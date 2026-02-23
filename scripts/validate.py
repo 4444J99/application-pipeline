@@ -21,6 +21,12 @@ VALID_DEADLINE_TYPES = {"hard", "rolling", "window", "tba"}
 VALID_PORTALS = {"submittable", "slideroom", "email", "custom", "web", "greenhouse", "workable"}
 VALID_AMOUNT_TYPES = {"lump_sum", "stipend", "salary", "fee", "in_kind", "variable"}
 VALID_POSITIONS = {"systems-artist", "creative-technologist", "educator", "community-practitioner"}
+VALID_EFFORT_LEVELS = {"quick", "standard", "deep", "complex"}
+VALID_DIMENSIONS = {
+    "mission_alignment", "evidence_match", "track_record_fit",
+    "financial_alignment", "effort_to_value", "strategic_value",
+    "deadline_feasibility", "portal_friction",
+}
 
 # Valid status transitions: each status maps to the set of statuses it can reach
 VALID_TRANSITIONS = {
@@ -109,6 +115,24 @@ def validate_entry(filepath: Path) -> list[str]:
         position = fit.get("identity_position")
         if position and position not in VALID_POSITIONS:
             errors.append(f"Invalid identity_position: '{position}'")
+        # Validate dimensions if present
+        dimensions = fit.get("dimensions")
+        if dimensions is not None:
+            if not isinstance(dimensions, dict):
+                errors.append("fit.dimensions must be a mapping")
+            else:
+                for key, val in dimensions.items():
+                    if key not in VALID_DIMENSIONS:
+                        errors.append(f"Unknown dimension: '{key}' (valid: {VALID_DIMENSIONS})")
+                    if val is not None and not (1 <= val <= 10):
+                        errors.append(f"Dimension '{key}' out of range: {val} (must be 1-10)")
+
+    # Effort level validation
+    submission = data.get("submission", {})
+    if isinstance(submission, dict):
+        effort = submission.get("effort_level")
+        if effort is not None and effort not in VALID_EFFORT_LEVELS:
+            errors.append(f"Invalid effort_level: '{effort}' (valid: {VALID_EFFORT_LEVELS})")
 
     # Status transition validation
     status = data.get("status")

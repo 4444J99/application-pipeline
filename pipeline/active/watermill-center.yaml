@@ -22,12 +22,22 @@ amount:
   benefits_cliff_note: null
 
 fit:
-  score: 7
+  score: 6.8
   identity_position: systems-artist
   framing: "Systems artist engaging interdisciplinary collaboration in intensive residency context"
   lead_organs: [II, VI, META]
 
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 6
+    track_record_fit: 7
+    financial_alignment: 10
+    effort_to_value: 6
+    strategic_value: 7
+    deadline_feasibility: 1
+    portal_friction: 4
 submission:
+  effort_level: complex
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system

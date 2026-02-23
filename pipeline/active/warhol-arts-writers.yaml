@@ -22,12 +22,22 @@ amount:
   benefits_cliff_note: null
 
 fit:
-  score: 7
+  score: 7.1
   identity_position: systems-artist
   framing: "Arts writer and systems artist producing critical writing on computation and culture"
   lead_organs: [I, V, META]
 
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 6
+    track_record_fit: 7
+    financial_alignment: 4
+    effort_to_value: 7
+    strategic_value: 10
+    deadline_feasibility: 9
+    portal_friction: 6
 submission:
+  effort_level: standard
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system

@@ -39,11 +39,29 @@
 
 # --- Fit Assessment ---
 # fit:
-#   score (required): 1-10 fit rating
+#   score (required): 1-10 composite fit rating (weighted from dimensions)
 #   identity_position: Which framing to use
 #     enum: systems-artist | creative-technologist | educator | community-practitioner
 #   framing: One-line description of how to position for this target
 #   lead_organs: Which ORGANVM organs to emphasize (list of roman numerals)
+#   dimensions: Per-dimension scores (1-10 each, see strategy/scoring-rubric.md)
+#     mission_alignment: How well work fits their mission (25% weight)
+#     evidence_match: Can we demonstrate what they require (20%)
+#     track_record_fit: Do credentials match expectations (15%)
+#     financial_alignment: Benefits cliff risk (10%)
+#     effort_to_value: Probability × value relative to effort (10%)
+#     strategic_value: Credibility signal if accepted (10%)
+#     deadline_feasibility: Can materials be ready in time (5%)
+#     portal_friction: Submission mechanical complexity (5%)
+
+# --- Submission Effort ---
+# submission:
+#   effort_level: Estimated work to prepare and submit
+#     enum: quick | standard | deep | complex
+#     quick: 15-45 min — paste blocks, fill form, submit
+#     standard: 1-2 hours — compose from blocks, customize framing
+#     deep: 3-6 hours — custom narrative, budget, multi-section
+#     complex: 1-2 days — new materials, video, recommendations
 
 # --- Submission Composition ---
 # submission:
@@ -108,8 +126,18 @@ example:
     identity_position: systems-artist
     framing: "adventurous and imaginative interdisciplinary work"
     lead_organs: [IV, I, META]
+    dimensions:
+      mission_alignment: 10
+      evidence_match: 9
+      track_record_fit: 8
+      financial_alignment: 5
+      effort_to_value: 8
+      strategic_value: 10
+      deadline_feasibility: 8
+      portal_friction: 6
 
   submission:
+    effort_level: deep
     blocks_used:
       artist_statement: identity/2min
       project_description: projects/organvm-system

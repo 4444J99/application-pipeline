@@ -2,6 +2,7 @@
 """Assemble blocks into target-specific submission documents."""
 
 import argparse
+import re
 import sys
 from pathlib import Path
 
@@ -15,6 +16,10 @@ PIPELINE_DIRS = [
 ]
 BLOCKS_DIR = REPO_ROOT / "blocks"
 VARIANTS_DIR = REPO_ROOT / "variants"
+
+# Common portal limits for flagging
+WORD_LIMITS = [100, 150, 250, 500, 1000]
+CHAR_LIMITS = [500, 1000, 2000, 5000]
 
 
 def find_entry(target_id: str) -> dict | None:
@@ -49,8 +54,64 @@ def load_variant(variant_path: str) -> str | None:
     return None
 
 
+def strip_markdown(text: str) -> str:
+    """Strip markdown formatting for plain text output."""
+    # Remove headers
+    text = re.sub(r'^#{1,6}\s+', '', text, flags=re.MULTILINE)
+    # Remove bold/italic
+    text = re.sub(r'\*{1,3}(.+?)\*{1,3}', r'\1', text)
+    # Remove links, keep text
+    text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
+    # Remove horizontal rules
+    text = re.sub(r'^---+\s*$', '', text, flags=re.MULTILINE)
+    # Remove bullet markers
+    text = re.sub(r'^[-*+]\s+', '', text, flags=re.MULTILINE)
+    # Collapse multiple blank lines
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    return text.strip()
+
+
+def count_words(text: str) -> int:
+    """Count words in a text string."""
+    return len(text.split())
+
+
+def count_chars(text: str) -> int:
+    """Count characters (excluding leading/trailing whitespace)."""
+    return len(text.strip())
+
+
+def compose_sections(entry: dict) -> list[tuple[str, str]]:
+    """Compose sections from an entry's block references. Returns (title, content) pairs."""
+    sections = []
+
+    submission = entry.get("submission", {})
+    if not isinstance(submission, dict):
+        return sections
+
+    blocks_used = submission.get("blocks_used", {})
+    if isinstance(blocks_used, dict):
+        for slot, block_path in blocks_used.items():
+            title = slot.replace('_', ' ').title()
+            content = load_block(block_path)
+            if content:
+                sections.append((title, content.strip()))
+            else:
+                sections.append((title, f"[Block not found: {block_path}]"))
+
+    variant_ids = submission.get("variant_ids", {})
+    if isinstance(variant_ids, dict):
+        for slot, variant_path in variant_ids.items():
+            title = slot.replace('_', ' ').title()
+            content = load_variant(variant_path)
+            if content:
+                sections.append((title, content.strip()))
+
+    return sections
+
+
 def compose(entry: dict) -> str:
-    """Compose a submission document from an entry's block references."""
+    """Compose a full submission document from an entry's block references."""
     parts = []
     name = entry.get("name", entry.get("id", "Unknown"))
     org = entry.get("target", {}).get("organization", "")
@@ -60,7 +121,6 @@ def compose(entry: dict) -> str:
     parts.append(f"**Track:** {entry.get('track', '?')}")
     parts.append(f"**Status:** {entry.get('status', '?')}")
 
-    # Deadline
     deadline = entry.get("deadline", {})
     if isinstance(deadline, dict) and deadline.get("date"):
         parts.append(f"**Deadline:** {deadline['date']} {deadline.get('time', '')}")
@@ -69,57 +129,73 @@ def compose(entry: dict) -> str:
     parts.append("---")
     parts.append("")
 
-    # Blocks
-    submission = entry.get("submission", {})
-    if not isinstance(submission, dict):
-        parts.append("*No submission blocks configured.*")
-        return "\n".join(parts)
-
-    blocks_used = submission.get("blocks_used", {})
-    if isinstance(blocks_used, dict):
-        for slot, block_path in blocks_used.items():
-            content = load_block(block_path)
-            if content:
-                parts.append(f"## {slot.replace('_', ' ').title()}")
-                parts.append("")
-                parts.append(content.strip())
-                parts.append("")
-            else:
-                parts.append(f"## {slot.replace('_', ' ').title()}")
-                parts.append(f"*Block not found: {block_path}*")
-                parts.append("")
-
-    # Variants
-    variant_ids = submission.get("variant_ids", {})
-    if isinstance(variant_ids, dict):
-        for slot, variant_path in variant_ids.items():
-            content = load_variant(variant_path)
-            if content:
-                parts.append(f"## {slot.replace('_', ' ').title()}")
-                parts.append("")
-                parts.append(content.strip())
-                parts.append("")
+    sections = compose_sections(entry)
+    if not sections:
+        submission = entry.get("submission", {})
+        if not isinstance(submission, dict):
+            parts.append("*No submission blocks configured.*")
+        else:
+            parts.append("*No blocks or variants referenced.*")
+    else:
+        for title, content in sections:
+            parts.append(f"## {title}")
+            parts.append("")
+            parts.append(content)
+            parts.append("")
 
     # Materials
-    materials = submission.get("materials_attached", [])
-    if materials:
-        parts.append("## Attached Materials")
-        for m in materials:
-            parts.append(f"- {m}")
-        parts.append("")
+    submission = entry.get("submission", {})
+    if isinstance(submission, dict):
+        materials = submission.get("materials_attached", [])
+        if materials:
+            parts.append("## Attached Materials")
+            for m in materials:
+                parts.append(f"- {m}")
+            parts.append("")
 
-    # Portfolio URL
-    portfolio = submission.get("portfolio_url")
-    if portfolio:
-        parts.append(f"**Portfolio:** {portfolio}")
-        parts.append("")
+        portfolio = submission.get("portfolio_url")
+        if portfolio:
+            parts.append(f"**Portfolio:** {portfolio}")
+            parts.append("")
 
     return "\n".join(parts)
 
 
-def count_words(text: str) -> int:
-    """Count words in a text string."""
-    return len(text.split())
+def print_counts(entry: dict):
+    """Print per-section word and character counts with limit flags."""
+    name = entry.get("name", entry.get("id", "?"))
+    sections = compose_sections(entry)
+
+    print(f"Section Counts: {name}")
+    print(f"{'─' * 60}")
+    print(f"  {'Section':<30s} {'Words':>6s} {'Chars':>7s}  Flags")
+    print(f"  {'─' * 30} {'─' * 6} {'─' * 7}  {'─' * 15}")
+
+    total_words = 0
+    total_chars = 0
+
+    for title, content in sections:
+        plain = strip_markdown(content)
+        words = count_words(plain)
+        chars = count_chars(plain)
+        total_words += words
+        total_chars += chars
+
+        # Flag sections near common limits
+        flags = []
+        for limit in WORD_LIMITS:
+            if words > limit:
+                flags.append(f">{limit}w")
+        for limit in CHAR_LIMITS:
+            if chars > limit:
+                flags.append(f">{limit}c")
+
+        flag_str = " ".join(flags) if flags else "—"
+        print(f"  {title:<30s} {words:>6d} {chars:>7d}  {flag_str}")
+
+    print(f"  {'─' * 30} {'─' * 6} {'─' * 7}")
+    print(f"  {'TOTAL':<30s} {total_words:>6d} {total_chars:>7d}")
+    print()
 
 
 def main():
@@ -128,6 +204,10 @@ def main():
                         help="Target ID (matches pipeline YAML filename)")
     parser.add_argument("--output", "-o",
                         help="Output file (default: stdout)")
+    parser.add_argument("--plain", action="store_true",
+                        help="Output plain text (markdown stripped)")
+    parser.add_argument("--counts", action="store_true",
+                        help="Show per-section word/character counts")
     parser.add_argument("--max-words", type=int, default=0,
                         help="Warn if composed document exceeds N words")
     parser.add_argument("--word-count", action="store_true",
@@ -140,7 +220,17 @@ def main():
         print(f"Searched: {[str(d) for d in PIPELINE_DIRS]}", file=sys.stderr)
         sys.exit(1)
 
+    # Counts mode
+    if args.counts:
+        print_counts(entry)
+        if not args.word_count and not args.output and not args.plain:
+            return
+
     document = compose(entry)
+
+    if args.plain:
+        document = strip_markdown(document)
+
     wc = count_words(document)
 
     if args.word_count:
@@ -157,9 +247,11 @@ def main():
 
     if args.output:
         Path(args.output).write_text(document)
-        print(f"Composed submission written to {args.output} ({wc} words)")
+        fmt = "plain text" if args.plain else "markdown"
+        print(f"Composed submission written to {args.output} ({wc} words, {fmt})")
     else:
-        print(document)
+        if not args.counts:
+            print(document)
 
 
 if __name__ == "__main__":
