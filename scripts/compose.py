@@ -2,12 +2,13 @@
 """Assemble blocks into target-specific submission documents."""
 
 import argparse
-import re
 import sys
 from pathlib import Path
 
 from pipeline_lib import (
-    BLOCKS_DIR, VARIANTS_DIR, SUBMISSIONS_DIR, load_entry_by_id,
+    BLOCKS_DIR, VARIANTS_DIR, SUBMISSIONS_DIR,
+    load_entry_by_id, load_profile,
+    strip_markdown, count_words, count_chars,
 )
 
 # Common portal limits for flagging
@@ -41,35 +42,17 @@ def load_variant(variant_path: str) -> str | None:
     return None
 
 
-def strip_markdown(text: str) -> str:
-    """Strip markdown formatting for plain text output."""
-    # Remove headers
-    text = re.sub(r'^#{1,6}\s+', '', text, flags=re.MULTILINE)
-    # Remove bold/italic
-    text = re.sub(r'\*{1,3}(.+?)\*{1,3}', r'\1', text)
-    # Remove links, keep text
-    text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
-    # Remove horizontal rules
-    text = re.sub(r'^---+\s*$', '', text, flags=re.MULTILINE)
-    # Remove bullet markers
-    text = re.sub(r'^[-*+]\s+', '', text, flags=re.MULTILINE)
-    # Collapse multiple blank lines
-    text = re.sub(r'\n{3,}', '\n\n', text)
-    return text.strip()
+def _profile_fallback(profile: dict, slot: str) -> str | None:
+    """Try to get content for a slot from the profile JSON."""
+    from draft import get_profile_content
+    return get_profile_content(profile, slot, "medium")
 
 
-def count_words(text: str) -> int:
-    """Count words in a text string."""
-    return len(text.split())
+def compose_sections(entry: dict, profile: dict | None = None) -> list[tuple[str, str]]:
+    """Compose sections from an entry's block references. Returns (title, content) pairs.
 
-
-def count_chars(text: str) -> int:
-    """Count characters (excluding leading/trailing whitespace)."""
-    return len(text.strip())
-
-
-def compose_sections(entry: dict) -> list[tuple[str, str]]:
-    """Compose sections from an entry's block references. Returns (title, content) pairs."""
+    If profile is provided, missing blocks fall back to profile content.
+    """
     sections = []
 
     submission = entry.get("submission", {})
@@ -83,6 +66,12 @@ def compose_sections(entry: dict) -> list[tuple[str, str]]:
             content = load_block(block_path)
             if content:
                 sections.append((title, content.strip()))
+            elif profile:
+                fallback = _profile_fallback(profile, slot)
+                if fallback:
+                    sections.append((title, fallback.strip()))
+                else:
+                    sections.append((title, f"[Block not found: {block_path}]"))
             else:
                 sections.append((title, f"[Block not found: {block_path}]"))
 
@@ -97,7 +86,7 @@ def compose_sections(entry: dict) -> list[tuple[str, str]]:
     return sections
 
 
-def compose(entry: dict) -> str:
+def compose(entry: dict, profile: dict | None = None) -> str:
     """Compose a full submission document from an entry's block references."""
     parts = []
     name = entry.get("name", entry.get("id", "Unknown"))
@@ -116,7 +105,7 @@ def compose(entry: dict) -> str:
     parts.append("---")
     parts.append("")
 
-    sections = compose_sections(entry)
+    sections = compose_sections(entry, profile)
     if not sections:
         submission = entry.get("submission", {})
         if not isinstance(submission, dict):
@@ -148,10 +137,10 @@ def compose(entry: dict) -> str:
     return "\n".join(parts)
 
 
-def print_counts(entry: dict):
+def print_counts(entry: dict, profile: dict | None = None):
     """Print per-section word and character counts with limit flags."""
     name = entry.get("name", entry.get("id", "?"))
-    sections = compose_sections(entry)
+    sections = compose_sections(entry, profile)
 
     print(f"Section Counts: {name}")
     print(f"{'─' * 60}")
@@ -201,6 +190,8 @@ def main():
                         help="Report word count only (don't print document)")
     parser.add_argument("--snapshot", action="store_true",
                         help="Save composed output to pipeline/submissions/{id}-{date}.md")
+    parser.add_argument("--profile", action="store_true",
+                        help="Fall back to profile content when blocks are missing")
     args = parser.parse_args()
 
     entry = find_entry(args.target)
@@ -208,13 +199,19 @@ def main():
         print(f"Error: No pipeline entry found for '{args.target}'", file=sys.stderr)
         sys.exit(1)
 
+    profile = None
+    if args.profile:
+        profile = load_profile(args.target)
+        if not profile:
+            print(f"Warning: No profile found for '{args.target}'", file=sys.stderr)
+
     # Counts mode
     if args.counts:
-        print_counts(entry)
+        print_counts(entry, profile)
         if not args.word_count and not args.output and not args.plain:
             return
 
-    document = compose(entry)
+    document = compose(entry, profile)
 
     if args.plain:
         document = strip_markdown(document)

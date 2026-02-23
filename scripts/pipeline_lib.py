@@ -8,6 +8,9 @@ pipeline_status.py, standup.py, daily_batch.py, conversion_report.py, and score.
 from datetime import date, datetime
 from pathlib import Path
 
+import json
+import re
+
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -20,8 +23,42 @@ ALL_PIPELINE_DIRS = [PIPELINE_DIR_ACTIVE, PIPELINE_DIR_SUBMITTED, PIPELINE_DIR_C
 
 BLOCKS_DIR = REPO_ROOT / "blocks"
 VARIANTS_DIR = REPO_ROOT / "variants"
+PROFILES_DIR = REPO_ROOT / "targets" / "profiles"
+DRAFTS_DIR = REPO_ROOT / "pipeline" / "drafts"
 SIGNALS_DIR = REPO_ROOT / "signals"
 SUBMISSIONS_DIR = REPO_ROOT / "pipeline" / "submissions"
+LEGACY_DIR = REPO_ROOT / "scripts" / "legacy-submission"
+MATERIALS_DIR = REPO_ROOT / "materials"
+
+# Maps entry IDs to profile file IDs where naming conventions differ.
+PROFILE_ID_MAP = {
+    "creative-capital-2027": "creative-capital",
+    "doris-duke-amt": "doris-duke",
+    "eyebeam-plurality": "eyebeam",
+    "fire-island-residency": "fire-island",
+    "google-creative-lab-five": "google-cl5",
+    "google-creative-fellowship": "google-fellowship",
+    "headlands-center": "headlands",
+    "huggingface-dev-advocate": "huggingface",
+    "mit-tr-wired-aeon": "mit-tech-review",
+    "noema-magazine": "noema",
+    "openai-se-evals": "openai-evals",
+    "prix-ars-electronica": "prix-ars",
+    "rauschenberg-cycle-36": "rauschenberg-emergency",
+}
+
+# Maps legacy script filenames to entry IDs where naming conventions differ.
+LEGACY_ID_MAP = {
+    "cc-creative-capital": "creative-capital-2027",
+    "doris-duke": "doris-duke-amt",
+    "eyebeam": "eyebeam-plurality",
+    "fire-island": "fire-island-residency",
+    "google-cl5": "google-creative-lab-five",
+    "google-fellowship": "google-creative-fellowship",
+    "headlands": "headlands-center",
+    "prix-ars-starts": "prix-ars-electronica",
+    "rauschenberg-emergency": "rauschenberg-cycle-36",
+}
 
 VALID_TRACKS = {"grant", "residency", "job", "fellowship", "writing", "emergency", "prize", "program", "consulting"}
 VALID_STATUSES = {"research", "qualified", "drafting", "staged", "submitted", "acknowledged", "interview", "outcome"}
@@ -148,3 +185,188 @@ def get_deadline(entry: dict) -> tuple[date | None, str]:
 def days_until(d: date) -> int:
     """Days from today until the given date (negative = past)."""
     return (d - date.today()).days
+
+
+def load_profile(target_id: str) -> dict | None:
+    """Load a target profile JSON by ID, falling back to PROFILE_ID_MAP."""
+    filepath = PROFILES_DIR / f"{target_id}.json"
+    if not filepath.exists():
+        mapped = PROFILE_ID_MAP.get(target_id)
+        if mapped:
+            filepath = PROFILES_DIR / f"{mapped}.json"
+    if filepath.exists():
+        return json.loads(filepath.read_text())
+    return None
+
+
+def _build_reverse_legacy_map() -> dict[str, str]:
+    """Build entry_id → legacy_filename map from LEGACY_ID_MAP."""
+    reverse = {}
+    for legacy_name, entry_id in LEGACY_ID_MAP.items():
+        reverse[entry_id] = legacy_name
+    return reverse
+
+
+_REVERSE_LEGACY_MAP = _build_reverse_legacy_map()
+
+
+def load_legacy_script(target_id: str) -> dict | None:
+    """Load and parse a legacy submission script into field sections.
+
+    Returns a dict mapping canonical field names to paste-ready content,
+    or None if no legacy script exists.
+    """
+    # Try direct match first, then reverse legacy map
+    filepath = LEGACY_DIR / f"{target_id}.md"
+    if not filepath.exists():
+        legacy_name = _REVERSE_LEGACY_MAP.get(target_id)
+        if legacy_name:
+            filepath = LEGACY_DIR / f"{legacy_name}.md"
+    if not filepath.exists():
+        return None
+
+    return _parse_legacy_markdown(filepath.read_text())
+
+
+# Map legacy section headers to canonical field names
+_LEGACY_SECTION_MAP = {
+    "artist statement": "artist_statement",
+    "artistic statement": "artist_statement",
+    "bio": "bio",
+    "bio / cv summary": "bio",
+    "bio/cv summary": "bio",
+    "cv summary": "bio",
+    "project description": "project_description",
+    "project description / why this opportunity": "project_description",
+    "project summary / abstract": "project_description",
+    "project summary": "project_description",
+    "project title": "project_title",
+    "project narrative": "project_description",
+    "proposal narrative": "project_description",
+    "cover letter": "cover_letter",
+    "work samples": "work_samples",
+    "work samples — descriptions": "work_samples",
+    "links to submit": "links",
+    "performing arts connection statement": "performing_arts_connection",
+    "financial hardship statement": "financial_hardship",
+    "documentation of need": "documentation_of_need",
+    "budget": "budget",
+    "budget outline": "budget",
+    "methodology": "methodology",
+    "technical plan": "technical_plan",
+}
+
+
+def _parse_legacy_markdown(text: str) -> dict:
+    """Parse a legacy submission script markdown into sections.
+
+    Extracts content from between --- delimiters within each ## section.
+    Falls back to raw section content if no delimiters found.
+    """
+    sections = {}
+    current_header = None
+    current_lines = []
+
+    for line in text.split("\n"):
+        if line.startswith("## "):
+            # Save previous section
+            if current_header is not None:
+                content = _extract_section_content("\n".join(current_lines))
+                if content:
+                    sections[current_header] = content
+
+            header_text = line[3:].strip()
+            # Map to canonical name
+            header_lower = header_text.lower()
+            current_header = _LEGACY_SECTION_MAP.get(header_lower, header_lower)
+            current_lines = []
+        elif current_header is not None:
+            current_lines.append(line)
+
+    # Save last section
+    if current_header is not None:
+        content = _extract_section_content("\n".join(current_lines))
+        if content:
+            sections[current_header] = content
+
+    # Skip non-content sections
+    for skip in ("pre-flight (2 minutes)", "pre-flight (3 minutes)",
+                 "pre-flight (5 minutes)", "post-submission checklist",
+                 "if something goes wrong", "fit assessment — 7/10",
+                 "fit assessment"):
+        sections.pop(skip, None)
+
+    return sections
+
+
+def _extract_section_content(text: str) -> str | None:
+    """Extract paste-ready content from between --- delimiters.
+
+    If delimiters found, extracts content between them (skipping metadata).
+    If no delimiters, returns the full text stripped of metadata lines.
+    """
+    parts = text.split("---")
+
+    # If we have delimiter-separated parts, look for the substantive one
+    # Skip the first part (usually metadata like word counts) and empty parts
+    if len(parts) >= 3:
+        # Try parts between delimiters (index 1, 3, 5...)
+        for i in range(1, len(parts)):
+            stripped = parts[i].strip()
+            if not stripped:
+                continue
+            lines = stripped.split("\n")
+            non_meta = [
+                l for l in lines
+                if l.strip()
+                and not l.strip().startswith("**")
+                and not l.strip().startswith(">")
+                and not l.strip().startswith("- [ ]")
+                and not l.strip().startswith("Copy")
+            ]
+            if non_meta:
+                result = "\n".join(non_meta).strip()
+                if result:
+                    return result
+
+    # Fallback: no delimiters or nothing found between them
+    lines = text.strip().split("\n")
+    non_meta = [
+        l for l in lines
+        if l.strip()
+        and not l.strip().startswith("**")
+        and not l.strip().startswith(">")
+        and not l.strip().startswith("- [ ]")
+        and not l.strip().startswith("Copy")
+        and l.strip() != "---"
+    ]
+    if non_meta:
+        result = "\n".join(non_meta).strip()
+        if len(result) > 10:
+            return result
+
+    return None
+
+
+# --- Text utilities (shared by compose.py, draft.py) ---
+
+
+def strip_markdown(text: str) -> str:
+    """Strip markdown formatting for plain text output."""
+    text = re.sub(r'^#{1,6}\s+', '', text, flags=re.MULTILINE)
+    text = re.sub(r'\*{1,3}(.+?)\*{1,3}', r'\1', text)
+    text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
+    text = re.sub(r'^---+\s*$', '', text, flags=re.MULTILINE)
+    text = re.sub(r'^[-*+]\s+', '', text, flags=re.MULTILINE)
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    return text.strip()
+
+
+def count_words(text: str) -> int:
+    """Count words in a text string."""
+    return len(text.split())
+
+
+def count_chars(text: str) -> int:
+    """Count characters (excluding leading/trailing whitespace)."""
+    return len(text.strip())

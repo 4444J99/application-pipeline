@@ -70,6 +70,16 @@ submission:
 
 The `.md` extension is optional — `compose.py` and `validate.py` append it automatically.
 
+## Relationship to Profiles
+
+**Blocks** are reusable narrative modules — generic, composable, authored manually. They live in `blocks/` and are referenced by path in pipeline YAML `submission.blocks_used`.
+
+**Profiles** are target-specific pre-written content — artist statements at 3 lengths, bios, identity narratives, work sample lists. They live in `targets/profiles/*.json` (44 profiles).
+
+**`draft.py`** synthesizes both: for each portal section, it first checks for a matching block, then falls back to profile content. This means entries don't need `blocks_used` fully populated to produce a working draft — the profile provides a baseline, blocks provide overrides.
+
+**`compose.py --profile`** also supports this fallback: when a referenced block is missing, it pulls from the profile instead.
+
 ## Source of Truth
 
 All metrics in blocks derive from the covenant-ark document in `organvm-corpvs-testamentvm`. Update covenant-ark first, then propagate here. Run `python scripts/check_metrics.py` to verify consistency.

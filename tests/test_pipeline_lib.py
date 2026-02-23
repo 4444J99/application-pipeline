@@ -9,9 +9,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 from pipeline_lib import (
     REPO_ROOT, ALL_PIPELINE_DIRS, BLOCKS_DIR, VARIANTS_DIR,
     VALID_TRACKS, VALID_STATUSES, ACTIONABLE_STATUSES, STATUS_ORDER,
-    EFFORT_MINUTES,
+    EFFORT_MINUTES, PROFILE_ID_MAP, LEGACY_ID_MAP, LEGACY_DIR, PROFILES_DIR,
     load_entries, load_entry_by_id, parse_date, parse_datetime,
     format_amount, get_effort, get_score, get_deadline, days_until,
+    load_profile, load_legacy_script, _parse_legacy_markdown, _extract_section_content,
 )
 
 
@@ -233,3 +234,214 @@ def test_days_until_past():
 
 def test_days_until_today():
     assert days_until(date.today()) == 0
+
+
+# --- PROFILE_ID_MAP ---
+
+
+def test_profile_id_map_entries():
+    """All mapped IDs point to profiles that exist."""
+    for entry_id, profile_id in PROFILE_ID_MAP.items():
+        filepath = PROFILES_DIR / f"{profile_id}.json"
+        assert filepath.exists(), f"PROFILE_ID_MAP: {entry_id} -> {profile_id}.json not found"
+
+
+def test_profile_id_map_no_direct_match():
+    """Mapped entry IDs should NOT have a direct profile (that's why they're mapped)."""
+    for entry_id in PROFILE_ID_MAP:
+        filepath = PROFILES_DIR / f"{entry_id}.json"
+        assert not filepath.exists(), (
+            f"{entry_id}.json exists directly — remove from PROFILE_ID_MAP"
+        )
+
+
+# --- load_profile with ID mapping ---
+
+
+def test_load_profile_direct():
+    """Direct match loads without needing the map."""
+    profile = load_profile("artadia-nyc")
+    assert profile is not None
+    assert profile["target_id"] == "artadia-nyc"
+
+
+def test_load_profile_mapped():
+    """Mapped ID loads the correct profile."""
+    profile = load_profile("creative-capital-2027")
+    assert profile is not None
+    assert profile["target_id"] == "creative-capital"
+
+
+def test_load_profile_mapped_doris_duke():
+    profile = load_profile("doris-duke-amt")
+    assert profile is not None
+
+
+def test_load_profile_mapped_prix_ars():
+    profile = load_profile("prix-ars-electronica")
+    assert profile is not None
+
+
+def test_load_profile_all_mapped_entries():
+    """Every entry in PROFILE_ID_MAP should successfully load a profile."""
+    for entry_id in PROFILE_ID_MAP:
+        profile = load_profile(entry_id)
+        assert profile is not None, f"load_profile('{entry_id}') returned None"
+
+
+def test_load_profile_nonexistent():
+    profile = load_profile("definitely-does-not-exist-xyz")
+    assert profile is None
+
+
+# --- LEGACY_ID_MAP ---
+
+
+def test_legacy_id_map_files_exist():
+    """All legacy script files referenced in the map should exist."""
+    for legacy_name in LEGACY_ID_MAP:
+        filepath = LEGACY_DIR / f"{legacy_name}.md"
+        assert filepath.exists(), f"LEGACY_ID_MAP: {legacy_name}.md not found"
+
+
+# --- load_legacy_script ---
+
+
+def test_load_legacy_script_direct():
+    """Direct match loads a legacy script."""
+    result = load_legacy_script("artadia-nyc")
+    assert result is not None
+    assert isinstance(result, dict)
+    assert "artist_statement" in result
+
+
+def test_load_legacy_script_mapped():
+    """Mapped entry ID loads the correct legacy script."""
+    result = load_legacy_script("creative-capital-2027")
+    assert result is not None
+    assert isinstance(result, dict)
+
+
+def test_load_legacy_script_nonexistent():
+    result = load_legacy_script("definitely-does-not-exist-xyz")
+    assert result is None
+
+
+def test_load_legacy_script_has_bio():
+    """Artadia legacy script should include a bio section."""
+    result = load_legacy_script("artadia-nyc")
+    assert result is not None
+    assert "bio" in result
+
+
+def test_load_legacy_script_no_preflight():
+    """Parsed legacy scripts should not contain pre-flight sections."""
+    result = load_legacy_script("artadia-nyc")
+    assert result is not None
+    for key in result:
+        assert "pre-flight" not in key.lower()
+        assert "post-submission" not in key.lower()
+
+
+# --- _parse_legacy_markdown ---
+
+
+def test_parse_legacy_markdown_basic():
+    md = """# Title
+
+## Artist Statement
+
+**~250 words**
+
+---
+
+This is my artist statement content.
+It has multiple lines.
+
+---
+
+## Bio
+
+---
+
+Short bio here.
+
+---
+"""
+    result = _parse_legacy_markdown(md)
+    assert "artist_statement" in result
+    assert "bio" in result
+    assert "artist statement content" in result["artist_statement"]
+    assert "Short bio" in result["bio"]
+
+
+def test_parse_legacy_markdown_skips_preflight():
+    md = """## Pre-flight (2 minutes)
+
+- [ ] Check this
+- [ ] Check that
+
+## Artist Statement
+
+---
+
+Real content here.
+
+---
+"""
+    result = _parse_legacy_markdown(md)
+    assert "artist_statement" in result
+    assert "pre-flight" not in " ".join(result.keys()).lower()
+
+
+def test_parse_legacy_markdown_project_description():
+    md = """## Project Description / Why This Opportunity
+
+---
+
+This describes the project in detail.
+
+---
+"""
+    result = _parse_legacy_markdown(md)
+    assert "project_description" in result
+
+
+# --- _extract_section_content ---
+
+
+def test_extract_section_content_between_delimiters():
+    text = """
+**~250 words**
+
+---
+
+Real content is here.
+Multiple lines of it.
+
+---
+
+Some notes after.
+"""
+    result = _extract_section_content(text)
+    assert result is not None
+    assert "Real content" in result
+
+
+def test_extract_section_content_no_delimiters():
+    text = """
+This is just raw content without any delimiters.
+It should still be extracted if it's long enough.
+"""
+    result = _extract_section_content(text)
+    assert result is not None
+
+
+def test_extract_section_content_only_metadata():
+    text = """
+**~250 words**
+
+> Note: this is instructions only
+"""
+    result = _extract_section_content(text)
+    assert result is None
