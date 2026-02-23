@@ -1,0 +1,55 @@
+id: doris-duke-amt
+name: "Doris Duke / Mozilla Artists Make Technology Lab"
+track: grant
+status: staged
+outcome: null
+
+target:
+  organization: "Doris Duke Foundation / Mozilla"
+  url: https://givingdata.com
+  application_url: https://givingdata.com
+  portal: custom
+
+deadline:
+  date: "2026-03-02"
+  time: "12:00 ET"
+  type: hard
+
+amount:
+  value: 150000
+  currency: USD
+  type: lump_sum
+  benefits_cliff_note: "Well above all thresholds. Call NYLAG."
+
+fit:
+  score: 7
+  identity_position: systems-artist
+  framing: "Systems artist building technology as artistic medium and institutional infrastructure"
+  lead_organs: [I, III, IV]
+
+submission:
+  blocks_used:
+    artist_statement: identity/2min
+    project_description: projects/organvm-system
+  variant_ids: {}
+  materials_attached: []
+  portfolio_url: https://4444j99.github.io/portfolio/
+
+timeline:
+  researched: "2026-02-14"
+  qualified: "2026-02-16"
+  materials_ready: "2026-02-18"
+  submitted: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+
+tags: []
+source: 04-application-tracker.md
+notes: null

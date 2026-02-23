@@ -1,0 +1,55 @@
+id: watermill-center
+name: "Watermill Center International Summer Program"
+track: residency
+status: staged
+outcome: null
+
+target:
+  organization: "Watermill Center"
+  url: https://watermillcenter.org
+  application_url: https://watermillcenter.slideroom.com
+  portal: slideroom
+
+deadline:
+  date: "2026-02-18"
+  time: null
+  type: hard
+
+amount:
+  value: 0
+  currency: USD
+  type: in_kind
+  benefits_cliff_note: null
+
+fit:
+  score: 7
+  identity_position: systems-artist
+  framing: "Systems artist engaging interdisciplinary collaboration in intensive residency context"
+  lead_organs: [II, VI, META]
+
+submission:
+  blocks_used:
+    artist_statement: identity/2min
+    project_description: projects/organvm-system
+  variant_ids: {}
+  materials_attached: []
+  portfolio_url: https://4444j99.github.io/portfolio/
+
+timeline:
+  researched: "2026-02-14"
+  qualified: "2026-02-16"
+  materials_ready: "2026-02-18"
+  submitted: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+
+tags: []
+source: 04-application-tracker.md
+notes: "Deadline has passed (Feb 18 2026). Free residency, in-kind support."

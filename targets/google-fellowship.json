@@ -1,0 +1,86 @@
+{
+  "target_id": "google-fellowship",
+  "target_name": "Google Creative Fellowship",
+  "category": "Fellowship",
+  "amount": "Stipend (~$50K+)",
+  "deadline": "March 18, 2026, 5pm PST",
+  "url": "https://creativefellowship.google/",
+  "fit_score": 7,
+  "primary_position": "technologist",
+  "secondary_position": "systems_artist",
+  "position_label": "Creative Technologist",
+  "identity_narrative": "The eight-organ system coordinates 100 repositories across 8 GitHub organizations through automated governance: 82+ CI/CD workflows, 31 dependency edges with zero violations, a formal promotion state machine, and 2,349+ automated tests across the flagship frameworks (agentic-titan: 1,095 tests, recursive-engine: 1,254 tests). Built using the AI-conductor methodology — AI generates volume, human directs architecture.\n\nGoogle Creative Fellowship aligns precisely with the trajectory of this practice — the combination of creative rigor, technical depth, and public documentation that defines the eight-organ methodology.",
+  "artist_statement": {
+    "long": "Production-grade AI orchestration with creative-artistic applications.\n\nMy practice centers on the eight-organ system: a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 100 repositories. I don't produce individual artworks. I produce the *systems* that generate, coordinate, and sustain creative work — and the visible record of how those systems are built is itself the primary creative output.\n\nThe process of creation is the product. The 42 essays I've published aren't reflections on the work; they ARE the work — the creative process rendered into prose in real time. The governance rules — registry design, dependency graphs, promotion pipelines — aren't bureaucratic overhead; they're generative constraints, the way a composer's harmonic rules shape what melodies can emerge.\n\nI work in the tradition of solo producers who became orchestras: Brian Eno treating the studio as a compositional instrument, Trent Reznor building entire albums alone because nobody else would commit at the necessary intensity. I use AI tools the way these practitioners used their technologies — as instruments for realizing an architectural vision, not as replacements for creative judgment.\n\nThe eight-organ system is simultaneously: (a) working infrastructure that produces creative work, (b) a documented methodology for solo production at institutional scale, (c) an argument that the process of creation — made visible and governable — is itself the most interesting thing an artist can produce, and (d) a reusable model other practitioners can learn from.",
+    "medium": "Production-grade AI orchestration with creative-artistic applications.\n\nMy practice centers on the eight-organ system — a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 100 repositories and 8 GitHub organizations. The 42 published essays documenting this process aren't reflections on the work; they ARE the work — the creative process rendered into prose in real time.\n\nI use AI tools as compositional instruments, the way Brian Eno treated the studio. The architectural vision, governance design, and editorial judgment are the creative work. The result: a documented methodology for solo production at institutional scale, built over 5+ years and 33 development sprints.",
+    "short": "Production-grade AI orchestration with creative-artistic applications. My eight-organ system coordinates 100 repositories across 8 organizations — spanning theory, generative art, commerce, governance, public process, community, and marketing. 42 published essays document the methodology in real time. Solo production using AI tools as compositional instruments."
+  },
+  "bio": {
+    "long": "Systems artist and auteur-producer working at the intersection of creative infrastructure, governance design, and AI-augmented methodology. Creator of the ORGANVM eight-organ system: 100 repositories across 8 GitHub organizations coordinating theory, generative art, commercial products, governance, public process, community, and marketing through automated governance and a formal promotion state machine. 42 published essays document the creative process in real time.\n\nProfessional background spans 18 years across four domains: 5 years independent creative systems design (the eight-organ system, 2,349+ tests, 33 development sprints), 11 years college instruction at 8+ institutions (2,000+ students), 15 years multimedia production (AJP Media Arts), and 11 years construction project management. MFA Creative Writing (FAU), BA English Literature (CUNY). Meta Full-Stack Developer and Google UX/Digital Marketing/Project Management certifications.\n\nBased in New York City.",
+    "medium": "Systems artist and auteur-producer. Creator of the ORGANVM eight-organ system: 100 repositories across 8 GitHub organizations coordinating theory, art, commerce, governance, and public process through automated governance. 42 published essays, 33 development sprints, ~410K+ of documentation. 18 years professional experience across creative systems design, college instruction (11 years, 2,000+ students), multimedia production, and project management. MFA Creative Writing, Meta Full-Stack Developer certification. Based in New York City.",
+    "short": "Systems artist. Creator of the ORGANVM eight-organ system — 100 repositories, 8 organizations, 42 essays, ~410K+ words. Builds creative infrastructure at institutional scale using AI tools as compositional instruments. MFA Creative Writing, 18 years professional experience. NYC-based."
+  },
+  "work_samples": [
+    {
+      "name": "Agentic Titan",
+      "url": "https://github.com/organvm-iv-taxis/agentic-titan",
+      "description": "Multi-agent orchestration framework: 1,095 tests, 18 development phases"
+    },
+    {
+      "name": "Recursive Engine",
+      "url": "https://github.com/organvm-i-theoria/recursive-engine--generative-entity",
+      "description": "Symbolic operating system: 1,254 tests, 85% coverage, 21 organ handlers, custom DSL"
+    },
+    {
+      "name": "Orchestration Hub",
+      "url": "https://github.com/organvm-iv-taxis/orchestration-start-here",
+      "description": "11 governance workflows, cross-org dispatch, promotion automation"
+    },
+    {
+      "name": "Eight-Organ System Hub",
+      "url": "https://github.com/meta-organvm/organvm-corpvs-testamentvm",
+      "description": "Governance corpus: 410K+ words, registry, orchestration specs, 33 sprint records"
+    },
+    {
+      "name": "life-my--midst--in",
+      "url": "https://github.com/organvm-iii-ergon/life-my--midst--in",
+      "description": "Interactive identity platform: 291 tests, 44 DB tables, Inverted Interview paradigm"
+    },
+    {
+      "name": "Portfolio Site",
+      "url": "https://4444j99.github.io/portfolio/",
+      "description": "Interactive portfolio with generative art (p5.js), CMYK design system, 19 curated projects"
+    },
+    {
+      "name": "Public Process Essays",
+      "url": "https://organvm-v-logos.github.io/public-process/",
+      "description": "42 essays documenting creative methodology in real time (~142K words)"
+    },
+    {
+      "name": "Metasystem Master",
+      "url": "https://github.com/organvm-ii-poiesis/metasystem-master",
+      "description": "Generative art meta-system connecting theory to practice"
+    }
+  ],
+  "evidence_highlights": [
+    "AI-augmented creative practice, not AI-generated art — AI serves as compositional instrument; the vision is human.",
+    "Solo production at institutional scale — one person built and documented a 100-repository system across 8 organizations.",
+    "Governance as creative medium — registry design, dependency graphs, and promotion pipelines are generative structures.",
+    "Radical transparency at system scale — ~410K+ of documentation, 33 sprint specs, 12 ADRs, a constitution."
+  ],
+  "differentiators": [
+    "AI-augmented creative practice, not AI-generated art — AI serves as compositional instrument; the vision is human.",
+    "Solo production at institutional scale — one person built and documented a 100-repository system across 8 organizations.",
+    "Governance as creative medium — registry design, dependency graphs, and promotion pipelines are generative structures.",
+    "Radical transparency at system scale — ~410K+ of documentation, 33 sprint specs, 12 ADRs, a constitution.",
+    "Cross-domain integration — the eight-organ model bridges theory, art, commerce, governance, and community.",
+    "Process-as-product methodology — the 42 essays aren't marketing; they ARE the creative work."
+  ],
+  "benefits_cliff": {
+    "rating": "caution",
+    "note": "Paid contractor role. Full employment income exceeds all thresholds."
+  },
+  "submission_format": "Portfolio + artist statement + project description",
+  "has_existing_materials": true,
+  "generated": "2026-02-18T11:38:29.553102+00:00"
+}

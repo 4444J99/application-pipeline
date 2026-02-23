@@ -1,0 +1,472 @@
+{
+  "generated": "2026-02-18T11:38:29.557413+00:00",
+  "total_profiles": 43,
+  "by_position": {
+    "systems_artist": [
+      "artadia-nyc",
+      "creative-capital",
+      "eyebeam",
+      "prix-ars",
+      "starts-prize",
+      "whiting-nonfiction",
+      "warhol-arts-writers",
+      "headlands",
+      "zkm-rauschenberg",
+      "doris-duke",
+      "lacma-art-tech",
+      "github-sponsors",
+      "fractured-atlas",
+      "fca-emergency",
+      "rauschenberg-emergency",
+      "pen-america",
+      "awesome-foundation",
+      "pioneer-works",
+      "tulsa-fellowship",
+      "noema"
+    ],
+    "educator": [
+      "processing-foundation",
+      "workshop-facilitation",
+      "spencer-foundation"
+    ],
+    "technologist": [
+      "google-fellowship",
+      "google-cl5",
+      "nlnet-commons",
+      "google-ami",
+      "together-ai",
+      "huggingface",
+      "anthropic-fde",
+      "openai-evals",
+      "ai-consulting",
+      "documentation-consulting",
+      "new-inc",
+      "logic-magazine",
+      "mit-tech-review",
+      "recurse-center"
+    ],
+    "community": [
+      "fire-island",
+      "wff-housing",
+      "stimpunks",
+      "queer-art",
+      "lambda-literary",
+      "gay-lesbian-review"
+    ]
+  },
+  "by_category": {
+    "Grant": [
+      "artadia-nyc",
+      "creative-capital",
+      "wff-housing",
+      "nlnet-commons",
+      "whiting-nonfiction",
+      "warhol-arts-writers",
+      "doris-duke",
+      "lacma-art-tech",
+      "google-ami",
+      "awesome-foundation",
+      "stimpunks",
+      "spencer-foundation"
+    ],
+    "Fellowship": [
+      "google-fellowship",
+      "processing-foundation",
+      "tulsa-fellowship"
+    ],
+    "Residency": [
+      "google-cl5",
+      "fire-island",
+      "eyebeam",
+      "headlands",
+      "zkm-rauschenberg",
+      "pioneer-works"
+    ],
+    "Prize": [
+      "prix-ars",
+      "starts-prize"
+    ],
+    "Infrastructure": [
+      "github-sponsors",
+      "fractured-atlas"
+    ],
+    "Emergency": [
+      "fca-emergency",
+      "rauschenberg-emergency",
+      "pen-america"
+    ],
+    "Employment": [
+      "together-ai",
+      "huggingface",
+      "anthropic-fde",
+      "openai-evals"
+    ],
+    "Consulting": [
+      "ai-consulting",
+      "workshop-facilitation",
+      "documentation-consulting"
+    ],
+    "Incubator": [
+      "new-inc"
+    ],
+    "Program": [
+      "queer-art",
+      "recurse-center"
+    ],
+    "Retreat": [
+      "lambda-literary"
+    ],
+    "Writing": [
+      "noema",
+      "gay-lesbian-review",
+      "logic-magazine",
+      "mit-tech-review"
+    ]
+  },
+  "profiles": [
+    {
+      "target_id": "artadia-nyc",
+      "target_name": "Artadia NYC Awards",
+      "category": "Grant",
+      "primary_position": "systems_artist",
+      "fit_score": 8,
+      "has_existing_materials": true
+    },
+    {
+      "target_id": "creative-capital",
+      "target_name": "Creative Capital 2027 Open Call",
+      "category": "Grant",
+      "primary_position": "systems_artist",
+      "fit_score": 9,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "google-fellowship",
+      "target_name": "Google Creative Fellowship",
+      "category": "Fellowship",
+      "primary_position": "technologist",
+      "fit_score": 7,
+      "has_existing_materials": true
+    },
+    {
+      "target_id": "google-cl5",
+      "target_name": "Google Creative Lab Five",
+      "category": "Residency",
+      "primary_position": "technologist",
+      "fit_score": 8,
+      "has_existing_materials": true
+    },
+    {
+      "target_id": "fire-island",
+      "target_name": "Fire Island Artist Residency",
+      "category": "Residency",
+      "primary_position": "community",
+      "fit_score": 7,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "eyebeam",
+      "target_name": "Eyebeam Speculating on Plurality",
+      "category": "Residency",
+      "primary_position": "systems_artist",
+      "fit_score": 7,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "processing-foundation",
+      "target_name": "Processing Foundation Fellowship",
+      "category": "Fellowship",
+      "primary_position": "educator",
+      "fit_score": 6,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "prix-ars",
+      "target_name": "Prix Ars Electronica 2026",
+      "category": "Prize",
+      "primary_position": "systems_artist",
+      "fit_score": 8,
+      "has_existing_materials": true
+    },
+    {
+      "target_id": "starts-prize",
+      "target_name": "S+T+ARTS Prize 2026",
+      "category": "Prize",
+      "primary_position": "systems_artist",
+      "fit_score": 8,
+      "has_existing_materials": true
+    },
+    {
+      "target_id": "wff-housing",
+      "target_name": "WFF Housing Stability Grant",
+      "category": "Grant",
+      "primary_position": "community",
+      "fit_score": 9,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "nlnet-commons",
+      "target_name": "NLnet NGI Zero Commons Fund",
+      "category": "Grant",
+      "primary_position": "technologist",
+      "fit_score": 7,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "whiting-nonfiction",
+      "target_name": "Whiting Creative Nonfiction Grant",
+      "category": "Grant",
+      "primary_position": "systems_artist",
+      "fit_score": 8,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "warhol-arts-writers",
+      "target_name": "Warhol Foundation Arts Writers Grant",
+      "category": "Grant",
+      "primary_position": "systems_artist",
+      "fit_score": 7,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "headlands",
+      "target_name": "Headlands Center for the Arts",
+      "category": "Residency",
+      "primary_position": "systems_artist",
+      "fit_score": 9,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "zkm-rauschenberg",
+      "target_name": "ZKM Rauschenberg Residencies",
+      "category": "Residency",
+      "primary_position": "systems_artist",
+      "fit_score": 8,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "doris-duke",
+      "target_name": "Doris Duke / Mozilla Artists Make Technology Lab",
+      "category": "Grant",
+      "primary_position": "systems_artist",
+      "fit_score": 7,
+      "has_existing_materials": true
+    },
+    {
+      "target_id": "lacma-art-tech",
+      "target_name": "LACMA Art + Technology Lab",
+      "category": "Grant",
+      "primary_position": "systems_artist",
+      "fit_score": 8,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "google-ami",
+      "target_name": "Google Artists + Machine Intelligence Grants",
+      "category": "Grant",
+      "primary_position": "technologist",
+      "fit_score": 9,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "github-sponsors",
+      "target_name": "GitHub Sponsors",
+      "category": "Infrastructure",
+      "primary_position": "systems_artist",
+      "fit_score": null,
+      "has_existing_materials": true
+    },
+    {
+      "target_id": "fractured-atlas",
+      "target_name": "Fractured Atlas Fiscal Sponsorship",
+      "category": "Infrastructure",
+      "primary_position": "systems_artist",
+      "fit_score": null,
+      "has_existing_materials": true
+    },
+    {
+      "target_id": "fca-emergency",
+      "target_name": "FCA Emergency Grants",
+      "category": "Emergency",
+      "primary_position": "systems_artist",
+      "fit_score": null,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "rauschenberg-emergency",
+      "target_name": "Rauschenberg Emergency Cycle 36",
+      "category": "Emergency",
+      "primary_position": "systems_artist",
+      "fit_score": 6,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "pen-america",
+      "target_name": "PEN America Writers Aid",
+      "category": "Emergency",
+      "primary_position": "systems_artist",
+      "fit_score": 9,
+      "has_existing_materials": true
+    },
+    {
+      "target_id": "awesome-foundation",
+      "target_name": "Awesome Foundation NYC",
+      "category": "Grant",
+      "primary_position": "systems_artist",
+      "fit_score": 8,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "stimpunks",
+      "target_name": "Stimpunks Creator Grant",
+      "category": "Grant",
+      "primary_position": "community",
+      "fit_score": 7,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "together-ai",
+      "target_name": "Together AI: Lead DX Engineer, Documentation",
+      "category": "Employment",
+      "primary_position": "technologist",
+      "fit_score": 6,
+      "has_existing_materials": true
+    },
+    {
+      "target_id": "huggingface",
+      "target_name": "HuggingFace Developer Advocate Engineer",
+      "category": "Employment",
+      "primary_position": "technologist",
+      "fit_score": 5,
+      "has_existing_materials": true
+    },
+    {
+      "target_id": "anthropic-fde",
+      "target_name": "Anthropic Forward Deployed Engineer",
+      "category": "Employment",
+      "primary_position": "technologist",
+      "fit_score": 4,
+      "has_existing_materials": true
+    },
+    {
+      "target_id": "openai-evals",
+      "target_name": "OpenAI Software Engineer, Applied Evals",
+      "category": "Employment",
+      "primary_position": "technologist",
+      "fit_score": 4,
+      "has_existing_materials": true
+    },
+    {
+      "target_id": "ai-consulting",
+      "target_name": "AI Systems Consulting",
+      "category": "Consulting",
+      "primary_position": "technologist",
+      "fit_score": null,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "workshop-facilitation",
+      "target_name": "Workshop Facilitation",
+      "category": "Consulting",
+      "primary_position": "educator",
+      "fit_score": null,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "documentation-consulting",
+      "target_name": "Documentation Consulting",
+      "category": "Consulting",
+      "primary_position": "technologist",
+      "fit_score": null,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "new-inc",
+      "target_name": "NEW INC (New Museum Incubator)",
+      "category": "Incubator",
+      "primary_position": "technologist",
+      "fit_score": 7,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "pioneer-works",
+      "target_name": "Pioneer Works Residency",
+      "category": "Residency",
+      "primary_position": "systems_artist",
+      "fit_score": 7,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "tulsa-fellowship",
+      "target_name": "Tulsa Artist Fellowship",
+      "category": "Fellowship",
+      "primary_position": "systems_artist",
+      "fit_score": 7,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "queer-art",
+      "target_name": "Queer|Art Mentorship Program",
+      "category": "Program",
+      "primary_position": "community",
+      "fit_score": 8,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "lambda-literary",
+      "target_name": "Lambda Literary Writers Retreat",
+      "category": "Retreat",
+      "primary_position": "community",
+      "fit_score": 7,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "noema",
+      "target_name": "Noema Magazine",
+      "category": "Writing",
+      "primary_position": "systems_artist",
+      "fit_score": null,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "gay-lesbian-review",
+      "target_name": "Gay & Lesbian Review",
+      "category": "Writing",
+      "primary_position": "community",
+      "fit_score": 9,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "logic-magazine",
+      "target_name": "Logic Magazine",
+      "category": "Writing",
+      "primary_position": "technologist",
+      "fit_score": 8,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "mit-tech-review",
+      "target_name": "MIT Technology Review / Wired / Aeon",
+      "category": "Writing",
+      "primary_position": "technologist",
+      "fit_score": null,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "spencer-foundation",
+      "target_name": "Spencer Foundation Small Research Grant",
+      "category": "Grant",
+      "primary_position": "educator",
+      "fit_score": 6,
+      "has_existing_materials": false
+    },
+    {
+      "target_id": "recurse-center",
+      "target_name": "Recurse Center",
+      "category": "Program",
+      "primary_position": "technologist",
+      "fit_score": 9,
+      "has_existing_materials": false
+    }
+  ]
+}

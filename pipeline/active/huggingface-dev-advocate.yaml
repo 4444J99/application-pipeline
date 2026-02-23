@@ -1,0 +1,53 @@
+id: huggingface-dev-advocate
+name: "HuggingFace Developer Advocate Engineer"
+track: job
+status: qualified
+outcome: null
+
+target:
+  organization: "Hugging Face"
+  url: https://huggingface.co
+  application_url: https://apply.workable.com/huggingface
+  portal: workable
+
+deadline:
+  date: null
+  time: null
+  type: rolling
+
+amount:
+  value: 140000
+  currency: USD
+  type: salary
+  benefits_cliff_note: null
+
+fit:
+  score: 5
+  identity_position: creative-technologist
+  framing: "Developer advocate bridging open-source ML tools and creative practitioner communities"
+  lead_organs: [III, VI]
+
+submission:
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached: []
+  portfolio_url: https://4444j99.github.io/portfolio/
+
+timeline:
+  researched: "2026-02-14"
+  qualified: "2026-02-16"
+  materials_ready: null
+  submitted: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+
+tags: []
+source: 04-application-tracker.md
+notes: "Salary range $120,000-$160,000."

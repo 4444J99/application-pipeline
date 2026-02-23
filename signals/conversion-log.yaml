@@ -1,0 +1,17 @@
+# Conversion Log
+# Records per-submission outcome data for pattern analysis.
+# Updated after each response received.
+
+entries: []
+
+# Entry format:
+# - id: creative-capital-2027
+#   submitted: 2026-04-02
+#   track: grant
+#   identity_position: systems-artist
+#   blocks_used: [identity/2min, projects/organvm-system]
+#   variant_id: cover-letters/grant-art-tech-v2
+#   outcome: null  # accepted | rejected | withdrawn | expired
+#   response_date: null
+#   time_to_response_days: null
+#   feedback: null

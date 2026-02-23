@@ -1,0 +1,53 @@
+id: openai-se-evals
+name: "OpenAI Software Engineer Applied Evals"
+track: job
+status: qualified
+outcome: null
+
+target:
+  organization: "OpenAI"
+  url: https://openai.com
+  application_url: https://openai.com/careers
+  portal: custom
+
+deadline:
+  date: null
+  time: null
+  type: rolling
+
+amount:
+  value: 300000
+  currency: USD
+  type: salary
+  benefits_cliff_note: null
+
+fit:
+  score: 4
+  identity_position: creative-technologist
+  framing: "Software engineer with evaluation expertise and deep understanding of AI system behavior"
+  lead_organs: [III, IV]
+
+submission:
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached: []
+  portfolio_url: https://4444j99.github.io/portfolio/
+
+timeline:
+  researched: "2026-02-14"
+  qualified: "2026-02-16"
+  materials_ready: null
+  submitted: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+
+tags: []
+source: 04-application-tracker.md
+notes: "Salary range $230,000-$385,000."

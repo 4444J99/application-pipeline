@@ -1,0 +1,53 @@
+id: together-ai
+name: "Together AI Lead DX Engineer"
+track: job
+status: qualified
+outcome: null
+
+target:
+  organization: "Together AI"
+  url: https://together.ai
+  application_url: https://boards.greenhouse.io/togetherai
+  portal: greenhouse
+
+deadline:
+  date: null
+  time: null
+  type: rolling
+
+amount:
+  value: 200000
+  currency: USD
+  type: salary
+  benefits_cliff_note: null
+
+fit:
+  score: 6
+  identity_position: creative-technologist
+  framing: "Creative technologist with deep developer experience and AI systems expertise"
+  lead_organs: [III, IV]
+
+submission:
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached: []
+  portfolio_url: https://4444j99.github.io/portfolio/
+
+timeline:
+  researched: "2026-02-14"
+  qualified: "2026-02-16"
+  materials_ready: null
+  submitted: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+
+tags: []
+source: 04-application-tracker.md
+notes: "Salary range $160,000-$240,000."

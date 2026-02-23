@@ -1,0 +1,55 @@
+id: gay-lesbian-review
+name: "Gay & Lesbian Review"
+track: writing
+status: qualified
+outcome: null
+
+target:
+  organization: "Gay & Lesbian Review"
+  url: https://glreview.org
+  application_url: https://glreview.org/submissions
+  portal: custom
+
+deadline:
+  date: null
+  time: null
+  type: rolling
+
+amount:
+  value: 250
+  currency: USD
+  type: fee
+  benefits_cliff_note: null
+
+fit:
+  score: 9
+  identity_position: community-practitioner
+  framing: "Queer writer contributing critical essays on culture, identity, and community history"
+  lead_organs: [V, VI, META]
+
+submission:
+  blocks_used:
+    artist_statement: identity/2min
+    project_description: projects/organvm-system
+  variant_ids: {}
+  materials_attached: []
+  portfolio_url: https://4444j99.github.io/portfolio/
+
+timeline:
+  researched: "2026-02-14"
+  qualified: "2026-02-16"
+  materials_ready: null
+  submitted: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+
+tags: []
+source: 04-application-tracker.md
+notes: "$250/feature."

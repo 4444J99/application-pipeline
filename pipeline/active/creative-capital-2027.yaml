@@ -1,0 +1,55 @@
+id: creative-capital-2027
+name: "Creative Capital 2027 Open Call"
+track: grant
+status: qualified
+outcome: null
+
+target:
+  organization: "Creative Capital"
+  url: https://creative-capital.org
+  application_url: https://creative-capital.org/apply
+  portal: custom
+
+deadline:
+  date: "2026-04-02"
+  time: "15:00 ET"
+  type: hard
+
+amount:
+  value: 50000
+  currency: USD
+  type: lump_sum
+  benefits_cliff_note: "Exceeds Medicaid -> Essential Plan. Call NYLAG."
+
+fit:
+  score: 9
+  identity_position: systems-artist
+  framing: "Multi-year systems art project bridging recursive computing and institutional critique"
+  lead_organs: [I, IV, META]
+
+submission:
+  blocks_used:
+    artist_statement: identity/2min
+    project_description: projects/organvm-system
+  variant_ids: {}
+  materials_attached: []
+  portfolio_url: https://4444j99.github.io/portfolio/
+
+timeline:
+  researched: "2026-02-14"
+  qualified: "2026-02-16"
+  materials_ready: null
+  submitted: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+
+tags: []
+source: 04-application-tracker.md
+notes: null

@@ -1,0 +1,55 @@
+id: whiting-nonfiction
+name: "Whiting Creative Nonfiction Grant"
+track: grant
+status: qualified
+outcome: null
+
+target:
+  organization: "Whiting Foundation"
+  url: https://whiting.org
+  application_url: https://whiting.org/writers/creative-nonfiction-grant
+  portal: custom
+
+deadline:
+  date: null
+  time: null
+  type: tba
+
+amount:
+  value: 40000
+  currency: USD
+  type: lump_sum
+  benefits_cliff_note: "Exceeds Medicaid -> Essential Plan. Call NYLAG."
+
+fit:
+  score: 8
+  identity_position: systems-artist
+  framing: "Systems artist and nonfiction writer exploring recursive structures in institutional critique"
+  lead_organs: [I, V, META]
+
+submission:
+  blocks_used:
+    artist_statement: identity/2min
+    project_description: projects/organvm-system
+  variant_ids: {}
+  materials_attached: []
+  portfolio_url: https://4444j99.github.io/portfolio/
+
+timeline:
+  researched: "2026-02-14"
+  qualified: "2026-02-16"
+  materials_ready: null
+  submitted: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+
+tags: []
+source: 04-application-tracker.md
+notes: "Approximate deadline Apr 2026 TBA."

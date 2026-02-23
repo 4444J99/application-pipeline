@@ -1,0 +1,55 @@
+id: prix-ars-electronica
+name: "Prix Ars Electronica 2026"
+track: prize
+status: staged
+outcome: null
+
+target:
+  organization: "Ars Electronica"
+  url: https://ars.electronica.art
+  application_url: https://ars.electronica.art/prix
+  portal: custom
+
+deadline:
+  date: "2026-03-04"
+  time: null
+  type: hard
+
+amount:
+  value: 10000
+  currency: EUR
+  type: lump_sum
+  benefits_cliff_note: null
+
+fit:
+  score: 8
+  identity_position: systems-artist
+  framing: "Systems artist creating recursive computational structures as artistic practice"
+  lead_organs: [I, II, META]
+
+submission:
+  blocks_used:
+    artist_statement: identity/2min
+    project_description: projects/organvm-system
+  variant_ids: {}
+  materials_attached: []
+  portfolio_url: https://4444j99.github.io/portfolio/
+
+timeline:
+  researched: "2026-02-14"
+  qualified: "2026-02-16"
+  materials_ready: "2026-02-18"
+  submitted: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+
+tags: []
+source: 04-application-tracker.md
+notes: null

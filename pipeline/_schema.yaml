@@ -1,0 +1,142 @@
+# Application Pipeline Entry Schema
+# Each pipeline YAML file follows this structure.
+# Required fields marked with (required), all others optional.
+
+# --- Identification ---
+# id (required): kebab-case unique identifier, matches filename
+#   e.g. "creative-capital-2027"
+# name (required): Human-readable target name
+#   e.g. "Creative Capital 2027 Open Call"
+# track (required): Application category
+#   enum: grant | residency | job | fellowship | writing | emergency | prize | program | consulting
+# status (required): Current pipeline stage
+#   enum: research | qualified | drafting | staged | submitted | acknowledged | interview | outcome
+# outcome: Final result (null until resolved)
+#   enum: accepted | rejected | withdrawn | expired | null
+
+# --- Target Information ---
+# target:
+#   organization (required): Name of the funding/hiring organization
+#   url: Organization homepage
+#   application_url: Direct link to application form/portal
+#   portal: Application submission platform
+#     enum: submittable | slideroom | email | custom | web | greenhouse | workable
+
+# --- Deadline ---
+# deadline:
+#   date: ISO date (YYYY-MM-DD) or null for rolling
+#   time: Time with timezone, e.g. "15:00 ET"
+#   type (required): Deadline behavior
+#     enum: hard | rolling | window | tba
+
+# --- Compensation ---
+# amount:
+#   value: Numeric amount (0 for unpaid programs)
+#   currency: ISO currency code (USD, EUR)
+#   type: Compensation structure
+#     enum: lump_sum | stipend | salary | fee | in_kind | variable
+#   benefits_cliff_note: Impact on SNAP/Medicaid/Fair Fares (consult NYLAG)
+
+# --- Fit Assessment ---
+# fit:
+#   score (required): 1-10 fit rating
+#   identity_position: Which framing to use
+#     enum: systems-artist | creative-technologist | educator | community-practitioner
+#   framing: One-line description of how to position for this target
+#   lead_organs: Which ORGANVM organs to emphasize (list of roman numerals)
+
+# --- Submission Composition ---
+# submission:
+#   blocks_used: Map of slot → block path
+#     artist_statement: identity/2min
+#     project_description: projects/organvm-system
+#     methodology: methodology/ai-conductor
+#   variant_ids: Map of material type → variant path
+#     cover_letter: cover-letters/grant-art-tech-v2
+#   materials_attached: List of material file paths
+#   portfolio_url: URL to portfolio or work samples
+
+# --- Timeline ---
+# timeline:
+#   researched: ISO date
+#   qualified: ISO date
+#   materials_ready: ISO date
+#   submitted: ISO date
+#   acknowledged: ISO date
+#   interview: ISO date
+#   outcome_date: ISO date
+
+# --- Conversion Tracking ---
+# conversion:
+#   response_received: boolean
+#   response_type: acknowledgment | interview | rejection | offer | null
+#   time_to_response_days: integer or null
+#   feedback: Free text from reviewer/organization
+
+# --- Metadata ---
+# tags: List of strings (omega criteria cross-refs, categories)
+# source: Origin document reference
+# notes: Free text for context, reviewer advice, special instructions
+
+# --- Example ---
+example:
+  id: creative-capital-2027
+  name: Creative Capital 2027 Open Call
+  track: grant
+  status: staged
+  outcome: null
+
+  target:
+    organization: Creative Capital
+    url: https://creative-capital.org/
+    application_url: https://creative-capital.org/creative-capital-award/award-application/
+    portal: custom
+
+  deadline:
+    date: "2026-04-02"
+    time: "15:00 ET"
+    type: hard
+
+  amount:
+    value: 50000
+    currency: USD
+    type: lump_sum
+    benefits_cliff_note: "Exceeds Medicaid -> Essential Plan. Call NYLAG."
+
+  fit:
+    score: 9
+    identity_position: systems-artist
+    framing: "adventurous and imaginative interdisciplinary work"
+    lead_organs: [IV, I, META]
+
+  submission:
+    blocks_used:
+      artist_statement: identity/2min
+      project_description: projects/organvm-system
+      methodology: methodology/ai-conductor
+    variant_ids:
+      cover_letter: cover-letters/grant-art-tech-v2
+    materials_attached:
+      - resumes/creative-tech-2026.pdf
+    portfolio_url: https://4444j99.github.io/portfolio/
+
+  timeline:
+    researched: "2026-02-14"
+    qualified: "2026-02-16"
+    materials_ready: "2026-02-18"
+    submitted: null
+    acknowledged: null
+    interview: null
+    outcome_date: null
+
+  conversion:
+    response_received: false
+    response_type: null
+    time_to_response_days: null
+    feedback: null
+
+  tags: ["#5", "#9"]
+  source: 10-funding-strategy.md
+  notes: |
+    HIGHEST-FIT TARGET. Panelist advice: "Describe your project
+    with the clarity of a children's book."

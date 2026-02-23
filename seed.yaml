@@ -1,0 +1,23 @@
+name: application-pipeline
+organ: LIMINAL
+tier: standard
+status: LOCAL
+description: >
+  Career application pipeline — structured conversion tracking,
+  modular narrative blocks, variant testing, and analytics for
+  grant/residency/job applications.
+
+produces: []
+consumes:
+  - source: META-ORGANVM/organvm-corpvs-testamentvm
+    edge: covenant-ark-metrics
+    description: Canonical identity statements, metrics, evidence inventory
+
+subscriptions: []
+
+tags:
+  - career-infrastructure
+  - application-tracking
+  - narrative-blocks
+
+implementation_status: ACTIVE

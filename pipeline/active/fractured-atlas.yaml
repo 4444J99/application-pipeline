@@ -1,0 +1,55 @@
+id: fractured-atlas
+name: "Fractured Atlas Fiscal Sponsorship"
+track: program
+status: qualified
+outcome: null
+
+target:
+  organization: "Fractured Atlas"
+  url: https://fracturedatlas.org
+  application_url: https://fracturedatlas.org/apply
+  portal: custom
+
+deadline:
+  date: null
+  time: null
+  type: rolling
+
+amount:
+  value: 0
+  currency: USD
+  type: variable
+  benefits_cliff_note: null
+
+fit:
+  score: 7
+  identity_position: systems-artist
+  framing: "Systems artist seeking fiscal infrastructure for grant-eligible project funding"
+  lead_organs: [IV, META]
+
+submission:
+  blocks_used:
+    artist_statement: identity/2min
+    project_description: projects/organvm-system
+  variant_ids: {}
+  materials_attached: []
+  portfolio_url: https://4444j99.github.io/portfolio/
+
+timeline:
+  researched: "2026-02-14"
+  qualified: "2026-02-16"
+  materials_ready: null
+  submitted: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+
+tags: []
+source: 04-application-tracker.md
+notes: "Infrastructure/fiscal sponsorship. Enables tax-deductible donations."
