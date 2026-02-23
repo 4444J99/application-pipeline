@@ -8,7 +8,7 @@
 | Total repositories | 101 |
 | Implementation status | 92 ACTIVE, 9 ARCHIVED |
 | GitHub organizations | 8 |
-| Published essays | 0 (~404K+ words) |
+| Published essays | 42 (~404K+ words) |
 | Total documentation | ~410K+ words |
 | Named development sprints | 33 |
 | CI/CD workflows | 82+ repos |

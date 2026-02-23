@@ -29,8 +29,11 @@ fit:
 
 submission:
   blocks_used:
-    artist_statement: identity/2min
+    artist_statement: identity/5min
     project_description: projects/organvm-system
+    methodology: methodology/process-as-product
+    evidence: evidence/work-samples
+    framing: framings/systems-artist
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/

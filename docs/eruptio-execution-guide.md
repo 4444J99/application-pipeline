@@ -27,8 +27,8 @@
 **Platform:** SlideRoom | **Fee:** $12
 
 ### Materials to upload:
-- **Project Proposal PDF:** `submission-materials/watermill-proposal.md` — export to PDF, upload (≤5 pages)
-- **Artist Statement:** `submission-materials/watermill-artist-statement.md` — paste ~200 word version
+- **Project Proposal PDF:** `materials/work-samples/watermill-proposal.md` — export to PDF, upload (≤5 pages)
+- **Artist Statement:** `materials/work-samples/watermill-artist-statement.md` — paste ~200 word version
 - **Short Bio:** same file — paste ~75 word version
 - **Work Samples:** URLs below
 
@@ -45,7 +45,7 @@
 - Discipline field → "Interdisciplinary — Systems Art / Performance / Digital Media"
 - Video required but no time → submit PDF + screenshots instead
 
-### Full script: `submission-scripts/watermill.md`
+### Full script: `scripts/legacy-submission/watermill.md`
 
 ---
 
@@ -61,9 +61,9 @@
 
 | Variable | Value |
 |----------|-------|
-| `DATABASE_URL` | `postgresql://neondb_owner:npg_L6jQf8lbiIVn@ep-dark-cherry-ah3f7vpu-pooler.c-3.us-east-1.aws.neon.tech/neondb?sslmode=require` |
-| `JWT_SECRET` | `06478ff96dfbfc3f2ec28be8d0c543ab45c3ce00d54a95cf8b02b9b8ee1ddec5` |
-| `PROFILE_KEY_ENC_KEY` | `3ba0e0545c62cd9e9cea1e9d8b1ef26aeaa6f2e3e22376515ac84eda80cedb5e` |
+| `DATABASE_URL` | `<REDACTED — rotate credential and set via Render dashboard>` |
+| `JWT_SECRET` | `<REDACTED — rotate credential and set via Render dashboard>` |
+| `PROFILE_KEY_ENC_KEY` | `<REDACTED — rotate credential and set via Render dashboard>` |
 | `NODE_ENV` | `production` |
 
 ### Verify:
@@ -78,7 +78,7 @@ GET <api-url>/demo/profile  → Full demo profile
 - Copy Deploy Hook URL → add as `RENDER_DEPLOY_HOOK` secret to the repo
 - Update `registry-v2.json`: add `"url"`, set `"revenue_status": "beta"`
 
-### Full script: `submission-scripts/life-deploy.md`
+### Full script: `scripts/legacy-submission/life-deploy.md`
 
 ---
 
@@ -118,7 +118,7 @@ GET <api-url>/demo/profile  → Full demo profile
 | Portfolio | `https://4444j99.github.io/portfolio/` |
 | Resume | `https://4444j99.github.io/portfolio/resume/` |
 
-### Full script: `submission-scripts/google-cl5.md`
+### Full script: `scripts/legacy-submission/google-cl5.md`
 
 ---
 
@@ -127,12 +127,12 @@ GET <api-url>/demo/profile  → Full demo profile
 **Platform:** Submittable | **Award:** $15,000 unrestricted
 
 ### Key fields:
-- **Artist Statement** (~250 words): in `submission-scripts/artadia-nyc.md`
+- **Artist Statement** (~250 words): in `scripts/legacy-submission/artadia-nyc.md`
 - **Bio/CV** (~100 words): same file
 - **Work Samples:** 5 URL-based samples with descriptions (same file)
 - **Medium/Discipline:** "New Media / Digital Art / Systems Art"
 
-### Full script: `submission-scripts/artadia-nyc.md`
+### Full script: `scripts/legacy-submission/artadia-nyc.md`
 
 ---
 
@@ -142,7 +142,7 @@ GET <api-url>/demo/profile  → Full demo profile
 
 ### Key fields:
 - **Project Title:** "Governance as Performance Score: An AI-Orchestrated Framework for Collaborative Performing Arts Production"
-- **Summary** (~250 words): in `submission-scripts/doris-duke.md`
+- **Summary** (~250 words): in `scripts/legacy-submission/doris-duke.md`
 - **Performing Arts Connection:** same file
 - **Bio** (~200 words): same file
 - **Budget:** $150K over 8 months (breakdown in script)
@@ -150,7 +150,7 @@ GET <api-url>/demo/profile  → Full demo profile
 ### Critical framing note:
 This is a **performing arts** grant. Lead with governance-as-choreography, community salons as performance, AI orchestration as conducting. NOT a software grant.
 
-### Full script: `submission-scripts/doris-duke.md`
+### Full script: `scripts/legacy-submission/doris-duke.md`
 
 ---
 
@@ -161,12 +161,12 @@ This is a **performing arts** grant. Lead with governance-as-choreography, commu
 ### Key fields:
 - **Category:** Digital Humanity (recommended)
 - **Project Title:** "The Eight-Organ Creative-Institutional System: Governance as Artistic Medium"
-- **Short Description** (~100 words): in `submission-scripts/prix-ars-starts.md`
+- **Short Description** (~100 words): in `scripts/legacy-submission/prix-ars-starts.md`
 - **Extended Description** (~500 words): same file
 - **Artist Statement** (~200 words): same file
 - **Technical Description** (~150 words): same file
 
-### Full script: `submission-scripts/prix-ars-starts.md`
+### Full script: `scripts/legacy-submission/prix-ars-starts.md`
 
 ---
 
@@ -176,11 +176,11 @@ This is a **performing arts** grant. Lead with governance-as-choreography, commu
 
 ### Key fields:
 - **Professional Writing Credentials:** MFA, 42 essays, ~404K+ words, 11 years teaching
-- **Financial Hardship Statement** (~200 words): in `submission-scripts/pen-america.md`
+- **Financial Hardship Statement** (~200 words): in `scripts/legacy-submission/pen-america.md`
 - **Use of Funds** (~100 words): same file
 - **Writing Sample:** Link to public-process essays
 
-### Full script: `submission-scripts/pen-america.md`
+### Full script: `scripts/legacy-submission/pen-america.md`
 
 ---
 
@@ -231,7 +231,7 @@ All materials are organized under `docs/applications/`:
 docs/applications/
 ├── eruptio-execution-guide.md          ← THIS FILE (master checklist)
 ├── 04-application-tracker.md           ← Status tracking
-├── submission-scripts/
+├── scripts/legacy-submission/
 │   ├── watermill.md                    ← Full Watermill script
 │   ├── google-cl5.md                   ← Full CL5 script
 │   ├── artadia-nyc.md                  ← Full Artadia script
@@ -239,7 +239,7 @@ docs/applications/
 │   ├── prix-ars-starts.md              ← Full Prix Ars + S+T+ARTS script
 │   ├── pen-america.md                  ← Full PEN America script
 │   └── life-deploy.md                  ← Full deploy script
-└── submission-materials/
+└── materials/work-samples/
     ├── watermill-proposal.md           ← Standalone PDF-ready proposal
     └── watermill-artist-statement.md   ← Standalone artist statement + bio
 ```

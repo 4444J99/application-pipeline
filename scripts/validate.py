@@ -22,6 +22,31 @@ VALID_PORTALS = {"submittable", "slideroom", "email", "custom", "web", "greenhou
 VALID_AMOUNT_TYPES = {"lump_sum", "stipend", "salary", "fee", "in_kind", "variable"}
 VALID_POSITIONS = {"systems-artist", "creative-technologist", "educator", "community-practitioner"}
 
+# Valid status transitions: each status maps to the set of statuses it can reach
+VALID_TRANSITIONS = {
+    "research": {"qualified", "withdrawn"},
+    "qualified": {"drafting", "staged", "withdrawn"},
+    "drafting": {"staged", "qualified", "withdrawn"},
+    "staged": {"submitted", "drafting", "withdrawn"},
+    "submitted": {"acknowledged", "interview", "outcome", "withdrawn"},
+    "acknowledged": {"interview", "outcome", "withdrawn"},
+    "interview": {"outcome", "withdrawn"},
+    "outcome": set(),  # terminal
+}
+
+
+def _reachable_statuses(from_status: str) -> set[str]:
+    """Return all statuses reachable from a given status via valid transitions."""
+    reachable = set()
+    frontier = [from_status]
+    while frontier:
+        current = frontier.pop()
+        for next_status in VALID_TRANSITIONS.get(current, set()):
+            if next_status not in reachable:
+                reachable.add(next_status)
+                frontier.append(next_status)
+    return reachable
+
 
 def validate_entry(filepath: Path) -> list[str]:
     """Validate a single pipeline YAML file. Returns list of errors."""
@@ -84,6 +109,41 @@ def validate_entry(filepath: Path) -> list[str]:
         position = fit.get("identity_position")
         if position and position not in VALID_POSITIONS:
             errors.append(f"Invalid identity_position: '{position}'")
+
+    # Status transition validation
+    status = data.get("status")
+    if status and status in VALID_TRANSITIONS:
+        timeline = data.get("timeline", {})
+        if isinstance(timeline, dict):
+            # Check that the current status is reachable from the timeline evidence
+            # The timeline records when each stage was reached; if a later stage
+            # has a date but an earlier required stage doesn't, that's suspicious
+            stage_order = ["researched", "qualified", "materials_ready", "submitted",
+                           "acknowledged", "interview", "outcome_date"]
+            stage_to_status = {
+                "researched": "research",
+                "qualified": "qualified",
+                "materials_ready": "staged",
+                "submitted": "submitted",
+                "acknowledged": "acknowledged",
+                "interview": "interview",
+                "outcome_date": "outcome",
+            }
+            # Find the highest stage with a date set
+            highest_dated = None
+            for stage_key in stage_order:
+                if timeline.get(stage_key):
+                    highest_dated = stage_to_status.get(stage_key)
+            # If timeline shows a stage that can't reach current status, warn
+            if highest_dated and status in VALID_TRANSITIONS:
+                # Verify status is consistent: status should match or be reachable
+                # from the highest dated stage
+                reachable = _reachable_statuses(highest_dated)
+                if status not in reachable and status != highest_dated:
+                    errors.append(
+                        f"Status '{status}' not reachable from timeline "
+                        f"(highest dated stage: '{highest_dated}')"
+                    )
 
     # Block path validation
     submission = data.get("submission", {})

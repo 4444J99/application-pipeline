@@ -5,13 +5,13 @@ A/B tracked material versions for conversion analysis.
 ## Naming Convention
 
 ```
-{target-type}-v{version}.md
+{company}-{role}-{focus}.md
 ```
 
 Examples:
-- `cover-letters/grant-art-tech-v1.md` — Grant cover letter, art-tech framing, version 1
-- `statements/systems-artist-short-v2.md` — Short artist statement, systems-artist position, version 2
-- `project-pitches/organvm-residency-v1.md` — ORGANVM project pitch for residency contexts
+- `cover-letters/anthropic-fde-custom-agents.md` — Anthropic FDE cover letter, custom agents focus
+- `cover-letters/together-ai-lead-dx-documentation.md` — Together AI lead DX cover letter, documentation focus
+- `cover-letters/huggingface-dev-advocate-hub-enterprise.md` — HuggingFace dev advocate, hub enterprise focus
 
 ## Version Rules
 
