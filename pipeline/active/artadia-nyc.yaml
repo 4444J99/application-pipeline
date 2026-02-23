@@ -1,8 +1,8 @@
 id: artadia-nyc
 name: Artadia NYC Awards
 track: grant
-status: staged
-outcome: null
+status: withdrawn
+outcome: ineligible
 target:
   organization: Artadia
   url: https://artadia.org
@@ -70,5 +70,5 @@ conversion:
   feedback: null
 tags: []
 source: 04-application-tracker.md
-notes: null
+notes: 2026 cycle is Chicago (Cook County) only. NYC cycle not currently open. Revisit when NYC cycle announced.
 last_touched: "2026-02-23"
