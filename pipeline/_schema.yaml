@@ -108,6 +108,40 @@
 #   - status: Current state of this outreach action
 #     enum: planned | done | waiting
 
+# --- Recommendations ---
+# recommendations: List of recommenders for applications that require letters
+#   - name: Recommender's full name
+#   - relationship: How you know them (e.g. "MFA thesis advisor", "former colleague")
+#   - email: Contact email
+#   - status: Current state of the request
+#     enum: not_asked | asked | confirmed | submitted | declined
+#   - asked_date: ISO date when you sent the request
+#   - deadline: ISO date by which the letter must be submitted
+#   - brief_sent: boolean — whether you sent them a brief about the opportunity
+#   - note: Any relevant context
+
+# --- Portal Fields ---
+# portal_fields: Portal-specific field metadata for submission composition
+#   platform: Portal name (matches target.portal)
+#   fields: List of field definitions
+#     - name: Field label as shown on the portal (e.g. "Artist Statement")
+#       char_limit: Maximum characters (null if unknown)
+#       word_limit: Maximum words (null if unknown)
+#       format: Required format
+#         enum: text | textarea | file_upload | url | dropdown | checkbox
+#       file_types: Accepted file types for uploads (e.g. ["pdf", "jpg", "mp4"])
+#       max_file_size_mb: Maximum file size in MB (null if unknown)
+#       required: boolean
+#       note: Any special instructions from the portal
+
+# --- Withdrawal / Deprioritization ---
+# withdrawal_reason: Structured reason when an entry is withdrawn or deprioritized
+#   reason: Primary reason category
+#     enum: missed_deadline | low_fit | effort_too_high | duplicate | ineligible | strategic_shift | personal | other
+#   detail: Free text explanation
+#   date: ISO date of the decision
+#   reopen: boolean — whether this could be revisited in a future cycle
+
 # --- Metadata ---
 # tags: List of strings (omega criteria cross-refs, categories)
 # source: Origin document reference

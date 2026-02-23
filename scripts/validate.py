@@ -6,12 +6,7 @@ from pathlib import Path
 
 import yaml
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-PIPELINE_DIRS = [
-    REPO_ROOT / "pipeline" / "active",
-    REPO_ROOT / "pipeline" / "submitted",
-    REPO_ROOT / "pipeline" / "closed",
-]
+from pipeline_lib import REPO_ROOT, ALL_PIPELINE_DIRS as PIPELINE_DIRS
 
 REQUIRED_FIELDS = {"id", "name", "track", "status"}
 VALID_TRACKS = {"grant", "residency", "job", "fellowship", "writing", "emergency", "prize", "program", "consulting"}
@@ -33,6 +28,12 @@ VALID_OUTREACH_TYPES = {
 }
 VALID_OUTREACH_CHANNELS = {"email", "linkedin", "phone", "in_person", "webinar", "other"}
 VALID_OUTREACH_STATUSES = {"planned", "done", "waiting"}
+VALID_RECOMMENDATION_STATUSES = {"not_asked", "asked", "confirmed", "submitted", "declined"}
+VALID_PORTAL_FIELD_FORMATS = {"text", "textarea", "file_upload", "url", "dropdown", "checkbox"}
+VALID_WITHDRAWAL_REASONS = {
+    "missed_deadline", "low_fit", "effort_too_high", "duplicate",
+    "ineligible", "strategic_shift", "personal", "other",
+}
 
 # Valid status transitions: each status maps to the set of statuses it can reach
 VALID_TRANSITIONS = {
@@ -216,6 +217,58 @@ def validate_entry(filepath: Path) -> list[str]:
                 ostatus = item.get("status")
                 if ostatus and ostatus not in VALID_OUTREACH_STATUSES:
                     errors.append(f"outreach[{i}].status '{ostatus}' invalid (valid: {VALID_OUTREACH_STATUSES})")
+
+    # Recommendations validation
+    recommendations = data.get("recommendations")
+    if recommendations is not None:
+        if not isinstance(recommendations, list):
+            errors.append("recommendations must be a list")
+        else:
+            for i, rec in enumerate(recommendations):
+                if not isinstance(rec, dict):
+                    errors.append(f"recommendations[{i}] must be a mapping")
+                    continue
+                rstatus = rec.get("status")
+                if rstatus and rstatus not in VALID_RECOMMENDATION_STATUSES:
+                    errors.append(
+                        f"recommendations[{i}].status '{rstatus}' invalid "
+                        f"(valid: {VALID_RECOMMENDATION_STATUSES})"
+                    )
+
+    # Portal fields validation
+    portal_fields = data.get("portal_fields")
+    if portal_fields is not None:
+        if not isinstance(portal_fields, dict):
+            errors.append("portal_fields must be a mapping")
+        else:
+            fields = portal_fields.get("fields")
+            if fields is not None:
+                if not isinstance(fields, list):
+                    errors.append("portal_fields.fields must be a list")
+                else:
+                    for i, field in enumerate(fields):
+                        if not isinstance(field, dict):
+                            errors.append(f"portal_fields.fields[{i}] must be a mapping")
+                            continue
+                        fmt = field.get("format")
+                        if fmt and fmt not in VALID_PORTAL_FIELD_FORMATS:
+                            errors.append(
+                                f"portal_fields.fields[{i}].format '{fmt}' invalid "
+                                f"(valid: {VALID_PORTAL_FIELD_FORMATS})"
+                            )
+
+    # Withdrawal reason validation
+    withdrawal = data.get("withdrawal_reason")
+    if withdrawal is not None:
+        if not isinstance(withdrawal, dict):
+            errors.append("withdrawal_reason must be a mapping")
+        else:
+            reason = withdrawal.get("reason")
+            if reason and reason not in VALID_WITHDRAWAL_REASONS:
+                errors.append(
+                    f"withdrawal_reason.reason '{reason}' invalid "
+                    f"(valid: {VALID_WITHDRAWAL_REASONS})"
+                )
 
     return errors
 

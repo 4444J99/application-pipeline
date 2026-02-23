@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Generate a daily work plan sorted by deadline urgency + fit score.
 
+DEPRECATED: Use `python scripts/standup.py --section plan` instead.
+standup.py section 3 provides the same functionality plus additional context.
+
 Reads pipeline entries, prioritizes by deadline urgency (<14 days),
 then sorts remaining by composite fit score. Groups by effort level
 and fits within a time budget.
@@ -8,71 +11,24 @@ and fits within a time budget.
 
 import argparse
 import sys
+import warnings
 from datetime import datetime
 from pathlib import Path
 
-import yaml
+from pipeline_lib import (
+    EFFORT_MINUTES, load_entries, get_effort as get_effort_level,
+    get_score, format_amount, parse_datetime,
+)
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-PIPELINE_DIRS = [
-    REPO_ROOT / "pipeline" / "active",
-    REPO_ROOT / "pipeline" / "submitted",
-    REPO_ROOT / "pipeline" / "closed",
-]
+warnings.warn(
+    "daily_batch.py is deprecated. Use 'python scripts/standup.py --section plan' instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)
 
 ACTIONABLE_STATUSES = {"qualified", "drafting", "staged"}
 
-# Time estimates in minutes
-EFFORT_MINUTES = {
-    "quick": {"min": 15, "max": 45, "default": 30},
-    "standard": {"min": 60, "max": 120, "default": 90},
-    "deep": {"min": 180, "max": 360, "default": 270},
-    "complex": {"min": 480, "max": 960, "default": 720},
-}
-
 URGENCY_DAYS = 14
-
-
-def load_entries() -> list[dict]:
-    """Load all pipeline YAML entries."""
-    entries = []
-    for pipeline_dir in PIPELINE_DIRS:
-        if not pipeline_dir.exists():
-            continue
-        for filepath in sorted(pipeline_dir.glob("*.yaml")):
-            if filepath.name.startswith("_"):
-                continue
-            with open(filepath) as f:
-                data = yaml.safe_load(f)
-            if isinstance(data, dict):
-                entries.append(data)
-    return entries
-
-
-def parse_date(date_str) -> datetime | None:
-    """Parse a date string into a datetime object."""
-    if not date_str:
-        return None
-    try:
-        return datetime.strptime(str(date_str), "%Y-%m-%d")
-    except ValueError:
-        return None
-
-
-def get_effort_level(entry: dict) -> str:
-    """Get effort level from submission, defaulting to 'standard'."""
-    sub = entry.get("submission", {})
-    if isinstance(sub, dict):
-        return sub.get("effort_level", "standard") or "standard"
-    return "standard"
-
-
-def get_score(entry: dict) -> float:
-    """Get composite fit score."""
-    fit = entry.get("fit", {})
-    if isinstance(fit, dict):
-        return float(fit.get("score", 0))
-    return 0.0
 
 
 def get_deadline_info(entry: dict) -> tuple[datetime | None, str, int | None]:
@@ -82,7 +38,7 @@ def get_deadline_info(entry: dict) -> tuple[datetime | None, str, int | None]:
         return None, "unknown", None
 
     dtype = deadline.get("type", "unknown")
-    date = parse_date(deadline.get("date"))
+    date = parse_datetime(deadline.get("date"))
 
     if date:
         days_left = (date - datetime.now()).days
@@ -91,31 +47,14 @@ def get_deadline_info(entry: dict) -> tuple[datetime | None, str, int | None]:
     return None, dtype, None
 
 
-def format_amount(entry: dict) -> str:
-    """Format amount for display."""
-    amount = entry.get("amount", {})
-    if not isinstance(amount, dict):
-        return ""
-    value = amount.get("value", 0)
-    if value == 0:
-        atype = amount.get("type", "")
-        if atype == "in_kind":
-            return "in-kind"
-        return ""
-    currency = amount.get("currency", "USD")
-    if currency == "EUR":
-        return f"EUR {value:,}"
-    return f"${value:,}"
-
-
 def format_entry_line(entry: dict, days_left: int | None = None) -> str:
     """Format a single entry for display."""
     name = entry.get("name", entry.get("id", "?"))
     status = entry.get("status", "?")
     effort = get_effort_level(entry)
     score = get_score(entry)
-    amount = format_amount(entry)
-    est = EFFORT_MINUTES.get(effort, EFFORT_MINUTES["standard"])
+    amount = format_amount(entry.get("amount"))
+    est = EFFORT_MINUTES.get(effort, 90)
 
     deadline_str = ""
     if days_left is not None:
@@ -128,10 +67,10 @@ def format_entry_line(entry: dict, days_left: int | None = None) -> str:
         if dtype in ("rolling", "tba"):
             deadline_str = f" — {dtype}"
 
-    amount_str = f" — {amount}" if amount else ""
+    amount_str = f" — {amount}" if amount and amount != "—" else ""
     return (
         f"    {name}{deadline_str} — {status} — "
-        f"{effort} (~{est['default']} min){amount_str}"
+        f"{effort} (~{est} min){amount_str}"
     )
 
 
@@ -190,7 +129,7 @@ def generate_batch(hours: float, show_all: bool = False):
         print(f"\n  URGENT (deadline <{URGENCY_DAYS}d):")
         for days_left, entry in urgent:
             effort = get_effort_level(entry)
-            est = EFFORT_MINUTES.get(effort, EFFORT_MINUTES["standard"])["default"]
+            est = EFFORT_MINUTES.get(effort, 90)
             marker = "!!!" if days_left <= 7 else "! "
             line = format_entry_line(entry, days_left)
             if used_minutes + est <= budget_minutes or show_all:
@@ -205,7 +144,7 @@ def generate_batch(hours: float, show_all: bool = False):
         print(f"\n  BY SCORE:")
         for entry in by_score:
             effort = get_effort_level(entry)
-            est = EFFORT_MINUTES.get(effort, EFFORT_MINUTES["standard"])["default"]
+            est = EFFORT_MINUTES.get(effort, 90)
             score = get_score(entry)
             line = format_entry_line(entry)
             if used_minutes + est <= budget_minutes:

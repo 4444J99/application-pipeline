@@ -2,33 +2,10 @@
 """Analyze conversion rates by track, identity position, and framing."""
 
 import sys
-from pathlib import Path
 
-import yaml
+from pipeline_lib import SIGNALS_DIR, load_entries
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-PIPELINE_DIRS = [
-    REPO_ROOT / "pipeline" / "active",
-    REPO_ROOT / "pipeline" / "submitted",
-    REPO_ROOT / "pipeline" / "closed",
-]
-CONVERSION_LOG = REPO_ROOT / "signals" / "conversion-log.yaml"
-
-
-def load_entries() -> list[dict]:
-    """Load all pipeline YAML entries."""
-    entries = []
-    for pipeline_dir in PIPELINE_DIRS:
-        if not pipeline_dir.exists():
-            continue
-        for filepath in sorted(pipeline_dir.glob("*.yaml")):
-            if filepath.name.startswith("_"):
-                continue
-            with open(filepath) as f:
-                data = yaml.safe_load(f)
-            if isinstance(data, dict):
-                entries.append(data)
-    return entries
+CONVERSION_LOG = SIGNALS_DIR / "conversion-log.yaml"
 
 
 def analyze_by_dimension(entries: list[dict], dimension: str, extract_fn) -> dict:

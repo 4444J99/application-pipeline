@@ -228,3 +228,135 @@ def test_transition_inconsistent_timeline():
         filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
         errors = validate_entry(filepath)
         assert any("not reachable" in e for e in errors)
+
+
+# --- Recommendations validation ---
+
+
+def test_valid_recommendations():
+    """An entry with valid recommendations should pass."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "test-entry",
+            "name": "Test Entry",
+            "track": "grant",
+            "status": "qualified",
+            "outcome": None,
+            "recommendations": [
+                {"name": "Jane Doe", "status": "asked", "relationship": "advisor"},
+            ],
+        }
+        filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
+        errors = validate_entry(filepath)
+        assert errors == [], f"Expected no errors, got: {errors}"
+
+
+def test_invalid_recommendation_status():
+    """An entry with invalid recommendation status should error."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "test-entry",
+            "name": "Test Entry",
+            "track": "grant",
+            "status": "qualified",
+            "outcome": None,
+            "recommendations": [
+                {"name": "Jane Doe", "status": "maybe"},
+            ],
+        }
+        filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
+        errors = validate_entry(filepath)
+        assert any("recommendations[0].status" in e for e in errors)
+
+
+# --- Portal fields validation ---
+
+
+def test_valid_portal_fields():
+    """An entry with valid portal_fields should pass."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "test-entry",
+            "name": "Test Entry",
+            "track": "grant",
+            "status": "qualified",
+            "outcome": None,
+            "portal_fields": {
+                "platform": "submittable",
+                "fields": [
+                    {"name": "Artist Statement", "format": "textarea", "char_limit": 2000},
+                ],
+            },
+        }
+        filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
+        errors = validate_entry(filepath)
+        assert errors == [], f"Expected no errors, got: {errors}"
+
+
+def test_invalid_portal_field_format():
+    """An entry with invalid portal field format should error."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "test-entry",
+            "name": "Test Entry",
+            "track": "grant",
+            "status": "qualified",
+            "outcome": None,
+            "portal_fields": {
+                "platform": "submittable",
+                "fields": [
+                    {"name": "Test", "format": "hologram"},
+                ],
+            },
+        }
+        filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
+        errors = validate_entry(filepath)
+        assert any("portal_fields.fields[0].format" in e for e in errors)
+
+
+# --- Withdrawal reason validation ---
+
+
+def test_valid_withdrawal_reason():
+    """An entry with valid withdrawal_reason should pass."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "test-entry",
+            "name": "Test Entry",
+            "track": "grant",
+            "status": "outcome",
+            "outcome": "withdrawn",
+            "withdrawal_reason": {
+                "reason": "missed_deadline",
+                "detail": "Deadline passed",
+                "date": "2026-02-01",
+                "reopen": False,
+            },
+        }
+        filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
+        errors = validate_entry(filepath)
+        assert errors == [], f"Expected no errors, got: {errors}"
+
+
+def test_invalid_withdrawal_reason():
+    """An entry with invalid withdrawal reason should error."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "test-entry",
+            "name": "Test Entry",
+            "track": "grant",
+            "status": "outcome",
+            "outcome": "withdrawn",
+            "withdrawal_reason": {
+                "reason": "aliens",
+            },
+        }
+        filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
+        errors = validate_entry(filepath)
+        assert any("withdrawal_reason.reason" in e for e in errors)

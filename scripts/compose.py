@@ -6,16 +6,9 @@ import re
 import sys
 from pathlib import Path
 
-import yaml
-
-REPO_ROOT = Path(__file__).resolve().parent.parent
-PIPELINE_DIRS = [
-    REPO_ROOT / "pipeline" / "active",
-    REPO_ROOT / "pipeline" / "submitted",
-    REPO_ROOT / "pipeline" / "closed",
-]
-BLOCKS_DIR = REPO_ROOT / "blocks"
-VARIANTS_DIR = REPO_ROOT / "variants"
+from pipeline_lib import (
+    BLOCKS_DIR, VARIANTS_DIR, SUBMISSIONS_DIR, load_entry_by_id,
+)
 
 # Common portal limits for flagging
 WORD_LIMITS = [100, 150, 250, 500, 1000]
@@ -24,14 +17,8 @@ CHAR_LIMITS = [500, 1000, 2000, 5000]
 
 def find_entry(target_id: str) -> dict | None:
     """Find a pipeline entry by ID."""
-    for pipeline_dir in PIPELINE_DIRS:
-        if not pipeline_dir.exists():
-            continue
-        filepath = pipeline_dir / f"{target_id}.yaml"
-        if filepath.exists():
-            with open(filepath) as f:
-                return yaml.safe_load(f)
-    return None
+    _, data = load_entry_by_id(target_id)
+    return data
 
 
 def load_block(block_path: str) -> str | None:
@@ -212,12 +199,13 @@ def main():
                         help="Warn if composed document exceeds N words")
     parser.add_argument("--word-count", action="store_true",
                         help="Report word count only (don't print document)")
+    parser.add_argument("--snapshot", action="store_true",
+                        help="Save composed output to pipeline/submissions/{id}-{date}.md")
     args = parser.parse_args()
 
     entry = find_entry(args.target)
     if not entry:
         print(f"Error: No pipeline entry found for '{args.target}'", file=sys.stderr)
-        print(f"Searched: {[str(d) for d in PIPELINE_DIRS]}", file=sys.stderr)
         sys.exit(1)
 
     # Counts mode
@@ -245,12 +233,20 @@ def main():
         print(f"WARNING: Document is {wc} words, exceeds limit of {args.max_words} "
               f"by {wc - args.max_words} words.", file=sys.stderr)
 
+    if args.snapshot:
+        from datetime import date as _date
+        SUBMISSIONS_DIR.mkdir(parents=True, exist_ok=True)
+        snapshot_name = f"{args.target}-{_date.today().isoformat()}.md"
+        snapshot_path = SUBMISSIONS_DIR / snapshot_name
+        snapshot_path.write_text(document)
+        print(f"Snapshot saved: {snapshot_path.relative_to(SUBMISSIONS_DIR.parent.parent)} ({wc} words)")
+
     if args.output:
         Path(args.output).write_text(document)
         fmt = "plain text" if args.plain else "markdown"
         print(f"Composed submission written to {args.output} ({wc} words, {fmt})")
     else:
-        if not args.counts:
+        if not args.counts and not args.snapshot:
             print(document)
 
 

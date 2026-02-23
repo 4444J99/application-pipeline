@@ -28,6 +28,7 @@ python scripts/standup.py --hours 5          # Adjust time budget
 python scripts/standup.py --section stale    # Single section
 python scripts/standup.py --touch <entry-id> # Mark entry as reviewed
 python scripts/standup.py --log              # Log session metrics
+python scripts/standup.py --triage           # Interactive triage of stagnant entries
 
 # Pipeline overview
 python scripts/pipeline_status.py
@@ -35,16 +36,27 @@ python scripts/pipeline_status.py
 # Validate pipeline YAML
 python scripts/validate.py
 
+# Scoring
+python scripts/score.py --target <target-id>  # Score single entry
+python scripts/score.py --all --dry-run        # Preview all scores
+
 # Conversion analysis
 python scripts/conversion_report.py
 
 # Compose submission from blocks
 python scripts/compose.py --target <target-id>
+python scripts/compose.py --target <target-id> --snapshot  # Save to submissions/
+python scripts/compose.py --target <target-id> --counts    # Word/char counts
+
+# Tests
+pytest tests/ -v
 ```
 
 ## Key Files
 
+- `scripts/pipeline_lib.py` — Shared utilities (load_entries, parse_date, format_amount, etc.)
 - `pipeline/_schema.yaml` — Canonical schema for pipeline YAML entries
+- `pipeline/submissions/` — Snapshots of composed submissions (via `compose.py --snapshot`)
 - `blocks/identity/60s.md` — 100-word elevator pitch (storefront layer)
 - `blocks/identity/cathedral.md` — Full immersive statement (cathedral layer)
 - `strategy/storefront-playbook.md` — Cathedral → storefront translation guide

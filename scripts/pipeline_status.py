@@ -6,65 +6,9 @@ import sys
 from datetime import datetime, timedelta
 from pathlib import Path
 
-import yaml
-
-REPO_ROOT = Path(__file__).resolve().parent.parent
-PIPELINE_DIRS = [
-    ("active", REPO_ROOT / "pipeline" / "active"),
-    ("submitted", REPO_ROOT / "pipeline" / "submitted"),
-    ("closed", REPO_ROOT / "pipeline" / "closed"),
-]
-
-STATUS_ORDER = [
-    "research", "qualified", "drafting", "staged",
-    "submitted", "acknowledged", "interview", "outcome",
-]
-
-
-def load_entries() -> list[dict]:
-    """Load all pipeline YAML entries."""
-    entries = []
-    for stage, pipeline_dir in PIPELINE_DIRS:
-        if not pipeline_dir.exists():
-            continue
-        for filepath in sorted(pipeline_dir.glob("*.yaml")):
-            if filepath.name.startswith("_"):
-                continue
-            with open(filepath) as f:
-                data = yaml.safe_load(f)
-            if isinstance(data, dict):
-                data["_dir"] = stage
-                data["_file"] = filepath.name
-                entries.append(data)
-    return entries
-
-
-def parse_date(date_str: str | None) -> datetime | None:
-    """Parse a date string into a datetime object."""
-    if not date_str:
-        return None
-    try:
-        return datetime.strptime(str(date_str), "%Y-%m-%d")
-    except ValueError:
-        return None
-
-
-def format_amount(amount: dict | None) -> str:
-    """Format amount for display."""
-    if not amount or not isinstance(amount, dict):
-        return "—"
-    value = amount.get("value", 0)
-    currency = amount.get("currency", "USD")
-    if value == 0:
-        atype = amount.get("type", "")
-        if atype == "in_kind":
-            return "In-kind"
-        if atype == "variable":
-            return "Variable"
-        return "—"
-    if currency == "EUR":
-        return f"EUR {value:,}"
-    return f"${value:,}"
+from pipeline_lib import (
+    REPO_ROOT, STATUS_ORDER, load_entries, parse_datetime, format_amount,
+)
 
 
 def print_summary(entries: list[dict]):
@@ -105,7 +49,7 @@ def print_upcoming(entries: list[dict], days: int = 30):
         deadline = entry.get("deadline", {})
         if not isinstance(deadline, dict):
             continue
-        date = parse_date(deadline.get("date"))
+        date = parse_datetime(deadline.get("date"))
         if date and now <= date <= cutoff:
             upcoming.append((date, entry))
 

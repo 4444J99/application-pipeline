@@ -7,19 +7,13 @@ human-judgment dimensions from existing fit.score and context.
 """
 
 import argparse
-import math
 import sys
 from datetime import datetime
 from pathlib import Path
 
 import yaml
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-PIPELINE_DIRS = [
-    REPO_ROOT / "pipeline" / "active",
-    REPO_ROOT / "pipeline" / "submitted",
-    REPO_ROOT / "pipeline" / "closed",
-]
+from pipeline_lib import ALL_PIPELINE_DIRS
 
 # Dimension weights (must sum to 1.0)
 WEIGHTS = {
@@ -88,7 +82,7 @@ HIGH_PRESTIGE = {
 def load_entries(entry_id: str | None = None) -> list[tuple[Path, dict]]:
     """Load pipeline entries. If entry_id given, load only that one."""
     results = []
-    for pipeline_dir in PIPELINE_DIRS:
+    for pipeline_dir in ALL_PIPELINE_DIRS:
         if not pipeline_dir.exists():
             continue
         if entry_id:
@@ -327,111 +321,75 @@ def compute_composite(dimensions: dict[str, int]) -> float:
     return round(total, 1)
 
 
+DIMENSION_ORDER = [
+    "mission_alignment", "evidence_match", "track_record_fit",
+    "financial_alignment", "effort_to_value", "strategic_value",
+    "deadline_feasibility", "portal_friction",
+]
+
+
 def update_entry_file(filepath: Path, dimensions: dict[str, int], composite: float, dry_run: bool = False):
-    """Update a pipeline YAML file with new dimensions and composite score."""
+    """Update a pipeline YAML file with new dimensions and composite score.
+
+    Uses parse-modify-dump via PyYAML. Reads the file, updates the data
+    structure, then writes it back preserving key ordering by constructing
+    an OrderedDict-based output.
+    """
+    import re
+
     with open(filepath) as f:
         content = f.read()
 
     data = yaml.safe_load(content)
     old_score = data.get("fit", {}).get("score") if isinstance(data.get("fit"), dict) else None
 
-    # Build the dimensions YAML block
-    dims_lines = []
-    for key in [
-        "mission_alignment", "evidence_match", "track_record_fit",
-        "financial_alignment", "effort_to_value", "strategic_value",
-        "deadline_feasibility", "portal_friction",
-    ]:
-        dims_lines.append(f"    {key}: {dimensions[key]}")
-    dims_block = "\n".join(dims_lines)
-
     if dry_run:
         return old_score, composite
 
-    # Update the YAML content
-    lines = content.split("\n")
-    new_lines = []
-    i = 0
-    in_fit = False
-    in_dimensions = False
-    score_updated = False
-    dimensions_written = False
+    # Update score in-place via regex (preserves surrounding formatting)
+    # Match "  score: <number>" within the fit section
+    content = re.sub(
+        r"^(\s+score:\s+)[\d.]+",
+        rf"\g<1>{composite}",
+        content,
+        count=1,
+        flags=re.MULTILINE,
+    )
 
-    while i < len(lines):
-        line = lines[i]
-        stripped = line.strip()
+    # Build new dimensions block
+    # Detect the indentation used in the file for fit sub-keys
+    fit_indent_match = re.search(r"^(\s+)score:", content, re.MULTILINE)
+    indent = fit_indent_match.group(1) if fit_indent_match else "  "
+    dim_indent = indent + "  "
 
-        # Detect fit section
-        if stripped.startswith("fit:"):
-            in_fit = True
-            new_lines.append(line)
-            i += 1
-            continue
+    new_dims_lines = [f"{indent}dimensions:"]
+    for key in DIMENSION_ORDER:
+        new_dims_lines.append(f"{dim_indent}{key}: {dimensions[key]}")
+    new_dims_block = "\n".join(new_dims_lines)
 
-        if in_fit:
-            # Replace score line
-            if stripped.startswith("score:") and not score_updated:
-                indent = line[:len(line) - len(line.lstrip())]
-                new_lines.append(f"{indent}score: {composite}")
-                score_updated = True
-                i += 1
-                continue
+    # Replace existing dimensions block or insert before next top-level key after fit
+    dims_pattern = re.compile(
+        r"^(\s+dimensions:\s*\n)"  # dimensions: header
+        r"(?:\s+\w+:\s*\d+\s*\n)*",  # dimension key-value lines
+        re.MULTILINE,
+    )
 
-            # Handle existing dimensions block
-            if stripped.startswith("dimensions:"):
-                in_dimensions = True
-                indent = line[:len(line) - len(line.lstrip())]
-                new_lines.append(f"{indent}dimensions:")
-                i += 1
-                # Skip old dimension lines
-                while i < len(lines):
-                    next_stripped = lines[i].strip()
-                    if next_stripped and not next_stripped.startswith(tuple(
-                        f"{k}:" for k in WEIGHTS.keys()
-                    )):
-                        break
-                    i += 1
-                # Write new dimensions
-                for key in [
-                    "mission_alignment", "evidence_match", "track_record_fit",
-                    "financial_alignment", "effort_to_value", "strategic_value",
-                    "deadline_feasibility", "portal_friction",
-                ]:
-                    new_lines.append(f"{indent}  {key}: {dimensions[key]}")
-                dimensions_written = True
-                continue
-
-            # Detect leaving fit section (next top-level key)
-            if line and not line[0].isspace() and ":" in line:
-                in_fit = False
-                # Insert dimensions before leaving if not yet written
-                if not dimensions_written:
-                    # Find indentation from last fit line
-                    indent = "  "
-                    new_lines.append(f"{indent}dimensions:")
-                    for key in [
-                        "mission_alignment", "evidence_match", "track_record_fit",
-                        "financial_alignment", "effort_to_value", "strategic_value",
-                        "deadline_feasibility", "portal_friction",
-                    ]:
-                        new_lines.append(f"{indent}  {key}: {dimensions[key]}")
-                    dimensions_written = True
-
-        new_lines.append(line)
-        i += 1
-
-    # Edge case: fit was the last section
-    if in_fit and not dimensions_written:
-        new_lines.append("  dimensions:")
-        for key in [
-            "mission_alignment", "evidence_match", "track_record_fit",
-            "financial_alignment", "effort_to_value", "strategic_value",
-            "deadline_feasibility", "portal_friction",
-        ]:
-            new_lines.append(f"    {key}: {dimensions[key]}")
+    if dims_pattern.search(content):
+        content = dims_pattern.sub(new_dims_block + "\n", content, count=1)
+    else:
+        # No dimensions block exists — insert after the last fit sub-key
+        # Find the fit section and its last indented line
+        fit_section = re.search(
+            r"^fit:\s*\n((?:\s+\S.*\n)*)",
+            content,
+            re.MULTILINE,
+        )
+        if fit_section:
+            insert_pos = fit_section.end()
+            content = content[:insert_pos] + new_dims_block + "\n" + content[insert_pos:]
 
     with open(filepath, "w") as f:
-        f.write("\n".join(new_lines))
+        f.write(content)
 
     return old_score, composite
 

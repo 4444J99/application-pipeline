@@ -18,85 +18,18 @@ from pathlib import Path
 
 import yaml
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-PIPELINE_DIR = REPO_ROOT / "pipeline" / "active"
-SUBMITTED_DIR = REPO_ROOT / "pipeline" / "submitted"
-CLOSED_DIR = REPO_ROOT / "pipeline" / "closed"
-SIGNALS_DIR = REPO_ROOT / "signals"
+from pipeline_lib import (
+    REPO_ROOT, PIPELINE_DIR_ACTIVE, PIPELINE_DIR_SUBMITTED, PIPELINE_DIR_CLOSED,
+    SIGNALS_DIR, ALL_PIPELINE_DIRS, ACTIONABLE_STATUSES, EFFORT_MINUTES,
+    load_entries, parse_date, get_effort, get_score, get_deadline, days_until,
+)
+
 STANDUP_LOG = SIGNALS_DIR / "standup-log.yaml"
-
-ACTIONABLE_STATUSES = {"research", "qualified", "drafting", "staged"}
-ALL_PIPELINE_DIRS = [PIPELINE_DIR, SUBMITTED_DIR, CLOSED_DIR]
-
-EFFORT_MINUTES = {
-    "quick": 30,
-    "standard": 90,
-    "deep": 270,
-    "complex": 720,
-}
 
 STAGNATION_DAYS = 7
 URGENCY_DAYS = 14
 AT_RISK_DAYS = 3
 REPLENISH_THRESHOLD = 5  # warn when fewer than this many actionable entries
-
-
-# ---------------------------------------------------------------------------
-# Data loading
-# ---------------------------------------------------------------------------
-
-def load_entries(dirs: list[Path] | None = None) -> list[dict]:
-    """Load pipeline YAML entries from given directories."""
-    entries = []
-    for pipeline_dir in (dirs or ALL_PIPELINE_DIRS):
-        if not pipeline_dir.exists():
-            continue
-        for filepath in sorted(pipeline_dir.glob("*.yaml")):
-            if filepath.name.startswith("_"):
-                continue
-            with open(filepath) as f:
-                data = yaml.safe_load(f)
-            if isinstance(data, dict):
-                data["_filepath"] = filepath
-                data["_dir"] = pipeline_dir.name
-                entries.append(data)
-    return entries
-
-
-def parse_date(date_str) -> date | None:
-    """Parse an ISO date string."""
-    if not date_str:
-        return None
-    try:
-        return datetime.strptime(str(date_str), "%Y-%m-%d").date()
-    except ValueError:
-        return None
-
-
-def get_effort(entry: dict) -> str:
-    sub = entry.get("submission", {})
-    if isinstance(sub, dict):
-        return sub.get("effort_level", "standard") or "standard"
-    return "standard"
-
-
-def get_score(entry: dict) -> float:
-    fit = entry.get("fit", {})
-    if isinstance(fit, dict):
-        return float(fit.get("score", 0))
-    return 0.0
-
-
-def get_deadline(entry: dict) -> tuple[date | None, str]:
-    """Return (deadline_date, deadline_type)."""
-    dl = entry.get("deadline", {})
-    if not isinstance(dl, dict):
-        return None, "unknown"
-    return parse_date(dl.get("date")), dl.get("type", "unknown")
-
-
-def days_until(d: date) -> int:
-    return (d - date.today()).days
 
 
 # ---------------------------------------------------------------------------
@@ -644,6 +577,171 @@ def run_standup(hours: float, section: str | None, do_log: bool):
         section_log(health_stats, stale_stats, plan_stats)
 
 
+# ---------------------------------------------------------------------------
+# Triage mode
+# ---------------------------------------------------------------------------
+
+NEXT_STATUS = {
+    "research": "qualified",
+    "qualified": "drafting",
+    "drafting": "staged",
+    "staged": "submitted",
+}
+
+
+def run_triage():
+    """Interactive walk-through of stagnant and actionable entries.
+
+    For each entry, prompts: advance / withdraw / defer / skip.
+    """
+    entries = load_entries(include_filepath=True)
+    today = date.today()
+
+    # Find stagnant + actionable entries, sorted by staleness
+    candidates = []
+    for e in entries:
+        status = e.get("status", "")
+        if status not in ACTIONABLE_STATUSES:
+            continue
+        lt = parse_date(e.get("last_touched"))
+        stale_days = (today - lt).days if lt else 999
+        candidates.append((stale_days, e))
+
+    candidates.sort(key=lambda x: -x[0])  # most stale first
+
+    if not candidates:
+        print("No actionable entries to triage.")
+        return
+
+    print("=" * 60)
+    print(f"TRIAGE MODE — {len(candidates)} actionable entries")
+    print("=" * 60)
+    print("For each entry: [a]dvance  [w]ithdraw  [d]efer  [s]kip  [q]uit\n")
+
+    advanced = 0
+    withdrawn = 0
+    deferred = 0
+
+    for stale_days, entry in candidates:
+        entry_id = entry.get("id", "?")
+        name = entry.get("name", entry_id)
+        status = entry.get("status", "?")
+        score = get_score(entry)
+        dl_date, dl_type = get_deadline(entry)
+
+        dl_str = ""
+        if dl_date:
+            d = days_until(dl_date)
+            if d < 0:
+                dl_str = f" | EXPIRED {abs(d)}d ago"
+            else:
+                dl_str = f" | {d}d to deadline"
+        elif dl_type in ("rolling", "tba"):
+            dl_str = f" | {dl_type}"
+
+        stale_str = f"{stale_days}d stale" if stale_days < 999 else "never touched"
+
+        print(f"  {name}")
+        print(f"  Status: {status} | Score: {score:.1f}{dl_str} | {stale_str}")
+
+        next_status = NEXT_STATUS.get(status)
+        if next_status:
+            print(f"  [a] Advance to '{next_status}' + touch")
+        print(f"  [w] Withdraw  [d] Defer (touch only)  [s] Skip  [q] Quit")
+
+        try:
+            choice = input("  > ").strip().lower()
+        except (EOFError, KeyboardInterrupt):
+            print("\n  Quitting triage.")
+            break
+
+        filepath = entry.get("_filepath")
+
+        if choice == "q":
+            break
+        elif choice == "a" and next_status and filepath:
+            _triage_update_entry(filepath, entry_id, status=next_status, touch=True)
+            advanced += 1
+            print(f"  -> Advanced to {next_status}\n")
+        elif choice == "w" and filepath:
+            reason = ""
+            try:
+                reason = input("  Reason (optional): ").strip()
+            except (EOFError, KeyboardInterrupt):
+                pass
+            _triage_update_entry(filepath, entry_id, withdraw=True, reason=reason, touch=True)
+            withdrawn += 1
+            print(f"  -> Withdrawn\n")
+        elif choice == "d" and filepath:
+            _triage_update_entry(filepath, entry_id, touch=True)
+            deferred += 1
+            print(f"  -> Deferred (touched)\n")
+        else:
+            print(f"  -> Skipped\n")
+
+    print(f"Triage complete: {advanced} advanced, {withdrawn} withdrawn, {deferred} deferred")
+
+
+def _triage_update_entry(
+    filepath: Path,
+    entry_id: str,
+    status: str | None = None,
+    withdraw: bool = False,
+    reason: str = "",
+    touch: bool = False,
+):
+    """Update an entry file during triage."""
+    import re
+
+    with open(filepath) as f:
+        content = f.read()
+
+    if touch:
+        today_str = date.today().isoformat()
+        if re.search(r"^last_touched:", content, re.MULTILINE):
+            content = re.sub(
+                r"^(last_touched:\s+).*$",
+                rf'\1"{today_str}"',
+                content,
+                count=1,
+                flags=re.MULTILINE,
+            )
+        else:
+            content = content.rstrip() + f'\nlast_touched: "{today_str}"\n'
+
+    if status and not withdraw:
+        content = re.sub(
+            r"^(status:\s+).*$",
+            rf"\1{status}",
+            content,
+            count=1,
+            flags=re.MULTILINE,
+        )
+
+    if withdraw:
+        content = re.sub(
+            r"^(status:\s+).*$",
+            r"\1outcome",
+            content,
+            count=1,
+            flags=re.MULTILINE,
+        )
+        content = re.sub(
+            r"^(outcome:\s+).*$",
+            r"\1withdrawn",
+            content,
+            count=1,
+            flags=re.MULTILINE,
+        )
+        if reason:
+            # Add withdrawal_reason if not present
+            if "withdrawal_reason:" not in content:
+                content = content.rstrip() + f"\nwithdrawal_reason:\n  reason: strategic_shift\n  detail: \"{reason}\"\n  date: \"{date.today().isoformat()}\"\n  reopen: false\n"
+
+    with open(filepath, "w") as f:
+        f.write(content)
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Daily standup — pipeline health, staleness detection, execution protocol"
@@ -656,10 +754,16 @@ def main():
                         help="Mark an entry as reviewed today (sets last_touched)")
     parser.add_argument("--log", action="store_true",
                         help="Append session record to standup-log.yaml")
+    parser.add_argument("--triage", action="store_true",
+                        help="Interactive triage: walk through stagnant entries one-by-one")
     args = parser.parse_args()
 
     if args.touch:
         touch_entry(args.touch)
+        return
+
+    if args.triage:
+        run_triage()
         return
 
     run_standup(args.hours, args.section, args.log)

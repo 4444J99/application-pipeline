@@ -52,7 +52,7 @@ def test_compose_missing_blocks():
         },
     }
     result = compose(entry)
-    assert "*Block not found: does-not/exist*" in result
+    assert "[Block not found: does-not/exist]" in result
 
 
 def test_compose_no_submission():
