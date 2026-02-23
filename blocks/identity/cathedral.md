@@ -35,13 +35,13 @@ The eight-organ system coordinates:
 | VII (Kerygma) | Marketing, distribution | 4 |
 | Meta | Cross-system governance | 7 |
 
-Key infrastructure: machine-readable registry as single source of truth, automated dependency validation (no circular dependencies, no back-edges), formal promotion state machine (LOCAL → CANDIDATE → PUBLIC_PROCESS → GRADUATED → ARCHIVED), 82+ CI/CD pipelines, ~410K+ words of public documentation.
+Key infrastructure: machine-readable registry as single source of truth, automated dependency validation (no circular dependencies, no back-edges), formal promotion state machine (LOCAL → CANDIDATE → PUBLIC_PROCESS → GRADUATED → ARCHIVED), 82+ CI/CD pipelines, ~404K+ words of public documentation.
 
 ## The Method
 
 The AI-conductor model: AI generates volume, human directs architecture and reviews output. This methodology enabled a single operator to build, document, and validate 101 repositories — demonstrating that the architectural vision and editorial judgment, not the volume of output, are the creative acts.
 
-Solo production at full intensity: not isolation as limitation, but as the only way to maintain a singular vision across theory, art, commerce, governance, public process, community, and marketing. Five years of construction, 33 named sprints, 410,000+ words — built alone because the work required it.
+Solo production at full intensity: not isolation as limitation, but as the only way to maintain a singular vision across theory, art, commerce, governance, public process, community, and marketing. Five years of construction, 33 named sprints, 404,000+ words — built alone because the work required it.
 
 ## The Thesis
 

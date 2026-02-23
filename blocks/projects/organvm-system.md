@@ -4,7 +4,7 @@
 101-repository creative system coordinated across 8 GitHub organizations through automated governance.
 
 ## Short (100 words)
-The ORGANVM system coordinates 101 repositories across 8 GitHub organizations — spanning theory, generative art, commercial products, governance, public process, community, and marketing. A machine-readable registry serves as single source of truth. Automated dependency validation enforces architectural rules (no circular dependencies, no back-edges). A formal promotion state machine governs how work moves between organs. 82+ CI/CD pipelines, 2,349+ tests, 33 development sprints, and 410K+ words of documentation — all built by a single practitioner using AI tools as compositional instruments.
+The ORGANVM system coordinates 101 repositories across 8 GitHub organizations — spanning theory, generative art, commercial products, governance, public process, community, and marketing. A machine-readable registry serves as single source of truth. Automated dependency validation enforces architectural rules (no circular dependencies, no back-edges). A formal promotion state machine governs how work moves between organs. 82+ CI/CD pipelines, 2,349+ tests, 33 development sprints, and ~404K+ words of documentation — all built by a single practitioner using AI tools as compositional instruments.
 
 ## Full
 The eight-organ system coordinates:

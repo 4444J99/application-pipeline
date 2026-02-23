@@ -8,11 +8,11 @@
 | Total repositories | 101 |
 | Implementation status | 92 ACTIVE, 9 ARCHIVED |
 | GitHub organizations | 8 |
-| Published essays | 42 (~142K words) |
+| Published essays | 0 (~404K+ words) |
 | Total documentation | ~410K+ words |
 | Named development sprints | 33 |
 | CI/CD workflows | 82+ repos |
-| Dependency edges | 31 validated |
+| Dependency edges | 39 validated |
 | Back-edge violations | 0 |
 | Circular dependencies | 0 |
 | CLAUDE.md coverage | 100% |

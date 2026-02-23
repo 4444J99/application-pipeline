@@ -18,7 +18,7 @@ The distance between "powerful tool" and "tool people actually use" is almost al
 ## What I'd Bring
 
 **Technical content at scale, from scratch.** The eight-organ documentation corpus includes:
-- 100 repository READMEs, each written for grant reviewers and hiring managers
+- 101 repository READMEs, each written for grant reviewers and hiring managers
 - A cross-document dependency map and reading order so newcomers never feel lost
 - An annotated manifest with per-file descriptions of the entire corpus
 - 42 published essays explaining architectural decisions to non-technical audiences

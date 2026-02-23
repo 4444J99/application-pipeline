@@ -10,12 +10,12 @@ I build production-grade AI orchestration systems that bridge creative practice 
 - Multi-agent orchestration demonstrated at scale (Agentic Titan: 1,095 tests)
 - Automated governance with zero dependency violations
 - Symbolic computing infrastructure (Recursive Engine: 1,254 tests, custom DSL)
-- Documentation-first methodology producing 410K+ words
+- Documentation-first methodology producing ~404K+ words
 
 ## Lead Evidence
 - 2,349+ automated tests across flagship repos
 - 82+ CI/CD workflows
-- 31 dependency edges, all validated, 0 violations
+- 39 dependency edges, all validated, 0 violations
 - Meta Full-Stack Developer + Google certifications
 
 ## Targets

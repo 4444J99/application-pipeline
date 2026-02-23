@@ -20,7 +20,7 @@ Anthropic's approach to AI safety requires constraints that scale — not constr
 
 **Communication capacity for enterprise environments.** The system includes 404,000+ words of documentation written for grant reviewers and hiring managers, not just developers. I can explain complex orchestration systems to non-technical stakeholders and translate their needs into production implementations.
 
-**Autonomy under ambiguity.** The eight-organ system didn't start with a spec — it started with a question about how to organize 100 repositories into a coherent creative-institutional system. I defined the architecture, built the tooling, documented the decisions, and shipped it. That's the FDE operating model.
+**Autonomy under ambiguity.** The eight-organ system didn't start with a spec — it started with a question about how to organize 101 repositories into a coherent creative-institutional system. I defined the architecture, built the tooling, documented the decisions, and shipped it. That's the FDE operating model.
 
 ## Evidence
 

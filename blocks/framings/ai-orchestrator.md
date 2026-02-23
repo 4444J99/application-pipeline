@@ -13,7 +13,7 @@ I orchestrate AI systems the way Brian Eno orchestrated the recording studio —
 - Effort measured in LLM tokens, with transparent cost accounting
 
 ## Lead Evidence
-- 410K+ words produced through AI-conductor methodology
+- ~404K+ words produced through AI-conductor methodology
 - Agentic Titan: multi-agent orchestration, 18 development phases
 - Token-based effort budgets documented per task type
 - 42 essays transparently documenting the human-AI workflow

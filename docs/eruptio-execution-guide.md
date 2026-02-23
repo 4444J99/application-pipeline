@@ -175,7 +175,7 @@ This is a **performing arts** grant. Lead with governance-as-choreography, commu
 **Platform:** pen.org | **Award:** up to $3,500 | **Fit: 9/10**
 
 ### Key fields:
-- **Professional Writing Credentials:** MFA, 42 essays, 134K words, 11 years teaching
+- **Professional Writing Credentials:** MFA, 42 essays, ~404K+ words, 11 years teaching
 - **Financial Hardship Statement** (~200 words): in `submission-scripts/pen-america.md`
 - **Use of Funds** (~100 words): same file
 - **Writing Sample:** Link to public-process essays

@@ -4,7 +4,7 @@
 
 Grant reviewers read 200 applications in an afternoon. Hiring managers spend 30 seconds on a resume. The first 60 seconds determine whether anyone reads further.
 
-The cathedral — 101 repos, 42 essays, 410K+ words, 33 sprints — is the substance. But substance without a storefront is invisible.
+The cathedral — 101 repos, 42 essays, ~404K+ words, 33 sprints — is the substance. But substance without a storefront is invisible.
 
 ## Translation Rules
 
@@ -51,7 +51,7 @@ The same work needs different storefronts:
 |----------|----------------|
 | Art grant panel | "Governance IS the artwork — 101 repos as a living creative system" |
 | Tech fellowship | "Production-grade AI orchestration: 2,349 tests, automated governance, zero violations" |
-| Writing grant | "42 essays, 142K words documenting the process of building creative infrastructure" |
+| Writing grant | "42 essays, ~404K+ words documenting the process of building creative infrastructure" |
 | Emergency fund | "Housing-precarious NYC artist with 5+ years sustained creative practice" |
 
 ## The 60-Second Test

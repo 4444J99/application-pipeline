@@ -6,11 +6,11 @@
 
 ---
 
-orchestration-start-here is the entry point to a 100-repo system — a reading order, cross-document dependency map, and annotated manifest that make a complex architecture navigable from a single starting point. I built it because a system that large becomes unusable without strong tooling. That's the problem the Claude Code team solves for everyone, and why I'm applying for the Software Engineer position.
+orchestration-start-here is the entry point to a 101-repo system — a reading order, cross-document dependency map, and annotated manifest that make a complex architecture navigable from a single starting point. I built it because a system that large becomes unusable without strong tooling. That's the problem the Claude Code team solves for everyone, and why I'm applying for the Software Engineer position.
 
 ## Why Claude Code
 
-Systems that grow beyond what any single person can hold in their head need strong tooling to remain navigable. The eight-organ system coordinates 100 repositories across 8 GitHub organizations with a machine-readable registry, automated health checks, and dependency validation. Without those tools, the system would be unmanageable. Claude Code is building that kind of tooling for everyone.
+Systems that grow beyond what any single person can hold in their head need strong tooling to remain navigable. The eight-organ system coordinates 101 repositories across 8 GitHub organizations with a machine-readable registry, automated health checks, and dependency validation. Without those tools, the system would be unmanageable. Claude Code is building that kind of tooling for everyone.
 
 ## What I'd Bring
 
@@ -20,7 +20,7 @@ Systems that grow beyond what any single person can hold in their head need stro
 
 **Full-stack capacity with safety instincts.** The system enforces constitutional constraints: no back-edges in the dependency graph, promotion through a formal state machine, transitive depth limits. These are safety constraints at the infrastructure level — the same thinking that matters in AI-assisted coding tools. I've built compliance into the architecture, not bolted it on after.
 
-**Container and CLI experience.** 5 GitHub Actions workflows automate validation across the entire system. organ-audit.py runs health checks across 100 repos. I've worked with containerized environments, CI/CD pipelines, and command-line tooling at production scale.
+**Container and CLI experience.** 5 GitHub Actions workflows automate validation across the entire system. organ-audit.py runs health checks across 101 repos. I've worked with containerized environments, CI/CD pipelines, and command-line tooling at production scale.
 
 ## Evidence
 

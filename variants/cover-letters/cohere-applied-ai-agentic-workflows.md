@@ -20,7 +20,7 @@ Cohere is building the enterprise layer for agentic AI. Enterprise means governa
 
 **Symbolic systems with real depth.** recursive-engine--generative-entity implements a symbolic operating system with a custom DSL, 21 organ handlers, and 1,254 tests at 85% coverage. I understand the internals of how agent systems maintain state, route messages, and handle complex multi-step reasoning — not just how to prompt them.
 
-**Evaluation infrastructure as a first-class concern.** I built organ-audit.py (monthly health monitoring across 100 repos), platinum-validation.py (full system sweep against 1,267 audited links and 31 dependency edges), and 5 GitHub Actions workflows that enforce governance continuously. Evaluation framework building isn't a secondary skill — it's central to how I design systems.
+**Evaluation infrastructure as a first-class concern.** I built organ-audit.py (monthly health monitoring across 101 repos), platinum-validation.py (full system sweep against 1,267 audited links and 39 dependency edges), and 5 GitHub Actions workflows that enforce governance continuously. Evaluation framework building isn't a secondary skill — it's central to how I design systems.
 
 **Documentation that scales enterprise adoption.** 404,000+ words of portfolio-quality documentation. When enterprise customers need to understand what an agentic system does and why they should trust it, clear technical communication is the difference between a proof-of-concept and a deployment.
 
@@ -29,7 +29,7 @@ Cohere is building the enterprise layer for agentic AI. Enterprise means governa
 - **agentic-titan:** 1,095 tests, 18 phases, multi-agent orchestration (organvm-iv-taxis/agentic-titan)
 - **a-i-council--coliseum:** Multi-agent deliberation and synthesis (organvm-ii-poiesis/a-i-council--coliseum)
 - **recursive-engine:** 1,254 tests, 85% coverage, symbolic OS with custom DSL (organvm-i-theoria/recursive-engine--generative-entity)
-- **organvm-corpvs-testamentvm:** Governance infrastructure for 100-repo system (meta-organvm/organvm-corpvs-testamentvm)
+- **organvm-corpvs-testamentvm:** Governance infrastructure for 101-repo system (meta-organvm/organvm-corpvs-testamentvm)
 - **Portfolio:** https://4444j99.github.io/portfolio/
 
 I build agentic systems that are governed, tested, and documented — because that's what enterprise deployment requires.
