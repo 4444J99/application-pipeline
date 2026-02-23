@@ -117,25 +117,47 @@ def compose(entry: dict) -> str:
     return "\n".join(parts)
 
 
+def count_words(text: str) -> int:
+    """Count words in a text string."""
+    return len(text.split())
+
+
 def main():
     parser = argparse.ArgumentParser(description="Compose submission from blocks")
     parser.add_argument("--target", required=True,
                         help="Target ID (matches pipeline YAML filename)")
     parser.add_argument("--output", "-o",
                         help="Output file (default: stdout)")
+    parser.add_argument("--max-words", type=int, default=0,
+                        help="Warn if composed document exceeds N words")
+    parser.add_argument("--word-count", action="store_true",
+                        help="Report word count only (don't print document)")
     args = parser.parse_args()
 
     entry = find_entry(args.target)
     if not entry:
         print(f"Error: No pipeline entry found for '{args.target}'", file=sys.stderr)
-        print(f"Searched: {[str(d) for _, d in PIPELINE_DIRS]}", file=sys.stderr)
+        print(f"Searched: {[str(d) for d in PIPELINE_DIRS]}", file=sys.stderr)
         sys.exit(1)
 
     document = compose(entry)
+    wc = count_words(document)
+
+    if args.word_count:
+        name = entry.get("name", args.target)
+        print(f"{name}: {wc} words")
+        if args.max_words and wc > args.max_words:
+            print(f"  WARNING: exceeds limit of {args.max_words} words by {wc - args.max_words}")
+            sys.exit(1)
+        return
+
+    if args.max_words and wc > args.max_words:
+        print(f"WARNING: Document is {wc} words, exceeds limit of {args.max_words} "
+              f"by {wc - args.max_words} words.", file=sys.stderr)
 
     if args.output:
         Path(args.output).write_text(document)
-        print(f"Composed submission written to {args.output}")
+        print(f"Composed submission written to {args.output} ({wc} words)")
     else:
         print(document)
 

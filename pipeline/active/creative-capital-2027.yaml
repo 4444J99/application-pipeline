@@ -29,8 +29,12 @@ fit:
 
 submission:
   blocks_used:
-    artist_statement: identity/2min
+    artist_statement: identity/5min
     project_description: projects/organvm-system
+    methodology: methodology/governance-as-art
+    evidence: evidence/differentiators
+    framing: framings/systems-artist
+    work_samples: evidence/work-samples
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/

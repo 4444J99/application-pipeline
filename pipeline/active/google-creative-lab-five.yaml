@@ -31,6 +31,10 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
+    methodology: methodology/ai-conductor
+    evidence: evidence/work-samples
+    framing: framings/creative-technologist
+    tech_detail: projects/agentic-titan
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/

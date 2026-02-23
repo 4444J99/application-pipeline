@@ -94,7 +94,7 @@ GET <api-url>/demo/profile  → Full demo profile
 >
 > The most interesting creative work I've made came from imposing more constraints, not fewer. My eight-organ system enforces a strict no-back-edges rule: theory feeds art, art feeds commerce — never the reverse. That constraint should limit what's possible. Instead, it forces each organ to be genuinely self-sufficient, which produces work that's stranger and more honest than anything I made when everything could depend on everything else.
 >
-> The governance model — dependency validation, promotion state machines, automated audits — sounds like the opposite of creative freedom. But designing those rules is where the real creative decisions happen. Choosing how work flows between 100 repositories is as much an artistic act as any individual piece the system produces.
+> The governance model — dependency validation, promotion state machines, automated audits — sounds like the opposite of creative freedom. But designing those rules is where the real creative decisions happen. Choosing how work flows between 101 repositories is as much an artistic act as any individual piece the system produces.
 >
 > I don't break the rule that creativity needs freedom. I break the rule that constraints aren't creative.
 
@@ -110,7 +110,7 @@ GET <api-url>/demo/profile  → Full demo profile
 
 **Q3: "In 1-3 sentences, tell us about the project you are most proud of and why."** (80 words)
 
-> I built an eight-organ system that coordinates 100 repositories across 8 GitHub organizations — governing how theory, generative art, commercial products, and community work flow into each other through automated dependency validation, a promotion state machine, and ~404K+ words of public documentation. I'm most proud of it because it demonstrates that governance and art aren't separate categories: the rules that coordinate the system are as carefully designed as any artwork it produces. It's infrastructure that makes its own logic visible.
+> I built an eight-organ system that coordinates 101 repositories across 8 GitHub organizations — governing how theory, generative art, commercial products, and community work flow into each other through automated dependency validation, a promotion state machine, and ~404K+ words of public documentation. I'm most proud of it because it demonstrates that governance and art aren't separate categories: the rules that coordinate the system are as carefully designed as any artwork it produces. It's infrastructure that makes its own logic visible.
 
 ### Links:
 | Field | URL |

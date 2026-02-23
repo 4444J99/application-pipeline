@@ -16,11 +16,11 @@ Four framings of the same body of work for different audiences. Derived from cov
 
 **For:** Art grants, residencies, prizes
 **Narrative:** "I build creative systems — the governance IS the artwork"
-**Evidence:** 100-repo eight-organ system as living creative work, 42 essays, MFA
+**Evidence:** 101-repo eight-organ system as living creative work, 42 essays, MFA
 **Targets:** Creative Capital, Artadia, FCA, NYSCA/NYFA, Eyebeam, Fire Island, Headlands, Prix Ars, S+T+ARTS, ZKM, LACMA
 
 **Opening line template:**
-> I am a systems artist who builds creative infrastructure at institutional scale. The ORGANVM project — 100 repositories coordinated across 8 GitHub organizations through automated governance — is simultaneously working infrastructure and an argument that the process of creation, made visible and governable, is itself the most interesting thing an artist can produce.
+> I am a systems artist who builds creative infrastructure at institutional scale. The ORGANVM project — 101 repositories coordinated across 8 GitHub organizations through automated governance — is simultaneously working infrastructure and an argument that the process of creation, made visible and governable, is itself the most interesting thing an artist can produce.
 
 ---
 
@@ -44,7 +44,7 @@ Four framings of the same body of work for different audiences. Derived from cov
 **Targets:** Google Creative Lab, Processing Foundation, consulting clients, Together AI, HuggingFace
 
 **Opening line template:**
-> I build production-grade AI orchestration systems. The ORGANVM project coordinates 100 repositories through automated dependency validation, a formal promotion state machine, and 82+ CI/CD pipelines — all designed, tested (2,349+ tests), and documented by a single practitioner using AI tools as compositional instruments.
+> I build production-grade AI orchestration systems. The ORGANVM project coordinates 101 repositories through automated dependency validation, a formal promotion state machine, and 82+ CI/CD pipelines — all designed, tested (2,349+ tests), and documented by a single practitioner using AI tools as compositional instruments.
 
 ---
 

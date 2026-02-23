@@ -41,7 +41,7 @@ python scripts/conversion_report.py
 ## Key Concepts
 
 - **Blocks as atoms, submissions as molecules** — compose from tested blocks instead of writing fresh
-- **Tiered depth** — every block has 60s / 2min / 5min / cathedral variants
+- **Tiered depth** — blocks have depth tiers appropriate to type (see `blocks/README.md`)
 - **Pipeline state machine** — `research → qualified → drafting → staged → submitted → acknowledged → interview → outcome`
 - **Variant tracking** — every submission records which block versions were used
 - **Benefits cliff awareness** — built into the schema for every target

@@ -35,7 +35,7 @@ The cathedral layer is what converts interest into commitment. It rewards attent
 
 Instead of writing fresh applications for each target, compose from a library of tested blocks. Each block is:
 - **Self-contained** — makes sense without context
-- **Tiered** — available at multiple depth levels (60s, 2min, 5min, cathedral)
+- **Tiered** — available at depth levels appropriate to block type (see `blocks/README.md`)
 - **Tracked** — usage recorded in pipeline YAML for conversion analysis
 
 The `compose.py` script assembles target-appropriate packages from the block library.

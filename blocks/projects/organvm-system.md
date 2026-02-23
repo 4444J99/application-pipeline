@@ -1,10 +1,10 @@
 # Project: The ORGANVM Eight-Organ System
 
 ## One-Line
-100-repository creative system coordinated across 8 GitHub organizations through automated governance.
+101-repository creative system coordinated across 8 GitHub organizations through automated governance.
 
 ## Short (100 words)
-The ORGANVM system coordinates 100 repositories across 8 GitHub organizations — spanning theory, generative art, commercial products, governance, public process, community, and marketing. A machine-readable registry serves as single source of truth. Automated dependency validation enforces architectural rules (no circular dependencies, no back-edges). A formal promotion state machine governs how work moves between organs. 82+ CI/CD pipelines, 2,349+ tests, 33 development sprints, and 410K+ words of documentation — all built by a single practitioner using AI tools as compositional instruments.
+The ORGANVM system coordinates 101 repositories across 8 GitHub organizations — spanning theory, generative art, commercial products, governance, public process, community, and marketing. A machine-readable registry serves as single source of truth. Automated dependency validation enforces architectural rules (no circular dependencies, no back-edges). A formal promotion state machine governs how work moves between organs. 82+ CI/CD pipelines, 2,349+ tests, 33 development sprints, and 410K+ words of documentation — all built by a single practitioner using AI tools as compositional instruments.
 
 ## Full
 The eight-organ system coordinates:
@@ -16,7 +16,7 @@ The eight-organ system coordinates:
 - **ORGAN-V (Logos):** 2 repos — public process essays, building in public
 - **ORGAN-VI (Koinonia):** 4 repos — community infrastructure, salons
 - **ORGAN-VII (Kerygma):** 4 repos — POSSE distribution, marketing
-- **META-ORGANVM:** 6 repos — cross-system governance, registry, dashboard
+- **META-ORGANVM:** 7 repos — cross-system governance, registry, dashboard
 
 Key infrastructure: `registry-v2.json` as single source of truth, `governance-rules.json` encoding constitutional principles, automated dependency validation (31 edges, 0 violations), promotion state machine (LOCAL → CANDIDATE → PUBLIC_PROCESS → GRADUATED → ARCHIVED), 5 GitHub Actions workflows for autonomous governance.
 

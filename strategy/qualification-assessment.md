@@ -8,7 +8,7 @@ Detailed version: `organvm-corpvs-testamentvm/docs/applications/09-qualification
 
 | Claim | Evidence | Verification |
 |-------|----------|-------------|
-| 100 repos across 8 orgs | registry-v2.json | `jq '.summary.total_repos' registry-v2.json` |
+| 101 repos across 8 orgs | registry-v2.json | `jq '.summary.total_repos' registry-v2.json` |
 | 42 published essays (~142K words) | public-process/_posts/ | Counted at deploy |
 | ~410K+ total documentation | Aggregate across all repos | system-metrics.json |
 | 33 development sprints | docs/specs/sprints/ | 01-ignition through 33-operatio |

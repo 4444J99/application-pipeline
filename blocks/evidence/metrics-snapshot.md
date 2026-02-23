@@ -5,8 +5,8 @@
 
 | Metric | Value |
 |--------|-------|
-| Total repositories | 100 |
-| Implementation status | 90 ACTIVE, 10 ARCHIVED |
+| Total repositories | 101 |
+| Implementation status | 92 ACTIVE, 9 ARCHIVED |
 | GitHub organizations | 8 |
 | Published essays | 42 (~142K words) |
 | Total documentation | ~410K+ words |
@@ -32,4 +32,4 @@
 | V (Logos) | Public process, essays | 2 |
 | VI (Koinonia) | Community | 4 |
 | VII (Kerygma) | Marketing, distribution | 4 |
-| Meta | Cross-system governance | 6 |
+| Meta | Cross-system governance | 7 |

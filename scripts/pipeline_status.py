@@ -160,12 +160,83 @@ def print_rolling(entries: list[dict]):
         print(f"      Status: {status} | Fit: {score}/10 | Amount: {amount}")
 
 
+BENEFITS_THRESHOLDS = {
+    "medicaid": {"limit": 18754, "program": "Medicaid (NY)"},
+    "snap": {"limit": 23904, "program": "SNAP"},
+    "fair_fares": {"limit": 27180, "program": "Fair Fares NYC"},
+    "essential_plan": {"limit": 25520, "program": "Essential Plan (NY)"},
+}
+
+IN_FLIGHT_STATUSES = {"qualified", "drafting", "staged", "submitted", "acknowledged", "interview"}
+
+
+def print_benefits_check(entries: list[dict]):
+    """Check total in-flight compensation against benefits thresholds."""
+    print(f"\n{'=' * 60}")
+    print("BENEFITS CLIFF CHECK")
+    print("=" * 60)
+
+    in_flight = []
+    total_usd = 0
+
+    for entry in entries:
+        status = entry.get("status", "")
+        if status not in IN_FLIGHT_STATUSES:
+            continue
+
+        amount = entry.get("amount", {})
+        if not isinstance(amount, dict):
+            continue
+
+        value = amount.get("value", 0)
+        currency = amount.get("currency", "USD")
+        if value <= 0:
+            continue
+
+        # Convert EUR to approximate USD for threshold comparison
+        if currency == "EUR":
+            value_usd = int(value * 1.10)
+        else:
+            value_usd = value
+
+        cliff_note = amount.get("benefits_cliff_note")
+        name = entry.get("name", entry.get("id", "?"))
+        in_flight.append((name, value_usd, currency, value, cliff_note, status))
+        total_usd += value_usd
+
+    if not in_flight:
+        print("\n  No in-flight entries with compensation.")
+        return
+
+    print(f"\n  In-flight entries with compensation ({len(in_flight)}):\n")
+    for name, value_usd, currency, raw_value, cliff_note, status in in_flight:
+        amt_str = f"EUR {raw_value:,}" if currency == "EUR" else f"${raw_value:,}"
+        flag = " !!!" if cliff_note else ""
+        print(f"    {name}")
+        print(f"      {amt_str} ({status}){flag}")
+        if cliff_note:
+            print(f"      Cliff note: {cliff_note}")
+
+    print(f"\n  Total in-flight (USD): ${total_usd:,}")
+    print(f"\n  Threshold analysis (if ALL accepted):")
+    for key, info in BENEFITS_THRESHOLDS.items():
+        limit = info["limit"]
+        program = info["program"]
+        if total_usd > limit:
+            print(f"    !!! {program}: ${total_usd:,} exceeds ${limit:,} limit")
+        else:
+            remaining = limit - total_usd
+            print(f"    OK  {program}: ${remaining:,} remaining under ${limit:,} limit")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Pipeline status report")
     parser.add_argument("--upcoming", type=int, default=30,
                         help="Show deadlines within N days (default: 30)")
     parser.add_argument("--all", action="store_true",
                         help="Show all entries including rolling")
+    parser.add_argument("--benefits-check", action="store_true",
+                        help="Show benefits cliff analysis for in-flight entries")
     args = parser.parse_args()
 
     entries = load_entries()
@@ -178,6 +249,9 @@ def main():
 
     if args.all:
         print_rolling(entries)
+
+    if args.benefits_check:
+        print_benefits_check(entries)
 
     print()
 
