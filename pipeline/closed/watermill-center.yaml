@@ -41,8 +41,10 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
-  variant_ids: {}
-  materials_attached: []
+  variant_ids: 
+    cover_letter: cover-letters/grant-art-template
+  materials_attached: 
+    - resumes/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 
 timeline:

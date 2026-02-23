@@ -1,7 +1,7 @@
 id: whiting-nonfiction
 name: Whiting Creative Nonfiction Grant
 track: grant
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Whiting Foundation
@@ -43,17 +43,25 @@ submission:
     methodology: methodology/process-as-product
     evidence: evidence/work-samples
     framing: framings/systems-artist
-  variant_ids: {}
-  materials_attached: []
+  variant_ids: 
+    cover_letter: cover-letters/grant-art-template
+  materials_attached: 
+    - resumes/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
-  materials_ready: null
+  materials_ready: '2026-02-23'
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
+portal_fields:
+  fields:
+  - name: writing_sample
+  - name: project_description
+  - name: bio
+  - name: references
 conversion:
   response_received: false
   response_type: null
@@ -62,4 +70,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Approximate deadline Apr 2026 TBA.
-last_touched: '2026-02-18'
+last_touched: "2026-02-23"

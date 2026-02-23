@@ -1,7 +1,7 @@
 id: awesome-foundation
 name: Awesome Foundation NYC
 track: emergency
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Awesome Foundation
@@ -47,11 +47,15 @@ submission:
 timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
-  materials_ready: null
+  materials_ready: '2026-02-23'
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
+portal_fields:
+  fields:
+  - name: project_description
+    word_limit: 300
 conversion:
   response_received: false
   response_type: null
@@ -60,4 +64,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Monthly rolling deadline.
-last_touched: '2026-02-18'
+last_touched: "2026-02-23"

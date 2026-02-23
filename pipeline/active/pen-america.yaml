@@ -53,6 +53,11 @@ timeline:
   acknowledged: null
   interview: null
   outcome_date: null
+portal_fields:
+  fields:
+  - name: application_form
+  - name: writing_sample
+  - name: work_samples
 conversion:
   response_received: false
   response_type: null
@@ -61,4 +66,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: null
-last_touched: '2026-02-23'
+last_touched: "2026-02-23"

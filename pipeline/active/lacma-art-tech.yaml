@@ -1,7 +1,7 @@
 id: lacma-art-tech
 name: LACMA Art + Technology Lab
 track: grant
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Los Angeles County Museum of Art
@@ -44,17 +44,25 @@ submission:
     evidence: evidence/work-samples
     framing: framings/systems-artist
     tech_detail: projects/recursive-engine
-  variant_ids: {}
-  materials_attached: []
+  variant_ids: 
+    cover_letter: cover-letters/grant-art-template
+  materials_attached: 
+    - resumes/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
-  materials_ready: null
+  materials_ready: '2026-02-23'
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
+portal_fields:
+  fields:
+  - name: project_description
+  - name: artist_statement
+  - name: budget
+  - name: work_samples
 conversion:
   response_received: false
   response_type: null
@@ -63,4 +71,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: null
-last_touched: '2026-02-18'
+last_touched: "2026-02-23"

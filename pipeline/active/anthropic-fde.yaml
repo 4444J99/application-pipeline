@@ -1,7 +1,7 @@
 id: anthropic-fde
 name: Anthropic Forward Deployed Engineer
 track: job
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Anthropic
@@ -37,17 +37,24 @@ fit:
 submission:
   effort_level: complex
   blocks_used: {}
-  variant_ids: {}
-  materials_attached: []
+  variant_ids: 
+    cover_letter: cover-letters/anthropic-fde-custom-agents
+  materials_attached: 
+    - resumes/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
-  materials_ready: null
+  materials_ready: '2026-02-23'
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
+portal_fields:
+  fields:
+  - name: resume
+  - name: cover_letter
+  - name: portfolio
 conversion:
   response_received: false
   response_type: null
@@ -56,4 +63,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Salary range $280,000-$400,000.
-last_touched: '2026-02-18'
+last_touched: "2026-02-23"

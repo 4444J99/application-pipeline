@@ -1,0 +1,65 @@
+SUBMISSION CHECKLIST: Fractured Atlas Fiscal Sponsorship
+Organization: Fractured Atlas
+Portal: https://fracturedatlas.org/apply
+Platform: custom
+Deadline: rolling (rolling)
+Generated: 2026-02-23
+
+============================================================
+
+[ ] PROJECT DESCRIPTION
+    # Project: The ORGANVM Eight-Organ System
+    
+    ## One-Line
+    101-repository creative system coordinated across 8 GitHub organizations through automated governance.
+    
+    ## Short (100 words)
+    The ORGANVM system coordinates 101 repositories across 8 GitHub organizations — spanning theory, generative art, commercial products, governance, public process, community, and marketing. A machine-readable registry serves as single source of truth. Automated dependency validation enforces architectural rules (no circular dependencies, no back-edges). A formal promotion state machine governs how work moves between organs. 82+ CI/CD pipelines, 2,349+ tests, 33 development sprints, and ~404K+ words of documentation — all built by a single practitioner using AI tools as compositional instruments.
+    
+    ## Full
+    The eight-organ system coordinates:
+    
+    - **ORGAN-I (Theoria):** 20 repos — epistemology, recursion, ontology
+    - **ORGAN-II (Poiesis):** 30 repos — generative art, performance, experiential systems
+    - **ORGAN-III (Ergon):** 27 repos — SaaS products, B2B/B2C tools
+    - **ORGAN-IV (Taxis):** 7 repos — orchestration, governance, AI agents
+    - **ORGAN-V (Logos):** 2 repos — public process essays, building in public
+    - **ORGAN-VI (Koinonia):** 4 repos — community infrastructure, salons
+    - **ORGAN-VII (Kerygma):** 4 repos — POSSE distribution, marketing
+    - **META-ORGANVM:** 7 repos — cross-system governance, registry, dashboard
+    
+    Key infrastructure: `registry-v2.json` as single source of truth, `governance-rules.json` encoding constitutional principles, automated dependency validation (31 edges, 0 violations), promotion state machine (LOCAL → CANDIDATE → PUBLIC_PROCESS → GRADUATED → ARCHIVED), 5 GitHub Actions workflows for autonomous governance.
+    
+    ## Links
+    - Portfolio: https://4444j99.github.io/portfolio/
+    - System Hub: https://github.com/meta-organvm
+    - Public Process: https://organvm-v-logos.github.io/public-process/
+    - Central Registry: https://github.com/meta-organvm/organvm-corpvs-testamentvm
+
+    -- 226 words, 1913 chars [ok] (source: block:projects/organvm-system)
+
+[ ] BUDGET
+    [MISSING — no content found for: budget]
+
+[ ] ARTIST STATEMENT
+    # Identity: 2-Minute Statement
+    
+    I build creative systems — environments where theory, art, and community work grow like organisms in a medium. My eight-organ system coordinates 101 repositories across 8 organizations through automated governance, dependency validation, and a formal promotion state machine. The 42 published essays documenting this process aren't reflections on the work; they ARE the work — the creative process rendered into prose in real time.
+    
+    I use AI tools as compositional instruments, the way Brian Eno treated the studio or Hundred Rabbits treat their custom toolchain. The architectural vision, governance design, and editorial judgment are the creative work; AI provides execution capacity. The governance rules aren't bureaucracy — they're generative constraints that shape what the system can become.
+    
+    The result: a documented methodology for solo production at institutional scale, built over 5+ years and 33 named development sprints, demonstrating that process-as-product is a viable and rigorous creative practice.
+
+    -- 150 words, 1046 chars [ok] (source: block:identity/2min)
+
+[ ] MATERIALS
+    Portfolio: https://4444j99.github.io/portfolio/
+    File: resumes/multimedia-specialist.pdf [ok]
+
+============================================================
+PRE-SUBMIT VALIDATION:
+  - 1 field(s) missing content
+  + Materials check passed
+  + Portal URL set
+
+1 issue(s) found — review before submitting

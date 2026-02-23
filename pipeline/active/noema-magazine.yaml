@@ -1,7 +1,7 @@
 id: noema-magazine
 name: Noema Magazine
 track: writing
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Noema Magazine
@@ -46,11 +46,15 @@ submission:
 timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
-  materials_ready: null
+  materials_ready: '2026-02-23'
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
+portal_fields:
+  fields:
+  - name: 2_3_paragraph_pitch
+  - name: writing_sample
 conversion:
   response_received: false
   response_type: null
@@ -59,4 +63,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $1/word, ~$3K/essay. Pitch to pitches@noemamag.com.
-last_touched: '2026-02-18'
+last_touched: "2026-02-23"

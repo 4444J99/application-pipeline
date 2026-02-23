@@ -1,7 +1,7 @@
 id: fca-emergency
 name: FCA Emergency Grants
 track: emergency
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Foundation for Contemporary Arts
@@ -44,11 +44,17 @@ submission:
 timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
-  materials_ready: null
+  materials_ready: '2026-02-23'
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
+portal_fields:
+  fields:
+  - name: application_form
+  - name: proof_of_presentation
+  - name: budget
+  - name: artist_statement
 conversion:
   response_received: false
   response_type: null
@@ -57,4 +63,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Range $200-$3,000.
-last_touched: '2026-02-18'
+last_touched: "2026-02-23"

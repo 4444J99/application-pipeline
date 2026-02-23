@@ -1,7 +1,7 @@
 id: tulsa-fellowship
 name: Tulsa Artist Fellowship
 track: fellowship
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Tulsa Artist Fellowship
@@ -41,16 +41,24 @@ submission:
     artist_statement: identity/2min
     project_description: projects/organvm-system
   variant_ids: {}
-  materials_attached: []
+  materials_attached: 
+    - resumes/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
-  materials_ready: null
+  materials_ready: '2026-02-23'
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
+portal_fields:
+  fields:
+  - name: statement
+  - name: proposal
+  - name: work_samples
+  - name: references
+  - name: budget
 conversion:
   response_received: false
   response_type: null
@@ -59,4 +67,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $230K+ over 3 years. Spring 2026 deadline TBA.
-last_touched: '2026-02-18'
+last_touched: "2026-02-23"

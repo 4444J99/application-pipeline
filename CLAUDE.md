@@ -73,6 +73,24 @@ python scripts/preflight.py                       # Check all staged entries
 python scripts/preflight.py --target <target-id>  # Check one entry
 python scripts/preflight.py --status qualified    # Check entries with different status
 
+# Batch enrichment: wire materials, variants, portal_fields
+python scripts/enrich.py --report                    # Show enrichment gaps
+python scripts/enrich.py --all --dry-run             # Preview all enrichments
+python scripts/enrich.py --all --yes                 # Execute all enrichments
+python scripts/enrich.py --materials --yes            # Wire resume only
+python scripts/enrich.py --variants --yes             # Wire cover letters only
+python scripts/enrich.py --portal --yes               # Populate portal_fields only
+python scripts/enrich.py --variants --grant-template  # Also wire grant template to grants
+python scripts/enrich.py --all --effort quick --yes   # Quick entries only
+
+# Campaign orchestrator: deadline-aware pipeline execution
+python scripts/campaign.py                           # This week's campaign (14-day window)
+python scripts/campaign.py --days 7                  # Next 7 days only
+python scripts/campaign.py --days 30                 # Full month view
+python scripts/campaign.py --execute --dry-run       # Preview pipeline execution
+python scripts/campaign.py --execute --yes           # Execute for all urgent entries
+python scripts/campaign.py --execute --id <entry-id> --yes  # Single entry
+
 # Submission velocity tracking
 python scripts/velocity.py                    # Display velocity stats
 python scripts/velocity.py --update-signals   # Write to signals/patterns.md
@@ -88,6 +106,8 @@ pytest tests/ -v
 - `scripts/submit.py` — Portal-ready checklist generator + `--record` for post-submission tracking
 - `scripts/preflight.py` — Batch submission readiness validator for staged entries
 - `scripts/advance.py` — Batch pipeline progression with validation and dry-run
+- `scripts/enrich.py` — Batch enrichment: materials, variants, portal_fields wiring
+- `scripts/campaign.py` — Deadline-aware campaign orchestrator with execute mode
 - `scripts/velocity.py` — Submission velocity metrics and throughput tracking
 - `pipeline/_schema.yaml` — Canonical schema for pipeline YAML entries
 - `pipeline/submissions/` — Snapshots of composed submissions (via `compose.py --snapshot`)

@@ -43,8 +43,10 @@ submission:
     evidence: evidence/work-samples
     framing: framings/creative-technologist
     tech_detail: projects/agentic-titan
-  variant_ids: {}
-  materials_attached: []
+  variant_ids: 
+    cover_letter: cover-letters/grant-art-template
+  materials_attached: 
+    - resumes/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
@@ -54,6 +56,10 @@ timeline:
   acknowledged: null
   interview: null
   outcome_date: null
+portal_fields:
+  fields:
+  - name: short_answers
+  - name: portfolio
 conversion:
   response_received: false
   response_type: null
@@ -62,4 +68,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: 1-year salaried position. Rolling/open applications.
-last_touched: '2026-02-18'
+last_touched: "2026-02-23"

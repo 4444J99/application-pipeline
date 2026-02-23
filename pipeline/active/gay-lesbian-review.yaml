@@ -1,7 +1,7 @@
 id: gay-lesbian-review
 name: Gay & Lesbian Review
 track: writing
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Gay & Lesbian Review
@@ -48,11 +48,15 @@ submission:
 timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
-  materials_ready: null
+  materials_ready: '2026-02-23'
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
+portal_fields:
+  fields:
+  - name: pitch_email
+  - name: bio
 conversion:
   response_received: false
   response_type: null
@@ -61,4 +65,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $250/feature.
-last_touched: '2026-02-18'
+last_touched: "2026-02-23"

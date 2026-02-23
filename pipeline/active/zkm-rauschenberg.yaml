@@ -43,8 +43,10 @@ submission:
     methodology: methodology/governance-as-art
     evidence: evidence/differentiators
     framing: framings/systems-artist
-  variant_ids: {}
-  materials_attached: []
+  variant_ids: 
+    cover_letter: cover-letters/grant-art-template
+  materials_attached: 
+    - resumes/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
@@ -54,6 +56,12 @@ timeline:
   acknowledged: null
   interview: null
   outcome_date: null
+portal_fields:
+  fields:
+  - name: resume
+  - name: artist_statement
+  - name: project_description
+  - name: work_samples
 conversion:
   response_received: false
   response_type: null
@@ -62,4 +70,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Studio access for 3 months. In-kind support.
-last_touched: '2026-02-18'
+last_touched: "2026-02-23"

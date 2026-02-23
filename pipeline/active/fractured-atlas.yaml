@@ -1,7 +1,7 @@
 id: fractured-atlas
 name: Fractured Atlas Fiscal Sponsorship
 track: program
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Fractured Atlas
@@ -40,16 +40,22 @@ submission:
     artist_statement: identity/2min
     project_description: projects/organvm-system
   variant_ids: {}
-  materials_attached: []
+  materials_attached: 
+    - resumes/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
-  materials_ready: null
+  materials_ready: '2026-02-23'
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
+portal_fields:
+  fields:
+  - name: project_description
+  - name: budget
+  - name: artist_statement
 conversion:
   response_received: false
   response_type: null
@@ -58,4 +64,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Infrastructure/fiscal sponsorship. Enables tax-deductible donations.
-last_touched: '2026-02-18'
+last_touched: "2026-02-23"

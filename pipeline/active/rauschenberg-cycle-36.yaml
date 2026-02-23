@@ -49,6 +49,11 @@ timeline:
   acknowledged: null
   interview: null
   outcome_date: null
+portal_fields:
+  fields:
+  - name: application_form
+  - name: artist_statement
+  - name: work_samples
 conversion:
   response_received: false
   response_type: null
@@ -57,4 +62,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Application window Apr 14 - May 12 2026.
-last_touched: '2026-02-18'
+last_touched: "2026-02-23"

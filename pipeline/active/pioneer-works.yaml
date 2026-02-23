@@ -1,7 +1,7 @@
 id: pioneer-works
 name: Pioneer Works
 track: residency
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Pioneer Works
@@ -40,17 +40,25 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
-  variant_ids: {}
-  materials_attached: []
+  variant_ids: 
+    cover_letter: cover-letters/grant-art-template
+  materials_attached: 
+    - resumes/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
-  materials_ready: null
+  materials_ready: '2026-02-23'
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
+portal_fields:
+  fields:
+  - name: artist_statement
+  - name: project_description
+  - name: work_samples
+  - name: bio
 conversion:
   response_received: false
   response_type: null
@@ -59,4 +67,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $1K-$2.5K stipend plus studio. Summer 2026 deadline TBA.
-last_touched: '2026-02-18'
+last_touched: "2026-02-23"
