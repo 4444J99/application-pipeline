@@ -1,32 +1,31 @@
 id: lambda-literary
-name: "Lambda Literary Retreat"
+name: Lambda Literary Retreat
 track: program
 status: qualified
 outcome: null
-
 target:
-  organization: "Lambda Literary"
+  organization: Lambda Literary
   url: https://lambdaliterary.org
   application_url: https://lambdaliterary.org/retreat
   portal: custom
-
 deadline:
   date: null
   time: null
   type: tba
-
 amount:
   value: 0
   currency: USD
   type: in_kind
   benefits_cliff_note: null
-
 fit:
   score: 7.2
   identity_position: community-practitioner
-  framing: "LGBTQ+ writer developing nonfiction and hybrid practice in community retreat context"
-  lead_organs: [V, VI, META]
-
+  framing: LGBTQ+ writer developing nonfiction and hybrid practice in community retreat
+    context
+  lead_organs:
+  - V
+  - VI
+  - META
   dimensions:
     mission_alignment: 8
     evidence_match: 6
@@ -44,22 +43,20 @@ submission:
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
-
 timeline:
-  researched: "2026-02-14"
-  qualified: "2026-02-16"
+  researched: '2026-02-14'
+  qualified: '2026-02-16'
   materials_ready: null
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
-
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
-
 tags: []
 source: 04-application-tracker.md
-notes: "Program-based retreat. Nov 2026-Jan 2027 deadline TBA."
+notes: Program-based retreat. Nov 2026-Jan 2027 deadline TBA.
+last_touched: '2026-02-18'

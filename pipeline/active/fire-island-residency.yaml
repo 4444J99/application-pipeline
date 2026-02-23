@@ -1,32 +1,31 @@
 id: fire-island-residency
-name: "Fire Island Artist Residency"
+name: Fire Island Artist Residency
 track: residency
 status: qualified
 outcome: null
-
 target:
-  organization: "Fire Island Artist Residency"
+  organization: Fire Island Artist Residency
   url: https://fireislandartistresidency.org
   application_url: https://fireislandartistresidency.slideroom.com
   portal: slideroom
-
 deadline:
-  date: "2026-04-01"
+  date: '2026-04-01'
   time: null
   type: hard
-
 amount:
   value: 0
   currency: USD
   type: stipend
   benefits_cliff_note: null
-
 fit:
   score: 7.1
   identity_position: community-practitioner
-  framing: "Community-rooted artist exploring queer identity through systems and generative practice"
-  lead_organs: [II, VI, META]
-
+  framing: Community-rooted artist exploring queer identity through systems and generative
+    practice
+  lead_organs:
+  - II
+  - VI
+  - META
   dimensions:
     mission_alignment: 8
     evidence_match: 6
@@ -44,22 +43,20 @@ submission:
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
-
 timeline:
-  researched: "2026-02-14"
-  qualified: "2026-02-16"
+  researched: '2026-02-14'
+  qualified: '2026-02-16'
   materials_ready: null
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
-
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
-
 tags: []
 source: 04-application-tracker.md
-notes: "Stipend plus housing provided."
+notes: Stipend plus housing provided.
+last_touched: '2026-02-18'

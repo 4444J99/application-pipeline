@@ -1,32 +1,30 @@
 id: documentation-consulting
-name: "Documentation Consulting"
+name: Documentation Consulting
 track: consulting
 status: research
 outcome: null
-
 target:
   organization: null
   url: null
   application_url: null
   portal: null
-
 deadline:
   date: null
   time: null
   type: rolling
-
 amount:
   value: 0
   currency: USD
   type: fee
   benefits_cliff_note: null
-
 fit:
   score: 6.5
   identity_position: creative-technologist
-  framing: "Technical writer and documentation architect for developer tools and open-source projects"
-  lead_organs: [III, V]
-
+  framing: Technical writer and documentation architect for developer tools and open-source
+    projects
+  lead_organs:
+  - III
+  - V
   dimensions:
     mission_alignment: 8
     evidence_match: 5
@@ -42,7 +40,6 @@ submission:
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
-
 timeline:
   researched: null
   qualified: null
@@ -51,13 +48,12 @@ timeline:
   acknowledged: null
   interview: null
   outcome_date: null
-
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
-
 tags: []
 source: 04-application-tracker.md
-notes: "Rate: $2,500-$15,000/project. Research stage."
+notes: 'Rate: $2,500-$15,000/project. Research stage.'
+last_touched: '2026-02-18'

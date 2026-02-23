@@ -1,32 +1,30 @@
 id: nlnet-commons
-name: "NLnet NGI Zero Commons Fund"
+name: NLnet NGI Zero Commons Fund
 track: grant
 status: qualified
 outcome: null
-
 target:
-  organization: "NLnet Foundation"
+  organization: NLnet Foundation
   url: https://nlnet.nl
   application_url: https://nlnet.nl/propose
   portal: custom
-
 deadline:
-  date: "2026-04-01"
+  date: '2026-04-01'
   time: null
   type: hard
-
 amount:
   value: 50000
   currency: EUR
   type: lump_sum
   benefits_cliff_note: null
-
 fit:
   score: 6.8
   identity_position: creative-technologist
-  framing: "Open-source technologist building commons infrastructure for creative computation"
-  lead_organs: [I, III, IV]
-
+  framing: Open-source technologist building commons infrastructure for creative computation
+  lead_organs:
+  - I
+  - III
+  - IV
   dimensions:
     mission_alignment: 8
     evidence_match: 6
@@ -44,22 +42,20 @@ submission:
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
-
 timeline:
-  researched: "2026-02-14"
-  qualified: "2026-02-16"
+  researched: '2026-02-14'
+  qualified: '2026-02-16'
   materials_ready: null
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
-
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
-
 tags: []
 source: 04-application-tracker.md
-notes: "Range EUR 5,000-50,000."
+notes: Range EUR 5,000-50,000.
+last_touched: '2026-02-18'

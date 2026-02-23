@@ -22,6 +22,13 @@ Career application pipeline repo — personal infrastructure for managing grant,
 ## Commands
 
 ```bash
+# Daily standup (start here every session)
+python scripts/standup.py
+python scripts/standup.py --hours 5          # Adjust time budget
+python scripts/standup.py --section stale    # Single section
+python scripts/standup.py --touch <entry-id> # Mark entry as reviewed
+python scripts/standup.py --log              # Log session metrics
+
 # Pipeline overview
 python scripts/pipeline_status.py
 

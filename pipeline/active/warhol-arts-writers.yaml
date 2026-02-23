@@ -1,32 +1,31 @@
 id: warhol-arts-writers
-name: "Warhol Arts Writers Grant"
+name: Warhol Arts Writers Grant
 track: grant
 status: qualified
 outcome: null
-
 target:
-  organization: "Andy Warhol Foundation / Creative Capital"
+  organization: Andy Warhol Foundation / Creative Capital
   url: https://creative-capital.org/artswriters
   application_url: https://creative-capital.org/artswriters/apply
   portal: custom
-
 deadline:
-  date: "2026-05-01"
+  date: '2026-05-01'
   time: null
   type: hard
-
 amount:
   value: 50000
   currency: USD
   type: lump_sum
   benefits_cliff_note: null
-
 fit:
   score: 7.1
   identity_position: systems-artist
-  framing: "Arts writer and systems artist producing critical writing on computation and culture"
-  lead_organs: [I, V, META]
-
+  framing: Arts writer and systems artist producing critical writing on computation
+    and culture
+  lead_organs:
+  - I
+  - V
+  - META
   dimensions:
     mission_alignment: 8
     evidence_match: 6
@@ -44,22 +43,20 @@ submission:
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
-
 timeline:
-  researched: "2026-02-14"
-  qualified: "2026-02-16"
+  researched: '2026-02-14'
+  qualified: '2026-02-16'
   materials_ready: null
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
-
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
-
 tags: []
 source: 04-application-tracker.md
-notes: "Range $15,000-$50,000. Opens May 1."
+notes: Range $15,000-$50,000. Opens May 1.
+last_touched: '2026-02-18'

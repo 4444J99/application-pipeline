@@ -1,32 +1,31 @@
 id: pen-america
-name: "PEN America Writers Aid"
+name: PEN America Writers Aid
 track: emergency
 status: staged
 outcome: null
-
 target:
-  organization: "PEN America"
+  organization: PEN America
   url: https://pen.org
   application_url: https://pen.org/writers-aid
   portal: custom
-
 deadline:
   date: null
   time: null
   type: rolling
-
 amount:
   value: 3500
   currency: USD
   type: lump_sum
-  benefits_cliff_note: "SNAP-safe"
-
+  benefits_cliff_note: SNAP-safe
 fit:
   score: 8.5
   identity_position: community-practitioner
-  framing: "Writer and community practitioner seeking emergency support for literary work"
-  lead_organs: [V, VI, META]
-
+  framing: Writer and community practitioner seeking emergency support for literary
+    work
+  lead_organs:
+  - V
+  - VI
+  - META
   dimensions:
     mission_alignment: 10
     evidence_match: 9
@@ -46,22 +45,20 @@ submission:
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
-
 timeline:
-  researched: "2026-02-14"
-  qualified: "2026-02-16"
-  materials_ready: "2026-02-18"
+  researched: '2026-02-14'
+  qualified: '2026-02-16'
+  materials_ready: '2026-02-18'
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
-
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
-
 tags: []
 source: 04-application-tracker.md
 notes: null
+last_touched: '2026-02-23'

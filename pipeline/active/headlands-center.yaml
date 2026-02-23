@@ -1,32 +1,31 @@
 id: headlands-center
-name: "Headlands Center for the Arts"
+name: Headlands Center for the Arts
 track: residency
 status: qualified
 outcome: null
-
 target:
-  organization: "Headlands Center for the Arts"
+  organization: Headlands Center for the Arts
   url: https://headlands.org
   application_url: https://headlands.org/program/artist-in-residence
   portal: custom
-
 deadline:
-  date: "2026-04-01"
+  date: '2026-04-01'
   time: null
   type: window
-
 amount:
   value: 4000
   currency: USD
   type: stipend
   benefits_cliff_note: null
-
 fit:
   score: 8.9
   identity_position: systems-artist
-  framing: "Systems artist working across computation and material practice in immersive residency context"
-  lead_organs: [I, II, META]
-
+  framing: Systems artist working across computation and material practice in immersive
+    residency context
+  lead_organs:
+  - I
+  - II
+  - META
   dimensions:
     mission_alignment: 10
     evidence_match: 10
@@ -47,22 +46,20 @@ submission:
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
-
 timeline:
-  researched: "2026-02-14"
-  qualified: "2026-02-16"
+  researched: '2026-02-14'
+  qualified: '2026-02-16'
   materials_ready: null
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
-
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
-
 tags: []
 source: 04-application-tracker.md
-notes: "Fully funded plus $1K/month stipend. Application window Apr 1 - Jun 1 2026."
+notes: Fully funded plus $1K/month stipend. Application window Apr 1 - Jun 1 2026.
+last_touched: '2026-02-18'

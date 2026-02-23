@@ -1,32 +1,31 @@
 id: logic-magazine
-name: "Logic Magazine"
+name: Logic Magazine
 track: writing
 status: qualified
 outcome: null
-
 target:
-  organization: "Logic Magazine"
+  organization: Logic Magazine
   url: https://logicmag.io
   application_url: https://logicmag.io/pitch
   portal: custom
-
 deadline:
   date: null
   time: null
   type: rolling
-
 amount:
   value: 2000
   currency: USD
   type: fee
   benefits_cliff_note: null
-
 fit:
   score: 8.3
   identity_position: creative-technologist
-  framing: "Creative technologist writing critically about computation, labor, and digital systems"
-  lead_organs: [I, V, META]
-
+  framing: Creative technologist writing critically about computation, labor, and
+    digital systems
+  lead_organs:
+  - I
+  - V
+  - META
   dimensions:
     mission_alignment: 9
     evidence_match: 9
@@ -47,22 +46,20 @@ submission:
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
-
 timeline:
-  researched: "2026-02-14"
-  qualified: "2026-02-16"
+  researched: '2026-02-14'
+  qualified: '2026-02-16'
   materials_ready: null
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
-
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
-
 tags: []
 source: 04-application-tracker.md
-notes: "$1,200-$2,000/essay. Themed rolling deadlines."
+notes: $1,200-$2,000/essay. Themed rolling deadlines.
+last_touched: '2026-02-18'

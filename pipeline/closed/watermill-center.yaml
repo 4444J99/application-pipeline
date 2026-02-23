@@ -1,11 +1,11 @@
 id: watermill-center
-name: "Watermill Center International Summer Program"
+name: Watermill Center International Summer Program
 track: residency
-status: staged
-outcome: null
+status: outcome
+outcome: expired
 
 target:
-  organization: "Watermill Center"
+  organization: Watermill Center
   url: https://watermillcenter.org
   application_url: https://watermillcenter.slideroom.com
   portal: slideroom
@@ -26,7 +26,6 @@ fit:
   identity_position: systems-artist
   framing: "Systems artist engaging interdisciplinary collaboration in intensive residency context"
   lead_organs: [II, VI, META]
-
   dimensions:
     mission_alignment: 8
     evidence_match: 6
@@ -36,6 +35,7 @@ fit:
     strategic_value: 7
     deadline_feasibility: 1
     portal_friction: 4
+
 submission:
   effort_level: complex
   blocks_used:
@@ -52,7 +52,7 @@ timeline:
   submitted: null
   acknowledged: null
   interview: null
-  outcome_date: null
+  outcome_date: "2026-02-23"
 
 conversion:
   response_received: false
@@ -60,6 +60,8 @@ conversion:
   time_to_response_days: null
   feedback: null
 
+last_touched: "2026-02-23"
+
 tags: []
 source: 04-application-tracker.md
-notes: "Deadline has passed (Feb 18 2026). Free residency, in-kind support."
+notes: "Deadline passed Feb 18 2026 without submission. Archived as expired by standup system."

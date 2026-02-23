@@ -1,32 +1,31 @@
 id: queer-art
-name: "Queer|Art Mentorship"
+name: Queer|Art Mentorship
 track: program
 status: qualified
 outcome: null
-
 target:
-  organization: "Queer|Art"
+  organization: Queer|Art
   url: https://queer-art.org
   application_url: https://queer-art.org/programs/mentorship
   portal: custom
-
 deadline:
   date: null
   time: null
   type: tba
-
 amount:
   value: 0
   currency: USD
   type: in_kind
   benefits_cliff_note: null
-
 fit:
   score: 7.1
   identity_position: community-practitioner
-  framing: "Queer artist seeking mentorship to deepen practice at intersection of identity and systems"
-  lead_organs: [II, VI, META]
-
+  framing: Queer artist seeking mentorship to deepen practice at intersection of identity
+    and systems
+  lead_organs:
+  - II
+  - VI
+  - META
   dimensions:
     mission_alignment: 8
     evidence_match: 6
@@ -44,22 +43,20 @@ submission:
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
-
 timeline:
-  researched: "2026-02-14"
-  qualified: "2026-02-16"
+  researched: '2026-02-14'
+  qualified: '2026-02-16'
   materials_ready: null
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
-
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
-
 tags: []
 source: 04-application-tracker.md
-notes: "Program-based mentorship. Jun-Jul 2026 deadline TBA."
+notes: Program-based mentorship. Jun-Jul 2026 deadline TBA.
+last_touched: '2026-02-18'

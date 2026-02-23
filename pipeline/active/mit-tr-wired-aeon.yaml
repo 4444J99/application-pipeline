@@ -1,32 +1,31 @@
 id: mit-tr-wired-aeon
-name: "MIT Technology Review / Wired / Aeon"
+name: MIT Technology Review / Wired / Aeon
 track: writing
 status: qualified
 outcome: null
-
 target:
-  organization: "MIT Technology Review / Wired / Aeon"
+  organization: MIT Technology Review / Wired / Aeon
   url: null
   application_url: null
   portal: custom
-
 deadline:
   date: null
   time: null
   type: rolling
-
 amount:
   value: 5000
   currency: USD
   type: fee
   benefits_cliff_note: null
-
 fit:
   score: 7.8
   identity_position: creative-technologist
-  framing: "Technology writer producing in-depth features on AI, computation, and digital culture"
-  lead_organs: [I, V, META]
-
+  framing: Technology writer producing in-depth features on AI, computation, and digital
+    culture
+  lead_organs:
+  - I
+  - V
+  - META
   dimensions:
     mission_alignment: 9
     evidence_match: 7
@@ -44,22 +43,20 @@ submission:
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
-
 timeline:
-  researched: "2026-02-14"
-  qualified: "2026-02-16"
+  researched: '2026-02-14'
+  qualified: '2026-02-16'
   materials_ready: null
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
-
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
-
 tags: []
 source: 04-application-tracker.md
-notes: "$1-3/word. Pitch-based, rolling."
+notes: $1-3/word. Pitch-based, rolling.
+last_touched: '2026-02-18'

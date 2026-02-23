@@ -27,6 +27,12 @@ VALID_DIMENSIONS = {
     "financial_alignment", "effort_to_value", "strategic_value",
     "deadline_feasibility", "portal_friction",
 }
+VALID_OUTREACH_TYPES = {
+    "pre_submission", "warm_contact", "info_session",
+    "post_submission", "follow_up", "reference_request",
+}
+VALID_OUTREACH_CHANNELS = {"email", "linkedin", "phone", "in_person", "webinar", "other"}
+VALID_OUTREACH_STATUSES = {"planned", "done", "waiting"}
 
 # Valid status transitions: each status maps to the set of statuses it can reach
 VALID_TRANSITIONS = {
@@ -181,6 +187,35 @@ def validate_entry(filepath: Path) -> list[str]:
                     full_path = full_path.with_suffix(".md")
                 if not full_path.exists():
                     errors.append(f"Block not found: blocks/{block_path} (slot: {slot})")
+
+    # last_touched validation
+    last_touched = data.get("last_touched")
+    if last_touched is not None:
+        from datetime import datetime
+        try:
+            datetime.strptime(str(last_touched), "%Y-%m-%d")
+        except ValueError:
+            errors.append(f"Invalid last_touched format: '{last_touched}' (expected YYYY-MM-DD)")
+
+    # Outreach validation
+    outreach = data.get("outreach")
+    if outreach is not None:
+        if not isinstance(outreach, list):
+            errors.append("outreach must be a list")
+        else:
+            for i, item in enumerate(outreach):
+                if not isinstance(item, dict):
+                    errors.append(f"outreach[{i}] must be a mapping")
+                    continue
+                otype = item.get("type")
+                if otype and otype not in VALID_OUTREACH_TYPES:
+                    errors.append(f"outreach[{i}].type '{otype}' invalid (valid: {VALID_OUTREACH_TYPES})")
+                ochannel = item.get("channel")
+                if ochannel and ochannel not in VALID_OUTREACH_CHANNELS:
+                    errors.append(f"outreach[{i}].channel '{ochannel}' invalid (valid: {VALID_OUTREACH_CHANNELS})")
+                ostatus = item.get("status")
+                if ostatus and ostatus not in VALID_OUTREACH_STATUSES:
+                    errors.append(f"outreach[{i}].status '{ostatus}' invalid (valid: {VALID_OUTREACH_STATUSES})")
 
     return errors
 

@@ -1,5 +1,60 @@
 # Daily Workflow
 
+## Daily Standup (Start Here)
+
+The standup is the daily entry point. Run it every session before doing anything else.
+
+```bash
+# Full standup with default 3-hour budget
+python scripts/standup.py
+
+# Adjust time budget
+python scripts/standup.py --hours 5
+
+# Single section
+python scripts/standup.py --section health
+python scripts/standup.py --section stale
+python scripts/standup.py --section plan
+
+# Mark an entry as reviewed after working on it
+python scripts/standup.py --touch pen-america
+
+# Log session metrics to signals/standup-log.yaml
+python scripts/standup.py --log
+```
+
+The standup produces 7 sections:
+
+1. **Pipeline Health** — Counts, velocity, days since last submission
+2. **Staleness Alerts** — Expired, at-risk, stagnant entries
+3. **Today's Work Plan** — Deadline-driven + score-sorted within time budget
+4. **Outreach Suggestions** — Per-target checklists based on status
+5. **Best Practices** — Context-sensitive reminders
+6. **Pipeline Replenishment** — Alerts when actionable count is low
+7. **Session Log** — Optional daily record to signals/standup-log.yaml
+
+### Staleness Rules
+
+- **EXPIRED**: Deadline passed + not yet submitted. Action: archive or withdraw.
+- **AT-RISK**: Hard deadline ≤3 days away + still in research/qualified. Action: stage immediately or withdraw.
+- **STAGNANT**: No `last_touched` update in >7 days + actionable status. Action: review or touch.
+
+### Outreach Tracking
+
+Each pipeline entry can have an `outreach` list tracking actions taken:
+
+```yaml
+outreach:
+  - type: warm_contact
+    contact: "Jane Doe"
+    channel: email
+    date: "2026-03-01"
+    note: "Intro email about Creative Capital application"
+    status: done
+```
+
+Cross-cutting networking (not tied to a single target) goes in `signals/outreach-log.yaml`.
+
 ## Adding a New Target
 
 1. **Research** — Create a file in `targets/{track}/` with organization info, eligibility, deadlines, fit assessment

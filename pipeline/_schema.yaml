@@ -91,6 +91,23 @@
 #   time_to_response_days: integer or null
 #   feedback: Free text from reviewer/organization
 
+# --- Activity Tracking ---
+# last_touched: ISO date (YYYY-MM-DD) of last human review of this entry
+#   Updated via `standup.py --touch <id>` or manual edit
+#   Used by standup.py to detect stagnation (>7 days = stale)
+
+# --- Outreach ---
+# outreach: List of target-specific outreach actions taken or planned
+#   - type: Action category
+#     enum: pre_submission | warm_contact | info_session | post_submission | follow_up | reference_request
+#   - contact: Person or entity name (null for impersonal actions)
+#   - channel: Communication channel used
+#     enum: email | linkedin | phone | in_person | webinar | other
+#   - date: ISO date (YYYY-MM-DD)
+#   - note: Brief description of the action
+#   - status: Current state of this outreach action
+#     enum: planned | done | waiting
+
 # --- Metadata ---
 # tags: List of strings (omega criteria cross-refs, categories)
 # source: Origin document reference
@@ -162,6 +179,16 @@ example:
     response_type: null
     time_to_response_days: null
     feedback: null
+
+  last_touched: "2026-02-18"
+
+  outreach:
+    - type: pre_submission
+      contact: null
+      channel: webinar
+      date: "2026-03-01"
+      note: "Attended Creative Capital info session"
+      status: done
 
   tags: ["#5", "#9"]
   source: 10-funding-strategy.md

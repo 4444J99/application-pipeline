@@ -1,0 +1,11 @@
+sessions:
+- date: '2026-02-23'
+  total: 42
+  actionable: 41
+  submitted: 0
+  days_since_last_submission: null
+  expired: 0
+  at_risk: 0
+  stagnant: 0
+  planned_today: 2
+  planned_minutes: 180

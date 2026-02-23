@@ -1,32 +1,30 @@
 id: wff-housing
-name: "WFF Housing Stability Grant"
+name: WFF Housing Stability Grant
 track: grant
 status: qualified
 outcome: null
-
 target:
-  organization: "WFF / NYFA"
+  organization: WFF / NYFA
   url: https://nyfa.org
   application_url: https://nyfa.org/awards-grants
   portal: custom
-
 deadline:
-  date: "2026-04-14"
-  time: "17:00 ET"
+  date: '2026-04-14'
+  time: 17:00 ET
   type: hard
-
 amount:
   value: 30000
   currency: USD
   type: lump_sum
-  benefits_cliff_note: "Exceeds Medicaid and Fair Fares. Call NYLAG."
-
+  benefits_cliff_note: Exceeds Medicaid and Fair Fares. Call NYLAG.
 fit:
   score: 8.1
   identity_position: community-practitioner
-  framing: "Community-rooted artist addressing housing stability as foundation for sustained creative practice"
-  lead_organs: [VI, META]
-
+  framing: Community-rooted artist addressing housing stability as foundation for
+    sustained creative practice
+  lead_organs:
+  - VI
+  - META
   dimensions:
     mission_alignment: 10
     evidence_match: 9
@@ -46,22 +44,20 @@ submission:
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
-
 timeline:
-  researched: "2026-02-14"
-  qualified: "2026-02-16"
+  researched: '2026-02-14'
+  qualified: '2026-02-16'
   materials_ready: null
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
-
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
-
 tags: []
 source: 04-application-tracker.md
-notes: "$30,000 distributed over 3 years."
+notes: $30,000 distributed over 3 years.
+last_touched: '2026-02-18'

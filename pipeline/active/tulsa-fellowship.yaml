@@ -1,32 +1,31 @@
 id: tulsa-fellowship
-name: "Tulsa Artist Fellowship"
+name: Tulsa Artist Fellowship
 track: fellowship
 status: qualified
 outcome: null
-
 target:
-  organization: "Tulsa Artist Fellowship"
+  organization: Tulsa Artist Fellowship
   url: https://tulsaartistfellowship.org
   application_url: https://tulsaartistfellowship.org/apply
   portal: custom
-
 deadline:
   date: null
   time: null
   type: tba
-
 amount:
   value: 230000
   currency: USD
   type: stipend
   benefits_cliff_note: null
-
 fit:
   score: 6.8
   identity_position: systems-artist
-  framing: "Systems artist seeking immersive multi-year fellowship for sustained practice development"
-  lead_organs: [I, II, META]
-
+  framing: Systems artist seeking immersive multi-year fellowship for sustained practice
+    development
+  lead_organs:
+  - I
+  - II
+  - META
   dimensions:
     mission_alignment: 8
     evidence_match: 6
@@ -44,22 +43,20 @@ submission:
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
-
 timeline:
-  researched: "2026-02-14"
-  qualified: "2026-02-16"
+  researched: '2026-02-14'
+  qualified: '2026-02-16'
   materials_ready: null
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
-
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
-
 tags: []
 source: 04-application-tracker.md
-notes: "$230K+ over 3 years. Spring 2026 deadline TBA."
+notes: $230K+ over 3 years. Spring 2026 deadline TBA.
+last_touched: '2026-02-18'

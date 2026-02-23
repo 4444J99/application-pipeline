@@ -1,32 +1,31 @@
 id: google-creative-fellowship
-name: "Google Creative Fellowship"
+name: Google Creative Fellowship
 track: fellowship
 status: qualified
 outcome: null
-
 target:
-  organization: "Google"
+  organization: Google
   url: https://experiments.withgoogle.com
   application_url: https://experiments.withgoogle.com/fellowship
   portal: custom
-
 deadline:
-  date: "2026-03-18"
-  time: "17:00 PST"
+  date: '2026-03-18'
+  time: 17:00 PST
   type: hard
-
 amount:
   value: 50000
   currency: USD
   type: stipend
   benefits_cliff_note: null
-
 fit:
   score: 6.9
   identity_position: creative-technologist
-  framing: "Creative technologist building experimental tools at the intersection of art and computation"
-  lead_organs: [I, III, IV]
-
+  framing: Creative technologist building experimental tools at the intersection of
+    art and computation
+  lead_organs:
+  - I
+  - III
+  - IV
   dimensions:
     mission_alignment: 8
     evidence_match: 6
@@ -44,22 +43,20 @@ submission:
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
-
 timeline:
-  researched: "2026-02-14"
-  qualified: "2026-02-16"
+  researched: '2026-02-14'
+  qualified: '2026-02-16'
   materials_ready: null
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
-
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
-
 tags: []
 source: 04-application-tracker.md
 notes: null
+last_touched: '2026-02-18'

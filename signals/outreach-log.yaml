@@ -1,0 +1,13 @@
+# Outreach Log
+# Cross-cutting networking actions not tied to a single pipeline target.
+# Target-specific outreach lives in each pipeline entry's `outreach` list.
+
+# Entry format:
+# - date: 2026-02-23
+#   type: networking | conference | meetup | informational | community
+#   contact: "Name or org"
+#   channel: email | linkedin | phone | in_person | webinar | other
+#   note: "Brief description"
+#   related_targets: []  # optional list of pipeline entry IDs
+
+entries: []

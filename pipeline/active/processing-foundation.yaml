@@ -1,32 +1,30 @@
 id: processing-foundation
-name: "Processing Foundation Fellowship"
+name: Processing Foundation Fellowship
 track: fellowship
 status: qualified
 outcome: null
-
 target:
-  organization: "Processing Foundation"
+  organization: Processing Foundation
   url: https://processingfoundation.org
   application_url: https://processingfoundation.org/fellowships
   portal: custom
-
 deadline:
   date: null
   time: null
   type: tba
-
 amount:
   value: 10000
   currency: USD
   type: lump_sum
   benefits_cliff_note: null
-
 fit:
   score: 6.5
   identity_position: educator
-  framing: "Educator and creative coder advancing open-source tools for artistic computation"
-  lead_organs: [I, III, VI]
-
+  framing: Educator and creative coder advancing open-source tools for artistic computation
+  lead_organs:
+  - I
+  - III
+  - VI
   dimensions:
     mission_alignment: 7
     evidence_match: 5
@@ -44,22 +42,20 @@ submission:
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
-
 timeline:
-  researched: "2026-02-14"
-  qualified: "2026-02-16"
+  researched: '2026-02-14'
+  qualified: '2026-02-16'
   materials_ready: null
   submitted: null
   acknowledged: null
   interview: null
   outcome_date: null
-
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
-
 tags: []
 source: 04-application-tracker.md
-notes: "Approximate deadline Apr-May 2026 TBA."
+notes: Approximate deadline Apr-May 2026 TBA.
+last_touched: '2026-02-18'
