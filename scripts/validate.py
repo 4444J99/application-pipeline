@@ -15,7 +15,7 @@ VALID_OUTCOMES = {"accepted", "rejected", "withdrawn", "expired", None}
 VALID_DEADLINE_TYPES = {"hard", "rolling", "window", "tba"}
 VALID_PORTALS = {"submittable", "slideroom", "email", "custom", "web", "greenhouse", "workable"}
 VALID_AMOUNT_TYPES = {"lump_sum", "stipend", "salary", "fee", "in_kind", "variable"}
-VALID_POSITIONS = {"systems-artist", "creative-technologist", "educator", "community-practitioner"}
+VALID_POSITIONS = {"systems-artist", "creative-technologist", "educator", "community-practitioner", "independent-engineer"}
 VALID_EFFORT_LEVELS = {"quick", "standard", "deep", "complex"}
 VALID_DIMENSIONS = {
     "mission_alignment", "evidence_match", "track_record_fit",

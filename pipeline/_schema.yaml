@@ -41,7 +41,7 @@
 # fit:
 #   score (required): 1-10 composite fit rating (weighted from dimensions)
 #   identity_position: Which framing to use
-#     enum: systems-artist | creative-technologist | educator | community-practitioner
+#     enum: systems-artist | creative-technologist | educator | community-practitioner | independent-engineer
 #   framing: One-line description of how to position for this target
 #   lead_organs: Which ORGANVM organs to emphasize (list of roman numerals)
 #   dimensions: Per-dimension scores (1-10 each, see strategy/scoring-rubric.md)

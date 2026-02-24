@@ -1,11 +1,12 @@
 # Identity Positions
 
-Four framings of the same body of work for different audiences. Derived from covenant-ark Section H.
+Five framings of the same body of work for different audiences. Derived from covenant-ark Section H.
 
 ## Rules
 
-- **Never** say "I am an engineer" or "software engineer" — use "systems artist," "creative technologist," or "auteur-producer"
-- **Never** frame the system as a portfolio piece for an engineering job — the system IS the creative practice
+- **Never** say "I am an engineer" or "software engineer" in art/grant contexts — use "systems artist," "creative technologist," or "auteur-producer"
+- **Exception:** For job-track applications at AI labs, use "independent engineer" or "systems engineer" framing (see Position #5)
+- **Never** frame the system as a portfolio piece for an engineering job in grant contexts — the system IS the creative practice
 - The process of creation IS the product — this is the thesis, not a metaphor
 - "Solo production at institutional scale" is the method descriptor
 - "AI tools as compositional instruments" is the technology descriptor
@@ -57,6 +58,20 @@ Four framings of the same body of work for different audiences. Derived from cov
 
 **Opening line template:**
 > As a queer, housing-precarious artist building creative infrastructure from lived experience of precarity, I understand that the systems we build reflect the conditions we build them in. The eight-organ system — including its community infrastructure (ORGAN-VI) and public documentation of 42 essays — was built as a model for sustainable creative practice accessible to others navigating similar circumstances.
+
+---
+
+## 5. Independent Engineer
+
+**For:** AI lab engineering roles, developer tooling positions, infrastructure engineering
+**Narrative:** "5 years building production-grade Python/TypeScript infrastructure at scale — 103 repos, 21K code files, 3.6K tests, 94 CI/CD pipelines, governance as architecture"
+**Evidence:** system-metrics.json (computed, verifiable), agentic-titan (1,095 tests), recursive-engine (1,254 tests, 85% coverage), 43 validated dependency edges, 0 violations, automated governance
+**What to emphasize:** Testing discipline, CI/CD, systems architecture, API orchestration, documentation rigor, autonomous governance design
+**What to acknowledge:** Independent practice (no team PRs), no production users, LLM API orchestration not ML training
+**Targets:** Anthropic, OpenAI, Runway, Together AI, Cohere, HuggingFace
+
+**Opening line template:**
+> Independent engineer with 5 years building production-grade Python and TypeScript infrastructure across 103 repositories. 21,160 code files, 3,610 test files in 70 repos, 94 CI/CD pipelines, and a validated dependency graph with 43 edges and 0 violations — all designed, built, and maintained as a solo practitioner using AI-augmented development methodology.
 
 ---
 

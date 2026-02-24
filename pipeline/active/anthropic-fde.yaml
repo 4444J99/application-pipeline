@@ -18,17 +18,17 @@ amount:
   type: salary
   benefits_cliff_note: null
 fit:
-  score: 4.2
-  identity_position: creative-technologist
-  framing: Forward-deployed engineer with deep understanding of AI systems and user-facing
-    applications
+  score: 5.0
+  identity_position: independent-engineer
+  framing: Independent engineer with AI systems infrastructure experience and 11 years
+    teaching experience as customer-facing communication evidence
   lead_organs:
   - III
   - IV
   dimensions:
     mission_alignment: 5
-    evidence_match: 2
-    track_record_fit: 2
+    evidence_match: 4
+    track_record_fit: 4
     financial_alignment: 3
     effort_to_value: 5
     strategic_value: 8

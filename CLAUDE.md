@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 ## What This Is
 
 Career application pipeline repo — personal infrastructure for managing grant, residency, fellowship, job, and writing applications as a structured conversion pipeline.
@@ -9,15 +11,47 @@ Career application pipeline repo — personal infrastructure for managing grant,
 
 ## Architecture
 
-- `pipeline/` — One YAML file per application tracking full lifecycle (schema in `_schema.yaml`)
-- `blocks/` — Modular narrative building blocks with tiered depth (60s → 2min → 5min → cathedral)
-- `variants/` — A/B tracked material versions with outcome attribution
+- `pipeline/` — One YAML file per application, organized into `active/`, `submitted/`, `closed/` subdirectories (schema in `_schema.yaml`)
+- `blocks/` — Modular narrative building blocks with tiered depth (60s / 2min / 5min / cathedral)
+- `variants/` — A/B tracked material versions with outcome attribution (e.g. `cover-letters/`, `project-descriptions/`)
 - `materials/` — Raw materials (resumes, CVs, work samples, headshots)
-- `targets/` — Target research organized by track (grants, residencies, jobs, writing, emergency)
-- `signals/` — Conversion analytics (log, patterns, signal map)
-- `strategy/` — Strategic documents (funding strategy, qualification assessment, playbook)
-- `scripts/` — Python CLI tooling
+- `targets/profiles/` — 44 target-specific profile JSONs with pre-written artist statements, bios, work samples
+- `signals/` — Conversion analytics (conversion-log.yaml, patterns.md, outreach-log.yaml, standup-log.yaml)
+- `strategy/` — Strategic documents (funding strategy, scoring rubric, identity positions, campaign reports)
+- `scripts/` — Python CLI tooling (all scripts import from `pipeline_lib.py`)
 - `docs/` — Architecture rationale and workflow guide
+
+## Pipeline State Machine
+
+Entries progress through these statuses in order:
+
+```
+research → qualified → drafting → staged → submitted → acknowledged → interview → outcome
+```
+
+- **Actionable statuses** (what scripts operate on): `research`, `qualified`, `drafting`, `staged`
+- **Terminal outcomes**: `accepted`, `rejected`, `withdrawn`, `expired`
+- `advance.py` enforces forward-only progression with validation
+- `standup.py` flags entries untouched for >7 days as stale
+
+## Content Composition Model
+
+Three content layers feed into submissions:
+
+1. **Blocks** (`blocks/`) — Reusable narrative modules authored manually. Referenced by path in pipeline YAML `submission.blocks_used` (e.g. `identity/2min`, `projects/organvm-system`). See `blocks/README.md` for the tier system.
+2. **Profiles** (`targets/profiles/*.json`) — Target-specific pre-written content: artist statements at 3 lengths, bios, work samples.
+3. **Legacy scripts** (`scripts/legacy-submission/`) — 32 pre-pipeline paste-ready submissions, parsed via `pipeline_lib.load_legacy_script()`.
+
+**Fallback pattern**: `draft.py` and `compose.py --profile` check blocks first, then fall back to profile content, then legacy scripts. Entries don't need `blocks_used` fully populated.
+
+## Script Dependency Graph
+
+Scripts are independent CLIs but some import functions from each other:
+
+- **`pipeline_lib.py`** — Shared foundation: `load_entries()`, `load_profile()`, `load_block()`, `load_variant()`, `load_legacy_script()`, path constants, ID maps, text utils. Every script imports from here.
+- **`campaign.py`** imports from `enrich.py` — the `--execute` mode runs enrichment + advance + preflight as a pipeline.
+- **`alchemize.py`** imports from `greenhouse_submit.py` — the Greenhouse-specific end-to-end orchestrator (research → identity mapping → synthesis prompt → integration → submission).
+- All other scripts are standalone CLIs that read/write pipeline YAML files.
 
 ## Commands
 
@@ -36,7 +70,7 @@ python scripts/pipeline_status.py
 # Validate pipeline YAML
 python scripts/validate.py
 
-# Scoring
+# Scoring (8-dimension weighted rubric, see strategy/scoring-rubric.md)
 python scripts/score.py --target <target-id>  # Score single entry
 python scripts/score.py --all --dry-run        # Preview all scores
 
@@ -93,49 +127,70 @@ python scripts/campaign.py --execute --dry-run       # Preview pipeline executio
 python scripts/campaign.py --execute --yes           # Execute for all urgent entries
 python scripts/campaign.py --execute --id <entry-id> --yes  # Single entry
 
+# Greenhouse-specific orchestrator (4-phase: intake → research → map → synthesize)
+python scripts/alchemize.py --target <target-id>                    # Full pipeline → prompt.md
+python scripts/alchemize.py --target <target-id> --phase research   # Stop after research
+python scripts/alchemize.py --target <target-id> --integrate        # Integrate output.md back
+python scripts/alchemize.py --target <target-id> --submit           # Submit via greenhouse_submit.py
+
+# Greenhouse API submission
+python scripts/greenhouse_submit.py --target <target-id>          # Dry-run preview
+python scripts/greenhouse_submit.py --target <target-id> --submit # POST to Greenhouse
+python scripts/greenhouse_submit.py --init-answers --target <target-id>  # Generate answer template
+python scripts/greenhouse_submit.py --check-answers --batch              # Validate all answers
+
+# Metric consistency check (compares blocks against canonical system-metrics.json)
+python scripts/check_metrics.py
+
 # Submission velocity tracking
 python scripts/velocity.py                    # Display velocity stats
 python scripts/velocity.py --update-signals   # Write to signals/patterns.md
 
 # Tests
 pytest tests/ -v
+pytest tests/test_compose.py -v              # Single test file
+pytest tests/test_compose.py::test_name -v   # Single test
 ```
 
-## Key Files
+## Testing Patterns
 
-- `scripts/pipeline_lib.py` — Shared utilities (load_entries, load_profile, legacy loading, ID maps, text utils)
-- `scripts/draft.py` — Profile→portal bridge: assembles portal-ready drafts from profile content
-- `scripts/submit.py` — Portal-ready checklist generator + `--record` for post-submission tracking
-- `scripts/preflight.py` — Batch submission readiness validator for staged entries
-- `scripts/advance.py` — Batch pipeline progression with validation and dry-run
-- `scripts/enrich.py` — Batch enrichment: materials, variants, portal_fields wiring
-- `scripts/campaign.py` — Deadline-aware campaign orchestrator with execute mode and `--save` markdown export
-- `scripts/velocity.py` — Submission velocity metrics and throughput tracking
-- `pipeline/_schema.yaml` — Canonical schema for pipeline YAML entries
-- `pipeline/submissions/` — Snapshots of composed submissions (via `compose.py --snapshot`)
-- `pipeline/drafts/` — Working drafts from `draft.py` (intermediate, not finalized)
-- `targets/profiles/` — 44 target profile JSONs with artist statements, bios, work samples
-- `blocks/identity/60s.md` — 100-word elevator pitch (storefront layer)
-- `blocks/identity/cathedral.md` — Full immersive statement (cathedral layer)
-- `strategy/storefront-playbook.md` — Cathedral → storefront translation guide
-- `strategy/identity-positions.md` — Four canonical identity framings
-- `scripts/legacy-submission/` — 32 pre-pipeline paste-ready submission scripts (integrated via `load_legacy_script`)
-- `signals/conversion-log.yaml` — Per-submission outcome data (updated via `submit.py --record`)
-- `signals/patterns.md` — Pipeline velocity report (updated via `velocity.py --update-signals`)
+- Tests live in `tests/` and use pytest
+- Scripts use `sys.path.insert(0, ...)` to add `scripts/` to the import path (no package installation needed)
+- Tests operate on real pipeline data — they validate against actual YAML files, block directories, and profiles
+- No mocking framework; tests verify constants, data integrity, and script output against live data
+
+## Key ID Mapping
+
+Pipeline entry IDs don't always match profile filenames or legacy script names. `pipeline_lib.py` maintains two maps:
+
+- `PROFILE_ID_MAP` — entry ID → profile JSON filename (e.g. `"creative-capital-2027"` → `"creative-capital"`)
+- `LEGACY_ID_MAP` — legacy script filename → entry ID (e.g. `"cc-creative-capital"` → `"creative-capital-2027"`)
+
+When adding new entries, check if these maps need updating.
+
+## Greenhouse Integration
+
+For entries with `target.portal: greenhouse`:
+
+- `greenhouse_submit.py` uses the public Greenhouse Job Board API for form submission
+- Personal info (name, email, phone) loaded from `scripts/.submit-config.yaml`
+- Custom question answers stored in `scripts/.greenhouse-answers/<entry-id>.yaml`
+- `alchemize.py` orchestrates the full flow: scrapes job posting, maps identity blocks to requirements, generates a synthesis prompt, then integrates AI-generated output back into pipeline YAML
 
 ## Conventions
 
 - Pipeline YAML filenames use kebab-case matching the `id` field
 - Block filenames are descriptive and match reference paths in pipeline YAML
-- Variant filenames follow `{target-type}-v{n}.md` pattern
+- Variant filenames follow `{target-type}-v{n}.md` or `{target-specific-name}.md` pattern
 - All narrative text uses covenant-ark metrics (update there first, propagate here)
+- `daily_batch.py` is deprecated — use `standup.py --section plan` instead
 
 ## Relationship to Corpus
 
-Canonical identity statements, metrics, and evidence live in `organvm-corpvs-testamentvm/docs/applications/00-covenant-ark.md`. This repo consumes those as source of truth and composes them into submission-ready materials. When metrics change, update covenant-ark first, then propagate to blocks here.
+Canonical identity statements, metrics, and evidence live in `organvm-corpvs-testamentvm/docs/applications/00-covenant-ark.md`. This repo consumes those as source of truth and composes them into submission-ready materials. When metrics change, update covenant-ark first, then propagate to blocks here. Run `python scripts/check_metrics.py` to verify consistency.
 
 ## Dependencies
 
-- Python 3.11+
+- Python 3.11+ (venv at `.venv/` uses Python 3.14)
 - PyYAML (`pip install pyyaml`)
-- No other external dependencies
+- No other external dependencies — `alchemize.py` and `greenhouse_submit.py` use stdlib `urllib` for HTTP

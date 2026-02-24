@@ -18,17 +18,17 @@ amount:
   type: salary
   benefits_cliff_note: null
 fit:
-  score: 5.0
-  identity_position: creative-technologist
-  framing: Applied AI engineer with agentic workflow expertise and production systems
-    experience
+  score: 5.4
+  identity_position: independent-engineer
+  framing: Independent engineer with agentic workflow infrastructure — agentic-titan
+    (1,095 tests), multi-agent orchestration, 94 CI/CD pipelines
   lead_organs:
   - III
   - IV
   dimensions:
-    mission_alignment: 6
-    evidence_match: 4
-    track_record_fit: 3
+    mission_alignment: 7
+    evidence_match: 5
+    track_record_fit: 4
     financial_alignment: 3
     effort_to_value: 5
     strategic_value: 5
