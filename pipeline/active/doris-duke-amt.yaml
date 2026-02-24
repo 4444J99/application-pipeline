@@ -19,28 +19,27 @@ amount:
   type: lump_sum
   benefits_cliff_note: Well above all thresholds. Call NYLAG.
 fit:
-  score: 6.6
+  score: 7.4
   identity_position: systems-artist
-  framing: Systems artist building technology as artistic medium and institutional
-    infrastructure
+  framing: Systems artist deploying Omni-Dromenon audience-participatory performance
+    engine for live performing arts contexts across dance, theatre, and music
   lead_organs:
+  - II
   - I
-  - III
-  - IV
   dimensions:
-    mission_alignment: 8
-    evidence_match: 6
+    mission_alignment: 9
+    evidence_match: 8
     track_record_fit: 7
     financial_alignment: 4
-    effort_to_value: 7
-    strategic_value: 7
+    effort_to_value: 8
+    strategic_value: 8
     deadline_feasibility: 5
     portal_friction: 6
 submission:
   effort_level: deep
   blocks_used:
     artist_statement: identity/2min
-    project_description: projects/organvm-system
+    project_description: projects/omni-dromenon-engine
   variant_ids: 
     cover_letter: cover-letters/grant-art-template
   materials_attached: 
