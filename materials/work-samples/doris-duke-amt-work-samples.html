@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Work Samples — Anthony James Padavano — Omni-Dromenon Engine</title>
+<style>
+  @page {
+    size: 8.5in 11in;
+    margin: 0.5in 0.6in;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    color: #1a1a1a;
+    width: 7.3in;
+    max-width: 7.3in;
+    margin: 0 auto;
+    padding: 0.5in 0.6in;
+  }
+
+  @media print {
+    body { padding: 0; width: 100%; max-width: 100%; }
+    .sample { page-break-inside: avoid; }
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 14pt;
+    padding-bottom: 8pt;
+    border-bottom: 1.5pt solid #1a1a1a;
+  }
+
+  header h1 {
+    font-size: 13pt;
+    font-weight: bold;
+    margin-bottom: 2pt;
+  }
+
+  header .subtitle {
+    font-size: 8.5pt;
+    color: #444;
+  }
+
+  .sample {
+    margin-bottom: 16pt;
+  }
+
+  .sample-label {
+    font-size: 7pt;
+    font-weight: bold;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 4pt;
+  }
+
+  .sample-title {
+    font-size: 11pt;
+    font-weight: bold;
+    margin-bottom: 6pt;
+  }
+
+  .diagram-container {
+    width: 100%;
+    margin-bottom: 6pt;
+    display: flex;
+    justify-content: center;
+  }
+
+  .diagram-container svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .caption {
+    font-size: 8.5pt;
+    color: #333;
+    line-height: 1.35;
+  }
+
+  .caption strong {
+    color: #1a1a1a;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Work Samples — Omni-Dromenon Engine</h1>
+  <div class="subtitle">Anthony James Padavano &nbsp;|&nbsp; Systems Artist &amp; Creative Technologist &nbsp;|&nbsp; Doris Duke AMT Lab 2026</div>
+</header>
+
+<!-- ============================================================ -->
+<!-- IMAGE 1: System Architecture Diagram                          -->
+<!-- ============================================================ -->
+<div class="sample">
+  <div class="sample-label">Image 1 of 2</div>
+  <div class="sample-title">System Architecture — Real-Time Audience-Participatory Performance Engine</div>
+  <div class="diagram-container">
+    <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, serif">
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6 Z" fill="#555"/>
+        </marker>
+        <marker id="arrow-white" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6 Z" fill="#fff"/>
+        </marker>
+      </defs>
+
+      <!-- Background -->
+      <rect width="700" height="340" fill="#fafafa" rx="4"/>
+
+      <!-- ===== AUDIENCE LAYER (left) ===== -->
+      <rect x="16" y="16" width="140" height="308" rx="6" fill="#f0f4f8" stroke="#b0c4de" stroke-width="1.5"/>
+      <text x="86" y="36" text-anchor="middle" font-size="9" font-weight="bold" fill="#2c5282" letter-spacing="1">AUDIENCE</text>
+
+      <!-- Phone icons -->
+      <rect x="32" y="52" width="36" height="56" rx="5" fill="#fff" stroke="#718096" stroke-width="1"/>
+      <rect x="36" y="58" width="28" height="38" rx="2" fill="#e2e8f0"/>
+      <text x="50" y="80" text-anchor="middle" font-size="7" fill="#4a5568">mood</text>
+      <text x="50" y="90" text-anchor="middle" font-size="7" fill="#4a5568">0.8</text>
+      <circle cx="50" cy="102" r="2" fill="#718096"/>
+
+      <rect x="78" y="52" width="36" height="56" rx="5" fill="#fff" stroke="#718096" stroke-width="1"/>
+      <rect x="82" y="58" width="28" height="38" rx="2" fill="#e2e8f0"/>
+      <text x="96" y="80" text-anchor="middle" font-size="7" fill="#4a5568">tempo</text>
+      <text x="96" y="90" text-anchor="middle" font-size="7" fill="#4a5568">0.6</text>
+      <circle cx="96" cy="102" r="2" fill="#718096"/>
+
+      <rect x="32" y="118" width="36" height="56" rx="5" fill="#fff" stroke="#718096" stroke-width="1"/>
+      <rect x="36" y="124" width="28" height="38" rx="2" fill="#e2e8f0"/>
+      <text x="50" y="146" text-anchor="middle" font-size="7" fill="#4a5568">intens</text>
+      <text x="50" y="156" text-anchor="middle" font-size="7" fill="#4a5568">0.4</text>
+      <circle cx="50" cy="168" r="2" fill="#718096"/>
+
+      <rect x="78" y="118" width="36" height="56" rx="5" fill="#fff" stroke="#718096" stroke-width="1"/>
+      <rect x="82" y="124" width="28" height="38" rx="2" fill="#e2e8f0"/>
+      <text x="96" y="146" text-anchor="middle" font-size="7" fill="#4a5568">densi</text>
+      <text x="96" y="156" text-anchor="middle" font-size="7" fill="#4a5568">0.3</text>
+      <circle cx="96" cy="168" r="2" fill="#718096"/>
+
+      <text x="86" y="196" text-anchor="middle" font-size="8" fill="#4a5568">1,000+ phones</text>
+      <text x="86" y="208" text-anchor="middle" font-size="7" fill="#718096">continuous sliders</text>
+      <text x="86" y="220" text-anchor="middle" font-size="7" fill="#718096">+ spatial location</text>
+
+      <!-- Venue zones -->
+      <rect x="28" y="236" width="108" height="76" rx="3" fill="#fff" stroke="#b0c4de" stroke-width="1"/>
+      <text x="82" y="250" text-anchor="middle" font-size="7" font-weight="bold" fill="#2c5282">VENUE ZONES</text>
+      <rect x="36" y="258" width="92" height="14" rx="2" fill="#bee3f8"/>
+      <text x="82" y="268" text-anchor="middle" font-size="6.5" fill="#2c5282">Front — weight 1.0</text>
+      <rect x="36" y="276" width="92" height="14" rx="2" fill="#e2e8f0"/>
+      <text x="82" y="286" text-anchor="middle" font-size="6.5" fill="#4a5568">Middle — weight 0.8</text>
+      <rect x="36" y="294" width="92" height="14" rx="2" fill="#f7fafc"/>
+      <text x="82" y="304" text-anchor="middle" font-size="6.5" fill="#718096">Back — weight 0.6</text>
+
+      <!-- ===== CORE ENGINE (center) ===== -->
+      <rect x="180" y="16" width="244" height="308" rx="6" fill="#1a1a1a" stroke="#333" stroke-width="1.5"/>
+      <text x="302" y="36" text-anchor="middle" font-size="9" font-weight="bold" fill="#e2e8f0" letter-spacing="1">CORE ENGINE</text>
+      <text x="302" y="48" text-anchor="middle" font-size="7" fill="#718096">Express + Socket.io — Port 3000</text>
+
+      <!-- WebSocket namespaces -->
+      <rect x="192" y="58" width="108" height="30" rx="3" fill="#2d3748"/>
+      <text x="246" y="72" text-anchor="middle" font-size="7.5" fill="#90cdf4">/audience</text>
+      <text x="246" y="82" text-anchor="middle" font-size="6" fill="#718096">many concurrent</text>
+
+      <rect x="308" y="58" width="104" height="30" rx="3" fill="#2d3748"/>
+      <text x="360" y="72" text-anchor="middle" font-size="7.5" fill="#f6ad55">/performer</text>
+      <text x="360" y="82" text-anchor="middle" font-size="6" fill="#718096">authenticated</text>
+
+      <!-- Parameter Bus -->
+      <rect x="192" y="98" width="220" height="26" rx="3" fill="#2d3748"/>
+      <text x="302" y="114" text-anchor="middle" font-size="8" font-weight="bold" fill="#e2e8f0">Parameter Bus</text>
+      <text x="302" y="122" text-anchor="middle" font-size="6" fill="#718096">16 event types — typed pub/sub</text>
+
+      <!-- Consensus Engine - the star of the show -->
+      <rect x="192" y="134" width="220" height="80" rx="4" fill="#2c5282"/>
+      <text x="302" y="150" text-anchor="middle" font-size="9" font-weight="bold" fill="#fff">CONSENSUS AGGREGATOR</text>
+
+      <!-- Three axes -->
+      <rect x="198" y="158" width="66" height="32" rx="3" fill="#2b6cb0"/>
+      <text x="231" y="170" text-anchor="middle" font-size="7" font-weight="bold" fill="#bee3f8">Spatial</text>
+      <text x="231" y="180" text-anchor="middle" font-size="6.5" fill="#90cdf4">proximity</text>
+      <text x="231" y="188" text-anchor="middle" font-size="6" fill="#63b3ed">&alpha; weight</text>
+
+      <rect x="270" y="158" width="66" height="32" rx="3" fill="#2b6cb0"/>
+      <text x="303" y="170" text-anchor="middle" font-size="7" font-weight="bold" fill="#bee3f8">Temporal</text>
+      <text x="303" y="180" text-anchor="middle" font-size="6.5" fill="#90cdf4">recency</text>
+      <text x="303" y="188" text-anchor="middle" font-size="6" fill="#63b3ed">&beta; weight</text>
+
+      <rect x="342" y="158" width="66" height="32" rx="3" fill="#2b6cb0"/>
+      <text x="375" y="170" text-anchor="middle" font-size="7" font-weight="bold" fill="#bee3f8">Cluster</text>
+      <text x="375" y="180" text-anchor="middle" font-size="6.5" fill="#90cdf4">agreement</text>
+      <text x="375" y="188" text-anchor="middle" font-size="6" fill="#63b3ed">&gamma; weight</text>
+
+      <text x="302" y="207" text-anchor="middle" font-size="6.5" fill="#bee3f8">outlier rejection &rarr; smoothing &rarr; override resolution</text>
+
+      <!-- Performer Override -->
+      <rect x="192" y="224" width="220" height="36" rx="3" fill="#744210" opacity="0.9"/>
+      <text x="302" y="238" text-anchor="middle" font-size="8" font-weight="bold" fill="#fefcbf">PERFORMER OVERRIDE</text>
+      <text x="226" y="252" text-anchor="middle" font-size="7" fill="#faf089">absolute</text>
+      <text x="302" y="252" text-anchor="middle" font-size="7" fill="#faf089">blend (ratio)</text>
+      <text x="378" y="252" text-anchor="middle" font-size="7" fill="#faf089">lock</text>
+      <line x1="260" y1="244" x2="260" y2="256" stroke="#b7791f" stroke-width="0.5"/>
+      <line x1="344" y1="244" x2="344" y2="256" stroke="#b7791f" stroke-width="0.5"/>
+
+      <!-- OSC Bridge -->
+      <rect x="192" y="270" width="104" height="44" rx="3" fill="#2d3748"/>
+      <text x="244" y="286" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#e2e8f0">OSC Bridge</text>
+      <text x="244" y="298" text-anchor="middle" font-size="6.5" fill="#90cdf4">SuperCollider</text>
+      <text x="244" y="308" text-anchor="middle" font-size="6.5" fill="#90cdf4">Max/MSP</text>
+
+      <!-- Redis -->
+      <rect x="308" y="270" width="104" height="44" rx="3" fill="#2d3748"/>
+      <text x="360" y="286" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#fc8181">Redis</text>
+      <text x="360" y="298" text-anchor="middle" font-size="6.5" fill="#feb2b2">session state</text>
+      <text x="360" y="308" text-anchor="middle" font-size="6.5" fill="#feb2b2">20 updates/sec</text>
+
+      <!-- ===== OUTPUT LAYER (right) ===== -->
+      <rect x="448" y="16" width="236" height="148" rx="6" fill="#f0fff4" stroke="#9ae6b4" stroke-width="1.5"/>
+      <text x="566" y="36" text-anchor="middle" font-size="9" font-weight="bold" fill="#276749" letter-spacing="1">PERFORMANCE SDK</text>
+      <text x="566" y="48" text-anchor="middle" font-size="7" fill="#68d391">React 18 + Vite — Port 3001</text>
+
+      <!-- Audience Interface -->
+      <rect x="458" y="56" width="104" height="96" rx="3" fill="#fff" stroke="#9ae6b4" stroke-width="1"/>
+      <text x="510" y="70" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#276749">Audience UI</text>
+      <!-- Slider representations -->
+      <rect x="468" y="78" width="60" height="4" rx="2" fill="#e2e8f0"/>
+      <rect x="468" y="78" width="42" height="4" rx="2" fill="#90cdf4"/>
+      <text x="536" y="82" font-size="6" fill="#718096">mood</text>
+      <rect x="468" y="88" width="60" height="4" rx="2" fill="#e2e8f0"/>
+      <rect x="468" y="88" width="30" height="4" rx="2" fill="#90cdf4"/>
+      <text x="536" y="92" font-size="6" fill="#718096">tempo</text>
+      <rect x="468" y="98" width="60" height="4" rx="2" fill="#e2e8f0"/>
+      <rect x="468" y="98" width="48" height="4" rx="2" fill="#90cdf4"/>
+      <text x="536" y="102" font-size="6" fill="#718096">intens.</text>
+      <rect x="468" y="108" width="60" height="4" rx="2" fill="#e2e8f0"/>
+      <rect x="468" y="108" width="20" height="4" rx="2" fill="#90cdf4"/>
+      <text x="536" y="112" font-size="6" fill="#718096">density</text>
+      <text x="510" y="134" text-anchor="middle" font-size="6.5" fill="#4a5568">touch-optimized</text>
+      <text x="510" y="144" text-anchor="middle" font-size="6.5" fill="#4a5568">phone controls</text>
+
+      <!-- Performer Dashboard -->
+      <rect x="570" y="56" width="104" height="96" rx="3" fill="#fff" stroke="#f6ad55" stroke-width="1"/>
+      <text x="622" y="70" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#975a16">Performer Panel</text>
+      <!-- Override indicators -->
+      <rect x="580" y="78" width="84" height="14" rx="2" fill="#fefcbf"/>
+      <text x="622" y="88" text-anchor="middle" font-size="6.5" fill="#975a16">mood: BLEND 70%</text>
+      <rect x="580" y="96" width="84" height="14" rx="2" fill="#fed7d7"/>
+      <text x="622" y="106" text-anchor="middle" font-size="6.5" fill="#9b2c2c">tempo: LOCKED</text>
+      <rect x="580" y="114" width="84" height="14" rx="2" fill="#f0fff4"/>
+      <text x="622" y="124" text-anchor="middle" font-size="6.5" fill="#276749">intens.: audience</text>
+      <text x="622" y="142" text-anchor="middle" font-size="6.5" fill="#4a5568">override controls</text>
+      <text x="622" y="152" text-anchor="middle" font-size="6.5" fill="#4a5568">+ live analytics</text>
+
+      <!-- Audio Output -->
+      <rect x="448" y="180" width="236" height="66" rx="6" fill="#faf5ff" stroke="#d6bcfa" stroke-width="1.5"/>
+      <text x="566" y="200" text-anchor="middle" font-size="9" font-weight="bold" fill="#553c9a" letter-spacing="1">AUDIO SYNTHESIS BRIDGE</text>
+      <text x="500" y="218" text-anchor="middle" font-size="7.5" fill="#805ad5">OSC &rarr; SuperCollider</text>
+      <text x="500" y="230" text-anchor="middle" font-size="7.5" fill="#805ad5">OSC &rarr; Max/MSP</text>
+      <text x="632" y="218" text-anchor="middle" font-size="7.5" fill="#805ad5">WebAudio API</text>
+      <text x="632" y="230" text-anchor="middle" font-size="7.5" fill="#805ad5">(browser-native)</text>
+      <line x1="566" y1="210" x2="566" y2="236" stroke="#d6bcfa" stroke-width="0.5"/>
+
+      <!-- Genre Presets Box -->
+      <rect x="448" y="260" width="236" height="64" rx="6" fill="#fffaf0" stroke="#fbd38d" stroke-width="1.5"/>
+      <text x="566" y="278" text-anchor="middle" font-size="8" font-weight="bold" fill="#975a16" letter-spacing="0.5">GENRE PRESETS (&alpha; + &beta; + &gamma; &asymp; 1.0)</text>
+      <text x="466" y="294" font-size="7" fill="#744210">Electronic Music</text>
+      <text x="466" y="306" font-size="7" fill="#744210">Ballet</text>
+      <text x="466" y="318" font-size="7" fill="#744210">Opera</text>
+      <text x="568" y="294" font-size="7" fill="#744210">Theatre</text>
+      <text x="568" y="306" font-size="7" fill="#744210">Installation</text>
+      <text x="630" y="294" font-size="6.5" fill="#975a16">.4 / .3 / .3</text>
+      <text x="630" y="306" font-size="6.5" fill="#975a16">.7 / .1 / .2</text>
+      <!-- Preset values - left column -->
+      <text x="558" y="294" font-size="6.5" fill="#975a16" text-anchor="end">.3 / .5 / .2</text>
+      <text x="558" y="306" font-size="6.5" fill="#975a16" text-anchor="end">.5 / .2 / .3</text>
+      <text x="558" y="318" font-size="6.5" fill="#975a16" text-anchor="end">.2 / .3 / .5</text>
+
+      <!-- ===== FLOW ARROWS ===== -->
+      <!-- Audience phones to Core Engine -->
+      <line x1="156" y1="100" x2="180" y2="100" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+      <text x="168" y="95" text-anchor="middle" font-size="5.5" fill="#718096">WS</text>
+
+      <!-- Core Engine to Performance SDK -->
+      <line x1="424" y1="100" x2="448" y2="100" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+      <!-- Core Engine to Audio Bridge -->
+      <line x1="424" y1="210" x2="448" y2="210" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+      <text x="436" y="205" text-anchor="middle" font-size="5.5" fill="#718096">OSC</text>
+
+      <!-- Performer panel back to Core Engine -->
+      <line x1="570" y1="152" x2="570" y2="164" stroke="#f6ad55" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="570" y1="164" x2="436" y2="164" stroke="#f6ad55" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="436" y1="164" x2="436" y2="240" stroke="#f6ad55" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="436" y1="240" x2="424" y2="240" stroke="#f6ad55" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#arrow)"/>
+      <text x="504" y="161" text-anchor="middle" font-size="5.5" fill="#975a16">override</text>
+
+      <!-- Performance metrics bar -->
+      <rect x="16" y="332" width="668" height="0" fill="none"/>
+    </svg>
+  </div>
+  <div class="caption">
+    <strong>Omni-Dromenon Engine architecture.</strong> Audience members (left) control continuous parameters via phone-based sliders. Inputs flow to the Core Engine, which aggregates them through a three-axis weighted consensus algorithm — spatial proximity to the stage, temporal recency, and cluster agreement — before applying performer override resolution. The Performance SDK (top right) provides React interfaces for both audiences and performers. The Audio Synthesis Bridge (middle right) routes consensus values to SuperCollider/Max/MSP via OSC and browser-native WebAudio. Genre presets (bottom right) encode each form's aesthetic priorities as weighting ratios. Designed for 1,000+ concurrent participants at &lt;2ms P95 latency and 20 consensus updates/second. Open-source (MIT).
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- IMAGE 2: Four Working Examples                                -->
+<!-- ============================================================ -->
+<div class="sample">
+  <div class="sample-label">Image 2 of 2</div>
+  <div class="sample-title">Four Working Examples — Genre-Specific Performance Applications</div>
+  <div class="diagram-container">
+    <svg viewBox="0 0 700 270" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, serif">
+      <rect width="700" height="270" fill="#fafafa" rx="4"/>
+
+      <!-- ===== EXAMPLE 1: Generative Music ===== -->
+      <rect x="12" y="12" width="163" height="246" rx="6" fill="#ebf8ff" stroke="#90cdf4" stroke-width="1.5"/>
+      <text x="93" y="32" text-anchor="middle" font-size="9" font-weight="bold" fill="#2c5282">Generative Music</text>
+      <text x="93" y="44" text-anchor="middle" font-size="6.5" fill="#4299e1">Electronic Music preset</text>
+      <text x="93" y="54" text-anchor="middle" font-size="6" fill="#718096">&alpha;=0.3 &beta;=0.5 &gamma;=0.2</text>
+
+      <!-- Waveform visualization -->
+      <rect x="24" y="62" width="139" height="70" rx="3" fill="#fff" stroke="#bee3f8" stroke-width="1"/>
+      <polyline points="30,97 42,82 54,105 66,78 78,100 90,85 102,108 114,75 126,95 138,88 150,97" fill="none" stroke="#4299e1" stroke-width="1.5"/>
+      <polyline points="30,97 42,92 54,102 66,88 78,98 90,93 102,100 114,86 126,96 138,94 150,97" fill="none" stroke="#90cdf4" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="93" y="126" text-anchor="middle" font-size="6" fill="#718096">consensus &rarr; SuperCollider via OSC</text>
+
+      <!-- Description -->
+      <text x="24" y="148" font-size="7" fill="#2d3748">Audience controls:</text>
+      <text x="24" y="160" font-size="6.5" fill="#4a5568">&#8226; pitch / rhythm / intensity</text>
+      <text x="24" y="172" font-size="6.5" fill="#4a5568">&#8226; continuous sliders (0&ndash;1)</text>
+      <text x="24" y="190" font-size="7" fill="#2d3748">Output:</text>
+      <text x="24" y="202" font-size="6.5" fill="#4a5568">&#8226; OSC messages to synth</text>
+      <text x="24" y="214" font-size="6.5" fill="#4a5568">&#8226; real-time audio synthesis</text>
+      <text x="24" y="226" font-size="6.5" fill="#4a5568">&#8226; temporal weighting highest</text>
+      <text x="24" y="244" font-size="6.5" fill="#2c5282" font-style="italic">Rhythmic immediacy drives form</text>
+
+      <!-- ===== EXAMPLE 2: Generative Visual ===== -->
+      <rect x="183" y="12" width="163" height="246" rx="6" fill="#f0fff4" stroke="#9ae6b4" stroke-width="1.5"/>
+      <text x="264" y="32" text-anchor="middle" font-size="9" font-weight="bold" fill="#276749">Generative Visual</text>
+      <text x="264" y="44" text-anchor="middle" font-size="6.5" fill="#48bb78">Installation preset</text>
+      <text x="264" y="54" text-anchor="middle" font-size="6" fill="#718096">&alpha;=0.7 &beta;=0.1 &gamma;=0.2</text>
+
+      <!-- Shader visualization -->
+      <rect x="195" y="62" width="139" height="70" rx="3" fill="#1a1a2e" stroke="#9ae6b4" stroke-width="1"/>
+      <!-- Abstract shader representation -->
+      <circle cx="240" cy="92" r="18" fill="none" stroke="#48bb78" stroke-width="1" opacity="0.7"/>
+      <circle cx="240" cy="92" r="12" fill="none" stroke="#9ae6b4" stroke-width="1" opacity="0.5"/>
+      <circle cx="240" cy="92" r="6" fill="#48bb78" opacity="0.4"/>
+      <circle cx="278" cy="100" r="14" fill="none" stroke="#f6ad55" stroke-width="1" opacity="0.6"/>
+      <circle cx="278" cy="100" r="8" fill="none" stroke="#fbd38d" stroke-width="1" opacity="0.4"/>
+      <circle cx="278" cy="100" r="3" fill="#f6ad55" opacity="0.4"/>
+      <circle cx="255" cy="82" r="10" fill="none" stroke="#90cdf4" stroke-width="1" opacity="0.5"/>
+      <text x="264" y="126" text-anchor="middle" font-size="6" fill="#718096">consensus &rarr; WebGL shader uniforms</text>
+
+      <text x="195" y="148" font-size="7" fill="#2d3748">Audience controls:</text>
+      <text x="195" y="160" font-size="6.5" fill="#4a5568">&#8226; color / distortion / speed</text>
+      <text x="195" y="172" font-size="6.5" fill="#4a5568">&#8226; palette &amp; animation params</text>
+      <text x="195" y="190" font-size="7" fill="#2d3748">Output:</text>
+      <text x="195" y="202" font-size="6.5" fill="#4a5568">&#8226; real-time WebGL shaders</text>
+      <text x="195" y="214" font-size="6.5" fill="#4a5568">&#8226; vertex + fragment programs</text>
+      <text x="195" y="226" font-size="6.5" fill="#4a5568">&#8226; spatial weighting highest</text>
+      <text x="195" y="244" font-size="6.5" fill="#276749" font-style="italic">Position in space is everything</text>
+
+      <!-- ===== EXAMPLE 3: Choreographic Interface ===== -->
+      <rect x="354" y="12" width="163" height="246" rx="6" fill="#faf5ff" stroke="#d6bcfa" stroke-width="1.5"/>
+      <text x="435" y="32" text-anchor="middle" font-size="9" font-weight="bold" fill="#553c9a">Choreographic</text>
+      <text x="435" y="44" text-anchor="middle" font-size="6.5" fill="#9f7aea">Ballet preset</text>
+      <text x="435" y="54" text-anchor="middle" font-size="6" fill="#718096">&alpha;=0.5 &beta;=0.2 &gamma;=0.3</text>
+
+      <!-- Body/pose visualization -->
+      <rect x="366" y="62" width="139" height="70" rx="3" fill="#fff" stroke="#d6bcfa" stroke-width="1"/>
+      <!-- Stick figure pose -->
+      <circle cx="420" cy="76" r="5" fill="none" stroke="#805ad5" stroke-width="1.5"/>
+      <line x1="420" y1="81" x2="420" y2="102" stroke="#805ad5" stroke-width="1.5"/>
+      <line x1="420" y1="87" x2="408" y2="78" stroke="#805ad5" stroke-width="1.5"/>
+      <line x1="420" y1="87" x2="436" y2="95" stroke="#805ad5" stroke-width="1.5"/>
+      <line x1="420" y1="102" x2="410" y2="118" stroke="#805ad5" stroke-width="1.5"/>
+      <line x1="420" y1="102" x2="432" y2="116" stroke="#805ad5" stroke-width="1.5"/>
+      <!-- Pose detection dots -->
+      <circle cx="408" cy="78" r="2" fill="#9f7aea"/>
+      <circle cx="436" cy="95" r="2" fill="#9f7aea"/>
+      <circle cx="410" cy="118" r="2" fill="#9f7aea"/>
+      <circle cx="432" cy="116" r="2" fill="#9f7aea"/>
+      <circle cx="420" cy="76" r="2" fill="#9f7aea"/>
+      <!-- Movement mapping arrows -->
+      <path d="M442,85 Q458,80 462,92" fill="none" stroke="#d6bcfa" stroke-width="1" stroke-dasharray="2,2"/>
+      <path d="M442,100 Q456,105 458,112" fill="none" stroke="#d6bcfa" stroke-width="1" stroke-dasharray="2,2"/>
+      <text x="468" y="88" font-size="5.5" fill="#805ad5">map</text>
+      <text x="468" y="108" font-size="5.5" fill="#805ad5">map</text>
+      <text x="435" y="126" text-anchor="middle" font-size="6" fill="#718096">pose detection + movement mapping</text>
+
+      <text x="366" y="148" font-size="7" fill="#2d3748">Audience controls:</text>
+      <text x="366" y="160" font-size="6.5" fill="#4a5568">&#8226; movement interpretation</text>
+      <text x="366" y="172" font-size="6.5" fill="#4a5568">&#8226; literal &harr; abstract mapping</text>
+      <text x="366" y="190" font-size="7" fill="#2d3748">Output:</text>
+      <text x="366" y="202" font-size="6.5" fill="#4a5568">&#8226; visual/sonic response to body</text>
+      <text x="366" y="214" font-size="6.5" fill="#4a5568">&#8226; camera tracks performer</text>
+      <text x="366" y="226" font-size="6.5" fill="#4a5568">&#8226; spatial weighting highest</text>
+      <text x="366" y="244" font-size="6.5" fill="#553c9a" font-style="italic">Dancer-audience proximity is primary</text>
+
+      <!-- ===== EXAMPLE 4: Theatre Dialogue ===== -->
+      <rect x="525" y="12" width="163" height="246" rx="6" fill="#fffaf0" stroke="#fbd38d" stroke-width="1.5"/>
+      <text x="606" y="32" text-anchor="middle" font-size="9" font-weight="bold" fill="#975a16">Theatre Dialogue</text>
+      <text x="606" y="44" text-anchor="middle" font-size="6.5" fill="#d69e2e">Theatre preset</text>
+      <text x="606" y="54" text-anchor="middle" font-size="6" fill="#718096">&alpha;=0.4 &beta;=0.3 &gamma;=0.3</text>
+
+      <!-- Branching narrative visualization -->
+      <rect x="537" y="62" width="139" height="70" rx="3" fill="#fff" stroke="#fbd38d" stroke-width="1"/>
+      <!-- Tree/branch structure -->
+      <circle cx="606" cy="74" r="4" fill="#d69e2e"/>
+      <line x1="606" y1="78" x2="582" y2="90" stroke="#d69e2e" stroke-width="1.2"/>
+      <line x1="606" y1="78" x2="630" y2="90" stroke="#d69e2e" stroke-width="1.2"/>
+      <circle cx="582" cy="92" r="3" fill="#fbd38d"/>
+      <circle cx="630" cy="92" r="3" fill="#fbd38d"/>
+      <line x1="582" y1="95" x2="570" y2="106" stroke="#d69e2e" stroke-width="1"/>
+      <line x1="582" y1="95" x2="594" y2="106" stroke="#d69e2e" stroke-width="1"/>
+      <line x1="630" y1="95" x2="618" y2="106" stroke="#d69e2e" stroke-width="1"/>
+      <line x1="630" y1="95" x2="642" y2="106" stroke="#d69e2e" stroke-width="1"/>
+      <circle cx="570" cy="108" r="2.5" fill="#fef3c7"/>
+      <circle cx="594" cy="108" r="2.5" fill="#fef3c7"/>
+      <circle cx="618" cy="108" r="2.5" fill="#fef3c7"/>
+      <circle cx="642" cy="108" r="2.5" fill="#fef3c7"/>
+      <!-- Lock icon on one branch -->
+      <rect x="614" y="113" width="8" height="6" rx="1" fill="#e53e3e"/>
+      <text x="618" y="118" text-anchor="middle" font-size="4" fill="#fff">L</text>
+      <text x="606" y="126" text-anchor="middle" font-size="6" fill="#718096">branching narratives + performer locks</text>
+
+      <text x="537" y="148" font-size="7" fill="#2d3748">Audience controls:</text>
+      <text x="537" y="160" font-size="6.5" fill="#4a5568">&#8226; narrative branch selection</text>
+      <text x="537" y="172" font-size="6.5" fill="#4a5568">&#8226; dialogue path consensus</text>
+      <text x="537" y="190" font-size="7" fill="#2d3748">Output:</text>
+      <text x="537" y="202" font-size="6.5" fill="#4a5568">&#8226; tree-structured script engine</text>
+      <text x="537" y="214" font-size="6.5" fill="#4a5568">&#8226; performer locks narrative beats</text>
+      <text x="537" y="226" font-size="6.5" fill="#4a5568">&#8226; balanced weighting</text>
+      <text x="537" y="244" font-size="6.5" fill="#975a16" font-style="italic">Narrative requires all three axes</text>
+    </svg>
+  </div>
+  <div class="caption">
+    <strong>Four genre-specific examples ship with the engine.</strong> Each demonstrates a different audience-performer dynamic and genre preset. <em>Generative Music</em> routes audience consensus to SuperCollider synthesis via OSC, prioritizing temporal responsiveness. <em>Generative Visual</em> maps collective input to WebGL shader uniforms, prioritizing spatial position within the installation. <em>Choreographic Interface</em> integrates camera-based pose detection with consensus-weighted movement mapping — audience proximity to the dancer determines influence. <em>Theatre Dialogue</em> uses a branching narrative engine where audience consensus selects story paths while performers lock critical beats. The grant funds deploying these in live venue conditions with performing artists across dance, theatre, and music — testing and refining the genre presets based on performer feedback.
+  </div>
+</div>
+
+</body>
+</html>

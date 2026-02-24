@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omni-Dromenon Engine — Interactive Work Samples</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+<style>
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-card: rgba(0,0,0,0.65);
+  --bg-card-solid: #111111;
+  --border: rgba(255,255,255,0.15);
+  --border-bright: rgba(255,255,255,0.3);
+  --text-primary: #FFFFFF;
+  --text-muted: rgba(255,255,255,0.65);
+  --text-dim: rgba(255,255,255,0.4);
+  --accent: #d4a853;
+  --accent-hover: #c4463a;
+  --accent-glow: rgba(212,168,83,0.3);
+  --blue: #4299e1;
+  --green: #48bb78;
+  --purple: #9f7aea;
+  --amber: #d69e2e;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-heading: 'Syne', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1rem 2rem;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.95), rgba(10,10,10,0));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.site-header > * { pointer-events: auto; }
+
+.header-title {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+.header-subtitle {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  margin-top: 0.15rem;
+}
+
+.nav-dots { display: flex; gap: 0.75rem; align-items: center; }
+.nav-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  border: 1.5px solid var(--text-dim);
+  background: transparent; cursor: pointer; transition: all 0.3s;
+}
+.nav-dot.active { background: var(--accent); border-color: var(--accent); }
+.nav-dot:hover { border-color: var(--accent); }
+
+section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  padding: 5rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  opacity: 0; transform: translateY(10px);
+  transition: all 0.6s ease;
+}
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  opacity: 0; transform: translateY(10px);
+  transition: all 0.6s ease 0.1s;
+}
+.section-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  opacity: 0; transform: translateY(10px);
+  transition: all 0.6s ease 0.2s;
+}
+.visible .section-label,
+.visible .section-title,
+.visible .section-subtitle { opacity: 1; transform: translateY(0); }
+
+/* Controls */
+.controls-bar {
+  display: flex; flex-wrap: wrap; gap: 0.75rem;
+  align-items: center; justify-content: center;
+  margin-bottom: 1rem; width: 100%; max-width: 1200px;
+  opacity: 0; transition: opacity 0.6s ease 0.3s;
+}
+.visible .controls-bar { opacity: 1; }
+
+.preset-tabs { display: flex; gap: 0.35rem; }
+.preset-tab {
+  font-family: var(--font-mono); font-size: 0.65rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border); border-radius: 4px;
+  background: transparent; color: var(--text-muted);
+  cursor: pointer; transition: all 0.25s; letter-spacing: 0.03em;
+}
+.preset-tab:hover { border-color: var(--accent); color: var(--text-primary); }
+.preset-tab.active {
+  background: var(--accent); color: var(--bg-primary);
+  border-color: var(--accent); font-weight: 600;
+}
+
+.control-group { display: flex; align-items: center; gap: 0.5rem; }
+.control-label {
+  font-family: var(--font-mono); font-size: 0.6rem;
+  color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em;
+}
+
+.audience-slider {
+  -webkit-appearance: none; appearance: none;
+  width: 120px; height: 4px; border-radius: 2px;
+  background: var(--border); outline: none; cursor: pointer;
+}
+.audience-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--accent); cursor: pointer;
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.override-btns { display: flex; gap: 0.25rem; }
+.override-btn {
+  font-family: var(--font-mono); font-size: 0.6rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--border); border-radius: 3px;
+  background: transparent; color: var(--text-dim);
+  cursor: pointer; transition: all 0.25s;
+}
+.override-btn:hover { border-color: var(--amber); color: var(--text-primary); }
+.override-btn.active {
+  background: rgba(214,158,46,0.2);
+  border-color: var(--amber); color: var(--amber);
+}
+
+/* Canvas */
+.canvas-container {
+  width: 100%; max-width: 1200px;
+  aspect-ratio: 16/9; max-height: 60vh;
+  border-radius: 8px; overflow: hidden;
+  border: 1px solid var(--border);
+  position: relative; background: #050505;
+}
+.canvas-container canvas { display: block; width: 100% !important; height: 100% !important; }
+
+/* Metrics */
+.metrics-ticker {
+  display: flex; gap: 2rem; justify-content: center;
+  margin-top: 1rem; flex-wrap: wrap;
+}
+.metric { text-align: center; }
+.metric-value {
+  font-family: var(--font-mono); font-size: 1.1rem;
+  font-weight: 600; color: var(--accent);
+}
+.metric-label {
+  font-size: 0.65rem; color: var(--text-dim);
+  text-transform: uppercase; letter-spacing: 0.1em;
+}
+
+.caption {
+  max-width: 800px; font-size: 0.8rem;
+  color: var(--text-muted); line-height: 1.6;
+  margin-top: 1.25rem; text-align: center;
+}
+.caption strong { color: var(--accent); }
+
+/* Example cards */
+.example-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  gap: 1.25rem; width: 100%; max-width: 1200px;
+  opacity: 0; transform: translateY(20px);
+  transition: all 0.6s ease 0.3s;
+}
+.visible .example-grid { opacity: 1; transform: translateY(0); }
+
+.example-card {
+  border: 1px solid var(--border); border-radius: 8px;
+  overflow: hidden; background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  cursor: pointer; transition: all 0.35s; position: relative;
+}
+.example-card:hover { border-color: var(--border-bright); transform: translateY(-2px); }
+.example-card.pulse { border-color: var(--border-bright); }
+
+.card-canvas-wrap {
+  width: 100%; aspect-ratio: 16/9;
+  position: relative; overflow: hidden;
+}
+.card-canvas-wrap canvas { display: block; width: 100% !important; height: 100% !important; }
+
+.card-overlay {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 1rem; z-index: 2;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 70%, transparent);
+  pointer-events: none;
+}
+.card-genre { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; }
+.card-preset {
+  font-family: var(--font-mono); font-size: 0.6rem;
+  color: var(--text-dim); margin-top: 0.15rem;
+}
+
+.card-detail {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 1rem;
+  font-size: 0.78rem; color: var(--text-muted);
+  line-height: 1.55; background: var(--bg-card-solid);
+}
+.example-card.expanded .card-detail {
+  max-height: 300px; padding: 0.75rem 1rem 1rem;
+}
+.card-detail p { margin-bottom: 0.5rem; }
+.card-detail .mechanism-label {
+  font-family: var(--font-mono); font-size: 0.6rem;
+  color: var(--accent); text-transform: uppercase;
+  letter-spacing: 0.1em; margin-bottom: 0.25rem;
+}
+
+/* Footer */
+.site-footer {
+  padding: 2rem; text-align: center;
+  border-top: 1px solid var(--border);
+}
+.footer-name { font-family: var(--font-heading); font-weight: 700; font-size: 0.9rem; color: var(--accent); }
+.footer-links { font-size: 0.7rem; color: var(--text-dim); margin-top: 0.3rem; }
+.footer-links a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-context {
+  font-family: var(--font-mono); font-size: 0.6rem;
+  color: var(--text-dim); margin-top: 0.5rem; letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  section { padding: 4.5rem 1rem 2rem; }
+  .example-grid { grid-template-columns: 1fr; }
+  .controls-bar { gap: 0.5rem; }
+  .preset-tabs { flex-wrap: wrap; justify-content: center; }
+  .canvas-container { aspect-ratio: 4/3; max-height: 50vh; }
+  .metrics-ticker { gap: 1rem; }
+  .site-header { padding: 0.75rem 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@keyframes consensusGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(212,168,83,0.1); }
+  50% { box-shadow: 0 0 30px rgba(212,168,83,0.25); }
+}
+.canvas-container { animation: consensusGlow 4s ease-in-out infinite; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div>
+    <div class="header-title">OMNI-DROMENON ENGINE</div>
+    <div class="header-subtitle">Anthony James Padavano — Work Samples</div>
+  </div>
+  <nav class="nav-dots">
+    <button class="nav-dot active" onclick="scrollToSection(0)" aria-label="Architecture"></button>
+    <button class="nav-dot" onclick="scrollToSection(1)" aria-label="Examples"></button>
+  </nav>
+</header>
+
+<!-- SECTION 1: ARCHITECTURE -->
+<section id="architecture">
+  <div class="section-label">Image 1 of 2</div>
+  <div class="section-title">System Architecture</div>
+  <div class="section-subtitle">Real-time audience-participatory performance engine — 1,000+ concurrent participants, &lt;2ms P95 latency</div>
+
+  <div class="controls-bar">
+    <div class="preset-tabs">
+      <button class="preset-tab active" data-preset="electronic">Electronic</button>
+      <button class="preset-tab" data-preset="ballet">Ballet</button>
+      <button class="preset-tab" data-preset="opera">Opera</button>
+      <button class="preset-tab" data-preset="installation">Installation</button>
+      <button class="preset-tab" data-preset="theatre">Theatre</button>
+    </div>
+    <div class="control-group">
+      <span class="control-label">Your input</span>
+      <input type="range" class="audience-slider" id="audienceSlider" min="0" max="100" value="50">
+    </div>
+    <div class="control-group">
+      <span class="control-label">Override</span>
+      <div class="override-btns">
+        <button class="override-btn" data-mode="absolute">Absolute</button>
+        <button class="override-btn active" data-mode="blend">Blend</button>
+        <button class="override-btn" data-mode="lock">Lock</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="canvas-container" id="archCanvasContainer"></div>
+
+  <div class="metrics-ticker">
+    <div class="metric">
+      <div class="metric-value" id="metricParticipants">0</div>
+      <div class="metric-label">Participants</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value" id="metricLatency">0ms</div>
+      <div class="metric-label">P95 Latency</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value" id="metricUpdates">0/s</div>
+      <div class="metric-label">Updates</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value" id="metricPreset">—</div>
+      <div class="metric-label">Active Preset</div>
+    </div>
+  </div>
+
+  <div class="caption">
+    <strong>Omni-Dromenon Engine architecture.</strong> Audience members control continuous parameters via phone-based sliders. Inputs flow to the Core Engine, which aggregates them through a three-axis weighted consensus algorithm — spatial proximity, temporal recency, and cluster agreement — before applying performer override resolution. Genre presets encode each art form's aesthetic priorities as weighting ratios. Try the controls above to explore different configurations.
+  </div>
+</section>
+
+<!-- SECTION 2: EXAMPLES -->
+<section id="examples">
+  <div class="section-label">Image 2 of 2</div>
+  <div class="section-title">Working Examples</div>
+  <div class="section-subtitle">How audience phones shape live performance across four art forms</div>
+
+  <div class="example-grid">
+    <div class="example-card" data-genre="music" onclick="toggleCard(this)">
+      <div class="card-canvas-wrap" id="musicCanvasWrap">
+        <div class="card-overlay">
+          <div class="card-genre" style="color: var(--blue);">Generative Music</div>
+          <div class="card-preset">&alpha;=0.3 &beta;=0.5 &gamma;=0.2 — Electronic Music preset</div>
+        </div>
+      </div>
+      <div class="card-detail">
+        <div class="mechanism-label">How it works in performance</div>
+        <p>500 audience members each control sliders for pitch, rhythm, and intensity on their phones. The engine averages their input 20 times per second, weighting recent changes most heavily (temporal priority). Consensus values route to SuperCollider via OSC, controlling synthesizer parameters in real time. The performer can lock tempo to prevent rhythmic chaos, or blend their own values at 70/30 over audience consensus.</p>
+        <p><strong>What audiences experience:</strong> Moving your slider immediately shifts the sound. You hear your contribution merge with hundreds of others into an evolving sonic landscape that no single person controls.</p>
+      </div>
+    </div>
+
+    <div class="example-card" data-genre="visual" onclick="toggleCard(this)">
+      <div class="card-canvas-wrap" id="visualCanvasWrap">
+        <div class="card-overlay">
+          <div class="card-genre" style="color: var(--green);">Generative Visual</div>
+          <div class="card-preset">&alpha;=0.7 &beta;=0.1 &gamma;=0.2 — Installation preset</div>
+        </div>
+      </div>
+      <div class="card-detail">
+        <div class="mechanism-label">How it works in performance</div>
+        <p>In an installation, your physical position matters most (spatial weighting = 0.7). Standing closer to the projection gives your phone inputs more influence. Audience sliders control color, distortion, and animation speed. Consensus values become WebGL shader uniforms, reshaping the projected visuals in real time. Walking through the space changes what you control.</p>
+        <p><strong>What audiences experience:</strong> The projection responds to where you stand and what you choose. Move to the front — the visuals shift toward your preferences. Step back — others take over.</p>
+      </div>
+    </div>
+
+    <div class="example-card" data-genre="choreo" onclick="toggleCard(this)">
+      <div class="card-canvas-wrap" id="choreoCanvasWrap">
+        <div class="card-overlay">
+          <div class="card-genre" style="color: var(--purple);">Choreographic Interface</div>
+          <div class="card-preset">&alpha;=0.5 &beta;=0.2 &gamma;=0.3 — Ballet preset</div>
+        </div>
+      </div>
+      <div class="card-detail">
+        <div class="mechanism-label">How it works in performance</div>
+        <p>The dancer performs on stage while audience phones control the environment around them. Collective "mood" input shifts lighting color (warm to cool). "Intensity" controls music tempo and volume. "Density" adjusts the complexity of projected patterns on the stage floor. The dancer sees a summary display showing audience energy level, and adapts their movement to the shifting environment the audience creates.</p>
+        <p><strong>What audiences experience:</strong> You collectively sculpt the world the dancer moves through. Sitting closer to the stage gives you more influence (spatial weighting). The dancer responds to the lighting and soundscape you create — a feedback loop between performer and audience.</p>
+      </div>
+    </div>
+
+    <div class="example-card" data-genre="theatre" onclick="toggleCard(this)">
+      <div class="card-canvas-wrap" id="theatreCanvasWrap">
+        <div class="card-overlay">
+          <div class="card-genre" style="color: var(--amber);">Theatre Dialogue</div>
+          <div class="card-preset">&alpha;=0.4 &beta;=0.3 &gamma;=0.3 — Theatre preset</div>
+        </div>
+      </div>
+      <div class="card-detail">
+        <div class="mechanism-label">How it works in performance</div>
+        <p>At key moments in the script, audience members vote on their phones for which direction the story takes: "Does the character confess?" or "Does she leave?" The engine aggregates votes using balanced weighting — position, timing, and agreement all matter equally. Actors see the selected path on a backstage monitor and follow the corresponding script branch. The director can lock critical dramatic beats to prevent audience votes from derailing narrative structure.</p>
+        <p><strong>What audiences experience:</strong> The story responds to your choices. You see vote tallies shift in real time before the decision locks. Some paths are blocked by the director — the "LOCKED" icon means that beat is dramatically non-negotiable. Every performance takes a different path through the script tree.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="caption">
+    <strong>Four genre-specific examples ship with the engine.</strong> Each demonstrates a different audience-performer dynamic. The grant funds deploying these in live venue conditions with performing artists across dance, theatre, and music — testing and refining the genre presets with real performer feedback.
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-name">Anthony James Padavano</div>
+  <div class="footer-links">
+    Systems Artist &amp; Creative Technologist
+    &nbsp;&middot;&nbsp;
+    <a href="https://4444j99.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a>
+    &nbsp;&middot;&nbsp;
+    <a href="https://github.com/omni-dromenon-machina" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <div class="footer-context">Doris Duke / Mozilla Artists Make Technology Lab 2026</div>
+</footer>
+
+<script>
+// ================================================================
+// SHARED STATE
+// ================================================================
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const PRESETS = {
+  electronic:   { name: 'Electronic Music', alpha: 0.3, beta: 0.5, gamma: 0.2, speed: 1.2 },
+  ballet:       { name: 'Ballet',           alpha: 0.5, beta: 0.2, gamma: 0.3, speed: 0.6 },
+  opera:        { name: 'Opera',            alpha: 0.2, beta: 0.3, gamma: 0.5, speed: 0.4 },
+  installation: { name: 'Installation',     alpha: 0.7, beta: 0.1, gamma: 0.2, speed: 0.3 },
+  theatre:      { name: 'Theatre',          alpha: 0.4, beta: 0.3, gamma: 0.3, speed: 0.8 }
+};
+
+let activePreset = 'electronic';
+let overrideMode = 'blend';
+let audienceInput = 0.5;
+let targetAlpha = 0.3, targetBeta = 0.5, targetGamma = 0.2;
+let currentAlpha = 0.3, currentBeta = 0.5, currentGamma = 0.2;
+
+function lerp(a, b, t) { return a + (b - a) * t; }
+
+// ================================================================
+// INTERSECTION OBSERVER
+// ================================================================
+const sections = document.querySelectorAll('section');
+const navDots = document.querySelectorAll('.nav-dot');
+let visibleSections = new Set();
+
+// Mark first section visible immediately so p5 starts drawing
+visibleSections.add('architecture');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      visibleSections.add(entry.target.id);
+    } else {
+      visibleSections.delete(entry.target.id);
+    }
+    navDots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === [...sections].findIndex(s => visibleSections.has(s.id)));
+    });
+  });
+}, { threshold: 0.15 });
+
+sections.forEach(s => observer.observe(s));
+// Force first section visible
+document.getElementById('architecture').classList.add('visible');
+
+function scrollToSection(idx) {
+  sections[idx]?.scrollIntoView({ behavior: 'smooth' });
+}
+
+// ================================================================
+// CONTROLS
+// ================================================================
+document.querySelectorAll('.preset-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.preset-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    activePreset = tab.dataset.preset;
+    const p = PRESETS[activePreset];
+    targetAlpha = p.alpha;
+    targetBeta = p.beta;
+    targetGamma = p.gamma;
+  });
+});
+
+document.getElementById('audienceSlider').addEventListener('input', (e) => {
+  audienceInput = e.target.value / 100;
+});
+
+document.querySelectorAll('.override-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.override-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    overrideMode = btn.dataset.mode;
+  });
+});
+
+// ================================================================
+// METRICS TICKER
+// ================================================================
+let metricParticipants = 200;
+
+function updateMetrics() {
+  if (reducedMotion) {
+    document.getElementById('metricParticipants').textContent = '247';
+    document.getElementById('metricLatency').textContent = '1.8ms';
+    document.getElementById('metricUpdates').textContent = '20/s';
+    document.getElementById('metricPreset').textContent = PRESETS[activePreset].name;
+    return;
+  }
+  const target = 240 + Math.floor(Math.random() * 20);
+  metricParticipants += Math.sign(target - metricParticipants);
+  document.getElementById('metricParticipants').textContent = metricParticipants;
+  document.getElementById('metricLatency').textContent = (1.5 + Math.random() * 0.8).toFixed(1) + 'ms';
+  document.getElementById('metricUpdates').textContent = (19 + Math.floor(Math.random() * 3)) + '/s';
+  document.getElementById('metricPreset').textContent = PRESETS[activePreset].name;
+}
+setInterval(updateMetrics, 500);
+updateMetrics();
+
+// ================================================================
+// CARD EXPAND/COLLAPSE
+// ================================================================
+function toggleCard(card) { card.classList.toggle('expanded'); }
+
+let pulseIndex = 0;
+setInterval(() => {
+  if (reducedMotion) return;
+  const cards = document.querySelectorAll('.example-card');
+  cards.forEach(c => c.classList.remove('pulse'));
+  if (cards[pulseIndex]) cards[pulseIndex].classList.add('pulse');
+  pulseIndex = (pulseIndex + 1) % cards.length;
+  setTimeout(() => cards.forEach(c => c.classList.remove('pulse')), 1500);
+}, 3000);
+
+// ================================================================
+// P5 SKETCH 1: ARCHITECTURE DIAGRAM
+// ================================================================
+const archSketch = (p) => {
+  let particles = [];
+  let w, h;
+
+  class Particle {
+    constructor(paramIdx, isUser) {
+      this.paramIdx = paramIdx;
+      this.isUser = isUser || false;
+      const colors = [[66,153,225],[72,187,120],[159,122,234],[214,158,46]];
+      const c = this.isUser ? [212,168,83] : colors[paramIdx];
+      this.r = c[0]; this.g = c[1]; this.b = c[2];
+      this.size = this.isUser ? 8 : 4 + p.random(3);
+      // Store start and end positions as fixed values
+      const phoneY = [0.28, 0.40, 0.52, 0.64][paramIdx];
+      this.startX = w * 0.15;
+      this.startY = h * phoneY + p.random(-8, 8);
+      this.endX = w * 0.45;
+      this.endY = h * 0.45 + p.random(-5, 5);
+      this.curveAmp = p.random(-25, 25);
+      this.progress = 0;
+      this.speed = 0.006 + p.random(0.004);
+      this.phase = 0; // 0=toEngine, 1=inEngine, 2=toOutput, 3=dead
+      this.spiralAngle = p.random(p.TWO_PI);
+      this.alpha = 255;
+    }
+    update() {
+      const presetSpeed = PRESETS[activePreset].speed;
+      this.progress += this.speed * presetSpeed;
+      if (this.phase === 0) {
+        // Travel from phone to engine
+        if (this.progress >= 1) { this.phase = 1; this.progress = 0; }
+      } else if (this.phase === 1) {
+        // Spiral inside engine
+        if (this.progress >= 0.8) { this.phase = 2; this.progress = 0; }
+      } else if (this.phase === 2) {
+        // Travel from engine to output
+        this.alpha = 255 * (1 - this.progress);
+        if (this.progress >= 1) { this.phase = 3; }
+      }
+    }
+    getPos() {
+      if (this.phase === 0) {
+        const t = this.progress;
+        const x = p.lerp(this.startX, this.endX, t);
+        const curve = Math.sin(t * Math.PI) * this.curveAmp;
+        const y = p.lerp(this.startY, this.endY, t) + curve;
+        return [x, y];
+      } else if (this.phase === 1) {
+        const cx = w * 0.45;
+        const cy = h * 0.45;
+        const radius = (1 - this.progress) * 35;
+        const angle = this.spiralAngle + this.progress * Math.PI * 6;
+        return [cx + Math.cos(angle) * radius, cy + Math.sin(angle) * radius];
+      } else if (this.phase === 2) {
+        const t = this.progress;
+        const sx = w * 0.45;
+        const ex = w * 0.78;
+        const x = p.lerp(sx, ex, t);
+        const y = h * 0.3 + Math.sin(t * Math.PI * 2) * 10;
+        return [x, y];
+      }
+      return [0, 0];
+    }
+    draw() {
+      if (this.phase >= 3) return;
+      const [x, y] = this.getPos();
+      p.noStroke();
+      // Glow
+      p.fill(this.r, this.g, this.b, this.alpha * 0.15);
+      p.circle(x, y, this.size * 3);
+      // Core
+      p.fill(this.r, this.g, this.b, this.alpha * 0.9);
+      p.circle(x, y, this.size);
+    }
+    alive() { return this.phase < 3; }
+  }
+
+  p.setup = () => {
+    const container = document.getElementById('archCanvasContainer');
+    w = container.clientWidth;
+    h = container.clientHeight;
+    p.createCanvas(w, h).parent('archCanvasContainer');
+    if (reducedMotion) p.noLoop();
+  };
+
+  p.windowResized = () => {
+    const container = document.getElementById('archCanvasContainer');
+    w = container.clientWidth; h = container.clientHeight;
+    p.resizeCanvas(w, h);
+  };
+
+  p.draw = () => {
+    if (!visibleSections.has('architecture') && p.frameCount > 60) return;
+
+    currentAlpha = lerp(currentAlpha, targetAlpha, 0.05);
+    currentBeta = lerp(currentBeta, targetBeta, 0.05);
+    currentGamma = lerp(currentGamma, targetGamma, 0.05);
+
+    p.background(10, 10, 10);
+
+    // Spawn particles
+    if (p.frameCount % 6 === 0 && particles.length < 90) {
+      particles.push(new Particle(Math.floor(p.random(4)), false));
+    }
+    // User particle from slider
+    if (p.frameCount % 25 === 0) {
+      const idx = Math.floor(audienceInput * 3.99);
+      particles.push(new Particle(idx, true));
+    }
+
+    particles.forEach(pt => { pt.update(); pt.draw(); });
+    particles = particles.filter(pt => pt.alive());
+
+    drawBoxes();
+    drawConsensusRings();
+    drawOutputFlows();
+    drawOverrideBar();
+    drawLabels();
+  };
+
+  function drawBoxes() {
+    // Audience zone
+    p.fill(66, 153, 225, 8);
+    p.stroke(66, 153, 225, 60);
+    p.strokeWeight(1.5);
+    p.rect(w * 0.02, h * 0.12, w * 0.22, h * 0.76, 8);
+
+    // Phone icons
+    const params = ['mood', 'tempo', 'intensity', 'density'];
+    const phoneColors = [[66,153,225],[72,187,120],[159,122,234],[214,158,46]];
+    for (let i = 0; i < 4; i++) {
+      const py = h * [0.28, 0.40, 0.52, 0.64][i];
+      const px = w * 0.09;
+      // Phone body
+      p.fill(20, 20, 25);
+      p.stroke(255, 255, 255, 50);
+      p.strokeWeight(1);
+      p.rect(px - 14, py - 20, 28, 40, 5);
+      // Screen
+      p.fill(phoneColors[i][0], phoneColors[i][1], phoneColors[i][2], 25);
+      p.noStroke();
+      p.rect(px - 10, py - 14, 20, 24, 2);
+      // Slider line
+      p.stroke(phoneColors[i][0], phoneColors[i][1], phoneColors[i][2], 100);
+      p.strokeWeight(2);
+      const sliderVal = 0.3 + Math.sin(p.frameCount * 0.02 + i * 1.5) * 0.3;
+      p.line(px - 6, py, px - 6 + 12 * sliderVal, py);
+      // Slider dot
+      p.noStroke();
+      p.fill(phoneColors[i][0], phoneColors[i][1], phoneColors[i][2], 200);
+      p.circle(px - 6 + 12 * sliderVal, py, 4);
+      // Label below
+      p.fill(phoneColors[i][0], phoneColors[i][1], phoneColors[i][2], 150);
+      p.textAlign(p.CENTER);
+      p.textSize(Math.max(9, w * 0.008));
+      p.noStroke();
+      p.text(params[i], px, py + 28);
+    }
+
+    // Core Engine
+    p.fill(212, 168, 83, 6);
+    p.stroke(212, 168, 83, 80);
+    p.strokeWeight(1.5);
+    p.rect(w * 0.3, h * 0.12, w * 0.3, h * 0.76, 8);
+
+    // Output: Performance SDK
+    p.fill(72, 187, 120, 6);
+    p.stroke(72, 187, 120, 60);
+    p.strokeWeight(1);
+    p.rect(w * 0.67, h * 0.12, w * 0.31, h * 0.3, 8);
+
+    // Output: Audio Bridge
+    p.fill(159, 122, 234, 6);
+    p.stroke(159, 122, 234, 60);
+    p.rect(w * 0.67, h * 0.47, w * 0.31, h * 0.2, 8);
+
+    // Genre Presets
+    p.fill(214, 158, 46, 6);
+    p.stroke(214, 158, 46, 60);
+    p.rect(w * 0.67, h * 0.72, w * 0.31, h * 0.16, 8);
+  }
+
+  function drawConsensusRings() {
+    const cx = w * 0.45;
+    const cy = h * 0.45;
+    const time = p.frameCount * 0.02;
+    const maxR = Math.min(w * 0.12, h * 0.25);
+
+    // Spatial ring (blue)
+    p.noFill();
+    p.stroke(66, 153, 225, 120 + Math.sin(time) * 40);
+    p.strokeWeight(2.5);
+    p.circle(cx, cy, (20 + currentAlpha * maxR) * 2);
+
+    // Temporal ring (green)
+    p.stroke(72, 187, 120, 120 + Math.sin(time + 2) * 40);
+    p.circle(cx, cy, (20 + currentBeta * maxR) * 2);
+
+    // Cluster ring (amber)
+    p.stroke(212, 168, 83, 120 + Math.sin(time + 4) * 40);
+    p.circle(cx, cy, (20 + currentGamma * maxR) * 2);
+
+    // Center dot
+    p.noStroke();
+    p.fill(212, 168, 83, 60);
+    p.circle(cx, cy, 24);
+    p.fill(212, 168, 83, 200);
+    p.circle(cx, cy, 10);
+  }
+
+  function drawOutputFlows() {
+    const time = p.frameCount * 0.02;
+    const sx = w * 0.6;
+
+    // Flow to Performance SDK
+    p.stroke(72, 187, 120, 100);
+    p.strokeWeight(2);
+    p.noFill();
+    p.beginShape();
+    for (let i = 0; i <= 20; i++) {
+      const t = i / 20;
+      const x = p.lerp(sx, w * 0.67, t);
+      const y = h * 0.27 + Math.sin(t * Math.PI * 3 + time * 2) * 6;
+      p.vertex(x, y);
+    }
+    p.endShape();
+
+    // Moving dots along the flow
+    for (let i = 0; i < 5; i++) {
+      const t = ((time * 0.5 + i * 0.2) % 1);
+      const x = p.lerp(sx, w * 0.67, t);
+      const y = h * 0.27 + Math.sin(t * Math.PI * 3 + time * 2) * 6;
+      p.noStroke();
+      p.fill(72, 187, 120, 200 * (1 - t));
+      p.circle(x, y, 5);
+    }
+
+    // Flow to Audio Bridge
+    p.stroke(159, 122, 234, 80);
+    p.strokeWeight(2);
+    p.noFill();
+    p.beginShape();
+    for (let i = 0; i <= 20; i++) {
+      const t = i / 20;
+      const x = p.lerp(sx, w * 0.67, t);
+      const y = h * 0.57 + Math.sin(t * Math.PI * 2 + time * 1.5) * 5;
+      p.vertex(x, y);
+    }
+    p.endShape();
+
+    for (let i = 0; i < 4; i++) {
+      const t = ((time * 0.4 + i * 0.25) % 1);
+      const x = p.lerp(sx, w * 0.67, t);
+      const y = h * 0.57 + Math.sin(t * Math.PI * 2 + time * 1.5) * 5;
+      p.noStroke();
+      p.fill(159, 122, 234, 180 * (1 - t));
+      p.circle(x, y, 4);
+    }
+
+    // Connection arrows: audience -> engine
+    drawFlowArrow(w * 0.24, h * 0.45, w * 0.3, h * 0.45, [255, 255, 255, 50]);
+    // Engine -> outputs
+    drawFlowArrow(w * 0.6, h * 0.27, w * 0.67, h * 0.27, [72, 187, 120, 80]);
+    drawFlowArrow(w * 0.6, h * 0.57, w * 0.67, h * 0.57, [159, 122, 234, 80]);
+  }
+
+  function drawFlowArrow(x1, y1, x2, y2, col) {
+    p.stroke(col[0], col[1], col[2], col[3]);
+    p.strokeWeight(1.5);
+    p.line(x1, y1, x2, y2);
+    const angle = Math.atan2(y2 - y1, x2 - x1);
+    const hl = 8;
+    p.line(x2, y2, x2 - hl * Math.cos(angle - 0.4), y2 - hl * Math.sin(angle - 0.4));
+    p.line(x2, y2, x2 - hl * Math.cos(angle + 0.4), y2 - hl * Math.sin(angle + 0.4));
+  }
+
+  function drawOverrideBar() {
+    const bx = w * 0.31;
+    const by = h * 0.72;
+    const bw = w * 0.26;
+    const bh = h * 0.07;
+    const time = p.frameCount * 0.03;
+
+    let alpha;
+    if (overrideMode === 'absolute') {
+      p.fill(214, 158, 46, 100 + Math.sin(time * 2) * 50);
+    } else if (overrideMode === 'blend') {
+      p.fill(214, 158, 46, 40 + Math.sin(time) * 15);
+    } else {
+      p.fill(196, 70, 58, 70);
+    }
+    p.noStroke();
+    p.rect(bx, by, bw, bh, 4);
+
+    // Mode text
+    p.fill(255, 255, 255, 150);
+    p.textSize(Math.max(9, w * 0.008));
+    p.textAlign(p.CENTER, p.CENTER);
+    p.text(overrideMode.toUpperCase(), bx + bw / 2, by + bh / 2);
+  }
+
+  function drawLabels() {
+    p.noStroke();
+    p.textAlign(p.CENTER, p.CENTER);
+
+    // Section titles
+    p.fill(66, 153, 225, 200);
+    p.textSize(Math.max(11, w * 0.01));
+    p.text('AUDIENCE', w * 0.13, h * 0.16);
+    p.textSize(Math.max(8, w * 0.007));
+    p.fill(66, 153, 225, 100);
+    p.text('1,000+ phones', w * 0.13, h * 0.2);
+
+    p.fill(212, 168, 83, 220);
+    p.textSize(Math.max(12, w * 0.011));
+    p.text('CORE ENGINE', w * 0.45, h * 0.16);
+    p.textSize(Math.max(8, w * 0.007));
+    p.fill(212, 168, 83, 100);
+    p.text('Express + Socket.io', w * 0.45, h * 0.2);
+
+    p.fill(72, 187, 120, 200);
+    p.textSize(Math.max(10, w * 0.009));
+    p.text('PERFORMANCE SDK', w * 0.825, h * 0.16);
+    p.textSize(Math.max(8, w * 0.007));
+    p.fill(72, 187, 120, 120);
+    p.text('React 18 + Vite', w * 0.825, h * 0.2);
+    // Sub-labels inside SDK box
+    p.fill(72, 187, 120, 80);
+    p.text('Audience UI', w * 0.76, h * 0.32);
+    p.text('Performer Panel', w * 0.9, h * 0.32);
+
+    p.fill(159, 122, 234, 180);
+    p.textSize(Math.max(10, w * 0.009));
+    p.text('AUDIO BRIDGE', w * 0.825, h * 0.5);
+    p.textSize(Math.max(8, w * 0.007));
+    p.fill(159, 122, 234, 100);
+    p.text('OSC \u2192 SuperCollider', w * 0.78, h * 0.58);
+    p.text('OSC \u2192 Max/MSP', w * 0.78, h * 0.62);
+    p.text('WebAudio API', w * 0.9, h * 0.58);
+
+    // Genre presets
+    p.fill(214, 158, 46, 180);
+    p.textSize(Math.max(10, w * 0.009));
+    p.text('GENRE PRESETS', w * 0.825, h * 0.75);
+    p.textSize(Math.max(8, w * 0.007));
+    p.fill(214, 158, 46, 120);
+    p.text('\u03B1=' + currentAlpha.toFixed(1) + '  \u03B2=' + currentBeta.toFixed(1) + '  \u03B3=' + currentGamma.toFixed(1), w * 0.825, h * 0.8);
+    p.fill(214, 158, 46, 70);
+    p.text('\u03B1+\u03B2+\u03B3 \u2248 1.0', w * 0.825, h * 0.84);
+
+    // Consensus labels
+    p.fill(255, 255, 255, 160);
+    p.textSize(Math.max(10, w * 0.009));
+    p.text('CONSENSUS', w * 0.45, h * 0.3);
+    p.textSize(Math.max(9, w * 0.008));
+    p.text('AGGREGATOR', w * 0.45, h * 0.34);
+
+    // Ring axis labels
+    const cx = w * 0.45;
+    const cy = h * 0.45;
+    p.textSize(Math.max(9, w * 0.008));
+    p.fill(66, 153, 225, 180);
+    p.text('spatial \u03B1=' + currentAlpha.toFixed(2), cx, h * 0.26);
+    p.fill(72, 187, 120, 180);
+    p.textAlign(p.LEFT, p.CENTER);
+    p.text('temporal \u03B2=' + currentBeta.toFixed(2), cx + 60, cy);
+    p.textAlign(p.CENTER, p.CENTER);
+    p.fill(212, 168, 83, 180);
+    p.text('cluster \u03B3=' + currentGamma.toFixed(2), cx, h * 0.62);
+
+    // Override label
+    p.fill(255, 240, 200, 140);
+    p.textSize(Math.max(9, w * 0.008));
+    p.text('PERFORMER OVERRIDE', w * 0.45, h * 0.69);
+
+    // Protocol labels on arrows
+    p.fill(255, 255, 255, 60);
+    p.textSize(Math.max(7, w * 0.006));
+    p.text('WebSocket', w * 0.27, h * 0.43);
+    p.text('OSC', w * 0.635, h * 0.55);
+  }
+};
+
+// ================================================================
+// P5 SKETCH 2: GENERATIVE MUSIC
+// ================================================================
+const musicSketch = (p) => {
+  let w, h;
+
+  p.setup = () => {
+    const container = document.getElementById('musicCanvasWrap');
+    w = container.clientWidth; h = container.clientHeight;
+    p.createCanvas(w, h).parent('musicCanvasWrap');
+    if (reducedMotion) p.noLoop();
+  };
+
+  p.windowResized = () => {
+    const container = document.getElementById('musicCanvasWrap');
+    if (!container) return;
+    w = container.clientWidth; h = container.clientHeight;
+    p.resizeCanvas(w, h);
+  };
+
+  p.draw = () => {
+    if (!visibleSections.has('examples') && p.frameCount > 60) return;
+    p.background(8, 12, 20);
+    const time = p.frameCount * 0.03;
+
+    // Three waveforms representing three audience parameters
+    const waves = [
+      { freq: 0.02, amp: 0.25, phase: 0, r: 66, g: 153, b: 225, a: 160, label: 'pitch' },
+      { freq: 0.035, amp: 0.18, phase: 2, r: 100, g: 180, b: 255, a: 110, label: 'rhythm' },
+      { freq: 0.015, amp: 0.2, phase: 4, r: 40, g: 120, b: 200, a: 90, label: 'intensity' }
+    ];
+
+    waves.forEach((wave, wi) => {
+      p.noFill();
+      p.stroke(wave.r, wave.g, wave.b, wave.a);
+      p.strokeWeight(2);
+      p.beginShape();
+      for (let x = 0; x < w; x += 2) {
+        const f = wave.freq * (1 + audienceInput * 0.5);
+        const a = wave.amp * h * (0.5 + audienceInput * 0.3);
+        const y = h * 0.45 + Math.sin(x * f + time + wave.phase) * a
+                  + Math.sin(x * f * 2.1 + time * 1.3) * a * 0.25;
+        p.vertex(x, y);
+      }
+      p.endShape();
+
+      // Label on the right
+      p.noStroke();
+      p.fill(wave.r, wave.g, wave.b, 120);
+      p.textSize(Math.max(9, w * 0.016));
+      p.textAlign(p.RIGHT);
+      p.text(wave.label, w - 12, h * (0.25 + wi * 0.2));
+    });
+
+    // OSC sonar rings
+    for (let i = 0; i < 3; i++) {
+      const age = (p.frameCount + i * 20) % 60;
+      const t = age / 60;
+      p.noFill();
+      p.stroke(66, 153, 225, (1 - t) * 100);
+      p.strokeWeight(1.5);
+      p.circle(w * 0.15, h * 0.78, t * Math.min(w, h) * 0.3);
+    }
+
+    p.noStroke();
+    p.fill(66, 153, 225, 130);
+    p.textSize(Math.max(9, w * 0.015));
+    p.textAlign(p.CENTER);
+    p.text('OSC \u2192 SuperCollider', w * 0.15, h * 0.78);
+
+    // "consensus drives audio" annotation
+    p.fill(255, 255, 255, 50);
+    p.textSize(Math.max(8, w * 0.013));
+    p.text('audience consensus shapes synthesis in real time', w * 0.5, h * 0.92);
+  };
+};
+
+// ================================================================
+// P5 SKETCH 3: GENERATIVE VISUAL
+// ================================================================
+const visualSketch = (p) => {
+  let w, h;
+
+  p.setup = () => {
+    const container = document.getElementById('visualCanvasWrap');
+    w = container.clientWidth; h = container.clientHeight;
+    p.createCanvas(w, h).parent('visualCanvasWrap');
+    if (reducedMotion) p.noLoop();
+  };
+
+  p.windowResized = () => {
+    const container = document.getElementById('visualCanvasWrap');
+    if (!container) return;
+    w = container.clientWidth; h = container.clientHeight;
+    p.resizeCanvas(w, h);
+  };
+
+  p.draw = () => {
+    if (!visibleSections.has('examples') && p.frameCount > 60) return;
+    p.background(6, 14, 10);
+    const time = p.frameCount * 0.01;
+    const cx = w * 0.5;
+    const cy = h * 0.45;
+
+    // Concentric deforming rings (like shader output)
+    p.noFill();
+    for (let i = 14; i > 0; i--) {
+      const baseR = i * Math.min(w, h) * 0.03;
+      const distort = Math.sin(time + i * 0.5) * 10 + audienceInput * 15;
+      const r = baseR + distort;
+      const hShift = time * 20 + i * 30;
+      p.stroke(
+        48 + Math.sin(hShift * 0.01) * 30,
+        120 + Math.sin(hShift * 0.01 + 2) * 60,
+        80 + Math.sin(hShift * 0.01 + 4) * 40,
+        60 + (14 - i) * 10
+      );
+      p.strokeWeight(1.5);
+      p.beginShape();
+      for (let a = 0; a < p.TWO_PI; a += 0.08) {
+        const deform = Math.sin(a * 3 + time * 2 + i) * (5 + audienceInput * 12);
+        p.vertex(cx + Math.cos(a) * (r + deform), cy + Math.sin(a) * (r + deform));
+      }
+      p.endShape(p.CLOSE);
+    }
+
+    // Orbiting "audience position" dots with distance labels
+    p.noStroke();
+    for (let i = 0; i < 6; i++) {
+      const angle = time * 0.5 + (i / 6) * p.TWO_PI;
+      const orbitR = Math.min(w, h) * 0.38;
+      const dx = cx + Math.cos(angle) * orbitR;
+      const dy = cy + Math.sin(angle) * orbitR * 0.5;
+      const dist = Math.sqrt((dx - cx) ** 2 + (dy - cy) ** 2);
+      const influence = Math.max(0, 1 - dist / (Math.min(w, h) * 0.4));
+      p.fill(72, 187, 120, 100 + influence * 155);
+      p.circle(dx, dy, 5 + influence * 4);
+      p.fill(72, 187, 120, 40);
+      p.circle(dx, dy, 14);
+    }
+
+    // Annotation
+    p.fill(255, 255, 255, 50);
+    p.textSize(Math.max(8, w * 0.013));
+    p.textAlign(p.CENTER);
+    p.text('closer to projection = more influence (spatial weighting)', w * 0.5, h * 0.92);
+  };
+};
+
+// ================================================================
+// P5 SKETCH 4: CHOREOGRAPHIC INTERFACE
+// ================================================================
+const choreoSketch = (p) => {
+  let w, h;
+  let posePhase = 0;
+
+  // Simplified dance poses
+  const poses = [
+    { head: [0,-40], lh: [-30,-10], rh: [25,-25], lf: [-12,35], rf: [15,30] },
+    { head: [0,-42], lh: [-35,-20], rh: [35,-15], lf: [-15,33], rf: [10,35] },
+    { head: [2,-38], lh: [-20,-30], rh: [30,-30], lf: [-10,36], rf: [18,28] },
+    { head: [-2,-40], lh: [-40,-5], rh: [20,-35], lf: [-14,34], rf: [12,32] }
+  ];
+
+  function lerpPose(a, b, t) {
+    const l = (k) => [p.lerp(a[k][0], b[k][0], t), p.lerp(a[k][1], b[k][1], t)];
+    return { head: l('head'), lh: l('lh'), rh: l('rh'), lf: l('lf'), rf: l('rf') };
+  }
+
+  p.setup = () => {
+    const container = document.getElementById('choreoCanvasWrap');
+    w = container.clientWidth; h = container.clientHeight;
+    p.createCanvas(w, h).parent('choreoCanvasWrap');
+    if (reducedMotion) p.noLoop();
+  };
+
+  p.windowResized = () => {
+    const container = document.getElementById('choreoCanvasWrap');
+    if (!container) return;
+    w = container.clientWidth; h = container.clientHeight;
+    p.resizeCanvas(w, h);
+  };
+
+  p.draw = () => {
+    if (!visibleSections.has('examples') && p.frameCount > 60) return;
+    p.background(12, 6, 18);
+    const time = p.frameCount * 0.01;
+
+    // --- STAGE AREA ---
+    // Stage floor (ellipse perspective)
+    p.noStroke();
+    p.fill(159, 122, 234, 12);
+    p.ellipse(w * 0.35, h * 0.65, w * 0.5, h * 0.35);
+    // Stage border
+    p.noFill();
+    p.stroke(159, 122, 234, 30);
+    p.strokeWeight(1);
+    p.ellipse(w * 0.35, h * 0.65, w * 0.5, h * 0.35);
+
+    // "STAGE" label
+    p.noStroke();
+    p.fill(159, 122, 234, 50);
+    p.textSize(Math.max(8, w * 0.012));
+    p.textAlign(p.CENTER);
+    p.text('STAGE', w * 0.35, h * 0.82);
+
+    // --- DANCER ---
+    posePhase += 0.008;
+    const pi = Math.floor(posePhase) % poses.length;
+    const ni = (pi + 1) % poses.length;
+    const st = (posePhase % 1);
+    const smoothT = st * st * (3 - 2 * st);
+    const pose = lerpPose(poses[pi], poses[ni], smoothT);
+    const cx = w * 0.35;
+    const cy = h * 0.52;
+    const sc = Math.min(w, h) * 0.006;
+
+    p.stroke(159, 122, 234, 240);
+    p.strokeWeight(2.5);
+    p.noFill();
+    p.line(cx, cy + pose.head[1] * sc + 8 * sc, cx, cy + 5 * sc); // torso
+    p.line(cx, cy - 5 * sc, cx + pose.lh[0] * sc, cy + pose.lh[1] * sc); // L arm
+    p.line(cx, cy - 5 * sc, cx + pose.rh[0] * sc, cy + pose.rh[1] * sc); // R arm
+    p.line(cx, cy + 5 * sc, cx + pose.lf[0] * sc, cy + pose.lf[1] * sc); // L leg
+    p.line(cx, cy + 5 * sc, cx + pose.rf[0] * sc, cy + pose.rf[1] * sc); // R leg
+    p.circle(cx + pose.head[0] * sc, cy + pose.head[1] * sc, 9 * sc);
+
+    // Joint dots
+    p.noStroke();
+    p.fill(159, 122, 234, 220);
+    [pose.head, pose.lh, pose.rh, pose.lf, pose.rf].forEach(j => {
+      p.circle(cx + j[0] * sc, cy + j[1] * sc, 4);
+    });
+
+    // --- LIGHTING ENVIRONMENT (shows audience control) ---
+    // Mood-driven color wash on stage
+    const moodHue = audienceInput; // 0=cool blue, 1=warm amber
+    const envR = p.lerp(40, 214, moodHue);
+    const envG = p.lerp(100, 158, moodHue);
+    const envB = p.lerp(200, 46, moodHue);
+    // Stage color wash
+    p.noStroke();
+    p.fill(envR, envG, envB, 15 + audienceInput * 15);
+    p.ellipse(w * 0.35, h * 0.65, w * 0.45, h * 0.3);
+
+    // --- AUDIENCE MEMBERS (around the stage) ---
+    const audPositions = [
+      { x: 0.08, y: 0.35, label: 'front left' },
+      { x: 0.08, y: 0.55, label: 'front right' },
+      { x: 0.08, y: 0.75, label: 'mid left' },
+      { x: 0.62, y: 0.25, label: 'back' },
+      { x: 0.62, y: 0.50, label: 'far back' },
+      { x: 0.62, y: 0.75, label: 'side' }
+    ];
+
+    audPositions.forEach((aud, i) => {
+      const ax = w * aud.x;
+      const ay = h * aud.y;
+      const dist = Math.sqrt((ax - cx) ** 2 + (ay - cy) ** 2);
+      const maxDist = Math.sqrt(w * w + h * h) * 0.4;
+      const influence = Math.max(0.1, 1 - dist / maxDist);
+
+      // Phone icon
+      p.fill(20, 20, 25);
+      p.stroke(159, 122, 234, 40 + influence * 120);
+      p.strokeWeight(1);
+      p.rect(ax - 6, ay - 9, 12, 18, 2);
+
+      // Influence ring
+      p.noFill();
+      p.stroke(159, 122, 234, influence * 100);
+      p.strokeWeight(1);
+      p.circle(ax, ay, 20 + influence * 20);
+
+      // Proximity line to dancer (thicker = more influence)
+      p.stroke(159, 122, 234, influence * 40);
+      p.strokeWeight(influence * 2);
+      // Dashed line
+      const steps = 10;
+      for (let s = 0; s < steps; s += 2) {
+        const t1 = s / steps;
+        const t2 = (s + 1) / steps;
+        p.line(p.lerp(ax, cx, t1), p.lerp(ay, cy, t1),
+               p.lerp(ax, cx, t2), p.lerp(ay, cy, t2));
+      }
+
+      // Influence % label
+      p.noStroke();
+      p.fill(159, 122, 234, 100 + influence * 80);
+      p.textSize(Math.max(7, w * 0.011));
+      p.textAlign(p.CENTER);
+      p.text(Math.round(influence * 100) + '%', ax, ay + 18);
+    });
+
+    // --- RIGHT PANEL: What the dancer sees ---
+    const panelX = w * 0.72;
+    const panelY = h * 0.15;
+    const panelW = w * 0.25;
+    const panelH = h * 0.7;
+
+    p.fill(20, 15, 28, 200);
+    p.stroke(159, 122, 234, 40);
+    p.strokeWeight(1);
+    p.rect(panelX, panelY, panelW, panelH, 6);
+
+    p.noStroke();
+    p.fill(159, 122, 234, 150);
+    p.textSize(Math.max(8, w * 0.012));
+    p.textAlign(p.CENTER);
+    p.text('DANCER SEES', panelX + panelW / 2, panelY + 18);
+
+    // Mood bar
+    const barX = panelX + 12;
+    const barW = panelW - 24;
+    const barH = 10;
+
+    p.fill(255, 255, 255, 60);
+    p.textSize(Math.max(7, w * 0.01));
+    p.textAlign(p.LEFT);
+    p.text('Audience mood', barX, panelY + 40);
+    p.fill(40, 40, 50);
+    p.rect(barX, panelY + 45, barW, barH, 3);
+    p.fill(envR, envG, envB, 200);
+    p.rect(barX, panelY + 45, barW * audienceInput, barH, 3);
+    p.fill(255, 255, 255, 80);
+    p.textAlign(p.LEFT);
+    p.text('cool', barX, panelY + 68);
+    p.textAlign(p.RIGHT);
+    p.text('warm', barX + barW, panelY + 68);
+
+    // Intensity bar
+    const intensity = 0.5 + Math.sin(time * 0.5) * 0.3;
+    p.fill(255, 255, 255, 60);
+    p.textAlign(p.LEFT);
+    p.text('Audience intensity', barX, panelY + 90);
+    p.fill(40, 40, 50);
+    p.rect(barX, panelY + 95, barW, barH, 3);
+    p.fill(159, 122, 234, 200);
+    p.rect(barX, panelY + 95, barW * intensity, barH, 3);
+
+    // Energy level
+    const energy = (audienceInput + intensity) / 2;
+    p.fill(255, 255, 255, 60);
+    p.text('Energy level', barX, panelY + 125);
+    p.fill(energy > 0.6 ? p.color(72, 187, 120, 200) : p.color(214, 158, 46, 200));
+    p.textSize(Math.max(14, w * 0.022));
+    p.textAlign(p.CENTER);
+    p.text(energy > 0.6 ? 'HIGH' : energy > 0.35 ? 'MED' : 'LOW', panelX + panelW / 2, panelY + 155);
+
+    // Lighting cue
+    p.fill(255, 255, 255, 50);
+    p.textSize(Math.max(7, w * 0.01));
+    p.textAlign(p.LEFT);
+    p.text('Lighting:', barX, panelY + 180);
+    p.fill(envR, envG, envB, 200);
+    p.circle(barX + barW - 8, panelY + 176, 12);
+
+    // Annotation
+    p.fill(159, 122, 234, 60);
+    p.textSize(Math.max(7, w * 0.01));
+    p.textAlign(p.CENTER);
+    p.text('Dancer adapts movement', panelX + panelW / 2, panelY + panelH - 30);
+    p.text('to audience-shaped', panelX + panelW / 2, panelY + panelH - 18);
+    p.text('environment', panelX + panelW / 2, panelY + panelH - 6);
+  };
+};
+
+// ================================================================
+// P5 SKETCH 5: THEATRE DIALOGUE
+// ================================================================
+const theatreSketch = (p) => {
+  let w, h;
+  let selectedBranch = 0;
+  let voteTimer = 0;
+  let votes = [0.6, 0.4]; // running vote percentages
+  let voteTarget = [0.6, 0.4];
+  let showResult = false;
+  let resultTimer = 0;
+
+  p.setup = () => {
+    const container = document.getElementById('theatreCanvasWrap');
+    w = container.clientWidth; h = container.clientHeight;
+    p.createCanvas(w, h).parent('theatreCanvasWrap');
+    if (reducedMotion) p.noLoop();
+  };
+
+  p.windowResized = () => {
+    const container = document.getElementById('theatreCanvasWrap');
+    if (!container) return;
+    w = container.clientWidth; h = container.clientHeight;
+    p.resizeCanvas(w, h);
+  };
+
+  p.draw = () => {
+    if (!visibleSections.has('examples') && p.frameCount > 60) return;
+    p.background(14, 12, 6);
+    const time = p.frameCount * 0.02;
+
+    // Simulate vote cycling
+    voteTimer++;
+    if (voteTimer < 120) {
+      // Votes are shifting
+      votes[0] = lerp(votes[0], voteTarget[0], 0.03);
+      votes[1] = 1 - votes[0];
+      // Randomly shift target
+      if (voteTimer % 20 === 0) {
+        voteTarget[0] = 0.3 + p.random(0.4);
+        voteTarget[1] = 1 - voteTarget[0];
+      }
+      showResult = false;
+    } else if (voteTimer < 180) {
+      // Decision made
+      showResult = true;
+      selectedBranch = votes[0] > 0.5 ? 0 : 1;
+    } else {
+      voteTimer = 0;
+      voteTarget = [0.3 + p.random(0.4), 0];
+      voteTarget[1] = 1 - voteTarget[0];
+    }
+
+    // --- SCRIPT TREE (left half) ---
+    const treeX = w * 0.3;
+
+    // Act label
+    p.noStroke();
+    p.fill(214, 158, 46, 200);
+    p.textSize(Math.max(11, w * 0.016));
+    p.textAlign(p.CENTER);
+    p.text('Act II, Scene 3', treeX, h * 0.1);
+
+    // Root node
+    p.fill(214, 158, 46, 220);
+    p.circle(treeX, h * 0.18, 14);
+
+    // "The moment of decision" label
+    p.fill(255, 255, 255, 100);
+    p.textSize(Math.max(8, w * 0.012));
+    p.text('"Does she confess?"', treeX, h * 0.27);
+
+    // Branch A (left)
+    const axEnd = treeX - w * 0.12;
+    const ayEnd = h * 0.52;
+    const branchASelected = selectedBranch === 0 && showResult;
+    p.stroke(214, 158, 46, branchASelected ? 200 : 50);
+    p.strokeWeight(branchASelected ? 3 : 1.5);
+    p.line(treeX, h * 0.22, axEnd, ayEnd);
+    // Node
+    p.noStroke();
+    p.fill(214, 158, 46, branchASelected ? 220 : 60);
+    p.circle(axEnd, ayEnd, 10);
+    // Label
+    p.fill(255, 255, 255, branchASelected ? 180 : 60);
+    p.textSize(Math.max(9, w * 0.013));
+    p.text('YES \u2014 confess', axEnd, ayEnd + 18);
+    p.textSize(Math.max(7, w * 0.01));
+    p.fill(255, 255, 255, branchASelected ? 80 : 30);
+    p.text('"I did it. All of it."', axEnd, ayEnd + 32);
+
+    // Sub-branches from A
+    if (branchASelected) {
+      p.stroke(214, 158, 46, 120);
+      p.strokeWeight(1.5);
+      p.line(axEnd, ayEnd + 5, axEnd - w * 0.06, h * 0.72);
+      p.line(axEnd, ayEnd + 5, axEnd + w * 0.06, h * 0.72);
+      p.noStroke();
+      p.fill(214, 158, 46, 100);
+      p.circle(axEnd - w * 0.06, h * 0.72, 6);
+      p.circle(axEnd + w * 0.06, h * 0.72, 6);
+      p.fill(255, 255, 255, 50);
+      p.textSize(Math.max(7, w * 0.009));
+      p.text('forgiven', axEnd - w * 0.06, h * 0.77);
+      p.text('expelled', axEnd + w * 0.06, h * 0.77);
+    }
+
+    // Branch B (right)
+    const bxEnd = treeX + w * 0.12;
+    const byEnd = h * 0.52;
+    const branchBSelected = selectedBranch === 1 && showResult;
+    p.stroke(214, 158, 46, branchBSelected ? 200 : 50);
+    p.strokeWeight(branchBSelected ? 3 : 1.5);
+    p.line(treeX, h * 0.22, bxEnd, byEnd);
+    p.noStroke();
+    p.fill(214, 158, 46, branchBSelected ? 220 : 60);
+    p.circle(bxEnd, byEnd, 10);
+    p.fill(255, 255, 255, branchBSelected ? 180 : 60);
+    p.textSize(Math.max(9, w * 0.013));
+    p.text('NO \u2014 deny', bxEnd, byEnd + 18);
+    p.textSize(Math.max(7, w * 0.01));
+    p.fill(255, 255, 255, branchBSelected ? 80 : 30);
+    p.text('"I don\'t know what', bxEnd, byEnd + 32);
+    p.text('you\'re talking about."', bxEnd, byEnd + 44);
+
+    // LOCKED icon on branch B sub-path
+    if (branchBSelected) {
+      p.stroke(214, 158, 46, 120);
+      p.strokeWeight(1.5);
+      p.line(bxEnd, byEnd + 5, bxEnd - w * 0.05, h * 0.72);
+      p.line(bxEnd, byEnd + 5, bxEnd + w * 0.05, h * 0.72);
+      p.noStroke();
+      p.fill(214, 158, 46, 100);
+      p.circle(bxEnd - w * 0.05, h * 0.72, 6);
+      // Lock icon
+      p.fill(196, 70, 58, 180);
+      p.rect(bxEnd + w * 0.05 - 8, h * 0.72 - 6, 16, 12, 2);
+      p.fill(255, 255, 255, 200);
+      p.textSize(7);
+      p.text('LOCKED', bxEnd + w * 0.05, h * 0.72 + 2);
+      p.fill(255, 255, 255, 50);
+      p.textSize(Math.max(7, w * 0.009));
+      p.text('flee', bxEnd - w * 0.05, h * 0.77);
+      p.text('(director lock)', bxEnd + w * 0.05, h * 0.77);
+    }
+
+    // --- VOTE PANEL (right half) ---
+    const panelX = w * 0.58;
+    const panelW = w * 0.38;
+
+    p.fill(20, 18, 10, 200);
+    p.stroke(214, 158, 46, 40);
+    p.strokeWeight(1);
+    p.rect(panelX, h * 0.08, panelW, h * 0.84, 6);
+
+    p.noStroke();
+    p.fill(214, 158, 46, 180);
+    p.textSize(Math.max(9, w * 0.013));
+    p.textAlign(p.CENTER);
+    p.text('AUDIENCE VOTES', panelX + panelW / 2, h * 0.16);
+
+    // Vote bars
+    const vbX = panelX + 16;
+    const vbW = panelW - 32;
+
+    // Option A bar
+    p.fill(255, 255, 255, 80);
+    p.textSize(Math.max(8, w * 0.012));
+    p.textAlign(p.LEFT);
+    p.text('YES \u2014 confess', vbX, h * 0.25);
+    p.fill(30, 30, 20);
+    p.rect(vbX, h * 0.27, vbW, 20, 4);
+    p.fill(72, 187, 120, 180);
+    p.rect(vbX, h * 0.27, vbW * votes[0], 20, 4);
+    p.fill(255, 255, 255, 180);
+    p.textAlign(p.RIGHT);
+    p.textSize(Math.max(10, w * 0.015));
+    p.text(Math.round(votes[0] * 100) + '%', vbX + vbW - 4, h * 0.27 + 15);
+
+    // Option B bar
+    p.fill(255, 255, 255, 80);
+    p.textSize(Math.max(8, w * 0.012));
+    p.textAlign(p.LEFT);
+    p.text('NO \u2014 deny', vbX, h * 0.37);
+    p.fill(30, 30, 20);
+    p.rect(vbX, h * 0.39, vbW, 20, 4);
+    p.fill(214, 158, 46, 180);
+    p.rect(vbX, h * 0.39, vbW * votes[1], 20, 4);
+    p.fill(255, 255, 255, 180);
+    p.textAlign(p.RIGHT);
+    p.textSize(Math.max(10, w * 0.015));
+    p.text(Math.round(votes[1] * 100) + '%', vbX + vbW - 4, h * 0.39 + 15);
+
+    // Result indicator
+    if (showResult) {
+      p.fill(72, 187, 120, 200);
+      p.textSize(Math.max(12, w * 0.018));
+      p.textAlign(p.CENTER);
+      p.text('DECIDED', panelX + panelW / 2, h * 0.53);
+      p.fill(255, 255, 255, 120);
+      p.textSize(Math.max(9, w * 0.013));
+      p.text(selectedBranch === 0 ? 'She confesses.' : 'She denies it.', panelX + panelW / 2, h * 0.58);
+    } else {
+      p.fill(214, 158, 46, 100 + Math.sin(time * 3) * 50);
+      p.textSize(Math.max(10, w * 0.015));
+      p.textAlign(p.CENTER);
+      p.text('VOTING...', panelX + panelW / 2, h * 0.53);
+
+      // Incoming vote particles
+      for (let i = 0; i < 4; i++) {
+        const vt = ((time * 0.5 + i * 0.25) % 1);
+        const vy = p.lerp(h * 0.7, h * 0.55, vt);
+        const vx = panelX + panelW * (0.3 + i * 0.12);
+        p.fill(214, 158, 46, (1 - vt) * 150);
+        p.noStroke();
+        p.circle(vx, vy, 4);
+      }
+    }
+
+    // Actor instruction panel
+    p.fill(30, 28, 18, 200);
+    p.stroke(214, 158, 46, 30);
+    p.strokeWeight(1);
+    p.rect(panelX + 8, h * 0.64, panelW - 16, h * 0.22, 4);
+
+    p.noStroke();
+    p.fill(214, 158, 46, 120);
+    p.textSize(Math.max(8, w * 0.011));
+    p.textAlign(p.CENTER);
+    p.text('BACKSTAGE MONITOR', panelX + panelW / 2, h * 0.69);
+    p.fill(255, 255, 255, 80);
+    p.textSize(Math.max(7, w * 0.01));
+    if (showResult) {
+      p.fill(72, 187, 120, 180);
+      p.textSize(Math.max(9, w * 0.013));
+      p.text('CUE: ' + (selectedBranch === 0 ? 'CONFESS' : 'DENY'), panelX + panelW / 2, h * 0.76);
+      p.fill(255, 255, 255, 60);
+      p.textSize(Math.max(7, w * 0.01));
+      p.text('Follow script branch ' + (selectedBranch === 0 ? 'A' : 'B'), panelX + panelW / 2, h * 0.81);
+    } else {
+      p.fill(214, 158, 46, 100);
+      p.text('Audience voting in progress...', panelX + panelW / 2, h * 0.76);
+      p.text('Continue current scene', panelX + panelW / 2, h * 0.81);
+    }
+  };
+};
+
+// ================================================================
+// INIT
+// ================================================================
+new p5(archSketch);
+new p5(musicSketch);
+new p5(visualSketch);
+new p5(choreoSketch);
+new p5(theatreSketch);
+</script>
+</body>
+</html>
