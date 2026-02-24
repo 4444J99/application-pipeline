@@ -9,12 +9,13 @@ import yaml
 from pipeline_lib import (
     REPO_ROOT, ALL_PIPELINE_DIRS as PIPELINE_DIRS,
     VALID_TRACKS, VALID_STATUSES, VALID_TRANSITIONS,
+    detect_portal,
 )
 
 REQUIRED_FIELDS = {"id", "name", "track", "status"}
 VALID_OUTCOMES = {"accepted", "rejected", "withdrawn", "expired", None}
 VALID_DEADLINE_TYPES = {"hard", "rolling", "window", "tba"}
-VALID_PORTALS = {"submittable", "slideroom", "email", "custom", "web", "greenhouse", "workable"}
+VALID_PORTALS = {"submittable", "slideroom", "email", "custom", "web", "greenhouse", "workable", "lever", "ashby", "smartrecruiters"}
 VALID_AMOUNT_TYPES = {"lump_sum", "stipend", "salary", "fee", "in_kind", "variable"}
 VALID_POSITIONS = {"systems-artist", "creative-technologist", "educator", "community-practitioner", "independent-engineer"}
 VALID_EFFORT_LEVELS = {"quick", "standard", "deep", "complex"}
@@ -163,6 +164,22 @@ def validate_entry(filepath: Path) -> list[str]:
                         f"Status '{status}' not reachable from timeline "
                         f"(highest dated stage: '{highest_dated}')"
                     )
+
+    # Portal validation
+    target = data.get("target", {})
+    if isinstance(target, dict):
+        portal = target.get("portal")
+        if portal and portal not in VALID_PORTALS:
+            errors.append(f"Invalid target.portal: '{portal}' (valid: {VALID_PORTALS})")
+        # Warn if portal doesn't match what URL detection finds
+        app_url = target.get("application_url", "")
+        if app_url and portal:
+            detected = detect_portal(app_url)
+            if detected and detected != portal:
+                errors.append(
+                    f"Portal mismatch: target.portal is '{portal}' but URL "
+                    f"suggests '{detected}' ({app_url})"
+                )
 
     # Block path validation
     submission = data.get("submission", {})

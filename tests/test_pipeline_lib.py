@@ -13,6 +13,7 @@ from pipeline_lib import (
     load_entries, load_entry_by_id, parse_date, parse_datetime,
     format_amount, get_effort, get_score, get_deadline, days_until,
     load_profile, load_legacy_script, _parse_legacy_markdown, _extract_section_content,
+    detect_portal,
 )
 
 
@@ -445,3 +446,42 @@ def test_extract_section_content_only_metadata():
 """
     result = _extract_section_content(text)
     assert result is None
+
+
+# --- detect_portal ---
+
+
+def test_detect_portal_greenhouse():
+    assert detect_portal("https://job-boards.greenhouse.io/anthropic/jobs/123") == "greenhouse"
+    assert detect_portal("https://boards-api.greenhouse.io/v1/boards/x/jobs/1") == "greenhouse"
+
+
+def test_detect_portal_lever():
+    assert detect_portal("https://jobs.lever.co/acme/abc-123") == "lever"
+    assert detect_portal("https://jobs.eu.lever.co/euro/abc-123") == "lever"
+
+
+def test_detect_portal_ashby():
+    assert detect_portal("https://jobs.ashbyhq.com/cohere/1fa01a03-9253") == "ashby"
+
+
+def test_detect_portal_workable():
+    assert detect_portal("https://apply.workable.com/huggingface/j/abc/") == "workable"
+
+
+def test_detect_portal_smartrecruiters():
+    assert detect_portal("https://jobs.smartrecruiters.com/Acme/abc") == "smartrecruiters"
+
+
+def test_detect_portal_submittable():
+    assert detect_portal("https://artadia.submittable.com/submit/abc") == "submittable"
+
+
+def test_detect_portal_slideroom():
+    assert detect_portal("https://watermillcenter.slideroom.com/") == "slideroom"
+
+
+def test_detect_portal_unknown():
+    assert detect_portal("https://example.com/apply") is None
+    assert detect_portal("") is None
+    assert detect_portal("not-a-url") is None

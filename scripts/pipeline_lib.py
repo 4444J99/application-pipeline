@@ -474,3 +474,30 @@ def count_words(text: str) -> int:
 def count_chars(text: str) -> int:
     """Count characters (excluding leading/trailing whitespace)."""
     return len(text.strip())
+
+
+# --- Portal URL detection ---
+
+
+PORTAL_URL_PATTERNS = [
+    (re.compile(r'job-boards\.greenhouse\.io|boards-api\.greenhouse\.io'), 'greenhouse'),
+    (re.compile(r'jobs\.(?:eu\.)?lever\.co'), 'lever'),
+    (re.compile(r'jobs\.ashbyhq\.com'), 'ashby'),
+    (re.compile(r'apply\.workable\.com'), 'workable'),
+    (re.compile(r'jobs\.smartrecruiters\.com'), 'smartrecruiters'),
+    (re.compile(r'\.submittable\.com'), 'submittable'),
+    (re.compile(r'slideroom\.com'), 'slideroom'),
+]
+
+
+def detect_portal(url: str) -> str | None:
+    """Detect the portal type from an application URL.
+
+    Returns the portal name string or None if no pattern matches.
+    """
+    if not url:
+        return None
+    for pattern, portal in PORTAL_URL_PATTERNS:
+        if pattern.search(url):
+            return portal
+    return None

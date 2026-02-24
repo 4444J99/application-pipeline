@@ -950,9 +950,21 @@ def phase_integrate(entry_id: str, work_dir: Path) -> bool:
 # ---------------------------------------------------------------------------
 
 
-def phase_submit(entry_id: str, do_submit: bool) -> bool:
-    """Shell out to greenhouse_submit.py."""
-    script = Path(__file__).resolve().parent / "greenhouse_submit.py"
+SUBMIT_SCRIPTS = {
+    "greenhouse": "greenhouse_submit.py",
+    "lever": "lever_submit.py",
+    "ashby": "ashby_submit.py",
+}
+
+
+def phase_submit(entry_id: str, entry: dict, do_submit: bool) -> bool:
+    """Shell out to the portal-specific submit script."""
+    portal = entry.get("target", {}).get("portal", "")
+    script_name = SUBMIT_SCRIPTS.get(portal)
+    if not script_name:
+        print(f"  No submit script for portal '{portal}'")
+        return False
+    script = Path(__file__).resolve().parent / script_name
     cmd = [sys.executable, str(script), "--target", entry_id]
     if do_submit:
         cmd.append("--submit")
@@ -994,7 +1006,7 @@ def process_entry(
     # Submit mode
     if submit:
         print("\nPhase 6: SUBMIT")
-        return phase_submit(entry_id, do_submit=True)
+        return phase_submit(entry_id, entry, do_submit=True)
 
     # Phase 1: INTAKE
     print("\nPhase 1: INTAKE")
@@ -1070,7 +1082,7 @@ def main():
     parser.add_argument("--integrate", action="store_true",
                         help="Run phase 5: integrate output.md back into pipeline")
     parser.add_argument("--submit", action="store_true",
-                        help="Run phase 6: submit via greenhouse_submit.py")
+                        help="Run phase 6: submit via portal-specific script")
     parser.add_argument("--force", action="store_true",
                         help="Overwrite existing work files")
     parser.add_argument("--no-web", action="store_true",
