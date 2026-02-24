@@ -25,6 +25,7 @@ import yaml
 from pipeline_lib import (
     BLOCKS_DIR, DRAFTS_DIR,
     load_entries, load_entry_by_id, load_profile,
+    load_block,
     strip_markdown, count_words, count_chars,
     get_effort, ACTIONABLE_STATUSES, PIPELINE_DIR_ACTIVE,
 )
@@ -266,16 +267,6 @@ def get_profile_content(profile: dict, section_name: str, length: str = "medium"
         if diffs:
             return "\n".join(f"- {d}" for d in diffs)
 
-    return None
-
-
-def load_block(block_path: str) -> str | None:
-    """Load a block file by its reference path."""
-    full_path = BLOCKS_DIR / block_path
-    if not full_path.suffix:
-        full_path = full_path.with_suffix(".md")
-    if full_path.exists():
-        return full_path.read_text()
     return None
 
 

@@ -273,7 +273,73 @@ def validate_entry(filepath: Path) -> list[str]:
     return errors
 
 
+def check_profile_freshness() -> list[str]:
+    """Compare profile JSON metric values against metrics-snapshot.md source of truth.
+
+    Returns list of warning strings for stale profiles.
+    """
+    import json
+    import re
+
+    from pipeline_lib import PROFILES_DIR, BLOCKS_DIR
+
+    warnings = []
+
+    # Load source-of-truth metrics from metrics-snapshot.md
+    snapshot_path = BLOCKS_DIR / "evidence" / "metrics-snapshot.md"
+    if not snapshot_path.exists():
+        warnings.append("Cannot check freshness: blocks/evidence/metrics-snapshot.md not found")
+        return warnings
+
+    snapshot = snapshot_path.read_text()
+
+    # Extract canonical repo count
+    repo_match = re.search(r"Total repositories\s*\|\s*(\d+)", snapshot)
+    canonical_repos = int(repo_match.group(1)) if repo_match else None
+
+    if not PROFILES_DIR.exists():
+        warnings.append("Cannot check freshness: targets/profiles/ not found")
+        return warnings
+
+    stale_count = 0
+    for profile_path in sorted(PROFILES_DIR.glob("*.json")):
+        if "index" in profile_path.name:
+            continue
+        text = profile_path.read_text()
+
+        issues = []
+
+        # Check for stale repo count
+        if canonical_repos:
+            # Match patterns like "101 repositories", "101-repository", "101 repos"
+            stale_repos = re.findall(r"\b(\d+)(?:\s+|-)?repositor(?:ies|y)", text)
+            for count_str in stale_repos:
+                count = int(count_str)
+                if count != canonical_repos:
+                    issues.append(f"repo count {count} != {canonical_repos}")
+                    break
+
+        if issues:
+            stale_count += 1
+            for issue in issues:
+                warnings.append(f"  {profile_path.name}: {issue}")
+
+    if stale_count:
+        warnings.insert(0, f"STALE PROFILES — {stale_count} profile(s) with outdated metrics:")
+    else:
+        warnings.append(f"Profile freshness OK — all profiles match metrics-snapshot.md")
+
+    return warnings
+
+
 def main():
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Validate pipeline YAML entries")
+    parser.add_argument("--check-freshness", action="store_true",
+                        help="Also check profile JSON freshness against metrics-snapshot.md")
+    args = parser.parse_args()
+
     all_errors = {}
     file_count = 0
 
@@ -292,6 +358,8 @@ def main():
         print("No pipeline YAML files found.")
         sys.exit(1)
 
+    has_errors = False
+
     if all_errors:
         print(f"VALIDATION FAILED — {len(all_errors)} file(s) with errors:\n")
         for filename, errors in all_errors.items():
@@ -299,10 +367,22 @@ def main():
             for error in errors:
                 print(f"    - {error}")
         print(f"\n{file_count} files checked, {len(all_errors)} with errors.")
-        sys.exit(1)
+        has_errors = True
     else:
         print(f"OK — {file_count} pipeline entries validated successfully.")
-        sys.exit(0)
+
+    if args.check_freshness:
+        print()
+        freshness_warnings = check_profile_freshness()
+        for w in freshness_warnings:
+            print(w)
+        stale = any("STALE" in w for w in freshness_warnings)
+        if stale:
+            has_errors = True
+
+    if has_errors:
+        sys.exit(1)
+    sys.exit(0)
 
 
 if __name__ == "__main__":

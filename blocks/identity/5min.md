@@ -1,10 +1,10 @@
 # Identity: 5-Minute Statement
 
-101 repositories across 8 GitHub organizations. 42 published essays. 410,000+ words of public documentation. 2,349+ automated tests. All built by one person.
+103 repositories across 8 GitHub organizations. 42 published essays. 810,000+ words of public documentation. 2,349+ automated tests. All built by one person.
 
 That scale invites a fair question: *why solo?* The answer is structural, not temperamental. The eight-organ system — coordinating theory, generative art, commercial products, governance, public process, community, and marketing — required a single architectural vision sustained across every boundary. Committees produce compromise; this project required coherence. The same logic that makes a film director a director, not a committee chair, applies here: someone has to hold the whole design in their head for the parts to cohere.
 
-The project is called ORGANVM, and it treats governance as a creative medium. The registry that tracks all 101 repositories is a machine-readable constitution. The dependency graph — theory feeds art, art feeds commerce, never the reverse — is an architectural constraint as deliberately chosen as any compositional rule. The promotion state machine that governs how work moves between organs is both working infrastructure and an argument about how creative systems should be organized.
+The project is called ORGANVM, and it treats governance as a creative medium. The registry that tracks all 103 repositories is a machine-readable constitution. The dependency graph — theory feeds art, art feeds commerce, never the reverse — is an architectural constraint as deliberately chosen as any compositional rule. The promotion state machine that governs how work moves between organs is both working infrastructure and an argument about how creative systems should be organized.
 
 I use AI tools the way Brian Eno used the recording studio: as compositional instruments, not replacements for creative judgment. The AI-conductor model — human directs architecture, AI generates volume, human reviews — enabled one person to produce at institutional scale. The methodology is documented transparently in the 42 essays, including failures and course corrections. This isn't a portfolio of finished works; it's a working demonstration that the process of creation, made visible, is itself the creative output.
 

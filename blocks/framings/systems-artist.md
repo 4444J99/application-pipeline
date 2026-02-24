@@ -4,7 +4,7 @@
 **Identity position:** The system IS the artwork
 
 ## Opening
-I am a systems artist who builds creative infrastructure at institutional scale. The ORGANVM project — 101 repositories coordinated across 8 GitHub organizations through automated governance — is simultaneously working infrastructure and an argument that governance, made visible, is itself the most interesting thing an artist can produce.
+I am a systems artist who builds creative infrastructure at institutional scale. The ORGANVM project — 103 repositories coordinated across 8 GitHub organizations through automated governance — is simultaneously working infrastructure and an argument that governance, made visible, is itself the most interesting thing an artist can produce.
 
 ## Key Claims
 - The eight-organ system is a living creative work, not a portfolio
@@ -13,7 +13,7 @@ I am a systems artist who builds creative infrastructure at institutional scale.
 - MFA Creative Writing grounds the practice in formal creative education
 
 ## Lead Evidence
-- 101 repos across 8 orgs with automated governance
+- 103 repos across 8 orgs with automated governance
 - 42 published essays (~142K words)
 - 33 named development sprints over 5+ years
 - MFA Creative Writing (FAU)

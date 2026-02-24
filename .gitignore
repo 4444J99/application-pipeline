@@ -24,6 +24,7 @@ Thumbs.db
 credentials.*
 scripts/.submit-config.yaml
 scripts/.greenhouse-answers/
+scripts/.alchemize-work/
 
 # Build
 dist/

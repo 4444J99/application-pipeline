@@ -349,6 +349,29 @@ def _extract_section_content(text: str) -> str | None:
     return None
 
 
+# --- Block/variant loading (shared by compose.py, submit.py, draft.py) ---
+
+
+def load_block(block_path: str) -> str | None:
+    """Load a block file by its reference path relative to BLOCKS_DIR."""
+    full_path = BLOCKS_DIR / block_path
+    if not full_path.suffix:
+        full_path = full_path.with_suffix(".md")
+    if full_path.exists():
+        return full_path.read_text().strip()
+    return None
+
+
+def load_variant(variant_path: str) -> str | None:
+    """Load a variant file by its reference path relative to VARIANTS_DIR."""
+    full_path = VARIANTS_DIR / variant_path
+    if not full_path.suffix:
+        full_path = full_path.with_suffix(".md")
+    if full_path.exists():
+        return full_path.read_text().strip()
+    return None
+
+
 # --- Text utilities (shared by compose.py, draft.py) ---
 
 

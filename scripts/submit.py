@@ -25,22 +25,13 @@ from pipeline_lib import (
     BLOCKS_DIR, MATERIALS_DIR, PIPELINE_DIR_ACTIVE, PIPELINE_DIR_SUBMITTED,
     SIGNALS_DIR, REPO_ROOT, VARIANTS_DIR,
     load_entry_by_id, load_profile, load_legacy_script,
+    load_block,
     strip_markdown, count_words, count_chars,
     get_deadline, days_until, get_effort,
 )
 
 
 # --- Content resolution ---
-
-
-def load_block(block_path: str) -> str | None:
-    """Load a block file by its reference path."""
-    full_path = BLOCKS_DIR / block_path
-    if not full_path.suffix:
-        full_path = full_path.with_suffix(".md")
-    if full_path.exists():
-        return full_path.read_text().strip()
-    return None
 
 
 def resolve_field_content(

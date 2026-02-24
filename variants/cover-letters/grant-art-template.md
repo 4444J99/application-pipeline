@@ -11,7 +11,7 @@ Dear [PROGRAM NAME] Selection Committee,
 
 ## The Practice
 
-I am a systems artist whose primary medium is creative infrastructure. The ORGANVM project — 101 repositories coordinated across 8 GitHub organizations through automated governance — is simultaneously working infrastructure and an argument that the process of creation, made visible and governable, is itself the most interesting thing an artist can produce. I have documented this practice in 42 published essays totaling over 142,000 words.
+I am a systems artist whose primary medium is creative infrastructure. The ORGANVM project — 103 repositories coordinated across 8 GitHub organizations through automated governance — is simultaneously working infrastructure and an argument that the process of creation, made visible and governable, is itself the most interesting thing an artist can produce. I have documented this practice in 42 published essays totaling over 142,000 words.
 
 [1-2 SENTENCES: What this practice means for their program specifically. How would a grant/residency/fellowship advance the work?]
 
@@ -25,7 +25,7 @@ I am a systems artist whose primary medium is creative infrastructure. The ORGAN
 
 ## Evidence
 
-- **101 repositories** across 8 GitHub organizations with automated governance
+- **103 repositories** across 8 GitHub organizations with automated governance
 - **42 published essays** (~142K words) documenting the creative practice
 - **MFA Creative Writing** (Florida Atlantic University)
 - **18 years** professional experience across education, technology, and creative fields

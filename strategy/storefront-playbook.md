@@ -4,7 +4,7 @@
 
 Grant reviewers read 200 applications in an afternoon. Hiring managers spend 30 seconds on a resume. The first 60 seconds determine whether anyone reads further.
 
-The cathedral — 101 repos, 42 essays, ~404K+ words, 33 sprints — is the substance. But substance without a storefront is invisible.
+The cathedral — 103 repos, 42 essays, ~810K+ words, 33 sprints — is the substance. But substance without a storefront is invisible.
 
 ## Translation Rules
 
@@ -14,13 +14,14 @@ The cathedral — 101 repos, 42 essays, ~404K+ words, 33 sprints — is the subs
 
 **Storefront:** "103 repositories across 8 organizations, built and documented by one person using AI as a compositional instrument."
 
+
 *Why:* Numbers are scannable. Concepts require attention the reviewer hasn't committed yet.
 
 ### Rule 2: One Sentence, One Claim
 
 **Cathedral:** "The system is simultaneously: (a) working infrastructure that produces creative work, (b) a documented methodology for solo production at institutional scale, (c) an argument that the process of creation — made visible and governable — is itself the most interesting thing an artist can produce, and (d) a reusable model other practitioners can learn from."
 
-**Storefront:** "A 101-repository creative system that treats governance as its primary artistic medium."
+**Storefront:** "A 103-repository creative system that treats governance as its primary artistic medium."
 
 *Why:* Multiple claims dilute each other at scanning speed. Pick the one that fits the target.
 
@@ -49,10 +50,24 @@ The same work needs different storefronts:
 
 | Audience | Storefront lead |
 |----------|----------------|
-| Art grant panel | "Governance IS the artwork — 101 repos as a living creative system" |
+| Art grant panel | "Governance IS the artwork — 103 repos as a living creative system" |
 | Tech fellowship | "Production-grade AI orchestration: 2,349 tests, automated governance, zero violations" |
-| Writing grant | "42 essays, ~404K+ words documenting the process of building creative infrastructure" |
+| Writing grant | "42 essays, ~810K+ words documenting the process of building creative infrastructure" |
 | Emergency fund | "Housing-precarious NYC artist with 5+ years sustained creative practice" |
+
+### Rule 6: Address Known Gaps Preemptively
+
+Every reviewer notices what's missing. Frame gaps as trajectory, not absence.
+
+| Gap | How to Frame |
+|-----|-------------|
+| No external awards yet | "The 103-repo system was built in 18 months — this evaluation framework is itself evidence of the methodology" |
+| No gallery exhibitions | "The portfolio site is a digital exhibition; the public process essays are the curatorial statement" |
+| No published book | "42 essays totaling 142K words — a book-length corpus published as process, not artifact" |
+| No institutional affiliation | "Independent practitioner — the system demonstrates that institutional-scale work doesn't require an institution" |
+| No collaborative team experience | "Solo production at institutional scale IS the methodology — one architectural vision sustained across 8 organizations" |
+
+*Why:* Unaddressed gaps let the reviewer fill in the worst explanation. A preemptive frame lets you choose the narrative.
 
 ## The 60-Second Test
 

@@ -8,6 +8,7 @@ from pathlib import Path
 from pipeline_lib import (
     BLOCKS_DIR, VARIANTS_DIR, SUBMISSIONS_DIR,
     load_entry_by_id, load_profile,
+    load_block, load_variant,
     strip_markdown, count_words, count_chars,
 )
 
@@ -21,25 +22,6 @@ def find_entry(target_id: str) -> dict | None:
     _, data = load_entry_by_id(target_id)
     return data
 
-
-def load_block(block_path: str) -> str | None:
-    """Load a block file by its reference path."""
-    full_path = BLOCKS_DIR / block_path
-    if not full_path.suffix:
-        full_path = full_path.with_suffix(".md")
-    if full_path.exists():
-        return full_path.read_text()
-    return None
-
-
-def load_variant(variant_path: str) -> str | None:
-    """Load a variant file by its reference path."""
-    full_path = VARIANTS_DIR / variant_path
-    if not full_path.suffix:
-        full_path = full_path.with_suffix(".md")
-    if full_path.exists():
-        return full_path.read_text()
-    return None
 
 
 def _profile_fallback(profile: dict, slot: str) -> str | None:

@@ -127,12 +127,13 @@ def resolve_resume(entry: dict) -> Path | None:
     return None
 
 
-def fetch_job_questions(board_token: str, job_id: str) -> list[dict]:
-    """Fetch required custom questions from the Greenhouse Job Board API.
+def fetch_job_data(board_token: str, job_id: str) -> dict | None:
+    """Fetch full job data from the Greenhouse Job Board API.
 
     GET https://boards-api.greenhouse.io/v1/boards/{board_token}/jobs/{job_id}?questions=true
 
-    Returns list of question dicts with 'label', 'required', 'fields' keys.
+    Returns the full job dict (title, content, location, departments, questions, etc.)
+    or None on failure.
     """
     import urllib.request
     import urllib.error
@@ -141,13 +142,23 @@ def fetch_job_questions(board_token: str, job_id: str) -> list[dict]:
     try:
         req = urllib.request.Request(url, headers={"Accept": "application/json"})
         with urllib.request.urlopen(req, timeout=15) as resp:
-            data = json.loads(resp.read().decode())
+            return json.loads(resp.read().decode())
     except (urllib.error.URLError, urllib.error.HTTPError, json.JSONDecodeError) as e:
-        print(f"  Warning: Could not fetch job questions: {e}", file=sys.stderr)
-        return []
+        print(f"  Warning: Could not fetch job data: {e}", file=sys.stderr)
+        return None
 
-    questions = data.get("questions", [])
-    return questions
+
+def fetch_job_questions(board_token: str, job_id: str) -> list[dict]:
+    """Fetch required custom questions from the Greenhouse Job Board API.
+
+    GET https://boards-api.greenhouse.io/v1/boards/{board_token}/jobs/{job_id}?questions=true
+
+    Returns list of question dicts with 'label', 'required', 'fields' keys.
+    """
+    data = fetch_job_data(board_token, job_id)
+    if data is None:
+        return []
+    return data.get("questions", [])
 
 
 # ---------------------------------------------------------------------------
@@ -155,7 +166,7 @@ def fetch_job_questions(board_token: str, job_id: str) -> list[dict]:
 # ---------------------------------------------------------------------------
 
 
-def _get_custom_questions(questions: list[dict]) -> list[dict]:
+def get_custom_questions(questions: list[dict]) -> list[dict]:
     """Filter questions to only custom ones (not standard name/email/etc)."""
     custom = []
     for q in questions:
@@ -167,7 +178,7 @@ def _get_custom_questions(questions: list[dict]) -> list[dict]:
     return custom
 
 
-def _field_type_label(field: dict) -> str:
+def field_type_label(field: dict) -> str:
     """Human-readable type string for a question field."""
     ftype = field.get("type", "unknown")
     type_map = {
@@ -215,7 +226,7 @@ def auto_fill_answers(questions: list[dict], config: dict, entry: dict) -> dict:
         "location": config.get("location", ""),
     }
 
-    for q in _get_custom_questions(questions):
+    for q in get_custom_questions(questions):
         label = q.get("label", "")
         fields = q.get("fields", [])
         for field in fields:
@@ -269,7 +280,7 @@ def validate_answers(questions: list[dict], merged_answers: dict) -> list[str]:
     Returns list of error strings for missing/incomplete fields.
     """
     errors = []
-    for q in _get_custom_questions(questions):
+    for q in get_custom_questions(questions):
         if not q.get("required"):
             continue
         label = q.get("label", "?")
@@ -296,7 +307,7 @@ def resolve_all_answers(
     """
     resolved = {}
     field_meta = {}
-    for q in _get_custom_questions(questions):
+    for q in get_custom_questions(questions):
         for field in q.get("fields", []):
             fname = field.get("name", "")
             field_meta[fname] = field
@@ -329,7 +340,7 @@ def generate_answer_template(
         "",
     ]
 
-    for q in _get_custom_questions(questions):
+    for q in get_custom_questions(questions):
         label = q.get("label", "?")
         required = q.get("required", False)
         fields = q.get("fields", [])
@@ -338,7 +349,7 @@ def generate_answer_template(
             fname = field.get("name", "")
             if fname in STANDARD_FIELD_NAMES:
                 continue
-            ftype = _field_type_label(field)
+            ftype = field_type_label(field)
             values = field.get("values", [])
 
             # Build comment
@@ -405,7 +416,7 @@ def init_answers_for_entry(
         print(f"  Warning: No questions returned for {entry_id}")
         return False
 
-    custom_qs = _get_custom_questions(questions)
+    custom_qs = get_custom_questions(questions)
     if not custom_qs:
         print(f"  {entry_id}: No custom questions (only standard fields)")
         return True
@@ -564,7 +575,7 @@ def preview_submission(
     print()
 
     if questions:
-        custom_qs = _get_custom_questions(questions)
+        custom_qs = get_custom_questions(questions)
         if custom_qs and resolved_answers is not None:
             # Enhanced preview with answer status
             sources = answer_sources or {}
@@ -578,7 +589,7 @@ def preview_submission(
                     fname = field.get("name", "")
                     if fname in STANDARD_FIELD_NAMES:
                         continue
-                    ftype = _field_type_label(field)
+                    ftype = field_type_label(field)
                     if fname in resolved_answers:
                         val = resolved_answers[fname]
                         src = sources.get(fname, "?")

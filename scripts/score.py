@@ -13,7 +13,11 @@ from pathlib import Path
 
 import yaml
 
-from pipeline_lib import ALL_PIPELINE_DIRS
+from pipeline_lib import (
+    ALL_PIPELINE_DIRS,
+    load_entries as _load_entries_raw,
+    load_entry_by_id,
+)
 
 # Dimension weights (must sum to 1.0)
 WEIGHTS = {
@@ -80,28 +84,18 @@ HIGH_PRESTIGE = {
 
 
 def load_entries(entry_id: str | None = None) -> list[tuple[Path, dict]]:
-    """Load pipeline entries. If entry_id given, load only that one."""
-    results = []
-    for pipeline_dir in ALL_PIPELINE_DIRS:
-        if not pipeline_dir.exists():
-            continue
-        if entry_id:
-            filepath = pipeline_dir / f"{entry_id}.yaml"
-            if filepath.exists():
-                with open(filepath) as f:
-                    data = yaml.safe_load(f)
-                if isinstance(data, dict):
-                    results.append((filepath, data))
-                return results
-        else:
-            for filepath in sorted(pipeline_dir.glob("*.yaml")):
-                if filepath.name.startswith("_"):
-                    continue
-                with open(filepath) as f:
-                    data = yaml.safe_load(f)
-                if isinstance(data, dict):
-                    results.append((filepath, data))
-    return results
+    """Load pipeline entries as (filepath, data) tuples.
+
+    If entry_id given, load only that one.
+    """
+    if entry_id:
+        filepath, data = load_entry_by_id(entry_id)
+        if filepath and data:
+            return [(filepath, data)]
+        return []
+
+    entries = _load_entries_raw(include_filepath=True)
+    return [(e.pop("_filepath"), e) for e in entries if "_filepath" in e]
 
 
 def score_deadline_feasibility(entry: dict) -> int:

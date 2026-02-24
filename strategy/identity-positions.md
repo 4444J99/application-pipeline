@@ -20,7 +20,7 @@ Four framings of the same body of work for different audiences. Derived from cov
 **Targets:** Creative Capital, Artadia, FCA, NYSCA/NYFA, Eyebeam, Fire Island, Headlands, Prix Ars, S+T+ARTS, ZKM, LACMA
 
 **Opening line template:**
-> I am a systems artist who builds creative infrastructure at institutional scale. The ORGANVM project — 101 repositories coordinated across 8 GitHub organizations through automated governance — is simultaneously working infrastructure and an argument that the process of creation, made visible and governable, is itself the most interesting thing an artist can produce.
+> I am a systems artist who builds creative infrastructure at institutional scale. The ORGANVM project — 103 repositories coordinated across 8 GitHub organizations through automated governance — is simultaneously working infrastructure and an argument that the process of creation, made visible and governable, is itself the most interesting thing an artist can produce.
 
 ---
 
@@ -44,7 +44,7 @@ Four framings of the same body of work for different audiences. Derived from cov
 **Targets:** Google Creative Lab, Processing Foundation, consulting clients, Together AI, HuggingFace
 
 **Opening line template:**
-> I build production-grade AI orchestration systems. The ORGANVM project coordinates 101 repositories through automated dependency validation, a formal promotion state machine, and 94+ CI/CD pipelines — all designed, tested (2,349+ tests), and documented by a single practitioner using AI tools as compositional instruments.
+> I build production-grade AI orchestration systems. The ORGANVM project coordinates 103 repositories through automated dependency validation, a formal promotion state machine, and 94+ CI/CD pipelines — all designed, tested (2,349+ tests), and documented by a single practitioner using AI tools as compositional instruments.
 
 ---
 
@@ -57,3 +57,18 @@ Four framings of the same body of work for different audiences. Derived from cov
 
 **Opening line template:**
 > As a queer, housing-precarious artist building creative infrastructure from lived experience of precarity, I understand that the systems we build reflect the conditions we build them in. The eight-organ system — including its community infrastructure (ORGAN-VI) and public documentation of 42 essays — was built as a model for sustainable creative practice accessible to others navigating similar circumstances.
+
+---
+
+## Extended Framings
+
+The four canonical positions above cover most applications. The following target-specific framings extend them for specialized contexts. Each maps to a canonical parent position.
+
+| Extended Framing | Parent Position | Block File | Use For |
+|-----------------|----------------|------------|---------|
+| AI Orchestrator | Creative Technologist | `framings/ai-orchestrator.md` | AI-specific grants, tech roles emphasizing the AI-conductor methodology |
+| Emergency / Precarity | Community Practitioner | `framings/emergency-precarity.md` | Emergency funds, housing stability grants — tone is direct, factual, not embellished |
+| S+T+ARTS European Dimension | Systems Artist | `framings/starts-prize-european-dimension.md` | Prix Ars Electronica, S+T+ARTS — EU governance parallels, media art lineage |
+| S+T+ARTS Art-Tech Collaboration | Creative Technologist | `framings/starts-prize-art-tech-collaboration.md` | S+T+ARTS — bridge between artistic vision and technical infrastructure |
+
+**Rule:** Use the canonical position as the primary framing. Use an extended framing only when the target explicitly calls for the specialized angle (e.g., "European dimension" requirement in S+T+ARTS, or emergency fund applications requiring documentation of need).

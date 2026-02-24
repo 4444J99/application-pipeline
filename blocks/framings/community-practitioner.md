@@ -17,7 +17,7 @@ As a queer, housing-precarious artist building creative infrastructure from live
 - Krypto-velamen: 20 deep research files on queer literary figures, 26 world-building research modules, original encoding schema (double-channel text, six calibratable dials)
 - 42 published essays documenting the practice publicly
 - ORGAN-VI with 4 community-facing repositories
-- 101 repos built and maintained as a solo practitioner
+- 103 repos built and maintained as a solo practitioner
 - MFA Creative Writing (FAU)
 
 ## Reference Points

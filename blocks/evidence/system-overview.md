@@ -8,9 +8,9 @@ The system operates on an AI-conductor model: AI generates volume, human directs
 
 | Claim | Proof |
 |-------|-------|
-| 101 repos, 8 orgs | registry-v2.json |
+| 103 repos, 8 orgs | registry-v2.json |
 | 42 published essays | public-process/_posts/ |
-| ~404K+ words | Aggregate measurement |
+| ~810K+ words | Aggregate measurement |
 | 33 sprints | docs/specs/sprints/01-33 |
 | 2,349+ tests | agentic-titan (1,095) + recursive-engine (1,254) |
 | 0 dependency violations | Automated weekly validation |

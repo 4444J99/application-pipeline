@@ -11,4 +11,4 @@ This methodology enabled a single operator to build, document, and validate 103 
 The model is documented transparently in 42 published essays. It's reusable: other practitioners can adopt the same approach to achieve institutional-scale output as independent creators.
 
 ## Key Metric
-~404K+ words of documentation produced by one person using this methodology.
+~810K+ words of documentation produced by one person using this methodology.
