@@ -6,7 +6,7 @@ outcome: null
 target:
   organization: MIT Technology Review / Wired / Aeon
   url: null
-  application_url: null
+  application_url: https://www.technologyreview.com/pitch/
   portal: custom
 deadline:
   date: null
@@ -40,6 +40,10 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
+    framing: framings/creative-technologist
+    3_4_paragraph_pitch: pitches/mit-tr-wired-aeon
+    credentials: pitches/credentials-creative-tech
+    writing_sample: evidence/work-samples
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
@@ -64,4 +68,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $1-3/word. Pitch-based, rolling.
-last_touched: "2026-02-23"
+last_touched: "2026-02-24"

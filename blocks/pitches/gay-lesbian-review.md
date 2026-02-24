@@ -1,13 +1,4 @@
-# Draft: Gay & Lesbian Review
-**Target:** Gay & Lesbian Review
-**Track:** writing
-**Status:** staged
-**Generated:** 2026-02-24
-**Framing:** community-practitioner
-
----
-
-## Pitch Email
+# Pitch: Gay & Lesbian Review
 
 Dear Editors,
 
@@ -21,11 +12,3 @@ I'd welcome the opportunity to discuss this further. A writing sample from my pu
 
 Best,
 Anthony James Padavano
-
-*[223 words — framing: community-practitioner, source: blocks/identity/2min + blocks/methodology/process-as-product]*
-
-## Bio
-
-Systems artist and auteur-producer. Creator of the ORGANVM eight-organ system: 101 repositories across 8 GitHub organizations coordinating theory, art, commerce, governance, and public process through automated governance. 42 published essays, 33 development sprints, ~410K+ of documentation. 18 years professional experience across creative systems design, college instruction (11 years, 2,000+ students), multimedia production, and project management. MFA Creative Writing, Meta Full-Stack Developer certification. Based in New York City.
-
-*[67 words, 540 chars — source: profile]*

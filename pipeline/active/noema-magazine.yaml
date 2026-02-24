@@ -6,7 +6,7 @@ outcome: null
 target:
   organization: Noema Magazine
   url: https://noemamag.com
-  application_url: null
+  application_url: mailto:pitches@noemamag.com
   portal: email
 deadline:
   date: null
@@ -40,6 +40,8 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
+    2_3_paragraph_pitch: pitches/noema-magazine
+    writing_sample: evidence/work-samples
   variant_ids: {}
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
@@ -63,4 +65,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $1/word, ~$3K/essay. Pitch to pitches@noemamag.com.
-last_touched: "2026-02-23"
+last_touched: "2026-02-24"

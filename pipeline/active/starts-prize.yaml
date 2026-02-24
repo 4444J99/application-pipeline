@@ -61,7 +61,6 @@ portal_fields:
   fields:
   - name: project_description
   - name: work_samples
-  - name: work_samples
 conversion:
   response_received: false
   response_type: null

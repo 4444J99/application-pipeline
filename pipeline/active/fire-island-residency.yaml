@@ -1,7 +1,7 @@
 id: fire-island-residency
 name: Fire Island Artist Residency
 track: residency
-status: qualified
+status: drafting
 outcome: null
 target:
   organization: Fire Island Artist Residency
@@ -68,4 +68,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Stipend plus housing provided.
-last_touched: "2026-02-23"
+last_touched: "2026-02-24"
