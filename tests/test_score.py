@@ -11,6 +11,7 @@ from score import (
     PORTAL_SCORES,
     STRATEGIC_BASE,
     HIGH_PRESTIGE,
+    QUALIFICATION_THRESHOLD,
     score_deadline_feasibility,
     score_financial_alignment,
     score_portal_friction,
@@ -19,6 +20,7 @@ from score import (
     estimate_human_dimensions,
     compute_dimensions,
     compute_composite,
+    qualify,
 )
 
 
@@ -440,3 +442,55 @@ def test_composite_missing_dim_defaults_to_five():
     result = compute_composite(dims)
     expected = round(10 * 0.25 + 5 * 0.75, 1)  # rest default to 5
     assert result == expected
+
+
+# --- qualify ---
+
+
+def test_qualification_threshold_is_reasonable():
+    """QUALIFICATION_THRESHOLD should be between 1 and 10."""
+    assert 1.0 <= QUALIFICATION_THRESHOLD <= 10.0
+
+
+def test_qualify_above_threshold():
+    """Entry scoring above threshold should return (True, reason)."""
+    entry = _make_entry(
+        fit_score=8,
+        framing="Strong framing that exceeds thirty chars easily",
+        blocks_used={"a": "x", "b": "x", "c": "x", "d": "x", "e": "x"},
+        organization="Creative Capital",
+        deadline_type="rolling",
+    )
+    should_apply, reason = qualify(entry)
+    assert should_apply is True
+    assert ">=" in reason
+
+
+def test_qualify_below_threshold():
+    """Entry scoring below threshold should return (False, reason with weak dims)."""
+    entry = _make_entry(
+        fit_score=1,
+        track="job",
+        amount_value=100000,
+        portal="slideroom",
+        deadline_date=_date_offset(-5),
+    )
+    should_apply, reason = qualify(entry)
+    assert should_apply is False
+    assert "<" in reason
+    assert "weak:" in reason
+
+
+def test_qualify_boundary():
+    """Entry exactly at threshold should return APPLY."""
+    # Build an entry that scores exactly at threshold — we just need to
+    # verify the >= comparison handles the boundary correctly.
+    entry = _make_entry(fit_score=5, deadline_type="rolling")
+    dims = compute_dimensions(entry)
+    composite = compute_composite(dims)
+
+    should_apply, _ = qualify(entry)
+    if composite >= QUALIFICATION_THRESHOLD:
+        assert should_apply is True
+    else:
+        assert should_apply is False

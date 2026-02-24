@@ -31,6 +31,7 @@ from enrich import (
     find_matching_variant, detect_gaps,
     GRANT_TEMPLATE_PATH, GRANT_TEMPLATE_TRACKS,
 )
+from score import QUALIFICATION_THRESHOLD
 
 
 # --- Urgency classification ---
@@ -166,10 +167,11 @@ def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
                 else:
                     dl_str = dl_type or "rolling"
 
+                low_tag = " [LOW]" if score and score < QUALIFICATION_THRESHOLD else ""
                 score_str = f"[{score:.1f}]" if score else ""
                 lines.append(
                     f"  {score_str:>6} {name:<38} {dl_str:<8} "
-                    f"{status:<12} {effort:<10} {amount}"
+                    f"{status:<12} {effort:<10} {amount}{low_tag}"
                 )
 
                 gaps = detect_gaps(e)
@@ -213,9 +215,10 @@ def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
             dl_str = f"{days_until(dl_date)}d" if dl_date else "rolling"
             effort = get_effort(e)
             amount = format_amount(e.get("amount"))
+            low_tag = " [LOW]" if score and score < QUALIFICATION_THRESHOLD else ""
             lines.append(
                 f"  {i:>2}. [{score:.1f}] {name:<36} {dl_str:<6} "
-                f"{effort:<10} {amount}"
+                f"{effort:<10} {amount}{low_tag}"
             )
         lines.append("")
 

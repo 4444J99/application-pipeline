@@ -2,8 +2,8 @@
 """Full-pipeline application orchestrator.
 
 Assembles research, identity mapping, and a structured synthesis prompt
-for each Greenhouse pipeline entry. After the user generates output via Claude,
-integrates the results back into the pipeline.
+for pipeline entries across all portal types. After the user generates
+output via Claude, integrates the results back into the pipeline.
 
 Usage:
     python scripts/alchemize.py --target anthropic-fde                    # Full pipeline → prompt.md
@@ -12,6 +12,8 @@ Usage:
     python scripts/alchemize.py --target anthropic-fde --integrate        # Integrate output.md back
     python scripts/alchemize.py --target anthropic-fde --submit           # Submit via greenhouse_submit.py
     python scripts/alchemize.py --batch                                   # Phases 1-4 for all Greenhouse entries
+    python scripts/alchemize.py --batch-all                               # Phases 1-4 for all portal types
+    python scripts/alchemize.py --batch-all --portal greenhouse           # Same as --batch
 """
 
 import argparse
@@ -27,6 +29,7 @@ from urllib.parse import urljoin, urlparse
 import yaml
 
 from pipeline_lib import (
+    ACTIONABLE_STATUSES,
     BLOCKS_DIR,
     MATERIALS_DIR,
     REPO_ROOT,
@@ -48,6 +51,7 @@ from greenhouse_submit import (
     STANDARD_FIELD_NAMES,
     ANSWERS_DIR,
 )
+from enrich import RESUME_BY_IDENTITY, select_resume
 
 WORK_DIR = Path(__file__).resolve().parent / ".alchemize-work"
 STRATEGY_DIR = REPO_ROOT / "strategy"
@@ -184,14 +188,50 @@ def fetch_page_text(url: str) -> str | None:
 # ---------------------------------------------------------------------------
 
 
-def phase_intake(entry: dict) -> dict | None:
-    """Parse entry, fetch Greenhouse job data. Returns job data dict or None."""
+def phase_intake_general(entry: dict, no_web: bool = False) -> dict | None:
+    """Generic intake for non-Greenhouse entries.
+
+    Scrapes the application URL page text and returns a dict with
+    'content' (page text) and 'title' (entry name). Returns None
+    if no URL is available or the scrape fails.
+    """
+    entry_id = entry.get("id", "?")
+    name = entry.get("name", entry_id)
+
+    app_url = entry.get("target", {}).get("application_url", "")
+    if not app_url:
+        print(f"  No application_url for {entry_id}")
+        return {"_portal": "general", "title": name}
+
+    if no_web:
+        print(f"  Web fetching disabled, skipping scrape for {entry_id}")
+        return {"_portal": "general", "title": name}
+
+    print(f"  Fetching application page: {app_url}")
+    page_text = fetch_page_text(app_url)
+    if page_text:
+        return {
+            "_portal": "general",
+            "title": name,
+            "content": page_text,
+            "_application_url": app_url,
+        }
+
+    print(f"  Warning: Could not fetch application page for {entry_id}")
+    return {"_portal": "general", "title": name}
+
+
+def phase_intake(entry: dict, no_web: bool = False) -> dict | None:
+    """Parse entry and fetch data. Returns data dict or None.
+
+    For Greenhouse entries, fetches via the Greenhouse Job Board API.
+    For all other portal types, scrapes the application URL page.
+    """
     entry_id = entry.get("id", "?")
 
     portal = entry.get("target", {}).get("portal", "")
     if portal != "greenhouse":
-        print(f"  Skipping {entry_id}: portal is '{portal}', not greenhouse")
-        return None
+        return phase_intake_general(entry, no_web=no_web)
 
     app_url = entry.get("target", {}).get("application_url", "")
     parsed = parse_greenhouse_url(app_url)
@@ -242,11 +282,16 @@ def phase_research(entry: dict, job_data: dict | None, no_web: bool = False) -> 
     entry_id = entry.get("id", "?")
     name = entry.get("name", entry_id)
     org = entry.get("target", {}).get("organization", "")
+    is_greenhouse = entry.get("target", {}).get("portal") == "greenhouse"
 
     sections = [f"# Research: {name}\n"]
 
-    # Job description from Greenhouse API
-    sections.append("## Job Description\n")
+    # Opportunity description
+    if is_greenhouse:
+        sections.append("## Job Description\n")
+    else:
+        sections.append("## Opportunity Description\n")
+
     if job_data:
         title = job_data.get("title", "Unknown")
         sections.append(f"**Title:** {title}\n")
@@ -262,41 +307,56 @@ def phase_research(entry: dict, job_data: dict | None, no_web: bool = False) -> 
                 sections.append(f"**Departments:** {', '.join(dept_names)}\n")
 
         content_html = job_data.get("content", "")
-        if content_html:
+        page_content = job_data.get("content", "") if is_greenhouse else ""
+        general_content = job_data.get("content", "") if not is_greenhouse else ""
+
+        if is_greenhouse and content_html:
             jd_text = extract_text_from_html(content_html)
             sections.append(f"\n{jd_text}\n")
+        elif general_content:
+            sections.append(f"\n{general_content}\n")
+        elif not is_greenhouse:
+            app_url = job_data.get("_application_url", "")
+            if app_url:
+                sections.append(f"*Application page scraped from {app_url}.*\n")
+            else:
+                sections.append("*No opportunity description available.*\n")
         else:
             sections.append("*No job description content returned from API.*\n")
     else:
-        sections.append("*Could not fetch from Greenhouse API.*\n")
-
-    # Custom questions
-    sections.append("## Custom Questions\n")
-    if job_data:
-        questions = job_data.get("questions", [])
-        custom_qs = get_custom_questions(questions)
-        if custom_qs:
-            for q in custom_qs:
-                label = q.get("label", "?")
-                required = q.get("required", False)
-                req_tag = " (REQUIRED)" if required else ""
-                sections.append(f"### {label}{req_tag}\n")
-                for field in q.get("fields", []):
-                    fname = field.get("name", "")
-                    if fname in STANDARD_FIELD_NAMES:
-                        continue
-                    ftype = field_type_label(field)
-                    values = field.get("values", [])
-                    sections.append(f"- **Field:** `{fname}`")
-                    sections.append(f"- **Type:** {ftype}")
-                    if values:
-                        opts = ", ".join(v.get("label", "?") for v in values)
-                        sections.append(f"- **Options:** {opts}")
-                    sections.append("")
+        if is_greenhouse:
+            sections.append("*Could not fetch from Greenhouse API.*\n")
         else:
-            sections.append("*No custom questions (standard fields only).*\n")
-    else:
-        sections.append("*Could not fetch questions.*\n")
+            sections.append("*No opportunity data available.*\n")
+
+    # Custom questions (Greenhouse only)
+    if is_greenhouse:
+        sections.append("## Custom Questions\n")
+        if job_data:
+            questions = job_data.get("questions", [])
+            custom_qs = get_custom_questions(questions)
+            if custom_qs:
+                for q in custom_qs:
+                    label = q.get("label", "?")
+                    required = q.get("required", False)
+                    req_tag = " (REQUIRED)" if required else ""
+                    sections.append(f"### {label}{req_tag}\n")
+                    for field in q.get("fields", []):
+                        fname = field.get("name", "")
+                        if fname in STANDARD_FIELD_NAMES:
+                            continue
+                        ftype = field_type_label(field)
+                        values = field.get("values", [])
+                        sections.append(f"- **Field:** `{fname}`")
+                        sections.append(f"- **Type:** {ftype}")
+                        if values:
+                            opts = ", ".join(v.get("label", "?") for v in values)
+                            sections.append(f"- **Options:** {opts}")
+                        sections.append("")
+            else:
+                sections.append("*No custom questions (standard fields only).*\n")
+        else:
+            sections.append("*Could not fetch questions.*\n")
 
     # Company overview from web
     sections.append("## Company Overview\n")
@@ -507,6 +567,18 @@ def phase_map(entry: dict, research: str, profile: dict | None) -> str:
     else:
         sections.append("*No profile with work samples available.*\n")
 
+    # Resume selection
+    sections.append("## Resume Selection\n")
+    resume = select_resume(entry)
+    position = select_identity_position(entry)
+    sections.append(f"**Selected resume:** {resume}")
+    sections.append(f"**Identity position:** {position}")
+    if position in RESUME_BY_IDENTITY:
+        sections.append(f"**Resume framing:** {position.replace('-', ' ').title()} variant")
+    else:
+        sections.append("**Resume framing:** Default (multimedia specialist)")
+    sections.append("")
+
     # Storefront translation notes
     sections.append("## Storefront Translation Notes\n")
     playbook_path = STRATEGY_DIR / "storefront-playbook.md"
@@ -524,6 +596,19 @@ def phase_map(entry: dict, research: str, profile: dict | None) -> str:
 # ---------------------------------------------------------------------------
 
 
+def _extract_research_section(research: str, header: str) -> str:
+    """Extract a section from research markdown by ## header name."""
+    full_header = f"## {header}"
+    if full_header not in research:
+        return ""
+    start = research.index(full_header)
+    rest = research[start + len(full_header):]
+    next_section = rest.find("\n## ")
+    if next_section >= 0:
+        return rest[:next_section].strip()
+    return rest.strip()
+
+
 def phase_synthesize(
     entry: dict, research: str, mapping: str, existing_cl: str | None
 ) -> str:
@@ -531,6 +616,7 @@ def phase_synthesize(
     entry_id = entry.get("id", "?")
     name = entry.get("name", entry_id)
     org = entry.get("target", {}).get("organization", "")
+    is_greenhouse = entry.get("target", {}).get("portal") == "greenhouse"
     deadline = entry.get("deadline", {})
     dl_date = deadline.get("date", "Rolling") if isinstance(deadline, dict) else "Rolling"
     dl_type = deadline.get("type", "unknown") if isinstance(deadline, dict) else "unknown"
@@ -543,83 +629,20 @@ def phase_synthesize(
             salary = f"${val:,}" if currency == "USD" else f"{currency} {val:,}"
 
     # Extract sections from research
-    # Job description
-    jd_section = ""
-    if "## Job Description" in research:
-        start = research.index("## Job Description")
-        end = research.index("\n## ", start + 1) if "\n## " in research[start + 1:] else len(research)
-        # Find next ## after start
-        rest = research[start + len("## Job Description"):]
-        next_section = rest.find("\n## ")
-        if next_section >= 0:
-            jd_section = rest[:next_section].strip()
-        else:
-            jd_section = rest.strip()
-
-    # Custom questions section
-    questions_section = ""
-    if "## Custom Questions" in research:
-        start = research.index("## Custom Questions")
-        rest = research[start + len("## Custom Questions"):]
-        next_section = rest.find("\n## ")
-        if next_section >= 0:
-            questions_section = rest[:next_section].strip()
-        else:
-            questions_section = rest.strip()
-
-    # Company overview
-    company_section = ""
-    if "## Company Overview" in research:
-        start = research.index("## Company Overview")
-        rest = research[start + len("## Company Overview"):]
-        next_section = rest.find("\n## ")
-        if next_section >= 0:
-            company_section = rest[:next_section].strip()
-        else:
-            company_section = rest.strip()
+    jd_section = (
+        _extract_research_section(research, "Job Description")
+        or _extract_research_section(research, "Opportunity Description")
+    )
+    questions_section = _extract_research_section(research, "Custom Questions")
+    company_section = _extract_research_section(research, "Company Overview")
 
     # Extract sections from mapping
     position = select_identity_position(entry)
-
-    framing_section = ""
-    if "## Framing Block" in mapping:
-        start = mapping.index("## Framing Block")
-        rest = mapping[start + len("## Framing Block"):]
-        next_section = rest.find("\n## ")
-        if next_section >= 0:
-            framing_section = rest[:next_section].strip()
-        else:
-            framing_section = rest.strip()
-
-    evidence_section = ""
-    if "## Relevant Evidence" in mapping:
-        start = mapping.index("## Relevant Evidence")
-        rest = mapping[start + len("## Relevant Evidence"):]
-        next_section = rest.find("\n## ")
-        if next_section >= 0:
-            evidence_section = rest[:next_section].strip()
-        else:
-            evidence_section = rest.strip()
-
-    projects_section = ""
-    if "## Relevant Projects" in mapping:
-        start = mapping.index("## Relevant Projects")
-        rest = mapping[start + len("## Relevant Projects"):]
-        next_section = rest.find("\n## ")
-        if next_section >= 0:
-            projects_section = rest[:next_section].strip()
-        else:
-            projects_section = rest.strip()
-
-    storefront_section = ""
-    if "## Storefront Translation Notes" in mapping:
-        start = mapping.index("## Storefront Translation Notes")
-        rest = mapping[start + len("## Storefront Translation Notes"):]
-        next_section = rest.find("\n## ")
-        if next_section >= 0:
-            storefront_section = rest[:next_section].strip()
-        else:
-            storefront_section = rest.strip()
+    framing_section = _extract_research_section(mapping, "Framing Block")
+    evidence_section = _extract_research_section(mapping, "Relevant Evidence")
+    projects_section = _extract_research_section(mapping, "Relevant Projects")
+    resume_section = _extract_research_section(mapping, "Resume Selection")
+    storefront_section = _extract_research_section(mapping, "Storefront Translation Notes")
 
     # Build prompt
     lines = [
@@ -634,16 +657,17 @@ def phase_synthesize(
         lines.append(f"- **Salary:** {salary}")
     lines.append("")
 
-    lines.append("## Job Description\n")
+    desc_label = "Job Description" if is_greenhouse else "Opportunity Description"
+    lines.append(f"## {desc_label}\n")
     lines.append(jd_section if jd_section else "*Not available.*")
     lines.append("")
 
-    if questions_section and "*No custom questions" not in questions_section:
+    if is_greenhouse and questions_section and "*No custom questions" not in questions_section:
         lines.append("## Custom Questions Requiring Answers\n")
         lines.append(questions_section)
         lines.append("")
 
-    lines.append("## Company Philosophy & Values\n")
+    lines.append("## Organization Philosophy & Values\n")
     lines.append(company_section if company_section else "*Not available — research manually.*")
     lines.append("")
 
@@ -658,6 +682,12 @@ def phase_synthesize(
     lines.append("## Your Relevant Projects\n")
     lines.append(projects_section if projects_section else "*No projects selected.*")
     lines.append("")
+
+    # Resume note
+    if resume_section:
+        lines.append("## Resume Attached\n")
+        lines.append(resume_section)
+        lines.append("")
 
     lines.append("## Storefront Rules\n")
     lines.append(storefront_section if storefront_section else "*storefront-playbook.md not found.*")
@@ -675,10 +705,12 @@ def phase_synthesize(
     lines.append("### COVER_LETTER")
     lines.append("Write a cover letter following the storefront-playbook rules. Lead with numbers,")
     lines.append("one claim per sentence, match the reviewer's vocabulary. 400-600 words.")
+    if resume_section:
+        lines.append("The attached resume is noted above. Ensure the cover letter complements its framing.")
     lines.append("Use the existing cover letter as a starting point if provided above.")
     lines.append("")
 
-    if questions_section and "*No custom questions" not in questions_section:
+    if is_greenhouse and questions_section and "*No custom questions" not in questions_section:
         lines.append("### GREENHOUSE_ANSWERS")
         lines.append("For each custom question above, provide the answer in this exact format:")
         lines.append("```yaml")
@@ -966,7 +998,7 @@ def process_entry(
 
     # Phase 1: INTAKE
     print("\nPhase 1: INTAKE")
-    job_data = phase_intake(entry)
+    job_data = phase_intake(entry, no_web=no_web)
     if phase == "intake":
         print(f"\n  Stopped after intake phase.")
         return job_data is not None
@@ -1029,6 +1061,10 @@ def main():
     parser.add_argument("--target", help="Target entry ID")
     parser.add_argument("--batch", action="store_true",
                         help="Run phases 1-4 for all Greenhouse entries")
+    parser.add_argument("--batch-all", action="store_true",
+                        help="Run phases 1-4 for all entries (any portal type)")
+    parser.add_argument("--portal",
+                        help="Filter batch by portal type (e.g. greenhouse, custom)")
     parser.add_argument("--phase", choices=PHASES,
                         help="Stop after this phase (default: synthesize)")
     parser.add_argument("--integrate", action="store_true",
@@ -1041,25 +1077,43 @@ def main():
                         help="Skip web fetching (use only existing files + API)")
     args = parser.parse_args()
 
-    if not args.target and not args.batch:
-        parser.error("Specify --target <id> or --batch")
+    if not args.target and not args.batch and not args.batch_all:
+        parser.error("Specify --target <id>, --batch, or --batch-all")
 
-    if args.batch and (args.integrate or args.submit):
-        parser.error("--integrate and --submit cannot be used with --batch")
+    if (args.batch or args.batch_all) and (args.integrate or args.submit):
+        parser.error("--integrate and --submit cannot be used with --batch/--batch-all")
 
     # Resolve entries
-    if args.batch:
+    if args.batch or args.batch_all:
         entries = load_entries(dirs=[PIPELINE_DIR_ACTIVE])
+        # Filter to actionable statuses
         entries = [
             e for e in entries
-            if e.get("target", {}).get("portal") == "greenhouse"
+            if e.get("status") in ACTIONABLE_STATUSES
         ]
+        # Portal filter
+        if args.batch and not args.batch_all:
+            # Legacy --batch: Greenhouse only
+            portal_filter = args.portal or "greenhouse"
+        elif args.portal:
+            portal_filter = args.portal
+        else:
+            portal_filter = None
+
+        if portal_filter:
+            entries = [
+                e for e in entries
+                if e.get("target", {}).get("portal") == portal_filter
+            ]
+
         if not entries:
-            print("No Greenhouse entries found in active pipeline.")
+            portal_msg = f" (portal={portal_filter})" if portal_filter else ""
+            print(f"No actionable entries found in active pipeline{portal_msg}.")
             sys.exit(1)
-        print(f"Found {len(entries)} Greenhouse entries:")
+        print(f"Found {len(entries)} entries:")
         for e in entries:
-            print(f"  - {e.get('id')}: {e.get('name')}")
+            portal = e.get("target", {}).get("portal", "?")
+            print(f"  - {e.get('id')}: {e.get('name')} [{portal}]")
     else:
         _, entry = load_entry_by_id(args.target)
         if not entry:

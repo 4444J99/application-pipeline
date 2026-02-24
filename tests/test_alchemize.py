@@ -13,7 +13,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from alchemize import (
     _TextExtractor,
+    _extract_research_section,
     extract_text_from_html,
+    phase_intake_general,
+    phase_research,
     select_identity_position,
     select_evidence_blocks,
     select_work_samples,
@@ -309,3 +312,177 @@ def test_parse_output_normalizes_keys():
     sections = parse_output(text)
     assert "MY_CUSTOM_SECTION" in sections
     assert sections["MY_CUSTOM_SECTION"] == "Content here."
+
+
+# ---------------------------------------------------------------------------
+# phase_intake_general (non-Greenhouse intake)
+# ---------------------------------------------------------------------------
+
+
+def test_phase_intake_general_no_url():
+    """phase_intake_general returns dict with title when no application_url."""
+    entry = {"id": "test-entry", "name": "Test Entry", "target": {}}
+    result = phase_intake_general(entry)
+    assert result is not None
+    assert result["_portal"] == "general"
+    assert result["title"] == "Test Entry"
+
+
+def test_phase_intake_general_no_web():
+    """phase_intake_general skips scraping when no_web=True."""
+    entry = {
+        "id": "test-entry",
+        "name": "Test Entry",
+        "target": {"application_url": "https://example.com/apply"},
+    }
+    result = phase_intake_general(entry, no_web=True)
+    assert result is not None
+    assert result["_portal"] == "general"
+    assert "content" not in result  # no scraping happened
+
+
+def test_phase_intake_general_with_url_no_web():
+    """phase_intake_general with URL but no_web still returns title."""
+    entry = {
+        "id": "queer-art",
+        "name": "Queer|Art Mentorship",
+        "target": {
+            "application_url": "https://queer-art.org/programs/mentorship",
+        },
+    }
+    result = phase_intake_general(entry, no_web=True)
+    assert result["title"] == "Queer|Art Mentorship"
+    assert result["_portal"] == "general"
+
+
+# ---------------------------------------------------------------------------
+# phase_research (generalized for non-Greenhouse)
+# ---------------------------------------------------------------------------
+
+
+def test_phase_research_non_greenhouse_uses_opportunity_description():
+    """phase_research for non-Greenhouse entries uses '## Opportunity Description'."""
+    entry = {
+        "id": "test-grant",
+        "name": "Test Grant",
+        "target": {
+            "organization": "Test Org",
+            "portal": "custom",
+            "url": "https://example.com",
+        },
+    }
+    job_data = {
+        "_portal": "general",
+        "title": "Test Grant",
+        "content": "This is the opportunity page content.",
+    }
+    result = phase_research(entry, job_data, no_web=True)
+    assert "## Opportunity Description" in result
+    assert "## Custom Questions" not in result  # skipped for non-Greenhouse
+    assert "This is the opportunity page content." in result
+
+
+def test_phase_research_greenhouse_uses_job_description():
+    """phase_research for Greenhouse entries uses '## Job Description'."""
+    entry = {
+        "id": "test-job",
+        "name": "Test Job",
+        "target": {
+            "organization": "Test Corp",
+            "portal": "greenhouse",
+            "url": "https://example.com",
+        },
+    }
+    job_data = {
+        "title": "Software Engineer",
+        "content": "<p>Build great software.</p>",
+        "questions": [],
+    }
+    result = phase_research(entry, job_data, no_web=True)
+    assert "## Job Description" in result
+    assert "## Custom Questions" in result
+    assert "Build great software." in result
+
+
+def test_phase_research_no_job_data_non_greenhouse():
+    """phase_research with None job_data for non-Greenhouse shows generic message."""
+    entry = {
+        "id": "test-entry",
+        "name": "Test",
+        "target": {"organization": "Org", "portal": "custom"},
+    }
+    result = phase_research(entry, None, no_web=True)
+    assert "No opportunity data available" in result
+
+
+# ---------------------------------------------------------------------------
+# _extract_research_section
+# ---------------------------------------------------------------------------
+
+
+def test_extract_research_section_found():
+    """_extract_research_section extracts content between ## headers."""
+    research = (
+        "# Research\n\n"
+        "## Job Description\n\n"
+        "Engineer role at Acme.\n\n"
+        "## Company Overview\n\n"
+        "Acme builds widgets.\n"
+    )
+    result = _extract_research_section(research, "Job Description")
+    assert "Engineer role at Acme." in result
+    assert "Acme builds widgets." not in result
+
+
+def test_extract_research_section_not_found():
+    """_extract_research_section returns empty string when header missing."""
+    research = "## Company Overview\n\nSome content.\n"
+    assert _extract_research_section(research, "Job Description") == ""
+
+
+def test_extract_research_section_last_section():
+    """_extract_research_section handles the last section in the document."""
+    research = "## Company Overview\n\nThis is the last section.\n"
+    result = _extract_research_section(research, "Company Overview")
+    assert "This is the last section." in result
+
+
+# ---------------------------------------------------------------------------
+# Resume selection in mapping
+# ---------------------------------------------------------------------------
+
+
+def test_phase_map_includes_resume_selection(tmp_path):
+    """phase_map should include a Resume Selection section."""
+    import alchemize
+
+    original_blocks_dir = alchemize.BLOCKS_DIR
+    original_strategy_dir = alchemize.STRATEGY_DIR
+    alchemize.BLOCKS_DIR = tmp_path / "blocks"
+    alchemize.STRATEGY_DIR = tmp_path / "strategy"
+
+    try:
+        # Create minimal block structure
+        (tmp_path / "blocks" / "evidence").mkdir(parents=True)
+        (tmp_path / "blocks" / "evidence" / "metrics-snapshot.md").write_text("M")
+        (tmp_path / "blocks" / "evidence" / "differentiators.md").write_text("D")
+        (tmp_path / "blocks" / "framings").mkdir()
+        (tmp_path / "blocks" / "framings" / "systems-artist.md").write_text("SA framing")
+        (tmp_path / "blocks" / "identity").mkdir()
+        (tmp_path / "blocks" / "identity" / "60s.md").write_text("Elevator pitch")
+        (tmp_path / "strategy").mkdir()
+
+        from alchemize import phase_map
+
+        entry = {
+            "id": "test",
+            "name": "Test",
+            "fit": {"identity_position": "systems-artist"},
+        }
+        result = phase_map(entry, "research text", None)
+        assert "## Resume Selection" in result
+        assert "systems-artist" in result
+        assert "resumes/systems-artist-resume.pdf" in result
+    finally:
+        alchemize.BLOCKS_DIR = original_blocks_dir
+        alchemize.STRATEGY_DIR = original_strategy_dir

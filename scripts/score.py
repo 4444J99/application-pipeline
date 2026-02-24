@@ -321,6 +321,30 @@ DIMENSION_ORDER = [
     "deadline_feasibility", "portal_friction",
 ]
 
+# Below this composite score, recommend skipping the application
+QUALIFICATION_THRESHOLD = 5.0
+
+
+def qualify(entry: dict) -> tuple[bool, str]:
+    """Return (should_apply, reason) based on composite score.
+
+    Entries at or above QUALIFICATION_THRESHOLD get APPLY.
+    Entries below get SKIP with an explanation of which dimensions drag it down.
+    """
+    dimensions = compute_dimensions(entry)
+    composite = compute_composite(dimensions)
+
+    if composite >= QUALIFICATION_THRESHOLD:
+        return True, f"composite {composite:.1f} >= {QUALIFICATION_THRESHOLD}"
+
+    # Find the weakest dimensions to explain why
+    weak = sorted(
+        ((dim, dimensions[dim]) for dim in DIMENSION_ORDER),
+        key=lambda x: x[1],
+    )
+    weak_names = [f"{dim}={val}" for dim, val in weak[:3]]
+    return False, f"composite {composite:.1f} < {QUALIFICATION_THRESHOLD} (weak: {', '.join(weak_names)})"
+
 
 def update_entry_file(filepath: Path, dimensions: dict[str, int], composite: float, dry_run: bool = False):
     """Update a pipeline YAML file with new dimensions and composite score.
@@ -388,23 +412,65 @@ def update_entry_file(filepath: Path, dimensions: dict[str, int], composite: flo
     return old_score, composite
 
 
+def run_qualify(entries: list[tuple[Path, dict]]):
+    """Print APPLY/SKIP recommendations for all entries."""
+    apply_entries = []
+    skip_entries = []
+
+    for filepath, data in entries:
+        entry_id = data.get("id", filepath.stem)
+        should_apply, reason = qualify(data)
+        if should_apply:
+            apply_entries.append((entry_id, reason))
+        else:
+            skip_entries.append((entry_id, reason))
+
+    if skip_entries:
+        print("SKIP (below threshold):")
+        for eid, reason in sorted(skip_entries, key=lambda x: x[1]):
+            print(f"  {eid:<40s} {reason}")
+        print()
+
+    if apply_entries:
+        print("APPLY (above threshold):")
+        for eid, reason in sorted(apply_entries, key=lambda x: x[1], reverse=True):
+            print(f"  {eid:<40s} {reason}")
+        print()
+
+    print(f"{'=' * 50}")
+    print(
+        f"Threshold: {QUALIFICATION_THRESHOLD} | "
+        f"{len(apply_entries)} APPLY | {len(skip_entries)} SKIP"
+    )
+
+
 def main():
     parser = argparse.ArgumentParser(description="Score pipeline entries against rubric")
     parser.add_argument("--target", help="Score a single entry by ID")
     parser.add_argument("--all", action="store_true", help="Score all entries")
+    parser.add_argument("--qualify", action="store_true",
+                        help="Show APPLY/SKIP recommendations based on score threshold")
     parser.add_argument("--dry-run", action="store_true",
                         help="Show scores without writing changes")
     parser.add_argument("--verbose", "-v", action="store_true",
                         help="Show per-dimension breakdowns")
     args = parser.parse_args()
 
-    if not args.target and not args.all:
-        parser.error("Specify --target <id> or --all")
+    if not args.target and not args.all and not args.qualify:
+        parser.error("Specify --target <id>, --all, or --qualify")
+
+    # --qualify implies --all unless --target is given
+    if args.qualify and not args.target:
+        args.all = True
 
     entries = load_entries(args.target if args.target else None)
     if not entries:
         print(f"No entries found.", file=sys.stderr)
         sys.exit(1)
+
+    if args.qualify:
+        run_qualify(entries)
+        return
 
     changes = []
     for filepath, data in entries:
