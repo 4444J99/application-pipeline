@@ -60,7 +60,16 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-tags: []
+tags:
+  - job-tier-1
+  - submit-order-2
 source: 04-application-tracker.md
-notes: Salary range $120,000-$160,000.
-last_touched: "2026-02-23"
+notes: |
+  Salary range $120,000-$160,000.
+  PRIORITY: Tier 1 — Apply Now (submit second). Role where the full body of work is evidence.
+  42 essays (810K+ words) = sustained technical writing. 11 years teaching 2,000+ students
+  = proven communication. 103 public repos = open-source at scale. Dev advocacy is the
+  intersection of engineering + communication + community — all three demonstrated strengths.
+  Honest gaps: Limited ML knowledge (but dev advocacy doesn't require training models).
+  No prior dev advocate title (but teaching IS advocacy).
+last_touched: "2026-02-24"

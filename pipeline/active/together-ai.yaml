@@ -60,7 +60,15 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-tags: []
+tags:
+  - job-tier-2
+  - submit-order-4
 source: 04-application-tracker.md
-notes: Salary range $160,000-$240,000.
-last_touched: "2026-02-23"
+notes: |
+  Salary range $160,000-$240,000.
+  PRIORITY: Tier 2 — Apply with Targeted Narrative (submit fourth).
+  DX + documentation is a real strength. 810K+ words, 100% README coverage, 42 essays.
+  The DX role values someone who makes complex systems understandable — that's what the
+  essays and teaching demonstrate.
+  Gap to bridge: "Lead" implies team management experience, which is missing.
+last_touched: "2026-02-24"

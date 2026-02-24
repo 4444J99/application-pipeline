@@ -60,7 +60,14 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-tags: []
+tags:
+  - job-tier-4
+  - deprioritize
 source: 04-application-tracker.md
-notes: Salary range $230,000-$385,000.
-last_touched: "2026-02-23"
+notes: |
+  Salary range $230,000-$385,000.
+  PRIORITY: Tier 4 — Deprioritize. Applied evals is a specialized ML discipline. Testing
+  infrastructure (3.6K test files, 85% coverage) is evaluation-adjacent but not evaluation
+  work. Limited ML knowledge (acknowledged in covenant-ark Section J) is a hard gap. Lowest
+  mission alignment and strategic value of the job group. Effort better redirected to Tier 1-2.
+last_touched: "2026-02-24"

@@ -60,7 +60,15 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-tags: []
+tags:
+  - job-tier-4
+  - deprioritize
 source: 04-application-tracker.md
-notes: Salary range $280,000-$400,000.
-last_touched: "2026-02-23"
+notes: |
+  Salary range $280,000-$400,000.
+  PRIORITY: Tier 4 — Deprioritize. "Forward-deployed" means customer-facing enterprise
+  engineering — building custom solutions for enterprise customers on-site. Core gap (no
+  enterprise customer-facing tech experience) is structural, not frameable. Teaching shows
+  communication but not enterprise deployment context. High strategic value (8) is tempting
+  but probability too low — effort better spent on SE Claude Code application.
+last_touched: "2026-02-24"

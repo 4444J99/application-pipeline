@@ -60,7 +60,14 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-tags: []
+tags:
+  - job-tier-3
+  - submit-order-5
 source: manual
-notes: Salary range $240,000-$290,000.
+notes: |
+  Salary range $240,000-$290,000.
+  PRIORITY: Tier 3 — Apply If Time Permits (submit fifth).
+  Score is 5.7 (second highest), but role leans toward ML research infrastructure more than
+  systems engineering. Creative-AI bridge via ORGAN-II is real, but role likely needs more
+  hands-on ML pipeline experience. Good application, lower probability of advancing past screen.
 last_touched: "2026-02-24"

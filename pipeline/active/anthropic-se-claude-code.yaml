@@ -60,7 +60,15 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-tags: []
+tags:
+  - job-tier-1
+  - submit-order-1
 source: manual
-notes: Salary range $320,000-$560,000.
+notes: |
+  Salary range $320,000-$560,000.
+  PRIORITY: Tier 1 — Apply Now (submit first). Highest fit by wide margin (6.3).
+  CLI developer tools and agentic systems built daily — this pipeline, alchemize.py,
+  greenhouse_submit.py, the entire scripts/ directory IS the kind of work this role does.
+  Evidence that lands: 21K code files, 3.6K tests, 94 CI/CD pipelines, agentic-titan (1,095 tests).
+  Honest gaps: No team engineering, no production users. Scale and testing discipline are real.
 last_touched: "2026-02-24"

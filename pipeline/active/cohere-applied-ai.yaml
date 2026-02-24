@@ -60,7 +60,15 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-tags: []
+tags:
+  - job-tier-2
+  - submit-order-3
 source: manual
-notes: Salary undisclosed.
+notes: |
+  Salary undisclosed.
+  PRIORITY: Tier 2 — Apply with Targeted Narrative (submit third).
+  Agentic workflows match agentic-titan directly. Multi-agent orchestration, 1,095 tests,
+  18 development phases — exact domain match. Role title says "agentic workflows" and
+  agentic-titan IS an agentic workflow framework.
+  Gap to bridge: Track record at 4 is modest. No enterprise deployment of agentic systems.
 last_touched: "2026-02-24"
