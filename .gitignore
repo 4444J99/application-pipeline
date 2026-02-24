@@ -23,6 +23,7 @@ Thumbs.db
 .env.local
 credentials.*
 scripts/.submit-config.yaml
+scripts/.greenhouse-answers/
 
 # Build
 dist/

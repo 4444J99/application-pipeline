@@ -8,8 +8,11 @@ entries in the pipeline.
 Usage:
     python scripts/greenhouse_submit.py --target together-ai          # dry-run preview
     python scripts/greenhouse_submit.py --target together-ai --submit # POST to Greenhouse
-    python scripts/greenhouse_submit.py --batch                       # dry-run all 4
-    python scripts/greenhouse_submit.py --batch --submit              # submit all 4
+    python scripts/greenhouse_submit.py --batch                       # dry-run all
+    python scripts/greenhouse_submit.py --batch --submit              # submit all
+    python scripts/greenhouse_submit.py --init-answers --target together-ai  # generate answer template
+    python scripts/greenhouse_submit.py --init-answers --batch               # generate all templates
+    python scripts/greenhouse_submit.py --check-answers --batch              # validate all answers
 """
 
 import argparse
@@ -29,11 +32,27 @@ from pipeline_lib import (
 )
 
 CONFIG_PATH = Path(__file__).resolve().parent / ".submit-config.yaml"
+ANSWERS_DIR = Path(__file__).resolve().parent / ".greenhouse-answers"
 
 # URL pattern: job-boards.greenhouse.io/{board_token}/jobs/{job_id}
 GREENHOUSE_URL_RE = re.compile(
     r"job-boards\.greenhouse\.io/(?P<board>[^/]+)/jobs/(?P<job_id>\d+)"
 )
+
+# Standard fields handled outside the answer system
+STANDARD_FIELD_NAMES = {
+    "first_name", "last_name", "email", "phone",
+    "resume", "resume_text", "cover_letter", "cover_letter_text",
+}
+
+# Label patterns for auto-fill (compiled once)
+AUTO_FILL_PATTERNS = [
+    (re.compile(r"website|portfolio|github|personal.*url", re.I), "portfolio_url"),
+    (re.compile(r"linkedin", re.I), "linkedin"),
+    (re.compile(r"pronounc|phonetic", re.I), "name_pronunciation"),
+    (re.compile(r"pronoun", re.I), "pronouns"),
+    (re.compile(r"address|city|location|plan on working|where.*located|where.*based", re.I), "location"),
+]
 
 
 def load_config() -> dict:
@@ -131,6 +150,333 @@ def fetch_job_questions(board_token: str, job_id: str) -> list[dict]:
     return questions
 
 
+# ---------------------------------------------------------------------------
+# Answer management
+# ---------------------------------------------------------------------------
+
+
+def _get_custom_questions(questions: list[dict]) -> list[dict]:
+    """Filter questions to only custom ones (not standard name/email/etc)."""
+    custom = []
+    for q in questions:
+        fields = q.get("fields", [])
+        # Skip if all fields are standard
+        if fields and all(f.get("name") in STANDARD_FIELD_NAMES for f in fields):
+            continue
+        custom.append(q)
+    return custom
+
+
+def _field_type_label(field: dict) -> str:
+    """Human-readable type string for a question field."""
+    ftype = field.get("type", "unknown")
+    type_map = {
+        "input_text": "text",
+        "textarea": "textarea",
+        "multi_value_single_select": "select",
+        "input_file": "file",
+    }
+    return type_map.get(ftype, ftype)
+
+
+def resolve_select_value(answer_str: str, values_list: list[dict]) -> int | str | None:
+    """Resolve a string answer like 'Yes' to the integer value from the values list.
+
+    Returns the integer value if matched, the original string if no values list,
+    or None if no match found.
+    """
+    if not values_list:
+        return answer_str
+    answer_lower = str(answer_str).strip().lower()
+    for v in values_list:
+        if str(v.get("label", "")).strip().lower() == answer_lower:
+            return v.get("value", answer_str)
+    # Try matching against the value itself (in case user provided the int)
+    for v in values_list:
+        if str(v.get("value", "")).strip() == str(answer_str).strip():
+            return v.get("value", answer_str)
+    return None
+
+
+def auto_fill_answers(questions: list[dict], config: dict, entry: dict) -> dict:
+    """Auto-map standard question patterns to config/entry values.
+
+    Returns dict of {field_name: answer_value} for auto-fillable questions.
+    """
+    answers = {}
+    submission = entry.get("submission", {}) or {}
+    portfolio_url = submission.get("portfolio_url", "") if isinstance(submission, dict) else ""
+
+    source_map = {
+        "portfolio_url": portfolio_url,
+        "linkedin": config.get("linkedin", ""),
+        "name_pronunciation": config.get("name_pronunciation", ""),
+        "pronouns": config.get("pronouns", ""),
+        "location": config.get("location", ""),
+    }
+
+    for q in _get_custom_questions(questions):
+        label = q.get("label", "")
+        fields = q.get("fields", [])
+        for field in fields:
+            fname = field.get("name", "")
+            if fname in STANDARD_FIELD_NAMES:
+                continue
+            # Check each auto-fill pattern
+            for pattern, source_key in AUTO_FILL_PATTERNS:
+                if pattern.search(label):
+                    value = source_map.get(source_key, "")
+                    if value:
+                        answers[fname] = value
+                    break
+
+    return answers
+
+
+def load_answers(entry_id: str) -> dict | None:
+    """Load answers from the per-entry YAML file.
+
+    Returns dict of {field_name: answer_value}, or None if file doesn't exist.
+    """
+    answer_path = ANSWERS_DIR / f"{entry_id}.yaml"
+    if not answer_path.exists():
+        return None
+    data = yaml.safe_load(answer_path.read_text())
+    if not isinstance(data, dict):
+        return None
+    # Filter out None/empty and FILL IN placeholders
+    cleaned = {}
+    for k, v in data.items():
+        if v is None:
+            continue
+        sv = str(v).strip()
+        if sv and sv != "FILL IN":
+            cleaned[k] = v
+    return cleaned
+
+
+def merge_answers(auto_filled: dict, file_answers: dict | None) -> dict:
+    """Merge auto-filled and file answers. File answers take precedence."""
+    merged = dict(auto_filled)
+    if file_answers:
+        merged.update(file_answers)
+    return merged
+
+
+def validate_answers(questions: list[dict], merged_answers: dict) -> list[str]:
+    """Validate that all required custom questions have answers.
+
+    Returns list of error strings for missing/incomplete fields.
+    """
+    errors = []
+    for q in _get_custom_questions(questions):
+        if not q.get("required"):
+            continue
+        label = q.get("label", "?")
+        fields = q.get("fields", [])
+        for field in fields:
+            fname = field.get("name", "")
+            if fname in STANDARD_FIELD_NAMES:
+                continue
+            if fname not in merged_answers:
+                errors.append(f"MISSING required: {label} ({fname})")
+            else:
+                val = str(merged_answers[fname]).strip()
+                if not val or val == "FILL IN":
+                    errors.append(f"EMPTY required: {label} ({fname})")
+    return errors
+
+
+def resolve_all_answers(
+    questions: list[dict], merged_answers: dict
+) -> dict:
+    """Resolve string answers to API values (e.g. 'Yes' -> 1 for selects).
+
+    Returns dict of {field_name: resolved_value} ready for POST.
+    """
+    resolved = {}
+    field_meta = {}
+    for q in _get_custom_questions(questions):
+        for field in q.get("fields", []):
+            fname = field.get("name", "")
+            field_meta[fname] = field
+
+    for fname, answer in merged_answers.items():
+        field = field_meta.get(fname)
+        if field and field.get("type") == "multi_value_single_select":
+            values_list = field.get("values", [])
+            resolved_val = resolve_select_value(answer, values_list)
+            if resolved_val is not None:
+                resolved[fname] = resolved_val
+            else:
+                # Keep original — will likely fail but lets the user see it
+                resolved[fname] = answer
+        else:
+            resolved[fname] = answer
+
+    return resolved
+
+
+def generate_answer_template(
+    entry_id: str, entry_name: str, board_token: str, job_id: str,
+    questions: list[dict], auto_filled: dict,
+) -> str:
+    """Render a YAML answer template with comments for each question."""
+    lines = [
+        f"# Generated for: {entry_name}",
+        f"# Job: {board_token}/{job_id}",
+        f"# Edit answers below, then run with --check-answers to validate",
+        "",
+    ]
+
+    for q in _get_custom_questions(questions):
+        label = q.get("label", "?")
+        required = q.get("required", False)
+        fields = q.get("fields", [])
+
+        for field in fields:
+            fname = field.get("name", "")
+            if fname in STANDARD_FIELD_NAMES:
+                continue
+            ftype = _field_type_label(field)
+            values = field.get("values", [])
+
+            # Build comment
+            comment_parts = [f"# {label}"]
+            type_str = f"# Type: {ftype}"
+            if values:
+                opts = ", ".join(v.get("label", "?") for v in values)
+                type_str += f" | Options: {opts}"
+            type_str += f" | {'Required' if required else 'Optional'}"
+            comment_parts.append(type_str)
+
+            lines.extend(comment_parts)
+
+            # Value: auto-filled or placeholder
+            if fname in auto_filled:
+                val = auto_filled[fname]
+                if "\n" in str(val):
+                    lines.append(f"{fname}: |")
+                    for vline in str(val).split("\n"):
+                        lines.append(f"  {vline}")
+                else:
+                    lines.append(f'{fname}: "{val}"')
+            elif ftype == "textarea":
+                lines.append(f"{fname}: |")
+                lines.append("  FILL IN")
+            elif ftype == "select" and values:
+                # Default to first option as hint
+                lines.append(f'{fname}: "FILL IN"')
+            else:
+                lines.append(f'{fname}: "FILL IN"')
+
+            lines.append("")
+
+    return "\n".join(lines)
+
+
+def init_answers_for_entry(
+    entry: dict, config: dict, force: bool = False
+) -> bool:
+    """Generate answer template for a single entry. Returns True on success."""
+    entry_id = entry.get("id", "?")
+    name = entry.get("name", entry_id)
+
+    portal = entry.get("target", {}).get("portal", "")
+    if portal != "greenhouse":
+        print(f"  Skipping {entry_id}: portal is '{portal}', not greenhouse")
+        return False
+
+    app_url = entry.get("target", {}).get("application_url", "")
+    parsed = parse_greenhouse_url(app_url)
+    if not parsed:
+        print(f"  Error: Cannot parse Greenhouse URL for {entry_id}: {app_url}")
+        return False
+    board_token, job_id = parsed
+
+    answer_path = ANSWERS_DIR / f"{entry_id}.yaml"
+    if answer_path.exists() and not force:
+        print(f"  {entry_id}: Answer file exists (use --force to overwrite)")
+        return False
+
+    print(f"  Fetching questions for {entry_id} ({board_token}/{job_id})...")
+    questions = fetch_job_questions(board_token, job_id)
+    if not questions:
+        print(f"  Warning: No questions returned for {entry_id}")
+        return False
+
+    custom_qs = _get_custom_questions(questions)
+    if not custom_qs:
+        print(f"  {entry_id}: No custom questions (only standard fields)")
+        return True
+
+    auto_filled = auto_fill_answers(questions, config, entry)
+
+    template = generate_answer_template(
+        entry_id, name, board_token, job_id, questions, auto_filled
+    )
+
+    ANSWERS_DIR.mkdir(parents=True, exist_ok=True)
+    answer_path.write_text(template)
+
+    # Count fields
+    total_fields = sum(
+        1 for q in custom_qs for f in q.get("fields", [])
+        if f.get("name") not in STANDARD_FIELD_NAMES
+    )
+    auto_count = len(auto_filled)
+    manual_count = total_fields - auto_count
+
+    print(f"  {entry_id}: Wrote {answer_path.name}")
+    print(f"    {total_fields} custom fields: {auto_count} auto-filled, {manual_count} need manual answers")
+    return True
+
+
+def check_answers_for_entry(entry: dict, config: dict) -> bool:
+    """Validate answers for a single entry. Returns True if all required answered."""
+    entry_id = entry.get("id", "?")
+    name = entry.get("name", entry_id)
+
+    portal = entry.get("target", {}).get("portal", "")
+    if portal != "greenhouse":
+        print(f"  Skipping {entry_id}: not greenhouse")
+        return False
+
+    app_url = entry.get("target", {}).get("application_url", "")
+    parsed = parse_greenhouse_url(app_url)
+    if not parsed:
+        print(f"  Error: Cannot parse URL for {entry_id}")
+        return False
+    board_token, job_id = parsed
+
+    questions = fetch_job_questions(board_token, job_id)
+    if not questions:
+        print(f"  {entry_id}: No questions (cannot validate)")
+        return False
+
+    auto_filled = auto_fill_answers(questions, config, entry)
+    file_answers = load_answers(entry_id)
+    merged = merge_answers(auto_filled, file_answers)
+    errors = validate_answers(questions, merged)
+
+    if errors:
+        print(f"  {entry_id}: {len(errors)} issue(s)")
+        for err in errors:
+            print(f"    - {err}")
+        return False
+    else:
+        source_note = ""
+        if file_answers is None:
+            source_note = " (auto-fill only, no answer file)"
+        print(f"  {entry_id}: All required questions answered{source_note}")
+        return True
+
+
+# ---------------------------------------------------------------------------
+# Core submission functions
+# ---------------------------------------------------------------------------
+
+
 def build_form_data(
     config: dict,
     entry: dict,
@@ -171,6 +517,9 @@ def preview_submission(
     cover_letter_text: str,
     resume_path: Path | None,
     questions: list[dict],
+    resolved_answers: dict | None = None,
+    answer_sources: dict | None = None,
+    validation_errors: list[str] | None = None,
 ) -> None:
     """Display a dry-run preview of what would be submitted."""
     entry_id = entry.get("id", "?")
@@ -215,19 +564,54 @@ def preview_submission(
     print()
 
     if questions:
-        required_qs = [q for q in questions if q.get("required")]
-        optional_qs = [q for q in questions if not q.get("required")]
-        if required_qs:
-            print(f"  REQUIRED QUESTIONS ({len(required_qs)}):")
-            for q in required_qs:
+        custom_qs = _get_custom_questions(questions)
+        if custom_qs and resolved_answers is not None:
+            # Enhanced preview with answer status
+            sources = answer_sources or {}
+            print(f"  CUSTOM QUESTIONS ({len(custom_qs)}):")
+            for q in custom_qs:
                 label = q.get("label", "?")
-                print(f"    * {label}")
-        if optional_qs:
-            print(f"  OPTIONAL QUESTIONS ({len(optional_qs)}):")
-            for q in optional_qs:
-                label = q.get("label", "?")
-                print(f"      {label}")
-        print()
+                required = q.get("required", False)
+                req_tag = "REQ" if required else "opt"
+                fields = q.get("fields", [])
+                for field in fields:
+                    fname = field.get("name", "")
+                    if fname in STANDARD_FIELD_NAMES:
+                        continue
+                    ftype = _field_type_label(field)
+                    if fname in resolved_answers:
+                        val = resolved_answers[fname]
+                        src = sources.get(fname, "?")
+                        val_display = str(val)
+                        if len(val_display) > 60:
+                            val_display = val_display[:57] + "..."
+                        print(f"    [{req_tag}] {label}")
+                        print(f"          -> {val_display}  ({ftype}, {src})")
+                    else:
+                        print(f"    [{req_tag}] {label}")
+                        print(f"          -> MISSING  ({ftype}, {fname})")
+            print()
+
+            if validation_errors:
+                print(f"  ANSWER VALIDATION ({len(validation_errors)} issue(s)):")
+                for err in validation_errors:
+                    print(f"    ! {err}")
+                print()
+        else:
+            # Fallback: simple question listing
+            required_qs = [q for q in questions if q.get("required")]
+            optional_qs = [q for q in questions if not q.get("required")]
+            if required_qs:
+                print(f"  REQUIRED QUESTIONS ({len(required_qs)}):")
+                for q in required_qs:
+                    label = q.get("label", "?")
+                    print(f"    * {label}")
+            if optional_qs:
+                print(f"  OPTIONAL QUESTIONS ({len(optional_qs)}):")
+                for q in optional_qs:
+                    label = q.get("label", "?")
+                    print(f"      {label}")
+            print()
     else:
         print("  QUESTIONS: None fetched (API may not have returned them)")
         print()
@@ -242,6 +626,7 @@ def submit_to_greenhouse(
     cover_letter_text: str,
     resume_path: Path,
     portfolio_url: str = "",
+    answers: dict | None = None,
 ) -> bool:
     """POST application to Greenhouse Job Board API.
 
@@ -273,6 +658,11 @@ def submit_to_greenhouse(
     if portfolio_url:
         add_field("website_url", portfolio_url)
     add_field("cover_letter", cover_letter_text)
+
+    # Add custom question answers
+    if answers:
+        for fname, value in answers.items():
+            add_field(fname, str(value))
 
     # File upload for resume
     resume_data = resume_path.read_bytes()
@@ -348,13 +738,44 @@ def process_entry(entry: dict, config: dict, do_submit: bool) -> bool:
         print(f"  Error: No resume PDF found for {entry_id}")
         return False
 
-    # Fetch job questions (informational)
+    # Fetch job questions
     questions = fetch_job_questions(board_token, job_id)
 
+    # Resolve custom question answers
+    resolved_answers = {}
+    answer_sources = {}
+    validation_errors = []
+
+    if questions:
+        auto_filled = auto_fill_answers(questions, config, entry)
+        file_answers = load_answers(entry_id)
+        merged = merge_answers(auto_filled, file_answers)
+
+        # Track sources for preview
+        for fname in merged:
+            if file_answers and fname in file_answers:
+                answer_sources[fname] = "answer-file"
+            elif fname in auto_filled:
+                answer_sources[fname] = "auto"
+
+        resolved_answers = resolve_all_answers(questions, merged)
+        validation_errors = validate_answers(questions, merged)
+
     if not do_submit:
-        preview_submission(entry, config, board_token, job_id,
-                           cover_letter_text, resume_path, questions)
+        preview_submission(
+            entry, config, board_token, job_id,
+            cover_letter_text, resume_path, questions,
+            resolved_answers, answer_sources, validation_errors,
+        )
         return True
+
+    # Check for missing required answers before submitting
+    if validation_errors:
+        print(f"\n  Cannot submit {entry_id}: {len(validation_errors)} required answer(s) missing:")
+        for err in validation_errors:
+            print(f"    - {err}")
+        print(f"  Run --init-answers --target {entry_id} to generate answer template")
+        return False
 
     # Actually submit
     portfolio_url = ""
@@ -366,6 +787,7 @@ def process_entry(entry: dict, config: dict, do_submit: bool) -> bool:
     return submit_to_greenhouse(
         board_token, job_id, config,
         cover_letter_text, resume_path, portfolio_url,
+        answers=resolved_answers,
     )
 
 
@@ -384,6 +806,12 @@ def main():
                         help="Process all Greenhouse entries in active pipeline")
     parser.add_argument("--submit", action="store_true",
                         help="Actually POST to Greenhouse (default is dry-run)")
+    parser.add_argument("--init-answers", action="store_true",
+                        help="Generate answer template YAML for custom questions")
+    parser.add_argument("--check-answers", action="store_true",
+                        help="Validate that all required questions have answers")
+    parser.add_argument("--force", action="store_true",
+                        help="Overwrite existing answer files (with --init-answers)")
     args = parser.parse_args()
 
     if not args.target and not args.batch:
@@ -391,11 +819,47 @@ def main():
 
     config = load_config()
 
+    # Resolve entries
     if args.batch:
         entries = find_greenhouse_entries()
         if not entries:
             print("No Greenhouse entries found in active pipeline.")
             sys.exit(1)
+    else:
+        _, entry = load_entry_by_id(args.target)
+        if not entry:
+            print(f"Error: No pipeline entry found for '{args.target}'", file=sys.stderr)
+            sys.exit(1)
+        entries = [entry]
+
+    # --init-answers mode
+    if args.init_answers:
+        print(f"Generating answer templates for {len(entries)} entry(ies)...\n")
+        results = []
+        for entry in entries:
+            ok = init_answers_for_entry(entry, config, force=args.force)
+            results.append((entry.get("id"), ok))
+        if len(results) > 1:
+            print(f"\nSummary: {sum(1 for _, ok in results if ok)}/{len(results)} generated")
+        return
+
+    # --check-answers mode
+    if args.check_answers:
+        print(f"Checking answers for {len(entries)} entry(ies)...\n")
+        results = []
+        for entry in entries:
+            ok = check_answers_for_entry(entry, config)
+            results.append((entry.get("id"), ok))
+        if len(results) > 1:
+            passed = sum(1 for _, ok in results if ok)
+            print(f"\nSummary: {passed}/{len(results)} fully answered")
+        failed = sum(1 for _, ok in results if not ok)
+        if failed:
+            sys.exit(1)
+        return
+
+    # Standard preview/submit mode
+    if args.batch:
         print(f"Found {len(entries)} Greenhouse entries:")
         for e in entries:
             print(f"  - {e.get('id')}: {e.get('name')}")
@@ -417,11 +881,7 @@ def main():
         if failed:
             sys.exit(1)
     else:
-        _, entry = load_entry_by_id(args.target)
-        if not entry:
-            print(f"Error: No pipeline entry found for '{args.target}'", file=sys.stderr)
-            sys.exit(1)
-        ok = process_entry(entry, config, args.submit)
+        ok = process_entry(entries[0], config, args.submit)
         if not ok and args.submit:
             sys.exit(1)
 
