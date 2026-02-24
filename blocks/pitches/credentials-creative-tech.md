@@ -5,6 +5,6 @@
 - Google IT Support / Data Analytics Certifications
 - 18 years professional experience: creative systems design, multimedia production, project management
 - 11 years college instruction across 8+ institutions (2,000+ students)
-- Creator of ORGANVM: 101 repositories, 8 organizations, 2,349+ tests, 82+ CI/CD pipelines
+- Creator of ORGANVM: 101 repositories, 8 organizations, 2,349+ tests, 94+ CI/CD pipelines
 - 42 published essays (~142K words) at https://organvm-v-logos.github.io/public-process/
 - Interactive portfolio: https://4444j99.github.io/portfolio/

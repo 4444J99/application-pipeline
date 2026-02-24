@@ -43,6 +43,7 @@ PROFILE_ID_MAP = {
     "mit-tr-wired-aeon": "mit-tech-review",
     "noema-magazine": "noema",
     "openai-se-evals": "openai-evals",
+    "prix-ars-digital-humanity": "prix-ars",
     "prix-ars-electronica": "prix-ars",
     "rauschenberg-cycle-36": "rauschenberg-emergency",
 }

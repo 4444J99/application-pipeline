@@ -159,21 +159,23 @@ def parse_submission_format(format_str: str) -> dict:
         # Remove leading numbers like "6 short questions"
         clean = re.sub(r'^\d+\s+', '', clean)
 
-        # Match against known section keywords
+        # Match against known section keywords (deduplicate by canonical name)
+        existing_names = {f["name"] for f in result["fields"]}
         matched = False
         for keyword, canonical in SECTION_KEYWORDS.items():
             if keyword in clean:
-                result["fields"].append({
-                    "name": canonical,
-                    "word_limit": field_limit or global_limit,
-                })
+                if canonical not in existing_names:
+                    result["fields"].append({
+                        "name": canonical,
+                        "word_limit": field_limit or global_limit,
+                    })
                 matched = True
                 break
 
         if not matched and clean and len(clean) > 2:
             # Use as-is with underscored name
             safe_name = re.sub(r'[^a-z0-9]+', '_', clean).strip('_')
-            if safe_name:
+            if safe_name and safe_name not in existing_names:
                 result["fields"].append({
                     "name": safe_name,
                     "word_limit": field_limit or global_limit,

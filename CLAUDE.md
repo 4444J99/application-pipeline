@@ -87,6 +87,8 @@ python scripts/enrich.py --all --effort quick --yes   # Quick entries only
 python scripts/campaign.py                           # This week's campaign (14-day window)
 python scripts/campaign.py --days 7                  # Next 7 days only
 python scripts/campaign.py --days 30                 # Full month view
+python scripts/campaign.py --days 90                 # Full quarter view
+python scripts/campaign.py --days 90 --save          # Save markdown report to strategy/
 python scripts/campaign.py --execute --dry-run       # Preview pipeline execution
 python scripts/campaign.py --execute --yes           # Execute for all urgent entries
 python scripts/campaign.py --execute --id <entry-id> --yes  # Single entry
@@ -107,7 +109,7 @@ pytest tests/ -v
 - `scripts/preflight.py` — Batch submission readiness validator for staged entries
 - `scripts/advance.py` — Batch pipeline progression with validation and dry-run
 - `scripts/enrich.py` — Batch enrichment: materials, variants, portal_fields wiring
-- `scripts/campaign.py` — Deadline-aware campaign orchestrator with execute mode
+- `scripts/campaign.py` — Deadline-aware campaign orchestrator with execute mode and `--save` markdown export
 - `scripts/velocity.py` — Submission velocity metrics and throughput tracking
 - `pipeline/_schema.yaml` — Canonical schema for pipeline YAML entries
 - `pipeline/submissions/` — Snapshots of composed submissions (via `compose.py --snapshot`)

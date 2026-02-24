@@ -6,7 +6,7 @@ outcome: null
 target:
   organization: S+T+ARTS
   url: https://starts-prize.aec.at
-  application_url: https://starts-prize.aec.at/submit
+  application_url: https://starts-prize-call.aec.at/2026/
   portal: custom
 deadline:
   date: '2026-03-04'
@@ -20,12 +20,13 @@ amount:
 fit:
   score: 8.4
   identity_position: systems-artist
-  framing: Systems artist bridging science, technology, and artistic practice through
-    recursive engines
+  framing: Systems artist producing audience-participatory performance, modular synthesis,
+    immersive web experiences, and queer literary archives through governed creative
+    infrastructure
   lead_organs:
-  - I
   - II
-  - III
+  - I
+  - IV
   dimensions:
     mission_alignment: 9
     evidence_match: 9
@@ -36,17 +37,19 @@ fit:
     deadline_feasibility: 6
     portal_friction: 6
 submission:
-  effort_level: standard
+  effort_level: complex
   blocks_used:
     artist_statement: identity/5min
-    project_description: projects/organvm-system
+    project_description: projects/starts-prize-art-outputs
+    art_tech_collaboration: framings/starts-prize-art-tech-collaboration
+    european_dimension: framings/starts-prize-european-dimension
+    technical_specs: evidence/starts-prize-technical-specs
     methodology: methodology/governance-as-art
-    evidence: evidence/differentiators
+    evidence: evidence/metrics-snapshot
     framing: framings/systems-artist
-    tech_detail: projects/recursive-engine
-  variant_ids: 
-    cover_letter: cover-letters/grant-art-template
-  materials_attached: 
+  variant_ids:
+    project_description: project-descriptions/starts-prize-v1
+  materials_attached:
     - resumes/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -58,9 +61,39 @@ timeline:
   interview: null
   outcome_date: null
 portal_fields:
+  platform: custom
   fields:
   - name: project_description
+    format: textarea
+    required: true
+    note: "Artistic concept + interaction + technical implementation + HW/SW + spatial"
+  - name: video_documentary
+    format: file_upload
+    file_types: ["mp4", "mov"]
+    required: true
+    note: "~3 min video documentary of the project"
+  - name: project_images
+    format: file_upload
+    file_types: ["jpg", "tif", "bmp", "png"]
+    required: true
+    note: "High-resolution project images"
+  - name: portrait_photo
+    format: file_upload
+    file_types: ["jpg", "png"]
+    required: true
+    note: "Portrait photo of the artist"
+  - name: bio
+    format: textarea
+    required: true
   - name: work_samples
+    format: url
+    required: false
+    note: "URLs to work samples and documentation"
+  - name: additional_documents
+    format: file_upload
+    file_types: ["png", "pdf"]
+    required: false
+    note: "Optional additional supporting documents"
 conversion:
   response_received: false
   response_type: null
@@ -68,5 +101,10 @@ conversion:
   feedback: null
 tags: []
 source: 04-application-tracker.md
-notes: null
-last_touched: "2026-02-23"
+notes: |
+  S+T+ARTS Prize: EUR 20,000 grand prize for innovation at intersection of
+  science, technology, and the arts. Since 2016: 18,900 submissions, 350+
+  honored projects, 124 countries. Same project CAN win both S+T+ARTS and
+  Prix Ars Electronica. Lead with art outputs (Omni-Dromenon, Brahma,
+  MET4, KRYPTO), not governance abstraction.
+last_touched: "2026-02-24"

@@ -1,8 +1,8 @@
 id: artadia-nyc
 name: Artadia NYC Awards
 track: grant
-status: withdrawn
-outcome: ineligible
+status: outcome
+outcome: withdrawn
 target:
   organization: Artadia
   url: https://artadia.org

@@ -12,7 +12,7 @@ The cathedral — 101 repos, 42 essays, ~404K+ words, 33 sprints — is the subs
 
 **Cathedral:** "I design environments where creative organisms grow — and then I document the process of growing them."
 
-**Storefront:** "101 repositories across 8 organizations, built and documented by one person using AI as a compositional instrument."
+**Storefront:** "103 repositories across 8 organizations, built and documented by one person using AI as a compositional instrument."
 
 *Why:* Numbers are scannable. Concepts require attention the reviewer hasn't committed yet.
 

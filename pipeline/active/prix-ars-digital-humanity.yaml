@@ -1,5 +1,5 @@
-id: prix-ars-electronica
-name: Prix Ars Electronica 2026 — Interactive Art+
+id: prix-ars-digital-humanity
+name: Prix Ars Electronica 2026 — Digital Humanity
 track: prize
 status: staged
 outcome: null
@@ -18,31 +18,30 @@ amount:
   type: lump_sum
   benefits_cliff_note: null
 fit:
-  score: 8.4
+  score: 8.0
   identity_position: systems-artist
-  framing: "Governance-as-spectacle: AI debate arena where philosophical combat becomes interactive art"
+  framing: "Multilingual digital humanism: language technology built on the premise that every language deserves architectural commitment"
   lead_organs:
-  - II
   - I
-  - IV
+  - META
+  - V
   dimensions:
     mission_alignment: 9
-    evidence_match: 9
-    track_record_fit: 8
+    evidence_match: 8
+    track_record_fit: 7
     financial_alignment: 9
-    effort_to_value: 8
-    strategic_value: 8
+    effort_to_value: 7
+    strategic_value: 9
     deadline_feasibility: 6
     portal_friction: 6
 submission:
   effort_level: complex
   blocks_used:
     artist_statement: identity/5min
-    project_description: projects/ai-council-coliseum
+    project_description: projects/nexus-babel-alexandria
     methodology: methodology/governance-as-art
     evidence: evidence/differentiators
     framing: framings/systems-artist
-    tech_detail: projects/recursive-engine
     system_context: projects/organvm-system
   variant_ids:
     cover_letter: cover-letters/grant-art-template
@@ -50,9 +49,9 @@ submission:
     - resumes/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
-  researched: '2026-02-14'
-  qualified: '2026-02-16'
-  materials_ready: '2026-02-18'
+  researched: '2026-02-24'
+  qualified: '2026-02-24'
+  materials_ready: null
   submitted: null
   acknowledged: null
   interview: null
@@ -72,7 +71,7 @@ portal_fields:
     format: file_upload
     file_types: ["jpg", "png"]
     required: true
-    note: "Screenshots of arena, combat, voting"
+    note: "Architecture diagram, API output, hypergraph"
   - name: ai_disclosure
     format: textarea
     required: true
@@ -85,15 +84,16 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-tags: ["prix-ars-2026", "interactive-art"]
+tags: ["prix-ars-2026", "digital-humanity"]
 source: 04-application-tracker.md
 notes: |
-  DUAL SUBMISSION: Interactive Art+ category with AI Council Coliseum.
-  Sister entry: prix-ars-digital-humanity (Nexus Babel Alexandria).
-  Jury: Jussi Angeslevä (computational fabrication), Paula Gaetano Adi
-  (2025 Golden Nica, decolonial robotics), Aisling Murray (socially
-  engaged art+tech), Julia Staudach (media art/NFT), Elliot Woods
-  (200+ open source repos, Kimchi and Chips).
-  Key risk: most IA+ winners have physical installations.
-  Video is highest-impact element — demo loop of debate + combat + voting.
+  DUAL SUBMISSION: Digital Humanity category with Nexus Babel Alexandria.
+  Sister entry: prix-ars-electronica (AI Council Coliseum, Interactive Art+).
+  Jury: Ian Banerjee (urban transformation, TU Wien), Yun-Cheng Chen
+  (regenerative institutionalism, g0v.tw civic tech — strong fit),
+  Marta Handenawer (directed 2025 DH Golden Nica "Synthetic Memories"),
+  Esther Mwema (digital inequalities, African feminist/decolonial).
+  Frame: multilingual equity, open-source, cultural preservation.
+  Risk: category emphasizes underrepresented geographies; lead with
+  structural innovation (building from precarity) not identity claims.
 last_touched: "2026-02-24"

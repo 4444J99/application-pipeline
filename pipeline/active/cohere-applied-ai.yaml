@@ -1,50 +1,51 @@
-id: together-ai
-name: Together AI Lead DX Engineer
+id: cohere-applied-ai
+name: Cohere Applied AI Engineer Agentic Workflows
 track: job
 status: staged
 outcome: null
 target:
-  organization: Together AI
-  url: https://together.ai
-  application_url: https://job-boards.greenhouse.io/togetherai/jobs/4903661007
-  portal: greenhouse
+  organization: Cohere
+  url: https://cohere.com
+  application_url: https://jobs.ashbyhq.com/cohere/1fa01a03-9253-4f62-8f10-0fe368b38cb9
+  portal: ashby
 deadline:
   date: null
   time: null
   type: rolling
 amount:
-  value: 200000
+  value: 0
   currency: USD
   type: salary
   benefits_cliff_note: null
 fit:
-  score: 5.1
+  score: 5.0
   identity_position: creative-technologist
-  framing: Creative technologist with deep developer experience and AI systems expertise
+  framing: Applied AI engineer with agentic workflow expertise and production systems
+    experience
   lead_organs:
   - III
   - IV
   dimensions:
-    mission_alignment: 7
+    mission_alignment: 6
     evidence_match: 4
-    track_record_fit: 4
+    track_record_fit: 3
     financial_alignment: 3
     effort_to_value: 5
-    strategic_value: 4
+    strategic_value: 5
     deadline_feasibility: 9
     portal_friction: 5
 submission:
   effort_level: complex
   blocks_used: {}
-  variant_ids: 
-    cover_letter: cover-letters/together-ai-lead-dx-documentation
-  materials_attached: 
+  variant_ids:
+    cover_letter: cover-letters/cohere-applied-ai-agentic-workflows
+  materials_attached:
     - resumes/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
-  researched: '2026-02-14'
-  qualified: '2026-02-16'
-  materials_ready: '2026-02-23'
+  researched: '2026-02-24'
+  qualified: '2026-02-24'
+  materials_ready: '2026-02-24'
   submitted: null
   acknowledged: null
   interview: null
@@ -60,6 +61,6 @@ conversion:
   time_to_response_days: null
   feedback: null
 tags: []
-source: 04-application-tracker.md
-notes: Salary range $160,000-$240,000.
-last_touched: "2026-02-23"
+source: manual
+notes: Salary undisclosed.
+last_touched: "2026-02-24"

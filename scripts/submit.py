@@ -23,7 +23,7 @@ import yaml
 
 from pipeline_lib import (
     BLOCKS_DIR, MATERIALS_DIR, PIPELINE_DIR_ACTIVE, PIPELINE_DIR_SUBMITTED,
-    SIGNALS_DIR, REPO_ROOT,
+    SIGNALS_DIR, REPO_ROOT, VARIANTS_DIR,
     load_entry_by_id, load_profile, load_legacy_script,
     strip_markdown, count_words, count_chars,
     get_deadline, days_until, get_effort,
@@ -68,6 +68,16 @@ def resolve_field_content(
             content = load_block(blocks_used[field_name])
             if content:
                 return content, f"block:{blocks_used[field_name]}"
+
+    # Priority 2.5: Variant files (e.g. cover_letter → variants/cover-letters/...)
+    if isinstance(submission, dict):
+        variant_ids = submission.get("variant_ids", {})
+        if isinstance(variant_ids, dict) and field_name in variant_ids:
+            variant_path = VARIANTS_DIR / variant_ids[field_name]
+            if not variant_path.suffix:
+                variant_path = variant_path.with_suffix(".md")
+            if variant_path.exists():
+                return variant_path.read_text().strip(), f"variant:{variant_ids[field_name]}"
 
     # Priority 3: Profile content
     if profile:
@@ -148,6 +158,16 @@ def generate_checklist(
             if isinstance(blocks_used, dict):
                 for key in blocks_used:
                     fields.append({"name": key, "word_limit": None})
+
+    # If still no fields, use entry's portal_fields.fields
+    if not fields:
+        portal_fields = entry.get("portal_fields", {})
+        if isinstance(portal_fields, dict):
+            pf_list = portal_fields.get("fields", [])
+            if isinstance(pf_list, list):
+                for pf in pf_list:
+                    if isinstance(pf, dict) and "name" in pf:
+                        fields.append({"name": pf["name"], "word_limit": pf.get("word_limit")})
 
     if not fields:
         lines.append("WARNING: No fields identified for this submission.")

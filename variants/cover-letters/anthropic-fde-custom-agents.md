@@ -14,20 +14,20 @@ Anthropic's approach to AI safety requires constraints that scale — not constr
 
 ## What I'd Bring to the FDE Team
 
-**Agent development, tested rigorously.** agentic-titan is a multi-agent orchestration framework I built through 18 development phases with 1,095 tests covering agent coordination, message passing, and fault tolerance. a-i-council--coliseum implements multi-agent deliberation — AI agents debating and synthesizing positions — which is exactly the kind of custom agent workflow your enterprise clients need. I understand what it takes to make agent systems reliable in production — phased development, comprehensive testing, clear architectural boundaries.
+**Agent development, tested rigorously.** agentic-titan is a multi-agent orchestration framework I built through 18 development phases with 1,276 tests covering agent coordination, message passing, and fault tolerance. agent--claude-smith is a multi-agent system built directly on the Claude SDK — TypeScript, session persistence, self-correction hooks, 1Password secrets management, and Zod schema validation — which is exactly the kind of custom agent deployment your enterprise clients need. I understand what it takes to make agent systems reliable in production — phased development, comprehensive testing, clear architectural boundaries.
 
 **Deployment patterns I've already codified.** Your FDE team identifies repeatable deployment patterns and feeds them back to Product and Engineering. I've done this systematically: governance-rules.json encodes rules the system enforces automatically; orchestration-system-v2.md documents the rationale behind every architectural decision; 5 GitHub Actions workflows automate health checks, dependency validation, and promotion across the entire system. These are the kind of artifacts — MCP servers, sub-agents, agent skills — your job description calls for.
 
 **Communication capacity for enterprise environments.** The system includes 404,000+ words of documentation written for grant reviewers and hiring managers, not just developers. I can explain complex orchestration systems to non-technical stakeholders and translate their needs into production implementations.
 
-**Autonomy under ambiguity.** The eight-organ system didn't start with a spec — it started with a question about how to organize 101 repositories into a coherent creative-institutional system. I defined the architecture, built the tooling, documented the decisions, and shipped it. That's the FDE operating model.
+**Autonomy under ambiguity.** The eight-organ system didn't start with a spec — it started with a question about how to organize 103 repositories into a coherent creative-institutional system. I defined the architecture, built the tooling, documented the decisions, and shipped it. That's the FDE operating model.
 
 ## Evidence
 
-- **agentic-titan:** 1,095 tests, 18 phases, multi-agent orchestration (organvm-iv-taxis/agentic-titan)
-- **a-i-council--coliseum:** Multi-agent deliberation system — AI agents debating and synthesizing (organvm-ii-poiesis/a-i-council--coliseum)
+- **agentic-titan:** 1,276 tests, 18 phases, multi-agent orchestration (organvm-iv-taxis/agentic-titan)
+- **agent--claude-smith:** Multi-agent system built on Claude SDK — TypeScript, session persistence, self-correction hooks, 1Password integration (organvm-iv-taxis/agent--claude-smith)
 - **organvm-corpvs-testamentvm:** The governance corpus itself — ~404K+ words of constitutional architecture (meta-organvm/organvm-corpvs-testamentvm)
-- **narratological-algorithmic-lenses:** Analytical frameworks applied to narrative systems (organvm-i-theoria/narratological-algorithmic-lenses)
+- **recursive-engine:** 1,254 tests, 85% coverage, symbolic DSL with custom parser and orchestration (organvm-i-theoria/recursive-engine--generative-entity)
 - **Portfolio:** https://4444j99.github.io/portfolio/
 
 I'd welcome the chance to discuss how governance-first design applies to deploying Claude in regulated enterprise environments.

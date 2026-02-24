@@ -6,7 +6,7 @@
 
 ---
 
-agentic-titan coordinates multiple AI agents through 18 development phases with 1,095 tests covering coordination, message passing, and fault tolerance. a-i-council--coliseum implements multi-agent deliberation — agents debating positions and synthesizing conclusions. Both systems enforce the same governance model: constitutional constraints, automated validation, and evaluation frameworks that assess output quality. That infrastructure maps directly to the Applied AI Engineer, Agentic Workflows role at Cohere.
+agentic-titan coordinates multiple AI agents through 18 development phases with 1,276 tests covering coordination, message passing, and fault tolerance. agent--claude-smith is a multi-agent system built directly on the Claude SDK — TypeScript, session persistence, self-correction hooks, and 1Password secrets management. Both systems enforce the same governance model: constitutional constraints, automated validation, and evaluation frameworks that assess output quality. That infrastructure maps directly to the Applied AI Engineer, Agentic Workflows role at Cohere.
 
 ## Why Agentic Workflows at Cohere
 
@@ -14,22 +14,22 @@ Cohere is building the enterprise layer for agentic AI. Enterprise means governa
 
 ## What I'd Bring
 
-**Multi-agent orchestration, tested at scale.** agentic-titan is a multi-agent orchestration framework I built through 18 development phases with 1,095 tests covering agent coordination, message passing, fault tolerance, and graceful degradation. This isn't a prototype — it's a system designed to evaluate how agents behave when things go wrong, not just when things go right.
+**Multi-agent orchestration, tested at scale.** agentic-titan is a multi-agent orchestration framework I built through 18 development phases with 1,276 tests covering agent coordination, message passing, fault tolerance, and graceful degradation. This isn't a prototype — it's a system designed to evaluate how agents behave when things go wrong, not just when things go right.
 
-**Agent deliberation systems.** a-i-council--coliseum implements multi-agent deliberation: AI agents with distinct perspectives debating positions and synthesizing conclusions. This is the kind of multi-step reasoning workflow — plan, execute, evaluate, refine — that your role designs for enterprise customers. I've built the architecture and the evaluation framework to assess whether the synthesis is actually good.
+**Agent systems built on production SDKs.** agent--claude-smith is a multi-agent system built directly on the Claude SDK — TypeScript, session persistence, self-correction hooks, 1Password secrets management, and Zod schema validation. This is the kind of agentic workflow — plan, execute, evaluate, refine — that your role designs for enterprise customers. I've built the architecture on real SDKs with real secrets management and real error recovery.
 
 **Symbolic systems with real depth.** recursive-engine--generative-entity implements a symbolic operating system with a custom DSL, 21 organ handlers, and 1,254 tests at 85% coverage. I understand the internals of how agent systems maintain state, route messages, and handle complex multi-step reasoning — not just how to prompt them.
 
-**Evaluation infrastructure as a first-class concern.** I built organ-audit.py (monthly health monitoring across 101 repos), platinum-validation.py (full system sweep against 1,267 audited links and 39 dependency edges), and 5 GitHub Actions workflows that enforce governance continuously. Evaluation framework building isn't a secondary skill — it's central to how I design systems.
+**Evaluation infrastructure as a first-class concern.** I built organ-audit.py (monthly health monitoring across 103 repos), platinum-validation.py (full system sweep against 1,267 audited links and 43 dependency edges), and 5 GitHub Actions workflows that enforce governance continuously. Evaluation framework building isn't a secondary skill — it's central to how I design systems.
 
 **Documentation that scales enterprise adoption.** 404,000+ words of portfolio-quality documentation. When enterprise customers need to understand what an agentic system does and why they should trust it, clear technical communication is the difference between a proof-of-concept and a deployment.
 
 ## Evidence
 
-- **agentic-titan:** 1,095 tests, 18 phases, multi-agent orchestration (organvm-iv-taxis/agentic-titan)
-- **a-i-council--coliseum:** Multi-agent deliberation and synthesis (organvm-ii-poiesis/a-i-council--coliseum)
+- **agentic-titan:** 1,276 tests, 18 phases, multi-agent orchestration (organvm-iv-taxis/agentic-titan)
+- **agent--claude-smith:** Multi-agent system on Claude SDK — TypeScript, session persistence, self-correction hooks, 1Password (organvm-iv-taxis/agent--claude-smith)
 - **recursive-engine:** 1,254 tests, 85% coverage, symbolic OS with custom DSL (organvm-i-theoria/recursive-engine--generative-entity)
-- **organvm-corpvs-testamentvm:** Governance infrastructure for 101-repo system (meta-organvm/organvm-corpvs-testamentvm)
+- **organvm-corpvs-testamentvm:** Governance infrastructure for 103-repo system (meta-organvm/organvm-corpvs-testamentvm)
 - **Portfolio:** https://4444j99.github.io/portfolio/
 
 I build agentic systems that are governed, tested, and documented — because that's what enterprise deployment requires.

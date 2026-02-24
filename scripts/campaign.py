@@ -8,19 +8,22 @@ Usage:
     python scripts/campaign.py                            # 14-day window
     python scripts/campaign.py --days 7                   # Next 7 days
     python scripts/campaign.py --days 30                  # Full month
+    python scripts/campaign.py --days 90                  # Full quarter
+    python scripts/campaign.py --save                     # Save markdown to strategy/
     python scripts/campaign.py --execute --dry-run        # Preview pipeline
     python scripts/campaign.py --execute --yes            # Execute for urgent
-    python scripts/campaign.py --execute --id artadia-nyc --yes  # Single entry
+    python scripts/campaign.py --execute --id <id> --yes  # Single entry
 """
 
 import argparse
 import sys
 from datetime import date
+from pathlib import Path
 
 from pipeline_lib import (
     load_entries, load_entry_by_id, load_profile,
-    get_deadline, days_until, get_effort,
-    ACTIONABLE_STATUSES, DRAFTS_DIR,
+    get_deadline, days_until, get_effort, get_score, format_amount,
+    ACTIONABLE_STATUSES, DRAFTS_DIR, REPO_ROOT,
 )
 
 from enrich import (
@@ -117,7 +120,7 @@ def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
     today = date.today()
 
     lines.append(f"CAMPAIGN: Week of {today.isoformat()}")
-    lines.append("=" * 60)
+    lines.append("=" * 70)
     lines.append("")
 
     tiers = {
@@ -149,6 +152,9 @@ def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
                 name = e.get("name", e.get("id", "?"))
                 status = e.get("status", "?")
                 effort = get_effort(e)
+                score = get_score(e)
+                amount = format_amount(e.get("amount"))
+                track = e.get("track", "")
                 dl_date, dl_type = get_deadline(e)
 
                 if dl_date:
@@ -160,20 +166,61 @@ def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
                 else:
                     dl_str = dl_type or "rolling"
 
-                lines.append(f"  {name:<40} {dl_str:<8} {status:<12} {effort}")
+                score_str = f"[{score:.1f}]" if score else ""
+                lines.append(
+                    f"  {score_str:>6} {name:<38} {dl_str:<8} "
+                    f"{status:<12} {effort:<10} {amount}"
+                )
 
                 gaps = detect_gaps(e)
                 if gaps:
-                    lines.append(f"    gaps: {', '.join(gaps)}")
+                    lines.append(f"         gaps: {', '.join(gaps)}")
 
                 # Suggest action
                 if status in ("qualified", "drafting"):
-                    lines.append(f"    needs: advance to staged")
+                    lines.append(f"         needs: advance to staged")
 
         lines.append("")
 
+    # Recommended execution order (deadlined entries sorted by urgency × fit)
+    deadlined = []
+    for tier_key in ("critical", "urgent", "upcoming"):
+        for e in tiers[tier_key]:
+            deadlined.append(e)
+    # Also include "ready" entries that have actual deadlines (hard, window, etc.)
+    for e in tiers["ready"]:
+        dl_date, dl_type = get_deadline(e)
+        if dl_date and dl_type in ("hard", "window", "soft"):
+            deadlined.append(e)
+
+    if deadlined:
+        # Sort by: urgency tier first, then deadline week, then fit desc
+        def exec_sort_key(e):
+            urgency = classify_urgency(e)
+            tier_rank = {"critical": 0, "urgent": 1, "upcoming": 2, "ready": 3}
+            dl_date, _ = get_deadline(e)
+            # Group by deadline week (7-day buckets)
+            week_bucket = days_until(dl_date) // 7 if dl_date else 99
+            return (tier_rank.get(urgency, 4), week_bucket, -get_score(e))
+
+        deadlined.sort(key=exec_sort_key)
+
+        lines.append("RECOMMENDED EXECUTION ORDER (urgency x fit):")
+        for i, e in enumerate(deadlined, 1):
+            name = e.get("name", e.get("id", "?"))
+            score = get_score(e)
+            dl_date, _ = get_deadline(e)
+            dl_str = f"{days_until(dl_date)}d" if dl_date else "rolling"
+            effort = get_effort(e)
+            amount = format_amount(e.get("amount"))
+            lines.append(
+                f"  {i:>2}. [{score:.1f}] {name:<36} {dl_str:<6} "
+                f"{effort:<10} {amount}"
+            )
+        lines.append("")
+
     # Summary
-    lines.append("=" * 60)
+    lines.append("=" * 70)
 
     total_gaps = {"materials": 0, "variants": 0, "portal_fields": 0}
     for e in entries:
@@ -325,12 +372,134 @@ def run_execute(
     print("Next: review checklists → open portals → paste → submit.py --record")
 
 
+def generate_campaign_markdown(entries: list[dict], days_ahead: int) -> str:
+    """Generate a full markdown campaign report for saving to strategy/."""
+    today = date.today()
+    lines = []
+    lines.append(f"# Campaign View — Application Pipeline (as of {today.strftime('%b %d, %Y')})")
+    lines.append("")
+
+    tiers = {
+        "critical": [],
+        "urgent": [],
+        "upcoming": [],
+        "ready": [],
+    }
+    for e in entries:
+        tiers[classify_urgency(e)].append(e)
+
+    # Deadlined entries by date cluster
+    deadlined = []
+    for tier_key in ("critical", "urgent", "upcoming"):
+        deadlined.extend(tiers[tier_key])
+    for e in tiers["ready"]:
+        dl_date, dl_type = get_deadline(e)
+        if dl_date and dl_type in ("hard", "window", "soft"):
+            deadlined.append(e)
+
+    # Group deadlined by date
+    date_groups = {}
+    for e in deadlined:
+        dl_date, _ = get_deadline(e)
+        if dl_date:
+            date_groups.setdefault(dl_date, []).append(e)
+    sorted_dates = sorted(date_groups.keys())
+
+    if sorted_dates:
+        lines.append("## Deadlined Queue (chronological)")
+        lines.append("")
+
+        for dl_date in sorted_dates:
+            group = date_groups[dl_date]
+            d = days_until(dl_date)
+            lines.append(f"### {dl_date.strftime('%B %d')} — {d} days")
+            lines.append("")
+            lines.append("| Entry | Track | Status | Fit | Effort | Amount |")
+            lines.append("|-------|-------|--------|-----|--------|--------|")
+            for e in group:
+                name = e.get("name", e.get("id", "?"))
+                track = e.get("track", "")
+                status = e.get("status", "?")
+                score = get_score(e)
+                effort = get_effort(e)
+                amount = format_amount(e.get("amount"))
+                score_str = f"{score:.1f}" if score else "—"
+                lines.append(
+                    f"| {name} | {track} | `{status}` "
+                    f"| {score_str} | {effort} | {amount} |"
+                )
+            lines.append("")
+
+    # Rolling/no-deadline entries
+    rolling = [e for e in tiers["ready"]
+               if not (get_deadline(e)[0]
+                       and get_deadline(e)[1] in ("hard", "window", "soft"))]
+
+    if rolling:
+        lines.append("## Rolling/No-Deadline (staged, submit anytime)")
+        lines.append("")
+
+        # Group by track
+        track_groups = {}
+        for e in rolling:
+            track = e.get("track", "other")
+            track_groups.setdefault(track, []).append(e)
+
+        for track_name in sorted(track_groups.keys()):
+            group = track_groups[track_name]
+            lines.append(f"### {track_name.title()}")
+            lines.append("")
+            lines.append("| Entry | Status | Fit | Effort |")
+            lines.append("|-------|--------|-----|--------|")
+            for e in group:
+                name = e.get("name", e.get("id", "?"))
+                status = e.get("status", "?")
+                score = get_score(e)
+                effort = get_effort(e)
+                score_str = f"{score:.1f}" if score else "—"
+                lines.append(f"| {name} | `{status}` | {score_str} | {effort} |")
+            lines.append("")
+
+    # Recommended execution order
+    if deadlined:
+        def exec_sort_key(e):
+            urgency = classify_urgency(e)
+            tier_rank = {"critical": 0, "urgent": 1, "upcoming": 2, "ready": 3}
+            dl_date, _ = get_deadline(e)
+            week_bucket = days_until(dl_date) // 7 if dl_date else 99
+            return (tier_rank.get(urgency, 4), week_bucket, -get_score(e))
+
+        deadlined_sorted = sorted(deadlined, key=exec_sort_key)
+
+        lines.append("## Recommended Execution Order (urgency x fit)")
+        lines.append("")
+        for i, e in enumerate(deadlined_sorted, 1):
+            name = e.get("name", e.get("id", "?"))
+            score = get_score(e)
+            dl_date, _ = get_deadline(e)
+            dl_str = f"{days_until(dl_date)}d" if dl_date else "rolling"
+            effort = get_effort(e)
+            amount = format_amount(e.get("amount"))
+            lines.append(
+                f"{i}. **{name}** — {dl_str}, fit {score:.1f}, "
+                f"{effort}, {amount}"
+            )
+        lines.append("")
+
+    lines.append("---")
+    lines.append(f"*Generated {today.isoformat()} by `campaign.py --save`*")
+
+    return "\n".join(lines)
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Deadline-aware campaign orchestrator"
     )
     parser.add_argument("--days", type=int, default=14,
                         help="Look-ahead window in days (default: 14)")
+    parser.add_argument("--save", action="store_true",
+                        help="Save markdown campaign report to strategy/")
     parser.add_argument("--execute", action="store_true",
                         help="Execute full pipeline sequence for campaign entries")
     parser.add_argument("--id", dest="entry_id",
@@ -346,6 +515,17 @@ def main():
 
     if args.execute:
         run_execute(campaign, args.entry_id, args.dry_run, args.yes)
+    elif args.save:
+        md = generate_campaign_markdown(campaign, args.days)
+        strategy_dir = REPO_ROOT / "strategy"
+        strategy_dir.mkdir(parents=True, exist_ok=True)
+        today = date.today()
+        filename = f"campaign-{today.strftime('%Y-%m')}.md"
+        out_path = strategy_dir / filename
+        out_path.write_text(md + "\n")
+        print(f"Campaign report saved to {out_path.relative_to(REPO_ROOT)}")
+        view = format_campaign_view(campaign, args.days)
+        print(view)
     else:
         view = format_campaign_view(campaign, args.days)
         print(view)

@@ -18,7 +18,7 @@ The distance between "powerful tool" and "tool people actually use" is almost al
 ## What I'd Bring
 
 **Technical content at scale, from scratch.** The eight-organ documentation corpus includes:
-- 101 repository READMEs, each written for grant reviewers and hiring managers
+- 103 repository READMEs, each written for grant reviewers and hiring managers
 - A cross-document dependency map and reading order so newcomers never feel lost
 - An annotated manifest with per-file descriptions of the entire corpus
 - 42 published essays explaining architectural decisions to non-technical audiences
@@ -26,9 +26,9 @@ The distance between "powerful tool" and "tool people actually use" is almost al
 
 This is the kind of content your role creates: docs, blog posts, tutorials, demos with code repos. I've done all of it at once.
 
-**Developer-first instinct.** my-knowledge-base is a knowledge management system designed around how developers actually retrieve information — not how librarians organize it. metasystem-master coordinates subsystems at the meta-level, and its documentation teaches by showing how pieces compose rather than listing features. Every piece of writing in the system asks: "What does the reader need to do next?" and answers that question.
+**Developer-first instinct.** my-knowledge-base is a knowledge management system designed around how developers actually retrieve information — not how librarians organize it. agentic-titan is a multi-agent orchestration framework with 1,276 tests across Python, Rust, and TypeScript adapters — a real API surface worth advocating for, with the kind of complexity that demands clear documentation and code examples. Every piece of writing in the system asks: "What does the reader need to do next?" and answers that question.
 
-**Code that teaches.** The system includes Python validation scripts, YAML workflow specs, JSON schemas, and shell scripts — all documented with the "why," not just the "what." narratological-algorithmic-lenses applies computational thinking to narrative structures, demonstrating the kind of technically precise yet accessible writing that makes developer advocacy work.
+**Code that teaches.** The system includes Python validation scripts, YAML workflow specs, JSON schemas, and shell scripts — all documented with the "why," not just the "what." linguistic-atomization-framework (142 tests) decomposes language into composable units with a custom DSL — demonstrating the kind of technically precise yet accessible code examples that make developer advocacy work.
 
 **Open-source ownership.** I've shipped community health files, contribution guidelines, and org-level profiles across 8 organizations. I understand that open-source documentation isn't a deliverable — it's the interface between your product and the people who decide whether to use it.
 
@@ -36,7 +36,7 @@ This is the kind of content your role creates: docs, blog posts, tutorials, demo
 
 - **organvm-corpvs-testamentvm:** 404K+-word documentation corpus, the complete architecture (meta-organvm/organvm-corpvs-testamentvm)
 - **my-knowledge-base:** Developer-oriented knowledge management design (organvm-i-theoria/my-knowledge-base)
-- **metasystem-master:** Meta-level systems documentation that teaches by composition (organvm-ii-poiesis/metasystem-master)
+- **agentic-titan:** 1,276 tests, multi-language adapters (Python/Rust/TypeScript) — real API surface for developer advocacy (organvm-iv-taxis/agentic-titan)
 - **.github org profiles:** Community health files and org-level technical communication across 8 orgs (organvm-i-theoria/.github)
 - **Portfolio:** https://4444j99.github.io/portfolio/
 
