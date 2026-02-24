@@ -40,6 +40,7 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
+    queer_project: projects/krypto-velamen
     methodology: methodology/process-as-product
     evidence: evidence/work-samples
   variant_ids: {}
@@ -66,4 +67,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: null
-last_touched: "2026-02-23"
+last_touched: "2026-02-24"

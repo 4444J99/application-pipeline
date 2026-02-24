@@ -39,6 +39,7 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
+    queer_project: projects/krypto-velamen
     methodology: methodology/process-as-product
     evidence: evidence/metrics-snapshot
   variant_ids: 
@@ -59,7 +60,6 @@ portal_fields:
   - name: artist_statement
   - name: project_description
   - name: budget
-  - name: work_samples
   - name: work_samples
 conversion:
   response_received: false

@@ -40,6 +40,8 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
+    queer_project: projects/krypto-velamen
+    framing: framings/community-practitioner
   variant_ids: {}
   materials_attached: 
     - resumes/multimedia-specialist.pdf
@@ -65,4 +67,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Program-based retreat. Nov 2026-Jan 2027 deadline TBA.
-last_touched: "2026-02-23"
+last_touched: "2026-02-24"

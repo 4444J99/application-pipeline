@@ -8,15 +8,17 @@ As a queer, housing-precarious artist building creative infrastructure from live
 
 ## Key Claims
 - Creative practice grounded in lived experience of LGBTQ+ identity, housing instability, and recovery
+- KRYPTO-VELAMEN is a dedicated queer cultural archive studying how 20 queer authors use concealment as compositional engine — from Rimbaud to Porpentine — with 26 world-building research modules on queer cultural history, activism, and community governance
 - ORGAN-VI (Koinonia) is dedicated community infrastructure: reading groups, salons, mutual learning
 - Public documentation of process makes the practice reproducible for others in precarity
 - The system demonstrates that institutional-scale creative work is possible without institutional backing
 
 ## Lead Evidence
+- Krypto-velamen: 20 deep research files on queer literary figures, 26 world-building research modules, original encoding schema (double-channel text, six calibratable dials)
 - 42 published essays documenting the practice publicly
 - ORGAN-VI with 4 community-facing repositories
 - 101 repos built and maintained as a solo practitioner
 - MFA Creative Writing (FAU)
 
 ## Reference Points
-Mutual aid networks, community land trusts (organizational model), adrienne maree brown (emergent strategy), Dean Spade (mutual aid frameworks)
+Mutual aid networks, community land trusts (organizational model), adrienne maree brown (emergent strategy), Dean Spade (mutual aid frameworks), Reinaldo Arenas (queer survival literature), Leslie Feinberg (trans liberation praxis)

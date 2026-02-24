@@ -40,6 +40,8 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
+    queer_project: projects/krypto-velamen
+    framing: framings/community-practitioner
   variant_ids: 
     cover_letter: cover-letters/grant-art-template
   materials_attached: 
