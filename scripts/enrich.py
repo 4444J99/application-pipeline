@@ -24,6 +24,7 @@ from pipeline_lib import (
     load_entries, load_entry_by_id, load_profile,
     get_effort, ACTIONABLE_STATUSES,
     MATERIALS_DIR, VARIANTS_DIR,
+    update_last_touched as _update_last_touched_content,
 )
 
 
@@ -57,18 +58,7 @@ GRANT_TEMPLATE_PATH = "cover-letters/grant-art-template"
 
 def _update_last_touched(content: str) -> str:
     """Update last_touched to today in YAML content."""
-    today_str = date.today().isoformat()
-    if re.search(r'^last_touched:', content, re.MULTILINE):
-        content = re.sub(
-            r'^(last_touched:\s+).*$',
-            rf'\1"{today_str}"',
-            content,
-            count=1,
-            flags=re.MULTILINE,
-        )
-    else:
-        content = content.rstrip() + f'\nlast_touched: "{today_str}"\n'
-    return content
+    return _update_last_touched_content(content)
 
 
 def select_resume(entry: dict) -> str:
@@ -110,7 +100,7 @@ def enrich_materials(filepath, entry, dry_run=False) -> bool:
     content = filepath.read_text()
 
     # Replace empty materials_attached: [] with the selected resume
-    content = re.sub(
+    new_content = re.sub(
         r'^(\s*materials_attached:\s*)\[\]',
         rf'\1\n    - {resume}',
         content,
@@ -118,8 +108,17 @@ def enrich_materials(filepath, entry, dry_run=False) -> bool:
         flags=re.MULTILINE,
     )
 
-    content = _update_last_touched(content)
-    filepath.write_text(content)
+    if new_content == content:
+        return False  # pattern didn't match — already populated or different format
+
+    import yaml
+    try:
+        yaml.safe_load(new_content)
+    except yaml.YAMLError:
+        return False  # refuse to write invalid YAML
+
+    new_content = _update_last_touched(new_content)
+    filepath.write_text(new_content)
     return True
 
 
@@ -147,7 +146,7 @@ def enrich_variant(filepath, entry, variant_path, dry_run=False) -> bool:
     content = filepath.read_text()
 
     # Replace empty variant_ids: {} with the cover letter
-    content = re.sub(
+    new_content = re.sub(
         r'^(\s*variant_ids:\s*)\{\}',
         rf'\1\n    cover_letter: {variant_path}',
         content,
@@ -155,8 +154,17 @@ def enrich_variant(filepath, entry, variant_path, dry_run=False) -> bool:
         flags=re.MULTILINE,
     )
 
-    content = _update_last_touched(content)
-    filepath.write_text(content)
+    if new_content == content:
+        return False  # pattern didn't match — already populated or different format
+
+    import yaml
+    try:
+        yaml.safe_load(new_content)
+    except yaml.YAMLError:
+        return False  # refuse to write invalid YAML
+
+    new_content = _update_last_touched(new_content)
+    filepath.write_text(new_content)
     return True
 
 

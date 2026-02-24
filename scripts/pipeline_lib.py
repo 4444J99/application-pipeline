@@ -77,6 +77,86 @@ EFFORT_MINUTES = {
     "complex": 720,
 }
 
+# Valid status transitions: each status maps to the set of statuses it can reach.
+# Single source of truth — imported by validate.py and advance.py.
+VALID_TRANSITIONS = {
+    "research": {"qualified", "withdrawn"},
+    "qualified": {"drafting", "staged", "withdrawn"},
+    "drafting": {"staged", "qualified", "withdrawn"},
+    "staged": {"submitted", "drafting", "withdrawn"},
+    "submitted": {"acknowledged", "interview", "outcome", "withdrawn"},
+    "acknowledged": {"interview", "outcome", "withdrawn"},
+    "interview": {"outcome", "withdrawn"},
+    "outcome": set(),  # terminal
+}
+
+
+# --- Safe YAML field mutation helpers ---
+
+
+def update_yaml_field(
+    content: str,
+    field: str,
+    new_value: str,
+    *,
+    nested: bool = False,
+) -> str:
+    """Replace a scalar YAML field's value in raw text with verification.
+
+    Uses targeted regex to preserve file formatting (comments, key order,
+    quoting style) while validating the result is still parseable YAML.
+
+    Args:
+        content: Raw YAML text.
+        field: Field name (e.g. "status", "score", "submitted").
+        new_value: Replacement value string (caller handles quoting).
+        nested: If True, field is expected to be indented under a parent key.
+
+    Returns:
+        Modified YAML text.
+
+    Raises:
+        ValueError: If the field is not found or the result is invalid YAML.
+    """
+    if nested:
+        pattern = rf'^([ \t]+{re.escape(field)}:[ \t]+).*$'
+    else:
+        pattern = rf'^({re.escape(field)}:[ \t]+).*$'
+
+    if not re.search(pattern, content, re.MULTILINE):
+        raise ValueError(f"Field '{field}' not found in YAML (nested={nested})")
+
+    new_content = re.sub(
+        pattern,
+        rf'\g<1>{new_value}',
+        content,
+        count=1,
+        flags=re.MULTILINE,
+    )
+
+    # Verify the result is still valid YAML
+    try:
+        yaml.safe_load(new_content)
+    except yaml.YAMLError as e:
+        raise ValueError(
+            f"YAML became invalid after updating '{field}' to '{new_value}': {e}"
+        )
+
+    return new_content
+
+
+def ensure_yaml_field(content: str, field: str, value: str) -> str:
+    """Update a top-level field if it exists, or append it if missing."""
+    if re.search(rf'^{re.escape(field)}:', content, re.MULTILINE):
+        return update_yaml_field(content, field, value, nested=False)
+    return content.rstrip() + f'\n{field}: {value}\n'
+
+
+def update_last_touched(content: str) -> str:
+    """Set last_touched to today's ISO date string."""
+    today_str = date.today().isoformat()
+    return ensure_yaml_field(content, "last_touched", f'"{today_str}"')
+
 
 def load_entries(
     dirs: list[Path] | None = None,

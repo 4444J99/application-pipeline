@@ -13,7 +13,6 @@ Usage:
 """
 
 import argparse
-import re
 import subprocess
 import sys
 from datetime import date
@@ -28,6 +27,7 @@ from pipeline_lib import (
     load_block,
     strip_markdown, count_words, count_chars,
     get_deadline, days_until, get_effort,
+    update_yaml_field, update_last_touched as update_last_touched_content,
 )
 
 
@@ -286,36 +286,18 @@ def record_submission(filepath: Path, entry: dict) -> None:
     content = filepath.read_text()
 
     # Update status
-    content = re.sub(
-        r'^(status:\s+).*$',
-        r'\1submitted',
-        content,
-        count=1,
-        flags=re.MULTILINE,
-    )
+    content = update_yaml_field(content, "status", "submitted")
 
     # Update last_touched
-    if re.search(r'^last_touched:', content, re.MULTILINE):
-        content = re.sub(
-            r'^(last_touched:\s+).*$',
-            rf"\1'{today_str}'",
-            content,
-            count=1,
-            flags=re.MULTILINE,
-        )
-    else:
-        content = content.rstrip() + f"\nlast_touched: '{today_str}'\n"
+    content = update_last_touched_content(content)
 
     # Update timeline.submitted
-    pattern = r'^(\s+submitted:\s+).*$'
-    if re.search(pattern, content, re.MULTILINE):
-        content = re.sub(
-            pattern,
-            rf"\1'{today_str}'",
-            content,
-            count=1,
-            flags=re.MULTILINE,
+    try:
+        content = update_yaml_field(
+            content, "submitted", f"'{today_str}'", nested=True,
         )
+    except ValueError:
+        pass  # Field may not exist in this entry
 
     filepath.write_text(content)
 

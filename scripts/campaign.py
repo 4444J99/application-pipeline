@@ -23,7 +23,7 @@ from pathlib import Path
 from pipeline_lib import (
     load_entries, load_entry_by_id, load_profile,
     get_deadline, days_until, get_effort, get_score, format_amount,
-    ACTIONABLE_STATUSES, DRAFTS_DIR, REPO_ROOT,
+    ACTIONABLE_STATUSES, DRAFTS_DIR, REPO_ROOT, EFFORT_MINUTES,
 )
 
 from enrich import (
@@ -60,6 +60,28 @@ def classify_urgency(entry: dict) -> str:
         return "upcoming"
     else:
         return "ready"
+
+
+def is_effort_feasible(entry: dict) -> bool:
+    """Check if an entry's effort fits within its remaining deadline time.
+
+    Returns False if the estimated effort (in working hours) exceeds
+    the days remaining before the deadline. Assumes ~6 productive hours/day.
+    """
+    dl_date, _ = get_deadline(entry)
+    if not dl_date:
+        return True  # rolling/tba — always feasible
+
+    d = days_until(dl_date)
+    if d < 0:
+        return False  # expired
+
+    effort = get_effort(entry)
+    effort_minutes = EFFORT_MINUTES.get(effort, 90)
+    # Assume ~6 productive hours (360 min) per day
+    available_minutes = d * 360
+
+    return effort_minutes <= available_minutes
 
 
 def get_campaign_entries(entries: list[dict], days_ahead: int = 14) -> list[dict]:
@@ -168,10 +190,11 @@ def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
                     dl_str = dl_type or "rolling"
 
                 low_tag = " [LOW]" if score and score < QUALIFICATION_THRESHOLD else ""
+                feasible_tag = "" if is_effort_feasible(e) else " [INFEASIBLE]"
                 score_str = f"[{score:.1f}]" if score else ""
                 lines.append(
                     f"  {score_str:>6} {name:<38} {dl_str:<8} "
-                    f"{status:<12} {effort:<10} {amount}{low_tag}"
+                    f"{status:<12} {effort:<10} {amount}{low_tag}{feasible_tag}"
                 )
 
                 gaps = detect_gaps(e)
@@ -216,9 +239,10 @@ def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
             effort = get_effort(e)
             amount = format_amount(e.get("amount"))
             low_tag = " [LOW]" if score and score < QUALIFICATION_THRESHOLD else ""
+            feasible_tag = "" if is_effort_feasible(e) else " [INFEASIBLE]"
             lines.append(
                 f"  {i:>2}. [{score:.1f}] {name:<36} {dl_str:<6} "
-                f"{effort:<10} {amount}{low_tag}"
+                f"{effort:<10} {amount}{low_tag}{feasible_tag}"
             )
         lines.append("")
 

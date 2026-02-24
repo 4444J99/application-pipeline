@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from campaign import classify_urgency, get_campaign_entries, detect_gaps
+from campaign import classify_urgency, get_campaign_entries, detect_gaps, is_effort_feasible
 
 
 def _make_entry(
@@ -198,3 +198,58 @@ def test_detect_gaps_portal_requires_profile():
     gaps = detect_gaps(entry)
     # No profile → no portal_fields gap flagged
     assert "portal_fields" not in gaps
+
+
+# --- is_effort_feasible ---
+
+
+def _make_effort_entry(deadline_days, effort_level="standard", deadline_type="hard"):
+    """Build an entry for effort-feasibility testing."""
+    entry = _make_entry(
+        deadline_date=_date_offset(deadline_days) if deadline_days is not None else None,
+        deadline_type=deadline_type,
+    )
+    entry["submission"]["effort_level"] = effort_level
+    return entry
+
+
+def test_feasible_quick_with_time():
+    """Quick effort (30 min) with 3 days left is feasible."""
+    entry = _make_effort_entry(3, "quick")
+    assert is_effort_feasible(entry) is True
+
+
+def test_infeasible_complex_tight_deadline():
+    """Complex effort (720 min / 12h) with 1 day left (360 min available) is infeasible."""
+    entry = _make_effort_entry(1, "complex")
+    assert is_effort_feasible(entry) is False
+
+
+def test_feasible_complex_plenty_of_time():
+    """Complex effort (720 min) with 7 days left (2520 min available) is feasible."""
+    entry = _make_effort_entry(7, "complex")
+    assert is_effort_feasible(entry) is True
+
+
+def test_infeasible_deep_zero_days():
+    """Deep effort (270 min) due today (0 days, 0 min available) is infeasible."""
+    entry = _make_effort_entry(0, "deep")
+    assert is_effort_feasible(entry) is False
+
+
+def test_infeasible_expired():
+    """Expired deadline is always infeasible."""
+    entry = _make_effort_entry(-2, "quick")
+    assert is_effort_feasible(entry) is False
+
+
+def test_feasible_rolling():
+    """Rolling deadline is always feasible."""
+    entry = _make_effort_entry(None, "complex", deadline_type="rolling")
+    assert is_effort_feasible(entry) is True
+
+
+def test_feasible_standard_one_day():
+    """Standard effort (90 min) with 1 day (360 min) is feasible."""
+    entry = _make_effort_entry(1, "standard")
+    assert is_effort_feasible(entry) is True

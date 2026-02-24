@@ -8,7 +8,7 @@ human-judgment dimensions from existing fit.score and context.
 
 import argparse
 import sys
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 import yaml
@@ -17,6 +17,7 @@ from pipeline_lib import (
     ALL_PIPELINE_DIRS,
     load_entries as _load_entries_raw,
     load_entry_by_id,
+    parse_date, days_until,
 )
 
 # Dimension weights (must sum to 1.0)
@@ -99,7 +100,11 @@ def load_entries(entry_id: str | None = None) -> list[tuple[Path, dict]]:
 
 
 def score_deadline_feasibility(entry: dict) -> int:
-    """Score deadline feasibility from deadline data."""
+    """Score deadline feasibility from deadline data.
+
+    Uses date.today() (not datetime.now()) for consistent day-boundary
+    calculations that match pipeline_lib.days_until().
+    """
     deadline = entry.get("deadline", {})
     if not isinstance(deadline, dict):
         return 7
@@ -110,12 +115,11 @@ def score_deadline_feasibility(entry: dict) -> int:
     if dtype in ("rolling", "tba") or not date_str:
         return 9
 
-    try:
-        deadline_date = datetime.strptime(str(date_str), "%Y-%m-%d")
-    except ValueError:
+    deadline_date = parse_date(date_str)
+    if not deadline_date:
         return 7
 
-    days_left = (deadline_date - datetime.now()).days
+    days_left = days_until(deadline_date)
 
     if days_left < 0:
         return 1
@@ -349,11 +353,11 @@ def qualify(entry: dict) -> tuple[bool, str]:
 def update_entry_file(filepath: Path, dimensions: dict[str, int], composite: float, dry_run: bool = False):
     """Update a pipeline YAML file with new dimensions and composite score.
 
-    Uses parse-modify-dump via PyYAML. Reads the file, updates the data
-    structure, then writes it back preserving key ordering by constructing
-    an OrderedDict-based output.
+    Uses targeted regex to preserve file formatting while verifying
+    the result is still valid YAML after each modification.
     """
     import re
+    from pipeline_lib import update_yaml_field
 
     with open(filepath) as f:
         content = f.read()
@@ -364,15 +368,8 @@ def update_entry_file(filepath: Path, dimensions: dict[str, int], composite: flo
     if dry_run:
         return old_score, composite
 
-    # Update score in-place via regex (preserves surrounding formatting)
-    # Match "  score: <number>" within the fit section
-    content = re.sub(
-        r"^(\s+score:\s+)[\d.]+",
-        rf"\g<1>{composite}",
-        content,
-        count=1,
-        flags=re.MULTILINE,
-    )
+    # Update score via safe helper
+    content = update_yaml_field(content, "score", str(composite), nested=True)
 
     # Build new dimensions block
     # Detect the indentation used in the file for fit sub-keys
@@ -405,6 +402,12 @@ def update_entry_file(filepath: Path, dimensions: dict[str, int], composite: flo
         if fit_section:
             insert_pos = fit_section.end()
             content = content[:insert_pos] + new_dims_block + "\n" + content[insert_pos:]
+
+    # Verify the final content is still valid YAML
+    try:
+        yaml.safe_load(content)
+    except yaml.YAMLError as e:
+        raise ValueError(f"YAML became invalid after scoring update: {e}")
 
     with open(filepath, "w") as f:
         f.write(content)

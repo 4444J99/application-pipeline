@@ -22,6 +22,7 @@ from pipeline_lib import (
     REPO_ROOT, PIPELINE_DIR_ACTIVE, PIPELINE_DIR_SUBMITTED, PIPELINE_DIR_CLOSED,
     SIGNALS_DIR, ALL_PIPELINE_DIRS, ACTIONABLE_STATUSES, EFFORT_MINUTES,
     load_entries, parse_date, get_effort, get_score, get_deadline, days_until,
+    update_yaml_field, update_last_touched as update_last_touched_content,
 )
 
 STANDUP_LOG = SIGNALS_DIR / "standup-log.yaml"
@@ -691,55 +692,23 @@ def _triage_update_entry(
     touch: bool = False,
 ):
     """Update an entry file during triage."""
-    import re
-
-    with open(filepath) as f:
-        content = f.read()
+    content = filepath.read_text()
 
     if touch:
-        today_str = date.today().isoformat()
-        if re.search(r"^last_touched:", content, re.MULTILINE):
-            content = re.sub(
-                r"^(last_touched:\s+).*$",
-                rf'\1"{today_str}"',
-                content,
-                count=1,
-                flags=re.MULTILINE,
-            )
-        else:
-            content = content.rstrip() + f'\nlast_touched: "{today_str}"\n'
+        content = update_last_touched_content(content)
 
     if status and not withdraw:
-        content = re.sub(
-            r"^(status:\s+).*$",
-            rf"\1{status}",
-            content,
-            count=1,
-            flags=re.MULTILINE,
-        )
+        content = update_yaml_field(content, "status", status)
 
     if withdraw:
-        content = re.sub(
-            r"^(status:\s+).*$",
-            r"\1outcome",
-            content,
-            count=1,
-            flags=re.MULTILINE,
-        )
-        content = re.sub(
-            r"^(outcome:\s+).*$",
-            r"\1withdrawn",
-            content,
-            count=1,
-            flags=re.MULTILINE,
-        )
+        content = update_yaml_field(content, "status", "outcome")
+        content = update_yaml_field(content, "outcome", "withdrawn")
         if reason:
             # Add withdrawal_reason if not present
             if "withdrawal_reason:" not in content:
                 content = content.rstrip() + f"\nwithdrawal_reason:\n  reason: strategic_shift\n  detail: \"{reason}\"\n  date: \"{date.today().isoformat()}\"\n  reopen: false\n"
 
-    with open(filepath, "w") as f:
-        f.write(content)
+    filepath.write_text(content)
 
 
 def main():

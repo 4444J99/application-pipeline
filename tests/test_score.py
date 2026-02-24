@@ -102,16 +102,13 @@ def test_deadline_expired():
 
 
 def test_deadline_tomorrow():
-    """Deadline tomorrow (1 day out, but parsed as midnight so days_left=0) should score 2."""
-    # datetime.strptime gives midnight; datetime.now() is later in the day,
-    # so +1 day offset yields days_left=0, landing in the <= 1 bracket.
+    """Deadline tomorrow (1 day out) should score 2."""
     entry = _make_entry(deadline_date=_date_offset(1))
     assert score_deadline_feasibility(entry) == 2
 
 
 def test_deadline_three_days():
     """Deadline in 3 days should score 3."""
-    # +3 offset -> days_left=2 after time-of-day subtraction, landing in <= 3.
     entry = _make_entry(deadline_date=_date_offset(3))
     assert score_deadline_feasibility(entry) == 3
 

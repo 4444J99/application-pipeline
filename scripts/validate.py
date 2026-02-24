@@ -6,11 +6,12 @@ from pathlib import Path
 
 import yaml
 
-from pipeline_lib import REPO_ROOT, ALL_PIPELINE_DIRS as PIPELINE_DIRS
+from pipeline_lib import (
+    REPO_ROOT, ALL_PIPELINE_DIRS as PIPELINE_DIRS,
+    VALID_TRACKS, VALID_STATUSES, VALID_TRANSITIONS,
+)
 
 REQUIRED_FIELDS = {"id", "name", "track", "status"}
-VALID_TRACKS = {"grant", "residency", "job", "fellowship", "writing", "emergency", "prize", "program", "consulting"}
-VALID_STATUSES = {"research", "qualified", "drafting", "staged", "submitted", "acknowledged", "interview", "outcome"}
 VALID_OUTCOMES = {"accepted", "rejected", "withdrawn", "expired", None}
 VALID_DEADLINE_TYPES = {"hard", "rolling", "window", "tba"}
 VALID_PORTALS = {"submittable", "slideroom", "email", "custom", "web", "greenhouse", "workable"}
@@ -34,19 +35,6 @@ VALID_WITHDRAWAL_REASONS = {
     "missed_deadline", "low_fit", "effort_too_high", "duplicate",
     "ineligible", "strategic_shift", "personal", "other",
 }
-
-# Valid status transitions: each status maps to the set of statuses it can reach
-VALID_TRANSITIONS = {
-    "research": {"qualified", "withdrawn"},
-    "qualified": {"drafting", "staged", "withdrawn"},
-    "drafting": {"staged", "qualified", "withdrawn"},
-    "staged": {"submitted", "drafting", "withdrawn"},
-    "submitted": {"acknowledged", "interview", "outcome", "withdrawn"},
-    "acknowledged": {"interview", "outcome", "withdrawn"},
-    "interview": {"outcome", "withdrawn"},
-    "outcome": set(),  # terminal
-}
-
 
 def _reachable_statuses(from_status: str) -> set[str]:
     """Return all statuses reachable from a given status via valid transitions."""
