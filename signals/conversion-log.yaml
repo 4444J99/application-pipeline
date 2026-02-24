@@ -11,3 +11,13 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: anthropic-se-claude-code
+  submitted: '2026-02-24'
+  track: job
+  identity_position: independent-engineer
+  blocks_used: null
+  variant_id: cover-letters/anthropic-se-claude-code
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null

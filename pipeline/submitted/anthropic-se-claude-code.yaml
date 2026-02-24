@@ -1,7 +1,7 @@
 id: anthropic-se-claude-code
 name: Anthropic Software Engineer Claude Code
 track: job
-status: staged
+status: submitted
 outcome: null
 target:
   organization: Anthropic
@@ -40,13 +40,13 @@ submission:
   variant_ids:
     cover_letter: cover-letters/anthropic-se-claude-code
   materials_attached:
-    - resumes/multimedia-specialist.pdf
+    - resumes/anthropic-se-claude-code-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'
   qualified: '2026-02-24'
   materials_ready: '2026-02-24'
-  submitted: null
+  submitted: '2026-02-24'
   acknowledged: null
   interview: null
   outcome_date: null
@@ -71,4 +71,4 @@ notes: |
   greenhouse_submit.py, the entire scripts/ directory IS the kind of work this role does.
   Evidence that lands: 21K code files, 3.6K tests, 94 CI/CD pipelines, agentic-titan (1,095 tests).
   Honest gaps: No team engineering, no production users. Scale and testing discipline are real.
-last_touched: "2026-02-24"
+last_touched: '2026-02-24'

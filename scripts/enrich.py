@@ -31,6 +31,14 @@ from pipeline_lib import (
 
 DEFAULT_RESUME = "resumes/multimedia-specialist.pdf"
 
+RESUME_BY_IDENTITY = {
+    "independent-engineer": "resumes/independent-engineer-resume.pdf",
+    "systems-artist": "resumes/systems-artist-resume.pdf",
+    "creative-technologist": "resumes/creative-technologist-resume.pdf",
+    "community-practitioner": "resumes/community-practitioner-resume.pdf",
+    "educator": "resumes/educator-resume.pdf",
+}
+
 RESUME_TRACKS = {"job", "fellowship", "grant", "residency", "prize", "program"}
 
 COVER_LETTER_MAP = {
@@ -63,9 +71,24 @@ def _update_last_touched(content: str) -> str:
     return content
 
 
-def enrich_materials(filepath, entry, dry_run=False) -> bool:
-    """Wire DEFAULT_RESUME into materials_attached if empty.
+def select_resume(entry: dict) -> str:
+    """Select the appropriate resume based on the entry's identity_position.
 
+    Falls back to DEFAULT_RESUME if the position is unrecognized or missing.
+    """
+    fit = entry.get("fit", {})
+    if isinstance(fit, dict):
+        position = fit.get("identity_position", "")
+        if position in RESUME_BY_IDENTITY:
+            return RESUME_BY_IDENTITY[position]
+    return DEFAULT_RESUME
+
+
+def enrich_materials(filepath, entry, dry_run=False) -> bool:
+    """Wire identity-matched resume into materials_attached if empty.
+
+    Reads fit.identity_position to select the right resume variant.
+    Falls back to DEFAULT_RESUME if position is unrecognized.
     Returns True if the entry was (or would be) modified.
     """
     track = entry.get("track", "")
@@ -83,12 +106,13 @@ def enrich_materials(filepath, entry, dry_run=False) -> bool:
     if dry_run:
         return True
 
+    resume = select_resume(entry)
     content = filepath.read_text()
 
-    # Replace empty materials_attached: [] with the resume
+    # Replace empty materials_attached: [] with the selected resume
     content = re.sub(
         r'^(\s*materials_attached:\s*)\[\]',
-        rf'\1\n    - {DEFAULT_RESUME}',
+        rf'\1\n    - {resume}',
         content,
         count=1,
         flags=re.MULTILINE,

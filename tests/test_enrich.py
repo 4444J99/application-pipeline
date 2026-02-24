@@ -9,7 +9,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from enrich import (
     enrich_materials, enrich_variant, find_matching_variant, detect_gaps,
-    COVER_LETTER_MAP, DEFAULT_RESUME, RESUME_TRACKS, GRANT_TEMPLATE_TRACKS,
+    select_resume,
+    COVER_LETTER_MAP, DEFAULT_RESUME, RESUME_BY_IDENTITY,
+    RESUME_TRACKS, GRANT_TEMPLATE_TRACKS,
 )
 from pipeline_lib import MATERIALS_DIR, VARIANTS_DIR
 
@@ -89,6 +91,40 @@ submission:
   blocks_used: {}
   variant_ids:
     cover_letter: cover-letters/existing
+  materials_attached: []
+  portfolio_url: https://example.com
+last_touched: "2026-01-15"
+"""
+
+SAMPLE_GRANT_WITH_IDENTITY = """id: test-grant-identity
+name: Test Grant With Identity
+track: grant
+status: staged
+outcome: null
+fit:
+  score: 7.0
+  identity_position: systems-artist
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached: []
+  portfolio_url: https://example.com
+last_touched: "2026-01-15"
+"""
+
+SAMPLE_JOB_WITH_IDENTITY = """id: test-job-identity
+name: Test Job With Identity
+track: job
+status: qualified
+outcome: null
+fit:
+  score: 8.0
+  identity_position: independent-engineer
+submission:
+  effort_level: complex
+  blocks_used: {}
+  variant_ids: {}
   materials_attached: []
   portfolio_url: https://example.com
 last_touched: "2026-01-15"
@@ -175,6 +211,107 @@ def test_enrich_materials_dry_run():
         assert "materials_attached: []" in content
     finally:
         filepath.unlink()
+
+
+# --- select_resume ---
+
+
+def test_select_resume_independent_engineer():
+    entry = {"fit": {"identity_position": "independent-engineer"}}
+    assert select_resume(entry) == "resumes/independent-engineer-resume.pdf"
+
+
+def test_select_resume_systems_artist():
+    entry = {"fit": {"identity_position": "systems-artist"}}
+    assert select_resume(entry) == "resumes/systems-artist-resume.pdf"
+
+
+def test_select_resume_creative_technologist():
+    entry = {"fit": {"identity_position": "creative-technologist"}}
+    assert select_resume(entry) == "resumes/creative-technologist-resume.pdf"
+
+
+def test_select_resume_community_practitioner():
+    entry = {"fit": {"identity_position": "community-practitioner"}}
+    assert select_resume(entry) == "resumes/community-practitioner-resume.pdf"
+
+
+def test_select_resume_educator():
+    entry = {"fit": {"identity_position": "educator"}}
+    assert select_resume(entry) == "resumes/educator-resume.pdf"
+
+
+def test_select_resume_unknown_position_falls_back():
+    entry = {"fit": {"identity_position": "unknown-position"}}
+    assert select_resume(entry) == DEFAULT_RESUME
+
+
+def test_select_resume_no_fit_falls_back():
+    entry = {"track": "grant"}
+    assert select_resume(entry) == DEFAULT_RESUME
+
+
+def test_select_resume_empty_position_falls_back():
+    entry = {"fit": {"identity_position": ""}}
+    assert select_resume(entry) == DEFAULT_RESUME
+
+
+# --- enrich_materials with identity ---
+
+
+def test_enrich_materials_uses_identity_position():
+    filepath = _make_temp_yaml(SAMPLE_GRANT_WITH_IDENTITY)
+    try:
+        result = enrich_materials(filepath, {
+            "track": "grant",
+            "fit": {"identity_position": "systems-artist"},
+            "submission": {"materials_attached": []},
+        })
+        assert result is True
+        content = filepath.read_text()
+        assert "systems-artist-resume.pdf" in content
+        assert "multimedia-specialist" not in content
+    finally:
+        filepath.unlink()
+
+
+def test_enrich_materials_uses_engineer_identity():
+    filepath = _make_temp_yaml(SAMPLE_JOB_WITH_IDENTITY)
+    try:
+        result = enrich_materials(filepath, {
+            "track": "job",
+            "fit": {"identity_position": "independent-engineer"},
+            "submission": {"materials_attached": []},
+        })
+        assert result is True
+        content = filepath.read_text()
+        assert "independent-engineer-resume.pdf" in content
+    finally:
+        filepath.unlink()
+
+
+def test_enrich_materials_falls_back_without_identity():
+    filepath = _make_temp_yaml(SAMPLE_GRANT)
+    try:
+        result = enrich_materials(filepath, {
+            "track": "grant",
+            "submission": {"materials_attached": []},
+        })
+        assert result is True
+        content = filepath.read_text()
+        assert DEFAULT_RESUME in content
+    finally:
+        filepath.unlink()
+
+
+# --- resume file existence ---
+
+
+def test_identity_resume_html_files_exist():
+    """All identity-position resume HTML files should exist."""
+    for position, pdf_path in RESUME_BY_IDENTITY.items():
+        html_path = MATERIALS_DIR / pdf_path.replace(".pdf", ".html")
+        assert html_path.exists(), f"Missing HTML: {html_path} (for {position})"
 
 
 # --- enrich_variant ---

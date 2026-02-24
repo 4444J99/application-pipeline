@@ -17,6 +17,7 @@ Usage:
 
 import argparse
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -691,6 +692,13 @@ def submit_to_greenhouse(
     headers = {
         "Content-Type": f"multipart/form-data; boundary={boundary}",
     }
+
+    # Greenhouse Job Board API requires HTTP Basic auth (API key as username)
+    gh_api_key = config.get("greenhouse_api_key", "") or os.environ.get("GREENHOUSE_API_KEY", "")
+    if gh_api_key:
+        import base64
+        credentials = base64.b64encode(f"{gh_api_key}:".encode()).decode()
+        headers["Authorization"] = f"Basic {credentials}"
 
     try:
         req = urllib.request.Request(url, data=full_body, headers=headers, method="POST")
