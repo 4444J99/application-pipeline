@@ -5,9 +5,10 @@ status: staged
 outcome: null
 target:
   organization: Doris Duke Foundation / Mozilla
-  url: https://givingdata.com
-  application_url: https://givingdata.com
+  url: https://www.dorisduke.org/grants/projects/artists-make-technology-lab
+  application_url: https://dorisduke.givingdata.com/portal/campaign/AMT2026
   portal: custom
+  contact: AMTLab@dorisduke.org
 deadline:
   date: '2026-03-02'
   time: 12:00 ET
@@ -54,11 +55,75 @@ timeline:
   interview: null
   outcome_date: null
 portal_fields:
+  platform: givingdata
   fields:
-  - name: project_description
-  - name: budget
-  - name: work_samples
-  - name: bio
+  # --- Dropdown/Select Fields ---
+  - name: lead_discipline
+    format: dropdown
+    required: true
+    note: "Options: Dance, Music (specify if Jazz), Theater, Other [specify]. Select Other — specify 'Systems Art / Interdisciplinary Performance Technology'"
+  - name: lead_applicant
+    format: dropdown
+    required: true
+    note: "Options: Artist, Technician, Producer or Curator, Nonprofit Organization, Ensemble/Performing Arts Company, University, Other. Select Technician."
+  - name: project_type
+    format: checkbox
+    required: true
+    note: "Multi-select. Options: Access, Archival, New Work, Technology/Tools, Pre-Visualization, Audience Development, Systemic/Fieldwide Solutions, Convening, Other. Select: Technology/Tools + New Work + Systemic/Fieldwide Solutions"
+  - name: experience_with_technology
+    format: dropdown
+    required: true
+    note: "Options: Experienced, New to the Work, Unclear/Unknown. Select Experienced."
+  - name: geography
+    format: dropdown
+    required: true
+    note: "Options: West, Northeast, South, Midwest, Tribal Nations, U.S. Territories. Select Northeast."
+  - name: grant_amount_requested
+    format: dropdown
+    required: true
+    note: "Options: $50k, $75k, $100k, $125k, $150k. Select $150k (or $100k to reduce benefits cliff risk)."
+  # --- Written Fields ---
+  - name: concept_description
+    format: textarea
+    word_limit: 250
+    required: true
+    note: "Clearly describe your big idea. What is your project intended to address? How does the project engage new perspectives or approaches to the performing arts through the use of technology?"
+  - name: feasibility
+    format: textarea
+    word_limit: 100
+    required: true
+    note: "What are some challenges you anticipate when implementing your idea or approach, and how do you plan to mitigate these challenges?"
+  - name: field_survey
+    format: textarea
+    word_limit: 100
+    required: true
+    note: "Are you aware of other individuals or organizations working on similar ideas? If yes, explain how your work complements that of others or fills a gap."
+  - name: field_impact
+    format: textarea
+    word_limit: 100
+    required: true
+    note: "How does this project impact the performing arts field? How do you plan on evaluating the impact of the project?"
+  - name: about_you
+    format: textarea
+    word_limit: 150
+    required: true
+    note: "Background on your work + describe a previous project demonstrating engagement with new digital tools, innovative data practices, or production methods. 150w per person, 300w max for team."
+  # --- Budget ---
+  - name: budget_overview
+    format: text
+    required: true
+    note: "11 categories: Fees/Salary (core team up to 3), Fees/Consultants-Collaborators-Performers, Equipment, Licenses, Workshops, Travel, Materials, Space (rental), Overhead (10% cap), Contingency & Misc., Other [specify]"
+  # --- Attachments ---
+  - name: resume_pdf
+    format: file_upload
+    file_types: ["pdf"]
+    required: true
+    note: "One-page resume per core team member (up to 3) OR one-page organizational dossier."
+  - name: work_samples_pdf
+    format: file_upload
+    file_types: ["pdf"]
+    required: true
+    note: "Combined single PDF. Up to 2 images OR up to 2 video/audio samples (2 min total). Video/audio links go INSIDE the PDF with passwords if needed."
 conversion:
   response_received: false
   response_type: null
@@ -66,5 +131,13 @@ conversion:
   feedback: null
 tags: []
 source: 04-application-tracker.md
-notes: null
+notes: |
+  GivingData form differs significantly from legacy script assumptions.
+  5 short-answer text fields (concept 250w, feasibility 100w, field_survey 100w,
+  field_impact 100w, about_you 150w). 11 budget line items. 2 PDF attachments only
+  (resume + work samples combined). Submissions are FINAL upon upload. Noon deadline,
+  not midnight. ~750 applicants expected → 40 finalists → 20 grantees.
+  Technician FAQ: articulate why work is good match for theater/dance/jazz.
+  DDF mandate prioritizes dance/jazz/theater — "Other" discipline applicants
+  remain eligible but not prioritized. Mozilla side more open to cross-disciplinary.
 last_touched: "2026-02-23"
