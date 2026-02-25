@@ -1,7 +1,7 @@
 id: anthropic-developer-education-lead
 name: Anthropic Developer Education Lead
 track: job
-status: research
+status: staged
 outcome: null
 target:
   organization: Anthropic
@@ -18,8 +18,10 @@ amount:
 fit:
   score: 7.4
   identity_position: educator
-  framing: 11 years teaching 2,000+ students, 810K words documentation, building developer
-    education content daily with Claude Code — direct match for developer education lead
+  framing: Educator-practitioner who has taught complex systems to 2,000+ students
+    across 11 years and now applies the same pedagogical methodology to developer
+    education content — 810K+ words of documentation, 42 published essays, and a content
+    pipeline built on the same rigorous prioritization this role demands.
   lead_organs:
   - VI
   - III
@@ -35,9 +37,10 @@ fit:
 submission:
   effort_level: standard
   blocks_used: {}
-  variant_ids: {}
+  variant_ids:
+    cover_letter: cover-letters/anthropic-developer-education-lead-alchemized
   materials_attached:
-  - resumes/independent-engineer-resume.html
+  - resumes/educator-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'
@@ -50,5 +53,5 @@ tags:
 - auto-sourced
 - job-tier-1
 source: source_jobs.py
-last_touched: '2026-02-24'
+last_touched: "2026-02-25"
 notes: 'Location: San Francisco, CA | New York City, NY'

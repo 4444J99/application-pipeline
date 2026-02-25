@@ -76,12 +76,8 @@ COMPANY_DISPLAY_NAMES = {
     "dbtlabsinc": "dbt Labs",
     "sourcegraph91": "Sourcegraph",
     "coreweave": "Weights & Biases",
-    "hashicorp": "HashiCorp",
-    "laaboratory": "LaunchDarkly",
-    "datadoghq": "Datadog",
-    "flyio": "Fly.io",
-    "railway": "Railway",
-    "render": "Render",
+    "launchdarkly": "LaunchDarkly",
+    "datadog": "Datadog",
     "wikimedia": "Wikimedia",
     "mozilla": "Mozilla",
     # Ashby boards
@@ -97,6 +93,8 @@ COMPANY_DISPLAY_NAMES = {
     "ramp": "Ramp",
     "character": "Character AI",
     "perplexity": "Perplexity",
+    "railway": "Railway",
+    "render": "Render",
 }
 
 

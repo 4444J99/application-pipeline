@@ -1,7 +1,7 @@
 id: anthropic-founding-developer-relations-lead
 name: Anthropic Founding Developer Relations Lead
 track: job
-status: research
+status: staged
 outcome: null
 target:
   organization: Anthropic
@@ -18,8 +18,10 @@ amount:
 fit:
   score: 7.2
   identity_position: independent-engineer
-  framing: 810K words + 11 years teaching + 103 OSS repos = devrel trifecta.
-    Founding role values builder-communicators over corporate devrel background
+  framing: Independent engineer and educator applying 11 years of teaching complex
+    systems (2,000+ students) and 18 months of daily Claude-powered production (103
+    repos, 810K+ words, 42 published essays) to build Anthropic's founding developer
+    relations function from practitioner experience.
   lead_organs:
   - III
   - VI
@@ -36,9 +38,10 @@ fit:
 submission:
   effort_level: standard
   blocks_used: {}
-  variant_ids: {}
+  variant_ids:
+    cover_letter: cover-letters/anthropic-founding-developer-relations-lead-alchemized
   materials_attached:
-  - resumes/independent-engineer-resume.html
+  - resumes/independent-engineer-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'
@@ -51,5 +54,5 @@ tags:
 - auto-sourced
 - job-tier-1
 source: source_jobs.py
-last_touched: '2026-02-24'
+last_touched: "2026-02-25"
 notes: 'Location: San Francisco, CA | New York City, NY'
