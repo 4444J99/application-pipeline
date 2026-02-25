@@ -35,7 +35,6 @@ fit:
     strategic_value: 7
     deadline_feasibility: 1
     portal_friction: 4
-
 submission:
   effort_level: complex
   blocks_used:

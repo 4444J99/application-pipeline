@@ -182,6 +182,24 @@ def test_financial_essential_plan_cliff_note():
     assert score_financial_alignment(entry) == 5
 
 
+def test_financial_job_track_high_salary():
+    """Job track with salary >$100K should score 8 (inverted logic)."""
+    entry = _make_entry(track="job", amount_value=140000)
+    assert score_financial_alignment(entry) == 8
+
+
+def test_financial_job_track_very_high_salary():
+    """Job track with salary >$150K should score 7."""
+    entry = _make_entry(track="job", amount_value=300000)
+    assert score_financial_alignment(entry) == 7
+
+
+def test_financial_job_track_zero_salary():
+    """Job track with unknown salary should score 6."""
+    entry = _make_entry(track="job", amount_value=0)
+    assert score_financial_alignment(entry) == 6
+
+
 def test_financial_non_dict_amount():
     """Non-dict amount should return default 9."""
     entry = {"amount": "unknown"}
@@ -235,10 +253,10 @@ def test_effort_emergency_track():
 
 
 def test_effort_job_track():
-    """Job track has lowest base score."""
+    """Job track has moderate base score (CLI-submittable)."""
     entry = _make_entry(track="job")
     score = score_effort_to_value(entry)
-    assert score <= 5
+    assert score >= 5
 
 
 def test_effort_high_block_coverage():
@@ -333,11 +351,11 @@ def test_human_dims_zero_blocks():
     assert dims["evidence_match"] == 4  # 6 - 2
 
 
-def test_human_dims_job_track_penalty():
-    """Job track penalizes track_record_fit by 2."""
+def test_human_dims_job_track_no_penalty():
+    """Job track no longer has a blanket track_record_fit penalty."""
     entry = _make_entry(fit_score=6, track="job")
     dims = estimate_human_dimensions(entry)
-    assert dims["track_record_fit"] == 4  # 6 - 2
+    assert dims["track_record_fit"] == 6  # no penalty
 
 
 def test_human_dims_clamped_to_range():

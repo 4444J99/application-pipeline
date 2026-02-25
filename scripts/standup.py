@@ -535,11 +535,144 @@ SECTIONS = {
     "practices": "Context-sensitive best practice reminders",
     "replenish": "Pipeline replenishment alerts",
     "log": "Append session record to standup-log.yaml",
+    "jobs": "Job pipeline status",
+    "opportunities": "Opportunity pipeline (grants/residencies/prizes/writing)",
 }
 
 
-def run_standup(hours: float, section: str | None, do_log: bool):
-    """Run the full standup or a single section."""
+# ---------------------------------------------------------------------------
+# Section: Job Pipeline
+# ---------------------------------------------------------------------------
+
+def section_jobs(entries: list[dict]):
+    """Display job-track pipeline sorted by score and submission status."""
+    job_entries = [e for e in entries if e.get("track") == "job"]
+
+    print("JOB PIPELINE")
+    if not job_entries:
+        print("   No job-track entries in pipeline.")
+        print()
+        return
+
+    # Group by status
+    by_status: dict[str, list] = {}
+    for e in job_entries:
+        status = e.get("status", "unknown")
+        by_status.setdefault(status, []).append(e)
+
+    # Show counts
+    print(f"   Total job entries: {len(job_entries)}")
+    status_order = ["research", "qualified", "drafting", "staged",
+                    "submitted", "acknowledged", "interview", "outcome"]
+    status_parts = []
+    for s in status_order:
+        c = len(by_status.get(s, []))
+        if c:
+            status_parts.append(f"{s}={c}")
+    print(f"   Status: {', '.join(status_parts)}")
+    print()
+
+    # Actionable jobs sorted by score
+    actionable_jobs = [e for e in job_entries if e.get("status") in ACTIONABLE_STATUSES]
+    actionable_jobs.sort(key=lambda e: get_score(e), reverse=True)
+
+    if actionable_jobs:
+        print("   Actionable (by score):")
+        for e in actionable_jobs:
+            entry_id = e.get("id", "?")
+            name = e.get("name", entry_id)
+            score = get_score(e)
+            status = e.get("status", "?")
+            portal = e.get("target", {}).get("portal", "?") if isinstance(e.get("target"), dict) else "?"
+            org = e.get("target", {}).get("organization", "") if isinstance(e.get("target"), dict) else ""
+            tags_str = ""
+            tags = e.get("tags", [])
+            if isinstance(tags, list) and "auto-sourced" in tags:
+                tags_str = " [auto]"
+            print(f"     [{score:.1f}] {name} — {status} [{portal}]{tags_str}")
+
+    # Submitted jobs
+    submitted_jobs = [e for e in job_entries if e.get("status") in ("submitted", "acknowledged", "interview")]
+    if submitted_jobs:
+        print("   Awaiting response:")
+        for e in submitted_jobs:
+            name = e.get("name", e.get("id", "?"))
+            status = e.get("status", "?")
+            tl = e.get("timeline", {})
+            sub_date = tl.get("submitted", "") if isinstance(tl, dict) else ""
+            days_str = ""
+            if sub_date:
+                sd = parse_date(sub_date)
+                if sd:
+                    days_waiting = (date.today() - sd).days
+                    days_str = f" ({days_waiting}d ago)"
+            print(f"     {name} — {status}{days_str}")
+
+    print()
+
+
+# ---------------------------------------------------------------------------
+# Section: Opportunity Pipeline
+# ---------------------------------------------------------------------------
+
+def section_opportunities(entries: list[dict]):
+    """Display non-job pipeline sorted by deadline."""
+    opp_entries = [e for e in entries
+                   if e.get("track") != "job"
+                   and e.get("status") in ACTIONABLE_STATUSES]
+
+    print("OPPORTUNITY PIPELINE (grants/residencies/prizes/writing)")
+    if not opp_entries:
+        print("   No actionable non-job entries.")
+        print()
+        return
+
+    # Sort by deadline (hard deadlines first), then by score
+    def opp_sort_key(e):
+        dl_date, dl_type = get_deadline(e)
+        if dl_date:
+            d = days_until(dl_date)
+            if d >= 0 and dl_type == "hard":
+                return (0, d, -get_score(e))
+        return (1, 9999, -get_score(e))
+
+    opp_entries.sort(key=opp_sort_key)
+
+    print(f"   Actionable opportunities: {len(opp_entries)}")
+    print()
+    for e in opp_entries[:15]:
+        name = e.get("name", e.get("id", "?"))
+        score = get_score(e)
+        status = e.get("status", "?")
+        track = e.get("track", "?")
+        dl_date, dl_type = get_deadline(e)
+        dl_str = ""
+        if dl_date:
+            d = days_until(dl_date)
+            if d < 0:
+                dl_str = f" EXPIRED {abs(d)}d ago"
+            elif dl_type == "hard":
+                dl_str = f" {d}d left"
+            else:
+                dl_str = f" ~{d}d ({dl_type})"
+        elif dl_type in ("rolling", "tba"):
+            dl_str = f" {dl_type}"
+        effort = get_effort(e)
+        print(f"     [{score:.1f}] {name}")
+        print(f"           {track} — {status} — {effort}{dl_str}")
+
+    if len(opp_entries) > 15:
+        print(f"     ... and {len(opp_entries) - 15} more")
+    print()
+
+
+def run_standup(hours: float, section: str | None, do_log: bool, track_filter: str | None = None):
+    """Run the full standup or a single section.
+
+    Args:
+        track_filter: "jobs" for job-only standup, "opportunities" for non-jobs,
+                      None for both (default).
+    """
     entries = load_entries()
     if not entries:
         print("No pipeline entries found.")
@@ -551,12 +684,27 @@ def run_standup(hours: float, section: str | None, do_log: bool):
     print("=" * 60)
     print()
 
+    # Track-filtered views
+    if track_filter == "jobs" or section == "jobs":
+        section_jobs(entries)
+        return
+
+    if track_filter == "opportunities" or section == "opportunities":
+        section_opportunities(entries)
+        return
+
     health_stats = {}
     stale_stats = {}
     plan_stats = {}
 
     if section is None or section == "health":
         health_stats = section_health(entries)
+
+    # Show dual-track summary when running full standup
+    if section is None:
+        section_jobs(entries)
+        section_opportunities(entries)
+
     if section is None or section == "stale":
         stale_stats = section_stale(entries)
     if section is None or section == "plan":
@@ -725,6 +873,10 @@ def main():
                         help="Append session record to standup-log.yaml")
     parser.add_argument("--triage", action="store_true",
                         help="Interactive triage: walk through stagnant entries one-by-one")
+    parser.add_argument("--jobs", action="store_true",
+                        help="Show job pipeline status only")
+    parser.add_argument("--opportunities", action="store_true",
+                        help="Show opportunity pipeline only (grants/residencies/prizes/writing)")
     args = parser.parse_args()
 
     if args.touch:
@@ -735,7 +887,13 @@ def main():
         run_triage()
         return
 
-    run_standup(args.hours, args.section, args.log)
+    track_filter = None
+    if args.jobs:
+        track_filter = "jobs"
+    elif args.opportunities:
+        track_filter = "opportunities"
+
+    run_standup(args.hours, args.section, args.log, track_filter=track_filter)
 
 
 if __name__ == "__main__":

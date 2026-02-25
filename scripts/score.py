@@ -44,6 +44,8 @@ PORTAL_SCORES = {
     "web": 6,
     "submittable": 5,
     "greenhouse": 5,
+    "lever": 5,
+    "ashby": 5,
     "workable": 5,
     "slideroom": 4,
 }
@@ -57,7 +59,7 @@ STRATEGIC_BASE = {
     "program": 5,
     "writing": 5,
     "emergency": 3,
-    "job": 4,
+    "job": 6,
     "consulting": 3,
 }
 
@@ -81,6 +83,21 @@ HIGH_PRESTIGE = {
     "Tulsa Artist Fellowship": 8,
     "Processing Foundation": 6,
     "Watermill Center": 7,
+    "Cohere": 6,
+    "Together AI": 5,
+    "Runway": 6,
+    "HuggingFace": 6,
+    "Hugging Face": 6,
+    "Mistral": 7,
+    "Perplexity": 7,
+    "Cursor": 7,
+    "Anysphere": 7,
+    "Replit": 6,
+    "Vercel": 6,
+    "Scale AI": 6,
+    "Weights & Biases": 5,
+    "Modal": 5,
+    "Replicate": 5,
 }
 
 
@@ -137,12 +154,30 @@ def score_deadline_feasibility(entry: dict) -> int:
 
 
 def score_financial_alignment(entry: dict) -> int:
-    """Score financial alignment from amount and cliff notes."""
+    """Score financial alignment from amount and cliff notes.
+
+    For job-track entries, higher salary is better (inverted logic).
+    For grants/fellowships, benefits-cliff-aware scoring applies.
+    """
     amount = entry.get("amount", {})
     if not isinstance(amount, dict):
         return 9
 
     value = amount.get("value", 0)
+    track = entry.get("track", "")
+
+    # Job track: higher salary = better alignment (inverted)
+    if track == "job":
+        if value == 0:
+            return 6  # unknown salary, neutral
+        if value > 150000:
+            return 7
+        if value > 100000:
+            return 8
+        if value > 50000:
+            return 9
+        return 7  # any salary is fine for jobs
+
     cliff_note = amount.get("benefits_cliff_note") or ""
 
     if value == 0:
@@ -196,7 +231,7 @@ def score_effort_to_value(entry: dict) -> int:
         "residency": 5,
         "program": 5,
         "consulting": 6,
-        "job": 4,        # highest effort (interviews, etc.)
+        "job": 6,        # CLI-submittable jobs are moderate effort
     }.get(track, 5)
 
     # Value adjustment
@@ -261,12 +296,10 @@ def estimate_human_dimensions(entry: dict) -> dict[str, int]:
         evidence = max(1, evidence - 1)
 
     # Track record fit: generally slightly below mission alignment
-    # Jobs require specific credentials, grants/prizes more flexible
+    # Consulting entries get a slight penalty; jobs evaluated on their own merit
     track = entry.get("track", "")
     track_record = existing_score
-    if track in ("job",):
-        track_record = max(1, track_record - 2)
-    elif track in ("consulting",):
+    if track in ("consulting",):
         track_record = max(1, track_record - 1)
 
     return {

@@ -18,7 +18,7 @@ amount:
   type: lump_sum
   benefits_cliff_note: SNAP-safe
 fit:
-  score: 8.5
+  score: 8.6
   identity_position: community-practitioner
   framing: Writer and community practitioner seeking emergency support for literary
     work
@@ -31,7 +31,7 @@ fit:
     evidence_match: 9
     track_record_fit: 9
     financial_alignment: 9
-    effort_to_value: 9
+    effort_to_value: 10
     strategic_value: 3
     deadline_feasibility: 9
     portal_friction: 6
