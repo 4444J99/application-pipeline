@@ -34,6 +34,14 @@ Microservices platform designed for community safety:
 - Knowledge graph connecting authors, mechanisms, and cultural contexts
 - Archive engine for evolving, non-linear documentation
 
+## Visual Identity & Diagrams
+The project utilizes a formal visual language to communicate its theoretical and technical complexity:
+1. **Double-Channel Logic:** Visualizing the split between surface camouflage and substrate desire.
+2. **Instrument Interface:** A terminal-based calibration dashboard for the six compositional dials.
+3. **Distributed Node Mapping:** Diagramming the secure microservices and identity layers.
+4. **Compositional Engine Flow:** Tracking the movement from author studies to community survival folios.
+5. **Knowledge Loop:** The iterative process of transforming lived experience into reproducible strategy.
+
 ## Links
 - Repository: https://github.com/organvm-ii-poiesis/krypto-velamen
 - Organ: ORGAN-II (Poiesis) — Generative art, performance, experiential systems
