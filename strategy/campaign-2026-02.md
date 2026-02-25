@@ -9,6 +9,12 @@
 | Prix Ars Electronica 2026 | prize | `staged` | 8.4 | standard | EUR 10,000 |
 | S+T+ARTS Prize 2026 | prize | `staged` | 8.4 | standard | EUR 20,000 |
 
+### March 16 — 20 days
+
+| Entry | Track | Status | Fit | Effort | Amount |
+|-------|-------|--------|-----|--------|--------|
+| PEN America Writers Aid | emergency | `staged` | 8.5 | quick | $3,500 |
+
 ### March 18 — 22 days
 
 | Entry | Track | Status | Fit | Effort | Amount |
@@ -56,7 +62,6 @@
 |-------|--------|-----|--------|
 | Awesome Foundation NYC | `staged` | 7.9 | quick |
 | FCA Emergency Grants | `staged` | 7.1 | quick |
-| PEN America Writers Aid | `staged` | 8.5 | quick |
 | Stimpunks Creator Grant | `staged` | 7.1 | quick |
 
 ### Fellowship
@@ -114,7 +119,8 @@
 
 1. **Prix Ars Electronica 2026** — 8d, fit 8.4, standard, EUR 10,000
 2. **S+T+ARTS Prize 2026** — 8d, fit 8.4, standard, EUR 20,000
-3. **Google Creative Fellowship** — 22d, fit 6.9, deep, $50,000
+3. **PEN America Writers Aid** — 20d, fit 8.5, quick, $3,500
+4. **Google Creative Fellowship** — 22d, fit 6.9, deep, $50,000
 4. **Headlands Center for the Arts** — 36d, fit 8.9, standard, $4,000
 5. **Creative Capital 2027 Open Call** — 37d, fit 8.8, deep, $50,000
 6. **Fire Island Artist Residency** — 36d, fit 7.1, standard, —

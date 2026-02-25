@@ -26,7 +26,7 @@ This is the **exhaustive master list** — every opportunity discovered across 5
 |---|------------|--------|----------|-----|------|--------|
 | 1 | **Prix Ars Electronica** | EUR 10,000 + Golden Nica | **Mar 4, 2026** | 8/10 | International prize | Creative Tech |
 | 2 | **S+T+ARTS Prize** | EUR 20,000 | **Mar 4, 2026** | 8/10 | International prize | Creative Tech |
-| 3 | **PEN America Writers Aid** | Up to $3,500 | Rolling | **9/10** | Emergency | Emergency/Writing |
+| 3 | **PEN America Writers Aid** | Up to $3,500 | **Mar 16, 2026** | 9/10 | Emergency | Emergency/Writing |
 | 4 | **Awesome Foundation NYC** | $1,000 (no strings) | Monthly | 8/10 | Micro-grant | Emergency/Writing |
 | 5 | **Stimpunks Creator Grant** | $3,000 | Rolling (5/yr, pipeline just reopened) | 7/10 | Micro-grant | Emergency/Writing |
 | 5b | **Watermill Center Summer Program** | FREE (housing/food/travel) | **Feb 18, 11:59pm EST** | 7/10 | Residency | Residencies |
@@ -53,7 +53,8 @@ This is the **exhaustive master list** — every opportunity discovered across 5
 
 ### PEN America U.S. Writers Aid Initiative
 
-- **Amount:** Up to $3,500 (rolling)
+- **Amount:** Up to $3,500
+- **Deadline:** March 16, 2026 (Quarterly cycles: Mar 16, Jun 15, Oct 5)
 - **Why it fits:** **HIGHEST-FIT emergency fund.** MFA + 42 published essays = clearly professional writer. Nonfiction explicitly eligible. Housing-precarious situation is exactly what this fund targets. PEN membership NOT required. Max 2 grants lifetime.
 - **URL:** https://pen.org/us-writers-aid-initiative/
 - **Contact:** writersfund@pen.org

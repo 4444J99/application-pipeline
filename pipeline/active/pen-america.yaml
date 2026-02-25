@@ -9,9 +9,9 @@ target:
   application_url: https://pen.org/writers-aid
   portal: custom
 deadline:
-  date: null
+  date: "2026-03-16"
   time: null
-  type: rolling
+  type: fixed
 amount:
   value: 3500
   currency: USD
@@ -66,5 +66,5 @@ conversion:
   feedback: null
 tags: []
 source: 04-application-tracker.md
-notes: null
-last_touched: "2026-02-24"
+notes: Quarterly cycles for 2026. Portal for March 16 deadline typically opens 2-3 weeks prior. Check portal daily starting March 1.
+last_touched: "2026-02-25"
