@@ -37,7 +37,7 @@ submission:
   blocks_used: {}
   variant_ids: {}
   materials_attached:
-  - resumes/base/independent-engineer-resume.html
+  - resumes/batch-02/anthropic-applied-ai-engineer-beneficial-deployments-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'
@@ -50,5 +50,5 @@ tags:
 - auto-sourced
 - job-tier-3
 source: source_jobs.py
-last_touched: '2026-02-24'
+last_touched: "2026-02-25"
 notes: 'Location: San Francisco, CA | New York City, NY'
