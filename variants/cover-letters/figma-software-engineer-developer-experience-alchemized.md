@@ -1,0 +1,23 @@
+# Cover Letter: Figma Software Engineer, Developer Experience
+
+**Role:** Figma Software Engineer, Developer Experience
+**Apply:** https://boards.greenhouse.io/figma/jobs/5790627004?gh_jid=5790627004
+
+---
+
+Developer experience is infrastructure that disappears when it works. I have spent five years building that kind of infrastructure across 103 public repositories — design systems, CI/CD pipelines, documentation standards, and CLI tooling — all aimed at making the next developer's experience frictionless.
+
+The numbers: 21,000 code files across 8 GitHub organizations. 3,600+ test files with coverage in 70 of 103 repositories. 94 CI/CD pipelines enforcing automated quality gates on every commit. 43 validated dependency edges with zero circular dependencies and zero back-edge violations, enforced by automated validation rather than manual review. Every repository has a CLAUDE.md with build commands, architecture notes, and navigation protocols. Every project has a seed.yaml declaring its metadata contract. 810,000+ words of documentation.
+
+The design system work is concrete. My portfolio site uses a component-driven architecture with CSS custom properties as the design token layer — a dark-theme system with gold accent and burnt sienna hover states, all defined as semantic variables rather than hard-coded values. A full-page p5.js generative canvas runs as a background layer with three intensity modes (subtle, bold, extreme), composited behind the content through z-index layering. The build pipeline includes Astro 5 static generation, Pagefind search indexing, Vitest unit tests, Playwright E2E smoke tests, and accessibility validation. This is front-end systems engineering: making design decisions composable and enforceable through code.
+
+At the infrastructure level, I built a quality governance system that commits policy JSONs to a `.quality/` directory and validates them against README values through automated tests — a quality ratchet that prevents regression. The deploy pipeline triggers only on quality pipeline success, not on direct push. These patterns — governance through automation, quality through enforcement, documentation through convention — are the same patterns that developer experience teams build at platform scale.
+
+TypeScript strict mode is the default across every TypeScript project I ship. I use named exports over defaults, async/await over raw Promises, and Vitest for testing. The discipline shows in the 94 CI/CD pipelines: automated type checking, linting, and test execution on every commit, across every active repository.
+
+I should acknowledge the gap directly. I have not worked on a developer experience team at a company like Figma. My component-driven architecture experience is at portfolio scale, not platform scale. I have not built plugin APIs, design token systems consumed by thousands of developers, or collaborative editing infrastructure. What I have demonstrated is the DX engineering sensibility — the instinct that documentation is a product feature, that error messages are a user interface, that CI/CD is developer experience infrastructure, and that the hardest thing to build is something that feels effortless to use.
+
+Figma's platform serves millions of designers and developers. The developer experience role shapes how those developers interact with Figma's APIs, plugins, and platform capabilities. I would bring the same infrastructure-as-experience mindset I apply to my own systems — where every CLI, every error message, and every onboarding document is designed to reduce friction.
+
+Portfolio: https://4444j99.github.io/portfolio/
+GitHub: https://github.com/4444j99

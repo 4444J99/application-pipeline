@@ -1,0 +1,20 @@
+# Cover Letter: Cursor Software Engineer, Client Infrastructure
+
+**Role:** Cursor Software Engineer, Client Infrastructure
+**Apply:** https://jobs.ashbyhq.com/cursor/e08262e8-c089-488d-9b59-9e21f7702b64
+
+---
+
+I build CLI client infrastructure every day. Not as a concept — as working software. The application pipeline that generated this cover letter is itself a Python CLI system: 14 interconnected scripts, YAML state machines, API integrations with Greenhouse and Ashby portals, and an orchestration layer that coordinates research, identity mapping, content synthesis, and submission in a single pipeline run. That is the kind of client-side tooling I build.
+
+Across 103 public repositories organized through 8 GitHub organizations, I have written 21,000 code files and 3,600+ test files. 94 CI/CD pipelines enforce quality gates on every push. The flagship project, agentic-titan, is a multi-agent orchestration framework with 1,095 tests across 18 development phases — coordinating multiple AI agents through structured task delegation, error recovery, and result synthesis. It is TypeScript and Python, strict mode throughout, with automated validation at every layer.
+
+The MCP server infrastructure I built and maintain runs as a local service layer on macOS, providing filesystem access, persistent memory, and sequential reasoning capabilities to AI-powered development tools. It starts via LaunchAgent, logs to a structured directory, and exposes a health-check endpoint. This is client infrastructure in the literal sense: software that runs on the developer's machine, mediates between local state and remote services, and must be reliable without supervision.
+
+My engineering methodology is documented in 810,000+ words across the system, including 42 published essays totaling 142,000 words. Documentation is not an afterthought — every repository has a CLAUDE.md with build commands, architecture notes, and dependency declarations. Every project has a seed.yaml declaring its organ membership, tier, and dependency edges. 43 validated dependency edges with zero back-edge violations enforce architectural boundaries automatically.
+
+I should be direct about what this portfolio demonstrates and what it does not. This is independent engineering work — no team PRs, no shared codebases, no production users at scale. The systems are feature-complete and publicly verifiable, but they have not been battle-tested by external traffic. What IS demonstrated: sustained engineering discipline across a large codebase, testing rigor, CI/CD automation, documentation standards, and the ability to design and maintain complex client-side tooling as a solo practitioner.
+
+Cursor is building the AI code editor that I use to build these systems. The feedback loop is direct: I am a power user of AI-assisted development tooling who also builds AI-assisted development tooling. The client infrastructure challenges — editor state management, extension APIs, language server protocols, local AI inference coordination — map to the same problem space I work in daily: making complex systems feel simple on the developer's machine.
+
+My portfolio at https://4444j99.github.io/portfolio/ and my GitHub at https://github.com/4444j99 make the full system inspectable. Every claim above is verifiable against public repositories.

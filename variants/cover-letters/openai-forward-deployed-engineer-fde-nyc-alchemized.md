@@ -1,0 +1,23 @@
+# Cover Letter: OpenAI Forward Deployed Engineer (FDE) - NYC
+
+**Role:** OpenAI Forward Deployed Engineer (FDE) - NYC
+**Apply:** https://jobs.ashbyhq.com/openai/cf31f5f6-4e67-4695-808c-9cdd2e1fa3b1
+
+---
+
+Forward-deployed engineering requires two things that rarely overlap: the ability to build production AI infrastructure and the ability to communicate with non-technical stakeholders under real-world constraints. I have verifiable evidence for both, built independently over the last five years and the last eleven.
+
+The AI infrastructure: 103 public repositories across 8 GitHub organizations. 21,000 code files. 3,600+ test files. 94 CI/CD pipelines. The most directly relevant project is agentic-titan — a multi-agent orchestration framework with 1,095 tests across 18 development phases. It coordinates multiple AI agents through structured task delegation, error recovery, and result synthesis. The application pipeline that generated this cover letter is itself an end-to-end AI-integrated system: 14 Python scripts that orchestrate research, identity mapping, LLM-powered content synthesis, validation, and API submission to external portals. These are not prototypes — they are working systems with test coverage, error handling, and structured logging.
+
+The communication skill: 11 years teaching 2,000+ university-level students. That is a decade of daily practice in reading a room, explaining complex concepts at the appropriate level, diagnosing where understanding has broken down, and adapting the explanation in real time. Forward-deployed engineers work directly with customers who have specific problems. Teaching is the same work: someone has a problem they cannot solve alone, and the job is to understand their context well enough to solve it with them.
+
+The end-to-end systems thinking is what connects these two capabilities. My eight-organ system coordinates theory, art, commerce, governance, and distribution through a validated dependency graph with 43 edges and zero violations. The application pipeline coordinates research, scoring, drafting, enrichment, and submission through a defined state machine. I think in pipelines, not in isolated features. When a customer needs an AI solution deployed, the work is not just the model integration — it is the data pipeline, the validation layer, the error recovery, the monitoring, and the documentation that makes the system maintainable after the FDE moves on.
+
+I am based in New York City. I have built and maintained MCP server infrastructure that runs as a local service layer, providing capabilities to AI development tools with health checks and structured logging. The infrastructure patterns I use — state machines, dependency validation, automated quality gates, composable CLI tools — translate directly to the kind of rapid prototyping and deployment that forward-deployed engineering demands.
+
+I should be transparent about the gaps. I have not worked on a customer-facing engineering team. My systems have not been deployed to external users at scale. My AI experience is LLM orchestration, not model training. What I bring is the combination of engineering discipline (3,600+ tests, 94 CI/CD pipelines) and communication practice (11 years, 2,000+ students) that forward-deployed engineering requires — and the demonstrated ability to build end-to-end AI-integrated systems from research through deployment.
+
+810,000+ words of documentation and 42 published essays demonstrate that I document what I build, transparently and thoroughly. Forward-deployed work generates institutional knowledge. I have the habit of capturing it.
+
+Portfolio: https://4444j99.github.io/portfolio/
+GitHub: https://github.com/4444j99

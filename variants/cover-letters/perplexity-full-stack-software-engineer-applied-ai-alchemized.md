@@ -1,0 +1,21 @@
+# Cover Letter: Perplexity Full Stack Software Engineer - Applied AI
+
+**Role:** Perplexity Full Stack Software Engineer - Applied AI
+**Apply:** https://jobs.ashbyhq.com/perplexity/8e98cd9a-ef90-4e9b-9f4d-3d93f6e3a8fc
+
+---
+
+I built a multi-agent orchestration framework called agentic-titan. It coordinates multiple AI agents through structured task delegation, error recovery, and result synthesis. 1,095 tests. 18 development phases. TypeScript and Python. The framework treats AI not as a single API call but as a system of collaborating agents that must be orchestrated, monitored, and gracefully degraded when individual components fail. That is applied AI engineering.
+
+Across 103 public repositories organized through 8 GitHub organizations, I have written 21,000 code files and 3,600+ test files. The full-stack range is concrete: an Astro 5 portfolio site with p5.js generative canvas, D3.js data visualization, and Pagefind search indexing on the frontend. Python CLI pipelines, YAML state machines, API integration layers for Greenhouse and Ashby job portals, and MCP server infrastructure on the backend. TypeScript strict mode and Python with PEP 8 and type hints throughout. 94 CI/CD pipelines enforce quality at every layer.
+
+The application pipeline that generated this cover letter demonstrates the applied AI methodology I practice daily. It is a 14-script Python CLI system that orchestrates research, identity mapping, content synthesis, and API submission — using LLM outputs as structured inputs to downstream pipeline stages. This is not prompt engineering; it is systems engineering where AI capabilities are one component in a larger automated workflow. The pipeline reads YAML state, generates synthesis prompts, integrates AI-generated content back into structured data, and submits to external APIs — all with validation, error handling, and audit logging.
+
+My approach to AI integration follows what I call the AI-conductor model: human provides architectural vision and editorial judgment, AI provides execution capacity. The 810,000+ words of documentation across my system were produced using this methodology. 42 published essays totaling 142,000 words document the process transparently, including what works and what does not. The creative intelligence is in the architecture and the judgment — which prompts to construct, which outputs to accept, which to reject, how to structure the pipeline so AI outputs remain tractable.
+
+I should be honest about scope. I orchestrate LLM APIs — I do not train models. My AI experience is applied, not research. I have not worked on a product team shipping AI features to millions of users. What I have demonstrated is the full-stack engineering discipline that applied AI demands: building reliable systems around unreliable components, structuring pipelines so failures are recoverable, and maintaining quality standards when AI-generated content is in the loop.
+
+Perplexity is building AI-powered search that requires applied AI engineers who can work across the full stack — from the interface that users see to the AI orchestration layer that generates answers to the infrastructure that serves them. I work across that same stack daily, at a smaller scale, with the same demand for reliability and quality.
+
+Portfolio: https://4444j99.github.io/portfolio/
+GitHub: https://github.com/4444j99

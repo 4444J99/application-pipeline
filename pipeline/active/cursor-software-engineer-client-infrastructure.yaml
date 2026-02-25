@@ -1,0 +1,54 @@
+id: cursor-software-engineer-client-infrastructure
+name: Cursor Software Engineer, Client Infrastructure
+track: job
+status: staged
+outcome: null
+target:
+  organization: Cursor
+  url: https://jobs.ashbyhq.com/cursor
+  application_url: https://jobs.ashbyhq.com/cursor/e08262e8-c089-488d-9b59-9e21f7702b64
+  portal: ashby
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: independent-engineer
+  framing: Independent engineer who builds CLI client infrastructure daily — this
+    application pipeline, MCP servers, agentic orchestration frameworks — with 103
+    public repos, 3,600+ tests, and 94 CI/CD pipelines demonstrating sustained client-side
+    tooling discipline in TypeScript and Python.
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 6
+    track_record_fit: 8
+    financial_alignment: 6
+    effort_to_value: 5
+    strategic_value: 7
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids:
+    cover_letter: cover-letters/cursor-software-engineer-client-infrastructure-alchemized
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-02-24'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+- curated-fit
+source: source_jobs.py
+last_touched: "2026-02-24"
+notes: 'Location: SF / NY / Remote'

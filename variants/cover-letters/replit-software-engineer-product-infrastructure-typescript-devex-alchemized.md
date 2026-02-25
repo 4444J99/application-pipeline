@@ -1,0 +1,23 @@
+# Cover Letter: Replit Software Engineer, Product Infrastructure (TypeScript DevEx)
+
+**Role:** Replit Software Engineer, Product Infrastructure (TypeScript DevEx)
+**Apply:** https://jobs.ashbyhq.com/replit/34afefd8-f698-4c46-a517-9ced6695b59b
+
+---
+
+TypeScript strict mode is not a setting I toggle on for production builds. It is the default across every TypeScript project I ship — from a portfolio site built on Astro 5 to agentic-titan, a multi-agent orchestration framework with 1,095 tests across 18 development phases. Strict mode catches the bugs that cost developer hours downstream. That conviction about TypeScript quality infrastructure is what I would bring to Replit's product infrastructure team.
+
+I maintain 103 public repositories across 8 GitHub organizations. 21,000 code files. 3,600+ test files with coverage in 70 of 103 repositories. 94 CI/CD pipelines that run automated quality gates on every commit. The system is coordinated through a machine-readable registry (registry-v2.json) that tracks implementation status, dependency declarations, and organ membership for every repository. 43 validated dependency edges with zero circular dependencies and zero back-edge violations — enforced by automated validation scripts, not manual review.
+
+Developer experience is infrastructure I think about daily. Every repository in my system has a CLAUDE.md file — a structured developer onboarding document with build commands, architecture notes, key constraints, and navigation protocols. Every project has a seed.yaml declaring its metadata contract. 810,000+ words of documentation across the system, including 42 published essays. This is not documentation as an afterthought; it is documentation as a first-class engineering deliverable that reduces onboarding friction and eliminates tribal knowledge.
+
+The application pipeline that produced this cover letter is itself a developer experience tool: 14 Python CLI scripts sharing a common library, YAML-based state machines for tracking 60+ applications through a defined lifecycle, automated enrichment and validation, and portal-specific submission modules for Greenhouse and Ashby APIs. I built it because the developer experience of applying to jobs was bad, and I could make it better with the same infrastructure patterns I use everywhere else.
+
+I should be transparent about scope. This is independent engineering work — I have not worked on a product infrastructure team or shipped TypeScript infrastructure used by millions of developers. What I have demonstrated is the discipline that product infrastructure demands: strict typing everywhere, automated quality gates, documentation standards, dependency governance, and the patience to build tooling that makes future development faster rather than shipping features directly.
+
+Replit's mission — making programming accessible to everyone — requires product infrastructure that is fast, reliable, and invisible when it works. That last quality is the hardest to engineer. The 94 CI/CD pipelines I maintain do not require my attention when they pass. The dependency validation runs weekly without intervention. The CLAUDE.md files answer questions before developers ask them. Good infrastructure disappears. I have spent five years learning how to build things that disappear well.
+
+11 years of teaching 2,000+ university students taught me that developer experience is a pedagogical problem: the infrastructure should teach the developer what to do next, not require them to already know. That principle shapes how I write documentation, design CLIs, and structure error messages.
+
+Portfolio: https://4444j99.github.io/portfolio/
+GitHub: https://github.com/4444j99

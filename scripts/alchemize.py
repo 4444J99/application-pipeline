@@ -233,8 +233,10 @@ def phase_intake(entry: dict, no_web: bool = False) -> dict | None:
     if portal != "greenhouse":
         return phase_intake_general(entry, no_web=no_web)
 
-    app_url = entry.get("target", {}).get("application_url", "")
-    parsed = parse_greenhouse_url(app_url)
+    target = entry.get("target", {})
+    app_url = target.get("application_url", "")
+    board_url = target.get("url", "")
+    parsed = parse_greenhouse_url(app_url, board_url)
     if not parsed:
         print(f"  Error: Cannot parse Greenhouse URL for {entry_id}: {app_url}")
         return None

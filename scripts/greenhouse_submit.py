@@ -35,9 +35,9 @@ from pipeline_lib import (
 CONFIG_PATH = Path(__file__).resolve().parent / ".submit-config.yaml"
 ANSWERS_DIR = Path(__file__).resolve().parent / ".greenhouse-answers"
 
-# URL pattern: job-boards.greenhouse.io/{board_token}/jobs/{job_id}
+# URL pattern: job-boards.greenhouse.io or boards.greenhouse.io
 GREENHOUSE_URL_RE = re.compile(
-    r"job-boards\.greenhouse\.io/(?P<board>[^/]+)/jobs/(?P<job_id>\d+)"
+    r"(?:job-boards|boards)\.greenhouse\.io/(?P<board>[^/]+)/jobs/(?P<job_id>\d+)"
 )
 
 # Standard fields handled outside the answer system
@@ -74,11 +74,33 @@ def load_config() -> dict:
     return config
 
 
-def parse_greenhouse_url(url: str) -> tuple[str, str] | None:
-    """Extract (board_token, job_id) from a Greenhouse application URL."""
+def parse_greenhouse_url(url: str, board_url: str = "") -> tuple[str, str] | None:
+    """Extract (board_token, job_id) from a Greenhouse application URL.
+
+    Supports:
+      - job-boards.greenhouse.io/{board}/jobs/{id}
+      - boards.greenhouse.io/{board}/jobs/{id}
+      - *.com/jobs/search?gh_jid={id} (needs board_url fallback)
+    """
     m = GREENHOUSE_URL_RE.search(url)
     if m:
         return m.group("board"), m.group("job_id")
+    # Fallback: extract gh_jid from query string (e.g. stripe.com/jobs/search?gh_jid=X)
+    parsed = urlparse(url)
+    params = dict(p.split("=", 1) for p in parsed.query.split("&") if "=" in p)
+    gh_jid = params.get("gh_jid")
+    if gh_jid:
+        # Try to get board token from board_url or the URL path
+        board_token = None
+        if board_url:
+            bm = re.search(r"(?:job-boards|boards)\.greenhouse\.io/([^/]+)", board_url)
+            if bm:
+                board_token = bm.group(1)
+        if not board_token:
+            # Try domain prefix as board token (e.g. stripe.com -> stripe)
+            domain = parsed.netloc.replace("www.", "")
+            board_token = domain.split(".")[0]
+        return board_token, gh_jid
     return None
 
 
@@ -399,8 +421,10 @@ def init_answers_for_entry(
         print(f"  Skipping {entry_id}: portal is '{portal}', not greenhouse")
         return False
 
-    app_url = entry.get("target", {}).get("application_url", "")
-    parsed = parse_greenhouse_url(app_url)
+    target = entry.get("target", {})
+    app_url = target.get("application_url", "")
+    board_url = target.get("url", "")
+    parsed = parse_greenhouse_url(app_url, board_url)
     if not parsed:
         print(f"  Error: Cannot parse Greenhouse URL for {entry_id}: {app_url}")
         return False
@@ -454,8 +478,10 @@ def check_answers_for_entry(entry: dict, config: dict) -> bool:
         print(f"  Skipping {entry_id}: not greenhouse")
         return False
 
-    app_url = entry.get("target", {}).get("application_url", "")
-    parsed = parse_greenhouse_url(app_url)
+    target = entry.get("target", {})
+    app_url = target.get("application_url", "")
+    board_url = target.get("url", "")
+    parsed = parse_greenhouse_url(app_url, board_url)
     if not parsed:
         print(f"  Error: Cannot parse URL for {entry_id}")
         return False
@@ -738,8 +764,10 @@ def process_entry(entry: dict, config: dict, do_submit: bool) -> bool:
         return False
 
     # Parse URL
-    app_url = entry.get("target", {}).get("application_url", "")
-    parsed = parse_greenhouse_url(app_url)
+    target = entry.get("target", {})
+    app_url = target.get("application_url", "")
+    board_url = target.get("url", "")
+    parsed = parse_greenhouse_url(app_url, board_url)
     if not parsed:
         print(f"  Error: Cannot parse Greenhouse URL for {entry_id}: {app_url}")
         return False

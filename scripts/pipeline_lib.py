@@ -480,7 +480,7 @@ def count_chars(text: str) -> int:
 
 
 PORTAL_URL_PATTERNS = [
-    (re.compile(r'job-boards\.greenhouse\.io|boards-api\.greenhouse\.io'), 'greenhouse'),
+    (re.compile(r'(?:job-)?boards(?:-api)?\.greenhouse\.io'), 'greenhouse'),
     (re.compile(r'jobs\.(?:eu\.)?lever\.co'), 'lever'),
     (re.compile(r'jobs\.ashbyhq\.com'), 'ashby'),
     (re.compile(r'apply\.workable\.com'), 'workable'),

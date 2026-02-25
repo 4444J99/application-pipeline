@@ -1,0 +1,23 @@
+# Cover Letter: Supabase Developer Relations Engineer (San Francisco, CA)
+
+**Role:** Supabase Developer Relations Engineer (San Francisco, CA)
+**Apply:** https://jobs.ashbyhq.com/supabase/a1320bbf-bfae-49a8-a1b7-12eeccaf39ca
+
+---
+
+Developer relations requires three capabilities that rarely coexist in one person: engineering credibility, communication skill, and community instinct. I have verifiable evidence for all three.
+
+Engineering: 103 public repositories across 8 GitHub organizations. 21,000 code files. 3,600+ test files. 94 CI/CD pipelines. The flagship project, agentic-titan, is a multi-agent orchestration framework with 1,095 tests across 18 development phases. I build in TypeScript (strict mode), Python (PEP 8, type hints), and Rust. I have built MCP servers, CLI pipeline tools, design systems, and API integration layers. Every project ships with automated quality gates, structured documentation, and dependency validation. This is not a portfolio of toy projects — it is a functioning software system coordinated through a machine-readable registry with 43 validated dependency edges and zero violations.
+
+Communication: 810,000+ words of published documentation and essays. 42 essays totaling 142,000 words, written as real-time process documentation — not marketing copy, but honest accounts of building, failing, and iterating on complex systems. Every repository has a CLAUDE.md file with onboarding instructions, architecture decisions, and navigation protocols. I write technical content because I believe documentation is the primary interface between an open-source project and its community.
+
+Community: 11 years teaching 2,000+ university-level students. That is not a soft credential — it is 11 years of daily practice in explaining complex concepts to people encountering them for the first time, reading a room to know when understanding has broken down, and iterating on explanations until they land. Teaching is developer relations at its most direct: one person helping another person get unstuck.
+
+Supabase builds open-source infrastructure. The developer relations role bridges the gap between what the engineering team builds and what the developer community needs to understand. I have lived on both sides of that gap — as the engineer building the system, and as the teacher helping people navigate complex technical material. The 103 public repos mean I have experience with the full lifecycle of open-source work: READMEs that actually help, CI badges that signal quality, contribution guidelines that reduce friction, and documentation that answers the question the developer is actually asking.
+
+I should be direct about gaps. My open-source work has been solo — I have not managed community contributions, triaged external issues at scale, or coordinated with a developer community team. My engineering experience is independent, not team-based. What I bring is the combination: someone who can write a working code example, explain why it works in a blog post, and present it to a room of developers — because I have done all three, separately, at scale, for years.
+
+Supabase's community-first approach to open-source infrastructure matches how I build. The system I maintain is 100% public, 100% documented, and designed so that any developer can navigate it from the outside. That transparency is not a feature I added — it is the methodology.
+
+Portfolio: https://4444j99.github.io/portfolio/
+GitHub: https://github.com/4444j99
