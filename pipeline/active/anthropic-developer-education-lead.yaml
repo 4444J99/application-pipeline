@@ -18,10 +18,10 @@ amount:
 fit:
   score: 7.4
   identity_position: educator
-  framing: Educator-practitioner who has taught complex systems to 2,000+ students
-    across 11 years and now applies the same pedagogical methodology to developer
-    education content — 810K+ words of documentation, 42 published essays, and a content
-    pipeline built on the same rigorous prioritization this role demands.
+  framing: 'Educator-practitioner who has taught complex systems to 2,000+ students
+    across 11 years and built a gamified education platform (Classroom RPG: Aetheria)
+    with AI-powered evaluation — now applying the same pedagogical methodology and
+    technical execution to developer education content at the scale Claude demands.'
   lead_organs:
   - VI
   - III
@@ -53,5 +53,5 @@ tags:
 - auto-sourced
 - job-tier-1
 source: source_jobs.py
-last_touched: "2026-02-25"
+last_touched: '2026-02-25'
 notes: 'Location: San Francisco, CA | New York City, NY'
