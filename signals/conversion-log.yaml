@@ -273,3 +273,13 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: anthropic-developer-education-lead
+  submitted: '2026-02-25'
+  track: job
+  identity_position: educator
+  blocks_used: null
+  variant_id: cover-letters/anthropic-developer-education-lead-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
