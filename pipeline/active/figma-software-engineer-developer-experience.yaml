@@ -36,7 +36,8 @@ submission:
   variant_ids:
     cover_letter: cover-letters/figma-software-engineer-developer-experience-alchemized
   materials_attached:
-  - resumes/independent-engineer-resume.html
+  - resumes/figma-software-engineer-developer-experience-resume.html
+  - resumes/figma-software-engineer-developer-experience-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'

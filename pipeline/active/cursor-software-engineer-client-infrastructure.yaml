@@ -37,7 +37,8 @@ submission:
   variant_ids:
     cover_letter: cover-letters/cursor-software-engineer-client-infrastructure-alchemized
   materials_attached:
-  - resumes/independent-engineer-resume.html
+  - resumes/cursor-software-engineer-client-infrastructure-resume.html
+  - resumes/cursor-software-engineer-client-infrastructure-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'

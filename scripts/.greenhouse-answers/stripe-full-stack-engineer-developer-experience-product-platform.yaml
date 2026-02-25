@@ -1,0 +1,61 @@
+# Generated for: Stripe Full Stack Engineer, Developer Experience & Product Platform
+# Job: stripe/6567104
+# Edit answers below, then run with --check-answers to validate
+
+# Please select the country where you currently reside.
+
+# Type: select | Options: Australia, Belgium, Brazil, Canada, Egypt, France, Germany, India, Indonesia, Ireland, Israel, Italy, Japan, Malaysia, Mexico, New Zealand, Poland, Romania, Singapore, South Korea, Spain, Sweden, Switzerland, Thailand, The Netherlands, UAE, UK, US, Other | Required
+question_53581249: "US"
+
+# Please select the country or countries you anticipate working in for the role in which you are applying.
+# Type: multi_value_multi_select | Options: Australia, Belgium, Brazil, Canada, France, Germany, India, Indonesia, Ireland, Israel, Italy, Japan, Malaysia, Mexico, New Zealand, Poland, Portugal, Romania, Singapore, South Korea, Spain, Sweden, Switzerland, Thailand, The Netherlands, UAE, UK, US | Required
+question_53581250[]: "US"
+
+# Are you authorized to work in the location(s) you selected in your previous response?
+# Type: select | Options: Yes, No | Required
+question_53581251: "Yes"
+
+# Will you require Stripe to sponsor you for a work permit now or in the future for the location(s) you selected in in your previous response?
+
+# Type: select | Options: Yes, No | Required
+question_53581252: "No"
+
+# If this role offers the option to work from a remote location, do you plan to work remotely?
+# Type: select | Options: Yes, I intend to work remotely., No, I intend to work from an office location. | Required
+question_53581253: "Yes, I intend to work remotely."
+
+# Have you ever been employed by Stripe or a Stripe affiliate?
+# Type: select | Options: Yes, No | Required
+question_53581254: "No"
+
+# Who is your current or previous employer?
+# Type: text | Required
+question_53581255: "Independent / Self-employed"
+
+# What is your current or previous job title?
+# Type: text | Required
+question_53581256: "Independent Software Engineer"
+
+# What is the most recent school you attended?
+# Type: text | Required
+question_53581257: "Florida Atlantic University"
+
+# What is the most recent degree you obtained?
+# Type: text | Required
+question_53581258: "Master of Fine Arts, Creative Writing"
+
+# Do you opt-in to receive WhatsApp messages from Stripe Recruiting?
+# Type: select | Options: Yes, No | Required
+question_53581259: "No"
+
+# How many years of experience full time, industry do you have as a software engineer? (not counting internships or school work)
+# Type: select | Options: None - I am a new grad., 0 - 1.5 years of experience as a software engineer, 1.5 - 5 years of experience as a software engineer, 5 - 10 years of experience as a software engineer, 10+ years of experience as a software engineer | Required
+question_55612830: "5 - 10 years of experience as a software engineer"
+
+# Are you currently based in Toronto, or willing to relocate to Toronto?
+# Type: select | Options: Yes, No | Required
+question_55612831: "No"
+
+# To ensure we can focus fully on our conversation, we use BrightHire to record and transcribe interviews. This helps us get to know you better without the distraction of note-taking. We also use BrightHire to help us analyze interview notes and for internal Stripe interview quality training and assurance purposes. Please confirm if you consent to BrightHire being enabled for this interview and for your personal data to be collected and processed for the purposes mentioned above, by responding below.
+# Type: select | Options: Yes, No | Required
+question_59540123: "Yes"

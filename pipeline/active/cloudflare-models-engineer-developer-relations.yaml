@@ -36,7 +36,8 @@ submission:
   variant_ids:
     cover_letter: cover-letters/cloudflare-models-engineer-developer-relations-alchemized
   materials_attached:
-  - resumes/independent-engineer-resume.html
+  - resumes/cloudflare-models-engineer-developer-relations-resume.html
+  - resumes/cloudflare-models-engineer-developer-relations-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'

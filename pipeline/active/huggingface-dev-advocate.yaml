@@ -39,8 +39,10 @@ submission:
   blocks_used: {}
   variant_ids: 
     cover_letter: cover-letters/huggingface-dev-advocate-hub-enterprise
-  materials_attached: 
-    - resumes/multimedia-specialist.pdf
+  materials_attached:
+  - resumes/huggingface-dev-advocate-resume.html
+  - resumes/huggingface-dev-advocate-resume.pdf
+  - resumes/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'

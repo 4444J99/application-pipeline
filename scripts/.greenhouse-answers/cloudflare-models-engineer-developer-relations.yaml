@@ -1,0 +1,31 @@
+# Generated for: Cloudflare Models Engineer, Developer Relations
+# Job: cloudflare/7577103
+# Edit answers below, then run with --check-answers to validate
+
+# Preferred First Name
+# Type: text | Optional
+preferred_name: "Anthony"
+
+# Legal Name 
+# Type: text | Required
+question_63135698: "Anthony James Padavano"
+
+# Would you like to include your LinkedIn profile, personal website or blog?
+# Type: text | Optional
+question_63135699: "https://4444j99.github.io/portfolio/"
+
+# How did you hear about this job?
+# Type: text | Required
+question_63135700: "Job board"
+
+# Do you currently live or are you willing to relocate to the job’s location?
+# Type: select | Options: I currently live in this job's location., I am willing to relocate to this job's location., I do not live and not willing to relocate to this job's location. | Required
+question_63135701: "I currently live in this job's location."
+
+# Do you now or will you in the future require immigration sponsorship to work at Cloudflare?
+# Type: select | Options: Yes, No | Required
+question_63135702: "No"
+
+# Please review and acknowledge Cloudflare's Candidate Privacy Policy (cloudflare.com/candidate-privacy-notice/).
+# Type: multi_value_multi_select | Options: Acknowledge/Confirm | Required
+question_63135703[]: "Acknowledge/Confirm"
