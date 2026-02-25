@@ -34,6 +34,9 @@ scripts/.job-source-stats.yaml
 dist/
 build/
 
+# Browser automation
+scripts/.browser-profile/
+
 # Temporary
 *.tmp
 *.bak
