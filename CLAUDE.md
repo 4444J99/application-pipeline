@@ -51,6 +51,8 @@ Scripts are independent CLIs but some import functions from each other:
 - **`pipeline_lib.py`** — Shared foundation: `load_entries()`, `load_profile()`, `load_block()`, `load_variant()`, `load_legacy_script()`, path constants, ID maps, text utils. Every script imports from here.
 - **`campaign.py`** imports from `enrich.py` — the `--execute` mode runs enrichment + advance + preflight as a pipeline.
 - **`alchemize.py`** imports from `greenhouse_submit.py` — the Greenhouse-specific end-to-end orchestrator (research → identity mapping → synthesis prompt → integration → submission).
+- **`followup.py`** — Follow-up tracker: generates daily outreach lists, logs follow-up actions to entries and outreach-log.yaml.
+- **`funnel_report.py`** — Conversion funnel analytics: stage distribution, conversion rates by variable (channel, portal, position, track), weekly velocity, target vs actual comparison.
 - All other scripts are standalone CLIs that read/write pipeline YAML files.
 
 ## Commands
@@ -138,6 +140,22 @@ python scripts/greenhouse_submit.py --target <target-id>          # Dry-run prev
 python scripts/greenhouse_submit.py --target <target-id> --submit # POST to Greenhouse
 python scripts/greenhouse_submit.py --init-answers --target <target-id>  # Generate answer template
 python scripts/greenhouse_submit.py --check-answers --batch              # Validate all answers
+
+# Follow-up tracker and daily outreach list
+python scripts/followup.py                     # Show today's follow-up actions
+python scripts/followup.py --all               # All entries with follow-up status
+python scripts/followup.py --schedule           # Upcoming follow-up schedule (21 days)
+python scripts/followup.py --overdue            # Overdue follow-ups only
+python scripts/followup.py --log <entry-id> --channel linkedin --contact "Name" --note "DM sent"
+
+# Conversion funnel analytics
+python scripts/funnel_report.py                # Full funnel summary
+python scripts/funnel_report.py --by channel   # Breakdown by channel
+python scripts/funnel_report.py --by position  # Breakdown by identity position
+python scripts/funnel_report.py --by portal    # Breakdown by portal type
+python scripts/funnel_report.py --by track     # Breakdown by track
+python scripts/funnel_report.py --weekly       # Weekly submission velocity
+python scripts/funnel_report.py --targets      # Conversion targets vs actual
 
 # Metric consistency check (compares blocks against canonical system-metrics.json)
 python scripts/check_metrics.py

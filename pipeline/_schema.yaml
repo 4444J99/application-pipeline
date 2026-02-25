@@ -90,6 +90,26 @@
 #   response_type: acknowledgment | interview | rejection | offer | null
 #   time_to_response_days: integer or null
 #   feedback: Free text from reviewer/organization
+#   channel: How the application was submitted
+#     enum: direct | referral | linkedin | job_board | email | other
+#   resume_variant: Which resume version was used (filename or path)
+#   cover_letter_present: boolean — whether a cover letter or pitch was included
+#   custom_answers: boolean — whether portal-specific questions were answered
+#   follow_up_count: integer — number of follow-up actions taken
+#   outcome_stage: Where in the funnel the outcome occurred
+#     enum: resume_screen | phone_screen | technical | onsite | offer | null
+
+# --- Follow-Up Tracking ---
+# follow_up: List of follow-up actions for this entry
+#   - date: ISO date (YYYY-MM-DD)
+#     channel: Communication channel
+#       enum: linkedin | email | phone | in_person | other
+#     contact: Name/title of person contacted
+#     type: Type of follow-up
+#       enum: connect | dm | email | check_in | thank_you
+#     note: Brief description
+#     response: Whether a response was received
+#       enum: none | replied | ignored | referred
 
 # --- Activity Tracking ---
 # last_touched: ISO date (YYYY-MM-DD) of last human review of this entry
@@ -213,6 +233,14 @@ example:
     response_type: null
     time_to_response_days: null
     feedback: null
+    channel: direct
+    resume_variant: resumes/creative-tech-2026.pdf
+    cover_letter_present: true
+    custom_answers: false
+    follow_up_count: 0
+    outcome_stage: null
+
+  follow_up: []
 
   last_touched: "2026-02-18"
 

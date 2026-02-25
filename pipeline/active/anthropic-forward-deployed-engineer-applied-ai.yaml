@@ -1,8 +1,8 @@
 id: anthropic-forward-deployed-engineer-applied-ai
 name: Anthropic Forward Deployed Engineer, Applied AI
 track: job
-status: research
-outcome: null
+status: outcome
+outcome: withdrawn
 target:
   organization: Anthropic
   url: https://boards.greenhouse.io/anthropic
@@ -45,4 +45,9 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: '2026-02-24'
+withdrawal_reason:
+  reason: ineligible
+  detail: Requires on-site in Paris, France — outside NYC metro location filter
+  date: '2026-02-25'
+  reopen: false
 notes: 'Location: Paris, France'

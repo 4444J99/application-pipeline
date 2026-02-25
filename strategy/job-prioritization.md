@@ -1,110 +1,141 @@
 # Job Application Prioritization
 
-Strategic analysis of 7 active job entries, ranked by fit-to-effort ROI.
+Strategic analysis of all active job entries, ranked by fit-to-effort ROI.
 
-**Date:** 2026-02-24
-**Identity Position:** independent-engineer (all entries)
-**Score Range:** 4.5-6.3
+**Date:** 2026-02-25
+**Identity Position:** independent-engineer / educator (varies by role)
+**Pipeline state:** 16 submitted (13 active, 2 expired, 1 withdrawn), 10 Anthropic in research
 
-## Submission Order
+## Submission Priority — Next Batch
 
-| # | Entry | Score | Tier | Key Rationale |
-|---|-------|-------|------|---------------|
-| 1 | anthropic-se-claude-code | 6.3 | Tier 1 | Best fit — CLI tools + agentic systems built daily |
-| 2 | huggingface-dev-advocate | 5.4 | Tier 1 | Full body of work as evidence (writing + teaching + OSS) |
-| 3 | cohere-applied-ai | 5.4 | Tier 2 | agentic-titan maps directly to role requirements |
-| 4 | together-ai | 5.4 | Tier 2 | DX + documentation strength |
-| 5 | runway-mts | 5.7 | Tier 3 | High score but ML research infra gap lowers probability |
-| 6 | anthropic-fde | 5.0 | Tier 4 | Structural gap: no enterprise customer-facing experience |
-| 7 | openai-se-evals | 4.5 | Tier 4 | Hard gap: limited ML knowledge for evals discipline |
+### Tier 1 — Submit This Week (Highest ROI Jobs)
 
-## Tier Definitions
+| # | Entry | Score | Location | Key Rationale |
+|---|-------|-------|----------|---------------|
+| 1 | anthropic-developer-education-lead | 7.4 | SF / NYC | Teaching background is DIRECT match — 11yr, 2K students, 810K words |
+| 2 | anthropic-founding-developer-relations-lead | 7.2 | SF / NYC | Devrel trifecta: writing + teaching + OSS. "Founding" favors builders |
+| 3 | anthropic-developer-relations-mcp | 7.0 | SF | Daily MCP user, custom servers, claude-code integration |
+| 4 | huggingface-dev-advocate | 6.2 | Remote | Full body of work as evidence (already staged, materials ready) |
 
-- **Tier 1 — Apply Now:** Strongest ROI, submit immediately
-- **Tier 2 — Apply with Targeted Narrative:** Good fit with specific evidence, needs framing work
-- **Tier 3 — Apply If Time Permits:** Decent score but lower advance probability
-- **Tier 4 — Deprioritize:** Structural gaps make effort better spent on Tier 1-2
+### Tier 2 — Submit This Week (Emergency Grants — Quick Effort)
 
-## Tier 1 — Apply Now
+| Entry | Score | Effort | Rationale |
+|-------|-------|--------|-----------|
+| PEN America Writers Aid | 8.5 | quick | Emergency grant, high fit |
+| Awesome Foundation NYC | 7.9 | quick | Emergency grant, high fit |
+| FCA Emergency Grants | 7.1 | quick | Emergency grant |
+| Stimpunks Creator Grant | 7.1 | quick | Emergency grant |
 
-### 1. Anthropic SE Claude Code (6.3)
+### Tier 3 — Submit by March 4 (Hard Deadline)
 
-**Why first:** This is the best fit by a wide margin. You build CLI developer tools and agentic systems *every day* — this pipeline, alchemize.py, greenhouse_submit.py, the entire scripts/ directory IS the kind of work this role does. Claude Code is a CLI tool for developers; the ORGANVM system is 103 repos of CLI-driven Python/TypeScript infrastructure. Mission alignment at 8 is the highest of any job entry.
+| Entry | Score | Amount | Deadline |
+|-------|-------|--------|----------|
+| Prix Ars Electronica 2026 | 8.4 | EUR 10,000 | 2026-03-04 |
+| S+T+ARTS Prize 2026 | 8.4 | EUR 20,000 | 2026-03-04 |
 
-**Evidence that lands:**
-- 21K code files, 3.6K tests, 94 CI/CD pipelines
-- agentic-titan (1,095 tests)
-- Governance dependency graph (43 validated edges, 0 violations)
-- This application pipeline itself (Python CLI tooling, YAML-driven state machine)
+### Tier 4 — Apply If Time Permits
 
-**Honest gaps:** No team engineering, no production users. But the scale and testing discipline are real, and the role values independent builders.
+| Entry | Score | Location | Gap |
+|-------|-------|----------|-----|
+| anthropic-applied-ai-engineer-beneficial-deployments | 5.4 | SF / NYC | Limited enterprise deployment experience |
+| anthropic-applied-ai-engineer-digital-natives-business | 5.0 | SF / NYC / SEA | Enterprise customer-facing gap |
+| anthropic-forward-deployed-engineer-applied-ai-federal-civilian | 4.4 | SF / NYC / DC | Clearance + enterprise deployment gap |
+| anthropic-applied-ai-engineer-life-sciences-beneficial-deployments | 4.6 | SF / NYC | Life sciences domain gap |
 
-**Strategic value:** 8 — Anthropic is the highest-signal employer in the AI space.
+### Withdrawn (Location Filter)
 
-### 2. HuggingFace Developer Advocate (5.4)
+| Entry | Location | Reason |
+|-------|----------|--------|
+| anthropic-developer-community-lead-japan | Tokyo | Outside NYC metro |
+| anthropic-applied-ai-engineer-startups | London | Outside NYC metro |
+| anthropic-forward-deployed-engineer-applied-ai | Paris | Outside NYC metro |
 
-**Why second:** The role where the *full* body of work is evidence, not just engineering. Dev advocacy is the intersection of engineering + communication + community — all three are demonstrated strengths.
+## Previously Submitted (2026-02-24 Batch)
 
-**Evidence that lands:**
-- 42 essays (810K+ words) = sustained technical writing
-- 11 years teaching 2,000+ students = proven communication with diverse audiences
-- 103 public repos across 8 GitHub orgs = open-source at scale
-- Documentation coverage (100% CLAUDE.md + seed.yaml)
-- Community infrastructure (ORGAN-VI)
+| # | Entry | Score | Tier | Portal | Status |
+|---|-------|-------|------|--------|--------|
+| 1 | anthropic-se-claude-code | 6.3 | Tier 1 | greenhouse | Active — acknowledged |
+| 2 | anthropic-fde | 5.5 | Tier 4 | greenhouse | Active — acknowledged |
+| 3 | cohere-applied-ai | 5.4 | Tier 2 | ashby | Active |
+| 4 | together-ai | 5.4 | Tier 2 | greenhouse | Active |
+| 5 | runway-mts | 5.7 | Tier 3 | greenhouse | Active |
+| 6 | cloudflare | - | - | greenhouse | Active |
+| 7 | figma | - | - | greenhouse | Active |
+| 8 | openai-dxe | - | - | ashby | Active |
+| 9 | openai-fde-nyc | - | - | ashby | Active |
+| 10 | perplexity | - | - | ashby | Active |
+| 11 | replit | - | - | ashby | Active |
+| 12 | stripe | - | - | greenhouse | Active |
+| 13 | doris-duke-amt | - | grant | custom | Active |
+| 14 | cursor | - | - | ashby | Expired |
+| 15 | supabase | - | - | ashby | Expired |
+| 16 | notion | - | - | ashby | Withdrawn (India on-site) |
 
-**Honest gaps:** Limited ML knowledge (but dev advocacy doesn't require training models). No prior dev advocate title (but teaching IS advocacy).
+## Conversion Funnel Approach
 
-**Strategic value:** 5 — HuggingFace community visibility opens doors in open-source ML.
+### Variables Being Tracked
+- **Channel:** direct (all current), referral (target), linkedin (avoid as primary)
+- **Resume variant:** per-role tailored PDFs via alchemize.py
+- **Cover letter:** concise pitch in Additional Info (never merged with resume PDF)
+- **Custom answers:** Greenhouse/Ashby portal question quality
+- **Follow-up:** LinkedIn connect Day 1-2, DM Day 7-10, final Day 14-21
 
-## Tier 2 — Apply with Targeted Narrative
+### Conversion Targets
+| Stage | Target Rate | Benchmark |
+|-------|------------|-----------|
+| Apply → Response | 10% | Industry cold: 5-10% |
+| Response → Interview | 33% | |
+| Interview → Offer | 33% | |
+| Full funnel (cold) | 1% | |
+| Full funnel (with follow-up) | 5% | |
 
-### 3. Cohere Applied AI (5.4)
+### Daily Volume
+- **Target:** 3-5 tailored applications per day
+- **Evidence:** 3-5 tailored/day → 20-30% interview conversion; 10+ generic/day → 2-4%
+- **Sweet spot:** 21-80 total applications
 
-**Why tier 2:** Agentic workflows match agentic-titan directly. Multi-agent orchestration, 1,095 tests, 18 development phases — this is the exact domain. The role title says "agentic workflows," and there's a flagship repo that IS an agentic workflow framework.
+### Daily Workflow
+1. **Morning (1hr):** Run `standup.py`, check `followup.py`, send LinkedIn DMs
+2. **Core block (3-4hr):** Submit 3-5 applications
+3. **End of day (30min):** Run `pipeline_status.py`, update conversion log, source 2-3 new roles
 
-**Gap to bridge:** Track record at 4 is still modest. No enterprise deployment of agentic systems.
+## Channel Strategy
 
-### 4. Together AI Lead DX (5.4)
+| Channel | Response Rate | Recommendation |
+|---------|-------------|----------------|
+| Referral + direct | Highest | Seek for Tier 1 targets |
+| Company career page (cold) | 2-5% | Current approach — keep, supplement with follow-up |
+| Indeed | 20-25% | Not using — consider for broader reach |
+| LinkedIn Easy Apply | 3-13% | AVOID as primary — low signal |
 
-**Why tier 2:** Developer experience + documentation is a real strength. 810K+ words of documentation, 100% README coverage, 42 essays on methodology. The DX role values someone who can make complex systems understandable — that's what the essays and teaching demonstrate.
+**Multi-channel approach:** Apply via direct link + simultaneously find hiring manager on LinkedIn.
+For top-tier targets (Anthropic, Perplexity, Figma): seek employee referrals (8x hire rate).
 
-**Gap to bridge:** "Lead" implies team management experience, which is missing.
+## Follow-Up Protocol
 
-## Tier 3 — Apply If Time Permits
+| Day | Action |
+|-----|--------|
+| Day 0 | Submit application |
+| Day 1-2 | Connect with hiring manager/recruiter on LinkedIn |
+| Day 7-10 | First follow-up: short DM referencing application |
+| Day 14-21 | Second and final follow-up |
+| After that | Move on |
 
-### 5. Runway MTS Research Tooling (5.7)
-
-**Why high score but lower tier?** The score is 5.7 (second highest), but Runway's research tooling role leans more toward ML research infrastructure than systems engineering. The creative-AI bridge is real (ORGAN-II), but the role likely needs more hands-on ML pipeline experience than the system demonstrates. Good application, but lower probability of advancing past screen.
-
-## Tier 4 — Deprioritize
-
-### 6. Anthropic FDE (5.0)
-
-**Why deprioritize despite Anthropic's strategic value:** "Forward-deployed" means customer-facing enterprise engineering — building custom solutions for enterprise customers on-site. The core gap (no enterprise customer-facing tech experience) is structural, not frameable. Teaching shows communication skills, but not the enterprise deployment context FDE requires. The high strategic value (8) makes it tempting, but the probability is low enough that effort is better spent on the SE Claude Code application.
-
-### 7. OpenAI SE Evals (4.5)
-
-**Why deprioritize:** Applied evals is a specialized ML discipline. The testing infrastructure (3.6K test files, 85% coverage) is evaluation-*adjacent* but not evaluation work. Limited ML knowledge (acknowledged in covenant-ark Section J) is a hard gap for this role. Lowest mission alignment and strategic value of the group.
-
-## Key Insight
-
-The strongest applications are the ones where the *specific* work maps to the *specific* role — not just "I have engineering metrics." Anthropic SE Claude Code works because CLI tools are built daily. HuggingFace works because of writing, teaching, and building in public. Cohere works because agentic-titan exists. The weakest applications are where experience that doesn't exist would need to be claimed (enterprise deployment, ML evals).
-
-## Score Breakdown Reference
+## Score Breakdown — New Anthropic Roles
 
 | Entry | Mission | Evidence | Track | Financial | Effort | Strategic | Deadline | Portal | Composite |
 |-------|---------|----------|-------|-----------|--------|-----------|----------|--------|-----------|
-| anthropic-se-claude-code | 8 | 6 | 5 | 3 | 5 | 8 | 9 | 5 | 6.3 |
-| runway-mts | 7 | 6 | 5 | 3 | 5 | 5 | 9 | 5 | 5.7 |
-| cohere-applied-ai | 7 | 5 | 4 | 3 | 5 | 5 | 9 | 5 | 5.4 |
-| together-ai | 7 | 5 | 5 | 3 | 5 | 4 | 9 | 5 | 5.4 |
-| huggingface-dev-advocate | 7 | 5 | 4 | 3 | 5 | 5 | 9 | 5 | 5.4 |
-| anthropic-fde | 5 | 4 | 4 | 3 | 5 | 8 | 9 | 5 | 5.0 |
-| openai-se-evals | 5 | 4 | 3 | 3 | 5 | 4 | 9 | 6 | 4.5 |
+| developer-education-lead | 9 | 8 | 7 | 6 | 7 | 8 | 9 | 5 | 7.4 |
+| founding-devrel-lead | 9 | 7 | 5 | 6 | 7 | 8 | 9 | 5 | 7.2 |
+| developer-relations-mcp | 9 | 7 | 5 | 6 | 7 | 8 | 9 | 5 | 7.0 |
+| applied-ai-beneficial | 7 | 4 | 3 | 6 | 5 | 8 | 9 | 5 | 5.4 |
+| applied-ai-digital-natives | 6 | 4 | 3 | 6 | 5 | 8 | 9 | 5 | 5.0 |
+| life-sciences | 5 | 3 | 2 | 6 | 5 | 8 | 9 | 5 | 4.6 |
+| fde-federal-civilian | 5 | 3 | 2 | 6 | 4 | 8 | 9 | 5 | 4.4 |
 
 ## Tags Convention
 
-Pipeline entries tagged with:
 - `job-tier-1` through `job-tier-4` — priority tier
 - `submit-order-N` — recommended submission sequence
 - `deprioritize` — effort better redirected to higher tiers
+- `auto-sourced` — created by source_jobs.py

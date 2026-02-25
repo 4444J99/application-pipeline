@@ -7,7 +7,14 @@ entries:
   - identity/2min
   - projects/omni-dromenon-engine
   variant_id: cover-letters/grant-art-template
+  channel: direct
+  portal: custom
+  resume_variant: resumes/multimedia-specialist.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
   outcome: null
+  outcome_stage: null
   response_date: null
   time_to_response_days: null
   feedback: null
@@ -17,7 +24,14 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/anthropic-se-claude-code
+  channel: direct
+  portal: greenhouse
+  resume_variant: resumes/anthropic-se-claude-code-resume.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
   outcome: null
+  outcome_stage: null
   response_date: null
   time_to_response_days: null
   feedback: null
@@ -27,7 +41,14 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/cohere-applied-ai-agentic-workflows
+  channel: direct
+  portal: ashby
+  resume_variant: resumes/cohere-applied-ai-resume.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
   outcome: null
+  outcome_stage: null
   response_date: null
   time_to_response_days: null
   feedback: null
@@ -37,7 +58,14 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/cursor-software-engineer-client-infrastructure-alchemized
-  outcome: null
+  channel: direct
+  portal: ashby
+  resume_variant: resumes/cursor-software-engineer-client-infrastructure-resume.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
+  outcome: expired
+  outcome_stage: resume_screen
   response_date: null
   time_to_response_days: null
   feedback: null
@@ -47,17 +75,31 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/notion-software-engineer-developer-experience-alchemized
-  outcome: null
+  channel: direct
+  portal: ashby
+  resume_variant: resumes/notion-software-engineer-developer-experience-resume.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
+  outcome: withdrawn
+  outcome_stage: null
   response_date: null
   time_to_response_days: null
-  feedback: null
+  feedback: India on-site requirement
 - id: openai-developer-experience-engineer
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/openai-developer-experience-engineer-alchemized
+  channel: direct
+  portal: ashby
+  resume_variant: resumes/openai-developer-experience-engineer-resume.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
   outcome: null
+  outcome_stage: null
   response_date: null
   time_to_response_days: null
   feedback: null
@@ -67,7 +109,14 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/openai-forward-deployed-engineer-fde-nyc-alchemized
+  channel: direct
+  portal: ashby
+  resume_variant: resumes/openai-forward-deployed-engineer-fde-nyc-resume.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
   outcome: null
+  outcome_stage: null
   response_date: null
   time_to_response_days: null
   feedback: null
@@ -77,7 +126,14 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/perplexity-full-stack-software-engineer-applied-ai-alchemized
+  channel: direct
+  portal: ashby
+  resume_variant: resumes/perplexity-full-stack-software-engineer-applied-ai-resume.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
   outcome: null
+  outcome_stage: null
   response_date: null
   time_to_response_days: null
   feedback: null
@@ -87,7 +143,14 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/replit-software-engineer-product-infrastructure-typescript-devex-alchemized
+  channel: direct
+  portal: ashby
+  resume_variant: resumes/replit-software-engineer-product-infrastructure-typescript-devex-resume.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
   outcome: null
+  outcome_stage: null
   response_date: null
   time_to_response_days: null
   feedback: null
@@ -97,7 +160,14 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/supabase-developer-relations-engineer-san-francisco-ca-alchemized
-  outcome: null
+  channel: direct
+  portal: ashby
+  resume_variant: resumes/supabase-developer-relations-engineer-san-francisco-ca-resume.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
+  outcome: expired
+  outcome_stage: resume_screen
   response_date: null
   time_to_response_days: null
   feedback: null
@@ -107,7 +177,14 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/anthropic-fde-custom-agents
+  channel: direct
+  portal: greenhouse
+  resume_variant: resumes/anthropic-fde-resume.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
   outcome: null
+  outcome_stage: null
   response_date: null
   time_to_response_days: null
   feedback: null
@@ -117,7 +194,14 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/cloudflare-models-engineer-developer-relations-alchemized
+  channel: direct
+  portal: greenhouse
+  resume_variant: resumes/cloudflare-models-engineer-developer-relations-resume.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
   outcome: null
+  outcome_stage: null
   response_date: null
   time_to_response_days: null
   feedback: null
@@ -127,7 +211,14 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/figma-software-engineer-developer-experience-alchemized
+  channel: direct
+  portal: greenhouse
+  resume_variant: resumes/figma-software-engineer-developer-experience-resume.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
   outcome: null
+  outcome_stage: null
   response_date: null
   time_to_response_days: null
   feedback: null
@@ -137,7 +228,14 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/runway-mts-research-tooling
+  channel: direct
+  portal: greenhouse
+  resume_variant: resumes/runway-mts-resume.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
   outcome: null
+  outcome_stage: null
   response_date: null
   time_to_response_days: null
   feedback: null
@@ -147,7 +245,14 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/stripe-full-stack-engineer-developer-experience-product-platform-alchemized
+  channel: direct
+  portal: greenhouse
+  resume_variant: resumes/stripe-full-stack-engineer-developer-experience-product-platform-resume.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
   outcome: null
+  outcome_stage: null
   response_date: null
   time_to_response_days: null
   feedback: null
@@ -157,7 +262,14 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/together-ai-lead-dx-documentation
+  channel: direct
+  portal: greenhouse
+  resume_variant: resumes/together-ai-resume.pdf
+  cover_letter_present: true
+  custom_answers: true
+  follow_up_count: 0
   outcome: null
+  outcome_stage: null
   response_date: null
   time_to_response_days: null
   feedback: null
