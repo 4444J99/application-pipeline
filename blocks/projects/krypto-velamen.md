@@ -1,10 +1,10 @@
 # Project: KRYPTO-VELAMEN — The Instrument v1.0
 
 ## One-Line
-Living queer cultural archive exploring concealment as compositional engine through 20 author studies and 26 world-building research modules.
+A distributed, collaborative digital instrument for queer knowledge-building, authentic expression, and community survival through "Double-Channel" communication.
 
 ## Short (100 words)
-KRYPTO-VELAMEN is a public, evolving queer archive that documents lived interiority in real time, refusing narrative closure or moral framing. Its theoretical framework — "Double-Channel Text" — studies how queer writers encode desire through concealment mechanisms: surface story vs. substrate story. The research corpus spans 20 deep studies of queer authors (Wilde, Rimbaud, Burroughs, Baldwin, Lorde, Genet, Acker, Delany, Bishop, Cavafy, Forster, Mishima, Guibert, Feinberg, Arenas, Araki, Sophie, Lynch, Arca, Porpentine) and 26 world-building modules on queer cultural history, activism, and community governance. Original synthesis tools — Author Crosswalk, Mechanism Atlas, Visibility Schema — formalize patterns across the corpus. The platform architecture centers community safety through pseudonym management and risk-calibrated privacy.
+KRYPTO-VELAMEN has evolved from a static archive into a distributed, collaborative platform. It is a digital instrument designed to facilitate queer knowledge-production and community survival. Its theoretical framework — "Double-Channel Text" — studies how queer subjects encode desire and interiority through concealment mechanisms: surface story vs. substrate story. The project coordinates 20 deep author studies and 26 world-building modules into a living infrastructure for authentic expression. The platform architecture centers community safety through pseudonym management and risk-calibrated privacy, allowing for the secure, non-linear documentation of lived experience in real time.
 
 ## Full
 KRYPTO-VELAMEN treats concealment not as biographical background but as a formal constraint that becomes a creative method — the "closet" as compositional engine.

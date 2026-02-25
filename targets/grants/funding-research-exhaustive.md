@@ -63,7 +63,7 @@ This is the **exhaustive master list** — every opportunity discovered across 5
 ### Awesome Foundation NYC Chapter
 
 - **Amount:** $1,000, no strings attached, monthly
-- **Why it fits:** Zero restrictions. KRYPTO-VELAMEN (the living queer archive) is a high-fit "awesome" project for NYC community funding. Framing shifts from broad infrastructure to interactive history/workshops.
+- **Why it fits:** Zero restrictions. KRYPTO-VELAMEN (the digital instrument for community survival) is a high-fit "awesome" project for NYC community funding. Framing shifts from archive to a collaborative platform for authentic expression.
 - **URL:** https://www.awesomefoundation.org/en/chapters/nyc
 - **Benefits cliff:** SNAP-safe.
 
