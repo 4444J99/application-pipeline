@@ -283,3 +283,23 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: anthropic-developer-relations-mcp
+  submitted: '2026-02-25'
+  track: job
+  identity_position: independent-engineer
+  blocks_used: null
+  variant_id: cover-letters/anthropic-developer-relations-mcp-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: anthropic-founding-developer-relations-lead
+  submitted: '2026-02-25'
+  track: job
+  identity_position: independent-engineer
+  blocks_used: null
+  variant_id: cover-letters/anthropic-founding-developer-relations-lead-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
