@@ -1,8 +1,8 @@
 id: anthropic-forward-deployed-engineer-applied-ai-federal-civilian
 name: 'Anthropic Forward Deployed Engineer, Applied AI (Federal Civilian) '
 track: job
-status: research
-outcome: null
+status: outcome
+outcome: withdrawn
 target:
   organization: Anthropic
   url: https://boards.greenhouse.io/anthropic
@@ -16,7 +16,7 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 4.4
+  score: 4.8
   identity_position: independent-engineer
   framing: Federal civilian context requires clearance eligibility and enterprise
     deployment experience — structural gaps similar to FDE role
@@ -27,7 +27,7 @@ fit:
     evidence_match: 3
     track_record_fit: 2
     financial_alignment: 6
-    effort_to_value: 4
+    effort_to_value: 5
     strategic_value: 8
     deadline_feasibility: 9
     portal_friction: 5
@@ -52,3 +52,8 @@ tags:
 source: source_jobs.py
 last_touched: "2026-02-25"
 notes: 'Location: San Francisco, CA | New York City, NY | Washington, DC'
+withdrawal_reason:
+  reason: low_fit
+  detail: Low fit score, never progressed past research — emergency triage sprint
+  date: '2026-02-25'
+  reopen: false

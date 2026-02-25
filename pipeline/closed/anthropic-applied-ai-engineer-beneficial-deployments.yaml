@@ -1,12 +1,12 @@
-id: anthropic-founding-developer-relations-lead
-name: Anthropic Founding Developer Relations Lead
+id: anthropic-applied-ai-engineer-beneficial-deployments
+name: Anthropic Applied AI Engineer, Beneficial Deployments
 track: job
-status: submitted
-outcome: null
+status: outcome
+outcome: withdrawn
 target:
   organization: Anthropic
   url: https://boards.greenhouse.io/anthropic
-  application_url: https://job-boards.greenhouse.io/anthropic/jobs/4781798008
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/5068226008
   portal: greenhouse
 deadline:
   date: null
@@ -16,20 +16,17 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 7.0
+  score: 5.6
   identity_position: independent-engineer
-  framing: Independent engineer and educator applying 11 years of teaching complex
-    systems (2,000+ students) and 18 months of daily Claude-powered production (103
-    repos, 810K+ words, 42 published essays) to build Anthropic's founding developer
-    relations function from practitioner experience.
+  framing: AI systems builder applying Claude to beneficial use cases — pipeline
+    infrastructure and agentic systems as evidence of applied AI capability
   lead_organs:
   - III
-  - VI
-  - V
+  - IV
   dimensions:
-    mission_alignment: 9
-    evidence_match: 7
-    track_record_fit: 5
+    mission_alignment: 7
+    evidence_match: 4
+    track_record_fit: 3
     financial_alignment: 6
     effort_to_value: 5
     strategic_value: 8
@@ -38,10 +35,9 @@ fit:
 submission:
   effort_level: standard
   blocks_used: {}
-  variant_ids:
-    cover_letter: cover-letters/anthropic-founding-developer-relations-lead-alchemized
+  variant_ids: {}
   materials_attached:
-  - resumes/batch-02/anthropic-founding-developer-relations-lead-resume.pdf
+  - resumes/batch-02/anthropic-applied-ai-engineer-beneficial-deployments-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'
@@ -52,7 +48,12 @@ conversion:
   feedback: null
 tags:
 - auto-sourced
-- job-tier-1
+- job-tier-3
 source: source_jobs.py
 last_touched: "2026-02-25"
 notes: 'Location: San Francisco, CA | New York City, NY'
+withdrawal_reason:
+  reason: low_fit
+  detail: Low fit score, never progressed past research — emergency triage sprint
+  date: '2026-02-25'
+  reopen: false

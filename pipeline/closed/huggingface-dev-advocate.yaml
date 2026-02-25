@@ -1,8 +1,8 @@
 id: huggingface-dev-advocate
 name: HuggingFace Developer Advocate Engineer
 track: job
-status: staged
-outcome: null
+status: outcome
+outcome: withdrawn
 target:
   organization: Hugging Face
   url: https://huggingface.co
@@ -75,3 +75,8 @@ notes: |
   Honest gaps: Limited ML knowledge (but dev advocacy doesn't require training models).
   No prior dev advocate title (but teaching IS advocacy).
 last_touched: "2026-02-24"
+withdrawal_reason:
+  reason: effort_too_high
+  detail: Complex effort, poor fit score — withdrawn during emergency triage sprint
+  date: '2026-02-25'
+  reopen: false

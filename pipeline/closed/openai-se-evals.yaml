@@ -1,8 +1,8 @@
 id: openai-se-evals
 name: OpenAI Software Engineer Applied Evals
 track: job
-status: staged
-outcome: null
+status: outcome
+outcome: withdrawn
 target:
   organization: OpenAI
   url: https://openai.com
@@ -73,3 +73,8 @@ notes: |
   work. Limited ML knowledge (acknowledged in covenant-ark Section J) is a hard gap. Lowest
   mission alignment and strategic value of the job group. Effort better redirected to Tier 1-2.
 last_touched: "2026-02-24"
+withdrawal_reason:
+  reason: effort_too_high
+  detail: Complex effort, poor fit score — withdrawn during emergency triage sprint
+  date: '2026-02-25'
+  reopen: false
