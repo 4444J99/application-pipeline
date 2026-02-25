@@ -1,0 +1,76 @@
+id: anthropic-fde
+name: Anthropic Forward Deployed Engineer
+track: job
+status: submitted
+outcome: null
+target:
+  organization: Anthropic
+  url: https://anthropic.com
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/5074695008
+  portal: greenhouse
+deadline:
+  date: null
+  time: null
+  type: rolling
+amount:
+  value: 340000
+  currency: USD
+  type: salary
+  benefits_cliff_note: null
+fit:
+  score: 5.5
+  identity_position: independent-engineer
+  framing: Independent engineer with AI systems infrastructure experience and 11 years
+    teaching experience as customer-facing communication evidence
+  lead_organs:
+  - III
+  - IV
+  dimensions:
+    mission_alignment: 5
+    evidence_match: 4
+    track_record_fit: 4
+    financial_alignment: 7
+    effort_to_value: 7
+    strategic_value: 8
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: complex
+  blocks_used: {}
+  variant_ids: 
+    cover_letter: cover-letters/anthropic-fde-custom-agents
+  materials_attached:
+  - resumes/anthropic-fde-resume.html
+  - resumes/anthropic-fde-resume.pdf
+  - resumes/multimedia-specialist.pdf
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-02-14'
+  qualified: '2026-02-16'
+  materials_ready: '2026-02-23'
+  submitted: '2026-02-24'
+  acknowledged: null
+  interview: null
+  outcome_date: null
+portal_fields:
+  fields:
+  - name: resume
+  - name: cover_letter
+  - name: portfolio
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+  - job-tier-4
+  - deprioritize
+source: 04-application-tracker.md
+notes: |
+  Salary range $280,000-$400,000.
+  PRIORITY: Tier 4 — Deprioritize. "Forward-deployed" means customer-facing enterprise
+  engineering — building custom solutions for enterprise customers on-site. Core gap (no
+  enterprise customer-facing tech experience) is structural, not frameable. Teaching shows
+  communication but not enterprise deployment context. High strategic value (8) is tempting
+  but probability too low — effort better spent on SE Claude Code application.
+last_touched: "2026-02-24"
