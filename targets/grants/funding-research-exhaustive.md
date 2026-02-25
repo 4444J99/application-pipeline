@@ -63,7 +63,7 @@ This is the **exhaustive master list** — every opportunity discovered across 5
 ### Awesome Foundation NYC Chapter
 
 - **Amount:** $1,000, no strings attached, monthly
-- **Why it fits:** Zero restrictions. The 100-repo organ system is exactly the kind of "awesome" project they fund. No reporting requirements.
+- **Why it fits:** Zero restrictions. KRYPTO-VELAMEN (the living queer archive) is a high-fit "awesome" project for NYC community funding. Framing shifts from broad infrastructure to interactive history/workshops.
 - **URL:** https://www.awesomefoundation.org/en/chapters/nyc
 - **Benefits cliff:** SNAP-safe.
 

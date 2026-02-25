@@ -18,29 +18,31 @@ amount:
   type: lump_sum
   benefits_cliff_note: null
 fit:
-  score: 7.9
-  identity_position: systems-artist
-  framing: Systems artist with small-scale project seeking community-driven micro-funding
+  score: 8.2
+  identity_position: community-practitioner
+  framing: Queer cultural archivist seeking micro-funding for a community-driven history
+    project
   lead_organs:
   - II
+  - V
   - VI
-  - META
   dimensions:
-    mission_alignment: 9
-    evidence_match: 8
+    mission_alignment: 10
+    evidence_match: 9
     track_record_fit: 8
     financial_alignment: 9
     effort_to_value: 9
-    strategic_value: 3
+    strategic_value: 4
     deadline_feasibility: 9
     portal_friction: 6
 submission:
   effort_level: quick
   blocks_used:
     artist_statement: identity/2min
-    project_description: projects/organvm-system
-    methodology: methodology/governance-as-art
-    evidence: evidence/metrics-snapshot
+    project_description: projects/krypto-velamen
+    queer_content: pitches/gay-lesbian-review
+    methodology: methodology/process-as-product
+    evidence: evidence/work-samples
   variant_ids:
     pitch: variants/project-pitches/awesome-foundation-nyc.md
   materials_attached: []
