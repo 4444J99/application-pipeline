@@ -1,7 +1,7 @@
 id: awesome-foundation
 name: Awesome Foundation NYC
 track: emergency
-status: staged
+status: drafted
 outcome: null
 target:
   organization: Awesome Foundation
@@ -41,7 +41,8 @@ submission:
     project_description: projects/organvm-system
     methodology: methodology/governance-as-art
     evidence: evidence/metrics-snapshot
-  variant_ids: {}
+  variant_ids:
+    pitch: variants/project-pitches/awesome-foundation-nyc.md
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
