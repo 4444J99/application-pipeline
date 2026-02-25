@@ -49,7 +49,7 @@ timeline:
   qualified: '2026-02-16'
   materials_ready: '2026-02-23'
   submitted: '2026-02-24'
-  acknowledged: null
+  acknowledged: '2026-02-25'
   interview: null
   outcome_date: null
 portal_fields:
@@ -58,7 +58,7 @@ portal_fields:
   - name: cover_letter
   - name: portfolio
 conversion:
-  response_received: false
+  response_received: true
   response_type: null
   time_to_response_days: null
   feedback: null
@@ -73,4 +73,4 @@ notes: |
   The DX role values someone who makes complex systems understandable — that's what the
   essays and teaching demonstrate.
   Gap to bridge: "Lead" implies team management experience, which is missing.
-last_touched: "2026-02-24"
+last_touched: '2026-02-25'

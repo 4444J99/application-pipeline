@@ -2,7 +2,7 @@ id: notion-software-engineer-developer-experience
 name: Notion Software Engineer, Developer Experience
 track: job
 status: submitted
-outcome: null
+outcome: withdrawn
 target:
   organization: Notion
   url: https://jobs.ashbyhq.com/notion
@@ -43,6 +43,7 @@ timeline:
   researched: '2026-02-24'
 conversion:
   response_received: false
+  outcome_reason: location-ineligible
   response_type: null
   time_to_response_days: null
   feedback: null
@@ -50,5 +51,5 @@ tags:
 - auto-sourced
 - curated-fit
 source: source_jobs.py
-last_touched: "2026-02-24"
-notes: 'Location: Hyderabad, India'
+last_touched: '2026-02-25'
+notes: 'Location: Hyderabad, India — requires on-site 3 days/week, not applicable'

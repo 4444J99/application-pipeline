@@ -2,7 +2,7 @@ id: cursor-software-engineer-client-infrastructure
 name: Cursor Software Engineer, Client Infrastructure
 track: job
 status: submitted
-outcome: null
+outcome: expired
 target:
   organization: Cursor
   url: https://jobs.ashbyhq.com/cursor
@@ -52,4 +52,4 @@ tags:
 - curated-fit
 source: source_jobs.py
 last_touched: "2026-02-24"
-notes: 'Location: SF / NY / Remote'
+notes: 'Location: SF / NY / Remote. Job posting removed as of 2026-02-25 — listing returns 404.'

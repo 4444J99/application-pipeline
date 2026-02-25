@@ -50,7 +50,7 @@ timeline:
   qualified: '2026-02-16'
   materials_ready: '2026-02-18'
   submitted: '2026-02-24'
-  acknowledged: null
+  acknowledged: '2026-02-25'
   interview: null
   outcome_date: null
 portal_fields:
@@ -124,7 +124,7 @@ portal_fields:
     required: true
     note: "Combined single PDF. Up to 2 images OR up to 2 video/audio samples (2 min total). Video/audio links go INSIDE the PDF with passwords if needed."
 conversion:
-  response_received: false
+  response_received: true
   response_type: null
   time_to_response_days: null
   feedback: null
@@ -139,4 +139,4 @@ notes: |
   Technician FAQ: articulate why work is good match for theater/dance/jazz.
   DDF mandate prioritizes dance/jazz/theater — "Other" discipline applicants
   remain eligible but not prioritized. Mozilla side more open to cross-disciplinary.
-last_touched: '2026-02-24'
+last_touched: '2026-02-25'

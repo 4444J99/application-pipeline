@@ -42,8 +42,10 @@ submission:
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'
+  submitted: '2026-02-24'
+  acknowledged: '2026-02-25'
 conversion:
-  response_received: false
+  response_received: true
   response_type: null
   time_to_response_days: null
   feedback: null
@@ -51,5 +53,5 @@ tags:
 - auto-sourced
 - curated-fit
 source: source_jobs.py
-last_touched: "2026-02-24"
+last_touched: '2026-02-25'
 notes: 'Location: New York City'
