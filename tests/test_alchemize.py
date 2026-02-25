@@ -482,7 +482,7 @@ def test_phase_map_includes_resume_selection(tmp_path):
         result = phase_map(entry, "research text", None)
         assert "## Resume Selection" in result
         assert "systems-artist" in result
-        assert "resumes/systems-artist-resume.pdf" in result
+        assert "resumes/base/systems-artist-resume.pdf" in result
     finally:
         alchemize.BLOCKS_DIR = original_blocks_dir
         alchemize.STRATEGY_DIR = original_strategy_dir

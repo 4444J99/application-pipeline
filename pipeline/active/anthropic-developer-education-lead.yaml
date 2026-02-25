@@ -40,7 +40,7 @@ submission:
   variant_ids:
     cover_letter: cover-letters/anthropic-developer-education-lead-alchemized
   materials_attached:
-  - resumes/educator-resume.pdf
+  - resumes/base/educator-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'

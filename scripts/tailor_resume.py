@@ -35,7 +35,7 @@ from pipeline_lib import (
 
 WORK_DIR = Path(__file__).resolve().parent / ".alchemize-work"
 RESUMES_DIR = MATERIALS_DIR / "resumes"
-BASE_RESUME = RESUMES_DIR / "independent-engineer-resume.html"
+BASE_RESUME = RESUMES_DIR / "base" / "independent-engineer-resume.html"
 
 # Section markers in the HTML template
 SECTION_MARKERS = {
@@ -307,8 +307,10 @@ def integrate_tailored_sections(entry_id: str, output_text: str) -> Path | None:
             flags=re.DOTALL,
         )
 
-    # Write per-entry resume HTML
-    output_path = RESUMES_DIR / f"{entry_id}-resume.html"
+    # Write per-entry resume HTML to batch-01/
+    batch_dir = RESUMES_DIR / "batch-01"
+    batch_dir.mkdir(parents=True, exist_ok=True)
+    output_path = batch_dir / f"{entry_id}-resume.html"
     output_path.write_text(html)
     print(f"  Wrote: {output_path.relative_to(REPO_ROOT)}")
     return output_path
@@ -332,7 +334,7 @@ def wire_resume_to_entry(entry_id: str) -> bool:
         print(f"  Error: Invalid submission block in {entry_id}")
         return False
 
-    new_ref = f"resumes/{entry_id}-resume.html"
+    new_ref = f"resumes/batch-01/{entry_id}-resume.html"
     materials = submission.get("materials_attached", [])
     if isinstance(materials, list) and new_ref in materials:
         print(f"  {entry_id}: Already wired to {new_ref}")
@@ -340,7 +342,7 @@ def wire_resume_to_entry(entry_id: str) -> bool:
 
     # Update the YAML file — replace the generic resume reference
     content = filepath.read_text()
-    old_ref = "resumes/independent-engineer-resume.html"
+    old_ref = "resumes/base/independent-engineer-resume.html"
     if old_ref in content:
         content = content.replace(
             f"- {old_ref}",

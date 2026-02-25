@@ -30,14 +30,14 @@ from pipeline_lib import (
 
 # --- Constants ---
 
-DEFAULT_RESUME = "resumes/multimedia-specialist.pdf"
+DEFAULT_RESUME = "resumes/base/multimedia-specialist.pdf"
 
 RESUME_BY_IDENTITY = {
-    "independent-engineer": "resumes/independent-engineer-resume.pdf",
-    "systems-artist": "resumes/systems-artist-resume.pdf",
-    "creative-technologist": "resumes/creative-technologist-resume.pdf",
-    "community-practitioner": "resumes/community-practitioner-resume.pdf",
-    "educator": "resumes/educator-resume.pdf",
+    "independent-engineer": "resumes/base/independent-engineer-resume.pdf",
+    "systems-artist": "resumes/base/systems-artist-resume.pdf",
+    "creative-technologist": "resumes/base/creative-technologist-resume.pdf",
+    "community-practitioner": "resumes/base/community-practitioner-resume.pdf",
+    "educator": "resumes/base/educator-resume.pdf",
 }
 
 RESUME_TRACKS = {"job", "fellowship", "grant", "residency", "prize", "program"}

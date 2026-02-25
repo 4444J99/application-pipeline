@@ -37,8 +37,8 @@ submission:
   variant_ids:
     cover_letter: cover-letters/openai-developer-experience-engineer-alchemized
   materials_attached:
-  - resumes/openai-developer-experience-engineer-resume.html
-  - resumes/openai-developer-experience-engineer-resume.pdf
+  - resumes/batch-01/openai-developer-experience-engineer-resume.html
+  - resumes/batch-01/openai-developer-experience-engineer-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'

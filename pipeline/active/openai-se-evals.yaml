@@ -40,9 +40,9 @@ submission:
   variant_ids: 
     cover_letter: cover-letters/openai-se-applied-evals
   materials_attached:
-  - resumes/openai-se-evals-resume.html
-  - resumes/openai-se-evals-resume.pdf
-  - resumes/multimedia-specialist.pdf
+  - resumes/batch-01/openai-se-evals-resume.html
+  - resumes/batch-01/openai-se-evals-resume.pdf
+  - resumes/base/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'

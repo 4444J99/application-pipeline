@@ -218,27 +218,27 @@ def test_enrich_materials_dry_run():
 
 def test_select_resume_independent_engineer():
     entry = {"fit": {"identity_position": "independent-engineer"}}
-    assert select_resume(entry) == "resumes/independent-engineer-resume.pdf"
+    assert select_resume(entry) == "resumes/base/independent-engineer-resume.pdf"
 
 
 def test_select_resume_systems_artist():
     entry = {"fit": {"identity_position": "systems-artist"}}
-    assert select_resume(entry) == "resumes/systems-artist-resume.pdf"
+    assert select_resume(entry) == "resumes/base/systems-artist-resume.pdf"
 
 
 def test_select_resume_creative_technologist():
     entry = {"fit": {"identity_position": "creative-technologist"}}
-    assert select_resume(entry) == "resumes/creative-technologist-resume.pdf"
+    assert select_resume(entry) == "resumes/base/creative-technologist-resume.pdf"
 
 
 def test_select_resume_community_practitioner():
     entry = {"fit": {"identity_position": "community-practitioner"}}
-    assert select_resume(entry) == "resumes/community-practitioner-resume.pdf"
+    assert select_resume(entry) == "resumes/base/community-practitioner-resume.pdf"
 
 
 def test_select_resume_educator():
     entry = {"fit": {"identity_position": "educator"}}
-    assert select_resume(entry) == "resumes/educator-resume.pdf"
+    assert select_resume(entry) == "resumes/base/educator-resume.pdf"
 
 
 def test_select_resume_unknown_position_falls_back():

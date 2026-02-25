@@ -36,7 +36,7 @@ submission:
   blocks_used: {}
   variant_ids: {}
   materials_attached:
-  - resumes/independent-engineer-resume.html
+  - resumes/base/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'
