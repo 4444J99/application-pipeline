@@ -1,3 +1,10 @@
+# Cover Letter: MongoDB Senior Developer Advocate
+
+**Role:** MongoDB Senior Developer Advocate
+**Apply:** https://www.mongodb.com/careers/job/?gh_jid=7490333
+
+---
+
 To the Technical Marketing Team at MongoDB,
 
 I am writing to apply for the Senior Developer Advocate position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a deep, firsthand discipline for the developer experience. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the community—and the AI agents—that interact with it.
