@@ -1,3 +1,10 @@
+# Cover Letter: Datadog Senior Technical Writer
+
+**Role:** Datadog Senior Technical Writer
+**Apply:** https://careers.datadoghq.com/detail/7642830/?gh_jid=7642830
+
+---
+
 To the Technical Writing Team at Datadog,
 
 I am writing to apply for the Senior Technical Writer position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to "Docs as Code." My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable documentation for the developers—and AI agents—that interact with it.
