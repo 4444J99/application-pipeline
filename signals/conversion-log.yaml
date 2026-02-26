@@ -427,3 +427,18 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: cloudflare-software-engineer-developer-tools-and-productivity
+  submitted: '2026-02-26'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/cloudflare-software-engineer-developer-tools-and-productivity-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
