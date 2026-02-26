@@ -1,0 +1,14 @@
+Developer advocacy at an API-first company requires someone who can write production code, create compelling content, and bridge the gap between engineering teams and the developer community. I've spent five years doing all three — building production-grade infrastructure, publishing extensively about technical methodology, and creating developer-facing documentation designed to reduce friction.
+
+The engineering evidence: 103 repositories across 8 GitHub organizations, 21,160 code files, 3,610 test files, and 94 CI/CD pipelines. The system includes API integration layers (Greenhouse and Ashby job board APIs with structured HTTP clients, error handling, and rate limiting), MCP server infrastructure providing structured capabilities to AI development tools, and CLI tooling with consistent interface patterns. I build at the intersection of APIs, developer tools, and automation — the same space where Deepgram's developer advocacy lives.
+
+The content evidence: 810,000+ words of documentation, including 42 published essays exploring technical methodology, architectural decisions, and development processes. 100% documentation coverage across all repositories. I've written tutorials, architecture guides, API integration documentation, and long-form technical essays. I treat content creation as an engineering discipline — with revision cycles, consistent voice, and measurable quality standards.
+
+The teaching evidence: 11 years of university teaching (2,000+ students across composition and technical communication courses). I know how to structure explanations for different technical levels, how to build from simple examples to complex integrations, and how to create content that respects the developer's time while being thorough enough to be genuinely useful.
+
+The AI platform angle: I've built multi-agent orchestration systems and documented an "AI-conductor" methodology across 142K words of published research. I have direct experience integrating AI APIs into production workflows — not just calling endpoints, but building reliable systems that handle the full complexity of API-based AI services: error handling, rate limiting, output validation, and composability. As Deepgram builds its AI-powered speech and audio platform, this kind of practitioner experience with AI API integration is directly relevant to advocating for developers building on the platform.
+
+The gap: I have not worked in developer advocacy at a company, and I don't have direct experience with speech-to-text or audio processing APIs. What I bring is the rare combination of engineering credibility, content creation at scale, and teaching experience — the ability to represent a technical product to a developer community with both depth and clarity.
+
+Portfolio: https://4444j99.github.io/portfolio/
+GitHub: https://github.com/4444j99

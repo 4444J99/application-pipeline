@@ -1,0 +1,38 @@
+# Generated for: MongoDB Senior Developer Advocate
+# Job: mongodb/7490333
+
+# Preferred Name
+# Type: text | Required
+question_62326036: Anthony
+
+# Website
+# Type: text | Optional
+question_62326037: "https://4444j99.github.io/portfolio/"
+
+# LinkedIn Profile
+# Type: text | Optional
+question_62326038: "https://www.linkedin.com/in/ajpadavano/"
+
+# Would you like to stay up to date with MongoDB Culture and Careers content?
+# Type: select | Options: Yes, No | Optional
+question_62326039: Yes
+
+# How did you learn about this job?
+# Type: select | Required
+question_62326040: LinkedIn
+
+# If you answered MongoDB Employee, MongoDB Event, or Other, please specify here:
+# Type: text | Optional
+question_62326041: ""
+
+# Receive alerts for similar jobs?
+# Type: select | Options: Yes, No | Optional
+question_62326042: Yes
+
+# Will you now or in the future require employment sponsorship?
+# Type: select | Options: Yes, No | Required
+question_62326043: No
+
+# Have you ever worked at MongoDB before?
+# Type: select | Options: Yes, No | Required
+question_62326044: No

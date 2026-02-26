@@ -1,0 +1,108 @@
+# Generated for: Anthropic Software Engineer Claude Code
+# Job: anthropic/4816198008
+# Edit answers below, then run with --check-answers to validate
+
+# Website
+# Type: text | Optional
+question_11884767008: "https://4444j99.github.io/portfolio/"
+
+# LinkedIn Profile
+# Type: text | Optional
+question_11884768008: ""
+
+# When is the earliest you would want to start working with us?
+# Type: text | Optional
+question_11884769008: "Immediately available"
+
+# Do you have any deadlines or timeline considerations we should be aware of?
+# Type: text | Optional
+question_11884770008: "No specific deadlines"
+
+# Are you open to relocation for this role?
+# Type: select | Options: Yes, No | Required
+question_11884771008: "Yes"
+
+# What is the address from which you plan on working? If you would need to relocate, please type "relocating".
+# Type: text | Optional
+question_11884772008: "New York City"
+
+# (Optional) Personal Preferences
+# Type: text | Required
+question_11884773008: "Anthony Padavano — he/him"
+
+# Are you open to working in-person in one of our offices 25% of the time?
+# Type: select | Options: Yes, No | Required
+question_11884774008: "Yes"
+
+# AI Policy for Application
+# Type: select | Options: Yes, No | Required
+question_11884775008: "Yes"
+
+# Why Anthropic?
+# Type: textarea | Required
+question_11884776008: |
+  I use Claude Code every day to build CLI developer tools — this application pipeline, a Greenhouse API submission script, a multi-agent orchestrator, a portfolio site build system. The tool I rely on most is the one this team builds, and I want to make it better for practitioners like me.
+
+  What makes my background unusual is the AI-conductor methodology I've developed over the past four months. I work as a solo human architect directing AI coding agents to produce team-equivalent output: 103 repositories across 8 GitHub organizations, 21,000 code files, 3,600 tests, 94 CI/CD pipelines. The system is governed by CLAUDE.md files in every repo, 32 AI agent definitions, 90+ chatmodes, and 128 GitHub Actions workflows — all infrastructure that configures AI as a development workforce.
+
+  This means I've been living inside the problem Claude Code solves. I know what makes AI-assisted development productive: strong onboarding documents that give agents context, constitutional constraints that prevent unsafe operations, promotion state machines that enforce quality gates. I've also felt every friction point — context window limits, tool permission flows, multi-file coordination across repos.
+
+  The eight-organ system applies production governance to creative infrastructure. orchestration-start-here is a reading order and dependency map that makes 103 repos navigable from a single entry point. agentic-titan implements multi-agent orchestration across 18 development phases with 1,276 tests. agent--claude-smith is a multi-agent system built on the Claude Agent SDK with session persistence and self-correction hooks. These aren't toy projects — they're working infrastructure I depend on daily.
+
+  I want to bring that practitioner perspective to Claude Code: someone who has built the developer tooling that makes AI-augmented development governable, and who understands both the power and the limitations from direct experience.
+
+# Will you now or will you in the future require employment visa sponsorship to work in the country in which the job you're applying for is located?
+# Type: select | Options: Yes, No | Required
+question_11884777008: "No"
+
+# Do you require visa sponsorship?
+# Type: select | Options: Yes, No | Required
+question_11884778008: "No"
+
+# Additional Information
+# Type: textarea | Required
+question_11884779008: |
+  I want to address the screening questions directly. I answered No to several questions about team-scale adoption — testing infrastructure used by 10+ developers, tools adopted by 20+ engineers, team productivity responsibility. These are honest answers: I'm a solo practitioner, not a team engineering lead.
+
+  Here's what I built instead. Over four months, I designed an AI-conductor system where the "team" is AI agent sessions consuming infrastructure I architected:
+
+  - 32 AI agent definitions and 90+ chatmodes that configure how AI coding agents approach different tasks — these are developer tools consumed by AI, not humans
+  - 128 GitHub Actions workflows (18 reusable templates) providing CI/CD across 103 repositories
+  - CLAUDE.md files in every repo serving as onboarding documents that give AI agents the context they need to work effectively
+  - A machine-readable registry (registry-v2.json) tracking all 103 repos with dependency validation, promotion state machines, and health checks
+
+  The output demonstrates team-equivalent productivity through AI orchestration: 21,000 code files, 3,600 tests, 810,000+ words of documentation, 94 CI/CD pipelines — all built by one human directing AI agents in ~4 months. The system enforces constitutional constraints (no dependency back-edges, forward-only promotion, transitive depth limits) that make AI-generated output governable.
+
+  This is precisely the paradigm Claude Code enables. The gap in my experience is human team adoption. The strength is that I've been building and stress-testing the exact workflow — human architect + AI coding agents — that Claude Code is designed to support. I understand the developer tooling needs from the inside.
+
+# Have you ever interviewed at Anthropic before?
+# Type: select | Options: Yes, No | Required
+question_11884780008: "No"
+
+# Have you built and maintained large-scale TypeScript applications (>50k lines of code) in the last 2 years?
+# Type: select | Options: Yes, No | Required
+question_11884781008: "No"
+
+# Have you created or significantly improved build systems for TypeScript/JavaScript projects?
+# Type: select | Options: Yes, No | Required
+question_11884782008: "Yes"
+
+# Have you designed and implemented testing infrastructure used by 10+ other developers?
+# Type: select | Options: Yes, No | Required
+question_11884783008: "No"
+
+# Have you worked with modern JavaScript runtimes beyond Node.js (like Bun or Deno)?
+# Type: select | Options: Yes, No | Required
+question_11884784008: "No"
+
+# Have you created custom ESLint rules or TypeScript compiler plugins?
+# Type: select | Options: Yes, No | Required
+question_11884785008: "No"
+
+# Have you created developer tools that were adopted by 20+ engineers?
+# Type: select | Options: Yes, No | Required
+question_11884786008: "No"
+
+# Have you worked in roles where you were responsible for developer productivity?
+# Type: select | Options: Yes, No | Required
+question_11884787008: "No"

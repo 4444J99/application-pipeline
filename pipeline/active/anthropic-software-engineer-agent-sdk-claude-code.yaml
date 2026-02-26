@@ -39,6 +39,7 @@ submission:
     methodology: methodology/ai-conductor
   variant_ids: {}
   materials_attached:
+  - resumes/batch-03/anthropic-software-engineer-agent-sdk-claude-code/anthropic-software-engineer-agent-sdk-claude-code-resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:

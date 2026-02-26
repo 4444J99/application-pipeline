@@ -1,0 +1,64 @@
+# Generated for: Anthropic Software Engineer, Agent SDK - Claude Code
+# Job: anthropic/5126691008
+
+# (Optional) Personal Preferences
+# Type: text | Optional
+question_15088972008: I thrive in high-intensity, engineering-driven environments focused on building reliable agent infrastructure for real-world developer workflows.
+
+# Website
+# Type: text | Optional
+question_15088973008: "https://4444j99.github.io/portfolio/"
+
+# Are you open to working in-person in one of our offices 25% of the time?
+# Type: select | Options: Yes, No | Required
+question_15088974008: Yes
+
+# When is the earliest you would want to start working with us?
+# Type: text | Optional
+question_15088975008: Immediate
+
+# Do you have any deadlines or timeline considerations we should be aware of?
+# Type: text | Optional
+question_15088976008: None
+
+# AI Policy for Application
+# Type: select | Options: Yes, No | Required
+question_15088977008: Yes
+
+# Why Anthropic?
+# Type: textarea | Required
+question_15088978008: |
+  I want to build the agent SDK that professional engineers actually depend on. I've spent the last year using Claude Code daily as my primary development tool while simultaneously building multi-agent orchestration systems — agentic-titan (1,095 tests, 18 development phases) and recursive-engine (1,254 tests, 85% coverage, custom DSL with 21 organ handlers). This gives me direct product intuition for where agent SDKs succeed and where they create friction.
+
+  The gap between what an agent can technically do and what a developer can reliably compose into a workflow — that gap is the design space for agent SDKs. I've experienced this gap daily: the context management challenges, the tool routing decisions, the state persistence problems, the error recovery patterns. My 42 published essays (~142K words) documenting the "AI-conductor" methodology are essentially field notes from the exact developer experience that the Agent SDK team is building for.
+
+  Anthropic's approach to building safe, reliable AI aligns with how I think about infrastructure. My 103-repository system enforces zero-violation dependency governance, formal state machines, and automated quality gates — the same engineering discipline required to build an agent SDK that developers can trust in production. I want to bring this discipline and practitioner experience to the team defining how agents compose, delegate, and recover at scale.
+
+# Do you require visa sponsorship?
+# Type: select | Options: Yes, No | Required
+question_15088979008: No
+
+# Will you now or will you in the future require employment visa sponsorship?
+# Type: select | Options: Yes, No | Required
+question_15088980008: No
+
+# Additional Information
+# Type: textarea | Optional
+question_15088981008: |
+  Key projects directly relevant to agent SDK work: agentic-titan (multi-agent orchestration, 1,095 tests), recursive-engine (custom DSL, 1,254 tests, 85% coverage), and MCP server infrastructure providing structured tool capabilities to AI agents. I also maintain the application pipeline that produced this submission — a 14-script CLI system demonstrating the structured workflow patterns that agent SDKs need to support. All work is publicly verifiable on GitHub.
+
+# LinkedIn Profile
+# Type: text | Optional
+question_15088982008: "https://www.linkedin.com/in/ajpadavano/"
+
+# Are you open to relocation for this role?
+# Type: select | Options: Yes, No | Required
+question_15088983008: Yes
+
+# What is the address from which you plan on working?
+# Type: text | Optional
+question_15088984008: relocating
+
+# Have you ever interviewed at Anthropic before?
+# Type: select | Options: Yes, No | Required
+question_15088985008: No

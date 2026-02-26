@@ -46,7 +46,7 @@ submission:
   variant_ids:
     cover_letter: cover-letters/anthropic-se-claude-code
   materials_attached:
-    - resumes/batch-01/anthropic-se-claude-code-resume.pdf
+    - resumes/batch-01/anthropic-se-claude-code/anthropic-se-claude-code-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'

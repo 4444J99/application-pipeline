@@ -43,8 +43,8 @@ submission:
   variant_ids:
     cover_letter: cover-letters/perplexity-full-stack-software-engineer-applied-ai-alchemized
   materials_attached:
-  - resumes/batch-01/perplexity-full-stack-software-engineer-applied-ai-resume.html
-  - resumes/batch-01/perplexity-full-stack-software-engineer-applied-ai-resume.pdf
+  - resumes/batch-01/perplexity-full-stack-software-engineer-applied-ai/perplexity-full-stack-software-engineer-applied-ai-resume.html
+  - resumes/batch-01/perplexity-full-stack-software-engineer-applied-ai/perplexity-full-stack-software-engineer-applied-ai-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'

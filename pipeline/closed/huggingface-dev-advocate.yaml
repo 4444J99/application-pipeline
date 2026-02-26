@@ -46,8 +46,8 @@ submission:
   variant_ids: 
     cover_letter: cover-letters/huggingface-dev-advocate-hub-enterprise
   materials_attached:
-  - resumes/batch-01/huggingface-dev-advocate-resume.html
-  - resumes/batch-01/huggingface-dev-advocate-resume.pdf
+  - resumes/batch-01/huggingface-dev-advocate/huggingface-dev-advocate-resume.html
+  - resumes/batch-01/huggingface-dev-advocate/huggingface-dev-advocate-resume.pdf
   - resumes/base/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:

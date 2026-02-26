@@ -1,0 +1,40 @@
+# Generated for: Figma Software Engineer, Developer Experience
+# Job: figma/5790627004
+# Edit answers below, then run with --check-answers to validate
+
+# LinkedIn Profile
+# Type: text | Optional
+question_15317091004: ""
+
+# Other Website
+# Type: text | Optional
+question_15317092004: "https://4444j99.github.io/portfolio/"
+
+# Why do you want to join Figma?
+# Type: textarea | Required
+question_15317093004: |
+  I want to join Figma because developer experience is the infrastructure challenge I care about most. I have spent five years building DX tooling across 103 public repositories — documentation standards, CI/CD pipelines, CLI tools, and design systems — all aimed at making the next developer's experience frictionless. Figma's platform serves millions of designers and developers, and the developer experience role shapes how those developers interact with Figma's APIs, plugins, and platform capabilities. I want to bring the same infrastructure-as-experience mindset I apply to my own systems — where every error message is a user interface, every onboarding document is a product feature, and the hardest thing to build is something that feels effortless to use.
+
+# Pronouns
+# Type: select | Options: she/her/hers, he/him/his, they/them/theirs, self-describe | Optional
+question_15317094004: "he/him"
+
+# Additional Information
+# Type: textarea | Optional
+question_15317095004: ""
+
+# From where do you intend to work? 
+# Type: text | Required
+question_15317096004: "New York, NY"
+
+# Preferred First Name
+# Type: text | Optional
+question_15317097004: "Anthony"
+
+# Are you authorized to work in the country for which you applied? 
+# Type: select | Options: Yes, No | Required
+question_15317098004: "Yes"
+
+# Have you ever worked for Figma before, as an employee or a contractor/consultant? 
+# Type: select | Options: Yes, No | Required
+question_15317099004: "No"

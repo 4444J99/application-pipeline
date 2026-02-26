@@ -1,0 +1,80 @@
+# Generated for: Anthropic Software Engineer, Windows - Claude Code
+# Job: anthropic/5098506008
+
+# Preferred First Name
+# Type: text | Optional
+preferred_name: Anthony
+
+# Why Anthropic?
+# Type: textarea | Required
+question_14798651008: |
+  Claude Code is redefining how engineers write software, and bringing it to Windows means reaching the majority of professional developers who've been waiting for first-class agentic tooling on their platform. I want to build that. I'm a daily power user of Claude Code who has documented the AI-augmented development experience across 42 essays (~142K words), and I have extensive CLI tooling engineering experience — 14-script Python CLI systems with consistent UX patterns, 94 CI/CD pipelines, and MCP server infrastructure.
+
+  I'm direct about the gap: my primary environment is macOS, not Windows. But the engineering fundamentals transfer — CLI architecture, shell integration patterns, testing discipline (3,610 test files across my system), and the product intuition for what makes a coding tool feel reliable. I'm prepared to ramp on Windows-specific engineering quickly because the underlying challenge — building a cross-platform CLI tool that developers trust — is the challenge I've been solving across my entire practice.
+
+  Anthropic's commitment to safety and reliability matters here. A CLI tool that developers depend on for their daily work must be rock-solid on every platform. The same engineering discipline that maintains 43 validated dependency edges with 0 violations across 103 repositories is the discipline required to ship Claude Code on Windows without compromising reliability.
+
+# Have you built CLI tools or IDE extensions/plugins before?
+# Type: text | Required
+question_14832881008: "Yes. I have built multiple CLI tool systems: a 14-script Python CLI pipeline with consistent interface patterns (--target, --dry-run, --batch, --yes), shared library architecture, and state machine validation; MCP server infrastructure with CLI management tooling; and automated build/deploy CLI tools coordinating HTML-to-PDF conversion, search indexing, and static site generation across 94 repositories."
+
+# Do you have experience with designing, building, and maintaining Windows?
+# Type: text | Required
+question_14832882008: "Limited direct Windows experience. My primary development environment is macOS. I have cross-platform engineering experience (shell-agnostic tooling, environment-adaptive configuration, path handling across systems) and am prepared to ramp on Windows-specific development including Win32 APIs, Windows Terminal integration, and platform-specific testing."
+
+# Have you developed and maintained PowerShell integrations and scripts?
+# Type: text | Required
+question_14832883008: "No direct PowerShell experience. My shell scripting is in bash/zsh with set -euo pipefail patterns. I understand shell integration principles (environment variables, path management, process spawning, signal handling) and am prepared to learn PowerShell integration patterns."
+
+# (Optional) Personal Preferences
+# Type: text | Optional
+question_14798645008: I thrive in high-intensity environments focused on cross-platform reliability and developer tool quality.
+
+# Website
+# Type: text | Optional
+question_14798646008: "https://4444j99.github.io/portfolio/"
+
+# Are you open to working in-person in one of our offices 25% of the time?
+# Type: select | Options: Yes, No | Required
+question_14798647008: Yes
+
+# When is the earliest you would want to start working with us?
+# Type: text | Optional
+question_14798648008: Immediate
+
+# Do you have any deadlines or timeline considerations we should be aware of?
+# Type: text | Optional
+question_14798649008: None
+
+# AI Policy for Application
+# Type: select | Options: Yes, No | Required
+question_14798650008: Yes
+
+# Do you require visa sponsorship?
+# Type: select | Options: Yes, No | Required
+question_14798652008: No
+
+# Will you now or will you in the future require employment visa sponsorship?
+# Type: select | Options: Yes, No | Required
+question_14798653008: No
+
+# Additional Information
+# Type: textarea | Optional
+question_14798654008: |
+  I want to be transparent: Windows is a growth area for me, not an existing strength. What I bring is the engineering discipline (3,610 test files, 94 CI/CD pipelines, zero-violation dependency governance) and the CLI tooling experience that transfers directly. My 103-repository system and daily Claude Code usage give me deep product intuition for what makes a coding CLI reliable. All work is publicly verifiable on GitHub.
+
+# LinkedIn Profile
+# Type: text | Optional
+question_14798655008: "https://www.linkedin.com/in/ajpadavano/"
+
+# Are you open to relocation for this role?
+# Type: select | Options: Yes, No | Required
+question_14798656008: Yes
+
+# What is the address from which you plan on working?
+# Type: text | Optional
+question_14798657008: relocating
+
+# Have you ever interviewed at Anthropic before?
+# Type: select | Options: Yes, No | Required
+question_14798658008: No

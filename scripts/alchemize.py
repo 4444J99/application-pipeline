@@ -19,6 +19,7 @@ Usage:
 import argparse
 import json
 import re
+import shutil
 import subprocess
 import sys
 from datetime import date
@@ -56,6 +57,8 @@ from enrich import RESUME_BY_IDENTITY, select_resume
 WORK_DIR = Path(__file__).resolve().parent / ".alchemize-work"
 STRATEGY_DIR = REPO_ROOT / "strategy"
 TARGETS_DIR = REPO_ROOT / "targets"
+RESUMES_DIR = MATERIALS_DIR / "resumes"
+CURRENT_BATCH = "batch-03"
 
 PHASES = ("intake", "research", "map", "synthesize")
 
@@ -780,6 +783,12 @@ def write_cover_letter_variant(entry_id: str, entry: dict, cl_text: str) -> Path
     variant_dir.mkdir(parents=True, exist_ok=True)
     variant_path = variant_dir / f"{entry_id}-alchemized.md"
     variant_path.write_text(header + cl_text.strip() + "\n")
+
+    # Also write clean body to per-role batch folder
+    role_dir = RESUMES_DIR / CURRENT_BATCH / entry_id
+    role_dir.mkdir(parents=True, exist_ok=True)
+    (role_dir / "cover-letter.md").write_text(cl_text.strip() + "\n")
+
     return variant_path
 
 
@@ -830,6 +839,12 @@ def write_greenhouse_answers(entry_id: str, answers_text: str) -> Path | None:
         lines.append("")
 
     answer_path.write_text("\n".join(lines))
+
+    # Also copy to per-role batch folder
+    role_dir = RESUMES_DIR / CURRENT_BATCH / entry_id
+    role_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(str(answer_path), str(role_dir / "answers.yaml"))
+
     return answer_path
 
 

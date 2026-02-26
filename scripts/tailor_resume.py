@@ -334,10 +334,10 @@ def integrate_tailored_sections(entry_id: str, output_text: str, identity: str |
             flags=re.DOTALL,
         )
 
-    # Write per-entry resume HTML to current batch dir
-    batch_dir = RESUMES_DIR / CURRENT_BATCH
-    batch_dir.mkdir(parents=True, exist_ok=True)
-    output_path = batch_dir / f"{entry_id}-resume.html"
+    # Write per-entry resume HTML to current batch dir (per-role subfolder)
+    role_dir = RESUMES_DIR / CURRENT_BATCH / entry_id
+    role_dir.mkdir(parents=True, exist_ok=True)
+    output_path = role_dir / f"{entry_id}-resume.html"
     output_path.write_text(html)
     print(f"  Wrote: {output_path.relative_to(REPO_ROOT)}")
     return output_path
@@ -350,7 +350,7 @@ def wire_resume_to_entry(entry_id: str) -> bool:
         print(f"  Error: Entry not found: {entry_id}")
         return False
 
-    html_path = RESUMES_DIR / CURRENT_BATCH / f"{entry_id}-resume.html"
+    html_path = RESUMES_DIR / CURRENT_BATCH / entry_id / f"{entry_id}-resume.html"
     if not html_path.exists():
         print(f"  Error: Tailored resume not found: {html_path.name}")
         return False
@@ -361,7 +361,7 @@ def wire_resume_to_entry(entry_id: str) -> bool:
         print(f"  Error: Invalid submission block in {entry_id}")
         return False
 
-    new_ref = f"resumes/{CURRENT_BATCH}/{entry_id}-resume.html"
+    new_ref = f"resumes/{CURRENT_BATCH}/{entry_id}/{entry_id}-resume.html"
     materials = submission.get("materials_attached", [])
     if isinstance(materials, list) and new_ref in materials:
         print(f"  {entry_id}: Already wired to {new_ref}")
@@ -385,16 +385,21 @@ def wire_resume_to_entry(entry_id: str) -> bool:
             break
 
     if not replaced:
-        # Also check for prior batch references
+        # Also check for prior batch references (both flat and folder formats)
         for batch in ("batch-01", "batch-02"):
-            old_batch_ref = f"resumes/{batch}/{entry_id}-resume.html"
-            if old_batch_ref in content and old_batch_ref != new_ref:
-                content = content.replace(
-                    f"- {old_batch_ref}",
-                    f"- {new_ref}",
-                    1,
-                )
-                replaced = True
+            for fmt in (
+                f"resumes/{batch}/{entry_id}/{entry_id}-resume.html",
+                f"resumes/{batch}/{entry_id}-resume.html",
+            ):
+                if fmt in content and fmt != new_ref:
+                    content = content.replace(
+                        f"- {fmt}",
+                        f"- {new_ref}",
+                        1,
+                    )
+                    replaced = True
+                    break
+            if replaced:
                 break
 
     if not replaced and "materials_attached:" in content:

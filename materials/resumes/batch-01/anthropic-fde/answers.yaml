@@ -1,0 +1,66 @@
+# Generated for: Anthropic Forward Deployed Engineer
+# Job: anthropic/5074695008
+# Edit answers below, then run with --check-answers to validate
+
+# (Optional) Personal Preferences
+# Type: text | Optional
+question_14520714008: ""
+
+# Website
+# Type: text | Optional
+question_14520715008: "https://4444j99.github.io/portfolio/"
+
+# Are you open to working in-person in one of our offices 25% of the time?
+# Type: select | Options: Yes, No | Required
+question_14520716008: "Yes"
+
+# When is the earliest you would want to start working with us?
+# Type: text | Optional
+question_14520717008: "Immediately"
+
+# Do you have any deadlines or timeline considerations we should be aware of?
+# Type: text | Optional
+question_14520718008: ""
+
+# AI Policy for Application
+# Type: select | Options: Yes, No | Required
+question_14520719008: "Yes"
+
+# Have you ever built custom agents for internal or external stakeholders?
+# Type: select | Options: Yes, No | Required
+question_14945822008: "Yes"
+
+# Why Anthropic?
+# Type: textarea | Required
+question_14520720008: |
+  Anthropic's approach to AI safety requires constraints that scale — not constraints that erode under pressure. The system I built solves the same problem at infrastructure scale: governance-rules.json encodes constitutional principles, and automated checks enforce them on every merge without human vigilance. The dependency validator blocks violations before they reach production. Monthly audits confirm system health. The constraints hold because they're structural, not procedural.
+
+  I built agentic-titan, a multi-agent orchestration framework with 1,276 tests covering agent coordination, message passing, and fault tolerance. agent--claude-smith is a multi-agent system built directly on the Claude SDK — TypeScript, session persistence, self-correction hooks, and Zod schema validation. I understand what it takes to make agent systems reliable and deployable, which is exactly what the FDE team delivers to enterprise customers.
+
+# Do you require visa sponsorship?
+# Type: select | Options: Yes, No | Required
+question_14520721008: "No"
+
+# Will you now or will you in the future require employment visa sponsorship to work in the country in which the job you're applying for is located?
+# Type: select | Options: Yes, No | Required
+question_14520722008: "No"
+
+# Additional Information
+# Type: textarea | Optional
+question_14520723008: ""
+
+# LinkedIn Profile
+# Type: text | Optional
+question_14520724008: ""
+
+# Are you open to relocation for this role?
+# Type: select | Options: Yes, No | Required
+question_14520725008: "Yes"
+
+# What is the address from which you plan on working? If you would need to relocate, please type "relocating".
+# Type: text | Optional
+question_14520726008: "New York City"
+
+# Have you ever interviewed at Anthropic before?
+# Type: select | Options: Yes, No | Required
+question_14520727008: "No"

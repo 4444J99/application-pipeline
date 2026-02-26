@@ -1,0 +1,14 @@
+Developer advocacy for an infrastructure product requires someone who has built infrastructure, who can explain infrastructure, and who understands that the developer's experience of infrastructure is what determines adoption. I've spent five years building exactly this kind of system — and documenting the process so thoroughly that the documentation itself is evidence of the advocacy skills.
+
+The infrastructure evidence: 103 repositories coordinated across 8 GitHub organizations through automated governance. A machine-readable registry (registry-v2.json) serves as single source of truth for all 103 repos — tracking implementation status, dependency declarations, organ membership, and metadata contracts. 43 validated dependency edges with zero circular dependencies and zero back-edge violations. A formal promotion state machine governs lifecycle transitions. This is database-adjacent thinking: schema design, data integrity constraints, query patterns, and governance at scale.
+
+The content evidence: 810,000+ words of documentation, 42 published essays, and 100% documentation coverage across all repositories. Every project has a structured CLAUDE.md with architecture notes, build commands, and navigation protocols. Every project has a seed.yaml declaring its metadata contract. I've written tutorials, architecture decision records, sprint specifications with retrospectives, and long-form technical essays — the full range of content that a developer advocacy role requires.
+
+The teaching evidence: 11 years of university teaching (2,000+ students). I've designed curricula, iterated on course materials, and developed the ability to explain complex technical concepts at multiple levels of depth. Developer advocacy is teaching at scale — creating content that helps developers succeed with a product, whether they're reading a quickstart guide or designing a complex data architecture.
+
+The AI dimension: I've built multi-agent orchestration systems and maintain MCP server infrastructure for AI development tools. My "AI-conductor" methodology, documented across 142K words, explores how AI capabilities compose into production systems. As MongoDB integrates AI capabilities (vector search, Atlas AI features), having an advocate who understands both infrastructure fundamentals and AI application patterns is valuable.
+
+The gap: I have not worked in developer advocacy at a company, and my database experience is at application scale (YAML-based data stores, JSON registries) rather than at MongoDB's scale. I have not built with MongoDB's specific product surface. What I bring is the combination that's hard to find: deep infrastructure engineering experience, high-volume content creation, and genuine teaching skill — the ability to represent a technical product authentically to a developer community.
+
+Portfolio: https://4444j99.github.io/portfolio/
+GitHub: https://github.com/4444j99

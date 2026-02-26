@@ -44,8 +44,8 @@ submission:
   variant_ids:
     cover_letter: cover-letters/openai-forward-deployed-engineer-fde-nyc-alchemized
   materials_attached:
-  - resumes/batch-01/openai-forward-deployed-engineer-fde-nyc-resume.html
-  - resumes/batch-01/openai-forward-deployed-engineer-fde-nyc-resume.pdf
+  - resumes/batch-01/openai-forward-deployed-engineer-fde-nyc/openai-forward-deployed-engineer-fde-nyc-resume.html
+  - resumes/batch-01/openai-forward-deployed-engineer-fde-nyc/openai-forward-deployed-engineer-fde-nyc-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'

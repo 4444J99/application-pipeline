@@ -1,0 +1,53 @@
+# Generated for: Runway Member of Technical Staff Research Tooling
+# Job: runwayml/4650196005
+# Edit answers below, then run with --check-answers to validate
+
+# LinkedIn Profile
+# Type: text | Required
+question_8292917005: "https://github.com/4444J99"
+
+# Github or Personal website
+# Type: text | Required
+question_8292918005: "https://4444j99.github.io/portfolio/"
+
+# Do you have experience processing large datasets at scale?
+# Type: select | Options: Yes, No | Required
+question_8326206005: "Yes"
+
+# Have you been the primary POC for data tooling for multiple research groups before?
+# Type: select | Options: Yes, No | Required
+question_8326207005: "No"
+
+# Do you have any side projects you're excited about, or something new you're learning?
+# Type: select | Options: Yes, No | Required
+question_8326208005: "Yes"
+
+# If you answered yes to the above, what are you working on/learning about?
+# Type: textarea | Optional
+question_8326209005: |
+  I'm building ORGANVM, a 103-repository creative-technical infrastructure system across 8 GitHub organizations. The flagship project is agentic-titan, a multi-agent orchestration framework in TypeScript with 1,276 tests. I'm also developing generative art systems using p5.js — my portfolio features a full-page canvas with three visual modes that composites behind the content layer.
+
+# Do you have experience working at an early stage startup?
+# Type: select | Options: Yes, No | Required
+question_8326210005: "No"
+
+# What's been the largest scale datasets you've worked with in the past and what type of data?
+# Type: textarea | Optional
+question_8326211005: |
+  My largest-scale data work is the ORGANVM system itself: 21,000 code files, 3,600+ test files, 810,000+ words of documentation across 103 repositories. I built automated tooling to crawl, validate, and cross-reference this corpus — including dependency graph validation (43 edges, zero circular dependencies), registry synchronization, and batch pipeline processing across multiple data formats (YAML, JSON, Markdown).
+
+# Are you currently based in the U.S. or Canada?
+# Type: select | Options: Yes, No | Required
+question_8292923005: "Yes"
+
+# If located in the US, are you currently authorized to work in the US?
+# Type: select | Options: Yes, No | Required
+question_8292924005: "Yes"
+
+# So we can pronounce it correctly, what is the phonetic spelling of your name? (e.g., Kristina would be chris-teen-uh)
+# Type: text | Required
+question_8292925005: "AN-thuh-nee pah-duh-VAH-no"
+
+# What are your preferred pronouns?
+# Type: text | Optional
+question_8292926005: "he/him"

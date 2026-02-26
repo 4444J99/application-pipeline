@@ -1,0 +1,14 @@
+Technical writing is infrastructure. When documentation is good, developers build faster, file fewer support tickets, and adopt features they would otherwise ignore. When documentation is bad, every other investment in the product — the engineering, the design, the marketing — loses value. I've spent five years treating documentation as a first-class engineering deliverable, and the scale of that work is the core of my candidacy.
+
+810,000+ words of documentation across a 103-repository system. 42 published essays exploring technical methodology, architectural decisions, and development processes. 100% documentation coverage — every repository in the system has a structured CLAUDE.md with build commands, architecture notes, and navigation protocols, verified by automated checks. This is not incidental writing attached to code; this is documentation treated as product.
+
+The documentation system is designed for multiple audiences. CLAUDE.md files serve as machine-readable developer onboarding guides — structured so that both human developers and AI coding agents can orient themselves in a codebase. seed.yaml contracts declare each project's metadata, dependencies, and capabilities. Architecture Decision Records (ADRs) capture the reasoning behind structural choices. Sprint specification documents provide narrative context for development phases. Each layer serves a different reader at a different level of detail.
+
+The technical depth: I've documented Python and TypeScript infrastructure across CI/CD pipelines, API integrations (Greenhouse, Ashby job board APIs), state machines, dependency graphs, MCP server protocols, and build systems. I understand the challenge of writing for developers — being precise enough to be useful, concise enough to be read, and structured enough to be navigated. I've also written for non-technical audiences: 11 years of teaching experience (2,000+ students) developed my ability to explain complex systems clearly to people with varied technical backgrounds.
+
+The editorial process matters. My 42 essays aren't first drafts posted as blog content — they're iterated, revised, and published as part of a deliberate body of work. I treat writing as a craft with revision cycles, consistent voice, and editorial standards. This is the same discipline that distinguishes excellent technical documentation from adequate technical documentation.
+
+The gap: I have not worked as a technical writer on a product team. My documentation experience is for systems I built myself, not for products used by millions of developers. I have not worked with docs-as-code pipelines at Datadog's scale, or coordinated documentation across multiple engineering teams. What I bring is the volume, the discipline, and the conviction that documentation is engineering — not a task that gets done after the real work is finished.
+
+Portfolio: https://4444j99.github.io/portfolio/
+GitHub: https://github.com/4444j99

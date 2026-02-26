@@ -1,0 +1,43 @@
+# Generated for: dbt Labs Senior Developer Experience Advocate
+# Job: dbtlabsinc/4663992005
+
+# Preferred First Name
+# Type: text | Required
+preferred_name: Anthony
+
+# Your LinkedIn Profile
+# Type: text | Required
+question_8418337005: "https://www.linkedin.com/in/ajpadavano/"
+
+# Please share any public resources you've created on dbt, data work or AI (code/blogs/talks etc)
+# Type: textarea | Required
+question_8434064005: |
+  While I have not created dbt-specific content, I have an extensive body of public work on data pipeline engineering, AI-augmented development, and developer experience:
+
+  - 42 published essays (~142K words) documenting AI-conductor methodology, systems architecture, and development processes
+  - 103 public GitHub repositories with 100% documentation coverage (CLAUDE.md + seed.yaml in every repo)
+  - A YAML-driven application pipeline (14-script Python CLI system) that implements data transformation patterns: raw data intake, enrichment, validation, and structured output — conceptually aligned with dbt's transform-in-place philosophy
+  - Multi-agent orchestration systems (agentic-titan, 1,095 tests) exploring how AI agents interact with structured data workflows
+  - MCP server infrastructure providing structured AI tool capabilities, including data processing patterns
+  - Portfolio: https://4444j99.github.io/portfolio/
+  - GitHub: https://github.com/4444j99
+
+# Do you have 5+ years in analytics engineering, data engineering, or closely related field with hands-on dbt expertise?
+# Type: select | Options: Yes, No | Required
+question_8418338005: No
+
+# Do you have experience building with and for AI coding agents?
+# Type: select | Options: Yes, No | Required
+question_8418339005: Yes
+
+# Do you have current authorization to work in the country of this job post without requiring visa sponsorship?
+# Type: select | Options: Yes, No | Required
+question_8418341005: Yes
+
+# What is your preferred first name?
+# Type: text | Required
+question_8418342005: Anthony
+
+# What is your preferred last name?
+# Type: text | Required
+question_8418343005: Padavano

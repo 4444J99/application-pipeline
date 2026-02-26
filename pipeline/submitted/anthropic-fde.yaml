@@ -46,8 +46,8 @@ submission:
   variant_ids: 
     cover_letter: cover-letters/anthropic-fde-custom-agents
   materials_attached:
-  - resumes/batch-01/anthropic-fde-resume.html
-  - resumes/batch-01/anthropic-fde-resume.pdf
+  - resumes/batch-01/anthropic-fde/anthropic-fde-resume.html
+  - resumes/batch-01/anthropic-fde/anthropic-fde-resume.pdf
   - resumes/base/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
