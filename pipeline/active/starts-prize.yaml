@@ -21,9 +21,10 @@ fit:
   score: 7.6
   original_score: 8.3
   identity_position: systems-artist
-  framing: Systems artist producing audience-participatory performance, modular synthesis,
-    immersive web experiences, and queer literary archives through governed creative
-    infrastructure
+  framing: Independent systems artist and engineer building production-grade AI orchestration
+    at the nexus of technology and artistic practice. Presenting the "ORGANVM Metasystem"—a
+    103-repository autonomous infrastructure where automated governance and human-agent
+    collaboration serve as the primary artistic medium.
   lead_organs:
   - II
   - I
@@ -50,7 +51,9 @@ submission:
     framing: framings/systems-artist
   variant_ids:
     project_description: project-descriptions/starts-prize-v1
+    cover_letter: cover-letters/starts-prize-alchemized
   materials_attached:
+  - resumes/batch-03/starts-prize/starts-prize-resume.html
   - resumes/base/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -67,34 +70,44 @@ portal_fields:
   - name: project_description
     format: textarea
     required: true
-    note: "Artistic concept + interaction + technical implementation + HW/SW + spatial"
+    note: Artistic concept + interaction + technical implementation + HW/SW + spatial
   - name: video_documentary
     format: file_upload
-    file_types: ["mp4", "mov"]
+    file_types:
+    - mp4
+    - mov
     required: true
-    note: "~3 min video documentary of the project"
+    note: ~3 min video documentary of the project
   - name: project_images
     format: file_upload
-    file_types: ["jpg", "tif", "bmp", "png"]
+    file_types:
+    - jpg
+    - tif
+    - bmp
+    - png
     required: true
-    note: "High-resolution project images"
+    note: High-resolution project images
   - name: portrait_photo
     format: file_upload
-    file_types: ["jpg", "png"]
+    file_types:
+    - jpg
+    - png
     required: true
-    note: "Portrait photo of the artist"
+    note: Portrait photo of the artist
   - name: bio
     format: textarea
     required: true
   - name: work_samples
     format: url
     required: false
-    note: "URLs to work samples and documentation"
+    note: URLs to work samples and documentation
   - name: additional_documents
     format: file_upload
-    file_types: ["png", "pdf"]
+    file_types:
+    - png
+    - pdf
     required: false
-    note: "Optional additional supporting documents"
+    note: Optional additional supporting documents
 conversion:
   response_received: false
   response_type: null
@@ -102,10 +115,15 @@ conversion:
   feedback: null
 tags: []
 source: 04-application-tracker.md
-notes: |
-  S+T+ARTS Prize: EUR 20,000 grand prize for innovation at intersection of
+notes: 'S+T+ARTS Prize: EUR 20,000 grand prize for innovation at intersection of
+
   science, technology, and the arts. Since 2016: 18,900 submissions, 350+
+
   honored projects, 124 countries. Same project CAN win both S+T+ARTS and
+
   Prix Ars Electronica. Lead with art outputs (Omni-Dromenon, Brahma,
+
   MET4, KRYPTO), not governance abstraction.
-last_touched: "2026-02-24"
+
+  '
+last_touched: "2026-02-26"
