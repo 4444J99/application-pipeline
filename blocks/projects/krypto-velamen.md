@@ -1,56 +1,29 @@
 ---
 title: "KRYPTO-VELAMEN"
 category: projects
-tags: [queer, lgbtq, archive, privacy, identity, knowledge-graph, microservices, community, literary-criticism]
-identity_positions: [community-practitioner, systems-artist, creative-technologist]
-tracks: [grant, residency, fellowship, prize, writing]
+tags: [ai, creative-coding, docker, fastapi, generative-art, knowledge-graph, microservices, nlp, python, queer]
+identity_positions: [community-practitioner, creative-technologist, systems-artist]
+tracks: [grant, residency, fellowship]
 tier: full
+review_status: auto-generated
+stats:
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: HIGH
 ---
 
-# Project: KRYPTO-VELAMEN — The Instrument v1.0
+# Project: KRYPTO-VELAMEN
 
 ## One-Line
-A distributed, collaborative digital instrument for queer knowledge-building, authentic expression, and community survival through "Double-Channel" communication.
+KRYPTO-VELAMEN — The hidden veil: queer theory and literary technique corpus.
 
 ## Short (100 words)
-KRYPTO-VELAMEN has evolved from a static archive into a distributed, collaborative platform. It is a digital instrument designed to facilitate queer knowledge-production and community survival. Its theoretical framework — "Double-Channel Text" — studies how queer subjects encode desire and interiority through concealment mechanisms: surface story vs. substrate story. The project coordinates 20 deep author studies and 26 world-building modules into a living infrastructure for authentic expression. The platform architecture centers community safety through pseudonym management and risk-calibrated privacy, allowing for the secure, non-linear documentation of lived experience in real time.
+KRYPTO-VELAMEN — The hidden veil: queer theory and literary technique corpus. Field I (Present Waking). Double-channel text, concealment as compositional engine, archival of lived interiority. <div align="center"> <p align="center"> <strong>The Instrument v1.0 — A Living Cultural Operating System</strong> </p> <p align="center"> <img src="https://img.shields.io/badge/Architecture-Monorepo-blueviolet" alt="Monorepo"> <img src="https://img.shields.io/badge/Services-Microservices-blue" alt="Services"> <img src="https://img.shields.io/badge/Status-Active--Development-green" alt="Status"> <img src="https://img.shields.io/badge/Organ-II--POIESIS-magenta" alt="Organ II"> </p> </div> Part of ORGAN-II (Poiesis).
 
 ## Full
-KRYPTO-VELAMEN treats concealment not as biographical background but as a formal constraint that becomes a creative method — the "closet" as compositional engine.
-
-### Encoding Schema: Six Dials
-The project synthesizes queer literary strategies into six calibratable parameters:
-
-**Concealment Dials:**
-- **Rimbaud Drift** — Sensory overload and linguistic derangement as camouflage for desire
-- **Wilde Mask** — Performative surface deployed to protect interior truth
-- **Burroughs Control** — Cut-up, fragmentation, and structural disruption as encoding
-
-**Visibility Dials:**
-- **Lorde Voice** — Direct naming of experience as political and aesthetic act
-- **Arenas Scream** — Excessive, baroque disclosure as resistance to erasure
-- **Acker Piracy** — Appropriation and rewriting of canonical texts to inscribe queer presence
-
-### Research Corpus
-- **20 author studies:** Deep research on queer literary figures from Rimbaud (1871) to Porpentine (2010s), each analyzed through the double-channel framework
-- **26 world-building modules:** Stonewall activism, queer spaces, chosen families, intersectional activism, creative frameworks, cultural histories, community governance, digital activism, eco-queer perspectives
-- **Synthesis documents:** Author Crosswalk (7-variable comparison), Claims Ledger, Mechanism Atlas, Visibility Schema, Dial Calibration
-
-### Platform Architecture
-Microservices platform designed for community safety:
-- Identity service with pseudonym management and risk calibration
-- Community service with encrypted DMs and co-authoring capabilities
-- Knowledge graph connecting authors, mechanisms, and cultural contexts
-- Archive engine for evolving, non-linear documentation
-
-## Visual Identity & Diagrams
-The project utilizes a formal visual language to communicate its theoretical and technical complexity:
-1. **Double-Channel Logic:** Visualizing the split between surface camouflage and substrate desire.
-2. **Instrument Interface:** A terminal-based calibration dashboard for the six compositional dials.
-3. **Distributed Node Mapping:** Diagramming the secure microservices and identity layers.
-4. **Compositional Engine Flow:** Tracking the movement from author studies to community survival folios.
-5. **Knowledge Loop:** The iterative process of transforming lived experience into reproducible strategy.
+**🏗 System Architecture:** The repository is organized as a Monorepo housing distinct microservices: ```mermaid graph TD Root --> Apps Root --> Services Root --> Infrastructure Apps --> Web[web-platform (Next.js)] Services --> Identity[identity-service (FastAPI)] Services --> Community[community-service (Django)] Services --> Graph[knowledge-graph (Neo4j)] Services --> Archive[archive-engine (The Core Corpus)] Services --> Swarm[agent-swarm (The Spirit)] Services --> Titan[titan-governor (The Law)] Services --> Atomizer[atomizer-engine (The Molecular)] Services --> Lens[lens-engine (The Geometry)] ``` ### 📂 Directory Structure | Path | Service | Description | |------|---------|-------------| | **`apps/web-platform`** | **The Surface** | The user-facing frontend (Grid, Terminal, Journal). | | **`services/archive-engine`** | **The Core** | The original research/creative corpus and `orchestrator.py`. | | **`services/identity-service`** | **The Mask** | User profiles, authentication, and privacy calibration. | | **`services/community-service`** | **The Substrate** | Forums, DMs, and collaborative co-authoring tools. | | **`services/knowledge-graph`** | **The Atlas** | Recommendation engine mapping connections across the archive. | | **`services/agent-swarm`** | **The Spirit** | AI agents and the SCRIPT-DOCTOR meta-agent. | | **`services/titan-governor`** | **The Law** | Governance and auditing from Organ IV (TAXIS). | | **`services/atomizer-engine`** | **The Molecular** | Linguistic atomization from Organ I (THEORIA). | | **`services/lens-engine`** | **The Geometry** | Narratological lenses from Organ I (THEORIA). | ---
 
 ## Links
-- Repository: https://github.com/organvm-ii-poiesis/krypto-velamen
-- Organ: ORGAN-II (Poiesis) — Generative art, performance, experiential systems
+- GitHub: https://github.com/organvm-ii-poiesis/krypto-velamen
+- Organ: ORGAN-II (Poiesis) — Art

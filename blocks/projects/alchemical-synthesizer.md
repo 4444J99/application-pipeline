@@ -6,6 +6,12 @@ identity_positions: [creative-technologist, systems-artist]
 tracks: [grant, residency, fellowship]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [javascript]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: MEDIUM
 ---
 
 # Project: Alchemical Synthesizer (Brahma)

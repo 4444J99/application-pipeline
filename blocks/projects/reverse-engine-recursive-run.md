@@ -7,6 +7,12 @@ tracks: [grant, fellowship]
 related_projects: [recursive-engine]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: HIGH
 ---
 
 # Project: Architecture governance toolkit

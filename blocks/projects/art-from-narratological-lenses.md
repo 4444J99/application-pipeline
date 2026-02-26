@@ -7,6 +7,12 @@ tracks: [grant, residency, fellowship]
 related_projects: [narratological-algorithmic-lenses]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: MEDIUM
 ---
 
 # Project: Interactive web experience exploring narrative structures via visual algorith...

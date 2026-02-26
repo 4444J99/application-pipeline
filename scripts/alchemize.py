@@ -564,6 +564,10 @@ def phase_map(entry: dict, research: str, profile: dict | None) -> str:
     evidence_blocks = select_evidence_blocks(job_desc, entry)
     work_samples = select_work_samples(profile, job_desc)
 
+    # Load block index for stats lookup
+    block_index = load_block_index()
+    block_entries = block_index.get("blocks", {})
+
     sections = [f"# Identity Mapping: {name}\n"]
 
     sections.append(f"## Selected Position: {position}\n")
@@ -579,6 +583,24 @@ def phase_map(entry: dict, research: str, profile: dict | None) -> str:
     sections.append(f"## Relevant Evidence ({len(evidence_blocks)} blocks)\n")
     for block_path, content in evidence_blocks:
         sections.append(f"### {block_path}\n")
+        # Append key stats if available in the index
+        block_key = block_path.removesuffix(".md")
+        idx_entry = block_entries.get(block_key, {})
+        stats = idx_entry.get("stats", {})
+        if stats:
+            stats_parts = []
+            if stats.get("languages"):
+                langs = stats["languages"]
+                if isinstance(langs, list):
+                    stats_parts.append(f"Languages: {', '.join(langs)}")
+                else:
+                    stats_parts.append(f"Languages: {langs}")
+            if stats.get("test_count"):
+                stats_parts.append(f"Tests: {stats['test_count']}")
+            if stats.get("coverage"):
+                stats_parts.append(f"Coverage: {stats['coverage']}%")
+            if stats_parts:
+                content += f"\n\n**Key Stats:** {' | '.join(stats_parts)}"
         sections.append(content + "\n")
 
     sections.append(f"## Relevant Projects ({len(work_samples)} samples)\n")

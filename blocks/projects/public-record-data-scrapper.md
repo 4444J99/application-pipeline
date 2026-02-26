@@ -7,6 +7,13 @@ tracks: [job, grant, fellowship]
 related_projects: [organvm-system]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [typescript]
+  coverage: 100
+  ci: true
+  public: true
+  promotion_status: PUBLIC_PROCESS
+  relevance: CRITICAL
 ---
 
 # Project: 50-state UCC public records aggregation platform

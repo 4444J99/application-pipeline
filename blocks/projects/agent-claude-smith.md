@@ -7,6 +7,12 @@ tracks: [job, fellowship]
 related_projects: [agentic-titan]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [typescript]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: HIGH
 ---
 
 # Project: Multi-agent orchestration using Claude Agent SDK with subagent spawning

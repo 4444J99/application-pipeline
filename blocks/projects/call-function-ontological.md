@@ -7,6 +7,12 @@ tracks: [grant, fellowship]
 related_projects: [organon-noumenon]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: PUBLIC_PROCESS
+  relevance: CRITICAL
 ---
 
 # Project: Ontological function-calling framework

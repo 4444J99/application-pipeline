@@ -6,6 +6,12 @@ identity_positions: [community-practitioner, creative-technologist, systems-arti
 tracks: [grant, residency, fellowship]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: HIGH
 ---
 
 # Project: Interactive simulation exploring social influence theory, dating dynamics

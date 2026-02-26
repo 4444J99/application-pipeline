@@ -7,6 +7,12 @@ tracks: [grant]
 related_projects: [koinonia-db]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: false
+  promotion_status: PUBLIC_PROCESS
+  relevance: MEDIUM
 ---
 
 # Project: Structured reading group curricula spanning eight-organ domains: 8-12 week pr...

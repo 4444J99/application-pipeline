@@ -552,6 +552,13 @@ blocks:
     tier: full
     related_projects:
     - organvm-system
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: PUBLIC_PROCESS
+      relevance: HIGH
   projects/a-recursive-root:
     title: Foundational recursive principles
     tags:
@@ -569,6 +576,13 @@ blocks:
     - grant
     - fellowship
     tier: short
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/academic-publication:
     title: Academic papers, posters, presentations, and datasets for art research
     tags:
@@ -582,6 +596,13 @@ blocks:
     - residency
     - fellowship
     tier: short
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/adaptive-personal-syllabus:
     title: AI-personalized education system with multi-module curriculum spanning
       OS dev...
@@ -605,6 +626,13 @@ blocks:
     tier: full
     related_projects:
     - koinonia-db
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: PUBLIC_PROCESS
+      relevance: HIGH
   projects/agent-claude-smith:
     title: Multi-agent orchestration using Claude Agent SDK with subagent spawning
     tags:
@@ -625,19 +653,33 @@ blocks:
     tier: full
     related_projects:
     - agentic-titan
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/agentic-titan:
-    title: Agentic Titan
+    title: 'Polymorphic Agent Swarm Architecture: model-agnostic'
     tags:
-    - ai
     - agent
+    - ai
+    - api
+    - ci-cd
+    - database
+    - docker
+    - fastapi
+    - governance
+    - knowledge-graph
     - orchestration
-    - multi-agent
-    - testing
+    - performance
     - python
-    - infrastructure
+    - testing
+    - websocket
     identity_positions:
-    - independent-engineer
     - creative-technologist
+    - independent-engineer
     tracks:
     - job
     - grant
@@ -646,6 +688,14 @@ blocks:
     related_projects:
     - organvm-system
     - recursive-engine
+    stats:
+      languages:
+      - python
+      test_count: 1312
+      ci: true
+      public: true
+      promotion_status: PUBLIC_PROCESS
+      relevance: CRITICAL
   projects/ai-chat-exporter:
     title: Export and share AI chat conversation history (fork of chatgpt-exporter)
     tags:
@@ -662,18 +712,28 @@ blocks:
     tracks:
     - job
     tier: short
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/ai-council-coliseum:
-    title: AI Council Coliseum
+    title: Decentralized live-streaming platform where AI agents debate with viewer
+      cryp...
     tags:
     - ai
-    - debate
-    - governance
     - blockchain
-    - solana
-    - three-js
+    - creative-coding
+    - database
+    - docker
     - fastapi
     - generative-art
-    - spectacle
+    - python
+    - react
+    - testing
+    - three-js
     identity_positions:
     - creative-technologist
     - systems-artist
@@ -683,7 +743,15 @@ blocks:
     - fellowship
     tier: full
     related_projects:
-    - organvm-system
+    - metasystem-master
+    - performance-sdk
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/ai-skills:
     title: 'Public repository of AI agent skills: specialized capabilities and workflows
       ...'
@@ -708,6 +776,13 @@ blocks:
     tier: full
     related_projects:
     - agent-claude-smith
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/alchemia-ingestvm:
     title: The Alchemical Forge
     tags:
@@ -729,6 +804,13 @@ blocks:
     tier: full
     related_projects:
     - organvm-corpus
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/alchemical-synthesizer:
     title: Alchemical Synthesizer (Brahma)
     tags:
@@ -750,6 +832,13 @@ blocks:
     - residency
     - fellowship
     tier: short
+    stats:
+      languages:
+      - javascript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/anon-hookup-now:
     title: Open-source grid+map rendezvous
     tags:
@@ -762,6 +851,13 @@ blocks:
     tracks:
     - job
     tier: short
+    stats:
+      languages:
+      - python
+      ci: true
+      public: false
+      promotion_status: CANDIDATE
+      relevance: LOW
   projects/archive-past-works:
     title: Archival infrastructure for completed artworks with Dublin Core-inspired
       meta...
@@ -786,6 +882,13 @@ blocks:
     - residency
     - fellowship
     tier: full
+    stats:
+      languages:
+      - markdown
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/art-from-auto-revision:
     title: Interactive visualization of self-governing orchestration
     tags:
@@ -808,6 +911,13 @@ blocks:
     tier: short
     related_projects:
     - auto-revision-epistemic-engine
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/art-from-narratological-lenses:
     title: Interactive web experience exploring narrative structures via visual algorith...
     tags:
@@ -825,6 +935,13 @@ blocks:
     tier: short
     related_projects:
     - narratological-algorithmic-lenses
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/artist-toolkit-and-templates:
     title: Artist prospecting, deployment playbooks, grant resources, and project
       templates
@@ -839,6 +956,13 @@ blocks:
     - residency
     - fellowship
     tier: short
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/audio-synthesis-bridge:
     title: TypeScript bridge for audio synthesis via OSC and WebAudio
     tags:
@@ -861,6 +985,13 @@ blocks:
     tier: short
     related_projects:
     - metasystem-master
+    stats:
+      languages:
+      - markdown
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/auto-revision-epistemic-engine:
     title: Self-governing orchestration framework with 8 phases, 4 human review gates
     tags:
@@ -880,6 +1011,13 @@ blocks:
     - grant
     - fellowship
     tier: full
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: PUBLIC_PROCESS
+      relevance: CRITICAL
   projects/call-function-ontological:
     title: Ontological function-calling framework
     tags:
@@ -902,6 +1040,13 @@ blocks:
     tier: full
     related_projects:
     - organon-noumenon
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: PUBLIC_PROCESS
+      relevance: CRITICAL
   projects/card-trade-social:
     title: Hydra Trading Card Ecosystem
     tags:
@@ -924,6 +1069,13 @@ blocks:
     tracks:
     - job
     tier: full
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/case-studies-methodology:
     title: Structured case studies documenting creative methodology
     tags:
@@ -943,6 +1095,13 @@ blocks:
     - residency
     - fellowship
     tier: full
+    stats:
+      languages:
+      - markdown
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: CRITICAL
   projects/chthon-oneiros:
     title: CHTHON-ONEIROS
     tags:
@@ -956,32 +1115,37 @@ blocks:
     - residency
     - fellowship
     tier: full
+    stats:
+      public: true
+      promotion_status: LOCAL
+      relevance: HIGH
   projects/classroom-rpg-aetheria:
-    title: 'Classroom RPG: Aetheria'
+    title: Educational RPG system for classroom engagement
     tags:
-    - education
-    - gamification
-    - teaching
-    - curriculum
-    - learning-platform
-    - react
-    - typescript
     - ai
-    - pedagogy
-    - classroom
-    - assessment
-    - game-design
+    - ci-cd
+    - developer-tools
+    - education
+    - platform
+    - react
+    - testing
+    - three-js
+    - typescript
     identity_positions:
-    - educator
-    - independent-engineer
     - creative-technologist
+    - independent-engineer
     tracks:
     - job
-    - grant
-    - fellowship
     tier: full
     related_projects:
-    - organvm-system
+    - gamified-coach-interface
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: PUBLIC_PROCESS
+      relevance: CRITICAL
   projects/client-sdk:
     title: WebSocket client library for audience vote submission in Omni-Dromenon-Engine
     tags:
@@ -1003,6 +1167,13 @@ blocks:
     tier: short
     related_projects:
     - metasystem-master
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/cognitive-archaelogy-tribunal:
     title: Audit tool for cognitive systems and organizational coherence
     tags:
@@ -1026,6 +1197,13 @@ blocks:
     tier: full
     related_projects:
     - recursive-engine
+    stats:
+      languages:
+      - python
+      ci: true
+      public: false
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/collective-persona-operations:
     title: Multi-agent system for collective identity and persona management
     tags:
@@ -1039,6 +1217,13 @@ blocks:
     - grant
     - fellowship
     tier: short
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/commerce-meta:
     title: 'Private governance repo for ORGAN-III commerce operations: contracts'
     tags:
@@ -1051,6 +1236,11 @@ blocks:
     tracks:
     - job
     tier: short
+    stats:
+      ci: true
+      public: false
+      promotion_status: CANDIDATE
+      relevance: INTERNAL
   projects/community-hub:
     title: FastAPI flagship portal
     tags:
@@ -1072,6 +1262,11 @@ blocks:
     related_projects:
     - koinonia-db
     - organvm-system
+    stats:
+      ci: true
+      public: true
+      promotion_status: PUBLIC_PROCESS
+      relevance: HIGH
   projects/distribution-strategy:
     title: 'Distribution strategy brain: analytics, scheduling, persistence'
     tags:
@@ -1083,6 +1278,13 @@ blocks:
     tracks:
     - job
     tier: short
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: GRADUATED
+      relevance: MEDIUM
   projects/example-ai-collaboration:
     title: 'Human-AI co-creation framework: the AI-conductor model as artistic practice'
     tags:
@@ -1104,6 +1306,13 @@ blocks:
     - residency
     - fellowship
     tier: full
+    stats:
+      languages:
+      - markdown
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/example-choreographic-interface:
     title: Choreographic UI example
     tags:
@@ -1123,6 +1332,13 @@ blocks:
     tier: short
     related_projects:
     - metasystem-master
+    stats:
+      languages:
+      - markdown
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/example-generative-music:
     title: Generative music example
     tags:
@@ -1145,6 +1361,13 @@ blocks:
     tier: full
     related_projects:
     - metasystem-master
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/example-interactive-installation:
     title: Reference implementation for sensor-driven interactive art installations
       with...
@@ -1172,6 +1395,13 @@ blocks:
     tier: full
     related_projects:
     - metasystem-master
+    stats:
+      languages:
+      - markdown
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/example-theatre-dialogue:
     title: Interactive theatre dialogue example with server and client
     tags:
@@ -1191,6 +1421,13 @@ blocks:
     tier: short
     related_projects:
     - metasystem-master
+    stats:
+      languages:
+      - markdown
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/fetch-familiar-friends:
     title: Social matching and community platform
     tags:
@@ -1208,6 +1445,13 @@ blocks:
     tracks:
     - job
     tier: full
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: CRITICAL
   projects/gamified-coach-interface:
     title: Gamified coaching system with progress tracking
     tags:
@@ -1227,6 +1471,13 @@ blocks:
     tracks:
     - job
     tier: full
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: CRITICAL
   projects/generative-music:
     title: Generative Art & Music Systems
     tags:
@@ -1264,6 +1515,13 @@ blocks:
     tracks:
     - job
     tier: short
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/koinonia-db:
     title: Shared SQLAlchemy 2
     tags:
@@ -1278,29 +1536,38 @@ blocks:
     tracks:
     - grant
     tier: short
+    stats:
+      ci: true
+      public: true
+      promotion_status: PUBLIC_PROCESS
+      relevance: MEDIUM
   projects/krypto-velamen:
     title: KRYPTO-VELAMEN
     tags:
-    - queer
-    - lgbtq
-    - archive
-    - privacy
-    - identity
+    - ai
+    - creative-coding
+    - docker
+    - fastapi
+    - generative-art
     - knowledge-graph
     - microservices
-    - community
-    - literary-criticism
+    - nlp
+    - python
+    - queer
     identity_positions:
     - community-practitioner
-    - systems-artist
     - creative-technologist
+    - systems-artist
     tracks:
     - grant
     - residency
     - fellowship
-    - prize
-    - writing
     tier: full
+    stats:
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/learning-resources:
     title: 'Educational layer: workshop curricula, tiered learning paths'
     tags:
@@ -1327,6 +1594,13 @@ blocks:
     - residency
     - fellowship
     tier: short
+    stats:
+      languages:
+      - markdown
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/life-betterment-simulation:
     title: Interactive simulation exploring social influence theory, dating dynamics
     tags:
@@ -1345,25 +1619,40 @@ blocks:
     - residency
     - fellowship
     tier: full
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/life-my-midst-in:
-    title: life-my--midst--in
+    title: Inverted Interview CV platform
     tags:
-    - identity
-    - interview
-    - interactive
-    - platform
-    - testing
+    - ai
+    - api
+    - ci-cd
     - database
+    - developer-tools
+    - docker
+    - identity
+    - platform
+    - react
+    - testing
+    - typescript
     identity_positions:
     - creative-technologist
     - independent-engineer
     tracks:
     - job
-    - grant
-    - fellowship
     tier: full
-    related_projects:
-    - organvm-system
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: CRITICAL
   projects/linguistic-atomization-framework:
     title: LingFrame
     tags:
@@ -1383,6 +1672,14 @@ blocks:
     - grant
     - fellowship
     tier: full
+    stats:
+      languages:
+      - python
+      test_count: 142
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/meta-source-ledger-output:
     title: Cross-domain creative-technical framework exploring identity systems
     tags:
@@ -1402,6 +1699,12 @@ blocks:
     - grant
     - fellowship
     tier: short
+    stats:
+      languages:
+      - typescript
+      public: true
+      promotion_status: LOCAL
+      relevance: MEDIUM
   projects/metasystem-master:
     title: Omni-Dromenon Engine
     tags:
@@ -1435,6 +1738,14 @@ blocks:
     related_projects:
     - organvm-system
     - recursive-engine
+    stats:
+      languages:
+      - python
+      - typescript
+      ci: true
+      public: true
+      promotion_status: PUBLIC_PROCESS
+      relevance: CRITICAL
   projects/mfa-thesis-portfolio:
     title: MET4MORFOSES Web Edition
     tags:
@@ -1452,6 +1763,12 @@ blocks:
     - residency
     - fellowship
     tier: full
+    stats:
+      languages:
+      - typescript
+      public: true
+      promotion_status: LOCAL
+      relevance: HIGH
   projects/mirror-mirror:
     title: Private analytics and customer insights platform
     tags:
@@ -1470,6 +1787,13 @@ blocks:
     tracks:
     - job
     tier: short
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: false
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/multi-camera-livestream:
     title: Multi-camera livestream production platform
     tags:
@@ -1485,6 +1809,13 @@ blocks:
     tracks:
     - job
     tier: full
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/my-block-warfare:
     title: TurfSynth AR
     tags:
@@ -1506,6 +1837,13 @@ blocks:
     tracks:
     - job
     tier: full
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/my-father-mother:
     title: Local-only clipboard long-term memory for macOS with FTS5 search
     tags:
@@ -1521,6 +1859,13 @@ blocks:
     tracks:
     - job
     tier: short
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/my-knowledge-base:
     title: 'Knowledge atomization system: exports Claude conversations'
     tags:
@@ -1547,6 +1892,15 @@ blocks:
     tier: full
     related_projects:
     - linguistic-atomization-framework
+    stats:
+      languages:
+      - typescript
+      test_count: 1463
+      coverage: 62.7
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/narratological-algorithmic-lenses:
     title: 14 narratological studies × 92 algorithms
     tags:
@@ -1567,6 +1921,13 @@ blocks:
     - grant
     - fellowship
     tier: full
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: PUBLIC_PROCESS
+      relevance: HIGH
   projects/nexus-babel-alexandria:
     title: Nexus Babel Alexandria
     tags:
@@ -1631,6 +1992,13 @@ blocks:
     tier: full
     related_projects:
     - organvm-system
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: PUBLIC_PROCESS
+      relevance: CRITICAL
   projects/organon-noumenon:
     title: Ontogenetic Morphe
     tags:
@@ -1649,6 +2017,13 @@ blocks:
     - grant
     - fellowship
     tier: full
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/organvm-corpus:
     title: The authoritative planning and governance corpus for the eight-organ creative...
     tags:
@@ -1673,6 +2048,13 @@ blocks:
     tier: full
     related_projects:
     - organvm-system
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: PUBLIC_PROCESS
+      relevance: CRITICAL
   projects/organvm-engine:
     title: Core Python package
     tags:
@@ -1692,6 +2074,13 @@ blocks:
     related_projects:
     - organvm-system
     - schema-definitions
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: CRITICAL
   projects/organvm-system:
     title: The ORGANVM Eight-Organ System
     tags:
@@ -1734,6 +2123,13 @@ blocks:
     tier: full
     related_projects:
     - system-governance-framework
+    stats:
+      languages:
+      - shell
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/public-process:
     title: Essays, case studies, methodology documentation, RSS feed
     tags:
@@ -1758,6 +2154,13 @@ blocks:
     - organvm-system
     - public-record-data-scrapper
     - recursive-engine
+    stats:
+      languages:
+      - jekyll
+      ci: true
+      public: true
+      promotion_status: PUBLIC_PROCESS
+      relevance: CRITICAL
   projects/public-record-data-scrapper:
     title: 50-state UCC public records aggregation platform
     tags:
@@ -1781,6 +2184,14 @@ blocks:
     tier: full
     related_projects:
     - organvm-system
+    stats:
+      languages:
+      - typescript
+      coverage: 100
+      ci: true
+      public: true
+      promotion_status: PUBLIC_PROCESS
+      relevance: CRITICAL
   projects/radix-recursiva:
     title: Recursive root solving and alchemical cycles
     tags:
@@ -1801,6 +2212,13 @@ blocks:
     tier: short
     related_projects:
     - a-recursive-root
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/reading-group-curriculum:
     title: 'Structured reading group curricula spanning eight-organ domains: 8-12
       week pr...'
@@ -1819,19 +2237,29 @@ blocks:
     tier: short
     related_projects:
     - koinonia-db
+    stats:
+      languages:
+      - python
+      ci: true
+      public: false
+      promotion_status: PUBLIC_PROCESS
+      relevance: MEDIUM
   projects/recursive-engine:
-    title: Recursive Engine
+    title: RE:GE
     tags:
+    - ai
+    - ci-cd
+    - formal-systems
+    - identity
+    - microservices
+    - orchestration
+    - osc
+    - python
     - recursive
     - symbolic
-    - dsl
     - testing
-    - python
-    - formal-systems
-    - computation
     identity_positions:
     - independent-engineer
-    - creative-technologist
     - systems-artist
     tracks:
     - job
@@ -1840,7 +2268,15 @@ blocks:
     tier: full
     related_projects:
     - organvm-system
-    - agentic-titan
+    stats:
+      languages:
+      - python
+      test_count: 1254
+      coverage: 85
+      ci: true
+      public: true
+      promotion_status: PUBLIC_PROCESS
+      relevance: CRITICAL
   projects/reverse-engine-recursive-run:
     title: Architecture governance toolkit
     tags:
@@ -1865,6 +2301,13 @@ blocks:
     tier: full
     related_projects:
     - recursive-engine
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/salon-archive:
     title: 'Archive infrastructure for intellectual salons: transcription pipeline'
     tags:
@@ -1882,6 +2325,13 @@ blocks:
     tier: full
     related_projects:
     - koinonia-db
+    stats:
+      languages:
+      - python
+      ci: true
+      public: false
+      promotion_status: PUBLIC_PROCESS
+      relevance: HIGH
   projects/scalable-lore-expert:
     title: Ontological knowledge management system applying Dante's epistemological
       fram...
@@ -1905,6 +2355,13 @@ blocks:
     - grant
     - fellowship
     tier: full
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/schema-definitions:
     title: Canonical JSON Schema definitions for all eight-organ system data contracts
     tags:
@@ -1922,6 +2379,13 @@ blocks:
     - job
     - grant
     tier: full
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/search-local-happy-hour:
     title: Location-based social discovery for local events
     tags:
@@ -1939,6 +2403,13 @@ blocks:
     tracks:
     - job
     tier: short
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/select-or-left-or-right-or:
     title: Satirical social network platform
     tags:
@@ -1955,6 +2426,13 @@ blocks:
     tracks:
     - job
     tier: short
+    stats:
+      languages:
+      - javascript
+      ci: true
+      public: false
+      promotion_status: CANDIDATE
+      relevance: LOW
   projects/sema-metra-alchemica-mundi:
     title: Three-engine alchemical transformation framework
     tags:
@@ -1974,6 +2452,14 @@ blocks:
     tier: short
     related_projects:
     - a-recursive-root
+    stats:
+      languages:
+      - typescript
+      test_count: 297
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/shared-remembrance-gateway:
     title: Hosting Home
     tags:
@@ -1999,6 +2485,13 @@ blocks:
     - residency
     - fellowship
     tier: full
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/showcase-portfolio:
     title: Living portfolio aggregating all ORGAN-II generative art
     tags:
@@ -2017,6 +2510,13 @@ blocks:
     - residency
     - fellowship
     tier: full
+    stats:
+      languages:
+      - markdown
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: CRITICAL
   projects/social-automation:
     title: 'POSSE distribution backend: Mastodon, Discord, Bluesky'
     tags:
@@ -2029,6 +2529,13 @@ blocks:
     tracks:
     - job
     tier: short
+    stats:
+      languages:
+      - python
+      ci: true
+      public: false
+      promotion_status: GRADUATED
+      relevance: INTERNAL
   projects/sovereign-ecosystem-real-estate:
     title: Luxury real estate marketplace with blockchain verification
     tags:
@@ -2049,6 +2556,13 @@ blocks:
     tracks:
     - job
     tier: full
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: false
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/starts-prize-art-outputs:
     title: ORGANVM Tier 1 Art Outputs (S+T+ARTS Prize)
     tags:
@@ -2089,6 +2603,13 @@ blocks:
     related_projects:
     - organvm-corpus
     - organvm-engine
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/system-governance-framework:
     title: Multi-organ governance rules and promotion criteria
     tags:
@@ -2109,6 +2630,13 @@ blocks:
     - grant
     - fellowship
     tier: full
+    stats:
+      languages:
+      - shell
+      ci: true
+      public: false
+      promotion_status: CANDIDATE
+      relevance: CRITICAL
   projects/tab-bookmark-manager:
     title: AI-powered tab and bookmark management SaaS with ML services and browser
       exte...
@@ -2132,6 +2660,13 @@ blocks:
     tracks:
     - job
     tier: full
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/the-actual-news:
     title: Verifiable news ledger platform
     tags:
@@ -2150,6 +2685,13 @@ blocks:
     tracks:
     - job
     tier: full
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/the-invisible-ledger:
     title: Private financial tracking and accounting system
     tags:
@@ -2168,6 +2710,13 @@ blocks:
     tracks:
     - job
     tier: short
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: false
+      promotion_status: CANDIDATE
+      relevance: INTERNAL
   projects/trade-perpetual-future:
     title: Perpetual futures trading system
     tags:
@@ -2187,6 +2736,14 @@ blocks:
     tracks:
     - job
     tier: full
+    stats:
+      languages:
+      - python
+      - typescript
+      ci: true
+      public: false
+      promotion_status: CANDIDATE
+      relevance: HIGH
   projects/universal-mail-automation:
     title: Email workflow automation and scheduling
     tags:
@@ -2200,6 +2757,13 @@ blocks:
     tracks:
     - job
     tier: short
+    stats:
+      languages:
+      - python
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/universal-node-network:
     title: Distributed node network infrastructure for decentralized systems
     tags:
@@ -2217,6 +2781,13 @@ blocks:
     - job
     - fellowship
     tier: short
+    stats:
+      languages:
+      - shell
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
   projects/universal-waveform-explorer:
     title: Aether Canvas
     tags:
@@ -2236,6 +2807,13 @@ blocks:
     - residency
     - fellowship
     tier: full
+    stats:
+      languages:
+      - typescript
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: CRITICAL
   projects/your-fit-tailored:
     title: Specification-driven seed for circular weekly apparel subscription platform
     tags:
@@ -2251,6 +2829,13 @@ blocks:
     tracks:
     - job
     tier: short
+    stats:
+      languages:
+      - markdown
+      ci: true
+      public: true
+      promotion_status: CANDIDATE
+      relevance: MEDIUM
 tag_index:
   agent:
   - framings/ai-orchestrator
@@ -2300,8 +2885,10 @@ tag_index:
   - projects/fetch-familiar-friends
   - projects/gamified-coach-interface
   - projects/hokage-chess
+  - projects/krypto-velamen
   - projects/learning-resources
   - projects/life-betterment-simulation
+  - projects/life-my-midst-in
   - projects/linguistic-atomization-framework
   - projects/metasystem-master
   - projects/mirror-mirror
@@ -2318,6 +2905,7 @@ tag_index:
   - projects/public-record-data-scrapper
   - projects/radix-recursiva
   - projects/reading-group-curriculum
+  - projects/recursive-engine
   - projects/reverse-engine-recursive-run
   - projects/salon-archive
   - projects/scalable-lore-expert
@@ -2337,7 +2925,9 @@ tag_index:
   algorithmic-composition:
   - projects/generative-music
   api:
+  - projects/agentic-titan
   - projects/cognitive-archaelogy-tribunal
+  - projects/life-my-midst-in
   - projects/metasystem-master
   - projects/my-block-warfare
   - projects/my-knowledge-base
@@ -2353,14 +2943,11 @@ tag_index:
   - projects/organvm-system
   archive:
   - projects/community-hub
-  - projects/krypto-velamen
   - projects/salon-archive
   art-technology:
   - framings/starts-prize-art-tech-collaboration
   artist:
   - framings/emergency-precarity
-  assessment:
-  - projects/classroom-rpg-aetheria
   audience-participation:
   - framings/starts-prize-art-tech-collaboration
   - projects/omni-dromenon-engine
@@ -2399,6 +2986,7 @@ tag_index:
   - projects/a-mavs-olevm
   - projects/adaptive-personal-syllabus
   - projects/agent-claude-smith
+  - projects/agentic-titan
   - projects/ai-chat-exporter
   - projects/ai-skills
   - projects/alchemia-ingestvm
@@ -2408,11 +2996,13 @@ tag_index:
   - projects/auto-revision-epistemic-engine
   - projects/call-function-ontological
   - projects/card-trade-social
+  - projects/classroom-rpg-aetheria
   - projects/cognitive-archaelogy-tribunal
   - projects/distribution-strategy
   - projects/fetch-familiar-friends
   - projects/hokage-chess
   - projects/life-betterment-simulation
+  - projects/life-my-midst-in
   - projects/linguistic-atomization-framework
   - projects/mfa-thesis-portfolio
   - projects/mirror-mirror
@@ -2428,6 +3018,7 @@ tag_index:
   - projects/public-record-data-scrapper
   - projects/radix-recursiva
   - projects/reading-group-curriculum
+  - projects/recursive-engine
   - projects/reverse-engine-recursive-run
   - projects/salon-archive
   - projects/sema-metra-alchemica-mundi
@@ -2444,7 +3035,6 @@ tag_index:
   - projects/your-fit-tailored
   classroom:
   - framings/educator-researcher
-  - projects/classroom-rpg-aetheria
   collaboration:
   - framings/starts-prize-art-tech-collaboration
   community:
@@ -2452,13 +3042,10 @@ tag_index:
   - projects/adaptive-personal-syllabus
   - projects/community-hub
   - projects/koinonia-db
-  - projects/krypto-velamen
   - projects/reading-group-curriculum
   - projects/salon-archive
   compliance:
   - methodology/governance-as-art
-  computation:
-  - projects/recursive-engine
   concealment:
   - pitches/gay-lesbian-review
   constitutional:
@@ -2469,6 +3056,7 @@ tag_index:
   - framings/creative-technologist
   - projects/a-mavs-olevm
   - projects/academic-publication
+  - projects/ai-council-coliseum
   - projects/alchemical-synthesizer
   - projects/archive-past-works
   - projects/art-from-auto-revision
@@ -2484,6 +3072,7 @@ tag_index:
   - projects/example-interactive-installation
   - projects/example-theatre-dialogue
   - projects/generative-music
+  - projects/krypto-velamen
   - projects/learning-resources
   - projects/life-betterment-simulation
   - projects/metasystem-master
@@ -2505,9 +3094,10 @@ tag_index:
   curriculum:
   - framings/educator-researcher
   - projects/adaptive-personal-syllabus
-  - projects/classroom-rpg-aetheria
   database:
   - projects/adaptive-personal-syllabus
+  - projects/agentic-titan
+  - projects/ai-council-coliseum
   - projects/archive-past-works
   - projects/card-trade-social
   - projects/cognitive-archaelogy-tribunal
@@ -2537,17 +3127,17 @@ tag_index:
   - projects/trade-perpetual-future
   - projects/universal-node-network
   - projects/your-fit-tailored
-  debate:
-  - projects/ai-council-coliseum
   developer-tools:
   - framings/independent-engineer
   - projects/ai-chat-exporter
   - projects/anon-hookup-now
   - projects/card-trade-social
+  - projects/classroom-rpg-aetheria
   - projects/commerce-meta
   - projects/fetch-familiar-friends
   - projects/gamified-coach-interface
   - projects/hokage-chess
+  - projects/life-my-midst-in
   - projects/mirror-mirror
   - projects/multi-camera-livestream
   - projects/my-block-warfare
@@ -2565,10 +3155,14 @@ tag_index:
   docker:
   - evidence/starts-prize-technical-specs
   - projects/agent-claude-smith
+  - projects/agentic-titan
+  - projects/ai-council-coliseum
   - projects/card-trade-social
   - projects/community-hub
   - projects/example-interactive-installation
+  - projects/krypto-velamen
   - projects/learning-resources
+  - projects/life-my-midst-in
   - projects/metasystem-master
   - projects/my-father-mother
   - projects/my-knowledge-base
@@ -2586,8 +3180,6 @@ tag_index:
   - methodology/process-as-product
   - projects/organvm-system
   - projects/public-process
-  dsl:
-  - projects/recursive-engine
   education:
   - framings/educator-researcher
   - projects/adaptive-personal-syllabus
@@ -2615,9 +3207,11 @@ tag_index:
   exhibition:
   - evidence/starts-prize-technical-specs
   fastapi:
+  - projects/agentic-titan
   - projects/ai-council-coliseum
   - projects/cognitive-archaelogy-tribunal
   - projects/community-hub
+  - projects/krypto-velamen
   - projects/narratological-algorithmic-lenses
   - projects/nexus-babel-alexandria
   - projects/scalable-lore-expert
@@ -2644,11 +3238,9 @@ tag_index:
   - projects/sema-metra-alchemica-mundi
   - projects/system-governance-framework
   game-design:
-  - projects/classroom-rpg-aetheria
   - projects/my-block-warfare
   gamification:
   - projects/card-trade-social
-  - projects/classroom-rpg-aetheria
   - projects/gamified-coach-interface
   generative-art:
   - framings/starts-prize-art-tech-collaboration
@@ -2670,6 +3262,7 @@ tag_index:
   - projects/example-interactive-installation
   - projects/example-theatre-dialogue
   - projects/generative-music
+  - projects/krypto-velamen
   - projects/learning-resources
   - projects/life-betterment-simulation
   - projects/linguistic-atomization-framework
@@ -2698,7 +3291,7 @@ tag_index:
   - methodology/governance-as-art
   - pitches/noema-magazine
   - projects/agent-claude-smith
-  - projects/ai-council-coliseum
+  - projects/agentic-titan
   - projects/ai-skills
   - projects/alchemia-ingestvm
   - projects/art-from-auto-revision
@@ -2725,14 +3318,13 @@ tag_index:
   - identity/60s
   - identity/cathedral
   - projects/collective-persona-operations
-  - projects/krypto-velamen
   - projects/life-my-midst-in
   - projects/meta-source-ledger-output
+  - projects/recursive-engine
   infrastructure:
   - evidence/system-overview
   - framings/creative-technologist
   - framings/independent-engineer
-  - projects/agentic-titan
   - projects/alchemia-ingestvm
   - projects/organvm-corpus
   - projects/organvm-engine
@@ -2744,11 +3336,8 @@ tag_index:
   - projects/starts-prize-art-outputs
   institutional-design:
   - pitches/noema-magazine
-  interactive:
-  - projects/life-my-midst-in
-  interview:
-  - projects/life-my-midst-in
   knowledge-graph:
+  - projects/agentic-titan
   - projects/ai-skills
   - projects/cognitive-archaelogy-tribunal
   - projects/gamified-coach-interface
@@ -2765,19 +3354,15 @@ tag_index:
   - projects/koinonia-db
   - projects/reading-group-curriculum
   - projects/salon-archive
-  learning-platform:
-  - projects/classroom-rpg-aetheria
   lgbtq:
   - framings/community-practitioner
   - pitches/gay-lesbian-review
-  - projects/krypto-velamen
   linguistics:
   - projects/nexus-babel-alexandria
   literary-analysis:
   - projects/nexus-babel-alexandria
   literary-criticism:
   - pitches/gay-lesbian-review
-  - projects/krypto-velamen
   llm:
   - framings/ai-orchestrator
   - methodology/ai-conductor
@@ -2804,6 +3389,7 @@ tag_index:
   - projects/krypto-velamen
   - projects/my-knowledge-base
   - projects/organon-noumenon
+  - projects/recursive-engine
   - projects/scalable-lore-expert
   - projects/shared-remembrance-gateway
   - projects/tab-bookmark-manager
@@ -2812,7 +3398,6 @@ tag_index:
   multi-agent:
   - framings/ai-orchestrator
   - framings/creative-technologist
-  - projects/agentic-titan
   multilingual:
   - projects/nexus-babel-alexandria
   music:
@@ -2822,6 +3407,7 @@ tag_index:
   - framings/community-practitioner
   nlp:
   - projects/call-function-ontological
+  - projects/krypto-velamen
   - projects/linguistic-atomization-framework
   - projects/my-block-warfare
   - projects/nexus-babel-alexandria
@@ -2842,6 +3428,7 @@ tag_index:
   - projects/metasystem-master
   - projects/orchestration-start-here
   - projects/petasum-super-petasum
+  - projects/recursive-engine
   - projects/universal-node-network
   organvm:
   - identity/2min
@@ -2860,6 +3447,7 @@ tag_index:
   - projects/learning-resources
   - projects/metasystem-master
   - projects/omni-dromenon-engine
+  - projects/recursive-engine
   - projects/universal-waveform-explorer
   p5js:
   - projects/a-mavs-olevm
@@ -2871,9 +3459,9 @@ tag_index:
   - projects/organvm-corpus
   pedagogy:
   - framings/educator-researcher
-  - projects/classroom-rpg-aetheria
   performance:
   - framings/starts-prize-art-tech-collaboration
+  - projects/agentic-titan
   - projects/art-from-auto-revision
   - projects/learning-resources
   - projects/metasystem-master
@@ -2888,6 +3476,7 @@ tag_index:
   - projects/ai-chat-exporter
   - projects/anon-hookup-now
   - projects/card-trade-social
+  - projects/classroom-rpg-aetheria
   - projects/commerce-meta
   - projects/fetch-familiar-friends
   - projects/gamified-coach-interface
@@ -2921,7 +3510,6 @@ tag_index:
   - framings/community-practitioner
   - framings/emergency-precarity
   privacy:
-  - projects/krypto-velamen
   - projects/shared-remembrance-gateway
   process:
   - methodology/process-as-product
@@ -2936,6 +3524,7 @@ tag_index:
   - projects/a-recursive-root
   - projects/adaptive-personal-syllabus
   - projects/agentic-titan
+  - projects/ai-council-coliseum
   - projects/ai-skills
   - projects/alchemia-ingestvm
   - projects/alchemical-synthesizer
@@ -2949,6 +3538,7 @@ tag_index:
   - projects/gamified-coach-interface
   - projects/hokage-chess
   - projects/koinonia-db
+  - projects/krypto-velamen
   - projects/learning-resources
   - projects/life-betterment-simulation
   - projects/linguistic-atomization-framework
@@ -2978,12 +3568,14 @@ tag_index:
   - projects/a-mavs-olevm
   - projects/adaptive-personal-syllabus
   - projects/ai-chat-exporter
+  - projects/ai-council-coliseum
   - projects/call-function-ontological
   - projects/card-trade-social
   - projects/classroom-rpg-aetheria
   - projects/client-sdk
   - projects/example-interactive-installation
   - projects/fetch-familiar-friends
+  - projects/life-my-midst-in
   - projects/meta-source-ledger-output
   - projects/metasystem-master
   - projects/mfa-thesis-portfolio
@@ -3025,14 +3617,10 @@ tag_index:
   - identity/cathedral
   - pitches/mit-tr-wired-aeon
   - projects/organvm-system
-  solana:
-  - projects/ai-council-coliseum
   solo-production:
   - evidence/differentiators
   - identity/5min
   - identity/cathedral
-  spectacle:
-  - projects/ai-council-coliseum
   stability:
   - framings/emergency-precarity
   supercollider:
@@ -3083,7 +3671,6 @@ tag_index:
   teaching:
   - framings/educator-researcher
   - pitches/credentials-creative-tech
-  - projects/classroom-rpg-aetheria
   technical:
   - evidence/starts-prize-technical-specs
   technology:
@@ -3099,6 +3686,7 @@ tag_index:
   - projects/agent-claude-smith
   - projects/agentic-titan
   - projects/ai-chat-exporter
+  - projects/ai-council-coliseum
   - projects/ai-skills
   - projects/alchemia-ingestvm
   - projects/archive-past-works
@@ -3109,6 +3697,7 @@ tag_index:
   - projects/call-function-ontological
   - projects/card-trade-social
   - projects/case-studies-methodology
+  - projects/classroom-rpg-aetheria
   - projects/client-sdk
   - projects/cognitive-archaelogy-tribunal
   - projects/community-hub
@@ -3164,6 +3753,7 @@ tag_index:
   - projects/ai-council-coliseum
   - projects/ai-skills
   - projects/art-from-auto-revision
+  - projects/classroom-rpg-aetheria
   - projects/client-sdk
   - projects/example-ai-collaboration
   - projects/example-interactive-installation
@@ -3199,6 +3789,7 @@ tag_index:
   - projects/gamified-coach-interface
   - projects/hokage-chess
   - projects/learning-resources
+  - projects/life-my-midst-in
   - projects/meta-source-ledger-output
   - projects/metasystem-master
   - projects/mfa-thesis-portfolio
@@ -3222,6 +3813,7 @@ tag_index:
   - projects/trade-perpetual-future
   - projects/universal-waveform-explorer
   websocket:
+  - projects/agentic-titan
   - projects/alchemical-synthesizer
   - projects/archive-past-works
   - projects/art-from-auto-revision

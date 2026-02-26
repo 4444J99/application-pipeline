@@ -6,6 +6,12 @@ identity_positions: [creative-technologist, independent-engineer, systems-artist
 tracks: [job, grant]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: HIGH
 ---
 
 # Project: Canonical JSON Schema definitions for all eight-organ system data contracts

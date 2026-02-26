@@ -7,6 +7,12 @@ tracks: [grant, fellowship]
 related_projects: [recursive-engine]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: false
+  promotion_status: CANDIDATE
+  relevance: HIGH
 ---
 
 # Project: Audit tool for cognitive systems and organizational coherence

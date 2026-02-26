@@ -7,6 +7,12 @@ tracks: [job, fellowship]
 related_projects: [agent-claude-smith]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: HIGH
 ---
 
 # Project: Public repository of AI agent skills: specialized capabilities and workflows ...

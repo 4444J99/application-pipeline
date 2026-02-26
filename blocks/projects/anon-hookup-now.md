@@ -6,6 +6,12 @@ identity_positions: [creative-technologist, independent-engineer]
 tracks: [job]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: false
+  promotion_status: CANDIDATE
+  relevance: LOW
 ---
 
 # Project: Open-source grid+map rendezvous

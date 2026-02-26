@@ -7,6 +7,12 @@ tracks: [grant, residency, fellowship]
 related_projects: [metasystem-master]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [markdown]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: MEDIUM
 ---
 
 # Project: Interactive theatre dialogue example with server and client

@@ -6,6 +6,12 @@ identity_positions: [community-practitioner, creative-technologist, systems-arti
 tracks: [grant, residency, fellowship]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [markdown]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: MEDIUM
 ---
 
 # Project: Educational layer: workshop curricula, tiered learning paths

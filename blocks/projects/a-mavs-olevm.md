@@ -7,6 +7,12 @@ tracks: [grant, residency, fellowship, prize]
 related_projects: [organvm-system]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [typescript]
+  ci: true
+  public: true
+  promotion_status: PUBLIC_PROCESS
+  relevance: HIGH
 ---
 
 # Project: Personal artistic portfolio site (etceter4.com)

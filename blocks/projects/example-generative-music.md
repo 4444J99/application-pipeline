@@ -7,6 +7,12 @@ tracks: [grant, residency, fellowship]
 related_projects: [metasystem-master]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [typescript]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: HIGH
 ---
 
 # Project: Generative music example

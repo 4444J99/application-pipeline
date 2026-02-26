@@ -7,6 +7,12 @@ tracks: [job, grant, fellowship]
 related_projects: [organvm-system]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: PUBLIC_PROCESS
+  relevance: CRITICAL
 ---
 
 # Project: The authoritative planning and governance corpus for the eight-organ creative...

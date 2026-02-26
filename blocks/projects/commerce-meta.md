@@ -6,6 +6,11 @@ identity_positions: [creative-technologist, independent-engineer]
 tracks: [job]
 tier: short
 review_status: auto-generated
+stats:
+  ci: true
+  public: false
+  promotion_status: CANDIDATE
+  relevance: INTERNAL
 ---
 
 # Project: Private governance repo for ORGAN-III commerce operations: contracts

@@ -7,6 +7,12 @@ tracks: [writing, grant]
 related_projects: [agentic-titan, metasystem-master, organvm-system, public-record-data-scrapper, recursive-engine]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [jekyll]
+  ci: true
+  public: true
+  promotion_status: PUBLIC_PROCESS
+  relevance: CRITICAL
 ---
 
 # Project: Essays, case studies, methodology documentation, RSS feed

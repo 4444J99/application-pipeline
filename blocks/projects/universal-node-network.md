@@ -6,6 +6,12 @@ identity_positions: [creative-technologist, independent-engineer]
 tracks: [job, fellowship]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [shell]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: MEDIUM
 ---
 
 # Project: Distributed node network infrastructure for decentralized systems

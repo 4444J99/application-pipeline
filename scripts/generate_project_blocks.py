@@ -12,6 +12,7 @@ Usage:
     python scripts/generate_project_blocks.py --yes               # Generate all
     python scripts/generate_project_blocks.py --yes --force       # Overwrite existing
     python scripts/generate_project_blocks.py --rebuild-index     # Also rebuild _index.yaml
+    python scripts/generate_project_blocks.py --stats-only --yes  # Update stats only (safe for hand-authored)
 """
 
 import argparse
@@ -207,6 +208,9 @@ def extract_repos(registry: dict) -> list[dict]:
                 "implementation_status": repo.get("implementation_status", ""),
                 "dependencies": repo.get("dependencies", []),
                 "promotion_status": repo.get("promotion_status", ""),
+                "ci_workflow": repo.get("ci_workflow", ""),
+                "public": repo.get("public", False),
+                "platinum_status": repo.get("platinum_status", False),
             })
     return repos
 
@@ -266,6 +270,93 @@ def read_seed(repo: dict) -> dict | None:
         except yaml.YAMLError:
             return None
     return None
+
+
+def extract_readme_stats(readme_text: str) -> dict:
+    """Extract quantitative stats from README badge lines.
+
+    Parses shields.io-style badges for language, test count, and coverage.
+    Returns dict with only keys that have data.
+    """
+    stats = {}
+
+    # Language from lang-X- badge
+    lang_matches = re.findall(r"lang-(\w+)-", readme_text, re.IGNORECASE)
+    if lang_matches:
+        stats["languages"] = [m.lower() for m in lang_matches]
+
+    # Test count from tests-N badge (handles URL-encoded spaces like %20)
+    test_match = re.search(r"tests-(\d[\d,]*(?:%20\w+)?)-", readme_text)
+    if test_match:
+        raw = test_match.group(1)
+        # Strip URL-encoded text and commas, keep just the number
+        num_str = re.sub(r"%20.*", "", raw).replace(",", "")
+        try:
+            stats["test_count"] = int(num_str)
+        except ValueError:
+            pass
+
+    # Coverage from coverage-N% badge (skip "pending")
+    cov_match = re.search(r"coverage-([\d.]+)%25", readme_text)
+    if cov_match:
+        try:
+            stats["coverage"] = float(cov_match.group(1))
+            # Use int if it's a whole number
+            if stats["coverage"] == int(stats["coverage"]):
+                stats["coverage"] = int(stats["coverage"])
+        except ValueError:
+            pass
+
+    return stats
+
+
+def extract_stats(repo: dict, readme_text: str | None, seed: dict | None) -> dict:
+    """Build structured stats for a project block.
+
+    3-layer merge: README badges > registry fields > seed.yaml.
+    Only includes keys with actual data.
+    """
+    stats = {}
+
+    # Layer 1: Registry fields (always available)
+    ci_workflow = repo.get("ci_workflow", "")
+    if ci_workflow:
+        stats["ci"] = True
+        # Infer language from CI workflow name
+        if "python" in ci_workflow.lower():
+            stats["languages"] = ["python"]
+        elif "typescript" in ci_workflow.lower():
+            stats["languages"] = ["typescript"]
+        elif "mixed" in ci_workflow.lower():
+            stats["languages"] = ["python", "typescript"]
+
+    if repo.get("public") is not None:
+        stats["public"] = repo["public"]
+
+    if repo.get("promotion_status"):
+        stats["promotion_status"] = repo["promotion_status"]
+
+    relevance = relevance_level(repo.get("portfolio_relevance", ""))
+    if relevance != "NONE":
+        stats["relevance"] = relevance
+
+    # Layer 2: seed.yaml fallback for language
+    if seed and not stats.get("languages"):
+        lang = (seed.get("metadata") or {}).get("language")
+        if lang:
+            stats["languages"] = [lang.lower()]
+
+    # Layer 3: README badge parsing (overrides registry for language, test_count, coverage)
+    if readme_text:
+        readme_stats = extract_readme_stats(readme_text)
+        if readme_stats.get("languages"):
+            stats["languages"] = readme_stats["languages"]
+        if readme_stats.get("test_count"):
+            stats["test_count"] = readme_stats["test_count"]
+        if readme_stats.get("coverage"):
+            stats["coverage"] = readme_stats["coverage"]
+
+    return stats
 
 
 def strip_markdown_inline(text: str) -> str:
@@ -584,6 +675,7 @@ def generate_block(repo: dict) -> str:
     """Generate complete block markdown for a repo."""
     block_name = repo_to_block_name(repo["name"])
     readme_text = read_readme(repo)
+    seed = read_seed(repo)
     intro = extract_intro_paragraph(readme_text) if readme_text else ""
     description = repo["description"]
 
@@ -597,6 +689,7 @@ def generate_block(repo: dict) -> str:
     identity_positions = compute_identity_positions(repo, readme_text)
     tracks = compute_tracks(repo)
     related = compute_related_projects(repo)
+    stats = extract_stats(repo, readme_text, seed)
 
     # Derive a human title
     if " — " in description:
@@ -643,6 +736,22 @@ def generate_block(repo: dict) -> str:
         fm_lines.append(f"related_projects: [{', '.join(fm['related_projects'])}]")
     fm_lines.append(f"tier: {fm['tier']}")
     fm_lines.append("review_status: auto-generated")
+    if stats:
+        fm_lines.append("stats:")
+        if stats.get("languages"):
+            fm_lines.append(f"  languages: [{', '.join(stats['languages'])}]")
+        if stats.get("test_count"):
+            fm_lines.append(f"  test_count: {stats['test_count']}")
+        if stats.get("coverage"):
+            fm_lines.append(f"  coverage: {stats['coverage']}")
+        if "ci" in stats:
+            fm_lines.append(f"  ci: {str(stats['ci']).lower()}")
+        if "public" in stats:
+            fm_lines.append(f"  public: {str(stats['public']).lower()}")
+        if stats.get("promotion_status"):
+            fm_lines.append(f"  promotion_status: {stats['promotion_status']}")
+        if stats.get("relevance"):
+            fm_lines.append(f"  relevance: {stats['relevance']}")
     fm_lines.append("---")
 
     # Build content
@@ -722,6 +831,79 @@ def coverage_report(repos: list[dict]):
         print(f"{organ:<14} {d['total']:>5} {d['skip']:>5} {d['existing']:>5} {d['new']:>5}")
 
 
+def update_block_stats(block_path: Path, stats: dict) -> bool:
+    """Update only the stats section in an existing block's frontmatter.
+
+    Preserves all other frontmatter and content. Returns True if changed.
+    """
+    text = block_path.read_text()
+    if not text.startswith("---"):
+        return False
+    end = text.find("---", 3)
+    if end == -1:
+        return False
+
+    fm_text = text[3:end]
+    body = text[end + 3:]
+
+    try:
+        fm = yaml.safe_load(fm_text)
+    except yaml.YAMLError:
+        return False
+
+    if fm is None:
+        return False
+
+    old_stats = fm.get("stats")
+    if stats:
+        fm["stats"] = stats
+    elif "stats" in fm:
+        del fm["stats"]
+
+    if fm.get("stats") == old_stats:
+        return False
+
+    # Re-render frontmatter manually to preserve style
+    fm_lines = ["---"]
+    safe_title = fm.get("title", "").replace('"', '\\"')
+    fm_lines.append(f'title: "{safe_title}"')
+    if fm.get("category"):
+        fm_lines.append(f"category: {fm['category']}")
+    if fm.get("tags"):
+        fm_lines.append(f"tags: [{', '.join(fm['tags'])}]")
+    if fm.get("identity_positions"):
+        fm_lines.append(f"identity_positions: [{', '.join(fm['identity_positions'])}]")
+    if fm.get("tracks"):
+        fm_lines.append(f"tracks: [{', '.join(fm['tracks'])}]")
+    if fm.get("related_projects"):
+        fm_lines.append(f"related_projects: [{', '.join(fm['related_projects'])}]")
+    if fm.get("tier"):
+        fm_lines.append(f"tier: {fm['tier']}")
+    if fm.get("review_status"):
+        fm_lines.append(f"review_status: {fm['review_status']}")
+    if fm.get("stats"):
+        s = fm["stats"]
+        fm_lines.append("stats:")
+        if s.get("languages"):
+            fm_lines.append(f"  languages: [{', '.join(s['languages'])}]")
+        if s.get("test_count"):
+            fm_lines.append(f"  test_count: {s['test_count']}")
+        if s.get("coverage"):
+            fm_lines.append(f"  coverage: {s['coverage']}")
+        if "ci" in s:
+            fm_lines.append(f"  ci: {str(s['ci']).lower()}")
+        if "public" in s:
+            fm_lines.append(f"  public: {str(s['public']).lower()}")
+        if s.get("promotion_status"):
+            fm_lines.append(f"  promotion_status: {s['promotion_status']}")
+        if s.get("relevance"):
+            fm_lines.append(f"  relevance: {s['relevance']}")
+    fm_lines.append("---")
+
+    block_path.write_text("\n".join(fm_lines) + body)
+    return True
+
+
 def main():
     parser = argparse.ArgumentParser(description="Generate project blocks from ORGANVM registry")
     parser.add_argument("--dry-run", action="store_true", help="Preview without writing")
@@ -731,6 +913,8 @@ def main():
     parser.add_argument("--yes", action="store_true", help="Execute generation")
     parser.add_argument("--force", action="store_true", help="Overwrite existing blocks")
     parser.add_argument("--rebuild-index", action="store_true", help="Rebuild _index.yaml after")
+    parser.add_argument("--stats-only", action="store_true",
+                        help="Update stats in existing blocks without regenerating content")
     args = parser.parse_args()
 
     registry = load_registry()
@@ -752,6 +936,54 @@ def main():
 
     if args.report:
         coverage_report(all_repos)
+        return
+
+    # Stats-only mode: update stats in existing blocks without regenerating content
+    if args.stats_only:
+        updated = 0
+        for repo in all_repos:
+            skip = should_skip(repo)
+            if skip:
+                continue
+            block_name = repo_to_block_name(repo["name"])
+            block_path = existing_block_path(block_name)
+            if not block_path:
+                continue
+            readme_text = read_readme(repo)
+            seed = read_seed(repo)
+            stats = extract_stats(repo, readme_text, seed)
+            if args.dry_run:
+                stats_summary = []
+                if stats.get("languages"):
+                    stats_summary.append(f"lang={','.join(stats['languages'])}")
+                if stats.get("test_count"):
+                    stats_summary.append(f"tests={stats['test_count']}")
+                if stats.get("coverage"):
+                    stats_summary.append(f"cov={stats['coverage']}%")
+                if stats.get("ci"):
+                    stats_summary.append("ci")
+                print(f"  {block_name}.md: {' | '.join(stats_summary) or 'no stats'}")
+                updated += 1
+            elif args.yes:
+                if update_block_stats(block_path, stats):
+                    print(f"  Updated stats: {block_name}.md")
+                    updated += 1
+            else:
+                print(f"Would update stats: {block_name}.md")
+                updated += 1
+        print()
+        if args.dry_run:
+            print(f"Dry run: {updated} blocks checked")
+        elif args.yes:
+            print(f"Updated stats in {updated} blocks")
+        else:
+            print(f"{updated} blocks ready for stats update. Run with --yes to execute.")
+        if args.rebuild_index and args.yes and updated > 0:
+            print("\nRebuilding block index...")
+            subprocess.run(
+                [sys.executable, str(REPO_ROOT / "scripts" / "build_block_index.py")],
+                check=True,
+            )
         return
 
     # Process repos

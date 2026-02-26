@@ -6,6 +6,10 @@ identity_positions: [creative-technologist, systems-artist]
 tracks: [grant, residency, fellowship]
 tier: full
 review_status: auto-generated
+stats:
+  public: true
+  promotion_status: LOCAL
+  relevance: HIGH
 ---
 
 # Project: CHTHON-ONEIROS

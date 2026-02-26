@@ -7,6 +7,12 @@ tracks: [grant, residency, fellowship]
 related_projects: [metasystem-master]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [typescript]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: MEDIUM
 ---
 
 # Project: WebSocket client library for audience vote submission in Omni-Dromenon-Engine

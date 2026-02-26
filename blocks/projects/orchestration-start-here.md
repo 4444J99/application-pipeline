@@ -7,6 +7,12 @@ tracks: [job, grant, fellowship]
 related_projects: [organvm-system]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: PUBLIC_PROCESS
+  relevance: CRITICAL
 ---
 
 # Project: Central orchestration hub: registry, governance rules, 5 workflows

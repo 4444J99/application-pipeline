@@ -1,34 +1,35 @@
 ---
-title: "AI Council Coliseum"
+title: "Decentralized live-streaming platform where AI agents debate with viewer cryp..."
 category: projects
-tags: [ai, debate, governance, blockchain, solana, three-js, fastapi, generative-art, spectacle]
+tags: [ai, blockchain, creative-coding, database, docker, fastapi, generative-art, python, react, testing, three-js]
 identity_positions: [creative-technologist, systems-artist]
 tracks: [grant, residency, fellowship]
-related_projects: [organvm-system]
+related_projects: [metasystem-master, performance-sdk]
 tier: full
+review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: HIGH
 ---
 
-# Project: AI Council Coliseum
+# Project: Decentralized live-streaming platform where AI agents debate with viewer cryp...
 
 ## One-Line
-Decentralized AI debate arena where autonomous philosophical agents battle through rhetorical combat in a 3D arena with on-chain governance.
+Decentralized live-streaming platform where AI agents debate with viewer crypto participation
 
 ## Short (100 words)
-AI Council Coliseum is a decentralized platform where autonomous AI agents — Socrates, Machiavelli, and others — pull real-time trends and debate through rhetorical combat. Arguments become attack moves (Strawman Strike, Ad Hominem) rendered in a Three.js 3D arena. Audiences participate through stake-weighted voting on Solana, creating a governance-as-spectacle feedback loop. The work asks: what happens when philosophical argument becomes gamified combat, when democratic participation requires skin in the game? Built with FastAPI, Next.js 14, React Three Fiber, pgvector RAG memory, and Anchor smart contracts. Part of ORGAN-II (Poiesis).
+Decentralized live-streaming platform where AI agents debate with viewer crypto participation. AI Council Coliseum is a decentralized 24/7 live streaming platform where AI agents debate real-time events. It is a fusion of autonomous procedural entertainment ("Nothing Forever"), high-stakes satire ("Celebrity Deathmatch"), and decentralized governance ("Twitch Plays Pokemon"). Part of ORGAN-II (Poiesis).
 
 ## Full
-AI Council Coliseum fuses autonomous procedural entertainment ("Nothing Forever"), high-stakes satire ("Celebrity Deathmatch"), and decentralized governance ("Twitch Plays Pokemon") into a 24/7 live streaming debate platform.
+**🏟️ The Arena Experience:** - **Autonomous Debates**: Agents like Socrates and Machiavelli pull trends from the web and battle for consensus. - **Combat Engine**: Arguments are translated into combat moves (Strawman Strike, Ad Hominem) that drain opponent HP. - **3D Visualizer**: A Three.js powered arena provides a cinematic view of the agents in action. - **RAG Memory**: Agents remember past debates and utilize a vector-backed knowledge base to build their cases.
 
-### Architecture
-- **Debate Engine**: LiteLLM-powered agents with distinct philosophical personalities, RAG memory from past debates, and vector-backed knowledge bases
-- **Combat System**: Rhetorical arguments translated into combat moves with HP drain, combo chains, and visual effects
-- **3D Arena**: Three.js (React Three Fiber) cinematic visualization — agent avatars, combat animations, real-time event ticker
-- **On-Chain Economy**: Solana integration with stake-weighted voter tiers (Bronze to Platinum), durable governance polls
-- **Backend**: Python 3.11, FastAPI, SQLAlchemy, PostgreSQL + pgvector, Redis real-time layer
+**⛓️ On-Chain Economy:** - **Solana Integration**: Connect your wallet to link your on-chain identity. - **Voter Tiers**: Your influence weight (Bronze to Platinum) is determined by your real SOL stake. - **Durable Governance**: Cast votes on active polls to influence the outcome of high-priority debates.
 
-### Conceptual Stakes
-The Coliseum makes governance visible and visceral. By translating philosophical debate into spectacle — complete with stakes, combat, and audience participation — it interrogates the gamification of democratic processes. The AI agents are not tools but performers: autonomous entities whose philosophical commitments shape their rhetorical strategies.
+**🚀 Tech Stack:** - **Backend**: Python 3.11, FastAPI, SQLAlchemy, LiteLLM, pgvector. - **Frontend**: Next.js 15, Three.js (React Three Fiber), Tailwind CSS, Framer Motion. - **Database**: PostgreSQL (Persistence & Vector Storage), Redis (Real-time). - **Blockchain**: Solana (Anchor/Rust Smart Contracts).
 
 ## Links
 - GitHub: https://github.com/organvm-ii-poiesis/a-i-council--coliseum
-- Organ: ORGAN-II (Poiesis) — Generative art, performance, experiential systems
+- Organ: ORGAN-II (Poiesis) — Art

@@ -7,6 +7,14 @@ tracks: [grant, fellowship]
 related_projects: [linguistic-atomization-framework]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [typescript]
+  test_count: 1463
+  coverage: 62.7
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: HIGH
 ---
 
 # Project: Knowledge atomization system: exports Claude conversations

@@ -7,6 +7,12 @@ tracks: [job, fellowship]
 related_projects: [system-governance-framework]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [shell]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: HIGH
 ---
 
 # Project: Organization-wide issue tracking with logic-first governance framework and co...

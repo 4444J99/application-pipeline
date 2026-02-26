@@ -7,6 +7,12 @@ tracks: [grant, residency, fellowship]
 related_projects: [auto-revision-epistemic-engine]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: MEDIUM
 ---
 
 # Project: Interactive visualization of self-governing orchestration

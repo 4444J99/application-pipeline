@@ -6,6 +6,11 @@ identity_positions: [community-practitioner, educator]
 tracks: [grant]
 tier: short
 review_status: auto-generated
+stats:
+  ci: true
+  public: true
+  promotion_status: PUBLIC_PROCESS
+  relevance: MEDIUM
 ---
 
 # Project: Shared SQLAlchemy 2

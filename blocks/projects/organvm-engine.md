@@ -7,6 +7,12 @@ tracks: [job, grant, fellowship]
 related_projects: [organvm-system, schema-definitions]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: CRITICAL
 ---
 
 # Project: Core Python package

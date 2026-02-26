@@ -6,6 +6,12 @@ identity_positions: [creative-technologist]
 tracks: [job]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: false
+  promotion_status: GRADUATED
+  relevance: INTERNAL
 ---
 
 # Project: POSSE distribution backend: Mastodon, Discord, Bluesky

@@ -6,6 +6,12 @@ identity_positions: [independent-engineer, systems-artist]
 tracks: [grant, fellowship]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [shell]
+  ci: true
+  public: false
+  promotion_status: CANDIDATE
+  relevance: CRITICAL
 ---
 
 # Project: Multi-organ governance rules and promotion criteria

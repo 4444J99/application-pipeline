@@ -6,6 +6,11 @@ identity_positions: [creative-technologist, systems-artist]
 tracks: [grant, residency, fellowship]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [typescript]
+  public: true
+  promotion_status: LOCAL
+  relevance: HIGH
 ---
 
 # Project: MET4MORFOSES Web Edition

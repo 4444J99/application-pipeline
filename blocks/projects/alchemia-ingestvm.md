@@ -7,6 +7,12 @@ tracks: [job, grant]
 related_projects: [organvm-corpus]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: HIGH
 ---
 
 # Project: The Alchemical Forge

@@ -7,6 +7,11 @@ tracks: [grant, fellowship]
 related_projects: [koinonia-db, organvm-system]
 tier: full
 review_status: auto-generated
+stats:
+  ci: true
+  public: true
+  promotion_status: PUBLIC_PROCESS
+  relevance: HIGH
 ---
 
 # Project: FastAPI flagship portal

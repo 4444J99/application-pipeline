@@ -6,6 +6,12 @@ identity_positions: [creative-technologist, independent-engineer]
 tracks: [job]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: MEDIUM
 ---
 
 # Project: Email workflow automation and scheduling

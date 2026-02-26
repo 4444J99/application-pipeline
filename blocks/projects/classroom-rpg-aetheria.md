@@ -1,33 +1,33 @@
 ---
-title: "Classroom RPG: Aetheria"
+title: "Educational RPG system for classroom engagement"
 category: projects
-tags: [education, gamification, teaching, curriculum, learning-platform, react, typescript, ai, pedagogy, classroom, assessment, game-design]
-identity_positions: [educator, independent-engineer, creative-technologist]
-tracks: [job, grant, fellowship]
-related_projects: [organvm-system]
+tags: [ai, ci-cd, developer-tools, education, platform, react, testing, three-js, typescript]
+identity_positions: [creative-technologist, independent-engineer]
+tracks: [job]
+related_projects: [gamified-coach-interface]
 tier: full
+review_status: auto-generated
+stats:
+  languages: [typescript]
+  ci: true
+  public: true
+  promotion_status: PUBLIC_PROCESS
+  relevance: CRITICAL
 ---
 
-# Project: Classroom RPG — Aetheria
+# Project: Educational RPG system for classroom engagement
 
 ## One-Line
-Classroom gamification platform (React 19, TypeScript, Vite) with AI-powered feedback, 4 theme systems, and quest-based learning progression.
+Educational RPG system for classroom engagement
 
-## Short (~100 words)
-Aetheria is a classroom gamification platform that transforms course assignments into quests within themed realms. Built with React 19, TypeScript, Vite, and Tailwind CSS v4, it uses LLM-powered features (via GitHub Spark) for AI-generated study guides and assignment feedback. The platform includes 4 switchable theme systems (Fantasy, Cyberpunk, Medieval, Modern) with localized terminology, a Knowledge Crystal system for remediation on failed quests, and a sandbox mode for demos. The architecture demonstrates education-specific product engineering: turning pedagogical concepts (mastery-based progression, scaffolded feedback, formative assessment) into composable software components.
+## Short (100 words)
+Educational RPG system for classroom engagement. A gamified education platform that transforms classroom learning into immersive role-playing experiences, mapping curriculum objectives to quest mechanics, XP progression, and AI-powered evaluation. Aetheria addresses the 40% dropout rate observed across online learning platforms by applying game-design psychology to structured education. Students do not simply complete assignments — they embark on quests within themed realms, earn artifacts graded by rarity, accumulate experience points that unlock progression tiers, and receive AI-generated feedback calibrated to curriculum standards.
 
 ## Full
-Aetheria bridges 11 years of classroom teaching experience with production-grade frontend engineering. The platform implements pedagogical principles as software architecture:
+**Product Overview:** Aetheria is a React-based single-page application built with TypeScript, Vite, and Tailwind CSS. It targets the $8B+ EdTech gamification market by combining three capabilities that existing platforms offer only in isolation: 1. **Deep RPG mechanics** — not surface-level badges, but a complete game loop with realms, quests, prerequisites, artifacts, knowledge crystals, constellation maps, and level-gated progression. 2. **AI-powered evaluation** — instant feedback on student submissions using LLM integration, with automatic remediation content generation, structured rubric scoring, and DOMPurify-sanitized output. 3. **Curriculum-first design** — every quest maps to specific CCSS ELA or AP Literature standards, every rubric aligns to institutional expectations, and every analytics view rolls up to mastery-level reporting by standard. The platform serves three distinct user roles — students, teachers, and parents — each with tailored interfaces, permissions, and interaction patterns. Teachers create realms (courses), populate them with quests (assignments), and monitor student progress through analytics dashboards. Students navigate a spatial quest map, submit work, receive AI feedback, and collect artifacts as tangible representations of their learning. Parents participate through a three-way voting system that shapes personalized content variants. ### Key Metrics from Internal Analysis - **13/13 core features** implemented in the current prototype - **35% production readiness** (active hardening underway — see Roadmap) - **9/10 innovation score** per internal nine-dimensional analysis - **4 complete thematic skins** with consistent vocabulary, geometry, and visual identity - **4 years of English Literature curriculum** pre-built with quests, rubrics, and standards mappings ---
 
-- **Quest state machine**: Assignments progress through locked → available → in-progress → submitted → graded states, mirroring mastery-based progression where students must demonstrate competence before advancing
-- **Knowledge Crystal system**: Failed quests generate remediation artifacts — targeted review materials that address specific gaps, implementing the pedagogical concept of formative assessment as a game mechanic
-- **4 theme systems**: Fantasy, Cyberpunk, Medieval, and Modern themes with localized terminology (e.g. "quest" vs "mission" vs "task"), demonstrating that the same learning structure can be presented in multiple cultural frames
-- **AI-powered feedback**: LLM integration for generating study guides and providing scaffolded assignment feedback, extending the AI-conductor methodology into educational contexts
-- **XP/leveling progression**: Experience points and leveling tied to learning outcomes, not just completion — the reward structure reinforces the pedagogical goals
-- **Sandbox mode**: Demo environment for showcasing the platform without student data, designed for conference presentations and grant applications
-
-The project traveled the full Theory → Art → Commerce pipeline (ORGAN-I → II → III) and is documented in a published post-mortem essay that honestly examines what succeeded and what didn't — demonstrating the process-as-product methodology applied to educational technology.
+**Technical Architecture:** ### Stack Overview | Layer | Technology | Purpose | |-------|-----------|---------| | **UI Framework** | React 19 | Component-based rendering with concurrent features | | **Language** | TypeScript 5.9 (strict) | End-to-end type safety across all domain models | | **Build** | Vite 7.3 | Sub-second HMR, optimized production bundles | | **Styling** | Tailwind CSS 4.1 + Radix UI | Utility-first CSS with accessible component primitives | | **3D Rendering** | Three.js + React Three Fiber | Constellation maps, themed 3D geometries | | **Animation** | Framer Motion | Page transitions, quest state animations | | **Charts** | Recharts + D3 | Analytics dashboards, progress visualizations | | **Forms**
 
 ## Links
-- GitHub: https://github.com/4444J99/classroom-rpg-aetheria
-- Post-mortem: Referenced in public process essays
+- GitHub: https://github.com/organvm-iii-ergon/classroom-rpg-aetheria
+- Organ: ORGAN-III (Ergon) — Commerce

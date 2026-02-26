@@ -6,6 +6,12 @@ identity_positions: [systems-artist]
 tracks: [grant, fellowship]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: MEDIUM
 ---
 
 # Project: Multi-agent system for collective identity and persona management

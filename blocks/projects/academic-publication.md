@@ -6,6 +6,12 @@ identity_positions: [creative-technologist, systems-artist]
 tracks: [grant, residency, fellowship]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: MEDIUM
 ---
 
 # Project: Academic papers, posters, presentations, and datasets for art research

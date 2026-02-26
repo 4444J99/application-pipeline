@@ -7,6 +7,12 @@ tracks: [grant, residency, fellowship, prize]
 related_projects: [organvm-system, recursive-engine]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [python, typescript]
+  ci: true
+  public: true
+  promotion_status: PUBLIC_PROCESS
+  relevance: CRITICAL
 ---
 
 # Project: Omni-Dromenon Engine

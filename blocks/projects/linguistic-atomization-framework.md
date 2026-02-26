@@ -6,6 +6,13 @@ identity_positions: [independent-engineer, systems-artist]
 tracks: [grant, fellowship]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [python]
+  test_count: 142
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: HIGH
 ---
 
 # Project: LingFrame

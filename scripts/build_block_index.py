@@ -65,6 +65,8 @@ def build_index() -> dict:
         }
         if fm.get("related_projects"):
             entry["related_projects"] = fm["related_projects"]
+        if fm.get("stats"):
+            entry["stats"] = fm["stats"]
 
         blocks[block_key] = entry
 

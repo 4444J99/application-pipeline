@@ -6,6 +6,12 @@ identity_positions: [independent-engineer, systems-artist]
 tracks: [grant, fellowship]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: PUBLIC_PROCESS
+  relevance: CRITICAL
 ---
 
 # Project: Self-governing orchestration framework with 8 phases, 4 human review gates

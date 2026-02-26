@@ -7,6 +7,13 @@ tracks: [grant, fellowship]
 related_projects: [a-recursive-root]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [typescript]
+  test_count: 297
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: MEDIUM
 ---
 
 # Project: Three-engine alchemical transformation framework

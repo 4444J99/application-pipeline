@@ -6,6 +6,11 @@ identity_positions: [independent-engineer, systems-artist]
 tracks: [grant, fellowship]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [typescript]
+  public: true
+  promotion_status: LOCAL
+  relevance: MEDIUM
 ---
 
 # Project: Cross-domain creative-technical framework exploring identity systems

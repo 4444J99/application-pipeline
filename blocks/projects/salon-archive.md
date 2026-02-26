@@ -7,6 +7,12 @@ tracks: [grant]
 related_projects: [koinonia-db]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: false
+  promotion_status: PUBLIC_PROCESS
+  relevance: HIGH
 ---
 
 # Project: Archive infrastructure for intellectual salons: transcription pipeline

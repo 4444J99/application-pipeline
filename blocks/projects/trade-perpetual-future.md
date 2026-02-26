@@ -6,6 +6,12 @@ identity_positions: [creative-technologist, independent-engineer]
 tracks: [job]
 tier: full
 review_status: auto-generated
+stats:
+  languages: [python, typescript]
+  ci: true
+  public: false
+  promotion_status: CANDIDATE
+  relevance: HIGH
 ---
 
 # Project: Perpetual futures trading system

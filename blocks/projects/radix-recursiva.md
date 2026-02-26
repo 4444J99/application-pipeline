@@ -7,6 +7,12 @@ tracks: [grant, fellowship]
 related_projects: [a-recursive-root]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: CANDIDATE
+  relevance: MEDIUM
 ---
 
 # Project: Recursive root solving and alchemical cycles

@@ -6,6 +6,12 @@ identity_positions: [creative-technologist]
 tracks: [job]
 tier: short
 review_status: auto-generated
+stats:
+  languages: [python]
+  ci: true
+  public: true
+  promotion_status: GRADUATED
+  relevance: MEDIUM
 ---
 
 # Project: Distribution strategy brain: analytics, scheduling, persistence
