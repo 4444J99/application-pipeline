@@ -44,7 +44,7 @@ def _make_entry(
         "status": status,
         "track": track,
         "fit": {"score": score},
-        "effort": effort,
+        "submission": {"effort_level": effort},
         "target": {"organization": organization},
         "timeline": {},
     }

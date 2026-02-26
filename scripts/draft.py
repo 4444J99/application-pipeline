@@ -25,10 +25,39 @@ import yaml
 from pipeline_lib import (
     BLOCKS_DIR, DRAFTS_DIR,
     load_entries, load_entry_by_id, load_profile,
-    load_block,
+    load_block, load_block_frontmatter,
     strip_markdown, count_words, count_chars,
     get_effort, ACTIONABLE_STATUSES, PIPELINE_DIR_ACTIVE,
 )
+
+# Languages to filter from stats display (config/documentation noise)
+_NOISE_LANGS = {"markdown", "shell", "yaml", "jekyll"}
+
+
+def _format_block_stats(block_path: str) -> str | None:
+    """Extract Key Stats line from block frontmatter, if available."""
+    fm = load_block_frontmatter(block_path)
+    if not fm:
+        return None
+    stats = fm.get("stats", {})
+    if not stats:
+        return None
+    parts = []
+    if stats.get("languages"):
+        langs = stats["languages"]
+        if isinstance(langs, list):
+            useful = [l for l in langs if l not in _NOISE_LANGS]
+        else:
+            useful = [langs] if langs not in _NOISE_LANGS else []
+        if useful:
+            parts.append(f"Languages: {', '.join(useful)}")
+    if stats.get("test_count"):
+        parts.append(f"Tests: {stats['test_count']}")
+    if stats.get("coverage"):
+        parts.append(f"Coverage: {stats['coverage']}%")
+    if parts:
+        return f"**Key Stats:** {' | '.join(parts)}"
+    return None
 
 
 # --- Submission format parsing ---
@@ -346,11 +375,13 @@ def assemble_draft(
         source = None
 
         # Priority 1: Entry blocks
+        block_stats_line = None
         if field_name in blocks_used:
             block_content = load_block(blocks_used[field_name])
             if block_content:
                 content = block_content.strip()
                 source = f"block:{blocks_used[field_name]}"
+                block_stats_line = _format_block_stats(blocks_used[field_name])
 
         # Priority 2: Profile content
         if content is None and profile and field_name in PROFILE_FILLABLE:
@@ -378,6 +409,8 @@ def assemble_draft(
                     warnings.append(f"{title}: {wc}w is under 50% of ~{word_limit}w target")
 
             parts.append(count_line)
+            if block_stats_line:
+                parts.append(block_stats_line)
         else:
             parts.append(f"*[MISSING — needs manual content for: {field_name}]*")
             warnings.append(f"Missing content: {field_name}")

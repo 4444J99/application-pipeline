@@ -79,7 +79,7 @@ python scripts/validate.py
 python scripts/score.py --target <target-id>  # Score single entry
 python scripts/score.py --all --dry-run        # Preview all scores
 
-# Conversion analysis
+# Conversion analysis (basic report; see funnel_report.py for detailed breakdowns)
 python scripts/conversion_report.py
 
 # Compose submission from blocks
@@ -169,6 +169,26 @@ python scripts/check_metrics.py
 python scripts/velocity.py                    # Display velocity stats
 python scripts/velocity.py --update-signals   # Write to signals/patterns.md
 
+# Job sourcing from ATS APIs
+python scripts/source_jobs.py --fetch --dry-run       # Preview new job postings
+python scripts/source_jobs.py --fetch --yes            # Fetch and create pipeline entries
+python scripts/source_jobs.py --fetch --yes --limit 5  # Limit new entries
+
+# Keyword extraction from job postings and research files
+python scripts/distill_keywords.py                    # Analyze all entries with research files
+python scripts/distill_keywords.py --target <id>      # Single entry
+python scripts/distill_keywords.py --write --yes      # Write keywords to pipeline YAMLs
+python scripts/distill_keywords.py --signals          # Write aggregate to signals/
+python scripts/distill_keywords.py --match-tags       # Show which keywords match block tags
+
+# AI-assisted answer generation for portal questions
+python scripts/answer_questions.py --target <id>      # Generate prompts for custom questions
+python scripts/answer_questions.py --integrate <id>   # Integrate AI-generated answers back
+
+# Browser-based submission automation (Playwright)
+python scripts/browser_submit.py --target <id>        # Interactive browser submission
+python scripts/browser_submit.py --target <id> --auto-submit  # Auto-submit (use with caution)
+
 # Tests
 pytest tests/ -v
 pytest tests/test_compose.py -v              # Single test file
@@ -209,7 +229,7 @@ For entries with `target.portal: greenhouse`:
 - Block filenames are descriptive and match reference paths in pipeline YAML
 - Variant filenames follow `{target-type}-v{n}.md` or `{target-specific-name}.md` pattern
 - All narrative text uses covenant-ark metrics (update there first, propagate here)
-- `daily_batch.py` is deprecated — use `standup.py --section plan` instead
+- `daily_batch.py` and `daily_pipeline.py` are deprecated (moved to `scripts/deprecated/`). Use `standup.py --section plan` and `campaign.py --execute` instead
 
 ## Relationship to Corpus
 

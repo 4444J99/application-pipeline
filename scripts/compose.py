@@ -8,13 +8,42 @@ from pathlib import Path
 from pipeline_lib import (
     BLOCKS_DIR, VARIANTS_DIR, SUBMISSIONS_DIR,
     load_entry_by_id, load_profile,
-    load_block, load_variant,
+    load_block, load_block_frontmatter, load_variant,
     strip_markdown, count_words, count_chars,
 )
 
 # Common portal limits for flagging
 WORD_LIMITS = [100, 150, 250, 500, 1000]
 CHAR_LIMITS = [500, 1000, 2000, 5000]
+
+# Languages to filter from stats display (config/documentation noise)
+_NOISE_LANGS = {"markdown", "shell", "yaml", "jekyll"}
+
+
+def _format_block_stats(block_path: str) -> str | None:
+    """Extract Key Stats line from block frontmatter, if available."""
+    fm = load_block_frontmatter(block_path)
+    if not fm:
+        return None
+    stats = fm.get("stats", {})
+    if not stats:
+        return None
+    parts = []
+    if stats.get("languages"):
+        langs = stats["languages"]
+        if isinstance(langs, list):
+            useful = [l for l in langs if l not in _NOISE_LANGS]
+        else:
+            useful = [langs] if langs not in _NOISE_LANGS else []
+        if useful:
+            parts.append(f"Languages: {', '.join(useful)}")
+    if stats.get("test_count"):
+        parts.append(f"Tests: {stats['test_count']}")
+    if stats.get("coverage"):
+        parts.append(f"Coverage: {stats['coverage']}%")
+    if parts:
+        return f"**Key Stats:** {' | '.join(parts)}"
+    return None
 
 
 def find_entry(target_id: str) -> dict | None:
@@ -100,6 +129,17 @@ def compose(entry: dict, profile: dict | None = None) -> str:
             parts.append("")
             parts.append(content)
             parts.append("")
+
+        # Append Key Stats for blocks that have stats frontmatter
+        submission = entry.get("submission", {})
+        if isinstance(submission, dict):
+            blocks_used = submission.get("blocks_used", {})
+            if isinstance(blocks_used, dict):
+                for block_path in blocks_used.values():
+                    stats_line = _format_block_stats(block_path)
+                    if stats_line:
+                        parts.append(stats_line)
+                        parts.append("")
 
     # Materials
     submission = entry.get("submission", {})

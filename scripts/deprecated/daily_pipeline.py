@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Daily job pipeline orchestrator.
 
+DEPRECATED: Use `python scripts/standup.py --jobs` for job pipeline status,
+and `python scripts/campaign.py --execute` for pipeline execution.
+
 Chains: source → score → qualify → alchemize → queue.
 Automates the daily cadence of finding, evaluating, and processing job applications.
 
@@ -15,12 +18,19 @@ Usage:
 import argparse
 import subprocess
 import sys
+import warnings
 from datetime import date
 from pathlib import Path
 
 import yaml
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+warnings.warn(
+    "daily_pipeline.py is deprecated. Use 'standup.py --jobs' or 'campaign.py --execute' instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from pipeline_lib import (
     ACTIONABLE_STATUSES,
