@@ -1,3 +1,10 @@
+# Cover Letter: Cloudflare Software Engineer, Developer Tools and Productivity
+
+**Role:** Cloudflare Software Engineer, Developer Tools and Productivity
+**Apply:** https://boards.greenhouse.io/cloudflare/jobs/7434052?gh_jid=7434052
+
+---
+
 To the Developer Tools Team at Cloudflare,
 
 I am writing to apply for the Software Engineer (Developer Tools and Productivity) position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 103 repositories across 8 GitHub organizations, I bring a unique perspective on "solo production at institutional scale." My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
