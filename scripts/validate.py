@@ -112,6 +112,9 @@ def validate_entry(filepath: Path) -> list[str]:
         score = fit.get("score")
         if score is not None and not (1 <= score <= 10):
             errors.append(f"Fit score out of range: {score} (must be 1-10)")
+        original_score = fit.get("original_score")
+        if original_score is not None and not (1 <= original_score <= 10):
+            errors.append(f"Fit original_score out of range: {original_score} (must be 1-10)")
         position = fit.get("identity_position")
         if position and position not in VALID_POSITIONS:
             errors.append(f"Invalid identity_position: '{position}'")

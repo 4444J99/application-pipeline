@@ -18,7 +18,8 @@ amount:
   type: salary
   benefits_cliff_note: null
 fit:
-  score: 8.5
+  score: 8.0
+  original_score: 8.5
   identity_position: creative-technologist
   framing: Creative technologist with deep systems thinking and generative art practice
   lead_organs:
@@ -27,8 +28,8 @@ fit:
   - III
   dimensions:
     mission_alignment: 9
-    evidence_match: 9
-    track_record_fit: 8
+    evidence_match: 7
+    track_record_fit: 7
     financial_alignment: 10
     effort_to_value: 7
     strategic_value: 8

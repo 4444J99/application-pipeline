@@ -118,8 +118,8 @@ def section_stale(entries: list[dict]) -> dict:
             expired.append((entry_id, e.get("name", entry_id), dl_date, status))
             continue
 
-        # At-risk: hard deadline <3 days away + still in qualified
-        if (dl_date and dl_type == "hard" and 0 <= days_until(dl_date) <= AT_RISK_DAYS
+        # At-risk: hard/fixed deadline <3 days away + still in qualified
+        if (dl_date and dl_type in ("hard", "fixed") and 0 <= days_until(dl_date) <= AT_RISK_DAYS
                 and status in ("research", "qualified")):
             at_risk.append((entry_id, e.get("name", entry_id), dl_date, status,
                             days_until(dl_date)))
@@ -189,7 +189,7 @@ def section_plan(entries: list[dict], hours: float) -> dict:
             d = days_until(dl_date)
             if d < 0:
                 continue  # expired, handled in staleness
-            if d <= URGENCY_DAYS and dl_type == "hard":
+            if d <= URGENCY_DAYS and dl_type in ("hard", "fixed"):
                 urgent.append((d, e))
                 continue
         scored.append(e)
@@ -373,7 +373,7 @@ def section_practices(entries: list[dict], stale_stats: dict):
     # Check if any entry has deadline this week
     for e in entries:
         dl_date, dl_type = get_deadline(e)
-        if dl_date and dl_type == "hard" and 0 <= days_until(dl_date) <= 7:
+        if dl_date and dl_type in ("hard", "fixed") and 0 <= days_until(dl_date) <= 7:
             if "pre_deadline_week" not in tips_shown:
                 tips_shown.add("pre_deadline_week")
                 for tip in PRACTICES_BY_CONTEXT["pre_deadline_week"]:
@@ -676,7 +676,7 @@ def section_opportunities(entries: list[dict]):
         dl_date, dl_type = get_deadline(e)
         if dl_date:
             d = days_until(dl_date)
-            if d >= 0 and dl_type == "hard":
+            if d >= 0 and dl_type in ("hard", "fixed"):
                 return (0, d, -get_score(e))
         return (1, 9999, -get_score(e))
 
@@ -695,7 +695,7 @@ def section_opportunities(entries: list[dict]):
             d = days_until(dl_date)
             if d < 0:
                 dl_str = f" EXPIRED {abs(d)}d ago"
-            elif dl_type == "hard":
+            elif dl_type in ("hard", "fixed"):
                 dl_str = f" {d}d left"
             else:
                 dl_str = f" ~{d}d ({dl_type})"
@@ -811,11 +811,11 @@ def run_triage():
     print("=" * 60)
     print(f"TRIAGE MODE — {len(candidates)} actionable entries")
     print("=" * 60)
-    print("For each entry: [a]dvance  [w]ithdraw  [d]efer  [s]kip  [q]uit\n")
+    print("For each entry: [a]dvance  [w]ithdraw  [t]ouch  [s]kip  [q]uit\n")
 
     advanced = 0
     withdrawn = 0
-    deferred = 0
+    touched = 0
 
     for stale_days, entry in candidates:
         entry_id = entry.get("id", "?")
@@ -842,7 +842,7 @@ def run_triage():
         next_status = NEXT_STATUS.get(status)
         if next_status:
             print(f"  [a] Advance to '{next_status}' + touch")
-        print(f"  [w] Withdraw  [d] Defer (touch only)  [s] Skip  [q] Quit")
+        print(f"  [w] Withdraw  [t] Touch (mark reviewed)  [s] Skip  [q] Quit")
 
         try:
             choice = input("  > ").strip().lower()
@@ -867,14 +867,14 @@ def run_triage():
             _triage_update_entry(filepath, entry_id, withdraw=True, reason=reason, touch=True)
             withdrawn += 1
             print(f"  -> Withdrawn\n")
-        elif choice == "d" and filepath:
+        elif choice == "t" and filepath:
             _triage_update_entry(filepath, entry_id, touch=True)
-            deferred += 1
-            print(f"  -> Deferred (touched)\n")
+            touched += 1
+            print(f"  -> Touched\n")
         else:
             print(f"  -> Skipped\n")
 
-    print(f"Triage complete: {advanced} advanced, {withdrawn} withdrawn, {deferred} deferred")
+    print(f"Triage complete: {advanced} advanced, {withdrawn} withdrawn, {touched} touched")
 
 
 def _triage_update_entry(

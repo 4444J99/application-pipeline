@@ -18,7 +18,8 @@ amount:
   type: lump_sum
   benefits_cliff_note: null
 fit:
-  score: 7.1
+  score: 7.0
+  original_score: 7.1
   identity_position: community-practitioner
   framing: Neurodivergent creator building accessible infrastructure for community
     learning
@@ -26,8 +27,8 @@ fit:
   - VI
   - META
   dimensions:
-    mission_alignment: 8
-    evidence_match: 6
+    mission_alignment: 9
+    evidence_match: 4
     track_record_fit: 7
     financial_alignment: 9
     effort_to_value: 9

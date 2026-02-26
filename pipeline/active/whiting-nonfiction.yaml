@@ -18,7 +18,8 @@ amount:
   type: lump_sum
   benefits_cliff_note: Exceeds Medicaid -> Essential Plan. Call NYLAG.
 fit:
-  score: 8.0
+  score: 7.8
+  original_score: 8.0
   identity_position: systems-artist
   framing: Systems artist and nonfiction writer exploring recursive structures in
     institutional critique
@@ -28,7 +29,7 @@ fit:
   - META
   dimensions:
     mission_alignment: 9
-    evidence_match: 9
+    evidence_match: 8
     track_record_fit: 8
     financial_alignment: 4
     effort_to_value: 7

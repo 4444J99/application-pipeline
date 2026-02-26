@@ -18,7 +18,8 @@ amount:
   type: variable
   benefits_cliff_note: null
 fit:
-  score: 7.1
+  score: 6.8
+  original_score: 7.1
   identity_position: systems-artist
   framing: Systems artist seeking fiscal infrastructure for grant-eligible project
     funding
@@ -26,7 +27,7 @@ fit:
   - IV
   - META
   dimensions:
-    mission_alignment: 8
+    mission_alignment: 7
     evidence_match: 6
     track_record_fit: 7
     financial_alignment: 10

@@ -18,7 +18,8 @@ amount:
   type: in_kind
   benefits_cliff_note: null
 fit:
-  score: 8.5
+  score: 8.6
+  original_score: 8.5
   identity_position: systems-artist
   framing: Systems artist exploring computational art in the tradition of media art
     institutions
@@ -27,9 +28,9 @@ fit:
   - II
   - META
   dimensions:
-    mission_alignment: 9
+    mission_alignment: 10
     evidence_match: 9
-    track_record_fit: 8
+    track_record_fit: 7
     financial_alignment: 10
     effort_to_value: 7
     strategic_value: 8

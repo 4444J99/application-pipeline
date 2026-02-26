@@ -130,7 +130,7 @@ def compute_velocity(entries: list[dict]) -> dict:
         if e.get("status") not in ACTIONABLE_STATUSES:
             continue
         dl_date, dl_type = get_deadline(e)
-        if dl_date and dl_type == "hard":
+        if dl_date and dl_type in ("hard", "fixed"):
             d = days_until(dl_date)
             if 0 <= d <= 7:
                 upcoming["this_week"] += 1

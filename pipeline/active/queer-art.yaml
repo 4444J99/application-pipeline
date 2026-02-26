@@ -18,7 +18,8 @@ amount:
   type: in_kind
   benefits_cliff_note: null
 fit:
-  score: 7.1
+  score: 7.3
+  original_score: 7.1
   identity_position: community-practitioner
   framing: Queer artist seeking mentorship to deepen practice at intersection of identity
     and systems
@@ -27,7 +28,7 @@ fit:
   - VI
   - META
   dimensions:
-    mission_alignment: 8
+    mission_alignment: 9
     evidence_match: 6
     track_record_fit: 7
     financial_alignment: 10

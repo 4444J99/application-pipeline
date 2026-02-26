@@ -16,17 +16,17 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 6.0
+  score: 5.0
   identity_position: independent-engineer
   framing: NYC-based engineer combining AI infrastructure experience (agentic-titan,
     1,095 tests; end-to-end pipeline orchestration) with 11 years of customer-facing
     communication practice (2,000+ students) — the two capabilities forward-deployed
     engineering demands.
   dimensions:
-    mission_alignment: 7
-    evidence_match: 4
-    track_record_fit: 6
-    financial_alignment: 6
+    mission_alignment: 5
+    evidence_match: 5
+    track_record_fit: 3
+    financial_alignment: 5
     effort_to_value: 7
     strategic_value: 6
     deadline_feasibility: 9

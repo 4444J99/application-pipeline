@@ -16,7 +16,7 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.0
+  score: 8.2
   identity_position: educator
   framing: 'Educator-practitioner who has taught complex systems to 2,000+ students
     across 11 years and built a gamified education platform (Classroom RPG: Aetheria)
@@ -27,9 +27,9 @@ fit:
   - III
   dimensions:
     mission_alignment: 9
-    evidence_match: 8
+    evidence_match: 9
     track_record_fit: 7
-    financial_alignment: 6
+    financial_alignment: 5
     effort_to_value: 6
     strategic_value: 8
     deadline_feasibility: 9

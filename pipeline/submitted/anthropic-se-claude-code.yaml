@@ -18,7 +18,8 @@ amount:
   type: salary
   benefits_cliff_note: null
 fit:
-  score: 7.0
+  score: 6.7
+  original_score: 7.0
   identity_position: independent-engineer
   framing: Independent engineer building CLI developer tools and agentic systems — 103
     repos, 21K code files, 3.6K tests, 94 CI/CD pipelines
@@ -26,10 +27,10 @@ fit:
   - III
   - IV
   dimensions:
-    mission_alignment: 8
-    evidence_match: 6
+    mission_alignment: 6
+    evidence_match: 7
     track_record_fit: 5
-    financial_alignment: 7
+    financial_alignment: 9
     effort_to_value: 9
     strategic_value: 8
     deadline_feasibility: 9

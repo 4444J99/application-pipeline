@@ -80,6 +80,14 @@ COMPANY_DISPLAY_NAMES = {
     "datadog": "Datadog",
     "wikimedia": "Wikimedia",
     "mozilla": "Mozilla",
+    "gitlab": "GitLab",
+    "twilio": "Twilio",
+    "mongodb": "MongoDB",
+    "elastic": "Elastic",
+    "grafanalabs": "Grafana Labs",
+    "netlify": "Netlify",
+    "planetscale": "PlanetScale",
+    "airtable": "Airtable",
     # Ashby boards
     "cohere": "Cohere",
     "posthog": "PostHog",
@@ -95,6 +103,10 @@ COMPANY_DISPLAY_NAMES = {
     "perplexity": "Perplexity",
     "railway": "Railway",
     "render": "Render",
+    "resend": "Resend",
+    "elevenlabs": "ElevenLabs",
+    "neon": "Neon",
+    "warp": "Warp",
 }
 
 

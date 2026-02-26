@@ -200,8 +200,8 @@ def run_advance(
         if effort_filter and get_effort(e) != effort_filter:
             continue
 
-        # Must be actionable
-        if current not in ACTIONABLE_STATUSES:
+        # Must be actionable (or deferred, which can be re-activated)
+        if current not in ACTIONABLE_STATUSES and current != "deferred":
             continue
 
         candidates.append(e)

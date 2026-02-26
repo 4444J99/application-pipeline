@@ -18,7 +18,8 @@ amount:
   type: lump_sum
   benefits_cliff_note: null
 fit:
-  score: 8.5
+  score: 6.6
+  original_score: 8.5
   identity_position: community-practitioner
   framing: Queer technologist building a digital instrument for community survival and
     authentic expression
@@ -27,9 +28,9 @@ fit:
   - V
   - VI
   dimensions:
-    mission_alignment: 10
+    mission_alignment: 4
     evidence_match: 9
-    track_record_fit: 8
+    track_record_fit: 6
     financial_alignment: 9
     effort_to_value: 10
     strategic_value: 3

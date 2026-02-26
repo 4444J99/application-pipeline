@@ -1,0 +1,53 @@
+id: openai-forward-deployed-engineer-tokyo
+name: OpenAI Forward Deployed Engineer - Tokyo
+track: job
+status: research
+outcome: null
+target:
+  organization: OpenAI
+  url: https://jobs.ashbyhq.com/openai
+  application_url: https://jobs.ashbyhq.com/openai/51b17595-3a70-43be-a333-3a3952303284
+  portal: ashby
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 5.0
+  identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 5
+    evidence_match: 5
+    track_record_fit: 3
+    financial_alignment: 5
+    effort_to_value: 7
+    strategic_value: 6
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: 
+    framing: framings/independent-engineer
+    evidence: evidence/differentiators
+    work_samples: evidence/work-samples
+    credentials: pitches/credentials-creative-tech
+    methodology: methodology/ai-conductor
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-02-26'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-02-26"
+notes: 'Location: Tokyo, Japan'

@@ -1,0 +1,69 @@
+id: noema-magazine
+name: Noema Magazine
+track: writing
+status: submitted
+outcome: null
+target:
+  organization: Noema Magazine
+  url: https://noemamag.com
+  application_url: mailto:pitches@noemamag.com
+  portal: email
+deadline:
+  date: null
+  time: null
+  type: rolling
+amount:
+  value: 3000
+  currency: USD
+  type: fee
+  benefits_cliff_note: null
+fit:
+  score: 7.7
+  original_score: 8.0
+  identity_position: systems-artist
+  framing: Systems thinker writing long-form essays on technology, culture, and institutional
+    design
+  lead_organs:
+  - I
+  - V
+  - META
+  dimensions:
+    mission_alignment: 6
+    evidence_match: 8
+    track_record_fit: 10
+    financial_alignment: 9
+    effort_to_value: 8
+    strategic_value: 5
+    deadline_feasibility: 9
+    portal_friction: 9
+submission:
+  effort_level: quick
+  blocks_used:
+    artist_statement: identity/2min
+    project_description: projects/organvm-system
+    2_3_paragraph_pitch: pitches/noema-magazine
+    writing_sample: evidence/work-samples
+  variant_ids: {}
+  materials_attached: []
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-02-14'
+  qualified: '2026-02-16'
+  materials_ready: '2026-02-23'
+  submitted: '2026-02-26'
+  acknowledged: null
+  interview: null
+  outcome_date: null
+portal_fields:
+  fields:
+  - name: 2_3_paragraph_pitch
+  - name: writing_sample
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags: []
+source: 04-application-tracker.md
+notes: $1/word, ~$3K/essay. Pitch to pitches@noemamag.com.
+last_touched: "2026-02-26"

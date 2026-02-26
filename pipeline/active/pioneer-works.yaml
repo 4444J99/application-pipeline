@@ -18,7 +18,8 @@ amount:
   type: stipend
   benefits_cliff_note: null
 fit:
-  score: 7.2
+  score: 7.5
+  original_score: 7.2
   identity_position: systems-artist
   framing: Systems artist working across computation, material practice, and public
     engagement
@@ -27,7 +28,7 @@ fit:
   - II
   - META
   dimensions:
-    mission_alignment: 8
+    mission_alignment: 9
     evidence_match: 6
     track_record_fit: 7
     financial_alignment: 9

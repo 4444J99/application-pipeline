@@ -16,16 +16,16 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 6.7
+  score: 8.3
   identity_position: independent-engineer
   framing: Documentation-first engineer with a knowledge architecture spanning 103
     repos, 43 validated dependency edges, and 810K+ words — building the kind of structured,
     navigable systems that developer experience demands at platform scale.
   dimensions:
-    mission_alignment: 8
-    evidence_match: 5
+    mission_alignment: 9
+    evidence_match: 10
     track_record_fit: 7
-    financial_alignment: 6
+    financial_alignment: 5
     effort_to_value: 7
     strategic_value: 6
     deadline_feasibility: 9

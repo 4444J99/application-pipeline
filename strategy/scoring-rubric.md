@@ -145,7 +145,7 @@ The original creative rubric was designed for grants and residencies where:
 - The 60/40 human/auto split provides good differentiation
 
 For jobs, these dimensions behave completely differently:
-- All auto-sourced jobs with unknown salary get the same `financial_alignment` score (6)
+- All auto-sourced jobs with unknown salary get the same `financial_alignment` score (5)
 - The auto-derived 40% becomes nearly identical across all jobs, compressing scores
 
 The job rubric fixes this by shifting weight to the dimensions that actually differentiate: role fit (mission_alignment), skills match (evidence_match), and background competitiveness (track_record_fit). Additionally, `enrich.py --blocks` wires identity-matched blocks to job entries, enabling the evidence coverage bonus in `effort_to_value` and the blocks bonus in `estimate_human_dimensions`.
@@ -166,6 +166,27 @@ composite = (
 ```
 
 Result is rounded to one decimal place and stored as `fit.score`.
+
+### `original_score` Field
+
+`fit.original_score` preserves the original human gut-feel score that was set before the signal-based rubric existed. It is no longer used in any computation — all dimensions are derived from structured data signals. The field is retained purely for historical reference.
+
+- `fit.original_score` — Frozen historical baseline (read-only, not used in scoring).
+- `fit.score` — The computed composite from all 8 signal-derived dimensions.
+
+### Job Financial Alignment
+
+For job entries, `financial_alignment` scores higher salary = higher score:
+
+| Salary | Score | Rationale |
+|--------|-------|-----------|
+| $0 (unknown) | 5 | Slight penalty for unknown comp |
+| $1–$50K | 6 | Low compensation |
+| $50K–$100K | 7 | Adequate compensation |
+| $100K–$150K | 8 | Good compensation |
+| >$150K | 9 | Strong compensation |
+
+This differs from creative entries where higher amounts *decrease* the score due to benefits cliff risk.
 
 ## Effort Level Classification
 
@@ -196,11 +217,76 @@ These dimensions can be estimated from existing pipeline data:
 - **portal_friction**: From `target.portal` type
 - **effort_to_value**: Partially from `amount.value`, `track`, and `submission.blocks_used` count
 
-## Human-Judgment Dimensions
+## Signal-Based Dimensions
 
-These require human assessment (or estimation from existing `fit.score` + `identity_position`):
+Mission alignment, evidence match, and track record fit are computed from structured data signals. No human gut-feel input. Each dimension is the sum of 4 signals, clamped to [1, 10].
 
-- **mission_alignment**: From framing quality and identity position match
-- **evidence_match**: From blocks_used coverage and portfolio relevance
-- **track_record_fit**: From qualification assessment gaps
-- **strategic_value**: From organization prestige and network potential
+Use `score.py --explain --target <id>` to see the signal breakdown for any entry.
+
+### Mission Alignment (4 signals, max 10)
+
+| Signal | Range | Source |
+|--------|-------|--------|
+| Position-Profile Match | 0–4 | `entry.fit.identity_position` vs `profile.primary_position` / `secondary_position`. Primary=4, secondary=2, no profile=2 (neutral), no match=0. |
+| Track-Position Affinity | 0–3 | Hardcoded matrix of (track, position) fit scores. |
+| Organ-Position Coherence | 0–2 | Overlap between `fit.lead_organs` and position's expected organs, normalized. |
+| Framing Specialization | 0–1 | Has a `framings/*` block in `submission.blocks_used`: 1, else 0. |
+
+**Track-Position Affinity Matrix:**
+
+|  | systems-artist | creative-tech | community-prac | educator | independent-eng |
+|--|----------------|---------------|----------------|----------|-----------------|
+| grant | 3 | 2 | 2 | 1 | 1 |
+| residency | 3 | 3 | 2 | 1 | 1 |
+| prize | 3 | 2 | 1 | 1 | 1 |
+| fellowship | 2 | 3 | 2 | 2 | 2 |
+| program | 2 | 2 | 3 | 2 | 2 |
+| writing | 1 | 2 | 3 | 2 | 1 |
+| emergency | 2 | 1 | 3 | 1 | 1 |
+| consulting | 1 | 2 | 1 | 1 | 3 |
+
+**Position Expected Organs:**
+- `systems-artist` → I, II, META
+- `creative-technologist` → I, III, IV
+- `community-practitioner` → V, VI, META
+- `educator` → V, VI
+- `independent-engineer` → III, IV
+
+### Evidence Match (4 signals, max 10)
+
+| Signal | Range | Source |
+|--------|-------|--------|
+| Block-Portal Coverage | 0–3 | `len(blocks_used) / len(portal_fields)`. Ratio ≥1.0=3, ≥0.5=2, >0=1, 0/0=0. |
+| Slot Name Alignment | 0–3 | Fuzzy matches between `blocks_used` keys and `portal_fields[].name`. |
+| Evidence Depth | 0–2 | Has `evidence/*` block (+1), has `methodology/*` block (+1). |
+| Materials Readiness | 0–2 | `materials_attached` non-empty (+1), `portfolio_url` set (+1). |
+
+### Track Record Fit (4 signals, max 10)
+
+| Signal | Range | Source |
+|--------|-------|--------|
+| Credential-Track Relevance | 0–4 | Best credential score for the entry's track (see table below). |
+| Track Experience | 0–3 | Count of same-track entries at submitted+ status. 3+=3, 2=2, 1=1, 0=0. |
+| Position Depth | 0–2 | Position has a `blocks/framings/{position}.md` on disk: 2, position set but no block: 1, none: 0. |
+| Differentiators Coverage | 0–1 | Profile has ≥3 `evidence_highlights`: 1, else 0. |
+
+**Credential Relevance Matrix:**
+
+| Credential | writing | grant | residency | prize | program | fellowship | emergency | consulting |
+|-----------|---------|-------|-----------|-------|---------|-----------|-----------|------------|
+| MFA Creative Writing | 4 | 3 | 3 | 3 | 2 | 2 | 2 | 1 |
+| Meta Fullstack Dev | 1 | 1 | 1 | 1 | 3 | 3 | 1 | 4 |
+| Teaching 11yr | 2 | 2 | 2 | 1 | 4 | 3 | 1 | 2 |
+| Construction PM | 0 | 1 | 1 | 0 | 1 | 1 | 1 | 3 |
+
+### No Human Override
+
+All 8 dimensions are always recomputed from data. `original_score` is preserved in YAML for historical reference but no longer feeds computation. The dependency is unidirectional:
+
+```
+structured data → compute all 8 dims → composite → fit.score
+```
+
+### Compressed Score Review
+
+Use `score.py --review-compressed` to identify entries in a narrow score band. Because dimensions are now signal-based, score compression should be less severe — entries with different structured data (position, blocks, portal fields, organs) will naturally differentiate.

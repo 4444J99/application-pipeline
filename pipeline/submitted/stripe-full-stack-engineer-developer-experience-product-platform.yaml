@@ -16,17 +16,17 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 6.0
+  score: 8.3
   identity_position: independent-engineer
   framing: Full-stack developer experience engineer with TypeScript/Python CLI tooling,
     design system architecture, 94 CI/CD pipelines, and documentation-first development
     — building the kind of reliable, consistent developer-facing infrastructure that
     product platform engineering demands.
   dimensions:
-    mission_alignment: 7
-    evidence_match: 4
-    track_record_fit: 6
-    financial_alignment: 6
+    mission_alignment: 9
+    evidence_match: 10
+    track_record_fit: 7
+    financial_alignment: 5
     effort_to_value: 7
     strategic_value: 6
     deadline_feasibility: 9

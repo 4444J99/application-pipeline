@@ -216,7 +216,7 @@ def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
     # Also include "ready" entries that have actual deadlines (hard, window, etc.)
     for e in tiers["ready"]:
         dl_date, dl_type = get_deadline(e)
-        if dl_date and dl_type in ("hard", "window", "soft"):
+        if dl_date and dl_type in ("hard", "fixed", "window", "soft"):
             deadlined.append(e)
 
     if deadlined:
@@ -428,7 +428,7 @@ def generate_campaign_markdown(entries: list[dict], days_ahead: int) -> str:
         deadlined.extend(tiers[tier_key])
     for e in tiers["ready"]:
         dl_date, dl_type = get_deadline(e)
-        if dl_date and dl_type in ("hard", "window", "soft"):
+        if dl_date and dl_type in ("hard", "fixed", "window", "soft"):
             deadlined.append(e)
 
     # Group deadlined by date

@@ -15,6 +15,10 @@ from score import (
     QUALIFICATION_THRESHOLD,
     JOB_QUALIFICATION_THRESHOLD,
     ROLE_FIT_TIERS,
+    RUBRIC_DESCRIPTIONS,
+    TRACK_POSITION_AFFINITY,
+    POSITION_EXPECTED_ORGANS,
+    CREDENTIALS,
     get_weights,
     get_qualification_threshold,
     score_deadline_feasibility,
@@ -22,10 +26,25 @@ from score import (
     score_portal_friction,
     score_effort_to_value,
     score_strategic_value,
+    compute_human_dimensions,
     estimate_human_dimensions,
     compute_dimensions,
     compute_composite,
     qualify,
+    explain_entry,
+    _rubric_desc,
+    _ma_position_profile_match,
+    _ma_track_position_affinity,
+    _ma_organ_position_coherence,
+    _ma_framing_specialization,
+    _em_block_portal_coverage,
+    _em_slot_name_alignment,
+    _em_evidence_depth,
+    _em_materials_readiness,
+    _tr_credential_track_relevance,
+    _tr_track_experience,
+    _tr_position_depth,
+    _tr_differentiators_coverage,
 )
 
 
@@ -46,6 +65,15 @@ def _make_entry(
     fit_score=5,
     framing="",
     existing_dims=None,
+    original_score=None,
+    tags=None,
+    name=None,
+    identity_position="",
+    lead_organs=None,
+    portal_fields=None,
+    materials_attached=None,
+    portfolio_url="",
+    entry_id="",
 ):
     """Build a minimal pipeline entry dict for scoring tests."""
     entry = {
@@ -69,11 +97,28 @@ def _make_entry(
             "score": fit_score,
             "framing": framing,
         },
+        "tags": tags or [],
     }
+    if entry_id:
+        entry["id"] = entry_id
+    if name:
+        entry["name"] = name
+    if identity_position:
+        entry["fit"]["identity_position"] = identity_position
+    if lead_organs is not None:
+        entry["fit"]["lead_organs"] = lead_organs
     if amount_cliff_note:
         entry["amount"]["benefits_cliff_note"] = amount_cliff_note
     if existing_dims is not None:
         entry["fit"]["dimensions"] = existing_dims
+    if original_score is not None:
+        entry["fit"]["original_score"] = original_score
+    if portal_fields is not None:
+        entry["portal_fields"] = {"fields": portal_fields}
+    if materials_attached is not None:
+        entry["submission"]["materials_attached"] = materials_attached
+    if portfolio_url:
+        entry["submission"]["portfolio_url"] = portfolio_url
     return entry
 
 
@@ -188,21 +233,21 @@ def test_financial_essential_plan_cliff_note():
 
 
 def test_financial_job_track_high_salary():
-    """Job track with salary >$100K should score 8 (inverted logic)."""
+    """Job track with salary >$100K should score 8."""
     entry = _make_entry(track="job", amount_value=140000)
     assert score_financial_alignment(entry) == 8
 
 
 def test_financial_job_track_very_high_salary():
-    """Job track with salary >$150K should score 7."""
+    """Job track with salary >$150K should score 9 (strong comp)."""
     entry = _make_entry(track="job", amount_value=300000)
-    assert score_financial_alignment(entry) == 7
+    assert score_financial_alignment(entry) == 9
 
 
 def test_financial_job_track_zero_salary():
-    """Job track with unknown salary should score 6."""
+    """Job track with unknown salary should score 5 (slight penalty)."""
     entry = _make_entry(track="job", amount_value=0)
-    assert score_financial_alignment(entry) == 6
+    assert score_financial_alignment(entry) == 5
 
 
 def test_financial_non_dict_amount():
@@ -320,67 +365,278 @@ def test_strategic_unknown_track():
     assert score_strategic_value(entry) == 5
 
 
-# --- estimate_human_dimensions ---
+# --- Mission Alignment signal tests ---
 
 
-def test_human_dims_with_framing():
-    """Framing longer than 30 chars boosts mission_alignment by 1."""
-    entry = _make_entry(fit_score=6, framing="A detailed framing that exceeds thirty characters")
-    dims = estimate_human_dimensions(entry)
-    assert dims["mission_alignment"] == 7  # 6 + 1 for framing
+def test_ma_position_profile_match_primary():
+    """Primary position match scores 4."""
+    entry = _make_entry(identity_position="systems-artist")
+    profile = {"primary_position": "systems-artist", "secondary_position": "educator"}
+    score, reason = _ma_position_profile_match(entry, profile)
+    assert score == 4
+    assert "primary" in reason
 
 
-def test_human_dims_without_framing():
-    """No framing reduces mission_alignment by 1."""
-    entry = _make_entry(fit_score=6, framing="")
-    dims = estimate_human_dimensions(entry)
-    assert dims["mission_alignment"] == 5  # 6 - 1 for no framing
+def test_ma_position_profile_match_secondary():
+    """Secondary position match scores 2."""
+    entry = _make_entry(identity_position="educator")
+    profile = {"primary_position": "systems-artist", "secondary_position": "educator"}
+    score, reason = _ma_position_profile_match(entry, profile)
+    assert score == 2
+    assert "secondary" in reason
 
 
-def test_human_dims_high_block_coverage():
-    """5+ blocks boosts evidence_match by 1."""
+def test_ma_position_profile_match_no_profile():
+    """No profile available scores 2 (neutral)."""
+    entry = _make_entry(identity_position="systems-artist")
+    score, reason = _ma_position_profile_match(entry, None)
+    assert score == 2
+    assert "no profile" in reason
+
+
+def test_ma_position_profile_match_no_match():
+    """Position doesn't match primary or secondary scores 0."""
+    entry = _make_entry(identity_position="independent-engineer")
+    profile = {"primary_position": "systems-artist", "secondary_position": "educator"}
+    score, reason = _ma_position_profile_match(entry, profile)
+    assert score == 0
+
+
+def test_ma_track_position_affinity_strong():
+    """systems-artist + residency is a strong fit (3)."""
+    entry = _make_entry(track="residency", identity_position="systems-artist")
+    score, reason = _ma_track_position_affinity(entry)
+    assert score == 3
+
+
+def test_ma_track_position_affinity_weak():
+    """independent-engineer + writing is a weak fit (1)."""
+    entry = _make_entry(track="writing", identity_position="independent-engineer")
+    score, reason = _ma_track_position_affinity(entry)
+    assert score == 1
+
+
+def test_ma_organ_coherence_full_overlap():
+    """Full organ overlap scores 2."""
     entry = _make_entry(
-        fit_score=6,
+        identity_position="systems-artist",
+        lead_organs=["I", "II", "META"],
+    )
+    score, reason = _ma_organ_position_coherence(entry)
+    assert score == 2
+
+
+def test_ma_organ_coherence_no_overlap():
+    """No organ overlap scores 0."""
+    entry = _make_entry(
+        identity_position="systems-artist",
+        lead_organs=["III", "IV"],
+    )
+    score, reason = _ma_organ_position_coherence(entry)
+    assert score == 0
+
+
+def test_ma_framing_specialization_present():
+    """Entry with a framings/* block scores 1."""
+    entry = _make_entry(
+        blocks_used={"framing": "framings/systems-artist", "bio": "identity/60s"},
+    )
+    score, reason = _ma_framing_specialization(entry)
+    assert score == 1
+
+
+def test_ma_framing_specialization_absent():
+    """Entry without framings/* block scores 0."""
+    entry = _make_entry(
+        blocks_used={"bio": "identity/60s"},
+    )
+    score, reason = _ma_framing_specialization(entry)
+    assert score == 0
+
+
+# --- Evidence Match signal tests ---
+
+
+def test_em_block_portal_full_coverage():
+    """Blocks >= fields ratio scores 3."""
+    entry = _make_entry(
+        blocks_used={"a": "x", "b": "x", "c": "x", "d": "x"},
+        portal_fields=[{"name": "a"}, {"name": "b"}, {"name": "c"}],
+    )
+    score, reason = _em_block_portal_coverage(entry)
+    assert score == 3
+
+
+def test_em_block_portal_no_coverage():
+    """Zero blocks or zero fields scores 0."""
+    entry = _make_entry()
+    score, reason = _em_block_portal_coverage(entry)
+    assert score == 0
+
+
+def test_em_block_portal_half_coverage():
+    """Ratio >= 0.5 scores 2."""
+    entry = _make_entry(
+        blocks_used={"a": "x", "b": "x"},
+        portal_fields=[{"name": "a"}, {"name": "b"}, {"name": "c"}, {"name": "d"}],
+    )
+    score, reason = _em_block_portal_coverage(entry)
+    assert score == 2
+
+
+def test_em_slot_alignment_direct_match():
+    """Direct name match between block keys and field names."""
+    entry = _make_entry(
+        blocks_used={"artist_statement": "identity/2min", "bio": "identity/60s"},
+        portal_fields=[{"name": "artist_statement"}, {"name": "bio"}, {"name": "work_samples"}],
+    )
+    score, reason = _em_slot_name_alignment(entry)
+    assert score == 2  # 2/3 * 3 = 2
+
+
+def test_em_slot_alignment_fuzzy_match():
+    """Fuzzy match: 'statement' in 'artist_statement'."""
+    entry = _make_entry(
+        blocks_used={"artist_statement": "identity/2min"},
+        portal_fields=[{"name": "statement"}],
+    )
+    score, reason = _em_slot_name_alignment(entry)
+    assert score == 3  # 1/1 * 3 = 3
+
+
+def test_em_evidence_depth_both_present():
+    """evidence/* + methodology/* blocks scores 2."""
+    entry = _make_entry(
         blocks_used={
-            "a": "x", "b": "x", "c": "x", "d": "x", "e": "x",
+            "evidence": "evidence/differentiators",
+            "methodology": "methodology/ai-conductor",
         },
     )
-    dims = estimate_human_dimensions(entry)
-    assert dims["evidence_match"] == 7  # 6 + 1
+    score, reason = _em_evidence_depth(entry)
+    assert score == 2
 
 
-def test_human_dims_zero_blocks():
-    """Zero blocks reduces evidence_match by 2."""
-    entry = _make_entry(fit_score=6)
-    dims = estimate_human_dimensions(entry)
-    assert dims["evidence_match"] == 4  # 6 - 2
-
-
-def test_human_dims_job_track_no_penalty():
-    """Job track no longer has a blanket track_record_fit penalty."""
-    entry = _make_entry(fit_score=6, track="job")
-    dims = estimate_human_dimensions(entry)
-    assert dims["track_record_fit"] == 6  # no penalty
-
-
-def test_human_dims_clamped_to_range():
-    """Scores should be clamped to [1, 10]."""
-    # Very low base score with penalties
-    entry = _make_entry(fit_score=1, track="job")
-    dims = estimate_human_dimensions(entry)
-    assert dims["track_record_fit"] >= 1
-    assert dims["mission_alignment"] >= 1
-    assert dims["evidence_match"] >= 1
-
-    # Very high base score with bonuses
-    entry_high = _make_entry(
-        fit_score=10,
-        framing="A very long framing string that exceeds thirty characters easily",
-        blocks_used={"a": "x", "b": "x", "c": "x", "d": "x", "e": "x"},
+def test_em_evidence_depth_one_present():
+    """Only evidence/* block scores 1."""
+    entry = _make_entry(
+        blocks_used={"evidence": "evidence/differentiators"},
     )
-    dims_high = estimate_human_dimensions(entry_high)
-    assert dims_high["mission_alignment"] <= 10
-    assert dims_high["evidence_match"] <= 10
+    score, reason = _em_evidence_depth(entry)
+    assert score == 1
+
+
+def test_em_materials_readiness():
+    """Both materials and portfolio_url scores 2."""
+    entry = _make_entry(
+        materials_attached=["resumes/base/resume.pdf"],
+        portfolio_url="https://example.com",
+    )
+    score, reason = _em_materials_readiness(entry)
+    assert score == 2
+
+
+def test_em_materials_readiness_none():
+    """No materials or portfolio scores 0."""
+    entry = _make_entry()
+    score, reason = _em_materials_readiness(entry)
+    assert score == 0
+
+
+# --- Track Record Fit signal tests ---
+
+
+def test_tr_credential_best_for_track():
+    """Best credential for 'writing' track is mfa_creative_writing=4."""
+    entry = _make_entry(track="writing")
+    score, reason = _tr_credential_track_relevance(entry)
+    assert score == 4
+    assert "mfa_creative_writing" in reason
+
+
+def test_tr_credential_consulting():
+    """Best credential for consulting is meta_fullstack_dev=4."""
+    entry = _make_entry(track="consulting")
+    score, reason = _tr_credential_track_relevance(entry)
+    assert score == 4
+    assert "meta_fullstack_dev" in reason
+
+
+def test_tr_track_experience_counts_submitted():
+    """Counts same-track entries with submitted+ status."""
+    entry = _make_entry(track="grant", entry_id="test-grant")
+    all_entries = [
+        {"id": "g1", "track": "grant", "status": "submitted"},
+        {"id": "g2", "track": "grant", "status": "outcome"},
+        {"id": "g3", "track": "grant", "status": "drafting"},  # not submitted
+        {"id": "r1", "track": "residency", "status": "submitted"},  # wrong track
+    ]
+    score, reason = _tr_track_experience(entry, all_entries)
+    assert score == 2  # 2 submitted grant entries
+
+
+def test_tr_track_experience_no_prior():
+    """Zero same-track submitted entries scores 0."""
+    entry = _make_entry(track="prize", entry_id="test-prize")
+    all_entries = [
+        {"id": "g1", "track": "grant", "status": "submitted"},
+    ]
+    score, reason = _tr_track_experience(entry, all_entries)
+    assert score == 0
+
+
+def test_tr_position_depth_has_framing():
+    """Position with existing framing block on disk scores 2."""
+    # systems-artist has blocks/framings/systems-artist.md in the repo
+    entry = _make_entry(identity_position="systems-artist")
+    score, reason = _tr_position_depth(entry)
+    assert score == 2
+    assert "exists" in reason
+
+
+def test_tr_differentiators_coverage():
+    """Profile with 3+ evidence_highlights scores 1."""
+    entry = _make_entry()
+    profile = {"evidence_highlights": ["a", "b", "c", "d"]}
+    score, reason = _tr_differentiators_coverage(entry, profile)
+    assert score == 1
+
+
+def test_tr_differentiators_no_profile():
+    """No profile scores 0."""
+    entry = _make_entry()
+    score, reason = _tr_differentiators_coverage(entry, None)
+    assert score == 0
+
+
+# --- Signal-based dimensions clamped to range ---
+
+
+def test_signal_dims_clamped_to_range():
+    """Signal-based dimensions should be clamped to [1, 10]."""
+    # Minimal entry — all signals score low
+    entry = _make_entry(track="job")
+    dims = compute_human_dimensions(entry, all_entries=[])
+    for key in ("mission_alignment", "evidence_match", "track_record_fit"):
+        assert 1 <= dims[key] <= 10, f"{key}={dims[key]} out of [1,10]"
+
+    # Rich entry — signals may sum high
+    entry_rich = _make_entry(
+        track="residency",
+        identity_position="systems-artist",
+        lead_organs=["I", "II", "META"],
+        blocks_used={
+            "framing": "framings/systems-artist",
+            "artist_statement": "identity/2min",
+            "evidence": "evidence/differentiators",
+            "methodology": "methodology/ai-conductor",
+        },
+        portal_fields=[{"name": "artist_statement"}, {"name": "evidence"}],
+        materials_attached=["resumes/base/resume.pdf"],
+        portfolio_url="https://example.com",
+    )
+    dims_rich = compute_human_dimensions(entry_rich, all_entries=[])
+    for key in ("mission_alignment", "evidence_match", "track_record_fit"):
+        assert 1 <= dims_rich[key] <= 10, f"{key}={dims_rich[key]} out of [1,10]"
 
 
 # --- compute_dimensions ---
@@ -393,8 +649,8 @@ def test_compute_dimensions_returns_all_eight():
     assert set(dims.keys()) == set(WEIGHTS.keys())
 
 
-def test_compute_dimensions_preserves_human_overrides():
-    """Existing human-judgment dimensions should be preserved, not re-estimated."""
+def test_no_human_override_dimensions_always_recompute():
+    """Existing stored dimensions are ignored — always recomputed from signals."""
     entry = _make_entry(
         fit_score=5,
         existing_dims={
@@ -403,10 +659,10 @@ def test_compute_dimensions_preserves_human_overrides():
             "track_record_fit": 7,
         },
     )
-    dims = compute_dimensions(entry)
-    assert dims["mission_alignment"] == 9
-    assert dims["evidence_match"] == 8
-    assert dims["track_record_fit"] == 7
+    dims = compute_dimensions(entry, all_entries=[])
+    # With no identity_position, no profile, no blocks, the signal-based
+    # scores should NOT be 9/8/7 — they should be recomputed (lower).
+    assert dims["mission_alignment"] != 9 or dims["evidence_match"] != 8
 
 
 def test_compute_dimensions_auto_dims_recomputed():
@@ -730,3 +986,346 @@ def test_job_tier4_scores_below_threshold():
     assert composite < JOB_QUALIFICATION_THRESHOLD, (
         f"Tier-4 job scored {composite}, expected < {JOB_QUALIFICATION_THRESHOLD}"
     )
+
+
+# --- explain mode ---
+
+
+def test_explain_creative_entry_shows_all_dimensions():
+    """--explain output should contain all 8 dimension names."""
+    entry = _make_entry(
+        fit_score=8,
+        framing="Multi-year systems art project bridging recursive computing",
+        blocks_used={"a": "x", "b": "x", "c": "x", "d": "x", "e": "x"},
+        organization="Creative Capital",
+        deadline_type="rolling",
+    )
+    entry["id"] = "test-creative"
+    output = explain_entry(entry, all_entries=[])
+    for dim in WEIGHTS:
+        assert dim in output, f"Dimension '{dim}' not found in explain output"
+
+
+def test_explain_auto_sourced_job_shows_tier():
+    """--explain output for auto-sourced job should mention the tier."""
+    entry = _make_entry(
+        track="job",
+        fit_score=1,
+        organization="Anthropic",
+        portal="greenhouse",
+        deadline_type="rolling",
+        name="Software Engineer, Agent SDK",
+        tags=["auto-sourced"],
+    )
+    entry["id"] = "test-job"
+    output = explain_entry(entry, all_entries=[])
+    assert "tier-1-strong" in output or "auto-sourced" in output
+
+
+def test_explain_includes_weighted_sum():
+    """--explain output should include the COMPOSITE line with terms."""
+    entry = _make_entry(fit_score=7, deadline_type="rolling")
+    entry["id"] = "test-entry"
+    output = explain_entry(entry, all_entries=[])
+    assert "COMPOSITE:" in output
+
+
+def test_explain_shows_original_score_when_present():
+    """--explain should show original_score if available."""
+    entry = _make_entry(fit_score=7.5, original_score=7.0, deadline_type="rolling")
+    entry["id"] = "test-entry"
+    output = explain_entry(entry, all_entries=[])
+    assert "original_score" in output
+    assert "7.0" in output
+
+
+def test_explain_shows_signal_breakdown():
+    """--explain output should show signal-level detail for each dimension."""
+    entry = _make_entry(
+        track="residency",
+        identity_position="systems-artist",
+        lead_organs=["I", "II", "META"],
+        blocks_used={
+            "framing": "framings/systems-artist",
+            "evidence": "evidence/differentiators",
+        },
+        portal_fields=[{"name": "artist_statement"}, {"name": "evidence"}],
+        materials_attached=["resume.pdf"],
+        portfolio_url="https://example.com",
+        deadline_type="rolling",
+    )
+    entry["id"] = "test-signal"
+    output = explain_entry(entry, all_entries=[])
+    assert "SIGNAL-BASED DIMENSIONS:" in output
+    assert "position-profile match:" in output
+    assert "block-portal coverage:" in output
+    assert "credential-track:" in output
+
+
+# --- Signal-based scoring ignores original_score ---
+
+
+def test_signal_dims_ignore_original_score():
+    """Signal-based dimensions don't use original_score at all."""
+    entry_a = _make_entry(
+        fit_score=8.0, original_score=6.0,
+        identity_position="systems-artist",
+        lead_organs=["I", "II", "META"],
+        track="grant",
+    )
+    entry_b = _make_entry(
+        fit_score=3.0, original_score=3.0,
+        identity_position="systems-artist",
+        lead_organs=["I", "II", "META"],
+        track="grant",
+    )
+    dims_a = compute_human_dimensions(entry_a, all_entries=[])
+    dims_b = compute_human_dimensions(entry_b, all_entries=[])
+    # Same structured data -> same signal scores, regardless of original_score
+    assert dims_a == dims_b
+
+
+def test_auto_sourced_still_uses_title_based():
+    """Auto-sourced entries should still use title-based estimation (tier-1)."""
+    entry = _make_entry(
+        track="job",
+        fit_score=1,
+        original_score=1,
+        name="Software Engineer, Agent SDK",
+        tags=["auto-sourced"],
+    )
+    dims = compute_human_dimensions(entry)
+    assert dims["mission_alignment"] == 9
+
+
+# --- Job financial alignment corrected ---
+
+
+def test_financial_job_high_salary_scores_high():
+    """Job with >$150K salary should score 9 (strong comp)."""
+    entry = _make_entry(track="job", amount_value=200000)
+    assert score_financial_alignment(entry) == 9
+
+
+def test_financial_job_zero_salary_penalized():
+    """Job with $0 salary should score 5 (slight penalty for unknown)."""
+    entry = _make_entry(track="job", amount_value=0)
+    assert score_financial_alignment(entry) == 5
+
+
+def test_financial_job_moderate_salary():
+    """Job with >$50K salary should score 7 (adequate comp)."""
+    entry = _make_entry(track="job", amount_value=75000)
+    assert score_financial_alignment(entry) == 7
+
+
+def test_financial_job_low_salary():
+    """Job with salary <= $50K should score 6 (low comp)."""
+    entry = _make_entry(track="job", amount_value=40000)
+    assert score_financial_alignment(entry) == 6
+
+
+# --- explain parameter returns tuples ---
+
+
+def test_explain_param_deadline():
+    """score_deadline_feasibility with explain=True returns (score, reason)."""
+    entry = _make_entry(deadline_type="rolling")
+    result = score_deadline_feasibility(entry, explain=True)
+    assert isinstance(result, tuple)
+    score, reason = result
+    assert score == 9
+    assert "rolling" in reason or "no date" in reason
+
+
+def test_explain_param_financial():
+    """score_financial_alignment with explain=True returns (score, reason)."""
+    entry = _make_entry(amount_value=15000)
+    result = score_financial_alignment(entry, explain=True)
+    assert isinstance(result, tuple)
+    score, reason = result
+    assert score == 9
+    assert "SNAP" in reason
+
+
+def test_explain_param_portal():
+    """score_portal_friction with explain=True returns (score, reason)."""
+    entry = _make_entry(portal="email")
+    result = score_portal_friction(entry, explain=True)
+    assert isinstance(result, tuple)
+    score, reason = result
+    assert score == 9
+    assert "email" in reason
+
+
+def test_explain_param_effort():
+    """score_effort_to_value with explain=True returns (score, reason)."""
+    entry = _make_entry(track="emergency")
+    result = score_effort_to_value(entry, explain=True)
+    assert isinstance(result, tuple)
+    score, reason = result
+    assert score >= 6
+    assert "emergency" in reason
+
+
+def test_explain_param_strategic():
+    """score_strategic_value with explain=True returns (score, reason)."""
+    entry = _make_entry(organization="Creative Capital")
+    result = score_strategic_value(entry, explain=True)
+    assert isinstance(result, tuple)
+    score, reason = result
+    assert score == 10
+    assert "prestige" in reason
+
+
+def test_explain_param_human_dims():
+    """compute_human_dimensions with explain=True returns (dims, explanations)."""
+    entry = _make_entry(
+        fit_score=7,
+        identity_position="systems-artist",
+        lead_organs=["I", "II", "META"],
+        blocks_used={"framing": "framings/systems-artist"},
+    )
+    result = compute_human_dimensions(entry, all_entries=[], explain=True)
+    assert isinstance(result, tuple)
+    dims, explanations = result
+    assert "mission_alignment" in dims
+    assert "mission_alignment" in explanations
+    assert "position-profile match" in explanations["mission_alignment"]
+
+
+# --- rubric_desc helper ---
+
+
+def test_rubric_desc_returns_description():
+    """_rubric_desc should return the matching description for a score."""
+    desc = _rubric_desc("mission_alignment", 9)
+    assert "exemplifies" in desc or "target applicant" in desc
+
+
+def test_rubric_desc_unknown_dim():
+    """_rubric_desc should return empty string for unknown dimension."""
+    assert _rubric_desc("nonexistent_dim", 5) == ""
+
+
+# --- review_compressed filters correctly ---
+
+
+def test_review_compressed_excludes_auto_sourced(capsys):
+    """review_compressed should skip auto-sourced entries."""
+    from score import review_compressed
+
+    entries = [
+        (Path("/fake/job.yaml"), {
+            "id": "job-1",
+            "track": "job",
+            "tags": ["auto-sourced"],
+            "fit": {"score": 7.0, "dimensions": {}},
+        }),
+        (Path("/fake/grant.yaml"), {
+            "id": "grant-1",
+            "name": "Test Grant",
+            "track": "grant",
+            "tags": [],
+            "fit": {
+                "score": 7.1,
+                "identity_position": "systems-artist",
+                "dimensions": {
+                    "mission_alignment": 8,
+                    "evidence_match": 6,
+                    "track_record_fit": 7,
+                },
+            },
+        }),
+    ]
+    review_compressed(entries, lo=6.5, hi=7.5)
+    captured = capsys.readouterr()
+    assert "grant-1" in captured.out
+    assert "job-1" not in captured.out
+
+
+# --- Signal constants consistency ---
+
+
+def test_track_position_affinity_covers_all_tracks():
+    """Every creative track should have affinity scores."""
+    for track in ("grant", "residency", "prize", "fellowship", "program",
+                  "writing", "emergency", "consulting"):
+        assert track in TRACK_POSITION_AFFINITY, f"Missing track: {track}"
+
+
+def test_position_expected_organs_covers_all_positions():
+    """Every identity position should have expected organs."""
+    for pos in ("systems-artist", "creative-technologist", "community-practitioner",
+                "educator", "independent-engineer"):
+        assert pos in POSITION_EXPECTED_ORGANS, f"Missing position: {pos}"
+
+
+def test_credentials_cover_all_tracks():
+    """Every credential should have scores for all creative tracks."""
+    tracks = {"grant", "residency", "prize", "fellowship", "program",
+              "writing", "emergency", "consulting"}
+    for cred_name, track_scores in CREDENTIALS.items():
+        assert tracks <= set(track_scores.keys()), (
+            f"Credential {cred_name} missing tracks: {tracks - set(track_scores.keys())}"
+        )
+
+
+# --- Integration: differentiation test ---
+
+
+def test_compressed_entries_now_differentiate():
+    """Entries with different structured data should get different scores."""
+    # A residency with systems-artist position, organs I/II/META, framings block
+    entry_residency = _make_entry(
+        track="residency",
+        identity_position="systems-artist",
+        lead_organs=["I", "II", "META"],
+        blocks_used={
+            "framing": "framings/systems-artist",
+            "artist_statement": "identity/2min",
+            "evidence": "evidence/differentiators",
+        },
+        portal_fields=[{"name": "artist_statement"}, {"name": "evidence"}],
+        materials_attached=["resume.pdf"],
+        portfolio_url="https://example.com",
+        entry_id="entry-residency",
+    )
+
+    # An emergency entry with community-practitioner, different organs, no blocks
+    entry_emergency = _make_entry(
+        track="emergency",
+        identity_position="community-practitioner",
+        lead_organs=["V", "VI"],
+        entry_id="entry-emergency",
+    )
+
+    all_entries = []
+    dims_res = compute_dimensions(entry_residency, all_entries)
+    dims_emg = compute_dimensions(entry_emergency, all_entries)
+
+    # The entries should have different dimension scores
+    ma_diff = abs(dims_res["mission_alignment"] - dims_emg["mission_alignment"])
+    em_diff = abs(dims_res["evidence_match"] - dims_emg["evidence_match"])
+    tr_diff = abs(dims_res["track_record_fit"] - dims_emg["track_record_fit"])
+
+    total_diff = ma_diff + em_diff + tr_diff
+    assert total_diff >= 3, (
+        f"Expected differentiation >= 3 across MA/EM/TR, got {total_diff} "
+        f"(residency={dims_res}, emergency={dims_emg})"
+    )
+
+
+def test_auto_sourced_jobs_still_use_tier_estimation():
+    """Auto-sourced job entries should still use tier-based title estimation."""
+    entry = _make_entry(
+        track="job",
+        fit_score=1,
+        name="Software Engineer, Developer Tools",
+        tags=["auto-sourced"],
+    )
+    dims = compute_human_dimensions(entry)
+    # devtools matches tier-1-strong: MA=9, EM=9, TR=7
+    assert dims["mission_alignment"] == 9
+    assert dims["evidence_match"] == 9
+    assert dims["track_record_fit"] == 7

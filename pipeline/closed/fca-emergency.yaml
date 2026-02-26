@@ -18,7 +18,8 @@ amount:
   type: lump_sum
   benefits_cliff_note: null
 fit:
-  score: 7.1
+  score: 6.5
+  original_score: 7.1
   identity_position: systems-artist
   framing: Systems artist with urgent need for project-specific emergency support
   lead_organs:
@@ -26,8 +27,8 @@ fit:
   - META
   dimensions:
     mission_alignment: 8
-    evidence_match: 6
-    track_record_fit: 7
+    evidence_match: 4
+    track_record_fit: 6
     financial_alignment: 9
     effort_to_value: 9
     strategic_value: 3

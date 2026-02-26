@@ -318,3 +318,67 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: gay-lesbian-review
+  submitted: '2026-02-26'
+  track: writing
+  identity_position: community-practitioner
+  blocks_used:
+  - identity/2min
+  - projects/organvm-system
+  - projects/krypto-velamen
+  - methodology/process-as-product
+  - evidence/work-samples
+  - framings/community-practitioner
+  - pitches/gay-lesbian-review
+  variant_id: null
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: logic-magazine
+  submitted: '2026-02-26'
+  track: writing
+  identity_position: creative-technologist
+  blocks_used:
+  - identity/2min
+  - projects/organvm-system
+  - methodology/process-as-product
+  - evidence/work-samples
+  - framings/creative-technologist
+  - pitches/logic-magazine
+  - evidence/work-samples
+  variant_id: null
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: noema-magazine
+  submitted: '2026-02-26'
+  track: writing
+  identity_position: systems-artist
+  blocks_used:
+  - identity/2min
+  - projects/organvm-system
+  - pitches/noema-magazine
+  - evidence/work-samples
+  variant_id: null
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: mit-tr-wired-aeon
+  submitted: '2026-02-26'
+  track: writing
+  identity_position: creative-technologist
+  blocks_used:
+  - identity/2min
+  - projects/organvm-system
+  - framings/creative-technologist
+  - pitches/mit-tr-wired-aeon
+  - pitches/credentials-creative-tech
+  - evidence/work-samples
+  variant_id: null
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null

@@ -18,7 +18,8 @@ amount:
   type: lump_sum
   benefits_cliff_note: null
 fit:
-  score: 8.3
+  score: 7.6
+  original_score: 8.3
   identity_position: systems-artist
   framing: Systems artist producing audience-participatory performance, modular synthesis,
     immersive web experiences, and queer literary archives through governed creative
@@ -29,8 +30,8 @@ fit:
   - IV
   dimensions:
     mission_alignment: 9
-    evidence_match: 9
-    track_record_fit: 8
+    evidence_match: 7
+    track_record_fit: 6
     financial_alignment: 9
     effort_to_value: 8
     strategic_value: 8

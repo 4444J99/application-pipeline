@@ -18,7 +18,8 @@ amount:
   type: stipend
   benefits_cliff_note: null
 fit:
-  score: 6.9
+  score: 7.0
+  original_score: 6.9
   identity_position: creative-technologist
   framing: Creative technologist building experimental tools at the intersection of
     art and computation
@@ -27,9 +28,9 @@ fit:
   - III
   - IV
   dimensions:
-    mission_alignment: 8
+    mission_alignment: 9
     evidence_match: 6
-    track_record_fit: 7
+    track_record_fit: 6
     financial_alignment: 4
     effort_to_value: 7
     strategic_value: 8

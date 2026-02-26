@@ -18,7 +18,8 @@ amount:
   type: stipend
   benefits_cliff_note: null
 fit:
-  score: 6.8
+  score: 6.2
+  original_score: 6.8
   identity_position: systems-artist
   framing: Systems artist seeking immersive multi-year fellowship for sustained practice
     development
@@ -28,8 +29,8 @@ fit:
   - META
   dimensions:
     mission_alignment: 8
-    evidence_match: 6
-    track_record_fit: 7
+    evidence_match: 4
+    track_record_fit: 6
     financial_alignment: 3
     effort_to_value: 7
     strategic_value: 8

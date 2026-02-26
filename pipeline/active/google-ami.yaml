@@ -18,7 +18,8 @@ amount:
   type: lump_sum
   benefits_cliff_note: null
 fit:
-  score: 9.0
+  score: 8.2
+  original_score: 9.0
   identity_position: creative-technologist
   framing: Creative technologist building experimental AI-assisted tools for artistic
     creation
@@ -27,9 +28,9 @@ fit:
   - III
   - IV
   dimensions:
-    mission_alignment: 10
-    evidence_match: 10
-    track_record_fit: 9
+    mission_alignment: 9
+    evidence_match: 8
+    track_record_fit: 8
     financial_alignment: 9
     effort_to_value: 7
     strategic_value: 8

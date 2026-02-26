@@ -18,7 +18,8 @@ amount:
   type: salary
   benefits_cliff_note: null
 fit:
-  score: 6.1
+  score: 5.5
+  original_score: 6.1
   identity_position: independent-engineer
   framing: Independent engineer and developer advocate — 810K+ words documentation,
     42 essays, 11 years teaching, open-source infrastructure at scale
@@ -26,9 +27,9 @@ fit:
   - III
   - VI
   dimensions:
-    mission_alignment: 7
-    evidence_match: 5
-    track_record_fit: 4
+    mission_alignment: 3
+    evidence_match: 7
+    track_record_fit: 6
     financial_alignment: 8
     effort_to_value: 9
     strategic_value: 6

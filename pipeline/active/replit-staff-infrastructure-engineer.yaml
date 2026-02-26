@@ -1,0 +1,53 @@
+id: replit-staff-infrastructure-engineer
+name: Replit Staff Infrastructure Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: Replit
+  url: https://jobs.ashbyhq.com/replit
+  application_url: https://jobs.ashbyhq.com/replit/6481ec1e-527c-4c1f-a041-2fb5021e7bd5
+  portal: ashby
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.5
+  identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 7
+    track_record_fit: 5
+    financial_alignment: 5
+    effort_to_value: 7
+    strategic_value: 6
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: 
+    framing: framings/independent-engineer
+    evidence: evidence/differentiators
+    work_samples: evidence/work-samples
+    credentials: pitches/credentials-creative-tech
+    methodology: methodology/ai-conductor
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-02-26'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-02-26"
+notes: 'Location: Foster City, CA (Hybrid) In office M,W,F'
