@@ -1,3 +1,10 @@
+# Cover Letter: OpenAI Software Engineer, Full-Stack — Developer Experience
+
+**Role:** OpenAI Software Engineer, Full-Stack — Developer Experience
+**Apply:** https://jobs.ashbyhq.com/openai/202eb061-23d7-4a58-80c8-bc3b41e56d39
+
+---
+
 To the Developer Experience Team at OpenAI,
 
 I am writing to apply for the Software Engineer, Full-Stack (Developer Experience) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a deep discipline for the "Agent-Human Hybrid" model of software development. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
