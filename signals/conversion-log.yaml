@@ -577,3 +577,20 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: prix-ars-electronica
+  submitted: '2026-02-26'
+  track: prize
+  identity_position: systems-artist
+  blocks_used:
+  - identity/5min
+  - projects/ai-council-coliseum
+  - methodology/governance-as-art
+  - evidence/differentiators
+  - framings/systems-artist
+  - projects/recursive-engine
+  - projects/organvm-system
+  variant_id: cover-letters/prix-ars-electronica-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null

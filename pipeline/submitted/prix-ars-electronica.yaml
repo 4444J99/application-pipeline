@@ -1,7 +1,7 @@
 id: prix-ars-electronica
 name: Prix Ars Electronica 2026 — Interactive Art+
 track: prize
-status: staged
+status: submitted
 outcome: null
 target:
   organization: Ars Electronica
@@ -58,7 +58,7 @@ timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
   materials_ready: '2026-02-18'
-  submitted: null
+  submitted: '2026-02-26'
   acknowledged: null
   interview: null
   outcome_date: null
