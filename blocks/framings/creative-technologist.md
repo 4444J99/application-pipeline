@@ -1,3 +1,13 @@
+---
+title: "Creative Technologist"
+category: framings
+tags: [ai, orchestration, testing, ci-cd, infrastructure, creative-coding, multi-agent]
+identity_positions: [creative-technologist]
+tracks: [job, grant, fellowship, consulting]
+related_projects: [agentic-titan, recursive-engine, organvm-system]
+tier: single
+---
+
 # Framing: Creative Technologist
 
 **For:** Tech grants, selective roles, accelerators, consulting

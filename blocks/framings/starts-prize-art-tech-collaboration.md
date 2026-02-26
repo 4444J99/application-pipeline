@@ -1,3 +1,13 @@
+---
+title: "Art-Technology Collaboration (S+T+ARTS Prize)"
+category: framings
+tags: [art-technology, collaboration, performance, audience-participation, supercollider, ai, queer, generative-art]
+identity_positions: [systems-artist, creative-technologist]
+tracks: [prize]
+related_projects: [omni-dromenon-engine, krypto-velamen]
+tier: single
+---
+
 # Framing: Art-Technology Collaboration (S+T+ARTS Prize)
 
 ORGANVM operates through multiple layered collaborations between humans, algorithms, and audiences — each producing distinct art outputs.

@@ -1,3 +1,12 @@
+---
+title: "Metrics Snapshot"
+category: evidence
+tags: [metrics, scale, testing, ci-cd, documentation, governance]
+identity_positions: [systems-artist, creative-technologist, independent-engineer, educator]
+tracks: [job, grant, residency, fellowship, prize]
+tier: single
+---
+
 # Evidence: Metrics Snapshot
 
 *Source of truth: `organvm-corpvs-testamentvm/docs/applications/00-covenant-ark.md` Section A*

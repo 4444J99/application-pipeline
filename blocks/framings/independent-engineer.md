@@ -1,3 +1,13 @@
+---
+title: "Independent Engineer"
+category: framings
+tags: [engineering, python, typescript, testing, ci-cd, infrastructure, ai, developer-tools, architecture]
+identity_positions: [independent-engineer]
+tracks: [job]
+related_projects: [agentic-titan, recursive-engine, organvm-system]
+tier: single
+---
+
 # Framing: Independent Engineer
 
 **For:** AI lab engineering roles, developer tooling, infrastructure positions

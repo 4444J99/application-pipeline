@@ -1,3 +1,13 @@
+---
+title: "Systems Artist"
+category: framings
+tags: [systems-art, governance, process-as-product, mfa, creative-writing, transparency]
+identity_positions: [systems-artist]
+tracks: [grant, residency, prize, fellowship]
+related_projects: [organvm-system]
+tier: single
+---
+
 # Framing: Systems Artist
 
 **For:** Art grants, residencies, prizes

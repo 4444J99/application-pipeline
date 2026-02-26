@@ -1,3 +1,13 @@
+---
+title: "European Dimension (S+T+ARTS Prize)"
+category: framings
+tags: [governance, constitutional, transparency, open-source, european, ai, media-art]
+identity_positions: [systems-artist]
+tracks: [prize]
+related_projects: [organvm-system]
+tier: single
+---
+
 # Framing: European Dimension (S+T+ARTS Prize)
 
 The ORGANVM system's constitutional governance model directly parallels European institutional design. Its `governance-rules.json` encodes architectural principles — unidirectional dependency flow, promotion state machines, dependency validation — as machine-readable constitutional law. This is not metaphor: the registry (`registry-v2.json`) functions as a living constitutional document, amended through documented processes with full audit trails across 33 development sprints and 12 Architectural Decision Records.

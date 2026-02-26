@@ -83,6 +83,7 @@ JOB_BLOCKS_BY_IDENTITY = {
         "framing": "framings/educator-researcher",
         "evidence": "evidence/differentiators",
         "work_samples": "evidence/work-samples",
+        "project": "projects/classroom-rpg-aetheria",
     },
 }
 

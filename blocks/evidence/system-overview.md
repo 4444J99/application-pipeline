@@ -1,3 +1,13 @@
+---
+title: "System Overview"
+category: evidence
+tags: [system, governance, ai, scale, documentation, infrastructure]
+identity_positions: [systems-artist, creative-technologist, independent-engineer]
+tracks: [job, grant, residency, fellowship, prize]
+related_projects: [organvm-system]
+tier: single
+---
+
 # Evidence: System Overview
 
 The ORGANVM eight-organ system coordinates 103 repositories across 8 GitHub organizations. Each organ governs a domain — from epistemological theory (ORGAN-I) through generative art (ORGAN-II), commercial products (ORGAN-III), orchestration governance (ORGAN-IV), public documentation (ORGAN-V), community infrastructure (ORGAN-VI), marketing distribution (ORGAN-VII), to meta-system governance (META).

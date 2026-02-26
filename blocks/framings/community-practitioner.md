@@ -1,3 +1,13 @@
+---
+title: "Community Practitioner"
+category: framings
+tags: [queer, lgbtq, community, precarity, housing, mutual-aid, identity]
+identity_positions: [community-practitioner]
+tracks: [grant, fellowship, emergency, residency]
+related_projects: [krypto-velamen]
+tier: single
+---
+
 # Framing: Community Practitioner
 
 **For:** LGBTQ+ funding, identity-specific grants, housing-related funding, community programs

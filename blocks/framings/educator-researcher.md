@@ -1,3 +1,13 @@
+---
+title: "Educator-Researcher"
+category: framings
+tags: [education, teaching, pedagogy, curriculum, writing, mfa, classroom, learning]
+identity_positions: [educator]
+tracks: [job, grant, fellowship]
+related_projects: [classroom-rpg-aetheria]
+tier: single
+---
+
 # Framing: Educator-Researcher
 
 **For:** Education grants, fellowships, academic positions
@@ -17,6 +27,7 @@ With 11 years of college instruction across 8+ institutions and 2,000+ students,
 - 100+ courses (composition, creative writing, literature)
 - MFA Creative Writing (FAU)
 - 42 published essays as pedagogical artifacts
+- Classroom RPG: Aetheria — gamification platform (React/TS) with AI-powered feedback and quest-based learning
 
 ## Targets
 Spencer Foundation, NEH, Bread Loaf, state arts councils

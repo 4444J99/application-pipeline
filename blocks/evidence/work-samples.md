@@ -1,3 +1,12 @@
+---
+title: "Work Samples"
+category: evidence
+tags: [portfolio, work-samples, github, documentation]
+identity_positions: [systems-artist, creative-technologist, independent-engineer, educator]
+tracks: [job, grant, residency, fellowship, prize]
+tier: single
+---
+
 # Evidence: Work Samples (Ordered by Impact)
 
 *Source: covenant-ark Section E*
@@ -13,6 +22,7 @@
 | 7 | life-my--midst--in | https://github.com/organvm-iii-ergon/life-my--midst--in | Interactive identity platform: 291 tests, 44 DB tables, Inverted Interview paradigm |
 | 8 | Metasystem Master | https://github.com/organvm-ii-poiesis/metasystem-master | Generative art meta-system connecting theory to practice |
 | 9 | Orchestration Hub | https://github.com/organvm-iv-taxis/orchestration-start-here | 11 governance workflows, cross-org dispatch, promotion automation |
+| 10 | Classroom RPG: Aetheria | https://github.com/4444J99/classroom-rpg-aetheria | Classroom gamification platform: React 19/TS, AI-powered feedback, 4 theme systems, quest-based learning |
 
 ## Links Table (copy-paste for forms)
 

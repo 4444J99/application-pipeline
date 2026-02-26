@@ -1,3 +1,12 @@
+---
+title: "Emergency / Precarity"
+category: framings
+tags: [emergency, housing, precarity, stability, artist, mfa]
+identity_positions: [community-practitioner]
+tracks: [emergency, grant]
+tier: single
+---
+
 # Framing: Emergency / Precarity
 
 **For:** Emergency funds, housing stability grants, crisis assistance

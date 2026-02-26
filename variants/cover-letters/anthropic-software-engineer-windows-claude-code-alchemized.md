@@ -1,3 +1,10 @@
+# Cover Letter: Anthropic Software Engineer, Windows - Claude Code
+
+**Role:** Anthropic Software Engineer, Windows - Claude Code
+**Apply:** https://job-boards.greenhouse.io/anthropic/jobs/5098506008
+
+---
+
 To the Claude Code Team at Anthropic,
 
 I am writing to apply for the Software Engineer (Windows) position on the Claude Code team. As an independent engineer who has built and maintained a production-grade system of 103 repositories across 8 GitHub organizations, I bring a deep discipline for developer tooling and systems architecture. My work is defined by the "Cathedral → Storefront" philosophy: managing deep, recursive infrastructure while ensuring high-signal scannability for the tools—and developers—that depend on it.

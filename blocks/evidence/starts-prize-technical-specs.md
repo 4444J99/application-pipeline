@@ -1,3 +1,13 @@
+---
+title: "Technical Specifications (S+T+ARTS Prize)"
+category: evidence
+tags: [technical, exhibition, hardware, supercollider, typescript, python, docker, installation]
+identity_positions: [systems-artist, creative-technologist]
+tracks: [prize]
+related_projects: [omni-dromenon-engine, recursive-engine, krypto-velamen, organvm-system]
+tier: single
+---
+
 # Evidence: Technical Specifications (S+T+ARTS Prize)
 
 ## Software Stack by Organ

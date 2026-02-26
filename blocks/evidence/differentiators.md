@@ -1,3 +1,12 @@
+---
+title: "Key Differentiators"
+category: evidence
+tags: [scale, solo-production, process-as-product, ai, governance, transparency, cross-domain]
+identity_positions: [systems-artist, creative-technologist, independent-engineer]
+tracks: [job, grant, residency, fellowship, prize]
+tier: single
+---
+
 # Evidence: Key Differentiators
 
 *Source: covenant-ark Section G*

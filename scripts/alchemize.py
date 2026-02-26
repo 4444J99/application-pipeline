@@ -97,6 +97,13 @@ PROJECT_KEYWORDS = {
     "queer": "projects/krypto-velamen.md",
     "lgbtq": "projects/krypto-velamen.md",
     "privacy": "projects/krypto-velamen.md",
+    "education": "projects/classroom-rpg-aetheria.md",
+    "teaching": "projects/classroom-rpg-aetheria.md",
+    "learning": "projects/classroom-rpg-aetheria.md",
+    "curriculum": "projects/classroom-rpg-aetheria.md",
+    "classroom": "projects/classroom-rpg-aetheria.md",
+    "gamification": "projects/classroom-rpg-aetheria.md",
+    "pedagogy": "projects/classroom-rpg-aetheria.md",
 }
 
 

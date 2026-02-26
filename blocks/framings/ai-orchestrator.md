@@ -1,3 +1,13 @@
+---
+title: "AI Orchestrator"
+category: framings
+tags: [ai, llm, agent, orchestration, machine-learning, automation, multi-agent]
+identity_positions: [independent-engineer, creative-technologist]
+tracks: [job, grant, fellowship]
+related_projects: [agentic-titan]
+tier: single
+---
+
 # Framing: AI Orchestrator
 
 **For:** AI-specific grants, tech roles, research fellowships
