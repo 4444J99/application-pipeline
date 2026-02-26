@@ -1,58 +1,14 @@
-# Campaign View — Application Pipeline (as of Feb 24, 2026)
+# Campaign View — Application Pipeline (as of Feb 25, 2026)
 
 ## Deadlined Queue (chronological)
 
-### March 04 — 8 days
+### March 04 — 7 days
 
 | Entry | Track | Status | Fit | Effort | Amount |
 |-------|-------|--------|-----|--------|--------|
-| Prix Ars Electronica 2026 | prize | `staged` | 8.4 | standard | EUR 10,000 |
-| S+T+ARTS Prize 2026 | prize | `staged` | 8.4 | standard | EUR 20,000 |
-
-### March 16 — 20 days
-
-| Entry | Track | Status | Fit | Effort | Amount |
-|-------|-------|--------|-----|--------|--------|
-| PEN America Writers Aid | emergency | `staged` | 8.5 | quick | $3,500 |
-
-### March 18 — 22 days
-
-| Entry | Track | Status | Fit | Effort | Amount |
-|-------|-------|--------|-----|--------|--------|
-| Google Creative Fellowship | fellowship | `drafting` | 6.9 | deep | $50,000 |
-
-### April 01 — 36 days
-
-| Entry | Track | Status | Fit | Effort | Amount |
-|-------|-------|--------|-----|--------|--------|
-| Fire Island Artist Residency | residency | `drafting` | 7.1 | standard | — |
-| Headlands Center for the Arts | residency | `drafting` | 8.9 | standard | $4,000 |
-| NLnet NGI Zero Commons Fund | grant | `drafting` | 6.8 | standard | EUR 50,000 |
-
-### April 02 — 37 days
-
-| Entry | Track | Status | Fit | Effort | Amount |
-|-------|-------|--------|-----|--------|--------|
-| Creative Capital 2027 Open Call | grant | `drafting` | 8.8 | deep | $50,000 |
-
-### April 12 — 47 days
-
-| Entry | Track | Status | Fit | Effort | Amount |
-|-------|-------|--------|-----|--------|--------|
-| ZKM Rauschenberg Residencies | residency | `drafting` | 8.5 | standard | In-kind |
-
-### April 14 — 49 days
-
-| Entry | Track | Status | Fit | Effort | Amount |
-|-------|-------|--------|-----|--------|--------|
-| Rauschenberg Cycle 36 | emergency | `drafting` | 7.0 | standard | $5,000 |
-| WFF Housing Stability Grant | grant | `drafting` | 8.1 | standard | $30,000 |
-
-### May 01 — 66 days
-
-| Entry | Track | Status | Fit | Effort | Amount |
-|-------|-------|--------|-----|--------|--------|
-| Warhol Arts Writers Grant | grant | `drafting` | 7.1 | standard | $50,000 |
+| Prix Ars Electronica 2026 — Digital Humanity | prize | `staged` | 8.0 | complex | EUR 10,000 |
+| Prix Ars Electronica 2026 — Interactive Art+ | prize | `staged` | 8.3 | complex | EUR 10,000 |
+| S+T+ARTS Prize 2026 | prize | `staged` | 8.3 | complex | EUR 20,000 |
 
 ## Rolling/No-Deadline (staged, submit anytime)
 
@@ -60,8 +16,6 @@
 
 | Entry | Status | Fit | Effort |
 |-------|--------|-----|--------|
-| Awesome Foundation NYC | `staged` | 7.9 | quick |
-| FCA Emergency Grants | `staged` | 7.1 | quick |
 | Stimpunks Creator Grant | `staged` | 7.1 | quick |
 
 ### Fellowship
@@ -78,15 +32,6 @@
 | Google AMI Grants | `staged` | 9.0 | deep |
 | LACMA Art + Technology Lab | `staged` | 7.9 | deep |
 | Whiting Creative Nonfiction Grant | `staged` | 8.0 | standard |
-
-### Job
-
-| Entry | Status | Fit | Effort |
-|-------|--------|-----|--------|
-| Anthropic Forward Deployed Engineer | `staged` | 4.2 | complex |
-| HuggingFace Developer Advocate Engineer | `staged` | 4.4 | complex |
-| OpenAI Software Engineer Applied Evals | `staged` | 3.9 | complex |
-| Together AI Lead DX Engineer | `staged` | 5.1 | complex |
 
 ### Program
 
@@ -110,25 +55,16 @@
 
 | Entry | Status | Fit | Effort |
 |-------|--------|-----|--------|
-| Gay & Lesbian Review | `staged` | 8.6 | quick |
+| Gay & Lesbian Review | `staged` | 8.7 | quick |
 | Logic Magazine | `staged` | 8.3 | quick |
-| MIT Technology Review / Wired / Aeon | `staged` | 7.8 | quick |
+| MIT Technology Review / Wired / Aeon | `staged` | 7.9 | quick |
 | Noema Magazine | `staged` | 8.0 | quick |
 
 ## Recommended Execution Order (urgency x fit)
 
-1. **Prix Ars Electronica 2026** — 8d, fit 8.4, standard, EUR 10,000
-2. **S+T+ARTS Prize 2026** — 8d, fit 8.4, standard, EUR 20,000
-3. **PEN America Writers Aid** — 20d, fit 8.5, quick, $3,500
-4. **Google Creative Fellowship** — 22d, fit 6.9, deep, $50,000
-4. **Headlands Center for the Arts** — 36d, fit 8.9, standard, $4,000
-5. **Creative Capital 2027 Open Call** — 37d, fit 8.8, deep, $50,000
-6. **Fire Island Artist Residency** — 36d, fit 7.1, standard, —
-7. **NLnet NGI Zero Commons Fund** — 36d, fit 6.8, standard, EUR 50,000
-8. **ZKM Rauschenberg Residencies** — 47d, fit 8.5, standard, In-kind
-9. **WFF Housing Stability Grant** — 49d, fit 8.1, standard, $30,000
-10. **Rauschenberg Cycle 36** — 49d, fit 7.0, standard, $5,000
-11. **Warhol Arts Writers Grant** — 66d, fit 7.1, standard, $50,000
+1. **Prix Ars Electronica 2026 — Interactive Art+** — 7d, fit 8.3, complex, EUR 10,000
+2. **S+T+ARTS Prize 2026** — 7d, fit 8.3, complex, EUR 20,000
+3. **Prix Ars Electronica 2026 — Digital Humanity** — 7d, fit 8.0, complex, EUR 10,000
 
 ---
-*Generated 2026-02-24 by `campaign.py --save`*
+*Generated 2026-02-25 by `campaign.py --save`*

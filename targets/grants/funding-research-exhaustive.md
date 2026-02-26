@@ -28,7 +28,7 @@ This is the **exhaustive master list** — every opportunity discovered across 5
 | 2 | **S+T+ARTS Prize** | EUR 20,000 | **Mar 4, 2026** | 8/10 | International prize | Creative Tech |
 | 3 | **PEN America Writers Aid** | Up to $3,500 | **Mar 16, 2026** | 9/10 | Emergency | Emergency/Writing |
 | 4 | **Awesome Foundation NYC** | $1,000 (no strings) | Monthly | 8/10 | Micro-grant | Emergency/Writing |
-| 5 | **Stimpunks Creator Grant** | $3,000 | Rolling (5/yr, pipeline just reopened) | 7/10 | Micro-grant | Emergency/Writing |
+| 5 | **Stimpunks Creator Grant** | $3,000 | **June 1, 2026** (Paused) | 7/10 | Micro-grant | Emergency/Writing |
 | 5b | **Watermill Center Summer Program** | FREE (housing/food/travel) | **Feb 18, 11:59pm EST** | 7/10 | Residency | Residencies |
 | 6 | **ACC CREATORS Korea** | $15K-22K + stipend | **Mar 1** | 8/10 | Residency | Residencies |
 | 7 | **Artadia NYC** | $15,000 | **Mar 1** | 8/10 | Grant | Already tracked |
@@ -94,9 +94,10 @@ This is the **exhaustive master list** — every opportunity discovered across 5
 
 ### Stimpunks Foundation Creator Grant
 
-- **Amount:** $3,000 (5 grants per year; pipeline reopened January 2026)
+- **Amount:** $3,000 (5 grants per year)
+- **Status:** **PAUSED** until June 1, 2026.
 - **Eligibility:** Neurodivergent and disabled creators. Formal diagnosis NOT required.
-- **Why it fits:** Broad creative fields. The 100-repo system + 42 essays is exactly what they support. Apply immediately — only 5 grants/year.
+- **Why it fits:** Broad creative fields. The 100-repo system + 42 essays is exactly what they support. Framing: "Neurodivergent creator building accessible infrastructure."
 - **URL:** https://stimpunks.org/creators/grant/
 - **Benefits cliff:** SNAP-safe.
 
@@ -365,7 +366,7 @@ Publications that pay professional rates for the exact kind of essays already be
 
 | Resource | Amount | Eligibility | Notes |
 |----------|--------|-------------|-------|
-| PEN America Writers Aid | Up to $3,500 | Professional writers, housing-precarious | **APPLY NOW** |
+| PEN America Writers Aid | Up to $3,500 | Professional writers, housing-precarious | **Mar 16, 2026** |
 | FCA Emergency Grants | $500-$3,000 | Confirmed public presentation required | Rolling |
 | Rauschenberg Emergency | Up to $5,000 | Medical/dental/mental health emergency | Apr 14-May 12 |
 | Max's Kansas City Project | $500-$1,000 | NY self-employed artists | Payment to creditor |
@@ -373,7 +374,7 @@ Publications that pay professional rates for the exact kind of essays already be
 | CERF+ | $3,000 | Craft artists, emergency | Rolling |
 | NYC One Shot Deal (HRA) | Covers rent arrears | NYC residents facing eviction | access.nyc.gov |
 | Awesome Foundation | $1,000 | Anyone, no restrictions | Monthly |
-| Stimpunks | $3,000 | Neurodivergent/disabled creators | 5/year |
+| Stimpunks | $3,000 | Neurodivergent/disabled creators | **June 1, 2026** |
 
 ---
 
