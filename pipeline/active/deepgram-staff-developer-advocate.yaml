@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/deepgram
   application_url: https://jobs.ashbyhq.com/deepgram/060d1b08-cfac-40dc-b6db-06ecbef4ccc4
   portal: ashby
+  location: San Francisco, CA
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: San Francisco, CA'

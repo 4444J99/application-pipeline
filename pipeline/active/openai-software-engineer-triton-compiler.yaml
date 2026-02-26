@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/openai
   application_url: https://jobs.ashbyhq.com/openai/fb15e668-3c43-4f85-b4c6-8a59b5e40c45
   portal: ashby
+  location: San Francisco
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: San Francisco'

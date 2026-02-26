@@ -202,6 +202,9 @@ For entries with `target.portal: greenhouse`:
 
 ## Conventions
 
+- **Deadline Prioritization**: 
+  - Remind user when a deadline is within **14 days** (2 weeks).
+  - Heavily prioritize and flag as urgent when a deadline is within **7 days** (1 week).
 - Pipeline YAML filenames use kebab-case matching the `id` field
 - Block filenames are descriptive and match reference paths in pipeline YAML
 - Variant filenames follow `{target-type}-v{n}.md` or `{target-specific-name}.md` pattern

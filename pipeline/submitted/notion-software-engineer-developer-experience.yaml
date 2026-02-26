@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/notion
   application_url: https://jobs.ashbyhq.com/notion/49bdf081-6e20-4323-8c73-6d6b19544ff5
   portal: ashby
+  location: Hyderabad, India — requires on-site 3 days/week, not applicable
+  location_class: international
 deadline:
   date: null
   type: rolling
@@ -16,7 +18,7 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.3
+  score: 8.1
   identity_position: independent-engineer
   framing: Documentation-first engineer with a knowledge architecture spanning 103
     repos, 43 validated dependency edges, and 810K+ words — building the kind of structured,
@@ -26,7 +28,7 @@ fit:
     evidence_match: 10
     track_record_fit: 7
     financial_alignment: 5
-    effort_to_value: 7
+    effort_to_value: 4
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
@@ -57,4 +59,3 @@ tags:
 - curated-fit
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Hyderabad, India — requires on-site 3 days/week, not applicable'

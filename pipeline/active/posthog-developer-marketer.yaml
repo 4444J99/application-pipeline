@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/posthog
   application_url: https://jobs.ashbyhq.com/posthog/9ccf88b0-f1ff-4c7b-9cef-f5219d2231fd
   portal: ashby
+  location: Remote
+  location_class: remote-global
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Remote'

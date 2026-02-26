@@ -40,6 +40,7 @@ VALID_DEFERRAL_REASONS = {
     "portal_paused", "cycle_not_open", "pending_materials",
     "external_dependency", "strategic_hold",
 }
+VALID_LOCATION_CLASSES = {"us-onsite", "us-remote", "remote-global", "international", "unknown"}
 
 def _reachable_statuses(from_status: str) -> set[str]:
     """Return all statuses reachable from a given status via valid transitions."""
@@ -178,6 +179,10 @@ def validate_entry(filepath: Path) -> list[str]:
         portal = target.get("portal")
         if portal and portal not in VALID_PORTALS:
             errors.append(f"Invalid target.portal: '{portal}' (valid: {VALID_PORTALS})")
+        # Location class validation (optional field)
+        loc_class = target.get("location_class")
+        if loc_class and loc_class not in VALID_LOCATION_CLASSES:
+            errors.append(f"Invalid target.location_class: '{loc_class}' (valid: {VALID_LOCATION_CLASSES})")
         # Warn if portal doesn't match what URL detection finds
         app_url = target.get("application_url", "")
         if app_url and portal:

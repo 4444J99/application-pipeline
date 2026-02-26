@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/cursor
   application_url: https://jobs.ashbyhq.com/cursor/e08262e8-c089-488d-9b59-9e21f7702b64
   portal: ashby
+  location: SF / NY / Remote. Job posting removed as of 2026-02-25 — listing returns 404.
+  location_class: us-remote
 deadline:
   date: null
   type: rolling
@@ -57,4 +59,3 @@ tags:
 - curated-fit
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: SF / NY / Remote. Job posting removed as of 2026-02-25 — listing returns 404.'

@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/replit
   application_url: https://jobs.ashbyhq.com/replit/34afefd8-f698-4c46-a517-9ced6695b59b
   portal: ashby
+  location: Foster City, CA (Hybrid) In office M,W,F
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -59,4 +61,3 @@ tags:
 - curated-fit
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Foster City, CA (Hybrid) In office M,W,F'

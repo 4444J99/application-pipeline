@@ -9,6 +9,8 @@ target:
   url: https://boards.greenhouse.io/coreweave
   application_url: https://coreweave.com/careers/job?4628998006&board=coreweave&gh_jid=4628998006
   portal: greenhouse
+  location: Livingston, NJ / Bellevue, WA / Philadelphia, PA / New York City, NY / San Francisco, CA / Sunnyvale, CA / Washington, D
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -51,5 +53,4 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Livingston, NJ / Bellevue, WA / Philadelphia, PA / New York City,
-  NY / San Francisco, CA / Sunnyvale, CA / Washington, D.C.'
+notes: C.

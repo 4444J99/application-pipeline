@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/supabase
   application_url: https://jobs.ashbyhq.com/supabase/a1320bbf-bfae-49a8-a1b7-12eeccaf39ca
   portal: ashby
+  location: Remote — listing expired August 2025, role no longer open
+  location_class: remote-global
 deadline:
   date: null
   type: rolling
@@ -56,4 +58,3 @@ tags:
 - curated-fit
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Remote — listing expired August 2025, role no longer open'

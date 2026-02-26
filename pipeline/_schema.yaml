@@ -22,6 +22,9 @@
 #   application_url: Direct link to application form/portal
 #   portal: Application submission platform
 #     enum: submittable | slideroom | email | custom | web | greenhouse | workable | lever | ashby | smartrecruiters
+#   location: Raw location string from job posting API (e.g. "San Francisco, CA", "Remote - US")
+#   location_class: US accessibility classification (populated by source_jobs.py)
+#     enum: us-onsite | us-remote | remote-global | international | unknown
 
 # --- Deadline ---
 # deadline:

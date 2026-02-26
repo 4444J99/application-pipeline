@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/notion
   application_url: https://jobs.ashbyhq.com/notion/ff54d0b3-d30f-4622-b6e6-9b9c6e4132ea
   portal: ashby
+  location: New York, New York
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: New York, New York'

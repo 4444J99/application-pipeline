@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/coreweave
   application_url: https://coreweave.com/careers/job?4453307006&board=coreweave&gh_jid=4453307006
   portal: greenhouse
+  location: Livingston, NJ / New York, NY
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Livingston, NJ / New York, NY'

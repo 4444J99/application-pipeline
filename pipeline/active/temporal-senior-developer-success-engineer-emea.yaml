@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/temporaltechnologies
   application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/5031597007
   portal: greenhouse
+  location: London, UK
+  location_class: international
 deadline:
   date: null
   type: rolling
@@ -16,14 +18,14 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 5.2
+  score: 5.0
   identity_position: independent-engineer
   dimensions:
     mission_alignment: 5
     evidence_match: 5
     track_record_fit: 4
     financial_alignment: 5
-    effort_to_value: 7
+    effort_to_value: 4
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: London, UK'

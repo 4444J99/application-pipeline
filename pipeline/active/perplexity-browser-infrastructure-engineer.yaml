@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/perplexity
   application_url: https://jobs.ashbyhq.com/perplexity/7bce0fcf-eef6-41aa-9243-896f07a0316e
   portal: ashby
+  location: Belgrade
+  location_class: unknown
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Belgrade'

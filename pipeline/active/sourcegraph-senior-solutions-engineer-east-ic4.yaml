@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/sourcegraph91
   application_url: https://job-boards.greenhouse.io/sourcegraph91/jobs/5793604004
   portal: greenhouse
+  location: Remote
+  location_class: remote-global
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Remote'

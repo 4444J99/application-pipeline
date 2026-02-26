@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/cohere
   application_url: https://jobs.ashbyhq.com/cohere/9e3f11d9-c935-496a-86f3-b5bd60921a47
   portal: ashby
+  location: Europe
+  location_class: unknown
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Europe'

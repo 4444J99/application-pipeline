@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/ramp
   application_url: https://jobs.ashbyhq.com/ramp/9912212c-2edd-4bdb-a18c-1087bcae0522
   portal: ashby
+  location: Washington, D.C.
+  location_class: unknown
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Washington, D.C.'

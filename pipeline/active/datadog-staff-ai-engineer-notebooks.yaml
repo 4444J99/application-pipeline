@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/datadog
   application_url: https://careers.datadoghq.com/detail/7629288/?gh_jid=7629288
   portal: greenhouse
+  location: New York, New York, USA
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: New York, New York, USA'

@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/vercel
   application_url: https://job-boards.greenhouse.io/vercel/jobs/5808568004
   portal: greenhouse
+  location: Hybrid - San Francisco, New York City
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Hybrid - San Francisco, New York City'

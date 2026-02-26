@@ -704,6 +704,15 @@ def score_effort_to_value(entry: dict, explain: bool = False) -> int | tuple[int
     explain_parts.append(f"{blocks_count} blocks (+{coverage_bonus:.1f})")
 
     score = base + coverage_bonus
+
+    # Location accessibility penalty: international-only roles require
+    # visa sponsorship and relocation, significantly increasing effort
+    target = entry.get("target", {})
+    location_class = target.get("location_class", "") if isinstance(target, dict) else ""
+    if location_class == "international":
+        score -= 3
+        explain_parts.append("international (-3)")
+
     result = max(1, min(10, round(score)))
 
     if explain:

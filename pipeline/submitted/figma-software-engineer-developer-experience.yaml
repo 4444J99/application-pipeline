@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/figma
   application_url: https://boards.greenhouse.io/figma/jobs/5790627004?gh_jid=5790627004
   portal: greenhouse
+  location: San Francisco, CA • New York, NY • United States
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -58,4 +60,3 @@ tags:
 - curated-fit
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: San Francisco, CA • New York, NY • United States'

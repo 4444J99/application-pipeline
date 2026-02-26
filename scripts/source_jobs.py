@@ -61,6 +61,96 @@ TITLE_EXCLUDES = [
 HTTP_TIMEOUT = 15
 
 # Display names for companies (board_token -> display name)
+VALID_LOCATION_CLASSES = {"us-onsite", "us-remote", "remote-global", "international", "unknown"}
+
+# US states and cities for location classification
+_US_STATES = [
+    "al", "ak", "az", "ar", "ca", "co", "ct", "de", "fl", "ga",
+    "hi", "id", "il", "in", "ia", "ks", "ky", "la", "me", "md",
+    "ma", "mi", "mn", "ms", "mo", "mt", "ne", "nv", "nh", "nj",
+    "nm", "ny", "nc", "nd", "oh", "ok", "or", "pa", "ri", "sc",
+    "sd", "tn", "tx", "ut", "vt", "va", "wa", "wv", "wi", "wy",
+    "dc",
+]
+_US_CITIES = [
+    "san francisco", "new york", "seattle", "austin", "chicago",
+    "los angeles", "boston", "denver", "portland", "miami",
+    "atlanta", "dallas", "houston", "phoenix", "philadelphia",
+    "san jose", "san diego", "nashville", "raleigh", "pittsburgh",
+    "minneapolis", "salt lake city", "boulder", "palo alto",
+    "mountain view", "menlo park", "sunnyvale", "cupertino",
+    "redmond", "bellevue", "brooklyn", "manhattan",
+    "sf", "nyc",
+]
+_INTERNATIONAL_MARKERS = [
+    "london", "uk", "united kingdom", "dublin", "ireland",
+    "tokyo", "japan", "singapore", "korea", "seoul",
+    "hyderabad", "india", "bangalore", "bengaluru", "mumbai",
+    "hungary", "budapest", "netherlands", "amsterdam",
+    "germany", "berlin", "munich", "france", "paris",
+    "canada", "toronto", "vancouver", "montreal",
+    "australia", "sydney", "melbourne",
+    "brazil", "são paulo",
+    "switzerland", "zürich", "zurich",
+    "israel", "tel aviv",
+    "poland", "warsaw",
+    "spain", "madrid", "barcelona",
+    "italy", "milan", "rome",
+    "sweden", "stockholm",
+    "emea", "apac",
+]
+_US_KEYWORDS = [
+    "united states", "usa", " us ", "u.s.", "us-", "- us",
+    "remote - us", "remote-us", "remote us", "us remote",
+]
+
+
+def classify_location(loc: str) -> str:
+    """Classify a location string for US accessibility.
+
+    Returns one of: us-onsite, us-remote, remote-global, international, unknown.
+    """
+    if not loc or not loc.strip():
+        return "unknown"
+
+    loc_lower = loc.lower().strip()
+
+    # Check for explicit international markers first
+    has_international = any(m in loc_lower for m in _INTERNATIONAL_MARKERS)
+
+    # Check for US indicators
+    has_us_city = any(c in loc_lower for c in _US_CITIES)
+    has_us_state = False
+    import re as _re
+    for state in _US_STATES:
+        # Match ", CA" at end of string or followed by non-alpha (space, semicolon, pipe)
+        # Require comma prefix + non-alpha suffix to avoid matching words like "india" -> "in"
+        if _re.search(rf", {state}(?:[^a-z]|$)", loc_lower):
+            has_us_state = True
+            break
+    has_us_keyword = any(k in loc_lower for k in _US_KEYWORDS)
+    has_us = has_us_city or has_us_state or has_us_keyword
+
+    # Check for remote indicators
+    is_remote = "remote" in loc_lower
+
+    # Classification logic
+    if has_international and not has_us:
+        return "international"
+
+    if has_us and is_remote:
+        return "us-remote"
+
+    if has_us:
+        return "us-onsite"
+
+    if is_remote:
+        # "Remote" with no country qualifier — could be global
+        return "remote-global"
+
+    return "unknown"
+
+
 COMPANY_DISPLAY_NAMES = {
     # Greenhouse boards
     "anthropic": "Anthropic",
@@ -311,6 +401,8 @@ def create_pipeline_entry(job: dict) -> tuple[str, dict]:
             "url": job.get("company_url", ""),
             "application_url": job["url"],
             "portal": job["portal"],
+            "location": job.get("location", ""),
+            "location_class": classify_location(job.get("location", "")),
         },
         "deadline": {
             "date": None,
@@ -347,9 +439,6 @@ def create_pipeline_entry(job: dict) -> tuple[str, dict]:
         "source": "source_jobs.py",
         "last_touched": today,
     }
-
-    if job.get("location"):
-        entry["notes"] = f"Location: {job['location']}"
 
     return entry_id, entry
 
@@ -394,6 +483,140 @@ def show_sources():
             print(f"  {c:<20s} → {display}")
 
 
+def backfill_locations(dry_run: bool = False) -> int:
+    """Add target.location and target.location_class to existing entries.
+
+    Parses 'Location: ...' from the notes field, populates structured
+    target fields, and cleans the location line out of notes.
+
+    Returns number of entries updated.
+    """
+    updated = 0
+    for pipeline_dir in ALL_PIPELINE_DIRS:
+        if not pipeline_dir.exists():
+            continue
+        for filepath in sorted(pipeline_dir.glob("*.yaml")):
+            if filepath.name.startswith("_"):
+                continue
+
+            with open(filepath) as f:
+                content = f.read()
+
+            data = yaml.safe_load(content)
+            if not isinstance(data, dict):
+                continue
+
+            target = data.get("target", {})
+            if not isinstance(target, dict):
+                continue
+
+            # Skip if already has location_class
+            if target.get("location_class"):
+                continue
+
+            # Extract location from notes field
+            notes = data.get("notes") or ""
+            location = ""
+
+            if isinstance(notes, str) and notes.startswith("Location: "):
+                # Extract location — may be followed by additional context
+                loc_text = notes[len("Location: "):]
+                # Location ends at first period, newline, or end of string
+                loc_end = len(loc_text)
+                for sep in [".", "\n"]:
+                    idx = loc_text.find(sep)
+                    if idx != -1 and idx < loc_end:
+                        loc_end = idx
+                location = loc_text[:loc_end].strip()
+                # Remaining text becomes new notes
+                remaining = loc_text[loc_end:].lstrip(". ").strip()
+                new_notes = remaining if remaining else ""
+            elif isinstance(notes, str) and "\nLocation: " in notes:
+                # Multi-line notes with location somewhere inside
+                lines = notes.split("\n")
+                remaining = []
+                for line in lines:
+                    if line.startswith("Location: "):
+                        location = line[len("Location: "):].strip()
+                    else:
+                        remaining.append(line)
+                new_notes = "\n".join(remaining).strip()
+            else:
+                # No location in notes — use target.location if present
+                location = target.get("location", "")
+                new_notes = notes
+
+            if not location:
+                continue
+
+            loc_class = classify_location(location)
+
+            if dry_run:
+                print(f"  [dry-run] {filepath.stem}: {location!r} -> {loc_class}")
+                updated += 1
+                continue
+
+            # Update via YAML round-trip to preserve formatting
+            # Add location and location_class to target section
+            import re as _re
+
+            # Insert location fields after portal line in target section
+            portal_pattern = _re.compile(
+                r"^(\s+portal:\s+\S+)\s*$", _re.MULTILINE
+            )
+            match = portal_pattern.search(content)
+            if match:
+                indent_match = _re.match(r"(\s+)", match.group(0))
+                indent = indent_match.group(1) if indent_match else "  "
+                insert_pos = match.end()
+                loc_lines = f"\n{indent}location: {_yaml_quote(location)}\n{indent}location_class: {loc_class}"
+                content = content[:insert_pos] + loc_lines + content[insert_pos:]
+
+            # Clean location out of notes
+            if new_notes != notes:
+                if not new_notes:
+                    # Remove entire notes field (may be multiline with indented continuation)
+                    content = _re.sub(
+                        r"^notes:[ \t]+[^\n]*\n(?:[ \t]+[^\n]*\n)*",
+                        "", content, count=1, flags=_re.MULTILINE,
+                    )
+                else:
+                    # Replace notes value (handles multiline YAML strings)
+                    content = _re.sub(
+                        r"^notes:[ \t]+[^\n]*\n(?:[ \t]+[^\n]*\n)*",
+                        f"notes: {_yaml_quote(new_notes)}\n",
+                        content, count=1, flags=_re.MULTILINE,
+                    )
+
+            # Verify still valid YAML
+            try:
+                yaml.safe_load(content)
+            except yaml.YAMLError as e:
+                print(f"  WARNING: Skipping {filepath.stem} — YAML invalid after edit: {e}",
+                      file=sys.stderr)
+                continue
+
+            with open(filepath, "w") as f:
+                f.write(content)
+
+            print(f"  {filepath.stem}: {location!r} -> {loc_class}")
+            updated += 1
+
+    return updated
+
+
+def _yaml_quote(text: str) -> str:
+    """Quote a string for inline YAML if it contains special characters."""
+    if not text:
+        return "''"
+    # If it contains single quotes, use double quotes; otherwise single quotes
+    if any(c in text for c in ":#{}[]|>&*!%@`'\"\n"):
+        if "'" not in text:
+            return f"'{text}'"
+        return f'"{text}"'
+    return text
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Source job postings from public ATS APIs"
@@ -410,6 +633,8 @@ def main():
                         help="Show configured company sources")
     parser.add_argument("--stats", action="store_true",
                         help="Show last fetch statistics")
+    parser.add_argument("--backfill-locations", action="store_true",
+                        help="Add target.location and target.location_class to existing entries")
     args = parser.parse_args()
 
     if args.list_sources:
@@ -418,6 +643,16 @@ def main():
 
     if args.stats:
         show_stats()
+        return
+
+    if args.backfill_locations:
+        print("Backfilling location data on existing pipeline entries...")
+        count = backfill_locations(dry_run=args.dry_run)
+        print(f"\n{'=' * 60}")
+        print(f"Updated {count} entries" + (" (dry run)" if args.dry_run else ""))
+        if not args.dry_run and count:
+            print(f"\nNext steps:")
+            print(f"  python scripts/score.py --all          # Re-score with location penalty")
         return
 
     if not args.fetch and not args.dry_run and not args.yes:

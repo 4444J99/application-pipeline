@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/scaleai
   application_url: https://job-boards.greenhouse.io/scaleai/jobs/4651559005
   portal: greenhouse
+  location: St. Louis, MO; Washington, DC
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: St. Louis, MO; Washington, DC'

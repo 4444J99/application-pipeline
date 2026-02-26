@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/mongodb
   application_url: https://www.mongodb.com/careers/job/?gh_jid=7264738
   portal: greenhouse
+  location: Alberta; British Columbia; Manitoba; Nova Scotia; Ontario; Quebec
+  location_class: unknown
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Alberta; British Columbia; Manitoba; Nova Scotia; Ontario; Quebec'

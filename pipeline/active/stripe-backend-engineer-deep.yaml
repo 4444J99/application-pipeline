@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/stripe
   application_url: https://stripe.com/jobs/search?gh_jid=7292520
   portal: greenhouse
+  location: Toronto Canada, San Francisco, Remote in US, Remote in Canada
+  location_class: us-remote
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Toronto Canada, San Francisco, Remote in US, Remote in Canada'

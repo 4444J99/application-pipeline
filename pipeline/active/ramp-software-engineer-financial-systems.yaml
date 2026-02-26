@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/ramp
   application_url: https://jobs.ashbyhq.com/ramp/1b191a1d-bb39-4b4a-b6bf-224e66ead1eb
   portal: ashby
+  location: New York, NY (HQ)
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: New York, NY (HQ)'

@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/mozilla
   application_url: https://job-boards.greenhouse.io/mozilla/jobs/7411292
   portal: greenhouse
+  location: Remote Netherlands
+  location_class: international
 deadline:
   date: null
   type: rolling
@@ -16,14 +18,14 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 6.5
+  score: 6.4
   identity_position: independent-engineer
   dimensions:
     mission_alignment: 7
     evidence_match: 7
     track_record_fit: 5
     financial_alignment: 5
-    effort_to_value: 7
+    effort_to_value: 4
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Remote Netherlands'

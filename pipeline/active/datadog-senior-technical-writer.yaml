@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/datadog
   application_url: https://careers.datadoghq.com/detail/7642830/?gh_jid=7642830
   portal: greenhouse
+  location: California, USA, Remote; Colorado, USA, Remote; Illinois, USA, Remote; New York, USA, Remote; Washington, USA, Remote
+  location_class: us-remote
 deadline:
   date: null
   type: rolling
@@ -50,5 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: California, USA, Remote; Colorado, USA, Remote; Illinois, USA, Remote;
-  New York, USA, Remote; Washington, USA, Remote'

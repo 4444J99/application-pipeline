@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/anthropic
   application_url: https://job-boards.greenhouse.io/anthropic/jobs/4781798008
   portal: greenhouse
+  location: 'San Francisco, CA | New York City, NY'
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -60,4 +62,3 @@ tags:
 - job-tier-1
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: San Francisco, CA | New York City, NY'

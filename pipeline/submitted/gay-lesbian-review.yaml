@@ -21,8 +21,9 @@ fit:
   score: 8.9
   original_score: 8.7
   identity_position: community-practitioner
-  framing: Queer writer contributing critical essays on culture, identity, and community
-    history
+  framing: Queer writer and community practitioner leveraging a 103-repository digital
+    infrastructure to map the formal aesthetic innovations produced by historical
+    queer concealment strategies.
   lead_organs:
   - V
   - VI
@@ -46,7 +47,8 @@ submission:
     evidence: evidence/work-samples
     framing: framings/community-practitioner
     pitch_email: pitches/gay-lesbian-review
-  variant_ids: {}
+  variant_ids:
+    cover_letter: cover-letters/gay-lesbian-review-alchemized
   materials_attached: []
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -69,4 +71,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $250/feature.
-last_touched: "2026-02-26"
+last_touched: '2026-02-26'

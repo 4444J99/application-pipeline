@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/perplexity
   application_url: https://jobs.ashbyhq.com/perplexity/88ba56e4-4755-421a-9927-3f0b80f1f256
   portal: ashby
+  location: San Francisco
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: San Francisco'

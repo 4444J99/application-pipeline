@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/linear
   application_url: https://jobs.ashbyhq.com/linear/a8041e0e-350e-47d0-9190-454089216fb8
   portal: ashby
+  location: North America
+  location_class: unknown
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: North America'

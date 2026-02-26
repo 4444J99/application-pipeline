@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/cursor
   application_url: https://jobs.ashbyhq.com/cursor/36e69353-0452-4bf6-9f35-b1e7307959a7
   portal: ashby
+  location: SF / NY
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: SF / NY'

@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/cloudflare
   application_url: https://boards.greenhouse.io/cloudflare/jobs/7377424?gh_jid=7377424
   portal: greenhouse
+  location: Hybrid
+  location_class: unknown
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Hybrid'

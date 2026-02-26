@@ -1,12 +1,12 @@
 id: zkm-rauschenberg
 name: ZKM Rauschenberg Residencies
 track: residency
-status: drafting
+status: deferred
 outcome: null
 target:
   organization: ZKM Center for Art and Media
   url: https://zkm.de
-  application_url: https://zkm.de/en/residencies
+  application_url: https://zkm.de/en/open-call-rauschenberg-residencies-202627
   portal: custom
 deadline:
   date: '2026-04-12'
@@ -21,8 +21,9 @@ fit:
   score: 8.6
   original_score: 8.5
   identity_position: systems-artist
-  framing: Systems artist exploring computational art in the tradition of media art
-    institutions
+  framing: Systems artist engineering a 103-repository computational infrastructure
+    to redefine the relationship between institutional governance and generative media
+    art.
   lead_organs:
   - I
   - II
@@ -44,9 +45,11 @@ submission:
     methodology: methodology/governance-as-art
     evidence: evidence/differentiators
     framing: framings/systems-artist
-  variant_ids: 
-    cover_letter: cover-letters/grant-art-template
-  materials_attached: 
+  variant_ids:
+    cover_letter: cover-letters/zkm-rauschenberg-alchemized
+    artist_statement: statements/zkm-rauschenberg-artist-statement
+    project_description: project-descriptions/zkm-rauschenberg-proposal
+  materials_attached:
   - resumes/base/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -68,7 +71,11 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
+deferral:
+  reason: strategic_hold
+  resume_date: '2026-03-29'
+  note: Due date is far out (April 12).
 tags: []
 source: 04-application-tracker.md
 notes: Studio access for 3 months. In-kind support.
-last_touched: "2026-02-24"
+last_touched: '2026-02-26'

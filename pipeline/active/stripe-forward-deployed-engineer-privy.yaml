@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/stripe
   application_url: https://stripe.com/jobs/search?gh_jid=7230452
   portal: greenhouse
+  location: New York Privy HQ
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: New York Privy HQ'

@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/stripe
   application_url: https://stripe.com/jobs/search?gh_jid=7404437
   portal: greenhouse
+  location: Remote - California, Remote - Colorado, Remote - Oregon, Remote - Washington
+  location_class: remote-global
 deadline:
   date: null
   type: rolling
@@ -50,5 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Remote - California, Remote - Colorado, Remote - Oregon, Remote
-  - Washington '

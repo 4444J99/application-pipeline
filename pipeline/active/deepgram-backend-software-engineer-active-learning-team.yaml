@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/deepgram
   application_url: https://jobs.ashbyhq.com/deepgram/0796cc37-96a7-4158-8a00-155962da275a
   portal: ashby
+  location: 'USA | Remote'
+  location_class: us-remote
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: USA | Remote'

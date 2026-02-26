@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/elevenlabs
   application_url: https://jobs.ashbyhq.com/elevenlabs/8c068ebf-c79f-4f12-97ef-b4c9a4f7ae5f
   portal: ashby
+  location: United States
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: United States'

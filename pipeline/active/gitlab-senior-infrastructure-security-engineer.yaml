@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/gitlab
   application_url: https://job-boards.greenhouse.io/gitlab/jobs/8326388002
   portal: greenhouse
+  location: Remote, Australia; Remote, EMEA; Remote, Japan
+  location_class: international
 deadline:
   date: null
   type: rolling
@@ -16,14 +18,14 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 3.7
+  score: 3.5
   identity_position: independent-engineer
   dimensions:
     mission_alignment: 3
     evidence_match: 3
     track_record_fit: 2
     financial_alignment: 5
-    effort_to_value: 7
+    effort_to_value: 4
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Remote, Australia; Remote, EMEA; Remote, Japan'

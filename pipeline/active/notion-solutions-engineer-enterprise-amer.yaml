@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/notion
   application_url: https://jobs.ashbyhq.com/notion/b0c0afb3-f075-47c7-9a8e-428032b3bb20
   portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: San Francisco, California'

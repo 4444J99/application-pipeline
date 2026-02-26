@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/character
   application_url: https://jobs.ashbyhq.com/character/13006848-6a69-4467-9274-5d54e80b965d
   portal: ashby
+  location: Redwood City, CA
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Redwood City, CA'

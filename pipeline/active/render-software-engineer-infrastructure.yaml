@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/render
   application_url: https://jobs.ashbyhq.com/render/d52dc923-1641-4386-b8ba-5c15e1d7028d
   portal: ashby
+  location: 'Remote: United States'
+  location_class: us-remote
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Remote: United States'

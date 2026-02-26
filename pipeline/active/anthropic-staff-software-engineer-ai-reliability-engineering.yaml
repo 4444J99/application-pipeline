@@ -8,6 +8,8 @@ target:
   url: https://boards.greenhouse.io/anthropic
   application_url: https://job-boards.greenhouse.io/anthropic/jobs/5101169008
   portal: greenhouse
+  location: Dublin, IE
+  location_class: international
 deadline:
   date: null
   type: rolling
@@ -16,14 +18,14 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 6.7
+  score: 6.6
   identity_position: independent-engineer
   dimensions:
     mission_alignment: 7
     evidence_match: 7
     track_record_fit: 5
     financial_alignment: 5
-    effort_to_value: 7
+    effort_to_value: 4
     strategic_value: 8
     deadline_feasibility: 9
     portal_friction: 5
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Dublin, IE'

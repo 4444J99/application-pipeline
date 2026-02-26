@@ -8,6 +8,8 @@ target:
   url: https://jobs.ashbyhq.com/railway
   application_url: https://jobs.ashbyhq.com/railway/7d42f0e8-15a5-453d-8992-9e8638846077
   portal: ashby
+  location: Remote (United States)
+  location_class: us-remote
 deadline:
   date: null
   type: rolling
@@ -50,4 +52,3 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
-notes: 'Location: Remote (United States)'
