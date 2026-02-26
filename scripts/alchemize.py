@@ -473,7 +473,9 @@ def load_framing_block(position: str) -> str:
     return f"*Framing block not found for position: {position}*"
 
 
-def select_evidence_blocks(job_desc: str, entry: dict) -> list[tuple[str, str]]:
+def select_evidence_blocks(
+    job_desc: str, entry: dict, block_index: dict | None = None,
+) -> list[tuple[str, str]]:
     """Select relevant evidence blocks based on job description keywords.
 
     Uses the block index tag_index for tag-based matching, with hardcoded
@@ -491,7 +493,8 @@ def select_evidence_blocks(job_desc: str, entry: dict) -> list[tuple[str, str]]:
             selected[core] = path.read_text().strip()
 
     # Primary: index-based tag matching
-    block_index = load_block_index()
+    if block_index is None:
+        block_index = load_block_index()
     tag_index = block_index.get("tag_index", {})
     for tag, block_paths in tag_index.items():
         if tag in job_lower:
@@ -561,12 +564,12 @@ def phase_map(entry: dict, research: str, profile: dict | None) -> str:
     # Extract job description from research for keyword matching
     job_desc = research
 
-    evidence_blocks = select_evidence_blocks(job_desc, entry)
-    work_samples = select_work_samples(profile, job_desc)
-
-    # Load block index for stats lookup
+    # Load block index once for both evidence selection and stats lookup
     block_index = load_block_index()
     block_entries = block_index.get("blocks", {})
+
+    evidence_blocks = select_evidence_blocks(job_desc, entry, block_index)
+    work_samples = select_work_samples(profile, job_desc)
 
     sections = [f"# Identity Mapping: {name}\n"]
 
@@ -590,11 +593,15 @@ def phase_map(entry: dict, research: str, profile: dict | None) -> str:
         if stats:
             stats_parts = []
             if stats.get("languages"):
+                # Filter out documentation/config-only languages
+                noise_langs = {"markdown", "shell", "yaml", "jekyll"}
                 langs = stats["languages"]
                 if isinstance(langs, list):
-                    stats_parts.append(f"Languages: {', '.join(langs)}")
+                    useful = [l for l in langs if l not in noise_langs]
                 else:
-                    stats_parts.append(f"Languages: {langs}")
+                    useful = [langs] if langs not in noise_langs else []
+                if useful:
+                    stats_parts.append(f"Languages: {', '.join(useful)}")
             if stats.get("test_count"):
                 stats_parts.append(f"Tests: {stats['test_count']}")
             if stats.get("coverage"):

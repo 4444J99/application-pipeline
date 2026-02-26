@@ -78,6 +78,14 @@ tier: short                        # depth tier per the tier system below
 - `tracks` — applicable application tracks (job, grant, residency, fellowship, prize, writing, emergency)
 - `related_projects` — cross-references to other project blocks by short name (optional)
 - `tier` — depth tier: `60s`, `2min`, `5min`, `cathedral`, `one-line`, `short`, `full`, `single`
+- `stats` — structured quantitative stats for project blocks (optional, auto-generated):
+  - `languages` — list of programming languages (e.g. `[python, typescript]`)
+  - `test_count` — number of passing tests (integer)
+  - `coverage` — test coverage percentage (number)
+  - `ci` — whether CI is configured (boolean)
+  - `public` — whether the repo is public (boolean)
+  - `promotion_status` — promotion state machine status (e.g. `PUBLIC_PROCESS`)
+  - `relevance` — portfolio relevance level (e.g. `CRITICAL`, `HIGH`)
 
 **Index:** Run `python scripts/build_block_index.py` to regenerate `blocks/_index.yaml` from frontmatter. The index provides a `tag_index` (tag → block paths) used by `alchemize.py` for automatic block selection.
 

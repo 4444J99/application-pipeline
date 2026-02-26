@@ -210,7 +210,6 @@ def extract_repos(registry: dict) -> list[dict]:
                 "promotion_status": repo.get("promotion_status", ""),
                 "ci_workflow": repo.get("ci_workflow", ""),
                 "public": repo.get("public", False),
-                "platinum_status": repo.get("platinum_status", False),
             })
     return repos
 
@@ -276,6 +275,8 @@ def extract_readme_stats(readme_text: str) -> dict:
     """Extract quantitative stats from README badge lines.
 
     Parses shields.io-style badges for language, test count, and coverage.
+    Handles URL-encoded characters in badge text:
+      %20 = space, %2B = +, %2C = comma
     Returns dict with only keys that have data.
     """
     stats = {}
@@ -285,12 +286,20 @@ def extract_readme_stats(readme_text: str) -> dict:
     if lang_matches:
         stats["languages"] = [m.lower() for m in lang_matches]
 
-    # Test count from tests-N badge (handles URL-encoded spaces like %20)
-    test_match = re.search(r"tests-(\d[\d,]*(?:%20\w+)?)-", readme_text)
+    # Test count from tests-N badge
+    # Handles: tests-85-  tests-1,254-  tests-85%2B%20passing-  tests-2%2C055%20passing-
+    test_match = re.search(
+        r"tests-(\d[\d,%2BC]*(?:%20\w+)?)-", readme_text, re.IGNORECASE
+    )
     if test_match:
         raw = test_match.group(1)
-        # Strip URL-encoded text and commas, keep just the number
-        num_str = re.sub(r"%20.*", "", raw).replace(",", "")
+        # Step 1: Strip URL-encoded space suffix (%20passing etc.)
+        num_str = re.sub(r"%20.*", "", raw, flags=re.IGNORECASE)
+        # Step 2: Decode URL-encoded comma (%2C → ,) and plus (%2B → nothing)
+        num_str = re.sub(r"%2[Cc]", ",", num_str)
+        num_str = re.sub(r"%2[Bb]", "", num_str)
+        # Step 3: Strip literal commas
+        num_str = num_str.replace(",", "")
         try:
             stats["test_count"] = int(num_str)
         except ValueError:
@@ -357,6 +366,30 @@ def extract_stats(repo: dict, readme_text: str | None, seed: dict | None) -> dic
             stats["coverage"] = readme_stats["coverage"]
 
     return stats
+
+
+def render_stats_frontmatter(stats: dict) -> list[str]:
+    """Render stats dict as YAML frontmatter lines.
+
+    Returns list of lines starting with 'stats:' followed by indented fields.
+    Only includes keys that have data.
+    """
+    lines = ["stats:"]
+    if stats.get("languages"):
+        lines.append(f"  languages: [{', '.join(stats['languages'])}]")
+    if stats.get("test_count"):
+        lines.append(f"  test_count: {stats['test_count']}")
+    if stats.get("coverage"):
+        lines.append(f"  coverage: {stats['coverage']}")
+    if "ci" in stats:
+        lines.append(f"  ci: {str(stats['ci']).lower()}")
+    if "public" in stats:
+        lines.append(f"  public: {str(stats['public']).lower()}")
+    if stats.get("promotion_status"):
+        lines.append(f"  promotion_status: {stats['promotion_status']}")
+    if stats.get("relevance"):
+        lines.append(f"  relevance: {stats['relevance']}")
+    return lines
 
 
 def strip_markdown_inline(text: str) -> str:
@@ -737,21 +770,7 @@ def generate_block(repo: dict) -> str:
     fm_lines.append(f"tier: {fm['tier']}")
     fm_lines.append("review_status: auto-generated")
     if stats:
-        fm_lines.append("stats:")
-        if stats.get("languages"):
-            fm_lines.append(f"  languages: [{', '.join(stats['languages'])}]")
-        if stats.get("test_count"):
-            fm_lines.append(f"  test_count: {stats['test_count']}")
-        if stats.get("coverage"):
-            fm_lines.append(f"  coverage: {stats['coverage']}")
-        if "ci" in stats:
-            fm_lines.append(f"  ci: {str(stats['ci']).lower()}")
-        if "public" in stats:
-            fm_lines.append(f"  public: {str(stats['public']).lower()}")
-        if stats.get("promotion_status"):
-            fm_lines.append(f"  promotion_status: {stats['promotion_status']}")
-        if stats.get("relevance"):
-            fm_lines.append(f"  relevance: {stats['relevance']}")
+        fm_lines.extend(render_stats_frontmatter(stats))
     fm_lines.append("---")
 
     # Build content
@@ -834,7 +853,9 @@ def coverage_report(repos: list[dict]):
 def update_block_stats(block_path: Path, stats: dict) -> bool:
     """Update only the stats section in an existing block's frontmatter.
 
-    Preserves all other frontmatter and content. Returns True if changed.
+    Preserves all other frontmatter fields and content using text-level
+    replacement. Unknown/custom frontmatter keys are not dropped.
+    Returns True if changed.
     """
     text = block_path.read_text()
     if not text.startswith("---"):
@@ -846,6 +867,7 @@ def update_block_stats(block_path: Path, stats: dict) -> bool:
     fm_text = text[3:end]
     body = text[end + 3:]
 
+    # Parse to compare old vs new stats
     try:
         fm = yaml.safe_load(fm_text)
     except yaml.YAMLError:
@@ -855,52 +877,41 @@ def update_block_stats(block_path: Path, stats: dict) -> bool:
         return False
 
     old_stats = fm.get("stats")
-    if stats:
-        fm["stats"] = stats
-    elif "stats" in fm:
-        del fm["stats"]
+    new_stats = stats if stats else None
 
-    if fm.get("stats") == old_stats:
+    if new_stats == old_stats:
         return False
 
-    # Re-render frontmatter manually to preserve style
-    fm_lines = ["---"]
-    safe_title = fm.get("title", "").replace('"', '\\"')
-    fm_lines.append(f'title: "{safe_title}"')
-    if fm.get("category"):
-        fm_lines.append(f"category: {fm['category']}")
-    if fm.get("tags"):
-        fm_lines.append(f"tags: [{', '.join(fm['tags'])}]")
-    if fm.get("identity_positions"):
-        fm_lines.append(f"identity_positions: [{', '.join(fm['identity_positions'])}]")
-    if fm.get("tracks"):
-        fm_lines.append(f"tracks: [{', '.join(fm['tracks'])}]")
-    if fm.get("related_projects"):
-        fm_lines.append(f"related_projects: [{', '.join(fm['related_projects'])}]")
-    if fm.get("tier"):
-        fm_lines.append(f"tier: {fm['tier']}")
-    if fm.get("review_status"):
-        fm_lines.append(f"review_status: {fm['review_status']}")
-    if fm.get("stats"):
-        s = fm["stats"]
-        fm_lines.append("stats:")
-        if s.get("languages"):
-            fm_lines.append(f"  languages: [{', '.join(s['languages'])}]")
-        if s.get("test_count"):
-            fm_lines.append(f"  test_count: {s['test_count']}")
-        if s.get("coverage"):
-            fm_lines.append(f"  coverage: {s['coverage']}")
-        if "ci" in s:
-            fm_lines.append(f"  ci: {str(s['ci']).lower()}")
-        if "public" in s:
-            fm_lines.append(f"  public: {str(s['public']).lower()}")
-        if s.get("promotion_status"):
-            fm_lines.append(f"  promotion_status: {s['promotion_status']}")
-        if s.get("relevance"):
-            fm_lines.append(f"  relevance: {s['relevance']}")
-    fm_lines.append("---")
+    # Text-level surgery: remove existing stats block, insert new one
+    fm_lines = fm_text.split("\n")
+    # Filter out old stats lines (stats: and its indented children)
+    cleaned = []
+    in_stats = False
+    for line in fm_lines:
+        stripped = line.strip()
+        if stripped == "stats:" or stripped.startswith("stats:"):
+            in_stats = True
+            continue
+        if in_stats:
+            # Indented lines belong to stats block
+            if line.startswith("  ") and stripped and not stripped.endswith(":"):
+                continue
+            if line.startswith("  ") and stripped:
+                continue
+            in_stats = False
+        cleaned.append(line)
 
-    block_path.write_text("\n".join(fm_lines) + body)
+    # Remove trailing empty lines before re-adding stats
+    while cleaned and cleaned[-1].strip() == "":
+        cleaned.pop()
+
+    # Append new stats block
+    if new_stats:
+        cleaned.append("")
+        cleaned.extend(render_stats_frontmatter(new_stats))
+
+    new_fm_text = "\n".join(cleaned)
+    block_path.write_text("---" + new_fm_text + "\n---" + body)
     return True
 
 
