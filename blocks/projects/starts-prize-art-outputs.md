@@ -1,3 +1,13 @@
+---
+title: "ORGANVM Tier 1 Art Outputs (S+T+ARTS Prize)"
+category: projects
+tags: [performance, generative-art, supercollider, queer, audience-participation, creative-coding, installation]
+identity_positions: [systems-artist, creative-technologist]
+tracks: [prize]
+related_projects: [omni-dromenon-engine, krypto-velamen, generative-music]
+tier: full
+---
+
 # Art Outputs: ORGANVM Tier 1 Projects
 
 The ORGANVM system produces four distinct art projects, each representing a different mode of art-technology convergence.

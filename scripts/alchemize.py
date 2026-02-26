@@ -38,6 +38,7 @@ from pipeline_lib import (
     load_entries,
     load_entry_by_id,
     load_profile,
+    load_block_index,
     strip_markdown,
     count_words,
     PIPELINE_DIR_ACTIVE,
@@ -475,6 +476,9 @@ def load_framing_block(position: str) -> str:
 def select_evidence_blocks(job_desc: str, entry: dict) -> list[tuple[str, str]]:
     """Select relevant evidence blocks based on job description keywords.
 
+    Uses the block index tag_index for tag-based matching, with hardcoded
+    METHODOLOGY_KEYWORDS and PROJECT_KEYWORDS as fallbacks.
+
     Returns list of (block_path, content) tuples.
     """
     selected = {}
@@ -486,14 +490,26 @@ def select_evidence_blocks(job_desc: str, entry: dict) -> list[tuple[str, str]]:
         if path.exists():
             selected[core] = path.read_text().strip()
 
-    # Match methodology blocks
+    # Primary: index-based tag matching
+    block_index = load_block_index()
+    tag_index = block_index.get("tag_index", {})
+    for tag, block_paths in tag_index.items():
+        if tag in job_lower:
+            for bp in block_paths:
+                bp_md = bp + ".md" if not bp.endswith(".md") else bp
+                if bp_md not in selected:
+                    path = BLOCKS_DIR / bp_md
+                    if path.exists():
+                        selected[bp_md] = path.read_text().strip()
+
+    # Fallback: hardcoded methodology keywords
     for keyword, block_path in METHODOLOGY_KEYWORDS.items():
         if keyword in job_lower and block_path not in selected:
             path = BLOCKS_DIR / block_path
             if path.exists():
                 selected[block_path] = path.read_text().strip()
 
-    # Match project blocks
+    # Fallback: hardcoded project keywords
     for keyword, block_path in PROJECT_KEYWORDS.items():
         if keyword in job_lower and block_path not in selected:
             path = BLOCKS_DIR / block_path

@@ -1,3 +1,13 @@
+---
+title: "Recursive Engine"
+category: projects
+tags: [recursive, symbolic, dsl, testing, python, formal-systems, computation]
+identity_positions: [independent-engineer, creative-technologist, systems-artist]
+tracks: [job, grant, fellowship]
+related_projects: [organvm-system, agentic-titan]
+tier: full
+---
+
 # Project: Recursive Engine
 
 ## One-Line

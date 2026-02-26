@@ -1,3 +1,12 @@
+---
+title: "The ORGANVM Eight-Organ System"
+category: projects
+tags: [system, infrastructure, governance, ci-cd, testing, documentation, scale, architecture, repository]
+identity_positions: [systems-artist, creative-technologist, independent-engineer]
+tracks: [job, grant, residency, fellowship, prize]
+tier: full
+---
+
 # Project: The ORGANVM Eight-Organ System
 
 ## One-Line

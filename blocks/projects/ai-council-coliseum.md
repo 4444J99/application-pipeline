@@ -1,3 +1,13 @@
+---
+title: "AI Council Coliseum"
+category: projects
+tags: [ai, debate, governance, blockchain, solana, three-js, fastapi, generative-art, spectacle]
+identity_positions: [creative-technologist, systems-artist]
+tracks: [grant, residency, fellowship]
+related_projects: [organvm-system]
+tier: full
+---
+
 # Project: AI Council Coliseum
 
 ## One-Line

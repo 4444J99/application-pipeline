@@ -1,3 +1,12 @@
+---
+title: "2-Minute Statement"
+category: identity
+tags: [identity, pitch, organvm, ai, governance, methodology, process-as-product]
+identity_positions: [systems-artist, creative-technologist, independent-engineer, educator, community-practitioner]
+tracks: [job, grant, residency, fellowship, prize, writing]
+tier: 2min
+---
+
 # Identity: 2-Minute Statement
 
 I build creative systems — environments where theory, art, and community work grow like organisms in a medium. My eight-organ system coordinates 103 repositories across 8 organizations through automated governance, dependency validation, and a formal promotion state machine. The 42 published essays documenting this process aren't reflections on the work; they ARE the work — the creative process rendered into prose in real time.

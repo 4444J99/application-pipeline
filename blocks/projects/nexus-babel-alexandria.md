@@ -1,3 +1,13 @@
+---
+title: "Nexus Babel Alexandria"
+category: projects
+tags: [nlp, linguistics, literary-analysis, multilingual, api, fastapi, knowledge-graph, canon]
+identity_positions: [creative-technologist, systems-artist]
+tracks: [grant, residency, fellowship]
+related_projects: [recursive-engine]
+tier: full
+---
+
 # Project: Nexus Babel Alexandria
 
 ## One-Line

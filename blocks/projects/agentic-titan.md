@@ -1,3 +1,13 @@
+---
+title: "Agentic Titan"
+category: projects
+tags: [ai, agent, orchestration, multi-agent, testing, python, infrastructure]
+identity_positions: [independent-engineer, creative-technologist]
+tracks: [job, grant, fellowship]
+related_projects: [organvm-system, recursive-engine]
+tier: full
+---
+
 # Project: Agentic Titan
 
 ## One-Line

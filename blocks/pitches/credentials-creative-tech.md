@@ -1,3 +1,12 @@
+---
+title: "Credentials: Creative Technologist"
+category: pitches
+tags: [credentials, mfa, certifications, teaching, engineering, portfolio]
+identity_positions: [creative-technologist, independent-engineer]
+tracks: [job, grant, fellowship, consulting]
+tier: single
+---
+
 # Credentials: Creative Technologist
 
 - MFA Creative Writing, Florida Atlantic University

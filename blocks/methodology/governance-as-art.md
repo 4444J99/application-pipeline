@@ -1,3 +1,13 @@
+---
+title: "Governance as Creative Medium"
+category: methodology
+tags: [governance, constitutional, policy, compliance, systems-art, transparency]
+identity_positions: [systems-artist, creative-technologist]
+tracks: [grant, residency, fellowship, prize]
+related_projects: [organvm-system]
+tier: short
+---
+
 # Methodology: Governance as Creative Medium
 
 ## One-Line

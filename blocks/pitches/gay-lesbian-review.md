@@ -1,3 +1,13 @@
+---
+title: "Gay & Lesbian Review Pitch"
+category: pitches
+tags: [queer, lgbtq, literary-criticism, concealment, writing, essay]
+identity_positions: [community-practitioner, systems-artist]
+tracks: [writing]
+related_projects: [krypto-velamen]
+tier: single
+---
+
 # Pitch: Gay & Lesbian Review
 
 Dear Editors,

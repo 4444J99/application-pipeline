@@ -1,3 +1,12 @@
+---
+title: "KRYPTO-VELAMEN"
+category: projects
+tags: [queer, lgbtq, archive, privacy, identity, knowledge-graph, microservices, community, literary-criticism]
+identity_positions: [community-practitioner, systems-artist, creative-technologist]
+tracks: [grant, residency, fellowship, prize, writing]
+tier: full
+---
+
 # Project: KRYPTO-VELAMEN — The Instrument v1.0
 
 ## One-Line

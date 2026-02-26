@@ -443,6 +443,43 @@ def load_block(block_path: str) -> str | None:
     return None
 
 
+def load_block_index() -> dict:
+    """Load the block index from blocks/_index.yaml.
+
+    Returns the full index dict with 'blocks' and 'tag_index' keys.
+    Returns an empty dict if the index file doesn't exist.
+    """
+    index_path = BLOCKS_DIR / "_index.yaml"
+    if not index_path.exists():
+        return {}
+    return yaml.safe_load(index_path.read_text()) or {}
+
+
+def load_block_frontmatter(block_path: str) -> dict | None:
+    """Parse YAML frontmatter from a single block file.
+
+    Args:
+        block_path: Path relative to BLOCKS_DIR (e.g. 'methodology/ai-conductor')
+
+    Returns the frontmatter dict, or None if not found.
+    """
+    full_path = BLOCKS_DIR / block_path
+    if not full_path.suffix:
+        full_path = full_path.with_suffix(".md")
+    if not full_path.exists():
+        return None
+    text = full_path.read_text()
+    if not text.startswith("---"):
+        return None
+    end = text.find("---", 3)
+    if end == -1:
+        return None
+    try:
+        return yaml.safe_load(text[3:end])
+    except yaml.YAMLError:
+        return None
+
+
 def load_variant(variant_path: str) -> str | None:
     """Load a variant file by its reference path relative to VARIANTS_DIR."""
     full_path = VARIANTS_DIR / variant_path

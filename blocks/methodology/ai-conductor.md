@@ -1,3 +1,13 @@
+---
+title: "AI-Conductor Model"
+category: methodology
+tags: [ai, llm, agent, orchestration, machine-learning, automation, methodology]
+identity_positions: [independent-engineer, creative-technologist]
+tracks: [job, grant, fellowship]
+related_projects: [agentic-titan, recursive-engine]
+tier: short
+---
+
 # Methodology: AI-Conductor Model
 
 ## One-Line

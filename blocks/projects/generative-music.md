@@ -1,3 +1,13 @@
+---
+title: "Generative Art & Music Systems"
+category: projects
+tags: [music, audio, generative-art, creative-coding, p5js, algorithmic-composition]
+identity_positions: [systems-artist, creative-technologist]
+tracks: [grant, residency, fellowship, prize]
+related_projects: [omni-dromenon-engine, organvm-system]
+tier: full
+---
+
 # Project: Generative Art & Music Systems
 
 ## One-Line

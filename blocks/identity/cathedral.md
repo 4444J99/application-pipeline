@@ -1,3 +1,12 @@
+---
+title: "Cathedral Statement"
+category: identity
+tags: [identity, pitch, organvm, ai, governance, methodology, solo-production, process-as-product, scale, systems-art]
+identity_positions: [systems-artist, creative-technologist, independent-engineer, educator, community-practitioner]
+tracks: [job, grant, residency, fellowship, prize, writing]
+tier: cathedral
+---
+
 # Identity: Cathedral Statement
 
 *The full immersive statement — for applications that reward depth and for contexts where the reviewer has already committed attention.*

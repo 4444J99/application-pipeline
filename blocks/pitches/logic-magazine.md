@@ -1,3 +1,13 @@
+---
+title: "Logic Magazine Pitch"
+category: pitches
+tags: [ai, labor, political-economy, creative-practice, writing, essay]
+identity_positions: [creative-technologist, systems-artist]
+tracks: [writing]
+related_projects: [organvm-system]
+tier: single
+---
+
 # Pitch: Logic Magazine
 
 Dear Logic editors,

@@ -48,6 +48,8 @@
 #   identity_position: Which framing to use
 #     enum: systems-artist | creative-technologist | educator | community-practitioner | independent-engineer
 #   framing: One-line description of how to position for this target
+#   extracted_keywords: List of top keywords extracted from the posting text
+#     Populated by distill_keywords.py; used for block matching and signal analysis
 #   lead_organs: Which ORGANVM organs to emphasize (list of roman numerals)
 #   dimensions: Per-dimension scores (1-10 each, see strategy/scoring-rubric.md)
 #     mission_alignment: How well work fits their mission (25% weight)

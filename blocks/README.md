@@ -54,6 +54,33 @@ Framing blocks are audience-specific opening + claims + evidence templates. Each
 - `educator-researcher.md` — For education grants, fellowships
 - `ai-orchestrator.md` — For AI-specific grants, tech roles
 
+## Frontmatter Schema
+
+Every block file includes YAML frontmatter for machine-readable metadata:
+
+```yaml
+---
+title: "Human-Readable Name"
+category: methodology          # matches parent directory
+tags: [ai, llm, orchestration] # lowercase keyword list (semantic vocabulary)
+identity_positions: [independent-engineer, creative-technologist]
+tracks: [job, grant, fellowship]
+related_projects: [agentic-titan]  # cross-references (optional)
+tier: short                        # depth tier per the tier system below
+---
+```
+
+**Fields:**
+- `title` — human-readable block name
+- `category` — parent directory: evidence, framings, identity, methodology, pitches, projects
+- `tags` — lowercase keywords used for index-based matching
+- `identity_positions` — which identity positions this block supports
+- `tracks` — applicable application tracks (job, grant, residency, fellowship, prize, writing, emergency)
+- `related_projects` — cross-references to other project blocks by short name (optional)
+- `tier` — depth tier: `60s`, `2min`, `5min`, `cathedral`, `one-line`, `short`, `full`, `single`
+
+**Index:** Run `python scripts/build_block_index.py` to regenerate `blocks/_index.yaml` from frontmatter. The index provides a `tag_index` (tag → block paths) used by `alchemize.py` for automatic block selection.
+
 ## Referencing Blocks in Pipeline YAML
 
 Use relative paths from `blocks/` in `submission.blocks_used`:

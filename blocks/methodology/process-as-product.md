@@ -1,3 +1,12 @@
+---
+title: "Process as Product"
+category: methodology
+tags: [process, methodology, documentation, transparency, essays, writing]
+identity_positions: [systems-artist, creative-technologist, educator]
+tracks: [grant, residency, fellowship, prize, writing]
+tier: short
+---
+
 # Methodology: Process as Product
 
 ## One-Line

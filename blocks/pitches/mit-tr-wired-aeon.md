@@ -1,3 +1,13 @@
+---
+title: "MIT Technology Review / Wired / Aeon Pitch"
+category: pitches
+tags: [ai, creative-practice, technology, scale, writing, essay, methodology]
+identity_positions: [creative-technologist, independent-engineer]
+tracks: [writing]
+related_projects: [organvm-system]
+tier: single
+---
+
 # Pitch: MIT Technology Review / Wired / Aeon
 
 Dear editors,

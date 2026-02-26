@@ -1,3 +1,13 @@
+---
+title: "Omni-Dromenon Engine"
+category: projects
+tags: [performance, audience-participation, generative-art, creative-coding, websocket, typescript, supercollider, osc]
+identity_positions: [systems-artist, creative-technologist]
+tracks: [grant, residency, fellowship, prize]
+related_projects: [generative-music, organvm-system]
+tier: full
+---
+
 # Project: Omni-Dromenon Engine
 
 ## One-Line

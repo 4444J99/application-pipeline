@@ -1,3 +1,13 @@
+---
+title: "Noema Magazine Pitch"
+category: pitches
+tags: [governance, institutional-design, systems-art, writing, essay, constitutional]
+identity_positions: [systems-artist, creative-technologist]
+tracks: [writing]
+related_projects: [organvm-system]
+tier: single
+---
+
 # Pitch: Noema Magazine
 
 Dear Noema editors,

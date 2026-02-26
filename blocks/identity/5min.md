@@ -1,3 +1,12 @@
+---
+title: "5-Minute Statement"
+category: identity
+tags: [identity, pitch, organvm, ai, governance, methodology, solo-production, testing, scale]
+identity_positions: [systems-artist, creative-technologist, independent-engineer, educator, community-practitioner]
+tracks: [job, grant, residency, fellowship, prize, writing]
+tier: 5min
+---
+
 # Identity: 5-Minute Statement
 
 103 repositories across 8 GitHub organizations. 42 published essays. 810,000+ words of public documentation. 2,349+ automated tests. All built by one person.

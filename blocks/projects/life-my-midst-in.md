@@ -1,3 +1,13 @@
+---
+title: "life-my--midst--in"
+category: projects
+tags: [identity, interview, interactive, platform, testing, database]
+identity_positions: [creative-technologist, independent-engineer]
+tracks: [job, grant, fellowship]
+related_projects: [organvm-system]
+tier: full
+---
+
 # Project: life-my--midst--in
 
 ## One-Line
