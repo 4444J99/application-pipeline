@@ -27,11 +27,11 @@ from pipeline_lib import (
 )
 
 from enrich import (
-    enrich_materials, enrich_variant, enrich_portal_fields,
+    enrich_materials, enrich_blocks, enrich_variant, enrich_portal_fields,
     find_matching_variant, detect_gaps,
     GRANT_TEMPLATE_PATH, GRANT_TEMPLATE_TRACKS,
 )
-from score import QUALIFICATION_THRESHOLD
+from score import QUALIFICATION_THRESHOLD, get_qualification_threshold
 
 
 # --- Urgency classification ---
@@ -189,7 +189,8 @@ def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
                 else:
                     dl_str = dl_type or "rolling"
 
-                low_tag = " [LOW]" if score and score < QUALIFICATION_THRESHOLD else ""
+                entry_threshold = get_qualification_threshold(track)
+                low_tag = " [LOW]" if score and score < entry_threshold else ""
                 feasible_tag = "" if is_effort_feasible(e) else " [INFEASIBLE]"
                 score_str = f"[{score:.1f}]" if score else ""
                 lines.append(
@@ -238,7 +239,8 @@ def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
             dl_str = f"{days_until(dl_date)}d" if dl_date else "rolling"
             effort = get_effort(e)
             amount = format_amount(e.get("amount"))
-            low_tag = " [LOW]" if score and score < QUALIFICATION_THRESHOLD else ""
+            entry_threshold = get_qualification_threshold(e.get("track", ""))
+            low_tag = " [LOW]" if score and score < entry_threshold else ""
             feasible_tag = "" if is_effort_feasible(e) else " [INFEASIBLE]"
             lines.append(
                 f"  {i:>2}. [{score:.1f}] {name:<36} {dl_str:<6} "
@@ -249,7 +251,7 @@ def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
     # Summary
     lines.append("=" * 70)
 
-    total_gaps = {"materials": 0, "variants": 0, "portal_fields": 0}
+    total_gaps = {"materials": 0, "blocks": 0, "variants": 0, "portal_fields": 0}
     for e in entries:
         for gap in detect_gaps(e):
             if gap in total_gaps:
@@ -263,6 +265,7 @@ def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
     )
     lines.append(
         f"         {total_gaps['materials']} need materials | "
+        f"{total_gaps['blocks']} need blocks | "
         f"{total_gaps['portal_fields']} need portal_fields | "
         f"{total_gaps['variants']} need variants"
     )
@@ -348,6 +351,10 @@ def run_execute(
         enriched = False
         if enrich_materials(filepath, e):
             print(f"    + materials wired")
+            enriched = True
+
+        if enrich_blocks(filepath, e):
+            print(f"    + blocks wired")
             enriched = True
 
         variant = find_matching_variant(eid)

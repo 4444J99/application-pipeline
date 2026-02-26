@@ -52,6 +52,40 @@ COVER_LETTER_MAP = {
 GRANT_TEMPLATE_TRACKS = {"grant", "residency", "prize"}
 GRANT_TEMPLATE_PATH = "cover-letters/grant-art-template"
 
+# Default blocks_used mappings for job entries, keyed by identity_position.
+# Analogous to RESUME_BY_IDENTITY for materials.
+JOB_BLOCKS_BY_IDENTITY = {
+    "independent-engineer": {
+        "framing": "framings/independent-engineer",
+        "evidence": "evidence/differentiators",
+        "work_samples": "evidence/work-samples",
+        "credentials": "pitches/credentials-creative-tech",
+        "methodology": "methodology/ai-conductor",
+    },
+    "creative-technologist": {
+        "framing": "framings/creative-technologist",
+        "evidence": "evidence/differentiators",
+        "work_samples": "evidence/work-samples",
+        "credentials": "pitches/credentials-creative-tech",
+        "methodology": "methodology/process-as-product",
+    },
+    "systems-artist": {
+        "framing": "framings/systems-artist",
+        "evidence": "evidence/differentiators",
+        "work_samples": "evidence/work-samples",
+    },
+    "community-practitioner": {
+        "framing": "framings/community-practitioner",
+        "evidence": "evidence/differentiators",
+        "work_samples": "evidence/work-samples",
+    },
+    "educator": {
+        "framing": "framings/educator-researcher",
+        "evidence": "evidence/differentiators",
+        "work_samples": "evidence/work-samples",
+    },
+}
+
 
 # --- Enrichment operations ---
 
@@ -202,6 +236,69 @@ def enrich_portal_fields(filepath, entry, dry_run=False) -> bool:
     return modified
 
 
+def enrich_blocks(filepath, entry, dry_run=False) -> bool:
+    """Wire identity-matched blocks into blocks_used for job entries.
+
+    Looks up fit.identity_position to select default blocks from
+    JOB_BLOCKS_BY_IDENTITY. Skips if blocks_used already has entries.
+    Returns True if the entry was (or would be) modified.
+    """
+    track = entry.get("track", "")
+    if track != "job":
+        return False
+
+    submission = entry.get("submission", {})
+    if not isinstance(submission, dict):
+        return False
+
+    blocks = submission.get("blocks_used", {})
+    if isinstance(blocks, dict) and blocks:
+        return False  # already has blocks wired
+
+    fit = entry.get("fit", {})
+    if not isinstance(fit, dict):
+        return False
+
+    position = fit.get("identity_position", "")
+    if position not in JOB_BLOCKS_BY_IDENTITY:
+        return False
+
+    if dry_run:
+        return True
+
+    default_blocks = JOB_BLOCKS_BY_IDENTITY[position]
+
+    content = filepath.read_text()
+
+    # Build the replacement YAML for blocks_used
+    blocks_lines = []
+    for key, path in default_blocks.items():
+        blocks_lines.append(f"    {key}: {path}")
+    blocks_yaml = "\n".join(blocks_lines)
+
+    # Replace empty blocks_used: {} with the block mappings
+    new_content = re.sub(
+        r'^(\s*blocks_used:\s*)\{\}',
+        rf'\1\n{blocks_yaml}',
+        content,
+        count=1,
+        flags=re.MULTILINE,
+    )
+
+    if new_content == content:
+        return False  # pattern didn't match
+
+    import yaml
+    try:
+        yaml.safe_load(new_content)
+    except yaml.YAMLError:
+        return False  # refuse to write invalid YAML
+
+    new_content = _update_last_touched(new_content)
+    filepath.write_text(new_content)
+    return True
+
+
 # --- Report ---
 
 
@@ -212,6 +309,7 @@ def run_report(entries: list[dict]):
     print()
 
     needs_materials = 0
+    needs_blocks = 0
     needs_variants = 0
     needs_portal = 0
     already_complete = 0
@@ -234,6 +332,8 @@ def run_report(entries: list[dict]):
 
         if "materials" in gaps:
             needs_materials += 1
+        if "blocks" in gaps:
+            needs_blocks += 1
         if "variants" in gaps:
             needs_variants += 1
         if "portal_fields" in gaps:
@@ -241,8 +341,9 @@ def run_report(entries: list[dict]):
 
     print()
     print("=" * 70)
-    total = needs_materials + needs_variants + needs_portal
+    total = needs_materials + needs_blocks + needs_variants + needs_portal
     print(f"Summary: {needs_materials} need materials | "
+          f"{needs_blocks} need blocks | "
           f"{needs_variants} need variants | "
           f"{needs_portal} need portal_fields | "
           f"{already_complete} complete | "
@@ -261,6 +362,14 @@ def detect_gaps(entry: dict) -> list[str]:
     materials = submission.get("materials_attached", [])
     if track in RESUME_TRACKS and (not isinstance(materials, list) or not materials):
         gaps.append("materials")
+
+    # Blocks gap (job entries with identity mapping but no blocks wired)
+    blocks = submission.get("blocks_used", {})
+    if track == "job" and (not isinstance(blocks, dict) or not blocks):
+        fit = entry.get("fit", {})
+        position = fit.get("identity_position", "") if isinstance(fit, dict) else ""
+        if position in JOB_BLOCKS_BY_IDENTITY:
+            gaps.append("blocks")
 
     # Variants gap
     entry_id = entry.get("id", "?")
@@ -285,6 +394,7 @@ def detect_gaps(entry: dict) -> list[str]:
 def run_enrich(
     entries: list[dict],
     do_materials: bool,
+    do_blocks: bool,
     do_variants: bool,
     do_portal: bool,
     grant_template: bool,
@@ -327,6 +437,15 @@ def run_enrich(
             mat = sub.get("materials_attached", []) if isinstance(sub, dict) else []
             if not mat:
                 entry_actions.append("materials")
+
+        if do_blocks and track == "job":
+            sub = e.get("submission", {})
+            blk = sub.get("blocks_used", {}) if isinstance(sub, dict) else {}
+            if not (isinstance(blk, dict) and blk):
+                fit = e.get("fit", {})
+                position = fit.get("identity_position", "") if isinstance(fit, dict) else ""
+                if position in JOB_BLOCKS_BY_IDENTITY:
+                    entry_actions.append("blocks")
 
         if do_variants:
             sub = e.get("submission", {})
@@ -390,6 +509,9 @@ def run_enrich(
             if action == "materials":
                 if enrich_materials(filepath, e):
                     modified = True
+            elif action == "blocks":
+                if enrich_blocks(filepath, e):
+                    modified = True
             elif action.startswith("variant:"):
                 variant_path = action[len("variant:"):]
                 if enrich_variant(filepath, e, variant_path):
@@ -415,6 +537,8 @@ def main():
                         help="Run all enrichment operations")
     parser.add_argument("--materials", action="store_true",
                         help="Wire resume into materials_attached")
+    parser.add_argument("--blocks", action="store_true",
+                        help="Wire identity-matched blocks into blocks_used for jobs")
     parser.add_argument("--variants", action="store_true",
                         help="Wire cover letters into variant_ids")
     parser.add_argument("--portal", action="store_true",
@@ -439,16 +563,18 @@ def main():
         return
 
     do_materials = args.all or args.materials
+    do_blocks = args.all or args.blocks
     do_variants = args.all or args.variants
     do_portal = args.all or args.portal
 
-    if not (do_materials or do_variants or do_portal):
-        parser.error("Specify --all, --materials, --variants, --portal, or --report")
+    if not (do_materials or do_blocks or do_variants or do_portal):
+        parser.error("Specify --all, --materials, --blocks, --variants, --portal, or --report")
 
     entries = load_entries(include_filepath=True)
     run_enrich(
         entries=entries,
         do_materials=do_materials,
+        do_blocks=do_blocks,
         do_variants=do_variants,
         do_portal=do_portal,
         grant_template=args.grant_template,

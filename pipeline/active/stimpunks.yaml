@@ -62,5 +62,9 @@ conversion:
   feedback: null
 tags: []
 source: 04-application-tracker.md
+deferral:
+  reason: portal_paused
+  resume_date: "2026-06-01"
+  note: Portal paused. Re-opening June 1 for second round of 50 applications.
 notes: Application portal currently PAUSED. Re-opening for second round of 50 applications on June 1, 2026. Accepting 100 applications total for the year.
 last_touched: "2026-02-25"

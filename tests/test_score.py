@@ -8,10 +8,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from score import (
     WEIGHTS,
+    WEIGHTS_JOB,
     PORTAL_SCORES,
     STRATEGIC_BASE,
     HIGH_PRESTIGE,
     QUALIFICATION_THRESHOLD,
+    JOB_QUALIFICATION_THRESHOLD,
+    ROLE_FIT_TIERS,
+    get_weights,
+    get_qualification_threshold,
     score_deadline_feasibility,
     score_financial_alignment,
     score_portal_friction,
@@ -509,3 +514,219 @@ def test_qualify_boundary():
         assert should_apply is True
     else:
         assert should_apply is False
+
+
+# --- Job rubric weights ---
+
+
+def test_weights_job_sum_to_one():
+    """Job dimension weights must sum to 1.0."""
+    total = sum(WEIGHTS_JOB.values())
+    assert abs(total - 1.0) < 1e-9, f"Job weights sum to {total}, expected 1.0"
+
+
+def test_weights_job_all_positive():
+    """Every job weight must be positive."""
+    for dim, weight in WEIGHTS_JOB.items():
+        assert weight > 0, f"Job weight for {dim} is non-positive: {weight}"
+
+
+def test_weights_job_cover_all_dimensions():
+    """WEIGHTS_JOB should have the same 8 dimensions as WEIGHTS."""
+    assert set(WEIGHTS_JOB.keys()) == set(WEIGHTS.keys())
+
+
+def test_get_weights_job():
+    """get_weights returns job weights for track='job'."""
+    assert get_weights("job") is WEIGHTS_JOB
+
+
+def test_get_weights_creative():
+    """get_weights returns creative weights for non-job tracks."""
+    for track in ("grant", "fellowship", "residency", "writing", ""):
+        assert get_weights(track) is WEIGHTS
+
+
+def test_get_qualification_threshold_job():
+    """Job track uses JOB_QUALIFICATION_THRESHOLD."""
+    assert get_qualification_threshold("job") == JOB_QUALIFICATION_THRESHOLD
+
+
+def test_get_qualification_threshold_creative():
+    """Non-job tracks use QUALIFICATION_THRESHOLD."""
+    for track in ("grant", "fellowship", "residency", ""):
+        assert get_qualification_threshold(track) == QUALIFICATION_THRESHOLD
+
+
+# --- Job composite scoring ---
+
+
+def test_composite_job_weights():
+    """Job entry should use WEIGHTS_JOB for composite calculation."""
+    dims = {
+        "mission_alignment": 8,
+        "evidence_match": 7,
+        "track_record_fit": 6,
+        "financial_alignment": 6,
+        "effort_to_value": 5,
+        "strategic_value": 8,
+        "deadline_feasibility": 9,
+        "portal_friction": 5,
+    }
+    job_score = compute_composite(dims, "job")
+    creative_score = compute_composite(dims, "grant")
+
+    # Manually compute expected job score
+    expected_job = round(
+        8 * 0.35 + 7 * 0.25 + 6 * 0.15 + 8 * 0.10
+        + 6 * 0.05 + 5 * 0.05 + 9 * 0.03 + 5 * 0.02,
+        1,
+    )
+    assert job_score == expected_job
+
+    # Job and creative scores should differ with these unequal dims
+    assert job_score != creative_score
+
+
+def test_composite_creative_weights():
+    """Non-job entry should use WEIGHTS (creative) for composite."""
+    dims = {
+        "mission_alignment": 8,
+        "evidence_match": 7,
+        "track_record_fit": 6,
+        "financial_alignment": 9,
+        "effort_to_value": 5,
+        "strategic_value": 7,
+        "deadline_feasibility": 4,
+        "portal_friction": 6,
+    }
+    expected = round(
+        8 * 0.25 + 7 * 0.20 + 6 * 0.15 + 9 * 0.10
+        + 5 * 0.10 + 7 * 0.10 + 4 * 0.05 + 6 * 0.05,
+        1,
+    )
+    assert compute_composite(dims, "grant") == expected
+    assert compute_composite(dims, "") == expected
+    assert compute_composite(dims) == expected
+
+
+# --- Job qualification threshold ---
+
+
+def test_qualify_job_threshold():
+    """Job entry should use JOB_QUALIFICATION_THRESHOLD (5.5)."""
+    # Build a job entry that scores between 5.0 and 5.5
+    # This should SKIP under job threshold but would APPLY under creative
+    entry = _make_entry(
+        track="job",
+        fit_score=5,
+        portal="greenhouse",
+        deadline_type="rolling",
+        organization="Unknown Corp",
+    )
+    dims = compute_dimensions(entry)
+    job_composite = compute_composite(dims, "job")
+
+    should_apply, reason = qualify(entry)
+
+    # Verify the threshold used is the job one
+    assert str(JOB_QUALIFICATION_THRESHOLD) in reason or str(QUALIFICATION_THRESHOLD) not in reason.replace(str(JOB_QUALIFICATION_THRESHOLD), "")
+    if job_composite >= JOB_QUALIFICATION_THRESHOLD:
+        assert should_apply is True
+    else:
+        assert should_apply is False
+
+
+def test_qualify_creative_threshold():
+    """Creative entry should use QUALIFICATION_THRESHOLD (5.0)."""
+    entry = _make_entry(
+        track="grant",
+        fit_score=5,
+        deadline_type="rolling",
+    )
+    should_apply, reason = qualify(entry)
+    assert str(QUALIFICATION_THRESHOLD) in reason
+
+
+# --- Job tier scoring with job weights ---
+
+
+def test_job_tier1_scores_above_threshold():
+    """Tier-1 auto-sourced job (e.g. agent SDK) should score well above threshold with raised ceilings."""
+    entry = _make_entry(
+        track="job",
+        fit_score=1,
+        organization="Anthropic",
+        portal="greenhouse",
+        deadline_type="rolling",
+    )
+    entry["name"] = "Software Engineer, Agent SDK"
+    entry["tags"] = ["auto-sourced"]
+    # Force auto-sourced path (score <= 1)
+    dims = compute_dimensions(entry)
+    composite = compute_composite(dims, "job")
+    # With raised tier-1 ceilings (9/9/7), composite should be >= 8.0
+    assert composite >= 8.0, (
+        f"Tier-1 job scored {composite}, expected >= 8.0"
+    )
+
+
+def test_job_tier1_with_blocks_scores_high():
+    """Tier-1 auto-sourced job with 5 blocks wired should get evidence bonus."""
+    entry = _make_entry(
+        track="job",
+        fit_score=1,
+        organization="Anthropic",
+        portal="greenhouse",
+        deadline_type="rolling",
+        blocks_used={
+            "framing": "framings/independent-engineer",
+            "evidence": "evidence/differentiators",
+            "work_samples": "evidence/work-samples",
+            "credentials": "pitches/credentials-creative-tech",
+            "methodology": "methodology/ai-conductor",
+        },
+    )
+    entry["name"] = "Software Engineer, Agent SDK"
+    entry["tags"] = ["auto-sourced"]
+    dims = compute_dimensions(entry)
+    composite = compute_composite(dims, "job")
+    # With blocks wired (5 blocks → evidence bonus) + raised ceilings, composite >= 8.5
+    # Auto-derived dims (financial=6, portal=5) pull the composite below 9.0
+    assert composite >= 8.5, (
+        f"Tier-1 job with blocks scored {composite}, expected >= 8.5"
+    )
+
+
+def test_job_tier1_dimension_values():
+    """Tier-1 dimension values should reflect raised ceilings (9/9/7)."""
+    tier1 = next(t for t in ROLE_FIT_TIERS if t["name"] == "tier-1-strong")
+    assert tier1["mission_alignment"] == 9
+    assert tier1["evidence_match"] == 9
+    assert tier1["track_record_fit"] == 7
+
+
+def test_job_tier2_dimension_values():
+    """Tier-2 dimension values should reflect raised ceilings (7/6/5)."""
+    tier2 = next(t for t in ROLE_FIT_TIERS if t["name"] == "tier-2-moderate")
+    assert tier2["mission_alignment"] == 7
+    assert tier2["evidence_match"] == 6
+    assert tier2["track_record_fit"] == 5
+
+
+def test_job_tier4_scores_below_threshold():
+    """Tier-4 auto-sourced job (e.g. iOS) should score below 5.5 with job weights."""
+    entry = _make_entry(
+        track="job",
+        fit_score=1,
+        organization="Anthropic",
+        portal="greenhouse",
+        deadline_type="rolling",
+    )
+    entry["name"] = "Software Engineer, iOS"
+    entry["tags"] = ["auto-sourced"]
+    dims = compute_dimensions(entry)
+    composite = compute_composite(dims, "job")
+    assert composite < JOB_QUALIFICATION_THRESHOLD, (
+        f"Tier-4 job scored {composite}, expected < {JOB_QUALIFICATION_THRESHOLD}"
+    )

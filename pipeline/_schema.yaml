@@ -10,7 +10,8 @@
 # track (required): Application category
 #   enum: grant | residency | job | fellowship | writing | emergency | prize | program | consulting
 # status (required): Current pipeline stage
-#   enum: research | qualified | drafting | staged | submitted | acknowledged | interview | outcome
+#   enum: research | qualified | drafting | staged | deferred | submitted | acknowledged | interview | outcome
+#   deferred: Ready to submit but blocked by external factors (portal paused, cycle not open, etc.)
 # outcome: Final result (null until resolved)
 #   enum: accepted | rejected | withdrawn | expired | null
 
@@ -27,7 +28,8 @@
 #   date: ISO date (YYYY-MM-DD) or null for rolling
 #   time: Time with timezone, e.g. "15:00 ET"
 #   type (required): Deadline behavior
-#     enum: hard | rolling | window | tba
+#     enum: hard | rolling | window | tba | fixed
+#     fixed: Specific date set by organization for recurring/cycle deadlines
 
 # --- Compensation ---
 # amount:
@@ -161,6 +163,13 @@
 #   detail: Free text explanation
 #   date: ISO date of the decision
 #   reopen: boolean — whether this could be revisited in a future cycle
+
+# --- Deferral ---
+# deferral: Structured reason when status is 'deferred' (recommended when deferred)
+#   reason: Why the entry is deferred
+#     enum: portal_paused | cycle_not_open | pending_materials | external_dependency | strategic_hold
+#   resume_date: ISO date (YYYY-MM-DD) when to re-check availability (optional)
+#   note: Free text explanation (optional)
 
 # --- Metadata ---
 # tags: List of strings (omega criteria cross-refs, categories)

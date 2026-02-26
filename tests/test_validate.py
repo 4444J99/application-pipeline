@@ -9,7 +9,7 @@ import yaml
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from validate import validate_entry, _reachable_statuses, VALID_TRANSITIONS
+from validate import validate_entry, _reachable_statuses, VALID_TRANSITIONS, VALID_DEFERRAL_REASONS
 
 
 def _write_yaml(tmp_dir: Path, filename: str, data: dict) -> Path:
@@ -360,3 +360,111 @@ def test_invalid_withdrawal_reason():
         filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
         errors = validate_entry(filepath)
         assert any("withdrawal_reason.reason" in e for e in errors)
+
+
+# --- Deferred status validation ---
+
+
+def test_deferred_status_valid():
+    """An entry with status=deferred should pass validation."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "test-entry",
+            "name": "Test Entry",
+            "track": "grant",
+            "status": "deferred",
+            "outcome": None,
+            "deferral": {
+                "reason": "portal_paused",
+                "resume_date": "2026-06-01",
+                "note": "Portal paused until June.",
+            },
+        }
+        filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
+        errors = validate_entry(filepath)
+        assert errors == [], f"Expected no errors, got: {errors}"
+
+
+def test_deferred_without_deferral_field_warns():
+    """A deferred entry without deferral field should produce a warning."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "test-entry",
+            "name": "Test Entry",
+            "track": "grant",
+            "status": "deferred",
+            "outcome": None,
+        }
+        filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
+        errors = validate_entry(filepath)
+        assert any("no 'deferral' field present" in e for e in errors)
+
+
+def test_invalid_deferral_reason():
+    """An entry with an invalid deferral reason should error."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "test-entry",
+            "name": "Test Entry",
+            "track": "grant",
+            "status": "deferred",
+            "outcome": None,
+            "deferral": {
+                "reason": "bored",
+            },
+        }
+        filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
+        errors = validate_entry(filepath)
+        assert any("deferral.reason" in e for e in errors)
+
+
+def test_valid_deferral_reasons():
+    """All valid deferral reasons should pass."""
+    for reason in VALID_DEFERRAL_REASONS:
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            data = {
+                "id": "test-entry",
+                "name": "Test Entry",
+                "track": "grant",
+                "status": "deferred",
+                "outcome": None,
+                "deferral": {"reason": reason},
+            }
+            filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
+            errors = validate_entry(filepath)
+            assert not any("deferral.reason" in e for e in errors), (
+                f"Reason '{reason}' should be valid, got: {errors}"
+            )
+
+
+# --- Fixed deadline type validation ---
+
+
+def test_fixed_deadline_type_valid():
+    """An entry with deadline.type=fixed should pass validation."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "test-entry",
+            "name": "Test Entry",
+            "track": "grant",
+            "status": "qualified",
+            "outcome": None,
+            "deadline": {"date": "2026-03-16", "type": "fixed"},
+        }
+        filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
+        errors = validate_entry(filepath)
+        assert errors == [], f"Expected no errors, got: {errors}"
+
+
+# --- Deferred reachability ---
+
+
+def test_deferred_reachable_from_research():
+    """deferred should be reachable from research via qualified/drafting/staged."""
+    reachable = _reachable_statuses("research")
+    assert "deferred" in reachable

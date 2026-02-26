@@ -18,7 +18,7 @@ amount:
   type: lump_sum
   benefits_cliff_note: SNAP-safe
 fit:
-  score: 8.1
+  score: 8.0
   identity_position: systems-artist
   framing: Systems-based art practice rooted in recursive structures and generative
     processes
@@ -33,7 +33,7 @@ fit:
     financial_alignment: 9
     effort_to_value: 7
     strategic_value: 7
-    deadline_feasibility: 5
+    deadline_feasibility: 3
     portal_friction: 5
 submission:
   effort_level: standard

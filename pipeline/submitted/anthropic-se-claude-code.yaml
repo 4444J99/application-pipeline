@@ -18,7 +18,7 @@ amount:
   type: salary
   benefits_cliff_note: null
 fit:
-  score: 6.9
+  score: 7.0
   identity_position: independent-engineer
   framing: Independent engineer building CLI developer tools and agentic systems — 103
     repos, 21K code files, 3.6K tests, 94 CI/CD pipelines
@@ -30,13 +30,18 @@ fit:
     evidence_match: 6
     track_record_fit: 5
     financial_alignment: 7
-    effort_to_value: 7
+    effort_to_value: 9
     strategic_value: 8
     deadline_feasibility: 9
     portal_friction: 5
 submission:
   effort_level: complex
-  blocks_used: {}
+  blocks_used: 
+    framing: framings/independent-engineer
+    evidence: evidence/differentiators
+    work_samples: evidence/work-samples
+    credentials: pitches/credentials-creative-tech
+    methodology: methodology/ai-conductor
   variant_ids:
     cover_letter: cover-letters/anthropic-se-claude-code
   materials_attached:
@@ -71,4 +76,4 @@ notes: |
   greenhouse_submit.py, the entire scripts/ directory IS the kind of work this role does.
   Evidence that lands: 21K code files, 3.6K tests, 94 CI/CD pipelines, agentic-titan (1,095 tests).
   Honest gaps: No team engineering, no production users. Scale and testing discipline are real.
-last_touched: '2026-02-24'
+last_touched: "2026-02-26"

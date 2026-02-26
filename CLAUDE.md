@@ -27,9 +27,12 @@ Entries progress through these statuses in order:
 
 ```
 research → qualified → drafting → staged → submitted → acknowledged → interview → outcome
+                  ↘        ↘         ↘
+                   → → → deferred → staged / qualified (re-activate)
 ```
 
 - **Actionable statuses** (what scripts operate on): `research`, `qualified`, `drafting`, `staged`
+- **Deferred**: Ready to submit but blocked by external factors (portal paused, cycle not open). Not actionable — excluded from standup/campaign/advance but visible in standup's deferred section. Entries have a `deferral` field with `reason`, optional `resume_date`, and `note`.
 - **Terminal outcomes**: `accepted`, `rejected`, `withdrawn`, `expired`
 - `advance.py` enforces forward-only progression with validation
 - `standup.py` flags entries untouched for >7 days as stale
@@ -109,11 +112,13 @@ python scripts/preflight.py                       # Check all staged entries
 python scripts/preflight.py --target <target-id>  # Check one entry
 python scripts/preflight.py --status qualified    # Check entries with different status
 
-# Batch enrichment: wire materials, variants, portal_fields
+# Batch enrichment: wire materials, blocks, variants, portal_fields
 python scripts/enrich.py --report                    # Show enrichment gaps
 python scripts/enrich.py --all --dry-run             # Preview all enrichments
 python scripts/enrich.py --all --yes                 # Execute all enrichments
 python scripts/enrich.py --materials --yes            # Wire resume only
+python scripts/enrich.py --blocks --dry-run           # Preview job block wiring
+python scripts/enrich.py --blocks --yes               # Wire identity-matched blocks to jobs
 python scripts/enrich.py --variants --yes             # Wire cover letters only
 python scripts/enrich.py --portal --yes               # Populate portal_fields only
 python scripts/enrich.py --variants --grant-template  # Also wire grant template to grants

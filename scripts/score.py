@@ -32,6 +32,19 @@ WEIGHTS = {
     "portal_friction": 0.05,
 }
 
+# Job-specific weights: human-judgment dimensions get 75% (vs 60% creative)
+# because auto-derived dimensions don't differentiate between auto-sourced jobs.
+WEIGHTS_JOB = {
+    "mission_alignment": 0.35,
+    "evidence_match": 0.25,
+    "track_record_fit": 0.15,
+    "strategic_value": 0.10,
+    "financial_alignment": 0.05,
+    "effort_to_value": 0.05,
+    "deadline_feasibility": 0.03,
+    "portal_friction": 0.02,
+}
+
 # Benefits cliff thresholds (annual USD)
 SNAP_LIMIT = 20352
 MEDICAID_LIMIT = 21597
@@ -99,6 +112,99 @@ HIGH_PRESTIGE = {
     "Modal": 5,
     "Replicate": 5,
 }
+
+# Title-based role-fit tiers for auto-sourced entries.
+# Derived from 20 manually-scored submitted entries.
+# Order matters: specific patterns (tier-1, tier-4, tier-3) are checked
+# before generic catch-alls (tier-2 "software engineer") so that
+# "Software Engineer, iOS" matches tier-4 not tier-2.
+ROLE_FIT_TIERS = [
+    {
+        "name": "tier-1-strong",
+        "title_patterns": [
+            "developer experience", "developer tools", "devtools", "devex",
+            "developer relations", "devrel", "developer advocate", "developer community",
+            "developer education", "education engineer", "education platform",
+            "technical writer", "documentation engineer",
+            "cli ", "client infrastructure",
+            "agent sdk", "agentic",
+            "claude code",
+        ],
+        "mission_alignment": 9,
+        "evidence_match": 9,
+        "track_record_fit": 7,
+    },
+    {
+        "name": "tier-4-poor",
+        "title_patterns": [
+            "machine learning", "ml engineer", "reinforcement learning",
+            "security", "cybersecurity",
+            "data engineer", "data infrastructure", "databases",
+            "ios", "android", "mobile",
+            "accelerator", "compute efficiency", "networking",
+            "encoding", "inference",
+            "recruiting", "audiovisual",
+            "account abuse", "safeguard",
+            "people product", "human data",
+            "windows",
+        ],
+        "mission_alignment": 3,
+        "evidence_match": 2,
+        "track_record_fit": 2,
+    },
+    {
+        "name": "tier-3-weak",
+        "title_patterns": [
+            "forward deployed", "applied ai",
+            "growth", "enterprise",
+            "business technology",
+            "public sector",
+        ],
+        "mission_alignment": 5,
+        "evidence_match": 4,
+        "track_record_fit": 3,
+    },
+    {
+        "name": "tier-2-moderate",
+        "title_patterns": [
+            "software engineer",
+            "full stack", "fullstack",
+            "frontend", "backend",
+            "platform engineer", "infrastructure engineer",
+            "solutions engineer",
+            "integrations",
+            "product engineer",
+        ],
+        "mission_alignment": 7,
+        "evidence_match": 6,
+        "track_record_fit": 5,
+    },
+]
+
+
+def estimate_role_fit_from_title(entry: dict) -> dict[str, int]:
+    """Estimate human dimensions from job title for auto-sourced entries.
+
+    Returns dimension dict based on title-pattern tier matching.
+    Uses patterns derived from 20 manually-scored submitted entries.
+    """
+    name = (entry.get("name") or "").lower()
+
+    for tier in ROLE_FIT_TIERS:
+        for pattern in tier["title_patterns"]:
+            if pattern in name:
+                return {
+                    "mission_alignment": tier["mission_alignment"],
+                    "evidence_match": tier["evidence_match"],
+                    "track_record_fit": tier["track_record_fit"],
+                }
+
+    # No match — neutral defaults instead of broken 0-based estimate
+    return {
+        "mission_alignment": 5,
+        "evidence_match": 4,
+        "track_record_fit": 4,
+    }
 
 
 def load_entries(entry_id: str | None = None) -> list[tuple[Path, dict]]:
@@ -264,14 +370,33 @@ def score_strategic_value(entry: dict) -> int:
 def estimate_human_dimensions(entry: dict) -> dict[str, int]:
     """Estimate mission_alignment, evidence_match, track_record_fit from existing data.
 
-    Uses the existing fit.score as a baseline, then adjusts based on
-    identity_position match quality and blocks coverage.
+    For auto-sourced entries with fit.score <= 1, uses title-based role-fit
+    estimation instead of the broken fit.score baseline.
+    For manually-scored entries, uses fit.score as baseline with adjustments.
     """
     fit = entry.get("fit", {})
     if not isinstance(fit, dict):
         fit = {}
 
     existing_score = fit.get("score", 5)
+    tags = entry.get("tags") or []
+
+    # Auto-sourced entries: use title-based estimation instead of
+    # broken fit.score baseline. Detect by: auto-sourced tag AND either
+    # score <= 1 (never scored) OR all human dimensions are 1 (broken scorer output).
+    if "auto-sourced" in tags:
+        dims = fit.get("dimensions", {}) or {}
+        human_vals = [dims.get(k) for k in ("mission_alignment", "evidence_match", "track_record_fit")]
+        all_human_broken = all(v is not None and v <= 1 for v in human_vals)
+        if existing_score <= 1 or all_human_broken:
+            base = estimate_role_fit_from_title(entry)
+            # Apply blocks coverage bonus to auto-sourced entries with blocks wired
+            submission = entry.get("submission", {})
+            blocks_count = len(submission.get("blocks_used", {}) or {}) if isinstance(submission, dict) else 0
+            if blocks_count >= 5:
+                base["evidence_match"] = min(10, base["evidence_match"] + 1)
+            return base
+
     position = fit.get("identity_position")
     framing = fit.get("framing", "")
 
@@ -331,22 +456,28 @@ def compute_dimensions(entry: dict) -> dict[str, int]:
     dims["effort_to_value"] = score_effort_to_value(entry)
     dims["strategic_value"] = score_strategic_value(entry)
 
-    # Human-judgment: use existing values if present, otherwise estimate
+    # Human-judgment: use existing values if present AND meaningful, otherwise estimate.
+    # Treat value=1 as "unset placeholder" from prior broken scoring of auto-sourced entries.
     human_keys = ["mission_alignment", "evidence_match", "track_record_fit"]
     estimated = estimate_human_dimensions(entry)
     for key in human_keys:
-        if key in existing and existing[key] is not None:
-            dims[key] = int(existing[key])
+        existing_val = existing.get(key)
+        if existing_val is not None and existing_val > 1:
+            dims[key] = int(existing_val)
         else:
             dims[key] = estimated[key]
 
     return dims
 
 
-def compute_composite(dimensions: dict[str, int]) -> float:
-    """Compute weighted composite score from dimensions."""
+def compute_composite(dimensions: dict[str, int], track: str = "") -> float:
+    """Compute weighted composite score from dimensions.
+
+    Uses job-specific weights when track is "job", creative weights otherwise.
+    """
+    weights = get_weights(track)
     total = 0.0
-    for dim, weight in WEIGHTS.items():
+    for dim, weight in weights.items():
         val = dimensions.get(dim, 5)
         total += val * weight
     return round(total, 1)
@@ -360,19 +491,33 @@ DIMENSION_ORDER = [
 
 # Below this composite score, recommend skipping the application
 QUALIFICATION_THRESHOLD = 5.0
+JOB_QUALIFICATION_THRESHOLD = 5.5
+
+
+def get_weights(track: str) -> dict:
+    """Return the weight config appropriate for the entry's track."""
+    return WEIGHTS_JOB if track == "job" else WEIGHTS
+
+
+def get_qualification_threshold(track: str) -> float:
+    """Return the qualification threshold appropriate for the entry's track."""
+    return JOB_QUALIFICATION_THRESHOLD if track == "job" else QUALIFICATION_THRESHOLD
 
 
 def qualify(entry: dict) -> tuple[bool, str]:
     """Return (should_apply, reason) based on composite score.
 
-    Entries at or above QUALIFICATION_THRESHOLD get APPLY.
-    Entries below get SKIP with an explanation of which dimensions drag it down.
+    Uses track-appropriate weights and threshold: job entries use
+    JOB_QUALIFICATION_THRESHOLD (5.5) with job weights, creative entries
+    use QUALIFICATION_THRESHOLD (5.0) with creative weights.
     """
+    track = entry.get("track", "")
+    threshold = get_qualification_threshold(track)
     dimensions = compute_dimensions(entry)
-    composite = compute_composite(dimensions)
+    composite = compute_composite(dimensions, track)
 
-    if composite >= QUALIFICATION_THRESHOLD:
-        return True, f"composite {composite:.1f} >= {QUALIFICATION_THRESHOLD}"
+    if composite >= threshold:
+        return True, f"composite {composite:.1f} >= {threshold}"
 
     # Find the weakest dimensions to explain why
     weak = sorted(
@@ -380,7 +525,7 @@ def qualify(entry: dict) -> tuple[bool, str]:
         key=lambda x: x[1],
     )
     weak_names = [f"{dim}={val}" for dim, val in weak[:3]]
-    return False, f"composite {composite:.1f} < {QUALIFICATION_THRESHOLD} (weak: {', '.join(weak_names)})"
+    return False, f"composite {composite:.1f} < {threshold} (weak: {', '.join(weak_names)})"
 
 
 def update_entry_file(filepath: Path, dimensions: dict[str, int], composite: float, dry_run: bool = False):
@@ -448,36 +593,59 @@ def update_entry_file(filepath: Path, dimensions: dict[str, int], composite: flo
     return old_score, composite
 
 
+def _print_qualify_group(label: str, threshold: float,
+                         apply_list: list, skip_list: list):
+    """Print a single qualification group (job or creative)."""
+    print(f"{label} (threshold: {threshold})")
+    print(f"{'-' * 50}")
+
+    if apply_list:
+        print("APPLY:")
+        for eid, reason in sorted(apply_list, key=lambda x: x[1], reverse=True):
+            print(f"  {eid:<40s} {reason}")
+
+    if skip_list:
+        print("SKIP:")
+        for eid, reason in sorted(skip_list, key=lambda x: x[1]):
+            print(f"  {eid:<40s} {reason}")
+
+    print(f"  {len(apply_list)} APPLY | {len(skip_list)} SKIP")
+    print()
+
+
 def run_qualify(entries: list[tuple[Path, dict]]):
-    """Print APPLY/SKIP recommendations for all entries."""
-    apply_entries = []
-    skip_entries = []
+    """Print APPLY/SKIP recommendations grouped by track type."""
+    job_apply = []
+    job_skip = []
+    creative_apply = []
+    creative_skip = []
 
     for filepath, data in entries:
         entry_id = data.get("id", filepath.stem)
+        track = data.get("track", "")
         should_apply, reason = qualify(data)
-        if should_apply:
-            apply_entries.append((entry_id, reason))
+
+        if track == "job":
+            (job_apply if should_apply else job_skip).append((entry_id, reason))
         else:
-            skip_entries.append((entry_id, reason))
+            (creative_apply if should_apply else creative_skip).append((entry_id, reason))
 
-    if skip_entries:
-        print("SKIP (below threshold):")
-        for eid, reason in sorted(skip_entries, key=lambda x: x[1]):
-            print(f"  {eid:<40s} {reason}")
-        print()
+    if job_apply or job_skip:
+        _print_qualify_group(
+            "JOB ENTRIES", JOB_QUALIFICATION_THRESHOLD,
+            job_apply, job_skip,
+        )
 
-    if apply_entries:
-        print("APPLY (above threshold):")
-        for eid, reason in sorted(apply_entries, key=lambda x: x[1], reverse=True):
-            print(f"  {eid:<40s} {reason}")
-        print()
+    if creative_apply or creative_skip:
+        _print_qualify_group(
+            "CREATIVE ENTRIES", QUALIFICATION_THRESHOLD,
+            creative_apply, creative_skip,
+        )
 
     print(f"{'=' * 50}")
-    print(
-        f"Threshold: {QUALIFICATION_THRESHOLD} | "
-        f"{len(apply_entries)} APPLY | {len(skip_entries)} SKIP"
-    )
+    total_apply = len(job_apply) + len(creative_apply)
+    total_skip = len(job_skip) + len(creative_skip)
+    print(f"Total: {total_apply} APPLY | {total_skip} SKIP")
 
 
 def main():
@@ -511,8 +679,9 @@ def main():
     changes = []
     for filepath, data in entries:
         entry_id = data.get("id", filepath.stem)
+        track = data.get("track", "")
         dimensions = compute_dimensions(data)
-        composite = compute_composite(dimensions)
+        composite = compute_composite(dimensions, track)
 
         old_score, new_score = update_entry_file(filepath, dimensions, composite, dry_run=args.dry_run)
 
@@ -526,23 +695,22 @@ def main():
 
         changes.append((entry_id, old_score, new_score, dimensions))
 
+        rubric = "JOB" if track == "job" else "CREATIVE"
+        weights = get_weights(track)
+
         if args.verbose:
             print(f"\n{'=' * 50}")
-            print(f"{entry_id}: {new_score}{delta}")
+            print(f"{entry_id}: {new_score}{delta}  [{rubric} rubric]")
             print(f"  {'Dimension':<25s} {'Score':>5s}  {'Weight':>6s}  {'Contrib':>7s}")
             print(f"  {'-' * 25} {'-' * 5}  {'-' * 6}  {'-' * 7}")
-            for dim in [
-                "mission_alignment", "evidence_match", "track_record_fit",
-                "financial_alignment", "effort_to_value", "strategic_value",
-                "deadline_feasibility", "portal_friction",
-            ]:
+            for dim in DIMENSION_ORDER:
                 val = dimensions[dim]
-                weight = WEIGHTS[dim]
+                weight = weights[dim]
                 contrib = val * weight
                 print(f"  {dim:<25s} {int(val):>5d}  {weight:>5.0%}  {contrib:>7.2f}")
             print(f"  {'COMPOSITE':<25s}        {'':>6s}  {new_score:>7.1f}")
         else:
-            print(f"  {entry_id:<40s} {new_score:>5.1f}{delta}")
+            print(f"  {entry_id:<40s} {new_score:>5.1f}{delta}  [{rubric}]")
 
     # Summary
     print(f"\n{'=' * 50}")

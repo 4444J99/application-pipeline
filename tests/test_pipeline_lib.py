@@ -9,7 +9,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 from pipeline_lib import (
     REPO_ROOT, ALL_PIPELINE_DIRS, BLOCKS_DIR, VARIANTS_DIR,
     VALID_TRACKS, VALID_STATUSES, ACTIONABLE_STATUSES, STATUS_ORDER,
-    EFFORT_MINUTES, PROFILE_ID_MAP, LEGACY_ID_MAP, LEGACY_DIR, PROFILES_DIR,
+    VALID_TRANSITIONS, EFFORT_MINUTES, PROFILE_ID_MAP, LEGACY_ID_MAP,
+    LEGACY_DIR, PROFILES_DIR,
     load_entries, load_entry_by_id, parse_date, parse_datetime,
     format_amount, get_effort, get_score, get_deadline, days_until,
     load_profile, load_legacy_script, _parse_legacy_markdown, _extract_section_content,
@@ -485,3 +486,35 @@ def test_detect_portal_unknown():
     assert detect_portal("https://example.com/apply") is None
     assert detect_portal("") is None
     assert detect_portal("not-a-url") is None
+
+
+# --- Deferred status ---
+
+
+def test_deferred_in_valid_statuses():
+    """deferred is a valid status."""
+    assert "deferred" in VALID_STATUSES
+
+
+def test_deferred_not_in_actionable():
+    """deferred entries should not appear in active processing."""
+    assert "deferred" not in ACTIONABLE_STATUSES
+
+
+def test_deferred_in_status_order():
+    """deferred appears in STATUS_ORDER between staged and submitted."""
+    assert "deferred" in STATUS_ORDER
+    assert STATUS_ORDER.index("deferred") > STATUS_ORDER.index("staged")
+    assert STATUS_ORDER.index("deferred") < STATUS_ORDER.index("submitted")
+
+
+def test_deferred_transitions_from():
+    """qualified, drafting, and staged can transition to deferred."""
+    assert "deferred" in VALID_TRANSITIONS["qualified"]
+    assert "deferred" in VALID_TRANSITIONS["drafting"]
+    assert "deferred" in VALID_TRANSITIONS["staged"]
+
+
+def test_deferred_transitions_to():
+    """deferred can transition to staged, qualified, or withdrawn."""
+    assert VALID_TRANSITIONS["deferred"] == {"staged", "qualified", "withdrawn"}

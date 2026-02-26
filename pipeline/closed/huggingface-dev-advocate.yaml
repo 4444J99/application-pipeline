@@ -18,7 +18,7 @@ amount:
   type: salary
   benefits_cliff_note: null
 fit:
-  score: 6.2
+  score: 6.1
   identity_position: independent-engineer
   framing: Independent engineer and developer advocate — 810K+ words documentation,
     42 essays, 11 years teaching, open-source infrastructure at scale
@@ -30,13 +30,18 @@ fit:
     evidence_match: 5
     track_record_fit: 4
     financial_alignment: 8
-    effort_to_value: 7
+    effort_to_value: 9
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
 submission:
   effort_level: complex
-  blocks_used: {}
+  blocks_used: 
+    framing: framings/independent-engineer
+    evidence: evidence/differentiators
+    work_samples: evidence/work-samples
+    credentials: pitches/credentials-creative-tech
+    methodology: methodology/ai-conductor
   variant_ids: 
     cover_letter: cover-letters/huggingface-dev-advocate-hub-enterprise
   materials_attached:
@@ -74,7 +79,7 @@ notes: |
   intersection of engineering + communication + community — all three demonstrated strengths.
   Honest gaps: Limited ML knowledge (but dev advocacy doesn't require training models).
   No prior dev advocate title (but teaching IS advocacy).
-last_touched: "2026-02-24"
+last_touched: "2026-02-26"
 withdrawal_reason:
   reason: effort_too_high
   detail: Complex effort, poor fit score — withdrawn during emergency triage sprint

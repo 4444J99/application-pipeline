@@ -8,10 +8,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from enrich import (
-    enrich_materials, enrich_variant, find_matching_variant, detect_gaps,
+    enrich_materials, enrich_blocks, enrich_variant,
+    find_matching_variant, detect_gaps,
     select_resume,
     COVER_LETTER_MAP, DEFAULT_RESUME, RESUME_BY_IDENTITY,
-    RESUME_TRACKS, GRANT_TEMPLATE_TRACKS,
+    RESUME_TRACKS, GRANT_TEMPLATE_TRACKS, JOB_BLOCKS_BY_IDENTITY,
 )
 from pipeline_lib import MATERIALS_DIR, VARIANTS_DIR
 
@@ -454,3 +455,165 @@ def test_grant_template_tracks():
     """Ensure GRANT_TEMPLATE_TRACKS covers expected tracks."""
     expected = {"grant", "residency", "prize"}
     assert GRANT_TEMPLATE_TRACKS == expected
+
+
+# --- enrich_blocks ---
+
+
+def test_enrich_blocks_job_entry():
+    """Job entry with identity_position should get blocks wired."""
+    filepath = _make_temp_yaml(SAMPLE_JOB_WITH_IDENTITY)
+    try:
+        result = enrich_blocks(filepath, {
+            "track": "job",
+            "fit": {"identity_position": "independent-engineer"},
+            "submission": {"blocks_used": {}},
+        })
+        assert result is True
+        content = filepath.read_text()
+        assert "framings/independent-engineer" in content
+        assert "evidence/differentiators" in content
+        assert "evidence/work-samples" in content
+        assert "pitches/credentials-creative-tech" in content
+        assert "methodology/ai-conductor" in content
+        assert "blocks_used: {}" not in content
+    finally:
+        filepath.unlink()
+
+
+def test_enrich_blocks_skips_existing():
+    """Existing blocks_used should not be overwritten."""
+    yaml_content = """id: test-job
+name: Test Job
+track: job
+status: qualified
+outcome: null
+fit:
+  score: 8.0
+  identity_position: independent-engineer
+submission:
+  effort_level: complex
+  blocks_used:
+    custom: some/custom-block
+  variant_ids: {}
+  materials_attached: []
+  portfolio_url: https://example.com
+last_touched: "2026-01-15"
+"""
+    filepath = _make_temp_yaml(yaml_content)
+    try:
+        result = enrich_blocks(filepath, {
+            "track": "job",
+            "fit": {"identity_position": "independent-engineer"},
+            "submission": {"blocks_used": {"custom": "some/custom-block"}},
+        })
+        assert result is False
+    finally:
+        filepath.unlink()
+
+
+def test_enrich_blocks_skips_grant():
+    """Grant entries should not get auto-blocks (only jobs)."""
+    filepath = _make_temp_yaml(SAMPLE_GRANT_WITH_IDENTITY)
+    try:
+        result = enrich_blocks(filepath, {
+            "track": "grant",
+            "fit": {"identity_position": "systems-artist"},
+            "submission": {"blocks_used": {}},
+        })
+        assert result is False
+    finally:
+        filepath.unlink()
+
+
+def test_enrich_blocks_dry_run():
+    """Dry run should return True but not modify the file."""
+    filepath = _make_temp_yaml(SAMPLE_JOB_WITH_IDENTITY)
+    try:
+        result = enrich_blocks(filepath, {
+            "track": "job",
+            "fit": {"identity_position": "independent-engineer"},
+            "submission": {"blocks_used": {}},
+        }, dry_run=True)
+        assert result is True
+        content = filepath.read_text()
+        assert "blocks_used: {}" in content  # unchanged
+    finally:
+        filepath.unlink()
+
+
+def test_enrich_blocks_updates_last_touched():
+    """Blocks enrichment should update last_touched."""
+    filepath = _make_temp_yaml(SAMPLE_JOB_WITH_IDENTITY)
+    try:
+        enrich_blocks(filepath, {
+            "track": "job",
+            "fit": {"identity_position": "independent-engineer"},
+            "submission": {"blocks_used": {}},
+        })
+        content = filepath.read_text()
+        assert date.today().isoformat() in content
+    finally:
+        filepath.unlink()
+
+
+def test_enrich_blocks_skips_unknown_identity():
+    """Job with unrecognized identity_position should not get blocks."""
+    filepath = _make_temp_yaml(SAMPLE_JOB)
+    try:
+        result = enrich_blocks(filepath, {
+            "track": "job",
+            "fit": {"identity_position": "unknown-position"},
+            "submission": {"blocks_used": {}},
+        })
+        assert result is False
+    finally:
+        filepath.unlink()
+
+
+# --- detect_gaps with blocks ---
+
+
+def test_detect_gaps_includes_blocks_for_job():
+    """Job entry with empty blocks and known identity should have blocks gap."""
+    entry = {
+        "id": "test-job",
+        "track": "job",
+        "fit": {"identity_position": "independent-engineer"},
+        "submission": {"materials_attached": [], "blocks_used": {}, "variant_ids": {}},
+    }
+    gaps = detect_gaps(entry)
+    assert "blocks" in gaps
+
+
+def test_detect_gaps_no_blocks_for_grant():
+    """Grant entry should not have blocks gap (blocks enrichment is job-only)."""
+    entry = {
+        "id": "test-grant",
+        "track": "grant",
+        "fit": {"identity_position": "systems-artist"},
+        "submission": {"materials_attached": [], "blocks_used": {}, "variant_ids": {}},
+    }
+    gaps = detect_gaps(entry)
+    assert "blocks" not in gaps
+
+
+def test_detect_gaps_no_blocks_when_populated():
+    """Job entry with blocks already populated should not have blocks gap."""
+    entry = {
+        "id": "test-job",
+        "track": "job",
+        "fit": {"identity_position": "independent-engineer"},
+        "submission": {
+            "materials_attached": [],
+            "blocks_used": {"framing": "framings/independent-engineer"},
+            "variant_ids": {},
+        },
+    }
+    gaps = detect_gaps(entry)
+    assert "blocks" not in gaps
+
+
+def test_job_blocks_by_identity_keys():
+    """JOB_BLOCKS_BY_IDENTITY should cover the same identities as RESUME_BY_IDENTITY."""
+    assert set(JOB_BLOCKS_BY_IDENTITY.keys()) == set(RESUME_BY_IDENTITY.keys())

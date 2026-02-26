@@ -44,7 +44,7 @@ TARGETS = {
 
 # Funnel stages in order
 FUNNEL_STAGES = [
-    "research", "qualified", "drafting", "staged",
+    "research", "qualified", "drafting", "staged", "deferred",
     "submitted", "acknowledged", "interview", "outcome",
 ]
 

@@ -18,7 +18,7 @@ amount:
   type: salary
   benefits_cliff_note: null
 fit:
-  score: 5.2
+  score: 5.0
   identity_position: independent-engineer
   framing: Independent engineer with testing infrastructure expertise — 3.6K test files,
     85% coverage on flagships, evaluation-adjacent methodology
@@ -30,13 +30,18 @@ fit:
     evidence_match: 4
     track_record_fit: 3
     financial_alignment: 7
-    effort_to_value: 7
+    effort_to_value: 9
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 6
 submission:
   effort_level: complex
-  blocks_used: {}
+  blocks_used: 
+    framing: framings/independent-engineer
+    evidence: evidence/differentiators
+    work_samples: evidence/work-samples
+    credentials: pitches/credentials-creative-tech
+    methodology: methodology/ai-conductor
   variant_ids: 
     cover_letter: cover-letters/openai-se-applied-evals
   materials_attached:
@@ -72,7 +77,7 @@ notes: |
   infrastructure (3.6K test files, 85% coverage) is evaluation-adjacent but not evaluation
   work. Limited ML knowledge (acknowledged in covenant-ark Section J) is a hard gap. Lowest
   mission alignment and strategic value of the job group. Effort better redirected to Tier 1-2.
-last_touched: "2026-02-24"
+last_touched: "2026-02-26"
 withdrawal_reason:
   reason: effort_too_high
   detail: Complex effort, poor fit score — withdrawn during emergency triage sprint

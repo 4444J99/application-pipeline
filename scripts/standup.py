@@ -79,7 +79,7 @@ def section_health(entries: list[dict]) -> dict:
         print("   Days since last submission: NEVER (0 submissions)")
     print()
 
-    status_order = ["research", "qualified", "drafting", "staged",
+    status_order = ["research", "qualified", "drafting", "staged", "deferred",
                     "submitted", "acknowledged", "interview", "outcome"]
     print("   Status breakdown:")
     for s in status_order:
@@ -454,7 +454,50 @@ def section_replenish(entries: list[dict]):
 
 
 # ---------------------------------------------------------------------------
-# Section 7: Session Log
+# Section 7: Deferred Entries
+# ---------------------------------------------------------------------------
+
+def section_deferred(entries: list[dict]):
+    """Show entries with status=deferred and their resume dates."""
+    deferred = [e for e in entries if e.get("status") == "deferred"]
+
+    print("7. DEFERRED ENTRIES")
+
+    if not deferred:
+        print("   No deferred entries.")
+        print()
+        return
+
+    today = date.today()
+    print(f"   {len(deferred)} entry(ies) deferred (blocked by external factors):")
+    for e in deferred:
+        name = e.get("name", e.get("id", "?"))
+        deferral = e.get("deferral", {})
+        reason = deferral.get("reason", "unknown") if isinstance(deferral, dict) else "unknown"
+        resume_date_str = deferral.get("resume_date") if isinstance(deferral, dict) else None
+        note = deferral.get("note", "") if isinstance(deferral, dict) else ""
+
+        resume_info = ""
+        if resume_date_str:
+            rd = parse_date(resume_date_str)
+            if rd:
+                d = (rd - today).days
+                if d > 0:
+                    resume_info = f" — resumes in {d}d ({resume_date_str})"
+                elif d == 0:
+                    resume_info = f" — RESUME TODAY ({resume_date_str})"
+                else:
+                    resume_info = f" — PAST RESUME DATE ({resume_date_str}, {abs(d)}d ago)"
+
+        print(f"     {name} [{reason}]{resume_info}")
+        if note:
+            print(f"       {note}")
+
+    print()
+
+
+# ---------------------------------------------------------------------------
+# Section 8: Session Log
 # ---------------------------------------------------------------------------
 
 def section_log(health_stats: dict, stale_stats: dict, plan_stats: dict):
@@ -494,7 +537,7 @@ def section_log(health_stats: dict, stale_stats: dict, plan_stats: dict):
     with open(STANDUP_LOG, "w") as f:
         yaml.dump(log_data, f, default_flow_style=False, sort_keys=False)
 
-    print("7. SESSION LOG")
+    print("8. SESSION LOG")
     print(f"   Logged to {STANDUP_LOG.relative_to(REPO_ROOT)}")
     print()
 
@@ -534,6 +577,7 @@ SECTIONS = {
     "outreach": "Outreach suggestions per target",
     "practices": "Context-sensitive best practice reminders",
     "replenish": "Pipeline replenishment alerts",
+    "deferred": "Deferred entries awaiting external unblock",
     "log": "Append session record to standup-log.yaml",
     "jobs": "Job pipeline status",
     "opportunities": "Opportunity pipeline (grants/residencies/prizes/writing)",
@@ -562,7 +606,7 @@ def section_jobs(entries: list[dict]):
 
     # Show counts
     print(f"   Total job entries: {len(job_entries)}")
-    status_order = ["research", "qualified", "drafting", "staged",
+    status_order = ["research", "qualified", "drafting", "staged", "deferred",
                     "submitted", "acknowledged", "interview", "outcome"]
     status_parts = []
     for s in status_order:
@@ -715,6 +759,8 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
         section_practices(entries, stale_stats)
     if section is None or section == "replenish":
         section_replenish(entries)
+    if section is None or section == "deferred":
+        section_deferred(entries)
     if do_log or section == "log":
         # Need all stats for logging
         if not health_stats:

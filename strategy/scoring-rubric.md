@@ -100,6 +100,56 @@ Replaces intuitive single-number scoring with auditable, weighted composite.
 | 7–8 | Simple web form or email submission |
 | 9–10 | One-click, already staged, or pure paste-from-blocks |
 
+## Job Rubric
+
+Job applications use a separate weight distribution that emphasizes human-judgment dimensions (75% vs 60% for creative). This is necessary because auto-derived dimensions (financial, effort, deadline, portal) are nearly identical across auto-sourced job entries and don't differentiate between them. The title-based role fit is the primary differentiating signal.
+
+### Job Weights
+
+| Dimension | Weight | What it measures (job context) |
+|-----------|--------|-------------------------------|
+| Mission Alignment | 35% | Role matches professional identity (role fit) |
+| Evidence Match | 25% | Can demonstrate specific technical skills |
+| Track Record Fit | 15% | Background makes you competitive |
+| Strategic Value | 10% | Company prestige + career trajectory value |
+| Financial Alignment | 5% | Compensation adequacy |
+| Effort-to-Value | 5% | Application effort |
+| Deadline Feasibility | 3% | Urgency |
+| Portal Friction | 2% | Portal complexity |
+
+**Total: 100%**
+
+### Job Qualification Threshold
+
+- **Creative entries** (grant, prize, fellowship, residency, program, writing, emergency, consulting): **5.0**
+- **Job entries**: **5.5**
+
+The higher job threshold accounts for the wider score spread from job weights. With creative weights, most jobs compressed into a narrow 4.0–6.9 band. With job weights and raised tier ceilings, the spread widens to ~3.6–8.5+, making 5.5 an effective cut: tier-1 and tier-2 roles pass, tier-3 and tier-4 roles are skipped.
+
+### Role Fit Tiers
+
+Title-based role-fit estimation for auto-sourced job entries. Blocks are now wired to jobs via `enrich.py --blocks`, which enables evidence bonuses in scoring.
+
+| Tier | Mission | Evidence | Track Record | Example |
+|------|---------|----------|-------------|---------|
+| Tier-1 (strong) | 9 | 9 | 7 | DevEx, Agent SDK, Claude Code, DevRel |
+| Tier-2 (moderate) | 7 | 6 | 5 | Software Engineer, Full Stack, Platform |
+| Tier-3 (weak) | 5 | 4 | 3 | Forward Deployed, Applied AI, Growth |
+| Tier-4 (poor) | 3 | 2 | 2 | ML Engineer, iOS, Security, Mobile |
+
+### Why Two Rubrics
+
+The original creative rubric was designed for grants and residencies where:
+- `financial_alignment` measures benefits-cliff risk (will this push me off Medicaid?)
+- `effort_to_value` measures blocks coverage (how many reusable narrative blocks are ready?)
+- The 60/40 human/auto split provides good differentiation
+
+For jobs, these dimensions behave completely differently:
+- All auto-sourced jobs with unknown salary get the same `financial_alignment` score (6)
+- The auto-derived 40% becomes nearly identical across all jobs, compressing scores
+
+The job rubric fixes this by shifting weight to the dimensions that actually differentiate: role fit (mission_alignment), skills match (evidence_match), and background competitiveness (track_record_fit). Additionally, `enrich.py --blocks` wires identity-matched blocks to job entries, enabling the evidence coverage bonus in `effort_to_value` and the blocks bonus in `estimate_human_dimensions`.
+
 ## Composite Score Calculation
 
 ```

@@ -62,11 +62,11 @@ LEGACY_ID_MAP = {
 }
 
 VALID_TRACKS = {"grant", "residency", "job", "fellowship", "writing", "emergency", "prize", "program", "consulting"}
-VALID_STATUSES = {"research", "qualified", "drafting", "staged", "submitted", "acknowledged", "interview", "outcome"}
+VALID_STATUSES = {"research", "qualified", "drafting", "staged", "deferred", "submitted", "acknowledged", "interview", "outcome"}
 ACTIONABLE_STATUSES = {"research", "qualified", "drafting", "staged"}
 
 STATUS_ORDER = [
-    "research", "qualified", "drafting", "staged",
+    "research", "qualified", "drafting", "staged", "deferred",
     "submitted", "acknowledged", "interview", "outcome",
 ]
 
@@ -81,9 +81,10 @@ EFFORT_MINUTES = {
 # Single source of truth — imported by validate.py and advance.py.
 VALID_TRANSITIONS = {
     "research": {"qualified", "withdrawn"},
-    "qualified": {"drafting", "staged", "withdrawn"},
-    "drafting": {"staged", "qualified", "withdrawn"},
-    "staged": {"submitted", "drafting", "withdrawn"},
+    "qualified": {"drafting", "staged", "deferred", "withdrawn"},
+    "drafting": {"staged", "qualified", "deferred", "withdrawn"},
+    "staged": {"submitted", "drafting", "deferred", "withdrawn"},
+    "deferred": {"staged", "qualified", "withdrawn"},
     "submitted": {"acknowledged", "interview", "outcome", "withdrawn"},
     "acknowledged": {"interview", "outcome", "withdrawn"},
     "interview": {"outcome", "withdrawn"},

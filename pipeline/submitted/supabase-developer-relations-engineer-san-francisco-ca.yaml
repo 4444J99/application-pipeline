@@ -16,7 +16,7 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 7.0
+  score: 7.5
   identity_position: independent-engineer
   framing: 'Developer relations trifecta: 103 public repos demonstrating engineering
     credibility, 810K+ words demonstrating communication range, and 11 years teaching
@@ -26,13 +26,18 @@ fit:
     evidence_match: 6
     track_record_fit: 8
     financial_alignment: 6
-    effort_to_value: 5
+    effort_to_value: 7
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
 submission:
   effort_level: standard
-  blocks_used: {}
+  blocks_used: 
+    framing: framings/independent-engineer
+    evidence: evidence/differentiators
+    work_samples: evidence/work-samples
+    credentials: pitches/credentials-creative-tech
+    methodology: methodology/ai-conductor
   variant_ids:
     cover_letter: cover-letters/supabase-developer-relations-engineer-san-francisco-ca-alchemized
   materials_attached:
@@ -50,5 +55,5 @@ tags:
 - auto-sourced
 - curated-fit
 source: source_jobs.py
-last_touched: '2026-02-25'
+last_touched: "2026-02-26"
 notes: 'Location: Remote — listing expired August 2025, role no longer open'

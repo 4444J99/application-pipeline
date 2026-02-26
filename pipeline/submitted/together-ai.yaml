@@ -30,13 +30,18 @@ fit:
     evidence_match: 5
     track_record_fit: 5
     financial_alignment: 7
-    effort_to_value: 7
+    effort_to_value: 9
     strategic_value: 5
     deadline_feasibility: 9
     portal_friction: 5
 submission:
   effort_level: complex
-  blocks_used: {}
+  blocks_used: 
+    framing: framings/independent-engineer
+    evidence: evidence/differentiators
+    work_samples: evidence/work-samples
+    credentials: pitches/credentials-creative-tech
+    methodology: methodology/ai-conductor
   variant_ids: 
     cover_letter: cover-letters/together-ai-lead-dx-documentation
   materials_attached:
@@ -73,4 +78,4 @@ notes: |
   The DX role values someone who makes complex systems understandable — that's what the
   essays and teaching demonstrate.
   Gap to bridge: "Lead" implies team management experience, which is missing.
-last_touched: '2026-02-25'
+last_touched: "2026-02-26"

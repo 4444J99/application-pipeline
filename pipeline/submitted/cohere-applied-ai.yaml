@@ -18,7 +18,7 @@ amount:
   type: salary
   benefits_cliff_note: null
 fit:
-  score: 5.8
+  score: 5.9
   identity_position: independent-engineer
   framing: Independent engineer with agentic workflow infrastructure — agentic-titan
     (1,095 tests), multi-agent orchestration, 94 CI/CD pipelines
@@ -30,13 +30,18 @@ fit:
     evidence_match: 5
     track_record_fit: 4
     financial_alignment: 6
-    effort_to_value: 5
+    effort_to_value: 7
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
 submission:
   effort_level: complex
-  blocks_used: {}
+  blocks_used: 
+    framing: framings/independent-engineer
+    evidence: evidence/differentiators
+    work_samples: evidence/work-samples
+    credentials: pitches/credentials-creative-tech
+    methodology: methodology/ai-conductor
   variant_ids:
     cover_letter: cover-letters/cohere-applied-ai-agentic-workflows
   materials_attached:
@@ -73,4 +78,4 @@ notes: |
   18 development phases — exact domain match. Role title says "agentic workflows" and
   agentic-titan IS an agentic workflow framework.
   Gap to bridge: Track record at 4 is modest. No enterprise deployment of agentic systems.
-last_touched: "2026-02-24"
+last_touched: "2026-02-26"

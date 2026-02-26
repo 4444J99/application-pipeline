@@ -16,20 +16,25 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 3.2
+  score: 3.9
   identity_position: independent-engineer
   dimensions:
-    mission_alignment: 1
-    evidence_match: 1
-    track_record_fit: 1
+    mission_alignment: 3
+    evidence_match: 3
+    track_record_fit: 2
     financial_alignment: 6
-    effort_to_value: 5
+    effort_to_value: 7
     strategic_value: 8
     deadline_feasibility: 9
     portal_friction: 5
 submission:
   effort_level: standard
-  blocks_used: {}
+  blocks_used: 
+    framing: framings/independent-engineer
+    evidence: evidence/differentiators
+    work_samples: evidence/work-samples
+    credentials: pitches/credentials-creative-tech
+    methodology: methodology/ai-conductor
   variant_ids: {}
   materials_attached:
   - resumes/independent-engineer-resume.html
@@ -44,5 +49,5 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-02-25'
+last_touched: "2026-02-26"
 notes: 'Location: San Francisco, CA'

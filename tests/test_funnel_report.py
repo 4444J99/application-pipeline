@@ -40,8 +40,8 @@ def test_targets_required_keys():
 
 
 def test_funnel_stages_count():
-    """Should have 8 stages."""
-    assert len(FUNNEL_STAGES) == 8
+    """Should have 9 stages (including deferred)."""
+    assert len(FUNNEL_STAGES) == 9
 
 
 def test_funnel_stages_ordered():
@@ -69,8 +69,8 @@ def test_stage_index_unknown():
 
 
 def test_stage_index_submitted():
-    """Submitted should be index 4."""
-    assert get_stage_index("submitted") == 4
+    """Submitted should be index 5 (after deferred)."""
+    assert get_stage_index("submitted") == 5
 
 
 # --- _get_dimension_value ---

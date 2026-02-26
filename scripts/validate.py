@@ -14,7 +14,7 @@ from pipeline_lib import (
 
 REQUIRED_FIELDS = {"id", "name", "track", "status"}
 VALID_OUTCOMES = {"accepted", "rejected", "withdrawn", "expired", None}
-VALID_DEADLINE_TYPES = {"hard", "rolling", "window", "tba"}
+VALID_DEADLINE_TYPES = {"hard", "rolling", "window", "tba", "fixed"}
 VALID_PORTALS = {"submittable", "slideroom", "email", "custom", "web", "greenhouse", "workable", "lever", "ashby", "smartrecruiters"}
 VALID_AMOUNT_TYPES = {"lump_sum", "stipend", "salary", "fee", "in_kind", "variable"}
 VALID_POSITIONS = {"systems-artist", "creative-technologist", "educator", "community-practitioner", "independent-engineer"}
@@ -35,6 +35,10 @@ VALID_PORTAL_FIELD_FORMATS = {"text", "textarea", "file_upload", "url", "dropdow
 VALID_WITHDRAWAL_REASONS = {
     "missed_deadline", "low_fit", "effort_too_high", "duplicate",
     "ineligible", "strategic_shift", "personal", "other",
+}
+VALID_DEFERRAL_REASONS = {
+    "portal_paused", "cycle_not_open", "pending_materials",
+    "external_dependency", "strategic_hold",
 }
 
 def _reachable_statuses(from_status: str) -> set[str]:
@@ -261,6 +265,29 @@ def validate_entry(filepath: Path) -> list[str]:
                                 f"portal_fields.fields[{i}].format '{fmt}' invalid "
                                 f"(valid: {VALID_PORTAL_FIELD_FORMATS})"
                             )
+
+    # Deferral field validation
+    deferral = data.get("deferral")
+    status = data.get("status")
+    if status == "deferred" and deferral is None:
+        errors.append("Status is 'deferred' but no 'deferral' field present (recommended)")
+    if deferral is not None:
+        if not isinstance(deferral, dict):
+            errors.append("deferral must be a mapping")
+        else:
+            reason = deferral.get("reason")
+            if reason and reason not in VALID_DEFERRAL_REASONS:
+                errors.append(
+                    f"deferral.reason '{reason}' invalid "
+                    f"(valid: {VALID_DEFERRAL_REASONS})"
+                )
+            resume_date = deferral.get("resume_date")
+            if resume_date is not None:
+                from datetime import datetime
+                try:
+                    datetime.strptime(str(resume_date), "%Y-%m-%d")
+                except ValueError:
+                    errors.append(f"Invalid deferral.resume_date format: '{resume_date}' (expected YYYY-MM-DD)")
 
     # Withdrawal reason validation
     withdrawal = data.get("withdrawal_reason")
