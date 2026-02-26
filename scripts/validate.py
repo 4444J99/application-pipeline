@@ -7,7 +7,7 @@ from pathlib import Path
 import yaml
 
 from pipeline_lib import (
-    REPO_ROOT, ALL_PIPELINE_DIRS as PIPELINE_DIRS,
+    REPO_ROOT, ALL_PIPELINE_DIRS_WITH_POOL as PIPELINE_DIRS,
     VALID_TRACKS, VALID_STATUSES, VALID_TRANSITIONS,
     detect_portal,
 )

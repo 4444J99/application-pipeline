@@ -18,8 +18,12 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 PIPELINE_DIR_ACTIVE = REPO_ROOT / "pipeline" / "active"
 PIPELINE_DIR_SUBMITTED = REPO_ROOT / "pipeline" / "submitted"
 PIPELINE_DIR_CLOSED = REPO_ROOT / "pipeline" / "closed"
+PIPELINE_DIR_RESEARCH_POOL = REPO_ROOT / "pipeline" / "research_pool"
 
 ALL_PIPELINE_DIRS = [PIPELINE_DIR_ACTIVE, PIPELINE_DIR_SUBMITTED, PIPELINE_DIR_CLOSED]
+
+# Includes research pool — use when scripts need the full dataset (scoring, validation, analytics)
+ALL_PIPELINE_DIRS_WITH_POOL = ALL_PIPELINE_DIRS + [PIPELINE_DIR_RESEARCH_POOL]
 
 BLOCKS_DIR = REPO_ROOT / "blocks"
 VARIANTS_DIR = REPO_ROOT / "variants"
@@ -192,7 +196,7 @@ def load_entries(
 
 def load_entry_by_id(entry_id: str) -> tuple[Path | None, dict | None]:
     """Load a single pipeline entry by ID. Returns (filepath, data) or (None, None)."""
-    for pipeline_dir in ALL_PIPELINE_DIRS:
+    for pipeline_dir in ALL_PIPELINE_DIRS_WITH_POOL:
         filepath = pipeline_dir / f"{entry_id}.yaml"
         if filepath.exists():
             with open(filepath) as f:

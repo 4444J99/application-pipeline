@@ -15,7 +15,7 @@ from collections import Counter
 from datetime import date, timedelta
 
 from pipeline_lib import (
-    SIGNALS_DIR, STATUS_ORDER,
+    SIGNALS_DIR, STATUS_ORDER, ALL_PIPELINE_DIRS_WITH_POOL,
     load_entries, parse_date, get_effort, get_deadline, days_until,
     ACTIONABLE_STATUSES,
 )
@@ -285,7 +285,7 @@ def main():
                         help="Write report to signals/patterns.md")
     args = parser.parse_args()
 
-    entries = load_entries()
+    entries = load_entries(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
     if not entries:
         print("No pipeline entries found.")
         sys.exit(1)

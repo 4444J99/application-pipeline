@@ -26,7 +26,7 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
-    ALL_PIPELINE_DIRS,
+    ALL_PIPELINE_DIRS_WITH_POOL,
     SIGNALS_DIR,
     load_entries,
     parse_date,
@@ -50,8 +50,8 @@ FUNNEL_STAGES = [
 
 
 def load_all_entries() -> list[dict]:
-    """Load all pipeline entries across all directories."""
-    return load_entries(include_filepath=True)
+    """Load all pipeline entries across all directories (including research pool)."""
+    return load_entries(dirs=ALL_PIPELINE_DIRS_WITH_POOL, include_filepath=True)
 
 
 def load_conversion_log() -> list[dict]:

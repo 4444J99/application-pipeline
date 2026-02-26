@@ -16,11 +16,15 @@ import yaml
 
 from pipeline_lib import (
     ALL_PIPELINE_DIRS,
+    ALL_PIPELINE_DIRS_WITH_POOL,
+    PIPELINE_DIR_ACTIVE,
+    PIPELINE_DIR_RESEARCH_POOL,
     BLOCKS_DIR,
     load_entries as _load_entries_raw,
     load_entry_by_id,
     load_profile,
     parse_date, days_until,
+    update_yaml_field,
 )
 
 # Dimension weights (must sum to 1.0)
@@ -515,10 +519,11 @@ def _tr_differentiators_coverage(entry: dict, profile: dict | None) -> tuple[int
     return 0, f"{len(highlights)} evidence_highlights < 3 -> 0"
 
 
-def load_entries(entry_id: str | None = None) -> list[tuple[Path, dict]]:
+def load_entries(entry_id: str | None = None, include_pool: bool = False) -> list[tuple[Path, dict]]:
     """Load pipeline entries as (filepath, data) tuples.
 
     If entry_id given, load only that one.
+    If include_pool, also scan research_pool/ (for --all scoring).
     """
     if entry_id:
         filepath, data = load_entry_by_id(entry_id)
@@ -526,7 +531,8 @@ def load_entries(entry_id: str | None = None) -> list[tuple[Path, dict]]:
             return [(filepath, data)]
         return []
 
-    entries = _load_entries_raw(include_filepath=True)
+    dirs = ALL_PIPELINE_DIRS_WITH_POOL if include_pool else None
+    entries = _load_entries_raw(dirs=dirs, include_filepath=True)
     return [(e.pop("_filepath"), e) for e in entries if "_filepath" in e]
 
 
@@ -1064,6 +1070,72 @@ def run_qualify(entries: list[tuple[Path, dict]]):
     print(f"Total: {total_apply} APPLY | {total_skip} SKIP")
 
 
+def run_auto_qualify(dry_run: bool = False):
+    """Batch-advance qualifying research_pool entries to qualified in active/.
+
+    Loads entries from research_pool/, runs qualify() on each, and moves
+    qualifying entries back to active/ with status=qualified.
+    """
+    import shutil
+
+    pool_entries = _load_entries_raw(
+        dirs=[PIPELINE_DIR_RESEARCH_POOL], include_filepath=True,
+    )
+    if not pool_entries:
+        print("No entries in research_pool/.")
+        return
+
+    # Pre-load all raw entries for cross-pipeline scoring signals
+    all_raw = _load_entries_raw(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
+
+    qualified_list = []
+    skipped = 0
+
+    for entry in pool_entries:
+        filepath = entry.get("_filepath")
+        if not filepath:
+            continue
+        entry_id = entry.get("id", filepath.stem)
+        should_apply, reason = qualify(entry, all_raw)
+
+        if should_apply:
+            qualified_list.append((filepath, entry_id, entry, reason))
+        else:
+            skipped += 1
+
+    print(f"Research pool: {len(pool_entries)} entries")
+    print(f"Qualify: {len(qualified_list)} | Skip: {skipped}")
+    print()
+
+    if not qualified_list:
+        print("No entries meet the qualification threshold.")
+        return
+
+    PIPELINE_DIR_ACTIVE.mkdir(parents=True, exist_ok=True)
+    moved = 0
+    for filepath, entry_id, entry, reason in qualified_list:
+        dest = PIPELINE_DIR_ACTIVE / filepath.name
+
+        if dry_run:
+            score = entry.get("fit", {}).get("score", 0) if isinstance(entry.get("fit"), dict) else 0
+            print(f"  [dry-run] {entry_id} ({reason}) -> active/ as qualified")
+        else:
+            # Update status to qualified in the file
+            content = filepath.read_text()
+            content = update_yaml_field(content, "status", "qualified")
+            filepath.write_text(content)
+            # Move to active/
+            shutil.move(str(filepath), str(dest))
+            print(f"  {entry_id} -> active/ (qualified, {reason})")
+        moved += 1
+
+    print(f"\n{'=' * 50}")
+    if dry_run:
+        print(f"Would auto-qualify {moved} entries (dry run)")
+    else:
+        print(f"Auto-qualified {moved} entries to active/")
+
+
 RUBRIC_DESCRIPTIONS = {
     "mission_alignment": {
         (1, 2): "Work doesn't fit their stated mission",
@@ -1221,14 +1293,16 @@ def main():
                         help="Show detailed score derivation for a single entry (requires --target)")
     parser.add_argument("--review-compressed", action="store_true",
                         help="List entries in compressed score band for manual dimension review")
+    parser.add_argument("--auto-qualify", action="store_true",
+                        help="Batch-advance qualifying research_pool entries to active/qualified")
     parser.add_argument("--dry-run", action="store_true",
                         help="Show scores without writing changes")
     parser.add_argument("--verbose", "-v", action="store_true",
                         help="Show per-dimension breakdowns")
     args = parser.parse_args()
 
-    if not args.target and not args.all and not args.qualify and not args.explain and not args.review_compressed:
-        parser.error("Specify --target <id>, --all, --qualify, --explain, or --review-compressed")
+    if not args.target and not args.all and not args.qualify and not args.explain and not args.review_compressed and not args.auto_qualify:
+        parser.error("Specify --target <id>, --all, --qualify, --explain, --review-compressed, or --auto-qualify")
 
     if args.explain and not args.target:
         parser.error("--explain requires --target <id>")
@@ -1237,17 +1311,24 @@ def main():
     if args.qualify and not args.target:
         args.all = True
 
+    # --auto-qualify is a standalone command
+    if args.auto_qualify:
+        run_auto_qualify(dry_run=args.dry_run)
+        return
+
     # --review-compressed implies --all
     if args.review_compressed:
         args.all = True
 
-    entries = load_entries(args.target if args.target else None)
+    # --all includes research pool for full-dataset scoring
+    include_pool = args.all and not args.target
+    entries = load_entries(args.target if args.target else None, include_pool=include_pool)
     if not entries:
         print(f"No entries found.", file=sys.stderr)
         sys.exit(1)
 
     # Pre-load all raw entries for cross-pipeline signals (track experience)
-    all_raw = _load_entries_raw()
+    all_raw = _load_entries_raw(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
 
     if args.explain:
         _, data = entries[0]

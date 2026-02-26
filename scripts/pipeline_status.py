@@ -7,7 +7,8 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from pipeline_lib import (
-    REPO_ROOT, STATUS_ORDER, load_entries, parse_datetime, format_amount,
+    REPO_ROOT, STATUS_ORDER, ALL_PIPELINE_DIRS_WITH_POOL,
+    load_entries, parse_datetime, format_amount,
 )
 
 
@@ -275,7 +276,7 @@ def main():
                         help="Show top N actionable US-accessible entries by fit score")
     args = parser.parse_args()
 
-    entries = load_entries()
+    entries = load_entries(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
     if not entries:
         print("No pipeline entries found.")
         sys.exit(1)

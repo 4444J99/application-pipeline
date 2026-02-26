@@ -30,6 +30,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pipeline_lib import (
     PIPELINE_DIR_ACTIVE,
     ALL_PIPELINE_DIRS,
+    ALL_PIPELINE_DIRS_WITH_POOL,
     load_entries,
 )
 
@@ -351,8 +352,8 @@ def _slugify(text: str) -> str:
 
 
 def _get_existing_ids() -> set[str]:
-    """Get IDs and application URLs of existing pipeline entries."""
-    entries = load_entries()
+    """Get IDs and application URLs of existing pipeline entries (including research pool)."""
+    entries = load_entries(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
     ids = set()
     for e in entries:
         if e.get("id"):
