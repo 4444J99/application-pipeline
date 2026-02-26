@@ -35,7 +35,7 @@ from pipeline_lib import (
 
 WORK_DIR = Path(__file__).resolve().parent / ".alchemize-work"
 RESUMES_DIR = MATERIALS_DIR / "resumes"
-CURRENT_BATCH = "batch-02"
+CURRENT_BATCH = "batch-03"
 
 BASE_RESUME_BY_IDENTITY = {
     "independent-engineer": RESUMES_DIR / "base" / "independent-engineer-resume.html",

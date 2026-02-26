@@ -48,6 +48,7 @@ Always apply one of the five canonical **Identity Positions** defined in `strate
 - **Lead with Numbers**: "103 repositories," "2,349 tests," "810K+ words."
 - **One Sentence, One Claim**: Maintain scannability for 60-second reviews.
 - **Preemptive Framing**: Address gaps (e.g., lack of awards) as deliberate trajectory.
+- **Tailored Resumes (Mandatory)**: NEVER use base resumes (`materials/resumes/base/`) for final submissions. Every target MUST have a tailored resume generated and stored in the current batch directory (e.g., `materials/resumes/batch-03/`). Update the pipeline entry to point to the tailored version.
 
 ### Technical Integrity
 - **YAML Schema**: Strictly follow `pipeline/_schema.yaml`.
