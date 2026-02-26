@@ -41,6 +41,15 @@ Use the repo-local virtualenv if present: `source .venv/bin/activate`.
 - PRs should include: summary of affected directories, rationale, commands run (`validate`/`pytest`), and sample output when script behavior changes.
 - Include screenshots only for UI/HTML changes (for example `materials/work-samples/interactive/`).
 
+## Narrative Infrastructure & Identity Positions
+Narratives are built using five canonical Identity Positions defined in `strategy/identity-positions.md`. Every application must align with one of these to ensure consistent storefront signal:
+
+1. **Independent Engineer**: For AI lab roles (Anthropic, OpenAI). Focus: Large-scale infra, testing discipline, "AI-conductor" methodology.
+2. **Systems Artist**: For art grants/residencies. Focus: Governance as artwork, systemic scale.
+3. **Educator**: For academic roles. Focus: Teaching complex systems at scale.
+4. **Creative Technologist**: For tech grants/consulting. Focus: AI orchestration, production-grade creative instruments.
+5. **Community Practitioner**: For identity-specific funding. Focus: Precarity-informed systemic practice.
+
 ## Security & Configuration Tips
 - Never commit secrets or local submission data (`.env`, `credentials.*`, `scripts/.submit-config.yaml`, `scripts/.*-answers/`, browser profiles).
 - Treat `materials/` and submission assets as sensitive; avoid unnecessary redistribution in PR discussions.

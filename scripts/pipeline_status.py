@@ -104,6 +104,42 @@ def print_rolling(entries: list[dict]):
         print(f"      Status: {status} | Fit: {score}/10 | Amount: {amount}")
 
 
+ACTIONABLE_STATUSES = {"research", "qualified", "drafting", "staged"}
+
+
+def print_top(entries: list[dict], n: int):
+    """Print top N actionable, US-accessible entries by fit score."""
+    filtered = []
+    for entry in entries:
+        if entry.get("status") not in ACTIONABLE_STATUSES:
+            continue
+        target = entry.get("target", {}) or {}
+        if target.get("location_class") == "international":
+            continue
+        fit = entry.get("fit", {})
+        score = fit.get("score", 0) if isinstance(fit, dict) else 0
+        researched = entry.get("timeline", {}).get("researched") or ""
+        filtered.append((score, str(researched), entry))
+
+    filtered.sort(key=lambda x: (x[0], x[1]), reverse=True)
+
+    print(f"{'=' * 72}")
+    print(f"TOP {n} ACTIONABLE ENTRIES (US-accessible, by fit score)")
+    print(f"{'=' * 72}")
+    print(f"\n  {'#':>3}  {'Score':>5}  {'Status':<10} {'Location':<14} {'Org':<20} Role")
+    print(f"  {'—'*3}  {'—'*5}  {'—'*10} {'—'*14} {'—'*20} {'—'*20}")
+
+    for i, (score, _researched, entry) in enumerate(filtered[:n], 1):
+        status = entry.get("status", "?")
+        target = entry.get("target", {}) or {}
+        loc = target.get("location_class", "unknown")
+        org = (target.get("organization") or "—")[:20]
+        name = entry.get("name", entry.get("id", "?"))
+        print(f"  {i:>3}  {score:>5}  {status:<10} {loc:<14} {org:<20} {name}")
+
+    print(f"\n  {len(filtered)} actionable US-accessible entries total\n")
+
+
 BENEFITS_THRESHOLDS = {
     "snap": {"limit": 20352, "program": "SNAP"},
     "medicaid": {"limit": 21597, "program": "Medicaid (NY)"},
@@ -235,12 +271,18 @@ def main():
                         help="Show benefits cliff analysis for in-flight entries")
     parser.add_argument("--write-index", action="store_true",
                         help="Write current summary to pipeline/INDEX.md")
+    parser.add_argument("--top", type=int, metavar="N",
+                        help="Show top N actionable US-accessible entries by fit score")
     args = parser.parse_args()
 
     entries = load_entries()
     if not entries:
         print("No pipeline entries found.")
         sys.exit(1)
+
+    if args.top:
+        print_top(entries, args.top)
+        return
 
     if args.write_index:
         write_index(entries)

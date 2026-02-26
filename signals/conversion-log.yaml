@@ -382,3 +382,18 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: anthropic-model-quality-software-engineer-claude-code
+  submitted: '2026-02-26'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/anthropic-model-quality-software-engineer-claude-code-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
