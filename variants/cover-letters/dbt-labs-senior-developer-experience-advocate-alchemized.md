@@ -1,3 +1,10 @@
+# Cover Letter: dbt Labs Senior Developer Experience Advocate
+
+**Role:** dbt Labs Senior Developer Experience Advocate
+**Apply:** https://job-boards.greenhouse.io/dbtlabsinc/jobs/4663992005
+
+---
+
 To the Developer Experience Team at dbt Labs,
 
 I am writing to apply for the Senior Developer Experience Advocate position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a deep, firsthand discipline for the "Agent-Human Hybrid" model of software development. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
