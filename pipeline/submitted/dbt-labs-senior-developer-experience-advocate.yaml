@@ -1,7 +1,7 @@
 id: dbt-labs-senior-developer-experience-advocate
 name: dbt Labs Senior Developer Experience Advocate
 track: job
-status: research
+status: submitted
 outcome: null
 target:
   organization: dbt Labs
@@ -57,4 +57,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-02-26'
+last_touched: "2026-02-26"
