@@ -276,7 +276,7 @@ def main():
             sys.exit(1)
         entries = [(args.target, entry)]
     else:
-        all_entries = load_entries()
+        all_entries = load_entries(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
         entries = [(e.get("id", "unknown"), e) for e in all_entries]
 
     # Analyze

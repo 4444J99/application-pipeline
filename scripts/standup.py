@@ -20,6 +20,7 @@ import yaml
 
 from pipeline_lib import (
     REPO_ROOT, PIPELINE_DIR_ACTIVE, PIPELINE_DIR_SUBMITTED, PIPELINE_DIR_CLOSED,
+    PIPELINE_DIR_RESEARCH_POOL,
     SIGNALS_DIR, ALL_PIPELINE_DIRS, ACTIONABLE_STATUSES, EFFORT_MINUTES,
     load_entries, parse_date, get_effort, get_score, get_deadline, days_until,
     update_yaml_field, update_last_touched as update_last_touched_content,
@@ -449,6 +450,14 @@ def section_replenish(entries: list[dict]):
     missing = desired_tracks - set(by_track.keys())
     if missing:
         print(f"   Gaps: no live entries in {', '.join(sorted(missing))}")
+
+    # Show research pool size
+    pool_entries = load_entries(dirs=[PIPELINE_DIR_RESEARCH_POOL])
+    if pool_entries:
+        pool_high = sum(1 for e in pool_entries if get_score(e) >= 7.0)
+        print(f"   Research pool: {len(pool_entries)} entries ({pool_high} scoring >= 7.0)")
+        if len(live) < REPLENISH_THRESHOLD and pool_high > 0:
+            print(f"   Tip: run `python scripts/score.py --auto-qualify --dry-run` to promote top entries")
 
     print()
 

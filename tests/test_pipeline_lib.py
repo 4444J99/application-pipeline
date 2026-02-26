@@ -7,7 +7,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from pipeline_lib import (
-    REPO_ROOT, ALL_PIPELINE_DIRS, BLOCKS_DIR, VARIANTS_DIR,
+    REPO_ROOT, ALL_PIPELINE_DIRS, ALL_PIPELINE_DIRS_WITH_POOL,
+    PIPELINE_DIR_RESEARCH_POOL, BLOCKS_DIR, VARIANTS_DIR,
     VALID_TRACKS, VALID_STATUSES, ACTIONABLE_STATUSES, STATUS_ORDER,
     VALID_TRANSITIONS, EFFORT_MINUTES, PROFILE_ID_MAP, LEGACY_ID_MAP,
     LEGACY_DIR, PROFILES_DIR,
@@ -518,3 +519,56 @@ def test_deferred_transitions_from():
 def test_deferred_transitions_to():
     """deferred can transition to staged, qualified, or withdrawn."""
     assert VALID_TRANSITIONS["deferred"] == {"staged", "qualified", "withdrawn"}
+
+
+# --- Research pool constants ---
+
+
+def test_research_pool_dir_constant():
+    """PIPELINE_DIR_RESEARCH_POOL points to the right path."""
+    assert PIPELINE_DIR_RESEARCH_POOL.name == "research_pool"
+    assert PIPELINE_DIR_RESEARCH_POOL.parent.name == "pipeline"
+
+
+def test_all_pipeline_dirs_does_not_include_pool():
+    """Default ALL_PIPELINE_DIRS must NOT include research_pool."""
+    assert PIPELINE_DIR_RESEARCH_POOL not in ALL_PIPELINE_DIRS
+
+
+def test_all_pipeline_dirs_with_pool_includes_pool():
+    """ALL_PIPELINE_DIRS_WITH_POOL must include research_pool."""
+    assert PIPELINE_DIR_RESEARCH_POOL in ALL_PIPELINE_DIRS_WITH_POOL
+
+
+def test_all_pipeline_dirs_with_pool_superset():
+    """WITH_POOL is a superset of the default dirs."""
+    for d in ALL_PIPELINE_DIRS:
+        assert d in ALL_PIPELINE_DIRS_WITH_POOL
+
+
+def test_default_load_entries_excludes_pool():
+    """Default load_entries() should NOT load research_pool entries."""
+    default_entries = load_entries()
+    pool_entries = load_entries(dirs=[PIPELINE_DIR_RESEARCH_POOL])
+
+    default_files = {e["_file"] for e in default_entries}
+    pool_files = {e["_file"] for e in pool_entries}
+
+    # No pool file should appear in default load
+    overlap = default_files & pool_files
+    assert len(overlap) == 0, (
+        f"Default load_entries() includes pool entries: {overlap}"
+    )
+
+
+def test_load_entries_with_pool_includes_pool():
+    """load_entries with ALL_PIPELINE_DIRS_WITH_POOL should include pool entries."""
+    all_entries = load_entries(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
+    pool_entries = load_entries(dirs=[PIPELINE_DIR_RESEARCH_POOL])
+
+    if pool_entries:
+        all_files = {e["_file"] for e in all_entries}
+        pool_files = {e["_file"] for e in pool_entries}
+        assert pool_files.issubset(all_files), (
+            "Pool entries missing from ALL_PIPELINE_DIRS_WITH_POOL load"
+        )

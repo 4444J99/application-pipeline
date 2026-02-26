@@ -29,16 +29,22 @@ fit:
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
+  framing: Independent engineer building production-grade AI orchestration and context-management
+    systems at institutional scale (103 repos, 2,349+ tests). Specialist in architecting
+    "Agentic Search" infrastructures that translate deep "Cathedral" corpuses into
+    high-signal "Storefront" insights.
 submission:
   effort_level: standard
-  blocks_used: 
+  blocks_used:
     framing: framings/independent-engineer
     evidence: evidence/differentiators
     work_samples: evidence/work-samples
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
-  variant_ids: {}
+  variant_ids:
+    cover_letter: cover-letters/notion-staff-software-engineer-ai-agentic-search-alchemized
   materials_attached:
+  - resumes/batch-03/notion-staff-software-engineer-ai-agentic-search/notion-staff-software-engineer-ai-agentic-search-resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
