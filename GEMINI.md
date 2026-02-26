@@ -49,6 +49,9 @@ Always apply one of the five canonical **Identity Positions** defined in `strate
 - **One Sentence, One Claim**: Maintain scannability for 60-second reviews.
 - **Preemptive Framing**: Address gaps (e.g., lack of awards) as deliberate trajectory.
 - **Tailored Resumes (Mandatory)**: NEVER use base resumes (`materials/resumes/base/`) for final submissions. Every target MUST have a tailored resume generated and stored in the current batch directory (e.g., `materials/resumes/batch-03/`). Update the pipeline entry to point to the tailored version.
+- **Completion Summaries (Mandatory)**: When finishing an application batch or role, you MUST provide:
+  1. The original Job Posting/Application URL.
+  2. Direct links to the tailored Resume (PDF), Cover Letter, and Answers files.
 
 ### Technical Integrity
 - **YAML Schema**: Strictly follow `pipeline/_schema.yaml`.
