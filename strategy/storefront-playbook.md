@@ -69,6 +69,11 @@ Every reviewer notices what's missing. Frame gaps as trajectory, not absence.
 
 *Why:* Unaddressed gaps let the reviewer fill in the worst explanation. A preemptive frame lets you choose the narrative.
 
+### Rule 7: Submission Depth & Tailoring
+
+1. **The "Why" Question**: For all "Why this organization?" or "Why this role?" questions, the response MUST be between 200-400 words. This ensures enough room to bridge your "Cathedral" (deep work) with their mission.
+2. **Mandatory Resume Tailoring**: Base resumes are templates only. Every submission requires a tailored version generated in the active batch directory (e.g., `batch-03/`). The pipeline YAML must point to the tailored PDF.
+
 ## The 60-Second Test
 
 Before submitting anything, apply this test:

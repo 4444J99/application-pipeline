@@ -720,6 +720,8 @@ def phase_synthesize(
         lines.append("  answer text here")
         lines.append("```")
         lines.append("")
+        lines.append("IMPORTANT: If there is a 'Why Anthropic?' or 'Why this role?' question, the answer MUST be between 200-400 words.")
+        lines.append("")
 
     lines.append("### IDENTITY_FRAMING")
     lines.append("A 1-2 sentence framing for this specific application (goes in pipeline YAML fit.framing).")
