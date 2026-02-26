@@ -1,3 +1,10 @@
+# Cover Letter: Cursor Software Engineer, DevEx
+
+**Role:** Cursor Software Engineer, DevEx
+**Apply:** https://jobs.ashbyhq.com/cursor/010063bd-6083-4fc0-a455-e6f0193b5347
+
+---
+
 To the DevEx Team at Cursor (Anysphere),
 
 I am writing to apply for the Software Engineer (Developer Experience) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a deep, firsthand discipline for the "Agent-Human Hybrid" model of software development. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
