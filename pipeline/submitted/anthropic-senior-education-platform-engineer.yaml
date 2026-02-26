@@ -1,7 +1,7 @@
 id: anthropic-senior-education-platform-engineer
 name: Anthropic Senior Education Platform Engineer
 track: job
-status: research
+status: submitted
 outcome: null
 target:
   organization: Anthropic
@@ -57,4 +57,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-02-26'
+last_touched: "2026-02-26"
