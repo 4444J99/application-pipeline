@@ -303,3 +303,18 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: awesome-foundation
+  submitted: '2026-02-25'
+  track: emergency
+  identity_position: community-practitioner
+  blocks_used:
+  - identity/2min
+  - projects/krypto-velamen
+  - pitches/gay-lesbian-review
+  - methodology/process-as-product
+  - evidence/work-samples
+  variant_id: variants/project-pitches/awesome-foundation-nyc.md
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
