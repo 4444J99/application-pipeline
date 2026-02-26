@@ -3,7 +3,7 @@
 
 import sys
 
-from pipeline_lib import SIGNALS_DIR, load_entries
+from pipeline_lib import SIGNALS_DIR, ALL_PIPELINE_DIRS_WITH_POOL, load_entries
 
 CONVERSION_LOG = SIGNALS_DIR / "conversion-log.yaml"
 
@@ -62,7 +62,7 @@ def print_report(title: str, groups: dict):
 
 
 def main():
-    entries = load_entries()
+    entries = load_entries(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
     if not entries:
         print("No pipeline entries found.")
         sys.exit(1)

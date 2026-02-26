@@ -25,6 +25,7 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
+    ALL_PIPELINE_DIRS_WITH_POOL,
     BLOCKS_DIR,
     REPO_ROOT,
     SIGNALS_DIR,
