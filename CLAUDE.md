@@ -11,7 +11,8 @@ Career application pipeline repo — personal infrastructure for managing grant,
 
 ## Architecture
 
-- `pipeline/` — One YAML file per application, organized into `active/`, `submitted/`, `closed/` subdirectories (schema in `_schema.yaml`)
+- `pipeline/` — One YAML file per application, organized into `active/`, `submitted/`, `closed/`, and `research_pool/` subdirectories (schema in `_schema.yaml`)
+  - `research_pool/` holds auto-sourced research-status entries, separated from actionable entries to keep `active/` lean (~25 files vs ~1000)
 - `blocks/` — Modular narrative building blocks with tiered depth (60s / 2min / 5min / cathedral)
 - `variants/` — A/B tracked material versions with outcome attribution (e.g. `cover-letters/`, `project-descriptions/`)
 - `materials/` — Raw materials (resumes, CVs, work samples, headshots)
@@ -75,9 +76,19 @@ python scripts/pipeline_status.py
 # Validate pipeline YAML
 python scripts/validate.py
 
+# Research pool management (archive research entries out of active/)
+python scripts/archive_research.py --report        # Show what would move
+python scripts/archive_research.py --dry-run        # Preview file moves
+python scripts/archive_research.py --yes             # Execute moves
+python scripts/archive_research.py --restore <id>    # Move entry back to active/
+
 # Scoring (8-dimension weighted rubric, see strategy/scoring-rubric.md)
 python scripts/score.py --target <target-id>  # Score single entry
 python scripts/score.py --all --dry-run        # Preview all scores
+
+# Auto-qualify: promote research_pool entries above threshold to active/qualified
+python scripts/score.py --auto-qualify --dry-run     # Preview which entries would qualify
+python scripts/score.py --auto-qualify --yes          # Execute promotion
 
 # Conversion analysis (basic report; see funnel_report.py for detailed breakdowns)
 python scripts/conversion_report.py

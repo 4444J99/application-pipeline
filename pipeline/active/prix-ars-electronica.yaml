@@ -21,7 +21,10 @@ fit:
   score: 7.8
   original_score: 8.3
   identity_position: systems-artist
-  framing: "Governance-as-spectacle: AI debate arena where philosophical combat becomes interactive art"
+  framing: Systems artist presenting the "ORGANVM Metasystem"—a 103-repository autonomous
+    infrastructure where governance is the primary medium. Redefining "Interactive
+    Art+" as the recursive dialogue between human intent, automated validation, and
+    agentic volume.
   lead_organs:
   - II
   - I
@@ -46,8 +49,9 @@ submission:
     tech_detail: projects/recursive-engine
     system_context: projects/organvm-system
   variant_ids:
-    cover_letter: cover-letters/grant-art-template
+    cover_letter: cover-letters/prix-ars-electronica-alchemized
   materials_attached:
+  - resumes/batch-03/prix-ars-electronica/prix-ars-electronica-resume.html
   - resumes/base/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -64,20 +68,22 @@ portal_fields:
     char_limit: 2000
     format: textarea
     required: true
-    note: "2,000 characters including spaces"
+    note: 2,000 characters including spaces
   - name: project_video
     format: url
     required: true
-    note: "~3 min video documentation"
+    note: ~3 min video documentation
   - name: project_images
     format: file_upload
-    file_types: ["jpg", "png"]
+    file_types:
+    - jpg
+    - png
     required: true
-    note: "Screenshots of arena, combat, voting"
+    note: Screenshots of arena, combat, voting
   - name: ai_disclosure
     format: textarea
     required: true
-    note: "AI usage disclosure required for all entries"
+    note: AI usage disclosure required for all entries
   - name: work_samples
     format: url
     required: false
@@ -86,15 +92,25 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-tags: ["prix-ars-2026", "interactive-art"]
+tags:
+- prix-ars-2026
+- interactive-art
 source: 04-application-tracker.md
-notes: |
-  DUAL SUBMISSION: Interactive Art+ category with AI Council Coliseum.
+notes: 'DUAL SUBMISSION: Interactive Art+ category with AI Council Coliseum.
+
   Sister entry: prix-ars-digital-humanity (Nexus Babel Alexandria).
+
   Jury: Jussi Angeslevä (computational fabrication), Paula Gaetano Adi
+
   (2025 Golden Nica, decolonial robotics), Aisling Murray (socially
+
   engaged art+tech), Julia Staudach (media art/NFT), Elliot Woods
+
   (200+ open source repos, Kimchi and Chips).
+
   Key risk: most IA+ winners have physical installations.
+
   Video is highest-impact element — demo loop of debate + combat + voting.
-last_touched: "2026-02-24"
+
+  '
+last_touched: "2026-02-26"
