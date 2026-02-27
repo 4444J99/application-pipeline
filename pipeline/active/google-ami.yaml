@@ -21,8 +21,10 @@ fit:
   score: 8.2
   original_score: 9.0
   identity_position: creative-technologist
-  framing: Creative technologist building experimental AI-assisted tools for artistic
-    creation
+  framing: Creative technologist presenting the "ORGANVM Metasystem"—a production-grade
+    AI orchestration framework designed to explore the frontier of human-agent creative
+    collaboration. Seeking to collaborate with Google AMI to build more steerable,
+    transparent, and beautiful AI-native cultural instruments.
   lead_organs:
   - I
   - III
@@ -45,9 +47,10 @@ submission:
     evidence: evidence/work-samples
     framing: framings/creative-technologist
     tech_detail: projects/recursive-engine
-  variant_ids: 
-    cover_letter: cover-letters/grant-art-template
-  materials_attached: 
+  variant_ids:
+    cover_letter: cover-letters/google-ami-alchemized
+  materials_attached:
+  - resumes/batch-03/google-ami/google-ami-resume.html
   - resumes/base/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -72,4 +75,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Watch for cycle opening. TBA deadline.
-last_touched: "2026-02-23"
+last_touched: "2026-02-27"
