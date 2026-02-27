@@ -64,6 +64,91 @@ def print_report(title: str, groups: dict):
         print(f"    Conversion: {rate}")
 
 
+def response_time_analysis(entries: list[dict]):
+    """Analyze response times by portal type and identity position."""
+    from datetime import date
+    from pipeline_lib import parse_date
+
+    print("\nRESPONSE TIME ANALYSIS")
+    print("-" * 40)
+
+    # Collect entries with response time data
+    by_portal: dict[str, list[int]] = {}
+    by_position: dict[str, list[int]] = {}
+    all_times = []
+
+    for entry in entries:
+        conversion = entry.get("conversion", {})
+        if not isinstance(conversion, dict):
+            continue
+
+        ttr = conversion.get("time_to_response_days")
+        if not ttr or not isinstance(ttr, (int, float)) or ttr <= 0:
+            continue
+
+        ttr = int(ttr)
+        all_times.append(ttr)
+
+        # By portal
+        target = entry.get("target", {})
+        portal = target.get("portal", "unknown") if isinstance(target, dict) else "unknown"
+        by_portal.setdefault(portal, []).append(ttr)
+
+        # By identity position
+        fit = entry.get("fit", {})
+        position = fit.get("identity_position", "unset") if isinstance(fit, dict) else "unset"
+        by_position.setdefault(position, []).append(ttr)
+
+    if not all_times:
+        # Show entries waiting without response
+        waiting = []
+        for entry in entries:
+            status = entry.get("status", "")
+            if status not in ("submitted", "acknowledged"):
+                continue
+            timeline = entry.get("timeline", {})
+            sub_date = parse_date(timeline.get("submitted")) if isinstance(timeline, dict) else None
+            if sub_date:
+                days_waiting = (date.today() - sub_date).days
+                waiting.append((days_waiting, entry))
+
+        if waiting:
+            waiting.sort(key=lambda x: -x[0])
+            print(f"  No response time data yet. {len(waiting)} entries awaiting response:")
+            for days, e in waiting[:5]:
+                name = e.get("name", e.get("id", "?"))
+                target = e.get("target", {})
+                portal = target.get("portal", "?") if isinstance(target, dict) else "?"
+                print(f"    {name} — {days}d waiting [{portal}]")
+                # Flag entries exceeding typical window
+                if days > 21:
+                    print(f"      !! Exceeds typical response window")
+        else:
+            print("  No response time data recorded yet.")
+        return
+
+    # Overall stats
+    avg = sum(all_times) / len(all_times)
+    sorted_times = sorted(all_times)
+    median = sorted_times[len(sorted_times) // 2]
+    print(f"\n  Overall ({len(all_times)} responses):")
+    print(f"    Mean: {avg:.1f}d | Median: {median}d | Min: {min(all_times)}d | Max: {max(all_times)}d")
+
+    # By portal
+    if len(by_portal) > 1 or (by_portal and list(by_portal.keys())[0] != "unknown"):
+        print(f"\n  By Portal Type:")
+        for portal, times in sorted(by_portal.items(), key=lambda x: -len(x[1])):
+            p_avg = sum(times) / len(times)
+            print(f"    {portal:<20s} n={len(times):>3d}  mean={p_avg:.1f}d")
+
+    # By identity position
+    if len(by_position) > 1 or (by_position and list(by_position.keys())[0] != "unset"):
+        print(f"\n  By Identity Position:")
+        for position, times in sorted(by_position.items(), key=lambda x: -len(x[1])):
+            p_avg = sum(times) / len(times)
+            print(f"    {position:<25s} n={len(times):>3d}  mean={p_avg:.1f}d")
+
+
 def main():
     # Operational entries for conversion rate calculations
     operational = load_entries(dirs=ALL_PIPELINE_DIRS)
@@ -122,6 +207,9 @@ def main():
 
     by_score = analyze_by_dimension(entries, "fit score", score_bracket)
     print_report("BY FIT SCORE", by_score)
+
+    # Response time analysis
+    response_time_analysis(entries)
 
     print()
 

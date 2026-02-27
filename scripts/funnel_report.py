@@ -325,12 +325,89 @@ def show_targets(entries: list[dict]):
         print(f"  Status: ABOVE sweet spot — diminishing returns")
 
 
+def compare_variants(entries: list[dict]):
+    """Compare outcomes by variant composition type."""
+    print(f"Variant Comparison — Outcome by Composition Method")
+    print(f"{'=' * 70}")
+
+    # Classify each submitted entry by composition method
+    groups: dict[str, list[dict]] = {}
+
+    for entry in entries:
+        status = entry.get("status", "")
+        if get_stage_index(status) < get_stage_index("submitted"):
+            continue
+
+        # Determine composition type
+        submission = entry.get("submission", {})
+        if not isinstance(submission, dict):
+            comp_type = "unknown"
+        else:
+            variant_ids = submission.get("variant_ids", {})
+            blocks_used = submission.get("blocks_used", {})
+
+            has_alchemized = False
+            if isinstance(variant_ids, dict):
+                for v in variant_ids.values():
+                    if isinstance(v, str) and "alchemized" in v:
+                        has_alchemized = True
+                        break
+
+            has_blocks = isinstance(blocks_used, dict) and len(blocks_used) > 0
+            has_variants = isinstance(variant_ids, dict) and len(variant_ids) > 0
+
+            if has_alchemized:
+                comp_type = "alchemized"
+            elif has_blocks and has_variants:
+                comp_type = "block+variant"
+            elif has_blocks:
+                comp_type = "block-only"
+            elif has_variants:
+                comp_type = "variant-only"
+            else:
+                comp_type = "minimal"
+
+        groups.setdefault(comp_type, []).append(entry)
+
+    if not groups:
+        print("  No submitted entries found.")
+        return
+
+    # Print comparison table
+    print(f"\n  {'Composition':<20s} {'Total':>6s} {'Resp':>6s} {'Intv':>6s} {'Rate':>8s}")
+    print(f"  {'-' * 20} {'-' * 6} {'-' * 6} {'-' * 6} {'-' * 8}")
+
+    for comp_type, group in sorted(groups.items(), key=lambda x: -len(x[1])):
+        total = len(group)
+        responded = sum(1 for e in group
+                       if e.get("status") in ("acknowledged", "interview", "outcome")
+                       or (isinstance(e.get("conversion"), dict)
+                           and e["conversion"].get("response_received")))
+        interviewed = sum(1 for e in group
+                         if e.get("status") in ("interview", "outcome")
+                         and e.get("outcome") not in ("rejected", "expired", "withdrawn"))
+        rate = f"{responded / total * 100:.0f}%" if total else "—"
+
+        print(f"  {comp_type:<20s} {total:>6d} {responded:>6d} {interviewed:>6d} {rate:>8s}")
+
+    total_all = sum(len(g) for g in groups.values())
+    print(f"\n  Total submitted: {total_all}")
+    print(f"\n  Composition types:")
+    print(f"    alchemized    — AI-synthesized via alchemize.py pipeline")
+    print(f"    block+variant — Manual blocks + cover letter variant")
+    print(f"    block-only    — Blocks without cover letter")
+    print(f"    variant-only  — Cover letter without identity blocks")
+    print(f"    minimal       — No blocks or variants attached")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Conversion funnel analytics")
     parser.add_argument("--by", choices=["channel", "position", "portal", "track", "cover_letter", "follow_up"],
                         help="Breakdown by dimension")
     parser.add_argument("--weekly", action="store_true", help="Weekly submission velocity")
     parser.add_argument("--targets", action="store_true", help="Show conversion targets vs actual")
+    parser.add_argument("--compare-variants", action="store_true",
+                        help="Compare outcomes by variant composition method")
     args = parser.parse_args()
 
     entries = load_all_entries()
@@ -345,6 +422,8 @@ def main():
         weekly_velocity(entries)
     elif args.targets:
         show_targets(entries)
+    elif args.compare_variants:
+        compare_variants(entries)
     else:
         funnel_summary(entries, pool_count=len(pool))
 

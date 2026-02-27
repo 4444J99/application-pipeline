@@ -362,6 +362,44 @@ def _append_conversion_log(entry: dict, submitted_date: str) -> None:
     log_path.write_text(yaml.dump(log_data, default_flow_style=False, sort_keys=False))
 
 
+# --- Metrics freshness check ---
+
+
+def _check_metrics_freshness(entry: dict) -> list[str]:
+    """Check blocks_used for stale metrics. Returns list of issue strings."""
+    issues = []
+    try:
+        from check_metrics import check_file, SOURCE_METRICS
+    except ImportError:
+        return issues  # check_metrics not available
+
+    submission = entry.get("submission", {})
+    if not isinstance(submission, dict):
+        return issues
+
+    blocks_used = submission.get("blocks_used", {})
+    if not isinstance(blocks_used, dict):
+        return issues
+
+    for field_name, block_path in blocks_used.items():
+        if not isinstance(block_path, str):
+            continue
+        full_path = BLOCKS_DIR / block_path
+        if not full_path.suffix:
+            full_path = full_path.with_suffix(".md")
+        if not full_path.exists():
+            continue
+
+        errors = check_file(full_path)
+        for error in errors:
+            issues.append(
+                f"Stale metric in block '{block_path}': "
+                f"{error['metric']} is {error['found']}, expected {error['expected']}"
+            )
+
+    return issues
+
+
 # --- Main ---
 
 
@@ -420,15 +458,18 @@ def main():
     checklist, issues = generate_checklist(entry, profile, legacy)
 
     if args.check:
-        # Validation only — just report issues
+        # Validation only — run metrics freshness check on blocks_used
         name = entry.get("name", target_id)
-        if not issues:
+        metric_issues = _check_metrics_freshness(entry)
+        all_issues = issues + metric_issues
+
+        if not all_issues:
             print(f"PASS: {name} — ready to submit")
         else:
-            print(f"FAIL: {name} — {len(issues)} issue(s):")
-            for issue in issues:
+            print(f"FAIL: {name} — {len(all_issues)} issue(s):")
+            for issue in all_issues:
                 print(f"  - {issue}")
-        sys.exit(1 if issues else 0)
+        sys.exit(1 if all_issues else 0)
 
     print(checklist)
 

@@ -55,8 +55,12 @@ Scripts are independent CLIs but some import functions from each other:
 - **`pipeline_lib.py`** — Shared foundation: `load_entries()`, `load_profile()`, `load_block()`, `load_variant()`, `load_legacy_script()`, path constants, ID maps, text utils. Every script imports from here.
 - **`campaign.py`** imports from `enrich.py` — the `--execute` mode runs enrichment + advance + preflight as a pipeline.
 - **`alchemize.py`** imports from `greenhouse_submit.py` — the Greenhouse-specific end-to-end orchestrator (research → identity mapping → synthesis prompt → integration → submission).
-- **`followup.py`** — Follow-up tracker: generates daily outreach lists, logs follow-up actions to entries and outreach-log.yaml.
-- **`funnel_report.py`** — Conversion funnel analytics: stage distribution, conversion rates by variable (channel, portal, position, track), weekly velocity, target vs actual comparison.
+- **`followup.py`** — Follow-up tracker: generates daily outreach lists, logs follow-up actions to entries and outreach-log.yaml. `--init` populates follow_up fields on submitted entries.
+- **`funnel_report.py`** — Conversion funnel analytics: stage distribution, conversion rates by variable (channel, portal, position, track), weekly velocity, target vs actual comparison, variant composition comparison.
+- **`hygiene.py`** imports from `source_jobs.py` — URL liveness, ATS posting verification, auto-expire, track-specific gates.
+- **`check_outcomes.py`** — Outcome recording and stale response alerts. Updates conversion-log and moves terminal entries to closed/.
+- **`research_contacts.py`** — Recruiter identification and follow-up protocol date generation.
+- **`submit.py`** imports from `check_metrics.py` — `--check` mode now validates block metrics freshness.
 - All other scripts are standalone CLIs that read/write pipeline YAML files.
 
 ## Commands
@@ -66,6 +70,7 @@ Scripts are independent CLIs but some import functions from each other:
 python scripts/standup.py
 python scripts/standup.py --hours 5          # Adjust time budget
 python scripts/standup.py --section stale    # Single section
+python scripts/standup.py --section followup # Follow-up dashboard for submitted entries
 python scripts/standup.py --touch <entry-id> # Mark entry as reviewed
 python scripts/standup.py --log              # Log session metrics
 python scripts/standup.py --triage           # Interactive triage of stagnant entries
@@ -165,19 +170,44 @@ python scripts/followup.py                     # Show today's follow-up actions
 python scripts/followup.py --all               # All entries with follow-up status
 python scripts/followup.py --schedule           # Upcoming follow-up schedule (21 days)
 python scripts/followup.py --overdue            # Overdue follow-ups only
+python scripts/followup.py --init --dry-run     # Preview: add follow_up fields to submitted entries
+python scripts/followup.py --init --yes         # Execute: populate follow_up + conversion.follow_up_count
 python scripts/followup.py --log <entry-id> --channel linkedin --contact "Name" --note "DM sent"
 
-# Conversion funnel analytics
-python scripts/funnel_report.py                # Full funnel summary
-python scripts/funnel_report.py --by channel   # Breakdown by channel
-python scripts/funnel_report.py --by position  # Breakdown by identity position
-python scripts/funnel_report.py --by portal    # Breakdown by portal type
-python scripts/funnel_report.py --by track     # Breakdown by track
-python scripts/funnel_report.py --weekly       # Weekly submission velocity
-python scripts/funnel_report.py --targets      # Conversion targets vs actual
+# Recruiter identification and outreach templating
+python scripts/research_contacts.py --target <entry-id>  # Research contacts for one entry
+python scripts/research_contacts.py --batch               # All submitted entries without contacts
+python scripts/research_contacts.py --batch --limit 10    # Top 10 by tier
 
-# Metric consistency check (compares blocks against canonical system-metrics.json)
-python scripts/check_metrics.py
+# Outcome tracking and response monitoring
+python scripts/check_outcomes.py                 # Show entries awaiting response
+python scripts/check_outcomes.py --stale         # Entries >14d with no response
+python scripts/check_outcomes.py --summary       # Outcome statistics
+python scripts/check_outcomes.py --record <id> --outcome rejected --stage resume_screen
+python scripts/check_outcomes.py --record <id> --outcome acknowledged
+
+# Conversion funnel analytics
+python scripts/funnel_report.py                      # Full funnel summary
+python scripts/funnel_report.py --by channel         # Breakdown by channel
+python scripts/funnel_report.py --by position        # Breakdown by identity position
+python scripts/funnel_report.py --by portal          # Breakdown by portal type
+python scripts/funnel_report.py --by track           # Breakdown by track
+python scripts/funnel_report.py --weekly             # Weekly submission velocity
+python scripts/funnel_report.py --targets            # Conversion targets vs actual
+python scripts/funnel_report.py --compare-variants   # Compare outcomes by composition method
+
+# Entry hygiene: URL liveness, ATS posting checks, auto-expire, track gates
+python scripts/hygiene.py                    # Full hygiene report
+python scripts/hygiene.py --check-urls       # HTTP HEAD check on application_urls
+python scripts/hygiene.py --check-postings   # Verify jobs still live on ATS APIs
+python scripts/hygiene.py --auto-expire --dry-run   # Preview expired entry archival
+python scripts/hygiene.py --auto-expire --yes       # Execute expired entry archival
+python scripts/hygiene.py --gate <entry-id>  # Track-specific readiness gate
+
+# Metric consistency check (blocks, profiles, strategy vs canonical system-metrics.json)
+python scripts/check_metrics.py                 # Full consistency check
+python scripts/check_metrics.py --fix --dry-run  # Preview metric fixes
+python scripts/check_metrics.py --fix --yes      # Apply metric fixes
 
 # Submission velocity tracking
 python scripts/velocity.py                    # Display velocity stats

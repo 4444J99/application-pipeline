@@ -23,6 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
     PIPELINE_DIR_SUBMITTED,
+    PIPELINE_DIR_CLOSED,
     SIGNALS_DIR,
     load_entries,
     parse_date,
@@ -49,8 +50,15 @@ OUTREACH_LOG = SIGNALS_DIR / "outreach-log.yaml"
 
 
 def get_submitted_entries() -> list[dict]:
-    """Load all submitted/acknowledged entries with follow-up context."""
-    entries = load_entries(dirs=[PIPELINE_DIR_SUBMITTED], include_filepath=True)
+    """Load all submitted/acknowledged entries with follow-up context.
+
+    Searches both submitted/ and closed/ directories to find all entries
+    that have been submitted, including those that may have been moved.
+    """
+    entries = load_entries(
+        dirs=[PIPELINE_DIR_SUBMITTED, PIPELINE_DIR_CLOSED],
+        include_filepath=True,
+    )
     return [e for e in entries if e.get("status") in ("submitted", "acknowledged")]
 
 
@@ -210,6 +218,92 @@ def _append_outreach_log(entry_id: str, channel: str, contact: str, note: str, f
 
     with open(OUTREACH_LOG, "w") as f:
         yaml.dump(log_data, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
+
+
+def init_follow_ups(dry_run: bool = True) -> int:
+    """Add follow_up: [] and conversion.follow_up_count: 0 to submitted entries missing them.
+
+    Returns number of entries updated.
+    """
+    entries = load_entries(
+        dirs=[PIPELINE_DIR_SUBMITTED, PIPELINE_DIR_CLOSED],
+        include_filepath=True,
+    )
+    submitted = [e for e in entries if e.get("status") in ("submitted", "acknowledged")]
+
+    updated = 0
+    for entry in submitted:
+        filepath = entry.get("_filepath")
+        if not filepath or not filepath.exists():
+            continue
+
+        needs_update = False
+        content = filepath.read_text()
+        data = yaml.safe_load(content)
+        if not isinstance(data, dict):
+            continue
+
+        # Check if follow_up field is missing or null
+        has_follow_up = "follow_up" in data and data["follow_up"] is not None
+        # Check if conversion.follow_up_count is missing
+        conversion = data.get("conversion", {})
+        has_count = (isinstance(conversion, dict)
+                     and "follow_up_count" in conversion
+                     and conversion["follow_up_count"] is not None)
+
+        if has_follow_up and has_count:
+            continue
+
+        entry_id = entry.get("id", "?")
+
+        if dry_run:
+            missing = []
+            if not has_follow_up:
+                missing.append("follow_up")
+            if not has_count:
+                missing.append("conversion.follow_up_count")
+            print(f"  [dry-run] {entry_id} — would add: {', '.join(missing)}")
+            updated += 1
+            continue
+
+        # Add follow_up field if missing
+        if not has_follow_up:
+            if "follow_up:" not in content:
+                # Insert before tags or at end
+                content = content.rstrip() + "\nfollow_up: []\n"
+            else:
+                # Field exists but is null — update to empty list
+                import re
+                content = re.sub(
+                    r'^(follow_up:)\s*(?:null|~)?\s*$',
+                    r'\1 []',
+                    content,
+                    count=1,
+                    flags=re.MULTILINE,
+                )
+
+        # Add conversion.follow_up_count if missing
+        if not has_count:
+            import re
+            if "follow_up_count:" not in content:
+                # Insert after other conversion fields
+                conversion_match = re.search(r'^conversion:\s*$', content, re.MULTILINE)
+                if conversion_match:
+                    # Find the end of the conversion block
+                    pos = conversion_match.end()
+                    # Find next top-level key
+                    next_key = re.search(r'^\S', content[pos:], re.MULTILINE)
+                    if next_key:
+                        insert_pos = pos + next_key.start()
+                        content = (content[:insert_pos]
+                                   + "  follow_up_count: 0\n"
+                                   + content[insert_pos:])
+
+        filepath.write_text(content)
+        print(f"  {entry_id} — initialized follow-up fields")
+        updated += 1
+
+    return updated
 
 
 def show_today(entries: list[dict]):
@@ -375,13 +469,26 @@ def main():
     parser.add_argument("--all", action="store_true", help="Show all submitted entries with follow-up status")
     parser.add_argument("--schedule", action="store_true", help="Show upcoming follow-up schedule")
     parser.add_argument("--overdue", action="store_true", help="Show overdue follow-ups only")
+    parser.add_argument("--init", action="store_true",
+                        help="Initialize follow_up fields on submitted entries missing them")
     parser.add_argument("--log", metavar="ENTRY_ID", help="Log a follow-up action for an entry")
     parser.add_argument("--channel", default="linkedin", help="Follow-up channel (default: linkedin)")
     parser.add_argument("--contact", default="", help="Contact name")
     parser.add_argument("--note", default="", help="Follow-up note")
     parser.add_argument("--type", default="dm", dest="followup_type",
                         help="Follow-up type: connect, dm, email, check_in, thank_you")
+    parser.add_argument("--dry-run", action="store_true", help="Preview changes without executing")
+    parser.add_argument("--yes", action="store_true", help="Execute changes")
     args = parser.parse_args()
+
+    if args.init:
+        dry_run = not args.yes or args.dry_run
+        print(f"Initializing follow-up fields on submitted entries...")
+        count = init_follow_ups(dry_run=dry_run)
+        print(f"\n{'Would update' if dry_run else 'Updated'} {count} entries")
+        if dry_run and count:
+            print("Run with --init --yes to execute.")
+        return
 
     if args.log:
         if not args.note:

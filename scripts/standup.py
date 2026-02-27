@@ -506,7 +506,105 @@ def section_deferred(entries: list[dict]):
 
 
 # ---------------------------------------------------------------------------
-# Section 8: Session Log
+# Section 8: Follow-Up Dashboard
+# ---------------------------------------------------------------------------
+
+def section_followup(entries: list[dict]):
+    """Show follow-up dashboard: due/overdue actions for submitted entries."""
+    submitted = [e for e in entries if e.get("status") in ("submitted", "acknowledged")]
+
+    print("8. FOLLOW-UP DASHBOARD")
+
+    if not submitted:
+        print("   No submitted entries to follow up on.")
+        print()
+        return
+
+    today = date.today()
+    due_entries = []
+    overdue_entries = []
+    upcoming_entries = []
+
+    for e in submitted:
+        entry_id = e.get("id", "?")
+        name = e.get("name", entry_id)
+        target = e.get("target", {})
+        org = target.get("organization", "?") if isinstance(target, dict) else "?"
+
+        tl = e.get("timeline", {})
+        sub_date = parse_date(tl.get("submitted")) if isinstance(tl, dict) else None
+        if not sub_date:
+            continue
+
+        days_since = (today - sub_date).days
+        existing = e.get("follow_up", []) or []
+        existing_types = {fu.get("type") for fu in existing if isinstance(fu, dict)}
+
+        # Follow-up protocol: connect (day 1-2), dm (day 7-10), check_in (day 14-21)
+        protocol = [
+            {"day_range": (1, 2), "type": "connect", "action": "Connect on LinkedIn"},
+            {"day_range": (7, 10), "type": "dm", "action": "First follow-up DM/email"},
+            {"day_range": (14, 21), "type": "check_in", "action": "Final follow-up"},
+        ]
+
+        for step in protocol:
+            if step["type"] in existing_types:
+                continue
+            low, high = step["day_range"]
+            if days_since > high:
+                overdue_entries.append({
+                    "id": entry_id, "name": name, "org": org,
+                    "days": days_since, "action": step["action"],
+                    "window": f"Day {low}-{high}",
+                })
+            elif low <= days_since <= high:
+                due_entries.append({
+                    "id": entry_id, "name": name, "org": org,
+                    "days": days_since, "action": step["action"],
+                    "window": f"Day {low}-{high}",
+                })
+            else:
+                upcoming_entries.append({
+                    "id": entry_id, "name": name, "org": org,
+                    "days": days_since, "due_in": low - days_since,
+                    "action": step["action"],
+                })
+
+    if overdue_entries:
+        print(f"   OVERDUE ({len(overdue_entries)}):")
+        for item in overdue_entries[:5]:
+            print(f"     !!! {item['org']} — {item['name']}")
+            print(f"         Day {item['days']} — {item['action']} ({item['window']})")
+        if len(overdue_entries) > 5:
+            print(f"     ... and {len(overdue_entries) - 5} more")
+
+    if due_entries:
+        print(f"   DUE TODAY ({len(due_entries)}):")
+        for item in due_entries[:5]:
+            print(f"     >> {item['org']} — {item['name']}")
+            print(f"        Day {item['days']} — {item['action']}")
+        if len(due_entries) > 5:
+            print(f"     ... and {len(due_entries) - 5} more")
+
+    if not overdue_entries and not due_entries:
+        if upcoming_entries:
+            upcoming_entries.sort(key=lambda x: x["due_in"])
+            print(f"   No actions due today. Next up:")
+            for item in upcoming_entries[:3]:
+                print(f"     in {item['due_in']}d — {item['org']} — {item['action']}")
+        else:
+            print("   All follow-up protocols complete for current submissions.")
+
+    # Summary line
+    total_submitted = len(submitted)
+    with_followups = sum(1 for e in submitted if e.get("follow_up"))
+    print(f"\n   Submitted: {total_submitted} | With follow-ups: {with_followups} | "
+          f"Overdue: {len(overdue_entries)} | Due: {len(due_entries)}")
+    print()
+
+
+# ---------------------------------------------------------------------------
+# Section 9: Session Log
 # ---------------------------------------------------------------------------
 
 def section_log(health_stats: dict, stale_stats: dict, plan_stats: dict):
@@ -546,7 +644,7 @@ def section_log(health_stats: dict, stale_stats: dict, plan_stats: dict):
     with open(STANDUP_LOG, "w") as f:
         yaml.dump(log_data, f, default_flow_style=False, sort_keys=False)
 
-    print("8. SESSION LOG")
+    print("9. SESSION LOG")
     print(f"   Logged to {STANDUP_LOG.relative_to(REPO_ROOT)}")
     print()
 
@@ -587,6 +685,7 @@ SECTIONS = {
     "practices": "Context-sensitive best practice reminders",
     "replenish": "Pipeline replenishment alerts",
     "deferred": "Deferred entries awaiting external unblock",
+    "followup": "Follow-up dashboard for submitted entries",
     "log": "Append session record to standup-log.yaml",
     "jobs": "Job pipeline status",
     "opportunities": "Opportunity pipeline (grants/residencies/prizes/writing)",
@@ -770,6 +869,8 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
         section_replenish(entries)
     if section is None or section == "deferred":
         section_deferred(entries)
+    if section is None or section == "followup":
+        section_followup(entries)
     if do_log or section == "log":
         # Need all stats for logging
         if not health_stats:
