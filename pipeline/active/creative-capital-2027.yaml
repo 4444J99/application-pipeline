@@ -21,8 +21,10 @@ fit:
   score: 8.0
   original_score: 8.8
   identity_position: systems-artist
-  framing: Multi-year systems art project bridging recursive computing and institutional
-    critique
+  framing: Systems artist presenting ORGANVM—a 103-repository autonomous ecosystem
+    where technical governance is reclaimed as an aesthetic medium. Proposing to scale
+    this "Infrastructure Art" model to demonstrate a steerable, transparent, and human-centric
+    alternative to opaque AI development.
   lead_organs:
   - I
   - IV
@@ -45,9 +47,10 @@ submission:
     evidence: evidence/differentiators
     framing: framings/systems-artist
     work_samples: evidence/work-samples
-  variant_ids: 
-    cover_letter: cover-letters/grant-art-template
-  materials_attached: 
+  variant_ids:
+    cover_letter: cover-letters/creative-capital-2027-alchemized
+  materials_attached:
+  - resumes/batch-03/creative-capital-2027/creative-capital-2027-resume.html
   - resumes/base/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -73,4 +76,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: null
-last_touched: "2026-02-24"
+last_touched: "2026-02-27"
