@@ -1,3 +1,10 @@
+# Cover Letter: Deepgram Staff Developer Advocate
+
+**Role:** Deepgram Staff Developer Advocate
+**Apply:** https://jobs.ashbyhq.com/deepgram/060d1b08-cfac-40dc-b6db-06ecbef4ccc4
+
+---
+
 To the Developer Relations Team at Deepgram,
 
 I am writing to apply for the Staff Developer Advocate position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 103 repositories across 8 GitHub organizations, I bring a unique "solo production at institutional scale" perspective to technical advocacy. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.

@@ -26,7 +26,9 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
+    ALL_PIPELINE_DIRS,
     ALL_PIPELINE_DIRS_WITH_POOL,
+    PIPELINE_DIR_RESEARCH_POOL,
     SIGNALS_DIR,
     load_entries,
     parse_date,

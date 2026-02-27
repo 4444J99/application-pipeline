@@ -3,7 +3,10 @@
 
 import sys
 
-from pipeline_lib import SIGNALS_DIR, ALL_PIPELINE_DIRS_WITH_POOL, load_entries
+from pipeline_lib import (
+    SIGNALS_DIR, ALL_PIPELINE_DIRS, ALL_PIPELINE_DIRS_WITH_POOL,
+    PIPELINE_DIR_RESEARCH_POOL, load_entries,
+)
 
 CONVERSION_LOG = SIGNALS_DIR / "conversion-log.yaml"
 
@@ -62,17 +65,23 @@ def print_report(title: str, groups: dict):
 
 
 def main():
-    entries = load_entries(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
-    if not entries:
+    # Operational entries for conversion rate calculations
+    operational = load_entries(dirs=ALL_PIPELINE_DIRS)
+    # Research pool entries (reported separately)
+    pool = load_entries(dirs=[PIPELINE_DIR_RESEARCH_POOL])
+
+    if not operational and not pool:
         print("No pipeline entries found.")
         sys.exit(1)
 
     print("=" * 60)
     print("CONVERSION REPORT")
     print("=" * 60)
-    print(f"\nTotal pipeline entries: {len(entries)}")
+    print(f"\nOperational pipeline entries: {len(operational)}")
+    print(f"Research pool: {len(pool)} (not included in conversion rates)")
 
-    # Overall stats
+    # Overall stats (operational only — pool entries haven't been submitted)
+    entries = operational
     submitted = sum(1 for e in entries if e.get("status") in ("submitted", "acknowledged", "interview", "outcome"))
     with_outcome = sum(1 for e in entries if e.get("outcome"))
     accepted = sum(1 for e in entries if e.get("outcome") == "accepted")

@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from pipeline_lib import (
-    REPO_ROOT, STATUS_ORDER, ALL_PIPELINE_DIRS_WITH_POOL,
+    REPO_ROOT, STATUS_ORDER, ALL_PIPELINE_DIRS, ALL_PIPELINE_DIRS_WITH_POOL,
     load_entries, parse_datetime, format_amount,
 )
 
@@ -276,27 +276,30 @@ def main():
                         help="Show top N actionable US-accessible entries by fit score")
     args = parser.parse_args()
 
-    entries = load_entries(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
-    if not entries:
+    # Full dataset for summary/counts (includes research pool)
+    all_entries = load_entries(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
+    if not all_entries:
         print("No pipeline entries found.")
         sys.exit(1)
 
     if args.top:
-        print_top(entries, args.top)
+        # Operational dataset for actionable views (excludes research pool)
+        operational_entries = load_entries(dirs=ALL_PIPELINE_DIRS)
+        print_top(operational_entries, args.top)
         return
 
     if args.write_index:
-        write_index(entries)
+        write_index(all_entries)
         return
 
-    print_summary(entries)
-    print_upcoming(entries, args.upcoming)
+    print_summary(all_entries)
+    print_upcoming(all_entries, args.upcoming)
 
     if args.all:
-        print_rolling(entries)
+        print_rolling(all_entries)
 
     if args.benefits_check:
-        print_benefits_check(entries)
+        print_benefits_check(all_entries)
 
     print()
 

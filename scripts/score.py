@@ -25,6 +25,7 @@ from pipeline_lib import (
     load_profile,
     parse_date, days_until,
     update_yaml_field,
+    update_last_touched,
 )
 
 # Dimension weights (must sum to 1.0)
@@ -1070,13 +1071,28 @@ def run_qualify(entries: list[tuple[Path, dict]]):
     print(f"Total: {total_apply} APPLY | {total_skip} SKIP")
 
 
-def run_auto_qualify(dry_run: bool = False):
+def run_auto_qualify(dry_run: bool = False, yes: bool = False,
+                     min_score: float = 7.0, limit: int = 0):
     """Batch-advance qualifying research_pool entries to qualified in active/.
 
-    Loads entries from research_pool/, runs qualify() on each, and moves
-    qualifying entries back to active/ with status=qualified.
+    Loads entries from research_pool/, runs qualify() on each, filters by
+    min_score, and moves qualifying entries back to active/ with status=qualified.
+
+    Defaults to dry-run unless --yes is explicitly passed to prevent accidental
+    mass-promotion of entries into active/.
+
+    Args:
+        dry_run: If True, show preview without moving files.
+        yes: If True, execute the moves. Without --yes or --dry-run, defaults to dry-run.
+        min_score: Minimum composite score for auto-qualify (default 7.0).
+        limit: Maximum entries to promote (0 = unlimited). Highest scores first.
     """
     import shutil
+
+    # Default to dry-run unless --yes is explicitly passed
+    if not dry_run and not yes:
+        dry_run = True
+        print("(Defaulting to dry-run. Use --yes to execute.)\n")
 
     pool_entries = _load_entries_raw(
         dirs=[PIPELINE_DIR_RESEARCH_POOL], include_filepath=True,
@@ -1090,6 +1106,7 @@ def run_auto_qualify(dry_run: bool = False):
 
     qualified_list = []
     skipped = 0
+    below_min_score = 0
 
     for entry in pool_entries:
         filepath = entry.get("_filepath")
@@ -1098,13 +1115,29 @@ def run_auto_qualify(dry_run: bool = False):
         entry_id = entry.get("id", filepath.stem)
         should_apply, reason = qualify(entry, all_raw)
 
-        if should_apply:
-            qualified_list.append((filepath, entry_id, entry, reason))
-        else:
+        if not should_apply:
             skipped += 1
+            continue
+
+        # Check min_score threshold
+        score = entry.get("fit", {}).get("score", 0) if isinstance(entry.get("fit"), dict) else 0
+        if score < min_score:
+            below_min_score += 1
+            continue
+
+        qualified_list.append((filepath, entry_id, entry, reason, score))
+
+    # Sort by score descending so highest-scoring entries are promoted first
+    qualified_list.sort(key=lambda x: x[4], reverse=True)
+
+    # Apply limit
+    if limit > 0 and len(qualified_list) > limit:
+        qualified_list = qualified_list[:limit]
 
     print(f"Research pool: {len(pool_entries)} entries")
-    print(f"Qualify: {len(qualified_list)} | Skip: {skipped}")
+    print(f"Qualify (score >= {min_score}): {len(qualified_list)} | Below min-score: {below_min_score} | Skip: {skipped}")
+    if limit > 0:
+        print(f"Limit: {limit}")
     print()
 
     if not qualified_list:
@@ -1112,26 +1145,32 @@ def run_auto_qualify(dry_run: bool = False):
         return
 
     PIPELINE_DIR_ACTIVE.mkdir(parents=True, exist_ok=True)
+    today_str = date.today().isoformat()
     moved = 0
-    for filepath, entry_id, entry, reason in qualified_list:
+    for filepath, entry_id, entry, reason, score in qualified_list:
         dest = PIPELINE_DIR_ACTIVE / filepath.name
 
         if dry_run:
-            score = entry.get("fit", {}).get("score", 0) if isinstance(entry.get("fit"), dict) else 0
-            print(f"  [dry-run] {entry_id} ({reason}) -> active/ as qualified")
+            print(f"  [dry-run] {entry_id} (score={score}, {reason}) -> active/ as qualified")
         else:
-            # Update status to qualified in the file
+            # Update status to qualified, set last_touched and timeline.qualified
             content = filepath.read_text()
             content = update_yaml_field(content, "status", "qualified")
+            content = update_last_touched(content)
+            try:
+                content = update_yaml_field(content, "qualified", f'"{today_str}"', nested=True)
+            except ValueError:
+                pass  # timeline section may not have a qualified field — that's OK
             filepath.write_text(content)
             # Move to active/
             shutil.move(str(filepath), str(dest))
-            print(f"  {entry_id} -> active/ (qualified, {reason})")
+            print(f"  {entry_id} -> active/ (score={score}, qualified, {reason})")
         moved += 1
 
     print(f"\n{'=' * 50}")
     if dry_run:
         print(f"Would auto-qualify {moved} entries (dry run)")
+        print(f"Run with --yes to execute")
     else:
         print(f"Auto-qualified {moved} entries to active/")
 
@@ -1297,6 +1336,12 @@ def main():
                         help="Batch-advance qualifying research_pool entries to active/qualified")
     parser.add_argument("--dry-run", action="store_true",
                         help="Show scores without writing changes")
+    parser.add_argument("--yes", action="store_true",
+                        help="Execute changes (used with --auto-qualify)")
+    parser.add_argument("--min-score", type=float, default=7.0,
+                        help="Minimum score for auto-qualify (default: 7.0)")
+    parser.add_argument("--limit", type=int, default=0,
+                        help="Max entries to auto-qualify (0 = unlimited)")
     parser.add_argument("--verbose", "-v", action="store_true",
                         help="Show per-dimension breakdowns")
     args = parser.parse_args()
@@ -1313,7 +1358,12 @@ def main():
 
     # --auto-qualify is a standalone command
     if args.auto_qualify:
-        run_auto_qualify(dry_run=args.dry_run)
+        run_auto_qualify(
+            dry_run=args.dry_run,
+            yes=args.yes,
+            min_score=args.min_score,
+            limit=args.limit,
+        )
         return
 
     # --review-compressed implies --all
