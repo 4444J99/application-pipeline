@@ -628,3 +628,19 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: creative-capital-2027
+  submitted: '2026-02-27'
+  track: grant
+  identity_position: systems-artist
+  blocks_used:
+  - identity/5min
+  - projects/organvm-system
+  - methodology/governance-as-art
+  - evidence/differentiators
+  - framings/systems-artist
+  - evidence/work-samples
+  variant_id: cover-letters/creative-capital-2027-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
