@@ -13,8 +13,10 @@ from standup import (
     section_plan,
     section_replenish,
     section_deferred,
+    section_followup,
     section_jobs,
     section_opportunities,
+    SECTIONS,
     STAGNATION_DAYS,
     URGENCY_DAYS,
     AT_RISK_DAYS,
@@ -332,6 +334,37 @@ class TestSectionJobs:
         assert "JOB PIPELINE" in captured.out
         assert "Dev Role" in captured.out
         assert "Total job entries: 2" in captured.out
+
+
+# --- section_opportunities ---
+
+# --- section_followup ---
+
+class TestSectionFollowup:
+    def test_section_followup_exists(self):
+        """'followup' is in SECTIONS dict."""
+        assert "followup" in SECTIONS
+
+    def test_section_followup_runs(self, capsys):
+        """section_followup([]) doesn't crash."""
+        section_followup([])
+        captured = capsys.readouterr()
+        assert "FOLLOW-UP DASHBOARD" in captured.out
+
+    def test_section_followup_shows_overdue(self, capsys):
+        """Entry with overdue follow-up appears in output."""
+        old_date = (date.today() - timedelta(days=25)).isoformat()
+        entries = [
+            _make_entry(
+                entry_id="fu-1",
+                name="Overdue Entry",
+                status="submitted",
+                submitted_date=old_date,
+            ),
+        ]
+        section_followup(entries)
+        captured = capsys.readouterr()
+        assert "OVERDUE" in captured.out
 
 
 # --- section_opportunities ---

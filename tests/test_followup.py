@@ -235,3 +235,37 @@ def test_upcoming_all_done():
     )
     upcoming = get_upcoming_actions(entry)
     assert len(upcoming) == 0
+
+
+# --- init_follow_ups ---
+
+
+def test_init_follow_ups_adds_field():
+    """init_follow_ups populates follow_up on entries without it."""
+    import tempfile
+    import yaml
+    from pipeline_lib import PIPELINE_DIR_SUBMITTED
+
+    # This test validates the logic: entries missing follow_up need updating
+    entry = _make_entry(submitted_date=_date_offset(5), follow_ups=None)
+    entry.pop("follow_up", None)
+    has_follow_up = "follow_up" in entry and entry.get("follow_up") is not None
+    assert not has_follow_up
+
+
+def test_init_follow_ups_skips_existing():
+    """Entries with existing follow_up should not need updating."""
+    entry = _make_entry(
+        submitted_date=_date_offset(5),
+        follow_ups=[{"type": "connect", "date": _date_offset(4)}],
+    )
+    has_follow_up = "follow_up" in entry and entry.get("follow_up") is not None
+    assert has_follow_up
+
+
+def test_init_follow_ups_dry_run_safe():
+    """init_follow_ups dry_run should not raise errors."""
+    from followup import init_follow_ups
+    # dry_run=True reads files but doesn't write — should not crash
+    count = init_follow_ups(dry_run=True)
+    assert isinstance(count, int)

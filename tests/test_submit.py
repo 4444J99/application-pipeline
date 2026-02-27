@@ -226,3 +226,26 @@ def test_append_conversion_log_empty_blocks():
 
     assert blocks_list == []
     assert variant_id is None
+
+
+# --- _check_metrics_freshness ---
+
+
+def test_check_metrics_freshness_clean():
+    """Entry with no blocks returns no issues."""
+    from submit import _check_metrics_freshness
+
+    entry = {
+        "submission": {"blocks_used": {}},
+    }
+    issues = _check_metrics_freshness(entry)
+    assert issues == []
+
+
+def test_check_metrics_freshness_no_submission():
+    """Entry without submission block returns no issues."""
+    from submit import _check_metrics_freshness
+
+    entry = {"submission": "invalid"}
+    issues = _check_metrics_freshness(entry)
+    assert issues == []

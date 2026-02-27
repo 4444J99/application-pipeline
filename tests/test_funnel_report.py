@@ -174,3 +174,86 @@ def test_dimension_unknown():
     """Unknown dimension should return 'unknown'."""
     entry = _make_entry()
     assert _get_dimension_value(entry, "nonexistent") == "unknown"
+
+
+# --- compare_variants ---
+
+
+def _make_submitted_entry(
+    entry_id="test-sub",
+    status="submitted",
+    blocks_used=None,
+    variant_ids=None,
+    outcome=None,
+):
+    """Build a submitted-status entry for variant comparison tests."""
+    entry = {
+        "id": entry_id,
+        "status": status,
+        "track": "job",
+        "target": {"portal": "greenhouse"},
+        "fit": {"identity_position": "independent-engineer"},
+        "submission": {
+            "blocks_used": blocks_used or {},
+            "variant_ids": variant_ids or {},
+        },
+        "conversion": {},
+    }
+    if outcome:
+        entry["outcome"] = outcome
+    return entry
+
+
+def test_compare_variants_classification():
+    """Entries classified as alchemized/block+variant/etc."""
+    from funnel_report import compare_variants, get_stage_index
+
+    entries = [
+        _make_submitted_entry(
+            entry_id="e1",
+            variant_ids={"cover_letter": "cover-letters/alchemized-v1"},
+        ),
+        _make_submitted_entry(
+            entry_id="e2",
+            blocks_used={"identity": "identity/2min"},
+            variant_ids={"cover_letter": "cover-letters/test-v1"},
+        ),
+        _make_submitted_entry(
+            entry_id="e3",
+        ),
+    ]
+    # Just verify the function runs without error on these entries
+    # (compare_variants prints output, doesn't return)
+    import io
+    import contextlib
+    out = io.StringIO()
+    with contextlib.redirect_stdout(out):
+        compare_variants(entries)
+    output = out.getvalue()
+    assert "Variant Comparison" in output
+
+
+def test_compare_variants_empty(capsys):
+    """No submitted entries returns gracefully."""
+    from funnel_report import compare_variants
+
+    entries = [
+        _make_submitted_entry(entry_id="e1", status="research"),
+    ]
+    compare_variants(entries)
+    captured = capsys.readouterr()
+    assert "No submitted entries" in captured.out
+
+
+def test_compare_variants_counts(capsys):
+    """Response and interview counts in output."""
+    from funnel_report import compare_variants
+
+    entries = [
+        _make_submitted_entry(entry_id="e1", status="submitted"),
+        _make_submitted_entry(entry_id="e2", status="acknowledged"),
+        _make_submitted_entry(entry_id="e3", status="interview"),
+    ]
+    compare_variants(entries)
+    captured = capsys.readouterr()
+    assert "Total submitted:" in captured.out

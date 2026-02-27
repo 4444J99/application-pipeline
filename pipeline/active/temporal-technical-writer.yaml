@@ -29,10 +29,10 @@ fit:
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
-  framing: Independent engineer and veteran educator building production-grade distributed
-    infrastructure at scale (103 repos, 2,349+ tests). Specialist in "Docs as Code"
-    and translating complex backend orchestration concepts—like durable execution
-    and state management—into scannable, scrupulously accurate technical content.
+  framing: Independent engineer and veteran educator (11 years) building production-grade
+    distributed systems at institutional scale (103 repos, 2,349+ tests). Specialist
+    in "Docs as Code" and translating deep "Cathedral" architectures into high-signal
+    "Storefront" technical content for developers.
 submission:
   effort_level: standard
   blocks_used:
@@ -57,4 +57,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-27"
+last_touched: '2026-02-27'
