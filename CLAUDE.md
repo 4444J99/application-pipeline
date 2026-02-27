@@ -87,8 +87,11 @@ python scripts/score.py --target <target-id>  # Score single entry
 python scripts/score.py --all --dry-run        # Preview all scores
 
 # Auto-qualify: promote research_pool entries above threshold to active/qualified
-python scripts/score.py --auto-qualify --dry-run     # Preview which entries would qualify
-python scripts/score.py --auto-qualify --yes          # Execute promotion
+python scripts/score.py --auto-qualify                        # Defaults to dry-run preview
+python scripts/score.py --auto-qualify --dry-run              # Explicit dry-run preview
+python scripts/score.py --auto-qualify --yes                  # Execute promotion (score >= 7.0)
+python scripts/score.py --auto-qualify --yes --min-score 8.0  # Higher threshold
+python scripts/score.py --auto-qualify --yes --limit 5        # Promote top 5 only
 
 # Conversion analysis (basic report; see funnel_report.py for detailed breakdowns)
 python scripts/conversion_report.py
@@ -180,9 +183,9 @@ python scripts/check_metrics.py
 python scripts/velocity.py                    # Display velocity stats
 python scripts/velocity.py --update-signals   # Write to signals/patterns.md
 
-# Job sourcing from ATS APIs
+# Job sourcing from ATS APIs (writes to research_pool/)
 python scripts/source_jobs.py --fetch --dry-run       # Preview new job postings
-python scripts/source_jobs.py --fetch --yes            # Fetch and create pipeline entries
+python scripts/source_jobs.py --fetch --yes            # Fetch and create entries in research_pool/
 python scripts/source_jobs.py --fetch --yes --limit 5  # Limit new entries
 
 # Keyword extraction from job postings and research files

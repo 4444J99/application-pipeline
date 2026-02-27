@@ -52,8 +52,13 @@ FUNNEL_STAGES = [
 
 
 def load_all_entries() -> list[dict]:
-    """Load all pipeline entries across all directories (including research pool)."""
-    return load_entries(dirs=ALL_PIPELINE_DIRS_WITH_POOL, include_filepath=True)
+    """Load operational pipeline entries (excludes research pool)."""
+    return load_entries(dirs=ALL_PIPELINE_DIRS, include_filepath=True)
+
+
+def load_pool_entries() -> list[dict]:
+    """Load research pool entries."""
+    return load_entries(dirs=[PIPELINE_DIR_RESEARCH_POOL], include_filepath=True)
 
 
 def load_conversion_log() -> list[dict]:
@@ -74,7 +79,7 @@ def get_stage_index(status: str) -> int:
         return -1
 
 
-def funnel_summary(entries: list[dict]):
+def funnel_summary(entries: list[dict], pool_count: int = 0):
     """Print overall funnel conversion summary."""
     stage_counts = Counter()
     outcome_counts = Counter()
@@ -93,7 +98,9 @@ def funnel_summary(entries: list[dict]):
 
     print(f"Pipeline Funnel Summary — {date.today().isoformat()}")
     print(f"{'=' * 60}")
-    print(f"Total entries: {total}")
+    print(f"Operational entries: {total}")
+    if pool_count:
+        print(f"Research pool: {pool_count} (not included in funnel rates)")
     print()
 
     # Stage distribution
@@ -327,7 +334,8 @@ def main():
     args = parser.parse_args()
 
     entries = load_all_entries()
-    if not entries:
+    pool = load_pool_entries()
+    if not entries and not pool:
         print("No pipeline entries found.", file=sys.stderr)
         sys.exit(1)
 
@@ -338,7 +346,7 @@ def main():
     elif args.targets:
         show_targets(entries)
     else:
-        funnel_summary(entries)
+        funnel_summary(entries, pool_count=len(pool))
 
 
 if __name__ == "__main__":

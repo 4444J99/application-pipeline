@@ -1329,3 +1329,66 @@ def test_auto_sourced_jobs_still_use_tier_estimation():
     assert dims["mission_alignment"] == 9
     assert dims["evidence_match"] == 9
     assert dims["track_record_fit"] == 7
+
+
+# --- Auto-qualify tests ---
+
+
+def test_run_auto_qualify_defaults_to_dry_run(capsys):
+    """run_auto_qualify without --yes should default to dry-run (no file moves)."""
+    from score import run_auto_qualify
+    from pipeline_lib import PIPELINE_DIR_RESEARCH_POOL
+
+    if not PIPELINE_DIR_RESEARCH_POOL.exists():
+        return  # Skip if no pool dir
+
+    # Neither dry_run=True nor yes=True — should default to dry-run behavior
+    run_auto_qualify(dry_run=False, yes=False)
+    captured = capsys.readouterr()
+    assert "dry-run" in captured.out.lower() or "dry run" in captured.out.lower() or "Defaulting to dry-run" in captured.out
+
+
+def test_run_auto_qualify_dry_run_no_file_moves(capsys):
+    """run_auto_qualify(dry_run=True) should not move any files."""
+    from score import run_auto_qualify
+    from pipeline_lib import PIPELINE_DIR_RESEARCH_POOL, PIPELINE_DIR_ACTIVE
+
+    if not PIPELINE_DIR_RESEARCH_POOL.exists():
+        return  # Skip if no pool dir
+
+    # Count files before
+    pool_before = len(list(PIPELINE_DIR_RESEARCH_POOL.glob("*.yaml")))
+    active_before = len(list(PIPELINE_DIR_ACTIVE.glob("*.yaml")))
+
+    run_auto_qualify(dry_run=True)
+
+    # Count files after — should be unchanged
+    pool_after = len(list(PIPELINE_DIR_RESEARCH_POOL.glob("*.yaml")))
+    active_after = len(list(PIPELINE_DIR_ACTIVE.glob("*.yaml")))
+
+    assert pool_before == pool_after, "Dry run should not move files from pool"
+    assert active_before == active_after, "Dry run should not add files to active"
+
+
+def test_run_auto_qualify_min_score_filters(capsys):
+    """A very high min_score should filter out all entries."""
+    from score import run_auto_qualify
+
+    run_auto_qualify(dry_run=True, min_score=99.0)
+    captured = capsys.readouterr()
+    assert "No entries meet the qualification threshold" in captured.out or "Qualify (score >= 99.0): 0" in captured.out
+
+
+def test_run_auto_qualify_limit_caps_output(capsys):
+    """--limit should cap the number of entries shown."""
+    from score import run_auto_qualify
+    from pipeline_lib import PIPELINE_DIR_RESEARCH_POOL
+
+    if not PIPELINE_DIR_RESEARCH_POOL.exists():
+        return
+
+    run_auto_qualify(dry_run=True, min_score=0.0, limit=2)
+    captured = capsys.readouterr()
+    # Count [dry-run] lines — should be at most 2
+    dry_run_lines = [line for line in captured.out.splitlines() if "[dry-run]" in line]
+    assert len(dry_run_lines) <= 2, f"Expected at most 2 dry-run lines, got {len(dry_run_lines)}"

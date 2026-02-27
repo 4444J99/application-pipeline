@@ -29,6 +29,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
     PIPELINE_DIR_ACTIVE,
+    PIPELINE_DIR_RESEARCH_POOL,
     ALL_PIPELINE_DIRS,
     ALL_PIPELINE_DIRS_WITH_POOL,
     load_entries,
@@ -445,9 +446,9 @@ def create_pipeline_entry(job: dict) -> tuple[str, dict]:
 
 
 def write_pipeline_entry(entry_id: str, entry: dict) -> Path:
-    """Write a pipeline entry YAML file to pipeline/active/."""
-    PIPELINE_DIR_ACTIVE.mkdir(parents=True, exist_ok=True)
-    filepath = PIPELINE_DIR_ACTIVE / f"{entry_id}.yaml"
+    """Write a pipeline entry YAML file to pipeline/research_pool/."""
+    PIPELINE_DIR_RESEARCH_POOL.mkdir(parents=True, exist_ok=True)
+    filepath = PIPELINE_DIR_RESEARCH_POOL / f"{entry_id}.yaml"
     with open(filepath, "w") as f:
         yaml.dump(entry, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
     return filepath
@@ -748,7 +749,7 @@ def main():
 
         print(f"\n{'=' * 60}")
         if args.yes and not args.dry_run:
-            print(f"Created {len(created)} pipeline entries in pipeline/active/")
+            print(f"Created {len(created)} pipeline entries in pipeline/research_pool/")
             print(f"\nNext steps:")
             print(f"  python scripts/score.py --all          # Score new entries")
             print(f"  python scripts/advance.py --report     # Check advancement")
