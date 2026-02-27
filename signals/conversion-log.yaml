@@ -532,3 +532,108 @@ entries:
   response_date: '2026-02-27'
   time_to_response_days: null
   feedback: null
+- id: cursor-software-engineer-devex
+  submitted: '2026-02-27'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/cursor-software-engineer-devex-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: datadog-senior-technical-writer
+  submitted: '2026-02-27'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/datadog-senior-technical-writer-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: railway-developer-relations
+  submitted: '2026-02-27'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/railway-developer-relations-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: elevenlabs-developer-relations-engineer
+  submitted: '2026-02-27'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/elevenlabs-developer-relations-engineer-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: mongodb-senior-software-engineer-devtools
+  submitted: '2026-02-27'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/mongodb-senior-software-engineer-devtools-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: temporal-technical-writer
+  submitted: '2026-02-27'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/temporal-technical-writer-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: temporal-staff-developer-advocate-platform-engineering
+  submitted: '2026-02-27'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/temporal-staff-developer-advocate-platform-engineering-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null

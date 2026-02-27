@@ -1,15 +1,15 @@
-id: resend-dx-engineer-technical-writer
-name: Resend DX Engineer (Technical Writer)
+id: cursor-software-engineer-devex
+name: Cursor Software Engineer, DevEx
 track: job
-status: research
+status: submitted
 outcome: null
 target:
-  organization: Resend
-  url: https://jobs.ashbyhq.com/resend
-  application_url: https://jobs.ashbyhq.com/resend/06bd9cb2-d189-41b6-baf7-42bd5da9610f
+  organization: Cursor
+  url: https://jobs.ashbyhq.com/cursor
+  application_url: https://cursor.com/careers/software-engineer-devex
   portal: ashby
-  location: United States / Remote / Full-time
-  location_class: us-remote
+  location: SF / NY
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -18,7 +18,7 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.2
+  score: 8.4
   identity_position: independent-engineer
   dimensions:
     mission_alignment: 9
@@ -26,13 +26,13 @@ fit:
     track_record_fit: 7
     financial_alignment: 5
     effort_to_value: 7
-    strategic_value: 5
+    strategic_value: 7
     deadline_feasibility: 9
     portal_friction: 5
-  framing: Independent engineer and veteran educator (11 years) building production-grade
-    infrastructure at institutional scale (103 repos, 2,349+ tests). Specialist in
-    translating complex systemic work into "delightful" scannable documentation and
-    AI-native developer experiences for the Resend community.
+  framing: Independent engineer building production-grade infrastructure at scale
+    (103 repos, 2,349+ tests). Specialist in architecting "AI-native" development
+    environments designed for seamless human-agent collaboration and tightening EPD
+    feedback loops.
 submission:
   effort_level: standard
   blocks_used:
@@ -42,9 +42,9 @@ submission:
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
   variant_ids:
-    cover_letter: cover-letters/resend-dx-engineer-technical-writer-alchemized
+    cover_letter: cover-letters/cursor-software-engineer-devex-alchemized
   materials_attached:
-  - resumes/batch-03/resend-dx-engineer-technical-writer/resend-dx-engineer-technical-writer-resume.html
+  - resumes/batch-03/cursor-software-engineer-devex/cursor-software-engineer-devex-resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -54,7 +54,9 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
+  follow_up_count: 0
 tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-27"
+follow_up: []

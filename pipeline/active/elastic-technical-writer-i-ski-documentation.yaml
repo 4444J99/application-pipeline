@@ -1,14 +1,14 @@
-id: cohere-applied-ai-engineer-agentic-workflows-singapore
-name: Cohere Applied AI Engineer - Agentic Workflows (Singapore)
+id: elastic-technical-writer-i-ski-documentation
+name: Elastic Technical Writer I - SKI - Documentation
 track: job
-status: research
+status: qualified
 outcome: null
 target:
-  organization: Cohere
-  url: https://jobs.ashbyhq.com/cohere
-  application_url: https://jobs.ashbyhq.com/cohere/9c18b199-cd1f-4ef3-9fab-ce05589348ae
-  portal: ashby
-  location: Singapore
+  organization: Elastic
+  url: https://boards.greenhouse.io/elastic
+  application_url: https://jobs.elastic.co/jobs?gh_jid=7636419&gh_jid=7636419
+  portal: greenhouse
+  location: Hungary
   location_class: international
 deadline:
   date: null
@@ -18,7 +18,7 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.1
+  score: 8.0
   identity_position: independent-engineer
   dimensions:
     mission_alignment: 9
@@ -26,19 +26,25 @@ fit:
     track_record_fit: 7
     financial_alignment: 5
     effort_to_value: 4
-    strategic_value: 6
+    strategic_value: 5
     deadline_feasibility: 9
     portal_friction: 5
+  framing: Independent engineer and veteran educator building production-grade infrastructure
+    and developer tools at institutional scale. Specialist in "Docs as Code" and translating
+    deep technical "Cathedrals"—including Kibana visualizations and AI-native search—into
+    scannable, goal-oriented guidance.
 submission:
   effort_level: standard
-  blocks_used: 
+  blocks_used:
     framing: framings/independent-engineer
     evidence: evidence/differentiators
     work_samples: evidence/work-samples
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
-  variant_ids: {}
+  variant_ids:
+    cover_letter: cover-letters/elastic-technical-writer-i-ski-documentation-alchemized
   materials_attached:
+  - resumes/batch-03/elastic-technical-writer-i-ski-documentation/elastic-technical-writer-i-ski-documentation-resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -51,4 +57,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-26"
+last_touched: "2026-02-27"

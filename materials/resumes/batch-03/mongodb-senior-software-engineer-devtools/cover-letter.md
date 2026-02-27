@@ -10,7 +10,7 @@ The mission of MongoDB's DevTools team to empower users to interact with their d
 
 3. **Frontier Tooling and Agentic Experience:** I am a power user of agentic coding tools and have built multi-agent orchestration frameworks (like `agentic-titan`) and reliability layers for the Claude Agent SDK. I have extensive experience building MCP servers and WebSocket-based communication layers designed for autonomous engineering tasks. I am eager to help MongoDB build the next generation of tools—like the MongoDB MCP Server and VSCode extensions—that will define how developers interact with data in the AI era.
 
-I thrive in high-intensity, "big science" environments where the goal is to solve difficult problems in distributed environments. I am eager to contribute to MongoDB’s Database Experience department, building the tools that make managing global-scale data feel effortless.
+I thrive in high-intensity, "big science" environments where the goal is to solve difficult problems in distributed environments. I’m also drawn to this role’s Dublin location on a personal level: James Joyce was a central subject of both my Literature BA and Creative Writing MFA, and his work continues to inform my own computational research — my `linguistic-atomization-framework` project applies formal decomposition methods to Joycean textual structures. The chance to build developer tools for MongoDB from the city where Joyce wrote *Dubliners* would be a meaningful convergence of my technical and intellectual commitments.
 
 Thank you for your time and consideration.
 

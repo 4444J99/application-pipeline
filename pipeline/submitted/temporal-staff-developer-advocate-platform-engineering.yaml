@@ -1,15 +1,14 @@
-id: datadog-senior-technical-writer
-name: Datadog Senior Technical Writer
+id: temporal-staff-developer-advocate-platform-engineering
+name: Temporal Staff Developer Advocate, Platform Engineering
 track: job
-status: staged
+status: submitted
 outcome: null
 target:
-  organization: Datadog
-  url: https://boards.greenhouse.io/datadog
-  application_url: https://careers.datadoghq.com/detail/7642830/?gh_jid=7642830
+  organization: Temporal
+  url: https://boards.greenhouse.io/temporaltechnologies
+  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/5019040007
   portal: greenhouse
-  location: California, USA, Remote; Colorado, USA, Remote; Illinois, USA, Remote;
-    New York, USA, Remote; Washington, USA, Remote
+  location: Remote, United States
   location_class: us-remote
 deadline:
   date: null
@@ -31,9 +30,9 @@ fit:
     deadline_feasibility: 9
     portal_friction: 5
   framing: Independent engineer and veteran educator (11 years) building production-grade
-    infrastructure at institutional scale. Specialist in "Docs as Code" and translating
-    deep "Cathedral" architecture into scannable "Storefront" documentation for observability
-    and AI-native systems.
+    platform infrastructure at institutional scale (103 repos, 2,349+ tests). Specialist
+    in technical advocacy for distributed systems, Infrastructure-as-Code, and AI-native
+    developer experience.
 submission:
   effort_level: standard
   blocks_used:
@@ -43,9 +42,9 @@ submission:
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
   variant_ids:
-    cover_letter: cover-letters/datadog-senior-technical-writer-alchemized
+    cover_letter: cover-letters/temporal-staff-developer-advocate-platform-engineering-alchemized
   materials_attached:
-  - resumes/batch-03/datadog-senior-technical-writer/datadog-senior-technical-writer-resume.html
+  - resumes/batch-03/temporal-staff-developer-advocate-platform-engineering/temporal-staff-developer-advocate-platform-engineering-resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -55,9 +54,7 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-  follow_up_count: 0
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-26"
-follow_up: []
+last_touched: "2026-02-27"

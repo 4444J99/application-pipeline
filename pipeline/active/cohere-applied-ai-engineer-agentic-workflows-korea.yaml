@@ -1,14 +1,14 @@
-id: temporal-staff-developer-advocate-emea
-name: Temporal Staff Developer Advocate, EMEA
+id: cohere-applied-ai-engineer-agentic-workflows-korea
+name: Cohere Applied AI Engineer – Agentic Workflows (Korea)
 track: job
-status: research
+status: qualified
 outcome: null
 target:
-  organization: Temporal
-  url: https://boards.greenhouse.io/temporaltechnologies
-  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/4931126007
-  portal: greenhouse
-  location: London, United Kingdom
+  organization: Cohere
+  url: https://jobs.ashbyhq.com/cohere
+  application_url: https://jobs.ashbyhq.com/cohere/031c2335-db85-4265-8a88-a54b911be36a
+  portal: ashby
+  location: Korea
   location_class: international
 deadline:
   date: null
@@ -29,22 +29,16 @@ fit:
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
-  framing: Independent engineer building production-grade distributed systems and
-    technical advocacy infrastructure at institutional scale (103 repos, 2,349+ tests).
-    Specialist in translating complex backend primitives into high-signal technical
-    content and community flywheels for the EMEA ecosystem.
 submission:
   effort_level: standard
-  blocks_used:
+  blocks_used: 
     framing: framings/independent-engineer
     evidence: evidence/differentiators
     work_samples: evidence/work-samples
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
-  variant_ids:
-    cover_letter: cover-letters/temporal-staff-developer-advocate-emea-alchemized
+  variant_ids: {}
   materials_attached:
-  - resumes/batch-03/temporal-staff-developer-advocate-emea/temporal-staff-developer-advocate-emea-resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -57,4 +51,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-02-27'
+last_touched: "2026-02-27"

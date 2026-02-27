@@ -1,15 +1,15 @@
-id: cursor-software-engineer-devex
-name: Cursor Software Engineer, DevEx
+id: mongodb-senior-software-engineer-devtools
+name: MongoDB Senior Software Engineer, DevTools
 track: job
-status: staged
+status: submitted
 outcome: null
 target:
-  organization: Cursor
-  url: https://jobs.ashbyhq.com/cursor
-  application_url: https://jobs.ashbyhq.com/cursor/010063bd-6083-4fc0-a455-e6f0193b5347
-  portal: ashby
-  location: SF / NY
-  location_class: us-onsite
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7541590
+  portal: greenhouse
+  location: Dublin
+  location_class: international
 deadline:
   date: null
   type: rolling
@@ -18,21 +18,21 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.4
+  score: 8.1
   identity_position: independent-engineer
   dimensions:
     mission_alignment: 9
     evidence_match: 10
     track_record_fit: 7
     financial_alignment: 5
-    effort_to_value: 7
-    strategic_value: 7
+    effort_to_value: 4
+    strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
-  framing: Independent engineer building production-grade infrastructure at scale
-    (103 repos, 2,349+ tests). Specialist in architecting "AI-native" development
-    environments designed for seamless human-agent collaboration and tightening EPD
-    feedback loops.
+  framing: Independent engineer building production-grade developer tools and multi-agent
+    orchestration frameworks at institutional scale (103 repos, 2,349+ tests). Specialist
+    in bridging the gap between frontier database capabilities and AI-native engineering
+    workflows through automated governance.
 submission:
   effort_level: standard
   blocks_used:
@@ -42,9 +42,9 @@ submission:
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
   variant_ids:
-    cover_letter: cover-letters/cursor-software-engineer-devex-alchemized
+    cover_letter: cover-letters/mongodb-senior-software-engineer-devtools-alchemized
   materials_attached:
-  - resumes/batch-03/cursor-software-engineer-devex/cursor-software-engineer-devex-resume.html
+  - resumes/batch-03/mongodb-senior-software-engineer-devtools/mongodb-senior-software-engineer-devtools-resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -58,5 +58,5 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-26"
+last_touched: "2026-02-27"
 follow_up: []

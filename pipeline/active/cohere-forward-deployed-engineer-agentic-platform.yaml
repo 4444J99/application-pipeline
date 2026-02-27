@@ -1,15 +1,15 @@
-id: stripe-developer-experience-engineer-privy
-name: Stripe Developer Experience Engineer, Privy
+id: cohere-forward-deployed-engineer-agentic-platform
+name: Cohere Forward Deployed Engineer, Agentic Platform
 track: job
-status: research
+status: qualified
 outcome: null
 target:
-  organization: Stripe
-  url: https://boards.greenhouse.io/stripe
-  application_url: https://stripe.com/jobs/search?gh_jid=7104344
-  portal: greenhouse
-  location: NYC-Privy, US-Remote
-  location_class: us-remote
+  organization: Cohere
+  url: https://jobs.ashbyhq.com/cohere
+  application_url: https://jobs.ashbyhq.com/cohere/b0bcef37-1d20-414f-aade-c54942d63df9
+  portal: ashby
+  location: Japan
+  location_class: international
 deadline:
   date: null
   type: rolling
@@ -18,21 +18,21 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.3
+  score: 8.1
   identity_position: independent-engineer
   dimensions:
     mission_alignment: 9
     evidence_match: 10
     track_record_fit: 7
     financial_alignment: 5
-    effort_to_value: 7
+    effort_to_value: 4
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
-  framing: Independent engineer and creative technologist building production-grade
-    developer tools and AI orchestration frameworks at institutional scale (103 repos,
-    2,349+ tests). Specialist in translating complex technical primitives into delightful,
-    scannable "Storefront" developer experiences.
+  framing: Independent engineer building production-grade AI orchestration and RAG-ready
+    infrastructure at institutional scale (103 repos, 2,349+ tests). Specialist in
+    bridging the gap between frontier LLM capabilities and reliable enterprise deployment
+    through an "AI-conductor" methodology.
 submission:
   effort_level: standard
   blocks_used:
@@ -42,9 +42,9 @@ submission:
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
   variant_ids:
-    cover_letter: cover-letters/stripe-developer-experience-engineer-privy-alchemized
+    cover_letter: cover-letters/cohere-forward-deployed-engineer-agentic-platform-alchemized
   materials_attached:
-  - resumes/batch-03/stripe-developer-experience-engineer-privy/stripe-developer-experience-engineer-privy-resume.html
+  - resumes/batch-03/cohere-forward-deployed-engineer-agentic-platform/cohere-forward-deployed-engineer-agentic-platform-resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
