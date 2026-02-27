@@ -21,7 +21,10 @@ fit:
   score: 7.8
   original_score: 8.0
   identity_position: systems-artist
-  framing: "Multilingual digital humanism: language technology built on the premise that every language deserves architectural commitment"
+  framing: Systems artist presenting the "ORGANVM Metasystem"—a 103-repository autonomous
+    infrastructure that reclaims technical governance as a medium for human-scale
+    expression. Demonstrating how institutional-scale digital architecture can be
+    made transparent, steerable, and profoundly human-readable.
   lead_organs:
   - I
   - META
@@ -45,8 +48,9 @@ submission:
     framing: framings/systems-artist
     system_context: projects/organvm-system
   variant_ids:
-    cover_letter: cover-letters/grant-art-template
+    cover_letter: cover-letters/prix-ars-digital-humanity-alchemized
   materials_attached:
+  - resumes/batch-03/prix-ars-digital-humanity/prix-ars-digital-humanity-resume.html
   - resumes/base/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -63,20 +67,22 @@ portal_fields:
     char_limit: 2000
     format: textarea
     required: true
-    note: "2,000 characters including spaces"
+    note: 2,000 characters including spaces
   - name: project_video
     format: url
     required: true
-    note: "~3 min video documentation"
+    note: ~3 min video documentation
   - name: project_images
     format: file_upload
-    file_types: ["jpg", "png"]
+    file_types:
+    - jpg
+    - png
     required: true
-    note: "Architecture diagram, API output, hypergraph"
+    note: Architecture diagram, API output, hypergraph
   - name: ai_disclosure
     format: textarea
     required: true
-    note: "AI usage disclosure required for all entries"
+    note: AI usage disclosure required for all entries
   - name: work_samples
     format: url
     required: false
@@ -85,16 +91,27 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-tags: ["prix-ars-2026", "digital-humanity"]
+tags:
+- prix-ars-2026
+- digital-humanity
 source: 04-application-tracker.md
-notes: |
-  DUAL SUBMISSION: Digital Humanity category with Nexus Babel Alexandria.
+notes: 'DUAL SUBMISSION: Digital Humanity category with Nexus Babel Alexandria.
+
   Sister entry: prix-ars-electronica (AI Council Coliseum, Interactive Art+).
+
   Jury: Ian Banerjee (urban transformation, TU Wien), Yun-Cheng Chen
+
   (regenerative institutionalism, g0v.tw civic tech — strong fit),
+
   Marta Handenawer (directed 2025 DH Golden Nica "Synthetic Memories"),
+
   Esther Mwema (digital inequalities, African feminist/decolonial).
+
   Frame: multilingual equity, open-source, cultural preservation.
+
   Risk: category emphasizes underrepresented geographies; lead with
+
   structural innovation (building from precarity) not identity claims.
-last_touched: "2026-02-24"
+
+  '
+last_touched: "2026-02-27"
