@@ -1,7 +1,7 @@
 id: new-inc
 name: NEW INC (New Museum)
 track: program
-status: staged
+status: submitted
 outcome: null
 target:
   organization: New Museum / NEW INC
@@ -53,7 +53,7 @@ timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
   materials_ready: '2026-02-23'
-  submitted: null
+  submitted: '2026-02-27'
   acknowledged: null
   interview: null
   outcome_date: null
