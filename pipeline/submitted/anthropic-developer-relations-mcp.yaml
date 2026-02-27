@@ -1,7 +1,7 @@
 id: anthropic-developer-relations-mcp
 name: Anthropic Developer Relations, MCP
 track: job
-status: submitted
+status: acknowledged
 outcome: null
 target:
   organization: Anthropic
@@ -53,15 +53,15 @@ timeline:
   researched: '2026-02-24'
   submitted: '2026-02-25'
 conversion:
-  response_received: false
-  response_type: null
-  time_to_response_days: null
+  response_received: true
+  response_type: acknowledged
+  time_to_response_days: 2
   feedback: null
   follow_up_count: 0
 tags:
 - auto-sourced
 - job-tier-1
 source: source_jobs.py
-last_touched: "2026-02-26"
+last_touched: "2026-02-27"
 notes: SF-only but may negotiate remote for strong fit. MCP daily workflow is strongest evidence — custom servers, skill system, claude-code integration.
 follow_up: []

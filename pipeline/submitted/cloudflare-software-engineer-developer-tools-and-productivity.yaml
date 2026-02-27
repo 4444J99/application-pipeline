@@ -1,7 +1,7 @@
 id: cloudflare-software-engineer-developer-tools-and-productivity
 name: Cloudflare Software Engineer, Developer Tools and Productivity
 track: job
-status: submitted
+status: acknowledged
 outcome: null
 target:
   organization: Cloudflare
@@ -51,13 +51,13 @@ timeline:
   researched: '2026-02-26'
   submitted: '2026-02-26'
 conversion:
-  response_received: false
-  response_type: null
-  time_to_response_days: null
+  response_received: true
+  response_type: acknowledged
+  time_to_response_days: 1
   feedback: null
   follow_up_count: 0
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-26"
+last_touched: "2026-02-27"
 follow_up: []

@@ -1,7 +1,7 @@
 id: cloudflare-models-engineer-developer-relations
 name: Cloudflare Models Engineer, Developer Relations
 track: job
-status: submitted
+status: acknowledged
 outcome: null
 target:
   organization: Cloudflare
@@ -51,13 +51,13 @@ timeline:
   submitted: '2026-02-24'
 conversion:
   response_received: true
-  response_type: null
-  time_to_response_days: null
+  response_type: acknowledged
+  time_to_response_days: 3
   feedback: null
   follow_up_count: 0
 tags:
 - auto-sourced
 - curated-fit
 source: source_jobs.py
-last_touched: "2026-02-26"
+last_touched: "2026-02-27"
 follow_up: []

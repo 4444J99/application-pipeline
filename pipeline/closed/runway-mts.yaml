@@ -1,8 +1,8 @@
 id: runway-mts
 name: Runway Member of Technical Staff Research Tooling
 track: job
-status: acknowledged
-outcome: null
+status: outcome
+outcome: rejected
 target:
   organization: Runway
   url: https://runwayml.com
@@ -64,8 +64,8 @@ portal_fields:
   - name: portfolio
 conversion:
   response_received: true
-  response_type: null
-  time_to_response_days: null
+  response_type: rejected
+  time_to_response_days: 3
   feedback: null
   follow_up_count: 0
 tags:
@@ -78,5 +78,5 @@ notes: |
   Score is 5.7 (second highest), but role leans toward ML research infrastructure more than
   systems engineering. Creative-AI bridge via ORGAN-II is real, but role likely needs more
   hands-on ML pipeline experience. Good application, lower probability of advancing past screen.
-last_touched: "2026-02-26"
+last_touched: "2026-02-27"
 follow_up: []

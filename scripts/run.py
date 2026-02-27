@@ -36,6 +36,7 @@ COMMANDS = {
     "preflight":   ("preflight.py", [],                  "Batch submission readiness"),
     "archive":     ("archive_research.py", ["--report"], "Show archival candidates"),
     "qualify":     ("score.py", ["--auto-qualify"],       "Preview auto-qualification"),
+    "email":       ("check_email.py", [],                 "Check email for submission confirmations and responses"),
 }
 
 # --- Parameterized commands (word + target ID) ---

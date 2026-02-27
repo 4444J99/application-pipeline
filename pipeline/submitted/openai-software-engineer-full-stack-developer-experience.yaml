@@ -1,7 +1,7 @@
 id: openai-software-engineer-full-stack-developer-experience
 name: OpenAI Software Engineer, Full-Stack — Developer Experience
 track: job
-status: submitted
+status: acknowledged
 outcome: null
 target:
   organization: OpenAI
@@ -49,8 +49,8 @@ submission:
 timeline:
   researched: '2026-02-26'
 conversion:
-  response_received: false
-  response_type: null
+  response_received: true
+  response_type: acknowledged
   time_to_response_days: null
   feedback: null
   follow_up_count: 0

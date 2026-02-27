@@ -47,10 +47,10 @@ entries:
   cover_letter_present: true
   custom_answers: true
   follow_up_count: 0
-  outcome: null
-  outcome_stage: null
-  response_date: null
-  time_to_response_days: null
+  outcome: rejected
+  outcome_stage: resume_screen
+  response_date: '2026-02-27'
+  time_to_response_days: 3
   feedback: null
 - id: cursor-software-engineer-client-infrastructure
   submitted: '2026-02-24'
@@ -200,10 +200,10 @@ entries:
   cover_letter_present: true
   custom_answers: true
   follow_up_count: 0
-  outcome: null
+  outcome: acknowledged
   outcome_stage: null
-  response_date: null
-  time_to_response_days: null
+  response_date: '2026-02-27'
+  time_to_response_days: 3
   feedback: null
 - id: figma-software-engineer-developer-experience
   submitted: '2026-02-24'
@@ -234,10 +234,10 @@ entries:
   cover_letter_present: true
   custom_answers: true
   follow_up_count: 0
-  outcome: null
-  outcome_stage: null
-  response_date: null
-  time_to_response_days: null
+  outcome: rejected
+  outcome_stage: resume_screen
+  response_date: '2026-02-27'
+  time_to_response_days: 3
   feedback: null
 - id: stripe-full-stack-engineer-developer-experience-product-platform
   submitted: '2026-02-24'
@@ -279,9 +279,9 @@ entries:
   identity_position: educator
   blocks_used: null
   variant_id: cover-letters/anthropic-developer-education-lead-alchemized
-  outcome: null
-  response_date: null
-  time_to_response_days: null
+  outcome: acknowledged
+  response_date: '2026-02-27'
+  time_to_response_days: 2
   feedback: null
 - id: anthropic-developer-relations-mcp
   submitted: '2026-02-25'
@@ -289,9 +289,9 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/anthropic-developer-relations-mcp-alchemized
-  outcome: null
-  response_date: null
-  time_to_response_days: null
+  outcome: acknowledged
+  response_date: '2026-02-27'
+  time_to_response_days: 2
   feedback: null
 - id: anthropic-founding-developer-relations-lead
   submitted: '2026-02-25'
@@ -299,9 +299,9 @@ entries:
   identity_position: independent-engineer
   blocks_used: null
   variant_id: cover-letters/anthropic-founding-developer-relations-lead-alchemized
-  outcome: null
-  response_date: null
-  time_to_response_days: null
+  outcome: acknowledged
+  response_date: '2026-02-27'
+  time_to_response_days: 2
   feedback: null
 - id: awesome-foundation
   submitted: '2026-02-25'
@@ -393,9 +393,9 @@ entries:
   - pitches/credentials-creative-tech
   - methodology/ai-conductor
   variant_id: cover-letters/anthropic-model-quality-software-engineer-claude-code-alchemized
-  outcome: null
-  response_date: null
-  time_to_response_days: null
+  outcome: acknowledged
+  response_date: '2026-02-27'
+  time_to_response_days: 1
   feedback: null
 - id: anthropic-senior-education-platform-engineer
   submitted: '2026-02-26'
@@ -408,9 +408,9 @@ entries:
   - pitches/credentials-creative-tech
   - methodology/ai-conductor
   variant_id: cover-letters/anthropic-senior-education-platform-engineer-alchemized
-  outcome: null
-  response_date: null
-  time_to_response_days: null
+  outcome: acknowledged
+  response_date: '2026-02-27'
+  time_to_response_days: 1
   feedback: null
 - id: anthropic-software-engineer-windows-claude-code
   submitted: '2026-02-26'
@@ -423,9 +423,9 @@ entries:
   - pitches/credentials-creative-tech
   - methodology/ai-conductor
   variant_id: cover-letters/anthropic-software-engineer-windows-claude-code-alchemized
-  outcome: null
-  response_date: null
-  time_to_response_days: null
+  outcome: acknowledged
+  response_date: '2026-02-27'
+  time_to_response_days: 1
   feedback: null
 - id: cloudflare-software-engineer-developer-tools-and-productivity
   submitted: '2026-02-26'
@@ -438,9 +438,9 @@ entries:
   - pitches/credentials-creative-tech
   - methodology/ai-conductor
   variant_id: cover-letters/cloudflare-software-engineer-developer-tools-and-productivity-alchemized
-  outcome: null
-  response_date: null
-  time_to_response_days: null
+  outcome: acknowledged
+  response_date: '2026-02-27'
+  time_to_response_days: 1
   feedback: null
 - id: scale-ai-staff-software-engineer-developer-experience
   submitted: '2026-02-26'
@@ -453,9 +453,9 @@ entries:
   - pitches/credentials-creative-tech
   - methodology/ai-conductor
   variant_id: cover-letters/scale-ai-staff-software-engineer-developer-experience-alchemized
-  outcome: null
-  response_date: null
-  time_to_response_days: null
+  outcome: acknowledged
+  response_date: '2026-02-27'
+  time_to_response_days: 1
   feedback: null
 - id: mongodb-senior-developer-advocate
   submitted: '2026-02-27'
@@ -468,8 +468,8 @@ entries:
   - pitches/credentials-creative-tech
   - methodology/ai-conductor
   variant_id: cover-letters/mongodb-senior-developer-advocate-alchemized
-  outcome: null
-  response_date: null
+  outcome: acknowledged
+  response_date: '2026-02-27'
   time_to_response_days: null
   feedback: null
 - id: dbt-labs-senior-developer-experience-advocate
@@ -483,8 +483,8 @@ entries:
   - pitches/credentials-creative-tech
   - methodology/ai-conductor
   variant_id: cover-letters/dbt-labs-senior-developer-experience-advocate-alchemized
-  outcome: null
-  response_date: null
+  outcome: acknowledged
+  response_date: '2026-02-27'
   time_to_response_days: null
   feedback: null
 - id: anthropic-software-engineer-agent-sdk-claude-code
@@ -498,8 +498,8 @@ entries:
   - pitches/credentials-creative-tech
   - methodology/ai-conductor
   variant_id: cover-letters/anthropic-software-engineer-agent-sdk-claude-code-alchemized
-  outcome: null
-  response_date: null
+  outcome: acknowledged
+  response_date: '2026-02-27'
   time_to_response_days: null
   feedback: null
 - id: deepgram-staff-developer-advocate
@@ -513,8 +513,8 @@ entries:
   - pitches/credentials-creative-tech
   - methodology/ai-conductor
   variant_id: cover-letters/deepgram-staff-developer-advocate-alchemized
-  outcome: null
-  response_date: null
+  outcome: acknowledged
+  response_date: '2026-02-27'
   time_to_response_days: null
   feedback: null
 - id: openai-software-engineer-full-stack-developer-experience
@@ -528,7 +528,7 @@ entries:
   - pitches/credentials-creative-tech
   - methodology/ai-conductor
   variant_id: cover-letters/openai-software-engineer-full-stack-developer-experience-alchemized
-  outcome: null
-  response_date: null
+  outcome: acknowledged
+  response_date: '2026-02-27'
   time_to_response_days: null
   feedback: null
