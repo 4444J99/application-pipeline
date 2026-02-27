@@ -29,16 +29,22 @@ fit:
     strategic_value: 8
     deadline_feasibility: 9
     portal_friction: 5
+  framing: Independent engineer and veteran educator building production-grade AI
+    orchestration at institutional scale (103 repos, 2,349+ tests). Specialist in
+    translating deep technical infrastructure into high-signal "Storefront" community
+    programs and "AI-conductor" methodologies for the EMEA builder ecosystem.
 submission:
   effort_level: standard
-  blocks_used: 
+  blocks_used:
     framing: framings/independent-engineer
     evidence: evidence/differentiators
     work_samples: evidence/work-samples
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
-  variant_ids: {}
+  variant_ids:
+    cover_letter: cover-letters/anthropic-developer-community-lead-emea-alchemized
   materials_attached:
+  - resumes/batch-03/anthropic-developer-community-lead-emea/anthropic-developer-community-lead-emea-resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -51,4 +57,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-26"
+last_touched: "2026-02-27"

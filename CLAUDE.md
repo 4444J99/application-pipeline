@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-Career application pipeline repo — personal infrastructure for managing grant, residency, fellowship, job, and writing applications as a structured conversion pipeline.
+Career application pipeline repo — personal infrastructure for managing grant, residency, fellowship, job, and writing applications as a structured conversion pipeline. Implements a **"Cathedral → Storefront"** philosophy: preserving deep, immersive systemic work (Cathedral) while providing high-signal, scannable entry points (Storefront) for reviewers.
 
 **Owner:** @4444J99 (personal/liminal — not an organ repo)
 **Parent:** `~/Workspace/4444J99/application-pipeline/`
@@ -12,14 +12,14 @@ Career application pipeline repo — personal infrastructure for managing grant,
 ## Architecture
 
 - `pipeline/` — One YAML file per application, organized into `active/`, `submitted/`, `closed/`, and `research_pool/` subdirectories (schema in `_schema.yaml`)
-  - `research_pool/` holds auto-sourced research-status entries, separated from actionable entries to keep `active/` lean (~25 files vs ~1000)
-- `blocks/` — Modular narrative building blocks with tiered depth (60s / 2min / 5min / cathedral)
+  - `research_pool/` holds auto-sourced research-status entries, separated from actionable entries to keep `active/` lean (~30 files vs ~1000)
+- `blocks/` — Modular narrative building blocks with tiered depth (60s / 2min / 5min / cathedral). Each block has frontmatter: `title`, `category`, `tags`, `identity_positions`, `tracks`, `tier`. Regenerate the tag index with `python scripts/build_block_index.py`.
 - `variants/` — A/B tracked material versions with outcome attribution (e.g. `cover-letters/`, `project-descriptions/`)
-- `materials/` — Raw materials (resumes, CVs, work samples, headshots)
+- `materials/` — Raw materials (resumes, CVs, work samples, headshots). Resumes organized into `base/` (5 identity-position templates) and `batch-NN/` (target-tailored versions, current: `batch-03/`).
 - `targets/profiles/` — 44 target-specific profile JSONs with pre-written artist statements, bios, work samples
 - `signals/` — Conversion analytics (conversion-log.yaml, patterns.md, outreach-log.yaml, standup-log.yaml)
 - `strategy/` — Strategic documents (funding strategy, scoring rubric, identity positions, campaign reports)
-- `scripts/` — Python CLI tooling (all scripts import from `pipeline_lib.py`)
+- `scripts/` — Python CLI tooling (all scripts import from `pipeline_lib.py`). Includes ATS-specific submitters for Greenhouse, Lever, and Ashby portals.
 - `docs/` — Architecture rationale and workflow guide
 
 ## Pipeline State Machine
@@ -38,6 +38,16 @@ research → qualified → drafting → staged → submitted → acknowledged �
 - `advance.py` enforces forward-only progression with validation
 - `standup.py` flags entries untouched for >7 days as stale
 
+## Identity Positions
+
+Every application must align with one of five canonical positions defined in `strategy/identity-positions.md`. These determine framing, block selection, and resume variant:
+
+1. **Independent Engineer** — AI lab roles (Anthropic, OpenAI, Stripe). Focus: large-scale infra, testing discipline, "AI-conductor" methodology.
+2. **Systems Artist** — Art grants/residencies. Focus: governance as artwork, systemic scale.
+3. **Educator** — Academic roles/fellowships. Focus: teaching complex systems at scale.
+4. **Creative Technologist** — Tech grants/consulting. Focus: AI orchestration, production-grade creative instruments.
+5. **Community Practitioner** — Identity-specific funding. Focus: precarity-informed systemic practice.
+
 ## Content Composition Model
 
 Three content layers feed into submissions:
@@ -47,6 +57,8 @@ Three content layers feed into submissions:
 3. **Legacy scripts** (`scripts/legacy-submission/`) — 32 pre-pipeline paste-ready submissions, parsed via `pipeline_lib.load_legacy_script()`.
 
 **Fallback pattern**: `draft.py` and `compose.py --profile` check blocks first, then fall back to profile content, then legacy scripts. Entries don't need `blocks_used` fully populated.
+
+**Storefront content rules**: Lead with numbers ("103 repositories," "2,349 tests"). One sentence, one claim — maintain scannability for 60-second reviews. Preemptively frame gaps (e.g., lack of awards) as deliberate trajectory.
 
 ## Script Dependency Graph
 
