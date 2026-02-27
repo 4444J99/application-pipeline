@@ -44,6 +44,7 @@ submission:
   variant_ids:
     cover_letter: cover-letters/stripe-global-strategic-alliances-lead-agentic-commerce-and-retail--alchemized
   materials_attached:
+  - resumes/batch-03/stripe-global-strategic-alliances-lead-agentic-commerce-and-retail-/stripe-global-strategic-alliances-lead-agentic-commerce-and-retail--resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -56,4 +57,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-02-27'
+last_touched: "2026-02-27"

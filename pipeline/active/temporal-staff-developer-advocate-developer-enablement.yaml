@@ -45,6 +45,7 @@ submission:
   variant_ids:
     cover_letter: cover-letters/temporal-staff-developer-advocate-developer-enablement-alchemized
   materials_attached:
+  - resumes/batch-03/temporal-staff-developer-advocate-developer-enablement/temporal-staff-developer-advocate-developer-enablement-resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -57,4 +58,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-02-27'
+last_touched: "2026-02-27"
