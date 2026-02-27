@@ -21,8 +21,10 @@ fit:
   score: 7.9
   original_score: 7.9
   identity_position: systems-artist
-  framing: Systems artist creating large-scale computational works bridging art and
-    technology
+  framing: Systems artist presenting the "ORGANVM Metasystem"—a work of infrastructure
+    art that reclaims technical governance as an aesthetic medium. Proposing to collaborate
+    with LACMA's technology partners to explore how autonomous, steerable orchestration
+    can redefine the future of creative labor.
   lead_organs:
   - I
   - II
@@ -45,9 +47,10 @@ submission:
     evidence: evidence/work-samples
     framing: framings/systems-artist
     tech_detail: projects/recursive-engine
-  variant_ids: 
-    cover_letter: cover-letters/grant-art-template
-  materials_attached: 
+  variant_ids:
+    cover_letter: cover-letters/lacma-art-tech-alchemized
+  materials_attached:
+  - resumes/batch-03/lacma-art-tech/lacma-art-tech-resume.html
   - resumes/base/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -72,4 +75,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: null
-last_touched: "2026-02-23"
+last_touched: "2026-02-27"
