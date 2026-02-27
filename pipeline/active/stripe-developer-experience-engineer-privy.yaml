@@ -1,14 +1,14 @@
-id: temporal-staff-developer-advocate-developer-enablement
-name: Temporal Staff Developer Advocate, Developer Enablement
+id: stripe-developer-experience-engineer-privy
+name: Stripe Developer Experience Engineer, Privy
 track: job
 status: research
 outcome: null
 target:
-  organization: Temporal
-  url: https://boards.greenhouse.io/temporaltechnologies
-  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/5041529007
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7104344
   portal: greenhouse
-  location: United States - Remote Opportunity
+  location: NYC-Privy, US-Remote
   location_class: us-remote
 deadline:
   date: null
@@ -29,15 +29,20 @@ fit:
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
+  framing: Independent engineer and creative technologist building production-grade
+    developer tools and AI orchestration frameworks at institutional scale (103 repos,
+    2,349+ tests). Specialist in translating complex technical primitives into delightful,
+    scannable "Storefront" developer experiences.
 submission:
   effort_level: standard
-  blocks_used: 
+  blocks_used:
     framing: framings/independent-engineer
     evidence: evidence/differentiators
     work_samples: evidence/work-samples
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
-  variant_ids: {}
+  variant_ids:
+    cover_letter: cover-letters/stripe-developer-experience-engineer-privy-alchemized
   materials_attached:
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
@@ -51,4 +56,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-26"
+last_touched: '2026-02-27'
