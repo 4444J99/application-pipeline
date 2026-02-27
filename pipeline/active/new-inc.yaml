@@ -21,8 +21,10 @@ fit:
   score: 6.8
   original_score: 7.2
   identity_position: creative-technologist
-  framing: Creative technologist building sustainable practice at intersection of
-    art and technology
+  framing: Creative technologist presenting the "ORGANVM Metasystem"—a production-grade
+    AI orchestration framework designed to scale solo creative practice into institutional-grade
+    cultural infrastructure. Seeking to use the NEW INC incubator to bridge the gap
+    between frontier AI engineering and resilient artistic production.
   lead_organs:
   - III
   - IV
@@ -41,8 +43,10 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
-  variant_ids: {}
-  materials_attached: 
+  variant_ids:
+    cover_letter: cover-letters/new-inc-alchemized
+  materials_attached:
+  - resumes/batch-03/new-inc/new-inc-resume.html
   - resumes/base/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -66,4 +70,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: ~$600/month program. Spring/Summer 2026 deadline TBA.
-last_touched: "2026-02-23"
+last_touched: "2026-02-27"
