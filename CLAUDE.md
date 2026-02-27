@@ -239,6 +239,37 @@ pytest tests/test_compose.py -v              # Single test file
 pytest tests/test_compose.py::test_name -v   # Single test
 ```
 
+## Quick Commands
+
+Single-word command protocol via `python scripts/run.py <command>`. Any LLM can execute these.
+
+| Command | What It Does |
+|---------|-------------|
+| `standup` | Daily dashboard: stale entries, deadlines, priorities, follow-ups |
+| `campaign` | Deadline-aware campaign view with urgency tiers |
+| `hygiene` | Entry data quality report: URLs, staleness, gates |
+| `followup` | Today's follow-up actions and overdue items |
+| `outcomes` | Entries awaiting response + stale submissions |
+| `funnel` | Conversion funnel analytics |
+| `metrics` | Metric consistency check across blocks/profiles/strategy |
+| `validate` | Pipeline YAML schema validation |
+| `status` | Full pipeline status overview |
+| `velocity` | Submission velocity stats |
+| `conversion` | Conversion rate report by track/position/score |
+| `scoreall` | Preview all scores |
+| `enrichall` | Preview all enrichments |
+| `preflight` | Batch submission readiness |
+| `archive` | Show archival candidates |
+| `qualify` | Preview auto-qualification |
+
+**With target ID:** `score <id>`, `enrich <id>`, `advance <id>`, `compose <id>`, `draft <id>`, `submit <id>`, `check <id>`, `record <id>`, `gate <id>`, `contacts <id>`
+
+**Session sequences:**
+- Morning: `standup` → `followup` → `outcomes` → `campaign`
+- Submit: `campaign` → `check <id>` → `submit <id>` → `record <id>`
+- Research: `hygiene` → `scoreall` → `qualify` → `enrichall`
+- Analyze: `funnel` → `conversion` → `velocity` → `metrics`
+
 ## Testing Patterns
 
 - Tests live in `tests/` and use pytest

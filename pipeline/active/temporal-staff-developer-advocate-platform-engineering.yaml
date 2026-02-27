@@ -29,10 +29,10 @@ fit:
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
-  framing: Independent engineer and platform architect building production-grade distributed
-    infrastructure at scale (103 repos, 2,349+ tests). Specialist in self-service
-    developer platforms and "AI-conductor" methodologies, translating complex backend
-    orchestration into high-signal "golden path" workflows for engineering teams.
+  framing: Independent engineer and veteran educator (11 years) building production-grade
+    platform infrastructure at institutional scale (103 repos, 2,349+ tests). Specialist
+    in technical advocacy for distributed systems, Infrastructure-as-Code, and AI-native
+    developer experience.
 submission:
   effort_level: standard
   blocks_used:
@@ -57,4 +57,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-27"
+last_touched: '2026-02-27'
