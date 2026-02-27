@@ -1,7 +1,7 @@
 id: notion-staff-software-engineer-ai-agentic-search
 name: Notion Staff Software Engineer, AI Agentic Search
 track: job
-status: submitted
+status: staged
 outcome: null
 target:
   organization: Notion
@@ -54,7 +54,9 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
+  follow_up_count: 0
 tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-02-26"
+follow_up: []

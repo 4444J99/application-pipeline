@@ -67,6 +67,7 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
+  follow_up_count: 0
 tags:
   - job-tier-2
   - submit-order-3
@@ -79,3 +80,4 @@ notes: |
   agentic-titan IS an agentic workflow framework.
   Gap to bridge: Track record at 4 is modest. No enterprise deployment of agentic systems.
 last_touched: "2026-02-26"
+follow_up: []

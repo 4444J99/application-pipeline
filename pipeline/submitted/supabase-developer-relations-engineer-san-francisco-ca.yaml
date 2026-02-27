@@ -48,13 +48,16 @@ submission:
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-24'
+  submitted: '2026-02-24'
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
+  follow_up_count: 0
 tags:
 - auto-sourced
 - curated-fit
 source: source_jobs.py
 last_touched: "2026-02-26"
+follow_up: []

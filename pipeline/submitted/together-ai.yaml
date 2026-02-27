@@ -67,6 +67,7 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
+  follow_up_count: 0
 tags:
   - job-tier-2
   - submit-order-4
@@ -79,3 +80,4 @@ notes: |
   essays and teaching demonstrate.
   Gap to bridge: "Lead" implies team management experience, which is missing.
 last_touched: "2026-02-26"
+follow_up: []

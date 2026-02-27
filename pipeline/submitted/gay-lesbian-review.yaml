@@ -68,7 +68,9 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
+  follow_up_count: 0
 tags: []
 source: 04-application-tracker.md
 notes: $250/feature.
 last_touched: '2026-02-26'
+follow_up: []

@@ -67,6 +67,7 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
+  follow_up_count: 0
 tags:
   - job-tier-4
   - deprioritize
@@ -79,3 +80,4 @@ notes: |
   communication but not enterprise deployment context. High strategic value (8) is tempting
   but probability too low — effort better spent on SE Claude Code application.
 last_touched: "2026-02-26"
+follow_up: []

@@ -1,7 +1,7 @@
 id: prix-ars-electronica
 name: Prix Ars Electronica 2026 — Interactive Art+
 track: prize
-status: submitted
+status: staged
 outcome: null
 target:
   organization: Ars Electronica
@@ -57,7 +57,6 @@ timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
   materials_ready: '2026-02-18'
-  submitted: '2026-02-26'
   acknowledged: null
   interview: null
   outcome_date: null
@@ -91,6 +90,7 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
+  follow_up_count: 0
 tags:
 - prix-ars-2026
 - interactive-art
@@ -113,3 +113,4 @@ notes: 'DUAL SUBMISSION: Interactive Art+ category with AI Council Coliseum.
 
   '
 last_touched: "2026-02-26"
+follow_up: []

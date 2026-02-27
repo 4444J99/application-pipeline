@@ -1,7 +1,7 @@
 id: google-ami
 name: Google AMI Grants
 track: grant
-status: submitted
+status: staged
 outcome: null
 target:
   organization: Google
@@ -56,7 +56,6 @@ timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
   materials_ready: '2026-02-23'
-  submitted: '2026-02-27'
   acknowledged: null
   interview: null
   outcome_date: null

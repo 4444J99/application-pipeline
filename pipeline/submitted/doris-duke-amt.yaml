@@ -129,6 +129,7 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
+  follow_up_count: 0
 tags: []
 source: 04-application-tracker.md
 notes: |
@@ -141,3 +142,4 @@ notes: |
   DDF mandate prioritizes dance/jazz/theater — "Other" discipline applicants
   remain eligible but not prioritized. Mozilla side more open to cross-disciplinary.
 last_touched: '2026-02-25'
+follow_up: []

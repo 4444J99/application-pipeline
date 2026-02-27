@@ -67,6 +67,7 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
+  follow_up_count: 0
 tags:
   - job-tier-3
   - submit-order-5
@@ -78,3 +79,4 @@ notes: |
   systems engineering. Creative-AI bridge via ORGAN-II is real, but role likely needs more
   hands-on ML pipeline experience. Good application, lower probability of advancing past screen.
 last_touched: "2026-02-26"
+follow_up: []

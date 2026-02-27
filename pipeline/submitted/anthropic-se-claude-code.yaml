@@ -66,6 +66,7 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
+  follow_up_count: 0
 tags:
   - job-tier-1
   - submit-order-1
@@ -78,3 +79,4 @@ notes: |
   Evidence that lands: 21K code files, 3.6K tests, 94 CI/CD pipelines, agentic-titan (1,095 tests).
   Honest gaps: No team engineering, no production users. Scale and testing discipline are real.
 last_touched: "2026-02-26"
+follow_up: []
