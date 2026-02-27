@@ -12,7 +12,6 @@ from tailor_resume import (
     resolve_base_resume,
 )
 
-
 # --- resolve_base_resume ---
 
 

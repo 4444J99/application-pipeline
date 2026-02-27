@@ -7,16 +7,15 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from check_metrics import (
+    _FALLBACK_METRICS,
     METRIC_PATTERNS,
     ORGAN_PATTERNS,
     SOURCE_METRICS,
-    _FALLBACK_METRICS,
     apply_fix,
     check_file,
     check_profile_json,
     load_source_metrics,
 )
-
 
 # --- _FALLBACK_METRICS ---
 

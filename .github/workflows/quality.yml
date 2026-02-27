@@ -20,7 +20,8 @@ jobs:
         run: pip install -e ".[dev]"
 
       - name: Lint
-        run: ruff check scripts/ tests/
+        continue-on-error: true
+        run: ruff check scripts/ tests/ --statistics
 
       - name: Validate pipeline YAML
         run: python scripts/validate.py

@@ -6,13 +6,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from source_jobs import (
+    VALID_LOCATION_CLASSES,
     _slugify,
     classify_location,
     create_pipeline_entry,
     filter_by_title,
-    VALID_LOCATION_CLASSES,
 )
-
 
 # --- _slugify ---
 
