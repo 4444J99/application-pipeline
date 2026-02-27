@@ -75,7 +75,33 @@ Scripts are independent CLIs but some import functions from each other:
 - **`submit.py`** imports from `check_metrics.py` — `--check` mode now validates block metrics freshness.
 - All other scripts are standalone CLIs that read/write pipeline YAML files.
 
+## Resume Workflow
+
+**NEVER use base resumes (`materials/resumes/base/`) for final submissions.** Every target must have a tailored resume in the current batch directory (`materials/resumes/batch-03/`).
+
+```bash
+# Tailor a resume for a target (generates HTML in batch-03/<entry-id>/)
+python scripts/tailor_resume.py --target <entry-id>
+
+# Wire the tailored resume into the pipeline YAML
+python scripts/tailor_resume.py --target <entry-id> --wire
+
+# Build PDFs from HTML resumes (headless Chrome)
+python scripts/build_resumes.py                          # All unbuilt resumes
+python scripts/build_resumes.py --target <entry-id>      # Single target
+```
+
+All resumes must be exactly 1 page.
+
+## Completion Summaries
+
+When finishing an application batch or role, always provide:
+1. The original job posting / application URL
+2. Direct links to the tailored resume (PDF), cover letter, and answers files
+
 ## Commands
+
+Most scripts are accessible via `python scripts/run.py <command>` (see Quick Commands below). Full script invocations are documented here for advanced usage.
 
 ```bash
 # Daily standup (start here every session)
@@ -93,6 +119,9 @@ python scripts/pipeline_status.py
 # Validate pipeline YAML
 python scripts/validate.py
 
+# Lint
+ruff check scripts/ tests/
+
 # Research pool management (archive research entries out of active/)
 python scripts/archive_research.py --report        # Show what would move
 python scripts/archive_research.py --dry-run        # Preview file moves
@@ -105,7 +134,6 @@ python scripts/score.py --all --dry-run        # Preview all scores
 
 # Auto-qualify: promote research_pool entries above threshold to active/qualified
 python scripts/score.py --auto-qualify                        # Defaults to dry-run preview
-python scripts/score.py --auto-qualify --dry-run              # Explicit dry-run preview
 python scripts/score.py --auto-qualify --yes                  # Execute promotion (score >= 7.0)
 python scripts/score.py --auto-qualify --yes --min-score 8.0  # Higher threshold
 python scripts/score.py --auto-qualify --yes --limit 5        # Promote top 5 only
@@ -148,47 +176,42 @@ python scripts/enrich.py --report                    # Show enrichment gaps
 python scripts/enrich.py --all --dry-run             # Preview all enrichments
 python scripts/enrich.py --all --yes                 # Execute all enrichments
 python scripts/enrich.py --materials --yes            # Wire resume only
-python scripts/enrich.py --blocks --dry-run           # Preview job block wiring
 python scripts/enrich.py --blocks --yes               # Wire identity-matched blocks to jobs
 python scripts/enrich.py --variants --yes             # Wire cover letters only
 python scripts/enrich.py --portal --yes               # Populate portal_fields only
-python scripts/enrich.py --variants --grant-template  # Also wire grant template to grants
 python scripts/enrich.py --all --effort quick --yes   # Quick entries only
 
 # Campaign orchestrator: deadline-aware pipeline execution
 python scripts/campaign.py                           # This week's campaign (14-day window)
 python scripts/campaign.py --days 7                  # Next 7 days only
 python scripts/campaign.py --days 30                 # Full month view
-python scripts/campaign.py --days 90                 # Full quarter view
 python scripts/campaign.py --days 90 --save          # Save markdown report to strategy/
 python scripts/campaign.py --execute --dry-run       # Preview pipeline execution
 python scripts/campaign.py --execute --yes           # Execute for all urgent entries
 python scripts/campaign.py --execute --id <entry-id> --yes  # Single entry
 
-# Greenhouse-specific orchestrator (4-phase: intake → research → map → synthesize)
+# Alchemy suite: Greenhouse-specific orchestrator (intake → research → map → synthesize)
 python scripts/alchemize.py --target <target-id>                    # Full pipeline → prompt.md
 python scripts/alchemize.py --target <target-id> --phase research   # Stop after research
 python scripts/alchemize.py --target <target-id> --integrate        # Integrate output.md back
 python scripts/alchemize.py --target <target-id> --submit           # Submit via greenhouse_submit.py
 
-# Greenhouse API submission
+# ATS API submissions (Greenhouse, Lever, Ashby)
 python scripts/greenhouse_submit.py --target <target-id>          # Dry-run preview
 python scripts/greenhouse_submit.py --target <target-id> --submit # POST to Greenhouse
 python scripts/greenhouse_submit.py --init-answers --target <target-id>  # Generate answer template
-python scripts/greenhouse_submit.py --check-answers --batch              # Validate all answers
+python scripts/lever_submit.py --target <target-id>               # Lever portal
+python scripts/ashby_submit.py --target <target-id>               # Ashby portal
 
 # Follow-up tracker and daily outreach list
 python scripts/followup.py                     # Show today's follow-up actions
-python scripts/followup.py --all               # All entries with follow-up status
 python scripts/followup.py --schedule           # Upcoming follow-up schedule (21 days)
 python scripts/followup.py --overdue            # Overdue follow-ups only
-python scripts/followup.py --init --dry-run     # Preview: add follow_up fields to submitted entries
-python scripts/followup.py --init --yes         # Execute: populate follow_up + conversion.follow_up_count
+python scripts/followup.py --init --yes         # Populate follow_up fields on submitted entries
 python scripts/followup.py --log <entry-id> --channel linkedin --contact "Name" --note "DM sent"
 
 # Recruiter identification and outreach templating
 python scripts/research_contacts.py --target <entry-id>  # Research contacts for one entry
-python scripts/research_contacts.py --batch               # All submitted entries without contacts
 python scripts/research_contacts.py --batch --limit 10    # Top 10 by tier
 
 # Outcome tracking and response monitoring
@@ -196,14 +219,11 @@ python scripts/check_outcomes.py                 # Show entries awaiting respons
 python scripts/check_outcomes.py --stale         # Entries >14d with no response
 python scripts/check_outcomes.py --summary       # Outcome statistics
 python scripts/check_outcomes.py --record <id> --outcome rejected --stage resume_screen
-python scripts/check_outcomes.py --record <id> --outcome acknowledged
 
 # Conversion funnel analytics
 python scripts/funnel_report.py                      # Full funnel summary
 python scripts/funnel_report.py --by channel         # Breakdown by channel
 python scripts/funnel_report.py --by position        # Breakdown by identity position
-python scripts/funnel_report.py --by portal          # Breakdown by portal type
-python scripts/funnel_report.py --by track           # Breakdown by track
 python scripts/funnel_report.py --weekly             # Weekly submission velocity
 python scripts/funnel_report.py --targets            # Conversion targets vs actual
 python scripts/funnel_report.py --compare-variants   # Compare outcomes by composition method
@@ -212,29 +232,22 @@ python scripts/funnel_report.py --compare-variants   # Compare outcomes by compo
 python scripts/hygiene.py                    # Full hygiene report
 python scripts/hygiene.py --check-urls       # HTTP HEAD check on application_urls
 python scripts/hygiene.py --check-postings   # Verify jobs still live on ATS APIs
-python scripts/hygiene.py --auto-expire --dry-run   # Preview expired entry archival
 python scripts/hygiene.py --auto-expire --yes       # Execute expired entry archival
 python scripts/hygiene.py --gate <entry-id>  # Track-specific readiness gate
 
 # Metric consistency check (blocks, profiles, strategy vs canonical system-metrics.json)
 python scripts/check_metrics.py                 # Full consistency check
-python scripts/check_metrics.py --fix --dry-run  # Preview metric fixes
 python scripts/check_metrics.py --fix --yes      # Apply metric fixes
-
-# Submission velocity tracking
-python scripts/velocity.py                    # Display velocity stats
-python scripts/velocity.py --update-signals   # Write to signals/patterns.md
 
 # Job sourcing from ATS APIs (writes to research_pool/)
 python scripts/source_jobs.py --fetch --dry-run       # Preview new job postings
 python scripts/source_jobs.py --fetch --yes            # Fetch and create entries in research_pool/
 python scripts/source_jobs.py --fetch --yes --limit 5  # Limit new entries
 
-# Keyword extraction from job postings and research files
+# Keyword extraction from job postings
 python scripts/distill_keywords.py                    # Analyze all entries with research files
 python scripts/distill_keywords.py --target <id>      # Single entry
 python scripts/distill_keywords.py --write --yes      # Write keywords to pipeline YAMLs
-python scripts/distill_keywords.py --signals          # Write aggregate to signals/
 python scripts/distill_keywords.py --match-tags       # Show which keywords match block tags
 
 # AI-assisted answer generation for portal questions
@@ -309,21 +322,30 @@ For entries with `target.portal: greenhouse`:
 
 ## Conventions
 
-- **Deadline Prioritization**: 
+- **Deadline Prioritization**:
   - Remind user when a deadline is within **14 days** (2 weeks).
   - Heavily prioritize and flag as urgent when a deadline is within **7 days** (1 week).
 - Pipeline YAML filenames use kebab-case matching the `id` field
 - Block filenames are descriptive and match reference paths in pipeline YAML
 - Variant filenames follow `{target-type}-v{n}.md` or `{target-specific-name}.md` pattern
 - All narrative text uses covenant-ark metrics (update there first, propagate here)
+- Prefer `pathlib.Path` for filesystem logic; explicit YAML field validation over implicit assumptions
 - `daily_batch.py` and `daily_pipeline.py` are deprecated (moved to `scripts/deprecated/`). Use `standup.py --section plan` and `campaign.py --execute` instead
+- Never commit secrets or local submission data (`.submit-config.yaml`, `.greenhouse-answers/`, `.env`)
 
 ## Relationship to Corpus
 
 Canonical identity statements, metrics, and evidence live in `organvm-corpvs-testamentvm/docs/applications/00-covenant-ark.md`. This repo consumes those as source of truth and composes them into submission-ready materials. When metrics change, update covenant-ark first, then propagate to blocks here. Run `python scripts/check_metrics.py` to verify consistency.
 
+## CI & Linting
+
+- CI runs via `.github/workflows/quality.yml`: ruff lint, YAML validation, pytest (Ubuntu, Python 3.12)
+- Linter: `ruff check scripts/ tests/` — config in `pyproject.toml` (line-length 120, E/F/I/UP rules, E501 ignored)
+- No formal coverage threshold; prioritize regression coverage for pipeline state and YAML schema changes
+
 ## Dependencies
 
 - Python 3.11+ (venv at `.venv/` uses Python 3.14)
-- PyYAML (`pip install pyyaml`)
-- No other external dependencies — `alchemize.py` and `greenhouse_submit.py` use stdlib `urllib` for HTTP
+- Runtime: PyYAML only (`pip install pyyaml`). ATS submitters use stdlib `urllib` for HTTP.
+- Dev: pytest, ruff (`pip install -e ".[dev]"`)
+- Editable install metadata in `application_pipeline.egg-info/` (from `pip install -e .`)
