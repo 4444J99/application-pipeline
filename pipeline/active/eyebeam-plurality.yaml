@@ -46,6 +46,7 @@ submission:
   variant_ids:
     cover_letter: cover-letters/eyebeam-plurality-alchemized
   materials_attached:
+  - resumes/batch-03/eyebeam-plurality/eyebeam-plurality-resume.html
   - resumes/base/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -69,4 +70,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $4,000 plus studio access. Spring 2026 deadline TBA.
-last_touched: '2026-02-27'
+last_touched: "2026-02-27"
