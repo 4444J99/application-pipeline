@@ -684,3 +684,19 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: google-ami
+  submitted: '2026-02-27'
+  track: grant
+  identity_position: creative-technologist
+  blocks_used:
+  - identity/2min
+  - projects/organvm-system
+  - methodology/ai-conductor
+  - evidence/work-samples
+  - framings/creative-technologist
+  - projects/recursive-engine
+  variant_id: cover-letters/google-ami-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
