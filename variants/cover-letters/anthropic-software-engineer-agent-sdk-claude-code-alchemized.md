@@ -1,3 +1,10 @@
+# Cover Letter: Anthropic Software Engineer, Agent SDK - Claude Code
+
+**Role:** Anthropic Software Engineer, Agent SDK - Claude Code
+**Apply:** https://job-boards.greenhouse.io/anthropic/jobs/5126691008
+
+---
+
 To the Claude Code & Agent SDK Team at Anthropic,
 
 I am writing to apply for the Software Engineer (Agent SDK) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a deep discipline for the "Agent-Human Hybrid" model of software development. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and the AI agents—that interact with it.
