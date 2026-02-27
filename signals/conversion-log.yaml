@@ -457,3 +457,78 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: mongodb-senior-developer-advocate
+  submitted: '2026-02-27'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/mongodb-senior-developer-advocate-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: dbt-labs-senior-developer-experience-advocate
+  submitted: '2026-02-27'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/dbt-labs-senior-developer-experience-advocate-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: anthropic-software-engineer-agent-sdk-claude-code
+  submitted: '2026-02-27'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/anthropic-software-engineer-agent-sdk-claude-code-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: deepgram-staff-developer-advocate
+  submitted: '2026-02-27'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/deepgram-staff-developer-advocate-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: openai-software-engineer-full-stack-developer-experience
+  submitted: '2026-02-27'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/openai-software-engineer-full-stack-developer-experience-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
