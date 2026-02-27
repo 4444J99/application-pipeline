@@ -594,3 +594,21 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: starts-prize
+  submitted: '2026-02-27'
+  track: prize
+  identity_position: systems-artist
+  blocks_used:
+  - identity/5min
+  - projects/starts-prize-art-outputs
+  - framings/starts-prize-art-tech-collaboration
+  - framings/starts-prize-european-dimension
+  - evidence/starts-prize-technical-specs
+  - methodology/governance-as-art
+  - evidence/metrics-snapshot
+  - framings/systems-artist
+  variant_id: project-descriptions/starts-prize-v1
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
