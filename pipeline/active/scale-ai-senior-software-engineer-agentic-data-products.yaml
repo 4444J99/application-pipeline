@@ -43,6 +43,7 @@ submission:
   variant_ids:
     cover_letter: cover-letters/scale-ai-senior-software-engineer-agentic-data-products-alchemized
   materials_attached:
+  - resumes/batch-03/scale-ai-senior-software-engineer-agentic-data-products/scale-ai-senior-software-engineer-agentic-data-products-resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -55,4 +56,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-02-27'
+last_touched: "2026-02-27"
