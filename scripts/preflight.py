@@ -88,6 +88,14 @@ def check_entry(entry: dict) -> list[str]:
                 if not mat_path.exists():
                     issues.append(f"material not found: {m}")
 
+    # 4b. Base resume check — tailored resumes should be used, not base templates
+    if isinstance(submission, dict):
+        materials = submission.get("materials_attached", [])
+        if isinstance(materials, list):
+            for m in materials:
+                if "resumes/base/" in m:
+                    issues.append(f"using base resume: {m} — tailor with tailor_resume.py")
+
     # 5. Resume/CV existence (check common locations)
     has_resume_ref = False
     if isinstance(submission, dict):
@@ -118,6 +126,64 @@ def check_entry(entry: dict) -> list[str]:
             issues.append(f"deadline expired {abs(d)} days ago")
 
     return issues
+
+
+def readiness_score(entry: dict) -> int:
+    """Compute a 0-5 readiness score for a pipeline entry.
+
+    Points:
+      +1  Resume: materials_attached has a tailored (non-base) resume
+      +1  Blocks: blocks_used is populated (not null/empty)
+      +1  Cover letter: variant_ids.cover_letter exists
+      +1  Portal fields: portal_fields present, OR profile found
+      +1  Deadline safe: deadline >3 days away, or rolling/tba/none
+    """
+    score = 0
+    entry_id = entry.get("id", "?")
+    submission = entry.get("submission", {})
+    if not isinstance(submission, dict):
+        submission = {}
+
+    # Resume: has a tailored (non-base) resume
+    materials = submission.get("materials_attached", [])
+    if isinstance(materials, list):
+        has_tailored = any(
+            ("resume" in m.lower() or "cv" in m.lower()) and "resumes/base/" not in m
+            for m in materials
+        )
+        if has_tailored:
+            score += 1
+
+    # Blocks: blocks_used populated
+    blocks = submission.get("blocks_used", {})
+    if isinstance(blocks, dict) and blocks:
+        score += 1
+
+    # Cover letter variant
+    variant_ids = submission.get("variant_ids", {})
+    if isinstance(variant_ids, dict) and variant_ids.get("cover_letter"):
+        score += 1
+
+    # Portal fields or profile
+    portal_fields = entry.get("portal_fields")
+    has_portal = portal_fields and isinstance(portal_fields, dict) and portal_fields.get("fields")
+    if has_portal:
+        score += 1
+    else:
+        profile = load_profile(entry_id)
+        if profile:
+            score += 1
+
+    # Deadline safe (>3 days or rolling/tba/none)
+    dl_date, dl_type = get_deadline(entry)
+    if dl_date:
+        d = days_until(dl_date)
+        if d > 3:
+            score += 1
+    elif dl_type in ("rolling", "tba") or dl_type is None:
+        score += 1
+
+    return score
 
 
 def run_preflight(entries: list[dict], single_target: str | None = None):
@@ -164,12 +230,14 @@ def run_preflight(entries: list[dict], single_target: str | None = None):
         elif dl_type in ("rolling", "tba"):
             dl_str = dl_type
 
+        rscore = readiness_score(entry)
+
         if not issues:
             ready_count += 1
-            print(f"  + {name} — READY ({dl_str})")
+            print(f"  + {name} — READY ({dl_str}) [{rscore}/5]")
         else:
             fail_count += 1
-            print(f"  - {name} — {len(issues)} issue(s) ({dl_str})")
+            print(f"  - {name} — {len(issues)} issue(s) ({dl_str}) [{rscore}/5]")
             for issue in issues:
                 print(f"      {issue}")
 

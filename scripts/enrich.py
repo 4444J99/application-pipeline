@@ -32,6 +32,9 @@ from pipeline_lib import (
 
 DEFAULT_RESUME = "resumes/base/multimedia-specialist.pdf"
 
+# Fallback resumes by identity — only used when no tailored resume exists
+# in the current batch directory (materials/resumes/batch-03/<entry-id>/).
+# Always prefer tailored resumes over these base templates.
 RESUME_BY_IDENTITY = {
     "independent-engineer": "resumes/base/independent-engineer-resume.pdf",
     "systems-artist": "resumes/base/systems-artist-resume.pdf",
@@ -39,6 +42,8 @@ RESUME_BY_IDENTITY = {
     "community-practitioner": "resumes/base/community-practitioner-resume.pdf",
     "educator": "resumes/base/educator-resume.pdf",
 }
+
+CURRENT_BATCH = "batch-03"
 
 RESUME_TRACKS = {"job", "fellowship", "grant", "residency", "prize", "program"}
 
@@ -97,10 +102,23 @@ def _update_last_touched(content: str) -> str:
 
 
 def select_resume(entry: dict) -> str:
-    """Select the appropriate resume based on the entry's identity_position.
+    """Select the best available resume for an entry.
 
-    Falls back to DEFAULT_RESUME if the position is unrecognized or missing.
+    Priority:
+      1. Tailored resume in current batch (materials/resumes/batch-03/<entry-id>/)
+      2. Identity-position base resume (RESUME_BY_IDENTITY fallback)
+      3. DEFAULT_RESUME
     """
+    entry_id = entry.get("id", "")
+    # Check for tailored resume in current batch
+    if entry_id:
+        batch_dir = MATERIALS_DIR / "resumes" / CURRENT_BATCH / entry_id
+        if batch_dir.exists():
+            for ext in (".pdf", ".html"):
+                candidates = sorted(batch_dir.glob(f"*{ext}"))
+                if candidates:
+                    return str(candidates[0].relative_to(MATERIALS_DIR))
+    # Fall back to identity-based base resume
     fit = entry.get("fit", {})
     if isinstance(fit, dict):
         position = fit.get("identity_position", "")

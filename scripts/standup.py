@@ -686,10 +686,68 @@ SECTIONS = {
     "replenish": "Pipeline replenishment alerts",
     "deferred": "Deferred entries awaiting external unblock",
     "followup": "Follow-up dashboard for submitted entries",
+    "readiness": "Staged entry readiness scores and blockers",
     "log": "Append session record to standup-log.yaml",
     "jobs": "Job pipeline status",
     "opportunities": "Opportunity pipeline (grants/residencies/prizes/writing)",
 }
+
+
+# ---------------------------------------------------------------------------
+# Section: Readiness (staged entry submission readiness)
+# ---------------------------------------------------------------------------
+
+def section_readiness(entries: list[dict]):
+    """Show staged entries with readiness scores and blockers."""
+    from preflight import check_entry, readiness_score
+
+    staged = [e for e in entries if e.get("status") == "staged"]
+
+    print("STAGED ENTRY READINESS")
+
+    if not staged:
+        print("   No staged entries.")
+        print()
+        return
+
+    # Compute readiness for each
+    scored = []
+    for e in staged:
+        rscore = readiness_score(e)
+        issues = check_entry(e)
+        scored.append((rscore, e, issues))
+
+    # Sort by readiness score descending
+    scored.sort(key=lambda x: -x[0])
+
+    ready_now = [s for s in scored if s[0] >= 4]
+    not_ready = [s for s in scored if s[0] < 4]
+
+    if ready_now:
+        print(f"   READY TO SUBMIT NOW ({len(ready_now)}):")
+        for rscore, e, issues in ready_now:
+            name = e.get("name", e.get("id", "?"))
+            dl_date, dl_type = get_deadline(e)
+            dl_str = ""
+            if dl_date:
+                d = days_until(dl_date)
+                dl_str = f" — {d}d" if d >= 0 else f" — EXPIRED"
+            elif dl_type in ("rolling", "tba"):
+                dl_str = f" — {dl_type}"
+            print(f"     [{rscore}/5] {name}{dl_str}")
+            if issues:
+                for issue in issues[:2]:
+                    print(f"            {issue}")
+
+    if not_ready:
+        print(f"   NEEDS WORK ({len(not_ready)}):")
+        for rscore, e, issues in not_ready:
+            name = e.get("name", e.get("id", "?"))
+            print(f"     [{rscore}/5] {name}")
+            for issue in issues[:3]:
+                print(f"            {issue}")
+
+    print()
 
 
 # ---------------------------------------------------------------------------
@@ -871,6 +929,8 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
         section_deferred(entries)
     if section is None or section == "followup":
         section_followup(entries)
+    if section is None or section == "readiness":
+        section_readiness(entries)
     if do_log or section == "log":
         # Need all stats for logging
         if not health_stats:

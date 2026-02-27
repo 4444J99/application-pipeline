@@ -223,10 +223,16 @@ def generate_checklist(
             for m in (materials or []):
                 mat_path = MATERIALS_DIR / m
                 exists = mat_path.exists()
-                status = "ok" if exists else "NOT FOUND"
-                lines.append(f"    File: {m} [{status}]")
-                if not exists:
+                if "resumes/base/" in str(m):
+                    status = "BASE RESUME"
+                    lines.append(f"    File: {m} [{status}]")
+                    issues.append(f"BASE RESUME — must use tailored resume, not {m}")
+                elif not exists:
+                    status = "NOT FOUND"
+                    lines.append(f"    File: {m} [{status}]")
                     issues.append(f"Material not found: {m}")
+                else:
+                    lines.append(f"    File: {m} [ok]")
             lines.append("")
 
     # Validation summary

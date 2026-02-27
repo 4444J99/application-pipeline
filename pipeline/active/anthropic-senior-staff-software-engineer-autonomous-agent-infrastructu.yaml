@@ -1,14 +1,14 @@
-id: anthropic-software-engineer-beneficial-deployments
-name: 'Anthropic Software Engineer, Beneficial Deployments '
+id: anthropic-senior-staff-software-engineer-autonomous-agent-infrastructu
+name: Anthropic Senior / Staff+ Software Engineer - Autonomous Agent Infrastructure
 track: job
 status: research
 outcome: null
 target:
   organization: Anthropic
   url: https://boards.greenhouse.io/anthropic
-  application_url: https://job-boards.greenhouse.io/anthropic/jobs/4942024008
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/5065894008
   portal: greenhouse
-  location: 'San Francisco, CA | New York City, NY'
+  location: San Francisco, CA | New York City, NY | Seattle, WA
   location_class: us-onsite
 deadline:
   date: null
@@ -29,16 +29,22 @@ fit:
     strategic_value: 8
     deadline_feasibility: 9
     portal_friction: 5
+  framing: Independent engineer and systems architect building production-grade infrastructure
+    for autonomous AI orchestration at institutional scale (103 repos, 2,349+ tests).
+    Specialist in designing resilient execution environments and state management
+    systems for complex, multi-step agentic workflows.
 submission:
   effort_level: standard
-  blocks_used: 
+  blocks_used:
     framing: framings/independent-engineer
     evidence: evidence/differentiators
     work_samples: evidence/work-samples
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
-  variant_ids: {}
+  variant_ids:
+    cover_letter: cover-letters/anthropic-senior-staff-software-engineer-autonomous-agent-infrastructu-alchemized
   materials_attached:
+  - resumes/batch-03/anthropic-senior-staff-software-engineer-autonomous-agent-infrastructu/anthropic-senior-staff-software-engineer-autonomous-agent-infrastructu-resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -51,4 +57,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-26"
+last_touched: "2026-02-27"
