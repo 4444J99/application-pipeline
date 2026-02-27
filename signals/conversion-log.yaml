@@ -668,3 +668,19 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: lacma-art-tech
+  submitted: '2026-02-27'
+  track: grant
+  identity_position: systems-artist
+  blocks_used:
+  - identity/5min
+  - projects/organvm-system
+  - methodology/ai-conductor
+  - evidence/work-samples
+  - framings/systems-artist
+  - projects/recursive-engine
+  variant_id: cover-letters/lacma-art-tech-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
