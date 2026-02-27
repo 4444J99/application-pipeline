@@ -1,14 +1,14 @@
-id: elastic-senior-developer-advocate-video-content-creator
-name: Elastic Senior Developer Advocate (Video Content Creator)
+id: elastic-senior-technical-writer-core-docs-documentation
+name: Elastic Senior Technical Writer - Core Docs - Documentation
 track: job
 status: research
 outcome: null
 target:
   organization: Elastic
   url: https://boards.greenhouse.io/elastic
-  application_url: https://jobs.elastic.co/jobs?gh_jid=7190130&gh_jid=7190130
+  application_url: https://jobs.elastic.co/jobs?gh_jid=7600285&gh_jid=7600285
   portal: greenhouse
-  location: United Kingdom
+  location: Hungary
   location_class: international
 deadline:
   date: null
@@ -29,16 +29,22 @@ fit:
     strategic_value: 5
     deadline_feasibility: 9
     portal_friction: 5
+  framing: Independent engineer and veteran educator building production-grade Search
+    AI and vector database documentation at institutional scale. Specialist in "Docs
+    as Code" and translating deep "Cathedral" architectures—including RAG and NLP
+    workflows—into scannable, lead contributor content for data scientists and engineers.
 submission:
   effort_level: standard
-  blocks_used: 
+  blocks_used:
     framing: framings/independent-engineer
     evidence: evidence/differentiators
     work_samples: evidence/work-samples
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
-  variant_ids: {}
+  variant_ids:
+    cover_letter: cover-letters/elastic-senior-technical-writer-core-docs-documentation-alchemized
   materials_attached:
+  - resumes/batch-03/elastic-senior-technical-writer-core-docs-documentation/elastic-senior-technical-writer-core-docs-documentation-resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -51,4 +57,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-26"
+last_touched: "2026-02-27"
