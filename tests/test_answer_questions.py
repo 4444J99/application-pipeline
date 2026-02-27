@@ -6,10 +6,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from answer_questions import (
-    DEFAULT_ANSWER_PATTERNS,
     build_answer_prompt,
     find_fill_in_fields,
-    integrate_answers,
     try_auto_answer,
 )
 

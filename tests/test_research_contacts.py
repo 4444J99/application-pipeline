@@ -8,9 +8,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from research_contacts import (
     PROTOCOL_STEPS,
-    generate_research_prompt,
-    generate_outreach_template,
     generate_followup_dates,
+    generate_outreach_template,
+    generate_research_prompt,
 )
 
 

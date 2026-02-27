@@ -101,7 +101,7 @@ def run_command(cmd: str, target: str | None = None):
         sys.exit(1)
     else:
         print(f"Unknown command: '{cmd}'", file=sys.stderr)
-        print(f"Run 'python scripts/run.py --help' for available commands.", file=sys.stderr)
+        print("Run 'python scripts/run.py --help' for available commands.", file=sys.stderr)
         sys.exit(1)
 
     result = subprocess.run(full_args)
