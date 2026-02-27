@@ -21,8 +21,10 @@ fit:
   score: 7.1
   original_score: 7.3
   identity_position: systems-artist
-  framing: Systems artist exploring plurality through recursive structures and collective
-    computation
+  framing: Systems artist presenting ORGANVM—a 103-repository autonomous architecture
+    that explores "plurality" as the coexistence of human intent and agentic swarms.
+    Speculating on a future where digital togetherness is founded on transparent,
+    governed orchestration rather than opaque centralization.
   lead_organs:
   - I
   - IV
@@ -41,9 +43,9 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
-  variant_ids: 
-    cover_letter: cover-letters/grant-art-template
-  materials_attached: 
+  variant_ids:
+    cover_letter: cover-letters/eyebeam-plurality-alchemized
+  materials_attached:
   - resumes/base/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -67,4 +69,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $4,000 plus studio access. Spring 2026 deadline TBA.
-last_touched: "2026-02-23"
+last_touched: '2026-02-27'
