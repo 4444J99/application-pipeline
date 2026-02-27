@@ -11,6 +11,7 @@ from standup import (
     section_health,
     section_stale,
     section_plan,
+    section_readiness,
     section_replenish,
     section_deferred,
     section_followup,
@@ -384,3 +385,35 @@ class TestSectionOpportunities:
         captured = capsys.readouterr()
         assert "OPPORTUNITY PIPELINE" in captured.out
         assert "Art Grant" in captured.out
+
+
+# --- section_readiness ---
+
+class TestSectionReadiness:
+    def test_readiness_in_sections(self):
+        """'readiness' is in SECTIONS dict."""
+        assert "readiness" in SECTIONS
+
+    def test_no_staged_entries(self, capsys):
+        entries = [_make_entry(status="research")]
+        section_readiness(entries)
+        captured = capsys.readouterr()
+        assert "STAGED ENTRY READINESS" in captured.out
+        assert "No staged entries" in captured.out
+
+    def test_staged_entries_shown(self, capsys):
+        entries = [
+            _make_entry(entry_id="s1", name="Staged Entry", status="staged", track="grant"),
+        ]
+        section_readiness(entries)
+        captured = capsys.readouterr()
+        assert "STAGED ENTRY READINESS" in captured.out
+        assert "Staged Entry" in captured.out
+
+    def test_shows_readiness_scores(self, capsys):
+        entries = [
+            _make_entry(entry_id="s1", name="Ready Entry", status="staged", track="grant"),
+        ]
+        section_readiness(entries)
+        captured = capsys.readouterr()
+        assert "/5]" in captured.out

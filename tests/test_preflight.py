@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from preflight import check_entry
+from preflight import check_entry, readiness_score
 
 
 # --- Helpers ---
@@ -118,3 +118,95 @@ def test_check_entry_all_ok():
     structural = [i for i in issues if "portfolio_url" in i or "application_url" in i
                   or "expired" in i or "material not found" in i]
     assert len(structural) == 0
+
+
+# --- Base resume detection ---
+
+
+def test_check_entry_flags_base_resume():
+    """Flags base resume in materials_attached."""
+    entry = _make_entry()
+    entry["submission"]["materials_attached"] = ["resumes/base/multimedia-specialist.pdf"]
+    issues = check_entry(entry)
+    assert any("base resume" in i.lower() for i in issues)
+
+
+def test_check_entry_no_flag_for_tailored_resume():
+    """Does not flag tailored resume as base."""
+    entry = _make_entry()
+    entry["submission"]["materials_attached"] = [
+        "resumes/batch-03/test-entry/test-entry-resume.pdf"
+    ]
+    issues = check_entry(entry)
+    assert not any("base resume" in i.lower() for i in issues)
+
+
+# --- readiness_score ---
+
+
+def test_readiness_score_empty_entry():
+    """Entry with minimal fields gets a low score."""
+    entry = _make_entry(id="definitely-nonexistent-xyz")
+    entry["submission"]["materials_attached"] = []
+    entry["submission"]["blocks_used"] = {}
+    entry["submission"]["variant_ids"] = {}
+    score = readiness_score(entry)
+    assert 0 <= score <= 5
+
+
+def test_readiness_score_resume_point():
+    """Tailored resume contributes +1 to readiness score."""
+    entry_base = _make_entry(id="definitely-nonexistent-xyz")
+    entry_base["submission"]["materials_attached"] = ["resumes/base/multimedia-specialist.pdf"]
+
+    entry_tailored = _make_entry(id="definitely-nonexistent-xyz")
+    entry_tailored["submission"]["materials_attached"] = [
+        "resumes/batch-03/test/test-resume.pdf"
+    ]
+
+    score_base = readiness_score(entry_base)
+    score_tailored = readiness_score(entry_tailored)
+    assert score_tailored > score_base
+
+
+def test_readiness_score_blocks_point():
+    """Populated blocks_used contributes +1."""
+    entry_empty = _make_entry(id="definitely-nonexistent-xyz")
+    entry_empty["submission"]["blocks_used"] = {}
+
+    entry_blocks = _make_entry(id="definitely-nonexistent-xyz")
+    entry_blocks["submission"]["blocks_used"] = {"framing": "framings/test"}
+
+    assert readiness_score(entry_blocks) > readiness_score(entry_empty)
+
+
+def test_readiness_score_cover_letter_point():
+    """Cover letter variant contributes +1."""
+    entry_no_cl = _make_entry(id="definitely-nonexistent-xyz")
+    entry_no_cl["submission"]["variant_ids"] = {}
+
+    entry_cl = _make_entry(id="definitely-nonexistent-xyz")
+    entry_cl["submission"]["variant_ids"] = {"cover_letter": "cover-letters/test"}
+
+    assert readiness_score(entry_cl) > readiness_score(entry_no_cl)
+
+
+def test_readiness_score_deadline_safe_point():
+    """Deadline >3d or rolling gives +1."""
+    future = (date.today() + timedelta(days=30)).isoformat()
+    entry = _make_entry(id="definitely-nonexistent-xyz")
+    entry["deadline"] = {"date": future, "type": "hard"}
+    score_safe = readiness_score(entry)
+
+    entry_tight = _make_entry(id="definitely-nonexistent-xyz")
+    entry_tight["deadline"] = {"date": (date.today() + timedelta(days=1)).isoformat(), "type": "hard"}
+    score_tight = readiness_score(entry_tight)
+
+    assert score_safe > score_tight
+
+
+def test_readiness_score_max_is_five():
+    """Score cannot exceed 5."""
+    entry = _make_entry(id="definitely-nonexistent-xyz")
+    score = readiness_score(entry)
+    assert score <= 5

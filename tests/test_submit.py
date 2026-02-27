@@ -249,3 +249,27 @@ def test_check_metrics_freshness_no_submission():
     entry = {"submission": "invalid"}
     issues = _check_metrics_freshness(entry)
     assert issues == []
+
+
+# --- base resume blocking ---
+
+
+def test_checklist_flags_base_resume():
+    """Checklist should flag base resume as a blocking issue."""
+    entry = dict(SAMPLE_ENTRY)
+    entry["submission"] = dict(entry["submission"])
+    entry["submission"]["materials_attached"] = ["resumes/base/multimedia-specialist.pdf"]
+    checklist, issues = generate_checklist(entry, SAMPLE_PROFILE, SAMPLE_LEGACY)
+    assert any("BASE RESUME" in i for i in issues)
+    assert "BASE RESUME" in checklist
+
+
+def test_checklist_no_flag_for_tailored_resume():
+    """Checklist should not flag tailored resume."""
+    entry = dict(SAMPLE_ENTRY)
+    entry["submission"] = dict(entry["submission"])
+    entry["submission"]["materials_attached"] = [
+        "resumes/batch-03/test/test-resume.pdf"
+    ]
+    checklist, issues = generate_checklist(entry, SAMPLE_PROFILE, SAMPLE_LEGACY)
+    assert not any("BASE RESUME" in i for i in issues)

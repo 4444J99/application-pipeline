@@ -11,7 +11,7 @@ from enrich import (
     enrich_materials, enrich_blocks, enrich_variant,
     find_matching_variant, detect_gaps,
     select_resume,
-    COVER_LETTER_MAP, DEFAULT_RESUME, RESUME_BY_IDENTITY,
+    COVER_LETTER_MAP, CURRENT_BATCH, DEFAULT_RESUME, RESUME_BY_IDENTITY,
     RESUME_TRACKS, GRANT_TEMPLATE_TRACKS, JOB_BLOCKS_BY_IDENTITY,
 )
 from pipeline_lib import MATERIALS_DIR, VARIANTS_DIR
@@ -617,3 +617,54 @@ def test_detect_gaps_no_blocks_when_populated():
 def test_job_blocks_by_identity_keys():
     """JOB_BLOCKS_BY_IDENTITY should cover the same identities as RESUME_BY_IDENTITY."""
     assert set(JOB_BLOCKS_BY_IDENTITY.keys()) == set(RESUME_BY_IDENTITY.keys())
+
+
+# --- select_resume: tailored resume preference ---
+
+
+def test_select_resume_prefers_tailored_over_base():
+    """When a tailored resume exists in batch-03, it should be selected over base."""
+    batch_dir = MATERIALS_DIR / "resumes" / CURRENT_BATCH
+    # Find any entry that has a tailored resume in batch-03
+    if not batch_dir.exists():
+        return  # skip if no batch dir
+    entry_dirs = [d for d in batch_dir.iterdir() if d.is_dir()]
+    if not entry_dirs:
+        return  # skip if no entries
+    entry_dir = entry_dirs[0]
+    entry_id = entry_dir.name
+    entry = {"id": entry_id, "fit": {"identity_position": "independent-engineer"}}
+    result = select_resume(entry)
+    # Should NOT be a base resume
+    assert "resumes/base/" not in result
+    # Should reference the batch directory
+    assert CURRENT_BATCH in result
+
+
+def test_select_resume_falls_back_to_base_without_tailored():
+    """When no tailored resume exists, falls back to identity-based base resume."""
+    entry = {"id": "nonexistent-entry-xyz-999", "fit": {"identity_position": "systems-artist"}}
+    result = select_resume(entry)
+    assert result == "resumes/base/systems-artist-resume.pdf"
+
+
+def test_select_resume_real_entries_prefer_tailored():
+    """All entries in batch-03 should get tailored resumes from select_resume."""
+    batch_dir = MATERIALS_DIR / "resumes" / CURRENT_BATCH
+    if not batch_dir.exists():
+        return
+    for entry_dir in batch_dir.iterdir():
+        if not entry_dir.is_dir():
+            continue
+        has_resume = any(
+            f.suffix in (".pdf", ".html")
+            for f in entry_dir.iterdir()
+            if "resume" in f.name.lower() or "cv" in f.name.lower()
+        )
+        if not has_resume:
+            continue
+        entry = {"id": entry_dir.name}
+        result = select_resume(entry)
+        assert "resumes/base/" not in result, (
+            f"Entry {entry_dir.name} has tailored resume but select_resume returned base: {result}"
+        )
