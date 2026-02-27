@@ -46,8 +46,9 @@ submission:
     framing: framings/systems-artist
   variant_ids: 
     cover_letter: cover-letters/grant-art-template
-  materials_attached: 
-  - resumes/base/multimedia-specialist.pdf
+  materials_attached:
+  - resumes/batch-03/headlands-center/headlands-center-resume.html
+  - resumes/batch-03/headlands-center/headlands-center-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
@@ -72,4 +73,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Fully funded plus $1K/month stipend. Application window Apr 1 - Jun 1 2026.
-last_touched: "2026-02-24"
+last_touched: "2026-02-27"

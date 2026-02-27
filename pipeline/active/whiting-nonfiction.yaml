@@ -46,8 +46,9 @@ submission:
     framing: framings/systems-artist
   variant_ids: 
     cover_letter: cover-letters/grant-art-template
-  materials_attached: 
-  - resumes/base/multimedia-specialist.pdf
+  materials_attached:
+  - resumes/batch-03/whiting-nonfiction/whiting-nonfiction-resume.html
+  - resumes/batch-03/whiting-nonfiction/whiting-nonfiction-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
@@ -71,4 +72,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Approximate deadline Apr 2026 TBA.
-last_touched: "2026-02-23"
+last_touched: "2026-02-27"

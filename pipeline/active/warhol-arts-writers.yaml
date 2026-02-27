@@ -43,8 +43,9 @@ submission:
     project_description: projects/organvm-system
   variant_ids: 
     cover_letter: cover-letters/grant-art-template
-  materials_attached: 
-  - resumes/base/multimedia-specialist.pdf
+  materials_attached:
+  - resumes/batch-03/warhol-arts-writers/warhol-arts-writers-resume.html
+  - resumes/batch-03/warhol-arts-writers/warhol-arts-writers-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
@@ -67,4 +68,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Range $15,000-$50,000. Opens May 1.
-last_touched: "2026-02-24"
+last_touched: "2026-02-27"

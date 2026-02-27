@@ -46,8 +46,9 @@ submission:
     tech_detail: projects/agentic-titan
   variant_ids: 
     cover_letter: cover-letters/grant-art-template
-  materials_attached: 
-  - resumes/base/multimedia-specialist.pdf
+  materials_attached:
+  - resumes/batch-03/google-creative-lab-five/google-creative-lab-five-resume.html
+  - resumes/batch-03/google-creative-lab-five/google-creative-lab-five-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
@@ -69,4 +70,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: 1-year salaried position. Rolling/open applications.
-last_touched: "2026-02-23"
+last_touched: "2026-02-27"

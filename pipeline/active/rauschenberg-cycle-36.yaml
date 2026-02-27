@@ -40,7 +40,9 @@ submission:
     artist_statement: identity/2min
     project_description: projects/organvm-system
   variant_ids: {}
-  materials_attached: []
+  materials_attached:
+  - resumes/batch-03/rauschenberg-cycle-36/rauschenberg-cycle-36-resume.html
+  - resumes/batch-03/rauschenberg-cycle-36/rauschenberg-cycle-36-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
@@ -63,4 +65,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Application window Apr 14 - May 12 2026.
-last_touched: "2026-02-24"
+last_touched: "2026-02-27"

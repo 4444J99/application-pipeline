@@ -41,8 +41,9 @@ submission:
     artist_statement: identity/2min
     project_description: projects/organvm-system
   variant_ids: {}
-  materials_attached: 
-  - resumes/base/multimedia-specialist.pdf
+  materials_attached:
+  - resumes/batch-03/fractured-atlas/fractured-atlas-resume.html
+  - resumes/batch-03/fractured-atlas/fractured-atlas-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
@@ -65,4 +66,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Infrastructure/fiscal sponsorship. Enables tax-deductible donations.
-last_touched: "2026-02-23"
+last_touched: "2026-02-27"
