@@ -22,14 +22,14 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
-    PIPELINE_DIR_SUBMITTED,
     PIPELINE_DIR_CLOSED,
+    PIPELINE_DIR_SUBMITTED,
     SIGNALS_DIR,
     load_entries,
     load_entry_by_id,
     parse_date,
-    update_yaml_field,
     update_last_touched,
+    update_yaml_field,
 )
 
 STALE_DAYS = 14
@@ -156,8 +156,8 @@ def show_stale(entries: list[dict]):
 
     print(f"\n{'=' * 70}")
     print(f"Total stale: {len(stale)}")
-    print(f"\nLog follow-ups: python scripts/followup.py --log <id> --channel email --note \"...\"")
-    print(f"Record outcome: python scripts/check_outcomes.py --record <id> --outcome rejected")
+    print("\nLog follow-ups: python scripts/followup.py --log <id> --channel email --note \"...\"")
+    print("Record outcome: python scripts/check_outcomes.py --record <id> --outcome rejected")
 
 
 def record_outcome(
@@ -259,6 +259,10 @@ def record_outcome(
     if time_to_response is not None:
         print(f"  Time to response: {time_to_response} days")
 
+    # Prompt for hypothesis capture on terminal outcomes
+    if outcome in ("accepted", "rejected"):
+        print(f"\n  → Capture hypothesis: python scripts/feedback_capture.py --entry {entry_id} --outcome {outcome}")
+
 
 def _update_conversion_log(entry_id: str, outcome: str, stage: str | None, time_to_response: int | None):
     """Update the conversion log with outcome data."""
@@ -314,7 +318,7 @@ def show_summary(entries: list[dict]):
     print(f"Awaiting response: {len(entries)}")
 
     if outcomes:
-        print(f"\nOutcomes:")
+        print("\nOutcomes:")
         for outcome, count in sorted(outcomes.items(), key=lambda x: -x[1]):
             print(f"  {outcome:<15s} {count}")
 
@@ -322,11 +326,11 @@ def show_summary(entries: list[dict]):
         avg_ttr = sum(response_times) / len(response_times)
         min_ttr = min(response_times)
         max_ttr = max(response_times)
-        print(f"\nResponse Time (days):")
+        print("\nResponse Time (days):")
         print(f"  Mean: {avg_ttr:.1f} | Min: {min_ttr} | Max: {max_ttr}")
         print(f"  Sample size: {len(response_times)}")
     else:
-        print(f"\nNo response time data recorded yet.")
+        print("\nNo response time data recorded yet.")
 
     no_response = sum(1 for e in entries if (days_since_submission(e) or 0) > STALE_DAYS)
     if no_response:

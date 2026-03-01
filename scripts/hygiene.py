@@ -10,6 +10,8 @@ Usage:
     python scripts/hygiene.py --auto-expire      # Move past-deadline active entries to closed/
     python scripts/hygiene.py --auto-expire --dry-run
     python scripts/hygiene.py --gate <id>        # Track-specific readiness gate for one entry
+    python scripts/hygiene.py --company-focus    # Rule of Three: flag companies >3 active+submitted
+    python scripts/hygiene.py --company-focus --limit 3  # Override Rule of Three limit
 """
 
 import argparse
@@ -30,6 +32,7 @@ from pipeline_lib import (
     PIPELINE_DIR_ACTIVE,
     PIPELINE_DIR_CLOSED,
     PIPELINE_DIR_RESEARCH_POOL,
+    PIPELINE_DIR_SUBMITTED,
     load_entries,
     load_entry_by_id,
     get_deadline,
@@ -467,6 +470,111 @@ def run_full_report(entries: list[dict]):
 
 
 # ---------------------------------------------------------------------------
+# Company focus (Rule of Three)
+# ---------------------------------------------------------------------------
+
+DEFAULT_FOCUS_LIMIT = 3
+
+
+def section_company_focus(focus_limit: int = DEFAULT_FOCUS_LIMIT):
+    """Flag companies with more than focus_limit active+submitted job entries.
+
+    Loads active/ and submitted/ job-track entries, groups by organization,
+    and shows triage suggestions for over-concentrated companies.
+    Submitted entries are immutable (shown for context). Triage actions
+    apply to active/ entries only.
+    """
+    active_entries = load_entries(dirs=[PIPELINE_DIR_ACTIVE], include_filepath=True)
+    submitted_entries = load_entries(dirs=[PIPELINE_DIR_SUBMITTED], include_filepath=True)
+
+    job_entries: list[tuple[dict, str]] = []  # (entry, source)
+    for e in active_entries:
+        if e.get("track") == "job":
+            job_entries.append((e, "active"))
+    for e in submitted_entries:
+        if e.get("track") == "job":
+            job_entries.append((e, "submitted"))
+
+    # Group by organization
+    by_company: dict[str, list[tuple[dict, str]]] = {}
+    for entry, source in job_entries:
+        org = entry.get("target", {}).get("organization", "Unknown") if isinstance(entry.get("target"), dict) else "Unknown"
+        by_company.setdefault(org, []).append((entry, source))
+
+    violators = {
+        org: entries
+        for org, entries in by_company.items()
+        if len(entries) > focus_limit
+    }
+
+    print(f"COMPANY FOCUS — Rule of {focus_limit}")
+    print("=" * 60)
+    print(f"Limit: {focus_limit} total active+submitted per company (job track)")
+    print()
+
+    if not violators:
+        total_companies = len(by_company)
+        print(f"ALL CLEAR — {total_companies} companies, none exceed limit of {focus_limit}")
+        return
+
+    print(f"FLAGGED COMPANIES ({len(violators)}):")
+    print()
+
+    for org, entries in sorted(violators.items(), key=lambda x: -len(x[1])):
+        active_count = sum(1 for _, src in entries if src == "active")
+        submitted_count = sum(1 for _, src in entries if src == "submitted")
+        total = len(entries)
+
+        print(f"  {org}  [{total} total: {active_count} active, {submitted_count} submitted]")
+        print(f"  {'─' * 56}")
+
+        # Sort by score descending; missing score goes last
+        def sort_key(item: tuple[dict, str]) -> float:
+            e, _ = item
+            fit = e.get("fit", {})
+            score = fit.get("score", 0) if isinstance(fit, dict) else 0
+            return -(score or 0)
+
+        ranked = sorted(entries, key=sort_key)
+
+        # Submitted entries always shown first (immutable context)
+        submitted_list = [(e, src) for e, src in ranked if src == "submitted"]
+        active_list = [(e, src) for e, src in ranked if src == "active"]
+
+        keep_slots = max(0, focus_limit - len(submitted_list))
+
+        for idx, (e, src) in enumerate(submitted_list + active_list):
+            entry_id = e.get("id", "?")
+            status = e.get("status", "?")
+            fit = e.get("fit", {})
+            score = fit.get("score", 0) if isinstance(fit, dict) else 0
+            score_str = f"{score:.1f}" if score else " — "
+            target = e.get("target", {}) if isinstance(e.get("target"), dict) else {}
+            app_url = target.get("application_url", "")
+
+            if src == "submitted":
+                action = "[submitted — immutable]"
+            elif (idx - len(submitted_list)) < keep_slots:
+                action = "[keep]"
+            else:
+                action = "[suggest defer]"
+
+            print(f"    {score_str:>5}  {status:<12}  {action:<26}  {entry_id}")
+            if app_url:
+                print(f"           {app_url}")
+
+        print()
+
+    print(f"{'─' * 60}")
+    active_violations = sum(
+        max(0, sum(1 for _, src in entries if src == "active") - max(0, focus_limit - sum(1 for _, src in entries if src == "submitted")))
+        for entries in violators.values()
+    )
+    print(f"ACTION: {active_violations} active entries exceed focus limit — consider deferring")
+    print(f"To defer an entry: update its status to 'deferred' in the pipeline YAML")
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -482,6 +590,10 @@ def main():
                         help="Move past-deadline active entries to closed/")
     parser.add_argument("--gate", metavar="ENTRY_ID",
                         help="Run track-specific readiness gate for one entry")
+    parser.add_argument("--company-focus", action="store_true",
+                        help="Rule of Three: flag companies with >limit active+submitted job entries")
+    parser.add_argument("--limit", type=int, default=DEFAULT_FOCUS_LIMIT, metavar="N",
+                        help=f"Focus limit for --company-focus (default: {DEFAULT_FOCUS_LIMIT})")
     parser.add_argument("--dry-run", action="store_true",
                         help="Preview changes without executing")
     parser.add_argument("--yes", action="store_true",
@@ -491,6 +603,10 @@ def main():
     if args.gate:
         issues = run_gate(args.gate)
         sys.exit(1 if issues else 0)
+
+    if args.company_focus:
+        section_company_focus(focus_limit=args.limit)
+        return
 
     entries = load_entries(
         dirs=[PIPELINE_DIR_ACTIVE, PIPELINE_DIR_RESEARCH_POOL],

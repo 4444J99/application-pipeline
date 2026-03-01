@@ -14,7 +14,10 @@ tier: single
 **Identity position:** Independent engineer building production-grade systems at scale
 
 ## Opening
-Independent engineer with 5 years building production-grade Python and TypeScript infrastructure across 103 repositories coordinated through 8 GitHub organizations. The ORGANVM system — 21,160 code files, 3,610 test files (test coverage in 70 of 103 repositories), 94 CI/CD pipelines, and a validated dependency graph with 43 edges and 0 violations — demonstrates sustained engineering discipline at institutional scale, designed and maintained by a solo practitioner.
+
+21,160 code files. 3,610 test files across 70 repositories. 94 CI/CD pipelines. 43 validated dependency edges with zero violations — all designed, built, and maintained by a single practitioner. This is not freelance consulting or contract work: it is sustained independent production at the scale of a small engineering team, built over five years using Python and TypeScript across 103 repositories coordinated through 8 GitHub organizations.
+
+**Pattern interrupt note:** Lead with the numbers before naming the solo context. "Solo practitioner" fires a "contractor" pattern in ATS and hiring managers — delay it until after the scale has registered. Always pair the solo framing with the institutional-scale evidence: "not as a team member, but at the scale of a team."
 
 ## Key Claims
 - **Testing discipline:** 3,610 test files with coverage in 70 of 103 repositories; flagship projects at 1,095 tests (agentic-titan) and 1,254 tests with 85% coverage (recursive-engine)

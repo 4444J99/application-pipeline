@@ -71,7 +71,11 @@ Five framings of the same body of work for different audiences. Derived from cov
 **Targets:** Anthropic, OpenAI, Runway, Together AI, Cohere, HuggingFace
 
 **Opening line template:**
-> Independent engineer with 5 years building production-grade Python and TypeScript infrastructure across 103 repositories. 21,160 code files, 3,610 test files in 70 repos, 94 CI/CD pipelines, and a validated dependency graph with 43 edges and 0 violations — all designed, built, and maintained as a solo practitioner using AI-augmented development methodology.
+> 21,160 code files. 3,610 test files across 70 repositories. 94 CI/CD pipelines. 43 validated dependency edges with zero violations — all designed, built, and maintained by a single practitioner. This is not freelance consulting or contract work: it is sustained independent production at engineering-team scale, five years of Python and TypeScript across 103 repositories coordinated through 8 GitHub organizations.
+
+**Pattern interrupt:** Lead with the output scale before naming the solo context. The reviewer's "contractor" pattern fires on "solo practitioner" — delay that phrase until after the numbers have established the scale.
+
+**What to say about solo work:** "Independent practice — not consulting, not contract work. Sustained production at the scale of a small engineering team, without institutional support."
 
 ---
 

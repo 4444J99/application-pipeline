@@ -1,7 +1,7 @@
 id: stripe-developer-experience-engineer-privy
 name: Stripe Developer Experience Engineer, Privy
 track: job
-status: staged
+status: submitted
 outcome: null
 target:
   organization: Stripe
@@ -57,4 +57,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-27"
+last_touched: "2026-02-28"

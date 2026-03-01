@@ -1,0 +1,17 @@
+# Resend DX Engineer (Technical Writer) - Application Answers
+
+why_resend: |
+  I am drawn to Resend because it treats email not as a legacy chore, but as a foundational developer primitive that deserves a first-class, "delightful" experience. My own work over the last five years—architecting a 103-repository ecosystem across 8 GitHub organizations—mirrors your focus on building simple, high-signal tools that empower builders to stay in flow. I maintain a deep "Cathedral" of infrastructure (21,160 code files, 2,349+ tests) while ensuring every entry point is a scannable, high-impact "Storefront." I see a direct parallel between this philosophy and Resend’s mission to provide the "cleanest" API for email.
+
+  I am excited by the challenge of bridging complex infrastructure with the "magic" of a 60-second setup. Email is often the most fragile part of a developer's stack; by treating it as code and providing a rigorous, DX-first abstraction, Resend is setting the standard for how modern cloud services should function. I envision my role as the primary architect of the technical narratives that convert Resend's primitives into developer superpowers. I want to build the documentation, guides, and example implementations that prove Resend is not just a utility, but a strategic advantage for engineers who value correctness and speed.
+
+  Having taught 2,000+ students across 8 institutions, I bring a veteran pedagogical lens to technical writing. I don’t just explain features; I build "Golden Paths" that reduce cognitive load and accelerate adoption. I thrive in high-intensity, "zero-to-one" environments where the goal is to build the reliable foundations for the next generation of builders. I am eager to join Resend to help scale this culture of excellence and ensure your documentation remains as delightful as your API.
+
+marketing_to_developers: |
+  I believe that for developers, marketing IS the documentation. My approach is defined by two rules: "Storefront Scannability" and "Cathedral Depth." Developers have exceptionally high "BS detectors"; they don't want aspirational copy—they want code samples, reliability metrics, and a clear path to "it just works." I market to developers by providing a high-signal entry point—the "60-second setup"—and then immediately proving the technical rigor under the hood through 100% specification coverage and automated validation.
+
+  My methodology treats every piece of technical content as a "compositional instrument." By leading with concrete numbers—such as my own 2,349+ automated tests and zero circular dependencies—I establish immediate peer-level credibility. I focus on reducing the "time to first value" by designing documentation that mirrors the developer's mental model. This "AI-conductor" approach allows me to produce institutional-scale volume (810K+ words of public documentation) without sacrificing the granular technical detail that professional engineers require to trust a service.
+
+writing_sample_url: https://organvm-v-logos.github.io/public-process/
+portfolio_url: https://4444j99.github.io/portfolio/
+github_url: https://github.com/4444J99

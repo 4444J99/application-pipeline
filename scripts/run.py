@@ -37,6 +37,11 @@ COMMANDS = {
     "archive":     ("archive_research.py", ["--report"], "Show archival candidates"),
     "qualify":     ("score.py", ["--auto-qualify"],       "Preview auto-qualification"),
     "email":       ("check_email.py", [],                 "Check email for submission confirmations and responses"),
+    "focus":       ("hygiene.py", ["--company-focus"],    "Rule of Three: flag companies with >3 active+submitted job applications"),
+    "topjobs":     ("ingest_top_roles.py", [],            "Daily glove-fit fetch: top roles ≥ 8.5 score"),
+    "syncmetrics": ("sync_metrics.py", [],               "Check canonical metric consistency across blocks/strategy"),
+    "hypotheses":  ("feedback_capture.py", ["--list"],   "List all recorded outcome hypotheses"),
+    "analysis":    ("feedback_capture.py", ["--analyze"],"Pattern analysis of outcome hypotheses"),
 }
 
 # --- Parameterized commands (word + target ID) ---
@@ -50,7 +55,8 @@ PARAM_COMMANDS = {
     "check":    ("submit.py", ["--check"],               "Pre-submit validation"),
     "record":   ("submit.py", ["--target", None, "--record"], "Record completed submission"),
     "gate":     ("hygiene.py", ["--gate"],               "Track-specific readiness gate"),
-    "contacts": ("research_contacts.py", ["--target"],   "Research hiring contacts"),
+    "contacts":   ("research_contacts.py", ["--target"],  "Research hiring contacts"),
+    "hypothesis": ("feedback_capture.py", ["--entry"],   "Capture outcome hypothesis for an entry"),
 }
 
 

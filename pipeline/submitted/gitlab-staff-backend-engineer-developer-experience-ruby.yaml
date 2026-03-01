@@ -1,7 +1,7 @@
 id: gitlab-staff-backend-engineer-developer-experience-ruby
 name: GitLab Staff Backend Engineer, Developer Experience (Ruby)
 track: job
-status: staged
+status: submitted
 outcome: null
 target:
   organization: GitLab
@@ -58,4 +58,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-27"
+last_touched: "2026-02-28"

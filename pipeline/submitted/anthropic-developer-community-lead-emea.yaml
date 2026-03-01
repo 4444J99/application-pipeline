@@ -1,0 +1,60 @@
+id: anthropic-developer-community-lead-emea
+name: Anthropic Developer Community Lead, EMEA
+track: job
+status: submitted
+outcome: null
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/5113368008
+  portal: greenhouse
+  location: London, UK
+  location_class: international
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 10
+    track_record_fit: 7
+    financial_alignment: 5
+    effort_to_value: 4
+    strategic_value: 8
+    deadline_feasibility: 9
+    portal_friction: 5
+  framing: Independent engineer and veteran educator building production-grade AI
+    orchestration at institutional scale (103 repos, 2,349+ tests). Specialist in
+    translating deep technical infrastructure into high-signal "Storefront" community
+    programs and "AI-conductor" methodologies for the EMEA builder ecosystem.
+submission:
+  effort_level: standard
+  blocks_used:
+    framing: framings/independent-engineer
+    evidence: evidence/differentiators
+    work_samples: evidence/work-samples
+    credentials: pitches/credentials-creative-tech
+    methodology: methodology/ai-conductor
+  variant_ids:
+    cover_letter: cover-letters/anthropic-developer-community-lead-emea-alchemized
+  materials_attached:
+  - resumes/batch-03/anthropic-developer-community-lead-emea/anthropic-developer-community-lead-emea-resume.html
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-02-25'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-02-28"

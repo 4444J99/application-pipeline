@@ -22,7 +22,8 @@ entries:
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/anthropic-se-claude-code
   channel: direct
   portal: greenhouse
@@ -39,7 +40,8 @@ entries:
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/cohere-applied-ai-agentic-workflows
   channel: direct
   portal: ashby
@@ -56,7 +58,8 @@ entries:
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/cursor-software-engineer-client-infrastructure-alchemized
   channel: direct
   portal: ashby
@@ -73,7 +76,8 @@ entries:
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/notion-software-engineer-developer-experience-alchemized
   channel: direct
   portal: ashby
@@ -90,7 +94,8 @@ entries:
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/openai-developer-experience-engineer-alchemized
   channel: direct
   portal: ashby
@@ -107,7 +112,8 @@ entries:
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/openai-forward-deployed-engineer-fde-nyc-alchemized
   channel: direct
   portal: ashby
@@ -124,7 +130,8 @@ entries:
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/perplexity-full-stack-software-engineer-applied-ai-alchemized
   channel: direct
   portal: ashby
@@ -141,7 +148,8 @@ entries:
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/replit-software-engineer-product-infrastructure-typescript-devex-alchemized
   channel: direct
   portal: ashby
@@ -158,7 +166,8 @@ entries:
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/supabase-developer-relations-engineer-san-francisco-ca-alchemized
   channel: direct
   portal: ashby
@@ -175,7 +184,8 @@ entries:
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/anthropic-fde-custom-agents
   channel: direct
   portal: greenhouse
@@ -192,7 +202,8 @@ entries:
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/cloudflare-models-engineer-developer-relations-alchemized
   channel: direct
   portal: greenhouse
@@ -209,7 +220,8 @@ entries:
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/figma-software-engineer-developer-experience-alchemized
   channel: direct
   portal: greenhouse
@@ -226,7 +238,8 @@ entries:
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/runway-mts-research-tooling
   channel: direct
   portal: greenhouse
@@ -243,7 +256,8 @@ entries:
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/stripe-full-stack-engineer-developer-experience-product-platform-alchemized
   channel: direct
   portal: greenhouse
@@ -260,7 +274,8 @@ entries:
   submitted: '2026-02-24'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/together-ai-lead-dx-documentation
   channel: direct
   portal: greenhouse
@@ -277,7 +292,8 @@ entries:
   submitted: '2026-02-25'
   track: job
   identity_position: educator
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/anthropic-developer-education-lead-alchemized
   outcome: acknowledged
   response_date: '2026-02-27'
@@ -287,7 +303,8 @@ entries:
   submitted: '2026-02-25'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/anthropic-developer-relations-mcp-alchemized
   outcome: acknowledged
   response_date: '2026-02-27'
@@ -297,7 +314,8 @@ entries:
   submitted: '2026-02-25'
   track: job
   identity_position: independent-engineer
-  blocks_used: null
+  blocks_used:
+  - cover-letter-only
   variant_id: cover-letters/anthropic-founding-developer-relations-lead-alchemized
   outcome: acknowledged
   response_date: '2026-02-27'
@@ -633,6 +651,127 @@ entries:
   - pitches/credentials-creative-tech
   - methodology/ai-conductor
   variant_id: cover-letters/temporal-staff-developer-advocate-platform-engineering-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: anthropic-developer-community-lead-emea
+  submitted: '2026-02-28'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/anthropic-developer-community-lead-emea-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: scale-ai-senior-software-engineer-agentic-data-products
+  submitted: '2026-02-28'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/scale-ai-senior-software-engineer-agentic-data-products-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: stripe-developer-experience-engineer-privy
+  submitted: '2026-02-28'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/stripe-developer-experience-engineer-privy-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: stripe-global-strategic-alliances-lead-agentic-commerce-and-retail-
+  submitted: '2026-02-28'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  - projects/your-fit-tailored
+  variant_id: cover-letters/stripe-global-strategic-alliances-lead-agentic-commerce-and-retail--alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: temporal-staff-developer-advocate-developer-enablement
+  submitted: '2026-02-28'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/temporal-staff-developer-advocate-developer-enablement-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: elastic-software-engineer-ii-python-developer-tools-search
+  submitted: '2026-02-28'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/elastic-software-engineer-ii-python-developer-tools-search-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: resend-dx-engineer-technical-writer
+  submitted: '2026-02-28'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/resend-dx-engineer-technical-writer-alchemized
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: gitlab-staff-backend-engineer-developer-experience-ruby
+  submitted: '2026-02-28'
+  track: job
+  identity_position: independent-engineer
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/gitlab-staff-backend-engineer-developer-experience-ruby-alchemized
   outcome: null
   response_date: null
   time_to_response_days: null
