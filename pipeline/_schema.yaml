@@ -84,6 +84,7 @@
 # --- Timeline ---
 # timeline:
 #   researched: ISO date
+#   posting_date: ISO date the job was posted (from ATS API; null if unavailable)
 #   qualified: ISO date
 #   materials_ready: ISO date
 #   submitted: ISO date

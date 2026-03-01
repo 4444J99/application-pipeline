@@ -18,7 +18,7 @@ import argparse
 import json
 import re
 import sys
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -252,6 +252,8 @@ def fetch_greenhouse_jobs(board: str) -> list[dict]:
     jobs = data.get("jobs", [])
     results = []
     for job in jobs:
+        raw_date = job.get("updated_at", "")
+        posting_date = raw_date[:10] if raw_date else None
         results.append({
             "title": job.get("title", ""),
             "id": str(job.get("id", "")),
@@ -261,6 +263,7 @@ def fetch_greenhouse_jobs(board: str) -> list[dict]:
             "company_display": COMPANY_DISPLAY_NAMES.get(board, board.title()),
             "portal": "greenhouse",
             "company_url": f"https://boards.greenhouse.io/{board}",
+            "posting_date": posting_date,
         })
     return results
 
@@ -283,6 +286,11 @@ def fetch_lever_jobs(company: str) -> list[dict]:
 
     results = []
     for job in jobs:
+        created_ms = job.get("createdAt")
+        if created_ms:
+            posting_date = datetime.fromtimestamp(created_ms / 1000, tz=timezone.utc).date().isoformat()
+        else:
+            posting_date = None
         results.append({
             "title": job.get("text", ""),
             "id": job.get("id", ""),
@@ -292,6 +300,7 @@ def fetch_lever_jobs(company: str) -> list[dict]:
             "company_display": COMPANY_DISPLAY_NAMES.get(company, company.title()),
             "portal": "lever",
             "company_url": f"https://jobs.lever.co/{company}",
+            "posting_date": posting_date,
         })
     return results
 
@@ -313,6 +322,8 @@ def fetch_ashby_jobs(company: str) -> list[dict]:
     results = []
     for job in jobs:
         posting_url = f"https://jobs.ashbyhq.com/{company}/{job.get('id', '')}"
+        raw_date = job.get("publishedDate") or job.get("updatedAt", "")
+        posting_date = raw_date[:10] if raw_date else None
         results.append({
             "title": job.get("title", ""),
             "id": str(job.get("id", "")),
@@ -322,6 +333,7 @@ def fetch_ashby_jobs(company: str) -> list[dict]:
             "company_display": COMPANY_DISPLAY_NAMES.get(company, company.title()),
             "portal": "ashby",
             "company_url": f"https://jobs.ashbyhq.com/{company}",
+            "posting_date": posting_date,
         })
     return results
 
@@ -430,6 +442,7 @@ def create_pipeline_entry(job: dict) -> tuple[str, dict]:
         },
         "timeline": {
             "researched": today,
+            "posting_date": job.get("posting_date"),
         },
         "conversion": {
             "response_received": False,

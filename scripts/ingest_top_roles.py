@@ -15,7 +15,7 @@ Usage:
 """
 
 import sys
-from datetime import date
+from datetime import date, datetime as _dt
 from pathlib import Path
 
 import yaml
@@ -55,6 +55,43 @@ IDENTITY_KEYWORDS = [
     "agentic", "agent sdk", "claude code", "cli",
     "technical writer", "documentation",
 ]
+
+# Freshness scoring modifiers based on posting age.
+# Research shows 48h peak, 14d black hole, 30d+ ghost (shortlist already selected).
+FRESHNESS_MODIFIERS: dict[str, float] = {
+    "urgent":    1.5,   # 0–2 days: 48-hour peak window
+    "fresh":     0.5,   # 3–7 days: still strong
+    "standard":  0.0,   # 8–14 days: no modifier
+    "aging":    -0.5,   # 15–21 days: declining probability
+    "stale":    -1.5,   # 22–30 days: near-black-hole
+    "ghost":    -3.0,   # 31+ days: shortlist effectively selected
+    "unknown":   0.0,   # No posting date captured
+}
+
+
+def freshness_tier(posting_date: str | None) -> tuple[str, int | None]:
+    """Return (tier_name, age_in_days) for a posting date ISO string.
+
+    tier_name is one of: urgent, fresh, standard, aging, stale, ghost, unknown.
+    age_in_days is None when posting_date is absent or unparseable.
+    """
+    if not posting_date:
+        return "unknown", None
+    try:
+        age = (date.today() - date.fromisoformat(posting_date)).days
+    except (ValueError, TypeError):
+        return "unknown", None
+    if age <= 2:
+        return "urgent", age
+    if age <= 7:
+        return "fresh", age
+    if age <= 14:
+        return "standard", age
+    if age <= 21:
+        return "aging", age
+    if age <= 30:
+        return "stale", age
+    return "ghost", age
 
 
 def pre_score(job: dict) -> float:
@@ -103,8 +140,10 @@ def pre_score(job: dict) -> float:
         "portal_friction": portal_friction,
     }
 
+    tier, _ = freshness_tier(job.get("posting_date"))
+    freshness_mod = FRESHNESS_MODIFIERS[tier]
     score = sum(dims[dim] * weight for dim, weight in WEIGHTS_JOB.items())
-    return round(score, 2)
+    return round(max(0.0, min(10.0, score + freshness_mod)), 2)
 
 
 def identity_match(job: dict) -> bool:
@@ -147,12 +186,14 @@ def run(
     all_tiers: bool = False,
     promote: bool = False,
     dry_run: bool = True,
+    max_age: int | None = None,
 ):
     """Main entry point for glove-fit ingestion."""
     today = date.today().isoformat()
 
     print(f"GLOVE-FIT INGESTION — {today}")
-    print(f"Threshold: ≥ {min_score}  |  Identity filter: {'off' if all_tiers else 'on'}")
+    age_filter_label = f"  |  Max age: {max_age}d" if max_age is not None else ""
+    print(f"Threshold: ≥ {min_score}  |  Identity filter: {'off' if all_tiers else 'on'}{age_filter_label}")
     print("=" * 60)
     print()
 
@@ -172,6 +213,14 @@ def run(
     existing_ids = _get_existing_ids()
     unique = deduplicate(filtered, existing_ids)
     print(f"  {len(unique)} new (not yet in pipeline)")
+
+    # Apply max-age filter if requested
+    if max_age is not None:
+        unique = [j for j in unique
+                  if freshness_tier(j.get("posting_date"))[1] is None
+                  or freshness_tier(j.get("posting_date"))[1] <= max_age]
+        print(f"  {len(unique)} after max-age filter (≤ {max_age} days)")
+
     print()
 
     if not unique:
@@ -183,7 +232,9 @@ def run(
     for job in unique:
         score = pre_score(job)
         matches_identity = identity_match(job)
-        scored.append({**job, "_score": score, "_identity": matches_identity})
+        tier, age = freshness_tier(job.get("posting_date"))
+        scored.append({**job, "_score": score, "_identity": matches_identity,
+                        "_tier": tier, "_age": age})
 
     # Apply threshold + identity filter
     qualifying = [
@@ -202,7 +253,9 @@ def run(
             print(f"\nNear-misses (score ≥ {min_score - 0.5}, below threshold or no identity match):")
             for j in near_miss[:5]:
                 id_tag = "✓" if j["_identity"] else "✗"
-                print(f"  {j['_score']:.1f}  [{id_tag}]  {j['company_display']:<20}  {j['title']}")
+                t, a = freshness_tier(j.get("posting_date"))
+                age_str = f"Day {a}" if a is not None else "--"
+                print(f"  {j['_score']:.1f}  [{id_tag}]  {age_str:<9}  {j['company_display']:<20}  {j['title']}")
         return
 
     display = qualifying[:top_n]
@@ -217,14 +270,21 @@ def run(
         return "unmatched"
 
     print(f"TOP {min(top_n, len(qualifying))} GLOVE FITS  (score ≥ {min_score}" + (", identity match)" if not all_tiers else ")"))
-    print("─" * 65)
-    print(f"  {'#':>2}  {'Score':>5}  {'Tier':<18}  {'Company':<20}  Role")
-    print("─" * 65)
+    print("─" * 75)
+    print(f"  {'#':>2}  {'Score':>5}  {'Age':<9}  {'Tier':<18}  {'Company':<20}  Role")
+    print("─" * 75)
 
     for idx, job in enumerate(display, 1):
-        tier_name = get_tier_name(job)
+        freshness_t = job.get("_tier", "unknown")
+        age = job.get("_age")
+        age_str = f"Day {age}" if age is not None else "--"
+        # For stale/ghost tiers, show freshness status instead of role tier to flag risk
+        if freshness_t in ("ghost", "stale"):
+            tier_display = f"[{freshness_t}]"
+        else:
+            tier_display = get_tier_name(job)
         id_tag = " ✓" if job["_identity"] else ""
-        print(f"  {idx:>2}  {job['_score']:.1f}   {tier_name:<18}  {job['company_display']:<20}  {job['title']}{id_tag}")
+        print(f"  {idx:>2}  {job['_score']:.1f}   {age_str:<9}  {tier_display:<18}  {job['company_display']:<20}  {job['title']}{id_tag}")
         print(f"       {job['url']}")
 
     if len(qualifying) > top_n:
@@ -290,6 +350,8 @@ def main():
                         help="Preview promotions without writing files (default when --yes is absent)")
     parser.add_argument("--yes", action="store_true",
                         help="Execute promotions (required with --promote to write files)")
+    parser.add_argument("--max-age", type=int, default=None, metavar="DAYS",
+                        help="Exclude postings older than N days (skips postings with unknown date)")
     args = parser.parse_args()
 
     dry_run = not args.yes or args.dry_run
@@ -300,6 +362,7 @@ def main():
         all_tiers=args.all_tiers,
         promote=args.promote,
         dry_run=dry_run,
+        max_age=args.max_age,
     )
 
 
