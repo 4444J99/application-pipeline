@@ -8,12 +8,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from followup import (
     PROTOCOL,
-    TIER_PRIORITY,
-    get_submission_date,
-    get_follow_ups,
-    get_tier,
     days_since_submission,
     get_due_actions,
+    get_follow_ups,
+    get_submission_date,
+    get_tier,
     get_upcoming_actions,
 )
 
@@ -242,9 +241,6 @@ def test_upcoming_all_done():
 
 def test_init_follow_ups_adds_field():
     """init_follow_ups populates follow_up on entries without it."""
-    import tempfile
-    import yaml
-    from pipeline_lib import PIPELINE_DIR_SUBMITTED
 
     # This test validates the logic: entries missing follow_up need updating
     entry = _make_entry(submitted_date=_date_offset(5), follow_ups=None)

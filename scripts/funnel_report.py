@@ -27,12 +27,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
     ALL_PIPELINE_DIRS,
-    ALL_PIPELINE_DIRS_WITH_POOL,
     PIPELINE_DIR_RESEARCH_POOL,
     SIGNALS_DIR,
     load_entries,
     parse_date,
-    STATUS_ORDER,
 )
 
 # Conversion targets (benchmarks from plan)
@@ -44,9 +42,9 @@ TARGETS = {
     "full_funnel_followup": 0.05, # 5% with follow-up + tailoring
 }
 
-# Funnel stages in order
+# Funnel stages in order (deferred excluded — it is a hold state, not a pipeline stage)
 FUNNEL_STAGES = [
-    "research", "qualified", "drafting", "staged", "deferred",
+    "research", "qualified", "drafting", "staged",
     "submitted", "acknowledged", "interview", "outcome",
 ]
 
@@ -104,8 +102,7 @@ def funnel_summary(entries: list[dict], pool_count: int = 0):
     print()
 
     # Stage distribution
-    print(f"Stage Distribution:")
-    cumulative = total
+    print("Stage Distribution:")
     for stage in FUNNEL_STAGES:
         count = stage_counts.get(stage, 0)
         pct = (count / total * 100) if total else 0
@@ -115,7 +112,7 @@ def funnel_summary(entries: list[dict], pool_count: int = 0):
     print()
 
     # Conversion rates between stages
-    print(f"Stage-to-Stage Conversion:")
+    print("Stage-to-Stage Conversion:")
     for i in range(len(FUNNEL_STAGES) - 1):
         current = FUNNEL_STAGES[i]
         next_stage = FUNNEL_STAGES[i + 1]
@@ -134,14 +131,14 @@ def funnel_summary(entries: list[dict], pool_count: int = 0):
     print()
 
     # Track distribution
-    print(f"Track Distribution:")
+    print("Track Distribution:")
     for track, count in sorted(track_counts.items(), key=lambda x: -x[1]):
         pct = (count / total * 100) if total else 0
         print(f"  {track:<15s} {count:>4d}  ({pct:>5.1f}%)")
 
     if outcome_counts:
         print()
-        print(f"Outcomes:")
+        print("Outcomes:")
         for outcome, count in sorted(outcome_counts.items(), key=lambda x: -x[1]):
             print(f"  {outcome:<15s} {count:>4d}")
 
@@ -229,7 +226,7 @@ def _get_dimension_value(entry: dict, dimension: str) -> str:
 
 def weekly_velocity(entries: list[dict]):
     """Show weekly submission velocity."""
-    print(f"Weekly Submission Velocity")
+    print("Weekly Submission Velocity")
     print(f"{'=' * 60}")
 
     # Group submissions by week
@@ -247,13 +244,19 @@ def weekly_velocity(entries: list[dict]):
         print("  No submissions recorded yet.")
         return
 
-    # Show last 8 weeks
+    # Show all active weeks; emit gap markers for inactive periods ≥2 weeks
     all_weeks = sorted(weekly.keys())
-    for week in all_weeks[-8:]:
+    prev_week = None
+    for week in all_weeks:
+        if prev_week is not None:
+            gap_weeks = (week - prev_week).days // 7 - 1
+            if gap_weeks >= 2:
+                print(f"  --- [{gap_weeks} weeks inactive] ---")
         count = weekly[week]
         bar = "#" * count
         week_end = week + timedelta(days=6)
         print(f"  {week.isoformat()} — {week_end.isoformat()}  {count:>3d}  {bar}")
+        prev_week = week
 
     total = sum(weekly.values())
     weeks_active = len(weekly)
@@ -281,7 +284,7 @@ def show_targets(entries: list[dict]):
     n_int = len(interview)
     n_offer = len(outcome_offer)
 
-    print(f"Conversion Targets vs Actual")
+    print("Conversion Targets vs Actual")
     print(f"{'=' * 60}")
 
     print(f"\n  {'Metric':<30s} {'Target':>8s} {'Actual':>8s} {'Status':>8s}")
@@ -316,18 +319,18 @@ def show_targets(entries: list[dict]):
     # Volume target
     total_pipeline = len(entries)
     print(f"\n  Pipeline size: {total_pipeline} entries")
-    print(f"  Sweet spot: 21-80 total applications (30.89% success rate)")
+    print("  Sweet spot: 21-80 total applications (30.89% success rate)")
     if total_pipeline < 21:
         print(f"  Status: BELOW minimum — need {21 - total_pipeline} more entries")
     elif total_pipeline <= 80:
-        print(f"  Status: IN sweet spot")
+        print("  Status: IN sweet spot")
     else:
-        print(f"  Status: ABOVE sweet spot — diminishing returns")
+        print("  Status: ABOVE sweet spot — diminishing returns")
 
 
 def compare_variants(entries: list[dict]):
     """Compare outcomes by variant composition type."""
-    print(f"Variant Comparison — Outcome by Composition Method")
+    print("Variant Comparison — Outcome by Composition Method")
     print(f"{'=' * 70}")
 
     # Classify each submitted entry by composition method
@@ -383,21 +386,62 @@ def compare_variants(entries: list[dict]):
                        if e.get("status") in ("acknowledged", "interview", "outcome")
                        or (isinstance(e.get("conversion"), dict)
                            and e["conversion"].get("response_received")))
-        interviewed = sum(1 for e in group
-                         if e.get("status") in ("interview", "outcome")
-                         and e.get("outcome") not in ("rejected", "expired", "withdrawn"))
+        # Use timeline.interview presence to count interviews (not outcome filtering)
+        interviewed = sum(
+            1 for e in group
+            if bool((e.get("timeline") or {}).get("interview"))
+        )
         rate = f"{responded / total * 100:.0f}%" if total else "—"
 
         print(f"  {comp_type:<20s} {total:>6d} {responded:>6d} {interviewed:>6d} {rate:>8s}")
 
     total_all = sum(len(g) for g in groups.values())
     print(f"\n  Total submitted: {total_all}")
-    print(f"\n  Composition types:")
-    print(f"    alchemized    — AI-synthesized via alchemize.py pipeline")
-    print(f"    block+variant — Manual blocks + cover letter variant")
-    print(f"    block-only    — Blocks without cover letter")
-    print(f"    variant-only  — Cover letter without identity blocks")
-    print(f"    minimal       — No blocks or variants attached")
+    print("\n  Composition types:")
+    print("    alchemized    — AI-synthesized via alchemize.py pipeline")
+    print("    block+variant — Manual blocks + cover letter variant")
+    print("    block-only    — Blocks without cover letter")
+    print("    variant-only  — Cover letter without identity blocks")
+    print("    minimal       — No blocks or variants attached")
+
+
+def breakdown_by_score_tier(entries: list[dict]):
+    """Conversion breakdown segmented by fit score tier.
+
+    Tiers: <5.0 (low), 5.0-6.5 (fair), 6.5-7.5 (good), 7.5-9.0 (strong), 9.0+ (top).
+    Validates whether the scoring rubric is predictive: high-tier entries should
+    convert at materially higher rates.
+    """
+    TIERS = [
+        ("<5.0",   lambda s: s < 5.0),
+        ("5.0-6.5", lambda s: 5.0 <= s < 6.5),
+        ("6.5-7.5", lambda s: 6.5 <= s < 7.5),
+        ("7.5-9.0", lambda s: 7.5 <= s < 9.0),
+        ("9.0+",   lambda s: s >= 9.0),
+    ]
+
+    print("Conversion by Score Tier — Rubric Calibration")
+    print(f"{'=' * 70}")
+    print(f"  {'Tier':<12s} {'N':>5s} {'Submit':>7s} {'Ack':>5s} {'Intv':>5s} {'Rate':>6s}")
+    print(f"  {'-' * 12} {'-' * 5} {'-' * 7} {'-' * 5} {'-' * 5} {'-' * 6}")
+
+    for tier_label, tier_fn in TIERS:
+        group = []
+        for e in entries:
+            fit = e.get("fit", {})
+            score = float(fit.get("score", 0)) if isinstance(fit, dict) else 0.0
+            if tier_fn(score):
+                group.append(e)
+        total = len(group)
+        submitted = sum(1 for e in group if get_stage_index(e.get("status", "")) >= 4)
+        ack = sum(1 for e in group if get_stage_index(e.get("status", "")) >= 5)
+        interview = sum(1 for e in group if get_stage_index(e.get("status", "")) >= 6)
+        rate = f"{ack / submitted * 100:.0f}%" if submitted else "—"
+        print(f"  {tier_label:<12s} {total:>5d} {submitted:>7d} {ack:>5d} {interview:>5d} {rate:>6s}")
+
+    print(f"\n{'=' * 70}")
+    print("  If high-tier rates >> low-tier: rubric is predictive.")
+    print("  If no difference: rubric needs recalibration.")
 
 
 def main():
@@ -408,6 +452,8 @@ def main():
     parser.add_argument("--targets", action="store_true", help="Show conversion targets vs actual")
     parser.add_argument("--compare-variants", action="store_true",
                         help="Compare outcomes by variant composition method")
+    parser.add_argument("--by-score-tier", action="store_true",
+                        help="Conversion breakdown by score tier (rubric calibration)")
     args = parser.parse_args()
 
     entries = load_all_entries()
@@ -424,6 +470,8 @@ def main():
         show_targets(entries)
     elif args.compare_variants:
         compare_variants(entries)
+    elif args.by_score_tier:
+        breakdown_by_score_tier(entries)
     else:
         funnel_summary(entries, pool_count=len(pool))
 

@@ -12,16 +12,18 @@ Usage:
 
 import argparse
 import sys
-from datetime import date
-from pathlib import Path
 
 from pipeline_lib import (
     MATERIALS_DIR,
-    load_entries, load_entry_by_id, load_profile, load_legacy_script,
-    get_deadline, days_until,
-    strip_markdown, count_words,
+    count_words,
+    days_until,
+    get_deadline,
+    load_entries,
+    load_entry_by_id,
+    load_legacy_script,
+    load_profile,
+    strip_markdown,
 )
-
 
 # Reasonable word limits per field for flagging overruns
 TYPICAL_LIMITS = {
@@ -33,18 +35,19 @@ TYPICAL_LIMITS = {
 }
 
 
-def check_entry(entry: dict) -> list[str]:
+def check_entry(entry: dict) -> tuple[list[str], list[str]]:
     """Run all preflight checks on a single entry.
 
-    Returns a list of issue strings (empty = ready).
+    Returns (errors, warnings). Errors block submission; warnings are advisory.
     """
-    issues = []
+    errors = []
+    warnings = []
     entry_id = entry.get("id", "?")
 
     # 1. Profile exists
     profile = load_profile(entry_id)
     if not profile:
-        issues.append("no profile found")
+        errors.append("no profile found")
 
     # 2. Submission format parseable
     has_fields = False
@@ -71,13 +74,13 @@ def check_entry(entry: dict) -> list[str]:
             field_name = field["name"]
             content, _ = resolve_field_content(field_name, entry, profile, legacy)
             if not content:
-                issues.append(f"missing content: {field_name}")
+                errors.append(f"missing content: {field_name}")
             elif field.get("word_limit"):
                 wc = count_words(strip_markdown(content))
                 if wc > field["word_limit"] * 1.1:
-                    issues.append(f"{field_name}: {wc}w exceeds ~{field['word_limit']}w limit")
+                    warnings.append(f"{field_name}: {wc}w exceeds ~{field['word_limit']}w limit")
     elif not blocks_used and not legacy:
-        issues.append("no submission fields identified (no format, blocks, or legacy script)")
+        warnings.append("no submission fields identified (no format, blocks, or legacy script)")
 
     # 4. Materials check
     if isinstance(submission, dict):
@@ -86,7 +89,7 @@ def check_entry(entry: dict) -> list[str]:
             for m in materials:
                 mat_path = MATERIALS_DIR / m
                 if not mat_path.exists():
-                    issues.append(f"material not found: {m}")
+                    errors.append(f"material not found: {m}")
 
     # 4b. Base resume check — tailored resumes should be used, not base templates
     if isinstance(submission, dict):
@@ -94,38 +97,29 @@ def check_entry(entry: dict) -> list[str]:
         if isinstance(materials, list):
             for m in materials:
                 if "resumes/base/" in m:
-                    issues.append(f"using base resume: {m} — tailor with tailor_resume.py")
+                    warnings.append(f"using base resume: {m} — tailor with tailor_resume.py")
 
-    # 5. Resume/CV existence (check common locations)
-    has_resume_ref = False
-    if isinstance(submission, dict):
-        materials = submission.get("materials_attached", [])
-        if isinstance(materials, list):
-            for m in materials:
-                if "resume" in m.lower() or "cv" in m.lower():
-                    has_resume_ref = True
-
-    # 6. Portfolio URL
+    # 5. Portfolio URL (advisory — not all applications require it)
     if isinstance(submission, dict):
         portfolio = submission.get("portfolio_url")
         if not portfolio:
-            issues.append("no portfolio_url set")
+            warnings.append("no portfolio_url set")
 
-    # 7. Portal URL
+    # 6. Portal URL (error — required to actually submit)
     target = entry.get("target", {})
     if isinstance(target, dict):
         app_url = target.get("application_url")
         if not app_url:
-            issues.append("no application_url set")
+            errors.append("no application_url set")
 
-    # 8. Deadline check
+    # 7. Deadline check
     dl_date, dl_type = get_deadline(entry)
     if dl_date:
         d = days_until(dl_date)
         if d < 0:
-            issues.append(f"deadline expired {abs(d)} days ago")
+            errors.append(f"deadline expired {abs(d)} days ago")
 
-    return issues
+    return errors, warnings
 
 
 def readiness_score(entry: dict) -> int:
@@ -174,11 +168,11 @@ def readiness_score(entry: dict) -> int:
         if profile:
             score += 1
 
-    # Deadline safe (>3 days or rolling/tba/none)
+    # Deadline safe (>7 days matches CLAUDE.md urgency protocol, or rolling/tba/none)
     dl_date, dl_type = get_deadline(entry)
     if dl_date:
         d = days_until(dl_date)
-        if d > 3:
+        if d > 7:
             score += 1
     elif dl_type in ("rolling", "tba") or dl_type is None:
         score += 1
@@ -210,12 +204,13 @@ def run_preflight(entries: list[dict], single_target: str | None = None):
     print("=" * 60)
 
     ready_count = 0
+    warn_count = 0
     fail_count = 0
 
     for entry in entries_to_check:
         entry_id = entry.get("id", "?")
         name = entry.get("name", entry_id)
-        issues = check_entry(entry)
+        errors, warnings = check_entry(entry)
 
         dl_date, dl_type = get_deadline(entry)
         dl_str = ""
@@ -232,18 +227,25 @@ def run_preflight(entries: list[dict], single_target: str | None = None):
 
         rscore = readiness_score(entry)
 
-        if not issues:
-            ready_count += 1
-            print(f"  + {name} — READY ({dl_str}) [{rscore}/5]")
-        else:
+        if errors:
             fail_count += 1
-            print(f"  - {name} — {len(issues)} issue(s) ({dl_str}) [{rscore}/5]")
-            for issue in issues:
-                print(f"      {issue}")
+            print(f"  ✗ {name} — {len(errors)} error(s) ({dl_str}) [{rscore}/5]")
+            for e in errors:
+                print(f"      [ERROR] {e}")
+            for w in warnings:
+                print(f"      [WARN]  {w}")
+        elif warnings:
+            warn_count += 1
+            print(f"  ~ {name} — {len(warnings)} warning(s) ({dl_str}) [{rscore}/5]")
+            for w in warnings:
+                print(f"      [WARN] {w}")
+        else:
+            ready_count += 1
+            print(f"  ✓ {name} — READY ({dl_str}) [{rscore}/5]")
 
     print("=" * 60)
-    print(f"Ready: {ready_count} | Issues: {fail_count} | "
-          f"Total: {ready_count + fail_count}")
+    print(f"Ready: {ready_count} | Warnings: {warn_count} | Errors: {fail_count} | "
+          f"Total: {ready_count + warn_count + fail_count}")
 
     if fail_count > 0:
         sys.exit(1)

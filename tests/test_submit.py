@@ -10,12 +10,9 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from submit import (
-    resolve_field_content,
     generate_checklist,
-    _append_conversion_log,
+    resolve_field_content,
 )
-from pipeline_lib import SIGNALS_DIR
-
 
 # --- resolve_field_content ---
 

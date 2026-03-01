@@ -1,15 +1,15 @@
 """Tests for scripts/validate.py"""
 
+# Add scripts to path
+import sys
 import tempfile
 from pathlib import Path
 
 import yaml
 
-# Add scripts to path
-import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from validate import validate_entry, _reachable_statuses, VALID_TRANSITIONS, VALID_DEFERRAL_REASONS
+from validate import VALID_DEFERRAL_REASONS, VALID_TRANSITIONS, _reachable_statuses, validate_entry
 
 
 def _write_yaml(tmp_dir: Path, filename: str, data: dict) -> Path:

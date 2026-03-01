@@ -1,18 +1,16 @@
 """Tests for scripts/funnel_report.py"""
 
 import sys
-from datetime import date, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from funnel_report import (
-    TARGETS,
     FUNNEL_STAGES,
-    get_stage_index,
+    TARGETS,
     _get_dimension_value,
+    get_stage_index,
 )
-
 
 # --- TARGETS ---
 
@@ -40,14 +38,15 @@ def test_targets_required_keys():
 
 
 def test_funnel_stages_count():
-    """Should have 9 stages (including deferred)."""
-    assert len(FUNNEL_STAGES) == 9
+    """Should have 8 stages (deferred excluded — it's a hold state, not a funnel stage)."""
+    assert len(FUNNEL_STAGES) == 8
 
 
 def test_funnel_stages_ordered():
-    """Stages should match pipeline status order."""
-    from pipeline_lib import STATUS_ORDER
-    assert FUNNEL_STAGES == STATUS_ORDER
+    """Funnel stages should not include deferred (hold state excluded from conversion calc)."""
+    assert "deferred" not in FUNNEL_STAGES
+    assert FUNNEL_STAGES[0] == "research"
+    assert FUNNEL_STAGES[-1] == "outcome"
 
 
 # --- get_stage_index ---
@@ -69,8 +68,8 @@ def test_stage_index_unknown():
 
 
 def test_stage_index_submitted():
-    """Submitted should be index 5 (after deferred)."""
-    assert get_stage_index("submitted") == 5
+    """Submitted should be index 4 (deferred removed from funnel stages)."""
+    assert get_stage_index("submitted") == 4
 
 
 # --- _get_dimension_value ---
@@ -206,7 +205,7 @@ def _make_submitted_entry(
 
 def test_compare_variants_classification():
     """Entries classified as alchemized/block+variant/etc."""
-    from funnel_report import compare_variants, get_stage_index
+    from funnel_report import compare_variants
 
     entries = [
         _make_submitted_entry(
@@ -224,8 +223,8 @@ def test_compare_variants_classification():
     ]
     # Just verify the function runs without error on these entries
     # (compare_variants prints output, doesn't return)
-    import io
     import contextlib
+    import io
     out = io.StringIO()
     with contextlib.redirect_stdout(out):
         compare_variants(entries)

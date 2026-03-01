@@ -19,15 +19,15 @@ import json
 import re
 import sys
 from pathlib import Path
-from urllib.parse import urlparse
 
 import yaml
-
 from pipeline_lib import (
-    MATERIALS_DIR, REPO_ROOT, VARIANTS_DIR,
-    load_entries, load_entry_by_id,
-    strip_markdown,
+    MATERIALS_DIR,
     PIPELINE_DIR_ACTIVE,
+    VARIANTS_DIR,
+    load_entries,
+    load_entry_by_id,
+    strip_markdown,
 )
 
 CONFIG_PATH = Path(__file__).resolve().parent / ".submit-config.yaml"
@@ -97,8 +97,8 @@ def fetch_posting_data(company: str, posting_id: str, is_eu: bool) -> dict | Non
 
     Returns the posting dict or None on failure.
     """
-    import urllib.request
     import urllib.error
+    import urllib.request
 
     base = _api_base(is_eu)
     url = f"{base}/{company}/{posting_id}"
@@ -275,7 +275,7 @@ def generate_answer_template(
     lines = [
         f"# Generated for: {entry_name}",
         f"# Posting: {company}/{posting_id}",
-        f"# Edit answers below, then run with --check-answers to validate",
+        "# Edit answers below, then run with --check-answers to validate",
         "",
     ]
 
@@ -425,7 +425,7 @@ def preview_submission(
     print(f"  Region:        {'EU' if is_eu else 'US'}")
     print(f"  API endpoint:  POST {base}/{company}/{posting_id}")
     print()
-    print(f"  APPLICANT INFO:")
+    print("  APPLICANT INFO:")
     full_name = f"{config['first_name']} {config['last_name']}"
     print(f"    Name:     {full_name}")
     print(f"    Email:    {config['email']}")
@@ -448,13 +448,13 @@ def preview_submission(
         if len(cl_lines) > 3:
             print(f"    ... ({len(cl_lines) - 3} more lines)")
     else:
-        print(f"  COVER LETTER: None (will be sent as 'comments' field)")
+        print("  COVER LETTER: None (will be sent as 'comments' field)")
     print()
 
     if resume_path:
         print(f"  RESUME: {resume_path.name} ({resume_path.stat().st_size:,} bytes)")
     else:
-        print(f"  RESUME: NOT FOUND")
+        print("  RESUME: NOT FOUND")
     print()
 
     if questions:
@@ -474,7 +474,7 @@ def preview_submission(
                     print(f"          -> {val}")
                 else:
                     print(f"    [{req_tag}] {text}")
-                    print(f"          -> MISSING")
+                    print("          -> MISSING")
             print()
 
     if validation_errors:
@@ -483,7 +483,7 @@ def preview_submission(
             print(f"    ! {err}")
         print()
 
-    print(f"  STATUS: DRY RUN — use --submit to POST")
+    print("  STATUS: DRY RUN — use --submit to POST")
 
 
 def submit_to_lever(
@@ -500,8 +500,8 @@ def submit_to_lever(
 
     Returns True on success, False on failure.
     """
-    import urllib.request
     import urllib.error
+    import urllib.request
     import uuid
 
     base = _api_base(is_eu)
@@ -554,7 +554,7 @@ def submit_to_lever(
 
     # Assemble the body
     text_body = "".join(body_parts).encode("utf-8")
-    end_boundary = f"\r\n--{boundary}--\r\n".encode("utf-8")
+    end_boundary = f"\r\n--{boundary}--\r\n".encode()
     full_body = text_body + resume_data + end_boundary
 
     headers = {
@@ -588,7 +588,7 @@ def submit_to_lever(
         status_code = e.code
         print(f"  HTTP Error: {status_code} {e.reason}")
         if status_code == 429:
-            print(f"  Rate limited — Lever allows 2 POST requests/second")
+            print("  Rate limited — Lever allows 2 POST requests/second")
         try:
             error_body = e.read().decode()
             print(f"  Body: {error_body[:500]}")

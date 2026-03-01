@@ -8,14 +8,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from lever_submit import (
     auto_fill_answers,
-    get_custom_questions,
     generate_answer_template,
+    get_custom_questions,
     load_answers,
     merge_answers,
     parse_lever_url,
     validate_answers,
 )
-
 
 # ---------------------------------------------------------------------------
 # parse_lever_url

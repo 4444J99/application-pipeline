@@ -1,7 +1,7 @@
 id: cohere-forward-deployed-engineer-agentic-platform
 name: Cohere Forward Deployed Engineer, Agentic Platform
 track: job
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Cohere
@@ -45,7 +45,6 @@ submission:
     cover_letter: cover-letters/cohere-forward-deployed-engineer-agentic-platform-alchemized
   materials_attached:
   - resumes/batch-03/cohere-forward-deployed-engineer-agentic-platform/cohere-forward-deployed-engineer-agentic-platform-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'
@@ -57,4 +56,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-27"
+last_touched: "2026-03-01"

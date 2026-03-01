@@ -8,7 +8,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from velocity import compute_velocity, format_report
 
-
 # --- Helpers ---
 
 def _make_entry(
@@ -158,8 +157,8 @@ class TestComputeVelocity:
             ),
         ]
         metrics = compute_velocity(entries)
-        assert metrics["deadline_pressure"]["this_week"] == 1
-        assert metrics["deadline_pressure"]["next_month"] == 1
+        assert metrics["deadline_pressure"]["0-7d"] == 1
+        assert metrics["deadline_pressure"]["15-30d"] == 1
 
 
 # --- format_report ---

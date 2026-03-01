@@ -13,6 +13,7 @@ Usage:
 """
 
 import argparse
+import json
 import sys
 from datetime import date, timedelta
 from pathlib import Path
@@ -22,21 +23,45 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
-    PIPELINE_DIR_SUBMITTED,
     PIPELINE_DIR_CLOSED,
+    PIPELINE_DIR_SUBMITTED,
     SIGNALS_DIR,
     load_entries,
     parse_date,
-    days_until,
     update_last_touched,
 )
 
-# Follow-up protocol timing (days after submission)
-PROTOCOL = [
+_INTEL_FILE = Path(__file__).resolve().parent.parent / "strategy" / "market-intelligence-2026.json"
+
+# Follow-up protocol timing (days after submission) — defaults
+_PROTOCOL_DEFAULT = [
     {"day_range": (1, 2), "action": "Connect with hiring manager/recruiter on LinkedIn", "type": "connect"},
     {"day_range": (7, 10), "action": "First follow-up: short DM or email referencing application", "type": "dm"},
     {"day_range": (14, 21), "action": "Second and final follow-up", "type": "check_in"},
 ]
+
+
+def load_protocol_from_market_intel() -> list[dict]:
+    """Load follow-up timing from market-intelligence-2026.json, fallback to defaults."""
+    if not _INTEL_FILE.exists():
+        return _PROTOCOL_DEFAULT
+    try:
+        with open(_INTEL_FILE) as f:
+            intel = json.load(f)
+        fp = intel.get("follow_up_protocol", {})
+        connect = tuple(fp.get("connect_window_days", [1, 3]))
+        first_dm = tuple(fp.get("first_dm_days", [7, 10]))
+        second_dm = tuple(fp.get("second_dm_days", [14, 21]))
+        return [
+            {"day_range": connect, "action": "Connect with hiring manager/recruiter on LinkedIn", "type": "connect"},
+            {"day_range": first_dm, "action": "First follow-up: short DM or email referencing application", "type": "dm"},
+            {"day_range": second_dm, "action": "Second and final follow-up", "type": "check_in"},
+        ]
+    except Exception:
+        return _PROTOCOL_DEFAULT
+
+
+PROTOCOL = load_protocol_from_market_intel()
 
 # Tier priority for follow-up ordering
 TIER_PRIORITY = {
@@ -145,50 +170,85 @@ def get_upcoming_actions(entry: dict) -> list[dict]:
     return upcoming
 
 
+def _escape_yaml_scalar(s: str) -> str:
+    """Wrap a string in double quotes, escaping any double quotes inside."""
+    return '"' + s.replace("\\", "\\\\").replace('"', '\\"') + '"'
+
+
+def _append_to_follow_up_list(content: str, item_yaml: str) -> str:
+    """Append a YAML block-sequence item to the follow_up field.
+
+    Handles three initial states:
+      - follow_up: []         → replaces with block list
+      - follow_up: null/~     → replaces with block list
+      - follow_up:            → appends item after the existing block
+    Falls back to appending a new follow_up block at EOF.
+    """
+    import re
+
+    indented = "  " + "\n  ".join(item_yaml.rstrip().split("\n"))
+
+    # Case 1: inline empty or null
+    m = re.search(r'^follow_up:\s*(?:\[\]|null|~)?\s*$', content, re.MULTILINE)
+    if m:
+        replacement = f"follow_up:\n{indented}"
+        return content[:m.start()] + replacement + content[m.end():]
+
+    # Case 2: block list — find end of follow_up block (next top-level key)
+    block_start_m = re.search(r'^follow_up:\s*$', content, re.MULTILINE)
+    if block_start_m:
+        pos = block_start_m.end()
+        rest = content[pos:]
+        next_top = re.search(r'^\S', rest, re.MULTILINE)
+        insert_pos = pos + (next_top.start() if next_top else len(rest))
+        return content[:insert_pos] + indented + "\n" + content[insert_pos:]
+
+    # Fallback: append new block at EOF
+    return content.rstrip() + f"\nfollow_up:\n{indented}\n"
+
+
 def log_followup(entry_id: str, channel: str, contact: str, note: str, followup_type: str = "dm"):
-    """Log a follow-up action to both the entry YAML and outreach log."""
-    # Find the entry file
+    """Log a follow-up action to both the entry YAML and outreach log.
+
+    Uses targeted raw-text mutation to preserve file formatting (key ordering,
+    comments, quoting style). Never calls yaml.dump on pipeline entry files.
+    """
+    from pipeline_lib import update_yaml_field
+
     filepath = PIPELINE_DIR_SUBMITTED / f"{entry_id}.yaml"
     if not filepath.exists():
         print(f"Entry not found: {entry_id}", file=sys.stderr)
         sys.exit(1)
 
-    with open(filepath) as f:
-        content = f.read()
+    content = filepath.read_text()
     data = yaml.safe_load(content)
 
-    # Add follow-up to entry
-    if "follow_up" not in data or data["follow_up"] is None:
-        data["follow_up"] = []
-
     today = date.today().isoformat()
-    followup_entry = {
-        "date": today,
-        "channel": channel,
-        "contact": contact,
-        "type": followup_type,
-        "note": note,
-        "response": "none",
-    }
-    data["follow_up"].append(followup_entry)
 
-    # Update conversion follow_up_count
+    # 1. Increment conversion.follow_up_count (targeted regex, nested=True)
     conversion = data.get("conversion", {})
     if isinstance(conversion, dict):
-        count = conversion.get("follow_up_count", 0) or 0
-        conversion["follow_up_count"] = count + 1
-        data["conversion"] = conversion
+        count = (conversion.get("follow_up_count", 0) or 0) + 1
+        try:
+            content = update_yaml_field(content, "follow_up_count", str(count), nested=True)
+        except ValueError:
+            pass  # field may not exist yet
 
-    # Write back
-    with open(filepath, "w") as f:
-        yaml.dump(data, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
+    # 2. Build new follow_up list item as indented YAML text
+    item_lines = (
+        f"- date: {_escape_yaml_scalar(today)}\n"
+        f"  channel: {channel}\n"
+        f"  contact: {_escape_yaml_scalar(contact)}\n"
+        f"  type: {followup_type}\n"
+        f"  note: {_escape_yaml_scalar(note)}\n"
+        f"  response: \"none\""
+    )
+    content = _append_to_follow_up_list(content, item_lines)
 
-    # Update last_touched
-    with open(filepath) as f:
-        raw = f.read()
-    raw = update_last_touched(raw)
-    with open(filepath, "w") as f:
-        f.write(raw)
+    # 3. Update last_touched
+    content = update_last_touched(content)
+
+    filepath.write_text(content)
 
     # Also log to outreach-log.yaml
     _append_outreach_log(entry_id, channel, contact, note, followup_type)
@@ -202,6 +262,8 @@ def log_followup(entry_id: str, channel: str, contact: str, note: str, followup_
 
 def _append_outreach_log(entry_id: str, channel: str, contact: str, note: str, followup_type: str):
     """Append an entry to the outreach log."""
+    if not OUTREACH_LOG.exists():
+        OUTREACH_LOG.write_text("entries: []\n")
     with open(OUTREACH_LOG) as f:
         log_data = yaml.safe_load(f) or {}
 
@@ -237,7 +299,6 @@ def init_follow_ups(dry_run: bool = True) -> int:
         if not filepath or not filepath.exists():
             continue
 
-        needs_update = False
         content = filepath.read_text()
         data = yaml.safe_load(content)
         if not isinstance(data, dict):
@@ -319,11 +380,14 @@ def show_today(entries: list[dict]):
         days = days_since_submission(entry)
 
         if due:
+            fit = entry.get("fit", {})
+            score = float(fit.get("score", 5.0)) if isinstance(fit, dict) else 5.0
             for action in due:
                 actions.append({
                     "entry_id": entry_id,
                     "org": org,
                     "tier": tier,
+                    "score": score,
                     "days": days,
                     **action,
                 })
@@ -340,13 +404,13 @@ def show_today(entries: list[dict]):
 
         if upcoming_all:
             upcoming_all.sort(key=lambda x: x["due_in"])
-            print(f"\nNext upcoming actions:")
+            print("\nNext upcoming actions:")
             for u in upcoming_all[:5]:
                 print(f"  {u['entry_id']:<50s} in {u['due_in']}d  {u['action']}")
         return
 
-    # Sort by tier (priority), then by overdue status
-    actions.sort(key=lambda x: (x["tier"], -x["day"]))
+    # Sort by tier (priority), then score descending, then by day descending
+    actions.sort(key=lambda x: (x["tier"], -x.get("score", 5.0), -x["day"]))
 
     print(f"Follow-up Actions Due — {today.isoformat()}")
     print(f"{'=' * 70}")
@@ -361,7 +425,7 @@ def show_today(entries: list[dict]):
 
 def show_all(entries: list[dict]):
     """Show all submitted entries with follow-up status."""
-    print(f"Follow-Up Status — All Submitted Entries")
+    print("Follow-Up Status — All Submitted Entries")
     print(f"{'=' * 80}")
 
     entries_sorted = sorted(entries, key=lambda e: (get_tier(e), -(days_since_submission(e) or 0)))
@@ -409,7 +473,7 @@ def show_all(entries: list[dict]):
 
 def show_schedule(entries: list[dict]):
     """Show upcoming follow-up schedule for next 21 days."""
-    print(f"Follow-Up Schedule — Next 21 Days")
+    print("Follow-Up Schedule — Next 21 Days")
     print(f"{'=' * 70}")
 
     today = date.today()
@@ -426,7 +490,7 @@ def show_schedule(entries: list[dict]):
 
             for step in PROTOCOL:
                 low, high = step["day_range"]
-                if low == days_since and step["type"] not in existing_types:
+                if low <= days_since <= high and step["type"] not in existing_types:
                     day_actions.append({
                         "entry_id": entry.get("id", "unknown"),
                         "action": step["action"],
@@ -455,7 +519,7 @@ def show_overdue(entries: list[dict]):
         print("No overdue follow-ups.")
         return
 
-    print(f"Overdue Follow-Ups")
+    print("Overdue Follow-Ups")
     print(f"{'=' * 70}")
     overdue.sort(key=lambda x: -x["day"])
     for o in overdue:
@@ -483,7 +547,7 @@ def main():
 
     if args.init:
         dry_run = not args.yes or args.dry_run
-        print(f"Initializing follow-up fields on submitted entries...")
+        print("Initializing follow-up fields on submitted entries...")
         count = init_follow_ups(dry_run=dry_run)
         print(f"\n{'Would update' if dry_run else 'Updated'} {count} entries")
         if dry_run and count:

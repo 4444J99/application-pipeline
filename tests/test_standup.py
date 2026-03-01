@@ -3,27 +3,24 @@
 import sys
 from datetime import date, timedelta
 from pathlib import Path
-from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from standup import (
+    AT_RISK_DAYS,
+    REPLENISH_THRESHOLD,
+    SECTIONS,
+    STAGNATION_DAYS,
+    section_deferred,
+    section_followup,
     section_health,
-    section_stale,
+    section_jobs,
+    section_opportunities,
     section_plan,
     section_readiness,
     section_replenish,
-    section_deferred,
-    section_followup,
-    section_jobs,
-    section_opportunities,
-    SECTIONS,
-    STAGNATION_DAYS,
-    URGENCY_DAYS,
-    AT_RISK_DAYS,
-    REPLENISH_THRESHOLD,
+    section_stale,
 )
-
 
 # --- Helpers ---
 
@@ -211,7 +208,7 @@ class TestSectionPlan:
                 score=9.0,
             ),
         ]
-        result = section_plan(entries, 3.0)
+        section_plan(entries, 3.0)
         captured = capsys.readouterr()
         assert "URGENT" in captured.out
 

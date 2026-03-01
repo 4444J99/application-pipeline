@@ -62,7 +62,7 @@ def build_pdf(chrome: str, html_path: Path, pdf_path: Path) -> bool:
             file_url,
         ]
         try:
-            result = subprocess.run(
+            subprocess.run(
                 cmd, capture_output=True, text=True, timeout=30
             )
             if pdf_path.exists() and pdf_path.stat().st_size > 0:
@@ -77,7 +77,7 @@ def build_pdf(chrome: str, html_path: Path, pdf_path: Path) -> bool:
         except FileNotFoundError:
             break
 
-    print(f"  ERROR: Chrome PDF generation failed", file=sys.stderr)
+    print("  ERROR: Chrome PDF generation failed", file=sys.stderr)
     return False
 
 

@@ -77,7 +77,6 @@ def test_active_has_no_research_after_archive():
     """
     active_entries = load_entries(dirs=[PIPELINE_DIR_ACTIVE])
     research_in_active = [e for e in active_entries if e.get("status") == "research"]
-    non_research_in_active = len(active_entries) - len(research_in_active)
 
     # If pool has entries, active should be mostly clean
     pool_entries = load_entries(dirs=[PIPELINE_DIR_RESEARCH_POOL])

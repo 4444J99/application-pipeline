@@ -20,8 +20,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pipeline_lib import (
     PIPELINE_DIR_ACTIVE,
     PIPELINE_DIR_RESEARCH_POOL,
-    load_entries,
     get_score,
+    load_entries,
 )
 
 

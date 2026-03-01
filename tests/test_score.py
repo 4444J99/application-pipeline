@@ -7,44 +7,42 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from score import (
+    CREDENTIALS,
+    HIGH_PRESTIGE,
+    JOB_QUALIFICATION_THRESHOLD,
+    PORTAL_SCORES,
+    POSITION_EXPECTED_ORGANS,
+    QUALIFICATION_THRESHOLD,
+    ROLE_FIT_TIERS,
+    STRATEGIC_BASE,
+    TRACK_POSITION_AFFINITY,
     WEIGHTS,
     WEIGHTS_JOB,
-    PORTAL_SCORES,
-    STRATEGIC_BASE,
-    HIGH_PRESTIGE,
-    QUALIFICATION_THRESHOLD,
-    JOB_QUALIFICATION_THRESHOLD,
-    ROLE_FIT_TIERS,
-    RUBRIC_DESCRIPTIONS,
-    TRACK_POSITION_AFFINITY,
-    POSITION_EXPECTED_ORGANS,
-    CREDENTIALS,
-    get_weights,
-    get_qualification_threshold,
-    score_deadline_feasibility,
-    score_financial_alignment,
-    score_portal_friction,
-    score_effort_to_value,
-    score_strategic_value,
-    compute_human_dimensions,
-    estimate_human_dimensions,
-    compute_dimensions,
-    compute_composite,
-    qualify,
-    explain_entry,
-    _rubric_desc,
-    _ma_position_profile_match,
-    _ma_track_position_affinity,
-    _ma_organ_position_coherence,
-    _ma_framing_specialization,
     _em_block_portal_coverage,
-    _em_slot_name_alignment,
     _em_evidence_depth,
     _em_materials_readiness,
+    _em_slot_name_alignment,
+    _ma_framing_specialization,
+    _ma_organ_position_coherence,
+    _ma_position_profile_match,
+    _ma_track_position_affinity,
+    _rubric_desc,
     _tr_credential_track_relevance,
-    _tr_track_experience,
-    _tr_position_depth,
     _tr_differentiators_coverage,
+    _tr_position_depth,
+    _tr_track_experience,
+    compute_composite,
+    compute_dimensions,
+    compute_human_dimensions,
+    explain_entry,
+    get_qualification_threshold,
+    get_weights,
+    qualify,
+    score_deadline_feasibility,
+    score_effort_to_value,
+    score_financial_alignment,
+    score_portal_friction,
+    score_strategic_value,
 )
 
 
@@ -1336,8 +1334,8 @@ def test_auto_sourced_jobs_still_use_tier_estimation():
 
 def test_run_auto_qualify_defaults_to_dry_run(capsys):
     """run_auto_qualify without --yes should default to dry-run (no file moves)."""
-    from score import run_auto_qualify
     from pipeline_lib import PIPELINE_DIR_RESEARCH_POOL
+    from score import run_auto_qualify
 
     if not PIPELINE_DIR_RESEARCH_POOL.exists():
         return  # Skip if no pool dir
@@ -1350,8 +1348,8 @@ def test_run_auto_qualify_defaults_to_dry_run(capsys):
 
 def test_run_auto_qualify_dry_run_no_file_moves(capsys):
     """run_auto_qualify(dry_run=True) should not move any files."""
+    from pipeline_lib import PIPELINE_DIR_ACTIVE, PIPELINE_DIR_RESEARCH_POOL
     from score import run_auto_qualify
-    from pipeline_lib import PIPELINE_DIR_RESEARCH_POOL, PIPELINE_DIR_ACTIVE
 
     if not PIPELINE_DIR_RESEARCH_POOL.exists():
         return  # Skip if no pool dir
@@ -1381,8 +1379,8 @@ def test_run_auto_qualify_min_score_filters(capsys):
 
 def test_run_auto_qualify_limit_caps_output(capsys):
     """--limit should cap the number of entries shown."""
-    from score import run_auto_qualify
     from pipeline_lib import PIPELINE_DIR_RESEARCH_POOL
+    from score import run_auto_qualify
 
     if not PIPELINE_DIR_RESEARCH_POOL.exists():
         return

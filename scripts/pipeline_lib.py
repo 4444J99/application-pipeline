@@ -5,11 +5,10 @@ get_deadline, and common constants that were previously duplicated across
 pipeline_status.py, standup.py, daily_batch.py, conversion_report.py, and score.py.
 """
 
-from datetime import date, datetime
-from pathlib import Path
-
 import json
 import re
+from datetime import date, datetime
+from pathlib import Path
 
 import yaml
 
@@ -33,6 +32,21 @@ SIGNALS_DIR = REPO_ROOT / "signals"
 SUBMISSIONS_DIR = REPO_ROOT / "pipeline" / "submissions"
 LEGACY_DIR = REPO_ROOT / "scripts" / "legacy-submission"
 MATERIALS_DIR = REPO_ROOT / "materials"
+
+
+def _detect_current_batch() -> str:
+    """Auto-detect the highest-numbered resume batch directory."""
+    resumes_dir = MATERIALS_DIR / "resumes"
+    if not resumes_dir.exists():
+        return "batch-03"
+    batches = sorted(
+        (p for p in resumes_dir.iterdir() if p.is_dir() and p.name.startswith("batch-")),
+        key=lambda p: p.name,
+    )
+    return batches[-1].name if batches else "batch-03"
+
+
+CURRENT_BATCH = _detect_current_batch()
 
 # Maps entry IDs to profile file IDs where naming conventions differ.
 PROFILE_ID_MAP = {
@@ -105,6 +119,7 @@ def update_yaml_field(
     new_value: str,
     *,
     nested: bool = False,
+    parent_key: str | None = None,
 ) -> str:
     """Replace a scalar YAML field's value in raw text with verification.
 
@@ -116,6 +131,9 @@ def update_yaml_field(
         field: Field name (e.g. "status", "score", "submitted").
         new_value: Replacement value string (caller handles quoting).
         nested: If True, field is expected to be indented under a parent key.
+        parent_key: If provided, scope the replacement to within the parent key's
+            block only — avoids ambiguous first-match when multiple blocks share
+            a field name (e.g. `date` under `deadline` vs `timeline`).
 
     Returns:
         Modified YAML text.
@@ -123,21 +141,55 @@ def update_yaml_field(
     Raises:
         ValueError: If the field is not found or the result is invalid YAML.
     """
-    if nested:
+    if parent_key is not None:
+        # Find the parent block, then scope the replacement within it.
+        parent_pattern = re.compile(
+            rf'^({re.escape(parent_key)}:\s*)$', re.MULTILINE
+        )
+        parent_match = parent_pattern.search(content)
+        if not parent_match:
+            raise ValueError(f"Parent key '{parent_key}' not found in YAML")
+        start = parent_match.end()
+        # Block ends at next top-level key (non-indented, non-blank line)
+        end_match = re.search(r'^\S', content[start:], re.MULTILINE)
+        block_end = start + end_match.start() if end_match else len(content)
+        block = content[start:block_end]
+
+        field_pattern = rf'^([ \t]+{re.escape(field)}:[ \t]+).*$'
+        if not re.search(field_pattern, block, re.MULTILINE):
+            raise ValueError(
+                f"Field '{field}' not found under parent '{parent_key}'"
+            )
+        new_block = re.sub(
+            field_pattern,
+            rf'\g<1>{new_value}',
+            block,
+            count=1,
+            flags=re.MULTILINE,
+        )
+        new_content = content[:start] + new_block + content[block_end:]
+    elif nested:
         pattern = rf'^([ \t]+{re.escape(field)}:[ \t]+).*$'
+        if not re.search(pattern, content, re.MULTILINE):
+            raise ValueError(f"Field '{field}' not found in YAML (nested={nested})")
+        new_content = re.sub(
+            pattern,
+            rf'\g<1>{new_value}',
+            content,
+            count=1,
+            flags=re.MULTILINE,
+        )
     else:
         pattern = rf'^({re.escape(field)}:[ \t]+).*$'
-
-    if not re.search(pattern, content, re.MULTILINE):
-        raise ValueError(f"Field '{field}' not found in YAML (nested={nested})")
-
-    new_content = re.sub(
-        pattern,
-        rf'\g<1>{new_value}',
-        content,
-        count=1,
-        flags=re.MULTILINE,
-    )
+        if not re.search(pattern, content, re.MULTILINE):
+            raise ValueError(f"Field '{field}' not found in YAML (nested={nested})")
+        new_content = re.sub(
+            pattern,
+            rf'\g<1>{new_value}',
+            content,
+            count=1,
+            flags=re.MULTILINE,
+        )
 
     # Verify the result is still valid YAML
     try:
@@ -176,6 +228,8 @@ def load_entries(
     Returns:
         List of parsed YAML dicts with _dir and _file metadata.
     """
+    import sys as _sys
+
     entries = []
     for pipeline_dir in (dirs or ALL_PIPELINE_DIRS):
         if not pipeline_dir.exists():
@@ -183,14 +237,20 @@ def load_entries(
         for filepath in sorted(pipeline_dir.glob("*.yaml")):
             if filepath.name.startswith("_"):
                 continue
-            with open(filepath) as f:
-                data = yaml.safe_load(f)
+            try:
+                with open(filepath) as f:
+                    data = yaml.safe_load(f)
+            except yaml.YAMLError as e:
+                print(f"[WARN] Skipping unparseable entry: {filepath} ({e})", file=_sys.stderr)
+                continue
             if isinstance(data, dict):
                 data["_dir"] = pipeline_dir.name
                 data["_file"] = filepath.name
                 if include_filepath:
                     data["_filepath"] = filepath
                 entries.append(data)
+            else:
+                print(f"[WARN] Skipping non-dict entry: {filepath}", file=_sys.stderr)
     return entries
 
 
@@ -453,8 +513,11 @@ def load_block_index() -> dict:
     Returns the full index dict with 'blocks' and 'tag_index' keys.
     Returns an empty dict if the index file doesn't exist.
     """
+    import sys as _sys
+
     index_path = BLOCKS_DIR / "_index.yaml"
     if not index_path.exists():
+        print("[WARN] blocks/_index.yaml not found — run build_block_index.py", file=_sys.stderr)
         return {}
     return yaml.safe_load(index_path.read_text()) or {}
 

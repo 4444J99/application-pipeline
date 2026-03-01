@@ -24,12 +24,13 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import yaml
-
 from pipeline_lib import (
-    MATERIALS_DIR, REPO_ROOT, VARIANTS_DIR,
-    load_entries, load_entry_by_id,
-    strip_markdown,
+    MATERIALS_DIR,
     PIPELINE_DIR_ACTIVE,
+    VARIANTS_DIR,
+    load_entries,
+    load_entry_by_id,
+    strip_markdown,
 )
 
 CONFIG_PATH = Path(__file__).resolve().parent / ".submit-config.yaml"
@@ -158,8 +159,8 @@ def fetch_job_data(board_token: str, job_id: str) -> dict | None:
     Returns the full job dict (title, content, location, departments, questions, etc.)
     or None on failure.
     """
-    import urllib.request
     import urllib.error
+    import urllib.request
 
     url = f"https://boards-api.greenhouse.io/v1/boards/{board_token}/jobs/{job_id}?questions=true"
     try:
@@ -359,7 +360,7 @@ def generate_answer_template(
     lines = [
         f"# Generated for: {entry_name}",
         f"# Job: {board_token}/{job_id}",
-        f"# Edit answers below, then run with --check-answers to validate",
+        "# Edit answers below, then run with --check-answers to validate",
         "",
     ]
 
@@ -471,7 +472,6 @@ def init_answers_for_entry(
 def check_answers_for_entry(entry: dict, config: dict) -> bool:
     """Validate answers for a single entry. Returns True if all required answered."""
     entry_id = entry.get("id", "?")
-    name = entry.get("name", entry_id)
 
     portal = entry.get("target", {}).get("portal", "")
     if portal != "greenhouse":
@@ -572,7 +572,7 @@ def preview_submission(
     print(f"  Job ID:        {job_id}")
     print(f"  API endpoint:  POST https://boards-api.greenhouse.io/v1/boards/{board_token}/jobs/{job_id}")
     print()
-    print(f"  APPLICANT INFO:")
+    print("  APPLICANT INFO:")
     print(f"    Name:     {config['first_name']} {config['last_name']}")
     print(f"    Email:    {config['email']}")
     phone = config.get("phone", "")
@@ -598,7 +598,7 @@ def preview_submission(
     if resume_path:
         print(f"  RESUME: {resume_path.name} ({resume_path.stat().st_size:,} bytes)")
     else:
-        print(f"  RESUME: NOT FOUND")
+        print("  RESUME: NOT FOUND")
     print()
 
     if questions:
@@ -654,7 +654,7 @@ def preview_submission(
         print("  QUESTIONS: None fetched (API may not have returned them)")
         print()
 
-    print(f"  STATUS: DRY RUN — use --submit to POST")
+    print("  STATUS: DRY RUN — use --submit to POST")
 
 
 def submit_to_greenhouse(
@@ -670,8 +670,8 @@ def submit_to_greenhouse(
 
     Returns True on success, False on failure.
     """
-    import urllib.request
     import urllib.error
+    import urllib.request
     import uuid
 
     url = f"https://boards-api.greenhouse.io/v1/boards/{board_token}/jobs/{job_id}"
@@ -712,7 +712,7 @@ def submit_to_greenhouse(
 
     # Assemble the body
     text_body = "".join(body_parts).encode("utf-8")
-    end_boundary = f"\r\n--{boundary}--\r\n".encode("utf-8")
+    end_boundary = f"\r\n--{boundary}--\r\n".encode()
     full_body = text_body + resume_data + end_boundary
 
     headers = {
@@ -733,7 +733,7 @@ def submit_to_greenhouse(
             response_data = resp.read().decode()
         print(f"  Response: {status}")
         if status in (200, 201):
-            print(f"  SUCCESS: Application submitted to Greenhouse")
+            print("  SUCCESS: Application submitted to Greenhouse")
             return True
         else:
             print(f"  Unexpected status: {status}")

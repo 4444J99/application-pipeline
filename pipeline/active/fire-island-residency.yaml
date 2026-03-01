@@ -1,7 +1,7 @@
 id: fire-island-residency
 name: Fire Island Artist Residency
 track: residency
-status: drafting
+status: staged
 outcome: null
 target:
   organization: Fire Island Artist Residency
@@ -52,7 +52,7 @@ submission:
 timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
-  materials_ready: null
+  materials_ready: '2026-03-01'
   submitted: null
   acknowledged: null
   interview: null
@@ -72,4 +72,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Stipend plus housing provided.
-last_touched: "2026-02-27"
+last_touched: "2026-03-01"

@@ -14,14 +14,15 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
+from advance import advance_entry, can_advance
+from enrich import detect_gaps, enrich_materials, select_resume
 from pipeline_lib import (
-    update_yaml_field, ensure_yaml_field, update_last_touched,
     VALID_TRANSITIONS,
+    ensure_yaml_field,
+    update_last_touched,
+    update_yaml_field,
 )
-from advance import can_advance, advance_entry
-from score import compute_dimensions, compute_composite
-from enrich import enrich_materials, select_resume, detect_gaps
-
+from score import compute_composite, compute_dimensions
 
 # --- Helpers ---
 

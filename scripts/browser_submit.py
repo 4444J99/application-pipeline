@@ -19,31 +19,40 @@ import sys
 import time
 from pathlib import Path
 
-import yaml
-
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from pipeline_lib import (
-    MATERIALS_DIR, PIPELINE_DIR_ACTIVE, VARIANTS_DIR,
-    load_entries, load_entry_by_id,
-    strip_markdown,
+from ashby_submit import (
+    fetch_form_schema,
+    get_custom_fields,
+    parse_ashby_url,
+)
+from ashby_submit import (
+    load_answers as ashby_load_answers,
+)
+from ashby_submit import (
+    resolve_cover_letter as ashby_resolve_cover_letter,
+)
+from ashby_submit import (
+    resolve_resume as ashby_resolve_resume,
+)
+from greenhouse_submit import (
+    load_answers as gh_load_answers,
+)
+from greenhouse_submit import (
+    load_config,
 )
 
 # Reuse URL parsers and material resolvers from existing submit modules
 from greenhouse_submit import (
-    parse_greenhouse_url,
     resolve_cover_letter as gh_resolve_cover_letter,
-    resolve_resume as gh_resolve_resume,
-    load_answers as gh_load_answers,
-    load_config,
 )
-from ashby_submit import (
-    parse_ashby_url,
-    resolve_cover_letter as ashby_resolve_cover_letter,
-    resolve_resume as ashby_resolve_resume,
-    load_answers as ashby_load_answers,
-    fetch_form_schema,
-    get_custom_fields,
+from greenhouse_submit import (
+    resolve_resume as gh_resolve_resume,
+)
+from pipeline_lib import (
+    PIPELINE_DIR_ACTIVE,
+    load_entries,
+    load_entry_by_id,
 )
 
 # Import record_submission from submit.py
@@ -312,7 +321,7 @@ def ashby_fill(page, entry, config, answers):
             print(f"  WARNING: Resume upload error: {e}")
         if resume_uploaded:
             page.wait_for_timeout(1500)
-            print(f"  Resume uploaded")
+            print("  Resume uploaded")
         else:
             print("  WARNING: No file input found for resume upload")
     else:
@@ -467,7 +476,7 @@ def workable_fill(page, entry, config):
     page.goto(app_url, wait_until="domcontentloaded")
     page.wait_for_timeout(2000)
     print(f"  Workable portal opened for {entry_id}")
-    print(f"  NOTE: Workable forms vary — fill manually in the browser")
+    print("  NOTE: Workable forms vary — fill manually in the browser")
 
 
 # ---------------------------------------------------------------------------
@@ -484,7 +493,7 @@ def manual_fallback(page, entry):
     page.goto(app_url, wait_until="domcontentloaded")
     page.wait_for_timeout(2000)
     print(f"  Custom portal opened for {entry_id}")
-    print(f"  NOTE: Fill and submit manually in the browser")
+    print("  NOTE: Fill and submit manually in the browser")
 
 
 # ---------------------------------------------------------------------------
@@ -546,7 +555,7 @@ def init_ashby_answers_browser(page, entry, config):
     lines = [
         f"# Generated for: {name}",
         f"# Posting: {company}/{posting_id}",
-        f"# Edit answers below, then run with --check-answers to validate",
+        "# Edit answers below, then run with --check-answers to validate",
         "",
     ]
 
@@ -713,8 +722,8 @@ def wait_for_review(page, entry_id):
     """Pause execution and wait for user to review the form in the browser."""
     print()
     print(f"  >>> REVIEW: {entry_id}")
-    print(f"  >>> The form is filled. Review it in the browser.")
-    print(f"  >>> Press Enter here to submit, or type 'skip' to skip this entry.")
+    print("  >>> The form is filled. Review it in the browser.")
+    print("  >>> Press Enter here to submit, or type 'skip' to skip this entry.")
     print()
     try:
         response = input("  >>> ").strip().lower()
@@ -740,7 +749,7 @@ def click_submit(page, portal):
     for sel in submit_selectors:
         btn = page.locator(sel)
         if btn.count() > 0 and btn.first.is_visible():
-            print(f"  Clicking submit button...")
+            print("  Clicking submit button...")
             btn.first.click()
             return True
     print("  WARNING: Could not find submit button — submit manually in the browser")
@@ -809,7 +818,7 @@ def process_entry_browser(page, entry, config, auto_submit=False):
             manual_fallback(page, entry)
     except Exception as e:
         print(f"  ERROR filling form: {e}")
-        print(f"  The browser is still open — fill manually if needed.")
+        print("  The browser is still open — fill manually if needed.")
         # Don't return failed yet, let user still review
 
     # Review step
@@ -829,7 +838,7 @@ def process_entry_browser(page, entry, config, auto_submit=False):
         if confirmed:
             print(f"  Submission confirmed for {entry_id}")
         else:
-            print(f"  No confirmation detected — check the browser to verify")
+            print("  No confirmation detected — check the browser to verify")
 
     # Record submission
     if filepath and Path(filepath).exists():
@@ -840,7 +849,7 @@ def process_entry_browser(page, entry, config, auto_submit=False):
             print(f"  WARNING: Could not record submission: {e}")
             print(f"  Run manually: python scripts/submit.py --target {entry_id} --record")
     else:
-        print(f"  WARNING: No filepath for entry — record manually")
+        print("  WARNING: No filepath for entry — record manually")
         print(f"  Run: python scripts/submit.py --target {entry_id} --record")
 
     return "submitted"

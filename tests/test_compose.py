@@ -6,7 +6,7 @@ from pathlib import Path
 # Add scripts to path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from compose import compose, find_entry, count_words
+from compose import compose, count_words, find_entry
 
 
 def test_compose_with_blocks():

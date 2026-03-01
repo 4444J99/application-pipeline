@@ -22,12 +22,10 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
-    REPO_ROOT,
+    PIPELINE_DIR_ACTIVE,
     VARIANTS_DIR,
     load_entries,
     load_entry_by_id,
-    strip_markdown,
-    PIPELINE_DIR_ACTIVE,
 )
 
 CONFIG_PATH = Path(__file__).resolve().parent / ".submit-config.yaml"
@@ -313,7 +311,7 @@ def integrate_answers(entry_id: str, output_text: str, portal: str) -> bool:
         # Handle multiline answers
         if "\n" in answer:
             # Replace the FILL IN value with a block scalar
-            yaml_val = f"|\n" + "\n".join(f"  {line}" for line in answer.split("\n"))
+            yaml_val = "|\n" + "\n".join(f"  {line}" for line in answer.split("\n"))
             raw_text = re.sub(
                 rf'^({re.escape(key)}:\s*).*$',
                 rf'\g<1>{yaml_val}',
@@ -414,10 +412,10 @@ def main():
     if auto_complete:
         print(f"{auto_complete} entries fully answered (no prompts needed).")
     if prompts_generated:
-        print(f"\nNext steps:")
-        print(f"  1. Run each prompt through Claude to get answers")
-        print(f"  2. Save output to .alchemize-work/<entry-id>/answers-output.md")
-        print(f"  3. Run: python scripts/answer_questions.py --batch --integrate")
+        print("\nNext steps:")
+        print("  1. Run each prompt through Claude to get answers")
+        print("  2. Save output to .alchemize-work/<entry-id>/answers-output.md")
+        print("  3. Run: python scripts/answer_questions.py --batch --integrate")
 
 
 if __name__ == "__main__":

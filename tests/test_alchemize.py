@@ -12,19 +12,16 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from alchemize import (
-    _TextExtractor,
     _extract_research_section,
+    _TextExtractor,
     extract_text_from_html,
+    parse_output,
     phase_intake_general,
     phase_research,
-    select_identity_position,
     select_evidence_blocks,
+    select_identity_position,
     select_work_samples,
-    parse_output,
-    METHODOLOGY_KEYWORDS,
-    PROJECT_KEYWORDS,
 )
-
 
 # ---------------------------------------------------------------------------
 # extract_text_from_html

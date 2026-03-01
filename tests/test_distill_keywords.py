@@ -6,11 +6,10 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from distill_keywords import (
-    normalize_text,
-    extract_keywords,
     DOMAIN_STOPWORDS,
+    extract_keywords,
+    normalize_text,
 )
-
 
 # --- normalize_text ---
 

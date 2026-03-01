@@ -1,7 +1,7 @@
 id: rauschenberg-cycle-36
 name: Rauschenberg Cycle 36
 track: emergency
-status: drafting
+status: staged
 outcome: null
 target:
   organization: Robert Rauschenberg Foundation
@@ -47,7 +47,7 @@ submission:
 timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
-  materials_ready: null
+  materials_ready: '2026-03-01'
   submitted: null
   acknowledged: null
   interview: null
@@ -65,4 +65,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Application window Apr 14 - May 12 2026.
-last_touched: "2026-02-27"
+last_touched: "2026-03-01"

@@ -12,6 +12,7 @@ Usage:
 """
 
 import argparse
+import json
 import shutil
 import sys
 from datetime import date
@@ -32,22 +33,35 @@ from pipeline_lib import (
     update_yaml_field,
 )
 
-STALE_DAYS = 14
-LIKELY_GHOSTED_DAYS = 30
+
+def _load_outcome_thresholds() -> tuple[int, int, dict]:
+    """Load stale/ghosted thresholds and response windows from market intelligence JSON."""
+    intel_file = Path(__file__).resolve().parent.parent / "strategy" / "market-intelligence-2026.json"
+    default_windows = {
+        "greenhouse": (7, 21), "lever": (7, 21), "ashby": (7, 21), "workable": (7, 21),
+        "submittable": (14, 60), "slideroom": (30, 90), "direct": (7, 30),
+    }
+    if not intel_file.exists():
+        return 14, 30, default_windows
+    try:
+        with open(intel_file) as f:
+            intel = json.load(f)
+        t = intel.get("stale_thresholds_days", {})
+        stale = t.get("response_overdue_job", 14)
+        ghosted = t.get("response_ghosted_job", 30)
+        windows_raw = intel.get("typical_response_windows", {})
+        windows = {k: tuple(v) for k, v in windows_raw.items() if isinstance(v, list) and len(v) == 2}
+        if not windows:
+            windows = default_windows
+        return stale, ghosted, windows
+    except Exception:
+        return 14, 30, default_windows
+
+
+STALE_DAYS, LIKELY_GHOSTED_DAYS, TYPICAL_WINDOWS = _load_outcome_thresholds()
 
 VALID_OUTCOMES = {"accepted", "rejected", "withdrawn", "expired", "acknowledged"}
 VALID_STAGES = {"resume_screen", "phone_screen", "technical", "onsite", "offer", "referral_screen"}
-
-# Typical response windows by portal type (days)
-TYPICAL_WINDOWS = {
-    "greenhouse": (7, 21),
-    "lever": (7, 21),
-    "ashby": (7, 21),
-    "workable": (7, 21),
-    "submittable": (14, 60),
-    "slideroom": (30, 90),
-    "direct": (7, 30),
-}
 
 
 def get_submitted_entries() -> list[dict]:

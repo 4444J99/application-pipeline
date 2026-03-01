@@ -17,16 +17,17 @@ Usage:
 
 import argparse
 import re
-import sys
-from datetime import date
 
 from pipeline_lib import (
-    load_entries, load_entry_by_id, load_profile,
-    get_effort, ACTIONABLE_STATUSES,
-    MATERIALS_DIR, VARIANTS_DIR,
+    CURRENT_BATCH,
+    MATERIALS_DIR,
+    get_effort,
+    load_entries,
+    load_profile,
+)
+from pipeline_lib import (
     update_last_touched as _update_last_touched_content,
 )
-
 
 # --- Constants ---
 
@@ -42,8 +43,6 @@ RESUME_BY_IDENTITY = {
     "community-practitioner": "resumes/base/community-practitioner-resume.pdf",
     "educator": "resumes/base/educator-resume.pdf",
 }
-
-CURRENT_BATCH = "batch-03"
 
 RESUME_TRACKS = {"job", "fellowship", "grant", "residency", "prize", "program"}
 

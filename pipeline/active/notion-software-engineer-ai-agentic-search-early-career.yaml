@@ -1,7 +1,7 @@
 id: notion-software-engineer-ai-agentic-search-early-career
 name: Notion Software Engineer, AI Agentic Search, Early Career
 track: job
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Notion
@@ -45,7 +45,6 @@ submission:
     cover_letter: cover-letters/notion-software-engineer-ai-agentic-search-early-career-alchemized
   materials_attached:
   - resumes/batch-03/notion-software-engineer-ai-agentic-search-early-career/notion-software-engineer-ai-agentic-search-early-career-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'
@@ -57,4 +56,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-27"
+last_touched: "2026-03-01"

@@ -1,0 +1,421 @@
+{
+  "meta": {
+    "version": "2026-03-01",
+    "sources_count": 112,
+    "last_updated": "2026-03-01",
+    "next_review": "2026-06-01",
+    "note": "All numeric parameters are research-backed. See market-research-corpus.md for citations."
+  },
+  "market_conditions": {
+    "layoffs_ytd_2026": 51330,
+    "layoffs_ytd_2026_as_of": "2026-03-01",
+    "layoffs_daily_rate_2026": 856,
+    "layoffs_total_2025": 245953,
+    "layoffs_events_2025": 783,
+    "ai_layoff_share_2025": 0.285,
+    "tech_employment_vs_prepandemic": 0.032,
+    "swe_hiring_yoy_growth": 0.081,
+    "ai_job_postings_growth_2024_2025": 1.17,
+    "ai_ml_share_of_tech_jobs_2023": 0.10,
+    "ai_ml_share_of_tech_jobs_2025": 0.50,
+    "entry_level_hiring_rate_decline": -0.73,
+    "entry_level_posting_growth_since_oct_2023": 0.47,
+    "hiring_managers_expect_more_layoffs_2026": 0.55,
+    "cold_app_viability": "low",
+    "ai_content_rejection_rate_generic": 0.62,
+    "ai_content_rejection_rate_robotic": 0.80,
+    "ai_detection_explicit_rejection_rate": 0.196,
+    "arts_contributed_revenue_change_2023_2024": -0.30,
+    "arts_orgs_ran_deficit_2024": 0.44,
+    "relationship_runway_days": {"ai_labs": 180, "creative_grants": 365},
+    "note": "Sources: layoffs.fyi, TrueUp, Computerworld 2026; CompTIA; Pragmatic Engineer 2025; Resume-Now Survey 2025; GIA/DataArts 2025"
+  },
+  "track_benchmarks": {
+    "job": {
+      "cold_response_rate": 0.08,
+      "cold_response_rate_range": [0.02, 0.15],
+      "median_response_days": 14,
+      "median_response_days_actual": 6.7,
+      "interview_rate_from_response": 0.33,
+      "offer_rate_from_interview": 0.33,
+      "full_funnel_cold": 0.01,
+      "full_funnel_with_followup": 0.05,
+      "tailored_application_interview_rate": 0.0575,
+      "generic_application_interview_rate": 0.0268,
+      "conversion_timeline_weeks": [4, 8],
+      "note": "Huntr Q2 2025 analysis of 461,000 applications; Careery.pro 2026 response timing research"
+    },
+    "grant": {
+      "acceptance_rate": 0.03,
+      "acceptance_rate_range": [0.02, 0.05],
+      "median_response_days": 90,
+      "conversion_timeline_weeks": [12, 24],
+      "note": "Creative Capital historical ~2-3%; NEA varies by program"
+    },
+    "residency": {
+      "acceptance_rate": 0.05,
+      "acceptance_rate_range": [0.03, 0.10],
+      "median_response_days": 60,
+      "conversion_timeline_weeks": [8, 16],
+      "note": "Estimated from program capacities; Headlands ~50 per year from large pool"
+    },
+    "fellowship": {
+      "acceptance_rate": 0.04,
+      "acceptance_rate_range": [0.02, 0.08],
+      "median_response_days": 90,
+      "conversion_timeline_weeks": [12, 24],
+      "note": "Mozilla: up to 10/cycle; Whiting: up to 10/cycle"
+    },
+    "prize": {
+      "acceptance_rate": 0.02,
+      "acceptance_rate_range": [0.005, 0.05],
+      "median_response_days": 120,
+      "conversion_timeline_weeks": [16, 32],
+      "note": "Prix Ars Electronica 2025: 3,987 submissions; Golden Nicas: ~4-6 per category. S+T+ARTS: 2 grand prizes"
+    },
+    "writing": {
+      "acceptance_rate": 0.15,
+      "acceptance_rate_range": [0.05, 0.25],
+      "median_response_days": 45,
+      "conversion_timeline_weeks": [6, 12],
+      "note": "Literary journal/op-ed acceptance rates; varies widely by prestige"
+    },
+    "emergency": {
+      "acceptance_rate": 0.20,
+      "acceptance_rate_range": [0.15, 0.35],
+      "median_response_days": 30,
+      "conversion_timeline_weeks": [4, 8],
+      "note": "Rauschenberg Medical Emergency Grants: ~$150K/cycle distributed; designed for high throughput"
+    },
+    "consulting": {
+      "cold_response_rate": 0.10,
+      "median_response_days": 7,
+      "conversion_timeline_weeks": [1, 4],
+      "note": "B2B cold outreach; warm intro multiplier applies"
+    }
+  },
+  "company_tiers": {
+    "tier-1": {
+      "names": ["anthropic", "openai", "google deepmind", "meta ai"],
+      "expected_response_days": [14, 60],
+      "cold_pass_rate": 0.02,
+      "relationship_multiplier": 8.0,
+      "required_runway_days": 180,
+      "note": "Anthropic avg hiring 19 days; DevEx role 60 days. Every documented success in 2024-2025 involved referral or unconventional path."
+    },
+    "tier-2": {
+      "names": ["cohere", "perplexity", "mistral", "figma", "notion", "cursor", "replit", "elevenlabs", "runway"],
+      "expected_response_days": [7, 21],
+      "cold_pass_rate": 0.05,
+      "relationship_multiplier": 3.0,
+      "required_runway_days": 60
+    },
+    "tier-3": {
+      "names": ["elastic", "mongodb", "cloudflare", "stripe", "together-ai", "modal", "replicate", "grafana-labs"],
+      "expected_response_days": [5, 14],
+      "cold_pass_rate": 0.08,
+      "relationship_multiplier": 2.0,
+      "required_runway_days": 0
+    }
+  },
+  "channel_multipliers": {
+    "referral": {
+      "response_rate_multiplier": 8.0,
+      "time_to_hire_days": 29,
+      "source": "LinkedIn Economic Graph 2025; referred candidates 4-5x more likely to be hired; 29 day avg vs 44 for general"
+    },
+    "direct": {
+      "response_rate_multiplier": 1.0,
+      "response_rate_range": [0.08, 0.12],
+      "source": "JobPilotApp 2025 data study"
+    },
+    "linkedin_easy_apply": {
+      "response_rate_multiplier": 0.4,
+      "response_rate_range": [0.02, 0.04],
+      "avg_applicants_per_posting": 834,
+      "human_review_rate": 0.03,
+      "note": "Avoid as primary channel. Easy Apply: 834 avg applications vs 295 for direct. 3% receive human review.",
+      "source": "LinkedHelper 2025; Medium/@Resumely-AI 2025"
+    },
+    "indeed": {
+      "response_rate_multiplier": 2.5,
+      "response_rate_range": [0.20, 0.25],
+      "source": "Upplai.com 2026 response rate data"
+    },
+    "company_career_page": {
+      "response_rate_multiplier": 1.2,
+      "response_rate_range": [0.08, 0.12],
+      "source": "JobPilotApp 2025 Easy Apply vs direct study"
+    }
+  },
+  "follow_up_protocol": {
+    "connect_window_days": [1, 3],
+    "first_dm_days": [7, 10],
+    "second_dm_days": [14, 21],
+    "max_follow_ups": 2,
+    "follow_up_offer_lift": 0.68,
+    "hiring_managers_who_expect_followup": 0.80,
+    "candidates_who_actually_followup": 0.24,
+    "best_days_of_week": ["Tuesday", "Wednesday", "Thursday"],
+    "note": "Candidates who follow up get 68% more offers. 80% of hiring managers expect follow-ups but only 24% send them. Days 7-10 first DM adds 15-25% callback lift.",
+    "source": "ResumeGenius 2026; Zety follow-up guide; Indeed career advice"
+  },
+  "volume_benchmarks": {
+    "daily_target_tailored": 3,
+    "daily_max_tailored": 5,
+    "weekly_max": 20,
+    "sweet_spot_total_min": 21,
+    "sweet_spot_total_max": 80,
+    "sweet_spot_offer_rate": 0.3089,
+    "high_volume_offer_rate": 0.2036,
+    "generic_volume_conversion": 0.02,
+    "tailored_volume_conversion": 0.25,
+    "tailored_interview_rate": 0.0575,
+    "generic_interview_rate": 0.0268,
+    "tailored_vs_generic_response_lift": 0.78,
+    "cover_letter_callback_lift": 0.53,
+    "note": "Huntr Q2 2025 (461K applications): tailored 5.75% vs generic 2.68% interview rate. Wellfound: 78% higher response with tailored. ResumeGenius: 53% higher callback with tailored cover letter. Sweet spot 21-80 apps.",
+    "source": "Huntr Q2 2025 Job Search Trends Report; Wellfound study; ResumeGenius; ResuTrack 2026"
+  },
+  "salary_benchmarks": {
+    "platform_infra_eng": {
+      "min": 163660,
+      "max": 249170,
+      "median": 200612,
+      "p90": 301179,
+      "currency": "USD",
+      "unit": "TC",
+      "source": "Glassdoor 2026; Infrastructure Platform Engineer"
+    },
+    "ai_lab_tier1": {
+      "min": 400000,
+      "max": 759000,
+      "median": 570000,
+      "currency": "USD",
+      "unit": "TC",
+      "note": "Anthropic SWE: $550K-$759K; OpenAI SWE: $255K-$590K. Research roles lower: $315K-$560K",
+      "source": "Levels.fyi 2026; Glassdoor Anthropic 2026"
+    },
+    "developer_relations": {
+      "min": 120000,
+      "max": 200000,
+      "median": 175000,
+      "currency": "USD",
+      "unit": "TC",
+      "note": "2023 DevRel compensation survey median $175K TC; base salary avg $85K (PayScale 2025)",
+      "source": "Common Room 2023 DevRel Compensation & Culture Report; PayScale 2026"
+    },
+    "technical_writer": {
+      "min": 100000,
+      "max": 160000,
+      "currency": "USD",
+      "unit": "TC",
+      "source": "Robert Half 2026 Salary Guide; Motion Recruitment 2026"
+    },
+    "creative_capital_grant": {
+      "min": 20000,
+      "max": 50000,
+      "currency": "USD",
+      "unit": "grant",
+      "note": "Up to $50K unrestricted. $2.9M to 109 artists in 2026 cycle.",
+      "source": "Creative Capital website 2026"
+    },
+    "lacma_art_tech": {
+      "min": 25000,
+      "max": 50000,
+      "currency": "USD",
+      "unit": "grant/project",
+      "note": "Up to $50K per project; 3-5 projects selected",
+      "source": "LACMA Art+Technology Lab 2026 RFP"
+    },
+    "mozilla_fellowship": {
+      "min": 75000,
+      "max": 100000,
+      "currency": "USD",
+      "unit": "stipend",
+      "note": "Track I: $75K stipend + $25K project = $100K total. Track II: $100K stipend + $25K = $125K total. Up to 10 fellows.",
+      "source": "Mozilla Foundation Fellowship page 2026"
+    },
+    "whiting_nonfiction": {
+      "min": 40000,
+      "max": 40000,
+      "currency": "USD",
+      "unit": "grant",
+      "note": "Up to 10 writers per cycle at $40K each",
+      "source": "Whiting Foundation website; Literary Hub 2024 announcement"
+    },
+    "starts_prize": {
+      "min": 20000,
+      "max": 20000,
+      "currency": "EUR",
+      "unit": "prize",
+      "note": "Two Grand Prizes at €20K each (€40K total)",
+      "source": "S+T+ARTS Prize 2026 Open Call"
+    },
+    "rauschenberg_award": {
+      "min": 45000,
+      "max": 45000,
+      "currency": "USD",
+      "unit": "award",
+      "source": "Foundation for Contemporary Arts; Robert Rauschenberg Award"
+    }
+  },
+  "portal_friction_scores": {
+    "email": 9,
+    "custom": 6,
+    "web": 6,
+    "submittable": 5,
+    "greenhouse": 5,
+    "lever": 5,
+    "ashby": 5,
+    "workable": 5,
+    "slideroom": 4,
+    "note": "Scale 1-10; higher = lower friction for applicant. Greenhouse/Lever/Ashby are feature-equivalent; Ashby adds advanced analytics and is cheaper for <500-person companies.",
+    "source": "SpotSaaS 2026 ATS comparison; Index.dev ATS guide 2026"
+  },
+  "skills_signals": {
+    "hot_2026": [
+      "go",
+      "kubernetes",
+      "terraform",
+      "platform-engineering",
+      "ai-orchestration",
+      "mcp",
+      "agentic-workflows",
+      "typescript",
+      "rust"
+    ],
+    "moderate_2026": [
+      "python",
+      "fastapi",
+      "postgresql",
+      "ci-cd",
+      "docker",
+      "llm-api",
+      "devops",
+      "observability",
+      "opentelemetry"
+    ],
+    "cooling_2026": [
+      "react",
+      "node",
+      "generic-swe"
+    ],
+    "go_job_posting_growth": 0.41,
+    "kubernetes_rank": "most in-demand DevOps/SRE skill worldwide",
+    "mcp_adoption": "industry-standard 2025-2026; as common as running web servers",
+    "agentic_ai_market_share_2025": "biggest development story of 2025",
+    "tech_recruiters_who_review_github": 0.87,
+    "portfolio_signal_weight": 0.65,
+    "github_public_signal_weight": 0.45,
+    "creative_fields_portfolio_resume_link_rate": 0.57,
+    "note": "87% of tech recruiters review GitHub during hiring. Go: +41% job posting growth. Platform engineering = DevOps scaled into product discipline. MCP is now standard.",
+    "source": "The New Stack 2026; La Fosse Academy 2026; HiringHello 2026; DEV Community MCP predictions 2026; CandorCo GitHub portfolio guide"
+  },
+  "grant_calendar": {
+    "creative_capital_2027": {
+      "opens": "2026-03-02",
+      "closes": "2026-04-02",
+      "closes_time": "15:00 ET",
+      "historical_acceptance": 0.02,
+      "award_max": 50000,
+      "award_recipients_2026": 109,
+      "total_awarded_2026": 2900000,
+      "source": "Creative Capital website March 2026"
+    },
+    "lacma_art_tech_2026": {
+      "opens": "2026-02-01",
+      "closes": "2026-04-22",
+      "notification": "2026-07-01",
+      "award_max": 50000,
+      "projects_selected": "3-5",
+      "partners": ["Hyundai Motor", "Snap Inc.", "Anthropic"],
+      "source": "LACMA 2026 Art+Technology Lab RFP"
+    },
+    "prix_ars_electronica_2026": {
+      "closes": "2026-03-04",
+      "award_note": "Golden Nica; small number per category",
+      "submissions_2025": 3987,
+      "categories": 4,
+      "source": "Ars Electronica 2025 press release"
+    },
+    "starts_prize_2026": {
+      "opens": "2026-01-07",
+      "closes": "2026-03-04",
+      "jury": "2026-04-16 to 2026-04-19",
+      "notification": "2026-05-15",
+      "award_total_eur": 40000,
+      "grand_prizes": 2,
+      "source": "S+T+ARTS Prize 2026 Open Call"
+    },
+    "mozilla_fellowship_2026": {
+      "nominations_closed": "2026-01-30",
+      "announcement": "2026-06-01",
+      "fellows_count": 10,
+      "track_1_total": 100000,
+      "track_2_total": 125000,
+      "status": "nominations-closed",
+      "source": "Mozilla Foundation Fellowship page 2026"
+    },
+    "whiting_nonfiction": {
+      "closes": "tba-fall-2026",
+      "award": 40000,
+      "recipients": 10,
+      "status": "monitor",
+      "source": "Whiting Foundation website"
+    },
+    "nea_grants_for_arts_fy2027": {
+      "deadline_1": "2026-02-12",
+      "deadline_2": "2026-07-09",
+      "award_range": [10000, 100000],
+      "match_required": true,
+      "eligible": "nonprofits and government agencies only",
+      "source": "NEA website"
+    },
+    "rauschenberg_medical_emergency": {
+      "cadence": "rolling",
+      "award_max": 5000,
+      "total_pool_per_cycle": 150000,
+      "note": "Medical/dental/mental health emergencies for visual/film/digital/choreography artists"
+    }
+  },
+  "stale_thresholds_days": {
+    "entry_stale": 7,
+    "entry_stagnant": 14,
+    "response_overdue_job": 21,
+    "response_overdue_grant": 90,
+    "response_ghosted_job": 42,
+    "intelligence_staleness": 90,
+    "note": "entry_stale = no review in 7d (standup STAGNANT alert). response_overdue triggers check_outcomes.py alerts. response_ghosted_job = 3x median_response_days (14d) per Careery.pro data."
+  },
+  "ats_analysis": {
+    "companies_using_ai_screening": 0.83,
+    "ats_auto_rejection_myth": "ATS rarely auto-rejects; recruiter keyword search + volume creates effective rejection via non-visibility",
+    "recruiters_who_say_ats_doesnt_auto_reject": 0.92,
+    "avg_applications_per_linkedin_easy_apply": 834,
+    "avg_applications_per_direct": 295,
+    "recruiter_time_per_easy_apply_seconds": 8.4,
+    "greenhouse_lever_ashby_comparison": "Feature-equivalent for core ATS; Ashby adds analytics and is cheaper <500 employees",
+    "source": "TheInterviewGuys ATS Rejection Myth; SpotSaaS 2026; Index.dev 2026; Equip.co 2026"
+  },
+  "urgency_thresholds": {
+    "by_effort": {
+      "quick":    {"critical_days": 1, "urgent_days": 3,  "upcoming_days": 7},
+      "standard": {"critical_days": 3, "urgent_days": 7,  "upcoming_days": 14},
+      "deep":     {"critical_days": 5, "urgent_days": 10, "upcoming_days": 21},
+      "complex":  {"critical_days": 7, "urgent_days": 14, "upcoming_days": 28}
+    },
+    "default": {"critical_days": 3, "urgent_days": 7, "upcoming_days": 14},
+    "note": "Lead-time windows per effort level. complex entries need 7d just to reach critical; quick entries need only 1d."
+  },
+  "typical_response_windows": {
+    "greenhouse": [7, 21],
+    "lever": [7, 21],
+    "ashby": [7, 21],
+    "workable": [7, 21],
+    "submittable": [14, 90],
+    "slideroom": [30, 120],
+    "direct": [7, 30],
+    "note": "Arrays are [stale_days, ghosted_days]. submittable/slideroom use grant/prize median_response_days from track_benchmarks."
+  }
+}

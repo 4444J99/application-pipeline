@@ -12,23 +12,61 @@ Usage:
 """
 
 import argparse
+import json
 import sys
-from datetime import datetime, date
+from datetime import date
 from pathlib import Path
 
 import yaml
-
 from pipeline_lib import (
-    REPO_ROOT, PIPELINE_DIR_ACTIVE, PIPELINE_DIR_SUBMITTED, PIPELINE_DIR_CLOSED,
+    ACTIONABLE_STATUSES,
+    ALL_PIPELINE_DIRS,
+    EFFORT_MINUTES,
     PIPELINE_DIR_RESEARCH_POOL,
-    SIGNALS_DIR, ALL_PIPELINE_DIRS, ACTIONABLE_STATUSES, EFFORT_MINUTES,
-    load_entries, parse_date, get_effort, get_score, get_deadline, days_until,
-    update_yaml_field, update_last_touched as update_last_touched_content,
+    REPO_ROOT,
+    SIGNALS_DIR,
+    days_until,
+    get_deadline,
+    get_effort,
+    get_score,
+    load_entries,
+    parse_date,
+    update_yaml_field,
+)
+from pipeline_lib import (
+    update_last_touched as update_last_touched_content,
 )
 
 STANDUP_LOG = SIGNALS_DIR / "standup-log.yaml"
+_INTEL_FILE = REPO_ROOT / "strategy" / "market-intelligence-2026.json"
 
-STAGNATION_DAYS = 7
+# --- Market intel loader ---
+_MARKET_INTEL: dict | None = None
+
+
+def _load_market_intel() -> dict:
+    global _MARKET_INTEL
+    if _MARKET_INTEL is not None:
+        return _MARKET_INTEL
+    if _INTEL_FILE.exists():
+        try:
+            with open(_INTEL_FILE) as f:
+                _MARKET_INTEL = json.load(f)
+        except Exception:
+            _MARKET_INTEL = {}
+    else:
+        _MARKET_INTEL = {}
+    return _MARKET_INTEL
+
+
+def _get_stale_threshold(key: str, default: int) -> int:
+    """Load a stale threshold from market intel JSON, fallback to hardcoded default."""
+    intel = _load_market_intel()
+    return intel.get("stale_thresholds_days", {}).get(key, default)
+
+
+# Load thresholds from market intel (with hardcoded fallbacks)
+STAGNATION_DAYS = _get_stale_threshold("entry_stale", 7)
 URGENCY_DAYS = 14
 AT_RISK_DAYS = 3
 REPLENISH_THRESHOLD = 5  # warn when fewer than this many actionable entries
@@ -140,7 +178,7 @@ def section_stale(entries: list[dict]) -> dict:
         print(f"   EXPIRED ({len(expired)}) — deadline passed, never submitted:")
         for eid, name, dl, status in expired:
             print(f"     !!! {name} — deadline was {dl} ({abs(days_until(dl))}d ago) — {status}")
-            print(f"         Action: archive with outcome=expired or withdraw")
+            print("         Action: archive with outcome=expired or withdraw")
     else:
         print("   EXPIRED: none")
 
@@ -148,7 +186,7 @@ def section_stale(entries: list[dict]) -> dict:
         print(f"   AT-RISK ({len(at_risk)}) — hard deadline ≤{AT_RISK_DAYS}d + early status:")
         for eid, name, dl, status, d in at_risk:
             print(f"     !! {name} — {d}d left — still {status}")
-            print(f"        Action: stage immediately or withdraw")
+            print("        Action: stage immediately or withdraw")
     else:
         print("   AT-RISK: none")
 
@@ -176,7 +214,6 @@ def section_stale(entries: list[dict]) -> dict:
 
 def section_plan(entries: list[dict], hours: float) -> dict:
     """Deadline-driven + score-sorted work plan within a time budget."""
-    today = date.today()
     budget = int(hours * 60)
     used = 0
 
@@ -234,7 +271,7 @@ def section_plan(entries: list[dict], hours: float) -> dict:
                 planned.append(e)
 
     remaining = budget - used
-    print(f"   ---")
+    print("   ---")
     print(f"   Planned: {len(planned)} entries | ~{used} min ({used / 60:.1f}h)")
     if remaining > 15:
         print(f"   Buffer: {remaining} min remaining")
@@ -278,7 +315,6 @@ OUTREACH_BY_STATUS = {
 
 def section_outreach(entries: list[dict]):
     """Per-target outreach checklists based on status and deadline proximity."""
-    today = date.today()
     actionable = [e for e in entries if e.get("status") in ACTIONABLE_STATUSES]
 
     # Sort by deadline urgency then score
@@ -366,7 +402,6 @@ PRACTICES_BY_CONTEXT = {
 
 def section_practices(entries: list[dict], stale_stats: dict):
     """Context-sensitive reminders from strategy docs."""
-    today = date.today()
     tips_shown = set()
 
     print("5. BEST PRACTICES")
@@ -416,7 +451,6 @@ def section_replenish(entries: list[dict]):
     """Alert when actionable count drops below threshold."""
     actionable = [e for e in entries if e.get("status") in ACTIONABLE_STATUSES]
     # Exclude expired
-    today = date.today()
     live = []
     for e in actionable:
         dl_date, _ = get_deadline(e)
@@ -457,7 +491,7 @@ def section_replenish(entries: list[dict]):
         pool_high = sum(1 for e in pool_entries if get_score(e) >= 7.0)
         print(f"   Research pool: {len(pool_entries)} entries ({pool_high} scoring >= 7.0)")
         if len(live) < REPLENISH_THRESHOLD and pool_high > 0:
-            print(f"   Tip: run `python scripts/score.py --auto-qualify --dry-run` to promote top entries")
+            print("   Tip: run `python scripts/score.py --auto-qualify --dry-run` to promote top entries")
 
     print()
 
@@ -589,7 +623,7 @@ def section_followup(entries: list[dict]):
     if not overdue_entries and not due_entries:
         if upcoming_entries:
             upcoming_entries.sort(key=lambda x: x["due_in"])
-            print(f"   No actions due today. Next up:")
+            print("   No actions due today. Next up:")
             for item in upcoming_entries[:3]:
                 print(f"     in {item['due_in']}d — {item['org']} — {item['action']}")
         else:
@@ -690,6 +724,7 @@ SECTIONS = {
     "log": "Append session record to standup-log.yaml",
     "jobs": "Job pipeline status",
     "opportunities": "Opportunity pipeline (grants/residencies/prizes/writing)",
+    "market": "Market conditions, hot skills, and upcoming grant deadlines",
 }
 
 
@@ -731,7 +766,7 @@ def section_readiness(entries: list[dict]):
             dl_str = ""
             if dl_date:
                 d = days_until(dl_date)
-                dl_str = f" — {d}d" if d >= 0 else f" — EXPIRED"
+                dl_str = f" — {d}d" if d >= 0 else " — EXPIRED"
             elif dl_type in ("rolling", "tba"):
                 dl_str = f" — {dl_type}"
             print(f"     [{rscore}/5] {name}{dl_str}")
@@ -794,7 +829,6 @@ def section_jobs(entries: list[dict]):
             score = get_score(e)
             status = e.get("status", "?")
             portal = e.get("target", {}).get("portal", "?") if isinstance(e.get("target"), dict) else "?"
-            org = e.get("target", {}).get("organization", "") if isinstance(e.get("target"), dict) else ""
             tags_str = ""
             tags = e.get("tags", [])
             if isinstance(tags, list) and "auto-sourced" in tags:
@@ -876,6 +910,74 @@ def section_opportunities(entries: list[dict]):
     print()
 
 
+# ---------------------------------------------------------------------------
+# Section: Market Intelligence
+# ---------------------------------------------------------------------------
+
+def section_market():
+    """Print market conditions, hot skills, and upcoming grant deadlines from market intel."""
+    intel = _load_market_intel()
+    if not intel:
+        print("MARKET INTELLIGENCE")
+        print("   No data — run: python scripts/market_intel.py --sources")
+        print()
+        return
+
+    meta = intel.get("meta", {})
+    mc = intel.get("market_conditions", {})
+    skills = intel.get("skills_signals", {})
+    calendar = intel.get("grant_calendar", {})
+    today = date.today()
+
+    print("MARKET INTELLIGENCE")
+    print(f"   Version: {meta.get('version', '?')} | Sources: {meta.get('sources_count', 0)} | Updated: {meta.get('last_updated', '?')}")
+    print()
+
+    # Market conditions summary
+    layoffs = mc.get("layoffs_ytd_2026", 0)
+    cold_viability = mc.get("cold_app_viability", "unknown").upper()
+    ai_rejection = mc.get("ai_content_rejection_rate_generic", 0)
+    swe_growth = mc.get("swe_hiring_yoy_growth", 0)
+    print("   CONDITIONS:")
+    print(f"     Tech layoffs YTD:  {layoffs:,} (cold app viability: {cold_viability})")
+    print(f"     SWE hiring YoY:    +{swe_growth*100:.1f}% recovery")
+    print(f"     AI rejection rate: {ai_rejection*100:.0f}% of HMs reject generic AI content")
+    print()
+
+    # Hot skills
+    hot = skills.get("hot_2026", [])
+    if hot:
+        print(f"   HOT SKILLS 2026: {', '.join(hot)}")
+    print()
+
+    # Upcoming calendar items
+    print("   UPCOMING DEADLINES:")
+    events = []
+    for name, data in calendar.items():
+        if not isinstance(data, dict):
+            continue
+        closes = data.get("closes")
+        if closes and closes not in ("tba-fall-2026", "monitor-2026", "monitor", "rolling"):
+            try:
+                from datetime import datetime as _dt
+                d = _dt.strptime(closes, "%Y-%m-%d").date()
+                days_left = (d - today).days
+                if -7 <= days_left <= 60:
+                    award = data.get("award_max") or data.get("award") or data.get("award_total_eur")
+                    award_str = f"${award:,}" if isinstance(award, int) and "eur" not in name else (f"€{award}" if "eur" in name.lower() else str(award) if award else "")
+                    if data.get("award_total_eur"):
+                        award_str = f"€{data['award_total_eur']:,}"
+                    urgency = "!!!" if days_left <= 7 else ("!!" if days_left <= 14 else "")
+                    label = name.replace("_", " ").title()
+                    print(f"     {urgency:>4} {label}: closes {closes} ({days_left:+d}d) {award_str}")
+                    events.append((days_left, name))
+            except ValueError:
+                pass
+    if not events:
+        print("     No deadlines in next 60 days.")
+    print()
+
+
 def run_standup(hours: float, section: str | None, do_log: bool, track_filter: str | None = None):
     """Run the full standup or a single section.
 
@@ -893,6 +995,11 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
     print(f"DAILY STANDUP — {today.strftime('%A, %B %d, %Y')}")
     print("=" * 60)
     print()
+
+    # Market section (standalone)
+    if section == "market":
+        section_market()
+        return
 
     # Track-filtered views
     if track_filter == "jobs" or section == "jobs":
@@ -912,6 +1019,7 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
 
     # Show dual-track summary when running full standup
     if section is None:
+        section_market()
         section_jobs(entries)
         section_opportunities(entries)
 
@@ -1012,7 +1120,7 @@ def run_triage():
         next_status = NEXT_STATUS.get(status)
         if next_status:
             print(f"  [a] Advance to '{next_status}' + touch")
-        print(f"  [w] Withdraw  [t] Touch (mark reviewed)  [s] Skip  [q] Quit")
+        print("  [w] Withdraw  [t] Touch (mark reviewed)  [s] Skip  [q] Quit")
 
         try:
             choice = input("  > ").strip().lower()
@@ -1036,13 +1144,13 @@ def run_triage():
                 pass
             _triage_update_entry(filepath, entry_id, withdraw=True, reason=reason, touch=True)
             withdrawn += 1
-            print(f"  -> Withdrawn\n")
+            print("  -> Withdrawn\n")
         elif choice == "t" and filepath:
             _triage_update_entry(filepath, entry_id, touch=True)
             touched += 1
-            print(f"  -> Touched\n")
+            print("  -> Touched\n")
         else:
-            print(f"  -> Skipped\n")
+            print("  -> Skipped\n")
 
     print(f"Triage complete: {advanced} advanced, {withdrawn} withdrawn, {touched} touched")
 

@@ -22,8 +22,6 @@ import warnings
 from datetime import date
 from pathlib import Path
 
-import yaml
-
 warnings.warn(
     "daily_pipeline.py is deprecated. Use 'standup.py --jobs' or 'campaign.py --execute' instead.",
     DeprecationWarning,
@@ -32,13 +30,9 @@ warnings.warn(
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from pipeline_lib import (
-    ACTIONABLE_STATUSES,
-    ALL_PIPELINE_DIRS,
-    PIPELINE_DIR_ACTIVE,
-    load_entries,
+from pipeline_lib import (  # noqa: E402
     get_score,
-    get_effort,
+    load_entries,
 )
 
 SCRIPTS_DIR = Path(__file__).resolve().parent
@@ -124,7 +118,7 @@ def phase_alchemize_queue():
         status = e.get("status", "?")
         print(f"\n  [{score:.1f}] {name} ({status})")
         print(f"    python scripts/alchemize.py --target {entry_id}")
-        print(f"    # After generating output.md:")
+        print("    # After generating output.md:")
         print(f"    python scripts/alchemize.py --target {entry_id} --integrate")
 
 

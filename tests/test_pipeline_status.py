@@ -3,20 +3,16 @@
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
-from io import StringIO
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from pipeline_status import (
-    print_summary,
-    print_upcoming,
-    print_rolling,
-    print_top,
     print_benefits_check,
-    BENEFITS_THRESHOLDS,
-    IN_FLIGHT_STATUSES,
+    print_rolling,
+    print_summary,
+    print_top,
+    print_upcoming,
 )
-
 
 # --- Helpers ---
 

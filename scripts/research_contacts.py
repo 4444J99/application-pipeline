@@ -15,17 +15,13 @@ import sys
 from datetime import date, timedelta
 from pathlib import Path
 
-import yaml
-
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
     PIPELINE_DIR_SUBMITTED,
-    PIPELINE_DIR_CLOSED,
     load_entries,
     load_entry_by_id,
     parse_date,
-    update_last_touched,
 )
 
 # Follow-up protocol timing (days after submission)
@@ -80,8 +76,8 @@ def generate_research_prompt(entry: dict) -> str:
     lines.append("")
     lines.append("Search LinkedIn for these roles at this organization:")
     lines.append(f"  1. Hiring manager for \"{name}\"")
-    lines.append(f"  2. Technical recruiter handling this role")
-    lines.append(f"  3. Engineering/team lead for the relevant team")
+    lines.append("  2. Technical recruiter handling this role")
+    lines.append("  3. Engineering/team lead for the relevant team")
     lines.append("")
     lines.append("For each contact found, record:")
     lines.append("  - Full name")
@@ -112,7 +108,7 @@ def generate_outreach_template(entry: dict) -> list[dict]:
         "channel": "linkedin",
         "contact": f"[Recruiter at {org}]",
         "status": "planned",
-        "note": f"Connect with recruiter handling this role",
+        "note": "Connect with recruiter handling this role",
     })
 
     return outreach
@@ -227,7 +223,7 @@ def research_batch(limit: int = 0):
 
     print(f"{'=' * 60}")
     print(f"Total: {len(candidates)} entries need contact research")
-    print(f"\nUse --target <id> for detailed research prompt per entry")
+    print("\nUse --target <id> for detailed research prompt per entry")
 
 
 def main():

@@ -8,11 +8,19 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from enrich import (
-    enrich_materials, enrich_blocks, enrich_variant,
-    find_matching_variant, detect_gaps,
+    COVER_LETTER_MAP,
+    CURRENT_BATCH,
+    DEFAULT_RESUME,
+    GRANT_TEMPLATE_TRACKS,
+    JOB_BLOCKS_BY_IDENTITY,
+    RESUME_BY_IDENTITY,
+    RESUME_TRACKS,
+    detect_gaps,
+    enrich_blocks,
+    enrich_materials,
+    enrich_variant,
+    find_matching_variant,
     select_resume,
-    COVER_LETTER_MAP, CURRENT_BATCH, DEFAULT_RESUME, RESUME_BY_IDENTITY,
-    RESUME_TRACKS, GRANT_TEMPLATE_TRACKS, JOB_BLOCKS_BY_IDENTITY,
 )
 from pipeline_lib import MATERIALS_DIR, VARIANTS_DIR
 

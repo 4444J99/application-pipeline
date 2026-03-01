@@ -188,6 +188,53 @@ For job entries, `financial_alignment` scores higher salary = higher score:
 
 This differs from creative entries where higher amounts *decrease* the score due to benefits cliff risk.
 
+---
+
+## Market-Adjusted Parameters
+
+*Parameters in this rubric are validated against `strategy/market-intelligence-2026.json` (112 sources, compiled 2026-03-01). See `strategy/market-research-corpus.md` for full bibliography.*
+
+### Portal Friction Scores (validated)
+
+Portal friction scores are loaded from `market-intelligence-2026.json` at runtime via `score.py:get_portal_scores()`. Current validated values match industry ATS comparison data (SpotSaaS 2026, Index.dev 2026):
+
+| Portal | Score | Source |
+|--------|-------|--------|
+| email | 9 | Minimal friction; paste-and-send |
+| custom / web | 6 | Variable; form-based with some custom fields |
+| greenhouse / lever / ashby | 5 | Standard ATS; Ashby adds analytics but same applicant experience |
+| submittable / workable | 5 | Common for arts/creative submissions |
+| slideroom | 4 | Heavy portfolio format requirements |
+
+Note: Greenhouse, Lever, and Ashby are feature-equivalent for applicants. Ashby's advanced analytics is a recruiter-side advantage (smaller companies), not visible to applicants.
+
+### Strategic Base by Track (market-derived)
+
+Strategic base values are derived from track acceptance rates in `market-intelligence-2026.json`. Lower acceptance rate → higher strategic value (scarcity signal):
+
+| Track | Acceptance Rate | Strategic Base |
+|-------|----------------|----------------|
+| prize | ~2% | 8 |
+| grant / fellowship / residency | 3–5% | 7 |
+| consulting / job | 8–10% | 5–6 |
+| emergency / writing | 15–20% | 4 |
+
+### Effort-to-Value Context (research-backed)
+
+The effort-to-value dimension is calibrated against market research showing:
+- Tailored applications: **5.75%** interview rate vs **2.68%** for generic (Huntr Q2 2025, 461K applications)
+- Cover letter callback lift: **+53%** with tailored letter (ResumeGenius 2026)
+- Sweet spot: **21-80 total applications** → 30.89% offer rate; 81+ → 20.36% (diminishing returns)
+
+### Follow-Up Protocol (research-backed)
+
+The follow-up timing constants loaded by `followup.py` are derived from market research:
+- **Day 1-3**: Connect on LinkedIn — within 48h of apply increases response 3x
+- **Day 7-10**: First DM — adds 15-25% callback lift
+- **Day 14-21**: Final follow-up — maximum 2 total (respect recruiter time)
+- **68% more offers** for candidates who follow up (ResumeGenius 2026)
+- **80%** of hiring managers expect follow-ups; only **24%** of candidates send them
+
 ## Effort Level Classification
 
 Separate from score — classifies the *work required to submit*, not the quality of fit.
@@ -275,7 +322,7 @@ Use `score.py --explain --target <id>` to see the signal breakdown for any entry
 | Credential | writing | grant | residency | prize | program | fellowship | emergency | consulting |
 |-----------|---------|-------|-----------|-------|---------|-----------|-----------|------------|
 | MFA Creative Writing | 4 | 3 | 3 | 3 | 2 | 2 | 2 | 1 |
-| Meta Fullstack Dev | 1 | 1 | 1 | 1 | 3 | 3 | 1 | 4 |
+| Fullstack Dev Certification | 1 | 1 | 1 | 1 | 3 | 3 | 1 | 4 |
 | Teaching 11yr | 2 | 2 | 2 | 1 | 4 | 3 | 1 | 2 |
 | Construction PM | 0 | 1 | 1 | 0 | 1 | 1 | 1 | 3 |
 

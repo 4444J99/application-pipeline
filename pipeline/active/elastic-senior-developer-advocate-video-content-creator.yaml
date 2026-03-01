@@ -1,7 +1,7 @@
 id: elastic-senior-developer-advocate-video-content-creator
 name: Elastic Senior Developer Advocate (Video Content Creator)
 track: job
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Elastic
@@ -45,7 +45,6 @@ submission:
     cover_letter: cover-letters/elastic-senior-developer-advocate-video-content-creator-alchemized
   materials_attached:
   - resumes/batch-03/elastic-senior-developer-advocate-video-content-creator/elastic-senior-developer-advocate-video-content-creator-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'
@@ -57,4 +56,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-27"
+last_touched: "2026-03-01"

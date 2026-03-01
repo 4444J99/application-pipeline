@@ -6,10 +6,15 @@ import sys
 from pathlib import Path
 
 from pipeline_lib import (
-    BLOCKS_DIR, VARIANTS_DIR, SUBMISSIONS_DIR,
-    load_entry_by_id, load_profile,
-    load_block, load_block_frontmatter, load_variant,
-    strip_markdown, count_words, count_chars,
+    SUBMISSIONS_DIR,
+    count_chars,
+    count_words,
+    load_block,
+    load_block_frontmatter,
+    load_entry_by_id,
+    load_profile,
+    load_variant,
+    strip_markdown,
 )
 
 # Common portal limits for flagging

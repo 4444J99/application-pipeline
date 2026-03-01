@@ -18,7 +18,7 @@ import argparse
 import json
 import re
 import sys
-from datetime import date, datetime, timezone
+from datetime import UTC, date, datetime
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -28,10 +28,9 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
-    PIPELINE_DIR_ACTIVE,
-    PIPELINE_DIR_RESEARCH_POOL,
     ALL_PIPELINE_DIRS,
     ALL_PIPELINE_DIRS_WITH_POOL,
+    PIPELINE_DIR_RESEARCH_POOL,
     load_entries,
 )
 
@@ -288,7 +287,7 @@ def fetch_lever_jobs(company: str) -> list[dict]:
     for job in jobs:
         created_ms = job.get("createdAt")
         if created_ms:
-            posting_date = datetime.fromtimestamp(created_ms / 1000, tz=timezone.utc).date().isoformat()
+            posting_date = datetime.fromtimestamp(created_ms / 1000, tz=UTC).date().isoformat()
         else:
             posting_date = None
         results.append({
@@ -666,8 +665,8 @@ def main():
         print(f"\n{'=' * 60}")
         print(f"Updated {count} entries" + (" (dry run)" if args.dry_run else ""))
         if not args.dry_run and count:
-            print(f"\nNext steps:")
-            print(f"  python scripts/score.py --all          # Re-score with location penalty")
+            print("\nNext steps:")
+            print("  python scripts/score.py --all          # Re-score with location penalty")
         return
 
     if not args.fetch and not args.dry_run and not args.yes:
@@ -749,7 +748,7 @@ def main():
             title = job["title"]
 
             if args.yes and not args.dry_run:
-                filepath = write_pipeline_entry(entry_id, entry)
+                write_pipeline_entry(entry_id, entry)
                 created.append(entry_id)
                 print(f"  + {entry_id}")
                 print(f"    {company} — {title}")
@@ -763,9 +762,9 @@ def main():
         print(f"\n{'=' * 60}")
         if args.yes and not args.dry_run:
             print(f"Created {len(created)} pipeline entries in pipeline/research_pool/")
-            print(f"\nNext steps:")
-            print(f"  python scripts/score.py --all          # Score new entries")
-            print(f"  python scripts/advance.py --report     # Check advancement")
+            print("\nNext steps:")
+            print("  python scripts/score.py --all          # Score new entries")
+            print("  python scripts/advance.py --report     # Check advancement")
         else:
             print(f"Would create {len(created)} pipeline entries (run with --yes to create)")
 

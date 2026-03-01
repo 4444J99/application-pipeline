@@ -19,17 +19,26 @@ from datetime import date
 from pathlib import Path
 
 import yaml
-
 from pipeline_lib import (
-    BLOCKS_DIR, MATERIALS_DIR, PIPELINE_DIR_ACTIVE, PIPELINE_DIR_SUBMITTED,
-    SIGNALS_DIR, REPO_ROOT, VARIANTS_DIR,
-    load_entry_by_id, load_profile, load_legacy_script,
+    BLOCKS_DIR,
+    MATERIALS_DIR,
+    PIPELINE_DIR_SUBMITTED,
+    SIGNALS_DIR,
+    VARIANTS_DIR,
+    count_chars,
+    count_words,
+    days_until,
+    get_deadline,
     load_block,
-    strip_markdown, count_words, count_chars,
-    get_deadline, days_until, get_effort,
-    update_yaml_field, update_last_touched as update_last_touched_content,
+    load_entry_by_id,
+    load_legacy_script,
+    load_profile,
+    strip_markdown,
+    update_yaml_field,
 )
-
+from pipeline_lib import (
+    update_last_touched as update_last_touched_content,
+)
 
 # --- Content resolution ---
 
@@ -199,7 +208,7 @@ def generate_checklist(
                     status = f"OVER by {wc - word_limit}w"
                     issues.append(f"{title}: {wc}w exceeds ~{word_limit}w limit")
                 elif wc < word_limit * 0.5:
-                    status = f"UNDER 50% target"
+                    status = "UNDER 50% target"
                     issues.append(f"{title}: {wc}w is under 50% of ~{word_limit}w target")
 
             check = "!" if status != "ok" else "ok"
@@ -316,10 +325,10 @@ def record_submission(filepath: Path, entry: dict) -> None:
     _append_conversion_log(entry, today_str)
 
     print(f"Recorded: {entry.get('name', '?')}")
-    print(f"  Status: submitted")
+    print("  Status: submitted")
     print(f"  Date: {today_str}")
     print(f"  Moved: {filepath.name} -> pipeline/submitted/")
-    print(f"  Conversion log updated")
+    print("  Conversion log updated")
 
 
 def _append_conversion_log(entry: dict, submitted_date: str) -> None:
@@ -375,7 +384,7 @@ def _check_metrics_freshness(entry: dict) -> list[str]:
     """Check blocks_used for stale metrics. Returns list of issue strings."""
     issues = []
     try:
-        from check_metrics import check_file, SOURCE_METRICS
+        from check_metrics import check_file
     except ImportError:
         return issues  # check_metrics not available
 
@@ -442,11 +451,11 @@ def main():
         # Confirm before recording
         name = entry.get("name", target_id)
         print(f"Record submission for: {name}")
-        print(f"  This will:")
-        print(f"    - Set status to 'submitted'")
+        print("  This will:")
+        print("    - Set status to 'submitted'")
         print(f"    - Set timeline.submitted to {date.today().isoformat()}")
         print(f"    - Move {filepath.name} to pipeline/submitted/")
-        print(f"    - Append to signals/conversion-log.yaml")
+        print("    - Append to signals/conversion-log.yaml")
         print()
         try:
             confirm = input("Proceed? [y/N] ").strip().lower()

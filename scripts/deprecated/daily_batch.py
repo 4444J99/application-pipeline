@@ -13,11 +13,16 @@ import argparse
 import sys
 import warnings
 from datetime import datetime
-from pathlib import Path
 
 from pipeline_lib import (
-    EFFORT_MINUTES, load_entries, get_effort as get_effort_level,
-    get_score, format_amount, parse_datetime,
+    EFFORT_MINUTES,
+    format_amount,
+    get_score,
+    load_entries,
+    parse_datetime,
+)
+from pipeline_lib import (
+    get_effort as get_effort_level,
 )
 
 warnings.warn(
@@ -52,7 +57,6 @@ def format_entry_line(entry: dict, days_left: int | None = None) -> str:
     name = entry.get("name", entry.get("id", "?"))
     status = entry.get("status", "?")
     effort = get_effort_level(entry)
-    score = get_score(entry)
     amount = format_amount(entry.get("amount"))
     est = EFFORT_MINUTES.get(effort, 90)
 
@@ -141,7 +145,7 @@ def generate_batch(hours: float, show_all: bool = False):
 
     # Scored entries
     if by_score:
-        print(f"\n  BY SCORE:")
+        print("\n  BY SCORE:")
         for entry in by_score:
             effort = get_effort_level(entry)
             est = EFFORT_MINUTES.get(effort, 90)

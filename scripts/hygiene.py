@@ -15,36 +15,32 @@ Usage:
 """
 
 import argparse
-import shutil
 import sys
 from datetime import date
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-import yaml
-
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
     ACTIONABLE_STATUSES,
-    ALL_PIPELINE_DIRS,
     PIPELINE_DIR_ACTIVE,
     PIPELINE_DIR_CLOSED,
     PIPELINE_DIR_RESEARCH_POOL,
     PIPELINE_DIR_SUBMITTED,
+    days_until,
+    get_deadline,
     load_entries,
     load_entry_by_id,
-    get_deadline,
-    days_until,
     parse_date,
-    update_yaml_field,
     update_last_touched,
+    update_yaml_field,
 )
 from source_jobs import (
+    fetch_ashby_jobs,
     fetch_greenhouse_jobs,
     fetch_lever_jobs,
-    fetch_ashby_jobs,
 )
 
 HTTP_TIMEOUT = 10
@@ -211,7 +207,6 @@ def run_check_postings(entries: list[dict]) -> list[dict]:
 
 def run_auto_expire(entries: list[dict], dry_run: bool = True) -> list[dict]:
     """Move past-deadline active entries to closed/ with outcome=expired."""
-    today = date.today()
     expired = []
 
     for e in entries:
@@ -242,7 +237,7 @@ def run_auto_expire(entries: list[dict], dry_run: bool = True) -> list[dict]:
             _expire_entry(item["id"])
 
     if dry_run:
-        print(f"\nDry run — run with --yes to execute.")
+        print("\nDry run — run with --yes to execute.")
     else:
         print(f"\nMoved {len(expired)} entries to pipeline/closed/")
 
@@ -466,7 +461,7 @@ def run_full_report(entries: list[dict]):
         print(f"  Gate failures: {len(gate_failures)}")
         print(f"  Stale rolling: {len(stale)}")
         if expired:
-            print(f"\nRun `python scripts/hygiene.py --auto-expire --dry-run` to handle expired entries")
+            print("\nRun `python scripts/hygiene.py --auto-expire --dry-run` to handle expired entries")
 
 
 # ---------------------------------------------------------------------------
@@ -571,7 +566,7 @@ def section_company_focus(focus_limit: int = DEFAULT_FOCUS_LIMIT):
         for entries in violators.values()
     )
     print(f"ACTION: {active_violations} active entries exceed focus limit — consider deferring")
-    print(f"To defer an entry: update its status to 'deferred' in the pipeline YAML")
+    print("To defer an entry: update its status to 'deferred' in the pipeline YAML")
 
 
 # ---------------------------------------------------------------------------

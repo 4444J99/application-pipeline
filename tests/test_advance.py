@@ -6,8 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from advance import can_advance, advance_entry, VALID_TRANSITIONS
-
+from advance import VALID_TRANSITIONS, advance_entry, can_advance
 
 # --- can_advance ---
 

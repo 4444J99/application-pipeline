@@ -10,15 +10,14 @@ from ashby_submit import (
     auto_fill_answers,
     build_field_submissions,
     field_type_label,
-    get_custom_fields,
     generate_answer_template,
+    get_custom_fields,
     is_standard_field,
     load_answers,
     merge_answers,
     parse_ashby_url,
     validate_answers,
 )
-
 
 # ---------------------------------------------------------------------------
 # parse_ashby_url

@@ -4,8 +4,10 @@
 import sys
 
 from pipeline_lib import (
-    SIGNALS_DIR, ALL_PIPELINE_DIRS, ALL_PIPELINE_DIRS_WITH_POOL,
-    PIPELINE_DIR_RESEARCH_POOL, load_entries,
+    ALL_PIPELINE_DIRS,
+    PIPELINE_DIR_RESEARCH_POOL,
+    SIGNALS_DIR,
+    load_entries,
 )
 
 CONVERSION_LOG = SIGNALS_DIR / "conversion-log.yaml"
@@ -67,6 +69,7 @@ def print_report(title: str, groups: dict):
 def response_time_analysis(entries: list[dict]):
     """Analyze response times by portal type and identity position."""
     from datetime import date
+
     from pipeline_lib import parse_date
 
     print("\nRESPONSE TIME ANALYSIS")
@@ -122,7 +125,7 @@ def response_time_analysis(entries: list[dict]):
                 print(f"    {name} — {days}d waiting [{portal}]")
                 # Flag entries exceeding typical window
                 if days > 21:
-                    print(f"      !! Exceeds typical response window")
+                    print("      !! Exceeds typical response window")
         else:
             print("  No response time data recorded yet.")
         return
@@ -136,14 +139,14 @@ def response_time_analysis(entries: list[dict]):
 
     # By portal
     if len(by_portal) > 1 or (by_portal and list(by_portal.keys())[0] != "unknown"):
-        print(f"\n  By Portal Type:")
+        print("\n  By Portal Type:")
         for portal, times in sorted(by_portal.items(), key=lambda x: -len(x[1])):
             p_avg = sum(times) / len(times)
             print(f"    {portal:<20s} n={len(times):>3d}  mean={p_avg:.1f}d")
 
     # By identity position
     if len(by_position) > 1 or (by_position and list(by_position.keys())[0] != "unset"):
-        print(f"\n  By Identity Position:")
+        print("\n  By Identity Position:")
         for position, times in sorted(by_position.items(), key=lambda x: -len(x[1])):
             p_avg = sum(times) / len(times)
             print(f"    {position:<25s} n={len(times):>3d}  mean={p_avg:.1f}d")

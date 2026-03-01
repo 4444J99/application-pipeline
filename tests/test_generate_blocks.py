@@ -12,7 +12,6 @@ from generate_project_blocks import (
     update_block_stats,
 )
 
-
 # ---------------------------------------------------------------------------
 # extract_readme_stats — basic badge formats
 # ---------------------------------------------------------------------------

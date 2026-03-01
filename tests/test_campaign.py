@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from campaign import classify_urgency, get_campaign_entries, detect_gaps, is_effort_feasible
+from campaign import classify_urgency, detect_gaps, get_campaign_entries, is_effort_feasible
 
 
 def _make_entry(

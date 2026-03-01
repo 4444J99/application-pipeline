@@ -1,7 +1,7 @@
 id: cohere-applied-ai-engineer-agentic-workflows-singapore
 name: Cohere Applied AI Engineer - Agentic Workflows (Singapore)
 track: job
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Cohere
@@ -39,7 +39,7 @@ submission:
     methodology: methodology/ai-conductor
   variant_ids: {}
   materials_attached:
-  - resumes/independent-engineer-resume.html
+  - resumes/batch-03/cohere-applied-ai-engineer-agentic-workflows-singapore/cohere-applied-ai-engineer-agentic-workflows-singapore-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'
@@ -51,4 +51,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-27"
+last_touched: "2026-03-01"

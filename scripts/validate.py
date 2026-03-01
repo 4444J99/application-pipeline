@@ -5,10 +5,14 @@ import sys
 from pathlib import Path
 
 import yaml
-
 from pipeline_lib import (
-    REPO_ROOT, ALL_PIPELINE_DIRS_WITH_POOL as PIPELINE_DIRS,
-    VALID_TRACKS, VALID_STATUSES, VALID_TRANSITIONS,
+    ALL_PIPELINE_DIRS_WITH_POOL as PIPELINE_DIRS,
+)
+from pipeline_lib import (
+    REPO_ROOT,
+    VALID_STATUSES,
+    VALID_TRACKS,
+    VALID_TRANSITIONS,
     detect_portal,
 )
 
@@ -111,10 +115,10 @@ def validate_entry(filepath: Path) -> list[str]:
     fit = data.get("fit", {})
     if isinstance(fit, dict):
         score = fit.get("score")
-        if score is not None and not (1 <= score <= 10):
+        if score is not None and isinstance(score, (int, float)) and not (1 <= score <= 10):
             errors.append(f"Fit score out of range: {score} (must be 1-10)")
         original_score = fit.get("original_score")
-        if original_score is not None and not (1 <= original_score <= 10):
+        if original_score is not None and isinstance(original_score, (int, float)) and not (1 <= original_score <= 10):
             errors.append(f"Fit original_score out of range: {original_score} (must be 1-10)")
         position = fit.get("identity_position")
         if position and position not in VALID_POSITIONS:
@@ -128,7 +132,7 @@ def validate_entry(filepath: Path) -> list[str]:
                 for key, val in dimensions.items():
                     if key not in VALID_DIMENSIONS:
                         errors.append(f"Unknown dimension: '{key}' (valid: {VALID_DIMENSIONS})")
-                    if val is not None and not (1 <= val <= 10):
+                    if val is not None and isinstance(val, (int, float)) and not (1 <= val <= 10):
                         errors.append(f"Dimension '{key}' out of range: {val} (must be 1-10)")
 
     # Effort level validation
@@ -198,6 +202,8 @@ def validate_entry(filepath: Path) -> list[str]:
     if isinstance(submission, dict):
         blocks = submission.get("blocks_used", {})
         if isinstance(blocks, dict):
+            from pipeline_lib import load_block_frontmatter
+            REQUIRED_BLOCK_FRONTMATTER = {"title", "category", "tags", "identity_positions", "tracks", "tier"}
             for slot, block_path in blocks.items():
                 full_path = REPO_ROOT / "blocks" / block_path
                 # Check for .md extension
@@ -205,6 +211,18 @@ def validate_entry(filepath: Path) -> list[str]:
                     full_path = full_path.with_suffix(".md")
                 if not full_path.exists():
                     errors.append(f"Block not found: blocks/{block_path} (slot: {slot})")
+                else:
+                    # Validate frontmatter completeness
+                    fm = load_block_frontmatter(block_path)
+                    if fm is None:
+                        errors.append(f"Block missing frontmatter: blocks/{block_path} (slot: {slot})")
+                    else:
+                        missing_fm = REQUIRED_BLOCK_FRONTMATTER - set(fm.keys())
+                        if missing_fm:
+                            errors.append(
+                                f"Block frontmatter missing fields {sorted(missing_fm)}: "
+                                f"blocks/{block_path} (slot: {slot})"
+                            )
 
     # last_touched validation
     last_touched = data.get("last_touched")
@@ -318,10 +336,9 @@ def check_profile_freshness() -> list[str]:
 
     Returns list of warning strings for stale profiles.
     """
-    import json
     import re
 
-    from pipeline_lib import PROFILES_DIR, BLOCKS_DIR
+    from pipeline_lib import BLOCKS_DIR, PROFILES_DIR
 
     warnings = []
 
@@ -333,9 +350,15 @@ def check_profile_freshness() -> list[str]:
 
     snapshot = snapshot_path.read_text()
 
-    # Extract canonical repo count
+    # Extract canonical metrics from snapshot
     repo_match = re.search(r"Total repositories\s*\|\s*(\d+)", snapshot)
     canonical_repos = int(repo_match.group(1)) if repo_match else None
+
+    test_match = re.search(r"Total test cases\s*\|\s*([\d,]+)", snapshot)
+    canonical_tests = int(test_match.group(1).replace(",", "")) if test_match else None
+
+    essay_match = re.search(r"Total essays\s*\|\s*(\d+)", snapshot)
+    canonical_essays = int(essay_match.group(1)) if essay_match else None
 
     if not PROFILES_DIR.exists():
         warnings.append("Cannot check freshness: targets/profiles/ not found")
@@ -351,12 +374,29 @@ def check_profile_freshness() -> list[str]:
 
         # Check for stale repo count
         if canonical_repos:
-            # Match patterns like "101 repositories", "101-repository", "101 repos"
             stale_repos = re.findall(r"\b(\d+)(?:\s+|-)?repositor(?:ies|y)", text)
             for count_str in stale_repos:
                 count = int(count_str)
                 if count != canonical_repos:
                     issues.append(f"repo count {count} != {canonical_repos}")
+                    break
+
+        # Check for stale test count
+        if canonical_tests:
+            test_patterns = re.findall(r"\b([\d,]+)\s+(?:automated\s+)?test[s\s]", text)
+            for t_str in test_patterns:
+                t = int(t_str.replace(",", ""))
+                if t != canonical_tests and t > 100:  # skip obvious subset refs
+                    issues.append(f"test count {t:,} != {canonical_tests:,}")
+                    break
+
+        # Check for stale essay count
+        if canonical_essays:
+            essay_patterns = re.findall(r"\b(\d+)\s+essays?", text)
+            for e_str in essay_patterns:
+                e = int(e_str)
+                if e != canonical_essays:
+                    issues.append(f"essay count {e} != {canonical_essays}")
                     break
 
         if issues:
@@ -367,7 +407,7 @@ def check_profile_freshness() -> list[str]:
     if stale_count:
         warnings.insert(0, f"STALE PROFILES — {stale_count} profile(s) with outdated metrics:")
     else:
-        warnings.append(f"Profile freshness OK — all profiles match metrics-snapshot.md")
+        warnings.append("Profile freshness OK — all profiles match metrics-snapshot.md")
 
     return warnings
 

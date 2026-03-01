@@ -16,10 +16,7 @@ Usage:
 
 import argparse
 import shutil
-import sys
 from pathlib import Path
-
-import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 RESUMES_DIR = REPO_ROOT / "materials" / "resumes"
@@ -158,14 +155,14 @@ def main():
         for k in totals:
             totals[k] += stats[k]
 
-    print(f"\n=== Summary ===")
+    print("\n=== Summary ===")
     print(f"  Files moved:       {totals['moved']}")
     print(f"  Cover letters:     {totals['cover_letters']}")
     print(f"  Answers copied:    {totals['answers']}")
     print(f"  YAML refs updated: {totals['yaml_updates']}")
 
     if not args.execute:
-        print(f"\nThis was a dry run. Re-run with --execute to apply changes.")
+        print("\nThis was a dry run. Re-run with --execute to apply changes.")
 
 
 if __name__ == "__main__":

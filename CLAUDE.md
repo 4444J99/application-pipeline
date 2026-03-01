@@ -73,6 +73,8 @@ Scripts are independent CLIs but some import functions from each other:
 - **`check_outcomes.py`** — Outcome recording and stale response alerts. Updates conversion-log and moves terminal entries to closed/.
 - **`research_contacts.py`** — Recruiter identification and follow-up protocol date generation.
 - **`submit.py`** imports from `check_metrics.py` — `--check` mode now validates block metrics freshness.
+- **`feedback_capture.py`** — standalone; writes hypothesis entries to `signals/hypotheses.yaml`. Use to record predicted outcome reasons before results arrive. Run `run.py hypotheses` to list, `run.py analysis` to see patterns, `run.py hypothesis <id>` to capture for a specific entry.
+- **`check_email.py`** — standalone; scans for submission confirmations and responses. Requires `.email-config.yaml` with IMAP credentials (not committed). Run `run.py email` daily.
 - All other scripts are standalone CLIs that read/write pipeline YAML files.
 
 ## Resume Workflow
@@ -286,8 +288,18 @@ Single-word command protocol via `python scripts/run.py <command>`. Any LLM can 
 | `preflight` | Batch submission readiness |
 | `archive` | Show archival candidates |
 | `qualify` | Preview auto-qualification |
+| `email` | Check email for submission confirmations and responses (requires `.email-config.yaml`) |
+| `focus` | Rule of Three: flag companies with >3 active+submitted applications |
+| `topjobs` | Daily glove-fit fetch: top roles ≥ 8.5 score |
+| `syncmetrics` | Check canonical metric consistency across blocks/strategy |
+| `hypotheses` | List all recorded outcome hypotheses |
+| `analysis` | Pattern analysis of outcome hypotheses |
+| `market` | Market conditions, benchmarks, and grant calendar |
+| `sourcejobs` | Preview new job postings from ATS APIs (dry-run) |
+| `keywords` | Extract keywords from job postings |
+| `buildblocks` | Generate blocks from project data |
 
-**With target ID:** `score <id>`, `enrich <id>`, `advance <id>`, `compose <id>`, `draft <id>`, `submit <id>`, `check <id>`, `record <id>`, `gate <id>`, `contacts <id>`
+**With target ID:** `score <id>`, `enrich <id>`, `advance <id>`, `compose <id>`, `draft <id>`, `submit <id>`, `check <id>`, `record <id>`, `gate <id>`, `contacts <id>`, `hypothesis <id>`, `alchemize <id>`, `answers <id>`, `tailor <id>`
 
 **Session sequences:**
 - Morning: `standup` → `followup` → `outcomes` → `campaign`

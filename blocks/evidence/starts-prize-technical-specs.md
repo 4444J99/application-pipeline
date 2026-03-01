@@ -12,7 +12,7 @@ tier: single
 
 ## Software Stack by Organ
 
-**ORGAN-I (Theoria):** Python 3.11+, Pydantic data models, custom DSL (RE:GE invocation syntax with 22 organ handlers), 1,254 automated tests at 85% coverage. CLI interface for symbolic computation.
+**ORGAN-I (Theoria):** Python 3.11+, Pydantic data models, custom DSL (RE:GE invocation syntax with 22 organ handlers), 1,254 test cases at 85% coverage. CLI interface for symbolic computation.
 
 **ORGAN-II (Poiesis):**
 - *Omni-Dromenon Engine:* TypeScript pnpm monorepo — Express/Socket.io (WebSocket core), React 18 (performer + audience interfaces), OSC bridge to SuperCollider/Max/MSP, Docker Compose infrastructure. 60 tests, P95 latency <2ms, designed for 1,000+ concurrent audience connections.

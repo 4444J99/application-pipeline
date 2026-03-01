@@ -15,7 +15,7 @@ Usage:
 """
 
 import sys
-from datetime import date, datetime as _dt
+from datetime import date
 from pathlib import Path
 
 import yaml
@@ -24,22 +24,22 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import PIPELINE_DIR_ACTIVE
 from score import (
-    WEIGHTS_JOB,
-    PORTAL_SCORES,
     HIGH_PRESTIGE,
-    STRATEGIC_BASE,
+    PORTAL_SCORES,
     ROLE_FIT_TIERS,
+    STRATEGIC_BASE,
+    WEIGHTS_JOB,
 )
 from source_jobs import (
+    TITLE_EXCLUDES,
+    TITLE_KEYWORDS,
+    _get_existing_ids,
+    create_pipeline_entry,
+    deduplicate,
+    fetch_ashby_jobs,
     fetch_greenhouse_jobs,
     fetch_lever_jobs,
-    fetch_ashby_jobs,
     filter_by_title,
-    deduplicate,
-    create_pipeline_entry,
-    _get_existing_ids,
-    TITLE_KEYWORDS,
-    TITLE_EXCLUDES,
     load_sources,
 )
 

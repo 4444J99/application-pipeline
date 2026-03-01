@@ -12,15 +12,21 @@ Usage:
 """
 
 import argparse
-import sys
-from datetime import date
+import shutil
+from datetime import date, datetime
 
 from pipeline_lib import (
-    load_entries, load_entry_by_id, load_profile,
-    get_effort, get_score, get_deadline, days_until,
-    ACTIONABLE_STATUSES, PROFILES_DIR,
+    ACTIONABLE_STATUSES,
+    REPO_ROOT,
     VALID_TRANSITIONS,
-    update_yaml_field, update_last_touched,
+    days_until,
+    get_deadline,
+    get_effort,
+    get_score,
+    load_entries,
+    load_profile,
+    update_last_touched,
+    update_yaml_field,
 )
 
 # Map target status to timeline field to set
@@ -116,7 +122,7 @@ def run_report(entries: list[dict]):
 
         # Determine readiness
         blockers = []
-        if status == "qualified" and not has_profile:
+        if status in ("qualified", "drafting") and not has_profile:
             blockers.append("no profile")
         if dl_date and days_until(dl_date) < 0:
             blockers.append("expired deadline")
@@ -168,6 +174,19 @@ def run_report(entries: list[dict]):
           f"{total_actionable} total actionable")
 
 
+def _backup_files(files: list, label: str = "advance") -> None:
+    """Snapshot files to pipeline/.backup/{timestamp}/ before modification."""
+    if not files:
+        return
+    ts = datetime.now().strftime("%Y%m%d-%H%M%S")
+    backup_dir = REPO_ROOT / "pipeline" / ".backup" / f"{ts}-{label}"
+    backup_dir.mkdir(parents=True, exist_ok=True)
+    for f in files:
+        if f and f.exists():
+            shutil.copy2(f, backup_dir / f.name)
+    print(f"  Backup: {backup_dir.relative_to(REPO_ROOT)} ({len(files)} files)")
+
+
 def run_advance(
     target_status: str,
     effort_filter: str | None,
@@ -175,6 +194,7 @@ def run_advance(
     entry_id: str | None,
     dry_run: bool,
     auto_yes: bool,
+    backup: bool = False,
 ):
     """Advance entries matching filters to target_status."""
     entries = load_entries(include_filepath=True)
@@ -213,11 +233,25 @@ def run_advance(
     print(f"{'DRY RUN: ' if dry_run else ''}Advancing {len(candidates)} entries → {target_status}")
     print(f"{'─' * 60}")
 
+    # Stage order for skip detection
+    _STATUS_ORDER = ["research", "qualified", "drafting", "staged", "submitted"]
+
     for e in candidates:
         eid = e.get("id", "?")
         name = e.get("name", eid)
         current = e.get("status", "?")
         filepath = e.get("_filepath")
+
+        # Warn when skipping intermediate stages
+        try:
+            current_idx = _STATUS_ORDER.index(current)
+            target_idx = _STATUS_ORDER.index(target_status)
+            if target_idx - current_idx > 1:
+                skipped = _STATUS_ORDER[current_idx + 1:target_idx]
+                print(f"  [WARN] {name}: skipping stage(s) {skipped} — "
+                      f"run compose.py/draft.py before submitting")
+        except ValueError:
+            pass
 
         print(f"  {name}: {current} → {target_status}")
 
@@ -230,13 +264,17 @@ def run_advance(
     if not auto_yes:
         print(f"{'─' * 60}")
         try:
-            confirm = input(f"Proceed? [y/N] ").strip().lower()
+            confirm = input("Proceed? [y/N] ").strip().lower()
         except (EOFError, KeyboardInterrupt):
             print("\nAborted.")
             return
         if confirm != "y":
             print("Aborted.")
             return
+
+    # Backup before modification
+    if backup:
+        _backup_files([e.get("_filepath") for e in candidates], label="advance")
 
     # Execute
     advanced = 0
@@ -269,6 +307,8 @@ def main():
                         help="Skip confirmation prompt")
     parser.add_argument("--report", action="store_true",
                         help="Show advancement opportunities and blockers")
+    parser.add_argument("--backup", action="store_true",
+                        help="Snapshot modified files to pipeline/.backup/ before writing")
     args = parser.parse_args()
 
     if args.report:
@@ -286,6 +326,7 @@ def main():
         entry_id=args.entry_id,
         dry_run=args.dry_run,
         auto_yes=args.yes,
+        backup=args.backup,
     )
 
 

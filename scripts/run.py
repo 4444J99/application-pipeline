@@ -42,6 +42,10 @@ COMMANDS = {
     "syncmetrics": ("sync_metrics.py", [],               "Check canonical metric consistency across blocks/strategy"),
     "hypotheses":  ("feedback_capture.py", ["--list"],   "List all recorded outcome hypotheses"),
     "analysis":    ("feedback_capture.py", ["--analyze"],"Pattern analysis of outcome hypotheses"),
+    "market":      ("market_intel.py", [],               "Market conditions, benchmarks, and grant calendar"),
+    "sourcejobs":  ("source_jobs.py", ["--fetch", "--dry-run"], "Preview new job postings from ATS APIs"),
+    "keywords":    ("distill_keywords.py", [],           "Extract keywords from job postings"),
+    "buildblocks": ("generate_project_blocks.py", [],    "Generate blocks from project data"),
 }
 
 # --- Parameterized commands (word + target ID) ---
@@ -57,6 +61,9 @@ PARAM_COMMANDS = {
     "gate":     ("hygiene.py", ["--gate"],               "Track-specific readiness gate"),
     "contacts":   ("research_contacts.py", ["--target"],  "Research hiring contacts"),
     "hypothesis": ("feedback_capture.py", ["--entry"],   "Capture outcome hypothesis for an entry"),
+    "alchemize":  ("alchemize.py", ["--target"],         "End-to-end Greenhouse orchestrator (research → synthesis)"),
+    "answers":    ("answer_questions.py", ["--target"],  "Generate AI-assisted answers for portal questions"),
+    "tailor":     ("tailor_resume.py", ["--target"],     "Tailor resume for a specific entry"),
 }
 
 

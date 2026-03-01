@@ -20,12 +20,13 @@ import sys
 from pathlib import Path
 
 import yaml
-
 from pipeline_lib import (
-    MATERIALS_DIR, REPO_ROOT, VARIANTS_DIR,
-    load_entries, load_entry_by_id,
-    strip_markdown,
+    MATERIALS_DIR,
     PIPELINE_DIR_ACTIVE,
+    VARIANTS_DIR,
+    load_entries,
+    load_entry_by_id,
+    strip_markdown,
 )
 
 CONFIG_PATH = Path(__file__).resolve().parent / ".submit-config.yaml"
@@ -82,9 +83,9 @@ def parse_ashby_url(url: str) -> tuple[str, str] | None:
 
 def _post_json(endpoint: str, payload: dict, api_key: str | None = None) -> dict | None:  # allow-secret
     """POST JSON to Ashby API and return parsed response."""
-    import urllib.request
-    import urllib.error
     import base64
+    import urllib.error
+    import urllib.request
 
     url = f"{ASHBY_API_BASE}/{endpoint}"
     data = json.dumps(payload).encode("utf-8")
@@ -312,7 +313,7 @@ def generate_answer_template(
     lines = [
         f"# Generated for: {entry_name}",
         f"# Posting: {company}/{posting_id}",
-        f"# Edit answers below, then run with --check-answers to validate",
+        "# Edit answers below, then run with --check-answers to validate",
         "",
     ]
 
@@ -502,7 +503,7 @@ def preview_submission(
     print(f"  Posting ID:    {posting_id}")
     print(f"  API endpoint:  POST {ASHBY_API_BASE}/applicationForm.submit")
     print()
-    print(f"  APPLICANT INFO:")
+    print("  APPLICANT INFO:")
     full_name = f"{config['first_name']} {config['last_name']}"
     print(f"    Name:     {full_name}")
     print(f"    Email:    {config['email']}")
@@ -525,13 +526,13 @@ def preview_submission(
         if len(cl_lines) > 3:
             print(f"    ... ({len(cl_lines) - 3} more lines)")
     else:
-        print(f"  COVER LETTER: None")
+        print("  COVER LETTER: None")
     print()
 
     if resume_path:
         print(f"  RESUME: {resume_path.name} ({resume_path.stat().st_size:,} bytes)")
     else:
-        print(f"  RESUME: NOT FOUND")
+        print("  RESUME: NOT FOUND")
     print()
 
     if fields:
@@ -562,7 +563,7 @@ def preview_submission(
             print(f"    ! {err}")
         print()
 
-    print(f"  STATUS: DRY RUN — use --submit to POST")
+    print("  STATUS: DRY RUN — use --submit to POST")
 
 
 def submit_to_ashby(
@@ -576,9 +577,9 @@ def submit_to_ashby(
     Uses multipart form data to support resume file upload.
     Returns True on success, False on failure.
     """
-    import urllib.request
-    import urllib.error
     import base64
+    import urllib.error
+    import urllib.request
     import uuid
 
     url = f"{ASHBY_API_BASE}/applicationForm.submit"
@@ -611,7 +612,7 @@ def submit_to_ashby(
 
     # Assemble body
     text_body = "".join(body_parts).encode("utf-8")
-    end_boundary = f"\r\n--{boundary}--\r\n".encode("utf-8")
+    end_boundary = f"\r\n--{boundary}--\r\n".encode()
     if resume_data:
         full_body = text_body + resume_data + end_boundary
     else:

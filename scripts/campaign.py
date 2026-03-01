@@ -16,33 +16,62 @@ Usage:
 """
 
 import argparse
+import json
 import sys
 from datetime import date
 from pathlib import Path
 
-from pipeline_lib import (
-    load_entries, load_entry_by_id, load_profile,
-    get_deadline, days_until, get_effort, get_score, format_amount,
-    ACTIONABLE_STATUSES, DRAFTS_DIR, REPO_ROOT, EFFORT_MINUTES,
-)
-
 from enrich import (
-    enrich_materials, enrich_blocks, enrich_variant, enrich_portal_fields,
-    find_matching_variant, detect_gaps,
-    GRANT_TEMPLATE_PATH, GRANT_TEMPLATE_TRACKS,
+    GRANT_TEMPLATE_PATH,
+    GRANT_TEMPLATE_TRACKS,
+    detect_gaps,
+    enrich_blocks,
+    enrich_materials,
+    enrich_portal_fields,
+    enrich_variant,
+    find_matching_variant,
 )
-from score import QUALIFICATION_THRESHOLD, get_qualification_threshold
-
+from pipeline_lib import (
+    ACTIONABLE_STATUSES,
+    DRAFTS_DIR,
+    EFFORT_MINUTES,
+    REPO_ROOT,
+    days_until,
+    format_amount,
+    get_deadline,
+    get_effort,
+    get_score,
+    load_entries,
+    load_profile,
+)
+from score import get_qualification_threshold
 
 # --- Urgency classification ---
 
 
+def _load_urgency_thresholds() -> dict:
+    """Load effort-aware urgency thresholds from market intelligence JSON."""
+    intel_file = Path(__file__).resolve().parent.parent / "strategy" / "market-intelligence-2026.json"
+    defaults = {"critical_days": 3, "urgent_days": 7, "upcoming_days": 14}
+    if not intel_file.exists():
+        return {"by_effort": {}, "default": defaults}
+    try:
+        with open(intel_file) as f:
+            intel = json.load(f)
+        return intel.get("urgency_thresholds", {"by_effort": {}, "default": defaults})
+    except Exception:
+        return {"by_effort": {}, "default": defaults}
+
+
+_URGENCY_THRESHOLDS = _load_urgency_thresholds()
+
+
 def classify_urgency(entry: dict) -> str:
-    """Classify an entry's urgency tier.
+    """Classify an entry's urgency tier, respecting effort level lead-time needs.
 
     Returns: "critical", "urgent", "upcoming", or "ready".
     """
-    dl_date, dl_type = get_deadline(entry)
+    dl_date, _ = get_deadline(entry)
 
     if not dl_date:
         # Rolling or TBA deadlines go to "ready"
@@ -52,11 +81,19 @@ def classify_urgency(entry: dict) -> str:
 
     if d < 0:
         return "critical"  # expired but still in pipeline
-    elif d <= 3:
+
+    effort = get_effort(entry)
+    thresholds = (
+        _URGENCY_THRESHOLDS.get("by_effort", {}).get(effort)
+        or _URGENCY_THRESHOLDS.get("default")
+        or {"critical_days": 3, "urgent_days": 7, "upcoming_days": 14}
+    )
+
+    if d <= thresholds["critical_days"]:
         return "critical"
-    elif d <= 7:
+    elif d <= thresholds["urgent_days"]:
         return "urgent"
-    elif d <= 14:
+    elif d <= thresholds["upcoming_days"]:
         return "upcoming"
     else:
         return "ready"
@@ -158,9 +195,9 @@ def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
         tiers[urgency].append(e)
 
     tier_labels = {
-        "critical": "CRITICAL (0-3 days)",
-        "urgent": "URGENT (4-7 days)",
-        "upcoming": f"UPCOMING (8-{days_ahead} days)",
+        "critical": "CRITICAL",
+        "urgent": "URGENT",
+        "upcoming": f"UPCOMING (within {days_ahead} days)",
         "ready": "READY (staged, rolling/30d+)",
     }
 
@@ -204,7 +241,7 @@ def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
 
                 # Suggest action
                 if status in ("qualified", "drafting"):
-                    lines.append(f"         needs: advance to staged")
+                    lines.append("         needs: advance to staged")
 
         lines.append("")
 
@@ -328,7 +365,7 @@ def run_execute(
             return
 
     # Import execution dependencies
-    from advance import can_advance, advance_entry
+    from advance import advance_entry, can_advance
     from preflight import check_entry
     from submit import generate_checklist
 
@@ -348,14 +385,11 @@ def run_execute(
         print(f"\n  Processing: {name}")
 
         # Step 1: Enrich
-        enriched = False
         if enrich_materials(filepath, e):
-            print(f"    + materials wired")
-            enriched = True
+            print("    + materials wired")
 
         if enrich_blocks(filepath, e):
-            print(f"    + blocks wired")
-            enriched = True
+            print("    + blocks wired")
 
         variant = find_matching_variant(eid)
         if not variant and e.get("track") in GRANT_TEMPLATE_TRACKS:
@@ -366,11 +400,9 @@ def run_execute(
             if not (isinstance(vids, dict) and vids):
                 if enrich_variant(filepath, e, variant):
                     print(f"    + variant wired: {variant}")
-                    enriched = True
 
         if enrich_portal_fields(filepath, e):
-            print(f"    + portal_fields populated")
-            enriched = True
+            print("    + portal_fields populated")
 
         # Step 2: Advance to staged if needed
         if status in ("qualified", "drafting") and can_advance(status, "staged"):
@@ -387,7 +419,7 @@ def run_execute(
                 for issue in issues:
                     print(f"      - {issue}")
             else:
-                print(f"    + preflight: READY")
+                print("    + preflight: READY")
 
             # Step 4: Generate checklist
             profile = load_profile(eid)

@@ -21,13 +21,18 @@ from datetime import date
 from pathlib import Path
 
 import yaml
-
 from pipeline_lib import (
-    BLOCKS_DIR, DRAFTS_DIR,
-    load_entries, load_entry_by_id, load_profile,
-    load_block, load_block_frontmatter,
-    strip_markdown, count_words, count_chars,
-    get_effort, ACTIONABLE_STATUSES, PIPELINE_DIR_ACTIVE,
+    ACTIONABLE_STATUSES,
+    DRAFTS_DIR,
+    count_chars,
+    count_words,
+    get_effort,
+    load_block,
+    load_block_frontmatter,
+    load_entries,
+    load_entry_by_id,
+    load_profile,
+    strip_markdown,
 )
 
 # Languages to filter from stats display (config/documentation noise)
@@ -317,7 +322,6 @@ def assemble_draft(
 
     name = entry.get("name", entry.get("id", "Unknown"))
     org = entry.get("target", {}).get("organization", "")
-    entry_id = entry.get("id", "?")
 
     parts.append(f"# Draft: {name}")
     parts.append(f"**Target:** {org}")
@@ -581,7 +585,7 @@ def draft_batch(status: str | None, effort: str | None, length: str, populate: b
         if populate and filepath:
             modified = populate_portal_fields(filepath, entry, profile)
             if modified:
-                print(f"        + portal_fields updated")
+                print("        + portal_fields updated")
 
     print(f"{'─' * 60}")
     print(f"Drafted: {drafted} | Skipped: {skipped} | Warnings: {warnings_total}")

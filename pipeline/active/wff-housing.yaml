@@ -1,7 +1,7 @@
 id: wff-housing
 name: WFF Housing Stability Grant
 track: grant
-status: drafting
+status: staged
 outcome: null
 target:
   organization: WFF / NYFA
@@ -52,7 +52,7 @@ submission:
 timeline:
   researched: '2026-02-14'
   qualified: '2026-02-16'
-  materials_ready: null
+  materials_ready: '2026-03-01'
   submitted: null
   acknowledged: null
   interview: null
@@ -71,4 +71,4 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $30,000 distributed over 3 years.
-last_touched: "2026-02-27"
+last_touched: "2026-03-01"

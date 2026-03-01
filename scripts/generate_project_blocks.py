@@ -706,7 +706,6 @@ def compute_related_projects(repo: dict) -> list[str]:
 
 def generate_block(repo: dict) -> str:
     """Generate complete block markdown for a repo."""
-    block_name = repo_to_block_name(repo["name"])
     readme_text = read_readme(repo)
     seed = read_seed(repo)
     intro = extract_intro_paragraph(readme_text) if readme_text else ""
@@ -835,7 +834,7 @@ def coverage_report(repos: list[dict]):
             to_generate += 1
             by_organ[organ]["new"] += 1
 
-    print(f"Coverage Report")
+    print("Coverage Report")
     print(f"{'='*60}")
     print(f"Total repos:      {total}")
     print(f"Skipped:          {skipped} (infrastructure/archive)")

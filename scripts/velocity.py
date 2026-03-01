@@ -15,9 +15,15 @@ from collections import Counter
 from datetime import date, timedelta
 
 from pipeline_lib import (
-    SIGNALS_DIR, STATUS_ORDER, ALL_PIPELINE_DIRS_WITH_POOL,
-    load_entries, parse_date, get_effort, get_deadline, days_until,
     ACTIONABLE_STATUSES,
+    ALL_PIPELINE_DIRS_WITH_POOL,
+    SIGNALS_DIR,
+    STATUS_ORDER,
+    days_until,
+    get_deadline,
+    get_effort,
+    load_entries,
+    parse_date,
 )
 
 PATTERNS_FILE = SIGNALS_DIR / "patterns.md"
@@ -124,21 +130,22 @@ def compute_velocity(entries: list[dict]) -> dict:
         track_counts[e.get("track", "unknown")] += 1
     metrics["track_distribution"] = dict(track_counts)
 
-    # --- Deadline pressure ---
-    upcoming = {"this_week": 0, "next_2_weeks": 0, "next_month": 0}
+    # --- Deadline pressure (exclusive buckets: 0-7, 8-14, 15-30) ---
+    upcoming = {"0-7d": 0, "8-14d": 0, "15-30d": 0}
     for e in entries:
         if e.get("status") not in ACTIONABLE_STATUSES:
             continue
         dl_date, dl_type = get_deadline(e)
-        if dl_date and dl_type in ("hard", "fixed"):
+        if dl_date and dl_type in ("hard", "fixed", "window"):
             d = days_until(dl_date)
             if 0 <= d <= 7:
-                upcoming["this_week"] += 1
-            elif 0 <= d <= 14:
-                upcoming["next_2_weeks"] += 1
-            elif 0 <= d <= 30:
-                upcoming["next_month"] += 1
+                upcoming["0-7d"] += 1
+            elif d <= 14:
+                upcoming["8-14d"] += 1
+            elif d <= 30:
+                upcoming["15-30d"] += 1
     metrics["deadline_pressure"] = upcoming
+    metrics["total_entries"] = len(entries)
 
     return metrics
 
@@ -194,7 +201,7 @@ def format_report(metrics: dict) -> str:
     funnel = metrics["funnel"]
     funnel_order = ["researched", "qualified", "materials_ready", "submitted",
                     "acknowledged", "outcome"]
-    total = max(funnel.get("researched", 0), 1)
+    total = max(metrics.get("total_entries", 0), funnel.get("researched", 0), 1)
     for stage in funnel_order:
         count = funnel.get(stage, 0)
         pct = count / total * 100 if total else 0
@@ -207,12 +214,12 @@ def format_report(metrics: dict) -> str:
         for outcome, count in sorted(metrics["outcomes"].items()):
             lines.append(f"- {outcome}: {count}")
 
-    # Deadline pressure
+    # Deadline pressure (exclusive buckets)
     lines.append("\n## Deadline Pressure\n")
     dp = metrics["deadline_pressure"]
-    lines.append(f"- This week: {dp['this_week']} hard deadlines")
-    lines.append(f"- Next 2 weeks: {dp['next_2_weeks']} hard deadlines")
-    lines.append(f"- Next month: {dp['next_month']} hard deadlines")
+    lines.append(f"- 0-7d: {dp['0-7d']} hard/window deadlines")
+    lines.append(f"- 8-14d: {dp['8-14d']} hard/window deadlines")
+    lines.append(f"- 15-30d: {dp['15-30d']} hard/window deadlines")
 
     # Hypotheses (keep from original)
     lines.append("\n## Hypotheses to Test\n")
@@ -262,7 +269,7 @@ def display_velocity(metrics: dict):
     # Funnel
     print("  Conversion funnel:")
     funnel = metrics["funnel"]
-    total = max(funnel.get("researched", 0), 1)
+    total = max(metrics.get("total_entries", 0), funnel.get("researched", 0), 1)
     for stage in ["researched", "qualified", "materials_ready", "submitted",
                   "acknowledged", "outcome"]:
         count = funnel.get(stage, 0)
@@ -270,10 +277,10 @@ def display_velocity(metrics: dict):
         print(f"    {stage:20s} {count:3d}  ({pct:.0f}%)")
     print()
 
-    # Deadline pressure
+    # Deadline pressure (exclusive buckets)
     dp = metrics["deadline_pressure"]
-    print(f"  Deadlines: {dp['this_week']} this week | "
-          f"{dp['next_2_weeks']} in 2 weeks | {dp['next_month']} in 30d")
+    print(f"  Deadlines: {dp['0-7d']} this week (0-7d) | "
+          f"{dp['8-14d']} next week (8-14d) | {dp['15-30d']} this month (15-30d)")
     print()
 
 

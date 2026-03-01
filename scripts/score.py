@@ -8,27 +8,50 @@ signals (profiles, blocks, portal fields, cross-pipeline history).
 """
 
 import argparse
+import json
 import sys
-from datetime import date, datetime
+from datetime import date
 from pathlib import Path
 
 import yaml
-
 from pipeline_lib import (
-    ALL_PIPELINE_DIRS,
     ALL_PIPELINE_DIRS_WITH_POOL,
+    BLOCKS_DIR,
     PIPELINE_DIR_ACTIVE,
     PIPELINE_DIR_RESEARCH_POOL,
-    BLOCKS_DIR,
-    load_entries as _load_entries_raw,
+    days_until,
     load_entry_by_id,
     load_profile,
-    parse_date, days_until,
-    update_yaml_field,
+    parse_date,
     update_last_touched,
+    update_yaml_field,
+)
+from pipeline_lib import (
+    load_entries as _load_entries_raw,
 )
 
-# Dimension weights (must sum to 1.0)
+# --- Market intelligence loader ---
+_INTEL_FILE = Path(__file__).resolve().parent.parent / "strategy" / "market-intelligence-2026.json"
+_MARKET_INTEL: dict | None = None
+
+
+def load_market_intelligence() -> dict:
+    """Load market-intelligence-2026.json once, return empty dict on failure."""
+    global _MARKET_INTEL
+    if _MARKET_INTEL is not None:
+        return _MARKET_INTEL
+    if _INTEL_FILE.exists():
+        try:
+            with open(_INTEL_FILE) as f:
+                _MARKET_INTEL = json.load(f)
+        except Exception:
+            _MARKET_INTEL = {}
+    else:
+        _MARKET_INTEL = {}
+    return _MARKET_INTEL
+
+
+# --- Dimension weights (must sum to 1.0)
 WEIGHTS = {
     "mission_alignment": 0.25,
     "evidence_match": 0.20,
@@ -58,8 +81,8 @@ SNAP_LIMIT = 20352
 MEDICAID_LIMIT = 21597
 ESSENTIAL_PLAN_LIMIT = 39125
 
-# Portal friction scores by portal type
-PORTAL_SCORES = {
+# Portal friction scores by portal type — loaded from market-intelligence-2026.json with fallback
+_PORTAL_SCORES_DEFAULT = {
     "email": 9,
     "custom": 6,
     "web": 6,
@@ -71,8 +94,22 @@ PORTAL_SCORES = {
     "slideroom": 4,
 }
 
+
+def get_portal_scores() -> dict:
+    """Load portal friction scores from market intel, falling back to defaults."""
+    intel = load_market_intelligence()
+    scores = intel.get("portal_friction_scores", {})
+    # Filter out metadata keys (non-int values)
+    result = {k: v for k, v in scores.items() if isinstance(v, int)}
+    return result if result else _PORTAL_SCORES_DEFAULT
+
+
+# Keep module-level alias for backward compatibility; scores loaded at call time via get_portal_scores()
+PORTAL_SCORES = _PORTAL_SCORES_DEFAULT
+
 # Strategic value by track (base estimates, individual overrides possible)
-STRATEGIC_BASE = {
+# Loaded from market-intelligence-2026.json if available, else hardcoded defaults.
+_STRATEGIC_BASE_DEFAULT = {
     "grant": 7,
     "prize": 8,
     "fellowship": 7,
@@ -84,51 +121,90 @@ STRATEGIC_BASE = {
     "consulting": 3,
 }
 
-# High-prestige organizations that get strategic_value boost
+
+def get_strategic_base() -> dict:
+    """Load strategic base values from market intel or fallback to defaults."""
+    intel = load_market_intelligence()
+    benchmarks = intel.get("track_benchmarks", {})
+    if not benchmarks:
+        return _STRATEGIC_BASE_DEFAULT
+
+    # Derive strategic base from acceptance rates: higher acceptance → lower scarcity → lower strategic value
+    # Scale: acceptance ~0.02 → 8-9 (very hard, high prestige), ~0.20 → 3-4 (accessible)
+    result = {}
+    for track, data in benchmarks.items():
+        rate = data.get("acceptance_rate") or data.get("cold_response_rate")
+        if rate is None:
+            result[track] = _STRATEGIC_BASE_DEFAULT.get(track, 5)
+        elif rate <= 0.02:
+            result[track] = 8
+        elif rate <= 0.04:
+            result[track] = 7
+        elif rate <= 0.06:
+            result[track] = 6
+        elif rate <= 0.10:
+            result[track] = 5
+        else:
+            result[track] = 4
+    # Fill any defaults not in market intel
+    for track, val in _STRATEGIC_BASE_DEFAULT.items():
+        if track not in result:
+            result[track] = val
+    return result
+
+
+STRATEGIC_BASE = _STRATEGIC_BASE_DEFAULT
+
+# High-prestige organizations — tiered by acceptance rate / selectivity.
+# Tier 1 (~1-2% acceptance): 10  Tier 2 (~3-5%): 9  Tier 3 (~5-10%): 8  Others: 7-5
 HIGH_PRESTIGE = {
+    # Tier 1 — extremely competitive (≤2% acceptance)
+    "Whiting Foundation": 10,
     "Creative Capital": 10,
+    # Tier 2 — highly competitive (≤5% acceptance)
     "Doris Duke Charitable Foundation": 9,
     "LACMA": 9,
-    "Whiting Foundation": 9,
     "Prix Ars Electronica": 9,
+    "Tulsa Artist Fellowship": 9,
+    "Rauschenberg Foundation": 9,
+    "Watermill Center": 9,
+    # Tier 3 — competitive (5-10% acceptance / very high prestige)
     "S+T+ARTS Prize": 8,
     "Google": 8,
     "Anthropic": 8,
     "Eyebeam": 8,
-    "Pioneer Works": 7,
-    "Rauschenberg Foundation": 8,
     "ZKM": 8,
-    "Headlands Center for the Arts": 7,
-    "NEW INC": 7,
-    "Lambda Literary": 6,
-    "Tulsa Artist Fellowship": 8,
-    "Processing Foundation": 6,
-    "Watermill Center": 7,
-    "Cohere": 6,
-    "Together AI": 5,
-    "Runway": 6,
-    "HuggingFace": 6,
-    "Hugging Face": 6,
     "Mistral": 7,
+    "ElevenLabs": 7,
     "Perplexity": 7,
     "Cursor": 7,
     "Anysphere": 7,
+    # Tier 4 — notable but more accessible
+    "Pioneer Works": 7,
+    "Headlands Center for the Arts": 7,
+    "NEW INC": 7,
+    "Cohere": 6,
+    "Runway": 6,
+    "HuggingFace": 6,
+    "Hugging Face": 6,
     "Replit": 6,
     "Vercel": 6,
     "Scale AI": 6,
-    "Weights & Biases": 5,
-    "Modal": 5,
-    "Replicate": 5,
     "GitLab": 6,
     "Twilio": 6,
     "MongoDB": 6,
-    "Elastic": 5,
     "Grafana Labs": 6,
     "Netlify": 6,
-    "PlanetScale": 5,
     "Airtable": 6,
+    "Lambda Literary": 6,
+    "Processing Foundation": 6,
+    "Together AI": 5,
+    "Weights & Biases": 5,
+    "Modal": 5,
+    "Replicate": 5,
+    "Elastic": 5,
+    "PlanetScale": 5,
     "Resend": 5,
-    "ElevenLabs": 7,
     "Neon": 5,
     "Warp": 5,
 }
@@ -583,8 +659,18 @@ def score_deadline_feasibility(entry: dict, explain: bool = False) -> int | tupl
     else:
         result = 9
 
+    # Materials-readiness bonus: fully-enriched entries are easier to submit on tight timelines
+    submission = entry.get("submission", {})
+    mat_bonus = False
+    if isinstance(submission, dict):
+        materials = submission.get("materials_attached") or []
+        if materials and result < 9:
+            result = min(9, result + 1)
+            mat_bonus = True
+
     if explain:
-        return result, f"{days_left}d left (date: {date_str}) -> {result}"
+        suffix = " + materials_ready (+1)" if mat_bonus else ""
+        return result, f"{days_left}d left (date: {date_str}){suffix} -> {result}"
     return result
 
 
@@ -666,11 +752,35 @@ def score_portal_friction(entry: dict, explain: bool = False) -> int | tuple[int
             return result, "target is not a dict -> default 6"
         return result
     portal = target.get("portal", "custom")
-    result = PORTAL_SCORES.get(portal, 6)
+    portal_scores = get_portal_scores()
+    result = portal_scores.get(portal, 6)
     if explain:
-        mapped = "mapped" if portal in PORTAL_SCORES else "default"
+        mapped = "mapped" if portal in portal_scores else "default"
         return result, f"portal={portal} -> {result} ({mapped})"
     return result
+
+
+def _get_effort_base_from_market(track: str) -> int:
+    """Map track's actual acceptance/response rate to effort_to_value base."""
+    _HARDCODED_FALLBACK = {
+        "emergency": 8, "writing": 7, "prize": 6, "grant": 5,
+        "fellowship": 5, "residency": 5, "program": 5, "consulting": 6, "job": 6,
+    }
+    intel = load_market_intelligence()
+    data = intel.get("track_benchmarks", {}).get(track, {})
+    rate = data.get("acceptance_rate") or data.get("cold_response_rate")
+    if rate is None:
+        return _HARDCODED_FALLBACK.get(track, 5)
+    if rate >= 0.15:
+        return 8   # emergency (0.20), writing (0.15)
+    elif rate >= 0.10:
+        return 7   # consulting (0.10)
+    elif rate >= 0.07:
+        return 6   # job (0.08)
+    elif rate >= 0.04:
+        return 5   # fellowship (0.04), residency (0.05)
+    else:
+        return 4   # grant (0.03), prize (0.02)
 
 
 def score_effort_to_value(entry: dict, explain: bool = False) -> int | tuple[int, str]:
@@ -682,22 +792,26 @@ def score_effort_to_value(entry: dict, explain: bool = False) -> int | tuple[int
     submission = entry.get("submission", {})
     blocks_count = len(submission.get("blocks_used", {}) or {}) if isinstance(submission, dict) else 0
 
-    # Higher blocks coverage = lower effort
-    coverage_bonus = min(blocks_count / 6, 1.0) * 2  # 0-2 bonus for block readiness
-
-    # Base by track
-    track_bases = {
-        "emergency": 8,  # low effort, high urgency
-        "writing": 7,    # moderate effort, direct value
-        "prize": 6,      # moderate effort, prestige value
-        "grant": 5,      # higher effort, high value
-        "fellowship": 5,
-        "residency": 5,
-        "program": 5,
-        "consulting": 6,
-        "job": 6,        # CLI-submittable jobs are moderate effort
+    # Dynamic denominator: use the expected block count for the entry's identity position.
+    # This ensures a fully-enriched entry always reaches the maximum coverage_bonus.
+    fit = entry.get("fit", {})
+    position = fit.get("identity_position", "") if isinstance(fit, dict) else ""
+    # Count dedicated job blocks for this position (identity + framing + projects + methodology + evidence...)
+    # Approximate: job positions need ~5 blocks, creative/community need ~6
+    _POSITION_EXPECTED_BLOCKS = {
+        "independent-engineer": 5,
+        "creative-technologist": 6,
+        "systems-artist": 6,
+        "educator": 5,
+        "community-practitioner": 5,
     }
-    base = track_bases.get(track, 5)
+    expected_blocks = _POSITION_EXPECTED_BLOCKS.get(position, 6)
+
+    # Higher blocks coverage = lower effort (0-2 bonus)
+    coverage_bonus = min(blocks_count / expected_blocks, 1.0) * 2
+
+    # Base from market-derived acceptance/response rate
+    base = _get_effort_base_from_market(track)
     explain_parts = [f"track={track} base={base}"]
 
     # Value adjustment
@@ -712,13 +826,31 @@ def score_effort_to_value(entry: dict, explain: bool = False) -> int | tuple[int
 
     score = base + coverage_bonus
 
-    # Location accessibility penalty: international-only roles require
-    # visa sponsorship and relocation, significantly increasing effort
+    # Channel adjustment for job entries
+    if track == "job":
+        channel = (entry.get("conversion") or {}).get("channel", "direct") or "direct"
+        channel_adj = {
+            "referral": 2,
+            "indeed": 1,
+            "company_career_page": 1,
+            "linkedin_easy_apply": -2,
+            "linkedin": -1,
+        }.get(channel, 0)
+        if channel_adj:
+            score += channel_adj
+            sign = "+" if channel_adj > 0 else ""
+            explain_parts.append(f"channel={channel} ({sign}{channel_adj})")
+
+    # Location accessibility penalty: international roles require visa/relocation (-3);
+    # remote-global roles require no relocation but carry timezone/legal overhead (-1).
     target = entry.get("target", {})
     location_class = target.get("location_class", "") if isinstance(target, dict) else ""
     if location_class == "international":
         score -= 3
         explain_parts.append("international (-3)")
+    elif location_class == "remote-global":
+        score -= 1
+        explain_parts.append("remote-global (-1)")
 
     result = max(1, min(10, round(score)))
 
@@ -743,9 +875,10 @@ def score_strategic_value(entry: dict, explain: bool = False) -> int | tuple[int
 
     # Fall back to track-based estimate
     track = entry.get("track", "")
-    result = STRATEGIC_BASE.get(track, 5)
+    strategic_base = get_strategic_base()
+    result = strategic_base.get(track, 5)
     if explain:
-        source = "track base" if track in STRATEGIC_BASE else "default"
+        source = "track base" if track in strategic_base else "default"
         return result, f'org "{org}" not in prestige list, track={track} -> {result} ({source})'
     return result
 
@@ -770,6 +903,29 @@ def compute_human_dimensions(
         blocks_count = len(submission.get("blocks_used", {}) or {}) if isinstance(submission, dict) else 0
         if blocks_count >= 5:
             base["evidence_match"] = min(10, base["evidence_match"] + 1)
+
+        # Hot skills signal: cross-match against blocks_used keys, distilled keywords,
+        # and entry tags — not title keywords, which rarely contain skill names.
+        intel = load_market_intelligence()
+        hot_skills = intel.get("skills_signals", {}).get("hot_2026", [])
+        hot_match_count = 0
+        if hot_skills:
+            submission = entry.get("submission", {})
+            block_keys = " ".join(
+                (submission.get("blocks_used") or {}).keys()
+            ).lower() if isinstance(submission, dict) else ""
+            keywords_list = submission.get("keywords", []) if isinstance(submission, dict) else []
+            keywords_str = " ".join(str(k).lower() for k in (keywords_list or []))
+            job_tags = " ".join(t.lower() for t in (entry.get("tags") or []))
+            hot_match_count = sum(
+                1 for skill in hot_skills
+                if skill.lower() in block_keys
+                or skill.lower() in keywords_str
+                or skill.lower() in job_tags
+            )
+            if hot_match_count >= 1:
+                base["evidence_match"] = min(10, base["evidence_match"] + 1)
+
         if explain:
             name = (entry.get("name") or "").lower()
             tier_name = "no match"
@@ -782,7 +938,10 @@ def compute_human_dimensions(
                     break
             explanations = {}
             for k, v in base.items():
-                explanations[k] = f"auto-sourced, {tier_name} -> {v}"
+                suffix = ""
+                if k == "evidence_match" and hot_match_count >= 1:
+                    suffix = f" + hot_skills_match={hot_match_count}"
+                explanations[k] = f"auto-sourced, {tier_name} -> {v}{suffix}"
             return base, explanations
         return base
 
@@ -940,6 +1099,7 @@ def update_entry_file(filepath: Path, dimensions: dict[str, int], composite: flo
     the result is still valid YAML after each modification.
     """
     import re
+
     from pipeline_lib import update_yaml_field
 
     with open(filepath) as f:
@@ -1170,7 +1330,7 @@ def run_auto_qualify(dry_run: bool = False, yes: bool = False,
     print(f"\n{'=' * 50}")
     if dry_run:
         print(f"Would auto-qualify {moved} entries (dry run)")
-        print(f"Run with --yes to execute")
+        print("Run with --yes to execute")
     else:
         print(f"Auto-qualified {moved} entries to active/")
 
@@ -1216,7 +1376,6 @@ def explain_entry(entry: dict, all_entries: list[dict] | None = None) -> str:
     rubric = "JOB" if track == "job" else "CREATIVE"
     weights = get_weights(track)
     fit = entry.get("fit", {}) if isinstance(entry.get("fit"), dict) else {}
-    tags = entry.get("tags") or []
 
     lines = []
 
@@ -1374,7 +1533,7 @@ def main():
     include_pool = args.all and not args.target
     entries = load_entries(args.target if args.target else None, include_pool=include_pool)
     if not entries:
-        print(f"No entries found.", file=sys.stderr)
+        print("No entries found.", file=sys.stderr)
         sys.exit(1)
 
     # Pre-load all raw entries for cross-pipeline signals (track experience)
@@ -1437,7 +1596,7 @@ def main():
         significant = [(eid, old, new, d) for eid, old, new, d in changes
                         if old is not None and abs(new - old) >= 1.0]
         if significant:
-            print(f"\nSignificant changes (>= 1.0 delta):")
+            print("\nSignificant changes (>= 1.0 delta):")
             for eid, old, new, _ in sorted(significant, key=lambda x: abs(x[2] - x[1]), reverse=True):
                 print(f"  {eid:<40s} {old} -> {new} ({new - old:+.1f})")
 

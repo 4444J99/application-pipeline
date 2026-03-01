@@ -4,11 +4,15 @@
 import argparse
 import sys
 from datetime import datetime, timedelta
-from pathlib import Path
 
 from pipeline_lib import (
-    REPO_ROOT, STATUS_ORDER, ALL_PIPELINE_DIRS, ALL_PIPELINE_DIRS_WITH_POOL,
-    load_entries, parse_datetime, format_amount,
+    ALL_PIPELINE_DIRS,
+    ALL_PIPELINE_DIRS_WITH_POOL,
+    REPO_ROOT,
+    STATUS_ORDER,
+    format_amount,
+    load_entries,
+    parse_datetime,
 )
 
 
@@ -199,7 +203,7 @@ def print_benefits_check(entries: list[dict]):
             print(f"      Cliff note: {cliff_note}")
 
     print(f"\n  Total in-flight (USD): ${total_usd:,}")
-    print(f"\n  Threshold analysis (if ALL accepted):")
+    print("\n  Threshold analysis (if ALL accepted):")
     for key, info in BENEFITS_THRESHOLDS.items():
         limit = info["limit"]
         program = info["program"]

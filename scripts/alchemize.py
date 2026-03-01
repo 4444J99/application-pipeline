@@ -17,7 +17,6 @@ Usage:
 """
 
 import argparse
-import json
 import re
 import shutil
 import subprocess
@@ -25,35 +24,30 @@ import sys
 from datetime import date
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urljoin, urlparse
 
 import yaml
-
+from enrich import RESUME_BY_IDENTITY, select_resume
+from greenhouse_submit import (
+    ANSWERS_DIR,
+    STANDARD_FIELD_NAMES,
+    fetch_job_data,
+    field_type_label,
+    get_custom_questions,
+    parse_greenhouse_url,
+    resolve_cover_letter,
+)
 from pipeline_lib import (
     ACTIONABLE_STATUSES,
     BLOCKS_DIR,
     MATERIALS_DIR,
+    PIPELINE_DIR_ACTIVE,
     REPO_ROOT,
     VARIANTS_DIR,
+    load_block_index,
     load_entries,
     load_entry_by_id,
     load_profile,
-    load_block_index,
-    strip_markdown,
-    count_words,
-    PIPELINE_DIR_ACTIVE,
-    PROFILE_ID_MAP,
 )
-from greenhouse_submit import (
-    fetch_job_data,
-    parse_greenhouse_url,
-    resolve_cover_letter,
-    get_custom_questions,
-    field_type_label,
-    STANDARD_FIELD_NAMES,
-    ANSWERS_DIR,
-)
-from enrich import RESUME_BY_IDENTITY, select_resume
 
 WORK_DIR = Path(__file__).resolve().parent / ".alchemize-work"
 STRATEGY_DIR = REPO_ROOT / "strategy"
@@ -173,8 +167,8 @@ def extract_text_from_html(html: str) -> str:
 
 def fetch_page_text(url: str) -> str | None:
     """Fetch a URL and extract readable text. Returns None on failure."""
-    import urllib.request
     import urllib.error
+    import urllib.request
 
     try:
         req = urllib.request.Request(
@@ -256,7 +250,7 @@ def phase_intake(entry: dict, no_web: bool = False) -> dict | None:
     print(f"  Fetching job data for {board_token}/{job_id}...")
     job_data = fetch_job_data(board_token, job_id)
     if not job_data:
-        print(f"  Warning: Could not fetch job data from Greenhouse API")
+        print("  Warning: Could not fetch job data from Greenhouse API")
         return {"_board_token": board_token, "_job_id": job_id}
 
     job_data["_board_token"] = board_token
@@ -320,7 +314,6 @@ def phase_research(entry: dict, job_data: dict | None, no_web: bool = False) -> 
                 sections.append(f"**Departments:** {', '.join(dept_names)}\n")
 
         content_html = job_data.get("content", "")
-        page_content = job_data.get("content", "") if is_greenhouse else ""
         general_content = job_data.get("content", "") if not is_greenhouse else ""
 
         if is_greenhouse and content_html:
@@ -862,7 +855,7 @@ def write_greenhouse_answers(entry_id: str, answers_text: str) -> Path | None:
     try:
         answers = yaml.safe_load(yaml_text)
         if not isinstance(answers, dict):
-            print(f"  Warning: Could not parse GREENHOUSE_ANSWERS as YAML dict")
+            print("  Warning: Could not parse GREENHOUSE_ANSWERS as YAML dict")
             return None
     except yaml.YAMLError as e:
         print(f"  Warning: YAML parse error in GREENHOUSE_ANSWERS: {e}")
@@ -1006,7 +999,7 @@ def phase_integrate(entry_id: str, work_dir: Path) -> bool:
             print(f"  Updated pipeline YAML for {entry_id}")
             log_lines.append("Pipeline YAML updated")
         else:
-            print(f"  Warning: Could not update pipeline YAML")
+            print("  Warning: Could not update pipeline YAML")
 
     # Write integration log
     log_path = work_dir / "integration.log"
@@ -1083,7 +1076,7 @@ def process_entry(
     print("\nPhase 1: INTAKE")
     job_data = phase_intake(entry, no_web=no_web)
     if phase == "intake":
-        print(f"\n  Stopped after intake phase.")
+        print("\n  Stopped after intake phase.")
         return job_data is not None
 
     # Phase 2: RESEARCH
@@ -1098,7 +1091,7 @@ def process_entry(
         research_content = research_path.read_text()
 
     if phase == "research":
-        print(f"\n  Stopped after research phase.")
+        print("\n  Stopped after research phase.")
         print(f"  Review: {research_path}")
         return True
 
@@ -1115,7 +1108,7 @@ def process_entry(
         mapping_content = mapping_path.read_text()
 
     if phase == "map":
-        print(f"\n  Stopped after map phase.")
+        print("\n  Stopped after map phase.")
         print(f"  Review: {mapping_path}")
         return True
 

@@ -19,23 +19,21 @@ import re
 import sys
 from pathlib import Path
 
-import yaml
-
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
+    CURRENT_BATCH,
     MATERIALS_DIR,
+    PIPELINE_DIR_ACTIVE,
     REPO_ROOT,
     VARIANTS_DIR,
     load_entries,
     load_entry_by_id,
-    PIPELINE_DIR_ACTIVE,
     update_last_touched,
 )
 
 WORK_DIR = Path(__file__).resolve().parent / ".alchemize-work"
 RESUMES_DIR = MATERIALS_DIR / "resumes"
-CURRENT_BATCH = "batch-03"
 
 BASE_RESUME_BY_IDENTITY = {
     "independent-engineer": RESUMES_DIR / "base" / "independent-engineer-resume.html",
@@ -516,12 +514,12 @@ def main():
         results.append((eid, True))
 
     print(f"\nGenerated {len(results)} resume prompt(s).")
-    print(f"\nNext steps:")
-    print(f"  1. Run each prompt through Claude to get customized sections")
-    print(f"  2. Save output to .alchemize-work/<entry-id>/resume-output.md")
-    print(f"  3. Run: python scripts/tailor_resume.py --batch --integrate")
-    print(f"  4. Run: python scripts/build_resumes.py  (HTML → PDF)")
-    print(f"  5. Run: python scripts/tailor_resume.py --batch --wire")
+    print("\nNext steps:")
+    print("  1. Run each prompt through Claude to get customized sections")
+    print("  2. Save output to .alchemize-work/<entry-id>/resume-output.md")
+    print("  3. Run: python scripts/tailor_resume.py --batch --integrate")
+    print("  4. Run: python scripts/build_resumes.py  (HTML → PDF)")
+    print("  5. Run: python scripts/tailor_resume.py --batch --wire")
 
 
 if __name__ == "__main__":

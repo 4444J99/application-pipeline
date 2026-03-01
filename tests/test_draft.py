@@ -6,13 +6,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from draft import (
-    parse_submission_format,
-    get_profile_content,
     assemble_draft,
     build_portal_fields,
+    get_profile_content,
+    parse_submission_format,
 )
-from pipeline_lib import load_profile, PROFILES_DIR
-
+from pipeline_lib import PROFILES_DIR, load_profile
 
 # --- parse_submission_format ---
 
