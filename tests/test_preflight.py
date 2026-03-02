@@ -124,12 +124,12 @@ def test_check_entry_all_ok():
 
 
 def test_check_entry_flags_base_resume():
-    """Base resume is a warning (advisory), not a blocking error."""
+    """Base resume is now a CRITICAL error (blocking submission)."""
     entry = _make_entry()
     entry["submission"]["materials_attached"] = ["resumes/base/multimedia-specialist.pdf"]
     errors, warnings = check_entry(entry)
-    assert any("base resume" in i.lower() for i in warnings)
-    assert not any("base resume" in i.lower() for i in errors)
+    assert any("base resume" in i.lower() for i in errors)
+    assert any("critical" in i.lower() for i in errors)
 
 
 def test_check_entry_no_flag_for_tailored_resume():

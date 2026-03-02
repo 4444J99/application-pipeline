@@ -30,17 +30,17 @@ mcp = FastMCP("application-pipeline")
 
 
 @mcp.tool()
-def pipeline_score(target_id: str, auto_qualify: bool = False) -> str:
+def pipeline_score(entry_id: str, auto_qualify: bool = False) -> str:
     """Score a single entry or auto-qualify batch.
     
     Args:
-        target_id: Entry ID to score
+        entry_id: Entry ID to score
         auto_qualify: If true, batch-advance research entries >= 7.0
         
     Returns:
         JSON result with status, entry_id, scores, and optional error
     """
-    result = score_entry(target_id=target_id, auto_qualify=auto_qualify, dry_run=True)
+    result = score_entry(entry_id=entry_id, auto_qualify=auto_qualify, dry_run=True)
     
     return json.dumps({
         "status": result.status.value,

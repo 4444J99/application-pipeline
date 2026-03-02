@@ -1,4 +1,5 @@
 import pytest
+import json
 import sys
 import os
 from pathlib import Path
@@ -6,48 +7,50 @@ from pathlib import Path
 # Ensure scripts dir is in path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../scripts')))
 
-from mcp_server import pipeline_score, pipeline_advance, pipeline_draft, pipeline_status
+from mcp_server import pipeline_score, pipeline_advance, pipeline_draft, pipeline_compose, pipeline_validate
 
-def test_pipeline_score_tool(mocker):
-    """Verify pipeline_score tool intercepts output and calls score_main."""
-    mock_main = mocker.patch("mcp_server.score_main")
-    def side_effect():
-        print("Score output")
-    mock_main.side_effect = side_effect
-    
-    result = pipeline_score("test-target", auto_qualify=True)
-    assert "Score output" in result
-    mock_main.assert_called_once()
 
-def test_pipeline_advance_tool(mocker):
-    """Verify pipeline_advance tool intercepts output and calls advance_main."""
-    mock_main = mocker.patch("mcp_server.advance_main")
-    def side_effect():
-        print("Advance output")
-    mock_main.side_effect = side_effect
-    
-    result = pipeline_advance("test-target", to_status="staged")
-    assert "Advance output" in result
-    mock_main.assert_called_once()
+def test_pipeline_score_tool():
+    """Verify pipeline_score returns JSON result."""
+    result = pipeline_score("test-entry")
+    data = json.loads(result)
+    assert "status" in data
+    assert "entry_id" in data
+    assert data["entry_id"] == "test-entry"
 
-def test_pipeline_draft_tool(mocker):
-    """Verify pipeline_draft tool intercepts output and calls draft_main."""
-    mock_main = mocker.patch("mcp_server.draft_main")
-    def side_effect():
-        print("Draft output")
-    mock_main.side_effect = side_effect
-    
-    result = pipeline_draft("test-target")
-    assert "Draft output" in result
-    mock_main.assert_called_once()
 
-def test_pipeline_status_tool(mocker):
-    """Verify pipeline_status tool calls print_summary and print_upcoming."""
-    mock_summary = mocker.patch("mcp_server.print_summary")
-    mock_upcoming = mocker.patch("mcp_server.print_upcoming")
-    mock_load = mocker.patch("pipeline_lib.load_entries")
-    mock_load.return_value = [{"id": "test"}]
-    
-    pipeline_status(upcoming_days=14)
-    mock_summary.assert_called_once_with([{"id": "test"}])
-    mock_upcoming.assert_called_once_with([{"id": "test"}], 14)
+def test_pipeline_advance_tool():
+    """Verify pipeline_advance returns JSON result."""
+    result = pipeline_advance("test-entry", to_status="staged")
+    data = json.loads(result)
+    assert "status" in data
+    assert "entry_id" in data
+    assert data["entry_id"] == "test-entry"
+
+
+def test_pipeline_draft_tool():
+    """Verify pipeline_draft returns JSON result."""
+    result = pipeline_draft("test-entry")
+    data = json.loads(result)
+    assert "status" in data
+    assert "entry_id" in data
+    assert data["entry_id"] == "test-entry"
+
+
+def test_pipeline_compose_tool():
+    """Verify pipeline_compose returns JSON result."""
+    result = pipeline_compose("test-entry")
+    data = json.loads(result)
+    assert "status" in data
+    assert "entry_id" in data
+    assert data["entry_id"] == "test-entry"
+
+
+def test_pipeline_validate_tool():
+    """Verify pipeline_validate returns JSON result."""
+    result = pipeline_validate("test-entry")
+    data = json.loads(result)
+    assert "status" in data
+    assert "entry_id" in data
+    assert "is_valid" in data
+
