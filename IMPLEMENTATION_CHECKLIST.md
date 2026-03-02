@@ -1,0 +1,537 @@
+# Implementation Checklist: Evaluation-to-Growth Roadmap
+
+**Status Tracking:** Use checkboxes below. Update weekly.
+
+---
+
+## PHASE 1: Foundation (Weeks 1-2)
+
+### 1.1 API Layer Refactoring
+- [ ] Create `scripts/pipeline_api.py` with clean function signatures
+  - [ ] `score_entry(entry_id: str, auto_qualify: bool = False) -> ScoreResult`
+  - [ ] `advance_entry(entry_id: str, to_status: str = None) -> AdvanceResult`
+  - [ ] `draft_entry(entry_id: str, profile: bool = False) -> DraftResult`
+  - [ ] `compose_entry(entry_id: str, snapshot: bool = False) -> ComposeResult`
+  - [ ] `validate_entry(entry_id: str) -> ValidationResult`
+- [ ] Refactor `scripts/cli.py` to import from pipeline_api instead of script modules
+  - [ ] Remove sys.argv manipulation
+  - [ ] Update all command handlers to call API functions
+  - [ ] Test that CLI still works (CliRunner tests)
+- [ ] Refactor `scripts/mcp_server.py` to use pipeline_api
+  - [ ] Remove redirect_stdout hacks
+  - [ ] Return structured objects (JSON-serializable)
+  - [ ] Add proper error handling
+
+### 1.2 Integration Testing
+- [ ] Create `tests/test_api_integration.py`
+  - [ ] Test score_entry with real pipeline YAML
+  - [ ] Test advance_entry state transitions
+  - [ ] Test draft_entry block composition
+  - [ ] Test validate_entry catches errors
+- [ ] Create `tests/test_cli_integration.py`
+  - [ ] Test CLI commands against real pipeline data (dry-run)
+  - [ ] Test --help output
+  - [ ] Test error handling (missing entry, invalid status)
+- [ ] Run all tests: `pytest tests/ -v` and capture result
+  - [ ] Document actual test count (was claimed 972)
+  - [ ] Add test count to CI/README
+
+### 1.3 Documentation Updates
+- [ ] Update `CLAUDE.md`
+  - [ ] Add CLI section (new tool, how to use)
+  - [ ] Add MCP Server section (setup, integration, examples)
+  - [ ] Add "CLI vs. Raw Scripts" comparison table
+  - [ ] Add "Migration Guide" (how to transition from raw scripts to CLI)
+  - [ ] Update Dependencies section with new packages
+  - [ ] Update Quick Commands table if changed
+- [ ] Update `README.md`
+  - [ ] Add link to CLAUDE.md for detailed reference
+  - [ ] Add "Quick Start" CLI example
+  - [ ] Remove any outdated script invocation examples
+- [ ] Create `docs/architecture-api-layer.md`
+  - [ ] Explain why API layer (testability, reusability)
+  - [ ] Document pipeline_api module structure
+  - [ ] Show before/after examples (sys.argv vs. function calls)
+
+### 1.4 Validation & Commit
+- [ ] Ensure all tests pass: `pytest tests/ -v`
+- [ ] Lint code: `ruff check scripts/ --fix`
+- [ ] Manual smoke test: CLI commands still work
+  - [ ] `python scripts/run.py standup`
+  - [ ] `python scripts/cli.py status`
+  - [ ] MCP server start (test connection)
+- [ ] Commit with message:
+  ```
+  feat: refactor CLI/MCP to use clean API layer
+
+  Problem: CLI and MCP server wrap scripts using sys.argv manipulation and
+  redirect_stdout, creating tight coupling and hard-to-test code.
+  
+  Solution: Extract clean functions into pipeline_api.py (score_entry,
+  advance_entry, draft_entry, etc.). Update cli.py and mcp_server.py to
+  call API functions instead of manipulating sys.argv.
+  
+  Benefits: Testable, reusable, enables agentic execution without coupling
+  to script internals. Integration tests now possible with real data.
+  ```
+
+---
+
+## PHASE 2: Validation & Enforcement (Weeks 3-4)
+
+### 2.1 Resume Origin Validation
+- [ ] Add resume path check to `scripts/submit.py`
+  ```python
+  resume_path = entry['submission'].get('resume_path', '')
+  if 'base/' in resume_path or resume_path.startswith('/base'):
+      raise ValueError(f"ERROR: Base resume detected in {entry_id}. "
+                      f"Use batch-NN version instead: {resume_path}")
+  ```
+- [ ] Add resume existence + format check
+  ```python
+  if not Path(resume_path).exists():
+      raise ValueError(f"Resume file not found: {resume_path}")
+  if not resume_path.endswith('.pdf'):
+      raise ValueError(f"Resume must be PDF: {resume_path}")
+  ```
+- [ ] Add resume validation to `scripts/preflight.py`
+  - [ ] Check resume exists
+  - [ ] Check resume path is from current batch (CURRENT_RESUME_BATCH)
+  - [ ] Check resume is 1 page (if PDF info available)
+- [ ] Add test: `tests/test_resume_validation.py`
+  - [ ] Test that base/ resumes are rejected
+  - [ ] Test that missing resumes are caught
+  - [ ] Test that valid batch resumes pass
+
+### 2.2 State Query Functions
+- [ ] Add to `scripts/pipeline_lib.py`
+  ```python
+  def is_actionable(entry: dict) -> bool:
+      """Return True if entry status is actionable (research, qualified, drafting, staged)."""
+      return entry.get('status') in ['research', 'qualified', 'drafting', 'staged']
+  
+  def is_deferred(entry: dict) -> bool:
+      """Return True if entry has deferred status."""
+      return entry.get('status') == 'deferred' and 'deferral' in entry
+  
+  def can_advance(entry: dict, target_status: str) -> tuple[bool, str]:
+      """Check if entry can advance to target_status; return (can_advance, reason)."""
+      # Implement state machine logic
+  ```
+- [ ] Update `scripts/standup.py` to use state queries
+  - [ ] `for entry in entries if is_actionable(entry): # show these`
+  - [ ] `for entry in entries if is_deferred(entry): # show deferred section`
+- [ ] Update `scripts/campaign.py` to use state queries
+- [ ] Update `scripts/advance.py` to use can_advance()
+- [ ] Add tests: `tests/test_state_queries.py`
+
+### 2.3 Scoring Rubric as Executable
+- [ ] Create `strategy/scoring-rubric.yaml`
+  ```yaml
+  version: "1.0"
+  dimensions:
+    - name: "relevance"
+      weight: 0.15
+      description: "How well the role matches identity position"
+    - name: "fit_metrics"
+      weight: 0.15
+      description: "Score/tier/size alignment"
+    # ... 6 more dimensions
+  
+  thresholds:
+    auto_qualify_min: 7.0
+    auto_qualify_max: 10.0
+    tier1_cutoff: 8.5
+    tier2_cutoff: 7.0
+    tier3_cutoff: 5.0
+  
+  weighting_method: "normalized_sum"  # or "weighted_average"
+  ```
+- [ ] Update `scripts/score.py` to read from rubric.yaml
+  ```python
+  RUBRIC = load_rubric("strategy/scoring-rubric.yaml")
+  # Use RUBRIC.thresholds.auto_qualify_min instead of hardcoded 7.0
+  ```
+- [ ] Add CI validation: `scripts/validate_rubric.py`
+  - [ ] Check rubric.yaml dimensions match score.py implementation
+  - [ ] Check weights sum to 1.0 (or appropriate value)
+  - [ ] Check all thresholds are in range [0, 10]
+- [ ] Commit rubric to git (source of truth, not docs)
+- [ ] Update CLAUDE.md strategy section to reference scoring-rubric.yaml
+
+### 2.4 ID Mapping Audit
+- [ ] Update `scripts/validate.py` to check ID mappings
+  ```python
+  def validate_id_mappings():
+      """Ensure PROFILE_ID_MAP and LEGACY_ID_MAP are in sync with actual files."""
+      for entry_id in load_all_entry_ids():
+          # Check that profile/legacy files exist
+          # Check maps are consistent
+  ```
+- [ ] Auto-generate ID mappings from filesystem (not hardcoded)
+  ```python
+  def generate_id_mappings():
+      """Scan targets/profiles/ and scripts/legacy-submission/ to build maps."""
+  ```
+- [ ] Add CI check: validate ID mappings before merge
+- [ ] Test: `tests/test_id_mappings.py`
+  - [ ] All entries in pipeline/ have corresponding profile or legacy script
+  - [ ] No orphaned profiles/legacy scripts
+  - [ ] Maps are consistent
+
+### 2.5 Validation & Commit
+- [ ] All new validations pass: `pytest tests/ -v`
+- [ ] Manual test: try submitting an entry with base/ resume (should fail)
+- [ ] Manual test: try advancing entry in wrong state (should fail)
+- [ ] Commit with message:
+  ```
+  feat: add validation gates for resume, state, and ID mappings
+
+  Problem: Resume origin not enforced (base/ can slip through); entry state
+  transitions not consistently validated; ID mapping drifts cause orphaned entries.
+
+  Solution: Add resume_path validation in submit.py/preflight.py; implement
+  state query functions (is_actionable, is_deferred); make scoring rubric
+  executable (YAML); auto-generate ID mappings from filesystem.
+
+  Impact: Prevents common errors (stale resumes, invalid state transitions,
+  orphaned entries). All validations happen before write operations.
+  ```
+
+---
+
+## PHASE 3: Automation (Weeks 5-6)
+
+### 3.1 Deferred Entry Automation
+- [ ] Create `scripts/check_deferred.py`
+  ```python
+  def check_deferred(alert_mode=False):
+      """List deferred entries; flag those ready to re-activate."""
+      deferred = load_entries(status='deferred')
+      for entry in deferred:
+          resume_date = entry.get('deferral', {}).get('resume_date')
+          if resume_date and parse_date(resume_date) <= today():
+              print(f"READY TO RE-ACTIVATE: {entry_id}")
+              if alert_mode:
+                  send_alert(f"Entry {entry_id} ready to re-activate")
+  ```
+- [ ] Add to `scripts/standup.py` --section deferred
+  ```
+  ## DEFERRED ENTRIES (4 total)
+  - entry-a (resume_date: 2026-03-15): OVERDUE for re-activation
+  - entry-b (resume_date: 2026-03-20): 18 days until re-activation
+  ```
+- [ ] Create cron job script: `scripts/daily_checks.sh`
+  ```bash
+  #!/bin/bash
+  # Run daily at 6 AM
+  python scripts/check_deferred.py --alert
+  python scripts/hygiene.py --auto-expire --yes
+  python scripts/standup.py --log
+  ```
+- [ ] Document in CLAUDE.md: "Daily Maintenance" section
+- [ ] Test: `tests/test_deferred_automation.py`
+
+### 3.2 Backup & Rollback Protocol
+- [ ] Create `scripts/backup_pipeline.py`
+  ```python
+  def backup_pipeline():
+      """Create dated backup: pipeline-backup-YYYYMMDD.tar.gz"""
+      timestamp = datetime.now().strftime('%Y%m%d')
+      tar_path = f"pipeline-backup-{timestamp}.tar.gz"
+      subprocess.run(['tar', 'czf', tar_path, 'pipeline/'])
+      return tar_path
+  ```
+- [ ] Create `scripts/restore_pipeline.py`
+  ```python
+  def restore_pipeline(backup_path):
+      """Restore pipeline from backup; git commit the restoration."""
+      subprocess.run(['tar', 'xzf', backup_path])
+      subprocess.run(['git', 'add', 'pipeline/'])
+      subprocess.run(['git', 'commit', '-m', f'restore: pipeline from {backup_path}'])
+  ```
+- [ ] Add cron job: weekly backup
+  ```bash
+  # Sunday at 2 AM
+  0 2 * * 0 cd /path/to/pipeline && python scripts/backup_pipeline.py
+  ```
+- [ ] Add cleanup: remove backups older than 90 days
+- [ ] Document in docs/: "Pipeline Recovery Guide"
+  - [ ] How to restore from backup
+  - [ ] How to inspect backup contents
+  - [ ] When to use backup vs. git revert
+
+### 3.3 Batch Resume Versioning
+- [ ] Define `CURRENT_RESUME_BATCH` in `scripts/pipeline_lib.py`
+  ```python
+  CURRENT_RESUME_BATCH = "batch-03"  # Update when new batch created
+  ```
+- [ ] Create `scripts/upgrade_resumes.py`
+  ```python
+  def upgrade_resumes(to_batch, dry_run=True):
+      """Update all entries to use new batch version."""
+      for entry in load_entries():
+          old_batch = extract_batch(entry['submission']['resume_path'])
+          new_path = entry['submission']['resume_path'].replace(old_batch, to_batch)
+          if dry_run:
+              print(f"Would update: {entry_id} {old_batch} -> {to_batch}")
+          else:
+              entry['submission']['resume_path'] = new_path
+              save_entry(entry)
+  ```
+- [ ] Add check to `scripts/compose.py`, `scripts/draft.py`, `scripts/enrich.py`
+  - [ ] If resume_path uses old batch, warn user and suggest upgrade
+- [ ] Add to `scripts/check_metrics.py`: flag resumes older than 30 days
+- [ ] Test: `tests/test_resume_versioning.py`
+
+### 3.4 Signal Freshness Checks
+- [ ] Add to `scripts/standup.py`
+  ```python
+  def check_signal_freshness():
+      """Warn if signal files are stale."""
+      signals = {
+          'signals/conversion-log.yaml': 1,  # max 1 day old
+          'signals/hypotheses.yaml': 3,       # max 3 days old
+          'signals/patterns.md': 7,           # max 7 days old
+      }
+      for signal_file, max_age_days in signals.items():
+          mtime = Path(signal_file).stat().st_mtime
+          age_days = (time.time() - mtime) / 86400
+          if age_days > max_age_days:
+              print(f"⚠️ STALE: {signal_file} ({age_days:.1f} days old)")
+  ```
+- [ ] Call from standup output (top of report)
+
+### 3.5 Validation & Commit
+- [ ] All automation scripts tested: `pytest tests/test_deferred_automation.py -v`
+- [ ] Manual test: verify check_deferred.py finds overdue entries
+- [ ] Manual test: verify backup script creates tar.gz; restore works
+- [ ] Manual test: verify upgrade_resumes.py --dry-run shows correct updates
+- [ ] Commit:
+  ```
+  feat: add automation for deferred entries, backups, and resume versioning
+
+  Problem: Deferred entries can be forgotten if not manually tracked;
+  pipeline YAML has no backup; resume batch versions can diverge.
+
+  Solution: Auto-detect overdue deferred entries (check_deferred.py);
+  weekly pipeline backups (backup_pipeline.py); batch versioning constant
+  (CURRENT_RESUME_BATCH); upgrade script for batch migrations.
+
+  Impact: Reduces operational overhead; prevents data loss; ensures resume
+  consistency across applications.
+  ```
+
+---
+
+## PHASE 4: Signals & Feedback Loops (Weeks 7-8)
+
+### 4.1 Signal-to-Action Audit Trail
+- [ ] Add `signals/signal-actions.yaml`
+  ```yaml
+  - signal_id: "hypothesis-001"
+    hypothesis: "Lack of management experience reduces acceptance rate"
+    triggered_action: "Added 'Project Leadership' block to required blocks"
+    action_date: "2026-03-10"
+    responsible: "@4444J99"
+    impact: "TBD"  # Updated after outcome feedback
+  ```
+- [ ] Create `scripts/log_signal_action.py`
+  ```python
+  def log_signal_action(signal_id, hypothesis, action, responsible=None):
+      """Log signal → action connection for audit trail."""
+  ```
+- [ ] Integrate into score.py, advance.py (when threshold-triggered changes made)
+
+### 4.2 Monthly Velocity Report
+- [ ] Create `scripts/velocity_report.py`
+  ```python
+  def generate_velocity_report(start_date=None, end_date=None):
+      """Generate monthly metrics: submissions, conversions, by position/channel."""
+      return {
+          'submissions': count_submitted(start_date, end_date),
+          'conversions': count_accepted(start_date, end_date),
+          'conversion_rate': rate,
+          'by_position': {...},
+          'by_channel': {...},
+          'block_roi': {...},  # acceptance rate per block
+          'hypothesis_accuracy': {...},  # % of hypotheses validated
+      }
+  ```
+- [ ] Output as markdown report + CSV
+- [ ] Integrate into cron job: run monthly
+- [ ] Add to CLAUDE.md commands: `python scripts/run.py velocity`
+
+### 4.3 Composition Method Tracking
+- [ ] Add to conversion-log.yaml entries
+  ```yaml
+  - entry_id: "anthropic-001"
+    composition_method: "blocks"  # or "profiles" or "legacy"
+    blocks_used: ["identity/2min", "projects/organvm"]
+    outcome: "accepted"
+    composition_date: "2026-02-15"
+  ```
+- [ ] Update `scripts/submit.py` to populate composition_method before logging
+- [ ] Update `scripts/funnel_report.py` to analyze composition_method
+  ```
+  ## Composition Method Breakdown
+  - blocks:  72% submissions, 45% acceptance rate
+  - profiles: 18% submissions, 30% acceptance rate
+  - legacy: 10% submissions, 20% acceptance rate
+  ```
+
+### 4.4 Block ROI Analysis
+- [ ] Create `scripts/block_roi_analysis.py`
+  ```python
+  def analyze_block_roi():
+      """Calculate acceptance rate per block."""
+      for block in load_blocks():
+          submissions = count_submissions_using_block(block.id)
+          accepted = count_accepted_using_block(block.id)
+          roi = accepted / submissions if submissions > 0 else 0
+          print(f"{block.id}: {submissions} submissions, {accepted} accepted ({roi*100:.1f}% ROI)")
+  ```
+- [ ] Integrate into monthly velocity report
+- [ ] Use to inform block selection (prefer high-ROI blocks)
+
+### 4.5 Hypothesis Validation Tracking
+- [ ] Extend `signals/hypotheses.yaml` with outcome field
+  ```yaml
+  - id: "hyp-001"
+    hypothesis: "Management experience matters for role X"
+    predicted_outcome: "accepted"
+    actual_outcome: "rejected"  # Populated after outcome recorded
+    validation: "incorrect"
+    learnings: "Need to reconsider signals for role X"
+  ```
+- [ ] Create `scripts/validate_hypotheses.py`
+  ```python
+  def validate_hypotheses():
+      """Compare predicted vs. actual outcomes; calculate accuracy."""
+      accuracy = count_correct_predictions() / total_predictions()
+      print(f"Hypothesis accuracy: {accuracy*100:.1f}%")
+  ```
+- [ ] Report in velocity report: "Hypothesis accuracy this month: X%"
+
+### 4.6 Validation & Commit
+- [ ] All signal tracking integrated: `pytest tests/test_signals.py -v`
+- [ ] Generate sample velocity report (dry run): `python scripts/velocity_report.py --dry-run`
+- [ ] Verify hypothesis validation works
+- [ ] Commit:
+  ```
+  feat: implement signal-to-action feedback loops and ROI analysis
+
+  Problem: Signals (hypotheses, patterns) are logged but not acted upon;
+  no feedback loop showing which signals predict outcomes; composition method
+  impact unknown.
+
+  Solution: Add signal-actions audit trail; implement monthly velocity
+  reports (submissions, conversions, block ROI, hypothesis accuracy);
+  track composition method in conversion-log; generate composition comparison.
+
+  Impact: Data-driven decision making; signals inform future strategy;
+  measurable ROI on tracking discipline.
+  ```
+
+---
+
+## PHASE 5: Growth Capabilities (Weeks 9+)
+
+### 5.1 Agentic Pipeline Execution
+- [ ] Design agent loop (sketched in docs/agent-design.md)
+  ```
+  Agent Goal: Execute daily/weekly pipeline operations autonomously
+  
+  Loop:
+  1. Load standup (stale entries, deadlines, priorities)
+  2. Decide: which entries to advance? which to submit?
+  3. Execute: score → advance → draft → submit (if --execute)
+  4. Log: update signals, send report
+  ```
+- [ ] Implement basic agent: `scripts/agent.py`
+  - [ ] Read campaign report (deadlines, priorities)
+  - [ ] Decide actions based on rules (e.g., "score ≥7 + deadline <7d → submit")
+  - [ ] Execute via pipeline_api (clean function calls)
+  - [ ] Log outcomes to conversion-log, hypotheses
+- [ ] Test: `tests/test_agent.py` (with mock pipeline)
+- [ ] Deploy: cron job runs agent 2x/week (Mon/Thu)
+
+### 5.2 Portfolio Analysis Engine
+- [ ] Create `scripts/portfolio_analysis.py`
+  - [ ] Query: "Which blocks appear in accepted applications?"
+  - [ ] Query: "What identity position has highest conversion rate?"
+  - [ ] Query: "Which channels (Greenhouse, Lever, etc.) perform best?"
+  - [ ] Query: "Do applications using variant V2 convert higher?"
+- [ ] Output: structured JSON for dashboarding
+- [ ] Integrate into monthly reports
+
+### 5.3 Multi-Operator Governance
+- [ ] Extend YAML schema: add `status.reviewed_by`, `status.submitted_by`
+- [ ] Create approval workflow: stage requires review before submission
+- [ ] Add git hooks: PR review required for pipeline/ changes
+- [ ] Audit trail: who changed what, when (in git commit messages)
+
+### 5.4 Continuous Freshness Batch Job
+- [ ] Create `scripts/daily_pipeline_health.py`
+  - [ ] 6 AM: fetch new ATS postings (source_jobs.py)
+  - [ ] Auto-score and enrich
+  - [ ] Generate campaign report
+  - [ ] Email standup + campaign to stakeholders
+  - [ ] Run hygiene checks (URL liveness, staleness)
+- [ ] Deploy as cron job or scheduled action
+
+### 5.5 Outcome Prediction Model
+- [ ] Train classifier on conversion-log
+  - [ ] Features: score, position, channel, blocks_used, composition_method
+  - [ ] Target: outcome (accepted/rejected/interview/pending)
+- [ ] Use to flag risky submissions ("70% rejection risk on this profile")
+- [ ] Integrate into preflight.py
+
+---
+
+## Tracking & Metrics
+
+### Key Progress Indicators
+- [ ] API layer implemented (refactor complete)
+- [ ] Real integration tests passing (not just mocks)
+- [ ] All validation gates in place (resume, state, ID mapping)
+- [ ] Automation running (deferred checks, backups, freshness)
+- [ ] Feedback loops active (signal-actions, velocity reports)
+- [ ] Agent executing autonomously (if applicable)
+
+### Ongoing Metrics
+- **Test pass rate:** Aim for 95%+ (integration + unit tests)
+- **Validation catch rate:** Log errors prevented (resume, state, ID)
+- **Signal accuracy:** Hypothesis predictions vs. actuals (aim >60%)
+- **Tool uptime:** CLI/MCP/scripts availability (aim >99%)
+- **Conversion rate:** % of applications → accepted (track monthly)
+
+### Review Schedule
+- **Weekly:** Update checklist above; note blockers
+- **Monthly:** Generate velocity report; reflect on signals/hypotheses
+- **Quarterly:** Update roadmap; prioritize next growth initiatives
+
+---
+
+## Notes & Blockers
+
+### Open Questions
+- How many tests actually exist (validate "972" claim)?
+- What's the current conversion rate baseline (needed for signal ROI)?
+- Should identity positions be rebalanced (current distribution)?
+
+### Known Risks
+- API refactoring may break existing scripts (needs thorough testing)
+- Backup strategy requires disk space (monitor backup directory size)
+- Cron job failures could go unnoticed (add alerting)
+
+### Dependencies
+- Python packages: check pyproject.toml for new dependencies
+- git hooks: requires pre-commit framework (optional but recommended)
+- cron access: assumes local machine or deployment server
+
+---
+
+**Last Updated:** 2026-03-02
+**Estimated Completion:** Week 8 (Phases 1-4), Week 12 (Phase 5)
+**Owner:** @4444J99
