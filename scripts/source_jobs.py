@@ -442,6 +442,7 @@ def create_pipeline_entry(job: dict) -> tuple[str, dict]:
         "timeline": {
             "researched": today,
             "posting_date": job.get("posting_date"),
+            "date_added": today,
         },
         "conversion": {
             "response_received": False,

@@ -2,7 +2,7 @@
 
 Consolidates load_entries, parse_date, format_amount, get_effort, get_score,
 get_deadline, and common constants that were previously duplicated across
-pipeline_status.py, standup.py, daily_batch.py, conversion_report.py, and score.py.
+pipeline_status.py, standup.py, conversion_report.py, and score.py.
 """
 
 import json
@@ -115,35 +115,8 @@ VALID_TRANSITIONS = {
     "acknowledged": {"interview", "outcome", "withdrawn"},
     "interview": {"outcome", "withdrawn"},
     "outcome": set(),  # terminal
+    "withdrawn": set(),  # terminal
 }
-
-
-# --- Mutation audit log ---
-
-MUTATION_LOG_PATH = SIGNALS_DIR / "mutation-log.jsonl"
-
-
-def log_mutation(filepath: str, field: str, old_value: str, new_value: str, caller: str = ""):
-    """Append a mutation record to signals/mutation-log.jsonl.
-
-    Lightweight audit trail for all YAML field changes.
-    """
-    if not SIGNALS_DIR.exists():
-        return
-    record = {
-        "ts": date.today().isoformat(),
-        "file": str(Path(filepath).name) if filepath else "",
-        "field": field,
-        "old": old_value,
-        "new": new_value,
-    }
-    if caller:
-        record["caller"] = caller
-    try:
-        with open(MUTATION_LOG_PATH, "a") as f:
-            f.write(json.dumps(record) + "\n")
-    except OSError:
-        pass  # non-critical — don't break the pipeline for logging
 
 
 # --- Safe YAML field mutation helpers ---
@@ -797,77 +770,6 @@ def format_block_stats(block_path: str) -> str | None:
     return None
 
 
-# --- Keyword-to-block recommender ---
-
-
-def recommend_blocks(entry: dict, top_n: int = 5) -> list[tuple[str, float, str]]:
-    """Recommend blocks based on entry keywords and identity position.
-
-    Uses the block tag index to find blocks whose tags overlap with the
-    entry's distilled keywords. Scores by keyword overlap count normalized
-    by total entry keywords.
-
-    Returns list of (block_path, score, reason) tuples, highest score first.
-    """
-    index = load_block_index()
-    if not index:
-        return []
-
-    tag_index = index.get("tag_index", {})
-    blocks_meta = index.get("blocks", {})
-    if not tag_index or not blocks_meta:
-        return []
-
-    # Gather entry signals
-    keywords = set()
-    kw_raw = entry.get("keywords", [])
-    if isinstance(kw_raw, list):
-        keywords = {k.lower().strip() for k in kw_raw if isinstance(k, str)}
-
-    fit = entry.get("fit", {})
-    position = fit.get("identity_position", "") if isinstance(fit, dict) else ""
-    track = entry.get("track", "")
-
-    if not keywords:
-        return []
-
-    # Score each block by keyword ∩ tags
-    scores: dict[str, tuple[float, list[str]]] = {}
-    for tag, block_paths in tag_index.items():
-        tag_lower = tag.lower()
-        if tag_lower in keywords:
-            for bp in block_paths:
-                if bp not in scores:
-                    scores[bp] = (0.0, [])
-                prev_score, prev_matches = scores[bp]
-                scores[bp] = (prev_score + 1.0, prev_matches + [tag])
-
-    # Bonus for position/track alignment
-    for bp, (score, matches) in list(scores.items()):
-        meta = blocks_meta.get(bp, {})
-        positions = meta.get("identity_positions", []) or []
-        tracks = meta.get("tracks", []) or []
-        bonus = 0.0
-        if position and position in positions:
-            bonus += 0.5
-        if track and track in tracks:
-            bonus += 0.3
-        scores[bp] = (score + bonus, matches)
-
-    # Normalize by number of keywords and sort
-    n_kw = len(keywords)
-    results = []
-    for bp, (raw_score, matches) in scores.items():
-        normalized = raw_score / n_kw
-        reason = f"matches: {', '.join(matches[:3])}"
-        if len(matches) > 3:
-            reason += f" +{len(matches) - 3} more"
-        results.append((bp, round(normalized, 3), reason))
-
-    results.sort(key=lambda x: -x[1])
-    return results[:top_n]
-
-
 # --- HTTP retry helper ---
 
 
@@ -904,6 +806,96 @@ def http_request_with_retry(
                       file=sys.stderr)
                 return None
     return None
+
+
+# --- Market intelligence loader ---
+
+_INTEL_FILE = REPO_ROOT / "strategy" / "market-intelligence-2026.json"
+_MARKET_INTEL: dict | None = None
+
+
+def load_market_intelligence() -> dict:
+    """Load market-intelligence-2026.json once, return empty dict on failure."""
+    global _MARKET_INTEL
+    if _MARKET_INTEL is not None:
+        return _MARKET_INTEL
+    if _INTEL_FILE.exists():
+        try:
+            with open(_INTEL_FILE) as f:
+                _MARKET_INTEL = json.load(f)
+        except Exception:
+            _MARKET_INTEL = {}
+    else:
+        _MARKET_INTEL = {}
+    return _MARKET_INTEL
+
+
+# Portal friction scores — hardcoded fallback when market-intelligence JSON is missing/malformed.
+PORTAL_SCORES_DEFAULT = {
+    "email": 9,
+    "custom": 6,
+    "web": 6,
+    "submittable": 5,
+    "greenhouse": 5,
+    "lever": 5,
+    "ashby": 5,
+    "workable": 5,
+    "slideroom": 4,
+}
+
+
+def get_portal_scores() -> dict:
+    """Load portal friction scores from market intel, falling back to defaults."""
+    intel = load_market_intelligence()
+    scores = intel.get("portal_friction_scores", {})
+    # Filter out metadata keys (non-int values)
+    result = {k: v for k, v in scores.items() if isinstance(v, int)}
+    return result if result else PORTAL_SCORES_DEFAULT
+
+
+# Strategic value by track — hardcoded fallback.
+STRATEGIC_BASE_DEFAULT = {
+    "grant": 7,
+    "prize": 8,
+    "fellowship": 7,
+    "residency": 6,
+    "program": 5,
+    "writing": 5,
+    "emergency": 3,
+    "job": 6,
+    "consulting": 3,
+}
+
+
+def get_strategic_base() -> dict:
+    """Load strategic base values from market intel or fallback to defaults."""
+    intel = load_market_intelligence()
+    benchmarks = intel.get("track_benchmarks", {})
+    if not benchmarks:
+        return STRATEGIC_BASE_DEFAULT
+
+    # Derive strategic base from acceptance rates: higher acceptance → lower scarcity → lower strategic value
+    # Scale: acceptance ~0.02 → 8-9 (very hard, high prestige), ~0.20 → 3-4 (accessible)
+    result = {}
+    for track, data in benchmarks.items():
+        rate = data.get("acceptance_rate") or data.get("cold_response_rate")
+        if rate is None:
+            result[track] = STRATEGIC_BASE_DEFAULT.get(track, 5)
+        elif rate <= 0.02:
+            result[track] = 8
+        elif rate <= 0.04:
+            result[track] = 7
+        elif rate <= 0.06:
+            result[track] = 6
+        elif rate <= 0.10:
+            result[track] = 5
+        else:
+            result[track] = 4
+    # Fill any defaults not in market intel
+    for track, val in STRATEGIC_BASE_DEFAULT.items():
+        if track not in result:
+            result[track] = val
+    return result
 
 
 def atomic_write(filepath: Path, content: str) -> None:

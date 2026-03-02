@@ -8,7 +8,6 @@ signals (profiles, blocks, portal fields, cross-pipeline history).
 """
 
 import argparse
-import json
 import sys
 from datetime import date
 from pathlib import Path
@@ -20,9 +19,14 @@ from pipeline_lib import (
     DIMENSION_ORDER,
     PIPELINE_DIR_ACTIVE,
     PIPELINE_DIR_RESEARCH_POOL,
+    PORTAL_SCORES_DEFAULT,
+    STRATEGIC_BASE_DEFAULT,
     atomic_write,
     days_until,
+    get_portal_scores,
+    get_strategic_base,
     load_entry_by_id,
+    load_market_intelligence,
     load_profile,
     parse_date,
     update_last_touched,
@@ -31,27 +35,6 @@ from pipeline_lib import (
 from pipeline_lib import (
     load_entries as _load_entries_raw,
 )
-
-# --- Market intelligence loader ---
-_INTEL_FILE = Path(__file__).resolve().parent.parent / "strategy" / "market-intelligence-2026.json"
-_MARKET_INTEL: dict | None = None
-
-
-def load_market_intelligence() -> dict:
-    """Load market-intelligence-2026.json once, return empty dict on failure."""
-    global _MARKET_INTEL
-    if _MARKET_INTEL is not None:
-        return _MARKET_INTEL
-    if _INTEL_FILE.exists():
-        try:
-            with open(_INTEL_FILE) as f:
-                _MARKET_INTEL = json.load(f)
-        except Exception:
-            _MARKET_INTEL = {}
-    else:
-        _MARKET_INTEL = {}
-    return _MARKET_INTEL
-
 
 # --- Dimension weights (must sum to 1.0)
 WEIGHTS = {
@@ -87,79 +70,12 @@ SNAP_LIMIT = 20352
 MEDICAID_LIMIT = 21597
 ESSENTIAL_PLAN_LIMIT = 39125
 
-# Portal friction scores by portal type — loaded from market-intelligence-2026.json with fallback
-_PORTAL_SCORES_DEFAULT = {
-    "email": 9,
-    "custom": 6,
-    "web": 6,
-    "submittable": 5,
-    "greenhouse": 5,
-    "lever": 5,
-    "ashby": 5,
-    "workable": 5,
-    "slideroom": 4,
-}
-
-
-def get_portal_scores() -> dict:
-    """Load portal friction scores from market intel, falling back to defaults."""
-    intel = load_market_intelligence()
-    scores = intel.get("portal_friction_scores", {})
-    # Filter out metadata keys (non-int values)
-    result = {k: v for k, v in scores.items() if isinstance(v, int)}
-    return result if result else _PORTAL_SCORES_DEFAULT
-
-
-# Keep module-level alias for backward compatibility; scores loaded at call time via get_portal_scores()
-PORTAL_SCORES = _PORTAL_SCORES_DEFAULT
-
-# Strategic value by track (base estimates, individual overrides possible)
-# Loaded from market-intelligence-2026.json if available, else hardcoded defaults.
-_STRATEGIC_BASE_DEFAULT = {
-    "grant": 7,
-    "prize": 8,
-    "fellowship": 7,
-    "residency": 6,
-    "program": 5,
-    "writing": 5,
-    "emergency": 3,
-    "job": 6,
-    "consulting": 3,
-}
-
-
-def get_strategic_base() -> dict:
-    """Load strategic base values from market intel or fallback to defaults."""
-    intel = load_market_intelligence()
-    benchmarks = intel.get("track_benchmarks", {})
-    if not benchmarks:
-        return _STRATEGIC_BASE_DEFAULT
-
-    # Derive strategic base from acceptance rates: higher acceptance → lower scarcity → lower strategic value
-    # Scale: acceptance ~0.02 → 8-9 (very hard, high prestige), ~0.20 → 3-4 (accessible)
-    result = {}
-    for track, data in benchmarks.items():
-        rate = data.get("acceptance_rate") or data.get("cold_response_rate")
-        if rate is None:
-            result[track] = _STRATEGIC_BASE_DEFAULT.get(track, 5)
-        elif rate <= 0.02:
-            result[track] = 8
-        elif rate <= 0.04:
-            result[track] = 7
-        elif rate <= 0.06:
-            result[track] = 6
-        elif rate <= 0.10:
-            result[track] = 5
-        else:
-            result[track] = 4
-    # Fill any defaults not in market intel
-    for track, val in _STRATEGIC_BASE_DEFAULT.items():
-        if track not in result:
-            result[track] = val
-    return result
-
-
-STRATEGIC_BASE = _STRATEGIC_BASE_DEFAULT
+# Backward-compatible module-level aliases (default/fallback values).
+# Callers that use the dynamic loaders (get_portal_scores(), get_strategic_base())
+# will get market-intelligence-backed values. These constants exist only for
+# callers that import PORTAL_SCORES / STRATEGIC_BASE by name.
+PORTAL_SCORES = PORTAL_SCORES_DEFAULT
+STRATEGIC_BASE = STRATEGIC_BASE_DEFAULT
 
 # High-prestige organizations — tiered by acceptance rate / selectivity.
 # Tier 1 (~1-2% acceptance): 10  Tier 2 (~3-5%): 9  Tier 3 (~5-10%): 8  Others: 7-5

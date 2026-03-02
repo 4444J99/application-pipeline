@@ -59,6 +59,8 @@ COMMANDS = {
     "tracker":     ("blind_spot_tracker.py", [],         "Blind spot progress tracker with actionable items"),
     "dashboard":   ("conversion_dashboard.py", [],       "Conversion intelligence dashboard"),
     "freshness":   ("freshness_monitor.py", [],          "Entry freshness report (posting age analysis)"),
+    "backfill":    ("backfill_dates.py", ["--report"],   "Backfill date_added from timeline.researched"),
+    "jobprofiles": ("generate_job_profile.py", ["--batch", "--dry-run"], "Preview missing job profiles for auto-sourced entries"),
     "bridge":      ("portfolio_bridge.py", [],           "Portfolio-pipeline work sample suggestions"),
     "warmintro":   ("warm_intro_audit.py", [],            "Warm intro audit: referral paths and org density"),
 }
@@ -66,7 +68,7 @@ COMMANDS = {
 # --- Parameterized commands (word + target ID) ---
 PARAM_COMMANDS = {
     "score":    ("score.py", ["--target"],               "Score a single entry"),
-    "enrich":   ("enrich.py", ["--target", None, "--all"], "Wire materials/blocks/variants"),
+    "enrich":   ("enrich.py", ["--id", None, "--all"], "Wire materials/blocks/variants"),
     "advance":  ("advance.py", ["--id"],                 "Advance entry to next status"),
     "compose":  ("compose.py", ["--target"],             "Compose submission from blocks"),
     "draft":    ("draft.py", ["--target"],               "Draft from profile content"),
@@ -80,6 +82,7 @@ PARAM_COMMANDS = {
     "answers":    ("answer_questions.py", ["--target"],  "Generate AI-assisted answers for portal questions"),
     "tailor":     ("tailor_resume.py", ["--target"],     "Tailor resume for a specific entry"),
     "samples":    ("portfolio_bridge.py", ["--target"],  "Suggest work samples for an entry"),
+    "jobprofile": ("generate_job_profile.py", ["--target"], "Generate minimal profile for auto-sourced job entry"),
 }
 
 

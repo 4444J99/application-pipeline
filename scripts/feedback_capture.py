@@ -23,7 +23,8 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from pipeline_lib import SIGNALS_DIR
+from pipeline_lib import ALL_PIPELINE_DIRS, SIGNALS_DIR, load_entries
+from score import HIGH_PRESTIGE
 
 HYPOTHESES_FILE = SIGNALS_DIR / "hypotheses.yaml"
 
@@ -233,6 +234,103 @@ def show_analysis():
         print("  → Consider adjusting materials targeting this failure mode")
 
 
+def _is_high_prestige(entry: dict) -> bool:
+    """Check if entry target is a Tier 1 prestige organization."""
+    target = entry.get("target", {})
+    org = target.get("organization", "") if isinstance(target, dict) else ""
+    return org in HIGH_PRESTIGE
+
+
+def infer_hypothesis(entry: dict) -> tuple[str, str]:
+    """Infer a default (category, hypothesis) based on entry characteristics.
+
+    Returns (category, hypothesis_text) for batch bootstrapping.
+    """
+    tags = entry.get("tags", []) or []
+    submission = entry.get("submission", {}) or {}
+    variant_ids = submission.get("variant_ids", {}) or {}
+    follow_up = entry.get("follow_up", {}) or {}
+
+    # Tier 1 company + no follow-up → timing
+    if _is_high_prestige(entry):
+        has_followup = follow_up.get("linkedin_connect") or follow_up.get("dm_sent")
+        if not has_followup:
+            return ("timing", "Tier 1 cold app; referral pathway not established")
+
+    # Auto-sourced → may not pass keyword screen
+    if "auto-sourced" in tags:
+        return ("auto_rejection", "Auto-sourced; may not pass initial keyword screen")
+
+    # No cover letter
+    if not variant_ids.get("cover_letter"):
+        return ("cover_letter", "No tailored cover letter submitted")
+
+    # No custom answers
+    portal_fields = submission.get("portal_fields", {}) or {}
+    if not portal_fields:
+        return ("resume_screen", "Standard application without custom question answers")
+
+    # Default
+    return ("role_fit", "Standard application — awaiting signal")
+
+
+def batch_capture(dry_run: bool = True) -> list[dict]:
+    """Generate hypotheses for all submitted entries without existing ones.
+
+    Returns list of records (saved or would-be-saved).
+    """
+    entries = load_entries(ALL_PIPELINE_DIRS)
+    awaiting_statuses = {"submitted", "acknowledged", "interview"}
+
+    # Filter to entries awaiting response
+    candidates = [e for e in entries if e.get("status") in awaiting_statuses]
+
+    if not candidates:
+        print("No entries awaiting response.")
+        return []
+
+    # Load existing hypotheses to skip duplicates
+    existing = load_hypotheses()
+    existing_ids = {h.get("entry_id") for h in existing}
+
+    # Filter out entries that already have hypotheses
+    new_candidates = [e for e in candidates if e.get("id") not in existing_ids]
+
+    if not new_candidates:
+        print(f"All {len(candidates)} awaiting entries already have hypotheses.")
+        return []
+
+    print(f"{'[DRY RUN] ' if dry_run else ''}Batch hypothesis capture: {len(new_candidates)} entries")
+    print(f"  (skipping {len(candidates) - len(new_candidates)} with existing hypotheses)")
+    print()
+
+    records = []
+    for entry in new_candidates:
+        entry_id = entry.get("id", "")
+        category, hypothesis = infer_hypothesis(entry)
+        record = {
+            "entry_id": entry_id,
+            "date": date.today().isoformat(),
+            "outcome": None,
+            "category": category,
+            "hypothesis": hypothesis,
+        }
+        records.append(record)
+
+        preview = hypothesis[:60] + ("..." if len(hypothesis) > 60 else "")
+        action = "would record" if dry_run else "recorded"
+        print(f"  {action}: {entry_id} [{category}] {preview}")
+
+    if not dry_run:
+        all_hypotheses = existing + records
+        save_hypotheses(all_hypotheses)
+        print(f"\nSaved {len(records)} new hypotheses ({len(all_hypotheses)} total)")
+    else:
+        print(f"\n{len(records)} hypotheses would be recorded. Run with --yes to save.")
+
+    return records
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Capture and analyze outcome hypotheses for scoring calibration"
@@ -249,6 +347,12 @@ def main():
                         help="List all recorded hypotheses (optionally for --entry)")
     parser.add_argument("--analyze", action="store_true",
                         help="Show category pattern analysis across all hypotheses")
+    parser.add_argument("--batch", action="store_true",
+                        help="Auto-infer hypotheses for all awaiting entries without one")
+    parser.add_argument("--dry-run", action="store_true", default=False,
+                        help="Preview batch changes without writing")
+    parser.add_argument("--yes", action="store_true",
+                        help="Execute batch writes")
     args = parser.parse_args()
 
     if args.analyze:
@@ -259,8 +363,13 @@ def main():
         show_hypotheses(entry_id=args.entry)
         return
 
+    if args.batch:
+        dry_run = not args.yes
+        batch_capture(dry_run=dry_run)
+        return
+
     if not args.entry:
-        parser.error("--entry is required (or use --list / --analyze)")
+        parser.error("--entry is required (or use --list / --analyze / --batch)")
 
     # Non-interactive if both category and hypothesis provided
     if args.category and args.hypothesis:

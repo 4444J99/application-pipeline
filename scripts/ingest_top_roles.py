@@ -22,12 +22,10 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from pipeline_lib import PIPELINE_DIR_ACTIVE
+from pipeline_lib import PIPELINE_DIR_ACTIVE, get_portal_scores, get_strategic_base
 from score import (
     HIGH_PRESTIGE,
-    PORTAL_SCORES,
     ROLE_FIT_TIERS,
-    STRATEGIC_BASE,
     WEIGHTS_JOB,
 )
 from source_jobs import (
@@ -123,11 +121,11 @@ def pre_score(job: dict) -> float:
         break
 
     # Auto-derived dimensions
-    strategic_value = HIGH_PRESTIGE.get(company_display, STRATEGIC_BASE.get("job", 6))
+    strategic_value = HIGH_PRESTIGE.get(company_display, get_strategic_base().get("job", 6))
     financial_alignment = 8   # tech jobs assumed well above benefits cliff
     effort_to_value = 7       # standard
     deadline_feasibility = 9  # rolling deadlines
-    portal_friction = PORTAL_SCORES.get(portal, 5)
+    portal_friction = get_portal_scores().get(portal, 5)
 
     dims = {
         "mission_alignment": human_dims["mission_alignment"],
