@@ -285,6 +285,12 @@ def generate_checklist(
         lines.append("")
         lines.append(f"{len(issues)} issue(s) found — review before submitting")
 
+    # Post-submission reminder
+    lines.append("")
+    lines.append("POST-SUBMISSION:")
+    lines.append(f"  Record outcome: python scripts/check_outcomes.py "
+                 f"--record {entry_id} --outcome <result> --category <cat> --hypothesis '...'")
+
     return "\n".join(lines), issues
 
 

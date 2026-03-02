@@ -11,13 +11,16 @@ Usage:
     python scripts/funding_scorer.py --differentiation   # Differentiation rubric (0-10)
     python scripts/funding_scorer.py --blindspots        # Blind spots checklist
     python scripts/funding_scorer.py --all               # All four reports
+    python scripts/funding_scorer.py --all --json        # All reports as JSON
 """
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
 import yaml
+from check_metrics import load_source_metrics
 from score import load_market_intelligence
 
 SCRIPTS_DIR = Path(__file__).resolve().parent
@@ -64,9 +67,17 @@ def load_startup_profile() -> dict:
     try:
         with open(PROFILE_FILE) as f:
             data = yaml.safe_load(f) or {}
+        # Warn about unknown top-level sections
+        for section in data:
+            if section not in defaults:
+                print(f"[WARN] startup-profile.yaml: unknown section '{section}'", file=sys.stderr)
         # Merge loaded data over defaults (one level deep)
         for section, section_defaults in defaults.items():
             if section in data and isinstance(data[section], dict):
+                # Warn about unknown keys within each section
+                for key in data[section]:
+                    if key not in section_defaults:
+                        print(f"[WARN] startup-profile.yaml: unknown key '{key}' in '{section}'", file=sys.stderr)
                 merged = dict(section_defaults)
                 merged.update(data[section])
                 defaults[section] = merged
@@ -173,12 +184,13 @@ def score_series_a(profile: dict, intel: dict) -> dict:
     if startup.get("ai_native"):
         score += 1.0
 
+    final_score = round(max(0, min(score, 10)), 1)
     return {
         "pathway": "Series A",
-        "score": round(max(0, min(score, 10)), 1),
-        "eligible": score >= 7.0,
+        "score": final_score,
+        "eligible": final_score >= 7.0,
         "providers": [],
-        "action": "Pursue actively" if score >= 7.0 else "Hit $1M+ ARR first",
+        "action": "Pursue actively" if final_score >= 7.0 else "Hit $1M+ ARR first",
     }
 
 
@@ -422,16 +434,23 @@ def display_pathways(results: list[dict]):
 
 # --- 2. Startup Viability Scorer ---
 
-VIABILITY_WEIGHTS = {
-    "market_timing": 0.20,
-    "funding_access": 0.15,
-    "solo_founder_viability": 0.10,
-    "revenue_model": 0.15,
-    "differentiation": 0.15,
-    "runway": 0.10,
-    "regulatory_moat": 0.05,
-    "team_advisor": 0.10,
+# Max points per dimension — single source of truth.
+# Sum = 100, so each max also doubles as its percentage weight.
+VIABILITY_MAX = {
+    "market_timing": 20,
+    "funding_access": 15,
+    "solo_founder_viability": 10,
+    "revenue_model": 15,
+    "differentiation": 15,
+    "runway": 10,
+    "regulatory_moat": 5,
+    "team_advisor": 10,
 }
+
+_VIABILITY_TOTAL = sum(VIABILITY_MAX.values())  # 100
+
+# Derived weights for display (kept for backward compat with tests).
+VIABILITY_WEIGHTS = {k: v / _VIABILITY_TOTAL for k, v in VIABILITY_MAX.items()}
 
 
 def score_viability(profile: dict, intel: dict) -> dict:
@@ -514,8 +533,12 @@ def score_viability(profile: dict, intel: dict) -> dict:
     else:
         dimensions["team_advisor"] = 5
 
+    # Clamp each dimension to its max
+    for dim in dimensions:
+        dimensions[dim] = min(dimensions[dim], VIABILITY_MAX[dim])
+
     composite = sum(dimensions.values())
-    max_possible = 100
+    max_possible = _VIABILITY_TOTAL
 
     if composite >= 80:
         band = "STRONG — pursue aggressively"
@@ -543,18 +566,11 @@ def display_viability(result: dict):
     print(f"  ASSESSMENT: {result['band']}")
     print()
 
-    max_per_dim = {
-        "market_timing": 20, "funding_access": 15,
-        "solo_founder_viability": 10, "revenue_model": 15,
-        "differentiation": 15, "runway": 10,
-        "regulatory_moat": 5, "team_advisor": 10,
-    }
-
     print(f"  {'Dimension':<28} {'Score':>6} {'Max':>6} {'Weight':>8}")
     print(f"  {'-'*28} {'-'*6} {'-'*6} {'-'*8}")
-    for dim, weight in VIABILITY_WEIGHTS.items():
+    for dim, mx in VIABILITY_MAX.items():
         score = result["dimensions"].get(dim, 0)
-        mx = max_per_dim.get(dim, 10)
+        weight = VIABILITY_WEIGHTS[dim]
         label = dim.replace("_", " ").title()
         print(f"  {label:<28} {score:>6} {mx:>6} {weight * 100:>7.0f}%")
     print()
@@ -581,13 +597,16 @@ DIFF_WEIGHTS = {
     "dual_alignment": 0.10,
 }
 
-# Canonical metrics for proof_of_work auto-derivation
+# Canonical metrics for proof_of_work auto-derivation.
+# Derived from system-metrics.json (via check_metrics.py) when available,
+# otherwise falls back to check_metrics._FALLBACK_METRICS.
+_SOURCE_METRICS = load_source_metrics()
 CANONICAL_METRICS = {
-    "repos": 103,
-    "tests": 2349,
-    "words": 810000,
-    "essays": 42,
-    "sprints": 33,
+    "repos": _SOURCE_METRICS["total_repos"],
+    "tests": _SOURCE_METRICS["automated_tests"],
+    "words": _SOURCE_METRICS["total_words_k"] * 1000,
+    "essays": _SOURCE_METRICS["published_essays"],
+    "sprints": _SOURCE_METRICS["named_sprints"],
 }
 
 
@@ -713,6 +732,7 @@ def score_blindspots(profile: dict, intel: dict) -> dict:
     legal = profile.get("legal", {})
     health = profile.get("health", {})
     strategic = profile.get("strategic", {})
+    startup = profile.get("startup", {})
 
     meta = intel.get("meta_strategy", {})
 
@@ -723,43 +743,54 @@ def score_blindspots(profile: dict, intel: dict) -> dict:
     }
 
     # Legal & Financial
-    legal_items = [
-        ("83(b) election filed within 30 days", legal.get("eighty_three_b_filed", False),
-         "URGENT" if legal.get("eighty_three_b_deadline_approaching") else ""),
-        ("Delaware franchise tax: Assumed Par Value method", legal.get("delaware_franchise_tax_method") == "assumed_par_value",
-         "Can be $400K+ if using Authorized Shares method"),
-        ("IP assignment agreements signed", legal.get("ip_assignment_signed", False), ""),
-        ("D&O insurance ($125/month)", legal.get("d_and_o_insurance", False),
-         f"${_g(meta, 'insurance', 'd_and_o_monthly_usd', default=125)}/month early is cheap"),
-    ]
+    # Unincorporated entities don't need 83(b), franchise tax, IP assignment, or D&O
+    incorporated = startup.get("incorporated", False)
+    if incorporated:
+        _83b_urgent = bool(legal.get("eighty_three_b_deadline_approaching"))
+        legal_items = [
+            ("83(b) election filed within 30 days", legal.get("eighty_three_b_filed", False),
+             "URGENT: 30-day window" if _83b_urgent else "", _83b_urgent),
+            ("Delaware franchise tax: Assumed Par Value method", legal.get("delaware_franchise_tax_method") == "assumed_par_value",
+             "Can be $400K+ if using Authorized Shares method", False),
+            ("IP assignment agreements signed", legal.get("ip_assignment_signed", False), "", False),
+            ("D&O insurance ($125/month)", legal.get("d_and_o_insurance", False),
+             f"${_g(meta, 'insurance', 'd_and_o_monthly_usd', default=125)}/month early is cheap", False),
+        ]
+    else:
+        legal_items = [
+            ("83(b) election filed within 30 days", True, "N/A — not incorporated", False),
+            ("Delaware franchise tax: Assumed Par Value method", True, "N/A — not incorporated", False),
+            ("IP assignment agreements signed", True, "N/A — not incorporated", False),
+            ("D&O insurance ($125/month)", True, "N/A — not incorporated", False),
+        ]
     categories["Legal & Financial"] = legal_items
 
     # Health & Sustainability
     burnout = _g(meta, "founder_burnout", "prevalence", default=0.73)
     health_items = [
-        (f"Founder burnout awareness ({burnout:.0%} prevalence)", True, "Ongoing"),
-        ("Structured breaks scheduled", health.get("structured_breaks", False), "Calendar non-negotiable time off"),
-        ("Peer support group", health.get("peer_support_group", False), "YPO, Founder Collective, local groups"),
-        ("Professional support (therapist/coach)", health.get("professional_support", False), "Before crisis, not after"),
+        (f"Founder burnout awareness ({burnout:.0%} prevalence)", True, "Ongoing", False),
+        ("Structured breaks scheduled", health.get("structured_breaks", False), "Calendar non-negotiable time off", False),
+        ("Peer support group", health.get("peer_support_group", False), "YPO, Founder Collective, local groups", False),
+        ("Professional support (therapist/coach)", health.get("professional_support", False), "Before crisis, not after", False),
     ]
     categories["Health & Sustainability"] = health_items
 
     # Strategic
     strategic_items = [
         ("Warm intro audit (200+ unrealized paths)", strategic.get("warm_intro_audit_done", False),
-         "Map paths before cold outreach"),
+         "Map paths before cold outreach", False),
         ("Documentation as leverage", strategic.get("documentation_as_leverage", False),
-         "Public writing generates inbound deal flow (0.45 signal weight)"),
+         "Public writing generates inbound deal flow (0.45 signal weight)", False),
         ("Open source strategy", strategic.get("open_source_strategy", False),
-         "Contributor pipeline doubles as hiring pipeline"),
+         "Contributor pipeline doubles as hiring pipeline", False),
         ("Academic partnerships (STTR requires)", strategic.get("academic_partnership", False),
-         "Valuable for credibility + STTR funding"),
+         "Valuable for credibility + STTR funding", False),
         ("Disability grants (least competitive)", strategic.get("disability_grant_eligible", False),
-         "Prioritize if applicable" if strategic.get("disability_grant_eligible") else "N/A if not applicable"),
+         "Prioritize if applicable" if strategic.get("disability_grant_eligible") else "N/A if not applicable", False),
         ("Climate/ESG framing ($62.6B PE market)", strategic.get("climate_esg_framing", False),
-         "Opens additional funding channels"),
+         "Opens additional funding channels", False),
         ("EU AI Act compliance as moat", strategic.get("eu_ai_act_compliant", False),
-         "Compliance creates defensibility"),
+         "Compliance creates defensibility", False),
     ]
     categories["Strategic"] = strategic_items
 
@@ -768,11 +799,11 @@ def score_blindspots(profile: dict, intel: dict) -> dict:
     completed = 0
     urgent = []
     for cat, items in categories.items():
-        for label, done, note in items:
+        for label, done, note, is_urgent in items:
             total += 1
             if done:
                 completed += 1
-            if "URGENT" in str(note):
+            if is_urgent:
                 urgent.append((cat, label, note))
 
     return {
@@ -800,7 +831,7 @@ def display_blindspots(result: dict):
     for cat, items in result["categories"].items():
         print(f"  {cat.upper()}")
         print(f"  {'-' * 40}")
-        for label, done, note in items:
+        for label, done, note, *_ in items:
             check = "x" if done else " "
             line = f"    [{check}] {label}"
             if note and not done:
@@ -825,6 +856,8 @@ def main():
                         help="Run blind spots checklist")
     parser.add_argument("--all", action="store_true",
                         help="Run all four reports")
+    parser.add_argument("--json", action="store_true",
+                        help="Output results as JSON (for programmatic consumption)")
     args = parser.parse_args()
 
     if not any([args.pathway, args.viability, args.differentiation, args.blindspots, args.all]):
@@ -833,6 +866,26 @@ def main():
 
     profile = load_startup_profile()
     intel = load_market_intelligence()
+
+    if args.json:
+        output = {}
+        if args.all or args.pathway:
+            output["pathways"] = run_pathway_scorer(profile, intel)
+        if args.all or args.viability:
+            output["viability"] = score_viability(profile, intel)
+        if args.all or args.differentiation:
+            output["differentiation"] = score_differentiation(profile, intel)
+        if args.all or args.blindspots:
+            bs = score_blindspots(profile, intel)
+            # Convert tuples to serializable lists
+            bs["categories"] = {
+                cat: [[label, done, note] for label, done, note, *_ in items]
+                for cat, items in bs["categories"].items()
+            }
+            bs["urgent"] = [[cat, label, note] for cat, label, note in bs["urgent"]]
+            output["blindspots"] = bs
+        print(json.dumps(output, indent=2))
+        return
 
     if args.all or args.pathway:
         results = run_pathway_scorer(profile, intel)

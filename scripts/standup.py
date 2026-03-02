@@ -725,6 +725,7 @@ SECTIONS = {
     "jobs": "Job pipeline status",
     "opportunities": "Opportunity pipeline (grants/residencies/prizes/writing)",
     "market": "Market conditions, hot skills, and upcoming grant deadlines",
+    "funding": "Funding pulse: viability score, top pathways, urgent blind spots",
 }
 
 
@@ -1031,6 +1032,53 @@ def section_market():
     print()
 
 
+def section_funding():
+    """Print funding pulse: viability score, top pathways, urgent blind spots."""
+    try:
+        from funding_scorer import (
+            load_startup_profile,
+            run_pathway_scorer,
+            score_blindspots,
+            score_viability,
+        )
+        from score import load_market_intelligence
+    except ImportError:
+        print("FUNDING PULSE")
+        print("   Error: funding_scorer not available")
+        print()
+        return
+
+    profile = load_startup_profile()
+    intel = load_market_intelligence()
+
+    # Viability
+    viability = score_viability(profile, intel)
+    print("FUNDING PULSE")
+    print(f"   Viability: {viability['composite']}/{viability['max']} — {viability['band']}")
+    print()
+
+    # Top 3 pathways
+    pathways = run_pathway_scorer(profile, intel)
+    print("   TOP PATHWAYS:")
+    for i, p in enumerate(pathways[:3], 1):
+        eligible = "YES" if p["eligible"] else "no"
+        print(f"     {i}. [{p['score']:4.1f}/10] {p['pathway']:<28s} (eligible: {eligible})")
+    print()
+
+    # Urgent blind spots
+    blindspots = score_blindspots(profile, intel)
+    if blindspots["urgent"]:
+        print("   !! URGENT BLIND SPOTS:")
+        for cat, label, note in blindspots["urgent"]:
+            print(f"      [{cat}] {label}")
+        print()
+
+    completion = blindspots["completed"]
+    total = blindspots["total"]
+    print(f"   Blind spots: {completion}/{total} addressed")
+    print()
+
+
 def run_standup(hours: float, section: str | None, do_log: bool, track_filter: str | None = None):
     """Run the full standup or a single section.
 
@@ -1049,9 +1097,12 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
     print("=" * 60)
     print()
 
-    # Market section (standalone)
+    # Standalone sections (no entries needed)
     if section == "market":
         section_market()
+        return
+    if section == "funding":
+        section_funding()
         return
 
     # Track-filtered views

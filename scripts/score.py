@@ -867,8 +867,34 @@ def score_effort_to_value(entry: dict, explain: bool = False) -> int | tuple[int
     return result
 
 
+_DIFF_COMPOSITE: float | None = None
+
+
+def _get_differentiation_boost() -> tuple[int, float]:
+    """Lazy-load differentiation composite and return (boost, composite).
+
+    Boost: +2 if composite >= 8.5, +1 if >= 7.0, else 0.
+    Uses lazy import to avoid circular import with funding_scorer.py.
+    """
+    global _DIFF_COMPOSITE
+    if _DIFF_COMPOSITE is None:
+        try:
+            from funding_scorer import load_startup_profile, score_differentiation
+            profile = load_startup_profile()
+            intel = load_market_intelligence()
+            result = score_differentiation(profile, intel)
+            _DIFF_COMPOSITE = result["composite"]
+        except Exception:
+            _DIFF_COMPOSITE = 0.0
+    if _DIFF_COMPOSITE >= 8.5:
+        return 2, _DIFF_COMPOSITE
+    elif _DIFF_COMPOSITE >= 7.0:
+        return 1, _DIFF_COMPOSITE
+    return 0, _DIFF_COMPOSITE
+
+
 def score_strategic_value(entry: dict, explain: bool = False) -> int | tuple[int, str]:
-    """Score strategic value from organization prestige and track."""
+    """Score strategic value from organization prestige, track, and differentiation."""
     org = ""
     target = entry.get("target", {})
     if isinstance(target, dict):
@@ -881,13 +907,16 @@ def score_strategic_value(entry: dict, explain: bool = False) -> int | tuple[int
                 return prestige_score, f'org "{org}" matched "{name}" -> {prestige_score} (prestige list)'
             return prestige_score
 
-    # Fall back to track-based estimate
+    # Fall back to track-based estimate + differentiation boost
     track = entry.get("track", "")
     strategic_base = get_strategic_base()
-    result = strategic_base.get(track, 5)
+    base = strategic_base.get(track, 5)
+    diff_boost, diff_composite = _get_differentiation_boost()
+    result = min(10, base + diff_boost)
     if explain:
         source = "track base" if track in strategic_base else "default"
-        return result, f'org "{org}" not in prestige list, track={track} -> {result} ({source})'
+        diff_note = f" + diff_boost={diff_boost} (composite={diff_composite:.1f})" if diff_boost else ""
+        return result, f'org "{org}" not in prestige list, track={track} -> {base} ({source}){diff_note} = {result}'
     return result
 
 
@@ -1059,8 +1088,33 @@ JOB_QUALIFICATION_THRESHOLD = 5.5
 
 
 def get_weights(track: str) -> dict:
-    """Return the weight config appropriate for the entry's track."""
-    return WEIGHTS_JOB if track == "job" else WEIGHTS
+    """Return the weight config appropriate for the entry's track.
+
+    If a calibration file exists with sufficient outcome data (n>=10),
+    blends calibrated weights at 30% with base weights at 70%.
+    """
+    base = WEIGHTS_JOB if track == "job" else WEIGHTS
+
+    try:
+        from outcome_learner import load_calibration
+        cal = load_calibration()
+        if cal and cal.get("sufficient_data"):
+            cal_weights = cal["weights"]
+            # Blend: 70% base + 30% calibrated
+            blended = {}
+            for dim in base:
+                base_val = base[dim]
+                cal_val = cal_weights.get(dim, base_val)
+                blended[dim] = round(base_val * 0.70 + cal_val * 0.30, 4)
+            # Normalize to sum to 1.0
+            total = sum(blended.values())
+            if total > 0:
+                blended = {k: round(v / total, 4) for k, v in blended.items()}
+            return blended
+    except ImportError:
+        pass
+
+    return base
 
 
 def get_qualification_threshold(track: str) -> float:

@@ -50,6 +50,17 @@ COMMANDS = {
     "sourcejobs":  ("source_jobs.py", ["--fetch", "--dry-run"], "Preview new job postings from ATS APIs"),
     "keywords":    ("distill_keywords.py", [],           "Extract keywords from job postings"),
     "buildblocks": ("generate_project_blocks.py", [],    "Generate blocks from project data"),
+    "morning":     ("morning.py", [],                    "Morning digest: health + stale + followups + campaign + funding"),
+    "derive":      ("derive_profile.py", [],             "Auto-derive startup profile fields from pipeline data"),
+    "learner":     ("outcome_learner.py", [],            "Outcome learning engine: calibration report"),
+    "hydrate":     ("hydrate_followups.py", [],          "Batch-hydrate follow-up fields on submitted entries"),
+    "triage":      ("smart_triage.py", [],               "Smart triage: decay-scored research entry ranking"),
+    "batch":       ("batch_submit.py", [],               "Batch submit staged rolling-deadline entries (dry-run)"),
+    "tracker":     ("blind_spot_tracker.py", [],         "Blind spot progress tracker with actionable items"),
+    "dashboard":   ("conversion_dashboard.py", [],       "Conversion intelligence dashboard"),
+    "freshness":   ("freshness_monitor.py", [],          "Entry freshness report (posting age analysis)"),
+    "bridge":      ("portfolio_bridge.py", [],           "Portfolio-pipeline work sample suggestions"),
+    "warmintro":   ("warm_intro_audit.py", [],            "Warm intro audit: referral paths and org density"),
 }
 
 # --- Parameterized commands (word + target ID) ---
@@ -68,6 +79,7 @@ PARAM_COMMANDS = {
     "alchemize":  ("alchemize.py", ["--target"],         "End-to-end Greenhouse orchestrator (research → synthesis)"),
     "answers":    ("answer_questions.py", ["--target"],  "Generate AI-assisted answers for portal questions"),
     "tailor":     ("tailor_resume.py", ["--target"],     "Tailor resume for a specific entry"),
+    "samples":    ("portfolio_bridge.py", ["--target"],  "Suggest work samples for an entry"),
 }
 
 
@@ -85,10 +97,12 @@ def show_help():
         print(f"  {cmd:<14s} {desc}")
     print()
     print("SESSION SEQUENCES:")
-    print("  Morning:  standup → followup → outcomes → campaign")
+    print("  Morning:  morning (or: standup → followup → outcomes → campaign)")
     print("  Submit:   campaign → check <id> → submit <id> → record <id>")
+    print("  Batch:    triage → batch → hydrate → freshness")
     print("  Research: hygiene → scoreall → qualify → enrichall")
-    print("  Analyze:  funnel → conversion → velocity → metrics")
+    print("  Analyze:  funnel → conversion → velocity → dashboard")
+    print("  Strategy: startup → funding → differentiate → tracker")
     print()
     print("Usage: python scripts/run.py <command> [target-id]")
 

@@ -180,6 +180,8 @@ def record_outcome(
     outcome: str,
     stage: str | None = None,
     note: str = "",
+    _hypothesis_category: str | None = None,
+    _hypothesis_text: str | None = None,
 ):
     """Record an outcome for a submitted entry."""
     filepath, entry = load_entry_by_id(entry_id)
@@ -299,9 +301,25 @@ def record_outcome(
     if time_to_response is not None:
         print(f"  Time to response: {time_to_response} days")
 
-    # Prompt for hypothesis capture on terminal outcomes
+    # Auto-capture hypothesis if flags provided, else prompt
     if outcome in ("accepted", "rejected"):
-        print(f"\n  → Capture hypothesis: python scripts/feedback_capture.py --entry {entry_id} --outcome {outcome}")
+        if _hypothesis_category and _hypothesis_text:
+            try:
+                from feedback_capture import add_hypothesis, capture_noninteractive
+                record = capture_noninteractive(
+                    entry_id=entry_id,
+                    category=_hypothesis_category,
+                    hypothesis=_hypothesis_text,
+                    outcome=outcome,
+                )
+                add_hypothesis(record)
+            except ImportError:
+                print("\n  → feedback_capture not available for auto-hypothesis")
+        else:
+            print("\n  → Capture hypothesis inline:")
+            print(f"    python scripts/check_outcomes.py --record {entry_id} --outcome {outcome} "
+                  f"--category <cat> --hypothesis \"...\"")
+            print(f"  → Or interactively: python scripts/feedback_capture.py --entry {entry_id} --outcome {outcome}")
 
 
 def _update_conversion_log(entry_id: str, outcome: str, stage: str | None, time_to_response: int | None):
@@ -389,6 +407,10 @@ def main():
                         help="Outcome stage (optional with --record)")
     parser.add_argument("--note", default="",
                         help="Note about the outcome")
+    parser.add_argument("--category",
+                        help="Hypothesis category (auto-capture with --record)")
+    parser.add_argument("--hypothesis", metavar="TEXT",
+                        help="Hypothesis text (auto-capture with --record)")
     parser.add_argument("--stale", action="store_true",
                         help="Show only stale entries (>14d, no response)")
     parser.add_argument("--summary", action="store_true",
@@ -398,7 +420,20 @@ def main():
     if args.record:
         if not args.outcome:
             parser.error("--outcome is required when using --record")
-        record_outcome(args.record, args.outcome, stage=args.stage, note=args.note)
+        # Validate hypothesis category if provided
+        if args.category:
+            try:
+                from feedback_capture import VALID_CATEGORIES
+                if args.category not in VALID_CATEGORIES:
+                    parser.error(f"--category must be one of: {', '.join(VALID_CATEGORIES)}")
+            except ImportError:
+                pass
+        record_outcome(
+            args.record, args.outcome,
+            stage=args.stage, note=args.note,
+            _hypothesis_category=args.category,
+            _hypothesis_text=args.hypothesis,
+        )
         return
 
     entries = get_submitted_entries()

@@ -30,6 +30,10 @@ scripts/.alchemize-work/
 scripts/.job-sources.yaml
 scripts/.job-source-stats.yaml
 
+# Caches
+.pytest_cache/
+.ruff_cache/
+
 # Build
 dist/
 build/

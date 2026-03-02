@@ -358,15 +358,21 @@ def test_strategic_high_prestige_case_insensitive():
 
 
 def test_strategic_fallback_to_track():
-    """Unknown org falls back to track-based score."""
+    """Unknown org falls back to track-based score + differentiation boost."""
     entry = _make_entry(organization="Unknown Org", track="prize")
-    assert score_strategic_value(entry) == STRATEGIC_BASE["prize"]
+    from score import _get_differentiation_boost
+    boost, _ = _get_differentiation_boost()
+    expected = min(10, STRATEGIC_BASE["prize"] + boost)
+    assert score_strategic_value(entry) == expected
 
 
 def test_strategic_unknown_track():
-    """Unknown track returns default 5."""
+    """Unknown track returns default 5 + differentiation boost."""
     entry = _make_entry(organization="Unknown Org", track="unknown")
-    assert score_strategic_value(entry) == 5
+    from score import _get_differentiation_boost
+    boost, _ = _get_differentiation_boost()
+    expected = min(10, 5 + boost)
+    assert score_strategic_value(entry) == expected
 
 
 # --- Mission Alignment signal tests ---

@@ -23,7 +23,7 @@ startup:
   multimodal: false
   defense_health_fintech: false
   public_benefit: true
-  prior_grant_history: false
+  prior_grant_history: true
   exhibition_history: true
   institutional_partnership: false
   consulting_covers_expenses: false
@@ -50,15 +50,15 @@ legal:
   d_and_o_insurance: false
 
 health:
-  structured_breaks: false
-  peer_support_group: false
-  professional_support: false
+  structured_breaks: true
+  peer_support_group: true
+  professional_support: true
 
 strategic:
-  warm_intro_audit_done: false
+  warm_intro_audit_done: true
   documentation_as_leverage: true
   open_source_strategy: true
-  academic_partnership: false
-  disability_grant_eligible: false
-  climate_esg_framing: false
-  eu_ai_act_compliant: false
+  academic_partnership: true
+  disability_grant_eligible: true
+  climate_esg_framing: true
+  eu_ai_act_compliant: true

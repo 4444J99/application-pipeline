@@ -14,8 +14,10 @@ from check_outcomes import (
     VALID_OUTCOMES,
     VALID_STAGES,
     days_since_submission,
+    record_outcome,
     show_awaiting,
     show_stale,
+    show_summary,
 )
 
 
@@ -298,3 +300,50 @@ def test_load_outcome_thresholds_loads_from_valid_json(tmp_path, monkeypatch):
     assert stale == 21
     assert ghosted == 45
     assert windows["greenhouse"] == (5, 15)
+
+
+# --- record_outcome: hypothesis flag integration ---
+
+
+def test_record_outcome_accepts_hypothesis_params():
+    """record_outcome function signature includes _hypothesis_category and _hypothesis_text."""
+    import inspect
+    sig = inspect.signature(record_outcome)
+    params = list(sig.parameters.keys())
+    assert "_hypothesis_category" in params
+    assert "_hypothesis_text" in params
+
+
+def test_record_outcome_hypothesis_defaults_to_none():
+    """Default values for hypothesis params are None."""
+    import inspect
+    sig = inspect.signature(record_outcome)
+    assert sig.parameters["_hypothesis_category"].default is None
+    assert sig.parameters["_hypothesis_text"].default is None
+
+
+def test_valid_outcomes_includes_acknowledged():
+    """VALID_OUTCOMES includes acknowledged for non-terminal recording."""
+    assert "acknowledged" in VALID_OUTCOMES
+
+
+# --- show_summary ---
+
+
+def test_show_summary_empty_entries(capsys):
+    """Summary with no entries shows zero counts."""
+    show_summary([])
+    out = capsys.readouterr().out
+    assert "OUTCOME SUMMARY" in out
+    assert "Awaiting response: 0" in out
+
+
+def test_show_summary_with_entries(capsys):
+    """Summary counts submitted entries correctly."""
+    entries = [
+        _make_entry("e1", status="submitted", submitted_date=_date_offset(5)),
+        _make_entry("e2", status="submitted", submitted_date=_date_offset(10)),
+    ]
+    show_summary(entries)
+    out = capsys.readouterr().out
+    assert "Awaiting response: 2" in out

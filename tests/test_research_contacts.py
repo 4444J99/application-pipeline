@@ -11,6 +11,7 @@ from research_contacts import (
     generate_followup_dates,
     generate_outreach_template,
     generate_research_prompt,
+    has_contacts,
 )
 
 
@@ -86,3 +87,68 @@ def test_generate_followup_dates_no_submission():
     # First follow-up should be tomorrow or later (day >= 1)
     first_date = follow_ups[0]["target_date"]
     assert first_date >= date.today().isoformat()
+
+
+def test_generate_followup_dates_all_pending():
+    """All generated follow-ups start with status=pending."""
+    entry = _make_entry(submitted_date=date.today().isoformat())
+    follow_ups = generate_followup_dates(entry)
+    for fu in follow_ups:
+        assert fu["status"] == "pending"
+
+
+def test_generate_followup_dates_order():
+    """Follow-up dates are in chronological order."""
+    entry = _make_entry(submitted_date=date.today().isoformat())
+    follow_ups = generate_followup_dates(entry)
+    dates = [fu["target_date"] for fu in follow_ups]
+    assert dates == sorted(dates)
+
+
+# --- has_contacts ---
+
+
+def test_has_contacts_empty():
+    """Entry with no outreach field returns False."""
+    entry = _make_entry()
+    assert has_contacts(entry) is False
+
+
+def test_has_contacts_empty_list():
+    """Entry with empty outreach list returns False."""
+    entry = _make_entry()
+    entry["outreach"] = []
+    assert has_contacts(entry) is False
+
+
+def test_has_contacts_with_contact():
+    """Entry with populated outreach returns True."""
+    entry = _make_entry()
+    entry["outreach"] = [{"contact": "John Doe", "type": "warm_contact"}]
+    assert has_contacts(entry) is True
+
+
+def test_has_contacts_missing_contact_field():
+    """Outreach items without 'contact' key return False."""
+    entry = _make_entry()
+    entry["outreach"] = [{"type": "warm_contact", "note": "placeholder"}]
+    assert has_contacts(entry) is False
+
+
+# --- generate_research_prompt edge cases ---
+
+
+def test_generate_research_prompt_missing_url():
+    """Prompt works when no URL in target."""
+    entry = _make_entry(org="No URL Corp")
+    entry["target"] = {"organization": "No URL Corp"}
+    prompt = generate_research_prompt(entry)
+    assert "No URL Corp" in prompt
+    assert "Company page:" not in prompt
+
+
+def test_generate_research_prompt_contains_linkedin():
+    """Prompt includes LinkedIn search instructions."""
+    entry = _make_entry()
+    prompt = generate_research_prompt(entry)
+    assert "LinkedIn" in prompt

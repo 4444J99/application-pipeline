@@ -174,6 +174,19 @@ def get_campaign_entries(entries: list[dict], days_ahead: int = 14) -> list[dict
     return campaign
 
 
+def _get_viability_context() -> tuple[int, int, str]:
+    """Lazy-load viability score for campaign context. Returns (composite, max, band)."""
+    try:
+        from funding_scorer import load_startup_profile, score_viability
+        from score import load_market_intelligence
+        profile = load_startup_profile()
+        intel = load_market_intelligence()
+        v = score_viability(profile, intel)
+        return v["composite"], v["max"], v["band"]
+    except Exception:
+        return 0, 100, "UNKNOWN"
+
+
 def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
     """Format the campaign view with urgency tiers."""
     lines = []
@@ -181,6 +194,10 @@ def format_campaign_view(entries: list[dict], days_ahead: int) -> str:
 
     lines.append(f"CAMPAIGN: Week of {today.isoformat()}")
     lines.append("=" * 70)
+
+    # Viability context
+    v_composite, v_max, v_band = _get_viability_context()
+    lines.append(f"  Viability: {v_composite}/{v_max} — {v_band}")
     lines.append("")
 
     tiers = {

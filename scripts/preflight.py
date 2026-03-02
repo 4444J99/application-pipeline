@@ -110,6 +110,18 @@ def check_entry(entry: dict) -> tuple[list[str], list[str]]:
         if d < 0:
             errors.append(f"deadline expired {abs(d)} days ago")
 
+    # 8. Blind spots check (urgent items are pre-submit warnings)
+    try:
+        from funding_scorer import load_startup_profile, score_blindspots
+        from score import load_market_intelligence
+        profile = load_startup_profile()
+        intel = load_market_intelligence()
+        bs = score_blindspots(profile, intel)
+        for cat, label, note in bs["urgent"]:
+            warnings.append(f"blind spot: [{cat}] {label}")
+    except ImportError:
+        pass
+
     return errors, warnings
 
 
