@@ -1,15 +1,15 @@
-id: elevenlabs-developer-relations-engineer
-name: ElevenLabs Developer Relations Engineer
+id: cursor-software-engineer-devex
+name: Cursor Software Engineer, DevEx
 track: job
-status: submitted
+status: staged
 outcome: null
 target:
-  organization: ElevenLabs
-  url: https://jobs.ashbyhq.com/elevenlabs
-  application_url: https://jobs.ashbyhq.com/elevenlabs/40e06dd8-5108-4ec8-ab62-a3f1d1715794
+  organization: Cursor
+  url: https://jobs.ashbyhq.com/cursor
+  application_url: https://cursor.com/careers/software-engineer-devex
   portal: ashby
-  location: United Kingdom
-  location_class: international
+  location: SF / NY
+  location_class: us-onsite
 deadline:
   date: null
   type: rolling
@@ -18,21 +18,21 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.2
+  score: 8.4
   identity_position: independent-engineer
   dimensions:
     mission_alignment: 9
     evidence_match: 10
     track_record_fit: 7
     financial_alignment: 5
-    effort_to_value: 4
+    effort_to_value: 7
     strategic_value: 7
     deadline_feasibility: 9
     portal_friction: 5
-  framing: Independent engineer and creative technologist building production-grade
-    AI orchestration at institutional scale. Specialist in translating deep "Cathedral"
-    architecture into high-signal "Storefront" entry points through technical advocacy
-    and "AI-conductor" methodologies.
+  framing: Independent engineer building production-grade infrastructure at scale
+    (103 repos, 2,349+ tests). Specialist in architecting "AI-native" development
+    environments designed for seamless human-agent collaboration and tightening EPD
+    feedback loops.
 submission:
   effort_level: standard
   blocks_used:
@@ -42,9 +42,9 @@ submission:
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
   variant_ids:
-    cover_letter: cover-letters/elevenlabs-developer-relations-engineer-alchemized
+    cover_letter: cover-letters/cursor-software-engineer-devex-alchemized
   materials_attached:
-  - resumes/batch-03/elevenlabs-developer-relations-engineer/elevenlabs-developer-relations-engineer-resume.html
+  - resumes/batch-03/cursor-software-engineer-devex/cursor-software-engineer-devex-resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:

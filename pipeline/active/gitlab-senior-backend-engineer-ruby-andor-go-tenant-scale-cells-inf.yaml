@@ -1,0 +1,43 @@
+id: gitlab-senior-backend-engineer-ruby-andor-go-tenant-scale-cells-inf
+name: GitLab Senior Backend Engineer (Ruby and/or Go), Tenant Scale; Cells Infrastructure
+track: job
+status: qualified
+outcome: null
+target:
+  organization: GitLab
+  url: https://boards.greenhouse.io/gitlab
+  application_url: https://job-boards.greenhouse.io/gitlab/jobs/8437148002
+  portal: greenhouse
+  location: Remote, Americas; Remote, APAC; Remote, EMEA
+  location_class: international
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.92
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-02'
+  posting_date: '2026-03-02'
+  date_added: '2026-03-02'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+- glove-fit
+source: ingest_top_roles.py
+last_touched: '2026-03-02'

@@ -1,15 +1,16 @@
-id: stripe-global-strategic-alliances-lead-agentic-commerce-and-retail-
-name: Stripe Global Strategic Alliances Lead, Agentic Commerce and Retail Industry
+id: gitlab-staff-backend-engineer-developer-experience-ruby
+name: GitLab Staff Backend Engineer, Developer Experience (Ruby)
 track: job
-status: submitted
+status: staged
 outcome: null
 target:
-  organization: Stripe
-  url: https://boards.greenhouse.io/stripe
-  application_url: https://stripe.com/jobs/search?gh_jid=7227036
+  organization: GitLab
+  url: https://boards.greenhouse.io/gitlab
+  application_url: https://job-boards.greenhouse.io/gitlab/jobs/8199765002
   portal: greenhouse
-  location: SF, Seattle, New York, Chicago
-  location_class: us-onsite
+  location: Remote, APAC; Remote, Canada; Remote, EMEA; Remote, Netherlands; Remote,
+    United Kingdom; Remote, US
+  location_class: international
 deadline:
   date: null
   type: rolling
@@ -18,21 +19,21 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.3
+  score: 8.1
   identity_position: independent-engineer
   dimensions:
     mission_alignment: 9
     evidence_match: 10
     track_record_fit: 7
     financial_alignment: 5
-    effort_to_value: 7
+    effort_to_value: 4
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
-  framing: Independent engineer and systems architect building production-grade AI
-    orchestration at institutional scale (103 repos, 2,349+ tests). Specialist in
-    bridging the gap between frontier AI capability and complex GTM partner strategy
-    for Agentic Commerce.
+  framing: Independent engineer building production-grade infrastructure and developer
+    tools at institutional scale (103 repos, 2,349+ tests). Specialist in removing
+    developer friction through automated governance, CI/CD optimization, and AI-native
+    "Storefront" platforms for internal engineering teams.
 submission:
   effort_level: standard
   blocks_used:
@@ -41,11 +42,10 @@ submission:
     work_samples: evidence/work-samples
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
-    project: projects/your-fit-tailored
   variant_ids:
-    cover_letter: cover-letters/stripe-global-strategic-alliances-lead-agentic-commerce-and-retail--alchemized
+    cover_letter: cover-letters/gitlab-staff-backend-engineer-developer-experience-ruby-alchemized
   materials_attached:
-  - resumes/batch-03/stripe-global-strategic-alliances-lead-agentic-commerce-and-retail-/stripe-global-strategic-alliances-lead-agentic-commerce-and-retail--resume.html
+  - resumes/batch-03/gitlab-staff-backend-engineer-developer-experience-ruby/gitlab-staff-backend-engineer-developer-experience-ruby-resume.html
   - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:

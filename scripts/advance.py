@@ -17,8 +17,10 @@ from datetime import date, datetime
 
 from pipeline_lib import (
     ACTIONABLE_STATUSES,
+    COMPANY_CAP,
     REPO_ROOT,
     VALID_TRANSITIONS,
+    check_company_cap,
     days_until,
     get_deadline,
     get_effort,
@@ -223,6 +225,15 @@ def run_advance(
         # Must be actionable (or deferred, which can be re-activated)
         if current not in ACTIONABLE_STATUSES and current != "deferred":
             continue
+
+        # Enforce company cap when advancing to staged or submitted
+        if target_status in ("staged", "submitted"):
+            org = (e.get("target") or {}).get("organization", "")
+            if org:
+                allowed, current_count = check_company_cap(org, entries)
+                if not allowed:
+                    print(f"  SKIP {eid}: {org} at cap ({current_count}/{COMPANY_CAP})")
+                    continue
 
         candidates.append(e)
 

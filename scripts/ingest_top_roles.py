@@ -22,7 +22,14 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from pipeline_lib import PIPELINE_DIR_ACTIVE, get_portal_scores, get_strategic_base
+from pipeline_lib import (
+    COMPANY_CAP,
+    PIPELINE_DIR_ACTIVE,
+    check_company_cap,
+    get_portal_scores,
+    get_strategic_base,
+    load_entries,
+)
 from score import (
     HIGH_PRESTIGE,
     ROLE_FIT_TIERS,
@@ -297,6 +304,7 @@ def run(
     # Promote mode
     promoted = []
     skipped = []
+    all_entries = load_entries()
 
     for job in qualifying:
         entry_id, entry = create_pipeline_entry(job)
@@ -310,6 +318,14 @@ def run(
         # Check if active/ file would overwrite something
         dest = PIPELINE_DIR_ACTIVE / f"{entry_id}.yaml"
         if dest.exists():
+            skipped.append(entry_id)
+            continue
+
+        # Enforce company cap
+        org_name = (entry.get("target") or {}).get("organization", "")
+        allowed, current = check_company_cap(org_name, all_entries)
+        if not allowed:
+            print(f"  SKIP {entry_id}: {org_name} at cap ({current}/{COMPANY_CAP})")
             skipped.append(entry_id)
             continue
 

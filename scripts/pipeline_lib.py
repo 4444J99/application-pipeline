@@ -898,6 +898,33 @@ def get_strategic_base() -> dict:
     return result
 
 
+COMPANY_CAP = 3  # Max active+submitted entries per organization
+
+
+def company_entry_counts(entries: list[dict], actionable_only: bool = True) -> dict[str, int]:
+    """Count entries per organization. If actionable_only, exclude closed/expired/withdrawn."""
+    counts: dict[str, int] = {}
+    for entry in entries:
+        org = (entry.get("target") or {}).get("organization", "Unknown")
+        if actionable_only:
+            status = entry.get("status", "")
+            if status in ("closed", "expired", "withdrawn", "rejected"):
+                continue
+        counts[org] = counts.get(org, 0) + 1
+    return counts
+
+
+def check_company_cap(org: str, entries: list[dict], cap: int = COMPANY_CAP) -> tuple[bool, int]:
+    """Check if an organization is under the cap. Returns (allowed, current_count)."""
+    count = 0
+    for entry in entries:
+        entry_org = (entry.get("target") or {}).get("organization", "")
+        entry_status = entry.get("status", "")
+        if entry_org == org and entry_status not in ("closed", "expired", "withdrawn", "rejected"):
+            count += 1
+    return count < cap, count
+
+
 def atomic_write(filepath: Path, content: str) -> None:
     """Write content to a file atomically via temp-file-then-rename.
 

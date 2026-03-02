@@ -1,0 +1,43 @@
+id: cloudflare-senior-solutions-engineer-digital-native
+name: Cloudflare Senior Solutions Engineer, Digital Native
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Cloudflare
+  url: https://boards.greenhouse.io/cloudflare
+  application_url: https://boards.greenhouse.io/cloudflare/jobs/7662538?gh_jid=7662538
+  portal: greenhouse
+  location: In-Office
+  location_class: unknown
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.82
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-02'
+  posting_date: '2026-03-02'
+  date_added: '2026-03-02'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+- glove-fit
+source: ingest_top_roles.py
+last_touched: '2026-03-02'

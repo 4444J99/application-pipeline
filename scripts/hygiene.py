@@ -27,6 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
     ACTIONABLE_STATUSES,
+    COMPANY_CAP,
     PIPELINE_DIR_ACTIVE,
     PIPELINE_DIR_CLOSED,
     PIPELINE_DIR_RESEARCH_POOL,
@@ -485,7 +486,7 @@ def run_full_report(entries: list[dict]):
 # Company focus (Rule of Three)
 # ---------------------------------------------------------------------------
 
-DEFAULT_FOCUS_LIMIT = 3
+DEFAULT_FOCUS_LIMIT = COMPANY_CAP
 
 
 def section_company_focus(focus_limit: int = DEFAULT_FOCUS_LIMIT):
