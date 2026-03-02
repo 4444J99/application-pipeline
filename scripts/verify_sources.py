@@ -71,7 +71,7 @@ ASHBY_CANDIDATES = [
 ]
 
 
-def test_greenhouse(slug: str) -> tuple[bool, str]:
+def verify_greenhouse(slug: str) -> tuple[bool, str]:
     """Test a Greenhouse board slug. Returns (valid, detail)."""
     url = f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs"
     try:
@@ -86,7 +86,7 @@ def test_greenhouse(slug: str) -> tuple[bool, str]:
         return False, str(e)[:60]
 
 
-def test_ashby(slug: str) -> tuple[bool, str]:
+def verify_ashby(slug: str) -> tuple[bool, str]:
     """Test an Ashby board slug. Returns (valid, detail)."""
     url = f"https://api.ashbyhq.com/posting-api/job-board/{slug}"
     try:
@@ -116,7 +116,7 @@ def main():
         gh_valid = []
         gh_fail = []
         for slug in GREENHOUSE_CANDIDATES:
-            valid, detail = test_greenhouse(slug)
+            valid, detail = verify_greenhouse(slug)
             status = "OK" if valid else "FAIL"
             print(f"  [{status:4}] {slug:30} — {detail}")
             if valid:
@@ -137,7 +137,7 @@ def main():
         ab_valid = []
         ab_fail = []
         for slug in ASHBY_CANDIDATES:
-            valid, detail = test_ashby(slug)
+            valid, detail = verify_ashby(slug)
             status = "OK" if valid else "FAIL"
             print(f"  [{status:4}] {slug:30} — {detail}")
             if valid:

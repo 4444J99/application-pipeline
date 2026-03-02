@@ -3,6 +3,7 @@
 
 import argparse
 import sys
+import os
 from pathlib import Path
 
 from pipeline_lib import (
@@ -73,7 +74,41 @@ def compose_sections(entry: dict, profile: dict | None = None) -> list[tuple[str
     return sections
 
 
-def compose(entry: dict, profile: dict | None = None) -> str:
+def smooth_with_ai(document: str, identity_position: str) -> str:
+    """Use Google GenAI to smooth the assembled blocks into a cohesive document."""
+    try:
+        from google import genai
+        
+        client = genai.Client() # Assumes GEMINI_API_KEY is in environment
+        
+        system_instruction = (
+            f"You are writing a career application document. Your Identity Position is: '{identity_position}'. "
+            "You have been given a document assembled from modular blocks. Your job is to rewrite it for cohesive narrative flow, "
+            "adding natural transitions and enhancing the Pathos (emotional resonance) while maintaining the original facts, metrics, and core arguments. "
+            "Do not fabricate any new experience, metrics, or evidence. Smooth the transitions between sections. "
+            "Output the final markdown document directly without any preamble."
+        )
+        
+        print(f"Running AI smoothing (Identity Position: {identity_position})...", file=sys.stderr)
+        
+        response = client.models.generate_content(
+            model='gemini-2.5-pro',
+            contents=document,
+            config=genai.types.GenerateContentConfig(
+                system_instruction=system_instruction,
+                temperature=0.4,
+            ),
+        )
+        return response.text
+    except ImportError:
+        print("google-genai not installed. Cannot perform AI smoothing.", file=sys.stderr)
+        return document
+    except Exception as e:
+        print(f"Error during AI smoothing: {e}", file=sys.stderr)
+        return document
+
+
+def compose(entry: dict, profile: dict | None = None, ai_smooth: bool = False) -> str:
     """Compose a full submission document from an entry's block references."""
     parts = []
     name = entry.get("name", entry.get("id", "Unknown"))
@@ -132,7 +167,13 @@ def compose(entry: dict, profile: dict | None = None) -> str:
             parts.append(f"**Portfolio:** {portfolio}")
             parts.append("")
 
-    return "\n".join(parts)
+    document = "\n".join(parts)
+    
+    if ai_smooth:
+        identity_pos = entry.get("fit", {}).get("identity_position", "creative-technologist")
+        document = smooth_with_ai(document, identity_pos)
+        
+    return document
 
 
 def print_counts(entry: dict, profile: dict | None = None):
@@ -190,6 +231,8 @@ def main():
                         help="Save composed output to pipeline/submissions/{id}-{date}.md")
     parser.add_argument("--profile", action="store_true",
                         help="Fall back to profile content when blocks are missing")
+    parser.add_argument("--ai-smooth", action="store_true",
+                        help="Use LLM to smooth the concatenated blocks for cohesive flow")
     args = parser.parse_args()
 
     entry = find_entry(args.target)
@@ -209,7 +252,7 @@ def main():
         if not args.word_count and not args.output and not args.plain:
             return
 
-    document = compose(entry, profile)
+    document = compose(entry, profile, ai_smooth=args.ai_smooth)
 
     if args.plain:
         document = strip_markdown(document)
