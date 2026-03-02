@@ -1,0 +1,241 @@
+hypotheses:
+- entry_id: anthropic-developer-community-lead-emea
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: anthropic-developer-education-lead
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: anthropic-developer-relations-mcp
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: anthropic-fde
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: anthropic-founding-developer-relations-lead
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: anthropic-model-quality-software-engineer-claude-code
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: anthropic-se-claude-code
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: anthropic-senior-education-platform-engineer
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: anthropic-software-engineer-agent-sdk-claude-code
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: anthropic-software-engineer-windows-claude-code
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: awesome-foundation
+  date: '2026-03-02'
+  outcome: null
+  category: cover_letter
+  hypothesis: No tailored cover letter submitted
+- entry_id: cloudflare-models-engineer-developer-relations
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: cloudflare-software-engineer-developer-tools-and-productivity
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: cohere-applied-ai
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: cursor-software-engineer-client-infrastructure
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: cursor-software-engineer-devex
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: datadog-senior-technical-writer
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: dbt-labs-senior-developer-experience-advocate
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: deepgram-staff-developer-advocate
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: doris-duke-amt
+  date: '2026-03-02'
+  outcome: null
+  category: resume_screen
+  hypothesis: Standard application without custom question answers
+- entry_id: elastic-software-engineer-ii-python-developer-tools-search
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: elevenlabs-developer-relations-engineer
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: figma-software-engineer-developer-experience
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: gay-lesbian-review
+  date: '2026-03-02'
+  outcome: null
+  category: resume_screen
+  hypothesis: Standard application without custom question answers
+- entry_id: gitlab-staff-backend-engineer-developer-experience-ruby
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: logic-magazine
+  date: '2026-03-02'
+  outcome: null
+  category: cover_letter
+  hypothesis: No tailored cover letter submitted
+- entry_id: mit-tr-wired-aeon
+  date: '2026-03-02'
+  outcome: null
+  category: cover_letter
+  hypothesis: No tailored cover letter submitted
+- entry_id: mongodb-senior-developer-advocate
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: mongodb-senior-software-engineer-devtools
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: noema-magazine
+  date: '2026-03-02'
+  outcome: null
+  category: cover_letter
+  hypothesis: No tailored cover letter submitted
+- entry_id: notion-software-engineer-developer-experience
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: openai-developer-experience-engineer
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: openai-forward-deployed-engineer-fde-nyc
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: openai-software-engineer-full-stack-developer-experience
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: perplexity-full-stack-software-engineer-applied-ai
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: railway-developer-relations
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: replit-software-engineer-product-infrastructure-typescript-devex
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: resend-dx-engineer-technical-writer
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: scale-ai-senior-software-engineer-agentic-data-products
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: scale-ai-staff-software-engineer-developer-experience
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established
+- entry_id: stripe-developer-experience-engineer-privy
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: stripe-full-stack-engineer-developer-experience-product-platform
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: stripe-global-strategic-alliances-lead-agentic-commerce-and-retail-
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: supabase-developer-relations-engineer-san-francisco-ca
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: temporal-staff-developer-advocate-developer-enablement
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: temporal-staff-developer-advocate-platform-engineering
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: temporal-technical-writer
+  date: '2026-03-02'
+  outcome: null
+  category: auto_rejection
+  hypothesis: Auto-sourced; may not pass initial keyword screen
+- entry_id: together-ai
+  date: '2026-03-02'
+  outcome: null
+  category: timing
+  hypothesis: Tier 1 cold app; referral pathway not established

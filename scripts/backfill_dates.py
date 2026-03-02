@@ -92,7 +92,9 @@ def backfill_entry(filepath: Path, dry_run: bool = True) -> bool:
                 insert_after = i
 
     if insert_after is not None:
-        indent = "    "  # standard 4-space YAML indent
+        # Match the indentation of the line we're inserting after
+        ref_line = lines[insert_after]
+        indent = ref_line[: len(ref_line) - len(ref_line.lstrip())]
         lines.insert(insert_after + 1, f"{indent}date_added: {date_str}")
         filepath.write_text("\n".join(lines))
         return True
