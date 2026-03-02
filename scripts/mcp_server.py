@@ -1,107 +1,145 @@
 #!/usr/bin/env python3
 """MCP Server for the application pipeline.
 
-Exposes core functions (score, advance, draft, status) as MCP tools,
-enabling agentic execution of the pipeline state machine.
+Exposes core functions (score, advance, draft, validate) as MCP tools
+using the clean API layer. No sys.argv manipulation or stdout redirection.
+
+Enables agentic execution of the pipeline state machine without tight
+coupling to script internals.
 """
 
 from mcp.server.fastmcp import FastMCP
 import sys
+import json
 from pathlib import Path
 
 # Add scripts dir to path so we can import local modules
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from score import main as score_main
-from advance import main as advance_main
-from draft import main as draft_main
-from pipeline_status import print_summary, print_upcoming
+from pipeline_api import (
+    score_entry,
+    advance_entry,
+    draft_entry,
+    compose_entry,
+    validate_entry,
+    ResultStatus,
+)
 
 # Initialize FastMCP server
 mcp = FastMCP("application-pipeline")
 
+
 @mcp.tool()
 def pipeline_score(target_id: str, auto_qualify: bool = False) -> str:
-    """Score a single entry or all entries in the pipeline."""
-    # We intercept stdout to return it as a string
-    import io
-    from contextlib import redirect_stdout
+    """Score a single entry or auto-qualify batch.
     
-    f = io.StringIO()
-    with redirect_stdout(f):
-        args = ["--target", target_id]
-        if auto_qualify:
-            args.append("--auto-qualify")
-            
-        old_argv = sys.argv
-        sys.argv = ["score.py"] + args
-        try:
-            score_main()
-        except SystemExit:
-            pass
-        finally:
-            sys.argv = old_argv
-            
-    return f.getvalue()
+    Args:
+        target_id: Entry ID to score
+        auto_qualify: If true, batch-advance research entries >= 7.0
+        
+    Returns:
+        JSON result with status, entry_id, scores, and optional error
+    """
+    result = score_entry(target_id=target_id, auto_qualify=auto_qualify, dry_run=True)
+    
+    return json.dumps({
+        "status": result.status.value,
+        "entry_id": result.entry_id,
+        "old_score": result.old_score,
+        "new_score": result.new_score,
+        "message": result.message,
+        "error": result.error,
+    }, default=str)
+
 
 @mcp.tool()
 def pipeline_advance(target_id: str, to_status: str = None) -> str:
-    """Advance an entry to the next status in the pipeline."""
-    import io
-    from contextlib import redirect_stdout
+    """Advance an entry to the next status in the pipeline.
     
-    f = io.StringIO()
-    with redirect_stdout(f):
-        args = ["--id", target_id]
-        if to_status:
-            args.extend(["--to", to_status])
-            
-        old_argv = sys.argv
-        sys.argv = ["advance.py"] + args
-        try:
-            advance_main()
-        except SystemExit:
-            pass
-        finally:
-            sys.argv = old_argv
-            
-    return f.getvalue()
+    Args:
+        target_id: Entry ID to advance
+        to_status: Target status (optional)
+        
+    Returns:
+        JSON result with status transition and optional error
+    """
+    result = advance_entry(entry_id=target_id, to_status=to_status, dry_run=True)
+    
+    return json.dumps({
+        "status": result.status.value,
+        "entry_id": result.entry_id,
+        "old_status": result.old_status,
+        "new_status": result.new_status,
+        "message": result.message,
+        "error": result.error,
+    }, default=str)
+
 
 @mcp.tool()
 def pipeline_draft(target_id: str) -> str:
-    """Draft application materials from profile content."""
-    import io
-    from contextlib import redirect_stdout
+    """Draft application materials from profile content.
     
-    f = io.StringIO()
-    with redirect_stdout(f):
-        args = ["--target", target_id]
-            
-        old_argv = sys.argv
-        sys.argv = ["draft.py"] + args
-        try:
-            draft_main()
-        except SystemExit:
-            pass
-        finally:
-            sys.argv = old_argv
-            
-    return f.getvalue()
+    Args:
+        target_id: Entry ID to draft
+        
+    Returns:
+        JSON result with drafted content and optional file path
+    """
+    result = draft_entry(entry_id=target_id, dry_run=True)
+    
+    return json.dumps({
+        "status": result.status.value,
+        "entry_id": result.entry_id,
+        "content": result.content[:500] if result.content else None,  # First 500 chars
+        "file_path": result.file_path,
+        "message": result.message,
+        "error": result.error,
+    }, default=str)
+
 
 @mcp.tool()
-def pipeline_status(upcoming_days: int = 7) -> str:
-    """Get the full pipeline status overview."""
-    import io
-    from contextlib import redirect_stdout
+def pipeline_compose(target_id: str) -> str:
+    """Compose submission from blocks.
     
-    f = io.StringIO()
-    with redirect_stdout(f):
-        from pipeline_lib import load_entries
-        entries = load_entries()
-        print_summary(entries)
-        print_upcoming(entries, upcoming_days)
-            
-    return f.getvalue()
+    Args:
+        target_id: Entry ID to compose
+        
+    Returns:
+        JSON result with composed content and metadata
+    """
+    result = compose_entry(entry_id=target_id, dry_run=True)
+    
+    return json.dumps({
+        "status": result.status.value,
+        "entry_id": result.entry_id,
+        "content": result.content[:500] if result.content else None,  # First 500 chars
+        "word_count": result.word_count,
+        "block_sources": result.block_sources,
+        "message": result.message,
+        "error": result.error,
+    }, default=str)
+
+
+@mcp.tool()
+def pipeline_validate(target_id: str = None) -> str:
+    """Validate pipeline YAML or specific entry.
+    
+    Args:
+        target_id: Entry ID to validate (optional; validates all if not given)
+        
+    Returns:
+        JSON result with validation status, errors, and warnings
+    """
+    result = validate_entry(entry_id=target_id)
+    
+    return json.dumps({
+        "status": result.status.value,
+        "entry_id": result.entry_id,
+        "is_valid": result.is_valid,
+        "errors": result.errors,
+        "warnings": result.warnings,
+        "message": result.message,
+    }, default=str)
 
 if __name__ == "__main__":
     # Start the MCP server using stdio transport
