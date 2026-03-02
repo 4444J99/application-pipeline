@@ -549,7 +549,7 @@ def generate_dashboard(entries: list[dict] | None = None) -> str:
             lines.append(f"    {cat:<25s} {count}")
 
         # Outcome distribution among hypotheses
-        outcome_counts = Counter(h.get("outcome", "?") for h in hypotheses)
+        outcome_counts = Counter(h.get("outcome") or "pending" for h in hypotheses)
         lines.append("  Outcome distribution:")
         for outcome, count in outcome_counts.most_common():
             lines.append(f"    {outcome:<15s} {count}")
