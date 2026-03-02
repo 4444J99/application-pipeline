@@ -82,13 +82,30 @@ def check_entry(entry: dict) -> tuple[list[str], list[str]]:
                 if not mat_path.exists():
                     errors.append(f"material not found: {m}")
 
-    # 4b. Base resume check — tailored resumes should be used, not base templates
+    # 4b. Resume origin validation — NEVER use base resumes in final submissions
+    # This is a CRITICAL check: base resumes are templates, not production materials
     if isinstance(submission, dict):
         materials = submission.get("materials_attached", [])
         if isinstance(materials, list):
             for m in materials:
-                if "resumes/base/" in m:
-                    warnings.append(f"using base resume: {m} — tailor with tailor_resume.py")
+                # Check for base/ in path
+                if "resumes/base/" in m or "/base/" in m:
+                    errors.append(f"CRITICAL: base resume detected: {m} — Use materials/resumes/batch-NN/ instead")
+        
+        # Also check resume_path field if it exists (some entries use this directly)
+        resume_path = submission.get("resume_path", "")
+        if resume_path:
+            # Check for base/ in resume_path
+            if "resumes/base/" in resume_path or "/base/" in resume_path:
+                errors.append(f"CRITICAL: base resume in resume_path: {resume_path} — Use batch-NN version")
+            # Check file exists
+            from pathlib import Path
+            full_path = Path(resume_path)
+            if not full_path.exists():
+                errors.append(f"resume file not found: {resume_path}")
+            # Check it's PDF
+            elif not resume_path.endswith(".pdf"):
+                errors.append(f"resume must be PDF, got: {resume_path}")
 
     # 5. Portfolio URL (advisory — not all applications require it)
     if isinstance(submission, dict):

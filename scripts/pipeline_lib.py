@@ -943,3 +943,78 @@ def atomic_write(filepath: Path, content: str) -> None:
     except BaseException:
         Path(tmp_path).unlink(missing_ok=True)
         raise
+
+
+# ============================================================================
+# STATE MACHINE QUERY FUNCTIONS
+# ============================================================================
+
+def is_actionable(entry: dict) -> bool:
+    """Return True if entry is in an actionable status (can be worked on).
+    
+    Actionable statuses: research, qualified, drafting, staged
+    Non-actionable: deferred, submitted, interview, outcome (*)
+    
+    """
+    status = entry.get("status", "")
+    return status in ("research", "qualified", "drafting", "staged")
+
+
+def is_deferred(entry: dict) -> bool:
+    """Return True if entry is deferred (blocked by external factors).
+    
+    Deferred entries have explicit deferral reason and optional resume_date
+    when they can be re-activated.
+    """
+    status = entry.get("status", "")
+    deferral = entry.get("deferral")
+    return status == "deferred" and isinstance(deferral, dict)
+
+
+def can_advance(entry: dict, target_status: str = None) -> tuple[bool, str]:
+    """Check if entry can advance to target_status.
+    
+    Returns (can_advance, reason) tuple.
+    
+    State machine: research → qualified → drafting → staged → submitted → outcome
+    
+    Special cases:
+    - Deferred entries cannot advance until re-activated
+    - Terminal outcomes (accepted, rejected, withdrawn, expired) cannot advance
+    """
+    current_status = entry.get("status", "")
+    entry_id = entry.get("id", "unknown")
+    
+    # Cannot advance from terminal outcomes
+    if current_status in ("accepted", "rejected", "withdrawn", "expired", "closed"):
+        return False, f"{entry_id}: already in terminal status '{current_status}'"
+    
+    # Cannot advance from deferred without explicit re-activation
+    if is_deferred(entry):
+        return False, f"{entry_id}: deferred (blocked by external factor); re-activate before advancing"
+    
+    # Define valid state transitions
+    state_order = ["research", "qualified", "drafting", "staged", "submitted"]
+    
+    if current_status not in state_order:
+        return False, f"{entry_id}: unknown status '{current_status}'"
+    
+    if target_status:
+        if target_status not in state_order:
+            return False, f"{entry_id}: unknown target status '{target_status}'"
+        
+        current_idx = state_order.index(current_status)
+        target_idx = state_order.index(target_status)
+        
+        if target_idx <= current_idx:
+            return False, f"{entry_id}: cannot advance backward from '{current_status}' to '{target_status}'"
+        
+        return True, f"{entry_id}: can advance {current_status} → {target_status}"
+    else:
+        # Auto-advance to next status
+        current_idx = state_order.index(current_status)
+        if current_idx < len(state_order) - 1:
+            next_status = state_order[current_idx + 1]
+            return True, f"{entry_id}: can auto-advance {current_status} → {next_status}"
+        else:
+            return False, f"{entry_id}: already at final actionable status '{current_status}'"
