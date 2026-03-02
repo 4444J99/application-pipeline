@@ -13,6 +13,7 @@ Usage:
 """
 
 import argparse
+import shutil
 import subprocess
 import sys
 from datetime import date
@@ -319,7 +320,7 @@ def record_submission(filepath: Path, entry: dict) -> None:
     # Move to submitted directory
     PIPELINE_DIR_SUBMITTED.mkdir(parents=True, exist_ok=True)
     dest = PIPELINE_DIR_SUBMITTED / filepath.name
-    filepath.rename(dest)
+    shutil.move(str(filepath), str(dest))
 
     # Append to conversion log
     _append_conversion_log(entry, today_str)

@@ -96,7 +96,8 @@ def extract_keywords(text: str, top_n: int = 20) -> list[tuple[str, int]]:
         if count >= 2:
             combined[bg] = count
     for ug, count in unigrams.items():
-        if ug not in combined:
+        # Suppress unigram if it appears in any selected bigram
+        if not any(ug in bg.split("-") for bg in combined):
             combined[ug] = count
 
     return combined.most_common(top_n)

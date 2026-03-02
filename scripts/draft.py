@@ -438,9 +438,9 @@ def populate_portal_fields(filepath: Path, entry: dict, profile: dict) -> bool:
     pf_yaml = yaml.dump({"portal_fields": portal_fields}, default_flow_style=False, sort_keys=False)
 
     if "portal_fields:" in content:
-        # Replace existing empty portal_fields
+        # Replace existing portal_fields block (stop at blank lines)
         content = re.sub(
-            r'^portal_fields:.*(?:\n(?:  .*)?)*',
+            r'^portal_fields:.*(?:\n  .+)*',
             pf_yaml.rstrip(),
             content,
             count=1,
@@ -449,7 +449,7 @@ def populate_portal_fields(filepath: Path, entry: dict, profile: dict) -> bool:
     else:
         # Insert before conversion: or at end
         if "\nconversion:" in content:
-            content = content.replace("\nconversion:", f"\n{pf_yaml.rstrip()}\nconversion:")
+            content = re.sub(r"\nconversion:", f"\n{pf_yaml.rstrip()}\nconversion:", content, count=1)
         else:
             content = content.rstrip() + f"\n{pf_yaml}"
 

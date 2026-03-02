@@ -17,8 +17,10 @@ import yaml
 from pipeline_lib import (
     ALL_PIPELINE_DIRS_WITH_POOL,
     BLOCKS_DIR,
+    DIMENSION_ORDER,
     PIPELINE_DIR_ACTIVE,
     PIPELINE_DIR_RESEARCH_POOL,
+    atomic_write,
     days_until,
     load_entry_by_id,
     load_profile,
@@ -720,8 +722,8 @@ def score_financial_alignment(entry: dict, explain: bool = False) -> int | tuple
     cliff_note = amount.get("benefits_cliff_note") or ""
 
     if value == 0:
-        result = 10
-        reason = "$0 (no cliff risk) -> 10"
+        result = 7
+        reason = "$0 (unknown/no amount — neutral) -> 7"
     elif "exceeds" in cliff_note.lower() or "nylag" in cliff_note.lower():
         result = 4
         reason = f"${value:,} cliff note '{cliff_note}' -> 4"
@@ -1051,12 +1053,6 @@ def compute_composite(dimensions: dict[str, int], track: str = "") -> float:
     return round(total, 1)
 
 
-DIMENSION_ORDER = [
-    "mission_alignment", "evidence_match", "track_record_fit",
-    "financial_alignment", "effort_to_value", "strategic_value",
-    "deadline_feasibility", "portal_friction",
-]
-
 # Below this composite score, recommend skipping the application
 QUALIFICATION_THRESHOLD = 5.0
 JOB_QUALIFICATION_THRESHOLD = 5.5
@@ -1113,7 +1109,8 @@ def update_entry_file(filepath: Path, dimensions: dict[str, int], composite: flo
 
     data = yaml.safe_load(content)
     fit = data.get("fit", {}) if isinstance(data.get("fit"), dict) else {}
-    old_score = fit.get("score")
+    raw_score = fit.get("score")
+    old_score = float(raw_score) if raw_score is not None else None
     tags = data.get("tags") or []
 
     if dry_run:
@@ -1126,9 +1123,11 @@ def update_entry_file(filepath: Path, dimensions: dict[str, int], composite: flo
     is_auto = "auto-sourced" in tags
 
     if not has_original and not is_auto and has_dimensions and old_score is not None:
-        # Insert original_score line right after the score line
+        # Insert original_score line right after the score line (anchored to fit: section)
+        fit_pos = content.find("\nfit:")
+        search_start = fit_pos + 1 if fit_pos >= 0 else 0
         score_pattern = re.compile(r"^(\s+)(score:\s+\S+)\s*$", re.MULTILINE)
-        match = score_pattern.search(content)
+        match = score_pattern.search(content, search_start)
         if match:
             indent = match.group(1)
             insert_after = match.end()
@@ -1176,8 +1175,7 @@ def update_entry_file(filepath: Path, dimensions: dict[str, int], composite: flo
     except yaml.YAMLError as e:
         raise ValueError(f"YAML became invalid after scoring update: {e}")
 
-    with open(filepath, "w") as f:
-        f.write(content)
+    atomic_write(filepath, content)
 
     return old_score, composite
 
@@ -1209,10 +1207,11 @@ def run_qualify(entries: list[tuple[Path, dict]]):
     creative_apply = []
     creative_skip = []
 
+    all_raw = [d for _, d in entries]
     for filepath, data in entries:
         entry_id = data.get("id", filepath.stem)
         track = data.get("track", "")
-        should_apply, reason = qualify(data)
+        should_apply, reason = qualify(data, all_entries=all_raw)
 
         if track == "job":
             (job_apply if should_apply else job_skip).append((entry_id, reason))
@@ -1329,7 +1328,7 @@ def run_auto_qualify(dry_run: bool = False, yes: bool = False,
                 content = update_yaml_field(content, "qualified", f'"{today_str}"', nested=True)
             except ValueError:
                 pass  # timeline section may not have a qualified field — that's OK
-            filepath.write_text(content)
+            atomic_write(filepath, content)
             # Move to active/
             shutil.move(str(filepath), str(dest))
             print(f"  {entry_id} -> active/ (score={score}, qualified, {reason})")

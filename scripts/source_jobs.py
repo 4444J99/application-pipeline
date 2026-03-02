@@ -623,11 +623,14 @@ def _yaml_quote(text: str) -> str:
     """Quote a string for inline YAML if it contains special characters."""
     if not text:
         return "''"
-    # If it contains single quotes, use double quotes; otherwise single quotes
     if any(c in text for c in ":#{}[]|>&*!%@`'\"\n"):
         if "'" not in text:
             return f"'{text}'"
-        return f'"{text}"'
+        if '"' not in text:
+            return f'"{text}"'
+        # Both quote types present — escape double quotes in double-quoted string
+        escaped = text.replace("\\", "\\\\").replace('"', '\\"')
+        return f'"{escaped}"'
     return text
 
 

@@ -55,7 +55,7 @@ COMMANDS = {
 # --- Parameterized commands (word + target ID) ---
 PARAM_COMMANDS = {
     "score":    ("score.py", ["--target"],               "Score a single entry"),
-    "enrich":   ("enrich.py", ["--target", None, "--all", "--yes"], "Wire materials/blocks/variants"),
+    "enrich":   ("enrich.py", ["--target", None, "--all"], "Wire materials/blocks/variants"),
     "advance":  ("advance.py", ["--id"],                 "Advance entry to next status"),
     "compose":  ("compose.py", ["--target"],             "Compose submission from blocks"),
     "draft":    ("draft.py", ["--target"],               "Draft from profile content"),

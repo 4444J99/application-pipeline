@@ -11,6 +11,7 @@ from pipeline_lib import (
     ALL_PIPELINE_DIRS,
     ALL_PIPELINE_DIRS_WITH_POOL,
     BLOCKS_DIR,
+    DIMENSION_ORDER,
     EFFORT_MINUTES,
     LEGACY_DIR,
     LEGACY_ID_MAP,
@@ -19,21 +20,25 @@ from pipeline_lib import (
     PROFILES_DIR,
     REPO_ROOT,
     STATUS_ORDER,
+    VALID_DIMENSIONS,
     VALID_STATUSES,
     VALID_TRANSITIONS,
     VARIANTS_DIR,
     _extract_section_content,
     _parse_legacy_markdown,
+    atomic_write,
     days_until,
     detect_portal,
     format_amount,
     get_deadline,
     get_effort,
     get_score,
+    load_block,
     load_entries,
     load_entry_by_id,
     load_legacy_script,
     load_profile,
+    load_variant,
     parse_date,
     parse_datetime,
 )
@@ -591,3 +596,98 @@ def test_load_entries_with_pool_includes_pool():
         assert pool_files.issubset(all_files), (
             "Pool entries missing from ALL_PIPELINE_DIRS_WITH_POOL load"
         )
+
+
+# --- load_block / load_variant ---
+
+
+def test_load_block_existing():
+    """Loading an existing block should return content."""
+    # Use a block that definitely exists
+    result = load_block("evidence/metrics-snapshot")
+    if (BLOCKS_DIR / "evidence" / "metrics-snapshot.md").exists():
+        assert result is not None
+        assert len(result) > 0
+
+
+def test_load_block_missing():
+    """Loading a nonexistent block should return None."""
+    assert load_block("nonexistent/block-that-does-not-exist") is None
+
+
+def test_load_block_path_traversal():
+    """Path traversal attempts should return None."""
+    assert load_block("../../etc/passwd") is None
+    assert load_block("../scripts/pipeline_lib.py") is None
+
+
+def test_load_variant_missing():
+    """Loading a nonexistent variant should return None."""
+    assert load_variant("nonexistent/variant-xyz") is None
+
+
+def test_load_variant_path_traversal():
+    """Path traversal attempts should return None."""
+    assert load_variant("../../etc/passwd") is None
+    assert load_variant("../scripts/pipeline_lib.py") is None
+
+
+# --- parse_date with datetime objects ---
+
+
+def test_parse_date_datetime_object():
+    """PyYAML may parse timestamps as datetime objects — parse_date should extract .date()."""
+    from datetime import datetime
+    dt = datetime(2026, 3, 1, 14, 30, 0)
+    result = parse_date(dt)
+    assert result == date(2026, 3, 1)
+
+
+# --- atomic_write ---
+
+
+def test_atomic_write_basic(tmp_path):
+    """atomic_write should write content to the target file."""
+    filepath = tmp_path / "test.yaml"
+    atomic_write(filepath, "status: qualified\n")
+    assert filepath.exists()
+    assert filepath.read_text() == "status: qualified\n"
+
+
+def test_atomic_write_overwrites(tmp_path):
+    """atomic_write should atomically overwrite existing files."""
+    filepath = tmp_path / "test.yaml"
+    filepath.write_text("old content\n")
+    atomic_write(filepath, "new content\n")
+    assert filepath.read_text() == "new content\n"
+
+
+def test_atomic_write_no_partial(tmp_path):
+    """No temporary files should be left behind after successful write."""
+    filepath = tmp_path / "test.yaml"
+    atomic_write(filepath, "content\n")
+    files = list(tmp_path.iterdir())
+    assert len(files) == 1
+    assert files[0].name == "test.yaml"
+
+
+# --- DIMENSION_ORDER / VALID_DIMENSIONS consistency ---
+
+
+def test_dimension_order_matches_valid_dimensions():
+    """DIMENSION_ORDER list and VALID_DIMENSIONS set should contain the same items."""
+    assert set(DIMENSION_ORDER) == VALID_DIMENSIONS
+
+
+def test_dimension_order_has_eight_dimensions():
+    """Scoring model should have exactly 8 dimensions."""
+    assert len(DIMENSION_ORDER) == 8
+
+
+# --- VALID_STATUSES includes withdrawn ---
+
+
+def test_withdrawn_in_valid_statuses():
+    """withdrawn should be a valid status (added in Tier 1 H1)."""
+    assert "withdrawn" in VALID_STATUSES
+    assert "withdrawn" in STATUS_ORDER

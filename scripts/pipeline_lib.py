@@ -41,7 +41,7 @@ def _detect_current_batch() -> str:
         return "batch-03"
     batches = sorted(
         (p for p in resumes_dir.iterdir() if p.is_dir() and p.name.startswith("batch-")),
-        key=lambda p: p.name,
+        key=lambda p: int(p.name.removeprefix("batch-")) if p.name.removeprefix("batch-").isdigit() else 0,
     )
     return batches[-1].name if batches else "batch-03"
 
@@ -80,12 +80,12 @@ LEGACY_ID_MAP = {
 }
 
 VALID_TRACKS = {"grant", "residency", "job", "fellowship", "writing", "emergency", "prize", "program", "consulting"}
-VALID_STATUSES = {"research", "qualified", "drafting", "staged", "deferred", "submitted", "acknowledged", "interview", "outcome"}
+VALID_STATUSES = {"research", "qualified", "drafting", "staged", "deferred", "submitted", "acknowledged", "interview", "outcome", "withdrawn"}
 ACTIONABLE_STATUSES = {"research", "qualified", "drafting", "staged"}
 
 STATUS_ORDER = [
     "research", "qualified", "drafting", "staged", "deferred",
-    "submitted", "acknowledged", "interview", "outcome",
+    "submitted", "acknowledged", "interview", "outcome", "withdrawn",
 ]
 
 EFFORT_MINUTES = {
@@ -94,6 +94,14 @@ EFFORT_MINUTES = {
     "deep": 270,
     "complex": 720,
 }
+
+# Canonical scoring dimensions — single source of truth for score.py and validate.py.
+DIMENSION_ORDER = [
+    "mission_alignment", "evidence_match", "track_record_fit",
+    "financial_alignment", "effort_to_value", "strategic_value",
+    "deadline_feasibility", "portal_friction",
+]
+VALID_DIMENSIONS = set(DIMENSION_ORDER)
 
 # Valid status transitions: each status maps to the set of statuses it can reach.
 # Single source of truth — imported by validate.py and advance.py.
@@ -190,7 +198,7 @@ def update_yaml_field(
             )
         new_block = re.sub(
             field_pattern,
-            rf'\g<1>{new_value}',
+            lambda m: m.group(1) + new_value,
             block,
             count=1,
             flags=re.MULTILINE,
@@ -202,7 +210,7 @@ def update_yaml_field(
             raise ValueError(f"Field '{field}' not found in YAML (nested={nested})")
         new_content = re.sub(
             pattern,
-            rf'\g<1>{new_value}',
+            lambda m: m.group(1) + new_value,
             content,
             count=1,
             flags=re.MULTILINE,
@@ -213,7 +221,7 @@ def update_yaml_field(
             raise ValueError(f"Field '{field}' not found in YAML (nested={nested})")
         new_content = re.sub(
             pattern,
-            rf'\g<1>{new_value}',
+            lambda m: m.group(1) + new_value,
             content,
             count=1,
             flags=re.MULTILINE,
@@ -295,9 +303,16 @@ def load_entry_by_id(entry_id: str) -> tuple[Path | None, dict | None]:
 
 
 def parse_date(date_str) -> date | None:
-    """Parse an ISO date string (YYYY-MM-DD) into a date object."""
+    """Parse an ISO date string (YYYY-MM-DD) into a date object.
+
+    Also handles datetime objects from PyYAML (e.g., '2026-03-01T14:30:00').
+    """
     if not date_str:
         return None
+    if isinstance(date_str, datetime):
+        return date_str.date()
+    if isinstance(date_str, date):
+        return date_str
     try:
         return datetime.strptime(str(date_str), "%Y-%m-%d").date()
     except ValueError:
@@ -527,7 +542,9 @@ def _extract_section_content(text: str) -> str | None:
 
 def load_block(block_path: str) -> str | None:
     """Load a block file by its reference path relative to BLOCKS_DIR."""
-    full_path = BLOCKS_DIR / block_path
+    full_path = (BLOCKS_DIR / block_path).resolve()
+    if not full_path.is_relative_to(BLOCKS_DIR.resolve()):
+        return None
     if not full_path.suffix:
         full_path = full_path.with_suffix(".md")
     if full_path.exists():
@@ -577,7 +594,9 @@ def load_block_frontmatter(block_path: str) -> dict | None:
 
 def load_variant(variant_path: str) -> str | None:
     """Load a variant file by its reference path relative to VARIANTS_DIR."""
-    full_path = VARIANTS_DIR / variant_path
+    full_path = (VARIANTS_DIR / variant_path).resolve()
+    if not full_path.is_relative_to(VARIANTS_DIR.resolve()):
+        return None
     if not full_path.suffix:
         full_path = full_path.with_suffix(".md")
     if full_path.exists():
@@ -885,3 +904,23 @@ def http_request_with_retry(
                       file=sys.stderr)
                 return None
     return None
+
+
+def atomic_write(filepath: Path, content: str) -> None:
+    """Write content to a file atomically via temp-file-then-rename.
+
+    Prevents data loss from crashes mid-write by writing to a temporary file
+    in the same directory first, then atomically renaming.
+    """
+    import tempfile
+
+    parent = filepath.parent
+    parent.mkdir(parents=True, exist_ok=True)
+    fd, tmp_path = tempfile.mkstemp(dir=parent, suffix=".tmp", prefix=f".{filepath.name}.")
+    try:
+        with open(fd, "w") as f:
+            f.write(content)
+        Path(tmp_path).replace(filepath)
+    except BaseException:
+        Path(tmp_path).unlink(missing_ok=True)
+        raise

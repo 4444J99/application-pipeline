@@ -86,10 +86,9 @@ def response_time_analysis(entries: list[dict]):
             continue
 
         ttr = conversion.get("time_to_response_days")
-        if not ttr or not isinstance(ttr, (int, float)) or ttr <= 0:
+        if ttr is None or not isinstance(ttr, (int, float)) or ttr < 0:
             continue
 
-        ttr = int(ttr)
         all_times.append(ttr)
 
         # By portal
@@ -107,7 +106,7 @@ def response_time_analysis(entries: list[dict]):
         waiting = []
         for entry in entries:
             status = entry.get("status", "")
-            if status not in ("submitted", "acknowledged"):
+            if status != "submitted":
                 continue
             timeline = entry.get("timeline", {})
             sub_date = parse_date(timeline.get("submitted")) if isinstance(timeline, dict) else None

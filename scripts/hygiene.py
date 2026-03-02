@@ -33,6 +33,7 @@ from pipeline_lib import (
     PIPELINE_DIR_SUBMITTED,
     days_until,
     get_deadline,
+    http_request_with_retry,
     load_entries,
     load_entry_by_id,
     parse_date,
@@ -54,9 +55,17 @@ STALE_ROLLING_DAYS = 30
 # ---------------------------------------------------------------------------
 
 def check_url_liveness(url: str) -> tuple[str, int | None]:
-    """HTTP HEAD check on a URL. Returns (status_label, http_code)."""
+    """HTTP HEAD check on a URL with retry. Returns (status_label, http_code)."""
     if not url:
         return "missing", None
+    result = http_request_with_retry(
+        url, method="HEAD", timeout=HTTP_TIMEOUT,
+        headers={"User-Agent": "application-pipeline/1.0"},
+        max_retries=2,
+    )
+    if result is not None:
+        return "ok", 200
+    # Retry failed — try to distinguish error type
     try:
         req = Request(url, method="HEAD", headers={"User-Agent": "application-pipeline/1.0"})
         with urlopen(req, timeout=HTTP_TIMEOUT) as resp:
@@ -169,17 +178,17 @@ def run_check_postings(entries: list[dict]) -> list[dict]:
             jobs = fetch_greenhouse_jobs(board)
             for j in jobs:
                 live_urls.add(j.get("url", ""))
-                live_ids.add(j.get("id", ""))
+                live_ids.add(str(j.get("id", "")))
         elif portal == "lever":
             jobs = fetch_lever_jobs(board)
             for j in jobs:
                 live_urls.add(j.get("url", ""))
-                live_ids.add(j.get("id", ""))
+                live_ids.add(str(j.get("id", "")))
         elif portal == "ashby":
             jobs = fetch_ashby_jobs(board)
             for j in jobs:
                 live_urls.add(j.get("url", ""))
-                live_ids.add(j.get("id", ""))
+                live_ids.add(str(j.get("id", "")))
 
         for e in board_entries:
             entry_id = e.get("id", "?")

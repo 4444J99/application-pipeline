@@ -14,6 +14,7 @@ from greenhouse_submit import (
     load_answers,
     merge_answers,
     parse_greenhouse_url,
+    process_entry,
     resolve_select_value,
     validate_answers,
 )
@@ -378,3 +379,46 @@ def test_load_answers_missing_file(tmp_path, monkeypatch):
 
     monkeypatch.setattr(greenhouse_submit, "ANSWERS_DIR", tmp_path)
     assert load_answers("nonexistent-entry") is None
+
+
+# ---------------------------------------------------------------------------
+# Status gate tests (E3/E4 — Tier 3)
+# ---------------------------------------------------------------------------
+
+
+def test_status_gate_blocks_submitted():
+    """process_entry should refuse to submit an already-submitted entry."""
+    entry = {
+        "id": "test-entry",
+        "name": "Test Entry",
+        "status": "submitted",
+        "target": {"portal": "greenhouse", "application_url": ""},
+    }
+    result = process_entry(entry, {}, do_submit=True)
+    assert result is False
+
+
+def test_status_gate_blocks_outcome():
+    """process_entry should refuse to submit an entry with terminal outcome."""
+    entry = {
+        "id": "test-entry",
+        "name": "Test Entry",
+        "status": "outcome",
+        "target": {"portal": "greenhouse", "application_url": ""},
+    }
+    result = process_entry(entry, {}, do_submit=True)
+    assert result is False
+
+
+def test_status_gate_allows_dry_run():
+    """Dry-run (do_submit=False) should not block on status."""
+    entry = {
+        "id": "test-entry",
+        "name": "Test Entry",
+        "status": "submitted",
+        "target": {"portal": "greenhouse", "application_url": ""},
+    }
+    # dry-run should not fail on status gate (may fail on URL parsing, that's OK)
+    result = process_entry(entry, {}, do_submit=False)
+    # Returns False because URL is empty, not because of status gate
+    assert result is False

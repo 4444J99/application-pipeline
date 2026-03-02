@@ -126,7 +126,7 @@ def get_due_actions(entry: dict) -> list[dict]:
                 "day": days,
                 "window": f"Day {low}-{high}",
             })
-        elif days > high and step["type"] not in existing_types:
+        elif days > high and days <= high + 30 and step["type"] not in existing_types:
             due.append({
                 "action": f"OVERDUE: {step['action']}",
                 "type": step["type"],

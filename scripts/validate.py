@@ -10,6 +10,7 @@ from pipeline_lib import (
 )
 from pipeline_lib import (
     REPO_ROOT,
+    VALID_DIMENSIONS,
     VALID_STATUSES,
     VALID_TRACKS,
     VALID_TRANSITIONS,
@@ -23,11 +24,6 @@ VALID_PORTALS = {"submittable", "slideroom", "email", "custom", "web", "greenhou
 VALID_AMOUNT_TYPES = {"lump_sum", "stipend", "salary", "fee", "in_kind", "variable"}
 VALID_POSITIONS = {"systems-artist", "creative-technologist", "educator", "community-practitioner", "independent-engineer"}
 VALID_EFFORT_LEVELS = {"quick", "standard", "deep", "complex"}
-VALID_DIMENSIONS = {
-    "mission_alignment", "evidence_match", "track_record_fit",
-    "financial_alignment", "effort_to_value", "strategic_value",
-    "deadline_feasibility", "portal_friction",
-}
 VALID_OUTREACH_TYPES = {
     "pre_submission", "warm_contact", "info_session",
     "post_submission", "follow_up", "reference_request",
@@ -59,8 +55,11 @@ def _reachable_statuses(from_status: str) -> set[str]:
     return reachable
 
 
-def validate_entry(filepath: Path) -> list[str]:
-    """Validate a single pipeline YAML file. Returns list of errors."""
+def validate_entry(filepath: Path, warnings: list[str] | None = None) -> list[str]:
+    """Validate a single pipeline YAML file. Returns list of errors.
+
+    Optionally collects non-fatal warnings into the provided list.
+    """
     errors = []
 
     try:
@@ -315,7 +314,8 @@ def validate_entry(filepath: Path) -> list[str]:
     deferral = data.get("deferral")
     status = data.get("status")
     if status == "deferred" and deferral is None:
-        errors.append("Status is 'deferred' but no 'deferral' field present (recommended)")
+        if warnings is not None:
+            warnings.append("Status is 'deferred' but no 'deferral' field present (recommended)")
     if deferral is not None:
         if not isinstance(deferral, dict):
             errors.append("deferral must be a mapping")
@@ -487,6 +487,7 @@ def main():
     args = parser.parse_args()
 
     all_errors = {}
+    all_warnings: dict[str, list[str]] = {}
     file_count = 0
     seen_ids: dict[str, str] = {}  # id -> first filepath
 
@@ -497,7 +498,12 @@ def main():
             if filepath.name.startswith("_"):
                 continue
             file_count += 1
-            errors = validate_entry(filepath)
+            entry_warnings = []
+            errors = validate_entry(filepath, warnings=entry_warnings)
+
+            # Print non-fatal warnings
+            for w in entry_warnings:
+                all_warnings.setdefault(filepath.name, []).append(w)
 
             # Duplicate ID detection across all directories
             entry_id = filepath.stem
@@ -527,6 +533,12 @@ def main():
         has_errors = True
     else:
         print(f"OK — {file_count} pipeline entries validated successfully.")
+
+    if all_warnings:
+        print(f"\nWarnings ({sum(len(v) for v in all_warnings.values())}):")
+        for filename, warns in all_warnings.items():
+            for w in warns:
+                print(f"  {filename}: {w}")
 
     if args.check_freshness:
         print()

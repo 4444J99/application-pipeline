@@ -201,9 +201,9 @@ def test_deadline_no_dict():
 
 
 def test_financial_zero_amount():
-    """Zero amount is maximally safe (score 10)."""
+    """Zero/unknown amount scores neutral (7) — avoids inflating under-researched entries."""
     entry = _make_entry(amount_value=0)
-    assert score_financial_alignment(entry) == 10
+    assert score_financial_alignment(entry) == 7
 
 
 def test_financial_below_snap():
@@ -740,6 +740,7 @@ def test_qualify_above_threshold():
         blocks_used={"a": "x", "b": "x", "c": "x", "d": "x", "e": "x"},
         organization="Creative Capital",
         deadline_type="rolling",
+        amount_value=15000,
     )
     should_apply, reason = qualify(entry)
     assert should_apply is True

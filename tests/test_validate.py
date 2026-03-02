@@ -387,7 +387,7 @@ def test_deferred_status_valid():
 
 
 def test_deferred_without_deferral_field_warns():
-    """A deferred entry without deferral field should produce a warning."""
+    """A deferred entry without deferral field should produce a warning (not error)."""
     with tempfile.TemporaryDirectory() as tmp:
         tmp_path = Path(tmp)
         data = {
@@ -398,8 +398,10 @@ def test_deferred_without_deferral_field_warns():
             "outcome": None,
         }
         filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
-        errors = validate_entry(filepath)
-        assert any("no 'deferral' field present" in e for e in errors)
+        warnings = []
+        errors = validate_entry(filepath, warnings=warnings)
+        assert not any("no 'deferral' field present" in e for e in errors)
+        assert any("no 'deferral' field present" in w for w in warnings)
 
 
 def test_invalid_deferral_reason():

@@ -505,7 +505,7 @@ def generate_campaign_markdown(entries: list[dict], days_ahead: int) -> str:
     # Rolling/no-deadline entries
     rolling = [e for e in tiers["ready"]
                if not (get_deadline(e)[0]
-                       and get_deadline(e)[1] in ("hard", "window", "soft"))]
+                       and get_deadline(e)[1] in ("hard", "window", "soft", "fixed"))]
 
     if rolling:
         lines.append("## Rolling/No-Deadline (staged, submit anytime)")

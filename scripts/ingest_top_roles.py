@@ -217,8 +217,8 @@ def run(
     # Apply max-age filter if requested
     if max_age is not None:
         unique = [j for j in unique
-                  if freshness_tier(j.get("posting_date"))[1] is None
-                  or freshness_tier(j.get("posting_date"))[1] <= max_age]
+                  if freshness_tier(j.get("posting_date"))[1] is not None
+                  and freshness_tier(j.get("posting_date"))[1] <= max_age]
         print(f"  {len(unique)} after max-age filter (≤ {max_age} days)")
 
     print()

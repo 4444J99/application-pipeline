@@ -286,7 +286,7 @@ def integrate_answers(entry_id: str, output_text: str, portal: str) -> bool:
             yaml_val = "|\n" + "\n".join(f"  {line}" for line in answer.split("\n"))
             raw_text = re.sub(
                 rf'^({re.escape(key)}:\s*).*$',
-                rf'\g<1>{yaml_val}',
+                lambda m: m.group(1) + yaml_val,
                 raw_text,
                 count=1,
                 flags=re.MULTILINE,
@@ -296,7 +296,7 @@ def integrate_answers(entry_id: str, output_text: str, portal: str) -> bool:
             escaped = answer.replace('"', '\\"')
             raw_text = re.sub(
                 rf'^({re.escape(key)}:\s*).*$',
-                rf'\g<1>"{escaped}"',
+                lambda m, val=escaped: m.group(1) + f'"{val}"',
                 raw_text,
                 count=1,
                 flags=re.MULTILINE,

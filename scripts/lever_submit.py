@@ -458,8 +458,6 @@ def submit_to_lever(
         api_key = lever_keys.get(company, "")  # allow-secret
 
     url = f"{base}/{company}/{posting_id}"
-    if api_key:
-        url += f"?key={api_key}"
 
     # Build multipart form data
     boundary = uuid.uuid4().hex
@@ -505,6 +503,10 @@ def submit_to_lever(
     headers = {
         "Content-Type": f"multipart/form-data; boundary={boundary}",
     }
+    if api_key:
+        import base64
+        creds = base64.b64encode(f"{api_key}:".encode()).decode()
+        headers["Authorization"] = f"Basic {creds}"
 
     try:
         req = urllib.request.Request(url, data=full_body, headers=headers, method="POST")
@@ -549,6 +551,14 @@ def process_entry(entry: dict, config: dict, do_submit: bool) -> bool:
     """Process a single Lever entry. Returns True if successful."""
     entry_id = entry.get("id", "?")
     name = entry.get("name", entry_id)
+
+    # Status gate: prevent duplicate submissions
+    status = entry.get("status", "")
+    if do_submit and status in ("submitted", "acknowledged", "interview", "outcome"):
+        print(f"  BLOCKED: {entry_id} already has status '{status}' — refusing duplicate submission")
+        return False
+    if do_submit and status != "staged":
+        print(f"  WARNING: {entry_id} has status '{status}' (expected 'staged'), proceeding with caution")
 
     portal = entry.get("target", {}).get("portal", "")
     if portal != "lever":

@@ -61,11 +61,14 @@ def build_pdf(chrome: str, html_path: Path, pdf_path: Path) -> bool:
             f"--print-to-pdf={pdf_path}",
             file_url,
         ]
+        # Remove stale PDF so we don't falsely report success
+        if pdf_path.exists():
+            pdf_path.unlink()
         try:
-            subprocess.run(
+            result = subprocess.run(
                 cmd, capture_output=True, text=True, timeout=30
             )
-            if pdf_path.exists() and pdf_path.stat().st_size > 0:
+            if result.returncode == 0 and pdf_path.exists() and pdf_path.stat().st_size > 0:
                 return True
         except subprocess.TimeoutExpired:
             # Kill any orphaned Chrome processes from the timeout

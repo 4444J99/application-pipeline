@@ -26,6 +26,7 @@ from pipeline_lib import (
     PIPELINE_DIR_CLOSED,
     PIPELINE_DIR_SUBMITTED,
     SIGNALS_DIR,
+    atomic_write,
     load_entries,
     load_entry_by_id,
     parse_date,
@@ -199,6 +200,8 @@ def record_outcome(
         )
         sys.exit(1)
 
+    import re
+
     today_str = date.today().isoformat()
     content = filepath.read_text()
 
@@ -225,7 +228,6 @@ def record_outcome(
     elif outcome in ("accepted", "rejected", "withdrawn", "expired"):
         # Terminal outcome
         content = update_yaml_field(content, "status", "outcome")
-        import re
         content = re.sub(
             r'^(outcome:)\s+.*$', rf'\1 {outcome}',
             content, count=1, flags=re.MULTILINE,
@@ -263,12 +265,18 @@ def record_outcome(
         try:
             content = update_yaml_field(content, "outcome_note", f'"{note}"', nested=True)
         except ValueError:
-            # Append to conversion section if field doesn't exist
+            # Insert outcome_note inside conversion section
             if "conversion:" in content:
-                content = content.rstrip() + f'\n  outcome_note: "{note}"\n'
+                content = re.sub(
+                    r'^(conversion:\s*\n)',
+                    rf'\g<0>  outcome_note: "{note}"\n',
+                    content,
+                    count=1,
+                    flags=re.MULTILINE,
+                )
 
     content = update_last_touched(content)
-    filepath.write_text(content)
+    atomic_write(filepath, content)
 
     # Update conversion log
     _update_conversion_log(entry_id, outcome, stage, time_to_response)

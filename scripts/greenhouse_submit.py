@@ -670,6 +670,14 @@ def process_entry(entry: dict, config: dict, do_submit: bool) -> bool:
     entry_id = entry.get("id", "?")
     name = entry.get("name", entry_id)
 
+    # Status gate: prevent duplicate submissions
+    status = entry.get("status", "")
+    if do_submit and status in ("submitted", "acknowledged", "interview", "outcome"):
+        print(f"  BLOCKED: {entry_id} already has status '{status}' — refusing duplicate submission")
+        return False
+    if do_submit and status != "staged":
+        print(f"  WARNING: {entry_id} has status '{status}' (expected 'staged'), proceeding with caution")
+
     # Verify portal type
     portal = entry.get("target", {}).get("portal", "")
     if portal != "greenhouse":

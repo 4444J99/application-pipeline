@@ -279,7 +279,7 @@ def integrate_tailored_sections(entry_id: str, output_text: str, identity: str |
     if "TITLE_LINE" in parsed_sections:
         html = re.sub(
             r'(<div class="title-line">).*?(</div>)',
-            rf'\g<1>{parsed_sections["TITLE_LINE"]}\g<2>',
+            lambda m: m.group(1) + parsed_sections["TITLE_LINE"] + m.group(2),
             html,
             count=1,
             flags=re.DOTALL,
@@ -289,7 +289,7 @@ def integrate_tailored_sections(entry_id: str, output_text: str, identity: str |
         title_text = title_text.replace("&amp;", "&").strip()
         html = re.sub(
             r'(<title>Anthony James Padavano — ).*?(</title>)',
-            rf'\g<1>{title_text}\g<2>',
+            lambda m: m.group(1) + title_text + m.group(2),
             html,
             count=1,
         )
@@ -297,7 +297,7 @@ def integrate_tailored_sections(entry_id: str, output_text: str, identity: str |
     if "PROFILE" in parsed_sections:
         html = re.sub(
             r'(<div class="section-content profile">\s*<p>).*?(</p>\s*</div>)',
-            rf'\g<1>{parsed_sections["PROFILE"]}\g<2>',
+            lambda m: m.group(1) + parsed_sections["PROFILE"] + m.group(2),
             html,
             count=1,
             flags=re.DOTALL,
@@ -306,7 +306,7 @@ def integrate_tailored_sections(entry_id: str, output_text: str, identity: str |
     if "SKILLS" in parsed_sections:
         html = re.sub(
             r'(<div class="skills-list">)\s*.*?\s*(</div>)',
-            rf'\g<1>\n      {parsed_sections["SKILLS"]}\n    \g<2>',
+            lambda m: m.group(1) + "\n      " + parsed_sections["SKILLS"] + "\n    " + m.group(2),
             html,
             count=1,
             flags=re.DOTALL,
@@ -315,7 +315,7 @@ def integrate_tailored_sections(entry_id: str, output_text: str, identity: str |
     if "PROJECTS" in parsed_sections:
         html = re.sub(
             r'(Selected<br>Projects</div>\s*<div class="section-content">)\s*.*?\s*(</div>\s*</div>\s*<div class="section">\s*<div class="section-label">Experience)',
-            rf'\g<1>\n\n{parsed_sections["PROJECTS"]}\n\n  \g<2>',
+            lambda m: m.group(1) + "\n\n" + parsed_sections["PROJECTS"] + "\n\n  " + m.group(2),
             html,
             count=1,
             flags=re.DOTALL,
@@ -324,7 +324,7 @@ def integrate_tailored_sections(entry_id: str, output_text: str, identity: str |
     if "EXPERIENCE" in parsed_sections:
         html = re.sub(
             r'(Experience</div>\s*<div class="section-content">)\s*.*?\s*(</div>\s*</div>\s*<div class="section">\s*<div class="section-label">Education)',
-            rf'\g<1>\n\n{parsed_sections["EXPERIENCE"]}\n\n  \g<2>',
+            lambda m: m.group(1) + "\n\n" + parsed_sections["EXPERIENCE"] + "\n\n  " + m.group(2),
             html,
             count=1,
             flags=re.DOTALL,

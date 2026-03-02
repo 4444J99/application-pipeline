@@ -8,6 +8,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 from source_jobs import (
     VALID_LOCATION_CLASSES,
     _slugify,
+    _yaml_quote,
     classify_location,
     create_pipeline_entry,
     filter_by_title,
@@ -116,3 +117,35 @@ def test_filter_by_title_exclude():
     jobs = [{"title": "Staff Engineer, Platform"}]
     result = filter_by_title(jobs, ["engineer"], ["staff engineer"])
     assert len(result) == 0
+
+
+# --- _yaml_quote ---
+
+
+def test_yaml_quote_plain():
+    """Plain text without special chars should pass through unquoted."""
+    assert _yaml_quote("hello world") == "hello world"
+
+
+def test_yaml_quote_empty():
+    """Empty string should produce empty single-quoted string."""
+    assert _yaml_quote("") == "''"
+
+
+def test_yaml_quote_single_quotes():
+    """Text with special chars but no single quotes uses single quotes."""
+    assert _yaml_quote("hello: world") == "'hello: world'"
+
+
+def test_yaml_quote_has_single_quotes():
+    """Text with single quotes should use double quotes."""
+    assert _yaml_quote("it's a test") == '"it\'s a test"'
+
+
+def test_yaml_quote_both_quote_types():
+    """Text with both single and double quotes should escape double quotes."""
+    result = _yaml_quote("""He said "it's fine" """.strip())
+    assert result.startswith('"')
+    assert result.endswith('"')
+    # Should be valid — double quotes escaped inside
+    assert '\\"' in result

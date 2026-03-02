@@ -163,6 +163,7 @@ def section_stale(entries: list[dict]) -> dict:
                 and status in ("research", "qualified")):
             at_risk.append((entry_id, e.get("name", entry_id), dl_date, status,
                             days_until(dl_date)))
+            continue
 
         # Stagnant: no activity in >7 days + actionable
         if status in ACTIONABLE_STATUSES:
@@ -1094,13 +1095,18 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
     if section is None or section == "readiness":
         section_readiness(entries)
     if do_log or section == "log":
-        # Need all stats for logging
+        # Need all stats for logging — suppress stdout if not already displayed
+        import contextlib
+        import io
         if not health_stats:
-            health_stats = section_health(entries)
+            with contextlib.redirect_stdout(io.StringIO()):
+                health_stats = section_health(entries)
         if not stale_stats:
-            stale_stats = section_stale(entries)
+            with contextlib.redirect_stdout(io.StringIO()):
+                stale_stats = section_stale(entries)
         if not plan_stats:
-            plan_stats = section_plan(entries, hours)
+            with contextlib.redirect_stdout(io.StringIO()):
+                plan_stats = section_plan(entries, hours)
         section_log(health_stats, stale_stats, plan_stats)
 
 

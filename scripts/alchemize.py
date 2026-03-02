@@ -39,6 +39,7 @@ from greenhouse_submit import (
 from pipeline_lib import (
     ACTIONABLE_STATUSES,
     BLOCKS_DIR,
+    CURRENT_BATCH,
     MATERIALS_DIR,
     PIPELINE_DIR_ACTIVE,
     REPO_ROOT,
@@ -47,13 +48,14 @@ from pipeline_lib import (
     load_entries,
     load_entry_by_id,
     load_profile,
+    update_last_touched,
+    update_yaml_field,
 )
 
 WORK_DIR = Path(__file__).resolve().parent / ".alchemize-work"
 STRATEGY_DIR = REPO_ROOT / "strategy"
 TARGETS_DIR = REPO_ROOT / "targets"
 RESUMES_DIR = MATERIALS_DIR / "resumes"
-CURRENT_BATCH = "batch-03"
 
 PHASES = ("intake", "research", "map", "synthesize")
 
@@ -490,7 +492,7 @@ def select_evidence_blocks(
         block_index = load_block_index()
     tag_index = block_index.get("tag_index", {})
     for tag, block_paths in tag_index.items():
-        if tag in job_lower:
+        if re.search(r"\b" + re.escape(tag) + r"\b", job_lower):
             for bp in block_paths:
                 bp_md = bp + ".md" if not bp.endswith(".md") else bp
                 if bp_md not in selected:
@@ -896,41 +898,61 @@ def write_greenhouse_answers(entry_id: str, answers_text: str) -> Path | None:
 def update_pipeline_yaml(
     entry_id: str, variant_ref: str | None, framing: str | None
 ) -> bool:
-    """Update pipeline YAML with new variant reference and framing."""
+    """Update pipeline YAML with new variant reference and framing.
+
+    Uses targeted regex-based field updates to preserve file formatting
+    (comments, key order, quoting style) instead of destructive yaml.dump.
+    """
     filepath, data = load_entry_by_id(entry_id)
     if not filepath or not data:
         print(f"  Error: Could not load pipeline entry for {entry_id}")
         return False
 
+    content = filepath.read_text()
     changed = False
 
     if variant_ref:
-        submission = data.get("submission", {})
-        if not isinstance(submission, dict):
-            submission = {}
-        variant_ids = submission.get("variant_ids", {})
-        if not isinstance(variant_ids, dict):
-            variant_ids = {}
-        variant_ids["cover_letter"] = variant_ref
-        submission["variant_ids"] = variant_ids
-        data["submission"] = submission
-        changed = True
+        try:
+            content = update_yaml_field(
+                content, "cover_letter", variant_ref,
+                nested=True, parent_key="variant_ids",
+            )
+            changed = True
+        except ValueError:
+            # variant_ids or cover_letter field doesn't exist yet — try adding
+            if "variant_ids:" in content:
+                content = re.sub(
+                    r'^(\s*variant_ids:\s*)\{\}',
+                    lambda m: re.match(r'^(\s*)', m.group(1)).group(1) + "variant_ids:\n"
+                    + re.match(r'^(\s*)', m.group(1)).group(1) + f"  cover_letter: {variant_ref}",
+                    content, count=1, flags=re.MULTILINE,
+                )
+                changed = True
+            elif "variant_ids:" not in content and "submission:" in content:
+                content = re.sub(
+                    r'^(submission:\s*\n)',
+                    rf'\g<0>  variant_ids:\n    cover_letter: {variant_ref}\n',
+                    content, count=1, flags=re.MULTILINE,
+                )
+                changed = True
 
     if framing:
-        fit = data.get("fit", {})
-        if not isinstance(fit, dict):
-            fit = {}
-        fit["framing"] = framing
-        data["fit"] = fit
-        changed = True
-
-    data["last_touched"] = str(date.today())
-    changed = True
+        try:
+            content = update_yaml_field(content, "framing", framing, nested=True)
+            changed = True
+        except ValueError:
+            # framing field doesn't exist yet — add under fit:
+            if "fit:" in content:
+                content = re.sub(
+                    r'^(fit:\s*\n)',
+                    rf'\g<0>  framing: {framing}\n',
+                    content, count=1, flags=re.MULTILINE,
+                )
+                changed = True
 
     if changed:
-        # Remove internal metadata keys before writing
-        clean_data = {k: v for k, v in data.items() if not k.startswith("_")}
-        filepath.write_text(yaml.dump(clean_data, default_flow_style=False, allow_unicode=True, sort_keys=False))
+        content = update_last_touched(content)
+        filepath.write_text(content)
         return True
     return False
 

@@ -91,7 +91,7 @@ class TestExtractKeywords:
         assert len(keywords) <= 5
 
     def test_returns_counts(self):
-        text = "python python python javascript javascript"
+        text = "python web python api python rest javascript api javascript rest"
         keywords = extract_keywords(text, top_n=5)
         kw_dict = dict(keywords)
         assert kw_dict.get("python", 0) == 3

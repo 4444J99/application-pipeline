@@ -152,9 +152,17 @@ def enrich_materials(filepath, entry, dry_run=False) -> bool:
     content = filepath.read_text()
 
     # Replace empty materials_attached: [] with the selected resume
+    # Capture indentation to compute correct child indentation
+    def _replace_materials(m):
+        indent = m.group(1)  # e.g. "    materials_attached: "
+        # Extract the leading whitespace from the key
+        key_indent = re.match(r'^(\s*)', indent).group(1)
+        child_indent = key_indent + "  "
+        return key_indent + "materials_attached:\n" + child_indent + f"- {resume}"
+
     new_content = re.sub(
         r'^(\s*materials_attached:\s*)\[\]',
-        rf'\1\n    - {resume}',
+        _replace_materials,
         content,
         count=1,
         flags=re.MULTILINE,
@@ -198,9 +206,15 @@ def enrich_variant(filepath, entry, variant_path, dry_run=False) -> bool:
     content = filepath.read_text()
 
     # Replace empty variant_ids: {} with the cover letter
+    def _replace_variants(m):
+        indent = m.group(1)
+        key_indent = re.match(r'^(\s*)', indent).group(1)
+        child_indent = key_indent + "  "
+        return key_indent + "variant_ids:\n" + child_indent + f"cover_letter: {variant_path}"
+
     new_content = re.sub(
         r'^(\s*variant_ids:\s*)\{\}',
-        rf'\1\n    cover_letter: {variant_path}',
+        _replace_variants,
         content,
         count=1,
         flags=re.MULTILINE,
@@ -288,16 +302,17 @@ def enrich_blocks(filepath, entry, dry_run=False) -> bool:
 
     content = filepath.read_text()
 
-    # Build the replacement YAML for blocks_used
-    blocks_lines = []
-    for key, path in default_blocks.items():
-        blocks_lines.append(f"    {key}: {path}")
-    blocks_yaml = "\n".join(blocks_lines)
-
     # Replace empty blocks_used: {} with the block mappings
+    def _replace_blocks(m):
+        indent = m.group(1)
+        key_indent = re.match(r'^(\s*)', indent).group(1)
+        child_indent = key_indent + "  "
+        blocks_lines = [f"{child_indent}{key}: {path}" for key, path in default_blocks.items()]
+        return key_indent + "blocks_used:\n" + "\n".join(blocks_lines)
+
     new_content = re.sub(
         r'^(\s*blocks_used:\s*)\{\}',
-        rf'\1\n{blocks_yaml}',
+        _replace_blocks,
         content,
         count=1,
         flags=re.MULTILINE,
