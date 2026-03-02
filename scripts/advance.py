@@ -51,10 +51,15 @@ def can_advance(current_status: str, target_status: str) -> bool:
 def advance_entry(filepath, entry_id: str, target_status: str) -> bool:
     """Advance a single entry to target_status by updating the YAML file.
 
-    Returns True if successful.
+    Returns True if successful. Logs to signal-action audit trail.
     """
     content = filepath.read_text()
     today_str = date.today().isoformat()
+
+    # Read current status before modification
+    import yaml as _yaml
+    current_data = _yaml.safe_load(content) or {}
+    from_status = current_data.get("status", "?")
 
     # Update status
     content = update_yaml_field(content, "status", target_status)
@@ -73,6 +78,20 @@ def advance_entry(filepath, entry_id: str, target_status: str) -> bool:
             pass  # Field may not exist in this entry
 
     filepath.write_text(content)
+
+    # Log signal-action for audit trail
+    try:
+        from log_signal_action import log_action
+        log_action(
+            signal_id=f"advance-{entry_id}-{today_str}",
+            signal_type="score_threshold",
+            description=f"Advanced {from_status} -> {target_status}",
+            triggered_action=f"advance to {target_status}",
+            entry_id=entry_id,
+        )
+    except Exception:
+        pass  # Non-critical; don't fail the advance
+
     return True
 
 

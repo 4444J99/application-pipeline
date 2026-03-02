@@ -1,0 +1,47 @@
+version: "1.0"
+description: >
+  Decision rules for the autonomous pipeline agent (scripts/agent.py).
+  Edit thresholds here to customize agent behavior without modifying code.
+
+rules:
+  # Rule 1: Score research entries that lack a composite score
+  score_unscored_research:
+    enabled: true
+    condition: "status == research AND score is null"
+    action: score
+    severity: routine
+
+  # Rule 2: Auto-advance research entries with sufficient score to qualified
+  advance_research_to_qualified:
+    enabled: true
+    condition: "status == research AND score >= threshold"
+    action: advance
+    to_status: qualified
+    threshold: 7.0
+    severity: routine
+
+  # Rule 3: Auto-advance qualified entries with high score to drafting
+  advance_qualified_to_drafting:
+    enabled: true
+    condition: "status == qualified AND score >= threshold"
+    action: advance
+    to_status: drafting
+    threshold: 8.0
+    severity: routine
+
+  # Rule 4: Auto-advance drafting entries with time to staged
+  advance_drafting_to_staged:
+    enabled: true
+    condition: "status == drafting AND days_to_deadline > min_days"
+    action: advance
+    to_status: staged
+    min_days: 7
+    severity: routine
+
+  # Rule 5: Flag staged entries approaching deadline for submission
+  flag_staged_for_submission:
+    enabled: true
+    condition: "status == staged AND days_to_deadline < max_days"
+    action: flag_for_submission
+    max_days: 7
+    severity: urgent

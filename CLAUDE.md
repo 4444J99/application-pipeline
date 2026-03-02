@@ -260,6 +260,72 @@ python scripts/answer_questions.py --integrate <id>   # Integrate AI-generated a
 python scripts/browser_submit.py --target <id>        # Interactive browser submission
 python scripts/browser_submit.py --target <id> --auto-submit  # Auto-submit (use with caution)
 
+# Autonomous agent: plan and execute pipeline state transitions
+python scripts/agent.py --plan                  # Show planned actions (dry-run)
+python scripts/agent.py --execute --yes         # Execute autonomously
+python scripts/agent.py --target <id> --yes     # Single entry
+# Decision rules loaded from strategy/agent-rules.yaml (editable thresholds)
+
+# Entry freshness monitoring: age categorization and URL liveness
+python scripts/freshness_monitor.py                          # Freshness report (no HTTP)
+python scripts/freshness_monitor.py --check-urls             # Check URLs (HTTP HEAD, limit 20)
+python scripts/freshness_monitor.py --check-urls --limit 50  # Larger batch
+python scripts/freshness_monitor.py --stale-only             # Show only stale/expired
+
+# Deferred entry automation
+python scripts/check_deferred.py              # List deferred entries with status
+python scripts/check_deferred.py --alert      # Alert mode for notifications
+
+# Pipeline backup and restore
+python scripts/backup_pipeline.py backup      # Create dated tar.gz
+python scripts/backup_pipeline.py list        # Show all backups
+python scripts/backup_pipeline.py restore     # Restore from latest backup
+python scripts/backup_pipeline.py cleanup     # Remove backups > 90 days old
+
+# Resume batch version management
+python scripts/upgrade_resumes.py                   # Report stale batch references
+python scripts/upgrade_resumes.py --dry-run         # Preview migration
+python scripts/upgrade_resumes.py --yes             # Execute migration
+python scripts/upgrade_resumes.py --to batch-04     # Migrate to specific batch
+
+# Block ROI analysis
+python scripts/block_roi_analysis.py                # Full ROI report
+python scripts/block_roi_analysis.py --top 10       # Top 10 blocks by acceptance rate
+python scripts/block_roi_analysis.py --json         # JSON output for dashboards
+
+# Portfolio analysis engine
+python scripts/portfolio_analysis.py                       # All queries
+python scripts/portfolio_analysis.py --query blocks        # Block effectiveness
+python scripts/portfolio_analysis.py --query position      # Position conversion rates
+python scripts/portfolio_analysis.py --query channel       # Channel performance
+python scripts/portfolio_analysis.py --query variants      # Variant comparison
+python scripts/portfolio_analysis.py --json                # JSON output
+
+# Signal-to-action audit trail
+python scripts/log_signal_action.py --list                # Show all signal-action entries
+python scripts/log_signal_action.py --signal-id hyp-001 --signal-type hypothesis \
+    --description "Description" --action "Action taken"   # Log new entry
+
+# Hypothesis validation
+python scripts/validate_hypotheses.py                 # Full validation report
+python scripts/validate_hypotheses.py --unresolved    # Show only unresolved
+python scripts/validate_hypotheses.py --accuracy      # Accuracy stats only
+
+# Velocity report (monthly)
+python scripts/velocity_report.py                     # Current month
+python scripts/velocity_report.py --month 2           # Last 2 months
+python scripts/velocity_report.py --save              # Save to strategy/
+
+# CLI (Typer-based alternative to run.py)
+pipeline score <entry-id>           # Score entry via clean API
+pipeline advance <entry-id>         # Advance entry
+pipeline validate                   # Validate all entries
+pipeline compose <entry-id>         # Compose submission
+pipeline draft <entry-id>           # Draft from profile
+
+# MCP Server (exposes pipeline functions as MCP tools)
+python scripts/mcp_server.py        # Start MCP server (score, advance, draft, compose, validate)
+
 # Tests
 pytest tests/ -v
 pytest tests/test_compose.py -v              # Single test file
@@ -298,6 +364,15 @@ Single-word command protocol via `python scripts/run.py <command>`. Any LLM can 
 | `sourcejobs` | Preview new job postings from ATS APIs (dry-run) |
 | `keywords` | Extract keywords from job postings |
 | `buildblocks` | Generate blocks from project data |
+| `agent` | Preview autonomous agent planned actions |
+| `deferred` | Deferred entries: overdue and upcoming re-activations |
+| `backup` | List pipeline backups |
+| `freshness` | Entry freshness report (posting age tiers) |
+| `blockroi` | Block acceptance rate ROI analysis |
+| `portfolio` | Portfolio analysis: blocks, positions, channels, variants |
+| `signals` | Signal-to-action audit trail |
+| `resumes` | Check for stale resume batch references |
+| `hypotheses-v` | Validate outcome hypotheses vs actual outcomes |
 
 **With target ID:** `score <id>`, `enrich <id>`, `advance <id>`, `compose <id>`, `draft <id>`, `submit <id>`, `check <id>`, `record <id>`, `gate <id>`, `contacts <id>`, `hypothesis <id>`, `alchemize <id>`, `answers <id>`, `tailor <id>`
 
@@ -305,7 +380,40 @@ Single-word command protocol via `python scripts/run.py <command>`. Any LLM can 
 - Morning: `standup` → `followup` → `outcomes` → `campaign`
 - Submit: `campaign` → `check <id>` → `submit <id>` → `record <id>`
 - Research: `hygiene` → `scoreall` → `qualify` → `enrichall`
-- Analyze: `funnel` → `conversion` → `velocity` → `metrics`
+- Analyze: `funnel` → `conversion` → `velocity` → `dashboard` → `blockroi`
+- Agent: `agent` → `deferred` → `signals` → `hypotheses-v`
+- Health: `freshness` → `resumes` → `backup` → `portfolio`
+
+## Configuration Files
+
+| File | Purpose |
+|------|---------|
+| `strategy/scoring-rubric.yaml` | Scoring dimensions, weights, thresholds (loaded by `score.py`) |
+| `strategy/agent-rules.yaml` | Agent decision rules and thresholds (loaded by `agent.py`) |
+| `strategy/market-intelligence-2026.json` | Market data, portal friction, benchmarks (loaded by many scripts) |
+| `signals/signal-actions.yaml` | Signal-to-action audit trail (written by `advance.py`, `log_signal_action.py`) |
+
+## Automation (LaunchAgent)
+
+LaunchAgent plist files in `launchd/` for macOS scheduled tasks:
+
+| Agent | Schedule | Script |
+|-------|----------|--------|
+| `daily-deferred` | Daily 6:00 AM | `check_deferred.py --alert` |
+| `weekly-backup` | Sunday 2:00 AM | `backup_pipeline.py backup` |
+| `agent-biweekly` | Mon/Thu 7:00 AM | `agent.py --execute --yes` |
+
+Install: `cp launchd/com.4jp.pipeline.*.plist ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/com.4jp.pipeline.*.plist`
+
+## CLI vs Raw Scripts
+
+The Typer CLI (`pipeline` command) and `run.py` coexist. Use either:
+
+| Method | Example | When to Use |
+|--------|---------|-------------|
+| `run.py` | `python scripts/run.py standup` | Quick single-word commands, backward compat |
+| CLI | `pipeline score <id>` | Clean API, structured output, programmatic use |
+| MCP | `mcp_server.py` | AI-assisted autonomous execution |
 
 ## Testing Patterns
 
@@ -313,6 +421,7 @@ Single-word command protocol via `python scripts/run.py <command>`. Any LLM can 
 - Scripts use `sys.path.insert(0, ...)` to add `scripts/` to the import path (no package installation needed)
 - Tests operate on real pipeline data — they validate against actual YAML files, block directories, and profiles
 - No mocking framework; tests verify constants, data integrity, and script output against live data
+- ATS synthetic tests (`test_ats_synthetic.py`) require internet and are marked `@pytest.mark.synthetic`
 
 ## Key ID Mapping
 

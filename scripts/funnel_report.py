@@ -242,6 +242,30 @@ def _get_dimension_value(entry: dict, dimension: str) -> str:
                 return f"{count}+_followups"
         return "no_followup"
 
+    if dimension == "composition":
+        # Check conversion log composition_method first
+        conv = entry.get("conversion", {})
+        if isinstance(conv, dict) and conv.get("composition_method"):
+            return conv["composition_method"]
+        # Infer from submission data
+        sub = entry.get("submission", {})
+        if not isinstance(sub, dict):
+            return "unknown"
+        blocks_used = sub.get("blocks_used", {})
+        variant_ids = sub.get("variant_ids", {})
+        has_blocks = isinstance(blocks_used, dict) and len(blocks_used) > 0
+        has_alchemized = any(
+            "alchemized" in str(v) for v in (variant_ids.values() if isinstance(variant_ids, dict) else [])
+        )
+        if has_alchemized:
+            return "alchemized"
+        elif has_blocks:
+            return "blocks"
+        elif isinstance(variant_ids, dict) and variant_ids:
+            return "profiles"
+        else:
+            return "manual"
+
     return "unknown"
 
 
@@ -467,8 +491,8 @@ def breakdown_by_score_tier(entries: list[dict]):
 
 def main():
     parser = argparse.ArgumentParser(description="Conversion funnel analytics")
-    parser.add_argument("--by", choices=["channel", "position", "portal", "track", "cover_letter", "follow_up"],
-                        help="Breakdown by dimension")
+    parser.add_argument("--by", choices=["channel", "position", "portal", "track", "cover_letter", "follow_up", "composition"],
+                        help="Breakdown by dimension (composition = method from conversion log)")
     parser.add_argument("--weekly", action="store_true", help="Weekly submission velocity")
     parser.add_argument("--targets", action="store_true", help="Show conversion targets vs actual")
     parser.add_argument("--compare-variants", action="store_true",

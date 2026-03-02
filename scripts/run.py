@@ -59,6 +59,14 @@ COMMANDS = {
     "tracker":     ("blind_spot_tracker.py", [],         "Blind spot progress tracker with actionable items"),
     "dashboard":   ("conversion_dashboard.py", [],       "Conversion intelligence dashboard"),
     "freshness":   ("freshness_monitor.py", [],          "Entry freshness report (posting age analysis)"),
+    "agent":       ("agent.py", ["--plan"],              "Agent: preview planned autonomous actions"),
+    "deferred":    ("check_deferred.py", [],              "Deferred entries: overdue and upcoming re-activations"),
+    "backup":      ("backup_pipeline.py", ["list"],       "List pipeline backups"),
+    "blockroi":    ("block_roi_analysis.py", [],          "Block acceptance rate ROI analysis"),
+    "portfolio":   ("portfolio_analysis.py", [],          "Portfolio analysis: blocks, positions, channels, variants"),
+    "signals":     ("log_signal_action.py", ["--list"],   "Signal-to-action audit trail"),
+    "resumes":     ("upgrade_resumes.py", [],             "Check for stale resume batch references"),
+    "hypotheses-v": ("validate_hypotheses.py", [],        "Validate outcome hypotheses vs actuals"),
     "backfill":    ("backfill_dates.py", ["--report"],   "Backfill date_added from timeline.researched"),
     "jobprofiles": ("generate_job_profile.py", ["--batch", "--dry-run"], "Preview missing job profiles for auto-sourced entries"),
     "bridge":      ("portfolio_bridge.py", [],           "Portfolio-pipeline work sample suggestions"),
@@ -104,8 +112,10 @@ def show_help():
     print("  Submit:   campaign → check <id> → submit <id> → record <id>")
     print("  Batch:    triage → batch → hydrate → freshness")
     print("  Research: hygiene → scoreall → qualify → enrichall")
-    print("  Analyze:  funnel → conversion → velocity → dashboard")
+    print("  Analyze:  funnel → conversion → velocity → dashboard → blockroi")
     print("  Strategy: startup → funding → differentiate → tracker")
+    print("  Agent:    agent → deferred → signals → hypotheses-v")
+    print("  Health:   freshness → resumes → backup → portfolio")
     print()
     print("Usage: python scripts/run.py <command> [target-id]")
 

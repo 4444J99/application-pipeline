@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.4jp.pipeline.agent-biweekly</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/anaconda3/bin/python</string>
+        <string>/Users/4jp/Workspace/4444J99/application-pipeline/scripts/agent.py</string>
+        <string>--execute</string>
+        <string>--yes</string>
+    </array>
+    <!-- Monday and Thursday at 7 AM -->
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict>
+            <key>Weekday</key>
+            <integer>1</integer>
+            <key>Hour</key>
+            <integer>7</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+        <dict>
+            <key>Weekday</key>
+            <integer>4</integer>
+            <key>Hour</key>
+            <integer>7</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/4jp/Workspace/4444J99/application-pipeline</string>
+    <key>StandardOutPath</key>
+    <string>/Users/4jp/System/Logs/pipeline-agent.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/4jp/System/Logs/pipeline-agent.log</string>
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>

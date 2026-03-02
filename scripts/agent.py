@@ -16,6 +16,8 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
+import yaml
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
@@ -31,51 +33,82 @@ from pipeline_api import (
     ResultStatus,
 )
 
+# --- Agent rules loader ---
+
+_RULES_PATH = Path(__file__).resolve().parent.parent / "strategy" / "agent-rules.yaml"
+
+
+def _load_agent_rules() -> dict:
+    """Load agent decision rules from YAML, falling back to defaults."""
+    if _RULES_PATH.exists():
+        try:
+            with open(_RULES_PATH) as f:
+                data = yaml.safe_load(f) or {}
+            return data.get("rules", {})
+        except Exception:
+            pass
+    return {}
+
+
+_RULES = _load_agent_rules()
+
+# Extract configurable thresholds from rules YAML (with hardcoded fallback)
+RESEARCH_QUALIFY_THRESHOLD = _RULES.get("advance_research_to_qualified", {}).get("threshold", 7.0)
+QUALIFIED_DRAFTING_THRESHOLD = _RULES.get("advance_qualified_to_drafting", {}).get("threshold", 8.0)
+DRAFTING_STAGED_MIN_DAYS = _RULES.get("advance_drafting_to_staged", {}).get("min_days", 7)
+STAGED_SUBMIT_MAX_DAYS = _RULES.get("flag_staged_for_submission", {}).get("max_days", 7)
+
+
+def _rule_enabled(rule_name: str) -> bool:
+    """Check if a rule is enabled in config (defaults to True)."""
+    return _RULES.get(rule_name, {}).get("enabled", True)
+
 
 class PipelineAgent:
     """Autonomous agent for pipeline state transitions."""
-    
+
     def __init__(self, dry_run: bool = True):
         self.dry_run = dry_run
         self.actions_planned = []
         self.actions_executed = []
         self.errors = []
-    
+
     def plan_actions(self, entries: list[dict]) -> list[dict]:
         """Analyze pipeline state; return planned actions.
-        
-        Rules:
+
+        Rules loaded from strategy/agent-rules.yaml:
         1. Research entries: auto-score if no score
-        2. Research + score >= 7: auto-advance to qualified
-        3. Qualified: auto-advance if score >= 8
-        4. Drafting: auto-advance if deadline > 7 days away
-        5. Staged + deadline < 7: flag for submission
+        2. Research + score >= threshold: auto-advance to qualified
+        3. Qualified + score >= threshold: auto-advance to drafting
+        4. Drafting + deadline > min_days: auto-advance to staged
+        5. Staged + deadline < max_days: flag for submission
         """
         actions = []
-        
+
         for entry in entries:
             if not is_actionable(entry):
                 continue
-            
+
             entry_id = entry.get("id", "?")
             status = entry.get("status", "?")
             score = entry.get("fit", {}).get("composite") if isinstance(entry.get("fit"), dict) else None
             deadline_date, deadline_type = get_deadline(entry)
             days_left = (deadline_date - datetime.now().date()).days if deadline_date else None
-            
+
             # Rule 1: Research entries without scores
-            if status == "research" and not score:
+            if status == "research" and not score and _rule_enabled("score_unscored_research"):
                 actions.append({
                     "entry_id": entry_id,
                     "action": "score",
                     "reason": "research entry lacks score",
                     "severity": "routine",
                 })
-            
-            # Rule 2: Research + score >= 7
-            elif status == "research" and score and score >= 7.0:
-                can, reason = can_advance(entry, "qualified")
-                if can:
+
+            # Rule 2: Research + score >= threshold
+            elif (status == "research" and score and score >= RESEARCH_QUALIFY_THRESHOLD
+                  and _rule_enabled("advance_research_to_qualified")):
+                can_adv, reason = can_advance(entry, "qualified")
+                if can_adv:
                     actions.append({
                         "entry_id": entry_id,
                         "action": "advance",
@@ -83,11 +116,12 @@ class PipelineAgent:
                         "reason": f"research with score {score}",
                         "severity": "routine",
                     })
-            
-            # Rule 3: Qualified, score >= 8
-            elif status == "qualified" and score and score >= 8.0:
-                can, reason = can_advance(entry, "drafting")
-                if can:
+
+            # Rule 3: Qualified, score >= threshold
+            elif (status == "qualified" and score and score >= QUALIFIED_DRAFTING_THRESHOLD
+                  and _rule_enabled("advance_qualified_to_drafting")):
+                can_adv, reason = can_advance(entry, "drafting")
+                if can_adv:
                     actions.append({
                         "entry_id": entry_id,
                         "action": "advance",
@@ -95,12 +129,12 @@ class PipelineAgent:
                         "reason": f"qualified with high score {score}",
                         "severity": "routine",
                     })
-            
-            # Rule 4: Drafting, deadline > 7 days
-            elif status == "drafting":
-                if days_left and days_left > 7:
-                    can, reason = can_advance(entry, "staged")
-                    if can:
+
+            # Rule 4: Drafting, deadline > min_days
+            elif status == "drafting" and _rule_enabled("advance_drafting_to_staged"):
+                if days_left and days_left > DRAFTING_STAGED_MIN_DAYS:
+                    can_adv, reason = can_advance(entry, "staged")
+                    if can_adv:
                         actions.append({
                             "entry_id": entry_id,
                             "action": "advance",
@@ -108,17 +142,17 @@ class PipelineAgent:
                             "reason": f"drafting with {days_left}d until deadline",
                             "severity": "routine",
                         })
-            
-            # Rule 5: Staged, deadline < 7 days
-            elif status == "staged":
-                if days_left and days_left < 7:
+
+            # Rule 5: Staged, deadline < max_days
+            elif status == "staged" and _rule_enabled("flag_staged_for_submission"):
+                if days_left and days_left < STAGED_SUBMIT_MAX_DAYS:
                     actions.append({
                         "entry_id": entry_id,
                         "action": "flag_for_submission",
                         "reason": f"staged with {days_left}d until deadline",
                         "severity": "urgent",
                     })
-        
+
         return actions
     
     def execute_actions(self, actions: list[dict]) -> None:

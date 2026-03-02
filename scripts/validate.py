@@ -431,6 +431,40 @@ def check_profile_freshness() -> list[str]:
     return warnings
 
 
+def validate_id_mappings() -> list[str]:
+    """Validate PROFILE_ID_MAP and LEGACY_ID_MAP consistency.
+
+    Checks:
+    - Map values point to existing files
+    - Map keys reference known entry IDs
+    Returns list of error strings.
+    """
+    from pipeline_lib import (
+        LEGACY_DIR,
+        LEGACY_ID_MAP,
+        PROFILE_ID_MAP,
+        PROFILES_DIR,
+    )
+
+    errors = []
+
+    # Check PROFILE_ID_MAP values exist
+    if PROFILES_DIR.exists():
+        profile_ids = {p.stem for p in PROFILES_DIR.glob("*.json") if "index" not in p.name}
+        for entry_id, profile_id in PROFILE_ID_MAP.items():
+            if profile_id not in profile_ids:
+                errors.append(f"PROFILE_ID_MAP: '{entry_id}' -> '{profile_id}' but {profile_id}.json not found")
+
+    # Check LEGACY_ID_MAP keys exist
+    if LEGACY_DIR.exists():
+        legacy_ids = {p.stem for p in LEGACY_DIR.glob("*.md")}
+        for legacy_name in LEGACY_ID_MAP:
+            if legacy_name not in legacy_ids:
+                errors.append(f"LEGACY_ID_MAP: key '{legacy_name}' has no matching {legacy_name}.md")
+
+    return errors
+
+
 REQUIRED_PROFILE_FIELDS = {"name", "identity_position", "track", "artist_statements"}
 
 
@@ -484,6 +518,8 @@ def main():
                         help="Also check profile JSON freshness against metrics-snapshot.md")
     parser.add_argument("--check-profiles", action="store_true",
                         help="Also validate profile JSON schema")
+    parser.add_argument("--check-id-maps", action="store_true",
+                        help="Also validate PROFILE_ID_MAP and LEGACY_ID_MAP consistency")
     args = parser.parse_args()
 
     all_errors = {}
@@ -559,6 +595,17 @@ def main():
             has_errors = True
         else:
             print("Profile validation OK — all profiles have required fields.")
+
+    if args.check_id_maps:
+        print()
+        id_errors = validate_id_mappings()
+        if id_errors:
+            print(f"ID MAPPING VALIDATION — {len(id_errors)} issue(s):\n")
+            for e in id_errors:
+                print(f"  - {e}")
+            has_errors = True
+        else:
+            print("ID mapping validation OK — all maps consistent with filesystem.")
 
     if has_errors:
         sys.exit(1)

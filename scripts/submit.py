@@ -366,11 +366,23 @@ def _append_conversion_log(entry: dict, submitted_date: str) -> None:
         if isinstance(variant_ids, dict) and variant_ids:
             variant_id = list(variant_ids.values())[0]
 
+    # Determine composition method
+    composition_method = "manual"
+    if blocks_list:
+        composition_method = "blocks"
+    elif variant_id and "alchemized" in str(variant_id):
+        composition_method = "alchemized"
+    elif isinstance(submission, dict) and submission.get("profile_used"):
+        composition_method = "profiles"
+    elif isinstance(submission, dict) and submission.get("legacy_script_used"):
+        composition_method = "legacy"
+
     log_entry = {
         "id": entry.get("id"),
         "submitted": submitted_date,
         "track": entry.get("track"),
         "identity_position": entry.get("fit", {}).get("identity_position"),
+        "composition_method": composition_method,
         "blocks_used": blocks_list or None,
         "variant_id": variant_id,
         "outcome": None,

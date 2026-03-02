@@ -542,6 +542,58 @@ def section_deferred(entries: list[dict]):
 
 
 # ---------------------------------------------------------------------------
+# Section 7b: Signal Freshness
+# ---------------------------------------------------------------------------
+
+def section_signal_freshness():
+    """Check staleness of signal files and pipeline backups."""
+    import time
+
+    print("   SIGNAL FRESHNESS:")
+    signals = {
+        SIGNALS_DIR / "conversion-log.yaml": ("conversion-log", 1),
+        SIGNALS_DIR / "hypotheses.yaml": ("hypotheses", 3),
+        SIGNALS_DIR / "standup-log.yaml": ("standup-log", 2),
+    }
+    # Also check backup freshness
+    backup_dir = REPO_ROOT / "backups"
+    latest_backup = None
+    if backup_dir.exists():
+        backups = sorted(backup_dir.glob("pipeline-backup-*.tar.gz"))
+        if backups:
+            latest_backup = backups[-1]
+
+    stale_count = 0
+    for filepath, (label, max_days) in signals.items():
+        if not filepath.exists():
+            print(f"     {label}: MISSING")
+            stale_count += 1
+            continue
+        mtime = filepath.stat().st_mtime
+        age_days = (time.time() - mtime) / 86400
+        if age_days > max_days:
+            print(f"     {label}: STALE ({age_days:.1f}d old, max {max_days}d)")
+            stale_count += 1
+        else:
+            print(f"     {label}: OK ({age_days:.1f}d old)")
+
+    if latest_backup:
+        backup_age = (time.time() - latest_backup.stat().st_mtime) / 86400
+        if backup_age > 7:
+            print(f"     backup: STALE ({backup_age:.0f}d old, run backup_pipeline.py)")
+            stale_count += 1
+        else:
+            print(f"     backup: OK ({backup_age:.0f}d old)")
+    else:
+        print("     backup: NONE (run backup_pipeline.py)")
+        stale_count += 1
+
+    if stale_count == 0:
+        print("     All signals fresh.")
+    print()
+
+
+# ---------------------------------------------------------------------------
 # Section 8: Follow-Up Dashboard
 # ---------------------------------------------------------------------------
 
@@ -1141,6 +1193,8 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
         section_replenish(entries)
     if section is None or section == "deferred":
         section_deferred(entries)
+    if section is None or section == "freshness":
+        section_signal_freshness()
     if section is None or section == "followup":
         section_followup(entries)
     if section is None or section == "readiness":

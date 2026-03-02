@@ -36,8 +36,27 @@ from pipeline_lib import (
     load_entries as _load_entries_raw,
 )
 
+# --- Scoring rubric loader ---
+
+_RUBRIC_PATH = Path(__file__).resolve().parent.parent / "strategy" / "scoring-rubric.yaml"
+
+
+def _load_rubric() -> dict:
+    """Load scoring rubric from YAML, falling back to hardcoded defaults."""
+    if _RUBRIC_PATH.exists():
+        try:
+            with open(_RUBRIC_PATH) as f:
+                return yaml.safe_load(f) or {}
+        except Exception:
+            pass
+    return {}
+
+
+_RUBRIC = _load_rubric()
+
 # --- Dimension weights (must sum to 1.0)
-WEIGHTS = {
+# Loaded from strategy/scoring-rubric.yaml with hardcoded fallback.
+_DEFAULT_WEIGHTS = {
     "mission_alignment": 0.25,
     "evidence_match": 0.20,
     "track_record_fit": 0.15,
@@ -47,10 +66,7 @@ WEIGHTS = {
     "deadline_feasibility": 0.05,
     "portal_friction": 0.05,
 }
-
-# Job-specific weights: human-judgment dimensions get 75% (vs 60% creative)
-# because auto-derived dimensions don't differentiate between auto-sourced jobs.
-WEIGHTS_JOB = {
+_DEFAULT_WEIGHTS_JOB = {
     "mission_alignment": 0.35,
     "evidence_match": 0.25,
     "track_record_fit": 0.15,
@@ -61,14 +77,23 @@ WEIGHTS_JOB = {
     "portal_friction": 0.02,
 }
 
+WEIGHTS = _RUBRIC.get("weights", _DEFAULT_WEIGHTS)
+WEIGHTS_JOB = _RUBRIC.get("weights_job", _DEFAULT_WEIGHTS_JOB)
+
 # Validate weight dicts sum to 1.0
 assert abs(sum(WEIGHTS.values()) - 1.0) < 1e-9, f"WEIGHTS sum to {sum(WEIGHTS.values())}, not 1.0"
 assert abs(sum(WEIGHTS_JOB.values()) - 1.0) < 1e-9, f"WEIGHTS_JOB sum to {sum(WEIGHTS_JOB.values())}, not 1.0"
 
+# Thresholds from rubric (with fallback)
+_THRESHOLDS = _RUBRIC.get("thresholds", {})
+AUTO_QUALIFY_MIN = _THRESHOLDS.get("auto_qualify_min", 7.0)
+AUTO_ADVANCE_DRAFTING = _THRESHOLDS.get("auto_advance_to_drafting", 8.0)
+
 # Benefits cliff thresholds (annual USD)
-SNAP_LIMIT = 20352
-MEDICAID_LIMIT = 21597
-ESSENTIAL_PLAN_LIMIT = 39125
+_CLIFFS = _RUBRIC.get("benefits_cliffs", {})
+SNAP_LIMIT = _CLIFFS.get("snap_limit", 20352)
+MEDICAID_LIMIT = _CLIFFS.get("medicaid_limit", 21597)
+ESSENTIAL_PLAN_LIMIT = _CLIFFS.get("essential_plan_limit", 39125)
 
 # Backward-compatible module-level aliases (default/fallback values).
 # Callers that use the dynamic loaders (get_portal_scores(), get_strategic_base())
