@@ -13,6 +13,10 @@ Usage:
     python scripts/market_intel.py --sources          # Source count and last updated
     python scripts/market_intel.py --skills           # Skills signal summary
     python scripts/market_intel.py --channels         # Channel multiplier comparison
+    python scripts/market_intel.py --startup          # VC, seed/Series A, accelerators
+    python scripts/market_intel.py --funding          # Cloud credits, RBF, grants
+    python scripts/market_intel.py --differentiation  # Pitch deck, networking, proof of work
+    python scripts/market_intel.py --meta             # Burnout, legal, insurance, blind spots
 """
 
 import argparse
@@ -34,6 +38,12 @@ _REQUIRED_INTEL_KEYS = {
     "skills_signals": dict,
     "follow_up_protocol": dict,
     "stale_thresholds_days": dict,
+    "startup_funding_landscape": dict,
+    "non_dilutive_funding": dict,
+    "startup_mechanics": dict,
+    "differentiation_signals": dict,
+    "alternative_funding": dict,
+    "meta_strategy": dict,
 }
 
 
@@ -360,6 +370,283 @@ def section_sources(intel: dict):
     print()
 
 
+def section_startup(intel: dict):
+    """Print startup funding landscape: VC metrics, seed/Series A, solo founder data."""
+    sfl = intel.get("startup_funding_landscape", {})
+    sm = intel.get("startup_mechanics", {})
+
+    print("STARTUP FUNDING LANDSCAPE")
+    print("=" * 55)
+    print()
+
+    # VC overview
+    vc_total = sfl.get("vc_total_deployed_2025_usd", 0)
+    ai_share = sfl.get("ai_share_of_vc_2025", 0)
+    ai_total = sfl.get("ai_funding_total_2025_usd", 0)
+    print("  VC MARKET (2025):")
+    print(f"    Total deployed:        {fmt_currency(vc_total)}")
+    print(f"    AI share:              {fmt_pct(ai_share)} ({fmt_currency(ai_total)})")
+    conc = sfl.get("mega_deal_concentration_note", "")
+    if conc:
+        print(f"    Concentration:         {conc}")
+    print(f"    Down-round rate Q3:    {fmt_pct(sfl.get('down_round_rate_q3_2025'))}")
+    print()
+
+    # Seed metrics
+    seed = sfl.get("seed_metrics", {})
+    print("  SEED ROUND METRICS:")
+    print(f"    Median round:          {fmt_currency(seed.get('median_round_usd'))}")
+    print(f"    Median pre-money:      {fmt_currency(seed.get('median_pre_money_valuation_usd'))}")
+    arr_range = seed.get("expected_arr_usd", [])
+    if len(arr_range) == 2:
+        print(f"    Expected ARR:          {fmt_currency(arr_range[0])} – {fmt_currency(arr_range[1])}")
+    print(f"    Closing time:          {fmt_days(seed.get('closing_days_median'))} median (was {fmt_days(seed.get('closing_days_2021'))} in 2021)")
+    print(f"    SAFE prevalence:       {fmt_pct(seed.get('safe_prevalence_pre_seed'))} at pre-seed")
+    print()
+
+    # Series A
+    series_a = sfl.get("series_a_metrics", {})
+    print("  SERIES A METRICS:")
+    print(f"    Median pre-money:      {fmt_currency(series_a.get('median_pre_money_valuation_usd'))}")
+    a_arr = series_a.get("expected_arr_usd", [])
+    if len(a_arr) == 2:
+        print(f"    Expected ARR:          {fmt_currency(a_arr[0])} – {fmt_currency(a_arr[1])}")
+    print(f"    Seed-to-A time:        {fmt_days(series_a.get('seed_to_a_days'))}")
+    print(f"    Conversion rate:       {fmt_pct(series_a.get('conversion_rate_seed_to_a_2020_cohort'))} (2020 cohort)")
+    print()
+
+    # Solo founder
+    solo = sm.get("solo_founder_data", {})
+    print("  SOLO FOUNDER DATA:")
+    print(f"    $1M+ revenue share:    {fmt_pct(solo.get('solo_pct_of_1m_revenue_companies'))}")
+    print(f"    Share of exits:        {fmt_pct(solo.get('solo_pct_of_exits'))}")
+    print()
+
+    # Sectors
+    winners = sfl.get("sector_winners_2026", [])
+    losers = sfl.get("sector_losers_2026", [])
+    print(f"  HOT SECTORS:    {', '.join(str(s) for s in winners)}")
+    print(f"  COLD SECTORS:   {', '.join(str(s) for s in losers)}")
+    print()
+
+    # Accelerators
+    acc = sm.get("accelerator_tier", {})
+    if acc:
+        print("  ACCELERATORS:")
+        yc_rate = acc.get("yc_acceptance_rate")
+        yc_deal = acc.get("yc_standard_deal", "")
+        print(f"    YC acceptance:         {fmt_pct(yc_rate)}")
+        print(f"    YC deal:               {yc_deal}")
+        tier1 = acc.get("tier_1", [])
+        print(f"    Tier 1:                {', '.join(str(t) for t in tier1)}")
+    print()
+
+
+def section_funding(intel: dict):
+    """Print non-dilutive + alternative funding landscape."""
+    ndf = intel.get("non_dilutive_funding", {})
+    af = intel.get("alternative_funding", {})
+
+    print("NON-DILUTIVE & ALTERNATIVE FUNDING")
+    print("=" * 55)
+    print()
+
+    # Cloud credits
+    credits = ndf.get("cloud_credits", {})
+    print("  CLOUD CREDITS (always pursue):")
+    entries = [
+        ("Microsoft Founders Hub", credits.get("microsoft_founders_hub_usd")),
+        ("AWS Activate", credits.get("aws_activate_usd")),
+        ("AWS Activate (AI)", credits.get("aws_activate_ai_usd")),
+        ("Google Cloud (AI)", credits.get("google_cloud_ai_usd")),
+        ("NVIDIA Inception", credits.get("nvidia_inception_aws_usd")),
+    ]
+    total = 0
+    for name, amt in entries:
+        if amt:
+            total += amt
+            print(f"    {name:<25} {fmt_currency(amt)}")
+    print(f"    {'TOTAL':<25} {fmt_currency(total)}")
+    print()
+
+    # SBIR/STTR
+    sbir = ndf.get("sbir_sttr", {})
+    status = sbir.get("status", "unknown")
+    pool = sbir.get("annual_pool_usd", 0)
+    print(f"  SBIR/STTR: {status.upper()} (${pool / 1e9:.0f}B/year frozen)")
+    print()
+
+    # RBF
+    rbf = af.get("revenue_based_financing", {})
+    if rbf:
+        print("  REVENUE-BASED FINANCING:")
+        print(f"    Market size (2027):    {fmt_currency(rbf.get('market_size_2027_usd'))}")
+        print(f"    Min MRR:               {fmt_currency(rbf.get('min_mrr_usd'))}")
+        providers = rbf.get("providers", {})
+        for name, data in providers.items():
+            if isinstance(data, dict):
+                print(f"    {name.title()}: {data}")
+        print()
+
+    # Crowdfunding
+    ecf = af.get("equity_crowdfunding", {})
+    if ecf:
+        print(f"  EQUITY CROWDFUNDING (Reg CF cap: {fmt_currency(ecf.get('reg_cf_annual_cap_usd'))})")
+        platforms = ecf.get("platforms", {})
+        for name, data in platforms.items():
+            if isinstance(data, dict):
+                raised = data.get("2025_raised_usd")
+                if raised:
+                    print(f"    {name.title()}: {fmt_currency(raised)} raised in 2025")
+        print()
+
+    # Crypto grants
+    cg = af.get("crypto_web3_grants", {})
+    if cg:
+        print("  CRYPTO / WEB3 GRANTS:")
+        print(f"    Gitcoin total:         {fmt_currency(cg.get('gitcoin_total_distributed_usd'))}")
+        print(f"    Gitcoin funded through: {cg.get('gitcoin_funded_through', 'unknown')}")
+        esp_range = cg.get("ethereum_esp_range_usd", [0, 0])
+        if isinstance(esp_range, list) and len(esp_range) >= 2:
+            print(f"    Ethereum ESP range:    {fmt_currency(esp_range[0])} – {fmt_currency(esp_range[1])}")
+        print()
+
+    # Consulting / Fractional CTO
+    fc = af.get("fractional_cto", {})
+    if fc:
+        print("  FRACTIONAL CTO:")
+        print(f"    Rate range:            ${fc.get('hourly_rate_usd', [0, 0])[0]}-${fc.get('hourly_rate_usd', [0, 0])[1]}/hr")
+        print(f"    Average:               ${fc.get('average_hourly_usd', 300)}/hr")
+        print(f"    Market growth:         {fc.get('market_growth', 'unknown')}")
+        print()
+
+
+def section_differentiation(intel: dict):
+    """Print differentiation signals summary."""
+    ds = intel.get("differentiation_signals", {})
+
+    print("DIFFERENTIATION SIGNALS")
+    print("=" * 55)
+    print()
+
+    # Pitch deck
+    pd = ds.get("pitch_deck", {})
+    if pd:
+        print("  PITCH DECK:")
+        review_time = pd.get("median_review_time_seconds", 0)
+        print(f"    Median review time:    {review_time}s ({review_time / 60:.1f} min)")
+        print(f"    First 3 slides:        {fmt_pct(pd.get('first_3_slides_decision_weight'))} of decision")
+        print(f"    Rejection rate:        {fmt_pct(pd.get('rejection_rate'))}")
+        print(f"    Clear next step lift:  +{fmt_pct(pd.get('clear_next_step_meeting_lift'))} meetings")
+        print()
+
+    # Networking
+    nw = ds.get("networking", {})
+    if nw:
+        print("  NETWORKING:")
+        print(f"    Warm intro conversion: {fmt_pct(nw.get('warm_intro_conversion'))}")
+        cold_range = nw.get("cold_email_response", [])
+        if len(cold_range) == 2:
+            print(f"    Cold email response:   {fmt_pct(cold_range[0])} – {fmt_pct(cold_range[1])}")
+        print(f"    Unrealized warm paths: {nw.get('unrealized_warm_paths', 0)}")
+        print()
+
+    # Personal brand
+    pb = ds.get("personal_brand", {})
+    if pb:
+        print("  PERSONAL BRAND:")
+        print(f"    LinkedIn personal vs co: {pb.get('linkedin_profile_vs_company_engagement', 0)}x engagement")
+        print(f"    GitHub recruiter review: {fmt_pct(pb.get('github_recruiter_review_rate'))}")
+        print(f"    GitHub scan time:       {pb.get('github_scan_time_seconds', 0)}s")
+        pinned = pb.get("optimal_pinned_projects", [])
+        if len(pinned) == 2:
+            print(f"    Optimal pinned repos:   {pinned[0]}-{pinned[1]}")
+        print()
+
+    # Proof of work
+    pow_data = ds.get("proof_of_work", {})
+    if pow_data:
+        print("  PROOF OF WORK:")
+        print(f"    Portfolio signal:       {fmt_pct(pow_data.get('portfolio_signal_weight'))}")
+        print(f"    5+ reviews lift:        {pow_data.get('reviews_conversion_lift_5plus', 0)}x conversion")
+        print()
+
+    # AI differentiation
+    ai = ds.get("ai_differentiation", {})
+    if ai:
+        print("  AI DIFFERENTIATION:")
+        print(f"    Wrapper viability:     {ai.get('wrapper_viability', 'unknown')}")
+        moats = ai.get("moat_factors", [])
+        print(f"    Moat factors:          {', '.join(str(m) for m in moats)}")
+        print(f"    Vertical > horizontal: {ai.get('vertical_beats_horizontal', False)}")
+        print()
+
+
+def section_meta(intel: dict):
+    """Print meta strategy: burnout, legal, insurance, blind spots."""
+    ms = intel.get("meta_strategy", {})
+
+    print("META STRATEGY & BLIND SPOTS")
+    print("=" * 55)
+    print()
+
+    # Burnout
+    burnout = ms.get("founder_burnout", {})
+    if burnout:
+        print("  FOUNDER BURNOUT:")
+        print(f"    Prevalence:            {fmt_pct(burnout.get('prevalence'))}")
+        mitigation = burnout.get("mitigation", [])
+        if mitigation:
+            print(f"    Mitigation:            {', '.join(str(m) for m in mitigation)}")
+        print()
+
+    # Legal
+    legal = ms.get("legal_landmines", {})
+    if legal:
+        print("  LEGAL LANDMINES:")
+        print(f"    83(b) deadline:        {legal.get('83b_election_deadline_days', 30)} days from stock grant")
+        print("    FTC noncompete:        ban failed — check state-specific")
+        print(f"    IP assignment:         {'CRITICAL' if legal.get('ip_assignment_critical') else 'recommended'}")
+        print(f"    DE franchise tax:      {legal.get('delaware_franchise_tax_note', 'use Assumed Par Value method')}")
+        print()
+
+    # Insurance
+    ins = ms.get("insurance", {})
+    if ins:
+        print("  INSURANCE:")
+        print(f"    D&O monthly:           {fmt_currency(ins.get('d_and_o_monthly_usd'))}")
+        print(f"    Cyber insurance:       {ins.get('cyber_insurance', 'recommended')}")
+        print()
+
+    # Timing
+    timing = ms.get("timing_considerations", {})
+    if timing:
+        print("  TIMING:")
+        print(f"    Grant cycle lead:      {timing.get('grant_cycle_alignment', 'N/A')}")
+        print(f"    Market vs execution:   {timing.get('market_timing_vs_execution', 'N/A')}")
+        print()
+
+    # First-time founder
+    ftf = ms.get("first_time_founder_gap", {})
+    if ftf:
+        gaps = ftf.get("knowledge_gaps", [])
+        print(f"  FIRST-TIME FOUNDER GAPS: {', '.join(str(g) for g in gaps)}")
+        print()
+
+    # Special categories
+    print("  SPECIAL FUNDING CATEGORIES:")
+    disability = ms.get("disability_grants", {})
+    if disability:
+        print(f"    Disability grants:     {disability.get('competition_level', 'N/A')}")
+    climate = ms.get("climate_impact_framing", {})
+    if climate:
+        print(f"    ESG PE market:         {fmt_currency(climate.get('esg_pe_total_usd'))}")
+    eu = ms.get("eu_ai_act_as_moat", {})
+    if eu:
+        print(f"    EU AI Act as moat:     {eu.get('compliance_as_differentiator', False)}")
+    print()
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Market intelligence report — pipeline parameters from research corpus"
@@ -378,6 +665,14 @@ def main():
                         help="Show channel multiplier comparison")
     parser.add_argument("--sources", action="store_true",
                         help="Show source count and last updated")
+    parser.add_argument("--startup", action="store_true",
+                        help="Show startup funding landscape (VC, seed, Series A, accelerators)")
+    parser.add_argument("--funding", action="store_true",
+                        help="Show non-dilutive + alternative funding (cloud credits, RBF, grants)")
+    parser.add_argument("--differentiation", action="store_true",
+                        help="Show differentiation signals (pitch deck, networking, proof of work)")
+    parser.add_argument("--meta", action="store_true",
+                        help="Show meta strategy (burnout, legal, insurance, blind spots)")
     args = parser.parse_args()
 
     intel = load_intel()
@@ -414,6 +709,22 @@ def main():
 
     if args.channels:
         section_channels(intel)
+        return
+
+    if args.startup:
+        section_startup(intel)
+        return
+
+    if args.funding:
+        section_funding(intel)
+        return
+
+    if args.differentiation:
+        section_differentiation(intel)
+        return
+
+    if args.meta:
+        section_meta(intel)
         return
 
     # Default: full summary

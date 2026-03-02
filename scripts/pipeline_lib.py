@@ -102,12 +102,40 @@ VALID_TRANSITIONS = {
     "qualified": {"drafting", "staged", "deferred", "withdrawn"},
     "drafting": {"staged", "qualified", "deferred", "withdrawn"},
     "staged": {"submitted", "drafting", "deferred", "withdrawn"},
-    "deferred": {"staged", "qualified", "withdrawn"},
+    "deferred": {"staged", "qualified", "drafting", "withdrawn"},
     "submitted": {"acknowledged", "interview", "outcome", "withdrawn"},
     "acknowledged": {"interview", "outcome", "withdrawn"},
     "interview": {"outcome", "withdrawn"},
     "outcome": set(),  # terminal
 }
+
+
+# --- Mutation audit log ---
+
+MUTATION_LOG_PATH = SIGNALS_DIR / "mutation-log.jsonl"
+
+
+def log_mutation(filepath: str, field: str, old_value: str, new_value: str, caller: str = ""):
+    """Append a mutation record to signals/mutation-log.jsonl.
+
+    Lightweight audit trail for all YAML field changes.
+    """
+    if not SIGNALS_DIR.exists():
+        return
+    record = {
+        "ts": date.today().isoformat(),
+        "file": str(Path(filepath).name) if filepath else "",
+        "field": field,
+        "old": old_value,
+        "new": new_value,
+    }
+    if caller:
+        record["caller"] = caller
+    try:
+        with open(MUTATION_LOG_PATH, "a") as f:
+            f.write(json.dumps(record) + "\n")
+    except OSError:
+        pass  # non-critical — don't break the pipeline for logging
 
 
 # --- Safe YAML field mutation helpers ---
@@ -605,4 +633,255 @@ def detect_portal(url: str) -> str | None:
     for pattern, portal in PORTAL_URL_PATTERNS:
         if pattern.search(url):
             return portal
+    return None
+
+
+# --- Submit config ---
+
+SUBMIT_CONFIG_PATH = Path(__file__).resolve().parent / ".submit-config.yaml"
+
+
+def load_submit_config(*, strict: bool = True) -> dict:
+    """Load personal info from .submit-config.yaml.
+
+    Args:
+        strict: If True (default), exit on missing file or unfilled fields.
+                If False, return {} on missing file (for non-submission use).
+    """
+    if not SUBMIT_CONFIG_PATH.exists():
+        if not strict:
+            return {}
+        import sys
+        print(f"Error: Config file not found: {SUBMIT_CONFIG_PATH}", file=sys.stderr)
+        print("Create it with first_name, last_name, email, phone fields.", file=sys.stderr)
+        sys.exit(1)
+    config = yaml.safe_load(SUBMIT_CONFIG_PATH.read_text())
+    if not isinstance(config, dict):
+        if not strict:
+            return {}
+        import sys
+        print("Error: Config file is not a valid YAML dict.", file=sys.stderr)
+        sys.exit(1)
+    if strict:
+        import sys
+        for field in ("first_name", "last_name", "email"):
+            val = config.get(field, "")
+            if not val or "FILL_IN" in str(val):
+                print(f"Error: Fill in '{field}' in {SUBMIT_CONFIG_PATH}", file=sys.stderr)
+                sys.exit(1)
+    return config
+
+
+# --- Material resolution ---
+
+
+def resolve_cover_letter(entry: dict, *, strip_md: bool = True) -> str | None:
+    """Resolve cover letter content from variant file.
+
+    Strips YAML frontmatter (always). If strip_md=True (default), also
+    strips markdown formatting for plain-text ATS submission.
+    If strip_md=False, returns markdown body (for AI prompting / templating).
+    """
+    submission = entry.get("submission", {})
+    if not isinstance(submission, dict):
+        return None
+    variant_ids = submission.get("variant_ids", {})
+    if not isinstance(variant_ids, dict):
+        return None
+    cl_ref = variant_ids.get("cover_letter")
+    if not cl_ref:
+        return None
+    variant_path = VARIANTS_DIR / cl_ref
+    if not variant_path.suffix:
+        variant_path = variant_path.with_suffix(".md")
+    if not variant_path.exists():
+        return None
+    raw = variant_path.read_text().strip()
+    # Strip YAML frontmatter
+    lines = raw.split("\n")
+    body_start = 0
+    found_separator = False
+    for i, line in enumerate(lines):
+        if line.strip() == "---":
+            if found_separator:
+                body_start = i + 1
+                break
+            found_separator = True
+    body = "\n".join(lines[body_start:]).strip()
+    if strip_md:
+        return strip_markdown(body)
+    return body
+
+
+def resolve_resume(entry: dict) -> Path | None:
+    """Find the resume PDF from materials_attached."""
+    submission = entry.get("submission", {})
+    if not isinstance(submission, dict):
+        return None
+    materials = submission.get("materials_attached", [])
+    if not isinstance(materials, list):
+        return None
+    for m in materials:
+        mat_path = MATERIALS_DIR / m
+        if mat_path.exists() and mat_path.suffix.lower() == ".pdf":
+            return mat_path
+    return None
+
+
+# --- Tier priority ---
+
+TIER_PRIORITY = {
+    "job-tier-1": 1,
+    "job-tier-2": 2,
+    "job-tier-3": 3,
+    "job-tier-4": 4,
+}
+
+
+def get_tier(entry: dict) -> int:
+    """Get tier priority from tags (lower = higher priority)."""
+    tags = entry.get("tags", []) or []
+    for tag in tags:
+        if tag in TIER_PRIORITY:
+            return TIER_PRIORITY[tag]
+    return 5  # default: untiered
+
+
+# --- Block stats formatting ---
+
+NOISE_LANGS = {"markdown", "shell", "yaml", "jekyll"}
+
+
+def format_block_stats(block_path: str) -> str | None:
+    """Extract Key Stats line from block frontmatter, if available."""
+    fm = load_block_frontmatter(block_path)
+    if not fm:
+        return None
+    stats = fm.get("stats", {})
+    if not stats:
+        return None
+    parts = []
+    if stats.get("languages"):
+        langs = stats["languages"]
+        if isinstance(langs, list):
+            useful = [lang for lang in langs if lang not in NOISE_LANGS]
+        else:
+            useful = [langs] if langs not in NOISE_LANGS else []
+        if useful:
+            parts.append(f"Languages: {', '.join(useful)}")
+    if stats.get("test_count"):
+        parts.append(f"Tests: {stats['test_count']}")
+    if stats.get("coverage"):
+        parts.append(f"Coverage: {stats['coverage']}%")
+    if parts:
+        return f"**Key Stats:** {' | '.join(parts)}"
+    return None
+
+
+# --- Keyword-to-block recommender ---
+
+
+def recommend_blocks(entry: dict, top_n: int = 5) -> list[tuple[str, float, str]]:
+    """Recommend blocks based on entry keywords and identity position.
+
+    Uses the block tag index to find blocks whose tags overlap with the
+    entry's distilled keywords. Scores by keyword overlap count normalized
+    by total entry keywords.
+
+    Returns list of (block_path, score, reason) tuples, highest score first.
+    """
+    index = load_block_index()
+    if not index:
+        return []
+
+    tag_index = index.get("tag_index", {})
+    blocks_meta = index.get("blocks", {})
+    if not tag_index or not blocks_meta:
+        return []
+
+    # Gather entry signals
+    keywords = set()
+    kw_raw = entry.get("keywords", [])
+    if isinstance(kw_raw, list):
+        keywords = {k.lower().strip() for k in kw_raw if isinstance(k, str)}
+
+    fit = entry.get("fit", {})
+    position = fit.get("identity_position", "") if isinstance(fit, dict) else ""
+    track = entry.get("track", "")
+
+    if not keywords:
+        return []
+
+    # Score each block by keyword ∩ tags
+    scores: dict[str, tuple[float, list[str]]] = {}
+    for tag, block_paths in tag_index.items():
+        tag_lower = tag.lower()
+        if tag_lower in keywords:
+            for bp in block_paths:
+                if bp not in scores:
+                    scores[bp] = (0.0, [])
+                prev_score, prev_matches = scores[bp]
+                scores[bp] = (prev_score + 1.0, prev_matches + [tag])
+
+    # Bonus for position/track alignment
+    for bp, (score, matches) in list(scores.items()):
+        meta = blocks_meta.get(bp, {})
+        positions = meta.get("identity_positions", []) or []
+        tracks = meta.get("tracks", []) or []
+        bonus = 0.0
+        if position and position in positions:
+            bonus += 0.5
+        if track and track in tracks:
+            bonus += 0.3
+        scores[bp] = (score + bonus, matches)
+
+    # Normalize by number of keywords and sort
+    n_kw = len(keywords)
+    results = []
+    for bp, (raw_score, matches) in scores.items():
+        normalized = raw_score / n_kw
+        reason = f"matches: {', '.join(matches[:3])}"
+        if len(matches) > 3:
+            reason += f" +{len(matches) - 3} more"
+        results.append((bp, round(normalized, 3), reason))
+
+    results.sort(key=lambda x: -x[1])
+    return results[:top_n]
+
+
+# --- HTTP retry helper ---
+
+
+def http_request_with_retry(
+    url: str,
+    *,
+    method: str = "GET",
+    data: bytes | None = None,
+    headers: dict | None = None,
+    timeout: int = 15,
+    max_retries: int = 3,
+) -> bytes | None:
+    """Make an HTTP request with exponential backoff retry.
+
+    Returns response body bytes, or None on failure after all retries.
+    """
+    import time
+    import urllib.error
+    import urllib.request
+
+    headers = headers or {}
+    for attempt in range(max_retries):
+        try:
+            req = urllib.request.Request(url, data=data, headers=headers, method=method)
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                return resp.read()
+        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as e:
+            if attempt < max_retries - 1:
+                wait = 2 ** attempt  # 1, 2, 4 seconds
+                time.sleep(wait)
+            else:
+                import sys
+                print(f"  HTTP {method} {url} failed after {max_retries} attempts: {e}",
+                      file=sys.stderr)
+                return None
     return None

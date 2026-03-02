@@ -42,13 +42,13 @@ def test_can_advance_rollback():
 
 
 def test_can_advance_from_deferred():
-    """Deferred entries can be re-activated to staged or qualified."""
+    """Deferred entries can be re-activated to staged, qualified, or drafting."""
     assert can_advance("deferred", "staged") is True
     assert can_advance("deferred", "qualified") is True
+    assert can_advance("deferred", "drafting") is True
     assert can_advance("deferred", "withdrawn") is True
     # But not to arbitrary statuses
     assert can_advance("deferred", "submitted") is False
-    assert can_advance("deferred", "drafting") is False
 
 
 def test_valid_transitions_all_statuses():

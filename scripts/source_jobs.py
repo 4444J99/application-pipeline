@@ -166,7 +166,7 @@ COMPANY_DISPLAY_NAMES = {
     "cloudflare": "Cloudflare",
     "dbtlabsinc": "dbt Labs",
     "sourcegraph91": "Sourcegraph",
-    "coreweave": "Weights & Biases",
+    "coreweave": "CoreWeave",
     "launchdarkly": "LaunchDarkly",
     "datadog": "Datadog",
     "wikimedia": "Wikimedia",

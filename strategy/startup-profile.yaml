@@ -1,0 +1,64 @@
+# Startup / Career Profile
+# Consumed by scripts/funding_scorer.py to parameterize scoring algorithms.
+# Edit these values to reflect your current state.
+
+revenue:
+  mrr_usd: 0
+  arr_usd: 0
+  months_history: 0
+  model: null  # saas, marketplace, consulting, none
+  burn_rate_monthly_usd: 0
+
+startup:
+  ai_native: true
+  sector: ai_infrastructure
+  open_source: true
+  artistic_merit: true
+  part_time_viable: true
+  incorporated: false
+  warm_intros_available: false
+  prototype_ready: true
+  vertical_ai: true
+  proprietary_data: true
+  multimodal: false
+  defense_health_fintech: false
+  public_benefit: true
+  prior_grant_history: false
+  exhibition_history: true
+  institutional_partnership: false
+  consulting_covers_expenses: false
+
+founder:
+  solo: true
+  prior_exit: false
+  technical: true
+  years_experience: 12
+  leadership_experience: true
+  ai_ml_expertise: true
+  domain_expert_advisor: false
+  published_exhibited: true
+
+runway:
+  months: 0
+  funding_source: savings  # savings, consulting, employment
+
+legal:
+  eighty_three_b_filed: false
+  eighty_three_b_deadline_approaching: false
+  delaware_franchise_tax_method: null  # assumed_par_value, authorized_shares, null
+  ip_assignment_signed: false
+  d_and_o_insurance: false
+
+health:
+  structured_breaks: false
+  peer_support_group: false
+  professional_support: false
+
+strategic:
+  warm_intro_audit_done: false
+  documentation_as_leverage: true
+  open_source_strategy: true
+  academic_partnership: false
+  disability_grant_eligible: false
+  climate_esg_framing: false
+  eu_ai_act_compliant: false

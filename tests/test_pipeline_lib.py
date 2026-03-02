@@ -536,8 +536,8 @@ def test_deferred_transitions_from():
 
 
 def test_deferred_transitions_to():
-    """deferred can transition to staged, qualified, or withdrawn."""
-    assert VALID_TRANSITIONS["deferred"] == {"staged", "qualified", "withdrawn"}
+    """deferred can transition to staged, qualified, drafting, or withdrawn."""
+    assert VALID_TRANSITIONS["deferred"] == {"staged", "qualified", "drafting", "withdrawn"}
 
 
 # --- Research pool constants ---

@@ -25,15 +25,6 @@ from pipeline_lib import (
     strip_markdown,
 )
 
-# Reasonable word limits per field for flagging overruns
-TYPICAL_LIMITS = {
-    "artist_statement": 500,
-    "bio": 300,
-    "project_description": 750,
-    "cover_letter": 500,
-    "pitch_email": 400,
-}
-
 
 def check_entry(entry: dict) -> tuple[list[str], list[str]]:
     """Run all preflight checks on a single entry.

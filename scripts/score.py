@@ -76,6 +76,10 @@ WEIGHTS_JOB = {
     "portal_friction": 0.02,
 }
 
+# Validate weight dicts sum to 1.0
+assert abs(sum(WEIGHTS.values()) - 1.0) < 1e-9, f"WEIGHTS sum to {sum(WEIGHTS.values())}, not 1.0"
+assert abs(sum(WEIGHTS_JOB.values()) - 1.0) < 1e-9, f"WEIGHTS_JOB sum to {sum(WEIGHTS_JOB.values())}, not 1.0"
+
 # Benefits cliff thresholds (annual USD)
 SNAP_LIMIT = 20352
 MEDICAID_LIMIT = 21597
@@ -650,6 +654,8 @@ def score_deadline_feasibility(entry: dict, explain: bool = False) -> int | tupl
         result = 2
     elif days_left <= 3:
         result = 3
+    elif days_left <= 5:
+        result = 4
     elif days_left <= 7:
         result = 5
     elif days_left <= 14:
@@ -1279,8 +1285,10 @@ def run_auto_qualify(dry_run: bool = False, yes: bool = False,
             skipped += 1
             continue
 
-        # Check min_score threshold
-        score = entry.get("fit", {}).get("score", 0) if isinstance(entry.get("fit"), dict) else 0
+        # Fresh-compute score instead of reading stale YAML value
+        dims = compute_dimensions(entry, all_raw)
+        track = entry.get("track", "")
+        score = compute_composite(dims, track)
         if score < min_score:
             below_min_score += 1
             continue
@@ -1599,6 +1607,56 @@ def main():
             print("\nSignificant changes (>= 1.0 delta):")
             for eid, old, new, _ in sorted(significant, key=lambda x: abs(x[2] - x[1]), reverse=True):
                 print(f"  {eid:<40s} {old} -> {new} ({new - old:+.1f})")
+
+
+def recalibrate_weights(entries: list[dict] | None = None) -> dict[str, float] | None:
+    """Analyze actual outcomes to suggest weight recalibration.
+
+    Compares dimension scores of accepted vs rejected entries to identify
+    which dimensions best predict positive outcomes.
+
+    Returns a suggested weight dict, or None if insufficient data.
+    """
+    if entries is None:
+        entries = _load_entries_raw(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
+
+    # Split by outcome
+    accepted = []
+    rejected = []
+    for e in entries:
+        outcome = e.get("outcome")
+        dims = e.get("fit", {}).get("dimensions") if isinstance(e.get("fit"), dict) else None
+        if not isinstance(dims, dict) or not dims:
+            continue
+        if outcome == "accepted":
+            accepted.append(dims)
+        elif outcome == "rejected":
+            rejected.append(dims)
+
+    if len(accepted) < 2 or len(rejected) < 2:
+        return None  # insufficient data
+
+    # Compute mean dimension score for each outcome group
+    dim_names = list(DIMENSION_ORDER)
+    accepted_means: dict[str, float] = {}
+    rejected_means: dict[str, float] = {}
+
+    for dim in dim_names:
+        a_vals = [d.get(dim, 5) for d in accepted if isinstance(d.get(dim), (int, float))]
+        r_vals = [d.get(dim, 5) for d in rejected if isinstance(d.get(dim), (int, float))]
+        accepted_means[dim] = sum(a_vals) / len(a_vals) if a_vals else 5.0
+        rejected_means[dim] = sum(r_vals) / len(r_vals) if r_vals else 5.0
+
+    # Compute discriminative power: how much each dimension separates outcomes
+    deltas = {}
+    for dim in dim_names:
+        deltas[dim] = max(0.01, accepted_means[dim] - rejected_means[dim])
+
+    # Normalize deltas to suggested weights
+    total_delta = sum(deltas.values())
+    suggested = {dim: round(deltas[dim] / total_delta, 3) for dim in dim_names}
+
+    return suggested
 
 
 if __name__ == "__main__":

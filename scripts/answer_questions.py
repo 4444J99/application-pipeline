@@ -23,12 +23,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
     PIPELINE_DIR_ACTIVE,
-    VARIANTS_DIR,
     load_entries,
     load_entry_by_id,
+    load_submit_config,
+    resolve_cover_letter,
 )
 
-CONFIG_PATH = Path(__file__).resolve().parent / ".submit-config.yaml"
 WORK_DIR = Path(__file__).resolve().parent / ".alchemize-work"
 ASHBY_ANSWERS_DIR = Path(__file__).resolve().parent / ".ashby-answers"
 GREENHOUSE_ANSWERS_DIR = Path(__file__).resolve().parent / ".greenhouse-answers"
@@ -50,9 +50,7 @@ DEFAULT_ANSWER_PATTERNS = [
 
 def load_config() -> dict:
     """Load config including default_answers."""
-    if not CONFIG_PATH.exists():
-        return {}
-    return yaml.safe_load(CONFIG_PATH.read_text()) or {}
+    return load_submit_config(strict=False)
 
 
 def get_answers_dir(portal: str) -> Path:
@@ -112,34 +110,8 @@ def find_fill_in_fields(answers: dict, raw_text: str) -> list[dict]:
     return fields
 
 
-def resolve_cover_letter(entry: dict) -> str | None:
-    """Load cover letter content for context."""
-    submission = entry.get("submission", {})
-    if not isinstance(submission, dict):
-        return None
-    variant_ids = submission.get("variant_ids", {})
-    if not isinstance(variant_ids, dict):
-        return None
-    cl_ref = variant_ids.get("cover_letter")
-    if not cl_ref:
-        return None
-    variant_path = VARIANTS_DIR / cl_ref
-    if not variant_path.suffix:
-        variant_path = variant_path.with_suffix(".md")
-    if variant_path.exists():
-        raw = variant_path.read_text().strip()
-        # Strip frontmatter
-        lines = raw.split("\n")
-        body_start = 0
-        found_separator = False
-        for i, line in enumerate(lines):
-            if line.strip() == "---":
-                if found_separator:
-                    body_start = i + 1
-                    break
-                found_separator = True
-        return "\n".join(lines[body_start:]).strip()
-    return None
+
+# resolve_cover_letter is imported from pipeline_lib
 
 
 def try_auto_answer(label: str, config: dict) -> str | None:
@@ -260,7 +232,7 @@ def generate_prompt_file(entry: dict, config: dict) -> Path | None:
         print(f"  {entry_id}: All fields answered (no prompt needed)")
         return None
 
-    cover_letter = resolve_cover_letter(entry)
+    cover_letter = resolve_cover_letter(entry, strip_md=False)
     prompt = build_answer_prompt(entry, remaining_fields, cover_letter)
 
     work_path = WORK_DIR / entry_id

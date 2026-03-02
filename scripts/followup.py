@@ -26,6 +26,7 @@ from pipeline_lib import (
     PIPELINE_DIR_CLOSED,
     PIPELINE_DIR_SUBMITTED,
     SIGNALS_DIR,
+    get_tier,
     load_entries,
     parse_date,
     update_last_touched,
@@ -63,13 +64,7 @@ def load_protocol_from_market_intel() -> list[dict]:
 
 PROTOCOL = load_protocol_from_market_intel()
 
-# Tier priority for follow-up ordering
-TIER_PRIORITY = {
-    "job-tier-1": 1,
-    "job-tier-2": 2,
-    "job-tier-3": 3,
-    "job-tier-4": 4,
-}
+# TIER_PRIORITY imported from pipeline_lib
 
 OUTREACH_LOG = SIGNALS_DIR / "outreach-log.yaml"
 
@@ -100,13 +95,8 @@ def get_follow_ups(entry: dict) -> list[dict]:
     return entry.get("follow_up", []) or []
 
 
-def get_tier(entry: dict) -> int:
-    """Get tier priority from tags (lower = higher priority)."""
-    tags = entry.get("tags", []) or []
-    for tag in tags:
-        if tag in TIER_PRIORITY:
-            return TIER_PRIORITY[tag]
-    return 5  # default: untiered
+
+# get_tier imported from pipeline_lib
 
 
 def days_since_submission(entry: dict) -> int | None:

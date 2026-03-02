@@ -49,6 +49,25 @@ FUNNEL_STAGES = [
 ]
 
 
+def wilson_interval(successes: int, total: int, z: float = 1.96) -> tuple[float, float]:
+    """Wilson score confidence interval for a proportion.
+
+    Returns (lower, upper) bounds for the true rate.
+    With default z=1.96 this is a 95% confidence interval.
+    Returns (0, 0) when total is 0.
+    """
+    if total == 0:
+        return (0.0, 0.0)
+    p = successes / total
+    n = total
+    denom = 1 + z * z / n
+    center = p + z * z / (2 * n)
+    spread = z * (p * (1 - p) / n + z * z / (4 * n * n)) ** 0.5
+    lower = max(0.0, (center - spread) / denom)
+    upper = min(1.0, (center + spread) / denom)
+    return (lower, upper)
+
+
 def load_all_entries() -> list[dict]:
     """Load operational pipeline entries (excludes research pool)."""
     return load_entries(dirs=ALL_PIPELINE_DIRS, include_filepath=True)
@@ -155,8 +174,8 @@ def breakdown_by(entries: list[dict], dimension: str):
     print(f"{'=' * 70}")
 
     # Header
-    print(f"  {'Value':<30s} {'Total':>6s} {'Submit':>7s} {'Ack':>5s} {'Intv':>5s} {'Rate':>6s}")
-    print(f"  {'-' * 30} {'-' * 6} {'-' * 7} {'-' * 5} {'-' * 5} {'-' * 6}")
+    print(f"  {'Value':<30s} {'Total':>6s} {'Submit':>7s} {'Ack':>5s} {'Intv':>5s} {'Rate':>6s} {'95% CI':>14s}")
+    print(f"  {'-' * 30} {'-' * 6} {'-' * 7} {'-' * 5} {'-' * 5} {'-' * 6} {'-' * 14}")
 
     for key, group in sorted(groups.items(), key=lambda x: -len(x[1])):
         total = len(group)
@@ -164,8 +183,10 @@ def breakdown_by(entries: list[dict], dimension: str):
         acknowledged = sum(1 for e in group if get_stage_index(e.get("status", "")) >= 5)
         interview = sum(1 for e in group if get_stage_index(e.get("status", "")) >= 6)
         rate = (acknowledged / submitted * 100) if submitted else 0
+        lo, hi = wilson_interval(acknowledged, submitted)
+        ci_str = f"[{lo:.0%}-{hi:.0%}]" if submitted else ""
 
-        print(f"  {str(key):<30s} {total:>6d} {submitted:>7d} {acknowledged:>5d} {interview:>5d} {rate:>5.1f}%")
+        print(f"  {str(key):<30s} {total:>6d} {submitted:>7d} {acknowledged:>5d} {interview:>5d} {rate:>5.1f}% {ci_str:>14s}")
 
     print(f"\n{'=' * 70}")
 

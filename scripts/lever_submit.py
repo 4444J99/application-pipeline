@@ -22,15 +22,14 @@ from pathlib import Path
 
 import yaml
 from pipeline_lib import (
-    MATERIALS_DIR,
     PIPELINE_DIR_ACTIVE,
-    VARIANTS_DIR,
     load_entries,
     load_entry_by_id,
-    strip_markdown,
+    load_submit_config,
+    resolve_cover_letter,
+    resolve_resume,
 )
 
-CONFIG_PATH = Path(__file__).resolve().parent / ".submit-config.yaml"
 ANSWERS_DIR = Path(__file__).resolve().parent / ".lever-answers"
 
 # URL patterns:
@@ -55,20 +54,7 @@ AUTO_FILL_PATTERNS = [
 
 def load_config() -> dict:
     """Load personal info from .submit-config.yaml."""
-    if not CONFIG_PATH.exists():
-        print(f"Error: Config file not found: {CONFIG_PATH}", file=sys.stderr)
-        print("Create it with first_name, last_name, email, phone fields.", file=sys.stderr)
-        sys.exit(1)
-    config = yaml.safe_load(CONFIG_PATH.read_text())
-    if not isinstance(config, dict):
-        print("Error: Config file is not a valid YAML dict.", file=sys.stderr)
-        sys.exit(1)
-    for field in ("first_name", "last_name", "email"):
-        val = config.get(field, "")
-        if not val or "FILL_IN" in str(val):
-            print(f"Error: Fill in '{field}' in {CONFIG_PATH}", file=sys.stderr)
-            sys.exit(1)
-    return config
+    return load_submit_config(strict=True)
 
 
 def parse_lever_url(url: str) -> tuple[str, str, bool] | None:
@@ -124,49 +110,8 @@ def fetch_posting_questions(company: str, posting_id: str, is_eu: bool) -> list[
     return data.get("lists", [])
 
 
-def resolve_cover_letter(entry: dict) -> str | None:
-    """Resolve cover letter content from variant file, stripping markdown headers."""
-    submission = entry.get("submission", {})
-    if not isinstance(submission, dict):
-        return None
-    variant_ids = submission.get("variant_ids", {})
-    if not isinstance(variant_ids, dict):
-        return None
-    cl_ref = variant_ids.get("cover_letter")
-    if not cl_ref:
-        return None
-    variant_path = VARIANTS_DIR / cl_ref
-    if not variant_path.suffix:
-        variant_path = variant_path.with_suffix(".md")
-    if not variant_path.exists():
-        return None
-    raw = variant_path.read_text().strip()
-    # Strip the markdown header block (title, role, apply, salary, ---)
-    lines = raw.split("\n")
-    body_start = 0
-    found_separator = False
-    for i, line in enumerate(lines):
-        if line.strip() == "---":
-            if found_separator:
-                body_start = i + 1
-                break
-            found_separator = True
-    body = "\n".join(lines[body_start:]).strip()
-    return strip_markdown(body)
 
-
-def resolve_resume(entry: dict) -> Path | None:
-    """Find the resume PDF from materials_attached."""
-    submission = entry.get("submission", {})
-    if not isinstance(submission, dict):
-        return None
-    materials = submission.get("materials_attached", [])
-    if not isinstance(materials, list):
-        return None
-    for m in materials:
-        mat_path = MATERIALS_DIR / m
-        if mat_path.exists() and mat_path.suffix.lower() == ".pdf":
-            return mat_path
+# resolve_cover_letter and resolve_resume are imported from pipeline_lib
     return None
 
 

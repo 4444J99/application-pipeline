@@ -177,6 +177,25 @@ def validate_entry(filepath: Path) -> list[str]:
                         f"(highest dated stage: '{highest_dated}')"
                     )
 
+            # Check chronological ordering of timeline dates
+            from pipeline_lib import parse_date as _parse_date
+            prev_key = None
+            prev_dt = None
+            for stage_key in stage_order:
+                raw = timeline.get(stage_key)
+                if not raw:
+                    continue
+                dt = _parse_date(raw)
+                if dt is None:
+                    continue
+                if prev_dt is not None and dt < prev_dt:
+                    errors.append(
+                        f"Timeline out of order: '{stage_key}' ({dt}) "
+                        f"before '{prev_key}' ({prev_dt})"
+                    )
+                prev_key = stage_key
+                prev_dt = dt
+
     # Portal validation
     target = data.get("target", {})
     if isinstance(target, dict):
@@ -412,16 +431,64 @@ def check_profile_freshness() -> list[str]:
     return warnings
 
 
+REQUIRED_PROFILE_FIELDS = {"name", "identity_position", "track", "artist_statements"}
+
+
+def validate_profiles() -> list[str]:
+    """Validate profile JSON files have required fields and valid structure.
+
+    Returns list of error strings.
+    """
+    import json
+
+    from pipeline_lib import PROFILES_DIR
+
+    errors = []
+    if not PROFILES_DIR.exists():
+        errors.append("Profile directory not found: targets/profiles/")
+        return errors
+
+    for profile_path in sorted(PROFILES_DIR.glob("*.json")):
+        if "index" in profile_path.name:
+            continue
+        try:
+            with open(profile_path) as f:
+                data = json.load(f)
+        except json.JSONDecodeError as e:
+            errors.append(f"{profile_path.name}: invalid JSON — {e}")
+            continue
+
+        if not isinstance(data, dict):
+            errors.append(f"{profile_path.name}: not a JSON object")
+            continue
+
+        for field in REQUIRED_PROFILE_FIELDS:
+            if field not in data:
+                errors.append(f"{profile_path.name}: missing required field '{field}'")
+
+        # Validate artist_statements structure
+        stmts = data.get("artist_statements")
+        if isinstance(stmts, dict):
+            for length_key in ("short", "medium", "long"):
+                if length_key in stmts and not isinstance(stmts[length_key], str):
+                    errors.append(f"{profile_path.name}: artist_statements.{length_key} must be a string")
+
+    return errors
+
+
 def main():
     import argparse
 
     parser = argparse.ArgumentParser(description="Validate pipeline YAML entries")
     parser.add_argument("--check-freshness", action="store_true",
                         help="Also check profile JSON freshness against metrics-snapshot.md")
+    parser.add_argument("--check-profiles", action="store_true",
+                        help="Also validate profile JSON schema")
     args = parser.parse_args()
 
     all_errors = {}
     file_count = 0
+    seen_ids: dict[str, str] = {}  # id -> first filepath
 
     for pipeline_dir in PIPELINE_DIRS:
         if not pipeline_dir.exists():
@@ -431,6 +498,16 @@ def main():
                 continue
             file_count += 1
             errors = validate_entry(filepath)
+
+            # Duplicate ID detection across all directories
+            entry_id = filepath.stem
+            if entry_id in seen_ids:
+                errors.append(
+                    f"Duplicate ID '{entry_id}' — also found at {seen_ids[entry_id]}"
+                )
+            else:
+                seen_ids[entry_id] = str(filepath.relative_to(REPO_ROOT))
+
             if errors:
                 all_errors[filepath.name] = errors
 
@@ -459,6 +536,17 @@ def main():
         stale = any("STALE" in w for w in freshness_warnings)
         if stale:
             has_errors = True
+
+    if args.check_profiles:
+        print()
+        profile_errors = validate_profiles()
+        if profile_errors:
+            print(f"PROFILE VALIDATION — {len(profile_errors)} issue(s):\n")
+            for e in profile_errors:
+                print(f"  - {e}")
+            has_errors = True
+        else:
+            print("Profile validation OK — all profiles have required fields.")
 
     if has_errors:
         sys.exit(1)

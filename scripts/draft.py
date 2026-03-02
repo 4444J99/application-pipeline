@@ -26,44 +26,14 @@ from pipeline_lib import (
     DRAFTS_DIR,
     count_chars,
     count_words,
+    format_block_stats,
     get_effort,
     load_block,
-    load_block_frontmatter,
     load_entries,
     load_entry_by_id,
     load_profile,
     strip_markdown,
 )
-
-# Languages to filter from stats display (config/documentation noise)
-_NOISE_LANGS = {"markdown", "shell", "yaml", "jekyll"}
-
-
-def _format_block_stats(block_path: str) -> str | None:
-    """Extract Key Stats line from block frontmatter, if available."""
-    fm = load_block_frontmatter(block_path)
-    if not fm:
-        return None
-    stats = fm.get("stats", {})
-    if not stats:
-        return None
-    parts = []
-    if stats.get("languages"):
-        langs = stats["languages"]
-        if isinstance(langs, list):
-            useful = [l for l in langs if l not in _NOISE_LANGS]
-        else:
-            useful = [langs] if langs not in _NOISE_LANGS else []
-        if useful:
-            parts.append(f"Languages: {', '.join(useful)}")
-    if stats.get("test_count"):
-        parts.append(f"Tests: {stats['test_count']}")
-    if stats.get("coverage"):
-        parts.append(f"Coverage: {stats['coverage']}%")
-    if parts:
-        return f"**Key Stats:** {' | '.join(parts)}"
-    return None
-
 
 # --- Submission format parsing ---
 
@@ -122,7 +92,7 @@ SECTION_KEYWORDS = {
 # Sections we can auto-fill from profile data
 PROFILE_FILLABLE = {
     "artist_statement", "bio", "work_samples", "project_description",
-    "portfolio", "writing_sample",
+    "portfolio",
 }
 
 # Word limit defaults per section type
@@ -385,7 +355,7 @@ def assemble_draft(
             if block_content:
                 content = block_content.strip()
                 source = f"block:{blocks_used[field_name]}"
-                block_stats_line = _format_block_stats(blocks_used[field_name])
+                block_stats_line = format_block_stats(blocks_used[field_name])
 
         # Priority 2: Profile content
         if content is None and profile and field_name in PROFILE_FILLABLE:

@@ -413,11 +413,17 @@ def run_execute(
         from pipeline_lib import load_entry_by_id as reload_entry
         _, fresh_entry = reload_entry(eid)
         if fresh_entry:
-            issues = check_entry(fresh_entry)
-            if issues:
-                print(f"    ! preflight: {len(issues)} issue(s)")
-                for issue in issues:
-                    print(f"      - {issue}")
+            errors, warnings = check_entry(fresh_entry)
+            if errors:
+                print(f"    ! preflight: {len(errors)} error(s), {len(warnings)} warning(s)")
+                for issue in errors:
+                    print(f"      - [ERROR] {issue}")
+                for issue in warnings:
+                    print(f"      - [WARN]  {issue}")
+            elif warnings:
+                print(f"    ~ preflight: {len(warnings)} warning(s)")
+                for issue in warnings:
+                    print(f"      - [WARN]  {issue}")
             else:
                 print("    + preflight: READY")
 

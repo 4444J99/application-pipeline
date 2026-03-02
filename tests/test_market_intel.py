@@ -8,11 +8,17 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from market_intel import (
+    _REQUIRED_INTEL_KEYS,
     check_staleness,
     fmt_currency,
     fmt_days,
     fmt_pct,
     load_intel,
+    section_differentiation,
+    section_funding,
+    section_meta,
+    section_startup,
+    validate_intel_schema,
 )
 
 # --- TestFmtPct ---
@@ -173,3 +179,85 @@ def test_load_intel_valid_json(tmp_path, monkeypatch):
     monkeypatch.setattr(mi, "INTEL_FILE", intel_file)
     result = load_intel()
     assert result["meta"]["version"] == "2026.1"
+
+
+# --- Required Intel Keys (v2: 13 sections) ---
+
+
+def test_required_intel_keys_count():
+    """All 13 sections (7 original + 6 new) are in _REQUIRED_INTEL_KEYS."""
+    assert len(_REQUIRED_INTEL_KEYS) == 13
+
+
+def test_required_intel_keys_original_seven():
+    """Original 7 keys present."""
+    original = ["meta", "market_conditions", "track_benchmarks", "portal_friction_scores",
+                 "skills_signals", "follow_up_protocol", "stale_thresholds_days"]
+    for key in original:
+        assert key in _REQUIRED_INTEL_KEYS, f"missing original key: {key}"
+
+
+def test_required_intel_keys_new_six():
+    """6 new keys from v2 JSON present."""
+    new_keys = ["startup_funding_landscape", "non_dilutive_funding", "startup_mechanics",
+                "differentiation_signals", "alternative_funding", "meta_strategy"]
+    for key in new_keys:
+        assert key in _REQUIRED_INTEL_KEYS, f"missing new key: {key}"
+
+
+def test_required_intel_keys_all_expect_dict():
+    """All required keys expect dict type."""
+    for key, expected_type in _REQUIRED_INTEL_KEYS.items():
+        assert expected_type is dict, f"key {key} expects {expected_type}, should be dict"
+
+
+# --- Schema Validation ---
+
+
+def test_validate_catches_missing_new_keys():
+    """Schema validation flags missing new sections."""
+    minimal = {"meta": {}, "market_conditions": {}, "track_benchmarks": {},
+               "portal_friction_scores": {}, "skills_signals": {},
+               "follow_up_protocol": {}, "stale_thresholds_days": {}}
+    issues = validate_intel_schema(minimal)
+    assert len(issues) == 6  # 6 new keys missing
+    for issue in issues:
+        assert "missing required key" in issue
+
+
+def test_validate_passes_full_schema():
+    """Full schema with all 13 keys produces no issues."""
+    full = {k: {} for k in _REQUIRED_INTEL_KEYS}
+    issues = validate_intel_schema(full)
+    assert len(issues) == 0
+
+
+# --- New Display Sections (smoke tests — don't crash on empty data) ---
+
+
+def test_section_startup_empty_intel(capsys):
+    """section_startup doesn't crash on empty intel."""
+    section_startup({})
+    captured = capsys.readouterr()
+    assert "STARTUP FUNDING LANDSCAPE" in captured.out
+
+
+def test_section_funding_empty_intel(capsys):
+    """section_funding doesn't crash on empty intel."""
+    section_funding({})
+    captured = capsys.readouterr()
+    assert "NON-DILUTIVE" in captured.out
+
+
+def test_section_differentiation_empty_intel(capsys):
+    """section_differentiation doesn't crash on empty intel."""
+    section_differentiation({})
+    captured = capsys.readouterr()
+    assert "DIFFERENTIATION SIGNALS" in captured.out
+
+
+def test_section_meta_empty_intel(capsys):
+    """section_meta doesn't crash on empty intel."""
+    section_meta({})
+    captured = capsys.readouterr()
+    assert "META STRATEGY" in captured.out

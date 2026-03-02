@@ -21,6 +21,8 @@ from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+import yaml
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
@@ -251,6 +253,12 @@ def _expire_entry(entry_id: str):
         filepath = search_dir / f"{entry_id}.yaml"
         if filepath.exists():
             content = filepath.read_text()
+            # Guard: only expire actionable entries
+            data = yaml.safe_load(content)
+            if isinstance(data, dict) and data.get("status") not in ACTIONABLE_STATUSES:
+                print(f"  WARNING: Skipping {entry_id} — status '{data.get('status')}' not actionable",
+                      file=sys.stderr)
+                return
             content = update_yaml_field(content, "status", "outcome")
             try:
                 content = update_yaml_field(content, "outcome", "expired")

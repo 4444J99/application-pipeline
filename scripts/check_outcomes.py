@@ -190,6 +190,15 @@ def record_outcome(
         print(f"No file path for entry: {entry_id}", file=sys.stderr)
         sys.exit(1)
 
+    current_status = entry.get("status", "")
+    if current_status not in ("submitted", "acknowledged", "interview"):
+        print(
+            f"Warning: entry '{entry_id}' has status '{current_status}', "
+            f"expected submitted/acknowledged/interview",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
     today_str = date.today().isoformat()
     content = filepath.read_text()
 
@@ -248,6 +257,15 @@ def record_outcome(
         content = update_yaml_field(content, "response_type", outcome, nested=True)
     except ValueError:
         pass
+
+    # Write outcome note if provided
+    if note:
+        try:
+            content = update_yaml_field(content, "outcome_note", f'"{note}"', nested=True)
+        except ValueError:
+            # Append to conversion section if field doesn't exist
+            if "conversion:" in content:
+                content = content.rstrip() + f'\n  outcome_note: "{note}"\n'
 
     content = update_last_touched(content)
     filepath.write_text(content)

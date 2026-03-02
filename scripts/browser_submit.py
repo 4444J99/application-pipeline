@@ -840,7 +840,12 @@ def process_entry_browser(page, entry, config, auto_submit=False):
         else:
             print("  No confirmation detected — check the browser to verify")
 
-    # Record submission
+    # Record submission only if submit succeeded
+    if not submitted:
+        print("  WARNING: Submit button not found/clicked — not recording submission")
+        print(f"  If submitted manually, run: python scripts/submit.py --target {entry_id} --record")
+        return "failed"
+
     if filepath and Path(filepath).exists():
         try:
             record_submission(Path(filepath), entry)

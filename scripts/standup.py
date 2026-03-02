@@ -25,6 +25,7 @@ from pipeline_lib import (
     PIPELINE_DIR_RESEARCH_POOL,
     REPO_ROOT,
     SIGNALS_DIR,
+    VALID_TRANSITIONS,
     days_until,
     get_deadline,
     get_effort,
@@ -694,14 +695,11 @@ def touch_entry(entry_id: str):
     for pipeline_dir in ALL_PIPELINE_DIRS:
         filepath = pipeline_dir / f"{entry_id}.yaml"
         if filepath.exists():
-            with open(filepath) as f:
-                data = yaml.safe_load(f)
-            if isinstance(data, dict):
-                data["last_touched"] = today
-                with open(filepath, "w") as f:
-                    yaml.dump(data, f, default_flow_style=False, sort_keys=False)
-                print(f"Touched: {entry_id} — last_touched set to {today}")
-                return
+            content = filepath.read_text()
+            content = update_last_touched_content(content)
+            filepath.write_text(content)
+            print(f"Touched: {entry_id} — last_touched set to {today}")
+            return
 
     print(f"Entry not found: {entry_id}")
     sys.exit(1)
@@ -713,6 +711,7 @@ def touch_entry(entry_id: str):
 
 SECTIONS = {
     "health": "Pipeline health counts and velocity",
+    "wins": "Recent milestones and achievements",
     "stale": "Staleness alerts (expired, at-risk, stagnant)",
     "plan": "Today's work plan",
     "outreach": "Outreach suggestions per target",
@@ -726,6 +725,56 @@ SECTIONS = {
     "opportunities": "Opportunity pipeline (grants/residencies/prizes/writing)",
     "market": "Market conditions, hot skills, and upcoming grant deadlines",
 }
+
+
+# ---------------------------------------------------------------------------
+# Section: Wins (recent milestones and achievements)
+# ---------------------------------------------------------------------------
+
+
+def section_wins(entries: list[dict]):
+    """Highlight recent milestones to maintain momentum."""
+    from datetime import timedelta
+
+    today = date.today()
+    window = timedelta(days=7)
+    wins = []
+
+    for e in entries:
+        timeline = e.get("timeline", {})
+        if not isinstance(timeline, dict):
+            continue
+        name = e.get("name", e.get("id", "?"))
+
+        # Recently submitted
+        sub_date = parse_date(timeline.get("submitted"))
+        if sub_date and (today - sub_date) <= window:
+            wins.append((sub_date, f"Submitted: {name}"))
+
+        # Got a response (acknowledged/interview)
+        ack_date = parse_date(timeline.get("acknowledged"))
+        if ack_date and (today - ack_date) <= window:
+            wins.append((ack_date, f"Response received: {name}"))
+
+        intv_date = parse_date(timeline.get("interview"))
+        if intv_date and (today - intv_date) <= window:
+            wins.append((intv_date, f"Interview stage: {name}"))
+
+        # Accepted
+        outcome = e.get("outcome")
+        outcome_date = parse_date(timeline.get("outcome_date"))
+        if outcome == "accepted" and outcome_date and (today - outcome_date) <= window:
+            wins.append((outcome_date, f"ACCEPTED: {name}"))
+
+    print("RECENT WINS (last 7 days)")
+    if not wins:
+        print("  No milestones this week — keep pushing!")
+    else:
+        wins.sort(key=lambda x: x[0], reverse=True)
+        for dt, desc in wins:
+            print(f"  {dt.isoformat()} — {desc}")
+
+    print()
 
 
 # ---------------------------------------------------------------------------
@@ -749,8 +798,8 @@ def section_readiness(entries: list[dict]):
     scored = []
     for e in staged:
         rscore = readiness_score(e)
-        issues = check_entry(e)
-        scored.append((rscore, e, issues))
+        errors, warnings = check_entry(e)
+        scored.append((rscore, e, errors, warnings))
 
     # Sort by readiness score descending
     scored.sort(key=lambda x: -x[0])
@@ -760,7 +809,7 @@ def section_readiness(entries: list[dict]):
 
     if ready_now:
         print(f"   READY TO SUBMIT NOW ({len(ready_now)}):")
-        for rscore, e, issues in ready_now:
+        for rscore, e, errors, warnings in ready_now:
             name = e.get("name", e.get("id", "?"))
             dl_date, dl_type = get_deadline(e)
             dl_str = ""
@@ -770,17 +819,20 @@ def section_readiness(entries: list[dict]):
             elif dl_type in ("rolling", "tba"):
                 dl_str = f" — {dl_type}"
             print(f"     [{rscore}/5] {name}{dl_str}")
-            if issues:
-                for issue in issues[:2]:
-                    print(f"            {issue}")
+            for issue in errors[:2]:
+                print(f"            [ERROR] {issue}")
+            for issue in warnings[:2]:
+                print(f"            [WARN]  {issue}")
 
     if not_ready:
         print(f"   NEEDS WORK ({len(not_ready)}):")
-        for rscore, e, issues in not_ready:
+        for rscore, e, errors, warnings in not_ready:
             name = e.get("name", e.get("id", "?"))
             print(f"     [{rscore}/5] {name}")
-            for issue in issues[:3]:
-                print(f"            {issue}")
+            for issue in errors[:3]:
+                print(f"            [ERROR] {issue}")
+            for issue in warnings[:2]:
+                print(f"            [WARN]  {issue}")
 
     print()
 
@@ -1023,6 +1075,8 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
         section_jobs(entries)
         section_opportunities(entries)
 
+    if section is None or section == "wins":
+        section_wins(entries)
     if section is None or section == "stale":
         stale_stats = section_stale(entries)
     if section is None or section == "plan":
@@ -1054,12 +1108,14 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
 # Triage mode
 # ---------------------------------------------------------------------------
 
-NEXT_STATUS = {
-    "research": "qualified",
-    "qualified": "drafting",
-    "drafting": "staged",
-    "staged": "submitted",
-}
+# Derive forward-only advancement map from canonical VALID_TRANSITIONS.
+# For each actionable status, the "next" status is the natural pipeline progression.
+_FORWARD_PATH = ["research", "qualified", "drafting", "staged", "submitted"]
+NEXT_STATUS = {}
+for _i, _s in enumerate(_FORWARD_PATH[:-1]):
+    _next = _FORWARD_PATH[_i + 1]
+    if _next in VALID_TRANSITIONS.get(_s, set()):
+        NEXT_STATUS[_s] = _next
 
 
 def run_triage():

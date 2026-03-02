@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "2026-03-01",
-    "sources_count": 112,
+    "version": "2026-03-01-v2",
+    "sources_count": 336,
     "last_updated": "2026-03-01",
     "next_review": "2026-06-01",
     "note": "All numeric parameters are research-backed. See market-research-corpus.md for citations."
@@ -417,5 +417,308 @@
     "slideroom": [30, 120],
     "direct": [7, 30],
     "note": "Arrays are [stale_days, ghosted_days]. submittable/slideroom use grant/prize median_response_days from track_benchmarks."
+  },
+  "startup_funding_landscape": {
+    "vc_total_deployed_2025_usd": 425000000000,
+    "vc_total_deployed_sources": ["crunchbase: $425B", "cb_insights: $469B", "pitchbook: $512B"],
+    "ai_share_of_vc_2025": 0.50,
+    "ai_funding_total_2025_usd": 202000000000,
+    "mega_deal_concentration": 0.50,
+    "mega_deal_concentration_note": "0.05% of deals capture 50% of dollars",
+    "seed_metrics": {
+      "median_round_usd": 3100000,
+      "median_pre_money_valuation_usd": 12000000,
+      "expected_arr_usd": [300000, 500000],
+      "typical_dilution": 0.20,
+      "closing_days_median": 142,
+      "closing_days_2021": 68,
+      "safe_prevalence_pre_seed": 0.88,
+      "note": "142 days median close (up from 68 in 2021). Post-money SAFEs dominate pre-seed at 88%"
+    },
+    "series_a_metrics": {
+      "median_pre_money_valuation_usd": 49300000,
+      "expected_arr_usd": [1000000, 5000000],
+      "seed_to_a_days": 616,
+      "a_to_b_months": 28,
+      "between_rounds_days_median": 696,
+      "conversion_rate_seed_to_a_2020_cohort": 0.36,
+      "note": "Series A median pre-money $49.3M (record). Seed-to-A 616 days; A-to-B 28 months"
+    },
+    "down_round_rate_q3_2025": 0.17,
+    "ipo_vs_private_valuation_median": 0.9,
+    "sector_winners_2026": ["ai_infrastructure", "defense_tech", "robotics", "cybersecurity", "stablecoin_payments"],
+    "sector_losers_2026": ["climate_tech", "non_payment_crypto", "vertical_saas_without_ai", "consumer_apps"],
+    "angel_median_check_usd": 88000,
+    "angel_valuation_cap_median_usd": 2500000,
+    "geographic_concentration": {"us_share": 0.64, "sf_bay_area_of_us_ai": 0.45},
+    "source": "Crunchbase Jan 2026; CB Insights 2025; PitchBook-NVCA Q4 2025; Carta Q3 2025"
+  },
+  "non_dilutive_funding": {
+    "sbir_sttr": {
+      "status": "expired_oct_2025",
+      "annual_pool_usd": 4000000000,
+      "phase_1_range_usd": [50000, 275000],
+      "phase_2_range_usd": [500000, 1500000],
+      "acceptance_rate": [0.15, 0.25],
+      "watch_url": "https://www.sbir.gov/",
+      "note": "SBIR/STTR authorization expired October 2025. $4B/year frozen. Monitor for reauthorization."
+    },
+    "nsf_icorps": {"amount_usd": 50000, "type": "customer-discovery"},
+    "darpa_sbir": {"amount_usd": [750000, 1500000], "note": "Still active under separate authority"},
+    "arpa_e_fy2026_usd": 350000000,
+    "humanity_ai_pool_usd": 500000000,
+    "humanity_ai_partners": ["ford_foundation", "macarthur", "mozilla", "7_others"],
+    "humanity_ai_note": "5-year $500M pooled fund; grantmaking began 2026",
+    "cloud_credits": {
+      "microsoft_founders_hub_usd": 150000,
+      "aws_activate_usd": 100000,
+      "aws_activate_ai_usd": 300000,
+      "google_cloud_ai_usd": 350000,
+      "nvidia_inception_aws_usd": 100000,
+      "note": "Non-dilutive cloud credits for AI startups. Microsoft: up to $150K over 4yr. AWS: up to $300K for AI. Google: up to $350K."
+    },
+    "qsbs_2025_update": {
+      "exclusion_cap_usd": 15000000,
+      "tiers": {"3yr": 0.50, "4yr": 0.75, "5yr": 1.00},
+      "bill": "OBBBA (One Big Beautiful Bill Act, July 2025)",
+      "california_conformity": false,
+      "note": "QSBS exclusion raised from $10M to $15M with tiered vesting. California does NOT conform."
+    },
+    "source": "SBIR.gov; NSF I-Corps; DARPA; ARPA-E; MacArthur/Ford Humanity AI; Microsoft/AWS/Google/NVIDIA startup programs; OBBBA July 2025"
+  },
+  "startup_mechanics": {
+    "incorporation": {
+      "preferred_entity": "delaware_c_corp",
+      "formation_cost_usd": [500, 819],
+      "note": "Delaware C-Corp is universal standard for VC-backed. Wyoming LLC for non-VC bootstrapped."
+    },
+    "equity_instruments": {
+      "safe_prevalence_pre_seed": 0.88,
+      "safe_type": "post_money",
+      "typical_cap_range_usd": [2000000, 15000000],
+      "note": "Post-money SAFEs dominate. YC standard terms. Priced rounds at Series A."
+    },
+    "solo_founder_data": {
+      "solo_pct_of_1m_revenue_companies": 0.42,
+      "solo_pct_of_exits": 0.523,
+      "solo_disadvantage_vc": "most VCs prefer co-founders; adjust pitch accordingly",
+      "note": "Solo founders: 42% of $1M+ revenue companies, 52.3% of exits"
+    },
+    "ai_mvp_timeline_weeks": [2, 4],
+    "ai_startup_failure_rate": 0.90,
+    "plg_vs_sales_acv_threshold_usd": 5000,
+    "accelerator_tier": {
+      "tier_1": ["yc", "techstars", "500_global"],
+      "yc_acceptance_rate": 0.015,
+      "yc_standard_deal": "125k_for_7pct + 375k_mfn_safe",
+      "note": "YC: $125K for 7% + $375K MFN SAFE. 1.5% acceptance rate."
+    },
+    "runway_planning": {
+      "months_before_raise": 6,
+      "target_runway_months": [18, 24],
+      "burn_multiple_target": "less_than_2x",
+      "note": "Start fundraising 6+ months before cash runs out. Seed rounds take 142 days median."
+    },
+    "source": "YCombinator; Carta State of Pre-Seed 2025; startup-research-march-2026.md"
+  },
+  "differentiation_signals": {
+    "pitch_deck": {
+      "median_review_time_seconds": 144,
+      "first_3_slides_decision_weight": 0.70,
+      "completion_rate": [0.41, 0.50],
+      "rejection_rate": 0.98,
+      "why_now_slide_importance": "critical",
+      "bottom_up_tam_required": true,
+      "clear_next_step_meeting_lift": 0.22,
+      "note": "VCs spend 2m24s per deck. First 3 slides = 70% of decision. 98%+ rejection rate."
+    },
+    "networking": {
+      "warm_intro_conversion": 0.58,
+      "cold_email_response": [0.01, 0.05],
+      "warm_vs_cold_multiplier": [10, 15],
+      "unrealized_warm_paths": 200,
+      "cold_email_max_read_time_seconds": 15,
+      "note": "Warm intros convert 58%+. Cold 1-5%. Founders have ~200+ unrealized warm paths."
+    },
+    "personal_brand": {
+      "linkedin_profile_vs_company_engagement": 5.0,
+      "linkedin_ceo_content_engagement_multiplier": 3.0,
+      "linkedin_video_growth_yoy": 0.36,
+      "github_recruiter_review_rate": 0.87,
+      "github_scan_time_seconds": 90,
+      "optimal_pinned_projects": [3, 5],
+      "note": "Personal profiles 5x company engagement. 87% of recruiters review GitHub (90s scan)."
+    },
+    "proof_of_work": {
+      "replacing_credentials": true,
+      "portfolio_signal_weight": 0.65,
+      "reviews_conversion_lift_5plus": 2.70,
+      "case_study_structure": ["challenge", "solution", "measurable_results"],
+      "note": "Proof of work replacing credentials. 5+ reviews increase conversion 270%."
+    },
+    "storytelling": {
+      "market_stage_narratives": {
+        "nascent": "teach_and_lead",
+        "emergent": "belong_and_differentiate",
+        "mature": "challenge_and_replace"
+      },
+      "narrative_structures": ["problem_solution_impact", "six_part_arc", "problem_agitate_solve"],
+      "note": "Match narrative to market stage. Mismatched narratives repel rather than attract."
+    },
+    "ai_differentiation": {
+      "wrapper_viability": "collapsed",
+      "moat_factors": ["workflow_integration", "proprietary_data", "compliance_tooling", "modular_architecture"],
+      "vertical_beats_horizontal": true,
+      "information_density_over_fine_tuning": true,
+      "note": "AI wrapper era collapsed. System is the moat, not the model. Vertical > horizontal."
+    },
+    "grant_differentiation": {
+      "dual_alignment_required": true,
+      "work_samples_paramount": true,
+      "clarity_over_artspeak": true,
+      "realistic_resource_requests": true,
+      "note": "Strongest grants show work serves applicant AND funder mission simultaneously."
+    },
+    "social_proof": {
+      "reviews_5plus_conversion_lift": 2.70,
+      "authenticity_over_automation": true,
+      "micro_influencer_advantage": true,
+      "awards_as_multiplier": true,
+      "note": "5+ reviews = 270% conversion lift. Authenticity beats automation in 2026."
+    },
+    "source": "competitive-landscape-research-2026-03.md (19 sources)"
+  },
+  "alternative_funding": {
+    "revenue_based_financing": {
+      "market_size_2027_usd": 42000000000,
+      "min_mrr_usd": 10000,
+      "providers": {
+        "pipe": {"range_usd": [25000, 100000000], "fee_pct": 0.01, "type": "marketplace"},
+        "capchase": {"range_usd": [25000, 10000000], "min_arr_usd": 1000000, "type": "direct_lender"},
+        "clearco": {"min_revenue_usd": 100000, "fee_pct": [0.06, 0.125], "type": "ecommerce_focused"}
+      },
+      "note": "RBF market projected $42B by 2027. Non-dilutive. Best for SaaS with $10K+ MRR."
+    },
+    "equity_crowdfunding": {
+      "reg_cf_annual_cap_usd": 5000000,
+      "platforms": {
+        "wefunder": {"2025_raised_usd": 109000000},
+        "startengine": {"2025_raised_usd": 89000000, "cumulative_usd": 1500000000},
+        "republic": {"2025_raised_usd": 20000000}
+      },
+      "platform_fee_pct": [0.06, 0.10],
+      "note": "Reg CF allows $5M/12 months. Increasingly treated as GTM channel, not just fundraising."
+    },
+    "rewards_crowdfunding": {
+      "avg_tech_campaign_usd": [20000, 100000],
+      "platform_fee_pct": 0.05,
+      "tech_campaign_growth_2025_2026": 0.15,
+      "note": "Kickstarter all-or-nothing; Indiegogo flexible. Pre-launch community building mandatory."
+    },
+    "crypto_web3_grants": {
+      "gitcoin_total_distributed_usd": 60000000,
+      "gitcoin_funded_through": "2029",
+      "ethereum_esp_range_usd": [5000, 500000],
+      "optimism_rpgf_total_usd": 3000000000,
+      "note": "Gitcoin Labs shutting down BUT Grants Program continues through ~2029. Quadratic funding model."
+    },
+    "creative_economy": {
+      "patreon_platform_fee": 0.10,
+      "substack_platform_fee": 0.10,
+      "buymeacoffee_platform_fee": 0.05,
+      "top_tech_creator_monthly_usd": [5000, 50000],
+      "note": "Patreon 10% fee (new creators). Substack 10% on paid subs. BuyMeACoffee 5%."
+    },
+    "residencies_with_stipends": {
+      "recurse_center": {"grant_usd": 7000, "duration_weeks": 12, "cost": "free"},
+      "eyebeam": {"stipend_usd": 4000, "duration_weeks": 12, "location": "nyc"},
+      "pioneer_works": {"honorarium_usd": [1000, 5000], "location": "brooklyn"}
+    },
+    "competitions": {
+      "xprize": {"grand_prize_usd": 11000000, "note": "Multi-year; self-fund development"},
+      "mit_solve": {"pool_usd": 1000000, "avg_per_team_usd": 40000},
+      "hult_prize": {"prize_usd": 1000000, "eligibility": "students"},
+      "mit_100k": {"prize_usd": 100000}
+    },
+    "fractional_cto": {
+      "hourly_rate_usd": [200, 500],
+      "average_hourly_usd": 300,
+      "monthly_retainer_range": "mid_four_to_low_five_figures",
+      "market_growth": "doubled_in_2_years",
+      "min_experience_years": [10, 15],
+      "note": "Structural shift, not cyclical. Viable hedge if full-time search exceeds 3 months."
+    },
+    "startup_banking": {
+      "brex": {"note": "Capital One acquiring for $5.15B; status unclear post-acquisition"},
+      "mercury": {"note": "Full-stack financial platform; venture debt + working capital"},
+      "svb": {"note": "Now First Citizens division; actively lending Feb 2026"}
+    },
+    "international_programs": {
+      "digital_nomad_visa_countries": 65,
+      "startup_visa_programs": 46,
+      "top_programs": ["spain_digital_nomad", "estonia_startup_visa", "start_up_chile", "uk_innovator_founder"],
+      "start_up_chile_grant_usd": [15000, 80000],
+      "note": "65+ countries offer DN visas. 46 startup visa programs across 39 countries."
+    },
+    "source": "alternative-funding-mechanisms-2026.md (58 sources)"
+  },
+  "meta_strategy": {
+    "founder_burnout": {
+      "prevalence": 0.73,
+      "shadow_burnout_note": "73% experience it; often undetected until crisis. Signs: decision fatigue, cynicism, micro-optimizing.",
+      "mitigation": ["structured_breaks", "peer_groups", "professional_support", "boundary_setting"]
+    },
+    "legal_landmines": {
+      "ftc_noncompete_ban_failed": true,
+      "state_noncompete_enforceability": "varies_by_state",
+      "ip_assignment_critical": true,
+      "delaware_franchise_tax_note": "Can be $400K+ if using Authorized Shares method; use Assumed Par Value method",
+      "83b_election_deadline_days": 30,
+      "note": "FTC non-compete ban failed. 83(b) election within 30 days of stock grant is critical."
+    },
+    "insurance": {
+      "d_and_o_monthly_usd": 125,
+      "cyber_insurance": "required_by_most_enterprise_contracts",
+      "note": "D&O at $125/month early is much cheaper than after incidents"
+    },
+    "disability_grants": {
+      "competition_level": "least_competitive",
+      "note": "Disability-specific funding is the least competitive grant category. If applicable, prioritize."
+    },
+    "climate_impact_framing": {
+      "esg_pe_total_usd": 62600000000,
+      "climate_premium": true,
+      "note": "ESG $62.6B PE. Climate/impact framing opens additional funding channels."
+    },
+    "eu_ai_act_as_moat": {
+      "compliance_as_differentiator": true,
+      "note": "EU AI Act compliance requirements create competitive moat for compliant companies"
+    },
+    "open_source_strategy": {
+      "github_visibility_advantage": true,
+      "contributor_hiring_pipeline": true,
+      "note": "Open source as strategic hiring pipeline and brand building"
+    },
+    "academic_partnerships": {
+      "research_university_grants": true,
+      "sttr_requires_academic_partner": true,
+      "note": "STTR specifically requires academic partnership. Universities unlock additional funding."
+    },
+    "timing_considerations": {
+      "grant_cycle_alignment": "apply_6_months_before",
+      "market_timing_vs_execution": "execution_dominates",
+      "note": "Grant cycles require 6-9 months lead time. Market timing matters less than execution."
+    },
+    "documentation_as_leverage": {
+      "public_artifacts_signal_weight": 0.45,
+      "writing_as_deal_flow": true,
+      "note": "Public documentation, essays, and technical writing generate inbound deal flow"
+    },
+    "first_time_founder_gap": {
+      "knowledge_gaps": ["financial_modeling", "term_sheet_negotiation", "board_management", "hr_compliance"],
+      "accelerator_value": "knowledge_transfer_more_than_capital",
+      "note": "First-time founders underestimate legal, financial, and HR complexity"
+    },
+    "source": "what-am-i-forgetting-research-2026-03.md (29 sources)"
   }
 }

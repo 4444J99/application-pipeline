@@ -26,9 +26,9 @@ from pipeline_lib import (
     MATERIALS_DIR,
     PIPELINE_DIR_ACTIVE,
     REPO_ROOT,
-    VARIANTS_DIR,
     load_entries,
     load_entry_by_id,
+    resolve_cover_letter,
     update_last_touched,
 )
 
@@ -147,23 +147,8 @@ def extract_sections(html: str) -> dict[str, str]:
     return sections
 
 
-def resolve_cover_letter(entry: dict) -> str | None:
-    """Load cover letter content for an entry."""
-    submission = entry.get("submission", {})
-    if not isinstance(submission, dict):
-        return None
-    variant_ids = submission.get("variant_ids", {})
-    if not isinstance(variant_ids, dict):
-        return None
-    cl_ref = variant_ids.get("cover_letter")
-    if not cl_ref:
-        return None
-    variant_path = VARIANTS_DIR / cl_ref
-    if not variant_path.suffix:
-        variant_path = variant_path.with_suffix(".md")
-    if variant_path.exists():
-        return variant_path.read_text().strip()
-    return None
+
+# resolve_cover_letter is imported from pipeline_lib
 
 
 def build_tailoring_prompt(entry: dict, sections: dict[str, str], cover_letter: str) -> str:
@@ -249,7 +234,7 @@ def generate_prompt_file(entry: dict) -> Path:
 
     template = load_base_template(identity)
     sections = extract_sections(template)
-    cover_letter = resolve_cover_letter(entry)
+    cover_letter = resolve_cover_letter(entry, strip_md=False)
 
     prompt = build_tailoring_prompt(entry, sections, cover_letter)
 

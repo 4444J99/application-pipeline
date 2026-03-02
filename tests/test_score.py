@@ -161,9 +161,15 @@ def test_deadline_three_days():
     assert score_deadline_feasibility(entry) == 3
 
 
-def test_deadline_one_week():
-    """Deadline in 5 days should score 5."""
+def test_deadline_five_days():
+    """Deadline in 5 days should score 4 (tight but doable)."""
     entry = _make_entry(deadline_date=_date_offset(5))
+    assert score_deadline_feasibility(entry) == 4
+
+
+def test_deadline_one_week():
+    """Deadline in 7 days should score 5."""
+    entry = _make_entry(deadline_date=_date_offset(7))
     assert score_deadline_feasibility(entry) == 5
 
 

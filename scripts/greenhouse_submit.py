@@ -25,15 +25,14 @@ from urllib.parse import urlparse
 
 import yaml
 from pipeline_lib import (
-    MATERIALS_DIR,
     PIPELINE_DIR_ACTIVE,
-    VARIANTS_DIR,
     load_entries,
     load_entry_by_id,
-    strip_markdown,
+    load_submit_config,
+    resolve_cover_letter,
+    resolve_resume,
 )
 
-CONFIG_PATH = Path(__file__).resolve().parent / ".submit-config.yaml"
 ANSWERS_DIR = Path(__file__).resolve().parent / ".greenhouse-answers"
 
 # URL pattern: job-boards.greenhouse.io or boards.greenhouse.io
@@ -59,20 +58,7 @@ AUTO_FILL_PATTERNS = [
 
 def load_config() -> dict:
     """Load personal info from .submit-config.yaml."""
-    if not CONFIG_PATH.exists():
-        print(f"Error: Config file not found: {CONFIG_PATH}", file=sys.stderr)
-        print("Create it with first_name, last_name, email, phone fields.", file=sys.stderr)
-        sys.exit(1)
-    config = yaml.safe_load(CONFIG_PATH.read_text())
-    if not isinstance(config, dict):
-        print("Error: Config file is not a valid YAML dict.", file=sys.stderr)
-        sys.exit(1)
-    for field in ("first_name", "last_name", "email"):
-        val = config.get(field, "")
-        if not val or "FILL_IN" in str(val):
-            print(f"Error: Fill in '{field}' in {CONFIG_PATH}", file=sys.stderr)
-            sys.exit(1)
-    return config
+    return load_submit_config(strict=True)
 
 
 def parse_greenhouse_url(url: str, board_url: str = "") -> tuple[str, str] | None:
@@ -105,50 +91,8 @@ def parse_greenhouse_url(url: str, board_url: str = "") -> tuple[str, str] | Non
     return None
 
 
-def resolve_cover_letter(entry: dict) -> str | None:
-    """Resolve cover letter content from variant file, stripping markdown headers."""
-    submission = entry.get("submission", {})
-    if not isinstance(submission, dict):
-        return None
-    variant_ids = submission.get("variant_ids", {})
-    if not isinstance(variant_ids, dict):
-        return None
-    cl_ref = variant_ids.get("cover_letter")
-    if not cl_ref:
-        return None
-    variant_path = VARIANTS_DIR / cl_ref
-    if not variant_path.suffix:
-        variant_path = variant_path.with_suffix(".md")
-    if not variant_path.exists():
-        return None
-    raw = variant_path.read_text().strip()
-    # Strip the markdown header block (title, role, apply, salary, ---)
-    lines = raw.split("\n")
-    body_start = 0
-    found_separator = False
-    for i, line in enumerate(lines):
-        if line.strip() == "---":
-            if found_separator:
-                body_start = i + 1
-                break
-            found_separator = True
-    body = "\n".join(lines[body_start:]).strip()
-    return strip_markdown(body)
 
-
-def resolve_resume(entry: dict) -> Path | None:
-    """Find the resume PDF from materials_attached."""
-    submission = entry.get("submission", {})
-    if not isinstance(submission, dict):
-        return None
-    materials = submission.get("materials_attached", [])
-    if not isinstance(materials, list):
-        return None
-    for m in materials:
-        mat_path = MATERIALS_DIR / m
-        if mat_path.exists() and mat_path.suffix.lower() == ".pdf":
-            return mat_path
-    return None
+# resolve_cover_letter and resolve_resume are imported from pipeline_lib
 
 
 def fetch_job_data(board_token: str, job_id: str) -> dict | None:
@@ -514,37 +458,6 @@ def check_answers_for_entry(entry: dict, config: dict) -> bool:
 # Core submission functions
 # ---------------------------------------------------------------------------
 
-
-def build_form_data(
-    config: dict,
-    entry: dict,
-    cover_letter_text: str,
-    resume_path: Path,
-    questions: list[dict],
-) -> dict:
-    """Build the form fields dict for the Greenhouse submission.
-
-    Returns dict with 'fields' (key-value pairs) and 'files' (key-path pairs).
-    """
-    fields = {
-        "first_name": config["first_name"],
-        "last_name": config["last_name"],
-        "email": config["email"],
-    }
-    if config.get("phone"):
-        fields["phone"] = config["phone"]
-
-    # Portfolio URL
-    submission = entry.get("submission", {})
-    if isinstance(submission, dict):
-        portfolio_url = submission.get("portfolio_url", "")
-        if portfolio_url:
-            # Try to find a website/portfolio question, otherwise use mapped field
-            fields["website_url"] = portfolio_url
-
-    files = {"resume": str(resume_path)}
-
-    return {"fields": fields, "files": files, "cover_letter_text": cover_letter_text}
 
 
 def preview_submission(

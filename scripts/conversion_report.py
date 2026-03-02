@@ -131,9 +131,9 @@ def response_time_analysis(entries: list[dict]):
         return
 
     # Overall stats
+    from statistics import median as _median
     avg = sum(all_times) / len(all_times)
-    sorted_times = sorted(all_times)
-    median = sorted_times[len(sorted_times) // 2]
+    median = _median(all_times)
     print(f"\n  Overall ({len(all_times)} responses):")
     print(f"    Mean: {avg:.1f}d | Median: {median}d | Min: {min(all_times)}d | Max: {max(all_times)}d")
 

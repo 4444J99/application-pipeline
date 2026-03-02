@@ -19,6 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
     PIPELINE_DIR_SUBMITTED,
+    get_tier,
     load_entries,
     load_entry_by_id,
     parse_date,
@@ -31,22 +32,8 @@ PROTOCOL_STEPS = [
     {"day": 14, "action": "Final follow-up or status check", "type": "check_in"},
 ]
 
-# Tier priority for ordering
-TIER_PRIORITY = {
-    "job-tier-1": 1,
-    "job-tier-2": 2,
-    "job-tier-3": 3,
-    "job-tier-4": 4,
-}
 
-
-def get_tier(entry: dict) -> int:
-    """Get tier priority from tags."""
-    tags = entry.get("tags", []) or []
-    for tag in tags:
-        if tag in TIER_PRIORITY:
-            return TIER_PRIORITY[tag]
-    return 5
+# TIER_PRIORITY and get_tier imported from pipeline_lib
 
 
 def has_contacts(entry: dict) -> bool:
