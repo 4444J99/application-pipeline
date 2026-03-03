@@ -14,7 +14,7 @@ Usage:
 import argparse
 import json
 import sys
-from datetime import date
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import yaml
@@ -74,6 +74,9 @@ STAGNATION_DAYS = _get_stale_threshold("entry_stale", 7)
 URGENCY_DAYS = 14
 AT_RISK_DAYS = 3
 REPLENISH_THRESHOLD = 5  # warn when fewer than this many actionable entries
+EXECUTION_STALE_STAGED_DAYS = 3  # 72h
+TARGET_STAGED_SUBMIT_CONVERSION = 0.70
+AGENT_ACTIONS_LOG = SIGNALS_DIR / "agent-actions.yaml"
 
 
 # ---------------------------------------------------------------------------
@@ -210,6 +213,132 @@ def section_stale(entries: list[dict]) -> dict:
         "expired": len(expired),
         "at_risk": len(at_risk),
         "stagnant": len(stagnant),
+    }
+
+
+# ---------------------------------------------------------------------------
+# Section 2b: Execution Gap Snapshot
+# ---------------------------------------------------------------------------
+
+def _entry_has_portal_fields(entry: dict) -> bool:
+    """Return True when portal_fields.fields exists and is non-empty."""
+    portal_fields = entry.get("portal_fields")
+    return (
+        isinstance(portal_fields, dict)
+        and isinstance(portal_fields.get("fields"), list)
+        and len(portal_fields["fields"]) > 0
+    )
+
+
+def _compute_staged_submit_conversion(entries: list[dict]) -> tuple[int, int, float]:
+    """Compute operational staged->submitted conversion from current pipeline state."""
+    in_funnel = {"staged", "submitted", "acknowledged", "interview", "outcome"}
+    submitted_or_beyond = {"submitted", "acknowledged", "interview", "outcome"}
+
+    denominator = sum(1 for e in entries if e.get("status") in in_funnel)
+    numerator = sum(1 for e in entries if e.get("status") in submitted_or_beyond)
+
+    rate = (numerator / denominator) if denominator else 0.0
+    return numerator, denominator, rate
+
+
+def _load_recent_agent_runs(days: int = 7) -> list[dict]:
+    """Load recent agent run records from signals/agent-actions.yaml."""
+    if not AGENT_ACTIONS_LOG.exists():
+        return []
+
+    try:
+        with open(AGENT_ACTIONS_LOG) as f:
+            data = yaml.safe_load(f) or {}
+    except Exception:
+        return []
+
+    runs = data.get("runs", [])
+    if not isinstance(runs, list):
+        return []
+
+    cutoff = datetime.now() - timedelta(days=days)
+    recent: list[dict] = []
+    for run in runs:
+        if not isinstance(run, dict):
+            continue
+        ts = run.get("timestamp")
+        if not ts:
+            continue
+        try:
+            run_dt = datetime.fromisoformat(str(ts))
+        except ValueError:
+            continue
+        if run_dt >= cutoff:
+            recent.append(run)
+
+    recent.sort(key=lambda x: str(x.get("timestamp")), reverse=True)
+    return recent
+
+
+def section_execution_gap(entries: list[dict]) -> dict:
+    """Highlight operational bottlenecks that block staged->submitted flow."""
+    today = date.today()
+    staged_entries = [e for e in entries if e.get("status") == "staged"]
+
+    stale_staged = []
+    missing_portal = []
+
+    for e in staged_entries:
+        lt = parse_date(e.get("last_touched"))
+        stale_days = (today - lt).days if lt else 999
+        if stale_days > EXECUTION_STALE_STAGED_DAYS:
+            stale_staged.append((stale_days, e))
+        if not _entry_has_portal_fields(e):
+            missing_portal.append(e)
+
+    stale_staged.sort(key=lambda x: x[0], reverse=True)
+    numerator, denominator, conversion_rate = _compute_staged_submit_conversion(entries)
+
+    print("2b. EXECUTION GAP SNAPSHOT")
+    print(f"   Staged entries: {len(staged_entries)}")
+    print(
+        f"   Stale staged >{EXECUTION_STALE_STAGED_DAYS * 24}h: {len(stale_staged)}"
+    )
+    print(f"   Staged missing portal_fields: {len(missing_portal)}")
+    print(
+        f"   Staged->Submitted: {conversion_rate * 100:.1f}% "
+        f"({numerator}/{denominator}, target {TARGET_STAGED_SUBMIT_CONVERSION * 100:.0f}%)"
+    )
+
+    if conversion_rate < TARGET_STAGED_SUBMIT_CONVERSION:
+        print("   !! Bottleneck: submission velocity below target")
+
+    if stale_staged:
+        print("   Top stale staged entries:")
+        for stale_days, entry in stale_staged[:10]:
+            name = entry.get("name", entry.get("id", "?"))
+            score = get_score(entry)
+            print(f"     - {name} — {stale_days}d stale — fit {score:.1f}")
+
+    if missing_portal:
+        print("   Staged entries missing portal_fields:")
+        for entry in missing_portal[:10]:
+            name = entry.get("name", entry.get("id", "?"))
+            print(f"     - {name}")
+
+    recent_runs = _load_recent_agent_runs(days=7)
+    execute_runs = [r for r in recent_runs if r.get("mode") == "execute"]
+    executed_actions = sum(int(r.get("executed", 0)) for r in execute_runs)
+    print(
+        f"   Autonomous runs (7d): {len(execute_runs)} execute runs, "
+        f"{executed_actions} actions executed"
+    )
+    if not execute_runs:
+        print("   Action: install/load launchd agents or run `python scripts/agent.py --execute --yes`")
+
+    print()
+    return {
+        "staged": len(staged_entries),
+        "stale_staged": len(stale_staged),
+        "missing_portal": len(missing_portal),
+        "conversion_rate": round(conversion_rate, 3),
+        "autonomous_runs": len(execute_runs),
     }
 
 
@@ -571,13 +700,12 @@ def section_signal_freshness():
         SIGNALS_DIR / "hypotheses.yaml": ("hypotheses", 3),
         SIGNALS_DIR / "standup-log.yaml": ("standup-log", 2),
     }
-    # Also check backup freshness
+    # Check backup freshness across both repo root and backups/.
+    backup_candidates = list(REPO_ROOT.glob("pipeline-backup-*.tar.gz"))
     backup_dir = REPO_ROOT / "backups"
-    latest_backup = None
     if backup_dir.exists():
-        backups = sorted(backup_dir.glob("pipeline-backup-*.tar.gz"))
-        if backups:
-            latest_backup = backups[-1]
+        backup_candidates.extend(backup_dir.glob("pipeline-backup-*.tar.gz"))
+    latest_backup = max(backup_candidates, key=lambda p: p.stat().st_mtime) if backup_candidates else None
 
     stale_count = 0
     for filepath, (label, max_days) in signals.items():
@@ -782,6 +910,7 @@ SECTIONS = {
     "health": "Pipeline health counts and velocity",
     "wins": "Recent milestones and achievements",
     "stale": "Staleness alerts (expired, at-risk, stagnant)",
+    "execution": "Execution bottlenecks (stale staged, portal wiring, conversion)",
     "plan": "Today's work plan",
     "outreach": "Outreach suggestions per target",
     "practices": "Context-sensitive best practice reminders",
@@ -1299,6 +1428,8 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
         section_wins(entries)
     if section is None or section == "stale":
         stale_stats = section_stale(entries)
+    if section is None or section == "execution":
+        section_execution_gap(entries)
     if section is None or section == "plan":
         plan_stats = section_plan(entries, hours)
     if section is None or section == "outreach":

@@ -3,28 +3,26 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.4jp.pipeline.weekly-backup</string>
+    <string>com.4jp.pipeline.daily-monitor</string>
     <key>ProgramArguments</key>
     <array>
         <string>/opt/anaconda3/bin/python</string>
-        <string>/Users/4jp/Workspace/4444J99/application-pipeline/scripts/backup_pipeline.py</string>
-        <string>create</string>
+        <string>/Users/4jp/Workspace/4444J99/application-pipeline/scripts/monitor_pipeline.py</string>
+        <string>--strict</string>
     </array>
     <key>StartCalendarInterval</key>
     <dict>
-        <key>Weekday</key>
-        <integer>0</integer>
         <key>Hour</key>
-        <integer>2</integer>
+        <integer>6</integer>
         <key>Minute</key>
-        <integer>0</integer>
+        <integer>30</integer>
     </dict>
     <key>WorkingDirectory</key>
     <string>/Users/4jp/Workspace/4444J99/application-pipeline</string>
     <key>StandardOutPath</key>
-    <string>/Users/4jp/System/Logs/pipeline-weekly-backup.log</string>
+    <string>/Users/4jp/System/Logs/pipeline-monitor.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/4jp/System/Logs/pipeline-weekly-backup.log</string>
+    <string>/Users/4jp/System/Logs/pipeline-monitor.log</string>
     <key>RunAtLoad</key>
     <false/>
 </dict>

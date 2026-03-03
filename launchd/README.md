@@ -5,16 +5,11 @@ macOS LaunchAgent plist files for pipeline automation.
 ## Install
 
 ```bash
-# Copy plists to LaunchAgents directory
-cp launchd/com.4jp.pipeline.*.plist ~/Library/LaunchAgents/
+# Install, load, and run immediately once
+python scripts/launchd_manager.py --install --kickstart
 
-# Ensure log directory exists
-mkdir -p ~/System/Logs
-
-# Load agents
-launchctl load ~/Library/LaunchAgents/com.4jp.pipeline.daily-deferred.plist
-launchctl load ~/Library/LaunchAgents/com.4jp.pipeline.weekly-backup.plist
-launchctl load ~/Library/LaunchAgents/com.4jp.pipeline.agent-biweekly.plist
+# Verify status
+python scripts/launchd_manager.py --status
 ```
 
 ## Schedule
@@ -22,16 +17,14 @@ launchctl load ~/Library/LaunchAgents/com.4jp.pipeline.agent-biweekly.plist
 | Agent | Schedule | What It Does |
 |-------|----------|-------------|
 | `daily-deferred` | Daily 6:00 AM | Check deferred entries for re-activation |
+| `daily-monitor` | Daily 6:30 AM | Alert on stale backups and stale signal logs |
 | `weekly-backup` | Sunday 2:00 AM | Create pipeline backup tar.gz |
 | `agent-biweekly` | Mon/Thu 7:00 AM | Autonomous agent: score, advance, flag |
 
 ## Uninstall
 
 ```bash
-launchctl unload ~/Library/LaunchAgents/com.4jp.pipeline.daily-deferred.plist
-launchctl unload ~/Library/LaunchAgents/com.4jp.pipeline.weekly-backup.plist
-launchctl unload ~/Library/LaunchAgents/com.4jp.pipeline.agent-biweekly.plist
-rm ~/Library/LaunchAgents/com.4jp.pipeline.*.plist
+python scripts/launchd_manager.py --uninstall
 ```
 
 ## Logs

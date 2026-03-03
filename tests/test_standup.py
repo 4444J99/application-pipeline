@@ -6,12 +6,15 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
+import standup
 from standup import (
     AT_RISK_DAYS,
+    EXECUTION_STALE_STAGED_DAYS,
     REPLENISH_THRESHOLD,
     SECTIONS,
     STAGNATION_DAYS,
     section_deferred,
+    section_execution_gap,
     section_followup,
     section_health,
     section_jobs,
@@ -172,6 +175,48 @@ class TestSectionStale:
         ]
         result = section_stale(entries)
         assert result["expired"] == 0
+
+
+# --- section_execution_gap ---
+
+class TestSectionExecutionGap:
+    def test_execution_in_sections(self):
+        """'execution' is in SECTIONS dict."""
+        assert "execution" in SECTIONS
+
+    def test_execution_gap_reports_stale_and_missing_portal(self, capsys, monkeypatch):
+        """Stale staged entries and portal gaps are surfaced."""
+        monkeypatch.setattr(standup, "_load_recent_agent_runs", lambda days=7: [])
+        old = (date.today() - timedelta(days=EXECUTION_STALE_STAGED_DAYS + 2)).isoformat()
+        entries = [
+            _make_entry(
+                entry_id="staged-stale",
+                name="Stale Staged",
+                status="staged",
+                last_touched=old,
+            ),
+            _make_entry(
+                entry_id="staged-fresh",
+                name="Fresh Staged",
+                status="staged",
+                last_touched=date.today().isoformat(),
+            ),
+            _make_entry(
+                entry_id="submitted-1",
+                name="Submitted One",
+                status="submitted",
+                submitted_date=date.today().isoformat(),
+            ),
+        ]
+        # Fresh staged has portal fields, stale staged does not.
+        entries[1]["portal_fields"] = {"fields": [{"name": "bio"}]}
+
+        section_execution_gap(entries)
+        captured = capsys.readouterr()
+        assert "EXECUTION GAP SNAPSHOT" in captured.out
+        assert "Stale staged >72h: 1" in captured.out
+        assert "Staged missing portal_fields: 1" in captured.out
+        assert "Stale Staged" in captured.out
 
 
 # --- section_plan ---

@@ -73,6 +73,23 @@ def check_entry(entry: dict) -> tuple[list[str], list[str]]:
     elif not blocks_used and not legacy:
         warnings.append("no submission fields identified (no format, blocks, or legacy script)")
 
+    # 3b. Staged entries must have portal_fields wired.
+    portal_fields = entry.get("portal_fields")
+    has_portal_fields = (
+        isinstance(portal_fields, dict)
+        and isinstance(portal_fields.get("fields"), list)
+        and len(portal_fields["fields"]) > 0
+    )
+    status = entry.get("status", "")
+    track = entry.get("track", "")
+    if status == "staged" and not has_portal_fields:
+        if track == "job":
+            warnings.append("portal_fields not wired on staged job (optional for ATS flow)")
+        else:
+            errors.append("missing portal_fields on staged entry (run enrich.py --portal --target <id>)")
+    elif status in ("research", "qualified", "drafting") and has_fields and not has_portal_fields:
+        warnings.append("portal_fields not wired yet (run enrich.py --portal before staging)")
+
     # 4. Materials check
     if isinstance(submission, dict):
         materials = submission.get("materials_attached", [])
@@ -149,8 +166,10 @@ def readiness_score(entry: dict) -> int:
       +1  Resume: materials_attached has a tailored (non-base) resume
       +1  Blocks: blocks_used is populated (not null/empty)
       +1  Cover letter: variant_ids.cover_letter exists
-      +1  Portal fields: portal_fields present, OR profile found
-      +1  Deadline safe: deadline >3 days away, or rolling/tba/none
+      +1  Portal readiness:
+           - non-job: portal_fields present (required when staged)
+           - job: application_url present (portal_fields optional)
+      +1  Deadline safe: deadline >7 days away, or rolling/tba/none
     """
     score = 0
     entry_id = entry.get("id", "?")
@@ -178,12 +197,19 @@ def readiness_score(entry: dict) -> int:
     if isinstance(variant_ids, dict) and variant_ids.get("cover_letter"):
         score += 1
 
-    # Portal fields or profile
+    # Portal fields are required on staged non-job entries. For job entries,
+    # portal_fields are optional and application_url indicates portal readiness.
+    status = entry.get("status", "")
+    track = entry.get("track", "")
     portal_fields = entry.get("portal_fields")
     has_portal = portal_fields and isinstance(portal_fields, dict) and portal_fields.get("fields")
     if has_portal:
         score += 1
-    else:
+    elif status == "staged" and track == "job":
+        target = entry.get("target", {})
+        if isinstance(target, dict) and target.get("application_url"):
+            score += 1
+    elif status != "staged":
         profile = load_profile(entry_id)
         if profile:
             score += 1

@@ -26,6 +26,7 @@ from pipeline_api import (
     score_entry,
 )
 from pipeline_lib import (
+    SIGNALS_DIR,
     can_advance,
     get_deadline,
     is_actionable,
@@ -71,6 +72,7 @@ class PipelineAgent:
         self.actions_planned = []
         self.actions_executed = []
         self.errors = []
+        self.started_at = datetime.now()
 
     def plan_actions(self, entries: list[dict]) -> list[dict]:
         """Analyze pipeline state; return planned actions.
@@ -213,6 +215,40 @@ class PipelineAgent:
         lines.append("\n" + "=" * 70)
         return "\n".join(lines)
 
+    def write_run_log(self) -> None:
+        """Persist run summary for standup visibility and automation audits."""
+        log_path = SIGNALS_DIR / "agent-actions.yaml"
+        SIGNALS_DIR.mkdir(parents=True, exist_ok=True)
+
+        if log_path.exists():
+            try:
+                with open(log_path) as f:
+                    data = yaml.safe_load(f) or {}
+            except Exception:
+                data = {}
+        else:
+            data = {}
+
+        runs = data.get("runs", [])
+        if not isinstance(runs, list):
+            runs = []
+
+        run_record = {
+            "timestamp": datetime.now().isoformat(timespec="seconds"),
+            "mode": "execute" if not self.dry_run else "plan",
+            "planned": len(self.actions_planned),
+            "executed": len(self.actions_executed),
+            "errors": len(self.errors),
+            "urgent": sum(1 for a in self.actions_planned if a.get("severity") == "urgent"),
+            "action_types": sorted({a.get("action", "unknown") for a in self.actions_planned}),
+            "duration_seconds": int((datetime.now() - self.started_at).total_seconds()),
+        }
+        runs.append(run_record)
+        data["runs"] = runs[-100:]
+
+        with open(log_path, "w") as f:
+            yaml.dump(data, f, default_flow_style=False, sort_keys=False)
+
 
 def main():
     parser = argparse.ArgumentParser(description="Autonomous pipeline agent")
@@ -266,6 +302,8 @@ def main():
         
         agent.execute_actions(agent.actions_planned)
         print("\n" + agent.report())
+
+    agent.write_run_log()
 
 
 if __name__ == "__main__":

@@ -265,6 +265,7 @@ python scripts/agent.py --plan                  # Show planned actions (dry-run)
 python scripts/agent.py --execute --yes         # Execute autonomously
 python scripts/agent.py --target <id> --yes     # Single entry
 # Decision rules loaded from strategy/agent-rules.yaml (editable thresholds)
+# Rule customization guide: docs/agent-rules.md
 
 # Entry freshness monitoring: age categorization and URL liveness
 python scripts/freshness_monitor.py                          # Freshness report (no HTTP)
@@ -277,10 +278,19 @@ python scripts/check_deferred.py              # List deferred entries with statu
 python scripts/check_deferred.py --alert      # Alert mode for notifications
 
 # Pipeline backup and restore
-python scripts/backup_pipeline.py backup      # Create dated tar.gz
+python scripts/backup_pipeline.py create      # Create dated tar.gz
 python scripts/backup_pipeline.py list        # Show all backups
-python scripts/backup_pipeline.py restore     # Restore from latest backup
+python scripts/backup_pipeline.py restore <backup-file>  # Restore from specific backup
 python scripts/backup_pipeline.py cleanup     # Remove backups > 90 days old
+
+# Monitoring (backup + signal freshness)
+python scripts/monitor_pipeline.py            # Report only (always exit 0)
+python scripts/monitor_pipeline.py --strict   # Exit non-zero on warnings/critical
+
+# Launchd automation management
+python scripts/launchd_manager.py --status
+python scripts/launchd_manager.py --install --kickstart
+python scripts/launchd_manager.py --uninstall
 
 # Resume batch version management
 python scripts/upgrade_resumes.py                   # Report stale batch references
@@ -365,6 +375,10 @@ Single-word command protocol via `python scripts/run.py <command>`. Any LLM can 
 | `keywords` | Extract keywords from job postings |
 | `buildblocks` | Generate blocks from project data |
 | `agent` | Preview autonomous agent planned actions |
+| `monitor` | Monitor backup + conversion-log freshness |
+| `automation` | Launchd automation status |
+| `automation-on` | Install and activate launchd agents |
+| `automation-off` | Unload and remove launchd agents |
 | `deferred` | Deferred entries: overdue and upcoming re-activations |
 | `backup` | List pipeline backups |
 | `freshness` | Entry freshness report (posting age tiers) |
@@ -381,8 +395,8 @@ Single-word command protocol via `python scripts/run.py <command>`. Any LLM can 
 - Submit: `campaign` → `check <id>` → `submit <id>` → `record <id>`
 - Research: `hygiene` → `scoreall` → `qualify` → `enrichall`
 - Analyze: `funnel` → `conversion` → `velocity` → `dashboard` → `blockroi`
-- Agent: `agent` → `deferred` → `signals` → `hypotheses-v`
-- Health: `freshness` → `resumes` → `backup` → `portfolio`
+- Agent: `automation` → `agent` → `deferred` → `signals` → `hypotheses-v`
+- Health: `monitor` → `freshness` → `resumes` → `backup` → `portfolio`
 
 ## Configuration Files
 
@@ -392,6 +406,7 @@ Single-word command protocol via `python scripts/run.py <command>`. Any LLM can 
 | `strategy/agent-rules.yaml` | Agent decision rules and thresholds (loaded by `agent.py`) |
 | `strategy/market-intelligence-2026.json` | Market data, portal friction, benchmarks (loaded by many scripts) |
 | `signals/signal-actions.yaml` | Signal-to-action audit trail (written by `advance.py`, `log_signal_action.py`) |
+| `signals/agent-actions.yaml` | Agent plan/execute run history (written by `agent.py`) |
 
 ## Automation (LaunchAgent)
 
@@ -400,10 +415,12 @@ LaunchAgent plist files in `launchd/` for macOS scheduled tasks:
 | Agent | Schedule | Script |
 |-------|----------|--------|
 | `daily-deferred` | Daily 6:00 AM | `check_deferred.py --alert` |
-| `weekly-backup` | Sunday 2:00 AM | `backup_pipeline.py backup` |
+| `daily-monitor` | Daily 6:30 AM | `monitor_pipeline.py --strict` |
+| `weekly-backup` | Sunday 2:00 AM | `backup_pipeline.py create` |
 | `agent-biweekly` | Mon/Thu 7:00 AM | `agent.py --execute --yes` |
 
-Install: `cp launchd/com.4jp.pipeline.*.plist ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/com.4jp.pipeline.*.plist`
+Install: `python scripts/launchd_manager.py --install --kickstart`
+Status: `python scripts/launchd_manager.py --status`
 
 ## CLI vs Raw Scripts
 

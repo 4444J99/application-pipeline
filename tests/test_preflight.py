@@ -88,6 +88,23 @@ def test_check_entry_material_not_found():
     assert any("material not found" in i for i in errors)
 
 
+def test_check_entry_staged_requires_portal_fields():
+    """Staged entries without portal_fields should fail preflight."""
+    entry = _make_entry(id="definitely-nonexistent-xyz", status="staged", track="grant")
+    entry.pop("portal_fields", None)
+    errors, warnings = check_entry(entry)
+    assert any("missing portal_fields on staged entry" in i for i in errors)
+
+
+def test_check_entry_staged_job_missing_portal_fields_is_warning():
+    """Staged jobs can proceed without portal_fields; this is advisory only."""
+    entry = _make_entry(id="definitely-nonexistent-xyz", status="staged", track="job")
+    entry.pop("portal_fields", None)
+    errors, warnings = check_entry(entry)
+    assert not any("missing portal_fields on staged entry" in i for i in errors)
+    assert any("portal_fields not wired on staged job" in i for i in warnings)
+
+
 def test_check_entry_real_artadia():
     """Integration test with real artadia-nyc entry (if available)."""
     from pipeline_lib import load_entry_by_id
@@ -191,6 +208,28 @@ def test_readiness_score_cover_letter_point():
     entry_cl["submission"]["variant_ids"] = {"cover_letter": "cover-letters/test"}
 
     assert readiness_score(entry_cl) > readiness_score(entry_no_cl)
+
+
+def test_readiness_score_staged_requires_portal_fields():
+    """Staged entries should not get portal readiness credit without portal_fields."""
+    no_portal = _make_entry(id="definitely-nonexistent-xyz", status="staged")
+    no_portal.pop("portal_fields", None)
+
+    with_portal = _make_entry(id="definitely-nonexistent-xyz", status="staged")
+    with_portal["portal_fields"] = {"fields": [{"name": "bio"}]}
+
+    assert readiness_score(with_portal) > readiness_score(no_portal)
+
+
+def test_readiness_score_staged_job_portal_fields_optional():
+    """Staged jobs keep portal readiness point from application_url without portal_fields."""
+    job_no_portal = _make_entry(id="definitely-nonexistent-xyz", status="staged", track="job")
+    job_no_portal.pop("portal_fields", None)
+
+    job_with_portal = _make_entry(id="definitely-nonexistent-xyz", status="staged", track="job")
+    job_with_portal["portal_fields"] = {"fields": [{"name": "bio"}]}
+
+    assert readiness_score(job_no_portal) == readiness_score(job_with_portal)
 
 
 def test_readiness_score_deadline_safe_point():

@@ -62,6 +62,10 @@ COMMANDS = {
     "jobfreshness":   ("standup.py", ["--section", "jobfreshness"], "Job freshness dashboard: hot/warm/stale postings"),
     "expirejobs":     ("freshness_monitor.py", ["--auto-expire-jobs"], "Auto-expire stale job postings (dry-run)"),
     "agent":       ("agent.py", ["--plan"],              "Agent: preview planned autonomous actions"),
+    "monitor":     ("monitor_pipeline.py", [],            "Monitor backup + conversion-log freshness"),
+    "automation":  ("launchd_manager.py", ["--status"],  "Launchd automation status"),
+    "automation-on": ("launchd_manager.py", ["--install", "--kickstart"], "Install and activate launchd agents"),
+    "automation-off": ("launchd_manager.py", ["--uninstall"], "Unload and remove launchd agents"),
     "deferred":    ("check_deferred.py", [],              "Deferred entries: overdue and upcoming re-activations"),
     "backup":      ("backup_pipeline.py", ["list"],       "List pipeline backups"),
     "blockroi":    ("block_roi_analysis.py", [],          "Block acceptance rate ROI analysis"),
@@ -121,7 +125,7 @@ def show_help():
     print("  Analyze:  funnel → conversion → velocity → dashboard → blockroi")
     print("  Strategy: startup → funding → differentiate → tracker")
     print("  Agent:    agent → deferred → signals → hypotheses-v")
-    print("  Health:   freshness → resumes → backup → portfolio")
+    print("  Health:   monitor → freshness → resumes → backup → portfolio")
     print()
     print("Usage: python scripts/run.py <command> [target-id]")
 
