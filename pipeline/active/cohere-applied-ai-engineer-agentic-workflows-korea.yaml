@@ -2,6 +2,7 @@ id: cohere-applied-ai-engineer-agentic-workflows-korea
 name: Cohere Applied AI Engineer – Agentic Workflows (Korea)
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: Cohere
@@ -37,7 +38,8 @@ submission:
     work_samples: evidence/work-samples
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
-  variant_ids: {}
+  variant_ids:
+    cover_letter: cover-letters/cohere-applied-ai-agentic-workflows
   materials_attached:
   - resumes/batch-03/cohere-applied-ai-engineer-agentic-workflows-korea/cohere-applied-ai-engineer-agentic-workflows-korea-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/

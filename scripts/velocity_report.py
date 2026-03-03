@@ -11,11 +11,10 @@ Usage:
 """
 
 import argparse
-import json
 import sys
+from collections import defaultdict
 from datetime import datetime, timedelta
 from pathlib import Path
-from collections import defaultdict
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 

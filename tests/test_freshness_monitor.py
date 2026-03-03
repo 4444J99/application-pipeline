@@ -119,9 +119,9 @@ def test_compute_freshness_report_fresh():
 
 
 def test_compute_freshness_report_aging():
-    """Entry 20 days old is categorized as aging."""
+    """Non-job entry 20 days old is categorized as aging (day-based thresholds)."""
     twenty_days_ago = (date.today() - timedelta(days=20)).isoformat()
-    entries = [_make_entry(entry_id="aging-one", posting_date=twenty_days_ago)]
+    entries = [_make_entry(entry_id="aging-one", posting_date=twenty_days_ago, track="grant")]
     report = compute_freshness_report(entries)
     assert len(report["aging"]) == 1
     assert report["aging"][0]["entry_id"] == "aging-one"
@@ -129,9 +129,9 @@ def test_compute_freshness_report_aging():
 
 
 def test_compute_freshness_report_stale():
-    """Entry 45 days old is categorized as stale."""
+    """Non-job entry 45 days old is categorized as stale (day-based thresholds)."""
     forty_five_ago = (date.today() - timedelta(days=45)).isoformat()
-    entries = [_make_entry(entry_id="stale-one", posting_date=forty_five_ago)]
+    entries = [_make_entry(entry_id="stale-one", posting_date=forty_five_ago, track="grant")]
     report = compute_freshness_report(entries)
     assert len(report["stale"]) == 1
     assert report["stale"][0]["entry_id"] == "stale-one"
@@ -200,21 +200,63 @@ def test_compute_freshness_report_has_required_fields():
 
 
 def test_compute_freshness_report_boundary_fresh_aging():
-    """Entry exactly 14 days old falls into aging (>= 14 is aging)."""
+    """Non-job entry exactly 14 days old falls into aging (>= 14 is aging)."""
     fourteen_ago = (date.today() - timedelta(days=14)).isoformat()
-    entries = [_make_entry(entry_id="boundary", posting_date=fourteen_ago)]
+    entries = [_make_entry(entry_id="boundary", posting_date=fourteen_ago, track="grant")]
     report = compute_freshness_report(entries)
     assert len(report["aging"]) == 1
     assert report["aging"][0]["entry_id"] == "boundary"
 
 
 def test_compute_freshness_report_boundary_aging_stale():
-    """Entry exactly 30 days old is still aging (<= 30)."""
+    """Non-job entry exactly 30 days old is still aging (<= 30)."""
     thirty_ago = (date.today() - timedelta(days=30)).isoformat()
-    entries = [_make_entry(entry_id="boundary30", posting_date=thirty_ago)]
+    entries = [_make_entry(entry_id="boundary30", posting_date=thirty_ago, track="grant")]
     report = compute_freshness_report(entries)
     assert len(report["aging"]) == 1
     assert report["aging"][0]["entry_id"] == "boundary30"
+
+
+# ---------------------------------------------------------------------------
+# Job-track hour-based freshness
+# ---------------------------------------------------------------------------
+
+
+def test_job_entry_today_is_fresh():
+    """Job entry posted today uses hour-based thresholds and is fresh."""
+    today = date.today().isoformat()
+    entries = [_make_entry(entry_id="job-fresh", posting_date=today, track="job")]
+    report = compute_freshness_report(entries)
+    assert len(report["fresh"]) == 1
+    assert report["fresh"][0]["entry_id"] == "job-fresh"
+    assert report["fresh"][0]["age_hours"] is not None
+
+
+def test_job_entry_old_is_expired():
+    """Job entry posted 5 days ago is expired under hour-based thresholds (120h > 72h)."""
+    five_days_ago = (date.today() - timedelta(days=5)).isoformat()
+    entries = [_make_entry(entry_id="job-old", posting_date=five_days_ago, track="job")]
+    report = compute_freshness_report(entries)
+    assert len(report["expired"]) == 1
+    assert report["expired"][0]["entry_id"] == "job-old"
+
+
+def test_job_entry_report_includes_track():
+    """Job entry items include track field in report."""
+    today = date.today().isoformat()
+    entries = [_make_entry(entry_id="job-track-check", posting_date=today, track="job")]
+    report = compute_freshness_report(entries)
+    item = report["fresh"][0]
+    assert item["track"] == "job"
+
+
+def test_grant_entry_uses_day_thresholds():
+    """Grant entry 20 days old is aging under day-based thresholds."""
+    twenty_ago = (date.today() - timedelta(days=20)).isoformat()
+    entries = [_make_entry(entry_id="grant-aging", posting_date=twenty_ago, track="grant")]
+    report = compute_freshness_report(entries)
+    assert len(report["aging"]) == 1
+    assert report["aging"][0]["age_hours"] is None
 
 
 # ---------------------------------------------------------------------------

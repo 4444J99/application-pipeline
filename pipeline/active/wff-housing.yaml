@@ -2,6 +2,7 @@ id: wff-housing
 name: WFF Housing Stability Grant
 track: grant
 status: staged
+identity_position: community-practitioner
 outcome: null
 target:
   organization: WFF / NYFA
@@ -18,7 +19,7 @@ amount:
   type: lump_sum
   benefits_cliff_note: Exceeds Medicaid and Fair Fares. Call NYLAG.
 fit:
-  score: 7.6
+  score: 7.5
   original_score: 8.2
   identity_position: community-practitioner
   framing: Community-rooted artist addressing housing stability as foundation for
@@ -31,8 +32,8 @@ fit:
     evidence_match: 9
     track_record_fit: 8
     financial_alignment: 4
-    effort_to_value: 7
-    strategic_value: 7
+    effort_to_value: 6
+    strategic_value: 8
     deadline_feasibility: 9
     portal_friction: 6
 submission:

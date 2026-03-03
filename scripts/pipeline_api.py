@@ -14,16 +14,10 @@ import sys
 from dataclasses import dataclass
 from enum import Enum
 from pathlib import Path
-from typing import Optional, Any
 
 # Ensure scripts dir is in path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-import score as score_module
-import advance as advance_module
-import draft as draft_module
-import compose as compose_module
-import validate as validate_module
 
 
 class ResultStatus(Enum):
@@ -39,11 +33,11 @@ class ScoreResult:
     """Result of scoring an entry."""
     status: ResultStatus
     entry_id: str
-    old_score: Optional[float] = None
-    new_score: Optional[float] = None
-    dimensions: Optional[dict] = None
+    old_score: float | None = None
+    new_score: float | None = None
+    dimensions: dict | None = None
     message: str = ""
-    error: Optional[str] = None
+    error: str | None = None
 
 
 @dataclass
@@ -51,10 +45,10 @@ class AdvanceResult:
     """Result of advancing an entry."""
     status: ResultStatus
     entry_id: str
-    old_status: Optional[str] = None
-    new_status: Optional[str] = None
+    old_status: str | None = None
+    new_status: str | None = None
     message: str = ""
-    error: Optional[str] = None
+    error: str | None = None
 
 
 @dataclass
@@ -62,10 +56,10 @@ class DraftResult:
     """Result of drafting an entry."""
     status: ResultStatus
     entry_id: str
-    content: Optional[str] = None
-    file_path: Optional[str] = None
+    content: str | None = None
+    file_path: str | None = None
     message: str = ""
-    error: Optional[str] = None
+    error: str | None = None
 
 
 @dataclass
@@ -73,12 +67,12 @@ class ComposeResult:
     """Result of composing an entry."""
     status: ResultStatus
     entry_id: str
-    content: Optional[str] = None
-    file_path: Optional[str] = None
-    word_count: Optional[int] = None
-    block_sources: Optional[list] = None
+    content: str | None = None
+    file_path: str | None = None
+    word_count: int | None = None
+    block_sources: list | None = None
     message: str = ""
-    error: Optional[str] = None
+    error: str | None = None
 
 
 @dataclass
@@ -153,7 +147,7 @@ def score_entry(
 
 def advance_entry(
     entry_id: str,
-    to_status: Optional[str] = None,
+    to_status: str | None = None,
     dry_run: bool = True,
 ) -> AdvanceResult:
     """Advance an entry to the next status (or specified status).
@@ -271,8 +265,8 @@ def compose_entry(
 
 
 def validate_entry(
-    entry_id: Optional[str] = None,
-    entry_dict: Optional[dict] = None,
+    entry_id: str | None = None,
+    entry_dict: dict | None = None,
 ) -> ValidationResult:
     """Validate a single entry or entire pipeline YAML.
 

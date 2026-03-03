@@ -2,6 +2,7 @@ id: rauschenberg-cycle-36
 name: Rauschenberg Cycle 36
 track: emergency
 status: staged
+identity_position: systems-artist
 outcome: null
 target:
   organization: Robert Rauschenberg Foundation
@@ -18,7 +19,7 @@ amount:
   type: lump_sum
   benefits_cliff_note: null
 fit:
-  score: 7.2
+  score: 7.5
   original_score: 7.0
   identity_position: systems-artist
   framing: Systems artist addressing emergency needs in sustaining creative practice
@@ -27,11 +28,11 @@ fit:
   - META
   dimensions:
     mission_alignment: 8
-    evidence_match: 4
+    evidence_match: 5
     track_record_fit: 7
     financial_alignment: 9
     effort_to_value: 9
-    strategic_value: 8
+    strategic_value: 9
     deadline_feasibility: 9
     portal_friction: 6
 submission:
@@ -39,7 +40,8 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
-  variant_ids: {}
+  variant_ids:
+    cover_letter: cover-letters/grant-art-template
   materials_attached:
   - resumes/batch-03/rauschenberg-cycle-36/rauschenberg-cycle-36-resume.html
   - resumes/batch-03/rauschenberg-cycle-36/rauschenberg-cycle-36-resume.pdf

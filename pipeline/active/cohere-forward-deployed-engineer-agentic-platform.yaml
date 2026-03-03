@@ -2,6 +2,7 @@ id: cohere-forward-deployed-engineer-agentic-platform
 name: Cohere Forward Deployed Engineer, Agentic Platform
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: Cohere

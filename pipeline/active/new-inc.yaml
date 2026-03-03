@@ -2,6 +2,7 @@ id: new-inc
 name: NEW INC (New Museum)
 track: program
 status: staged
+identity_position: systems-artist
 outcome: null
 target:
   organization: New Museum / NEW INC
@@ -18,9 +19,9 @@ amount:
   type: stipend
   benefits_cliff_note: null
 fit:
-  score: 6.8
+  score: 6.3
   original_score: 7.2
-  identity_position: creative-technologist
+  identity_position: systems-artist
   framing: Creative technologist presenting the "ORGANVM Metasystem"—a production-grade
     AI orchestration framework designed to scale solo creative practice into institutional-grade
     cultural infrastructure. Seeking to use the NEW INC incubator to bridge the gap
@@ -30,7 +31,7 @@ fit:
   - IV
   - META
   dimensions:
-    mission_alignment: 7
+    mission_alignment: 5
     evidence_match: 5
     track_record_fit: 7
     financial_alignment: 9

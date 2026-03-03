@@ -13,24 +13,23 @@ Usage:
 
 import argparse
 import sys
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
 
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from pipeline_api import (
+    ResultStatus,
+    advance_entry,
+    score_entry,
+)
 from pipeline_lib import (
-    load_entries,
+    can_advance,
     get_deadline,
     is_actionable,
-    can_advance,
-    update_yaml_field,
-)
-from pipeline_api import (
-    score_entry,
-    advance_entry,
-    ResultStatus,
+    load_entries,
 )
 
 # --- Agent rules loader ---

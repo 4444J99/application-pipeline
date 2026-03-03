@@ -3,12 +3,16 @@
 
 Polls Greenhouse, Lever, and Ashby job board APIs for matching postings,
 filters by title keywords, deduplicates against existing pipeline entries,
-and creates pipeline YAML files in pipeline/active/.
+and creates pipeline YAML files in pipeline/research_pool/.
+
+By default, only jobs posted within 72 hours are included (--fresh-only).
+Use --all to override and include older postings.
 
 Usage:
-    python scripts/source_jobs.py                     # Fetch all, dry-run
+    python scripts/source_jobs.py                     # Fetch all, dry-run (fresh only)
     python scripts/source_jobs.py --fetch --dry-run    # Show what would be created
     python scripts/source_jobs.py --fetch --yes        # Create pipeline entries
+    python scripts/source_jobs.py --fetch --all        # Include older postings too
     python scripts/source_jobs.py --fetch --limit 10   # Top 10 only
     python scripts/source_jobs.py --list-sources       # Show configured companies
     python scripts/source_jobs.py --stats              # Show last fetch stats
@@ -30,9 +34,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pipeline_lib import (
     ALL_PIPELINE_DIRS,
     ALL_PIPELINE_DIRS_WITH_POOL,
+    JOB_STALE_HOURS,
     PIPELINE_DIR_RESEARCH_POOL,
     load_entries,
 )
+
+# Maximum posting age (in hours) for --fresh-only filter
+FRESH_ONLY_MAX_HOURS = JOB_STALE_HOURS  # 72h default
 
 SOURCES_FILE = Path(__file__).resolve().parent / ".job-sources.yaml"
 STATS_FILE = Path(__file__).resolve().parent / ".job-source-stats.yaml"
@@ -500,6 +508,59 @@ def deduplicate(jobs: list[dict], existing_ids: set[str]) -> list[dict]:
     return unique
 
 
+def _posting_age_hours(job: dict) -> float | None:
+    """Compute posting age in hours from the job's posting_date.
+
+    Returns None if posting_date is missing or unparseable.
+    """
+    posting_date = job.get("posting_date")
+    if not posting_date:
+        return None
+    try:
+        d = datetime.strptime(str(posting_date), "%Y-%m-%d").replace(tzinfo=UTC)
+        now = datetime.now(UTC)
+        return (now - d).total_seconds() / 3600.0
+    except (ValueError, TypeError):
+        return None
+
+
+def _format_posting_age(job: dict) -> str:
+    """Format posting age as a human-readable string like '[2h ago]' or '[3d ago]'.
+
+    Returns '[??]' if age is unknown.
+    """
+    hours = _posting_age_hours(job)
+    if hours is None:
+        return "[??]"
+    if hours < 1:
+        return "[<1h ago]"
+    if hours < 24:
+        return f"[{int(hours)}h ago]"
+    days = hours / 24.0
+    if days < 1.5:
+        return "[1d ago]"
+    return f"[{int(days)}d ago]"
+
+
+def filter_by_freshness(jobs: list[dict], max_hours: float = FRESH_ONLY_MAX_HOURS) -> tuple[list[dict], list[dict]]:
+    """Split jobs into fresh (within max_hours) and stale (older).
+
+    Jobs with no posting_date are treated as fresh (benefit of the doubt).
+
+    Returns:
+        (fresh_jobs, skipped_jobs)
+    """
+    fresh = []
+    skipped = []
+    for job in jobs:
+        hours = _posting_age_hours(job)
+        if hours is not None and hours > max_hours:
+            skipped.append(job)
+        else:
+            fresh.append(job)
+    return fresh, skipped
+
+
 def create_pipeline_entry(job: dict) -> tuple[str, dict]:
     """Generate a pipeline YAML dict for a job posting.
 
@@ -551,6 +612,7 @@ def create_pipeline_entry(job: dict) -> tuple[str, dict]:
             "researched": today,
             "posting_date": job.get("posting_date"),
             "date_added": today,
+            "discovered": datetime.now(UTC).isoformat(),
         },
         "conversion": {
             "response_received": False,
@@ -759,6 +821,10 @@ def main():
                         help="Show configured company sources")
     parser.add_argument("--stats", action="store_true",
                         help="Show last fetch statistics")
+    parser.add_argument("--fresh-only", action="store_true", default=True,
+                        help="Only include jobs posted within 72h (default for --fetch)")
+    parser.add_argument("--all", action="store_true", dest="include_all",
+                        help="Include all jobs regardless of posting age (overrides --fresh-only)")
     parser.add_argument("--backfill-locations", action="store_true",
                         help="Add target.location and target.location_class to existing entries")
     args = parser.parse_args()
@@ -831,13 +897,29 @@ def main():
         # Deduplicate
         unique_jobs = deduplicate(all_jobs, existing_ids)
 
+        # Apply freshness filter (default: only jobs <72h old)
+        skipped_stale = []
+        if not args.include_all:
+            unique_jobs, skipped_stale = filter_by_freshness(unique_jobs)
+            if skipped_stale:
+                print(f"\nSkipped {len(skipped_stale)} stale postings (>{int(FRESH_ONLY_MAX_HOURS)}h old):")
+                for job in skipped_stale[:10]:
+                    age_str = _format_posting_age(job)
+                    print(f"    {age_str} {job['company_display']} — {job['title']}")
+                if len(skipped_stale) > 10:
+                    print(f"    ... and {len(skipped_stale) - 10} more")
+                print("  Use --all to include older postings.")
+
         # Apply limit
         if args.limit and args.limit > 0:
             unique_jobs = unique_jobs[:args.limit]
 
         print(f"\n{'=' * 60}")
         print(f"Total matched: {len(all_jobs)}")
-        print(f"After dedup:   {len(unique_jobs)}")
+        print(f"After dedup:   {len(unique_jobs) + len(skipped_stale)}")
+        if skipped_stale:
+            print(f"Skipped stale: {len(skipped_stale)}")
+        print(f"Fresh & new:   {len(unique_jobs)}")
         if args.limit:
             print(f"Limited to:    {args.limit}")
         print(f"{'=' * 60}")
@@ -858,16 +940,17 @@ def main():
             portal = job["portal"]
             company = job["company_display"]
             title = job["title"]
+            age_str = _format_posting_age(job)
 
             if args.yes and not args.dry_run:
                 write_pipeline_entry(entry_id, entry)
                 created.append(entry_id)
                 print(f"  + {entry_id}")
-                print(f"    {company} — {title}")
+                print(f"    {company} — {title} {age_str}")
                 print(f"    {job['url']}")
             else:
                 print(f"  [dry-run] {entry_id}")
-                print(f"    {company} — {title} [{portal}]")
+                print(f"    {company} — {title} [{portal}] {age_str}")
                 print(f"    {job['url']}")
                 created.append(entry_id)
 

@@ -2,6 +2,7 @@ id: resend-dx-engineer-technical-writer
 name: Resend DX Engineer (Technical Writer)
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: Resend
@@ -45,7 +46,6 @@ submission:
     cover_letter: cover-letters/resend-dx-engineer-technical-writer-alchemized
   materials_attached:
   - resumes/batch-03/resend-dx-engineer-technical-writer/resend-dx-engineer-technical-writer-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
   writing_sample_url: https://organvm-v-logos.github.io/public-process/
 timeline:

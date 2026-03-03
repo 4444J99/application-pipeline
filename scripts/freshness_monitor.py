@@ -4,29 +4,42 @@
 Monitors entry freshness by computing posting age, categorizing entries into
 freshness tiers, and optionally checking whether application URLs are still live.
 
+For job-track entries, uses hour-based thresholds (24/48/72h) from pipeline_lib.
+For all other tracks, uses day-based thresholds (14/30/60d).
+
 Usage:
-    python scripts/freshness_monitor.py                    # Freshness report (no HTTP)
-    python scripts/freshness_monitor.py --check-urls       # Check URLs (HTTP HEAD, limit 20)
+    python scripts/freshness_monitor.py                          # Freshness report (no HTTP)
+    python scripts/freshness_monitor.py --check-urls             # Check URLs (HTTP HEAD, limit 20)
     python scripts/freshness_monitor.py --check-urls --limit 50  # Larger batch
-    python scripts/freshness_monitor.py --stale-only       # Show only stale/expired
+    python scripts/freshness_monitor.py --stale-only             # Show only stale/expired
+    python scripts/freshness_monitor.py --auto-expire-jobs       # Expire stale job postings (dry-run)
+    python scripts/freshness_monitor.py --auto-expire-jobs --yes # Execute expiration
 """
 
 import argparse
+import re
 import sys
 from datetime import date
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+import yaml
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
     ACTIONABLE_STATUSES,
     PIPELINE_DIR_ACTIVE,
+    PIPELINE_DIR_CLOSED,
     PIPELINE_DIR_RESEARCH_POOL,
     SIGNALS_DIR,
+    get_freshness_tier,  # noqa: F401 — imported per freshness system API contract
+    get_posting_age_hours,
     load_entries,
     parse_date,
+    update_last_touched,
+    update_yaml_field,
 )
 
 HTTP_TIMEOUT = 10
@@ -34,10 +47,19 @@ USER_AGENT = "application-pipeline/freshness-monitor/1.0"
 
 FRESHNESS_CHECK_FILE = SIGNALS_DIR / "freshness-last-check.txt"
 
-# Age thresholds in days
+# Age thresholds in days (for non-job tracks)
 FRESH_MAX = 14
 AGING_MAX = 30
 STALE_MAX = 60
+
+# Job-track hour thresholds (imported from pipeline_lib via get_freshness_tier)
+JOB_FRESH_HOURS = 24
+JOB_AGING_HOURS = 48
+JOB_STALE_HOURS = 72
+
+# Only auto-expire entries whose date_added is on or after this date.
+# Grandfathers existing entries added before this date.
+DEFAULT_FRESHNESS_POLICY_START_DATE = "2026-03-04"
 
 
 # ---------------------------------------------------------------------------
@@ -186,7 +208,7 @@ def _get_entry_age_days(entry: dict) -> int | None:
 
 
 def _categorize_age(age_days: int | None) -> str:
-    """Map age in days to a freshness category."""
+    """Map age in days to a freshness category (for non-job tracks)."""
     if age_days is None:
         return "unknown"
     if age_days < FRESH_MAX:
@@ -198,14 +220,50 @@ def _categorize_age(age_days: int | None) -> str:
     return "expired"
 
 
+def _categorize_job_age_hours(age_hours: float | None) -> str:
+    """Map age in hours to a freshness category for job-track entries."""
+    if age_hours is None:
+        return "unknown"
+    if age_hours <= JOB_FRESH_HOURS:
+        return "fresh"
+    if age_hours <= JOB_AGING_HOURS:
+        return "aging"
+    if age_hours <= JOB_STALE_HOURS:
+        return "stale"
+    return "expired"
+
+
+def _categorize_entry(entry: dict) -> tuple[str, int | None, float | None]:
+    """Categorize an entry using track-aware thresholds.
+
+    For job-track entries, uses hour-based thresholds.
+    For all other tracks, uses day-based thresholds.
+
+    Returns:
+        (category, age_days, age_hours) — age_hours is only populated for job entries.
+    """
+    track = entry.get("track", "")
+    if track == "job":
+        age_hours = get_posting_age_hours(entry)
+        category = _categorize_job_age_hours(age_hours)
+        age_days = int(age_hours / 24.0) if age_hours is not None else None
+        return category, age_days, age_hours
+    else:
+        age_days = _get_entry_age_days(entry)
+        category = _categorize_age(age_days)
+        return category, age_days, None
+
+
 def compute_freshness_report(entries: list[dict] | None = None) -> dict:
     """Compute freshness report categorizing entries by posting age.
+
+    Uses track-aware thresholds: hour-based for job entries, day-based for others.
 
     Returns:
         {"fresh": list, "aging": list, "stale": list, "expired": list,
          "unknown": list, "total": int}
         Each item: {"entry_id": str, "name": str, "age_days": int|None,
-                     "url": str, "portal": str}
+                     "age_hours": float|None, "track": str, "url": str, "portal": str}
     """
     url_entries = get_entries_with_urls(entries)
 
@@ -218,13 +276,14 @@ def compute_freshness_report(entries: list[dict] | None = None) -> dict:
     }
 
     for entry in url_entries:
-        age_days = _get_entry_age_days(entry)
-        category = _categorize_age(age_days)
+        category, age_days, age_hours = _categorize_entry(entry)
         target = entry.get("target", {})
         item = {
             "entry_id": entry.get("id", "?"),
             "name": entry.get("name", entry.get("id", "?")),
             "age_days": age_days,
+            "age_hours": age_hours,
+            "track": entry.get("track", ""),
             "url": target.get("application_url", "") if isinstance(target, dict) else "",
             "portal": target.get("portal", "unknown") if isinstance(target, dict) else "unknown",
         }
@@ -267,9 +326,22 @@ def show_freshness_report(report: dict, stale_only: bool = False) -> None:
             # Sort by age descending (oldest first), unknowns at end
             sorted_items = sorted(items, key=lambda x: x.get("age_days") or 0, reverse=True)
             for item in sorted_items:
-                age_str = f"{item['age_days']}d" if item["age_days"] is not None else "??d"
-                print(f"    [{age_str:>5}] {item['entry_id']}")
-                print(f"           {item['url']}")
+                # Show hour-based age for job entries, day-based for others
+                if item.get("track") == "job" and item.get("age_hours") is not None:
+                    hours = item["age_hours"]
+                    if hours < 1:
+                        age_str = "<1h"
+                    elif hours < 24:
+                        age_str = f"{int(hours)}h"
+                    else:
+                        age_str = f"{int(hours)}h ({item['age_days']}d)"
+                elif item["age_days"] is not None:
+                    age_str = f"{item['age_days']}d"
+                else:
+                    age_str = "??d"
+                track_tag = f" [{item['track']}]" if item.get("track") == "job" else ""
+                print(f"    [{age_str:>10}] {item['entry_id']}{track_tag}")
+                print(f"               {item['url']}")
         print()
 
     # Summary line
@@ -330,6 +402,190 @@ def check_urls_batch(entries: list[dict] | None = None, limit: int = 20) -> list
 
 
 # ---------------------------------------------------------------------------
+# Auto-expire stale job postings
+# ---------------------------------------------------------------------------
+
+def _get_job_entries_for_expiry(
+    policy_start_date: str = DEFAULT_FRESHNESS_POLICY_START_DATE,
+) -> list[dict]:
+    """Find job-track entries in active/ eligible for auto-expiry.
+
+    Criteria:
+      - track == "job"
+      - status in ACTIONABLE_STATUSES (research, qualified, drafting, staged)
+      - posting age > 72 hours
+      - date_added >= freshness_policy_start_date (grandfathers older entries)
+      - last_touched NOT within 24 hours (human override)
+
+    Returns list of dicts with entry metadata and filepath.
+    """
+    entries = load_entries(
+        dirs=[PIPELINE_DIR_ACTIVE, PIPELINE_DIR_RESEARCH_POOL],
+        include_filepath=True,
+    )
+
+    policy_date = parse_date(policy_start_date)
+    candidates = []
+
+    for entry in entries:
+        # Must be job track
+        if entry.get("track") != "job":
+            continue
+
+        # Must be in an actionable status
+        status = entry.get("status", "")
+        if status not in ACTIONABLE_STATUSES:
+            continue
+
+        # Check posting age
+        age_hours = get_posting_age_hours(entry)
+        if age_hours is None or age_hours <= JOB_STALE_HOURS:
+            continue
+
+        # Grandfather: only expire entries added on or after policy start date
+        timeline = entry.get("timeline", {})
+        if isinstance(timeline, dict):
+            date_added = parse_date(timeline.get("date_added"))
+        else:
+            date_added = None
+        if date_added and policy_date and date_added < policy_date:
+            continue
+
+        # Human override: skip if last_touched within 24 hours
+        last_touched = parse_date(entry.get("last_touched"))
+        if last_touched is not None:
+            days_since_touch = (date.today() - last_touched).days
+            if days_since_touch < 1:
+                continue
+
+        candidates.append({
+            "id": entry.get("id", "?"),
+            "name": entry.get("name", "?"),
+            "status": status,
+            "age_hours": age_hours,
+            "date_added": date_added.isoformat() if date_added else "?",
+            "_filepath": entry.get("_filepath"),
+        })
+
+    return candidates
+
+
+def _expire_job_entry(filepath: Path) -> bool:
+    """Move a job entry to closed/ with outcome=expired and outcome_stage=posting_stale.
+
+    Returns True on success, False on failure.
+    """
+    if not filepath or not filepath.exists():
+        print(f"  WARNING: File not found: {filepath}", file=sys.stderr)
+        return False
+
+    content = filepath.read_text()
+    data = yaml.safe_load(content)
+    if not isinstance(data, dict):
+        print(f"  WARNING: Invalid YAML in {filepath.name}", file=sys.stderr)
+        return False
+
+    # Guard: only expire actionable entries
+    if data.get("status") not in ACTIONABLE_STATUSES:
+        print(f"  WARNING: Skipping {filepath.stem} -- status '{data.get('status')}' not actionable",
+              file=sys.stderr)
+        return False
+
+    # Update status to outcome
+    content = update_yaml_field(content, "status", "outcome")
+
+    # Update outcome to expired
+    try:
+        content = update_yaml_field(content, "outcome", "expired")
+    except ValueError:
+        # outcome field might be 'null' -- try regex
+        content = re.sub(
+            r'^(outcome:)\s+.*$', r'\1 expired',
+            content, count=1, flags=re.MULTILINE,
+        )
+
+    # Add conversion.outcome_stage if conversion block exists
+    try:
+        content = update_yaml_field(
+            content, "outcome_stage", "posting_stale",
+            nested=True, parent_key="conversion",
+        )
+    except ValueError:
+        # outcome_stage field might not exist -- append to conversion block
+        conversion_pattern = re.compile(r'^(conversion:\s*)$', re.MULTILINE)
+        match = conversion_pattern.search(content)
+        if match:
+            insert_pos = match.end()
+            # Find indentation of next line in the block
+            next_line_match = re.search(r'\n([ \t]+)', content[insert_pos:])
+            indent = next_line_match.group(1) if next_line_match else "  "
+            content = content[:insert_pos] + f"\n{indent}outcome_stage: posting_stale" + content[insert_pos:]
+
+    content = update_last_touched(content)
+
+    # Verify YAML is still valid
+    try:
+        yaml.safe_load(content)
+    except yaml.YAMLError as e:
+        print(f"  WARNING: YAML invalid after editing {filepath.stem}: {e}", file=sys.stderr)
+        return False
+
+    # Move to closed/
+    PIPELINE_DIR_CLOSED.mkdir(parents=True, exist_ok=True)
+    dest = PIPELINE_DIR_CLOSED / filepath.name
+    dest.write_text(content)
+    filepath.unlink()
+    return True
+
+
+def run_auto_expire_jobs(
+    dry_run: bool = True,
+    policy_start_date: str = DEFAULT_FRESHNESS_POLICY_START_DATE,
+) -> list[dict]:
+    """Find and expire stale job-track entries.
+
+    Args:
+        dry_run: If True, print what would be expired without making changes.
+        policy_start_date: Only expire entries added on or after this date.
+
+    Returns:
+        List of expired entry metadata dicts.
+    """
+    candidates = _get_job_entries_for_expiry(policy_start_date=policy_start_date)
+
+    if not candidates:
+        print("No stale job entries eligible for auto-expiry.")
+        print(f"  (policy start date: {policy_start_date})")
+        return []
+
+    print(f"Stale job entries eligible for auto-expiry ({len(candidates)}):")
+    print(f"  (policy: only entries added >= {policy_start_date}, posting age > {JOB_STALE_HOURS}h)\n")
+
+    expired = []
+    for item in candidates:
+        age_str = f"{int(item['age_hours'])}h"
+        action = "[dry-run]" if dry_run else "[expiring]"
+        print(f"  {action} {item['id']}")
+        print(f"          status={item['status']}  age={age_str}  added={item['date_added']}")
+
+        if not dry_run:
+            if _expire_job_entry(item["_filepath"]):
+                expired.append(item)
+            else:
+                print("          FAILED to expire")
+        else:
+            expired.append(item)
+
+    print()
+    if dry_run:
+        print(f"Would expire {len(expired)} entries. Run with --yes to execute.")
+    else:
+        print(f"Expired {len(expired)} entries to pipeline/closed/")
+
+    return expired
+
+
+# ---------------------------------------------------------------------------
 # Weekly check gating
 # ---------------------------------------------------------------------------
 
@@ -380,7 +636,27 @@ def main():
         "--stale-only", action="store_true",
         help="Show only stale and expired entries.",
     )
+    parser.add_argument(
+        "--auto-expire-jobs", action="store_true",
+        help="Expire job-track entries with posting age >72h (dry-run by default).",
+    )
+    parser.add_argument(
+        "--yes", action="store_true",
+        help="Execute changes (required for --auto-expire-jobs).",
+    )
+    parser.add_argument(
+        "--policy-start-date", type=str, default=DEFAULT_FRESHNESS_POLICY_START_DATE,
+        help=f"Only expire entries added on or after this date (default: {DEFAULT_FRESHNESS_POLICY_START_DATE}).",
+    )
     args = parser.parse_args()
+
+    if args.auto_expire_jobs:
+        print(f"\n{'='*60}")
+        print("  AUTO-EXPIRE STALE JOB POSTINGS")
+        print(f"{'='*60}\n")
+        dry_run = not args.yes
+        run_auto_expire_jobs(dry_run=dry_run, policy_start_date=args.policy_start_date)
+        return
 
     report = compute_freshness_report()
     show_freshness_report(report, stale_only=args.stale_only)

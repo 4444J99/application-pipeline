@@ -2,6 +2,7 @@ id: deepgram-staff-developer-advocate
 name: Deepgram Staff Developer Advocate
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: Deepgram
@@ -45,7 +46,6 @@ submission:
     cover_letter: cover-letters/deepgram-staff-developer-advocate-alchemized
   materials_attached:
   - resumes/batch-03/deepgram-staff-developer-advocate/deepgram-staff-developer-advocate-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'

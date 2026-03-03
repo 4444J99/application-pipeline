@@ -1,8 +1,7 @@
-import pytest
-from typer.testing import CliRunner
-import sys
 import os
-from pathlib import Path
+import sys
+
+from typer.testing import CliRunner
 
 # Ensure scripts dir is in path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../scripts')))

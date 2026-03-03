@@ -2,6 +2,7 @@ id: anthropic-software-engineer-agent-sdk-claude-code
 name: Anthropic Software Engineer, Agent SDK - Claude Code
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: Anthropic
@@ -45,7 +46,6 @@ submission:
     cover_letter: cover-letters/anthropic-software-engineer-agent-sdk-claude-code-alchemized
   materials_attached:
   - resumes/batch-03/anthropic-software-engineer-agent-sdk-claude-code/anthropic-software-engineer-agent-sdk-claude-code-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-25'

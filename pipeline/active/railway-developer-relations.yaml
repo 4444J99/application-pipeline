@@ -2,6 +2,7 @@ id: railway-developer-relations
 name: Railway Developer Relations
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: Railway
@@ -45,7 +46,6 @@ submission:
     cover_letter: cover-letters/railway-developer-relations-alchemized
   materials_attached:
   - resumes/batch-03/railway-developer-relations/railway-developer-relations-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'

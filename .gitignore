@@ -29,6 +29,8 @@ scripts/.ashby-answers/
 scripts/.alchemize-work/
 scripts/.job-sources.yaml
 scripts/.job-source-stats.yaml
+scripts/.discovery-queries.yaml
+scripts/.discovery-stats.yaml
 
 # Caches
 .pytest_cache/

@@ -1,8 +1,8 @@
 id: anthropic-developer-education-lead
 name: Anthropic Developer Education Lead
 track: job
-status: acknowledged
-outcome: null
+status: outcome
+outcome: rejected
 target:
   organization: Anthropic
   url: https://boards.greenhouse.io/anthropic
@@ -53,13 +53,14 @@ timeline:
   submitted: '2026-02-25'
 conversion:
   response_received: true
-  response_type: acknowledged
-  time_to_response_days: 2
+  response_type: rejected
+  time_to_response_days: 6
+  outcome_stage: resume_screen
   feedback: null
   follow_up_count: 0
 tags:
 - auto-sourced
 - job-tier-1
 source: source_jobs.py
-last_touched: "2026-02-27"
+last_touched: "2026-03-03"
 follow_up: []

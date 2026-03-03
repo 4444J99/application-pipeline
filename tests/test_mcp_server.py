@@ -1,13 +1,11 @@
-import pytest
 import json
-import sys
 import os
-from pathlib import Path
+import sys
 
 # Ensure scripts dir is in path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../scripts')))
 
-from mcp_server import pipeline_score, pipeline_advance, pipeline_draft, pipeline_compose, pipeline_validate
+from mcp_server import pipeline_advance, pipeline_compose, pipeline_draft, pipeline_score, pipeline_validate
 
 
 def test_pipeline_score_tool():

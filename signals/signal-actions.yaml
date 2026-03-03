@@ -191,3 +191,1763 @@ actions:
   responsible: '@4444J99'
   impact: TBD
   entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-test-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: test-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-deferred-entry-2026-03-03
+  signal_type: score_threshold
+  description: Advanced deferred -> qualified
+  triggered_action: advance to qualified
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deferred-entry
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting
+  triggered_action: advance to drafting
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test
+- signal_id: advance-integration-test-2026-03-03
+  signal_type: score_threshold
+  description: Advanced drafting -> staged
+  triggered_action: advance to staged
+  action_date: '2026-03-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: integration-test

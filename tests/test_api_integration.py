@@ -3,7 +3,6 @@
 Tests that the API layer works correctly with real pipeline data.
 """
 
-import pytest
 import sys
 from pathlib import Path
 
@@ -11,12 +10,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from pipeline_api import (
-    score_entry,
-    advance_entry,
-    draft_entry,
-    compose_entry,
-    validate_entry,
     ResultStatus,
+    advance_entry,
+    compose_entry,
+    draft_entry,
+    score_entry,
+    validate_entry,
 )
 
 

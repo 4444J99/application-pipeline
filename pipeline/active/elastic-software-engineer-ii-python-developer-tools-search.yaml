@@ -2,6 +2,7 @@ id: elastic-software-engineer-ii-python-developer-tools-search
 name: Elastic Software Engineer II - Python - Developer Tools - Search
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: Elastic
@@ -45,7 +46,6 @@ submission:
     cover_letter: cover-letters/elastic-software-engineer-ii-python-developer-tools-search-alchemized
   materials_attached:
   - resumes/batch-03/elastic-software-engineer-ii-python-developer-tools-search/elastic-software-engineer-ii-python-developer-tools-search-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'

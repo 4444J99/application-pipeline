@@ -8,21 +8,21 @@ Enables agentic execution of the pipeline state machine without tight
 coupling to script internals.
 """
 
-from mcp.server.fastmcp import FastMCP
-import sys
 import json
+import sys
 from pathlib import Path
+
+from mcp.server.fastmcp import FastMCP
 
 # Add scripts dir to path so we can import local modules
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_api import (
-    score_entry,
     advance_entry,
-    draft_entry,
     compose_entry,
+    draft_entry,
+    score_entry,
     validate_entry,
-    ResultStatus,
 )
 
 # Initialize FastMCP server

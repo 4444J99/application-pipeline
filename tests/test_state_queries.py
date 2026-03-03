@@ -1,13 +1,12 @@
 """Tests for pipeline state query functions."""
 
-import pytest
 import sys
 from pathlib import Path
 
 # Ensure scripts dir is in path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from pipeline_lib import is_actionable, is_deferred, can_advance
+from pipeline_lib import can_advance, is_actionable, is_deferred
 
 
 class TestStateQueries:

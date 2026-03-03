@@ -8,28 +8,29 @@ For operations not yet migrated to the API layer, we fall back to
 direct script imports (backward-compatible).
 """
 
-import typer
 import sys
 from pathlib import Path
+
+import typer
 
 # Ensure the scripts directory is in the path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 # Import clean API layer (new way)
+from campaign import main as campaign_main
+from check_outcomes import main as outcomes_main
+from hygiene import main as hygiene_main
 from pipeline_api import (
-    score_entry,
-    advance_entry,
-    draft_entry,
-    compose_entry,
-    validate_entry,
     ResultStatus,
+    advance_entry,
+    compose_entry,
+    draft_entry,
+    score_entry,
+    validate_entry,
 )
 
 # Import functions not yet migrated to API layer (backward-compatible)
 from standup import run_standup, run_triage, touch_entry
-from campaign import main as campaign_main
-from hygiene import main as hygiene_main
-from check_outcomes import main as outcomes_main
 
 app = typer.Typer(help="Application Pipeline CLI", no_args_is_help=True)
 

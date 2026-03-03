@@ -1,6 +1,5 @@
 """Tests for resume validation in preflight checks."""
 
-import pytest
 import sys
 from pathlib import Path
 

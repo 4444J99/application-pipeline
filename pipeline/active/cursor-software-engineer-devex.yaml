@@ -2,6 +2,7 @@ id: cursor-software-engineer-devex
 name: Cursor Software Engineer, DevEx
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: Cursor
@@ -45,7 +46,6 @@ submission:
     cover_letter: cover-letters/cursor-software-engineer-devex-alchemized
   materials_attached:
   - resumes/batch-03/cursor-software-engineer-devex/cursor-software-engineer-devex-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'

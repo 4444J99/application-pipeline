@@ -2,6 +2,7 @@ id: fire-island-residency
 name: Fire Island Artist Residency
 track: residency
 status: staged
+identity_position: community-practitioner
 outcome: null
 target:
   organization: Fire Island Artist Residency
@@ -18,7 +19,7 @@ amount:
   type: stipend
   benefits_cliff_note: null
 fit:
-  score: 7.3
+  score: 7.2
   original_score: 7.1
   identity_position: community-practitioner
   framing: Community-rooted artist exploring queer identity through systems and generative
@@ -31,9 +32,9 @@ fit:
     mission_alignment: 8
     evidence_match: 7
     track_record_fit: 7
-    financial_alignment: 10
-    effort_to_value: 6
-    strategic_value: 6
+    financial_alignment: 7
+    effort_to_value: 7
+    strategic_value: 7
     deadline_feasibility: 9
     portal_friction: 4
 submission:

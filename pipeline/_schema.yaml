@@ -84,6 +84,7 @@
 # --- Timeline ---
 # timeline:
 #   researched: ISO date
+#   discovered: ISO 8601 datetime when the entry was first fetched by source_jobs.py
 #   posting_date: ISO date the job was posted (from ATS API; null if unavailable)
 #   qualified: ISO date
 #   materials_ready: ISO date
@@ -91,6 +92,11 @@
 #   acknowledged: ISO date
 #   interview: ISO date
 #   outcome_date: ISO date
+#
+# --- Computed Fields (not stored in YAML) ---
+# freshness_score: float 0.0-1.0 computed at runtime by pipeline_lib from
+#   timeline.discovered and job_freshness thresholds in market-intelligence-2026.json.
+#   1.0 = hot (<=24h), decays toward 0.0 as posting ages past 72h.
 
 # --- Conversion Tracking ---
 # conversion:

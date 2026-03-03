@@ -15,7 +15,6 @@ Usage:
     python scripts/greenhouse_submit.py --check-answers --batch              # validate all answers
 """
 
-import argparse
 import json
 import os
 import re
@@ -24,11 +23,18 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import yaml
+from ats_base import (
+    GREENHOUSE_STANDARD_FIELDS as STANDARD_FIELD_NAMES,
+)
+from ats_base import (
+    auto_fill_answer,
+    build_common_argparse,
+    load_config,
+)
 from pipeline_lib import (
     PIPELINE_DIR_ACTIVE,
     load_entries,
     load_entry_by_id,
-    load_submit_config,
     resolve_cover_letter,
     resolve_resume,
 )
@@ -39,26 +45,6 @@ ANSWERS_DIR = Path(__file__).resolve().parent / ".greenhouse-answers"
 GREENHOUSE_URL_RE = re.compile(
     r"(?:job-boards|boards)\.greenhouse\.io/(?P<board>[^/]+)/jobs/(?P<job_id>\d+)"
 )
-
-# Standard fields handled outside the answer system
-STANDARD_FIELD_NAMES = {
-    "first_name", "last_name", "email", "phone",
-    "resume", "resume_text", "cover_letter", "cover_letter_text",
-}
-
-# Label patterns for auto-fill (compiled once)
-AUTO_FILL_PATTERNS = [
-    (re.compile(r"website|portfolio|github|personal.*url", re.I), "portfolio_url"),
-    (re.compile(r"linkedin", re.I), "linkedin"),
-    (re.compile(r"pronounc|phonetic", re.I), "name_pronunciation"),
-    (re.compile(r"pronoun", re.I), "pronouns"),
-    (re.compile(r"address|city|location|plan on working|where.*located|where.*based", re.I), "location"),
-]
-
-
-def load_config() -> dict:
-    """Load personal info from .submit-config.yaml."""
-    return load_submit_config(strict=True)
 
 
 def parse_greenhouse_url(url: str, board_url: str = "") -> tuple[str, str] | None:
@@ -186,14 +172,6 @@ def auto_fill_answers(questions: list[dict], config: dict, entry: dict) -> dict:
     submission = entry.get("submission", {}) or {}
     portfolio_url = submission.get("portfolio_url", "") if isinstance(submission, dict) else ""
 
-    source_map = {
-        "portfolio_url": portfolio_url,
-        "linkedin": config.get("linkedin", ""),
-        "name_pronunciation": config.get("name_pronunciation", ""),
-        "pronouns": config.get("pronouns", ""),
-        "location": config.get("location", ""),
-    }
-
     for q in get_custom_questions(questions):
         label = q.get("label", "")
         fields = q.get("fields", [])
@@ -201,13 +179,9 @@ def auto_fill_answers(questions: list[dict], config: dict, entry: dict) -> dict:
             fname = field.get("name", "")
             if fname in STANDARD_FIELD_NAMES:
                 continue
-            # Check each auto-fill pattern
-            for pattern, source_key in AUTO_FILL_PATTERNS:
-                if pattern.search(label):
-                    value = source_map.get(source_key, "")
-                    if value:
-                        answers[fname] = value
-                    break
+            value = auto_fill_answer(label, config, portfolio_url)
+            if value:
+                answers[fname] = value
 
     return answers
 
@@ -646,7 +620,14 @@ def submit_to_greenhouse(
             response_data = resp.read().decode()
         print(f"  Response: {status}")
         if status in (200, 201):
-            print("  SUCCESS: Application submitted to Greenhouse")
+            # Try to parse confirmation ID from JSON response
+            try:
+                result = json.loads(response_data)
+                confirmation_id = result.get("id", "unknown")
+                print(f"  SUCCESS: Application submitted to Greenhouse (ID: {confirmation_id})")
+            except json.JSONDecodeError:
+                # Fallback if response is not valid JSON
+                print("  SUCCESS: Application submitted to Greenhouse")
             return True
         else:
             print(f"  Unexpected status: {status}")
@@ -657,7 +638,8 @@ def submit_to_greenhouse(
         try:
             error_body = e.read().decode()
             print(f"  Body: {error_body[:500]}")
-        except Exception:
+        except (OSError, UnicodeDecodeError):
+            # Error body may not be readable or may contain non-UTF8 data
             pass
         return False
     except urllib.error.URLError as e:
@@ -766,20 +748,7 @@ def find_greenhouse_entries() -> list[dict]:
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Submit applications to Greenhouse Job Board API"
-    )
-    parser.add_argument("--target", help="Target entry ID")
-    parser.add_argument("--batch", action="store_true",
-                        help="Process all Greenhouse entries in active pipeline")
-    parser.add_argument("--submit", action="store_true",
-                        help="Actually POST to Greenhouse (default is dry-run)")
-    parser.add_argument("--init-answers", action="store_true",
-                        help="Generate answer template YAML for custom questions")
-    parser.add_argument("--check-answers", action="store_true",
-                        help="Validate that all required questions have answers")
-    parser.add_argument("--force", action="store_true",
-                        help="Overwrite existing answer files (with --init-answers)")
+    parser = build_common_argparse("Greenhouse Job Board")
     args = parser.parse_args()
 
     if not args.target and not args.batch:

@@ -156,7 +156,8 @@ def extract_text_from_html(html: str) -> str:
     parser = _TextExtractor()
     try:
         parser.feed(html)
-    except Exception:
+    except ValueError:
+        # HTMLParser can raise ValueError on malformed HTML
         pass
     text = parser.get_text()
     # Collapse excessive whitespace
@@ -186,7 +187,9 @@ def fetch_page_text(url: str) -> str | None:
                 return None
             html = resp.read().decode("utf-8", errors="replace")
         return extract_text_from_html(html)
-    except Exception:
+    except (OSError, UnicodeDecodeError) as e:
+        # OSError covers URLError, HTTPError, socket errors; UnicodeDecodeError for malformed content
+        print(f"  [warn] Could not fetch content: {e}", file=sys.stderr)
         return None
 
 

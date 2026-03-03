@@ -2,6 +2,7 @@ id: stimpunks
 name: Stimpunks Creator Grant
 track: emergency
 status: deferred
+identity_position: community-practitioner
 outcome: null
 target:
   organization: Stimpunks Foundation
@@ -18,7 +19,7 @@ amount:
   type: lump_sum
   benefits_cliff_note: null
 fit:
-  score: 7.0
+  score: 7.2
   original_score: 7.1
   identity_position: community-practitioner
   framing: Neurodivergent creator building accessible infrastructure for community
@@ -32,7 +33,7 @@ fit:
     track_record_fit: 7
     financial_alignment: 9
     effort_to_value: 9
-    strategic_value: 3
+    strategic_value: 5
     deadline_feasibility: 9
     portal_friction: 6
 submission:
@@ -40,8 +41,10 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
-  variant_ids: {}
-  materials_attached: []
+  variant_ids:
+    cover_letter: cover-letters/grant-art-template
+  materials_attached:
+  - resumes/batch-03/stimpunks/stimpunks-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
@@ -69,4 +72,4 @@ deferral:
   resume_date: "2026-06-01"
   note: Portal paused. Re-opening June 1 for second round of 50 applications.
 notes: Application portal currently PAUSED. Re-opening for second round of 50 applications on June 1, 2026. Accepting 100 applications total for the year.
-last_touched: "2026-02-25"
+last_touched: "2026-03-03"

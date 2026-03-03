@@ -13,18 +13,25 @@ Usage:
     python scripts/ashby_submit.py --check-answers --batch        # validate all answers
 """
 
-import argparse
 import json
 import re
 import sys
 from pathlib import Path
 
 import yaml
+from ats_base import (
+    ASHBY_STANDARD_FIELDS as STANDARD_FIELD_PATHS,
+)
+from ats_base import (
+    AUTO_FILL_PATTERNS,  # noqa: F401 — re-exported for browser_submit.py
+    auto_fill_answer,
+    build_common_argparse,
+    load_config,
+)
 from pipeline_lib import (
     PIPELINE_DIR_ACTIVE,
     load_entries,
     load_entry_by_id,
-    load_submit_config,
     resolve_cover_letter,
     resolve_resume,
 )
@@ -37,23 +44,6 @@ ASHBY_URL_RE = re.compile(
 )
 
 ASHBY_API_BASE = "https://api.ashbyhq.com"
-
-# Standard field paths handled outside the answer system
-STANDARD_FIELD_PATHS = {"_systemfield_name", "_systemfield_email", "_systemfield_phone"}
-
-# Label patterns for auto-fill (compiled once)
-AUTO_FILL_PATTERNS = [
-    (re.compile(r"website|portfolio|github|personal.*url", re.I), "portfolio_url"),
-    (re.compile(r"linkedin", re.I), "linkedin"),
-    (re.compile(r"pronounc|phonetic", re.I), "name_pronunciation"),
-    (re.compile(r"pronoun", re.I), "pronouns"),
-    (re.compile(r"address|city|location|plan on working|where.*located|where.*based", re.I), "location"),
-]
-
-
-def load_config() -> dict:
-    """Load personal info from .submit-config.yaml."""
-    return load_submit_config(strict=True)
 
 
 def parse_ashby_url(url: str) -> tuple[str, str] | None:
@@ -180,23 +170,12 @@ def auto_fill_answers(fields: list[dict], config: dict, entry: dict) -> dict:
     submission = entry.get("submission", {}) or {}
     portfolio_url = submission.get("portfolio_url", "") if isinstance(submission, dict) else ""
 
-    source_map = {
-        "portfolio_url": portfolio_url,
-        "linkedin": config.get("linkedin", ""),
-        "name_pronunciation": config.get("name_pronunciation", ""),
-        "pronouns": config.get("pronouns", ""),
-        "location": config.get("location", ""),
-    }
-
     for field in get_custom_fields(fields):
         title = field.get("title", "")
         path = field.get("path", "")
-        for pattern, source_key in AUTO_FILL_PATTERNS:
-            if pattern.search(title):
-                value = source_map.get(source_key, "")
-                if value:
-                    answers[path] = value
-                break
+        value = auto_fill_answer(title, config, portfolio_url)
+        if value:
+            answers[path] = value
 
     return answers
 
@@ -687,20 +666,7 @@ def find_ashby_entries() -> list[dict]:
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Submit applications to Ashby Application Form API"
-    )
-    parser.add_argument("--target", help="Target entry ID")
-    parser.add_argument("--batch", action="store_true",
-                        help="Process all Ashby entries in active pipeline")
-    parser.add_argument("--submit", action="store_true",
-                        help="Actually POST to Ashby (default is dry-run)")
-    parser.add_argument("--init-answers", action="store_true",
-                        help="Generate answer template YAML for custom fields")
-    parser.add_argument("--check-answers", action="store_true",
-                        help="Validate that all required fields have answers")
-    parser.add_argument("--force", action="store_true",
-                        help="Overwrite existing answer files (with --init-answers)")
+    parser = build_common_argparse("Ashby Application Form")
     args = parser.parse_args()
 
     if not args.target and not args.batch:

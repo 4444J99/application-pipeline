@@ -2,6 +2,7 @@ id: mongodb-senior-software-engineer-devtools
 name: MongoDB Senior Software Engineer, DevTools
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: MongoDB
@@ -45,7 +46,6 @@ submission:
     cover_letter: cover-letters/mongodb-senior-software-engineer-devtools-alchemized
   materials_attached:
   - resumes/batch-03/mongodb-senior-software-engineer-devtools/mongodb-senior-software-engineer-devtools-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'

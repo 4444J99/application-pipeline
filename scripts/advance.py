@@ -13,6 +13,7 @@ Usage:
 
 import argparse
 import shutil
+import sys
 from datetime import date, datetime
 
 from pipeline_lib import (
@@ -89,8 +90,8 @@ def advance_entry(filepath, entry_id: str, target_status: str) -> bool:
             triggered_action=f"advance to {target_status}",
             entry_id=entry_id,
         )
-    except Exception:
-        pass  # Non-critical; don't fail the advance
+    except Exception as e:
+        print(f"  [audit] Signal logging failed: {e}", file=sys.stderr)
 
     return True
 

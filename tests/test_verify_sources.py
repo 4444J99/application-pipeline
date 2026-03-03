@@ -1,14 +1,13 @@
-import pytest
-import sys
-import os
 import json
-from pathlib import Path
+import os
+import sys
 from urllib.error import HTTPError
 
 # Ensure scripts dir is in path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../scripts')))
 
-from verify_sources import verify_greenhouse, verify_ashby
+from verify_sources import verify_ashby, verify_greenhouse
+
 
 def test_verify_greenhouse_success(mocker):
     """Verify verify_greenhouse handles successful API response."""

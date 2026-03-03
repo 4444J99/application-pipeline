@@ -2,6 +2,7 @@ id: temporal-technical-writer
 name: Temporal Technical Writer
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: Temporal
@@ -45,7 +46,6 @@ submission:
     cover_letter: cover-letters/temporal-technical-writer-alchemized
   materials_attached:
   - resumes/batch-03/temporal-technical-writer/temporal-technical-writer-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'

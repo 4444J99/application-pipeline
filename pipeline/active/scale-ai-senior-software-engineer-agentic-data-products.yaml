@@ -2,6 +2,7 @@ id: scale-ai-senior-software-engineer-agentic-data-products
 name: Scale AI Senior Software Engineer, Agentic Data Products
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: Scale AI
@@ -45,7 +46,6 @@ submission:
     cover_letter: cover-letters/scale-ai-senior-software-engineer-agentic-data-products-alchemized
   materials_attached:
   - resumes/batch-03/scale-ai-senior-software-engineer-agentic-data-products/scale-ai-senior-software-engineer-agentic-data-products-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'

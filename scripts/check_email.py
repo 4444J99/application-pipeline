@@ -31,6 +31,8 @@ from pipeline_lib import (
     parse_date,
 )
 
+PIPELINE_DIR_CLOSED = Path(__file__).resolve().parent.parent / "pipeline" / "closed"
+
 MAIL_ACCOUNT = "padavano.anthony@gmail"
 MAILBOX = "[Gmail]/All Mail"
 
@@ -84,6 +86,13 @@ ATS_SENDERS = [
         "sender": "no-reply@stripe.com",
         "confirm_pattern": re.compile(
             r"Thanks for applying to (.+)", re.IGNORECASE
+        ),
+    },
+    {
+        "name": "Gem",
+        "sender": "no-reply@appreview.gem.com",
+        "confirm_pattern": re.compile(
+            r"Thank(?:s| you) for applying to (.+)", re.IGNORECASE
         ),
     },
 ]
@@ -396,76 +405,288 @@ def scan_confirmations(
     return confirmed, unconfirmed
 
 
+def _extract_role_from_subject(subject: str) -> str | None:
+    """Extract the role title from a response email subject line.
+
+    Recognizes patterns like:
+      - "Anthropic Follow-Up for Developer Education Lead | Name"
+      - "Your application for our Full Stack Engineer role at Stripe"
+      - "Update on your Role Title application"
+    """
+    patterns = [
+        # "Follow-Up for {Role} | Name" (Greenhouse)
+        re.compile(r"Follow[- ]?Up for (.+?)(?:\s*\||\s*$)", re.IGNORECASE),
+        # "Your application for our {Role} role at {Company}"
+        re.compile(r"Your application for (?:our |the )?(.+?)\s+role\s+at\s+", re.IGNORECASE),
+        # "Update on your {Role} application"
+        re.compile(r"Update on your (.+?) application", re.IGNORECASE),
+        # "Regarding your {Role} application"
+        re.compile(r"Regarding your (.+?) application", re.IGNORECASE),
+    ]
+    for pat in patterns:
+        m = pat.search(subject)
+        if m:
+            return m.group(1).strip()
+    return None
+
+
+def _match_role_to_entry(role_title: str, candidates: list[dict]) -> dict | None:
+    """Fuzzy-match an extracted role title against candidate entries.
+
+    Compares normalized words in the role title against each entry's title.
+    Returns the best match, or None if no reasonable match found.
+    """
+    role_words = set(re.sub(r"[^a-z0-9\s]", "", role_title.lower()).split())
+    # Filter out very common words that don't help distinguish roles
+    stop_words = {"the", "a", "an", "and", "or", "for", "at", "in", "of", "to",
+                   "senior", "staff", "lead", "jr", "ii", "iii",
+                   "software", "engineer", "developer", "manager", "director"}
+    role_words -= stop_words
+
+    if not role_words:
+        return None
+
+    scored = []
+
+    for entry in candidates:
+        title = entry.get("title", "") or entry.get("name", "")
+        title_words = set(re.sub(r"[^a-z0-9\s]", "", title.lower()).split()) - stop_words
+        if not title_words:
+            continue
+        overlap = role_words & title_words
+        if not overlap:
+            continue
+        # Primary: overlap ratio against role words (what % of the role matched)
+        role_coverage = len(overlap) / len(role_words)
+        # Secondary: prefer entries with fewer extraneous words (tighter match)
+        extraneous = len(title_words - role_words)
+        scored.append((role_coverage, -extraneous, entry))
+
+    if not scored:
+        return None
+
+    scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
+    best_coverage = scored[0][0]
+
+    # Require at least 40% of role words to match
+    return scored[0][2] if best_coverage >= 0.4 else None
+
+
+def _search_mail_by_subject(subject_fragment: str, days: int = 90) -> list[dict]:
+    """Search Mail.app for messages with a subject containing the fragment.
+
+    Sender-agnostic — catches rejections from any ATS or recruiter.
+    Subject search is indexed and fast (unlike body search which can timeout).
+    """
+    escaped = subject_fragment.replace('"', '\\"')
+    script = f'''
+tell application "Mail"
+    set cutoff to (current date) - {days} * days
+    set msgs to (messages of mailbox "{MAILBOX}" of account "{MAIL_ACCOUNT}" ¬
+        whose subject contains "{escaped}" and date received > cutoff)
+    set results to ""
+    repeat with m in msgs
+        set results to results & (subject of m) & "{FIELD_SEP}" & (sender of m) & "{FIELD_SEP}" & ((date received of m) as string) & "{RECORD_SEP}"
+    end repeat
+    return results
+end tell
+'''
+    try:
+        result = subprocess.run(
+            ["osascript", "-e", script],
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+    except subprocess.TimeoutExpired:
+        return []
+
+    if result.returncode != 0:
+        return []
+
+    raw = result.stdout.strip()
+    if not raw:
+        return []
+
+    messages = []
+    seen = set()
+    for record in raw.split(RECORD_SEP):
+        record = record.strip()
+        if not record:
+            continue
+        parts = record.split(FIELD_SEP)
+        if len(parts) >= 3:
+            key = (parts[0].strip(), parts[2].strip())
+            if key in seen:
+                continue
+            seen.add(key)
+            messages.append({
+                "subject": parts[0].strip(),
+                "sender": parts[1].strip(),
+                "date_str": parts[2].strip(),
+            })
+    return messages
+
+
 def scan_responses(
     entries: list[dict],
     org_index: dict[str, list[dict]],
     days: int,
     target_id: str | None = None,
+    closed_ids: set[str] | None = None,
 ) -> list[dict]:
     """Scan for rejection/interview response emails.
 
-    Fetches email bodies for non-confirmation emails and classifies them.
-    """
-    responses = []
+    Two-phase approach:
+    1. Known ATS senders — targeted search by sender address
+    2. Catch-all body scan — searches ALL emails for rejection/interview
+       keywords regardless of sender, catching unknown ATS platforms
 
+    Narrows matches to the specific role mentioned in the subject line
+    to avoid broadcasting one rejection to all entries at an org.
+    Skips entries already in closed/ to avoid false re-matches.
+    """
+    if closed_ids is None:
+        closed_ids = set()
+    responses = []
+    seen_entry_ids = set()
+    seen_subjects = set()
+
+    # Build set of known org names for matching
+    all_org_names = {}
+    for norm_org, org_entries in org_index.items():
+        if org_entries:
+            target = org_entries[0].get("target", {})
+            org_name = target.get("organization", "") if isinstance(target, dict) else ""
+            if org_name:
+                all_org_names[org_name.lower()] = org_entries
+
+    def _process_email(email, body, source_label):
+        """Process a single email: match to entry, classify, record."""
+        subject_key = (email["subject"], email.get("date_str", ""))
+        if subject_key in seen_subjects:
+            return
+        seen_subjects.add(subject_key)
+
+        email_date = parse_apple_date(email["date_str"])
+        matches = []
+
+        # Try subject-based org matching
+        subject_lower = email["subject"].lower()
+        for org_name_lower, org_entries in all_org_names.items():
+            if org_name_lower in subject_lower:
+                matches = org_entries
+                break
+
+        # Also try body-based org matching if subject didn't match
+        if not matches and body:
+            body_lower = body.lower()
+            for org_name_lower, org_entries in all_org_names.items():
+                # Only match org names in the first 500 chars (avoid footer noise)
+                if org_name_lower in body_lower[:500]:
+                    matches = org_entries
+                    break
+
+        if not matches:
+            return
+
+        # Narrow to specific role
+        if len(matches) > 1:
+            role_title = _extract_role_from_subject(email["subject"])
+            if role_title:
+                specific = _match_role_to_entry(role_title, matches)
+                if specific:
+                    matches = [specific]
+                else:
+                    matches = [matches[0]]
+            else:
+                # Try role from body
+                if body:
+                    for entry in matches:
+                        title = entry.get("title", "") or entry.get("name", "")
+                        if title and title.lower() in body.lower():
+                            matches = [entry]
+                            break
+                    else:
+                        matches = [matches[0]]
+                else:
+                    matches = [matches[0]]
+
+        classification = classify_email(email["subject"], body)
+
+        if classification in ("rejection", "interview"):
+            snippet = ""
+            if body:
+                body_lower = body.lower()
+                keywords = REJECTION_KEYWORDS if classification == "rejection" else INTERVIEW_KEYWORDS
+                for kw in keywords:
+                    idx = body_lower.find(kw)
+                    if idx != -1:
+                        start = max(0, idx - 20)
+                        end = min(len(body), idx + len(kw) + 40)
+                        snippet = body[start:end].replace("\n", " ").strip()
+                        break
+
+            entry = matches[0]
+            eid = entry.get("id", "")
+            if target_id and eid != target_id:
+                return
+            if eid in closed_ids:
+                return
+            if eid in seen_entry_ids:
+                return
+            seen_entry_ids.add(eid)
+            responses.append({
+                "entry_id": eid,
+                "entry_name": entry.get("name", eid),
+                "classification": classification,
+                "email_subject": email["subject"],
+                "email_date": email_date,
+                "snippet": snippet,
+                "ats": source_label,
+            })
+
+    # Phase 1: Known ATS senders (fast, targeted)
     for ats in ATS_SENDERS:
         print(f"  Searching responses: {ats['name']}...")
         msgs = search_mail(ats["sender"], days)
 
         for email in msgs:
-            # Skip pure confirmations
             if ats["confirm_pattern"].search(email["subject"]):
                 continue
-
-            email_date = parse_apple_date(email["date_str"])
-            matches = match_email_to_entries(email, org_index, email_date)
-
-            if not matches:
-                # Try broader subject-based matching
-                subject_lower = email["subject"].lower()
-                for norm_org, org_entries in org_index.items():
-                    org_name = ""
-                    if org_entries:
-                        target = org_entries[0].get("target", {})
-                        org_name = target.get("organization", "") if isinstance(target, dict) else ""
-                    if org_name and org_name.lower() in subject_lower:
-                        matches = org_entries
-                        break
-
-            if not matches:
-                continue
-
-            # Fetch body for classification
             body = get_email_body(ats["sender"], email["subject"][:60])
-            classification = classify_email(email["subject"], body)
+            _process_email(email, body, ats["name"])
 
-            if classification in ("rejection", "interview"):
-                # Extract a snippet for display
-                snippet = ""
-                if body:
-                    body_lower = body.lower()
-                    keywords = REJECTION_KEYWORDS if classification == "rejection" else INTERVIEW_KEYWORDS
-                    for kw in keywords:
-                        idx = body_lower.find(kw)
-                        if idx != -1:
-                            start = max(0, idx - 20)
-                            end = min(len(body), idx + len(kw) + 40)
-                            snippet = body[start:end].replace("\n", " ").strip()
-                            break
+    # Phase 2: Catch-all subject pattern scan (catches unknown ATS platforms)
+    # Body-content search is too slow on large mailboxes; subject search is indexed.
+    print("  Searching responses: catch-all (subject patterns)...")
+    catchall_subject_patterns = [
+        "Update from",           # Gem rejection pattern
+        "Your application for",  # Stripe/generic rejection
+        "Your candidacy",        # Generic rejection
+        "An update on your",     # LinkedIn/generic
+        "Regarding your",        # Formal rejection
+        "We appreciate your interest",  # Generic rejection
+    ]
+    catchall_emails = []
+    for pattern in catchall_subject_patterns:
+        catchall_emails.extend(_search_mail_by_subject(pattern, days))
 
-                for entry in matches:
-                    eid = entry.get("id", "")
-                    if target_id and eid != target_id:
-                        continue
-                    responses.append({
-                        "entry_id": eid,
-                        "entry_name": entry.get("name", eid),
-                        "classification": classification,
-                        "email_subject": email["subject"],
-                        "email_date": email_date,
-                        "snippet": snippet,
-                        "ats": ats["name"],
-                    })
+    # Deduplicate catch-all results
+    seen_catchall = set()
+    for email in catchall_emails:
+        key = (email["subject"], email["date_str"])
+        if key in seen_catchall:
+            continue
+        seen_catchall.add(key)
+        # Skip if already seen from Phase 1
+        if (email["subject"], email.get("date_str", "")) in seen_subjects:
+            continue
+        # Fetch body to verify it's actually a rejection/interview
+        sender_addr = re.search(r"<([^>]+)>", email["sender"])
+        sender_for_query = sender_addr.group(1) if sender_addr else email["sender"]
+        body = get_email_body(sender_for_query, email["subject"][:60])
+        _process_email(email, body, "catch-all")
 
     return responses
 
@@ -682,6 +903,12 @@ def main():
 
     org_index = build_org_index(submitted)
 
+    # Also index closed entries so already-processed rejections resolve
+    # to the correct (closed) entry instead of a wrong living entry.
+    closed_entries = load_entries(dirs=[PIPELINE_DIR_CLOSED], include_filepath=True)
+    closed_ids = {e.get("id", "") for e in closed_entries}
+    org_index_with_closed = build_org_index(submitted + closed_entries)
+
     confirmed, unconfirmed, responses = [], [], []
 
     if scan_confirm:
@@ -692,7 +919,8 @@ def main():
 
     if scan_respond:
         responses = scan_responses(
-            submitted, org_index, args.days, args.target,
+            submitted, org_index_with_closed, args.days, args.target,
+            closed_ids=closed_ids,
         )
         print_responses(responses)
 

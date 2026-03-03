@@ -7,7 +7,7 @@ pipeline_status.py, standup.py, conversion_report.py, and score.py.
 
 import json
 import re
-from datetime import date, datetime
+from datetime import UTC, date, datetime
 from pathlib import Path
 
 import yaml
@@ -94,6 +94,11 @@ EFFORT_MINUTES = {
     "deep": 270,
     "complex": 720,
 }
+
+# Job posting freshness thresholds (hours)
+JOB_FRESH_HOURS = 24       # prime submission window
+JOB_WARM_HOURS = 48        # still actionable
+JOB_STALE_HOURS = 72       # auto-expire threshold
 
 # Canonical scoring dimensions — single source of truth for score.py and validate.py.
 DIMENSION_ORDER = [
@@ -332,7 +337,10 @@ def get_score(entry: dict) -> float:
     """Get composite fit score."""
     fit = entry.get("fit", {})
     if isinstance(fit, dict):
-        return float(fit.get("score", 0))
+        raw = fit.get("score", 0)
+        if raw is None:
+            return 0.0
+        return float(raw)
     return 0.0
 
 
@@ -633,6 +641,18 @@ def detect_portal(url: str) -> str | None:
 SUBMIT_CONFIG_PATH = Path(__file__).resolve().parent / ".submit-config.yaml"
 
 
+def detect_entry_portal(entry: dict) -> str:
+    """Detect portal type from entry fields (dict-level wrapper).
+
+    Checks target.portal first, then falls back to URL-based detection.
+    """
+    portal = (entry.get("target") or {}).get("portal", "")
+    if portal:
+        return portal
+    app_url = (entry.get("target") or {}).get("application_url", "")
+    return detect_portal(app_url) or "unknown"
+
+
 def load_submit_config(*, strict: bool = True) -> dict:
     """Load personal info from .submit-config.yaml.
 
@@ -647,6 +667,16 @@ def load_submit_config(*, strict: bool = True) -> dict:
         print(f"Error: Config file not found: {SUBMIT_CONFIG_PATH}", file=sys.stderr)
         print("Create it with first_name, last_name, email, phone fields.", file=sys.stderr)
         sys.exit(1)
+    # Warn if credentials file is readable by group/others
+    try:
+        mode = SUBMIT_CONFIG_PATH.stat().st_mode
+        if mode & 0o077:
+            import sys
+            print(f"WARNING: {SUBMIT_CONFIG_PATH.name} is readable by others (mode {oct(mode)})",
+                  file=sys.stderr)
+            print("  Fix with: chmod 600 " + str(SUBMIT_CONFIG_PATH), file=sys.stderr)
+    except OSError:
+        pass
     config = yaml.safe_load(SUBMIT_CONFIG_PATH.read_text())
     if not isinstance(config, dict):
         if not strict:
@@ -717,6 +747,13 @@ def resolve_resume(entry: dict) -> Path | None:
         mat_path = MATERIALS_DIR / m
         if mat_path.exists() and mat_path.suffix.lower() == ".pdf":
             return mat_path
+    # Fallback: look for sibling .pdf next to any .html resume reference
+    for m in materials:
+        mat_path = MATERIALS_DIR / m
+        if mat_path.suffix.lower() == ".html":
+            pdf_sibling = mat_path.with_suffix(".pdf")
+            if pdf_sibling.exists():
+                return pdf_sibling
     return None
 
 
@@ -896,6 +933,153 @@ def get_strategic_base() -> dict:
         if track not in result:
             result[track] = val
     return result
+
+
+# --- Job posting freshness utilities ---
+
+
+def _load_freshness_thresholds() -> tuple[float, float, float]:
+    """Load job posting freshness thresholds from market intelligence JSON.
+
+    Looks for a 'job_posting_freshness_hours' key with 'fresh', 'warm', and
+    'stale' sub-keys.  Falls back to the module-level JOB_FRESH_HOURS,
+    JOB_WARM_HOURS, JOB_STALE_HOURS constants when the JSON is missing or
+    malformed.
+
+    Returns:
+        (fresh_hours, warm_hours, stale_hours) as floats.
+    """
+    intel = load_market_intelligence()
+    thresholds = intel.get("job_posting_freshness_hours", {})
+    if not isinstance(thresholds, dict):
+        return float(JOB_FRESH_HOURS), float(JOB_WARM_HOURS), float(JOB_STALE_HOURS)
+    fresh = thresholds.get("fresh", JOB_FRESH_HOURS)
+    warm = thresholds.get("warm", JOB_WARM_HOURS)
+    stale = thresholds.get("stale", JOB_STALE_HOURS)
+    try:
+        return float(fresh), float(warm), float(stale)
+    except (TypeError, ValueError):
+        return float(JOB_FRESH_HOURS), float(JOB_WARM_HOURS), float(JOB_STALE_HOURS)
+
+
+def _parse_datetime_aware(date_str) -> datetime | None:
+    """Parse a date or datetime string into a timezone-aware UTC datetime.
+
+    Handles:
+      - datetime objects (from PyYAML)
+      - date objects (from PyYAML)
+      - ISO date strings: '2026-03-03'
+      - ISO datetime strings: '2026-03-03T08:15:00'
+      - ISO datetime with timezone: '2026-03-03T08:15:00+00:00'
+
+    Returns None if the input is empty or unparseable.
+    """
+    if not date_str:
+        return None
+    if isinstance(date_str, datetime):
+        if date_str.tzinfo is None:
+            return date_str.replace(tzinfo=UTC)
+        return date_str
+    if isinstance(date_str, date):
+        return datetime(date_str.year, date_str.month, date_str.day, tzinfo=UTC)
+    s = str(date_str).strip()
+    # Try ISO datetime with timezone offset
+    for fmt in ("%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d"):
+        try:
+            dt = datetime.strptime(s, fmt)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=UTC)
+            return dt
+        except ValueError:
+            continue
+    return None
+
+
+def get_posting_age_hours(entry: dict) -> float | None:
+    """Compute the age of a job posting in hours.
+
+    Checks date fields in priority order:
+      1. timeline.posting_date
+      2. timeline.discovered
+      3. timeline.date_added
+      4. last_touched
+
+    Returns age in hours as a float, or None if no usable date is found.
+    """
+    timeline = entry.get("timeline", {})
+    if not isinstance(timeline, dict):
+        timeline = {}
+
+    dt = None
+    for field in ("posting_date", "discovered", "date_added"):
+        dt = _parse_datetime_aware(timeline.get(field))
+        if dt is not None:
+            break
+
+    if dt is None:
+        dt = _parse_datetime_aware(entry.get("last_touched"))
+
+    if dt is None:
+        return None
+
+    now = datetime.now(UTC)
+    delta = now - dt
+    return delta.total_seconds() / 3600.0
+
+
+def get_freshness_tier(entry: dict) -> str | None:
+    """Return the freshness tier for a job-track entry.
+
+    Only applies to entries with track == 'job'. Returns None for all other
+    tracks.
+
+    Tiers:
+      - 'hot':     < fresh threshold (default 24h)
+      - 'warm':    fresh .. warm threshold (default 24-48h)
+      - 'cooling': warm .. stale threshold (default 48-72h)
+      - 'stale':   > stale threshold (default 72h)
+
+    Returns None if the entry is not a job or has no parseable date.
+    """
+    if entry.get("track") != "job":
+        return None
+
+    age = get_posting_age_hours(entry)
+    if age is None:
+        return None
+
+    fresh, warm, stale = _load_freshness_thresholds()
+
+    if age < fresh:
+        return "hot"
+    if age < warm:
+        return "warm"
+    if age < stale:
+        return "cooling"
+    return "stale"
+
+
+def compute_freshness_score(entry: dict) -> float:
+    """Return a 0.0-1.0 decay multiplier based on job posting age.
+
+    - Non-job entries always return 1.0 (no penalty).
+    - Job entries with no parseable date return 0.0 (assume stale).
+    - Otherwise, linear decay from 1.0 at 0 hours to 0.0 at the stale
+      threshold (default 72h). Values are clamped to [0.0, 1.0].
+    """
+    if entry.get("track") != "job":
+        return 1.0
+
+    age = get_posting_age_hours(entry)
+    if age is None:
+        return 0.0
+
+    _, _, stale = _load_freshness_thresholds()
+    if stale <= 0:
+        return 0.0
+
+    score = 1.0 - (age / stale)
+    return max(0.0, min(1.0, score))
 
 
 COMPANY_CAP = 3  # Max active+submitted entries per organization

@@ -265,10 +265,10 @@ entries:
   cover_letter_present: true
   custom_answers: true
   follow_up_count: 0
-  outcome: null
-  outcome_stage: null
-  response_date: null
-  time_to_response_days: null
+  outcome: rejected
+  outcome_stage: resume_screen
+  response_date: '2026-03-03'
+  time_to_response_days: 7
   feedback: null
 - id: together-ai
   submitted: '2026-02-24'
@@ -283,10 +283,10 @@ entries:
   cover_letter_present: true
   custom_answers: true
   follow_up_count: 0
-  outcome: null
-  outcome_stage: null
-  response_date: null
-  time_to_response_days: null
+  outcome: rejected
+  outcome_stage: resume_screen
+  response_date: '2026-03-03'
+  time_to_response_days: 7
   feedback: null
 - id: anthropic-developer-education-lead
   submitted: '2026-02-25'
@@ -295,10 +295,11 @@ entries:
   blocks_used:
   - cover-letter-only
   variant_id: cover-letters/anthropic-developer-education-lead-alchemized
-  outcome: acknowledged
-  response_date: '2026-02-27'
-  time_to_response_days: 2
+  outcome: rejected
+  response_date: '2026-03-03'
+  time_to_response_days: 6
   feedback: null
+  outcome_stage: resume_screen
 - id: anthropic-developer-relations-mcp
   submitted: '2026-02-25'
   track: job

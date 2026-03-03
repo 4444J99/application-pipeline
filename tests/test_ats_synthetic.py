@@ -1,13 +1,15 @@
-import pytest
-import urllib.request
 import json
-import sys
 import os
+import sys
+import urllib.request
+
+import pytest
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../scripts')))
 
 from greenhouse_submit import fetch_job_data, parse_greenhouse_url
 from lever_submit import parse_lever_url
+
 
 # Mark these tests so they can be run on a schedule and won't fail local fast CI
 # if there's no internet connection.

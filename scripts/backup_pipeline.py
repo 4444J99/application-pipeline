@@ -51,7 +51,7 @@ def backup_pipeline() -> str:
                 capture_output=True,
                 timeout=10
             )
-            print(f"  Committed to git")
+            print("  Committed to git")
         except Exception as e:
             print(f"  (git commit failed: {e}, but backup file created)")
         
@@ -104,7 +104,7 @@ def restore_pipeline(backup_path: str) -> None:
                 capture_output=True,
                 timeout=10
             )
-            print(f"  Committed restoration to git")
+            print("  Committed restoration to git")
         except Exception as e:
             print(f"  (git commit failed: {e}, but restoration completed)")
     

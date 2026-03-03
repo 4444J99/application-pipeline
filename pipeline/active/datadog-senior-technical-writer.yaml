@@ -2,6 +2,7 @@ id: datadog-senior-technical-writer
 name: Datadog Senior Technical Writer
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: Datadog
@@ -46,7 +47,6 @@ submission:
     cover_letter: cover-letters/datadog-senior-technical-writer-alchemized
   materials_attached:
   - resumes/batch-03/datadog-senior-technical-writer/datadog-senior-technical-writer-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'

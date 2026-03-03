@@ -2,6 +2,7 @@ id: temporal-staff-developer-advocate-platform-engineering
 name: Temporal Staff Developer Advocate, Platform Engineering
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: Temporal
@@ -45,7 +46,6 @@ submission:
     cover_letter: cover-letters/temporal-staff-developer-advocate-platform-engineering-alchemized
   materials_attached:
   - resumes/batch-03/temporal-staff-developer-advocate-platform-engineering/temporal-staff-developer-advocate-platform-engineering-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'

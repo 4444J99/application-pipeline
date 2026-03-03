@@ -59,7 +59,8 @@ def _load_urgency_thresholds() -> dict:
         with open(intel_file) as f:
             intel = json.load(f)
         return intel.get("urgency_thresholds", {"by_effort": {}, "default": defaults})
-    except Exception:
+    except (json.JSONDecodeError, OSError) as e:
+        print(f"  [warn] Could not load urgency thresholds: {e}", file=sys.stderr)
         return {"by_effort": {}, "default": defaults}
 
 

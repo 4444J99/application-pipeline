@@ -2,6 +2,7 @@ id: anthropic-software-engineer-windows-claude-code
 name: Anthropic Software Engineer, Windows - Claude Code
 track: job
 status: acknowledged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: Anthropic

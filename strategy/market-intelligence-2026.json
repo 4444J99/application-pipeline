@@ -392,6 +392,13 @@
     "intelligence_staleness": 90,
     "note": "entry_stale = no review in 7d (standup STAGNANT alert). response_overdue triggers check_outcomes.py alerts. response_ghosted_job = 3x median_response_days (14d) per Careery.pro data."
   },
+  "job_freshness": {
+    "hot_hours": 24,
+    "warm_hours": 48,
+    "stale_hours": 72,
+    "freshness_policy_start_date": "2026-03-04",
+    "note": "Job postings receive 80% of applications in first 48h. After 72h, conversion probability drops below cold-app baseline."
+  },
   "ats_analysis": {
     "companies_using_ai_screening": 0.83,
     "ats_auto_rejection_myth": "ATS rarely auto-rejects; recruiter keyword search + volume creates effective rejection via non-visibility",

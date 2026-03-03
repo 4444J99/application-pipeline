@@ -58,7 +58,9 @@ COMMANDS = {
     "batch":       ("batch_submit.py", [],               "Batch submit staged rolling-deadline entries (dry-run)"),
     "tracker":     ("blind_spot_tracker.py", [],         "Blind spot progress tracker with actionable items"),
     "dashboard":   ("conversion_dashboard.py", [],       "Conversion intelligence dashboard"),
-    "freshness":   ("freshness_monitor.py", [],          "Entry freshness report (posting age analysis)"),
+    "freshness":      ("freshness_monitor.py", [],          "Entry freshness report (posting age analysis)"),
+    "jobfreshness":   ("standup.py", ["--section", "jobfreshness"], "Job freshness dashboard: hot/warm/stale postings"),
+    "expirejobs":     ("freshness_monitor.py", ["--auto-expire-jobs"], "Auto-expire stale job postings (dry-run)"),
     "agent":       ("agent.py", ["--plan"],              "Agent: preview planned autonomous actions"),
     "deferred":    ("check_deferred.py", [],              "Deferred entries: overdue and upcoming re-activations"),
     "backup":      ("backup_pipeline.py", ["list"],       "List pipeline backups"),
@@ -71,6 +73,9 @@ COMMANDS = {
     "jobprofiles": ("generate_job_profile.py", ["--batch", "--dry-run"], "Preview missing job profiles for auto-sourced entries"),
     "bridge":      ("portfolio_bridge.py", [],           "Portfolio-pipeline work sample suggestions"),
     "warmintro":   ("warm_intro_audit.py", [],            "Warm intro audit: referral paths and org density"),
+    "discover":    ("discover_jobs.py", [],                "Skill-based job discovery across free APIs"),
+    "audit":       ("submission_audit.py", [],              "Batch submission readiness diagnostic"),
+    "submitall":   ("submit_ready.py", [],                   "Submit all audit-ready entries (dry-run)"),
 }
 
 # --- Parameterized commands (word + target ID) ---
@@ -91,6 +96,7 @@ PARAM_COMMANDS = {
     "tailor":     ("tailor_resume.py", ["--target"],     "Tailor resume for a specific entry"),
     "samples":    ("portfolio_bridge.py", ["--target"],  "Suggest work samples for an entry"),
     "jobprofile": ("generate_job_profile.py", ["--target"], "Generate minimal profile for auto-sourced job entry"),
+    "discover":   ("discover_jobs.py", ["--position"],     "Discover jobs for a specific identity position"),
 }
 
 

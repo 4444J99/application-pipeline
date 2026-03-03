@@ -2,6 +2,7 @@ id: openai-forward-deployed-engineer-fde-nyc
 name: OpenAI Forward Deployed Engineer (FDE) - NYC
 track: job
 status: acknowledged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: OpenAI

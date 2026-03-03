@@ -2,6 +2,7 @@ id: mongodb-senior-developer-advocate
 name: MongoDB Senior Developer Advocate
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: MongoDB
@@ -45,7 +46,6 @@ submission:
     cover_letter: cover-letters/mongodb-senior-developer-advocate-alchemized
   materials_attached:
   - resumes/batch-03/mongodb-senior-developer-advocate/mongodb-senior-developer-advocate-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'

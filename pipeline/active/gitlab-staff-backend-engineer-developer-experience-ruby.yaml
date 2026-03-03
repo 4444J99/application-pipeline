@@ -2,6 +2,7 @@ id: gitlab-staff-backend-engineer-developer-experience-ruby
 name: GitLab Staff Backend Engineer, Developer Experience (Ruby)
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: GitLab
@@ -46,7 +47,6 @@ submission:
     cover_letter: cover-letters/gitlab-staff-backend-engineer-developer-experience-ruby-alchemized
   materials_attached:
   - resumes/batch-03/gitlab-staff-backend-engineer-developer-experience-ruby/gitlab-staff-backend-engineer-developer-experience-ruby-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'

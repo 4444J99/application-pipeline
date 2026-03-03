@@ -2,6 +2,7 @@ id: dbt-labs-senior-developer-experience-advocate
 name: dbt Labs Senior Developer Experience Advocate
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: dbt Labs
@@ -18,14 +19,14 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.3
+  score: 8.2
   identity_position: independent-engineer
   dimensions:
     mission_alignment: 9
     evidence_match: 10
     track_record_fit: 7
     financial_alignment: 5
-    effort_to_value: 7
+    effort_to_value: 6
     strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
@@ -45,7 +46,6 @@ submission:
     cover_letter: cover-letters/dbt-labs-senior-developer-experience-advocate-alchemized
   materials_attached:
   - resumes/batch-03/dbt-labs-senior-developer-experience-advocate/dbt-labs-senior-developer-experience-advocate-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'

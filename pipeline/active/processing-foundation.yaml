@@ -2,6 +2,7 @@ id: processing-foundation
 name: Processing Foundation Fellowship
 track: fellowship
 status: staged
+identity_position: educator
 outcome: null
 target:
   organization: Processing Foundation
@@ -40,7 +41,8 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
-  variant_ids: {}
+  variant_ids:
+    cover_letter: cover-letters/grant-art-template
   materials_attached:
   - resumes/batch-03/processing-foundation/processing-foundation-resume.html
   - resumes/batch-03/processing-foundation/processing-foundation-resume.pdf

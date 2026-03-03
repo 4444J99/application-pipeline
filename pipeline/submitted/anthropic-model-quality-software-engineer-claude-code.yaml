@@ -2,6 +2,7 @@ id: anthropic-model-quality-software-engineer-claude-code
 name: Anthropic Model Quality Software Engineer, Claude Code
 track: job
 status: acknowledged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: Anthropic

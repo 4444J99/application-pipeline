@@ -2,6 +2,7 @@ id: openai-software-engineer-full-stack-developer-experience
 name: OpenAI Software Engineer, Full-Stack — Developer Experience
 track: job
 status: staged
+identity_position: independent-engineer
 outcome: null
 target:
   organization: OpenAI
@@ -44,7 +45,6 @@ submission:
     cover_letter: cover-letters/openai-software-engineer-full-stack-developer-experience-alchemized
   materials_attached:
   - resumes/batch-03/openai-software-engineer-full-stack-developer-experience/openai-software-engineer-full-stack-developer-experience-resume.html
-  - resumes/independent-engineer-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-26'

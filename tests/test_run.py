@@ -1,13 +1,13 @@
-import pytest
-import sys
 import os
-import subprocess
-from pathlib import Path
+import sys
+
+import pytest
 
 # Ensure scripts dir is in path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../scripts')))
 
 from run import run_command
+
 
 def test_run_standalone_command(mocker):
     """Verify run_command calls subprocess.run correctly for standalone commands."""

@@ -26,9 +26,12 @@ from pipeline_lib import (
     REPO_ROOT,
     SIGNALS_DIR,
     VALID_TRANSITIONS,
+    compute_freshness_score,
     days_until,
     get_deadline,
     get_effort,
+    get_freshness_tier,
+    get_posting_age_hours,
     get_score,
     load_entries,
     parse_date,
@@ -235,7 +238,15 @@ def section_plan(entries: list[dict], hours: float) -> dict:
         scored.append(e)
 
     urgent.sort(key=lambda x: x[0])
-    scored.sort(key=lambda x: get_score(x), reverse=True)
+    # Rank by score, weighting job entries by posting freshness so hot jobs
+    # surface above warm ones even at equal score.
+    def _plan_sort_key(e):
+        base = get_score(e)
+        if e.get("track") == "job":
+            return base * compute_freshness_score(e)
+        return base
+
+    scored.sort(key=_plan_sort_key, reverse=True)
 
     print(f"3. TODAY'S WORK PLAN ({hours:.1f}h budget, {budget} min)")
     planned = []
@@ -257,17 +268,22 @@ def section_plan(entries: list[dict], hours: float) -> dict:
                 planned.append(e)
 
     if scored:
-        print("   BY SCORE:")
+        print("   BY SCORE (jobs weighted by freshness):")
         for e in scored:
             effort = get_effort(e)
             est = EFFORT_MINUTES.get(effort, 90)
-            score = get_score(e)
             name = e.get("name", e.get("id", "?"))
             status = e.get("status", "?")
             fits = used + est <= budget
             tag = "" if fits else " [OVER BUDGET]"
-            print(f"     [{score:.1f}] {name} — {status} — "
-                  f"{effort} (~{est}min){tag}")
+            effective = _plan_sort_key(e)
+            freshness_suffix = ""
+            if e.get("track") == "job":
+                badge = _freshness_badge(e)
+                if badge:
+                    freshness_suffix = f" {badge}"
+            print(f"     [{effective:.1f}] {name} — {status} — "
+                  f"{effort} (~{est}min){tag}{freshness_suffix}")
             if fits:
                 used += est
                 planned.append(e)
@@ -775,6 +791,7 @@ SECTIONS = {
     "readiness": "Staged entry readiness scores and blockers",
     "log": "Append session record to standup-log.yaml",
     "jobs": "Job pipeline status",
+    "jobfreshness": "Job posting freshness tiers (hot/warm/cooling/stale)",
     "opportunities": "Opportunity pipeline (grants/residencies/prizes/writing)",
     "market": "Market conditions, hot skills, and upcoming grant deadlines",
     "funding": "Funding pulse: viability score, top pathways, urgent blind spots",
@@ -892,6 +909,33 @@ def section_readiness(entries: list[dict]):
 
 
 # ---------------------------------------------------------------------------
+# Job freshness badge helper
+# ---------------------------------------------------------------------------
+
+_FRESHNESS_BADGES = {
+    "hot": "[HOT <24h]",
+    "warm": "[WARM 24-48h]",
+    "cooling": "[COOLING 48-72h]",
+    "stale": "[STALE >72h]",
+}
+
+
+def _freshness_badge(entry: dict) -> str:
+    """Return a freshness indicator string for a job entry.
+
+    Non-job entries return an empty string.  Job entries with no parseable
+    date return '[AGE?]'.
+    """
+    if entry.get("track") != "job":
+        return ""
+    age = get_posting_age_hours(entry)
+    if age is None:
+        return "[AGE?]"
+    tier = get_freshness_tier(entry)
+    return _FRESHNESS_BADGES.get(tier, "[AGE?]")
+
+
+# ---------------------------------------------------------------------------
 # Section: Job Pipeline
 # ---------------------------------------------------------------------------
 
@@ -939,7 +983,8 @@ def section_jobs(entries: list[dict]):
             tags = e.get("tags", [])
             if isinstance(tags, list) and "auto-sourced" in tags:
                 tags_str = " [auto]"
-            print(f"     [{score:.1f}] {name} — {status} [{portal}]{tags_str}")
+            freshness_badge = _freshness_badge(e)
+            print(f"     [{score:.1f}] {name} — {status} [{portal}]{tags_str} {freshness_badge}")
 
     # Submitted jobs
     submitted_jobs = [e for e in job_entries if e.get("status") in ("submitted", "acknowledged", "interview")]
@@ -957,6 +1002,73 @@ def section_jobs(entries: list[dict]):
                     days_waiting = (date.today() - sd).days
                     days_str = f" ({days_waiting}d ago)"
             print(f"     {name} — {status}{days_str}")
+
+    print()
+
+
+# ---------------------------------------------------------------------------
+# Section: Job Freshness
+# ---------------------------------------------------------------------------
+
+def section_job_freshness(entries: list[dict]):
+    """Show job posting freshness breakdown: hot/warm/cooling/stale counts and listings."""
+    job_entries = [e for e in entries
+                   if e.get("track") == "job" and e.get("status") in ACTIONABLE_STATUSES]
+
+    print("JOB FRESHNESS")
+
+    if not job_entries:
+        print("   No actionable job entries.")
+        print()
+        return
+
+    # Bucket entries by tier
+    buckets: dict[str, list[dict]] = {
+        "hot": [], "warm": [], "cooling": [], "stale": [], "unknown": [],
+    }
+    for e in job_entries:
+        age = get_posting_age_hours(e)
+        if age is None:
+            buckets["unknown"].append(e)
+        else:
+            tier = get_freshness_tier(e) or "unknown"
+            buckets[tier].append(e)
+
+    hot = buckets["hot"]
+    warm = buckets["warm"]
+    cooling = buckets["cooling"]
+    stale = buckets["stale"]
+    unknown = buckets["unknown"]
+
+    print(f"   HOT: {len(hot)}  |  WARM: {len(warm)}  |  COOLING: {len(cooling)}  |  STALE: {len(stale)}  |  AGE?: {len(unknown)}")
+    print()
+
+    if hot:
+        print("   HOT — submit NOW:")
+        for e in sorted(hot, key=lambda x: get_score(x), reverse=True):
+            name = e.get("name", e.get("id", "?"))
+            score = get_score(e)
+            print(f"     [{score:.1f}] {name}")
+
+    if warm:
+        print("   WARM — still viable today:")
+        for e in sorted(warm, key=lambda x: get_score(x), reverse=True):
+            name = e.get("name", e.get("id", "?"))
+            score = get_score(e)
+            print(f"     [{score:.1f}] {name}")
+
+    if cooling:
+        print("   COOLING — submit only if staged:")
+        for e in sorted(cooling, key=lambda x: get_score(x), reverse=True):
+            name = e.get("name", e.get("id", "?"))
+            score = get_score(e)
+            print(f"     [{score:.1f}] {name}")
+
+    if stale:
+        print(f"   {len(stale)} stale job entries — candidates for auto-expire")
+
+    if unknown:
+        print(f"   {len(unknown)} entries with no posting date (cannot determine freshness)")
 
     print()
 
@@ -1160,6 +1272,10 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
     # Track-filtered views
     if track_filter == "jobs" or section == "jobs":
         section_jobs(entries)
+        return
+
+    if section == "jobfreshness":
+        section_job_freshness(entries)
         return
 
     if track_filter == "opportunities" or section == "opportunities":

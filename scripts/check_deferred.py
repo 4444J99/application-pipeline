@@ -12,12 +12,12 @@ Usage:
 
 import argparse
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from pipeline_lib import load_entries, days_until
+from pipeline_lib import load_entries
 
 
 def check_deferred_entries(entries: list[dict]) -> dict:
@@ -37,7 +37,6 @@ def check_deferred_entries(entries: list[dict]) -> dict:
     deferred = [e for e in entries if e.get("status") == "deferred"]
     
     for entry in deferred:
-        entry_id = entry.get("id", "?")
         deferral = entry.get("deferral", {})
         
         if not isinstance(deferral, dict):
@@ -92,7 +91,7 @@ def run_check_deferred(alert_mode: bool = False, report_mode: bool = False):
         results["no_date"],
     )
     
-    print(f"DEFERRED ENTRIES ANALYSIS")
+    print("DEFERRED ENTRIES ANALYSIS")
     print("=" * 70)
     
     # OVERDUE (highest priority)
@@ -105,7 +104,7 @@ def run_check_deferred(alert_mode: bool = False, report_mode: bool = False):
             if alert_mode:
                 print(f"      [ALERT: {entry.get('id')} overdue]")
     else:
-        print(f"\n✓ No overdue entries")
+        print("\n✓ No overdue entries")
     
     # UPCOMING (next 7 days)
     if upcoming:
@@ -115,7 +114,7 @@ def run_check_deferred(alert_mode: bool = False, report_mode: bool = False):
             print(f"  ⏱️  {format_entry_summary(entry)}")
             print(f"      Ready to re-activate in {days} day(s)")
     else:
-        print(f"\n✓ No entries ready in next 7 days")
+        print("\n✓ No entries ready in next 7 days")
     
     # DISTANT (7+ days)
     if report_mode and distant:
@@ -133,7 +132,7 @@ def run_check_deferred(alert_mode: bool = False, report_mode: bool = False):
         print("-" * 70)
         for entry in no_date:
             print(f"  ❓ {format_entry_summary(entry)}")
-            print(f"     No resume_date set — clarify when re-activation is possible")
+            print("     No resume_date set — clarify when re-activation is possible")
     
     print("\n" + "=" * 70)
     print(f"Summary: {len(overdue)} overdue | {len(upcoming)} upcoming | "

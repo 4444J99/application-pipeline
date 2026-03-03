@@ -2,6 +2,7 @@ id: lacma-art-tech
 name: LACMA Art + Technology Lab
 track: grant
 status: staged
+identity_position: systems-artist
 outcome: null
 target:
   organization: Los Angeles County Museum of Art
@@ -34,8 +35,8 @@ fit:
     evidence_match: 9
     track_record_fit: 8
     financial_alignment: 4
-    effort_to_value: 8
-    strategic_value: 7
+    effort_to_value: 7
+    strategic_value: 8
     deadline_feasibility: 9
     portal_friction: 6
 submission:
