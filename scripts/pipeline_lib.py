@@ -945,6 +945,81 @@ def get_strategic_base() -> dict:
     return result
 
 
+# --- Pipeline mode functions ---
+
+PRECISION_PIVOT_DATE = "2026-03-04"
+
+_MODE_THRESHOLDS_DEFAULT = {
+    "precision": {"auto_qualify_min": 9.0, "max_active": 10, "max_weekly_submissions": 2, "stale_days": 14, "stagnant_days": 30},
+    "volume": {"auto_qualify_min": 7.0, "max_active": 30, "max_weekly_submissions": 10, "stale_days": 7, "stagnant_days": 14},
+    "hybrid": {"auto_qualify_min": 8.0, "max_active": 15, "max_weekly_submissions": 5, "stale_days": 10, "stagnant_days": 21},
+}
+
+
+def get_pipeline_mode() -> str:
+    """Return current pipeline mode from market intelligence (precision/volume/hybrid)."""
+    intel = load_market_intelligence()
+    strategy = intel.get("precision_strategy", {})
+    return strategy.get("mode", "precision")
+
+
+def get_mode_thresholds() -> dict:
+    """Return thresholds for the current pipeline mode."""
+    intel = load_market_intelligence()
+    strategy = intel.get("precision_strategy", {})
+    custom = strategy.get("mode_thresholds", {})
+    mode = strategy.get("mode", "precision")
+    if custom and mode in custom:
+        return custom[mode]
+    return _MODE_THRESHOLDS_DEFAULT.get(mode, _MODE_THRESHOLDS_DEFAULT["precision"])
+
+
+def get_mode_review_status() -> dict:
+    """Return review status for the precision pivot."""
+    from datetime import date as _date
+    intel = load_market_intelligence()
+    strategy = intel.get("precision_strategy", {})
+    review_str = strategy.get("review_date", "2026-04-04")
+    today = _date.today()
+    try:
+        review_date = _date.fromisoformat(review_str)
+    except (ValueError, TypeError):
+        review_date = _date(2026, 4, 4)
+    days_until_review = (review_date - today).days
+    return {
+        "review_date": review_str,
+        "days_until_review": days_until_review,
+        "past_review": days_until_review < 0,
+        "mode": get_pipeline_mode(),
+        "revert_trigger": strategy.get("revert_trigger", "0 interviews by review_date"),
+    }
+
+
+# --- Era derivation ---
+
+
+def get_entry_era(entry: dict) -> str:
+    """Derive 'volume' or 'precision' from timeline.submitted vs PRECISION_PIVOT_DATE.
+
+    Entries submitted before the pivot date are 'volume' era.
+    Entries submitted on or after, or not yet submitted, are 'precision' era.
+    """
+    timeline = entry.get("timeline", {})
+    if not isinstance(timeline, dict):
+        return "precision"
+    submitted_str = timeline.get("submitted")
+    if not submitted_str:
+        return "precision"
+    submitted_str = str(submitted_str).strip().strip('"')
+    try:
+        from datetime import date as _date
+        submitted_date = _date.fromisoformat(submitted_str)
+        pivot_date = _date.fromisoformat(PRECISION_PIVOT_DATE)
+        return "volume" if submitted_date < pivot_date else "precision"
+    except (ValueError, TypeError):
+        return "precision"
+
+
 # --- Job posting freshness utilities ---
 
 

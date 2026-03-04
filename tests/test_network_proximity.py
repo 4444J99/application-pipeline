@@ -213,3 +213,81 @@ class TestSignalPrecedence:
             outreach=[{"status": "done"}, {"status": "done"}],
         )
         assert score_network_proximity(entry) <= 10
+
+
+# ---------------------------------------------------------------------------
+# Time-decay tests (Tier 3H)
+# ---------------------------------------------------------------------------
+
+from datetime import date, timedelta
+
+
+def _days_ago(n: int) -> str:
+    """Return ISO date string for n days ago."""
+    return (date.today() - timedelta(days=n)).isoformat()
+
+
+class TestFollowUpDecay:
+    """Signal 3: follow-up response time decay."""
+
+    def test_fresh_response_min_7(self):
+        """Response 5 days ago -> min 7 (full boost)."""
+        entry = _make_entry(follow_up=[
+            {"response": "replied", "date": _days_ago(5)},
+        ])
+        assert score_network_proximity(entry) >= 7
+
+    def test_aging_response_min_5(self):
+        """Response 60 days ago -> min 5 (aging decay)."""
+        entry = _make_entry(follow_up=[
+            {"response": "replied", "date": _days_ago(60)},
+        ])
+        score = score_network_proximity(entry)
+        assert score >= 5
+        assert score < 7  # should not get full boost
+
+    def test_stale_response_min_3(self):
+        """Response 120 days ago -> min 3 (stale decay)."""
+        entry = _make_entry(follow_up=[
+            {"response": "replied", "date": _days_ago(120)},
+        ])
+        score = score_network_proximity(entry)
+        assert score >= 3
+        assert score < 5  # should not get aging boost
+
+    def test_expired_response_no_boost(self):
+        """Response 200 days ago -> no boost (expired)."""
+        entry = _make_entry(follow_up=[
+            {"response": "replied", "date": _days_ago(200)},
+        ])
+        score = score_network_proximity(entry)
+        assert score == 1  # cold default, no boost
+
+    def test_no_date_follow_up_gets_full_boost(self):
+        """Legacy follow-up without date -> benefit of doubt, min 7."""
+        entry = _make_entry(follow_up=[
+            {"response": "replied"},  # no date field
+        ])
+        assert score_network_proximity(entry) >= 7
+
+
+class TestOutreachDecay:
+    """Signal 5: outreach staleness."""
+
+    def test_stale_outreach_no_boost(self):
+        """Outreach completed 90 days ago -> no boost."""
+        entry = _make_entry(outreach=[
+            {"status": "done", "date": _days_ago(90)},
+            {"status": "done", "date": _days_ago(90)},
+        ])
+        score = score_network_proximity(entry)
+        assert score == 1  # cold default, stale outreach gives no boost
+
+    def test_recent_outreach_gets_boost(self):
+        """Outreach completed recently -> gets boost."""
+        entry = _make_entry(outreach=[
+            {"status": "done", "date": _days_ago(10)},
+            {"status": "done", "date": _days_ago(5)},
+        ])
+        score = score_network_proximity(entry)
+        assert score >= 4

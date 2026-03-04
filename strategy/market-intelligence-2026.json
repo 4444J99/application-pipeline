@@ -735,12 +735,20 @@
   },
   "precision_strategy": {
     "mode": "precision",
+    "pivot_date": "2026-03-04",
+    "review_date": "2026-04-04",
+    "revert_trigger": "0 interviews by review_date",
     "max_active_entries": 10,
     "max_weekly_submissions": 2,
     "min_score_to_apply": 9.0,
     "daily_hours_research": 2,
     "daily_hours_relationship": 2,
     "daily_hours_application": 1,
+    "mode_thresholds": {
+      "precision": {"auto_qualify_min": 9.0, "max_active": 10, "max_weekly_submissions": 2, "stale_days": 14, "stagnant_days": 30},
+      "volume": {"auto_qualify_min": 7.0, "max_active": 30, "max_weekly_submissions": 10, "stale_days": 7, "stagnant_days": 14},
+      "hybrid": {"auto_qualify_min": 8.0, "max_active": 15, "max_weekly_submissions": 5, "stale_days": 10, "stagnant_days": 21}
+    },
     "note": "Precision-over-volume pivot (2026-03-04). 60 cold apps in 4 days → 0 interviews. Optimize for finding perfect-fit roles and building relationships, not throughput."
   }
 }

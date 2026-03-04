@@ -77,6 +77,11 @@ COMMANDS = {
     "jobprofiles": ("generate_job_profile.py", ["--batch", "--dry-run"], "Preview missing job profiles for auto-sourced entries"),
     "bridge":      ("portfolio_bridge.py", [],           "Portfolio-pipeline work sample suggestions"),
     "warmintro":   ("warm_intro_audit.py", [],            "Warm intro audit: referral paths and org density"),
+    "reachable":   ("score.py", ["--reachable"],           "Reachability analysis: entries that network can unlock"),
+    "triagestaged": ("score.py", ["--triage-staged"],      "Triage staged entries: submit-ready / hold / demote"),
+    "enrichnetwork": ("enrich.py", ["--network"],          "Hydrate network fields from existing signals"),
+    "relationships": ("standup.py", ["--section", "relationships"], "Relationship cultivation dashboard"),
+    "cultivate":   ("cultivate.py", ["--candidates"],       "Relationship cultivation candidates"),
     "discover":    ("discover_jobs.py", [],                "Skill-based job discovery across free APIs"),
     "audit":       ("submission_audit.py", [],              "Batch submission readiness diagnostic"),
     "submitall":   ("submit_ready.py", [],                   "Submit all audit-ready entries (dry-run)"),
@@ -106,6 +111,7 @@ PARAM_COMMANDS = {
     "jobprofile": ("generate_job_profile.py", ["--target"], "Generate minimal profile for auto-sourced job entry"),
     "discover":   ("discover_jobs.py", ["--position"],     "Discover jobs for a specific identity position"),
     "review":     ("review_entry.py", ["--target"],        "Mark an entry reviewed for submission governance"),
+    "cultivate":  ("cultivate.py", ["--plan"],              "Generate cultivation plan for an entry"),
 }
 
 

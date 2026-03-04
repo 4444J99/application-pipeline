@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """Analyze conversion rates by track, identity position, and framing."""
 
+import argparse
 import sys
 
 from pipeline_lib import (
     ALL_PIPELINE_DIRS,
     PIPELINE_DIR_RESEARCH_POOL,
     SIGNALS_DIR,
+    get_entry_era,
     load_entries,
 )
 
@@ -152,10 +154,21 @@ def response_time_analysis(entries: list[dict]):
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Conversion rate report")
+    parser.add_argument("--era", choices=["volume", "precision", "all"], default="all",
+                        help="Filter by pipeline era (volume=pre-pivot, precision=post-pivot)")
+    args = parser.parse_args()
+
     # Operational entries for conversion rate calculations
     operational = load_entries(dirs=ALL_PIPELINE_DIRS)
     # Research pool entries (reported separately)
     pool = load_entries(dirs=[PIPELINE_DIR_RESEARCH_POOL])
+
+    # Filter by era if specified
+    if args.era != "all":
+        operational = [e for e in operational if get_entry_era(e) == args.era]
+        pool = [e for e in pool if get_entry_era(e) == args.era]
+        print(f"[Era filter: {args.era}]")
 
     if not operational and not pool:
         print("No pipeline entries found.")

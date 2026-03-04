@@ -560,6 +560,113 @@ def run_enrich(
     print(f"Enriched {enriched} entries.")
 
 
+def enrich_network(entries: list[dict], all_entries: list[dict], dry_run: bool = True) -> int:
+    """Batch-populate network fields from existing signals. No overwrite.
+
+    Inference rules:
+    1. follow_up[].response in (replied, referred) -> relationship_strength: warm
+    2. conversion.channel == referral -> relationship_strength: strong
+    3. outreach[].status == done count >= 2 -> relationship_strength: acquaintance
+    4. Org density >= 3 -> estimate mutual_connections
+    5. Adds hydrated_from and hydrated_at for traceability
+    6. Never overwrites existing network.relationship_strength
+    """
+    from datetime import date as _date
+
+    enriched = 0
+    today_str = _date.today().isoformat()
+
+    # Build org density map
+    org_counts: dict[str, int] = {}
+    for e in all_entries:
+        org = (e.get("target") or {}).get("organization", "")
+        if org:
+            org_counts[org] = org_counts.get(org, 0) + 1
+
+    for entry in entries:
+        filepath = entry.get("_filepath")
+        if not filepath:
+            continue
+        entry_id = entry.get("id", "unknown")
+
+        network = entry.get("network") or {}
+        if not isinstance(network, dict):
+            network = {}
+
+        # Skip if already has relationship_strength set
+        if network.get("relationship_strength") and network["relationship_strength"] != "cold":
+            continue
+
+        # Infer relationship strength
+        inferred_strength = None
+        source = None
+
+        # Rule 2: referral channel -> strong
+        conversion = entry.get("conversion") or {}
+        if isinstance(conversion, dict) and conversion.get("channel") == "referral":
+            inferred_strength = "strong"
+            source = "conversion.channel=referral"
+
+        # Rule 1: follow-up responses -> warm (don't override strong)
+        if not inferred_strength:
+            follow_ups = entry.get("follow_up") or []
+            if isinstance(follow_ups, list):
+                has_response = any(
+                    isinstance(fu, dict) and fu.get("response") in ("replied", "referred")
+                    for fu in follow_ups
+                )
+                if has_response:
+                    inferred_strength = "warm"
+                    source = "follow_up.response"
+
+        # Rule 3: outreach count >= 2 -> acquaintance
+        if not inferred_strength:
+            outreach = entry.get("outreach") or []
+            if isinstance(outreach, list):
+                done_count = sum(1 for o in outreach if isinstance(o, dict) and o.get("status") == "done")
+                if done_count >= 2:
+                    inferred_strength = "acquaintance"
+                    source = f"outreach.done={done_count}"
+
+        if not inferred_strength:
+            # Rule 4: org density only (set mutual_connections estimate)
+            org = (entry.get("target") or {}).get("organization", "")
+            if org and org_counts.get(org, 0) >= 3:
+                if not network.get("mutual_connections"):
+                    if dry_run:
+                        print(f"  [dry-run] {entry_id}: network.mutual_connections <- {org_counts[org]} (org density)")
+                    else:
+                        content = filepath.read_text()
+                        # Add network section with mutual_connections
+                        if "\nnetwork:" not in content:
+                            content += f"\nnetwork:\n  mutual_connections: {org_counts[org]}\n  hydrated_from: org_density\n  hydrated_at: \"{today_str}\"\n"
+                        from pipeline_lib import atomic_write
+                        atomic_write(filepath, _update_last_touched(content))
+                        print(f"  {entry_id}: network.mutual_connections <- {org_counts[org]} (org density)")
+                    enriched += 1
+            continue
+
+        if dry_run:
+            print(f"  [dry-run] {entry_id}: network.relationship_strength <- {inferred_strength} (from {source})")
+        else:
+            content = filepath.read_text()
+            if "\nnetwork:" in content:
+                # Add relationship_strength under existing network section
+                content = content.replace(
+                    "\nnetwork:",
+                    f"\nnetwork:\n  relationship_strength: {inferred_strength}\n  hydrated_from: {source}\n  hydrated_at: \"{today_str}\"",
+                    1,
+                )
+            else:
+                content += f"\nnetwork:\n  relationship_strength: {inferred_strength}\n  hydrated_from: {source}\n  hydrated_at: \"{today_str}\"\n"
+            from pipeline_lib import atomic_write
+            atomic_write(filepath, _update_last_touched(content))
+            print(f"  {entry_id}: network.relationship_strength <- {inferred_strength} (from {source})")
+        enriched += 1
+
+    return enriched
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Batch-populate enrichment data across pipeline entries"
@@ -576,6 +683,8 @@ def main():
                         help="Wire cover letters into variant_ids")
     parser.add_argument("--portal", action="store_true",
                         help="Populate portal_fields from profile")
+    parser.add_argument("--network", action="store_true",
+                        help="Hydrate network fields from existing signals")
     parser.add_argument("--grant-template", action="store_true",
                         help="Also wire grant template to grant/residency/prize entries")
     parser.add_argument("--effort", choices=["quick", "standard", "deep", "complex"],
@@ -595,13 +704,26 @@ def main():
         run_report(entries)
         return
 
+    # Handle --network as a standalone enrichment mode
+    if args.network:
+        entries = load_entries(include_filepath=True)
+        all_entries = load_entries()
+        dry_run = not args.yes
+        if dry_run and not args.dry_run:
+            print("(Defaulting to dry-run. Use --yes to execute.)\n")
+        count = enrich_network(entries, all_entries, dry_run=dry_run)
+        print(f"\n{'─' * 60}")
+        label = " (dry-run)" if dry_run else ""
+        print(f"Network-enriched {count} entries{label}")
+        return
+
     do_materials = args.all or args.materials
     do_blocks = args.all or args.blocks
     do_variants = args.all or args.variants
     do_portal = args.all or args.portal
 
     if not (do_materials or do_blocks or do_variants or do_portal):
-        parser.error("Specify --all, --materials, --blocks, --variants, --portal, or --report")
+        parser.error("Specify --all, --materials, --blocks, --variants, --portal, --network, or --report")
 
     entries = load_entries(include_filepath=True)
     run_enrich(

@@ -1030,15 +1030,36 @@ def compute_human_dimensions(
 estimate_human_dimensions = compute_human_dimensions
 
 
+_NETWORK_DECAY = {
+    "response_fresh": 30,    # days — full boost
+    "response_aging": 90,    # reduced boost
+    "response_stale": 180,   # minimal boost
+    "outreach_stale": 60,    # done outreach older than this gives no boost
+}
+
+
+def _days_since(date_str: str | None) -> int | None:
+    """Return days since a date string, or None if unparseable/missing."""
+    if not date_str:
+        return None
+    try:
+        d = parse_date(str(date_str))
+        if d:
+            return (date.today() - d).days
+    except Exception:
+        pass
+    return None
+
+
 def score_network_proximity(entry: dict, all_entries: list[dict] | None = None) -> int:
     """Score network proximity (1-10) based on relationship signals.
 
     Signals checked (highest wins):
     - network.relationship_strength: cold=1, acquaintance=4, warm=7, strong=9, internal=10
     - conversion.channel == "referral": min 8
-    - follow_up entries with responses: min 7
+    - follow_up entries with responses: min 7 (fresh), 5 (aging), 3 (stale), 0 (expired)
     - network.mutual_connections >= 5: min 5
-    - outreach actions completed: min 4
+    - outreach actions completed (recent only): min 4
     - Org density (other entries at same org): min 3
     """
     score = 1  # default: cold/unknown
@@ -1061,15 +1082,27 @@ def score_network_proximity(entry: dict, all_entries: list[dict] | None = None) 
     if isinstance(conversion, dict) and conversion.get("channel") == "referral":
         score = max(score, 8)
 
-    # Signal 3: follow-up contacts with responses
+    # Signal 3: follow-up contacts with responses (time-decayed)
     follow_ups = entry.get("follow_up") or []
     if isinstance(follow_ups, list):
-        has_response = any(
-            isinstance(fu, dict) and fu.get("response") in ("replied", "referred")
-            for fu in follow_ups
-        )
-        if has_response:
-            score = max(score, 7)
+        for fu in follow_ups:
+            if not isinstance(fu, dict):
+                continue
+            if fu.get("response") not in ("replied", "referred"):
+                continue
+            # Check date for decay
+            fu_date = fu.get("date") or fu.get("response_date")
+            age = _days_since(fu_date)
+            if age is None:
+                # No date — benefit of doubt (legacy entries)
+                score = max(score, 7)
+            elif age <= _NETWORK_DECAY["response_fresh"]:
+                score = max(score, 7)
+            elif age <= _NETWORK_DECAY["response_aging"]:
+                score = max(score, 5)
+            elif age <= _NETWORK_DECAY["response_stale"]:
+                score = max(score, 3)
+            # else: expired (>180d) — no boost
 
     # Signal 4: mutual connections — shared network at the org
     if isinstance(network, dict):
@@ -1077,12 +1110,18 @@ def score_network_proximity(entry: dict, all_entries: list[dict] | None = None) 
         if isinstance(mutual, (int, float)) and mutual >= 5:
             score = max(score, 5)
 
-    # Signal 5: outreach actions completed
+    # Signal 5: outreach actions completed (recent only)
     outreach = entry.get("outreach") or []
     if isinstance(outreach, list):
-        done_count = sum(
-            1 for o in outreach if isinstance(o, dict) and o.get("status") == "done"
-        )
+        done_count = 0
+        for o in outreach:
+            if not isinstance(o, dict) or o.get("status") != "done":
+                continue
+            o_date = o.get("date") or o.get("completed_date")
+            age = _days_since(o_date)
+            if age is not None and age > _NETWORK_DECAY["outreach_stale"]:
+                continue  # stale outreach — skip
+            done_count += 1
         if done_count >= 2:
             score = max(score, 5)
         elif done_count >= 1:
@@ -1103,6 +1142,23 @@ def score_network_proximity(entry: dict, all_entries: list[dict] | None = None) 
                 score = max(score, 3)
 
     return max(1, min(10, score))
+
+
+def _log_network_change(entry_id: str, old_network: int, new_network: int, filepath: Path):
+    """Log signal-action when network_proximity score changes."""
+    if old_network == new_network:
+        return
+    try:
+        from log_signal_action import log_signal_action
+        log_signal_action(
+            signal_id=f"net-{entry_id}",
+            signal_type="network_change",
+            description=f"network_proximity {old_network} -> {new_network}",
+            action=f"Score updated in {filepath.name}",
+            entry_id=entry_id,
+        )
+    except Exception:
+        pass  # non-critical — don't break scoring
 
 
 def compute_dimensions(entry: dict, all_entries: list[dict] | None = None) -> dict[str, int]:
@@ -1349,8 +1405,22 @@ def run_qualify(entries: list[tuple[Path, dict]]):
     print(f"Total: {total_apply} APPLY | {total_skip} SKIP")
 
 
+def get_auto_qualify_min() -> float:
+    """Return the auto-qualify minimum score, mode-aware.
+
+    Checks mode_thresholds from market intelligence first, then falls back
+    to the rubric-defined AUTO_QUALIFY_MIN.
+    """
+    try:
+        from pipeline_lib import get_mode_thresholds
+        t = get_mode_thresholds()
+        return float(t.get("auto_qualify_min", AUTO_QUALIFY_MIN))
+    except ImportError:
+        return AUTO_QUALIFY_MIN
+
+
 def run_auto_qualify(dry_run: bool = False, yes: bool = False,
-                     min_score: float = AUTO_QUALIFY_MIN, limit: int = 0):
+                     min_score: float | None = None, limit: int = 0):
     """Batch-advance qualifying research_pool entries to qualified in active/.
 
     Loads entries from research_pool/, runs qualify() on each, filters by
@@ -1362,9 +1432,11 @@ def run_auto_qualify(dry_run: bool = False, yes: bool = False,
     Args:
         dry_run: If True, show preview without moving files.
         yes: If True, execute the moves. Without --yes or --dry-run, defaults to dry-run.
-        min_score: Minimum composite score for auto-qualify (default from rubric).
+        min_score: Minimum composite score for auto-qualify (default from mode thresholds).
         limit: Maximum entries to promote (0 = unlimited). Highest scores first.
     """
+    if min_score is None:
+        min_score = get_auto_qualify_min()
     import shutil
 
     # Default to dry-run unless --yes is explicitly passed
@@ -1608,6 +1680,175 @@ def review_compressed(entries: list[tuple[Path, dict]], lo: float = 6.5, hi: flo
     print("Edit each YAML's fit.dimensions fields, then run `score.py --all` to recalculate composites.")
 
 
+_NETWORK_LEVELS = [
+    ("acquaintance", 4),
+    ("warm", 7),
+    ("strong", 9),
+    ("internal", 10),
+]
+
+
+def analyze_reachability(entry: dict, all_entries: list[dict] | None = None,
+                         threshold: float = 9.0) -> dict:
+    """Per-entry gap analysis: current score, scenarios at each network level, reachable_with.
+
+    Returns dict with keys: entry_id, current_composite, current_network, scenarios,
+    reachable_with (minimum relationship level crossing threshold, or None).
+    """
+    entry_id = entry.get("id", "unknown")
+    track = entry.get("track", "")
+    dims = compute_dimensions(entry, all_entries)
+    current_composite = compute_composite(dims, track)
+    current_network = dims.get("network_proximity", 1)
+
+    scenarios = []
+    reachable_with = None
+    for level_name, level_score in _NETWORK_LEVELS:
+        if level_score <= current_network:
+            continue
+        test_dims = dict(dims)
+        test_dims["network_proximity"] = level_score
+        scenario_composite = compute_composite(test_dims, track)
+        scenarios.append({
+            "level": level_name,
+            "network_score": level_score,
+            "composite": scenario_composite,
+            "delta": round(scenario_composite - current_composite, 1),
+            "crosses_threshold": scenario_composite >= threshold,
+        })
+        if scenario_composite >= threshold and reachable_with is None:
+            reachable_with = level_name
+
+    return {
+        "entry_id": entry_id,
+        "current_composite": current_composite,
+        "current_network": current_network,
+        "threshold": threshold,
+        "scenarios": scenarios,
+        "reachable_with": reachable_with,
+    }
+
+
+def run_reachable(threshold: float = 9.0):
+    """Display reachability for all actionable entries, grouped by reachable/unreachable."""
+    entries_raw = _load_entries_raw(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
+    actionable = [e for e in entries_raw if e.get("status") in {"research", "qualified", "drafting", "staged"}]
+
+    if not actionable:
+        print("No actionable entries found.")
+        return
+
+    reachable = []
+    unreachable = []
+    already_above = []
+
+    for entry in actionable:
+        result = analyze_reachability(entry, entries_raw, threshold)
+        if result["current_composite"] >= threshold:
+            already_above.append(result)
+        elif result["reachable_with"]:
+            reachable.append(result)
+        else:
+            unreachable.append(result)
+
+    print(f"REACHABILITY ANALYSIS (threshold: {threshold})")
+    print("=" * 60)
+
+    if already_above:
+        print(f"\nALREADY ABOVE {threshold} ({len(already_above)}):")
+        for r in sorted(already_above, key=lambda x: x["current_composite"], reverse=True):
+            print(f"  {r['entry_id']:<40s} {r['current_composite']:>5.1f}  (network={r['current_network']})")
+
+    if reachable:
+        print(f"\nREACHABLE WITH NETWORK ({len(reachable)}):")
+        for r in sorted(reachable, key=lambda x: x["current_composite"], reverse=True):
+            best = r["reachable_with"]
+            best_scenario = next(s for s in r["scenarios"] if s["level"] == best)
+            print(f"  {r['entry_id']:<40s} {r['current_composite']:>5.1f} -> {best_scenario['composite']:.1f}  "
+                  f"(need {best}, +{best_scenario['delta']:.1f})")
+
+    if unreachable:
+        print(f"\nUNREACHABLE EVEN WITH INTERNAL ({len(unreachable)}):")
+        for r in sorted(unreachable, key=lambda x: x["current_composite"], reverse=True):
+            max_scenario = r["scenarios"][-1] if r["scenarios"] else None
+            max_str = f" -> {max_scenario['composite']:.1f} at internal" if max_scenario else ""
+            print(f"  {r['entry_id']:<40s} {r['current_composite']:>5.1f}{max_str}")
+
+    print(f"\n{'=' * 60}")
+    print(f"Total: {len(already_above)} above | {len(reachable)} reachable | {len(unreachable)} unreachable")
+
+
+def run_triage_staged(dry_run: bool = True, yes: bool = False,
+                      submit_threshold: float = 8.5, demote_threshold: float = 7.0):
+    """One-time triage: categorize staged entries into submit_ready / hold / demote."""
+    if not dry_run and not yes:
+        dry_run = True
+        print("(Defaulting to dry-run. Use --yes to execute.)\n")
+
+    entries_raw = _load_entries_raw(dirs=ALL_PIPELINE_DIRS_WITH_POOL, include_filepath=True)
+    staged = [e for e in entries_raw if e.get("status") == "staged"]
+
+    if not staged:
+        print("No staged entries found.")
+        return
+
+    all_raw = _load_entries_raw(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
+
+    submit_ready = []
+    hold = []
+    demote_list = []
+
+    for entry in staged:
+        entry_id = entry.get("id", "unknown")
+        filepath = entry.get("_filepath")
+        dims = compute_dimensions(entry, all_raw)
+        track = entry.get("track", "")
+        composite = compute_composite(dims, track)
+        network = dims.get("network_proximity", 1)
+
+        if composite >= submit_threshold and network >= 7:
+            submit_ready.append((entry_id, composite, network, filepath))
+        elif composite < demote_threshold:
+            demote_list.append((entry_id, composite, network, filepath))
+        else:
+            reachability = analyze_reachability(entry, all_raw)
+            hold.append((entry_id, composite, network, reachability, filepath))
+
+    print(f"TRIAGE STAGED ENTRIES ({len(staged)} total)")
+    print("=" * 60)
+
+    if submit_ready:
+        print(f"\nSUBMIT-READY (score >= {submit_threshold}, network >= 7): {len(submit_ready)}")
+        for eid, score, net, _ in sorted(submit_ready, key=lambda x: x[1], reverse=True):
+            print(f"  {eid:<40s} {score:>5.1f}  network={net}")
+
+    if hold:
+        print(f"\nHOLD — cultivate network ({demote_threshold} <= score < {submit_threshold}): {len(hold)}")
+        for eid, score, net, reach, _ in sorted(hold, key=lambda x: x[1], reverse=True):
+            hint = f"need {reach['reachable_with']}" if reach.get("reachable_with") else "unreachable"
+            print(f"  {eid:<40s} {score:>5.1f}  network={net}  ({hint})")
+
+    if demote_list:
+        print(f"\nDEMOTE to qualified (score < {demote_threshold}): {len(demote_list)}")
+        for eid, score, net, fp in sorted(demote_list, key=lambda x: x[1]):
+            action = "[dry-run] " if dry_run else ""
+            print(f"  {action}{eid:<40s} {score:>5.1f}  network={net}")
+
+    # Execute demotions if not dry-run
+    if demote_list and not dry_run:
+        for eid, score, net, fp in demote_list:
+            if fp:
+                content = fp.read_text()
+                content = update_yaml_field(content, "status", "qualified")
+                content = update_last_touched(content)
+                atomic_write(fp, content)
+                print(f"  Demoted {eid} to qualified")
+
+    print(f"\n{'=' * 60}")
+    label = " (dry-run)" if dry_run else ""
+    print(f"Submit-ready: {len(submit_ready)} | Hold: {len(hold)} | Demote: {len(demote_list)}{label}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Score pipeline entries against rubric")
     parser.add_argument("--target", help="Score a single entry by ID")
@@ -1620,10 +1861,18 @@ def main():
                         help="List entries in compressed score band for manual dimension review")
     parser.add_argument("--auto-qualify", action="store_true",
                         help="Batch-advance qualifying research_pool entries to active/qualified")
+    parser.add_argument("--reachable", action="store_true",
+                        help="Show reachability analysis for all actionable entries")
+    parser.add_argument("--threshold", type=float, default=9.0,
+                        help="Score threshold for reachability analysis (default: 9.0)")
+    parser.add_argument("--triage-staged", action="store_true",
+                        help="Triage staged entries into submit-ready / hold / demote")
+    parser.add_argument("--demote", action="store_true",
+                        help="Execute demotions (with --triage-staged --yes)")
     parser.add_argument("--dry-run", action="store_true",
                         help="Show scores without writing changes")
     parser.add_argument("--yes", action="store_true",
-                        help="Execute changes (used with --auto-qualify)")
+                        help="Execute changes (used with --auto-qualify, --triage-staged)")
     parser.add_argument("--min-score", type=float, default=AUTO_QUALIFY_MIN,
                         help=f"Minimum score for auto-qualify (default: {AUTO_QUALIFY_MIN})")
     parser.add_argument("--limit", type=int, default=0,
@@ -1632,8 +1881,11 @@ def main():
                         help="Show per-dimension breakdowns")
     args = parser.parse_args()
 
-    if not args.target and not args.all and not args.qualify and not args.explain and not args.review_compressed and not args.auto_qualify:
-        parser.error("Specify --target <id>, --all, --qualify, --explain, --review-compressed, or --auto-qualify")
+    if not (args.target or args.all or args.qualify or args.explain
+            or args.review_compressed or args.auto_qualify
+            or args.reachable or args.triage_staged):
+        parser.error("Specify --target, --all, --qualify, --explain, --review-compressed, "
+                     "--auto-qualify, --reachable, or --triage-staged")
 
     if args.explain and not args.target:
         parser.error("--explain requires --target <id>")
@@ -1650,6 +1902,16 @@ def main():
             min_score=args.min_score,
             limit=args.limit,
         )
+        return
+
+    # --reachable is a standalone command
+    if args.reachable:
+        run_reachable(threshold=args.threshold)
+        return
+
+    # --triage-staged is a standalone command
+    if args.triage_staged:
+        run_triage_staged(dry_run=args.dry_run, yes=args.yes)
         return
 
     # --review-compressed implies --all
@@ -1686,7 +1948,14 @@ def main():
         dimensions = compute_dimensions(data, all_raw)
         composite = compute_composite(dimensions, track)
 
+        # Track network_proximity changes for ROI logging
+        old_dims = data.get("fit", {}).get("dimensions", {}) if isinstance(data.get("fit"), dict) else {}
+        old_network = old_dims.get("network_proximity", 1) if isinstance(old_dims, dict) else 1
+
         old_score, new_score = update_entry_file(filepath, dimensions, composite, dry_run=args.dry_run)
+
+        if not args.dry_run:
+            _log_network_change(entry_id, old_network, dimensions.get("network_proximity", 1), filepath)
 
         delta = ""
         if old_score is not None:

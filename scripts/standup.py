@@ -64,7 +64,17 @@ def _load_market_intel() -> dict:
 
 
 def _get_stale_threshold(key: str, default: int) -> int:
-    """Load a stale threshold from market intel JSON, fallback to hardcoded default."""
+    """Load a stale threshold from mode_thresholds first, then stale_thresholds_days, then default."""
+    try:
+        from pipeline_lib import get_mode_thresholds
+        mode_t = get_mode_thresholds()
+        # Map key names: entry_stale -> stale_days, entry_stagnant -> stagnant_days
+        mode_key_map = {"entry_stale": "stale_days", "entry_stagnant": "stagnant_days"}
+        mapped = mode_key_map.get(key)
+        if mapped and mapped in mode_t:
+            return int(mode_t[mapped])
+    except ImportError:
+        pass
     intel = _load_market_intel()
     return intel.get("stale_thresholds_days", {}).get(key, default)
 
@@ -836,6 +846,72 @@ def section_followup(entries: list[dict]):
 
 
 # ---------------------------------------------------------------------------
+# Section: Relationships (cultivation dashboard)
+# ---------------------------------------------------------------------------
+
+def section_relationships(entries: list[dict]):
+    """Relationship cultivation: top score-impact targets, today's actions, dense orgs."""
+    print("RELATIONSHIPS")
+    print("-" * 40)
+
+    # Part 1: Top 5 entries where warm->cold delta is highest
+    try:
+        from score import analyze_reachability
+        reachable = []
+        for e in entries:
+            if e.get("status") not in {"research", "qualified", "drafting", "staged"}:
+                continue
+            result = analyze_reachability(e, entries, 9.0)
+            if result["current_composite"] >= 9.0:
+                continue
+            if result["reachable_with"]:
+                best = next(s for s in result["scenarios"] if s["level"] == result["reachable_with"])
+                reachable.append({
+                    "entry_id": result["entry_id"],
+                    "composite": result["current_composite"],
+                    "delta": best["delta"],
+                    "need": result["reachable_with"],
+                })
+        reachable.sort(key=lambda x: x["delta"], reverse=True)
+        if reachable:
+            print("\n   TOP CULTIVATION TARGETS (by score impact):")
+            for r in reachable[:5]:
+                print(f"     {r['entry_id']:<35s} {r['composite']:.1f} (+{r['delta']:.1f} with {r['need']})")
+        else:
+            print("\n   No entries where network cultivation alone unlocks 9.0")
+    except ImportError:
+        print("\n   (score module not available for reachability analysis)")
+
+    # Part 2: Today's cultivation actions
+    try:
+        from cultivate import get_today_actions
+        actions = get_today_actions(entries)
+        if actions:
+            print(f"\n   TODAY'S CULTIVATION ACTIONS ({len(actions)}):")
+            for a in actions[:5]:
+                print(f"     {a['entry_id']}: {a['action_type']} via {a['channel']}"
+                      + (f" -> {a['contact']}" if a['contact'] else ""))
+    except ImportError:
+        pass  # cultivate.py not yet available — graceful skip
+
+    # Part 3: Dense organizations
+    try:
+        from warm_intro_audit import scan_for_organizations
+        org_map = scan_for_organizations(entries)
+        dense = [(org, ents) for org, ents in org_map.items() if len(ents) >= 3]
+        dense.sort(key=lambda x: len(x[1]), reverse=True)
+        if dense:
+            print("\n   DENSE ORGS (3+ entries — network leverage):")
+            for org, ents in dense[:3]:
+                ids = ", ".join(e.get("id", "?") for e in ents[:3])
+                print(f"     {org} ({len(ents)} entries): {ids}")
+    except ImportError:
+        pass  # warm_intro_audit.py not available — graceful skip
+
+    print()
+
+
+# ---------------------------------------------------------------------------
 # Section 9: Session Log
 # ---------------------------------------------------------------------------
 
@@ -924,6 +1000,7 @@ SECTIONS = {
     "opportunities": "Opportunity pipeline (grants/residencies/prizes/writing)",
     "market": "Market conditions, hot skills, and upcoming grant deadlines",
     "funding": "Funding pulse: viability score, top pathways, urgent blind spots",
+    "relationships": "Relationship cultivation: top targets, today's actions, dense orgs",
 }
 
 
@@ -1387,6 +1464,19 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
     today = date.today()
     print("=" * 60)
     print(f"DAILY STANDUP — {today.strftime('%A, %B %d, %Y')}")
+    try:
+        from pipeline_lib import get_mode_review_status
+        review = get_mode_review_status()
+        mode_label = review["mode"].upper()
+        days_left = review["days_until_review"]
+        if review["past_review"]:
+            print(f"Mode: {mode_label} | REVIEW OVERDUE by {abs(days_left)}d — evaluate results")
+        elif days_left <= 7:
+            print(f"Mode: {mode_label} | Review in {days_left}d — prepare evaluation")
+        else:
+            print(f"Mode: {mode_label} | Review in {days_left}d")
+    except ImportError:
+        pass
     print("=" * 60)
     print()
 
@@ -1444,6 +1534,8 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
         section_signal_freshness()
     if section is None or section == "followup":
         section_followup(entries)
+    if section is None or section == "relationships":
+        section_relationships(entries)
     if section is None or section == "readiness":
         section_readiness(entries)
     if do_log or section == "log":

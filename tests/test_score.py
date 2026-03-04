@@ -31,6 +31,7 @@ from score import (
     _tr_differentiators_coverage,
     _tr_position_depth,
     _tr_track_experience,
+    analyze_reachability,
     compute_composite,
     compute_dimensions,
     compute_human_dimensions,
@@ -1389,14 +1390,17 @@ def test_run_auto_qualify_dry_run_no_file_moves(capsys):
 
 
 def test_run_auto_qualify_default_uses_rubric_threshold():
-    """run_auto_qualify default min_score should match AUTO_QUALIFY_MIN from rubric."""
+    """run_auto_qualify default min_score=None resolves to mode-aware threshold at runtime."""
     import inspect
 
-    from score import AUTO_QUALIFY_MIN, run_auto_qualify
+    from score import AUTO_QUALIFY_MIN, get_auto_qualify_min, run_auto_qualify
 
     sig = inspect.signature(run_auto_qualify)
     default = sig.parameters["min_score"].default
-    assert default == AUTO_QUALIFY_MIN, f"Expected default {AUTO_QUALIFY_MIN}, got {default}"
+    assert default is None, f"Expected default None (mode-aware), got {default}"
+    # Runtime resolution should return at least the rubric minimum
+    resolved = get_auto_qualify_min()
+    assert resolved >= AUTO_QUALIFY_MIN, f"Mode-aware min {resolved} < rubric min {AUTO_QUALIFY_MIN}"
 
 
 def test_run_auto_qualify_min_score_filters(capsys):
@@ -1421,3 +1425,180 @@ def test_run_auto_qualify_limit_caps_output(capsys):
     # Count [dry-run] lines — should be at most 2
     dry_run_lines = [line for line in captured.out.splitlines() if "[dry-run]" in line]
     assert len(dry_run_lines) <= 2, f"Expected at most 2 dry-run lines, got {len(dry_run_lines)}"
+
+
+# --- Reachability analysis tests ---
+
+
+def test_reachability_cold_to_warm_adds_points():
+    """Upgrading network from cold to warm should increase composite and appear in scenarios."""
+    entry = _make_entry(
+        track="job",
+        fit_score=7,
+        identity_position="independent-engineer",
+        lead_organs=["III"],
+        portal="greenhouse",
+        organization="Some Corp",
+        entry_id="reachability-cold-warm",
+    )
+    # Ensure network is cold (default — no network field)
+    entry.pop("network", None)
+
+    result = analyze_reachability(entry, all_entries=[], threshold=9.0)
+
+    # Should have scenarios for levels above cold (score=1)
+    assert len(result["scenarios"]) > 0, "Expected at least one scenario"
+    level_names = [s["level"] for s in result["scenarios"]]
+    assert "warm" in level_names, f"Expected 'warm' in scenarios, got {level_names}"
+
+    # The warm scenario should have a positive delta
+    warm_scenario = next(s for s in result["scenarios"] if s["level"] == "warm")
+    assert warm_scenario["delta"] > 0, (
+        f"Expected positive delta for warm upgrade, got {warm_scenario['delta']}"
+    )
+    assert warm_scenario["composite"] > result["current_composite"], (
+        "Warm scenario composite should exceed current composite"
+    )
+
+
+def test_reachability_already_above_threshold():
+    """Entry already above threshold: caller should classify via current_composite >= threshold.
+
+    analyze_reachability always computes scenarios for higher network levels.
+    When current_composite >= threshold, the caller (run_reachable) classifies
+    the entry as "already above" by checking current_composite directly.
+    This test verifies that pattern works correctly.
+    """
+    # Build an entry with strong signals across all dimensions
+    entry = _make_entry(
+        track="grant",
+        fit_score=10,
+        identity_position="systems-artist",
+        lead_organs=["I", "II", "META"],
+        blocks_used={
+            "framing": "framings/systems-artist",
+            "artist_statement": "identity/2min",
+            "evidence": "evidence/differentiators",
+        },
+        portal_fields=[{"name": "artist_statement"}, {"name": "evidence"}],
+        materials_attached=["resume.pdf"],
+        portfolio_url="https://example.com",
+        portal="email",
+        deadline_type="rolling",
+        amount_value=15000,
+        organization="Creative Capital",
+        entry_id="reachability-already-high",
+    )
+    # Give it a strong network so the composite is already high
+    entry["network"] = {"relationship_strength": "strong"}
+
+    # Compute the actual composite to determine a threshold below it
+    dims = compute_dimensions(entry, all_entries=[])
+    actual_composite = compute_composite(dims, entry["track"])
+    assert actual_composite >= 8.0, (
+        f"Test setup: expected composite >= 8.0, got {actual_composite}"
+    )
+
+    # Use a threshold at or below the current composite
+    threshold = actual_composite
+    result = analyze_reachability(entry, all_entries=[], threshold=threshold)
+
+    # The current_composite should meet the threshold
+    assert result["current_composite"] >= threshold, (
+        f"Expected current_composite >= {threshold}, got {result['current_composite']}"
+    )
+
+    # This is the caller-side pattern used in run_reachable:
+    # entries with current_composite >= threshold are classified as "already above"
+    # and reachable_with is ignored. Verify the classification works.
+    is_already_above = result["current_composite"] >= result["threshold"]
+    assert is_already_above, (
+        f"Entry should be classified as already-above "
+        f"(composite={result['current_composite']}, threshold={result['threshold']})"
+    )
+
+    # Scenarios should only include network levels above current (strong=9 -> internal=10)
+    for scenario in result["scenarios"]:
+        assert scenario["network_score"] > result["current_network"]
+
+
+def test_reachability_unreachable_even_internal():
+    """Entry with very low non-network dims should be unreachable even at internal level."""
+    entry = _make_entry(
+        track="grant",
+        fit_score=1,
+        identity_position="",
+        lead_organs=[],
+        portal="custom",
+        deadline_type="hard",
+        deadline_date=_date_offset(1),  # deadline tomorrow — poor feasibility
+        amount_value=0,
+        organization="Unknown Org",
+        entry_id="reachability-unreachable",
+    )
+    # No network, no blocks, no materials — everything scores low
+    entry.pop("network", None)
+
+    result = analyze_reachability(entry, all_entries=[], threshold=9.0)
+
+    # Even the internal (10) scenario should not cross 9.0 with all other dims ~1-3
+    assert result["reachable_with"] is None, (
+        f"Expected unreachable (reachable_with=None), but got '{result['reachable_with']}'. "
+        f"Scenarios: {result['scenarios']}"
+    )
+
+    # Verify the internal scenario is present and still below threshold
+    if result["scenarios"]:
+        internal_scenario = result["scenarios"][-1]
+        assert internal_scenario["level"] == "internal"
+        assert not internal_scenario["crosses_threshold"], (
+            f"Internal scenario should NOT cross threshold, "
+            f"composite={internal_scenario['composite']}"
+        )
+
+
+def test_reachability_job_vs_creative_weights():
+    """Job entries use WEIGHTS_JOB (network=0.20) vs creative WEIGHTS (network=0.12).
+
+    The same network improvement should produce a larger delta for job entries.
+    """
+    base_kwargs = dict(
+        fit_score=6,
+        identity_position="independent-engineer",
+        lead_organs=["III"],
+        portal="greenhouse",
+        organization="Some Corp",
+    )
+
+    job_entry = _make_entry(track="job", entry_id="reachability-job", **base_kwargs)
+    creative_entry = _make_entry(track="grant", entry_id="reachability-creative", **base_kwargs)
+
+    # Ensure both start at cold network (score=1)
+    job_entry.pop("network", None)
+    creative_entry.pop("network", None)
+
+    job_result = analyze_reachability(job_entry, all_entries=[], threshold=9.0)
+    creative_result = analyze_reachability(creative_entry, all_entries=[], threshold=9.0)
+
+    # Both should have scenarios
+    assert len(job_result["scenarios"]) > 0
+    assert len(creative_result["scenarios"]) > 0
+
+    # Verify weights are actually different for network_proximity
+    assert WEIGHTS_JOB["network_proximity"] == 0.20, (
+        f"Expected WEIGHTS_JOB network_proximity=0.20, got {WEIGHTS_JOB['network_proximity']}"
+    )
+    assert WEIGHTS["network_proximity"] == 0.12, (
+        f"Expected WEIGHTS network_proximity=0.12, got {WEIGHTS['network_proximity']}"
+    )
+
+    # Find the "internal" scenario in both (largest possible network upgrade)
+    job_internal = next(s for s in job_result["scenarios"] if s["level"] == "internal")
+    creative_internal = next(s for s in creative_result["scenarios"] if s["level"] == "internal")
+
+    # Job entry should get a larger delta from the same network improvement
+    # because network_proximity weight is 0.20 (job) vs 0.12 (creative)
+    assert job_internal["delta"] > creative_internal["delta"], (
+        f"Job delta ({job_internal['delta']}) should exceed creative delta "
+        f"({creative_internal['delta']}) due to higher network weight"
+    )

@@ -29,6 +29,7 @@ from pipeline_lib import (
     ALL_PIPELINE_DIRS,
     PIPELINE_DIR_RESEARCH_POOL,
     SIGNALS_DIR,
+    get_entry_era,
     load_entries,
     parse_date,
 )
@@ -499,6 +500,8 @@ def main():
                         help="Compare outcomes by variant composition method")
     parser.add_argument("--by-score-tier", action="store_true",
                         help="Conversion breakdown by score tier (rubric calibration)")
+    parser.add_argument("--era", choices=["volume", "precision", "all"], default="all",
+                        help="Filter by pipeline era (volume=pre-pivot, precision=post-pivot)")
     args = parser.parse_args()
 
     entries = load_all_entries()
@@ -506,6 +509,12 @@ def main():
     if not entries and not pool:
         print("No pipeline entries found.", file=sys.stderr)
         sys.exit(1)
+
+    # Filter by era if specified
+    if args.era != "all":
+        entries = [e for e in entries if get_entry_era(e) == args.era]
+        pool = [e for e in pool if get_entry_era(e) == args.era]
+        print(f"[Era filter: {args.era}]")
 
     if args.by:
         breakdown_by(entries, args.by)

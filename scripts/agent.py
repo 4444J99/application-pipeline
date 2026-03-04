@@ -56,12 +56,27 @@ _RULES = _load_agent_rules()
 RESEARCH_QUALIFY_THRESHOLD = _RULES.get("advance_research_to_qualified", {}).get("threshold", 7.0)
 QUALIFIED_DRAFTING_THRESHOLD = _RULES.get("advance_qualified_to_drafting", {}).get("threshold", 8.0)
 DRAFTING_STAGED_MIN_DAYS = _RULES.get("advance_drafting_to_staged", {}).get("min_days", 7)
+DRAFTING_STAGED_MIN_SCORE = _RULES.get("advance_drafting_to_staged", {}).get("min_score", 9.0)
 STAGED_SUBMIT_MAX_DAYS = _RULES.get("flag_staged_for_submission", {}).get("max_days", 7)
 
 
 def _rule_enabled(rule_name: str) -> bool:
     """Check if a rule is enabled in config (defaults to True)."""
     return _RULES.get(rule_name, {}).get("enabled", True)
+
+
+def _mode_adjusted_threshold(base: float) -> float:
+    """Return the higher of base threshold and mode-required minimum.
+
+    Mode can only raise thresholds, never lower them.
+    """
+    try:
+        from pipeline_lib import get_mode_thresholds
+        t = get_mode_thresholds()
+        mode_min = float(t.get("auto_qualify_min", 0))
+        return max(base, mode_min)
+    except ImportError:
+        return base
 
 
 class PipelineAgent:
@@ -131,16 +146,18 @@ class PipelineAgent:
                         "severity": "routine",
                     })
 
-            # Rule 4: Drafting, deadline > min_days
+            # Rule 4: Drafting, deadline > min_days AND score >= min_score
             elif status == "drafting" and _rule_enabled("advance_drafting_to_staged"):
-                if days_left and days_left > DRAFTING_STAGED_MIN_DAYS:
+                effective_min = _mode_adjusted_threshold(DRAFTING_STAGED_MIN_SCORE)
+                if (days_left and days_left > DRAFTING_STAGED_MIN_DAYS
+                        and score and score >= effective_min):
                     can_adv, reason = can_advance(entry, "staged")
                     if can_adv:
                         actions.append({
                             "entry_id": entry_id,
                             "action": "advance",
                             "to_status": "staged",
-                            "reason": f"drafting with {days_left}d until deadline",
+                            "reason": f"drafting with {days_left}d until deadline, score {score}",
                             "severity": "routine",
                         })
 

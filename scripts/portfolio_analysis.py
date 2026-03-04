@@ -141,6 +141,79 @@ def query_variants(entries: list[dict]) -> dict:
     return {"variants": sorted(results, key=lambda x: -x["rate"])}
 
 
+def query_network(entries: list[dict]) -> dict:
+    """Network proximity score distribution, avg by track/position, acceptance rate by score."""
+    from collections import defaultdict
+
+    submitted = _submitted_entries(entries)
+
+    # Distribution of network_proximity scores
+    score_dist: dict[int, int] = defaultdict(int)
+    # Track averages
+    track_sums: dict[str, list[int]] = defaultdict(list)
+    # Position averages
+    position_sums: dict[str, list[int]] = defaultdict(list)
+    # Acceptance rate by network score
+    network_outcomes: dict[int, dict] = defaultdict(lambda: {"accepted": 0, "rejected": 0, "total": 0})
+
+    for entry in entries:
+        fit = entry.get("fit", {})
+        if not isinstance(fit, dict):
+            continue
+        dims = fit.get("dimensions", {})
+        if not isinstance(dims, dict):
+            continue
+        net_score = dims.get("network_proximity")
+        if net_score is None:
+            continue
+        net_score = int(net_score)
+        score_dist[net_score] += 1
+        track = entry.get("track", "unknown")
+        track_sums[track].append(net_score)
+        position = fit.get("identity_position", "unknown")
+        position_sums[position].append(net_score)
+
+    for entry in submitted:
+        fit = entry.get("fit", {})
+        if not isinstance(fit, dict):
+            continue
+        dims = fit.get("dimensions", {})
+        if not isinstance(dims, dict):
+            continue
+        net_score = dims.get("network_proximity")
+        if net_score is None:
+            continue
+        net_score = int(net_score)
+        outcome = entry.get("outcome")
+        network_outcomes[net_score]["total"] += 1
+        if outcome == "accepted":
+            network_outcomes[net_score]["accepted"] += 1
+        elif outcome == "rejected":
+            network_outcomes[net_score]["rejected"] += 1
+
+    # Format results
+    dist_results = [{"network_score": k, "count": v} for k, v in sorted(score_dist.items())]
+    track_results = []
+    for track, scores in sorted(track_sums.items()):
+        avg = sum(scores) / len(scores) if scores else 0
+        track_results.append({"track": track, "avg_network": round(avg, 1), "count": len(scores)})
+    position_results = []
+    for pos, scores in sorted(position_sums.items()):
+        avg = sum(scores) / len(scores) if scores else 0
+        position_results.append({"position": pos, "avg_network": round(avg, 1), "count": len(scores)})
+    outcome_results = []
+    for score_val, data in sorted(network_outcomes.items()):
+        rate = (data["accepted"] / data["total"] * 100) if data["total"] > 0 else 0
+        outcome_results.append({"network_score": score_val, "rate": round(rate, 1), **data})
+
+    return {
+        "distribution": dist_results,
+        "by_track": track_results,
+        "by_position": position_results,
+        "outcomes_by_network": outcome_results,
+    }
+
+
 def print_section(title: str, data: dict) -> None:
     """Print a single analysis section."""
     print(f"\n{title}")
@@ -149,15 +222,22 @@ def print_section(title: str, data: dict) -> None:
         if not items:
             print("  No data available.")
             continue
+        print(f"\n  {key}:")
         for item in items:
-            label_key = [k for k in item if k not in ("accepted", "rejected", "total", "rate")][0]
-            print(f"  {item[label_key]:<30s}  {item['total']:>3d} submitted  "
-                  f"{item['accepted']:>3d} accepted  ({item['rate']}%)")
+            # Standard format: items with accepted/rejected/total/rate
+            if "total" in item and "accepted" in item:
+                label_key = [k for k in item if k not in ("accepted", "rejected", "total", "rate")][0]
+                print(f"    {str(item[label_key]):<30s}  {item['total']:>3d} submitted  "
+                      f"{item['accepted']:>3d} accepted  ({item['rate']}%)")
+            else:
+                # Generic format: print all key-value pairs
+                parts = [f"{k}={v}" for k, v in item.items()]
+                print(f"    {', '.join(parts)}")
 
 
 def main():
     parser = argparse.ArgumentParser(description="Portfolio analysis engine")
-    parser.add_argument("--query", choices=["blocks", "position", "channel", "variants"],
+    parser.add_argument("--query", choices=["blocks", "position", "channel", "variants", "network"],
                         help="Run a specific query")
     parser.add_argument("--json", action="store_true", help="Output as JSON")
     args = parser.parse_args()
@@ -170,6 +250,7 @@ def main():
         "position": ("Identity Position Conversion", query_position),
         "channel": ("Channel Performance", query_channel),
         "variants": ("Variant Comparison", query_variants),
+        "network": ("Network Proximity ROI", query_network),
     }
 
     if args.query:

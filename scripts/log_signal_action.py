@@ -24,7 +24,7 @@ from pipeline_lib import SIGNALS_DIR, atomic_write
 
 SIGNAL_ACTIONS_PATH = SIGNALS_DIR / "signal-actions.yaml"
 
-VALID_SIGNAL_TYPES = {"hypothesis", "score_threshold", "pattern", "agent_rule", "conversion_data"}
+VALID_SIGNAL_TYPES = {"hypothesis", "score_threshold", "pattern", "agent_rule", "conversion_data", "network_change"}
 
 
 def load_signal_actions() -> list[dict]:
