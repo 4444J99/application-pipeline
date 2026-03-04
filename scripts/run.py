@@ -38,7 +38,7 @@ COMMANDS = {
     "qualify":     ("score.py", ["--auto-qualify"],       "Preview auto-qualification"),
     "email":       ("check_email.py", [],                 "Check email for submission confirmations and responses"),
     "focus":       ("hygiene.py", ["--company-focus"],    "Rule of Three: flag companies with >3 active+submitted job applications"),
-    "topjobs":     ("ingest_top_roles.py", [],            "Daily glove-fit fetch: top roles ≥ 8.5 score"),
+    "topjobs":     ("ingest_top_roles.py", [],            "Daily glove-fit fetch: top roles ≥ 9.0 score"),
     "syncmetrics": ("sync_metrics.py", [],               "Check canonical metric consistency across blocks/strategy"),
     "hypotheses":  ("feedback_capture.py", ["--list"],   "List all recorded outcome hypotheses"),
     "analysis":    ("feedback_capture.py", ["--analyze"],"Pattern analysis of outcome hypotheses"),

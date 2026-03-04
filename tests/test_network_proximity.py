@@ -44,6 +44,10 @@ class TestNetworkProximityDefaults:
 class TestRelationshipStrength:
     """Test network.relationship_strength signal."""
 
+    def test_invalid_enum_defaults_to_cold(self):
+        entry = _make_entry(network={"relationship_strength": "best_friend"})
+        assert score_network_proximity(entry) == 1
+
     def test_cold(self):
         entry = _make_entry(network={"relationship_strength": "cold"})
         assert score_network_proximity(entry) == 1
@@ -125,6 +129,34 @@ class TestOutreachActions:
         entry = _make_entry(outreach=[
             {"type": "warm_contact", "status": "planned"},
         ])
+        assert score_network_proximity(entry) == 1
+
+
+class TestMutualConnections:
+    """Test network.mutual_connections signal."""
+
+    def test_five_or_more_mutual_connections_min_5(self):
+        entry = _make_entry(network={"mutual_connections": 5})
+        assert score_network_proximity(entry) >= 5
+
+    def test_many_mutual_connections_min_5(self):
+        entry = _make_entry(network={"mutual_connections": 20})
+        assert score_network_proximity(entry) >= 5
+
+    def test_four_mutual_connections_no_boost(self):
+        entry = _make_entry(network={"mutual_connections": 4})
+        assert score_network_proximity(entry) == 1
+
+    def test_zero_mutual_connections_no_boost(self):
+        entry = _make_entry(network={"mutual_connections": 0})
+        assert score_network_proximity(entry) == 1
+
+    def test_missing_mutual_connections_no_boost(self):
+        entry = _make_entry(network={})
+        assert score_network_proximity(entry) == 1
+
+    def test_non_numeric_mutual_connections_no_boost(self):
+        entry = _make_entry(network={"mutual_connections": "many"})
         assert score_network_proximity(entry) == 1
 
 

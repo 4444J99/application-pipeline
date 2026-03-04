@@ -1037,6 +1037,7 @@ def score_network_proximity(entry: dict, all_entries: list[dict] | None = None) 
     - network.relationship_strength: cold=1, acquaintance=4, warm=7, strong=9, internal=10
     - conversion.channel == "referral": min 8
     - follow_up entries with responses: min 7
+    - network.mutual_connections >= 5: min 5
     - outreach actions completed: min 4
     - Org density (other entries at same org): min 3
     """
@@ -1070,7 +1071,13 @@ def score_network_proximity(entry: dict, all_entries: list[dict] | None = None) 
         if has_response:
             score = max(score, 7)
 
-    # Signal 4: outreach actions completed
+    # Signal 4: mutual connections — shared network at the org
+    if isinstance(network, dict):
+        mutual = network.get("mutual_connections", 0)
+        if isinstance(mutual, (int, float)) and mutual >= 5:
+            score = max(score, 5)
+
+    # Signal 5: outreach actions completed
     outreach = entry.get("outreach") or []
     if isinstance(outreach, list):
         done_count = sum(
@@ -1081,7 +1088,7 @@ def score_network_proximity(entry: dict, all_entries: list[dict] | None = None) 
         elif done_count >= 1:
             score = max(score, 4)
 
-    # Signal 5: org density — other entries at same org suggest familiarity
+    # Signal 6: org density — other entries at same org suggest familiarity
     if all_entries:
         org = (entry.get("target") or {}).get("organization", "")
         if org:
@@ -1343,7 +1350,7 @@ def run_qualify(entries: list[tuple[Path, dict]]):
 
 
 def run_auto_qualify(dry_run: bool = False, yes: bool = False,
-                     min_score: float = 7.0, limit: int = 0):
+                     min_score: float = AUTO_QUALIFY_MIN, limit: int = 0):
     """Batch-advance qualifying research_pool entries to qualified in active/.
 
     Loads entries from research_pool/, runs qualify() on each, filters by
@@ -1355,7 +1362,7 @@ def run_auto_qualify(dry_run: bool = False, yes: bool = False,
     Args:
         dry_run: If True, show preview without moving files.
         yes: If True, execute the moves. Without --yes or --dry-run, defaults to dry-run.
-        min_score: Minimum composite score for auto-qualify (default 7.0).
+        min_score: Minimum composite score for auto-qualify (default from rubric).
         limit: Maximum entries to promote (0 = unlimited). Highest scores first.
     """
     import shutil
@@ -1617,8 +1624,8 @@ def main():
                         help="Show scores without writing changes")
     parser.add_argument("--yes", action="store_true",
                         help="Execute changes (used with --auto-qualify)")
-    parser.add_argument("--min-score", type=float, default=7.0,
-                        help="Minimum score for auto-qualify (default: 7.0)")
+    parser.add_argument("--min-score", type=float, default=AUTO_QUALIFY_MIN,
+                        help=f"Minimum score for auto-qualify (default: {AUTO_QUALIFY_MIN})")
     parser.add_argument("--limit", type=int, default=0,
                         help="Max entries to auto-qualify (0 = unlimited)")
     parser.add_argument("--verbose", "-v", action="store_true",

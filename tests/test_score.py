@@ -1388,6 +1388,17 @@ def test_run_auto_qualify_dry_run_no_file_moves(capsys):
     assert active_before == active_after, "Dry run should not add files to active"
 
 
+def test_run_auto_qualify_default_uses_rubric_threshold():
+    """run_auto_qualify default min_score should match AUTO_QUALIFY_MIN from rubric."""
+    import inspect
+
+    from score import AUTO_QUALIFY_MIN, run_auto_qualify
+
+    sig = inspect.signature(run_auto_qualify)
+    default = sig.parameters["min_score"].default
+    assert default == AUTO_QUALIFY_MIN, f"Expected default {AUTO_QUALIFY_MIN}, got {default}"
+
+
 def test_run_auto_qualify_min_score_filters(capsys):
     """A very high min_score should filter out all entries."""
     from score import run_auto_qualify

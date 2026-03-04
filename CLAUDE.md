@@ -149,7 +149,7 @@ python scripts/score.py --all --dry-run        # Preview all scores
 
 # Auto-qualify: promote research_pool entries above threshold to active/qualified
 python scripts/score.py --auto-qualify                        # Defaults to dry-run preview
-python scripts/score.py --auto-qualify --yes                  # Execute promotion (score >= 7.0)
+python scripts/score.py --auto-qualify --yes                  # Execute promotion (score >= 9.0)
 python scripts/score.py --auto-qualify --yes --min-score 8.0  # Higher threshold
 python scripts/score.py --auto-qualify --yes --limit 5        # Promote top 5 only
 
@@ -379,7 +379,7 @@ Single-word command protocol via `python scripts/run.py <command>`. Any LLM can 
 | `qualify` | Preview auto-qualification |
 | `email` | Check email for submission confirmations and responses (requires `.email-config.yaml`) |
 | `focus` | Rule of Three: flag companies with >3 active+submitted applications |
-| `topjobs` | Daily glove-fit fetch: top roles ≥ 8.5 score |
+| `topjobs` | Daily glove-fit fetch: top roles ≥ 9.0 score |
 | `syncmetrics` | Check canonical metric consistency across blocks/strategy |
 | `hypotheses` | List all recorded outcome hypotheses |
 | `analysis` | Pattern analysis of outcome hypotheses |

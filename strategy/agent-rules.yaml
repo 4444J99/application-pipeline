@@ -29,13 +29,14 @@ rules:
     threshold: 9.5
     severity: routine
 
-  # Rule 4: Auto-advance drafting entries with time to staged
+  # Rule 4: Auto-advance drafting entries with time to staged (score gate enforced)
   advance_drafting_to_staged:
     enabled: true
-    condition: "status == drafting AND days_to_deadline > min_days"
+    condition: "status == drafting AND days_to_deadline > min_days AND score >= min_score"
     action: advance
     to_status: staged
     min_days: 7
+    min_score: 9.0
     severity: routine
 
   # Rule 5: Flag staged entries approaching deadline for submission

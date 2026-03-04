@@ -7,7 +7,7 @@ pipeline/active/ as 'qualified' (bypassing research_pool/).
 
 Usage:
     python scripts/ingest_top_roles.py                      # Fetch + filter + Top 10 display (dry-run)
-    python scripts/ingest_top_roles.py --min-score 8.5      # Override threshold (default: 8.5)
+    python scripts/ingest_top_roles.py --min-score 9.0      # Override threshold (default: 9.0)
     python scripts/ingest_top_roles.py --top 20             # Show more results (default: 10)
     python scripts/ingest_top_roles.py --all-tiers          # Skip identity filter, show any role >= threshold
     python scripts/ingest_top_roles.py --promote --yes      # Write qualifying entries to pipeline/active/ as qualified
