@@ -23,6 +23,20 @@ class Check:
     command: list[str]
 
 
+def _resolve_lint_command() -> list[str]:
+    """Prefer interpreter-coupled Ruff invocation when available."""
+    probe = [PYTHON, "-m", "ruff", "--version"]
+    try:
+        result = subprocess.run(probe, cwd=REPO_ROOT, capture_output=True, text=True)
+    except OSError:
+        result = None
+
+    if result is not None and result.returncode == 0:
+        return [PYTHON, "-m", "ruff", "check", "scripts/", "tests/"]
+
+    return ["ruff", "check", "scripts/", "tests/"]
+
+
 def build_checks(quick: bool) -> list[Check]:
     """Return ordered verification checks."""
     checks = [
@@ -32,7 +46,7 @@ def build_checks(quick: bool) -> list[Check]:
         ),
         Check(
             name="lint",
-            command=["ruff", "check", "scripts/", "tests/"],
+            command=_resolve_lint_command(),
         ),
         Check(
             name="pipeline-validation",
@@ -94,4 +108,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

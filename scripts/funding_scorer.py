@@ -20,7 +20,7 @@ import sys
 from pathlib import Path
 
 import yaml
-from check_metrics import load_source_metrics
+from funding_metrics import CANONICAL_METRICS
 from score import load_market_intelligence
 
 SCRIPTS_DIR = Path(__file__).resolve().parent
@@ -82,7 +82,7 @@ def load_startup_profile() -> dict:
                 merged.update(data[section])
                 defaults[section] = merged
         return defaults
-    except Exception:
+    except (OSError, yaml.YAMLError):
         return defaults
 
 
@@ -597,17 +597,8 @@ DIFF_WEIGHTS = {
     "dual_alignment": 0.10,
 }
 
-# Canonical metrics for proof_of_work auto-derivation.
-# Derived from system-metrics.json (via check_metrics.py) when available,
-# otherwise falls back to check_metrics._FALLBACK_METRICS.
-_SOURCE_METRICS = load_source_metrics()
-CANONICAL_METRICS = {
-    "repos": _SOURCE_METRICS["total_repos"],
-    "tests": _SOURCE_METRICS["automated_tests"],
-    "words": _SOURCE_METRICS["total_words_k"] * 1000,
-    "essays": _SOURCE_METRICS["published_essays"],
-    "sprints": _SOURCE_METRICS["named_sprints"],
-}
+# Canonical metrics for proof_of_work auto-derivation are maintained in
+# funding_metrics.py to keep this module focused on decision logic.
 
 
 def score_differentiation(profile: dict, intel: dict) -> dict:

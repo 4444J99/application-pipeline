@@ -12,11 +12,12 @@ Usage:
 """
 
 import argparse
-import json
 import sys
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
+import standup_relationship_sections as _relationship_sections
+import standup_work_sections as _work_sections
 import yaml
 from pipeline_lib import (
     ACTIONABLE_STATUSES,
@@ -30,37 +31,29 @@ from pipeline_lib import (
     days_until,
     get_deadline,
     get_effort,
-    get_freshness_tier,
-    get_posting_age_hours,
     get_score,
     load_entries,
+    load_market_intelligence,
     parse_date,
     update_yaml_field,
 )
 from pipeline_lib import (
     update_last_touched as update_last_touched_content,
 )
+from standup_constants import (
+    OUTREACH_BY_STATUS,
+    PRACTICES_BY_CONTEXT,
+    SECTIONS,
+    build_next_status,
+)
+from standup_pipeline_sections import (
+    _freshness_badge,
+    section_job_freshness,
+    section_jobs,
+    section_opportunities,
+)
 
 STANDUP_LOG = SIGNALS_DIR / "standup-log.yaml"
-_INTEL_FILE = REPO_ROOT / "strategy" / "market-intelligence-2026.json"
-
-# --- Market intel loader ---
-_MARKET_INTEL: dict | None = None
-
-
-def _load_market_intel() -> dict:
-    global _MARKET_INTEL
-    if _MARKET_INTEL is not None:
-        return _MARKET_INTEL
-    if _INTEL_FILE.exists():
-        try:
-            with open(_INTEL_FILE) as f:
-                _MARKET_INTEL = json.load(f)
-        except Exception:
-            _MARKET_INTEL = {}
-    else:
-        _MARKET_INTEL = {}
-    return _MARKET_INTEL
 
 
 def _get_stale_threshold(key: str, default: int) -> int:
@@ -75,7 +68,7 @@ def _get_stale_threshold(key: str, default: int) -> int:
             return int(mode_t[mapped])
     except ImportError:
         pass
-    intel = _load_market_intel()
+    intel = load_market_intelligence()
     return intel.get("stale_thresholds_days", {}).get(key, default)
 
 
@@ -95,62 +88,11 @@ AGENT_ACTIONS_LOG = SIGNALS_DIR / "agent-actions.yaml"
 
 def section_health(entries: list[dict]) -> dict:
     """Pipeline-wide counts and velocity."""
-    today = date.today()
-    total = len(entries)
-    by_status: dict[str, int] = {}
-    by_track: dict[str, int] = {}
-    actionable = 0
-    submitted_count = 0
-    last_submit_date = None
-
-    for e in entries:
-        status = e.get("status", "unknown")
-        track = e.get("track", "unknown")
-        by_status[status] = by_status.get(status, 0) + 1
-        by_track[track] = by_track.get(track, 0) + 1
-
-        if status in ACTIONABLE_STATUSES:
-            actionable += 1
-        if status in ("submitted", "acknowledged", "interview"):
-            submitted_count += 1
-
-        tl = e.get("timeline", {})
-        if isinstance(tl, dict) and tl.get("submitted"):
-            sd = parse_date(tl["submitted"])
-            if sd and (last_submit_date is None or sd > last_submit_date):
-                last_submit_date = sd
-
-    if last_submit_date:
-        days_since = (today - last_submit_date).days
-    else:
-        days_since = None
-
-    print("1. PIPELINE HEALTH")
-    print(f"   Total entries: {total}")
-    print(f"   Actionable (research/qualified/drafting/staged): {actionable}")
-    print(f"   Submitted / awaiting response: {submitted_count}")
-    if days_since is not None:
-        print(f"   Days since last submission: {days_since}")
-    else:
-        print("   Days since last submission: NEVER (0 submissions)")
-    print()
-
-    status_order = ["research", "qualified", "drafting", "staged", "deferred",
-                    "submitted", "acknowledged", "interview", "outcome"]
-    print("   Status breakdown:")
-    for s in status_order:
-        c = by_status.get(s, 0)
-        if c > 0:
-            bar = "#" * c
-            print(f"     {s:15s} {c:3d}  {bar}")
-    print()
-
-    return {
-        "total": total,
-        "actionable": actionable,
-        "submitted": submitted_count,
-        "days_since_last_submission": days_since,
-    }
+    return _work_sections.section_health(
+        entries,
+        actionable_statuses=ACTIONABLE_STATUSES,
+        parse_date_fn=parse_date,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -159,71 +101,15 @@ def section_health(entries: list[dict]) -> dict:
 
 def section_stale(entries: list[dict]) -> dict:
     """Flag expired, at-risk, and stagnant entries."""
-    today = date.today()
-    expired = []
-    at_risk = []
-    stagnant = []
-
-    for e in entries:
-        entry_id = e.get("id", "?")
-        status = e.get("status", "")
-        dl_date, dl_type = get_deadline(e)
-
-        # Expired: past deadline + not yet submitted
-        if dl_date and days_until(dl_date) < 0 and status in ACTIONABLE_STATUSES:
-            expired.append((entry_id, e.get("name", entry_id), dl_date, status))
-            continue
-
-        # At-risk: hard/fixed deadline <3 days away + still in qualified
-        if (dl_date and dl_type in ("hard", "fixed") and 0 <= days_until(dl_date) <= AT_RISK_DAYS
-                and status in ("research", "qualified")):
-            at_risk.append((entry_id, e.get("name", entry_id), dl_date, status,
-                            days_until(dl_date)))
-            continue
-
-        # Stagnant: no activity in >7 days + actionable
-        if status in ACTIONABLE_STATUSES:
-            lt = parse_date(e.get("last_touched"))
-            if lt:
-                stale_days = (today - lt).days
-                if stale_days > STAGNATION_DAYS:
-                    stagnant.append((entry_id, e.get("name", entry_id),
-                                     lt, stale_days, status))
-
-    print("2. STALENESS ALERTS")
-
-    if expired:
-        print(f"   EXPIRED ({len(expired)}) — deadline passed, never submitted:")
-        for eid, name, dl, status in expired:
-            print(f"     !!! {name} — deadline was {dl} ({abs(days_until(dl))}d ago) — {status}")
-            print("         Action: archive with outcome=expired or withdraw")
-    else:
-        print("   EXPIRED: none")
-
-    if at_risk:
-        print(f"   AT-RISK ({len(at_risk)}) — hard deadline ≤{AT_RISK_DAYS}d + early status:")
-        for eid, name, dl, status, d in at_risk:
-            print(f"     !! {name} — {d}d left — still {status}")
-            print("        Action: stage immediately or withdraw")
-    else:
-        print("   AT-RISK: none")
-
-    if stagnant:
-        stagnant.sort(key=lambda x: x[3], reverse=True)
-        print(f"   STAGNANT ({len(stagnant)}) — no review in >{STAGNATION_DAYS} days:")
-        for eid, name, lt, days, status in stagnant[:10]:
-            print(f"     {name} — {days}d since last touch ({lt}) — {status}")
-        if len(stagnant) > 10:
-            print(f"     ... and {len(stagnant) - 10} more")
-    else:
-        print("   STAGNANT: none")
-
-    print()
-    return {
-        "expired": len(expired),
-        "at_risk": len(at_risk),
-        "stagnant": len(stagnant),
-    }
+    return _work_sections.section_stale(
+        entries,
+        actionable_statuses=ACTIONABLE_STATUSES,
+        get_deadline_fn=get_deadline,
+        days_until_fn=days_until,
+        parse_date_fn=parse_date,
+        at_risk_days=AT_RISK_DAYS,
+        stagnation_days=STAGNATION_DAYS,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -232,24 +118,12 @@ def section_stale(entries: list[dict]) -> dict:
 
 def _entry_has_portal_fields(entry: dict) -> bool:
     """Return True when portal_fields.fields exists and is non-empty."""
-    portal_fields = entry.get("portal_fields")
-    return (
-        isinstance(portal_fields, dict)
-        and isinstance(portal_fields.get("fields"), list)
-        and len(portal_fields["fields"]) > 0
-    )
+    return _work_sections.entry_has_portal_fields(entry)
 
 
 def _compute_staged_submit_conversion(entries: list[dict]) -> tuple[int, int, float]:
     """Compute operational staged->submitted conversion from current pipeline state."""
-    in_funnel = {"staged", "submitted", "acknowledged", "interview", "outcome"}
-    submitted_or_beyond = {"submitted", "acknowledged", "interview", "outcome"}
-
-    denominator = sum(1 for e in entries if e.get("status") in in_funnel)
-    numerator = sum(1 for e in entries if e.get("status") in submitted_or_beyond)
-
-    rate = (numerator / denominator) if denominator else 0.0
-    return numerator, denominator, rate
+    return _work_sections.compute_staged_submit_conversion(entries)
 
 
 def _load_recent_agent_runs(days: int = 7) -> list[dict]:
@@ -288,68 +162,14 @@ def _load_recent_agent_runs(days: int = 7) -> list[dict]:
 
 def section_execution_gap(entries: list[dict]) -> dict:
     """Highlight operational bottlenecks that block staged->submitted flow."""
-    today = date.today()
-    staged_entries = [e for e in entries if e.get("status") == "staged"]
-
-    stale_staged = []
-    missing_portal = []
-
-    for e in staged_entries:
-        lt = parse_date(e.get("last_touched"))
-        stale_days = (today - lt).days if lt else 999
-        if stale_days > EXECUTION_STALE_STAGED_DAYS:
-            stale_staged.append((stale_days, e))
-        if not _entry_has_portal_fields(e):
-            missing_portal.append(e)
-
-    stale_staged.sort(key=lambda x: x[0], reverse=True)
-    numerator, denominator, conversion_rate = _compute_staged_submit_conversion(entries)
-
-    print("2b. EXECUTION GAP SNAPSHOT")
-    print(f"   Staged entries: {len(staged_entries)}")
-    print(
-        f"   Stale staged >{EXECUTION_STALE_STAGED_DAYS * 24}h: {len(stale_staged)}"
+    return _work_sections.section_execution_gap(
+        entries,
+        parse_date_fn=parse_date,
+        get_score_fn=get_score,
+        target_staged_submit_conversion=TARGET_STAGED_SUBMIT_CONVERSION,
+        execution_stale_staged_days=EXECUTION_STALE_STAGED_DAYS,
+        load_recent_agent_runs_fn=_load_recent_agent_runs,
     )
-    print(f"   Staged missing portal_fields: {len(missing_portal)}")
-    print(
-        f"   Staged->Submitted: {conversion_rate * 100:.1f}% "
-        f"({numerator}/{denominator}, target {TARGET_STAGED_SUBMIT_CONVERSION * 100:.0f}%)"
-    )
-
-    if conversion_rate < TARGET_STAGED_SUBMIT_CONVERSION:
-        print("   !! Bottleneck: submission velocity below target")
-
-    if stale_staged:
-        print("   Top stale staged entries:")
-        for stale_days, entry in stale_staged[:10]:
-            name = entry.get("name", entry.get("id", "?"))
-            score = get_score(entry)
-            print(f"     - {name} — {stale_days}d stale — fit {score:.1f}")
-
-    if missing_portal:
-        print("   Staged entries missing portal_fields:")
-        for entry in missing_portal[:10]:
-            name = entry.get("name", entry.get("id", "?"))
-            print(f"     - {name}")
-
-    recent_runs = _load_recent_agent_runs(days=7)
-    execute_runs = [r for r in recent_runs if r.get("mode") == "execute"]
-    executed_actions = sum(int(r.get("executed", 0)) for r in execute_runs)
-    print(
-        f"   Autonomous runs (7d): {len(execute_runs)} execute runs, "
-        f"{executed_actions} actions executed"
-    )
-    if not execute_runs:
-        print("   Action: install/load launchd agents or run `python scripts/agent.py --execute --yes`")
-
-    print()
-    return {
-        "staged": len(staged_entries),
-        "stale_staged": len(stale_staged),
-        "missing_portal": len(missing_portal),
-        "conversion_rate": round(conversion_rate, 3),
-        "autonomous_runs": len(execute_runs),
-    }
 
 
 # ---------------------------------------------------------------------------
@@ -358,246 +178,50 @@ def section_execution_gap(entries: list[dict]) -> dict:
 
 def section_plan(entries: list[dict], hours: float) -> dict:
     """Deadline-driven + score-sorted work plan within a time budget."""
-    budget = int(hours * 60)
-    used = 0
-
-    actionable = [e for e in entries if e.get("status") in ACTIONABLE_STATUSES]
-    urgent = []
-    scored = []
-
-    for e in actionable:
-        dl_date, dl_type = get_deadline(e)
-        if dl_date:
-            d = days_until(dl_date)
-            if d < 0:
-                continue  # expired, handled in staleness
-            if d <= URGENCY_DAYS and dl_type in ("hard", "fixed"):
-                urgent.append((d, e))
-                continue
-        scored.append(e)
-
-    urgent.sort(key=lambda x: x[0])
-    # Rank by score, weighting job entries by posting freshness so hot jobs
-    # surface above warm ones even at equal score.
-    def _plan_sort_key(e):
-        base = get_score(e)
-        if e.get("track") == "job":
-            return base * compute_freshness_score(e)
-        return base
-
-    scored.sort(key=_plan_sort_key, reverse=True)
-
-    print(f"3. TODAY'S WORK PLAN ({hours:.1f}h budget, {budget} min)")
-    planned = []
-
-    if urgent:
-        print("   URGENT (deadline ≤14d):")
-        for d, e in urgent:
-            effort = get_effort(e)
-            est = EFFORT_MINUTES.get(effort, 90)
-            name = e.get("name", e.get("id", "?"))
-            status = e.get("status", "?")
-            marker = "!!!" if d <= 3 else "! "
-            fits = used + est <= budget
-            tag = "" if fits else " [OVER BUDGET]"
-            print(f"     {marker} {name} — {d}d — {status} — "
-                  f"{effort} (~{est}min){tag}")
-            if fits:
-                used += est
-                planned.append(e)
-
-    if scored:
-        print("   BY SCORE (jobs weighted by freshness):")
-        for e in scored:
-            effort = get_effort(e)
-            est = EFFORT_MINUTES.get(effort, 90)
-            name = e.get("name", e.get("id", "?"))
-            status = e.get("status", "?")
-            fits = used + est <= budget
-            tag = "" if fits else " [OVER BUDGET]"
-            effective = _plan_sort_key(e)
-            freshness_suffix = ""
-            if e.get("track") == "job":
-                badge = _freshness_badge(e)
-                if badge:
-                    freshness_suffix = f" {badge}"
-            print(f"     [{effective:.1f}] {name} — {status} — "
-                  f"{effort} (~{est}min){tag}{freshness_suffix}")
-            if fits:
-                used += est
-                planned.append(e)
-
-    remaining = budget - used
-    print("   ---")
-    print(f"   Planned: {len(planned)} entries | ~{used} min ({used / 60:.1f}h)")
-    if remaining > 15:
-        print(f"   Buffer: {remaining} min remaining")
-    print()
-
-    return {"planned": len(planned), "used_minutes": used}
+    return _work_sections.section_plan(
+        entries,
+        hours,
+        actionable_statuses=ACTIONABLE_STATUSES,
+        urgency_days=URGENCY_DAYS,
+        effort_minutes=EFFORT_MINUTES,
+        get_deadline_fn=get_deadline,
+        days_until_fn=days_until,
+        get_score_fn=get_score,
+        compute_freshness_score_fn=compute_freshness_score,
+        get_effort_fn=get_effort,
+        freshness_badge_fn=_freshness_badge,
+    )
 
 
 # ---------------------------------------------------------------------------
 # Section 4: Outreach Suggestions
 # ---------------------------------------------------------------------------
 
-OUTREACH_BY_STATUS = {
-    "research": [
-        "Search for past grantees/winners — calibrate your framing",
-        "Check for upcoming info sessions or webinars",
-        "Search LinkedIn for warm contacts at the org",
-    ],
-    "qualified": [
-        "Visit the actual portal — note field names and character limits",
-        "Read 2-3 past winners' statements for tone/length calibration",
-        "Check if you know anyone connected to this org",
-    ],
-    "drafting": [
-        "Request references/recommendations (2+ weeks before deadline)",
-        "Verify portfolio URL and work samples are live and current",
-        "Prepare a brief for any recommenders (opportunity + your angle)",
-    ],
-    "staged": [
-        "Submit 24-48 hours before deadline (portals crash at deadlines)",
-        "Do a final check of all links in your materials",
-        "Prepare a thank-you draft for anyone who helped",
-    ],
-    "submitted": [
-        "Send thank-you emails within 48 hours to anyone who helped",
-        "Verify you received a confirmation email from the portal",
-        "Note expected response timeline from the org's website/materials",
-    ],
-}
-
-
 def section_outreach(entries: list[dict]):
     """Per-target outreach checklists based on status and deadline proximity."""
-    actionable = [e for e in entries if e.get("status") in ACTIONABLE_STATUSES]
-
-    # Sort by deadline urgency then score
-    def sort_key(e):
-        dl_date, _ = get_deadline(e)
-        if dl_date:
-            d = days_until(dl_date)
-            if d >= 0:
-                return (0, d)
-        return (1, -get_score(e))
-
-    actionable.sort(key=sort_key)
-
-    print("4. OUTREACH SUGGESTIONS")
-
-    if not actionable:
-        print("   No actionable entries.")
-        print()
-        return
-
-    shown = 0
-    for e in actionable:
-        if shown >= 5:
-            remaining = len(actionable) - shown
-            if remaining > 0:
-                print(f"   ... {remaining} more entries (run full standup to see all)")
-            break
-
-        status = e.get("status", "")
-        name = e.get("name", e.get("id", "?"))
-        tips = OUTREACH_BY_STATUS.get(status, [])
-        existing = e.get("outreach", [])
-        done_types = set()
-        if isinstance(existing, list):
-            for o in existing:
-                if isinstance(o, dict) and o.get("status") == "done":
-                    done_types.add(o.get("type", ""))
-
-        dl_date, _ = get_deadline(e)
-        dl_str = ""
-        if dl_date:
-            d = days_until(dl_date)
-            if d >= 0:
-                dl_str = f" — {d}d to deadline"
-
-        print(f"   {name} [{status}]{dl_str}:")
-        for tip in tips:
-            print(f"     - {tip}")
-        if done_types:
-            print(f"     (already done: {', '.join(sorted(done_types))})")
-        shown += 1
-
-    print()
+    _work_sections.section_outreach(
+        entries,
+        actionable_statuses=ACTIONABLE_STATUSES,
+        get_deadline_fn=get_deadline,
+        days_until_fn=days_until,
+        get_score_fn=get_score,
+        outreach_by_status=OUTREACH_BY_STATUS,
+    )
 
 
 # ---------------------------------------------------------------------------
 # Section 5: Best Practices
 # ---------------------------------------------------------------------------
 
-PRACTICES_BY_CONTEXT = {
-    "pre_deadline_week": [
-        "Submit 24-48 hours before the deadline — portals crash at the wire",
-        "Check that all linked work samples/portfolio URLs are live",
-        "Do a final proofread pass on all materials",
-    ],
-    "no_submissions_ever": [
-        "Have you identified your top 3 perfect-fit roles?",
-        "Invest time in relationship building before submitting cold",
-        "One deeply researched application beats ten generic ones",
-    ],
-    "high_stagnation": [
-        "Review your top entries — is each still a genuine perfect fit?",
-        "If an entry has been stagnant >30 days, decide: invest deeper or withdraw",
-    ],
-    "networking_cadence": [
-        "Target 2-3 outreach messages per week (quality over quantity)",
-        "Warm introductions convert 5-10x better than cold emails",
-    ],
-    "reference_requests": [
-        "Ask recommenders 2+ weeks before deadline",
-        "Provide them a brief: what the opportunity is + your angle + deadline",
-    ],
-}
-
-
 def section_practices(entries: list[dict], stale_stats: dict):
     """Context-sensitive reminders from strategy docs."""
-    tips_shown = set()
-
-    print("5. BEST PRACTICES")
-
-    # Check if any entry has deadline this week
-    for e in entries:
-        dl_date, dl_type = get_deadline(e)
-        if dl_date and dl_type in ("hard", "fixed") and 0 <= days_until(dl_date) <= 7:
-            if "pre_deadline_week" not in tips_shown:
-                tips_shown.add("pre_deadline_week")
-                for tip in PRACTICES_BY_CONTEXT["pre_deadline_week"]:
-                    print(f"   - {tip}")
-
-    # No submissions ever
-    has_submission = any(
-        e.get("status") in ("submitted", "acknowledged", "interview", "outcome")
-        for e in entries
+    _work_sections.section_practices(
+        entries,
+        stale_stats,
+        get_deadline_fn=get_deadline,
+        days_until_fn=days_until,
+        practices_by_context=PRACTICES_BY_CONTEXT,
     )
-    if not has_submission and "no_submissions_ever" not in tips_shown:
-        tips_shown.add("no_submissions_ever")
-        for tip in PRACTICES_BY_CONTEXT["no_submissions_ever"]:
-            print(f"   - {tip}")
-
-    # High stagnation
-    if stale_stats.get("stagnant", 0) > 5 and "high_stagnation" not in tips_shown:
-        tips_shown.add("high_stagnation")
-        for tip in PRACTICES_BY_CONTEXT["high_stagnation"]:
-            print(f"   - {tip}")
-
-    # Always show networking cadence
-    if "networking_cadence" not in tips_shown:
-        tips_shown.add("networking_cadence")
-        for tip in PRACTICES_BY_CONTEXT["networking_cadence"]:
-            print(f"   - {tip}")
-
-    if not tips_shown:
-        print("   No context-specific tips today.")
-
-    print()
 
 
 # ---------------------------------------------------------------------------
@@ -606,51 +230,16 @@ def section_practices(entries: list[dict], stale_stats: dict):
 
 def section_replenish(entries: list[dict]):
     """Alert when actionable count drops below threshold."""
-    actionable = [e for e in entries if e.get("status") in ACTIONABLE_STATUSES]
-    # Exclude expired
-    live = []
-    for e in actionable:
-        dl_date, _ = get_deadline(e)
-        if dl_date and days_until(dl_date) < 0:
-            continue
-        live.append(e)
-
-    # Count by track
-    by_track: dict[str, int] = {}
-    for e in live:
-        track = e.get("track", "unknown")
-        by_track[track] = by_track.get(track, 0) + 1
-
-    print("6. PIPELINE REPLENISHMENT")
-    print(f"   Live actionable entries: {len(live)}")
-
-    if len(live) < REPLENISH_THRESHOLD:
-        print(f"   !! Below threshold ({REPLENISH_THRESHOLD}). Research new perfect-fit targets.")
-        print("   Focus on roles with warm paths (network_proximity >= 5).")
-    else:
-        print(f"   OK — pipeline lean and focused ({len(live)} entries, threshold {REPLENISH_THRESHOLD})")
-
-    # Track diversity check
-    if by_track:
-        print("   By track:")
-        for track, count in sorted(by_track.items(), key=lambda x: -x[1]):
-            print(f"     {track}: {count}")
-
-    # Check for track gaps
-    desired_tracks = {"grant", "residency", "job", "fellowship", "writing"}
-    missing = desired_tracks - set(by_track.keys())
-    if missing:
-        print(f"   Gaps: no live entries in {', '.join(sorted(missing))}")
-
-    # Show research pool size
-    pool_entries = load_entries(dirs=[PIPELINE_DIR_RESEARCH_POOL])
-    if pool_entries:
-        pool_high = sum(1 for e in pool_entries if get_score(e) >= 9.0)
-        print(f"   Research pool: {len(pool_entries)} entries ({pool_high} scoring >= 9.0)")
-        if len(live) < REPLENISH_THRESHOLD and pool_high > 0:
-            print("   Tip: run `python scripts/score.py --auto-qualify --dry-run` to preview top entries (threshold 9.0)")
-
-    print()
+    _work_sections.section_replenish(
+        entries,
+        actionable_statuses=ACTIONABLE_STATUSES,
+        get_deadline_fn=get_deadline,
+        days_until_fn=days_until,
+        replenish_threshold=REPLENISH_THRESHOLD,
+        load_entries_fn=load_entries,
+        pipeline_dir_research_pool=PIPELINE_DIR_RESEARCH_POOL,
+        get_score_fn=get_score,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -659,41 +248,10 @@ def section_replenish(entries: list[dict]):
 
 def section_deferred(entries: list[dict]):
     """Show entries with status=deferred and their resume dates."""
-    deferred = [e for e in entries if e.get("status") == "deferred"]
-
-    print("7. DEFERRED ENTRIES")
-
-    if not deferred:
-        print("   No deferred entries.")
-        print()
-        return
-
-    today = date.today()
-    print(f"   {len(deferred)} entry(ies) deferred (blocked by external factors):")
-    for e in deferred:
-        name = e.get("name", e.get("id", "?"))
-        deferral = e.get("deferral", {})
-        reason = deferral.get("reason", "unknown") if isinstance(deferral, dict) else "unknown"
-        resume_date_str = deferral.get("resume_date") if isinstance(deferral, dict) else None
-        note = deferral.get("note", "") if isinstance(deferral, dict) else ""
-
-        resume_info = ""
-        if resume_date_str:
-            rd = parse_date(resume_date_str)
-            if rd:
-                d = (rd - today).days
-                if d > 0:
-                    resume_info = f" — resumes in {d}d ({resume_date_str})"
-                elif d == 0:
-                    resume_info = f" — RESUME TODAY ({resume_date_str})"
-                else:
-                    resume_info = f" — PAST RESUME DATE ({resume_date_str}, {abs(d)}d ago)"
-
-        print(f"     {name} [{reason}]{resume_info}")
-        if note:
-            print(f"       {note}")
-
-    print()
+    _work_sections.section_deferred(
+        entries,
+        parse_date_fn=parse_date,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -753,96 +311,10 @@ def section_signal_freshness():
 
 def section_followup(entries: list[dict]):
     """Show follow-up dashboard: due/overdue actions for submitted entries."""
-    submitted = [e for e in entries if e.get("status") in ("submitted", "acknowledged")]
-
-    print("8. FOLLOW-UP DASHBOARD")
-
-    if not submitted:
-        print("   No submitted entries to follow up on.")
-        print()
-        return
-
-    today = date.today()
-    due_entries = []
-    overdue_entries = []
-    upcoming_entries = []
-
-    for e in submitted:
-        entry_id = e.get("id", "?")
-        name = e.get("name", entry_id)
-        target = e.get("target", {})
-        org = target.get("organization", "?") if isinstance(target, dict) else "?"
-
-        tl = e.get("timeline", {})
-        sub_date = parse_date(tl.get("submitted")) if isinstance(tl, dict) else None
-        if not sub_date:
-            continue
-
-        days_since = (today - sub_date).days
-        existing = e.get("follow_up", []) or []
-        existing_types = {fu.get("type") for fu in existing if isinstance(fu, dict)}
-
-        # Follow-up protocol: connect (day 1-2), dm (day 7-10), check_in (day 14-21)
-        protocol = [
-            {"day_range": (1, 2), "type": "connect", "action": "Connect on LinkedIn"},
-            {"day_range": (7, 10), "type": "dm", "action": "First follow-up DM/email"},
-            {"day_range": (14, 21), "type": "check_in", "action": "Final follow-up"},
-        ]
-
-        for step in protocol:
-            if step["type"] in existing_types:
-                continue
-            low, high = step["day_range"]
-            if days_since > high:
-                overdue_entries.append({
-                    "id": entry_id, "name": name, "org": org,
-                    "days": days_since, "action": step["action"],
-                    "window": f"Day {low}-{high}",
-                })
-            elif low <= days_since <= high:
-                due_entries.append({
-                    "id": entry_id, "name": name, "org": org,
-                    "days": days_since, "action": step["action"],
-                    "window": f"Day {low}-{high}",
-                })
-            else:
-                upcoming_entries.append({
-                    "id": entry_id, "name": name, "org": org,
-                    "days": days_since, "due_in": low - days_since,
-                    "action": step["action"],
-                })
-
-    if overdue_entries:
-        print(f"   OVERDUE ({len(overdue_entries)}):")
-        for item in overdue_entries[:5]:
-            print(f"     !!! {item['org']} — {item['name']}")
-            print(f"         Day {item['days']} — {item['action']} ({item['window']})")
-        if len(overdue_entries) > 5:
-            print(f"     ... and {len(overdue_entries) - 5} more")
-
-    if due_entries:
-        print(f"   DUE TODAY ({len(due_entries)}):")
-        for item in due_entries[:5]:
-            print(f"     >> {item['org']} — {item['name']}")
-            print(f"        Day {item['days']} — {item['action']}")
-        if len(due_entries) > 5:
-            print(f"     ... and {len(due_entries) - 5} more")
-
-    if not overdue_entries and not due_entries:
-        if upcoming_entries:
-            upcoming_entries.sort(key=lambda x: x["due_in"])
-            print("   No actions due today. Next up:")
-            for item in upcoming_entries[:3]:
-                print(f"     in {item['due_in']}d — {item['org']} — {item['action']}")
-        else:
-            print("   All follow-up protocols complete for current submissions.")
-
-    # Summary line
-    total_submitted = len(submitted)
-    with_followups = sum(1 for e in submitted if e.get("follow_up"))
-    print(f"\n   Submitted: {total_submitted} | With follow-ups: {with_followups} | "
-          f"Overdue: {len(overdue_entries)} | Due: {len(due_entries)}")
-    print()
+    _relationship_sections.section_followup(
+        entries,
+        parse_date_fn=parse_date,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -851,64 +323,7 @@ def section_followup(entries: list[dict]):
 
 def section_relationships(entries: list[dict]):
     """Relationship cultivation: top score-impact targets, today's actions, dense orgs."""
-    print("RELATIONSHIPS")
-    print("-" * 40)
-
-    # Part 1: Top 5 entries where warm->cold delta is highest
-    try:
-        from score import analyze_reachability
-        reachable = []
-        for e in entries:
-            if e.get("status") not in {"research", "qualified", "drafting", "staged"}:
-                continue
-            result = analyze_reachability(e, entries, 9.0)
-            if result["current_composite"] >= 9.0:
-                continue
-            if result["reachable_with"]:
-                best = next(s for s in result["scenarios"] if s["level"] == result["reachable_with"])
-                reachable.append({
-                    "entry_id": result["entry_id"],
-                    "composite": result["current_composite"],
-                    "delta": best["delta"],
-                    "need": result["reachable_with"],
-                })
-        reachable.sort(key=lambda x: x["delta"], reverse=True)
-        if reachable:
-            print("\n   TOP CULTIVATION TARGETS (by score impact):")
-            for r in reachable[:5]:
-                print(f"     {r['entry_id']:<35s} {r['composite']:.1f} (+{r['delta']:.1f} with {r['need']})")
-        else:
-            print("\n   No entries where network cultivation alone unlocks 9.0")
-    except ImportError:
-        print("\n   (score module not available for reachability analysis)")
-
-    # Part 2: Today's cultivation actions
-    try:
-        from cultivate import get_today_actions
-        actions = get_today_actions(entries)
-        if actions:
-            print(f"\n   TODAY'S CULTIVATION ACTIONS ({len(actions)}):")
-            for a in actions[:5]:
-                print(f"     {a['entry_id']}: {a['action_type']} via {a['channel']}"
-                      + (f" -> {a['contact']}" if a['contact'] else ""))
-    except ImportError:
-        pass  # cultivate.py not yet available — graceful skip
-
-    # Part 3: Dense organizations
-    try:
-        from warm_intro_audit import scan_for_organizations
-        org_map = scan_for_organizations(entries)
-        dense = [(org, ents) for org, ents in org_map.items() if len(ents) >= 3]
-        dense.sort(key=lambda x: len(x[1]), reverse=True)
-        if dense:
-            print("\n   DENSE ORGS (3+ entries — network leverage):")
-            for org, ents in dense[:3]:
-                ids = ", ".join(e.get("id", "?") for e in ents[:3])
-                print(f"     {org} ({len(ents)} entries): {ids}")
-    except ImportError:
-        pass  # warm_intro_audit.py not available — graceful skip
-
-    print()
+    _relationship_sections.section_relationships(entries)
 
 
 # ---------------------------------------------------------------------------
@@ -981,28 +396,6 @@ def touch_entry(entry_id: str):
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
-
-SECTIONS = {
-    "health": "Pipeline health counts and velocity",
-    "wins": "Recent milestones and achievements",
-    "stale": "Staleness alerts (expired, at-risk, stagnant)",
-    "execution": "Execution bottlenecks (stale staged, portal wiring, conversion)",
-    "plan": "Today's work plan",
-    "outreach": "Outreach suggestions per target",
-    "practices": "Context-sensitive best practice reminders",
-    "replenish": "Pipeline replenishment alerts",
-    "deferred": "Deferred entries awaiting external unblock",
-    "followup": "Follow-up dashboard for submitted entries",
-    "readiness": "Staged entry readiness scores and blockers",
-    "log": "Append session record to standup-log.yaml",
-    "jobs": "Job pipeline status",
-    "jobfreshness": "Job posting freshness tiers (hot/warm/cooling/stale)",
-    "opportunities": "Opportunity pipeline (grants/residencies/prizes/writing)",
-    "market": "Market conditions, hot skills, and upcoming grant deadlines",
-    "funding": "Funding pulse: viability score, top pathways, urgent blind spots",
-    "relationships": "Relationship cultivation: top targets, today's actions, dense orgs",
-}
-
 
 # ---------------------------------------------------------------------------
 # Section: Wins (recent milestones and achievements)
@@ -1115,232 +508,12 @@ def section_readiness(entries: list[dict]):
 
 
 # ---------------------------------------------------------------------------
-# Job freshness badge helper
-# ---------------------------------------------------------------------------
-
-_FRESHNESS_BADGES = {
-    "hot": "[HOT <24h]",
-    "warm": "[WARM 24-48h]",
-    "cooling": "[COOLING 48-72h]",
-    "stale": "[STALE >72h]",
-}
-
-
-def _freshness_badge(entry: dict) -> str:
-    """Return a freshness indicator string for a job entry.
-
-    Non-job entries return an empty string.  Job entries with no parseable
-    date return '[AGE?]'.
-    """
-    if entry.get("track") != "job":
-        return ""
-    age = get_posting_age_hours(entry)
-    if age is None:
-        return "[AGE?]"
-    tier = get_freshness_tier(entry)
-    return _FRESHNESS_BADGES.get(tier, "[AGE?]")
-
-
-# ---------------------------------------------------------------------------
-# Section: Job Pipeline
-# ---------------------------------------------------------------------------
-
-def section_jobs(entries: list[dict]):
-    """Display job-track pipeline sorted by score and submission status."""
-    job_entries = [e for e in entries if e.get("track") == "job"]
-
-    print("JOB PIPELINE")
-    if not job_entries:
-        print("   No job-track entries in pipeline.")
-        print()
-        return
-
-    # Group by status
-    by_status: dict[str, list] = {}
-    for e in job_entries:
-        status = e.get("status", "unknown")
-        by_status.setdefault(status, []).append(e)
-
-    # Show counts
-    print(f"   Total job entries: {len(job_entries)}")
-    status_order = ["research", "qualified", "drafting", "staged", "deferred",
-                    "submitted", "acknowledged", "interview", "outcome"]
-    status_parts = []
-    for s in status_order:
-        c = len(by_status.get(s, []))
-        if c:
-            status_parts.append(f"{s}={c}")
-    print(f"   Status: {', '.join(status_parts)}")
-    print()
-
-    # Actionable jobs sorted by score
-    actionable_jobs = [e for e in job_entries if e.get("status") in ACTIONABLE_STATUSES]
-    actionable_jobs.sort(key=lambda e: get_score(e), reverse=True)
-
-    if actionable_jobs:
-        print("   Actionable (by score):")
-        for e in actionable_jobs:
-            entry_id = e.get("id", "?")
-            name = e.get("name", entry_id)
-            score = get_score(e)
-            status = e.get("status", "?")
-            portal = e.get("target", {}).get("portal", "?") if isinstance(e.get("target"), dict) else "?"
-            tags_str = ""
-            tags = e.get("tags", [])
-            if isinstance(tags, list) and "auto-sourced" in tags:
-                tags_str = " [auto]"
-            freshness_badge = _freshness_badge(e)
-            print(f"     [{score:.1f}] {name} — {status} [{portal}]{tags_str} {freshness_badge}")
-
-    # Submitted jobs
-    submitted_jobs = [e for e in job_entries if e.get("status") in ("submitted", "acknowledged", "interview")]
-    if submitted_jobs:
-        print("   Awaiting response:")
-        for e in submitted_jobs:
-            name = e.get("name", e.get("id", "?"))
-            status = e.get("status", "?")
-            tl = e.get("timeline", {})
-            sub_date = tl.get("submitted", "") if isinstance(tl, dict) else ""
-            days_str = ""
-            if sub_date:
-                sd = parse_date(sub_date)
-                if sd:
-                    days_waiting = (date.today() - sd).days
-                    days_str = f" ({days_waiting}d ago)"
-            print(f"     {name} — {status}{days_str}")
-
-    print()
-
-
-# ---------------------------------------------------------------------------
-# Section: Job Freshness
-# ---------------------------------------------------------------------------
-
-def section_job_freshness(entries: list[dict]):
-    """Show job posting freshness breakdown: hot/warm/cooling/stale counts and listings."""
-    job_entries = [e for e in entries
-                   if e.get("track") == "job" and e.get("status") in ACTIONABLE_STATUSES]
-
-    print("JOB FRESHNESS")
-
-    if not job_entries:
-        print("   No actionable job entries.")
-        print()
-        return
-
-    # Bucket entries by tier
-    buckets: dict[str, list[dict]] = {
-        "hot": [], "warm": [], "cooling": [], "stale": [], "unknown": [],
-    }
-    for e in job_entries:
-        age = get_posting_age_hours(e)
-        if age is None:
-            buckets["unknown"].append(e)
-        else:
-            tier = get_freshness_tier(e) or "unknown"
-            buckets[tier].append(e)
-
-    hot = buckets["hot"]
-    warm = buckets["warm"]
-    cooling = buckets["cooling"]
-    stale = buckets["stale"]
-    unknown = buckets["unknown"]
-
-    print(f"   HOT: {len(hot)}  |  WARM: {len(warm)}  |  COOLING: {len(cooling)}  |  STALE: {len(stale)}  |  AGE?: {len(unknown)}")
-    print()
-
-    if hot:
-        print("   HOT — submit NOW:")
-        for e in sorted(hot, key=lambda x: get_score(x), reverse=True):
-            name = e.get("name", e.get("id", "?"))
-            score = get_score(e)
-            print(f"     [{score:.1f}] {name}")
-
-    if warm:
-        print("   WARM — still viable today:")
-        for e in sorted(warm, key=lambda x: get_score(x), reverse=True):
-            name = e.get("name", e.get("id", "?"))
-            score = get_score(e)
-            print(f"     [{score:.1f}] {name}")
-
-    if cooling:
-        print("   COOLING — submit only if staged:")
-        for e in sorted(cooling, key=lambda x: get_score(x), reverse=True):
-            name = e.get("name", e.get("id", "?"))
-            score = get_score(e)
-            print(f"     [{score:.1f}] {name}")
-
-    if stale:
-        print(f"   {len(stale)} stale job entries — candidates for auto-expire")
-
-    if unknown:
-        print(f"   {len(unknown)} entries with no posting date (cannot determine freshness)")
-
-    print()
-
-
-# ---------------------------------------------------------------------------
-# Section: Opportunity Pipeline
-# ---------------------------------------------------------------------------
-
-def section_opportunities(entries: list[dict]):
-    """Display non-job pipeline sorted by deadline."""
-    opp_entries = [e for e in entries
-                   if e.get("track") != "job"
-                   and e.get("status") in ACTIONABLE_STATUSES]
-
-    print("OPPORTUNITY PIPELINE (grants/residencies/prizes/writing)")
-    if not opp_entries:
-        print("   No actionable non-job entries.")
-        print()
-        return
-
-    # Sort by deadline (hard deadlines first), then by score
-    def opp_sort_key(e):
-        dl_date, dl_type = get_deadline(e)
-        if dl_date:
-            d = days_until(dl_date)
-            if d >= 0 and dl_type in ("hard", "fixed"):
-                return (0, d, -get_score(e))
-        return (1, 9999, -get_score(e))
-
-    opp_entries.sort(key=opp_sort_key)
-
-    print(f"   Actionable opportunities: {len(opp_entries)}")
-    print()
-    for e in opp_entries[:15]:
-        name = e.get("name", e.get("id", "?"))
-        score = get_score(e)
-        status = e.get("status", "?")
-        track = e.get("track", "?")
-        dl_date, dl_type = get_deadline(e)
-        dl_str = ""
-        if dl_date:
-            d = days_until(dl_date)
-            if d < 0:
-                dl_str = f" EXPIRED {abs(d)}d ago"
-            elif dl_type in ("hard", "fixed"):
-                dl_str = f" {d}d left"
-            else:
-                dl_str = f" ~{d}d ({dl_type})"
-        elif dl_type in ("rolling", "tba"):
-            dl_str = f" {dl_type}"
-        effort = get_effort(e)
-        print(f"     [{score:.1f}] {name}")
-        print(f"           {track} — {status} — {effort}{dl_str}")
-
-    if len(opp_entries) > 15:
-        print(f"     ... and {len(opp_entries) - 15} more")
-    print()
-
-
-# ---------------------------------------------------------------------------
 # Section: Market Intelligence
 # ---------------------------------------------------------------------------
 
 def section_market():
     """Print market conditions, hot skills, and upcoming grant deadlines from market intel."""
-    intel = _load_market_intel()
+    intel = load_market_intelligence()
     if not intel:
         print("MARKET INTELLIGENCE")
         print("   No data — run: python scripts/market_intel.py --sources")
@@ -1558,14 +731,7 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
 # Triage mode
 # ---------------------------------------------------------------------------
 
-# Derive forward-only advancement map from canonical VALID_TRANSITIONS.
-# For each actionable status, the "next" status is the natural pipeline progression.
-_FORWARD_PATH = ["research", "qualified", "drafting", "staged", "submitted"]
-NEXT_STATUS = {}
-for _i, _s in enumerate(_FORWARD_PATH[:-1]):
-    _next = _FORWARD_PATH[_i + 1]
-    if _next in VALID_TRANSITIONS.get(_s, set()):
-        NEXT_STATUS[_s] = _next
+NEXT_STATUS = build_next_status(VALID_TRANSITIONS)
 
 
 def run_triage():

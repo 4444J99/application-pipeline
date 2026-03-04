@@ -9,28 +9,36 @@ coupling to script internals.
 """
 
 import json
-import sys
-from pathlib import Path
 
 from mcp.server.fastmcp import FastMCP
 
-# Add scripts dir to path so we can import local modules
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from pipeline_api import (
-    advance_entry,
-    compose_entry,
-    draft_entry,
-    score_entry,
-    validate_entry,
-)
+try:  # Prefer package-style imports when available.
+    from .pipeline_api import (
+        advance_entry,
+        compose_entry,
+        draft_entry,
+        score_entry,
+        validate_entry,
+    )
+except ImportError:  # pragma: no cover - script execution fallback
+    from pipeline_api import (
+        advance_entry,
+        compose_entry,
+        draft_entry,
+        score_entry,
+        validate_entry,
+    )
 
 # Initialize FastMCP server
 mcp = FastMCP("application-pipeline")
 
 
 @mcp.tool()
-def pipeline_score(entry_id: str, auto_qualify: bool = False) -> str:
+def pipeline_score(
+    entry_id: str | None = None,
+    auto_qualify: bool = False,
+    all_entries: bool = False,
+) -> str:
     """Score a single entry or auto-qualify batch.
     
     Args:
@@ -40,7 +48,12 @@ def pipeline_score(entry_id: str, auto_qualify: bool = False) -> str:
     Returns:
         JSON result with status, entry_id, scores, and optional error
     """
-    result = score_entry(entry_id=entry_id, auto_qualify=auto_qualify, dry_run=True)
+    result = score_entry(
+        entry_id=entry_id,
+        auto_qualify=auto_qualify,
+        all_entries=all_entries,
+        dry_run=True,
+    )
     
     return json.dumps({
         "status": result.status.value,
@@ -53,7 +66,7 @@ def pipeline_score(entry_id: str, auto_qualify: bool = False) -> str:
 
 
 @mcp.tool()
-def pipeline_advance(target_id: str, to_status: str = None) -> str:
+def pipeline_advance(target_id: str, to_status: str | None = None) -> str:
     """Advance an entry to the next status in the pipeline.
     
     Args:

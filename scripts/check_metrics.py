@@ -15,6 +15,7 @@ Usage:
 
 import argparse
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -53,17 +54,46 @@ _FALLBACK_METRICS = {
 }
 
 
-def load_source_metrics(path: Path = CANONICAL_METRICS) -> dict:
+def _resolve_metrics_source_mode(explicit_mode: str | None = None) -> str:
+    """Resolve metrics source mode from argument or environment.
+
+    Modes:
+    - auto: use canonical file when present, fallback otherwise
+    - canonical: prefer canonical file, fallback with warning if unavailable
+    - fallback: always use repository fallback constants
+    """
+    mode = (explicit_mode or os.getenv("PIPELINE_METRICS_SOURCE", "auto")).strip().lower()
+    if mode not in {"auto", "canonical", "fallback"}:
+        return "auto"
+    return mode
+
+
+def load_source_metrics(path: Path = CANONICAL_METRICS, mode: str | None = None) -> dict:
     """Load source of truth metrics from system-metrics.json.
 
     Falls back to hardcoded values if the canonical file is unavailable.
     """
-    if not path.exists():
-        print(f"  WARNING: {path} not found, using fallback metrics", file=sys.stderr)
+    source_mode = _resolve_metrics_source_mode(mode)
+    if source_mode == "fallback":
         return _FALLBACK_METRICS
 
-    with open(path) as f:
-        data = json.load(f)
+    if not path.exists():
+        if source_mode == "canonical":
+            print(
+                f"  WARNING: canonical metrics requested but missing at {path}; using fallback metrics",
+                file=sys.stderr,
+            )
+        else:
+            print(f"  WARNING: {path} not found, using fallback metrics", file=sys.stderr)
+        return _FALLBACK_METRICS
+
+    try:
+        with open(path) as f:
+            data = json.load(f)
+    except (OSError, json.JSONDecodeError) as exc:
+        print(f"  WARNING: failed to load canonical metrics at {path}, using fallback metrics", file=sys.stderr)
+        print(f"  DETAIL: {exc}", file=sys.stderr)
+        return _FALLBACK_METRICS
 
     c = data["computed"]
     m = data.get("manual", {})

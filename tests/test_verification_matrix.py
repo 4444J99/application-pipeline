@@ -40,6 +40,18 @@ def test_build_matrix_detects_stale_overrides():
     assert report["stale_overrides"] == ["old-module"]
 
 
+def test_build_matrix_reports_missing_mcp_tools():
+    report = build_matrix(
+        modules=["alpha"],
+        direct_test_modules={"alpha"},
+        overrides={},
+        mcp_tools=["pipeline_score", "pipeline_validate"],
+        mcp_tested_tools={"pipeline_score"},
+    )
+    assert report["mcp_tools_total"] == 2
+    assert report["mcp_tools_missing"] == ["pipeline_validate"]
+
+
 def test_load_overrides_normalizes_shapes(tmp_path):
     path = tmp_path / "overrides.yaml"
     path.write_text(
@@ -60,4 +72,3 @@ def test_load_overrides_normalizes_shapes(tmp_path):
     assert "alpha" in overrides
     assert overrides["alpha"]["verification"] == "smoke"
     assert overrides["alpha"]["evidence"] == ["python scripts/alpha.py"]
-

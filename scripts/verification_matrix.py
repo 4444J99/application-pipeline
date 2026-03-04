@@ -9,7 +9,9 @@ Ensures every top-level script module has an explicit verification route:
 from __future__ import annotations
 
 import argparse
+import ast
 import json
+import re
 from dataclasses import asdict, dataclass
 from pathlib import Path
 
@@ -20,6 +22,8 @@ SCRIPTS_DIR = REPO_ROOT / "scripts"
 TESTS_DIR = REPO_ROOT / "tests"
 DEFAULT_OVERRIDES_PATH = REPO_ROOT / "strategy" / "module-verification-overrides.yaml"
 IGNORED_MODULES = {"__init__"}
+MCP_SERVER_PATH = REPO_ROOT / "scripts" / "mcp_server.py"
+MCP_TEST_PATH = REPO_ROOT / "tests" / "test_mcp_server.py"
 
 
 @dataclass(frozen=True)
@@ -80,7 +84,43 @@ def load_overrides(path: Path) -> dict[str, dict]:
     return result
 
 
-def build_matrix(modules: list[str], direct_test_modules: set[str], overrides: dict[str, dict]) -> dict:
+def discover_mcp_tools(server_path: Path) -> list[str]:
+    """Discover tool functions decorated with @mcp.tool() in mcp_server.py."""
+    if not server_path.exists():
+        return []
+
+    tree = ast.parse(server_path.read_text())
+    tools: list[str] = []
+    for node in tree.body:
+        if not isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+            continue
+        for decorator in node.decorator_list:
+            dec = decorator.func if isinstance(decorator, ast.Call) else decorator
+            if isinstance(dec, ast.Attribute) and dec.attr == "tool":
+                tools.append(node.name)
+                break
+    return sorted(tools)
+
+
+def discover_mcp_tested_tools(test_path: Path, tools: list[str]) -> set[str]:
+    """Return MCP tool functions that appear in the MCP server test file."""
+    if not test_path.exists():
+        return set()
+    text = test_path.read_text()
+    covered = set()
+    for tool in tools:
+        if re.search(rf"\b{re.escape(tool)}\b", text):
+            covered.add(tool)
+    return covered
+
+
+def build_matrix(
+    modules: list[str],
+    direct_test_modules: set[str],
+    overrides: dict[str, dict],
+    mcp_tools: list[str] | None = None,
+    mcp_tested_tools: set[str] | None = None,
+) -> dict:
     """Build module verification matrix report payload."""
     rows: list[ModuleStatus] = []
     missing: list[str] = []
@@ -120,6 +160,9 @@ def build_matrix(modules: list[str], direct_test_modules: set[str], overrides: d
         )
 
     stale_overrides = sorted(set(overrides.keys()) - set(modules))
+    mcp_tools = sorted(mcp_tools or [])
+    mcp_tested_tools = set(mcp_tested_tools or set())
+    mcp_missing_tools = sorted(tool for tool in mcp_tools if tool not in mcp_tested_tools)
 
     return {
         "total_modules": len(modules),
@@ -128,6 +171,9 @@ def build_matrix(modules: list[str], direct_test_modules: set[str], overrides: d
         "missing_count": len(missing),
         "missing_modules": sorted(missing),
         "stale_overrides": stale_overrides,
+        "mcp_tools_total": len(mcp_tools),
+        "mcp_tools_tested": sorted(mcp_tested_tools),
+        "mcp_tools_missing": mcp_missing_tools,
         "rows": rows,
     }
 
@@ -166,6 +212,16 @@ def _print_report(report: dict) -> None:
             print(f"  - {module}")
         print()
 
+    mcp_missing = report["mcp_tools_missing"]
+    print(f"MCP tools discovered: {report['mcp_tools_total']}")
+    if mcp_missing:
+        print("MCP TOOLS MISSING TEST COVERAGE:")
+        for tool_name in mcp_missing:
+            print(f"  - {tool_name}")
+        print()
+    else:
+        print("MCP tool coverage: complete")
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Check script module verification coverage")
@@ -182,7 +238,15 @@ def main() -> None:
     modules = discover_modules(SCRIPTS_DIR)
     direct_test_modules = discover_direct_test_modules(TESTS_DIR)
     overrides = load_overrides(overrides_path)
-    report = build_matrix(modules, direct_test_modules, overrides)
+    mcp_tools = discover_mcp_tools(MCP_SERVER_PATH)
+    tested_mcp_tools = discover_mcp_tested_tools(MCP_TEST_PATH, mcp_tools)
+    report = build_matrix(
+        modules,
+        direct_test_modules,
+        overrides,
+        mcp_tools=mcp_tools,
+        mcp_tested_tools=tested_mcp_tools,
+    )
 
     if args.json:
         payload = dict(report)
@@ -191,7 +255,7 @@ def main() -> None:
     else:
         _print_report(report)
 
-    has_failures = bool(report["missing_modules"] or report["stale_overrides"])
+    has_failures = bool(report["missing_modules"] or report["stale_overrides"] or report["mcp_tools_missing"])
     if args.strict and has_failures:
         raise SystemExit(1)
 

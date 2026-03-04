@@ -12,94 +12,35 @@ import sys
 from datetime import date
 from pathlib import Path
 
+import score_auto_dimensions as _auto_dimensions
+import score_constants as _score_constants
+import score_explain as _score_explain
+import score_human_dimensions as _human_dimensions
+import score_network as _score_network
+import score_reachability as _score_reachability
 import yaml
 from pipeline_lib import (
     ALL_PIPELINE_DIRS_WITH_POOL,
-    BLOCKS_DIR,
     DIMENSION_ORDER,
     PIPELINE_DIR_ACTIVE,
     PIPELINE_DIR_RESEARCH_POOL,
     PORTAL_SCORES_DEFAULT,
     STRATEGIC_BASE_DEFAULT,
     atomic_write,
-    days_until,
-    get_portal_scores,
-    get_strategic_base,
     load_entry_by_id,
-    load_market_intelligence,
-    load_profile,
-    parse_date,
     update_last_touched,
     update_yaml_field,
 )
 from pipeline_lib import (
     load_entries as _load_entries_raw,
 )
+from pipeline_lib import (
+    load_market_intelligence as _load_market_intelligence,
+)
 
-# --- Text match integration (lazy-loaded) ---
-
-_TEXT_MATCH_IDF: tuple[dict[str, float], int] | None = None
-_text_match_available = True
-
-
-def _get_text_match_idf() -> tuple[dict[str, float], int] | None:
-    """Lazy-load IDF table from text_match module."""
-    global _TEXT_MATCH_IDF, _text_match_available
-    if not _text_match_available:
-        return None
-    if _TEXT_MATCH_IDF is not None:
-        return _TEXT_MATCH_IDF
-    try:
-        from text_match import get_idf
-        idf, corpus_size = get_idf()
-        if idf:
-            _TEXT_MATCH_IDF = (idf, corpus_size)
-            return _TEXT_MATCH_IDF
-    except Exception:
-        _text_match_available = False
-    return None
-
-
-def _text_match_result(entry: dict):
-    """Compute text match result for an entry, or None on failure."""
-    idf_data = _get_text_match_idf()
-    if idf_data is None:
-        return None
-    idf, corpus_size = idf_data
-    try:
-        from text_match import analyze_entry
-        entry_id = entry.get("id", "")
-        return analyze_entry(entry_id, entry, idf, corpus_size)
-    except Exception:
-        return None
-
-
-def _ma_text_alignment(entry: dict) -> tuple[int, str]:
-    """Signal 5: TF-IDF similarity between posting and mission content (0-2)."""
-    result = _text_match_result(entry)
-    if result is None:
-        return 0, "no research text available"
-    score = result.mission_score
-    return score, f"text similarity -> {score} (cosine={result.overall_similarity:.3f})"
-
-
-def _em_text_coverage(entry: dict) -> tuple[int, str]:
-    """Signal 5: TF-IDF similarity between posting and evidence content (0-2)."""
-    result = _text_match_result(entry)
-    if result is None:
-        return 0, "no research text available"
-    score = result.evidence_score
-    return score, f"text coverage -> {score} (cosine={result.overall_similarity:.3f})"
-
-
-def _tr_text_fit(entry: dict) -> tuple[int, str]:
-    """Signal 5: TF-IDF similarity between posting and resume/profile content (0-2)."""
-    result = _text_match_result(entry)
-    if result is None:
-        return 0, "no research text available"
-    score = result.fit_score
-    return score, f"text fit -> {score} (cosine={result.overall_similarity:.3f})"
-
+HIGH_PRESTIGE = _score_constants.HIGH_PRESTIGE
+ROLE_FIT_TIERS = _score_constants.ROLE_FIT_TIERS
+load_market_intelligence = _load_market_intelligence
 
 # --- Scoring rubric loader ---
 
@@ -169,485 +110,61 @@ ESSENTIAL_PLAN_LIMIT = _CLIFFS.get("essential_plan_limit", 39125)
 PORTAL_SCORES = PORTAL_SCORES_DEFAULT
 STRATEGIC_BASE = STRATEGIC_BASE_DEFAULT
 
-# High-prestige organizations — tiered by acceptance rate / selectivity.
-# Tier 1 (~1-2% acceptance): 10  Tier 2 (~3-5%): 9  Tier 3 (~5-10%): 8  Others: 7-5
-HIGH_PRESTIGE = {
-    # Tier 1 — extremely competitive (≤2% acceptance)
-    "Whiting Foundation": 10,
-    "Creative Capital": 10,
-    # Tier 2 — highly competitive (≤5% acceptance)
-    "Doris Duke Charitable Foundation": 9,
-    "LACMA": 9,
-    "Prix Ars Electronica": 9,
-    "Tulsa Artist Fellowship": 9,
-    "Rauschenberg Foundation": 9,
-    "Watermill Center": 9,
-    # Tier 3 — competitive (5-10% acceptance / very high prestige)
-    "S+T+ARTS Prize": 8,
-    "Google": 8,
-    "Anthropic": 8,
-    "Eyebeam": 8,
-    "ZKM": 8,
-    "Mistral": 7,
-    "ElevenLabs": 7,
-    "Perplexity": 7,
-    "Cursor": 7,
-    "Anysphere": 7,
-    # Tier 4 — notable but more accessible
-    "Pioneer Works": 7,
-    "Headlands Center for the Arts": 7,
-    "NEW INC": 7,
-    "Cohere": 6,
-    "Runway": 6,
-    "HuggingFace": 6,
-    "Hugging Face": 6,
-    "Replit": 6,
-    "Vercel": 6,
-    "Scale AI": 6,
-    "GitLab": 6,
-    "Twilio": 6,
-    "MongoDB": 6,
-    "Grafana Labs": 6,
-    "Netlify": 6,
-    "Airtable": 6,
-    "Lambda Literary": 6,
-    "Processing Foundation": 6,
-    "Together AI": 5,
-    "Weights & Biases": 5,
-    "Modal": 5,
-    "Replicate": 5,
-    "Elastic": 5,
-    "PlanetScale": 5,
-    "Resend": 5,
-    "Neon": 5,
-    "Warp": 5,
-    # Expansion — notable companies from source pool
-    "DeepMind": 10,
-    "Databricks": 9,
-    "Plaid": 9,
-    "Coinbase": 9,
-    "Palantir": 9,
-    "Snowflake": 8,
-    "Robinhood": 8,
-    "Affirm": 8,
-    "Anduril": 8,
-    "Brex": 7,
-    "Mercury": 7,
-    "Rippling": 7,
-    "Prefect": 7,
-    "Sentry": 7,
-    "LangChain": 7,
-    "Sierra AI": 7,
-    "Harvey AI": 7,
-    "Cognition": 7,
-    "Fivetran": 6,
-    "Postman": 6,
-    "Gusto": 6,
-    "Lattice": 6,
-    "Deel": 6,
-    "Airbyte": 6,
-    "Grammarly": 6,
-    "Dropbox": 6,
-    "Reddit": 6,
-    "Discord": 6,
-    "Asana": 6,
-    "Duolingo": 6,
-    "Wiz": 6,
-    "Semgrep": 5,
-    "Pinecone": 5,
-    "Weaviate": 5,
-    "Honeycomb": 5,
-    "Tailscale": 5,
-    "Clerk": 5,
-    "Zapier": 5,
-    "Raycast": 5,
-}
-
-# Title-based role-fit tiers for auto-sourced entries.
-# Derived from 20 manually-scored submitted entries.
-# Order matters: specific patterns (tier-1, tier-4, tier-3) are checked
-# before generic catch-alls (tier-2 "software engineer") so that
-# "Software Engineer, iOS" matches tier-4 not tier-2.
-ROLE_FIT_TIERS = [
-    {
-        "name": "tier-1-strong",
-        "title_patterns": [
-            "developer experience", "developer tools", "devtools", "devex",
-            "developer relations", "devrel", "developer advocate", "developer community",
-            "developer education", "education engineer", "education platform",
-            "technical writer", "documentation engineer",
-            "cli ", "client infrastructure",
-            "agent sdk", "agentic",
-            "claude code",
-        ],
-        "mission_alignment": 9,
-        "evidence_match": 9,
-        "track_record_fit": 7,
-    },
-    {
-        "name": "tier-4-poor",
-        "title_patterns": [
-            "machine learning", "ml engineer", "reinforcement learning",
-            "security", "cybersecurity",
-            "data engineer", "data infrastructure", "databases",
-            "ios", "android", "mobile",
-            "accelerator", "compute efficiency", "networking",
-            "encoding", "inference",
-            "recruiting", "audiovisual",
-            "account abuse", "safeguard",
-            "people product", "human data",
-            "windows",
-        ],
-        "mission_alignment": 3,
-        "evidence_match": 2,
-        "track_record_fit": 2,
-    },
-    {
-        "name": "tier-3-weak",
-        "title_patterns": [
-            "forward deployed", "applied ai",
-            "growth", "enterprise",
-            "business technology",
-            "public sector",
-        ],
-        "mission_alignment": 5,
-        "evidence_match": 4,
-        "track_record_fit": 3,
-    },
-    {
-        "name": "tier-2-moderate",
-        "title_patterns": [
-            "software engineer",
-            "full stack", "fullstack",
-            "frontend", "backend",
-            "platform engineer", "infrastructure engineer",
-            "solutions engineer",
-            "integrations",
-            "product engineer",
-        ],
-        "mission_alignment": 7,
-        "evidence_match": 6,
-        "track_record_fit": 5,
-    },
-]
+TRACK_POSITION_AFFINITY = _human_dimensions.TRACK_POSITION_AFFINITY
+POSITION_EXPECTED_ORGANS = _human_dimensions.POSITION_EXPECTED_ORGANS
+CREDENTIALS = _human_dimensions.CREDENTIALS
 
 
 def estimate_role_fit_from_title(entry: dict) -> dict[str, int]:
-    """Estimate human dimensions from job title for auto-sourced entries.
-
-    Returns dimension dict based on title-pattern tier matching.
-    Uses patterns derived from 20 manually-scored submitted entries.
-    """
-    name = (entry.get("name") or "").lower()
-
-    for tier in ROLE_FIT_TIERS:
-        for pattern in tier["title_patterns"]:
-            if pattern in name:
-                return {
-                    "mission_alignment": tier["mission_alignment"],
-                    "evidence_match": tier["evidence_match"],
-                    "track_record_fit": tier["track_record_fit"],
-                }
-
-    # No match — neutral defaults instead of broken 0-based estimate
-    return {
-        "mission_alignment": 5,
-        "evidence_match": 4,
-        "track_record_fit": 4,
-    }
-
-
-# --- Signal-based dimension constants ---
-
-# Track-position affinity: how well each identity position fits each track.
-TRACK_POSITION_AFFINITY = {
-    "grant":      {"systems-artist": 3, "creative-technologist": 2, "community-practitioner": 2, "educator": 1, "independent-engineer": 1},
-    "residency":  {"systems-artist": 3, "creative-technologist": 3, "community-practitioner": 2, "educator": 1, "independent-engineer": 1},
-    "prize":      {"systems-artist": 3, "creative-technologist": 2, "community-practitioner": 1, "educator": 1, "independent-engineer": 1},
-    "fellowship": {"systems-artist": 2, "creative-technologist": 3, "community-practitioner": 2, "educator": 2, "independent-engineer": 2},
-    "program":    {"systems-artist": 2, "creative-technologist": 2, "community-practitioner": 3, "educator": 2, "independent-engineer": 2},
-    "writing":    {"systems-artist": 1, "creative-technologist": 2, "community-practitioner": 3, "educator": 2, "independent-engineer": 1},
-    "emergency":  {"systems-artist": 2, "creative-technologist": 1, "community-practitioner": 3, "educator": 1, "independent-engineer": 1},
-    "consulting": {"systems-artist": 1, "creative-technologist": 2, "community-practitioner": 1, "educator": 1, "independent-engineer": 3},
-}
-
-# Expected organs for each identity position.
-POSITION_EXPECTED_ORGANS = {
-    "systems-artist":          {"I", "II", "META"},
-    "creative-technologist":   {"I", "III", "IV"},
-    "community-practitioner":  {"V", "VI", "META"},
-    "educator":                {"V", "VI"},
-    "independent-engineer":    {"III", "IV"},
-}
-
-# Credential relevance per track.
-CREDENTIALS = {
-    "mfa_creative_writing": {
-        "writing": 4, "grant": 3, "residency": 3, "prize": 3,
-        "program": 2, "fellowship": 2, "emergency": 2, "consulting": 1,
-    },
-    "meta_fullstack_dev": {
-        "consulting": 4, "fellowship": 3, "program": 3,
-        "grant": 1, "residency": 1, "prize": 1, "writing": 1, "emergency": 1,
-    },
-    "teaching_11yr": {
-        "program": 4, "fellowship": 3, "residency": 2,
-        "writing": 2, "grant": 2, "prize": 1, "emergency": 1, "consulting": 2,
-    },
-    "construction_pm": {
-        "consulting": 3, "grant": 1, "residency": 1, "prize": 0,
-        "fellowship": 1, "program": 1, "writing": 0, "emergency": 1,
-    },
-}
-
-
-# --- Mission Alignment signal functions ---
+    return _human_dimensions.estimate_role_fit_from_title(entry)
 
 
 def _ma_position_profile_match(entry: dict, profile: dict | None) -> tuple[int, str]:
-    """Signal 1: Does the entry's identity position match the profile's primary/secondary?"""
-    fit = entry.get("fit", {})
-    if not isinstance(fit, dict):
-        fit = {}
-    position = fit.get("identity_position", "")
-
-    if not profile:
-        return 2, "no profile available -> 2 (neutral)"
-
-    primary = profile.get("primary_position", "")
-    secondary = profile.get("secondary_position", "")
-
-    if position and position == primary:
-        return 4, f"{position} = profile primary_position -> 4"
-    if position and position == secondary:
-        return 2, f"{position} = profile secondary_position -> 2"
-    if not position:
-        return 2, "no identity_position set -> 2 (neutral)"
-    return 0, f"{position} != primary ({primary}) or secondary ({secondary}) -> 0"
+    return _human_dimensions._ma_position_profile_match(entry, profile)
 
 
 def _ma_track_position_affinity(entry: dict) -> tuple[int, str]:
-    """Signal 2: How well does the identity position fit the track?"""
-    track = entry.get("track", "")
-    fit = entry.get("fit", {})
-    if not isinstance(fit, dict):
-        fit = {}
-    position = fit.get("identity_position", "")
-
-    track_affinities = TRACK_POSITION_AFFINITY.get(track, {})
-    score = track_affinities.get(position, 1)  # default 1 for unknown
-    return score, f"({track}, {position or 'none'}) -> {score}"
+    return _human_dimensions._ma_track_position_affinity(entry)
 
 
 def _ma_organ_position_coherence(entry: dict) -> tuple[int, str]:
-    """Signal 3: Do lead_organs match the position's expected organs?"""
-    fit = entry.get("fit", {})
-    if not isinstance(fit, dict):
-        fit = {}
-    position = fit.get("identity_position", "")
-    lead_organs = fit.get("lead_organs") or []
-
-    if not lead_organs or not position:
-        return 1, f"missing data (organs={lead_organs}, pos={position}) -> 1"
-
-    expected = POSITION_EXPECTED_ORGANS.get(position, set())
-    if not expected:
-        return 1, f"unknown position {position} -> 1"
-
-    lead_set = set(lead_organs)
-    overlap = len(lead_set & expected)
-    score = round(overlap / len(lead_set) * 2)
-    return score, f"lead {list(lead_set)} & expected {sorted(expected)} = {overlap}/{len(lead_set)} -> {score}"
+    return _human_dimensions._ma_organ_position_coherence(entry)
 
 
 def _ma_framing_specialization(entry: dict) -> tuple[int, str]:
-    """Signal 4: Does the entry use a dedicated framing block?"""
-    submission = entry.get("submission", {})
-    if not isinstance(submission, dict):
-        return 0, "no submission data -> 0"
-
-    blocks_used = submission.get("blocks_used", {}) or {}
-    for key, path in blocks_used.items():
-        if isinstance(path, str) and path.startswith("framings/"):
-            return 1, f"has framings/ block ({path}) -> 1"
-    return 0, "no framings/* block -> 0"
-
-
-# --- Evidence Match signal functions ---
+    return _human_dimensions._ma_framing_specialization(entry)
 
 
 def _em_block_portal_coverage(entry: dict) -> tuple[int, str]:
-    """Signal 1: Ratio of blocks_used to portal_fields."""
-    submission = entry.get("submission", {})
-    if not isinstance(submission, dict):
-        submission = {}
-    blocks_used = submission.get("blocks_used", {}) or {}
-    blocks_count = len(blocks_used)
-
-    portal_fields = entry.get("portal_fields", {})
-    if not isinstance(portal_fields, dict):
-        portal_fields = {}
-    fields = portal_fields.get("fields") or []
-    fields_count = len(fields)
-
-    if blocks_count == 0 or fields_count == 0:
-        return 0, f"{blocks_count} blocks / {fields_count} fields -> 0"
-
-    ratio = blocks_count / fields_count
-    if ratio >= 1.0:
-        score = 3
-    elif ratio >= 0.5:
-        score = 2
-    else:
-        score = 1
-    return score, f"{blocks_count} blocks / {fields_count} fields = {ratio:.2f} -> {score}"
+    return _human_dimensions._em_block_portal_coverage(entry)
 
 
 def _em_slot_name_alignment(entry: dict) -> tuple[int, str]:
-    """Signal 2: How many block keys match portal field names (fuzzy)."""
-    submission = entry.get("submission", {})
-    if not isinstance(submission, dict):
-        submission = {}
-    blocks_used = submission.get("blocks_used", {}) or {}
-    block_keys = set(blocks_used.keys())
-
-    portal_fields = entry.get("portal_fields", {})
-    if not isinstance(portal_fields, dict):
-        portal_fields = {}
-    fields = portal_fields.get("fields") or []
-    field_names = {f.get("name", "") for f in fields if isinstance(f, dict)}
-
-    if not field_names:
-        return 0, "no portal fields -> 0"
-
-    # Fuzzy matching: check if field name is substring of block key or vice versa
-    matches = 0
-    for fname in field_names:
-        for bkey in block_keys:
-            # Normalize: artist_statement matches statement, bio matches bio
-            if fname in bkey or bkey in fname:
-                matches += 1
-                break
-
-    score = min(3, round(matches / len(field_names) * 3))
-    return score, f"{matches} matches / {len(field_names)} fields -> {score}"
+    return _human_dimensions._em_slot_name_alignment(entry)
 
 
 def _em_evidence_depth(entry: dict) -> tuple[int, str]:
-    """Signal 3: Has evidence/* or methodology/* blocks."""
-    submission = entry.get("submission", {})
-    if not isinstance(submission, dict):
-        return 0, "no submission data -> 0"
-
-    blocks_used = submission.get("blocks_used", {}) or {}
-    score = 0
-    parts = []
-    for key, path in blocks_used.items():
-        if isinstance(path, str):
-            if path.startswith("evidence/") and "evidence" not in parts:
-                score += 1
-                parts.append("evidence")
-            elif path.startswith("methodology/") and "methodology" not in parts:
-                score += 1
-                parts.append("methodology")
-
-    if parts:
-        return score, f"has {'+'.join(parts)} blocks -> {score}"
-    return 0, "no evidence/* or methodology/* blocks -> 0"
+    return _human_dimensions._em_evidence_depth(entry)
 
 
 def _em_materials_readiness(entry: dict) -> tuple[int, str]:
-    """Signal 4: Are materials attached and portfolio URL set?"""
-    submission = entry.get("submission", {})
-    if not isinstance(submission, dict):
-        return 0, "no submission data -> 0"
-
-    score = 0
-    parts = []
-
-    materials = submission.get("materials_attached") or []
-    if materials:
-        score += 1
-        parts.append("materials_attached")
-
-    portfolio = submission.get("portfolio_url") or ""
-    if portfolio:
-        score += 1
-        parts.append("portfolio_url")
-
-    if parts:
-        return score, f"{'+'.join(parts)} set -> {score}"
-    return 0, "no materials or portfolio_url -> 0"
-
-
-# --- Track Record Fit signal functions ---
+    return _human_dimensions._em_materials_readiness(entry)
 
 
 def _tr_credential_track_relevance(entry: dict) -> tuple[int, str]:
-    """Signal 1: Best credential score for this entry's track."""
-    track = entry.get("track", "")
-    best_score = 0
-    best_cred = ""
-
-    for cred_name, track_scores in CREDENTIALS.items():
-        cred_score = track_scores.get(track, 0)
-        if cred_score > best_score:
-            best_score = cred_score
-            best_cred = cred_name
-
-    if best_cred:
-        return best_score, f"{best_cred} for {track} -> {best_score}"
-    return 0, f"no credential scores for track={track} -> 0"
+    return _human_dimensions._tr_credential_track_relevance(entry)
 
 
 def _tr_track_experience(entry: dict, all_entries: list[dict]) -> tuple[int, str]:
-    """Signal 2: How many entries in the same track have been submitted+."""
-    track = entry.get("track", "")
-    submitted_statuses = {"submitted", "acknowledged", "interview", "outcome"}
-
-    count = 0
-    for e in all_entries:
-        if e.get("track") == track and e.get("status") in submitted_statuses:
-            # Don't count the entry itself
-            if e.get("id") != entry.get("id"):
-                count += 1
-
-    if count >= 3:
-        score = 3
-    elif count == 2:
-        score = 2
-    elif count == 1:
-        score = 1
-    else:
-        score = 0
-    return score, f"{count} submitted {track} entries -> {score}"
+    return _human_dimensions._tr_track_experience(entry, all_entries)
 
 
 def _tr_position_depth(entry: dict) -> tuple[int, str]:
-    """Signal 3: Does the position have a dedicated framing block on disk?"""
-    fit = entry.get("fit", {})
-    if not isinstance(fit, dict):
-        fit = {}
-    position = fit.get("identity_position", "")
-
-    if not position:
-        return 0, "no position set -> 0"
-
-    framing_path = BLOCKS_DIR / "framings" / f"{position}.md"
-    if framing_path.exists():
-        return 2, f"framings/{position}.md exists -> 2"
-    return 1, f"position {position} set but no framings/{position}.md -> 1"
+    return _human_dimensions._tr_position_depth(entry)
 
 
 def _tr_differentiators_coverage(entry: dict, profile: dict | None) -> tuple[int, str]:
-    """Signal 4: Does the profile have enough evidence highlights?"""
-    if not profile:
-        return 0, "no profile -> 0"
-
-    highlights = profile.get("evidence_highlights") or []
-    if len(highlights) >= 3:
-        return 1, f"{len(highlights)} evidence_highlights >= 3 -> 1"
-    return 0, f"{len(highlights)} evidence_highlights < 3 -> 0"
+    return _human_dimensions._tr_differentiators_coverage(entry, profile)
 
 
 def load_entries(entry_id: str | None = None, include_pool: bool = False) -> list[tuple[Path, dict]]:
@@ -668,304 +185,37 @@ def load_entries(entry_id: str | None = None, include_pool: bool = False) -> lis
 
 
 def score_deadline_feasibility(entry: dict, explain: bool = False) -> int | tuple[int, str]:
-    """Score deadline feasibility from deadline data.
-
-    Uses date.today() (not datetime.now()) for consistent day-boundary
-    calculations that match pipeline_lib.days_until().
-    """
-    deadline = entry.get("deadline", {})
-    if not isinstance(deadline, dict):
-        result = 7
-        if explain:
-            return result, "deadline is not a dict -> default 7"
-        return result
-
-    dtype = deadline.get("type", "")
-    date_str = deadline.get("date")
-
-    if dtype in ("rolling", "tba") or not date_str:
-        result = 9
-        if explain:
-            return result, f"type={dtype or 'no date'} -> 9 (no pressure)"
-        return result
-
-    deadline_date = parse_date(date_str)
-    if not deadline_date:
-        result = 7
-        if explain:
-            return result, f"unparseable date '{date_str}' -> default 7"
-        return result
-
-    days_left = days_until(deadline_date)
-
-    if days_left < 0:
-        result = 1
-    elif days_left <= 1:
-        result = 2
-    elif days_left <= 3:
-        result = 3
-    elif days_left <= 5:
-        result = 4
-    elif days_left <= 7:
-        result = 5
-    elif days_left <= 14:
-        result = 6
-    elif days_left <= 30:
-        result = 8
-    else:
-        result = 9
-
-    # Materials-readiness bonus: fully-enriched entries are easier to submit on tight timelines
-    submission = entry.get("submission", {})
-    mat_bonus = False
-    if isinstance(submission, dict):
-        materials = submission.get("materials_attached") or []
-        if materials and result < 9:
-            result = min(9, result + 1)
-            mat_bonus = True
-
-    if explain:
-        suffix = " + materials_ready (+1)" if mat_bonus else ""
-        return result, f"{days_left}d left (date: {date_str}){suffix} -> {result}"
-    return result
+    return _auto_dimensions.score_deadline_feasibility(entry, explain=explain)
 
 
 def score_financial_alignment(entry: dict, explain: bool = False) -> int | tuple[int, str]:
-    """Score financial alignment from amount and cliff notes.
-
-    For job-track entries, higher salary scores higher.
-    For grants/fellowships, benefits-cliff-aware scoring applies.
-    """
-    amount = entry.get("amount", {})
-    if not isinstance(amount, dict):
-        result = 9
-        if explain:
-            return result, "amount is not a dict -> default 9"
-        return result
-
-    value = amount.get("value", 0)
-    track = entry.get("track", "")
-
-    # Job track: higher salary = higher score
-    if track == "job":
-        if value == 0:
-            result = 5  # unknown salary — slight penalty
-            reason = f"${value:,} (unknown) -> {result}"
-        elif value > 150000:
-            result = 9  # strong comp
-            reason = f"${value:,} (>$150K) -> {result}"
-        elif value > 100000:
-            result = 8  # good comp
-            reason = f"${value:,} (>$100K) -> {result}"
-        elif value > 50000:
-            result = 7  # adequate comp
-            reason = f"${value:,} (>$50K) -> {result}"
-        else:
-            result = 6  # low comp
-            reason = f"${value:,} (low) -> {result}"
-        if explain:
-            return result, reason
-        return result
-
-    cliff_note = amount.get("benefits_cliff_note") or ""
-
-    if value == 0:
-        result = 7
-        reason = "$0 (unknown/no amount — neutral) -> 7"
-    elif "exceeds" in cliff_note.lower() or "nylag" in cliff_note.lower():
-        result = 4
-        reason = f"${value:,} cliff note '{cliff_note}' -> 4"
-    elif "essential plan" in cliff_note.lower():
-        result = 5
-        reason = f"${value:,} cliff note '{cliff_note}' -> 5"
-    elif value <= SNAP_LIMIT:
-        result = 9
-        reason = f"${value:,} <= SNAP ${SNAP_LIMIT:,} -> 9"
-    elif value <= MEDICAID_LIMIT:
-        result = 8
-        reason = f"${value:,} <= Medicaid ${MEDICAID_LIMIT:,} -> 8"
-    elif value <= ESSENTIAL_PLAN_LIMIT:
-        result = 6
-        reason = f"${value:,} <= Essential Plan ${ESSENTIAL_PLAN_LIMIT:,} -> 6"
-    elif value <= 100000:
-        result = 4
-        reason = f"${value:,} > Essential Plan -> 4"
-    else:
-        result = 3
-        reason = f"${value:,} > $100K -> 3 (severe cliff risk)"
-
-    if explain:
-        return result, reason
-    return result
+    return _auto_dimensions.score_financial_alignment(
+        entry,
+        SNAP_LIMIT,
+        MEDICAID_LIMIT,
+        ESSENTIAL_PLAN_LIMIT,
+        explain=explain,
+    )
 
 
 def score_portal_friction(entry: dict, explain: bool = False) -> int | tuple[int, str]:
-    """Score portal friction from portal type."""
-    target = entry.get("target", {})
-    if not isinstance(target, dict):
-        result = 6
-        if explain:
-            return result, "target is not a dict -> default 6"
-        return result
-    portal = target.get("portal", "custom")
-    portal_scores = get_portal_scores()
-    result = portal_scores.get(portal, 6)
-    if explain:
-        mapped = "mapped" if portal in portal_scores else "default"
-        return result, f"portal={portal} -> {result} ({mapped})"
-    return result
+    return _auto_dimensions.score_portal_friction(entry, explain=explain)
 
 
 def _get_effort_base_from_market(track: str) -> int:
-    """Map track's actual acceptance/response rate to effort_to_value base."""
-    _HARDCODED_FALLBACK = {
-        "emergency": 8, "writing": 7, "prize": 6, "grant": 5,
-        "fellowship": 5, "residency": 5, "program": 5, "consulting": 6, "job": 6,
-    }
-    intel = load_market_intelligence()
-    data = intel.get("track_benchmarks", {}).get(track, {})
-    rate = data.get("acceptance_rate") or data.get("cold_response_rate")
-    if rate is None:
-        return _HARDCODED_FALLBACK.get(track, 5)
-    if rate >= 0.15:
-        return 8   # emergency (0.20), writing (0.15)
-    elif rate >= 0.10:
-        return 7   # consulting (0.10)
-    elif rate >= 0.07:
-        return 6   # job (0.08)
-    elif rate >= 0.04:
-        return 5   # fellowship (0.04), residency (0.05)
-    else:
-        return 4   # grant (0.03), prize (0.02)
+    return _auto_dimensions._get_effort_base_from_market(track)
 
 
 def score_effort_to_value(entry: dict, explain: bool = False) -> int | tuple[int, str]:
-    """Estimate effort-to-value from amount, track, and blocks coverage."""
-    amount = entry.get("amount", {})
-    value = amount.get("value", 0) if isinstance(amount, dict) else 0
-    track = entry.get("track", "")
-
-    submission = entry.get("submission", {})
-    blocks_count = len(submission.get("blocks_used", {}) or {}) if isinstance(submission, dict) else 0
-
-    # Dynamic denominator: use the expected block count for the entry's identity position.
-    # This ensures a fully-enriched entry always reaches the maximum coverage_bonus.
-    fit = entry.get("fit", {})
-    position = fit.get("identity_position", "") if isinstance(fit, dict) else ""
-    # Count dedicated job blocks for this position (identity + framing + projects + methodology + evidence...)
-    # Approximate: job positions need ~5 blocks, creative/community need ~6
-    _POSITION_EXPECTED_BLOCKS = {
-        "independent-engineer": 5,
-        "creative-technologist": 6,
-        "systems-artist": 6,
-        "educator": 5,
-        "community-practitioner": 5,
-    }
-    expected_blocks = _POSITION_EXPECTED_BLOCKS.get(position, 6)
-
-    # Higher blocks coverage = lower effort (0-2 bonus)
-    coverage_bonus = min(blocks_count / expected_blocks, 1.0) * 2
-
-    # Base from market-derived acceptance/response rate
-    base = _get_effort_base_from_market(track)
-    explain_parts = [f"track={track} base={base}"]
-
-    # Value adjustment
-    if value >= 50000:
-        base += 1
-        explain_parts.append(f"${value:,}>=50K (+1)")
-    elif value == 0 and track not in ("residency", "program"):
-        base -= 1
-        explain_parts.append("$0 (-1)")
-
-    explain_parts.append(f"{blocks_count} blocks (+{coverage_bonus:.1f})")
-
-    score = base + coverage_bonus
-
-    # Channel adjustment for job entries
-    if track == "job":
-        channel = (entry.get("conversion") or {}).get("channel", "direct") or "direct"
-        channel_adj = {
-            "referral": 2,
-            "indeed": 1,
-            "company_career_page": 1,
-            "linkedin_easy_apply": -2,
-            "linkedin": -1,
-        }.get(channel, 0)
-        if channel_adj:
-            score += channel_adj
-            sign = "+" if channel_adj > 0 else ""
-            explain_parts.append(f"channel={channel} ({sign}{channel_adj})")
-
-    # Location accessibility penalty: international roles require visa/relocation (-3);
-    # remote-global roles require no relocation but carry timezone/legal overhead (-1).
-    target = entry.get("target", {})
-    location_class = target.get("location_class", "") if isinstance(target, dict) else ""
-    if location_class == "international":
-        score -= 3
-        explain_parts.append("international (-3)")
-    elif location_class == "remote-global":
-        score -= 1
-        explain_parts.append("remote-global (-1)")
-
-    result = max(1, min(10, round(score)))
-
-    if explain:
-        return result, f"{' | '.join(explain_parts)} = {result}"
-    return result
-
-
-_DIFF_COMPOSITE: float | None = None
+    return _auto_dimensions.score_effort_to_value(entry, explain=explain)
 
 
 def _get_differentiation_boost() -> tuple[int, float]:
-    """Lazy-load differentiation composite and return (boost, composite).
-
-    Boost: +2 if composite >= 8.5, +1 if >= 7.0, else 0.
-    Uses lazy import to avoid circular import with funding_scorer.py.
-    """
-    global _DIFF_COMPOSITE
-    if _DIFF_COMPOSITE is None:
-        try:
-            from funding_scorer import load_startup_profile, score_differentiation
-            profile = load_startup_profile()
-            intel = load_market_intelligence()
-            result = score_differentiation(profile, intel)
-            _DIFF_COMPOSITE = result["composite"]
-        except Exception:
-            _DIFF_COMPOSITE = 0.0
-    if _DIFF_COMPOSITE >= 8.5:
-        return 2, _DIFF_COMPOSITE
-    elif _DIFF_COMPOSITE >= 7.0:
-        return 1, _DIFF_COMPOSITE
-    return 0, _DIFF_COMPOSITE
+    return _auto_dimensions._get_differentiation_boost()
 
 
 def score_strategic_value(entry: dict, explain: bool = False) -> int | tuple[int, str]:
-    """Score strategic value from organization prestige, track, and differentiation."""
-    org = ""
-    target = entry.get("target", {})
-    if isinstance(target, dict):
-        org = target.get("organization") or ""
-
-    # Check high-prestige overrides
-    for name, prestige_score in HIGH_PRESTIGE.items():
-        if org and name.lower() in org.lower():
-            if explain:
-                return prestige_score, f'org "{org}" matched "{name}" -> {prestige_score} (prestige list)'
-            return prestige_score
-
-    # Fall back to track-based estimate + differentiation boost
-    track = entry.get("track", "")
-    strategic_base = get_strategic_base()
-    base = strategic_base.get(track, 5)
-    diff_boost, diff_composite = _get_differentiation_boost()
-    result = min(10, base + diff_boost)
-    if explain:
-        source = "track base" if track in strategic_base else "default"
-        diff_note = f" + diff_boost={diff_boost} (composite={diff_composite:.1f})" if diff_boost else ""
-        return result, f'org "{org}" not in prestige list, track={track} -> {base} ({source}){diff_note} = {result}'
-    return result
+    return _auto_dimensions.score_strategic_value(entry, explain=explain)
 
 
 def compute_human_dimensions(
@@ -973,263 +223,30 @@ def compute_human_dimensions(
     all_entries: list[dict] | None = None,
     explain: bool = False,
 ) -> dict[str, int] | tuple[dict[str, int], dict[str, str]]:
-    """Compute mission_alignment, evidence_match, track_record_fit from signals.
-
-    For auto-sourced job entries, uses title-based tier estimation (unchanged).
-    For everything else, uses 12 signal functions that analyze profiles, blocks,
-    portal fields, and cross-pipeline history. No gut-feel input.
-    """
-    tags = entry.get("tags") or []
-
-    # Auto-sourced job entries: always use title-based tier estimation
-    if "auto-sourced" in tags:
-        base = estimate_role_fit_from_title(entry)
-        submission = entry.get("submission", {})
-        blocks_count = len(submission.get("blocks_used", {}) or {}) if isinstance(submission, dict) else 0
-        if blocks_count >= 5:
-            base["evidence_match"] = min(10, base["evidence_match"] + 1)
-
-        # Hot skills signal: cross-match against blocks_used keys, distilled keywords,
-        # and entry tags — not title keywords, which rarely contain skill names.
-        intel = load_market_intelligence()
-        hot_skills = intel.get("skills_signals", {}).get("hot_2026", [])
-        hot_match_count = 0
-        if hot_skills:
-            submission = entry.get("submission", {})
-            block_keys = " ".join(
-                (submission.get("blocks_used") or {}).keys()
-            ).lower() if isinstance(submission, dict) else ""
-            keywords_list = submission.get("keywords", []) if isinstance(submission, dict) else []
-            keywords_str = " ".join(str(k).lower() for k in (keywords_list or []))
-            job_tags = " ".join(t.lower() for t in (entry.get("tags") or []))
-            hot_match_count = sum(
-                1 for skill in hot_skills
-                if skill.lower() in block_keys
-                or skill.lower() in keywords_str
-                or skill.lower() in job_tags
-            )
-            if hot_match_count >= 1:
-                base["evidence_match"] = min(10, base["evidence_match"] + 1)
-
-        if explain:
-            name = (entry.get("name") or "").lower()
-            tier_name = "no match"
-            for tier in ROLE_FIT_TIERS:
-                for pattern in tier["title_patterns"]:
-                    if pattern in name:
-                        tier_name = tier["name"]
-                        break
-                if tier_name != "no match":
-                    break
-            explanations = {}
-            for k, v in base.items():
-                suffix = ""
-                if k == "evidence_match" and hot_match_count >= 1:
-                    suffix = f" + hot_skills_match={hot_match_count}"
-                explanations[k] = f"auto-sourced, {tier_name} -> {v}{suffix}"
-            return base, explanations
-        return base
-
-    # Load cross-pipeline entries for track experience signal
-    if all_entries is None:
-        all_entries = [e for e in _load_entries_raw()]
-
-    # Load profile for this entry
-    entry_id = entry.get("id", "")
-    profile = load_profile(entry_id)
-
-    # --- Mission Alignment (5 signals, 0-10) ---
-    ma1_score, ma1_reason = _ma_position_profile_match(entry, profile)
-    ma2_score, ma2_reason = _ma_track_position_affinity(entry)
-    ma3_score, ma3_reason = _ma_organ_position_coherence(entry)
-    ma4_score, ma4_reason = _ma_framing_specialization(entry)
-    ma5_score, ma5_reason = _ma_text_alignment(entry)
-    mission = max(1, min(10, ma1_score + ma2_score + ma3_score + ma4_score + ma5_score))
-
-    # --- Evidence Match (5 signals, 0-10) ---
-    em1_score, em1_reason = _em_block_portal_coverage(entry)
-    em2_score, em2_reason = _em_slot_name_alignment(entry)
-    em3_score, em3_reason = _em_evidence_depth(entry)
-    em4_score, em4_reason = _em_materials_readiness(entry)
-    em5_score, em5_reason = _em_text_coverage(entry)
-    evidence = max(1, min(10, em1_score + em2_score + em3_score + em4_score + em5_score))
-
-    # --- Track Record Fit (5 signals, 0-10) ---
-    tr1_score, tr1_reason = _tr_credential_track_relevance(entry)
-    tr2_score, tr2_reason = _tr_track_experience(entry, all_entries)
-    tr3_score, tr3_reason = _tr_position_depth(entry)
-    tr4_score, tr4_reason = _tr_differentiators_coverage(entry, profile)
-    tr5_score, tr5_reason = _tr_text_fit(entry)
-    track_record = max(1, min(10, tr1_score + tr2_score + tr3_score + tr4_score + tr5_score))
-
-    result = {
-        "mission_alignment": mission,
-        "evidence_match": evidence,
-        "track_record_fit": track_record,
-    }
-
-    if explain:
-        explanations = {
-            "mission_alignment": "\n".join([
-                f"  position-profile match:  {ma1_score}  <- {ma1_reason}",
-                f"  track-position affinity: {ma2_score}  <- {ma2_reason}",
-                f"  organ-position coherence:{ma3_score}  <- {ma3_reason}",
-                f"  framing specialization:  {ma4_score}  <- {ma4_reason}",
-                f"  text alignment:          {ma5_score}  <- {ma5_reason}",
-            ]),
-            "evidence_match": "\n".join([
-                f"  block-portal coverage:   {em1_score}  <- {em1_reason}",
-                f"  slot name alignment:     {em2_score}  <- {em2_reason}",
-                f"  evidence depth:          {em3_score}  <- {em3_reason}",
-                f"  materials readiness:     {em4_score}  <- {em4_reason}",
-                f"  text coverage:           {em5_score}  <- {em5_reason}",
-            ]),
-            "track_record_fit": "\n".join([
-                f"  credential-track:        {tr1_score}  <- {tr1_reason}",
-                f"  track experience:        {tr2_score}  <- {tr2_reason}",
-                f"  position depth:          {tr3_score}  <- {tr3_reason}",
-                f"  differentiators:         {tr4_score}  <- {tr4_reason}",
-                f"  text fit:                {tr5_score}  <- {tr5_reason}",
-            ]),
-        }
-        return result, explanations
-
-    return result
+    return _human_dimensions.compute_human_dimensions(
+        entry,
+        all_entries=all_entries,
+        explain=explain,
+    )
 
 
 # Keep backward-compatible alias for any external callers
 estimate_human_dimensions = compute_human_dimensions
 
 
-_NETWORK_DECAY = {
-    "response_fresh": 30,    # days — full boost
-    "response_aging": 90,    # reduced boost
-    "response_stale": 180,   # minimal boost
-    "outreach_stale": 60,    # done outreach older than this gives no boost
-}
+_NETWORK_DECAY = _score_network._NETWORK_DECAY
 
 
 def _days_since(date_str: str | None) -> int | None:
-    """Return days since a date string, or None if unparseable/missing."""
-    if not date_str:
-        return None
-    try:
-        d = parse_date(str(date_str))
-        if d:
-            return (date.today() - d).days
-    except Exception:
-        pass
-    return None
+    return _score_network._days_since(date_str)
 
 
 def score_network_proximity(entry: dict, all_entries: list[dict] | None = None) -> int:
-    """Score network proximity (1-10) based on relationship signals.
-
-    Signals checked (highest wins):
-    - network.relationship_strength: cold=1, acquaintance=4, warm=7, strong=9, internal=10
-    - conversion.channel == "referral": min 8
-    - follow_up entries with responses: min 7 (fresh), 5 (aging), 3 (stale), 0 (expired)
-    - network.mutual_connections >= 5: min 5
-    - outreach actions completed (recent only): min 4
-    - Org density (other entries at same org): min 3
-    """
-    score = 1  # default: cold/unknown
-
-    # Signal 1: explicit relationship_strength field
-    network = entry.get("network") or {}
-    if isinstance(network, dict):
-        strength = network.get("relationship_strength", "cold")
-        strength_map = {
-            "cold": 1,
-            "acquaintance": 4,
-            "warm": 7,
-            "strong": 9,
-            "internal": 10,
-        }
-        score = max(score, strength_map.get(strength, 1))
-
-    # Signal 2: referral channel
-    conversion = entry.get("conversion") or {}
-    if isinstance(conversion, dict) and conversion.get("channel") == "referral":
-        score = max(score, 8)
-
-    # Signal 3: follow-up contacts with responses (time-decayed)
-    follow_ups = entry.get("follow_up") or []
-    if isinstance(follow_ups, list):
-        for fu in follow_ups:
-            if not isinstance(fu, dict):
-                continue
-            if fu.get("response") not in ("replied", "referred"):
-                continue
-            # Check date for decay
-            fu_date = fu.get("date") or fu.get("response_date")
-            age = _days_since(fu_date)
-            if age is None:
-                # No date — benefit of doubt (legacy entries)
-                score = max(score, 7)
-            elif age <= _NETWORK_DECAY["response_fresh"]:
-                score = max(score, 7)
-            elif age <= _NETWORK_DECAY["response_aging"]:
-                score = max(score, 5)
-            elif age <= _NETWORK_DECAY["response_stale"]:
-                score = max(score, 3)
-            # else: expired (>180d) — no boost
-
-    # Signal 4: mutual connections — shared network at the org
-    if isinstance(network, dict):
-        mutual = network.get("mutual_connections", 0)
-        if isinstance(mutual, (int, float)) and mutual >= 5:
-            score = max(score, 5)
-
-    # Signal 5: outreach actions completed (recent only)
-    outreach = entry.get("outreach") or []
-    if isinstance(outreach, list):
-        done_count = 0
-        for o in outreach:
-            if not isinstance(o, dict) or o.get("status") != "done":
-                continue
-            o_date = o.get("date") or o.get("completed_date")
-            age = _days_since(o_date)
-            if age is not None and age > _NETWORK_DECAY["outreach_stale"]:
-                continue  # stale outreach — skip
-            done_count += 1
-        if done_count >= 2:
-            score = max(score, 5)
-        elif done_count >= 1:
-            score = max(score, 4)
-
-    # Signal 6: org density — other entries at same org suggest familiarity
-    if all_entries:
-        org = (entry.get("target") or {}).get("organization", "")
-        if org:
-            org_count = sum(
-                1 for e in all_entries
-                if (e.get("target") or {}).get("organization") == org
-                and e.get("id") != entry.get("id")
-            )
-            if org_count >= 3:
-                score = max(score, 4)
-            elif org_count >= 1:
-                score = max(score, 3)
-
-    return max(1, min(10, score))
+    return _score_network.score_network_proximity(entry, all_entries)
 
 
 def _log_network_change(entry_id: str, old_network: int, new_network: int, filepath: Path):
-    """Log signal-action when network_proximity score changes."""
-    if old_network == new_network:
-        return
-    try:
-        from log_signal_action import log_signal_action
-        log_signal_action(
-            signal_id=f"net-{entry_id}",
-            signal_type="network_change",
-            description=f"network_proximity {old_network} -> {new_network}",
-            action=f"Score updated in {filepath.name}",
-            entry_id=entry_id,
-        )
-    except Exception:
-        pass  # non-critical — don't break scoring
+    return _score_network._log_network_change(entry_id, old_network, new_network, filepath)
 
 
 def compute_dimensions(entry: dict, all_entries: list[dict] | None = None) -> dict[str, int]:
@@ -1598,326 +615,83 @@ def run_auto_qualify(dry_run: bool = False, yes: bool = False,
         print(f"Auto-qualified {moved} entries to active/")
 
 
-RUBRIC_DESCRIPTIONS = {
-    "mission_alignment": {
-        (1, 2): "Work doesn't fit their stated mission",
-        (3, 4): "Tangential connection requiring significant stretching",
-        (5, 6): "Plausible fit with some reframing needed",
-        (7, 8): "Clear alignment, work fits naturally",
-        (9, 10): "Work exemplifies their mission; target applicant",
-    },
-    "evidence_match": {
-        (1, 2): "They want things we can't demonstrate",
-        (3, 4): "Most evidence is indirect or requires heavy reframing",
-        (5, 6): "Some direct evidence, some gaps",
-        (7, 8): "Strong evidence for most requirements",
-        (9, 10): "Every requirement has verifiable proof",
-    },
-    "track_record_fit": {
-        (1, 2): "Credentials we don't have and can't reframe",
-        (3, 4): "Major gaps (exhibitions, affiliations, team leadership)",
-        (5, 6): "Some gaps but reframeable via ORGANVM scale",
-        (7, 8): "Credentials match with minor gaps",
-        (9, 10): "Credentials exceed expectations",
-    },
-}
+RUBRIC_DESCRIPTIONS = _score_explain.RUBRIC_DESCRIPTIONS
 
 
 def _rubric_desc(dim: str, score: int) -> str:
-    """Return the rubric description for a dimension at a given score."""
-    descs = RUBRIC_DESCRIPTIONS.get(dim, {})
-    for (lo, hi), desc in descs.items():
-        if lo <= score <= hi:
-            return desc
-    return ""
+    return _score_explain._rubric_desc(dim, score)
 
 
 def explain_entry(entry: dict, all_entries: list[dict] | None = None) -> str:
-    """Generate a detailed score derivation for a single entry."""
-    entry_id = entry.get("id", "unknown")
-    track = entry.get("track", "")
-    rubric = "JOB" if track == "job" else "CREATIVE"
-    weights = get_weights(track)
-    fit = entry.get("fit", {}) if isinstance(entry.get("fit"), dict) else {}
-
-    lines = []
-
-    # Header
-    dimensions = compute_dimensions(entry, all_entries)
-    composite = compute_composite(dimensions, track)
-    lines.append(f"{entry_id}: {composite} [{rubric} rubric]")
-    lines.append("")
-
-    # Show original_score if present (historical reference)
-    original = fit.get("original_score")
-    current = fit.get("score")
-    if original:
-        lines.append(f"  original_score: {original} (historical baseline, no longer feeds computation)")
-        lines.append(f"  fit.score:      {current} (computed composite)")
-    else:
-        lines.append(f"  fit.score: {current}")
-    lines.append("")
-
-    # Signal-based dimensions section
-    human_keys = ["mission_alignment", "evidence_match", "track_record_fit"]
-    computed, signal_explanations = compute_human_dimensions(entry, all_entries, explain=True)
-
-    lines.append("SIGNAL-BASED DIMENSIONS:")
-    for key in human_keys:
-        dim_val = dimensions[key]
-        weight = weights[key]
-        lines.append(f"  {key:<25s} {int(dim_val):>2d}  x{weight:.0%}")
-        detail = signal_explanations.get(key, "")
-        if detail:
-            lines.append(detail)
-
-    lines.append("")
-
-    # Network proximity (auto-computed from relationship signals)
-    net_val = score_network_proximity(entry, all_entries)
-    net_weight = weights.get("network_proximity", 0)
-    lines.append("NETWORK PROXIMITY:")
-    lines.append(f"  {'network_proximity':<25s} {net_val:>2d}  x{net_weight:.0%}")
-    lines.append("")
-
-    # Auto dimensions section
-    auto_funcs = [
-        ("financial_alignment", score_financial_alignment),
-        ("effort_to_value", score_effort_to_value),
-        ("strategic_value", score_strategic_value),
-        ("deadline_feasibility", score_deadline_feasibility),
-        ("portal_friction", score_portal_friction),
-    ]
-
-    lines.append("AUTO DIMENSIONS:")
-    for dim_name, func in auto_funcs:
-        val, reason = func(entry, explain=True)
-        weight = weights[dim_name]
-        lines.append(f"  {dim_name:<25s} {val:>2d}  x{weight:.0%}  <- {reason}")
-
-    lines.append("")
-
-    # Weighted sum breakdown
-    terms = []
-    for dim in DIMENSION_ORDER:
-        val = dimensions[dim]
-        weight = weights[dim]
-        terms.append(f"{val}x{weight:.2f}")
-    lines.append(f"COMPOSITE: {' + '.join(terms)} = {composite}")
-
-    return "\n".join(lines)
+    return _score_explain.explain_entry(
+        entry,
+        all_entries,
+        get_weights=get_weights,
+        compute_dimensions=compute_dimensions,
+        compute_composite=compute_composite,
+        compute_human_dimensions=compute_human_dimensions,
+        score_network_proximity=score_network_proximity,
+        score_financial_alignment=score_financial_alignment,
+        score_effort_to_value=score_effort_to_value,
+        score_strategic_value=score_strategic_value,
+        score_deadline_feasibility=score_deadline_feasibility,
+        score_portal_friction=score_portal_friction,
+        dimension_order=DIMENSION_ORDER,
+    )
 
 
 def review_compressed(entries: list[tuple[Path, dict]], lo: float = 6.5, hi: float = 7.5):
-    """Print entries in a compressed score band for manual dimension review."""
-    compressed = []
-
-    for filepath, data in entries:
-        track = data.get("track", "")
-        tags = data.get("tags") or []
-        if "auto-sourced" in tags:
-            continue  # only manual entries need review
-        fit = data.get("fit", {}) if isinstance(data.get("fit"), dict) else {}
-        score = fit.get("score", 0)
-        if lo <= score <= hi:
-            compressed.append((filepath, data))
-
-    if not compressed:
-        print(f"No entries in the {lo}-{hi} composite band need review.")
-        return
-
-    print(f"COMPRESSED SCORE REVIEW ({lo} - {hi} band)")
-    print(f"{len(compressed)} entries need human dimension review:\n")
-
-    for filepath, data in sorted(compressed, key=lambda x: x[1].get("fit", {}).get("score", 0), reverse=True):
-        entry_id = data.get("id", filepath.stem)
-        track = data.get("track", "")
-        fit = data.get("fit", {})
-        score = fit.get("score", 0)
-        position = fit.get("identity_position", "—")
-        dims = fit.get("dimensions", {}) or {}
-
-        print(f"  {entry_id} ({score}) — {track} — {position}")
-
-        for key in ["mission_alignment", "evidence_match", "track_record_fit"]:
-            val = dims.get(key, "?")
-            desc = _rubric_desc(key, val) if isinstance(val, int) else ""
-            desc_str = f'  ({val}-range: "{desc}")' if desc else ""
-            print(f"    {key:<25s} {val}{desc_str}")
-
-        print(f"    -> Review: Are these accurate for {data.get('name', entry_id)} specifically?")
-        print()
-
-    print("Edit each YAML's fit.dimensions fields, then run `score.py --all` to recalculate composites.")
+    return _score_explain.review_compressed(entries, lo=lo, hi=hi)
 
 
 _NETWORK_LEVELS = [
-    ("acquaintance", 4),
-    ("warm", 7),
-    ("strong", 9),
-    ("internal", 10),
+    *(_score_reachability._NETWORK_LEVELS),
 ]
 
 
-def analyze_reachability(entry: dict, all_entries: list[dict] | None = None,
-                         threshold: float = 9.0) -> dict:
-    """Per-entry gap analysis: current score, scenarios at each network level, reachable_with.
-
-    Returns dict with keys: entry_id, current_composite, current_network, scenarios,
-    reachable_with (minimum relationship level crossing threshold, or None).
-    """
-    entry_id = entry.get("id", "unknown")
-    track = entry.get("track", "")
-    dims = compute_dimensions(entry, all_entries)
-    current_composite = compute_composite(dims, track)
-    current_network = dims.get("network_proximity", 1)
-
-    scenarios = []
-    reachable_with = None
-    for level_name, level_score in _NETWORK_LEVELS:
-        if level_score <= current_network:
-            continue
-        test_dims = dict(dims)
-        test_dims["network_proximity"] = level_score
-        scenario_composite = compute_composite(test_dims, track)
-        scenarios.append({
-            "level": level_name,
-            "network_score": level_score,
-            "composite": scenario_composite,
-            "delta": round(scenario_composite - current_composite, 1),
-            "crosses_threshold": scenario_composite >= threshold,
-        })
-        if scenario_composite >= threshold and reachable_with is None:
-            reachable_with = level_name
-
-    return {
-        "entry_id": entry_id,
-        "current_composite": current_composite,
-        "current_network": current_network,
-        "threshold": threshold,
-        "scenarios": scenarios,
-        "reachable_with": reachable_with,
-    }
+def analyze_reachability(
+    entry: dict,
+    all_entries: list[dict] | None = None,
+    threshold: float = 9.0,
+) -> dict:
+    return _score_reachability.analyze_reachability(
+        entry,
+        all_entries,
+        threshold=threshold,
+        compute_dimensions=compute_dimensions,
+        compute_composite=compute_composite,
+    )
 
 
 def run_reachable(threshold: float = 9.0):
-    """Display reachability for all actionable entries, grouped by reachable/unreachable."""
-    entries_raw = _load_entries_raw(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
-    actionable = [e for e in entries_raw if e.get("status") in {"research", "qualified", "drafting", "staged"}]
-
-    if not actionable:
-        print("No actionable entries found.")
-        return
-
-    reachable = []
-    unreachable = []
-    already_above = []
-
-    for entry in actionable:
-        result = analyze_reachability(entry, entries_raw, threshold)
-        if result["current_composite"] >= threshold:
-            already_above.append(result)
-        elif result["reachable_with"]:
-            reachable.append(result)
-        else:
-            unreachable.append(result)
-
-    print(f"REACHABILITY ANALYSIS (threshold: {threshold})")
-    print("=" * 60)
-
-    if already_above:
-        print(f"\nALREADY ABOVE {threshold} ({len(already_above)}):")
-        for r in sorted(already_above, key=lambda x: x["current_composite"], reverse=True):
-            print(f"  {r['entry_id']:<40s} {r['current_composite']:>5.1f}  (network={r['current_network']})")
-
-    if reachable:
-        print(f"\nREACHABLE WITH NETWORK ({len(reachable)}):")
-        for r in sorted(reachable, key=lambda x: x["current_composite"], reverse=True):
-            best = r["reachable_with"]
-            best_scenario = next(s for s in r["scenarios"] if s["level"] == best)
-            print(f"  {r['entry_id']:<40s} {r['current_composite']:>5.1f} -> {best_scenario['composite']:.1f}  "
-                  f"(need {best}, +{best_scenario['delta']:.1f})")
-
-    if unreachable:
-        print(f"\nUNREACHABLE EVEN WITH INTERNAL ({len(unreachable)}):")
-        for r in sorted(unreachable, key=lambda x: x["current_composite"], reverse=True):
-            max_scenario = r["scenarios"][-1] if r["scenarios"] else None
-            max_str = f" -> {max_scenario['composite']:.1f} at internal" if max_scenario else ""
-            print(f"  {r['entry_id']:<40s} {r['current_composite']:>5.1f}{max_str}")
-
-    print(f"\n{'=' * 60}")
-    print(f"Total: {len(already_above)} above | {len(reachable)} reachable | {len(unreachable)} unreachable")
+    return _score_reachability.run_reachable(
+        threshold=threshold,
+        load_entries_raw=_load_entries_raw,
+        all_pipeline_dirs_with_pool=ALL_PIPELINE_DIRS_WITH_POOL,
+        analyze_reachability_fn=analyze_reachability,
+    )
 
 
-def run_triage_staged(dry_run: bool = True, yes: bool = False,
-                      submit_threshold: float = 8.5, demote_threshold: float = 7.0):
-    """One-time triage: categorize staged entries into submit_ready / hold / demote."""
-    if not dry_run and not yes:
-        dry_run = True
-        print("(Defaulting to dry-run. Use --yes to execute.)\n")
-
-    entries_raw = _load_entries_raw(dirs=ALL_PIPELINE_DIRS_WITH_POOL, include_filepath=True)
-    staged = [e for e in entries_raw if e.get("status") == "staged"]
-
-    if not staged:
-        print("No staged entries found.")
-        return
-
-    all_raw = _load_entries_raw(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
-
-    submit_ready = []
-    hold = []
-    demote_list = []
-
-    for entry in staged:
-        entry_id = entry.get("id", "unknown")
-        filepath = entry.get("_filepath")
-        dims = compute_dimensions(entry, all_raw)
-        track = entry.get("track", "")
-        composite = compute_composite(dims, track)
-        network = dims.get("network_proximity", 1)
-
-        if composite >= submit_threshold and network >= 7:
-            submit_ready.append((entry_id, composite, network, filepath))
-        elif composite < demote_threshold:
-            demote_list.append((entry_id, composite, network, filepath))
-        else:
-            reachability = analyze_reachability(entry, all_raw)
-            hold.append((entry_id, composite, network, reachability, filepath))
-
-    print(f"TRIAGE STAGED ENTRIES ({len(staged)} total)")
-    print("=" * 60)
-
-    if submit_ready:
-        print(f"\nSUBMIT-READY (score >= {submit_threshold}, network >= 7): {len(submit_ready)}")
-        for eid, score, net, _ in sorted(submit_ready, key=lambda x: x[1], reverse=True):
-            print(f"  {eid:<40s} {score:>5.1f}  network={net}")
-
-    if hold:
-        print(f"\nHOLD — cultivate network ({demote_threshold} <= score < {submit_threshold}): {len(hold)}")
-        for eid, score, net, reach, _ in sorted(hold, key=lambda x: x[1], reverse=True):
-            hint = f"need {reach['reachable_with']}" if reach.get("reachable_with") else "unreachable"
-            print(f"  {eid:<40s} {score:>5.1f}  network={net}  ({hint})")
-
-    if demote_list:
-        print(f"\nDEMOTE to qualified (score < {demote_threshold}): {len(demote_list)}")
-        for eid, score, net, fp in sorted(demote_list, key=lambda x: x[1]):
-            action = "[dry-run] " if dry_run else ""
-            print(f"  {action}{eid:<40s} {score:>5.1f}  network={net}")
-
-    # Execute demotions if not dry-run
-    if demote_list and not dry_run:
-        for eid, score, net, fp in demote_list:
-            if fp:
-                content = fp.read_text()
-                content = update_yaml_field(content, "status", "qualified")
-                content = update_last_touched(content)
-                atomic_write(fp, content)
-                print(f"  Demoted {eid} to qualified")
-
-    print(f"\n{'=' * 60}")
-    label = " (dry-run)" if dry_run else ""
-    print(f"Submit-ready: {len(submit_ready)} | Hold: {len(hold)} | Demote: {len(demote_list)}{label}")
+def run_triage_staged(
+    dry_run: bool = True,
+    yes: bool = False,
+    submit_threshold: float = 8.5,
+    demote_threshold: float = 7.0,
+):
+    return _score_reachability.run_triage_staged(
+        dry_run=dry_run,
+        yes=yes,
+        submit_threshold=submit_threshold,
+        demote_threshold=demote_threshold,
+        load_entries_raw=_load_entries_raw,
+        all_pipeline_dirs_with_pool=ALL_PIPELINE_DIRS_WITH_POOL,
+        compute_dimensions=compute_dimensions,
+        compute_composite=compute_composite,
+        analyze_reachability_fn=analyze_reachability,
+        update_yaml_field=update_yaml_field,
+        update_last_touched=update_last_touched,
+        atomic_write=atomic_write,
+    )
 
 
 def main():

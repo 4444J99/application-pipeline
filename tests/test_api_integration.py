@@ -1,10 +1,11 @@
-"""Integration tests for pipeline_api module.
+"""Integration tests for pipeline_api module with real repository fixtures."""
 
-Tests that the API layer works correctly with real pipeline data.
-"""
+from __future__ import annotations
 
 import sys
 from pathlib import Path
+
+import yaml
 
 # Ensure scripts dir is in path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
@@ -17,150 +18,133 @@ from pipeline_api import (
     score_entry,
     validate_entry,
 )
+from pipeline_lib import VALID_TRANSITIONS
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+PIPELINE_DIRS = [
+    REPO_ROOT / "pipeline" / "active",
+    REPO_ROOT / "pipeline" / "submitted",
+    REPO_ROOT / "pipeline" / "closed",
+    REPO_ROOT / "pipeline" / "research_pool",
+]
+_NEXT_STATUS = {
+    "research": "qualified",
+    "qualified": "drafting",
+    "drafting": "staged",
+    "staged": "submitted",
+    "deferred": "qualified",
+    "submitted": "acknowledged",
+    "acknowledged": "interview",
+    "interview": "outcome",
+}
 
 
-class TestScoreAPI:
-    """Test score_entry API function."""
-
-    def test_score_entry_requires_entry_id(self):
-        """Test that score_entry requires entry_id or auto_qualify."""
-        result = score_entry(entry_id=None, auto_qualify=False)
-        assert result.status == ResultStatus.ERROR
-        assert "entry_id required" in result.error.lower()
-
-    def test_score_entry_success_structure(self):
-        """Test that successful score result has expected structure."""
-        result = score_entry(entry_id="test-entry", dry_run=True)
-        assert result.entry_id == "test-entry"
-        assert result.status in [ResultStatus.SUCCESS, ResultStatus.DRY_RUN, ResultStatus.ERROR]
-        assert result.message is not None
+def _first_entry_id() -> str:
+    for pipeline_dir in PIPELINE_DIRS:
+        for path in sorted(pipeline_dir.glob("*.yaml")):
+            if path.name.startswith("_"):
+                continue
+            return path.stem
+    raise AssertionError("No pipeline entries found for integration tests")
 
 
-class TestAdvanceAPI:
-    """Test advance_entry API function."""
-
-    def test_advance_requires_entry_id(self):
-        """Test that advance_entry requires entry_id."""
-        result = advance_entry(entry_id=None)
-        assert result.status == ResultStatus.ERROR
-        assert "entry_id required" in result.error.lower()
-
-    def test_advance_success_structure(self):
-        """Test that successful advance result has expected structure."""
-        result = advance_entry(entry_id="test-entry", dry_run=True)
-        assert result.entry_id == "test-entry"
-        assert result.status in [ResultStatus.SUCCESS, ResultStatus.DRY_RUN, ResultStatus.ERROR]
-        assert result.message is not None
+def _first_advanceable_entry() -> tuple[str, str]:
+    for pipeline_dir in PIPELINE_DIRS:
+        for path in sorted(pipeline_dir.glob("*.yaml")):
+            if path.name.startswith("_"):
+                continue
+            data = yaml.safe_load(path.read_text()) or {}
+            status = data.get("status")
+            target = _NEXT_STATUS.get(status)
+            if target and target in VALID_TRANSITIONS.get(status, set()):
+                return path.stem, target
+    raise AssertionError("No advanceable entry found for integration tests")
 
 
-class TestDraftAPI:
-    """Test draft_entry API function."""
-
-    def test_draft_requires_entry_id(self):
-        """Test that draft_entry requires entry_id."""
-        result = draft_entry(entry_id=None)
-        assert result.status == ResultStatus.ERROR
-        assert "entry_id required" in result.error.lower()
-
-    def test_draft_success_structure(self):
-        """Test that successful draft result has expected structure."""
-        result = draft_entry(entry_id="test-entry", dry_run=True)
-        assert result.entry_id == "test-entry"
-        assert result.status in [ResultStatus.SUCCESS, ResultStatus.DRY_RUN, ResultStatus.ERROR]
-        assert result.message is not None
+def test_score_entry_requires_parameters():
+    result = score_entry(entry_id=None, auto_qualify=False, all_entries=False)
+    assert result.status == ResultStatus.ERROR
+    assert "required" in (result.error or "").lower()
 
 
-class TestComposeAPI:
-    """Test compose_entry API function."""
-
-    def test_compose_requires_entry_id(self):
-        """Test that compose_entry requires entry_id."""
-        result = compose_entry(entry_id=None)
-        assert result.status == ResultStatus.ERROR
-        assert "entry_id required" in result.error.lower()
-
-    def test_compose_success_structure(self):
-        """Test that successful compose result has expected structure."""
-        result = compose_entry(entry_id="test-entry", dry_run=True)
-        assert result.entry_id == "test-entry"
-        assert result.status in [ResultStatus.SUCCESS, ResultStatus.DRY_RUN, ResultStatus.ERROR]
-        assert result.message is not None
+def test_score_entry_dry_run_single():
+    entry_id = _first_entry_id()
+    result = score_entry(entry_id=entry_id, dry_run=True)
+    assert result.status == ResultStatus.DRY_RUN
+    assert result.entry_id == entry_id
+    assert isinstance(result.new_score, float)
+    assert isinstance(result.dimensions, dict)
 
 
-class TestValidateAPI:
-    """Test validate_entry API function."""
-
-    def test_validate_requires_input(self):
-        """Test that validate_entry requires entry_id or entry_dict."""
-        result = validate_entry()
-        assert result.status == ResultStatus.ERROR
-        assert "required" in result.message.lower() or result.errors
-
-    def test_validate_success_structure(self):
-        """Test that successful validation result has expected structure."""
-        result = validate_entry(entry_id="test-entry")
-        assert result.entry_id is not None
-        assert isinstance(result.is_valid, bool)
-        assert isinstance(result.errors, list)
-        assert isinstance(result.warnings, list)
-
-    def test_validate_dict_input(self):
-        """Test validate_entry with entry dict."""
-        entry_dict = {"id": "test-entry", "status": "research"}
-        result = validate_entry(entry_dict=entry_dict)
-        assert result.entry_id is not None
-        assert isinstance(result.is_valid, bool)
+def test_score_entry_dry_run_all_entries():
+    result = score_entry(entry_id=None, all_entries=True, dry_run=True)
+    assert result.status == ResultStatus.DRY_RUN
+    assert result.entry_id == "batch"
+    assert "scored" in result.message.lower()
 
 
-class TestAPIResultTypes:
-    """Test API result dataclass types."""
+def test_advance_requires_entry_id():
+    result = advance_entry(entry_id=None)
+    assert result.status == ResultStatus.ERROR
+    assert "entry_id required" in (result.error or "").lower()
 
-    def test_score_result_has_fields(self):
-        """Test ScoreResult has expected fields."""
-        from pipeline_api import ScoreResult
-        result = ScoreResult(
-            status=ResultStatus.SUCCESS,
-            entry_id="test",
-            old_score=7.0,
-            new_score=7.5,
-        )
-        assert result.entry_id == "test"
-        assert result.old_score == 7.0
-        assert result.new_score == 7.5
 
-    def test_advance_result_has_fields(self):
-        """Test AdvanceResult has expected fields."""
-        from pipeline_api import AdvanceResult
-        result = AdvanceResult(
-            status=ResultStatus.SUCCESS,
-            entry_id="test",
-            old_status="research",
-            new_status="qualified",
-        )
-        assert result.entry_id == "test"
-        assert result.old_status == "research"
-        assert result.new_status == "qualified"
+def test_advance_dry_run_real_transition():
+    entry_id, target = _first_advanceable_entry()
+    result = advance_entry(entry_id=entry_id, to_status=target, dry_run=True)
+    assert result.status == ResultStatus.DRY_RUN
+    assert result.entry_id == entry_id
+    assert result.new_status == target
 
-    def test_validation_result_initialization(self):
-        """Test ValidationResult initializes errors and warnings lists."""
-        from pipeline_api import ValidationResult
-        result = ValidationResult(
-            status=ResultStatus.SUCCESS,
-            entry_id="test",
-            is_valid=True,
-        )
-        assert result.errors == []
-        assert result.warnings == []
 
-    def test_validation_result_with_errors(self):
-        """Test ValidationResult with explicit errors."""
-        from pipeline_api import ValidationResult
-        result = ValidationResult(
-            status=ResultStatus.ERROR,
-            entry_id="test",
-            is_valid=False,
-            errors=["Missing resume", "Invalid status"],
-            warnings=["Old date"],
-        )
-        assert len(result.errors) == 2
-        assert len(result.warnings) == 1
+def test_draft_requires_entry_id():
+    result = draft_entry(entry_id=None)
+    assert result.status == ResultStatus.ERROR
+    assert "entry_id required" in (result.error or "").lower()
+
+
+def test_draft_dry_run_content():
+    entry_id = _first_entry_id()
+    result = draft_entry(entry_id=entry_id, dry_run=True)
+    assert result.status == ResultStatus.DRY_RUN
+    assert result.entry_id == entry_id
+    assert isinstance(result.content, str)
+    assert len(result.content) > 0
+
+
+def test_compose_requires_entry_id():
+    result = compose_entry(entry_id=None)
+    assert result.status == ResultStatus.ERROR
+    assert "entry_id required" in (result.error or "").lower()
+
+
+def test_compose_dry_run_content():
+    entry_id = _first_entry_id()
+    result = compose_entry(entry_id=entry_id, dry_run=True)
+    assert result.status == ResultStatus.DRY_RUN
+    assert result.entry_id == entry_id
+    assert isinstance(result.content, str)
+    assert isinstance(result.word_count, int)
+    assert result.word_count > 0
+
+
+def test_validate_all_entries_success():
+    result = validate_entry()
+    assert result.entry_id == "all"
+    assert isinstance(result.errors, list)
+    assert isinstance(result.warnings, list)
+    assert result.status == ResultStatus.SUCCESS
+    assert result.is_valid is True
+
+
+def test_validate_dict_input():
+    entry_dict = {
+        "id": "test-entry",
+        "name": "Test Entry",
+        "track": "job",
+        "status": "research",
+    }
+    result = validate_entry(entry_dict=entry_dict)
+    assert result.status == ResultStatus.SUCCESS
+    assert result.is_valid is True
+

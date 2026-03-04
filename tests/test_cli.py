@@ -7,6 +7,7 @@ from typer.testing import CliRunner
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../scripts')))
 
 from cli import app
+from pipeline_api import ResultStatus, ValidationResult
 
 runner = CliRunner()
 
@@ -36,6 +37,13 @@ def test_cli_score_requires_args():
     assert "Specify" in result.output or "error" in result.output.lower()
 
 
+def test_cli_score_all_dry_run():
+    """Verify score --all --dry-run is accepted and executes."""
+    result = runner.invoke(app, ["score", "--all", "--dry-run"])
+    assert result.exit_code == 0
+    assert "batch" in result.output.lower() or "scored" in result.output.lower()
+
+
 def test_cli_advance_requires_target():
     """Verify advance command requires target."""
     result = runner.invoke(app, ["advance"])
@@ -48,3 +56,21 @@ def test_cli_standup_help():
     assert result.exit_code == 0
     assert "Daily dashboard" in result.output
 
+
+def test_cli_validate_handles_error_without_crash(monkeypatch):
+    """Validate command should show errors cleanly instead of throwing AttributeError."""
+
+    def _fake_validate(entry_id=None, entry_dict=None):
+        return ValidationResult(
+            status=ResultStatus.ERROR,
+            entry_id=entry_id or "all",
+            is_valid=False,
+            errors=["synthetic validation error"],
+            message="validation failed",
+            error="synthetic validation error",
+        )
+
+    monkeypatch.setattr("cli.validate_entry", _fake_validate)
+    result = runner.invoke(app, ["validate"])
+    assert result.exit_code != 0
+    assert "synthetic validation error" in result.output

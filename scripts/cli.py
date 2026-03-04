@@ -9,28 +9,35 @@ direct script imports (backward-compatible).
 """
 
 import sys
-from pathlib import Path
 
 import typer
 
-# Ensure the scripts directory is in the path
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-# Import clean API layer (new way)
-from campaign import main as campaign_main
-from check_outcomes import main as outcomes_main
-from hygiene import main as hygiene_main
-from pipeline_api import (
-    ResultStatus,
-    advance_entry,
-    compose_entry,
-    draft_entry,
-    score_entry,
-    validate_entry,
-)
-
-# Import functions not yet migrated to API layer (backward-compatible)
-from standup import run_standup, run_triage, touch_entry
+try:  # Prefer package-style imports when available.
+    from .campaign import main as campaign_main
+    from .check_outcomes import main as outcomes_main
+    from .hygiene import main as hygiene_main
+    from .pipeline_api import (
+        ResultStatus,
+        advance_entry,
+        compose_entry,
+        draft_entry,
+        score_entry,
+        validate_entry,
+    )
+    from .standup import run_standup, run_triage, touch_entry
+except ImportError:  # pragma: no cover - script execution fallback
+    from campaign import main as campaign_main
+    from check_outcomes import main as outcomes_main
+    from hygiene import main as hygiene_main
+    from pipeline_api import (
+        ResultStatus,
+        advance_entry,
+        compose_entry,
+        draft_entry,
+        score_entry,
+        validate_entry,
+    )
+    from standup import run_standup, run_triage, touch_entry
 
 app = typer.Typer(help="Application Pipeline CLI", no_args_is_help=True)
 
@@ -59,6 +66,7 @@ def score(
         dry_run=dry_run,
         min_score=min_score,
         verbose=verbose,
+        all_entries=all,
     )
     
     if result.status == ResultStatus.ERROR:
@@ -146,7 +154,8 @@ def validate(target: str = typer.Argument(None, help="Target ID (optional)")):
     result = validate_entry(entry_id=target)
     
     if result.status == ResultStatus.ERROR:
-        typer.echo(f"Error: {result.error}", err=True)
+        if result.error:
+            typer.echo(f"Error: {result.error}", err=True)
         for err in result.errors:
             typer.echo(f"  - {err}", err=True)
         raise typer.Exit(1)

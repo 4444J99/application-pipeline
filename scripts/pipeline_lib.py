@@ -8,12 +8,36 @@ pipeline_status.py, standup.py, conversion_report.py, and score.py.
 import json
 import os
 import re
-from datetime import UTC, date, datetime
+from datetime import date
 from pathlib import Path
 
+import pipeline_entry_state as _entry_state
+import pipeline_freshness as _pipeline_freshness
 import yaml
+from pipeline_market import build_market_intelligence_loader
+from pipeline_market import http_request_with_retry as _http_request_with_retry
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+
+# Backward-compatible re-exports from extracted modules.
+PRECISION_PIVOT_DATE = _pipeline_freshness.PRECISION_PIVOT_DATE
+JOB_FRESH_HOURS = _pipeline_freshness.JOB_FRESH_HOURS
+JOB_WARM_HOURS = _pipeline_freshness.JOB_WARM_HOURS
+JOB_STALE_HOURS = _pipeline_freshness.JOB_STALE_HOURS
+get_entry_era = _pipeline_freshness.get_entry_era
+get_posting_age_hours = _pipeline_freshness.get_posting_age_hours
+get_freshness_tier = _pipeline_freshness.get_freshness_tier
+compute_freshness_score = _pipeline_freshness.compute_freshness_score
+parse_date = _entry_state.parse_date
+parse_datetime = _entry_state.parse_datetime
+format_amount = _entry_state.format_amount
+get_effort = _entry_state.get_effort
+get_score = _entry_state.get_score
+get_deadline = _entry_state.get_deadline
+days_until = _entry_state.days_until
+is_actionable = _entry_state.is_actionable
+is_deferred = _entry_state.is_deferred
+can_advance = _entry_state.can_advance
 
 PIPELINE_DIR_ACTIVE = REPO_ROOT / "pipeline" / "active"
 PIPELINE_DIR_SUBMITTED = REPO_ROOT / "pipeline" / "submitted"
@@ -33,6 +57,15 @@ SIGNALS_DIR = REPO_ROOT / "signals"
 SUBMISSIONS_DIR = REPO_ROOT / "pipeline" / "submissions"
 LEGACY_DIR = REPO_ROOT / "scripts" / "legacy-submission"
 MATERIALS_DIR = REPO_ROOT / "materials"
+
+(
+    load_market_intelligence,
+    get_portal_scores,
+    get_strategic_base,
+    PORTAL_SCORES_DEFAULT,
+    STRATEGIC_BASE_DEFAULT,
+) = build_market_intelligence_loader(REPO_ROOT)
+http_request_with_retry = _http_request_with_retry
 
 
 def _detect_current_batch() -> str:
@@ -104,11 +137,6 @@ EFFORT_MINUTES = {
     "deep": 480,
     "complex": 720,
 }
-
-# Job posting freshness thresholds (hours)
-JOB_FRESH_HOURS = 24       # prime submission window
-JOB_WARM_HOURS = 48        # still actionable
-JOB_STALE_HOURS = 72       # auto-expire threshold
 
 # Canonical scoring dimensions — single source of truth for score.py and validate.py.
 DIMENSION_ORDER = [
@@ -288,83 +316,6 @@ def load_entry_by_id(entry_id: str) -> tuple[Path | None, dict | None]:
             if isinstance(data, dict):
                 return filepath, data
     return None, None
-
-
-def parse_date(date_str) -> date | None:
-    """Parse an ISO date string (YYYY-MM-DD) into a date object.
-
-    Also handles datetime objects from PyYAML (e.g., '2026-03-01T14:30:00').
-    """
-    if not date_str:
-        return None
-    if isinstance(date_str, datetime):
-        return date_str.date()
-    if isinstance(date_str, date):
-        return date_str
-    try:
-        return datetime.strptime(str(date_str), "%Y-%m-%d").date()
-    except ValueError:
-        return None
-
-
-def parse_datetime(date_str) -> datetime | None:
-    """Parse an ISO date string into a datetime object."""
-    if not date_str:
-        return None
-    try:
-        return datetime.strptime(str(date_str), "%Y-%m-%d")
-    except ValueError:
-        return None
-
-
-def format_amount(amount: dict | None) -> str:
-    """Format an amount dict for display."""
-    if not amount or not isinstance(amount, dict):
-        return "—"
-    value = amount.get("value", 0)
-    currency = amount.get("currency", "USD")
-    if value == 0:
-        atype = amount.get("type", "")
-        if atype == "in_kind":
-            return "In-kind"
-        if atype == "variable":
-            return "Variable"
-        return "—"
-    if currency == "EUR":
-        return f"EUR {value:,}"
-    return f"${value:,}"
-
-
-def get_effort(entry: dict) -> str:
-    """Get effort level from submission, defaulting to 'standard'."""
-    sub = entry.get("submission", {})
-    if isinstance(sub, dict):
-        return sub.get("effort_level", "standard") or "standard"
-    return "standard"
-
-
-def get_score(entry: dict) -> float:
-    """Get composite fit score."""
-    fit = entry.get("fit", {})
-    if isinstance(fit, dict):
-        raw = fit.get("score", 0)
-        if raw is None:
-            return 0.0
-        return float(raw)
-    return 0.0
-
-
-def get_deadline(entry: dict) -> tuple[date | None, str]:
-    """Return (deadline_date, deadline_type)."""
-    dl = entry.get("deadline", {})
-    if not isinstance(dl, dict):
-        return None, "unknown"
-    return parse_date(dl.get("date")), dl.get("type", "unknown")
-
-
-def days_until(d: date) -> int:
-    """Days from today until the given date (negative = past)."""
-    return (d - date.today()).days
 
 
 def load_profile(target_id: str) -> dict | None:
@@ -817,137 +768,10 @@ def format_block_stats(block_path: str) -> str | None:
     return None
 
 
-# --- HTTP retry helper ---
-
-
-def http_request_with_retry(
-    url: str,
-    *,
-    method: str = "GET",
-    data: bytes | None = None,
-    headers: dict | None = None,
-    timeout: int = 15,
-    max_retries: int = 3,
-) -> bytes | None:
-    """Make an HTTP request with exponential backoff retry.
-
-    Returns response body bytes, or None on failure after all retries.
-    """
-    import time
-    import urllib.error
-    import urllib.request
-
-    headers = headers or {}
-    for attempt in range(max_retries):
-        try:
-            req = urllib.request.Request(url, data=data, headers=headers, method=method)
-            with urllib.request.urlopen(req, timeout=timeout) as resp:
-                return resp.read()
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as e:
-            if attempt < max_retries - 1:
-                wait = 2 ** attempt  # 1, 2, 4 seconds
-                time.sleep(wait)
-            else:
-                import sys
-                print(f"  HTTP {method} {url} failed after {max_retries} attempts: {e}",
-                      file=sys.stderr)
-                return None
-    return None
-
-
-# --- Market intelligence loader ---
-
-_INTEL_FILE = REPO_ROOT / "strategy" / "market-intelligence-2026.json"
-_MARKET_INTEL: dict | None = None
-
-
-def load_market_intelligence() -> dict:
-    """Load market-intelligence-2026.json once, return empty dict on failure."""
-    global _MARKET_INTEL
-    if _MARKET_INTEL is not None:
-        return _MARKET_INTEL
-    if _INTEL_FILE.exists():
-        try:
-            with open(_INTEL_FILE) as f:
-                _MARKET_INTEL = json.load(f)
-        except Exception:
-            _MARKET_INTEL = {}
-    else:
-        _MARKET_INTEL = {}
-    return _MARKET_INTEL
-
-
-# Portal friction scores — hardcoded fallback when market-intelligence JSON is missing/malformed.
-PORTAL_SCORES_DEFAULT = {
-    "email": 9,
-    "custom": 6,
-    "web": 6,
-    "submittable": 5,
-    "greenhouse": 5,
-    "lever": 5,
-    "ashby": 5,
-    "workable": 5,
-    "slideroom": 4,
-}
-
-
-def get_portal_scores() -> dict:
-    """Load portal friction scores from market intel, falling back to defaults."""
-    intel = load_market_intelligence()
-    scores = intel.get("portal_friction_scores", {})
-    # Filter out metadata keys (non-int values)
-    result = {k: v for k, v in scores.items() if isinstance(v, int)}
-    return result if result else PORTAL_SCORES_DEFAULT
-
-
-# Strategic value by track — hardcoded fallback.
-STRATEGIC_BASE_DEFAULT = {
-    "grant": 7,
-    "prize": 8,
-    "fellowship": 7,
-    "residency": 6,
-    "program": 5,
-    "writing": 5,
-    "emergency": 3,
-    "job": 6,
-    "consulting": 3,
-}
-
-
-def get_strategic_base() -> dict:
-    """Load strategic base values from market intel or fallback to defaults."""
-    intel = load_market_intelligence()
-    benchmarks = intel.get("track_benchmarks", {})
-    if not benchmarks:
-        return STRATEGIC_BASE_DEFAULT
-
-    # Derive strategic base from acceptance rates: higher acceptance → lower scarcity → lower strategic value
-    # Scale: acceptance ~0.02 → 8-9 (very hard, high prestige), ~0.20 → 3-4 (accessible)
-    result = {}
-    for track, data in benchmarks.items():
-        rate = data.get("acceptance_rate") or data.get("cold_response_rate")
-        if rate is None:
-            result[track] = STRATEGIC_BASE_DEFAULT.get(track, 5)
-        elif rate <= 0.02:
-            result[track] = 8
-        elif rate <= 0.04:
-            result[track] = 7
-        elif rate <= 0.06:
-            result[track] = 6
-        elif rate <= 0.10:
-            result[track] = 5
-        else:
-            result[track] = 4
-    # Fill any defaults not in market intel
-    for track, val in STRATEGIC_BASE_DEFAULT.items():
-        if track not in result:
-            result[track] = val
-    return result
+# HTTP and market-intelligence helpers are imported from pipeline_market.py.
 
 
 # --- Pipeline mode functions ---
-
-PRECISION_PIVOT_DATE = "2026-03-04"
 
 _MODE_THRESHOLDS_DEFAULT = {
     "precision": {"auto_qualify_min": 9.0, "max_active": 10, "max_weekly_submissions": 2, "stale_days": 14, "stagnant_days": 30},
@@ -993,199 +817,6 @@ def get_mode_review_status() -> dict:
         "mode": get_pipeline_mode(),
         "revert_trigger": strategy.get("revert_trigger", "0 interviews by review_date"),
     }
-
-
-# --- Era derivation ---
-
-
-def get_entry_era(entry: dict) -> str:
-    """Derive 'volume' or 'precision' from timeline.submitted vs PRECISION_PIVOT_DATE.
-
-    Entries submitted before the pivot date are 'volume' era.
-    Entries submitted on or after, or not yet submitted, are 'precision' era.
-    """
-    timeline = entry.get("timeline", {})
-    if not isinstance(timeline, dict):
-        return "precision"
-    submitted_str = timeline.get("submitted")
-    if not submitted_str:
-        return "precision"
-    submitted_str = str(submitted_str).strip().strip('"')
-    try:
-        from datetime import date as _date
-        submitted_date = _date.fromisoformat(submitted_str)
-        pivot_date = _date.fromisoformat(PRECISION_PIVOT_DATE)
-        return "volume" if submitted_date < pivot_date else "precision"
-    except (ValueError, TypeError):
-        return "precision"
-
-
-# --- Job posting freshness utilities ---
-
-
-def _load_freshness_thresholds() -> tuple[float, float, float]:
-    """Load job posting freshness thresholds from market intelligence JSON.
-
-    Looks for a 'job_posting_freshness_hours' key with 'fresh', 'warm', and
-    'stale' sub-keys.  Falls back to the module-level JOB_FRESH_HOURS,
-    JOB_WARM_HOURS, JOB_STALE_HOURS constants when the JSON is missing or
-    malformed.
-
-    Returns:
-        (fresh_hours, warm_hours, stale_hours) as floats.
-    """
-    intel = load_market_intelligence()
-    thresholds = intel.get("job_posting_freshness_hours", {})
-    if not isinstance(thresholds, dict):
-        return float(JOB_FRESH_HOURS), float(JOB_WARM_HOURS), float(JOB_STALE_HOURS)
-    fresh = thresholds.get("fresh", JOB_FRESH_HOURS)
-    warm = thresholds.get("warm", JOB_WARM_HOURS)
-    stale = thresholds.get("stale", JOB_STALE_HOURS)
-    try:
-        return float(fresh), float(warm), float(stale)
-    except (TypeError, ValueError):
-        return float(JOB_FRESH_HOURS), float(JOB_WARM_HOURS), float(JOB_STALE_HOURS)
-
-
-def _parse_datetime_aware(date_str) -> datetime | None:
-    """Parse a date or datetime string into a timezone-aware UTC datetime.
-
-    Handles:
-      - datetime objects (from PyYAML)
-      - date objects (from PyYAML)
-      - ISO date strings: '2026-03-03'
-      - ISO datetime strings: '2026-03-03T08:15:00'
-      - ISO datetime with timezone: '2026-03-03T08:15:00+00:00'
-
-    Returns None if the input is empty or unparseable.
-    """
-    if not date_str:
-        return None
-    if isinstance(date_str, datetime):
-        if date_str.tzinfo is None:
-            return date_str.replace(tzinfo=UTC)
-        return date_str
-    if isinstance(date_str, date):
-        return datetime(date_str.year, date_str.month, date_str.day, tzinfo=UTC)
-    s = str(date_str).strip()
-    # Try ISO datetime with timezone offset
-    for fmt in ("%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d"):
-        try:
-            dt = datetime.strptime(s, fmt)
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=UTC)
-            return dt
-        except ValueError:
-            continue
-    return None
-
-
-def get_posting_age_hours(entry: dict) -> float | None:
-    """Compute the age of a job posting in hours.
-
-    Checks date fields in priority order:
-      1. timeline.posting_date
-      2. timeline.discovered
-      3. timeline.date_added
-      4. last_touched
-
-    Returns age in hours as a float, or None if no usable date is found.
-    """
-    def _is_date_only(value) -> bool:
-        if isinstance(value, date) and not isinstance(value, datetime):
-            return True
-        if isinstance(value, str):
-            return bool(re.fullmatch(r"\d{4}-\d{2}-\d{2}", value.strip()))
-        return False
-
-    def _hours_from_date_only(value) -> float | None:
-        parsed = parse_date(value)
-        if parsed is None:
-            return None
-        # Date-only values are day-granular. Use local day delta to avoid
-        # UTC midnight rollover inflating age by ~24h.
-        return float((date.today() - parsed).days * 24)
-
-    timeline = entry.get("timeline", {})
-    if not isinstance(timeline, dict):
-        timeline = {}
-
-    dt = None
-    for field in ("posting_date", "discovered", "date_added"):
-        raw = timeline.get(field)
-        if _is_date_only(raw):
-            return _hours_from_date_only(raw)
-        dt = _parse_datetime_aware(raw)
-        if dt is not None:
-            break
-
-    if dt is None:
-        raw = entry.get("last_touched")
-        if _is_date_only(raw):
-            return _hours_from_date_only(raw)
-        dt = _parse_datetime_aware(raw)
-
-    if dt is None:
-        return None
-
-    now = datetime.now(UTC)
-    delta = now - dt
-    return delta.total_seconds() / 3600.0
-
-
-def get_freshness_tier(entry: dict) -> str | None:
-    """Return the freshness tier for a job-track entry.
-
-    Only applies to entries with track == 'job'. Returns None for all other
-    tracks.
-
-    Tiers:
-      - 'hot':     < fresh threshold (default 24h)
-      - 'warm':    fresh .. warm threshold (default 24-48h)
-      - 'cooling': warm .. stale threshold (default 48-72h)
-      - 'stale':   > stale threshold (default 72h)
-
-    Returns None if the entry is not a job or has no parseable date.
-    """
-    if entry.get("track") != "job":
-        return None
-
-    age = get_posting_age_hours(entry)
-    if age is None:
-        return None
-
-    fresh, warm, stale = _load_freshness_thresholds()
-
-    if age < fresh:
-        return "hot"
-    if age < warm:
-        return "warm"
-    if age < stale:
-        return "cooling"
-    return "stale"
-
-
-def compute_freshness_score(entry: dict) -> float:
-    """Return a 0.0-1.0 decay multiplier based on job posting age.
-
-    - Non-job entries always return 1.0 (no penalty).
-    - Job entries with no parseable date return 0.0 (assume stale).
-    - Otherwise, linear decay from 1.0 at 0 hours to 0.0 at the stale
-      threshold (default 72h). Values are clamped to [0.0, 1.0].
-    """
-    if entry.get("track") != "job":
-        return 1.0
-
-    age = get_posting_age_hours(entry)
-    if age is None:
-        return 0.0
-
-    _, _, stale = _load_freshness_thresholds()
-    if stale <= 0:
-        return 0.0
-
-    score = 1.0 - (age / stale)
-    return max(0.0, min(1.0, score))
 
 
 COMPANY_CAP = 1  # Max active+submitted entries per organization (precision mode)
@@ -1235,76 +866,4 @@ def atomic_write(filepath: Path, content: str) -> None:
         raise
 
 
-# ============================================================================
-# STATE MACHINE QUERY FUNCTIONS
-# ============================================================================
-
-def is_actionable(entry: dict) -> bool:
-    """Return True if entry is in an actionable status (can be worked on).
-    
-    Actionable statuses: research, qualified, drafting, staged
-    Non-actionable: deferred, submitted, interview, outcome (*)
-    
-    """
-    status = entry.get("status", "")
-    return status in ("research", "qualified", "drafting", "staged")
-
-
-def is_deferred(entry: dict) -> bool:
-    """Return True if entry is deferred (blocked by external factors).
-    
-    Deferred entries have explicit deferral reason and optional resume_date
-    when they can be re-activated.
-    """
-    status = entry.get("status", "")
-    deferral = entry.get("deferral")
-    return status == "deferred" and isinstance(deferral, dict)
-
-
-def can_advance(entry: dict, target_status: str = None) -> tuple[bool, str]:
-    """Check if entry can advance to target_status.
-    
-    Returns (can_advance, reason) tuple.
-    
-    State machine: research → qualified → drafting → staged → submitted → outcome
-    
-    Special cases:
-    - Deferred entries cannot advance until re-activated
-    - Terminal outcomes (accepted, rejected, withdrawn, expired) cannot advance
-    """
-    current_status = entry.get("status", "")
-    entry_id = entry.get("id", "unknown")
-    
-    # Cannot advance from terminal outcomes
-    if current_status in ("accepted", "rejected", "withdrawn", "expired", "closed"):
-        return False, f"{entry_id}: already in terminal status '{current_status}'"
-    
-    # Cannot advance from deferred without explicit re-activation
-    if is_deferred(entry):
-        return False, f"{entry_id}: deferred (blocked by external factor); re-activate before advancing"
-    
-    # Define valid state transitions
-    state_order = ["research", "qualified", "drafting", "staged", "submitted"]
-    
-    if current_status not in state_order:
-        return False, f"{entry_id}: unknown status '{current_status}'"
-    
-    if target_status:
-        if target_status not in state_order:
-            return False, f"{entry_id}: unknown target status '{target_status}'"
-        
-        current_idx = state_order.index(current_status)
-        target_idx = state_order.index(target_status)
-        
-        if target_idx <= current_idx:
-            return False, f"{entry_id}: cannot advance backward from '{current_status}' to '{target_status}'"
-        
-        return True, f"{entry_id}: can advance {current_status} → {target_status}"
-    else:
-        # Auto-advance to next status
-        current_idx = state_order.index(current_status)
-        if current_idx < len(state_order) - 1:
-            next_status = state_order[current_idx + 1]
-            return True, f"{entry_id}: can auto-advance {current_status} → {next_status}"
-        else:
-            return False, f"{entry_id}: already at final actionable status '{current_status}'"
+# STATE MACHINE QUERY FUNCTIONS are imported from pipeline_entry_state.py.
