@@ -33,6 +33,22 @@ def test_auto_fill_answer_falls_back_to_default_answers():
     assert answer == "No sponsorship required"
 
 
+def test_auto_fill_answer_prefers_default_over_generic_location_match():
+    config = {
+        "location": "New York City",
+        "default_answers": {"visa_sponsorship": "No"},
+    }
+    label = "Will you now or in the future require sponsorship for a visa to remain in your current location?"
+    answer = auto_fill_answer(label, config, portfolio_url="")
+    assert answer == "No"
+
+
+def test_auto_fill_answer_privacy_acknowledgement():
+    config = {}
+    answer = auto_fill_answer("Please review and acknowledge the candidate privacy policy", config, portfolio_url="")
+    assert answer == "Acknowledge/Confirm"
+
+
 def test_find_dynamic_answer_prefixed_label_and_normalized_alias():
     answers = {
         "label::Are you authorized to work in the U.S.": "Yes",

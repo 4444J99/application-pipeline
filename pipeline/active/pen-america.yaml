@@ -10,7 +10,7 @@ target:
   application_url: https://pen.org/writers-aid
   portal: custom
 deadline:
-  date: "2026-03-16"
+  date: '2026-03-16'
   time: null
   type: fixed
 amount:
@@ -73,7 +73,12 @@ tags: []
 source: 04-application-tracker.md
 deferral:
   reason: cycle_not_open
-  resume_date: "2026-03-01"
+  resume_date: '2026-03-01'
   note: Quarterly cycles. Portal for March 16 deadline typically opens 2-3 weeks prior.
-notes: Quarterly cycles for 2026. Portal for March 16 deadline typically opens 2-3 weeks prior. Check portal daily starting March 1.
-last_touched: "2026-03-03"
+notes: Quarterly cycles for 2026. Portal for March 16 deadline typically opens 2-3
+  weeks prior. Check portal daily starting March 1.
+last_touched: '2026-03-03'
+status_meta:
+  reviewed_by: 4jp
+  reviewed_at: '2026-03-03'
+  review_note: autofix-unblocker

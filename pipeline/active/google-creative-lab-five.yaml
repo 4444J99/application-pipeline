@@ -45,7 +45,7 @@ submission:
     evidence: evidence/work-samples
     framing: framings/creative-technologist
     tech_detail: projects/agentic-titan
-  variant_ids: 
+  variant_ids:
     cover_letter: cover-letters/grant-art-template
   materials_attached:
   - resumes/batch-03/google-creative-lab-five/google-creative-lab-five-resume.html
@@ -72,4 +72,8 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: 1-year salaried position. Rolling/open applications.
-last_touched: "2026-02-27"
+last_touched: '2026-03-03'
+status_meta:
+  reviewed_by: 4jp
+  reviewed_at: '2026-03-03'
+  review_note: autofix-unblocker

@@ -42,7 +42,7 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
-  variant_ids: 
+  variant_ids:
     cover_letter: cover-letters/grant-art-template
   materials_attached:
   - resumes/batch-03/pioneer-works/pioneer-works-resume.html
@@ -71,4 +71,8 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $1K-$2.5K stipend plus studio. Summer 2026 deadline TBA.
-last_touched: "2026-02-27"
+last_touched: '2026-03-03'
+status_meta:
+  reviewed_by: 4jp
+  reviewed_at: '2026-03-03'
+  review_note: autofix-unblocker

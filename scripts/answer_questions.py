@@ -17,11 +17,9 @@ import re
 import sys
 from pathlib import Path
 
-import yaml
-
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from ats_base import match_default_answer
+from ats_base import load_answers_yaml, match_default_answer
 from pipeline_lib import (
     PIPELINE_DIR_ACTIVE,
     load_entries,
@@ -54,10 +52,7 @@ def load_answer_template(entry_id: str, portal: str) -> dict | None:
     """Load existing answer template from the portal-specific answers dir."""
     answers_dir = get_answers_dir(portal)
     answer_path = answers_dir / f"{entry_id}.yaml"
-    if not answer_path.exists():
-        return None
-    data = yaml.safe_load(answer_path.read_text())
-    return data if isinstance(data, dict) else None
+    return load_answers_yaml(answer_path)
 
 
 def find_fill_in_fields(answers: dict, raw_text: str) -> list[dict]:

@@ -44,7 +44,7 @@ submission:
     queer_project: projects/krypto-velamen
     methodology: methodology/process-as-product
     evidence: evidence/metrics-snapshot
-  variant_ids: 
+  variant_ids:
     cover_letter: cover-letters/grant-art-template
   materials_attached:
   - resumes/batch-03/wff-housing/wff-housing-resume.html
@@ -73,4 +73,8 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $30,000 distributed over 3 years.
-last_touched: "2026-03-01"
+last_touched: '2026-03-03'
+status_meta:
+  reviewed_by: 4jp
+  reviewed_at: '2026-03-03'
+  review_note: autofix-unblocker

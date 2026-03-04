@@ -126,4 +126,8 @@ notes: 'S+T+ARTS Prize: EUR 20,000 grand prize for innovation at intersection of
   MET4, KRYPTO), not governance abstraction.
 
   '
-last_touched: "2026-02-27"
+last_touched: '2026-03-03'
+status_meta:
+  reviewed_by: 4jp
+  reviewed_at: '2026-03-03'
+  review_note: autofix-unblocker

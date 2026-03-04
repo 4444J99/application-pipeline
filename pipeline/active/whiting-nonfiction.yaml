@@ -45,7 +45,7 @@ submission:
     methodology: methodology/process-as-product
     evidence: evidence/work-samples
     framing: framings/systems-artist
-  variant_ids: 
+  variant_ids:
     cover_letter: cover-letters/grant-art-template
   materials_attached:
   - resumes/batch-03/whiting-nonfiction/whiting-nonfiction-resume.html
@@ -74,4 +74,8 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Approximate deadline Apr 2026 TBA.
-last_touched: "2026-02-27"
+last_touched: '2026-03-03'
+status_meta:
+  reviewed_by: 4jp
+  reviewed_at: '2026-03-03'
+  review_note: autofix-unblocker

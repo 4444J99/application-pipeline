@@ -35,15 +35,20 @@ PORTAL_SCRIPTS = {
 }
 
 
-def gather_ready_entries(portal_filter: str | None = None) -> list[dict]:
+def gather_ready_entries(portal_filter: str | None = None, *, deep: bool = False) -> list[dict]:
     """Load active entries, run audit checks, return ready ones."""
     entries = load_entries(dirs=[PIPELINE_DIR_ACTIVE])
+    config = None
+    if deep:
+        from pipeline_lib import load_submit_config
+
+        config = load_submit_config(strict=False)
     results = []
     for entry in entries:
         portal = detect_entry_portal(entry)
         if portal_filter and portal != portal_filter:
             continue
-        result = check_entry(entry)
+        result = check_entry(entry, deep=deep, config=config)
         if result["ready"]:
             # Attach the full entry for company cap filtering
             result["_org"] = entry.get("target", {}).get("organization", "")
@@ -200,10 +205,12 @@ def main():
                         help="Delay between API submissions (anti-bot, default: 0)")
     parser.add_argument("--max-per-company", type=int, default=0, metavar="N",
                         help="Max submissions per organization in this batch (default: unlimited)")
+    parser.add_argument("--deep", action="store_true",
+                        help="Use deep audit gates (auth + answers_complete) for readiness")
     args = parser.parse_args()
 
     # Gather all ready entries
-    ready = gather_ready_entries(portal_filter=args.portal)
+    ready = gather_ready_entries(portal_filter=args.portal, deep=args.deep)
 
     if not ready:
         portal_note = f" for portal '{args.portal}'" if args.portal else ""

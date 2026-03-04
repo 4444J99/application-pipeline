@@ -15,6 +15,7 @@ Usage:
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -75,15 +76,46 @@ def _check_answers_complete(portal: str, eid: str) -> bool:
 
     try:
         content = answer_file.read_text()
-        # Scan for unfilled placeholder patterns
-        if "FILL IN" in content or "FILL_IN" in content:
-            return False
-        # Also check YAML values for empty required fields
+
+        # Fast path: templates with no custom questions are complete.
+        if "No custom questions" in content:
+            return True
+
         data = yaml.safe_load(content)
-        if isinstance(data, dict):
-            for key, val in data.items():
-                if isinstance(val, str) and val.strip().upper() in ("FILL IN", "FILL_IN", "TODO", ""):
-                    return False
+        if not isinstance(data, dict):
+            return False
+
+        # Determine which keys are required using template comments.
+        # If no required metadata exists, conservatively check all keys.
+        required_keys: set[str] = set()
+        pending_required: bool | None = None
+        for raw_line in content.splitlines():
+            stripped = raw_line.strip()
+            if stripped.startswith("# Type:"):
+                pending_required = "Required" in stripped
+                continue
+            if stripped.startswith("#") or not stripped:
+                continue
+            key_match = re.match(r"^([^:#][^:]*):", stripped)
+            if key_match:
+                key = key_match.group(1).strip().strip('"').strip("'")
+                if pending_required is True:
+                    required_keys.add(key)
+                pending_required = None
+
+        keys_to_check = required_keys if required_keys else set(data.keys())
+
+        for key in keys_to_check:
+            if key not in data:
+                return False
+            val = data.get(key)
+            if val is None:
+                return False
+            sval = str(val).strip().upper()
+            if not sval:
+                return False
+            if "FILL IN" in sval or "FILL_IN" in sval or "TODO" in sval:
+                return False
         return True
     except (OSError, yaml.YAMLError):
         return False

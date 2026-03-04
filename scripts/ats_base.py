@@ -28,7 +28,8 @@ AUTO_FILL_PATTERNS: list[tuple[re.Pattern, str]] = [
     (re.compile(r"linkedin", re.I), "linkedin"),
     (re.compile(r"pronounc|phonetic", re.I), "name_pronunciation"),
     (re.compile(r"pronoun", re.I), "pronouns"),
-    (re.compile(r"address|city|location|plan on working|where.*located|where.*based", re.I), "location"),
+    (re.compile(r"privacy policy|acknowledge|consent", re.I), "privacy_acknowledgement"),
+    (re.compile(r"address|city|plan on working|where.*located|where.*based", re.I), "location"),
 ]
 
 # Label patterns for semantic default_answers mapping from .submit-config.yaml.
@@ -227,7 +228,14 @@ def auto_fill_answer(label: str, config: Mapping[str, Any], portfolio_url: str =
         "name_pronunciation": config.get("name_pronunciation", ""),
         "pronouns": config.get("pronouns", ""),
         "location": config.get("location", ""),
+        "privacy_acknowledgement": "Acknowledge/Confirm",
     }
+
+    # Prefer semantic defaults first (e.g. sponsorship/auth/how-heard) to avoid
+    # accidental matches on broad text like "current location".
+    default_match = match_default_answer(label, config)
+    if default_match:
+        return default_match
 
     for pattern, source_key in AUTO_FILL_PATTERNS:
         if pattern.search(label):
@@ -235,8 +243,7 @@ def auto_fill_answer(label: str, config: Mapping[str, Any], portfolio_url: str =
             if _is_effective_value(value):
                 return str(value)
             return None
-
-    return match_default_answer(label, config)
+    return None
 
 
 def resolve_select_value(answer_value: Any, values_list: Sequence[Mapping[str, Any]]) -> Any | None:

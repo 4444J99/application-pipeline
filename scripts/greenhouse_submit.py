@@ -150,6 +150,12 @@ def field_type_label(field: dict) -> str:
     return type_map.get(ftype, ftype)
 
 
+def _comment_lines(text: str) -> list[str]:
+    """Render any label text as YAML-safe comment lines."""
+    lines = text.splitlines() or [text]
+    return [f"# {line}" if line else "#" for line in lines]
+
+
 def resolve_select_value(answer_str: str, values_list: list[dict]) -> int | str | None:
     """Proxy to shared option resolver (kept for backwards-compatible imports)."""
     return resolve_select_value_shared(answer_str, values_list)
@@ -303,7 +309,7 @@ def generate_answer_template(
             values = field.get("values", [])
 
             # Build comment
-            comment_parts = [f"# {label}"]
+            comment_parts = _comment_lines(label)
             type_str = f"# Type: {ftype}"
             if values:
                 opts = ", ".join(v.get("label", "?") for v in values)

@@ -197,6 +197,29 @@ def test_check_answers_complete_detects_todo():
             submission_audit.GREENHOUSE_ANSWERS_DIR = orig_dir
 
 
+def test_check_answers_complete_ignores_optional_fill_in_with_required_metadata():
+    """Optional placeholders should not fail completeness when required fields are answered."""
+    with tempfile.TemporaryDirectory() as tmpdir:
+        import submission_audit
+
+        orig_dir = submission_audit.GREENHOUSE_ANSWERS_DIR
+        try:
+            submission_audit.GREENHOUSE_ANSWERS_DIR = Path(tmpdir)
+            answer_file = Path(tmpdir) / "meta-entry.yaml"
+            answer_file.write_text(
+                "# Optional field\n"
+                "# Type: text | Optional\n"
+                'optional_q: "FILL IN"\n'
+                "\n"
+                "# Required field\n"
+                "# Type: text | Required\n"
+                'required_q: "Complete answer"\n'
+            )
+            assert _check_answers_complete("greenhouse", "meta-entry") is True
+        finally:
+            submission_audit.GREENHOUSE_ANSWERS_DIR = orig_dir
+
+
 # --- deep mode ---
 
 

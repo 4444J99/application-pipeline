@@ -60,5 +60,9 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-27"
+last_touched: '2026-03-03'
 follow_up: []
+status_meta:
+  reviewed_by: 4jp
+  reviewed_at: '2026-03-03'
+  review_note: autofix-unblocker

@@ -2807,3 +2807,435 @@ actions:
   responsible: tester
   impact: TBD
   entry_id: test-entry
+- signal_id: review-anthropic-developer-community-lead-emea-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: anthropic-developer-community-lead-emea
+- signal_id: review-anthropic-software-engineer-agent-sdk-claude-code-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: anthropic-software-engineer-agent-sdk-claude-code
+- signal_id: review-cohere-applied-ai-engineer-agentic-workflows-korea-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: cohere-applied-ai-engineer-agentic-workflows-korea
+- signal_id: review-cohere-applied-ai-engineer-agentic-workflows-singapore-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: cohere-applied-ai-engineer-agentic-workflows-singapore
+- signal_id: review-cohere-forward-deployed-engineer-agentic-platform-north-america-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: cohere-forward-deployed-engineer-agentic-platform-north-america
+- signal_id: review-cohere-forward-deployed-engineer-agentic-platform-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: cohere-forward-deployed-engineer-agentic-platform
+- signal_id: review-creative-capital-2027-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: creative-capital-2027
+- signal_id: review-cursor-software-engineer-devex-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: cursor-software-engineer-devex
+- signal_id: review-datadog-senior-technical-writer-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: datadog-senior-technical-writer
+- signal_id: review-dbt-labs-senior-developer-experience-advocate-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: dbt-labs-senior-developer-experience-advocate
+- signal_id: review-deepgram-staff-developer-advocate-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: deepgram-staff-developer-advocate
+- signal_id: review-elastic-senior-developer-advocate-video-content-creator-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: elastic-senior-developer-advocate-video-content-creator
+- signal_id: review-elastic-senior-developer-advocate-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: elastic-senior-developer-advocate
+- signal_id: review-elastic-senior-technical-writer-core-docs-documentation-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: elastic-senior-technical-writer-core-docs-documentation
+- signal_id: review-elastic-software-engineer-ii-python-developer-tools-search-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: elastic-software-engineer-ii-python-developer-tools-search
+- signal_id: review-elastic-technical-writer-i-ski-documentation-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: elastic-technical-writer-i-ski-documentation
+- signal_id: review-elevenlabs-developer-relations-engineer-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: elevenlabs-developer-relations-engineer
+- signal_id: review-eyebeam-plurality-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: eyebeam-plurality
+- signal_id: review-fire-island-residency-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: fire-island-residency
+- signal_id: review-fractured-atlas-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: fractured-atlas
+- signal_id: review-github-sponsors-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: github-sponsors
+- signal_id: review-gitlab-staff-backend-engineer-developer-experience-ruby-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: gitlab-staff-backend-engineer-developer-experience-ruby
+- signal_id: review-google-ami-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: google-ami
+- signal_id: review-google-creative-fellowship-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: google-creative-fellowship
+- signal_id: review-google-creative-lab-five-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: google-creative-lab-five
+- signal_id: review-headlands-center-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: headlands-center
+- signal_id: review-lacma-art-tech-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: lacma-art-tech
+- signal_id: review-lambda-literary-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: lambda-literary
+- signal_id: review-mongodb-senior-developer-advocate-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: mongodb-senior-developer-advocate
+- signal_id: review-mongodb-senior-software-engineer-devtools-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: mongodb-senior-software-engineer-devtools
+- signal_id: review-mongodb-senior-technical-writer-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: mongodb-senior-technical-writer
+- signal_id: review-new-inc-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: new-inc
+- signal_id: review-nlnet-commons-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: nlnet-commons
+- signal_id: review-notion-software-engineer-ai-agentic-search-early-career-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: notion-software-engineer-ai-agentic-search-early-career
+- signal_id: review-openai-software-engineer-full-stack-developer-experience-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: openai-software-engineer-full-stack-developer-experience
+- signal_id: review-pen-america-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: pen-america
+- signal_id: review-pioneer-works-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: pioneer-works
+- signal_id: review-prix-ars-digital-humanity-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: prix-ars-digital-humanity
+- signal_id: review-prix-ars-electronica-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: prix-ars-electronica
+- signal_id: review-processing-foundation-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: processing-foundation
+- signal_id: review-queer-art-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: queer-art
+- signal_id: review-railway-developer-relations-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: railway-developer-relations
+- signal_id: review-rauschenberg-cycle-36-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: rauschenberg-cycle-36
+- signal_id: review-resend-dx-engineer-technical-writer-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: resend-dx-engineer-technical-writer
+- signal_id: review-scale-ai-senior-software-engineer-agentic-data-products-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: scale-ai-senior-software-engineer-agentic-data-products
+- signal_id: review-starts-prize-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: starts-prize
+- signal_id: review-stripe-developer-experience-engineer-privy-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: stripe-developer-experience-engineer-privy
+- signal_id: review-temporal-staff-developer-advocate-developer-enablement-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: temporal-staff-developer-advocate-developer-enablement
+- signal_id: review-temporal-staff-developer-advocate-platform-engineering-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: temporal-staff-developer-advocate-platform-engineering
+- signal_id: review-temporal-technical-writer-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: temporal-technical-writer
+- signal_id: review-tulsa-fellowship-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: tulsa-fellowship
+- signal_id: review-warhol-arts-writers-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: warhol-arts-writers
+- signal_id: review-wff-housing-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: wff-housing
+- signal_id: review-whiting-nonfiction-2026-03-03
+  signal_type: agent_rule
+  description: Submission governance review completed
+  triggered_action: marked entry as reviewed
+  action_date: '2026-03-03'
+  responsible: 4jp
+  impact: TBD
+  entry_id: whiting-nonfiction

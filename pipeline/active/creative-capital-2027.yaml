@@ -76,4 +76,8 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: null
-last_touched: "2026-02-27"
+last_touched: '2026-03-03'
+status_meta:
+  reviewed_by: 4jp
+  reviewed_at: '2026-03-03'
+  review_note: autofix-unblocker

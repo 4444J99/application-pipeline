@@ -45,7 +45,7 @@ submission:
     methodology: methodology/governance-as-art
     evidence: evidence/differentiators
     framing: framings/systems-artist
-  variant_ids: 
+  variant_ids:
     cover_letter: cover-letters/grant-art-template
   materials_attached:
   - resumes/batch-03/headlands-center/headlands-center-resume.html
@@ -75,4 +75,8 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Fully funded plus $1K/month stipend. Application window Apr 1 - Jun 1 2026.
-last_touched: "2026-03-01"
+last_touched: '2026-03-03'
+status_meta:
+  reviewed_by: 4jp
+  reviewed_at: '2026-03-03'
+  review_note: autofix-unblocker
