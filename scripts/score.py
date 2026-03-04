@@ -36,6 +36,71 @@ from pipeline_lib import (
     load_entries as _load_entries_raw,
 )
 
+# --- Text match integration (lazy-loaded) ---
+
+_TEXT_MATCH_IDF: tuple[dict[str, float], int] | None = None
+_text_match_available = True
+
+
+def _get_text_match_idf() -> tuple[dict[str, float], int] | None:
+    """Lazy-load IDF table from text_match module."""
+    global _TEXT_MATCH_IDF, _text_match_available
+    if not _text_match_available:
+        return None
+    if _TEXT_MATCH_IDF is not None:
+        return _TEXT_MATCH_IDF
+    try:
+        from text_match import get_idf
+        idf, corpus_size = get_idf()
+        if idf:
+            _TEXT_MATCH_IDF = (idf, corpus_size)
+            return _TEXT_MATCH_IDF
+    except Exception:
+        _text_match_available = False
+    return None
+
+
+def _text_match_result(entry: dict):
+    """Compute text match result for an entry, or None on failure."""
+    idf_data = _get_text_match_idf()
+    if idf_data is None:
+        return None
+    idf, corpus_size = idf_data
+    try:
+        from text_match import analyze_entry
+        entry_id = entry.get("id", "")
+        return analyze_entry(entry_id, entry, idf, corpus_size)
+    except Exception:
+        return None
+
+
+def _ma_text_alignment(entry: dict) -> tuple[int, str]:
+    """Signal 5: TF-IDF similarity between posting and mission content (0-2)."""
+    result = _text_match_result(entry)
+    if result is None:
+        return 0, "no research text available"
+    score = result.mission_score
+    return score, f"text similarity -> {score} (cosine={result.overall_similarity:.3f})"
+
+
+def _em_text_coverage(entry: dict) -> tuple[int, str]:
+    """Signal 5: TF-IDF similarity between posting and evidence content (0-2)."""
+    result = _text_match_result(entry)
+    if result is None:
+        return 0, "no research text available"
+    score = result.evidence_score
+    return score, f"text coverage -> {score} (cosine={result.overall_similarity:.3f})"
+
+
+def _tr_text_fit(entry: dict) -> tuple[int, str]:
+    """Signal 5: TF-IDF similarity between posting and resume/profile content (0-2)."""
+    result = _text_match_result(entry)
+    if result is None:
+        return 0, "no research text available"
+    score = result.fit_score
+    return score, f"text fit -> {score} (cosine={result.overall_similarity:.3f})"
+
+
 # --- Scoring rubric loader ---
 
 _RUBRIC_PATH = Path(__file__).resolve().parent.parent / "strategy" / "scoring-rubric.yaml"
@@ -973,26 +1038,29 @@ def compute_human_dimensions(
     entry_id = entry.get("id", "")
     profile = load_profile(entry_id)
 
-    # --- Mission Alignment (4 signals, 0-10) ---
+    # --- Mission Alignment (5 signals, 0-10) ---
     ma1_score, ma1_reason = _ma_position_profile_match(entry, profile)
     ma2_score, ma2_reason = _ma_track_position_affinity(entry)
     ma3_score, ma3_reason = _ma_organ_position_coherence(entry)
     ma4_score, ma4_reason = _ma_framing_specialization(entry)
-    mission = max(1, min(10, ma1_score + ma2_score + ma3_score + ma4_score))
+    ma5_score, ma5_reason = _ma_text_alignment(entry)
+    mission = max(1, min(10, ma1_score + ma2_score + ma3_score + ma4_score + ma5_score))
 
-    # --- Evidence Match (4 signals, 0-10) ---
+    # --- Evidence Match (5 signals, 0-10) ---
     em1_score, em1_reason = _em_block_portal_coverage(entry)
     em2_score, em2_reason = _em_slot_name_alignment(entry)
     em3_score, em3_reason = _em_evidence_depth(entry)
     em4_score, em4_reason = _em_materials_readiness(entry)
-    evidence = max(1, min(10, em1_score + em2_score + em3_score + em4_score))
+    em5_score, em5_reason = _em_text_coverage(entry)
+    evidence = max(1, min(10, em1_score + em2_score + em3_score + em4_score + em5_score))
 
-    # --- Track Record Fit (4 signals, 0-10) ---
+    # --- Track Record Fit (5 signals, 0-10) ---
     tr1_score, tr1_reason = _tr_credential_track_relevance(entry)
     tr2_score, tr2_reason = _tr_track_experience(entry, all_entries)
     tr3_score, tr3_reason = _tr_position_depth(entry)
     tr4_score, tr4_reason = _tr_differentiators_coverage(entry, profile)
-    track_record = max(1, min(10, tr1_score + tr2_score + tr3_score + tr4_score))
+    tr5_score, tr5_reason = _tr_text_fit(entry)
+    track_record = max(1, min(10, tr1_score + tr2_score + tr3_score + tr4_score + tr5_score))
 
     result = {
         "mission_alignment": mission,
@@ -1007,18 +1075,21 @@ def compute_human_dimensions(
                 f"  track-position affinity: {ma2_score}  <- {ma2_reason}",
                 f"  organ-position coherence:{ma3_score}  <- {ma3_reason}",
                 f"  framing specialization:  {ma4_score}  <- {ma4_reason}",
+                f"  text alignment:          {ma5_score}  <- {ma5_reason}",
             ]),
             "evidence_match": "\n".join([
                 f"  block-portal coverage:   {em1_score}  <- {em1_reason}",
                 f"  slot name alignment:     {em2_score}  <- {em2_reason}",
                 f"  evidence depth:          {em3_score}  <- {em3_reason}",
                 f"  materials readiness:     {em4_score}  <- {em4_reason}",
+                f"  text coverage:           {em5_score}  <- {em5_reason}",
             ]),
             "track_record_fit": "\n".join([
                 f"  credential-track:        {tr1_score}  <- {tr1_reason}",
                 f"  track experience:        {tr2_score}  <- {tr2_reason}",
                 f"  position depth:          {tr3_score}  <- {tr3_reason}",
                 f"  differentiators:         {tr4_score}  <- {tr4_reason}",
+                f"  text fit:                {tr5_score}  <- {tr5_reason}",
             ]),
         }
         return result, explanations

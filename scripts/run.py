@@ -89,6 +89,8 @@ COMMANDS = {
     "idmaps":      ("generate_id_mappings.py", [],           "Generate ID mapping suggestions from filesystem"),
     "verifyall":   ("verify_all.py", [],                     "Run full verification gates (matrix + lint + validate + tests)"),
     "verifymatrix": ("verification_matrix.py", ["--strict"], "Check module verification coverage matrix"),
+    "textmatch":   ("text_match.py", ["--all"],             "TF-IDF text match analysis for all entries"),
+    "gaps":        ("text_match.py", ["--all", "--gaps"],    "Text match gap analysis: missing skills and blocks"),
 }
 
 # --- Parameterized commands (word + target ID) ---
@@ -112,6 +114,7 @@ PARAM_COMMANDS = {
     "discover":   ("discover_jobs.py", ["--position"],     "Discover jobs for a specific identity position"),
     "review":     ("review_entry.py", ["--target"],        "Mark an entry reviewed for submission governance"),
     "cultivate":  ("cultivate.py", ["--plan"],              "Generate cultivation plan for an entry"),
+    "textmatch":  ("text_match.py", ["--target"],            "TF-IDF text match for single entry"),
 }
 
 
