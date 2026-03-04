@@ -86,6 +86,7 @@ Scripts are independent CLIs but some import functions from each other:
 - **`check_outcomes.py`** — Outcome recording and stale response alerts. Updates conversion-log and moves terminal entries to closed/.
 - **`research_contacts.py`** — Recruiter identification and follow-up protocol date generation.
 - **`submit.py`** imports from `check_metrics.py` — `--check` mode now validates block metrics freshness.
+- **`text_match.py`** — TF-IDF text matching engine; provides objective scoring signals by comparing job posting keywords against block/profile content. Used by `score.py` for evidence_match dimension.
 - **`feedback_capture.py`** — standalone; writes hypothesis entries to `signals/hypotheses.yaml`. Use to record predicted outcome reasons before results arrive. Run `run.py hypotheses` to list, `run.py analysis` to see patterns, `run.py hypothesis <id>` to capture for a specific entry.
 - **`check_email.py`** — standalone; scans for submission confirmations and responses. Requires `.email-config.yaml` with IMAP credentials (not committed). Run `run.py email` daily.
 - All other scripts are standalone CLIs that read/write pipeline YAML files.
@@ -131,8 +132,9 @@ python scripts/standup.py --triage           # Interactive triage of stagnant en
 # Pipeline overview
 python scripts/pipeline_status.py
 
-# Validate pipeline YAML
+# Validate pipeline YAML (CI runs with --check-id-maps --check-rubric)
 python scripts/validate.py
+python scripts/validate.py --check-id-maps --check-rubric  # Full CI-parity validation
 
 # Lint
 ruff check scripts/ tests/
@@ -143,7 +145,7 @@ python scripts/archive_research.py --dry-run        # Preview file moves
 python scripts/archive_research.py --yes             # Execute moves
 python scripts/archive_research.py --restore <id>    # Move entry back to active/
 
-# Scoring (8-dimension weighted rubric, see strategy/scoring-rubric.md)
+# Scoring (9-dimension weighted rubric, see strategy/scoring-rubric.yaml)
 python scripts/score.py --target <target-id>  # Score single entry
 python scripts/score.py --all --dry-run        # Preview all scores
 
@@ -490,13 +492,16 @@ Canonical identity statements, metrics, and evidence live in `organvm-corpvs-tes
 
 ## CI & Linting
 
-- CI runs via `.github/workflows/quality.yml`: ruff lint, YAML validation, pytest (Ubuntu, Python 3.12)
+- CI runs via `.github/workflows/quality.yml`: verification matrix, ruff lint, YAML validation, pytest (Ubuntu, Python 3.12)
+- **Verification matrix gate**: `python scripts/verification_matrix.py --strict` runs first in CI — enforces module-to-test coverage. Override exceptions in `strategy/module-verification-overrides.yaml`.
 - Linter: `ruff check scripts/ tests/` — config in `pyproject.toml` (line-length 120, E/F/I/UP rules, E501 ignored)
 - No formal coverage threshold; prioritize regression coverage for pipeline state and YAML schema changes
+- Full local CI-parity check: `python scripts/verify_all.py`
 
 ## Dependencies
 
 - Python 3.11+ (venv at `.venv/` uses Python 3.14)
-- Runtime: PyYAML only (`pip install pyyaml`). ATS submitters use stdlib `urllib` for HTTP.
-- Dev: pytest, ruff (`pip install -e ".[dev]"`)
+- Runtime: PyYAML, Typer (CLI), google-genai (AI answer generation), mcp (MCP server)
+- Dev: pytest, pytest-mock, ruff (`pip install -e ".[dev]"`)
+- ATS submitters use stdlib `urllib` for HTTP (no requests dependency)
 - Editable install metadata in `application_pipeline.egg-info/` (from `pip install -e .`)
