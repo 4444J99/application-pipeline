@@ -82,6 +82,12 @@ overrides:
       - python scripts/validate_hypotheses.py
     note: Signal consistency validator currently exercised as command smoke.
 
+  unblock_submissions:
+    verification: smoke
+    evidence:
+      - python scripts/unblock_submissions.py
+    note: Blocker audit and autofix orchestrator; verified via dry-run reporting path.
+
   velocity_report:
     verification: integration_test
     evidence:
