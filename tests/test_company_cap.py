@@ -14,7 +14,7 @@ def _make_entry(org: str, status: str = "qualified") -> dict:
 
 class TestCompanyCap:
     def test_cap_value(self):
-        assert COMPANY_CAP == 3
+        assert COMPANY_CAP == 1
 
 
 class TestCompanyEntryCounts:
@@ -64,36 +64,24 @@ class TestCompanyEntryCounts:
 
 
 class TestCheckCompanyCap:
-    def test_under_cap(self):
+    def test_at_cap(self):
+        """With COMPANY_CAP=1, one active entry is at cap."""
         entries = [_make_entry("Anthropic", "qualified")]
         allowed, count = check_company_cap("Anthropic", entries)
-        assert allowed is True
-        assert count == 1
-
-    def test_at_cap(self):
-        entries = [
-            _make_entry("Anthropic", "qualified"),
-            _make_entry("Anthropic", "drafting"),
-            _make_entry("Anthropic", "staged"),
-        ]
-        allowed, count = check_company_cap("Anthropic", entries)
         assert allowed is False
-        assert count == 3
+        assert count == 1
 
     def test_over_cap(self):
         entries = [
             _make_entry("Anthropic", "qualified"),
             _make_entry("Anthropic", "drafting"),
-            _make_entry("Anthropic", "staged"),
-            _make_entry("Anthropic", "submitted"),
         ]
         allowed, count = check_company_cap("Anthropic", entries)
         assert allowed is False
-        assert count == 4
+        assert count == 2
 
     def test_closed_not_counted(self):
         entries = [
-            _make_entry("Anthropic", "qualified"),
             _make_entry("Anthropic", "closed"),
             _make_entry("Anthropic", "rejected"),
             _make_entry("Anthropic", "expired"),
@@ -101,12 +89,12 @@ class TestCheckCompanyCap:
         ]
         allowed, count = check_company_cap("Anthropic", entries)
         assert allowed is True
-        assert count == 1
+        assert count == 0
 
     def test_custom_cap(self):
         entries = [_make_entry("Anthropic", "qualified")]
-        allowed, count = check_company_cap("Anthropic", entries, cap=1)
-        assert allowed is False
+        allowed, count = check_company_cap("Anthropic", entries, cap=2)
+        assert allowed is True
         assert count == 1
 
     def test_no_entries_for_org(self):

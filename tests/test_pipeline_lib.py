@@ -679,9 +679,9 @@ def test_dimension_order_matches_valid_dimensions():
     assert set(DIMENSION_ORDER) == VALID_DIMENSIONS
 
 
-def test_dimension_order_has_eight_dimensions():
-    """Scoring model should have exactly 8 dimensions."""
-    assert len(DIMENSION_ORDER) == 8
+def test_dimension_order_has_nine_dimensions():
+    """Scoring model should have exactly 9 dimensions (including network_proximity)."""
+    assert len(DIMENSION_ORDER) == 9
 
 
 # --- VALID_STATUSES includes withdrawn ---

@@ -60,21 +60,23 @@ _DEFAULT_WEIGHTS = {
     "mission_alignment": 0.25,
     "evidence_match": 0.20,
     "track_record_fit": 0.15,
-    "financial_alignment": 0.10,
-    "effort_to_value": 0.10,
+    "network_proximity": 0.12,
     "strategic_value": 0.10,
-    "deadline_feasibility": 0.05,
-    "portal_friction": 0.05,
-}
-_DEFAULT_WEIGHTS_JOB = {
-    "mission_alignment": 0.35,
-    "evidence_match": 0.25,
-    "track_record_fit": 0.15,
-    "strategic_value": 0.10,
-    "financial_alignment": 0.05,
+    "financial_alignment": 0.08,
     "effort_to_value": 0.05,
     "deadline_feasibility": 0.03,
     "portal_friction": 0.02,
+}
+_DEFAULT_WEIGHTS_JOB = {
+    "mission_alignment": 0.25,
+    "evidence_match": 0.20,
+    "network_proximity": 0.20,
+    "track_record_fit": 0.15,
+    "strategic_value": 0.10,
+    "financial_alignment": 0.05,
+    "effort_to_value": 0.03,
+    "deadline_feasibility": 0.01,
+    "portal_friction": 0.01,
 }
 
 WEIGHTS = _RUBRIC.get("weights", _DEFAULT_WEIGHTS)
@@ -1028,8 +1030,76 @@ def compute_human_dimensions(
 estimate_human_dimensions = compute_human_dimensions
 
 
+def score_network_proximity(entry: dict, all_entries: list[dict] | None = None) -> int:
+    """Score network proximity (1-10) based on relationship signals.
+
+    Signals checked (highest wins):
+    - network.relationship_strength: cold=1, acquaintance=4, warm=7, strong=9, internal=10
+    - conversion.channel == "referral": min 8
+    - follow_up entries with responses: min 7
+    - outreach actions completed: min 4
+    - Org density (other entries at same org): min 3
+    """
+    score = 1  # default: cold/unknown
+
+    # Signal 1: explicit relationship_strength field
+    network = entry.get("network") or {}
+    if isinstance(network, dict):
+        strength = network.get("relationship_strength", "cold")
+        strength_map = {
+            "cold": 1,
+            "acquaintance": 4,
+            "warm": 7,
+            "strong": 9,
+            "internal": 10,
+        }
+        score = max(score, strength_map.get(strength, 1))
+
+    # Signal 2: referral channel
+    conversion = entry.get("conversion") or {}
+    if isinstance(conversion, dict) and conversion.get("channel") == "referral":
+        score = max(score, 8)
+
+    # Signal 3: follow-up contacts with responses
+    follow_ups = entry.get("follow_up") or []
+    if isinstance(follow_ups, list):
+        has_response = any(
+            isinstance(fu, dict) and fu.get("response") in ("replied", "referred")
+            for fu in follow_ups
+        )
+        if has_response:
+            score = max(score, 7)
+
+    # Signal 4: outreach actions completed
+    outreach = entry.get("outreach") or []
+    if isinstance(outreach, list):
+        done_count = sum(
+            1 for o in outreach if isinstance(o, dict) and o.get("status") == "done"
+        )
+        if done_count >= 2:
+            score = max(score, 5)
+        elif done_count >= 1:
+            score = max(score, 4)
+
+    # Signal 5: org density — other entries at same org suggest familiarity
+    if all_entries:
+        org = (entry.get("target") or {}).get("organization", "")
+        if org:
+            org_count = sum(
+                1 for e in all_entries
+                if (e.get("target") or {}).get("organization") == org
+                and e.get("id") != entry.get("id")
+            )
+            if org_count >= 3:
+                score = max(score, 4)
+            elif org_count >= 1:
+                score = max(score, 3)
+
+    return max(1, min(10, score))
+
+
 def compute_dimensions(entry: dict, all_entries: list[dict] | None = None) -> dict[str, int]:
-    """Compute all 8 dimension scores for an entry.
+    """Compute all 9 dimension scores for an entry.
 
     All dimensions are always recomputed from data. No human overrides.
     Signal-based dimensions replace the old gut-feel estimation.
@@ -1042,6 +1112,7 @@ def compute_dimensions(entry: dict, all_entries: list[dict] | None = None) -> di
     dims["portal_friction"] = score_portal_friction(entry)
     dims["effort_to_value"] = score_effort_to_value(entry)
     dims["strategic_value"] = score_strategic_value(entry)
+    dims["network_proximity"] = score_network_proximity(entry, all_entries)
 
     # Signal-based (replaces estimate + override)
     human = compute_human_dimensions(entry, all_entries)
@@ -1450,6 +1521,13 @@ def explain_entry(entry: dict, all_entries: list[dict] | None = None) -> str:
         if detail:
             lines.append(detail)
 
+    lines.append("")
+
+    # Network proximity (auto-computed from relationship signals)
+    net_val = score_network_proximity(entry, all_entries)
+    net_weight = weights.get("network_proximity", 0)
+    lines.append("NETWORK PROXIMITY:")
+    lines.append(f"  {'network_proximity':<25s} {net_val:>2d}  x{net_weight:.0%}")
     lines.append("")
 
     # Auto dimensions section

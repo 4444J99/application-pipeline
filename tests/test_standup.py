@@ -214,7 +214,7 @@ class TestSectionExecutionGap:
         section_execution_gap(entries)
         captured = capsys.readouterr()
         assert "EXECUTION GAP SNAPSHOT" in captured.out
-        assert "Stale staged >72h: 1" in captured.out
+        assert "Stale staged >168h: 1" in captured.out
         assert "Staged missing portal_fields: 1" in captured.out
         assert "Stale Staged" in captured.out
 

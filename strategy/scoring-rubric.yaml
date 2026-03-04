@@ -1,36 +1,39 @@
-version: "1.0"
+version: "2.0"
 description: >
-  8-dimension weighted scoring rubric for pipeline entries.
+  9-dimension weighted scoring rubric for pipeline entries.
   Source of truth for score.py weights and auto-qualify thresholds.
+  Precision-over-volume: network_proximity added, throughput dimensions reduced.
 
-# Default weights for creative/grant/residency tracks (must sum to 1.0)
+# Precision weights for creative/grant/residency tracks (must sum to 1.0)
 weights:
   mission_alignment: 0.25
   evidence_match: 0.20
   track_record_fit: 0.15
-  financial_alignment: 0.10
-  effort_to_value: 0.10
+  network_proximity: 0.12
   strategic_value: 0.10
-  deadline_feasibility: 0.05
-  portal_friction: 0.05
-
-# Job-specific weights (human-judgment dimensions get 75%)
-weights_job:
-  mission_alignment: 0.35
-  evidence_match: 0.25
-  track_record_fit: 0.15
-  strategic_value: 0.10
-  financial_alignment: 0.05
+  financial_alignment: 0.08
   effort_to_value: 0.05
   deadline_feasibility: 0.03
   portal_friction: 0.02
 
+# Precision weights for job track — network_proximity highest (referral = 8x)
+weights_job:
+  mission_alignment: 0.25
+  evidence_match: 0.20
+  network_proximity: 0.20
+  track_record_fit: 0.15
+  strategic_value: 0.10
+  financial_alignment: 0.05
+  effort_to_value: 0.03
+  deadline_feasibility: 0.01
+  portal_friction: 0.01
+
 thresholds:
-  auto_qualify_min: 7.0
-  auto_advance_to_drafting: 8.0
-  tier1_cutoff: 8.5
-  tier2_cutoff: 7.0
-  tier3_cutoff: 5.0
+  auto_qualify_min: 9.0
+  auto_advance_to_drafting: 9.5
+  tier1_cutoff: 9.5
+  tier2_cutoff: 8.5
+  tier3_cutoff: 7.0
   score_range_min: 1
   score_range_max: 10
 

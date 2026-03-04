@@ -89,15 +89,17 @@ Strategic analysis of all active job entries, ranked by fit-to-effort ROI.
 | Full funnel (cold) | 1% | |
 | Full funnel (with follow-up) | 5% | |
 
-### Daily Volume
-- **Target:** 3-5 tailored applications per day
-- **Evidence:** 3-5 tailored/day → 20-30% interview conversion; 10+ generic/day → 2-4%
-- **Sweet spot:** 21-80 total applications
+### Weekly Focus (Precision Mode — effective 2026-03-04)
+- **Target:** 1 deeply researched application per week, max 2
+- **Min 2hr/day** relationship building (LinkedIn, informational interviews, referral cultivation)
+- **Submit only when** score >= 9.0 AND network_proximity >= 5
+- **Evidence:** 60 cold applications in 4 days → 0 interviews, 5 resume-screen rejections. Referral = 8x hire rate.
 
 ### Daily Workflow
-1. **Morning (1hr):** Run `standup.py`, check `followup.py`, send LinkedIn DMs
-2. **Core block (3-4hr):** Submit 3-5 applications
-3. **End of day (30min):** Run `pipeline_status.py`, update conversion log, source 2-3 new roles
+1. **Morning (1hr):** Run `standup.py`, check `followup.py`, send relationship-building messages
+2. **Research block (2hr):** Deep-research 1-2 perfect-fit targets, identify warm paths
+3. **Application block (1hr):** Draft/polish materials for the week's top target only
+4. **Relationship block (1hr):** Informational interviews, mutual connections, community engagement
 
 ## Channel Strategy
 

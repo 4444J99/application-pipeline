@@ -165,11 +165,11 @@
     "source": "ResumeGenius 2026; Zety follow-up guide; Indeed career advice"
   },
   "volume_benchmarks": {
-    "daily_target_tailored": 3,
-    "daily_max_tailored": 5,
-    "weekly_max": 20,
-    "sweet_spot_total_min": 21,
-    "sweet_spot_total_max": 80,
+    "daily_target_tailored": 0,
+    "daily_max_tailored": 1,
+    "weekly_max": 2,
+    "sweet_spot_total_min": 5,
+    "sweet_spot_total_max": 15,
     "sweet_spot_offer_rate": 0.3089,
     "high_volume_offer_rate": 0.2036,
     "generic_volume_conversion": 0.02,
@@ -178,7 +178,8 @@
     "generic_interview_rate": 0.0268,
     "tailored_vs_generic_response_lift": 0.78,
     "cover_letter_callback_lift": 0.53,
-    "note": "Huntr Q2 2025 (461K applications): tailored 5.75% vs generic 2.68% interview rate. Wellfound: 78% higher response with tailored. ResumeGenius: 53% higher callback with tailored cover letter. Sweet spot 21-80 apps.",
+    "precision_note": "1-2 deeply researched applications per week max. Daily effort goes to relationship building, not submission volume.",
+    "note": "Huntr Q2 2025 (461K applications): tailored 5.75% vs generic 2.68% interview rate. Wellfound: 78% higher response with tailored. ResumeGenius: 53% higher callback with tailored cover letter. Reference rates preserved from volume era for analytics continuity.",
     "source": "Huntr Q2 2025 Job Search Trends Report; Wellfound study; ResumeGenius; ResuTrack 2026"
   },
   "salary_benchmarks": {
@@ -384,13 +385,13 @@
     }
   },
   "stale_thresholds_days": {
-    "entry_stale": 7,
-    "entry_stagnant": 14,
-    "response_overdue_job": 21,
+    "entry_stale": 14,
+    "entry_stagnant": 30,
+    "response_overdue_job": 30,
     "response_overdue_grant": 90,
     "response_ghosted_job": 42,
     "intelligence_staleness": 90,
-    "note": "entry_stale = no review in 7d (standup STAGNANT alert). response_overdue triggers check_outcomes.py alerts. response_ghosted_job = 3x median_response_days (14d) per Careery.pro data."
+    "note": "Precision mode: relaxed staleness thresholds. entry_stale = no review in 14d (was 7d). entry_stagnant = 30d (was 14d). response_overdue_job = 30d (was 21d). Fewer entries means each gets more time."
   },
   "job_freshness": {
     "hot_hours": 24,
@@ -731,5 +732,15 @@
       "note": "First-time founders underestimate legal, financial, and HR complexity"
     },
     "source": "what-am-i-forgetting-research-2026-03.md (29 sources)"
+  },
+  "precision_strategy": {
+    "mode": "precision",
+    "max_active_entries": 10,
+    "max_weekly_submissions": 2,
+    "min_score_to_apply": 9.0,
+    "daily_hours_research": 2,
+    "daily_hours_relationship": 2,
+    "daily_hours_application": 1,
+    "note": "Precision-over-volume pivot (2026-03-04). 60 cold apps in 4 days → 0 interviews. Optimize for finding perfect-fit roles and building relationships, not throughput."
   }
 }

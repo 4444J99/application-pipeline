@@ -55,8 +55,8 @@ def _date_offset(days: int) -> str:
 
 
 def test_stale_days_constant():
-    """STALE_DAYS is loaded from market intelligence JSON (response_overdue_job: 21)."""
-    assert STALE_DAYS == 21
+    """STALE_DAYS is loaded from market intelligence JSON (response_overdue_job: 30)."""
+    assert STALE_DAYS == 30
 
 
 def test_typical_windows_has_major_portals():

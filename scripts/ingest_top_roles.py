@@ -48,8 +48,8 @@ from source_jobs import (
     load_sources,
 )
 
-DEFAULT_MIN_SCORE = 8.5
-DEFAULT_TOP_N = 10
+DEFAULT_MIN_SCORE = 9.0
+DEFAULT_TOP_N = 5
 
 # Identity match: title patterns that indicate strong DevEx/DevRel/agentic fit.
 # A role passing this filter is a "glove fit" — not just a good score,
@@ -138,6 +138,7 @@ def pre_score(job: dict) -> float:
         "mission_alignment": human_dims["mission_alignment"],
         "evidence_match": human_dims["evidence_match"],
         "track_record_fit": human_dims["track_record_fit"],
+        "network_proximity": 1,  # auto-sourced jobs are always cold
         "strategic_value": strategic_value,
         "financial_alignment": financial_alignment,
         "effort_to_value": effort_to_value,

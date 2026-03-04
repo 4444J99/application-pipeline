@@ -17,7 +17,7 @@ rules:
     condition: "status == research AND score >= threshold"
     action: advance
     to_status: qualified
-    threshold: 7.0
+    threshold: 9.0
     severity: routine
 
   # Rule 3: Auto-advance qualified entries with high score to drafting
@@ -26,7 +26,7 @@ rules:
     condition: "status == qualified AND score >= threshold"
     action: advance
     to_status: drafting
-    threshold: 8.0
+    threshold: 9.5
     severity: routine
 
   # Rule 4: Auto-advance drafting entries with time to staged

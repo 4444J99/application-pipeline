@@ -272,5 +272,5 @@ def test_stale_rolling_days_positive():
 
 
 def test_default_focus_limit():
-    """DEFAULT_FOCUS_LIMIT is 3."""
-    assert DEFAULT_FOCUS_LIMIT == 3
+    """DEFAULT_FOCUS_LIMIT is 1 (precision mode: max 1 per org)."""
+    assert DEFAULT_FOCUS_LIMIT == 1

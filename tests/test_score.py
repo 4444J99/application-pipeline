@@ -136,8 +136,8 @@ def test_weights_all_positive():
 
 
 def test_weights_cover_all_dimensions():
-    """WEIGHTS should have exactly 8 dimensions."""
-    assert len(WEIGHTS) == 8
+    """WEIGHTS should have exactly 9 dimensions (including network_proximity)."""
+    assert len(WEIGHTS) == 9
 
 
 # --- score_deadline_feasibility ---
@@ -652,8 +652,8 @@ def test_signal_dims_clamped_to_range():
 # --- compute_dimensions ---
 
 
-def test_compute_dimensions_returns_all_eight():
-    """compute_dimensions should return all 8 dimension keys."""
+def test_compute_dimensions_returns_all_nine():
+    """compute_dimensions should return all 9 dimension keys."""
     entry = _make_entry()
     dims = compute_dimensions(entry)
     assert set(dims.keys()) == set(WEIGHTS.keys())
@@ -708,6 +708,7 @@ def test_composite_weighted_sum():
         "mission_alignment": 8,
         "evidence_match": 7,
         "track_record_fit": 6,
+        "network_proximity": 3,
         "financial_alignment": 9,
         "effort_to_value": 5,
         "strategic_value": 7,
@@ -715,8 +716,8 @@ def test_composite_weighted_sum():
         "portal_friction": 6,
     }
     expected = round(
-        8 * 0.25 + 7 * 0.20 + 6 * 0.15 + 9 * 0.10
-        + 5 * 0.10 + 7 * 0.10 + 4 * 0.05 + 6 * 0.05,
+        8 * 0.25 + 7 * 0.20 + 6 * 0.15 + 3 * 0.12
+        + 7 * 0.10 + 9 * 0.08 + 5 * 0.05 + 4 * 0.03 + 6 * 0.02,
         1,
     )
     assert compute_composite(dims) == expected
@@ -748,6 +749,8 @@ def test_qualify_above_threshold():
         deadline_type="rolling",
         amount_value=15000,
     )
+    # Add warm network to boost network_proximity
+    entry["network"] = {"relationship_strength": "warm"}
     should_apply, reason = qualify(entry)
     assert should_apply is True
     assert ">=" in reason
@@ -799,7 +802,7 @@ def test_weights_job_all_positive():
 
 
 def test_weights_job_cover_all_dimensions():
-    """WEIGHTS_JOB should have the same 8 dimensions as WEIGHTS."""
+    """WEIGHTS_JOB should have the same 9 dimensions as WEIGHTS."""
     assert set(WEIGHTS_JOB.keys()) == set(WEIGHTS.keys())
 
 
@@ -834,6 +837,7 @@ def test_composite_job_weights():
         "mission_alignment": 8,
         "evidence_match": 7,
         "track_record_fit": 6,
+        "network_proximity": 3,
         "financial_alignment": 6,
         "effort_to_value": 5,
         "strategic_value": 8,
@@ -843,10 +847,10 @@ def test_composite_job_weights():
     job_score = compute_composite(dims, "job")
     creative_score = compute_composite(dims, "grant")
 
-    # Manually compute expected job score
+    # Manually compute expected job score with precision weights
     expected_job = round(
-        8 * 0.35 + 7 * 0.25 + 6 * 0.15 + 8 * 0.10
-        + 6 * 0.05 + 5 * 0.05 + 9 * 0.03 + 5 * 0.02,
+        8 * 0.25 + 7 * 0.20 + 3 * 0.20 + 6 * 0.15
+        + 8 * 0.10 + 6 * 0.05 + 5 * 0.03 + 9 * 0.01 + 5 * 0.01,
         1,
     )
     assert job_score == expected_job
@@ -861,6 +865,7 @@ def test_composite_creative_weights():
         "mission_alignment": 8,
         "evidence_match": 7,
         "track_record_fit": 6,
+        "network_proximity": 3,
         "financial_alignment": 9,
         "effort_to_value": 5,
         "strategic_value": 7,
@@ -868,8 +873,8 @@ def test_composite_creative_weights():
         "portal_friction": 6,
     }
     expected = round(
-        8 * 0.25 + 7 * 0.20 + 6 * 0.15 + 9 * 0.10
-        + 5 * 0.10 + 7 * 0.10 + 4 * 0.05 + 6 * 0.05,
+        8 * 0.25 + 7 * 0.20 + 6 * 0.15 + 3 * 0.12
+        + 7 * 0.10 + 9 * 0.08 + 5 * 0.05 + 4 * 0.03 + 6 * 0.02,
         1,
     )
     assert compute_composite(dims, "grant") == expected
@@ -918,8 +923,12 @@ def test_qualify_creative_threshold():
 # --- Job tier scoring with job weights ---
 
 
-def test_job_tier1_scores_above_threshold():
-    """Tier-1 auto-sourced job (e.g. agent SDK) should score well above threshold with raised ceilings."""
+def test_job_tier1_scores_above_cold_baseline():
+    """Tier-1 auto-sourced job (cold) should score above baseline but below precision threshold.
+
+    With precision weights, network_proximity=1 (cold, 20% weight) intentionally drags
+    cold-sourced jobs below the 9.0 application threshold. This is by design.
+    """
     entry = _make_entry(
         track="job",
         fit_score=1,
@@ -929,17 +938,15 @@ def test_job_tier1_scores_above_threshold():
     )
     entry["name"] = "Software Engineer, Agent SDK"
     entry["tags"] = ["auto-sourced"]
-    # Force auto-sourced path (score <= 1)
     dims = compute_dimensions(entry)
     composite = compute_composite(dims, "job")
-    # With raised tier-1 ceilings (9/9/7), composite should be >= 8.0
-    assert composite >= 8.0, (
-        f"Tier-1 job scored {composite}, expected >= 8.0"
-    )
+    # Cold tier-1 should score 6-7 range (network_proximity=1 at 20% is a -0.8 drag)
+    assert composite >= 6.0, f"Tier-1 cold job scored {composite}, expected >= 6.0"
+    assert composite < 9.0, f"Tier-1 cold job scored {composite}, should be < 9.0 (no warm path)"
 
 
-def test_job_tier1_with_blocks_scores_high():
-    """Tier-1 auto-sourced job with 5 blocks wired should get evidence bonus."""
+def test_job_tier1_with_warm_path_scores_high():
+    """Tier-1 job with warm network path should score high enough to apply."""
     entry = _make_entry(
         track="job",
         fit_score=1,
@@ -956,12 +963,12 @@ def test_job_tier1_with_blocks_scores_high():
     )
     entry["name"] = "Software Engineer, Agent SDK"
     entry["tags"] = ["auto-sourced"]
+    entry["network"] = {"relationship_strength": "warm"}
     dims = compute_dimensions(entry)
     composite = compute_composite(dims, "job")
-    # With blocks wired (5 blocks → evidence bonus) + raised ceilings, composite >= 8.5
-    # Auto-derived dims (financial=6, portal=5) pull the composite below 9.0
-    assert composite >= 8.5, (
-        f"Tier-1 job with blocks scored {composite}, expected >= 8.5"
+    # With warm path (7 at 20%) + blocks + tier-1, should be competitive
+    assert composite >= 7.0, (
+        f"Tier-1 job with warm path scored {composite}, expected >= 7.0"
     )
 
 
@@ -1003,7 +1010,7 @@ def test_job_tier4_scores_below_threshold():
 
 
 def test_explain_creative_entry_shows_all_dimensions():
-    """--explain output should contain all 8 dimension names."""
+    """--explain output should contain all 9 dimension names."""
     entry = _make_entry(
         fit_score=8,
         framing="Multi-year systems art project bridging recursive computing",

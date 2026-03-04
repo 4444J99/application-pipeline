@@ -99,9 +99,9 @@ STATUS_ORDER = [
 ]
 
 EFFORT_MINUTES = {
-    "quick": 30,
-    "standard": 90,
-    "deep": 270,
+    "quick": 60,
+    "standard": 180,
+    "deep": 480,
     "complex": 720,
 }
 
@@ -113,8 +113,8 @@ JOB_STALE_HOURS = 72       # auto-expire threshold
 # Canonical scoring dimensions — single source of truth for score.py and validate.py.
 DIMENSION_ORDER = [
     "mission_alignment", "evidence_match", "track_record_fit",
-    "financial_alignment", "effort_to_value", "strategic_value",
-    "deadline_feasibility", "portal_friction",
+    "network_proximity", "strategic_value", "financial_alignment",
+    "effort_to_value", "deadline_feasibility", "portal_friction",
 ]
 VALID_DIMENSIONS = set(DIMENSION_ORDER)
 
@@ -1113,7 +1113,7 @@ def compute_freshness_score(entry: dict) -> float:
     return max(0.0, min(1.0, score))
 
 
-COMPANY_CAP = 3  # Max active+submitted entries per organization
+COMPANY_CAP = 1  # Max active+submitted entries per organization (precision mode)
 
 
 def company_entry_counts(entries: list[dict], actionable_only: bool = True) -> dict[str, int]:

@@ -9,6 +9,19 @@ Career application pipeline repo — personal infrastructure for managing grant,
 **Owner:** @4444J99 (personal/liminal — not an organ repo)
 **Parent:** `~/Workspace/4444J99/application-pipeline/`
 
+## Pipeline Philosophy: Precision Over Volume
+
+**Effective 2026-03-04.** The pipeline optimizes for finding perfect-fit roles and building relationships, not throughput.
+
+- **Max 1-2 applications per week**, each deeply researched
+- **Minimum score 9.0** to apply; network_proximity >= 5 preferred
+- **9 scoring dimensions** including `network_proximity` (referral = 8x hire rate)
+- **Max 10 active entries** at any time; max 1 per organization
+- **Daily split:** 2hr research, 2hr relationships, 1hr application work
+- **Stale thresholds relaxed:** 14 days (was 7), stagnant 30 days (was 14)
+- **No volume pressure** in standup messaging; no "ship something this week"
+- **Rationale:** 60 cold applications in 4 days → 0 interviews. Precision targeting + warm paths is the only viable strategy.
+
 ## Architecture
 
 - `pipeline/` — One YAML file per application, organized into `active/`, `submitted/`, `closed/`, and `research_pool/` subdirectories (schema in `_schema.yaml`)

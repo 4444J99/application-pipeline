@@ -73,9 +73,9 @@ def _get_stale_threshold(key: str, default: int) -> int:
 STAGNATION_DAYS = _get_stale_threshold("entry_stale", 7)
 URGENCY_DAYS = 14
 AT_RISK_DAYS = 3
-REPLENISH_THRESHOLD = 5  # warn when fewer than this many actionable entries
-EXECUTION_STALE_STAGED_DAYS = 3  # 72h
-TARGET_STAGED_SUBMIT_CONVERSION = 0.70
+REPLENISH_THRESHOLD = 3  # precision mode: fewer entries, deeper work
+EXECUTION_STALE_STAGED_DAYS = 7  # 7 days (precision mode: more time per entry)
+TARGET_STAGED_SUBMIT_CONVERSION = 0.50
 AGENT_ACTIONS_LOG = SIGNALS_DIR / "agent-actions.yaml"
 
 
@@ -528,13 +528,13 @@ PRACTICES_BY_CONTEXT = {
         "Do a final proofread pass on all materials",
     ],
     "no_submissions_ever": [
-        "Zero submissions means zero signal. Ship something this week.",
-        "Start with the highest-scored quick-effort entry to build momentum",
-        "A submitted imperfect application beats a perfect never-submitted one",
+        "Have you identified your top 3 perfect-fit roles?",
+        "Invest time in relationship building before submitting cold",
+        "One deeply researched application beats ten generic ones",
     ],
     "high_stagnation": [
-        "Touch at least 3 entries today — even if just re-reading notes",
-        "If an entry has been stagnant >14 days, decide: advance or withdraw",
+        "Review your top entries — is each still a genuine perfect fit?",
+        "If an entry has been stagnant >30 days, decide: invest deeper or withdraw",
     ],
     "networking_cadence": [
         "Target 2-3 outreach messages per week (quality over quantity)",
@@ -615,10 +615,10 @@ def section_replenish(entries: list[dict]):
     print(f"   Live actionable entries: {len(live)}")
 
     if len(live) < REPLENISH_THRESHOLD:
-        print(f"   !! Below threshold ({REPLENISH_THRESHOLD}). Research new targets.")
-        print("   Check targets/ directory for pre-researched opportunities.")
+        print(f"   !! Below threshold ({REPLENISH_THRESHOLD}). Research new perfect-fit targets.")
+        print("   Focus on roles with warm paths (network_proximity >= 5).")
     else:
-        print(f"   OK — above minimum threshold ({REPLENISH_THRESHOLD})")
+        print(f"   OK — pipeline lean and focused ({len(live)} entries, threshold {REPLENISH_THRESHOLD})")
 
     # Track diversity check
     if by_track:
@@ -635,10 +635,10 @@ def section_replenish(entries: list[dict]):
     # Show research pool size
     pool_entries = load_entries(dirs=[PIPELINE_DIR_RESEARCH_POOL])
     if pool_entries:
-        pool_high = sum(1 for e in pool_entries if get_score(e) >= 7.0)
-        print(f"   Research pool: {len(pool_entries)} entries ({pool_high} scoring >= 7.0)")
+        pool_high = sum(1 for e in pool_entries if get_score(e) >= 9.0)
+        print(f"   Research pool: {len(pool_entries)} entries ({pool_high} scoring >= 9.0)")
         if len(live) < REPLENISH_THRESHOLD and pool_high > 0:
-            print("   Tip: run `python scripts/score.py --auto-qualify --dry-run` to promote top entries")
+            print("   Tip: run `python scripts/score.py --auto-qualify --dry-run` to preview top entries (threshold 9.0)")
 
     print()
 
