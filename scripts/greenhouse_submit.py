@@ -22,14 +22,20 @@ import sys
 from pathlib import Path
 from urllib.parse import urlparse
 
-import yaml
 from ats_base import (
     GREENHOUSE_STANDARD_FIELDS as STANDARD_FIELD_NAMES,
 )
 from ats_base import (
     auto_fill_answer,
     build_common_argparse,
+    build_normalized_answer_index,
+    clean_answer_mapping,
+    find_dynamic_answer,
+    load_answers_yaml,
     load_config,
+)
+from ats_base import (
+    resolve_select_value as resolve_select_value_shared,
 )
 from pipeline_lib import (
     PIPELINE_DIR_ACTIVE,
@@ -145,22 +151,8 @@ def field_type_label(field: dict) -> str:
 
 
 def resolve_select_value(answer_str: str, values_list: list[dict]) -> int | str | None:
-    """Resolve a string answer like 'Yes' to the integer value from the values list.
-
-    Returns the integer value if matched, the original string if no values list,
-    or None if no match found.
-    """
-    if not values_list:
-        return answer_str
-    answer_lower = str(answer_str).strip().lower()
-    for v in values_list:
-        if str(v.get("label", "")).strip().lower() == answer_lower:
-            return v.get("value", answer_str)
-    # Try matching against the value itself (in case user provided the int)
-    for v in values_list:
-        if str(v.get("value", "")).strip() == str(answer_str).strip():
-            return v.get("value", answer_str)
-    return None
+    """Proxy to shared option resolver (kept for backwards-compatible imports)."""
+    return resolve_select_value_shared(answer_str, values_list)
 
 
 def auto_fill_answers(questions: list[dict], config: dict, entry: dict) -> dict:
@@ -192,20 +184,36 @@ def load_answers(entry_id: str) -> dict | None:
     Returns dict of {field_name: answer_value}, or None if file doesn't exist.
     """
     answer_path = ANSWERS_DIR / f"{entry_id}.yaml"
-    if not answer_path.exists():
+    data = load_answers_yaml(answer_path)
+    if data is None:
         return None
-    data = yaml.safe_load(answer_path.read_text())
-    if not isinstance(data, dict):
-        return None
-    # Filter out None/empty and FILL IN placeholders
-    cleaned = {}
-    for k, v in data.items():
-        if v is None:
-            continue
-        sv = str(v).strip()
-        if sv and sv != "FILL IN":
-            cleaned[k] = v
-    return cleaned
+    return clean_answer_mapping(data)
+
+
+def map_file_answers_to_fields(questions: list[dict], file_answers: dict | None) -> dict:
+    """Project dynamic answer-file keys onto current Greenhouse field names."""
+    if not file_answers:
+        return {}
+
+    projected: dict[str, object] = {}
+    normalized_index = build_normalized_answer_index(file_answers)
+
+    for q in get_custom_questions(questions):
+        label = q.get("label", "")
+        for field in q.get("fields", []):
+            fname = field.get("name", "")
+            if not fname or fname in STANDARD_FIELD_NAMES:
+                continue
+            answer = find_dynamic_answer(
+                file_answers,
+                field_key=fname,
+                label=label,
+                aliases=[f"{label} ({fname})"],
+                normalized_index=normalized_index,
+            )
+            if answer is not None:
+                projected[fname] = answer
+    return projected
 
 
 def merge_answers(auto_filled: dict, file_answers: dict | None) -> dict:
@@ -412,7 +420,8 @@ def check_answers_for_entry(entry: dict, config: dict) -> bool:
 
     auto_filled = auto_fill_answers(questions, config, entry)
     file_answers = load_answers(entry_id)
-    merged = merge_answers(auto_filled, file_answers)
+    mapped_file_answers = map_file_answers_to_fields(questions, file_answers)
+    merged = merge_answers(auto_filled, mapped_file_answers)
     errors = validate_answers(questions, merged)
 
     if errors:
@@ -422,7 +431,7 @@ def check_answers_for_entry(entry: dict, config: dict) -> bool:
         return False
     else:
         source_note = ""
-        if file_answers is None:
+        if not mapped_file_answers:
             source_note = " (auto-fill only, no answer file)"
         print(f"  {entry_id}: All required questions answered{source_note}")
         return True
@@ -699,11 +708,12 @@ def process_entry(entry: dict, config: dict, do_submit: bool) -> bool:
     if questions:
         auto_filled = auto_fill_answers(questions, config, entry)
         file_answers = load_answers(entry_id)
-        merged = merge_answers(auto_filled, file_answers)
+        mapped_file_answers = map_file_answers_to_fields(questions, file_answers)
+        merged = merge_answers(auto_filled, mapped_file_answers)
 
         # Track sources for preview
         for fname in merged:
-            if file_answers and fname in file_answers:
+            if fname in mapped_file_answers:
                 answer_sources[fname] = "answer-file"
             elif fname in auto_filled:
                 answer_sources[fname] = "auto"

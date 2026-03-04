@@ -9,7 +9,13 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from validate import VALID_DEFERRAL_REASONS, VALID_TRANSITIONS, _reachable_statuses, validate_entry
+from validate import (
+    VALID_DEFERRAL_REASONS,
+    VALID_TRANSITIONS,
+    _reachable_statuses,
+    validate_entry,
+    validate_scoring_rubric,
+)
 
 
 def _write_yaml(tmp_dir: Path, filename: str, data: dict) -> Path:
@@ -269,6 +275,93 @@ def test_invalid_recommendation_status():
         filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
         errors = validate_entry(filepath)
         assert any("recommendations[0].status" in e for e in errors)
+
+
+def test_validate_scoring_rubric_valid():
+    """A valid rubric file should pass rubric validation."""
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / "rubric.yaml"
+        path.write_text(
+            yaml.dump(
+                {
+                    "weights": {
+                        "mission_alignment": 0.25,
+                        "evidence_match": 0.20,
+                        "track_record_fit": 0.15,
+                        "financial_alignment": 0.10,
+                        "effort_to_value": 0.10,
+                        "strategic_value": 0.10,
+                        "deadline_feasibility": 0.05,
+                        "portal_friction": 0.05,
+                    },
+                    "weights_job": {
+                        "mission_alignment": 0.35,
+                        "evidence_match": 0.25,
+                        "track_record_fit": 0.15,
+                        "strategic_value": 0.10,
+                        "financial_alignment": 0.05,
+                        "effort_to_value": 0.05,
+                        "deadline_feasibility": 0.03,
+                        "portal_friction": 0.02,
+                    },
+                    "thresholds": {
+                        "score_range_min": 1,
+                        "score_range_max": 10,
+                        "auto_qualify_min": 7.0,
+                        "tier1_cutoff": 8.5,
+                        "tier2_cutoff": 7.0,
+                        "tier3_cutoff": 5.0,
+                    },
+                },
+                sort_keys=False,
+            )
+        )
+        assert validate_scoring_rubric(path) == []
+
+
+def test_validate_scoring_rubric_invalid_weight_sum():
+    """Rubric validation should fail if weights do not sum to 1.0."""
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / "rubric.yaml"
+        path.write_text(
+            yaml.dump(
+                {
+                    "weights": {
+                        "mission_alignment": 1.0,
+                        "evidence_match": 0.0,
+                        "track_record_fit": 0.0,
+                        "financial_alignment": 0.0,
+                        "effort_to_value": 0.0,
+                        "strategic_value": 0.0,
+                        "deadline_feasibility": 0.0,
+                        "portal_friction": 0.0,
+                    },
+                    "weights_job": {
+                        "mission_alignment": 0.5,
+                        "evidence_match": 0.5,
+                        "track_record_fit": 0.0,
+                        "strategic_value": 0.0,
+                        "financial_alignment": 0.0,
+                        "effort_to_value": 0.0,
+                        "deadline_feasibility": 0.0,
+                        "portal_friction": 0.0,
+                    },
+                    "thresholds": {
+                        "score_range_min": 10,
+                        "score_range_max": 1,
+                        "auto_qualify_min": 11,
+                        "tier1_cutoff": 5,
+                        "tier2_cutoff": 6,
+                        "tier3_cutoff": 7,
+                    },
+                },
+                sort_keys=False,
+            )
+        )
+        errors = validate_scoring_rubric(path)
+        assert any("score_range_min must be <" in e for e in errors)
+        assert any("auto_qualify_min must be within score range" in e for e in errors)
+        assert any("tier cutoffs" in e for e in errors)
 
 
 # --- Portal fields validation ---

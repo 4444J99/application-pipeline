@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+cd "$REPO_ROOT"
+git config core.hooksPath .githooks
+
+echo "Configured git hooks path: .githooks"
+echo "Active hooks:"
+ls -1 .githooks

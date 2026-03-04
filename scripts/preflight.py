@@ -82,6 +82,9 @@ def check_entry(entry: dict) -> tuple[list[str], list[str]]:
     )
     status = entry.get("status", "")
     track = entry.get("track", "")
+    status_meta = entry.get("status_meta", {})
+    if not isinstance(status_meta, dict):
+        status_meta = {}
     if status == "staged" and not has_portal_fields:
         if track == "job":
             warnings.append("portal_fields not wired on staged job (optional for ATS flow)")
@@ -89,6 +92,10 @@ def check_entry(entry: dict) -> tuple[list[str], list[str]]:
             errors.append("missing portal_fields on staged entry (run enrich.py --portal --target <id>)")
     elif status in ("research", "qualified", "drafting") and has_fields and not has_portal_fields:
         warnings.append("portal_fields not wired yet (run enrich.py --portal before staging)")
+
+    # 3c. Governance advisory: staged entries should be explicitly reviewed.
+    if status == "staged" and not status_meta.get("reviewed_by"):
+        warnings.append("governance review missing (run review_entry.py --target <id> --reviewer <name>)")
 
     # 4. Materials check
     if isinstance(submission, dict):
@@ -154,6 +161,27 @@ def check_entry(entry: dict) -> tuple[list[str], list[str]]:
         for cat, label, note in bs["urgent"]:
             warnings.append(f"blind spot: [{cat}] {label}")
     except ImportError:
+        pass
+
+    # 9. Outcome-risk prediction (advisory; model auto-disables on low data).
+    try:
+        from outcome_risk import predict_submission_risk
+
+        risk = predict_submission_risk(entry)
+        if risk.get("available"):
+            risk_value = float(risk.get("risk", 0.0))
+            if risk_value >= 0.70:
+                warnings.append(
+                    f"outcome risk: HIGH ({risk_value:.0%}) "
+                    f"[{risk.get('samples', 0)} samples, {risk.get('confidence', 'low')} confidence]"
+                )
+            elif risk_value >= 0.50:
+                warnings.append(
+                    f"outcome risk: MODERATE ({risk_value:.0%}) "
+                    f"[{risk.get('samples', 0)} samples]"
+                )
+    except Exception:
+        # Risk model is advisory only; never block preflight if unavailable.
         pass
 
     return errors, warnings

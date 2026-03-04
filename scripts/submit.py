@@ -30,6 +30,7 @@ from pipeline_lib import (
     count_words,
     days_until,
     get_deadline,
+    get_operator_name,
     load_block,
     load_entry_by_id,
     load_legacy_script,
@@ -321,6 +322,18 @@ def record_submission(filepath: Path, entry: dict) -> None:
     except ValueError:
         pass  # Field may not exist in this entry
 
+    # Submission governance metadata (audit trail).
+    operator = get_operator_name()
+    data = yaml.safe_load(content) or {}
+    if isinstance(data, dict):
+        status_meta = data.get("status_meta")
+        if not isinstance(status_meta, dict):
+            status_meta = {}
+        status_meta["submitted_by"] = operator
+        status_meta["submitted_at"] = today_str
+        data["status_meta"] = status_meta
+        content = yaml.dump(data, default_flow_style=False, sort_keys=False, allow_unicode=True)
+
     filepath.write_text(content)
 
     # Move to submitted directory
@@ -329,7 +342,7 @@ def record_submission(filepath: Path, entry: dict) -> None:
     shutil.move(str(filepath), str(dest))
 
     # Append to conversion log
-    _append_conversion_log(entry, today_str)
+    _append_conversion_log(entry, today_str, submitted_by=operator)
 
     print(f"Recorded: {entry.get('name', '?')}")
     print("  Status: submitted")
@@ -338,7 +351,7 @@ def record_submission(filepath: Path, entry: dict) -> None:
     print("  Conversion log updated")
 
 
-def _append_conversion_log(entry: dict, submitted_date: str) -> None:
+def _append_conversion_log(entry: dict, submitted_date: str, submitted_by: str | None = None) -> None:
     """Append an entry to signals/conversion-log.yaml."""
     log_path = SIGNALS_DIR / "conversion-log.yaml"
 
@@ -380,6 +393,7 @@ def _append_conversion_log(entry: dict, submitted_date: str) -> None:
     log_entry = {
         "id": entry.get("id"),
         "submitted": submitted_date,
+        "submitted_by": submitted_by,
         "track": entry.get("track"),
         "identity_position": entry.get("fit", {}).get("identity_position"),
         "composition_method": composition_method,

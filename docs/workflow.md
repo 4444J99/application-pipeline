@@ -64,6 +64,21 @@ Cross-cutting networking (not tied to a single target) goes in `signals/outreach
 5. **Stage** — Finalize materials, create variants in `variants/`. Update status to `staged`
 6. **Submit** — Submit via portal, record date. Move file to `pipeline/submitted/`. Update status to `submitted`
 
+### Submission Governance
+
+Staged entries should be explicitly reviewed before automated submission dispatch.
+
+```bash
+# Mark a single entry reviewed
+python scripts/review_entry.py --target anthropic-software-engineer-agent-sdk-claude-code --reviewer 4jp
+
+# Bootstrap review metadata for all staged entries
+python scripts/review_entry.py --all-staged --reviewer 4jp
+```
+
+`submission_audit.py` and `submit_ready.py` now enforce `status_meta.reviewed_by`
+for staged entries in submission flows.
+
 ## Composing a Submission
 
 ```bash
@@ -107,6 +122,20 @@ python scripts/pipeline_status.py --upcoming 7
 
 # Validate all entries
 python scripts/validate.py
+
+# Validate rubric + mapping consistency
+python scripts/validate.py --check-rubric --check-id-maps
+
+# Generate mapping suggestions from filesystem
+python scripts/generate_id_mappings.py --write
+```
+
+### Git Hook Guardrail
+
+Install repo hooks to block direct pushes to `main` when `pipeline/` files change:
+
+```bash
+./scripts/install_git_hooks.sh
 ```
 
 ## After Receiving a Response

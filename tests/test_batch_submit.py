@@ -160,6 +160,19 @@ def test_process_entry_includes_id():
     assert result["id"] == "my-unique-id"
 
 
+def test_process_entry_execute_requires_review():
+    """Execute mode blocks staged entries without governance review approval."""
+    entry = _make_staged_entry()
+    entry["status_meta"] = {}
+    entry["_filepath"] = Path("/tmp/nonexistent.yaml")
+
+    with patch("batch_submit.check_entry", return_value=([], [])):
+        result = process_entry(entry, dry_run=False)
+
+    assert result["status"] == "blocked"
+    assert any("governance review" in e for e in result["errors"])
+
+
 # --- show_batch_report ---
 
 

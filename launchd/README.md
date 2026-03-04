@@ -17,6 +17,7 @@ python scripts/launchd_manager.py --status
 | Agent | Schedule | What It Does |
 |-------|----------|-------------|
 | `daily-deferred` | Daily 6:00 AM | Check deferred entries for re-activation |
+| `daily-health` | Daily 6:15 AM | Composite run: source jobs, score/enrich, campaign/standup, hygiene |
 | `daily-monitor` | Daily 6:30 AM | Alert on stale backups and stale signal logs |
 | `weekly-backup` | Sunday 2:00 AM | Create pipeline backup tar.gz |
 | `agent-biweekly` | Mon/Thu 7:00 AM | Autonomous agent: score, advance, flag |

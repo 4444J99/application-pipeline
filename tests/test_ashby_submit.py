@@ -14,6 +14,7 @@ from ashby_submit import (
     get_custom_fields,
     is_standard_field,
     load_answers,
+    map_file_answers_to_fields,
     merge_answers,
     parse_ashby_url,
     validate_answers,
@@ -163,6 +164,16 @@ def test_merge_answers_no_file():
     assert result == {"q1": "val"}
 
 
+def test_map_file_answers_to_fields_uses_title_fallback():
+    """Title-keyed answers are projected onto current dynamic Ashby paths."""
+    fields = [
+        {"path": "custom_auth_42", "title": "Work Authorization", "isRequired": True, "type": "String"},
+    ]
+    file_answers = {"label::Work Authorization": "Authorized"}
+    mapped = map_file_answers_to_fields(fields, file_answers)
+    assert mapped == {"custom_auth_42": "Authorized"}
+
+
 # ---------------------------------------------------------------------------
 # auto_fill_answers
 # ---------------------------------------------------------------------------
@@ -256,6 +267,25 @@ def test_build_field_submissions_select_resolution():
     config = {"first_name": "J", "last_name": "D", "email": "j@t.com"}
     answers = {"auth_q": "Yes"}
     result = build_field_submissions(fields, config, {}, answers)
+    auth_sub = next(s for s in result if s["path"] == "auth_q")
+    assert auth_sub["value"] == "authorized_yes"
+
+
+def test_build_field_submissions_select_yes_no_alias():
+    """Short yes/no answers resolve to matching long option labels."""
+    fields = [
+        {
+            "path": "auth_q",
+            "title": "Authorized?",
+            "type": "ValueSelect",
+            "selectableValues": [
+                {"label": "Yes - Authorized", "value": "authorized_yes"},
+                {"label": "No - Need Sponsorship", "value": "authorized_no"},
+            ],
+        },
+    ]
+    config = {"first_name": "J", "last_name": "D", "email": "j@t.com"}
+    result = build_field_submissions(fields, config, {}, {"auth_q": "yes"})
     auth_sub = next(s for s in result if s["path"] == "auth_q")
     assert auth_sub["value"] == "authorized_yes"
 

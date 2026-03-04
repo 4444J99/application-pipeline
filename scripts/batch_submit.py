@@ -121,6 +121,18 @@ def process_entry(entry: dict, dry_run: bool = True) -> dict:
             "warnings": warnings,
         }
 
+    # Governance gate: staged entries require explicit review approval before
+    # any automated submit/record path can execute.
+    if not dry_run and entry.get("status") == "staged":
+        status_meta = entry.get("status_meta", {})
+        if not isinstance(status_meta, dict) or not status_meta.get("reviewed_by"):
+            return {
+                "id": entry_id,
+                "status": "blocked",
+                "errors": ["missing governance review (run review_entry.py before batch submit)"],
+                "warnings": warnings,
+            }
+
     rscore = readiness_score(entry)
 
     if dry_run:

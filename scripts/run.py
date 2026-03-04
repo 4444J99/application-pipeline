@@ -80,6 +80,10 @@ COMMANDS = {
     "discover":    ("discover_jobs.py", [],                "Skill-based job discovery across free APIs"),
     "audit":       ("submission_audit.py", [],              "Batch submission readiness diagnostic"),
     "submitall":   ("submit_ready.py", [],                   "Submit all audit-ready entries (dry-run)"),
+    "dailyhealth": ("daily_pipeline_health.py", [],          "Composite daily health run: source, score, enrich, campaign, standup, hygiene"),
+    "idmaps":      ("generate_id_mappings.py", [],           "Generate ID mapping suggestions from filesystem"),
+    "verifyall":   ("verify_all.py", [],                     "Run full verification gates (matrix + lint + validate + tests)"),
+    "verifymatrix": ("verification_matrix.py", ["--strict"], "Check module verification coverage matrix"),
 }
 
 # --- Parameterized commands (word + target ID) ---
@@ -101,6 +105,7 @@ PARAM_COMMANDS = {
     "samples":    ("portfolio_bridge.py", ["--target"],  "Suggest work samples for an entry"),
     "jobprofile": ("generate_job_profile.py", ["--target"], "Generate minimal profile for auto-sourced job entry"),
     "discover":   ("discover_jobs.py", ["--position"],     "Discover jobs for a specific identity position"),
+    "review":     ("review_entry.py", ["--target"],        "Mark an entry reviewed for submission governance"),
 }
 
 
@@ -127,15 +132,21 @@ def show_help():
     print("  Agent:    agent → deferred → signals → hypotheses-v")
     print("  Health:   monitor → freshness → resumes → backup → portfolio")
     print()
-    print("Usage: python scripts/run.py <command> [target-id]")
+    print("Usage: python scripts/run.py <command> [args...]")
 
 
-def run_command(cmd: str, target: str | None = None):
+def run_command(
+    cmd: str,
+    target: str | None = None,
+    extra_args: list[str] | None = None,
+):
     """Execute a command."""
+    extra_args = extra_args or []
+
     # Check standalone commands first (unless a target is provided)
     if cmd in COMMANDS and target is None:
         script, args, _ = COMMANDS[cmd]
-        full_args = [sys.executable, str(SCRIPTS_DIR / script)] + args
+        full_args = [sys.executable, str(SCRIPTS_DIR / script)] + args + extra_args
     elif cmd in PARAM_COMMANDS and target is not None:
         script, arg_template, _ = PARAM_COMMANDS[cmd]
         # Build args: replace None placeholders with the target
@@ -148,7 +159,7 @@ def run_command(cmd: str, target: str | None = None):
         # If target wasn't inserted via None placeholder, append after the flag
         if target not in args:
             args.append(target)
-        full_args = [sys.executable, str(SCRIPTS_DIR / script)] + args
+        full_args = [sys.executable, str(SCRIPTS_DIR / script)] + args + extra_args
     elif cmd in PARAM_COMMANDS and target is None:
         _, _, desc = PARAM_COMMANDS[cmd]
         print(f"Error: '{cmd}' requires a target ID.", file=sys.stderr)
@@ -169,9 +180,23 @@ def main():
         sys.exit(0)
 
     cmd = sys.argv[1].lower()
-    target = sys.argv[2] if len(sys.argv) > 2 else None
+    rest = sys.argv[2:]
 
-    run_command(cmd, target)
+    target = None
+    extra_args = rest
+
+    # If a command supports parameterized mode and the first arg is positional,
+    # treat it as target ID and pass remaining args through.
+    if cmd in PARAM_COMMANDS and rest and not rest[0].startswith("-"):
+        target = rest[0]
+        extra_args = rest[1:]
+
+    # For standalone-only commands, all trailing args are passthrough flags/args.
+    if cmd in COMMANDS and cmd not in PARAM_COMMANDS:
+        target = None
+        extra_args = rest
+
+    run_command(cmd, target, extra_args)
 
 
 if __name__ == "__main__":

@@ -9,3 +9,13 @@ sessions:
   stagnant: 0
   planned_today: 2
   planned_minutes: 180
+- date: '2026-03-03'
+  total: 104
+  actionable: 58
+  submitted: 25
+  days_since_last_submission: 5
+  expired: 0
+  at_risk: 0
+  stagnant: 0
+  planned_today: 2
+  planned_minutes: 180

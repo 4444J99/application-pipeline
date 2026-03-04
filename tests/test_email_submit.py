@@ -12,7 +12,6 @@ from email_submit import (
     is_email_entry,
 )
 
-
 # --- extract_recipient ---
 
 

@@ -41,6 +41,7 @@ VALID_DEFERRAL_REASONS = {
     "external_dependency", "strategic_hold",
 }
 VALID_LOCATION_CLASSES = {"us-onsite", "us-remote", "remote-global", "international", "unknown"}
+SCORING_RUBRIC_PATH = REPO_ROOT / "strategy" / "scoring-rubric.yaml"
 
 def _reachable_statuses(from_status: str) -> set[str]:
     """Return all statuses reachable from a given status via valid transitions."""
@@ -334,6 +335,40 @@ def validate_entry(filepath: Path, warnings: list[str] | None = None) -> list[st
                 except ValueError:
                     errors.append(f"Invalid deferral.resume_date format: '{resume_date}' (expected YYYY-MM-DD)")
 
+    # Governance status metadata validation
+    status_meta = data.get("status_meta")
+    if status_meta is not None:
+        if not isinstance(status_meta, dict):
+            errors.append("status_meta must be a mapping")
+        else:
+            reviewed_by = status_meta.get("reviewed_by")
+            submitted_by = status_meta.get("submitted_by")
+            reviewed_at = status_meta.get("reviewed_at")
+            submitted_at = status_meta.get("submitted_at")
+
+            if reviewed_by is not None and not isinstance(reviewed_by, str):
+                errors.append("status_meta.reviewed_by must be a string")
+            if submitted_by is not None and not isinstance(submitted_by, str):
+                errors.append("status_meta.submitted_by must be a string")
+
+            from datetime import datetime
+            if reviewed_at is not None:
+                try:
+                    datetime.strptime(str(reviewed_at), "%Y-%m-%d")
+                except ValueError:
+                    errors.append(
+                        f"Invalid status_meta.reviewed_at format: '{reviewed_at}' "
+                        "(expected YYYY-MM-DD)"
+                    )
+            if submitted_at is not None:
+                try:
+                    datetime.strptime(str(submitted_at), "%Y-%m-%d")
+                except ValueError:
+                    errors.append(
+                        f"Invalid status_meta.submitted_at format: '{submitted_at}' "
+                        "(expected YYYY-MM-DD)"
+                    )
+
     # Withdrawal reason validation
     withdrawal = data.get("withdrawal_reason")
     if withdrawal is not None:
@@ -465,6 +500,74 @@ def validate_id_mappings() -> list[str]:
     return errors
 
 
+def validate_scoring_rubric(path: Path = SCORING_RUBRIC_PATH) -> list[str]:
+    """Validate scoring-rubric.yaml structure and constraints."""
+    errors: list[str] = []
+    if not path.exists():
+        return [f"Scoring rubric not found: {path}"]
+
+    try:
+        rubric = yaml.safe_load(path.read_text()) or {}
+    except yaml.YAMLError as exc:
+        return [f"Scoring rubric YAML parse error: {exc}"]
+
+    if not isinstance(rubric, dict):
+        return ["Scoring rubric must be a YAML mapping"]
+
+    for section in ("weights", "weights_job"):
+        weights = rubric.get(section)
+        if not isinstance(weights, dict):
+            errors.append(f"{section} must be a mapping")
+            continue
+
+        keys = set(weights.keys())
+        missing = sorted(VALID_DIMENSIONS - keys)
+        extra = sorted(keys - VALID_DIMENSIONS)
+        if missing:
+            errors.append(f"{section} missing dimensions: {missing}")
+        if extra:
+            errors.append(f"{section} has unknown dimensions: {extra}")
+
+        total = 0.0
+        for dim, value in weights.items():
+            if not isinstance(value, (int, float)):
+                errors.append(f"{section}.{dim} must be numeric, got {type(value).__name__}")
+                continue
+            if value < 0:
+                errors.append(f"{section}.{dim} must be >= 0")
+            total += float(value)
+
+        if abs(total - 1.0) > 1e-6:
+            errors.append(f"{section} must sum to 1.0 (got {total:.6f})")
+
+    thresholds = rubric.get("thresholds")
+    if not isinstance(thresholds, dict):
+        errors.append("thresholds must be a mapping")
+    else:
+        score_min = thresholds.get("score_range_min")
+        score_max = thresholds.get("score_range_max")
+        auto_q = thresholds.get("auto_qualify_min")
+        tier1 = thresholds.get("tier1_cutoff")
+        tier2 = thresholds.get("tier2_cutoff")
+        tier3 = thresholds.get("tier3_cutoff")
+
+        for field in ("score_range_min", "score_range_max", "auto_qualify_min", "tier1_cutoff", "tier2_cutoff", "tier3_cutoff"):
+            if field in thresholds and not isinstance(thresholds[field], (int, float)):
+                errors.append(f"thresholds.{field} must be numeric")
+
+        if isinstance(score_min, (int, float)) and isinstance(score_max, (int, float)):
+            if score_min >= score_max:
+                errors.append("thresholds.score_range_min must be < thresholds.score_range_max")
+        if isinstance(auto_q, (int, float)) and isinstance(score_min, (int, float)) and isinstance(score_max, (int, float)):
+            if not (score_min <= auto_q <= score_max):
+                errors.append("thresholds.auto_qualify_min must be within score range")
+        if isinstance(tier1, (int, float)) and isinstance(tier2, (int, float)) and isinstance(tier3, (int, float)):
+            if not (tier1 >= tier2 >= tier3):
+                errors.append("thresholds tier cutoffs must satisfy tier1 >= tier2 >= tier3")
+
+    return errors
+
+
 REQUIRED_PROFILE_FIELDS = {"name", "identity_position", "track", "artist_statements"}
 
 
@@ -520,6 +623,10 @@ def main():
                         help="Also validate profile JSON schema")
     parser.add_argument("--check-id-maps", action="store_true",
                         help="Also validate PROFILE_ID_MAP and LEGACY_ID_MAP consistency")
+    parser.add_argument("--check-rubric", action="store_true",
+                        help="Also validate strategy/scoring-rubric.yaml")
+    parser.add_argument("--generate-id-maps", action="store_true",
+                        help="Generate ID mapping suggestions at strategy/id-mappings.generated.yaml")
     args = parser.parse_args()
 
     all_errors = {}
@@ -606,6 +713,34 @@ def main():
             has_errors = True
         else:
             print("ID mapping validation OK — all maps consistent with filesystem.")
+
+    if args.check_rubric:
+        print()
+        rubric_errors = validate_scoring_rubric()
+        if rubric_errors:
+            print(f"SCORING RUBRIC VALIDATION — {len(rubric_errors)} issue(s):\n")
+            for e in rubric_errors:
+                print(f"  - {e}")
+            has_errors = True
+        else:
+            print("Scoring rubric validation OK — weights and thresholds are consistent.")
+
+    if args.generate_id_maps:
+        print()
+        try:
+            from generate_id_mappings import OUTPUT_PATH, generate_legacy_map, generate_profile_map
+
+            payload = {
+                "generated": OUTPUT_PATH.name,
+                "profile_id_map": generate_profile_map(),
+                "legacy_id_map": generate_legacy_map(),
+            }
+            OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+            OUTPUT_PATH.write_text(yaml.dump(payload, default_flow_style=False, sort_keys=False, allow_unicode=True))
+            print(f"Generated ID map suggestions: {OUTPUT_PATH.relative_to(REPO_ROOT)}")
+        except Exception as exc:
+            print(f"ID mapping generation failed: {exc}")
+            has_errors = True
 
     if has_errors:
         sys.exit(1)

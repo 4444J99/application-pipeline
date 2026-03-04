@@ -8,14 +8,13 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from pipeline_lib import detect_entry_portal, load_entries, PIPELINE_DIR_ACTIVE
+from pipeline_lib import PIPELINE_DIR_ACTIVE, detect_entry_portal, load_entries
 from submission_audit import (
     PRE_SUBMIT_STATUSES,
     SUBMITTABLE_PORTALS,
     _check_answers_complete,
     check_entry,
 )
-
 
 # --- Constants ---
 
@@ -83,6 +82,7 @@ def test_check_entry_results_keys():
         "resume_pdf",
         "cover_letter",
         "status_submittable",
+        "review_approved",
         "answer_file",
         "has_target_url",
     }
@@ -121,6 +121,7 @@ def test_check_entry_ready_entry():
     # so portal_parsed and status_submittable and has_target_url should pass
     assert result["results"]["portal_parsed"] is True
     assert result["results"]["status_submittable"] is True
+    assert "review_approved" in result["results"]
     assert result["results"]["has_target_url"] is True
 
 

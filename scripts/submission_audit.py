@@ -21,7 +21,6 @@ from pathlib import Path
 import yaml
 from pipeline_lib import (
     PIPELINE_DIR_ACTIVE,
-    SUBMIT_CONFIG_PATH,
     detect_entry_portal,
     load_entries,
     load_submit_config,
@@ -96,6 +95,9 @@ def check_entry(entry: dict, *, deep: bool = False, config: dict | None = None) 
     portal = detect_entry_portal(entry)
     status = entry.get("status", "")
     target = entry.get("target", {}) or {}
+    status_meta = entry.get("status_meta", {}) or {}
+    if not isinstance(status_meta, dict):
+        status_meta = {}
 
     checks = {
         "id": eid,
@@ -120,6 +122,13 @@ def check_entry(entry: dict, *, deep: bool = False, config: dict | None = None) 
 
     # Check 4: Status is submittable (not already submitted)
     checks["results"]["status_submittable"] = status in PRE_SUBMIT_STATUSES
+
+    # Check 4b: Governance review required before staged submissions.
+    # (Qualified/drafting entries can still be prepared, but staged is submit-gated.)
+    if status == "staged":
+        checks["results"]["review_approved"] = bool(status_meta.get("reviewed_by"))
+    else:
+        checks["results"]["review_approved"] = True
 
     # Check 5: Answer file exists (portal-specific)
     if portal in ("greenhouse", "ashby"):

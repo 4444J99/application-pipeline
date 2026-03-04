@@ -12,7 +12,6 @@ from submit_ready import (
     group_by_portal,
 )
 
-
 # --- PORTAL_SCRIPTS ---
 
 

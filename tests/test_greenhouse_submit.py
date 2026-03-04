@@ -12,6 +12,7 @@ from greenhouse_submit import (
     generate_answer_template,
     get_custom_questions,
     load_answers,
+    map_file_answers_to_fields,
     merge_answers,
     parse_greenhouse_url,
     process_entry,
@@ -68,6 +69,16 @@ def test_resolve_select_value_case_insensitive():
     """resolve_select_value matches labels case-insensitively."""
     values = [{"label": "Remote", "value": 42}]
     assert resolve_select_value("remote", values) == 42
+
+
+def test_resolve_select_value_yes_no_aliases():
+    """resolve_select_value handles short yes/no aliases against long labels."""
+    values = [
+        {"label": "Yes - I am authorized", "value": 1},
+        {"label": "No - I need sponsorship", "value": 0},
+    ]
+    assert resolve_select_value("yes", values) == 1
+    assert resolve_select_value("no", values) == 0
 
 
 def test_resolve_select_value_match_by_value():
@@ -222,6 +233,20 @@ def test_merge_answers_no_file():
     auto = {"field_x": "value"}
     result = merge_answers(auto, None)
     assert result == {"field_x": "value"}
+
+
+def test_map_file_answers_to_fields_uses_label_fallback():
+    """Label-keyed answers are projected onto current dynamic field IDs."""
+    questions = [
+        {
+            "label": "LinkedIn Profile URL",
+            "required": True,
+            "fields": [{"name": "question_9001", "type": "input_text"}],
+        },
+    ]
+    file_answers = {"label::LinkedIn Profile URL": "https://linkedin.com/in/test"}
+    mapped = map_file_answers_to_fields(questions, file_answers)
+    assert mapped == {"question_9001": "https://linkedin.com/in/test"}
 
 
 # ---------------------------------------------------------------------------

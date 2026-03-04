@@ -20,7 +20,6 @@ Requires smtp config in .submit-config.yaml:
 """
 
 import argparse
-import re
 import smtplib
 import sys
 from datetime import date
@@ -28,7 +27,6 @@ from email.message import EmailMessage
 from pathlib import Path
 from urllib.parse import urlparse
 
-import yaml
 from pipeline_lib import (
     MATERIALS_DIR,
     PIPELINE_DIR_ACTIVE,
@@ -218,7 +216,7 @@ def preview_entry(entry: dict, config: dict) -> bool:
     if not resume:
         print("  WARNING: No resume PDF found")
 
-    print(f"  Ready:     YES")
+    print("  Ready:     YES")
     return True
 
 

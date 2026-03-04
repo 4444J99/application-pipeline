@@ -360,27 +360,7 @@ def init_follow_ups(dry_run: bool = True) -> int:
 def show_today(entries: list[dict]):
     """Show today's follow-up actions."""
     today = date.today()
-    actions = []
-
-    for entry in entries:
-        entry_id = entry.get("id", "unknown")
-        org = entry.get("target", {}).get("organization", "Unknown") if isinstance(entry.get("target"), dict) else "Unknown"
-        tier = get_tier(entry)
-        due = get_due_actions(entry)
-        days = days_since_submission(entry)
-
-        if due:
-            fit = entry.get("fit", {})
-            score = float(fit.get("score", 5.0)) if isinstance(fit, dict) else 5.0
-            for action in due:
-                actions.append({
-                    "entry_id": entry_id,
-                    "org": org,
-                    "tier": tier,
-                    "score": score,
-                    "days": days,
-                    **action,
-                })
+    actions = collect_due_actions(entries)
 
     if not actions:
         print(f"No follow-up actions due today ({today.isoformat()}).")
@@ -411,6 +391,68 @@ def show_today(entries: list[dict]):
         print(f"    Window: {a['window']}")
     print(f"\n{'=' * 70}")
     print(f"Total: {len(actions)} actions due")
+
+
+def collect_due_actions(entries: list[dict]) -> list[dict]:
+    """Collect due follow-up actions sorted by priority."""
+    actions = []
+    for entry in entries:
+        entry_id = entry.get("id", "unknown")
+        org = entry.get("target", {}).get("organization", "Unknown") if isinstance(entry.get("target"), dict) else "Unknown"
+        tier = get_tier(entry)
+        due = get_due_actions(entry)
+        days = days_since_submission(entry)
+
+        if due:
+            fit = entry.get("fit", {})
+            score = float(fit.get("score", 5.0)) if isinstance(fit, dict) else 5.0
+            for action in due:
+                actions.append({
+                    "entry_id": entry_id,
+                    "org": org,
+                    "tier": tier,
+                    "score": score,
+                    "days": days,
+                    **action,
+                })
+
+    actions.sort(key=lambda x: (x["tier"], -x.get("score", 5.0), -x["day"]))
+    return actions
+
+
+def export_due_actions(entries: list[dict], output_path: Path) -> int:
+    """Export due follow-up actions with copy-ready outreach templates."""
+    today = date.today().isoformat()
+    actions = collect_due_actions(entries)
+
+    lines = [
+        f"# Follow-up Actions Due — {today}",
+        "",
+        f"Total actions: {len(actions)}",
+        "",
+    ]
+
+    if not actions:
+        lines.append("No follow-up actions due today.")
+    else:
+        for i, action in enumerate(actions, start=1):
+            lines.append(f"## {i}. {action['org']} — {action['entry_id']}")
+            lines.append(f"- Day: {action['day']}")
+            lines.append(f"- Window: {action['window']}")
+            lines.append(f"- Action: {action['action']}")
+            lines.append("- Template:")
+            lines.append("```text")
+            lines.append(
+                f"Hi {action['org']} team — following up on my application for {action['entry_id']}. "
+                "I remain very interested and would be glad to provide any additional information. "
+                "Thank you for your time."
+            )
+            lines.append("```")
+            lines.append("")
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text("\n".join(lines))
+    return len(actions)
 
 
 def show_all(entries: list[dict]):
@@ -531,6 +573,11 @@ def main():
     parser.add_argument("--note", default="", help="Follow-up note")
     parser.add_argument("--type", default="dm", dest="followup_type",
                         help="Follow-up type: connect, dm, email, check_in, thank_you")
+    parser.add_argument(
+        "--export",
+        metavar="PATH",
+        help="Export due actions with templates to a markdown file",
+    )
     parser.add_argument("--dry-run", action="store_true", help="Preview changes without executing")
     parser.add_argument("--yes", action="store_true", help="Execute changes")
     args = parser.parse_args()
@@ -554,6 +601,11 @@ def main():
     if not entries:
         print("No submitted entries found.")
         return
+
+    if args.export:
+        output_path = Path(args.export)
+        count = export_due_actions(entries, output_path)
+        print(f"Exported {count} due action(s) to {output_path}")
 
     if args.all:
         show_all(entries)

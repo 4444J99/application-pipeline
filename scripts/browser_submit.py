@@ -35,6 +35,7 @@ from ashby_submit import (
 from ashby_submit import (
     resolve_resume as ashby_resolve_resume,
 )
+from ats_base import auto_fill_answer
 from greenhouse_submit import (
     load_answers as gh_load_answers,
 )
@@ -530,26 +531,14 @@ def init_ashby_answers_browser(page, entry, config):
     # Build auto-fill answers
     submission = entry.get("submission", {}) or {}
     portfolio_url = submission.get("portfolio_url", "") if isinstance(submission, dict) else ""
-    source_map = {
-        "portfolio_url": portfolio_url,
-        "linkedin": config.get("linkedin", ""),
-        "name_pronunciation": config.get("name_pronunciation", ""),
-        "pronouns": config.get("pronouns", ""),
-        "location": config.get("location", ""),
-    }
-
-    from ashby_submit import AUTO_FILL_PATTERNS as ASHBY_AUTO_FILL
 
     auto_filled = {}
     for field in custom_fields:
         title = field.get("title", "")
         path = field.get("path", "")
-        for pattern, source_key in ASHBY_AUTO_FILL:
-            if pattern.search(title):
-                value = source_map.get(source_key, "")
-                if value:
-                    auto_filled[path] = value
-                break
+        value = auto_fill_answer(title, config, portfolio_url)
+        if value:
+            auto_filled[path] = value
 
     # Generate template
     lines = [

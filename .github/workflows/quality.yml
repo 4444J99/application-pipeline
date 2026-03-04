@@ -19,11 +19,14 @@ jobs:
       - name: Install dependencies
         run: pip install -e ".[dev]"
 
+      - name: Verify module coverage matrix
+        run: python scripts/verification_matrix.py --strict
+
       - name: Lint
         run: ruff check scripts/ tests/ --statistics
 
       - name: Validate pipeline YAML
-        run: python scripts/validate.py
+        run: python scripts/validate.py --check-id-maps --check-rubric
 
       - name: Run tests
         run: python -m pytest tests/ -v

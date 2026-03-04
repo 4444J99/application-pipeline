@@ -56,6 +56,10 @@ conversion:
   time_to_response_days: null
   feedback: null
   follow_up_count: 0
+deferral:
+  reason: strategic_hold
+  resume_date: "2026-03-17"
+  note: Deferred intentionally pending refresh on role/location fit and current priorities.
 tags:
 - auto-sourced
 source: source_jobs.py

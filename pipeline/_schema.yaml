@@ -14,6 +14,13 @@
 #   deferred: Ready to submit but blocked by external factors (portal paused, cycle not open, etc.)
 # outcome: Final result (null until resolved)
 #   enum: accepted | rejected | withdrawn | expired | null
+#
+# status_meta: Governance/audit metadata for state transitions (optional)
+#   reviewed_by: operator handle that reviewed staged entry before submission
+#   reviewed_at: ISO date (YYYY-MM-DD) of review approval
+#   review_note: Optional rationale for review decision
+#   submitted_by: operator handle that executed submission recording
+#   submitted_at: ISO date (YYYY-MM-DD) of submission record action
 
 # --- Target Information ---
 # target:

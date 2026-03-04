@@ -19,10 +19,13 @@ import re
 import sys
 from pathlib import Path
 
-import yaml
 from ats_base import (
     auto_fill_answer,
     build_common_argparse,
+    build_normalized_answer_index,
+    clean_answer_mapping,
+    find_dynamic_answer,
+    load_answers_yaml,
     load_config,
 )
 from pipeline_lib import (
@@ -141,19 +144,33 @@ def load_answers(entry_id: str) -> dict | None:
     Returns dict of {question_text: answer_value}, or None if file doesn't exist.
     """
     answer_path = ANSWERS_DIR / f"{entry_id}.yaml"
-    if not answer_path.exists():
+    data = load_answers_yaml(answer_path)
+    if data is None:
         return None
-    data = yaml.safe_load(answer_path.read_text())
-    if not isinstance(data, dict):
-        return None
-    cleaned = {}
-    for k, v in data.items():
-        if v is None:
+    return clean_answer_mapping(data)
+
+
+def map_file_answers_to_questions(questions: list[dict], file_answers: dict | None) -> dict:
+    """Project dynamic answer-file keys onto current Lever question texts."""
+    if not file_answers:
+        return {}
+
+    projected: dict[str, object] = {}
+    normalized_index = build_normalized_answer_index(file_answers)
+
+    for question in get_custom_questions(questions):
+        text = question.get("text", "")
+        if not text:
             continue
-        sv = str(v).strip()
-        if sv and sv != "FILL IN":
-            cleaned[k] = v
-    return cleaned
+        answer = find_dynamic_answer(
+            file_answers,
+            field_key=text,
+            label=text,
+            normalized_index=normalized_index,
+        )
+        if answer is not None:
+            projected[text] = answer
+    return projected
 
 
 def merge_answers(auto_filled: dict, file_answers: dict | None) -> dict:
@@ -293,7 +310,8 @@ def check_answers_for_entry(entry: dict, config: dict) -> bool:
 
     auto_filled = auto_fill_answers(questions, config, entry)
     file_answers = load_answers(entry_id)
-    merged = merge_answers(auto_filled, file_answers)
+    mapped_file_answers = map_file_answers_to_questions(questions, file_answers)
+    merged = merge_answers(auto_filled, mapped_file_answers)
     errors = validate_answers(questions, merged)
 
     if errors:
@@ -303,7 +321,7 @@ def check_answers_for_entry(entry: dict, config: dict) -> bool:
         return False
     else:
         source_note = ""
-        if file_answers is None:
+        if not mapped_file_answers:
             source_note = " (auto-fill only, no answer file)"
         print(f"  {entry_id}: All required questions answered{source_note}")
         return True
@@ -557,7 +575,8 @@ def process_entry(entry: dict, config: dict, do_submit: bool) -> bool:
     if questions:
         auto_filled = auto_fill_answers(questions, config, entry)
         file_answers = load_answers(entry_id)
-        merged_answers = merge_answers(auto_filled, file_answers)
+        mapped_file_answers = map_file_answers_to_questions(questions, file_answers)
+        merged_answers = merge_answers(auto_filled, mapped_file_answers)
         validation_errors = validate_answers(questions, merged_answers)
 
     if not do_submit:

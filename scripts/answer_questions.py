@@ -21,6 +21,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from ats_base import match_default_answer
 from pipeline_lib import (
     PIPELINE_DIR_ACTIVE,
     load_entries,
@@ -32,20 +33,6 @@ from pipeline_lib import (
 WORK_DIR = Path(__file__).resolve().parent / ".alchemize-work"
 ASHBY_ANSWERS_DIR = Path(__file__).resolve().parent / ".ashby-answers"
 GREENHOUSE_ANSWERS_DIR = Path(__file__).resolve().parent / ".greenhouse-answers"
-
-# Label patterns for matching default_answers from config
-DEFAULT_ANSWER_PATTERNS = [
-    (re.compile(r"authorized.*work|work.*authorization|legally.*work|eligible.*work", re.I), "work_authorization"),
-    (re.compile(r"visa|sponsor", re.I), "visa_sponsorship"),
-    (re.compile(r"salary|compensation|pay.*expect", re.I), "salary_expectation"),
-    (re.compile(r"start.*date|when.*start|earliest.*start|available.*start", re.I), "start_date"),
-    (re.compile(r"how.*hear|how.*find|where.*hear|how.*learn.*about", re.I), "how_did_you_hear"),
-    (re.compile(r"relocat", re.I), "willing_to_relocate"),
-    (re.compile(r"\bgender\b", re.I), "gender"),
-    (re.compile(r"race|ethnic", re.I), "race_ethnicity"),
-    (re.compile(r"veteran|military", re.I), "veteran_status"),
-    (re.compile(r"disabilit", re.I), "disability_status"),
-]
 
 
 def load_config() -> dict:
@@ -116,15 +103,7 @@ def find_fill_in_fields(answers: dict, raw_text: str) -> list[dict]:
 
 def try_auto_answer(label: str, config: dict) -> str | None:
     """Try to match a field label against default_answers config patterns."""
-    defaults = config.get("default_answers", {})
-    if not defaults:
-        return None
-    for pattern, key in DEFAULT_ANSWER_PATTERNS:
-        if pattern.search(label):
-            answer = defaults.get(key)
-            if answer:
-                return str(answer)
-    return None
+    return match_default_answer(label, config)
 
 
 def build_answer_prompt(entry: dict, fill_fields: list[dict], cover_letter: str | None) -> str:

@@ -11,6 +11,7 @@ from lever_submit import (
     generate_answer_template,
     get_custom_questions,
     load_answers,
+    map_file_answers_to_questions,
     merge_answers,
     parse_lever_url,
     validate_answers,
@@ -137,6 +138,23 @@ def test_merge_answers_no_file():
     auto = {"q1": "value"}
     result = merge_answers(auto, None)
     assert result == {"q1": "value"}
+
+
+def test_map_file_answers_to_questions_normalized_label():
+    """Dynamic question text can resolve from normalized label keys."""
+    questions = [
+        {
+            "text": "Do you require visa sponsorship now or in the future?",
+            "required": True,
+        },
+    ]
+    file_answers = {
+        "label::Do you require visa sponsorship now or in the future": "No",
+    }
+    mapped = map_file_answers_to_questions(questions, file_answers)
+    assert mapped == {
+        "Do you require visa sponsorship now or in the future?": "No",
+    }
 
 
 # ---------------------------------------------------------------------------

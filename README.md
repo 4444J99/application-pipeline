@@ -3,7 +3,7 @@
 [![Quality](https://github.com/4444j99/application-pipeline/actions/workflows/quality.yml/badge.svg)](https://github.com/4444j99/application-pipeline/actions/workflows/quality.yml)
 ![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
-![Tests: 1263](https://img.shields.io/badge/tests-1263%20passing-brightgreen)
+![Tests: 1489](https://img.shields.io/badge/tests-1489%20passing-brightgreen)
 
 Career application infrastructure treating job, grant, and residency search as a **conversion pipeline**. Implements a "Cathedral → Storefront" philosophy: preserving deep, immersive systemic work while providing high-signal, scannable entry points for reviewers.
 
@@ -106,9 +106,12 @@ Every application aligns to one of five canonical positions:
 ## Development
 
 ```bash
-ruff check scripts/ tests/         # Lint
-python -m pytest tests/ -v         # Full test suite
-python scripts/validate.py         # YAML schema validation
+python scripts/verify_all.py                 # Full verification gates (matrix + lint + validate + full tests)
+python scripts/verify_all.py --quick         # Faster local verification loop
+python scripts/verification_matrix.py --strict  # Module-to-verification route coverage
+ruff check scripts/ tests/                   # Lint only
+python -m pytest tests/ -v                   # Full test suite only
+python scripts/validate.py                   # YAML schema validation
 ```
 
 CI runs on every push via `.github/workflows/quality.yml` (lint + validate + pytest on Python 3.12).

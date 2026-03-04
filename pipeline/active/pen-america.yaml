@@ -1,7 +1,7 @@
 id: pen-america
 name: PEN America Writers Aid
 track: emergency
-status: deferred
+status: staged
 identity_position: community-practitioner
 outcome: null
 target:
@@ -54,7 +54,7 @@ timeline:
   researched: '2026-02-14'
   date_added: 2026-02-14
   qualified: '2026-02-16'
-  materials_ready: '2026-02-18'
+  materials_ready: '2026-03-03'
   submitted: null
   acknowledged: null
   interview: null

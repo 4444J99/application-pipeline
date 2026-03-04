@@ -48,3 +48,18 @@ def test_run_missing_parameter(mocker):
         run_command("score") # missing target-id
     
     assert excinfo.value.code == 1
+
+
+def test_run_standalone_passthrough_args(mocker):
+    """Standalone commands should pass extra args through to the target script."""
+    mock_run = mocker.patch("subprocess.run")
+    mock_run.return_value.returncode = 0
+
+    with pytest.raises(SystemExit) as excinfo:
+        run_command("batch", extra_args=["--yes", "--limit", "2"])
+
+    assert excinfo.value.code == 0
+    args = mock_run.call_args[0][0]
+    assert "batch_submit.py" in args[1]
+    assert "--yes" in args
+    assert "--limit" in args

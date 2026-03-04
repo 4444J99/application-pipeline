@@ -6,6 +6,7 @@ pipeline_status.py, standup.py, conversion_report.py, and score.py.
 """
 
 import json
+import os
 import re
 from datetime import UTC, date, datetime
 from pathlib import Path
@@ -47,6 +48,15 @@ def _detect_current_batch() -> str:
 
 
 CURRENT_BATCH = _detect_current_batch()
+
+
+def get_operator_name(default: str = "unknown") -> str:
+    """Return the active human/operator identifier for audit trails."""
+    return (
+        os.environ.get("PIPELINE_OPERATOR")
+        or os.environ.get("USER")
+        or default
+    )
 
 # Maps entry IDs to profile file IDs where naming conventions differ.
 PROFILE_ID_MAP = {
@@ -1006,18 +1016,39 @@ def get_posting_age_hours(entry: dict) -> float | None:
 
     Returns age in hours as a float, or None if no usable date is found.
     """
+    def _is_date_only(value) -> bool:
+        if isinstance(value, date) and not isinstance(value, datetime):
+            return True
+        if isinstance(value, str):
+            return bool(re.fullmatch(r"\d{4}-\d{2}-\d{2}", value.strip()))
+        return False
+
+    def _hours_from_date_only(value) -> float | None:
+        parsed = parse_date(value)
+        if parsed is None:
+            return None
+        # Date-only values are day-granular. Use local day delta to avoid
+        # UTC midnight rollover inflating age by ~24h.
+        return float((date.today() - parsed).days * 24)
+
     timeline = entry.get("timeline", {})
     if not isinstance(timeline, dict):
         timeline = {}
 
     dt = None
     for field in ("posting_date", "discovered", "date_added"):
-        dt = _parse_datetime_aware(timeline.get(field))
+        raw = timeline.get(field)
+        if _is_date_only(raw):
+            return _hours_from_date_only(raw)
+        dt = _parse_datetime_aware(raw)
         if dt is not None:
             break
 
     if dt is None:
-        dt = _parse_datetime_aware(entry.get("last_touched"))
+        raw = entry.get("last_touched")
+        if _is_date_only(raw):
+            return _hours_from_date_only(raw)
+        dt = _parse_datetime_aware(raw)
 
     if dt is None:
         return None
