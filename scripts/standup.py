@@ -889,6 +889,54 @@ def _triage_update_entry(
     filepath.write_text(content)
 
 
+def collect_standup_data(hours: float = 3.0, section: str | None = None) -> dict:
+    """Gather standup section data as a dict for JSON output.
+
+    Returns a dict with keys for each section (health, stale, plan, etc.).
+    Captures section output by redirecting stdout.
+    """
+    import contextlib
+    import io
+
+    entries = load_entries()
+    if not entries:
+        return {"error": "No pipeline entries found"}
+
+    data: dict = {"date": str(date.today()), "entry_count": len(entries)}
+
+    # Collect health stats silently
+    with contextlib.redirect_stdout(io.StringIO()):
+        if section is None or section == "health":
+            data["health"] = section_health(entries)
+        if section is None or section == "stale":
+            data["stale"] = section_stale(entries)
+        if section is None or section == "plan":
+            data["plan"] = section_plan(entries, hours)
+
+    # Count actionable entries
+    actionable = [e for e in entries if e.get("status") in ACTIONABLE_STATUSES]
+    data["actionable_count"] = len(actionable)
+
+    # Status distribution
+    status_counts: dict[str, int] = {}
+    for e in entries:
+        s = e.get("status", "unknown")
+        status_counts[s] = status_counts.get(s, 0) + 1
+    data["status_distribution"] = status_counts
+
+    # Stale entry IDs
+    stale_ids = []
+    for e in entries:
+        lt = e.get("last_touched")
+        if lt and e.get("status") in ACTIONABLE_STATUSES:
+            d = parse_date(lt)
+            if d and (date.today() - d).days >= STAGNATION_DAYS:
+                stale_ids.append(e.get("id", "unknown"))
+    data["stale_entry_ids"] = stale_ids
+
+    return data
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Daily standup — pipeline health, staleness detection, execution protocol"
@@ -907,6 +955,8 @@ def main():
                         help="Show job pipeline status only")
     parser.add_argument("--opportunities", action="store_true",
                         help="Show opportunity pipeline only (grants/residencies/prizes/writing)")
+    parser.add_argument("--json", action="store_true",
+                        help="Output JSON instead of formatted text")
     args = parser.parse_args()
 
     if args.touch:
@@ -915,6 +965,12 @@ def main():
 
     if args.triage:
         run_triage()
+        return
+
+    if args.json:
+        import json as json_mod
+        payload = collect_standup_data(args.hours, args.section)
+        print(json_mod.dumps(payload, indent=2, default=str))
         return
 
     track_filter = None

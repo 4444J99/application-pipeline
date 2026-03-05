@@ -90,6 +90,14 @@ Scripts are independent CLIs but some import functions from each other:
 - **`text_match.py`** — TF-IDF text matching engine; provides objective scoring signals by comparing job posting keywords against block/profile content. Used by `score.py` for evidence_match dimension.
 - **`feedback_capture.py`** — standalone; writes hypothesis entries to `signals/hypotheses.yaml`. Use to record predicted outcome reasons before results arrive. Run `run.py hypotheses` to list, `run.py analysis` to see patterns, `run.py hypothesis <id>` to capture for a specific entry.
 - **`check_email.py`** — standalone; scans for submission confirmations and responses. Requires `.email-config.yaml` with IMAP credentials (not committed). Run `run.py email` daily.
+- **`triage.py`** — Triage automation: demotes sub-threshold staged entries, resolves org-cap violations. `--execute --yes` to apply, `--json` for machine output.
+- **`snapshot.py`** — Daily pipeline snapshots with trend analysis (7d/30d/90d deltas, linear regression slopes, inflection detection). Saves to `signals/daily-snapshots/`.
+- **`notify.py`** — Notification dispatcher: routes pipeline events (weekly_brief, agent_action, deadline_alert, etc.) to webhooks and email per `strategy/notifications.yaml`.
+- **`org_intelligence.py`** — Organization intelligence: aggregates entries, contacts, outcomes, network density per org. Composite opportunity scoring.
+- **`skills_gap.py`** — Skills gap analysis: extracts required skills from entries, computes coverage against block content.
+- **`block_outcomes.py`** — Block-outcome correlation: classifies blocks as golden (>50% accept), toxic (>75% reject), or neutral.
+- **`calendar_export.py`** — iCal export: generates VCALENDAR/VEVENT/VALARM from pipeline deadlines. Pure stdlib.
+- **`interview_prep.py`** imports from `org_intelligence.py`, `skills_gap.py` — Interview prep document generator combining org intelligence, skills gaps, STAR questions, and block talking points.
 - All other scripts are standalone CLIs that read/write pipeline YAML files.
 
 ## Module Architecture
@@ -170,6 +178,24 @@ python scripts/quarterly_report.py                     # Quarterly analytics
 python scripts/rejection_learner.py                    # Rejection dimension analysis
 python scripts/portfolio_analysis.py                   # Block/position/channel analysis
 python scripts/velocity_report.py                      # Monthly velocity
+python scripts/snapshot.py --report                    # Pipeline snapshot with counts and trends
+python scripts/snapshot.py --save                      # Save daily snapshot to signals/daily-snapshots/
+python scripts/org_intelligence.py --all               # Org intelligence rankings
+python scripts/skills_gap.py --all                     # Skills gap analysis across entries
+python scripts/block_outcomes.py                       # Block-outcome correlation (golden/toxic)
+
+# Triage & notifications
+python scripts/triage.py                               # Triage gate report (dry-run)
+python scripts/triage.py --execute --yes               # Execute triage demotions/deferrals
+python scripts/notify.py --config                      # Show notification config
+python scripts/notify.py --test-webhook                # Test webhook dispatch
+
+# Calendar & interview prep
+python scripts/calendar_export.py                      # Print iCal to stdout
+python scripts/calendar_export.py --output ~/Calendar/pipeline.ics  # Export .ics file
+python scripts/calendar_export.py --follow-ups         # Include follow-up dates
+python scripts/interview_prep.py --target <id>         # Generate interview prep document
+python scripts/interview_prep.py --auto                # Prep all interview-status entries
 
 # Relationship management
 python scripts/crm.py                                  # CRM dashboard
@@ -246,8 +272,16 @@ Single-word command protocol via `python scripts/run.py <command>`. Any LLM can 
 | `crm` | Relationship CRM dashboard: contacts, interactions, follow-ups |
 | `quarterly` | Quarterly analytics report (conversion, velocity, recommendations) |
 | `signallog` | Log a new signal-action audit entry |
+| `triagegate` | Triage gate: demote sub-threshold staged, resolve org-cap |
+| `snapshot` | Pipeline snapshot: counts, scores, trends |
+| `notify` | Notification dispatcher config check |
+| `orgs` | Org intelligence: aggregated org rankings |
+| `skillsgap` | Skills gap analysis across entries |
+| `blockoutcomes` | Block-outcome correlation: golden/toxic blocks |
+| `calendar` | Export pipeline deadlines to iCal |
+| `interviewprep` | Interview prep for all interview-status entries |
 
-**With target ID:** `score <id>`, `enrich <id>`, `advance <id>`, `compose <id>`, `draft <id>`, `submit <id>`, `check <id>`, `record <id>`, `gate <id>`, `contacts <id>`, `hypothesis <id>`, `alchemize <id>`, `answers <id>`, `tailor <id>`
+**With target ID:** `score <id>`, `enrich <id>`, `advance <id>`, `compose <id>`, `draft <id>`, `submit <id>`, `check <id>`, `record <id>`, `gate <id>`, `contacts <id>`, `hypothesis <id>`, `alchemize <id>`, `answers <id>`, `tailor <id>`, `skillsgap <id>`, `orgdetail <id>`, `interviewprep <id>`
 
 **Session sequences:**
 - Morning: `standup` → `followup` → `outcomes` → `campaign`
@@ -257,6 +291,8 @@ Single-word command protocol via `python scripts/run.py <command>`. Any LLM can 
 - Agent: `automation` → `agent` → `deferred` → `signals` → `hypotheses-v`
 - Quarterly: `quarterly` → `rejections` → `crm` → `portfolio`
 - Health: `monitor` → `freshness` → `resumes` → `backup` → `portfolio`
+- Triage: `triagegate` → `snapshot` → `orgs` → `blockoutcomes`
+- Interview: `interviewprep <id>` → `skillsgap <id>` → `orgdetail <org>`
 
 ## Configuration Files
 
@@ -268,6 +304,7 @@ Single-word command protocol via `python scripts/run.py <command>`. Any LLM can 
 | `signals/signal-actions.yaml` | Signal-to-action audit trail (written by `advance.py`, `log_signal_action.py`) |
 | `signals/agent-actions.yaml` | Agent plan/execute run history (written by `agent.py`) |
 | `signals/contacts.yaml` | Relationship CRM contacts and interactions (written by `crm.py`) |
+| `strategy/notifications.yaml` | Notification event routing: webhook URLs, email recipients (loaded by `notify.py`) |
 
 ## Automation (LaunchAgent)
 
@@ -279,6 +316,8 @@ LaunchAgent plist files in `launchd/` for macOS scheduled tasks:
 | `daily-monitor` | Daily 6:30 AM | `monitor_pipeline.py --strict` |
 | `weekly-backup` | Sunday 2:00 AM | `backup_pipeline.py create` |
 | `agent-biweekly` | Mon/Thu 7:00 AM | `agent.py --execute --yes` |
+| `weekly-briefing` | Sunday 7:00 PM | `weekly_brief.py --save` |
+| `calendar-refresh` | Daily 6:45 AM | `calendar_export.py --output ~/Calendar/pipeline-deadlines.ics --follow-ups` |
 
 Install: `python scripts/launchd_manager.py --install --kickstart`
 Status: `python scripts/launchd_manager.py --status`
@@ -340,8 +379,8 @@ Canonical identity statements, metrics, and evidence live in `organvm-corpvs-tes
 ## CI & Linting
 
 - CI runs via `.github/workflows/quality.yml`: verification matrix, ruff lint, signal validation, YAML validation, pytest (Ubuntu, Python 3.12)
-- **Verification matrix gate**: `python scripts/verification_matrix.py --strict` runs first in CI — enforces module-to-test coverage (109/109 modules). Override exceptions in `strategy/module-verification-overrides.yaml`.
-- **Signal validation gate**: `python scripts/validate_signals.py --strict` validates all 4 signal YAML files (signal-actions, conversion-log, hypotheses, agent-actions)
+- **Verification matrix gate**: `python scripts/verification_matrix.py --strict` runs first in CI — enforces module-to-test coverage (117/117 modules). Override exceptions in `strategy/module-verification-overrides.yaml`.
+- **Signal validation gate**: `python scripts/validate_signals.py --strict` validates all signal YAML files (signal-actions, conversion-log, hypotheses, agent-actions) plus referential integrity and contacts schema
 - Linter: `ruff check scripts/ tests/` — config in `pyproject.toml` (line-length 120, E/F/I/UP rules, E501 ignored)
 - No formal coverage threshold; prioritize regression coverage for pipeline state and YAML schema changes
 - Full local CI-parity check: `python scripts/verify_all.py`

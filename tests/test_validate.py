@@ -14,6 +14,8 @@ from validate import (
     VALID_TRANSITIONS,
     _reachable_statuses,
     validate_entry,
+    validate_no_duplicate_urls,
+    validate_org_cap_warnings,
     validate_scoring_rubric,
 )
 
@@ -617,3 +619,68 @@ def test_staged_missing_governance_fields_warns():
         assert errors == []
         assert any("missing status_meta.reviewed_by" in w for w in warnings)
         assert any("missing status_meta.approved_at" in w for w in warnings)
+
+
+# --- Duplicate URL tests ---
+
+
+def test_duplicate_urls_detected():
+    entries = [
+        {"id": "a", "target": {"application_url": "https://example.com/apply"}},
+        {"id": "b", "target": {"application_url": "https://example.com/apply"}},
+    ]
+    errors = []
+    dupes = validate_no_duplicate_urls(entries, errors)
+    assert dupes == 1
+    assert any("Duplicate" in e for e in errors)
+
+
+def test_no_duplicate_urls():
+    entries = [
+        {"id": "a", "target": {"application_url": "https://example.com/a"}},
+        {"id": "b", "target": {"application_url": "https://example.com/b"}},
+    ]
+    errors = []
+    dupes = validate_no_duplicate_urls(entries, errors)
+    assert dupes == 0
+    assert errors == []
+
+
+def test_duplicate_urls_handles_missing_url():
+    entries = [{"id": "a", "target": {}}, {"id": "b"}]
+    errors = []
+    dupes = validate_no_duplicate_urls(entries, errors)
+    assert dupes == 0
+
+
+# --- Org-cap tests ---
+
+
+def test_org_cap_violation_detected():
+    entries = [
+        {"id": "a", "status": "qualified", "target": {"organization": "BigCo"}},
+        {"id": "b", "status": "submitted", "target": {"organization": "BigCo"}},
+    ]
+    warnings = []
+    violations = validate_org_cap_warnings(entries, warnings, cap=1)
+    assert violations == 1
+    assert any("bigco" in w.lower() for w in warnings)
+
+
+def test_org_cap_no_violation():
+    entries = [
+        {"id": "a", "status": "qualified", "target": {"organization": "Solo"}},
+    ]
+    warnings = []
+    violations = validate_org_cap_warnings(entries, warnings, cap=1)
+    assert violations == 0
+
+
+def test_org_cap_ignores_closed():
+    entries = [
+        {"id": "a", "status": "qualified", "target": {"organization": "BigCo"}},
+        {"id": "b", "status": "withdrawn", "target": {"organization": "BigCo"}},
+    ]
+    warnings = []
+    violations = validate_org_cap_warnings(entries, warnings, cap=1)
+    assert violations == 0

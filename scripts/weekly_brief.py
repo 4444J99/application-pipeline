@@ -373,6 +373,7 @@ def main() -> None:
     parser.add_argument("--failure-months", type=int, default=1, help="Window for failure themes (default: 1)")
     parser.add_argument("--json", action="store_true", help="Emit machine-readable payload")
     parser.add_argument("--save", action="store_true", help="Save markdown report to signals/weekly-brief")
+    parser.add_argument("--notify", action="store_true", help="Dispatch weekly_brief notification after save")
     args = parser.parse_args()
 
     payload = build_brief_payload(week_days=max(1, args.week_days), failure_months=max(1, args.failure_months))
@@ -388,6 +389,18 @@ def main() -> None:
         print()
         print(f"Saved brief: {dated_path.relative_to(REPO_ROOT)}")
         print(f"Updated latest: {latest_path.relative_to(REPO_ROOT)}")
+        if args.notify:
+            try:
+                from notify import dispatch_event
+                results = dispatch_event("weekly_brief", {
+                    "summary": f"Weekly brief saved to {dated_path.name}",
+                    "snapshot": payload.get("pipeline_snapshot", {}),
+                })
+                for r in results:
+                    status = "OK" if r["success"] else "FAILED"
+                    print(f"  Notification [{r['channel']}]: {status} — {r['message']}")
+            except ImportError:
+                print("  Notification dispatch unavailable (notify.py not found)")
 
 
 if __name__ == "__main__":

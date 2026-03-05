@@ -99,6 +99,14 @@ COMMANDS = {
     "gaps":        ("text_match.py", ["--all", "--gaps"],    "Text match gap analysis: missing skills and blocks"),
     "rejections":  ("rejection_learner.py", [],              "Rejection learning engine: correlate factors with outcomes"),
     "crm":         ("crm.py", [],                            "Relationship CRM: contacts, interactions, coverage gaps"),
+    "triagegate":  ("triage.py", [],                          "Triage gate: demote sub-threshold staged, resolve org-cap"),
+    "snapshot":    ("snapshot.py", ["--report"],              "Pipeline snapshot: counts, scores, trends"),
+    "notify":      ("notify.py", ["--config"],                "Notification dispatcher config check"),
+    "orgs":        ("org_intelligence.py", ["--all"],         "Org intelligence: aggregated org rankings"),
+    "skillsgap":   ("skills_gap.py", ["--all"],               "Skills gap analysis across entries"),
+    "blockoutcomes": ("block_outcomes.py", [],                "Block-outcome correlation: golden/toxic blocks"),
+    "calendar":    ("calendar_export.py", [],                 "Export pipeline deadlines to iCal"),
+    "interviewprep": ("interview_prep.py", ["--auto"],        "Interview prep for all interview-status entries"),
 }
 
 # --- Parameterized commands (word + target ID) ---
@@ -123,6 +131,9 @@ PARAM_COMMANDS = {
     "review":     ("review_entry.py", ["--target"],        "Mark an entry reviewed for submission governance"),
     "cultivate":  ("cultivate.py", ["--plan"],              "Generate cultivation plan for an entry"),
     "textmatch":  ("text_match.py", ["--target"],            "TF-IDF text match for single entry"),
+    "skillsgap":  ("skills_gap.py", ["--target"],            "Skills gap analysis for single entry"),
+    "orgdetail":  ("org_intelligence.py", ["--org"],         "Org intelligence detail for single org"),
+    "interviewprep": ("interview_prep.py", ["--target"],     "Generate interview prep for single entry"),
 }
 
 

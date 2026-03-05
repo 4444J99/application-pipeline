@@ -646,6 +646,54 @@ def validate_profiles() -> list[str]:
     return errors
 
 
+def validate_no_duplicate_urls(entries: list[dict], errors: list[str]) -> int:
+    """Detect entries sharing the same target.application_url.
+
+    Returns count of duplicates found.
+    """
+    url_map: dict[str, list[str]] = {}
+    for entry in entries:
+        target = entry.get("target", {})
+        if not isinstance(target, dict):
+            continue
+        url = target.get("application_url", "")
+        if not url or not isinstance(url, str):
+            continue
+        url_map.setdefault(url, []).append(entry.get("id", "unknown"))
+    dupes = 0
+    for url, ids in url_map.items():
+        if len(ids) > 1:
+            errors.append(f"Duplicate application_url '{url}' shared by: {', '.join(ids)}")
+            dupes += 1
+    return dupes
+
+
+def validate_org_cap_warnings(entries: list[dict], warnings: list[str], cap: int = 1) -> int:
+    """Flag orgs with more than `cap` active+submitted entries.
+
+    Returns count of org-cap violations.
+    """
+    actionable_statuses = {"research", "qualified", "drafting", "staged", "submitted", "acknowledged", "interview"}
+    org_map: dict[str, list[str]] = {}
+    for entry in entries:
+        status = entry.get("status", "")
+        if status not in actionable_statuses:
+            continue
+        target = entry.get("target", {})
+        if not isinstance(target, dict):
+            continue
+        org = target.get("organization", "")
+        if not org or not isinstance(org, str):
+            continue
+        org_map.setdefault(org.lower(), []).append(entry.get("id", "unknown"))
+    violations = 0
+    for org, ids in sorted(org_map.items()):
+        if len(ids) > cap:
+            warnings.append(f"Org-cap violation: '{org}' has {len(ids)} entries (cap={cap}): {', '.join(ids)}")
+            violations += 1
+    return violations
+
+
 def main():
     import argparse
 
@@ -658,6 +706,8 @@ def main():
                         help="Also validate PROFILE_ID_MAP and LEGACY_ID_MAP consistency")
     parser.add_argument("--check-rubric", action="store_true",
                         help="Also validate strategy/scoring-rubric.yaml")
+    parser.add_argument("--check-org-cap", action="store_true",
+                        help="Also check org-cap violations (>1 active+submitted per org)")
     parser.add_argument("--generate-id-maps", action="store_true",
                         help="Generate ID mapping suggestions at strategy/id-mappings.generated.yaml")
     args = parser.parse_args()
@@ -757,6 +807,43 @@ def main():
             has_errors = True
         else:
             print("Scoring rubric validation OK — weights and thresholds are consistent.")
+
+    if args.check_org_cap:
+        print()
+        # Load all entries for cross-entry checks
+        all_entries = []
+        for pipeline_dir in PIPELINE_DIRS:
+            if not pipeline_dir.exists():
+                continue
+            for filepath in sorted(pipeline_dir.glob("*.yaml")):
+                if filepath.name.startswith("_"):
+                    continue
+                try:
+                    with open(filepath) as f:
+                        entry_data = yaml.safe_load(f)
+                    if isinstance(entry_data, dict):
+                        all_entries.append(entry_data)
+                except yaml.YAMLError:
+                    continue
+        # Duplicate URL check
+        url_errors = []
+        validate_no_duplicate_urls(all_entries, url_errors)
+        if url_errors:
+            print(f"DUPLICATE URL CHECK — {len(url_errors)} issue(s):")
+            for e in url_errors:
+                print(f"  - {e}")
+            has_errors = True
+        else:
+            print("Duplicate URL check OK — no shared application URLs.")
+        # Org-cap check
+        org_warnings = []
+        violations = validate_org_cap_warnings(all_entries, org_warnings)
+        if org_warnings:
+            print(f"\nORG-CAP WARNINGS — {violations} violation(s):")
+            for w in org_warnings:
+                print(f"  - {w}")
+        else:
+            print("Org-cap check OK — no violations.")
 
     if args.generate_id_maps:
         print()

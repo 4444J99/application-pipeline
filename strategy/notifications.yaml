@@ -1,0 +1,20 @@
+# Notification configuration for pipeline events.
+# Channels: webhook (POST JSON) and email (SMTP).
+# Each event type maps to a list of channels to notify.
+
+webhooks: []
+  # - https://hooks.slack.com/services/YOUR/WEBHOOK/URL
+
+email:
+  smtp_host: ""
+  smtp_port: 587
+  sender: ""
+  password: ""
+  recipients: []
+
+subscriptions:
+  weekly_brief: []
+  agent_action: []
+  deadline_alert: []
+  outcome_received: []
+  triage_report: []

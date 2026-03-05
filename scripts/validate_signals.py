@@ -19,7 +19,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from pipeline_lib import SIGNALS_DIR
+from pipeline_lib import ALL_PIPELINE_DIRS_WITH_POOL, SIGNALS_DIR
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
@@ -174,6 +174,94 @@ def validate_agent_actions(errors: list[str]) -> int:
     return len(runs)
 
 
+def _collect_all_entry_ids() -> set[str]:
+    """Scan all pipeline directories and return the set of known entry IDs."""
+    ids: set[str] = set()
+    for d in ALL_PIPELINE_DIRS_WITH_POOL:
+        if not d.exists():
+            continue
+        for fp in d.glob("*.yaml"):
+            if not fp.name.startswith("_"):
+                ids.add(fp.stem)
+    return ids
+
+
+def validate_referential_integrity(errors: list[str]) -> int:
+    """Check that signal files reference existing pipeline entries.
+
+    Returns the number of dangling references found.
+    """
+    entry_ids = _collect_all_entry_ids()
+    dangling = 0
+
+    # conversion-log: each entry.id must exist in pipeline
+    conv_path = SIGNALS_DIR / "conversion-log.yaml"
+    conv_data = _load_yaml(conv_path)
+    if isinstance(conv_data, dict):
+        for i, entry in enumerate(conv_data.get("entries", []) or []):
+            if not isinstance(entry, dict):
+                continue
+            eid = entry.get("id")
+            if isinstance(eid, str) and eid not in entry_ids:
+                errors.append(
+                    f"{conv_path} [entry {i}]: id '{eid}' not found in pipeline"
+                )
+                dangling += 1
+
+    # hypotheses: each entry_id/id must exist in pipeline
+    hyp_path = SIGNALS_DIR / "hypotheses.yaml"
+    hyp_data = _load_yaml(hyp_path)
+    if isinstance(hyp_data, dict):
+        for i, entry in enumerate(hyp_data.get("hypotheses", []) or []):
+            if not isinstance(entry, dict):
+                continue
+            eid = entry.get("id") or entry.get("entry_id")
+            if isinstance(eid, str) and eid not in entry_ids:
+                errors.append(
+                    f"{hyp_path} [hypothesis {i}]: id '{eid}' not found in pipeline"
+                )
+                dangling += 1
+
+    return dangling
+
+
+def validate_contacts(errors: list[str]) -> int:
+    """Validate signals/contacts.yaml schema. Returns entry count."""
+    path = SIGNALS_DIR / "contacts.yaml"
+    data = _load_yaml(path)
+    if data is None:
+        return 0  # contacts.yaml is optional
+    if not isinstance(data, dict) or "contacts" not in data:
+        errors.append(f"{path}: missing top-level 'contacts' key")
+        return 0
+    contacts = data["contacts"]
+    if not isinstance(contacts, list):
+        errors.append(f"{path}: 'contacts' must be a list")
+        return 0
+
+    valid_channels = {"linkedin", "email", "twitter", "referral", "event", "slack", "phone"}
+    for i, entry in enumerate(contacts):
+        label = f"{path} [contact {i}]"
+        if not isinstance(entry, dict):
+            errors.append(f"{label}: entry is not a mapping")
+            continue
+        _check_str(entry, "name", errors, label)
+        channel = entry.get("channel")
+        if isinstance(channel, str) and channel not in valid_channels:
+            errors.append(f"{label}: channel '{channel}' not in {sorted(valid_channels)}")
+        # Validate date formats in interactions
+        for j, interaction in enumerate(entry.get("interactions", []) or []):
+            if isinstance(interaction, dict):
+                d = str(interaction.get("date", ""))
+                if d and not DATE_RE.match(d):
+                    errors.append(f"{label} interaction[{j}]: date '{d}' not YYYY-MM-DD")
+        nad = str(entry.get("next_action_date", "") or "")
+        if nad and not DATE_RE.match(nad):
+            errors.append(f"{label}: next_action_date '{nad}' not YYYY-MM-DD")
+
+    return len(contacts)
+
+
 def validate_all_signals() -> tuple[list[str], dict]:
     """Validate all signal YAML files.
 
@@ -188,6 +276,8 @@ def validate_all_signals() -> tuple[list[str], dict]:
     stats["conversion-log"] = validate_conversion_log(errors)
     stats["hypotheses"] = validate_hypotheses(errors)
     stats["agent-actions"] = validate_agent_actions(errors)
+    stats["referential-integrity"] = validate_referential_integrity(errors)
+    stats["contacts"] = validate_contacts(errors)
 
     return errors, stats
 

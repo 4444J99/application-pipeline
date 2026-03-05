@@ -598,6 +598,15 @@ def generate_dashboard(entries: list[dict] | None = None) -> str:
 # CLI
 # ---------------------------------------------------------------------------
 
+def generate_dashboard_data(entries: list[dict]) -> dict:
+    """Generate structured dashboard data for JSON output."""
+    return {
+        "portals": compute_portal_stats(entries),
+        "positions": compute_position_stats(entries),
+        "tracks": compute_track_stats(entries),
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Unified conversion intelligence dashboard",
@@ -616,9 +625,20 @@ def main():
         action="store_true",
         help="Save report to signals/conversion-dashboard.md",
     )
+    parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Output JSON instead of formatted text",
+    )
     args = parser.parse_args()
 
     entries = load_entries(dirs=ALL_PIPELINE_DIRS, include_filepath=True)
+
+    if args.json:
+        import json
+        data = generate_dashboard_data(entries)
+        print(json.dumps(data, indent=2, default=str))
+        return
 
     if args.portal:
         report = show_portal_detail(args.portal, entries)

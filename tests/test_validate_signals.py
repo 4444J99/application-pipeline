@@ -16,8 +16,10 @@ from validate_signals import (
     SIGNAL_TYPES,
     validate_agent_actions,
     validate_all_signals,
+    validate_contacts,
     validate_conversion_log,
     validate_hypotheses,
+    validate_referential_integrity,
     validate_signal_actions,
 )
 
@@ -153,3 +155,103 @@ def test_constants_populated():
     assert len(SIGNAL_TYPES) >= 5
     assert None in OUTCOMES
     assert "execute" in AGENT_MODES
+
+
+# --- Referential integrity tests ---
+
+
+def test_referential_integrity_valid(signals_dir, tmp_path, monkeypatch):
+    """Valid references produce no errors."""
+    import validate_signals
+
+    # Create a fake pipeline dir with an entry
+    pipeline_dir = tmp_path / "pipeline" / "active"
+    pipeline_dir.mkdir(parents=True)
+    _write_yaml(pipeline_dir / "test-entry.yaml", {"id": "test-entry", "status": "staged"})
+    monkeypatch.setattr(validate_signals, "ALL_PIPELINE_DIRS_WITH_POOL", [pipeline_dir])
+
+    _write_yaml(signals_dir / "conversion-log.yaml", {
+        "entries": [{"id": "test-entry", "submitted": "2026-03-01", "track": "job"}]
+    })
+    _write_yaml(signals_dir / "hypotheses.yaml", {
+        "hypotheses": [{"entry_id": "test-entry", "category": "timing"}]
+    })
+    errors = []
+    dangling = validate_referential_integrity(errors)
+    assert dangling == 0
+    assert errors == []
+
+
+def test_referential_integrity_dangling(signals_dir, tmp_path, monkeypatch):
+    """Dangling references produce errors."""
+    import validate_signals
+
+    pipeline_dir = tmp_path / "pipeline" / "active"
+    pipeline_dir.mkdir(parents=True)
+    monkeypatch.setattr(validate_signals, "ALL_PIPELINE_DIRS_WITH_POOL", [pipeline_dir])
+
+    _write_yaml(signals_dir / "conversion-log.yaml", {
+        "entries": [{"id": "nonexistent", "submitted": "2026-03-01", "track": "job"}]
+    })
+    _write_yaml(signals_dir / "hypotheses.yaml", {
+        "hypotheses": [{"id": "also-missing", "category": "timing"}]
+    })
+    errors = []
+    dangling = validate_referential_integrity(errors)
+    assert dangling == 2
+    assert any("nonexistent" in e for e in errors)
+    assert any("also-missing" in e for e in errors)
+
+
+# --- Contacts validation tests ---
+
+
+def test_contacts_valid(signals_dir):
+    _write_yaml(signals_dir / "contacts.yaml", {
+        "contacts": [{
+            "name": "Jane Doe",
+            "channel": "linkedin",
+            "interactions": [{"date": "2026-03-01", "type": "connect", "note": "DM sent"}],
+        }]
+    })
+    errors = []
+    count = validate_contacts(errors)
+    assert count == 1
+    assert errors == []
+
+
+def test_contacts_invalid_channel(signals_dir):
+    _write_yaml(signals_dir / "contacts.yaml", {
+        "contacts": [{"name": "Jane", "channel": "fax"}]
+    })
+    errors = []
+    validate_contacts(errors)
+    assert any("channel" in e for e in errors)
+
+
+def test_contacts_missing_name(signals_dir):
+    _write_yaml(signals_dir / "contacts.yaml", {
+        "contacts": [{"channel": "email"}]
+    })
+    errors = []
+    validate_contacts(errors)
+    assert any("name" in e for e in errors)
+
+
+def test_contacts_optional_missing_file(signals_dir):
+    errors = []
+    count = validate_contacts(errors)
+    assert count == 0
+    assert errors == []
+
+
+def test_contacts_bad_date(signals_dir):
+    _write_yaml(signals_dir / "contacts.yaml", {
+        "contacts": [{
+            "name": "Bob",
+            "interactions": [{"date": "not-a-date", "type": "call"}],
+        }]
+    })
+    errors = []
+    validate_contacts(errors)
+    assert any("not-a-date" in e for e in errors)

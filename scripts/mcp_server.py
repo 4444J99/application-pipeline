@@ -154,6 +154,95 @@ def pipeline_validate(target_id: str = None) -> str:
         "message": result.message,
     }, default=str)
 
+@mcp.tool()
+def pipeline_funnel() -> str:
+    """Get conversion funnel analytics as JSON.
+
+    Returns:
+        JSON with portal, position, and track conversion stats
+    """
+    try:
+        from conversion_dashboard import generate_dashboard_data
+        from pipeline_lib import ALL_PIPELINE_DIRS, load_entries
+        entries = load_entries(dirs=ALL_PIPELINE_DIRS, include_filepath=True)
+        data = generate_dashboard_data(entries)
+        return json.dumps(data, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
+def pipeline_snapshot() -> str:
+    """Capture current pipeline snapshot with counts, scores, and violations.
+
+    Returns:
+        JSON snapshot of current pipeline state
+    """
+    try:
+        from snapshot import capture_snapshot
+        data = capture_snapshot()
+        return json.dumps(data, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
+def pipeline_triage(min_score: float = 9.0, dry_run: bool = True) -> str:
+    """Triage staged entries below threshold and org-cap violations.
+
+    Args:
+        min_score: Minimum score for staged entries (default: 9.0)
+        dry_run: If true, preview only (default: true)
+
+    Returns:
+        JSON with staged_demotions, org_cap_deferrals, and summary
+    """
+    try:
+        from pipeline_lib import load_entries
+        from triage import generate_triage_data
+        entries = load_entries()
+        data = generate_triage_data(entries, min_score=min_score, dry_run=dry_run)
+        return json.dumps(data, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
+def pipeline_crm_dashboard() -> str:
+    """Get CRM dashboard data: contacts, orgs, overdue actions.
+
+    Returns:
+        JSON with contact stats, org coverage, and overdue items
+    """
+    try:
+        from crm import generate_crm_data, load_contacts
+        contacts = load_contacts()
+        data = generate_crm_data(contacts)
+        return json.dumps(data, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
+def pipeline_campaign(days: int = 14) -> str:
+    """Get deadline-aware campaign data with urgency tiers.
+
+    Args:
+        days: Look-ahead window in days (default: 14)
+
+    Returns:
+        JSON with urgency tiers and entry details
+    """
+    try:
+        from campaign import generate_campaign_data
+        from pipeline_lib import load_entries
+        entries = load_entries(include_filepath=True)
+        data = generate_campaign_data(entries, days)
+        return json.dumps(data, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
 if __name__ == "__main__":
     # Start the MCP server using stdio transport
     mcp.run()

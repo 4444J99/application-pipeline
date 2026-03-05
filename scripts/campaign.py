@@ -582,6 +582,27 @@ def generate_campaign_markdown(entries: list[dict], days_ahead: int) -> str:
     return "\n".join(lines)
 
 
+def generate_campaign_data(entries: list[dict], days: int = 14) -> dict:
+    """Generate structured campaign data for JSON output."""
+    campaign = get_campaign_entries(entries, days_ahead=days)
+    tiers: dict[str, list[dict]] = {"critical": [], "urgent": [], "upcoming": [], "ready": []}
+    for entry in campaign:
+        tier = classify_urgency(entry)
+        tiers[tier].append({
+            "id": entry.get("id"),
+            "name": entry.get("name"),
+            "status": entry.get("status"),
+            "score": get_score(entry),
+            "deadline": str(get_deadline(entry)[0] or ""),
+            "urgency": tier,
+        })
+    return {
+        "days_ahead": days,
+        "total_entries": len(campaign),
+        "tiers": tiers,
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Deadline-aware campaign orchestrator"
@@ -598,9 +619,18 @@ def main():
                         help="Preview execution without modifying files")
     parser.add_argument("--yes", "-y", action="store_true",
                         help="Skip confirmation prompt")
+    parser.add_argument("--json", action="store_true",
+                        help="Output JSON instead of formatted text")
     args = parser.parse_args()
 
     entries = load_entries(include_filepath=True)
+
+    if args.json:
+        import json
+        data = generate_campaign_data(entries, args.days)
+        print(json.dumps(data, indent=2, default=str))
+        return
+
     campaign = get_campaign_entries(entries, days_ahead=args.days)
 
     if args.execute:

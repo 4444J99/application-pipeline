@@ -491,6 +491,40 @@ def show_stats(contacts: list[dict]) -> None:
 # --- CLI ---
 
 
+def generate_crm_data(contacts: list[dict]) -> dict:
+    """Generate structured CRM data for JSON output."""
+    orgs = get_orgs_covered(contacts)
+    overdue = get_overdue_contacts(contacts)
+    strength_dist: dict[int, int] = {}
+    for c in contacts:
+        s = c.get("relationship_strength", 0)
+        strength_dist[s] = strength_dist.get(s, 0) + 1
+    by_org: dict[str, int] = {}
+    for org in orgs:
+        by_org[org] = len(get_contacts_by_org(contacts, org))
+    return {
+        "total_contacts": len(contacts),
+        "organizations": len(orgs),
+        "overdue_count": len(overdue),
+        "overdue": [{"name": c.get("name"), "next_action_date": c.get("next_action_date")} for c in overdue],
+        "strength_distribution": strength_dist,
+        "by_org": by_org,
+    }
+
+
+def suggest_all_proximity(contacts: list[dict], entries: list[dict]) -> list[dict]:
+    """Compute network_proximity suggestions for all entries based on contact depth."""
+    suggestions = []
+    for entry in entries:
+        eid = entry.get("id", "")
+        score = suggest_network_proximity(contacts, eid)
+        current = (entry.get("fit", {}) or {}).get("dimensions", {}) or {}
+        current_prox = current.get("network_proximity")
+        if current_prox != score:
+            suggestions.append({"id": eid, "current": current_prox, "suggested": score})
+    return suggestions
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Lightweight relationship CRM for the application pipeline"
@@ -505,6 +539,8 @@ def main():
     parser.add_argument("--stats", action="store_true", help="Relationship statistics")
     parser.add_argument("--set-action", action="store_true", help="Set next action for a contact")
     parser.add_argument("--proximity", metavar="ENTRY_ID", help="Suggest network_proximity score for an entry")
+    parser.add_argument("--json", action="store_true", help="Output JSON instead of formatted text")
+    parser.add_argument("--wire-proximity", action="store_true", help="Update entry YAML with suggested network_proximity")
 
     # Contact fields
     parser.add_argument("--name", metavar="NAME", help="Contact name")
@@ -612,6 +648,30 @@ def main():
         return
 
     contacts = load_contacts()
+
+    if args.json:
+        import json
+        data = generate_crm_data(contacts)
+        print(json.dumps(data, indent=2, default=str))
+        return
+
+    if args.wire_proximity:
+        from pipeline_lib import load_entries, load_entry_by_id, update_yaml_field
+        entries = load_entries()
+        suggestions = suggest_all_proximity(contacts, entries)
+        if not suggestions:
+            print("All entries already have matching network_proximity scores.")
+            return
+        for s in suggestions:
+            path, entry = load_entry_by_id(s["id"])
+            if path:
+                content = path.read_text()
+                content = update_yaml_field(content, "network_proximity", str(s["suggested"]),
+                                            nested=True, parent_key="dimensions")
+                path.write_text(content)
+                print(f"  {s['id']}: {s['current']} → {s['suggested']}")
+        print(f"\nUpdated {len(suggestions)} entries.")
+        return
 
     if args.due:
         show_due(contacts)

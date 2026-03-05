@@ -463,6 +463,19 @@ def main():
         agent.execute_actions(agent.actions_planned)
         print("\n" + agent.report())
 
+        # Dispatch notification
+        try:
+            from notify import dispatch_event
+            results = dispatch_event("agent_action", {
+                "summary": f"Agent executed {len(agent.actions_planned)} actions",
+                "actions": [a.get("action", "") for a in agent.actions_planned[:10]],
+            })
+            for r in results:
+                status = "OK" if r["success"] else "FAILED"
+                print(f"  Notification [{r['channel']}]: {status} — {r['message']}")
+        except ImportError:
+            pass
+
     agent.write_run_log()
 
 
