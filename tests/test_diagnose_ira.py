@@ -15,6 +15,7 @@ from diagnose_ira import (
     compute_consensus,
     compute_fleiss_kappa,
     compute_icc,
+    discover_rating_files,
     extract_dimension_scores,
     generate_ira_report,
     generate_json_report,
@@ -258,10 +259,25 @@ class TestReportGeneration:
         assert "INTER-RATER AGREEMENT" in report
         assert "claude-opus" in report
         assert "gpt-4" in report
+        assert "Cohen's kappa" in report
 
     def test_json_report_structure(self, sample_ratings):
         output = generate_json_report(sample_ratings, show_consensus=True)
         assert output["n_raters"] == 2
         assert "overall_icc" in output
         assert "consensus" in output
+        assert output["categorical_agreement"]["method"] == "cohens_kappa"
         assert "test_coverage" in output["dimensions"]
+
+
+class TestDiscoverRatingFiles:
+    def test_discovers_json_files(self, tmp_path):
+        ratings_dir = tmp_path / "ratings"
+        ratings_dir.mkdir()
+        (ratings_dir / "a.json").write_text("{}", encoding="utf-8")
+        (ratings_dir / "b.json").write_text("{}", encoding="utf-8")
+
+        files = discover_rating_files(tmp_path)
+        assert len(files) == 2
+        assert files[0].endswith("a.json")
+        assert files[1].endswith("b.json")

@@ -1,0 +1,43 @@
+id: poolside-ai-founding-forward-deployed-research-engineer-fdre-clearance
+name: Poolside AI Founding Forward Deployed Research Engineer (FDRE - Clearance)
+track: job
+status: research
+outcome: null
+target:
+  organization: Poolside AI
+  url: https://jobs.ashbyhq.com/poolside
+  application_url: https://jobs.ashbyhq.com/poolside/9b5e9618-5c7a-4d2f-89b3-60c0710fbd3e
+  portal: ashby
+  location: New York, US
+  location_class: us-onsite
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-05'
+  posting_date: null
+  date_added: '2026-03-05'
+  discovered: '2026-03-05T08:28:52.776728+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-05'

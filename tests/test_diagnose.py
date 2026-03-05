@@ -104,6 +104,38 @@ class TestMeasureTestCoverage:
         result = measure_test_coverage()
         assert result["score"] >= 1.0
 
+    def test_pytest_missing_uses_fallback_estimate(self, monkeypatch, tmp_path):
+        tests_dir = tmp_path / "tests"
+        tests_dir.mkdir()
+        (tests_dir / "test_sample.py").write_text(
+            "def test_alpha():\n    assert True\n\n"
+            "def test_beta():\n    assert True\n",
+            encoding="utf-8",
+        )
+
+        monkeypatch.setattr("diagnose.TESTS_DIR", tests_dir)
+        monkeypatch.setattr("diagnose._python_with_module", lambda _name: sys.executable)
+
+        def mock_run(cmd, **kwargs):
+            class R:
+                pass
+            r = R()
+            if "-m" in cmd and "pytest" in cmd:
+                r.returncode = 1
+                r.stdout = ""
+                r.stderr = "No module named pytest"
+            else:
+                r.returncode = 0
+                r.stdout = "All 1/1 modules covered."
+                r.stderr = ""
+            return r
+
+        monkeypatch.setattr("diagnose.subprocess.run", mock_run)
+        result = measure_test_coverage()
+        assert result["details"]["test_count"] == 2
+        assert result["details"]["test_count_fallback_used"] is True
+        assert result["confidence"] == "medium"
+
 
 class TestMeasureCodeQuality:
     def test_zero_lint_errors(self, monkeypatch):
@@ -131,6 +163,76 @@ class TestMeasureCodeQuality:
         monkeypatch.setattr("diagnose.SCRIPTS_DIR", Path("/nonexistent"))
         result = measure_code_quality()
         assert result["score"] < 5.0
+
+    def test_ruff_missing_sets_low_confidence(self, monkeypatch):
+        monkeypatch.setattr("diagnose._python_with_module", lambda _name: sys.executable)
+
+        def mock_run(cmd, **kwargs):
+            class R:
+                returncode = 1
+                stdout = ""
+                stderr = "No module named ruff"
+            return R()
+
+        monkeypatch.setattr("diagnose.subprocess.run", mock_run)
+        monkeypatch.setattr("diagnose.SCRIPTS_DIR", Path("/nonexistent"))
+        result = measure_code_quality()
+        assert result["confidence"] == "low"
+        assert result["details"]["ruff_unavailable"] is True
+
+class TestShadowScripts:
+    def test_finds_unmapped_scripts(self, tmp_path, monkeypatch):
+        # Create a fake scripts dir
+        scripts_dir = tmp_path / "scripts"
+        scripts_dir.mkdir()
+        (scripts_dir / "run.py").write_text(
+            'COMMANDS = {"mapped": ("mapped.py", [], "desc")}\n'
+            'PARAM_COMMANDS = {}',
+            encoding="utf-8",
+        )
+        (scripts_dir / "mapped.py").write_text("print('hi')", encoding="utf-8")
+        (scripts_dir / "shadow.py").write_text("print('spooky')", encoding="utf-8")
+        (scripts_dir / "_internal.py").write_text("print('hidden')", encoding="utf-8")
+
+        monkeypatch.setattr("diagnose.SCRIPTS_DIR", scripts_dir)
+
+        from diagnose import _get_shadow_scripts
+        shadows = _get_shadow_scripts()
+
+        # shadow.py is unmapped and not core infra
+        assert "shadow.py" in shadows
+        # mapped.py is mapped
+        assert "mapped.py" not in shadows
+        # _internal.py starts with _
+        assert "_internal.py" not in shadows
+        # run.py is core infra
+        assert "run.py" not in shadows
+        
+        assert len(shadows) == 1
+
+    def test_code_quality_penalizes_shadows(self, monkeypatch):
+        monkeypatch.setattr("diagnose._python_with_module", lambda _name: sys.executable)
+        monkeypatch.setattr("diagnose._get_shadow_scripts", lambda: ["shadow1.py", "shadow2.py"])
+
+        def mock_run(cmd, **kwargs):
+            class R:
+                returncode = 0
+                stdout = "All checks passed!\n"
+                stderr = ""
+            return R()
+        monkeypatch.setattr("diagnose.subprocess.run", mock_run)
+        # Mock SCRIPTS_DIR to avoid counting actual functions
+        monkeypatch.setattr("diagnose.SCRIPTS_DIR", Path("/nonexistent"))
+
+        from diagnose import measure_code_quality
+        result = measure_code_quality()
+
+        # Without shadows, 0 lint errors = 7.0 + hint_ratio*3.0.
+        # Here hinted=0, total=0 -> ratio=0. Score would be 7.0.
+        # 2 shadows = 0.4 penalty. Expected score = 6.6.
+        assert result["score"] == 6.6
+        assert "2 shadow scripts" in result["evidence"]
+        assert result["details"]["shadow_scripts"] == ["shadow1.py", "shadow2.py"]
 
 
 class TestMeasureDataIntegrity:

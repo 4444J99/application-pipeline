@@ -2,3 +2,10 @@ notifications:
 - event_type: weekly_brief
   timestamp: '2026-03-05T00:49:42.814587'
   summary: test
+- event_type: agent_action
+  timestamp: '2026-03-05T03:27:40.119862'
+  summary: Agent executed 3 actions
+  actions:
+  - flag_for_submission
+  - flag_for_submission
+  - flag_for_submission

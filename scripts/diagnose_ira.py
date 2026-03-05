@@ -7,6 +7,7 @@ multiple rater JSON files produced by diagnose.py --json.
 Pure-stdlib implementation — no scipy or numpy dependency.
 
 Usage:
+    python scripts/diagnose_ira.py                # Auto-load ratings/*.json
     python scripts/diagnose_ira.py ratings/*.json
     python scripts/diagnose_ira.py ratings/*.json --consensus
     python scripts/diagnose_ira.py ratings/*.json --json
@@ -18,8 +19,10 @@ import math
 import sys
 from pathlib import Path
 
-# Landis & Koch (1977) interpretation bands
-INTERPRETATION_BANDS = [
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
+# Landis & Koch (1977) interpretation bands (default fallback)
+DEFAULT_INTERPRETATION_BANDS = [
     (-1.0, 0.00, "poor"),
     (0.00, 0.20, "slight"),
     (0.20, 0.40, "fair"),
@@ -29,13 +32,37 @@ INTERPRETATION_BANDS = [
 ]
 
 
+def load_rubric_bands() -> list[tuple[float, float, str]]:
+    """Load interpretation bands from the rubric YAML if available."""
+    rubric_path = REPO_ROOT / "strategy" / "system-grading-rubric.yaml"
+    if not rubric_path.is_file():
+        return DEFAULT_INTERPRETATION_BANDS
+
+    try:
+        import yaml
+        with open(rubric_path) as f:
+            rubric = yaml.safe_load(f)
+        bands_cfg = rubric.get("ira", {}).get("interpretation_bands", {})
+        if not bands_cfg:
+            return DEFAULT_INTERPRETATION_BANDS
+
+        bands = []
+        for label, range_list in bands_cfg.items():
+            if isinstance(range_list, list) and len(range_list) == 2:
+                bands.append((float(range_list[0]), float(range_list[1]), label))
+        return sorted(bands, key=lambda x: x[0])
+    except Exception:
+        return DEFAULT_INTERPRETATION_BANDS
+
+
 def interpret_agreement(value: float) -> str:
-    """Map an agreement coefficient to Landis & Koch interpretation band."""
-    for low, high, label in INTERPRETATION_BANDS:
-        if low <= value < high:
+    """Map an agreement coefficient to interpretation band."""
+    bands = load_rubric_bands()
+    for low, high, label in bands:
+        if low <= value <= high:
             return label
     if value >= 1.0:
-        return "almost_perfect"
+        return bands[-1][2] if bands else "almost_perfect"
     return "poor"
 
 
@@ -278,14 +305,17 @@ def _median(values: list[float]) -> float:
 # ---------------------------------------------------------------------------
 
 def bin_score(score: float) -> str:
-    """Bin a continuous score into a categorical band."""
+    """Bin a continuous score into a categorical band based on rubric anchors.
+    
+    Anchors: 1 (critical), 3 (below_average), 5 (adequate), 7 (strong), 10 (exemplary)
+    """
     if score < 2.0:
         return "critical"
     elif score < 4.0:
         return "below_average"
     elif score < 6.0:
         return "adequate"
-    elif score < 8.0:
+    elif score < 8.5:
         return "strong"
     else:
         return "exemplary"
@@ -294,6 +324,14 @@ def bin_score(score: float) -> str:
 # ---------------------------------------------------------------------------
 # Load rating files
 # ---------------------------------------------------------------------------
+
+def discover_rating_files(repo_root: Path = REPO_ROOT) -> list[str]:
+    """Discover default rating JSON files from ratings/ directory."""
+    ratings_dir = repo_root / "ratings"
+    if not ratings_dir.is_dir():
+        return []
+    return [str(p) for p in sorted(ratings_dir.glob("*.json")) if p.is_file()]
+
 
 def load_ratings(paths: list[str]) -> list[dict]:
     """Load rating JSON files."""
@@ -375,6 +413,17 @@ def generate_ira_report(
         band = interpret_agreement(overall_icc)
 
         lines.append(f"  Overall ICC(2,1): {overall_icc:.3f} ({band})")
+
+        binned = [[bin_score(s) for s in scores_per_dim[d]] for d in complete_dims]
+        if n_raters == 2:
+            cohen = compute_cohens_kappa(
+                [row[0] for row in binned],
+                [row[1] for row in binned],
+            )
+            lines.append(f"  Cohen's kappa (binned): {cohen:.3f} ({interpret_agreement(cohen)})")
+        elif n_raters >= 3:
+            fleiss = compute_fleiss_kappa(binned)
+            lines.append(f"  Fleiss' kappa (binned): {fleiss:.3f} ({interpret_agreement(fleiss)})")
         lines.append("")
 
     # Per-dimension table
@@ -436,9 +485,28 @@ def generate_json_report(ratings: list[dict], show_consensus: bool = False) -> d
     complete_dims = [d for d in all_dims if len(scores_per_dim[d]) == n_raters]
 
     overall_icc = 0.0
+    categorical_agreement: dict | None = None
     if complete_dims and n_raters >= 2:
         matrix = [scores_per_dim[d] for d in complete_dims]
         overall_icc = compute_icc(matrix)
+        binned = [[bin_score(s) for s in scores_per_dim[d]] for d in complete_dims]
+        if n_raters == 2:
+            value = compute_cohens_kappa(
+                [row[0] for row in binned],
+                [row[1] for row in binned],
+            )
+            categorical_agreement = {
+                "method": "cohens_kappa",
+                "value": round(value, 3),
+                "interpretation": interpret_agreement(value),
+            }
+        elif n_raters >= 3:
+            value = compute_fleiss_kappa(binned)
+            categorical_agreement = {
+                "method": "fleiss_kappa",
+                "value": round(value, 3),
+                "interpretation": interpret_agreement(value),
+            }
 
     per_dim = {}
     for dim in all_dims:
@@ -461,6 +529,8 @@ def generate_json_report(ratings: list[dict], show_consensus: bool = False) -> d
         "overall_interpretation": interpret_agreement(overall_icc),
         "dimensions": per_dim,
     }
+    if categorical_agreement:
+        result["categorical_agreement"] = categorical_agreement
 
     if show_consensus:
         result["consensus"] = compute_consensus(scores_per_dim)
@@ -476,17 +546,22 @@ def main():
     parser = argparse.ArgumentParser(
         description="Inter-Rater Agreement computation for diagnostic grade norming",
     )
-    parser.add_argument("files", nargs="*", help="Rating JSON files from diagnose.py --json")
+    parser.add_argument(
+        "files",
+        nargs="*",
+        help="Rating JSON files from diagnose.py --json (defaults to ratings/*.json)",
+    )
     parser.add_argument("--consensus", action="store_true", help="Include consensus scores")
     parser.add_argument("--json", action="store_true", help="Machine-readable JSON output")
     args = parser.parse_args()
 
-    if not args.files:
+    files = args.files or discover_rating_files()
+    if not files:
         print("Error: provide at least 2 rating JSON files.", file=sys.stderr)
         print("Usage: python scripts/diagnose_ira.py ratings/*.json", file=sys.stderr)
         sys.exit(1)
 
-    ratings = load_ratings(args.files)
+    ratings = load_ratings(files)
     if len(ratings) < 2:
         print(f"Error: need ≥2 valid rating files, got {len(ratings)}.", file=sys.stderr)
         sys.exit(1)

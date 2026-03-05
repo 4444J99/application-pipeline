@@ -37,6 +37,48 @@ def load_rubric() -> dict:
         return yaml.safe_load(f)
 
 
+def _python_with_module(module_name: str) -> str:
+    """Pick a Python interpreter that can import `module_name`.
+
+    Preference order:
+    1) current interpreter
+    2) repo-local .venv interpreter
+    3) python3 / python on PATH
+    """
+    candidates = [
+        sys.executable,
+        str(REPO_ROOT / ".venv" / "bin" / "python"),
+        "python3",
+        "python",
+    ]
+
+    seen = set()
+    for candidate in candidates:
+        if candidate in seen:
+            continue
+        seen.add(candidate)
+
+        candidate_path = Path(candidate)
+        if candidate_path.is_absolute() and not candidate_path.exists():
+            continue
+
+        try:
+            probe = subprocess.run(
+                [candidate, "-c", f"import {module_name}"],
+                capture_output=True,
+                text=True,
+                timeout=15,
+                cwd=str(REPO_ROOT),
+            )
+        except (FileNotFoundError, subprocess.TimeoutExpired):
+            continue
+
+        if probe.returncode == 0:
+            return candidate
+
+    return sys.executable
+
+
 def _run_cmd(cmd: list[str], timeout: int = 120) -> tuple[int, str]:
     """Run a command and return (returncode, combined output)."""
     try:
@@ -58,15 +100,28 @@ def _run_cmd(cmd: list[str], timeout: int = 120) -> tuple[int, str]:
 
 def measure_test_coverage() -> dict:
     """Measure test count and verification matrix ratio."""
+    pytest_python = _python_with_module("pytest")
+
     # Count tests via pytest --co
-    rc, output = _run_cmd([sys.executable, "-m", "pytest", "tests/", "--co", "-q"])
+    rc, output = _run_cmd([pytest_python, "-m", "pytest", "tests/", "--co", "-q"])
     test_count = 0
+    fallback_used = False
     if rc == 0:
         # Last line like "N tests collected"
         for line in output.strip().splitlines():
             m = re.search(r"(\d+)\s+tests?\s+", line)
             if m:
                 test_count = int(m.group(1))
+    elif "no module named pytest" in output.lower():
+        # Fallback: count test functions directly when pytest is unavailable.
+        fallback_used = True
+        for test_file in TESTS_DIR.rglob("test_*.py"):
+            try:
+                text = test_file.read_text(encoding="utf-8", errors="replace")
+            except OSError:
+                continue
+            # Matches 'def test_...' and '  def test_...' (for class methods)
+            test_count += len(re.findall(r"^\s*def\s+test_", text, flags=re.MULTILINE))
 
     # Verification matrix ratio
     rc2, output2 = _run_cmd([
@@ -103,27 +158,78 @@ def measure_test_coverage() -> dict:
 
     return {
         "score": score,
-        "confidence": "high",
-        "evidence": f"{test_count} tests; matrix {matrix_detail}",
+        "confidence": "medium" if fallback_used else "high",
+        "evidence": (
+            f"{test_count} tests{' (fallback estimate)' if fallback_used else ''}; "
+            f"matrix {matrix_detail}"
+        ),
         "details": {
             "test_count": test_count,
             "matrix_ratio": round(matrix_ratio, 3),
             "matrix_detail": matrix_detail,
+            "test_count_fallback_used": fallback_used,
         },
     }
 
 
+def _get_shadow_scripts() -> list[str]:
+    """Find scripts in scripts/ that are not mapped in run.py."""
+    run_py = SCRIPTS_DIR / "run.py"
+    if not run_py.is_file():
+        return []
+
+    try:
+        text = run_py.read_text(encoding="utf-8")
+    except OSError:
+        return []
+
+    # Simple regex to find script names in COMMANDS and PARAM_COMMANDS
+    mapped = set(re.findall(r'["\']([^"\']+\.py)["\']', text))
+    actual = {p.name for p in SCRIPTS_DIR.glob("*.py") if not p.name.startswith("_")}
+
+    # Exclude core infrastructure and libraries
+    core_infra = {
+        "__init__.py", "run.py", "diagnose.py", "diagnose_ira.py",
+        "pipeline_lib.py", "pipeline_api.py", "mcp_server.py", "cli.py",
+        "pipeline_entry_state.py", "pipeline_freshness.py", "pipeline_market.py",
+        "ats_base.py", "yaml_mutation.py", "verification_matrix.py",
+        "build_block_index.py", "generate_id_mappings.py", "portfolio_bridge.py",
+        "submit_ready.py", "sync_metrics.py",
+    }
+    
+    # Also exclude helper modules (constants, sections, sub-scores, sub-submitters)
+    shadows = []
+    for name in actual:
+        if name in mapped or name in core_infra:
+            continue
+        if name.startswith("score_"):
+            continue
+        if any(name.endswith(suffix) for suffix in ["_constants.py", "_sections.py", "_dimensions.py", "_submit.py"]):
+            continue
+        shadows.append(name)
+
+    return sorted(shadows)
+
+
 def measure_code_quality() -> dict:
-    """Measure lint errors and type hint presence."""
+    """Measure lint errors, type hint presence, and shadow scripts."""
+    ruff_python = _python_with_module("ruff")
     rc, output = _run_cmd([
-        sys.executable, "-m", "ruff", "check", "scripts/", "tests/",
+        ruff_python, "-m", "ruff", "check", "scripts/", "tests/",
     ])
-    lint_errors = 0
-    if rc != 0:
+    lint_errors: int | None = 0
+    ruff_unavailable = "no module named ruff" in output.lower() or "command not found" in output.lower()
+    if ruff_unavailable:
+        lint_errors = None
+    elif rc != 0:
         # Count lines that look like errors (file:line:col: CODE message)
+        lint_errors = 0
         for line in output.strip().splitlines():
             if re.match(r".+:\d+:\d+:\s+\w+\d+", line):
                 lint_errors += 1
+
+    # Shadow scripts detection
+    shadows = _get_shadow_scripts()
 
     # Count type-hinted functions in scripts/
     hinted = 0
@@ -143,7 +249,9 @@ def measure_code_quality() -> dict:
     hint_ratio = hinted / total_funcs if total_funcs > 0 else 0.0
 
     # Score
-    if lint_errors == 0:
+    if lint_errors is None:
+        score = 4.0 + min(2.0, hint_ratio * 2.0)
+    elif lint_errors == 0:
         score = 7.0 + min(3.0, hint_ratio * 3.0)
     elif lint_errors <= 10:
         score = 5.0 + min(2.0, (10 - lint_errors) / 10 * 2.0)
@@ -152,17 +260,27 @@ def measure_code_quality() -> dict:
     else:
         score = max(1.0, 3.0 - (lint_errors - 50) / 50)
 
+    # Penalize for shadow scripts (0.2 per shadow, max 2.0 penalty)
+    if shadows:
+        score = max(1.0, score - min(2.0, len(shadows) * 0.2))
+
     score = round(min(10.0, score), 1)
 
+    shadow_msg = f"; {len(shadows)} shadow scripts" if shadows else ""
     return {
         "score": score,
-        "confidence": "high",
-        "evidence": f"{lint_errors} lint errors; {hinted}/{total_funcs} functions type-hinted",
+        "confidence": "low" if lint_errors is None else "high",
+        "evidence": (
+            f"{'ruff unavailable' if lint_errors is None else f'{lint_errors} lint errors'}; "
+            f"{hinted}/{total_funcs} functions type-hinted{shadow_msg}"
+        ),
         "details": {
             "lint_errors": lint_errors,
             "type_hinted_functions": hinted,
             "total_functions": total_funcs,
             "hint_ratio": round(hint_ratio, 3),
+            "ruff_unavailable": lint_errors is None,
+            "shadow_scripts": shadows,
         },
     }
 
@@ -175,10 +293,15 @@ def measure_data_integrity() -> dict:
     ])
     val_errors = 0
     if rc1 != 0:
-        for line in output1.strip().splitlines():
-            low = line.lower()
-            if "error" in low or "invalid" in low or "missing" in low:
-                val_errors += 1
+        # Try to find the summary line: "VALIDATION FAILED — X file(s) with errors"
+        match = re.search(r"VALIDATION FAILED — (\d+) file", output1)
+        if match:
+            val_errors = int(match.group(1))
+        else:
+            # Fallback to counting lines that look like file headers in the error report
+            for line in output1.strip().splitlines():
+                if line.endswith(".yaml:") and not line.startswith("  "):
+                    val_errors += 1
 
     rc2, output2 = _run_cmd([
         sys.executable, str(SCRIPTS_DIR / "validate_signals.py"), "--strict",
@@ -235,13 +358,18 @@ def measure_operational_maturity() -> dict:
     backup_dir = REPO_ROOT / "backups"
     recent_backup = False
     backup_age_days = -1
+    
+    # Check root and backups dir
+    backup_candidates = list(REPO_ROOT.glob("pipeline-backup-*.tar.gz"))
     if backup_dir.is_dir():
-        backups = sorted(backup_dir.glob("*.tar.gz"), key=lambda p: p.stat().st_mtime, reverse=True)
-        if backups:
-            import time
-            age_seconds = time.time() - backups[0].stat().st_mtime
-            backup_age_days = int(age_seconds / 86400)
-            recent_backup = backup_age_days <= 7
+        backup_candidates.extend(list(backup_dir.glob("*.tar.gz")))
+        
+    if backup_candidates:
+        backups = sorted(backup_candidates, key=lambda p: p.stat().st_mtime, reverse=True)
+        import time
+        age_seconds = time.time() - backups[0].stat().st_mtime
+        backup_age_days = int(age_seconds / 86400)
+        recent_backup = backup_age_days <= 7
 
     # Check notification config
     notify_config = REPO_ROOT / "strategy" / "notifications.yaml"
@@ -481,17 +609,7 @@ def compute_diagnostic_score(
     rubric: dict,
 ) -> float:
     """Compute weighted composite score from dimension scores."""
-    dimensions = rubric.get("dimensions", {})
-    total = 0.0
-    weight_sum = 0.0
-    for dim_key, dim_cfg in dimensions.items():
-        weight = dim_cfg.get("weight", 0.0)
-        if dim_key in scores and scores[dim_key].get("score") is not None:
-            total += weight * scores[dim_key]["score"]
-            weight_sum += weight
-    if weight_sum == 0:
-        return 0.0
-    return round(total / weight_sum * weight_sum / weight_sum * (total / weight_sum), 1)
+    return compute_composite(scores, rubric)
 
 
 def compute_composite(scores: dict[str, dict], rubric: dict) -> float:

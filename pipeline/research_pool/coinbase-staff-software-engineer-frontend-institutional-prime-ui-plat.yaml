@@ -1,0 +1,43 @@
+id: coinbase-staff-software-engineer-frontend-institutional-prime-ui-plat
+name: Coinbase Staff Software Engineer, Frontend (Institutional - Prime UI Platform)
+track: job
+status: research
+outcome: null
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7578604?gh_jid=7578604
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-05'
+  posting_date: '2026-03-03'
+  date_added: '2026-03-05'
+  discovered: '2026-03-05T08:28:52.423925+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-05'

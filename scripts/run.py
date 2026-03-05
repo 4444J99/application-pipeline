@@ -35,6 +35,7 @@ COMMANDS = {
     "qualify":     ("score.py", ["--auto-qualify"],       "Preview auto-qualification"),
     "enrichall":   ("enrich.py", ["--all", "--dry-run"], "Preview all enrichments"),
     "preflight":   ("preflight.py", [],                  "Batch submission readiness"),
+    "resumes":     ("build_resumes.py", [],              "Rebuild PDF resumes from JSON/Markdown sources"),
     "archive":     ("archive_research.py", ["--report"], "Show archival candidates"),
     "triagegate":  ("triage.py", [],                      "Triage gate: demote sub-threshold staged, resolve org-cap"),
     "triage":      ("smart_triage.py", [],               "Smart triage: decay-scored research entry ranking"),
@@ -42,8 +43,12 @@ COMMANDS = {
     # -- Analytics --
     "funnel":      ("funnel_report.py", [],              "Conversion funnel analytics"),
     "conversion":  ("conversion_report.py", [],          "Conversion rate report by track/position/score"),
+    "dashboard":   ("conversion_dashboard.py", [],       "Rich terminal conversion dashboard"),
+    "velocity":    ("velocity.py", [],                   "Pipeline throughput: staleness, deadlines, throughput"),
+    "velocity-log": ("velocity_report.py", [],            "Monthly submission velocity and historical conversion"),
     "quarterly":   ("quarterly_report.py", [],             "Quarterly State of Applications analytics report"),
     "rejections":  ("rejection_learner.py", [],              "Rejection learning: correlate factors with outcomes"),
+    "risks":       ("outcome_risk.py", [],                   "Predict submission risk and bottleneck likelihood"),
     "blockoutcomes": ("block_outcomes.py", [],                "Block-outcome correlation: golden/toxic blocks"),
     "blockroi":    ("block_roi_analysis.py", [],          "Block acceptance rate ROI analysis"),
     "portfolio":   ("portfolio_analysis.py", [],          "Portfolio analysis: blocks, positions, channels, variants"),
@@ -54,16 +59,19 @@ COMMANDS = {
 
     # -- Relationships --
     "crm":         ("crm.py", [],                            "Relationship CRM: contacts, interactions, coverage gaps"),
+    "hydrate":     ("hydrate_followups.py", [],              "Hydrate relationship metadata from LinkedIn/Email"),
     "cultivate":   ("cultivate.py", ["--candidates"],       "Relationship cultivation candidates"),
     "warmintro":   ("warm_intro_audit.py", [],            "Warm intro audit: referral paths and org density"),
 
     # -- Validation & Health --
     "validate":    ("validate.py", [],                   "Pipeline YAML schema validation"),
     "metrics":     ("check_metrics.py", [],              "Metric consistency check across blocks/profiles/strategy"),
+    "health":      ("daily_pipeline_health.py", [],      "Daily pipeline integrity and freshness check"),
     "hygiene":     ("hygiene.py", [],                    "Entry data quality report: URLs, staleness, gates"),
     "signals":     ("validate_signals.py", [],              "Validate signal YAML schema integrity"),
     "verifyall":   ("verify_all.py", [],                     "Run full verification gates (matrix + lint + validate + tests)"),
     "monitor":     ("monitor_pipeline.py", [],            "Monitor backup + conversion-log freshness"),
+    "scheduler":   ("scheduler_health.py", [],           "Launchd scheduler and agent health check"),
     "freshness":   ("freshness_monitor.py", [],          "Entry freshness report (posting age analysis)"),
     "resumes":     ("upgrade_resumes.py", [],             "Check for stale resume batch references"),
 
@@ -78,12 +86,15 @@ COMMANDS = {
     # -- Strategy --
     "market":      ("market_intel.py", [],               "Market conditions, benchmarks, and grant calendar"),
     "funding":     ("funding_scorer.py", ["--pathway"],         "Non-dilutive funding opportunities by viability"),
+    "funding-metrics": ("funding_metrics.py", [],            "Aggregate funding performance and velocity metrics"),
     "tracker":     ("blind_spot_tracker.py", [],         "Blind spot progress tracker with actionable items"),
 
     # -- Content & Jobs --
     "sourcejobs":  ("source_jobs.py", ["--fetch", "--dry-run"], "Preview new job postings from ATS APIs"),
     "keywords":    ("distill_keywords.py", [],           "Extract keywords from job postings"),
-    "buildblocks": ("generate_project_blocks.py", [],    "Generate blocks from project data"),
+    "blocks":      ("generate_project_blocks.py", [],    "Generate blocks from project data"),
+    "derive":      ("derive_profile.py", [],             "Derive target profiles from raw evidence blocks"),
+    "profiles":    ("generate_job_profile.py", [],       "Generate standardized target profiles from postings"),
     "topjobs":     ("ingest_top_roles.py", [],            "Daily glove-fit fetch: top roles ≥ 9.0 score"),
     "discover":    ("discover_jobs.py", [],                "Skill-based job discovery across free APIs"),
     "calendar":    ("calendar_export.py", [],                 "Export pipeline deadlines to iCal"),
@@ -91,10 +102,12 @@ COMMANDS = {
 
     # -- Diagnostics --
     "diagnose":    ("diagnose.py", [],                       "System diagnostic scorecard (objective dimensions)"),
-    "ira":         ("diagnose_ira.py", [],                   "Inter-rater agreement report (needs ratings/*.json)"),
+    "ira":         ("diagnose_ira.py", [],                   "Inter-rater agreement report (auto-loads ratings/*.json)"),
 
     # -- Infrastructure --
     "agent":       ("agent.py", ["--plan"],              "Agent: preview planned autonomous actions"),
+    "unblock":     ("unblock_submissions.py", [],        "Identify and resolve submission bottlenecks"),
+    "audit":       ("submission_audit.py", [],           "Deep audit of submission materials and history"),
     "automation":  ("launchd_manager.py", ["--status"],  "Launchd automation status"),
     "automation-on": ("launchd_manager.py", ["--install", "--kickstart"], "Install and activate launchd agents"),
     "automation-off": ("launchd_manager.py", ["--uninstall"], "Unload and remove launchd agents"),
@@ -155,8 +168,6 @@ def show_help():
     print("  Interview: interviewprep <id> → skillsgap <id> → orgdetail <org>")
     print()
     print("REMOVED ALIASES (use underlying script flags instead):")
-    print("  velocity → funnel_report.py")
-    print("  dashboard → conversion_dashboard.py")
     print("  gaps → textmatch --all --gaps")
     print("  drift → learner (outcome_learner.py --drift-check)")
     print("  enrichnetwork → enrich.py --network")
