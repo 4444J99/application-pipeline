@@ -68,7 +68,7 @@ def run_reachable(
 
     if not actionable:
         print("No actionable entries found.")
-        return
+        return {"total_actionable": 0, "above": 0, "reachable": 0, "unreachable": 0, "threshold": threshold}
 
     reachable = []
     unreachable = []
@@ -110,6 +110,13 @@ def run_reachable(
 
     print(f"\n{'=' * 60}")
     print(f"Total: {len(already_above)} above | {len(reachable)} reachable | {len(unreachable)} unreachable")
+    return {
+        "total_actionable": len(actionable),
+        "above": len(already_above),
+        "reachable": len(reachable),
+        "unreachable": len(unreachable),
+        "threshold": threshold,
+    }
 
 
 def run_triage_staged(
@@ -137,7 +144,15 @@ def run_triage_staged(
 
     if not staged:
         print("No staged entries found.")
-        return
+        return {
+            "total_staged": 0,
+            "submit_ready": 0,
+            "hold": 0,
+            "demote": 0,
+            "dry_run": dry_run,
+            "submit_threshold": submit_threshold,
+            "demote_threshold": demote_threshold,
+        }
 
     all_raw = load_entries_raw(dirs=all_pipeline_dirs_with_pool)
 
@@ -193,3 +208,12 @@ def run_triage_staged(
     print(f"\n{'=' * 60}")
     label = " (dry-run)" if dry_run else ""
     print(f"Submit-ready: {len(submit_ready)} | Hold: {len(hold)} | Demote: {len(demote_list)}{label}")
+    return {
+        "total_staged": len(staged),
+        "submit_ready": len(submit_ready),
+        "hold": len(hold),
+        "demote": len(demote_list),
+        "dry_run": dry_run,
+        "submit_threshold": submit_threshold,
+        "demote_threshold": demote_threshold,
+    }

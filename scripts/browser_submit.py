@@ -65,6 +65,20 @@ GREENHOUSE_ANSWERS_DIR = SCRIPTS_DIR / ".greenhouse-answers"
 
 DELAY_BETWEEN_SUBMISSIONS = 4  # seconds
 
+try:  # pragma: no cover - depends on Playwright installation/runtime
+    from playwright.sync_api import Error as PlaywrightError
+    from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
+
+    NON_FATAL_AUTOMATION_ERRORS = (
+        PlaywrightError,
+        PlaywrightTimeoutError,
+        OSError,
+        RuntimeError,
+        ValueError,
+    )
+except ImportError:  # pragma: no cover - unit tests can import module without Playwright
+    NON_FATAL_AUTOMATION_ERRORS = (OSError, RuntimeError, ValueError)
+
 
 # ---------------------------------------------------------------------------
 # Greenhouse form handler
@@ -98,7 +112,7 @@ def greenhouse_fill(page, entry, config, answers):
     # Wait for the application form to appear
     try:
         page.wait_for_selector("#first_name, form, #application_form", timeout=10000)
-    except Exception:
+    except NON_FATAL_AUTOMATION_ERRORS:
         print("  WARNING: Form did not appear within 10s")
 
     # --- Personal info ---
@@ -197,10 +211,10 @@ def _fill_greenhouse_question(page, field_name, answer):
         if tag == "select":
             try:
                 el.first.select_option(label=answer)
-            except Exception:
+            except NON_FATAL_AUTOMATION_ERRORS:
                 try:
                     el.first.select_option(value=answer)
-                except Exception:
+                except NON_FATAL_AUTOMATION_ERRORS:
                     print(f"    WARNING: Could not select '{answer}' for {field_name}")
         elif tag in ("input", "textarea"):
             el.first.fill(answer)
@@ -213,10 +227,10 @@ def _fill_greenhouse_question(page, field_name, answer):
         if tag == "select":
             try:
                 el.first.select_option(label=answer)
-            except Exception:
+            except NON_FATAL_AUTOMATION_ERRORS:
                 try:
                     el.first.select_option(value=answer)
-                except Exception:
+                except NON_FATAL_AUTOMATION_ERRORS:
                     pass
         else:
             el.first.fill(answer)
@@ -276,7 +290,7 @@ def ashby_fill(page, entry, config, answers):
             'label[for="_systemfield_name"], label:has-text("Name")',
             timeout=10000,
         )
-    except Exception:
+    except NON_FATAL_AUTOMATION_ERRORS:
         print("  WARNING: Form fields did not render within 10s")
 
     # --- Location FIRST (autocomplete triggers React re-render) ---
@@ -318,7 +332,7 @@ def ashby_fill(page, entry, config, answers):
             elif count == 1:
                 file_inputs.first.set_input_files(str(resume_path))
                 resume_uploaded = True
-        except Exception as e:
+        except NON_FATAL_AUTOMATION_ERRORS as e:
             print(f"  WARNING: Resume upload error: {e}")
         if resume_uploaded:
             page.wait_for_timeout(1500)
@@ -414,13 +428,13 @@ def _fill_ashby_custom_by_label(page, config, entry):
             if location:
                 try:
                     target.first.fill(location)
-                except Exception:
+                except NON_FATAL_AUTOMATION_ERRORS:
                     pass
         elif "linkedin" in text:
             if linkedin:
                 try:
                     target.first.fill(linkedin)
-                except Exception:
+                except NON_FATAL_AUTOMATION_ERRORS:
                     pass
 
 
@@ -436,7 +450,7 @@ def _fill_ashby_field(page, field_path, answer):
         if tag == "select":
             try:
                 el.first.select_option(label=answer)
-            except Exception:
+            except NON_FATAL_AUTOMATION_ERRORS:
                 pass
         else:
             el.first.fill(answer)
@@ -451,7 +465,7 @@ def _fill_ashby_field(page, field_path, answer):
             if tag == "select":
                 try:
                     inner.first.select_option(label=answer)
-                except Exception:
+                except NON_FATAL_AUTOMATION_ERRORS:
                     pass
             else:
                 inner.first.fill(answer)
@@ -625,7 +639,7 @@ def _react_fill(page, element_id, value):
         }""", {"id": element_id, "val": value})
         page.wait_for_timeout(100)
         return True
-    except Exception:
+    except NON_FATAL_AUTOMATION_ERRORS:
         return False
 
 
@@ -633,7 +647,7 @@ def _fill_by_label_safe(page, label_text, value):
     """Wrapper around _fill_by_label that catches exceptions."""
     try:
         return _fill_by_label(page, label_text, value)
-    except Exception:
+    except NON_FATAL_AUTOMATION_ERRORS:
         return False
 
 
@@ -681,7 +695,7 @@ def _fill_location_autocomplete(page, location):
             # No dropdown — try Tab to accept typed value
             loc_input.first.press("Tab")
             page.wait_for_timeout(300)
-    except Exception as e:
+    except NON_FATAL_AUTOMATION_ERRORS as e:
         print(f"  NOTE: Location field may need manual entry ({e})")
 
 
@@ -763,7 +777,7 @@ def wait_for_confirmation(page, timeout=10000):
         try:
             page.wait_for_selector(sel, timeout=timeout)
             return True
-        except Exception:
+        except NON_FATAL_AUTOMATION_ERRORS:
             continue
     return False
 
@@ -805,7 +819,7 @@ def process_entry_browser(page, entry, config, auto_submit=False):
             workable_fill(page, entry, config)
         else:
             manual_fallback(page, entry)
-    except Exception as e:
+    except NON_FATAL_AUTOMATION_ERRORS as e:
         print(f"  ERROR filling form: {e}")
         print("  The browser is still open — fill manually if needed.")
         # Don't return failed yet, let user still review
@@ -839,7 +853,7 @@ def process_entry_browser(page, entry, config, auto_submit=False):
         try:
             record_submission(Path(filepath), entry)
             print(f"  Recorded submission for {entry_id}")
-        except Exception as e:
+        except (OSError, RuntimeError, ValueError, TypeError) as e:
             print(f"  WARNING: Could not record submission: {e}")
             print(f"  Run manually: python scripts/submit.py --target {entry_id} --record")
     else:

@@ -9,9 +9,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from outcome_learner import (
     analyze_dimension_accuracy,
+    approve_calibration,
     collect_outcome_data,
+    compute_weight_drift,
     compute_weight_recommendations,
     cross_reference_hypotheses,
+    drift_check_report,
     generate_calibration_report,
     load_calibration,
     save_calibration,
@@ -295,6 +298,55 @@ def test_load_calibration_returns_data_when_sufficient(tmp_path, monkeypatch):
     assert result is not None
     assert result["sufficient_data"] is True
     assert "weights" in result
+
+
+def test_load_calibration_blocks_unapproved_records(tmp_path, monkeypatch):
+    """New-format records with approved=false should not auto-apply."""
+    cal_file = tmp_path / "weight-calibration.yaml"
+    cal_file.write_text(yaml.dump({
+        "sufficient_data": True,
+        "approved": False,
+        "weights": {"mission_alignment": 0.25},
+    }))
+    monkeypatch.setattr("outcome_learner.CALIBRATION_FILE", cal_file)
+    assert load_calibration() is None
+
+
+def test_approve_calibration_sets_review_metadata(tmp_path, monkeypatch):
+    """approve_calibration marks file approved and stores reviewer/date fields."""
+    cal_file = tmp_path / "weight-calibration.yaml"
+    cal_file.write_text(yaml.dump({
+        "sufficient_data": True,
+        "approved": False,
+        "weights": {"mission_alignment": 0.25},
+    }))
+    monkeypatch.setattr("outcome_learner.CALIBRATION_FILE", cal_file)
+    approve_calibration("tester")
+    data = yaml.safe_load(cal_file.read_text())
+    assert data["approved"] is True
+    assert data["approved_by"] == "tester"
+    assert "approved_at" in data
+
+
+def test_compute_weight_drift_reports_max_delta():
+    """Drift helper reports per-dimension deltas and max absolute drift."""
+    base = {"mission_alignment": 0.20, "evidence_match": 0.20}
+    calibrated = {"mission_alignment": 0.28, "evidence_match": 0.12}
+    result = compute_weight_drift(base, calibrated)
+    assert result["max_abs_delta"] == 0.08
+    assert "mission_alignment" in result["deltas"]
+
+
+def test_drift_check_report_includes_budget_line():
+    """Drift report prints max-drift summary with configured budget."""
+    calibration = {
+        "weights": {"mission_alignment": 0.3},
+        "max_dimension_drift": 0.08,
+    }
+    base = {"mission_alignment": 0.2}
+    report = drift_check_report(calibration, base)
+    assert "Max absolute drift" in report
+    assert "budget" in report
 
 
 # --- cross_reference_hypotheses ---

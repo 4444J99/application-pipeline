@@ -31,6 +31,7 @@ scripts/.job-sources.yaml
 scripts/.job-source-stats.yaml
 scripts/.discovery-queries.yaml
 scripts/.discovery-stats.yaml
+signals/score-telemetry.yaml
 
 # Caches
 .pytest_cache/

@@ -13,12 +13,16 @@ jobs:
   quick:
     runs-on: ubuntu-latest
     if: github.event_name == 'push' || github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: ${{ matrix.python-version }}
 
       - name: Install dependencies
         run: pip install -e ".[dev]"
@@ -39,5 +43,23 @@ jobs:
       - name: Install dependencies
         run: pip install -e ".[dev]"
 
-      - name: Full repository tests
-        run: python -m pytest tests/ -q
+      - name: Full verification gates
+        run: |
+          python scripts/verify_all.py | tee quality-verify.log
+
+      - name: Staged preflight snapshot (advisory)
+        run: |
+          python scripts/preflight.py --status staged | tee quality-preflight.log || true
+
+      - name: Outcome learning drift snapshot
+        run: |
+          python scripts/outcome_learner.py --drift-check | tee quality-outcome-learner.log
+
+      - name: Upload quality artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: quality-artifacts
+          path: |
+            quality-verify.log
+            quality-preflight.log
+            quality-outcome-learner.log

@@ -15,6 +15,7 @@ Application processes waste enormous energy on redundant writing. This system tr
 
 ```bash
 pip install -e ".[dev]"      # Install with dev dependencies
+make verify-quick            # Deterministic local verification (python -m pytest)
 
 python scripts/run.py standup      # Daily dashboard
 python scripts/run.py campaign     # Deadline-aware campaign view
@@ -106,15 +107,16 @@ Every application aligns to one of five canonical positions:
 ## Development
 
 ```bash
-python scripts/verify_all.py                 # Full verification gates (matrix + lint + validate + full tests)
-python scripts/verify_all.py --quick         # Faster local verification loop
+make verify                                 # Full verification gates (matrix + lint + validate + full tests)
+make verify-quick                           # Faster local verification loop
+make preflight                              # Staged preflight gate
 python scripts/verification_matrix.py --strict  # Module-to-verification route coverage
-ruff check scripts/ tests/                   # Lint only
+python -m ruff check scripts/ tests/         # Lint only
 python -m pytest tests/ -v                   # Full test suite only
 python scripts/validate.py                   # YAML schema validation
 ```
 
-CI runs on every push via `.github/workflows/quality.yml` (lint + validate + pytest on Python 3.12).
+CI runs on every push/PR via `.github/workflows/quality.yml` with a Python 3.11/3.12 matrix; scheduled full regression also uploads verification artifacts.
 
 ## License
 

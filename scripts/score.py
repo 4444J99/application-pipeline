@@ -18,6 +18,7 @@ import score_explain as _score_explain
 import score_human_dimensions as _human_dimensions
 import score_network as _score_network
 import score_reachability as _score_reachability
+import score_telemetry as _score_telemetry
 import yaml
 from pipeline_lib import (
     ALL_PIPELINE_DIRS_WITH_POOL,
@@ -537,7 +538,19 @@ def run_auto_qualify(dry_run: bool = False, yes: bool = False,
     )
     if not pool_entries:
         print("No entries in research_pool/.")
-        return
+        summary = {
+            "dry_run": dry_run,
+            "executed": not dry_run,
+            "pool_entries": 0,
+            "qualified_candidates": 0,
+            "below_min_score": 0,
+            "skipped": 0,
+            "moved": 0,
+            "min_score": min_score,
+            "limit": limit,
+        }
+        _score_telemetry.log_score_run("auto_qualify", summary)
+        return summary
 
     # Pre-load all raw entries for cross-pipeline scoring signals
     all_raw = _load_entries_raw(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
@@ -582,7 +595,19 @@ def run_auto_qualify(dry_run: bool = False, yes: bool = False,
 
     if not qualified_list:
         print("No entries meet the qualification threshold.")
-        return
+        summary = {
+            "dry_run": dry_run,
+            "executed": not dry_run,
+            "pool_entries": len(pool_entries),
+            "qualified_candidates": 0,
+            "below_min_score": below_min_score,
+            "skipped": skipped,
+            "moved": 0,
+            "min_score": min_score,
+            "limit": limit,
+        }
+        _score_telemetry.log_score_run("auto_qualify", summary)
+        return summary
 
     PIPELINE_DIR_ACTIVE.mkdir(parents=True, exist_ok=True)
     today_str = date.today().isoformat()
@@ -613,6 +638,19 @@ def run_auto_qualify(dry_run: bool = False, yes: bool = False,
         print("Run with --yes to execute")
     else:
         print(f"Auto-qualified {moved} entries to active/")
+    summary = {
+        "dry_run": dry_run,
+        "executed": not dry_run,
+        "pool_entries": len(pool_entries),
+        "qualified_candidates": len(qualified_list),
+        "below_min_score": below_min_score,
+        "skipped": skipped,
+        "moved": moved,
+        "min_score": min_score,
+        "limit": limit,
+    }
+    _score_telemetry.log_score_run("auto_qualify", summary)
+    return summary
 
 
 RUBRIC_DESCRIPTIONS = _score_explain.RUBRIC_DESCRIPTIONS
@@ -664,12 +702,14 @@ def analyze_reachability(
 
 
 def run_reachable(threshold: float = 9.0):
-    return _score_reachability.run_reachable(
+    summary = _score_reachability.run_reachable(
         threshold=threshold,
         load_entries_raw=_load_entries_raw,
         all_pipeline_dirs_with_pool=ALL_PIPELINE_DIRS_WITH_POOL,
         analyze_reachability_fn=analyze_reachability,
     )
+    _score_telemetry.log_score_run("reachable", summary)
+    return summary
 
 
 def run_triage_staged(
@@ -678,7 +718,7 @@ def run_triage_staged(
     submit_threshold: float = 8.5,
     demote_threshold: float = 7.0,
 ):
-    return _score_reachability.run_triage_staged(
+    summary = _score_reachability.run_triage_staged(
         dry_run=dry_run,
         yes=yes,
         submit_threshold=submit_threshold,
@@ -692,6 +732,8 @@ def run_triage_staged(
         update_last_touched=update_last_touched,
         atomic_write=atomic_write,
     )
+    _score_telemetry.log_score_run("triage_staged", summary)
+    return summary
 
 
 def main():

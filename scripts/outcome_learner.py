@@ -12,6 +12,7 @@ Usage:
 """
 
 import argparse
+import os
 import sys
 from datetime import date
 from pathlib import Path
@@ -35,6 +36,60 @@ MIN_OUTCOMES_FOR_CALIBRATION = 10
 
 # How much to blend calibrated weights vs base weights (when n >= MIN_OUTCOMES)
 CALIBRATION_BLEND_RATIO = 0.30
+
+# Governance safeguards for automatic calibration application.
+MIN_ACCEPTED_FOR_LOAD = 3
+MIN_REJECTED_FOR_LOAD = 3
+DEFAULT_MAX_AGE_DAYS = 45
+DEFAULT_MAX_DIMENSION_DRIFT = 0.08
+
+
+def _parse_iso_date(raw: str | None):
+    if not raw:
+        return None
+    try:
+        from datetime import datetime
+
+        return datetime.strptime(str(raw), "%Y-%m-%d").date()
+    except ValueError:
+        return None
+
+
+def compute_weight_drift(base_weights: dict, calibrated_weights: dict) -> dict:
+    """Compute absolute drift per dimension between base and calibrated weights."""
+    deltas = {}
+    for dim in DIMENSION_ORDER:
+        base = float(base_weights.get(dim, 0.0))
+        calibrated = float(calibrated_weights.get(dim, 0.0))
+        deltas[dim] = round(calibrated - base, 4)
+
+    max_abs_delta = max((abs(v) for v in deltas.values()), default=0.0)
+    return {
+        "deltas": deltas,
+        "max_abs_delta": round(max_abs_delta, 4),
+    }
+
+
+def drift_check_report(calibration: dict, base_weights: dict) -> str:
+    """Generate a human-readable drift check report for calibration safety."""
+    weights = calibration.get("weights", {}) if isinstance(calibration, dict) else {}
+    if not isinstance(weights, dict) or not weights:
+        return "No calibration weights available for drift check."
+
+    drift = compute_weight_drift(base_weights, weights)
+    budget = float(calibration.get("max_dimension_drift", DEFAULT_MAX_DIMENSION_DRIFT))
+    lines = []
+    lines.append(f"CALIBRATION DRIFT CHECK — {date.today().isoformat()}")
+    lines.append("=" * 60)
+    lines.append(f"Max absolute drift: {drift['max_abs_delta']:.3f} (budget: {budget:.3f})")
+    lines.append("")
+    lines.append(f"{'Dimension':<25s} {'Delta':>8s}")
+    lines.append("-" * 60)
+    for dim in DIMENSION_ORDER:
+        delta = drift["deltas"].get(dim, 0.0)
+        marker = " !!" if abs(delta) > budget else ""
+        lines.append(f"{dim:<25s} {delta:>+8.3f}{marker}")
+    return "\n".join(lines)
 
 
 def collect_outcome_data() -> list[dict]:
@@ -240,6 +295,7 @@ def generate_calibration_report(data: list[dict], analysis: dict, recommendation
     lines.append("\nRECOMMENDATIONS:")
     lines.append(f"  Confidence: {recommendations['confidence']}")
     lines.append(f"  Sufficient data: {'yes' if recommendations['sufficient_data'] else 'no'}")
+    lines.append("  Auto-apply requires review approval: yes")
 
     if not recommendations["sufficient_data"]:
         remaining = MIN_OUTCOMES_FOR_CALIBRATION - useful
@@ -270,6 +326,13 @@ def save_calibration(recommendations: dict, data: list[dict]) -> Path:
         "sufficient_data": recommendations["sufficient_data"],
         "weights": recommendations["weights"],
         "adjustments": recommendations["adjustments"],
+        "base_weights": recommendations.get("_base_weights", {}),
+        "approved": False if recommendations["sufficient_data"] else True,
+        "approved_by": None,
+        "approved_at": None,
+        "max_age_days": DEFAULT_MAX_AGE_DAYS,
+        "max_dimension_drift": DEFAULT_MAX_DIMENSION_DRIFT,
+        "calibration_blend_ratio": CALIBRATION_BLEND_RATIO,
     }
 
     with open(CALIBRATION_FILE, "w") as f:
@@ -300,7 +363,50 @@ def load_calibration() -> dict | None:
     if not weights or not isinstance(weights, dict):
         return None
 
+    # New calibration records require explicit approval before score.py auto-applies.
+    if "approved" in cal and not cal.get("approved"):
+        return None
+
+    accepted_count = cal.get("accepted_count")
+    rejected_count = cal.get("rejected_count")
+    if accepted_count is not None and int(accepted_count) < MIN_ACCEPTED_FOR_LOAD:
+        return None
+    if rejected_count is not None and int(rejected_count) < MIN_REJECTED_FOR_LOAD:
+        return None
+
+    generated = _parse_iso_date(cal.get("generated"))
+    max_age_days = int(cal.get("max_age_days", DEFAULT_MAX_AGE_DAYS))
+    if generated is not None:
+        age_days = (date.today() - generated).days
+        if age_days > max_age_days:
+            return None
+
+    base_weights = cal.get("base_weights", {})
+    if isinstance(base_weights, dict) and base_weights:
+        drift = compute_weight_drift(base_weights, weights)
+        max_drift_budget = float(cal.get("max_dimension_drift", DEFAULT_MAX_DIMENSION_DRIFT))
+        if drift["max_abs_delta"] > max_drift_budget:
+            return None
+
     return cal
+
+
+def approve_calibration(reviewer: str) -> Path:
+    """Mark the calibration file as approved for auto-application."""
+    if not CALIBRATION_FILE.exists():
+        raise FileNotFoundError(f"Calibration file not found: {CALIBRATION_FILE}")
+
+    data = yaml.safe_load(CALIBRATION_FILE.read_text()) or {}
+    if not isinstance(data, dict):
+        raise ValueError("Calibration file is not a YAML mapping")
+
+    data["approved"] = True
+    data["approved_by"] = reviewer
+    data["approved_at"] = date.today().isoformat()
+
+    with open(CALIBRATION_FILE, "w") as f:
+        yaml.dump(data, f, default_flow_style=False, sort_keys=False)
+    return CALIBRATION_FILE
 
 
 def cross_reference_hypotheses(data: list[dict], analysis: dict) -> str:
@@ -376,11 +482,13 @@ def main():
                         help="Write calibration to signals/weight-calibration.yaml")
     parser.add_argument("--hypotheses", action="store_true",
                         help="Cross-reference hypothesis patterns with dimension accuracy")
+    parser.add_argument("--drift-check", action="store_true",
+                        help="Check drift between calibrated and base weights")
+    parser.add_argument("--approve", action="store_true",
+                        help="Approve saved calibration for score.py auto-application")
+    parser.add_argument("--reviewer", default=os.environ.get("PIPELINE_OPERATOR") or os.environ.get("USER") or "unknown",
+                        help="Reviewer handle for --approve")
     args = parser.parse_args()
-
-    # Collect outcome data
-    data = collect_outcome_data()
-    analysis = analyze_dimension_accuracy(data)
 
     # Load base weights for recommendations
     try:
@@ -388,6 +496,28 @@ def main():
         base_weights = dict(WEIGHTS)
     except ImportError:
         base_weights = {dim: 1.0 / len(DIMENSION_ORDER) for dim in DIMENSION_ORDER}
+
+    if args.drift_check:
+        if not CALIBRATION_FILE.exists():
+            print(f"No calibration file found at {CALIBRATION_FILE}")
+            return
+        calibration = yaml.safe_load(CALIBRATION_FILE.read_text()) or {}
+        print(drift_check_report(calibration, base_weights))
+        return
+
+    if args.approve:
+        try:
+            path = approve_calibration(args.reviewer)
+        except (FileNotFoundError, ValueError) as exc:
+            print(str(exc), file=sys.stderr)
+            raise SystemExit(1)
+        print(f"Approved calibration: {path}")
+        print(f"Reviewer: {args.reviewer}")
+        return
+
+    # Collect outcome data
+    data = collect_outcome_data()
+    analysis = analyze_dimension_accuracy(data)
 
     recommendations = compute_weight_recommendations(analysis, base_weights)
     recommendations["_base_weights"] = base_weights

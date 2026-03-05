@@ -22,7 +22,7 @@ def test_analyze_reachability_returns_levels():
 
 
 def test_run_reachable_no_actionable(capsys):
-    score_reachability.run_reachable(
+    summary = score_reachability.run_reachable(
         threshold=9.0,
         load_entries_raw=lambda **_kwargs: [{"status": "deferred"}],
         all_pipeline_dirs_with_pool=[],
@@ -30,10 +30,11 @@ def test_run_reachable_no_actionable(capsys):
     )
     captured = capsys.readouterr()
     assert "No actionable entries found." in captured.out
+    assert summary["total_actionable"] == 0
 
 
 def test_run_triage_staged_no_entries(capsys):
-    score_reachability.run_triage_staged(
+    summary = score_reachability.run_triage_staged(
         dry_run=True,
         yes=False,
         load_entries_raw=lambda **_kwargs: [],
@@ -47,3 +48,4 @@ def test_run_triage_staged_no_entries(capsys):
     )
     captured = capsys.readouterr()
     assert "No staged entries found." in captured.out
+    assert summary["total_staged"] == 0

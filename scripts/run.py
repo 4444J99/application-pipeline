@@ -53,6 +53,7 @@ COMMANDS = {
     "morning":     ("morning.py", [],                    "Morning digest: health + stale + followups + campaign + funding"),
     "derive":      ("derive_profile.py", [],             "Auto-derive startup profile fields from pipeline data"),
     "learner":     ("outcome_learner.py", [],            "Outcome learning engine: calibration report"),
+    "drift":       ("outcome_learner.py", ["--drift-check"], "Calibration drift check vs base rubric weights"),
     "hydrate":     ("hydrate_followups.py", [],          "Batch-hydrate follow-up fields on submitted entries"),
     "triage":      ("smart_triage.py", [],               "Smart triage: decay-scored research entry ranking"),
     "batch":       ("batch_submit.py", [],               "Batch submit staged rolling-deadline entries (dry-run)"),
