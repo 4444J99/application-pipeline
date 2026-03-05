@@ -83,6 +83,7 @@ def test_check_entry_results_keys():
         "cover_letter",
         "status_submittable",
         "review_approved",
+        "staged_sla",
         "answer_file",
         "has_target_url",
     }
@@ -294,3 +295,35 @@ def test_check_entry_submitted_status_not_submittable():
     result = check_entry(entry)
     assert result["results"]["status_submittable"] is False
     assert result["ready"] is False
+
+
+def test_check_entry_staged_requires_approved_at_for_review_gate():
+    """Staged entries need reviewed_by + approved_at to pass review_approved."""
+    entry = {
+        "id": "review-gated",
+        "status": "staged",
+        "status_meta": {"reviewed_by": "operator"},
+        "target": {"portal": "custom", "application_url": "https://example.com"},
+        "submission": {"materials_attached": [], "variant_ids": {}},
+        "last_touched": "2099-01-01",
+    }
+    result = check_entry(entry)
+    assert result["results"]["review_approved"] is False
+
+    entry["status_meta"]["approved_at"] = "2099-01-01"
+    result_ok = check_entry(entry)
+    assert result_ok["results"]["review_approved"] is True
+
+
+def test_check_entry_staged_sla_violates_after_72_hours():
+    """Staged entries older than 72h should fail staged_sla check."""
+    entry = {
+        "id": "sla-breach",
+        "status": "staged",
+        "status_meta": {"reviewed_by": "op", "approved_at": "2099-01-01"},
+        "target": {"portal": "custom", "application_url": "https://example.com"},
+        "submission": {"materials_attached": [], "variant_ids": {}},
+        "last_touched": "2000-01-01",
+    }
+    result = check_entry(entry)
+    assert result["results"]["staged_sla"] is False

@@ -58,6 +58,11 @@ QUALIFIED_DRAFTING_THRESHOLD = _RULES.get("advance_qualified_to_drafting", {}).g
 DRAFTING_STAGED_MIN_DAYS = _RULES.get("advance_drafting_to_staged", {}).get("min_days", 7)
 DRAFTING_STAGED_MIN_SCORE = _RULES.get("advance_drafting_to_staged", {}).get("min_score", 9.0)
 STAGED_SUBMIT_MAX_DAYS = _RULES.get("flag_staged_for_submission", {}).get("max_days", 7)
+CHANNEL_ALLOCATOR_ENABLED = _RULES.get("channel_allocator", {}).get("enabled", True)
+CHANNEL_ALLOCATOR_MIN_SAMPLES = _RULES.get("channel_allocator", {}).get("min_samples", 3)
+ADAPTIVE_ENABLED = _RULES.get("adaptive_feedback", {}).get("enabled", True)
+ADAPTIVE_MIN_SAMPLES = _RULES.get("adaptive_feedback", {}).get("min_samples", 12)
+ADAPTIVE_WINDOW_MONTHS = _RULES.get("adaptive_feedback", {}).get("window_months", 3)
 
 
 def _rule_enabled(rule_name: str) -> bool:
@@ -79,6 +84,102 @@ def _mode_adjusted_threshold(base: float) -> float:
         return base
 
 
+def compute_channel_allocator(entries: list[dict], min_samples: int = 3) -> dict[str, float]:
+    """Build track allocator multipliers from resolved outcomes."""
+    focus_tracks = {"job", "grant", "fellowship"}
+    stats = {
+        track: {"resolved": 0, "accepted": 0}
+        for track in focus_tracks
+    }
+    overall_resolved = 0
+    overall_accepted = 0
+
+    for entry in entries:
+        track = entry.get("track")
+        if track not in focus_tracks:
+            continue
+        outcome = entry.get("outcome")
+        if outcome not in {"accepted", "rejected", "withdrawn", "expired"}:
+            continue
+        stats[track]["resolved"] += 1
+        overall_resolved += 1
+        if outcome == "accepted":
+            stats[track]["accepted"] += 1
+            overall_accepted += 1
+
+    if overall_resolved < max(1, min_samples):
+        return {track: 1.0 for track in focus_tracks}
+
+    overall_rate = overall_accepted / overall_resolved
+    allocator: dict[str, float] = {}
+    for track in focus_tracks:
+        resolved = stats[track]["resolved"]
+        if resolved < min_samples:
+            allocator[track] = 1.0
+            continue
+        track_rate = stats[track]["accepted"] / resolved
+        # Convert relative conversion advantage into a bounded multiplier.
+        raw = 1.0 + ((track_rate - overall_rate) * 2.0)
+        # Keep a floor, but preserve enough spread to distinguish weak tracks.
+        allocator[track] = round(max(0.65, min(1.25, raw)), 3)
+    return allocator
+
+
+def compute_feedback_adjustment(months: int = 3) -> dict:
+    """Compute threshold adjustment from recent conversion and hypothesis accuracy."""
+    try:
+        from validate_hypotheses import (
+            accuracy_stats,
+            build_outcome_map,
+            load_hypotheses,
+            validate,
+        )
+        from validate_hypotheses import (
+            load_conversion_log as load_hypothesis_log,
+        )
+        from velocity_report import calculate_metrics, filter_by_date_range, load_conversion_log
+    except Exception:
+        return {
+            "delta": 0.0,
+            "conversion_rate": None,
+            "hypothesis_accuracy": None,
+            "resolved_hypotheses": 0,
+        }
+
+    # Conversion-based signal (0-1 scale).
+    raw_conversion = load_conversion_log()
+    recent_conversion = filter_by_date_range(raw_conversion, months=months)
+    metrics = calculate_metrics(recent_conversion)
+    conversion_rate = float(metrics.get("conversion_rate", 0.0))
+
+    # Hypothesis signal (percentage scale).
+    hypotheses = load_hypotheses()
+    outcomes = build_outcome_map(load_hypothesis_log())
+    validated = validate(hypotheses, outcomes)
+    hyp_stats = accuracy_stats(validated)
+    hypothesis_accuracy = float(hyp_stats.get("accuracy", 0.0))
+    resolved_hypotheses = int(hyp_stats.get("resolved", 0))
+
+    delta = 0.0
+    if conversion_rate < 0.10:
+        delta += 0.25
+    elif conversion_rate > 0.20:
+        delta -= 0.15
+
+    if resolved_hypotheses >= ADAPTIVE_MIN_SAMPLES:
+        if hypothesis_accuracy < 50.0:
+            delta += 0.15
+        elif hypothesis_accuracy > 70.0:
+            delta -= 0.10
+
+    return {
+        "delta": round(max(-0.5, min(0.5, delta)), 2),
+        "conversion_rate": round(conversion_rate, 3),
+        "hypothesis_accuracy": round(hypothesis_accuracy, 1),
+        "resolved_hypotheses": resolved_hypotheses,
+    }
+
+
 class PipelineAgent:
     """Autonomous agent for pipeline state transitions."""
 
@@ -88,6 +189,13 @@ class PipelineAgent:
         self.actions_executed = []
         self.errors = []
         self.started_at = datetime.now()
+        self.channel_allocator: dict[str, float] = {}
+        self.feedback_summary: dict = {
+            "delta": 0.0,
+            "conversion_rate": None,
+            "hypothesis_accuracy": None,
+            "resolved_hypotheses": 0,
+        }
 
     def plan_actions(self, entries: list[dict]) -> list[dict]:
         """Analyze pipeline state; return planned actions.
@@ -100,6 +208,23 @@ class PipelineAgent:
         5. Staged + deadline < max_days: flag for submission
         """
         actions = []
+        if CHANNEL_ALLOCATOR_ENABLED:
+            self.channel_allocator = compute_channel_allocator(entries, min_samples=CHANNEL_ALLOCATOR_MIN_SAMPLES)
+        else:
+            self.channel_allocator = {"job": 1.0, "grant": 1.0, "fellowship": 1.0}
+        if ADAPTIVE_ENABLED:
+            self.feedback_summary = compute_feedback_adjustment(months=ADAPTIVE_WINDOW_MONTHS)
+        else:
+            self.feedback_summary = {
+                "delta": 0.0,
+                "conversion_rate": None,
+                "hypothesis_accuracy": None,
+                "resolved_hypotheses": 0,
+            }
+
+        base_research_threshold = _mode_adjusted_threshold(RESEARCH_QUALIFY_THRESHOLD + self.feedback_summary["delta"])
+        base_qualified_threshold = _mode_adjusted_threshold(QUALIFIED_DRAFTING_THRESHOLD + self.feedback_summary["delta"])
+        base_drafting_threshold = _mode_adjusted_threshold(DRAFTING_STAGED_MIN_SCORE + self.feedback_summary["delta"])
 
         for entry in entries:
             if not is_actionable(entry):
@@ -107,9 +232,15 @@ class PipelineAgent:
 
             entry_id = entry.get("id", "?")
             status = entry.get("status", "?")
+            track = entry.get("track", "unknown")
             score = entry.get("fit", {}).get("composite") if isinstance(entry.get("fit"), dict) else None
             deadline_date, deadline_type = get_deadline(entry)
             days_left = (deadline_date - datetime.now().date()).days if deadline_date else None
+            allocation_multiplier = self.channel_allocator.get(track, 1.0)
+            track_bias = (1.0 - allocation_multiplier) * 0.5
+            research_threshold = round(base_research_threshold + track_bias, 2)
+            qualified_threshold = round(base_qualified_threshold + track_bias, 2)
+            drafting_threshold = round(base_drafting_threshold + track_bias, 2)
 
             # Rule 1: Research entries without scores
             if status == "research" and not score and _rule_enabled("score_unscored_research"):
@@ -121,7 +252,7 @@ class PipelineAgent:
                 })
 
             # Rule 2: Research + score >= threshold
-            elif (status == "research" and score and score >= RESEARCH_QUALIFY_THRESHOLD
+            elif (status == "research" and score and score >= research_threshold
                   and _rule_enabled("advance_research_to_qualified")):
                 can_adv, reason = can_advance(entry, "qualified")
                 if can_adv:
@@ -129,12 +260,12 @@ class PipelineAgent:
                         "entry_id": entry_id,
                         "action": "advance",
                         "to_status": "qualified",
-                        "reason": f"research with score {score}",
+                        "reason": f"research with score {score} (threshold {research_threshold}, alloc {allocation_multiplier:.2f})",
                         "severity": "routine",
                     })
 
             # Rule 3: Qualified, score >= threshold
-            elif (status == "qualified" and score and score >= QUALIFIED_DRAFTING_THRESHOLD
+            elif (status == "qualified" and score and score >= qualified_threshold
                   and _rule_enabled("advance_qualified_to_drafting")):
                 can_adv, reason = can_advance(entry, "drafting")
                 if can_adv:
@@ -142,22 +273,24 @@ class PipelineAgent:
                         "entry_id": entry_id,
                         "action": "advance",
                         "to_status": "drafting",
-                        "reason": f"qualified with high score {score}",
+                        "reason": f"qualified with score {score} (threshold {qualified_threshold}, alloc {allocation_multiplier:.2f})",
                         "severity": "routine",
                     })
 
             # Rule 4: Drafting, deadline > min_days AND score >= min_score
             elif status == "drafting" and _rule_enabled("advance_drafting_to_staged"):
-                effective_min = _mode_adjusted_threshold(DRAFTING_STAGED_MIN_SCORE)
                 if (days_left and days_left > DRAFTING_STAGED_MIN_DAYS
-                        and score and score >= effective_min):
+                        and score and score >= drafting_threshold):
                     can_adv, reason = can_advance(entry, "staged")
                     if can_adv:
                         actions.append({
                             "entry_id": entry_id,
                             "action": "advance",
                             "to_status": "staged",
-                            "reason": f"drafting with {days_left}d until deadline, score {score}",
+                            "reason": (
+                                f"drafting with {days_left}d until deadline, score {score} "
+                                f"(threshold {drafting_threshold}, alloc {allocation_multiplier:.2f})"
+                            ),
                             "severity": "routine",
                         })
 
@@ -215,6 +348,16 @@ class PipelineAgent:
         lines.append("=" * 70)
         
         lines.append(f"\n📋 PLANNED ACTIONS: {len(self.actions_planned)}")
+        lines.append(
+            "   Adaptive feedback: "
+            f"delta={self.feedback_summary.get('delta', 0.0):+.2f}, "
+            f"conversion={self.feedback_summary.get('conversion_rate')}, "
+            f"hyp_acc={self.feedback_summary.get('hypothesis_accuracy')}% "
+            f"(resolved={self.feedback_summary.get('resolved_hypotheses')})"
+        )
+        if self.channel_allocator:
+            alloc_bits = ", ".join(f"{k}={v:.2f}" for k, v in sorted(self.channel_allocator.items()))
+            lines.append(f"   Channel allocator: {alloc_bits}")
         for action in self.actions_planned:
             severity_marker = "🔴" if action["severity"] == "urgent" else "🟡"
             lines.append(f"  {severity_marker} {action['entry_id']}: {action['action']} "

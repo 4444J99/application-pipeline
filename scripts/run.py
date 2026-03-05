@@ -86,7 +86,9 @@ COMMANDS = {
     "discover":    ("discover_jobs.py", [],                "Skill-based job discovery across free APIs"),
     "audit":       ("submission_audit.py", [],              "Batch submission readiness diagnostic"),
     "submitall":   ("submit_ready.py", [],                   "Submit all audit-ready entries (dry-run)"),
-    "dailyhealth": ("daily_pipeline_health.py", [],          "Composite daily health run: source, score, enrich, campaign, standup, hygiene"),
+    "dailyhealth": ("daily_pipeline_health.py", [],          "Composite daily health run: source, score, enrich, campaign, standup, hygiene, scheduler"),
+    "schedulerhealth": ("scheduler_health.py", ["--strict"], "Launchd scheduler health audit"),
+    "weeklybrief": ("weekly_brief.py", [],                   "Weekly executive brief: KPIs, blockers, risks, and outreach priorities"),
     "idmaps":      ("generate_id_mappings.py", [],           "Generate ID mapping suggestions from filesystem"),
     "verifyall":   ("verify_all.py", [],                     "Run full verification gates (matrix + lint + validate + tests)"),
     "verifymatrix": ("verification_matrix.py", ["--strict"], "Check module verification coverage matrix"),
@@ -140,7 +142,7 @@ def show_help():
     print("  Analyze:  funnel → conversion → velocity → dashboard → blockroi")
     print("  Strategy: startup → funding → differentiate → tracker")
     print("  Agent:    agent → deferred → signals → hypotheses-v")
-    print("  Health:   monitor → freshness → resumes → backup → portfolio")
+    print("  Health:   monitor → schedulerhealth → freshness → resumes → backup → portfolio")
     print()
     print("Usage: python scripts/run.py <command> [args...]")
 

@@ -337,17 +337,25 @@ def validate_entry(filepath: Path, warnings: list[str] | None = None) -> list[st
 
     # Governance status metadata validation
     status_meta = data.get("status_meta")
+    reviewed_by = None
+    approved_at = None
+    submitted_by = None
+    submitted_at = None
     if status_meta is not None:
         if not isinstance(status_meta, dict):
             errors.append("status_meta must be a mapping")
         else:
             reviewed_by = status_meta.get("reviewed_by")
+            approved_by = status_meta.get("approved_by")
             submitted_by = status_meta.get("submitted_by")
             reviewed_at = status_meta.get("reviewed_at")
+            approved_at = status_meta.get("approved_at")
             submitted_at = status_meta.get("submitted_at")
 
             if reviewed_by is not None and not isinstance(reviewed_by, str):
                 errors.append("status_meta.reviewed_by must be a string")
+            if approved_by is not None and not isinstance(approved_by, str):
+                errors.append("status_meta.approved_by must be a string")
             if submitted_by is not None and not isinstance(submitted_by, str):
                 errors.append("status_meta.submitted_by must be a string")
 
@@ -360,6 +368,14 @@ def validate_entry(filepath: Path, warnings: list[str] | None = None) -> list[st
                         f"Invalid status_meta.reviewed_at format: '{reviewed_at}' "
                         "(expected YYYY-MM-DD)"
                     )
+            if approved_at is not None:
+                try:
+                    datetime.strptime(str(approved_at), "%Y-%m-%d")
+                except ValueError:
+                    errors.append(
+                        f"Invalid status_meta.approved_at format: '{approved_at}' "
+                        "(expected YYYY-MM-DD)"
+                    )
             if submitted_at is not None:
                 try:
                     datetime.strptime(str(submitted_at), "%Y-%m-%d")
@@ -368,6 +384,23 @@ def validate_entry(filepath: Path, warnings: list[str] | None = None) -> list[st
                         f"Invalid status_meta.submitted_at format: '{submitted_at}' "
                         "(expected YYYY-MM-DD)"
                     )
+
+            if approved_at is not None and reviewed_by is None:
+                errors.append("status_meta.approved_at requires status_meta.reviewed_by")
+            if submitted_at is not None and submitted_by is None:
+                errors.append("status_meta.submitted_at requires status_meta.submitted_by")
+
+    if warnings is not None:
+        if status == "staged":
+            if not reviewed_by:
+                warnings.append("status=staged missing status_meta.reviewed_by")
+            if not approved_at:
+                warnings.append("status=staged missing status_meta.approved_at")
+        if status in {"submitted", "acknowledged", "interview", "outcome"}:
+            if not submitted_by:
+                warnings.append(f"status={status} missing status_meta.submitted_by")
+            if not submitted_at:
+                warnings.append(f"status={status} missing status_meta.submitted_at")
 
     # Withdrawal reason validation
     withdrawal = data.get("withdrawal_reason")

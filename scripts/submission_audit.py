@@ -17,6 +17,7 @@ import argparse
 import json
 import re
 import sys
+from datetime import date
 from pathlib import Path
 
 import yaml
@@ -25,6 +26,7 @@ from pipeline_lib import (
     detect_entry_portal,
     load_entries,
     load_submit_config,
+    parse_date,
     resolve_cover_letter,
     resolve_resume,
 )
@@ -41,6 +43,7 @@ PRE_SUBMIT_STATUSES = {"research", "qualified", "drafting", "staged", "deferred"
 
 # Portals requiring API keys
 API_KEY_PORTALS = {"greenhouse", "ashby", "lever"}
+STAGED_SUBMISSION_SLA_HOURS = 72
 
 
 def _check_auth_configured(portal: str, config: dict | None) -> bool:
@@ -121,6 +124,32 @@ def _check_answers_complete(portal: str, eid: str) -> bool:
         return False
 
 
+def _staged_age_hours(entry: dict) -> float | None:
+    """Return staged age in hours using best available timestamp evidence."""
+    status_meta = entry.get("status_meta", {})
+    if not isinstance(status_meta, dict):
+        status_meta = {}
+    timeline = entry.get("timeline", {})
+    if not isinstance(timeline, dict):
+        timeline = {}
+
+    staged_markers = [
+        status_meta.get("staged_at"),
+        timeline.get("materials_ready"),
+        entry.get("last_touched"),
+    ]
+    staged_date = None
+    for marker in staged_markers:
+        staged_date = parse_date(marker)
+        if staged_date:
+            break
+    if staged_date is None:
+        return None
+
+    age_days = (date.today() - staged_date).days
+    return max(0.0, float(age_days * 24))
+
+
 def check_entry(entry: dict, *, deep: bool = False, config: dict | None = None) -> dict:
     """Run all readiness checks on an entry. Returns check results dict."""
     eid = entry.get("id", "unknown")
@@ -158,9 +187,19 @@ def check_entry(entry: dict, *, deep: bool = False, config: dict | None = None) 
     # Check 4b: Governance review required before staged submissions.
     # (Qualified/drafting entries can still be prepared, but staged is submit-gated.)
     if status == "staged":
-        checks["results"]["review_approved"] = bool(status_meta.get("reviewed_by"))
+        checks["results"]["review_approved"] = bool(status_meta.get("reviewed_by")) and bool(status_meta.get("approved_at"))
     else:
         checks["results"]["review_approved"] = True
+
+    # Check 4c: Staged entries should be submitted within SLA window.
+    if status == "staged":
+        staged_age_hours = _staged_age_hours(entry)
+        checks["staged_age_hours"] = staged_age_hours
+        checks["results"]["staged_sla"] = bool(
+            staged_age_hours is not None and staged_age_hours <= STAGED_SUBMISSION_SLA_HOURS
+        )
+    else:
+        checks["results"]["staged_sla"] = True
 
     # Check 5: Answer file exists (portal-specific)
     if portal in ("greenhouse", "ashby"):
@@ -201,6 +240,8 @@ def print_entry_result(result: dict, verbose: bool = True):
 
     print(f"  {eid}")
     print(f"    Status: {result['status']}  |  Portal: {portal}  |  {score} checks  |  {status_icon}")
+    if result.get("status") == "staged" and result.get("staged_age_hours") is not None:
+        print(f"    staged age: {result['staged_age_hours']:.0f}h (SLA <= {STAGED_SUBMISSION_SLA_HOURS}h)")
 
     if verbose:
         for check_name, passed in result["results"].items():

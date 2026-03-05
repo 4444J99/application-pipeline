@@ -4,6 +4,17 @@ description: >
   Edit thresholds here to customize agent behavior without modifying code.
 
 rules:
+  # Adaptive allocator: prioritize tracks with better rolling conversion.
+  channel_allocator:
+    enabled: true
+    min_samples: 3
+
+  # Closed-loop learning: adjust score thresholds from recent outcomes.
+  adaptive_feedback:
+    enabled: true
+    window_months: 3
+    min_samples: 12
+
   # Rule 1: Score research entries that lack a composite score
   score_unscored_research:
     enabled: true

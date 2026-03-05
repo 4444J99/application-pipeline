@@ -25,6 +25,49 @@ from pipeline_lib import (
     strip_markdown,
 )
 
+HIGH_RISK_BLOCK_THRESHOLD = 0.85
+HIGH_RISK_BLOCK_MIN_SAMPLES = 30
+HIGH_RISK_WARN_THRESHOLD = 0.70
+
+
+def assess_outcome_risk(entry: dict) -> tuple[str | None, str | None]:
+    """Return (blocking_error, warning) based on historical outcome risk model."""
+    try:
+        from outcome_risk import predict_submission_risk
+    except Exception:
+        return None, None
+
+    try:
+        risk = predict_submission_risk(entry)
+    except Exception:
+        return None, None
+
+    if not risk.get("available"):
+        return None, None
+
+    risk_value = float(risk.get("risk", 0.0))
+    samples = int(risk.get("samples", 0))
+    confidence = risk.get("confidence", "low")
+
+    if risk_value >= HIGH_RISK_BLOCK_THRESHOLD and samples >= HIGH_RISK_BLOCK_MIN_SAMPLES:
+        return (
+            f"outcome risk: BLOCKED HIGH ({risk_value:.0%}) "
+            f"[{samples} samples, {confidence} confidence]",
+            None,
+        )
+    if risk_value >= HIGH_RISK_WARN_THRESHOLD:
+        return (
+            None,
+            f"outcome risk: HIGH ({risk_value:.0%}) "
+            f"[{samples} samples, {confidence} confidence]",
+        )
+    if risk_value >= 0.50:
+        return (
+            None,
+            f"outcome risk: MODERATE ({risk_value:.0%}) [{samples} samples]",
+        )
+    return None, None
+
 
 def check_entry(entry: dict) -> tuple[list[str], list[str]]:
     """Run all preflight checks on a single entry.
@@ -163,26 +206,12 @@ def check_entry(entry: dict) -> tuple[list[str], list[str]]:
     except ImportError:
         pass
 
-    # 9. Outcome-risk prediction (advisory; model auto-disables on low data).
-    try:
-        from outcome_risk import predict_submission_risk
-
-        risk = predict_submission_risk(entry)
-        if risk.get("available"):
-            risk_value = float(risk.get("risk", 0.0))
-            if risk_value >= 0.70:
-                warnings.append(
-                    f"outcome risk: HIGH ({risk_value:.0%}) "
-                    f"[{risk.get('samples', 0)} samples, {risk.get('confidence', 'low')} confidence]"
-                )
-            elif risk_value >= 0.50:
-                warnings.append(
-                    f"outcome risk: MODERATE ({risk_value:.0%}) "
-                    f"[{risk.get('samples', 0)} samples]"
-                )
-    except Exception:
-        # Risk model is advisory only; never block preflight if unavailable.
-        pass
+    # 9. Outcome-risk prediction (high-confidence high risk now blocks preflight).
+    risk_error, risk_warning = assess_outcome_risk(entry)
+    if risk_error:
+        errors.append(risk_error)
+    if risk_warning:
+        warnings.append(risk_warning)
 
     return errors, warnings
 

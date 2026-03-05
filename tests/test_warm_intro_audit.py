@@ -6,6 +6,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from warm_intro_audit import (
+    build_outreach_queue,
     display_audit,
     generate_audit_report,
     identify_referral_candidates,
@@ -147,6 +148,7 @@ def test_report_has_required_keys():
     assert "contact_entries" in report
     assert "dense_organizations" in report
     assert "referral_candidates" in report
+    assert "outreach_queue" in report
     assert "recommendations" in report
     assert "generated" in report
 
@@ -160,6 +162,7 @@ def test_report_summary_counts():
     report = generate_audit_report(entries)
     assert report["summary"]["total_submitted"] == 2
     assert report["summary"]["total_active"] == 1
+    assert "outreach_queue" in report["summary"]
 
 
 def test_report_recommendations_nonempty():
@@ -185,6 +188,19 @@ def test_display_audit_shows_referral_multiplier(capsys):
     display_audit(report)
     captured = capsys.readouterr()
     assert "8x" in captured.out
+
+
+def test_build_outreach_queue_returns_top_five_with_owner_and_due_date():
+    candidates = [
+        {"id": f"entry-{i}", "organization": "acme", "status": "staged", "org_entry_count": 10, "reason": "Org has existing contacts from other applications"}
+        for i in range(6)
+    ]
+    queue = build_outreach_queue(candidates, assignee="owner-x", limit=5)
+    assert len(queue) == 1  # dedup by org
+    item = queue[0]
+    assert item["assignee"] == "owner-x"
+    assert item["due_date"]
+    assert "next_action" in item
 
 
 # --- save_audit ---

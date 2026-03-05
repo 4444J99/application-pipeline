@@ -12,8 +12,10 @@ from check_outcomes import (
     STALE_DAYS,
     TYPICAL_WINDOWS,
     VALID_OUTCOMES,
+    VALID_REJECTION_REASONS,
     VALID_STAGES,
     days_since_submission,
+    extract_failure_themes,
     record_outcome,
     show_awaiting,
     show_stale,
@@ -306,10 +308,13 @@ def test_load_outcome_thresholds_loads_from_valid_json(tmp_path, monkeypatch):
 
 
 def test_record_outcome_accepts_hypothesis_params():
-    """record_outcome function signature includes _hypothesis_category and _hypothesis_text."""
+    """record_outcome signature includes hypothesis + rejection taxonomy fields."""
     import inspect
     sig = inspect.signature(record_outcome)
     params = list(sig.parameters.keys())
+    assert "rejection_reason" in params
+    assert "rejection_theme" in params
+    assert "rejection_evidence" in params
     assert "_hypothesis_category" in params
     assert "_hypothesis_text" in params
 
@@ -320,6 +325,11 @@ def test_record_outcome_hypothesis_defaults_to_none():
     sig = inspect.signature(record_outcome)
     assert sig.parameters["_hypothesis_category"].default is None
     assert sig.parameters["_hypothesis_text"].default is None
+    assert sig.parameters["rejection_reason"].default is None
+
+
+def test_rejection_reason_taxonomy_contains_unknown():
+    assert "unknown" in VALID_REJECTION_REASONS
 
 
 def test_valid_outcomes_includes_acknowledged():
@@ -347,3 +357,31 @@ def test_show_summary_with_entries(capsys):
     show_summary(entries)
     out = capsys.readouterr().out
     assert "Awaiting response: 2" in out
+
+
+def test_extract_failure_themes_groups_recent_failures():
+    recent = date.today().isoformat()
+    entries = [
+        {
+            "id": "a",
+            "track": "job",
+            "outcome": "rejected",
+            "timeline": {"outcome_date": recent},
+            "conversion": {
+                "outcome_stage": "resume_screen",
+                "rejection_reason": "skills_mismatch",
+                "rejection_theme": "keyword mismatch",
+            },
+        },
+        {
+            "id": "b",
+            "track": "grant",
+            "outcome": "withdrawn",
+            "timeline": {"outcome_date": recent},
+            "conversion": {"outcome_stage": "unknown"},
+        },
+    ]
+    themes = extract_failure_themes(entries, months=1)
+    assert themes["total_failures"] == 2
+    assert themes["by_reason"]["skills_mismatch"] == 1
+    assert themes["by_stage"]["resume_screen"] == 1

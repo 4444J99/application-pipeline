@@ -69,3 +69,25 @@ def test_generate_report_includes_expected_sections(monkeypatch):
     assert "# Monthly Velocity Report" in report
     assert "## Summary" in report
     assert "## Hypothesis Validation" in report
+
+
+def test_load_conversion_log_supports_dict_shape(tmp_path, monkeypatch):
+    signals = tmp_path / "signals"
+    signals.mkdir()
+    path = signals / "conversion-log.yaml"
+    path.write_text("entries:\n  - submission_date: '2026-02-20'\n    outcome: accepted\n")
+    monkeypatch.setattr(report_mod, "SIGNALS_DIR", signals)
+    data = report_mod.load_conversion_log()
+    assert isinstance(data, list)
+    assert data[0]["outcome"] == "accepted"
+
+
+def test_load_hypotheses_supports_dict_shape(tmp_path, monkeypatch):
+    signals = tmp_path / "signals"
+    signals.mkdir()
+    path = signals / "hypotheses.yaml"
+    path.write_text("hypotheses:\n  - predicted_outcome: accepted\n    actual_outcome: accepted\n")
+    monkeypatch.setattr(report_mod, "SIGNALS_DIR", signals)
+    data = report_mod.load_hypotheses()
+    assert isinstance(data, list)
+    assert data[0]["predicted_outcome"] == "accepted"

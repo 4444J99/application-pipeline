@@ -35,12 +35,26 @@ def _make_entry(entry_id="test-entry", status="drafting", score=None, days_ahead
     return entry
 
 
+def _neutralize_dynamic_controls(monkeypatch, agent_module):
+    monkeypatch.setattr(
+        agent_module,
+        "compute_channel_allocator",
+        lambda _entries, min_samples=3: {"job": 1.0, "grant": 1.0, "fellowship": 1.0},
+    )
+    monkeypatch.setattr(
+        agent_module,
+        "compute_feedback_adjustment",
+        lambda months=3: {"delta": 0.0, "conversion_rate": 0.0, "hypothesis_accuracy": 0.0, "resolved_hypotheses": 0},
+    )
+
+
 def test_rule4_below_threshold_no_action(monkeypatch):
     """Score 8.0 is below the 9.0 threshold -- no advance action produced."""
     import agent
 
     monkeypatch.setattr(agent, "can_advance", lambda entry, target: (True, ""))
     monkeypatch.setattr(agent, "_mode_adjusted_threshold", lambda base: base)
+    _neutralize_dynamic_controls(monkeypatch, agent)
 
     entry = _make_entry(score=8.0, days_ahead=30)
     actions = PipelineAgent(dry_run=True).plan_actions([entry])
@@ -55,6 +69,7 @@ def test_rule4_at_threshold_advances(monkeypatch):
 
     monkeypatch.setattr(agent, "can_advance", lambda entry, target: (True, ""))
     monkeypatch.setattr(agent, "_mode_adjusted_threshold", lambda base: base)
+    _neutralize_dynamic_controls(monkeypatch, agent)
 
     entry = _make_entry(score=9.0, days_ahead=30)
     actions = PipelineAgent(dry_run=True).plan_actions([entry])
@@ -70,6 +85,7 @@ def test_rule4_missing_score_no_action(monkeypatch):
 
     monkeypatch.setattr(agent, "can_advance", lambda entry, target: (True, ""))
     monkeypatch.setattr(agent, "_mode_adjusted_threshold", lambda base: base)
+    _neutralize_dynamic_controls(monkeypatch, agent)
 
     entry = _make_entry(score=None, days_ahead=30)
     actions = PipelineAgent(dry_run=True).plan_actions([entry])
@@ -84,6 +100,7 @@ def test_rule4_insufficient_days_no_action(monkeypatch):
 
     monkeypatch.setattr(agent, "can_advance", lambda entry, target: (True, ""))
     monkeypatch.setattr(agent, "_mode_adjusted_threshold", lambda base: base)
+    _neutralize_dynamic_controls(monkeypatch, agent)
 
     entry = _make_entry(score=9.5, days_ahead=3)
     actions = PipelineAgent(dry_run=True).plan_actions([entry])

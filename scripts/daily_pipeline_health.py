@@ -167,6 +167,10 @@ def run_daily_health(dry_run: bool, recipients: list[str], strict: bool) -> int:
             "hygiene-check",
             [PYTHON, str(SCRIPTS_DIR / "hygiene.py")],
         ),
+        (
+            "scheduler-health",
+            [PYTHON, str(SCRIPTS_DIR / "scheduler_health.py"), "--strict"],
+        ),
     ]
 
     results: list[StepResult] = []

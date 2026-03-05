@@ -567,3 +567,53 @@ def test_deferred_reachable_from_research():
     """deferred should be reachable from research via qualified/drafting/staged."""
     reachable = _reachable_statuses("research")
     assert "deferred" in reachable
+
+
+def test_status_meta_invalid_approved_at_errors():
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "test-entry",
+            "name": "Test Entry",
+            "track": "job",
+            "status": "staged",
+            "outcome": None,
+            "status_meta": {"reviewed_by": "ops", "approved_at": "03-01-2026"},
+        }
+        filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
+        errors = validate_entry(filepath)
+        assert any("status_meta.approved_at" in e for e in errors)
+
+
+def test_status_meta_submitted_at_requires_submitted_by():
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "test-entry",
+            "name": "Test Entry",
+            "track": "job",
+            "status": "submitted",
+            "outcome": None,
+            "status_meta": {"submitted_at": "2026-03-01"},
+        }
+        filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
+        errors = validate_entry(filepath)
+        assert any("submitted_at requires status_meta.submitted_by" in e for e in errors)
+
+
+def test_staged_missing_governance_fields_warns():
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "test-entry",
+            "name": "Test Entry",
+            "track": "job",
+            "status": "staged",
+            "outcome": None,
+        }
+        filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
+        warnings = []
+        errors = validate_entry(filepath, warnings=warnings)
+        assert errors == []
+        assert any("missing status_meta.reviewed_by" in w for w in warnings)
+        assert any("missing status_meta.approved_at" in w for w in warnings)

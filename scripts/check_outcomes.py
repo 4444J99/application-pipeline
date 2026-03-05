@@ -9,6 +9,7 @@ Usage:
     python scripts/check_outcomes.py --record <id> --outcome acknowledged
     python scripts/check_outcomes.py --stale         # Entries >14d with no response
     python scripts/check_outcomes.py --summary       # Outcome statistics
+    python scripts/check_outcomes.py --failure-themes --months 1
 """
 
 import argparse
@@ -63,6 +64,19 @@ STALE_DAYS, LIKELY_GHOSTED_DAYS, TYPICAL_WINDOWS = _load_outcome_thresholds()
 
 VALID_OUTCOMES = {"accepted", "rejected", "withdrawn", "expired", "acknowledged"}
 VALID_STAGES = {"resume_screen", "phone_screen", "technical", "onsite", "offer", "referral_screen"}
+VALID_REJECTION_REASONS = {
+    "skills_mismatch",
+    "experience_gap",
+    "domain_mismatch",
+    "location_constraint",
+    "compensation_mismatch",
+    "sponsorship_constraint",
+    "portfolio_mismatch",
+    "timing_cycle",
+    "headcount_pause",
+    "no_response",
+    "unknown",
+}
 
 
 def get_submitted_entries() -> list[dict]:
@@ -82,6 +96,18 @@ def days_since_submission(entry: dict) -> int | None:
         if sub_date:
             return (date.today() - sub_date).days
     return None
+
+
+def _iter_conversion_log_entries() -> list[dict]:
+    """Load conversion log entries from signals/conversion-log.yaml."""
+    path = SIGNALS_DIR / "conversion-log.yaml"
+    if not path.exists():
+        return []
+    data = yaml.safe_load(path.read_text()) or {}
+    if isinstance(data, dict):
+        entries = data.get("entries", [])
+        return entries if isinstance(entries, list) else []
+    return data if isinstance(data, list) else []
 
 
 def show_awaiting(entries: list[dict]):
@@ -180,6 +206,9 @@ def record_outcome(
     outcome: str,
     stage: str | None = None,
     note: str = "",
+    rejection_reason: str | None = None,
+    rejection_theme: str | None = None,
+    rejection_evidence: str = "",
     _hypothesis_category: str | None = None,
     _hypothesis_text: str | None = None,
 ):
@@ -277,11 +306,36 @@ def record_outcome(
                     flags=re.MULTILINE,
                 )
 
+    if outcome == "rejected":
+        data_after = yaml.safe_load(content) or {}
+        if not isinstance(data_after, dict):
+            data_after = {}
+        conversion_after = data_after.get("conversion")
+        if not isinstance(conversion_after, dict):
+            conversion_after = {}
+
+        if rejection_reason:
+            conversion_after["rejection_reason"] = rejection_reason
+        if rejection_theme:
+            conversion_after["rejection_theme"] = rejection_theme
+        if rejection_evidence:
+            conversion_after["rejection_evidence"] = rejection_evidence
+
+        data_after["conversion"] = conversion_after
+        content = yaml.dump(data_after, default_flow_style=False, sort_keys=False, allow_unicode=True)
+
     content = update_last_touched(content)
     atomic_write(filepath, content)
 
     # Update conversion log
-    _update_conversion_log(entry_id, outcome, stage, time_to_response)
+    _update_conversion_log(
+        entry_id,
+        outcome,
+        stage,
+        time_to_response,
+        rejection_reason=rejection_reason,
+        rejection_theme=rejection_theme,
+    )
 
     # Move to closed/ for terminal outcomes
     if outcome in ("accepted", "rejected", "withdrawn", "expired"):
@@ -298,6 +352,10 @@ def record_outcome(
     print(f"  Outcome: {outcome}")
     if stage:
         print(f"  Stage: {stage}")
+    if outcome == "rejected" and rejection_reason:
+        print(f"  Rejection reason: {rejection_reason}")
+    if outcome == "rejected" and rejection_theme:
+        print(f"  Rejection theme: {rejection_theme}")
     if time_to_response is not None:
         print(f"  Time to response: {time_to_response} days")
 
@@ -322,7 +380,15 @@ def record_outcome(
             print(f"  → Or interactively: python scripts/feedback_capture.py --entry {entry_id} --outcome {outcome}")
 
 
-def _update_conversion_log(entry_id: str, outcome: str, stage: str | None, time_to_response: int | None):
+def _update_conversion_log(
+    entry_id: str,
+    outcome: str,
+    stage: str | None,
+    time_to_response: int | None,
+    *,
+    rejection_reason: str | None = None,
+    rejection_theme: str | None = None,
+):
     """Update the conversion log with outcome data."""
     log_path = SIGNALS_DIR / "conversion-log.yaml"
     if not log_path.exists():
@@ -340,6 +406,11 @@ def _update_conversion_log(entry_id: str, outcome: str, stage: str | None, time_
                 log_entry["time_to_response_days"] = time_to_response
             if stage:
                 log_entry["outcome_stage"] = stage
+            if outcome == "rejected":
+                if rejection_reason:
+                    log_entry["rejection_reason"] = rejection_reason
+                if rejection_theme:
+                    log_entry["rejection_theme"] = rejection_theme
             break
 
     log_data["entries"] = entries
@@ -394,6 +465,98 @@ def show_summary(entries: list[dict]):
     if no_response:
         print(f"\nStale (>{STALE_DAYS}d, no response): {no_response}")
 
+    rejection_reasons = {}
+    for e in all_entries:
+        if e.get("outcome") != "rejected":
+            continue
+        conversion = e.get("conversion", {})
+        if not isinstance(conversion, dict):
+            continue
+        reason = conversion.get("rejection_reason") or "unknown"
+        rejection_reasons[reason] = rejection_reasons.get(reason, 0) + 1
+    if rejection_reasons:
+        print("\nTop rejection reasons:")
+        for reason, count in sorted(rejection_reasons.items(), key=lambda item: (-item[1], item[0]))[:5]:
+            print(f"  {reason:<24s} {count}")
+
+
+def extract_failure_themes(entries: list[dict], months: int = 1) -> dict:
+    """Extract monthly failure themes from terminal non-accept outcomes."""
+    horizon_days = max(1, months) * 30
+    today = date.today()
+
+    by_reason: dict[str, int] = {}
+    by_theme: dict[str, int] = {}
+    by_stage: dict[str, int] = {}
+    by_track: dict[str, int] = {}
+    total = 0
+
+    for entry in entries:
+        outcome = entry.get("outcome")
+        if outcome not in {"rejected", "withdrawn", "expired"}:
+            continue
+
+        timeline = entry.get("timeline", {})
+        conversion = entry.get("conversion", {})
+        if not isinstance(timeline, dict):
+            timeline = {}
+        if not isinstance(conversion, dict):
+            conversion = {}
+
+        outcome_date = (
+            parse_date(timeline.get("outcome_date"))
+            or parse_date(conversion.get("response_date"))
+            or parse_date(entry.get("last_touched"))
+        )
+        if outcome_date is None:
+            continue
+        if (today - outcome_date).days > horizon_days:
+            continue
+
+        total += 1
+        reason = conversion.get("rejection_reason") or "unknown"
+        theme = conversion.get("rejection_theme") or "unspecified"
+        stage = conversion.get("outcome_stage") or "unknown"
+        track = entry.get("track") or "unknown"
+
+        by_reason[reason] = by_reason.get(reason, 0) + 1
+        by_theme[theme] = by_theme.get(theme, 0) + 1
+        by_stage[stage] = by_stage.get(stage, 0) + 1
+        by_track[track] = by_track.get(track, 0) + 1
+
+    return {
+        "months": months,
+        "total_failures": total,
+        "by_reason": dict(sorted(by_reason.items(), key=lambda item: (-item[1], item[0]))),
+        "by_theme": dict(sorted(by_theme.items(), key=lambda item: (-item[1], item[0]))),
+        "by_stage": dict(sorted(by_stage.items(), key=lambda item: (-item[1], item[0]))),
+        "by_track": dict(sorted(by_track.items(), key=lambda item: (-item[1], item[0]))),
+    }
+
+
+def show_failure_themes(submitted_entries: list[dict], months: int = 1) -> None:
+    """Display failure themes for the specified monthly window."""
+    closed_entries = load_entries(dirs=[PIPELINE_DIR_CLOSED], include_filepath=True)
+    all_entries = submitted_entries + closed_entries
+    themes = extract_failure_themes(all_entries, months=months)
+
+    print(f"FAILURE THEMES — last {months} month(s)")
+    print("=" * 70)
+    print(f"Total failures analyzed: {themes['total_failures']}")
+    if themes["total_failures"] == 0:
+        print("No failure outcomes found in the selected window.")
+        return
+
+    def _print_block(title: str, payload: dict[str, int]) -> None:
+        print(f"\n{title}:")
+        for key, count in list(payload.items())[:8]:
+            print(f"  {key:<28s} {count}")
+
+    _print_block("Top reasons", themes["by_reason"])
+    _print_block("Top themes", themes["by_theme"])
+    _print_block("Top stages", themes["by_stage"])
+    _print_block("By track", themes["by_track"])
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -407,6 +570,21 @@ def main():
                         help="Outcome stage (optional with --record)")
     parser.add_argument("--note", default="",
                         help="Note about the outcome")
+    parser.add_argument(
+        "--rejection-reason",
+        choices=sorted(VALID_REJECTION_REASONS),
+        help="Structured rejection reason (for --outcome rejected)",
+    )
+    parser.add_argument(
+        "--rejection-theme",
+        default="",
+        help="Free-text failure theme (for --outcome rejected)",
+    )
+    parser.add_argument(
+        "--rejection-evidence",
+        default="",
+        help="Evidence snippet supporting rejection taxonomy",
+    )
     parser.add_argument("--category",
                         help="Hypothesis category (auto-capture with --record)")
     parser.add_argument("--hypothesis", metavar="TEXT",
@@ -415,11 +593,17 @@ def main():
                         help="Show only stale entries (>14d, no response)")
     parser.add_argument("--summary", action="store_true",
                         help="Show outcome statistics summary")
+    parser.add_argument("--failure-themes", action="store_true",
+                        help="Show monthly failure themes from rejected/expired/withdrawn outcomes")
+    parser.add_argument("--months", type=int, default=1,
+                        help="Time window for --failure-themes (default: 1)")
     args = parser.parse_args()
 
     if args.record:
         if not args.outcome:
             parser.error("--outcome is required when using --record")
+        if args.outcome != "rejected" and (args.rejection_reason or args.rejection_theme or args.rejection_evidence):
+            parser.error("--rejection-* flags are only valid with --outcome rejected")
         # Validate hypothesis category if provided
         if args.category:
             try:
@@ -431,6 +615,9 @@ def main():
         record_outcome(
             args.record, args.outcome,
             stage=args.stage, note=args.note,
+            rejection_reason=args.rejection_reason,
+            rejection_theme=args.rejection_theme or None,
+            rejection_evidence=args.rejection_evidence,
             _hypothesis_category=args.category,
             _hypothesis_text=args.hypothesis,
         )
@@ -440,6 +627,8 @@ def main():
 
     if args.stale:
         show_stale(entries)
+    elif args.failure_themes:
+        show_failure_themes(entries, months=args.months)
     elif args.summary:
         show_summary(entries)
     else:

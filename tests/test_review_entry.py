@@ -27,6 +27,7 @@ def test_mark_reviewed_dry_run(tmp_path):
     assert result["ok"] is True
     assert result["dry_run"] is True
     assert result["status_meta"]["reviewed_by"] == "tester"
+    assert result["status_meta"]["approved_by"] == "tester"
 
 
 def test_mark_reviewed_write(tmp_path):
@@ -46,5 +47,7 @@ def test_mark_reviewed_write(tmp_path):
 
     data = yaml.safe_load(path.read_text())
     assert data["status_meta"]["reviewed_by"] == "tester"
+    assert data["status_meta"]["approved_by"] == "tester"
+    assert "approved_at" in data["status_meta"]
     assert "reviewed_at" in data["status_meta"]
     assert "last_touched" in data

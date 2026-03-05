@@ -28,6 +28,9 @@ def load_hypotheses() -> list[dict]:
         return []
     with open(path) as f:
         data = yaml.safe_load(f) or []
+    if isinstance(data, dict):
+        hypotheses = data.get("hypotheses", [])
+        return hypotheses if isinstance(hypotheses, list) else []
     return data if isinstance(data, list) else []
 
 
@@ -38,6 +41,9 @@ def load_conversion_log() -> list[dict]:
         return []
     with open(path) as f:
         data = yaml.safe_load(f) or []
+    if isinstance(data, dict):
+        entries = data.get("entries", [])
+        return entries if isinstance(entries, list) else []
     return data if isinstance(data, list) else []
 
 

@@ -222,8 +222,13 @@ def print_manual_next_steps(rows: list[AuditRow]) -> None:
 
     if "review_approved" in by_check:
         print("  review_approved:")
-        print("    Mark staged entries reviewed:")
+        print("    Mark staged entries reviewed+approved:")
         print("      .venv/bin/python scripts/review_entry.py --all-staged --reviewer <you>")
+
+    if "staged_sla" in by_check:
+        print("  staged_sla:")
+        print("    Staged entries exceeded the 72h submit SLA.")
+        print("    Prioritize immediate submit/withdraw decision and update status_meta.")
 
     if "has_target_url" in by_check:
         print("  has_target_url:")

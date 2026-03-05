@@ -3,10 +3,11 @@
 import sys
 from datetime import date, timedelta
 from pathlib import Path
+from types import SimpleNamespace
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from preflight import check_entry, readiness_score
+from preflight import assess_outcome_risk, check_entry, readiness_score
 
 # --- Helpers ---
 
@@ -251,3 +252,26 @@ def test_readiness_score_max_is_five():
     entry = _make_entry(id="definitely-nonexistent-xyz")
     score = readiness_score(entry)
     assert score <= 5
+
+
+def test_check_entry_blocks_when_risk_assessment_returns_error(monkeypatch):
+    entry = _make_entry(id="definitely-nonexistent-xyz")
+    monkeypatch.setattr("preflight.assess_outcome_risk", lambda _entry: ("outcome risk: BLOCKED HIGH (92%)", None))
+    errors, warnings = check_entry(entry)
+    assert any("BLOCKED HIGH" in err for err in errors)
+
+
+def test_assess_outcome_risk_warns_for_high_not_blocking(monkeypatch):
+    fake_module = SimpleNamespace(
+        predict_submission_risk=lambda entry: {
+            "available": True,
+            "risk": 0.75,
+            "samples": 20,
+            "confidence": "medium",
+        }
+    )
+    monkeypatch.setitem(sys.modules, "outcome_risk", fake_module)
+    error, warning = assess_outcome_risk(_make_entry())
+    assert error is None
+    assert warning is not None
+    assert "HIGH" in warning

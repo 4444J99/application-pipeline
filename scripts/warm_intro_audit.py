@@ -15,7 +15,7 @@ import argparse
 import json
 import sys
 from collections import defaultdict
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -148,11 +148,74 @@ def identify_referral_candidates(entries: list[dict]) -> list[dict]:
     return candidates
 
 
+def build_outreach_queue(
+    referral_candidates: list[dict],
+    *,
+    assignee: str = "4jp",
+    limit: int = 5,
+) -> list[dict]:
+    """Build top-N warm intro outreach queue with owner/date/action fields."""
+    if not referral_candidates:
+        return []
+
+    status_priority = {"staged": 4, "drafting": 3, "qualified": 2, "research": 1}
+    by_org: dict[str, dict] = {}
+    for candidate in referral_candidates:
+        org = (candidate.get("organization") or "").strip().lower()
+        if not org:
+            continue
+        current = by_org.get(org)
+        rank = (
+            int(candidate.get("org_entry_count", 0)),
+            status_priority.get(candidate.get("status", ""), 0),
+        )
+        if current is None:
+            by_org[org] = dict(candidate)
+            by_org[org]["_rank"] = rank
+            continue
+        if rank > current.get("_rank", (0, 0)):
+            merged = dict(candidate)
+            merged["_rank"] = rank
+            by_org[org] = merged
+
+    ordered = sorted(
+        by_org.values(),
+        key=lambda item: (
+            item.get("_rank", (0, 0))[0],
+            item.get("_rank", (0, 0))[1],
+            item.get("organization", ""),
+        ),
+        reverse=True,
+    )
+
+    due_date = (date.today() + timedelta(days=2)).isoformat()
+    queue = []
+    for candidate in ordered[:limit]:
+        reason = candidate.get("reason", "")
+        if "existing contacts" in reason.lower():
+            next_action = "Request intro from existing contact; send warm outreach in 24h."
+        else:
+            next_action = "Research referral path and send intro request."
+        queue.append(
+            {
+                "organization": candidate.get("organization"),
+                "entry_id": candidate.get("id"),
+                "status": candidate.get("status"),
+                "org_entry_count": int(candidate.get("org_entry_count", 0)),
+                "assignee": assignee,
+                "due_date": due_date,
+                "next_action": next_action,
+            }
+        )
+    return queue
+
+
 def generate_audit_report(entries: list[dict]) -> dict:
     """Generate comprehensive warm intro audit report."""
     contact_entries = scan_submitted_for_contacts(entries)
     dense_orgs = scan_for_organizations(entries)
     referral_candidates = identify_referral_candidates(entries)
+    outreach_queue = build_outreach_queue(referral_candidates)
 
     submitted = [e for e in entries if e.get("status") in ("submitted", "acknowledged", "interview")]
     active = [e for e in entries if e.get("status") in ("qualified", "drafting", "staged")]
@@ -171,6 +234,7 @@ def generate_audit_report(entries: list[dict]) -> dict:
             "warm_path_pct": warm_pct,
             "dense_organizations": len(dense_orgs),
             "referral_candidates": len(referral_candidates),
+            "outreach_queue": len(outreach_queue),
         },
         "contact_entries": contact_entries,
         "dense_organizations": {
@@ -178,6 +242,7 @@ def generate_audit_report(entries: list[dict]) -> dict:
             for org, items in dense_orgs.items()
         },
         "referral_candidates": referral_candidates,
+        "outreach_queue": outreach_queue,
         "recommendations": _generate_recommendations(contact_entries, dense_orgs, referral_candidates),
     }
 
@@ -218,6 +283,7 @@ def display_audit(report: dict) -> None:
     print(f"  With contacts:          {s['entries_with_contacts']} ({s['warm_path_pct']}%)")
     print(f"  Dense organizations:    {s['dense_organizations']}")
     print(f"  Referral candidates:    {s['referral_candidates']}")
+    print(f"  Outreach queue:         {s['outreach_queue']}")
     print()
 
     # Contact entries
@@ -247,6 +313,17 @@ def display_audit(report: dict) -> None:
             print(f"    {rc['id']:<45s} {rc['reason']}")
         print()
 
+    if report["outreach_queue"]:
+        print("  TOP OUTREACH QUEUE")
+        print(f"  {'-' * 40}")
+        for item in report["outreach_queue"]:
+            print(
+                f"    {item['organization']:<25s} {item['entry_id']} "
+                f"(owner={item['assignee']}, due={item['due_date']})"
+            )
+            print(f"      next: {item['next_action']}")
+        print()
+
     # Recommendations
     print("  RECOMMENDATIONS")
     print(f"  {'-' * 40}")
@@ -273,6 +350,7 @@ def save_audit(report: dict) -> Path:
         f"- With contacts: {s['entries_with_contacts']} ({s['warm_path_pct']}%)",
         f"- Dense organizations: {s['dense_organizations']}",
         f"- Referral candidates: {s['referral_candidates']}",
+        f"- Outreach queue: {s['outreach_queue']}",
         "",
         "## Recommendations",
         "",
@@ -296,6 +374,16 @@ def save_audit(report: dict) -> Path:
         lines.append("")
         for rc in report["referral_candidates"]:
             lines.append(f"- **{rc['id']}** — {rc['reason']}")
+        lines.append("")
+
+    if report["outreach_queue"]:
+        lines.append("## Outreach Queue")
+        lines.append("")
+        for item in report["outreach_queue"]:
+            lines.append(
+                f"- **{item['organization']}** (`{item['entry_id']}`): owner `{item['assignee']}`, "
+                f"due `{item['due_date']}` — {item['next_action']}"
+            )
         lines.append("")
 
     out.write_text("\n".join(lines))

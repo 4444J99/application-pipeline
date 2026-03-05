@@ -30,6 +30,9 @@ def load_conversion_log() -> list[dict]:
     
     with open(log_path) as f:
         data = yaml.safe_load(f) or []
+    if isinstance(data, dict):
+        entries = data.get("entries", [])
+        return entries if isinstance(entries, list) else []
     return data if isinstance(data, list) else []
 
 
@@ -41,6 +44,9 @@ def load_hypotheses() -> list[dict]:
     
     with open(hyp_path) as f:
         data = yaml.safe_load(f) or []
+    if isinstance(data, dict):
+        hypotheses = data.get("hypotheses", [])
+        return hypotheses if isinstance(hypotheses, list) else []
     return data if isinstance(data, list) else []
 
 
@@ -53,7 +59,7 @@ def filter_by_date_range(entries: list[dict], months: int = 1) -> list[dict]:
     filtered = []
     
     for entry in entries:
-        date_str = entry.get("submission_date")
+        date_str = entry.get("submission_date") or entry.get("submitted")
         if not date_str:
             continue
         
@@ -119,7 +125,10 @@ def calculate_metrics(entries: list[dict]) -> dict:
     # By channel
     channels = defaultdict(lambda: {"submissions": 0, "conversions": 0})
     for e in entries:
-        channel = (e.get("target") or {}).get("portal", "unknown") if isinstance(e.get("target"), dict) else "unknown"
+        if isinstance(e.get("target"), dict):
+            channel = (e.get("target") or {}).get("portal", "unknown")
+        else:
+            channel = e.get("portal", "unknown")
         channels[channel]["submissions"] += 1
         if e.get("outcome") == "accepted":
             channels[channel]["conversions"] += 1

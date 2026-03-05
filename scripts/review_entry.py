@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Mark entries as reviewed for multi-operator submission governance.
 
-Adds/updates status_meta.reviewed_by and status_meta.reviewed_at.
+Adds/updates status_meta.reviewed_by/status_meta.reviewed_at and approval metadata.
 This enables review gating before staged entries are submitted.
 
 Usage:
@@ -43,6 +43,8 @@ def mark_reviewed(filepath: Path, reviewer: str, note: str | None = None, dry_ru
 
     status_meta["reviewed_by"] = reviewer
     status_meta["reviewed_at"] = today
+    status_meta["approved_by"] = reviewer
+    status_meta["approved_at"] = today
     if note:
         status_meta["review_note"] = note
 

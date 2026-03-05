@@ -5,6 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
+import validate_hypotheses as vh_mod
 from validate_hypotheses import accuracy_stats, build_outcome_map, validate
 
 
@@ -45,3 +46,23 @@ def test_accuracy_stats_computes_percentage_from_resolved_items():
         "accuracy": 50.0,
         "unresolved": 1,
     }
+
+
+def test_load_hypotheses_supports_dict_shape(tmp_path, monkeypatch):
+    signals = tmp_path / "signals"
+    signals.mkdir()
+    (signals / "hypotheses.yaml").write_text("hypotheses:\n  - hypothesis: test\n")
+    monkeypatch.setattr(vh_mod, "SIGNALS_DIR", signals)
+    data = vh_mod.load_hypotheses()
+    assert isinstance(data, list)
+    assert data[0]["hypothesis"] == "test"
+
+
+def test_load_conversion_log_supports_dict_shape(tmp_path, monkeypatch):
+    signals = tmp_path / "signals"
+    signals.mkdir()
+    (signals / "conversion-log.yaml").write_text("entries:\n  - id: e1\n    outcome: accepted\n")
+    monkeypatch.setattr(vh_mod, "SIGNALS_DIR", signals)
+    data = vh_mod.load_conversion_log()
+    assert isinstance(data, list)
+    assert data[0]["id"] == "e1"
