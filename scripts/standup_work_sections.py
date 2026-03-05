@@ -116,7 +116,7 @@ def section_stale(
                 if stale_days > stagnation_days:
                     stagnant.append((entry_id, entry.get("name", entry_id), last_touched, stale_days, status))
 
-    print("2. STALENESS ALERTS")
+    print("2. AWAITING ATTENTION")
 
     if expired:
         print(f"   EXPIRED ({len(expired)}) — deadline passed, never submitted:")
@@ -136,13 +136,13 @@ def section_stale(
 
     if stagnant:
         stagnant.sort(key=lambda row: row[3], reverse=True)
-        print(f"   STAGNANT ({len(stagnant)}) — no review in >{stagnation_days} days:")
+        print(f"   NEEDS REVIEW ({len(stagnant)}) — no review in >{stagnation_days} days:")
         for _eid, name, last_touched, days_stale, status in stagnant[:10]:
             print(f"     {name} — {days_stale}d since last touch ({last_touched}) — {status}")
         if len(stagnant) > 10:
             print(f"     ... and {len(stagnant) - 10} more")
     else:
-        print("   STAGNANT: none")
+        print("   NEEDS REVIEW: none")
 
     print()
     return {
@@ -534,3 +534,70 @@ def section_deferred(entries: list[dict], *, parse_date_fn) -> None:
             print(f"       {note}")
 
     print()
+
+
+def section_precision_compliance(
+    entries: list[dict],
+    *,
+    actionable_statuses: set[str],
+    parse_date_fn,
+    max_active: int,
+    max_weekly_submissions: int,
+    company_cap: int,
+) -> dict:
+    """Report precision-mode compliance: actionable count, org caps, weekly submissions."""
+    today = date.today()
+    actionable = [e for e in entries if e.get("status") in actionable_statuses]
+    actionable_count = len(actionable)
+
+    # Entries per organization in actionable statuses
+    org_counts: dict[str, list[str]] = {}
+    for e in actionable:
+        org = (e.get("target") or {}).get("organization", "Unknown")
+        org_counts.setdefault(org, []).append(e.get("id", "?"))
+    over_cap_orgs = {org: ids for org, ids in org_counts.items() if len(ids) > company_cap}
+
+    # Weekly submission rate (submitted in last 7 days)
+    from datetime import timedelta
+    cutoff = today - timedelta(days=7)
+    weekly_submissions = 0
+    for e in entries:
+        timeline = e.get("timeline", {})
+        if not isinstance(timeline, dict):
+            continue
+        sub_date = parse_date_fn(timeline.get("submitted"))
+        if sub_date and sub_date >= cutoff:
+            weekly_submissions += 1
+
+    # Compliance checks
+    actionable_compliant = actionable_count <= max_active
+    org_compliant = len(over_cap_orgs) == 0
+    weekly_compliant = weekly_submissions <= max_weekly_submissions
+
+    print("PRECISION MODE COMPLIANCE")
+    status_label = "COMPLIANT" if actionable_compliant else "OVER_LIMIT"
+    print(f"   Actionable entries: {actionable_count}/{max_active} — {status_label}")
+
+    status_label = "COMPLIANT" if org_compliant else "OVER_LIMIT"
+    print(f"   Org cap ({company_cap}/org): {status_label}")
+    if over_cap_orgs:
+        for org, ids in sorted(over_cap_orgs.items()):
+            print(f"     !! {org}: {len(ids)} entries ({', '.join(ids[:5])})")
+
+    status_label = "COMPLIANT" if weekly_compliant else "OVER_LIMIT"
+    print(f"   Weekly submissions (7d): {weekly_submissions}/{max_weekly_submissions} — {status_label}")
+
+    all_compliant = actionable_compliant and org_compliant and weekly_compliant
+    if all_compliant:
+        print("   All metrics within precision-mode limits.")
+    print()
+
+    return {
+        "actionable_count": actionable_count,
+        "max_active": max_active,
+        "actionable_compliant": actionable_compliant,
+        "over_cap_orgs": len(over_cap_orgs),
+        "weekly_submissions": weekly_submissions,
+        "weekly_compliant": weekly_compliant,
+        "all_compliant": all_compliant,
+    }

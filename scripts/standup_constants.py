@@ -75,6 +75,7 @@ SECTIONS = {
     "market": "Market conditions, hot skills, and upcoming grant deadlines",
     "funding": "Funding pulse: viability score, top pathways, urgent blind spots",
     "relationships": "Relationship cultivation: top targets, today's actions, dense orgs",
+    "compliance": "Precision-mode compliance: actionable count, org caps, weekly submissions",
 }
 
 

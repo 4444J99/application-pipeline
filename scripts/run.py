@@ -71,9 +71,12 @@ COMMANDS = {
     "backup":      ("backup_pipeline.py", ["list"],       "List pipeline backups"),
     "blockroi":    ("block_roi_analysis.py", [],          "Block acceptance rate ROI analysis"),
     "portfolio":   ("portfolio_analysis.py", [],          "Portfolio analysis: blocks, positions, channels, variants"),
-    "signals":     ("log_signal_action.py", ["--list"],   "Signal-to-action audit trail"),
+    "quarterly":   ("quarterly_report.py", [],             "Quarterly State of Applications analytics report"),
+    "signals":     ("validate_signals.py", [],              "Validate signal YAML schema integrity"),
+    "signallog":   ("log_signal_action.py", ["--list"],   "Signal-to-action audit trail"),
     "resumes":     ("upgrade_resumes.py", [],             "Check for stale resume batch references"),
     "hypotheses-v": ("validate_hypotheses.py", [],        "Validate outcome hypotheses vs actuals"),
+    "hypotheses-validate": ("outcome_learner.py", ["--validate-hypotheses"], "Hypothesis validation + weight adjustment recommendations"),
     "backfill":    ("backfill_dates.py", ["--report"],   "Backfill date_added from timeline.researched"),
     "jobprofiles": ("generate_job_profile.py", ["--batch", "--dry-run"], "Preview missing job profiles for auto-sourced entries"),
     "bridge":      ("portfolio_bridge.py", [],           "Portfolio-pipeline work sample suggestions"),
@@ -94,6 +97,8 @@ COMMANDS = {
     "verifymatrix": ("verification_matrix.py", ["--strict"], "Check module verification coverage matrix"),
     "textmatch":   ("text_match.py", ["--all"],             "TF-IDF text match analysis for all entries"),
     "gaps":        ("text_match.py", ["--all", "--gaps"],    "Text match gap analysis: missing skills and blocks"),
+    "rejections":  ("rejection_learner.py", [],              "Rejection learning engine: correlate factors with outcomes"),
+    "crm":         ("crm.py", [],                            "Relationship CRM: contacts, interactions, coverage gaps"),
 }
 
 # --- Parameterized commands (word + target ID) ---

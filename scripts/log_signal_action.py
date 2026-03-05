@@ -61,6 +61,7 @@ def log_action(
     triggered_action: str,
     entry_id: str | None = None,
     responsible: str = "@4444J99",
+    reason: str | None = None,
 ) -> dict:
     """Add a new signal-action entry."""
     if signal_type not in VALID_SIGNAL_TYPES:
@@ -77,6 +78,8 @@ def log_action(
     }
     if entry_id:
         entry["entry_id"] = entry_id
+    if reason:
+        entry["reason"] = reason
 
     actions = load_signal_actions()
     actions.append(entry)

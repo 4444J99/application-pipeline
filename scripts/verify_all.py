@@ -52,6 +52,10 @@ def build_checks(quick: bool) -> list[Check]:
             name="pipeline-validation",
             command=[PYTHON, str(REPO_ROOT / "scripts" / "validate.py"), "--check-id-maps", "--check-rubric"],
         ),
+        Check(
+            name="signal-validation",
+            command=[PYTHON, str(REPO_ROOT / "scripts" / "validate_signals.py"), "--strict"],
+        ),
     ]
 
     if quick:

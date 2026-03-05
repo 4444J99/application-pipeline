@@ -5,7 +5,7 @@ from __future__ import annotations
 from datetime import date, datetime
 
 
-def parse_date(date_str) -> date | None:
+def parse_date(date_str: str | date | datetime | None) -> date | None:
     """Parse an ISO date string (YYYY-MM-DD) into a date object."""
     if not date_str:
         return None
@@ -19,7 +19,7 @@ def parse_date(date_str) -> date | None:
         return None
 
 
-def parse_datetime(date_str) -> datetime | None:
+def parse_datetime(date_str: str | date | datetime | None) -> datetime | None:
     """Parse an ISO date string into a datetime object."""
     if not date_str:
         return None

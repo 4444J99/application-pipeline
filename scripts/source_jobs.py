@@ -879,6 +879,16 @@ def main():
             print(f"Limited to:    {args.limit}")
         print(f"{'=' * 60}")
 
+        # Auto-source balance check: alert if >80% are tech jobs
+        if unique_jobs:
+            job_track_count = sum(1 for j in unique_jobs if j.get("track", "job") == "job")
+            total_new = len(unique_jobs)
+            job_pct = job_track_count / total_new * 100 if total_new > 0 else 0
+            if job_pct > 80 and total_new >= 5:
+                print(f"\n  AUTO-SOURCE BALANCE: {job_pct:.0f}% tech jobs ({job_track_count}/{total_new})")
+                print("  Consider adding non-ATS sources (grants, residencies, fellowships)")
+                print("  to maintain pipeline diversity across tracks.")
+
         if not unique_jobs:
             print("\nNo new jobs to add.")
             save_stats({

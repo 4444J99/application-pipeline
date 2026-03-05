@@ -5,6 +5,8 @@ get_deadline, and common constants that were previously duplicated across
 pipeline_status.py, standup.py, conversion_report.py, and score.py.
 """
 
+from __future__ import annotations
+
 import json
 import os
 import re

@@ -22,6 +22,7 @@ import yaml
 from pipeline_lib import (
     ACTIONABLE_STATUSES,
     ALL_PIPELINE_DIRS,
+    COMPANY_CAP,
     EFFORT_MINUTES,
     PIPELINE_DIR_RESEARCH_POOL,
     REPO_ROOT,
@@ -31,6 +32,7 @@ from pipeline_lib import (
     days_until,
     get_deadline,
     get_effort,
+    get_mode_thresholds,
     get_score,
     load_entries,
     load_market_intelligence,
@@ -92,6 +94,23 @@ def section_health(entries: list[dict]) -> dict:
         entries,
         actionable_statuses=ACTIONABLE_STATUSES,
         parse_date_fn=parse_date,
+    )
+
+
+# ---------------------------------------------------------------------------
+# Section: Precision Mode Compliance
+# ---------------------------------------------------------------------------
+
+def section_precision_compliance(entries: list[dict]) -> dict:
+    """Report precision-mode compliance metrics."""
+    thresholds = get_mode_thresholds()
+    return _work_sections.section_precision_compliance(
+        entries,
+        actionable_statuses=ACTIONABLE_STATUSES,
+        parse_date_fn=parse_date,
+        max_active=thresholds.get("max_active", 10),
+        max_weekly_submissions=thresholds.get("max_weekly_submissions", 2),
+        company_cap=COMPANY_CAP,
     )
 
 
@@ -299,6 +318,18 @@ def section_signal_freshness():
     else:
         print("     backup: NONE (run backup_pipeline.py)")
         stale_count += 1
+
+    # Market intelligence freshness
+    from pipeline_market import check_market_intel_freshness
+    market_status = check_market_intel_freshness(REPO_ROOT)
+    if market_status["age_days"] < 0:
+        print("     market-intel: MISSING")
+        stale_count += 1
+    elif market_status["warning"]:
+        print(f"     market-intel: {market_status['warning']}")
+        stale_count += 1
+    else:
+        print(f"     market-intel: OK ({market_status['age_days']:.0f}d old)")
 
     if stale_count == 0:
         print("     All signals fresh.")
@@ -680,6 +711,9 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
 
     if section is None or section == "health":
         health_stats = section_health(entries)
+
+    if section is None or section == "compliance":
+        section_precision_compliance(entries)
 
     # Show dual-track summary when running full standup
     if section is None:

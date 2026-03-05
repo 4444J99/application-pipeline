@@ -6,9 +6,10 @@ with actual results, and recommends scoring weight adjustments. Designed to
 close the feedback loop between submission outcomes and the scoring rubric.
 
 Usage:
-    python scripts/outcome_learner.py                    # Full calibration report
-    python scripts/outcome_learner.py --save             # Write calibration to signals/
-    python scripts/outcome_learner.py --hypotheses       # Cross-reference with hypothesis patterns
+    python scripts/outcome_learner.py                           # Full calibration report
+    python scripts/outcome_learner.py --save                    # Write calibration to signals/
+    python scripts/outcome_learner.py --hypotheses              # Cross-reference with hypothesis patterns
+    python scripts/outcome_learner.py --validate-hypotheses     # Hypothesis validation + weight recommendations
 """
 
 import argparse
@@ -409,6 +410,209 @@ def approve_calibration(reviewer: str) -> Path:
     return CALIBRATION_FILE
 
 
+# Map hypothesis categories to the scoring dimensions they most affect.
+# Used by cross_reference_hypotheses and validate_hypotheses_with_weights.
+CATEGORY_DIMENSION_MAP = {
+    "resume_screen": ["evidence_match", "track_record_fit"],
+    "cover_letter": ["mission_alignment", "evidence_match"],
+    "credential_gap": ["track_record_fit"],
+    "timing": ["deadline_feasibility"],
+    "auto_rejection": ["portal_friction"],
+    "portfolio_gap": ["evidence_match", "track_record_fit"],
+    "role_fit": ["mission_alignment", "strategic_value"],
+    "compensation": ["financial_alignment"],
+    "ie_framing": ["mission_alignment", "track_record_fit"],
+}
+
+
+def validate_hypotheses_with_weights(base_weights: dict) -> dict:
+    """Run hypothesis validation and generate weight adjustment recommendations.
+
+    Closes the hypothesis -> outcome -> adjustment loop:
+    1. Loads and validates hypotheses against conversion log outcomes
+    2. Computes per-category accuracy
+    3. For validated patterns (>50% accurate), recommends increasing related
+       dimension weights
+    4. For invalid assumptions (<30% accurate), recommends decreasing related
+       dimension weights
+
+    Returns dict with: report (str), adjustments (dict), yaml_snippet (str),
+    category_accuracy (dict), patterns (dict).
+    """
+    from validate_hypotheses import (
+        accuracy_by_category,
+        build_outcome_map,
+        classify_patterns,
+        load_conversion_log,
+        load_hypotheses,
+        validate,
+    )
+
+    hypotheses = load_hypotheses()
+    if not hypotheses:
+        return {
+            "report": "No hypotheses found. Capture with: python scripts/feedback_capture.py --entry <id>",
+            "adjustments": {},
+            "yaml_snippet": "",
+            "category_accuracy": {},
+            "patterns": {"validated": [], "invalid": [], "inconclusive": [], "no_data": []},
+        }
+
+    outcomes = build_outcome_map(load_conversion_log())
+    results = validate(hypotheses, outcomes)
+    cat_stats = accuracy_by_category(results)
+    patterns = classify_patterns(cat_stats)
+
+    # Build weight adjustment recommendations from validated/invalid patterns
+    dimension_adjustments: dict[str, dict] = {}
+    for dim in DIMENSION_ORDER:
+        dimension_adjustments[dim] = {
+            "direction": "keep",
+            "reason": [],
+            "confidence_sources": [],
+        }
+
+    # Validated patterns -> increase related dimensions
+    for cat in patterns["validated"]:
+        stats = cat_stats[cat]
+        dims = CATEGORY_DIMENSION_MAP.get(cat, [])
+        for dim in dims:
+            if dim in dimension_adjustments:
+                dimension_adjustments[dim]["direction"] = "increase"
+                dimension_adjustments[dim]["reason"].append(
+                    f"{cat} predictions {stats['accuracy']:.0f}% accurate ({stats['correct']}/{stats['resolved']})"
+                )
+                dimension_adjustments[dim]["confidence_sources"].append(cat)
+
+    # Invalid assumptions -> decrease related dimensions
+    for cat in patterns["invalid"]:
+        stats = cat_stats[cat]
+        dims = CATEGORY_DIMENSION_MAP.get(cat, [])
+        for dim in dims:
+            if dim in dimension_adjustments:
+                # Only override to decrease if not already set to increase by
+                # a stronger (validated) signal
+                if dimension_adjustments[dim]["direction"] != "increase":
+                    dimension_adjustments[dim]["direction"] = "decrease"
+                dimension_adjustments[dim]["reason"].append(
+                    f"{cat} predictions only {stats['accuracy']:.0f}% accurate -- invalid assumption"
+                )
+                dimension_adjustments[dim]["confidence_sources"].append(cat)
+
+    # Compute recommended weights
+    new_weights = dict(base_weights)
+    shift = 0.02
+    increase_dims = [d for d, a in dimension_adjustments.items() if a["direction"] == "increase"]
+    decrease_dims = [d for d, a in dimension_adjustments.items() if a["direction"] == "decrease"]
+
+    total_freed = 0.0
+    for dim in decrease_dims:
+        if dim in new_weights:
+            actual_shift = min(shift, new_weights[dim] - 0.01)
+            new_weights[dim] = round(new_weights[dim] - actual_shift, 4)
+            total_freed += actual_shift
+
+    if increase_dims and total_freed > 0:
+        per_dim = total_freed / len(increase_dims)
+        for dim in increase_dims:
+            if dim in new_weights:
+                new_weights[dim] = round(new_weights[dim] + per_dim, 4)
+
+    # Normalize to 1.0
+    total = sum(new_weights.values())
+    if total > 0:
+        new_weights = {k: round(v / total, 3) for k, v in new_weights.items()}
+
+    # Generate YAML snippet for agent-rules.yaml
+    yaml_lines = []
+    yaml_lines.append("# Hypothesis-validated weight adjustments")
+    yaml_lines.append(f"# Generated from {len(hypotheses)} hypotheses, "
+                      f"{sum(s['resolved'] for s in cat_stats.values())} resolved")
+    yaml_lines.append("hypothesis_weight_adjustments:")
+    has_adjustments = False
+    for dim in DIMENSION_ORDER:
+        adj = dimension_adjustments[dim]
+        if adj["direction"] != "keep":
+            has_adjustments = True
+            reason_str = "; ".join(adj["reason"])
+            yaml_lines.append(f"  {dim}:")
+            yaml_lines.append(f"    direction: {adj['direction']}")
+            yaml_lines.append(f"    current: {base_weights.get(dim, 0.0)}")
+            yaml_lines.append(f"    recommended: {new_weights.get(dim, 0.0)}")
+            yaml_lines.append(f"    reason: \"{reason_str}\"")
+
+    if not has_adjustments:
+        yaml_lines.append("  # No adjustments recommended (insufficient validated patterns)")
+
+    yaml_snippet = "\n".join(yaml_lines)
+
+    # Generate human-readable report
+    report_lines = []
+    report_lines.append("HYPOTHESIS-VALIDATED WEIGHT ADJUSTMENTS")
+    report_lines.append("=" * 60)
+    report_lines.append(f"Hypotheses analyzed: {len(hypotheses)}")
+    resolved_n = sum(s["resolved"] for s in cat_stats.values())
+    report_lines.append(f"Resolved: {resolved_n}")
+    report_lines.append("")
+
+    if patterns["validated"]:
+        report_lines.append("Validated Patterns (>50% accuracy):")
+        for cat in patterns["validated"]:
+            s = cat_stats[cat]
+            dims = CATEGORY_DIMENSION_MAP.get(cat, [])
+            dim_str = ", ".join(dims) if dims else "no mapped dimensions"
+            report_lines.append(f"  {cat}: {s['accuracy']:.0f}% ({s['correct']}/{s['resolved']}) -> {dim_str}")
+        report_lines.append("")
+
+    if patterns["invalid"]:
+        report_lines.append("Invalid Assumptions (<30% accuracy):")
+        for cat in patterns["invalid"]:
+            s = cat_stats[cat]
+            dims = CATEGORY_DIMENSION_MAP.get(cat, [])
+            dim_str = ", ".join(dims) if dims else "no mapped dimensions"
+            report_lines.append(f"  {cat}: {s['accuracy']:.0f}% ({s['correct']}/{s['resolved']}) -> {dim_str}")
+        report_lines.append("")
+
+    if has_adjustments:
+        report_lines.append("Recommended Weight Changes:")
+        report_lines.append(f"  {'Dimension':<25s} {'Current':>8s} {'New':>8s}  Direction")
+        report_lines.append("  " + "-" * 55)
+        for dim in DIMENSION_ORDER:
+            adj = dimension_adjustments[dim]
+            if adj["direction"] != "keep":
+                current = base_weights.get(dim, 0.0)
+                new = new_weights.get(dim, 0.0)
+                report_lines.append(f"  {dim:<25s} {current:>8.3f} {new:>8.3f}  {adj['direction']}")
+        report_lines.append("")
+        report_lines.append("Apply to strategy/agent-rules.yaml:")
+        report_lines.append("  python scripts/outcome_learner.py --validate-hypotheses")
+    else:
+        report_lines.append("No weight adjustments recommended.")
+        if resolved_n == 0:
+            report_lines.append("  Record outcomes first: python scripts/check_outcomes.py --record <id> --outcome <result>")
+        else:
+            report_lines.append("  All patterns are inconclusive (30-50% accuracy). Need more data.")
+
+    report = "\n".join(report_lines)
+
+    return {
+        "report": report,
+        "adjustments": {
+            dim: {
+                "direction": dimension_adjustments[dim]["direction"],
+                "current": base_weights.get(dim, 0.0),
+                "recommended": new_weights.get(dim, 0.0),
+                "reason": dimension_adjustments[dim]["reason"],
+            }
+            for dim in DIMENSION_ORDER
+            if dimension_adjustments[dim]["direction"] != "keep"
+        },
+        "yaml_snippet": yaml_snippet,
+        "category_accuracy": cat_stats,
+        "patterns": patterns,
+    }
+
+
 def cross_reference_hypotheses(data: list[dict], analysis: dict) -> str:
     """Cross-reference hypothesis categories with dimension accuracy."""
     try:
@@ -435,19 +639,6 @@ def cross_reference_hypotheses(data: list[dict], analysis: dict) -> str:
     for cat, count in sorted(by_cat.items(), key=lambda x: -x[1]):
         desc = CATEGORY_DESCRIPTIONS.get(cat, cat)
         lines.append(f"  {cat:<20s} {count:>3}  {desc}")
-
-    # Map categories to likely scoring dimensions
-    CATEGORY_DIMENSION_MAP = {
-        "resume_screen": ["evidence_match", "track_record_fit"],
-        "cover_letter": ["mission_alignment", "evidence_match"],
-        "credential_gap": ["track_record_fit"],
-        "timing": ["deadline_feasibility"],
-        "auto_rejection": ["portal_friction"],
-        "portfolio_gap": ["evidence_match", "track_record_fit"],
-        "role_fit": ["mission_alignment", "strategic_value"],
-        "compensation": ["financial_alignment"],
-        "ie_framing": ["mission_alignment", "track_record_fit"],
-    }
 
     lines.append("\nCategory → Dimension correlations:")
     for cat, count in sorted(by_cat.items(), key=lambda x: -x[1]):
@@ -486,6 +677,8 @@ def main():
                         help="Check drift between calibrated and base weights")
     parser.add_argument("--approve", action="store_true",
                         help="Approve saved calibration for score.py auto-application")
+    parser.add_argument("--validate-hypotheses", action="store_true",
+                        help="Run hypothesis validation and generate weight adjustment YAML snippet")
     parser.add_argument("--reviewer", default=os.environ.get("PIPELINE_OPERATOR") or os.environ.get("USER") or "unknown",
                         help="Reviewer handle for --approve")
     args = parser.parse_args()
@@ -496,6 +689,15 @@ def main():
         base_weights = dict(WEIGHTS)
     except ImportError:
         base_weights = {dim: 1.0 / len(DIMENSION_ORDER) for dim in DIMENSION_ORDER}
+
+    if args.validate_hypotheses:
+        result = validate_hypotheses_with_weights(base_weights)
+        print(result["report"])
+        if result["yaml_snippet"]:
+            print()
+            print("--- YAML Snippet for strategy/agent-rules.yaml ---")
+            print(result["yaml_snippet"])
+        return
 
     if args.drift_check:
         if not CALIBRATION_FILE.exists():

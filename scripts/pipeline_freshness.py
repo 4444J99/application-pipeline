@@ -25,7 +25,7 @@ JOB_WARM_HOURS = 48
 JOB_STALE_HOURS = 72
 
 
-def _parse_date(date_str) -> date | None:
+def _parse_date(date_str: str | date | datetime | None) -> date | None:
     if not date_str:
         return None
     if isinstance(date_str, datetime):
@@ -70,7 +70,7 @@ def _load_freshness_thresholds() -> tuple[float, float, float]:
         return float(JOB_FRESH_HOURS), float(JOB_WARM_HOURS), float(JOB_STALE_HOURS)
 
 
-def _parse_datetime_aware(date_str) -> datetime | None:
+def _parse_datetime_aware(date_str: str | date | datetime | None) -> datetime | None:
     """Parse date/datetime values into timezone-aware UTC datetimes."""
     if not date_str:
         return None
@@ -95,14 +95,14 @@ def _parse_datetime_aware(date_str) -> datetime | None:
 def get_posting_age_hours(entry: dict) -> float | None:
     """Compute posting age in hours using timeline/posting-related fields."""
 
-    def _is_date_only(raw_value) -> bool:
+    def _is_date_only(raw_value: str | date | datetime | None) -> bool:
         if isinstance(raw_value, date) and not isinstance(raw_value, datetime):
             return True
         if isinstance(raw_value, str):
             return bool(re.fullmatch(r"\d{4}-\d{2}-\d{2}", raw_value.strip()))
         return False
 
-    def _hours_from_date_only(raw_value) -> float | None:
+    def _hours_from_date_only(raw_value: str | date | datetime | None) -> float | None:
         parsed = _parse_date(raw_value)
         if parsed is None:
             return None

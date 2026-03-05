@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from collections.abc import Callable
 from pathlib import Path
 
 
@@ -40,7 +41,9 @@ def http_request_with_retry(
     return None
 
 
-def build_market_intelligence_loader(repo_root: Path):
+def build_market_intelligence_loader(
+    repo_root: Path,
+) -> tuple[Callable[[], dict], Callable[[], dict], Callable[[], dict], dict[str, int], dict[str, int]]:
     """Return lazy market-intelligence accessors bound to a repo root."""
     intel_file = repo_root / "strategy" / "market-intelligence-2026.json"
     cache: dict | None = None
@@ -122,4 +125,27 @@ def build_market_intelligence_loader(repo_root: Path):
         portal_scores_default,
         strategic_base_default,
     )
+
+
+def check_market_intel_freshness(repo_root: Path) -> dict:
+    """Check modification time of market-intelligence-2026.json.
+
+    Returns:
+        {"fresh": bool, "age_days": float, "warning": str|None}
+        Warns if >90 days old, critical if >180 days old.
+    """
+    import time
+
+    intel_file = repo_root / "strategy" / "market-intelligence-2026.json"
+    if not intel_file.exists():
+        return {"fresh": False, "age_days": -1, "warning": "market-intelligence-2026.json not found"}
+
+    mtime = intel_file.stat().st_mtime
+    age_days = (time.time() - mtime) / 86400
+
+    if age_days > 180:
+        return {"fresh": False, "age_days": age_days, "warning": f"CRITICAL: market intel is {age_days:.0f}d old (>180d) — data is unreliable"}
+    if age_days > 90:
+        return {"fresh": False, "age_days": age_days, "warning": f"WARNING: market intel is {age_days:.0f}d old (>90d) — schedule refresh"}
+    return {"fresh": True, "age_days": age_days, "warning": None}
 

@@ -49,10 +49,18 @@ def can_advance(current_status: str, target_status: str) -> bool:
     return target_status in VALID_TRANSITIONS.get(current_status, set())
 
 
-def advance_entry(filepath, entry_id: str, target_status: str) -> bool:
+def has_outreach_actions(entry: dict) -> bool:
+    """Check if an entry has at least one outreach or follow-up action recorded."""
+    follow_up = entry.get("follow_up") or []
+    outreach = entry.get("outreach") or []
+    return len(follow_up) > 0 or len(outreach) > 0
+
+
+def advance_entry(filepath, entry_id: str, target_status: str, reason: str | None = None) -> bool:
     """Advance a single entry to target_status by updating the YAML file.
 
     Returns True if successful. Logs to signal-action audit trail.
+    The optional reason is included in the signal-action log entry.
     """
     content = filepath.read_text()
     today_str = date.today().isoformat()
@@ -83,12 +91,16 @@ def advance_entry(filepath, entry_id: str, target_status: str) -> bool:
     # Log signal-action for audit trail
     try:
         from log_signal_action import log_action
+        description = f"Advanced {from_status} -> {target_status}"
+        if reason:
+            description = f"{description} ({reason})"
         log_action(
             signal_id=f"advance-{entry_id}-{today_str}",
             signal_type="score_threshold",
-            description=f"Advanced {from_status} -> {target_status}",
+            description=description,
             triggered_action=f"advance to {target_status}",
             entry_id=entry_id,
+            reason=reason,
         )
     except Exception as e:
         print(f"  [audit] Signal logging failed: {e}", file=sys.stderr)
@@ -217,6 +229,7 @@ def run_advance(
     dry_run: bool,
     auto_yes: bool,
     backup: bool = False,
+    force: bool = False,
 ):
     """Advance entries matching filters to target_status."""
     entries = load_entries(include_filepath=True)
@@ -254,6 +267,13 @@ def run_advance(
                 if not allowed:
                     print(f"  SKIP {eid}: {org} at cap ({current_count}/{COMPANY_CAP})")
                     continue
+
+        # Gate: require outreach before advancing to submitted (unless --force)
+        if target_status == "submitted" and not force:
+            if not has_outreach_actions(e):
+                print(f"  BLOCKED {eid}: No outreach actions recorded. "
+                      f"Use followup.py --log to record outreach first.")
+                continue
 
         candidates.append(e)
 
@@ -307,13 +327,23 @@ def run_advance(
     if backup:
         _backup_files([e.get("_filepath") for e in candidates], label="advance")
 
+    # Determine reason based on context
+    if entry_id:
+        reason = "Manual advancement by user"
+    elif effort_filter:
+        reason = f"Batch advance: effort={effort_filter}"
+    elif status_filter:
+        reason = f"Batch advance: from {status_filter}"
+    else:
+        reason = None
+
     # Execute
     advanced = 0
     for e in candidates:
         eid = e.get("id", "?")
         filepath = e.get("_filepath")
         if filepath:
-            advance_entry(filepath, eid, target_status)
+            advance_entry(filepath, eid, target_status, reason=reason)
             advanced += 1
 
     print(f"{'─' * 60}")
@@ -340,6 +370,8 @@ def main():
                         help="Show advancement opportunities and blockers")
     parser.add_argument("--backup", action="store_true",
                         help="Snapshot modified files to pipeline/.backup/ before writing")
+    parser.add_argument("--force", action="store_true",
+                        help="Bypass outreach gate when advancing to submitted")
     args = parser.parse_args()
 
     if args.report:
@@ -358,6 +390,7 @@ def main():
         dry_run=args.dry_run,
         auto_yes=args.yes,
         backup=args.backup,
+        force=args.force,
     )
 
 

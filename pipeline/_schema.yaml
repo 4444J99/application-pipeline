@@ -115,6 +115,14 @@
 #   timeline.discovered and job_freshness thresholds in market-intelligence-2026.json.
 #   1.0 = hot (<=24h), decays toward 0.0 as posting ages past 72h.
 
+# --- Submission Timing ---
+# submission_timing: When the application was submitted relative to deadline
+#   enum: early | mid | late | rolling
+#   early: >14 days before deadline
+#   mid: 7-14 days before deadline
+#   late: <7 days before deadline
+#   rolling: No fixed deadline
+
 # --- Conversion Tracking ---
 # conversion:
 #   response_received: boolean

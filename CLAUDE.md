@@ -16,11 +16,12 @@ Career application pipeline repo — personal infrastructure for managing grant,
 - **Max 1-2 applications per week**, each deeply researched
 - **Minimum score 9.0** to apply; network_proximity >= 5 preferred
 - **9 scoring dimensions** including `network_proximity` (referral = 8x hire rate)
-- **Max 10 active entries** at any time; max 1 per organization
+- **Max 10 actionable entries** (qualified+drafting+staged) at any time; max 1 per organization. Note: the `active/` directory may contain more files including recently-promoted research entries awaiting triage.
 - **Daily split:** 2hr research, 2hr relationships, 1hr application work
 - **Stale thresholds relaxed:** 14 days (was 7), stagnant 30 days (was 14)
 - **No volume pressure** in standup messaging; no "ship something this week"
-- **Rationale:** 60 cold applications in 4 days → 0 interviews. Precision targeting + warm paths is the only viable strategy.
+- **Minimum outreach before submission:** At least 1 outreach action (LinkedIn connect, email, referral ask) required before advancing to submitted. Use `followup.py --log` to record.
+- **Rationale:** 60 cold applications in 4 days → 0 interviews. Precision targeting + warm paths is the only viable strategy. Note: referral multiplier (8x) and cover letter callback (+53%) are *market benchmarks* (not yet validated by this pipeline's own data).
 
 ## Architecture
 
@@ -48,8 +49,8 @@ research → qualified → drafting → staged → submitted → acknowledged �
 - **Actionable statuses** (what scripts operate on): `research`, `qualified`, `drafting`, `staged`
 - **Deferred**: Ready to submit but blocked by external factors (portal paused, cycle not open). Not actionable — excluded from standup/campaign/advance but visible in standup's deferred section. Entries have a `deferral` field with `reason`, optional `resume_date`, and `note`.
 - **Terminal outcomes**: `accepted`, `rejected`, `withdrawn`, `expired`
-- `advance.py` enforces forward-only progression with validation
-- `standup.py` flags entries untouched for >7 days as stale
+- `advance.py` enforces forward-only progression with validation; requires at least 1 outreach action before advancing to `submitted` (bypass with `--force`)
+- `standup.py` flags entries untouched for >14 days as stale (threshold loaded from market-intelligence JSON)
 
 ## Identity Positions
 
@@ -91,6 +92,21 @@ Scripts are independent CLIs but some import functions from each other:
 - **`check_email.py`** — standalone; scans for submission confirmations and responses. Requires `.email-config.yaml` with IMAP credentials (not committed). Run `run.py email` daily.
 - All other scripts are standalone CLIs that read/write pipeline YAML files.
 
+## Module Architecture
+
+`pipeline_lib.py` was decomposed into focused modules to keep the main file manageable:
+
+| Module | Extracted From | Purpose |
+|--------|---------------|---------|
+| `pipeline_entry_state.py` | `pipeline_lib.py` | Entry state machine: status transitions, validation, actionable checks |
+| `pipeline_freshness.py` | `pipeline_lib.py` | Staleness thresholds, age categorization, freshness scoring |
+| `pipeline_market.py` | `pipeline_lib.py` | Market intelligence loader, portal friction scores, strategic base values, HTTP retry |
+| `standup_constants.py` | `standup.py` | Standup section names, colors, budget defaults |
+| `standup_work_sections.py` | `standup.py` | Work-focused standup sections: stale, plan, outreach, practices, replenish, deferred, precision compliance |
+| `standup_relationship_sections.py` | `standup.py` | Relationship standup sections: follow-up dashboard, CRM summary |
+
+Scripts import from these modules directly (e.g. `from pipeline_market import build_market_intelligence_loader`). The main `pipeline_lib.py` re-exports commonly used functions for backward compatibility.
+
 ## Resume Workflow
 
 **NEVER use base resumes (`materials/resumes/base/`) for final submissions.** Every target must have a tailored resume in the current batch directory (`materials/resumes/batch-03/`).
@@ -117,244 +133,68 @@ When finishing an application batch or role, always provide:
 
 ## Commands
 
-Most scripts are accessible via `python scripts/run.py <command>` (see Quick Commands below). Full script invocations are documented here for advanced usage.
+Most scripts are accessible via `python scripts/run.py <command>` (see Quick Commands below). For full flag documentation, run any script with `--help`.
 
 ```bash
-# Daily standup (start here every session)
-python scripts/standup.py
-python scripts/standup.py --hours 5          # Adjust time budget
-python scripts/standup.py --section stale    # Single section
-python scripts/standup.py --section followup # Follow-up dashboard for submitted entries
-python scripts/standup.py --touch <entry-id> # Mark entry as reviewed
-python scripts/standup.py --log              # Log session metrics
-python scripts/standup.py --triage           # Interactive triage of stagnant entries
+# Daily workflow
+python scripts/standup.py                              # Daily dashboard (start here)
+python scripts/standup.py --section followup           # Follow-up dashboard only
+python scripts/standup.py --triage                     # Interactive triage of stagnant entries
+python scripts/campaign.py                             # Deadline-aware campaign (14-day window)
+python scripts/campaign.py --execute --yes             # Execute pipeline for urgent entries
+python scripts/followup.py                             # Today's follow-up actions
+python scripts/check_outcomes.py                       # Entries awaiting response
 
-# Pipeline overview
-python scripts/pipeline_status.py
+# Pipeline operations
+python scripts/score.py --target <id>                  # Score single entry (9-dimension rubric)
+python scripts/score.py --auto-qualify --yes            # Promote research_pool entries ≥ 9.0
+python scripts/advance.py --report                     # Show advancement opportunities
+python scripts/advance.py --to staged --id <id>        # Advance specific entry
+python scripts/enrich.py --all --yes                   # Wire materials, blocks, variants
+python scripts/submit.py --target <id>                 # Generate paste-ready checklist
+python scripts/submit.py --target <id> --record        # Record submission + update YAML
 
-# Validate pipeline YAML (CI runs with --check-id-maps --check-rubric)
-python scripts/validate.py
+# Composition & drafting
+python scripts/compose.py --target <id>                # Compose from blocks
+python scripts/draft.py --target <id>                  # Draft from profile
+python scripts/alchemize.py --target <id>              # Greenhouse end-to-end orchestrator
+
+# ATS submissions
+python scripts/greenhouse_submit.py --target <id>      # Greenhouse (dry-run)
+python scripts/lever_submit.py --target <id>           # Lever portal
+python scripts/ashby_submit.py --target <id>           # Ashby portal
+
+# Analytics & reporting
+python scripts/funnel_report.py                        # Conversion funnel
+python scripts/quarterly_report.py                     # Quarterly analytics
+python scripts/rejection_learner.py                    # Rejection dimension analysis
+python scripts/portfolio_analysis.py                   # Block/position/channel analysis
+python scripts/velocity_report.py                      # Monthly velocity
+
+# Relationship management
+python scripts/crm.py                                  # CRM dashboard
+python scripts/crm.py --add "Name" --org "Company"     # Add contact
+python scripts/followup.py --log <id> --channel linkedin --contact "Name" --note "DM sent"
+python scripts/research_contacts.py --target <id>      # Recruiter identification
+
+# Validation & hygiene
 python scripts/validate.py --check-id-maps --check-rubric  # Full CI-parity validation
+python scripts/validate_signals.py --strict            # Signal YAML validation (CI gate)
+python scripts/hygiene.py                              # URL liveness, staleness, gates
+python scripts/check_metrics.py                        # Block metric consistency
+python scripts/freshness_monitor.py                    # Entry age categorization
 
-# Lint
-ruff check scripts/ tests/
-
-# Research pool management (archive research entries out of active/)
-python scripts/archive_research.py --report        # Show what would move
-python scripts/archive_research.py --dry-run        # Preview file moves
-python scripts/archive_research.py --yes             # Execute moves
-python scripts/archive_research.py --restore <id>    # Move entry back to active/
-
-# Scoring (9-dimension weighted rubric, see strategy/scoring-rubric.yaml)
-python scripts/score.py --target <target-id>  # Score single entry
-python scripts/score.py --all --dry-run        # Preview all scores
-
-# Auto-qualify: promote research_pool entries above threshold to active/qualified
-python scripts/score.py --auto-qualify                        # Defaults to dry-run preview
-python scripts/score.py --auto-qualify --yes                  # Execute promotion (score >= 9.0)
-python scripts/score.py --auto-qualify --yes --min-score 8.0  # Higher threshold
-python scripts/score.py --auto-qualify --yes --limit 5        # Promote top 5 only
-
-# Conversion analysis (basic report; see funnel_report.py for detailed breakdowns)
-python scripts/conversion_report.py
-
-# Compose submission from blocks
-python scripts/compose.py --target <target-id>
-python scripts/compose.py --target <target-id> --snapshot  # Save to submissions/
-python scripts/compose.py --target <target-id> --counts    # Word/char counts
-python scripts/compose.py --target <target-id> --profile   # Fall back to profile content
-
-# Draft portal-ready submissions from profiles
-python scripts/draft.py --target <target-id>               # Generate draft from profile
-python scripts/draft.py --target <target-id> --length short # Use short variants
-python scripts/draft.py --target <target-id> --populate    # Write portal_fields to YAML
-python scripts/draft.py --batch --effort quick             # Draft all quick-effort entries
-python scripts/draft.py --batch --status qualified         # Draft all qualified entries
-
-# Batch-advance pipeline entries
-python scripts/advance.py --report                         # Show advancement opportunities
-python scripts/advance.py --dry-run --to drafting --effort quick  # Preview batch advance
-python scripts/advance.py --to drafting --effort quick --yes      # Execute batch advance
-python scripts/advance.py --to staged --id <entry-id>            # Advance specific entry
-
-# Submit: generate portal-ready checklists and record submissions
-python scripts/submit.py --target <target-id>          # Generate paste-ready checklist
-python scripts/submit.py --target <target-id> --open   # Also open portal URL in browser
-python scripts/submit.py --check <target-id>           # Pre-submit validation only
-python scripts/submit.py --target <target-id> --record # After submitting: update YAML + log
-
-# Preflight: batch submission readiness checker
-python scripts/preflight.py                       # Check all staged entries
-python scripts/preflight.py --target <target-id>  # Check one entry
-python scripts/preflight.py --status qualified    # Check entries with different status
-
-# Batch enrichment: wire materials, blocks, variants, portal_fields
-python scripts/enrich.py --report                    # Show enrichment gaps
-python scripts/enrich.py --all --dry-run             # Preview all enrichments
-python scripts/enrich.py --all --yes                 # Execute all enrichments
-python scripts/enrich.py --materials --yes            # Wire resume only
-python scripts/enrich.py --blocks --yes               # Wire identity-matched blocks to jobs
-python scripts/enrich.py --variants --yes             # Wire cover letters only
-python scripts/enrich.py --portal --yes               # Populate portal_fields only
-python scripts/enrich.py --all --effort quick --yes   # Quick entries only
-
-# Campaign orchestrator: deadline-aware pipeline execution
-python scripts/campaign.py                           # This week's campaign (14-day window)
-python scripts/campaign.py --days 7                  # Next 7 days only
-python scripts/campaign.py --days 30                 # Full month view
-python scripts/campaign.py --days 90 --save          # Save markdown report to strategy/
-python scripts/campaign.py --execute --dry-run       # Preview pipeline execution
-python scripts/campaign.py --execute --yes           # Execute for all urgent entries
-python scripts/campaign.py --execute --id <entry-id> --yes  # Single entry
-
-# Alchemy suite: Greenhouse-specific orchestrator (intake → research → map → synthesize)
-python scripts/alchemize.py --target <target-id>                    # Full pipeline → prompt.md
-python scripts/alchemize.py --target <target-id> --phase research   # Stop after research
-python scripts/alchemize.py --target <target-id> --integrate        # Integrate output.md back
-python scripts/alchemize.py --target <target-id> --submit           # Submit via greenhouse_submit.py
-
-# ATS API submissions (Greenhouse, Lever, Ashby)
-python scripts/greenhouse_submit.py --target <target-id>          # Dry-run preview
-python scripts/greenhouse_submit.py --target <target-id> --submit # POST to Greenhouse
-python scripts/greenhouse_submit.py --init-answers --target <target-id>  # Generate answer template
-python scripts/lever_submit.py --target <target-id>               # Lever portal
-python scripts/ashby_submit.py --target <target-id>               # Ashby portal
-
-# Follow-up tracker and daily outreach list
-python scripts/followup.py                     # Show today's follow-up actions
-python scripts/followup.py --schedule           # Upcoming follow-up schedule (21 days)
-python scripts/followup.py --overdue            # Overdue follow-ups only
-python scripts/followup.py --init --yes         # Populate follow_up fields on submitted entries
-python scripts/followup.py --log <entry-id> --channel linkedin --contact "Name" --note "DM sent"
-
-# Recruiter identification and outreach templating
-python scripts/research_contacts.py --target <entry-id>  # Research contacts for one entry
-python scripts/research_contacts.py --batch --limit 10    # Top 10 by tier
-
-# Outcome tracking and response monitoring
-python scripts/check_outcomes.py                 # Show entries awaiting response
-python scripts/check_outcomes.py --stale         # Entries >14d with no response
-python scripts/check_outcomes.py --summary       # Outcome statistics
-python scripts/check_outcomes.py --record <id> --outcome rejected --stage resume_screen
-
-# Conversion funnel analytics
-python scripts/funnel_report.py                      # Full funnel summary
-python scripts/funnel_report.py --by channel         # Breakdown by channel
-python scripts/funnel_report.py --by position        # Breakdown by identity position
-python scripts/funnel_report.py --weekly             # Weekly submission velocity
-python scripts/funnel_report.py --targets            # Conversion targets vs actual
-python scripts/funnel_report.py --compare-variants   # Compare outcomes by composition method
-
-# Entry hygiene: URL liveness, ATS posting checks, auto-expire, track gates
-python scripts/hygiene.py                    # Full hygiene report
-python scripts/hygiene.py --check-urls       # HTTP HEAD check on application_urls
-python scripts/hygiene.py --check-postings   # Verify jobs still live on ATS APIs
-python scripts/hygiene.py --auto-expire --yes       # Execute expired entry archival
-python scripts/hygiene.py --gate <entry-id>  # Track-specific readiness gate
-
-# Metric consistency check (blocks, profiles, strategy vs canonical system-metrics.json)
-python scripts/check_metrics.py                 # Full consistency check
-python scripts/check_metrics.py --fix --yes      # Apply metric fixes
-
-# Job sourcing from ATS APIs (writes to research_pool/)
-python scripts/source_jobs.py --fetch --dry-run       # Preview new job postings
-python scripts/source_jobs.py --fetch --yes            # Fetch and create entries in research_pool/
-python scripts/source_jobs.py --fetch --yes --limit 5  # Limit new entries
-
-# Keyword extraction from job postings
-python scripts/distill_keywords.py                    # Analyze all entries with research files
-python scripts/distill_keywords.py --target <id>      # Single entry
-python scripts/distill_keywords.py --write --yes      # Write keywords to pipeline YAMLs
-python scripts/distill_keywords.py --match-tags       # Show which keywords match block tags
-
-# AI-assisted answer generation for portal questions
-python scripts/answer_questions.py --target <id>      # Generate prompts for custom questions
-python scripts/answer_questions.py --integrate <id>   # Integrate AI-generated answers back
-
-# Browser-based submission automation (Playwright)
-python scripts/browser_submit.py --target <id>        # Interactive browser submission
-python scripts/browser_submit.py --target <id> --auto-submit  # Auto-submit (use with caution)
-
-# Autonomous agent: plan and execute pipeline state transitions
-python scripts/agent.py --plan                  # Show planned actions (dry-run)
-python scripts/agent.py --execute --yes         # Execute autonomously
-python scripts/agent.py --target <id> --yes     # Single entry
-# Decision rules loaded from strategy/agent-rules.yaml (editable thresholds)
-# Rule customization guide: docs/agent-rules.md
-
-# Entry freshness monitoring: age categorization and URL liveness
-python scripts/freshness_monitor.py                          # Freshness report (no HTTP)
-python scripts/freshness_monitor.py --check-urls             # Check URLs (HTTP HEAD, limit 20)
-python scripts/freshness_monitor.py --check-urls --limit 50  # Larger batch
-python scripts/freshness_monitor.py --stale-only             # Show only stale/expired
-
-# Deferred entry automation
-python scripts/check_deferred.py              # List deferred entries with status
-python scripts/check_deferred.py --alert      # Alert mode for notifications
-
-# Pipeline backup and restore
-python scripts/backup_pipeline.py create      # Create dated tar.gz
-python scripts/backup_pipeline.py list        # Show all backups
-python scripts/backup_pipeline.py restore <backup-file>  # Restore from specific backup
-python scripts/backup_pipeline.py cleanup     # Remove backups > 90 days old
-
-# Monitoring (backup + signal freshness)
-python scripts/monitor_pipeline.py            # Report only (always exit 0)
-python scripts/monitor_pipeline.py --strict   # Exit non-zero on warnings/critical
-
-# Launchd automation management
-python scripts/launchd_manager.py --status
-python scripts/launchd_manager.py --install --kickstart
-python scripts/launchd_manager.py --uninstall
-
-# Resume batch version management
-python scripts/upgrade_resumes.py                   # Report stale batch references
-python scripts/upgrade_resumes.py --dry-run         # Preview migration
-python scripts/upgrade_resumes.py --yes             # Execute migration
-python scripts/upgrade_resumes.py --to batch-04     # Migrate to specific batch
-
-# Block ROI analysis
-python scripts/block_roi_analysis.py                # Full ROI report
-python scripts/block_roi_analysis.py --top 10       # Top 10 blocks by acceptance rate
-python scripts/block_roi_analysis.py --json         # JSON output for dashboards
-
-# Portfolio analysis engine
-python scripts/portfolio_analysis.py                       # All queries
-python scripts/portfolio_analysis.py --query blocks        # Block effectiveness
-python scripts/portfolio_analysis.py --query position      # Position conversion rates
-python scripts/portfolio_analysis.py --query channel       # Channel performance
-python scripts/portfolio_analysis.py --query variants      # Variant comparison
-python scripts/portfolio_analysis.py --json                # JSON output
-
-# Signal-to-action audit trail
-python scripts/log_signal_action.py --list                # Show all signal-action entries
-python scripts/log_signal_action.py --signal-id hyp-001 --signal-type hypothesis \
-    --description "Description" --action "Action taken"   # Log new entry
-
-# Hypothesis validation
-python scripts/validate_hypotheses.py                 # Full validation report
-python scripts/validate_hypotheses.py --unresolved    # Show only unresolved
-python scripts/validate_hypotheses.py --accuracy      # Accuracy stats only
-
-# Velocity report (monthly)
-python scripts/velocity_report.py                     # Current month
-python scripts/velocity_report.py --month 2           # Last 2 months
-python scripts/velocity_report.py --save              # Save to strategy/
-
-# CLI (Typer-based alternative to run.py)
-pipeline score <entry-id>           # Score entry via clean API
-pipeline advance <entry-id>         # Advance entry
-pipeline validate                   # Validate all entries
-pipeline compose <entry-id>         # Compose submission
-pipeline draft <entry-id>           # Draft from profile
-
-# MCP Server (exposes pipeline functions as MCP tools)
-python scripts/mcp_server.py        # Start MCP server (score, advance, draft, compose, validate)
+# Infrastructure
+python scripts/agent.py --plan                         # Autonomous agent preview
+python scripts/monitor_pipeline.py --strict            # Backup + signal freshness
+python scripts/backup_pipeline.py create               # Create dated tar.gz
+python scripts/launchd_manager.py --status             # LaunchAgent status
+ruff check scripts/ tests/                             # Lint (run via .venv)
 
 # Tests
 pytest tests/ -v
-pytest tests/test_compose.py -v              # Single test file
-pytest tests/test_compose.py::test_name -v   # Single test
+pytest tests/test_compose.py -v                        # Single test file
+pytest tests/test_compose.py::test_name -v             # Single test
 ```
 
 ## Quick Commands
@@ -402,6 +242,10 @@ Single-word command protocol via `python scripts/run.py <command>`. Any LLM can 
 | `signals` | Signal-to-action audit trail |
 | `resumes` | Check for stale resume batch references |
 | `hypotheses-v` | Validate outcome hypotheses vs actual outcomes |
+| `rejections` | Rejection learning: dimension weakness, timing, block correlation |
+| `crm` | Relationship CRM dashboard: contacts, interactions, follow-ups |
+| `quarterly` | Quarterly analytics report (conversion, velocity, recommendations) |
+| `signallog` | Log a new signal-action audit entry |
 
 **With target ID:** `score <id>`, `enrich <id>`, `advance <id>`, `compose <id>`, `draft <id>`, `submit <id>`, `check <id>`, `record <id>`, `gate <id>`, `contacts <id>`, `hypothesis <id>`, `alchemize <id>`, `answers <id>`, `tailor <id>`
 
@@ -409,8 +253,9 @@ Single-word command protocol via `python scripts/run.py <command>`. Any LLM can 
 - Morning: `standup` → `followup` → `outcomes` → `campaign`
 - Submit: `campaign` → `check <id>` → `submit <id>` → `record <id>`
 - Research: `hygiene` → `scoreall` → `qualify` → `enrichall`
-- Analyze: `funnel` → `conversion` → `velocity` → `dashboard` → `blockroi`
+- Analyze: `funnel` → `conversion` → `velocity` → `dashboard` → `blockroi` → `rejections`
 - Agent: `automation` → `agent` → `deferred` → `signals` → `hypotheses-v`
+- Quarterly: `quarterly` → `rejections` → `crm` → `portfolio`
 - Health: `monitor` → `freshness` → `resumes` → `backup` → `portfolio`
 
 ## Configuration Files
@@ -422,6 +267,7 @@ Single-word command protocol via `python scripts/run.py <command>`. Any LLM can 
 | `strategy/market-intelligence-2026.json` | Market data, portal friction, benchmarks (loaded by many scripts) |
 | `signals/signal-actions.yaml` | Signal-to-action audit trail (written by `advance.py`, `log_signal_action.py`) |
 | `signals/agent-actions.yaml` | Agent plan/execute run history (written by `agent.py`) |
+| `signals/contacts.yaml` | Relationship CRM contacts and interactions (written by `crm.py`) |
 
 ## Automation (LaunchAgent)
 
@@ -449,11 +295,12 @@ The Typer CLI (`pipeline` command) and `run.py` coexist. Use either:
 
 ## Testing Patterns
 
-- Tests live in `tests/` and use pytest
+- Tests live in `tests/` (~1,977 tests) and use pytest
 - Scripts use `sys.path.insert(0, ...)` to add `scripts/` to the import path (no package installation needed)
-- Tests operate on real pipeline data — they validate against actual YAML files, block directories, and profiles
-- No mocking framework; tests verify constants, data integrity, and script output against live data
+- **Two test styles**: (1) live-data tests validate against actual YAML files, block directories, and profiles; (2) isolated tests use `tmp_path`, `monkeypatch`, and `capsys` for unit testing script logic
+- `pytest-mock` available; `monkeypatch.setattr` used extensively for isolating filesystem, `sys.argv`, and module globals
 - ATS synthetic tests (`test_ats_synthetic.py`) require internet and are marked `@pytest.mark.synthetic`
+- Run `ruff` via `.venv/bin/activate` — it's not in the global PATH
 
 ## Key ID Mapping
 
@@ -492,8 +339,9 @@ Canonical identity statements, metrics, and evidence live in `organvm-corpvs-tes
 
 ## CI & Linting
 
-- CI runs via `.github/workflows/quality.yml`: verification matrix, ruff lint, YAML validation, pytest (Ubuntu, Python 3.12)
-- **Verification matrix gate**: `python scripts/verification_matrix.py --strict` runs first in CI — enforces module-to-test coverage. Override exceptions in `strategy/module-verification-overrides.yaml`.
+- CI runs via `.github/workflows/quality.yml`: verification matrix, ruff lint, signal validation, YAML validation, pytest (Ubuntu, Python 3.12)
+- **Verification matrix gate**: `python scripts/verification_matrix.py --strict` runs first in CI — enforces module-to-test coverage (109/109 modules). Override exceptions in `strategy/module-verification-overrides.yaml`.
+- **Signal validation gate**: `python scripts/validate_signals.py --strict` validates all 4 signal YAML files (signal-actions, conversion-log, hypotheses, agent-actions)
 - Linter: `ruff check scripts/ tests/` — config in `pyproject.toml` (line-length 120, E/F/I/UP rules, E501 ignored)
 - No formal coverage threshold; prioritize regression coverage for pipeline state and YAML schema changes
 - Full local CI-parity check: `python scripts/verify_all.py`
