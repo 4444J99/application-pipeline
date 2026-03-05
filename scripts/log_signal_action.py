@@ -12,6 +12,7 @@ Usage:
 """
 
 import argparse
+import os
 import sys
 from datetime import date
 from pathlib import Path
@@ -23,15 +24,25 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pipeline_lib import SIGNALS_DIR, atomic_write
 
 SIGNAL_ACTIONS_PATH = SIGNALS_DIR / "signal-actions.yaml"
+SIGNAL_ACTIONS_PATH_ENV = "PIPELINE_SIGNAL_ACTIONS_PATH"
 
 VALID_SIGNAL_TYPES = {"hypothesis", "score_threshold", "pattern", "agent_rule", "conversion_data", "network_change"}
 
 
+def _signal_actions_path() -> Path:
+    """Resolve signal actions path, allowing test/runtime override via env var."""
+    override = os.getenv(SIGNAL_ACTIONS_PATH_ENV, "").strip()
+    if override:
+        return Path(override)
+    return SIGNAL_ACTIONS_PATH
+
+
 def load_signal_actions() -> list[dict]:
     """Load signal-actions.yaml."""
-    if not SIGNAL_ACTIONS_PATH.exists():
+    path = _signal_actions_path()
+    if not path.exists():
         return []
-    with open(SIGNAL_ACTIONS_PATH) as f:
+    with open(path) as f:
         data = yaml.safe_load(f) or {}
     actions = data.get("actions", [])
     return actions if isinstance(actions, list) else []
@@ -40,7 +51,7 @@ def load_signal_actions() -> list[dict]:
 def save_signal_actions(actions: list[dict]) -> None:
     """Save signal-actions.yaml."""
     content = yaml.dump({"actions": actions}, default_flow_style=False, sort_keys=False)
-    atomic_write(SIGNAL_ACTIONS_PATH, content)
+    atomic_write(_signal_actions_path(), content)
 
 
 def log_action(
