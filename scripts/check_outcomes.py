@@ -32,7 +32,6 @@ from pipeline_lib import (
     load_entry_by_id,
     parse_date,
     update_last_touched,
-    update_yaml_field,
 )
 
 
@@ -231,7 +230,6 @@ def record_outcome(
         )
         sys.exit(1)
 
-    import re
 
     today_str = date.today().isoformat()
     content = filepath.read_text()

@@ -64,7 +64,7 @@ class TestComputeBlockCrossTabs:
 class TestClassifyBlocks:
     def test_golden_classification(self):
         tabs = {
-            "good-block": {"used": 4, "accepted": 3, "rejected": 1, "pending": 0,
+            "good-block": {"used": 8, "accepted": 6, "rejected": 2, "pending": 0,
                           "position": {}, "portal": {}},
         }
         classified = classify_blocks(tabs)
@@ -73,7 +73,7 @@ class TestClassifyBlocks:
 
     def test_toxic_classification(self):
         tabs = {
-            "bad-block": {"used": 4, "accepted": 0, "rejected": 4, "pending": 0,
+            "bad-block": {"used": 8, "accepted": 0, "rejected": 8, "pending": 0,
                          "position": {}, "portal": {}},
         }
         classified = classify_blocks(tabs)
@@ -86,7 +86,7 @@ class TestClassifyBlocks:
         }
         classified = classify_blocks(tabs)
         assert len(classified["neutral"]) == 1
-        assert classified["neutral"][0]["reason"] == "insufficient data"
+        assert "insufficient data" in classified["neutral"][0]["reason"]
 
     def test_empty_tabs(self):
         classified = classify_blocks({})

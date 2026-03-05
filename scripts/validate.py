@@ -20,6 +20,7 @@ from pipeline_lib import (
 REQUIRED_FIELDS = {"id", "name", "track", "status"}
 VALID_OUTCOMES = {"accepted", "rejected", "withdrawn", "expired", None}
 VALID_DEADLINE_TYPES = {"hard", "rolling", "window", "tba", "fixed"}
+VALID_TIMEZONES = {"ET", "CT", "MT", "PT", "EST", "CST", "MST", "PST", "EDT", "CDT", "MDT", "PDT", "UTC", "GMT"}
 VALID_PORTALS = {"submittable", "slideroom", "email", "custom", "web", "greenhouse", "workable", "lever", "ashby", "smartrecruiters"}
 VALID_AMOUNT_TYPES = {"lump_sum", "stipend", "salary", "fee", "in_kind", "variable"}
 VALID_POSITIONS = {"systems-artist", "creative-technologist", "educator", "community-practitioner", "independent-engineer"}
@@ -97,12 +98,27 @@ def validate_entry(filepath: Path, warnings: list[str] | None = None) -> list[st
     if outcome not in VALID_OUTCOMES:
         errors.append(f"Invalid outcome: '{outcome}' (valid: {VALID_OUTCOMES})")
 
-    # Deadline type
+    # Deadline type and timezone
     deadline = data.get("deadline", {})
     if isinstance(deadline, dict):
         dtype = deadline.get("type")
         if dtype and dtype not in VALID_DEADLINE_TYPES:
             errors.append(f"Invalid deadline.type: '{dtype}'")
+        dtime = deadline.get("time")
+        ddate = deadline.get("date")
+        if isinstance(dtime, str) and dtime.strip():
+            # Extract timezone abbreviation from time string (e.g. "15:00 ET" → "ET")
+            parts = dtime.strip().split()
+            if len(parts) >= 2:
+                tz = parts[-1]
+                if tz not in VALID_TIMEZONES and warnings is not None:
+                    warnings.append(f"Unrecognized deadline timezone: '{tz}' (expected one of {sorted(VALID_TIMEZONES)})")
+            elif len(parts) == 1 and warnings is not None:
+                # Time present but no timezone (e.g., "15:00" without "ET")
+                warnings.append(f"Deadline time '{dtime}' has no timezone — add one (e.g., ET, PT, UTC)")
+        elif ddate and dtype == "hard" and not dtime and warnings is not None:
+            # Hard deadline with a date but no time at all
+            warnings.append("Hard deadline has no time/timezone — risk of missing cutoff")
 
     # Amount type
     amount = data.get("amount", {})

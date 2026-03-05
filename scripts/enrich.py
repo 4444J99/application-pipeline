@@ -16,11 +16,11 @@ Usage:
 """
 
 import argparse
-import re
 
 from pipeline_lib import (
     CURRENT_BATCH,
     MATERIALS_DIR,
+    atomic_write,
     get_effort,
     load_entries,
     load_profile,
@@ -28,6 +28,7 @@ from pipeline_lib import (
 from pipeline_lib import (
     update_last_touched as _update_last_touched_content,
 )
+from yaml_mutation import YAMLEditor
 
 # --- Constants ---
 
@@ -151,34 +152,11 @@ def enrich_materials(filepath, entry, dry_run=False) -> bool:
     resume = select_resume(entry)
     content = filepath.read_text()
 
-    # Replace empty materials_attached: [] with the selected resume
-    # Capture indentation to compute correct child indentation
-    def _replace_materials(m):
-        indent = m.group(1)  # e.g. "    materials_attached: "
-        # Extract the leading whitespace from the key
-        key_indent = re.match(r'^(\s*)', indent).group(1)
-        child_indent = key_indent + "  "
-        return key_indent + "materials_attached:\n" + child_indent + f"- {resume}"
-
-    new_content = re.sub(
-        r'^(\s*materials_attached:\s*)\[\]',
-        _replace_materials,
-        content,
-        count=1,
-        flags=re.MULTILINE,
-    )
-
-    if new_content == content:
-        return False  # pattern didn't match — already populated or different format
-
-    import yaml
-    try:
-        yaml.safe_load(new_content)
-    except yaml.YAMLError:
-        return False  # refuse to write invalid YAML
-
-    new_content = _update_last_touched(new_content)
-    filepath.write_text(new_content)
+    editor = YAMLEditor(content)
+    if not editor.setdefault("submission", "materials_attached", [resume]):
+        return False  # already populated
+    editor.touch()
+    atomic_write(filepath, editor.dump())
     return True
 
 
@@ -205,32 +183,11 @@ def enrich_variant(filepath, entry, variant_path, dry_run=False) -> bool:
 
     content = filepath.read_text()
 
-    # Replace empty variant_ids: {} with the cover letter
-    def _replace_variants(m):
-        indent = m.group(1)
-        key_indent = re.match(r'^(\s*)', indent).group(1)
-        child_indent = key_indent + "  "
-        return key_indent + "variant_ids:\n" + child_indent + f"cover_letter: {variant_path}"
-
-    new_content = re.sub(
-        r'^(\s*variant_ids:\s*)\{\}',
-        _replace_variants,
-        content,
-        count=1,
-        flags=re.MULTILINE,
-    )
-
-    if new_content == content:
-        return False  # pattern didn't match — already populated or different format
-
-    import yaml
-    try:
-        yaml.safe_load(new_content)
-    except yaml.YAMLError:
-        return False  # refuse to write invalid YAML
-
-    new_content = _update_last_touched(new_content)
-    filepath.write_text(new_content)
+    editor = YAMLEditor(content)
+    if not editor.setdefault("submission", "variant_ids", {"cover_letter": variant_path}):
+        return False  # already populated
+    editor.touch()
+    atomic_write(filepath, editor.dump())
     return True
 
 
@@ -302,33 +259,11 @@ def enrich_blocks(filepath, entry, dry_run=False) -> bool:
 
     content = filepath.read_text()
 
-    # Replace empty blocks_used: {} with the block mappings
-    def _replace_blocks(m):
-        indent = m.group(1)
-        key_indent = re.match(r'^(\s*)', indent).group(1)
-        child_indent = key_indent + "  "
-        blocks_lines = [f"{child_indent}{key}: {path}" for key, path in default_blocks.items()]
-        return key_indent + "blocks_used:\n" + "\n".join(blocks_lines)
-
-    new_content = re.sub(
-        r'^(\s*blocks_used:\s*)\{\}',
-        _replace_blocks,
-        content,
-        count=1,
-        flags=re.MULTILINE,
-    )
-
-    if new_content == content:
-        return False  # pattern didn't match
-
-    import yaml
-    try:
-        yaml.safe_load(new_content)
-    except yaml.YAMLError:
-        return False  # refuse to write invalid YAML
-
-    new_content = _update_last_touched(new_content)
-    filepath.write_text(new_content)
+    editor = YAMLEditor(content)
+    if not editor.setdefault("submission", "blocks_used", dict(default_blocks)):
+        return False  # already populated
+    editor.touch()
+    atomic_write(filepath, editor.dump())
     return True
 
 

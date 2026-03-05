@@ -1,0 +1,247 @@
+# System Grading Rubric — Application Pipeline
+# 8-dimension quality assessment for inter-rater agreement (IRA) grade norming.
+# Consumed by scripts/diagnose.py and scripts/diagnose_ira.py.
+#
+# Version history:
+#   1.0  2026-03-05  Initial rubric (8 dimensions, weighted composite)
+
+version: "1.0"
+effective_date: "2026-03-05"
+composite_method: weighted_sum  # score = Σ(weight_i × score_i)
+scale:
+  min: 1.0
+  max: 10.0
+  precision: 1  # decimal places for reporting
+
+dimensions:
+  test_coverage:
+    label: Test Coverage
+    type: objective
+    weight: 0.15
+    description: >-
+      Test count, module coverage ratio (verification matrix), edge case depth,
+      and regression coverage for pipeline state and YAML schema changes.
+    scoring_guide:
+      1: "< 100 tests; many modules untested; no matrix"
+      3: "100–500 tests; partial matrix coverage (< 70%); few edge cases"
+      5: "500–1,000 tests; matrix coverage 70–89%; some edge case tests"
+      7: "1,000–2,000 tests; matrix coverage 90–99%; good edge case coverage"
+      10: "2,000+ tests; 100% matrix coverage; comprehensive edge cases and regressions"
+    evidence_sources:
+      - command: "pytest tests/ --co -q | tail -1"
+        measures: test_count
+      - command: "python scripts/verification_matrix.py --strict"
+        measures: module_coverage_ratio
+      - path: "tests/"
+        measures: edge_case_presence
+    ira_config:
+      agreement_method: icc
+      consensus_method: median
+      outlier_threshold: 1.5
+
+  architecture:
+    label: Architecture
+    type: subjective
+    weight: 0.15
+    description: >-
+      Module decomposition quality, separation of concerns, dependency flow
+      clarity, single-responsibility adherence, and reuse patterns.
+    scoring_guide:
+      1: "Monolithic scripts; no shared library; circular dependencies"
+      3: "Some extraction but inconsistent boundaries; partial pipeline_lib"
+      5: "Reasonable module split; pipeline_lib exists; some tight coupling"
+      7: "Clean module boundaries; extracted sub-modules; clear dependency graph"
+      10: "Exemplary decomposition; each module single-purpose; dependency graph is a DAG; reuse is systematic"
+    evidence_sources:
+      - path: "scripts/"
+        measures: module_count_and_structure
+      - path: "scripts/pipeline_lib.py"
+        measures: shared_library_quality
+      - section: "CLAUDE.md → Module Architecture"
+        measures: documented_decomposition
+      - section: "CLAUDE.md → Script Dependency Graph"
+        measures: dependency_flow
+    ira_config:
+      agreement_method: icc
+      consensus_method: median
+      outlier_threshold: 1.5
+
+  data_integrity:
+    label: Data Integrity
+    type: mixed
+    weight: 0.15
+    description: >-
+      Schema validation strictness, state machine enforcement, YAML consistency,
+      ID map correctness, and referential integrity across pipeline files.
+    scoring_guide:
+      1: "No validation; entries have missing/invalid fields; broken references"
+      3: "Basic required-field checks; some invalid transitions allowed"
+      5: "Schema validation exists; state machine partial; some referential checks"
+      7: "Strict validation + signals validation; state machine enforced; referential integrity"
+      10: "Zero validation errors; complete state machine; full referential integrity; CI-gated"
+    evidence_sources:
+      - command: "python scripts/validate.py --check-id-maps --check-rubric"
+        measures: validation_error_count
+      - command: "python scripts/validate_signals.py --strict"
+        measures: signal_integrity
+      - path: "scripts/pipeline_entry_state.py"
+        measures: state_machine_quality
+    ira_config:
+      agreement_method: icc
+      consensus_method: median
+      outlier_threshold: 1.5
+
+  operational_maturity:
+    label: Operational Maturity
+    type: mixed
+    weight: 0.15
+    description: >-
+      Automation coverage (launchd agents), backup recency, monitoring/alerting,
+      notification dispatch, and recovery procedures.
+    scoring_guide:
+      1: "No automation; no backups; manual everything"
+      3: "1-2 cron/launchd jobs; occasional backups; no monitoring"
+      5: "Several launchd agents; regular backups; basic monitoring"
+      7: "Full launchd suite; automated backups + monitoring; notification dispatch"
+      10: "All agents healthy; recent backup; monitoring strict-mode clean; notifications configured; documented recovery"
+    evidence_sources:
+      - command: "python scripts/launchd_manager.py --status"
+        measures: agent_health
+      - command: "python scripts/monitor_pipeline.py --strict"
+        measures: monitoring_output
+      - path: "strategy/notifications.yaml"
+        measures: notification_config
+      - path: "launchd/"
+        measures: agent_count
+    ira_config:
+      agreement_method: icc
+      consensus_method: median
+      outlier_threshold: 1.5
+
+  code_quality:
+    label: Code Quality
+    type: objective
+    weight: 0.10
+    description: >-
+      Linter compliance (ruff), type hint coverage on function signatures,
+      consistent patterns across scripts, and adherence to PEP 8.
+    scoring_guide:
+      1: "> 50 lint errors; no type hints; inconsistent style"
+      3: "10–50 lint errors; scattered type hints; mixed patterns"
+      5: "1–10 lint errors; type hints on most public functions; mostly consistent"
+      7: "0 lint errors; type hints on all public functions; consistent patterns"
+      10: "0 lint errors; comprehensive type hints; exemplary consistency; clean imports"
+    evidence_sources:
+      - command: "ruff check scripts/ tests/"
+        measures: lint_error_count
+      - path: "scripts/"
+        measures: type_hint_coverage
+      - path: "pyproject.toml"
+        measures: lint_config
+    ira_config:
+      agreement_method: icc
+      consensus_method: median
+      outlier_threshold: 1.5
+
+  analytics_intelligence:
+    label: Analytics & Intelligence
+    type: mixed
+    weight: 0.10
+    description: >-
+      Conversion funnel analytics, multi-dimensional scoring model, trend
+      detection (snapshots), rejection learning, and org intelligence.
+    scoring_guide:
+      1: "No analytics; manual tracking; no scoring model"
+      3: "Basic counts; simple scoring; no funnel or trend analysis"
+      5: "Funnel report exists; scoring model with some dimensions; basic trends"
+      7: "Full funnel + conversion analytics; 9-dimension scoring; snapshot trends; rejection learning"
+      10: "Comprehensive analytics suite; scoring with auto-derive + network; trend regression; block-outcome correlation; org intelligence"
+    evidence_sources:
+      - path: "scripts/funnel_report.py"
+        measures: funnel_analytics
+      - path: "scripts/score.py"
+        measures: scoring_model
+      - path: "scripts/snapshot.py"
+        measures: trend_detection
+      - path: "scripts/rejection_learner.py"
+        measures: rejection_learning
+      - path: "scripts/org_intelligence.py"
+        measures: org_intelligence
+    ira_config:
+      agreement_method: icc
+      consensus_method: median
+      outlier_threshold: 1.5
+
+  documentation:
+    label: Documentation
+    type: subjective
+    weight: 0.10
+    description: >-
+      CLAUDE.md completeness, inline code documentation, architecture docs,
+      handoff readiness, and onboarding clarity for new contributors/AI raters.
+    scoring_guide:
+      1: "No README; no inline docs; undocumented scripts"
+      3: "Basic README; some docstrings; missing architecture docs"
+      5: "Decent CLAUDE.md; docstrings on most scripts; some architecture notes"
+      7: "Comprehensive CLAUDE.md; all scripts have docstrings; architecture documented"
+      10: "Exemplary CLAUDE.md (commands, architecture, conventions); full docstrings; handoff doc; SOP library"
+    evidence_sources:
+      - path: "CLAUDE.md"
+        measures: claude_md_completeness
+      - path: "docs/"
+        measures: documentation_breadth
+      - path: "scripts/"
+        measures: docstring_coverage
+    ira_config:
+      agreement_method: icc
+      consensus_method: median
+      outlier_threshold: 1.5
+
+  sustainability:
+    label: Sustainability
+    type: subjective
+    weight: 0.10
+    description: >-
+      Single-operator resilience, bus factor mitigation, automation reducing
+      manual toil, onboarding ease for new AI or human operators.
+    scoring_guide:
+      1: "Fully manual; no docs; impossible to hand off"
+      3: "Some automation; sparse docs; significant tribal knowledge"
+      5: "Moderate automation; CLAUDE.md helps; still needs original operator context"
+      7: "Good automation; clear docs; another operator could run daily workflow"
+      10: "Autonomous daily ops; comprehensive docs + SOPs; any AI/human can onboard from CLAUDE.md alone"
+    evidence_sources:
+      - path: "CLAUDE.md"
+        measures: onboarding_completeness
+      - path: "docs/"
+        measures: sop_coverage
+      - path: "launchd/"
+        measures: automation_breadth
+      - path: "scripts/run.py"
+        measures: command_discoverability
+    ira_config:
+      agreement_method: icc
+      consensus_method: median
+      outlier_threshold: 1.5
+
+# IRA global settings
+ira:
+  min_raters: 3
+  max_raters: 7
+  recommended_panel:
+    - "claude-opus"
+    - "claude-sonnet"
+    - "gpt-4"
+    - "gemini-pro"
+    - "human-anchor"
+  interpretation_bands:
+    poor: [-1.0, 0.00]
+    slight: [0.00, 0.20]
+    fair: [0.21, 0.40]
+    moderate: [0.41, 0.60]
+    substantial: [0.61, 0.80]
+    almost_perfect: [0.81, 1.00]
+  consensus:
+    method: median
+    outlier_iqr_factor: 1.5
+    re_rate_threshold: 0.61  # ICC below this triggers re-rating discussion

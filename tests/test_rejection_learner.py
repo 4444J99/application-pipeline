@@ -604,7 +604,7 @@ def test_print_report_insufficient_data(capsys):
     analysis = run_full_analysis(entries, min_samples=5)
     print_report(analysis, min_samples=5)
     captured = capsys.readouterr().out
-    assert "Insufficient data" in captured
+    assert "DATA NOTICE" in captured
 
 
 def test_print_report_shows_timing_section(capsys):

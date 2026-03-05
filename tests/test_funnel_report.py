@@ -10,6 +10,7 @@ from funnel_report import (
     TARGETS,
     _get_dimension_value,
     get_stage_index,
+    minimum_sample_size,
 )
 
 # --- TARGETS ---
@@ -256,3 +257,31 @@ def test_compare_variants_counts(capsys):
     compare_variants(entries)
     captured = capsys.readouterr()
     assert "Total submitted:" in captured.out
+
+
+# --- minimum_sample_size ---
+
+
+def test_minimum_sample_size_returns_positive():
+    """Sample size for detecting a difference should be positive."""
+    n = minimum_sample_size(p1=0.10, p2=0.20)
+    assert n > 0
+
+
+def test_minimum_sample_size_larger_for_smaller_effect():
+    """Smaller effect size requires larger sample."""
+    n_large_effect = minimum_sample_size(p1=0.10, p2=0.30)
+    n_small_effect = minimum_sample_size(p1=0.10, p2=0.15)
+    assert n_small_effect > n_large_effect
+
+
+def test_minimum_sample_size_no_difference():
+    """Equal rates need 0 samples."""
+    n = minimum_sample_size(p1=0.10, p2=0.10)
+    assert n == 0
+
+
+def test_minimum_sample_size_reasonable_range():
+    """Default params (10% vs 20%) should need ~200 per group."""
+    n = minimum_sample_size(p1=0.10, p2=0.20, alpha=0.05, power=0.80)
+    assert 100 < n < 500

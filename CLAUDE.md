@@ -18,7 +18,7 @@ Career application pipeline repo — personal infrastructure for managing grant,
 - **9 scoring dimensions** including `network_proximity` (referral = 8x hire rate)
 - **Max 10 actionable entries** (qualified+drafting+staged) at any time; max 1 per organization. Note: the `active/` directory may contain more files including recently-promoted research entries awaiting triage.
 - **Daily split:** 2hr research, 2hr relationships, 1hr application work
-- **Stale thresholds relaxed:** 14 days (was 7), stagnant 30 days (was 14)
+- **Stale thresholds relaxed:** 14 days (was 7), stagnant 30 days (was 14). _Source: loaded dynamically from `strategy/market-intelligence-2026.json`; these are the fallback defaults when JSON is absent._
 - **No volume pressure** in standup messaging; no "ship something this week"
 - **Minimum outreach before submission:** At least 1 outreach action (LinkedIn connect, email, referral ask) required before advancing to submitted. Use `followup.py --log` to record.
 - **Rationale:** 60 cold applications in 4 days → 0 interviews. Precision targeting + warm paths is the only viable strategy. Note: referral multiplier (8x) and cover letter callback (+53%) are *market benchmarks* (not yet validated by this pipeline's own data).
@@ -83,7 +83,7 @@ Scripts are independent CLIs but some import functions from each other:
 - **`alchemize.py`** imports from `greenhouse_submit.py` — the Greenhouse-specific end-to-end orchestrator (research → identity mapping → synthesis prompt → integration → submission).
 - **`followup.py`** — Follow-up tracker: generates daily outreach lists, logs follow-up actions to entries and outreach-log.yaml. `--init` populates follow_up fields on submitted entries.
 - **`funnel_report.py`** — Conversion funnel analytics: stage distribution, conversion rates by variable (channel, portal, position, track), weekly velocity, target vs actual comparison, variant composition comparison.
-- **`hygiene.py`** imports from `source_jobs.py` — URL liveness, ATS posting verification, auto-expire, track-specific gates.
+- **`hygiene.py`** imports from `source_jobs.py` — URL liveness, ATS posting verification, auto-expire, track-specific gates. Also: `--prune-research` archives stale research entries, `--rotate-signals` archives old signal-actions entries.
 - **`check_outcomes.py`** — Outcome recording and stale response alerts. Updates conversion-log and moves terminal entries to closed/.
 - **`research_contacts.py`** — Recruiter identification and follow-up protocol date generation.
 - **`submit.py`** imports from `check_metrics.py` — `--check` mode now validates block metrics freshness.
@@ -98,6 +98,9 @@ Scripts are independent CLIs but some import functions from each other:
 - **`block_outcomes.py`** — Block-outcome correlation: classifies blocks as golden (>50% accept), toxic (>75% reject), or neutral.
 - **`calendar_export.py`** — iCal export: generates VCALENDAR/VEVENT/VALARM from pipeline deadlines. Pure stdlib.
 - **`interview_prep.py`** imports from `org_intelligence.py`, `skills_gap.py` — Interview prep document generator combining org intelligence, skills gaps, STAR questions, and block talking points.
+- **`recalibrate.py`** imports from `score.py` — Quarterly rubric recalibration: proposes scoring weight adjustments based on outcome patterns. Requires `--apply --yes` to modify `scoring-rubric.yaml`.
+- **`diagnose.py`** imports from `launchd_manager.py` — uses `get_agent_status()` for operational maturity measurement. Loads rubric from `strategy/system-grading-rubric.yaml`.
+- **`diagnose_ira.py`** — standalone; computes ICC, kappa, and consensus from rating JSON files in `ratings/`.
 - All other scripts are standalone CLIs that read/write pipeline YAML files.
 
 ## Module Architecture
@@ -210,6 +213,14 @@ python scripts/hygiene.py                              # URL liveness, staleness
 python scripts/check_metrics.py                        # Block metric consistency
 python scripts/freshness_monitor.py                    # Entry age categorization
 
+# Diagnostics & grade norming
+python scripts/diagnose.py                             # System diagnostic scorecard
+python scripts/diagnose.py --json --rater-id opus > ratings/opus.json  # JSON for IRA
+python scripts/diagnose.py --subjective-only           # Generate prompts for AI raters
+python scripts/diagnose.py --objective-only            # Only automated measurements
+python scripts/diagnose_ira.py ratings/*.json          # IRA report from rating files
+python scripts/diagnose_ira.py ratings/*.json --consensus  # With consensus scores
+
 # Infrastructure
 python scripts/agent.py --plan                         # Autonomous agent preview
 python scripts/monitor_pipeline.py --strict            # Backup + signal freshness
@@ -225,74 +236,74 @@ pytest tests/test_compose.py::test_name -v             # Single test
 
 ## Quick Commands
 
-Single-word command protocol via `python scripts/run.py <command>`. Any LLM can execute these.
+Single-word command protocol via `python scripts/run.py <command>`. 59 standalone + 20 parameterized = 79 commands (consolidated from 112).
 
 | Command | What It Does |
 |---------|-------------|
 | `standup` | Daily dashboard: stale entries, deadlines, priorities, follow-ups |
 | `campaign` | Deadline-aware campaign view with urgency tiers |
-| `hygiene` | Entry data quality report: URLs, staleness, gates |
 | `followup` | Today's follow-up actions and overdue items |
 | `outcomes` | Entries awaiting response + stale submissions |
-| `funnel` | Conversion funnel analytics |
-| `metrics` | Metric consistency check across blocks/profiles/strategy |
-| `validate` | Pipeline YAML schema validation |
-| `status` | Full pipeline status overview |
-| `velocity` | Submission velocity stats |
-| `conversion` | Conversion rate report by track/position/score |
+| `morning` | Morning digest: health + stale + followups + campaign |
+| `deferred` | Deferred entries: overdue and upcoming re-activations |
 | `scoreall` | Preview all scores |
+| `qualify` | Preview auto-qualification |
 | `enrichall` | Preview all enrichments |
 | `preflight` | Batch submission readiness |
-| `archive` | Show archival candidates |
-| `qualify` | Preview auto-qualification |
-| `email` | Check email for submission confirmations and responses (requires `.email-config.yaml`) |
-| `focus` | Rule of Three: flag companies with >3 active+submitted applications |
-| `topjobs` | Daily glove-fit fetch: top roles ≥ 9.0 score |
-| `syncmetrics` | Check canonical metric consistency across blocks/strategy |
-| `hypotheses` | List all recorded outcome hypotheses |
-| `analysis` | Pattern analysis of outcome hypotheses |
-| `market` | Market conditions, benchmarks, and grant calendar |
-| `sourcejobs` | Preview new job postings from ATS APIs (dry-run) |
-| `keywords` | Extract keywords from job postings |
-| `buildblocks` | Generate blocks from project data |
-| `agent` | Preview autonomous agent planned actions |
-| `monitor` | Monitor backup + conversion-log freshness |
-| `automation` | Launchd automation status |
-| `automation-on` | Install and activate launchd agents |
-| `automation-off` | Unload and remove launchd agents |
-| `deferred` | Deferred entries: overdue and upcoming re-activations |
-| `backup` | List pipeline backups |
-| `freshness` | Entry freshness report (posting age tiers) |
+| `triagegate` | Triage gate: demote sub-threshold staged, resolve org-cap |
+| `funnel` | Conversion funnel analytics |
+| `conversion` | Conversion rate report by track/position/score |
+| `quarterly` | Quarterly analytics report |
+| `rejections` | Rejection learning: dimension weakness, timing, block correlation |
+| `blockoutcomes` | Block-outcome correlation: golden/toxic blocks |
 | `blockroi` | Block acceptance rate ROI analysis |
 | `portfolio` | Portfolio analysis: blocks, positions, channels, variants |
-| `signals` | Signal-to-action audit trail |
-| `resumes` | Check for stale resume batch references |
-| `hypotheses-v` | Validate outcome hypotheses vs actual outcomes |
-| `rejections` | Rejection learning: dimension weakness, timing, block correlation |
-| `crm` | Relationship CRM dashboard: contacts, interactions, follow-ups |
-| `quarterly` | Quarterly analytics report (conversion, velocity, recommendations) |
-| `signallog` | Log a new signal-action audit entry |
-| `triagegate` | Triage gate: demote sub-threshold staged, resolve org-cap |
 | `snapshot` | Pipeline snapshot: counts, scores, trends |
-| `notify` | Notification dispatcher config check |
+| `textmatch` | TF-IDF text match analysis |
 | `orgs` | Org intelligence: aggregated org rankings |
 | `skillsgap` | Skills gap analysis across entries |
-| `blockoutcomes` | Block-outcome correlation: golden/toxic blocks |
+| `crm` | Relationship CRM: contacts, interactions, coverage gaps |
+| `cultivate` | Relationship cultivation candidates |
+| `warmintro` | Warm intro audit: referral paths and org density |
+| `validate` | Pipeline YAML schema validation |
+| `metrics` | Metric consistency check |
+| `hygiene` | Entry data quality: URLs, staleness, gates, signal rotation |
+| `signals` | Validate signal YAML schema integrity |
+| `verifyall` | Run full verification gates (matrix + lint + validate + tests) |
+| `monitor` | Monitor backup + conversion-log freshness |
+| `freshness` | Entry freshness report (posting age analysis) |
+| `learner` | Outcome learning engine: calibration report |
+| `hypotheses` | List all recorded outcome hypotheses |
+| `hypotheses-v` | Validate outcome hypotheses vs actuals |
+| `recalibrate` | Quarterly rubric recalibration proposal |
+| `market` | Market conditions, benchmarks, and grant calendar |
+| `funding` | Non-dilutive funding opportunities by viability |
+| `sourcejobs` | Preview new job postings from ATS APIs |
+| `topjobs` | Daily glove-fit fetch: top roles ≥ 9.0 score |
+| `discover` | Skill-based job discovery across free APIs |
 | `calendar` | Export pipeline deadlines to iCal |
 | `interviewprep` | Interview prep for all interview-status entries |
+| `agent` | Preview autonomous agent planned actions |
+| `automation` | Launchd automation status |
+| `backup` | List pipeline backups |
+| `notify` | Notification dispatcher config check |
+| `weeklybrief` | Weekly executive brief |
+| `diagnose` | System diagnostic scorecard (objective dimensions) |
+| `ira` | Inter-rater agreement report (needs ratings/*.json) |
 
-**With target ID:** `score <id>`, `enrich <id>`, `advance <id>`, `compose <id>`, `draft <id>`, `submit <id>`, `check <id>`, `record <id>`, `gate <id>`, `contacts <id>`, `hypothesis <id>`, `alchemize <id>`, `answers <id>`, `tailor <id>`, `skillsgap <id>`, `orgdetail <id>`, `interviewprep <id>`
+**With target ID:** `score <id>`, `enrich <id>`, `advance <id>`, `compose <id>`, `draft <id>`, `submit <id>`, `check <id>`, `record <id>`, `gate <id>`, `contacts <id>`, `hypothesis <id>`, `alchemize <id>`, `answers <id>`, `tailor <id>`, `review <id>`, `cultivate <id>`, `textmatch <id>`, `skillsgap <id>`, `orgdetail <org>`, `interviewprep <id>`
 
 **Session sequences:**
-- Morning: `standup` → `followup` → `outcomes` → `campaign`
+- Morning: `morning` (or: `standup` → `followup` → `outcomes` → `campaign`)
 - Submit: `campaign` → `check <id>` → `submit <id>` → `record <id>`
 - Research: `hygiene` → `scoreall` → `qualify` → `enrichall`
-- Analyze: `funnel` → `conversion` → `velocity` → `dashboard` → `blockroi` → `rejections`
-- Agent: `automation` → `agent` → `deferred` → `signals` → `hypotheses-v`
-- Quarterly: `quarterly` → `rejections` → `crm` → `portfolio`
-- Health: `monitor` → `freshness` → `resumes` → `backup` → `portfolio`
+- Analyze: `funnel` → `conversion` → `quarterly` → `blockroi` → `rejections`
+- Strategy: `funding` → `market` → `recalibrate`
+- Agent: `agent` → `deferred` → `signals` → `hypotheses-v`
+- Health: `monitor` → `freshness` → `verifyall` → `backup`
 - Triage: `triagegate` → `snapshot` → `orgs` → `blockoutcomes`
 - Interview: `interviewprep <id>` → `skillsgap <id>` → `orgdetail <org>`
+- Diagnostic: `diagnose` → `diagnose --subjective-only` → `ira`
 
 ## Configuration Files
 
@@ -305,6 +316,7 @@ Single-word command protocol via `python scripts/run.py <command>`. Any LLM can 
 | `signals/agent-actions.yaml` | Agent plan/execute run history (written by `agent.py`) |
 | `signals/contacts.yaml` | Relationship CRM contacts and interactions (written by `crm.py`) |
 | `strategy/notifications.yaml` | Notification event routing: webhook URLs, email recipients (loaded by `notify.py`) |
+| `strategy/system-grading-rubric.yaml` | 8-dimension quality rubric for diagnostic grade norming (loaded by `diagnose.py`) |
 
 ## Automation (LaunchAgent)
 

@@ -19,94 +19,91 @@ from pathlib import Path
 SCRIPTS_DIR = Path(__file__).resolve().parent
 
 # --- No-argument commands ---
+# Consolidated from 88 → 58 commands. Removed aliases that duplicate flags
+# available on the underlying script (e.g., "gaps" = textmatch --all --gaps).
 COMMANDS = {
+    # -- Daily Operations --
     "standup":     ("standup.py", [],                    "Daily dashboard: stale entries, deadlines, priorities, follow-ups"),
     "campaign":    ("campaign.py", [],                   "Deadline-aware campaign view with urgency tiers"),
-    "hygiene":     ("hygiene.py", [],                    "Entry data quality report: URLs, staleness, gates"),
     "followup":    ("followup.py", [],                   "Today's follow-up actions and overdue items"),
     "outcomes":    ("check_outcomes.py", [],             "Entries awaiting response + stale submissions"),
-    "funnel":      ("funnel_report.py", [],              "Conversion funnel analytics"),
-    "metrics":     ("check_metrics.py", [],              "Metric consistency check across blocks/profiles/strategy"),
-    "validate":    ("validate.py", [],                   "Pipeline YAML schema validation"),
-    "status":      ("pipeline_status.py", [],            "Full pipeline status overview"),
-    "velocity":    ("velocity.py", [],                   "Submission velocity stats"),
-    "conversion":  ("conversion_report.py", [],          "Conversion rate report by track/position/score"),
+    "morning":     ("morning.py", [],                    "Morning digest: health + stale + followups + campaign + funding"),
+    "deferred":    ("check_deferred.py", [],              "Deferred entries: overdue and upcoming re-activations"),
+
+    # -- Pipeline Operations --
     "scoreall":    ("score.py", ["--all", "--dry-run"],  "Preview all scores"),
+    "qualify":     ("score.py", ["--auto-qualify"],       "Preview auto-qualification"),
     "enrichall":   ("enrich.py", ["--all", "--dry-run"], "Preview all enrichments"),
     "preflight":   ("preflight.py", [],                  "Batch submission readiness"),
     "archive":     ("archive_research.py", ["--report"], "Show archival candidates"),
-    "qualify":     ("score.py", ["--auto-qualify"],       "Preview auto-qualification"),
-    "email":       ("check_email.py", [],                 "Check email for submission confirmations and responses"),
-    "focus":       ("hygiene.py", ["--company-focus"],    "Rule of Three: flag companies with >3 active+submitted job applications"),
-    "topjobs":     ("ingest_top_roles.py", [],            "Daily glove-fit fetch: top roles ≥ 9.0 score"),
-    "syncmetrics": ("sync_metrics.py", [],               "Check canonical metric consistency across blocks/strategy"),
+    "triagegate":  ("triage.py", [],                      "Triage gate: demote sub-threshold staged, resolve org-cap"),
+    "triage":      ("smart_triage.py", [],               "Smart triage: decay-scored research entry ranking"),
+
+    # -- Analytics --
+    "funnel":      ("funnel_report.py", [],              "Conversion funnel analytics"),
+    "conversion":  ("conversion_report.py", [],          "Conversion rate report by track/position/score"),
+    "quarterly":   ("quarterly_report.py", [],             "Quarterly State of Applications analytics report"),
+    "rejections":  ("rejection_learner.py", [],              "Rejection learning: correlate factors with outcomes"),
+    "blockoutcomes": ("block_outcomes.py", [],                "Block-outcome correlation: golden/toxic blocks"),
+    "blockroi":    ("block_roi_analysis.py", [],          "Block acceptance rate ROI analysis"),
+    "portfolio":   ("portfolio_analysis.py", [],          "Portfolio analysis: blocks, positions, channels, variants"),
+    "snapshot":    ("snapshot.py", ["--report"],              "Pipeline snapshot: counts, scores, trends"),
+    "textmatch":   ("text_match.py", ["--all"],             "TF-IDF text match analysis for all entries"),
+    "orgs":        ("org_intelligence.py", ["--all"],         "Org intelligence: aggregated org rankings"),
+    "skillsgap":   ("skills_gap.py", ["--all"],               "Skills gap analysis across entries"),
+
+    # -- Relationships --
+    "crm":         ("crm.py", [],                            "Relationship CRM: contacts, interactions, coverage gaps"),
+    "cultivate":   ("cultivate.py", ["--candidates"],       "Relationship cultivation candidates"),
+    "warmintro":   ("warm_intro_audit.py", [],            "Warm intro audit: referral paths and org density"),
+
+    # -- Validation & Health --
+    "validate":    ("validate.py", [],                   "Pipeline YAML schema validation"),
+    "metrics":     ("check_metrics.py", [],              "Metric consistency check across blocks/profiles/strategy"),
+    "hygiene":     ("hygiene.py", [],                    "Entry data quality report: URLs, staleness, gates"),
+    "signals":     ("validate_signals.py", [],              "Validate signal YAML schema integrity"),
+    "verifyall":   ("verify_all.py", [],                     "Run full verification gates (matrix + lint + validate + tests)"),
+    "monitor":     ("monitor_pipeline.py", [],            "Monitor backup + conversion-log freshness"),
+    "freshness":   ("freshness_monitor.py", [],          "Entry freshness report (posting age analysis)"),
+    "resumes":     ("upgrade_resumes.py", [],             "Check for stale resume batch references"),
+
+    # -- Learning --
+    "learner":     ("outcome_learner.py", [],            "Outcome learning engine: calibration report"),
     "hypotheses":  ("feedback_capture.py", ["--list"],   "List all recorded outcome hypotheses"),
-    "analysis":    ("feedback_capture.py", ["--analyze"],"Pattern analysis of outcome hypotheses"),
+    "hypotheses-v": ("validate_hypotheses.py", [],        "Validate outcome hypotheses vs actuals"),
+    "recalibrate": ("recalibrate.py", [],                "Quarterly rubric recalibration proposal"),
+    "retrospective": ("retrospective.py", [],             "Monthly retrospective prompt"),
+    "okr":           ("okr.py", [],                       "Quarterly OKR progress"),
+
+    # -- Strategy --
     "market":      ("market_intel.py", [],               "Market conditions, benchmarks, and grant calendar"),
-    "startup":     ("funding_scorer.py", ["--viability"],       "Startup viability score + recommended funding path"),
     "funding":     ("funding_scorer.py", ["--pathway"],         "Non-dilutive funding opportunities by viability"),
-    "differentiate": ("funding_scorer.py", ["--differentiation"], "Differentiation rubric score + gap analysis"),
-    "blindspots":  ("funding_scorer.py", ["--blindspots"],      "Blind spots checklist with completion status"),
+    "tracker":     ("blind_spot_tracker.py", [],         "Blind spot progress tracker with actionable items"),
+
+    # -- Content & Jobs --
     "sourcejobs":  ("source_jobs.py", ["--fetch", "--dry-run"], "Preview new job postings from ATS APIs"),
     "keywords":    ("distill_keywords.py", [],           "Extract keywords from job postings"),
     "buildblocks": ("generate_project_blocks.py", [],    "Generate blocks from project data"),
-    "morning":     ("morning.py", [],                    "Morning digest: health + stale + followups + campaign + funding"),
-    "derive":      ("derive_profile.py", [],             "Auto-derive startup profile fields from pipeline data"),
-    "learner":     ("outcome_learner.py", [],            "Outcome learning engine: calibration report"),
-    "drift":       ("outcome_learner.py", ["--drift-check"], "Calibration drift check vs base rubric weights"),
-    "hydrate":     ("hydrate_followups.py", [],          "Batch-hydrate follow-up fields on submitted entries"),
-    "triage":      ("smart_triage.py", [],               "Smart triage: decay-scored research entry ranking"),
-    "batch":       ("batch_submit.py", [],               "Batch submit staged rolling-deadline entries (dry-run)"),
-    "tracker":     ("blind_spot_tracker.py", [],         "Blind spot progress tracker with actionable items"),
-    "dashboard":   ("conversion_dashboard.py", [],       "Conversion intelligence dashboard"),
-    "freshness":      ("freshness_monitor.py", [],          "Entry freshness report (posting age analysis)"),
-    "jobfreshness":   ("standup.py", ["--section", "jobfreshness"], "Job freshness dashboard: hot/warm/stale postings"),
-    "expirejobs":     ("freshness_monitor.py", ["--auto-expire-jobs"], "Auto-expire stale job postings (dry-run)"),
+    "topjobs":     ("ingest_top_roles.py", [],            "Daily glove-fit fetch: top roles ≥ 9.0 score"),
+    "discover":    ("discover_jobs.py", [],                "Skill-based job discovery across free APIs"),
+    "calendar":    ("calendar_export.py", [],                 "Export pipeline deadlines to iCal"),
+    "interviewprep": ("interview_prep.py", ["--auto"],        "Interview prep for all interview-status entries"),
+
+    # -- Diagnostics --
+    "diagnose":    ("diagnose.py", [],                       "System diagnostic scorecard (objective dimensions)"),
+    "ira":         ("diagnose_ira.py", [],                   "Inter-rater agreement report (needs ratings/*.json)"),
+
+    # -- Infrastructure --
     "agent":       ("agent.py", ["--plan"],              "Agent: preview planned autonomous actions"),
-    "monitor":     ("monitor_pipeline.py", [],            "Monitor backup + conversion-log freshness"),
     "automation":  ("launchd_manager.py", ["--status"],  "Launchd automation status"),
     "automation-on": ("launchd_manager.py", ["--install", "--kickstart"], "Install and activate launchd agents"),
     "automation-off": ("launchd_manager.py", ["--uninstall"], "Unload and remove launchd agents"),
-    "deferred":    ("check_deferred.py", [],              "Deferred entries: overdue and upcoming re-activations"),
     "backup":      ("backup_pipeline.py", ["list"],       "List pipeline backups"),
-    "blockroi":    ("block_roi_analysis.py", [],          "Block acceptance rate ROI analysis"),
-    "portfolio":   ("portfolio_analysis.py", [],          "Portfolio analysis: blocks, positions, channels, variants"),
-    "quarterly":   ("quarterly_report.py", [],             "Quarterly State of Applications analytics report"),
-    "signals":     ("validate_signals.py", [],              "Validate signal YAML schema integrity"),
-    "signallog":   ("log_signal_action.py", ["--list"],   "Signal-to-action audit trail"),
-    "resumes":     ("upgrade_resumes.py", [],             "Check for stale resume batch references"),
-    "hypotheses-v": ("validate_hypotheses.py", [],        "Validate outcome hypotheses vs actuals"),
-    "hypotheses-validate": ("outcome_learner.py", ["--validate-hypotheses"], "Hypothesis validation + weight adjustment recommendations"),
-    "backfill":    ("backfill_dates.py", ["--report"],   "Backfill date_added from timeline.researched"),
-    "jobprofiles": ("generate_job_profile.py", ["--batch", "--dry-run"], "Preview missing job profiles for auto-sourced entries"),
-    "bridge":      ("portfolio_bridge.py", [],           "Portfolio-pipeline work sample suggestions"),
-    "warmintro":   ("warm_intro_audit.py", [],            "Warm intro audit: referral paths and org density"),
-    "reachable":   ("score.py", ["--reachable"],           "Reachability analysis: entries that network can unlock"),
-    "triagestaged": ("score.py", ["--triage-staged"],      "Triage staged entries: submit-ready / hold / demote"),
-    "enrichnetwork": ("enrich.py", ["--network"],          "Hydrate network fields from existing signals"),
-    "relationships": ("standup.py", ["--section", "relationships"], "Relationship cultivation dashboard"),
-    "cultivate":   ("cultivate.py", ["--candidates"],       "Relationship cultivation candidates"),
-    "discover":    ("discover_jobs.py", [],                "Skill-based job discovery across free APIs"),
-    "audit":       ("submission_audit.py", [],              "Batch submission readiness diagnostic"),
-    "submitall":   ("submit_ready.py", [],                   "Submit all audit-ready entries (dry-run)"),
-    "dailyhealth": ("daily_pipeline_health.py", [],          "Composite daily health run: source, score, enrich, campaign, standup, hygiene, scheduler"),
-    "schedulerhealth": ("scheduler_health.py", ["--strict"], "Launchd scheduler health audit"),
-    "weeklybrief": ("weekly_brief.py", [],                   "Weekly executive brief: KPIs, blockers, risks, and outreach priorities"),
-    "idmaps":      ("generate_id_mappings.py", [],           "Generate ID mapping suggestions from filesystem"),
-    "verifyall":   ("verify_all.py", [],                     "Run full verification gates (matrix + lint + validate + tests)"),
-    "verifymatrix": ("verification_matrix.py", ["--strict"], "Check module verification coverage matrix"),
-    "textmatch":   ("text_match.py", ["--all"],             "TF-IDF text match analysis for all entries"),
-    "gaps":        ("text_match.py", ["--all", "--gaps"],    "Text match gap analysis: missing skills and blocks"),
-    "rejections":  ("rejection_learner.py", [],              "Rejection learning engine: correlate factors with outcomes"),
-    "crm":         ("crm.py", [],                            "Relationship CRM: contacts, interactions, coverage gaps"),
-    "triagegate":  ("triage.py", [],                          "Triage gate: demote sub-threshold staged, resolve org-cap"),
-    "snapshot":    ("snapshot.py", ["--report"],              "Pipeline snapshot: counts, scores, trends"),
+    "email":       ("check_email.py", [],                 "Check email for submission confirmations"),
     "notify":      ("notify.py", ["--config"],                "Notification dispatcher config check"),
-    "orgs":        ("org_intelligence.py", ["--all"],         "Org intelligence: aggregated org rankings"),
-    "skillsgap":   ("skills_gap.py", ["--all"],               "Skills gap analysis across entries"),
-    "blockoutcomes": ("block_outcomes.py", [],                "Block-outcome correlation: golden/toxic blocks"),
-    "calendar":    ("calendar_export.py", [],                 "Export pipeline deadlines to iCal"),
-    "interviewprep": ("interview_prep.py", ["--auto"],        "Interview prep for all interview-status entries"),
+    "weeklybrief": ("weekly_brief.py", [],                   "Weekly executive brief"),
+    "status":      ("pipeline_status.py", [],            "Full pipeline status overview"),
+    "signallog":   ("log_signal_action.py", ["--list"],   "Signal-to-action audit trail"),
 }
 
 # --- Parameterized commands (word + target ID) ---
@@ -122,13 +119,10 @@ PARAM_COMMANDS = {
     "gate":     ("hygiene.py", ["--gate"],               "Track-specific readiness gate"),
     "contacts":   ("research_contacts.py", ["--target"],  "Research hiring contacts"),
     "hypothesis": ("feedback_capture.py", ["--entry"],   "Capture outcome hypothesis for an entry"),
-    "alchemize":  ("alchemize.py", ["--target"],         "End-to-end Greenhouse orchestrator (research → synthesis)"),
+    "alchemize":  ("alchemize.py", ["--target"],         "End-to-end Greenhouse orchestrator"),
     "answers":    ("answer_questions.py", ["--target"],  "Generate AI-assisted answers for portal questions"),
     "tailor":     ("tailor_resume.py", ["--target"],     "Tailor resume for a specific entry"),
-    "samples":    ("portfolio_bridge.py", ["--target"],  "Suggest work samples for an entry"),
-    "jobprofile": ("generate_job_profile.py", ["--target"], "Generate minimal profile for auto-sourced job entry"),
-    "discover":   ("discover_jobs.py", ["--position"],     "Discover jobs for a specific identity position"),
-    "review":     ("review_entry.py", ["--target"],        "Mark an entry reviewed for submission governance"),
+    "review":     ("review_entry.py", ["--target"],        "Mark entry reviewed for governance"),
     "cultivate":  ("cultivate.py", ["--plan"],              "Generate cultivation plan for an entry"),
     "textmatch":  ("text_match.py", ["--target"],            "TF-IDF text match for single entry"),
     "skillsgap":  ("skills_gap.py", ["--target"],            "Skills gap analysis for single entry"),
@@ -153,12 +147,21 @@ def show_help():
     print("SESSION SEQUENCES:")
     print("  Morning:  morning (or: standup → followup → outcomes → campaign)")
     print("  Submit:   campaign → check <id> → submit <id> → record <id>")
-    print("  Batch:    triage → batch → hydrate → freshness")
     print("  Research: hygiene → scoreall → qualify → enrichall")
-    print("  Analyze:  funnel → conversion → velocity → dashboard → blockroi")
-    print("  Strategy: startup → funding → differentiate → tracker")
+    print("  Analyze:  funnel → conversion → quarterly → blockroi → rejections")
+    print("  Strategy: funding → tracker → market")
     print("  Agent:    agent → deferred → signals → hypotheses-v")
-    print("  Health:   monitor → schedulerhealth → freshness → resumes → backup → portfolio")
+    print("  Health:   monitor → freshness → resumes → backup → verifyall")
+    print("  Interview: interviewprep <id> → skillsgap <id> → orgdetail <org>")
+    print()
+    print("REMOVED ALIASES (use underlying script flags instead):")
+    print("  velocity → funnel_report.py")
+    print("  dashboard → conversion_dashboard.py")
+    print("  gaps → textmatch --all --gaps")
+    print("  drift → learner (outcome_learner.py --drift-check)")
+    print("  enrichnetwork → enrich.py --network")
+    print("  reachable → score.py --reachable")
+    print("  triagestaged → score.py --triage-staged")
     print()
     print("Usage: python scripts/run.py <command> [args...]")
 

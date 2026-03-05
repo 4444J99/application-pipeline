@@ -97,6 +97,27 @@ def check_page_count(pdf_path: Path) -> int:
     return count
 
 
+def build_docx(html_path: Path, docx_path: Path) -> bool:
+    """Convert an HTML file to .docx using pandoc.
+
+    Requires pandoc to be installed (brew install pandoc).
+    """
+    try:
+        result = subprocess.run(
+            ["pandoc", str(html_path), "-f", "html", "-t", "docx", "-o", str(docx_path)],
+            capture_output=True, text=True, timeout=30,
+        )
+        if result.returncode == 0 and docx_path.exists() and docx_path.stat().st_size > 0:
+            return True
+        if result.stderr:
+            print(f"  pandoc stderr: {result.stderr.strip()}", file=sys.stderr)
+    except FileNotFoundError:
+        print("  ERROR: pandoc not found. Install with: brew install pandoc", file=sys.stderr)
+    except subprocess.TimeoutExpired:
+        pass
+    return False
+
+
 def run_check(strict: bool = False) -> int:
     """Check that all HTML resumes have corresponding up-to-date PDFs."""
     html_files = sorted(RESUMES_DIR.rglob("*-resume.html"))
@@ -168,6 +189,14 @@ def main():
         "--list", action="store_true",
         help="List all resume HTML files"
     )
+    parser.add_argument(
+        "--docx", action="store_true",
+        help="Generate .docx files from HTML resumes using pandoc (for ATS portals)"
+    )
+    parser.add_argument(
+        "--target", metavar="ENTRY_ID",
+        help="Build only the resume for a specific entry ID"
+    )
     args = parser.parse_args()
 
     if args.list:
@@ -176,6 +205,31 @@ def main():
 
     if args.check:
         sys.exit(run_check(strict=args.strict))
+
+    if args.docx:
+        html_files = sorted(RESUMES_DIR.rglob("*-resume.html"))
+        if args.target:
+            html_files = [f for f in html_files if args.target in f.stem]
+        if not html_files:
+            print("No resume HTML files found.")
+            sys.exit(1)
+        print(f"Building .docx for {len(html_files)} resume(s)\n")
+        ok, fail = 0, 0
+        for html_path in html_files:
+            docx_path = html_path.with_suffix(".docx")
+            rel = html_path.relative_to(RESUMES_DIR)
+            print(f"  {rel} -> {docx_path.name} ...", end=" ")
+            if build_docx(html_path, docx_path):
+                size_kb = docx_path.stat().st_size / 1024
+                print(f"OK ({size_kb:.0f} KB)")
+                ok += 1
+            else:
+                print("FAILED")
+                fail += 1
+        print(f"\nBuilt {ok}/{ok + fail} .docx files.")
+        if fail:
+            sys.exit(1)
+        return
 
     chrome = find_chrome()
     if not chrome:
@@ -191,6 +245,8 @@ def main():
     print(f"Using: {chrome}")
 
     html_files = sorted(RESUMES_DIR.rglob("*-resume.html"))
+    if args.target:
+        html_files = [f for f in html_files if args.target in f.stem]
     if not html_files:
         print("No resume HTML files found in materials/resumes/")
         sys.exit(1)

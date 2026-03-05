@@ -1,5 +1,4 @@
 import json
-import os
 import re
 from pathlib import Path
 
@@ -21,7 +20,7 @@ def fix_json_metrics():
 
     for filepath in PROFILES_DIR.glob("*.json"):
         file_count += 1
-        with open(filepath, 'r') as f:
+        with open(filepath) as f:
             try:
                 data = json.load(f)
             except json.JSONDecodeError:

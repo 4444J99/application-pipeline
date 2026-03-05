@@ -10,7 +10,6 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from crm import (
-    CONTACTS_FILE,
     VALID_CHANNELS,
     VALID_INTERACTION_TYPES,
     add_contact,
@@ -31,7 +30,6 @@ from crm import (
     show_stats,
     suggest_network_proximity,
 )
-
 
 # --- Helpers ---
 

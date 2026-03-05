@@ -4,6 +4,13 @@
 Addresses the qualified → drafting logjam by enabling batch progression
 with validation, dry-run preview, and an advancement report.
 
+Two-tier enforcement model:
+    advance.py is **permissive by design** — it warns and skips entries that
+    violate org-cap constraints but does not block the overall operation.
+    triage.py is the **enforcement backstop** — it actively demotes excess
+    entries to restore compliance. This separation lets the user advance
+    entries optimistically while triage ensures invariants hold.
+
 Usage:
     python scripts/advance.py --report
     python scripts/advance.py --dry-run --to drafting --effort quick
@@ -54,6 +61,22 @@ def has_outreach_actions(entry: dict) -> bool:
     follow_up = entry.get("follow_up") or []
     outreach = entry.get("outreach") or []
     return len(follow_up) > 0 or len(outreach) > 0
+
+
+def _log_gate_bypass(entry_id: str, gate_name: str) -> None:
+    """Log a signal-action audit entry when a gate is bypassed."""
+    try:
+        from log_signal_action import log_action
+        log_action(
+            signal_id=f"gate-bypass-{entry_id}-{date.today().isoformat()}",
+            signal_type="gate_bypass",
+            description=f"Outreach gate bypassed via --skip-outreach-gate for {entry_id}",
+            triggered_action=f"bypassed {gate_name} gate",
+            entry_id=entry_id,
+            reason="User explicitly skipped gate",
+        )
+    except Exception:
+        pass  # Best-effort audit logging
 
 
 def advance_entry(filepath, entry_id: str, target_status: str, reason: str | None = None) -> bool:
@@ -230,6 +253,7 @@ def run_advance(
     auto_yes: bool,
     backup: bool = False,
     force: bool = False,
+    strict: bool = False,
 ):
     """Advance entries matching filters to target_status."""
     entries = load_entries(include_filepath=True)
@@ -268,12 +292,20 @@ def run_advance(
                     print(f"  SKIP {eid}: {org} at cap ({current_count}/{COMPANY_CAP})")
                     continue
 
-        # Gate: require outreach before advancing to submitted (unless --force)
-        if target_status == "submitted" and not force:
+        # Gate: require outreach before advancing to submitted
+        if target_status == "submitted":
             if not has_outreach_actions(e):
-                print(f"  BLOCKED {eid}: No outreach actions recorded. "
-                      f"Use followup.py --log to record outreach first.")
-                continue
+                if strict:
+                    print(f"  BLOCKED {eid}: No outreach actions recorded "
+                          f"(strict mode — gate cannot be bypassed)")
+                    continue
+                elif force:
+                    print(f"  WARNING {eid}: Outreach gate skipped (--skip-outreach-gate)")
+                    _log_gate_bypass(eid, "outreach")
+                else:
+                    print(f"  BLOCKED {eid}: No outreach actions recorded. "
+                          f"Use followup.py --log to record outreach first.")
+                    continue
 
         candidates.append(e)
 
@@ -370,8 +402,12 @@ def main():
                         help="Show advancement opportunities and blockers")
     parser.add_argument("--backup", action="store_true",
                         help="Snapshot modified files to pipeline/.backup/ before writing")
-    parser.add_argument("--force", action="store_true",
+    parser.add_argument("--skip-outreach-gate", action="store_true",
                         help="Bypass outreach gate when advancing to submitted")
+    parser.add_argument("--force", action="store_true", dest="skip_outreach_gate",
+                        help="(deprecated alias for --skip-outreach-gate)")
+    parser.add_argument("--strict", action="store_true",
+                        help="Strict mode: disables --skip-outreach-gate and enforces all gates")
     args = parser.parse_args()
 
     if args.report:
@@ -382,6 +418,9 @@ def main():
     if not args.target_status:
         parser.error("Specify --to <status> or --report")
 
+    if args.strict and args.skip_outreach_gate:
+        parser.error("--strict and --skip-outreach-gate are mutually exclusive")
+
     run_advance(
         target_status=args.target_status,
         effort_filter=args.effort,
@@ -390,7 +429,8 @@ def main():
         dry_run=args.dry_run,
         auto_yes=args.yes,
         backup=args.backup,
-        force=args.force,
+        force=args.skip_outreach_gate,
+        strict=args.strict,
     )
 
 

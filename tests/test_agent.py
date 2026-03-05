@@ -28,6 +28,7 @@ def _make_entry(entry_id="test-entry", status="drafting", score=None, days_ahead
         "id": entry_id,
         "status": status,
         "deadline": {"date": deadline_date, "type": "rolling"},
+        "submission": {"materials_attached": ["resumes/test-resume.html"], "blocks_used": {}, "variant_ids": {}},
         "tags": [],
     }
     if score is not None:

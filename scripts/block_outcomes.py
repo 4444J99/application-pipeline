@@ -73,12 +73,15 @@ def compute_block_cross_tabs(entries: list[dict]) -> dict:
     return cross_tabs
 
 
-def classify_blocks(cross_tabs: dict) -> dict:
+MIN_OUTCOMES_FOR_CLASSIFICATION = 5
+
+
+def classify_blocks(cross_tabs: dict, min_outcomes: int = MIN_OUTCOMES_FOR_CLASSIFICATION) -> dict:
     """Classify blocks into golden/neutral/toxic based on acceptance rate.
 
-    Golden: acceptance rate > 50% with >= 2 uses
-    Toxic: rejection rate > 75% with >= 2 uses
-    Neutral: everything else
+    Golden: acceptance rate > 50% with >= min_outcomes resolved uses
+    Toxic: rejection rate > 75% with >= min_outcomes resolved uses
+    Neutral: everything else (including insufficient data)
     """
     golden = []
     neutral = []
@@ -86,8 +89,9 @@ def classify_blocks(cross_tabs: dict) -> dict:
 
     for block, tab in sorted(cross_tabs.items()):
         resolved = tab["accepted"] + tab["rejected"]
-        if resolved < 2:
-            neutral.append({"block": block, **tab, "category": "neutral", "reason": "insufficient data"})
+        if resolved < min_outcomes:
+            neutral.append({"block": block, **tab, "category": "neutral",
+                           "reason": f"insufficient data ({resolved}/{min_outcomes} resolved)"})
             continue
 
         accept_rate = tab["accepted"] / resolved
@@ -107,6 +111,17 @@ def classify_blocks(cross_tabs: dict) -> dict:
 def format_block_report(classified: dict) -> str:
     """Format block-outcome correlation report."""
     lines = ["Block-Outcome Correlation Report", "=" * 60]
+
+    # Data sufficiency warning
+    total_resolved = sum(
+        b.get("accepted", 0) + b.get("rejected", 0)
+        for cat in classified.values()
+        for b in cat
+    )
+    if total_resolved < 20:
+        lines.append(f"\n  DATA NOTICE: Only {total_resolved} resolved outcomes available.")
+        lines.append(f"  Classifications require >= {MIN_OUTCOMES_FOR_CLASSIFICATION} outcomes per block.")
+        lines.append("  Results may be unreliable at this sample size.")
 
     lines.append(f"\nGOLDEN BLOCKS ({len(classified['golden'])} — correlated with acceptance):")
     if classified["golden"]:

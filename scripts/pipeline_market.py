@@ -41,6 +41,47 @@ def http_request_with_retry(
     return None
 
 
+# Required top-level keys in market-intelligence JSON.
+# Missing keys are logged as warnings but don't block loading.
+MARKET_INTEL_REQUIRED_KEYS = {
+    "meta",
+    "market_conditions",
+    "track_benchmarks",
+    "portal_friction_scores",
+    "follow_up_protocol",
+    "stale_thresholds_days",
+}
+
+
+def _validate_market_intel(data: dict, filepath: Path) -> list[str]:
+    """Validate market intelligence JSON structure. Returns list of warnings."""
+    import sys
+
+    warnings = []
+    missing = MARKET_INTEL_REQUIRED_KEYS - set(data.keys())
+    if missing:
+        warnings.append(f"market-intelligence: missing required keys: {sorted(missing)}")
+
+    # Validate meta section
+    meta = data.get("meta", {})
+    if isinstance(meta, dict):
+        if not meta.get("sources_count"):
+            warnings.append("market-intelligence: meta.sources_count missing")
+        if not meta.get("review_by"):
+            warnings.append("market-intelligence: meta.review_by missing")
+
+    # Validate portal_friction_scores values are ints 1-10
+    pfs = data.get("portal_friction_scores", {})
+    if isinstance(pfs, dict):
+        for portal, score in pfs.items():
+            if not isinstance(score, int) or not 1 <= score <= 10:
+                warnings.append(f"market-intelligence: portal_friction_scores.{portal} invalid: {score}")
+
+    for w in warnings:
+        print(f"  WARNING: {w}", file=sys.stderr)
+    return warnings
+
+
 def build_market_intelligence_loader(
     repo_root: Path,
 ) -> tuple[Callable[[], dict], Callable[[], dict], Callable[[], dict], dict[str, int], dict[str, int]]:
@@ -73,7 +114,11 @@ def build_market_intelligence_loader(
     }
 
     def load_market_intelligence() -> dict:
-        """Load market-intelligence JSON once, return {} on failure."""
+        """Load market-intelligence JSON once, return {} on failure.
+
+        Validates required keys on first load and logs warnings for
+        any structural issues (missing keys, invalid values).
+        """
         nonlocal cache
         if cache is not None:
             return cache
@@ -81,6 +126,7 @@ def build_market_intelligence_loader(
             try:
                 with open(intel_file) as f:
                     cache = json.load(f)
+                _validate_market_intel(cache, intel_file)
             except (OSError, json.JSONDecodeError):
                 cache = {}
         else:

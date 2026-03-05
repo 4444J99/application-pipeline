@@ -385,7 +385,7 @@ def test_markdown_report_contains_sections():
     assert "## 6. Scoring Dimension Accuracy" in md
     assert "## 7. Seasonal Patterns" in md
     assert "## 8. Pipeline Velocity" in md
-    assert "## 9. Recommendations" in md
+    assert "## 10. Recommendations" in md
 
 
 def test_markdown_report_includes_comparison_when_provided():

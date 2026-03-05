@@ -167,12 +167,52 @@ def compose(entry: dict, profile: dict | None = None, ai_smooth: bool = False) -
             parts.append("")
 
     document = "\n".join(parts)
-    
+
     if ai_smooth:
         identity_pos = entry.get("fit", {}).get("identity_position", "creative-technologist")
         document = smooth_with_ai(document, identity_pos)
-        
+
+    # Warn on AI content hallmarks that trigger 62% rejection rate
+    warnings = detect_ai_hallmarks(document)
+    if warnings:
+        print("  AI CONTENT WARNING — These phrases trigger high rejection rates:",
+              file=sys.stderr)
+        for w in warnings:
+            print(f"    - {w}", file=sys.stderr)
+
     return document
+
+
+# --- AI content detection ---
+
+# Phrases that signal generic AI-generated content (62% rejection rate).
+# Sourced from market-intelligence-2026.json AI content benchmarks.
+AI_HALLMARK_PHRASES = [
+    "passionate about",
+    "deeply committed",
+    "leverage my expertise",
+    "uniquely positioned",
+    "at the intersection of",
+    "interdisciplinary approach",
+    "holistic understanding",
+    "diverse perspectives",
+    "meaningful impact",
+    "innovative solutions",
+    "transformative potential",
+    "cutting-edge",
+    "synergize",
+    "paradigm shift",
+    "thought leader",
+]
+
+
+def detect_ai_hallmarks(text: str) -> list[str]:
+    """Scan text for generic AI-generated phrases.
+
+    Returns list of matched phrases. Empty list = clean.
+    """
+    lower = text.lower()
+    return [phrase for phrase in AI_HALLMARK_PHRASES if phrase in lower]
 
 
 def print_counts(entry: dict, profile: dict | None = None):

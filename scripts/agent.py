@@ -277,9 +277,17 @@ class PipelineAgent:
                         "severity": "routine",
                     })
 
-            # Rule 4: Drafting, deadline > min_days AND score >= min_score
+            # Rule 4: Drafting, deadline > min_days AND score >= min_score AND materials ready
             elif status == "drafting" and _rule_enabled("advance_drafting_to_staged"):
-                if (days_left and days_left > DRAFTING_STAGED_MIN_DAYS
+                submission = entry.get("submission") or {}
+                has_materials = bool(
+                    (submission.get("materials_attached") or [])
+                    or (submission.get("blocks_used") or {})
+                    or (submission.get("variant_ids") or {})
+                )
+                if not has_materials:
+                    pass  # skip — no materials attached yet
+                elif (days_left and days_left > DRAFTING_STAGED_MIN_DAYS
                         and score and score >= drafting_threshold):
                     can_adv, reason = can_advance(entry, "staged")
                     if can_adv:

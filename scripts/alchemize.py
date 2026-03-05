@@ -44,13 +44,13 @@ from pipeline_lib import (
     PIPELINE_DIR_ACTIVE,
     REPO_ROOT,
     VARIANTS_DIR,
+    atomic_write,
     load_block_index,
     load_entries,
     load_entry_by_id,
     load_profile,
-    update_last_touched,
-    update_yaml_field,
 )
+from yaml_mutation import YAMLEditor
 
 WORK_DIR = Path(__file__).resolve().parent / ".alchemize-work"
 STRATEGY_DIR = REPO_ROOT / "strategy"
@@ -903,7 +903,7 @@ def update_pipeline_yaml(
 ) -> bool:
     """Update pipeline YAML with new variant reference and framing.
 
-    Uses targeted regex-based field updates to preserve file formatting
+    Uses ruamel.yaml round-trip editing to preserve file formatting
     (comments, key order, quoting style) instead of destructive yaml.dump.
     """
     filepath, data = load_entry_by_id(entry_id)
@@ -912,50 +912,20 @@ def update_pipeline_yaml(
         return False
 
     content = filepath.read_text()
+    editor = YAMLEditor(content)
     changed = False
 
     if variant_ref:
-        try:
-            content = update_yaml_field(
-                content, "cover_letter", variant_ref,
-                nested=True, parent_key="variant_ids",
-            )
-            changed = True
-        except ValueError:
-            # variant_ids or cover_letter field doesn't exist yet — try adding
-            if "variant_ids:" in content:
-                content = re.sub(
-                    r'^(\s*variant_ids:\s*)\{\}',
-                    lambda m: re.match(r'^(\s*)', m.group(1)).group(1) + "variant_ids:\n"
-                    + re.match(r'^(\s*)', m.group(1)).group(1) + f"  cover_letter: {variant_ref}",
-                    content, count=1, flags=re.MULTILINE,
-                )
-                changed = True
-            elif "variant_ids:" not in content and "submission:" in content:
-                content = re.sub(
-                    r'^(submission:\s*\n)',
-                    rf'\g<0>  variant_ids:\n    cover_letter: {variant_ref}\n',
-                    content, count=1, flags=re.MULTILINE,
-                )
-                changed = True
+        editor.set("submission", "variant_ids", "cover_letter", variant_ref)
+        changed = True
 
     if framing:
-        try:
-            content = update_yaml_field(content, "framing", framing, nested=True)
-            changed = True
-        except ValueError:
-            # framing field doesn't exist yet — add under fit:
-            if "fit:" in content:
-                content = re.sub(
-                    r'^(fit:\s*\n)',
-                    rf'\g<0>  framing: {framing}\n',
-                    content, count=1, flags=re.MULTILINE,
-                )
-                changed = True
+        editor.set("fit", "framing", framing)
+        changed = True
 
     if changed:
-        content = update_last_touched(content)
-        filepath.write_text(content)
+        editor.touch()
+        atomic_write(filepath, editor.dump())
         return True
     return False
 

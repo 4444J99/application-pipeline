@@ -28,7 +28,6 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
-    ALL_PIPELINE_DIRS,
     SIGNALS_DIR,
     atomic_write,
     load_entries,
@@ -264,7 +263,6 @@ def suggest_network_proximity(contacts: list[dict], entry_id: str) -> int:
         5 — contact exists at same organization
         2 — no contacts at org
     """
-    entry_orgs: set[str] = set()
     for c in contacts:
         linked = c.get("pipeline_entries", []) or []
         if entry_id in linked:

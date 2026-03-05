@@ -6,6 +6,7 @@ import re
 from datetime import UTC, date, datetime
 from pathlib import Path
 
+from pipeline_entry_state import parse_date as _parse_date
 from pipeline_market import build_market_intelligence_loader
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -23,19 +24,6 @@ PRECISION_PIVOT_DATE = "2026-03-04"
 JOB_FRESH_HOURS = 24
 JOB_WARM_HOURS = 48
 JOB_STALE_HOURS = 72
-
-
-def _parse_date(date_str: str | date | datetime | None) -> date | None:
-    if not date_str:
-        return None
-    if isinstance(date_str, datetime):
-        return date_str.date()
-    if isinstance(date_str, date):
-        return date_str
-    try:
-        return datetime.strptime(str(date_str), "%Y-%m-%d").date()
-    except ValueError:
-        return None
 
 
 def get_entry_era(entry: dict) -> str:

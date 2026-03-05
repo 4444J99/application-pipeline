@@ -6,7 +6,15 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from advance import VALID_TRANSITIONS, advance_entry, can_advance, has_outreach_actions, run_report, run_advance
+from advance import (
+    VALID_TRANSITIONS,
+    _log_gate_bypass,
+    advance_entry,
+    can_advance,
+    has_outreach_actions,
+    run_advance,
+    run_report,
+)
 
 # --- can_advance ---
 
@@ -394,7 +402,7 @@ def _write_pipeline_yaml(tmp_path, entry_id, status="qualified", effort="quick",
         "  qualified: '2026-01-15'",
         "  materials_ready: null",
         "  submitted: null",
-        f'last_touched: "2026-01-15"',
+        'last_touched: "2026-01-15"',
     ]
     if org:
         lines.insert(4, "target:")
@@ -586,3 +594,70 @@ def test_run_advance_no_candidates_prints_message(tmp_path, monkeypatch, capsys)
 
     output = capsys.readouterr().out
     assert "No entries match" in output
+
+
+# --- strict mode ---
+
+
+def test_run_advance_strict_blocks_without_outreach(tmp_path, monkeypatch, capsys):
+    """Strict mode blocks submitted advancement even if --skip-outreach-gate is not used."""
+    filepath = _write_pipeline_yaml(
+        tmp_path, "strict-test", status="staged",
+        follow_up=[], outreach=[],
+    )
+    original_content = filepath.read_text()
+    entry = _make_loaded_entry(filepath)
+
+    monkeypatch.setattr("advance.load_entries", lambda include_filepath=False: [entry])
+
+    run_advance(
+        target_status="submitted",
+        effort_filter=None,
+        status_filter=None,
+        entry_id=None,
+        dry_run=False,
+        auto_yes=True,
+        force=False,
+        strict=True,
+    )
+
+    assert filepath.read_text() == original_content
+    output = capsys.readouterr().out
+    assert "strict mode" in output
+    assert "BLOCKED" in output
+
+
+def test_run_advance_strict_allows_with_outreach(tmp_path, monkeypatch, capsys):
+    """Strict mode allows submitted advancement when outreach actions exist."""
+    filepath = _write_pipeline_yaml(
+        tmp_path, "strict-ok", status="staged",
+        follow_up=["2026-03-01"], outreach=[],
+    )
+    entry = _make_loaded_entry(filepath)
+
+    monkeypatch.setattr("advance.load_entries", lambda include_filepath=False: [entry])
+    monkeypatch.setattr("advance.advance_entry", lambda fp, eid, ts, reason=None: _mock_advance(fp, ts))
+
+    run_advance(
+        target_status="submitted",
+        effort_filter=None,
+        status_filter=None,
+        entry_id=None,
+        dry_run=False,
+        auto_yes=True,
+        force=False,
+        strict=True,
+    )
+
+    output = capsys.readouterr().out
+    assert "BLOCKED" not in output
+    assert "Advanced 1 entries" in output
+
+
+# --- gate bypass logging ---
+
+
+def test_log_gate_bypass_best_effort(monkeypatch):
+    """Gate bypass logging is best-effort and does not raise."""
+    # Should not raise even when log_signal_action is not importable
+    _log_gate_bypass("test-entry", "outreach")

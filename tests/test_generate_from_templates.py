@@ -1,8 +1,7 @@
-import os
 import yaml
-from pathlib import Path
-import pytest
+
 from scripts.generate_from_templates import render_template
+
 
 def test_render_template():
     metrics = {

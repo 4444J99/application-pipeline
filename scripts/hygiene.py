@@ -32,20 +32,21 @@ from pipeline_lib import (
     PIPELINE_DIR_CLOSED,
     PIPELINE_DIR_RESEARCH_POOL,
     PIPELINE_DIR_SUBMITTED,
+    SIGNALS_DIR,
+    atomic_write,
     days_until,
     get_deadline,
     http_request_with_retry,
     load_entries,
     load_entry_by_id,
     parse_date,
-    update_last_touched,
-    update_yaml_field,
 )
 from source_jobs import (
     fetch_ashby_jobs,
     fetch_greenhouse_jobs,
     fetch_lever_jobs,
 )
+from yaml_mutation import YAMLEditor
 
 HTTP_TIMEOUT = 10
 STALE_ROLLING_DAYS = 30
@@ -269,21 +270,14 @@ def _expire_entry(entry_id: str):
                 print(f"  WARNING: Skipping {entry_id} — status '{data.get('status')}' not actionable",
                       file=sys.stderr)
                 return
-            content = update_yaml_field(content, "status", "outcome")
-            try:
-                content = update_yaml_field(content, "outcome", "expired")
-            except ValueError:
-                # outcome field might be 'null' — try regex
-                import re
-                content = re.sub(
-                    r'^(outcome:)\s+.*$', r'\1 expired',
-                    content, count=1, flags=re.MULTILINE,
-                )
-            content = update_last_touched(content)
+            editor = YAMLEditor(content)
+            editor.set("status", "outcome")
+            editor.set("outcome", "expired")
+            editor.touch()
 
             PIPELINE_DIR_CLOSED.mkdir(parents=True, exist_ok=True)
             dest = PIPELINE_DIR_CLOSED / filepath.name
-            dest.write_text(content)
+            atomic_write(dest, editor.dump())
             filepath.unlink()
             return
 
@@ -483,6 +477,77 @@ def run_full_report(entries: list[dict]):
 
 
 # ---------------------------------------------------------------------------
+# Research pool pruning
+# ---------------------------------------------------------------------------
+
+DEFAULT_PRUNE_AGE_DAYS = 90
+
+
+def run_prune_research(entries: list[dict], older_than: int = DEFAULT_PRUNE_AGE_DAYS, dry_run: bool = True) -> list[dict]:
+    """Archive research_pool entries older than `older_than` days with no score.
+
+    Moves qualifying entries to closed/ with outcome=expired to prevent
+    unbounded growth of the research pool.
+    """
+    today = date.today()
+    pruned = []
+
+    for e in entries:
+        if e.get("status") != "research":
+            continue
+        filepath = e.get("_filepath")
+        if not filepath or not Path(filepath).parent.name == "research_pool":
+            continue
+
+        # Check for score — keep scored entries
+        fit = e.get("fit", {})
+        score = fit.get("score") if isinstance(fit, dict) else None
+        if score is not None and float(score) > 0:
+            continue
+
+        # Check age
+        lt = parse_date(e.get("last_touched"))
+        timeline = e.get("timeline", {})
+        discovered = parse_date(timeline.get("discovered")) if isinstance(timeline, dict) else None
+        ref_date = lt or discovered
+        if not ref_date:
+            continue
+
+        age_days = (today - ref_date).days
+        if age_days < older_than:
+            continue
+
+        entry_id = e.get("id", "?")
+        pruned.append({"id": entry_id, "age_days": age_days, "last_touched": ref_date.isoformat()})
+
+        if not dry_run:
+            src = Path(filepath)
+            content = src.read_text()
+            editor = YAMLEditor(content)
+            editor.set("status", "outcome")
+            editor.set("outcome", "expired")
+            editor.touch()
+            PIPELINE_DIR_CLOSED.mkdir(parents=True, exist_ok=True)
+            dest = PIPELINE_DIR_CLOSED / src.name
+            atomic_write(dest, editor.dump())
+            src.unlink()
+
+    if not pruned:
+        print(f"No research_pool entries older than {older_than} days with no score.")
+    else:
+        action = "Would prune" if dry_run else "Pruned"
+        print(f"{action} {len(pruned)} research_pool entries (>{older_than} days, no score):")
+        for item in pruned[:20]:
+            print(f"  {item['id']} — {item['age_days']}d old (last: {item['last_touched']})")
+        if len(pruned) > 20:
+            print(f"  ... and {len(pruned) - 20} more")
+        if dry_run:
+            print("\nDry run — run with --prune-research --yes to execute.")
+
+    return pruned
+
+
+# ---------------------------------------------------------------------------
 # Company focus (Rule of Three)
 # ---------------------------------------------------------------------------
 
@@ -589,6 +654,84 @@ def section_company_focus(focus_limit: int = DEFAULT_FOCUS_LIMIT):
 
 # ---------------------------------------------------------------------------
 # Main
+DEFAULT_SIGNAL_AGE_DAYS = 90
+
+
+def run_rotate_signals(older_than: int = DEFAULT_SIGNAL_AGE_DAYS, *, dry_run: bool = True):
+    """Archive signal-actions entries older than *older_than* days.
+
+    Moves old entries to signals/archive/YYYY-MM/signal-actions.yaml,
+    keeping the production file lean.
+    """
+    from datetime import datetime, timedelta
+
+    sa_path = SIGNALS_DIR / "signal-actions.yaml"
+    if not sa_path.exists():
+        print("signal-actions.yaml not found — nothing to rotate.")
+        return
+
+    data = yaml.safe_load(sa_path.read_text()) or {}
+    actions = data.get("actions", []) or []
+    if not actions:
+        print("No signal actions to rotate.")
+        return
+
+    cutoff = (datetime.now() - timedelta(days=older_than)).date()
+    keep, archive = [], []
+    for action in actions:
+        action_date_str = action.get("action_date", "")
+        try:
+            action_date = date.fromisoformat(str(action_date_str))
+        except (ValueError, TypeError):
+            keep.append(action)  # keep unparseable entries
+            continue
+        if action_date < cutoff:
+            archive.append(action)
+        else:
+            keep.append(action)
+
+    if not archive:
+        print(f"No signal actions older than {older_than} days (cutoff {cutoff}).")
+        return
+
+    print(f"Signal actions: {len(actions)} total, {len(archive)} older than {older_than}d, {len(keep)} to keep")
+
+    if dry_run:
+        print("\nDry run — run with --rotate-signals --yes to execute.")
+        return
+
+    # Group archived entries by month
+    monthly: dict[str, list] = {}
+    for a in archive:
+        d_str = str(a.get("action_date", ""))
+        month_key = d_str[:7] if len(d_str) >= 7 else "unknown"
+        monthly.setdefault(month_key, []).append(a)
+
+    archive_dir = SIGNALS_DIR / "archive"
+    for month, entries in sorted(monthly.items()):
+        month_dir = archive_dir / month
+        month_dir.mkdir(parents=True, exist_ok=True)
+        archive_file = month_dir / "signal-actions.yaml"
+        existing = []
+        if archive_file.exists():
+            existing_data = yaml.safe_load(archive_file.read_text()) or {}
+            existing = existing_data.get("actions", []) or []
+        existing.extend(entries)
+        atomic_write(
+            archive_file,
+            yaml.dump({"actions": existing}, default_flow_style=False, sort_keys=False, allow_unicode=True),
+        )
+        print(f"  Archived {len(entries)} entries to {archive_file}")
+
+    # Write trimmed production file
+    data["actions"] = keep
+    atomic_write(
+        sa_path,
+        yaml.dump(data, default_flow_style=False, sort_keys=False, allow_unicode=True),
+    )
+    print(f"  Production file trimmed to {len(keep)} entries")
+
+
 # ---------------------------------------------------------------------------
 
 def main():
@@ -607,10 +750,18 @@ def main():
                         help="Rule of Three: flag companies with >limit active+submitted job entries")
     parser.add_argument("--limit", type=int, default=DEFAULT_FOCUS_LIMIT, metavar="N",
                         help=f"Focus limit for --company-focus (default: {DEFAULT_FOCUS_LIMIT})")
+    parser.add_argument("--prune-research", action="store_true",
+                        help="Archive research_pool entries older than --older-than days with no score")
+    parser.add_argument("--older-than", type=int, default=DEFAULT_PRUNE_AGE_DAYS, metavar="DAYS",
+                        help=f"Age threshold for --prune-research (default: {DEFAULT_PRUNE_AGE_DAYS})")
+    parser.add_argument("--rotate-signals", action="store_true",
+                        help="Archive signal-actions entries older than --signal-age days")
+    parser.add_argument("--signal-age", type=int, default=DEFAULT_SIGNAL_AGE_DAYS, metavar="DAYS",
+                        help=f"Age threshold for --rotate-signals (default: {DEFAULT_SIGNAL_AGE_DAYS})")
     parser.add_argument("--dry-run", action="store_true",
                         help="Preview changes without executing")
     parser.add_argument("--yes", action="store_true",
-                        help="Execute changes (required for --auto-expire)")
+                        help="Execute changes (required for --auto-expire, --prune-research, --rotate-signals)")
     args = parser.parse_args()
 
     if args.gate:
@@ -626,7 +777,15 @@ def main():
         include_filepath=True,
     )
 
-    if args.check_urls:
+    if args.rotate_signals:
+        dry_run = not args.yes or args.dry_run
+        run_rotate_signals(older_than=args.signal_age, dry_run=dry_run)
+        return
+
+    if args.prune_research:
+        dry_run = not args.yes or args.dry_run
+        run_prune_research(entries, older_than=args.older_than, dry_run=dry_run)
+    elif args.check_urls:
         run_check_urls(entries)
     elif args.check_postings:
         run_check_postings(entries)

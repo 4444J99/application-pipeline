@@ -27,6 +27,9 @@ SIGNAL_TYPES = {"hypothesis", "score_threshold", "pattern", "agent_rule", "conve
 OUTCOMES = {None, "null", "rejected", "acknowledged", "withdrawn", "expired", "accepted"}
 AGENT_MODES = {"plan", "execute"}
 
+# Entry IDs that indicate test data contamination in production signal files
+TEST_ENTRY_IDS = {"test-entry", "deferred-entry", "integration-test", "test-integration", "mock-entry", "fake-entry"}
+
 
 def _load_yaml(path: Path) -> dict | list | None:
     """Load a YAML file, returning None if missing or empty."""
@@ -77,6 +80,11 @@ def validate_signal_actions(errors: list[str]) -> int:
         if not DATE_RE.match(ad):
             errors.append(f"{label}: action_date '{ad}' is not YYYY-MM-DD format")
 
+        # Test data contamination check
+        entry_id = entry.get("entry_id", "")
+        if isinstance(entry_id, str) and entry_id in TEST_ENTRY_IDS:
+            errors.append(f"{label}: test entry_id '{entry_id}' in production signal file")
+
     return len(actions)
 
 
@@ -112,6 +120,11 @@ def validate_conversion_log(errors: list[str]) -> int:
         outcome = entry.get("outcome")
         if outcome is not None and str(outcome) != "null" and outcome not in OUTCOMES:
             errors.append(f"{label}: outcome '{outcome}' not in {sorted(o for o in OUTCOMES if o)}")
+
+        # Test data contamination check
+        entry_id = entry.get("id", "")
+        if isinstance(entry_id, str) and entry_id in TEST_ENTRY_IDS:
+            errors.append(f"{label}: test id '{entry_id}' in production signal file")
 
     return len(entries)
 

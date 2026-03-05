@@ -26,11 +26,12 @@ from pipeline_lib import (
     PIPELINE_DIR_CLOSED,
     PIPELINE_DIR_SUBMITTED,
     SIGNALS_DIR,
+    atomic_write,
     get_tier,
     load_entries,
     parse_date,
-    update_last_touched,
 )
+from yaml_mutation import YAMLEditor
 
 _INTEL_FILE = Path(__file__).resolve().parent.parent / "strategy" / "market-intelligence-2026.json"
 
@@ -160,85 +161,42 @@ def get_upcoming_actions(entry: dict) -> list[dict]:
     return upcoming
 
 
-def _escape_yaml_scalar(s: str) -> str:
-    """Wrap a string in double quotes, escaping any double quotes inside."""
-    return '"' + s.replace("\\", "\\\\").replace('"', '\\"') + '"'
-
-
-def _append_to_follow_up_list(content: str, item_yaml: str) -> str:
-    """Append a YAML block-sequence item to the follow_up field.
-
-    Handles three initial states:
-      - follow_up: []         → replaces with block list
-      - follow_up: null/~     → replaces with block list
-      - follow_up:            → appends item after the existing block
-    Falls back to appending a new follow_up block at EOF.
-    """
-    import re
-
-    indented = "  " + "\n  ".join(item_yaml.rstrip().split("\n"))
-
-    # Case 1: inline empty or null
-    m = re.search(r'^follow_up:\s*(?:\[\]|null|~)?\s*$', content, re.MULTILINE)
-    if m:
-        replacement = f"follow_up:\n{indented}"
-        return content[:m.start()] + replacement + content[m.end():]
-
-    # Case 2: block list — find end of follow_up block (next top-level key)
-    block_start_m = re.search(r'^follow_up:\s*$', content, re.MULTILINE)
-    if block_start_m:
-        pos = block_start_m.end()
-        rest = content[pos:]
-        next_top = re.search(r'^\S', rest, re.MULTILINE)
-        insert_pos = pos + (next_top.start() if next_top else len(rest))
-        return content[:insert_pos] + indented + "\n" + content[insert_pos:]
-
-    # Fallback: append new block at EOF
-    return content.rstrip() + f"\nfollow_up:\n{indented}\n"
-
-
 def log_followup(entry_id: str, channel: str, contact: str, note: str, followup_type: str = "dm"):
     """Log a follow-up action to both the entry YAML and outreach log.
 
-    Uses targeted raw-text mutation to preserve file formatting (key ordering,
-    comments, quoting style). Never calls yaml.dump on pipeline entry files.
+    Uses ruamel.yaml round-trip editing to preserve file formatting
+    (comments, key ordering, quoting style).
     """
-    from pipeline_lib import update_yaml_field
-
     filepath = PIPELINE_DIR_SUBMITTED / f"{entry_id}.yaml"
     if not filepath.exists():
         print(f"Entry not found: {entry_id}", file=sys.stderr)
         sys.exit(1)
 
     content = filepath.read_text()
-    data = yaml.safe_load(content)
+    editor = YAMLEditor(content)
 
     today = date.today().isoformat()
 
-    # 1. Increment conversion.follow_up_count (targeted regex, nested=True)
-    conversion = data.get("conversion", {})
+    # 1. Increment conversion.follow_up_count
+    conversion = editor.get("conversion") or {}
     if isinstance(conversion, dict):
         count = (conversion.get("follow_up_count", 0) or 0) + 1
-        try:
-            content = update_yaml_field(content, "follow_up_count", str(count), nested=True)
-        except ValueError:
-            pass  # field may not exist yet
+        editor.set("conversion", "follow_up_count", count)
 
-    # 2. Build new follow_up list item as indented YAML text
-    item_lines = (
-        f"- date: {_escape_yaml_scalar(today)}\n"
-        f"  channel: {channel}\n"
-        f"  contact: {_escape_yaml_scalar(contact)}\n"
-        f"  type: {followup_type}\n"
-        f"  note: {_escape_yaml_scalar(note)}\n"
-        f"  response: \"none\""
-    )
-    content = _append_to_follow_up_list(content, item_lines)
+    # 2. Append follow_up item (handles null, empty list, or existing list)
+    editor.append_to_list("follow_up", {
+        "date": today,
+        "channel": channel,
+        "contact": contact,
+        "type": followup_type,
+        "note": note,
+        "response": "none",
+    })
 
     # 3. Update last_touched
-    content = update_last_touched(content)
+    editor.touch()
 
-    filepath.write_text(content)
+    atomic_write(filepath, editor.dump())
 
     # Also log to outreach-log.yaml
     _append_outreach_log(entry_id, channel, contact, note, followup_type)
@@ -317,40 +275,16 @@ def init_follow_ups(dry_run: bool = True) -> int:
             updated += 1
             continue
 
-        # Add follow_up field if missing
+        # Use round-trip editor for structural mutations
+        editor = YAMLEditor(content)
+
         if not has_follow_up:
-            if "follow_up:" not in content:
-                # Insert before tags or at end
-                content = content.rstrip() + "\nfollow_up: []\n"
-            else:
-                # Field exists but is null — update to empty list
-                import re
-                content = re.sub(
-                    r'^(follow_up:)\s*(?:null|~)?\s*$',
-                    r'\1 []',
-                    content,
-                    count=1,
-                    flags=re.MULTILINE,
-                )
+            editor.setdefault("follow_up", [])
 
-        # Add conversion.follow_up_count if missing
         if not has_count:
-            import re
-            if "follow_up_count:" not in content:
-                # Insert after other conversion fields
-                conversion_match = re.search(r'^conversion:\s*$', content, re.MULTILINE)
-                if conversion_match:
-                    # Find the end of the conversion block
-                    pos = conversion_match.end()
-                    # Find next top-level key
-                    next_key = re.search(r'^\S', content[pos:], re.MULTILINE)
-                    if next_key:
-                        insert_pos = pos + next_key.start()
-                        content = (content[:insert_pos]
-                                   + "  follow_up_count: 0\n"
-                                   + content[insert_pos:])
+            editor.set("conversion", "follow_up_count", 0)
 
-        filepath.write_text(content)
+        atomic_write(filepath, editor.dump())
         print(f"  {entry_id} — initialized follow-up fields")
         updated += 1
 

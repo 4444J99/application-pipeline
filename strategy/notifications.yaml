@@ -1,5 +1,6 @@
 # Notification configuration for pipeline events.
-# Channels: webhook (POST JSON) and email (SMTP).
+# Channels: webhook (POST JSON), email (SMTP), file (local YAML log).
+# File channel logs to signals/notification-log.yaml (always works, no setup).
 # Each event type maps to a list of channels to notify.
 
 webhooks: []
@@ -13,8 +14,13 @@ email:
   recipients: []
 
 subscriptions:
-  weekly_brief: []
-  agent_action: []
-  deadline_alert: []
-  outcome_received: []
-  triage_report: []
+  weekly_brief:
+    - file
+  agent_action:
+    - file
+  deadline_alert:
+    - file
+  outcome_received:
+    - file
+  triage_report:
+    - file

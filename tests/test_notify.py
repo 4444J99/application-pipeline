@@ -74,8 +74,9 @@ class TestDispatchEvent:
             "subscriptions": {"weekly_brief": []},
         }))
         monkeypatch.setattr(notify, "CONFIG_PATH", config_path)
+        monkeypatch.setattr(notify, "NOTIFICATION_LOG", tmp_path / "notification-log.yaml")
         results = dispatch_event("weekly_brief", {"summary": "test"})
-        assert results[0]["channel"] == "none"
+        assert results[0]["channel"] == "file"
         assert results[0]["success"] is True
 
     def test_webhook_channel_dispatched(self, tmp_path, monkeypatch):

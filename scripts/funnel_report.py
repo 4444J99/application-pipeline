@@ -443,12 +443,124 @@ def compare_variants(entries: list[dict]):
 
     total_all = sum(len(g) for g in groups.values())
     print(f"\n  Total submitted: {total_all}")
+
+    # Statistical significance — Fisher's exact test between top pairs
+    group_names = sorted(groups.keys(), key=lambda x: -len(groups[x]))
+    if len(group_names) >= 2:
+        _print_significance(groups, group_names)
+
     print("\n  Composition types:")
     print("    alchemized    — AI-synthesized via alchemize.py pipeline")
     print("    block+variant — Manual blocks + cover letter variant")
     print("    block-only    — Blocks without cover letter")
     print("    variant-only  — Cover letter without identity blocks")
     print("    minimal       — No blocks or variants attached")
+
+
+def _fisher_exact_2x2(a: int, b: int, c: int, d: int) -> float:
+    """Compute Fisher's exact test p-value for a 2x2 contingency table.
+
+    Table:    [[a, b], [c, d]]
+    Uses stdlib math only (no scipy dependency).
+    Returns one-sided p-value.
+    """
+    from math import comb
+
+    n = a + b + c + d
+    if n == 0:
+        return 1.0
+
+    # Hypergeometric probability
+    row1 = a + b
+    row2 = c + d
+    col1 = a + c
+
+    def _prob(x):
+        return comb(row1, x) * comb(row2, col1 - x) / comb(n, col1)
+
+    # Two-tailed: sum probabilities as extreme or more extreme than observed
+    p_obs = _prob(a)
+    p_value = sum(_prob(x) for x in range(max(0, col1 - row2), min(row1, col1) + 1)
+                  if _prob(x) <= p_obs + 1e-10)
+    return min(p_value, 1.0)
+
+
+def _print_significance(groups: dict[str, list[dict]], group_names: list[str]):
+    """Print pairwise Fisher's exact test between the two largest groups."""
+    if len(group_names) < 2:
+        return
+    g1_name, g2_name = group_names[0], group_names[1]
+    g1, g2 = groups[g1_name], groups[g2_name]
+
+    def _responded(group):
+        return sum(1 for e in group
+                   if e.get("status") in ("acknowledged", "interview", "outcome")
+                   or (isinstance(e.get("conversion"), dict)
+                       and e["conversion"].get("response_received")))
+
+    a = _responded(g1)
+    b = len(g1) - a
+    c = _responded(g2)
+    d = len(g2) - c
+
+    if a + b + c + d < 5:
+        return  # too few data points
+
+    p = _fisher_exact_2x2(a, b, c, d)
+    sig = "SIGNIFICANT" if p < 0.05 else "not significant"
+    print(f"\n  Significance ({g1_name} vs {g2_name}): p={p:.3f} ({sig})")
+    if a + b + c + d < 20:
+        print("    Note: Small sample size — interpret with caution")
+    _print_power_analysis(groups, group_names)
+
+
+def minimum_sample_size(p1: float = 0.10, p2: float = 0.20,
+                        alpha: float = 0.05, power: float = 0.80) -> int:
+    """Estimate minimum sample size per group for a two-proportion z-test.
+
+    Uses the normal approximation formula:
+        n = (z_alpha + z_beta)^2 * (p1*(1-p1) + p2*(1-p2)) / (p2 - p1)^2
+
+    Parameters:
+        p1: expected conversion rate for control group (default 10%)
+        p2: expected conversion rate for treatment group (default 20%)
+        alpha: significance level (default 0.05)
+        power: statistical power (default 0.80)
+
+    Returns minimum n per group (integer, rounded up).
+    """
+    import math
+
+    if abs(p2 - p1) < 1e-10:
+        return 0  # no difference to detect
+
+    # Z-scores for common alpha/power values (stdlib-only, no scipy)
+    z_table = {0.01: 2.576, 0.025: 1.96, 0.05: 1.645, 0.10: 1.282}
+    z_alpha = z_table.get(alpha / 2, 1.96)  # two-sided
+    z_beta = z_table.get(1 - power, 0.842)
+
+    numerator = (z_alpha + z_beta) ** 2 * (p1 * (1 - p1) + p2 * (1 - p2))
+    denominator = (p2 - p1) ** 2
+    return math.ceil(numerator / denominator)
+
+
+def _print_power_analysis(groups: dict[str, list[dict]], group_names: list[str]):
+    """Print minimum sample size needed to detect a meaningful difference."""
+    if len(group_names) < 2:
+        return
+
+    # Use current observed rates as estimates
+    g1, g2 = groups[group_names[0]], groups[group_names[1]]
+
+    # Detect a 10 percentage point difference at α=0.05, power=0.80
+    n_needed = minimum_sample_size(p1=0.10, p2=0.20, alpha=0.05, power=0.80)
+    current_per_group = min(len(g1), len(g2))
+
+    if current_per_group < n_needed:
+        print(f"  Power analysis: need {n_needed}/group to detect 10pp difference "
+              f"(currently {current_per_group}/group — {current_per_group * 100 // max(n_needed, 1)}% of target)")
+    else:
+        print(f"  Power analysis: sample sufficient ({current_per_group} >= {n_needed}/group)")
 
 
 def breakdown_by_score_tier(entries: list[dict]):

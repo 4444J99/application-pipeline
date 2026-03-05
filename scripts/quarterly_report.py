@@ -504,6 +504,54 @@ def pipeline_velocity(entries: list[dict]) -> list[dict]:
     return results
 
 
+def time_to_outcome(entries: list[dict]) -> dict:
+    """Compute submission-to-outcome benchmarks by track and portal.
+
+    Returns median, mean, min, max days from submitted → outcome date,
+    grouped by track and portal.
+    """
+    by_track: dict[str, list[int]] = defaultdict(list)
+    by_portal: dict[str, list[int]] = defaultdict(list)
+    all_durations: list[int] = []
+
+    for entry in entries:
+        outcome = _get_outcome(entry)
+        if not outcome or outcome not in {"accepted", "rejected", "withdrawn", "expired"}:
+            continue
+        timeline = entry.get("timeline", {})
+        if not isinstance(timeline, dict):
+            continue
+        submitted_date = parse_date(timeline.get("submitted"))
+        outcome_date = parse_date(timeline.get("outcome_date"))
+        if not submitted_date or not outcome_date:
+            continue
+        days = (outcome_date - submitted_date).days
+        if days < 0:
+            continue
+        all_durations.append(days)
+        track = entry.get("track", "unknown")
+        by_track[track].append(days)
+        by_portal[_get_portal(entry)].append(days)
+
+    def _stats(durations: list[int]) -> dict:
+        if not durations:
+            return {"median": 0, "mean": 0, "min": 0, "max": 0, "count": 0}
+        s = sorted(durations)
+        return {
+            "median": s[len(s) // 2],
+            "mean": round(sum(s) / len(s), 1),
+            "min": s[0],
+            "max": s[-1],
+            "count": len(s),
+        }
+
+    return {
+        "overall": _stats(all_durations),
+        "by_track": {t: _stats(d) for t, d in sorted(by_track.items())},
+        "by_portal": {p: _stats(d) for p, d in sorted(by_portal.items())},
+    }
+
+
 def generate_recommendations(
     summary: dict,
     position_data: list[dict],
@@ -623,6 +671,7 @@ def format_markdown_report(
     recommendations: list[str],
     *,
     compare_data: dict | None = None,
+    tto_data: dict | None = None,
 ) -> str:
     """Format the full report as markdown."""
     today = date.today()
@@ -785,8 +834,31 @@ def format_markdown_report(
         )
     lines.append("")
 
+    # Time to Outcome
+    tto = tto_data or {}
+    tto_overall = tto.get("overall", {})
+    if tto_overall.get("count", 0) > 0:
+        lines.append("## 9. Time to Outcome")
+        lines.append("")
+        lines.append(
+            f"**Overall:** median {tto_overall['median']}d, "
+            f"mean {tto_overall['mean']}d "
+            f"(range {tto_overall['min']}-{tto_overall['max']}d, N={tto_overall['count']})"
+        )
+        lines.append("")
+        by_track = tto.get("by_track", {})
+        if by_track:
+            lines.append("| Track | Median | Mean | Range | N |")
+            lines.append("|-------|--------|------|-------|---|")
+            for track, stats in by_track.items():
+                lines.append(
+                    f"| {track} | {stats['median']}d | {stats['mean']}d | "
+                    f"{stats['min']}-{stats['max']}d | {stats['count']} |"
+                )
+            lines.append("")
+
     # Recommendations
-    lines.append("## 9. Recommendations")
+    lines.append("## 10. Recommendations")
     lines.append("")
     for i, rec in enumerate(recommendations, 1):
         lines.append(f"{i}. {rec}")
@@ -807,6 +879,7 @@ def build_report(entries: list[dict], period_days: int, *, compare: bool = False
     dim_data = scoring_dimension_accuracy(period_entries)
     season_data = seasonal_patterns(period_entries)
     vel_data = pipeline_velocity(period_entries)
+    tto_data = time_to_outcome(period_entries)
     recs = generate_recommendations(summary, pos_data, ch_data, net_data, dim_data, blk_data)
 
     compare_data = None
@@ -836,6 +909,7 @@ def build_report(entries: list[dict], period_days: int, *, compare: bool = False
         "scoring_dimensions": dim_data,
         "seasonal_patterns": season_data,
         "pipeline_velocity": vel_data,
+        "time_to_outcome": tto_data,
         "recommendations": recs,
         "comparison": compare_data,
     }
@@ -872,6 +946,7 @@ def main():
         report_data["pipeline_velocity"],
         report_data["recommendations"],
         compare_data=report_data["comparison"],
+        tto_data=report_data.get("time_to_outcome"),
     )
 
     if args.save:

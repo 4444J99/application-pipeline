@@ -25,9 +25,10 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from pipeline_lib import REPO_ROOT
+from pipeline_lib import REPO_ROOT, SIGNALS_DIR
 
 CONFIG_PATH = REPO_ROOT / "strategy" / "notifications.yaml"
+NOTIFICATION_LOG = SIGNALS_DIR / "notification-log.yaml"
 
 # Event types that can trigger notifications
 VALID_EVENTS = {
@@ -95,6 +96,22 @@ def dispatch_email(subject: str, body: str, recipients: list[str]) -> tuple[bool
         return False, f"Email failed: {e}"
 
 
+def dispatch_file(payload: dict) -> tuple[bool, str]:
+    """Append notification to a local YAML log file. Always-on fallback channel."""
+    try:
+        existing = []
+        if NOTIFICATION_LOG.exists():
+            with open(NOTIFICATION_LOG) as f:
+                data = yaml.safe_load(f) or {}
+            existing = data.get("notifications", []) or []
+        existing.append(payload)
+        with open(NOTIFICATION_LOG, "w") as f:
+            yaml.dump({"notifications": existing}, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
+        return True, f"Logged to {NOTIFICATION_LOG.name}"
+    except Exception as e:
+        return False, f"File log failed: {e}"
+
+
 def dispatch_event(event_type: str, payload: dict) -> list[dict]:
     """Route an event to all configured channels. Returns list of results."""
     if event_type not in VALID_EVENTS:
@@ -123,9 +140,14 @@ def dispatch_event(event_type: str, payload: dict) -> list[dict]:
                 body = json.dumps(enriched_payload, indent=2, default=str)
                 ok, msg = dispatch_email(subject, body, recipients)
                 results.append({"channel": "email", "success": ok, "message": msg})
+        elif channel == "file":
+            ok, msg = dispatch_file(enriched_payload)
+            results.append({"channel": "file", "success": ok, "message": msg})
 
-    if not results:
-        results.append({"channel": "none", "success": True, "message": "No channels configured for this event"})
+    # Always log to file as fallback if no channels configured
+    if not channels:
+        ok, msg = dispatch_file(enriched_payload)
+        results.append({"channel": "file", "success": ok, "message": msg})
 
     return results
 

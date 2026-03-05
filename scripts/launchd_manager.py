@@ -103,6 +103,45 @@ def uninstall_agents(dry_run: bool) -> None:
     print("Launchd uninstall complete.")
 
 
+def get_agent_status() -> dict:
+    """Return structured scheduler status for programmatic use.
+
+    Returns dict with keys:
+        agents: list of {label, installed, loaded}
+        installed_count, loaded_count, total
+        healthy: True if all agents are installed and loaded
+    """
+    if platform.system() != "Darwin":
+        return {"agents": [], "installed_count": 0, "loaded_count": 0, "total": 0, "healthy": False}
+
+    plists = _plist_paths()
+    if not plists:
+        return {"agents": [], "installed_count": 0, "loaded_count": 0, "total": 0, "healthy": False}
+
+    agents = []
+    installed_count = 0
+    loaded_count = 0
+    for source in plists:
+        label = source.stem
+        destination = USER_LAUNCH_AGENTS / source.name
+        installed = destination.exists()
+        installed_count += int(installed)
+
+        target = _launchctl_target(label)
+        loaded = _run(["launchctl", "print", target], check=False).returncode == 0
+        loaded_count += int(loaded)
+
+        agents.append({"label": label, "installed": installed, "loaded": loaded})
+
+    return {
+        "agents": agents,
+        "installed_count": installed_count,
+        "loaded_count": loaded_count,
+        "total": len(plists),
+        "healthy": installed_count == len(plists) and loaded_count == len(plists),
+    }
+
+
 def show_status() -> None:
     """Report installed and loaded state for each pipeline launch agent."""
     _ensure_macos()

@@ -60,10 +60,9 @@ def test_run_standalone_passthrough_args(monkeypatch):
     monkeypatch.setattr(run_module.subprocess, "run", mock_run)
 
     with pytest.raises(SystemExit) as excinfo:
-        run_command("batch", extra_args=["--yes", "--limit", "2"])
+        run_command("preflight", extra_args=["--verbose"])
 
     assert excinfo.value.code == 0
     args = mock_run.call_args[0][0]
-    assert "batch_submit.py" in args[1]
-    assert "--yes" in args
-    assert "--limit" in args
+    assert "preflight.py" in args[1]
+    assert "--verbose" in args

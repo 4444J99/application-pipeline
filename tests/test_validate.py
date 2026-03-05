@@ -562,6 +562,55 @@ def test_fixed_deadline_type_valid():
         assert errors == [], f"Expected no errors, got: {errors}"
 
 
+# --- Timezone-less deadline warnings ---
+
+
+def test_hard_deadline_no_time_warns():
+    """Hard deadline with date but no time should produce a warning."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "tz-test", "name": "TZ Test", "track": "grant",
+            "status": "qualified", "outcome": None,
+            "deadline": {"date": "2026-06-01", "type": "hard"},
+        }
+        filepath = _write_yaml(tmp_path, "tz-test.yaml", data)
+        warnings = []
+        errors = validate_entry(filepath, warnings=warnings)
+        assert errors == []
+        assert any("no time/timezone" in w for w in warnings)
+
+
+def test_time_without_timezone_warns():
+    """Deadline time with no timezone abbreviation should warn."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "tz-test2", "name": "TZ Test 2", "track": "job",
+            "status": "qualified", "outcome": None,
+            "deadline": {"date": "2026-06-01", "type": "hard", "time": "15:00"},
+        }
+        filepath = _write_yaml(tmp_path, "tz-test2.yaml", data)
+        warnings = []
+        validate_entry(filepath, warnings=warnings)
+        assert any("no timezone" in w for w in warnings)
+
+
+def test_time_with_timezone_no_warning():
+    """Deadline time with valid timezone should not warn."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = {
+            "id": "tz-test3", "name": "TZ Test 3", "track": "job",
+            "status": "qualified", "outcome": None,
+            "deadline": {"date": "2026-06-01", "type": "hard", "time": "15:00 ET"},
+        }
+        filepath = _write_yaml(tmp_path, "tz-test3.yaml", data)
+        warnings = []
+        validate_entry(filepath, warnings=warnings)
+        assert not any("timezone" in w.lower() for w in warnings)
+
+
 # --- Deferred reachability ---
 
 

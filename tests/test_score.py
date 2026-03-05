@@ -32,6 +32,7 @@ from score import (
     _tr_position_depth,
     _tr_track_experience,
     analyze_reachability,
+    applicant_density_adjustment,
     compute_composite,
     compute_dimensions,
     compute_human_dimensions,
@@ -44,6 +45,7 @@ from score import (
     score_financial_alignment,
     score_portal_friction,
     score_strategic_value,
+    scoring_confidence_band,
 )
 
 
@@ -1520,6 +1522,94 @@ def test_reachability_already_above_threshold():
     # Scenarios should only include network levels above current (strong=9 -> internal=10)
     for scenario in result["scenarios"]:
         assert scenario["network_score"] > result["current_network"]
+
+
+# --- scoring confidence band ---
+
+
+def test_confidence_band_zero_outcomes():
+    """With 0 outcomes, band should be at maximum (1.5)."""
+    band = scoring_confidence_band(0)
+    assert band == 1.5
+
+
+def test_confidence_band_decreases_with_outcomes():
+    """Band should decrease as outcomes increase."""
+    band_0 = scoring_confidence_band(0)
+    band_10 = scoring_confidence_band(10)
+    band_30 = scoring_confidence_band(30)
+    assert band_0 > band_10 > band_30
+
+
+def test_confidence_band_at_calibration():
+    """At calibration target, band should be at minimum (0.3)."""
+    band = scoring_confidence_band(50)
+    assert band == 0.3
+
+
+def test_confidence_band_above_calibration():
+    """Above calibration target, band stays at minimum."""
+    band = scoring_confidence_band(100)
+    assert band == 0.3
+
+
+def test_confidence_band_never_below_minimum():
+    """Band should never go below 0.3."""
+    for n in range(0, 200):
+        assert scoring_confidence_band(n) >= 0.3
+
+
+# --- applicant density adjustment ---
+
+
+def test_density_adjustment_low():
+    """Low density gives positive adjustment."""
+    entry = {"target": {"applicant_density": "low"}}
+    assert applicant_density_adjustment(entry) == 0.3
+
+
+def test_density_adjustment_high():
+    """High density gives negative adjustment."""
+    entry = {"target": {"applicant_density": "high"}}
+    assert applicant_density_adjustment(entry) == -0.2
+
+
+def test_density_adjustment_extreme():
+    """Extreme density gives largest negative."""
+    entry = {"target": {"applicant_density": "extreme"}}
+    assert applicant_density_adjustment(entry) == -0.3
+
+
+def test_density_adjustment_medium():
+    """Medium density gives no adjustment."""
+    entry = {"target": {"applicant_density": "medium"}}
+    assert applicant_density_adjustment(entry) == 0.0
+
+
+def test_density_adjustment_numeric():
+    """Integer count also works."""
+    assert applicant_density_adjustment({"target": {"applicant_density": 20}}) == 0.3
+    assert applicant_density_adjustment({"target": {"applicant_density": 200}}) == 0.0
+    assert applicant_density_adjustment({"target": {"applicant_density": 1000}}) == -0.2
+    assert applicant_density_adjustment({"target": {"applicant_density": 5000}}) == -0.3
+
+
+def test_density_adjustment_missing():
+    """No density field returns 0."""
+    assert applicant_density_adjustment({"target": {}}) == 0.0
+    assert applicant_density_adjustment({}) == 0.0
+
+
+def test_composite_with_density():
+    """Composite score should incorporate density when entry provided."""
+    dims = {d: 5 for d in ["mission_alignment", "evidence_match", "track_record_fit",
+            "network_proximity", "strategic_value", "financial_alignment",
+            "effort_to_value", "deadline_feasibility", "portal_friction"]}
+    base = compute_composite(dims, "job")
+    low_density = compute_composite(dims, "job", entry={"target": {"applicant_density": "low"}})
+    high_density = compute_composite(dims, "job", entry={"target": {"applicant_density": "extreme"}})
+    assert low_density > base
+    assert high_density < base
 
 
 def test_reachability_unreachable_even_internal():

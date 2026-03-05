@@ -273,17 +273,70 @@ def compute_dimensions(entry: dict, all_entries: list[dict] | None = None) -> di
     return dims
 
 
-def compute_composite(dimensions: dict[str, int], track: str = "") -> float:
+def applicant_density_adjustment(entry: dict) -> float:
+    """Compute a score adjustment based on applicant density.
+
+    Reads `target.applicant_density` from the entry (optional field).
+    Values: "low" (<50), "medium" (50-500), "high" (500-2000), "extreme" (2000+).
+    Also accepts an integer for exact applicant count.
+
+    Returns a float adjustment: positive for low density, negative for high.
+    The adjustment is small (±0.3 max) to avoid dominating the composite.
+    """
+    target = entry.get("target", {})
+    if not isinstance(target, dict):
+        return 0.0
+    density = target.get("applicant_density")
+    if density is None:
+        return 0.0
+
+    if isinstance(density, (int, float)):
+        if density < 50:
+            return 0.3
+        elif density < 500:
+            return 0.0
+        elif density < 2000:
+            return -0.2
+        else:
+            return -0.3
+
+    density_str = str(density).lower()
+    adjustments = {"low": 0.3, "medium": 0.0, "high": -0.2, "extreme": -0.3}
+    return adjustments.get(density_str, 0.0)
+
+
+def compute_composite(dimensions: dict[str, int], track: str = "", entry: dict | None = None) -> float:
     """Compute weighted composite score from dimensions.
 
     Uses job-specific weights when track is "job", creative weights otherwise.
+    When entry is provided, applies applicant density adjustment.
     """
     weights = get_weights(track)
     total = 0.0
     for dim, weight in weights.items():
         val = dimensions.get(dim, 5)
         total += val * weight
-    return round(total, 1)
+    if entry is not None:
+        total += applicant_density_adjustment(entry)
+    return round(max(0, min(total, 10)), 1)
+
+
+def scoring_confidence_band(n_outcomes: int, calibration_target: int = 50) -> float:
+    """Compute a confidence band (±X) on composite scores.
+
+    The band narrows as outcome data accumulates. With 0 outcomes, the band is
+    ±1.5 (weights are purely theoretical). At calibration_target outcomes, the
+    band shrinks to ±0.3 (weights are empirically validated).
+
+    Uses a simple inverse-sqrt decay: band = max_band / sqrt(1 + n_outcomes).
+    """
+    import math
+    max_band = 1.5
+    min_band = 0.3
+    if n_outcomes >= calibration_target:
+        return min_band
+    band = max_band / math.sqrt(1 + n_outcomes)
+    return round(max(band, min_band), 1)
 
 
 # Below this composite score, recommend skipping the application
@@ -336,7 +389,7 @@ def qualify(entry: dict, all_entries: list[dict] | None = None) -> tuple[bool, s
     track = entry.get("track", "")
     threshold = get_qualification_threshold(track)
     dimensions = compute_dimensions(entry, all_entries)
-    composite = compute_composite(dimensions, track)
+    composite = compute_composite(dimensions, track, entry=entry)
 
     if composite >= threshold:
         return True, f"composite {composite:.1f} >= {threshold}"
@@ -573,7 +626,7 @@ def run_auto_qualify(dry_run: bool = False, yes: bool = False,
         # Fresh-compute score instead of reading stale YAML value
         dims = compute_dimensions(entry, all_raw)
         track = entry.get("track", "")
-        score = compute_composite(dims, track)
+        score = compute_composite(dims, track, entry=entry)
         if score < min_score:
             below_min_score += 1
             continue
@@ -833,7 +886,7 @@ def main():
         entry_id = data.get("id", filepath.stem)
         track = data.get("track", "")
         dimensions = compute_dimensions(data, all_raw)
-        composite = compute_composite(dimensions, track)
+        composite = compute_composite(dimensions, track, entry=data)
 
         # Track network_proximity changes for ROI logging
         old_dims = data.get("fit", {}).get("dimensions", {}) if isinstance(data.get("fit"), dict) else {}
@@ -874,6 +927,19 @@ def main():
     # Summary
     print(f"\n{'=' * 50}")
     print(f"Scored {len(changes)} entries" + (" (dry run)" if args.dry_run else ""))
+
+    # Model maturity indicator — count terminal outcomes for calibration status
+    all_entries = _load_entries_raw(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
+    terminal_outcomes = {"accepted", "rejected", "withdrawn", "expired"}
+    n_outcomes = sum(1 for e in all_entries if e.get("outcome") in terminal_outcomes)
+    calibration_target = 50
+    if n_outcomes >= calibration_target:
+        maturity = "CALIBRATED"
+    else:
+        maturity = "PENDING"
+    band = scoring_confidence_band(n_outcomes, calibration_target)
+    print(f"Model maturity: {maturity} (N={n_outcomes} outcomes; target N={calibration_target})")
+    print(f"Score confidence: ±{band} (scores are composite ± this band until calibrated)")
 
     if not args.dry_run:
         significant = [(eid, old, new, d) for eid, old, new, d in changes

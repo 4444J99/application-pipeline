@@ -1,7 +1,7 @@
 import json
-from pathlib import Path
-import pytest
+
 from scripts.fix_json_metrics import fix_json_metrics
+
 
 def test_fix_json_metrics(tmp_path, monkeypatch):
     # Setup mock directory

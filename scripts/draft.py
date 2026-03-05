@@ -489,6 +489,16 @@ def draft_single(target_id: str, length: str, populate: bool, output: str | None
             print(f"  - {w}", file=sys.stderr)
         print(file=sys.stderr)
 
+    # AI content detection
+    from compose import detect_ai_hallmarks
+    ai_warnings = detect_ai_hallmarks(doc)
+    if ai_warnings:
+        print("AI CONTENT WARNING — These phrases trigger high rejection rates:",
+              file=sys.stderr)
+        for w in ai_warnings:
+            print(f"  - {w}", file=sys.stderr)
+        print(file=sys.stderr)
+
     if populate and profile and filepath:
         modified = populate_portal_fields(filepath, entry, profile)
         if modified:

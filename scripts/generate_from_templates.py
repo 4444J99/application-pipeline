@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-import yaml
-import os
 import re
 from pathlib import Path
+
+import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = REPO_ROOT / "templates"
 METRICS_FILE = REPO_ROOT / "config" / "metrics.yaml"
 
 def load_metrics():
-    with open(METRICS_FILE, 'r') as f:
+    with open(METRICS_FILE) as f:
         return yaml.safe_load(f)
 
 def render_template(content, metrics):
@@ -39,7 +39,7 @@ def generate_all():
         # Ensure parent directory exists
         output_path.parent.mkdir(parents=True, exist_ok=True)
         
-        with open(template_path, 'r') as f:
+        with open(template_path) as f:
             template_content = f.read()
             
         rendered = render_template(template_content, metrics)

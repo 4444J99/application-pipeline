@@ -4,6 +4,13 @@
 Designed to reduce pipeline congestion by enforcing score thresholds and
 organizational caps on actionable entries.
 
+Two-tier enforcement model:
+    triage.py is the **enforcement backstop** — it actively demotes excess
+    entries to restore compliance with org-cap and score thresholds.
+    advance.py is **permissive by design** — it warns on violations but
+    does not block advancement. This separation lets the user advance
+    entries optimistically while triage ensures invariants hold.
+
 Usage:
     python scripts/triage.py                          # Report only (dry-run)
     python scripts/triage.py --execute --yes           # Apply changes
@@ -20,6 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pipeline_lib import (
     ALL_PIPELINE_DIRS,
     COMPANY_CAP,
+    atomic_write,
     get_score,
     load_entries,
     update_yaml_field,
@@ -62,7 +70,7 @@ def triage_staged_backlog(
             if path:
                 content = path.read_text()
                 content = update_yaml_field(content, "status", "qualified")
-                path.write_text(content)
+                atomic_write(path, content)
                 action["applied"] = True
         actions.append(action)
     return actions
@@ -111,7 +119,7 @@ def triage_org_cap(
                 if path:
                     content = path.read_text()
                     content = update_yaml_field(content, "status", "deferred")
-                    path.write_text(content)
+                    atomic_write(path, content)
                     action["applied"] = True
             actions.append(action)
     return actions

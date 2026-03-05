@@ -29,7 +29,7 @@ from pipeline_lib import (
     parse_date,
 )
 
-DEFAULT_MIN_SAMPLES = 3
+DEFAULT_MIN_SAMPLES = 5
 
 # Outcome categories for grouping
 REJECTION_OUTCOMES = {"rejected"}
@@ -511,9 +511,10 @@ def print_report(analysis: dict, min_samples: int = DEFAULT_MIN_SAMPLES):
 
     if n_rejected < min_samples:
         print(
-            f"Insufficient data: {n_rejected} rejection(s), "
-            f"need at least {min_samples}"
+            f"  DATA NOTICE: {n_rejected} rejection(s) available, "
+            f"need at least {min_samples} for statistical claims."
         )
+        print("  Collect more outcome data before drawing conclusions.\n")
         return
 
     # Score distribution

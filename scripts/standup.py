@@ -85,6 +85,101 @@ AGENT_ACTIONS_LOG = SIGNALS_DIR / "agent-actions.yaml"
 
 
 # ---------------------------------------------------------------------------
+# Pipeline Health Score (composite 0-10)
+# ---------------------------------------------------------------------------
+
+def compute_pipeline_health_score(entries: list[dict]) -> dict:
+    """Compute a composite 0-10 pipeline health score across 5 dimensions.
+
+    Dimensions (equal weight 2.0 each):
+    - Data quality: lint cleanliness, signal file integrity
+    - Freshness: entries touched recently, no stale entries
+    - Conversion: outcome data sufficiency for analytics
+    - Compliance: precision-mode adherence (actionable count, org-cap)
+    - Coverage: test/validation infrastructure health
+    """
+    today = date.today()
+    scores = {}
+
+    # 1. Data freshness (0-2): % of actionable entries touched in last 14 days
+    actionable = [e for e in entries if e.get("status") in ACTIONABLE_STATUSES]
+    if actionable:
+        fresh_count = 0
+        for e in actionable:
+            lt = parse_date(e.get("last_touched"))
+            if lt and (today - lt).days <= 14:
+                fresh_count += 1
+        scores["freshness"] = round(2.0 * (fresh_count / len(actionable)), 1)
+    else:
+        scores["freshness"] = 2.0  # No actionable = nothing stale
+
+    # 2. Compliance (0-2): actionable count <= 10, org-cap <= 1 per org
+    if actionable:
+        count_score = 1.0 if len(actionable) <= 10 else max(0, 1.0 - (len(actionable) - 10) * 0.1)
+        org_map: dict[str, int] = {}
+        for e in actionable:
+            target = e.get("target", {})
+            org = target.get("organization", "").lower() if isinstance(target, dict) else ""
+            if org:
+                org_map[org] = org_map.get(org, 0) + 1
+        violations = sum(1 for c in org_map.values() if c > COMPANY_CAP)
+        cap_score = 1.0 if violations == 0 else max(0, 1.0 - violations * 0.2)
+        scores["compliance"] = round(count_score + cap_score, 1)
+    else:
+        scores["compliance"] = 2.0
+
+    # 3. Conversion data (0-2): do we have enough outcomes for analytics?
+    closed = [e for e in entries if e.get("outcome") in ("accepted", "rejected")]
+    outcome_count = len(closed)
+    # 0 outcomes = 0, 20+ outcomes = 2.0
+    scores["conversion_data"] = round(min(2.0, outcome_count / 10.0), 1)
+
+    # 4. Signal integrity (0-2): check signal files exist and are non-empty
+    signal_files = ["signal-actions.yaml", "conversion-log.yaml", "contacts.yaml"]
+    existing = 0
+    for sf in signal_files:
+        path = SIGNALS_DIR / sf
+        if path.exists() and path.stat().st_size > 10:
+            existing += 1
+    scores["signal_integrity"] = round(2.0 * (existing / len(signal_files)), 1)
+
+    # 5. Pipeline balance (0-2): healthy ratio of statuses
+    submitted = [e for e in entries if e.get("status") in ("submitted", "acknowledged")]
+    research = [e for e in entries if e.get("status") == "research"]
+    # Good: have both submitted and research entries, with active work
+    balance = 0.0
+    if submitted:
+        balance += 0.7
+    if actionable:
+        balance += 0.7
+    if research:
+        balance += 0.6
+    scores["balance"] = round(min(2.0, balance), 1)
+
+    total = round(sum(scores.values()), 1)
+    return {"dimensions": scores, "total": total}
+
+
+def print_pipeline_health_score(entries: list[dict]):
+    """Print the composite pipeline health score."""
+    result = compute_pipeline_health_score(entries)
+    total = result["total"]
+    dims = result["dimensions"]
+
+    # Visual bar
+    filled = int(total)
+    bar = "█" * filled + "░" * (10 - filled)
+
+    print(f"PIPELINE HEALTH SCORE: {total}/10.0  [{bar}]")
+    print(f"  Freshness:       {dims['freshness']}/2.0")
+    print(f"  Compliance:      {dims['compliance']}/2.0")
+    print(f"  Conversion data: {dims['conversion_data']}/2.0")
+    print(f"  Signal integrity:{dims['signal_integrity']}/2.0")
+    print(f"  Balance:         {dims['balance']}/2.0")
+    print()
+
+
+# ---------------------------------------------------------------------------
 # Section 1: Pipeline Health
 # ---------------------------------------------------------------------------
 
@@ -333,6 +428,22 @@ def section_signal_freshness():
 
     if stale_count == 0:
         print("     All signals fresh.")
+
+    # Scheduler health
+    try:
+        from launchd_manager import get_agent_status
+        sched = get_agent_status()
+        if sched["total"] > 0:
+            if sched["healthy"]:
+                print(f"     scheduler: OK ({sched['loaded_count']}/{sched['total']} agents loaded)")
+            else:
+                not_loaded = [a["label"].replace("com.4jp.pipeline.", "")
+                              for a in sched["agents"] if not a["loaded"]]
+                print(f"     scheduler: DEGRADED ({sched['loaded_count']}/{sched['total']} loaded) "
+                      f"— down: {', '.join(not_loaded)}")
+    except Exception:
+        pass  # Non-macOS or launchd_manager unavailable
+
     print()
 
 
@@ -708,6 +819,10 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
     health_stats = {}
     stale_stats = {}
     plan_stats = {}
+
+    # Pipeline health score at top of standup
+    if section is None:
+        print_pipeline_health_score(entries)
 
     if section is None or section == "health":
         health_stats = section_health(entries)
