@@ -13,7 +13,7 @@ tier: short
 The visible record of building the system — including mistakes — is the primary creative output.
 
 ## Short (150 words)
-The 42 published essays documenting the eight-organ system aren't marketing, documentation, or reflection. They ARE the creative work — the process of creation rendered into prose in real time.
+The 47 published essays documenting the eight-organ system aren't marketing, documentation, or reflection. They ARE the creative work — the process of creation rendered into prose in real time.
 
 This includes failures. The Aetheria post-mortem honestly documents a project that traveled the full Theory→Art→Commerce pipeline and partially failed. The course corrections across 33 named development sprints are published alongside the successes. The governance amendments that modified the original constitution are visible in the ADR (Architecture Decision Record) archive.
 

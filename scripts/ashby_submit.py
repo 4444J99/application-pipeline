@@ -596,8 +596,8 @@ def submit_to_ashby(
         try:
             error_body = e.read().decode()
             print(f"  Body: {error_body[:500]}")
-        except Exception:
-            pass
+        except Exception as read_err:
+            print(f"  Warning: Could not read error response body: {read_err}")
         return False
     except urllib.error.URLError as e:
         print(f"  Connection error: {e.reason}")

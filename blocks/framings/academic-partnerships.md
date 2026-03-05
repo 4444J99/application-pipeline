@@ -18,7 +18,7 @@ The ORGANVM system constitutes publishable research infrastructure. 103 reposito
 
 ## Academic Value Propositions
 
-- **Research corpus:** 103 repos, ~810K+ words of documentation, 42 published essays — not a side project but a documented research program with verifiable methodology
+- **Research corpus:** 103 repos, ~810K+ words of documentation, 47 published essays — not a side project but a documented research program with verifiable methodology
 - **Governance-as-art:** Constitutional governance encoded as machine-readable rules is a publishable framework at the intersection of computer science, political theory, and media art
 - **Community research platforms:** ORGAN-V (Logos, public discourse) and ORGAN-VI (Koinonia, community) provide infrastructure for participatory research and community-engaged scholarship
 - **AI methodology:** The AI-conductor model (human directs, AI generates, human reviews) offers a replicable framework for studying human-AI collaboration at scale

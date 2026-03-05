@@ -19,12 +19,12 @@ I am a systems artist who builds creative infrastructure at institutional scale.
 ## Key Claims
 - The eight-organ system is a living creative work, not a portfolio
 - Governance structures are generative constraints, like a composer's harmonic rules
-- 42 published essays are the primary creative output — process rendered into prose
+- 47 published essays are the primary creative output — process rendered into prose
 - MFA Creative Writing grounds the practice in formal creative education
 
 ## Lead Evidence
 - 103 repos across 8 orgs with automated governance
-- 42 published essays (~142K words)
+- 47 published essays (~142K words)
 - 33 named development sprints over 5+ years
 - MFA Creative Writing (FAU)
 

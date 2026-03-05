@@ -17,7 +17,7 @@ Five framings of the same body of work for different audiences. Derived from cov
 
 **For:** Art grants, residencies, prizes
 **Narrative:** "I build creative systems — the governance IS the artwork"
-**Evidence:** 103-repo eight-organ system as living creative work, 42 essays, MFA
+**Evidence:** 103-repo eight-organ system as living creative work, 47 essays, MFA
 **Targets:** Creative Capital, Artadia, FCA, NYSCA/NYFA, Eyebeam, Fire Island, Headlands, Prix Ars, S+T+ARTS, ZKM, LACMA
 
 **Opening line template:**
@@ -33,7 +33,7 @@ Five framings of the same body of work for different audiences. Derived from cov
 **Targets:** Spencer Foundation, NEH, Bread Loaf, state arts councils, university partnerships
 
 **Opening line template:**
-> With 11 years of college instruction across 8+ institutions and 2,000+ students, I have built a teaching practice grounded in making complex systems accessible. The eight-organ system I've documented in 42 published essays demonstrates this methodology applied to creative infrastructure.
+> With 11 years of college instruction across 8+ institutions and 2,000+ students, I have built a teaching practice grounded in making complex systems accessible. The eight-organ system I've documented in 47 published essays demonstrates this methodology applied to creative infrastructure.
 
 ---
 
@@ -57,7 +57,7 @@ Five framings of the same body of work for different audiences. Derived from cov
 **Targets:** Queer|Art, Fire Island, TJFP, Lambda Literary, WFF Housing Stability, PEN America, Stimpunks
 
 **Opening line template:**
-> As a queer, housing-precarious artist building creative infrastructure from lived experience of precarity, I understand that the systems we build reflect the conditions we build them in. The eight-organ system — including its community infrastructure (ORGAN-VI) and public documentation of 42 essays — was built as a model for sustainable creative practice accessible to others navigating similar circumstances.
+> As a queer, housing-precarious artist building creative infrastructure from lived experience of precarity, I understand that the systems we build reflect the conditions we build them in. The eight-organ system — including its community infrastructure (ORGAN-VI) and public documentation of 47 essays — was built as a model for sustainable creative practice accessible to others navigating similar circumstances.
 
 ---
 

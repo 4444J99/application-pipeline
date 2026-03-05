@@ -503,7 +503,7 @@ Every evaluator — VC, grant panelist, hiring manager — makes an initial deci
 
 ### Storefront Optimization Checklist
 
-- [ ] Lead with numbers: "103 repositories, 2,349 tests, 42 essays"
+- [ ] Lead with numbers: "103 repositories, 2,349 tests, 47 essays"
 - [ ] One sentence, one claim — maintain scannability
 - [ ] Pin 3-5 strongest projects on GitHub (not 20 incomplete ones)
 - [ ] Bottom-up TAM in pitch deck (never top-down "1% of $200B")
@@ -513,7 +513,7 @@ Every evaluator — VC, grant panelist, hiring manager — makes an initial deci
 
 ### Cathedral Advantage
 
-The deep systemic work (103 repos, 2,349 tests, 810K words, 42 essays, 33 sprints) provides:
+The deep systemic work (103 repos, 2,349 tests, 810K words, 47 essays, 33 sprints) provides:
 1. **Vertical depth** that evaluators demand in 2026
 2. **Proprietary data** (the system itself is a dataset)
 3. **Authentic narrative** (not AI-generated, not a wrapper)

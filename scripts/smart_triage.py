@@ -25,11 +25,15 @@ from pipeline_lib import (
     ACTIONABLE_STATUSES,
     PIPELINE_DIR_ACTIVE,
     PIPELINE_DIR_RESEARCH_POOL,
+    atomic_write,
     get_effort,
     get_score,
     load_entries,
     parse_date,
+    update_yaml_field,
 )
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
 # Tracks that represent rarer opportunities worth a scoring bonus
 ART_TRACKS = {"grant", "residency", "fellowship", "prize"}
@@ -208,20 +212,22 @@ def show_triage_report(triage_result: dict):
     print(f"\n{'=' * 70}\n")
 
 
+PIPELINE_DIR_CLOSED_RESEARCH = REPO_ROOT / "pipeline" / "closed" / "research"
+
 def auto_archive(
     entries: list[dict],
-    threshold: float = 3.0,
+    threshold: float = 5.0,
     dry_run: bool = True,
 ) -> list[dict]:
     """Archive entries that score below the threshold.
 
-    Moves YAML files from active/ or research_pool/ source to research_pool/.
-    Entries already in research_pool/ that score below threshold are noted
-    but not moved.
+    Moves YAML files from active/ to research_pool/, and from research_pool/
+    to closed/research/.
 
     Returns list of archived entry summaries.
     """
     PIPELINE_DIR_RESEARCH_POOL.mkdir(parents=True, exist_ok=True)
+    PIPELINE_DIR_CLOSED_RESEARCH.mkdir(parents=True, exist_ok=True)
 
     archived = []
     for entry in entries:
@@ -240,24 +246,36 @@ def auto_archive(
             "base_score": get_score(entry),
         }
 
-        # Only move files that are in active/ (research_pool entries stay put)
+        # Determine destination and internal status
         if filepath and filepath.parent == PIPELINE_DIR_ACTIVE:
             dest = PIPELINE_DIR_RESEARCH_POOL / filepath.name
-            if dest.exists():
-                print(f"  SKIP {entry_id} — already exists in research_pool/")
-                continue
-
-            if dry_run:
-                print(f"  [dry-run] {entry_id} (score={decay_score:.1f}) -> research_pool/")
-            else:
-                shutil.move(str(filepath), str(dest))
-                print(f"  ARCHIVED {entry_id} (score={decay_score:.1f}) -> research_pool/")
-            summary["action"] = "archived" if not dry_run else "would_archive"
+            action_desc = "RESEARCH_POOL"
+            new_status = "research"
+        elif filepath and filepath.parent == PIPELINE_DIR_RESEARCH_POOL:
+            dest = PIPELINE_DIR_CLOSED_RESEARCH / filepath.name
+            action_desc = "CLOSED/RESEARCH"
+            new_status = "outcome" # Terminal
         else:
-            if dry_run:
-                print(f"  [info] {entry_id} (score={decay_score:.1f}) already in research_pool/")
-            summary["action"] = "already_in_pool"
+            continue
 
+        if dest.exists():
+            print(f"  SKIP {entry_id} — already exists in {dest.parent.name}/")
+            continue
+
+        if dry_run:
+            print(f"  [dry-run] {entry_id} (score={decay_score:.1f}) -> {action_desc} (status={new_status})")
+        else:
+            # Update internal status before moving
+            content = filepath.read_text()
+            content = update_yaml_field(content, "status", new_status)
+            if new_status == "outcome":
+                content = update_yaml_field(content, "outcome", "withdrawn") # Default for triage-closed
+            
+            atomic_write(filepath, content)
+            shutil.move(str(filepath), str(dest))
+            print(f"  ARCHIVED {entry_id} (score={decay_score:.1f}) -> {action_desc}")
+        
+        summary["action"] = "archived" if not dry_run else "would_archive"
         archived.append(summary)
 
     total_actionable = sum(1 for a in archived if a["action"] in ("archived", "would_archive"))
@@ -265,7 +283,7 @@ def auto_archive(
     if dry_run:
         print(f"Would archive {total_actionable} entries (dry run)")
     else:
-        print(f"Archived {total_actionable} entries to research_pool/")
+        print(f"Archived {total_actionable} entries.")
 
     return archived
 
@@ -331,8 +349,8 @@ def main():
                         help="Preview archive actions without executing")
     parser.add_argument("--yes", action="store_true",
                         help="Execute archive actions")
-    parser.add_argument("--threshold", type=float, default=3.0,
-                        help="Archive threshold score (default: 3.0)")
+    parser.add_argument("--threshold", type=float, default=5.0,
+                        help="Archive threshold score (default: 5.0)")
     args = parser.parse_args()
 
     # Load entries from both active/ and research_pool/ for full picture

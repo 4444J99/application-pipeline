@@ -4,7 +4,7 @@
 
 Grant reviewers read 200 applications in an afternoon. Hiring managers spend 30 seconds on a resume. The first 60 seconds determine whether anyone reads further.
 
-The cathedral — 103 repos, 42 essays, ~810K+ words, 33 sprints — is the substance. But substance without a storefront is invisible.
+The cathedral — 103 repos, 47 essays, ~810K+ words, 33 sprints — is the substance. But substance without a storefront is invisible.
 
 ## Translation Rules
 
@@ -52,7 +52,7 @@ The same work needs different storefronts:
 |----------|----------------|
 | Art grant panel | "Governance IS the artwork — 103 repos as a living creative system" |
 | Tech fellowship | "Production-grade AI orchestration: 2,349 tests, automated governance, zero violations" |
-| Writing grant | "42 essays, ~810K+ words documenting the process of building creative infrastructure" |
+| Writing grant | "47 essays, ~810K+ words documenting the process of building creative infrastructure" |
 | Emergency fund | "Housing-precarious NYC artist with 5+ years sustained creative practice" |
 
 ### Rule 6: Address Known Gaps Preemptively
@@ -63,7 +63,7 @@ Every reviewer notices what's missing. Frame gaps as trajectory, not absence.
 |-----|-------------|
 | No external awards yet | "The 103-repo system was built in 18 months — this evaluation framework is itself evidence of the methodology" |
 | No gallery exhibitions | "The portfolio site is a digital exhibition; the public process essays are the curatorial statement" |
-| No published book | "42 essays totaling 142K words — a book-length corpus published as process, not artifact" |
+| No published book | "47 essays totaling 142K words — a book-length corpus published as process, not artifact" |
 | No institutional affiliation | "Independent practitioner — the system demonstrates that institutional-scale work doesn't require an institution" |
 | No collaborative team experience | "Solo production at institutional scale IS the methodology — one architectural vision sustained across 8 organizations" |
 

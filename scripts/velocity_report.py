@@ -67,8 +67,8 @@ def filter_by_date_range(entries: list[dict], months: int = 1) -> list[dict]:
             entry_date = datetime.strptime(date_str, "%Y-%m-%d")
             if entry_date >= cutoff_date:
                 filtered.append(entry)
-        except ValueError:
-            pass
+        except (ValueError, TypeError) as e:
+            print(f"  Warning: Invalid date format for entry {entry.get('id', 'unknown')}: {e}")
     
     return filtered
 

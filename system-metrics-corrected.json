@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-03-05T00:59:02.929439+00:00",
+  "computed": {
+    "total_repos": 103,
+    "active_repos": 94,
+    "archived_repos": 9,
+    "total_organs": 8,
+    "operational_organs": 8,
+    "ci_workflows": 94,
+    "dependency_edges": 43,
+    "per_organ": {
+      "ORGAN-I": { "name": "Theory", "repos": 20 },
+      "ORGAN-II": { "name": "Art", "repos": 30 },
+      "ORGAN-III": { "name": "Commerce", "repos": 27 },
+      "ORGAN-IV": { "name": "Orchestration", "repos": 7 },
+      "ORGAN-V": { "name": "Public Process", "repos": 2 },
+      "ORGAN-VI": { "name": "Community", "repos": 6 },
+      "ORGAN-VII": { "name": "Marketing", "repos": 4 },
+      "META-ORGANVM": { "name": "Meta", "repos": 7 }
+    },
+    "published_essays": 47,
+    "sprints_completed": 33,
+    "implementation_status": {
+      "ACTIVE": 94,
+      "ARCHIVED": 9
+    },
+    "word_counts": {
+      "readmes": 278373,
+      "essays": 142281,
+      "corpus": 414198,
+      "org_profiles": 6031,
+      "total": 840883
+    },
+    "total_words": "~841,000+",
+    "total_words_numeric": 840883,
+    "total_words_short": "841K+",
+    "code_files": 22046,
+    "test_files": 3920,
+    "repos_with_tests": 71
+  },
+  "manual": {
+    "_note": "Local override for project-wide review."
+  }
+}

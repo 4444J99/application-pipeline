@@ -1,0 +1,24 @@
+# Application Pipeline: Canonical Metrics Source of Truth
+# Updated: 2026-03-04
+
+system:
+  total_repos: 103
+  active_repos: 94
+  archived_repos: 9
+  organizations: 8
+  published_essays: 47
+  total_words_k: 810
+  automated_tests: 2349
+  development_sprints: 33
+  code_files: 21160
+  test_files: 3610
+
+organs:
+  I: 20
+  II: 30
+  III: 27
+  IV: 7
+  V: 2
+  VI: 6
+  VII: 4
+  Meta: 7

@@ -26,4 +26,4 @@ I orchestrate AI systems the way Brian Eno orchestrated the recording studio —
 - ~810K+ words produced through AI-conductor methodology
 - Agentic Titan: multi-agent orchestration, 18 development phases
 - Token-based effort budgets documented per task type
-- 42 essays transparently documenting the human-AI workflow
+- 47 essays transparently documenting the human-AI workflow

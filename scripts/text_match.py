@@ -531,8 +531,8 @@ def analyze_entry(
     try:
         idx = load_block_index()
         tag_index = idx.get("tag_index", {})
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"  Warning: Could not load block index for gap analysis: {e}")
 
     gaps = _compute_gaps(posting_vec, all_vec, idf)
     for gap in gaps:

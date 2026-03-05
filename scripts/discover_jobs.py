@@ -540,8 +540,8 @@ def _save_stats(total_raw: int, new_entries: int, positions: list[str], apis: se
     try:
         with open(STATS_FILE, "w") as f:
             yaml.dump(stats, f, default_flow_style=False, sort_keys=False)
-    except OSError:
-        pass
+    except OSError as e:
+        print(f"  Warning: Could not write discovery stats to {STATS_FILE}: {e}")
 
 
 if __name__ == "__main__":

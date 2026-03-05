@@ -247,82 +247,42 @@ def record_outcome(
     sub_date = parse_date(timeline.get("submitted")) if isinstance(timeline, dict) else None
     time_to_response = (date.today() - sub_date).days if sub_date else None
 
-    # Update fields via YAML manipulation
+    # Update fields via structured manipulation
+    data = yaml.safe_load(content) or {}
+    if "conversion" not in data or not isinstance(data["conversion"], dict):
+        data["conversion"] = {}
+    
+    conv = data["conversion"]
+
     if outcome == "acknowledged":
-        # Move to acknowledged status, not terminal
-        content = update_yaml_field(content, "status", "acknowledged")
-        # Set response received
-        try:
-            content = update_yaml_field(content, "response_received", "true", nested=True)
-        except ValueError:
-            pass
+        data["status"] = "acknowledged"
+        conv["response_received"] = True
     elif outcome in ("accepted", "rejected", "withdrawn", "expired"):
-        # Terminal outcome
-        content = update_yaml_field(content, "status", "outcome")
-        content = re.sub(
-            r'^(outcome:)\s+.*$', rf'\1 {outcome}',
-            content, count=1, flags=re.MULTILINE,
-        )
-        try:
-            content = update_yaml_field(content, "response_received", "true", nested=True)
-        except ValueError:
-            pass
+        data["status"] = "outcome"
+        data["outcome"] = outcome
+        conv["response_received"] = True
 
-    # Set outcome_stage if provided
     if stage:
-        try:
-            content = update_yaml_field(content, "outcome_stage", stage, nested=True)
-        except ValueError:
-            # Add it to conversion section
-            pass
+        conv["outcome_stage"] = stage
 
-    # Set time_to_response_days
     if time_to_response is not None:
-        try:
-            content = update_yaml_field(
-                content, "time_to_response_days", str(time_to_response), nested=True,
-            )
-        except ValueError:
-            pass
+        conv["time_to_response_days"] = time_to_response
 
-    # Set response_type
-    try:
-        content = update_yaml_field(content, "response_type", outcome, nested=True)
-    except ValueError:
-        pass
+    conv["response_type"] = outcome
 
-    # Write outcome note if provided
     if note:
-        try:
-            content = update_yaml_field(content, "outcome_note", f'"{note}"', nested=True)
-        except ValueError:
-            # Insert outcome_note inside conversion section
-            if "conversion:" in content:
-                content = re.sub(
-                    r'^(conversion:\s*\n)',
-                    rf'\g<0>  outcome_note: "{note}"\n',
-                    content,
-                    count=1,
-                    flags=re.MULTILINE,
-                )
+        conv["outcome_note"] = note
 
     if outcome == "rejected":
-        data_after = yaml.safe_load(content) or {}
-        if not isinstance(data_after, dict):
-            data_after = {}
-        conversion_after = data_after.get("conversion")
-        if not isinstance(conversion_after, dict):
-            conversion_after = {}
-
         if rejection_reason:
-            conversion_after["rejection_reason"] = rejection_reason
+            conv["rejection_reason"] = rejection_reason
         if rejection_theme:
-            conversion_after["rejection_theme"] = rejection_theme
+            conv["rejection_theme"] = rejection_theme
         if rejection_evidence:
-            conversion_after["rejection_evidence"] = rejection_evidence
+            conv["rejection_evidence"] = rejection_evidence
 
-        data_after["conversion"] = conversion_after
-        content = yaml.dump(data_after, default_flow_style=False, sort_keys=False, allow_unicode=True)
+    # Re-serialize with preserved order where possible (using safe_load then dump)
+    content = yaml.dump(data, default_flow_style=False, sort_keys=False, allow_unicode=True)
 
     content = update_last_touched(content)
     atomic_write(filepath, content)
