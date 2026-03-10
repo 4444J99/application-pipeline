@@ -7,7 +7,7 @@
 
 To the Content and Engineering Teams at Temporal,
 
-I am writing to apply for the Technical Writer position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a unique "engineer-as-writer" perspective to distributed systems documentation. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and the AI agents—that interact with it.
+I am writing to apply for the Technical Writer position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a unique "engineer-as-writer" perspective to distributed systems documentation. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and the AI agents—that interact with it.
 
 Temporal’s mission to make applications more reliable through durable execution resonates with my own commitment to technical integrity and systemic correctness. My candidacy is built on three core pillars: large-scale distributed systems orchestration, a prolific culture of technical content, and a veteran background in education.
 

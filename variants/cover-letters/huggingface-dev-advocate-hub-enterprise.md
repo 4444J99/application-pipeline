@@ -18,11 +18,11 @@ The distance between "powerful tool" and "tool people actually use" is almost al
 ## What I'd Bring
 
 **Technical content at scale, from scratch.** The eight-organ documentation corpus includes:
-- 103 repository READMEs, each written for grant reviewers and hiring managers
+- 105 repository READMEs, each written for grant reviewers and hiring managers
 - A cross-document dependency map and reading order so newcomers never feel lost
 - An annotated manifest with per-file descriptions of the entire corpus
 - 42 published essays explaining architectural decisions to non-technical audiences
-- organvm-corpvs-testamentvm as the meta-governance document — ~404K+ words of structured technical writing that IS the product
+- organvm-corpvs-testamentvm as the meta-governance document — ~879K+ words of structured technical writing that IS the product
 
 This is the kind of content your role creates: docs, blog posts, tutorials, demos with code repos. I've done all of it at once.
 

@@ -7,7 +7,7 @@
 
 To the Documentation Team at Elastic,
 
-I am writing to apply for the Technical Writer I position focused on SKI and Kibana documentation. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a unique "engineer-as-writer" perspective to the Elastic Search AI Platform. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive architecture while ensuring high-signal, scannable documentation for the developers and AI agents that interact with it.
+I am writing to apply for the Technical Writer I position focused on SKI and Kibana documentation. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a unique "engineer-as-writer" perspective to the Elastic Search AI Platform. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive architecture while ensuring high-signal, scannable documentation for the developers and AI agents that interact with it.
 
 Elastic’s mission to enable everyone to find answers in real-time through data at scale resonates deeply with my own engineering discipline. I believe that documentation is not just a feature description, but the primary interface that enables user success with complex observability and search products. My candidacy is built on three core pillars: large-scale systems orchestration, a prolific culture of technical content, and a veteran background in education.
 

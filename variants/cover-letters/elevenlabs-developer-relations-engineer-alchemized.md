@@ -7,7 +7,7 @@
 
 To the Growth & DevRel Team at ElevenLabs,
 
-I am writing to apply for the Developer Relations Engineer position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 103 repositories across 8 GitHub organizations, I bring a unique "solo production at institutional scale" perspective to technical advocacy. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Developer Relations Engineer position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 105 repositories across 8 GitHub organizations, I bring a unique "solo production at institutional scale" perspective to technical advocacy. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 ElevenLabs’ mission to bridge the gap between frontier AI audio models and the global developer community resonates with my own commitment to making complex systems accessible and reliable. My candidacy is built on three core pillars: large-scale systems orchestration, a prolific culture of technical content, and a deep intuition for AI-native developer experience.
 

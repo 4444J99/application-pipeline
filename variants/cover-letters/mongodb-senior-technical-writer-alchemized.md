@@ -7,7 +7,7 @@
 
 To the Technical Documentation Team at MongoDB,
 
-I am writing to apply for the Senior Technical Writer position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a unique "engineer-as-writer" perspective to the MongoDB Product and Technology organization. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable documentation for the developers—and AI agents—that interact with it.
+I am writing to apply for the Senior Technical Writer position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a unique "engineer-as-writer" perspective to the MongoDB Product and Technology organization. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable documentation for the developers—and AI agents—that interact with it.
 
 MongoDB’s mission to redefine the database for the AI era resonates deeply with my own engineering discipline. I believe that documentation is not just a support requirement, but the primary interface that enables developers to successfully use complex cloud services like Atlas, Vector Search, and the MongoDB CLI. My candidacy is built on three core pillars: large-scale systems orchestration, a prolific culture of technical content, and a veteran background in education.
 

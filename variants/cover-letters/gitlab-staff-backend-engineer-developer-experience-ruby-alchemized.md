@@ -7,7 +7,7 @@
 
 To the Developer Experience Team at GitLab,
 
-I am writing to apply for the Staff Backend Engineer position within the Developer Experience group. As an independent engineer who has spent the last five years building a production-grade ecosystem of 103 repositories across 8 GitHub organizations, I bring a unique "solo production at institutional scale" perspective to DevSecOps orchestration. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the engineers—and the AI agents—that interact with it.
+I am writing to apply for the Staff Backend Engineer position within the Developer Experience group. As an independent engineer who has spent the last five years building a production-grade ecosystem of 105 repositories across 8 GitHub organizations, I bring a unique "solo production at institutional scale" perspective to DevSecOps orchestration. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the engineers—and the AI agents—that interact with it.
 
 GitLab’s mission to be the intelligent orchestration platform for DevSecOps resonates deeply with my own commitment to technical integrity and systemic scale. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and a deep understanding of the AI-native "golden path."
 

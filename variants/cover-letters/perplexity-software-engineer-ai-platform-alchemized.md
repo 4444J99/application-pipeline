@@ -7,7 +7,7 @@
 
 To the AI Platform and Research Engineering Teams at Perplexity,
 
-I am writing to apply for the Software Engineer position on the AI Platform team. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to platform orchestration. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the researchers—and AI agents—that interact with it.
+I am writing to apply for the Software Engineer position on the AI Platform team. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to platform orchestration. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the researchers—and AI agents—that interact with it.
 
 Perplexity’s mission to build the world's most trusted answer engine through frontier AI research resonates deeply with my own commitment to technical integrity and connected intelligence. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and a deep understanding of AI-native developer ergonomics.
 

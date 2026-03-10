@@ -7,7 +7,7 @@
 
 To the Research Tools and AI Research Engineering Teams at Anthropic,
 
-I am writing to apply for the Senior+ Software Engineer position on the Research Tools team. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to technical user enablement. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the researchers—and AI agents—that interact with it.
+I am writing to apply for the Senior+ Software Engineer position on the Research Tools team. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to technical user enablement. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the researchers—and AI agents—that interact with it.
 
 Anthropic’s mission to build reliable and steerable AI requires research tools that are equally robust and intuitive. My candidacy is built on three core pillars: large-scale full-stack orchestration, a rigorous testing culture, and a deep understanding of AI-native developer ergonomics.
 

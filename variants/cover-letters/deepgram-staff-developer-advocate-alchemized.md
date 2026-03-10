@@ -7,7 +7,7 @@
 
 To the Developer Relations Team at Deepgram,
 
-I am writing to apply for the Staff Developer Advocate position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 103 repositories across 8 GitHub organizations, I bring a unique "solo production at institutional scale" perspective to technical advocacy. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Staff Developer Advocate position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 105 repositories across 8 GitHub organizations, I bring a unique "solo production at institutional scale" perspective to technical advocacy. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Deepgram’s mission to provide the world's most powerful AI models for speech resonates with my own commitment to technical integrity and systemic reliability. My candidacy is built on three core pillars: large-scale systems orchestration, a prolific culture of technical content, and a deep intuition for the next generation of voice-enabled agentic applications.
 

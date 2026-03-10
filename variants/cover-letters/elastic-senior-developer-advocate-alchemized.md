@@ -7,7 +7,7 @@
 
 To the Community and Developer Relations Teams at Elastic,
 
-I am writing to apply for the Senior Developer Advocate position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 103 repositories across 8 GitHub organizations, I bring a unique "solo production at institutional scale" perspective to technical advocacy. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Senior Developer Advocate position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 105 repositories across 8 GitHub organizations, I bring a unique "solo production at institutional scale" perspective to technical advocacy. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Elastic’s mission to enable everyone to find answers in real-time resonates deeply with my own engineering discipline and my history as an educator. My candidacy is built on three core pillars: large-scale systems orchestration, a prolific culture of technical content, and a deep empathy for the developer journey.
 

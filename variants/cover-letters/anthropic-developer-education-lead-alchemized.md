@@ -14,7 +14,7 @@
 
 Dear Hiring Team,
 
-11 years teaching complex systems to 2,000+ students. 810,000 words of developer-facing documentation. A gamified education platform that maps curriculum standards to RPG quest mechanics with AI-powered evaluation. I'm applying for the Developer Education Lead role because I've spent my career doing the two things this role demands simultaneously: building developer tools and teaching people how complex systems work.
+11 years teaching complex systems to 2,000+ students. 878,651+ words of developer-facing documentation. A gamified education platform that maps curriculum standards to RPG quest mechanics with AI-powered evaluation. I'm applying for the Developer Education Lead role because I've spent my career doing the two things this role demands simultaneously: building developer tools and teaching people how complex systems work.
 
 Classroom RPG: Aetheria is the most direct proof. It's a React 19/TypeScript education platform I built that transforms classroom learning into game mechanics — quests mapped to CCSS ELA and AP Literature standards, an eight-tier XP progression system, AI-generated rubric scoring with remediation feedback, and an educator analytics dashboard tracking mastery by standard. Four thematic skins. A four-year English Literature curriculum shipped out of the box. Three-way student/teacher/parent voting for personalized learning paths. This is developer education as product: taking a pedagogical insight (progression loops sustain engagement better than isolated assignments) and building the infrastructure to deliver it.
 

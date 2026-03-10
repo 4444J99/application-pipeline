@@ -7,7 +7,7 @@
 
 To the Claude Code & Agent SDK Team at Anthropic,
 
-I am writing to apply for the Software Engineer (Agent SDK) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a deep discipline for the "Agent-Human Hybrid" model of software development. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and the AI agents—that interact with it.
+I am writing to apply for the Software Engineer (Agent SDK) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a deep discipline for the "Agent-Human Hybrid" model of software development. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and the AI agents—that interact with it.
 
 The Claude Agent SDK represents the foundational layer for the future of software engineering, and I am eager to contribute to its technical direction and developer adoption. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and a pioneer's intuition for agentic SDK design.
 

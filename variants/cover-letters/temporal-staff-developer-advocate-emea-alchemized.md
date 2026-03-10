@@ -7,7 +7,7 @@
 
 To the EMEA Developer Relations Team at Temporal,
 
-I am writing to apply for the Staff Developer Advocate (EMEA) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to technical advocacy. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Staff Developer Advocate (EMEA) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to technical advocacy. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Temporal’s mission to be the reliable foundation of every developer’s toolbox resonates deeply with my own commitment to technical integrity and connected intelligence. My candidacy is built on three core pillars: large-scale distributed systems orchestration, a prolific culture of technical storytelling, and a deep understanding of the EMEA builder ecosystem.
 

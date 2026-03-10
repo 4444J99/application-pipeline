@@ -8,7 +8,7 @@
 
 To the Creative Capital Selection Committee,
 
-I am applying for the 2027 Creative Capital Award to support the continued expansion and public activation of **ORGANVM: The Eight-Organ Metasystem**. ORGANVM is an autonomous work of "Infrastructure Art" encompassing 103 repositories, 21,160 code files, and ~810K+ words of documentation, all coordinated across 8 independent GitHub organizations. It is a live, self-governing sculpture of code that treats technical governance not as a backend requirement, but as the primary medium of expression.
+I am applying for the 2027 Creative Capital Award to support the continued expansion and public activation of **ORGANVM: The Eight-Organ Metasystem**. ORGANVM is an autonomous work of "Infrastructure Art" encompassing 103 repositories, 21,160 code files, and ~879K+ words of documentation, all coordinated across 8 independent GitHub organizations. It is a live, self-governing sculpture of code that treats technical governance not as a backend requirement, but as the primary medium of expression.
 
 My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive "Cathedral" of systemic logic while providing high-signal, scannable "Storefront" entry points for human-agent collaboration. In the era of frontier AI, I believe the most urgent artistic inquiry is not what we make *with* these models, but how we govern the systems that produce them.
 

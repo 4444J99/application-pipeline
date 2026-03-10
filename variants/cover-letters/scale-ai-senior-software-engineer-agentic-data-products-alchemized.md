@@ -7,7 +7,7 @@
 
 To the Agentic Data Products Team at Scale AI,
 
-I am writing to apply for the Senior Software Engineer position on the Agentic Data Products team. As an independent engineer who has spent the last five years building a production-grade ecosystem of 103 repositories across 8 GitHub organizations, I bring a deep, firsthand discipline for the "0→1 build" process. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Senior Software Engineer position on the Agentic Data Products team. As an independent engineer who has spent the last five years building a production-grade ecosystem of 105 repositories across 8 GitHub organizations, I bring a deep, firsthand discipline for the "0→1 build" process. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Scale’s mission to build reliable AI systems for the world's most important decisions resonates perfectly with my own engineering methodology. I am particularly excited about the Agentic Data Products team's goal of demystifying data layers through intelligent automation. My candidacy is built on three core pillars: large-scale full-stack orchestration, a rigorous testing culture, and a pioneering methodology for agentic systems.
 

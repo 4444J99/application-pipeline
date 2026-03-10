@@ -7,7 +7,7 @@
 
 To the Developer Experience Team at Resend,
 
-I am writing to apply for the DX Engineer (Technical Writer) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a unique "engineer-as-writer" perspective to the Resend ecosystem. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the DX Engineer (Technical Writer) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a unique "engineer-as-writer" perspective to the Resend ecosystem. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Resend’s mission to make email for developers delightful resonates deeply with my own engineering discipline. I believe that developer experience is not just about model capability or API features, but the scannability and reliability of the interaction layer. My candidacy is built on three core pillars: large-scale systems orchestration, a prolific culture of technical content, and a veteran background in education.
 

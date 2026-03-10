@@ -7,7 +7,7 @@
 
 To the Developer Relations and Platform Engineering Teams at Temporal,
 
-I am writing to apply for the Staff Developer Advocate (Platform Engineering) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to platform advocacy. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Staff Developer Advocate (Platform Engineering) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to platform advocacy. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Temporal’s mission to be the reliable foundation of every developer’s toolbox resonates with my own commitment to technical integrity and systemic correctness. My candidacy is built on three core pillars: large-scale platform orchestration, a rigorous testing culture, and a deep understanding of self-service developer experience.
 

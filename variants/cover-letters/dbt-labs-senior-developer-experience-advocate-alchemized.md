@@ -7,7 +7,7 @@
 
 To the Developer Experience Team at dbt Labs,
 
-I am writing to apply for the Senior Developer Experience Advocate position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a deep, firsthand discipline for the "Agent-Human Hybrid" model of software development. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Senior Developer Experience Advocate position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a deep, firsthand discipline for the "Agent-Human Hybrid" model of software development. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 dbt Labs’ mission to empower data practitioners through reliable, governed data resonates with my own commitment to technical integrity. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and an AI-native engineering methodology.
 

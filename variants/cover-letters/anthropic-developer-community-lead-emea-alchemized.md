@@ -7,7 +7,7 @@
 
 To the Community and Brand Teams at Anthropic,
 
-I am writing to apply for the Developer Community Lead (EMEA) position. My background is uniquely suited for this high-impact regional role: I have spent the last 11 years as a college instructor, teaching 2,000+ students across 8 institutions, while simultaneously building a production-grade infrastructure of 103 repositories across 8 GitHub organizations as an independent engineer. I am not just a community manager; I am a builder who understands how to scale a technical flywheel through disciplined orchestration.
+I am writing to apply for the Developer Community Lead (EMEA) position. My background is uniquely suited for this high-impact regional role: I have spent the last 11 years as a college instructor, teaching 2,000+ students across 8 institutions, while simultaneously building a production-grade infrastructure of 105 repositories across 8 GitHub organizations as an independent engineer. I am not just a community manager; I am a builder who understands how to scale a technical flywheel through disciplined orchestration.
 
 My candidacy is defined by the "Cathedral → Storefront" philosophy. I maintain a deep, recursive "Cathedral" of systemic work—21,160 code files coordinated through automated governance—while ensuring high-signal, scannable "Storefront" entry points for the developers and builders that interact with it. This methodology, which I’ve documented in 42 published essays (~142K words), is exactly what is needed to adapt Anthropic’s global playbooks into localized, high-impact community activations across EMEA.
 

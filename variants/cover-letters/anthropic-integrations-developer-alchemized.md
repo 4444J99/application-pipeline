@@ -7,7 +7,7 @@
 
 To the Sales and Revenue Operations Teams at Anthropic,
 
-I am writing to apply for the Integrations Developer position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to business systems automation. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the agents—both human and artificial—that interact with it.
+I am writing to apply for the Integrations Developer position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to business systems automation. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the agents—both human and artificial—that interact with it.
 
 Anthropic’s mission to build reliable and steerable AI requires a go-to-market infrastructure that is equally trustworthy and efficient. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and a deep understanding of automated GTM workflows.
 

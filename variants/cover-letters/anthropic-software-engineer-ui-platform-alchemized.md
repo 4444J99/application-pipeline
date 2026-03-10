@@ -7,7 +7,7 @@
 
 To the UI Platform and Product Engineering Teams at Anthropic,
 
-I am writing to apply for the Software Engineer position on the UI Platform team. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a unique "high-leverage" perspective to shared UI components. My work is defined by a "Cathedral → Storefront" philosophy: maintaining deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Software Engineer position on the UI Platform team. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a unique "high-leverage" perspective to shared UI components. My work is defined by a "Cathedral → Storefront" philosophy: maintaining deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Anthropic’s mission to build safe and steerable AI requires a consumer interface that is equally stable and predictable. My candidacy is built on three core pillars: large-scale platform orchestration, a rigorous testing culture, and a deep understanding of AI-native developer ergonomics.
 

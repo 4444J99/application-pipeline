@@ -7,7 +7,7 @@
 
 To the Claude Developer Platform and Product Foundations Teams at Anthropic,
 
-I am writing to apply for the Staff Software Engineer (Full Stack) position on the Claude Developer Platform team. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to developer experience. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Staff Software Engineer (Full Stack) position on the Claude Developer Platform team. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to developer experience. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Anthropic’s mission to build reliable and steerable AI requires a developer platform that is equally empowering and intuitive. My candidacy is built on three core pillars: large-scale full-stack systems orchestration, a rigorous testing culture, and a deep understanding of AI-native developer ergonomics.
 

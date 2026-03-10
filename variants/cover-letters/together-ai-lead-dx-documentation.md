@@ -6,7 +6,7 @@
 
 ---
 
-404,000+ words of documentation define how a system coordinating 103 repositories across 8 organizations works — every README written for external evaluators, a cross-document dependency map for navigation, and 42 essays explaining architectural decisions. The documentation didn't describe an existing system; it was documentation-first development where the writing determined what the system became. That's what drew me to the Lead DX Engineer, Documentation role at Together AI.
+878,651+ words of documentation define how a system coordinating 105 repositories across 8 organizations works — every README written for external evaluators, a cross-document dependency map for navigation, and 0 essays explaining architectural decisions. The documentation didn't describe an existing system; it was documentation-first development where the writing determined what the system became. That's what drew me to the Lead DX Engineer, Documentation role at Together AI.
 
 ## Why Together AI
 
@@ -15,7 +15,7 @@ Together AI is building the infrastructure layer for open-source AI. That infras
 ## What I'd Bring
 
 **Documentation at scale, built from scratch.** The eight-organ system has:
-- 103 documented repositories, each with a README written for external evaluators
+- 105 documented repositories, each with a README written for external evaluators
 - A reading order and cross-document dependency map so newcomers know where to start
 - An annotated manifest providing per-file descriptions of every document in the corpus
 - 42 published essays explaining architectural decisions to non-technical audiences
@@ -36,7 +36,7 @@ I write code that teaches. Every script is documented with the "why," not just t
 
 ## Evidence
 
-- **organvm-corpvs-testamentvm:** The documentation corpus itself — ~404K+ words of structured technical writing (meta-organvm/organvm-corpvs-testamentvm)
+- **organvm-corpvs-testamentvm:** The documentation corpus itself — ~879K+ words of structured technical writing (meta-organvm/organvm-corpvs-testamentvm)
 - **agentic-titan:** 1,276 tests, multi-language adapters (Python/Rust/TypeScript), CLI — complex API surface needing great docs (organvm-iv-taxis/agentic-titan)
 - **my-knowledge-base:** Knowledge management system design (organvm-i-theoria/my-knowledge-base)
 - **application-pipeline:** 16 CLI scripts, 191 tests — pipeline tooling with compose, draft, submit, and campaign commands (4444J99/application-pipeline)

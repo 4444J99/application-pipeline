@@ -7,7 +7,7 @@
 
 To the Railway Team,
 
-I am writing to apply for the Developer Relations position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 103 repositories across 8 GitHub organizations, I bring a deep, firsthand discipline for the "golden path" workflows that Railway enables. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Developer Relations position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 105 repositories across 8 GitHub organizations, I bring a deep, firsthand discipline for the "golden path" workflows that Railway enables. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Railway’s "high-ownership, low-meeting" culture and "async-heavy" default state resonate perfectly with my own solo-production methodology. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and a deep understanding of the future of developer tools.
 

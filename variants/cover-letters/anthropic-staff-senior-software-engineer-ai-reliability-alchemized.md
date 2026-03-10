@@ -7,7 +7,7 @@
 
 To the AI Reliability Engineering (AIRE) Team at Anthropic,
 
-I am writing to apply for the Staff + Senior Software Engineer position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a uniquely holistic perspective to AI reliability. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable reliability metrics for the researchers—and AI agents—that interact with it.
+I am writing to apply for the Staff + Senior Software Engineer position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a uniquely holistic perspective to AI reliability. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable reliability metrics for the researchers—and AI agents—that interact with it.
 
 Anthropic’s mission to build reliable and steerable AI systems requires a serving infrastructure that is equally resilient across every hop of the token path. My candidacy is built on three core pillars: large-scale distributed systems orchestration, a rigorous testing culture, and a deep ownership over emergent system outcomes.
 

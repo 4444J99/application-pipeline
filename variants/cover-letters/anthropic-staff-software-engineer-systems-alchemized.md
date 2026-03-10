@@ -7,7 +7,7 @@
 
 To the Infrastructure and Systems Engineering Teams at Anthropic,
 
-I am writing to apply for the Staff+ Software Engineer (Systems) position. As an independent engineer who has spent the last five years architecting and maintaining a production-grade metasystem of 103 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to technical strategy. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the researchers—and AI agents—that interact with it.
+I am writing to apply for the Staff+ Software Engineer (Systems) position. As an independent engineer who has spent the last five years architecting and maintaining a production-grade metasystem of 105 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to technical strategy. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the researchers—and AI agents—that interact with it.
 
 Anthropic’s mission to build reliable, interpretable, and steerable AI systems requires an underlying infrastructure that is equally resilient. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and a proven ability to set and execute technical direction at institutional scale.
 

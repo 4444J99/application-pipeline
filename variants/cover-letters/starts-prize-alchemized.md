@@ -8,7 +8,7 @@
 
 To the S+T+ARTS Prize Jury,
 
-I am submitting **ORGANVM: The Eight-Organ Metasystem** for consideration for the 2026 S+T+ARTS Prize. ORGANVM represents a fundamental shift in digital production, moving beyond art *made* with technology to art that is *composed* of the technological infrastructure itself. It is a live, self-governing corpus encompassing 103 repositories, 21,160 code files, and ~810K+ words of documentation, all coordinated across 8 independent GitHub organizations.
+I am submitting **ORGANVM: The Eight-Organ Metasystem** for consideration for the 2026 S+T+ARTS Prize. ORGANVM represents a fundamental shift in digital production, moving beyond art *made* with technology to art that is *composed* of the technological infrastructure itself. It is a live, self-governing corpus encompassing 103 repositories, 21,160 code files, and ~879K+ words of documentation, all coordinated across 8 independent GitHub organizations.
 
 In ORGANVM, the "Art as Catalyst" is the formal orchestration of complex, multi-agent systems to drive human expression at institutional scale. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive "Cathedral" of systemic logic while ensuring high-signal, scannable "Storefront" entry points for both human reviewers and artificial agents.
 

@@ -12,7 +12,7 @@ Strategic analysis of all active job entries, ranked by fit-to-effort ROI.
 
 | # | Entry | Score | Location | Key Rationale |
 |---|-------|-------|----------|---------------|
-| 1 | anthropic-developer-education-lead | 7.4 | SF / NYC | Teaching background is DIRECT match — 11yr, 2K students, 810K words |
+| 1 | anthropic-developer-education-lead | 7.4 | SF / NYC | Teaching background is DIRECT match — 11yr, 2K students, ~879K+ words |
 | 2 | anthropic-founding-developer-relations-lead | 7.2 | SF / NYC | Devrel trifecta: writing + teaching + OSS. "Founding" favors builders |
 | 3 | anthropic-developer-relations-mcp | 7.0 | SF | Daily MCP user, custom servers, claude-code integration |
 | 4 | huggingface-dev-advocate | 6.2 | Remote | Full body of work as evidence (already staged, materials ready) |

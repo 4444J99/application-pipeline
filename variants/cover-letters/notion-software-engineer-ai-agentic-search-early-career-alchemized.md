@@ -7,7 +7,7 @@
 
 To the AI Search Team at Notion,
 
-I am writing to apply for the Software Engineer (AI Agentic Search - Early Career) position. While I am early in my formal career, my background is defined by high-intensity, "0→1" production: over the last five years, I have built and maintained a production-grade ecosystem of 103 repositories across 8 GitHub organizations as an independent engineer. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Software Engineer (AI Agentic Search - Early Career) position. While I am early in my formal career, my background is defined by high-intensity, "0→1" production: over the last five years, I have built and maintained a production-grade ecosystem of 105 repositories across 8 GitHub organizations as an independent engineer. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Notion’s mission to make it possible for everyone to shape the tools they use resonates deeply with my own commitment to democratizing complex systemic architecture. I don’t just use Notion; I build the kind of "Connected Knowledge" infrastructure that defines your frontier. My candidacy is built on three core pillars: institutional-scale systems orchestration, a rigorous testing culture, and a pioneer's methodology for agentic context-management.
 

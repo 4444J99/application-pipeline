@@ -7,7 +7,7 @@
 
 To the Privy Team at Stripe,
 
-I am writing to apply for the Developer Experience Engineer position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 103 repositories across 8 GitHub organizations, I bring a unique "solo production at institutional scale" perspective to developer advocacy. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Developer Experience Engineer position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 105 repositories across 8 GitHub organizations, I bring a unique "solo production at institutional scale" perspective to developer advocacy. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Privy’s mission to make privacy and user ownership the default online resonates deeply with my own commitment to technical integrity and open-source transparency. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and a deep understanding of AI-native developer ergonomics.
 

@@ -7,7 +7,7 @@
 
 To the Claude Developer Platform and Product Engineering Teams at Anthropic,
 
-I am writing to apply for the Staff Software Engineer (Backend) position on the Claude Developer Platform team. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a unique "lead contributor" perspective to API orchestration. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Staff Software Engineer (Backend) position on the Claude Developer Platform team. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a unique "lead contributor" perspective to API orchestration. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Anthropic’s mission to build the world's most trusted AI platform for developers resonates deeply with my own engineering methodology. My candidacy is built on three core pillars: large-scale distributed systems orchestration, a rigorous testing culture, and a product-minded approach to agentic APIs.
 

@@ -7,7 +7,7 @@
 
 To the Global Alliances and Channels Team at Stripe,
 
-I am writing to apply for the position of Global Strategic Alliances Lead, Agentic Commerce and Retail Industry. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a uniquely technical perspective to partner strategy. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the agents—both human and artificial—that interact with it.
+I am writing to apply for the position of Global Strategic Alliances Lead, Agentic Commerce and Retail Industry. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a uniquely technical perspective to partner strategy. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the agents—both human and artificial—that interact with it.
 
 Stripe’s mission to increase the GDP of the internet aligns perfectly with my own commitment to technical integrity and systemic scale. As the industry shifts toward AI-driven shopping and agentic commerce, I am prepared to lead the strategy that ensures Stripe’s infrastructure remains at the core of this transformation. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous culture of correctness, and a deep understanding of agentic GTM solutions.
 

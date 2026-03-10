@@ -8,7 +8,7 @@
 
 To the Prix Ars Electronica Jury,
 
-I am submitting **ORGANVM: The Eight-Organ Metasystem** for consideration in the Digital Humanity category. ORGANVM is a live, self-governing corpus encompassing 103 repositories, 21,160 code files, and ~810K+ words of documentation, all coordinated across 8 independent GitHub organizations. It is an exploration of how we might reclaim the vast, often opaque "Cathedral" of digital infrastructure as a site for human agency, transparency, and ethical orchestration.
+I am submitting **ORGANVM: The Eight-Organ Metasystem** for consideration in the Digital Humanity category. ORGANVM is a live, self-governing corpus encompassing 103 repositories, 21,160 code files, and ~879K+ words of documentation, all coordinated across 8 independent GitHub organizations. It is an exploration of how we might reclaim the vast, often opaque "Cathedral" of digital infrastructure as a site for human agency, transparency, and ethical orchestration.
 
 In the era of frontier AI, the challenge of digital humanity is no longer just about making technology "user-friendly"—it is about making it "governable" by the individual. ORGANVM addresses this challenge by treating the infrastructure of creation as the primary aesthetic object.
 

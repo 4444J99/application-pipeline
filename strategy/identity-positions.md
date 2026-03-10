@@ -17,7 +17,7 @@ Five framings of the same body of work for different audiences. Derived from cov
 
 **For:** Art grants, residencies, prizes
 **Narrative:** "I build creative systems — the governance IS the artwork"
-**Evidence:** 103-repo eight-organ system as living creative work, 47 essays, MFA
+**Evidence:** 105-repo eight-organ system as living creative work, 47 essays, MFA
 **Targets:** Creative Capital, Artadia, FCA, NYSCA/NYFA, Eyebeam, Fire Island, Headlands, Prix Ars, S+T+ARTS, ZKM, LACMA
 
 **Opening line template:**
@@ -41,11 +41,11 @@ Five framings of the same body of work for different audiences. Derived from cov
 
 **For:** Tech grants, selective roles, accelerators, consulting
 **Narrative:** "Production-grade AI orchestration with creative-artistic applications"
-**Evidence:** Multi-agent orchestration, autonomous governance, 2,349+ tests, 94+ CI/CD workflows
+**Evidence:** Multi-agent orchestration, autonomous governance, 2,349+ tests, 96+ CI/CD workflows
 **Targets:** Google Creative Lab, Processing Foundation, consulting clients, Together AI, HuggingFace
 
 **Opening line template:**
-> I build production-grade AI orchestration systems. The ORGANVM project coordinates 103 repositories through automated dependency validation, a formal promotion state machine, and 94+ CI/CD pipelines — all designed, tested (2,349+ tests), and documented by a single practitioner using AI tools as compositional instruments.
+> I build production-grade AI orchestration systems. The ORGANVM project coordinates 103 repositories through automated dependency validation, a formal promotion state machine, and 96+ CI/CD pipelines — all designed, tested (2,349+ tests), and documented by a single practitioner using AI tools as compositional instruments.
 
 ---
 
@@ -71,7 +71,7 @@ Five framings of the same body of work for different audiences. Derived from cov
 **Targets:** Anthropic, OpenAI, Runway, Together AI, Cohere, HuggingFace
 
 **Opening line template:**
-> 21,160 code files. 3,610 test files across 70 of 103 repositories. 94 CI/CD pipelines. 43 validated dependency edges with zero violations — all designed, built, and maintained by a single practitioner. This is not freelance consulting or contract work: it is sustained independent production at engineering-team scale, five years of Python and TypeScript across 103 repositories coordinated through 8 GitHub organizations.
+> 21,160 code files. 3,610 test files across 70 of 103 repositories. 94 CI/CD pipelines. 43 validated dependency edges with zero violations — all designed, built, and maintained by a single practitioner. This is not freelance consulting or contract work: it is sustained independent production at engineering-team scale, five years of Python and TypeScript across 105 repositories coordinated through 8 GitHub organizations.
 
 **Pattern interrupt:** Lead with the output scale before naming the solo context. The reviewer's "contractor" pattern fires on "solo practitioner" — delay that phrase until after the numbers have established the scale.
 

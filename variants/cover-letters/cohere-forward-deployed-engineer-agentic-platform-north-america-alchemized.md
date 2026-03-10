@@ -7,7 +7,7 @@
 
 To the Forward Deployed Engineering Team (North America) at Cohere,
 
-I am writing to apply for the Forward Deployed Engineer position on the Agentic Platform team. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to "Agentic" deployment. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Forward Deployed Engineer position on the Agentic Platform team. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to "Agentic" deployment. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Cohere’s mission to enable the next generation of enterprise AI through reliable RAG and agentic workflows resonates deeply with my own commitment to technical integrity and systemic scale. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and a deep understanding of the "golden path" for AI-augmented production.
 

@@ -8,7 +8,7 @@
 
 To the Prix Ars Electronica Jury,
 
-I am submitting **ORGANVM: The Eight-Organ Metasystem** for consideration in the Interactive Art+ category. ORGANVM is not a work made *with* a system; it is a work *of* system. It is a live, self-governing sculpture of code encompassing 103 repositories, 21,160 code files, and 810K+ words of documentation, all coordinated across 8 independent GitHub organizations. In ORGANVM, the infrastructure of creation is the primary aesthetic object.
+I am submitting **ORGANVM: The Eight-Organ Metasystem** for consideration in the Interactive Art+ category. ORGANVM is not a work made *with* a system; it is a work *of* system. It is a live, self-governing sculpture of code encompassing 103 repositories, 21,160 code files, and ~879K+ words of documentation, all coordinated across 8 independent GitHub organizations. In ORGANVM, the infrastructure of creation is the primary aesthetic object.
 
 My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive "Cathedral" of systemic work while ensuring high-signal, scannable "Storefront" entry points for the agents—both human and artificial—that interact with it.
 

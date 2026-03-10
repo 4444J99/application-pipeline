@@ -7,7 +7,7 @@
 
 To the Community and Content Teams at Elastic,
 
-I am writing to apply for the Senior Developer Advocate (Video Content Creator) position. I bring a unique "engineer-as-director" perspective to technical advocacy: I have spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations while simultaneously producing high-volume visual and narrative campaigns that have generated over 17.5M views. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable (and viewable) entry points for the developers that interact with it.
+I am writing to apply for the Senior Developer Advocate (Video Content Creator) position. I bring a unique "engineer-as-director" perspective to technical advocacy: I have spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations while simultaneously producing high-volume visual and narrative campaigns that have generated over 17.5M views. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable (and viewable) entry points for the developers that interact with it.
 
 Elastic’s mission to connect search and AI through a creative lens resonates deeply with my own methodology. My candidacy is built on three core pillars: large-scale systems orchestration, a prolific culture of technical storytelling, and a veteran background in multimedia production.
 

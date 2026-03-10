@@ -15,7 +15,7 @@ The technical infrastructure I've built demonstrates hands-on MCP proficiency. a
 
 Before building with AI tools, I spent 11 years teaching complex systems to 2,000+ students across 8 institutions. Developer relations is education at scale, and I bring that pedagogical instinct to content creation: 42 published essays (142K words) document the AI-conductor methodology in real time, teaching by showing the process including failures. My portfolio site uses p5.js generative art and is built with Astro — I create technical content, not just strategy.
 
-What I'd bring to MCP DevRel specifically: practitioner credibility from daily MCP usage, the ability to create sample apps and integration guides from direct experience, a deep understanding of where developers get stuck with the protocol (server configuration, transport debugging, tool schema design, multi-server coordination), and the communication skills from 11 years of classroom teaching. I understand open source community dynamics — my entire 103-repo system is public, with governance structures designed for community contribution.
+What I'd bring to MCP DevRel specifically: practitioner credibility from daily MCP usage, the ability to create sample apps and integration guides from direct experience, a deep understanding of where developers get stuck with the protocol (server configuration, transport debugging, tool schema design, multi-server coordination), and the communication skills from 11 years of classroom teaching. I understand open source community dynamics — my entire 105-repo system is public, with governance structures designed for community contribution.
 
 I'm based in New York City, open to relocation for this role, and available to start immediately.
 

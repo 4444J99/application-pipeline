@@ -7,7 +7,7 @@
 
 To the Accelerator Capacity Engineering (ACE) Team at Anthropic,
 
-I am writing to apply for the Staff/Sr Software Engineer position within the Compute department. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to capacity orchestration. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable telemetry for the researchers—and AI agents—that depend on it.
+I am writing to apply for the Staff/Sr Software Engineer position within the Compute department. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to capacity orchestration. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable telemetry for the researchers—and AI agents—that depend on it.
 
 Anthropic’s mission to build reliable and steerable AI systems requires an infrastructure that is equally trustworthy. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and a deep understanding of Kubernetes-native data pipelines.
 

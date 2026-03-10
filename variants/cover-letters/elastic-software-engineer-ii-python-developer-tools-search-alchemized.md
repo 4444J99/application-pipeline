@@ -7,7 +7,7 @@
 
 To the Developer Tools Team at Elastic,
 
-I am writing to apply for the Software Engineer II position on the Developer Tools team. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to "writing software in the open." My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Software Engineer II position on the Developer Tools team. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to "writing software in the open." My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Elastic’s mission to enable everyone to find answers in real-time through data at scale resonates deeply with my own commitment to technical integrity and connected intelligence. My candidacy is built on three core pillars: large-scale systems orchestration in Python and Node.js, a rigorous testing culture, and a deep understanding of open-source versioning and community engagement.
 

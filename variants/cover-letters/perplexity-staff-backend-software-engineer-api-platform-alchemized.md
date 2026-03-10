@@ -7,7 +7,7 @@
 
 To the API Platform and Infrastructure Teams at Perplexity,
 
-I am writing to apply for the Staff Backend Software Engineer (API Platform) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to API orchestration. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Staff Backend Software Engineer (API Platform) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to API orchestration. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Perplexity’s mission to provide the world's most trusted answer engine resonates deeply with my own commitment to technical integrity and connected intelligence. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and a deep understanding of AI-native API design.
 

@@ -8,7 +8,7 @@
 
 To the Eyebeam Selection Committee,
 
-I am applying for the **Speculating on Plurality** season to share and expand **ORGANVM: The Eight-Organ Metasystem**. ORGANVM is an autonomous work of "Infrastructure Art" encompassing 103 repositories, 21,160 code files, and ~810K+ words of documentation, all coordinated across 8 independent GitHub organizations. It is an exploration of how we might speculate on "plurality" not as a social abstraction, but as a technical and narrative architecture.
+I am applying for the **Speculating on Plurality** season to share and expand **ORGANVM: The Eight-Organ Metasystem**. ORGANVM is an autonomous work of "Infrastructure Art" encompassing 103 repositories, 21,160 code files, and ~879K+ words of documentation, all coordinated across 8 independent GitHub organizations. It is an exploration of how we might speculate on "plurality" not as a social abstraction, but as a technical and narrative architecture.
 
 My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive "Cathedral" of systemic logic while providing high-signal, scannable "Storefront" entry points for the agents—both human and artificial—that interact with it. In the context of Eyebeam’s focus on experimental writing and gatherings, I offer a methodology where the act of building infrastructure is itself a form of storytelling.
 

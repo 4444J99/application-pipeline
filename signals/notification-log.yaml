@@ -9,3 +9,17 @@ notifications:
   - flag_for_submission
   - flag_for_submission
   - flag_for_submission
+- event_type: agent_action
+  timestamp: '2026-03-05T07:00:06.451558'
+  summary: Agent executed 3 actions
+  actions:
+  - flag_for_submission
+  - flag_for_submission
+  - flag_for_submission
+- event_type: agent_action
+  timestamp: '2026-03-09T08:15:27.270037'
+  summary: Agent executed 3 actions
+  actions:
+  - flag_for_submission
+  - flag_for_submission
+  - flag_for_submission

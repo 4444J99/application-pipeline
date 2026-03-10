@@ -8,7 +8,7 @@
 
 To the LACMA Art + Technology Lab Advisory Board,
 
-I am applying for the Art + Technology Lab grant to share and expand **ORGANVM: The Eight-Organ Metasystem**. ORGANVM is an autonomous work of "Infrastructure Art" encompassing 103 repositories, 21,160 code files, and ~810K+ words of documentation, all coordinated across 8 independent GitHub organizations. It is an exploration of how the tools of institutional-scale engineering can be reclaimed as a primary medium for artistic expression.
+I am applying for the Art + Technology Lab grant to share and expand **ORGANVM: The Eight-Organ Metasystem**. ORGANVM is an autonomous work of "Infrastructure Art" encompassing 103 repositories, 21,160 code files, and ~879K+ words of documentation, all coordinated across 8 independent GitHub organizations. It is an exploration of how the tools of institutional-scale engineering can be reclaimed as a primary medium for artistic expression.
 
 My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive "Cathedral" of systemic logic while providing high-signal, scannable "Storefront" entry points for human-agent collaboration.
 

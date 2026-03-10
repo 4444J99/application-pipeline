@@ -8,7 +8,7 @@
 
 To the NEW INC Selection Committee,
 
-I am applying for the NEW INC Y12 cohort to incubate **ORGANVM: The Eight-Organ Metasystem**. ORGANVM is a production-grade infrastructure for creative production encompassing 103 repositories, 21,160 code files, and ~810K+ words of documentation, all coordinated across 8 independent GitHub organizations. It is an exploration of how the rigor of frontier engineering can be reclaimed to build resilient, autonomous cultural infrastructure.
+I am applying for the NEW INC Y12 cohort to incubate **ORGANVM: The Eight-Organ Metasystem**. ORGANVM is a production-grade infrastructure for creative production encompassing 103 repositories, 21,160 code files, and ~879K+ words of documentation, all coordinated across 8 independent GitHub organizations. It is an exploration of how the rigor of frontier engineering can be reclaimed to build resilient, autonomous cultural infrastructure.
 
 My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive "Cathedral" of systemic work while ensuring high-signal, scannable "Storefront" entry points for the agents—both human and artificial—that interact with it.
 

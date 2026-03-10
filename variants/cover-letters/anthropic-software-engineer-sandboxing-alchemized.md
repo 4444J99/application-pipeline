@@ -7,7 +7,7 @@
 
 To the Sandboxing and AI Research Engineering Teams at Anthropic,
 
-I am writing to apply for the Software Engineer (Sandboxing) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a unique "security-as-medium" perspective to isolated execution environments. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the researchers—and AI agents—that interact with it.
+I am writing to apply for the Software Engineer (Sandboxing) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a unique "security-as-medium" perspective to isolated execution environments. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the researchers—and AI agents—that interact with it.
 
 Anthropic’s mission to build reliable and steerable AI systems requires a sandboxing infrastructure that is both impenetrable and invisible to the developers who use it. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and a deep obsession with developer-facing API design.
 

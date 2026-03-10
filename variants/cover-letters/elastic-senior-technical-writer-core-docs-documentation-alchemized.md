@@ -7,7 +7,7 @@
 
 To the Core Documentation Team at Elastic,
 
-I am writing to apply for the Senior Technical Writer position within the Core Docs group. As an independent engineer who has spent the last five years building a production-grade ecosystem of 103 repositories across 8 GitHub organizations, I bring a unique "lead contributor" perspective to Search AI documentation. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the data scientists and engineers that interact with it.
+I am writing to apply for the Senior Technical Writer position within the Core Docs group. As an independent engineer who has spent the last five years building a production-grade ecosystem of 105 repositories across 8 GitHub organizations, I bring a unique "lead contributor" perspective to Search AI documentation. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the data scientists and engineers that interact with it.
 
 Elastic’s mission to redefine the future of search through vector embeddings and RAG resonates deeply with my own commitment to technical integrity and connected intelligence. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and a deep understanding of the "golden path" for AI-native production.
 

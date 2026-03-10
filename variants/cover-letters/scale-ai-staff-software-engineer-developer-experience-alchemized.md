@@ -7,7 +7,7 @@
 
 To the Platform Engineering Team at Scale AI,
 
-I am writing to apply for the Staff Software Engineer (Developer Experience) position. As an independent engineer who has built and maintained a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a deep, firsthand discipline for the "golden path" workflows that empower high-velocity engineering. My work is defined by a "Cathedral → Storefront" philosophy: maintaining deep, recursive systemic work while providing high-signal, scannable entry points for the developers—and the AI agents—that interact with it.
+I am writing to apply for the Staff Software Engineer (Developer Experience) position. As an independent engineer who has built and maintained a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a deep, firsthand discipline for the "golden path" workflows that empower high-velocity engineering. My work is defined by a "Cathedral → Storefront" philosophy: maintaining deep, recursive systemic work while providing high-signal, scannable entry points for the developers—and the AI agents—that interact with it.
 
 Scale’s mission to develop reliable AI systems for the world's most important decisions resonates with my own commitment to technical integrity. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and an AI-native engineering methodology.
 

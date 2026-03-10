@@ -7,7 +7,7 @@
 
 To the Database Experience Team at MongoDB,
 
-I am writing to apply for the Senior Software Engineer (DevTools) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a deep, firsthand discipline for the developer experience. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Senior Software Engineer (DevTools) position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a deep, firsthand discipline for the developer experience. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 The mission of MongoDB's DevTools team to empower users to interact with their data at global scale resonates deeply with my own commitment to systemic reliability. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and a pioneering methodology for agentic applications.
 

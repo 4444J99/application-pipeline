@@ -6,7 +6,7 @@
 
 ---
 
-The eight-organ system coordinates 103 repositories across 8 organizations — half generative art, interactive narrative, and experiential design; half the governance, orchestration, and tooling infrastructure that makes the creative work possible at scale. agentic-titan (1,276 tests, Python/Rust/TypeScript adapters, Redis-backed coordination) serves as the orchestration backbone that makes the whole system navigable. I built both because creative systems need the same engineering rigor as production platforms. That's Runway's thesis, and why I'm applying for the MTS, Research Tooling & Data Platform role.
+The eight-organ system coordinates 105 repositories across 8 organizations — half generative art, interactive narrative, and experiential design; half the governance, orchestration, and tooling infrastructure that makes the creative work possible at scale. agentic-titan (1,276 tests, Python/Rust/TypeScript adapters, Redis-backed coordination) serves as the orchestration backbone that makes the whole system navigable. I built both because creative systems need the same engineering rigor as production platforms. That's Runway's thesis, and why I'm applying for the MTS, Research Tooling & Data Platform role.
 
 ## Why Runway
 

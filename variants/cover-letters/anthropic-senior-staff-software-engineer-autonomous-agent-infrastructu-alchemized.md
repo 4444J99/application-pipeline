@@ -7,7 +7,7 @@
 
 To the Agent Infrastructure and Systems Engineering Teams at Anthropic,
 
-I am writing to apply for the Senior / Staff+ Software Engineer position on the Autonomous Agent Infrastructure team. As an independent engineer who has spent the last five years building a production-grade ecosystem of 103 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to agentic execution environments. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
+I am writing to apply for the Senior / Staff+ Software Engineer position on the Autonomous Agent Infrastructure team. As an independent engineer who has spent the last five years building a production-grade ecosystem of 105 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to agentic execution environments. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the developers—and AI agents—that interact with it.
 
 Anthropic’s mission to build the infrastructure that enables Claude to act autonomously in the world resonates deeply with my own engineering discipline. My candidacy is built on three core pillars: large-scale distributed systems orchestration, a rigorous testing culture, and a pioneering methodology for agentic state management.
 

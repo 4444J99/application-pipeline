@@ -7,7 +7,7 @@
 
 To the Claude Code Team at Anthropic,
 
-I am writing to apply for the Software Engineer (Windows) position on the Claude Code team. As an independent engineer who has built and maintained a production-grade system of 103 repositories across 8 GitHub organizations, I bring a deep discipline for developer tooling and systems architecture. My work is defined by the "Cathedral → Storefront" philosophy: managing deep, recursive infrastructure while ensuring high-signal scannability for the tools—and developers—that depend on it.
+I am writing to apply for the Software Engineer (Windows) position on the Claude Code team. As an independent engineer who has built and maintained a production-grade system of 105 repositories across 8 GitHub organizations, I bring a deep discipline for developer tooling and systems architecture. My work is defined by the "Cathedral → Storefront" philosophy: managing deep, recursive infrastructure while ensuring high-signal scannability for the tools—and developers—that depend on it.
 
 Claude Code represents the frontier of AI-augmented development, and I am eager to ensure that Windows developers have a first-class experience with this instrument. My candidacy is built on three core strengths:
 

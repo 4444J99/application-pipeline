@@ -7,7 +7,7 @@
 
 To the Technical Marketing Team at MongoDB,
 
-I am writing to apply for the Senior Developer Advocate position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 103 repositories across 8 GitHub organizations, I bring a deep, firsthand discipline for the developer experience. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the community—and the AI agents—that interact with it.
+I am writing to apply for the Senior Developer Advocate position. As an independent engineer who has spent the last five years building a production-grade infrastructure of 105 repositories across 8 GitHub organizations, I bring a deep, firsthand discipline for the developer experience. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the community—and the AI agents—that interact with it.
 
 MongoDB’s mission to redefine the database for the AI era resonates with my own commitment to building reliable, steerable AI systems. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous culture of documentation, and an influential voice in the JavaScript/TypeScript community.
 

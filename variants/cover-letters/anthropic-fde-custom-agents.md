@@ -18,15 +18,15 @@ Anthropic's approach to AI safety requires constraints that scale — not constr
 
 **Deployment patterns I've already codified.** Your FDE team identifies repeatable deployment patterns and feeds them back to Product and Engineering. I've done this systematically: governance-rules.json encodes rules the system enforces automatically; orchestration-system-v2.md documents the rationale behind every architectural decision; 5 GitHub Actions workflows automate health checks, dependency validation, and promotion across the entire system. These are the kind of artifacts — MCP servers, sub-agents, agent skills — your job description calls for.
 
-**Communication capacity for enterprise environments.** The system includes 404,000+ words of documentation written for grant reviewers and hiring managers, not just developers. I can explain complex orchestration systems to non-technical stakeholders and translate their needs into production implementations.
+**Communication capacity for enterprise environments.** The system includes 878,651+ words of documentation written for grant reviewers and hiring managers, not just developers. I can explain complex orchestration systems to non-technical stakeholders and translate their needs into production implementations.
 
-**Autonomy under ambiguity.** The eight-organ system didn't start with a spec — it started with a question about how to organize 103 repositories into a coherent creative-institutional system. I defined the architecture, built the tooling, documented the decisions, and shipped it. That's the FDE operating model.
+**Autonomy under ambiguity.** The eight-organ system didn't start with a spec — it started with a question about how to organize 105 repositories into a coherent creative-institutional system. I defined the architecture, built the tooling, documented the decisions, and shipped it. That's the FDE operating model.
 
 ## Evidence
 
 - **agentic-titan:** 1,276 tests, 18 phases, multi-agent orchestration (organvm-iv-taxis/agentic-titan)
 - **agent--claude-smith:** Multi-agent system built on Claude SDK — TypeScript, session persistence, self-correction hooks, 1Password integration (organvm-iv-taxis/agent--claude-smith)
-- **organvm-corpvs-testamentvm:** The governance corpus itself — ~404K+ words of constitutional architecture (meta-organvm/organvm-corpvs-testamentvm)
+- **organvm-corpvs-testamentvm:** The governance corpus itself — ~879K+ words of constitutional architecture (meta-organvm/organvm-corpvs-testamentvm)
 - **recursive-engine:** 1,254 tests, 85% coverage, symbolic DSL with custom parser and orchestration (organvm-i-theoria/recursive-engine--generative-entity)
 - **Portfolio:** https://4444j99.github.io/portfolio/
 

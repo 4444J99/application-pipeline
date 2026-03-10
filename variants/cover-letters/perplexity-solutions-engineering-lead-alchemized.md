@@ -7,7 +7,7 @@
 
 To the Solutions Engineering and GTM Teams at Perplexity,
 
-I am writing to apply for the Solutions Engineering Lead position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 103 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to technical user success. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the agents—both human and artificial—that interact with it.
+I am writing to apply for the Solutions Engineering Lead position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 105 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to technical user success. My work is defined by a "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the agents—both human and artificial—that interact with it.
 
 Perplexity’s mission to increase the world's knowledge through a high-trust answer engine resonates deeply with my own commitment to technical integrity and connected intelligence. My candidacy is built on three core pillars: large-scale systems orchestration, a prolific culture of technical content, and a deep intuition for AI-native solution architecture.
 

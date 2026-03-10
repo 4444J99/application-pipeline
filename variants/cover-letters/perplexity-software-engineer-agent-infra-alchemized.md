@@ -7,7 +7,7 @@
 
 To the Agent Infrastructure and Research Teams at Perplexity,
 
-I am writing to apply for the Software Engineer (Agent Infra) position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 103 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to agentic execution. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the agents—both human and artificial—that interact with it.
+I am writing to apply for the Software Engineer (Agent Infra) position. As an independent engineer who has spent the last five years building a production-grade ecosystem of 105 repositories across 8 GitHub organizations, I bring a uniquely rigorous perspective to agentic execution. My work is built on the "Cathedral → Storefront" philosophy: maintaining a deep, recursive systemic architecture while ensuring high-signal, scannable entry points for the agents—both human and artificial—that interact with it.
 
 Perplexity’s mission to provide the world's most trusted answer engine through agentic search resonates deeply with my own commitment to technical integrity and connected intelligence. My candidacy is built on three core pillars: large-scale systems orchestration, a rigorous testing culture, and a pioneer's methodology for agentic state management.
 
