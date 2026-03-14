@@ -507,5 +507,58 @@ def standards(
     raise typer.Exit(0 if br.passed else 1)
 
 
+@app.command()
+def ingest(
+    write: bool = typer.Option(False, "--write", help="Write historical-outcomes.yaml"),
+    stats: bool = typer.Option(False, "--stats", help="Summary statistics only"),
+    json_output: bool = typer.Option(False, "--json", help="JSON output"),
+):
+    """Ingest historical application data from CSV exports."""
+    try:
+        from ingest_historical import main as ingest_main
+    except ImportError:
+        from scripts.ingest_historical import main as ingest_main
+    args = ["ingest_historical.py"]
+    if write:
+        args.append("--write")
+    if stats:
+        args.append("--stats")
+    if json_output:
+        args.append("--json")
+    old_argv = sys.argv
+    sys.argv = args
+    try:
+        ingest_main()
+    except SystemExit:
+        pass
+    finally:
+        sys.argv = old_argv
+
+
+@app.command()
+def phases(
+    velocity: bool = typer.Option(False, "--velocity", help="Monthly velocity only"),
+    json_output: bool = typer.Option(False, "--json", help="JSON output"),
+):
+    """Phase 1 vs Phase 2 application analytics."""
+    try:
+        from phase_analytics import main as phase_main
+    except ImportError:
+        from scripts.phase_analytics import main as phase_main
+    args = ["phase_analytics.py"]
+    if velocity:
+        args.append("--velocity")
+    if json_output:
+        args.append("--json")
+    old_argv = sys.argv
+    sys.argv = args
+    try:
+        phase_main()
+    except SystemExit:
+        pass
+    finally:
+        sys.argv = old_argv
+
+
 if __name__ == "__main__":
     app()

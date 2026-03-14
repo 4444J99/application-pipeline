@@ -106,6 +106,9 @@ COMMANDS = {
     "ira":         ("diagnose_ira.py", [],                   "Inter-rater agreement report (auto-loads ratings/*.json)"),
     "sysaudit":    ("audit_system.py", [],                   "System integrity audit: claims, wiring, logic"),
     "standards":   ("standards.py", [],                       "Standards Board: 5-level hierarchical validation audit"),
+    "ingest":      ("ingest_historical.py", ["--stats"],        "Historical data ingestion statistics"),
+    "phases":      ("phase_analytics.py", [],                    "Phase 1 vs Phase 2 application analytics"),
+    "resolve-hyp": ("resolve_hypotheses.py", [],                 "Auto-resolve cold-app hypotheses (dry-run)"),
 
     # -- Infrastructure --
     "agent":       ("agent.py", ["--plan"],              "Agent: preview planned autonomous actions"),

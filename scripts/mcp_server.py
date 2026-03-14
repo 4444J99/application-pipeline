@@ -467,6 +467,22 @@ def pipeline_standards(
     return json.dumps(br.to_dict(), indent=2)
 
 
+@mcp.tool()
+def pipeline_phase_analytics() -> str:
+    """Compare Phase 1 (volume) vs Phase 2 (precision) application strategies.
+
+    Returns:
+        JSON with phase comparison data, velocity metrics, and conversion rates
+    """
+    try:
+        from .phase_analytics import compute_phase_comparison
+    except ImportError:
+        from phase_analytics import compute_phase_comparison
+
+    comparison = compute_phase_comparison()
+    return json.dumps(comparison, indent=2)
+
+
 if __name__ == "__main__":
     # Start the MCP server using stdio transport
     mcp.run()
