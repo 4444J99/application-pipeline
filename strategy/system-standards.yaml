@@ -1,0 +1,291 @@
+# strategy/system-standards.yaml
+# Machine-readable source of truth for all system-wide standards.
+# Each standard belongs to one level (jurisdiction) and one tier (severity).
+# See docs/system-standards.md for human-readable reference.
+
+version: "1.0"
+
+tiers:
+  1:
+    name: Operational Integrity
+    description: Does the system work as specified?
+    gate: hard
+  2:
+    name: Systemic Quality
+    description: Is the system well-built?
+    gate: soft
+  3:
+    name: Empirical Validity
+    description: Are the criteria grounded in reality?
+    gate: advisory
+
+evidence_lifecycle:
+  states: [assumed, calibrating, validated]
+  transitions:
+    assumed_to_calibrating: "observation_count >= 1"
+    calibrating_to_validated: "observation_count >= min_sample"
+
+standards:
+  # -- Level 2 / Tier 1: Department (Schema Enforcement) --
+  weight_sum_general:
+    level: 2
+    tier: 1
+    gate: "2B"
+    category: scoring
+    track: [job, funding]
+    description: General scoring weights sum to 1.0
+    check: "abs(sum - 1.0) < 0.001"
+    validator: validate.validate_scoring_rubric
+    source: strategy/scoring-rubric.yaml
+
+  weight_sum_job:
+    level: 2
+    tier: 1
+    gate: "2B"
+    category: scoring
+    track: [job]
+    description: Job scoring weights sum to 1.0
+    check: "abs(sum - 1.0) < 0.001"
+    validator: validate.validate_scoring_rubric
+    source: strategy/scoring-rubric.yaml
+
+  weight_sum_system_grading:
+    level: 2
+    tier: 1
+    gate: "2B"
+    category: scoring
+    description: System grading rubric weights sum to 1.0
+    check: "abs(sum - 1.0) < 0.001"
+    validator: diagnose.load_rubric
+    source: strategy/system-grading-rubric.yaml
+
+  state_machine_valid:
+    level: 2
+    tier: 1
+    gate: "2A"
+    category: pipeline
+    description: All entry status transitions follow VALID_TRANSITIONS
+    validator: validate.validate_entry
+
+  dimensions_consistent:
+    level: 2
+    tier: 1
+    gate: "2C"
+    category: wiring
+    description: DIMENSION_ORDER == rubric keys == VALID_DIMENSIONS
+    validator: audit_system.audit_wiring
+
+  threshold_ordering:
+    level: 2
+    tier: 1
+    gate: "2B"
+    category: scoring
+    description: tier1_cutoff > tier2_cutoff > tier3_cutoff
+    validator: audit_system.audit_logic
+
+  high_prestige_ranges:
+    level: 2
+    tier: 1
+    gate: "2C"
+    category: constants
+    description: All HIGH_PRESTIGE org scores in 1-10
+    validator: audit_system.audit_wiring
+
+  role_fit_tier_ranges:
+    level: 2
+    tier: 1
+    gate: "2C"
+    category: constants
+    description: All ROLE_FIT_TIERS dimension scores in 1-10
+    validator: audit_system.audit_wiring
+
+  rubric_weights_match_code:
+    level: 2
+    tier: 1
+    gate: "2C"
+    category: wiring
+    description: scoring-rubric.yaml weights == score.py _DEFAULT_WEIGHTS
+    validator: audit_system.audit_wiring
+
+  system_rubric_matches_diagnose:
+    level: 2
+    tier: 1
+    gate: "2C"
+    category: wiring
+    description: system-grading-rubric.yaml dims == diagnose.py collectors+generators
+    validator: audit_system.audit_wiring
+
+  lint_clean:
+    level: 2
+    tier: 1
+    gate: "2A"
+    category: code_quality
+    description: Zero ruff lint errors in scripts/ and tests/
+    validator: subprocess
+    command: [python, -m, ruff, check, scripts/, tests/]
+
+  tests_pass:
+    level: 2
+    tier: 1
+    gate: "2A"
+    category: code_quality
+    description: Full pytest suite passes
+    validator: subprocess
+    command: [python, -m, pytest, tests/, -q]
+
+  verification_matrix_complete:
+    level: 2
+    tier: 1
+    gate: "2A"
+    category: code_quality
+    description: All modules have corresponding test coverage
+    validator: subprocess
+    command: [python, scripts/verification_matrix.py, --strict]
+
+  signal_integrity:
+    level: 2
+    tier: 1
+    gate: "2A"
+    category: data
+    description: All signal YAML files pass schema and referential integrity
+    validator: validate_signals.validate_all_signals
+
+  # -- Level 3 / Tier 2: University (System Quality) --
+  icc_agreement:
+    level: 3
+    tier: 2
+    gate: "3C"
+    category: ira
+    description: Inter-rater agreement on system quality
+    threshold: 0.61
+    target: 0.81
+    validator: diagnose_ira.compute_icc
+
+  claim_provenance_ratio:
+    level: 3
+    tier: 2
+    gate: "3B"
+    category: integrity
+    description: Proportion of statistical claims with sources
+    threshold: 0.80
+    target: 1.0
+    validator: audit_system.audit_claims
+
+  diagnostic_composite:
+    level: 3
+    tier: 2
+    gate: "3A"
+    category: quality
+    description: System diagnostic composite score
+    threshold: 6.0
+    target: 8.0
+    validator: diagnose.compute_composite
+
+  wiring_integrity:
+    level: 3
+    tier: 2
+    gate: "3B"
+    category: integrity
+    description: All wiring checks pass
+    threshold: 1.0
+    validator: audit_system.audit_wiring
+
+  logical_consistency:
+    level: 3
+    tier: 2
+    gate: "3B"
+    category: integrity
+    description: All logic checks pass
+    threshold: 1.0
+    validator: audit_system.audit_logic
+
+  math_proofs_pass:
+    level: 3
+    tier: 1
+    gate: "3A"
+    category: integrity
+    description: All mathematical certifications pass
+    validator: subprocess
+    command: [python, -m, pytest, tests/test_math_proofs.py, -q]
+
+  # -- Level 4 / Tier 3: National (Outcome Accreditation) --
+  weight_outcome_correlation:
+    level: 4
+    tier: 3
+    gate: "4A"
+    category: calibration
+    description: Dimension weights predict actual outcomes
+    min_sample: 30
+    threshold: 0.3
+    validator: standards.NationalRegulator.gate_outcome
+    evidence_status: assumed
+
+  weight_drift:
+    level: 4
+    tier: 3
+    gate: "4B"
+    category: calibration
+    description: Current weights within acceptable drift of empirical optimum
+    min_sample: 30
+    threshold: 0.15
+    check: "avg_drift <= 0.15"
+    validator: standards.NationalRegulator.gate_recalibration
+    evidence_status: assumed
+
+  hypothesis_accuracy:
+    level: 4
+    tier: 3
+    gate: "4C"
+    category: calibration
+    description: Pre-recorded predictions match actual outcomes
+    min_sample: 10
+    threshold: 0.5
+    validator: standards.NationalRegulator.gate_hypothesis
+    evidence_status: assumed
+
+  # -- Level 5 / Tier 3: Federal (Source Legitimacy) --
+  source_quality:
+    level: 5
+    tier: 3
+    gate: "5A"
+    category: provenance
+    description: Statistical claims backed by credible sources
+    quality_tiers:
+      peer_reviewed: 4
+      industry_report: 3
+      content_marketing: 2
+      opinion: 1
+      unsourced: 0
+    threshold: 2.5
+    validator: standards.FederalRegulator.gate_source_quality
+
+  benchmark_alignment:
+    level: 5
+    tier: 3
+    gate: "5B"
+    category: provenance
+    description: Pipeline metrics align with external industry baselines
+    threshold: 0.7
+    validator: standards.FederalRegulator.gate_benchmark
+
+  source_freshness:
+    level: 5
+    tier: 3
+    gate: "5C"
+    category: provenance
+    description: Cited sources are current (not stale)
+    threshold: 0.8
+    max_age_years: 2
+    validator: standards.FederalRegulator.gate_temporal
+
+meta_evaluation:
+  cycle: quarterly
+  criteria:
+    utility: "Do the standards reports change decisions?"
+    feasibility: "Can a new organ adopt the framework within 1 sprint?"
+    propriety: "Are any gates systematically biased?"
+    accuracy: "Do validated thresholds match observed behavior?"
+  trigger_out_of_cycle:
+    - "Any standard transitions from validated to assumed"
+    - "ICC drops below 0.41 (moderate)"
+    - "New organ adoption"
