@@ -333,6 +333,52 @@ def discover_rating_files(repo_root: Path = REPO_ROOT) -> list[str]:
     return [str(p) for p in sorted(ratings_dir.glob("*.json")) if p.is_file()]
 
 
+def load_rubric_for_partition() -> dict | None:
+    """Load rubric YAML for dimension partitioning. Returns None on failure."""
+    rubric_path = REPO_ROOT / "strategy" / "system-grading-rubric.yaml"
+    if not rubric_path.is_file():
+        return None
+    try:
+        import yaml
+
+        with open(rubric_path) as f:
+            return yaml.safe_load(f)
+    except Exception:
+        return None
+
+
+def partition_dimensions(
+    scores_per_dim: dict[str, list[float]],
+    rubric: dict | None = None,
+) -> tuple[dict[str, list[float]], dict[str, list[float]]]:
+    """Split dimensions into ground truth (objective) and rated (subjective).
+
+    Uses diagnose.py's OBJECTIVE_DIMENSIONS/SUBJECTIVE_DIMENSIONS as the
+    authoritative classification. Falls back to putting all dims in rated
+    if rubric is None or diagnose constants are unavailable.
+
+    Returns:
+        (ground_truth, rated) — each a dict of {dim: [scores]}
+    """
+    if rubric is None:
+        return {}, dict(scores_per_dim)
+
+    try:
+        from diagnose import OBJECTIVE_DIMENSIONS
+    except ImportError:
+        return {}, dict(scores_per_dim)
+
+    ground_truth = {}
+    rated = {}
+    for dim, scores in scores_per_dim.items():
+        if dim in OBJECTIVE_DIMENSIONS:
+            ground_truth[dim] = scores
+        else:
+            rated[dim] = scores
+
+    return ground_truth, rated
+
+
 def load_ratings(paths: list[str]) -> list[dict]:
     """Load rating JSON files."""
     ratings = []
@@ -484,10 +530,23 @@ def generate_json_report(ratings: list[dict], show_consensus: bool = False) -> d
     all_dims = sorted(scores_per_dim.keys())
     complete_dims = [d for d in all_dims if len(scores_per_dim[d]) == n_raters]
 
+    # Try to partition into ground truth vs rated
+    try:
+        rubric = load_rubric_for_partition()
+    except Exception:
+        rubric = None
+
+    ground_truth, rated_dims = partition_dimensions(scores_per_dim, rubric)
+    has_partition = len(ground_truth) > 0
+
+    # Compute ICC on rated dimensions only (if partitioned), else all
+    icc_dims = [d for d in sorted(rated_dims.keys()) if len(rated_dims[d]) == n_raters] if has_partition else complete_dims
+    icc_source = rated_dims if has_partition else scores_per_dim
+
     overall_icc = 0.0
     categorical_agreement: dict | None = None
-    if complete_dims and n_raters >= 2:
-        matrix = [scores_per_dim[d] for d in complete_dims]
+    if icc_dims and n_raters >= 2:
+        matrix = [icc_source[d] for d in icc_dims]
         overall_icc = compute_icc(matrix)
         binned = [[bin_score(s) for s in scores_per_dim[d]] for d in complete_dims]
         if n_raters == 2:
@@ -529,6 +588,13 @@ def generate_json_report(ratings: list[dict], show_consensus: bool = False) -> d
         "overall_interpretation": interpret_agreement(overall_icc),
         "dimensions": per_dim,
     }
+    if has_partition:
+        result["subjective_icc"] = round(overall_icc, 3)
+        result["subjective_interpretation"] = interpret_agreement(overall_icc)
+        result["ground_truth"] = {
+            dim: {"score": scores[0] if scores else None}
+            for dim, scores in ground_truth.items()
+        }
     if categorical_agreement:
         result["categorical_agreement"] = categorical_agreement
 

@@ -281,3 +281,100 @@ class TestDiscoverRatingFiles:
         assert len(files) == 2
         assert files[0].endswith("a.json")
         assert files[1].endswith("b.json")
+
+
+class TestDimensionPartitioning:
+    """Tests for objective/subjective dimension separation in IRA."""
+
+    def test_partition_dimensions_by_type(self):
+        """Objective/subjective split matches diagnose.py constants."""
+        from diagnose import OBJECTIVE_DIMENSIONS, SUBJECTIVE_DIMENSIONS
+        from diagnose_ira import partition_dimensions
+
+        rubric_path = Path(__file__).resolve().parent.parent / "strategy" / "system-grading-rubric.yaml"
+        import yaml
+
+        with open(rubric_path) as f:
+            rubric = yaml.safe_load(f)
+
+        # Build fake ratings with all dimensions
+        fake_scores = {d: [8.0, 7.0, 9.0] for d in list(OBJECTIVE_DIMENSIONS) + list(SUBJECTIVE_DIMENSIONS)}
+        ground_truth, rated = partition_dimensions(fake_scores, rubric)
+
+        assert set(ground_truth.keys()) == set(OBJECTIVE_DIMENSIONS)
+        assert set(rated.keys()) == set(SUBJECTIVE_DIMENSIONS)
+
+    def test_icc_subjective_only(self):
+        """ICC computation excludes objective dimensions when rubric available."""
+        from diagnose_ira import partition_dimensions
+
+        rubric_path = Path(__file__).resolve().parent.parent / "strategy" / "system-grading-rubric.yaml"
+        import yaml
+
+        with open(rubric_path) as f:
+            rubric = yaml.safe_load(f)
+
+        scores = {
+            # Objective — identical (SD=0)
+            "test_coverage": [10.0, 10.0, 10.0],
+            "code_quality": [9.4, 9.4, 9.4],
+            "data_integrity": [10.0, 10.0, 10.0],
+            "operational_maturity": [9.5, 9.5, 9.5],
+            "claim_provenance": [5.6, 5.6, 5.6],
+            # Subjective — real variance
+            "architecture": [8.5, 7.0, 6.5],
+            "documentation": [8.0, 7.5, 9.0],
+            "analytics_intelligence": [9.0, 7.5, 8.0],
+            "sustainability": [7.0, 6.0, 8.0],
+        }
+
+        ground_truth, rated = partition_dimensions(scores, rubric)
+
+        # All objective dims should be in ground_truth
+        assert "test_coverage" in ground_truth
+        assert "test_coverage" not in rated
+
+        # ICC on rated only should show real variance
+        icc = compute_icc([rated[d] for d in sorted(rated.keys())])
+        assert icc > 0.0  # Not degenerate
+
+    def test_ground_truth_in_json_output(self):
+        """JSON report contains ground_truth key with objective scores."""
+        ratings = [
+            {
+                "rater_id": f"rater-{i}",
+                "dimensions": {
+                    "test_coverage": {"score": 10.0},
+                    "code_quality": {"score": 9.4},
+                    "data_integrity": {"score": 10.0},
+                    "operational_maturity": {"score": 9.5},
+                    "claim_provenance": {"score": 5.6},
+                    "architecture": {"score": 7.0 + i},
+                    "documentation": {"score": 8.0 + i * 0.5},
+                    "analytics_intelligence": {"score": 8.0},
+                    "sustainability": {"score": 7.0 + i},
+                },
+            }
+            for i in range(3)
+        ]
+
+        result = generate_json_report(ratings, show_consensus=True)
+        assert "ground_truth" in result
+        assert "test_coverage" in result["ground_truth"]
+        assert "subjective_icc" in result
+
+    def test_backward_compat_no_rubric(self, monkeypatch):
+        """All dimensions go through ICC when no rubric file found."""
+        from diagnose_ira import partition_dimensions
+
+        scores = {
+            "test_coverage": [10.0, 10.0, 10.0],
+            "architecture": [8.0, 7.0, 9.0],
+        }
+
+        ground_truth, rated = partition_dimensions(scores, rubric=None)
+
+        # Without rubric, everything goes to rated
+        assert len(ground_truth) == 0
+        assert "test_coverage" in rated
+        assert "architecture" in rated
