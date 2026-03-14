@@ -23,3 +23,12 @@ notifications:
   - flag_for_submission
   - flag_for_submission
   - flag_for_submission
+- event_type: agent_action
+  timestamp: '2026-03-12T07:37:12.041621'
+  summary: Agent executed 5 actions
+  actions:
+  - flag_for_submission
+  - flag_for_submission
+  - flag_for_submission
+  - flag_for_submission
+  - flag_for_submission

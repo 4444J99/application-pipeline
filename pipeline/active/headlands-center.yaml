@@ -1,7 +1,7 @@
 id: headlands-center
 name: Headlands Center for the Arts
 track: residency
-status: staged
+status: deferred
 identity_position: systems-artist
 outcome: null
 target:
@@ -80,3 +80,7 @@ status_meta:
   reviewed_by: 4jp
   reviewed_at: '2026-03-03'
   review_note: autofix-unblocker
+deferral:
+  reason: below_actionable_threshold
+  note: Score below top-10 cutoff (8.3); preserved for future re-evaluation
+  deferred_date: '2026-03-13'

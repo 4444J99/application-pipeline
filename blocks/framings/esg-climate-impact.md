@@ -19,12 +19,12 @@ The ORGANVM system embodies sustainability by design. Digital infrastructure wit
 ## ESG Alignment Points
 
 ### Environmental
-- **Digital-first infrastructure:** 103 repositories with zero manufacturing footprint — the entire system runs on commodity compute
+- **Digital-first infrastructure:** 113 repositories with zero manufacturing footprint — the entire system runs on commodity compute
 - **Open-source multiplication:** Code shared publicly reduces aggregate development effort across the ecosystem, avoiding redundant energy expenditure
 - **Efficient AI usage:** AI-conductor model treats LLM calls as deliberate compositional acts, not brute-force generation — measured in tokens, optimized for quality over quantity
 
 ### Social
-- **Public benefit:** All repositories public, documentation openly accessible, methodology documented in 47 published essays
+- **Public benefit:** All repositories public, documentation openly accessible, methodology documented in 48 published essays
 - **Education pipeline:** 11 years teaching 2,000+ students — direct human capital development
 - **Community infrastructure:** ORGAN-VI reading groups and community channels provide free knowledge-sharing platforms
 

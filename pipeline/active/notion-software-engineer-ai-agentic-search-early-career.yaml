@@ -1,7 +1,7 @@
 id: notion-software-engineer-ai-agentic-search-early-career
 name: Notion Software Engineer, AI Agentic Search, Early Career
 track: job
-status: staged
+status: deferred
 identity_position: independent-engineer
 outcome: null
 target:
@@ -63,3 +63,7 @@ status_meta:
   reviewed_by: 4jp
   reviewed_at: '2026-03-03'
   review_note: autofix-unblocker
+deferral:
+  reason: below_actionable_threshold
+  note: Score below top-10 cutoff (8.3); preserved for future re-evaluation
+  deferred_date: '2026-03-13'

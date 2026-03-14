@@ -14,11 +14,11 @@ tier: single
 
 ## Core Argument
 
-The ORGANVM system constitutes publishable research infrastructure. 103 repositories organized into 8 domain-specific organizations with a formal governance model (validated dependency graph, promotion state machine, Architectural Decision Records) represent a corpus that can anchor academic collaboration in computational governance, digital humanities, and creative AI systems.
+The ORGANVM system constitutes publishable research infrastructure. 113 repositories organized into 8 domain-specific organizations with a formal governance model (validated dependency graph, promotion state machine, Architectural Decision Records) represent a corpus that can anchor academic collaboration in computational governance, digital humanities, and creative AI systems.
 
 ## Academic Value Propositions
 
-- **Research corpus:** 103 repos, ~810K+ words of documentation, 47 published essays — not a side project but a documented research program with verifiable methodology
+- **Research corpus:** 113 repos, ~810K+ words of documentation, 48 published essays — not a side project but a documented research program with verifiable methodology
 - **Governance-as-art:** Constitutional governance encoded as machine-readable rules is a publishable framework at the intersection of computer science, political theory, and media art
 - **Community research platforms:** ORGAN-V (Logos, public discourse) and ORGAN-VI (Koinonia, community) provide infrastructure for participatory research and community-engaged scholarship
 - **AI methodology:** The AI-conductor model (human directs, AI generates, human reviews) offers a replicable framework for studying human-AI collaboration at scale

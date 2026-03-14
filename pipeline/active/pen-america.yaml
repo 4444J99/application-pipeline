@@ -1,7 +1,7 @@
 id: pen-america
 name: PEN America Writers Aid
 track: emergency
-status: staged
+status: deferred
 identity_position: community-practitioner
 outcome: null
 target:
@@ -72,9 +72,9 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 deferral:
-  reason: cycle_not_open
-  resume_date: '2026-03-01'
-  note: Quarterly cycles. Portal for March 16 deadline typically opens 2-3 weeks prior.
+  reason: below_threshold
+  note: "Score below 9.0 precision minimum; deadline imminent but not worth diluting pipeline focus"
+  deferred_date: '2026-03-13'
 notes: Quarterly cycles for 2026. Portal for March 16 deadline typically opens 2-3
   weeks prior. Check portal daily starting March 1.
 last_touched: '2026-03-03'

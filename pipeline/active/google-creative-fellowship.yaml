@@ -1,7 +1,11 @@
 id: google-creative-fellowship
 name: Google Creative Fellowship
 track: fellowship
-status: staged
+status: deferred
+deferral:
+  reason: below_threshold
+  note: "Score below 9.0 precision minimum; deadline imminent but not worth diluting pipeline focus"
+  deferred_date: '2026-03-13'
 identity_position: educator
 outcome: null
 target:

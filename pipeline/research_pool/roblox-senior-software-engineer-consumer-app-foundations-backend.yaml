@@ -1,0 +1,43 @@
+id: roblox-senior-software-engineer-consumer-app-foundations-backend
+name: Roblox Senior Software Engineer, Consumer App Foundations (Backend)
+track: job
+status: research
+outcome: null
+target:
+  organization: Roblox
+  url: https://boards.greenhouse.io/roblox
+  application_url: https://careers.roblox.com/jobs/7360413?gh_jid=7360413
+  portal: greenhouse
+  location: San Mateo, CA, United States
+  location_class: us-onsite
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-13'
+  posting_date: '2026-03-12'
+  date_added: '2026-03-13'
+  discovered: '2026-03-13T10:16:06.617905+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-13'

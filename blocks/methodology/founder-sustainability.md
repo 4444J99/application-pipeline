@@ -19,7 +19,7 @@ Solo practitioners face a 73% burnout prevalence rate. The ORGANVM system treats
 
 **Peer accountability.** ORGAN-VI (Koinonia) operates reading groups and community channels that provide external perspective on pace and scope. These function as informal advisory boards — peers who see the work and flag unsustainable patterns before they compound.
 
-**Professional support.** Proactive engagement with coaching and therapeutic support as preventive infrastructure, not crisis response. The same systematic thinking applied to 103 repositories applies to personal capacity management.
+**Professional support.** Proactive engagement with coaching and therapeutic support as preventive infrastructure, not crisis response. The same systematic thinking applied to 113 repositories applies to personal capacity management.
 
 ## Key Metric
 33 named sprints completed with documented retrospectives — sustained production over years, not months.

@@ -302,7 +302,7 @@
 
 ### What Works Across All Domains
 
-1. **Lead with evidence, not claims.** Whether it is a pitch deck, grant application, or GitHub profile, quantified results beat adjectives. ("103 repositories" > "prolific coder.")
+1. **Lead with evidence, not claims.** Whether it is a pitch deck, grant application, or GitHub profile, quantified results beat adjectives. ("113 repositories" > "prolific coder.")
 
 2. **Vertical depth defeats horizontal breadth.** VCs want vertical AI, grant reviewers want domain-specific proposals, and recruiters want focused portfolios. Going deep signals seriousness.
 

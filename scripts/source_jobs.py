@@ -40,6 +40,8 @@ from pipeline_lib import (
 )
 from source_jobs_constants import (
     HTTP_TIMEOUT,
+    JOBSPY_DEFAULT_SITES,
+    JOBSPY_RESULTS_PER_SITE,
     TITLE_EXCLUDES,
     TITLE_KEYWORDS,
 )
@@ -269,6 +271,10 @@ COMPANY_DISPLAY_NAMES = {
     "assembly": "Assembly AI",
     "beam": "Beam",
     "fig": "Fig",
+    # SmartRecruiters boards
+    # (add entries as configured in .job-sources.yaml)
+    # Workable boards
+    # (add entries as configured in .job-sources.yaml)
 }
 
 
@@ -406,6 +412,171 @@ def fetch_ashby_jobs(company: str) -> list[dict]:
             "posting_date": posting_date,
         })
     return results
+
+
+def fetch_smartrecruiters_jobs(company_id: str) -> list[dict]:
+    """Fetch jobs from SmartRecruiters public job board API."""
+    url = f"https://api.smartrecruiters.com/v1/companies/{company_id}/postings"
+    try:
+        raw = _http_get(url)
+        data = json.loads(raw)
+    except (HTTPError, URLError, json.JSONDecodeError) as e:
+        print(f"  [smartrecruiters/{company_id}] Error: {e}", file=sys.stderr)
+        return []
+
+    postings = data.get("content", [])
+    results = []
+    for posting in postings:
+        location = posting.get("location", {})
+        loc_str = location.get("city", "") if isinstance(location, dict) else ""
+        country = location.get("country", "") if isinstance(location, dict) else ""
+        if country and loc_str:
+            loc_str = f"{loc_str}, {country}"
+        elif country:
+            loc_str = country
+
+        raw_date = posting.get("releasedDate", "")
+        posting_date = raw_date[:10] if raw_date else None
+        posting_url = posting.get("ref", "") or posting.get("applyUrl", "")
+
+        results.append({
+            "title": posting.get("name", ""),
+            "id": str(posting.get("id", "")),
+            "url": posting_url,
+            "location": loc_str,
+            "company": company_id,
+            "company_display": COMPANY_DISPLAY_NAMES.get(company_id, company_id.title()),
+            "portal": "smartrecruiters",
+            "company_url": f"https://jobs.smartrecruiters.com/{company_id}",
+            "posting_date": posting_date,
+        })
+    return results
+
+
+def fetch_workable_jobs(subdomain: str) -> list[dict]:
+    """Fetch jobs from Workable public SPI API."""
+    url = f"https://{subdomain}.workable.com/spi/v3/jobs"
+    try:
+        raw = _http_get(url)
+        data = json.loads(raw)
+    except (HTTPError, URLError, json.JSONDecodeError) as e:
+        print(f"  [workable/{subdomain}] Error: {e}", file=sys.stderr)
+        return []
+
+    jobs = data.get("results", [])
+    results = []
+    for job in jobs:
+        loc_parts = [job.get("city", ""), job.get("state", ""), job.get("country", "")]
+        loc_str = ", ".join(p for p in loc_parts if p)
+
+        shortcode = job.get("shortcode", "")
+        posting_url = f"https://apply.workable.com/{subdomain}/j/{shortcode}" if shortcode else ""
+        raw_date = job.get("published_on", "")
+        posting_date = raw_date[:10] if raw_date else None
+
+        results.append({
+            "title": job.get("title", ""),
+            "id": str(job.get("id", shortcode or "")),
+            "url": posting_url,
+            "location": loc_str,
+            "company": subdomain,
+            "company_display": COMPANY_DISPLAY_NAMES.get(subdomain, subdomain.title()),
+            "portal": "workable",
+            "company_url": f"https://{subdomain}.workable.com",
+            "posting_date": posting_date,
+        })
+    return results
+
+
+def fetch_jobspy_jobs(
+    search_terms: list[str] | None = None,
+    site_names: list[str] | None = None,
+    results_wanted: int = 50,
+    hours_old: int = 72,
+) -> list[dict]:
+    """Fetch jobs from multiple platforms via JobSpy scraper.
+
+    Requires: pip install python-jobspy
+    Returns list of normalized job dicts matching our pipeline format.
+    """
+    try:
+        from jobspy import scrape_jobs
+    except ImportError:
+        print("  [jobspy] python-jobspy not installed. Run: pip install python-jobspy", file=sys.stderr)
+        return []
+
+    if search_terms is None:
+        # Use a subset of TITLE_KEYWORDS that work well as search queries
+        search_terms = [
+            "software engineer",
+            "developer advocate",
+            "developer experience",
+            "technical writer",
+            "solutions engineer",
+            "ai engineer",
+        ]
+    if site_names is None:
+        site_names = JOBSPY_DEFAULT_SITES
+
+    all_results = []
+    for term in search_terms:
+        try:
+            df = scrape_jobs(
+                site_name=site_names,
+                search_term=term,
+                results_wanted=results_wanted,
+                hours_old=hours_old,
+                country_indeed="USA",
+            )
+        except Exception as e:
+            print(f"  [jobspy] Error searching '{term}': {e}", file=sys.stderr)
+            continue
+
+        if df is None or df.empty:
+            continue
+
+        for _, row in df.iterrows():
+            site = str(row.get("site", "")).lower()
+            portal_map = {
+                "linkedin": "linkedin",
+                "indeed": "indeed",
+                "glassdoor": "glassdoor",
+                "zip_recruiter": "ziprecruiter",
+            }
+            portal = portal_map.get(site, site)
+
+            posting_date = None
+            date_posted = row.get("date_posted")
+            if date_posted is not None:
+                try:
+                    posting_date = str(date_posted)[:10]
+                except Exception:
+                    pass
+
+            company_name = str(row.get("company_name", "")) or ""
+            company_slug = re.sub(r"[^a-z0-9]", "", company_name.lower())
+
+            all_results.append({
+                "title": str(row.get("title", "")),
+                "id": str(row.get("id", "")),
+                "url": str(row.get("job_url", "")),
+                "location": str(row.get("location", "")),
+                "company": company_slug,
+                "company_display": company_name,
+                "portal": portal,
+                "company_url": "",
+                "posting_date": posting_date,
+            })
+
+    # Deduplicate by URL within JobSpy results
+    seen_urls = set()
+    unique = []
+    for job in all_results:
+        if job["url"] and job["url"] not in seen_urls:
+            seen_urls.add(job["url"])
+            unique.append(job)
+
+    return unique
 
 
 def filter_by_title(jobs: list[dict], keywords: list[str], excludes: list[str]) -> list[dict]:
@@ -782,6 +953,12 @@ def main():
                         help="Include all jobs regardless of posting age (overrides --fresh-only)")
     parser.add_argument("--backfill-locations", action="store_true",
                         help="Add target.location and target.location_class to existing entries")
+    parser.add_argument("--purge-stale", action="store_true",
+                        help="After fetch, run 72h flash reaper on research_pool (archives entries >72h old)")
+    parser.add_argument("--jobspy", action="store_true",
+                        help="Include results from JobSpy multi-platform scraper (LinkedIn, Indeed, Glassdoor)")
+    parser.add_argument("--jobspy-sites", default="linkedin,indeed,glassdoor",
+                        help="Comma-separated JobSpy sites (default: linkedin,indeed,glassdoor)")
     args = parser.parse_args()
 
     if args.list_sources:
@@ -848,6 +1025,45 @@ def main():
             if filtered:
                 print(f"  {display}: {len(filtered)} matched / {len(jobs)} total")
             all_jobs.extend(filtered)
+
+        smartrecruiters_companies = sources.get("smartrecruiters") or []
+        workable_subdomains = sources.get("workable") or []
+
+        if smartrecruiters_companies:
+            print(f"\nFetching from {len(smartrecruiters_companies)} SmartRecruiters boards...")
+            for company_id in smartrecruiters_companies:
+                jobs = fetch_smartrecruiters_jobs(company_id)
+                display = COMPANY_DISPLAY_NAMES.get(company_id, company_id)
+                filtered = filter_by_title(jobs, TITLE_KEYWORDS, TITLE_EXCLUDES)
+                fetched_counts[f"smartrecruiters/{company_id}"] = {"total": len(jobs), "matched": len(filtered)}
+                if filtered:
+                    print(f"  {display}: {len(filtered)} matched / {len(jobs)} total")
+                all_jobs.extend(filtered)
+
+        if workable_subdomains:
+            print(f"\nFetching from {len(workable_subdomains)} Workable boards...")
+            for subdomain in workable_subdomains:
+                jobs = fetch_workable_jobs(subdomain)
+                display = COMPANY_DISPLAY_NAMES.get(subdomain, subdomain)
+                filtered = filter_by_title(jobs, TITLE_KEYWORDS, TITLE_EXCLUDES)
+                fetched_counts[f"workable/{subdomain}"] = {"total": len(jobs), "matched": len(filtered)}
+                if filtered:
+                    print(f"  {display}: {len(filtered)} matched / {len(jobs)} total")
+                all_jobs.extend(filtered)
+
+        # JobSpy multi-platform scraper (opt-in)
+        if args.jobspy:
+            jobspy_sites = [s.strip() for s in args.jobspy_sites.split(",")]
+            print(f"\nFetching from JobSpy ({', '.join(jobspy_sites)})...")
+            jobspy_jobs = fetch_jobspy_jobs(
+                site_names=jobspy_sites,
+                results_wanted=JOBSPY_RESULTS_PER_SITE,
+                hours_old=int(FRESH_ONLY_MAX_HOURS),
+            )
+            jobspy_filtered = filter_by_title(jobspy_jobs, TITLE_KEYWORDS, TITLE_EXCLUDES)
+            fetched_counts["jobspy"] = {"total": len(jobspy_jobs), "matched": len(jobspy_filtered)}
+            print(f"  JobSpy: {len(jobspy_filtered)} matched / {len(jobspy_jobs)} total")
+            all_jobs.extend(jobspy_filtered)
 
         # Deduplicate
         unique_jobs = deduplicate(all_jobs, existing_ids)
@@ -934,6 +1150,15 @@ def main():
             "new_entries": len(created),
             "sources": fetched_counts,
         })
+
+        # Post-fetch: purge stale research entries if requested
+        if args.purge_stale:
+            print(f"\n{'=' * 60}")
+            print("Running 72h flash reaper on research_pool...")
+            from hygiene import run_prune_research
+            pool_entries = load_entries(dirs=[PIPELINE_DIR_RESEARCH_POOL], include_filepath=True)
+            execute = args.yes and not args.dry_run
+            run_prune_research(pool_entries, dry_run=not execute, flash=True)
 
 
 if __name__ == "__main__":

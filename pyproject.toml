@@ -19,6 +19,7 @@ dev = [
     "pytest-mock",
     "ruff",
 ]
+jobspy = ["python-jobspy>=1.1"]
 
 [build-system]
 requires = ["setuptools>=64"]

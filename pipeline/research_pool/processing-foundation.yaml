@@ -1,0 +1,76 @@
+id: processing-foundation
+name: Processing Foundation Fellowship
+track: fellowship
+status: research
+identity_position: educator
+outcome: null
+target:
+  organization: Processing Foundation
+  url: https://processingfoundation.org
+  application_url: https://processingfoundation.org/fellowships
+  portal: custom
+deadline:
+  date: null
+  time: null
+  type: tba
+amount:
+  value: 10000
+  currency: USD
+  type: lump_sum
+  benefits_cliff_note: null
+fit:
+  score: 6.3
+  original_score: 6.5
+  identity_position: educator
+  framing: Educator and creative coder advancing open-source tools for artistic computation
+  lead_organs:
+  - I
+  - III
+  - VI
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 5
+    track_record_fit: 5
+    financial_alignment: 9
+    effort_to_value: 6
+    strategic_value: 6
+    deadline_feasibility: 9
+    portal_friction: 6
+submission:
+  effort_level: standard
+  blocks_used:
+    artist_statement: identity/2min
+    project_description: projects/organvm-system
+  variant_ids:
+    cover_letter: cover-letters/grant-art-template
+  materials_attached:
+  - resumes/batch-03/processing-foundation/processing-foundation-resume.html
+  - resumes/batch-03/processing-foundation/processing-foundation-resume.pdf
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-02-14'
+  date_added: 2026-02-14
+  qualified: '2026-02-16'
+  materials_ready: '2026-02-23'
+  submitted: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+portal_fields:
+  fields:
+  - name: project_description
+  - name: bio
+  - name: work_samples
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags: []
+source: 04-application-tracker.md
+notes: Approximate deadline Apr-May 2026 TBA.
+last_touched: '2026-03-03'
+status_meta:
+  reviewed_by: 4jp
+  reviewed_at: '2026-03-03'
+  review_note: autofix-unblocker

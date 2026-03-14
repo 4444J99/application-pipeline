@@ -8,8 +8,8 @@ Detailed version: `organvm-corpvs-testamentvm/docs/applications/09-qualification
 
 | Claim | Evidence | Verification |
 |-------|----------|-------------|
-| 103 repos across 8 orgs | registry-v2.json | `jq '.summary.total_repos' registry-v2.json` |
-| 47 published essays (~142K words) | public-process/_posts/ | Counted at deploy |
+| 113 repos across 8 orgs | registry-v2.json | `jq '.summary.total_repos' registry-v2.json` |
+| 48 published essays (~142K words) | public-process/_posts/ | Counted at deploy |
 | ~810K+ total documentation | Aggregate across all repos | system-metrics.json |
 | 33 development sprints | docs/specs/sprints/ | 01-ignition through 33-operatio |
 | 2,349+ tests | agentic-titan (1,095) + recursive-engine (1,254) | Package test suites |
@@ -23,7 +23,7 @@ Detailed version: `organvm-corpvs-testamentvm/docs/applications/09-qualification
 |-----|---------|-------------|
 | No production users | Beta not yet deployed, 291 tests pass | "Feature-complete, preparing for beta deployment" |
 | No collaborative team engineering | All 5 years solo | "Independent engineering practice" |
-| No published book | 47 essays (~879K+ words) | "Sustained nonfiction practice" / "book-length corpus" |
+| No published book | 48 essays (~810K+ words) | "Sustained nonfiction practice" / "book-length corpus" |
 | No gallery exhibitions | Portfolio site + generative art | "Digital exhibition" via portfolio site |
 | No institutional affiliation | Adjunct instructor | "Independent practitioner" |
 | Limited ML knowledge | Uses LLM APIs, doesn't train models | "AI orchestration" not "ML engineering" |

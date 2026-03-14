@@ -24,11 +24,11 @@
     {
       "name": "Eight-Organ System Hub",
       "url": "https://github.com/meta-organvm/organvm-corpvs-testamentvm",
-      "description": "103 repositories, 8 organizations, 47 essays, ~810K words of documentation"
+      "description": "113 repositories, 8 organizations, 48 essays, ~810K words of documentation"
     }
   ],
   "evidence_highlights": [
-    "103 repositories with 2,349+ automated tests across flagship frameworks",
+    "113 repositories with 2,349+ automated tests across flagship frameworks",
     "82+ CI/CD workflows with automated governance and promotion state machine",
     "AI-conductor methodology: AI generates volume, human directs architecture"
   ],

@@ -4,7 +4,7 @@
 
 Grant reviewers read 200 applications in an afternoon. Hiring managers spend 30 seconds on a resume. The first 60 seconds determine whether anyone reads further.
 
-The cathedral — 103 repos, 47 essays, ~879K+ words, 33 sprints — is the substance. But substance without a storefront is invisible.
+The cathedral — 113 repos, 48 essays, ~810K+ words, 33 sprints — is the substance. But substance without a storefront is invisible.
 
 ## Translation Rules
 
@@ -12,7 +12,7 @@ The cathedral — 103 repos, 47 essays, ~879K+ words, 33 sprints — is the subs
 
 **Cathedral:** "I design environments where creative organisms grow — and then I document the process of growing them."
 
-**Storefront:** "105 repositories across 8 organizations, built and documented by one person using AI as a compositional instrument."
+**Storefront:** "113 repositories across 8 organizations, built and documented by one person using AI as a compositional instrument."
 
 
 *Why:* Numbers are scannable. Concepts require attention the reviewer hasn't committed yet.
@@ -21,7 +21,7 @@ The cathedral — 103 repos, 47 essays, ~879K+ words, 33 sprints — is the subs
 
 **Cathedral:** "The system is simultaneously: (a) working infrastructure that produces creative work, (b) a documented methodology for solo production at institutional scale, (c) an argument that the process of creation — made visible and governable — is itself the most interesting thing an artist can produce, and (d) a reusable model other practitioners can learn from."
 
-**Storefront:** "A 103-repository creative system that treats governance as its primary artistic medium."
+**Storefront:** "A 113-repository creative system that treats governance as its primary artistic medium."
 
 *Why:* Multiple claims dilute each other at scanning speed. Pick the one that fits the target.
 
@@ -50,9 +50,9 @@ The same work needs different storefronts:
 
 | Audience | Storefront lead |
 |----------|----------------|
-| Art grant panel | "Governance IS the artwork — 103 repos as a living creative system" |
+| Art grant panel | "Governance IS the artwork — 113 repos as a living creative system" |
 | Tech fellowship | "Production-grade AI orchestration: 2,349 tests, automated governance, zero violations" |
-| Writing grant | "47 essays, ~879K+ words documenting the process of building creative infrastructure" |
+| Writing grant | "48 essays, ~810K+ words documenting the process of building creative infrastructure" |
 | Emergency fund | "Housing-precarious NYC artist with 5+ years sustained creative practice" |
 
 ### Rule 6: Address Known Gaps Preemptively
@@ -61,9 +61,9 @@ Every reviewer notices what's missing. Frame gaps as trajectory, not absence.
 
 | Gap | How to Frame |
 |-----|-------------|
-| No external awards yet | "The 105-repo system was built in 18 months — this evaluation framework is itself evidence of the methodology" |
+| No external awards yet | "The 113-repo system was built in 18 months — this evaluation framework is itself evidence of the methodology" |
 | No gallery exhibitions | "The portfolio site is a digital exhibition; the public process essays are the curatorial statement" |
-| No published book | "47 essays totaling ~879K+ words — a book-length corpus published as process, not artifact" |
+| No published book | "48 essays totaling ~810K+ words — a book-length corpus published as process, not artifact" |
 | No institutional affiliation | "Independent practitioner — the system demonstrates that institutional-scale work doesn't require an institution" |
 | No collaborative team experience | "Solo production at institutional scale IS the methodology — one architectural vision sustained across 8 organizations" |
 

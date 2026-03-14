@@ -137,6 +137,11 @@
 #   follow_up_count: integer — number of follow-up actions taken
 #   outcome_stage: Where in the funnel the outcome occurred
 #     enum: resume_screen | phone_screen | technical | onsite | offer | null
+#   rejection_signal: Quality level of the rejection signal
+#     enum: automated | screened | personalized
+#     automated: ATS-generated, no human review (<=3 days, template language)
+#     screened: Human reviewed materials, standard rejection (4-21 days)
+#     personalized: Specific feedback, named reviewer, or post-interview (>21 days or contains feedback)
 
 # --- Follow-Up Tracking ---
 # follow_up: List of follow-up actions for this entry

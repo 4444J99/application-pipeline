@@ -19,6 +19,7 @@ import json
 import os
 import re
 import sys
+import time
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -662,7 +663,37 @@ def submit_to_greenhouse(
         return False
 
 
-def process_entry(entry: dict, config: dict, do_submit: bool) -> bool:
+def _log_submission_timestamp(entry_id: str) -> None:
+    """Record submission timestamp in the pipeline YAML entry."""
+    from datetime import date as _date
+
+    from pipeline_lib import load_entry_by_id as _load
+    from yaml_mutation import YAMLEditor as _Editor
+
+    filepath, entry = _load(entry_id)
+    if not filepath or not entry:
+        print(f"  Warning: Could not find entry {entry_id} to log timestamp", file=sys.stderr)
+        return
+    content = Path(filepath).read_text()
+    editor = _Editor(content)
+    editor.set("timeline.submitted", _date.today().isoformat())
+    editor.set("status", "submitted")
+    editor.touch()
+    Path(filepath).write_text(editor.dump())
+    print("  Logged submission timestamp and advanced status to 'submitted'")
+
+
+def _confirm_submission(entry_id: str, name: str) -> bool:
+    """Interactive confirmation prompt before real submission."""
+    try:
+        answer = input(f"\n  Submit {name} ({entry_id})? [y/N] ").strip().lower()
+        return answer in ("y", "yes")
+    except (EOFError, KeyboardInterrupt):
+        print("\n  Cancelled.")
+        return False
+
+
+def process_entry(entry: dict, config: dict, do_submit: bool, confirm: bool = False) -> bool:
     """Process a single Greenhouse entry. Returns True if successful."""
     entry_id = entry.get("id", "?")
     name = entry.get("name", entry_id)
@@ -743,6 +774,11 @@ def process_entry(entry: dict, config: dict, do_submit: bool) -> bool:
         print(f"  Run --init-answers --target {entry_id} to generate answer template")
         return False
 
+    # Interactive confirmation if requested
+    if confirm and not _confirm_submission(entry_id, name):
+        print(f"  Skipped {entry_id}")
+        return False
+
     # Actually submit
     portfolio_url = ""
     submission = entry.get("submission", {})
@@ -750,11 +786,16 @@ def process_entry(entry: dict, config: dict, do_submit: bool) -> bool:
         portfolio_url = submission.get("portfolio_url", "")
 
     print(f"\nSubmitting: {name} ({board_token}/{job_id})...")
-    return submit_to_greenhouse(
+    success = submit_to_greenhouse(
         board_token, job_id, config,
         cover_letter_text, resume_path, portfolio_url,
         answers=resolved_answers,
     )
+
+    if success:
+        _log_submission_timestamp(entry_id)
+
+    return success
 
 
 def find_greenhouse_entries() -> list[dict]:
@@ -765,6 +806,8 @@ def find_greenhouse_entries() -> list[dict]:
 
 def main():
     parser = build_common_argparse("Greenhouse Job Board")
+    parser.add_argument("--confirm", action="store_true",
+                        help="Interactive confirmation prompt before each submission")
     args = parser.parse_args()
 
     if not args.target and not args.batch:
@@ -819,10 +862,14 @@ def main():
         print()
 
         results = []
-        for entry in entries:
-            ok = process_entry(entry, config, args.submit)
+        for i, entry in enumerate(entries):
+            ok = process_entry(entry, config, args.submit, confirm=getattr(args, "confirm", False))
             results.append((entry.get("id"), ok))
             print()
+            # Rate-limit between batch submissions to avoid bot detection
+            if args.submit and i < len(entries) - 1:
+                print("  (waiting 3s before next submission...)")
+                time.sleep(3)
 
         # Summary
         print("=" * 60)
@@ -834,7 +881,7 @@ def main():
         if failed:
             sys.exit(1)
     else:
-        ok = process_entry(entries[0], config, args.submit)
+        ok = process_entry(entries[0], config, args.submit, confirm=getattr(args, "confirm", False))
         if not ok and args.submit:
             sys.exit(1)
 

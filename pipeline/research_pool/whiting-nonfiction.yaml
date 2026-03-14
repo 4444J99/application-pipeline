@@ -1,0 +1,81 @@
+id: whiting-nonfiction
+name: Whiting Creative Nonfiction Grant
+track: grant
+status: research
+identity_position: systems-artist
+outcome: null
+target:
+  organization: Whiting Foundation
+  url: https://whiting.org
+  application_url: https://whiting.org/writers/creative-nonfiction-grant
+  portal: custom
+deadline:
+  date: null
+  time: null
+  type: tba
+amount:
+  value: 40000
+  currency: USD
+  type: lump_sum
+  benefits_cliff_note: Exceeds Medicaid -> Essential Plan. Call NYLAG.
+fit:
+  score: 7.8
+  original_score: 8.0
+  identity_position: systems-artist
+  framing: Systems artist and nonfiction writer exploring recursive structures in
+    institutional critique
+  lead_organs:
+  - I
+  - V
+  - META
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 8
+    track_record_fit: 8
+    financial_alignment: 4
+    effort_to_value: 6
+    strategic_value: 10
+    deadline_feasibility: 9
+    portal_friction: 6
+submission:
+  effort_level: standard
+  blocks_used:
+    artist_statement: identity/5min
+    project_description: projects/organvm-system
+    methodology: methodology/process-as-product
+    evidence: evidence/work-samples
+    framing: framings/systems-artist
+  variant_ids:
+    cover_letter: cover-letters/grant-art-template
+  materials_attached:
+  - resumes/batch-03/whiting-nonfiction/whiting-nonfiction-resume.html
+  - resumes/batch-03/whiting-nonfiction/whiting-nonfiction-resume.pdf
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-02-14'
+  date_added: 2026-02-14
+  qualified: '2026-02-16'
+  materials_ready: '2026-02-23'
+  submitted: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+portal_fields:
+  fields:
+  - name: writing_sample
+  - name: project_description
+  - name: bio
+  - name: references
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags: []
+source: 04-application-tracker.md
+notes: Approximate deadline Apr 2026 TBA.
+last_touched: '2026-03-03'
+status_meta:
+  reviewed_by: 4jp
+  reviewed_at: '2026-03-03'
+  review_note: autofix-unblocker

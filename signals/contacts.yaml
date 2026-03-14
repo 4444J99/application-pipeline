@@ -1,0 +1,29 @@
+contacts:
+- name: Tony Carbone
+  organization: Alternative Funding Group
+  role: Unknown
+  channel: email
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-13'
+    type: email
+    note: 'Inbound: interested in scaling underwriting automation and SaaS expansion
+      for MCA/forward funding. Found via GitHub projects.'
+  pipeline_entries: []
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Vincent Jiang
+  organization: AdenHQ
+  role: Unknown
+  channel: email
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-13'
+    type: email
+    note: 'Inbound: Discord invite for AI agent builder community (Hive). Multiple
+      team members subsequently starred/followed GitHub profile.'
+  pipeline_entries: []
+  tags: []
+  next_action: ''
+  next_action_date: ''

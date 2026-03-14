@@ -179,6 +179,86 @@ def classify_email(subject: str, body: str | None) -> str:
     return "update"
 
 
+# Template phrases that indicate an automated/ATS-generated rejection
+_AUTOMATED_TEMPLATE_PHRASES = (
+    "after careful consideration",
+    "we regret",
+    "decided to move forward with",
+    "not moving forward",
+    "other candidates",
+)
+
+# Patterns that indicate a personalized rejection (named reviewer)
+_NAMED_REVIEWER_RE = re.compile(
+    r"(?:From|Regards|Best|Sincerely)[,:\s]+([A-Z][a-z]+ [A-Z][a-z]+)"
+    r"[,\s]*(?:Recruiter|Hiring|Manager|Director|Lead|VP|Head|HR|People|Talent)",
+    re.MULTILINE,
+)
+
+# Keywords indicating specific feedback (personalized signal)
+_SPECIFIC_FEEDBACK_KEYWORDS = (
+    "your experience with",
+    "your background in",
+    "we encourage you to reapply",
+    "feedback",
+    "specific skills",
+    "for this particular role",
+)
+
+
+def classify_rejection_signal(
+    subject: str,
+    body: str | None,
+    time_to_response_days: int | None,
+) -> str:
+    """Classify the quality level of a rejection email signal.
+
+    Returns one of: automated, screened, personalized.
+
+    Classification hierarchy:
+    1. Body content analysis (strongest signal)
+       - Named reviewer + title pattern -> personalized
+       - Specific feedback keywords -> personalized
+       - Template phrases only -> weighted toward automated
+    2. Time-based heuristic (fallback)
+       - <=3 days -> automated
+       - 4-21 days -> screened
+       - >21 days -> personalized
+    """
+    body_text = (body or "").lower()
+    template_hits = 0
+    personalized_hits = 0
+
+    # Check for template/automated phrases
+    for phrase in _AUTOMATED_TEMPLATE_PHRASES:
+        if phrase in body_text:
+            template_hits += 1
+
+    # Check for named reviewer (strong personalized signal)
+    if body and _NAMED_REVIEWER_RE.search(body):
+        personalized_hits += 2
+
+    # Check for specific feedback content
+    for kw in _SPECIFIC_FEEDBACK_KEYWORDS:
+        if kw in body_text:
+            personalized_hits += 1
+
+    # Content-based decision when we have body evidence
+    if personalized_hits >= 2:
+        return "personalized"
+    if template_hits >= 2 and personalized_hits == 0:
+        return "automated"
+
+    # Time-based fallback
+    if time_to_response_days is not None:
+        if time_to_response_days <= 3:
+            return "automated"
+        if time_to_response_days > 21:
+            return "personalized"
+
+    return "screened"
+
+
 def normalize_org(name: str) -> str:
     """Normalize an organization name for fuzzy matching."""
     return re.sub(r"[^a-z0-9]", "", name.lower())
@@ -702,12 +782,48 @@ def record_outcomes(
     for item in actionable:
         outcome = "rejected" if item["classification"] == "rejection" else "interview"
         if dry_run:
-            print(f"  Would record: {item['entry_id']} → {outcome}")
+            signal_str = ""
+            if outcome == "rejected":
+                # Compute time_to_response for signal inference
+                ttr = None
+                for e in (entries or []):
+                    if e.get("id") == item["entry_id"]:
+                        timeline = e.get("timeline", {})
+                        sub_date = parse_date(timeline.get("submitted")) if isinstance(timeline, dict) else None
+                        if sub_date and item.get("email_date"):
+                            ttr = (item["email_date"] - sub_date).days
+                        break
+                signal = classify_rejection_signal(
+                    item.get("email_subject", ""),
+                    item.get("snippet", ""),
+                    ttr,
+                )
+                signal_str = f" [signal: {signal}]"
+            print(f"  Would record: {item['entry_id']} → {outcome}{signal_str}")
         else:
             print(f"  Recording: {item['entry_id']} → {outcome}")
             try:
                 if outcome == "rejected":
-                    record_outcome(item["entry_id"], "rejected", stage="resume_screen")
+                    # Compute time_to_response for signal classification
+                    ttr = None
+                    for e in (entries or []):
+                        if e.get("id") == item["entry_id"]:
+                            timeline = e.get("timeline", {})
+                            sub_date = parse_date(timeline.get("submitted")) if isinstance(timeline, dict) else None
+                            if sub_date and item.get("email_date"):
+                                ttr = (item["email_date"] - sub_date).days
+                            break
+                    signal = classify_rejection_signal(
+                        item.get("email_subject", ""),
+                        item.get("snippet", ""),
+                        ttr,
+                    )
+                    print(f"    Rejection signal: {signal}")
+                    record_outcome(
+                        item["entry_id"], "rejected",
+                        stage="resume_screen",
+                        rejection_signal=signal,
+                    )
                 else:
                     record_outcome(item["entry_id"], "acknowledged")
                     print("    Note: Interview detected — review manually for status update")

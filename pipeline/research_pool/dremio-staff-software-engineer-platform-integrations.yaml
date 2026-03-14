@@ -1,0 +1,43 @@
+id: dremio-staff-software-engineer-platform-integrations
+name: 'Dremio Staff Software Engineer - Platform & Integrations '
+track: job
+status: research
+outcome: null
+target:
+  organization: Dremio
+  url: https://boards.greenhouse.io/dremio
+  application_url: https://www.dremio.com/careers/job-postings/?gh_jid=7659533003
+  portal: greenhouse
+  location: Portugal - Remote
+  location_class: remote-global
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-13'
+  posting_date: '2026-03-12'
+  date_added: '2026-03-13'
+  discovered: '2026-03-13T10:16:06.637183+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-13'

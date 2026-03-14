@@ -76,6 +76,34 @@ VALID_REJECTION_REASONS = {
     "no_response",
     "unknown",
 }
+VALID_REJECTION_SIGNALS = {"automated", "screened", "personalized"}
+
+# Keywords that suggest a personalized rejection (human reviewer engagement)
+_PERSONALIZED_KEYWORDS = (
+    "reapply", "feedback", "specific", "unfortunately we", "your experience",
+)
+
+
+def infer_rejection_signal(time_to_response_days: int | None, note: str = "") -> str:
+    """Infer the quality level of a rejection signal from timing and content.
+
+    Returns one of: automated, screened, personalized.
+    - <=3 days: automated (ATS-generated, no human review)
+    - 4-21 days: screened (human reviewed materials)
+    - >21 days or personalization keywords present: personalized
+    """
+    note_lower = (note or "").lower()
+    for kw in _PERSONALIZED_KEYWORDS:
+        if kw in note_lower:
+            return "personalized"
+
+    if time_to_response_days is None:
+        return "screened"
+    if time_to_response_days <= 3:
+        return "automated"
+    if time_to_response_days <= 21:
+        return "screened"
+    return "personalized"
 
 
 def get_submitted_entries() -> list[dict]:
@@ -208,6 +236,7 @@ def record_outcome(
     rejection_reason: str | None = None,
     rejection_theme: str | None = None,
     rejection_evidence: str = "",
+    rejection_signal: str | None = None,
     _hypothesis_category: str | None = None,
     _hypothesis_text: str | None = None,
 ):
@@ -278,6 +307,8 @@ def record_outcome(
             conv["rejection_theme"] = rejection_theme
         if rejection_evidence:
             conv["rejection_evidence"] = rejection_evidence
+        if rejection_signal:
+            conv["rejection_signal"] = rejection_signal
 
     # Re-serialize with preserved order where possible (using safe_load then dump)
     content = yaml.dump(data, default_flow_style=False, sort_keys=False, allow_unicode=True)
@@ -293,6 +324,7 @@ def record_outcome(
         time_to_response,
         rejection_reason=rejection_reason,
         rejection_theme=rejection_theme,
+        rejection_signal=rejection_signal,
     )
 
     # Move to closed/ for terminal outcomes
@@ -314,6 +346,8 @@ def record_outcome(
         print(f"  Rejection reason: {rejection_reason}")
     if outcome == "rejected" and rejection_theme:
         print(f"  Rejection theme: {rejection_theme}")
+    if outcome == "rejected" and rejection_signal:
+        print(f"  Rejection signal: {rejection_signal}")
     if time_to_response is not None:
         print(f"  Time to response: {time_to_response} days")
 
@@ -346,6 +380,7 @@ def _update_conversion_log(
     *,
     rejection_reason: str | None = None,
     rejection_theme: str | None = None,
+    rejection_signal: str | None = None,
 ):
     """Update the conversion log with outcome data."""
     log_path = SIGNALS_DIR / "conversion-log.yaml"
@@ -369,6 +404,8 @@ def _update_conversion_log(
                     log_entry["rejection_reason"] = rejection_reason
                 if rejection_theme:
                     log_entry["rejection_theme"] = rejection_theme
+                if rejection_signal:
+                    log_entry["rejection_signal"] = rejection_signal
             break
 
     log_data["entries"] = entries
@@ -543,6 +580,11 @@ def main():
         default="",
         help="Evidence snippet supporting rejection taxonomy",
     )
+    parser.add_argument(
+        "--rejection-signal",
+        choices=sorted(VALID_REJECTION_SIGNALS),
+        help="Quality level of rejection signal: automated, screened, or personalized",
+    )
     parser.add_argument("--category",
                         help="Hypothesis category (auto-capture with --record)")
     parser.add_argument("--hypothesis", metavar="TEXT",
@@ -560,7 +602,10 @@ def main():
     if args.record:
         if not args.outcome:
             parser.error("--outcome is required when using --record")
-        if args.outcome != "rejected" and (args.rejection_reason or args.rejection_theme or args.rejection_evidence):
+        if args.outcome != "rejected" and (
+            args.rejection_reason or args.rejection_theme
+            or args.rejection_evidence or args.rejection_signal
+        ):
             parser.error("--rejection-* flags are only valid with --outcome rejected")
         # Validate hypothesis category if provided
         if args.category:
@@ -570,12 +615,29 @@ def main():
                     parser.error(f"--category must be one of: {', '.join(VALID_CATEGORIES)}")
             except ImportError:
                 pass
+
+        # Auto-infer rejection signal when recording a rejection
+        rejection_signal = args.rejection_signal
+        if args.outcome == "rejected" and not rejection_signal:
+            # Load the entry to get time_to_response for inference
+            filepath, entry_data = load_entry_by_id(args.record)
+            ttr = None
+            if entry_data:
+                timeline = entry_data.get("timeline", {})
+                sub_date = parse_date(timeline.get("submitted")) if isinstance(timeline, dict) else None
+                if sub_date:
+                    ttr = (date.today() - sub_date).days
+            rejection_signal = infer_rejection_signal(ttr, args.note)
+            print(f"  Auto-inferred rejection signal: {rejection_signal}"
+                  f" (time_to_response={ttr}d)")
+
         record_outcome(
             args.record, args.outcome,
             stage=args.stage, note=args.note,
             rejection_reason=args.rejection_reason,
             rejection_theme=args.rejection_theme or None,
             rejection_evidence=args.rejection_evidence,
+            rejection_signal=rejection_signal,
             _hypothesis_category=args.category,
             _hypothesis_text=args.hypothesis,
         )

@@ -30,6 +30,8 @@ from pipeline_lib import (
 )
 
 DEFAULT_MIN_SAMPLES = 5
+VALID_REJECTION_SIGNALS = ("automated", "screened", "personalized")
+AUTOMATED_WEIGHT = 0.3  # Weight for automated rejections in dimension averages
 
 # Outcome categories for grouping
 REJECTION_OUTCOMES = {"rejected"}
@@ -178,6 +180,40 @@ def _get_composite_score(entry: dict) -> float | None:
     return None
 
 
+def _get_rejection_signal(entry: dict) -> str | None:
+    """Extract rejection_signal from conversion field."""
+    conversion = entry.get("conversion", {})
+    if isinstance(conversion, dict):
+        return conversion.get("rejection_signal")
+    return None
+
+
+def analyze_signal_distribution(entries: list[dict]) -> dict[str, dict]:
+    """Group rejected entries by rejection_signal quality level.
+
+    Returns per-signal counts and lists of entry IDs.
+    """
+    signal_groups: dict[str, list[str]] = {s: [] for s in VALID_REJECTION_SIGNALS}
+    signal_groups["unknown"] = []
+
+    for entry in entries:
+        if entry.get("outcome") != "rejected":
+            continue
+        signal = _get_rejection_signal(entry) or "unknown"
+        if signal not in signal_groups:
+            signal_groups["unknown"].append(entry.get("id", "?"))
+        else:
+            signal_groups[signal].append(entry.get("id", "?"))
+
+    results = {}
+    for signal, ids in signal_groups.items():
+        results[signal] = {
+            "count": len(ids),
+            "entry_ids": ids,
+        }
+    return results
+
+
 # --- Analysis functions ---
 
 
@@ -187,25 +223,37 @@ def analyze_dimension_weakness(
 ) -> dict[str, dict]:
     """Compare average dimension scores between rejected and non-rejected entries.
 
+    Automated rejections are weighted at 0.3x in the rejected averages since
+    they carry less signal about materials quality.
+
     Returns per-dimension analysis with means, delta, and weakness ranking.
     """
     analysis = {}
 
     for dim in DIMENSION_ORDER:
-        rej_scores = [
-            _get_dimensions(e).get(dim)
-            for e in rejected
-            if dim in _get_dimensions(e)
-        ]
+        # Collect rejected scores with signal-based weighting
+        rej_weighted_sum = 0.0
+        rej_weight_total = 0.0
+        rej_count = 0
+        for e in rejected:
+            dims = _get_dimensions(e)
+            score = dims.get(dim)
+            if score is None:
+                continue
+            signal = _get_rejection_signal(e)
+            weight = AUTOMATED_WEIGHT if signal == "automated" else 1.0
+            rej_weighted_sum += score * weight
+            rej_weight_total += weight
+            rej_count += 1
+
         non_rej_scores = [
             _get_dimensions(e).get(dim)
             for e in non_rejected
             if dim in _get_dimensions(e)
         ]
-        rej_scores = [s for s in rej_scores if s is not None]
         non_rej_scores = [s for s in non_rej_scores if s is not None]
 
-        rej_avg = sum(rej_scores) / len(rej_scores) if rej_scores else None
+        rej_avg = round(rej_weighted_sum / rej_weight_total, 2) if rej_weight_total > 0 else None
         non_rej_avg = (
             sum(non_rej_scores) / len(non_rej_scores)
             if non_rej_scores
@@ -217,10 +265,10 @@ def analyze_dimension_weakness(
             delta = round(rej_avg - non_rej_avg, 2)
 
         analysis[dim] = {
-            "rejected_avg": round(rej_avg, 2) if rej_avg is not None else None,
+            "rejected_avg": rej_avg,
             "non_rejected_avg": round(non_rej_avg, 2) if non_rej_avg is not None else None,
             "delta": delta,
-            "rejected_n": len(rej_scores),
+            "rejected_n": rej_count,
             "non_rejected_n": len(non_rej_scores),
         }
 
@@ -475,6 +523,7 @@ def run_full_analysis(
         "block_correlation": analyze_block_correlation(rejected, non_rejected),
         "timing_correlation": analyze_timing_correlation(entries),
         "score_distribution": analyze_score_distribution(rejected, non_rejected),
+        "signal_distribution": analyze_signal_distribution(entries),
         "recommendations": [],
     }
 
@@ -603,6 +652,23 @@ def print_report(analysis: dict, min_samples: int = DEFAULT_MIN_SAMPLES):
             print(f"  {timing:<15s} {info['total']:>6d} {info['rejected']:>5d} {rate_str:>7s}")
         print()
 
+    # Rejection Signal Distribution
+    signal_data = analysis.get("signal_distribution", {})
+    if signal_data:
+        total_signals = sum(info["count"] for info in signal_data.values())
+        if total_signals > 0:
+            print("Rejection Signal Distribution")
+            print("-" * 50)
+            print(f"  {'Signal':<15s} {'Count':>6s} {'Pct':>7s}")
+            print(f"  {'-' * 15} {'-' * 6} {'-' * 7}")
+            for signal in list(VALID_REJECTION_SIGNALS) + ["unknown"]:
+                info = signal_data.get(signal, {"count": 0})
+                if info["count"] > 0:
+                    pct = info["count"] / total_signals
+                    print(f"  {signal:<15s} {info['count']:>6d} {pct:>6.0%}")
+            print(f"  {'total':<15s} {total_signals:>6d}")
+            print()
+
     # Recommendations
     recs = analysis.get("recommendations", [])
     if recs:
@@ -659,6 +725,62 @@ def print_single_dimension(analysis: dict, dimension: str):
         print(f"  {eid:<50s} {score:>6.1f} {outcome:>10s}{marker}")
 
 
+def print_signal_report(entries: list[dict], min_samples: int = DEFAULT_MIN_SAMPLES):
+    """Print per-signal breakdown of dimensions, positions, and portals."""
+    rejected = [e for e in entries if e.get("outcome") == "rejected"]
+
+    print(f"Rejection Signal Analysis — {date.today().isoformat()}")
+    print("=" * 65)
+
+    signal_groups: dict[str, list[dict]] = {s: [] for s in VALID_REJECTION_SIGNALS}
+    signal_groups["unknown"] = []
+    for entry in rejected:
+        signal = _get_rejection_signal(entry) or "unknown"
+        bucket = signal if signal in signal_groups else "unknown"
+        signal_groups[bucket].append(entry)
+
+    for signal in list(VALID_REJECTION_SIGNALS) + ["unknown"]:
+        group = signal_groups[signal]
+        if not group:
+            continue
+
+        print(f"\n--- {signal.upper()} ({len(group)} entries) ---")
+
+        # Dimension averages for this signal group
+        print("\n  Dimension Averages:")
+        print(f"  {'Dimension':<25s} {'Avg':>7s} {'N':>4s}")
+        for dim in DIMENSION_ORDER:
+            scores = [
+                _get_dimensions(e).get(dim)
+                for e in group
+                if dim in _get_dimensions(e)
+            ]
+            scores = [s for s in scores if s is not None]
+            if scores:
+                avg = sum(scores) / len(scores)
+                print(f"  {dim:<25s} {avg:>7.1f} {len(scores):>4d}")
+
+        # Position breakdown
+        pos_counts: dict[str, int] = defaultdict(int)
+        for e in group:
+            pos_counts[_get_identity_position(e)] += 1
+        if pos_counts:
+            print("\n  By Position:")
+            for pos, count in sorted(pos_counts.items(), key=lambda x: -x[1]):
+                print(f"    {pos:<28s} {count}")
+
+        # Portal breakdown
+        portal_counts: dict[str, int] = defaultdict(int)
+        for e in group:
+            portal_counts[_get_portal(e)] += 1
+        if portal_counts:
+            print("\n  By Portal:")
+            for portal, count in sorted(portal_counts.items(), key=lambda x: -x[1]):
+                print(f"    {portal:<20s} {count}")
+
+    print()
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Rejection learning engine: correlate factors with rejection outcomes"
@@ -666,6 +788,11 @@ def main():
     parser.add_argument(
         "--dimension",
         help="Analyze a single scoring dimension in detail",
+    )
+    parser.add_argument(
+        "--by-signal",
+        action="store_true",
+        help="Show rejection analysis stratified by signal quality (automated/screened/personalized)",
     )
     parser.add_argument(
         "--json",
@@ -684,6 +811,10 @@ def main():
     if not entries:
         print("No entries found in submitted/ or closed/.", file=sys.stderr)
         sys.exit(1)
+
+    if args.by_signal:
+        print_signal_report(entries, min_samples=args.min_samples)
+        return
 
     analysis = run_full_analysis(entries, min_samples=args.min_samples)
 

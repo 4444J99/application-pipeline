@@ -482,14 +482,26 @@ def run_full_report(entries: list[dict]):
 
 DEFAULT_PRUNE_AGE_DAYS = 90
 
+# 3-day flash memory: jobs have a ~72h competitive shelf life
+FLASH_PRUNE_HOURS = 72
+RESEARCH_ARCHIVE_DIR = PIPELINE_DIR_RESEARCH_POOL / "_archived"
 
-def run_prune_research(entries: list[dict], older_than: int = DEFAULT_PRUNE_AGE_DAYS, dry_run: bool = True) -> list[dict]:
-    """Archive research_pool entries older than `older_than` days with no score.
 
-    Moves qualifying entries to closed/ with outcome=expired to prevent
-    unbounded growth of the research pool.
+def run_prune_research(entries: list[dict], older_than: int = DEFAULT_PRUNE_AGE_DAYS, dry_run: bool = True, flash: bool = False) -> list[dict]:
+    """Archive research_pool entries that are stale.
+
+    Two modes:
+    - Default (flash=False): Archive entries older than `older_than` days with no score.
+      Moves to closed/ with outcome=expired.
+    - Flash mode (flash=True): Archive entries where EITHER posting_date OR
+      date_added exceeds 72h — whichever is older. Moves to
+      research_pool/_archived/ to preserve data without polluting the funnel.
+      Scored entries (score > 0) are kept regardless.
     """
+    from datetime import datetime
+
     today = date.today()
+    now = datetime.now()
     pruned = []
 
     for e in entries:
@@ -499,44 +511,78 @@ def run_prune_research(entries: list[dict], older_than: int = DEFAULT_PRUNE_AGE_
         if not filepath or not Path(filepath).parent.name == "research_pool":
             continue
 
-        # Check for score — keep scored entries
+        # Check for score — keep scored entries in both modes
         fit = e.get("fit", {})
         score = fit.get("score") if isinstance(fit, dict) else None
         if score is not None and float(score) > 0:
             continue
 
-        # Check age
-        lt = parse_date(e.get("last_touched"))
-        timeline = e.get("timeline", {})
-        discovered = parse_date(timeline.get("discovered")) if isinstance(timeline, dict) else None
-        ref_date = lt or discovered
-        if not ref_date:
-            continue
-
-        age_days = (today - ref_date).days
-        if age_days < older_than:
-            continue
+        if flash:
+            # Flash mode: check posting_date and date_added, archive if EITHER > 72h
+            timeline = e.get("timeline", {})
+            if not isinstance(timeline, dict):
+                timeline = {}
+            posting_date = parse_date(timeline.get("posting_date"))
+            date_added = parse_date(timeline.get("date_added"))
+            # Use the older of the two dates (most conservative = most aggressive pruning)
+            ref_date = min(filter(None, [posting_date, date_added]), default=None)
+            if not ref_date:
+                # No dates at all — use last_touched as fallback
+                ref_date = parse_date(e.get("last_touched"))
+            if not ref_date:
+                continue
+            age_hours = (now - datetime.combine(ref_date, datetime.min.time())).total_seconds() / 3600.0
+            if age_hours < FLASH_PRUNE_HOURS:
+                continue
+            age_days = (today - ref_date).days
+            reason = "flash"
+        else:
+            # Legacy mode: check last_touched/discovered, archive if > older_than days
+            lt = parse_date(e.get("last_touched"))
+            timeline = e.get("timeline", {})
+            discovered = parse_date(timeline.get("discovered")) if isinstance(timeline, dict) else None
+            ref_date = lt or discovered
+            if not ref_date:
+                continue
+            age_days = (today - ref_date).days
+            if age_days < older_than:
+                continue
+            reason = "age"
 
         entry_id = e.get("id", "?")
-        pruned.append({"id": entry_id, "age_days": age_days, "last_touched": ref_date.isoformat()})
+        pruned.append({"id": entry_id, "age_days": age_days, "last_touched": ref_date.isoformat(), "reason": reason})
 
         if not dry_run:
             src = Path(filepath)
-            content = src.read_text()
-            editor = YAMLEditor(content)
-            editor.set("status", "outcome")
-            editor.set("outcome", "expired")
-            editor.touch()
-            PIPELINE_DIR_CLOSED.mkdir(parents=True, exist_ok=True)
-            dest = PIPELINE_DIR_CLOSED / src.name
-            atomic_write(dest, editor.dump())
-            src.unlink()
+            if flash:
+                # Flash mode: move to research_pool/_archived/
+                RESEARCH_ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
+                dest = RESEARCH_ARCHIVE_DIR / src.name
+                src.rename(dest)
+            else:
+                # Legacy mode: move to closed/ with outcome=expired
+                content = src.read_text()
+                editor = YAMLEditor(content)
+                editor.set("status", "outcome")
+                editor.set("outcome", "expired")
+                editor.touch()
+                PIPELINE_DIR_CLOSED.mkdir(parents=True, exist_ok=True)
+                dest = PIPELINE_DIR_CLOSED / src.name
+                atomic_write(dest, editor.dump())
+                src.unlink()
 
     if not pruned:
-        print(f"No research_pool entries older than {older_than} days with no score.")
+        if flash:
+            print(f"No research_pool entries older than {FLASH_PRUNE_HOURS}h.")
+        else:
+            print(f"No research_pool entries older than {older_than} days with no score.")
     else:
-        action = "Would prune" if dry_run else "Pruned"
-        print(f"{action} {len(pruned)} research_pool entries (>{older_than} days, no score):")
+        action = "Would archive" if dry_run else "Archived"
+        if flash:
+            dest_label = "research_pool/_archived/"
+            print(f"{action} {len(pruned)} research_pool entries (>{FLASH_PRUNE_HOURS}h, no score) → {dest_label}:")
+        else:
+            print(f"{action} {len(pruned)} research_pool entries (>{older_than} days, no score):")
         for item in pruned[:20]:
             print(f"  {item['id']} — {item['age_days']}d old (last: {item['last_touched']})")
         if len(pruned) > 20:
@@ -752,6 +798,8 @@ def main():
                         help=f"Focus limit for --company-focus (default: {DEFAULT_FOCUS_LIMIT})")
     parser.add_argument("--prune-research", action="store_true",
                         help="Archive research_pool entries older than --older-than days with no score")
+    parser.add_argument("--flash", action="store_true",
+                        help="Use 72h flash memory mode: archive entries where posting_date or date_added > 72h")
     parser.add_argument("--older-than", type=int, default=DEFAULT_PRUNE_AGE_DAYS, metavar="DAYS",
                         help=f"Age threshold for --prune-research (default: {DEFAULT_PRUNE_AGE_DAYS})")
     parser.add_argument("--rotate-signals", action="store_true",
@@ -784,7 +832,7 @@ def main():
 
     if args.prune_research:
         dry_run = not args.yes or args.dry_run
-        run_prune_research(entries, older_than=args.older_than, dry_run=dry_run)
+        run_prune_research(entries, older_than=args.older_than, dry_run=dry_run, flash=args.flash)
     elif args.check_urls:
         run_check_urls(entries)
     elif args.check_postings:

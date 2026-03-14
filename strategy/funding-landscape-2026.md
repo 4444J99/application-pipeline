@@ -316,7 +316,7 @@ Seed round median close time:        142 days
 
 | Dimension | Weight | Score 0-3 (Weak) | Score 4-6 (Moderate) | Score 7-10 (Strong) |
 |-----------|--------|-------------------|---------------------|---------------------|
-| **Proof of Work** | 20% | No public artifacts | GitHub + some projects | 103 repos, 2,349 tests, documented system |
+| **Proof of Work** | 20% | No public artifacts | GitHub + some projects | 113 repos, 2,349 tests, documented system |
 | **Narrative Match** | 15% | Generic pitch | Tailored to market stage | Stage-matched narrative + "Why Now" |
 | **Warm Path Access** | 20% | Cold outreach only | 2nd-degree connections | Direct warm intros to decision makers |
 | **Vertical Depth** | 15% | Horizontal/generic | Category-specific | Deep domain + proprietary data |
@@ -503,7 +503,7 @@ Every evaluator — VC, grant panelist, hiring manager — makes an initial deci
 
 ### Storefront Optimization Checklist
 
-- [ ] Lead with numbers: "103 repositories, 2,349 tests, 47 essays"
+- [ ] Lead with numbers: "113 repositories, 2,349 tests, 48 essays"
 - [ ] One sentence, one claim — maintain scannability
 - [ ] Pin 3-5 strongest projects on GitHub (not 20 incomplete ones)
 - [ ] Bottom-up TAM in pitch deck (never top-down "1% of $200B")
@@ -513,7 +513,7 @@ Every evaluator — VC, grant panelist, hiring manager — makes an initial deci
 
 ### Cathedral Advantage
 
-The deep systemic work (103 repos, 2,349 tests, ~879K+ words, 47 essays, 33 sprints) provides:
+The deep systemic work (113 repos, 2,349 tests, ~810K+ words, 48 essays, 33 sprints) provides:
 1. **Vertical depth** that evaluators demand in 2026
 2. **Proprietary data** (the system itself is a dataset)
 3. **Authentic narrative** (not AI-generated, not a wrapper)

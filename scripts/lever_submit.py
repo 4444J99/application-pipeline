@@ -17,6 +17,7 @@ Usage:
 import json
 import re
 import sys
+import time
 from pathlib import Path
 
 from ats_base import (
@@ -668,10 +669,13 @@ def main():
         print()
 
         results = []
-        for entry in entries:
+        for i, entry in enumerate(entries):
             ok = process_entry(entry, config, args.submit)
             results.append((entry.get("id"), ok))
             print()
+            # Rate limit between batch submissions to respect Lever's 2 req/s limit
+            if args.submit and i < len(entries) - 1:
+                time.sleep(0.5)
 
         print("=" * 60)
         print("BATCH SUMMARY:")

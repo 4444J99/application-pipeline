@@ -17,11 +17,11 @@ Five framings of the same body of work for different audiences. Derived from cov
 
 **For:** Art grants, residencies, prizes
 **Narrative:** "I build creative systems — the governance IS the artwork"
-**Evidence:** 105-repo eight-organ system as living creative work, 47 essays, MFA
+**Evidence:** 113-repo eight-organ system as living creative work, 48 essays, MFA
 **Targets:** Creative Capital, Artadia, FCA, NYSCA/NYFA, Eyebeam, Fire Island, Headlands, Prix Ars, S+T+ARTS, ZKM, LACMA
 
 **Opening line template:**
-> I am a systems artist who builds creative infrastructure at institutional scale. The ORGANVM project — 103 repositories coordinated across 8 GitHub organizations through automated governance — is simultaneously working infrastructure and an argument that the process of creation, made visible and governable, is itself the most interesting thing an artist can produce.
+> I am a systems artist who builds creative infrastructure at institutional scale. The ORGANVM project — 113 repositories coordinated across 8 GitHub organizations through automated governance — is simultaneously working infrastructure and an argument that the process of creation, made visible and governable, is itself the most interesting thing an artist can produce.
 
 ---
 
@@ -33,7 +33,7 @@ Five framings of the same body of work for different audiences. Derived from cov
 **Targets:** Spencer Foundation, NEH, Bread Loaf, state arts councils, university partnerships
 
 **Opening line template:**
-> With 11 years of college instruction across 8+ institutions and 2,000+ students, I have built a teaching practice grounded in making complex systems accessible. The eight-organ system I've documented in 47 published essays demonstrates this methodology applied to creative infrastructure.
+> With 11 years of college instruction across 8+ institutions and 2,000+ students, I have built a teaching practice grounded in making complex systems accessible. The eight-organ system I've documented in 48 published essays demonstrates this methodology applied to creative infrastructure.
 
 ---
 
@@ -45,7 +45,7 @@ Five framings of the same body of work for different audiences. Derived from cov
 **Targets:** Google Creative Lab, Processing Foundation, consulting clients, Together AI, HuggingFace
 
 **Opening line template:**
-> I build production-grade AI orchestration systems. The ORGANVM project coordinates 103 repositories through automated dependency validation, a formal promotion state machine, and 96+ CI/CD pipelines — all designed, tested (2,349+ tests), and documented by a single practitioner using AI tools as compositional instruments.
+> I build production-grade AI orchestration systems. The ORGANVM project coordinates 113 repositories through automated dependency validation, a formal promotion state machine, and 96+ CI/CD pipelines — all designed, tested (2,349+ tests), and documented by a single practitioner using AI tools as compositional instruments.
 
 ---
 
@@ -57,21 +57,21 @@ Five framings of the same body of work for different audiences. Derived from cov
 **Targets:** Queer|Art, Fire Island, TJFP, Lambda Literary, WFF Housing Stability, PEN America, Stimpunks
 
 **Opening line template:**
-> As a queer, housing-precarious artist building creative infrastructure from lived experience of precarity, I understand that the systems we build reflect the conditions we build them in. The eight-organ system — including its community infrastructure (ORGAN-VI) and public documentation of 47 essays — was built as a model for sustainable creative practice accessible to others navigating similar circumstances.
+> As a queer, housing-precarious artist building creative infrastructure from lived experience of precarity, I understand that the systems we build reflect the conditions we build them in. The eight-organ system — including its community infrastructure (ORGAN-VI) and public documentation of 48 essays — was built as a model for sustainable creative practice accessible to others navigating similar circumstances.
 
 ---
 
 ## 5. Independent Engineer
 
 **For:** AI lab engineering roles, developer tooling positions, infrastructure engineering
-**Narrative:** "5 years building production-grade Python/TypeScript infrastructure at scale — 103 repos, 21K code files, 3.6K tests, 94 CI/CD pipelines, governance as architecture"
+**Narrative:** "5 years building production-grade Python/TypeScript infrastructure at scale — 113 repos, 21K code files, 3.6K tests, 94 CI/CD pipelines, governance as architecture"
 **Evidence:** system-metrics.json (computed, verifiable), agentic-titan (1,095 tests), recursive-engine (1,254 tests, 85% coverage), 43 validated dependency edges, 0 violations, automated governance
 **What to emphasize:** Testing discipline, CI/CD, systems architecture, API orchestration, documentation rigor, autonomous governance design
 **What to acknowledge:** Independent practice (no team PRs), no production users, LLM API orchestration not ML training
 **Targets:** Anthropic, OpenAI, Runway, Together AI, Cohere, HuggingFace
 
 **Opening line template:**
-> 21,160 code files. 3,610 test files across 70 of 103 repositories. 94 CI/CD pipelines. 43 validated dependency edges with zero violations — all designed, built, and maintained by a single practitioner. This is not freelance consulting or contract work: it is sustained independent production at engineering-team scale, five years of Python and TypeScript across 105 repositories coordinated through 8 GitHub organizations.
+> 21,160 code files. 3,610 test files across 70 of 113 repositories. 94 CI/CD pipelines. 43 validated dependency edges with zero violations — all designed, built, and maintained by a single practitioner. This is not freelance consulting or contract work: it is sustained independent production at engineering-team scale, five years of Python and TypeScript across 113 repositories coordinated through 8 GitHub organizations.
 
 **Pattern interrupt:** Lead with the output scale before naming the solo context. The reviewer's "contractor" pattern fires on "solo practitioner" — delay that phrase until after the numbers have established the scale.
 

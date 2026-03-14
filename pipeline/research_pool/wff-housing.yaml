@@ -1,0 +1,80 @@
+id: wff-housing
+name: WFF Housing Stability Grant
+track: grant
+status: research
+identity_position: community-practitioner
+outcome: null
+target:
+  organization: WFF / NYFA
+  url: https://nyfa.org
+  application_url: https://nyfa.org/awards-grants
+  portal: custom
+deadline:
+  date: '2026-04-14'
+  time: 17:00 ET
+  type: hard
+amount:
+  value: 30000
+  currency: USD
+  type: lump_sum
+  benefits_cliff_note: Exceeds Medicaid and Fair Fares. Call NYLAG.
+fit:
+  score: 7.5
+  original_score: 8.2
+  identity_position: community-practitioner
+  framing: Community-rooted artist addressing housing stability as foundation for
+    sustained creative practice
+  lead_organs:
+  - VI
+  - META
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 9
+    track_record_fit: 8
+    financial_alignment: 4
+    effort_to_value: 6
+    strategic_value: 8
+    deadline_feasibility: 9
+    portal_friction: 6
+submission:
+  effort_level: standard
+  blocks_used:
+    artist_statement: identity/2min
+    project_description: projects/organvm-system
+    queer_project: projects/krypto-velamen
+    methodology: methodology/process-as-product
+    evidence: evidence/metrics-snapshot
+  variant_ids:
+    cover_letter: cover-letters/grant-art-template
+  materials_attached:
+  - resumes/batch-03/wff-housing/wff-housing-resume.html
+  - resumes/batch-03/wff-housing/wff-housing-resume.pdf
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-02-14'
+  date_added: 2026-02-14
+  qualified: '2026-02-16'
+  materials_ready: '2026-03-01'
+  submitted: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+portal_fields:
+  fields:
+  - name: artist_statement
+  - name: project_description
+  - name: budget
+  - name: work_samples
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags: []
+source: 04-application-tracker.md
+notes: $30,000 distributed over 3 years.
+last_touched: '2026-03-03'
+status_meta:
+  reviewed_by: 4jp
+  reviewed_at: '2026-03-03'
+  review_note: autofix-unblocker

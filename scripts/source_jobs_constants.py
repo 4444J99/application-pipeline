@@ -66,3 +66,6 @@ US_KEYWORDS = [
     "united states", "usa", " us ", "u.s.", "us-", "- us",
     "remote - us", "remote-us", "remote us", "us remote",
 ]
+
+JOBSPY_DEFAULT_SITES = ["linkedin", "indeed", "glassdoor"]
+JOBSPY_RESULTS_PER_SITE = 50

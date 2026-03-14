@@ -91,6 +91,7 @@ COMMANDS = {
 
     # -- Content & Jobs --
     "sourcejobs":  ("source_jobs.py", ["--fetch", "--dry-run"], "Preview new job postings from ATS APIs"),
+    "purgejobs":   ("hygiene.py", ["--prune-research", "--flash"], "Archive research_pool entries >72h old (flash reaper)"),
     "keywords":    ("distill_keywords.py", [],           "Extract keywords from job postings"),
     "blocks":      ("generate_project_blocks.py", [],    "Generate blocks from project data"),
     "derive":      ("derive_profile.py", [],             "Derive target profiles from raw evidence blocks"),
@@ -141,6 +142,7 @@ PARAM_COMMANDS = {
     "skillsgap":  ("skills_gap.py", ["--target"],            "Skills gap analysis for single entry"),
     "orgdetail":  ("org_intelligence.py", ["--org"],         "Org intelligence detail for single org"),
     "interviewprep": ("interview_prep.py", ["--target"],     "Generate interview prep for single entry"),
+    "greenhouse-submit": ("greenhouse_submit.py", ["--target"], "Greenhouse dry-run preview for single entry"),
 }
 
 
