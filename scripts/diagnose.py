@@ -2,7 +2,7 @@
 """Diagnostic tool — comprehensive system self-assessment producing a graded scorecard.
 
 Runs objective collectors (automated measurements) and generates subjective
-prompts (for AI raters) against the 8-dimension grading rubric.
+prompts (for AI raters) against the 9-dimension grading rubric.
 
 Usage:
     python scripts/diagnose.py                      # Full report (objective only)
@@ -140,7 +140,16 @@ def measure_test_coverage() -> dict:
             matrix_ratio = covered / total if total > 0 else 0.0
             matrix_detail = f"{covered}/{total} modules"
         else:
-            matrix_detail = "could not parse"
+            # Handle "Total modules: N\nDirect tests: N" format
+            m_total = re.search(r"Total modules:\s*(\d+)", output2)
+            m_direct = re.search(r"Direct tests:\s*(\d+)", output2)
+            if m_total and m_direct:
+                total = int(m_total.group(1))
+                covered = int(m_direct.group(1))
+                matrix_ratio = covered / total if total > 0 else 0.0
+                matrix_detail = f"{covered}/{total} modules"
+            else:
+                matrix_detail = "could not parse"
 
     # Score derivation
     if test_count >= 2000 and matrix_ratio >= 1.0:
@@ -410,6 +419,65 @@ def measure_operational_maturity() -> dict:
     }
 
 
+def measure_claim_provenance() -> dict:
+    """Measure source traceability for statistical claims via audit_system."""
+    try:
+        from audit_system import audit_claims
+        results = audit_claims()
+    except Exception as e:
+        return {
+            "score": 5.0,
+            "confidence": "low",
+            "evidence": f"Could not run claim audit: {e}",
+            "details": {},
+        }
+
+    s = results["summary"]
+    total = s["sourced"] + s["cited"] + s["unsourced"]
+    if total == 0:
+        return {
+            "score": 10.0,
+            "confidence": "high",
+            "evidence": "No statistical claims found",
+            "details": {"total": 0},
+        }
+
+    sourced_ratio = s["sourced"] / total
+    cited_ratio = (s["sourced"] + s["cited"]) / total
+    unsourced_ratio = s["unsourced"] / total
+
+    # Score derivation based on plan criteria
+    if unsourced_ratio == 0 and sourced_ratio >= 0.8:
+        score = 10.0
+    elif unsourced_ratio < 0.1 and cited_ratio >= 0.9:
+        score = 7.0 + min(3.0, sourced_ratio * 3.0)
+    elif cited_ratio >= 0.7:
+        score = 5.0 + min(2.0, cited_ratio - 0.7) * 10
+    elif cited_ratio >= 0.4:
+        score = 3.0 + min(2.0, cited_ratio - 0.4) * 5
+    else:
+        score = max(1.0, cited_ratio * 5.0)
+
+    score = round(min(10.0, score), 1)
+
+    return {
+        "score": score,
+        "confidence": "high",
+        "evidence": (
+            f"{total} claims: {s['sourced']} sourced, {s['cited']} cited, "
+            f"{s['unsourced']} unsourced ({unsourced_ratio:.0%} unsourced)"
+        ),
+        "details": {
+            "total": total,
+            "sourced": s["sourced"],
+            "cited": s["cited"],
+            "unsourced": s["unsourced"],
+            "sourced_ratio": round(sourced_ratio, 3),
+            "cited_ratio": round(cited_ratio, 3),
+        },
+    }
+
+
 # ---------------------------------------------------------------------------
 # Subjective prompt generators
 # ---------------------------------------------------------------------------
@@ -586,7 +654,7 @@ Provide:
 # Composite scoring
 # ---------------------------------------------------------------------------
 
-OBJECTIVE_DIMENSIONS = ["test_coverage", "code_quality", "data_integrity", "operational_maturity"]
+OBJECTIVE_DIMENSIONS = ["test_coverage", "code_quality", "data_integrity", "operational_maturity", "claim_provenance"]
 SUBJECTIVE_DIMENSIONS = ["architecture", "documentation", "analytics_intelligence", "sustainability"]
 
 COLLECTORS = {
@@ -594,6 +662,7 @@ COLLECTORS = {
     "code_quality": measure_code_quality,
     "data_integrity": measure_data_integrity,
     "operational_maturity": measure_operational_maturity,
+    "claim_provenance": measure_claim_provenance,
 }
 
 PROMPT_GENERATORS = {

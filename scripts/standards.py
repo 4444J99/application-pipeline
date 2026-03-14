@@ -405,7 +405,8 @@ class UniversityRegulator(_BaseRegulator):
 
     def gate_diagnostic(self) -> GateResult:
         """Gate 3A: Objective diagnostic composite score.
-        Adapter: diagnose.compute_composite() returns float, pass if >= DIAGNOSTIC_THRESHOLD."""
+        Adapter: diagnose.compute_composite() returns float, pass if >= DIAGNOSTIC_THRESHOLD.
+        Normalizes composite to 0-10 scale based on available objective weight sum."""
         rubric = diagnose_mod.load_rubric()
         collectors = {
             "test_coverage": diagnose_mod.measure_test_coverage,
@@ -420,10 +421,16 @@ class UniversityRegulator(_BaseRegulator):
                 scores[dim_key] = collector()
             except Exception:  # noqa: BLE001
                 scores[dim_key] = {"score": 1.0, "confidence": "low", "evidence": "collector failed"}
-        composite = diagnose_mod.compute_composite(scores, rubric)
-        passed = composite >= DIAGNOSTIC_THRESHOLD
-        evidence = f"composite={composite:.1f} (threshold={DIAGNOSTIC_THRESHOLD})"
-        return GateResult("diagnostic", passed, composite, evidence)
+        raw_composite = diagnose_mod.compute_composite(scores, rubric)
+        # Scale threshold proportionally: only objective dims are auto-scored,
+        # so compare against threshold × (objective weight sum / 1.0)
+        dims = rubric.get("dimensions", {})
+        weight_sum = sum(dims[k].get("weight", 0) for k in collectors if k in dims)
+        scaled_threshold = round(DIAGNOSTIC_THRESHOLD * weight_sum, 2) if weight_sum > 0 else DIAGNOSTIC_THRESHOLD
+        passed = raw_composite >= scaled_threshold
+        evidence = (f"composite={raw_composite:.1f} (threshold={scaled_threshold} = "
+                    f"{DIAGNOSTIC_THRESHOLD}×{weight_sum:.2f})")
+        return GateResult("diagnostic", passed, raw_composite, evidence)
 
     def gate_integrity(self) -> GateResult:
         """Gate 3B: System integrity audit.
