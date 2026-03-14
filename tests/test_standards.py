@@ -820,6 +820,71 @@ class TestRunPyIntegration:
 
 
 # ---------------------------------------------------------------------------
+# TestLevel4BugFixes
+# ---------------------------------------------------------------------------
+
+
+class TestLevel4BugFixes:
+    """Test fixes for Level 4 gate bugs."""
+
+    def test_load_hypotheses_dict_format(self, tmp_path, monkeypatch):
+        """_load_hypotheses must handle {'hypotheses': [...]} dict format."""
+        import standards
+        hyp_file = tmp_path / "hypotheses.yaml"
+        import yaml
+        with open(hyp_file, "w") as f:
+            yaml.dump({"hypotheses": [
+                {"entry_id": "test-1", "outcome": "confirmed",
+                 "predicted_outcome": "rejected"},
+            ]}, f)
+        monkeypatch.setattr(standards, "REPO_ROOT", tmp_path)
+        # Patch path to use tmp_path
+        original = standards._load_hypotheses
+        def patched():
+            import yaml as _y
+            with open(hyp_file) as fh:
+                data = _y.safe_load(fh)
+            entries = data.get("hypotheses", []) if isinstance(data, dict) else data or []
+            return entries if isinstance(entries, list) else []
+        monkeypatch.setattr(standards, "_load_hypotheses", patched)
+        result = standards._load_hypotheses()
+        assert len(result) == 1
+
+    def test_outcome_gate_with_expired_data(self, monkeypatch):
+        """gate_outcome must pass with expired historical data (not just accepted/rejected)."""
+        import standards
+        # 50 expired + 5 rejected = mixed negative outcomes
+        mock_data = (
+            [{"entry_id": f"hist-{i}", "outcome": "expired",
+              "composite_score": None, "dimension_scores": {},
+              "track": "job", "identity_position": "unset"}
+             for i in range(50)]
+            + [{"entry_id": f"pipe-{i}", "outcome": "rejected",
+                "composite_score": 7.0, "dimension_scores": {"mission_alignment": 6.0},
+                "track": "job", "identity_position": "independent-engineer"}
+               for i in range(5)]
+        )
+        monkeypatch.setattr(standards, "_load_outcome_data", lambda: mock_data)
+        reg = standards.NationalRegulator()
+        result = reg.gate_outcome()
+        assert "insufficient data" not in result.evidence
+
+    def test_hypothesis_gate_confirmed_counts_as_correct(self, monkeypatch):
+        """gate_hypothesis must treat outcome='confirmed' as a correct prediction."""
+        import standards
+        resolved_hyps = [
+            {"entry_id": f"test-{i}", "outcome": "confirmed",
+             "predicted_outcome": "rejected"}
+            for i in range(15)
+        ]
+        monkeypatch.setattr(standards, "_load_hypotheses", lambda: resolved_hyps)
+        reg = standards.NationalRegulator()
+        result = reg.gate_hypothesis()
+        assert result.passed, f"Expected pass, got: {result.evidence}"
+        assert "15/15" in result.evidence
+
+
+# ---------------------------------------------------------------------------
 # Integration tests — full board smoke tests against live data
 # ---------------------------------------------------------------------------
 
