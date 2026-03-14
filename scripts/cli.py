@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Unified Typer CLI for the application pipeline.
 
-This CLI layer uses the pipeline_api module for all core operations.
-No sys.argv manipulation or stdout redirection—clean function calls only.
+This CLI layer uses the pipeline_api module for core operations (score, advance,
+draft, compose, validate, enrich, followup, hygiene, submit, triage).
 
 For operations not yet migrated to the API layer, we fall back to
-direct script imports (backward-compatible).
+direct script imports with sys.argv manipulation (backward-compatible).
 """
 
 import sys
@@ -13,28 +13,34 @@ import sys
 import typer
 
 try:  # Prefer package-style imports when available.
-    from .campaign import main as campaign_main
     from .check_outcomes import main as outcomes_main
-    from .hygiene import main as hygiene_main
     from .pipeline_api import (
         ResultStatus,
         advance_entry,
         compose_entry,
         draft_entry,
+        enrich_entry,
+        followup_data,
+        hygiene_check,
         score_entry,
+        submit_entry,
+        triage_data,
         validate_entry,
     )
     from .standup import run_standup, run_triage, touch_entry
 except ImportError:  # pragma: no cover - script execution fallback
-    from campaign import main as campaign_main
     from check_outcomes import main as outcomes_main
-    from hygiene import main as hygiene_main
     from pipeline_api import (
         ResultStatus,
         advance_entry,
         compose_entry,
         draft_entry,
+        enrich_entry,
+        followup_data,
+        hygiene_check,
         score_entry,
+        submit_entry,
+        triage_data,
         validate_entry,
     )
     from standup import run_standup, run_triage, touch_entry
@@ -200,16 +206,19 @@ def touch(entry_id: str = typer.Argument(..., help="Entry ID to mark as reviewed
 
 
 @app.command()
-def campaign():
+def campaign(
+    days: int = typer.Option(14, help="Look-ahead window in days"),
+):
     """Deadline-aware campaign view with urgency tiers."""
-    old_argv = sys.argv
-    sys.argv = ["campaign.py"]
     try:
-        campaign_main()
-    except SystemExit:
-        pass
-    finally:
-        sys.argv = old_argv
+        from campaign import generate_campaign_markdown
+        from pipeline_lib import load_entries
+    except ImportError:
+        from scripts.campaign import generate_campaign_markdown
+        from scripts.pipeline_lib import load_entries
+    entries = load_entries(include_filepath=True)
+    output = generate_campaign_markdown(entries, days)
+    typer.echo(output)
 
 
 @app.command()
@@ -238,20 +247,264 @@ def outcomes(
 
 
 @app.command()
-def hygiene(focus: bool = typer.Option(False, "--focus", help="Check company focus Rule of Three")):
+def hygiene(
+    target: str = typer.Argument(None, help="Target ID (optional)"),
+):
     """Entry data quality report and gate checks."""
-    args = []
-    if focus:
-        args.append("--company-focus")
-    
-    old_argv = sys.argv
-    sys.argv = ["hygiene.py"] + args
+    result = hygiene_check(entry_id=target)
+
+    if result.status == ResultStatus.ERROR:
+        typer.echo(f"Error: {result.error}", err=True)
+        raise typer.Exit(1)
+
+    typer.echo(f"{result.entry_id}: {result.message}")
+    if result.gate_issues:
+        for issue in result.gate_issues[:20]:
+            typer.echo(f"  - {issue}")
+        if len(result.gate_issues) > 20:
+            typer.echo(f"  ... and {len(result.gate_issues) - 20} more")
+
+
+# ============================================================================
+# NEW COMMANDS USING EXPANDED API LAYER
+# ============================================================================
+
+@app.command()
+def followup(
+    target: str = typer.Argument(None, help="Target ID (optional)"),
+):
+    """Today's follow-up actions and overdue items."""
+    result = followup_data(entry_id=target)
+
+    if result.status == ResultStatus.ERROR:
+        typer.echo(f"Error: {result.error}", err=True)
+        raise typer.Exit(1)
+
+    typer.echo(f"{result.entry_id}: {result.message}")
+    if result.due_actions:
+        for action in result.due_actions:
+            typer.echo(f"  [{action.get('tier', '?')}] {action['entry_id']} — {action.get('action', '?')}")
+
+
+@app.command()
+def enrich(
+    target: str = typer.Argument(None, help="Target ID (optional)"),
+    all: bool = typer.Option(False, "--all", help="Analyze all entries"),
+):
+    """Show enrichment gaps for entries."""
+    if not target and not all:
+        typer.echo("Specify target or --all")
+        raise typer.Exit(1)
+
+    result = enrich_entry(entry_id=target, all_entries=all)
+
+    if result.status == ResultStatus.ERROR:
+        typer.echo(f"Error: {result.error}", err=True)
+        raise typer.Exit(1)
+
+    typer.echo(f"{result.entry_id}: {result.message}")
+    if result.gaps:
+        for gap in result.gaps:
+            typer.echo(f"  - {gap}")
+
+
+@app.command()
+def submit(
+    target: str = typer.Argument(..., help="Target ID"),
+    dry_run: bool = typer.Option(True, "--dry-run/--no-dry-run", help="Preview only"),
+):
+    """Generate submission checklist for an entry."""
+    result = submit_entry(entry_id=target, dry_run=dry_run)
+
+    if result.status == ResultStatus.ERROR:
+        typer.echo(f"Error: {result.error}", err=True)
+        raise typer.Exit(1)
+
+    typer.echo(f"{result.entry_id}: {result.message}")
+    if result.checklist:
+        typer.echo(result.checklist)
+    if result.issues:
+        for issue in result.issues:
+            typer.echo(f"  ⚠ {issue}", err=True)
+
+
+@app.command()
+def triage(
+    min_score: float = typer.Option(9.0, "--min-score", help="Minimum score threshold"),
+    dry_run: bool = typer.Option(True, "--dry-run/--no-dry-run", help="Preview only"),
+):
+    """Triage staged entries below threshold and org-cap violations."""
+    result = triage_data(min_score=min_score, dry_run=dry_run)
+
+    if result.status == ResultStatus.ERROR:
+        typer.echo(f"Error: {result.error}", err=True)
+        raise typer.Exit(1)
+
+    typer.echo(f"Triage: {result.message}")
+    if result.staged_demotions:
+        for d in result.staged_demotions:
+            typer.echo(f"  demote: {d['id']} (score {d['score']:.1f})")
+    if result.org_cap_deferrals:
+        for d in result.org_cap_deferrals:
+            typer.echo(f"  defer: {d['id']} ({d['org']})")
+
+
+# ============================================================================
+# COMMANDS USING DIRECT SCRIPT IMPORTS (no API wrapper needed)
+# ============================================================================
+
+@app.command()
+def morning():
+    """Morning digest: health + stale + followups + campaign."""
     try:
-        hygiene_main()
+        from morning import run_morning
+    except ImportError:
+        from scripts.morning import run_morning
+    run_morning(brief=False, save=False)
+
+
+@app.command()
+def deferred():
+    """Deferred entries: overdue and upcoming re-activations."""
+    try:
+        from check_deferred import run_check_deferred
+    except ImportError:
+        from scripts.check_deferred import run_check_deferred
+    run_check_deferred(report_mode=True)
+
+
+@app.command()
+def funnel():
+    """Conversion funnel analytics."""
+    try:
+        from funnel_report import main as funnel_main
+    except ImportError:
+        from scripts.funnel_report import main as funnel_main
+    old_argv = sys.argv
+    sys.argv = ["funnel_report.py"]
+    try:
+        funnel_main()
     except SystemExit:
         pass
     finally:
         sys.argv = old_argv
+
+
+@app.command()
+def snapshot():
+    """Pipeline snapshot with counts and trends."""
+    try:
+        from snapshot import main as snapshot_main
+    except ImportError:
+        from scripts.snapshot import main as snapshot_main
+    old_argv = sys.argv
+    sys.argv = ["snapshot.py", "--report"]
+    try:
+        snapshot_main()
+    except SystemExit:
+        pass
+    finally:
+        sys.argv = old_argv
+
+
+@app.command()
+def metrics():
+    """Block metric consistency check."""
+    try:
+        from check_metrics import main as metrics_main
+    except ImportError:
+        from scripts.check_metrics import main as metrics_main
+    old_argv = sys.argv
+    sys.argv = ["check_metrics.py"]
+    try:
+        metrics_main()
+    except SystemExit:
+        pass
+    finally:
+        sys.argv = old_argv
+
+
+@app.command()
+def diagnose(
+    subjective_only: bool = typer.Option(False, "--subjective-only", help="Generate prompts for AI raters"),
+    objective_only: bool = typer.Option(False, "--objective-only", help="Only automated measurements"),
+):
+    """System diagnostic scorecard."""
+    try:
+        from diagnose import main as diagnose_main
+    except ImportError:
+        from scripts.diagnose import main as diagnose_main
+    args = ["diagnose.py"]
+    if subjective_only:
+        args.append("--subjective-only")
+    if objective_only:
+        args.append("--objective-only")
+    old_argv = sys.argv
+    sys.argv = args
+    try:
+        diagnose_main()
+    except SystemExit:
+        pass
+    finally:
+        sys.argv = old_argv
+
+
+@app.command()
+def audit(
+    claims: bool = typer.Option(False, "--claims", help="Claims provenance only"),
+    wiring: bool = typer.Option(False, "--wiring", help="Wiring integrity only"),
+    logic: bool = typer.Option(False, "--logic", help="Logical consistency only"),
+    as_json: bool = typer.Option(False, "--json", help="Machine-readable JSON output"),
+):
+    """System integrity audit: claims, wiring, logic."""
+    try:
+        from audit_system import main as audit_main
+    except ImportError:
+        from scripts.audit_system import main as audit_main
+    args = ["audit_system.py"]
+    if claims:
+        args.append("--claims")
+    if wiring:
+        args.append("--wiring")
+    if logic:
+        args.append("--logic")
+    if as_json:
+        args.append("--json")
+    old_argv = sys.argv
+    sys.argv = args
+    try:
+        audit_main()
+    except SystemExit:
+        pass
+    finally:
+        sys.argv = old_argv
+
+
+@app.command()
+def standards(
+    level: int = typer.Option(None, "--level", help="Run a single level (1-5)"),
+    json_output: bool = typer.Option(False, "--json", help="Machine-readable JSON"),
+    run_all: bool = typer.Option(False, "--run-all", help="Run all levels, no cascade stop"),
+):
+    """Standards Board: 5-level hierarchical validation audit."""
+    try:
+        from standards import BoardReport, StandardsBoard, format_report
+    except ImportError:
+        from scripts.standards import BoardReport, StandardsBoard, format_report
+    import json as _json
+
+    board = StandardsBoard()
+    if level:
+        lr = board.check_level(level)
+        br = BoardReport(level_reports=[lr])
+    else:
+        br = board.full_audit(gated=not run_all)
+
+    if json_output:
+        typer.echo(_json.dumps(br.to_dict(), indent=2))
+    else:
+        typer.echo(format_report(br))
+    raise typer.Exit(0 if br.passed else 1)
 
 
 if __name__ == "__main__":

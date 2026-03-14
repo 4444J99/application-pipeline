@@ -17,7 +17,12 @@ try:  # Prefer package-style imports when available.
         advance_entry,
         compose_entry,
         draft_entry,
+        enrich_entry,
+        followup_data,
+        hygiene_check,
         score_entry,
+        standup_data,
+        submit_entry,
         validate_entry,
     )
 except ImportError:  # pragma: no cover - script execution fallback
@@ -25,7 +30,12 @@ except ImportError:  # pragma: no cover - script execution fallback
         advance_entry,
         compose_entry,
         draft_entry,
+        enrich_entry,
+        followup_data,
+        hygiene_check,
         score_entry,
+        standup_data,
+        submit_entry,
         validate_entry,
     )
 
@@ -241,6 +251,220 @@ def pipeline_campaign(days: int = 14) -> str:
         return json.dumps(data, default=str)
     except Exception as e:
         return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
+def pipeline_followup(target_id: str | None = None) -> str:
+    """Get due follow-up actions for submitted entries.
+
+    Args:
+        target_id: Entry ID to check (optional; checks all if not given)
+
+    Returns:
+        JSON with due_actions list and summary
+    """
+    result = followup_data(entry_id=target_id)
+
+    return json.dumps({
+        "status": result.status.value,
+        "entry_id": result.entry_id,
+        "due_actions": result.due_actions,
+        "total_entries": result.total_entries,
+        "message": result.message,
+        "error": result.error,
+    }, default=str)
+
+
+@mcp.tool()
+def pipeline_hygiene(target_id: str | None = None) -> str:
+    """Run hygiene gate checks on pipeline entries.
+
+    Args:
+        target_id: Entry ID to check (optional; checks all if not given)
+
+    Returns:
+        JSON with gate_issues, stale_entries, and total_issues count
+    """
+    result = hygiene_check(entry_id=target_id)
+
+    return json.dumps({
+        "status": result.status.value,
+        "entry_id": result.entry_id,
+        "gate_issues": result.gate_issues[:20] if result.gate_issues else [],
+        "stale_entries": len(result.stale_entries) if result.stale_entries else 0,
+        "total_issues": result.total_issues,
+        "message": result.message,
+        "error": result.error,
+    }, default=str)
+
+
+@mcp.tool()
+def pipeline_enrich(target_id: str | None = None, all_entries: bool = False) -> str:
+    """Analyze enrichment gaps for pipeline entries.
+
+    Args:
+        target_id: Entry ID to analyze (optional)
+        all_entries: If true, analyze all entries
+
+    Returns:
+        JSON with gaps list and summary
+    """
+    result = enrich_entry(entry_id=target_id, all_entries=all_entries)
+
+    return json.dumps({
+        "status": result.status.value,
+        "entry_id": result.entry_id,
+        "gaps": result.gaps,
+        "message": result.message,
+        "error": result.error,
+    }, default=str)
+
+
+@mcp.tool()
+def pipeline_standup(hours: float = 3.0, section: str | None = None) -> str:
+    """Capture daily standup dashboard output.
+
+    Args:
+        hours: Available hours for today's session (default: 3.0)
+        section: Run a single section only (optional)
+
+    Returns:
+        JSON with captured standup text output
+    """
+    result = standup_data(hours=hours, section=section)
+
+    return json.dumps({
+        "status": result.status.value,
+        "entry_id": result.entry_id,
+        "output": result.output[:2000] if result.output else None,
+        "message": result.message,
+        "error": result.error,
+    }, default=str)
+
+
+@mcp.tool()
+def pipeline_submit(target_id: str) -> str:
+    """Generate submission checklist for an entry.
+
+    Args:
+        target_id: Entry ID to generate checklist for
+
+    Returns:
+        JSON with checklist text and any issues found
+    """
+    result = submit_entry(entry_id=target_id, dry_run=True)
+
+    return json.dumps({
+        "status": result.status.value,
+        "entry_id": result.entry_id,
+        "checklist": result.checklist[:1500] if result.checklist else None,
+        "issues": result.issues,
+        "message": result.message,
+        "error": result.error,
+    }, default=str)
+
+
+@mcp.tool()
+def pipeline_org_intelligence(org_name: str | None = None) -> str:
+    """Get organization intelligence rankings and details.
+
+    Args:
+        org_name: Organization name (optional; shows all rankings if not given)
+
+    Returns:
+        JSON with org rankings or single org detail
+    """
+    try:
+        from org_intelligence import _load_contacts, rank_orgs
+        from pipeline_lib import ALL_PIPELINE_DIRS, load_entries
+
+        entries = load_entries(dirs=ALL_PIPELINE_DIRS, include_filepath=True)
+        contacts = _load_contacts()
+        ranked = rank_orgs(entries, contacts)
+
+        if org_name:
+            matched = [s for s in ranked if s.get("organization", "").lower() == org_name.lower()]
+            if not matched:
+                return json.dumps({"status": "error", "error": f"org '{org_name}' not found"})
+            return json.dumps({"status": "success", "data": matched[0]}, default=str)
+
+        return json.dumps({
+            "status": "success",
+            "data": ranked[:15],
+            "total_orgs": len(ranked),
+        }, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
+def pipeline_audit(
+    claims: bool = False,
+    wiring: bool = False,
+    logic: bool = False,
+) -> str:
+    """System integrity audit: claims provenance, wiring, and logic checks.
+
+    Args:
+        claims: Run claims provenance audit only
+        wiring: Run wiring integrity audit only
+        logic: Run logical consistency audit only
+
+    Returns:
+        JSON with audit results and summary
+    """
+    try:
+        from audit_system import audit_claims, audit_logic, audit_wiring, run_full_audit
+
+        run_all = not (claims or wiring or logic)
+        if run_all:
+            result = run_full_audit()
+        else:
+            result = {}
+            if claims:
+                result["claims"] = audit_claims()
+            if wiring:
+                result["wiring"] = audit_wiring()
+            if logic:
+                result["logic"] = audit_logic()
+
+        # Trim claims list for JSON payload size
+        if "claims" in result and "claims" in result["claims"]:
+            unsourced = [c for c in result["claims"]["claims"] if c["status"] == "unsourced"]
+            result["claims"]["claims"] = unsourced[:50]
+
+        return json.dumps(result, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
+def pipeline_standards(
+    level: int | None = None,
+    run_all: bool = False,
+) -> str:
+    """Run the Standards Board hierarchical validation audit.
+
+    Args:
+        level: Run a single level (1-5). None = full audit.
+        run_all: If True, run all levels even if lower levels fail.
+
+    Returns:
+        JSON report with level reports, gate results, and pass/fail.
+    """
+    try:
+        from standards import BoardReport, StandardsBoard
+    except ImportError:
+        from scripts.standards import BoardReport, StandardsBoard
+
+    board = StandardsBoard()
+    if level:
+        lr = board.check_level(level)
+        br = BoardReport(level_reports=[lr])
+    else:
+        br = board.full_audit(gated=not run_all)
+
+    return json.dumps(br.to_dict(), indent=2)
 
 
 if __name__ == "__main__":
