@@ -483,6 +483,35 @@ def pipeline_phase_analytics() -> str:
     return json.dumps(comparison, indent=2)
 
 
+@mcp.tool()
+def pipeline_rate(
+    rater_id: str | None = None,
+    dry_run: bool = True,
+    compute_ira: bool = False,
+) -> str:
+    """Run multi-model IRA rating session.
+
+    Args:
+        rater_id: Single rater to run (optional; runs all if not given)
+        dry_run: If true, show prompts without calling APIs
+        compute_ira: If true, compute IRA after rating
+
+    Returns:
+        JSON with status and list of completed raters
+    """
+    try:
+        from generate_ratings import generate_ratings
+
+        result = generate_ratings(
+            dry_run=dry_run,
+            single_rater=rater_id,
+            compute_ira=compute_ira,
+        )
+        return json.dumps(result, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
 if __name__ == "__main__":
     # Start the MCP server using stdio transport
     mcp.run()

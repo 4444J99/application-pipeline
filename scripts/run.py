@@ -104,6 +104,7 @@ COMMANDS = {
     # -- Diagnostics --
     "diagnose":    ("diagnose.py", [],                       "System diagnostic scorecard (objective dimensions)"),
     "ira":         ("diagnose_ira.py", [],                   "Inter-rater agreement report (auto-loads ratings/*.json)"),
+    "rateall":     ("generate_ratings.py", ["--compute-ira"], "Multi-model rating session with IRA computation"),
     "sysaudit":    ("audit_system.py", [],                   "System integrity audit: claims, wiring, logic"),
     "standards":   ("standards.py", [],                       "Standards Board: 5-level hierarchical validation audit"),
     "ingest":      ("ingest_historical.py", ["--stats"],        "Historical data ingestion statistics"),

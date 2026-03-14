@@ -560,5 +560,29 @@ def phases(
         sys.argv = old_argv
 
 
+@app.command()
+def rate(
+    rater: str = typer.Option(None, "--rater", help="Single rater ID"),
+    dry_run: bool = typer.Option(False, "--dry-run", help="Show prompts only"),
+    compute_ira: bool = typer.Option(False, "--compute-ira", help="Compute IRA after"),
+):
+    """Run multi-model IRA rating session."""
+    from generate_ratings import generate_ratings
+
+    result = generate_ratings(
+        dry_run=dry_run,
+        single_rater=rater,
+        compute_ira=compute_ira,
+    )
+
+    if result["status"] == "error":
+        typer.echo(f"Error: {result['error']}", err=True)
+        raise typer.Exit(1)
+
+    typer.echo(f"Status: {result['status']}")
+    if result.get("raters"):
+        typer.echo(f"Raters: {', '.join(result['raters'])}")
+
+
 if __name__ == "__main__":
     app()
