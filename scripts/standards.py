@@ -36,6 +36,7 @@ import validate as validate_mod
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+STANDARDS_PATH = REPO_ROOT / "strategy" / "system-standards.yaml"
 
 DIAGNOSTIC_THRESHOLD = 6.0
 ICC_THRESHOLD = 0.61
@@ -679,6 +680,47 @@ class StandardsBoard:
 
 
 # ---------------------------------------------------------------------------
+# YAML registry
+# ---------------------------------------------------------------------------
+
+
+def load_standards() -> dict:
+    """Load the system-standards.yaml registry."""
+    if not STANDARDS_PATH.exists():
+        return {"version": "0.0", "tiers": {}, "standards": {}}
+    with open(STANDARDS_PATH) as f:
+        return yaml.safe_load(f) or {}
+
+
+# ---------------------------------------------------------------------------
+# Human-readable report formatter
+# ---------------------------------------------------------------------------
+
+
+def format_report(report: BoardReport) -> str:
+    """Format a human-readable hierarchical audit report."""
+    lines = [
+        "=" * 70,
+        "  STANDARDS BOARD — HIERARCHICAL AUDIT",
+        "=" * 70,
+        "",
+    ]
+    for lr in report.level_reports:
+        status = "PASS" if lr.passed else "FAIL"
+        lines.append(f"  Level {lr.level} — {lr.name}  [{status}]  (quorum: {lr.quorum})")
+        for g in lr.gates:
+            marker = "+" if g.passed else "-"
+            score_str = f" ({g.score:.3f})" if g.score is not None else ""
+            lines.append(f"    [{marker}] {g.gate}{score_str}: {g.evidence[:80]}")
+        lines.append("")
+    lines.append("-" * 70)
+    overall = "PASS" if report.passed else "FAIL"
+    lines.append(f"  Overall: {overall} ({report.levels_passed}/{report.levels_total} levels)")
+    lines.append("")
+    return "\n".join(lines)
+
+
+# ---------------------------------------------------------------------------
 # CLI entry point
 # ---------------------------------------------------------------------------
 
@@ -703,28 +745,17 @@ def main() -> None:
     board = StandardsBoard()
 
     if args.level:
-        report = board.check_level(args.level)
-        if args.json_output:
-            print(json.dumps(report.to_dict(), indent=2))
-        else:
-            status = "PASS" if report.passed else "FAIL"
-            print(f"Level {report.level} ({report.name}): {status} [{report.quorum}]")
-            for gate in report.gates:
-                mark = "+" if gate.passed else "-"
-                print(f"  [{mark}] {gate.gate}: {gate.evidence}")
+        lr = board.check_level(args.level)
+        br = BoardReport(level_reports=[lr])
     else:
-        board_report = board.full_audit(gated=not args.run_all)
-        if args.json_output:
-            print(json.dumps(board_report.to_dict(), indent=2))
-        else:
-            status = "PASS" if board_report.passed else "FAIL"
-            print(f"Standards Board: {status} ({board_report.levels_passed}/{board_report.levels_total} levels)")
-            for lr in board_report.level_reports:
-                level_status = "PASS" if lr.passed else "FAIL"
-                print(f"  Level {lr.level} ({lr.name}): {level_status} [{lr.quorum}]")
-                for gate in lr.gates:
-                    mark = "+" if gate.passed else "-"
-                    print(f"    [{mark}] {gate.gate}: {gate.evidence}")
+        br = board.full_audit(gated=not args.run_all)
+
+    if args.json_output:
+        print(json.dumps(br.to_dict(), indent=2))
+    else:
+        print(format_report(br))
+
+    raise SystemExit(0 if br.passed else 1)
 
 
 if __name__ == "__main__":

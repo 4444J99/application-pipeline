@@ -20,6 +20,8 @@ from standards import (
     UniversityRegulator,
     _run_gate,
     _run_subprocess_gate,
+    format_report,
+    load_standards,
 )
 
 # ---------------------------------------------------------------------------
@@ -741,3 +743,65 @@ class TestFederalGateTemporal:
         # 2/3 are fresh (2019 is > 2 years old from 2026), ratio = 0.667 < 0.8 threshold
         # Actually depends on current year. Let's just check it runs.
         assert isinstance(result.score, float)
+
+
+# ---------------------------------------------------------------------------
+# load_standards — YAML registry loading
+# ---------------------------------------------------------------------------
+
+
+class TestLoadStandards:
+    """YAML standards registry loading."""
+
+    def test_loads_yaml(self):
+        data = load_standards()
+        assert "standards" in data
+        assert "tiers" in data
+        assert len(data["standards"]) >= 25
+
+    def test_all_standards_have_gate_field(self):
+        data = load_standards()
+        for key, std in data["standards"].items():
+            assert "gate" in std, f"standard '{key}' missing gate field"
+
+    def test_all_standards_have_required_fields(self):
+        data = load_standards()
+        for key, std in data["standards"].items():
+            assert "level" in std, f"{key} missing level"
+            assert "tier" in std, f"{key} missing tier"
+            assert "description" in std, f"{key} missing description"
+            assert "validator" in std, f"{key} missing validator"
+
+
+# ---------------------------------------------------------------------------
+# format_report — human-readable report formatting
+# ---------------------------------------------------------------------------
+
+
+class TestFormatReport:
+    """Human-readable report formatting."""
+
+    def test_format_report_produces_readable_output(self):
+        report = BoardReport(level_reports=[
+            LevelReport(level=2, name="Department", gates=[
+                GateResult("schema", True, 1.0, "ok"),
+                GateResult("rubric", True, 1.0, "ok"),
+                GateResult("wiring", True, 1.0, "ok"),
+            ]),
+        ])
+        text = format_report(report)
+        assert "Department" in text
+        assert "PASS" in text
+        assert "STANDARDS BOARD" in text
+
+    def test_format_report_shows_failures(self):
+        report = BoardReport(level_reports=[
+            LevelReport(level=3, name="University", gates=[
+                GateResult("diagnostic", False, 4.5, "composite=4.5"),
+                GateResult("integrity", False, 0.0, "wiring failed"),
+                GateResult("agreement", True, 0.85, "ICC=0.85"),
+            ]),
+        ])
+        text = format_report(report)
+        assert "FAIL" in text
+        assert "University" in text
