@@ -30,6 +30,8 @@ import audit_system as audit_system_mod
 import diagnose as diagnose_mod
 import diagnose_ira as diagnose_ira_mod
 import outcome_learner as outcome_learner_mod
+import score as score_mod
+import text_match as text_match_mod
 import validate as validate_mod
 import yaml
 
@@ -38,6 +40,10 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DIAGNOSTIC_THRESHOLD = 6.0
 ICC_THRESHOLD = 0.61
 RATINGS_DIR = REPO_ROOT / "ratings"
+
+# Level 1 — Course
+EVIDENCE_MATCH_THRESHOLD = 0.3
+SCORE_THRESHOLD = 7.0
 
 # Level 4 — National
 MIN_OUTCOMES = 30
@@ -265,16 +271,63 @@ class _BaseRegulator:
 
 
 class CourseRegulator(_BaseRegulator):
-    """Level 1 — per-entry quality gates (rubric coverage, evidence, history)."""
+    """Level 1 — per-entry quality gates (rubric scoring, evidence match, historical)."""
 
     level = 1
     name = "Course"
 
+    def gate_rubric(self, entry: dict) -> GateResult:
+        """Gate 1A: Rubric scoring.
+        Adapter: score.compute_dimensions + compute_composite, pass if >= SCORE_THRESHOLD."""
+        dims = score_mod.compute_dimensions(entry)
+        composite = score_mod.compute_composite(dims, track=entry.get("track", ""), entry=entry)
+        passed = composite >= SCORE_THRESHOLD
+        evidence = f"composite={composite:.1f} (threshold={SCORE_THRESHOLD})"
+        return GateResult("rubric", passed, composite, evidence)
+
+    def gate_evidence(self, entry: dict) -> GateResult:
+        """Gate 1B: TF-IDF evidence match.
+        Adapter: text_match.analyze_entry() returns dict with overall_similarity."""
+        try:
+            result = text_match_mod.analyze_entry(entry)
+            sim = result.get("overall_similarity", 0.0)
+            passed = sim >= EVIDENCE_MATCH_THRESHOLD
+            evidence = f"TF-IDF similarity={sim:.3f} (threshold={EVIDENCE_MATCH_THRESHOLD})"
+            return GateResult("evidence", passed, round(sim, 3), evidence)
+        except Exception as exc:  # noqa: BLE001
+            return GateResult("evidence", False, None,
+                              f"text_match unavailable: {exc}")
+
+    def gate_historical(self, entry: dict) -> GateResult:
+        """Gate 1C: Historical outcome comparison.
+        Adapter: outcome_learner.analyze_dimension_accuracy()."""
+        data = _load_outcome_data()
+        if len(data) < 5:
+            return GateResult("historical", False, None,
+                              f"insufficient outcome data ({len(data)}, need 5)")
+        analysis = outcome_learner_mod.analyze_dimension_accuracy(data)
+        valid = [v for v in analysis.values() if v.get("signal") != "insufficient_data"]
+        if not valid:
+            return GateResult("historical", False, None,
+                              "no dimensions have sufficient outcome data")
+        overweighted = sum(1 for v in valid if v["signal"] == "overweighted")
+        ratio = 1.0 - (overweighted / len(valid))
+        passed = ratio >= 0.5
+        evidence = (f"{len(valid)} dimensions assessed, {overweighted} overweighted "
+                    f"(historical consistency={ratio:.0%})")
+        return GateResult("historical", passed, round(ratio, 3), evidence)
+
     def evaluate(self, entry=None) -> LevelReport:  # type: ignore[override]
+        if entry is None:
+            return LevelReport(level=self.level, name=self.name, gates=[
+                GateResult("rubric", False, None, "no entry provided"),
+                GateResult("evidence", False, None, "no entry provided"),
+                GateResult("historical", False, None, "no entry provided"),
+            ])
         gates = [
-            GateResult("rubric", False, None, "not yet implemented"),
-            GateResult("evidence", False, None, "not yet implemented"),
-            GateResult("historical", False, None, "not yet implemented"),
+            _run_gate("rubric", self.gate_rubric, entry),
+            _run_gate("evidence", self.gate_evidence, entry),
+            _run_gate("historical", self.gate_historical, entry),
         ]
         return LevelReport(level=self.level, name=self.name, gates=gates)
 

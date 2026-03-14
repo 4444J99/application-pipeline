@@ -231,8 +231,96 @@ class TestStubRegulators:
         assert all(not g.passed for g in report.gates), "Stub gates should all fail"
         assert not report.passed
 
-    def test_course_regulator(self):
-        self._check_regulator(CourseRegulator(), 1, ["rubric", "evidence", "historical"])
+
+# ---------------------------------------------------------------------------
+# CourseRegulator — real gates (Level 1)
+# ---------------------------------------------------------------------------
+
+
+class TestCourseGateRubric:
+    """Gate 1A: wraps score.compute_dimensions + compute_composite."""
+
+    def test_rubric_gate_passes(self, monkeypatch):
+        monkeypatch.setattr("standards.score_mod.compute_dimensions",
+                            lambda entry, all_entries=None: {"org_quality": 8})
+        monkeypatch.setattr("standards.score_mod.compute_composite",
+                            lambda dims, track="", entry=None: 8.5)
+        reg = CourseRegulator()
+        entry = {"id": "test-entry", "track": "job", "status": "qualified"}
+        result = reg.gate_rubric(entry)
+        assert result.passed is True
+        assert result.score == 8.5
+
+    def test_rubric_gate_below_threshold(self, monkeypatch):
+        monkeypatch.setattr("standards.score_mod.compute_dimensions",
+                            lambda entry, all_entries=None: {"org_quality": 4})
+        monkeypatch.setattr("standards.score_mod.compute_composite",
+                            lambda dims, track="", entry=None: 5.0)
+        reg = CourseRegulator()
+        result = reg.gate_rubric({"id": "weak-entry", "track": "job"})
+        assert result.passed is False
+        assert result.score == 5.0
+
+
+class TestCourseGateEvidence:
+    """Gate 1B: wraps text_match.analyze_entry."""
+
+    def test_evidence_gate_passes(self, monkeypatch):
+        monkeypatch.setattr("standards.text_match_mod.analyze_entry",
+                            lambda entry, **kw: {"overall_similarity": 0.75, "top_matches": []})
+        reg = CourseRegulator()
+        result = reg.gate_evidence({"id": "test-entry"})
+        assert result.passed is True
+        assert result.score == 0.75
+
+    def test_evidence_gate_low_match(self, monkeypatch):
+        monkeypatch.setattr("standards.text_match_mod.analyze_entry",
+                            lambda entry, **kw: {"overall_similarity": 0.15, "top_matches": []})
+        reg = CourseRegulator()
+        result = reg.gate_evidence({"id": "test-entry"})
+        assert result.passed is False
+
+    def test_evidence_gate_exception_handled(self, monkeypatch):
+        def raise_error(entry, **kw):
+            raise RuntimeError("no posting")
+        monkeypatch.setattr("standards.text_match_mod.analyze_entry", raise_error)
+        reg = CourseRegulator()
+        result = reg.gate_evidence({"id": "test-entry"})
+        assert result.passed is False
+        assert "text_match unavailable" in result.evidence
+
+
+class TestCourseGateHistorical:
+    """Gate 1C: wraps outcome_learner.analyze_dimension_accuracy."""
+
+    def test_historical_insufficient_data(self, monkeypatch):
+        monkeypatch.setattr("standards._load_outcome_data", lambda: [])
+        reg = CourseRegulator()
+        result = reg.gate_historical({"id": "test"})
+        assert result.passed is False
+        assert "insufficient" in result.evidence
+
+    def test_historical_good_consistency(self, monkeypatch):
+        data = [{"outcome": "accepted"} for _ in range(10)]
+        monkeypatch.setattr("standards._load_outcome_data", lambda: data)
+        monkeypatch.setattr("standards.outcome_learner_mod.analyze_dimension_accuracy",
+                            lambda d: {"dim1": {"signal": "strong", "delta": 2.0},
+                                       "dim2": {"signal": "strong", "delta": 1.5}})
+        reg = CourseRegulator()
+        result = reg.gate_historical({"id": "test"})
+        assert result.passed is True
+        assert result.score == 1.0
+
+
+class TestCourseEvaluateNoEntry:
+    """Course regulator returns failing gates when no entry is provided."""
+
+    def test_evaluate_no_entry(self):
+        reg = CourseRegulator()
+        report = reg.evaluate()
+        assert report.level == 1
+        assert all(not g.passed for g in report.gates)
+        assert all("no entry" in g.evidence for g in report.gates)
 
 
 # ---------------------------------------------------------------------------
