@@ -1,0 +1,125 @@
+{
+  "rater_id": "systems-architect",
+  "timestamp": "2026-03-14T19:52:32.745002+00:00",
+  "rubric_version": "1.1",
+  "dimensions": {
+    "test_coverage": {
+      "score": 10.0,
+      "confidence": "high",
+      "evidence": "2408 tests; matrix 123/123 modules",
+      "details": {
+        "test_count": 2408,
+        "matrix_ratio": 1.0,
+        "matrix_detail": "123/123 modules",
+        "test_count_fallback_used": false
+      }
+    },
+    "code_quality": {
+      "score": 9.4,
+      "confidence": "high",
+      "evidence": "0 lint errors; 1056/1330 functions type-hinted",
+      "details": {
+        "lint_errors": 0,
+        "type_hinted_functions": 1056,
+        "total_functions": 1330,
+        "hint_ratio": 0.794,
+        "ruff_unavailable": false,
+        "shadow_scripts": []
+      }
+    },
+    "data_integrity": {
+      "score": 10.0,
+      "confidence": "high",
+      "evidence": "0 validation errors; 0 signal errors",
+      "details": {
+        "validation_errors": 0,
+        "signal_errors": 0,
+        "total_errors": 0
+      }
+    },
+    "operational_maturity": {
+      "score": 9.5,
+      "confidence": "medium",
+      "evidence": "7/7 agents loaded; backup <7d; notifications configured",
+      "details": {
+        "agent_total": 7,
+        "agent_loaded": 7,
+        "agent_healthy": true,
+        "backup_age_days": 6,
+        "notifications_configured": true
+      }
+    },
+    "claim_provenance": {
+      "score": 5.6,
+      "confidence": "high",
+      "evidence": "1588 claims: 657 sourced, 545 cited, 386 unsourced (24% unsourced)",
+      "details": {
+        "total": 1588,
+        "sourced": 657,
+        "cited": 545,
+        "unsourced": 386,
+        "sourced_ratio": 0.414,
+        "cited_ratio": 0.757
+      }
+    },
+    "architecture": {
+      "score": 8.5,
+      "confidence": "high",
+      "evidence": "Three-layer architecture: pipeline_lib (data) \u2192 scripts (CLI) \u2192 pipeline_api (programmatic) \u2192 mcp_server (AI). Clean information flow. Module decomposition is systematic: pipeline_lib extracted into 3 sub-modules (entry_state, freshness, market). Standup similarly decomposed (constants, work_sections, relationship_sections). Score system uses separate constants, dimensions modules. The DAG property holds \u2014 no circular imports. The state machine is formalized in pipeline_entry_state.py with explicit VALID_TRANSITIONS.",
+      "strengths": [
+        "Information flow is strictly layered: data \u2192 CLI \u2192 API \u2192 MCP",
+        "State machine formalization prevents ad-hoc status transitions",
+        "Module extraction follows natural domain boundaries (freshness is separate from state)"
+      ],
+      "weaknesses": [
+        "pipeline_lib still re-exports from sub-modules for backward compat \u2014 conceptual overhead",
+        "No dependency injection; scripts import modules directly, making isolated testing harder",
+        "Scoring rubric YAML and score.py _DEFAULT_WEIGHTS are duplicated (audit catches drift but shouldn't exist)"
+      ]
+    },
+    "documentation": {
+      "score": 9.0,
+      "confidence": "high",
+      "evidence": "CLAUDE.md is a reference-quality onboarding document: state machine, identity positions, content composition model, script dependency graph, module architecture table, configuration files, CI & linting, testing patterns. docs/ contains architecture.md, workflow.md, SOPs. Scoring rubric documented in both YAML and scoring-rubric.md. Market intelligence has 126-source annotated bibliography. The system is self-documenting through the diagnostic tool.",
+      "strengths": [
+        "CLAUDE.md serves as both onboarding doc and architectural specification",
+        "Market research corpus is a model for evidence-based documentation",
+        "Self-assessment tooling (diagnose.py) makes quality visible"
+      ],
+      "weaknesses": [
+        "Architecture decisions not captured in ADR format",
+        "Some workflow sequences only documented in CLAUDE.md, not in dedicated docs"
+      ]
+    },
+    "analytics_intelligence": {
+      "score": 8.5,
+      "confidence": "medium",
+      "evidence": "Strong multi-dimensional scoring: 9 dimensions with 2 weight sets adapting to job vs general tracks. Conversion funnel tracks stage\u2192stage rates. Snapshot system provides trend detection with regression slopes. Rejection learner and block-outcome correlation provide feedback loops. Org intelligence aggregates cross-entry signals. Market intelligence integrates 112 sources. The scoring model lacks outcome validation \u2014 claims like '8x referral multiplier' aren't yet validated by this pipeline's own data.",
+      "strengths": [
+        "Multi-dimensional scoring with domain-specific weights is architecturally sound",
+        "Feedback loops (rejection learner, block outcomes) enable system learning",
+        "Market intelligence integration provides external calibration"
+      ],
+      "weaknesses": [
+        "Scoring model claims are based on external benchmarks, not validated against own outcomes",
+        "Text matching uses TF-IDF \u2014 architecturally simpler than embedding similarity",
+        "No A/B testing framework for variant effectiveness measurement"
+      ]
+    },
+    "sustainability": {
+      "score": 8.0,
+      "confidence": "medium",
+      "evidence": "Strong automation layer: 7 launchd agents, agent.py for autonomous actions, notify.py for event dispatch. CLAUDE.md provides sufficient context for any AI model to operate the system. The three-layer API architecture (pipeline_api.py \u2192 cli.py \u2192 mcp_server.py) means the system can be operated programmatically, via CLI, or via MCP. SOP documentation started. The diagnostic tool itself demonstrates sustainability \u2014 the system grades itself.",
+      "strengths": [
+        "Multi-interface design (CLI, API, MCP) maximizes operator flexibility",
+        "Self-diagnostic capability reduces dependency on original author",
+        "Automation covers the full daily cadence (morning \u2192 evening)"
+      ],
+      "weaknesses": [
+        "Single operator model \u2014 no delegation or team features",
+        "Recovery procedures not formally documented",
+        "Scaling beyond single-operator use would require significant redesign"
+      ]
+    }
+  }
+}

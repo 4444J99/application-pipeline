@@ -1,0 +1,124 @@
+{
+  "rater_id": "senior-engineer",
+  "timestamp": "2026-03-14T19:52:32.745002+00:00",
+  "rubric_version": "1.1",
+  "dimensions": {
+    "test_coverage": {
+      "score": 10.0,
+      "confidence": "high",
+      "evidence": "2408 tests; matrix 123/123 modules",
+      "details": {
+        "test_count": 2408,
+        "matrix_ratio": 1.0,
+        "matrix_detail": "123/123 modules",
+        "test_count_fallback_used": false
+      }
+    },
+    "code_quality": {
+      "score": 9.4,
+      "confidence": "high",
+      "evidence": "0 lint errors; 1056/1330 functions type-hinted",
+      "details": {
+        "lint_errors": 0,
+        "type_hinted_functions": 1056,
+        "total_functions": 1330,
+        "hint_ratio": 0.794,
+        "ruff_unavailable": false,
+        "shadow_scripts": []
+      }
+    },
+    "data_integrity": {
+      "score": 10.0,
+      "confidence": "high",
+      "evidence": "0 validation errors; 0 signal errors",
+      "details": {
+        "validation_errors": 0,
+        "signal_errors": 0,
+        "total_errors": 0
+      }
+    },
+    "operational_maturity": {
+      "score": 9.5,
+      "confidence": "medium",
+      "evidence": "7/7 agents loaded; backup <7d; notifications configured",
+      "details": {
+        "agent_total": 7,
+        "agent_loaded": 7,
+        "agent_healthy": true,
+        "backup_age_days": 6,
+        "notifications_configured": true
+      }
+    },
+    "claim_provenance": {
+      "score": 5.6,
+      "confidence": "high",
+      "evidence": "1588 claims: 657 sourced, 545 cited, 386 unsourced (24% unsourced)",
+      "details": {
+        "total": 1588,
+        "sourced": 657,
+        "cited": 545,
+        "unsourced": 386,
+        "sourced_ratio": 0.414,
+        "cited_ratio": 0.757
+      }
+    },
+    "architecture": {
+      "score": 8.0,
+      "confidence": "medium",
+      "evidence": "118 modules; clean pipeline_lib decomposition with extracted sub-modules (entry_state, freshness, market); dependency graph is a DAG. Some tight coupling between campaign.py/enrich.py and alchemize.py/greenhouse_submit.py. Score modules keep constants separate. Good single-responsibility overall but run.py dispatcher is getting large (79 commands).",
+      "strengths": [
+        "pipeline_lib decomposition into focused sub-modules reduces cognitive load",
+        "Clear dependency direction: scripts import from pipeline_lib, not from each other (mostly)",
+        "Score system cleanly separates constants, dimensions, and main scorer"
+      ],
+      "weaknesses": [
+        "campaign.py imports from enrich.py creating a cross-dependency",
+        "run.py command map growing unwieldy at 79 commands",
+        "Some scripts have dual responsibility (hygiene.py does both URL checks and research pruning)"
+      ]
+    },
+    "documentation": {
+      "score": 8.5,
+      "confidence": "high",
+      "evidence": "CLAUDE.md is 400+ lines covering architecture, commands, conventions, state machine, identity positions, and testing patterns. All scripts have module-level docstrings. Architecture rationale documented in docs/architecture.md. SOP library started with IRA and submission SOPs. Missing: formal API docs for pipeline_lib functions.",
+      "strengths": [
+        "CLAUDE.md is exceptionally comprehensive for AI-assisted onboarding",
+        "Script dependency graph explicitly documented",
+        "Session sequences guide daily workflow"
+      ],
+      "weaknesses": [
+        "No formal API reference for pipeline_lib's 50+ exported functions",
+        "Some one-off scripts lack usage examples in docstrings"
+      ]
+    },
+    "analytics_intelligence": {
+      "score": 9.0,
+      "confidence": "high",
+      "evidence": "9-dimension scoring model with rubric-driven weights and auto-qualification. Full conversion funnel analytics (funnel_report.py). Snapshot trend detection with 7d/30d/90d linear regression slopes. Rejection learner correlating dimension weaknesses with outcomes. Org intelligence aggregating cross-entry data. Block-outcome correlation (golden/toxic blocks). Skills gap analysis. Portfolio analysis across blocks, positions, channels.",
+      "strengths": [
+        "Scoring model is sophisticated: 9 dimensions, 2 weight sets, network_proximity",
+        "Trend detection uses linear regression over snapshot history",
+        "Block-outcome correlation provides actionable signal"
+      ],
+      "weaknesses": [
+        "Some analytics depend on sufficient outcome data which is sparse early on",
+        "Text match TF-IDF could benefit from embedding-based similarity"
+      ]
+    },
+    "sustainability": {
+      "score": 7.5,
+      "confidence": "medium",
+      "evidence": "7 launchd agents covering daily operations, weekly backups, and calendar export. CLAUDE.md provides sufficient context for another operator to run daily workflow. run.py command discoverability is good. SOP documentation started. Bus factor concern: single operator, deep domain knowledge embedded in strategy/ files.",
+      "strengths": [
+        "LaunchAgent automation reduces daily manual toil",
+        "CLAUDE.md enables AI-assisted operation without original author",
+        "run.py single-word commands make discovery easy"
+      ],
+      "weaknesses": [
+        "Single operator \u2014 bus factor of 1",
+        "Strategy files contain implicit domain knowledge not documented as SOPs",
+        "No runbook for incident response (what happens when backups fail?)"
+      ]
+    }
+  }
+}

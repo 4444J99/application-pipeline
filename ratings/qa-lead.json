@@ -1,0 +1,126 @@
+{
+  "rater_id": "qa-lead",
+  "timestamp": "2026-03-14T19:52:32.745002+00:00",
+  "rubric_version": "1.1",
+  "dimensions": {
+    "test_coverage": {
+      "score": 10.0,
+      "confidence": "high",
+      "evidence": "2408 tests; matrix 123/123 modules",
+      "details": {
+        "test_count": 2408,
+        "matrix_ratio": 1.0,
+        "matrix_detail": "123/123 modules",
+        "test_count_fallback_used": false
+      }
+    },
+    "code_quality": {
+      "score": 9.4,
+      "confidence": "high",
+      "evidence": "0 lint errors; 1056/1330 functions type-hinted",
+      "details": {
+        "lint_errors": 0,
+        "type_hinted_functions": 1056,
+        "total_functions": 1330,
+        "hint_ratio": 0.794,
+        "ruff_unavailable": false,
+        "shadow_scripts": []
+      }
+    },
+    "data_integrity": {
+      "score": 10.0,
+      "confidence": "high",
+      "evidence": "0 validation errors; 0 signal errors",
+      "details": {
+        "validation_errors": 0,
+        "signal_errors": 0,
+        "total_errors": 0
+      }
+    },
+    "operational_maturity": {
+      "score": 9.5,
+      "confidence": "medium",
+      "evidence": "7/7 agents loaded; backup <7d; notifications configured",
+      "details": {
+        "agent_total": 7,
+        "agent_loaded": 7,
+        "agent_healthy": true,
+        "backup_age_days": 6,
+        "notifications_configured": true
+      }
+    },
+    "claim_provenance": {
+      "score": 5.6,
+      "confidence": "high",
+      "evidence": "1588 claims: 657 sourced, 545 cited, 386 unsourced (24% unsourced)",
+      "details": {
+        "total": 1588,
+        "sourced": 657,
+        "cited": 545,
+        "unsourced": 386,
+        "sourced_ratio": 0.414,
+        "cited_ratio": 0.757
+      }
+    },
+    "architecture": {
+      "score": 7.5,
+      "confidence": "medium",
+      "evidence": "Good module separation overall but testability concerns. Direct module imports (no DI) mean many tests require monkeypatching sys.path, module globals, and filesystem paths. The verification matrix enforces module-to-test coverage but some test files are large (test_standup.py: 77 tests). Score calculation has multiple code paths (rubric YAML vs _DEFAULT_WEIGHTS fallback) that could diverge. The state machine formalization is good for validation but transition rules are spread across pipeline_entry_state.py and advance.py.",
+      "strengths": [
+        "Verification matrix enforces every module has corresponding tests",
+        "State machine formalization enables automated validation",
+        "Clean separation between live-data tests and isolated unit tests"
+      ],
+      "weaknesses": [
+        "No dependency injection \u2014 testing requires extensive monkeypatching",
+        "Some test files are very large, suggesting the modules they test are too coupled",
+        "Transition rules split between state module and advance script"
+      ]
+    },
+    "documentation": {
+      "score": 8.0,
+      "confidence": "medium",
+      "evidence": "CLAUDE.md covers testing patterns which is valuable. Test naming conventions are descriptive (test_stale_entry_flagged, test_score_out_of_range_rejected). But: no dedicated testing guide, no contribution guidelines for test writing, edge case coverage is noted in rubric but not systematically tracked. Documentation of expected failure modes is implicit in tests rather than explicit in docs.",
+      "strengths": [
+        "CLAUDE.md testing patterns section guides new test authors",
+        "Test names are descriptive and follow consistent conventions",
+        "Architecture docs help understand what to test"
+      ],
+      "weaknesses": [
+        "No formal testing guide or contribution documentation",
+        "Edge case coverage not systematically tracked or documented",
+        "Error message documentation is implicit"
+      ]
+    },
+    "analytics_intelligence": {
+      "score": 8.0,
+      "confidence": "medium",
+      "evidence": "Good analytics coverage but validation of analytics output is light. funnel_report.py produces conversion rates but no tests verify the math against known data. rejection_learner correlates outcomes but sample sizes are small and no statistical significance testing. Snapshot trend detection uses linear regression which is appropriate but no confidence intervals reported. Block-outcome classification (golden/toxic) uses fixed thresholds (50%, 75%) without rationale for those cutoffs.",
+      "strengths": [
+        "Comprehensive analytics suite covering many business questions",
+        "Snapshot trend detection is methodologically sound",
+        "Rejection learning creates a feedback loop for improvement"
+      ],
+      "weaknesses": [
+        "Analytics output not validated by tests against known datasets",
+        "No statistical significance testing for small sample conclusions",
+        "Fixed classification thresholds lack documented rationale"
+      ]
+    },
+    "sustainability": {
+      "score": 7.0,
+      "confidence": "medium",
+      "evidence": "Automation is good but monitoring of automation health is reactive. launchd_manager.py checks agent status but no alerting on agent failures. Backup monitoring exists (monitor_pipeline.py) but relies on manual invocation. The verification matrix is a strong sustainability signal \u2014 ensures new modules get tests. But: no integration tests for the full daily workflow, no smoke test for the automation chain, no canary for silent failures.",
+      "strengths": [
+        "Verification matrix ensures new modules get tested",
+        "Automation covers core daily operations",
+        "CLAUDE.md enables AI-assisted maintenance"
+      ],
+      "weaknesses": [
+        "No alerting on launchd agent failures \u2014 failures are silent",
+        "No integration test for the daily automation chain",
+        "No canary mechanism to detect silent data corruption"
+      ]
+    }
+  }
+}

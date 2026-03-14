@@ -1,0 +1,67 @@
+{
+  "rater_id": "objective",
+  "timestamp": "2026-03-14T19:52:32.745002+00:00",
+  "rubric_version": "1.1",
+  "dimensions": {
+    "test_coverage": {
+      "score": 10.0,
+      "confidence": "high",
+      "evidence": "2408 tests; matrix 123/123 modules",
+      "details": {
+        "test_count": 2408,
+        "matrix_ratio": 1.0,
+        "matrix_detail": "123/123 modules",
+        "test_count_fallback_used": false
+      }
+    },
+    "code_quality": {
+      "score": 9.4,
+      "confidence": "high",
+      "evidence": "0 lint errors; 1056/1330 functions type-hinted",
+      "details": {
+        "lint_errors": 0,
+        "type_hinted_functions": 1056,
+        "total_functions": 1330,
+        "hint_ratio": 0.794,
+        "ruff_unavailable": false,
+        "shadow_scripts": []
+      }
+    },
+    "data_integrity": {
+      "score": 10.0,
+      "confidence": "high",
+      "evidence": "0 validation errors; 0 signal errors",
+      "details": {
+        "validation_errors": 0,
+        "signal_errors": 0,
+        "total_errors": 0
+      }
+    },
+    "operational_maturity": {
+      "score": 9.5,
+      "confidence": "medium",
+      "evidence": "7/7 agents loaded; backup <7d; notifications configured",
+      "details": {
+        "agent_total": 7,
+        "agent_loaded": 7,
+        "agent_healthy": true,
+        "backup_age_days": 6,
+        "notifications_configured": true
+      }
+    },
+    "claim_provenance": {
+      "score": 5.6,
+      "confidence": "high",
+      "evidence": "1588 claims: 657 sourced, 545 cited, 386 unsourced (24% unsourced)",
+      "details": {
+        "total": 1588,
+        "sourced": 657,
+        "cited": 545,
+        "unsourced": 386,
+        "sourced_ratio": 0.414,
+        "cited_ratio": 0.757
+      }
+    }
+  },
+  "composite": 5.3
+}
