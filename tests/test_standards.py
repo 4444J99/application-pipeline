@@ -805,3 +805,15 @@ class TestFormatReport:
         text = format_report(report)
         assert "FAIL" in text
         assert "University" in text
+
+
+# ---------------------------------------------------------------------------
+
+
+class TestRunPyIntegration:
+    """Standards command registered in run.py."""
+
+    def test_standards_command_exists(self):
+        from run import COMMANDS
+        assert "standards" in COMMANDS
+        assert COMMANDS["standards"][0] == "standards.py"

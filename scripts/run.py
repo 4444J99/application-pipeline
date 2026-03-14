@@ -73,7 +73,7 @@ COMMANDS = {
     "monitor":     ("monitor_pipeline.py", [],            "Monitor backup + conversion-log freshness"),
     "scheduler":   ("scheduler_health.py", [],           "Launchd scheduler and agent health check"),
     "freshness":   ("freshness_monitor.py", [],          "Entry freshness report (posting age analysis)"),
-    "resumes":     ("upgrade_resumes.py", [],             "Check for stale resume batch references"),
+    "staleresumes": ("upgrade_resumes.py", [],             "Check for stale resume batch references"),
 
     # -- Learning --
     "learner":     ("outcome_learner.py", [],            "Outcome learning engine: calibration report"),
@@ -104,6 +104,8 @@ COMMANDS = {
     # -- Diagnostics --
     "diagnose":    ("diagnose.py", [],                       "System diagnostic scorecard (objective dimensions)"),
     "ira":         ("diagnose_ira.py", [],                   "Inter-rater agreement report (auto-loads ratings/*.json)"),
+    "sysaudit":    ("audit_system.py", [],                   "System integrity audit: claims, wiring, logic"),
+    "standards":   ("standards.py", [],                       "Standards Board: 5-level hierarchical validation audit"),
 
     # -- Infrastructure --
     "agent":       ("agent.py", ["--plan"],              "Agent: preview planned autonomous actions"),

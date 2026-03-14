@@ -56,6 +56,10 @@ def build_checks(quick: bool) -> list[Check]:
             name="signal-validation",
             command=[PYTHON, str(REPO_ROOT / "scripts" / "validate_signals.py"), "--strict"],
         ),
+        Check(
+            name="standards-level2",
+            command=[PYTHON, str(REPO_ROOT / "scripts" / "standards.py"), "--level", "2", "--json"],
+        ),
     ]
 
     if quick:
