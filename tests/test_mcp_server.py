@@ -8,13 +8,22 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../s
 
 from mcp_server import (
     pipeline_advance,
+    pipeline_audit,
     pipeline_campaign,
     pipeline_compose,
     pipeline_crm_dashboard,
     pipeline_draft,
+    pipeline_enrich,
+    pipeline_followup,
     pipeline_funnel,
+    pipeline_hygiene,
+    pipeline_org_intelligence,
+    pipeline_phase_analytics,
     pipeline_score,
     pipeline_snapshot,
+    pipeline_standards,
+    pipeline_standup,
+    pipeline_submit,
     pipeline_triage,
     pipeline_validate,
 )
@@ -164,3 +173,84 @@ def test_pipeline_campaign_tool():
     assert isinstance(data, dict)
     if data.get("status") != "error":
         assert "tiers" in data or "entries" in data or "total" in data
+
+
+def test_pipeline_followup_tool():
+    """Verify pipeline_followup returns JSON with follow-up data."""
+    result = pipeline_followup()
+    data = json.loads(result)
+    assert isinstance(data, dict)
+    assert "status" in data
+    assert "entry_id" in data
+
+
+def test_pipeline_hygiene_tool():
+    """Verify pipeline_hygiene returns JSON with hygiene data."""
+    result = pipeline_hygiene()
+    data = json.loads(result)
+    assert isinstance(data, dict)
+    assert "status" in data
+    assert "total_issues" in data
+
+
+def test_pipeline_enrich_tool():
+    """Verify pipeline_enrich returns JSON with enrichment data."""
+    result = pipeline_enrich(all_entries=True)
+    data = json.loads(result)
+    assert isinstance(data, dict)
+    assert "status" in data
+    assert data["entry_id"] == "batch"
+
+
+def test_pipeline_standup_tool():
+    """Verify pipeline_standup returns JSON with standup output."""
+    result = pipeline_standup(section="health")
+    data = json.loads(result)
+    assert isinstance(data, dict)
+    assert "status" in data
+
+
+def test_pipeline_submit_tool():
+    """Verify pipeline_submit returns JSON with checklist data."""
+    entry_id = _first_entry_id()
+    result = pipeline_submit(entry_id)
+    data = json.loads(result)
+    assert isinstance(data, dict)
+    assert "status" in data
+    assert "entry_id" in data
+
+
+def test_pipeline_org_intelligence_tool():
+    """Verify pipeline_org_intelligence returns JSON with org data."""
+    result = pipeline_org_intelligence()
+    data = json.loads(result)
+    assert isinstance(data, dict)
+    assert "status" in data
+
+
+def test_pipeline_audit_tool():
+    """Verify pipeline_audit returns JSON with audit results."""
+    result = pipeline_audit()
+    data = json.loads(result)
+    assert isinstance(data, dict)
+    if data.get("status") != "error":
+        assert "claims" in data
+        assert "wiring" in data
+        assert "logic" in data
+        assert "summary" in data
+
+
+def test_pipeline_standards_tool():
+    """Verify pipeline_standards returns JSON with board report."""
+    result = pipeline_standards()
+    data = json.loads(result)
+    assert "passed" in data
+    assert "level_reports" in data
+
+
+def test_pipeline_phase_analytics_tool():
+    """Verify pipeline_phase_analytics returns JSON with phase comparison."""
+    result = pipeline_phase_analytics()
+    data = json.loads(result)
+    assert "phase_1" in data
+    assert "phase_2" in data
