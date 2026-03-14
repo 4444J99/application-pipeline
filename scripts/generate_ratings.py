@@ -171,6 +171,22 @@ def generate_ratings(
         if not panel:
             return {"status": "error", "error": f"Rater '{single_rater}' not in panel"}
 
+    if dry_run:
+        # Dry run doesn't need API keys — just show prompts
+        evidence_parts = []
+        for dim_key, generator in PROMPT_GENERATORS.items():
+            evidence_parts.append(f"## {dim_key}\n{generator()}")
+        combined_evidence = "\n\n---\n\n".join(evidence_parts)
+        for rater_cfg in panel:
+            persona = personas.get(rater_cfg["persona"], {})
+            system_prompt = build_system_prompt(persona, rubric)
+            print(f"\n{'=' * 60}")
+            print(f"RATER: {rater_cfg['rater_id']} ({rater_cfg['model']})")
+            print(f"{'=' * 60}")
+            print(f"\nSYSTEM PROMPT:\n{system_prompt[:500]}...")
+            print(f"\nEVIDENCE:\n{combined_evidence[:500]}...")
+        return {"status": "dry_run", "raters": [r["rater_id"] for r in panel]}
+
     # Check API keys for configured providers
     providers_needed = {r["provider"] for r in panel}
     if "anthropic" in providers_needed and not os.environ.get("ANTHROPIC_API_KEY"):
@@ -189,17 +205,6 @@ def generate_ratings(
     for dim_key, generator in PROMPT_GENERATORS.items():
         evidence_parts.append(f"## {dim_key}\n{generator()}")
     combined_evidence = "\n\n---\n\n".join(evidence_parts)
-
-    if dry_run:
-        for rater_cfg in panel:
-            persona = personas.get(rater_cfg["persona"], {})
-            system_prompt = build_system_prompt(persona, rubric)
-            print(f"\n{'=' * 60}")
-            print(f"RATER: {rater_cfg['rater_id']} ({rater_cfg['model']})")
-            print(f"{'=' * 60}")
-            print(f"\nSYSTEM PROMPT:\n{system_prompt[:500]}...")
-            print(f"\nEVIDENCE:\n{combined_evidence[:500]}...")
-        return {"status": "dry_run", "raters": [r["rater_id"] for r in panel]}
 
     # Archive existing rating files
     archive_existing_ratings()
