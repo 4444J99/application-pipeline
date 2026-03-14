@@ -17,9 +17,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import subprocess
 import sys
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -27,13 +29,34 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import audit_system as audit_system_mod
 import diagnose as diagnose_mod
 import diagnose_ira as diagnose_ira_mod
+import outcome_learner as outcome_learner_mod
 import validate as validate_mod
+import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 DIAGNOSTIC_THRESHOLD = 6.0
 ICC_THRESHOLD = 0.61
 RATINGS_DIR = REPO_ROOT / "ratings"
+
+# Level 4 — National
+MIN_OUTCOMES = 30
+MIN_HYPOTHESES = 10
+WEIGHT_DRIFT_THRESHOLD = 0.15
+CORRELATION_THRESHOLD = 0.3
+HYPOTHESIS_ACCURACY_THRESHOLD = 0.5
+
+# Level 5 — Federal
+SOURCE_QUALITY_THRESHOLD = 2.5
+BENCHMARK_ALIGNMENT_THRESHOLD = 0.7
+SOURCE_FRESHNESS_THRESHOLD = 0.8
+SOURCE_MAX_AGE_YEARS = 2
+
+SOURCE_TIER_KEYWORDS = {
+    4: ["bls.gov", "census.gov", "doi.org", "arxiv.org", "nber.org", "nsf.gov", "nih.gov"],
+    3: ["linkedin.com", "glassdoor.com", "indeed.com", "burning-glass", "gartner.com", "mckinsey.com"],
+    2: ["resumegenius", "resume-now", "zety.com", "novoresume", "theladders.com"],
+}
 
 
 def _load_rating_files() -> list[dict]:
@@ -50,6 +73,36 @@ def _load_rating_files() -> list[dict]:
         except (OSError, json.JSONDecodeError):
             continue
     return ratings
+
+
+def _load_outcome_data() -> list[dict]:
+    """Load scored outcome data for Level 4 analysis."""
+    try:
+        return outcome_learner_mod.collect_outcome_data()
+    except Exception:  # noqa: BLE001
+        return []
+
+
+def _load_base_weights() -> dict:
+    """Load current scoring weights."""
+    try:
+        from score import WEIGHTS
+        return dict(WEIGHTS)
+    except Exception:  # noqa: BLE001
+        return {}
+
+
+def _load_hypotheses() -> list[dict]:
+    """Load hypothesis entries from signals/hypotheses.yaml."""
+    hyp_path = REPO_ROOT / "signals" / "hypotheses.yaml"
+    if not hyp_path.exists():
+        return []
+    try:
+        with open(hyp_path) as f:
+            data = yaml.safe_load(f)
+        return data if isinstance(data, list) else []
+    except Exception:  # noqa: BLE001
+        return []
 
 
 # ---------------------------------------------------------------------------
@@ -367,11 +420,63 @@ class NationalRegulator(_BaseRegulator):
     level = 4
     name = "National"
 
-    def evaluate(self) -> LevelReport:  # type: ignore[override]
+    def gate_outcome(self) -> GateResult:
+        """Gate 4A: Dimension-outcome correlation.
+        NEW: wraps outcome_learner.analyze_dimension_accuracy()."""
+        data = _load_outcome_data()
+        if len(data) < MIN_OUTCOMES:
+            return GateResult("outcome", False, None,
+                              f"insufficient data ({len(data)} outcomes, need {MIN_OUTCOMES})")
+        analysis = outcome_learner_mod.analyze_dimension_accuracy(data)
+        deltas = [abs(v["delta"]) for v in analysis.values()
+                  if v.get("delta") is not None]
+        avg_delta = sum(deltas) / len(deltas) if deltas else 0.0
+        score = min(1.0, avg_delta / 3.0)
+        passed = score >= CORRELATION_THRESHOLD
+        evidence = (f"avg dimension delta={avg_delta:.2f} across {len(data)} outcomes "
+                    f"(threshold={CORRELATION_THRESHOLD})")
+        return GateResult("outcome", passed, round(score, 3), evidence)
+
+    def gate_recalibration(self) -> GateResult:
+        """Gate 4B: Weight drift from empirical optimum.
+        NEW: wraps outcome_learner.compute_weight_drift()."""
+        data = _load_outcome_data()
+        if len(data) < MIN_OUTCOMES:
+            return GateResult("recalibration", False, None,
+                              f"insufficient data ({len(data)} outcomes, need {MIN_OUTCOMES})")
+        base_weights = _load_base_weights()
+        if not base_weights:
+            return GateResult("recalibration", False, None, "could not load base weights")
+        analysis = outcome_learner_mod.analyze_dimension_accuracy(data)
+        recs = outcome_learner_mod.compute_weight_recommendations(analysis, base_weights)
+        cal_weights = recs.get("weights", base_weights)
+        drift = outcome_learner_mod.compute_weight_drift(base_weights, cal_weights)
+        max_drift = drift.get("max_abs_delta", 0.0)
+        passed = max_drift <= WEIGHT_DRIFT_THRESHOLD
+        evidence = f"max weight drift={max_drift:.4f} (threshold={WEIGHT_DRIFT_THRESHOLD})"
+        return GateResult("recalibration", passed, round(1.0 - max_drift, 3), evidence)
+
+    def gate_hypothesis(self) -> GateResult:
+        """Gate 4C: Hypothesis prediction accuracy.
+        NEW: compares pre-recorded predictions against actual outcomes."""
+        hypotheses = _load_hypotheses()
+        resolved = [h for h in hypotheses if h.get("outcome") is not None]
+        if len(resolved) < MIN_HYPOTHESES:
+            return GateResult("hypothesis", False, None,
+                              f"insufficient data ({len(resolved)} resolved hypotheses, "
+                              f"need {MIN_HYPOTHESES})")
+        correct = sum(1 for h in resolved
+                      if h.get("predicted_outcome") == h.get("outcome"))
+        accuracy = correct / len(resolved)
+        passed = accuracy >= HYPOTHESIS_ACCURACY_THRESHOLD
+        evidence = f"{correct}/{len(resolved)} predictions correct ({accuracy:.0%})"
+        return GateResult("hypothesis", passed, round(accuracy, 3), evidence)
+
+    def evaluate(self) -> LevelReport:
         gates = [
-            GateResult("outcome", False, None, "not yet implemented"),
-            GateResult("recalibration", False, None, "not yet implemented"),
-            GateResult("hypothesis", False, None, "not yet implemented"),
+            _run_gate("outcome", self.gate_outcome),
+            _run_gate("recalibration", self.gate_recalibration),
+            _run_gate("hypothesis", self.gate_hypothesis),
         ]
         return LevelReport(level=self.level, name=self.name, gates=gates)
 
@@ -382,11 +487,82 @@ class FederalRegulator(_BaseRegulator):
     level = 5
     name = "Federal"
 
-    def evaluate(self) -> LevelReport:  # type: ignore[override]
+    def gate_source_quality(self) -> GateResult:
+        """Gate 5A: Source credibility assessment.
+        Extends audit_system.audit_claims() with quality tier scoring."""
+        claims_result = audit_system_mod.audit_claims()
+        claims = claims_result.get("claims", [])
+        if not claims:
+            return GateResult("source_quality", False, 0.0, "no claims found to assess")
+        tier_scores = []
+        for claim in claims:
+            status = claim.get("status", "unsourced")
+            context = claim.get("context", "").lower()
+            if status == "unsourced":
+                tier_scores.append(0)
+                continue
+            tier = 1  # default: opinion
+            if status == "cited":
+                tier = 2
+            for t, keywords in SOURCE_TIER_KEYWORDS.items():
+                if any(kw in context for kw in keywords):
+                    tier = t
+                    break
+            tier_scores.append(tier)
+        avg_tier = sum(tier_scores) / len(tier_scores)
+        passed = avg_tier >= SOURCE_QUALITY_THRESHOLD
+        evidence = (f"avg source quality={avg_tier:.2f}/4.0 across {len(claims)} claims "
+                    f"(threshold={SOURCE_QUALITY_THRESHOLD})")
+        return GateResult("source_quality", passed, round(avg_tier / 4.0, 3), evidence)
+
+    def gate_benchmark(self) -> GateResult:
+        """Gate 5B: Pipeline metrics vs external benchmarks.
+        Checks market-intelligence JSON has populated benchmark data."""
+        market_path = REPO_ROOT / "strategy" / "market-intelligence-2026.json"
+        if not market_path.exists():
+            return GateResult("benchmark", False, 0.0, "market intelligence file not found")
+        try:
+            market = json.loads(market_path.read_text())
+        except Exception as exc:  # noqa: BLE001
+            return GateResult("benchmark", False, 0.0, f"parse error: {exc}")
+        benchmarks = market.get("volume_benchmarks", {})
+        if not benchmarks:
+            return GateResult("benchmark", False, 0.0, "no volume_benchmarks in market intelligence")
+        total = len(benchmarks)
+        has_data = sum(1 for v in benchmarks.values() if v not in (None, "", 0))
+        ratio = has_data / total if total else 0
+        passed = ratio >= BENCHMARK_ALIGNMENT_THRESHOLD
+        evidence = f"{has_data}/{total} benchmarks populated (threshold={BENCHMARK_ALIGNMENT_THRESHOLD})"
+        return GateResult("benchmark", passed, round(ratio, 3), evidence)
+
+    def gate_temporal(self) -> GateResult:
+        """Gate 5C: Source freshness.
+        Checks cited source publication years are within 2 years of current."""
+        corpus_path = REPO_ROOT / "strategy" / "market-research-corpus.md"
+        if not corpus_path.exists():
+            return GateResult("temporal", False, 0.0, "market-research-corpus.md not found")
+        try:
+            text = corpus_path.read_text()
+        except OSError as exc:
+            return GateResult("temporal", False, 0.0, f"read error: {exc}")
+        year_pattern = re.compile(r'\b(20[12]\d)\b')
+        years_found = [int(y) for y in year_pattern.findall(text)]
+        if not years_found:
+            return GateResult("temporal", False, 0.0, "no publication years found in corpus")
+        current_year = date.today().year
+        fresh = sum(1 for y in years_found if current_year - y <= SOURCE_MAX_AGE_YEARS)
+        total = len(years_found)
+        ratio = fresh / total
+        passed = ratio >= SOURCE_FRESHNESS_THRESHOLD
+        evidence = (f"{fresh}/{total} source dates within {SOURCE_MAX_AGE_YEARS} years "
+                    f"({ratio:.0%}, threshold={SOURCE_FRESHNESS_THRESHOLD:.0%})")
+        return GateResult("temporal", passed, round(ratio, 3), evidence)
+
+    def evaluate(self) -> LevelReport:
         gates = [
-            GateResult("source_quality", False, None, "not yet implemented"),
-            GateResult("benchmark", False, None, "not yet implemented"),
-            GateResult("temporal", False, None, "not yet implemented"),
+            _run_gate("source_quality", self.gate_source_quality),
+            _run_gate("benchmark", self.gate_benchmark),
+            _run_gate("temporal", self.gate_temporal),
         ]
         return LevelReport(level=self.level, name=self.name, gates=gates)
 
