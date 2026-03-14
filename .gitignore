@@ -44,6 +44,9 @@ build/
 # Browser automation
 scripts/.browser-profile/
 
+# Historical data intake (contains PII)
+intake/
+
 # Temporary
 *.tmp
 *.bak
