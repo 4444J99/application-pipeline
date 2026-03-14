@@ -211,9 +211,9 @@ def _run_gate(gate_name: str, validator_fn, *args) -> GateResult:
         result = validator_fn(*args)
         if isinstance(result, GateResult):
             return result
-        # Validator returned something unexpected — treat as a pass with a note
-        return GateResult(gate=gate_name, passed=True, score=1.0,
-                          evidence=f"validator returned {type(result).__name__}")
+        # Validator returned something unexpected — respect truthiness
+        return GateResult(gate=gate_name, passed=bool(result), score=None,
+                          evidence=f"validator returned {type(result).__name__}: {result}")
     except Exception as exc:  # noqa: BLE001
         return GateResult(
             gate=gate_name,
@@ -231,11 +231,12 @@ def _run_subprocess_gate(gate_name: str, command: list[str]) -> GateResult:
     Handles TimeoutExpired by returning a failing gate.
     """
     try:
-        proc = subprocess.run(command, capture_output=True, timeout=120)
+        proc = subprocess.run(command, capture_output=True, text=True, timeout=120,
+                              cwd=REPO_ROOT)
         if proc.returncode == 0:
             return GateResult(gate=gate_name, passed=True, score=1.0,
                               evidence="exit code 0")
-        stderr_snippet = proc.stderr.decode(errors="replace")[:200]
+        stderr_snippet = proc.stderr[:200]
         return GateResult(gate=gate_name, passed=False, score=0.0,
                           evidence=f"exit code {proc.returncode}: {stderr_snippet}")
     except subprocess.TimeoutExpired:
