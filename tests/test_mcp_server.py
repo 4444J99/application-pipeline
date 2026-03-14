@@ -19,6 +19,7 @@ from mcp_server import (
     pipeline_hygiene,
     pipeline_org_intelligence,
     pipeline_phase_analytics,
+    pipeline_rate,
     pipeline_score,
     pipeline_snapshot,
     pipeline_standards,
@@ -254,3 +255,12 @@ def test_pipeline_phase_analytics_tool():
     data = json.loads(result)
     assert "phase_1" in data
     assert "phase_2" in data
+
+
+def test_pipeline_rate_tool():
+    """Verify pipeline_rate returns JSON in dry_run mode."""
+    result = pipeline_rate(dry_run=True)
+    data = json.loads(result)
+    assert data["status"] == "dry_run"
+    assert "raters" in data
+    assert len(data["raters"]) >= 4
