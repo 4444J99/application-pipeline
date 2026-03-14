@@ -31,6 +31,7 @@ from pipeline_lib import (
 )
 
 CALIBRATION_FILE = SIGNALS_DIR / "weight-calibration.yaml"
+HISTORICAL_OUTCOMES_PATH = SIGNALS_DIR / "historical-outcomes.yaml"
 
 # Minimum outcomes needed before recommending weight changes
 MIN_OUTCOMES_FOR_CALIBRATION = 10
@@ -135,6 +136,42 @@ def collect_outcome_data() -> list[dict]:
         })
 
     return data
+
+
+def load_historical_outcomes() -> list[dict]:
+    """Load historical outcome records from signals/historical-outcomes.yaml.
+
+    Returns simplified records without dimension scores (these predate the pipeline).
+    Each record has: company, title, applied_date, channel, portal, outcome.
+    """
+    if not HISTORICAL_OUTCOMES_PATH.exists():
+        return []
+    try:
+        with open(HISTORICAL_OUTCOMES_PATH) as f:
+            data = yaml.safe_load(f)
+        entries = data.get("entries", []) if isinstance(data, dict) else []
+        return [e for e in entries if isinstance(e, dict) and e.get("outcome")]
+    except Exception:  # noqa: BLE001
+        return []
+
+
+def collect_all_outcome_data() -> list[dict]:
+    """Collect outcome data from both pipeline entries and historical records.
+
+    Pipeline records have full dimension scores. Historical records have
+    channel/portal/date but no dimension scores. Consumers must handle
+    the difference (check for 'composite_score' key presence).
+    """
+    pipeline = collect_outcome_data()
+    historical = load_historical_outcomes()
+    # Normalize historical records to match pipeline record shape
+    for h in historical:
+        h.setdefault("entry_id", f"hist-{h.get('company', '?')}-{h.get('applied_date', '?')}")
+        h.setdefault("composite_score", None)
+        h.setdefault("dimension_scores", {})
+        h.setdefault("track", "job")
+        h.setdefault("identity_position", "unset")
+    return pipeline + historical
 
 
 def analyze_dimension_accuracy(data: list[dict]) -> dict:
