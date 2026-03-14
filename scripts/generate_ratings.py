@@ -25,7 +25,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import yaml
 from diagnose import (
     COLLECTORS,
-    OBJECTIVE_DIMENSIONS,
     PROMPT_GENERATORS,
     SUBJECTIVE_DIMENSIONS,
     compute_composite,

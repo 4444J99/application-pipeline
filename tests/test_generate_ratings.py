@@ -1,17 +1,12 @@
 """Tests for generate_ratings.py — multi-model IRA rating session."""
 
 import json
-import os
 import sys
 from pathlib import Path
-from unittest.mock import MagicMock, patch
-
-import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from generate_ratings import (
-    build_system_prompt,
     call_model,
     load_panel_config,
     load_personas,

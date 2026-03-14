@@ -100,7 +100,8 @@ Scripts are independent CLIs but some import functions from each other:
 - **`interview_prep.py`** imports from `org_intelligence.py`, `skills_gap.py` — Interview prep document generator combining org intelligence, skills gaps, STAR questions, and block talking points.
 - **`recalibrate.py`** imports from `score.py` — Quarterly rubric recalibration: proposes scoring weight adjustments based on outcome patterns. Requires `--apply --yes` to modify `scoring-rubric.yaml`.
 - **`diagnose.py`** imports from `launchd_manager.py` — uses `get_agent_status()` for operational maturity measurement. Loads rubric from `strategy/system-grading-rubric.yaml`.
-- **`diagnose_ira.py`** — standalone; computes ICC, kappa, and consensus from rating JSON files in `ratings/`.
+- **`diagnose_ira.py`** — standalone; computes ICC, kappa, and consensus from rating JSON files in `ratings/`. Includes `partition_dimensions()` for separating objective ground truth from subjective rated dimensions.
+- **`generate_ratings.py`** imports from `diagnose.py` — uses COLLECTORS, PROMPT_GENERATORS, OBJECTIVE_DIMENSIONS, SUBJECTIVE_DIMENSIONS for multi-model IRA rating. Calls Anthropic and Google APIs.
 - All other scripts are standalone CLIs that read/write pipeline YAML files.
 
 ## Module Architecture
@@ -220,6 +221,10 @@ python scripts/diagnose.py --subjective-only           # Generate prompts for AI
 python scripts/diagnose.py --objective-only            # Only automated measurements
 python scripts/diagnose_ira.py ratings/*.json          # IRA report from rating files
 python scripts/diagnose_ira.py ratings/*.json --consensus  # With consensus scores
+python scripts/generate_ratings.py                        # Full multi-model rating session
+python scripts/generate_ratings.py --rater architect-opus  # Single rater only
+python scripts/generate_ratings.py --dry-run               # Show prompts without API calls
+python scripts/generate_ratings.py --compute-ira           # Run IRA after rating
 
 # Infrastructure
 python scripts/agent.py --plan                         # Autonomous agent preview
@@ -290,6 +295,7 @@ Single-word command protocol via `python scripts/run.py <command>`. 59 standalon
 | `weeklybrief` | Weekly executive brief |
 | `diagnose` | System diagnostic scorecard (objective dimensions) |
 | `ira` | Inter-rater agreement report (needs ratings/*.json) |
+| `rateall` | Multi-model IRA rating session with diverse AI panel |
 
 **With target ID:** `score <id>`, `enrich <id>`, `advance <id>`, `compose <id>`, `draft <id>`, `submit <id>`, `check <id>`, `record <id>`, `gate <id>`, `contacts <id>`, `hypothesis <id>`, `alchemize <id>`, `answers <id>`, `tailor <id>`, `review <id>`, `cultivate <id>`, `textmatch <id>`, `skillsgap <id>`, `orgdetail <org>`, `interviewprep <id>`
 
@@ -303,7 +309,7 @@ Single-word command protocol via `python scripts/run.py <command>`. 59 standalon
 - Health: `monitor` → `freshness` → `verifyall` → `backup`
 - Triage: `triagegate` → `snapshot` → `orgs` → `blockoutcomes`
 - Interview: `interviewprep <id>` → `skillsgap <id>` → `orgdetail <org>`
-- Diagnostic: `diagnose` → `diagnose --subjective-only` → `ira`
+- Diagnostic: `diagnose` → `rateall` → `ira`
 
 ## Configuration Files
 
@@ -316,7 +322,8 @@ Single-word command protocol via `python scripts/run.py <command>`. 59 standalon
 | `signals/agent-actions.yaml` | Agent plan/execute run history (written by `agent.py`) |
 | `signals/contacts.yaml` | Relationship CRM contacts and interactions (written by `crm.py`) |
 | `strategy/notifications.yaml` | Notification event routing: webhook URLs, email recipients (loaded by `notify.py`) |
-| `strategy/system-grading-rubric.yaml` | 8-dimension quality rubric for diagnostic grade norming (loaded by `diagnose.py`) |
+| `strategy/system-grading-rubric.yaml` | 9-dimension quality rubric for diagnostic grade norming (loaded by `diagnose.py`) |
+| `strategy/rater-personas.yaml` | Persona prompts for multi-model IRA raters (loaded by `generate_ratings.py`) |
 
 ## Automation (LaunchAgent)
 
