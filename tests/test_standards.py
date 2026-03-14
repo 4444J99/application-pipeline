@@ -817,3 +817,29 @@ class TestRunPyIntegration:
         from run import COMMANDS
         assert "standards" in COMMANDS
         assert COMMANDS["standards"][0] == "standards.py"
+
+
+# ---------------------------------------------------------------------------
+# Integration tests — full board smoke tests against live data
+# ---------------------------------------------------------------------------
+
+
+class TestIntegration:
+    """Smoke tests: full board runs without crashing."""
+
+    def test_full_audit_returns_board_report(self):
+        """Full audit runs all 4 system levels without crashing."""
+        board = StandardsBoard()
+        report = board.full_audit(gated=False)
+        assert isinstance(report, BoardReport)
+        assert report.levels_total == 4
+        for lr in report.level_reports:
+            assert len(lr.gates) == 3
+            assert lr.level in (2, 3, 4, 5)
+
+    def test_check_level_2_returns_3_gates(self):
+        board = StandardsBoard()
+        lr = board.check_level(2)
+        assert lr.level == 2
+        assert lr.name == "Department"
+        assert len(lr.gates) == 3
