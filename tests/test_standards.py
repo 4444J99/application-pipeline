@@ -233,9 +233,6 @@ class TestStubRegulators:
     def test_course_regulator(self):
         self._check_regulator(CourseRegulator(), 1, ["rubric", "evidence", "historical"])
 
-    def test_department_regulator(self):
-        self._check_regulator(DepartmentRegulator(), 2, ["schema", "rubric", "wiring"])
-
     def test_university_regulator(self):
         self._check_regulator(UniversityRegulator(), 3, ["diagnostic", "integrity", "agreement"])
 
@@ -247,6 +244,83 @@ class TestStubRegulators:
 
 
 # ---------------------------------------------------------------------------
+# DepartmentRegulator — real gates (Level 2)
+# ---------------------------------------------------------------------------
+
+
+class TestDepartmentGateSchema:
+    """Gate 2A: wraps validate.validate_entry across all pipeline files."""
+
+    def test_schema_gate_passes_with_no_errors(self, monkeypatch):
+        monkeypatch.setattr("standards.validate_mod.validate_entry",
+                            lambda fp, warnings=None: [])
+        monkeypatch.setattr("standards._get_pipeline_files",
+                            lambda: [Path("/fake/entry.yaml")])
+        reg = DepartmentRegulator()
+        result = reg.gate_schema()
+        assert result.passed is True
+        assert result.score == 1.0
+        assert "0 errors" in result.evidence
+
+    def test_schema_gate_fails_with_errors(self, monkeypatch):
+        monkeypatch.setattr("standards.validate_mod.validate_entry",
+                            lambda fp, warnings=None: ["missing field: track"])
+        monkeypatch.setattr("standards._get_pipeline_files",
+                            lambda: [Path("/fake/entry.yaml")])
+        reg = DepartmentRegulator()
+        result = reg.gate_schema()
+        assert result.passed is False
+        assert "1 entries with errors" in result.evidence
+
+    def test_schema_gate_no_files(self, monkeypatch):
+        monkeypatch.setattr("standards._get_pipeline_files", lambda: [])
+        reg = DepartmentRegulator()
+        result = reg.gate_schema()
+        assert result.passed is False
+        assert "no pipeline YAML files" in result.evidence
+
+
+class TestDepartmentGateRubric:
+    """Gate 2B: wraps validate.validate_scoring_rubric."""
+
+    def test_rubric_gate_passes(self, monkeypatch):
+        monkeypatch.setattr("standards.validate_mod.validate_scoring_rubric",
+                            lambda path=None: [])
+        reg = DepartmentRegulator()
+        result = reg.gate_rubric()
+        assert result.passed is True
+        assert result.score == 1.0
+
+    def test_rubric_gate_fails(self, monkeypatch):
+        monkeypatch.setattr("standards.validate_mod.validate_scoring_rubric",
+                            lambda path=None: ["weights don't sum to 1.0"])
+        reg = DepartmentRegulator()
+        result = reg.gate_rubric()
+        assert result.passed is False
+        assert "1 errors" in result.evidence
+
+
+class TestDepartmentGateWiring:
+    """Gate 2C: wraps audit_system.audit_wiring."""
+
+    def test_wiring_gate_passes(self, monkeypatch):
+        monkeypatch.setattr("standards.audit_system_mod.audit_wiring",
+                            lambda: {"checks": [], "summary": {"passed": 10, "total": 10}})
+        reg = DepartmentRegulator()
+        result = reg.gate_wiring()
+        assert result.passed is True
+        assert result.score == 1.0
+
+    def test_wiring_gate_fails(self, monkeypatch):
+        monkeypatch.setattr("standards.audit_system_mod.audit_wiring",
+                            lambda: {"checks": [], "summary": {"passed": 8, "total": 10}})
+        reg = DepartmentRegulator()
+        result = reg.gate_wiring()
+        assert result.passed is False
+        assert result.score == 0.8
+
+
+# ---------------------------------------------------------------------------
 # StandardsBoard
 # ---------------------------------------------------------------------------
 
@@ -254,17 +328,38 @@ class TestStubRegulators:
 class TestStandardsBoard:
     """StandardsBoard orchestrates regulators with gated and run-all modes."""
 
-    def test_full_audit_gated_stops_on_failure(self):
-        """gated=True stops at the first failing level (stubs all fail → stops after level 2)."""
+    def test_full_audit_gated_stops_on_failure(self, monkeypatch):
+        """gated=True stops at the first failing level.
+
+        Monkeypatch DepartmentRegulator.evaluate to return a failing level so
+        the cascade stops after level 2 regardless of live pipeline state.
+        """
+        failing_gates = [
+            GateResult(gate=g, passed=False, score=0.0, evidence="forced fail")
+            for g in ["schema", "rubric", "wiring"]
+        ]
+        failing_level = LevelReport(level=2, name="Department", gates=failing_gates)
+        monkeypatch.setattr(DepartmentRegulator, "evaluate", lambda self: failing_level)
+
         board = StandardsBoard()
         report = board.full_audit(gated=True)
-        # All stubs fail, so cascade stops after the first system regulator (Department, level 2)
         assert report.levels_total == 1
         assert not report.passed
         assert report.level_reports[0].level == 2
 
-    def test_full_audit_run_all_continues_past_failure(self):
-        """gated=False runs all 4 system-level regulators regardless of failures."""
+    def test_full_audit_run_all_continues_past_failure(self, monkeypatch):
+        """gated=False runs all 4 system-level regulators regardless of failures.
+
+        Monkeypatch DepartmentRegulator.evaluate so University/National/Federal
+        stubs are still reached.
+        """
+        failing_gates = [
+            GateResult(gate=g, passed=False, score=0.0, evidence="forced fail")
+            for g in ["schema", "rubric", "wiring"]
+        ]
+        failing_level = LevelReport(level=2, name="Department", gates=failing_gates)
+        monkeypatch.setattr(DepartmentRegulator, "evaluate", lambda self: failing_level)
+
         board = StandardsBoard()
         report = board.full_audit(gated=False)
         assert report.levels_total == 4

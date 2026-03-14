@@ -24,6 +24,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import audit_system as audit_system_mod
+import validate as validate_mod
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
@@ -161,6 +164,16 @@ def _run_subprocess_gate(gate_name: str, command: list[str]) -> GateResult:
                           evidence=f"{type(exc).__name__}: {exc}")
 
 
+def _get_pipeline_files() -> list[Path]:
+    """Get all pipeline YAML files for schema validation."""
+    from pipeline_lib import ALL_PIPELINE_DIRS_WITH_POOL
+    files = []
+    for d in ALL_PIPELINE_DIRS_WITH_POOL:
+        if d.exists():
+            files.extend(sorted(d.glob("*.yaml")))
+    return [f for f in files if not f.name.startswith("_")]
+
+
 # ---------------------------------------------------------------------------
 # Stub Regulators
 # ---------------------------------------------------------------------------
@@ -192,16 +205,58 @@ class CourseRegulator(_BaseRegulator):
 
 
 class DepartmentRegulator(_BaseRegulator):
-    """Level 2 — pipeline schema, rubric wiring, material wiring gates."""
+    """Level 2 — schema enforcement, rubric integrity, cross-reference wiring."""
 
     level = 2
     name = "Department"
 
-    def evaluate(self) -> LevelReport:  # type: ignore[override]
+    def gate_schema(self) -> GateResult:
+        """Gate 2A: Entry schema validation.
+        Adapter: validate.validate_entry(filepath) returns list[str] — empty = pass."""
+        files = _get_pipeline_files()
+        if not files:
+            return GateResult("schema", False, 0.0, "no pipeline YAML files found")
+        error_count = 0
+        all_errors = []
+        for fp in files:
+            errors = validate_mod.validate_entry(fp)
+            if errors:
+                error_count += 1
+                all_errors.extend(f"{fp.name}: {e}" for e in errors[:3])
+        total = len(files)
+        passed = error_count == 0
+        ratio = (total - error_count) / total if total else 0
+        evidence = (f"{total} entries validated, 0 errors" if passed
+                    else f"{error_count} entries with errors: {'; '.join(all_errors[:5])}")
+        return GateResult("schema", passed, round(ratio, 3), evidence)
+
+    def gate_rubric(self) -> GateResult:
+        """Gate 2B: Scoring rubric integrity.
+        Adapter: validate.validate_scoring_rubric() returns list[str] — empty = pass."""
+        errors = validate_mod.validate_scoring_rubric()
+        passed = len(errors) == 0
+        evidence = ("rubric validation passed" if passed
+                    else f"{len(errors)} errors: {'; '.join(errors[:5])}")
+        return GateResult("rubric", passed, 1.0 if passed else 0.0, evidence)
+
+    def gate_wiring(self) -> GateResult:
+        """Gate 2C: Cross-reference wiring integrity.
+        Adapter: audit_system.audit_wiring() returns dict with summary.passed/total."""
+        result = audit_system_mod.audit_wiring()
+        summary = result.get("summary", {})
+        passed_count = summary.get("passed", 0)
+        total = summary.get("total", 1)
+        ratio = passed_count / total if total else 0
+        passed = passed_count == total
+        evidence = (f"all {total} wiring checks passed" if passed
+                    else f"{passed_count}/{total} wiring checks passed")
+        return GateResult("wiring", passed, round(ratio, 3), evidence)
+
+    def evaluate(self) -> LevelReport:
         gates = [
-            GateResult("schema", False, None, "not yet implemented"),
-            GateResult("rubric", False, None, "not yet implemented"),
-            GateResult("wiring", False, None, "not yet implemented"),
+            _run_gate("schema", self.gate_schema),
+            _run_gate("rubric", self.gate_rubric),
+            _run_gate("wiring", self.gate_wiring),
         ]
         return LevelReport(level=self.level, name=self.name, gates=gates)
 
