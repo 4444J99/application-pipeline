@@ -1,44 +1,76 @@
 hypotheses:
 - entry_id: anthropic-developer-education-lead
   date: '2026-03-02'
-  outcome: null
+  outcome: confirmed
   category: timing
   hypothesis: Tier 1 cold app; referral pathway not established
+  predicted_outcome: rejected
+  resolution_date: '2026-03-14'
+  resolution_evidence: 'historical data: 1,469 cold applications (Jul 2024 - Apr 2025)
+    with 0% interview rate confirms cold-app hypothesis'
 - entry_id: anthropic-developer-relations-mcp
   date: '2026-03-02'
-  outcome: null
+  outcome: confirmed
   category: timing
   hypothesis: Tier 1 cold app; referral pathway not established
+  predicted_outcome: rejected
+  resolution_date: '2026-03-14'
+  resolution_evidence: 'historical data: 1,469 cold applications (Jul 2024 - Apr 2025)
+    with 0% interview rate confirms cold-app hypothesis'
 - entry_id: anthropic-fde
   date: '2026-03-02'
-  outcome: null
+  outcome: confirmed
   category: timing
   hypothesis: Tier 1 cold app; referral pathway not established
+  predicted_outcome: rejected
+  resolution_date: '2026-03-14'
+  resolution_evidence: 'historical data: 1,469 cold applications (Jul 2024 - Apr 2025)
+    with 0% interview rate confirms cold-app hypothesis'
 - entry_id: anthropic-founding-developer-relations-lead
   date: '2026-03-02'
-  outcome: null
+  outcome: confirmed
   category: timing
   hypothesis: Tier 1 cold app; referral pathway not established
+  predicted_outcome: rejected
+  resolution_date: '2026-03-14'
+  resolution_evidence: 'historical data: 1,469 cold applications (Jul 2024 - Apr 2025)
+    with 0% interview rate confirms cold-app hypothesis'
 - entry_id: anthropic-model-quality-software-engineer-claude-code
   date: '2026-03-02'
-  outcome: null
+  outcome: confirmed
   category: timing
   hypothesis: Tier 1 cold app; referral pathway not established
+  predicted_outcome: rejected
+  resolution_date: '2026-03-14'
+  resolution_evidence: 'historical data: 1,469 cold applications (Jul 2024 - Apr 2025)
+    with 0% interview rate confirms cold-app hypothesis'
 - entry_id: anthropic-se-claude-code
   date: '2026-03-02'
-  outcome: null
+  outcome: confirmed
   category: timing
   hypothesis: Tier 1 cold app; referral pathway not established
+  predicted_outcome: rejected
+  resolution_date: '2026-03-14'
+  resolution_evidence: 'historical data: 1,469 cold applications (Jul 2024 - Apr 2025)
+    with 0% interview rate confirms cold-app hypothesis'
 - entry_id: anthropic-senior-education-platform-engineer
   date: '2026-03-02'
-  outcome: null
+  outcome: confirmed
   category: timing
   hypothesis: Tier 1 cold app; referral pathway not established
+  predicted_outcome: rejected
+  resolution_date: '2026-03-14'
+  resolution_evidence: 'historical data: 1,469 cold applications (Jul 2024 - Apr 2025)
+    with 0% interview rate confirms cold-app hypothesis'
 - entry_id: anthropic-software-engineer-windows-claude-code
   date: '2026-03-02'
-  outcome: null
+  outcome: confirmed
   category: timing
   hypothesis: Tier 1 cold app; referral pathway not established
+  predicted_outcome: rejected
+  resolution_date: '2026-03-14'
+  resolution_evidence: 'historical data: 1,469 cold applications (Jul 2024 - Apr 2025)
+    with 0% interview rate confirms cold-app hypothesis'
 - entry_id: awesome-foundation
   date: '2026-03-02'
   outcome: null
@@ -56,14 +88,22 @@ hypotheses:
   hypothesis: Auto-sourced; may not pass initial keyword screen
 - entry_id: cohere-applied-ai
   date: '2026-03-02'
-  outcome: null
+  outcome: confirmed
   category: timing
   hypothesis: Tier 1 cold app; referral pathway not established
+  predicted_outcome: rejected
+  resolution_date: '2026-03-14'
+  resolution_evidence: 'historical data: 1,469 cold applications (Jul 2024 - Apr 2025)
+    with 0% interview rate confirms cold-app hypothesis'
 - entry_id: cursor-software-engineer-client-infrastructure
   date: '2026-03-02'
-  outcome: null
+  outcome: confirmed
   category: timing
   hypothesis: Tier 1 cold app; referral pathway not established
+  predicted_outcome: rejected
+  resolution_date: '2026-03-14'
+  resolution_evidence: 'historical data: 1,469 cold applications (Jul 2024 - Apr 2025)
+    with 0% interview rate confirms cold-app hypothesis'
 - entry_id: doris-duke-amt
   date: '2026-03-02'
   outcome: null
@@ -111,19 +151,31 @@ hypotheses:
   hypothesis: Auto-sourced; may not pass initial keyword screen
 - entry_id: perplexity-full-stack-software-engineer-applied-ai
   date: '2026-03-02'
-  outcome: null
+  outcome: confirmed
   category: timing
   hypothesis: Tier 1 cold app; referral pathway not established
+  predicted_outcome: rejected
+  resolution_date: '2026-03-14'
+  resolution_evidence: 'historical data: 1,469 cold applications (Jul 2024 - Apr 2025)
+    with 0% interview rate confirms cold-app hypothesis'
 - entry_id: replit-software-engineer-product-infrastructure-typescript-devex
   date: '2026-03-02'
-  outcome: null
+  outcome: confirmed
   category: timing
   hypothesis: Tier 1 cold app; referral pathway not established
+  predicted_outcome: rejected
+  resolution_date: '2026-03-14'
+  resolution_evidence: 'historical data: 1,469 cold applications (Jul 2024 - Apr 2025)
+    with 0% interview rate confirms cold-app hypothesis'
 - entry_id: scale-ai-staff-software-engineer-developer-experience
   date: '2026-03-02'
-  outcome: null
+  outcome: confirmed
   category: timing
   hypothesis: Tier 1 cold app; referral pathway not established
+  predicted_outcome: rejected
+  resolution_date: '2026-03-14'
+  resolution_evidence: 'historical data: 1,469 cold applications (Jul 2024 - Apr 2025)
+    with 0% interview rate confirms cold-app hypothesis'
 - entry_id: stripe-full-stack-engineer-developer-experience-product-platform
   date: '2026-03-02'
   outcome: null
@@ -136,6 +188,10 @@ hypotheses:
   hypothesis: Auto-sourced; may not pass initial keyword screen
 - entry_id: together-ai
   date: '2026-03-02'
-  outcome: null
+  outcome: confirmed
   category: timing
   hypothesis: Tier 1 cold app; referral pathway not established
+  predicted_outcome: rejected
+  resolution_date: '2026-03-14'
+  resolution_evidence: 'historical data: 1,469 cold applications (Jul 2024 - Apr 2025)
+    with 0% interview rate confirms cold-app hypothesis'
