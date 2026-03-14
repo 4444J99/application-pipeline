@@ -233,9 +233,6 @@ class TestStubRegulators:
     def test_course_regulator(self):
         self._check_regulator(CourseRegulator(), 1, ["rubric", "evidence", "historical"])
 
-    def test_university_regulator(self):
-        self._check_regulator(UniversityRegulator(), 3, ["diagnostic", "integrity", "agreement"])
-
     def test_national_regulator(self):
         self._check_regulator(NationalRegulator(), 4, ["outcome", "recalibration", "hypothesis"])
 
@@ -318,6 +315,107 @@ class TestDepartmentGateWiring:
         result = reg.gate_wiring()
         assert result.passed is False
         assert result.score == 0.8
+
+
+# ---------------------------------------------------------------------------
+# UniversityRegulator — real gates (Level 3)
+# ---------------------------------------------------------------------------
+
+
+class TestUniversityGateDiagnostic:
+    """Gate 3A: wraps diagnose.measure_* + compute_composite."""
+
+    def test_diagnostic_gate_passes(self, monkeypatch):
+        monkeypatch.setattr("standards.diagnose_mod.load_rubric",
+                            lambda: {"dimensions": {
+                                "test_coverage": {"weight": 0.5, "type": "objective"},
+                                "code_quality": {"weight": 0.5, "type": "objective"},
+                            }, "version": "1.0"})
+        monkeypatch.setattr("standards.diagnose_mod.measure_test_coverage",
+                            lambda: {"score": 9.0})
+        monkeypatch.setattr("standards.diagnose_mod.measure_code_quality",
+                            lambda: {"score": 8.0})
+        monkeypatch.setattr("standards.diagnose_mod.measure_data_integrity",
+                            lambda: {"score": 10.0})
+        monkeypatch.setattr("standards.diagnose_mod.measure_operational_maturity",
+                            lambda: {"score": 7.0})
+        monkeypatch.setattr("standards.diagnose_mod.measure_claim_provenance",
+                            lambda: {"score": 8.0})
+        monkeypatch.setattr("standards.diagnose_mod.compute_composite",
+                            lambda scores, rubric: 8.5)
+        reg = UniversityRegulator()
+        result = reg.gate_diagnostic()
+        assert result.passed is True
+        assert result.score == 8.5
+
+    def test_diagnostic_gate_fails_below_threshold(self, monkeypatch):
+        monkeypatch.setattr("standards.diagnose_mod.load_rubric",
+                            lambda: {"dimensions": {}, "version": "1.0"})
+        for fn_name in ["measure_test_coverage", "measure_code_quality",
+                        "measure_data_integrity", "measure_operational_maturity",
+                        "measure_claim_provenance"]:
+            monkeypatch.setattr(f"standards.diagnose_mod.{fn_name}",
+                                lambda: {"score": 3.0})
+        monkeypatch.setattr("standards.diagnose_mod.compute_composite",
+                            lambda scores, rubric: 4.5)
+        reg = UniversityRegulator()
+        result = reg.gate_diagnostic()
+        assert result.passed is False
+        assert result.score == 4.5
+
+
+class TestUniversityGateIntegrity:
+    """Gate 3B: wraps audit_system.run_full_audit."""
+
+    def test_integrity_gate_passes(self, monkeypatch):
+        monkeypatch.setattr("standards.audit_system_mod.run_full_audit",
+                            lambda: {"summary": {"all_wiring_ok": True, "all_logic_ok": True}})
+        reg = UniversityRegulator()
+        result = reg.gate_integrity()
+        assert result.passed is True
+        assert result.score == 1.0
+
+    def test_integrity_gate_fails_wiring(self, monkeypatch):
+        monkeypatch.setattr("standards.audit_system_mod.run_full_audit",
+                            lambda: {"summary": {"all_wiring_ok": False, "all_logic_ok": True,
+                                                  "wiring_passed": 8, "wiring_total": 10}})
+        reg = UniversityRegulator()
+        result = reg.gate_integrity()
+        assert result.passed is False
+        assert "wiring" in result.evidence
+
+
+class TestUniversityGateAgreement:
+    """Gate 3C: wraps diagnose_ira.compute_icc on rating files."""
+
+    def test_agreement_gate_passes(self, monkeypatch):
+        monkeypatch.setattr("standards._load_rating_files",
+                            lambda: [{"dimensions": {"arch": {"score": 8.0}}},
+                                     {"dimensions": {"arch": {"score": 7.5}}}])
+        monkeypatch.setattr("standards.diagnose_ira_mod.compute_icc",
+                            lambda matrix: 0.85)
+        reg = UniversityRegulator()
+        result = reg.gate_agreement()
+        assert result.passed is True
+        assert result.score == 0.85
+
+    def test_agreement_gate_no_ratings(self, monkeypatch):
+        monkeypatch.setattr("standards._load_rating_files", lambda: [])
+        reg = UniversityRegulator()
+        result = reg.gate_agreement()
+        assert result.passed is False
+        assert "insufficient" in result.evidence
+
+    def test_agreement_gate_below_threshold(self, monkeypatch):
+        monkeypatch.setattr("standards._load_rating_files",
+                            lambda: [{"dimensions": {"a": {"score": 8.0}}},
+                                     {"dimensions": {"a": {"score": 3.0}}}])
+        monkeypatch.setattr("standards.diagnose_ira_mod.compute_icc",
+                            lambda matrix: 0.45)
+        reg = UniversityRegulator()
+        result = reg.gate_agreement()
+        assert result.passed is False
+        assert result.score == 0.45
 
 
 # ---------------------------------------------------------------------------

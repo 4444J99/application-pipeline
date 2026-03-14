@@ -25,9 +25,31 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import audit_system as audit_system_mod
+import diagnose as diagnose_mod
+import diagnose_ira as diagnose_ira_mod
 import validate as validate_mod
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+
+DIAGNOSTIC_THRESHOLD = 6.0
+ICC_THRESHOLD = 0.61
+RATINGS_DIR = REPO_ROOT / "ratings"
+
+
+def _load_rating_files() -> list[dict]:
+    """Load rating JSON files from ratings/ directory."""
+    if not RATINGS_DIR.exists():
+        return []
+    files = sorted(RATINGS_DIR.glob("*.json"))
+    ratings = []
+    for fp in files:
+        try:
+            data = json.loads(fp.read_text())
+            if "dimensions" in data:
+                ratings.append(data)
+        except (OSError, json.JSONDecodeError):
+            continue
+    return ratings
 
 
 # ---------------------------------------------------------------------------
@@ -262,16 +284,79 @@ class DepartmentRegulator(_BaseRegulator):
 
 
 class UniversityRegulator(_BaseRegulator):
-    """Level 3 — diagnostic scorecard, data integrity, inter-rater agreement."""
+    """Level 3 — diagnostic scorecard, system integrity, inter-rater agreement."""
 
     level = 3
     name = "University"
 
-    def evaluate(self) -> LevelReport:  # type: ignore[override]
+    def gate_diagnostic(self) -> GateResult:
+        """Gate 3A: Objective diagnostic composite score.
+        Adapter: diagnose.compute_composite() returns float, pass if >= DIAGNOSTIC_THRESHOLD."""
+        rubric = diagnose_mod.load_rubric()
+        collectors = {
+            "test_coverage": diagnose_mod.measure_test_coverage,
+            "code_quality": diagnose_mod.measure_code_quality,
+            "data_integrity": diagnose_mod.measure_data_integrity,
+            "operational_maturity": diagnose_mod.measure_operational_maturity,
+            "claim_provenance": diagnose_mod.measure_claim_provenance,
+        }
+        scores = {}
+        for dim_key, collector in collectors.items():
+            try:
+                scores[dim_key] = collector()
+            except Exception:  # noqa: BLE001
+                scores[dim_key] = {"score": 1.0, "confidence": "low", "evidence": "collector failed"}
+        composite = diagnose_mod.compute_composite(scores, rubric)
+        passed = composite >= DIAGNOSTIC_THRESHOLD
+        evidence = f"composite={composite:.1f} (threshold={DIAGNOSTIC_THRESHOLD})"
+        return GateResult("diagnostic", passed, composite, evidence)
+
+    def gate_integrity(self) -> GateResult:
+        """Gate 3B: System integrity audit.
+        Adapter: run_full_audit() returns dict, pass if wiring+logic both OK."""
+        audit = audit_system_mod.run_full_audit()
+        summary = audit.get("summary", {})
+        wiring_ok = summary.get("all_wiring_ok", False)
+        logic_ok = summary.get("all_logic_ok", False)
+        passed = wiring_ok and logic_ok
+        parts = []
+        if not wiring_ok:
+            parts.append(f"wiring: {summary.get('wiring_passed', '?')}/{summary.get('wiring_total', '?')}")
+        if not logic_ok:
+            parts.append(f"logic: {summary.get('logic_passed', '?')}/{summary.get('logic_total', '?')}")
+        evidence = "wiring+logic all passed" if passed else f"failures: {'; '.join(parts)}"
+        return GateResult("integrity", passed, 1.0 if passed else 0.0, evidence)
+
+    def gate_agreement(self) -> GateResult:
+        """Gate 3C: Inter-rater agreement.
+        Adapter: compute_icc() returns float, pass if >= ICC_THRESHOLD.
+        H1: separates objective/subjective for honest reporting."""
+        ratings = _load_rating_files()
+        if len(ratings) < 2:
+            return GateResult("agreement", False, None,
+                              f"insufficient rating files ({len(ratings)}, need >=2)")
+        all_dims = set()
+        for r in ratings:
+            all_dims.update(r["dimensions"].keys())
+        if not all_dims:
+            return GateResult("agreement", False, None, "no dimensions in ratings")
+        matrix = []
+        for dim in sorted(all_dims):
+            row = []
+            for r in ratings:
+                d = r["dimensions"].get(dim, {})
+                row.append(d.get("score", 0.0) if isinstance(d, dict) else float(d))
+            matrix.append(row)
+        icc = diagnose_ira_mod.compute_icc(matrix)
+        passed = icc >= ICC_THRESHOLD
+        evidence = f"ICC(2,1)={icc:.3f} (threshold={ICC_THRESHOLD})"
+        return GateResult("agreement", passed, round(icc, 3), evidence)
+
+    def evaluate(self) -> LevelReport:
         gates = [
-            GateResult("diagnostic", False, None, "not yet implemented"),
-            GateResult("integrity", False, None, "not yet implemented"),
-            GateResult("agreement", False, None, "not yet implemented"),
+            _run_gate("diagnostic", self.gate_diagnostic),
+            _run_gate("integrity", self.gate_integrity),
+            _run_gate("agreement", self.gate_agreement),
         ]
         return LevelReport(level=self.level, name=self.name, gates=gates)
 
