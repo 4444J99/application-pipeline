@@ -1,12 +1,13 @@
 # System Grading Rubric — Application Pipeline
-# 8-dimension quality assessment for inter-rater agreement (IRA) grade norming.
+# 9-dimension quality assessment for inter-rater agreement (IRA) grade norming.
 # Consumed by scripts/diagnose.py and scripts/diagnose_ira.py.
 #
 # Version history:
 #   1.0  2026-03-05  Initial rubric (8 dimensions, weighted composite)
+#   1.1  2026-03-13  Add claim_provenance (9th dimension), rebalance weights
 
-version: "1.0"
-effective_date: "2026-03-05"
+version: "1.1"
+effective_date: "2026-03-13"
 composite_method: weighted_sum  # score = Σ(weight_i × score_i)
 scale:
   min: 1.0
@@ -17,7 +18,7 @@ dimensions:
   test_coverage:
     label: Test Coverage
     type: objective
-    weight: 0.15
+    weight: 0.14
     description: >-
       Test count, module coverage ratio (verification matrix), edge case depth,
       and regression coverage for pipeline state and YAML schema changes.
@@ -42,7 +43,7 @@ dimensions:
   architecture:
     label: Architecture
     type: subjective
-    weight: 0.15
+    weight: 0.14
     description: >-
       Module decomposition quality, separation of concerns, dependency flow
       clarity, single-responsibility adherence, and reuse patterns.
@@ -69,7 +70,7 @@ dimensions:
   data_integrity:
     label: Data Integrity
     type: mixed
-    weight: 0.15
+    weight: 0.14
     description: >-
       Schema validation strictness, state machine enforcement, YAML consistency,
       ID map correctness, and referential integrity across pipeline files.
@@ -94,7 +95,7 @@ dimensions:
   operational_maturity:
     label: Operational Maturity
     type: mixed
-    weight: 0.15
+    weight: 0.13
     description: >-
       Automation coverage (launchd agents), backup recency, monitoring/alerting,
       notification dispatch, and recovery procedures.
@@ -224,16 +225,56 @@ dimensions:
       consensus_method: median
       outlier_threshold: 1.5
 
+  claim_provenance:
+    label: Claim Provenance
+    type: objective
+    weight: 0.05
+    description: >-
+      Source traceability for statistical claims. Every benchmark,
+      multiplier, and percentage should trace to a named report or URL.
+    scoring_guide:
+      1: "Pervasive unsourced claims; most statistical values have no attribution"
+      3: "Many unsourced claims; some reports named but no URLs"
+      5: "Most claims cited (report name); some with URLs; moderate unsourced"
+      7: "All claims cited; most with URLs; < 10% unsourced"
+      10: "All claims have verifiable primary sources with URLs"
+    evidence_sources:
+      - command: "python scripts/audit_system.py --claims --json"
+        measures: claim_provenance_ratios
+      - path: "strategy/market-intelligence-2026.json"
+        measures: market_data_sourcing
+      - path: "strategy/market-research-corpus.md"
+        measures: bibliography_completeness
+    ira_config:
+      agreement_method: icc
+      consensus_method: median
+      outlier_threshold: 1.5
+
 # IRA global settings
 ira:
   min_raters: 3
   max_raters: 7
-  recommended_panel:
-    - "claude-opus"
-    - "claude-sonnet"
-    - "gpt-4"
-    - "gemini-pro"
-    - "human-anchor"
+  panel:
+    - rater_id: architect-opus
+      model: claude-opus-4-6
+      provider: anthropic
+      persona: systems-architect
+      temperature: 0.7
+    - rater_id: qa-sonnet
+      model: claude-sonnet-4-6
+      provider: anthropic
+      persona: qa-lead
+      temperature: 0.7
+    - rater_id: pragmatist-haiku
+      model: claude-haiku-4-5-20251001
+      provider: anthropic
+      persona: pragmatic-operator
+      temperature: 0.8
+    - rater_id: auditor-gemini
+      model: gemini-2.0-flash
+      provider: google
+      persona: external-auditor
+      temperature: 0.7
   interpretation_bands:
     poor: [-1.0, 0.00]
     slight: [0.00, 0.20]
@@ -244,4 +285,4 @@ ira:
   consensus:
     method: median
     outlier_iqr_factor: 1.5
-    re_rate_threshold: 0.61  # ICC below this triggers re-rating discussion
+    re_rate_threshold: 0.61
