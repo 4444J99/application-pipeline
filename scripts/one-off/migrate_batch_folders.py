@@ -1,4 +1,3 @@
-import sys, pathlib; sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 #!/usr/bin/env python3
 """One-time migration: restructure batch resume directories into per-role folders.
 
@@ -16,8 +15,12 @@ Usage:
 """
 
 import argparse
+import pathlib
 import shutil
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 RESUMES_DIR = REPO_ROOT / "materials" / "resumes"

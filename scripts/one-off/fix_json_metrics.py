@@ -1,7 +1,10 @@
-import sys, pathlib; sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 import json
+import pathlib
 import re
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 PROFILES_DIR = Path("targets/profiles")
 OLD_VAL = "42"

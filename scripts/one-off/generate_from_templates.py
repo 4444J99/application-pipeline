@@ -1,9 +1,12 @@
-import sys, pathlib; sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 #!/usr/bin/env python3
+import pathlib
 import re
+import sys
 from pathlib import Path
 
 import yaml
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = REPO_ROOT / "templates"

@@ -1,4 +1,3 @@
-import sys, pathlib; sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 #!/usr/bin/env python3
 """One-time verification of candidate ATS board slugs.
 
@@ -13,8 +12,12 @@ Usage:
 
 import argparse
 import json
+import pathlib
+import sys
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 # ---------------------------------------------------------------------------
 # Candidate slugs to test

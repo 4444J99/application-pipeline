@@ -1,4 +1,3 @@
-import sys, pathlib; sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 #!/usr/bin/env python3
 """Backfill date_added from timeline.researched for entries missing freshness data.
 
@@ -13,15 +12,17 @@ Usage:
 """
 
 import argparse
+import pathlib
 import sys
 from datetime import date
 from pathlib import Path
 
 import yaml
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from pipeline_lib import ALL_PIPELINE_DIRS_WITH_POOL, load_entries, parse_date
+from pipeline_lib import ALL_PIPELINE_DIRS_WITH_POOL, load_entries, parse_date  # noqa: E402
 
 
 def classify_freshness(days_old: int | None) -> str:

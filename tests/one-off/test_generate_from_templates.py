@@ -1,5 +1,4 @@
 import yaml
-
 from generate_from_templates import render_template
 
 

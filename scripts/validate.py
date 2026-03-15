@@ -40,6 +40,7 @@ VALID_WITHDRAWAL_REASONS = {
 VALID_DEFERRAL_REASONS = {
     "portal_paused", "cycle_not_open", "pending_materials",
     "external_dependency", "strategic_hold",
+    "below_actionable_threshold", "below_threshold",
 }
 VALID_LOCATION_CLASSES = {"us-onsite", "us-remote", "remote-global", "international", "unknown"}
 SCORING_RUBRIC_PATH = REPO_ROOT / "strategy" / "scoring-rubric.yaml"
@@ -131,11 +132,12 @@ def validate_entry(filepath: Path, warnings: list[str] | None = None) -> list[st
     fit = data.get("fit", {})
     if isinstance(fit, dict):
         score = fit.get("score")
-        if score is not None and isinstance(score, (int, float)) and not (1 <= score <= 10):
-            errors.append(f"Fit score out of range: {score} (must be 1-10)")
+        # 0 is a valid sentinel meaning "not yet scored" (auto-sourced entries)
+        if score is not None and isinstance(score, (int, float)) and score != 0 and not (1 <= score <= 10):
+            errors.append(f"Fit score out of range: {score} (must be 0 or 1-10)")
         original_score = fit.get("original_score")
-        if original_score is not None and isinstance(original_score, (int, float)) and not (1 <= original_score <= 10):
-            errors.append(f"Fit original_score out of range: {original_score} (must be 1-10)")
+        if original_score is not None and isinstance(original_score, (int, float)) and original_score != 0 and not (1 <= original_score <= 10):
+            errors.append(f"Fit original_score out of range: {original_score} (must be 0 or 1-10)")
         position = fit.get("identity_position")
         if position and position not in VALID_POSITIONS:
             errors.append(f"Invalid identity_position: '{position}'")
@@ -182,12 +184,24 @@ def validate_entry(filepath: Path, warnings: list[str] | None = None) -> list[st
             for stage_key in stage_order:
                 if timeline.get(stage_key):
                     highest_dated = stage_to_status.get(stage_key)
-            # If timeline shows a stage that can't reach current status, warn
+            # If timeline shows a stage that can't reach current status, flag it.
+            # However, entries can be demoted by triage (staged→qualified→research)
+            # or deferred, retaining timeline history. Only flag when the current
+            # status is genuinely unreachable AND not a backward demotion.
+            status_rank = {
+                "research": 0, "qualified": 1, "drafting": 2, "staged": 3,
+                "deferred": -1,  # side state, always valid
+                "submitted": 4, "acknowledged": 5, "interview": 6, "outcome": 7,
+                "withdrawn": -1,  # terminal side state
+            }
             if highest_dated and status in VALID_TRANSITIONS:
-                # Verify status is consistent: status should match or be reachable
-                # from the highest dated stage
                 reachable = _reachable_statuses(highest_dated)
-                if status not in reachable and status != highest_dated:
+                cur_rank = status_rank.get(status, -1)
+                high_rank = status_rank.get(highest_dated, -1)
+                # Only flag if status is forward of timeline evidence AND unreachable.
+                # Backward movement (demotion) or side states are legitimate.
+                if (status not in reachable and status != highest_dated
+                        and cur_rank > high_rank and cur_rank >= 0):
                     errors.append(
                         f"Status '{status}' not reachable from timeline "
                         f"(highest dated stage: '{highest_dated}')"
