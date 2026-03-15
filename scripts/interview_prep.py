@@ -59,6 +59,30 @@ STAR_QUESTIONS = {
         "Walk through a time systemic barriers affected your work and how you navigated them.",
         "Describe your approach to participatory design in community contexts.",
     ],
+    "documentation-engineer": [
+        "Describe a documentation system you designed from scratch at scale.",
+        "Tell me about a time you treated documentation as a product, not an afterthought.",
+        "Walk through how you keep 113 repos' documentation consistent and current.",
+        "Describe your approach to auto-generating context files from structured data.",
+    ],
+    "governance-architect": [
+        "Describe a governance system you designed that enforced human oversight over automated processes.",
+        "Tell me about a compliance requirement you implemented as running code, not just policy.",
+        "Walk through the promotion state machine and why state-skipping is prohibited by design.",
+        "Describe how you would audit an AI system for EU AI Act compliance.",
+    ],
+    "platform-orchestrator": [
+        "Describe how you designed infrastructure that lets one person manage 113 repositories.",
+        "Tell me about the dependency graph design and why unidirectional flow matters.",
+        "Walk through the pulse daemon — what it measures, how often, and what it triggers.",
+        "Describe a developer productivity problem you solved with platform tooling.",
+    ],
+    "founder-operator": [
+        "Describe building and operating a system that would normally require a team.",
+        "Tell me about the AI-conductor methodology and how it changed your output capacity.",
+        "Walk through a decision where you chose governance over speed.",
+        "Describe what 'institutional scale as a solo practitioner' means in practice.",
+    ],
 }
 
 

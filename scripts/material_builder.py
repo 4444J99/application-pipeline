@@ -46,6 +46,11 @@ RESUME_MAP = {
     "educator": "resumes/base/educator-resume.html",
     "creative-technologist": "resumes/base/creative-technologist-resume.html",
     "community-practitioner": "resumes/base/community-practitioner-resume.html",
+    # New positions — fall back to closest existing resume until dedicated ones are built
+    "documentation-engineer": "resumes/base/independent-engineer-resume.html",
+    "governance-architect": "resumes/base/independent-engineer-resume.html",
+    "platform-orchestrator": "resumes/base/independent-engineer-resume.html",
+    "founder-operator": "resumes/base/creative-technologist-resume.html",
 }
 
 # Block slot priorities per identity position
@@ -72,6 +77,28 @@ BLOCK_SLOTS = {
     "community-practitioner": {
         "identity": "identity/2min",
         "framing": "framings/community-practitioner",
+    },
+    "documentation-engineer": {
+        "identity": "identity/2min",
+        "framing": "framings/independent-engineer",
+        "evidence": "evidence/system-overview",
+        "methodology": "methodology/ai-conductor",
+    },
+    "governance-architect": {
+        "identity": "identity/2min",
+        "framing": "framings/eu-ai-compliance",
+        "evidence": "evidence/system-overview",
+    },
+    "platform-orchestrator": {
+        "identity": "identity/2min",
+        "framing": "framings/ai-orchestrator",
+        "evidence": "evidence/engineering-at-scale",
+        "methodology": "methodology/ai-conductor",
+    },
+    "founder-operator": {
+        "identity": "identity/2min",
+        "framing": "framings/disability-founder",
+        "evidence": "evidence/system-overview",
     },
 }
 

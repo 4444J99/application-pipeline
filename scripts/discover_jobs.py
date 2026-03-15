@@ -47,6 +47,10 @@ VALID_POSITIONS = [
     "educator",
     "creative-technologist",
     "community-practitioner",
+    "documentation-engineer",
+    "governance-architect",
+    "platform-orchestrator",
+    "founder-operator",
 ]
 
 # Default rate delay between requests (seconds)

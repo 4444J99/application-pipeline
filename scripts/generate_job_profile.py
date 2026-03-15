@@ -78,6 +78,26 @@ EVIDENCE_BY_POSITION = {
         "Community-centered design: ORGAN-VI (koinonia) community infrastructure",
         "Open-source methodology: 103 public repositories with full documentation",
     ],
+    "documentation-engineer": [
+        "810K+ words of production-grade documentation across 113 repositories",
+        "Auto-generating context files (CLAUDE.md/GEMINI.md) with variable binding system",
+        "MFA in Creative Writing, 100+ college courses in composition and rhetoric",
+    ],
+    "governance-architect": [
+        "Promotion state machine (5 states), dependency graph validation, zero violations",
+        "17-criterion omega scorecard with threshold-based advisory policies",
+        "Human-oversight architecture: governance-rules.json, mutation operations with lineage",
+    ],
+    "platform-orchestrator": [
+        "8-organization orchestration: registry, seed contracts, superproject management",
+        "Pulse daemon computing system density every 15 minutes across 1,833 entities",
+        "MCP server with 88 tools exposing full system graph to AI agent sessions",
+    ],
+    "founder-operator": [
+        "Solo operation at institutional scale: 113 repos, 8 orgs, automated governance",
+        "AI-conductor methodology: AI generates volume, human directs architecture",
+        "Full-stack pipeline: application engine, portfolio, stakeholder portal, dashboard",
+    ],
 }
 
 

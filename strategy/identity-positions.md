@@ -1,6 +1,6 @@
 # Identity Positions
 
-Five framings of the same body of work for different audiences. Derived from covenant-ark Section H.
+Nine framings of the same body of work for different audiences. Derived from covenant-ark Section H, expanded by ecosystem activity analysis (2026-03-15).
 
 ## Rules
 
@@ -25,15 +25,15 @@ Five framings of the same body of work for different audiences. Derived from cov
 
 ---
 
-## 2. Educator
+## 2. Educator / Learning Architect
 
-**For:** Education grants, fellowships, academic positions
-**Narrative:** "Teaching complex systems to diverse audiences IS my creative practice"
-**Evidence:** 100+ courses, 2,000+ students, 8+ institutions, 11 years
-**Targets:** Spencer Foundation, NEH, Bread Loaf, state arts councils, university partnerships
+**For:** Education grants, fellowships, academic positions, L&D tech, EdTech product roles, instructional design
+**Narrative:** "Teaching complex systems to diverse audiences AND designing the learning systems themselves"
+**Evidence:** 100+ courses, 2,000+ students, 8+ institutions, 11 years, curriculum architecture, blocks system as content composition engine, pipeline as structured learning-from-outcomes system
+**Targets:** Spencer Foundation, NEH, Bread Loaf, state arts councils, university partnerships, EdTech companies, L&D departments
 
 **Opening line template:**
-> With 11 years of college instruction across 8+ institutions and 2,000+ students, I have built a teaching practice grounded in making complex systems accessible. The eight-organ system I've documented in 48 published essays demonstrates this methodology applied to creative infrastructure.
+> With 11 years of college instruction across 8+ institutions and 2,000+ students, I've built both a teaching practice and the systems that make teaching scale. The blocks system — a modular content composition engine with tiered depth — applies the same architectural thinking to curriculum that the eight-organ system applies to creative production.
 
 ---
 
@@ -75,13 +75,63 @@ Five framings of the same body of work for different audiences. Derived from cov
 
 **Pattern interrupt:** Lead with the output scale before naming the solo context. The reviewer's "contractor" pattern fires on "solo practitioner" — delay that phrase until after the numbers have established the scale.
 
-**What to say about solo work:** "Independent practice — not consulting, not contract work. Sustained production at the scale of a small engineering team, without institutional support."
+---
+
+## 6. Documentation Engineer
+
+**For:** Technical writing, docs-as-code, content architecture, developer documentation roles
+**Narrative:** "810K+ words of production-grade documentation across 113 repos — documentation governance as a system design practice"
+**Evidence:** 810K+ words, CLAUDE.md/GEMINI.md/AGENTS.md governance in every repo, MFA in Creative Writing, 100+ college courses in composition, contextmd auto-generation engine, `<!-- v:KEY -->` variable binding system, 48 published essays
+**What to emphasize:** Documentation architecture (not just writing), docs-as-code methodology, information architecture across 8 orgs, automated context file generation, variable propagation system
+**Targets:** Stripe (docs team), Anthropic (docs), Vercel (docs), Cloudflare (docs), any company with docs-as-product philosophy
+
+**Opening line template:**
+> 810,000 words of public documentation across 113 repositories, governed by machine-readable context files and a variable binding system that propagates live metrics into every document. This isn't technical writing bolted onto code — it's documentation architecture: an auto-generating system where every repo's CLAUDE.md, README, and pitch deck derives from the same source of truth.
+
+---
+
+## 7. Governance / Compliance Architect
+
+**For:** AI safety, responsible AI, EU AI Act compliance, trust & safety, ethics engineering
+**Narrative:** "Human-oversight architecture for AI systems — built, not theorized"
+**Evidence:** Promotion state machine (5 states, no skipping), dependency graph validation (unidirectional flow, zero violations), 17-criterion omega scorecard, governance-rules.json, advisory system with threshold-based policy evaluation, mutation operations with lineage tracking
+**What to emphasize:** The system IS a governance implementation — human oversight, transparency, accountability, proportionality. These aren't abstract principles; they're running code with tests.
+**Targets:** Anthropic (RSP team), EU AI Act compliance firms, trust & safety teams, responsible AI orgs
+
+**Opening line template:**
+> The eight-organ system I built implements the governance patterns that AI regulation demands: human oversight (promotion requires explicit approval), transparency (every decision is logged and auditable), proportionality (dependency flow is unidirectional by design), and accountability (17-criterion scorecard with threshold-based advisory policies). These aren't compliance documents — they're running infrastructure with 2,500+ tests.
+
+---
+
+## 8. Platform Orchestrator
+
+**For:** Platform engineering, developer productivity, engineering effectiveness, systems architecture at scale
+**Narrative:** "Designed an 8-organization orchestration system with automated governance, dependency validation, and cross-org coordination"
+**Evidence:** 8 GitHub orgs, 113 repos, superproject management, seed.yaml contracts, registry-v2.json (single source of truth), AMMOI density index, pulse daemon, MCP server (88 tools), ontologia entity registry (1,833 entities), Neon metrics sink
+**What to emphasize:** The architecture, not the code — the fact that this is infrastructure-of-infrastructure designed for one operator to manage 113 repos
+**Targets:** Staff Platform Engineer, Developer Productivity, Engineering Effectiveness, DevEx teams
+
+**Opening line template:**
+> I designed an orchestration system that coordinates 113 repositories across 8 GitHub organizations through a machine-readable registry, automated dependency validation, a formal promotion state machine, and a pulse daemon that computes system density every 15 minutes. The system exists so one person can steer 113 repos with the same coherence a team of 10 would bring — and the infrastructure that makes this possible is itself the most interesting engineering artifact.
+
+---
+
+## 9. Founder / Operator
+
+**For:** Fractional CTO, consulting, advisory, incubator/accelerator programs, entrepreneurial fellowships
+**Narrative:** "Solo practitioner operating at institutional scale — built and run a system that would normally require a team of 10"
+**Evidence:** 113 repos, 8 orgs, automated governance, AI-conductor methodology, application pipeline (2,078 entries), portfolio site, stakeholder portal, multi-agent coordination
+**What to emphasize:** The operational capacity — not just building but running, maintaining, evolving. The system doesn't just exist; it operates continuously (pulse every 15min, daily CI refresh, advisory system).
+**Targets:** Entrepreneur First, On Deck, Y Combinator (for future product), fractional CTO engagements, advisory boards
+
+**Opening line template:**
+> I built and operate a system that coordinates 113 repositories, 8 GitHub organizations, and 810K+ words of documentation — as a single practitioner. This isn't a weekend project; it's sustained institutional-scale operation with automated governance, daily metrics refresh, a 15-minute pulse daemon, and a 17-criterion maturity scorecard. The question isn't whether one person can do this — it's what becomes possible when the infrastructure is designed to make it natural.
 
 ---
 
 ## Extended Framings
 
-The four canonical positions above cover most applications. The following target-specific framings extend them for specialized contexts. Each maps to a canonical parent position.
+The nine positions above cover most applications. The following target-specific framings extend them for specialized contexts. Each maps to a canonical parent position.
 
 | Extended Framing | Parent Position | Block File | Use For |
 |-----------------|----------------|------------|---------|
@@ -89,5 +139,10 @@ The four canonical positions above cover most applications. The following target
 | Emergency / Precarity | Community Practitioner | `framings/emergency-precarity.md` | Emergency funds, housing stability grants — tone is direct, factual, not embellished |
 | S+T+ARTS European Dimension | Systems Artist | `framings/starts-prize-european-dimension.md` | Prix Ars Electronica, S+T+ARTS — EU governance parallels, media art lineage |
 | S+T+ARTS Art-Tech Collaboration | Creative Technologist | `framings/starts-prize-art-tech-collaboration.md` | S+T+ARTS — bridge between artistic vision and technical infrastructure |
+| Academic Partnerships | Educator / Learning Architect | `framings/academic-partnerships.md` | University-industry partnerships, research collaborations |
+| ESG / Climate Impact | Governance / Compliance Architect | `framings/esg-climate-impact.md` | ESG-aligned funding, climate tech, sustainability roles |
+| EU AI Compliance | Governance / Compliance Architect | `framings/eu-ai-compliance.md` | EU AI Act compliance positions, regulatory tech |
+| Disability Founder | Founder / Operator | `framings/disability-founder.md` | Disability-focused accelerators, accessibility entrepreneurship |
+| Educator-Researcher | Educator / Learning Architect | `framings/educator-researcher.md` | Academic research positions, research grants |
 
-**Rule:** Use the canonical position as the primary framing. Use an extended framing only when the target explicitly calls for the specialized angle (e.g., "European dimension" requirement in S+T+ARTS, or emergency fund applications requiring documentation of need).
+**Rule:** Use the canonical position as the primary framing. Use an extended framing only when the target explicitly calls for the specialized angle.

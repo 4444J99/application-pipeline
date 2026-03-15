@@ -54,13 +54,17 @@ research → qualified → drafting → staged → submitted → acknowledged �
 
 ## Identity Positions
 
-Every application must align with one of five canonical positions defined in `strategy/identity-positions.md`. These determine framing, block selection, and resume variant:
+Every application must align with one of nine canonical positions defined in `strategy/identity-positions.md`. These determine framing, block selection, and resume variant:
 
-1. **Independent Engineer** — AI lab roles (Anthropic, OpenAI, Stripe). Focus: large-scale infra, testing discipline, "AI-conductor" methodology.
-2. **Systems Artist** — Art grants/residencies. Focus: governance as artwork, systemic scale.
-3. **Educator** — Academic roles/fellowships. Focus: teaching complex systems at scale.
-4. **Creative Technologist** — Tech grants/consulting. Focus: AI orchestration, production-grade creative instruments.
-5. **Community Practitioner** — Identity-specific funding. Focus: precarity-informed systemic practice.
+1. **Systems Artist** — Art grants/residencies. Focus: governance as artwork, systemic scale.
+2. **Educator / Learning Architect** — Academic roles, EdTech, L&D. Focus: curriculum design, systems pedagogy.
+3. **Creative Technologist** — Tech grants/consulting. Focus: AI orchestration, production-grade creative instruments.
+4. **Community Practitioner** — Identity-specific funding. Focus: precarity-informed systemic practice.
+5. **Independent Engineer** — AI lab roles (Anthropic, OpenAI). Focus: testing discipline, CI/CD, systems architecture.
+6. **Documentation Engineer** — Docs-as-code roles (Stripe, Vercel). Focus: 810K+ words, content architecture, auto-generation.
+7. **Governance / Compliance Architect** — AI safety, EU AI Act. Focus: human-oversight architecture, promotion state machine.
+8. **Platform Orchestrator** — Platform engineering, DevEx. Focus: 8-org orchestration, registry, pulse daemon.
+9. **Founder / Operator** — Fractional CTO, advisory, accelerators. Focus: solo institutional-scale operation.
 
 ## Content Composition Model
 
@@ -358,6 +362,19 @@ The Typer CLI (`pipeline` command) and `run.py` coexist. Use either:
 | CLI | `pipeline score <id>` | Clean API, structured output, programmatic use |
 | MCP | `mcp_server.py` | AI-assisted autonomous execution |
 
+## Makefile
+
+Convenience targets wrapping common commands:
+
+```bash
+make test            # Full pytest suite (python -m pytest tests/ -q)
+make test-fast       # Quick smoke subset (pipeline_lib, validate, run, cli tests only)
+make lint            # ruff check scripts/ tests/
+make validate        # Schema + ID map + rubric validation
+make verify          # Full verify_all.py (CI-parity)
+make verify-quick    # Fast verification gates (verify_all.py --quick)
+```
+
 ## Testing Patterns
 
 - Tests live in `tests/` (~1,977 tests) and use pytest
@@ -365,6 +382,7 @@ The Typer CLI (`pipeline` command) and `run.py` coexist. Use either:
 - **Two test styles**: (1) live-data tests validate against actual YAML files, block directories, and profiles; (2) isolated tests use `tmp_path`, `monkeypatch`, and `capsys` for unit testing script logic
 - `pytest-mock` available; `monkeypatch.setattr` used extensively for isolating filesystem, `sys.argv`, and module globals
 - ATS synthetic tests (`test_ats_synthetic.py`) require internet and are marked `@pytest.mark.synthetic`
+- **Test isolation via `conftest.py`**: sets `PIPELINE_METRICS_SOURCE=fallback` (deterministic metrics) and redirects `PIPELINE_SIGNAL_ACTIONS_PATH` to a temp directory (prevents tests from mutating repo signal logs)
 - Run `ruff` via `.venv/bin/activate` — it's not in the global PATH
 
 ## Key ID Mapping
@@ -404,17 +422,20 @@ Canonical identity statements, metrics, and evidence live in `organvm-corpvs-tes
 
 ## CI & Linting
 
-- CI runs via `.github/workflows/quality.yml`: verification matrix, ruff lint, signal validation, YAML validation, pytest (Ubuntu, Python 3.12)
-- **Verification matrix gate**: `python scripts/verification_matrix.py --strict` runs first in CI — enforces module-to-test coverage (117/117 modules). Override exceptions in `strategy/module-verification-overrides.yaml`.
+- CI runs via `.github/workflows/quality.yml` on push/PR to main + weekly Monday 6am schedule
+- **Push/PR job**: runs `verify_all.py` (bundles verification matrix, lint, validation, pytest) + advisory `preflight.py --status staged`
+- **Weekly regression job**: adds `outcome_learner.py --drift-check` on top of the push/PR checks
+- **Verification matrix gate**: `python scripts/verification_matrix.py --strict` — enforces module-to-test coverage (117/117 modules). Override exceptions in `strategy/module-verification-overrides.yaml`.
 - **Signal validation gate**: `python scripts/validate_signals.py --strict` validates all signal YAML files (signal-actions, conversion-log, hypotheses, agent-actions) plus referential integrity and contacts schema
 - Linter: `ruff check scripts/ tests/` — config in `pyproject.toml` (line-length 120, E/F/I/UP rules, E501 ignored)
 - No formal coverage threshold; prioritize regression coverage for pipeline state and YAML schema changes
-- Full local CI-parity check: `python scripts/verify_all.py`
+- Full local CI-parity check: `python scripts/verify_all.py` (or `make verify`)
 
 ## Dependencies
 
 - Python 3.11+ (venv at `.venv/` uses Python 3.14)
-- Runtime: PyYAML, Typer (CLI), google-genai (AI answer generation), mcp (MCP server)
+- Runtime: PyYAML, ruamel.yaml, Typer (CLI), anthropic, google-genai (AI answer generation), mcp (MCP server)
 - Dev: pytest, pytest-mock, ruff (`pip install -e ".[dev]"`)
+- Optional: `pip install -e ".[jobspy]"` for python-jobspy job sourcing integration
 - ATS submitters use stdlib `urllib` for HTTP (no requests dependency)
 - Editable install metadata in `application_pipeline.egg-info/` (from `pip install -e .`)
