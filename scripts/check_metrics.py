@@ -147,7 +147,7 @@ ORGAN_PATTERNS = {
 
 # Extended metric patterns for word counts, essay counts, test counts, sprints
 METRIC_PATTERNS = [
-    # Total word counts: "~810K+ words of" (total system aggregate only)
+    # Total word counts: "~739K words of" (total system aggregate only)
     # Requires "words of" or "words across" or "words written" to distinguish from
     # per-component counts like "142K words" (essay word count)
     {
@@ -159,7 +159,7 @@ METRIC_PATTERNS = [
         "metric_key": "total_words_k",
         "transform": lambda m, pat_idx: int(m.group(1)),
     },
-    # Essay counts: "42 essays", "42 published essays"
+    # Essay counts: "49 essays", "49 published essays"
     {
         "name": "essay_count",
         "patterns": [
@@ -168,7 +168,7 @@ METRIC_PATTERNS = [
         "metric_key": "published_essays",
         "transform": lambda m, pat_idx: int(m.group(1)),
     },
-    # Test counts: "2,349+ automated tests", "2,349 tests across N" (total aggregate only)
+    # Test counts: "21,449 verified tests across 20 repos", "21,449 tests across N" (total aggregate only)
     # Avoids matching per-project breakdowns like "1,095 unit/integration tests"
     {
         "name": "test_count",

@@ -14,7 +14,7 @@ tier: single
 **Identity position:** Teaching complex systems as creative practice
 
 ## Opening
-With 11 years of college instruction across 8+ institutions and 2,000+ students, I have built a teaching practice grounded in making complex systems accessible. The eight-organ system I've documented in 48 published essays demonstrates this methodology applied to creative infrastructure — the same pedagogical instinct that makes a classroom work, scaled to institutional knowledge production.
+With 11 years of college instruction across 8+ institutions and 2,000+ students, I have built a teaching practice grounded in making complex systems accessible. The eight-organ system I've documented in 49 published essays demonstrates this methodology applied to creative infrastructure — the same pedagogical instinct that makes a classroom work, scaled to institutional knowledge production.
 
 ## Key Claims
 - 100+ courses taught across composition, literature, and creative writing
@@ -26,7 +26,7 @@ With 11 years of college instruction across 8+ institutions and 2,000+ students,
 - 11 years, 8+ institutions, 2,000+ students
 - 100+ courses (composition, creative writing, literature)
 - MFA Creative Writing (FAU)
-- 48 published essays as pedagogical artifacts
+- 49 published essays as pedagogical artifacts
 - Classroom RPG: Aetheria — gamification platform (React/TS) with AI-powered feedback and quest-based learning
 
 ## Targets

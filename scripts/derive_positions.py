@@ -75,7 +75,7 @@ ORGAN_POSITION_AFFINITY: dict[str, list[tuple[str, float]]] = {
 
 # Static evidence that always contributes regardless of snapshot
 STATIC_EVIDENCE: dict[str, float] = {
-    "documentation-engineer": 0.8,   # 810K+ words, MFA, 100+ courses
+    "documentation-engineer": 0.8,   # 739K words, MFA, 100+ courses
     "educator": 0.7,                  # 11 years, 100+ courses, 2000+ students
     "community-practitioner": 0.5,   # LGBTQ+, precarity, recovery
     "systems-artist": 0.4,           # MFA, governance as artwork

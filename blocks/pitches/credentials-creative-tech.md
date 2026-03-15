@@ -14,6 +14,6 @@ tier: single
 - Google IT Support / Data Analytics Certifications
 - 18 years professional experience: creative systems design, multimedia production, project management
 - 11 years college instruction across 8+ institutions (2,000+ students)
-- Creator of ORGANVM: 113 repositories, 8 organizations, 2,349+ tests, 96+ CI/CD pipelines
-- 48 published essays (~142K words) at https://organvm-v-logos.github.io/public-process/
+- Creator of ORGANVM: 113 repositories, 8 organizations, 21,449 tests, 104 CI/CD pipelines
+- 49 published essays (~142K words) at https://organvm-v-logos.github.io/public-process/
 - Interactive portfolio: https://4444j99.github.io/portfolio/

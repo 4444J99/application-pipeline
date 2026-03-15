@@ -14,7 +14,7 @@ tier: single
 **Identity position:** Building creative infrastructure from lived experience of precarity
 
 ## Opening
-As a queer, housing-precarious artist building creative infrastructure from lived experience of precarity, I understand that the systems we build reflect the conditions we build them in. The eight-organ system — including its community infrastructure (ORGAN-VI) and public documentation of 48 essays — was built as a model for sustainable creative practice accessible to others navigating similar circumstances.
+As a queer, housing-precarious artist building creative infrastructure from lived experience of precarity, I understand that the systems we build reflect the conditions we build them in. The eight-organ system — including its community infrastructure (ORGAN-VI) and public documentation of 49 essays — was built as a model for sustainable creative practice accessible to others navigating similar circumstances.
 
 ## Key Claims
 - Creative practice grounded in lived experience of LGBTQ+ identity, housing instability, and recovery
@@ -25,7 +25,7 @@ As a queer, housing-precarious artist building creative infrastructure from live
 
 ## Lead Evidence
 - Krypto-velamen: 20 deep research files on queer literary figures, 26 world-building research modules, original encoding schema (double-channel text, six calibratable dials)
-- 48 published essays documenting the practice publicly
+- 49 published essays documenting the practice publicly
 - ORGAN-VI with 4 community-facing repositories
 - 113 repos built and maintained as a solo practitioner
 - MFA Creative Writing (FAU)

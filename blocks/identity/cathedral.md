@@ -21,7 +21,7 @@ I design environments where creative organisms grow — and then I document the 
 
 My practice centers on the eight-organ system: a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 113 repositories. I don't produce individual artworks. I produce the *systems* that generate, coordinate, and sustain creative work — and the visible record of how those systems are built is itself the primary creative output.
 
-The process of creation is the product. The 48 essays I've published aren't reflections on the work; they ARE the work — the creative process rendered into prose in real time. The governance rules — registry design, dependency graphs, promotion pipelines — aren't bureaucratic overhead; they're generative constraints, the way a composer's harmonic rules shape what melodies can emerge. Every architectural decision is an artistic decision.
+The process of creation is the product. The 49 essays I've published aren't reflections on the work; they ARE the work — the creative process rendered into prose in real time. The governance rules — registry design, dependency graphs, promotion pipelines — aren't bureaucratic overhead; they're generative constraints, the way a composer's harmonic rules shape what melodies can emerge. Every architectural decision is an artistic decision.
 
 ## The Tradition
 
@@ -44,7 +44,7 @@ The eight-organ system coordinates:
 | VII (Kerygma) | Marketing, distribution | 4 |
 | Meta | Cross-system governance | 7 |
 
-Key infrastructure: machine-readable registry as single source of truth, automated dependency validation (no circular dependencies, no back-edges), formal promotion state machine (LOCAL → CANDIDATE → PUBLIC_PROCESS → GRADUATED → ARCHIVED), 96+ CI/CD pipelines, ~810K+ words of public documentation.
+Key infrastructure: machine-readable registry as single source of truth, automated dependency validation (no circular dependencies, no back-edges), formal promotion state machine (LOCAL → CANDIDATE → PUBLIC_PROCESS → GRADUATED → ARCHIVED), 104 CI/CD pipelines, ~739K words of public documentation.
 
 ## The Method
 
@@ -59,7 +59,7 @@ The system is simultaneously: (a) working infrastructure that produces creative 
 ## Key Differentiators
 
 1. **Solo production at institutional scale.** One person built and documented a 113-repository system across 8 organizations with automated governance — the kind of infrastructure normally requiring a team of 5-10.
-2. **Process-as-product methodology.** The 48 essays aren't marketing — they ARE the creative work.
+2. **Process-as-product methodology.** The 49 essays aren't marketing — they ARE the creative work.
 3. **AI-augmented creative practice, not AI-generated art.** AI tools serve as compositional instruments — the architectural vision and editorial judgment are human.
 4. **Governance as creative medium.** Registry design, dependency graphs, promotion pipelines are treated as generative structures.
 5. **Radical transparency at system scale.** Every decision, sprint, failure, and course correction is documented and published.
@@ -67,8 +67,8 @@ The system is simultaneously: (a) working infrastructure that produces creative 
 
 ## Bio (200 words)
 
-Systems artist and auteur-producer working at the intersection of creative infrastructure, governance design, and AI-augmented methodology. Creator of the ORGANVM eight-organ system: 113 repositories across 8 GitHub organizations coordinating theory, generative art, commercial products, governance, public process, community, and marketing through automated governance and a formal promotion state machine. 48 published essays document the creative process in real time.
+Systems artist and auteur-producer working at the intersection of creative infrastructure, governance design, and AI-augmented methodology. Creator of the ORGANVM eight-organ system: 113 repositories across 8 GitHub organizations coordinating theory, generative art, commercial products, governance, public process, community, and marketing through automated governance and a formal promotion state machine. 49 published essays document the creative process in real time.
 
-Professional background spans 18 years across four domains: 5 years independent creative systems design (the eight-organ system, 2,349+ tests, 33 development sprints), 11 years college instruction at 8+ institutions (2,000+ students), 15 years multimedia production (AJP Media Arts), and 11 years construction project management. MFA Creative Writing (FAU), BA English Literature (CUNY). Meta Full-Stack Developer and Google UX/Digital Marketing/Project Management certifications.
+Professional background spans 18 years across four domains: 5 years independent creative systems design (the eight-organ system, 21,449 tests, 33 development sprints), 11 years college instruction at 8+ institutions (2,000+ students), 15 years multimedia production (AJP Media Arts), and 11 years construction project management. MFA Creative Writing (FAU), BA English Literature (CUNY). Meta Full-Stack Developer and Google UX/Digital Marketing/Project Management certifications.
 
 Reference points: Julian Oliver's critical engineering, Nicky Case's Explorable Explanations, Hundred Rabbits' radical transparency. The conviction that protocols, governance structures, and systems design are primary creative outputs — not supplementary. Based in New York City.

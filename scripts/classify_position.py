@@ -76,8 +76,9 @@ POSITION_RULES: list[tuple[str, list[str]]] = [
     # (art grants and identity-specific funding are manual entries)
 ]
 
-# Default fallback
-DEFAULT_POSITION = "independent-engineer"
+# Default fallback — documentation-engineer reflects the actual work profile
+# (70% documentation/governance, 22 languages, 739K words, MFA)
+DEFAULT_POSITION = "documentation-engineer"
 
 
 def classify_position(

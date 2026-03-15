@@ -17,8 +17,8 @@ tier: single
 | Total repositories | 105 |
 | Implementation status | 96 ACTIVE, 9 ARCHIVED |
 | GitHub organizations | 8 |
-| Published essays | 0 (~810K+ words) |
-| Total documentation | ~810K+ words |
+| Published essays | 0 (~739K words) |
+| Total documentation | ~739K words |
 | Named development sprints | 33 |
 | CI/CD workflows | 96+ repos |
 | Dependency edges | 44 validated |

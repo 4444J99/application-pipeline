@@ -36,4 +36,4 @@ When applications require DEI narrative:
 1. Lead with identity positioning (neurodivergent founder)
 2. Connect to the work (systematic thinking → system architecture)
 3. Frame the ORGANVM system as evidence: governance structure, documentation rigor, and sustained independent production demonstrate how neurodivergent cognitive patterns become engineering advantages at scale
-4. Cite the numbers: 113 repositories, 2,349 tests, 33 sprints — sustained output that reframes "disability" as different, not deficient
+4. Cite the numbers: 113 repositories, 21,449 tests, 33 sprints — sustained output that reframes "disability" as different, not deficient

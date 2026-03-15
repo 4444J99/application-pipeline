@@ -14,17 +14,17 @@ tier: single
 **Identity position:** Production-grade AI orchestration with creative applications
 
 ## Opening
-I build production-grade AI orchestration systems that bridge creative practice and technical infrastructure. The ORGANVM project coordinates 113 repositories through automated dependency validation, a formal promotion state machine, and 96+ CI/CD pipelines — all designed, tested (2,349+ tests), and documented by a single practitioner.
+I build production-grade AI orchestration systems that bridge creative practice and technical infrastructure. The ORGANVM project coordinates 113 repositories through automated dependency validation, a formal promotion state machine, and 104 CI/CD pipelines — all designed, tested (21,449 tests), and documented by a single practitioner.
 
 ## Key Claims
 - Multi-agent orchestration demonstrated at scale (Agentic Titan: 1,095 tests)
 - Automated governance with zero dependency violations
 - Symbolic computing infrastructure (Recursive Engine: 1,254 tests, custom DSL)
-- Documentation-first methodology producing ~810K+ words
+- Documentation-first methodology producing ~739K words
 
 ## Lead Evidence
-- 2,349+ automated tests across flagship repos
-- 96+ CI/CD workflows
+- 21,449 verified tests across 20 repos across flagship repos
+- 104 CI/CD workflows
 - 44 dependency edges, all validated, 0 violations
 - Meta Full-Stack Developer + Google certifications
 

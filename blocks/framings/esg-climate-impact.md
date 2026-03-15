@@ -24,7 +24,7 @@ The ORGANVM system embodies sustainability by design. Digital infrastructure wit
 - **Efficient AI usage:** AI-conductor model treats LLM calls as deliberate compositional acts, not brute-force generation — measured in tokens, optimized for quality over quantity
 
 ### Social
-- **Public benefit:** All repositories public, documentation openly accessible, methodology documented in 48 published essays
+- **Public benefit:** All repositories public, documentation openly accessible, methodology documented in 49 published essays
 - **Education pipeline:** 11 years teaching 2,000+ students — direct human capital development
 - **Community infrastructure:** ORGAN-VI reading groups and community channels provide free knowledge-sharing platforms
 

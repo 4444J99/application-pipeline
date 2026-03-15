@@ -34,7 +34,7 @@ question_8326210005: "No"
 # What's been the largest scale datasets you've worked with in the past and what type of data?
 # Type: textarea | Optional
 question_8326211005: |
-  My largest-scale data work is the ORGANVM system itself: 21,000 code files, 3,600+ test files, 810,000+ words of documentation across 103 repositories. I built automated tooling to crawl, validate, and cross-reference this corpus — including dependency graph validation (43 edges, zero circular dependencies), registry synchronization, and batch pipeline processing across multiple data formats (YAML, JSON, Markdown).
+  My largest-scale data work is the ORGANVM system itself: 21,000 code files, 3,600+ test files, 739,000 words of documentation across 103 repositories. I built automated tooling to crawl, validate, and cross-reference this corpus — including dependency graph validation (43 edges, zero circular dependencies), registry synchronization, and batch pipeline processing across multiple data formats (YAML, JSON, Markdown).
 
 # Are you currently based in the U.S. or Canada?
 # Type: select | Options: Yes, No | Required

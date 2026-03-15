@@ -18,7 +18,7 @@ The AI-conductor model treats AI tools as compositional instruments — the way 
 
 This methodology enabled a single operator to build, document, and validate 113 repositories across 8 organizations — demonstrating that the creative intelligence lies in the architecture and the editorial judgment, not in any single line of code or prose. Effort is measured in LLM API tokens, not human-hours: a 3,000-word README requires ~72K tokens across generation, revision, and validation passes.
 
-The model is documented transparently in 48 published essays. It's reusable: other practitioners can adopt the same approach to achieve institutional-scale output as independent creators.
+The model is documented transparently in 49 published essays. It's reusable: other practitioners can adopt the same approach to achieve institutional-scale output as independent creators.
 
 ## Key Metric
-~810K+ words of documentation produced by one person using this methodology.
+~739K words of documentation produced by one person using this methodology.

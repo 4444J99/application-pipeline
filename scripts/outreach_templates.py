@@ -117,7 +117,7 @@ def generate_cold_email(entry: dict) -> dict:
 
     position_evidence = {
         "independent-engineer": (
-            "I maintain a 113-repository infrastructure system with 2,349 automated tests "
+            "I maintain a 113-repository infrastructure system with 21,449 verified tests "
             "and have built production pipelines for AI orchestration across multiple frameworks."
         ),
         "systems-artist": (

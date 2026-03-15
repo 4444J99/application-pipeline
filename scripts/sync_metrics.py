@@ -42,32 +42,31 @@ SCAN_PATHS = [
 #   - essays: match "N published essays" or "N essays"
 CANONICAL_METRICS = {
     "repositories": {
-        "canonical": "103",
+        "canonical": "113",
         "pattern": r"\b(1\d{2})\s*(?:repositories|repos)\b",
         "description": "Total repositories",
         # Matches 100-199 range: system total references. Excludes "70 repos with test coverage."
     },
     "essays": {
-        "canonical": "42",
+        "canonical": "49",
         "pattern": r"\b(\d{2})\s*(?:published\s+)?essays\b",
         "description": "Published essays",
     },
     "ci_cd_workflows": {
-        "canonical": "94",
+        "canonical": "104",
         "pattern": r"\b(\d{2,3})\+?\s*CI(?:/CD)?\s*(?:workflows?|pipelines?)\b",
         "description": "CI/CD workflows",
     },
     "dependency_edges": {
-        "canonical": "43",
+        "canonical": "50",
         "pattern": r"\b(\d{2})\s*(?:validated\s+)?dependency\s*edges?\b",
         "description": "Dependency edges",
     },
     "automated_tests": {
-        "canonical": "2,349",
-        "pattern": r"\b(2,\d{3})\+?\s*(?:automated\s+)?tests?\b",
-        "description": "Automated tests (system total)",
+        "canonical": "21,449",
+        "pattern": r"\b([\d,]+)\+?\s*(?:automated\s+|verified\s+|passing\s+)?tests?\b",
+        "description": "Automated tests (system total across 20 repos)",
         "allow_higher": True,
-        # Only matches "2,XXX tests" — system-level totals. Per-project counts (1,095, 1,254, 291) won't match.
     },
     "development_sprints": {
         "canonical": "33",
@@ -75,12 +74,12 @@ CANONICAL_METRICS = {
         "description": "Named development sprints",
     },
     "code_files": {
-        "canonical": "21,160",
+        "canonical": "22,885",
         "pattern": r"\b([\d,]+)\s*code\s+files?\b",
         "description": "Code files",
     },
     "test_files": {
-        "canonical": "3,610",
+        "canonical": "4,274",
         "pattern": r"\b([\d,]+)\s*test\s+files?\b",
         "description": "Test files",
     },

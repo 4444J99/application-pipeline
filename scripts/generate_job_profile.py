@@ -47,21 +47,21 @@ STANDARD_WORK_SAMPLES = [
     {
         "name": "Eight-Organ System Hub",
         "url": "https://github.com/meta-organvm/organvm-corpvs-testamentvm",
-        "description": "103 repositories, 8 organizations, 42 essays, ~810K words of documentation",
+        "description": "103 repositories, 8 organizations, 49 essays, ~739K words of documentation",
     },
 ]
 
 # Evidence highlights by identity position.
 EVIDENCE_BY_POSITION = {
     "independent-engineer": [
-        "103 repositories with 2,349+ automated tests across flagship frameworks",
+        "103 repositories with 21,449 verified tests across 20 repos across flagship frameworks",
         "82+ CI/CD workflows with automated governance and promotion state machine",
         "AI-conductor methodology: AI generates volume, human directs architecture",
     ],
     "creative-technologist": [
         "Eight-organ system: 103 repos coordinating theory, art, commerce, and governance",
         "Production-grade orchestration frameworks with comprehensive test coverage",
-        "42 published essays documenting creative-technical methodology in real time",
+        "49 published essays documenting creative-technical methodology in real time",
     ],
     "systems-artist": [
         "Eight-organ system as primary creative output: governance as artwork",
@@ -71,7 +71,7 @@ EVIDENCE_BY_POSITION = {
     "educator": [
         "11 years college instruction at 8+ institutions, 2,000+ students",
         "Eight-organ system as pedagogical case study in systems thinking",
-        "42 essays documenting complex systems methodology for public audience",
+        "49 essays documenting complex systems methodology for public audience",
     ],
     "community-practitioner": [
         "Precarity-informed systemic practice across 33 development sprints",
@@ -79,7 +79,7 @@ EVIDENCE_BY_POSITION = {
         "Open-source methodology: 103 public repositories with full documentation",
     ],
     "documentation-engineer": [
-        "810K+ words of production-grade documentation across 113 repositories",
+        "739K words of production-grade documentation across 113 repositories",
         "Auto-generating context files (CLAUDE.md/GEMINI.md) with variable binding system",
         "MFA in Creative Writing, 100+ college courses in composition and rhetoric",
     ],

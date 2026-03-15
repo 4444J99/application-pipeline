@@ -215,9 +215,9 @@ def generate_prep(entry_id: str) -> str:
     # Key metrics to mention
     lines.append("\n## Key Metrics to Reference")
     lines.append("- 103 repositories across 8 organizational organs")
-    lines.append("- ~810K words of documentation")
-    lines.append("- 2,349 automated tests")
-    lines.append("- 42 published essays")
+    lines.append("- ~739K words of documentation")
+    lines.append("- 21,449 verified tests")
+    lines.append("- 49 published essays")
     lines.append("- 33 development sprints")
 
     return "\n".join(lines)

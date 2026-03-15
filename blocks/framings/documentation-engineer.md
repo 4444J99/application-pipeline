@@ -15,15 +15,15 @@ tier: single
 
 ## Opening
 
-810,000 words of public documentation across 113 repositories. CLAUDE.md, GEMINI.md, and AGENTS.md auto-generated for every active repo from Jinja2 templates bound to live registry data. Variable binding that propagates code file counts, test totals, and organ membership into context files without manual edits. An MFA in Creative Writing and 11 years teaching composition to 2,000+ students — and 48 published essays on the intersection of systems, language, and culture.
+810,000 words of public documentation across 113 repositories. CLAUDE.md, GEMINI.md, and AGENTS.md auto-generated for every active repo from Jinja2 templates bound to live registry data. Variable binding that propagates code file counts, test totals, and organ membership into context files without manual edits. An MFA in Creative Writing and 11 years teaching composition to 2,000+ students — and 49 published essays on the intersection of systems, language, and culture.
 
 **Pattern interrupt note:** Lead with the architecture numbers before naming the writing background. "MFA" fires a "not technical" pattern — delay it until after the docs-as-code infrastructure has registered. The argument is: this person treats documentation as a typed system contract, not a narrative deliverable.
 
 ## Key Claims
 
-- **Scale:** 810K+ words of structured documentation across 113 repos — not padded prose, but architecture plans, SOPs, session logs, governance rules, registry data, and generated context files
+- **Scale:** 739K words of structured documentation across 113 repos — not padded prose, but architecture plans, SOPs, session logs, governance rules, registry data, and generated context files
 - **Auto-generation:** contextmd system generates CLAUDE.md/GEMINI.md/AGENTS.md from templates + registry; no manual sync across the system
-- **Variable binding:** Live metrics (21K code files, 3.6K test files, 94 CI/CD workflows) propagate into all documentation automatically via Python binding layer
+- **Variable binding:** Live metrics (22,885 code files, 3.6K test files, 104 CI/CD workflows) propagate into all documentation automatically via Python binding layer
 - **Validation:** Every doc format has a JSON Schema contract; automated CI validation on all corpus docs
 - **Process governance:** praxis-perpetua corpus — 6 SOPs, 5 templates, session self-critique logs; institutional knowledge as versioned, structured docs not team convention
 - **Teaching:** 11 years, 100+ courses, 2,000+ students — composition, rhetoric, writing at scale is the same discipline as documentation architecture
@@ -42,7 +42,7 @@ tier: single
 - Not a dedicated technical writer by prior job title — documentation engineering emerged from systems architecture practice
 - No enterprise docs platform experience (Confluence, Notion, Readme.io) — all docs-as-code in git/Markdown
 - Independent practice — no peer review with other writers or doc engineers
-- "810K words" includes generated/templated content, not all original prose
+- "739K words" includes generated/templated content, not all original prose
 
 ## Documentation-Resume Translation
 
@@ -53,4 +53,4 @@ tier: single
 | JSON Schema validation in CI | Typed documentation contracts with automated validation gates |
 | praxis-perpetua SOPs | Institutional knowledge as structured, versioned, auditable artifacts |
 | 11 years teaching composition | Communication at scale — same discipline as developer documentation |
-| 48 essays published | Long-form technical and analytical writing with public record |
+| 49 essays published | Long-form technical and analytical writing with public record |

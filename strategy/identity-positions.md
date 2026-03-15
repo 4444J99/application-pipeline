@@ -17,7 +17,7 @@ Nine framings of the same body of work for different audiences. Derived from cov
 
 **For:** Art grants, residencies, prizes
 **Narrative:** "I build creative systems — the governance IS the artwork"
-**Evidence:** 113-repo eight-organ system as living creative work, 48 essays, MFA
+**Evidence:** 113-repo eight-organ system as living creative work, 49 essays, MFA
 **Targets:** Creative Capital, Artadia, FCA, NYSCA/NYFA, Eyebeam, Fire Island, Headlands, Prix Ars, S+T+ARTS, ZKM, LACMA
 
 **Opening line template:**
@@ -41,11 +41,11 @@ Nine framings of the same body of work for different audiences. Derived from cov
 
 **For:** Tech grants, selective roles, accelerators, consulting
 **Narrative:** "Production-grade AI orchestration with creative-artistic applications"
-**Evidence:** Multi-agent orchestration, autonomous governance, 2,349+ tests, 96+ CI/CD workflows
+**Evidence:** Multi-agent orchestration, autonomous governance, 21,449 tests, 104 CI/CD workflows
 **Targets:** Google Creative Lab, Processing Foundation, consulting clients, Together AI, HuggingFace
 
 **Opening line template:**
-> I build production-grade AI orchestration systems. The ORGANVM project coordinates 113 repositories through automated dependency validation, a formal promotion state machine, and 96+ CI/CD pipelines — all designed, tested (2,349+ tests), and documented by a single practitioner using AI tools as compositional instruments.
+> I build production-grade AI orchestration systems. The ORGANVM project coordinates 113 repositories through automated dependency validation, a formal promotion state machine, and 104 CI/CD pipelines — all designed, tested (21,449 tests), and documented by a single practitioner using AI tools as compositional instruments.
 
 ---
 
@@ -57,21 +57,21 @@ Nine framings of the same body of work for different audiences. Derived from cov
 **Targets:** Queer|Art, Fire Island, TJFP, Lambda Literary, WFF Housing Stability, PEN America, Stimpunks
 
 **Opening line template:**
-> As a queer, housing-precarious artist building creative infrastructure from lived experience of precarity, I understand that the systems we build reflect the conditions we build them in. The eight-organ system — including its community infrastructure (ORGAN-VI) and public documentation of 48 essays — was built as a model for sustainable creative practice accessible to others navigating similar circumstances.
+> As a queer, housing-precarious artist building creative infrastructure from lived experience of precarity, I understand that the systems we build reflect the conditions we build them in. The eight-organ system — including its community infrastructure (ORGAN-VI) and public documentation of 49 essays — was built as a model for sustainable creative practice accessible to others navigating similar circumstances.
 
 ---
 
 ## 5. Independent Engineer
 
 **For:** AI lab engineering roles, developer tooling positions, infrastructure engineering
-**Narrative:** "5 years building production-grade Python/TypeScript infrastructure at scale — 113 repos, 21K code files, 3.6K tests, 94 CI/CD pipelines, governance as architecture"
-**Evidence:** system-metrics.json (computed, verifiable), agentic-titan (1,095 tests), recursive-engine (1,254 tests, 85% coverage), 43 validated dependency edges, 0 violations, automated governance
+**Narrative:** "5 years building production-grade Python/TypeScript infrastructure at scale — 113 repos, 22,885 code files, 3.6K tests, 104 CI/CD pipelines, governance as architecture"
+**Evidence:** system-metrics.json (computed, verifiable), agentic-titan (1,095 tests), recursive-engine (1,254 tests, 85% coverage), 50 validated dependency edges, 0 violations, automated governance
 **What to emphasize:** Testing discipline, CI/CD, systems architecture, API orchestration, documentation rigor, autonomous governance design
 **What to acknowledge:** Independent practice (no team PRs), no production users, LLM API orchestration not ML training
 **Targets:** Anthropic, OpenAI, Runway, Together AI, Cohere, HuggingFace
 
 **Opening line template:**
-> 21,160 code files. 3,610 test files across 70 of 113 repositories. 94 CI/CD pipelines. 43 validated dependency edges with zero violations — all designed, built, and maintained by a single practitioner. This is not freelance consulting or contract work: it is sustained independent production at engineering-team scale, five years of Python and TypeScript across 113 repositories coordinated through 8 GitHub organizations.
+> 22,885 code files. 4,274 test files across 70 of 113 repositories. 104 CI/CD pipelines. 50 validated dependency edges with zero violations — all designed, built, and maintained by a single practitioner. This is not freelance consulting or contract work: it is sustained independent production at engineering-team scale, five years of Python and TypeScript across 113 repositories coordinated through 8 GitHub organizations.
 
 **Pattern interrupt:** Lead with the output scale before naming the solo context. The reviewer's "contractor" pattern fires on "solo practitioner" — delay that phrase until after the numbers have established the scale.
 
@@ -80,8 +80,8 @@ Nine framings of the same body of work for different audiences. Derived from cov
 ## 6. Documentation Engineer
 
 **For:** Technical writing, docs-as-code, content architecture, developer documentation roles
-**Narrative:** "810K+ words of production-grade documentation across 113 repos — documentation governance as a system design practice"
-**Evidence:** 810K+ words, CLAUDE.md/GEMINI.md/AGENTS.md governance in every repo, MFA in Creative Writing, 100+ college courses in composition, contextmd auto-generation engine, `<!-- v:KEY -->` variable binding system, 48 published essays
+**Narrative:** "739K words of production-grade documentation across 113 repos — documentation governance as a system design practice"
+**Evidence:** 739K words, CLAUDE.md/GEMINI.md/AGENTS.md governance in every repo, MFA in Creative Writing, 100+ college courses in composition, contextmd auto-generation engine, `<!-- v:KEY -->` variable binding system, 49 published essays
 **What to emphasize:** Documentation architecture (not just writing), docs-as-code methodology, information architecture across 8 orgs, automated context file generation, variable propagation system
 **Targets:** Stripe (docs team), Anthropic (docs), Vercel (docs), Cloudflare (docs), any company with docs-as-product philosophy
 
@@ -125,7 +125,7 @@ Nine framings of the same body of work for different audiences. Derived from cov
 **Targets:** Entrepreneur First, On Deck, Y Combinator (for future product), fractional CTO engagements, advisory boards
 
 **Opening line template:**
-> I built and operate a system that coordinates 113 repositories, 8 GitHub organizations, and 810K+ words of documentation — as a single practitioner. This isn't a weekend project; it's sustained institutional-scale operation with automated governance, daily metrics refresh, a 15-minute pulse daemon, and a 17-criterion maturity scorecard. The question isn't whether one person can do this — it's what becomes possible when the infrastructure is designed to make it natural.
+> I built and operate a system that coordinates 113 repositories, 8 GitHub organizations, and 739K words of documentation — as a single practitioner. This isn't a weekend project; it's sustained institutional-scale operation with automated governance, daily metrics refresh, a 15-minute pulse daemon, and a 17-criterion maturity scorecard. The question isn't whether one person can do this — it's what becomes possible when the infrastructure is designed to make it natural.
 
 ---
 

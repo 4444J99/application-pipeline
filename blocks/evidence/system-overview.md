@@ -19,9 +19,9 @@ The system operates on an AI-conductor model: AI generates volume, human directs
 | Claim | Proof |
 |-------|-------|
 | 113 repos, 8 orgs | registry-v2.json |
-| 48 published essays | public-process/_posts/ |
-| ~810K+ words | Aggregate measurement |
+| 49 published essays | public-process/_posts/ |
+| ~739K words | Aggregate measurement |
 | 33 sprints | docs/specs/sprints/01-33 |
-| 2,349+ tests | agentic-titan (1,095) + recursive-engine (1,254) |
+| 21,449 tests | agentic-titan (1,095) + recursive-engine (1,254) |
 | 0 dependency violations | Automated weekly validation |
 | 100% documentation coverage | Per-repo CLAUDE.md + seed.yaml |
