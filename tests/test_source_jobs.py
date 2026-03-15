@@ -1,16 +1,22 @@
 """Tests for scripts/source_jobs.py"""
 
+import json
 import sys
 from pathlib import Path
+from urllib.error import HTTPError
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from source_jobs import (
     VALID_LOCATION_CLASSES,
     _slugify,
+    _strip_html,
     _yaml_quote,
     classify_location,
     create_pipeline_entry,
+    fetch_ashby_jobs,
+    fetch_greenhouse_jobs,
+    fetch_lever_jobs,
     filter_by_title,
 )
 
@@ -149,3 +155,265 @@ def test_yaml_quote_both_quote_types():
     assert result.endswith('"')
     # Should be valid — double quotes escaped inside
     assert '\\"' in result
+
+
+# --- _strip_html ---
+
+
+def test_strip_html_basic():
+    """HTML tags are removed and entities unescaped."""
+    result = _strip_html("<p>Hello &amp; World</p>")
+    assert result == "Hello & World"
+
+
+def test_strip_html_cap():
+    """Output is capped at 5000 chars."""
+    long_text = "a" * 10000
+    result = _strip_html(long_text)
+    assert len(result) == 5000
+
+
+def test_strip_html_whitespace_collapsed():
+    """Multiple whitespace is collapsed to single space."""
+    result = _strip_html("<p>foo</p>   <p>bar</p>")
+    assert result == "foo bar"
+
+
+# --- description fetching: Greenhouse ---
+
+
+def _make_greenhouse_list_response(jobs: list[dict]) -> bytes:
+    return json.dumps({"jobs": jobs}).encode()
+
+
+def _make_greenhouse_detail_response(content: str) -> bytes:
+    return json.dumps({"id": 1, "title": "Eng", "content": content}).encode()
+
+
+def test_greenhouse_description_fetched(monkeypatch):
+    """Greenhouse jobs include description fetched from detail endpoint."""
+    list_payload = _make_greenhouse_list_response([
+        {"id": 111, "title": "Software Engineer", "absolute_url": "https://example.com/jobs/111",
+         "location": {"name": "Remote"}, "updated_at": "2026-03-14T00:00:00Z"},
+    ])
+    detail_payload = _make_greenhouse_detail_response("<p>Build great things &amp; more.</p>")
+
+    call_count = {"n": 0}
+
+    def fake_http_get(url: str) -> bytes:
+        call_count["n"] += 1
+        if "/jobs/111" in url and url.endswith("/111"):
+            return detail_payload
+        return list_payload
+
+    monkeypatch.setattr("source_jobs._http_get", fake_http_get)
+    monkeypatch.setattr("source_jobs.time.sleep", lambda _: None)
+
+    jobs = fetch_greenhouse_jobs(
+        "testboard",
+        title_keywords=["software engineer"],
+        title_excludes=[],
+    )
+    assert len(jobs) == 1
+    assert jobs[0]["description"] == "Build great things & more."
+    assert call_count["n"] == 2  # list + detail
+
+
+def test_greenhouse_description_only_for_filtered(monkeypatch):
+    """Greenhouse only fetches detail for jobs that pass the title filter."""
+    list_payload = _make_greenhouse_list_response([
+        {"id": 1, "title": "Software Engineer", "absolute_url": "https://example.com/1",
+         "location": {"name": "Remote"}, "updated_at": "2026-03-14T00:00:00Z"},
+        {"id": 2, "title": "Marketing Manager", "absolute_url": "https://example.com/2",
+         "location": {"name": "Remote"}, "updated_at": "2026-03-14T00:00:00Z"},
+    ])
+
+    detail_calls = []
+
+    def fake_http_get(url: str) -> bytes:
+        if url.endswith("/1") or url.endswith("/2"):
+            detail_calls.append(url)
+            return json.dumps({"content": "<p>desc</p>"}).encode()
+        return list_payload
+
+    monkeypatch.setattr("source_jobs._http_get", fake_http_get)
+    monkeypatch.setattr("source_jobs.time.sleep", lambda _: None)
+
+    fetch_greenhouse_jobs(
+        "testboard",
+        title_keywords=["software engineer"],
+        title_excludes=[],
+    )
+    # Only the matching job's detail should have been fetched
+    assert len(detail_calls) == 1
+    assert detail_calls[0].endswith("/1")
+
+
+def test_greenhouse_failed_detail_gives_empty_description(monkeypatch):
+    """A failed Greenhouse detail fetch results in empty description, not a crash."""
+    list_payload = _make_greenhouse_list_response([
+        {"id": 999, "title": "Software Engineer", "absolute_url": "https://example.com/999",
+         "location": {"name": "Remote"}, "updated_at": "2026-03-14T00:00:00Z"},
+    ])
+
+    def fake_http_get(url: str) -> bytes:
+        if url.endswith("/999"):
+            raise HTTPError(url, 404, "Not Found", {}, None)
+        return list_payload
+
+    monkeypatch.setattr("source_jobs._http_get", fake_http_get)
+    monkeypatch.setattr("source_jobs.time.sleep", lambda _: None)
+
+    jobs = fetch_greenhouse_jobs(
+        "testboard",
+        title_keywords=["software engineer"],
+        title_excludes=[],
+    )
+    assert len(jobs) == 1
+    assert jobs[0]["description"] == ""
+
+
+# --- description fetching: Lever ---
+
+
+def test_lever_description_from_plain(monkeypatch):
+    """Lever jobs use descriptionPlain when available."""
+    payload = json.dumps([
+        {
+            "id": "abc-123",
+            "text": "Software Engineer",
+            "hostedUrl": "https://jobs.lever.co/testco/abc-123",
+            "applyUrl": "",
+            "createdAt": 1700000000000,
+            "categories": {"location": "Remote"},
+            "descriptionPlain": "Build cool stuff.",
+            "description": "<p>Build cool stuff.</p>",
+        }
+    ]).encode()
+
+    monkeypatch.setattr("source_jobs._http_get", lambda url: payload)
+
+    jobs = fetch_lever_jobs("testco")
+    assert len(jobs) == 1
+    assert jobs[0]["description"] == "Build cool stuff."
+
+
+def test_lever_description_falls_back_to_html(monkeypatch):
+    """Lever jobs strip HTML from description when descriptionPlain is absent."""
+    payload = json.dumps([
+        {
+            "id": "def-456",
+            "text": "Backend Engineer",
+            "hostedUrl": "https://jobs.lever.co/testco/def-456",
+            "applyUrl": "",
+            "createdAt": 1700000000000,
+            "categories": {"location": "Remote"},
+            "description": "<p>Build &amp; ship fast.</p>",
+        }
+    ]).encode()
+
+    monkeypatch.setattr("source_jobs._http_get", lambda url: payload)
+
+    jobs = fetch_lever_jobs("testco")
+    assert len(jobs) == 1
+    assert jobs[0]["description"] == "Build & ship fast."
+
+
+def test_lever_description_empty_when_missing(monkeypatch):
+    """Lever jobs have empty description when neither field is present."""
+    payload = json.dumps([
+        {
+            "id": "ghi-789",
+            "text": "DevOps Engineer",
+            "hostedUrl": "https://jobs.lever.co/testco/ghi-789",
+            "applyUrl": "",
+            "createdAt": 1700000000000,
+            "categories": {"location": "Remote"},
+        }
+    ]).encode()
+
+    monkeypatch.setattr("source_jobs._http_get", lambda url: payload)
+
+    jobs = fetch_lever_jobs("testco")
+    assert len(jobs) == 1
+    assert jobs[0]["description"] == ""
+
+
+# --- description fetching: Ashby ---
+
+
+def test_ashby_description_from_html(monkeypatch):
+    """Ashby jobs strip HTML from descriptionHtml."""
+    payload = json.dumps({
+        "jobs": [
+            {
+                "id": "ashby-job-1",
+                "title": "Staff Engineer",
+                "location": "Remote",
+                "publishedDate": "2026-03-14",
+                "descriptionHtml": "<h2>About the Role</h2><p>Build &amp; grow.</p>",
+            }
+        ]
+    }).encode()
+
+    monkeypatch.setattr("source_jobs._http_get", lambda url: payload)
+
+    jobs = fetch_ashby_jobs("testco")
+    assert len(jobs) == 1
+    assert jobs[0]["description"] == "About the Role Build & grow."
+
+
+def test_ashby_description_empty_when_missing(monkeypatch):
+    """Ashby jobs have empty description when descriptionHtml is absent."""
+    payload = json.dumps({
+        "jobs": [
+            {
+                "id": "ashby-job-2",
+                "title": "Data Engineer",
+                "location": "New York, NY",
+                "publishedDate": "2026-03-14",
+            }
+        ]
+    }).encode()
+
+    monkeypatch.setattr("source_jobs._http_get", lambda url: payload)
+
+    jobs = fetch_ashby_jobs("testco")
+    assert len(jobs) == 1
+    assert jobs[0]["description"] == ""
+
+
+# --- create_pipeline_entry includes description ---
+
+
+def test_create_entry_includes_description():
+    """Pipeline entry template includes description from job dict."""
+    job = {
+        "title": "Software Engineer",
+        "id": "123",
+        "url": "https://example.com/apply",
+        "location": "Remote",
+        "company": "testco",
+        "company_display": "TestCo",
+        "portal": "greenhouse",
+        "company_url": "https://boards.greenhouse.io/testco",
+        "description": "We build distributed systems at scale.",
+    }
+    _, entry = create_pipeline_entry(job)
+    assert entry["target"]["description"] == "We build distributed systems at scale."
+
+
+def test_create_entry_description_defaults_to_empty():
+    """Pipeline entry target.description defaults to empty string when absent."""
+    job = {
+        "title": "Backend Engineer",
+        "id": "456",
+        "url": "https://example.com/apply2",
+        "location": "Remote",
+        "company": "testco",
+        "company_display": "TestCo",
+        "portal": "lever",
+        "company_url": "https://jobs.lever.co/testco",
+    }
+    _, entry = create_pipeline_entry(job)
+    assert entry["target"]["description"] == ""

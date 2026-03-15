@@ -19,9 +19,11 @@ Usage:
 """
 
 import argparse
+import html as html_lib
 import json
 import re
 import sys
+import time
 from datetime import UTC, date, datetime
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -312,10 +314,25 @@ def _http_post_json(url: str, body: dict) -> bytes:
         return resp.read()
 
 
-def fetch_greenhouse_jobs(board: str) -> list[dict]:
+def _strip_html(text: str) -> str:
+    """Strip HTML tags and unescape entities, capped at 5000 chars."""
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = html_lib.unescape(text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text[:5000]
+
+
+def fetch_greenhouse_jobs(
+    board: str,
+    title_keywords: list[str] | None = None,
+    title_excludes: list[str] | None = None,
+) -> list[dict]:
     """Fetch jobs from Greenhouse public job board API.
 
     Returns list of normalized job dicts.
+
+    If title_keywords and title_excludes are provided, descriptions are fetched
+    only for jobs that pass the title filter (avoids fetching 15K detail pages).
     """
     url = f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs"
     try:
@@ -340,7 +357,30 @@ def fetch_greenhouse_jobs(board: str) -> list[dict]:
             "portal": "greenhouse",
             "company_url": f"https://boards.greenhouse.io/{board}",
             "posting_date": posting_date,
+            "description": "",
         })
+
+    # Fetch full descriptions only for jobs that pass the title filter.
+    # This avoids hitting the detail endpoint for every posting on the board.
+    if title_keywords is not None and title_excludes is not None:
+        candidates = filter_by_title(results, title_keywords, title_excludes)
+        candidate_ids = {j["id"] for j in candidates}
+    else:
+        candidate_ids = {j["id"] for j in results}
+
+    for job in results:
+        if job["id"] not in candidate_ids:
+            continue
+        detail_url = f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs/{job['id']}"
+        try:
+            detail_raw = _http_get(detail_url)
+            detail = json.loads(detail_raw)
+            content = detail.get("content", "") or ""
+            job["description"] = _strip_html(content)
+        except (HTTPError, URLError, json.JSONDecodeError):
+            job["description"] = ""
+        time.sleep(0.1)
+
     return results
 
 
@@ -367,6 +407,12 @@ def fetch_lever_jobs(company: str) -> list[dict]:
             posting_date = datetime.fromtimestamp(created_ms / 1000, tz=UTC).date().isoformat()
         else:
             posting_date = None
+        # Lever returns descriptionPlain (plain text) or description (HTML)
+        desc_plain = job.get("descriptionPlain", "") or ""
+        if not desc_plain:
+            desc_html = job.get("description", "") or ""
+            desc_plain = _strip_html(desc_html) if desc_html else ""
+        description = desc_plain[:5000]
         results.append({
             "title": job.get("text", ""),
             "id": job.get("id", ""),
@@ -377,6 +423,7 @@ def fetch_lever_jobs(company: str) -> list[dict]:
             "portal": "lever",
             "company_url": f"https://jobs.lever.co/{company}",
             "posting_date": posting_date,
+            "description": description,
         })
     return results
 
@@ -400,6 +447,8 @@ def fetch_ashby_jobs(company: str) -> list[dict]:
         posting_url = f"https://jobs.ashbyhq.com/{company}/{job.get('id', '')}"
         raw_date = job.get("publishedDate") or job.get("updatedAt", "")
         posting_date = raw_date[:10] if raw_date else None
+        desc_html = job.get("descriptionHtml", "") or ""
+        description = _strip_html(desc_html) if desc_html else ""
         results.append({
             "title": job.get("title", ""),
             "id": str(job.get("id", "")),
@@ -410,6 +459,7 @@ def fetch_ashby_jobs(company: str) -> list[dict]:
             "portal": "ashby",
             "company_url": f"https://jobs.ashbyhq.com/{company}",
             "posting_date": posting_date,
+            "description": description,
         })
     return results
 
@@ -711,6 +761,7 @@ def create_pipeline_entry(job: dict) -> tuple[str, dict]:
             "portal": job["portal"],
             "location": job.get("location", ""),
             "location_class": classify_location(job.get("location", "")),
+            "description": job.get("description", ""),
         },
         "deadline": {
             "date": None,
@@ -998,7 +1049,7 @@ def main():
 
         print(f"Fetching from {len(greenhouse_boards)} Greenhouse boards...")
         for board in greenhouse_boards:
-            jobs = fetch_greenhouse_jobs(board)
+            jobs = fetch_greenhouse_jobs(board, title_keywords=TITLE_KEYWORDS, title_excludes=TITLE_EXCLUDES)
             display = COMPANY_DISPLAY_NAMES.get(board, board)
             filtered = filter_by_title(jobs, TITLE_KEYWORDS, TITLE_EXCLUDES)
             fetched_counts[f"greenhouse/{board}"] = {"total": len(jobs), "matched": len(filtered)}
