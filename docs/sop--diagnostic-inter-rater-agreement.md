@@ -1,38 +1,44 @@
-# SOP: Diagnostic Inter-Rater Agreement
+# SOP: Diagnostic Inter-Rater Agreement (IRA) Grade Norming
 
 | Field | Value |
 |-------|-------|
 | **SOP ID** | SOP-DIAG-IRA-001 |
-| **Version** | 1.0 |
-| **Effective Date** | 2026-03-05 |
+| **Version** | 2.0 |
+| **Effective Date** | 2026-03-13 |
 | **Owner** | @4444J99 |
-| **Review Cycle** | Quarterly (next: 2026-06-05) |
-| **Scope** | Application pipeline quality measurement |
+| **Review Cycle** | Quarterly (next: 2026-06-13) |
+| **Scope** | Any ORGANVM organ or project with a system-grading rubric |
 
 ---
 
 ## 1. Purpose & Scope
 
-This SOP defines the process for running diagnostic quality assessments across multiple AI model raters and computing inter-rater agreement (IRA) metrics. The goal is **grade norming** — converging on ground truth about system quality by comparing independent assessments from different perspectives.
+This SOP defines a repeatable process for measuring system quality through multi-rater agreement. The goal is **grade norming** — converging on ground truth about system quality by comparing independent assessments from different perspectives.
+
+**Applicable to any project that has:**
+- A `system-grading-rubric.yaml` (or equivalent) defining weighted dimensions with scoring guides
+- A diagnostic script that produces objective measurements and subjective rating prompts
+- An IRA computation tool that computes ICC, kappa, and consensus from rating JSON files
 
 **In scope:**
-- 8-dimension quality assessment of the application pipeline codebase
+- N-dimension quality assessment using a weighted rubric
 - Agreement computation using ICC(2,1), Cohen's kappa, and Fleiss' kappa
 - Consensus formation and rubric refinement based on divergence patterns
 
 **Out of scope:**
-- Rating other codebases (rubric is pipeline-specific)
 - Rater training or LLM fine-tuning
+- Cross-project comparison (rubrics are project-specific)
 
 ---
 
 ## 2. Prerequisites
 
 - Python 3.11+
-- Repository cloned with all pipeline data intact
-- `strategy/system-grading-rubric.yaml` at version 1.0+
-- Access to N ≥ 3 independent rater sessions (AI models or human)
-- `ratings/` directory created at repo root
+- A grading rubric YAML with dimensions, weights, and scoring guides
+- A diagnostic script that produces objective + subjective rating JSON
+- An IRA computation script (e.g., `diagnose_ira.py`)
+- Access to N >= 3 independent rater sessions (AI models or human)
+- A `ratings/` directory at the project root
 
 ---
 
@@ -40,17 +46,17 @@ This SOP defines the process for running diagnostic quality assessments across m
 
 Before rating, each rater (AI or human) must review:
 
-1. **Read the rubric**: `strategy/system-grading-rubric.yaml`
-   - Understand all 8 dimensions, their types (objective/subjective/mixed), and weights
+1. **Read the rubric** (e.g., `strategy/system-grading-rubric.yaml`)
+   - Understand all dimensions, their types (objective/subjective/mixed), and weights
    - Study the anchored scoring guide at levels 1, 3, 5, 7, 10
 
 2. **Review evidence sources**: Each dimension lists specific files, commands, and sections to inspect
 
-3. **Understand the scale**: Scores are continuous 1.0–10.0 with one decimal place. The anchored descriptors are reference points, not bins.
+3. **Understand the scale**: Scores are continuous 1.0-10.0 with one decimal place. The anchored descriptors are reference points, not bins.
 
-4. **Note the distinction**: Objective dimensions (test_coverage, code_quality) are measured automatically. Subjective dimensions (architecture, documentation, analytics_intelligence, sustainability) require judgment.
+4. **Note the distinction**: Objective dimensions are measured automatically by the diagnostic tool. Subjective dimensions require human or AI judgment based on evidence.
 
-**Time estimate:** 10–15 minutes per rater.
+**Time estimate:** 10-15 minutes per rater.
 
 ---
 
@@ -66,7 +72,7 @@ Run the diagnostic tool to collect objective measurements:
 python scripts/diagnose.py --json --rater-id <rater-name> > ratings/<rater-name>.json
 ```
 
-This produces scores for: `test_coverage`, `code_quality`, `data_integrity`, `operational_maturity`.
+This produces scores for all objective dimensions defined in the rubric.
 
 ### 4.2 Subjective Dimensions (Rater-Scored)
 
@@ -76,13 +82,9 @@ Generate prompts for the subjective dimensions:
 python scripts/diagnose.py --subjective-only
 ```
 
-Each rater independently evaluates the 4 subjective dimensions:
-- `architecture` — Module decomposition, separation of concerns
-- `documentation` — CLAUDE.md completeness, inline docs, handoff readiness
-- `analytics_intelligence` — Scoring model, funnel analytics, trend detection
-- `sustainability` — Bus factor, automation, onboarding ease
+Each rater independently evaluates the subjective dimensions using the prompts and evidence sources listed in the rubric.
 
-**For AI raters**: Copy each prompt into a fresh session with the target AI model. The AI reads the evidence and produces a score (1–10), strengths, weaknesses, and confidence level.
+**For AI raters**: Copy each prompt into a fresh session with the target AI model. The AI reads the evidence and produces a score (1-10), strengths, weaknesses, and confidence level.
 
 **For human raters**: Review the evidence sources listed in the rubric directly, then score each dimension.
 
@@ -92,16 +94,31 @@ Manually add subjective scores to the JSON file produced in 4.1:
 
 ```json
 {
-  "rater_id": "claude-opus",
+  "rater_id": "rater-name",
+  "timestamp": "2026-03-14T03:25:00+00:00",
+  "rubric_version": "1.1",
   "dimensions": {
-    "test_coverage": {"score": 9.5, "confidence": "high", "evidence": "..."},
-    "architecture": {"score": 8.5, "confidence": "medium", "evidence": "..."},
-    ...
+    "objective_dim_1": {"score": 9.5, "confidence": "high", "evidence": "..."},
+    "subjective_dim_1": {"score": 8.5, "confidence": "medium", "evidence": "..."},
+    "..."
   }
 }
 ```
 
 Save as `ratings/<rater-name>.json`.
+
+### 4.4 Rating JSON Schema
+
+Each rating file must include:
+- `rater_id` (string) — unique identifier for this rater
+- `timestamp` (ISO 8601) — when the rating was produced
+- `rubric_version` (string) — version of the rubric used
+- `dimensions` (object) — dimension key -> score object, where each score object has:
+  - `score` (float, 1.0-10.0) — the rating
+  - `confidence` (string: "high", "medium", "low") — rater's confidence
+  - `evidence` (string) — justification for the score
+  - `strengths` (list of strings, optional) — key strengths observed
+  - `weaknesses` (list of strings, optional) — key weaknesses observed
 
 ---
 
@@ -128,20 +145,20 @@ python scripts/diagnose_ira.py ratings/*.json --consensus --json
 | **Cohen's kappa** | Pairwise categorical | When scores are binned (critical/below/adequate/strong/exemplary) |
 | **Fleiss' kappa** | Multi-rater categorical | 3+ raters on binned scores |
 | **Consensus** | Median per dimension | Ground truth estimate |
-| **Outlier flags** | 1.5 × IQR | Identify divergent raters |
+| **Outlier flags** | 1.5 x IQR | Identify divergent raters |
 
 ### 5.2 Interpretation (Landis & Koch 1977)
 
 | ICC/Kappa Range | Interpretation |
 |----------------|----------------|
 | < 0.00 | Poor |
-| 0.00 – 0.20 | Slight |
-| 0.21 – 0.40 | Fair |
-| 0.41 – 0.60 | Moderate |
-| 0.61 – 0.80 | Substantial |
-| 0.81 – 1.00 | Almost Perfect |
+| 0.00 - 0.20 | Slight |
+| 0.21 - 0.40 | Fair |
+| 0.41 - 0.60 | Moderate |
+| 0.61 - 0.80 | Substantial |
+| 0.81 - 1.00 | Almost Perfect |
 
-**Target**: ICC ≥ 0.61 (substantial) for all dimensions.
+**Target**: ICC >= 0.61 (substantial) for all dimensions.
 
 ---
 
@@ -203,9 +220,25 @@ Over time, compare diagnostic scores across dates to detect:
 
 ---
 
-## 8. Recommended Rater Panel
+## 8. Quality Checks
 
-For maximum coverage, use 3–5 raters with different architectures and training:
+### 8.1 Agreement Threshold
+
+ICC >= 0.61 (substantial agreement) is the minimum for accepting consensus scores. Below this threshold, the rubric needs refinement before scores are actionable.
+
+### 8.2 Outlier Flagging
+
+Scores outside 1.5 x IQR from the median are flagged as outliers. Outlier raters should be asked to re-examine their evidence before consensus is formed.
+
+### 8.3 Divergent Dimension Identification
+
+Dimensions with the highest score ranges (max - min across raters) are candidates for rubric refinement. If a dimension consistently diverges across rounds, its scoring guide needs sharper anchors.
+
+---
+
+## 9. Recommended Rater Panel
+
+For maximum coverage, use 3-5 raters with different perspectives:
 
 | Rater | Role | Strengths |
 |-------|------|-----------|
@@ -219,22 +252,52 @@ For maximum coverage, use 3–5 raters with different architectures and training
 
 ---
 
-## Appendix A — File Locations
+## Appendix A — Reference Implementation (Application Pipeline)
+
+The application-pipeline repo is the reference implementation of this SOP:
 
 | File | Purpose |
 |------|---------|
-| `strategy/system-grading-rubric.yaml` | 8-dimension rubric definition |
-| `scripts/diagnose.py` | Diagnostic tool (objective + subjective prompts) |
-| `scripts/diagnose_ira.py` | IRA computation engine |
+| `strategy/system-grading-rubric.yaml` | 9-dimension rubric (v1.1): 5 objective + 4 subjective |
+| `scripts/diagnose.py` | Diagnostic tool: 5 objective collectors, 4 subjective prompt generators |
+| `scripts/diagnose_ira.py` | IRA computation: ICC(2,1), Cohen/Fleiss kappa, consensus |
+| `scripts/audit_system.py` | System integrity audit: claims, wiring, logic |
 | `ratings/*.json` | Individual rater score files |
 | `signals/diagnostic-history/` | Archived consensus scores |
 
-## Appendix B — Quick Reference
+### Objective dimensions (automated):
+- `test_coverage` — test count + verification matrix ratio
+- `code_quality` — lint errors + type hint coverage
+- `data_integrity` — validation + signal integrity errors
+- `operational_maturity` — launchd agents + backup recency
+- `claim_provenance` — statistical claim source traceability
 
+### Subjective dimensions (rater-scored):
+- `architecture` — module decomposition, dependency flow
+- `documentation` — CLAUDE.md completeness, inline docs
+- `analytics_intelligence` — scoring model, funnel analytics, trends
+- `sustainability` — bus factor, automation, onboarding ease
+
+### Quick commands:
 ```bash
-# Morning after IRA round:
-python scripts/diagnose.py                              # Objective scorecard
-python scripts/diagnose.py --subjective-only            # Prompts for AI raters
+python scripts/run.py diagnose              # Objective scorecard
+python scripts/run.py ira                   # IRA report (auto-loads ratings/*.json)
+python scripts/run.py sysaudit              # System integrity audit
+python scripts/diagnose.py --subjective-only  # Prompts for AI raters
 python scripts/diagnose.py --json --rater-id opus > ratings/opus.json
-python scripts/diagnose_ira.py ratings/*.json --consensus  # Agreement report
+python scripts/diagnose_ira.py ratings/*.json --consensus
 ```
+
+## Appendix B — Adapting for Other Projects
+
+To apply this SOP to another ORGANVM organ or project:
+
+1. **Create a rubric**: Define `strategy/system-grading-rubric.yaml` with dimensions relevant to the project. Each dimension needs: label, type (objective/subjective/mixed), weight, description, scoring_guide (anchored at 1, 3, 5, 7, 10), evidence_sources, and ira_config.
+
+2. **Build a diagnostic script**: Implement objective collectors that return `{"score": float, "confidence": str, "evidence": str}` and subjective prompt generators that produce self-contained rating prompts.
+
+3. **Reuse the IRA engine**: `diagnose_ira.py` is project-agnostic — it works on any set of rating JSON files that contain `rater_id` and `dimensions` with `score` values. Copy or symlink it into the new project.
+
+4. **Configure IRA settings**: Set `min_raters`, `interpretation_bands`, and `consensus.outlier_iqr_factor` in the rubric YAML.
+
+5. **Follow Phases 1-5**: The process (familiarize, rate independently, compute agreement, form consensus, archive) is identical regardless of the specific dimensions.

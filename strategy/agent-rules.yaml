@@ -57,3 +57,16 @@ rules:
     action: flag_for_submission
     max_days: 7
     severity: urgent
+
+  # Rule 6: Daily scan for new postings (full-cycle mode)
+  daily_scan:
+    enabled: true
+    sources: all
+    max_entries: 100
+    severity: routine
+
+  # Rule 7: Material generation for qualified entries (full-cycle mode)
+  material_build:
+    enabled: true
+    require_score: 8.5
+    severity: routine
