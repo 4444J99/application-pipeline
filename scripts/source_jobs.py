@@ -737,6 +737,15 @@ def filter_by_freshness(jobs: list[dict], max_hours: float = FRESH_ONLY_MAX_HOUR
     return fresh, skipped
 
 
+def _auto_classify_position(title: str, description: str = "") -> str:
+    """Auto-classify identity position from job title/description."""
+    try:
+        from classify_position import classify_position
+        return classify_position(title, description)
+    except ImportError:
+        return "independent-engineer"
+
+
 def create_pipeline_entry(job: dict) -> tuple[str, dict]:
     """Generate a pipeline YAML dict for a job posting.
 
@@ -774,14 +783,14 @@ def create_pipeline_entry(job: dict) -> tuple[str, dict]:
         },
         "fit": {
             "score": 0,
-            "identity_position": "independent-engineer",
+            "identity_position": _auto_classify_position(title, description),
         },
         "submission": {
             "effort_level": "standard",
             "blocks_used": {},
             "variant_ids": {},
             "materials_attached": [
-                "resumes/independent-engineer-resume.html",
+                f"resumes/base/{_auto_classify_position(title, description)}-resume.html",
             ],
             "portfolio_url": "https://4444j99.github.io/portfolio/",
         },

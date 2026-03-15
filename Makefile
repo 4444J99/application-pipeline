@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: help install-dev lint test test-fast validate preflight verify verify-quick
+.PHONY: help install-dev lint test test-fast validate preflight verify verify-quick refresh-ecosystem refresh-prestige derive-positions classify
 
 help:
 	@echo "Targets:"
@@ -36,3 +36,19 @@ verify:
 
 verify-quick:
 	$(PYTHON) scripts/verify_all.py --quick
+
+# Ecosystem integration
+refresh-ecosystem:
+	$(PYTHON) scripts/refresh_from_ecosystem.py --propagate
+
+refresh-prestige:
+	$(PYTHON) scripts/enrich_prestige.py --update
+
+derive-positions:
+	$(PYTHON) scripts/derive_positions.py
+
+classify:
+	$(PYTHON) scripts/classify_position.py
+
+refresh-all: refresh-ecosystem refresh-prestige derive-positions
+	@echo "All ecosystem data refreshed."

@@ -46,11 +46,10 @@ RESUME_MAP = {
     "educator": "resumes/base/educator-resume.html",
     "creative-technologist": "resumes/base/creative-technologist-resume.html",
     "community-practitioner": "resumes/base/community-practitioner-resume.html",
-    # New positions — fall back to closest existing resume until dedicated ones are built
-    "documentation-engineer": "resumes/base/independent-engineer-resume.html",
-    "governance-architect": "resumes/base/independent-engineer-resume.html",
-    "platform-orchestrator": "resumes/base/independent-engineer-resume.html",
-    "founder-operator": "resumes/base/creative-technologist-resume.html",
+    "documentation-engineer": "resumes/base/documentation-engineer-resume.html",
+    "governance-architect": "resumes/base/governance-architect-resume.html",
+    "platform-orchestrator": "resumes/base/platform-orchestrator-resume.html",
+    "founder-operator": "resumes/base/founder-operator-resume.html",
 }
 
 # Block slot priorities per identity position
