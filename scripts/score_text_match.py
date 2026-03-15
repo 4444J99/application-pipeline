@@ -65,3 +65,44 @@ def track_record_text_signal(entry: dict) -> tuple[int, str]:
         return 0, "no research text available"
     score = result.fit_score
     return score, f"text fit -> {score} (cosine={result.overall_similarity:.3f})"
+
+
+def score_description_against_corpus(description: str) -> dict[str, int]:
+    """Score a job description against the living corpus fingerprint.
+
+    Returns dimension scores derived from cosine similarity between
+    the job description and the full corpus of blocks/resume/projects.
+    """
+    if not description or len(description.strip()) < 50:
+        return {"mission_alignment": 5, "evidence_match": 4, "track_record_fit": 4}
+
+    from corpus_fingerprint import get_fingerprint
+
+    fp = get_fingerprint()
+    similarity = fp.score_description(description)
+
+    # Map similarity to 1-10 scores
+    # Calibration: 0.00-0.03 = no overlap, 0.03-0.08 = weak, 0.08-0.15 = moderate, 0.15+ = strong
+    def sim_to_score(s: float) -> int:
+        if s >= 0.20:
+            return 10
+        if s >= 0.15:
+            return 9
+        if s >= 0.12:
+            return 8
+        if s >= 0.08:
+            return 7
+        if s >= 0.05:
+            return 6
+        if s >= 0.03:
+            return 5
+        if s >= 0.01:
+            return 4
+        return 3
+
+    score = sim_to_score(similarity)
+    return {
+        "mission_alignment": score,
+        "evidence_match": score,
+        "track_record_fit": max(3, score - 1),
+    }

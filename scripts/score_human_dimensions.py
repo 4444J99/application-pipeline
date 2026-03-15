@@ -93,10 +93,33 @@ CREDENTIALS = {
 
 
 def estimate_role_fit_from_title(entry: dict) -> dict[str, int]:
-    """Estimate human dimensions from job title for auto-sourced entries."""
+    """Estimate human dimensions from job title for auto-sourced entries.
+
+    Checks disqualifiers (tier-4) first — if a title contains both a positive
+    pattern ("developer productivity") and a negative one ("android"), the
+    negative wins. This prevents misclassification of roles like
+    "Android Engineer, Developer Productivity" as DevEx roles.
+    """
     name = (entry.get("name") or "").lower()
 
+    # Build a map of tier name -> tier for lookup
+    tier_by_name = {t["name"]: t for t in ROLE_FIT_TIERS}
+
+    # Phase 1: Check disqualifiers first (tier-4-poor)
+    poor = tier_by_name.get("tier-4-poor")
+    if poor:
+        for pattern in poor["title_patterns"]:
+            if pattern in name:
+                return {
+                    "mission_alignment": poor["mission_alignment"],
+                    "evidence_match": poor["evidence_match"],
+                    "track_record_fit": poor["track_record_fit"],
+                }
+
+    # Phase 2: Check remaining tiers in priority order (tier-1 first)
     for tier in ROLE_FIT_TIERS:
+        if tier["name"] == "tier-4-poor":
+            continue  # Already checked
         for pattern in tier["title_patterns"]:
             if pattern in name:
                 return {
@@ -361,7 +384,15 @@ def compute_human_dimensions(
     tags = entry.get("tags") or []
 
     if "auto-sourced" in tags:
-        base = estimate_role_fit_from_title(entry)
+        # Prefer corpus-driven scoring from job description
+        description = (entry.get("target", {}).get("description", "") or "")
+        if len(description.strip()) >= 50:
+            from score_text_match import score_description_against_corpus
+
+            base = score_description_against_corpus(description)
+        else:
+            # Fallback to title-pattern matching when no description available
+            base = estimate_role_fit_from_title(entry)
         submission = entry.get("submission", {})
         blocks_count = len(submission.get("blocks_used", {}) or {}) if isinstance(submission, dict) else 0
         if blocks_count >= 5:
