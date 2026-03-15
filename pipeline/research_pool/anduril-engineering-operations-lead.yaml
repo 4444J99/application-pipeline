@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: Costa Mesa, California, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><p><strong>As an Engineering\
+    \ Operations Lead, you will work directly with the Hardware Engineering Leadership\
+    \ team to build and run business operations across the Hardware Engineering Organization\
+    \ and cross functional partners.</strong> The Hardware Engineering organization\
+    \ is the central engineering organization across Anduril that upholds the bar\
+    \ of engineering excellence, provides core engineering services, and develops\
+    \ strategic core technology products for hardware development across Anduril.\
+    \ In this role, you will partner with hardware engineering org leadership and\
+    \ teams from across the organization and company \u2014 spanning our business\
+    \ lines and divisions to our Finance and G&amp;A teams to our core internal operations\
+    \ teams \u2014 to unpack ambiguous problems and build lasting, scalable solutions.\
+    \ Your work will vary from quick-turn operational fire-fighting, building and\
+    \ redesigning processes, to leading high-impact strategic projects. Your role\
+    \ and team will enable and provide operational leverage to the engineering organization\
+    \ that underpins and differentiates Anduril as the next generation defense prime.</p>\
+    \ <h2>Here\u2019s what you\u2019ll do:</h2> <ul> <li><strong>Collaborate Cross-Functionally</strong>:\
+    \ Work with business line operation teams, finance, talent acquisition, strategic\
+    \ real estate, central business operations, and facilities to unpack ambiguous\
+    \ problems and redesign processes.</li> <ul> <li><strong>Manage operations for\
+    \ the full FTE lifecycle</strong>: From program demand intake, headcount growth,\
+    \ recruiting operations partnership, new hire onboarding, staffing assignments,\
+    \ to deliverable analysis and labor metric report-out (actuals vs. Op Plan vs.\
+    \ staffing platform).</li> <li><strong>Facilitate operations for the space resourcing\
+    \ lifecycle</strong>: Enable the strategic growth and usage of workspaces and\
+    \ facilities for FTE growth and laboratory needs, and track platform and business\
+    \ line utilization of shared equipment and square footage.</li> </ul> <li><strong>Partner\
+    \ with Hardware Engineering Leadership</strong>: Execute strategic initiatives\
+    \ for organizational development like defining and tracking metrics related to\
+    \ organizational health, service performance, team growth, and annual goals.</li>\
+    \ <ul> <li><strong>Synthesize large datasets</strong>: Define KPIs and create\
+    \ leadership report-outs for Monthly Business Reviews, Quarterly Business Reviews,\
+    \ and Leadership Meetings with Division Leads and C-Suite.</li> <li><strong>Maintain\
+    \ and Improve HW Engineering hosted company engagements</strong>: Lead recurring\
+    \ engineering discussions including Lunch and Learns, Quarterly Division All Hands,\
+    \ IEEE societies, ASME societies, and Engineering Leads meetings.</li> </ul> <li><strong>Support\
+    \ and Develop Internal Processes</strong>: Work with Engineering Leads to develop\
+    \ processes/frameworks for org growth/talent acquisition, demand planning, staffing,\
+    \ employee mobility, seating/facilities, strategic real estate growth (workspaces\
+    \ and labs), and organization communications.</li> <ul> <li><strong>Define operational\
+    \ metrics and KPIs</strong>: Build automations to help teams intake demand, assess\
+    \ team capacity, mitigate risk, and deliver on-time.</li> <li><strong>Identify\
+    \ integrations and improvements</strong>: Enhance underlying data and system infrastructure\
+    \ to deliver high-value solutions to engineering leads.</li> </ul> </ul> <h2>Here\u2019\
+    s who you are:</h2> <ul> <li>Undergraduate degree in an engineering major or equivalent\
+    \ experience in engineering organizations with operational experience</li> <li>Minimum\
+    \ 4 years of experience in a consulting, operations, finance, product management,\
+    \ or general business analysis role, preferably with experience in a technical\
+    \ engineering role.</li> <li>Strong communicator with the ability to translate\
+    \ and articulate thoughts clearly across a wide range of roles and levels.</li>\
+    \ <li>Experience interfacing with leadership and executives, understanding how\
+    \ to facilitate meetings and engage with senior stakeholders.</li> <li>High emotional\
+    \ intelligence, solving operational problems from a data-driven and people-centric\
+    \ perspective.</li> <li>Ability to execute on a tactical level while also creating\
+    \ strategies to solve comp"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 4.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 5
+    evidence_match: 4
+    track_record_fit: 4
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

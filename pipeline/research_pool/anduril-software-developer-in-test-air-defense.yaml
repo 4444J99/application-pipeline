@@ -10,6 +10,68 @@ target:
   portal: greenhouse
   location: Irvine, California, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h2><strong>ABOUT\
+    \ THE TEAM</strong></h2> <p>The Air Defense team builds robots that find other\
+    \ robots and knock them out of the sky. At a time when air superiority can no\
+    \ longer be taken for granted, the Air Defense Team provides mission critical\
+    \ capabilities to warfighters. From detection to tracking, identification, deterrence,\
+    \ and defeat, our family of networked sensors and effectors enables our customers\
+    \ to rapidly close the kill chain against a broad range of Unmanned Aerial System\
+    \ (UAS) threats. Working across product, engineering, sales, logistics, operations,\
+    \ and mission success, the Air Defense team develops, tests, deploys, and sustains\
+    \ the Anduril Air Defense Family of Systems (FoS) in challenging operational environments\
+    \ worldwide.</p> <h2><strong>ABOUT THE JOB</strong></h2> <p>As a Software Development\
+    \ Engineer in Test (SDET) on the Air Defense team, you will play a key role in\
+    \ ensuring the quality and performance of mission-critical systems. Your work\
+    \ will focus on designing, developing, and maintaining robust automated test frameworks\
+    \ for backend systems, real-time data processing, and command &amp; control software.<br><br>This\
+    \ role requires advanced technical skills and collaboration to implement test\
+    \ strategies, integrate automation into CI/CD pipelines, and troubleshoot complex\
+    \ issues. Your contributions will directly enhance the readiness and operational\
+    \ superiority of our defense technologies.</p> <h2><strong>WHAT YOU\u2019LL DO&nbsp;</strong></h2>\
+    \ <ul> <li>Design and maintain scalable test automation frameworks for backend\
+    \ systems, APIs, and distributed components.</li> <li>Build and manage CI/CD pipelines\
+    \ to automate testing and deployments in secure cloud environments.</li> <li>Develop\
+    \ and execute test strategies, including functional, integration, performance,\
+    \ and reliability testing.</li> <li>Conduct end-to-end testing of complete software\
+    \ stacks in collaboration with cross-functional teams.</li> <li>Troubleshoot system\
+    \ issues using advanced Linux expertise, log analysis, and network debugging.</li>\
+    \ <li>Configure and manage test environments, including virtualized and containerized\
+    \ setups.</li> <li>Document test results, findings, and resolutions for knowledge\
+    \ sharing and compliance.</li> </ul> <h2><strong>REQUIRED QUALIFICATIONS&nbsp;</strong></h2>\
+    \ <ul> <li>6+ years of experience as an SDET or Test Automation Engineer, focusing\
+    \ on backend systems, APIs, and microservices.</li> <li>Bachelor\u2019s degree\
+    \ in Computer Science, Electrical Engineering, or a related field (Master\u2019\
+    s preferred).</li> <li>Proficiency in developing test automation frameworks using\
+    \ modern programming languages (e.g., Python, JavaScript, Go, C#).</li> <li>Experience\
+    \ creating and managing CI/CD pipelines.</li> <li>Advanced expertise in Linux,\
+    \ including scripting, system configuration, and log analysis.</li> <li>Experience\
+    \ testing complex distributed systems and cloud-native applications.</li> <li>Strong\
+    \ collaboration and communication skills for cross-functional teamwork.</li> <li>Familiarity\
+    \ with defect tracking and test management tools (e.g., Jira, TestRail).</li>\
+    \ <li>Ability to obtain a security clearance (U.S. Citizenship may be required).</li>\
+    \ </ul> <h2><strong>PREFERRED QUALIFICATIONS</strong></h2> <ul> <li>Experience\
+    \ with Robot Framework or other keyword-driven test automation tools.</li> <li>Familiarity\
+    \ with observability tools (e.g., Grafana, Prometheus, DataDog).</li> <li>Knowledge\
+    \ of gRPC-based microservices testing.</li> <li>Experience with performance testing\
+    \ tools (e.g., JMeter, K6).</li> <li>Proficiency in Golang or willingness to learn\
+    \ it.</li> <li>Exposure to Hardware-in-the-Loop (HITL) or Software-in-the-Loop\
+    \ (SITL) simulation environments.</li> </ul><div class=\"content-pay-transparency\"\
+    ><div class=\"pay-input\"><div class=\"title\">US Salary Range</div><div class=\"\
+    pay-range\"><span>$191,000</span><span class=\"divider\">&mdash;</span><span>$253,000\
+    \ USD</span></div></div></div><div class=\"content-conclusion\"><p><span data-contrast=\"\
+    auto\">The salary range for this role is an estimate based on a wide range of\
+    \ compensation factors, inclusive of base salary only. Actual salary offer may\
+    \ vary based on (but not limited to) work experience, education and/or training,"
 deadline:
   date: null
   type: rolling
@@ -18,8 +80,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 4.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 5
+    evidence_match: 4
+    track_record_fit: 4
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

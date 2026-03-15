@@ -1,0 +1,106 @@
+id: roblox-senior-software-engineer-app-performance-core-ui
+name: Roblox Senior Software Engineer, App Performance - Core UI
+track: job
+status: research
+outcome: null
+target:
+  organization: Roblox
+  url: https://boards.greenhouse.io/roblox
+  application_url: https://careers.roblox.com/jobs/7708489?gh_jid=7708489
+  portal: greenhouse
+  location: San Mateo, CA, United States
+  location_class: us-onsite
+  description: "<div class=\"content-intro\"><p><span style=\"font-weight: 400;\"\
+    >Every day, tens of millions of people come to Roblox to explore, create, play,\
+    \ learn, and connect with friends in 3D immersive digital experiences\u2013 all\
+    \ created by our global community of developers and creators.&nbsp;</span></p>\
+    \ <p><span style=\"font-weight: 400;\">At Roblox, we\u2019re building the tools\
+    \ and platform that empower our community to bring any experience that they can\
+    \ imagine to life. Our vision is to reimagine the way people come together, from\
+    \ anywhere in the world, and on any device.</span><strong> </strong><span style=\"\
+    font-weight: 400;\">We\u2019re on a mission to connect a billion people with optimism\
+    \ and civility, and looking for amazing talent to help us get there.&nbsp;</span></p>\
+    \ <p><span style=\"font-weight: 400;\">A career at Roblox means you\u2019ll be\
+    \ working to shape the future of human interaction, solving unique technical challenges\
+    \ at scale, and helping to create safer, more civil shared experiences for everyone.</span></p></div><p>As\
+    \ a <strong>Senior Frontend Engineer</strong> on the <strong>Core UI</strong>\
+    \ team, you'll push Roblox App performance to the next level - making it blazing\
+    \ fast and a joy to use. You'll own profiling, diagnosis, and end-to-end optimization\
+    \ of rendering, layout, and input pipelines to reduce frame time, eliminate jank,\
+    \ and build high-fidelity interfaces at scale. Our team sits at the intersection\
+    \ of performance engineering and product impact. You'll work on systems and surfaces\
+    \ used by every Roblox user and creator in every game session. If you care deeply\
+    \ about how software feels - not just how it works - this is the role for you.</p>\
+    \ <p><strong>You Will:</strong></p> <ul> <li>Own profiling, diagnosis, and end-to-end\
+    \ optimization of rendering, layout, and input pipelines across mobile, desktop,\
+    \ VR, and consoles - reducing frame time, eliminating jank, and delivering smooth,\
+    \ natural scrolling.</li> <li>Design and build robust, extensible systems powering\
+    \ Roblox's core surfaces (Home, Avatar, Search, and more) used by hundreds of\
+    \ millions of users and creators.</li> <li>Create scalable solutions for building\
+    \ high-fidelity, high-performance interfaces that set the standard for UI quality\
+    \ across Roblox.</li> <li>Partner with engineering, product, and design teams\
+    \ to integrate shared solutions and deliver cohesive, high-quality user experiences.</li>\
+    \ <li>Collaborate with senior engineers and tech leads to shape architectural\
+    \ direction and raise the bar on UI performance across the org.</li> </ul> <p><strong>You\
+    \ Have:</strong></p> <ul> <li>5+ years of software development experience building\
+    \ large-scale, user-facing frontend applications with performance and high-quality\
+    \ user experience in mind.</li> <li>Deep expertise in modern frontend technologies.\
+    \ Strong command of frameworks such as React or similar, component-based architecture,\
+    \ and state management patterns for building maintainable user interfaces.</li>\
+    \ <li>Demonstrated ability to optimize frontend performance and diagnose issues.\
+    \ Knowledge of performance debugging, profiling, and benchmarking techniques on\
+    \ the client side.</li> <li>Strong understanding of software design principles\
+    \ and frontend architecture. Ability to design clean APIs and clear module boundaries.</li>\
+    \ <li>Excellent communication and collaboration skills with the ability to work\
+    \ cross-functionally and drive alignment on technical solutions.</li> </ul> <p><strong>Nice\
+    \ to Have:</strong></p> <ul> <li>Experience developing applications across multiple\
+    \ platforms (mobile, desktop, VR, consoles).</li> <li>Familiarity with C++ for\
+    \ understanding Roblox app and engine integration.</li> <li>Experience with Lua\
+    \ or React Native in a production environment.</li> </ul><div class=\"content-pay-transparency\"\
+    ><div class=\"pay-input\"><div class=\"description\"><p>For roles that are based\
+    \ at our headquarters in San Mateo, CA: The starting base pay for this position\
+    \ is as shown below. The actual base pay is dependent upon a variety of job-related\
+    \ factors such as professional background, training, work experience, location,\
+    \ business needs and market demand. Therefore, in some circumstances, the actual\
+    \ salary could fall outside of this expected range. This pay range is subject\
+    \ to change and may be modified in the future. All full-time employees are also\
+    \ eligible for equity compensation and for benefits as described on <strong><a\
+    \ href=\"https://careers.roblox.com/total-rewards\">this page</a></strong>.</p></div><div\
+    \ class=\"title\">Annual Salary Range</div><div class=\"pay-range\"><span>$196,750</span><span\
+    \ class=\"divider\">&mdash;</span><span>$243,290 USD</span></div></div></div><div\
+    \ class=\"content-conclusion\"><p>Roles that are based in an office are onsite\
+    \ Tuesday, Wednesday, and Thursday, with optional presence on Monday and Friday\
+    \ (unless otherwise noted).</p> <p>Roblox provides equal employment opportunities\
+    \ to all employees and applicants for employment and prohibits discrimination\
+    \ and harassment of any type with"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-15'
+  posting_date: '2026-03-13'
+  date_added: '2026-03-15'
+  discovered: '2026-03-15T16:39:32.982333+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-15'

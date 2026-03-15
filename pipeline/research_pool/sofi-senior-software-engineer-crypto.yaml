@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: CA - San Francisco
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p><a href=\"https://www.sofi.com/sofi-employee-applicant-privacy-notice/\"\
+    \ target=\"_blank\"><strong>Employee Applicant Privacy Notice</strong></a></p>\
+    \ <p><strong>Who we are:</strong></p> <div> <p>Shape a brighter financial future\
+    \ with us.</p> <p>Together with our members, we\u2019re changing the way people\
+    \ think about and interact with personal finance.</p> <p>We\u2019re a next-generation\
+    \ financial services company and national bank using innovative, mobile-first\
+    \ technology to help our millions of members reach their goals. The industry is\
+    \ going through an unprecedented transformation, and we\u2019re at the forefront.\
+    \ We\u2019re proud to come to work every day knowing that what we do has a direct\
+    \ impact on people\u2019s lives, with our core values guiding us every step of\
+    \ the way. <strong>Join us to invest in yourself, your career, and the financial\
+    \ world.</strong></p> </div></div><p>We are seeking a Senior Software Engineer\
+    \ to join our team. SoFi is building out a new team to develop crypto products\
+    \ and services for our members.&nbsp; Recent developments made a path for SoFi\
+    \ to begin to re-enter the space and expand on our product offerings with intuitive,\
+    \ secure and fully featured products across crypto Investing, Transfers, Payments,\
+    \ Custody and beyond.&nbsp;&nbsp;</p> <p>On our team, you will be in the middle\
+    \ of it all \u2013 implementing functionality, architecting our system, squashing\
+    \ bugs, maintaining the health of our code, and continually growing as an engineer.\
+    \ The ideal candidate is both forward-thinking and hands-on, has a strong sense\
+    \ of ownership and drive for delivery, and is a good mentor and co-worker. At\
+    \ SoFi, we pride ourselves on the collaboration between Product, Design and Engineering\
+    \ and so you will be involved in the entire product lifecycle, from ideation through\
+    \ building, deploying and continual improvement and evolution.</p> <p>At SoFi,\
+    \ you\u2019ll become part of a new kind of finance company whose ambition is to\
+    \ help our members achieve financial independence and reach their goals. We aim\
+    \ to be at the center of our members\u2019 financial lives, and to help every\
+    \ member get their money right. We created student loan refinancing, addressing\
+    \ the biggest financial challenge of a new generation through a modern approach\
+    \ to lending and personal finance. Next we expanded our products and services\
+    \ across loans, wealth management, and insurance. SoFi has achieved significant\
+    \ growth, with ambitious plans ahead, but to continue this growth we need great\
+    \ talent. And that starts with you.</p> <p>&nbsp;</p> <p><strong>What You'll Do:</strong></p>\
+    \ <ul> <li>Lead the development and testing of system components/services, code\
+    \ and design reviews</li> <li>Participate in shaping the technical architecture\
+    \ of the product</li> <li>Help translate user stories into technical solutions</li>\
+    \ <li>Deliver highly available and scalable services in a production environment</li>\
+    \ <li>Mentor other engineers, support the technical culture, and help grow the\
+    \ team</li> <li>Generate ideas for new initiatives and technologies</li> <li>Communicate\
+    \ with project leads, product managers and other software developers</li> </ul>\
+    \ <p><strong>What You'll Need:</strong></p> <ul> <li>Bachelor\u2019s Degree, ideally\
+    \ in a technical field, but we understand great engineers come from all sorts\
+    \ of different backgrounds and also consider relevant work experience</li> <li>5+\
+    \ years programming experience, ideally on a modern stack</li> <li>Our core stack\
+    \ is Kotlin / Spring / Elixir / PostgreSQL, but you don't have to be an expert\
+    \ in any of these. 4+ years programming experience in similar technologies and\
+    \ an understanding of relational databases and ORMs suffices</li> <li>Willingness\
+    \ to roll up your sleeves, collaborate with others and get stuff done</li> <li>Strong\
+    \ sense of responsibility; driving a project from inception to completion</li>\
+    \ <li>Affinity for solving problems and shipping impactful features, not polishing\
+    \ perfect code or architecture</li> <li>Experience working in a collaborative\
+    \ coding environment (and git specifically), refining designs together, writing\
+    \ tests, working through code reviews and managing pull requests</li> </ul> <p><strong>Nice\
+    \ to Haves:</strong></p> <ul> <li>Understanding of blockchain fundamentals and\
+    \ distributed ledger technologies</li> <li>Hands-on experience working with digital\
+    \ assets (e.g., Bitcoin, Ethereum, stablecoins)</li> <li>Familiarity with custody,\
+    \ settlement, and clearing of crypto transactions</li> <li>Knowledge of crypto-specific\
+    \ regulatory environments (e.g., SEC, CFTC, MiCA, etc.)</li> <li>Exposure to crypto\
+    \ trading platforms, market data, and DeFi protocols</li> <li>Experience integrating\
+    \ with or building services using crypto infrastructure providers (e.g., Fireblocks,\
+    \ Bitgo, Zero Hash, Anchorage)</li> <li>Awareness of Web3 trends, including NFTs,\
+    \ DAOs, and Layer 2 solutions</li> <li>Prior work in or collaboration with crypto-native\
+    \ companies or fintechs</li> <li>Comfort with cryptographic concepts "
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

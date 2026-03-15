@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: London, UK
   location_class: international
+  description: "<div class=\"content-intro\"><h2><strong>About Anthropic</strong></h2>\
+    \ <p>Anthropic\u2019s mission is to create reliable, interpretable, and steerable\
+    \ AI systems. We want AI to be safe and beneficial for our users and for society\
+    \ as a whole. Our team is a quickly growing group of committed researchers, engineers,\
+    \ policy experts, and business leaders working together to build beneficial AI\
+    \ systems.</p></div><h2 class=\"heading\"><strong>About the role:</strong></h2>\
+    \ <p>Our Inference team is responsible for building and maintaining the critical\
+    \ systems that serve Claude to millions of users worldwide. We bring Claude to\
+    \ life by serving our models via the industry's largest compute-agnostic inference\
+    \ deployments.&nbsp; We are responsible for the entire stack from intelligent\
+    \ request routing to fleet-wide orchestration across diverse AI accelerators.</p>\
+    \ <p>The team has a dual mandate: <strong>maximizing compute efficiency</strong>\
+    \ to serve our explosive customer growth, while <strong>enabling breakthrough\
+    \ research</strong> by giving our scientists the high-performance inference infrastructure\
+    \ they need to develop next-generation models. We tackle complex, distributed\
+    \ systems challenges across multiple accelerator families and emerging AI hardware\
+    \ running in multiple cloud platforms.</p> <h2 class=\"heading\"><strong>Strong\
+    \ candidates may also have experience with:</strong></h2> <ul> <li>High-performance,\
+    \ large-scale distributed systems</li> <li>Implementing and deploying machine\
+    \ learning systems at scale</li> <li>Load balancing, request routing, or traffic\
+    \ management systems</li> <li>LLM inference optimization, batching, and caching\
+    \ strategies</li> <li>Kubernetes and cloud infrastructure (AWS, GCP)</li> <li>Python\
+    \ or Rust</li> </ul> <h2 class=\"heading\"><strong>You may be a good fit if you:</strong></h2>\
+    \ <ul> <li>Have significant software engineering experience, particularly with\
+    \ distributed systems</li> <li>Are results-oriented, with a bias towards flexibility\
+    \ and impact</li> <li>Pick up slack, even if it goes outside your job description</li>\
+    \ <li>Want to learn more about machine learning systems and infrastructure</li>\
+    \ <li>Thrive in environments where technical excellence directly drives both business\
+    \ results and research breakthroughs</li> <li>Care about the societal impacts\
+    \ of your work</li> </ul> <h2 class=\"heading\"><strong>Representative projects\
+    \ across the org:</strong></h2> <ul> <li>Designing intelligent routing algorithms\
+    \ that optimize request distribution across thousands of accelerators</li> <li>Autoscaling\
+    \ our compute fleet to dynamically match supply with demand across production,\
+    \ research, and experimental workloads</li> <li>Building production-grade deployment\
+    \ pipelines for releasing new models to millions of users</li> <li>Integrating\
+    \ new AI accelerator platforms to maintain our hardware-agnostic competitive advantage</li>\
+    \ <li>Contributing to new inference features (e.g., structured sampling, prompt\
+    \ caching)</li> <li>Supporting inference for new model architectures</li> <li>Analyzing\
+    \ observability data to tune performance based on real-world production workloads</li>\
+    \ <li>Managing multi-region deployments and geographic routing for global customers</li>\
+    \ </ul> <p><strong>Deadline to apply:</strong> None. Applications will be reviewed\
+    \ on a rolling basis.</p><div class=\"content-pay-transparency\"><div class=\"\
+    pay-input\"><div class=\"description\"><p>The annual compensation range for this\
+    \ role is listed below.&nbsp;</p> <p>For sales roles, the range provided is the\
+    \ role\u2019s On Target Earnings (\"OTE\") range, meaning that the range includes\
+    \ both the sales commissions/sales bonuses target and annual base salary for the\
+    \ role.</p></div><div class=\"title\">Annual Salary:</div><div class=\"pay-range\"\
+    ><span>\xA3225,000</span><span class=\"divider\">&mdash;</span><span>\xA3325,000\
+    \ GBP</span></div></div></div><div class=\"content-conclusion\"><h2><strong>Logistics</strong></h2>\
+    \ <p><strong>Education requirements: </strong>We require at least a Bachelor's\
+    \ degree in a related field or equivalent experience.<strong><br><br>Location-based\
+    \ hybrid policy:</strong> Currently, we expect all staff to be in one of our offices\
+    \ at least 25% of the time. However, some roles may require more time in our offices.</p>\
+    \ <p><strong data-stringify-type=\"bold\">Visa sponsorship:</strong>&nbsp;We do\
+    \ sponsor visas! However, we aren't able to successfully sponsor visas for every\
+    \ role and every candidate. But if we make you an offer, we will make every reasonable\
+    \ effort to get you a visa, and we retain an immigration lawyer to help with this.</p>\
+    \ <p><strong>We encourage you to apply even if you do not believe you meet every\
+    \ single qualification.</strong> Not all strong candidates will meet every single\
+    \ qualification as listed.&nbsp; Research shows that people who identify as being\
+    \ from underrepresented groups are more prone to experiencing imposter syndrome\
+    \ and doubting the strength of their candidacy, so we urge you not to exclude\
+    \ yourself prematurely and to submi"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 3.5
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 3
+    evidence_match: 2
+    track_record_fit: 2
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

@@ -1,0 +1,84 @@
+id: cohere-applied-ai
+name: Cohere Applied AI Engineer Agentic Workflows
+track: job
+status: research
+identity_position: independent-engineer
+outcome: null
+target:
+  organization: Cohere
+  url: https://cohere.com
+  application_url: https://jobs.ashbyhq.com/cohere/1fa01a03-9253-4f62-8f10-0fe368b38cb9
+  portal: ashby
+deadline:
+  date: null
+  time: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+  benefits_cliff_note: null
+fit:
+  score: 5.7
+  original_score: 5.9
+  identity_position: independent-engineer
+  framing: "Independent engineer with agentic workflow infrastructure \u2014 agentic-titan\
+    \ (1,095 tests), multi-agent orchestration, 94 CI/CD pipelines"
+  lead_organs:
+  - III
+  - IV
+  dimensions:
+    mission_alignment: 6
+    evidence_match: 7
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 7
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: complex
+  blocks_used:
+    framing: framings/independent-engineer
+    evidence: evidence/differentiators
+    work_samples: evidence/work-samples
+    credentials: pitches/credentials-creative-tech
+    methodology: methodology/ai-conductor
+  variant_ids:
+    cover_letter: cover-letters/cohere-applied-ai-agentic-workflows
+  materials_attached:
+  - resumes/batch-01/cohere-applied-ai/cohere-applied-ai-resume.html
+  - resumes/batch-01/cohere-applied-ai/cohere-applied-ai-resume.pdf
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-02-24'
+  date_added: 2026-02-24
+  qualified: '2026-02-24'
+  materials_ready: '2026-02-24'
+  submitted: '2026-02-24'
+  acknowledged: '2026-02-25'
+  interview: null
+  outcome_date: null
+portal_fields:
+  fields:
+  - name: resume
+  - name: cover_letter
+  - name: portfolio
+conversion:
+  response_received: true
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+  follow_up_count: 0
+tags:
+- job-tier-2
+- submit-order-3
+source: manual
+notes: "Salary undisclosed.\nPRIORITY: Tier 2 \u2014 Apply with Targeted Narrative\
+  \ (submit third).\nAgentic workflows match agentic-titan directly. Multi-agent orchestration,\
+  \ 1,095 tests,\n18 development phases \u2014 exact domain match. Role title says\
+  \ \"agentic workflows\" and\nagentic-titan IS an agentic workflow framework.\nGap\
+  \ to bridge: Track record at 4 is modest. No enterprise deployment of agentic systems.\n"
+last_touched: '2026-02-27'
+follow_up: []

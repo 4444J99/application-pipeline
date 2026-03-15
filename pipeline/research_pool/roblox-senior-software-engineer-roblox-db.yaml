@@ -10,6 +10,68 @@ target:
   portal: greenhouse
   location: San Mateo, CA, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p><span style=\"font-weight: 400;\"\
+    >Every day, tens of millions of people come to Roblox to explore, create, play,\
+    \ learn, and connect with friends in 3D immersive digital experiences\u2013 all\
+    \ created by our global community of developers and creators.&nbsp;</span></p>\
+    \ <p><span style=\"font-weight: 400;\">At Roblox, we\u2019re building the tools\
+    \ and platform that empower our community to bring any experience that they can\
+    \ imagine to life. Our vision is to reimagine the way people come together, from\
+    \ anywhere in the world, and on any device.</span><strong> </strong><span style=\"\
+    font-weight: 400;\">We\u2019re on a mission to connect a billion people with optimism\
+    \ and civility, and looking for amazing talent to help us get there.&nbsp;</span></p>\
+    \ <p><span style=\"font-weight: 400;\">A career at Roblox means you\u2019ll be\
+    \ working to shape the future of human interaction, solving unique technical challenges\
+    \ at scale, and helping to create safer, more civil shared experiences for everyone.</span></p></div><p>Roblox\u2019\
+    s database team develops the next-generation, multi-tenant database platform that\
+    \ elastically scales and underpins every online data workload at Roblox. As a\
+    \ Senior software engineer on the database team, you will shape the architecture,\
+    \ build and launch critical database capabilities that keep our services fast,\
+    \ reliable and efficient at global scale. You will report to the Technical Director\
+    \ for Storage.</p> <p><strong>You will:</strong></p> <ul> <li><strong>Design and\
+    \ implement new engine features</strong>\u2014indexing, storage formats, WAL and\
+    \ replication protocols, sharding, and query-planner enhancements\u2014that push\
+    \ latency, throughput, and availability boundaries.</li> <li><strong>Evolve the\
+    \ control plane</strong>&nbsp;to deliver elastic scaling, autonomous healing,\
+    \ and zero-downtime schema or tenant moves across global regions.</li> <li><strong>Profile\
+    \ and optimize</strong>&nbsp;critical code paths using kernel-level tracing and\
+    \ advanced performance tooling; drive systematic tail-latency reductions.</li>\
+    \ <li><strong>Establish engineering best practices</strong>&nbsp;by leading design\
+    \ reviews, performance benchmarks, failure drills, and post-incident retrospectives.</li>\
+    \ <li><strong>Automate everything</strong>: develop frameworks for testing, CI/CD,\
+    \ rollout safety, observability, and autoscaling so that the platform operates\
+    \ hands-off at scale.</li> <li><strong>Mentor and unblock engineers</strong>,\
+    \ fostering deep database craftsmanship and disseminating knowledge across Storage,\
+    \ Platform, and product teams.</li> <li><strong>Engage with the open-source community</strong>\u2014\
+    upstreaming patches, presenting learnings, and influencing the future of Postgres,\
+    \ RocksDB and related ecosystems.</li> </ul> <p><strong>You have:</strong></p>\
+    \ <ul> <li><strong>3+ years</strong>&nbsp;of experience in software engineering\
+    \ or a relevant field</li> <li>Deep experience with building and operating&nbsp;<strong>large-scale\
+    \ distributed databases</strong>&nbsp;or storage engines (e.g., PostgreSQL, MySQL/InnoDB,\
+    \ RocksDB, Spanner, Aurora, AlloyDB).</li> <li>Deep expertise in&nbsp;<strong>database\
+    \ internals</strong>\u2014B-trees, MVCC, WAL, query optimization, buffer management\u2014\
+    and strong skills in&nbsp;<strong>C/C++, GO or Rust</strong>.</li> <li>Hands-on\
+    \ experience with&nbsp;<strong>consensus algorithms</strong>&nbsp;(Raft, Paxos)\
+    \ and multi-region replication models that deliver strong consistency and high\
+    \ availability.</li> <li>Proven success shipping&nbsp;<strong>high-QPS, low-latency\
+    \ services</strong>&nbsp;on container orchestration stacks (Kubernetes or Nomad)\
+    \ with comprehensive observability.</li> <li>Ability to turn ambiguous product\
+    \ requirements into a clear technical roadmap and influence cross-functional stakeholders.</li>\
+    \ <li>Passion for&nbsp;<strong>automation, rigorous testing, and data-driven decision-making</strong>&nbsp;that\
+    \ raises the reliability and efficiency bar.</li> <li><strong>Bonus:</strong>&nbsp;upstream\
+    \ contributions to PostgreSQL, RocksDB or other OSS databases; familiarity with\
+    \ disaggregated storage, HTAP workloads, or custom query languages.</li> </ul><div\
+    \ class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"description\"\
+    ><p>For roles that are based at our headquarters in San Mateo, CA: The starting\
+    \ base pay for this position is as shown below. The actual base pay is dependent\
+    \ upon a variety of job-related factors such as professional background, training,\
+    \ work experience, location, business needs and market demand. Therefore, in some\
+    \ circumstances, the actual salary could fall outside of this expected range.\
+    \ This pay range is subject to change and may be modified in the future. All full-time\
+    \ employees are also eligible for equity compensation and for benefits as described\
+    \ on <strong><a href=\"https://careers.roblox.com/total-rewards\">this page</a></strong>.</p></div><div\
+    \ class=\"title\">Annual Salary Range</div><div class=\"pay-range\"><span>$196,750</span><span\
+    \ class=\"divider\">&mdash;</span"
 deadline:
   date: null
   type: rolling
@@ -18,8 +80,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

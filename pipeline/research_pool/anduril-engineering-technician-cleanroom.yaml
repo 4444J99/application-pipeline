@@ -10,6 +10,61 @@ target:
   portal: greenhouse
   location: Lexington, Massachusetts, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h4 id=\"MircoelectronicsTechnician-ABOUTTHEJOB:WeareseekingaWireBondingTechniciantojoinourteam,focusingonthepackagingandassemblyofcustominfraredimagesensors.Inthisrole,youwillcollaboratewithengineersinacleanroomenvironmenttohandleandtestsiliconwafers,wirebondimag\"\
+    ><strong>ABOUT THE JOB:&nbsp;</strong></h4> <p><span style=\"color: var(--ds-text,#333333);\"\
+    >We are seeking a Micro-electronics Technician to join our team, focusing on the\
+    \ packaging and assembly of custom infrared image sensors. In this role, you will\
+    \ collaborate with engineers in a cleanroom environment to handle and test silicon\
+    \ wafers, wire bond image sensors into ceramic packages, and perform visual and\
+    \ electrical inspections of sensor chip assemblies. Your expertise will be essential\
+    \ in operating custom test equipment to collect image data.&nbsp;</span></p> <h4\
+    \ id=\"MircoelectronicsTechnician-WHATYOU\u2019LLDO:\"><strong>WHAT YOU\u2019\
+    LL DO</strong></h4> <ul> <li>Work with engineers to package, test and assemble\
+    \ custom infrared image sensors in a clean room environment.</li> <li>Handle and\
+    \ test silicon wafers in automated probe test station.</li> <li>Handle, mount,\
+    \ and wirebond image sensors into custom ceramic packages using a wire ball bonder.</li>\
+    \ <li>Visual and electrical inspection of fully packaged sensor chip assemblies\
+    \ (SCAs).</li> <li>SCA installation into liquid nitrogen high vacuum test station.</li>\
+    \ <li>Majority of the tasks will be done inside our cleanroom.</li> <li>Operate\
+    \ custom test equipment to collect image data using automated tools.</li> </ul>\
+    \ <h4 id=\"MircoelectronicsTechnician-REQUIREDQUALIFICATIONS:\"><strong>REQUIRED\
+    \ QUALIFICATIONS</strong></h4> <ul> <li>Experience working with precision test\
+    \ and measurement equipment for development or production hardware.</li> <li>Experience\
+    \ collecting data from devices under test (DUTs) using test and inspection equipment.</li>\
+    \ <li>Experience working with delicate hardware such as microelectronics assemblies\
+    \ and performing ultra fine motor skill tasks.</li> <li>Eligible to obtain and\
+    \ maintain an active U.S. Secret security clearance</li> </ul> <h4 id=\"MircoelectronicsTechnician-PREFERREDQUALIFICATIONS:\"\
+    ><strong>PREFERRED QUALIFICATIONS</strong></h4> <ul> <li>Prior experience working\
+    \ within a clean room environment.</li> <li>Experience with microelectronics packaging\
+    \ such as wirebonders.</li> <li>Experience with electrical cabling assemblies,\
+    \ soldering, crimping and debug.</li> <li>Proficiency with SolidWorks and scripting/automation\
+    \ languages (MATLAB, Python, LabVIEW).</li> </ul> <p>&nbsp;</p><div class=\"content-pay-transparency\"\
+    ><div class=\"pay-input\"><div class=\"title\">US Salary Range</div><div class=\"\
+    pay-range\"><span>$77,000</span><span class=\"divider\">&mdash;</span><span>$102,000\
+    \ USD</span></div></div></div><div class=\"content-conclusion\"><p><span data-contrast=\"\
+    auto\">The salary range for this role is an estimate based on a wide range of\
+    \ compensation factors, inclusive of base salary only. Actual salary offer may\
+    \ vary based on (but not limited to) work experience, education and/or training,\
+    \ critical skills, and/or business considerations. Highly competitive equity grants\
+    \ are included in the majority of full time offers; and are considered part of\
+    \ Anduril's total compensation package. Additionally, Anduril offers top-tier\
+    \ benefits for full-time employees, including:</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}\"\
+    >&nbsp;</span></p> <p><strong><span data-contrast=\"auto\">Healthcare Benefits&nbsp;</span></strong></p>\
+    \ <ul> <li><strong><span data-contrast=\"none\">US Roles:</span></strong><span\
+    \ data-contrast=\"none\">&nbsp;Comprehensive medical, dental, and vision plans\
+    \ at little to no cost to you.</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}\"\
+    >&nbsp;</span></li> <li><strong><span data-contrast=\"none\">UK &amp; AUS Roles:</span></strong><span\
+    \ data-contrast=\"none\">&nbsp;We cover full cost of medical insurance premiums\
+    \ for you and your dependents.</span><span data-ccp-props=\"{&quot;134233"
 deadline:
   date: null
   type: rolling
@@ -18,8 +73,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 4.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 5
+    evidence_match: 4
+    track_record_fit: 4
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

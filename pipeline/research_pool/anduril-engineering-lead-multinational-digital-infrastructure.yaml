@@ -10,6 +10,68 @@ target:
   portal: greenhouse
   location: Costa Mesa, California, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><p>&nbsp;</p> <h3>ABOUT\
+    \ THE TEAM&nbsp;</h3> <p>The Multinational Digital Infrastructure (MDI) team is\
+    \ responsible for designing, deploying, and sustaining the sovereign and multinational\
+    \ classified systems that power Anduril\u2019s global Maritime and AUKUS missions.\
+    \ As a Multinational Digital Infrastructure &amp; Systems Engineer, you will architect\
+    \ and implement the classified environments, networks, gateways, and access pathways\
+    \ that enable U.S., Australian, and UK engineering and operational teams to collaborate\
+    \ at speed across IL5,IL6, and releasable environments. You will work across engineering,\
+    \ security, Mission Ops, and product teams to ensure our digital infrastructure\
+    \ is secure, scalable, and ready to support emerging mission demands.</p> <h3>ABOUT\
+    \ THE JOB&nbsp;</h3> <p>We are expanding our digital infrastructure team to meet\
+    \ the demands of increasingly interconnected multinational environments. If you\
+    \ are passionate about building resilient, scalable infrastructure that bridges\
+    \ IT, cloud, and tactical digital ecosystems, consider joining Anduril as a Multinational\
+    \ Digital Infrastructure Architect.</p> <p>&nbsp;As a Multinational Digital Infrastructure\
+    \ Architect, you will operate at the crossroads of systems architecture, IT infrastructure,\
+    \ and cloud engineering, with a deliberate focus on multinational and sovereign\
+    \ implementations. This role is designed for an engineering-oriented professional\
+    \ who will be deeply hands-on (\"hands-on keyboard\"), functioning as both a strategic\
+    \ solutions architect and an implementer.<br><br>You will be responsible for designing,\
+    \ deploying, and integrating infrastructure that supports secure multi-national\
+    \ defense collaboration, edge computing systems, and autonomous digital platforms\
+    \ in classified and sovereign environments. Your work will span private cloud,\
+    \ edge-to-cloud data flows, distributed tactical systems, and government IT environments\
+    \ such as IL5/IL6 secure networks across U.S., Australian, and UK missions.<br><br><br></p>\
+    \ <h4>WHAT YOU\u2019LL DO&nbsp;</h4> <p>&nbsp;</p> <h4><strong>1. Multinational\
+    \ Solutions Architecture:</strong></h4> <ul> <li>Design Scalable Infrastructure:\
+    \ Architect and deploy digital ecosystems (cloud, hybrid-cloud, and on-prem IT)\
+    \ to support multinational mission systems, focusing on performance, redundancy,\
+    \ and security.</li> <li>Cross-Domain Design: Bridge IT-focused infrastructure\
+    \ (e.g., enterprise networks, storage, and virtualization) with performance-critical\
+    \ operational systems such as tactical edge compute platforms.</li> <li>Tailor\
+    \ Sovereign Cloud Builds: Participate in the creation and deployment of sovereign\
+    \ cloud architectures, such as U.S. AWS GovCloud, Australian IRAP-compliant environments,\
+    \ or UK-MOD secure regions.</li> </ul> <h4><strong>2. Tactical Digital Infrastructure\
+    \ Implementation:</strong></h4> <ul> <li>Hands-On Implementation: Actively develop\
+    \ and deploy compute environments, containerized architectures (e.g., Docker,\
+    \ Kubernetes), and secure hybrid-cloud networking solutions.</li> <li>Integrate\
+    \ Mission Platforms: Deploy and configure communication systems, secure networking,\
+    \ and edge compute frameworks that support robotics, command-and-control, and\
+    \ autonomy systems via Lattice OS.</li> <li>Edge-to-Cloud Pipelines: Engineer\
+    \ data flows between tactical edge platforms (e.g., undersea communication nodes,\
+    \ unmanned underwater vehicles) and sovereign/private cloud environments.</li>\
+    \ </ul> <h4><strong>3. Multinational Collaboration and Interoperability:</strong></h4>\
+    \ <ul> <li>Enable Secure Collaboration: Architect and integrate cross-domain solutions\
+    \ that enable efficient, secure operational collaboration across U.S., Australia,\
+    \ and UK defense allies under frameworks such as AUKUS.</li> <li>Integrate Hybrid\
+    \ Environments: Ensure seamless multi-party interoperability of distributed systems\
+    \ across classified networks (e.g., IL5/IL6 mission environments) and IT systems.</li>\
+    \ <li>Field Support and Testing: Travel to global deployment sites to oversee\
+    \ infrastructure integration, provide on-the-ground implementation support, and\
+    \ troubleshoot real-time system challenges.</li> </ul> <h4><strong>4. Critical\
+    \ Systems Optimization &amp; Documentation:</strong></h4> <ul> <li>Automate Workf"
 deadline:
   date: null
   type: rolling
@@ -18,8 +80,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 4.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 5
+    evidence_match: 4
+    track_record_fit: 4
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

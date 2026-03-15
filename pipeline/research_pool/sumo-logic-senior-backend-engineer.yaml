@@ -10,6 +10,58 @@ target:
   portal: greenhouse
   location: Bangalore, Karnataka, India
   location_class: international
+  description: "<h2><strong>Senior Software Engineer II - Data Experiences<br>Location:\
+    \ Bangalore, Hybrid</strong></h2> <p><strong>Sumo Logic </strong>is a cloud-native\
+    \ SaaS data analytics platform, solving complex observability and security problems.\
+    \ Customers choose our product because it allows them to easily monitor, optimize\
+    \ and secure their applications, systems and infrastructures.&nbsp;</p> <p>Our\
+    \ microservices architecture hosted on AWS ingests petabytes of data daily across\
+    \ many geographic regions. Millions of queries a day analyze hundreds of petabytes\
+    \ of data.</p> <p><strong>The Platform Data Experiences Team</strong> is responsible\
+    \ for building scalable, cost-efficient and highly available backend services\
+    \ for Sumo Logic Infrastructure Monitoring solution. You will join a team of engineers\
+    \ responsible for handling products like alerting and other query features for\
+    \ logs, metrics and tracing.</p> <h4>Responsibilities</h4> <ul> <li>Develop features\
+    \ using algorithms that work optimally on very large data sets. These features\
+    \ would run on our backend systems that can handle enormous amounts of customer\
+    \ data, operate with high tolerance for errors, and can scale up as needed. These\
+    \ systems are responsible for managing and processing petabytes of data.</li>\
+    \ <li>Act as a team lead in the team.</li> <li>Write robust &amp; re-usable code.</li>\
+    \ <li>Own a small set of microservices, analyze and improve the efficiency, scalability,<br>reliability\
+    \ and cost for the same.</li> <li>Act as a primary on-call for owned services,\
+    \ responding to service degradations in a timely manner.</li> <li>Design and implement\
+    \ extremely high-volume, fault-tolerant, scalable backend systems that process\
+    \ and manage petabytes of customer data.</li> <li>Analyze and improve the efficiency,\
+    \ scalability, and reliability of our backend systems.</li> <li>Write robust code;\
+    \ demonstrate its robustness through automated tests.</li> </ul> <h4>Required\
+    \ Qualifications and Skills</h4> <ul> <li>B.Tech/ M.Tech/ BSc or MSc in Computer\
+    \ Science or a related discipline.</li> <li>7-9 years of industry experience with\
+    \ a proven track record of ownership.</li> <li>Object-oriented experience, for\
+    \ example in Java, Scala, Ruby, or C++.</li> <li>Experience in building backend\
+    \ services for handling data at large scale.</li> <li>Understanding the performance\
+    \ characteristics of commonly used data structures (maps, lists, trees, etc).</li>\
+    \ <li>Desire to learn Scala, an up-and-coming JVM language (scala-lang.org).</li>\
+    \ </ul> <h4>Desired Qualifications and Skills</h4> <ul> <li>Experience in big\
+    \ data / 24x7 commercial service / planet scale product development.</li> <li>Experience\
+    \ in agile software development (test-driven development, iterative and incremental\
+    \ development).</li> <li>Experience using Sumo Logic products or other observability\
+    \ products for reliability and security.&nbsp;&nbsp;</li> <li>Experience in multi-threaded\
+    \ programming and distributed systems (desirable).</li> <li>Experience leading\
+    \ scrum teams planning and day to day execution</li> </ul> <h2>About Us</h2> <p>Sumo\
+    \ Logic, Inc. helps make the digital world secure, fast, and reliable by unifying\
+    \ critical security and operational data through its Intelligent Operations Platform.\
+    \ Built to address the increasing complexity of modern cybersecurity and cloud\
+    \ operations challenges, we empower digital teams to move from reaction to readiness\u2014\
+    combining agentic AI-powered SIEM and log analytics into a single platform to\
+    \ detect, investigate, and resolve modern challenges. Customers around the world\
+    \ rely on Sumo Logic for trusted insights to protect against security threats,\
+    \ ensure reliability, and gain powerful insights into their digital environments.\
+    \ For more information, visit<a href=\"http://www.sumologic.com/\" target=\"_blank\"\
+    \ data-saferedirecturl=\"https://www.google.com/url?q=http://www.sumologic.com/&amp;source=gmail&amp;ust=1763582776811000&amp;usg=AOvVaw2tkPOBgFpGkG4SEdY6I_TY\"\
+    >&nbsp;www.sumologic.com.</a></p> <p><a href=\"https://www.sumologic.com/privacy-statement/\"\
+    >Sumo Logic Privacy Policy</a>. Employees will be responsible for complying with\
+    \ applicable federal privacy laws and regulations, as well as organizational policies\
+    \ related to data protection.</p> <p>&nbsp;</p>"
 deadline:
   date: null
   type: rolling
@@ -18,8 +70,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.5
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

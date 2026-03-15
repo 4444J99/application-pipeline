@@ -1,0 +1,106 @@
+id: roblox-software-engineer-user-co-experience
+name: Roblox Software Engineer, User Co-Experience
+track: job
+status: research
+outcome: null
+target:
+  organization: Roblox
+  url: https://boards.greenhouse.io/roblox
+  application_url: https://careers.roblox.com/jobs/7711780?gh_jid=7711780
+  portal: greenhouse
+  location: San Mateo, CA, United States
+  location_class: us-onsite
+  description: "<div class=\"content-intro\"><p><span style=\"font-weight: 400;\"\
+    >Every day, tens of millions of people come to Roblox to explore, create, play,\
+    \ learn, and connect with friends in 3D immersive digital experiences\u2013 all\
+    \ created by our global community of developers and creators.&nbsp;</span></p>\
+    \ <p><span style=\"font-weight: 400;\">At Roblox, we\u2019re building the tools\
+    \ and platform that empower our community to bring any experience that they can\
+    \ imagine to life. Our vision is to reimagine the way people come together, from\
+    \ anywhere in the world, and on any device.</span><strong> </strong><span style=\"\
+    font-weight: 400;\">We\u2019re on a mission to connect a billion people with optimism\
+    \ and civility, and looking for amazing talent to help us get there.&nbsp;</span></p>\
+    \ <p><span style=\"font-weight: 400;\">A career at Roblox means you\u2019ll be\
+    \ working to shape the future of human interaction, solving unique technical challenges\
+    \ at scale, and helping to create safer, more civil shared experiences for everyone.</span></p></div><p>As\
+    \ a <strong>Backend Engineer</strong> on the <strong>Co-Experience team</strong>,\
+    \ you will work on high-visibility initiatives that define the future of age-appropriate\
+    \ communication. Using modern technologies, you will build and maintain a social\
+    \ ecosystem that ensures safe, civil, and meaningful interactions across diverse\
+    \ age groups.</p> <p>We are kind, highly collaborative, and draw on a mix of startup\
+    \ and large company backgrounds to iterate faster within Roblox.</p> <p>Our primary\
+    \ product is a <strong>platform-level Party System</strong>. As the heartbeat\
+    \ of social interaction on Roblox, this system enables users to coordinate, form\
+    \ groups, and stay connected as they navigate across servers and immersive experiences.</p>\
+    \ <p>While we have a strong foundation of chat, voice, gameplay mechanics, and\
+    \ creator APIs, we need your expertise to strengthen our backend infrastructure,\
+    \ build out new features, and accelerate our path toward product-market fit. As\
+    \ we scale, your work will directly impact our global community and support the\
+    \ company\u2019s top-line growth.</p> <p><strong>You Have:</strong></p> <ul> <li>An\
+    \ undergraduate/graduate degree in computer science, engineering or a related\
+    \ field.</li> <li>2+ years of experience in working on microservice architectures\
+    \ with a proven track record in addressing scalability and reliability challenges.</li>\
+    \ <li>1+ years of experience building systems behind consumer-facing APIs that\
+    \ can handle large numbers of concurrent users.</li> <li>Strong understanding\
+    \ of server-side development and design principles, with proficiency in at least\
+    \ one compiled language such as C#, C++, Java, Golang, or other.</li> <li>Strong\
+    \ product intuition - you think in terms of user experience, tradeoffs, and measurable\
+    \ outcomes, as well as system design.</li> <li>A track record of leveraging AI-assisted\
+    \ development tools to maximize engineering velocity, allowing you to rapidly\
+    \ prototype, iterate on complex logic, and move from ideation to production-ready\
+    \ code with high efficiency.</li> </ul> <p><strong>You Will:</strong></p> <ul>\
+    \ <li>Collaborate within a multi-functional team that includes product, design,\
+    \ UXR, frontend and backend engineering.</li> <li>Maintain, improve and scale\
+    \ the Roblox party system to support millions of concurrent users.</li> <li>Participate\
+    \ in design and develop service infrastructure empowering Roblox creators to unlock\
+    \ new ways to co-experience for their users.</li> <li>Partner with other engineering\
+    \ teams (infrastructure, matchmaking, chat, voice, trust and safety) to integrate\
+    \ multiple systems in a reusable, performant and safe manner.</li> <li>Self-organize\
+    \ and take ownership of projects throughout their full lifecycle.</li> <li>Maintain\
+    \ high quality standards while iterating on features with live production traffic.</li>\
+    \ <li>Mentor interns.&nbsp;</li> </ul> <p>Please note the Company may not be able\
+    \ to employ candidates who have United States work authorization related to certain\
+    \ U.S. visa categories, or support future H-1B sponsorship at this time. You may\
+    \ redact age, date of birth, and dates of attendance/graduation from your resume\
+    \ if you prefer.</p><div class=\"content-pay-transparency\"><div class=\"pay-input\"\
+    ><div class=\"description\"><p>For roles that are based at our headquarters in\
+    \ San Mateo, CA: The starting base pay for this position is as shown below. The\
+    \ actual base pay is dependent upon a variety of job-related factors such as professional\
+    \ background, training, work experience, location, business needs and market demand.\
+    \ Therefore, in some circumstances, the actual salary could fall outside of this\
+    \ expected range. This pay range is subject to change and may be modified in the\
+    \ future. All full-time employees are also eligible for equity compensation and\
+    \ for benefits as described on <strong><a href=\"https://careers.roblox.com/total-rewards\"\
+    >this page</a></strong>.</p></div><div class=\"title\">Annual Salary Range</div><div\
+    \ class=\"pay-range\"><span>$153,1"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-15'
+  posting_date: '2026-03-13'
+  date_added: '2026-03-15'
+  discovered: '2026-03-15T16:39:32.984410+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-15'

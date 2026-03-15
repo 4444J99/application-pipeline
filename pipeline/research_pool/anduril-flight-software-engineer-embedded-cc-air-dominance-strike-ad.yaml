@@ -11,6 +11,68 @@ target:
   portal: greenhouse
   location: Costa Mesa, California, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><div>&nbsp;</div>\
+    \ <div> <p>The Flight Software team at Anduril develops flight computer vehicle\
+    \ software for all airborne vehicles. The right person for this role has experience\
+    \ in both commercial (product focused) and public sector (defense) technical environments,\
+    \ and is looking to leverage their passion for avionics and flight software.<br><br>Join\
+    \ our Flight Engineering team advancing the&nbsp;<span class=\"inline-comment-marker\
+    \ valid\" data-ref=\"9da5dc6c-e0c1-406f-bd25-50a8da482460\">Air Dominance and\
+    \ Strike division's portfolio</span>, where we push the boundaries of aerospace\
+    \ technology. We are seeking exceptional Flight Software Engineers to shape the\
+    \ next generation of advanced tactical missile systems, strategic weapons, and\
+    \ hypersonic strike and defense systems. As a key contributor, you will develop,\
+    \ test, and integrate cutting-edge architectures for subsonic, supersonic, and\
+    \ hypersonic autonomous systems, driving innovation in mission-critical capabilities.<br><br><span\
+    \ class=\"c-mrkdwn__highlight\"><strong data-stringify-type=\"bold\">ANDURIL</strong></span><strong\
+    \ data-stringify-type=\"bold\">&nbsp;</strong><span class=\"c-mrkdwn__highlight\"\
+    ><strong data-stringify-type=\"bold\">PRODUCTS</strong></span><br><span class=\"\
+    c-mrkdwn__highlight\">Anduril</span>&nbsp;has been selected as one of two vendors\
+    \ to move forward on the Collaborative Combat Aircraft (CCA) program for the Air\
+    \ Force's flagship autonomous aircraft program. During the next phase,&nbsp;<span\
+    \ class=\"c-mrkdwn__highlight\">Anduril</span>&nbsp;will design, manufacture,\
+    \ and test&nbsp;<span class=\"c-mrkdwn__highlight\">production</span>-representative\
+    \ CCAs. We are honored to be part of the program as a non-traditional defense\
+    \ company and are seeking highly motivated candidates to join us in the rapid\
+    \ development of a new, revolutionary aircraft.For more information on the latest\
+    \ with&nbsp;<span class=\"c-mrkdwn__highlight\">Anduril</span>, visit our&nbsp;<span\
+    \ class=\"c-mrkdwn__highlight\"><a class=\"c-link\" href=\"https://www.anduril.com/newsroom/\"\
+    \ target=\"_blank\" data-stringify-link=\"https://www.anduril.com/newsroom/\"\
+    \ data-sk=\"tooltip_parent\">Newsroom</a></span>&nbsp;with articles such as&nbsp;<a\
+    \ class=\"c-link\" href=\"https://www.anduril.com/article/anduril-in-2023-a-year-in-review/\"\
+    \ target=\"_blank\" data-stringify-link=\"https://www.anduril.com/article/anduril-in-2023-a-year-in-review/\"\
+    \ data-sk=\"tooltip_parent\"><span class=\"c-mrkdwn__highlight\">\"</span><span\
+    \ class=\"c-mrkdwn__highlight\">Anduril</span>&nbsp;a year in review\"</a>&nbsp;and\
+    \ many more. Watch this&nbsp;<a class=\"c-link\" href=\"https://youtu.be/RhkEQA-Idfc?si=xtFkvfP6XoDI0qC0\"\
+    \ target=\"_blank\" data-stringify-link=\"https://youtu.be/RhkEQA-Idfc?si=xtFkvfP6XoDI0qC0\"\
+    \ data-sk=\"tooltip_parent\">short video</a>&nbsp;showcasing our&nbsp;<span class=\"\
+    c-mrkdwn__highlight\">products</span>&nbsp;at&nbsp;<span class=\"c-mrkdwn__highlight\"\
+    >Anduril</span>.<br><br></p> <p>Products these teams work on:&nbsp;<br><a href=\"\
+    https://www.anduril.com/barracuda/\">Barracuda</a><br><a href=\"https://www.anduril.com/roadrunner/\"\
+    >Roadrunner</a><br>And other missile programs that are not public yet.</p> <p><strong>WHAT\
+    \ YOU\u2019LL DO&nbsp;</strong></p> <ul> <li>Develop microcontroller software\
+    \ using an RTOS</li> <li>Develop device drivers, protocols, and APIs for aircraft\
+    \ sensors</li> <li>Integrate new features and sensors into flight controller software</li>\
+    \ <li>Create aircraft control systems</li> <li>Create SITL/HITL test fixtures</li>\
+    \ <li>Analyze flight test results</li> <li>Support device manufacturing efforts</li>\
+    \ <li>Support operational aircraft deployments</li> </ul> <p><br><strong>CORE\
+    \ REQUIREMENTS&nbsp;</strong></p> <ul> <li>2+ years of experience in industry</li>\
+    \ <li>Bachelor's degree in Computer Science, Electrical Engineering, etc., or\
+    \ equivalent experience</li> <li>Direct experience with DO-178 standards or similar\
+    \ certifications</li> <li>Direct experience in aircraft embedded software or other\
+    \ safety critical systems</li> <li>Strong C programming skills</li> <li>Background\
+    \ in low-level embedded software architecture, design and development</li> <li>Low-level\
+    \ device driver development, experience with microcontrollers and application\
+    \ processors</li> <li>Comfortable with typic"
 deadline:
   date: null
   type: rolling
@@ -19,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

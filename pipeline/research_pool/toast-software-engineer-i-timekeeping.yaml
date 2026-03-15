@@ -10,6 +10,70 @@ target:
   portal: greenhouse
   location: Dublin, Ireland
   location_class: international
+  description: "<p>Toast is a rapidly growing company that's revolutionizing how the\
+    \ restaurant industry does business by pairing technology with an extraordinary\
+    \ commitment to customer success. We help restaurants streamline operations, increase\
+    \ revenue, and deliver amazing guest experiences through our platform that combines\
+    \ restaurant point of sale, team management, guest-facing technology, and award-winning\
+    \ customer support. Join us as we empower the restaurant community to delight\
+    \ guests, do what they love, and thrive.</p> <p>We\u2019re looking for an engineer\
+    \ to help build and scale Toast\u2019s labor cost and timekeeping platforms -\
+    \ systems that directly influence labor spend for more than 166,000 restaurant\
+    \ locations. You\u2019ll work on highly visible, mission-critical infrastructure\
+    \ supporting millions of employees and operators across Toast restaurants.</p>\
+    \ <p>In this role, you\u2019ll gain hands-on experience with large-scale, data-intensive\
+    \ systems. We\u2019ve processed over a <em>billion</em> of shift records and are\
+    \ in the midst of an exciting architecture modernization to support rapid growth\
+    \ and faster development. We are operating at true scale, pushing the limits of\
+    \ our databases. If you\u2019re excited to lay the technical foundation for the\
+    \ next generation of labor cost management\u2014and to help restaurant operators\
+    \ save real money\u2014we\u2019d love to hear from you.</p> <p>&nbsp;</p> <p><strong>A\
+    \ day in the life (Responsibilities)</strong><span data-sheets-root=\"1\"><br><br></span></p>\
+    \ <ul> <li>Help shape our next-generation timekeeping systems that operate at\
+    \ massive scale, processing tens of millions of shift events every week.</li>\
+    \ <li>Build, run, and improve core backend systems alongside a collaborative,\
+    \ supportive team.</li> <li>Be a part of the organization with a strong focus\
+    \ on engineering culture and full end-to-end ownership.</li> <li>Participate across\
+    \ the full development lifecycle\u2014design, estimation, implementation, testing,\
+    \ debugging, and deployment\u2014while learning and applying best practices for\
+    \ building and operating reliable systems at scale.</li> <li>Ship code that directly\
+    \ impacts Toast\u2019s growth and the day-to-day operations of restaurant teams</li>\
+    \ <li>Partner with product and design to influence what we build and how we build\
+    \ it</li> <li>Participate in thoughtful code reviews, both giving and receiving\
+    \ feedback</li> <li>Leverage cutting edge AI tools to enhance your development\
+    \ workflow, improve velocity, and help pioneer new approaches to building - contributing\
+    \ to a culture of innovation and productivity across the team.</li> </ul> <p><strong>What\
+    \ you'll need to thrive (Requirements)</strong></p> <ul> <li>1+ year of experience\
+    \ with Java, Kotlin, or similar - <strong>This is a junior level role</strong>.</li>\
+    \ <li>Willingness to monitor, troubleshoot, and improve system performance through\
+    \ logging and metrics</li> <li>Ability and motivation to learn quickly and apply\
+    \ knowledge to solve real problems</li> <li>A hunger to take on challenging projects\
+    \ and build systems that operate at massive scale.</li> </ul> <p data-pm-slice=\"\
+    1 1 []\"><strong>AI at Toast</strong></p> <p>At Toast, one of our company values\
+    \ is that we're hungry to build and learn. We believe learning new AI tools empowers\
+    \ us to build for our customers faster, more independently, and with higher quality.\
+    \ We provide these tools across all disciplines, from Engineering and Product\
+    \ to Sales and Support, and are inspired by how our Toasters are already driving\
+    \ real value with them. The people who thrive here are those who embrace changes\
+    \ that let us build more for our customers; it\u2019s a core part of our culture.</p>\
+    \ <p data-pm-slice=\"1 1 []\"><strong>Our Total Rewards Philosophy&nbsp;<br></strong>We\
+    \ strive to provide competitive compensation and benefits programs that help to\
+    \ attract, retain, and motivate the best and brightest people in our industry.\
+    \ Our total rewards package goes beyond great earnings potential and provides\
+    \ the means to a healthy lifestyle with the flexibility to meet Toasters\u2019\
+    \ changing needs. Learn more about our benefits at&nbsp;<a class=\"c-link\" href=\"\
+    https://careers.toasttab.com/toast-benefits\" target=\"_blank\" data-stringify-link=\"\
+    https://careers.toasttab.com/toast-benefits\" data-sk=\"tooltip_parent\" data-remove-tab-index=\"\
+    true\">https://careers.toasttab.com/toast-benefits</a>.</p><div class=\"content-conclusion\"\
+    ><p><strong>How Toast Uses AI in its Hiring Process</strong></p> <p>Throughout\
+    \ the hiring process, our goal is to get to know you. We use AI tools to support\
+    \ our recruiters and interviewers with tasks like note-taking, summarization,\
+    \ and documentation of interviews to ensure they can be fully focused on your\
+    \ conversation. All hiring decisions are made by people.</p> <p><strong><strong\
+    \ data-stringify-type=\"bold\">Diversity, Equity, and Inclusion is Baked into\
+    \ our Recipe for Success</strong></strong></p> <p>At Toast, our employees are\
+    \ our secret ingredient\u2014when they thrive, we thrive.&nbsp;The restaurant\
+    \ industry is one of the most diverse, "
 deadline:
   date: null
   type: rolling
@@ -18,8 +82,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.5
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

@@ -10,6 +10,70 @@ target:
   portal: greenhouse
   location: Costa Mesa, California, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h3><strong>ABOUT\
+    \ THE TEAM</strong></h3> <p>Anduril\u2019s Tactical Recon &amp; Strike (TRS) is\
+    \ a division with two missions: 1) build highly capable autonomous drones, and\
+    \ 2) build solid rocket motors at scale. We transform products like Ghost, Anvil,\
+    \ Bolt, and Altius from early concepts into fully operational capabilities by\
+    \ partnering closely with specialist engineering, operations, and production teams.\
+    \ Through our Anduril Rocket Motor Systems (RMS) team, we design and manufacture\
+    \ solid rocket motors using advanced materials, proprietary formulations, and\
+    \ high-volume production methods\u2014delivering safe, reliable propulsion systems\
+    \ that support a wide range of mission requirements. TRS hires software engineers\
+    \ &amp; hardware engineers, who are excited to build across a diverse and powerful\
+    \ portfolio\u2014from autonomous aerial systems to high-performance solid rocket\
+    \ motors. Our teams contribute to highly capable autonomous robotics systems and\
+    \ propulsion products that operate reliably in the most demanding mission environment.</p>\
+    \ <h3>ABOUT THE JOB</h3> <p>We are looking for C2 Software Engineers to join our\
+    \ team. As a C2 Software Engineer at Anduril, you will be architecting and building\
+    \ out ground control automation software, implementing user interface applications\
+    \ from backend to frontend, deploying them to users, and making sure they're meeting\
+    \ users' requirements directly. You will be working alongside a team of engineers\
+    \ with diverse backgrounds as well as engaging with internal and external stakeholders.\
+    \ The C2 software is every Anduril customer's view into our company and products,\
+    \ so the reward is high and the opportunity is unbounded. The Tactical C2 Software\
+    \ team has openings for web/cloud (React/AWS), mobile (Android), and embedded\
+    \ software (Linux/NixOS) engineering specialties, so you choose how to make an\
+    \ impact on our team!</p> <h4>WHAT YOU'LL DO</h4> <ul> <li>Design, build, test,\
+    \ and deploy real-time moving-map user interfaces for commanding missions and\
+    \ teams of autonomous systems.</li> <li>Define and implement APIs and services\
+    \ for datalink network communications, situational awareness and telemetry, robotics\
+    \ control and configuration, and sensor data like full motion video or signals\
+    \ intelligence.</li> <li>Regularly develop with modern full stack technologies\
+    \ for one or more C2 platforms:<br> <ul> <li>Cloud: Python, Golang, JavaScript/TypeScript,\
+    \ React, AWS, Docker, Kubernetes, Terraform</li> <li>Embedded: Python, C++, Rust,\
+    \ Embedded Linux, Nix/NixOS</li> </ul> </li> <li>Test and evaluate your software\
+    \ at multiple levels of rigor using high-fidelity simulations, benchtop hardware,\
+    \ and live flight exercises at our various Anduril test sites across the country.</li>\
+    \ </ul> <h4><strong>REQUIRED QUALIFICATIONS</strong></h4> <ul> <li>Degree in Computer\
+    \ Science, Computer Engineering, Aerospace Engineering, or another related technical\
+    \ degree.</li> <li>Proficiency in one or more skills of at least one of the C2\
+    \ platforms listed above: Cloud, Mobile, or Embedded.</li> <li>Willingness to\
+    \ provide on call support to various internal or external customers.</li> <li>Eligible\
+    \ to obtain and maintain an active U.S. Secret security clearance.</li> </ul>\
+    \ <p><strong>PREFERRED QUALIFICATIONS</strong></p> <ul> <li>Experience with 3D\
+    \ geospatial analysis and mapping software such as ArcGIS, Cesium, OpenLayers,\
+    \ MapBox, or TAK.</li> <li>Experience with client/server networking technologies\
+    \ and relationships such as TCP/UDP/Multicast, HTTP (REST), or protobuf/gRPC.</li>\
+    \ <li>Experience with robotic systems where hardware, physical actuators, datalink\
+    \ networks, sensors and effectors are employed to translate software concepts\
+    \ to physical interactions with the world.</li> <li>Experience with build system\
+    \ and software lifecycle technologies such as CMake, Cargo, gradle, NixOS, CircleCI,\
+    \ Gitlab-CI, Docker, Python, Bash, and other developer operations tools.</li>\
+    \ <li>Experience developing user interface software that does not require Internet\
+    \ access or has local/offline functionality.</li> <li>Experience in a startup\
+    \ or small company working environment where deadlines are tight, requirements\
+    \ are open-ended, and the teams are often fewer than 10 people.</li> <li>Experience\
+    \ with "
 deadline:
   date: null
   type: rolling
@@ -18,8 +82,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

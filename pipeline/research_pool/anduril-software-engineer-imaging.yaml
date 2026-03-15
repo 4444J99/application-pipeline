@@ -10,6 +10,64 @@ target:
   portal: greenhouse
   location: Lexington, Massachusetts, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3>\
+    \ <p>The Imaging team is responsible for tackling the most difficult problems\
+    \ involving computer vision, perception, electro-optical, infrared, and sensor\
+    \ data. The team develops state-of-the-art imaging systems across both hardware\
+    \ and software. Their products are deployed to tackle the most significant security\
+    \ challenges of America and its allies.</p> <h3>ABOUT THE JOB</h3> <p>We are seeking\
+    \ an ambitious Software Engineer on our Imaging Interfaces team to help solve\
+    \ a wide variety of problems involving networking, systems integration, and scalability;\
+    \ all while supporting ongoing efforts in the field. Your role will be instrumental\
+    \ in expanding the integration of these cameras with the broader Anduril ecosystem,\
+    \ as well as ensuring the systems can operate standalone in austere environments.</p>\
+    \ <p><strong>WHAT YOU\u2019LL DO</strong></p> <ul> <li>Own software system success\
+    \ for assets deployed to customers and events.</li> <li>Maintain an end-to-end\
+    \ systems understanding of the Imaging team\u2019s devices, you will be well-positioned\
+    \ to optimize how these software services interact.</li> <li>Develop and implement\
+    \ modular software usable between devices with similar software stacks, but varying\
+    \ functionality.</li> <li>Triage issues, identify root causes, and coordinate\
+    \ next-steps.</li> <li>Collaborate across multiple teams to plan, build, and test\
+    \ complex functionality.</li> <li>Develop and maintain user support workflows.</li>\
+    \ <li>Work on challenging problems in a fast-paced environment.</li> <li>Travel\
+    \ expected approximately 15% of the time for testing.</li> </ul> <p><strong>REQUIRED\
+    \ QUALIFICATIONS</strong></p> <ul> <li>Strong analytical &amp; critical thinking\
+    \ and problem-solving skills and an ability to communicate ideas clearly.</li>\
+    \ <li>Team-player, self-motivated, driven, organized.</li> <li>3+ years of experience\
+    \ working in modern development frameworks, with an emphasis on Python and C++.</li>\
+    \ <li>3+ years of experience working in Linux-based environments. We are a hardware\
+    \ company, so expect to work on bare-metal hardware.</li> <li>A strong desire\
+    \ to work on critical software that has real-world impact.</li> <li>Must be eligible\
+    \ to obtain and maintain a U.S. Secret clearance.</li> </ul> <p><strong>PREFERRED\
+    \ QUALIFICATIONS&nbsp;</strong></p> <ul> <li>Experience writing component-based\
+    \ React will be extremely valuable.</li> <li>Familiarity with Nix or NixOS is\
+    \ rare, but extremely valuable.</li> </ul><div class=\"content-pay-transparency\"\
+    ><div class=\"pay-input\"><div class=\"title\">US Salary Range</div><div class=\"\
+    pay-range\"><span>$166,000</span><span class=\"divider\">&mdash;</span><span>$220,000\
+    \ USD</span></div></div></div><div class=\"content-conclusion\"><p><span data-contrast=\"\
+    auto\">The salary range for this role is an estimate based on a wide range of\
+    \ compensation factors, inclusive of base salary only. Actual salary offer may\
+    \ vary based on (but not limited to) work experience, education and/or training,\
+    \ critical skills, and/or business considerations. Highly competitive equity grants\
+    \ are included in the majority of full time offers; and are considered part of\
+    \ Anduril's total compensation package. Additionally, Anduril offers top-tier\
+    \ benefits for full-time employees, including:</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}\"\
+    >&nbsp;</span></p> <p><strong><span data-contrast=\"auto\">Healthcare Benefits&nbsp;</span></strong></p>\
+    \ <ul> <li><strong><span data-contrast=\"none\">US Roles:</span></strong><span\
+    \ data-contrast=\"none\">&nbsp;Comprehensive medical, dental, and vision plans\
+    \ at little to no cost to you.</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}\"\
+    >&nbsp;</span></li> <li><strong><span data-contrast=\"none\">UK &amp; AUS Roles:</span></strong><span\
+    \ data-contrast=\"none\">&nbsp;We cover full cost of medical insurance premiums\
+    \ for you and your dependents.</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620"
 deadline:
   date: null
   type: rolling
@@ -18,8 +76,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

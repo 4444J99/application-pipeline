@@ -10,6 +10,70 @@ target:
   portal: greenhouse
   location: USA - Pacific Time
   location_class: us-onsite
+  description: "<h3><strong>About Buildkite</strong></h3> <p>Buildkite\u2019s CI platform\
+    \ is trusted by the world\u2019s leading engineering teams, shipping software\
+    \ to over 1,000,000,000 daily users.</p> <h3><strong>Job Overview</strong></h3>\
+    \ <p>We\u2019re looking for a Staff DevRel to be the human interface to our strategy.\
+    \ Our technical educator, advocate and signal-capture engine earning trust in\
+    \ public, accelerates adoption and keeps Buildkite\u2019s narrative anchored to\
+    \ reality.</p> <p>We believe in devtools, DevRel is an execution system; education\u2192\
+    proof\u2192adoption\u2192advocacy, run with credibility and discipline. You\u2019\
+    ll help devs get to value faster, create moments that reinforce the cult of Buildkite\
+    \ and feed the org the hard truth about what\u2019s confusing, what\u2019s missing,\
+    \ and what we should ship next.</p> <p>We\u2019re only interested in candidates\
+    \ with genuine technical depth and strong public judgment. Someone who can teach,\
+    \ demo, debug and influence platform direction.</p> <h3><strong>\U0001F680 What\
+    \ You\u2019ll Do</strong></h3> <h3><strong>Ship a dev-first demand engine</strong></h3>\
+    \ <ul> <li>Own campaign execution across priority pillars, from concept\u2192\
+    asset plan\u2192launch\u2192iteration</li> <li>Build programs that serve devs\
+    \ <em>and</em> buyers; credibility up top, clarity in the middle, conversion at\
+    \ the bottom</li> <li>Create a repeatable cadence that aligns our Labs (Brand\
+    \ Systems + Dev Voice + GTM) into</li> </ul> <h3><strong>Be the technical advocate\
+    \ devs trust</strong></h3> <ul> <li>Show up in the right places with real, honest\
+    \ and technical insights and answers</li> <li>Teach CI concepts and Buildkite\
+    \ workflows in formats engineers respect</li> <li>Build credibility by engaging\
+    \ with reality</li> </ul> <h3><strong>Accelerate adoption with education and practical\
+    \ pathways</strong></h3> <ul> <li>Design learning paths that reduce time-to-first-value:\
+    \ onboarding guides, implementation walkthroughs, etc</li> <li>Partner with Product/Support\
+    \ to turn recurring confusion into better docs, better defaults, and better UX</li>\
+    \ <li>Help teams migrate and modernise safely by demystifying CI and making it\
+    \ clear what good looks like</li> <li>Partner with customers (large, small and\
+    \ OSS) to share technical war stories and value-first storytelling, both for CI\
+    \ and for deeper orchestration</li> </ul> <h3><strong>Turn proof into public artifacts</strong></h3>\
+    \ <ul> <li>Co-create with Content Engineering and Content Writing to turn technical\
+    \ reality into distributable proof</li> <li>Capture and publish dev-grade assets\
+    \ that answer real questions and survive scrutiny</li> <li>Maintain a high bar\
+    \ for public artifacts</li> </ul> <h3><strong>Run signal capture for the whole\
+    \ org</strong></h3> <ul> <li>Collect what devs are asking, what objections repeat,\
+    \ what patterns emerge and route it to the right owners</li> <li>Make signal legible;\
+    \ categorise, quantify, and tell the truth clearly, even if it\u2019s uncomfortable</li>\
+    \ <li>Close the loop; ensure signal turns into shipped fixes</li> </ul> <h3><strong>Build\
+    \ durable advocacy and champion pathways</strong></h3> <ul> <li>Identify and nurture\
+    \ champions; power users, repeat contributors, future speakers</li> <li>Create\
+    \ pathways from curious\u2192capable\u2192confident\u2192advocate, with the assets\
+    \ and moments needed at each step</li> <li>Partner with Dev Events to turn field\
+    \ moments into ongoing relationships and durable community pull</li> </ul> <h3><strong>Run\
+    \ an OS that compounds</strong></h3> <p>You\u2019ll operate with a cadence that\
+    \ scales beyond any single person:</p> <ul> <li><strong>Education loop;</strong>\
+    \ teach\u2192observe confusion\u2192update assets\u2192improve onboarding</li>\
+    \ <li><strong>Signal loop;</strong> capture\u2192normalise\u2192route\u2192action</li>\
+    \ <li><strong>Proof loop;</strong> identify gaps\u2192co-build proof\u2192validate\u2192\
+    publish\u2192reuse</li> <li><strong>Adoption loop;</strong> guides/patterns\u2192\
+    activation\u2192support deflection\u2192iteration</li> <li><strong>Advocacy loop;</strong>\
+    \ champions\u2192moments\u2192contributions\u2192amplification</li> <li><strong>Coherence\
+    \ loop;</strong> align with Brand/GTM/Dev Voice\u2192reduce drift</li> </ul> <h3><strong><span\
+    \ style=\"font-size: 12pt;\">\U0001F3A8</span>What You Bring</strong></h3> <p>This\
+    \ role only works with technical credibility and public judgment.</p> <ul> <li>You\u2019\
+    ve shipped and operated real systems and can hold your own in CI/CD conversations</li>\
+    \ <li>Proven DevRel experience with evidence of impact</li> <li>Excellent technical\
+    \ communication</li> <li>You can design experiences that land, and you can recover\
+    \ when things break live</li> <li>You know what erodes trust and you protect credibility\
+    \ relentlessly</li> <li>You can run loops and build reusable assets</li> <li>You\
+    \ partner with Product, Eng, Support, Brand, and Sales while staying anchored\
+    \ to technical truth</li> <li>You can define success signals and report simply,\
+    \ clearly and regularly</li> <li>You document what you learn so the org compounds</li>\
+    \ <li>You see gaps, you ship fixes</li> </ul> <h3><strong>Nice-to-haves</strong></h3>\
+    \ <ul> <li>Deep CI/CD or DevOps experience</li> <li>OSS contribu"
 deadline:
   date: null
   type: rolling
@@ -18,8 +82,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 6.4
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 7
+    network_proximity: 1
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

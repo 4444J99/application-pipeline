@@ -1,0 +1,84 @@
+id: creative-capital-2027
+name: Creative Capital 2027 Open Call
+track: grant
+status: qualified
+identity_position: systems-artist
+outcome: null
+target:
+  organization: Creative Capital
+  url: https://creative-capital.org
+  application_url: https://creative-capital.org/apply
+  portal: custom
+deadline:
+  date: '2026-04-02'
+  time: 15:00 ET
+  type: hard
+amount:
+  value: 50000
+  currency: USD
+  type: lump_sum
+  benefits_cliff_note: Exceeds Medicaid -> Essential Plan. Call NYLAG.
+fit:
+  score: 8.2
+  original_score: 8.8
+  identity_position: systems-artist
+  framing: Systems artist presenting ORGANVM—a 103-repository autonomous ecosystem
+    where technical governance is reclaimed as an aesthetic medium. Proposing to scale
+    this "Infrastructure Art" model to demonstrate a steerable, transparent, and human-centric
+    alternative to opaque AI development.
+  lead_organs:
+  - I
+  - IV
+  - META
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 10
+    network_proximity: 1
+    strategic_value: 10
+    financial_alignment: 4
+    effort_to_value: 7
+    deadline_feasibility: 9
+    portal_friction: 6
+submission:
+  effort_level: deep
+  blocks_used:
+    artist_statement: identity/5min
+    project_description: projects/organvm-system
+    methodology: methodology/governance-as-art
+    evidence: evidence/differentiators
+    framing: framings/systems-artist
+    work_samples: evidence/work-samples
+  variant_ids:
+    cover_letter: cover-letters/creative-capital-2027-alchemized
+  materials_attached:
+  - resumes/batch-03/creative-capital-2027/creative-capital-2027-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-02-14'
+  date_added: 2026-02-14
+  qualified: "2026-03-15"
+  materials_ready: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+portal_fields:
+  fields:
+  - name: short_answers
+  - name: project_description
+  - name: work_samples
+  - name: bio
+  - name: resume
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags: []
+source: 04-application-tracker.md
+notes: null
+last_touched: "2026-03-15"
+status_meta:
+  reviewed_by: 4jp
+  reviewed_at: '2026-03-03'
+  review_note: autofix-unblocker

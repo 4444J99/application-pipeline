@@ -10,6 +10,70 @@ target:
   portal: greenhouse
   location: Seattle, Washington, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h3>ABOUT THE TEAM&nbsp;</h3>\
+    \ <p>The Lattice Foundations organization is responsible for enabling Anduril\u2019\
+    s software products to reach a new standard of software excellence. We build tools,\
+    \ operate services, define processes, and develop frameworks to allow Anduril\u2019\
+    s engineers and operators to execute at all stages of the software development\
+    \ lifecycle with efficiency, quality, and delight. We adapt industry best practices\
+    \ to the complexities of Anduril\u2019s domain, develop new systems when we can\
+    \ improve on the state of the art, and integrate it all into a unitary foundation\
+    \ underlying Anduril\u2019s software development.<br><br>The Platform Security\
+    \ team within Lattice Foundations is responsible for the security of the common\
+    \ software platform. We ensure that the platform architecture meets the security\
+    \ need, that the platform contains an appropriate set of well-designed security\
+    \ features, and that the software platform team has a strong security posture\
+    \ both for the development of its own components and for the management of third\
+    \ party dependencies. Platform Security helps other teams at Anduril securely\
+    \ integrate the software platform into their products.<br><br></p> <h3>ABOUT THE\
+    \ JOB&nbsp;</h3> <p>We are looking for an experienced security engineer and builder\
+    \ to join our rapidly expanding team. In this role, you\u2019ll design new security\
+    \ features and propose improvements to the security of Anduril\u2019s common software\
+    \ platform. You will lead the implementation of these designs, working across\
+    \ the stack to deliver production-quality code that meets the challenging requirements\
+    \ of our customers.<br><br>Collaboration is key; you\u2019ll review designs from\
+    \ other teams to identify potential security problems and work closely with them\
+    \ to agree on effective solutions. You\u2019ll also collaborate closely with teams\
+    \ across the company to improve Anduril\u2019s security posture.<br><br>If you\u2019\
+    re passionate about building things that improve security and if you enjoy both\
+    \ the breadth that comes from working on large systems and the technical depth\
+    \ that is needed to create secure foundations, then this may be the position for\
+    \ you.<br><br></p> <h4>WHAT YOU\u2019LL DO</h4> <ul> <li>Lead the design of new\
+    \ security features and of security improvements to common platform services.\
+    \ Our scope is broad, with example domains ranging from operating system hardening,\
+    \ through authentication, to distributed protocols</li> <li>Implement your designs,\
+    \ balancing security, performance, and functional requirements. You may need to\
+    \ work at all levels of the stack, from integrating secure hardware to developing\
+    \ and deploying applications</li> <li>Review design proposals from other teams,\
+    \ identifying potential security issues and proposing solutions</li> <li>Perform\
+    \ threat modeling and analyze existing systems to identify vulnerabilities</li>\
+    \ <li>Provide security advice to engineering teams during their development, helping\
+    \ raise security awareness</li> <li>Collaborate closely with other security practitioners\
+    \ and the software platform team, supporting efforts to improve Anduril\u2019\
+    s security posture while delivering on our commitments to customers</li> </ul>\
+    \ <h4>REQUIRED QUALIFICATIONS&nbsp;</h4> <ul> <li>6+ years experience designing\
+    \ and developing software</li> <li>Experience designing secure protocols and/or\
+    \ APIs</li> <li>Proficient in at least one of the following: C++, Rust, Golang</li>\
+    \ <li>3+ years experience securing complex systems</li> <li>Strong working knowledge\
+    \ of cryptographic primitives and best practices, including key management and\
+    \ certificates</li> <li>Experience performing security reviews and threat modeling</li>\
+    \ <li>Strong written and verbal communication skills; proven ability to negotiate\
+    \ and reach consensus</li> <li>Eligible to obtain and maintain an active U.S.\
+    \ Secret security clearance</li> </ul> <h4>PREFERRED QUALIFICATIONS&nbsp;</h4>\
+    \ <ul> <li>Proficient in two or more of the following: C++, Rust, Golang</li>\
+    \ <li>Experience integrating secure hardware, such as TPM or TEE</li> <li>Strong\
+    \ working knowledge of operating system security</li> <li>Experience securing\
+    \ Kubernetes deployments</li> </ul><div class=\"content-pay-transparency\"><div\
+    \ class=\"pay-input\"><div class=\"title\">US Salary Range</"
 deadline:
   date: null
   type: rolling
@@ -18,8 +82,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 3.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 3
+    evidence_match: 2
+    track_record_fit: 2
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

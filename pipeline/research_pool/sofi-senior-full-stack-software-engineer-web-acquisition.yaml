@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: WA - Seattle; CA - San Francisco HQ
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p><a href=\"https://www.sofi.com/sofi-employee-applicant-privacy-notice/\"\
+    \ target=\"_blank\"><strong>Employee Applicant Privacy Notice</strong></a></p>\
+    \ <p><strong>Who we are:</strong></p> <div> <p>Shape a brighter financial future\
+    \ with us.</p> <p>Together with our members, we\u2019re changing the way people\
+    \ think about and interact with personal finance.</p> <p>We\u2019re a next-generation\
+    \ financial services company and national bank using innovative, mobile-first\
+    \ technology to help our millions of members reach their goals. The industry is\
+    \ going through an unprecedented transformation, and we\u2019re at the forefront.\
+    \ We\u2019re proud to come to work every day knowing that what we do has a direct\
+    \ impact on people\u2019s lives, with our core values guiding us every step of\
+    \ the way. <strong>Join us to invest in yourself, your career, and the financial\
+    \ world.</strong></p> </div></div><p><strong>The role</strong></p> <p>We are seeking\
+    \ a highly motivated and experienced <em>Senior Full Stack Software Engineer to\
+    \ join the Member Growth - Web Acquisition</em> team. This team is part of Sofi\u2019\
+    s MarTech group and is dedicated to transforming the marketing technology landscape\
+    \ with the ultimate goal of accelerating SoFi\u2019s member growth. We will achieve\
+    \ this by developing and maintaining world-class, fast, personalized web experiences\
+    \ across organic and paid channels.&nbsp;</p> <p>You will own the full development\
+    \ lifecycle, building innovative solutions that directly influence our top-of-funnel\
+    \ user acquisitions. By integrating AI-driven capabilities and building scalable\
+    \ web platform, this role will help empower marketing and growth teams with self-serve\
+    \ content creation, SEO/GEO optimization, and experimentation on SoFi\u2019s logged-out\
+    \ web experiences, enabling faster iteration, stronger organic growth, and adaptability\
+    \ to an evolving digital ecosystem and platform constraints..&nbsp;</p> <p><strong>What\
+    \ you\u2019ll do</strong></p> <ul> <li>Drive product-led growth by creating seamless,\
+    \ personalized, and high-converting experiences on the critical funnels.</li>\
+    \ <li>Build web user flow including landing pages, customizations and partner\
+    \ site interactions for Affiliates Partners\u2019 user cases.&nbsp;</li> <li>Enable\
+    \ tracking, attribution and inbound/outbound data sharing for Affiliates Marketing\
+    \ by delivering and operating highly available and scalable services in a production\
+    \ environment.&nbsp;</li> <li>Develop testable and accessible features, leverage\
+    \ a/b experiment for measurement, identify and solve potential implementation\
+    \ issues.</li> <li>Generate, enhance, and promote ideas for useful new projects\
+    \ and technologies.</li> <li>Communicate effectively with project leads, product\
+    \ managers, and software developers on multiple projects.</li> <li>Contribute\
+    \ to technical roadmaps and engineering excellence, build and improve technical\
+    \ architectures across product features.</li> <li>Mentor other engineers, support\
+    \ healthy technical culture, and help the team grow.</li> </ul> <p>&nbsp;</p>\
+    \ <p><strong>What you\u2019ll need</strong></p> <ul> <li>Bachelor\u2019s degree,\
+    \ ideally in a technical field, but we understand great engineers come from a\
+    \ variety of different backgrounds and also consider relevant work experience.</li>\
+    \ <li>4+ years of experience in building distributed systems and large-scale services\
+    \ with full development lifecycles.&nbsp;</li> <li>Familiarity with containerization\
+    \ (e.g., Docker, Kubernetes), API framework (e.g. Spring or Spring Boot) and database\
+    \ (e.g. MySQL/PostgreSQL)</li> <li>2~4 years of experience in building user-facing\
+    \ web experience using React, JavaScript, PHP, and modern web frameworks.</li>\
+    \ <li>Solid understanding of web technologies including frontend/backend interaction,\
+    \ API design, common design patterns.&nbsp;</li> <li>Strong willingness to learn,\
+    \ act on feedback, collaborate, get things done.&nbsp;</li> <li>A solid sense\
+    \ of ownership&nbsp; to drive projects from inception to completion and accountability\
+    \ for problem solving and delivery.</li> <li>Be able to work efficiently and collaboratively\
+    \ in a dynamic production environment.</li> </ul> <p><strong>Nice to have</strong></p>\
+    \ <ul> <li>Experience in scaling highly available, mission-critical systems</li>\
+    \ <li>Direct experience in fintech, financial products, or consumer-facing platforms</li>\
+    \ <li>Exposure to performance optimization or reliability improvements in web\
+    \ applications</li> <li>Experience working with CMS platforms (e.g., WordPress)\
+    \ from a feature or migration perspective</li> <li>Experience with observability\
+    \ and analytics tools such as Datadog, Amplitude, and Snowflake.</li> </ul><div\
+    \ class=\"content-conclusion\"><div class=\"gmail_default\"><strong>Compensation\
+    \ and Benefits</strong></div> <div class=\"gmail_default\">The base pay range\
+    \ for this role is listed below. Final base pay offer will be determined based\
+    \ on individual factors such as the candidate\u2019s experience, skills, and location.&nbsp;</div>\
+    \ <div class=\"gmail_default\">&nbsp;</div> <div cl"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

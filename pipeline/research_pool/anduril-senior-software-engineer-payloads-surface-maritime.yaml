@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: Costa Mesa, California, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3>\
+    \ <p>The <strong>Maritime Software Engineering</strong> team builds, deploys,\
+    \ integrates, extends, and scales Anduril's software on Maritime platforms to\
+    \ deliver mission-critical capabilities to our customers. As the software engineers\
+    \ closest to Anduril customers and end-users, Mission Software Engineers solve\
+    \ technical challenges of operational scenarios while owning the end-to-end delivery\
+    \ of winning capabilities.</p> <h3>ABOUT THE JOB</h3> <p>As a <strong>Senior Software\
+    \ Engineer, Payloads</strong> you will solve a wide variety of problems involving\
+    \ networking, autonomy, systems integration, robotics, and more, while making\
+    \ pragmatic engineering tradeoffs along the way. You will be the leading edge\
+    \ of the Maritime Software team \u2014 working in a tight feedback loop with vehicle\
+    \ platform software engineers and ensuring that Anduril products seamlessly work\
+    \ together to achieve a variety of critical outcomes. Above all, Mission Software\
+    \ Engineers are driven by a \u201CWhatever It Takes\u201D mindset\u2014executing\
+    \ in an <em>expedient</em>, <em>scalable</em>, and <em>pragmatic</em> way while\
+    \ keeping the mission top-of-mind and making sound engineering decisions to deliver\
+    \ successful outcomes correctly, on-time, and with high quality.</p> <h4>WHAT\
+    \ YOU'LL DO</h4> <ul> <li>Design and implement trusted, safety critical Payload\
+    \ Management Systems that balance constraints, restrictions and requirements in\
+    \ a multi-stakeholder environment</li> <li>Design and implement scalable payload\
+    \ sub-systems including sensor processing, state estimation, contingency management,\
+    \ actuation, payload interfaces, and mission systems interfaces</li> <li>Develop\
+    \ real-time embedded software using an RTOS</li> <li>Develop device drivers and\
+    \ interfaces to a variety of sensors and actuators</li> <li>Create test and simulation\
+    \ fixtures that operate with both software-and hardware-in-the-loop</li> <li>Support\
+    \ payload manufacturing and deployment</li> </ul> <h4>REQUIRED QUALIFICATIONS</h4>\
+    \ <ul> <li>Bachelor\u2019s degree in Robotics, Mechatronics, Computer Science,\
+    \ Engineering, a relevant field, or equivalent experience</li> <li>Professional\
+    \ experience working as a Software Engineer with one or more domains and/or technologies\
+    \ of competence</li> <li>Systems programming skills including algorithms, data\
+    \ structures, concurrency and optimization</li> <li>Capacity learn and grow individually,\
+    \ while mentoring junior team members effectively, contributing to team cohesion\
+    \ and capacity</li> <li>Capacity to learn and grow individually, while mentoring\
+    \ junior team members effectively, contributing to team cohesion and capacity</li>\
+    \ <li>Experience troubleshooting and analyzing remotely deployed software systems</li>\
+    \ <li>Travel up to 30% of time to build, test, and deploy capabilities in the\
+    \ real world</li> <li>Eligible to obtain and maintain an active U.S. Top Secret\
+    \ security clearance</li> </ul> <h4>PREFERRED QUALIFICATIONS</h4> <ul> <li>Experience\
+    \ in design and development of embedded applications in autonomous vehicle software\
+    \ systems</li> <li>Experienced and proficient at writing C</li> <li>Familiarity\
+    \ with communications busses and protocols (e.g. CAN, CANFD, UART/RS232/RS422/RS485,\
+    \ SPI, QSPI, I2C, Ethernet, ARINC-825, ARINC-429, MIL-STD-1553, etc)</li> <li>Experience\
+    \ with an RTOS</li> <li>Experience with development of high assurance safety critical\
+    \ software applications</li> <li>Experience in developing interfaces to sensors\
+    \ and actuators</li> <li>Experience troubleshooting and analyzing remotely deployed\
+    \ software systems</li> <li>Experience working with and testing electrical and\
+    \ mechanical systems</li> <li>Experience with DO-178, IEC 61508, or similar certifications</li>\
+    \ <li>Familiarity with navigation and communications systems</li> <li>Desire to\
+    \ grow in to a Tech-Lead-Manager role, with responsibility for line management\
+    \ of engineers, in addition to delivery</li> <li>Experience working with RF systems</li>\
+    \ </ul><div class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"\
+    title\">US Salary Range</div><div class=\"pay-range\"><span>$191,000</span><span\
+    \ class=\"divider\">&mdash;</span><span>$253,000 USD</span></div></div></div><div\
+    \ class=\"content-conclusion\"><p><span data-contrast=\"auto\">"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

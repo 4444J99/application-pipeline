@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: Dublin, Ireland
   location_class: international
+  description: "<p>Toast is driven by building the all-in-one restaurant platform\
+    \ that helps restaurants operate their business, increase sales, engage guests,\
+    \ and keep employees happy. Our focus is on building the restaurant platform that\
+    \ helps restaurants adapt, take control, and get back to what they do best: building\
+    \ the businesses they love. And because our technology is purpose-built for restaurants,\
+    \ by restaurant people, restaurants can trust that we\u2019ll deliver on their\
+    \ needs for today while investing in experiences that will power their restaurant\
+    \ of the future.</p> <p><strong>A bit about the team:</strong></p> <p>The Modern\
+    \ Dining team is a unique team at Toast made up of engineers specialising in both\
+    \ full-stack and Android development. We are obsessed with rethinking the most\
+    \ painful and manual parts of the dining experience and transforming them into\
+    \ modern, delightful experiences for restaurant staff and their guests. Our focus\
+    \ is on building the restaurant of the future and helping Toast stand out as a\
+    \ thought leader in the restaurant space. As a highly visible, high-impact team,\
+    \ our work shapes how people experience dining and hospitality every day. If you\u2019\
+    re excited about working on meaningful problems and helping define the future\
+    \ of dining, this might be the team for you.</p> <p><strong>A day in the life\
+    \ (Responsibilities)</strong></p> <ul> <li>Work across software both in the restaurant\
+    \ and the cloud</li> <li>Navigate diverse codebases across disciplines to consistently\
+    \ deliver high-quality code within established timelines.</li> <li>Work directly\
+    \ with pilot customers (sometimes in the restaurant!) to ensure successful delivery\
+    \ and operation; incorporating their feedback and iterating quickly</li> <li>Collaborate\
+    \ with UX and PM on the definition and design of features&nbsp;</li> <li>Collaborate\
+    \ with teams across Toast</li> <li>Demonstrate a high degree of ownership in all\
+    \ aspects of development.</li> <li>Leverage cutting edge AI tools to enhance your\
+    \ development workflow, improve velocity, and help pioneer new approaches to building\
+    \ - contributing to a culture of innovation and productivity across the team.</li>\
+    \ <li>Mentor and coach other engineers</li> <li>Leverage cutting edge AI tools\
+    \ to enhance your development workflow, improve velocity, and help pioneer new\
+    \ approaches to building - contributing to a culture of innovation and productivity\
+    \ across the team.</li> </ul> <p><strong>What you'll need to thrive (Requirements)</strong></p>\
+    \ <ul> <li>High level of proficiency with Kotlin, Java or another object-oriented\
+    \ language, with a deep understanding of testing, quality &amp; best practices.</li>\
+    \ <li>High level of proficiency in frontend development, especially ReactJS&nbsp;</li>\
+    \ <li>Working experience with Android systems</li> <li>The ability to take complex\
+    \ business problems, break them down and create easy-to-use solutions</li> <li>Working\
+    \ experience of API principles e.g. REST</li> <li>Passionate about making users\
+    \ happy and seeing people use your product in the wild</li> <li>Adaptable to work\
+    \ in changing environments</li> </ul> <p><strong>Nice to haves;</strong></p> <ul>\
+    \ <li>Proficient in Android development&nbsp;&nbsp; <ul> <li> <ul> <li>Understanding\
+    \ of Activities, Fragments, Services.</li> <li>Reactivity.</li> <li>Dependency\
+    \ Injection with Dagger</li> <li>Android XML layouts</li> <li>Coroutines</li>\
+    \ </ul> </li> </ul> </li> </ul> <p data-pm-slice=\"1 1 []\"><strong>AI at Toast</strong></p>\
+    \ <p>At Toast, one of our company values is that we're hungry to build and learn.\
+    \ We believe learning new AI tools empowers us to build for our customers faster,\
+    \ more independently, and with higher quality. We provide these tools across all\
+    \ disciplines, from Engineering and Product to Sales and Support, and are inspired\
+    \ by how our Toasters are already driving real value with them. The people who\
+    \ thrive here are those who embrace changes that let us build more for our customers;\
+    \ it\u2019s a core part of our culture.</p> <p data-pm-slice=\"1 1 []\"><strong>Our\
+    \ Total Rewards Philosophy&nbsp;<br></strong>We strive to provide competitive\
+    \ compensation and benefits programs that help to attract, retain, and motivate\
+    \ the best and brightest people in our industry. Our total rewards package goes\
+    \ beyond great earnings potential and provides the means to a healthy lifestyle\
+    \ with the flexibility to meet Toasters\u2019 changing needs. Learn more about\
+    \ our benefits at&nbsp;<a href=\"https://careers.toasttab.com/toast-benefits\"\
+    >https://careers.toasttab.com/toast-benefits</a>.</p> <p data-pm-slice=\"1 1 []\"\
+    >#LI-HYBRID #BI-Hybrid</p><div class=\"content-conclusion\"><p><strong>How Toast\
+    \ Uses AI in its Hiring Process</strong></p> <p>Throughout the hiring process,\
+    \ our goal is to get to know you. We use AI tools to support our recruiters and\
+    \ interviewers with tasks like note-taking, summarization, and documentation of\
+    \ interviews to ensure they can be fully focused on your conversation. All hiring\
+    \ decisions are made by people.</p> <p><strong><strong data"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.5
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

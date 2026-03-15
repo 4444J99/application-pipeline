@@ -19,15 +19,16 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.3
+  score: 7.1
   identity_position: independent-engineer
   dimensions:
     mission_alignment: 9
     evidence_match: 10
     track_record_fit: 7
+    network_proximity: 3
+    strategic_value: 6
     financial_alignment: 5
     effort_to_value: 7
-    strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
   framing: Independent engineer building production-grade infrastructure at institutional scale (103 repos, 2,349+ tests, 128 GH Actions workflows). Specialist in removing developer friction through automated governance and scannable "Storefront" layers for complex systems.

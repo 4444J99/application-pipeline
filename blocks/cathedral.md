@@ -9,7 +9,7 @@ I am a creator of complex systems. My work is organized into an **eight-organ sy
 - **Thought**: 48 published essays (~810K words).
 
 ## Organ Breakdown
-- **Theory (I)**: 20 repos
-- **Art (II)**: 30 repos
-- **Commerce (III)**: 27 repos
-- **Meta**: 7 repos
+- **Theory (I)**: 113 repos
+- **Art (II)**: 113 repos
+- **Commerce (III)**: 113 repos
+- **Meta**: 113 repos

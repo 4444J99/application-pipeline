@@ -10,6 +10,62 @@ target:
   portal: greenhouse
   location: Reston, Virginia, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><p><strong>WHAT YOU\u2019\
+    LL DO </strong><br><br>Anduril is seeking an infrastructure engineer with deep\
+    \ security engineering experience and expertise in air-gapped environments to\
+    \ build and maintain resilient on-prem and cloud infrastructure supporting deployment\
+    \ of mission-critical software for high-security contexts.<br><br><strong>YOU\
+    \ WILL:</strong></p> <ul> <li>Design and implement security-hardened infrastructure\
+    \ for air-gapped and isolated computing environments supporting production systems</li>\
+    \ <li>Deploy and maintain STIG-compliant Linux systems</li> <li>Administer Kubernetes\
+    \ platforms (e.g., Rancher, KOTS) hosting enterprise applications in secure enclaves</li>\
+    \ <li>Develop Infrastructure-as-Code and automation solutions to streamline deployment\
+    \ and configuration management</li> <li>Conduct vulnerability assessments and\
+    \ remediation, managing patch processes for isolated environments</li> <li>Implement\
+    \ monitoring and auditing solutions to maintain visibility and ensure continuous\
+    \ compliance across secured systems</li> </ul> <p><strong>WHO YOU ARE</strong></p>\
+    \ <ul> <li>Bachelor's degree in Information Technology or related field with 3+\
+    \ years of infrastructure and cybersecurity experience in government or high-security\
+    \ environments</li> <li>Deep experience securing infrastructure in air-gapped\
+    \ and classified contexts, including STIG implementation and ATO achievement</li>\
+    \ <li>Proficient with cloud providers (e.g., AWS, GCP, Azure), Kubernetes administration\
+    \ (Rancher), and Linux security hardening</li> <li>Hands-on experience with automation\
+    \ (e.g., Ansible), Infrastructure-as-Code (e.g., Terraform), network engineering\
+    \ (VLAN management, segmentation), and vulnerability assessment tools</li> <li>Possess\
+    \ a desire to work on critical mission software that has a real-world impact</li>\
+    \ <li>Currently possesses and is able to maintain an active U.S. Top Secret security\
+    \ clearance</li> </ul><div class=\"content-pay-transparency\"><div class=\"pay-input\"\
+    ><div class=\"title\">US Salary Range</div><div class=\"pay-range\"><span>$129,000</span><span\
+    \ class=\"divider\">&mdash;</span><span>$171,000 USD</span></div></div></div><div\
+    \ class=\"content-conclusion\"><p><span data-contrast=\"auto\">The salary range\
+    \ for this role is an estimate based on a wide range of compensation factors,\
+    \ inclusive of base salary only. Actual salary offer may vary based on (but not\
+    \ limited to) work experience, education and/or training, critical skills, and/or\
+    \ business considerations. Highly competitive equity grants are included in the\
+    \ majority of full time offers; and are considered part of Anduril's total compensation\
+    \ package. Additionally, Anduril offers top-tier benefits for full-time employees,\
+    \ including:</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}\"\
+    >&nbsp;</span></p> <p><strong><span data-contrast=\"auto\">Healthcare Benefits&nbsp;</span></strong></p>\
+    \ <ul> <li><strong><span data-contrast=\"none\">US Roles:</span></strong><span\
+    \ data-contrast=\"none\">&nbsp;Comprehensive medical, dental, and vision plans\
+    \ at little to no cost to you.</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}\"\
+    >&nbsp;</span></li> <li><strong><span data-contrast=\"none\">UK &amp; AUS Roles:</span></strong><span\
+    \ data-contrast=\"none\">&nbsp;We cover full cost of medical insurance premiums\
+    \ for you and your dependents.</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}\"\
+    >&nbsp;</span></li> <li><strong><span data-contrast=\"auto\">IE Roles:</span></strong>\
+    \ <span data-contrast=\"none\">We offer an annual contribution toward your private\
+    \ health insurance for you and your dependents.</span><span data-ccp-props=\"\
+    {&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}\"\
+    >&nbsp;</span></li> </ul> <p><strong><span data-contrast=\"auto\">Additional Benefits</span></strong>"
 deadline:
   date: null
   type: rolling
@@ -18,8 +74,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

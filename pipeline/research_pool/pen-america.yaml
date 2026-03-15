@@ -1,0 +1,86 @@
+id: pen-america
+name: PEN America Writers Aid
+track: emergency
+status: research
+identity_position: community-practitioner
+outcome: null
+target:
+  organization: PEN America
+  url: https://pen.org
+  application_url: https://pen.org/writers-aid
+  portal: custom
+deadline:
+  date: '2026-03-16'
+  time: null
+  type: fixed
+amount:
+  value: 3500
+  currency: USD
+  type: lump_sum
+  benefits_cliff_note: SNAP-safe
+fit:
+  score: 5.8
+  original_score: 8.6
+  identity_position: community-practitioner
+  framing: Writer and community practitioner seeking emergency support for literary
+    work
+  lead_organs:
+  - V
+  - VI
+  - META
+  dimensions:
+    mission_alignment: 5
+    evidence_match: 7
+    track_record_fit: 7
+    network_proximity: 1
+    strategic_value: 5
+    financial_alignment: 9
+    effort_to_value: 10
+    deadline_feasibility: 3
+    portal_friction: 6
+submission:
+  effort_level: quick
+  blocks_used:
+    artist_statement: identity/2min
+    project_description: projects/organvm-system
+    queer_project: projects/krypto-velamen
+    methodology: methodology/process-as-product
+    evidence: evidence/work-samples
+  variant_ids:
+    cover_letter: cover-letters/grant-art-template
+  materials_attached:
+  - resumes/batch-03/pen-america/pen-america-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-02-14'
+  date_added: 2026-02-14
+  qualified: '2026-02-16'
+  materials_ready: '2026-03-03'
+  submitted: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+portal_fields:
+  fields:
+  - name: application_form
+  - name: writing_sample
+  - name: work_samples
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags: []
+source: 04-application-tracker.md
+deferral:
+  reason: below_threshold
+  note: Score below 9.0 precision minimum; deadline imminent but not worth diluting
+    pipeline focus
+  deferred_date: '2026-03-13'
+notes: Quarterly cycles for 2026. Portal for March 16 deadline typically opens 2-3
+  weeks prior. Check portal daily starting March 1.
+last_touched: '2026-03-03'
+status_meta:
+  reviewed_by: 4jp
+  reviewed_at: '2026-03-03'
+  review_note: autofix-unblocker

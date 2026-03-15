@@ -1,0 +1,109 @@
+id: mercury-senior-software-engineer-risk-ai-automation
+name: Mercury Senior Software Engineer - Risk (AI & Automation)
+track: job
+status: research
+outcome: null
+target:
+  organization: Mercury
+  url: https://boards.greenhouse.io/mercury
+  application_url: https://job-boards.greenhouse.io/mercury/jobs/5765913004
+  portal: greenhouse
+  location: San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada
+    or United States
+  location_class: us-remote
+  description: "<p>Every new customer who applies for a Mercury bank* account is like\
+    \ a new star igniting in the night sky. At first glance, it\u2019s a single spark.\
+    \ But look closer, and a constellation emerges\u2014identity and business verification,\
+    \ ownership and control checks, sanctions and adverse media screening, and fraud\
+    \ signals\u2014all pulling on one another with invisible gravity.</p> <p>The Risk\
+    \ Engineering team is the navigation system for this universe.</p> <p>Our job\
+    \ is to guide thousands of ambitious people safely through Mercury\u2019s orbit\
+    \ every day\u2014each with its own trajectory, risk profile, and story. We operate\
+    \ at escape velocity: moving fast, making confident decisions, and protecting\
+    \ the system without slowing down the builders who rely on us. When we do our\
+    \ work well, founders open bank accounts in delightful minutes, not days\u2014\
+    and never have to think about the complexity humming beneath the surface.</p>\
+    \ <p>Now we\u2019re entering a new era. We\u2019re building agentic AI systems\
+    \ that don\u2019t just score risk, but <em>reason about it</em>\u2014systems that\
+    \ can investigate, decide, escalate, and learn. These agents will help power and\
+    \ automate our KYC Refresh, EDD, ODD, and compliance workflows, taking our operations\
+    \ to the next level of efficiency and scale. The goal: less manual toil, earlier\
+    \ risk detection, sharper decisions, and experiences that feel almost magical\
+    \ in their simplicity.</p> <p>This is where you come in.</p> <p>We\u2019re looking\
+    \ for a <em>Senior Software Engineer</em> who is energized by the idea of bringing\
+    \ intelligent automation to life in real production systems. Someone who wants\
+    \ to design and build AI-driven workflows that can think in steps, adapt to new\
+    \ information, and orchestrate complex decisions across people, models, and services.\
+    \ Someone who sees compliance not as red tape, but as a fascinating systems problem\
+    \ at planetary scale.</p> <p>If you\u2019re excited to build agentic AI that matters\u2014\
+    software that protects millions of dollars, unlocks opportunities for founders\
+    \ around the world, and helps shape the future of banking\u2014we\u2019d love\
+    \ to explore the universe together.</p> <p>*\u200B\u200BMercury is a fintech company,\
+    \ not an FDIC-insured bank. Banking services provided through Choice Financial\
+    \ Group and Column N.A., Members FDIC.</p> <h3><strong>In this role, you will:</strong></h3>\
+    \ <ul> <li><strong>Drive AI Product Development in Risk</strong>: You\u2019ll\
+    \ help shape the architecture and implementation of AI-powered risk systems\u2014\
+    from application approvals to ongoing and enhanced due diligence\u2014turning\
+    \ messy, ambiguous signals into clear outcomes.&nbsp;</li> <li><strong>Collaborate\
+    \ Across Functions:</strong> You\u2019ll partner with Product, Design, Risk Strategy,\
+    \ Compliance, and Operations to translate evolving regulatory and operational\
+    \ needs into elegant, resilient software. And you\u2019ll push the frontier of\
+    \ what\u2019s possible when modern AI meets thoughtfully designed systems.</li>\
+    \ <li><strong>Lead Projects End-to-End:</strong> Drive technical projects from\
+    \ concept to production across the stack. Define solutions, analyze tradeoffs,\
+    \ make critical decisions, and deliver software that works today and is sustainable\
+    \ for tomorrow.</li> <li><strong>Craftsmanship:</strong> Write clear, testable,\
+    \ and maintainable code. Establish patterns and best practices that your team\
+    \ can follow, ensuring long-term scalability and reliability.</li> <li><strong>Drive\
+    \ Quality &amp; Scalability:</strong> Design extensible platform systems that\
+    \ create leverage, make balanced decisions on tech debt, plan careful rollouts,\
+    \ and own the quality of your work through post-launch monitoring.&nbsp;</li>\
+    \ <li><strong>Operational Excellence</strong>: Model a strong culture of operational\
+    \ excellence, holding a high bar for observability, reliability, and incident\
+    \ response.</li> <li><strong>Think Product, Not Just Code:</strong> Approach problems\
+    \ with a product mindset. You care as much about the business impact of what you\
+    \ build as the technical design.</li> <li><strong>Mentor &amp; Elevate:</strong>\
+    \ Coach engineers on your team by sharing patterns, practices, and critical thinking\
+    \ to raise the technical bar and foster a culture of sustainable engineering.</li>\
+    \ </ul> <h3><strong>You should have:</strong></h3> <ul> <li>5+ years of software\
+    \ engineering experience, preferably in Payments or Risk.</li> <li>Agentic AI\
+    \ expertise\u2014you\u2019ve built and launched applied Agentic AI products that\
+    \ have had strong business impact, shipping them from 0\u21921 and scaling 1\u2192\
+    10 in production environments.</li> <li>Proven success building large-scale distributed\
+    \ systems, ideally involving 3rd party integrations and decision automation.</li>\
+    \ <li>A mindset that balances urgency with craftsmanship: shipping fast, without\
+    \ cutting corners on quality engineering.</li> <li>A track record of raising the\
+    \ bar for quality and operational excellence, balancing shipping speed with technical\
+    \ excellence and observability.</li> <li>A mindset that balances urgency with\
+    \ craftsmanship: shipping fast, without cutting co"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-15'
+  posting_date: '2026-03-13'
+  date_added: '2026-03-15'
+  discovered: '2026-03-15T16:39:32.972149+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-15'

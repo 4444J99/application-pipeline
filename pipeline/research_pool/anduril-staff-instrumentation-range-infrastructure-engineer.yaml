@@ -10,6 +10,68 @@ target:
   portal: greenhouse
   location: Costa Mesa, California, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><p><strong>SUMMARY</strong><br><br>We\
+    \ are seeking a Staff Instrumentation &amp; Range Infrastructure Engineer to play\
+    \ a pivotal role in the design, development, and sustainment of our advanced test\
+    \ range infrastructure and instrumentation systems. This position requires a blend\
+    \ of systems engineering expertise, hands-on technical proficiency, and a deep\
+    \ understanding of complex test environments. You will be responsible for defining\
+    \ the architectural roadmap, integrating cutting-edge sensors, data acquisition\
+    \ systems, and telemetry solutions, and ensuring the robust operation of our mission-critical\
+    \ test assets.<br><br><strong>RESPONSIBILITIES</strong></p> <ul> <li><strong>Architectural\
+    \ Design &amp; Development:</strong></li> <ul> <li>Lead the architectural design,\
+    \ development, and evolution of comprehensive instrumentation systems and associated\
+    \ range infrastructure for complex test and evaluation systems.</li> <li>Define\
+    \ system requirements, specifications, and interface control documents (ICDs)\
+    \ for new and upgraded range capabilities.</li> <li>Develop long-term architectural\
+    \ roadmaps, technology insertion plans, and strategic upgrades to maintain state-of-the-art\
+    \ range capabilities.</li> </ul> <li><strong>Instrumentation Systems Engineering:</strong></li>\
+    \ <ul> <li>Select, integrate, and validate various instrumentation technologies\
+    \ including, but not limited to: telemetry (RF/Optical), radar, optics (high-speed\
+    \ cameras, IR, EO), GPS/PNT, environmental sensors, and acoustic arrays.</li>\
+    \ <li>Design and implement robust data acquisition (DAQ), processing, storage,\
+    \ and analysis pipelines to support real-time and post-test data needs.</li> <li>Develop\
+    \ and manage calibration procedures and ensure accuracy and traceability of all\
+    \ instrumentation.</li> </ul> <li><strong>Range Infrastructure Development:</strong></li>\
+    \ <ul> <li>Design and oversee the implementation of critical range infrastructure\
+    \ components, such as fiber optic networks, RF distribution systems, power distribution,\
+    \ communication systems, timing and synchronization, and environmental controls\
+    \ for instrumentation shelters.</li> <li>Perform RF Survey analysis to ensure\
+    \ noise floor is within desired tolerance ranges for various test sites and environments.</li>\
+    \ <li>Ensure network connectivity, cybersecurity, and data security for all instrumentation\
+    \ systems across the range.</li> <li>Coordinate with facility engineers and construction\
+    \ teams for physical infrastructure modifications and deployments.</li> </ul>\
+    \ <li><strong>Test &amp; Operations Support:</strong></li> <ul> <li>Collaborate\
+    \ closely with test directors, mission planners, range operators, and data analysts\
+    \ to understand requirements and provide technical solutions.</li> <li>Provide\
+    \ expert support during testing, anomaly resolution, and post-test data analysis.</li>\
+    \ <li>Ensure compliance with all relevant range safety, security, environmental,\
+    \ and regulatory requirements.</li> </ul> <li><strong>Technical Leadership &amp;\
+    \ Mentorship:</strong></li> <ul> <li>Provide technical leadership, guidance, and\
+    \ mentorship to junior engineers and cross-functional teams.</li> <li>Conduct\
+    \ trade studies, feasibility analyses, and risk assessments for proposed architectural\
+    \ changes and technology investments.</li> <li>Prepare detailed technical reports,\
+    \ presentations, and documentation for internal stakeholders and external customers.</li>\
+    \ </ul> </ul> <p><strong>REQUIRED QUALIFICATIONS</strong></p> <ul> <li>Bachelor's\
+    \ degree in Electrical Engineering, Aerospace Engineering, Systems Engineering,\
+    \ Computer Science, or a related technical field.</li> <li>12+ years of progressive\
+    \ experience in instrumentation systems architecture, leadership, or complex range\
+    \ infrastructure development, preferably within the defense or aerospace industry.</li>\
+    \ <li>Demonstrated experience in systems architecture development for complex\
+    \ real-time systems.</li> <li>Strong understanding of data acquisition (DAQ) principles,\
+    \ telemetry systems (e.g., IRIG 106), RF systems, and various sensor technologies.</li>\
+    \ <li>Proficiency with system modeling tools (e.g., SysML, MATLAB/Simulink), CAD\
+    \ software, and/or programming languages (e.g., Python, C++).</li> <li>Extensive\
+    \ experience in the desig"
 deadline:
   date: null
   type: rolling
@@ -18,8 +80,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: Helena, Montana
   location_class: unknown
+  description: "<div class=\"content-intro\"><p><a href=\"https://www.sofi.com/sofi-employee-applicant-privacy-notice/\"\
+    \ target=\"_blank\"><strong>Employee Applicant Privacy Notice</strong></a></p>\
+    \ <p><strong>Who we are:</strong></p> <div> <p>Shape a brighter financial future\
+    \ with us.</p> <p>Together with our members, we\u2019re changing the way people\
+    \ think about and interact with personal finance.</p> <p>We\u2019re a next-generation\
+    \ financial services company and national bank using innovative, mobile-first\
+    \ technology to help our millions of members reach their goals. The industry is\
+    \ going through an unprecedented transformation, and we\u2019re at the forefront.\
+    \ We\u2019re proud to come to work every day knowing that what we do has a direct\
+    \ impact on people\u2019s lives, with our core values guiding us every step of\
+    \ the way. <strong>Join us to invest in yourself, your career, and the financial\
+    \ world.</strong></p> </div></div><p><strong>**Preference will be given to those\
+    \ candidates in Helena, Montana</strong></p> <p>We are seeking a highly motivated\
+    \ and experienced Senior Engineer to join our SAFE team&nbsp; at SoFi. The team\u2019\
+    s mission is to build and support a suite of decisioning and event detection platforms\
+    \ and services that reduce fraud/risk and ensure AML compliance across all SoFi\
+    \ products, empowering the company to proactively detect and fight fraud while\
+    \ safeguarding customer trust.&nbsp;</p> <p>The team collaborates closely with\
+    \ cross-functional engineering groups and Risk business units to protect SoFi\
+    \ from fraud attacks. By proactively identifying and managing potential risks,\
+    \ they help reduce fraud exposure while providing a balanced, risk-aware experience\
+    \ for SoFi Members, fostering long-term trust and confidence.</p> <p>As a Senior\
+    \ Software Engineer on our team, you'll be tasked with building critical components\
+    \ and features. You will be involved in the entire product lifecycle, from ideation\
+    \ through building, testing, deploying, monitoring, and supporting mission-critical\
+    \ systems. The ideal candidate is someone with a strong sense of ownership and\
+    \ drive for delivery, a hunger for learning and is a good mentor and co-worker.&nbsp;</p>\
+    \ <p>&nbsp;</p> <p><strong><strong>What you\u2019ll do:</strong></strong></p>\
+    \ <ul> <li> <p>Full SDLC: Collaborate with cross-functional teams to design, architect,\
+    \ and implement end-to-end solutions that encompass both front-end and back-end\
+    \ components. Utilize your expertise in various programming languages, frameworks,\
+    \ and technologies to deliver high-quality and scalable software applications.\
+    \ Partner with senior leaders in the Anti-Money Laundering function to provide\
+    \ consultancy and translate the business needs to design and develop solutions,\
+    \ techniques, metrics, and dashboards for insights and data visualization.</p>\
+    \ </li> <li> <p>Back-end Development: Design and develop robust, scalable, and\
+    \ secure server-side applications and APIs. Work with databases and data models\
+    \ to manage and store information effectively. Build and maintain scalable data\
+    \ pipelines to support efficient data processing and analysis. Optimize performance\
+    \ and maintain system stability.</p> </li> <li> <p>Architecture and Design: Participate\
+    \ in architecture discussions and provide valuable insights to drive technical\
+    \ decisions. Ensure that software design patterns and best practices are followed\
+    \ throughout the development process.</p> </li> <li> <p>Testing and Quality Assurance:\
+    \ Conduct thorough testing of software components, including unit testing, integration\
+    \ testing, and end-to-end testing, to ensure the reliability and functionality\
+    \ of the applications.</p> </li> <li> <p>Continuous Improvement: Keep abreast\
+    \ of industry trends, best practices, and emerging technologies in software development.\
+    \ Advocate for process improvements and adopt new tools and technologies to enhance\
+    \ productivity and efficiency.</p> </li> <li> <p>Code Review and Mentorship: Review\
+    \ code contributions from junior developers and provide constructive feedback\
+    \ to promote code quality and maintain coding standards. Act as a mentor and share\
+    \ your knowledge and expertise with team members to foster their growth.</p> </li>\
+    \ <li> <p>Documentation: Create and maintain technical documentation for developed\
+    \ software, APIs, and processes to ensure comprehensive understanding and knowledge\
+    \ transfer.</p> </li> </ul> <p>&nbsp;</p> <p><strong><strong>What you\u2019ll\
+    \ need:</strong></strong></p> <ul> <li> <p>Bachelor\u2019s Degree, Computer Science\
+    \ Degree, or equivalent from a fully-accredited college or university</p> </li>\
+    \ <li> <p>3+ years of programming experience, ideally on a modern stack.</p> </li>\
+    \ <li> <p>Strong expertise in back-end technologies and programming languages,\
+    \ such as Java, Kotlin, Springboot, Node.js, Python, C#, Kafka, PostgreSQL, and\
+    \ we run on Kubernetes in a service-oriented architecture with over 100 services\
+    \ in production</p> </li> <li> <p>Knowledge of RESTful API design and implementation.</p>\
+    \ </li> <li> <p>Willingness to roll up your sleeves, collaborate with ot"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

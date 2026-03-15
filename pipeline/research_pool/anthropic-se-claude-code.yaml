@@ -1,0 +1,85 @@
+id: anthropic-se-claude-code
+name: Anthropic Software Engineer Claude Code
+track: job
+status: research
+identity_position: independent-engineer
+outcome: null
+target:
+  organization: Anthropic
+  url: https://anthropic.com
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/4816198008
+  portal: greenhouse
+deadline:
+  date: null
+  time: null
+  type: rolling
+amount:
+  value: 440000
+  currency: USD
+  type: salary
+  benefits_cliff_note: null
+fit:
+  score: 6.1
+  original_score: 7.0
+  identity_position: independent-engineer
+  framing: "Independent engineer building CLI developer tools and agentic systems\
+    \ \u2014 103 repos, 21K code files, 3.6K tests, 94 CI/CD pipelines"
+  lead_organs:
+  - III
+  - IV
+  dimensions:
+    mission_alignment: 6
+    evidence_match: 7
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 9
+    effort_to_value: 9
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: complex
+  blocks_used:
+    framing: framings/independent-engineer
+    evidence: evidence/differentiators
+    work_samples: evidence/work-samples
+    credentials: pitches/credentials-creative-tech
+    methodology: methodology/ai-conductor
+  variant_ids:
+    cover_letter: cover-letters/anthropic-se-claude-code
+  materials_attached:
+  - resumes/batch-01/anthropic-se-claude-code/anthropic-se-claude-code-resume.pdf
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-02-24'
+  date_added: 2026-02-24
+  qualified: '2026-02-24'
+  materials_ready: '2026-02-24'
+  submitted: '2026-02-24'
+  acknowledged: '2026-02-25'
+  interview: null
+  outcome_date: null
+portal_fields:
+  fields:
+  - name: resume
+  - name: cover_letter
+  - name: portfolio
+conversion:
+  response_received: true
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+  follow_up_count: 0
+tags:
+- job-tier-1
+- submit-order-1
+source: manual
+notes: "Salary range $320,000-$560,000.\nPRIORITY: Tier 1 \u2014 Apply Now (submit\
+  \ first). Highest fit by wide margin (6.3).\nCLI developer tools and agentic systems\
+  \ built daily \u2014 this pipeline, alchemize.py,\ngreenhouse_submit.py, the entire\
+  \ scripts/ directory IS the kind of work this role does.\nEvidence that lands: 21K\
+  \ code files, 3.6K tests, 94 CI/CD pipelines, agentic-titan (1,095 tests).\nHonest\
+  \ gaps: No team engineering, no production users. Scale and testing discipline are\
+  \ real.\n"
+last_touched: '2026-02-26'
+follow_up: []

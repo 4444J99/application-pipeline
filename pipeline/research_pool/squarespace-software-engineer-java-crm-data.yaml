@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: Dublin
   location_class: international
+  description: "<p>Our Client Engagement Group helps Squarespace users grow their\
+    \ businesses by allowing them to create, target, and automate marketing campaigns.\
+    \ We power one-time email sends, automated messages triggered by customer actions,\
+    \ and audience segmentation, helping users deliver the right message to the right\
+    \ people at the right time.</p> <p>We're looking for engineers to help build the\
+    \ systems behind campaign creation, audience management, segmentation, and automation.\
+    \ You'll collaborate with product managers, designers, and other engineers to\
+    \ deliver reliable and intuitive features that help our users engage their audiences.</p>\
+    \ <p>We are directly responsible for the full lifecycle of customer data, which\
+    \ includes:</p> <ol> <li><strong>Ingestion &amp; Aggregation:</strong> Designing\
+    \ and building <strong>low-latency, data pipelines</strong> to ingest, combine,\
+    \ and aggregate customer data from multiple internal and external sources.</li>\
+    \ <li><strong>Insight Generation:</strong> Leverage the aggregated data to develop\
+    \ <strong>advanced analytics</strong> and create comprehensive customer insights.</li>\
+    \ <li><strong>Compliance &amp; Security:</strong> Ensuring all data infrastructure,\
+    \ pipelines, and storage follows strict security standards and regulatory compliance\
+    \ requirements.</li> <li><strong>Distribution &amp; Access:</strong> Building\
+    \ and maintaining high-performance <strong>APIs</strong> to distribute these insights,\
+    \ powering the CRM frontends, internal reporting, and ultimately enabling data-driven\
+    \ decision-making for our customers.</li> </ol> <p>This is a hybrid role based\
+    \ in our Dublin office. You'll report to the Engineering Team Manager and partner\
+    \ with a collaborative, high-performing team.</p> <h2>You'll Get To\u2026</h2>\
+    \ <ul> <li><strong>Build:</strong> Low-latency, robust data pipelines to ingest,\
+    \ combine, and aggregate customer data from multiple internal and external sources,\
+    \ processing millions of data points every day.</li> <li><strong>Collaborate</strong>:\
+    \ Work with product managers to translate our goals into features that deliver\
+    \ value for our users.</li> <li><strong>Plan</strong>: Contribute to architecture\
+    \ discussions and design reviews, helping define how backend systems are built.</li>\
+    \ <li><strong>Own</strong>: Oversee features throughout the development lifecycle,\
+    \ from implementation to launch and maintenance.</li> </ul> <h2>Who We're Looking\
+    \ For</h2> <ul> <li>3+ years of experience building backend systems in a production\
+    \ environment.</li> <li>Proficiency in Java, or another object-oriented programming\
+    \ language.</li> <li>Experience with system design, algorithms, and distributed\
+    \ systems concepts.</li> <li>Experience with databases (Postgres, MongoDB, or\
+    \ similar)Mentoring less experienced engineers.</li> <li>Experience with data\
+    \ pipeline orchestration (DBT, AirFlow).</li> <li>Experience with data management,\
+    \ data modeling, and data strategy.</li> <li>Experience with data compliance and\
+    \ security</li> </ul> <h2>Benefits &amp; Perks</h2> <ul> <li>Health insurance\
+    \ with 100% covered premiums for you, your spouse or partner and your dependent\
+    \ children including medical, dental, and vision</li> <li>Life and Income Protection</li>\
+    \ <li>Fertility and adoption benefits</li> <li>Headspace mindfulness app subscription</li>\
+    \ <li>Global Employee Assistance Program</li> <li>Pension benefits with employer\
+    \ match</li> <li>Flexible paid time off</li> <li>26 weeks paid maternity leave\
+    \ &amp; 12 weeks paid paternity leave</li> <li>2 weeks paid family care leave</li>\
+    \ <li>Education reimbursement</li> <li>Employee donation match to community organizations</li>\
+    \ <li>7 Global Employee Resource Groups (ERGs)</li> <li>Free lunch and snacks</li>\
+    \ <li>Close proximity to cultural landmarks such as Dublin Castle and St. Patrick's\
+    \ Cathedral</li> </ul> <h2>About Squarespace</h2> <p>Squarespace is a design-driven\
+    \ platform helping entrepreneurs build brands and businesses online. We empower\
+    \ millions of customers in more than 200 countries and territories with all the\
+    \ tools they need to create an online presence, build an audience, monetize, and\
+    \ scale their business. Our suite of products range from websites, domains, ecommerce,\
+    \ and marketing tools, as well as tools for scheduling with Acuity and creating\
+    \ and managing social media presence with Bio Sites and Unfold. Our team of more\
+    \ than 1,700 is headquartered in New York City, with offices in Dublin, Ireland,\
+    \ and Aveiro, Portugal. For more information about our company, visit <a href=\"\
+    https://www.squarespace.com/about/careers\">https://www.squarespace.com/about/careers</a>.</p>\
+    \ <h2>Our Commitment</h2> <p>Today, more than a million people around the globe\
+    \ use Squarespace to share different perspectives and experiences with the world.\
+    \ Not only do we embrace and celebrate the diversity of our customers, but we\
+    \ also work toward the same in our employees. At Squarespace, we are committed\
+    \ to equal employment opportunity regardless of race, color, ethnicity, ancestry,\
+    \ religion, national or"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.5
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

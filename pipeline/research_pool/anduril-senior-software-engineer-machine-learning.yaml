@@ -1,0 +1,105 @@
+id: anduril-senior-software-engineer-machine-learning
+name: Anduril Senior Software Engineer, Machine Learning
+track: job
+status: research
+outcome: null
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5077336007?gh_jid=5077336007
+  portal: greenhouse
+  location: Washington, District of Columbia, United States
+  location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h3><strong>ABOUT\
+    \ THE TEAM</strong></h3> <p>The Discovery team at Anduril is at the forefront\
+    \ of incubating and maturing high-potential, software-defined, AI-native offerings\
+    \ that meet the toughest, newest challenges across hardware, software, space,\
+    \ and cyber domains. We're the architects of mission autonomy and mesh networking,\
+    \ delivering scalable hardware solutions that meet some of the most urgent national\
+    \ security needs. By working hand-in-hand with elite teams in Perception, AI,\
+    \ Motion Planning, Hardware, Test Engineering, Space, Networking, and Vehicle\
+    \ hardware, we craft cutting-edge, end-to-end systems that redefine mission success.</p>\
+    \ <h3><strong>ABOUT THE JOB</strong></h3> <p>As a Software Engineer in the Discovery\
+    \ team, you will tackle a diverse range of challenges in networking, autonomy,\
+    \ systems integration, robotics, and more. Your work will ensure seamless integration\
+    \ of Anduril products to achieve critical outcomes. You will work on a fast paced\
+    \ team and have opportunities to watch your creations operate in fielded deployment\
+    \ environments.&nbsp;Above all, Software Engineers at Anduril must embody a \u201C\
+    Whatever It Takes\u201D mindset\u2014executing tasks expediently, scalably, and\
+    \ pragmatically while prioritizing the mission. You will make sound engineering\
+    \ decisions to deliver high-quality outcomes on time. In addition to building\
+    \ the software, you will work directly with customers to deploy it.<br><br><strong>WHAT\
+    \ YOU\u2019LL DO</strong></p> <ul> <li>Work on challenging problems in a fast-paced\
+    \ environment from across our portfolio of programs and products</li> <li>Standing\
+    \ up the infrastructure, simulation solutions, and integrations for agent development</li>\
+    \ <li>Create data analysis and validation workflows</li> <li>Collaborate closely\
+    \ with customers, product designers, researchers, and other engineering teams\
+    \ to shape and build new software products and applications, optimizing for maximum\
+    \ value to the end user.</li> <li>Work with internal and external customers to\
+    \ understand simulation requirements and develop efficient modeling and simulation\
+    \ solutions for agent training</li> <li>Identify problems; solve them: implement\
+    \ robust, high-quality solutions</li> </ul> <h4><strong>REQUIRED QUALIFICATIONS</strong></h4>\
+    \ <ul> <li>Bachelor\u2019s Degree or higher in engineering, computer science,\
+    \ mathematics, physics, chemistry, or related technical discipline</li> <li>3\
+    \ - 8+ years working with a variety of programming languages such as Java, Python,\
+    \ C++, Rust, Go, JavaScript, etc.</li> <li>Experience building software solutions\
+    \ involving significant amounts of data processing and analysis</li> <li>Hands-on\
+    \ experience with Docker for building and managing containerized applications,\
+    \ deploying and scaling services on Kubernetes clusters, and configuring CI/CD\
+    \ pipelines</li> <li>Ability to quickly understand and navigate complex systems\
+    \ and established code bases</li> <li>A desire to work on critical software that\
+    \ has a real-world impact</li> </ul> <h4><strong>PREFERRED QUALIFICATIONS</strong></h4>\
+    \ <ul> <li>Demonstrated experience in machine learning training infrastructure\
+    \ and deployments</li> <li>Expertise in virtualization and containerization technologies</li>\
+    \ <li>Experience with SITL and HITL simulation infrastructure design, development\
+    \ and deployment for complex systems</li> </ul><div class=\"content-pay-transparency\"\
+    ><div class=\"pay-input\"><div class=\"title\">US Salary Range</div><div class=\"\
+    pay-range\"><span>$220,000</span><span class=\"divider\">&mdash;</span><span>$292,000\
+    \ USD</span></div></div></div><div class=\"content-conclusion\"><p><span data-contrast=\"\
+    auto\">The salary range for this role is an estimate based on a wide range of\
+    \ compensation factors, inclusive of base salary only. Actual salary offer may\
+    \ vary based on (but not limited to) work experience, education and/or training,\
+    \ critical skills, and/or business considerations. Highly competitive equity grants\
+    \ are included in the majority of full time offers; and are considered part of\
+    \ Anduril's total compensation package. Additionally, Anduril offers top-tier\
+    \ benefits for full-time employees, including:</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-15'
+  posting_date: '2026-03-13'
+  date_added: '2026-03-15'
+  discovered: '2026-03-15T16:39:32.975208+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-15'

@@ -1,0 +1,98 @@
+id: lyft-software-engineer-driver-earnings
+name: Lyft Software Engineer, Driver Earnings
+track: job
+status: research
+outcome: null
+target:
+  organization: Lyft
+  url: https://boards.greenhouse.io/lyft
+  application_url: https://app.careerpuck.com/job-board/lyft/job/8367642002?gh_jid=8367642002
+  portal: greenhouse
+  location: Seattle, WA
+  location_class: us-onsite
+  description: "<p>At Lyft, our purpose is to serve and connect. We aim to achieve\
+    \ this by cultivating a work environment where all team members belong and have\
+    \ the opportunity to thrive.</p> <p></p> <p>Lyft is looking for product-focused\
+    \ software engineers for our Driver Earnings Team. We are growing our team with\
+    \ people who want to build, improve, and incorporate technologies that enrich\
+    \ the lives of our community. As an engineer at Lyft, you'll collaborate with\
+    \ teams like product, data science, analytics, and operations on code that empowers\
+    \ us to iterate quickly while focusing on delighting our passengers and drivers.</p>\
+    \ <p>As a Software Engineer for Driver Earnings, you will work on multiple work\
+    \ streams that improve drivers' experience with rideshare. In addition, you will\
+    \ focus on incentivizing drivers to prefer Lyft, building differentiated pay products\
+    \ and features for the thing that drivers care the most about - their earnings.\
+    \ As an engineer on our team, you'll work hand in hand with various teams across\
+    \ Lyft, fostering collaboration and driving innovation to increase the adoption\
+    \ &amp; usage of Lyft.</p> <h2><strong>Responsibilities:</strong></h2> <ul> <li>Write\
+    \ well-crafted, well-tested, readable, maintainable code</li> <li>Participate\
+    \ in code reviews to ensure code quality and distribute knowledge&nbsp;</li> <li>Participate\
+    \ in our team's oncall rotation. Identify, triage, debug and resolve issues/bugs\
+    \ across our various applications and platforms</li> <li>Have the ability to explain\
+    \ the various trade offs made in decisions</li> <li>Manage project priorities,\
+    \ deadlines, and deliverables.</li> </ul> <h2><strong>Experience:</strong></h2>\
+    \ <ul> <li>BS/MS or equivalent in Computer Engineering, Computer Science, or related\
+    \ field or equivalent practical experience</li> <li>Experience with Python, Go</li>\
+    \ <li>Proficiency in object-oriented programming</li> <li>Experience working with\
+    \ data structures or algorithms&nbsp;</li> <li>Ability to work with a low-ego,\
+    \ highly collaborative, and cross-functional team</li> <li>Bonus points: experience\
+    \ pursuing side projects or open-source projects</li> </ul> <h2 class=\"p1\"><strong>Benefits:</strong></h2>\
+    \ <ul> <li>Great medical, dental, and vision insurance options with additional\
+    \ programs available when enrolled</li> <li>Mental health benefits</li> <li>Family\
+    \ building benefits</li> <li>Child care and pet benefits</li> <li>401(k) plan\
+    \ to help save for your future</li> <li>In addition to 12 observed holidays, salaried\
+    \ team members have discretionary paid time off, hourly team members have 15 days\
+    \ paid time off</li> <li>18 weeks of paid parental leave. Biological, adoptive,\
+    \ and foster parents are all eligible</li> <li>Subsidized commuter benefits</li>\
+    \ <li>Lyft Pink - Lyft team members get an exclusive opportunity to test new benefits\
+    \ of our Ridership Program</li> </ul> <p>Lyft is an equal opportunity employer\
+    \ committed to an inclusive workplace that fosters belonging. All qualified applicants\
+    \ will receive consideration for employment without regards to race, color, religion,\
+    \ sex, sexual orientation, gender identity, national origin, disability status,\
+    \ protected veteran status, age, genetic information, or any other basis prohibited\
+    \ by law. We also consider qualified applicants with criminal histories consistent\
+    \ with applicable federal, state and local law.</p> <p>Lyft highly values having\
+    \ employees working in-office to foster a collaborative work environment and company\
+    \ culture. This role will be in-office on a hybrid schedule \u2014 Team Members\
+    \ will be expected to work in the office 3 days per week on Mondays, Wednesdays,\
+    \ and Thursdays. Lyft considers working in the office at least 3 days per week\
+    \ to be an essential function of this hybrid role. Your recruiter can share more\
+    \ information about the various in-office perks Lyft offers. Additionally, hybrid\
+    \ roles have the flexibility to work from anywhere for up to 4 weeks per year.\
+    \ #Hybrid</p> <p>The expected base pay range for this position in the Seattle\
+    \ area is $99,360 - $124,200, not inclusive of potential equity offering, bonus\
+    \ or benefits. Salary ranges are dependent on a variety of factors, including\
+    \ qualifications, experience and geographic location. Your recruiter can share\
+    \ more information about the salary range specific to your working location and\
+    \ other factors during the hiring process.</p> <p>&nbsp;</p>"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-15'
+  posting_date: '2026-03-13'
+  date_added: '2026-03-15'
+  discovered: '2026-03-15T16:39:32.977931+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-15'

@@ -19,7 +19,7 @@ amount:
   type: fee
   benefits_cliff_note: null
 fit:
-  score: 8.9
+  score: 8.2
   original_score: 8.7
   identity_position: community-practitioner
   framing: Queer writer and community practitioner leveraging a 103-repository digital
@@ -31,11 +31,12 @@ fit:
   - META
   dimensions:
     mission_alignment: 10
-    evidence_match: 9
+    evidence_match: 10
     track_record_fit: 10
+    network_proximity: 1
+    strategic_value: 5
     financial_alignment: 9
     effort_to_value: 10
-    strategic_value: 5
     deadline_feasibility: 9
     portal_friction: 6
 submission:

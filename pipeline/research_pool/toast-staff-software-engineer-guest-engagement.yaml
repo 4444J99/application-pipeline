@@ -10,6 +10,68 @@ target:
   portal: greenhouse
   location: Dublin, Ireland
   location_class: international
+  description: "<p><strong>Staff Software Engineer, Guest Engagement</strong></p>\
+    \ <p>Toast is driven by building the restaurant platform that helps restaurants\
+    \ adapt, take control, and get back to what they do best: building the businesses\
+    \ they love. Because our technology is purpose-built for restaurants, by restaurant\
+    \ people - and increasingly shaped by AI in both what we build and how we build\
+    \ - restaurants can trust that we\u2019ll deliver on their needs for today while\
+    \ investing in the experiences that will power their restaurant of the future.</p>\
+    \ <p>We\u2019re seeking a Staff Software Engineer to work within our team focused\
+    \ on building an industry-leading Loyalty and Gift Card platform that helps restaurants\
+    \ drive guest engagement, boost retention and fuel growth. The team will help\
+    \ shape the future of how restaurants use technology to connect with their guests\
+    \ - increasingly through AI-powered tools and experiences that drive automation,\
+    \ personalization and smarter decision-making. You will be a key part of a high-impact,\
+    \ high-ownership engineering team solving complex challenges in a fast-moving\
+    \ product space. Your engineering leadership will be balancing technical excellence\
+    \ alongside a strong product mindset to solve for continuous growth within both\
+    \ the team and our product space.&nbsp;</p> <p><strong>A day in the life (Responsibilities)</strong></p>\
+    \ <ul> <li>Lead complex projects that deeply connect restaurants with their guests\
+    \ within a cross-functional collaborative and supportive environment.</li> <li>Design,\
+    \ build, deploy and maintain highly resilient and scalable systems critical to\
+    \ our customers\u2019 success.</li> <li>Be an awesome teammate who\u2019s all\
+    \ in on collaboration and collective success.</li> <li>Mentor and provide technical\
+    \ guidance to team members, leading technical discussions and promoting best engineering\
+    \ practices.</li> <li>Monitor feature rollouts to ensure customer success, iterating\
+    \ and improving when necessary.</li> <li>Advocate for best coding practices, raising\
+    \ the bar for yourself, your team, and the company.</li> </ul> <p><strong>What\
+    \ you'll need to thrive (Requirements)</strong></p> <ul> <li>Strong experience\
+    \ with Kotlin, Java or another object-oriented language.</li> <li>Thrive in a\
+    \ collaborative, team-based environment where features are shipped together.</li>\
+    \ <li>Proven track record of architecting and delivering reliable, distributed\
+    \ services to production.</li> <li>Lead technical discussions that foster open,\
+    \ honest dialogue while guiding the team toward clear decisions.</li> <li>Break\
+    \ down complex problems and communicate solutions clearly throughout cross-functional\
+    \ teams, including non technical stakeholders.</li> <li>Driven by impact and motivated\
+    \ by solving for the customer.</li> <li>Value personal and team growth while maintaining\
+    \ a strong focus on platform stability and delivery.</li> </ul> <p>&nbsp;<strong>Our\
+    \ Tech Stack:</strong></p> <ul> <li>A core of <strong>Java &amp; Kotlin</strong>\
+    \ based backend services.</li> <li><strong>React</strong> SPAs leveraging Tailwind,\
+    \ GraphQL and Storybook.</li> <li><strong>Android</strong> app built in Java &amp;\
+    \ Kotlin running in the restaurant.</li> <li><strong>PostgreSQL</strong> and <strong>Dynamodb</strong>\
+    \ for persistence.</li> <li>Pulsar, Camel and RabbitMQ for message-based integrations.</li>\
+    \ <li>And many more technologies that help us build a top class platform.</li>\
+    \ </ul> <p><strong>**This role requires a minimum of two days per week in our\
+    \ Dublin office**</strong></p> <p data-pm-slice=\"1 1 []\"><strong>#LI-HYBRID</strong></p>\
+    \ <p data-pm-slice=\"1 1 []\"><strong>#BI-Hybrid</strong></p> <p data-pm-slice=\"\
+    1 1 []\">&nbsp;</p> <p data-pm-slice=\"1 1 []\"><strong>AI at Toast</strong></p>\
+    \ <p>At Toast, one of our company values is that we're hungry to build and learn.\
+    \ We believe learning new AI tools empowers us to build for our customers faster,\
+    \ more independently, and with higher quality. We provide these tools across all\
+    \ disciplines, from Engineering and Product to Sales and Support, and are inspired\
+    \ by how our Toasters are already driving real value with them. The people who\
+    \ thrive here are those who embrace changes that let us build more for our customers;\
+    \ it\u2019s a core part of our culture.</p> <p data-pm-slice=\"1 1 []\"><strong>Our\
+    \ Total Rewards Philosophy&nbsp;<br></strong>We strive to provide competitive\
+    \ compensation and benefits programs that help to attract, retain, and motivate\
+    \ the best and brightest people in our industry. Our total rewards package goes\
+    \ beyond great earnings potential and provides the means to a healthy lifestyle\
+    \ with the flexibility to meet Toasters\u2019 changing needs. Learn more about\
+    \ our benefits at&nbsp;<a class=\"c-link\" href=\"https://careers.toasttab.com/toast-benefits\"\
+    \ target=\"_blank\" data-stringify-link=\"https://careers.toasttab.com/toast-benefits\"\
+    \ data-sk=\"tooltip_parent\" data-remove-tab-index=\"true\">https://careers.toasttab.com/toast-benefits</a>.</p><div\
+    \ class=\"content-conclusion\"><p><strong>How Toast Uses AI in its Hir"
 deadline:
   date: null
   type: rolling
@@ -18,8 +80,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.5
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

@@ -1,0 +1,105 @@
+id: stripe-software-engineer-product-security-data-platforms
+name: Stripe Software Engineer, Product Security Data Platforms
+track: job
+status: research
+outcome: null
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7545459
+  portal: greenhouse
+  location: Seattle
+  location_class: us-onsite
+  description: "<h2><strong>About the team</strong></h2> <p>The <strong>Product Security\
+    \ Data Platforms</strong> team is a newly established engineering team within\
+    \ Stripe Security. Our mission is to build the foundational infrastructure that\
+    \ provides our users with unprecedented visibility into the security posture of\
+    \ their Stripe integration. While Stripe is renowned for industry-leading payment\
+    \ protection, we are expanding our focus to provide a comprehensive security telemetry\
+    \ platform that helps businesses protect their entire digital ecosystem on Stripe.</p>\
+    \ <p>As a founding member of this team, you will be architecting a large-scale\
+    \ customer-facing security data pipeline and presentation layer. Much like modern\
+    \ security observability platforms and data lakes that have transformed cloud\
+    \ infrastructure, we are building an API-first service that transforms massive\
+    \ streams of behavioral data into actionable security intelligence. This team\
+    \ operates at the intersection of high-throughput data engineering and cybersecurity,\
+    \ creating the systems that will allow the world\u2019s most sophisticated companies\
+    \ to monitor, detect, and respond to threats in real-time.</p> <h2><strong>What\
+    \ you\u2019ll do</strong></h2> <p>As a Senior Software Engineer on this founding\
+    \ team, you will lead the technical design and implementation of our core security\
+    \ data pipelines. You will be responsible for defining how security signals are\
+    \ captured, processed at scale, and delivered to our users through robust, developer-friendly\
+    \ interfaces. If you have security domain knowledge, there are significant opportunities\
+    \ for you to help shape product vision.</p> <h3><strong>Responsibilities</strong></h3>\
+    \ <ul> <li><strong>Architect Scalable Foundations:</strong> Design and implement\
+    \ a highly available, low-latency pipeline capable of processing and augmenting\
+    \ millions of events per second into structured security telemetry.</li> <li><strong>Build\
+    \ API-First Products:</strong> Develop the core services and streaming APIs that\
+    \ enable enterprise customers to seamlessly ingest security signals into their\
+    \ own internal security operations centers and analytics tools.</li> <li><strong>Engineering\
+    \ Security Signals:</strong> Partner with security researchers and threat detection\
+    \ experts to build the logic that identifies anomalous behavior and surfaces high-fidelity\
+    \ security insights.</li> <li><strong>Define Technical Strategy:</strong> Lead\
+    \ the technical roadmap for the platform, making critical decisions on data modeling,\
+    \ storage strategies, and the abstraction layers that will support future security\
+    \ products.</li> <li><strong>Drive Engineering Excellence:</strong> As a senior\
+    \ leader, you will set the bar for code quality, system resilience, and operational\
+    \ maturity for a product that requires 99.99%+ availability.</li> <li><strong>Cross-functional\
+    \ Collaboration:</strong> Work closely with Stripe\u2019s core platform and data\
+    \ teams to leverage global infrastructure while ensuring security data remains\
+    \ isolated and protected.</li> </ul> <h2><strong>Who you are</strong></h2> <p>We\
+    \ are looking for an experienced backend and systems engineer who thrives on building\
+    \ new products from scratch. You should have a deep background in distributed\
+    \ systems and a passion for building platforms that empower other developers and\
+    \ security professionals.</p> <h3><strong>Minimum requirements</strong></h3> <ul>\
+    \ <li><strong>8+ years of professional software development experience</strong>,\
+    \ with a history of shipping and maintaining complex, large-scale systems.</li>\
+    \ <li><strong>Expertise in Data Engineering &amp; Distributed Systems:</strong>\
+    \ Deep experience building and operating high-throughput data pipelines (e.g.,\
+    \ Kafka, Flink, Spark, or similar streaming technologies).</li> <li><strong>Strong\
+    \ Programming Fundamentals:</strong> Significant experience in languages like\
+    \ Java, C++, or Rust.</li> <li><strong>System Design Leadership:</strong> A proven\
+    \ track record of designing robust, scalable architectures and leading cross-team\
+    \ technical initiatives from conception to launch.</li> <li><strong>Operational\
+    \ Mindset:</strong> Experience maintaining mission-critical services with high\
+    \ availability requirements, on-call rotation, and a strong focus on observability\
+    \ and debugging.</li> <li><strong>Communication &amp; Collaboration:</strong>\
+    \ Excellent technical writing skills for drafting design documents and the ability\
+    \ to mentor other engineers while collaborating with non-technical stakeholders.</li>\
+    \ </ul> <h3><strong>Preferred qualifications</strong></h3> <ul> <li><strong>Security\
+    \ Domain Knowledge:</strong> Prior experience building security analytics, threat\
+    \ detection systems, or observability platforms.</li> <li><strong>Platform Engineering:</strong>\
+    \ Experience building \"as-a-service\" infrastructure where the primary users\
+    \ are other engineers or external developers.</li> <li><strong>Cloud Native Infrastructure:</strong>\
+    \ Prior experience with AWS, Kubernetes, and infrastructure-as-code (Terraform"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-15'
+  posting_date: '2026-03-13'
+  date_added: '2026-03-15'
+  discovered: '2026-03-15T16:39:32.964534+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-15'

@@ -11,6 +11,69 @@ target:
   portal: greenhouse
   location: Remote
   location_class: remote-global
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><p>&nbsp;</p> <h3>ABOUT\
+    \ THE TEAM&nbsp;</h3> <p>The Multinational Digital Infrastructure (MDI) team is\
+    \ responsible for designing, deploying, and sustaining the sovereign and multinational\
+    \ classified systems that power Anduril\u2019s global Maritime and AUKUS missions.\
+    \ As a Multinational Digital Infrastructure &amp; Systems Engineer, you will architect\
+    \ and implement the classified environments, networks, gateways, and access pathways\
+    \ that enable U.S., Australian, and UK engineering and operational teams to collaborate\
+    \ at speed across IL5,IL6, and releasable environments. You will work across engineering,\
+    \ security, Mission Ops, and product teams to ensure our digital infrastructure\
+    \ is secure, scalable, and ready to support emerging mission demands.</p> <h3>ABOUT\
+    \ THE JOB&nbsp;</h3> <p>We are seeking an experienced Multinational Digital Infrastructure\
+    \ Senior Integration Engineer to join our growing team. This role is integral\
+    \ to the multinational integration of Anduril\u2019s digital infrastructure across\
+    \ Maritime platforms, classified networks, and sovereign/multinational environments,\
+    \ supporting critical bilateral and multilateral defense missions spanning the\
+    \ U.S., Australia, and the UK.</p> <h4>WHAT YOU\u2019LL DO&nbsp;</h4> <p>As a\
+    \ key engineer in this role, you will be responsible for influencing real-world\
+    \ deployment and sustaining the seamless integration of Anduril\u2019s Lattice\
+    \ OS and supporting systems in complex distributed environments. Specifically,\
+    \ you will:</p> <ul> <li>Lead Integration Initiatives: Embed Anduril\u2019s systems\u2014\
+    including Lattice OS, Maritime platforms, UUVs, and operational autonomy software\u2014\
+    within IL5/IL6 environments, sovereign cloud builds, and multinational Classified\
+    \ Defense Environments (CDE).</li> <li>Enable Maritime-Centric Applications: Integrate\
+    \ unmanned underwater vehicles (UUVs), seabed systems, command-and-control nodes,\
+    \ and other Maritime platforms with classified cloud systems and tactical networks.</li>\
+    \ <li>Develop Robust Architectures: Engineer and validate system designs that\
+    \ enable encrypted mesh networking, edge-to-cloud data pipelines, and operationally\
+    \ reliable command-and-control infrastructure.</li> <li>Collaborate Across Teams:\
+    \ Liaise across technical stacks\u2014including hardware, software, autonomy,\
+    \ and tactical networking teams\u2014to ensure consistent, dependable, and secure\
+    \ end-to-end mission system capabilities.</li> <li>Support Mission-Critical Events:\
+    \ Partner with government and allied stakeholders to facilitate field tests, exercises,\
+    \ and real-time system integration events, while rapidly resolving cross-functional\
+    \ technical challenges as needed.</li> <li>Streamline Processes: Generate critical\
+    \ technical documentation, including system integration test plans, deployment\
+    \ configurations, and repeatable workflows specifically tailored for allied and\
+    \ sovereign environments.</li> <li>Influence R&amp;D Roadmaps: Leverage in-field\
+    \ experience to inform the next generation of Lattice Maritime hardware/software\
+    \ capabilities, contributing to global mission readiness and technological advances.</li>\
+    \ <li>Act as a Senior Diplomatic Liaison: Represent Anduril\u2019s technical leadership\
+    \ during multinational partnerships, ensuring interoperable systems across U.S.,\
+    \ Australian, and UK defense frameworks.</li> </ul> <p>&nbsp;</p> <h4>REQUIRED\
+    \ QUALIFICATIONS</h4> <ul> <li>Clearance: Ability to obtain and maintain a U.S.\
+    \ Top Secret/Sensitive Compartmented Information (TS/SCI) security clearance.</li>\
+    \ <li>Education: Bachelor\u2019s degree in engineering, computer science, or a\
+    \ related technical discipline.</li> <li>Experience: At least 5+ years of experience\
+    \ in systems integration, mission systems engineering, or platform integration\
+    \ involving complex distributed systems.</li> <li>Technical Expertise: Demonstrated\
+    \ proficiency with:</li> <li>Tactical and classified network engineering.</li>\
+    \ <li>Systems integration and DevOps/DevSecOps tooling.</li> <li>Distributed systems\
+    \ and advanced digital infrastructure.</li> <li>Willingness to Travel: Flexibility\
+    \ to travel both domestically and internationally up to 50% of the time in support\
+    \ of integration, testing, and collaboration efforts across multinational partners.</li>\
+    \ <li>Eligible to obtain and maintain an active"
 deadline:
   date: null
   type: rolling
@@ -19,8 +82,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 4.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 5
+    evidence_match: 4
+    track_record_fit: 4
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

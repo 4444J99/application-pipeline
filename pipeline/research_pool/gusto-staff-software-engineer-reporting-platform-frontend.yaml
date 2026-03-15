@@ -1,0 +1,106 @@
+id: gusto-staff-software-engineer-reporting-platform-frontend
+name: Gusto Staff Software Engineer, Reporting Platform (Frontend)
+track: job
+status: research
+outcome: null
+target:
+  organization: Gusto
+  url: https://boards.greenhouse.io/gusto
+  application_url: https://job-boards.greenhouse.io/gusto/jobs/7654894
+  portal: greenhouse
+  location: San Francisco, CA;New York, NY
+  location_class: us-onsite
+  description: "<div class=\"content-intro\"><p style=\"line-height: 1.2;\">&nbsp;</p>\
+    \ <hr> <p><strong>About Gusto</strong></p> <p><span style=\"font-weight: 400;\"\
+    >At Gusto, we're on a mission to grow the small business economy. We handle the\
+    \ hard stuff\u2014like payroll, health insurance, 401(k)s, and HR\u2014so owners\
+    \ can focus on their craft and customers. With teams in Denver, San Francisco,\
+    \ and New York, we\u2019re proud to support more than 400,000 small businesses\
+    \ across the country, and we\u2019re building a workplace that represents and\
+    \ celebrates the customers we serve. Learn more about our </span><a href=\"https://gusto.com/about/careers/total-rewards\"\
+    ><span style=\"font-weight: 400;\">Total Rewards philosophy</span></a><span style=\"\
+    font-weight: 400;\">.&nbsp;</span></p></div><p><strong>About the Role:</strong></p>\
+    \ <p>The Reporting Platform team at Gusto empowers business owners to make better\
+    \ decisions with data and insights through reports and visualizations that span\
+    \ our product lines. As a member of our Reporting Platform team, you will create\
+    \ and maintain reports and enable engineering teams to deposit and consume data\
+    \ from our reporting platform. The Platform organization at Gusto is in its early\
+    \ stages of building foundational components that can be reused consistently across\
+    \ our product lines. This is an exciting opportunity for engineers passionate\
+    \ about platform engineering and data at scale. We are looking for a talented\
+    \ frontend-leaning full stack software engineer with experience building and maintaining\
+    \ SaaS-based solutions.</p> <p><strong>Here\u2019s what you\u2019ll do day-to-day:</strong></p>\
+    \ <ul> <li data-renderer-start-pos=\"976\">Collaboratively design and implement\
+    \ reports and visualizations across Gusto\u2019s product suite in our Ruby on\
+    \ Rails/React-based stack.</li> <li data-renderer-start-pos=\"1112\">Migrate reports\
+    \ from our legacy infrastructure (Rails/<span data-highlighted=\"true\" data-vc=\"\
+    highlighted-text\"><span class=\"_kqswh2mm\"><span class=\"_5pioz8co _189e1dm9\
+    \ _1il9buyh _19lc184f _d0altlke\" data-testid=\"definition-highlighter\">MySQL</span></span></span>)\
+    \ to our new reporting platform (Rails/Cube/Clickhouse).</li> <li data-renderer-start-pos=\"\
+    1231\">Frequently demonstrate your work to your team and the broader engineering\
+    \ organization.</li> <li data-renderer-start-pos=\"1322\">Improve the quality\
+    \ of our offerings by participating in support rotations and maintaining a prioritized\
+    \ backlog of technical debt and SRE improvements.</li> <li data-renderer-start-pos=\"\
+    1478\">Lead and mentor fellow engineers in tackling complex technical challenges\
+    \ at scale.</li> <li data-renderer-start-pos=\"1565\">Prototype, iterate, and\
+    \ launch new features quickly and efficiently.</li> <li data-renderer-start-pos=\"\
+    1637\">Foster a collaborative environment that encourages creativity and innovation,\
+    \ building products our customers love.</li> </ul> <p><strong>Here\u2019s what\
+    \ we're looking for:</strong></p> <ul> <li data-renderer-start-pos=\"1790\">7+\
+    \ years of professional software development experience. You have been a technical\
+    \ owner for initiatives that have spanned multiple development teams.</li> <li>Highly\
+    \ proficient in HTML, CSS, JavaScript, React, TypeScript</li> <li data-renderer-start-pos=\"\
+    1957\">Very strong understanding of SaaS fundamentals. You know how to build and\
+    \ ship SaaS products safely and monitor them in production. You are a go-to person\
+    \ in your organization for complex technical issues. You can take highly ambiguous\
+    \ problems and clarify them based on business context. You are experienced at\
+    \ breaking down these projects, scaffolding them for teams, and helping them execute\
+    \ their achievement.</li> <li data-renderer-start-pos=\"2395\">Members of our\
+    \ platform teams must be excellent communicators. You will spend time interacting\
+    \ with technical counterparts across engineering to understand their problems\
+    \ and help them onboard our solutions.</li> <li data-renderer-start-pos=\"2630\"\
+    >Technologies change over time. To succeed in this role, you must jump into unfamiliar\
+    \ areas and quickly develop expertise. We are looking for someone excited about\
+    \ learning new domains and quickly building deep expertise in our technical systems\
+    \ and how our business works.</li> <li data-renderer-start-pos=\"2935\">You value\
+    \ breaking down problems and quickly deploying work to production to gather learnings\
+    \ and iterate.</li> </ul> <div> <div> <p>Our cash compensation amount for this\
+    \ role is targeted at $200,000/yr to $247,000/yr for San Francisco and New York\
+    \ City. Stock equity is additional. Final offer amounts are determined by multiple\
+    \ factors including candidate experience and expertise and may vary from the amounts\
+    \ listed above.</p> </div> </div><div class=\"content-conclusion\"><hr> <p><span\
+    \ style=\"font-weight: 400;\">Gusto has physical office spaces in Denver, San\
+    \ Francisco, and New York City. Employees who are based in those locations will\
+    \ be expected to work from the office on designated days approximately <strong>2-3\
+    \ days </strong>per week (or more depending on role). The sa"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-15'
+  posting_date: '2026-03-14'
+  date_added: '2026-03-15'
+  discovered: '2026-03-15T16:39:32.974006+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-15'

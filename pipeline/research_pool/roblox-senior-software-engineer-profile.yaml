@@ -1,0 +1,105 @@
+id: roblox-senior-software-engineer-profile
+name: Roblox Senior Software Engineer, Profile
+track: job
+status: research
+outcome: null
+target:
+  organization: Roblox
+  url: https://boards.greenhouse.io/roblox
+  application_url: https://careers.roblox.com/jobs/7678482?gh_jid=7678482
+  portal: greenhouse
+  location: San Mateo, CA, United States
+  location_class: us-onsite
+  description: "<div class=\"content-intro\"><p><span style=\"font-weight: 400;\"\
+    >Every day, tens of millions of people come to Roblox to explore, create, play,\
+    \ learn, and connect with friends in 3D immersive digital experiences\u2013 all\
+    \ created by our global community of developers and creators.&nbsp;</span></p>\
+    \ <p><span style=\"font-weight: 400;\">At Roblox, we\u2019re building the tools\
+    \ and platform that empower our community to bring any experience that they can\
+    \ imagine to life. Our vision is to reimagine the way people come together, from\
+    \ anywhere in the world, and on any device.</span><strong> </strong><span style=\"\
+    font-weight: 400;\">We\u2019re on a mission to connect a billion people with optimism\
+    \ and civility, and looking for amazing talent to help us get there.&nbsp;</span></p>\
+    \ <p><span style=\"font-weight: 400;\">A career at Roblox means you\u2019ll be\
+    \ working to shape the future of human interaction, solving unique technical challenges\
+    \ at scale, and helping to create safer, more civil shared experiences for everyone.</span></p></div><p>As\
+    \ a Senior Software Engineer on the Profile team, you will build systems and applications\
+    \ across the stack and enable players, creators, influencers, and brands to create\
+    \ a compelling identity on Roblox.</p> <p>Your work will power the Roblox ecosystem,\
+    \ helping people recognize and connect with friends &amp; interests on Roblox,\
+    \ express themselves, and discover &amp; engage with the best of Roblox through\
+    \ their connections. You will own critical features used by millions of users\
+    \ daily, such as profiles, names, online presence, coplay tools, and social proof,\
+    \ as well as develop new zero-to-one features. You will drive company-level objectives\
+    \ for user engagement.</p> <p>If you are an experienced developer who loves to\
+    \ write code and ship user-facing features, you\u2019ll be right at home with\
+    \ our product-focused team. You\u2019ll be a fullstack engineer with a focus on\
+    \ frontend.</p> <p><strong>You Will:</strong></p> <ul> <li>Ship features and work\
+    \ across the stack with an end-to-end understanding of our features. This role\
+    \ will be frontend leaning.&nbsp;</li> <li>Collaborate with other engineering,\
+    \ product, and design teams to define and build platform features to enable users\
+    \ to express their identities&nbsp;</li> <li>Drive individual projects from end\
+    \ to end, ensuring they are well-planned, executed efficiently, run experiments,\
+    \ and deliver meaningful impact.</li> </ul> <p><strong>You Have:</strong></p>\
+    \ <ul> <li>5+ years of experience building full-stack systems, including backend,\
+    \ APIs, and frontend applications.</li> <li>Bachelor's degree or higher in Computer\
+    \ Science or a related field, or equivalent experience.</li> <li>Familiar with\
+    \ A/B testing and experience on a Product team (Bonus)</li> </ul> <p><strong>You\
+    \ Are:</strong></p> <ul> <li>Proactive: You operate with a sense of urgency, initiating\
+    \ conversations and workflow that pushes team projects and people forward</li>\
+    \ <li>Scrappy: You are willing to dive into any tech stack to solve problems,\
+    \ and can easily adapt to any situation when the need arises and come up with\
+    \ the right solution.</li> <li>A product owner: You champion for changes that\
+    \ align with the needs of our users</li> </ul><div class=\"content-pay-transparency\"\
+    ><div class=\"pay-input\"><div class=\"description\"><p>For roles that are based\
+    \ at our headquarters in San Mateo, CA: The starting base pay for this position\
+    \ is as shown below. The actual base pay is dependent upon a variety of job-related\
+    \ factors such as professional background, training, work experience, location,\
+    \ business needs and market demand. Therefore, in some circumstances, the actual\
+    \ salary could fall outside of this expected range. This pay range is subject\
+    \ to change and may be modified in the future. All full-time employees are also\
+    \ eligible for equity compensation and for benefits as described on <strong><a\
+    \ href=\"https://careers.roblox.com/total-rewards\">this page</a></strong>.</p></div><div\
+    \ class=\"title\">Annual Salary Range</div><div class=\"pay-range\"><span>$243,290</span><span\
+    \ class=\"divider\">&mdash;</span><span>$295,250 USD</span></div></div></div><div\
+    \ class=\"content-conclusion\"><p>Roles that are based in an office are onsite\
+    \ Tuesday, Wednesday, and Thursday, with optional presence on Monday and Friday\
+    \ (unless otherwise noted).</p> <p>Roblox provides equal employment opportunities\
+    \ to all employees and applicants for employment and prohibits discrimination\
+    \ and harassment of any type without regard to race, color, religion, age, sex,\
+    \ national origin, disability status, genetics, protected veteran status, sexual\
+    \ orientation, gender identity or expression, or any other characteristic protected\
+    \ by federal, state or local laws. Roblox also provides reasonable accommodations\
+    \ to candidates with qualifying disabilities or religious beliefs during the recruiting\
+    \ process.</p></div>"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-15'
+  posting_date: '2026-03-14'
+  date_added: '2026-03-15'
+  discovered: '2026-03-15T16:39:32.983772+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-15'

@@ -10,6 +10,66 @@ target:
   portal: greenhouse
   location: Costa Mesa, California, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h3>ABOUT THE JOB</h3>\
+    \ <p>Anduril\u2019s Cloud Infrastructure Engineering team is the foundation upon\
+    \ which our advanced defense products are built, deployed, and secured. We are\
+    \ seeking a mission-driven Cloud Infrastructure Engineer to take a leading role\
+    \ in designing and implementing world-class defensive controls. This is a high-impact\
+    \ role with the autonomy to shape security architecture and protect the technology\
+    \ that is changing the future of defense.</p> <h4>WHAT YOU\u2019LL DO&nbsp;</h4>\
+    \ <ul> <li>Design and Own Security Architecture: Architect, build, and deploy\
+    \ robust, scalable security controls for our corporate, development, and production\
+    \ cloud environments (AWS, Azure, GCP).</li> <li>Automate Everything: Develop\
+    \ and automate infrastructure-as-code (IaC) to manage and scale our cloud deployments\
+    \ securely and efficiently.</li> <li>Proactively Defend: Continuously monitor,\
+    \ identify, and remediate security weaknesses and configuration drift across our\
+    \ entire cloud footprint.</li> <li>Be a Force Multiplier: Partner with infrastructure,\
+    \ application, and product teams to embed security best practices into their workflows\
+    \ and secure environments holding mission-critical data.</li> <li>Enable Scale\
+    \ and Reliability: Engineer systems and processes that ensure our platforms are\
+    \ highly available, resilient, and prepared for rapid growth.</li> <li>Serve as\
+    \ a Cloud Security Expert: Act as the go-to subject matter expert for teams across\
+    \ Anduril, providing guidance, mentorship, and paved-road solutions for building\
+    \ securely in the cloud.</li> </ul> <h4>REQUIRED QUALIFICATIONS&nbsp;</h4> <ul>\
+    \ <li>Proven experience building and securing complex cloud environments, typically\
+    \ gained through 3+ years in a Cloud Security, DevOps, or SRE role.</li> <li>Deep\
+    \ proficiency in at least one major cloud provider (AWS, Azure, or GCP).</li>\
+    \ <li>Strong hands-on experience with Infrastructure as Code (e.g., Terraform,\
+    \ CloudFormation, Bicep).</li> <li>Solid programming/scripting ability in one\
+    \ or more languages (e.g., Python, Go, Rust).</li> <li>Firm understanding of public\
+    \ cloud networking principles (e.g., VPCs, subnets, routing, security groups).</li>\
+    \ <li>Must be a U.S. Person and eligible to obtain and maintain a U.S. Secret\
+    \ security clearance.</li> </ul> <h4>PREFERRED QUALIFICATIONS</h4> <ul> <li>Experience\
+    \ hardening and monitoring Kubernetes clusters (EKS, GKE, AKS).</li> <li>Experience\
+    \ with cloud security posture management (CSPM) or threat detection tooling.</li>\
+    \ <li>Familiarity with CI/CD pipelines and securing the software supply chain.</li>\
+    \ <li>Knowledge of compliance frameworks such as FedRAMP, SOC 2, or CMMC.</li>\
+    \ </ul><div class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"\
+    title\">US Salary Range</div><div class=\"pay-range\"><span>$146,000</span><span\
+    \ class=\"divider\">&mdash;</span><span>$194,000 USD</span></div></div></div><div\
+    \ class=\"content-conclusion\"><p><span data-contrast=\"auto\">The salary range\
+    \ for this role is an estimate based on a wide range of compensation factors,\
+    \ inclusive of base salary only. Actual salary offer may vary based on (but not\
+    \ limited to) work experience, education and/or training, critical skills, and/or\
+    \ business considerations. Highly competitive equity grants are included in the\
+    \ majority of full time offers; and are considered part of Anduril's total compensation\
+    \ package. Additionally, Anduril offers top-tier benefits for full-time employees,\
+    \ including:</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}\"\
+    >&nbsp;</span></p> <p><strong><span data-contrast=\"auto\">Healthcare Benefits&nbsp;</span></strong></p>\
+    \ <ul> <li><strong><span data-contrast=\"none\">US Roles:</span></strong><span\
+    \ data-contrast=\"none\">&nbsp;Comprehensive medical, dental, and vision plans\
+    \ at little to no cost to you.</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}\"\
+    >&nbsp;</span></li> <li><strong><span data-contrast=\"none\">UK &amp; AUS Roles:</span></strong><span\
+    \ data-contrast=\"none\">&nbsp;We cover full cost "
 deadline:
   date: null
   type: rolling
@@ -18,8 +78,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 3.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 3
+    evidence_match: 2
+    track_record_fit: 2
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

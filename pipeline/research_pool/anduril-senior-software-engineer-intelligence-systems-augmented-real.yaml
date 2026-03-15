@@ -10,6 +10,63 @@ target:
   portal: greenhouse
   location: Reston, Virginia, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h3><strong>ABOUT\
+    \ THE TEAM</strong></h3> <p>Anduril Intelligence Systems (AIS) is focused on positioning\
+    \ Anduril as a lead provider of specialized engineering and next generation national\
+    \ security products for Intelligence Community (IC) customers. We work within\
+    \ the IC to understand their requirements, shape their concepts of operation,\
+    \ and deliver exquisite capability across their problem set. We aim to develop\
+    \ and deploy critically needed capabilities that address our customers\u2019 most\
+    \ pressing national security requirements.</p> <h3><strong>WHAT YOU'LL DO</strong></h3>\
+    \ <ul> <li>Lead prototyping initiatives to experiment with revolutionary mixed\
+    \ reality concepts that set new industry standards</li> <li>Design, development,\
+    \ and enhance game engine components tailored for augmented reality applications</li>\
+    \ <li>Optimize rendering pipelines, physics simulations, and real-time interactions\
+    \ to deliver high-performance immersive experiences</li> <li>Collaborate with\
+    \ AR/VR specialists to integrate sensors, displays, and spatial mapping capabilities</li>\
+    \ <li>Implement robust pipelines that transform raw sensor data into actionable,\
+    \ immersive visuals.</li> <li>Partner with product managers, hardware engineers,\
+    \ and subject matter experts to translate mission requirements into practical,\
+    \ scalable solutions</li> <li>Evaluate and integrate emerging technologies and\
+    \ frameworks within the game engine ecosystem</li> </ul> <h4>REQUIRED QUALIFICATIONS</h4>\
+    \ <ul> <li>Proficiency in C++ or C# and familiarity with graphics APIs (DirectX,\
+    \ OpenGL, or Vulkan)</li> <li>Experience working in large codebases to solve complex\
+    \ problems in a matter of days and weeks, not months</li> <li>Excellent communication\
+    \ skills and ability to work cross functionally with stakeholders and Executive\
+    \ leaders</li> <li>Work full time, on-site with fellow Anduril team members.</li>\
+    \ <li>Currently possesses and is able to maintain an active U.S. Secret clearance.</li>\
+    \ </ul> <h4>PREFERRED QUALIFICATIONS</h4> <ul> <li>Linux development experience</li>\
+    \ <li>Experience in game development</li> </ul><div class=\"content-pay-transparency\"\
+    ><div class=\"pay-input\"><div class=\"title\">US Salary Range</div><div class=\"\
+    pay-range\"><span>$191,000</span><span class=\"divider\">&mdash;</span><span>$253,000\
+    \ USD</span></div></div></div><div class=\"content-conclusion\"><p><span data-contrast=\"\
+    auto\">The salary range for this role is an estimate based on a wide range of\
+    \ compensation factors, inclusive of base salary only. Actual salary offer may\
+    \ vary based on (but not limited to) work experience, education and/or training,\
+    \ critical skills, and/or business considerations. Highly competitive equity grants\
+    \ are included in the majority of full time offers; and are considered part of\
+    \ Anduril's total compensation package. Additionally, Anduril offers top-tier\
+    \ benefits for full-time employees, including:</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}\"\
+    >&nbsp;</span></p> <p><strong><span data-contrast=\"auto\">Healthcare Benefits&nbsp;</span></strong></p>\
+    \ <ul> <li><strong><span data-contrast=\"none\">US Roles:</span></strong><span\
+    \ data-contrast=\"none\">&nbsp;Comprehensive medical, dental, and vision plans\
+    \ at little to no cost to you.</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}\"\
+    >&nbsp;</span></li> <li><strong><span data-contrast=\"none\">UK &amp; AUS Roles:</span></strong><span\
+    \ data-contrast=\"none\">&nbsp;We cover full cost of medical insurance premiums\
+    \ for you and your dependents.</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}\"\
+    >&nbsp;</span></li> <li><strong><span data-contrast=\"auto\">IE Roles:</span></strong>\
+    \ <span data-contrast=\"none\">We offer an annual contribution toward your private\
+    \ health insurance for you and your dependents.</span><span data-ccp-props=\"\
+    {&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;"
 deadline:
   date: null
   type: rolling
@@ -18,8 +75,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

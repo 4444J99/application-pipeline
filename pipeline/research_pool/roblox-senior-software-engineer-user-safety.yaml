@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: San Mateo, CA, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p><span style=\"font-weight: 400;\"\
+    >Every day, tens of millions of people come to Roblox to explore, create, play,\
+    \ learn, and connect with friends in 3D immersive digital experiences\u2013 all\
+    \ created by our global community of developers and creators.&nbsp;</span></p>\
+    \ <p><span style=\"font-weight: 400;\">At Roblox, we\u2019re building the tools\
+    \ and platform that empower our community to bring any experience that they can\
+    \ imagine to life. Our vision is to reimagine the way people come together, from\
+    \ anywhere in the world, and on any device.</span><strong> </strong><span style=\"\
+    font-weight: 400;\">We\u2019re on a mission to connect a billion people with optimism\
+    \ and civility, and looking for amazing talent to help us get there.&nbsp;</span></p>\
+    \ <p><span style=\"font-weight: 400;\">A career at Roblox means you\u2019ll be\
+    \ working to shape the future of human interaction, solving unique technical challenges\
+    \ at scale, and helping to create safer, more civil shared experiences for everyone.</span></p></div><p><strong>WHY\
+    \ SAFETY?</strong></p> <p>At Roblox, we strive to connect a billion people with\
+    \ optimism and civility, and the Safety organization's mission is to become the\
+    \ leader in civil immersive online communities. We systematically and proactively\
+    \ detect, remove, and prevent problematic content and behavior, and we make Roblox\
+    \ accounts secure and free from compromise. We also keep the platform compliant\
+    \ for changing regulations and growth markets. We cover a broad area of the tech\
+    \ spectrum, including machine learning, experimentation, automation, highly scalable\
+    \ distributed backend systems, detection workflows, and AI-powered text filters.\
+    \ Aligned and partnering with product teams, we use this tool belt to discover\
+    \ new opportunities, influence and shape the product roadmap and prioritization,\
+    \ build safety products, and measure the impact on our community of users and\
+    \ developers. In doing so, we keep Roblox safe, civil, and inclusive, and we foster\
+    \ positive relationships between people around the world.</p> <p><strong>WHY USER\
+    \ SAFETY?</strong><strong><br></strong><strong><br></strong>At Roblox, we believe\
+    \ that Safety and Civility are fundamental to fostering a vibrant, creative community.\
+    \ As a Senior Software Engineer on User Safety, you will be responsible for designing\
+    \ and building large scale systems for abuse reporting, a critical part of keeping\
+    \ Roblox safe.&nbsp; You will work on services with substantial scaling needs\
+    \ in the path of many critical user journeys, and you will feel a true sense of\
+    \ ownership and responsibility in thoughtfully and fairly protecting our users,\
+    \ while carefully balancing freedom and civility.</p> <p><strong>You Will:</strong></p>\
+    \ <ul> <li>Build large-scale services for intaking, enriching, routing, and decisioning\
+    \ abuse reports.</li> <li>Work closely with UX design, research, data science,\
+    \ and product managers to substantially improve the efficacy, scale, and trustworthiness\
+    \ of abuse reporting.</li> <li>Help evolve our moderation infrastructure to meet\
+    \ new safety and compliance requirements.</li> <li>Leverage ML to tackle difficult\
+    \ problems at scale.</li> <li>Work with a tightly-knit, high-performing, diverse,\
+    \ and energetic cross-functional product engineering team with a strong sense\
+    \ of camaraderie.</li> </ul> <p><strong>You Have:</strong></p> <ul> <li>6+ Experience\
+    \ with scalable infrastructure and distributed systems</li> <li>6+ Experience\
+    \ in Golang/C++/C#/Java/etc.</li> <li>Experience with modern microservice architecture.</li>\
+    \ <li>Capability and willingness in being predominantly a product engineer but\
+    \ occasionally serve a platform role with internal partners.</li> <li>Interest\
+    \ with Safety systems.</li> <li>A growth mindset.</li> <li>Preferred - Experience\
+    \ with the Trust &amp; Safety domain</li> <li>Preferred - Experience with AI/ML\
+    \ at scale</li> </ul> <p><strong>You Are:</strong></p> <ul> <li><strong>An owner:\
+    \ </strong>Taking responsibility for not just your own work, but the work of your\
+    \ teammates, and ensuring that our users are safe on Roblox.</li> <li><strong>A\
+    \ learner: </strong>Constantly seeking knowledge to grow yourself and your impact.</li>\
+    \ <li><strong>Independent:</strong> Requiring little guidance and are generally\
+    \ able to resolve yourself.</li> <li><strong>Compassionate: </strong>To the needs\
+    \ and motivations of our users and creators - not just those who are exposed to\
+    \ violative content, but also those who are responsible for the abuse.</li> <li><strong>Team\
+    \ Oriented: </strong>You lift up your peers and find ways to make the team stronger</li>\
+    \ </ul><div class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"\
+    description\"><p>For roles that are based at our headquarters in San Mateo, CA:\
+    \ The starting base pay for this position is as shown below. The actual base pay\
+    \ is dependent upon a variety of job-related factors such as professional background,\
+    \ training, work experience, location, business needs and market demand. Therefore,\
+    \ in some circumstances"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

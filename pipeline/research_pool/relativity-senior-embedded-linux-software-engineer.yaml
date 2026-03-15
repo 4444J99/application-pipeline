@@ -10,6 +10,70 @@ target:
   portal: greenhouse
   location: Long Beach, California
   location_class: unknown
+  description: "<div class=\"content-intro\"><p><span style=\"font-family: arial,\
+    \ helvetica, sans-serif; font-size: 10pt;\">At Relativity Space, we\u2019re building\
+    \ rockets to serve today\u2019s needs and tomorrow\u2019s breakthroughs. Our&nbsp;Terran\
+    \ R vehicle will deliver customer payloads to orbit, meeting the growing demand\
+    \ for launch&nbsp;capacity. But that\u2019s just the start. Achieving commercial\
+    \ success with Terran R will unlock new&nbsp;opportunities to advance science,\
+    \ exploration, and innovation, pioneering progress that reaches beyond&nbsp;the\
+    \ known.</span></p> <p><span style=\"font-family: arial, helvetica, sans-serif;\
+    \ font-size: 10pt;\">Joining Relativity means becoming part of something where\
+    \ autonomy, ownership, and impact exist at every level. Here, you're not just\
+    \ executing tasks; you're solving problems that haven\u2019t been solved before,\
+    \ helping develop a rocket, a factory, and a business from the ground up. Whether\
+    \ you\u2019re in propulsion, manufacturing, software, avionics, or a corporate\
+    \ function, you\u2019ll collaborate across teams, shape decisions, and see your\
+    \ work come to life in record time. Relativity is a place where creativity and\
+    \ </span><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"\
+    >technical rigor go hand in hand, and your voice will help define the stories\
+    \ we\u2019re writing together. Now&nbsp;is a unique moment in time where it\u2019\
+    s early enough to leave your mark on the product, the process, and&nbsp;the culture,\
+    \ but far enough along that Terran R is tangible and picking up momentum. The\
+    \ most&nbsp;meaningful work of your career is waiting. Join us.</span></p></div><p><span\
+    \ style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><strong><span\
+    \ data-contrast=\"none\">About the Team:&nbsp;</span></strong></span></p> <p><span\
+    \ style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">The Vehicle\
+    \ Software team develops the safety-critical software that runs on Terran R. The\
+    \ work spans a distributed, real-time control system operating under extreme conditions\
+    \ like Mach 5 atmospheric flight, with a deployment pace that allows you to see\
+    \ your code run on rocket engines daily. The team is building new system architecture\
+    \ from the ground up and just as importantly, testing, releasing, and deploying\
+    \ it. You don\u2019t need an aerospace background: what matters is experience\
+    \ with high-reliability software for complex systems. This is a rare opportunity\
+    \ to shape the foundation of Terran R\u2019s software stack while directly influencing\
+    \ performance, reliability, and flight success.</span></p> <p><span style=\"font-family:\
+    \ arial, helvetica, sans-serif; font-size: 10pt;\"><strong><span data-contrast=\"\
+    none\">About the Role:</span></strong></span></p> <p><span style=\"font-family:\
+    \ arial, helvetica, sans-serif; font-size: 10pt;\">We are seeking an experience\
+    \ Embedded Software Engineer to help build the software platform powering our\
+    \ next generation networking and camera products. In this role, you will develop\
+    \ software running on embedded Linux systems that interface with high performance\
+    \ hardware, sensors and networking components. You will work across the stack\
+    \ from Linux user space applications and services to low level platform integration\
+    \ to deliver reliable and safety critical systems.</span></p> <p><span style=\"\
+    font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><strong><span data-contrast=\"\
+    none\">About You:</span></strong></span></p> <ul> <li style=\"font-family: arial,\
+    \ helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family: arial,\
+    \ helvetica, sans-serif; font-size: 10pt;\">5+ years of experience developing\
+    \ software for embedded systems</span></li> <li style=\"font-family: arial, helvetica,\
+    \ sans-serif; font-size: 10pt;\"><span style=\"font-family: arial, helvetica,\
+    \ sans-serif; font-size: 10pt;\">Strong proficiency in C/C++&nbsp;</span></li>\
+    \ <li style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><span\
+    \ style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Experience\
+    \ developing applications on embedded Linux platforms</span></li> <li style=\"\
+    font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family:\
+    \ arial, helvetica, sans-serif; font-size: 10pt;\">Experience debugging using\
+    \ tools such as gdb, strace, perf, tcpdump, etc</span></li> <li style=\"font-family:\
+    \ arial, helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family:\
+    \ arial, helvetica, sans-serif; font-size: 10pt;\">Familiarity with Linux networking\
+    \ and system programming</span></li> <li style=\"font-family: arial, helvetica,\
+    \ sans-serif; font-size: 10pt;\"><span style=\"font-family: arial, helvetica,\
+    \ sans-serif; font-size: 10pt;\">Experience working with cross-compiled systems\
+    \ and build systems</span></li> <li style=\"font-family: arial, helvetica, sans-serif;\
+    \ font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif;\
+    \ font-size: 10pt;\">Strong debugging skills across hardware and software boundaries</span></li>\
+    \ </ul> <p><span style=\"font-family: arial, helvetica, sans-serif; fon"
 deadline:
   date: null
   type: rolling
@@ -18,8 +82,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

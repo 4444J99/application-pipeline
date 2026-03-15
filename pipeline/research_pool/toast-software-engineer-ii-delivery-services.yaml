@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: Canada (remote)
   location_class: international
+  description: "<p><strong>Location</strong>: Remote within Canada \u2014 applicants\
+    \ must be based in Ontario, BC, Alberta, or Manitoba.</p> <p>&nbsp;</p> <p><strong>Bready*\
+    \ to make a change?</strong></p> <p>Toast is driven by building the restaurant\
+    \ platform that helps restaurants adapt, take control, and get back to what they\
+    \ do best: building the businesses they love.</p> <p>The Toast Delivery Services\
+    \ team enables restaurants to build thriving, profitable first party delivery\
+    \ channels while growing Toast's consumer business. As a Software Engineer II,\
+    \ you'll build seamless integration with third-party delivery providers, contributing\
+    \ to robust and scalable engineering solutions, helping restaurants offer direct\
+    \ delivery through Toast\u2019s Online Ordering channels. This is an exciting\
+    \ opportunity to contribute to a high-impact service focused on optimizing experiences\
+    \ for our restaurants and the customers who order from them.</p> <p><strong>About\
+    \ this roll* (Responsibilities)</strong></p> <ul> <li>Contribute to the implementation\
+    \ and evolution of our Delivery services, delivering well-designed solutions that\
+    \ support the team's OKRs</li> <li>Owns delivery of end-to-end user stories from\
+    \ conception to production, breaking down work into well-defined and sequenced\
+    \ tasks.</li> <li>Partners with the team and platform engineering teams to iteratively\
+    \ improve quality metrics, confidence, and resiliency for specific components</li>\
+    \ <li>Delivers technical decisions for features within owned components, incorporating\
+    \ feedback from code reviews, testing, and production monitoring</li> <li>Collaborate\
+    \ with and support other engineers through code reviews, pair programming, and\
+    \ knowledge sharing</li> <li>Work effectively with Product and Design partners\
+    \ to ensure user stories meet customer needs and security compliance requirements</li>\
+    \ </ul> <p><strong>Do you have the right ingredients*? (Requirements)</strong></p>\
+    \ <ul> <li>2+ years hands-on experience building end to end features using Java\
+    \ / Kotlin / Scala (or other object oriented languages) <span style=\"text-decoration:\
+    \ underline;\"><strong>and</strong></span> modern frontend frameworks like React\
+    \ / Angular / Vue, or similar&nbsp;</li> <li>Demonstrated ability to own and deliver\
+    \ complete features or components with minimal guidance</li> <li>Experience contributing\
+    \ to large scale product applications with consideration for functional and non-functional\
+    \ requirements</li> <li>Understanding of distributed systems concepts; Familiarity\
+    \ with event-driven architectures, DynamoDB, or modern state management patterns</li>\
+    \ <li>Respectful, empathetic, and humble</li> <li>Has a growth mindset with an\
+    \ emphasis on continuous learning and improvement</li> <li>Contribute efficiently\
+    \ with high code quality and maintain platform stability</li> </ul> <p>&nbsp;</p>\
+    \ <p data-pm-slice=\"1 1 []\"><strong>AI at Toast</strong></p> <p>At Toast, one\
+    \ of our company values is that we're hungry to build and learn. We believe learning\
+    \ new AI tools empowers us to build for our customers faster, more independently,\
+    \ and with higher quality. We provide these tools across all disciplines, from\
+    \ Engineering and Product to Sales and Support, and are inspired by how our Toasters\
+    \ are already driving real value with them. The people who thrive here are those\
+    \ who embrace changes that let us build more for our customers; it\u2019s a core\
+    \ part of our culture.</p> <p data-pm-slice=\"1 1 []\"><strong>Our Total Rewards\
+    \ Philosophy&nbsp;<br></strong>We strive to provide competitive compensation and\
+    \ benefits programs that help to attract, retain, and motivate the best and brightest\
+    \ people in our industry. Our total rewards package goes beyond great earnings\
+    \ potential and provides the means to a healthy lifestyle with the flexibility\
+    \ to meet Toasters\u2019 changing needs. Learn more about our benefits at&nbsp;<a\
+    \ class=\"c-link\" href=\"https://careers.toasttab.com/toast-benefits\" target=\"\
+    _blank\" data-stringify-link=\"https://careers.toasttab.com/toast-benefits\" data-sk=\"\
+    tooltip_parent\" data-remove-tab-index=\"true\">https://careers.toasttab.com/toast-benefits</a>.\\\
+    </p> <p data-pm-slice=\"1 1 []\">&nbsp;</p> <p data-pm-slice=\"1 1 []\">&nbsp;</p><div\
+    \ class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"description\"\
+    ><p><span style=\"font-weight: 400;\">The base salary range for this role is listed\
+    \ below. The starting salary will be determined based on skills and experience.\
+    \ </span>In addition to base salary, our total rewards components include cash\
+    \ compensation (overtime, bonus/commissions, if eligible), benefits, and equity\
+    \ (if eligible).</p></div><div class=\"title\">Pay Range</div><div class=\"pay-range\"\
+    ><span>$95,000</span><span class=\"divider\">&mdash;</span><span>$145,000 CAD</span></div></div></div><div\
+    \ class=\"content-conclusion\"><p><strong>How Toast Uses AI in its Hiring Process</strong></p>\
+    \ <p>Throughout the hiring process, our goal is to get to know you. We use AI\
+    \ tools to support our recruiters and interviewers with tasks like note-taking,\
+    \ sum"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.5
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

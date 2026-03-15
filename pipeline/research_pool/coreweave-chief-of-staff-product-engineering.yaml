@@ -10,6 +10,67 @@ target:
   portal: greenhouse
   location: 'Sunnyvale, CA '
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><div> <div> <div class=\"gmail_quote\"\
+    > <div> <div><span id=\"m_1770241969069985273m_-2746164444908759431gmail-docs-internal-guid-131e4fb0-7fff-b4e9-ff50-e8cf32449b1b\"\
+    >CoreWeave is The Essential Cloud for AI\u2122. Built for pioneers by pioneers,\
+    \ CoreWeave delivers a platform of technology, tools, and teams that enables innovators\
+    \ to build and scale AI with confidence. Trusted by leading AI labs, startups,\
+    \ and global enterprises, CoreWeave combines superior infrastructure performance\
+    \ with deep technical expertise to accelerate breakthroughs and turn compute into\
+    \ capability. Founded in 2017, CoreWeave became a publicly traded company (Nasdaq:\
+    \ CRWV) in March 2025. Learn more at&nbsp;<a href=\"http://www.coreweave.com/\"\
+    \ target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?q=http://www.coreweave.com&amp;source=gmail&amp;ust=1762613132717000&amp;usg=AOvVaw3D-UOhNaqEvF5BEWxjYyAU\"\
+    >www.coreweave.com</a>.</span></div> </div> </div> </div> </div></div><p>CoreWeave\
+    \ is looking for a motivated Chief of Staff to join our growing team. At <a href=\"\
+    https://www.coreweave.com/\">CoreWeave</a>, we are building the next generation\
+    \ public cloud for accelerated workloads.&nbsp; This role will provide direct\
+    \ support to the SVP of Engineering, ensuring the smooth operation of day-to-day\
+    \ activities and enabling the SVP to focus on strategic priorities. The ideal\
+    \ candidate will be a detail-oriented, experienced assistant or project manager\
+    \ with the demonstrated ability to respond effectively and efficiently while maintaining\
+    \ flexibility, composure and a good sense of humor.</p> <p>The Chief of Staff\
+    \ to the Product &amp; Engineering Executive office&nbsp; serves as a strategic\
+    \ and operational force multiplier, enabling the executive staff&nbsp; to operate\
+    \ at maximum effectiveness across a fast-moving AI Cloud organization. This role\
+    \ blends strategic planning, operational rigor, and cross-functional coordination\
+    \ to drive alignment, execution, and accountability across product, engineering,\
+    \ and partner teams. The Chief of Staff acts as an extension of the executive\
+    \ office for Product &amp; Engineering \u2014shaping agendas, managing business\
+    \ and operating cadences, ensuring follow-through on priorities, and helping translate\
+    \ strategy into measurable outcomes.</p> <p>The individual in this role must understand\
+    \ business priorities, demonstrate the ability to proactively anticipate needs\
+    \ and drive improvements to build capacity for the leadership team. The successful\
+    \ candidate will possess the ability to complete complex tasks quickly with little\
+    \ to no guidance, and react with appropriate urgency to situations that require\
+    \ a quick turnaround.&nbsp; The ideal candidate must be able to work successfully\
+    \ in a team environment and build effective working relationships inside and outside\
+    \ the group.</p> <p>&nbsp;</p> <p><strong>Responsibilities:</strong></p> <p><strong>Strategic\
+    \ Planning &amp; Agenda Management</strong><strong><br><br></strong></p> <ul>\
+    \ <li>Build and manage the executive\u2019s agendas for staff meetings, operating\
+    \ reviews, product and engineering forums, and leadership offsites.</li> <li>Identify,\
+    \ frame, and prioritize key topics and decisions to ensure meetings are outcome-oriented\
+    \ and aligned with strategic goals.</li> <li>Anticipate upcoming decisions and\
+    \ proactively surface risks, tradeoffs, and dependencies.<strong>Business &amp;\
+    \ Operating Cadence Coordination</strong></li> </ul> <p><strong>&nbsp;</strong></p>\
+    \ <ul> <li>Design, maintain, and continuously improve business and operating cadences\
+    \ across product and engineering (e.g., weekly staff meetings, quarterly planning,\
+    \ roadmap reviews, and retrospectives).</li> <li>Coordinate inputs, pre-reads,\
+    \ and outputs across teams to ensure consistent, high-quality execution of these\
+    \ cadences.<br><br></li> </ul> <p><strong>OKR &amp; Performance Management</strong><br><br></p>\
+    \ <ul> <li>Own executive-level OKR reporting, ensuring clarity, accuracy, and\
+    \ narrative around progress, risks, and mitigation plans.</li> <li>Drive accountability\
+    \ by following up on underperforming or at-risk initiatives and facilitating course\
+    \ correction.<br><br></li> </ul> <p><strong>Execution &amp; Follow-Through</strong><strong><br><br></strong></p>\
+    \ <ul> <li>Capture key decisions and action items from executive and leadership\
+    \ meetings.</li> <li>Ensure clear ownership, deadlines, and visibility for all\
+    \ critical action items.</li> <li>Track execution and proactively intervene to\
+    \ remove blockers or escalate issues when needed.<br><br></li> </ul> <p><strong>Special\
+    \ Projects &amp; Strategic Initiatives</strong><strong><br><br></strong></p> <ul>\
+    \ <li>Lead or support high-priority, cross-functional initiatives on behalf of\
+    \ the executive office.<br><br></li> <li>Conduct analysis, develop recommendations,\
+    \ and drive execution on strategic projects related to product strategy, engineering\
+    \ execution, or organizational effectiveness.<br><br></li> <li>Serve as a trusted\
+    \ thought partner to the executive"
 deadline:
   date: null
   type: rolling
@@ -18,8 +79,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 4.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 5
+    evidence_match: 4
+    track_record_fit: 4
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: Reston, Virginia, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3>\
+    \ <p>Anduril Intelligence Systems (AIS) is focused on positioning Anduril as a\
+    \ lead provider of specialized engineering and products for Intelligence Community\
+    \ (IC) customers. We work within the IC to understand their requirements, shape\
+    \ their concepts of operation, and deliver exquisite capability across their problem\
+    \ set. We aim to develop and deploy critically needed capabilities that address\
+    \ our customers\u2019 most pressing national security requirements.<br><br><strong>ABOUT\
+    \ THE JOB</strong><br>Anduril is seeking a technical writer to partner with our\
+    \ intelligence systems engineering team to generate and maintain engineering and\
+    \ developer-focused technical documentation. The team strongly believes that documentation\
+    \ is a key part of the product development process. In this role you will work\
+    \ closely with developers and users to understand how products are developed as\
+    \ well as how they are used, identify gaps in understanding, and use documentation\
+    \ to close the gap. You will be play a foundational role in setting the tone and\
+    \ quality bar on written artifacts.<br><br>With our focus on defense and national\
+    \ security, product docs play a critical role in ensuring that front-line decision\
+    \ makers have the best tools and information possible about Anduril systems. As\
+    \ a Technical Writer, your mission is to make this process as easy and seamless\
+    \ as possible, with exceptionally well-written and presented artifacts, while\
+    \ building world-class infrastructure and tooling for creating and maintaining\
+    \ our documentation content at scale.<br>Written content artifacts under this\
+    \ charter may include things like: compliance, process documentation, user guides,\
+    \ release notes, troubleshooting guides, and API documentation. You will partner\
+    \ with engineering, product management, and the business across all phases of\
+    \ product development \u2014 from ground truth need-finding, to execution, to\
+    \ field testing and validation \u2014 to ensure that the user has the right documentation\
+    \ available<br><br>This is an opportunity to join a small and start-up like team\
+    \ to help shape Anduril\u2019s product documentation experience from the ground\
+    \ up.</p> <h4>WHAT YOU'LL DO</h4> <ul> <li>Generate, review, and edit documentation,\
+    \ that is user-focused and of the highest quality.</li> <li>Work with engineering\
+    \ to ship a user-friendly documentation that not only informs and instructs, but\
+    \ provides a delightful user experience.</li> <li>Contribute to Anduril\u2019\
+    s technical writing toolkit, working on everything from style guides to the documentation\
+    \ lifecycle and review process.</li> <li>Build partnerships across the business\
+    \ to understand our users and our products</li> </ul> <h4><strong>REQUIRED QUALIFICATIONS</strong></h4>\
+    \ <ul> <li>4+ years of demonstrated excellence generating technical documentation\
+    \ for an opinionated audience.</li> <li>Experience reading and interpreting software\
+    \ and hardware user documentation, complex technical products, and highly-structured\
+    \ certification processes.</li> <li>Clear and persuasive writing and in-person\
+    \ communication skills, for a variety of audiences.</li> <li>A passion for excellent\
+    \ documentation and user experiences.</li> <li>Basic development proficiency -\
+    \ we value the ability to apply software development best practices to documentation\
+    \ systems.</li> <li>The ability to thrive with a high level of autonomy and responsibility,\
+    \ managing competing demands and occasional tight deadlines.</li> <li>Currently\
+    \ possesses and is able to maintain an active U.S. Secret security clearance.</li>\
+    \ </ul> <h4><strong>PREFERRED QUALIFICATIONS</strong></h4> <ul> <li>Experience\
+    \ using, evaluating, and implementing modern software and automation tools to\
+    \ help manage high volume technical writing requirements.</li> </ul><div class=\"\
+    content-pay-transparency\"><div class=\"pay-input\"><div class=\"title\">US Salary\
+    \ Range</div><div class=\"pay-range\"><span>$146,000</span><span class=\"divider\"\
+    >&mdash;</span><span>$194,000 USD</span></div></div></div><div class=\"content-conclusion\"\
+    ><p><span data-contrast=\"auto\">The salary range for this role is an estimate\
+    \ based on a wide range of compensation factors, inclusive of base salary only.\
+    \ Actual salary offer may vary based on (but not limited to) "
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 7.2
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}
@@ -40,4 +113,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-03-13'
+last_touched: '2026-03-15'

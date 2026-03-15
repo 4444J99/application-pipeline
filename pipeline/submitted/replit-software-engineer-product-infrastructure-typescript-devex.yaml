@@ -19,7 +19,7 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.3
+  score: 7.3
   identity_position: independent-engineer
   framing: TypeScript strict mode engineer with 103 public repos, 94 CI/CD pipelines,
     and documentation-first development methodology — building the kind of product
@@ -29,9 +29,10 @@ fit:
     mission_alignment: 9
     evidence_match: 10
     track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 6
     financial_alignment: 5
     effort_to_value: 7
-    strategic_value: 6
     deadline_feasibility: 9
     portal_friction: 5
 submission:

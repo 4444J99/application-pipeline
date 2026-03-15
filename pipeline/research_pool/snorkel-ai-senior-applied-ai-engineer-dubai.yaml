@@ -10,6 +10,70 @@ target:
   portal: greenhouse
   location: Dubai, United Arab Emirates (Remote)
   location_class: remote-global
+  description: "<div class=\"content-intro\"><p><strong>About Snorkel</strong></p>\
+    \ <p>At Snorkel, we believe meaningful AI doesn\u2019t start with the model, it\
+    \ starts with the data.</p> <p>We\u2019re on a mission to help enterprises transform\
+    \ expert knowledge into specialized AI at scale. The AI landscape has gone through\
+    \ incredible changes between 2015, when Snorkel started as a research project\
+    \ in the Stanford AI Lab, to the generative AI breakthroughs of today. But one\
+    \ thing has remained constant: the data you use to build AI is the key to achieving\
+    \ differentiation, high performance, and production-ready systems. We work with\
+    \ some of the world\u2019s largest organizations to empower scientists, engineers,\
+    \ financial experts, product creators, journalists, and more to build custom AI\
+    \ with their data faster than ever before. Excited to help us redefine how AI\
+    \ is built? Apply to be the newest Snorkeler!</p></div><div> <p><strong>About\
+    \ Snorkel</strong></p> <p>At Snorkel, we believe meaningful AI doesn\u2019t start\
+    \ with the model, it starts with the data.</p> <p>We\u2019re on a mission to help\
+    \ enterprises transform expert knowledge into specialized AI at scale. The AI\
+    \ landscape has gone through incredible changes between 2015, when Snorkel started\
+    \ as a research project in the Stanford AI Lab, to the generative AI breakthroughs\
+    \ of today. But one thing has remained constant: the data you use to build AI\
+    \ is the key to achieving differentiation, high performance, and production-ready\
+    \ systems. We work with some of the world\u2019s largest organizations to empower\
+    \ scientists, engineers, financial experts, product creators, journalists, and\
+    \ more to build custom AI with their data faster than ever before. Excited to\
+    \ help us redefine how AI is built? Apply to be the newest Snorkeler!</p> </div>\
+    \ <div> <h2>About Snorkel</h2> <p>We\u2019re on a mission to democratize AI by\
+    \ building the definitive AI data development platform. The AI landscape has gone\
+    \ through incredible change between 2016, when Snorkel started as a research project\
+    \ in the Stanford AI Lab, to the generative AI breakthroughs of today. But one\
+    \ thing has remained constant: the data you use to build AI is the key to achieving\
+    \ differentiation, high performance, and production-ready systems. We work with\
+    \ some of the world\u2019s largest organizations to empower scientists, engineers,\
+    \ financial experts, product creators, journalists, and more to build custom AI\
+    \ with their data faster than ever before. Excited to help us redefine how AI\
+    \ is built? Apply to be the newest Snorkeler!</p> <p>As an Applied AI Engineer,\
+    \ you\u2019ll research and utilize state-of-the-art Gen AI and machine learning\
+    \ (ML) techniques to successfully deliver solutions to our customers. You will\
+    \ work directly with our customers to understand their business and technical\
+    \ needs and design and deliver AI solutions to solve them - either by leveraging\
+    \ Snorkel Flow or developing custom approaches when needed. You will also help\
+    \ define Snorkel\u2019s Applied AI tooling by translating repeatable real-world\
+    \ challenges into reusable solution recipes, workflows, best practices, and platform-level\
+    \ capabilities that become part of Snorkel Flow\u2019s next generation of AI tooling.\
+    \ We move fast and are constantly prototyping and innovating new ways to deliver\
+    \ value to our customers. This position is ideal for someone who enjoys solving\
+    \ complex problems, bridging the gap between AI technology and business value,\
+    \ working directly with customers, keeping up-to date with AI research, and standardizing\
+    \ bespoke solutions into internal recipes and staying naturally curious about\
+    \ the infrastructure that underpin the Applied AI stack end-to-end.</p> <h2>Main\
+    \ Responsibilities</h2> <ul> <li>Partner with customers to build and deploy impactful\
+    \ Gen AI and machine learning solutions, from use case scoping and data exploration\
+    \ to model development and deployment. This may involve leveraging Snorkel Flow\
+    \ or designing custom approaches using state-of-the-art tools, with the goal of\
+    \ delivering real business value and informing the evolution of the Snorkel platform.</li>\
+    \ <li>Develop and implement state of the art AI systems such as retrieval-augmented\
+    \ generation (RAG), fine-tuning pipelines, prompt engineering recipes and agentic\
+    \ workflows.</li> <li>Create augmented real-world datasets and comprehensive evaluation\
+    \ workflows to ensure model reliability, transparency, and stakeholder trust.\
+    \ A data- and evaluation-first mindset is essential for success in this role.</li>\
+    \ <li>Forge and manage relationships with our customers\u2019 leadership and stakeholders\
+    \ to ensure successful development and deployment of AI projects with Snorkel\
+    \ Flow.</li> <li>Collaborate closely with pre-sales Solutions and Product teams\
+    \ to map customer needs to existing capabilities, prioritize roadmap gaps, and\
+    \ guide successful project setup.</li> <li>Work with other Applied AI Engineers\
+    \ to standardize solutions and contribute to internal tooling and best practices.</li>\
+    \ <li>Lead stakeholder education on quantitative capabilities,"
 deadline:
   date: null
   type: rolling
@@ -18,8 +82,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 4.4
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 5
+    evidence_match: 4
+    track_record_fit: 3
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

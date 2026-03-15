@@ -10,6 +10,67 @@ target:
   portal: greenhouse
   location: San Francisco, CA
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Amplitude is the leading AI analytics\
+    \ platform, helping over 4,700 customers\u2014including Atlassian, Burger King,\
+    \ NBCUniversal, Square, and Under Armour\u2014build better products and digital\
+    \ experiences. With powerful AI Agents embedded across our platform, teams can\
+    \ analyze, test, and optimize user experiences faster than ever. Ranked #1 across\
+    \ multiple categories in G2\u2019s Fall 2025 Report, Amplitude is the best-in-class\
+    \ solution for product, data, and marketing teams. Learn more at <a href=\"https://cts.businesswire.com/ct/CT?id=smartlink&amp;url=http%3A%2F%2Famplitude.com&amp;esheet=54428090&amp;newsitemid=20260218166598&amp;lan=en-US&amp;anchor=amplitude.com&amp;index=8&amp;md5=6cc9f966d63fa604ba56b7d2bceba4fe\"\
+    >amplitude.com</a>.</p> <p>As an organization, we deliver for our customers by\
+    \ living our values. We operate from a place of humility, take ownership of problems\
+    \ and successes, approach challenges with a growth mindset, and put our customers\
+    \ at the center of everything we do.</p> <p><strong>Amplitude\u2019s Commitment\
+    \ to Diversity Equity &amp; Inclusion (DEI): </strong>Amplitude believes that\
+    \ diversity enables the creation of better products, improves the ability to solve\
+    \ complex problems, and drives more powerful solutions. We strive to create an\
+    \ environment of inclusion\u2014one focused on psychological safety, empathy,\
+    \ and human connection\u2014that will allow employees of all backgrounds to thrive.</p></div><p>The\
+    \ Data Warehouse team is responsible for developing features to allow users integrate\
+    \ disparate data sources with Amplitude seamlessly to turn data into powerful\
+    \ product intelligence. We created a data platform which allows customers to easily\
+    \ bring data from numerous data sources into amplitude, and enhance the value\
+    \ of the data by powering more workflows outside of Amplitude as well. Also we\
+    \ are building next generation analytics experience where users can instantly\
+    \ get product insights out of their data in warehouses without any data ingested.\
+    \ Today, the team still works like a small startup with a fast-paced, collaborative\
+    \ and adaptive working environment. And we have lots of great product initiatives\
+    \ to be fulfilled.</p> <p>In this role, you will solve hardcore Infrastructure\
+    \ challenges like designing for extreme throughput, designing/optimizing systems\
+    \ with millisecond latencies, building resilient systems to achieve close to zero\
+    \ downtime. You will also get to closely work with Product and Customers to define\
+    \ the strategy and roadmap for our core product and new features. You will also\
+    \ work with designers to deliver the best customer experience for our products.</p>\
+    \ <p>Our product sits on top of many modern technologies, including Kubernetes,\
+    \ Kafka, Redis/Elasticache, Amazon S3, DynamoDB, Terraform etc. You will share\
+    \ your ideas with a group of similarly innovative and curious engineers.</p> <p>&nbsp;<strong>As\
+    \ a Senior Software Engineer, you will:&nbsp;</strong></p> <ul> <li>Take product\
+    \ ideas from ideation to implementation</li> <li>Develop backend services that\
+    \ integrates with various data warehouses and cloud services</li> <li>Optimize\
+    \ the performance and scale our data import/export infrastructure to server ever-increasing\
+    \ volume.</li> <li>Collaborate with Product and Design to iterate on our product</li>\
+    \ <li>Participate in design and code reviews&nbsp;&nbsp;</li> <li>Lead engineering\
+    \ discussions and mentor others on engineering best practices</li> <li>Mentor\
+    \ and contribute to the success of junior engineers</li> </ul> <p><strong>You'll\
+    \ be a great addition to the team if you have:</strong></p> <ul> <li>B.S., M.S.,\
+    \ or Ph.D. in Computer Science or another technical field</li> <li>3+ years of\
+    \ experience working in a Software Engineering role</li> <li>Strong foundation\
+    \ in programming, algorithms, and software application design</li> <li>Passionate\
+    \ about solving challenging problems and iterating quickly</li> <li>Previous experience\
+    \ with Java or Java is a plus</li> <li>Previous experience in distributed systems,\
+    \ data processing and analytics is a plus</li> <li>Previous experience with ETL/ETL\
+    \ pipelines is a plus</li> <li>Technical leadership of an engineering team is\
+    \ a plus</li> <li>Frontend experience is a plus</li> </ul> <h2><strong>Who We\
+    \ Are</strong></h2> <p><strong>The Company: </strong>Amplitude is filled with\
+    \ humble, life-long learners who are eager to help one another and the company\
+    \ succeed. Our values of growth mindset, ownership, and humility are core to the\
+    \ way we work: we\u2019re tenacious in the face of challenges, we take the initiative\
+    \ to solve problems that drive our shared success, and we operate from a place\
+    \ of empathy and openness, seeking to understand many points of view.&nbsp;</p>\
+    \ <p><strong>The Product: </strong>Amplitude is a digital analytics platform\u2014\
+    we help companies capture data they can trust, uncover clear insights about customer\
+    \ behavior, and take faster action. This empowers teams to build better product\
+    \ experiences that drive business growth. W"
 deadline:
   date: null
   type: rolling
@@ -18,8 +79,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

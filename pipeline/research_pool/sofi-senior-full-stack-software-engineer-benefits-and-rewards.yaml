@@ -10,6 +10,68 @@ target:
   portal: greenhouse
   location: CA - San Francisco
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p><a href=\"https://www.sofi.com/sofi-employee-applicant-privacy-notice/\"\
+    \ target=\"_blank\"><strong>Employee Applicant Privacy Notice</strong></a></p>\
+    \ <p><strong>Who we are:</strong></p> <div> <p>Shape a brighter financial future\
+    \ with us.</p> <p>Together with our members, we\u2019re changing the way people\
+    \ think about and interact with personal finance.</p> <p>We\u2019re a next-generation\
+    \ financial services company and national bank using innovative, mobile-first\
+    \ technology to help our millions of members reach their goals. The industry is\
+    \ going through an unprecedented transformation, and we\u2019re at the forefront.\
+    \ We\u2019re proud to come to work every day knowing that what we do has a direct\
+    \ impact on people\u2019s lives, with our core values guiding us every step of\
+    \ the way. <strong>Join us to invest in yourself, your career, and the financial\
+    \ world.</strong></p> </div></div><p><strong>The role:</strong></p> <p>We are\
+    \ seeking a Senior Full-Stack Engineer for the Member Benefits and Rewards team.\
+    \ We are responsible for member-facing SoFi Plus benefits like credit card cash\
+    \ back and the 1% investment match. We are also responsible for SoFi's newest\
+    \ subscription - SoFi Plus, which is an important project for the company. Our\
+    \ team manages member-facing features in SoFi's app and website as well as the\
+    \ backend streaming services that support this front-end experience. This provides\
+    \ ample opportunities for the SDE to gain full-stack experience and showcase their\
+    \ skill set in a company priority initiative.</p> <p>&nbsp;</p> <p><strong>What\
+    \ you'll do:</strong></p> <ul> <li>Architect and scale high-performance systems\
+    \ and services that drive member growth and engagement.</li> <li>Collaborate cross-functionally\
+    \ with Product, Design, Engineering, and Data Science teams to translate business\
+    \ needs into scalable technical solutions.</li> <li>Mentor and inspire engineers\
+    \ through code reviews, technical leadership, and fostering a culture of innovation\
+    \ and collaboration.</li> <li>Solve complex challenges across infrastructure,\
+    \ data pipelines, and backend services to ensure systems are robust, reliable,\
+    \ and future-proof.</li> <li>Drive innovation by identifying opportunities for\
+    \ new technologies, AI/ML-driven marketing, and process improvements to member\
+    \ adaption, engagement</li> <li>Own the full lifecycle of projects\u2014from ideation\
+    \ to deployment, monitoring, and continuous improvement.</li> </ul> <p>&nbsp;</p>\
+    \ <p><strong>What you\u2019ll need:</strong></p> <ul> <li>Bachelor\u2019s Degree\
+    \ in Computer Science or related field.</li> <li>5+ years of software engineering\
+    \ experience, with a proven track record of delivering scalable, production-grade\
+    \ applications.</li> <li>Full-stack experience, including frontend (React, TypeScript)&nbsp;</li>\
+    \ <li>Strong backend expertise in Java, Kotlin, or C#, with experience in frameworks\
+    \ like Spring Boot.</li> <li>Experience designing and deploying microservices\
+    \ in a cloud-native environment (Kubernetes, Docker, Kafka, AWS).</li> <li>Proficiency\
+    \ in relational databases (PostgreSQL) and ORMs with an ability to optimize data\
+    \ access patterns.</li> <li>Ability to balance engineering excellence with business\
+    \ impact, prioritizing high-value initiatives.</li> <li>Strong problem-solving\
+    \ skills and a passion for delivering efficient, well-tested, and maintainable\
+    \ solutions.</li> <li>Excellent communication skills and ability to collaborate\
+    \ cross-functionally with marketing, product, and data teams.</li> </ul> <p>&nbsp;</p>\
+    \ <p><strong>Nice to have:</strong></p> <ul> <li>Interest in personal finance,\
+    \ fintech, or SoFi\u2019s mission.</li> </ul><div class=\"content-conclusion\"\
+    ><div class=\"gmail_default\"><strong>Compensation and Benefits</strong></div>\
+    \ <div class=\"gmail_default\">The base pay range for this role is listed below.\
+    \ Final base pay offer will be determined based on individual factors such as\
+    \ the candidate\u2019s experience, skills, and location.&nbsp;</div> <div class=\"\
+    gmail_default\">&nbsp;</div> <div class=\"gmail_default\">To view all of our comprehensive&nbsp;and\
+    \ competitive&nbsp;benefits, visit our&nbsp;<strong><a href=\"https://sofietyinfo.sofi.com/sofi-benefits\"\
+    \ target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?q=https://sofietyinfo.sofi.com/sofi-benefits&amp;source=gmail&amp;ust=1667318410571000&amp;usg=AOvVaw0ZqbRtznVe1JsWWUOWQUnN\"\
+    >Benefits at SoFi</a>&nbsp;</strong>page!</div> <h5 style=\"text-align: center;\"\
+    ><span style=\"font-weight: 400;\">SoFi provides equal employment opportunities\
+    \ (EEO) to all employees and applicants for employment without regard to race,\
+    \ color, religion (including religious dress and grooming practices), sex (including\
+    \ pregnancy, childbirth and related medical conditions, breastfeeding, and conditions\
+    \ related to breastfeeding), gender, gender identity, gender expression, national\
+    \ origin, ancestry, age (40 or over), physical or medical disability, medical\
+    \ condition, marital status, registered domestic partner status, sexual orientation,\
+    \ genetic information, military "
 deadline:
   date: null
   type: rolling
@@ -18,8 +80,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

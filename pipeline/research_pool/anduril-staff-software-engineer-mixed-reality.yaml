@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: Bellevue, Washington, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><p><strong>ABOUT THE\
+    \ TEAM</strong><br>Our Warfighter Systems division is pioneering a future where\
+    \ mixed reality (MR), creates immersive, intuitive, and life-saving technologies.\
+    \ By seamlessly integrating real-time data with cutting-edge visualization tools,\
+    \ we are empowering warfighters with unparalleled situational awareness, enhanced\
+    \ training experiences, and operational superiority. This team is consistently\
+    \ pushing the boundaries of what's possible, and shaping a future where technology\
+    \ and defense unite to protect our nation.<br><br>Come join one of the strongest\
+    \ performing mixed reality teams in the industry, dedicated to revolutionizing\
+    \ experiences for the warfighter. You will develop and optimize advanced game\
+    \ development and game engine technologies that drive real-time simulation, immersive\
+    \ training, and critical mission planning capabilities. This role requires a blend\
+    \ of deep technical expertise and creative problem-solving skills as you contribute\
+    \ to national defense initiatives while pushing the boundaries of mixed reality.<br><br>You\
+    \ might be a fit for this role if:</p> <ul> <li>You recognize the performance\
+    \ gaps in existing game engines and want to lead the emergence of new 3D creation\
+    \ engines</li> <li>Recognize that AI is a major accelerator to the game creation\
+    \ process, and experimenting with emerging technologies and frameworks to revolutionize\
+    \ engine capabilities and user experiences excites you</li> <li>You believe the\
+    \ future of game engines should be highly modular, built on microservices and\
+    \ API\u2019s, allowing developers to assemble the right engine for the project\
+    \ at hand and quickly</li> <li>You obsess over technical advancement and what\
+    \ this means for game engines of the present and the future</li> </ul> <h4>WHAT\
+    \ YOU WILL DO</h4> <ul> <li>Work with one of the industries strongest mixed reality\
+    \ teams to change the landscape for MR on the frontlines and beyond</li> <li>Drive\
+    \ prototyping initiatives to experiment with revolutionary mixed reality concepts\
+    \ that set new industry standards</li> <li>Act as the technical advisor and visionary\
+    \ for a business line that is integral to Anduril\u2019s success</li> <li>Design,\
+    \ development, and enhance game engine components tailored for mixed reality applications</li>\
+    \ <li>Optimize rendering pipelines, physics simulations, and real-time interactions\
+    \ to deliver high-performance immersive experiences</li> <li>Collaborate with\
+    \ AR/VR specialists to integrate mixed reality sensors, displays, and spatial\
+    \ mapping capabilities</li> <li>Implement robust pipelines that transform raw\
+    \ sensor data into actionable, immersive visuals for the warfighter</li> <li>Partner\
+    \ with product managers, hardware engineers, and warfighter subject matter experts\
+    \ to translate mission requirements into practical, scalable solutions</li> <li>Mentor\
+    \ team members and foster best practices in code quality, performance testing,\
+    \ and game engineering architecture</li> <li>Evaluate and integrate emerging technologies\
+    \ and frameworks within the game engine ecosystem</li> </ul> <h4>REQUIRED QUALIFICATIONS</h4>\
+    \ <ul> <li>8-10 years of experience in game development, computer graphics, or\
+    \ real-time simulation</li> <li>Strong proficiency in C++ or C# and familiarity\
+    \ with graphics APIs (DirectX, OpenGL, or Vulkan), as well as Unity or Unreal\
+    \ engine</li> <li>Experience with shader programming and multi-threaded rendering\
+    \ pipelines</li> <li>Experience working in large codebases to solve complex problems\
+    \ in a matter of days and weeks, not months</li> <li>A track record of success\
+    \ in the gaming industry, with experience building and shipping code in a matter\
+    \ of days and weeks, not years</li> <li>Excellent communication skills and ability\
+    \ to work cross functionally with stakeholders and Executive leaders</li> <li>Eligible\
+    \ to obtain and maintain an active U.S. Secret security clearance</li> </ul> <h4>PREFERRED\
+    \ QUALIFICATIONS</h4> <ul> <li>Ideal if you have both AR/VR experience and working\
+    \ with DoD/Army</li> <li>Experience developing on console platforms</li> <li>Shipped\
+    \ at least one AAA game title in a similar role</li> <li>Understanding of immersive\
+    \ technologies and sensor integration is a plus</li> <li>Demonstrated experience\
+    \ or strong interest in develop"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

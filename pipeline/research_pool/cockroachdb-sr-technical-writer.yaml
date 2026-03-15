@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: San Mateo, CA
   location_class: us-onsite
+  description: "<div class=\"job-post-container\" style=\"position: relative; background-color:\
+    \ white; padding: 20px; max-width: 1000px; margin: 0 auto; box-shadow: 0px 0px\
+    \ 10px rgba(0, 0, 0, 0.1); min-height: 500px; border: 5px solid #0037A5;\"> <div\
+    \ style=\"position: absolute; top: 0; left: 2; width: 200px; height: 300px; margin-top:\
+    \ 30px; opacity: 1; z-index: 1;\">&nbsp;</div> <div class=\"job-post-content\"\
+    \ style=\"position: relative; z-index: 2;\"> <h1 style=\"font-family: Arial, sans-serif;\
+    \ color: rgb(51, 51, 51); line-height: 1.2; margin-top: 20px; text-align: center;\"\
+    ><img style=\"max-width: 100%; float: left;\" src=\"https://i.imgur.com/b9m4CJj.jpeg\"\
+    \ alt=\"\" width=\"92\"></h1> <h1 style=\"font-family: Arial, sans-serif; color:\
+    \ rgb(51, 51, 51); line-height: 1.2; margin-top: 20px; text-align: center;\">&nbsp;</h1>\
+    \ <h1 style=\"font-family: Arial, sans-serif; color: rgb(51, 51, 51); line-height:\
+    \ 1.2; margin-top: 20px; text-align: center;\">&nbsp;</h1> <h1 style=\"font-family:\
+    \ Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.2; margin-top: 20px;\
+    \ text-align: center;\">Category-defining tech. Career-defining work.</h1> <p\
+    \ style=\"text-align: center;\">Lots of tech companies disrupt. But, many fail\
+    \ when they try to scale. We're different. CockroachDB makes it easier for companies\
+    \ to build and scale apps. This is how and why we're helping some of the most\
+    \ innovative companies on the planet. We tackle problems head-on and focus on\
+    \ solutions that create lasting impact.&nbsp;</p> <h3 style=\"text-align: center;\"\
+    >Because when our customers win, we all win.&nbsp;</h3> <p>&nbsp;</p> <hr> <h2><span\
+    \ style=\"color: rgb(0, 0, 0);\"><strong>The Role</strong></span></h2> <p>We're\
+    \ seeking an experienced technical writer to join our world-class Documentation\
+    \ team.</p> <p>In this role, you'll create highly impactful technical documentation\
+    \ across the full CockroachDB platform\u2014spanning developer experiences, operations,\
+    \ security, and emerging capabilities. You'll collaborate closely with engineers,\
+    \ product managers, and other writers to produce <a href=\"https://www.cockroachlabs.com/docs/\"\
+    >public documentation</a> and craft clear, helpful copy across product interfaces.</p>\
+    \ <p>Beyond user assistance, you'll contribute insights on improving the product,\
+    \ evolving our processes, and collaborating across departments. Our team is committed\
+    \ to staying ahead of the curve\u2014innovating with AI to analyze content, ensure\
+    \ quality, and eliminate toil, freeing writers to focus on what they do best:\
+    \ producing the most effective content for our customers.</p> <p><strong>This\
+    \ role is hybrid, requiring three days per week in either our New York City or\
+    \ San Francisco office.</strong></p> <h2><strong>You Will</strong></h2> <ul> <li>Translate\
+    \ complex, highly technical concepts into clear, actionable documentation for\
+    \ engineers, operators, and technical decision-makers.</li> <li>Develop in-depth\
+    \ product knowledge and collaborate with engineering and product teams to ensure\
+    \ documentation aligns with user workflows and company priorities.</li> <li>Write\
+    \ comprehensive content across multiple formats\u2014tutorials, how-to guides,\
+    \ conceptual overviews, reference documentation\u2014and contribute to copy for\
+    \ release notes, UIs, APIs, and CLIs.</li> <li>Cover topics that may include developer\
+    \ workflows, schema design and migration, deployment automation and scaling, cluster\
+    \ performance and operational best practices, backups and disaster recovery, monitoring\
+    \ and observability, authentication and authorization, network security, vector\
+    \ search and AI workloads, data governance, and more.</li> <li>Benefit from a\
+    \ balanced work distribution, gaining experience across diverse areas of the product\
+    \ while reserving time for deep dives into larger projects within specific product\
+    \ domains.</li> <li>Get to know a variety of user workflows and priorities\u2014\
+    from developers building applications to operators maintaining critical workloads\
+    \ for high-scale, globally distributed systems.</li> <li>Collaborate with dedicated\
+    \ documentation infrastructure engineers who build and maintain our tooling. Offer\
+    \ meaningful input into workflows, automation, and other technical solutions that\
+    \ improve how the team works.</li> <li>Contribute to internal style guides, processes,\
+    \ and policy enhancements within the Documentation team.</li> <li>Share your learnings\
+    \ and expertise across the team, helping to build collective technical depth and\
+    \ writing excellence.</li> </ul> <h2><strong>The Expectations</strong></h2> <p><strong>In\
+    \ your first 30 days</strong>, you'll follow a custom onboarding plan that includes\
+    \ Cockroach University courses, internal documentation, and product training.\
+    \ You'll get hands-on experience using CockroachDB and our documentation tools,\
+    \ and start to contribute to the documentation with the supervision of other writers.</p>\
+    \ <p><strong>By three months in</strong>, you'll have developed enough expertise\
+    \ to help prioritize and plan documentation work, contributing independently to\
+    \ the CockroachDB docs site. You'll"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 6.4
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 7
+    network_proximity: 1
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

@@ -10,6 +10,67 @@ target:
   portal: greenhouse
   location: San Francisco, CA
   location_class: us-onsite
+  description: "<p>At Lyft, our purpose is to serve and connect. We aim to achieve\
+    \ this by cultivating a work environment where all team members belong and have\
+    \ the opportunity to thrive.</p> <p><a href=\"https://investor.lyft.com/news-and-events/news/news-details/2024/Lyft-Announces-New-Round-of-Autonomous-Partnerships/default.aspx\"\
+    >Lyft AV</a> brings the autonomous future to life by matching our community of\
+    \ riders with self-driving vehicles to meet their transportation needs today.\
+    \ The program is powered by a technical team innovating to build new features,\
+    \ experiment, and evolve approaches for emerging business needs. At the same time,\
+    \ we prioritize production quality because our customers put their trust in us\
+    \ for safety and reliability.</p> <p>As a Software Engineer for Autonomous Vehicles,\
+    \ you\u2019ll be responsible for executing integrations with partners, making\
+    \ tradeoffs between technical investments and product work, and collaborating\
+    \ with other engineers on system design. You will help shape the product direction\
+    \ by developing a deep understanding of the customer and working closely with\
+    \ cross-functional partners from Product, Design, Science, and Operations. You\
+    \ will work with a group of talented engineers and help the team to deliver significant\
+    \ business impact while being open to change through constant experimentation\
+    \ in an ambiguous emerging product. If you enjoy collaborating with technical\
+    \ and nontechnical partners in a fast-moving space with real-world impact, this\
+    \ is the role for you.</p> <h2><strong>Responsibilities:</strong></h2> <ul> <li>Help\
+    \ establish roadmap and architecture based on technology and understanding of\
+    \ customer needs</li> <li>Write well-crafted, well-tested, readable, maintainable\
+    \ code</li> <li>Participate in code reviews to ensure code quality and distribute\
+    \ knowledge</li> <li>Share your knowledge by giving brown bags, tech talks, and\
+    \ promoting appropriate tech and engineering best practices</li> <li>Can help\
+    \ lead large projects from idea to positive execution</li> <li>Unblock, support\
+    \ and communicate with internal partners to achieve results</li> </ul> <h2><strong>Experience:</strong></h2>\
+    \ <ul> <li>5+ years of software engineering experience with high-level programming\
+    \ languages; experience with Python and Go is a plus.</li> <li>BS/MS in Computer\
+    \ Engineering, Computer Science, or related field, or equivalent work experience.</li>\
+    \ <li>Strong background in distributed systems, and proficient in relational or\
+    \ NoSQL databases.</li> <li>Proven experience in designing, debugging, and managing\
+    \ fault-tolerant, highly available, large-scale distributed systems.</li> <li>Experience\
+    \ working with public cloud platforms (e.g., AWS, GCP, Microsoft Azure, etc.)</li>\
+    \ </ul> <h2><strong>Benefits:</strong><strong><br></strong></h2> <ul> <li>Great\
+    \ medical, dental, and vision insurance options with additional programs available\
+    \ when enrolled</li> <li>Mental health benefits</li> <li>Family building benefits</li>\
+    \ <li>Child care and pet benefits</li> <li>401(k) plan with company match to help\
+    \ save for your future</li> <li>In addition to 12 observed holidays, salaried\
+    \ team members have discretionary paid time off, hourly team members have 15 days\
+    \ paid time off</li> <li>18 weeks of paid parental leave. Biological, adoptive,\
+    \ and foster parents are all eligible</li> <li>Subsidized commuter benefits</li>\
+    \ <li>Monthly Lyft credits and complimentary Lyft Pink membership</li> </ul> <p>Lyft\
+    \ is an equal opportunity employer committed to an inclusive workplace that fosters\
+    \ belonging. All qualified applicants will receive consideration for employment\
+    \ without regards to race, color, religion, sex, sexual orientation, gender identity,\
+    \ national origin, disability status, protected veteran status, age, genetic information,\
+    \ or any other basis prohibited by law. We also consider qualified applicants\
+    \ with criminal histories consistent with applicable federal, state and local\
+    \ law.</p> <p>Lyft highly values having employees working in-office to foster\
+    \ a collaborative work environment and company culture. This role will be in-office\
+    \ on a hybrid schedule \u2014 Team Members will be expected to work in the office\
+    \ 3 days per week on Mondays, Wednesdays, and Thursdays. Lyft considers working\
+    \ in the office at least 3 days per week to be an essential function of this hybrid\
+    \ role. Your recruiter can share more information about the various in-office\
+    \ perks Lyft offers. Additionally, hybrid roles have the flexibility to work from\
+    \ anywhere for up to 4 weeks per year. #Hybrid</p> <p>The expected base pay range\
+    \ for this position in the San Francisco area is $148,000 - $185,000, not inclusive\
+    \ of potential equity offering, bonus or benefits. Salary ranges are dependent\
+    \ on a variety of factors, including qualifications, experience and geographic\
+    \ location. Your recruiter can share more information about the salary range specific\
+    \ to your working location and other factors during the hiring process.</p>"
 deadline:
   date: null
   type: rolling
@@ -18,8 +79,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

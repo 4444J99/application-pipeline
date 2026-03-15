@@ -10,6 +10,68 @@ target:
   portal: greenhouse
   location: Sunnyvale, CA / Bellevue, WA
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><div> <div> <div class=\"gmail_quote\"\
+    > <div> <div><span id=\"m_1770241969069985273m_-2746164444908759431gmail-docs-internal-guid-131e4fb0-7fff-b4e9-ff50-e8cf32449b1b\"\
+    >CoreWeave is The Essential Cloud for AI\u2122. Built for pioneers by pioneers,\
+    \ CoreWeave delivers a platform of technology, tools, and teams that enables innovators\
+    \ to build and scale AI with confidence. Trusted by leading AI labs, startups,\
+    \ and global enterprises, CoreWeave combines superior infrastructure performance\
+    \ with deep technical expertise to accelerate breakthroughs and turn compute into\
+    \ capability. Founded in 2017, CoreWeave became a publicly traded company (Nasdaq:\
+    \ CRWV) in March 2025. Learn more at&nbsp;<a href=\"http://www.coreweave.com/\"\
+    \ target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?q=http://www.coreweave.com&amp;source=gmail&amp;ust=1762613132717000&amp;usg=AOvVaw3D-UOhNaqEvF5BEWxjYyAU\"\
+    >www.coreweave.com</a>.</span></div> </div> </div> </div> </div></div><h3><span\
+    \ style=\"text-decoration: underline;\"><strong>What You\u2019ll Do:</strong></span></h3>\
+    \ <p>Senior engineers are area owners who lead designs, raise engineering standards,\
+    \ and deliver measurable improvements to latency, throughput, and reliability\
+    \ across multiple services. You\u2019ll partner with product, orchestration, and\
+    \ hardware teams to evolve our Kubernetes-native inference platform and meet strict\
+    \ P99 SLAs at scale.</p> <h3><span style=\"text-decoration: underline;\"><strong>About\
+    \ the role:</strong></span></h3> <ul> <li>Lead design reviews and drive architecture\
+    \ within the team; decompose multi-service work into clear milestones.</li> <li>Define\
+    \ and own SLIs/SLOs; ensure post-incident actions land and reliability improves\
+    \ release-over-release.</li> <li>Implement advanced optimizations (e.g., micro-batch\
+    \ schedulers, speculative decoding, KV-cache reuse) and quantify impact.</li>\
+    \ <li>Strengthen incident posture: capacity planning, autoscaling policy, graceful\
+    \ degradation, rollback/traffic-shift strategies.</li> <li>Mentor IC1/IC2 engineers;\
+    \ review cross-team designs and elevate coding/testing standards.</li> <li>For\
+    \ IC4: own an area spanning multiple services and teams (e.g., request routing\
+    \ &amp; adaptive scheduling, cost-per-token analytics, GPU resource isolation).</li>\
+    \ </ul> <h3><span style=\"text-decoration: underline;\"><strong>Who You Are:</strong></span></h3>\
+    \ <ul> <li>IC3: ~3\u20135 years; IC4: ~5\u20138 years industry experience building\
+    \ distributed systems or cloud services.</li> <li>Strong coding in Python or Go\
+    \ (C++ a plus) and deep familiarity with networked systems and performance.</li>\
+    \ <li>Hands-on experience with Kubernetes at production scale, CI/CD, and observability\
+    \ stacks (Prometheus, Grafana, OpenTelemetry).</li> <li>Practical knowledge of\
+    \ inference internals: batching, caching, mixed precision (BF16/FP8), streaming\
+    \ token delivery.</li> <li>Proven track record improving tail latency (P95/P99)\
+    \ and service reliability through metrics-driven work.</li> </ul> <p><strong>Preferred:\
+    \ </strong></p> <ul> <li>Contributions to inference frameworks (vLLM, Triton,\
+    \ TensorRT-LLM, Ray Serve, TorchServe).</li> <li>Experience with CUDA kernels,\
+    \ NCCL/SHARP, RDMA/NUMA, or GPU interconnect topologies.</li> <li>Leading multi-team\
+    \ initiatives or partnering with customers on mission-critical launches.</li>\
+    \ </ul> <p><strong>Wondering if you\u2019re a good fit? </strong><strong>We believe\
+    \ in investing in our people and value candidates who can bring their diverse\
+    \ experiences to our teams \u2013 even if you aren't a 100% skill or experience\
+    \ match.</strong></p> <h3><span style=\"text-decoration: underline;\"><strong>Why\
+    \ CoreWeave?</strong></span></h3> <p>At CoreWeave, we work hard, have fun, and\
+    \ move fast!&nbsp; We\u2019re in an exciting stage of hyper-growth that you will\
+    \ not want to miss out on. We\u2019re not afraid of a little chaos, and we\u2019\
+    re constantly learning. Our team cares deeply about how we build our product and\
+    \ how we work together, which is represented through our core values:&nbsp;</p>\
+    \ <ul> <li>Be Curious at Your Core</li> <li>Act Like an Owner</li> <li>Empower\
+    \ Employees</li> <li>Deliver Best-in-Class Client Experiences</li> <li>Achieve\
+    \ More Together</li> </ul> <p>We support and encourage an entrepreneurial outlook\
+    \ and independent thinking. We foster an environment that encourages collaboration\
+    \ and provides the opportunity to develop innovative solutions to complex problems.\
+    \ As we get set for takeoff, the growth opportunities within the organization\
+    \ are constantly expanding. You will be surrounded by some of the best talent\
+    \ in the industry, who will want to learn from you, too. Come join us!&nbsp;&nbsp;</p>\
+    \ <p><em data-stringify-type=\"italic\">The base salary range for this role is\
+    \ $139,000 to $204,000. The starting salary will be determined based on job-related\
+    \ knowledge, skills, experience, and market location. We strive for both market\
+    \ alignment and internal equity when determining compensation. In addition to\
+    \ base salary, our total rewards package includes a dis"
 deadline:
   date: null
   type: rolling
@@ -18,8 +80,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 3.4
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 3
+    evidence_match: 2
+    track_record_fit: 2
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

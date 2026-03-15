@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: London, UK
   location_class: international
+  description: "<div> <p>At Scale AI, we\u2019re not just building AI tools\u2014\
+    we\u2019re pioneering the next era of enterprise AI. As businesses race to harness\
+    \ the power of Generative AI, Scale is at the forefront, delivering cutting-edge\
+    \ solutions that transform workflows, automate complex processes, and drive unparalleled\
+    \ efficiency for the largest enterprises. Our Scale Generative AI Platform (SGP)\
+    \ provides foundational services and APIs, enabling businesses to seamlessly integrate\
+    \ AI into their operations at production scale.</p> <p>We\u2019re looking for\
+    \ a Backend Engineer to help bring large-scale GenAI systems to production. In\
+    \ this role, you\u2019ll build the core infrastructure that powers AI products\
+    \ for some of the world\u2019s largest enterprises\u2014designing scalable APIs,\
+    \ distributed data systems, and robust deployment pipelines that enable production-grade\
+    \ reliability and performance.&nbsp;</p> <p>This is a rare opportunity to be at\
+    \ the center of the GenAI revolution, solving hard backend and infrastructure\
+    \ challenges that make AI truly work at enterprise scale. If you're excited about\
+    \ shaping how AI systems are deployed and scaled in the real world, we want to\
+    \ hear from you.</p> <p>At Scale, we don\u2019t just follow AI advancements \u2014\
+    \ we lead them. Backed by deep expertise in data, infrastructure, and model deployment,\
+    \ we are uniquely positioned to solve the hardest problems in AI adoption. Join\
+    \ us in shaping the future of enterprise AI, where your work will directly impact\
+    \ how businesses operate, innovate, and grow in the age of GenAI.</p> <h3><strong>You\
+    \ Will:</strong></h3> <ul> <li><strong>Design, build, and scale backend systems</strong>&nbsp;that\
+    \ power enterprise GenAI products, focusing on reliability, performance, and deployment\
+    \ across both Scale\u2019s and customers\u2019 infrastructure.</li> <li><strong>Develop\
+    \ core services and APIs</strong>&nbsp;that integrate AI models and enterprise\
+    \ data sources securely and efficiently, enabling production-scale AI adoption.</li>\
+    \ <li><strong>Architect scalable distributed systems</strong>&nbsp;for data processing,\
+    \ inference, and orchestration of large-scale GenAI workloads.</li> <li><strong>Optimize\
+    \ backend performance</strong>&nbsp;for latency, throughput, and cost\u2014ensuring\
+    \ AI applications can operate at enterprise scale across hybrid and multi-cloud\
+    \ environments.</li> <li><strong>Manage and evolve cloud infrastructure</strong>&nbsp;(AWS,\
+    \ Azure, or GCP), driving automation, observability, and security for large-scale\
+    \ AI deployments.</li> <li><strong>Collaborate with ML and product teams</strong>&nbsp;to\
+    \ bring cutting-edge GenAI models into production through efficient APIs, model\
+    \ serving systems, and evaluation frameworks.</li> <li><strong>Continuously improve\
+    \ reliability and scalability</strong>, applying strong engineering practices\
+    \ to make AI systems robust, maintainable, and enterprise-ready.</li> </ul> <h3><strong>Ideally,\
+    \ You Have:</strong></h3> <ul> <li><strong>4+ years of experience</strong>&nbsp;developing\
+    \ large-scale backend or infrastructure systems, with a strong emphasis on distributed\
+    \ services, reliability, and scalability.</li> <li><strong>Proficiency in Python\
+    \ or TypeScript</strong>, with experience designing high-performance APIs and\
+    \ backend architectures using frameworks such as FastAPI, Flask, Express, or NestJS.</li>\
+    \ <li><strong>Deep familiarity with cloud infrastructure</strong>&nbsp;(AWS and\
+    \ Azure preferred), including container orchestration (Kubernetes, Docker) and\
+    \ Infrastructure-as-Code tools like Terraform.</li> <li><strong>Experience managing\
+    \ data systems</strong>&nbsp;such as relational and NoSQL databases (PostgreSQL,\
+    \ DynamoDB, etc.) and building pipelines for data-intensive applications.</li>\
+    \ <li><strong>Hands-on experience with GenAI</strong>&nbsp;applications, model\
+    \ integration, or AI agent systems\u2014understanding how to deploy, evaluate,\
+    \ and scale AI workloads in production.</li> <li><strong>Strong understanding\
+    \ of observability, CI/CD</strong>, and security best practices for running services\
+    \ in enterprise or multi-tenant environments.</li> <li><strong>Ability to balance\
+    \ rapid iteration with production-grade quality</strong>, shipping reliable backend\
+    \ systems in fast-paced environments.</li> </ul> <p><strong>Collaborative mindset</strong>,\
+    \ working closely with ML, infra, and product teams to bring complex GenAI systems\
+    \ into production at enterprise scale.</p> </div><div class=\"content-conclusion\"\
+    ><p><strong><em>PLEASE NOTE:&nbsp;</em></strong><em>Our policy requires a 90-day\
+    \ waiting period before reconsidering candidates for the same role. This allows\
+    \ us to ensure a fair and thorough evaluation of all applicants.</em></p> <p><strong>About\
+    \ Us:</strong></p> <p><em>At Scale, our mission is to develop reliable AI systems\
+    \ for the world's most important decisions. Our products provide the high-quality\
+    \ data and full-stack technologies that power the world's leading models, and\
+    \ help enterprises and governments build, deploy, and oversee AI applications\
+    \ that deliver real impact. "
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 4.3
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 5
+    evidence_match: 4
+    track_record_fit: 3
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

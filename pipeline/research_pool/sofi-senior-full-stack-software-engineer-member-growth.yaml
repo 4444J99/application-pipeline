@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: CA - San Francisco; WA - Seattle
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p><a href=\"https://www.sofi.com/sofi-employee-applicant-privacy-notice/\"\
+    \ target=\"_blank\"><strong>Employee Applicant Privacy Notice</strong></a></p>\
+    \ <p><strong>Who we are:</strong></p> <div> <p>Shape a brighter financial future\
+    \ with us.</p> <p>Together with our members, we\u2019re changing the way people\
+    \ think about and interact with personal finance.</p> <p>We\u2019re a next-generation\
+    \ financial services company and national bank using innovative, mobile-first\
+    \ technology to help our millions of members reach their goals. The industry is\
+    \ going through an unprecedented transformation, and we\u2019re at the forefront.\
+    \ We\u2019re proud to come to work every day knowing that what we do has a direct\
+    \ impact on people\u2019s lives, with our core values guiding us every step of\
+    \ the way. <strong>Join us to invest in yourself, your career, and the financial\
+    \ world.</strong></p> </div></div><p><strong>The role:</strong></p> <p>We are\
+    \ seeking a Senior Full Stack Software Engineer to join the Member Growth engineering\
+    \ team at SoFi, where we are designing for the future of personal finance. We\
+    \ are looking to help our Members find their path to financial independence by\
+    \ providing them with the tools, resources, and guidance they need to get there.\
+    \ We want to be part of the customers financial journey by providing them timely\
+    \ insights, tailored to their needs, that will establish and build trust. Building\
+    \ this will involve taking a thoughtful and personalized approach towards every\
+    \ user\u2019s financial needs.</p> <p>&nbsp;</p> <p>The ideal candidate is collaborative,\
+    \ product-minded, and pragmatic, with a strong sense of ownership and accountability\
+    \ for the quality of both the code and finished product. At SoFi, we pride ourselves\
+    \ on the collaboration between Product, Design and Engineering and so you will\
+    \ be involved in the entire product lifecycle, from ideation through building,\
+    \ deploying and continual improvement and evolution. We also pride ourselves on\
+    \ a philosophy of continuous learning, and you should likewise be committed to\
+    \ furthering your own career growth as well as to providing mentorship for your\
+    \ fellow team members.</p> <p>&nbsp;</p> <p><strong>What you\u2019ll do:</strong></p>\
+    \ <ul> <li>Lead the development and testing of system components/services, code\
+    \ and design reviews</li> <li>Participate in shaping the technical architecture\
+    \ of the products that drive member growth and marketing efficiency</li> <li>Help\
+    \ translate product requirements into user stories and technical solutions</li>\
+    \ <li>Deliver highly available and scalable services in a production environment</li>\
+    \ <li>Mentor and inspire other engineers, support the technical culture, and help\
+    \ grow the team</li> <li>Generate ideas for new initiatives and technologies</li>\
+    \ <li>Communicate with project leads, product managers and other software developers</li>\
+    \ </ul> <p>&nbsp;</p> <p><strong>What you\u2019ll need:</strong></p> <ul> <li>Bachelor\u2019\
+    s Degree, ideally in a technical field, but we understand great engineers come\
+    \ from all sorts of different backgrounds and also consider relevant work experience</li>\
+    \ <li>4+ years programming experience, ideally on a modern stack with a proven\
+    \ track record of delivering high quality, production-grade applications</li>\
+    \ <li>Full stack experience including React/Typescript and Kotlin/ Java</li> <li>We\
+    \ run on Kubernetes in a service oriented architecture with over 100 services\
+    \ in production</li> <li>You should have a strong understanding of relational\
+    \ databases like PostgreSQL and ORMs with a good understanding of data access\
+    \ patterns</li> <li>You should have worked on a SOA or microservice-based application</li>\
+    \ <li>Willingness to roll up your sleeves, collaborate with others and get stuff\
+    \ done</li> <li>Strong sense of responsibility; driving a project from inception\
+    \ to completion</li> <li>Affinity for solving problems and shipping impactful\
+    \ features, not polishing perfect code or architecture</li> <li>Experience working\
+    \ in a collaborative coding environment, refining designs together, working through\
+    \ code reviews and managing pull requests</li> </ul> <p>&nbsp;</p> <p><strong>Nice\
+    \ to have:</strong></p> <ul> <li>Interest in personal finance</li> <li>Experience\
+    \ in MarTech platforms like marketing campaign orchestration, personalization</li>\
+    \ <li>Experience managing your own investments or experience taking out loans</li>\
+    \ <li>Experience scaling highly available, mission critical systems</li> <li>Experience\
+    \ building data insight products</li> </ul><div class=\"content-conclusion\"><div\
+    \ class=\"gmail_default\"><strong>Compensation and Benefits</strong></div> <div\
+    \ class=\"gmail_default\">The base pay range for this role is listed below. Final\
+    \ base pay offer will be determined based on individual factors such as the candidate\u2019\
+    s experience, skills, and location.&nbsp;</div> <div class=\"gmail_default\">&nbsp;</div>\
+    \ <div class=\"gmail_default\">To view all of our comprehensive&nbsp;and competitive&nbsp;benefits,\
+    \ visit our&nbsp;<strong><a href=\"https://so"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 4.4
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 5
+    evidence_match: 4
+    track_record_fit: 3
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

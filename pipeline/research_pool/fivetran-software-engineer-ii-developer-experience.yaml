@@ -8,8 +8,72 @@ target:
   url: https://boards.greenhouse.io/fivetran
   application_url: https://www.fivetran.com/careers/job?gh_jid=7600897003
   portal: greenhouse
-  location: Novi Sad, South Bačka, Serbia, EMEA
+  location: "Novi Sad, South Ba\u010Dka, Serbia, EMEA"
   location_class: international
+  description: "<div class=\"content-intro\"><p>From Fivetran\u2019s founding until\
+    \ now, our mission has remained the same: to make access to data as simple and\
+    \ reliable as electricity. With Fivetran, customer data arrives in their warehouses,\
+    \ canonical and ready to query, with no engineering or maintenance required. We\u2019\
+    re proud that more organizations continue to leverage our technology every day\
+    \ to become truly data-driven.</p></div><p><span style=\"font-family: helvetica,\
+    \ arial, sans-serif; font-size: 10pt;\"><strong>About the Role</strong></span></p>\
+    \ <p><span style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\"\
+    >Fivetran is building data pipelines to power the modern data stack for thousands\
+    \ of companies.</span></p> <p><span style=\"font-family: helvetica, arial, sans-serif;\
+    \ font-size: 10pt;\">We\u2019re looking for a Software Engineer II to join our\
+    \ Customer developer experience team to build challenging new features of our\
+    \ data pipeline service, to improve our software architecture, and to maintain\
+    \ reliable operation of the service</span></p> <p><span style=\"font-family: helvetica,\
+    \ arial, sans-serif; font-size: 10pt;\">This is a full-time position based out\
+    \ of our Novi Sad office. Our hybrid work model offers a blend of remote flexibility\
+    \ and in-person collaboration, including two days in the office each week to connect\
+    \ and build as a team.</span></p> <h2><span style=\"font-family: helvetica, arial,\
+    \ sans-serif; font-size: 10pt;\">Technologies You\u2019ll Use</span></h2> <ul>\
+    \ <li style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\"><span\
+    \ style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\">Java</span></li>\
+    \ <li style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\"><span\
+    \ style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\">Postgres</span></li>\
+    \ <li style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\"><span\
+    \ style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\">Kubernetes</span></li>\
+    \ <li style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\"><span\
+    \ style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\">Docker</span></li>\
+    \ <li style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\"><span\
+    \ style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\">GCP /\
+    \ AWS / Azure</span></li> <li style=\"font-family: helvetica, arial, sans-serif;\
+    \ font-size: 10pt;\"><span style=\"font-family: helvetica, arial, sans-serif;\
+    \ font-size: 10pt;\">Terraform</span></li> <li style=\"font-family: helvetica,\
+    \ arial, sans-serif; font-size: 10pt;\"><span style=\"font-family: helvetica,\
+    \ arial, sans-serif; font-size: 10pt;\">Golang</span></li> <li style=\"font-family:\
+    \ helvetica, arial, sans-serif; font-size: 10pt;\"><span style=\"font-family:\
+    \ helvetica, arial, sans-serif; font-size: 10pt;\">Buildkite</span></li> </ul>\
+    \ <h2><span style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\"\
+    >What You\u2019ll Do</span></h2> <ul> <li style=\"font-family: helvetica, arial,\
+    \ sans-serif; font-size: 10pt;\"><span style=\"font-family: helvetica, arial,\
+    \ sans-serif; font-size: 10pt;\">Work on features related to Core and Developer\
+    \ experience of the product</span></li> <li style=\"font-family: helvetica, arial,\
+    \ sans-serif; font-size: 10pt;\"><span style=\"font-family: helvetica, arial,\
+    \ sans-serif; font-size: 10pt;\">Write connectors to integrate with source systems</span></li>\
+    \ <li style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\"><span\
+    \ style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\">Contribute\
+    \ to feature enhancements and bug fixes</span></li> </ul> <h2><span style=\"font-family:\
+    \ helvetica, arial, sans-serif; font-size: 10pt;\">Skills We\u2019re Looking For</span></h2>\
+    \ <ul> <li style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\"\
+    ><span style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\">Strong\
+    \ coding, technical and problem-solving skills with 3+ years of professional experience\
+    \ writing Java based applications in production environment</span></li> <li style=\"\
+    font-family: helvetica, arial, sans-serif; font-size: 10pt;\"><span style=\"font-family:\
+    \ helvetica, arial, sans-serif; font-size: 10pt;\">Experience in reliable distributed\
+    \ systems, with an emphasis on high-volume data management platform that operate\
+    \ under strict SLAs</span></li> <li style=\"font-family: helvetica, arial, sans-serif;\
+    \ font-size: 10pt;\"><span style=\"font-family: helvetica, arial, sans-serif;\
+    \ font-size: 10pt;\">Write well-structured Java code following programming best\
+    \ practices</span></li> <li style=\"font-family: helvetica, arial, sans-serif;\
+    \ font-size: 10pt;\"><span style=\"font-family: helvetica, arial, sans-serif;\
+    \ font-size: 10pt;\">Specify a software design to satisfy project requirements</span></li>\
+    \ <li style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\"><span\
+    \ style=\"font-family: helvetica, arial, sans-serif; font-size: 10pt;\">Work well\
+    \ in a team</span></li> <li style=\"font-family: helvetica, arial, sans-serif;\
+    \ font-size: 10pt;\""
 deadline:
   date: null
   type: rolling
@@ -18,8 +82,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 6.9
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

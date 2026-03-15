@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: Portugal - Remote
   location_class: remote-global
+  description: "<div class=\"content-intro\"><h2><strong>Be Part of Building the Future</strong></h2>\
+    \ <p>Dremio is the unified lakehouse platform for self-service analytics and AI,\
+    \ serving hundreds of global enterprises, including Maersk, Amazon, Regeneron,\
+    \ NetApp, and S&amp;P Global. Customers rely on Dremio for cloud, hybrid, and\
+    \ on-prem lakehouses to power their data mesh, data warehouse migration, data\
+    \ virtualization, and unified data access use cases. Based on open source technologies,\
+    \ including Apache Iceberg and Apache Arrow, Dremio provides an open lakehouse\
+    \ architecture enabling the fastest time to insight and platform flexibility at\
+    \ a fraction of the cost.&nbsp; Learn more at&nbsp;<a class=\"c-link\" href=\"\
+    http://www.dremio.com/\" target=\"_blank\" data-stringify-link=\"http://www.Dremio.com\"\
+    \ data-sk=\"tooltip_parent\">www.dremio.com.</a></p></div><p><strong>About the\
+    \ role</strong></p> <p>As a member of the Platform &amp; Partner Integrations\
+    \ team, you\u2019ll drive the design and evolution of critical platform capabilities\
+    \ that power Dremio at scale across containerized, hybrid, and on-premises environments.\
+    \ You\u2019ll build extensible, resilient, and high-performance systems that enable\
+    \ seamless partner integrations, amplifying Dremio\u2019s reach while upholding\
+    \ the reliability and operational excellence our customers expect.</p> <p>Leveraging\
+    \ deep expertise in infrastructure, networking, and containerization technologies,\
+    \ you will architect secure, scalable, and production-hardened systems designed\
+    \ for complex, distributed environments. You will collaborate closely with core\
+    \ product engineering teams to ensure new features and architectural changes are\
+    \ delivered consistently and safely across diverse deployment models and partner\
+    \ ecosystems. This is a high-impact role with real ownership, solving challenging\
+    \ distributed systems problems, shaping platform strategy, and driving innovation\
+    \ at a meaningful scale.</p> <p><strong>What you\u2019ll be doing</strong></p>\
+    \ <ul> <li>Define and drive the platform strategy for Kubernetes- and Docker-based\
+    \ environments, aligning architecture with scalability, reliability, and security\
+    \ goals.</li> <li>Partner with external platform architects to identify integration\
+    \ requirements and translate security, networking, and infrastructure constraints\
+    \ into robust platform capabilities.</li> <li>Architect and build resilient, production-grade\
+    \ solutions that operate seamlessly within diverse partner ecosystems.</li> <li>Design,\
+    \ develop, and maintain automated deployment and integration frameworks that enable\
+    \ consistent, repeatable delivery of Dremio across environments.</li> <li>Partner\
+    \ with product management to align platform capabilities with customer needs,\
+    \ roadmap priorities, and commercial objectives.</li> <li>Develop core product\
+    \ capabilities for cluster lifecycle management, observability, usage and cost\
+    \ reporting, and operational supportability.</li> <li>Lead cross-functional collaboration\
+    \ with internal architects and engineering teams to ensure features ship safely\
+    \ and perform reliably across diverse deployment models and partner ecosystems.</li>\
+    \ <li>Take technical ownership of complex integration initiatives, and when needed,\
+    \ lead development efforts beyond the immediate team to close capability gaps.</li>\
+    \ <li>Improve platform scalability, performance, and operability through proactive\
+    \ design reviews, architectural improvements, and production hardening.</li> <li>Drive\
+    \ automation-first practices, reducing operational overhead and improving deployment\
+    \ velocity and reliability.</li> <li>Contribute to long-term platform architecture,\
+    \ ensuring extensibility to support future partner integrations and evolving infrastructure\
+    \ trends.</li> </ul> <p><strong>&nbsp;</strong></p> <p><strong>What we\u2019re\
+    \ looking for</strong></p> <ul> <li>Bachelor's, Master's, or higher in Computer\
+    \ Science or a related technical field</li> <li>5+ years of relevant work experience</li>\
+    \ <li>Strong experience with container orchestration tools, such as Kubernetes\
+    \ and Docker</li> <li>Strong understanding of networking protocols like TCP/IP,\
+    \ DNS, HTTP, etc.</li> <li>Proficient in Java, Python, Bash, and Javascript/React</li>\
+    \ </ul> <p><strong>&nbsp;</strong></p> <p><strong>Bonus points if you have</strong></p>\
+    \ <ul> <li>Hands-on experience with multi-threaded and asynchronous programming\
+    \ models</li> <li>Extensive experience in distributed systems, concurrency control,\
+    \ data replication, networking, and storage systems</li> <li>Practical experience\
+    \ with Java GC/heap management, Apache Arrow, SQL operators, caching techniques,\
+    \ and disk spilling</li> </ul> <p>#LI-remote #LI-EH1</p><div class=\"content-conclusion\"\
+    ><h3><strong>What we value&nbsp;</strong></h3> <p><span style=\"font-weight: 400;\"\
+    >At Dremio, we hold ourselves to high standards when it comes to People, Thinking,\
+    \ and Action. Our Gnarlies (that's what we call our employees) communicate with\
+    \ clarity, drive accountability, and are respectful towards each other. We confront\
+    \ brutal facts an"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.0
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 1
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

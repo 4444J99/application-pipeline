@@ -17,7 +17,8 @@ amount:
   currency: USD
   type: stipend
 fit:
-  score: 4.8
+  score: 4.3
+  original_score: 4.8
   identity_position: creative-technologist
   dimensions: {}
   framing: null
@@ -25,10 +26,11 @@ fit:
     mission_alignment: 6
     evidence_match: 1
     track_record_fit: 5
+    network_proximity: 3
+    strategic_value: 6
     financial_alignment: 7
     effort_to_value: 4
-    strategic_value: 6
-    deadline_feasibility: 6
+    deadline_feasibility: 2
     portal_friction: 6
 submission:
   effort_level: standard

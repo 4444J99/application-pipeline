@@ -10,6 +10,68 @@ target:
   portal: greenhouse
   location: Kyiv, Ukraine
   location_class: international
+  description: "<p><em>Superhuman offers a dynamic hybrid working model for this role.\
+    \ This flexible approach gives team members the best of both worlds: plenty of\
+    \ focus time along with in-person collaboration that helps foster trust, innovation,\
+    \ and a strong team culture.</em></p> <h3><strong>About Superhuman</strong></h3>\
+    \ <p>Grammarly is now part of Superhuman, the AI productivity platform on a mission\
+    \ to unlock the superhuman potential in everyone. The Superhuman suite of apps\
+    \ and agents brings AI wherever people work, integrating with over 1 million applications\
+    \ and websites. The company\u2019s products include Grammarly's writing assistance,\
+    \ Coda\u2019s collaborative workspaces, Mail\u2019s inbox management, and Go,\
+    \ the proactive AI assistant that understands context and delivers help automatically.\
+    \ Founded in 2009, Superhuman empowers over 40 million people, 50,000 organizations,\
+    \ and 3,000 educational institutions worldwide to eliminate busywork and focus\
+    \ on what matters. Learn more at<a href=\"http://superhuman.com/\"><span class=\"\
+    s1\">&nbsp;superhuman.com</span></a> and about our <a href=\"https://blog.superhuman.com/our-values/\"\
+    ><span class=\"s1\">values here</span></a>.</p> <h3><strong>The Opportunity</strong></h3>\
+    \ <p>To achieve our ambitious goals, we\u2019re looking for Back-End Software\
+    \ Engineers to join our engineering teams.</p> <p>Superhuman's engineers and researchers\
+    \ have the freedom to innovate and uncover breakthroughs\u2014and, in turn, influence\
+    \ our product roadmap. The complexity of our technical challenges is growing rapidly\
+    \ as we scale our interfaces, algorithms, and infrastructure. You can hear more\
+    \ from our team on our <a href=\"http://grammarly.com/blog/engineering\">technical\
+    \ blog</a>.</p> <p>As a Back-End Engineer at Superhuman, you will play a critical\
+    \ role in building core parts of the Superhuman product offering, infrastructure,\
+    \ and features to help 30 million users write more clearly and effectively every\
+    \ day.</p> <p>As a Back-End Engineer, you will:</p> <ul> <li>Start building and\
+    \ pushing code in your first week and ship impactful features in your first few\
+    \ months.</li> <li>Build and support production services with high call rates.&nbsp;</li>\
+    \ <li>Target high availability for consumer and enterprise customers.&nbsp;</li>\
+    \ <li>Learn how to build infrastructure as code (IaC).</li> <li>Collaborate widely\
+    \ with internal teams such as Core, Growth, Enterprise, Trust, and Data to deliver\
+    \ delightful product offerings to our customers.&nbsp;</li> <li>Contribute to\
+    \ an engineering culture with a strong emphasis on documentation, testing, and\
+    \ user experience.</li> <li>Evaluate the systems and technology in place today\
+    \ while proposing systems and architecture that can scale for the future.&nbsp;</li>\
+    \ <li>Have the opportunity to mentor new hires.</li> </ul> <h3><strong>Qualifications</strong></h3>\
+    \ <ul> <li>Has 5+ years of relevant experience in back-end development.</li> <li>Displays\
+    \ excellent software engineering fundamentals, including knowledge of algorithms\
+    \ and data structures.</li> <li>Demonstrates perseverance when faced with tough\
+    \ technical issues.</li> <li>Has some experience with AWS or other cloud offerings\
+    \ (GCP, Azure, etc.).</li> <li>Has experience building, deploying, and debugging\
+    \ production systems at scale.</li> <li>Cares about the end-user experience and\
+    \ strives to ensure high quality.</li> <li>Has a demonstrated ability to work\
+    \ independently with minimal guidance, proactively manages tasks and priorities\
+    \ across multiple projects, analyzes and executes work efficiently, collaborates\
+    \ effectively with cross-functional teams, and thrives in fast-paced, results-driven\
+    \ environments.</li> </ul> <h3><strong>Support for you, professionally and personally</strong></h3>\
+    \ <ul> <li><em>Professional growth: </em>We believe that autonomy and trust are\
+    \ key to empowering our team members to do their best, most innovative work in\
+    \ a way that aligns with their interests, talents, and well-being.&nbsp;</li>\
+    \ <li><em>A connected team:</em> Superhuman builds a product that helps people\
+    \ connect, and we apply this mindset to our own team. Our remote-first, hybrid\
+    \ model enables a highly collaborative culture rooted in our values. We work to\
+    \ foster belonging among team members in a variety of ways. This includes our\
+    \ team member resource groups, Superhuman Circles, which promote connection among\
+    \ those with shared identities including BIPOC and <a href=\"https://www.grammarly.com/blog/supportive-workplace-for-lgbtqia/\"\
+    >LGBTQIA+</a> team members, women, and parents. We also celebrate our colleagues\
+    \ and accomplishments with global, local, and team-specific programs.&nbsp;</li>\
+    \ <li><em>Comprehensive benefits for candidates based in Ukraine: </em>Superhuman\
+    \ offers all team members competitive pay along with a benefits package encompassing\
+    \ life care (including mental health care and risk benefits) and ample and defined\
+    \ time off. We also offer support to set up a home office, wellness and pet care\
+    \ stipends, learning and development opportunities, and more"
 deadline:
   date: null
   type: rolling
@@ -18,8 +80,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.5
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

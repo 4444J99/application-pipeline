@@ -1,0 +1,108 @@
+id: mercury-senior-software-engineer-domestic-wires
+name: Mercury Senior Software Engineer - Domestic Wires
+track: job
+status: research
+outcome: null
+target:
+  organization: Mercury
+  url: https://boards.greenhouse.io/mercury
+  application_url: https://job-boards.greenhouse.io/mercury/jobs/5803347004
+  portal: greenhouse
+  location: San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada
+    or United States
+  location_class: us-remote
+  description: "<p>The electrical grid isn\u2019t flashy \u2014 but it powers everything.\
+    \ Homes, hospitals, factories, and entire cities depend on infrastructure that\
+    \ is always on, carefully regulated, and engineered for resilience. When it works,\
+    \ no one notices. When it doesn\u2019t, everything stops.</p> <p>Domestic Wires\
+    \ plays that role at Mercury. We own the engineering behind secure, compliant,\
+    \ and reliable domestic wire transfers \u2014 enabling businesses to move significant\
+    \ amounts of capital with precision and trust. The systems we build must balance\
+    \ speed with safety, scale with strict controls, and product flexibility with\
+    \ regulatory requirements.</p> <p>As a Senior Engineer, you\u2019ll operate at\
+    \ the core of Mercury\u2019s money movement platform. You\u2019ll design and evolve\
+    \ high-reliability systems, influence technical strategy, partner across product,\
+    \ risk, and banking* teams, and mentor others as we scale. This is an opportunity\
+    \ to work on infrastructure where durability, clarity, and strong judgment matter\
+    \ as much as raw speed.</p> <p><em>*</em><em>Mercury is a fintech company, not\
+    \ an FDIC-insured bank. Banking services provided through Choice Financial Group\
+    \ and Column N.A., Members FDIC.</em></p> <p><strong>What You\u2019ll Do</strong></p>\
+    \ <ul> <li><strong>Lead Projects End-to-End:</strong> Drive technical projects\
+    \ from concept to production. Define solutions, analyze tradeoffs, make critical\
+    \ decisions, and deliver software that works today and is sustainable for tomorrow.</li>\
+    \ <li><strong>Collaborate Across Functions:</strong> Partner with product, design,\
+    \ and business stakeholders to shape initiatives. Translate between technical\
+    \ and non-technical audiences to ensure clarity, alignment, and buy-in.</li> <li><strong>Code\
+    \ Craftsmanship:</strong> Write clear, testable, and maintainable code. Establish\
+    \ patterns and best practices that your team can follow, ensuring long-term scalability\
+    \ and reliability.</li> <li><strong>Build for Quality &amp; Sustainability:</strong>\
+    \ Design extensible systems, make balanced decisions on tech debt, plan careful\
+    \ rollouts, and own the quality of your work through post-launch monitoring.</li>\
+    \ <li><strong>Think Product, Not Just Code:</strong> Approach problems with a\
+    \ product mindset. You care as much about the business impact of what you build\
+    \ as the technical design.</li> <li><strong>Mentor &amp; Elevate:</strong> Coach\
+    \ engineers on your team by sharing patterns, practices, and critical thinking\
+    \ to raise the technical bar and foster a culture of sustainable engineering.</li>\
+    \ </ul> <p><strong>What You Bring</strong></p> <ul> <li>Seven or more years of\
+    \ backend software engineering experience.</li> <li>Proven experience leading\
+    \ technical projects at scale, including planning, execution, and stakeholder\
+    \ management.</li> <li>Experience maintaining and improving legacy systems.</li>\
+    \ <li>Clear and persuasive communication skills \u2014 you can articulate tradeoffs\
+    \ and influence decisions across teams, communicating clearly with non-technical\
+    \ stakeholders.</li> <li>A mindset that balances urgency with craftsmanship: shipping\
+    \ fast, without cutting corners on quality engineering.</li> <li>Creativity and\
+    \ adaptability \u2014 you think beyond the obvious and find solutions that move\
+    \ both product and business forward.</li> <li>A track record of mentoring engineers\
+    \ and helping teams grow.</li> </ul> <p>If this role interests you, we invite\
+    \ you to explore our public demo at <a href=\"https://demo.mercury.com/\">demo.mercury.com</a>.&nbsp;</p>\
+    \ <p>The total rewards package at Mercury includes base salary, equity, and benefits.\
+    \ Our salary and equity ranges are highly competitive within the SaaS and fintech\
+    \ industry and are updated regularly using the most reliable compensation survey\
+    \ data for our industry. New hire offers are made based on a candidate\u2019s\
+    \ experience, expertise, geographic location, and internal pay equity relative\
+    \ to peers.</p> <p>Our target new hire base salary ranges for this role are the\
+    \ following:</p> <ul> <li>US employees: $200,700 - $250,900</li> <li>Canadian\
+    \ employees: CAD $189,700 - $237,100</li> </ul> <p>Mercury values diversity &amp;\
+    \ belonging and is proud to be an Equal Employment Opportunity employer. All individuals\
+    \ seeking employment at Mercury are considered without regard to race, color,\
+    \ religion, national origin, age, sex, marital status, ancestry, physical or mental\
+    \ disability, veteran status, gender identity, sexual orientation, or any other\
+    \ legally protected characteristic. We are committed to providing reasonable accommodations\
+    \ throughout the recruitment process for applicants with disabilities or special\
+    \ needs. If you need assistance, or an accommodation, please let your recruiter\
+    \ know once you are contacted about a role.</p> <p>We use Covey as part of our\
+    \ hiring and / or promotional process for jobs in NYC and certain features may\
+    \ qualify it as an AEDT. As part of the evaluation process we provide Covey with\
+    \ job requirements and candidate submitted applications. We began using <a href=\"\
+    https://getcovey.co"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-15'
+  posting_date: '2026-03-13'
+  date_added: '2026-03-15'
+  discovered: '2026-03-15T16:39:32.970900+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-15'

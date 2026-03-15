@@ -1,0 +1,67 @@
+id: notion-software-engineer-developer-experience
+name: Notion Software Engineer, Developer Experience
+track: job
+status: deferred
+identity_position: independent-engineer
+outcome: withdrawn
+target:
+  organization: Notion
+  url: https://jobs.ashbyhq.com/notion
+  application_url: https://jobs.ashbyhq.com/notion/49bdf081-6e20-4323-8c73-6d6b19544ff5
+  portal: ashby
+  location: Hyderabad, India — requires on-site 3 days/week, not applicable
+  location_class: international
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: independent-engineer
+  framing: Documentation-first engineer with a knowledge architecture spanning 103
+    repos, 43 validated dependency edges, and 810K+ words — building the kind of structured,
+    navigable systems that developer experience demands at platform scale.
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 10
+    track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: 
+    framing: framings/independent-engineer
+    evidence: evidence/differentiators
+    work_samples: evidence/work-samples
+    credentials: pitches/credentials-creative-tech
+    methodology: methodology/ai-conductor
+  variant_ids:
+    cover_letter: cover-letters/notion-software-engineer-developer-experience-alchemized
+  materials_attached:
+  - resumes/batch-01/notion-software-engineer-developer-experience/notion-software-engineer-developer-experience-resume.html
+  - resumes/batch-01/notion-software-engineer-developer-experience/notion-software-engineer-developer-experience-resume.pdf
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-02-24'
+  date_added: 2026-02-24
+  submitted: '2026-02-24'
+conversion:
+  response_received: false
+  outcome_reason: location-ineligible
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+  follow_up_count: 0
+tags:
+- auto-sourced
+- curated-fit
+source: source_jobs.py
+last_touched: "2026-02-26"
+follow_up: []

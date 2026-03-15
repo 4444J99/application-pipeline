@@ -10,6 +10,67 @@ target:
   portal: greenhouse
   location: Lexington, Massachusetts, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h3>ABOUT THE JOB</h3>\
+    \ <p><br>As a Engineering Test Technician, you will play a critical role in ensuring\
+    \ our optical systems meet stringent quality standards before shipment to customers.\
+    \ In this position, you\u2019ll be responsible for testing optical equipment,\
+    \ running validation and system-level testing, and troubleshooting complex issues.\
+    \ A successful candidate will have a strong background in both production and\
+    \ R&amp;D environments, with the ability to collaborate effectively across interdisciplinary\
+    \ teams.</p> <h4><strong>WHAT YOU'LL DO</strong></h4> <ul> <li data-uuid=\"0e7e0180-a6b7-44cc-b7e4-da38b5a4c0dd\"\
+    >Perform testing of optical equipment according to procedures and specifications.</li>\
+    \ <li data-uuid=\"f4d74292-a722-4932-8387-c0bbda34c530\">Run validation and system-level\
+    \ testing to ensure optimal performance.</li> <li data-uuid=\"ed24a9b4-3656-43bd-bceb-43488959de93\"\
+    >Troubleshoot and resolve issues with optical systems during testing, identifying\
+    \ problems in electrical systems and the associated programs.</li> <li data-uuid=\"\
+    f3c2d46b-c89d-4930-863a-91f6172cadd8\">Follow detailed test work instructions\
+    \ and document results accurately in the system.</li> <li data-uuid=\"3f6aced3-66b5-4e1a-89ac-f8589adcd6eb\"\
+    >Utilize MATLAB for data collection, coding, and analysis to support testing activities.</li>\
+    \ <li data-uuid=\"f31f2dfe-1e31-4a68-98d5-7eab0a748e7a\">Maintain test equipment\
+    \ and tools, ensuring they are calibrated and functioning correctly.</li> <li\
+    \ data-uuid=\"87c532c9-0f3e-4e8d-8aa2-148453c30100\">Participate in root cause\
+    \ analysis of product failures, providing input based on testing experiences.</li>\
+    \ <li data-uuid=\"2fb9ed1a-f91e-4be9-99d0-12596f57b633\">Work autonomously while\
+    \ closely collaborating with the test engineering team to identify and report\
+    \ opportunities for improving testing processes and efficiencies.</li> </ul> <h4><strong>REQUIRED\
+    \ QUALIFICATIONS</strong></h4> <ul> <li data-uuid=\"993cba98-9e7b-4bbd-9866-7e0e668c9f33\"\
+    >Associates degree in Physics, Electrical/Electronics, Computer, Mechanical Engineering,\
+    \ or a related field or equivalent experience.&nbsp;</li> <li data-uuid=\"dee18fe7-3826-42c6-beb8-a0a8eae42570\"\
+    >3+ years of relevant industry experience in production or R&amp;D testing</li>\
+    \ <li data-uuid=\"f8dd6f8e-7644-4c25-b62f-399a824bf6e0\">Experience with cryogenics\
+    \ and vacuum systems in a testing environment.</li> <li data-uuid=\"b4b3e9e6-fd1a-47bb-a863-4b71ca0e3602\"\
+    >Proficiency in MATLAB for data acquisition, processing, and coding.</li> <li\
+    \ data-uuid=\"3f99bc52-3ab3-4725-8f00-94295314a528\">Strong troubleshooting skills\
+    \ for non-conforming hardware and software, with the ability to identify electrical\
+    \ issues and program failures.</li> <li data-uuid=\"27503317-fe5a-43f2-9f6b-11c3908a2d0d\"\
+    >Experience working with interdisciplinary teams in fast-paced settings.</li>\
+    \ <li data-uuid=\"c34ee8b4-1dc4-4ba7-90c4-301394077656\">Eligible to obtain and\
+    \ maintain an active U.S. Secret security clearance.</li> </ul> <h4><strong>PREFERRED\
+    \ QUALIFICATIONS</strong></h4> <ul> <li data-uuid=\"a1a88152-b65e-4035-bed2-772f2c50f9ae\"\
+    >Knowledge of infrared systems or optical systems including performance requirements\
+    \ and verification methodologies.</li> <li data-uuid=\"ec1aa27c-fc7e-4416-b7f2-a11bd11bb2e5\"\
+    >Familiarity with test equipment such as power supplies, electronic loads, thermal\
+    \ chambers, and data acquisition sensors.</li> <li data-uuid=\"0292b544-f436-4d46-b327-9d759e3ba8b3\"\
+    >Understanding of computer hardware communication protocols (USB, Ethernet, RS232,\
+    \ etc.).</li> </ul> <p>&nbsp;</p><div class=\"content-pay-transparency\"><div\
+    \ class=\"pay-input\"><div class=\"title\">US Salary Range</div><div class=\"\
+    pay-range\"><span>$86,000</span><span class=\"divider\">&mdash;</span><span>$114,000\
+    \ USD</span></div></div></div><div class=\"content-conclusion\"><p><span data-contrast=\"\
+    auto\">The salary range for this role is an estimate based on a wide range of\
+    \ compensation factors, inclusive of base salary only. Actual salary offer may\
+    \ vary based on (but not limited to) work experience, education and/or training,\
+    \ critical skills, and/or business considerations. Highly competitive equity grants\
+    \ are included in the majority of full time offers; and are considered part of\
+    \ Anduril's total compensa"
 deadline:
   date: null
   type: rolling
@@ -18,8 +79,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 4.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 5
+    evidence_match: 4
+    track_record_fit: 4
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

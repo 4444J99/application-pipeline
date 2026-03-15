@@ -10,6 +10,66 @@ target:
   portal: greenhouse
   location: Remote - Dubai
   location_class: remote-global
+  description: "<div class=\"content-intro\"><p>Amplitude is the leading AI analytics\
+    \ platform, helping over 4,700 customers\u2014including Atlassian, Burger King,\
+    \ NBCUniversal, Square, and Under Armour\u2014build better products and digital\
+    \ experiences. With powerful AI Agents embedded across our platform, teams can\
+    \ analyze, test, and optimize user experiences faster than ever. Ranked #1 across\
+    \ multiple categories in G2\u2019s Fall 2025 Report, Amplitude is the best-in-class\
+    \ solution for product, data, and marketing teams. Learn more at <a href=\"https://cts.businesswire.com/ct/CT?id=smartlink&amp;url=http%3A%2F%2Famplitude.com&amp;esheet=54428090&amp;newsitemid=20260218166598&amp;lan=en-US&amp;anchor=amplitude.com&amp;index=8&amp;md5=6cc9f966d63fa604ba56b7d2bceba4fe\"\
+    >amplitude.com</a>.</p> <p>As an organization, we deliver for our customers by\
+    \ living our values. We operate from a place of humility, take ownership of problems\
+    \ and successes, approach challenges with a growth mindset, and put our customers\
+    \ at the center of everything we do.</p> <p><strong>Amplitude\u2019s Commitment\
+    \ to Diversity Equity &amp; Inclusion (DEI): </strong>Amplitude believes that\
+    \ diversity enables the creation of better products, improves the ability to solve\
+    \ complex problems, and drives more powerful solutions. We strive to create an\
+    \ environment of inclusion\u2014one focused on psychological safety, empathy,\
+    \ and human connection\u2014that will allow employees of all backgrounds to thrive.</p></div><p>As\
+    \ a Senior Solutions Engineer at Amplitude, you'll be the technical quarterback\
+    \ for our most strategic opportunities in CIS, CEE, Middle East &amp; Africa.\
+    \ You'll partner with Account Executives to win complex, multi-stakeholder deals\
+    \ by translating product capabilities into business outcomes that matter to Product,\
+    \ Marketing, and Analytics leaders.</p> <p>You'll lead technical discovery, architect\
+    \ custom proof-of-concept implementations, and serve as a trusted advisor to prospects\
+    \ navigating their digital analytics strategy. Your technical credibility and\
+    \ business acumen will directly influence annual pipeline.</p> <h3>What You'll\
+    \ Do</h3> <p><strong>Deal Execution (70% of time)</strong></p> <ul> <li>Lead technical\
+    \ evaluation phases for deals ranging from $100K to $1M+ ARR</li> <li>Conduct\
+    \ deep discovery to map prospect workflows, tech stack dependencies, and decision\
+    \ criteria to Amplitude's differentiation</li> <li>Design and execute hands-on\
+    \ proof-of-concepts that prove value within the prospect's actual data and use\
+    \ cases</li> <li>Handle technical objections related to data architecture, privacy/compliance\
+    \ e.g., GDPR and integration complexity</li> <li>Present to C-level executives\
+    \ and translate technical capabilities into ROI narratives</li> </ul> <p><strong>Internal\
+    \ Collaboration (20% of time)</strong></p> <ul> <li>Partner with Product Management\
+    \ to communicate feature gaps and customer requirements that affect deal velocity</li>\
+    \ <li>Work with Customer Success to ensure smooth handoffs and technical alignment\
+    \ during implementation</li> <li>Mentor junior SEs on technical positioning and\
+    \ demo best practices</li> </ul> <p><strong>Thought Leadership (10% of time)</strong></p>\
+    \ <ul> <li>Contribute to our competitive intelligence on tools like Google Analytics\
+    \ 4, Adobe Analytics, and Mixpanel</li> <li>Develop reusable demo assets, technical\
+    \ content, and proof-of-concept frameworks for the broader SE team</li> </ul>\
+    \ <h3>What We're Looking For</h3> <p><strong>Required</strong></p> <ul> <li>5+\
+    \ years in software pre-sales (SE, Sales Consulting, or technical Account Management\
+    \ roles)</li> <li>2+ years working specifically with product analytics, experimentation\
+    \ platforms, or customer data platforms</li> <li>Hands-on SQL experience: you\
+    \ can write joins, aggregations, and window functions to analyze behavioral data</li>\
+    \ <li>Track record of closing technical evaluations in competitive enterprise\
+    \ deals</li> <li>Fluency in English and Arabic would be an advantage but not required\
+    \ (both written and verbal)]</li> <li>Comfort presenting technical concepts to\
+    \ both engineers and business stakeholders</li> </ul> <p><strong>Strongly Preferred</strong></p>\
+    \ <ul> <li>Russian or Arabic language fluency.&nbsp;</li> <li>Experience with\
+    \ event-based data models and understanding of tracking implementations</li> <li>Familiarity\
+    \ with BI tools (Tableau, Looker, Power BI) and how analytics platforms integrate\
+    \ with them</li> <li>Previous work in SaaS companies selling to Product, Growth,\
+    \ or Marketing teams</li> <li>Understanding of GDPR and data privacy implications\
+    \ for analytics tools</li> </ul> <h3>What Success Looks Like</h3> <ul> <li><strong>First\
+    \ 90 days:</strong> Ramp on Amplitude's platform, complete 3+ customer-facing\
+    \ demos, and contribute to 2 proof-of-concepts</li> <li><strong>First year:</strong>\
+    \ Influence revenue in closed-won ARR, maintain 70%+ technical win rate, and develop\
+    \ 2 reusable assets for the team</li> </ul> <h3>Why This Role Matters</h3> <p>Solutions\
+    \ Engineers are force multipliers at Ampl"
 deadline:
   date: null
   type: rolling
@@ -18,8 +78,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

@@ -1,0 +1,107 @@
+id: mercury-senior-software-engineering-educator-ai-enablement
+name: Mercury Senior Software Engineering Educator - AI Enablement
+track: job
+status: research
+outcome: null
+target:
+  organization: Mercury
+  url: https://boards.greenhouse.io/mercury
+  application_url: https://job-boards.greenhouse.io/mercury/jobs/5684047004
+  portal: greenhouse
+  location: San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada
+    or United States
+  location_class: us-remote
+  description: "<p>Teaching hospitals operate on a model that's remained largely unchanged\
+    \ for over a century: residents learn medicine not through lectures alone, but\
+    \ through supervised practice alongside attending physicians who've seen thousands\
+    \ of cases. The attending physician doesn't just demonstrate technique\u2014they\
+    \ narrate their clinical reasoning, point out subtle patterns the resident would\
+    \ miss, and know when to let the resident struggle versus when to intervene. This\
+    \ model works because medicine recognized early that expertise requires both knowledge\
+    \ transfer and judgment development, and judgment only develops through guided\
+    \ repetition.</p> <p>Software engineering is facing a version of this same challenge.\
+    \ AI coding tools can now produce working code faster than most engineers can\
+    \ type it\u2014but <a href=\"https://www.anthropic.com/research/AI-assistance-coding-skills\"\
+    >a growing body of research</a> suggests that speed comes at a cost. Engineers\
+    \ who lean heavily on AI during skill formation score significantly lower on debugging\
+    \ and conceptual mastery. The gap is especially pronounced in exactly the skills\
+    \ that matter most for oversight: understanding <em>why</em> code works, catching\
+    \ <em>when</em> it doesn't, and reasoning about <em>what should change</em>. As\
+    \ AI-written code becomes the norm, the engineers who can actually verify, debug,\
+    \ and guide that code become more valuable\u2014not less.</p> <p>Our Engineering\
+    \ Training team is looking for a software engineer and educator whose primary\
+    \ mission is helping Mercury engineers use AI effectively without eroding the\
+    \ fundamentals that make them effective in the first place. You'll be a part of\
+    \ designing the systems, norms, and learning experiences that turn \"AI as accelerant,\
+    \ not dependency\" from a slogan into an operational reality\u2014across experience\
+    \ levels, from new hires through senior ICs. You balance pragmatic execution with\
+    \ thoughtful program design, and you're comfortable doing the organizational legwork\
+    \ to drive adoption. This is a unique opportunity to shape what AI-enabled engineering\
+    \ excellence looks like at Mercury.</p> <p>*<em>Mercury is a fintech company,\
+    \ not an FDIC-insured bank. Banking services provided through Choice Financial\
+    \ Group and Column N.A., Members FDIC.</em></p> <h3><strong>As part of this role,\
+    \ you will:</strong></h3> <ul> <li>Define and operationalize Mercury's AI-usage\
+    \ guidelines for engineering: what engineers should use AI for, what they shouldn't,\
+    \ and how those boundaries shift as skill and context deepen</li> <li>Design structured\
+    \ checkpoints and assessment frameworks that detect when AI reliance is accelerating\
+    \ growth versus eroding foundational skills like debugging, code reading, and\
+    \ system reasoning</li> <li>Create clear \"when to unlatch AI\" triggers for onboarding\
+    \ and training\u2014criteria that tell engineers and their managers when someone\
+    \ has built enough foundation to lean more heavily on AI tooling</li> <li>Build\
+    \ and iterate on AI-aware training materials that model the right balance: hand-crafted\
+    \ coding where it builds understanding, AI-assisted workflows where it multiplies\
+    \ leverage</li> <li>Partner with managers and lead engineers across experience\
+    \ levels to embed AI-usage norms into 1:1s, growth conversations, and performance\
+    \ discussions\u2014not as a separate initiative, but as part of how Mercury engineers\
+    \ develop</li> <li>Stand up and evolve a mentorship-focused initiative for software\
+    \ engineers, ensuring mentors model thoughtful AI usage alongside strong engineering\
+    \ craft</li> <li>Do the operational work that drives adoption: scheduling, facilitation,\
+    \ follow-ups, and iteration based on feedback</li> <li>Collaborate closely with\
+    \ training team members and cross-functional partners to drive broader skill acquisition\
+    \ efforts</li> </ul> <h3><strong>The ideal candidate for this role:</strong></h3>\
+    \ <ul> <li>Has 5+ years of shipping quality software into production while mentoring\
+    \ peer software engineers in a start-up environment</li> <li>Has hands-on experience\
+    \ with AI coding tools and a thoughtful, opinionated perspective on where they\
+    \ help and where they hinder</li> <li>Communicates clearly and gives actionable,\
+    \ direct, kind feedback</li> <li>Enjoys turning fuzzy goals into simple, repeatable\
+    \ programs</li> <li>Knows when to lean into 1:1 sessions or organizational legwork\
+    \ to drive adoption or improve learning outcomes</li> <li>Models a care of craftsmanship\
+    \ and healthy engineering habits\u2014including deliberate, principled AI usage\
+    \ rather than reflexive reliance</li> <li>Loves turning passive, explanatory content\
+    \ into active, exercise-centric learning resources</li> <li>Is energized by the\
+    \ tension between productivity and skill development, and sees designing for both\
+    \ as a core challenge rather than a tradeoff to accept</li> <li>Haskell experience\
+    \ or strong willingness to learn Mercury's primary stack is a plus</li> </ul>\
+    \ <p>If this role interests you, we invite you to explore our public demo at <a\
+    \ href=\"http://demo.mercury.com\">demo.merc"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: independent-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/independent-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-15'
+  posting_date: '2026-03-13'
+  date_added: '2026-03-15'
+  discovered: '2026-03-15T16:39:32.971534+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-15'

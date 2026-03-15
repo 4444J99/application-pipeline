@@ -10,6 +10,68 @@ target:
   portal: greenhouse
   location: Costa Mesa, California, United States; Seattle, Washington, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h3><strong>ABOUT\
+    \ THE TEAM</strong></h3> <p>The Tasking Team is part of the Lattice software platform\
+    \ and enables command and control of robots, sensors, and third-party integrations\
+    \ through our flexible, software-defined tasking framework. Our work spans both\
+    \ ground and robot software, creating a unified model for task delivery, state\
+    \ management, and execution reasoning. As a core software capability, the Tasking\
+    \ Team's work directly enables mission-critical operations across all domains,\
+    \ across Anduril products and missions, and <a href=\"https://developer.anduril.com/\"\
+    >developer program partners</a> integrating with the Lattice SDK. Our solutions\
+    \ are designed for real-world deployment in the most demanding operational scenarios,\
+    \ where the ability to maintain command and control of autonomous systems can\
+    \ make the difference between mission success and failure.</p> <h3><strong>ABOUT\
+    \ THE JOB</strong></h3> <p>We are looking for a Senior Software Engineer to join\
+    \ our team, where you will design and develop the core task execution framework\
+    \ onboard autonomous vehicles, enabling reliable command and control through our\
+    \ Lattice Autonomy stack. You will collaborate closely with platform teams, autonomy\
+    \ engineers, and end users to create solutions that enable efficient, reliable\
+    \ tasking of autonomous systems in real-world defense scenarios. If you are someone\
+    \ who is self-motivated, holds yourself to high standards, and thrives in a low-structure,\
+    \ high-autonomy environment, then this role is for you.</p> <p><strong>WHAT YOU\u2019\
+    LL DO</strong></p> <ul> <li>Design and implement core components of our Tasking\
+    \ framework that runs onboard autonomous vehicles as part of Lattice for Mission\
+    \ Autonomy</li> <li>Develop robust, fault-tolerant systems that can operate reliably\
+    \ over denied or degraded communications links</li> <li>Create interfaces that\
+    \ enable third-party systems to integrate with our Tasking framework through the\
+    \ open source Lattice SDK</li> <li>Collaborate with autonomy teams to ensure their\
+    \ platforms can reliably receive and execute tasks</li> </ul> <h4>REQUIRED QUALIFICATIONS</h4>\
+    \ <ul> <li>Bachelor's degree in Computer Science, Engineering, or relevant field,\
+    \ or equivalent experience</li> <li>5+ years of professional software development\
+    \ experience, with a focus on distributed systems or robotics</li> <li>Deep experience\
+    \ with C++, Rust, or similar systems programming languages</li> <li>Proficiency\
+    \ with protocol design and implementation (gRPC, protobuf, etc.)</li> <li>Experience\
+    \ building software solutions involving significant amounts of data processing\
+    \ and analysis</li> <li>Excellent collaboration skills and ability to work across\
+    \ multiple engineering teams</li> <li>A desire to work on critical software that\
+    \ has a real-world impact</li> <li>US Persons: Must be a U.S. Person due to required\
+    \ access to U.S. export controlled information or facilities</li> </ul> <h4><strong>PREFERRED\
+    \ QUALIFICATIONS </strong></h4> <ul> <li>Experience with autonomous systems or\
+    \ command and control systems</li> <li>Background in developing systems for defense,\
+    \ aerospace, or other mission-critical applications</li> <li>Familiarity with\
+    \ software development for embedded systems or resource-constrained environments</li>\
+    \ <li>Distributed communication networks and message standards</li> </ul><div\
+    \ class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"title\"\
+    >US Salary Range</div><div class=\"pay-range\"><span>$191,000</span><span class=\"\
+    divider\">&mdash;</span><span>$253,000 USD</span></div></div></div><div class=\"\
+    content-conclusion\"><p><span data-contrast=\"auto\">The salary range for this\
+    \ role is an estimate based on a wide range of compensation factors, inclusive\
+    \ of base salary only. Actual salary offer may vary based on (but not limited\
+    \ to) work experience, education and/or training, critical skills, and/or business\
+    \ considerations. Highly competitive equity grants are included in the majority\
+    \ of full time offers; and are considered part of Anduril's total compensation\
+    \ package. Additionally, Anduril offers top-tier benefits for full-time employees,\
+    \ including:</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;33555162"
 deadline:
   date: null
   type: rolling
@@ -18,8 +80,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

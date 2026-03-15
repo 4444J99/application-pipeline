@@ -10,6 +10,68 @@ target:
   portal: greenhouse
   location: Costa Mesa, California, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h3 style=\"text-align:\
+    \ start;\">ABOUT THE JOB</h3> <p style=\"text-align: start;\">As a key member\
+    \ of Anduril's Talent Acquisition team, you will be responsible for the company's\
+    \ talent management as we continue to rapidly scale and grow. Your work will be\
+    \ hands-on and involve collaborating with Supply Chain &amp; Deployment leaders\
+    \ to define the hiring needs, influence process improvements and efficiencies,\
+    \ and set a high bar of talent and performance. To achieve this, you will be given\
+    \ the autonomy and tools to execute, build, and develop Anduril's world class\
+    \ team. We are looking for someone who can handle every aspect of recruiting and\
+    \ talent mapping, excited to be part of lean and nimble team on one mission together,\
+    \ where no task is too big or too small.</p> <p style=\"text-align: start;\">This\
+    \ role will be hybrid in Costa Mesa, CA. This is a 6 month contract with the ability\
+    \ to extend up to 2 years. Opportunity to be converted to a permanent employee\
+    \ based on performance, impact, and business need.&nbsp;</p> <h4 style=\"text-align:\
+    \ start;\"><strong>WHAT YOU\u2019LL DO</strong></h4> <ul style=\"text-align: start;\"\
+    > <li>Act as a subject matter expert in prospecting techniques and tools used\
+    \ for information retrieval, data extraction, web-scraping, continuous process\
+    \ improvement, process automation, and candidate management</li> <li>Conduct interviews\
+    \ of potential candidates, demonstrating ability to anticipate hiring manager\
+    \ preferences through high interview-to-offer ratios</li> <li>Engage passive candidates\
+    \ using Linkedin Recruiter, Gem, Boolean strings, referral and SOBO campaigns</li>\
+    \ <li>Drive diverse talent into the organization ensuring a positive candidate\
+    \ experience at every touchpoint</li> <li>Build talent maps to generate market\
+    \ insights to inform your engagement strategy</li> <li>Represent the company's\
+    \ brand and recruiting team internally and externally at the highest caliber</li>\
+    \ <li>Leverage internal resources, team mates, and cross functional partners to\
+    \ build strategy around selling our value proposition and impacting hiring practic</li>\
+    \ </ul> <h4 style=\"text-align: start;\">REQUIRED QUALIFICATIONS</h4> <ul style=\"\
+    text-align: start;\"> <li>3+ years experience as a high-volume sourcer for technical\
+    \ and niche roles and engaging top tier talent</li> <li>Experience working with\
+    \ senior level leaders and stakeholders, reporting on progress, creating and advising\
+    \ on hiring/talent strategies</li> <li>Experience recruiting at an agency and\
+    \ fast-paced startup, hiring non-exempt and exempt roles for Supply Chain, Logistics,\
+    \ Manufacturing, or Engineering</li> </ul> <h4 style=\"text-align: start;\">PREFERRED\
+    \ QUALIFICATIONS&nbsp;</h4> <ul style=\"text-align: start;\"> <li>Knowledge of\
+    \ ITAR policies around hiring practices&nbsp;</li> <li>Experience acting in a\
+    \ consultative manner where your guidance has led to improved outcomes and positive\
+    \ candidate experiences</li> <li>Clear and effective communication with candidates\
+    \ to understand motivation, drivers, and fit within the organization</li> <li>Experience\
+    \ managing various high-volume pipelines of candidates and keeping track of their\
+    \ progress throughout the recruitment process</li> <li>Highly autonomous, collaborative,\
+    \ and adaptable</li> </ul><div class=\"content-pay-transparency\"><div class=\"\
+    pay-input\"><div class=\"title\">US Hourly Range </div><div class=\"pay-range\"\
+    ><span>$50</span><span class=\"divider\">&mdash;</span><span>$60 USD</span></div></div></div><div\
+    \ class=\"content-conclusion\"><p><span data-contrast=\"auto\">The salary range\
+    \ for this role is an estimate based on a wide range of compensation factors,\
+    \ inclusive of base salary only. Actual salary offer may vary based on (but not\
+    \ limited to) work experience, education and/or training, critical skills, and/or\
+    \ business considerations. Highly competitive equity grants are included in the\
+    \ majority of full time offers; and are considered part of Anduril's total compensation\
+    \ package. Additionally, Anduril offers top-tier benefits for full-time employees,\
+    \ including:</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}\"\
+    >&nbsp;</span></p> <p><stro"
 deadline:
   date: null
   type: rolling
@@ -18,8 +80,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 4.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 5
+    evidence_match: 4
+    track_record_fit: 4
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

@@ -10,6 +10,67 @@ target:
   portal: greenhouse
   location: Sydney, New South Wales, Australia
   location_class: international
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><p>The Sourcing Engineer\
+    \ Lead will lead a small, high-performing team in executing sourcing initiatives.\
+    \ As a lead, leverage extensive experience in negotiating and securing strategic\
+    \ commercial agreements with demonstrated success in driving cost savings and\
+    \ enhancing supply chain flexibility through high-impact negotiations that support\
+    \ manufacturing scale-up and long-term operational goals. <br><br><strong>WHAT\
+    \ YOU'LL DO:</strong></p> <ul> <li>Leverage robust negotiation experience to secure\
+    \ strategic supplier agreements, ensuring favorable terms that support scalable\
+    \ manufacturing operations and drive cost-efficiency.</li> <li>Develop and lead\
+    \ supplier selection for specific products using our approved supplier list and/or\
+    \ identify new partners</li> <li>Collaborate and lead the partnership with strategic\
+    \ suppliers and internal stakeholders to accelerate product development through:</li>\
+    \ <ul> <li>Concept scoping for rapid requirement validation</li> <li>Feature trade-off\
+    \ analysis and trade tables</li> <li>Total Cost of Ownership (TCO) modeling</li>\
+    \ <li>Joint design development under clear statements of work</li> <li>Simulation\
+    \ of mechanical &amp; electronics designs</li> <li>Driving and owning the outcome\
+    \ of commercial negotiations with internal stakeholders such as program management\
+    \ and legal personnel</li> </ul> <li>Develop and execute sourcing strategies using\
+    \ market insights, supplier rationalisation, and commodity pricing plans across\
+    \ all product lines</li> <li>Lead and drive cost engineering efforts to converge\
+    \ cost models with product targets while maximizing TCO.</li> <li>Collaboratively\
+    \ drive on-time availability of NPI component procurement and ensure suppliers\
+    \ execute their manufacturing scale-up plans effectively by monitoring progress,\
+    \ enforcing quality standards, and coordinating closely to meet target timelines.</li>\
+    \ <li>Lead and own complete BOM risk assessments and implement mitigation plans.</li>\
+    \ <li>Collaborate with stakeholders to reduce complexity of supply chain through\
+    \ commonality optimisation &amp; component/supplier rationalisation.</li> <li>Lead\
+    \ all cost engineering activities to converge the bottoms-up cost curve to product\
+    \ cost, maximizing the total cost of ownership (TCO) across the product lifecycle.</li>\
+    \ </ul> <p><br><strong>REQUIRED QUALIFICATIONS:</strong></p> <ul> <li>Extensive\
+    \ experience in negotiating and securing strategic commercial agreements with\
+    \ demonstrated success in driving cost savings and enhancing supply chain flexibility\
+    \ through high-impact negotiations that support manufacturing scale-up and long-term\
+    \ operational goals.</li> <li>Ideally has background within:</li> <ul> <li>Design\
+    \ &amp; development of mechanical and/or electronics devices</li> <li>Advanced\
+    \ sourcing activities, including positions working as a commodity/sourcing manager</li>\
+    \ <li>Supplier development (technology, process, supply chain, etc.)</li> <li>Early\
+    \ supplier engagement, ahead of product/engineering requirement realisation</li>\
+    \ </ul> <li>Domain expertise must include value/procurement engineering or TCO-related\
+    \ work at the component &amp; product level</li> <li>Familiarity with developing\
+    \ high-tech products in a high-mix, low-volume environment</li> <li>Bachelor\u2019\
+    s degree in engineering (BSME, BSEE) or other related technical degree.</li> <li>Ability\
+    \ to obtain and maintain an Australian NV2 clearance</li> </ul><div class=\"content-conclusion\"\
+    ><p><span data-contrast=\"auto\">The salary range for this role is an estimate\
+    \ based on a wide range of compensation factors, inclusive of base salary only.\
+    \ Actual salary offer may vary based on (but not limited to) work experience,\
+    \ education and/or training, critical skills, and/or business considerations.\
+    \ Highly competitive equity grants are included in the majority of full time offers;\
+    \ and are considered part of Anduril's total compensation package. Additionally,\
+    \ Anduril offers top-tier benefits for full-time employees, including:</span><span\
+    \ data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}\"\
+    >&nbsp;</span></p> <p><strong><span data-contrast=\"auto\">Healthcare Benefits&nbsp;</span>"
 deadline:
   date: null
   type: rolling
@@ -18,8 +79,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 4.7
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 5
+    evidence_match: 4
+    track_record_fit: 4
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

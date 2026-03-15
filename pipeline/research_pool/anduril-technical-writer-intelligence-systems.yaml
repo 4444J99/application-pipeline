@@ -10,6 +10,67 @@ target:
   portal: greenhouse
   location: Reston, Virginia, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h3>ABOUT THE TEAM&nbsp;</h3>\
+    \ <p>Anduril Intelligence Systems (AIS) is focused on positioning Anduril as a\
+    \ lead provider of specialized engineering and products for Intelligence Community\
+    \ (IC) customers. We work within the IC to understand their requirements, shape\
+    \ their concepts of operation, and deliver exquisite capability across their problem\
+    \ set. We aim to develop and deploy critically needed capabilities that address\
+    \ our customers\u2019 most pressing national security requirements.</p> <h3>ABOUT\
+    \ THE JOB</h3> <p><span data-contrast=\"auto\">As a Technical Writer, your mission\
+    \ is to work with and capture technical artifacts from engineering project teams.\
+    \ You will deliver accurate, updated, and easy-to-understand documentation on\
+    \ material both for internal use and external customer delivery. In this role,\
+    \ you will work closely with engineers and various subject matter experts to understand\
+    \ the lifecycle of complex projects, identify knowledge and information gaps,\
+    \ and use documentation to close the gap. You may act as an editor to material\
+    \ written by engineers or work to incorporate specific inputs from the engineering\
+    \ team into more comprehensive documents. As such, the technical writer will play\
+    \ a foundational role in raising and setting the bar for tone, voice, and quality\
+    \ across our written artifacts.</span><span data-ccp-props=\"{}\">&nbsp;</span></p>\
+    \ <p><span data-contrast=\"auto\">With Anduril\u2019s focus on defense and national\
+    \ security, documentation plays a critical role in ensuring front-line operators\
+    \ know how to leverage the \u201Carsenal of democracy.\u201D Your mission is to\
+    \ make the process of learning how to understand and operate systems as easy and\
+    \ seamless as possible, with exceptionally written and presented artifacts.</span><span\
+    \ data-ccp-props=\"{}\">&nbsp;</span></p> <p><span data-contrast=\"auto\">You\
+    \ will identify relevant stakeholders and lead them through a documentation roadmap\
+    \ with established key milestones and targets. This will require an in-depth understanding\
+    \ of which engineers are relevant to documentation, and what an organized effort\
+    \ toward collaboration entails. You are to ensure that stakeholders are engaged\
+    \ at the right time, and you will guide them towards a polished and finished document\
+    \ that plainly meets customer needs. Finally, you will also work with Program\
+    \ Management to ensure contract deliverables are completed on-time and to a standard\
+    \ of excellence.</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;201341983&quot;:0,&quot;335551550&quot;:1,&quot;335551620&quot;:1,&quot;335559685&quot;:0,&quot;335559737&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:279}\"\
+    >&nbsp;</span></p> <p><span data-contrast=\"auto\">&nbsp;Written content artifacts\
+    \ under this charger may include: requirement documentation, technical manuals,\
+    \ operational manuals, maintenance manuals, procedures, checklists, templates,\
+    \ user guides, troubleshooting guides, and release notes. You will partner with\
+    \ account and engineering teams across all phases of development to ensure users\
+    \ have the right documentation available.</span><span data-ccp-props=\"{}\">&nbsp;</span></p>\
+    \ <h4><strong>WHAT YOU\u2019LL DO</strong></h4> <ul> <li><span data-contrast=\"\
+    auto\">Generate, review, and edit documentation that is user-focused \u2013 whoever\
+    \ that user may be. Work with engineering and operations to deliver documentation\
+    \ of a consistently high-quality.</span><span data-ccp-props=\"{}\">&nbsp;</span></li>\
+    \ <li><span data-ccp-props=\"{}\"><span class=\"TextRun SCXW17120980 BCX0\" lang=\"\
+    EN-US\" data-contrast=\"auto\"><span class=\"NormalTextRun SCXW17120980 BCX0\"\
+    >Contribute to Anduril\u2019s technical writing toolkit - working on everything\
+    \ from style guides to the documentation lifecycle and review process, </span><span\
+    \ class=\"NormalTextRun SCXW17120980 BCX0\">and also</span><span class=\"NormalTextRun\
+    \ SCXW17120980 BCX0\"> relevant software tool procurement through definition requirements\
+    \ for things like authoring and publishing tools</span><span class=\"NormalTextRun\
+    \ SCXW17120980 BCX0\">.</span></span><span class=\"EOP SCXW17120980 BCX0\" data-ccp-props=\"\
+    {}\">&nbsp;</span></span></li> <li><span data-ccp-props=\"{}\"><span class=\"\
+    EOP SCXW17120980 BCX0\" data"
 deadline:
   date: null
   type: rolling
@@ -18,8 +79,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 7.2
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}
@@ -40,4 +111,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-03-13'
+last_touched: '2026-03-15'

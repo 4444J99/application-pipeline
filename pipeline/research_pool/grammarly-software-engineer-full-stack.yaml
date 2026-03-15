@@ -10,6 +10,70 @@ target:
   portal: greenhouse
   location: San Francisco, CA; North America; Canada; Argentina; Brazil; Mexico
   location_class: us-onsite
+  description: "<h3>SUPERHUMAN MAIL \U0001F449</h3> <p>At Superhuman, we\u2019ve built\
+    \ the fastest email experience in the world \u2014 one that's <a href=\"https://superhuman.com/love\"\
+    >deeply loved and adored by customers</a> who get through their inboxes twice\
+    \ as fast.</p> <p>\U0001F4E3 Superhuman Mail, Grammarly, and Coda are now part\
+    \ of the Superhuman Suite, an AI productivity platform on a mission to unlock\
+    \ the superhuman potential in everyone. The Superhuman suite of apps and agents\
+    \ brings AI wherever people work, integrating with over 1 million applications\
+    \ and websites. Learn more at<a href=\"http://superhuman.com/\">&nbsp;superhuman.com</a>\
+    \ and about our <a href=\"https://blog.superhuman.com/our-values/\">values here</a>.</p>\
+    \ <h3>BUILD LOVE \U0001F49C</h3> <p>At Superhuman, we have a deep understanding\
+    \ of how to build products that people love. We incorporate fun and play, infusing\
+    \ magic and joy to create experiences that amaze and delight. It all starts with\
+    \ the right team \u2014 a team that deeply cares about values, customers, and\
+    \ each other.</p> <h3>CREATE MASSIVE IMPACT \U0001F680</h3> <p>We're not solving\
+    \ a small problem, nor are we addressing a small market. We're reshaping the fundamentals\
+    \ of how people work. We're combining premium product craft with enterprise-scale\
+    \ capabilities to rethink how individuals and teams should fundamentally collaborate.\
+    \ We are building a household brand and a worldwide organization. We are here\
+    \ to do our best work, and we hope you are too.</p> <h3>ROLE \U0001F469\U0001F3FD\
+    \u200D\U0001F4BB\U0001F468\u200D\U0001F4BB</h3> <ul> <li>Develop new products\
+    \ and features, improve existing offerings</li> <li>Become an expert in web app\
+    \ development</li> <li>Expand development experience across the stack and to other\
+    \ platforms</li> <li>Contribute to the product development process: thinking through\
+    \ UX, designing beautiful UI, and working with customers to solve their problems</li>\
+    \ <li>Help estimate, plan, and complete projects, features, and integrations</li>\
+    \ <li>Champion code quality, new technologies, and architectural design within\
+    \ the company</li> <li>Technologies we use: React, Typescript, Golang, Postgres,\
+    \ Electron, Google Cloud</li> </ul> <h3>SOUND LIKE YOU? \U0001F64C</h3> <ul> <li>Experience:\
+    \ 5+ years of professional full-stack web development experience, working from\
+    \ the database to the UI.</li> <li>Expertise:&nbsp;You have a deep understanding\
+    \ of browser JavaScript (including the DOM and platform APIs).</li> <li>AI Enthusiast:&nbsp;You\
+    \ believe AI will revolutionize how we work as well as the experiences that we\
+    \ create for our customers. Driven by passion and curiosity, you leverage AI to\
+    \ dramatically increase your own productivity and the impact of your team.</li>\
+    \ <li>Remarkable Quality:&nbsp;You produce work that is striking, worthy of attention,\
+    \ and a contribution to the state of the art.</li> <li>Asynchronous Communicator:&nbsp;You\u2019\
+    re effective across various mediums (especially Slack, Notion, and email) and\
+    \ can produce and consume detailed written materials as needed without sacrificing\
+    \ speed. You respond quickly and thoughtfully to unblock others and speed things\
+    \ up.</li> <li>Start-to-Finish Ownership:&nbsp;Acts with 100% responsibility for\
+    \ their own outcomes as well as the outcomes of the company.</li> <li>Bias to\
+    \ action:&nbsp;Speed matters. Takes rapid and decisive steps forward, even in\
+    \ the face of uncertainty, recognizing action is the catalyst for progress and\
+    \ growth.</li> <li>Growth Mindset: You embrace challenges, welcome feedback, and\
+    \ believe you and others can always grow.</li> </ul> <h3>SALARY INFO \U0001F4B8\
+    </h3> <p>Superhuman takes a market-based approach to compensation, which means\
+    \ base pay may vary depending on your location.</p> <p>Base pay may vary considerably\
+    \ depending on job-related knowledge, skills, and experience. The expected salary\
+    \ ranges for this position are outlined below and may be modified in the future.</p>\
+    \ <ul> <li>SF/NY/Seattle: $138,000-$306,000</li> <li>Other US geographies: $124,000-$275,000</li>\
+    \ <li>Canada: $104,000-$246,000 CAD</li> <li>Mexico: $1,928,000-$2,762,000 MXN</li>\
+    \ <li>Brazil: R$562,000-R$806,000 BRL</li> <li>Argentina: $103,000-$147,000 USD</li>\
+    \ </ul> <h3>BENEFITS \U0001F381</h3> <p>Superhuman offers all team members competitive\
+    \ pay along with a benefits package encompassing the following and more:</p> <ul>\
+    \ <li>Excellent health care (including a wide range of medical, dental, vision,\
+    \ mental health, and fertility benefits)</li> <li>Disability and life insurance\
+    \ options</li> <li>401(k) and RRSP matching (US &amp; Canada only)</li> <li>Paid\
+    \ parental leave</li> <li>20 days of paid time off per year, 12 days of paid holidays\
+    \ per year (17 days for LatAm), two floating holidays per year, and flexible sick\
+    \ time</li> <li>Generous stipends (including those for caregiving, pet care, wellness,\
+    \ your home office, and more)</li> <li>Annual professional development budget\
+    \ and opportunities</li> </ul> <p>Superhuman takes a market-based approach to\
+    \ compensation, so base pay may vary by location.</p> <h3>COME JOIN US \U0001F39F\
+    \uFE0F</h3> <p>We value our differences, and we encourage all to a"
 deadline:
   date: null
   type: rolling
@@ -18,8 +82,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

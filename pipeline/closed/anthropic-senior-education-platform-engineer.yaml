@@ -19,15 +19,16 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.5
+  score: 7.5
   identity_position: independent-engineer
   dimensions:
     mission_alignment: 9
     evidence_match: 10
     track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 8
     financial_alignment: 5
     effort_to_value: 7
-    strategic_value: 8
     deadline_feasibility: 9
     portal_friction: 5
   framing: Independent engineer and veteran educator (11 years, 2,000 students) building production-grade AI orchestration at institutional scale. Specialist in bridging the gap between agentic model capabilities and reliable engineering infrastructure through an "AI-conductor" methodology.

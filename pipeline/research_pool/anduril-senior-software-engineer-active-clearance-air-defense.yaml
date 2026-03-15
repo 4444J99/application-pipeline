@@ -10,6 +10,68 @@ target:
   portal: greenhouse
   location: Irvine, California, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3>\
+    \ <p>The Air Defense team builds robots that detect airborne threats and neutralizes\
+    \ them. At a time when air superiority can no longer be taken for granted, the\
+    \ Air Defense Team provides mission critical capabilities to warfighters. From\
+    \ detection to tracking, identification, deterrence, and defeat, our family of\
+    \ networked sensors and effectors enables our customers to rapidly close the kill\
+    \ chain against a broad range of Unmanned Aerial System (UAS) threats. Working\
+    \ across product, engineering, sales, logistics, operations, and mission success,\
+    \ the Air Defense team develops, tests, deploys, and sustains the Anduril Air\
+    \ Defense Family of Systems (FoS) in challenging operational environments worldwide.<br><br><strong>ABOUT\
+    \ THE JOB</strong><br>We are hiring for a Senior Software Engineer to join rapidly\
+    \ growing team in Irvine, CA. As a&nbsp; Senior Software Engineer, you will solve\
+    \ a wide variety of problems involving networking, autonomy, systems integration,\
+    \ robotics, and more, while making pragmatic engineering tradeoffs along the way.\
+    \ Your efforts will ensure that Anduril products seamlessly work together to achieve\
+    \ a variety of critical outcomes. Above all, Mission Software Engineers are driven\
+    \ by a \u201CWhatever It Takes\u201D mindset\u2014executing in an <em>expedient</em>,\
+    \ <em>scalable</em>, and <em>pragmatic</em> way while keeping the mission top-of-mind\
+    \ and making sound engineering decisions to deliver successful outcomes correctly,\
+    \ on-time, and with high quality.</p> <h4>WHAT YOU\u2019LL DO</h4> <ul> <li>Own\
+    \ the software solutions that are deployed to customers</li> <li>Write code to\
+    \ improve products and scale the mission capability to more customers</li> <li>Collaborate\
+    \ across multiple teams to plan, build, and test complex functionality</li> <li>Create\
+    \ and analyze metrics that are leveraged for debugging and monitoring</li> <li>Triage\
+    \ issues, root cause failures, and coordinate next-steps</li> <li>Partner with\
+    \ end-users to turn needs into features while balancing user experience with engineering\
+    \ constraints</li> <li>Travel 30% of time to build, test, and deploy capabilities\
+    \ in the real world</li> </ul> <h4>REQUIRED QUALIFICATIONS</h4> <ul> <li>Strong\
+    \ engineering background from industry or school, ideally in areas/fields such\
+    \ as Computer Science, Software Engineering, or Computer Engineering</li> <li>7+\
+    \ years working with a variety of programming languages such as Python, Rust,\
+    \ Go, etc.</li> <li>Experience building software solutions involving significant\
+    \ amounts of data processing and analysis</li> <li>Ability to quickly understand\
+    \ and navigate complex systems and established code bases</li> <li>A desire to\
+    \ work on critical software that has a real-world impact</li> <li>Active U.S.\
+    \ Secret clearance</li> </ul> <h4>PREFERRED QUALIFICATIONS</h4> <ul> <li>Experience\
+    \ with NixOS</li> <li>Developing and testing multi-agent autonomous systems and\
+    \ deploying in real-world environments</li> <li>Feature and algorithm development\
+    \ with an understanding of behavior trees</li> <li>Developing software/hardware\
+    \ for flight systems and safety critical functionality</li> <li>Distributed communication\
+    \ networks and message standards</li> <li>Knowledge of military systems and operational\
+    \ tactics</li> </ul><div class=\"content-pay-transparency\"><div class=\"pay-input\"\
+    ><div class=\"title\">US Salary Range</div><div class=\"pay-range\"><span>$191,000</span><span\
+    \ class=\"divider\">&mdash;</span><span>$253,000 USD</span></div></div></div><div\
+    \ class=\"content-conclusion\"><p><span data-contrast=\"auto\">The salary range\
+    \ for this role is an estimate based on a wide range of compensation factors,\
+    \ inclusive of base salary only. Actual salary offer may vary based on (but not\
+    \ limited to) work experience, education and/or training, critical skills, and/or\
+    \ business considerations. Highly competitive equity grants are included in the\
+    \ majority of full time offers; and are considered part of Anduril's total compensation\
+    \ package. Additionally, Anduril offers top-tier benefits for full-time employees,\
+    \ including:</span><span data-ccp-props=\"{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}\"\
+    >"
 deadline:
   date: null
   type: rolling
@@ -18,8 +80,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

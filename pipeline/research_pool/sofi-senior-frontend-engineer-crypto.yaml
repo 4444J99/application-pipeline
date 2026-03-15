@@ -11,6 +11,69 @@ target:
   location: 'WA - Seattle; UT - Cottonwood Heights; CA - San Francisco; NY - New York
     City   '
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p><a href=\"https://www.sofi.com/sofi-employee-applicant-privacy-notice/\"\
+    \ target=\"_blank\"><strong>Employee Applicant Privacy Notice</strong></a></p>\
+    \ <p><strong>Who we are:</strong></p> <div> <p>Shape a brighter financial future\
+    \ with us.</p> <p>Together with our members, we\u2019re changing the way people\
+    \ think about and interact with personal finance.</p> <p>We\u2019re a next-generation\
+    \ financial services company and national bank using innovative, mobile-first\
+    \ technology to help our millions of members reach their goals. The industry is\
+    \ going through an unprecedented transformation, and we\u2019re at the forefront.\
+    \ We\u2019re proud to come to work every day knowing that what we do has a direct\
+    \ impact on people\u2019s lives, with our core values guiding us every step of\
+    \ the way. <strong>Join us to invest in yourself, your career, and the financial\
+    \ world.</strong></p> </div></div><p><strong>The Role</strong></p> <p>We're looking\
+    \ for a Senior Frontend Engineer to join our SoFi Crypto team! We believe everyone\
+    \ should have the tools to build wealth, whether they're seasoned investors or\
+    \ just starting out. Our team is building innovative products and features that\
+    \ are changing the way people think about money. If you're a talented, driven\
+    \ individual who's passionate about technology and finance, we want to hear from\
+    \ you.</p> <p>On our team, you will be in the middle of it all \u2013 implementing\
+    \ functionality, architecting our system, squashing bugs, maintaining the health\
+    \ of our code, and continually growing as an engineer. The ideal candidate is\
+    \ both forward-thinking and hands-on, has a strong sense of ownership and drive\
+    \ for delivery, and is a good mentor and co-worker. At SoFi, we pride ourselves\
+    \ on the collaboration between Product, Design, and Engineering, so you will be\
+    \ involved in the entire product lifecycle, from ideation through building, deploying,\
+    \ and continual improvement and evolution.</p> <p>SoFi is now the first national\
+    \ bank to offer open access to its stablecoin, SoFiUSD, and stablecoin infrastructure,\
+    \ bringing bank-grade oversight and reliability to companies looking to integrate\
+    \ stablecoin products and services. With SoFiUSD on a public, permissionless blockchain,\
+    \ partners can move funds around the clock with near-instant settlement at fractional-cent\
+    \ pricing. This enables them to manage liquidity with more confidence and deliver\
+    \ faster and more transparent services to their customers. SoFiUSD will also be\
+    \ available soon to all SoFi members.</p> <p><strong>Key Responsibilities</strong></p>\
+    \ <ul> <li>Produce well-designed, scalable, and reusable code on schedule.</li>\
+    \ <li>Independently design and build large features, breaking work into subtasks\
+    \ where necessary.</li> <li>Maintain a high bar in code and design reviews, following\
+    \ modern mobile development practices.</li> <li>Drive communication across the\
+    \ development team and with other stakeholders.</li> <li>Collaborate across functions\
+    \ and teams to reduce ambiguity and keep projects on track.</li> <li>Track project\
+    \ performance against defined milestones/goals.</li> <li>Mentor junior engineers\
+    \ throughout the organization.</li> <li>Create and improve technical documentation.</li>\
+    \ </ul> <p><strong>Requirements</strong></p> <ul> <li>Bachelor\u2019s degree (ideally\
+    \ in a technical field), but we understand great engineers come from a variety\
+    \ of backgrounds; we will also consider relevant work experience.</li> <li>5+\
+    \ years of web programming experience (React strongly preferred).</li> <li>Familiarity\
+    \ with Agile-based project development in a microservices environment.</li> <li>Experience\
+    \ with designing and consuming backend APIs for web applications.</li> <li>Test-driven\
+    \ development skills.</li> <li>Passion for solving complex problems.</li> <li>Strong\
+    \ sense of responsibility; driving a project from inception to completion.</li>\
+    \ <li>Affinity for solving problems and shipping impactful features, not polishing\
+    \ perfect code or architecture.</li> <li>Experience working in a collaborative\
+    \ coding environment (and git specifically), refining designs together, working\
+    \ through code reviews, and managing pull requests.</li> <li>Able to design and\
+    \ build modern and highly-responsive customer-facing components.</li> </ul> <p><strong>Nice\
+    \ to Haves</strong></p> <ul> <li>Understanding of blockchain fundamentals and\
+    \ distributed ledger technologies.</li> <li>Hands-on experience working with digital\
+    \ assets (e.g., Bitcoin, Ethereum, stablecoins).</li> <li>Familiarity with custody,\
+    \ settlement, and clearing of crypto transactions.</li> <li>Knowledge of crypto-specific\
+    \ regulatory environments (e.g., SEC, CFTC, MiCA, etc.).</li> <li>Exposure to\
+    \ crypto trading platforms, market data, and DeFi protocols.</li> <li>Experience\
+    \ integrating with or building services using crypto infrastructure providers\
+    \ (e.g., Fireblocks, Zero Hash, Anchorage).</li> <li>Awareness of Web3 trends,\
+    \ including NFTs, DAOs, and Layer 2 solutions.</li> <li>Prior work in or collaboration\
+    \ with crypto-native compani"
 deadline:
   date: null
   type: rolling
@@ -19,8 +82,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

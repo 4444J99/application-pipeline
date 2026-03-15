@@ -10,6 +10,67 @@ target:
   portal: greenhouse
   location: Long Beach, California
   location_class: unknown
+  description: "<div class=\"content-intro\"><p><span style=\"font-family: arial,\
+    \ helvetica, sans-serif; font-size: 10pt;\">At Relativity Space, we\u2019re building\
+    \ rockets to serve today\u2019s needs and tomorrow\u2019s breakthroughs. Our&nbsp;Terran\
+    \ R vehicle will deliver customer payloads to orbit, meeting the growing demand\
+    \ for launch&nbsp;capacity. But that\u2019s just the start. Achieving commercial\
+    \ success with Terran R will unlock new&nbsp;opportunities to advance science,\
+    \ exploration, and innovation, pioneering progress that reaches beyond&nbsp;the\
+    \ known.</span></p> <p><span style=\"font-family: arial, helvetica, sans-serif;\
+    \ font-size: 10pt;\">Joining Relativity means becoming part of something where\
+    \ autonomy, ownership, and impact exist at every level. Here, you're not just\
+    \ executing tasks; you're solving problems that haven\u2019t been solved before,\
+    \ helping develop a rocket, a factory, and a business from the ground up. Whether\
+    \ you\u2019re in propulsion, manufacturing, software, avionics, or a corporate\
+    \ function, you\u2019ll collaborate across teams, shape decisions, and see your\
+    \ work come to life in record time. Relativity is a place where creativity and\
+    \ </span><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"\
+    >technical rigor go hand in hand, and your voice will help define the stories\
+    \ we\u2019re writing together. Now&nbsp;is a unique moment in time where it\u2019\
+    s early enough to leave your mark on the product, the process, and&nbsp;the culture,\
+    \ but far enough along that Terran R is tangible and picking up momentum. The\
+    \ most&nbsp;meaningful work of your career is waiting. Join us.</span></p></div><p><span\
+    \ style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><strong><span\
+    \ data-contrast=\"none\">About the Team:&nbsp;</span></strong></span></p> <p><span\
+    \ style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Relativity\
+    \ Space is on a mission to better connect humanity to space and the universe beyond\
+    \ our planet.&nbsp;With decades of experience scaling world-class technology organizations\
+    \ like Google, CEO Eric Schmidt is guiding Relativity into its&nbsp;next phase:\
+    \ advancing Terran R toward launch and building the foundation for long-term impact.&nbsp;</span></p>\
+    \ <p><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"\
+    >The Terrestrial Software team is building the foundation for an automated rocket\
+    \ factory and integrated launch platform. Their mission is to automate and streamline\
+    \ workflows across the entire lifecycle of Terran R, from raw material intake\
+    \ to launch operations and eventually manufacturing on Mars. Today, that means\
+    \ partnering directly with teams across design, materials, manufacturing, and\
+    \ test and launch to design, implement, and deploy end user enterprise-wide applications,\
+    \ industrial automation, data analytics infrastructure, and next-generation AI\
+    \ to solve real problems and accelerate progress. Long term, the team is laying\
+    \ the groundwork for a modular, scalable software platform that can power highly\
+    \ autonomous operations on Earth and beyond. This is a team for builders and thinkers\
+    \ who thrive on cross-functional impact and want to shape the digital backbone\
+    \ of our future in space.</span></p> <p><span style=\"font-family: arial, helvetica,\
+    \ sans-serif; font-size: 10pt;\"><strong><span data-contrast=\"none\">About the\
+    \ Role:</span></strong></span></p> <ul> <li><span style=\"font-family: arial,\
+    \ helvetica, sans-serif; font-size: 10pt;\"><span data-contrast=\"none\">On the\
+    \ Factory </span><span data-contrast=\"none\">Platform </span><span data-contrast=\"\
+    none\">team, you will play a key role in the software development life cycle from\
+    \ initial concept, trade studies, design, implementation, and ongoing iteration.\
+    \ </span><span data-ccp-props=\"{&quot;201341983&quot;:0,&quot;335557856&quot;:16777215,&quot;335559739&quot;:0,&quot;335559740&quot;:240}\"\
+    >&nbsp;</span></span></li> <li style=\"font-family: arial, helvetica, sans-serif;\
+    \ font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif;\
+    \ font-size: 10pt;\"><span data-contrast=\"none\">Develop applications used to\
+    \ plan and schedule purchasing and manufacturing operations, access and analyze\
+    \ engine and component test data, and several other tools used by engineers and\
+    \ operators across the company.</span><span data-ccp-props=\"{&quot;134233117&quot;:true,&quot;134233118&quot;:true,&quot;201341983&quot;:0,&quot;335557856&quot;:16777215,&quot;335559740&quot;:240}\"\
+    >&nbsp;</span></span></li> <li style=\"font-family: arial, helvetica, sans-serif;\
+    \ font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif;\
+    \ font-size: 10pt;\"><span data-contrast=\"none\">Follow agile development practices\
+    \ and implement quality software that is continuously integrated and deployed.\
+    \ </span><span data-ccp-props=\"{&quot;134233117&quot;:true,&quot;134233118&quot;:true,&quot;201341983&quot;:0,&quot;335557856&quot;:16777215,&quot;335559740&quot;:240}\"\
+    >&nbsp;</span></span></li> <li style=\"font-family: arial, helvetica, sans-serif;\
+    \ font-size: 10pt;\"><span style=\"f"
 deadline:
   date: null
   type: rolling
@@ -18,8 +79,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.6
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

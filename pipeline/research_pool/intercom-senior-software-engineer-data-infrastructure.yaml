@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: Dublin, Ireland
   location_class: international
+  description: "<div class=\"content-intro\"><p>Intercom is the AI Customer Service\
+    \ company on a mission to help businesses provide incredible customer experiences.&nbsp;</p>\
+    \ <p>Our AI agent Fin, the most advanced customer service AI agent on the market,\
+    \ lets businesses deliver always-on, impeccable customer service and ultimately\
+    \ transform their customer experiences for the better. Fin can also be combined\
+    \ with our Helpdesk to become a complete solution called the Intercom Customer\
+    \ Service Suite, which provides AI enhanced support for the more complex or high\
+    \ touch queries that require a human agent.&nbsp;</p> <p>Founded in 2011 and trusted\
+    \ by nearly 30,000 global businesses, Intercom is setting the new standard for\
+    \ customer service. Driven by our core values, we push boundaries, build with\
+    \ speed and intensity, and consistently deliver incredible value to our customers.</p></div><h2>Are\
+    \ You Ready to Define the Future of Data at Scale?</h2> <p>The volume and velocity\
+    \ of data at Intercom are exploding, fueled by our growth and our drive to integrate\
+    \ more sophisticated, AI-assisted data solutions.</p> <p>The Data Infrastructure\
+    \ team is the engine room for this future. We don't just maintain systems; we\
+    \ build the distributed foundations that empower every Intercom team\u2014from\
+    \ Product to Research\u2014to turn raw information into actionable intelligence.\
+    \ We are seeking a seasoned Senior+ Data Infrastructure Engineer to step up, take\
+    \ ownership of critical initiatives, and ensure our data platform is rock-solid,\
+    \ scalable, and future-proof.</p> <p>&nbsp;</p> <h2>What You\u2019ll Be Building\
+    \ &amp; Owning</h2> <p>This role is about impact and ownership. You will be at\
+    \ the forefront of designing and evolving the core infrastructure that powers\
+    \ our entire data ecosystem.</p> <ul> <li><strong>Next-Gen Platform Evolution:\
+    \ </strong>Partner with product and business teams and lead the architectural\
+    \ design and implementation of the next generation of our data stack, ensuring\
+    \ it can meet the demands of advanced analytics and AI applications.</li> <li><strong>Enable\
+    \ AI-powered internal applications:</strong> Teams use our platform to build AI-assisted\
+    \ insights tools, operational workflows, and internal data apps in Streamlit,\
+    \ React, and Python. You\u2019ll help define the interfaces, semantics, and data\
+    \ access patterns that power these experiences.</li> <li><strong>Operate and improve\
+    \ core data systems.</strong><strong>: </strong>You\u2019ll keep our pipelines,\
+    \ orchestration, and warehouse running reliably for demanding internal users \u2014\
+    \ AI, Product, Finance, GTM, Analytics Engineering, and more \u2014 while continuously\
+    \ improving performance, cost-efficiency, and resilience.</li> <li><strong>Enablement\
+    \ Through Tooling: </strong>Partner closely with Analytics Engineers, Analysts,\
+    \ and Data Scientists to build the self-service tooling and infrastructure they\
+    \ need to move fast and deploy safely. You\u2019ll build tooling, patterns, guardrails,\
+    \ and diagnostics that make teams self-serve, reduce friction, and prevent Data\
+    \ Infra from becoming a bottleneck.</li> <li><strong>Data Quality Guardianship:\
+    \ </strong>Implement advanced monitoring systems to proactively detect, surface,\
+    \ and resolve data quality issues across our high-throughput environment (where\
+    \ dozens of changes can ship daily).</li> <li><strong>Driving Automation: </strong>Develop\
+    \ automation and tooling that streamlines the creation and discovery of high-quality\
+    \ analytics data, making the entire data lifecycle more efficient.</li> </ul>\
+    \ <p><strong>The Strategic Impact You'll Drive</strong></p> <p>To put things in\
+    \ context, here are examples of the strategic, company-shaping initiatives you\
+    \ will be expected to own and drive as a Senior Data Infrastructure Engineer:</p>\
+    \ <ul> <li><strong>Platform &amp; Warehousing Strategy: </strong>Lead the architectural-\
+    \ and cost review and revamp of our core data infrastructure and to ensure it\
+    \ can scale exponentially for future growth and advanced use cases.</li> <li><strong>Conversational\
+    \ BI Strategy</strong>: Architect the semantic layer and LLM-integration pipelines\
+    \ required to enable Natural Language Querying (NLQ) over our data warehouse,\
+    \ shifting away from complex, technical reporting to make data truly democratized\
+    \ and accessible, users should be able to query information\u2014getting both\
+    \ raw numbers and contextual narratives instantly\u2014without needing a data\
+    \ science degree or waiting on analysts.&nbsp;</li> <li><strong>Community of Practice\
+    \ &amp; Mentorship:</strong> Act as a technical thought leader. Foster and grow\
+    \ our internal data community by establishing best practices, mentoring technical\
+    \ peers across the company, coaching on complex pipeline development, and ensuring\
+    \ our engineering bar remains high.</li> </ul> <p><strong><br>Recent Wins You'll\
+    \ Build Upon:</strong></p> <ul> <li>AI-assisted Local Analytics Development Environment\
+    \ for Airflow and DBT.</li> <li>Data-rich AI apps containerized on Snowflake SPCS.</li>\
+    \ <li>A new, modern data catalog solution</li> <li>Migrating criti"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 3.1
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 3
+    evidence_match: 2
+    track_record_fit: 2
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

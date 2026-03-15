@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: Costa Mesa, California, United States; Seattle, Washington, United States
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Anduril Industries is a defense technology\
+    \ company with a mission to transform U.S. and allied military capabilities with\
+    \ advanced technology. By bringing the expertise, technology, and business model\
+    \ of the 21st century\u2019s most innovative companies to the defense industry,\
+    \ Anduril is changing how military systems are designed, built and sold. Anduril\u2019\
+    s family of systems is powered by Lattice OS, an AI-powered operating system that\
+    \ turns thousands of data streams into a realtime, 3D command and control center.\
+    \ As the world enters an era of strategic competition, Anduril is committed to\
+    \ bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking\
+    \ technology to the military in months, not years.</p></div><h2>ABOUT THE TEAM</h2>\
+    \ <p>The Maritime Application Team sits at the tip of the spear, transforming\
+    \ core platform technology into mission-winning capabilities that deliver a decisive\
+    \ operational edge at sea. We are a specialized software team embedded within\
+    \ the core Lattice Platform, uniquely positioned to accelerate the delivery of\
+    \ mission-critical capabilities for maritime platforms such as the Dive-LD, Dive-XL,\
+    \ Copperhead, and Seabed Sentry. Our role is to take powerful platform primitives\u2014\
+    like data management, mission autonomy, simulation, auth, and orchestration\u2014\
+    and rapidly forge them into integrated, robust applications for autonomous maritime\
+    \ systems. We act as an incubator for future platform features, ensuring that\
+    \ the solutions we build for today's contracts are the foundation for tomorrow's\
+    \ platform-wide advancements. If you are passionate about building high-impact\
+    \ software that directly supports operators in the field while shaping a next-generation\
+    \ platform, this is your team.</p> <h2><strong>ABOUT THE JOB</strong></h2> <p>As\
+    \ a Software Engineer on the Maritime Application Team, you will be the architect\
+    \ and builder of the software that our maritime operators use every day. You will\
+    \ design and implement the user interfaces, microservices, and data integrations\
+    \ that transform our autonomous underwater vehicles from powerful hardware into\
+    \ intelligent, mission-capable assets. This role requires a product-minded engineer\
+    \ who can operate with ambiguous requirements and translate complex operational\
+    \ needs into elegant, reliable, and scalable software solutions, bridging the\
+    \ gap between core platform infrastructure and real-world maritime challenges.<br><br></p>\
+    \ <h3><strong>WHAT YOU'LL DO</strong></h3> <ul> <li>Design, develop, and deploy\
+    \ full-stack applications and services for maritime command and control, including\
+    \ our Lattice UI.</li> <li>Build robust, scalable back-end services (e.g., in\
+    \ Go, Rust, Python, C++) to manage mission planning, vehicle tasking, and real-time\
+    \ data processing.</li> <li>Develop intuitive and performant front-end interfaces\
+    \ (e.g., in React/TypeScript) that provide operators with at-a-glance situational\
+    \ awareness.</li> <li>Integrate specialized maritime data sources, such as electronic\
+    \ navigational charts (ENCs), bathymetry, and acoustic sensor data, by leveraging\
+    \ and extending core platform primitives.</li> <li>Collaborate closely with product\
+    \ managers, operators, and others cross functionally in the Software Platform\
+    \ and the Maritime Division to rapidly iterate on features and deliver tangible\
+    \ value.</li> <li>Champion best practices in software architecture, code quality,\
+    \ and testing to ensure our systems are reliable in challenging operational environments.</li>\
+    \ <li>Mentor other engineers on the team and contribute to the technical strategy\
+    \ for the maritime domain.</li> </ul> <h3><strong>REQUIRED QUALIFICATIONS</strong></h3>\
+    \ <ul> <li>3-5+ years of professional software development experience, with a\
+    \ proven track record of shipping complex, full-stack applications.</li> <li>Strong\
+    \ proficiency in one or more modern programming languages such as Go, Rust, Python,\
+    \ or C++, and a willingness to learn new ones.</li> <li>Experience building user-facing\
+    \ applications with modern web technologies (e.g., React, TypeScript, gRPC).</li>\
+    \ <li>A deep understanding of distributed systems, API design, and data modeling\
+    \ principles.</li> <li>Ability to architect solutions for scale, performance,\
+    \ and reliability.</li> <li>A bias towards rapid delivery and iteration, extreme\
+    \ ownership, and strong opinions with low ego.</li> <li>Must be a U.S. Citizen\
+    \ and eligible to obtain and maintain a U.S. Government clearance.</li> </ul>\
+    \ <h3><strong>PREFERRED QUALIFICATIONS</strong></h3> <ul> <li>Experience with\
+    \ Go and/or Rust in a production environment.</li> <li>Experience building software\
+    \ for robotics, autonomous systems, or geospatial applications.</li> <li>Familiarity\
+    \ with cloud-native technologies (e.g., Kubernetes, Docker) and infrastructure-as-code\
+    \ (e.g., Terraform).</li> <li>Experience working with real-time data streams,\
+    \ such as sensor data or vehicle telemetry.</li> <li>A passion for creating exceptional\
+    \ user experiences and a keen eye for produ"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.8
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

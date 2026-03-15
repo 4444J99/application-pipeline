@@ -10,6 +10,67 @@ target:
   portal: greenhouse
   location: San Francisco, CA
   location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Amplitude is the leading AI analytics\
+    \ platform, helping over 4,700 customers\u2014including Atlassian, Burger King,\
+    \ NBCUniversal, Square, and Under Armour\u2014build better products and digital\
+    \ experiences. With powerful AI Agents embedded across our platform, teams can\
+    \ analyze, test, and optimize user experiences faster than ever. Ranked #1 across\
+    \ multiple categories in G2\u2019s Fall 2025 Report, Amplitude is the best-in-class\
+    \ solution for product, data, and marketing teams. Learn more at <a href=\"https://cts.businesswire.com/ct/CT?id=smartlink&amp;url=http%3A%2F%2Famplitude.com&amp;esheet=54428090&amp;newsitemid=20260218166598&amp;lan=en-US&amp;anchor=amplitude.com&amp;index=8&amp;md5=6cc9f966d63fa604ba56b7d2bceba4fe\"\
+    >amplitude.com</a>.</p> <p>As an organization, we deliver for our customers by\
+    \ living our values. We operate from a place of humility, take ownership of problems\
+    \ and successes, approach challenges with a growth mindset, and put our customers\
+    \ at the center of everything we do.</p> <p><strong>Amplitude\u2019s Commitment\
+    \ to Diversity Equity &amp; Inclusion (DEI): </strong>Amplitude believes that\
+    \ diversity enables the creation of better products, improves the ability to solve\
+    \ complex problems, and drives more powerful solutions. We strive to create an\
+    \ environment of inclusion\u2014one focused on psychological safety, empathy,\
+    \ and human connection\u2014that will allow employees of all backgrounds to thrive.</p></div><p>The\
+    \ Developer Experience (DX) team at Amplitude builds and maintains the foundations\
+    \ that power how developers integrate, extend, and trust Amplitude across platforms.\
+    \ Our mission is to make Amplitude\u2019s SDKs reliable, easy to adopt, and a\
+    \ joy to build on, so customers can confidently instrument their products and\
+    \ unlock insights at scale.</p> <p>We\u2019re looking for a Staff Software Engineer,\
+    \ Android to play a key technical leadership role on our DevEx team. In this role,\
+    \ you will lead the design and development of Amplitude\u2019s core Android SDKs,\
+    \ including Analytics and Session Replay, and serve as the Android platform expert\
+    \ that other SDK teams, such as Experiment, Guides, and Surveys rely on.</p> <p>As\
+    \ a Staff Engineer, you\u2019ll operate with a wide scope and high impact: setting\
+    \ technical direction for the Android platform, driving cross-SDK architecture,\
+    \ improving performance and reliability, and raising the bar for developer experience\
+    \ across Amplitude\u2019s mobile ecosystem.</p> <p><strong>As a Staff Software\
+    \ Engineer, you will:&nbsp;</strong></p> <ul> <li>Lead the technical direction,\
+    \ architecture, and long-term evolution of Amplitude\u2019s Android SDK platform.</li>\
+    \ <li>Own and drive development of core Android SDKs, including Analytics and\
+    \ Session Replay, with a strong focus on performance, reliability, and ease of\
+    \ use.</li> <li>Act as the Android platform expert and trusted partner for other\
+    \ SDK teams (Experiment, Guides, Surveys), enabling them to build on shared foundations\
+    \ safely and efficiently.</li> <li>Design and evolve shared infrastructure, APIs,\
+    \ and abstractions that scale across multiple Android SDKs.</li> <li>Collaborate\
+    \ closely with Product, and Customer Support to ensure SDKs meet real customer\
+    \ needs.</li> <li>Lead cross-team technical discussions, reviews, and architectural\
+    \ decisions that span multiple SDKs.</li> <li>Improve developer experience through\
+    \ better APIs, documentation, tooling, testing strategies, and sample apps.</li>\
+    \ <li>Mentor senior and mid-level engineers, raising the overall quality and effectiveness\
+    \ of the team.</li> </ul> <p><strong>You'll be a great addition to the team if\
+    \ you have:</strong></p> <ul> <li>A strong focus on developer experience and empathy\
+    \ for the engineers who use your work.</li> <li>Deep expertise in Android platform\
+    \ internals and best practices.</li> <li>Proficiency in Jetpack Compose beyond\
+    \ UI development, including its rendering pipeline and Composition internals.</li>\
+    \ <li>A track record of technical leadership where others look to you for guidance\
+    \ and decision-making.</li> <li>Strong judgment in making tradeoffs between API\
+    \ design, performance, backward compatibility, and speed of delivery.</li> <li>Comfort\
+    \ working across team boundaries and influencing without direct authority.</li>\
+    \ <li>A high bar for code quality, testing, and long-term maintainability.</li>\
+    \ <li>The ability to explain complex technical topics clearly to both technical\
+    \ and non-technical partners.</li> </ul> <p><strong>At a minimum, you need to\
+    \ have:</strong></p> <ul> <li>B.S., M.S., or Ph.D. in Computer Science or a related\
+    \ technical field, or equivalent practical experience.</li> <li>8+ years of professional\
+    \ software engineering experience, with significant time spent on Android development.</li>\
+    \ <li>Deep expertise in Android platform internals and best practices.</li> <li>Strong\
+    \ proficiency in Kotlin and Java, and experience with modern Android APIs and\
+    \ tooling.</li> <li>Experience designing public APIs with a strong focus on stability\
+    \ and backward compatibilit"
 deadline:
   date: null
   type: rolling
@@ -18,8 +79,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 3.4
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 3
+    evidence_match: 2
+    track_record_fit: 2
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

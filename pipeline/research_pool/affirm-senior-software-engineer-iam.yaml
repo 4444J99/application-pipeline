@@ -10,6 +10,69 @@ target:
   portal: greenhouse
   location: Remote Spain
   location_class: international
+  description: "<div class=\"content-intro\"><p>Affirm is reinventing credit to make\
+    \ it more honest and friendly, giving consumers the flexibility to buy now and\
+    \ pay later without any hidden fees or compounding interest.</p></div><p>We are\
+    \ building the next generation of Identity and Access Management at Affirm. This\
+    \ is a software engineering role focused on evolving and extending our enterprise\
+    \ identity platform.</p> <p>SailPoint &amp; Auth0 are core systems in our environment.\
+    \ You will work directly within it, but your responsibility goes beyond configuration.\
+    \ You will design and build automation, integrations, and intelligent workflows\
+    \ that reduce manual operations and move us toward a highly scalable, AI-assisted\
+    \ identity platform.</p> <p>If you are excited about combining backend engineering,\
+    \ cloud-native systems, CI/CD discipline, and AI-driven automation within the\
+    \ identity domain, this role is for you.</p> <h3><strong>What You\u2019ll Do</strong></h3>\
+    \ <ul> <li>Own and evolve our SailPoint &amp; Auth0 based identity platforms,\
+    \ including workflows, integrations, and governance controls</li> <li>Design and\
+    \ build backend services and automation frameworks that extend SailPoint &amp;\
+    \ Auth0 capabilities</li> <li>Develop AI-assisted workflows that interpret structured\
+    \ and unstructured inputs such as Jira tickets and generate safe, reviewable IAM\
+    \ changes</li> <li>Build human-in-the-loop automation systems for provisioning,\
+    \ role modeling, and privileged access management</li> <li>Design, implement,\
+    \ and maintain CI/CD pipelines using GitHub and Buildkite to ensure safe, reliable\
+    \ deployments</li> <li>Improve test coverage, code quality, and release automation\
+    \ across the Identity platform</li> <li>Integrate with AWS services and other\
+    \ enterprise systems using secure, scalable APIs</li> <li>Use modern AI development\
+    \ tooling such as cloud-based AI services, Cursor, and model context protocols\
+    \ to accelerate secure automation development</li> <li>Partner with Security,\
+    \ IT, and Engineering to define the long-term architecture of identity at Affirm</li>\
+    \ </ul> <p>Example problems you may work on:</p> <ul> <li>Building a platform\
+    \ that reads Jira tickets, uses AI to determine required IAM changes, proposes\
+    \ those changes for human approval, and safely executes them in production</li>\
+    \ <li>Designing event-driven identity lifecycle automation across HR, access governance,\
+    \ and privileged systems</li> <li>Creating reusable frameworks for secure, AI-powered\
+    \ access management workflows</li> <li>Establishing automated testing and deployment\
+    \ standards for identity infrastructure</li> </ul> <h3><strong>What We\u2019re\
+    \ Looking For</strong></h3> <ul> <li>Must have <ul> <li>5+ years of professional\
+    \ backend software engineering experience</li> <li>Strong production experience\
+    \ in Python or a similar backend language</li> <li>Experience designing APIs,\
+    \ automation frameworks, and distributed systems</li> <li>Hands-on experience\
+    \ building and maintaining CI/CD pipelines</li> <li>Ability to pass a backend\
+    \ software engineering interview and contribute production-quality code regularly</li>\
+    \ </ul> </li> <li>Nice to have <ul> <li>Experience with cloud-native development,\
+    \ preferably AWS</li> <li>Experience working with IAM or IGA platforms such as\
+    \ SailPoint, or CIAM Platforms such as Auth0</li> <li>Familiarity with tools such\
+    \ as Cursor and other AI-augmented development environments</li> <li>Experience\
+    \ with infrastructure as code such as Terraform</li> <li>Familiarity with compliance\
+    \ frameworks such as SOC 2, SOX, ISO, or PCI</li> </ul> </li> </ul> <h3><strong>Compensation\
+    \ &amp; Benefits</strong></h3> <p><strong>Base Pay Grade</strong>&nbsp;<strong>-\
+    \ N</strong></p> <p><strong>Equity Grade</strong>&nbsp;<strong>- 4</strong></p>\
+    \ <p>Employees new to Affirm typically come in at the start of the pay range.\
+    \ Affirm focuses on providing a simple and transparent pay structure which is\
+    \ based on a variety of factors, including location, experience and job-related\
+    \ skills.&nbsp;</p> <p>Base pay is part of a total compensation package that may\
+    \ include monthly stipends for health, wellness and tech spending, and benefits\
+    \ (including 100% subsidized medical coverage, dental and vision for you and your\
+    \ dependents). In addition, the employees may be eligible for equity rewards offered\
+    \ by Affirm Holdings, Inc. (parent company).</p> <p>ESP base pay range per year:\
+    \ <strong>\u20AC85,000 &nbsp;- &nbsp;\u20AC115,000 &nbsp; &nbsp;</strong></p>\
+    \ <p>Additional benefits include:</p> <ul> <li>Flexible Spending Wallets for tech,\
+    \ food and lifestyle</li> <li>Away Days - wellness days to take off work and recharge</li>\
+    \ <li>Learning &amp; Development programs</li> <li>Parental benefits</li> <li>Employee\
+    \ Resource &amp; Community Groups</li> </ul> <p>We are able to offer visa sponsorship\
+    \ for this role, but do require that someone is based in Spain for the role.</p>\
+    \ <div> <div> <p><strong>Location - Remote Spain</strong></p> </div> <div><strong>#LI-Remote</strong></div>\
+    \ </div><div class=\"content-conclusion\"><div> <p>Affi"
 deadline:
   date: null
   type: rolling
@@ -18,8 +81,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.7
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}

@@ -10,6 +10,70 @@ target:
   portal: greenhouse
   location: Remote Canada
   location_class: international
+  description: "<div class=\"content-intro\"><p>Affirm is reinventing credit to make\
+    \ it more honest and friendly, giving consumers the flexibility to buy now and\
+    \ pay later without any hidden fees or compounding interest.</p></div><p>Our Fraud\
+    \ Engineering team\u2019s mission is to defend both consumers and our business\
+    \ by preventing fraud at the point of purchase, uncovering fraud after it\u2019\
+    s occurred and mitigating its impact. We need you to help build our next generation\
+    \ fraud mitigation platform that is flexible enough to respond to scaled fraud\
+    \ attacks while giving legitimate users a frictionless experience.</p> <p>Are\
+    \ you passionate about leading a team to protect our customers from identity theft\
+    \ and account takeover in an adversarial and dynamic environment? Affirm\u2019\
+    s Fraud Engineering team is growing and looking for a software engineer II to\
+    \ help keep our customers safe.</p> <h2><br>What You'll Do</h2> <ul> <li>With\
+    \ the support of your team\u2019s tech lead and manager, you will break down larger\
+    \ projects into individual tasks, deliver them in multiple phases, and collaborate\
+    \ with others to ensure timely delivery of your work.</li> <li>You will support\
+    \ your peers and stakeholders in the product development lifecycle by collaborating\
+    \ with product management, design &amp; analytics by participating in ideation,\
+    \ articulating technical constraints, and partnering on decisions that properly\
+    \ consider risks and trade-offs.</li> <li>You will support the operations and\
+    \ availability of your team\u2019s artifacts by creating and monitoring metrics,\
+    \ escalating when needed, and supporting \u201Ckeep the lights on\u201D &amp;\
+    \ on-call efforts.</li> <li>You will contribute to a sense of community on your\
+    \ team by engaging in growth and development activities such as participation\
+    \ in the interview process.</li> </ul> <h2>What We Look For</h2> <ul> <li>You\
+    \ have a total of 1.5+ years of experience as a software engineer.</li> <li>You\
+    \ have experience designing, developing and launching backend systems and are\
+    \ proficient in one of Python or Kotlin.</li> <li>You are familiar with the building\
+    \ blocks of distributed systems, and the technologies like AWS, MySQL and Kubernetes.</li>\
+    \ <li>You have mastered taking a simple problem or business scenario into a solution\
+    \ that interacts with multiple software components, and executing on it by writing\
+    \ clear, easily understood, well tested and extensible code.</li> <li>You are\
+    \ comfortable navigating a large code base, debugging others' code, and providing\
+    \ feedback to other engineers through code reviews.</li> <li>Your experience demonstrates\
+    \ that you take ownership of your growth, proactively seeking feedback from your\
+    \ team, your manager, and your stakeholders.</li> <li>You have strong verbal and\
+    \ written communication skills that support effective collaboration with our global\
+    \ engineering team.</li> </ul> <p><strong>Pay Grade - L</strong><br><strong>Equity\
+    \ Grade - 5</strong><br><br>Employees new to Affirm typically come in at the start\
+    \ of the pay range. Affirm focuses on providing a simple and transparent pay structure\
+    \ which is based on a variety of factors, including location, experience and job-related\
+    \ skills.<br><br>Base pay is part of a total compensation package that may include\
+    \ monthly stipends for health, wellness and tech spending, and benefits (including\
+    \ 100% subsidized medical coverage, dental and vision for you and your dependents).\
+    \ In addition, the employees may be eligible for equity rewards offered by Affirm\
+    \ Holdings, Inc. (parent company).<br><br>CAN base pay range per year: $125,000\
+    \ - $175,000</p> <p>&nbsp;</p> <p>This posting is for an existing vacancy.<br><br>#LI-Remote</p>\
+    \ <p>&nbsp;</p><div class=\"content-conclusion\"><div> <p>Affirm is proud to be\
+    \ a remote-first company! The majority of our roles are remote and you can work\
+    \ almost anywhere within the country of employment. Affirmers in proximal roles\
+    \ have the flexibility to work remotely, but will occasionally be required to\
+    \ work out of their assigned Affirm office. A limited number of roles remain office-based\
+    \ due to the nature of their job responsibilities.</p> <p><span style=\"font-weight:\
+    \ 400;\">We\u2019re extremely proud to offer competitive benefits that are anchored\
+    \ to our core value of people come first. Some key highlights of our benefits\
+    \ package include:&nbsp;</span></p> <ul> <li style=\"font-weight: 400;\"><span\
+    \ style=\"font-weight: 400;\">Health care coverage - Affirm covers all premiums\
+    \ for all levels of coverage for you and your dependents&nbsp;</span></li> <li\
+    \ style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Flexible Spending\
+    \ Wallets - generous stipends for spending on Technology, Food, various Lifestyle\
+    \ needs, and family forming expenses</span></li> <li style=\"font-weight: 400;\"\
+    ><span style=\"font-weight: 400;\">Time off - competitive vacation and holiday\
+    \ schedules allowing you to take time off to rest and recharge</span></li> <li\
+    \ style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">ESPP - An employee\
+    \ stock purchase plan enabling you to buy sh"
 deadline:
   date: null
   type: rolling
@@ -18,8 +82,18 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 0
+  score: 5.7
   identity_position: independent-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 6
+    track_record_fit: 5
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}
