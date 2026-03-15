@@ -102,6 +102,7 @@ Scripts are independent CLIs but some import functions from each other:
 - **`diagnose.py`** imports from `launchd_manager.py` — uses `get_agent_status()` for operational maturity measurement. Loads rubric from `strategy/system-grading-rubric.yaml`.
 - **`diagnose_ira.py`** — standalone; computes ICC, kappa, and consensus from rating JSON files in `ratings/`. Includes `partition_dimensions()` for separating objective ground truth from subjective rated dimensions.
 - **`generate_ratings.py`** imports from `diagnose.py` — uses COLLECTORS, PROMPT_GENERATORS, OBJECTIVE_DIMENSIONS, SUBJECTIVE_DIMENSIONS for multi-model IRA rating. Calls Anthropic and Google APIs.
+- **`external_validator.py`** imports from `pipeline_market.py` — fetches salary data from BLS OES API, skill demand from Remotive API, org signals from GitHub API. Stores to `strategy/external-validation-cache.json`. Used by `audit_system.py` for external validation audit.
 - All other scripts are standalone CLIs that read/write pipeline YAML files.
 
 ## Module Architecture
@@ -225,6 +226,10 @@ python scripts/generate_ratings.py                        # Full multi-model rat
 python scripts/generate_ratings.py --rater architect-opus  # Single rater only
 python scripts/generate_ratings.py --dry-run               # Show prompts without API calls
 python scripts/generate_ratings.py --compute-ira           # Run IRA after rating
+python scripts/external_validator.py                       # Fetch + compare + report
+python scripts/external_validator.py --fetch-only          # Refresh validation cache only
+python scripts/external_validator.py --compare-only        # Compare using existing cache
+python scripts/external_validator.py --json                # Machine-readable output
 
 # Infrastructure
 python scripts/agent.py --plan                         # Autonomous agent preview
@@ -296,6 +301,7 @@ Single-word command protocol via `python scripts/run.py <command>`. 59 standalon
 | `diagnose` | System diagnostic scorecard (objective dimensions) |
 | `ira` | Inter-rater agreement report (needs ratings/*.json) |
 | `rateall` | Multi-model IRA rating session with diverse AI panel |
+| `validate-external` | Refresh external validation cache and compare against scoring inputs |
 
 **With target ID:** `score <id>`, `enrich <id>`, `advance <id>`, `compose <id>`, `draft <id>`, `submit <id>`, `check <id>`, `record <id>`, `gate <id>`, `contacts <id>`, `hypothesis <id>`, `alchemize <id>`, `answers <id>`, `tailor <id>`, `review <id>`, `cultivate <id>`, `textmatch <id>`, `skillsgap <id>`, `orgdetail <org>`, `interviewprep <id>`
 
@@ -309,7 +315,7 @@ Single-word command protocol via `python scripts/run.py <command>`. 59 standalon
 - Health: `monitor` → `freshness` → `verifyall` → `backup`
 - Triage: `triagegate` → `snapshot` → `orgs` → `blockoutcomes`
 - Interview: `interviewprep <id>` → `skillsgap <id>` → `orgdetail <org>`
-- Diagnostic: `diagnose` → `rateall` → `ira`
+- Diagnostic: `diagnose` → `rateall` → `ira` → `validate-external`
 
 ## Configuration Files
 
@@ -324,6 +330,7 @@ Single-word command protocol via `python scripts/run.py <command>`. 59 standalon
 | `strategy/notifications.yaml` | Notification event routing: webhook URLs, email recipients (loaded by `notify.py`) |
 | `strategy/system-grading-rubric.yaml` | 9-dimension quality rubric for diagnostic grade norming (loaded by `diagnose.py`) |
 | `strategy/rater-personas.yaml` | Persona prompts for multi-model IRA raters (loaded by `generate_ratings.py`) |
+| `strategy/external-validation-cache.json` | Cached external data from BLS/GitHub/job APIs (written by `external_validator.py`) |
 
 ## Automation (LaunchAgent)
 
