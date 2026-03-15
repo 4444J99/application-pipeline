@@ -18,6 +18,7 @@ def _entry(entry_id: str, track: str, score: float, outcome: str | None = None, 
         "fit": {"composite": score},
         "outcome": outcome,
         "deadline": {"date": (date.today() + timedelta(days=30)).isoformat(), "type": "hard"},
+        "submission": {"blocks_used": {"framing": "framings/test"}, "materials_attached": ["resumes/base/test.pdf"]},
     }
 
 

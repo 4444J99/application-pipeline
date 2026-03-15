@@ -118,7 +118,7 @@ class TestGenerateCoverLetter:
             mock_llm.assert_called_once()
 
     def test_fallback_when_no_llm(self):
-        """Returns prompt text when LLM unavailable."""
+        """Falls back to template cover letter when LLM unavailable."""
         with patch("material_builder._call_llm", side_effect=ImportError("no genai")):
             entry = {
                 "id": "test",
@@ -126,8 +126,9 @@ class TestGenerateCoverLetter:
                 "target": {"organization": "Co", "title": "Eng"},
             }
             result = generate_cover_letter(entry, ["Block"], "Posting")
-            assert "PROMPT" in result
-            assert "google-genai not installed" in result
+            # Template fallback produces a real cover letter, not a prompt
+            assert "Co" in result
+            assert "Sincerely" in result or "Dear" in result
 
     def test_includes_identity_in_prompt(self):
         """System prompt includes identity position."""
