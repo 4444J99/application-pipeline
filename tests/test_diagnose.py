@@ -15,6 +15,7 @@ from diagnose import (
     format_human_report,
     format_json_output,
     load_rubric,
+    measure_claim_provenance,
     measure_code_quality,
     measure_data_integrity,
     measure_operational_maturity,
@@ -42,8 +43,8 @@ class TestLoadRubric:
         assert "dimensions" in rubric
         assert "version" in rubric
 
-    def test_rubric_has_8_dimensions(self, rubric):
-        assert len(rubric["dimensions"]) == 8
+    def test_rubric_has_9_dimensions(self, rubric):
+        assert len(rubric["dimensions"]) == 9
 
     def test_weights_sum_to_one(self, rubric):
         total = sum(d["weight"] for d in rubric["dimensions"].values())
@@ -293,9 +294,8 @@ class TestMeasureOperationalMaturity:
 class TestComputeComposite:
     def test_weighted_sum(self, rubric, sample_scores):
         composite = compute_composite(sample_scores, rubric)
-        # Manual: 0.15*9.5 + 0.10*8.0 + 0.15*10.0 + 0.15*7.0
-        # = 1.425 + 0.8 + 1.5 + 1.05 = 4.775
-        expected = round(0.15 * 9.5 + 0.10 * 8.0 + 0.15 * 10.0 + 0.15 * 7.0, 1)
+        # Weights after rebalance: test=0.14, code=0.10, data=0.14, ops=0.13
+        expected = round(0.14 * 9.5 + 0.10 * 8.0 + 0.14 * 10.0 + 0.13 * 7.0, 1)
         assert composite == expected
 
     def test_empty_scores(self, rubric):
@@ -304,7 +304,7 @@ class TestComputeComposite:
     def test_partial_scores(self, rubric):
         scores = {"test_coverage": {"score": 10.0}}
         composite = compute_composite(scores, rubric)
-        assert composite == round(0.15 * 10.0, 1)
+        assert composite == round(0.14 * 10.0, 1)
 
 
 class TestFormatHumanReport:
@@ -334,6 +334,33 @@ class TestFormatJsonOutput:
         serialized = json.dumps(output)
         parsed = json.loads(serialized)
         assert parsed["composite"] == output["composite"]
+
+
+class TestMeasureClaimProvenance:
+    def test_measure_claim_provenance_returns_score(self):
+        """measure_claim_provenance should produce a valid score dict."""
+        result = measure_claim_provenance()
+        assert "score" in result
+        assert "confidence" in result
+        assert "evidence" in result
+        assert isinstance(result["score"], (int, float))
+        assert 1.0 <= result["score"] <= 10.0
+        assert result["confidence"] in ("high", "medium", "low")
+
+    def test_claim_provenance_with_audit_failure(self, monkeypatch):
+        """If audit_system import fails, should return fallback score."""
+        import builtins
+        real_import = builtins.__import__
+
+        def fail_audit(name, *args, **kwargs):
+            if name == "audit_system":
+                raise ImportError("test-forced failure")
+            return real_import(name, *args, **kwargs)
+
+        monkeypatch.setattr(builtins, "__import__", fail_audit)
+        result = measure_claim_provenance()
+        assert result["score"] == 5.0
+        assert result["confidence"] == "low"
 
 
 class TestPromptGenerators:

@@ -22,3 +22,14 @@ def test_canonical_metrics_values_are_positive():
     assert CANONICAL_METRICS["essays"] >= 0
     assert CANONICAL_METRICS["sprints"] >= 0
 
+
+def test_canonical_metrics_values_are_integers():
+    for key, value in CANONICAL_METRICS.items():
+        assert isinstance(value, int), f"{key} should be int, got {type(value)}"
+
+
+def test_build_canonical_metrics_matches_constant():
+    built = build_canonical_metrics()
+    for key in ("repos", "tests", "words", "essays", "sprints"):
+        assert built[key] == CANONICAL_METRICS[key], f"{key} mismatch: built={built[key]} vs const={CANONICAL_METRICS[key]}"
+

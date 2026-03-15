@@ -53,3 +53,22 @@ def test_calculate_roi_sorts_by_acceptance_then_volume():
     assert results[0]["block"] == "blocks/high-rate.md"
     assert results[0]["acceptance_rate"] == 100.0
     assert results[1]["acceptance_rate"] == 40.0
+
+
+def test_gather_block_outcomes_empty_entries():
+    result = gather_block_outcomes([])
+    assert result == {}
+
+
+def test_gather_block_outcomes_no_blocks_used_key():
+    entries = [
+        {"status": "submitted", "outcome": "accepted"},
+        {"status": "submitted", "submission": {}},
+    ]
+    result = gather_block_outcomes(entries)
+    assert result == {}
+
+
+def test_calculate_roi_empty_data():
+    results = calculate_roi({})
+    assert results == []

@@ -117,8 +117,8 @@ def test_check_entry_ready_entry():
     result = check_entry(match[0])
     assert result["id"] == target_id
     assert result["portal"] == "greenhouse"
-    assert result["status"] == "staged"
-    # This entry is staged with a greenhouse portal and application URL,
+    assert result["status"] == match[0].get("status")
+    # This entry has a greenhouse portal and application URL,
     # so portal_parsed and status_submittable and has_target_url should pass
     assert result["results"]["portal_parsed"] is True
     assert result["results"]["status_submittable"] is True

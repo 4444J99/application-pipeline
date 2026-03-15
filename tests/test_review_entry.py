@@ -7,7 +7,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from review_entry import mark_reviewed
+from review_entry import _collect_targets, _default_reviewer, mark_reviewed
 
 
 def test_mark_reviewed_dry_run(tmp_path):
@@ -51,3 +51,26 @@ def test_mark_reviewed_write(tmp_path):
     assert "approved_at" in data["status_meta"]
     assert "reviewed_at" in data["status_meta"]
     assert "last_touched" in data
+
+
+def test_default_reviewer_returns_string():
+    result = _default_reviewer()
+    assert isinstance(result, str)
+    assert len(result) > 0
+
+
+def test_collect_targets_single_file(monkeypatch):
+    sentinel_path = Path("/tmp/fake-entry.yaml")
+    monkeypatch.setattr(
+        "review_entry.load_entry_by_id",
+        lambda entry_id: (sentinel_path, {"id": entry_id}),
+    )
+    targets = _collect_targets("some-entry", all_staged=False)
+    assert targets == [sentinel_path]
+
+
+def test_collect_targets_raises_without_target_or_all():
+    import pytest
+
+    with pytest.raises(ValueError, match="Specify"):
+        _collect_targets(None, all_staged=False)

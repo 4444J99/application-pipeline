@@ -46,3 +46,28 @@ def test_upgrade_entry_file_replaces_batch_token(tmp_path):
 
     unchanged = upgrade_entry_file(path, "batch-99", "batch-04")
     assert unchanged is False
+
+
+def test_find_stale_resumes_all_current_returns_empty():
+    entries = [
+        {
+            "id": "entry-1",
+            "_file": "entry-1.yaml",
+            "_dir": "active",
+            "submission": {
+                "materials_attached": ["resumes/batch-04/resume.pdf"],
+                "resume_path": "resumes/batch-04/resume.pdf",
+            },
+        },
+    ]
+    stale = find_stale_resumes(entries, target_batch="batch-04")
+    assert stale == []
+
+
+def test_find_stale_resumes_entry_without_submission():
+    entries = [
+        {"id": "entry-1", "_file": "entry-1.yaml", "_dir": "active"},
+        {"id": "entry-2", "_file": "entry-2.yaml", "_dir": "active", "submission": None},
+    ]
+    stale = find_stale_resumes(entries, target_batch="batch-04")
+    assert stale == []

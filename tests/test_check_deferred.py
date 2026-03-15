@@ -50,3 +50,44 @@ def test_check_deferred_entries_buckets_resume_dates(monkeypatch):
 def test_format_entry_summary_uses_reason_and_defaults():
     entry = {"id": "entry-1", "name": "Entry One", "deferral": {"reason": "portal_closed"}}
     assert deferred_mod.format_entry_summary(entry) == "Entry One (entry-1) — reason: portal_closed"
+
+
+def test_check_deferred_entries_empty_list(monkeypatch):
+    monkeypatch.setattr(deferred_mod, "datetime", _FixedDateTime)
+    results = deferred_mod.check_deferred_entries([])
+    assert results["overdue"] == []
+    assert results["upcoming"] == []
+    assert results["distant"] == []
+    assert results["no_date"] == []
+
+
+def test_check_deferred_no_deferred_entries(monkeypatch):
+    monkeypatch.setattr(deferred_mod, "datetime", _FixedDateTime)
+    entries = [
+        {"id": "active-1", "status": "qualified"},
+        {"id": "active-2", "status": "staged"},
+    ]
+    results = deferred_mod.check_deferred_entries(entries)
+    assert results["overdue"] == []
+    assert results["upcoming"] == []
+    assert results["distant"] == []
+    assert results["no_date"] == []
+
+
+def test_run_check_deferred_report_mode_output(capsys, monkeypatch):
+    monkeypatch.setattr(deferred_mod, "datetime", _FixedDateTime)
+    monkeypatch.setattr(
+        deferred_mod,
+        "load_entries",
+        lambda **kw: [
+            {
+                "id": "test-d",
+                "name": "Test Deferred",
+                "status": "deferred",
+                "deferral": {"resume_date": "2026-03-01", "reason": "paused"},
+            }
+        ],
+    )
+    deferred_mod.run_check_deferred(alert_mode=False, report_mode=True)
+    output = capsys.readouterr().out
+    assert "DEFERRED" in output.upper() or "test-d" in output
