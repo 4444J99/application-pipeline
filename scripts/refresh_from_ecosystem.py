@@ -86,7 +86,7 @@ def build_metrics_from_snapshot(snapshot: dict) -> dict:
         "languages": code_profile.get("languages", {}),
         "test_frameworks": code_profile.get("test_frameworks", {}),
         "primary_language": code_profile.get("primary_language", ""),
-        "verified_tests": code_profile.get("verified_test_counts", {}).get("_total_verified", 0),
+        "test_functions": code_profile.get("test_functions", {}),
         # Word counts by source
         "word_counts": word_counts,
     }
@@ -173,8 +173,15 @@ def write_metrics_yaml(metrics: dict, path: Path, dry_run: bool = False) -> str:
         for fw, count in metrics["test_frameworks"].items():
             lines.append(f"  {fw}: {count}")
 
-    if metrics.get("verified_tests"):
-        lines.append(f"\nverified_passing_tests: {metrics['verified_tests']}")
+    if metrics.get("test_functions"):
+        tf = metrics["test_functions"]
+        lines.extend([
+            "",
+            "test_functions:",
+            f"  python: {tf.get('python', 0)}",
+            f"  typescript: {tf.get('typescript', 0)}",
+            f"  total: {tf.get('total', 0)}",
+        ])
 
     if metrics.get("primary_language"):
         lines.append(f"primary_language: {metrics['primary_language']}")

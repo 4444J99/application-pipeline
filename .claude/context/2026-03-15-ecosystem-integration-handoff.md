@@ -81,7 +81,14 @@ word_counts:
   total: 738579
 ```
 
-**Key distinction:** `automated_tests: 46` = repos with test suites. `verified_passing_tests: 3421` = actual passing test count from direct pytest/vitest runs. The `test_files: 4274` is a file count. When writing application materials, use `3,421 verified passing tests` (specific, verifiable) over `4,274 test files` (file count, less meaningful).
+**Key distinctions:**
+- `automated_tests: 46` = repos with test suites
+- `test_files: 4274` = test file count
+- `test_functions.total: 23459` = actual test function count across the ecosystem (Python + TypeScript)
+- `test_functions.python: 14506` = pytest test functions (62%)
+- `test_functions.typescript: 8953` = vitest/jest test cases (38%)
+
+When writing application materials, use `23,459 test functions (62% Python/pytest, 38% TypeScript/vitest)` — this is the real number, scanned from all orgs, excluding third-party vendored code.
 
 ---
 
@@ -183,16 +190,20 @@ Run `python scripts/classify_position.py` standalone to see the full distributio
 **Old (stale, generic):**
 > 113 repositories, 2,349 tests, 810K+ words
 
-**New (accurate, typed):**
-> 113 repositories across 8 GitHub organizations. 22,885 code files (78% Python, 10% TypeScript). 3,421 verified passing tests across pytest (64 configs) and vitest (14 configs). 739K words of public documentation: 136K in READMEs, 145K in 49 published essays, 452K in the governance corpus.
+**New (accurate, typed, ecosystem-wide):**
+> 113 repositories across 8 GitHub organizations. 6,062 source code files — Python (46%), TypeScript (32%), TypeScript/React (12%), JavaScript (6%), Shell (3%). 23,459 test functions: 14,506 Python/pytest (62%) and 8,953 TypeScript/vitest+jest (38%). 104 CI workflows. 739K words of public documentation: 136K in READMEs, 145K in 49 published essays, 452K in the governance corpus.
 
-**Per-package test evidence (verified):**
-- organvm-engine: 2,556 tests (Python/pytest)
+**Flagship test counts (from file scan):**
+- application-pipeline: 3,117 tests (Python/pytest)
+- public-record-data-scrapper: 2,844 tests (TypeScript/vitest)
+- organvm-engine: 2,528 tests (Python/pytest)
+- recursive-engine: 1,992 tests (Python/pytest)
+- my-knowledge-base: 1,474 tests (TypeScript/vitest)
+- agentic-titan: 845 tests (Python/pytest)
 - organvm-ontologia: 438 tests (Python/pytest)
-- organvm-mcp-server: 207 tests (Python/pytest)
-- alchemia-ingestvm: 136 tests (Python/pytest)
-- system-dashboard: 62 tests (Python/pytest)
-- schema-definitions: 22 tests (Python/pytest)
+- metasystem-master: 302 tests (Python/pytest + vitest)
+- stakeholder-portal: 265 tests (TypeScript/vitest)
+- portfolio: 245 tests (TypeScript/vitest)
 
 **Organism evidence (new capability):**
 > System density 57.8% — 1,833 tracked entities with ULID-based permanent identity, 1,843 hierarchy + relation edges, pulse daemon computing AMMOI every 15 minutes, 9 registered metrics with timestamped observations, threshold-based advisory policies.

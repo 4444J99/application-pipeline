@@ -20,7 +20,7 @@ organism:
   density: 0.578
   entities: 113
   edges: 28
-  ammoi: "AMMOI:58% E:28 T:33 C:5 Ev24h:5089 IS:98% 8o/113r/1654c [ORGAN-V:90%, ORGAN-VII:79%, ORGAN-IV:77%] | d24h:+0.6%"
+  ammoi: "AMMOI:58% E:28 T:33 C:5 Ev24h:5120 IS:98% 8o/113r/1654c [ORGAN-V:90%, ORGAN-VII:79%, ORGAN-IV:77%] | d24h:+0.6%"
 
 organs:
   I: 19
@@ -33,21 +33,24 @@ organs:
   VII: 4
 
 languages:
-  Python: 15169
-  TypeScript: 1932
-  JavaScript: 1276
+  Python: 2812
+  TypeScript: 1948
   TypeScript/React: 727
-  Shell: 200
+  JavaScript: 369
+  Shell: 195
   Rust: 6
   JavaScript/React: 4
   Go: 1
 
 test_frameworks:
-  pytest: 64
+  pytest: 21
   vitest: 14
   jest: 5
 
-verified_passing_tests: 3421
+test_functions:
+  python: 14506
+  typescript: 8953
+  total: 23459
 primary_language: Python
 
 word_counts:
