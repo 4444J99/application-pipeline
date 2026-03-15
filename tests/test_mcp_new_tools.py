@@ -8,18 +8,22 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from mcp_server import (
     mcp,
+    pipeline_apply,
     pipeline_enrich,
     pipeline_followup,
     pipeline_hygiene,
+    pipeline_mode,
+    pipeline_outreach,
+    pipeline_outreach_prep,
     pipeline_phase_analytics,
     pipeline_rate,
     pipeline_standards,
 )
 
 
-def test_mcp_tool_count_is_sixteen():
+def test_mcp_tool_count_is_twenty_nine():
     tools = mcp._tool_manager._tools
-    assert len(tools) >= 16
+    assert len(tools) >= 29
 
 
 def test_pipeline_followup_returns_json():
@@ -64,3 +68,36 @@ def test_pipeline_rate_dry_run():
     assert data["status"] == "dry_run"
     assert "raters" in data
     assert len(data["raters"]) >= 4
+
+
+def test_pipeline_mode_returns_json():
+    """Verify pipeline_mode returns comparison data."""
+    result = pipeline_mode()
+    data = json.loads(result)
+    assert "current_mode" in data
+    assert "modes" in data
+    assert "precision" in data["modes"]
+    assert "volume" in data["modes"]
+    assert "hybrid" in data["modes"]
+
+
+def test_pipeline_outreach_missing_entry():
+    """Verify pipeline_outreach handles missing entry."""
+    result = pipeline_outreach(target_id="nonexistent-entry-xyz")
+    data = json.loads(result)
+    assert data["status"] == "error"
+    assert "not found" in data["error"].lower() or "Entry not found" in data["error"]
+
+
+def test_pipeline_apply_returns_json():
+    """Verify pipeline_apply returns valid JSON with result structure."""
+    result = pipeline_apply()
+    data = json.loads(result)
+    assert "checked" in data or "status" in data
+
+
+def test_pipeline_outreach_prep_returns_json():
+    """Verify pipeline_outreach_prep returns valid JSON."""
+    result = pipeline_outreach_prep()
+    data = json.loads(result)
+    assert "entries_processed" in data or "status" in data

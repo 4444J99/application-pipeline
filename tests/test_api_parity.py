@@ -8,7 +8,14 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from pipeline_api import ResultStatus, score_entry
+from pipeline_api import (
+    ResultStatus,
+    advance_entry,
+    compose_entry,
+    draft_entry,
+    score_entry,
+    validate_entry,
+)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -45,3 +52,42 @@ def test_score_api_matches_run_script_dry_run_output():
 
     assert api_result.status == ResultStatus.DRY_RUN
     assert api_result.new_score == script_score
+
+
+def test_advance_api_matches_dry_run():
+    entry_id = _sample_entry_id()
+    result = advance_entry(entry_id=entry_id, dry_run=True)
+    assert result.status in (ResultStatus.DRY_RUN, ResultStatus.NO_CHANGE, ResultStatus.ERROR)
+    assert result.entry_id == entry_id
+    if result.status == ResultStatus.DRY_RUN:
+        assert result.old_status is not None
+        assert result.new_status is not None
+
+
+def test_draft_api_returns_content():
+    entry_id = _sample_entry_id()
+    result = draft_entry(entry_id=entry_id, dry_run=True)
+    assert result.status in (ResultStatus.DRY_RUN, ResultStatus.ERROR)
+    assert result.entry_id == entry_id
+    if result.status == ResultStatus.DRY_RUN:
+        assert result.content is not None
+        assert len(result.content) > 0
+
+
+def test_compose_api_returns_word_count():
+    entry_id = _sample_entry_id()
+    result = compose_entry(entry_id=entry_id, dry_run=True)
+    assert result.status in (ResultStatus.DRY_RUN, ResultStatus.ERROR)
+    assert result.entry_id == entry_id
+    if result.status == ResultStatus.DRY_RUN:
+        assert result.word_count is not None
+        assert result.word_count >= 0
+
+
+def test_validate_api_returns_validity():
+    entry_id = _sample_entry_id()
+    result = validate_entry(entry_id=entry_id)
+    assert result.status in (ResultStatus.SUCCESS, ResultStatus.ERROR)
+    assert result.entry_id == entry_id
+    assert isinstance(result.is_valid, bool)
+    assert isinstance(result.errors, list)

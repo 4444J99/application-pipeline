@@ -183,8 +183,9 @@ def compute_feedback_adjustment(months: int = 3) -> dict:
 class PipelineAgent:
     """Autonomous agent for pipeline state transitions."""
 
-    def __init__(self, dry_run: bool = True):
+    def __init__(self, dry_run: bool = True, full_cycle: bool = False):
         self.dry_run = dry_run
+        self.full_cycle = full_cycle
         self.actions_planned = []
         self.actions_executed = []
         self.errors = []
@@ -201,6 +202,7 @@ class PipelineAgent:
         """Analyze pipeline state; return planned actions.
 
         Rules loaded from strategy/agent-rules.yaml:
+        0. Full-cycle: scan for new postings (if --full-cycle)
         1. Research entries: auto-score if no score
         2. Research + score >= threshold: auto-advance to qualified
         3. Qualified + score >= threshold: auto-advance to drafting
@@ -208,6 +210,15 @@ class PipelineAgent:
         5. Staged + deadline < max_days: flag for submission
         """
         actions = []
+
+        # Phase 0: Scan for new entries (full-cycle mode only)
+        if self.full_cycle and _rule_enabled("daily_scan"):
+            actions.append({
+                "entry_id": "batch",
+                "action": "scan",
+                "reason": "full-cycle: discover new postings",
+                "severity": "routine",
+            })
         if CHANNEL_ALLOCATOR_ENABLED:
             self.channel_allocator = compute_channel_allocator(entries, min_samples=CHANNEL_ALLOCATOR_MIN_SAMPLES)
         else:
@@ -340,10 +351,22 @@ class PipelineAgent:
                     else:
                         self.errors.append((entry_id, f"advance failed: {result.error}"))
                 
+                elif action_type == "scan":
+                    try:
+                        from scan_orchestrator import scan_all
+                        result = scan_all(dry_run=self.dry_run)
+                        self.actions_executed.append({
+                            **action,
+                            "result": f"found {result.total_qualified} new entries",
+                        })
+                    except Exception as e:
+                        self.errors.append((entry_id, f"scan: {e}"))
+                    continue
+
                 elif action_type == "flag_for_submission":
                     # Don't auto-submit; just flag
                     self.actions_executed.append(action)
-            
+
             except Exception as e:
                 self.errors.append((entry_id, str(e)))
     
@@ -439,20 +462,25 @@ def main():
         "--target",
         help="Single entry ID (optional; all if not given)"
     )
+    parser.add_argument(
+        "--full-cycle",
+        action="store_true",
+        help="Run scan→match→build before score→advance",
+    )
     args = parser.parse_args()
-    
+
     if not (args.plan or args.execute):
         parser.print_help()
         sys.exit(1)
-    
+
     entries = load_entries()
     if args.target:
         entries = [e for e in entries if e.get("id") == args.target]
         if not entries:
             print(f"Entry not found: {args.target}", file=sys.stderr)
             sys.exit(1)
-    
-    agent = PipelineAgent(dry_run=not args.execute)
+
+    agent = PipelineAgent(dry_run=not args.execute, full_cycle=args.full_cycle)
     
     # Plan actions
     agent.actions_planned = agent.plan_actions(entries)

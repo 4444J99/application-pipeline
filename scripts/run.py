@@ -98,6 +98,12 @@ COMMANDS = {
     "profiles":    ("generate_job_profile.py", [],       "Generate standardized target profiles from postings"),
     "topjobs":     ("ingest_top_roles.py", [],            "Daily glove-fit fetch: top roles ≥ 9.0 score"),
     "discover":    ("discover_jobs.py", [],                "Skill-based job discovery across free APIs"),
+    "scan":        ("scan_orchestrator.py", [],            "Unified scan: all 8 APIs, dedup, pre-score"),
+    "match":       ("match_engine.py", [],                 "Auto-score unscored entries, rank top matches"),
+    "build":       ("material_builder.py", [],             "LLM-powered material generation (dry-run)"),
+    "fullcycle":   ("daily_pipeline_orchestrator.py", [],  "Daily cycle: Scan → Match → Build → Apply → Outreach (dry-run)"),
+    "apply":       ("apply_engine.py", [],                    "Readiness check + ATS submission (dry-run)"),
+    "outreach":    ("outreach_engine.py", [],                 "Generate outreach templates + set follow-up dates"),
     "calendar":    ("calendar_export.py", [],                 "Export pipeline deadlines to iCal"),
     "interviewprep": ("interview_prep.py", ["--auto"],        "Interview prep for all interview-status entries"),
 
@@ -106,10 +112,14 @@ COMMANDS = {
     "ira":         ("diagnose_ira.py", [],                   "Inter-rater agreement report (auto-loads ratings/*.json)"),
     "rateall":     ("generate_ratings.py", ["--compute-ira"], "Multi-model rating session with IRA computation"),
     "sysaudit":    ("audit_system.py", [],                   "System integrity audit: claims, wiring, logic"),
+    "validate-external": ("external_validator.py", [],           "Refresh external validation cache and compare"),
+    "calibrate":  ("external_validator.py", ["--calibrate"],       "Calibrate thresholds from external data (dry-run)"),
+    "mode":        ("pipeline_mode.py", ["--compare"],          "Show pipeline mode and compare thresholds"),
     "standards":   ("standards.py", [],                       "Standards Board: 5-level hierarchical validation audit"),
     "ingest":      ("ingest_historical.py", ["--stats"],        "Historical data ingestion statistics"),
     "phases":      ("phase_analytics.py", [],                    "Phase 1 vs Phase 2 application analytics"),
     "resolve-hyp": ("resolve_hypotheses.py", [],                 "Auto-resolve cold-app hypotheses (dry-run)"),
+    "autopreflight": ("daily_pipeline_orchestrator.py", ["--preflight"], "Check autonomous pipeline readiness"),
 
     # -- Infrastructure --
     "agent":       ("agent.py", ["--plan"],              "Agent: preview planned autonomous actions"),
@@ -149,6 +159,7 @@ PARAM_COMMANDS = {
     "orgdetail":  ("org_intelligence.py", ["--org"],         "Org intelligence detail for single org"),
     "interviewprep": ("interview_prep.py", ["--target"],     "Generate interview prep for single entry"),
     "greenhouse-submit": ("greenhouse_submit.py", ["--target"], "Greenhouse dry-run preview for single entry"),
+    "outreach":   ("outreach_templates.py", ["--target"],       "Generate outreach templates for an entry"),
 }
 
 
@@ -174,6 +185,7 @@ def show_help():
     print("  Agent:    agent → deferred → signals → hypotheses-v")
     print("  Health:   monitor → freshness → resumes → backup → verifyall")
     print("  Interview: interviewprep <id> → skillsgap <id> → orgdetail <org>")
+    print("  Daily Cycle: fullcycle (or: scan → match → build)")
     print()
     print("REMOVED ALIASES (use underlying script flags instead):")
     print("  gaps → textmatch --all --gaps")

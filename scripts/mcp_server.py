@@ -8,6 +8,7 @@ Enables agentic execution of the pipeline state machine without tight
 coupling to script internals.
 """
 
+import dataclasses
 import json
 
 from mcp.server.fastmcp import FastMCP
@@ -398,23 +399,51 @@ def pipeline_org_intelligence(org_name: str | None = None) -> str:
 
 
 @mcp.tool()
+def pipeline_calibrate(dry_run: bool = True) -> str:
+    """Calibrate scoring thresholds from external validation data.
+
+    Reads BLS salary data, skill demand, and org signals from the
+    validation cache and proposes concrete threshold updates to
+    scoring-rubric.yaml and market-intelligence mode thresholds.
+
+    Args:
+        dry_run: If true, preview changes without writing (default: true)
+
+    Returns:
+        JSON with proposed calibrations and evidence
+    """
+    try:
+        from external_validator import calibrate_thresholds
+        result = calibrate_thresholds(dry_run=dry_run)
+        return json.dumps(result, indent=2, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
 def pipeline_audit(
     claims: bool = False,
     wiring: bool = False,
     logic: bool = False,
+    external: bool = False,
 ) -> str:
-    """System integrity audit: claims provenance, wiring, and logic checks.
+    """System integrity audit: claims provenance, wiring, logic, external validation.
 
     Args:
         claims: Run claims provenance audit only
         wiring: Run wiring integrity audit only
         logic: Run logical consistency audit only
+        external: Run external validation audit only
 
     Returns:
         JSON with audit results and summary
     """
     try:
-        from audit_system import audit_claims, audit_logic, audit_wiring, run_full_audit
+        from audit_system import audit_claims, audit_external, audit_logic, audit_wiring, run_full_audit
+
+        if external:
+            result = audit_external()
+            return json.dumps(result, default=str)
 
         run_all = not (claims or wiring or logic)
         if run_all:
@@ -508,6 +537,149 @@ def pipeline_rate(
             compute_ira=compute_ira,
         )
         return json.dumps(result, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
+def pipeline_mode(
+    set_mode: str | None = None,
+    dry_run: bool = True,
+) -> str:
+    """Show or switch pipeline mode (precision/volume/hybrid).
+
+    Args:
+        set_mode: Mode to switch to (optional; shows current if not given)
+        dry_run: If true, preview mode switch without applying
+
+    Returns:
+        JSON with current mode, thresholds, and changes
+    """
+    try:
+        from pipeline_mode import compare_modes
+        from pipeline_mode import set_mode as do_set_mode
+
+        if set_mode:
+            result = do_set_mode(set_mode, dry_run=dry_run)
+        else:
+            result = compare_modes()
+
+        return json.dumps(result, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
+def pipeline_outreach(target_id: str, template_type: str | None = None) -> str:
+    """Generate outreach templates for a pipeline entry.
+
+    Args:
+        target_id: Entry ID to generate templates for
+        template_type: connect, email, or followup (optional; all if not given)
+
+    Returns:
+        JSON with outreach templates
+    """
+    try:
+        from outreach_templates import (
+            _find_entry,
+            generate_all_templates,
+            generate_cold_email,
+            generate_connect_note,
+            generate_followup,
+        )
+
+        entry = _find_entry(target_id)
+        if not entry:
+            return json.dumps({"status": "error", "error": f"Entry not found: {target_id}"})
+
+        if template_type == "connect":
+            result = generate_connect_note(entry)
+        elif template_type == "email":
+            result = generate_cold_email(entry)
+        elif template_type == "followup":
+            result = generate_followup(entry)
+        else:
+            result = generate_all_templates(entry)
+
+        return json.dumps(result, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
+def pipeline_scan(sources: str = "all", max_entries: int = 100) -> str:
+    """Scan all job sources for new postings (dry-run). Returns new entry IDs."""
+    try:
+        from scan_orchestrator import scan_all
+
+        source_list = None if sources == "all" else sources.split(",")
+        result = scan_all(dry_run=True, sources=source_list, max_entries=max_entries)
+        return json.dumps(dataclasses.asdict(result), indent=2, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
+def pipeline_match(target_id: str = "", top_n: int = 10) -> str:
+    """Score unscored entries and rank top matches (dry-run)."""
+    try:
+        from match_engine import match_and_rank
+
+        entry_ids = [target_id] if target_id else None
+        result = match_and_rank(entry_ids=entry_ids, top_n=top_n, dry_run=True)
+        return json.dumps(dataclasses.asdict(result), indent=2, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
+def pipeline_build(target_id: str = "") -> str:
+    """Generate application materials for qualified entries (dry-run)."""
+    try:
+        from material_builder import build_materials
+
+        entry_ids = [target_id] if target_id else None
+        result = build_materials(entry_ids=entry_ids, dry_run=True)
+        return json.dumps(dataclasses.asdict(result), indent=2, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
+def pipeline_apply(target_id: str = "") -> str:
+    """Check readiness and submit staged entries via ATS portals (dry-run)."""
+    try:
+        from apply_engine import apply_ready_entries
+
+        entry_ids = [target_id] if target_id else None
+        result = apply_ready_entries(entry_ids=entry_ids, dry_run=True)
+        return json.dumps(dataclasses.asdict(result), indent=2, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
+def pipeline_outreach_prep(target_id: str = "") -> str:
+    """Generate outreach templates and set follow-up dates (dry-run)."""
+    try:
+        from outreach_engine import prepare_outreach
+
+        entry_ids = [target_id] if target_id else None
+        result = prepare_outreach(entry_ids=entry_ids, dry_run=True)
+        return json.dumps(dataclasses.asdict(result), indent=2, default=str)
+    except Exception as e:
+        return json.dumps({"status": "error", "error": str(e)})
+
+
+@mcp.tool()
+def pipeline_preflight() -> str:
+    """Check system readiness for autonomous pipeline operation."""
+    try:
+        from daily_pipeline_orchestrator import preflight_check
+
+        result = preflight_check()
+        return json.dumps(result, indent=2)
     except Exception as e:
         return json.dumps({"status": "error", "error": str(e)})
 

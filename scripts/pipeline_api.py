@@ -23,7 +23,13 @@ try:  # Prefer package-style imports when available.
     from .compose import compose as compose_document
     from .compose import find_entry as find_compose_entry
     from .draft import assemble_draft, populate_portal_fields
+    from .enrich import detect_gaps as _detect_gaps
+    from .followup import collect_due_actions as _collect_due_actions
+    from .followup import get_submitted_entries as _get_submitted_entries
+    from .hygiene import check_gate as _check_gate
+    from .hygiene import check_stale_rolling as _check_stale_rolling
     from .pipeline_lib import (
+        ALL_PIPELINE_DIRS,
         DRAFTS_DIR,
         SUBMISSIONS_DIR,
         VALID_STATUSES,
@@ -31,6 +37,9 @@ try:  # Prefer package-style imports when available.
         count_words,
         load_entry_by_id,
         load_profile,
+    )
+    from .pipeline_lib import (
+        load_entries as load_all_entries,
     )
     from .score import (
         ALL_PIPELINE_DIRS_WITH_POOL,
@@ -43,6 +52,8 @@ try:  # Prefer package-style imports when available.
     from .score import (
         load_entries as load_score_entries,
     )
+    from .submit import generate_checklist as _generate_checklist
+    from .triage import generate_triage_data as _generate_triage_data
     from .validate import PIPELINE_DIRS, REQUIRED_FIELDS
     from .validate import validate_entry as validate_file_entry
 except ImportError:  # pragma: no cover - script execution fallback
@@ -51,7 +62,13 @@ except ImportError:  # pragma: no cover - script execution fallback
     from compose import compose as compose_document
     from compose import find_entry as find_compose_entry
     from draft import assemble_draft, populate_portal_fields
+    from enrich import detect_gaps as _detect_gaps
+    from followup import collect_due_actions as _collect_due_actions
+    from followup import get_submitted_entries as _get_submitted_entries
+    from hygiene import check_gate as _check_gate
+    from hygiene import check_stale_rolling as _check_stale_rolling
     from pipeline_lib import (
+        ALL_PIPELINE_DIRS,
         DRAFTS_DIR,
         SUBMISSIONS_DIR,
         VALID_STATUSES,
@@ -59,6 +76,9 @@ except ImportError:  # pragma: no cover - script execution fallback
         count_words,
         load_entry_by_id,
         load_profile,
+    )
+    from pipeline_lib import (
+        load_entries as load_all_entries,
     )
     from score import (
         ALL_PIPELINE_DIRS_WITH_POOL,
@@ -71,6 +91,8 @@ except ImportError:  # pragma: no cover - script execution fallback
     from score import (
         load_entries as load_score_entries,
     )
+    from submit import generate_checklist as _generate_checklist
+    from triage import generate_triage_data as _generate_triage_data
     from validate import PIPELINE_DIRS, REQUIRED_FIELDS
     from validate import validate_entry as validate_file_entry
 
@@ -611,6 +633,342 @@ def validate_entry(
         )
 
 
+# ============================================================================
+# EXPANDED API OPERATIONS
+# ============================================================================
+
+
+@dataclass
+class EnrichResult:
+    """Result of enrichment gap analysis or enrichment execution."""
+
+    status: ResultStatus
+    entry_id: str
+    gaps: list[str] | None = None
+    message: str = ""
+    error: str | None = None
+
+
+@dataclass
+class FollowupResult:
+    """Result of follow-up action collection."""
+
+    status: ResultStatus
+    entry_id: str
+    due_actions: list[dict] | None = None
+    total_entries: int = 0
+    message: str = ""
+    error: str | None = None
+
+
+@dataclass
+class HygieneResult:
+    """Result of hygiene checks on entries."""
+
+    status: ResultStatus
+    entry_id: str
+    gate_issues: list[str] | None = None
+    stale_entries: list[dict] | None = None
+    total_issues: int = 0
+    message: str = ""
+    error: str | None = None
+
+    def __post_init__(self) -> None:
+        if self.gate_issues is None:
+            self.gate_issues = []
+        if self.stale_entries is None:
+            self.stale_entries = []
+
+
+@dataclass
+class StandupResult:
+    """Result of standup data collection."""
+
+    status: ResultStatus
+    entry_id: str
+    output: str | None = None
+    message: str = ""
+    error: str | None = None
+
+
+@dataclass
+class TriageResult:
+    """Result of triage analysis."""
+
+    status: ResultStatus
+    entry_id: str
+    staged_demotions: list[dict] | None = None
+    org_cap_deferrals: list[dict] | None = None
+    summary: dict | None = None
+    message: str = ""
+    error: str | None = None
+
+
+@dataclass
+class SubmitResult:
+    """Result of submission checklist generation."""
+
+    status: ResultStatus
+    entry_id: str
+    checklist: str | None = None
+    issues: list[str] | None = None
+    message: str = ""
+    error: str | None = None
+
+    def __post_init__(self) -> None:
+        if self.issues is None:
+            self.issues = []
+
+
+def enrich_entry(
+    entry_id: str | None = None,
+    all_entries: bool = False,
+) -> EnrichResult:
+    """Analyze enrichment gaps for one entry or all entries.
+
+    This is a read-only gap analysis — it does not modify files.
+    """
+    try:
+        if not entry_id and not all_entries:
+            return EnrichResult(
+                status=ResultStatus.ERROR,
+                entry_id="",
+                error="entry_id or all_entries required",
+            )
+
+        entries = load_all_entries(dirs=ALL_PIPELINE_DIRS, include_filepath=True)
+
+        if entry_id:
+            matched = [e for e in entries if e.get("id") == entry_id]
+            if not matched:
+                return EnrichResult(
+                    status=ResultStatus.ERROR,
+                    entry_id=entry_id,
+                    error=f"entry '{entry_id}' not found",
+                )
+            gaps = _detect_gaps(matched[0])
+            return EnrichResult(
+                status=ResultStatus.SUCCESS,
+                entry_id=entry_id,
+                gaps=gaps,
+                message=f"{len(gaps)} gaps found" if gaps else "fully enriched",
+            )
+
+        # All entries
+        total_gaps = 0
+        entries_with_gaps = 0
+        for entry in entries:
+            gaps = _detect_gaps(entry)
+            if gaps:
+                entries_with_gaps += 1
+                total_gaps += len(gaps)
+
+        return EnrichResult(
+            status=ResultStatus.SUCCESS,
+            entry_id="batch",
+            gaps=[],
+            message=f"{entries_with_gaps} entries with {total_gaps} total gaps",
+        )
+    except API_OPERATION_ERRORS as exc:
+        return EnrichResult(
+            status=ResultStatus.ERROR,
+            entry_id=entry_id or "batch",
+            error=f"{type(exc).__name__}: {exc}",
+        )
+
+
+def followup_data(
+    entry_id: str | None = None,
+) -> FollowupResult:
+    """Collect due follow-up actions for submitted entries."""
+    try:
+        entries = _get_submitted_entries()
+
+        if entry_id:
+            entries = [e for e in entries if e.get("id") == entry_id]
+            if not entries:
+                return FollowupResult(
+                    status=ResultStatus.ERROR,
+                    entry_id=entry_id,
+                    error=f"no submitted entry '{entry_id}' found",
+                )
+
+        actions = _collect_due_actions(entries)
+        eid = entry_id or "all"
+        return FollowupResult(
+            status=ResultStatus.SUCCESS,
+            entry_id=eid,
+            due_actions=actions,
+            total_entries=len(entries),
+            message=f"{len(actions)} due actions across {len(entries)} entries",
+        )
+    except API_OPERATION_ERRORS as exc:
+        return FollowupResult(
+            status=ResultStatus.ERROR,
+            entry_id=entry_id or "all",
+            error=f"{type(exc).__name__}: {exc}",
+        )
+
+
+def hygiene_check(
+    entry_id: str | None = None,
+) -> HygieneResult:
+    """Run hygiene gate checks on one entry or all entries."""
+    try:
+        if entry_id:
+            filepath, data = load_entry_by_id(entry_id)
+            if not data:
+                return HygieneResult(
+                    status=ResultStatus.ERROR,
+                    entry_id=entry_id,
+                    error=f"entry '{entry_id}' not found",
+                )
+            issues = _check_gate(data)
+            return HygieneResult(
+                status=ResultStatus.SUCCESS,
+                entry_id=entry_id,
+                gate_issues=issues,
+                total_issues=len(issues),
+                message="clean" if not issues else f"{len(issues)} gate issues",
+            )
+
+        # All entries
+        entries = load_all_entries(dirs=ALL_PIPELINE_DIRS)
+        all_issues: list[str] = []
+        for entry in entries:
+            issues = _check_gate(entry)
+            for issue in issues:
+                all_issues.append(f"{entry.get('id', '?')}: {issue}")
+
+        stale = _check_stale_rolling(entries)
+        total = len(all_issues) + len(stale)
+
+        return HygieneResult(
+            status=ResultStatus.SUCCESS,
+            entry_id="all",
+            gate_issues=all_issues,
+            stale_entries=stale,
+            total_issues=total,
+            message=f"{total} issues ({len(all_issues)} gate, {len(stale)} stale)",
+        )
+    except API_OPERATION_ERRORS as exc:
+        return HygieneResult(
+            status=ResultStatus.ERROR,
+            entry_id=entry_id or "all",
+            error=f"{type(exc).__name__}: {exc}",
+        )
+
+
+def standup_data(
+    hours: float = 3.0,
+    section: str | None = None,
+) -> StandupResult:
+    """Capture standup output as a string."""
+    try:
+        from contextlib import redirect_stdout as _redirect
+
+        capture = io.StringIO()
+        # Import here to avoid circular dependency at module level.
+        try:
+            from .standup import run_standup as _run_standup
+        except ImportError:  # pragma: no cover
+            from standup import run_standup as _run_standup
+
+        with _redirect(capture):
+            _run_standup(hours, section, do_log=False)
+
+        output = capture.getvalue()
+        return StandupResult(
+            status=ResultStatus.SUCCESS,
+            entry_id="standup",
+            output=output,
+            message=f"standup captured ({len(output)} chars)",
+        )
+    except API_OPERATION_ERRORS as exc:
+        return StandupResult(
+            status=ResultStatus.ERROR,
+            entry_id="standup",
+            error=f"{type(exc).__name__}: {exc}",
+        )
+
+
+def triage_data(
+    min_score: float = 9.0,
+    dry_run: bool = True,
+) -> TriageResult:
+    """Run triage analysis on the pipeline."""
+    try:
+        entries = load_all_entries(dirs=ALL_PIPELINE_DIRS)
+        data = _generate_triage_data(entries, min_score=min_score, dry_run=dry_run)
+
+        return TriageResult(
+            status=ResultStatus.DRY_RUN if dry_run else ResultStatus.SUCCESS,
+            entry_id="triage",
+            staged_demotions=data["staged_demotions"],
+            org_cap_deferrals=data["org_cap_deferrals"],
+            summary=data["summary"],
+            message=f"{data['summary']['staged_below_threshold']} staged demotions, "
+            f"{data['summary']['org_cap_violations']} org-cap deferrals",
+        )
+    except API_OPERATION_ERRORS as exc:
+        return TriageResult(
+            status=ResultStatus.ERROR,
+            entry_id="triage",
+            error=f"{type(exc).__name__}: {exc}",
+        )
+
+
+def submit_entry(
+    entry_id: str,
+    dry_run: bool = True,
+) -> SubmitResult:
+    """Generate a submission checklist for an entry."""
+    try:
+        if not entry_id:
+            return SubmitResult(
+                status=ResultStatus.ERROR,
+                entry_id="",
+                error="entry_id required",
+            )
+
+        filepath, entry = load_entry_by_id(entry_id)
+        if not entry:
+            return SubmitResult(
+                status=ResultStatus.ERROR,
+                entry_id=entry_id,
+                error=f"entry '{entry_id}' not found",
+            )
+
+        profile = _resolve_profile(entry_id)
+
+        # Legacy script lookup (best-effort)
+        legacy = None
+        try:
+            try:
+                from .pipeline_lib import load_legacy_script
+            except ImportError:  # pragma: no cover
+                from pipeline_lib import load_legacy_script
+            legacy = load_legacy_script(entry_id)
+        except Exception:
+            pass
+
+        checklist, issues = _generate_checklist(entry, profile, legacy)
+
+        return SubmitResult(
+            status=ResultStatus.DRY_RUN if dry_run else ResultStatus.SUCCESS,
+            entry_id=entry_id,
+            checklist=checklist,
+            issues=issues,
+            message=f"checklist generated ({len(issues)} issues)" if issues else "checklist ready",
+        )
+    except API_OPERATION_ERRORS as exc:
+        return SubmitResult(
+            status=ResultStatus.ERROR,
+            entry_id=entry_id,
+            error=f"{type(exc).__name__}: {exc}",
+        )
+
+
 __all__ = [
     "ResultStatus",
     "ScoreResult",
@@ -618,9 +976,21 @@ __all__ = [
     "DraftResult",
     "ComposeResult",
     "ValidationResult",
+    "EnrichResult",
+    "FollowupResult",
+    "HygieneResult",
+    "StandupResult",
+    "TriageResult",
+    "SubmitResult",
     "score_entry",
     "advance_entry",
     "draft_entry",
     "compose_entry",
     "validate_entry",
+    "enrich_entry",
+    "followup_data",
+    "hygiene_check",
+    "standup_data",
+    "triage_data",
+    "submit_entry",
 ]

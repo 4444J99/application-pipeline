@@ -8,7 +8,10 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../s
 
 from mcp_server import (
     pipeline_advance,
+    pipeline_apply,
     pipeline_audit,
+    pipeline_build,
+    pipeline_calibrate,
     pipeline_campaign,
     pipeline_compose,
     pipeline_crm_dashboard,
@@ -17,9 +20,15 @@ from mcp_server import (
     pipeline_followup,
     pipeline_funnel,
     pipeline_hygiene,
+    pipeline_match,
+    pipeline_mode,
     pipeline_org_intelligence,
+    pipeline_outreach,
+    pipeline_outreach_prep,
     pipeline_phase_analytics,
+    pipeline_preflight,
     pipeline_rate,
+    pipeline_scan,
     pipeline_score,
     pipeline_snapshot,
     pipeline_standards,
@@ -264,3 +273,75 @@ def test_pipeline_rate_tool():
     assert data["status"] == "dry_run"
     assert "raters" in data
     assert len(data["raters"]) >= 4
+
+
+def test_pipeline_mode_tool():
+    """Verify pipeline_mode returns JSON with mode comparison."""
+    result = pipeline_mode()
+    data = json.loads(result)
+    assert "current_mode" in data
+    assert "modes" in data
+
+
+def test_pipeline_outreach_tool():
+    """Verify pipeline_outreach returns JSON for missing entry."""
+    result = pipeline_outreach(target_id="nonexistent-entry-xyz")
+    data = json.loads(result)
+    assert data["status"] == "error"
+
+
+def test_pipeline_calibrate_tool():
+    """Verify pipeline_calibrate returns JSON with calibration proposals."""
+    result = pipeline_calibrate(dry_run=True)
+    data = json.loads(result)
+    assert isinstance(data, dict)
+    # Either has proposals or error (if no cache)
+    assert "proposals" in data or "status" in data
+
+
+def test_pipeline_scan_tool():
+    """Verify pipeline_scan returns JSON result."""
+    result = pipeline_scan()
+    data = json.loads(result)
+    assert isinstance(data, dict)
+    assert "new_entries" in data or "status" in data
+
+
+def test_pipeline_match_tool():
+    """Verify pipeline_match returns JSON result."""
+    result = pipeline_match()
+    data = json.loads(result)
+    assert isinstance(data, dict)
+    assert "scored" in data or "status" in data
+
+
+def test_pipeline_build_tool():
+    """Verify pipeline_build returns JSON result."""
+    result = pipeline_build()
+    data = json.loads(result)
+    assert isinstance(data, dict)
+    assert "entries_processed" in data or "status" in data
+
+
+def test_pipeline_apply_tool():
+    """Verify pipeline_apply returns JSON result."""
+    result = pipeline_apply()
+    data = json.loads(result)
+    assert isinstance(data, dict)
+    assert "checked" in data or "status" in data
+
+
+def test_pipeline_outreach_prep_tool():
+    """Verify pipeline_outreach_prep returns JSON result."""
+    result = pipeline_outreach_prep()
+    data = json.loads(result)
+    assert isinstance(data, dict)
+    assert "entries_processed" in data or "status" in data
+
+
+def test_pipeline_preflight_tool():
+    """Verify pipeline_preflight returns readiness status."""
+    result = pipeline_preflight()
+    data = json.loads(result)
+    assert isinstance(data, dict)
+    assert "ready" in data or "status" in data

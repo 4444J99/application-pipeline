@@ -454,9 +454,27 @@ def audit(
     claims: bool = typer.Option(False, "--claims", help="Claims provenance only"),
     wiring: bool = typer.Option(False, "--wiring", help="Wiring integrity only"),
     logic: bool = typer.Option(False, "--logic", help="Logical consistency only"),
+    external: bool = typer.Option(False, "--external", help="External validation only"),
     as_json: bool = typer.Option(False, "--json", help="Machine-readable JSON output"),
 ):
-    """System integrity audit: claims, wiring, logic."""
+    """System integrity audit: claims, wiring, logic, external validation."""
+    if external:
+        try:
+            from audit_system import audit_external
+        except ImportError:
+            from scripts.audit_system import audit_external
+        import json as _json
+
+        result = audit_external()
+        if as_json:
+            typer.echo(_json.dumps(result, indent=2, default=str))
+        elif result.get("status") == "no_cache":
+            typer.echo("No validation cache. Run: python scripts/external_validator.py --fetch-only")
+        else:
+            from external_validator import format_report as ext_format
+            typer.echo(ext_format(result))
+        return
+
     try:
         from audit_system import main as audit_main
     except ImportError:
@@ -582,6 +600,296 @@ def rate(
     typer.echo(f"Status: {result['status']}")
     if result.get("raters"):
         typer.echo(f"Raters: {', '.join(result['raters'])}")
+
+
+@app.command()
+def mode(
+    set_mode: str = typer.Option(None, "--set", help="Switch mode: precision, volume, hybrid"),
+    compare: bool = typer.Option(False, "--compare", help="Compare all modes"),
+    dry_run: bool = typer.Option(False, "--dry-run", help="Preview mode switch"),
+    json_output: bool = typer.Option(False, "--json", help="JSON output"),
+):
+    """Show or switch pipeline mode (precision/volume/hybrid)."""
+    try:
+        from pipeline_mode import compare_modes, format_report, get_active_thresholds, get_current_mode
+        from pipeline_mode import set_mode as do_set_mode
+    except ImportError:
+        from scripts.pipeline_mode import compare_modes, format_report, get_active_thresholds, get_current_mode
+        from scripts.pipeline_mode import set_mode as do_set_mode
+    import json as _json  # noqa: I001
+
+    if set_mode:
+        result = do_set_mode(set_mode, dry_run=dry_run)
+    elif compare:
+        result = compare_modes()
+    else:
+        m = get_current_mode()
+        t = get_active_thresholds()
+        result = {"mode": m, "thresholds": t}
+
+    if json_output:
+        typer.echo(_json.dumps(result, indent=2, default=str))
+    else:
+        typer.echo(format_report(result))
+
+
+@app.command()
+def outreach(
+    target: str = typer.Argument(..., help="Entry ID"),
+    template_type: str = typer.Option(None, "--type", help="connect, email, or followup"),
+    json_output: bool = typer.Option(False, "--json", help="JSON output"),
+):
+    """Generate outreach templates for an entry."""
+    try:
+        from outreach_templates import (
+            _find_entry,
+            _identity_position,
+            _org_name,
+            _role_title,
+            _track,
+            format_report,
+            generate_all_templates,
+            generate_cold_email,
+            generate_connect_note,
+            generate_followup,
+        )
+    except ImportError:
+        from scripts.outreach_templates import (
+            _find_entry,
+            _identity_position,
+            _org_name,
+            _role_title,
+            _track,
+            format_report,
+            generate_all_templates,
+            generate_cold_email,
+            generate_connect_note,
+            generate_followup,
+        )
+    import json as _json  # noqa: I001
+
+    entry = _find_entry(target)
+    if not entry:
+        typer.echo(f"Entry not found: {target}", err=True)
+        raise typer.Exit(1)
+
+    if template_type == "connect":
+        result = generate_connect_note(entry)
+    elif template_type == "email":
+        result = generate_cold_email(entry)
+    elif template_type == "followup":
+        result = generate_followup(entry)
+    else:
+        result = generate_all_templates(entry)
+
+    if json_output:
+        typer.echo(_json.dumps(result, indent=2, default=str))
+    else:
+        if "templates" not in result:
+            result = {"entry_id": entry.get("id"), "org": _org_name(entry), "role": _role_title(entry), "track": _track(entry), "identity_position": _identity_position(entry), "templates": {result["type"]: result}}
+        typer.echo(format_report(result))
+
+
+# ============================================================================
+# DAILY PIPELINE CYCLE (SCAN → MATCH → BUILD)
+# ============================================================================
+
+@app.command()
+def scan(
+    sources: str = typer.Option("all", help="Source group: ats, free, all"),
+    max_entries: int = typer.Option(100, "--max", help="Max new entries to create"),
+    yes: bool = typer.Option(False, "-y", "--yes", help="Execute (default is dry-run)"),
+    json_output: bool = typer.Option(False, "--json", help="JSON output"),
+):
+    """Unified job scan: all 8 APIs, dedup, pre-score."""
+    import dataclasses
+    import json as _json
+
+    try:
+        from scan_orchestrator import scan_all
+    except ImportError:
+        from scripts.scan_orchestrator import scan_all
+
+    result = scan_all(dry_run=not yes, sources=sources, max_entries=max_entries)
+    if json_output:
+        typer.echo(_json.dumps(dataclasses.asdict(result), indent=2, default=str))
+    else:
+        typer.echo(f"Scan complete: {result.total_qualified} qualified from {result.total_fetched} fetched")
+        typer.echo(f"  Sources: {', '.join(result.sources_queried)}")
+        typer.echo(f"  Duplicates skipped: {result.duplicates_skipped}")
+        if result.errors:
+            for e in result.errors:
+                typer.echo(f"  Error: {e}", err=True)
+
+
+@app.command()
+def match(
+    target: str = typer.Argument(None, help="Score a single entry ID"),
+    top_n: int = typer.Option(10, "--top", help="Number of top matches to show"),
+    json_output: bool = typer.Option(False, "--json", help="JSON output"),
+):
+    """Auto-score unscored entries, rank top matches."""
+    import dataclasses
+    import json as _json
+
+    try:
+        from match_engine import match_and_rank
+    except ImportError:
+        from scripts.match_engine import match_and_rank
+
+    result = match_and_rank(target_id=target, top_n=top_n)
+    if json_output:
+        typer.echo(_json.dumps(dataclasses.asdict(result), indent=2, default=str))
+    else:
+        typer.echo(f"Match: scored {result.entries_scored}, qualified {result.qualified}")
+        typer.echo(f"  Threshold: {result.threshold_used}")
+        if result.top_matches:
+            typer.echo("  Top matches:")
+            for m in result.top_matches:
+                typer.echo(f"    {m.composite_score:.1f}  {m.entry_id} ({m.organization})")
+
+
+@app.command()
+def build(
+    target: str = typer.Argument(None, help="Build for a single entry ID"),
+    yes: bool = typer.Option(False, "-y", "--yes", help="Execute (default is dry-run)"),
+    json_output: bool = typer.Option(False, "--json", help="JSON output"),
+):
+    """LLM-powered material generation (cover letters, blocks, resumes)."""
+    import dataclasses
+    import json as _json
+
+    try:
+        from material_builder import build_materials
+    except ImportError:
+        from scripts.material_builder import build_materials
+
+    result = build_materials(target_id=target, dry_run=not yes)
+    if json_output:
+        typer.echo(_json.dumps(dataclasses.asdict(result), indent=2, default=str))
+    else:
+        typer.echo(f"Build: {result.entries_processed} entries processed")
+        typer.echo(f"  Cover letters: {result.cover_letters_generated}")
+        typer.echo(f"  Resumes wired: {result.resumes_wired}")
+        typer.echo(f"  Blocks selected: {result.blocks_selected}")
+        if result.errors:
+            for e in result.errors:
+                typer.echo(f"  Error: {e}", err=True)
+
+
+@app.command()
+def apply(
+    target: str = typer.Argument(None, help="Check/submit a single entry"),
+    yes: bool = typer.Option(False, "-y", "--yes", help="Execute submissions"),
+    json_output: bool = typer.Option(False, "--json", help="JSON output"),
+):
+    """Readiness check + ATS submission for staged entries."""
+    import dataclasses
+    import json as _json
+
+    try:
+        from apply_engine import apply_ready_entries
+    except ImportError:
+        from scripts.apply_engine import apply_ready_entries
+
+    entry_ids = [target] if target else None
+    result = apply_ready_entries(entry_ids=entry_ids, dry_run=not yes)
+    if json_output:
+        typer.echo(_json.dumps(dataclasses.asdict(result), indent=2, default=str))
+    else:
+        typer.echo(f"Apply: checked {len(result.checked)}, submitted {len(result.submitted)}")
+        for check in result.checked:
+            status = "READY" if check.is_ready else "NOT READY"
+            typer.echo(f"  {check.entry_id} [{check.portal}]: {status}")
+            for m in check.missing:
+                typer.echo(f"    - {m}")
+        if result.errors:
+            for e in result.errors:
+                typer.echo(f"  Error: {e}", err=True)
+
+
+@app.command(name="outreach-prep")
+def outreach_prep(
+    target: str = typer.Argument(None, help="Single entry ID"),
+    yes: bool = typer.Option(False, "-y", "--yes", help="Execute (write files)"),
+    json_output: bool = typer.Option(False, "--json", help="JSON output"),
+):
+    """Generate outreach templates + set follow-up protocol dates."""
+    import dataclasses
+    import json as _json
+
+    try:
+        from outreach_engine import prepare_outreach
+    except ImportError:
+        from scripts.outreach_engine import prepare_outreach
+
+    entry_ids = [target] if target else None
+    result = prepare_outreach(entry_ids=entry_ids, dry_run=not yes)
+    if json_output:
+        typer.echo(_json.dumps(dataclasses.asdict(result), indent=2, default=str))
+    else:
+        typer.echo(f"Outreach: {len(result.entries_processed)} entries, {result.templates_generated} templates")
+        for a in result.actions:
+            typer.echo(f"  [{a.scheduled_date}] {a.entry_id}: {a.action_type} via {a.channel}")
+        if result.errors:
+            for e in result.errors:
+                typer.echo(f"  Error: {e}", err=True)
+
+
+@app.command()
+def cycle(
+    phase: list[str] = typer.Option(None, "--phase", help="Run specific phase(s): scan, match, build"),
+    yes: bool = typer.Option(False, "-y", "--yes", help="Execute (default is dry-run)"),
+    json_output: bool = typer.Option(False, "--json", help="JSON output"),
+):
+    """Daily pipeline cycle: Scan → Match → Build."""
+    import json as _json
+
+    try:
+        from daily_pipeline_orchestrator import run_daily_cycle
+    except ImportError:
+        from scripts.daily_pipeline_orchestrator import run_daily_cycle
+
+    phases = phase if phase else None
+    result = run_daily_cycle(dry_run=not yes, phases=phases)
+    if json_output:
+        typer.echo(_json.dumps(result, indent=2, default=str))
+    else:
+        typer.echo("Daily Cycle Results:")
+        for p in ("scan", "match", "build", "apply", "outreach"):
+            if p in result:
+                typer.echo(f"  {p}: {result[p].get('status', 'done')}")
+        if "auto_advance" in result:
+            aa = result["auto_advance"]
+            if aa.get("advanced"):
+                typer.echo(f"  auto-advance: {len(aa['advanced'])} entries")
+        if "followup_actions_logged" in result:
+            typer.echo(f"  followup: {result['followup_actions_logged']} actions logged")
+
+
+@app.command()
+def preflight(
+    json_output: bool = typer.Option(False, "--json", help="JSON output"),
+):
+    """Check system readiness for autonomous pipeline operation."""
+    import json as _json
+
+    try:
+        from daily_pipeline_orchestrator import preflight_check
+    except ImportError:
+        from scripts.daily_pipeline_orchestrator import preflight_check
+
+    check = preflight_check()
+    if json_output:
+        typer.echo(_json.dumps(check, indent=2))
+    else:
+        status = "READY" if check["ready"] else "NOT READY"
+        typer.echo(f"Preflight: {status}")
+        typer.echo(f"Entries: {check['entries_found']}")
+        if check["issues"]:
+            for issue in check["issues"]:
+                typer.echo(f"  - {issue}")
+    raise typer.Exit(0 if check["ready"] else 1)
 
 
 if __name__ == "__main__":
