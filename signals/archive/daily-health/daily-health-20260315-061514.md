@@ -1,0 +1,560 @@
+# Daily Pipeline Health — 2026-03-15T06:15:14
+
+Mode: execute
+Repo: /Users/4jp/Workspace/4444J99/application-pipeline
+Email: skipped (no recipients)
+
+Summary: 6 ok | 1 failed
+
+## OK — source-jobs
+Command: `/opt/anaconda3/bin/python /Users/4jp/Workspace/4444J99/application-pipeline/scripts/source_jobs.py --fetch --yes`
+
+```text
+Fetching from 91 Greenhouse boards...
+
+Fetching from 0 Lever boards...
+
+Fetching from 59 Ashby boards...
+
+============================================================
+Total matched: 0
+After dedup:   0
+Fresh & new:   0
+============================================================
+
+No new jobs to add.
+```
+
+```text
+  [greenhouse/anthropic] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/runwayml] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/scaleai] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/figma] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/vercel] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/assemblyai] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/stripe] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/togetherai] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/temporaltechnologies] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/cloudflare] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/dbtlabsinc] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/sourcegraph91] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/coreweave] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/launchdarkly] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/datadog] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/wikimedia] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/mozilla] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/gitlab] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/twilio] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/mongodb] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/elastic] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/grafanalabs] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/netlify] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/planetscale] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/airtable] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/databricks] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/labelbox] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/snorkelai] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/inflectionai] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/lightningai] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/deepmind] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/cockroachlabs] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/singlestore] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/fivetran] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/fastly] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/postman] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/circleci] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/buildkite] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/brex] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/mercury] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/gusto] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/lattice] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/justworks] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/coinbase] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/robinhood] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/affirm] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/marqeta] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/lithic] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/alloy] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/alchemy] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/relativity] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/andurilindustries] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/pagerduty] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/newrelic] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/honeycomb] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/sumologic] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/contentful] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/ghost] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/dropbox] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/asana] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/duolingo] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/reddit] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/discord] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/lyft] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/instacart] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/roblox] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/squarespace] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/webflow] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/grammarly] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/mixpanel] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/amplitude] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/intercom] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/calendly] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/salesloft] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/bitwarden] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/wizinc] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/neo4j] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/yugabyte] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/redis] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/dremio] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/starburst] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/tailscale] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/make] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/rootly] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/samsara] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/toast] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/tripactions] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/warp] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/chime] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/sofi] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [greenhouse/remote] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/cohere] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/posthog] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/openai] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/notion] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/supabase] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/linear] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/replit] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/deepgram] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/cursor] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/ramp] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/character] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/perplexity] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/railway] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/render] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/resend] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/elevenlabs] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/neon] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/warp] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/sierra] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/harvey] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/cognition] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/poolside] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/pika] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/modal] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/langchain] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/llamaindex] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/stainlessapi] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/clerk] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/axiom] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/motherduck] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/weaviate] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/pinecone] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/airbyte] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/snowflake] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/livekit] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/twenty] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/zed] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/inngest] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/sentry] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/mintlify] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/gitbook] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/semgrep] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/greptile] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/raycast] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/infisical] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/doppler] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/speakeasy] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/n8n] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/windmill] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/plane] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/deel] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/zapier] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/prefect] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/hightouch] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/retool] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/temporal] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/assembly] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/beam] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+  [ashby/fig] Error: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+```
+
+## OK — score-auto-qualify
+Command: `/opt/anaconda3/bin/python /Users/4jp/Workspace/4444J99/application-pipeline/scripts/score.py --auto-qualify --yes`
+
+```text
+Research pool: 1952 entries
+Qualify (score >= 9.0): 0 | Below min-score: 1408 | Skip: 544
+
+No entries meet the qualification threshold.
+```
+
+```text
+  WARNING: market-intelligence: meta.review_by missing
+  WARNING: market-intelligence: portal_friction_scores.note invalid: Scale 1-10; higher = lower friction for applicant. Greenhouse/Lever/Ashby are feature-equivalent; Ashby adds advanced analytics and is cheaper for <500-person companies.
+  WARNING: market-intelligence: portal_friction_scores.source invalid: SpotSaaS 2026 ATS comparison; Index.dev ATS guide 2026
+```
+
+## OK — enrich-all
+Command: `/opt/anaconda3/bin/python /Users/4jp/Workspace/4444J99/application-pipeline/scripts/enrich.py --all --yes`
+
+```text
+No enrichment needed for matching entries.
+```
+
+## OK — campaign-report
+Command: `/opt/anaconda3/bin/python /Users/4jp/Workspace/4444J99/application-pipeline/scripts/campaign.py`
+
+```text
+CAMPAIGN: Week of 2026-03-15
+======================================================================
+  Viability: 56/100 — QUESTIONABLE — consider pivoting model or team
+
+CRITICAL:
+  (none)
+
+URGENT:
+  (none)
+
+UPCOMING (within 14 days):
+  (none)
+
+READY (staged, rolling/30d+):
+   [8.5] Anthropic Software Engineer, Agent SDK - Claude Code rolling  qualified    standard   —
+         needs: advance to staged
+   [8.4] Cursor Software Engineer, DevEx        rolling  qualified    standard   —
+         needs: advance to staged
+   [8.3] Datadog Senior Technical Writer        rolling  qualified    standard   —
+         needs: advance to staged
+   [8.3] MongoDB Senior Developer Advocate      rolling  qualified    standard   —
+         needs: advance to staged
+   [8.3] OpenAI Software Engineer, Full-Stack — Developer Experience rolling  qualified    standard   —
+         needs: advance to staged
+   [8.3] Scale AI Senior Software Engineer, Agentic Data Products rolling  qualified    standard   —
+         needs: advance to staged
+   [8.3] Stripe Developer Experience Engineer, Privy rolling  qualified    standard   —
+         needs: advance to staged
+   [8.3] Temporal Staff Developer Advocate, Developer Enablement rolling  qualified    standard   —
+         needs: advance to staged
+
+======================================================================
+Summary: 0 critical | 0 urgent | 0 upcoming | 8 ready
+         0 need materials | 0 need blocks | 0 need portal_fields | 0 need variants
+```
+
+```text
+  WARNING: market-intelligence: meta.review_by missing
+  WARNING: market-intelligence: portal_friction_scores.note invalid: Scale 1-10; higher = lower friction for applicant. Greenhouse/Lever/Ashby are feature-equivalent; Ashby adds advanced analytics and is cheaper for <500-person companies.
+  WARNING: market-intelligence: portal_friction_scores.source invalid: SpotSaaS 2026 ATS comparison; Index.dev ATS guide 2026
+```
+
+## OK — standup-report
+Command: `/opt/anaconda3/bin/python /Users/4jp/Workspace/4444J99/application-pipeline/scripts/standup.py`
+
+```text
+============================================================
+DAILY STANDUP — Sunday, March 15, 2026
+Mode: PRECISION | Review in 20d
+============================================================
+
+PIPELINE HEALTH SCORE: 8.4/10.0  [████████░░]
+  Freshness:       2.0/2.0
+  Compliance:      2.0/2.0
+  Conversion data: 1.0/2.0
+  Signal integrity:2.0/2.0
+  Balance:         1.4/2.0
+
+1. PIPELINE HEALTH
+   Total entries: 85
+   Actionable (research/qualified/drafting/staged): 8
+   Submitted / awaiting response: 11
+   Days since last submission: 17
+
+   Status breakdown:
+     qualified         8  ########
+     deferred         40  ########################################
+     submitted         6  ######
+     acknowledged      5  #####
+     outcome          25  #########################
+
+PRECISION MODE COMPLIANCE
+   Actionable entries: 8/10 — COMPLIANT
+   Org cap (1/org): COMPLIANT
+   Weekly submissions (7d): 0/2 — COMPLIANT
+   All metrics within precision-mode limits.
+
+MARKET INTELLIGENCE
+   Version: 2026-03-01-v2 | Sources: 336 | Updated: 2026-03-01
+
+   CONDITIONS:
+     Tech layoffs YTD:  51,330 (cold app viability: LOW)
+     SWE hiring YoY:    +8.1% recovery
+     AI rejection rate: 62% of HMs reject generic AI content
+
+   HOT SKILLS 2026: go, kubernetes, terraform, platform-engineering, ai-orchestration, mcp, agentic-workflows, typescript, rust
+
+   UPCOMING DEADLINES:
+          Creative Capital 2027: closes 2026-04-02 (+18d) $50,000
+          Lacma Art Tech 2026: closes 2026-04-22 (+38d) $50,000
+
+JOB PIPELINE
+   Total job entries: 68
+   Status: qualified=8, deferred=35, submitted=1, acknowledged=4, outcome=19
+
+   Actionable (by score):
+     [8.5] Anthropic Software Engineer, Agent SDK - Claude Code — qualified [greenhouse] [auto] [STALE >72h]
+     [8.4] Cursor Software Engineer, DevEx — qualified [ashby] [auto] [STALE >72h]
+     [8.3] Datadog Senior Technical Writer — qualified [greenhouse] [auto] [STALE >72h]
+     [8.3] MongoDB Senior Developer Advocate — qualified [greenhouse] [auto] [STALE >72h]
+     [8.3] OpenAI Software Engineer, Full-Stack — Developer Experience — qualified [ashby] [auto] [STALE >72h]
+     [8.3] Scale AI Senior Software Engineer, Agentic Data Products — qualified [greenhouse] [auto] [STALE >72h]
+     [8.3] Stripe Developer Experience Engineer, Privy — qualified [greenhouse] [auto] [STALE >72h]
+     [8.3] Temporal Staff Developer Advocate, Developer Enablement — qualified [greenhouse] [auto] [STALE >72h]
+   Awaiting response:
+     Cloudflare Models Engineer, Developer Relations — acknowledged (19d ago)
+     Figma Software Engineer, Developer Experience — acknowledged (19d ago)
+     Perplexity Full Stack Software Engineer - Applied AI — acknowledged (19d ago)
+     Replit Software Engineer, Product Infrastructure (TypeScript DevEx) — acknowledged (19d ago)
+     Supabase Developer Relations Engineer (San Francisco, CA) — submitted (19d ago)
+
+OPPORTUNITY PIPELINE (grants/residencies/prizes/writing)
+   No actionable non-job entries.
+
+RECENT WINS (last 7 days)
+  No milestones this week — keep pushing!
+
+2. AWAITING ATTENTION
+   EXPIRED: none
+   AT-RISK: none
+   NEEDS REVIEW: none
+
+2b. EXECUTION GAP SNAPSHOT
+   Staged entries: 0
+   Stale staged >168h: 0
+   Staged missing portal_fields: 0
+   Staged->Submitted: 100.0% (36/36, target 50%)
+   Autonomous runs (7d): 2 execute runs, 8 actions executed
+
+3. TODAY'S WORK PLAN (3.0h budget, 180 min)
+   BY SCORE (jobs weighted by freshness):
+     [0.0] Anthropic Software Engineer, Agent SDK - Claude Code — qualified — standard (~180min) [STALE >72h]
+     [0.0] Cursor Software Engineer, DevEx — qualified — standard (~180min) [OVER BUDGET] [STALE >72h]
+     [0.0] Datadog Senior Technical Writer — qualified — standard (~180min) [OVER BUDGET] [STALE >72h]
+     [0.0] MongoDB Senior Developer Advocate — qualified — standard (~180min) [OVER BUDGET] [STALE >72h]
+     [0.0] OpenAI Software Engineer, Full-Stack — Developer Experience — qualified — standard (~180min) [OVER BUDGET] [STALE >72h]
+     [0.0] Scale AI Senior Software Engineer, Agentic Data Products — qualified — standard (~180min) [OVER BUDGET] [STALE >72h]
+     [0.0] Stripe Developer Experience Engineer, Privy — qualified — standard (~180min) [OVER BUDGET] [STALE >72h]
+     [0.0] Temporal Staff Developer Advocate, Developer Enablement — qualified — standard (~180min) [OVER BUDGET] [STALE >72h]
+   ---
+   Planned: 1 entries | ~180 min (3.0h)
+
+4. OUTREACH SUGGESTIONS
+   Anthropic Software Engineer, Agent SDK - Claude Code [qualified]:
+     - Visit the actual portal — note field names and character limits
+     - Read 2-3 past winners' statements for tone/length calibration
+     - Check if you know anyone connected to this org
+   Cursor Software Engineer, DevEx [qualified]:
+     - Visit the actual portal — note field names and character limits
+     - Read 2-3 past winners' statements for tone/length calibration
+     - Check if you know anyone connected to this org
+   Datadog Senior Technical Writer [qualified]:
+     - Visit the actual portal — note field names and character limits
+     - Read 2-3 past winners' statements for tone/length calibration
+     - Check if you know anyone connected to this org
+   MongoDB Senior Developer Advocate [qualified]:
+     - Visit the actual portal — note field names and character limits
+     - Read 2-3 past winners' statements for tone/length calibration
+     - Check if you know anyone connected to this org
+   OpenAI Software Engineer, Full-Stack — Developer Experience [qualified]:
+     - Visit the actual portal — note field names and character limits
+     - Read 2-3 past winners' statements for tone/length calibration
+     - Check if you know anyone connected to this org
+   ... 3 more entries (run full standup to see all)
+
+5. BEST PRACTICES
+   - Submit 24-48 hours before the deadline — portals crash at the wire
+   - Check that all linked work samples/portfolio URLs are live
+   - Do a final proofread pass on all materials
+   - Target 2-3 outreach messages per week (quality over quantity)
+   - Warm introductions convert 5-10x better than cold emails
+
+6. PIPELINE REPLENISHMENT
+   Live actionable entries: 8
+   OK — pipeline lean and focused (8 entries, threshold 3)
+   By track:
+     job: 8
+   Gaps: no live entries in fellowship, grant, residency, writing
+   Research pool: 1952 entries (0 scoring >= 9.0)
+
+7. DEFERRED ENTRIES
+   40 entry(ies) deferred (blocked by external factors):
+     Anthropic Developer Community Lead, EMEA [unknown]
+     Cloudflare Senior Solutions Engineer, Digital Native [unknown]
+     Cloudflare Senior Solutions Engineer - Mid-Market NY [unknown]
+     Cohere Applied AI Engineer – Agentic Workflows (Korea) [below_actionable_threshold]
+       Score below top-10 cutoff (8.3); preserved for future re-evaluation
+     Cohere Applied AI Engineer - Agentic Workflows (Singapore) [unknown]
+     Cohere Forward Deployed Engineer, Agentic Platform (North America) [unknown]
+     Cohere Forward Deployed Engineer, Agentic Platform [unknown]
+     dbt Labs Senior Developer Experience Advocate [below_actionable_threshold]
+       Score below top-10 cutoff (8.3); preserved for future re-evaluation
+     Elastic Senior Developer Advocate (Video Content Creator) [unknown]
+     Elastic Senior Developer Advocate [unknown]
+     Elastic Senior Software Engineer - Full Stack - Extract and Transform - WorkplaceAI - Search [unknown]
+     Elastic Senior Technical Writer - Core Docs - Documentation [unknown]
+     Elastic Software Engineer II - Python - Developer Tools - Search [below_actionable_threshold]
+       Score below top-10 cutoff (8.3); preserved for future re-evaluation
+     Elastic Technical Writer I - SKI - Documentation [unknown]
+     ElevenLabs Developer Relations Engineer [below_actionable_threshold]
+       Score below top-10 cutoff (8.3); preserved for future re-evaluation
+     GitLab Senior Backend Engineer (Ruby and/or Go), Tenant Scale; Cells Infrastructure [unknown]
+     Google AMI Grants [below_actionable_threshold]
+       Score below top-10 cutoff (8.3); preserved for future re-evaluation
+     Google Creative Fellowship [below_threshold]
+       Score below 9.0 precision minimum; deadline imminent but not worth diluting pipeline focus
+     Headlands Center for the Arts [below_actionable_threshold]
+       Score below top-10 cutoff (8.3); preserved for future re-evaluation
+     MongoDB Senior Software Engineer, DevTools [unknown]
+     MongoDB Senior Technical Writer [unknown]
+     Notion Software Engineer, AI Agentic Search, Early Career [below_actionable_threshold]
+       Score below top-10 cutoff (8.3); preserved for future re-evaluation
+     Notion Staff Software Engineer, AI Agentic Search [strategic_hold] — resumes in 2d (2026-03-17)
+       Deferred intentionally pending refresh on role/location fit and current priorities.
+     PEN America Writers Aid [below_threshold]
+       Score below 9.0 precision minimum; deadline imminent but not worth diluting pipeline focus
+     Resend DX Engineer (Technical Writer) [below_actionable_threshold]
+       Score below top-10 cutoff (8.3); preserved for future re-evaluation
+     Stimpunks Creator Grant [portal_paused] — resumes in 78d (2026-06-01)
+       Portal paused. Re-opening June 1 for second round of 50 applications.
+     Temporal Staff Developer Advocate, Platform Engineering [unknown]
+     Anthropic Developer Relations, MCP [unknown]
+     Anthropic Forward Deployed Engineer [unknown]
+     Anthropic Founding Developer Relations Lead [unknown]
+     Anthropic Model Quality Software Engineer, Claude Code [unknown]
+     Anthropic Software Engineer Claude Code [unknown]
+     Anthropic Software Engineer, Windows - Claude Code [unknown]
+     Cloudflare Software Engineer, Developer Tools and Productivity [unknown]
+     Cohere Applied AI Engineer Agentic Workflows [unknown]
+     Cursor Software Engineer, Client Infrastructure [unknown]
+     Notion Software Engineer, Developer Experience [unknown]
+     OpenAI Developer Experience Engineer [unknown]
+     OpenAI Forward Deployed Engineer (FDE) - NYC [unknown]
+     Scale AI Staff Software Engineer, Developer Experience [unknown]
+
+   SIGNAL FRESHNESS:
+     conversion-log: STALE (11.9d old, max 1d)
+     hypotheses: OK (0.6d old)
+     standup-log: STALE (11.5d old, max 2d)
+     backup: OK (0d old)
+     market-intel: OK (11d old)
+     scheduler: DEGRADED (7/8 loaded) — down: daily-scan
+
+8. FOLLOW-UP DASHBOARD
+   OVERDUE (22):
+     !!! Awesome Foundation — Awesome Foundation NYC
+         Day 18 — Connect on LinkedIn (Day 1-2)
+     !!! Awesome Foundation — Awesome Foundation NYC
+         Day 18 — First follow-up DM/email (Day 7-10)
+     !!! Cloudflare — Cloudflare Models Engineer, Developer Relations
+         Day 19 — Connect on LinkedIn (Day 1-2)
+     !!! Cloudflare — Cloudflare Models Engineer, Developer Relations
+         Day 19 — First follow-up DM/email (Day 7-10)
+     !!! Doris Duke Foundation / Mozilla — Doris Duke / Mozilla Artists Make Technology Lab
+         Day 19 — Connect on LinkedIn (Day 1-2)
+     ... and 17 more
+   DUE TODAY (11):
+     >> Awesome Foundation — Awesome Foundation NYC
+        Day 18 — Final follow-up
+     >> Cloudflare — Cloudflare Models Engineer, Developer Relations
+        Day 19 — Final follow-up
+     >> Doris Duke Foundation / Mozilla — Doris Duke / Mozilla Artists Make Technology Lab
+        Day 19 — Final follow-up
+     >> Figma — Figma Software Engineer, Developer Experience
+        Day 19 — Final follow-up
+     >> Gay & Lesbian Review — Gay & Lesbian Review
+        Day 17 — Final follow-up
+     ... and 6 more
+
+   Submitted: 11 | With follow-ups: 0 | Overdue: 22 | Due: 11
+
+RELATIONSHIPS
+----------------------------------------
+
+   No entries where network cultivation alone unlocks 9.0
+
+   DENSE ORGS (3+ entries — network leverage):
+     anthropic (17 entries): anthropic-developer-community-lead-emea, anthropic-software-engineer-agent-sdk-claude-code, anthropic-developer-relations-mcp
+     elastic (6 entries): elastic-senior-developer-advocate-video-content-creator, elastic-senior-developer-advocate, elastic-senior-software-engineer-full-stack-extract-and-transform-wo
+     cohere (5 entries): cohere-applied-ai-engineer-agentic-workflows-korea, cohere-applied-ai-engineer-agentic-workflows-singapore, cohere-forward-deployed-engineer-agentic-platform-north-america
+
+STAGED ENTRY READINESS
+   No staged entries.
+```
+
+```text
+  WARNING: market-intelligence: meta.review_by missing
+  WARNING: market-intelligence: portal_friction_scores.note invalid: Scale 1-10; higher = lower friction for applicant. Greenhouse/Lever/Ashby are feature-equivalent; Ashby adds advanced analytics and is cheaper for <500-person companies.
+  WARNING: market-intelligence: portal_friction_scores.source invalid: SpotSaaS 2026 ATS comparison; Index.dev ATS guide 2026
+  WARNING: market-intelligence: meta.review_by missing
+  WARNING: market-intelligence: portal_friction_scores.note invalid: Scale 1-10; higher = lower friction for applicant. Greenhouse/Lever/Ashby are feature-equivalent; Ashby adds advanced analytics and is cheaper for <500-person companies.
+  WARNING: market-intelligence: portal_friction_scores.source invalid: SpotSaaS 2026 ATS comparison; Index.dev ATS guide 2026
+```
+
+## OK — hygiene-check
+Command: `/opt/anaconda3/bin/python /Users/4jp/Workspace/4444J99/application-pipeline/scripts/hygiene.py`
+
+```text
+PIPELINE HYGIENE REPORT — 2026-03-15
+============================================================
+
+Actionable entries: 1960
+
+GATE FAILURES (1240):
+  affirm-analytics-lead-full-stack [job]:
+    - fit.score is 0 or missing
+  affirm-senior-partner-engineer-partnership-engineering [job]:
+    - fit.score is 0 or missing
+  affirm-senior-software-engineer-backend-decisions-and-pricing-found [job]:
+    - fit.score is 0 or missing
+  affirm-senior-software-engineer-backend-growth-platform [job]:
+    - fit.score is 0 or missing
+  affirm-senior-software-engineer-backend-merchant-data-platform-eu [job]:
+    - fit.score is 0 or missing
+  affirm-senior-software-engineer-backend-merchant-interfaces [job]:
+    - fit.score is 0 or missing
+  affirm-senior-software-engineer-backend-pmi-integrations [job]:
+    - fit.score is 0 or missing
+  affirm-senior-software-engineer-backend-repayment-ux-engineering [job]:
+    - fit.score is 0 or missing
+  affirm-senior-software-engineer-backend-streaming-infrastructure [job]:
+    - fit.score is 0 or missing
+  affirm-senior-software-engineer-full-stack-trust-safety [job]:
+    - fit.score is 0 or missing
+  ... and 1230 more
+
+============================================================
+ISSUES FOUND: 1240 total
+  Missing URLs: 0
+  Expired deadlines: 0
+  Gate failures: 1240
+  Stale rolling: 0
+```
+
+## FAIL — scheduler-health
+Command: `/opt/anaconda3/bin/python /Users/4jp/Workspace/4444J99/application-pipeline/scripts/scheduler_health.py --strict`
+
+```text
+SCHEDULER HEALTH
+==========================================================================================
+Label                                  Installed  Loaded   Recent   Log Age(h) Max Age(h)
+------------------------------------------------------------------------------------------
+com.4jp.pipeline.agent-biweekly        yes        yes      yes      70.6            168.0
+com.4jp.pipeline.calendar-refresh      yes        yes      yes      23.5             48.0
+com.4jp.pipeline.daily-deferred        yes        yes      yes      0.3              48.0
+com.4jp.pipeline.daily-health          yes        yes      yes      24.0             48.0
+com.4jp.pipeline.daily-monitor         yes        yes      yes      23.8             48.0
+com.4jp.pipeline.daily-scan            no         no       no       -                48.0
+com.4jp.pipeline.weekly-backup         yes        yes      yes      4.3             336.0
+com.4jp.pipeline.weekly-briefing       yes        yes      yes      155.3           336.0
+------------------------------------------------------------------------------------------
+Jobs: 8 | Healthy: 7 | Unhealthy: 1
+```

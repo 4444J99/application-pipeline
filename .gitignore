@@ -63,10 +63,6 @@ signals/score-telemetry.yaml
 signals/text-match-corpus.yaml
 signals/historical-outcomes.yaml
 signals/keyword-signals.yaml
-signals/daily-health/
-signals/daily-snapshots/
-signals/diagnostic-history/
-signals/weekly-brief/
 signals/notification-log.yaml
 signals/standup-log.yaml
 signals/agent-actions.yaml
