@@ -7,12 +7,12 @@ system:
   active_repos: 59
   archived_repos: 53
   organizations: 8
-  published_essays: 0
-  total_words_k: 1
-  automated_tests: 0
-  development_sprints: 0
-  code_files: 0
-  test_files: 0
+  published_essays: 49
+  total_words_k: 738
+  automated_tests: 46
+  development_sprints: 33
+  code_files: 22885
+  test_files: 4274
   ci_workflows: 104
   dependency_edges: 50
 
@@ -20,7 +20,7 @@ organism:
   density: 0.578
   entities: 113
   edges: 28
-  ammoi: "AMMOI:58% E:28 T:33 C:5 Ev24h:5032 IS:98% 8o/113r/1654c [ORGAN-V:90%, ORGAN-VII:79%, ORGAN-IV:77%] | d24h:+0.6%"
+  ammoi: "AMMOI:58% E:28 T:33 C:5 Ev24h:5089 IS:98% 8o/113r/1654c [ORGAN-V:90%, ORGAN-VII:79%, ORGAN-IV:77%] | d24h:+0.6%"
 
 organs:
   I: 19
@@ -31,3 +31,28 @@ organs:
   V: 2
   VI: 6
   VII: 4
+
+languages:
+  Python: 15169
+  TypeScript: 1932
+  JavaScript: 1276
+  TypeScript/React: 727
+  Shell: 200
+  Rust: 6
+  JavaScript/React: 4
+  Go: 1
+
+test_frameworks:
+  pytest: 64
+  vitest: 14
+  jest: 5
+
+verified_passing_tests: 3421
+primary_language: Python
+
+word_counts:
+  readmes: 135798
+  essays: 144924
+  corpus: 452453
+  org_profiles: 5404
+  total: 738579

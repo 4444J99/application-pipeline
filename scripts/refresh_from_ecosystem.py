@@ -20,7 +20,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -59,25 +59,36 @@ def build_metrics_from_snapshot(snapshot: dict) -> dict:
         short = key.replace("ORGAN-", "").replace("META-ORGANVM", "Meta")
         organs[short] = organ.get("repo_count", 0)
 
+    # Code profile (new enriched data)
+    code_profile = snapshot.get("code_profile", {})
+    word_counts = snapshot.get("word_counts", {})
+
     return {
-        "total_repos": int(variables.get("total_repos", sys.get("total_repos", 0))),
-        "active_repos": int(variables.get("active_repos", sys.get("active_repos", 0))),
+        "total_repos": int(sys.get("total_repos", 0) or variables.get("total_repos", 0)),
+        "active_repos": int(sys.get("active_repos", 0) or variables.get("active_repos", 0)),
         "archived_repos": int(variables.get("archived_repos", 0)),
         "organizations": int(variables.get("total_organs", 8)),
-        "published_essays": int(variables.get("published_essays", 0)),
-        "total_words_k": _to_k(variables.get("total_words_numeric", 0)),
-        "automated_tests": int(variables.get("repos_with_tests", 0)),
-        "development_sprints": int(variables.get("sprints_completed", 0)),
-        "code_files": int(variables.get("code_files", 0)),
-        "test_files": int(variables.get("test_files", 0)),
-        "ci_workflows": int(variables.get("ci_workflows", 0)),
+        "published_essays": int(sys.get("published_essays", 0) or variables.get("published_essays", 0)),
+        "total_words_k": _to_k(sys.get("total_words_numeric", 0) or variables.get("total_words_numeric", 0)),
+        "automated_tests": int(sys.get("repos_with_tests", 0) or variables.get("repos_with_tests", 0)),
+        "development_sprints": int(sys.get("sprints_completed", 0) or variables.get("sprints_completed", 0)),
+        "code_files": int(sys.get("code_files", 0) or variables.get("code_files", 0)),
+        "test_files": int(sys.get("test_files", 0) or variables.get("test_files", 0)),
+        "ci_workflows": int(sys.get("ci_workflows", 0) or variables.get("ci_workflows", 0)),
         "dependency_edges": int(variables.get("dependency_edges", 0)),
-        # Organism data (from snapshot.system)
+        # Organism data
         "density": sys.get("density", 0),
         "entities": sys.get("entities", 0),
         "edges": sys.get("edges", 0),
         "ammoi": sys.get("ammoi", ""),
         "organs": organs,
+        # Code profile (typed breakdown)
+        "languages": code_profile.get("languages", {}),
+        "test_frameworks": code_profile.get("test_frameworks", {}),
+        "primary_language": code_profile.get("primary_language", ""),
+        "verified_tests": code_profile.get("verified_test_counts", {}).get("_total_verified", 0),
+        # Word counts by source
+        "word_counts": word_counts,
     }
 
 
@@ -116,13 +127,13 @@ def _to_k(value: int | str) -> int:
 
 def write_metrics_yaml(metrics: dict, path: Path, dry_run: bool = False) -> str:
     """Write config/metrics.yaml from computed metrics."""
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    now = datetime.now(UTC).strftime("%Y-%m-%d")
     lines = [
-        f"# Application Pipeline: Canonical Metrics Source of Truth",
+        "# Application Pipeline: Canonical Metrics Source of Truth",
         f"# Auto-generated from ORGANVM ecosystem — {now}",
-        f"# Source: system-snapshot.json → refresh_from_ecosystem.py",
-        f"",
-        f"system:",
+        "# Source: system-snapshot.json → refresh_from_ecosystem.py",
+        "",
+        "system:",
         f"  total_repos: {metrics['total_repos']}",
         f"  active_repos: {metrics['active_repos']}",
         f"  archived_repos: {metrics['archived_repos']}",
@@ -139,8 +150,8 @@ def write_metrics_yaml(metrics: dict, path: Path, dry_run: bool = False) -> str:
 
     if metrics.get("density"):
         lines.extend([
-            f"",
-            f"organism:",
+            "",
+            "organism:",
             f"  density: {metrics['density']}",
             f"  entities: {metrics['entities']}",
             f"  edges: {metrics['edges']}",
@@ -151,6 +162,27 @@ def write_metrics_yaml(metrics: dict, path: Path, dry_run: bool = False) -> str:
         lines.extend(["", "organs:"])
         for key, count in sorted(metrics["organs"].items()):
             lines.append(f"  {key}: {count}")
+
+    if metrics.get("languages"):
+        lines.extend(["", "languages:"])
+        for lang, count in metrics["languages"].items():
+            lines.append(f"  {lang}: {count}")
+
+    if metrics.get("test_frameworks"):
+        lines.extend(["", "test_frameworks:"])
+        for fw, count in metrics["test_frameworks"].items():
+            lines.append(f"  {fw}: {count}")
+
+    if metrics.get("verified_tests"):
+        lines.append(f"\nverified_passing_tests: {metrics['verified_tests']}")
+
+    if metrics.get("primary_language"):
+        lines.append(f"primary_language: {metrics['primary_language']}")
+
+    if metrics.get("word_counts"):
+        lines.extend(["", "word_counts:"])
+        for source, count in metrics["word_counts"].items():
+            lines.append(f"  {source}: {count}")
 
     lines.append("")
     content = "\n".join(lines)
