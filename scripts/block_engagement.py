@@ -227,10 +227,14 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Block-engagement correlation analysis")
     parser.add_argument("--effective", action="store_true", help="Show only effective blocks")
     parser.add_argument("--invisible", action="store_true", help="Show only invisible blocks")
+    parser.add_argument("--track", help="Filter to specific track (job, grant, residency, etc.)")
     parser.add_argument("--json", action="store_true", help="Output JSON")
     args = parser.parse_args()
 
     entries = load_entries(dirs=ALL_PIPELINE_DIRS)
+    if args.track:
+        entries = [e for e in entries if e.get("track") == args.track]
+        print(f"Filtered to track={args.track}: {len(entries)} entries\n")
     tabs = compute_block_engagement_tabs(entries)
 
     if not tabs:
