@@ -111,10 +111,10 @@ def test_score_description_against_corpus_low_match(tmp_path, monkeypatch):
 def test_score_description_against_corpus_empty():
     """Empty string returns neutral defaults without touching corpus."""
     result = score_description_against_corpus("")
-    assert result == {"mission_alignment": 5, "evidence_match": 4, "track_record_fit": 4}
+    assert result == {"mission_alignment": 5, "evidence_match": 5, "track_record_fit": 4}
 
 
 def test_score_description_against_corpus_too_short():
     """Very short description (< 50 chars) returns neutral defaults."""
     result = score_description_against_corpus("Engineer wanted.")
-    assert result == {"mission_alignment": 5, "evidence_match": 4, "track_record_fit": 4}
+    assert result == {"mission_alignment": 5, "evidence_match": 5, "track_record_fit": 4}

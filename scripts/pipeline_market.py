@@ -70,10 +70,13 @@ def _validate_market_intel(data: dict, filepath: Path) -> list[str]:
         if not meta.get("review_by"):
             warnings.append("market-intelligence: meta.review_by missing")
 
-    # Validate portal_friction_scores values are ints 1-10
+    # Validate portal_friction_scores values are ints 1-10 (skip metadata keys)
     pfs = data.get("portal_friction_scores", {})
+    _PFS_META_KEYS = {"source", "note", "description", "updated"}
     if isinstance(pfs, dict):
         for portal, score in pfs.items():
+            if portal in _PFS_META_KEYS:
+                continue
             if not isinstance(score, int) or not 1 <= score <= 10:
                 warnings.append(f"market-intelligence: portal_friction_scores.{portal} invalid: {score}")
 

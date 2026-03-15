@@ -921,9 +921,9 @@ class TestProofThresholds:
         """
         Proof: tier1 > tier2 > tier3 > 0.
 
-        tier1_cutoff = 9.5
-        tier2_cutoff = 8.5
-        tier3_cutoff = 7.0
+        tier1_cutoff = 8.0
+        tier2_cutoff = 7.0
+        tier3_cutoff = 6.0
 
         9.5 > 8.5 > 7.0 > 0  ∎
         """
@@ -934,9 +934,9 @@ class TestProofThresholds:
 
         t = rubric["thresholds"]
         assert t["tier1_cutoff"] > t["tier2_cutoff"] > t["tier3_cutoff"] > 0
-        assert t["tier1_cutoff"] == 9.5
-        assert t["tier2_cutoff"] == 8.5
-        assert t["tier3_cutoff"] == 7.0
+        assert t["tier1_cutoff"] == 8.0
+        assert t["tier2_cutoff"] == 7.0
+        assert t["tier3_cutoff"] == 6.0
 
     def test_auto_qualify_within_range(self):
         """

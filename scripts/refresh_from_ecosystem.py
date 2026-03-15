@@ -64,17 +64,18 @@ def build_metrics_from_snapshot(snapshot: dict) -> dict:
     word_counts = snapshot.get("word_counts", {})
 
     return {
-        "total_repos": int(sys.get("total_repos", 0) or variables.get("total_repos", 0)),
-        "active_repos": int(sys.get("active_repos", 0) or variables.get("active_repos", 0)),
+        # Variables take precedence over system section (more specific/recent)
+        "total_repos": int(variables.get("total_repos", 0) or sys.get("total_repos", 0)),
+        "active_repos": int(variables.get("active_repos", 0) or sys.get("active_repos", 0)),
         "archived_repos": int(variables.get("archived_repos", 0)),
         "organizations": int(variables.get("total_organs", 8)),
-        "published_essays": int(sys.get("published_essays", 0) or variables.get("published_essays", 0)),
-        "total_words_k": _to_k(sys.get("total_words_numeric", 0) or variables.get("total_words_numeric", 0)),
-        "automated_tests": int(sys.get("repos_with_tests", 0) or variables.get("repos_with_tests", 0)),
-        "development_sprints": int(sys.get("sprints_completed", 0) or variables.get("sprints_completed", 0)),
-        "code_files": int(sys.get("code_files", 0) or variables.get("code_files", 0)),
-        "test_files": int(sys.get("test_files", 0) or variables.get("test_files", 0)),
-        "ci_workflows": int(sys.get("ci_workflows", 0) or variables.get("ci_workflows", 0)),
+        "published_essays": int(variables.get("published_essays", 0) or sys.get("published_essays", 0)),
+        "total_words_k": _to_k(variables.get("total_words_numeric", 0) or sys.get("total_words_numeric", 0)),
+        "automated_tests": int(variables.get("repos_with_tests", 0) or sys.get("repos_with_tests", 0)),
+        "development_sprints": int(variables.get("sprints_completed", 0) or sys.get("sprints_completed", 0)),
+        "code_files": int(variables.get("code_files", 0) or sys.get("code_files", 0)),
+        "test_files": int(variables.get("test_files", 0) or sys.get("test_files", 0)),
+        "ci_workflows": int(variables.get("ci_workflows", 0) or sys.get("ci_workflows", 0)),
         "dependency_edges": int(variables.get("dependency_edges", 0)),
         # Organism data
         "density": sys.get("density", 0),

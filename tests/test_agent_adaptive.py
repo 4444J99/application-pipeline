@@ -46,8 +46,8 @@ def test_plan_actions_applies_channel_allocator_bias(monkeypatch):
         lambda entries, min_samples=3: {"grant": 1.2, "job": 0.8, "fellowship": 1.0},
     )
 
-    grant_entry = _entry("grant-entry", "grant", 8.95, status="research")
-    job_entry = _entry("job-entry", "job", 8.95, status="research")
+    grant_entry = _entry("grant-entry", "grant", 6.95, status="drafting")
+    job_entry = _entry("job-entry", "job", 6.95, status="drafting")
     actions = PipelineAgent(dry_run=True).plan_actions([grant_entry, job_entry])
     targets = {a["entry_id"] for a in actions if a["action"] == "advance"}
     assert "grant-entry" in targets
@@ -68,6 +68,6 @@ def test_plan_actions_applies_feedback_delta(monkeypatch):
         lambda entries, min_samples=3: {"grant": 1.0, "job": 1.0, "fellowship": 1.0},
     )
 
-    entry = _entry("tight-entry", "job", 9.1, status="research")
+    entry = _entry("tight-entry", "job", 7.1, status="drafting")
     actions = PipelineAgent(dry_run=True).plan_actions([entry])
     assert [a for a in actions if a["action"] == "advance"] == []

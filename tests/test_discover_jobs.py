@@ -42,9 +42,13 @@ def _make_job(**overrides):
 
 
 def test_valid_positions_list():
-    """All five identity positions are defined."""
-    assert len(VALID_POSITIONS) == 5
+    """All nine identity positions are defined."""
+    assert len(VALID_POSITIONS) == 9
     assert "independent-engineer" in VALID_POSITIONS
+    assert "documentation-engineer" in VALID_POSITIONS
+    assert "governance-architect" in VALID_POSITIONS
+    assert "platform-orchestrator" in VALID_POSITIONS
+    assert "founder-operator" in VALID_POSITIONS
     assert "systems-artist" in VALID_POSITIONS
     assert "educator" in VALID_POSITIONS
     assert "creative-technologist" in VALID_POSITIONS

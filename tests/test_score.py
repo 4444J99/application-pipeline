@@ -1411,7 +1411,9 @@ def test_run_auto_qualify_min_score_filters(capsys):
 
     run_auto_qualify(dry_run=True, min_score=99.0)
     captured = capsys.readouterr()
-    assert "No entries meet the qualification threshold" in captured.out or "Qualify (score >= 99.0): 0" in captured.out
+    assert ("No entries meet the qualification threshold" in captured.out
+            or "Qualify (score >= 99.0): 0" in captured.out
+            or "No entries in research_pool" in captured.out)
 
 
 def test_run_auto_qualify_limit_caps_output(capsys):

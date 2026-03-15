@@ -22,8 +22,8 @@ from classify_position import (  # noqa: I001 - import order after sys.path mani
 # ---------------------------------------------------------------------------
 
 class TestConstants:
-    def test_default_position_is_independent_engineer(self):
-        assert DEFAULT_POSITION == "independent-engineer"
+    def test_default_position_is_documentation_engineer(self):
+        assert DEFAULT_POSITION == "documentation-engineer"
 
     def test_position_rules_is_list_of_tuples(self):
         assert isinstance(POSITION_RULES, list)
@@ -476,13 +476,13 @@ class TestClassifyBatch:
             {"target": {"title": "Software Engineer", "description": ""}},
         ]
         result = classify_batch(entries)
-        assert result["documentation-engineer"] == 1
+        # Technical Writer → documentation-engineer, Software Engineer → documentation-engineer (default)
+        assert result["documentation-engineer"] == 2
         assert result["governance-architect"] == 1
         assert result["platform-orchestrator"] == 1
         assert result["founder-operator"] == 1
         assert result["educator"] == 1
         assert result["creative-technologist"] == 1
-        assert result[DEFAULT_POSITION] == 1
 
     def test_empty_target_dict(self):
         entries = [{"target": {}}]

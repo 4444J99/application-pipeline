@@ -54,8 +54,8 @@ submission:
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
-  date_added: 2026-02-14
-  qualified: "2026-03-15"
+  date_added: &id001 2026-02-14
+  qualified: *id001
   materials_ready: '2026-02-23'
   submitted: null
   acknowledged: null
@@ -75,7 +75,7 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Approximate deadline Apr 2026 TBA.
-last_touched: "2026-03-15"
+last_touched: '2026-03-15'
 status_meta:
   reviewed_by: 4jp
   reviewed_at: '2026-03-03'

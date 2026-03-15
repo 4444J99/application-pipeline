@@ -50,14 +50,14 @@ def _neutralize_dynamic_controls(monkeypatch, agent_module):
 
 
 def test_rule4_below_threshold_no_action(monkeypatch):
-    """Score 8.0 is below the 9.0 threshold -- no advance action produced."""
+    """Score 5.0 is below the 7.0 threshold -- no advance action produced."""
     import agent
 
     monkeypatch.setattr(agent, "can_advance", lambda entry, target: (True, ""))
     monkeypatch.setattr(agent, "_mode_adjusted_threshold", lambda base: base)
     _neutralize_dynamic_controls(monkeypatch, agent)
 
-    entry = _make_entry(score=8.0, days_ahead=30)
+    entry = _make_entry(score=5.0, days_ahead=30)
     actions = PipelineAgent(dry_run=True).plan_actions([entry])
 
     advance_actions = [a for a in actions if a["action"] == "advance" and a.get("to_status") == "staged"]
@@ -65,14 +65,14 @@ def test_rule4_below_threshold_no_action(monkeypatch):
 
 
 def test_rule4_at_threshold_advances(monkeypatch):
-    """Score exactly 9.0 meets the threshold -- should produce advance to staged."""
+    """Score exactly 7.0 meets the threshold -- should produce advance to staged."""
     import agent
 
     monkeypatch.setattr(agent, "can_advance", lambda entry, target: (True, ""))
     monkeypatch.setattr(agent, "_mode_adjusted_threshold", lambda base: base)
     _neutralize_dynamic_controls(monkeypatch, agent)
 
-    entry = _make_entry(score=9.0, days_ahead=30)
+    entry = _make_entry(score=7.0, days_ahead=30)
     actions = PipelineAgent(dry_run=True).plan_actions([entry])
 
     advance_actions = [a for a in actions if a["action"] == "advance" and a.get("to_status") == "staged"]

@@ -22,10 +22,10 @@ fit:
   score: 7.6
   original_score: 7.3
   identity_position: systems-artist
-  framing: Systems artist presenting ORGANVM—a 103-repository autonomous architecture
-    that explores "plurality" as the coexistence of human intent and agentic swarms.
-    Speculating on a future where digital togetherness is founded on transparent,
-    governed orchestration rather than opaque centralization.
+  framing: "Systems artist presenting ORGANVM\u2014a 103-repository autonomous architecture\
+    \ that explores \"plurality\" as the coexistence of human intent and agentic swarms.\
+    \ Speculating on a future where digital togetherness is founded on transparent,\
+    \ governed orchestration rather than opaque centralization."
   lead_organs:
   - I
   - IV
@@ -52,8 +52,8 @@ submission:
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
-  date_added: 2026-02-14
-  qualified: "2026-03-15"
+  date_added: &id001 2026-02-14
+  qualified: *id001
   materials_ready: '2026-02-23'
   acknowledged: null
   interview: null
@@ -71,7 +71,7 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $4,000 plus studio access. Spring 2026 deadline TBA.
-last_touched: "2026-03-15"
+last_touched: '2026-03-15'
 status_meta:
   reviewed_by: 4jp
   reviewed_at: '2026-03-03'

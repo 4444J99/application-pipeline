@@ -22,10 +22,10 @@ fit:
   score: 8.0
   original_score: 7.9
   identity_position: systems-artist
-  framing: Systems artist presenting the "ORGANVM Metasystem"—a work of infrastructure
-    art that reclaims technical governance as an aesthetic medium. Proposing to collaborate
-    with LACMA's technology partners to explore how autonomous, steerable orchestration
-    can redefine the future of creative labor.
+  framing: "Systems artist presenting the \"ORGANVM Metasystem\"\u2014a work of infrastructure\
+    \ art that reclaims technical governance as an aesthetic medium. Proposing to\
+    \ collaborate with LACMA's technology partners to explore how autonomous, steerable\
+    \ orchestration can redefine the future of creative labor."
   lead_organs:
   - I
   - II
@@ -56,8 +56,8 @@ submission:
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
-  date_added: 2026-02-14
-  qualified: "2026-03-15"
+  date_added: &id001 2026-02-14
+  qualified: *id001
   materials_ready: '2026-02-23'
   acknowledged: null
   interview: null
@@ -76,7 +76,7 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: null
-last_touched: "2026-03-15"
+last_touched: '2026-03-15'
 status_meta:
   reviewed_by: 4jp
   reviewed_at: '2026-03-03'

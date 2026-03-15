@@ -28,7 +28,7 @@ rules:
     condition: "status == research AND score >= threshold"
     action: advance
     to_status: qualified
-    threshold: 9.0
+    threshold: 7.0
     severity: routine
 
   # Rule 3: Auto-advance qualified entries with high score to drafting
@@ -37,7 +37,7 @@ rules:
     condition: "status == qualified AND score >= threshold"
     action: advance
     to_status: drafting
-    threshold: 9.5
+    threshold: 7.5
     severity: routine
 
   # Rule 4: Auto-advance drafting entries with time to staged (score gate enforced)
@@ -47,7 +47,7 @@ rules:
     action: advance
     to_status: staged
     min_days: 7
-    min_score: 9.0
+    min_score: 7.0
     severity: routine
 
   # Rule 5: Flag staged entries approaching deadline for submission

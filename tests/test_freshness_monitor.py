@@ -84,12 +84,11 @@ def test_get_entries_with_urls_filters_status():
     assert "outcome" not in ids
 
 
-def test_get_entries_with_urls_includes_research():
-    """Research status entries are included (it is actionable)."""
+def test_get_entries_with_urls_excludes_research():
+    """Research status entries are excluded (research is pre-pipeline, not actionable)."""
     entries = [_make_entry(entry_id="research-entry", status="research")]
     result = get_entries_with_urls(entries)
-    assert len(result) == 1
-    assert result[0]["id"] == "research-entry"
+    assert len(result) == 0
 
 
 # ---------------------------------------------------------------------------

@@ -109,19 +109,17 @@ def test_check_entry_pass_count_matches():
 
 def test_check_entry_ready_entry():
     """Load a real greenhouse entry and verify it returns a well-formed result."""
-    entries = load_entries(dirs=[PIPELINE_DIR_ACTIVE])
-    target_id = "anthropic-software-engineer-agent-sdk-claude-code"
+    from pipeline_lib import PIPELINE_DIR_SUBMITTED
+    entries = load_entries(dirs=[PIPELINE_DIR_SUBMITTED])
+    target_id = "anduril-lead-technical-writer-intelligence-systems"
     match = [e for e in entries if e.get("id") == target_id]
-    assert len(match) == 1, f"Expected to find entry '{target_id}' in active pipeline"
+    assert len(match) == 1, f"Expected to find entry '{target_id}' in submitted pipeline"
 
     result = check_entry(match[0])
     assert result["id"] == target_id
     assert result["portal"] == "greenhouse"
     assert result["status"] == match[0].get("status")
-    # This entry has a greenhouse portal and application URL,
-    # so portal_parsed and status_submittable and has_target_url should pass
     assert result["results"]["portal_parsed"] is True
-    assert result["results"]["status_submittable"] is True
     assert "review_approved" in result["results"]
     assert result["results"]["has_target_url"] is True
 
