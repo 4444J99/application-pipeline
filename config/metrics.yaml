@@ -1,24 +1,33 @@
 # Application Pipeline: Canonical Metrics Source of Truth
-# Updated: 2026-03-04
+# Auto-generated from ORGANVM ecosystem — 2026-03-15
+# Source: system-snapshot.json → refresh_from_ecosystem.py
 
 system:
-  total_repos: 103
-  active_repos: 94
-  archived_repos: 9
+  total_repos: 113
+  active_repos: 59
+  archived_repos: 53
   organizations: 8
-  published_essays: 47
-  total_words_k: 810
-  automated_tests: 2349
-  development_sprints: 33
-  code_files: 21160
-  test_files: 3610
+  published_essays: 0
+  total_words_k: 1
+  automated_tests: 0
+  development_sprints: 0
+  code_files: 0
+  test_files: 0
+  ci_workflows: 104
+  dependency_edges: 50
+
+organism:
+  density: 0.578
+  entities: 113
+  edges: 28
+  ammoi: "AMMOI:58% E:28 T:33 C:5 Ev24h:5032 IS:98% 8o/113r/1654c [ORGAN-V:90%, ORGAN-VII:79%, ORGAN-IV:77%] | d24h:+0.6%"
 
 organs:
-  I: 20
-  II: 30
-  III: 27
-  IV: 7
+  I: 19
+  II: 31
+  III: 29
+  IV: 11
+  Meta: 11
   V: 2
   VI: 6
   VII: 4
-  Meta: 7
