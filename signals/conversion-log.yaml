@@ -777,3 +777,20 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: anduril-lead-technical-writer-intelligence-systems
+  submitted: '2026-03-15'
+  submitted_by: 4jp
+  track: job
+  identity_position: independent-engineer
+  composition_method: blocks
+  blocks_used:
+  - framings/independent-engineer
+  - evidence/differentiators
+  - evidence/work-samples
+  - pitches/credentials-creative-tech
+  - methodology/ai-conductor
+  variant_id: cover-letters/anduril-lead-technical-writer-intelligence-systems
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null

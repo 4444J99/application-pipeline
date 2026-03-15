@@ -122,12 +122,17 @@ def section_relationships(entries: list[dict]) -> None:
     try:
         from score import analyze_reachability
 
+        try:
+            from score import get_auto_qualify_min
+            _aq_min = get_auto_qualify_min()
+        except Exception:
+            _aq_min = 7.0
         reachable = []
         for entry in entries:
             if entry.get("status") not in {"research", "qualified", "drafting", "staged"}:
                 continue
-            result = analyze_reachability(entry, entries, 9.0)
-            if result["current_composite"] >= 9.0:
+            result = analyze_reachability(entry, entries, _aq_min)
+            if result["current_composite"] >= _aq_min:
                 continue
             if result["reachable_with"]:
                 best = next(

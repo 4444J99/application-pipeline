@@ -490,10 +490,15 @@ def section_replenish(
 
     pool_entries = load_entries_fn(dirs=[pipeline_dir_research_pool])
     if pool_entries:
-        pool_high = sum(1 for entry in pool_entries if get_score_fn(entry) >= 9.0)
-        print(f"   Research pool: {len(pool_entries)} entries ({pool_high} scoring >= 9.0)")
+        try:
+            from score import get_auto_qualify_min
+            _aq_min = get_auto_qualify_min()
+        except Exception:
+            _aq_min = 7.0
+        pool_high = sum(1 for entry in pool_entries if get_score_fn(entry) >= _aq_min)
+        print(f"   Research pool: {len(pool_entries)} entries ({pool_high} scoring >= {_aq_min})")
         if len(live) < replenish_threshold and pool_high > 0:
-            print("   Tip: run `python scripts/score.py --auto-qualify --dry-run` to preview top entries (threshold 9.0)")
+            print(f"   Tip: run `python scripts/score.py --auto-qualify --dry-run` to preview top entries (threshold {_aq_min})")
 
     print()
 

@@ -207,7 +207,7 @@ def test_greenhouse_description_fetched(monkeypatch):
         return list_payload
 
     monkeypatch.setattr("source_jobs._http_get", fake_http_get)
-    monkeypatch.setattr("source_jobs.time.sleep", lambda _: None)
+    # Parallel implementation — no sleep to patch
 
     jobs = fetch_greenhouse_jobs(
         "testboard",
@@ -237,7 +237,7 @@ def test_greenhouse_description_only_for_filtered(monkeypatch):
         return list_payload
 
     monkeypatch.setattr("source_jobs._http_get", fake_http_get)
-    monkeypatch.setattr("source_jobs.time.sleep", lambda _: None)
+    # Parallel implementation — no sleep to patch
 
     fetch_greenhouse_jobs(
         "testboard",
@@ -262,7 +262,7 @@ def test_greenhouse_failed_detail_gives_empty_description(monkeypatch):
         return list_payload
 
     monkeypatch.setattr("source_jobs._http_get", fake_http_get)
-    monkeypatch.setattr("source_jobs.time.sleep", lambda _: None)
+    # Parallel implementation — no sleep to patch
 
     jobs = fetch_greenhouse_jobs(
         "testboard",

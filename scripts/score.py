@@ -561,6 +561,42 @@ def get_auto_qualify_min() -> float:
         return AUTO_QUALIFY_MIN
 
 
+# NYC-metro keywords for location matching
+_NYC_METRO_KEYWORDS = frozenset({
+    "new york", "nyc", "manhattan", "brooklyn", "staten island", "queens",
+    "bronx", "jersey city", "newark", "hoboken", "weehawken",
+    "long island city", "astoria", "williamsburg",
+})
+
+
+def _is_acceptable_location(entry: dict) -> bool:
+    """Check if a job entry's location is remote or NYC-metro.
+
+    Returns True for: remote, us-remote, hybrid-remote, or any location
+    containing NYC-metro keywords. Returns True for non-job tracks (grants etc).
+    """
+    if entry.get("track") != "job":
+        return True
+
+    loc = (entry.get("target", {}).get("location", "") or "").lower()
+    loc_class = (entry.get("target", {}).get("location_class", "") or "").lower()
+
+    # Remote is always acceptable
+    if "remote" in loc or "remote" in loc_class:
+        return True
+
+    # NYC-metro is acceptable
+    for kw in _NYC_METRO_KEYWORDS:
+        if kw in loc:
+            return True
+
+    # No location data — let it through (benefit of the doubt for new entries)
+    if not loc and not loc_class:
+        return True
+
+    return False
+
+
 def run_auto_qualify(dry_run: bool = False, yes: bool = False,
                      min_score: float | None = None, limit: int = 0):
     """Batch-advance qualifying research_pool entries to qualified in active/.
@@ -623,9 +659,23 @@ def run_auto_qualify(dry_run: bool = False, yes: bool = False,
             skipped += 1
             continue
 
+        # Skip stale job entries — they'd be immediately flushed by the freshness gate
+        track = entry.get("track", "")
+        if track == "job":
+            from pipeline_freshness import _load_freshness_thresholds, get_posting_age_hours
+            _, _, stale_hours = _load_freshness_thresholds()
+            age = get_posting_age_hours(entry)
+            if age is not None and age > stale_hours:
+                skipped += 1
+                continue
+
+            # Skip job entries outside acceptable locations (remote or NYC-metro)
+            if not _is_acceptable_location(entry):
+                skipped += 1
+                continue
+
         # Fresh-compute score instead of reading stale YAML value
         dims = compute_dimensions(entry, all_raw)
-        track = entry.get("track", "")
         score = compute_composite(dims, track, entry=entry)
         if score < min_score:
             below_min_score += 1

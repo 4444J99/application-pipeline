@@ -439,3 +439,30 @@ actions:
   responsible: 4jp
   impact: TBD
   entry_id: whiting-nonfiction
+- signal_id: advance-anduril-lead-technical-writer-intelligence-systems-2026-03-15
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting (Manual advancement by user)
+  triggered_action: advance to drafting
+  action_date: '2026-03-15'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: anduril-lead-technical-writer-intelligence-systems
+  reason: Manual advancement by user
+- signal_id: advance-coreweave-senior-software-engineer-full-stack-agentic-ai-2026-03-15
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting (Manual advancement by user)
+  triggered_action: advance to drafting
+  action_date: '2026-03-15'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: coreweave-senior-software-engineer-full-stack-agentic-ai
+  reason: Manual advancement by user
+- signal_id: advance-sofi-senior-software-engineer-agentic-test-platform-2026-03-15
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting (Manual advancement by user)
+  triggered_action: advance to drafting
+  action_date: '2026-03-15'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: sofi-senior-software-engineer-agentic-test-platform
+  reason: Manual advancement by user

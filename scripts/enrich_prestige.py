@@ -26,6 +26,8 @@ from urllib.request import Request, urlopen
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from datetime import UTC
+
 from score_constants import HIGH_PRESTIGE
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -139,9 +141,9 @@ def enrich_prestige(
 
 def write_cache(data: dict, path: Path = CACHE_PATH) -> None:
     """Write enrichment cache."""
-    from datetime import datetime, timezone
+    from datetime import datetime
     cache = {
-        "generated": datetime.now(timezone.utc).isoformat(),
+        "generated": datetime.now(UTC).isoformat(),
         "companies": data,
     }
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -155,11 +157,11 @@ def load_cache(path: Path = CACHE_PATH) -> dict | None:
     if not path.is_file():
         return None
     try:
-        from datetime import datetime, timedelta, timezone
+        from datetime import datetime, timedelta
         with path.open() as f:
             cache = json.load(f)
         generated = datetime.fromisoformat(cache.get("generated", ""))
-        if (datetime.now(timezone.utc) - generated) > timedelta(days=7):
+        if (datetime.now(UTC) - generated) > timedelta(days=7):
             return None
         return cache.get("companies")
     except Exception:

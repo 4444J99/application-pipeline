@@ -23,7 +23,6 @@ import html as html_lib
 import json
 import re
 import sys
-import time
 from datetime import UTC, date, datetime
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -361,25 +360,34 @@ def fetch_greenhouse_jobs(
         })
 
     # Fetch full descriptions only for jobs that pass the title filter.
-    # This avoids hitting the detail endpoint for every posting on the board.
     if title_keywords is not None and title_excludes is not None:
         candidates = filter_by_title(results, title_keywords, title_excludes)
         candidate_ids = {j["id"] for j in candidates}
     else:
         candidate_ids = {j["id"] for j in results}
 
-    for job in results:
-        if job["id"] not in candidate_ids:
-            continue
-        detail_url = f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs/{job['id']}"
-        try:
-            detail_raw = _http_get(detail_url)
-            detail = json.loads(detail_raw)
-            content = detail.get("content", "") or ""
-            job["description"] = _strip_html(content)
-        except (HTTPError, URLError, json.JSONDecodeError):
-            job["description"] = ""
-        time.sleep(0.1)
+    # Parallel detail fetches — Greenhouse public API handles concurrent GETs fine
+    jobs_to_fetch = [j for j in results if j["id"] in candidate_ids]
+    if jobs_to_fetch:
+        from concurrent.futures import ThreadPoolExecutor, as_completed
+
+        def _fetch_description(job_id: str) -> tuple[str, str]:
+            detail_url = f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs/{job_id}"
+            try:
+                detail_raw = _http_get(detail_url)
+                detail = json.loads(detail_raw)
+                return job_id, _strip_html(detail.get("content", "") or "")
+            except (HTTPError, URLError, json.JSONDecodeError):
+                return job_id, ""
+
+        with ThreadPoolExecutor(max_workers=8) as pool:
+            futures = {pool.submit(_fetch_description, j["id"]): j for j in jobs_to_fetch}
+            for future in as_completed(futures):
+                job_id, desc = future.result()
+                for j in results:
+                    if j["id"] == job_id:
+                        j["description"] = desc
+                        break
 
     return results
 
@@ -783,14 +791,14 @@ def create_pipeline_entry(job: dict) -> tuple[str, dict]:
         },
         "fit": {
             "score": 0,
-            "identity_position": _auto_classify_position(title, description),
+            "identity_position": _auto_classify_position(job.get("title", ""), job.get("description", "")),
         },
         "submission": {
             "effort_level": "standard",
             "blocks_used": {},
             "variant_ids": {},
             "materials_attached": [
-                f"resumes/base/{_auto_classify_position(title, description)}-resume.html",
+                f'resumes/base/{_auto_classify_position(job.get("title", ""), job.get("description", ""))}-resume.html',
             ],
             "portfolio_url": "https://4444j99.github.io/portfolio/",
         },
@@ -1056,57 +1064,52 @@ def main():
         lever_companies = sources.get("lever") or []
         ashby_companies = sources.get("ashby") or []
 
-        print(f"Fetching from {len(greenhouse_boards)} Greenhouse boards...")
-        for board in greenhouse_boards:
-            jobs = fetch_greenhouse_jobs(board, title_keywords=TITLE_KEYWORDS, title_excludes=TITLE_EXCLUDES)
-            display = COMPANY_DISPLAY_NAMES.get(board, board)
-            filtered = filter_by_title(jobs, TITLE_KEYWORDS, TITLE_EXCLUDES)
-            fetched_counts[f"greenhouse/{board}"] = {"total": len(jobs), "matched": len(filtered)}
-            if filtered:
-                print(f"  {display}: {len(filtered)} matched / {len(jobs)} total")
-            all_jobs.extend(filtered)
+        from concurrent.futures import ThreadPoolExecutor, as_completed
 
-        print(f"\nFetching from {len(lever_companies)} Lever boards...")
-        for company in lever_companies:
-            jobs = fetch_lever_jobs(company)
-            display = COMPANY_DISPLAY_NAMES.get(company, company)
+        def _fetch_board(portal: str, key: str) -> tuple[str, str, list[dict], list[dict]]:
+            """Fetch and filter a single board. Returns (portal/key, display, all_jobs, filtered)."""
+            display = COMPANY_DISPLAY_NAMES.get(key, key)
+            if portal == "greenhouse":
+                jobs = fetch_greenhouse_jobs(key, title_keywords=TITLE_KEYWORDS, title_excludes=TITLE_EXCLUDES)
+            elif portal == "lever":
+                jobs = fetch_lever_jobs(key)
+            elif portal == "ashby":
+                jobs = fetch_ashby_jobs(key)
+            elif portal == "smartrecruiters":
+                jobs = fetch_smartrecruiters_jobs(key)
+            elif portal == "workable":
+                jobs = fetch_workable_jobs(key)
+            else:
+                jobs = []
             filtered = filter_by_title(jobs, TITLE_KEYWORDS, TITLE_EXCLUDES)
-            fetched_counts[f"lever/{company}"] = {"total": len(jobs), "matched": len(filtered)}
-            if filtered:
-                print(f"  {display}: {len(filtered)} matched / {len(jobs)} total")
-            all_jobs.extend(filtered)
-
-        print(f"\nFetching from {len(ashby_companies)} Ashby boards...")
-        for company in ashby_companies:
-            jobs = fetch_ashby_jobs(company)
-            display = COMPANY_DISPLAY_NAMES.get(company, company)
-            filtered = filter_by_title(jobs, TITLE_KEYWORDS, TITLE_EXCLUDES)
-            fetched_counts[f"ashby/{company}"] = {"total": len(jobs), "matched": len(filtered)}
-            if filtered:
-                print(f"  {display}: {len(filtered)} matched / {len(jobs)} total")
-            all_jobs.extend(filtered)
+            return f"{portal}/{key}", display, jobs, filtered
 
         smartrecruiters_companies = sources.get("smartrecruiters") or []
         workable_subdomains = sources.get("workable") or []
 
-        if smartrecruiters_companies:
-            print(f"\nFetching from {len(smartrecruiters_companies)} SmartRecruiters boards...")
-            for company_id in smartrecruiters_companies:
-                jobs = fetch_smartrecruiters_jobs(company_id)
-                display = COMPANY_DISPLAY_NAMES.get(company_id, company_id)
-                filtered = filter_by_title(jobs, TITLE_KEYWORDS, TITLE_EXCLUDES)
-                fetched_counts[f"smartrecruiters/{company_id}"] = {"total": len(jobs), "matched": len(filtered)}
-                if filtered:
-                    print(f"  {display}: {len(filtered)} matched / {len(jobs)} total")
-                all_jobs.extend(filtered)
+        # Build work list — all portals fetched in parallel
+        work = []
+        for board in greenhouse_boards:
+            work.append(("greenhouse", board))
+        for company in lever_companies:
+            work.append(("lever", company))
+        for company in ashby_companies:
+            work.append(("ashby", company))
+        for company_id in smartrecruiters_companies:
+            work.append(("smartrecruiters", company_id))
+        for subdomain in workable_subdomains:
+            work.append(("workable", subdomain))
 
-        if workable_subdomains:
-            print(f"\nFetching from {len(workable_subdomains)} Workable boards...")
-            for subdomain in workable_subdomains:
-                jobs = fetch_workable_jobs(subdomain)
-                display = COMPANY_DISPLAY_NAMES.get(subdomain, subdomain)
-                filtered = filter_by_title(jobs, TITLE_KEYWORDS, TITLE_EXCLUDES)
-                fetched_counts[f"workable/{subdomain}"] = {"total": len(jobs), "matched": len(filtered)}
+        total_boards = len(work)
+        print(f"Fetching from {total_boards} boards ({len(greenhouse_boards)} Greenhouse, "
+              f"{len(lever_companies)} Lever, {len(ashby_companies)} Ashby)...")
+
+        # Parallel fetch — 12 concurrent connections
+        with ThreadPoolExecutor(max_workers=12) as pool:
+            futures = [pool.submit(_fetch_board, portal, key) for portal, key in work]
+            for future in as_completed(futures):
+                source_key, display, jobs, filtered = future.result()
+                fetched_counts[source_key] = {"total": len(jobs), "matched": len(filtered)}
                 if filtered:
                     print(f"  {display}: {len(filtered)} matched / {len(jobs)} total")
                 all_jobs.extend(filtered)

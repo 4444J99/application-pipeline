@@ -771,6 +771,10 @@ def run_standup(hours: float, section: str | None, do_log: bool, track_filter: s
         track_filter: "jobs" for job-only standup, "opportunities" for non-jobs,
                       None for both (default).
     """
+    # Automatic freshness gate — flush stale job entries before reporting
+    from pipeline_freshness import flush_stale_active_jobs
+    flush_stale_active_jobs()
+
     entries = load_entries()
     if not entries:
         print("No pipeline entries found.")

@@ -121,7 +121,7 @@ def classify_batch(entries: list[dict]) -> dict[str, int]:
 if __name__ == "__main__":
     import sys
     sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
-    from pipeline_lib import load_entries, ALL_PIPELINE_DIRS
+    from pipeline_lib import ALL_PIPELINE_DIRS, load_entries
 
     entries = load_entries(dirs=ALL_PIPELINE_DIRS)
     print(f"Classifying {len(entries)} entries...\n")

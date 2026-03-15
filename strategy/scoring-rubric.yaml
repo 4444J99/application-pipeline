@@ -29,11 +29,14 @@ weights_job:
   portal_friction: 0.01
 
 thresholds:
-  auto_qualify_min: 9.0
-  auto_advance_to_drafting: 9.5
-  tier1_cutoff: 9.5
-  tier2_cutoff: 8.5
-  tier3_cutoff: 7.0
+  # Recalibrated 2026-03-15: thresholds were set before network_proximity (0.20 weight)
+  # was added. Old 9.0 required network_proximity >= 12.5 with realistic dims — impossible.
+  # New thresholds derived from weight-structure math (see scoring-threshold-analysis).
+  auto_qualify_min: 7.0
+  auto_advance_to_drafting: 7.5
+  tier1_cutoff: 8.0
+  tier2_cutoff: 7.0
+  tier3_cutoff: 6.0
   score_range_min: 1
   score_range_max: 10
 

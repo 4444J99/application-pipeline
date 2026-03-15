@@ -79,7 +79,7 @@ class TestSectionHealth:
         ]
         result = section_health(entries)
         assert result["total"] == 4
-        assert result["actionable"] == 3  # research + qualified
+        assert result["actionable"] == 1  # qualified only (research is pre-pipeline)
         assert result["submitted"] == 1
 
     def test_last_submission_date(self, capsys):

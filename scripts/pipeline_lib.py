@@ -126,7 +126,7 @@ LEGACY_ID_MAP = {
 
 VALID_TRACKS = {"grant", "residency", "job", "fellowship", "writing", "emergency", "prize", "program", "consulting"}
 VALID_STATUSES = {"research", "qualified", "drafting", "staged", "deferred", "submitted", "acknowledged", "interview", "outcome", "withdrawn"}
-ACTIONABLE_STATUSES = {"research", "qualified", "drafting", "staged"}
+ACTIONABLE_STATUSES = {"qualified", "drafting", "staged"}  # research is pre-pipeline (lives in research_pool/)
 
 STATUS_ORDER = [
     "research", "qualified", "drafting", "staged", "deferred",
@@ -776,7 +776,7 @@ def format_block_stats(block_path: str) -> str | None:
 # --- Pipeline mode functions ---
 
 _MODE_THRESHOLDS_DEFAULT = {
-    "precision": {"auto_qualify_min": 9.0, "max_active": 10, "max_weekly_submissions": 2, "stale_days": 14, "stagnant_days": 30},
+    "precision": {"auto_qualify_min": 7.0, "max_active": 10, "max_weekly_submissions": 2, "stale_days": 14, "stagnant_days": 30},
     "volume": {"auto_qualify_min": 7.0, "max_active": 30, "max_weekly_submissions": 10, "stale_days": 7, "stagnant_days": 14},
     "hybrid": {"auto_qualify_min": 8.0, "max_active": 15, "max_weekly_submissions": 5, "stale_days": 10, "stagnant_days": 21},
 }
@@ -838,12 +838,18 @@ def company_entry_counts(entries: list[dict], actionable_only: bool = True) -> d
 
 
 def check_company_cap(org: str, entries: list[dict], cap: int = COMPANY_CAP) -> tuple[bool, int]:
-    """Check if an organization is under the cap. Returns (allowed, current_count)."""
+    """Check if an organization is under the cap. Returns (allowed, current_count).
+
+    Only counts entries in active pursuit statuses — research and deferred
+    entries don't count toward the cap since they're not consuming effort.
+    """
+    # Statuses that represent active pursuit of the org
+    _CAP_STATUSES = {"qualified", "drafting", "staged", "submitted", "acknowledged", "interview"}
     count = 0
     for entry in entries:
         entry_org = (entry.get("target") or {}).get("organization", "")
         entry_status = entry.get("status", "")
-        if entry_org == org and entry_status not in ("closed", "expired", "withdrawn", "rejected"):
+        if entry_org == org and entry_status in _CAP_STATUSES:
             count += 1
     return count < cap, count
 

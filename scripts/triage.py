@@ -43,15 +43,25 @@ def _load_entry_path(entry_id: str) -> Path | None:
     return None
 
 
+def _default_min_score() -> float:
+    try:
+        from score import get_auto_qualify_min
+        return get_auto_qualify_min()
+    except Exception:
+        return 7.0
+
+
 def triage_staged_backlog(
     entries: list[dict],
-    min_score: float = 9.0,
+    min_score: float | None = None,
     dry_run: bool = True,
 ) -> list[dict]:
     """Demote staged entries below min_score back to qualified.
 
     Returns list of action dicts: {id, score, action, applied}.
     """
+    if min_score is None:
+        min_score = _default_min_score()
     actions = []
     for entry in entries:
         if entry.get("status") != "staged":
@@ -150,7 +160,7 @@ def format_triage_report(staged_actions: list[dict], cap_actions: list[dict]) ->
 
 def generate_triage_data(
     entries: list[dict],
-    min_score: float = 9.0,
+    min_score: float | None = None,
     cap: int = COMPANY_CAP,
     dry_run: bool = True,
 ) -> dict:
@@ -170,7 +180,7 @@ def generate_triage_data(
 
 def main():
     parser = argparse.ArgumentParser(description="Pipeline triage: enforce score thresholds and org caps")
-    parser.add_argument("--min-score", type=float, default=9.0, help="Minimum score for staged entries (default: 9.0)")
+    parser.add_argument("--min-score", type=float, default=None, help="Minimum score for staged entries (default: from rubric)")
     parser.add_argument("--org-cap", action="store_true", help="Run org-cap resolution only")
     parser.add_argument("--execute", action="store_true", help="Apply changes (default: dry-run)")
     parser.add_argument("--yes", action="store_true", help="Skip confirmation prompt")

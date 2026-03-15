@@ -26,6 +26,58 @@ JOB_WARM_HOURS = 48
 JOB_STALE_HOURS = 72
 
 
+PIPELINE_DIR_ACTIVE = REPO_ROOT / "pipeline" / "active"
+PIPELINE_DIR_RESEARCH_POOL = REPO_ROOT / "pipeline" / "research_pool"
+
+# Tracks exempt from the 72h freshness gate (they have fixed deadlines, not posting freshness)
+_DEADLINE_TRACKS = frozenset({"grant", "residency", "fellowship", "creative", "writing"})
+
+
+def flush_stale_active_jobs(*, quiet: bool = False) -> int:
+    """Move job-track entries in active/ older than 72h to research_pool/.
+
+    Called automatically by morning.py and standup.py before rendering output
+    so the user only ever sees hot leads.
+
+    Returns the number of entries flushed.
+    """
+    import yaml
+
+    _, _, stale_hours = _load_freshness_thresholds()
+    flushed = 0
+
+    for filepath in sorted(PIPELINE_DIR_ACTIVE.glob("*.yaml")):
+        try:
+            data = yaml.safe_load(filepath.read_text())
+        except Exception:
+            continue
+        if not isinstance(data, dict):
+            continue
+
+        track = data.get("track", "")
+        if track in _DEADLINE_TRACKS:
+            continue
+
+        age = get_posting_age_hours(data)
+        if age is None or age <= stale_hours:
+            continue
+
+        dest = PIPELINE_DIR_RESEARCH_POOL / filepath.name
+        if dest.exists():
+            filepath.unlink()
+        else:
+            # Reset status to research before moving
+            data["status"] = "research"
+            filepath.write_text(yaml.dump(data, default_flow_style=False, sort_keys=False))
+            filepath.rename(dest)
+        flushed += 1
+
+    if flushed and not quiet:
+        print(f"  [freshness] Flushed {flushed} stale job entries from active/ → research_pool/")
+
+    return flushed
+
+
 def get_entry_era(entry: dict) -> str:
     """Derive 'volume' or 'precision' from timeline.submitted and pivot date."""
     timeline = entry.get("timeline", {})

@@ -20,8 +20,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
-    ALL_PIPELINE_DIRS,
-    PIPELINE_DIR_RESEARCH_POOL,
     SIGNALS_DIR,
     load_entries,
 )
@@ -225,7 +223,11 @@ def format_digest(
 
 def run_morning(brief: bool = False, save: bool = False):
     """Execute the full morning sequence."""
-    entries = load_entries(dirs=ALL_PIPELINE_DIRS + [PIPELINE_DIR_RESEARCH_POOL])
+    # Automatic freshness gate — flush stale job entries before reporting
+    from pipeline_freshness import flush_stale_active_jobs
+    flush_stale_active_jobs()
+
+    entries = load_entries()  # active + submitted + closed only — research_pool is separate
     if not entries:
         print("No pipeline entries found.")
         sys.exit(1)

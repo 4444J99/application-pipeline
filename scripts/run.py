@@ -29,6 +29,7 @@ COMMANDS = {
     "outcomes":    ("check_outcomes.py", [],             "Entries awaiting response + stale submissions"),
     "morning":     ("morning.py", [],                    "Morning digest: health + stale + followups + campaign + funding"),
     "deferred":    ("check_deferred.py", [],              "Deferred entries: overdue and upcoming re-activations"),
+    "traffic":     ("traffic_signals.py", [],              "Traffic signals: GitHub views, clones, referrers → follow-up triggers"),
 
     # -- Pipeline Operations --
     "scoreall":    ("score.py", ["--all", "--dry-run"],  "Preview all scores"),

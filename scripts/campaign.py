@@ -623,6 +623,10 @@ def main():
                         help="Output JSON instead of formatted text")
     args = parser.parse_args()
 
+    # Automatic freshness gate — flush stale job entries before reporting
+    from pipeline_freshness import flush_stale_active_jobs
+    flush_stale_active_jobs()
+
     entries = load_entries(include_filepath=True)
 
     if args.json:

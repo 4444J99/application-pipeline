@@ -72,9 +72,15 @@ def score_description_against_corpus(description: str) -> dict[str, int]:
 
     Returns dimension scores derived from cosine similarity between
     the job description and the full corpus of blocks/resume/projects.
+
+    Short descriptions (<200 chars) return neutral scores — there isn't
+    enough text for meaningful TF-IDF signal. Real Greenhouse/Lever/Ashby
+    descriptions are typically 1000-5000 chars.
     """
-    if not description or len(description.strip()) < 50:
-        return {"mission_alignment": 5, "evidence_match": 4, "track_record_fit": 4}
+    if not description or len(description.strip()) < 200:
+        # Short descriptions don't have enough tokens for reliable TF-IDF scoring.
+        # Return neutral defaults rather than misleading scores.
+        return {"mission_alignment": 5, "evidence_match": 5, "track_record_fit": 4}
 
     from corpus_fingerprint import get_fingerprint
 
@@ -82,21 +88,26 @@ def score_description_against_corpus(description: str) -> dict[str, int]:
     similarity = fp.score_description(description)
 
     # Map similarity to 1-10 scores
-    # Calibration: 0.00-0.03 = no overlap, 0.03-0.08 = weak, 0.08-0.15 = moderate, 0.15+ = strong
+    # Calibrated against real descriptions (1000+ chars) with 4800+ term corpus:
+    #   Real Greenhouse DevEx/TechWriter (5000 chars): sim ~0.11  → 10
+    #   Synthetic DevEx (500 chars):                   sim ~0.09  → 9
+    #   Generic SWE (500 chars):                       sim ~0.07  → 7
+    #   iOS/mobile (500 chars):                        sim ~0.05  → 5
+    #   No overlap:                                    sim ~0.03  → 3
     def sim_to_score(s: float) -> int:
-        if s >= 0.20:
+        if s >= 0.10:
             return 10
-        if s >= 0.15:
+        if s >= 0.09:
             return 9
-        if s >= 0.12:
-            return 8
         if s >= 0.08:
+            return 8
+        if s >= 0.07:
             return 7
-        if s >= 0.05:
+        if s >= 0.06:
             return 6
-        if s >= 0.03:
+        if s >= 0.05:
             return 5
-        if s >= 0.01:
+        if s >= 0.04:
             return 4
         return 3
 
