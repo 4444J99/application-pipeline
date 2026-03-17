@@ -794,3 +794,37 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: harvey-ai-midseniorstaff-software-engineer-agents
+  submitted: '2026-03-17'
+  submitted_by: 4jp
+  track: job
+  identity_position: platform-orchestrator
+  composition_method: blocks
+  blocks_used:
+  - framings/documentation-engineer
+  - evidence/differentiators
+  - methodology/ai-conductor
+  - pitches/credentials-creative-tech
+  - evidence/work-samples
+  variant_id: cover-letters/harvey-ai-midseniorstaff-software-engineer-agents
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: langchain-senior-backend-engineer-enterprise-readiness-identity
+  submitted: '2026-03-17'
+  submitted_by: 4jp
+  track: job
+  identity_position: platform-orchestrator
+  composition_method: blocks
+  blocks_used:
+  - framings/documentation-engineer
+  - evidence/differentiators
+  - methodology/ai-conductor
+  - pitches/credentials-creative-tech
+  - evidence/work-samples
+  variant_id: cover-letters/langchain-senior-backend-engineer-enterprise-readiness-identity
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
