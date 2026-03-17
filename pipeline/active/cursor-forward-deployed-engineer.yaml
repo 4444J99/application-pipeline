@@ -1,0 +1,82 @@
+id: cursor-forward-deployed-engineer
+name: Cursor Forward Deployed Engineer
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Cursor
+  url: https://jobs.ashbyhq.com/cursor
+  application_url: https://jobs.ashbyhq.com/cursor/34cecd0c-c392-4454-8ef5-261310541011
+  portal: ashby
+  location: SF / NY / Remote
+  location_class: us-remote
+  description: "Our mission is to automate coding. The first step in our journey is\
+    \ to build the best tool for professional programmers, using a combination of\
+    \ inventive research, design, and engineering. Our organization is very flat,\
+    \ and our team is small and talent dense. We particularly like people who are\
+    \ truth-seeking, passionate, and creative. We enjoy spirited debate, crazy ideas,\
+    \ and shipping code. Forward Deployed Engineers embed directly with customer engineering\
+    \ teams to ship production-grade Cursor workflows that measurably improve how\
+    \ they build software. You\u2019ll figure out what\u2019s actually slowing a team\
+    \ down, design a practical solution, and own it end-to-end \u2014 from first discovery\
+    \ call through launch, iteration, and post-production support. This is not a demo\
+    \ role. You are responsible for systems that work in the real world. What you\u2019\
+    ll do Lead discovery with customer engineers to identify the real bottleneck and\
+    \ define clear success metrics Design and build Cursor-powered workflows (e.g.,\
+    \ large-scale refactors, migrations, PR review loops, incident \u2192 fix pipelines,\
+    \ spec \u2192 implementation systems) Ship a fast first version in days, then\
+    \ harden it into something reliable over weeks with proper rollout plans, monitoring,\
+    \ and iteration based on real usage Own production quality: tracing, evals, metrics,\
+    \ debugging model behavior, latency/cost tradeoffs, and failure modes Work directly\
+    \ with Staff+/Platform/Eng leaders \u2014 going deep in code while also communicating\
+    \ clearly about tradeoffs and results Turn what you build into reusable patterns\
+    \ and push improvements back into the core Cursor product You may be a fit if\
+    \ You thrive in ambiguity and can turn fuzzy problems into clear scopes and shipped\
+    \ systems. You\u2019ve built and owned AI-native workflows in production \u2014\
+    \ not just prototypes \u2014 and have debugged real-world model failures You\u2019\
+    re comfortable leading discovery conversations and being accountable for customer\
+    \ outcomes You build end-to-end. If it needs frontend, backend, infra, or prompt\
+    \ iteration, you\u2019ll own it You\u2019ve handled production reliability before\
+    \ (metrics, alerts, safe rollouts, incident response) You\u2019re strong in Python\
+    \ and TypeScript/JavaScript and can ramp quickly on new stacks"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.6
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: null
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:33.480261+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-17'

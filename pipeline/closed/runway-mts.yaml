@@ -18,7 +18,7 @@ amount:
   type: salary
   benefits_cliff_note: null
 fit:
-  score: 5.5
+  score: 5.6
   original_score: 6.5
   identity_position: independent-engineer
   framing: Independent engineer building research tooling infrastructure — 21K code files,
@@ -30,7 +30,7 @@ fit:
     mission_alignment: 5
     evidence_match: 7
     track_record_fit: 5
-    network_proximity: 3
+    network_proximity: 1
     strategic_value: 6
     financial_alignment: 9
     effort_to_value: 9

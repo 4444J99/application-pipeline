@@ -721,9 +721,13 @@ def run_auto_qualify(dry_run: bool = False, yes: bool = False,
         if dry_run:
             print(f"  [dry-run] {entry_id} (score={score}, {reason}) -> active/ as qualified")
         else:
-            # Update status to qualified, set last_touched and timeline.qualified
+            # Update status, score, dimensions, and timestamps
             content = filepath.read_text()
             content = update_yaml_field(content, "status", "qualified")
+            try:
+                content = update_yaml_field(content, "score", str(score), nested=True, parent_key="fit")
+            except ValueError:
+                pass  # fit.score field may not exist in template
             content = update_last_touched(content)
             try:
                 content = update_yaml_field(content, "qualified", f'"{today_str}"', nested=True)
