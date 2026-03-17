@@ -1,9 +1,9 @@
 id: perplexity-full-stack-software-engineer-applied-ai
 name: Perplexity Full Stack Software Engineer - Applied AI
 track: job
-status: acknowledged
+status: outcome
 identity_position: independent-engineer
-outcome: null
+outcome: expired
 target:
   organization: Perplexity
   url: https://jobs.ashbyhq.com/perplexity
@@ -21,9 +21,10 @@ amount:
 fit:
   score: 4.8
   identity_position: independent-engineer
-  framing: Full-stack applied AI engineer who built agentic-titan (1,095 tests, multi-agent
-    orchestration) and a 14-script AI-integrated pipeline system — demonstrating the
-    systems engineering discipline that applied AI demands across TypeScript and Python.
+  framing: "Full-stack applied AI engineer who built agentic-titan (1,095 tests, multi-agent\
+    \ orchestration) and a 14-script AI-integrated pipeline system \u2014 demonstrating\
+    \ the systems engineering discipline that applied AI demands across TypeScript\
+    \ and Python."
   dimensions:
     mission_alignment: 5
     evidence_match: 5
@@ -36,7 +37,7 @@ fit:
     portal_friction: 5
 submission:
   effort_level: standard
-  blocks_used: 
+  blocks_used:
     framing: framings/independent-engineer
     evidence: evidence/differentiators
     work_samples: evidence/work-samples
@@ -57,11 +58,12 @@ conversion:
   response_received: true
   response_type: null
   time_to_response_days: null
-  feedback: null
+  feedback: No response after 21 days. Auto-acknowledge only (Greenhouse). Closed
+    as expired.
   follow_up_count: 0
 tags:
 - auto-sourced
 - curated-fit
 source: source_jobs.py
-last_touched: "2026-02-26"
+last_touched: '2026-02-26'
 follow_up: []
