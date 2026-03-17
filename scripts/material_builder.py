@@ -79,9 +79,11 @@ BLOCK_SLOTS = {
     },
     "documentation-engineer": {
         "identity": "identity/2min",
-        "framing": "framings/independent-engineer",
-        "evidence": "evidence/system-overview",
+        "framing": "framings/documentation-engineer",
+        "evidence": "evidence/differentiators",
         "methodology": "methodology/ai-conductor",
+        "credentials": "pitches/credentials-creative-tech",
+        "work_samples": "evidence/work-samples",
     },
     "governance-architect": {
         "identity": "identity/2min",
