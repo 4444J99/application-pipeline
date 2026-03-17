@@ -610,7 +610,7 @@ def score_differentiation(profile: dict, intel: dict) -> dict:
     dimensions = {}
 
     # Proof of Work (auto-derive from canonical metrics)
-    # Strong: 103 repos, 21,449 tests, documented system → 8-10
+    # Strong: 103 repos, 23,470 tests, documented system → 8-10
     # Moderate: GitHub + some projects → 4-6
     # Weak: No public artifacts → 0-3
     if CANONICAL_METRICS["repos"] >= 100 and CANONICAL_METRICS["tests"] >= 2000:

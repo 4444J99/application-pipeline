@@ -41,11 +41,11 @@ Nine framings of the same body of work for different audiences. Derived from cov
 
 **For:** Tech grants, selective roles, accelerators, consulting
 **Narrative:** "Production-grade AI orchestration with creative-artistic applications"
-**Evidence:** Multi-agent orchestration, autonomous governance, 21,449 tests, 104 CI/CD workflows
+**Evidence:** Multi-agent orchestration, autonomous governance, 23,470 tests, 104 CI/CD workflows
 **Targets:** Google Creative Lab, Processing Foundation, consulting clients, Together AI, HuggingFace
 
 **Opening line template:**
-> I build production-grade AI orchestration systems. The ORGANVM project coordinates 113 repositories through automated dependency validation, a formal promotion state machine, and 104 CI/CD pipelines — all designed, tested (21,449 tests), and documented by a single practitioner using AI tools as compositional instruments.
+> I build production-grade AI orchestration systems. The ORGANVM project coordinates 113 repositories through automated dependency validation, a formal promotion state machine, and 104 CI/CD pipelines — all designed, tested (23,470 tests), and documented by a single practitioner using AI tools as compositional instruments.
 
 ---
 

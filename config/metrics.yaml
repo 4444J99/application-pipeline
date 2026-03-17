@@ -1,5 +1,5 @@
 # Application Pipeline: Canonical Metrics Source of Truth
-# Auto-generated from ORGANVM ecosystem — 2026-03-15
+# Auto-generated from ORGANVM ecosystem — 2026-03-17
 # Source: system-snapshot.json → refresh_from_ecosystem.py
 
 system:
@@ -11,8 +11,8 @@ system:
   total_words_k: 738
   automated_tests: 46
   development_sprints: 33
-  code_files: 22885
-  test_files: 4274
+  code_files: 22883
+  test_files: 4273
   ci_workflows: 104
   dependency_edges: 50
 

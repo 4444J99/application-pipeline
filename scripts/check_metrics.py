@@ -168,7 +168,7 @@ METRIC_PATTERNS = [
         "metric_key": "published_essays",
         "transform": lambda m, pat_idx: int(m.group(1)),
     },
-    # Test counts: "21,449 verified tests across 20 repos", "21,449 tests across N" (total aggregate only)
+    # Test counts: "23,470 verified tests across 20 repos", "23,470 tests across N" (total aggregate only)
     # Avoids matching per-project breakdowns like "1,095 unit/integration tests"
     {
         "name": "test_count",

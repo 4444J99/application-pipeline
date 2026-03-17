@@ -12,7 +12,7 @@ Detailed version: `organvm-corpvs-testamentvm/docs/applications/09-qualification
 | 49 published essays (~142K words) | public-process/_posts/ | Counted at deploy |
 | ~810K+ total documentation | Aggregate across all repos | system-metrics.json |
 | 33 development sprints | docs/specs/sprints/ | 01-ignition through 33-operatio |
-| 21,449 tests | agentic-titan (1,095) + recursive-engine (1,254) | Package test suites |
+| 23,470 tests | agentic-titan (1,095) + recursive-engine (1,254) | Package test suites |
 | 11 years teaching, 2,000+ students | CV / employment history | Institutional records |
 | MFA Creative Writing | FAU 2015-2018 | Degree |
 | 18 years professional experience | CV across 4 domains | Employment history |

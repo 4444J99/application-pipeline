@@ -48,7 +48,7 @@ tier: single
 | 4,274 test files (70 of 113 repositories) | Testing-first methodology with dedicated test suites across the system |
 | 104 CI/CD workflows | Automated quality gates on every active repository |
 | 44 dependency edges, 0 violations | Architectural governance via validated dependency graph |
-| 21,449 tests in flagships | 21,449 tests in flagship repos with 85% coverage on critical paths |
+| 23,470 tests in flagships | 23,470 tests in flagship repos with 85% coverage on critical paths |
 | 33 sprints | Structured development methodology across 33 named sprints |
 | 100% CLAUDE.md + seed.yaml | Developer documentation standards maintained across entire system |
 | Promotion state machine | Formal release management pipeline with 5-state lifecycle |

@@ -51,7 +51,7 @@ The same work needs different storefronts:
 | Audience | Storefront lead |
 |----------|----------------|
 | Art grant panel | "Governance IS the artwork — 113 repos as a living creative system" |
-| Tech fellowship | "Production-grade AI orchestration: 21,449 tests, automated governance, zero violations" |
+| Tech fellowship | "Production-grade AI orchestration: 23,470 tests, automated governance, zero violations" |
 | Writing grant | "49 essays, ~739K words documenting the process of building creative infrastructure" |
 | Emergency fund | "Housing-precarious NYC artist with 5+ years sustained creative practice" |
 

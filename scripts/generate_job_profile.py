@@ -54,7 +54,7 @@ STANDARD_WORK_SAMPLES = [
 # Evidence highlights by identity position.
 EVIDENCE_BY_POSITION = {
     "independent-engineer": [
-        "103 repositories with 21,449 verified tests across 20 repos across flagship frameworks",
+        "103 repositories with 23,470 verified tests across 20 repos across flagship frameworks",
         "82+ CI/CD workflows with automated governance and promotion state machine",
         "AI-conductor methodology: AI generates volume, human directs architecture",
     ],
