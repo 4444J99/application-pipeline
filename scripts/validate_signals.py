@@ -275,6 +275,89 @@ def validate_contacts(errors: list[str]) -> int:
     return len(contacts)
 
 
+OUTREACH_TYPES = {"post_submission", "reconnect", "seed", "dm", "connect", "referral_ask", "intro"}
+OUTREACH_CHANNELS = {"linkedin", "email", "twitter", "referral", "event", "slack", "phone"}
+
+
+def validate_outreach_log(errors: list[str]) -> int:
+    """Validate signals/outreach-log.yaml schema. Returns entry count."""
+    path = SIGNALS_DIR / "outreach-log.yaml"
+    data = _load_yaml(path)
+    if data is None:
+        return 0
+    if not isinstance(data, dict) or "entries" not in data:
+        errors.append(f"{path}: missing top-level 'entries' key")
+        return 0
+    entries = data["entries"]
+    if not isinstance(entries, list):
+        errors.append(f"{path}: 'entries' must be a list")
+        return 0
+
+    for i, entry in enumerate(entries):
+        label = f"{path} [entry {i}]"
+        if not isinstance(entry, dict):
+            errors.append(f"{label}: entry is not a mapping")
+            continue
+        _check_str(entry, "contact", errors, label)
+        _check_str(entry, "channel", errors, label)
+        d = str(entry.get("date", ""))
+        if d and not DATE_RE.match(d):
+            errors.append(f"{label}: date '{d}' not YYYY-MM-DD")
+        channel = entry.get("channel")
+        if isinstance(channel, str) and channel not in OUTREACH_CHANNELS:
+            errors.append(f"{label}: channel '{channel}' not in {sorted(OUTREACH_CHANNELS)}")
+        targets = entry.get("related_targets", [])
+        if not isinstance(targets, list):
+            errors.append(f"{label}: related_targets must be a list")
+
+    return len(entries)
+
+
+def validate_network(errors: list[str]) -> int:
+    """Validate signals/network.yaml schema. Returns node count."""
+    path = SIGNALS_DIR / "network.yaml"
+    data = _load_yaml(path)
+    if data is None:
+        return 0
+    if not isinstance(data, dict):
+        errors.append(f"{path}: top-level must be a mapping")
+        return 0
+
+    nodes = data.get("nodes", [])
+    edges = data.get("edges", [])
+    if not isinstance(nodes, list):
+        errors.append(f"{path}: 'nodes' must be a list")
+        return 0
+    if not isinstance(edges, list):
+        errors.append(f"{path}: 'edges' must be a list")
+        return 0
+
+    node_names = set()
+    for i, node in enumerate(nodes):
+        label = f"{path} [node {i}]"
+        if not isinstance(node, dict):
+            errors.append(f"{label}: node is not a mapping")
+            continue
+        _check_str(node, "name", errors, label)
+        name = node.get("name", "")
+        if name in node_names:
+            errors.append(f"{label}: duplicate node name '{name}'")
+        node_names.add(name)
+
+    for i, edge in enumerate(edges):
+        label = f"{path} [edge {i}]"
+        if not isinstance(edge, dict):
+            errors.append(f"{label}: edge is not a mapping")
+            continue
+        _check_str(edge, "from", errors, label)
+        _check_str(edge, "to", errors, label)
+        strength = edge.get("strength")
+        if strength is not None and (not isinstance(strength, (int, float)) or strength < 1 or strength > 10):
+            errors.append(f"{label}: strength must be 1-10, got {strength}")
+
+    return len(nodes)
+
+
 def validate_all_signals() -> tuple[list[str], dict]:
     """Validate all signal YAML files.
 
@@ -291,6 +374,8 @@ def validate_all_signals() -> tuple[list[str], dict]:
     stats["agent-actions"] = validate_agent_actions(errors)
     stats["referential-integrity"] = validate_referential_integrity(errors)
     stats["contacts"] = validate_contacts(errors)
+    stats["outreach-log"] = validate_outreach_log(errors)
+    stats["network"] = validate_network(errors)
 
     return errors, stats
 

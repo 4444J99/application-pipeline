@@ -107,6 +107,8 @@ Scripts are independent CLIs but some import functions from each other:
 - **`diagnose_ira.py`** — standalone; computes ICC, kappa, and consensus from rating JSON files in `ratings/`. Includes `partition_dimensions()` for separating objective ground truth from subjective rated dimensions.
 - **`generate_ratings.py`** imports from `diagnose.py` — uses COLLECTORS, PROMPT_GENERATORS, OBJECTIVE_DIMENSIONS, SUBJECTIVE_DIMENSIONS for multi-model IRA rating. Calls Anthropic and Google APIs.
 - **`external_validator.py`** imports from `pipeline_market.py` — fetches salary data from BLS OES API, skill demand from Remotive API, org signals from GitHub API. Stores to `strategy/external-validation-cache.json`. Used by `audit_system.py` for external validation audit.
+- **`network_graph.py`** — Network graph with BFS/DFS path-finding, hop-decay scoring (Granovetter weak-ties theory), tie-strength tracking. Ingests from `contacts.yaml` and `outreach-log.yaml`. Stores to `signals/network.yaml`. Reverse-syncs to `contacts.yaml` via `--sync-contacts`.
+- **`score_network.py`** imports from `network_graph.py` — `_score_from_graph()` queries the network graph for org proximity, combined with entry-level signals via `max(entry_score, graph_score)`.
 - All other scripts are standalone CLIs that read/write pipeline YAML files.
 
 ## Module Architecture
@@ -235,6 +237,17 @@ python scripts/external_validator.py --fetch-only          # Refresh validation 
 python scripts/external_validator.py --compare-only        # Compare using existing cache
 python scripts/external_validator.py --json                # Machine-readable output
 
+# Network graph
+python scripts/network_graph.py                          # Dashboard: nodes, edges, tie strength
+python scripts/network_graph.py --map                    # Full network tree from you
+python scripts/network_graph.py --orgs                   # Org reachability scores
+python scripts/network_graph.py --path "Cloudflare"      # Find paths to org
+python scripts/network_graph.py --path "Cloudflare" --all # All paths (max 3 hops)
+python scripts/network_graph.py --score <entry-id>       # Network score for entry
+python scripts/network_graph.py --ingest                 # Ingest contacts + outreach into graph
+python scripts/network_graph.py --sync-contacts          # Sync graph → contacts.yaml
+python scripts/network_graph.py --add-edge --from "A" --to "B" --strength 7  # Add edge
+
 # Infrastructure
 python scripts/agent.py --plan                         # Autonomous agent preview
 python scripts/monitor_pipeline.py --strict            # Backup + signal freshness
@@ -250,7 +263,7 @@ pytest tests/test_compose.py::test_name -v             # Single test
 
 ## Quick Commands
 
-Single-word command protocol via `python scripts/run.py <command>`. 59 standalone + 20 parameterized = 79 commands (consolidated from 112).
+Single-word command protocol via `python scripts/run.py <command>`. 62 standalone + 22 parameterized = 84 commands.
 
 | Command | What It Does |
 |---------|-------------|
@@ -277,6 +290,9 @@ Single-word command protocol via `python scripts/run.py <command>`. 59 standalon
 | `orgs` | Org intelligence: aggregated org rankings |
 | `skillsgap` | Skills gap analysis across entries |
 | `crm` | Relationship CRM: contacts, interactions, coverage gaps |
+| `network` | Network graph: nodes, edges, tie strength distribution |
+| `netmap` | Network map: full tree from you |
+| `netorgs` | Org reachability: scores, hops, paths per org |
 | `cultivate` | Relationship cultivation candidates |
 | `warmintro` | Warm intro audit: referral paths and org density |
 | `validate` | Pipeline YAML schema validation |
@@ -307,7 +323,7 @@ Single-word command protocol via `python scripts/run.py <command>`. 59 standalon
 | `rateall` | Multi-model IRA rating session with diverse AI panel |
 | `validate-external` | Refresh external validation cache and compare against scoring inputs |
 
-**With target ID:** `score <id>`, `enrich <id>`, `advance <id>`, `compose <id>`, `draft <id>`, `submit <id>`, `check <id>`, `record <id>`, `gate <id>`, `contacts <id>`, `hypothesis <id>`, `alchemize <id>`, `answers <id>`, `tailor <id>`, `review <id>`, `cultivate <id>`, `textmatch <id>`, `skillsgap <id>`, `orgdetail <org>`, `interviewprep <id>`
+**With target ID:** `score <id>`, `enrich <id>`, `advance <id>`, `compose <id>`, `draft <id>`, `submit <id>`, `check <id>`, `record <id>`, `gate <id>`, `contacts <id>`, `hypothesis <id>`, `alchemize <id>`, `answers <id>`, `tailor <id>`, `review <id>`, `cultivate <id>`, `textmatch <id>`, `skillsgap <id>`, `orgdetail <org>`, `interviewprep <id>`, `netpath <org>`, `netscore <id>`
 
 **Session sequences:**
 - Morning: `morning` (or: `standup` → `followup` → `outcomes` → `campaign`)
@@ -319,6 +335,7 @@ Single-word command protocol via `python scripts/run.py <command>`. 59 standalon
 - Health: `monitor` → `freshness` → `verifyall` → `backup`
 - Triage: `triagegate` → `snapshot` → `orgs` → `blockoutcomes`
 - Interview: `interviewprep <id>` → `skillsgap <id>` → `orgdetail <org>`
+- Network: `network` → `netmap` → `netorgs` → `netpath <org>` → `netscore <id>`
 - Diagnostic: `diagnose` → `rateall` → `ira` → `validate-external`
 
 ## Configuration Files
@@ -330,7 +347,9 @@ Single-word command protocol via `python scripts/run.py <command>`. 59 standalon
 | `strategy/market-intelligence-2026.json` | Market data, portal friction, benchmarks (loaded by many scripts) |
 | `signals/signal-actions.yaml` | Signal-to-action audit trail (written by `advance.py`, `log_signal_action.py`) |
 | `signals/agent-actions.yaml` | Agent plan/execute run history (written by `agent.py`) |
-| `signals/contacts.yaml` | Relationship CRM contacts and interactions (written by `crm.py`) |
+| `signals/contacts.yaml` | Relationship CRM contacts and interactions (written by `crm.py`, synced by `network_graph.py`) |
+| `signals/network.yaml` | Network graph: nodes, edges, tie strengths (written by `network_graph.py`, read by `score_network.py`) |
+| `signals/outreach-log.yaml` | Outreach action log: connection requests, DMs, seeds (written by `followup.py`, `network_graph.py`) |
 | `strategy/notifications.yaml` | Notification event routing: webhook URLs, email recipients (loaded by `notify.py`) |
 | `strategy/system-grading-rubric.yaml` | 9-dimension quality rubric for diagnostic grade norming (loaded by `diagnose.py`) |
 | `strategy/rater-personas.yaml` | Persona prompts for multi-model IRA raters (loaded by `generate_ratings.py`) |

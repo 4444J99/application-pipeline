@@ -1,4 +1,13 @@
-"""Network proximity scoring extracted from score.py."""
+"""Network proximity scoring extracted from score.py.
+
+Combines two scoring sources:
+1. Entry-level signals (inline YAML: relationship_strength, follow_ups, outreach)
+2. Graph-level signals (network.yaml: hop count, path strength, redundancy)
+
+The final score is max(entry_score, graph_score) — the graph can only boost,
+never penalize. This ensures backward compatibility while rewarding network
+investment.
+"""
 
 from __future__ import annotations
 
@@ -101,7 +110,35 @@ def score_network_proximity(entry: dict, all_entries: list[dict] | None = None) 
             elif org_count >= 1:
                 score = max(score, 3)
 
+    # --- Graph-based scoring (from network_graph.py) ---
+    graph_score = _score_from_graph(entry)
+    score = max(score, graph_score)
+
     return max(1, min(10, score))
+
+
+def _score_from_graph(entry: dict) -> int:
+    """Query the network graph for org proximity score.
+
+    Returns 1 (cold) if graph is unavailable or org not found.
+    Gracefully degrades — never fails the scoring pipeline.
+    Skips graph lookup when PIPELINE_METRICS_SOURCE=fallback (test isolation).
+    """
+    import os
+    if os.environ.get("PIPELINE_METRICS_SOURCE") == "fallback":
+        return 1
+    org = (entry.get("target") or {}).get("organization", "")
+    if not org:
+        return 1
+    try:
+        from network_graph import load_network, score_org_proximity
+        network = load_network()
+        if not network.get("nodes"):
+            return 1
+        result = score_org_proximity(network, "Anthony Padavano", org)
+        return result.get("score", 1)
+    except Exception:
+        return 1
 
 
 def _log_network_change(entry_id: str, old_network: int, new_network: int, filepath: Path):

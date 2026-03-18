@@ -60,6 +60,9 @@ COMMANDS = {
 
     # -- Relationships --
     "crm":         ("crm.py", [],                            "Relationship CRM: contacts, interactions, coverage gaps"),
+    "network":     ("network_graph.py", [],                   "Network graph: nodes, edges, tie strength"),
+    "netmap":      ("network_graph.py", ["--map"],            "Network map: full tree from you"),
+    "netorgs":     ("network_graph.py", ["--orgs"],           "Org reachability: scores, hops, paths per org"),
     "hydrate":     ("hydrate_followups.py", [],              "Hydrate relationship metadata from LinkedIn/Email"),
     "cultivate":   ("cultivate.py", ["--candidates"],       "Relationship cultivation candidates"),
     "warmintro":   ("warm_intro_audit.py", [],            "Warm intro audit: referral paths and org density"),
@@ -158,6 +161,8 @@ PARAM_COMMANDS = {
     "textmatch":  ("text_match.py", ["--target"],            "TF-IDF text match for single entry"),
     "skillsgap":  ("skills_gap.py", ["--target"],            "Skills gap analysis for single entry"),
     "orgdetail":  ("org_intelligence.py", ["--org"],         "Org intelligence detail for single org"),
+    "netpath":    ("network_graph.py", ["--path"],             "Find paths to org in network graph"),
+    "netscore":   ("network_graph.py", ["--score"],            "Network proximity score for single entry"),
     "interviewprep": ("interview_prep.py", ["--target"],     "Generate interview prep for single entry"),
     "greenhouse-submit": ("greenhouse_submit.py", ["--target"], "Greenhouse dry-run preview for single entry"),
     "outreach":   ("outreach_templates.py", ["--target"],       "Generate outreach templates for an entry"),

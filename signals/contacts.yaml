@@ -27,3 +27,553 @@ contacts:
   tags: []
   next_action: ''
   next_action_date: ''
+- name: Erika Hanson
+  organization: Anduril
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - anduril-lead-technical-writer-intelligence-systems
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Jackie Wallace
+  organization: Anduril
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - anduril-lead-technical-writer-intelligence-systems
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Heather Floss
+  organization: Anduril
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - anduril-lead-technical-writer-intelligence-systems
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Winston Weinberg
+  organization: Harvey AI
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - harvey-ai-midseniorstaff-software-engineer-agents
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Ashleigh Taylor
+  organization: Harvey AI
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - harvey-ai-midseniorstaff-software-engineer-agents
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Aatish Nayak
+  organization: Harvey AI
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - harvey-ai-midseniorstaff-software-engineer-agents
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Gabe Pereyra
+  organization: Harvey AI
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - harvey-ai-midseniorstaff-software-engineer-agents
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Ankush Gola
+  organization: LangChain
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - langchain-senior-backend-engineer-enterprise-readiness-identity
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Erick Friis
+  organization: LangChain
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - langchain-senior-backend-engineer-enterprise-readiness-identity
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Jacob Lee
+  organization: LangChain
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - langchain-senior-backend-engineer-enterprise-readiness-identity
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Eric Han
+  organization: LangChain
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - langchain-senior-backend-engineer-enterprise-readiness-identity
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Kristian Freeman
+  organization: Cloudflare
+  role: ''
+  channel: linkedin
+  relationship_strength: 3
+  interactions:
+  - date: '2026-03-17'
+    type: reconnect
+    note: Connection request sent
+  pipeline_entries:
+  - cloudflare-models-engineer-developer-relations
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Craig Dennis
+  organization: Cloudflare
+  role: ''
+  channel: linkedin
+  relationship_strength: 4
+  interactions:
+  - date: '2026-03-17'
+    type: reconnect
+    note: Connection accepted — DM sent with portfolio link and teaching angle
+  - date: '2026-03-17'
+    type: dm
+    note: Follow-up DM sent after connection acceptance — portfolio link and teaching
+      angle
+  pipeline_entries:
+  - cloudflare-models-engineer-developer-relations
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Aly Cabral
+  organization: Cloudflare
+  role: ''
+  channel: linkedin
+  relationship_strength: 3
+  interactions:
+  - date: '2026-03-17'
+    type: reconnect
+    note: Connection request sent
+  pipeline_entries:
+  - cloudflare-models-engineer-developer-relations
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Ayush Sood
+  organization: Figma
+  role: ''
+  channel: linkedin
+  relationship_strength: 3
+  interactions:
+  - date: '2026-03-17'
+    type: reconnect
+    note: Connection request sent
+  pipeline_entries:
+  - figma-software-engineer-developer-experience
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Shu Zhang
+  organization: Perplexity
+  role: ''
+  channel: linkedin
+  relationship_strength: 3
+  interactions:
+  - date: '2026-03-17'
+    type: reconnect
+    note: Connection request sent
+  pipeline_entries:
+  - perplexity-full-stack-software-engineer-applied-ai
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Raman Malik
+  organization: Perplexity
+  role: ''
+  channel: linkedin
+  relationship_strength: 3
+  interactions:
+  - date: '2026-03-17'
+    type: reconnect
+    note: Connection request sent
+  pipeline_entries:
+  - perplexity-full-stack-software-engineer-applied-ai
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Reza Shabani
+  organization: Replit
+  role: ''
+  channel: linkedin
+  relationship_strength: 3
+  interactions:
+  - date: '2026-03-17'
+    type: reconnect
+    note: Connection request sent
+  pipeline_entries:
+  - replit-software-engineer-product-infrastructure-typescript-devex
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Matt Palmer
+  organization: Replit
+  role: ''
+  channel: linkedin
+  relationship_strength: 3
+  interactions:
+  - date: '2026-03-17'
+    type: reconnect
+    note: Connection request sent
+  pipeline_entries:
+  - replit-software-engineer-product-infrastructure-typescript-devex
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Dean Bubar
+  organization: Replit
+  role: ''
+  channel: linkedin
+  relationship_strength: 3
+  interactions:
+  - date: '2026-03-17'
+    type: reconnect
+    note: Connection request sent
+  pipeline_entries:
+  - replit-software-engineer-product-infrastructure-typescript-devex
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Craig Cannon
+  organization: Supabase
+  role: ''
+  channel: linkedin
+  relationship_strength: 3
+  interactions:
+  - date: '2026-03-17'
+    type: reconnect
+    note: Connection request sent
+  pipeline_entries:
+  - supabase-developer-relations-engineer-san-francisco-ca
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Jon Meyers
+  organization: Supabase
+  role: ''
+  channel: linkedin
+  relationship_strength: 3
+  interactions:
+  - date: '2026-03-17'
+    type: reconnect
+    note: Connection request sent
+  pipeline_entries:
+  - supabase-developer-relations-engineer-san-francisco-ca
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Michaela Burpoe
+  organization: Supabase
+  role: ''
+  channel: linkedin
+  relationship_strength: 3
+  interactions:
+  - date: '2026-03-17'
+    type: reconnect
+    note: Connection request sent
+  pipeline_entries:
+  - supabase-developer-relations-engineer-san-francisco-ca
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Alex Albert
+  organization: Anthropic
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - anthropic-developer-education-lead
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Anthony Morris
+  organization: Anthropic
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - anthropic-developer-education-lead
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Scott Goodfriend
+  organization: Anthropic
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - anthropic-developer-education-lead
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Jamie Kosoy
+  organization: Stripe
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - stripe-full-stack-engineer-developer-experience-product-platform
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Matthew Fuller
+  organization: Stripe
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - stripe-full-stack-engineer-developer-experience-product-platform
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: David Dieulivol
+  organization: GitLab
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - gitlab-staff-backend-engineer-developer-experience-ruby
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Luke Duncalfe
+  organization: GitLab
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - gitlab-staff-backend-engineer-developer-experience-ruby
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Marina Mosti
+  organization: GitLab
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - gitlab-staff-backend-engineer-developer-experience-ruby
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Hudson Yeo
+  organization: Runway
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - runway-mts
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Logan Tills
+  organization: Runway
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - runway-mts
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Cristóbal Valenzuela
+  organization: Runway
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - runway-mts
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Hassan El Mghari
+  organization: Together AI
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - together-ai
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Jibu Chacko
+  organization: Together AI
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - together-ai
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Shadi Baqleh
+  organization: Deepgram
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - deepgram-staff-developer-advocate
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Natalie Rutgers
+  organization: Deepgram
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - deepgram-staff-developer-advocate
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Danny Kim
+  organization: Deepgram
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-17'
+    type: seed
+    note: Connection request sent
+  pipeline_entries:
+  - deepgram-staff-developer-advocate
+  tags: []
+  next_action: ''
+  next_action_date: ''

@@ -1,0 +1,542 @@
+nodes:
+- name: Anthony Padavano
+  organization: ORGANVM
+  role: Principal
+  degree: 1
+  channel: linkedin
+  last_interaction: ''
+  tags: []
+- name: Tony Carbone
+  organization: Alternative Funding Group
+  role: Unknown
+  degree: 1
+  channel: email
+  last_interaction: '2026-03-13'
+  tags: []
+- name: Vincent Jiang
+  organization: AdenHQ
+  role: Unknown
+  degree: 1
+  channel: email
+  last_interaction: '2026-03-13'
+  tags: []
+- name: Erika Hanson
+  organization: Anduril
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Jackie Wallace
+  organization: Anduril
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Heather Floss
+  organization: Anduril
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Winston Weinberg
+  organization: Harvey AI
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Ashleigh Taylor
+  organization: Harvey AI
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Aatish Nayak
+  organization: Harvey AI
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Gabe Pereyra
+  organization: Harvey AI
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Ankush Gola
+  organization: LangChain
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Erick Friis
+  organization: LangChain
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Jacob Lee
+  organization: LangChain
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Eric Han
+  organization: LangChain
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Kristian Freeman
+  organization: Cloudflare
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Craig Dennis
+  organization: Cloudflare
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Aly Cabral
+  organization: Cloudflare
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Ayush Sood
+  organization: Figma
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Shu Zhang
+  organization: Perplexity
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Raman Malik
+  organization: Perplexity
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Reza Shabani
+  organization: Replit
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Matt Palmer
+  organization: Replit
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Dean Bubar
+  organization: Replit
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Craig Cannon
+  organization: Supabase
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Jon Meyers
+  organization: Supabase
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Michaela Burpoe
+  organization: Supabase
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Alex Albert
+  organization: Anthropic
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Anthony Morris
+  organization: Anthropic
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Scott Goodfriend
+  organization: Anthropic
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Jamie Kosoy
+  organization: Stripe
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Matthew Fuller
+  organization: Stripe
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: David Dieulivol
+  organization: GitLab
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Luke Duncalfe
+  organization: GitLab
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Marina Mosti
+  organization: GitLab
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Hudson Yeo
+  organization: Runway
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Logan Tills
+  organization: Runway
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Cristóbal Valenzuela
+  organization: Runway
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Hassan El Mghari
+  organization: Together AI
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Jibu Chacko
+  organization: Together AI
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Shadi Baqleh
+  organization: Deepgram
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Natalie Rutgers
+  organization: Deepgram
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+- name: Danny Kim
+  organization: Deepgram
+  role: ''
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-17'
+  tags: []
+edges:
+- from: Anthony Padavano
+  to: Tony Carbone
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-17'
+  note: ''
+- from: Anthony Padavano
+  to: Vincent Jiang
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-17'
+  note: ''
+- from: Anthony Padavano
+  to: Erika Hanson
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Jackie Wallace
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Heather Floss
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Winston Weinberg
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Ashleigh Taylor
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Aatish Nayak
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Gabe Pereyra
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Ankush Gola
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Erick Friis
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Jacob Lee
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Eric Han
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Kristian Freeman
+  strength: 3
+  relationship_type: reconnect
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Craig Dennis
+  strength: 4
+  relationship_type: reconnect
+  created: '2026-03-17'
+  note: Connection accepted — DM sent with portfolio link and teaching angle
+- from: Anthony Padavano
+  to: Aly Cabral
+  strength: 3
+  relationship_type: reconnect
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Ayush Sood
+  strength: 3
+  relationship_type: reconnect
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Shu Zhang
+  strength: 3
+  relationship_type: reconnect
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Raman Malik
+  strength: 3
+  relationship_type: reconnect
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Reza Shabani
+  strength: 3
+  relationship_type: reconnect
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Matt Palmer
+  strength: 3
+  relationship_type: reconnect
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Dean Bubar
+  strength: 3
+  relationship_type: reconnect
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Craig Cannon
+  strength: 3
+  relationship_type: reconnect
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Jon Meyers
+  strength: 3
+  relationship_type: reconnect
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Michaela Burpoe
+  strength: 3
+  relationship_type: reconnect
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Alex Albert
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Anthony Morris
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Scott Goodfriend
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Jamie Kosoy
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Matthew Fuller
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: David Dieulivol
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Luke Duncalfe
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Marina Mosti
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Hudson Yeo
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Logan Tills
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Cristóbal Valenzuela
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Hassan El Mghari
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Jibu Chacko
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Shadi Baqleh
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Natalie Rutgers
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Danny Kim
+  strength: 2
+  relationship_type: seed
+  created: '2026-03-17'
+  note: Connection request sent

@@ -828,3 +828,54 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: openai-technical-deployment-lead-forward-deployed-engineering-fde-n
+  submitted: '2026-03-17'
+  submitted_by: 4jp
+  track: job
+  identity_position: founder-operator
+  composition_method: blocks
+  blocks_used:
+  - framings/documentation-engineer
+  - evidence/differentiators
+  - methodology/ai-conductor
+  - pitches/credentials-creative-tech
+  - evidence/work-samples
+  variant_id: cover-letters/openai-technical-deployment-lead-forward-deployed-engineering-fde-n
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: stripe-software-engineer-smart-contract-bridge
+  submitted: '2026-03-17'
+  submitted_by: 4jp
+  track: job
+  identity_position: documentation-engineer
+  composition_method: blocks
+  blocks_used:
+  - framings/documentation-engineer
+  - evidence/differentiators
+  - methodology/ai-conductor
+  - pitches/credentials-creative-tech
+  - evidence/work-samples
+  variant_id: cover-letters/stripe-software-engineer-smart-contract-bridge
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: notion-solutions-engineer-commercial
+  submitted: '2026-03-17'
+  submitted_by: 4jp
+  track: job
+  identity_position: documentation-engineer
+  composition_method: blocks
+  blocks_used:
+  - framings/documentation-engineer
+  - evidence/differentiators
+  - methodology/ai-conductor
+  - pitches/credentials-creative-tech
+  - evidence/work-samples
+  variant_id: cover-letters/notion-solutions-engineer-commercial
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
