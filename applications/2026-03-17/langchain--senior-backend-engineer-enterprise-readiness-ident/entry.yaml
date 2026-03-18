@@ -1,0 +1,117 @@
+id: langchain-senior-backend-engineer-enterprise-readiness-identity
+name: LangChain Senior Backend Engineer, Enterprise Readiness & Identity
+track: job
+status: submitted
+outcome: null
+target:
+  organization: LangChain
+  url: https://jobs.ashbyhq.com/langchain
+  application_url: https://jobs.ashbyhq.com/langchain/6f32998b-111c-447b-b593-2b64c7de245d
+  portal: ashby
+  location: New York, NY
+  location_class: us-onsite
+  description: 'About Us: At LangChain, our mission is to make intelligent agents
+    ubiquitous. We build the foundation for agent engineering in the real world, helping
+    developers move from prototypes to production-ready AI agents that teams can rely
+    on. We began as widely adopted open-source tools and have grown to also offer
+    a platform for building, evaluating, deploying, and operating agents at scale.
+    Today, LangChain, LangGraph, LangSmith, and Agent Builder are used by teams shipping
+    real AI products across startups and large enterprises. Millions of developers
+    trust LangChain to power AI teams at companies like Replit, Clay, Coinbase, Workday,
+    Lyft, Cloudflare, Harvey, Rippling, Vanta, and 35% of the Fortune 500 . With $125M
+    raised at Series B from IVP, Sequoia, Benchmark, CapitalG, and Sapphire Ventures
+    , we’re at a stage where we’re continuing to develop new products, growth is accelerating,
+    and all team members have meaningful impact on what we build and how we work together.
+    LangChain is a place where your contributions can shape how this technology shows
+    up in the real world. About the Team: The Enterprise Readiness team builds the
+    systems that allow large organizations to securely adopt and scale LangChain in
+    production. The team focuses on identity, authentication, authorization, billing,
+    compliance, and tenant management to ensure our platform meets the security and
+    operational requirements of enterprise customers. About the Role: LangChain is
+    hiring a Senior Backend Engineer focused on Enterprise Readiness & Identity to
+    build the features that make our platform secure, compliant, and scalable for
+    enterprise customers. This is a high-impact role on a newly formed team working
+    at the intersection of authentication, authorization, billing, security, compliance,
+    and tenant management. You’ll collaborate closely with infrastructure, product,
+    GTM teams, and our largest enterprise users to shape the foundation of our enterprise
+    offerings. Location: In-person 5 days/week in New York City, San Francisco, or
+    Boston. What You''ll Do: Design and implement backend services (Python/Go) powering
+    enterprise authentication, authorization, billing, and tenant provisioning Build
+    and evolve systems for SAML, SCIM, OAuth2, and single sign-on (SSO) integrations
+    Develop robust role-based and attribute-based access control systems (RBAC/ABAC)
+    at organizational scale Build and scale billing infrastructure including invoicing,
+    usage-based charging, and flexible pricing model support Implement audit logging,
+    usage tracking, and metering pipelines to support compliance and billing accuracy
+    Optimize enterprise onboarding and tenant lifecycle management for reliability
+    and scalability Collaborate with security and compliance teams to support SOC2,
+    GDPR, and other regulatory requirements Partner with infrastructure engineers
+    to ensure identity and enterprise features are performant, reliable, and observable
+    Engage directly with enterprise customers to translate requirements into secure,
+    scalable platform capabilities Write clean, maintainable, and well-documented
+    backend code What You''ll Bring: Technical experience 5+ years of backend engineering
+    experience with Python or Go (both preferred) Deep knowledge of authentication
+    and identity standards including OAuth2, SAML, JWTs, and SCIM Experience building
+    and scaling access control systems such as RBAC or ABAC frameworks Experience
+    building billing or usage infrastructure in SaaS environments Familiarity with
+    Postgres, Redis, APIs, and modern distributed backend infrastructure Enterprise
+    systems experience Comfort navigating enterprise security, compliance, and multi-tenant
+    architectures Prior experience building enterprise-grade SaaS platforms or developer
+    platforms Working style Strong ownership mindset and ability to thrive in fast-paced,
+    unstructured startup environments Nice to Have: Background in security, observability,
+    or developer infrastructure Familiarity with LLMs, GenAI applications, or agentic
+    frameworks Compensation & Benefits: We offer competitive compensation that includes
+    base salary, meaningful equity, and benefits such as health and dental coverage,
+    flexible vacation, a 401(k) plan, and life insurance. Actual compensation will
+    vary based on role, level, and location. For team members in the EU and UK, we
+    provide locally competitive benefits aligned with regional norms and regulations.
+    Annual salary range: $175,000- $225,000'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.6
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used:
+    framing: framings/documentation-engineer
+    evidence: evidence/differentiators
+    methodology: methodology/ai-conductor
+    credentials: pitches/credentials-creative-tech
+    work_samples: evidence/work-samples
+  variant_ids:
+    cover_letter: cover-letters/langchain-senior-backend-engineer-enterprise-readiness-identity
+  materials_attached:
+  - resumes/batch-03/langchain-senior-backend-engineer-enterprise-readiness-identity/langchain-senior-backend-engineer-enterprise-readiness-identity-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: null
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:33.726185+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-17'
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-03-17'
