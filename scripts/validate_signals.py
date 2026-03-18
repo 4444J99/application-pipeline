@@ -303,6 +303,9 @@ def validate_outreach_log(errors: list[str]) -> int:
         d = str(entry.get("date", ""))
         if d and not DATE_RE.match(d):
             errors.append(f"{label}: date '{d}' not YYYY-MM-DD")
+        otype = entry.get("type")
+        if isinstance(otype, str) and otype not in OUTREACH_TYPES:
+            errors.append(f"{label}: type '{otype}' not in {sorted(OUTREACH_TYPES)}")
         channel = entry.get("channel")
         if isinstance(channel, str) and channel not in OUTREACH_CHANNELS:
             errors.append(f"{label}: channel '{channel}' not in {sorted(OUTREACH_CHANNELS)}")

@@ -22,6 +22,7 @@ import argparse
 import shutil
 import sys
 from datetime import date, datetime
+from pathlib import Path
 
 from pipeline_lib import (
     ACTIONABLE_STATUSES,
@@ -378,8 +379,65 @@ def run_advance(
             advance_entry(filepath, eid, target_status, reason=reason)
             advanced += 1
 
+            # Auto-generate outreach LinkedIn search URLs on advancement to staged/drafting
+            if target_status in ("staged", "drafting") and e.get("track") == "job":
+                _generate_outreach_urls(filepath, e)
+
     print(f"{'─' * 60}")
     print(f"Advanced {advanced} entries to '{target_status}'.")
+
+
+def _generate_outreach_urls(filepath: Path, entry: dict) -> None:
+    """Auto-generate LinkedIn search URLs for outreach when entry is advanced.
+
+    Writes an 'outreach' field to the entry YAML with search URLs
+    based on the org and role title.
+    """
+    from urllib.parse import quote
+
+    org = (entry.get("target") or {}).get("organization", "")
+    title = (entry.get("name") or "").lower()
+    if not org:
+        return
+
+    # Derive search terms from role context
+    if "forward deployed" in title or "fde" in title:
+        terms = ["Head of Forward Deployed Engineering", "Engineering Manager"]
+    elif "solutions engineer" in title:
+        terms = ["Solutions Engineering Manager", "Head of Solutions"]
+    elif "technical writer" in title or "documentation" in title:
+        terms = ["Technical Writing Manager", "Head of Documentation"]
+    elif "developer advocate" in title or "devrel" in title:
+        terms = ["Head of Developer Relations", "DevRel Manager"]
+    elif "agent" in title:
+        terms = ["Engineering Manager AI", "Head of AI"]
+    elif "platform" in title or "infrastructure" in title:
+        terms = ["Engineering Manager Platform", "VP Engineering"]
+    elif "full stack" in title or "full-stack" in title or "staff" in title:
+        terms = ["Engineering Manager", "VP Engineering"]
+    else:
+        terms = ["Engineering Manager", "VP Engineering"]
+
+    linkedin_searches = []
+    for term in terms[:2]:
+        query = quote(f"{term} {org}")
+        url = f"https://www.linkedin.com/search/results/people/?keywords={query}&origin=GLOBAL_SEARCH_HEADER"
+        linkedin_searches.append({"role": term, "search_url": url})
+
+    # Write to YAML
+    try:
+        import yaml as _yaml
+        data = _yaml.safe_load(filepath.read_text())
+        data["outreach"] = {
+            "linkedin_searches": linkedin_searches,
+            "contact_name": None,
+            "contact_url": None,
+            "status": "pending",
+        }
+        filepath.write_text(_yaml.dump(data, default_flow_style=False, sort_keys=False))
+        print(f"  → Outreach URLs generated for {org}")
+    except Exception:
+        pass
 
 
 def main():

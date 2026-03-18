@@ -284,6 +284,65 @@ def _expire_entry(entry_id: str):
     print(f"  WARNING: Could not find file for {entry_id}", file=sys.stderr)
 
 
+def run_expire_stale_submissions(entries: list[dict], max_days: int = 21, dry_run: bool = True) -> list[dict]:
+    """Auto-expire job submissions with no response after max_days.
+
+    Only affects job-track entries with status submitted/acknowledged.
+    Grant, writing, and fellowship tracks have longer response cycles
+    and are excluded.
+    """
+    today = date.today()
+    expired = []
+
+    for e in entries:
+        if e.get("status") not in ("submitted", "acknowledged"):
+            continue
+        if e.get("track") not in ("job",):
+            continue
+
+        timeline = e.get("timeline", {})
+        if not isinstance(timeline, dict):
+            continue
+        sub_date = parse_date(timeline.get("submitted"))
+        if not sub_date:
+            continue
+
+        days_since = (today - sub_date).days
+        if days_since < max_days:
+            continue
+
+        entry_id = e.get("id", "?")
+        expired.append({"id": entry_id, "days_since": days_since, "submitted": sub_date.isoformat()})
+
+    if not expired:
+        return expired
+
+    print(f"Stale job submissions ({len(expired)}, >{max_days}d no response):")
+    for item in expired:
+        action = "[dry-run]" if dry_run else "[expiring]"
+        print(f"  {action} {item['id']} — submitted {item['submitted']} ({item['days_since']}d ago)")
+
+        if not dry_run:
+            filepath = PIPELINE_DIR_SUBMITTED / f"{item['id']}.yaml"
+            if filepath.exists():
+                content = filepath.read_text()
+                editor = YAMLEditor(content)
+                editor.set("status", "outcome")
+                editor.set("outcome", "expired")
+                editor.touch()
+                PIPELINE_DIR_CLOSED.mkdir(parents=True, exist_ok=True)
+                dest = PIPELINE_DIR_CLOSED / filepath.name
+                atomic_write(dest, editor.dump())
+                filepath.unlink()
+
+    if dry_run:
+        print("\nDry run — run with --yes to execute.")
+    else:
+        print(f"\nExpired {len(expired)} stale job submissions to pipeline/closed/")
+
+    return expired
+
+
 # ---------------------------------------------------------------------------
 # Track-specific gates
 # ---------------------------------------------------------------------------

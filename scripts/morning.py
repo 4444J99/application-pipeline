@@ -227,7 +227,12 @@ def run_morning(brief: bool = False, save: bool = False):
     from pipeline_freshness import flush_stale_active_jobs
     flush_stale_active_jobs()
 
-    entries = load_entries()  # active + submitted + closed only — research_pool is separate
+    # Auto-expire job submissions with no response after 21 days
+    from hygiene import run_expire_stale_submissions
+    all_for_expire = load_entries()
+    run_expire_stale_submissions(all_for_expire, max_days=21, dry_run=False)
+
+    entries = load_entries()  # reload after potential expirations
     if not entries:
         print("No pipeline entries found.")
         sys.exit(1)

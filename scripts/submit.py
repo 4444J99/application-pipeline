@@ -24,6 +24,7 @@ from pipeline_lib import (
     BLOCKS_DIR,
     MATERIALS_DIR,
     PIPELINE_DIR_SUBMITTED,
+    REPO_ROOT,
     SIGNALS_DIR,
     VARIANTS_DIR,
     count_chars,
@@ -295,16 +296,80 @@ def generate_checklist(
     return "\n".join(lines), issues
 
 
+# --- Cover letter quality gate ---
+
+COVER_LETTER_MIN_WORDS = 350
+COVER_LETTER_MAX_WORDS = 550
+COVER_LETTER_BANNED_PHRASES = [
+    "South Florida",  # Wrong location — user is in NYC
+    "MCP integration layer",  # MCP is Anthropic's, not OpenAI's
+    "I don't have",  # Apologetic framing
+    "I haven't",  # Apologetic framing
+    "gap I'm being transparent about",  # Apologetic framing
+]
+COVER_LETTER_REQUIRED_LOCATION = "New York"
+
+
+def check_cover_letter_quality(entry: dict) -> list[str]:
+    """Pre-submission quality check on cover letter content.
+
+    Returns list of issues. Empty list = passes.
+    """
+    issues = []
+    variant = entry.get("submission", {}).get("variant_ids", {}).get("cover_letter", "")
+    if not variant:
+        issues.append("No cover letter variant assigned")
+        return issues
+
+    cl_path = REPO_ROOT / "variants" / f"{variant}.md"
+    if not cl_path.exists():
+        issues.append(f"Cover letter file not found: {cl_path}")
+        return issues
+
+    content = cl_path.read_text()
+    words = len(content.split())
+
+    if words < COVER_LETTER_MIN_WORDS:
+        issues.append(f"Cover letter too short: {words} words (min {COVER_LETTER_MIN_WORDS})")
+    if words > COVER_LETTER_MAX_WORDS:
+        issues.append(f"Cover letter too long: {words} words (max {COVER_LETTER_MAX_WORDS})")
+
+    for phrase in COVER_LETTER_BANNED_PHRASES:
+        if phrase.lower() in content.lower():
+            issues.append(f"Banned phrase found: \"{phrase}\"")
+
+    if COVER_LETTER_REQUIRED_LOCATION not in content:
+        issues.append(f"Missing location reference: \"{COVER_LETTER_REQUIRED_LOCATION}\"")
+
+    if content.startswith("#") or content.startswith("---"):
+        issues.append("Cover letter starts with markdown header — should be plain text")
+
+    if "Sincerely" not in content and "sincerely" not in content:
+        issues.append("Missing closing (\"Sincerely\")")
+
+    return issues
+
+
 # --- Record mode ---
 
 
 def record_submission(filepath: Path, entry: dict) -> None:
     """Record that a submission was completed.
 
+    Runs cover letter quality gate first. Blocks on critical issues.
     Updates: status → submitted, timeline.submitted, last_touched.
     Moves file to pipeline/submitted/.
     Appends to conversion-log.yaml.
     """
+    # Quality gate — check cover letter before recording
+    cl_issues = check_cover_letter_quality(entry)
+    if cl_issues:
+        print("  QUALITY GATE — Cover letter issues:")
+        for issue in cl_issues:
+            print(f"    ✗ {issue}")
+        print("  Fix issues before recording submission.")
+        return
+
     today_str = date.today().isoformat()
     content = filepath.read_text()
 

@@ -115,7 +115,7 @@ def ensure_node(network: dict, name: str, **kwargs) -> dict:
     """Find or create a node. Updates fields if provided."""
     node = find_node(network, name)
     if node is None:
-        node = {"name": name, "organization": "", "role": "", "degree": 1,
+        node = {"name": name, "organization": "", "role": "",
                 "channel": "linkedin", "last_interaction": "", "tags": []}
         network["nodes"].append(node)
     for k, v in kwargs.items():
@@ -607,6 +607,14 @@ def sync_to_contacts(network: dict, me: str = "Anthony Padavano") -> int:
     existing_names = {c.get("name", "").lower() for c in contacts}
     added = 0
 
+    # Pre-load outreach log once (not per-contact)
+    outreach_entries: list[dict] = []
+    outreach_file = SIGNALS_DIR / "outreach-log.yaml"
+    if outreach_file.exists():
+        with open(outreach_file) as f:
+            odata = yaml.safe_load(f) or {}
+        outreach_entries = odata.get("entries", [])
+
     for node in network["nodes"]:
         name = node.get("name", "")
         if not name or name.lower() == me.lower():
@@ -631,21 +639,16 @@ def sync_to_contacts(network: dict, me: str = "Anthony Padavano") -> int:
         }
 
         # Populate interactions from outreach log
-        outreach_file = SIGNALS_DIR / "outreach-log.yaml"
-        if outreach_file.exists():
-            with open(outreach_file) as f:
-                odata = yaml.safe_load(f) or {}
-            for entry in odata.get("entries", []):
-                if entry.get("contact", "").lower() == name.lower():
-                    contact["interactions"].append({
-                        "date": entry.get("date", ""),
-                        "type": entry.get("type", "connect"),
-                        "note": entry.get("note", ""),
-                    })
-                    # Link pipeline entries
-                    for t in entry.get("related_targets", []):
-                        if t not in contact["pipeline_entries"]:
-                            contact["pipeline_entries"].append(t)
+        for entry in outreach_entries:
+            if entry.get("contact", "").lower() == name.lower():
+                contact["interactions"].append({
+                    "date": entry.get("date", ""),
+                    "type": entry.get("type", "connect"),
+                    "note": entry.get("note", ""),
+                })
+                for t in entry.get("related_targets", []):
+                    if t not in contact["pipeline_entries"]:
+                        contact["pipeline_entries"].append(t)
 
         contacts.append(contact)
         existing_names.add(name.lower())
