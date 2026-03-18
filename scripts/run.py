@@ -32,6 +32,7 @@ COMMANDS = {
     "traffic":     ("traffic_signals.py", [],              "Traffic signals: GitHub views, clones, referrers → follow-up triggers"),
 
     # -- Pipeline Operations --
+    "prepare":     ("prepare_submission.py", [],          "Prepare ALL submission materials (resume, cover letter, portal answers, outreach)"),
     "scoreall":    ("score.py", ["--all", "--dry-run"],  "Preview all scores"),
     "qualify":     ("score.py", ["--auto-qualify"],       "Preview auto-qualification"),
     "enrichall":   ("enrich.py", ["--all", "--dry-run"], "Preview all enrichments"),
