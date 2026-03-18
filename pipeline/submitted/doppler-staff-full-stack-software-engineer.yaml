@@ -1,0 +1,133 @@
+id: doppler-staff-full-stack-software-engineer
+name: 'Doppler Staff Full-Stack Software Engineer '
+track: job
+status: submitted
+outcome: null
+target:
+  organization: Doppler
+  url: https://jobs.ashbyhq.com/doppler
+  application_url: https://jobs.ashbyhq.com/doppler/6d6b52a7-cfb0-47fb-84c1-79bc737c53dd
+  portal: ashby
+  location: Remote - USA
+  location_class: us-remote
+  description: Why Now 2025 has been a breakout year for Doppler. We’ve helped over
+    50,000 startups and enterprises manage their secrets at scale, and landed our
+    first million-dollar customer. We've shipped some of our most exciting features
+    yet, expanded our customer base, and sharpened our focus like never before. With
+    a strong foundation in community, we're scaling and monetizing with ambitious
+    goals across product, growth, sales, and hiring. The momentum is real, and we’re
+    just getting started. About Doppler Doppler's mission is to make it easy and secure
+    for developers of every experience level and teams of any size to manage their
+    app configuration and secrets. But hasn't this been done? Developers tend to be
+    either struggling with the manual management of .env files , or wrestling with
+    an overly complex secrets manager that's not built for software development. Doppler
+    is changing that by making app configuration and secrets management easy, intuitive,
+    and scalable. It's the SecretOps platform built by developers for developers.
+    Our team is entrepreneurial, with a bias for action. We never back down from a
+    spirited debate and believe we are all responsible for exploring the hard questions.
+    We value self-awareness and meaningful impact. We are open to unconventional approaches
+    and have learned not to judge a book by its cover. Your time is your most valuable
+    resource, so you set your hours. We use Slack to communicate and default to zero
+    meetings. We aim to document everything. We also recommend you invest your time
+    in 10% compounding time . Who We Are Doppler is a developer-first secrets management
+    platform that enables engineers and security teams to securely store their secrets
+    across any cloud infrastructure or deployment environment at scale. The Role We
+    are looking for a Staff Full Stack Engineer who can own new features and projects
+    from inception to completion. You will be designing both frontend and backend
+    architectures while promoting secure engineering practices in a fast-paced development
+    environment. Typically these projects range across the stack, from building our
+    React frontend, to extending functionality within our secrets engine that manages
+    highly sensitive data. You will serve as a technical leader, setting architectural
+    direction and ensuring long-term scalability of the codebase. Part of what makes
+    Doppler loved is its simplicity and intuitiveness; we hope you can help carry
+    that torch. About the Team Doppler Engineering is a team comprised of Full-Stack/Product,
+    Data, Growth, and Infrastructure Engineers. We’re a security-first team that genuinely
+    cares about the quality of what we build. We collaborate with high trust and we
+    are constantly trying to improve how we work and deliver software. As a Staff
+    Engineer, you’ll work cross-functionally across teams to help define and uphold
+    technical standards. You will unblock teams and show impact through leadership
+    and collaboration. What You’ll Do Build out features across frontend and backend
+    services Design, implement, and extend database models to support new features
+    Collaborate with product and design to provide feedback on features from a developer’s
+    perspective Approach everything you do from a security-first perspective Lead
+    technical architecture and help shape Doppler’s long-term vision Mentor other
+    engineers through code reviews, pairing, and technical guidance Champion engineering
+    best practices and process improvements across the organization What You’ll Bring
+    to the Table 8+ years of experience in full-stack development Experience building
+    frontend and backend web services in Node.js + React Experience with SQL databases
+    (PostgreSQL) A love for the craft with a curiosity and passion to constantly learn
+    new things Experience building features or products from inception to delivery
+    Preferred Experience Knowledge and passion for security-first engineering Passion
+    for helping grow development teams and improving processes Experience deploying
+    software with Kubernetes Experience developing a large-scale monolith Experience
+    designing large-scale React apps Experience or interest in learning Go (CLI, Terraform
+    Provider, Kubernetes Operator) Passion for technically leading and mentoring others
+    Benefits Equity at an early-stage, fast-growing startup Premium health insurance
+    (medical, dental, vision) Guilt Free Unlimited PTO - 3-week minimum strongly encouraged!
+    Upward Mobility Learning and Development Stipend Wealth Advisor 401k Pregnancy
+    & Family Leave Fertility & Adoption Benefits Equal Compensation (regardless of
+    gender or race) For a full list of our benefits check our Perks Notion Page .
+    Closing We've built a great product our customers love. Our churn is low, and
+    active usage continues to rise. We just need to amplify our reach to educate the
+    market that secrets management can be fast, secure, and affordable for teams and
+    organizations of any size. And most importantly, we need to continue encouraging
+    Developers to stop adhering to archa
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.8
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 1
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used:
+    framing: framings/documentation-engineer
+    evidence: evidence/differentiators
+    methodology: methodology/ai-conductor
+    credentials: pitches/credentials-creative-tech
+    work_samples: evidence/work-samples
+  variant_ids:
+    cover_letter: cover-letters/doppler-staff-full-stack-software-engineer
+  materials_attached:
+  - resumes/batch-03/doppler-staff-full-stack-software-engineer/doppler-staff-full-stack-software-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: null
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:33.966902+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-17'
+outreach:
+  linkedin_searches:
+  - role: Engineering Manager
+    search_url: https://www.linkedin.com/search/results/people/?keywords=Engineering%20Manager%20Doppler&origin=GLOBAL_SEARCH_HEADER
+  - role: VP Engineering
+    search_url: https://www.linkedin.com/search/results/people/?keywords=VP%20Engineering%20Doppler&origin=GLOBAL_SEARCH_HEADER
+  contact_name: null
+  contact_url: null
+  status: pending
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-03-17'
