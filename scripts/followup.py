@@ -23,6 +23,7 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pipeline_lib import (
+    ALL_PIPELINE_DIRS,
     PIPELINE_DIR_CLOSED,
     PIPELINE_DIR_SUBMITTED,
     SIGNALS_DIR,
@@ -167,8 +168,13 @@ def log_followup(entry_id: str, channel: str, contact: str, note: str, followup_
     Uses ruamel.yaml round-trip editing to preserve file formatting
     (comments, key ordering, quoting style).
     """
-    filepath = PIPELINE_DIR_SUBMITTED / f"{entry_id}.yaml"
-    if not filepath.exists():
+    filepath = None
+    for d in ALL_PIPELINE_DIRS:
+        candidate = d / f"{entry_id}.yaml"
+        if candidate.exists():
+            filepath = candidate
+            break
+    if filepath is None:
         print(f"Entry not found: {entry_id}", file=sys.stderr)
         sys.exit(1)
 

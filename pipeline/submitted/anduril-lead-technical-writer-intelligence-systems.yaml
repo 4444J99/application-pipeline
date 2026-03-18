@@ -53,10 +53,30 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
+  follow_up_count: 3
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-03-15'
+last_touched: "2026-03-17"
 status_meta:
   submitted_by: 4jp
   submitted_at: '2026-03-15'
+follow_up:
+- date: '2026-03-17'
+  channel: linkedin
+  contact: Erika Hanson
+  type: connect
+  note: Connection request sent
+  response: none
+- date: '2026-03-17'
+  channel: linkedin
+  contact: Jackie Wallace
+  type: connect
+  note: Connection request sent
+  response: none
+- date: '2026-03-17'
+  channel: linkedin
+  contact: Heather Floss
+  type: connect
+  note: Connection request sent
+  response: none

@@ -1,13 +1,281 @@
-# Outreach Log
-# Cross-cutting networking actions not tied to a single pipeline target.
-# Target-specific outreach lives in each pipeline entry's `outreach` list.
-
-# Entry format:
-# - date: 2026-02-23
-#   type: networking | conference | meetup | informational | community
-#   contact: "Name or org"
-#   channel: email | linkedin | phone | in_person | webinar | other
-#   note: "Brief description"
-#   related_targets: []  # optional list of pipeline entry IDs
-
-entries: []
+entries:
+- date: '2026-03-17'
+  type: post_submission
+  contact: Erika Hanson
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - anduril-lead-technical-writer-intelligence-systems
+- date: '2026-03-17'
+  type: post_submission
+  contact: Jackie Wallace
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - anduril-lead-technical-writer-intelligence-systems
+- date: '2026-03-17'
+  type: post_submission
+  contact: Heather Floss
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - anduril-lead-technical-writer-intelligence-systems
+- date: '2026-03-17'
+  type: post_submission
+  contact: Winston Weinberg
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - harvey-ai-midseniorstaff-software-engineer-agents
+- date: '2026-03-17'
+  type: post_submission
+  contact: Ashleigh Taylor
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - harvey-ai-midseniorstaff-software-engineer-agents
+- date: '2026-03-17'
+  type: post_submission
+  contact: Aatish Nayak
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - harvey-ai-midseniorstaff-software-engineer-agents
+- date: '2026-03-17'
+  type: post_submission
+  contact: Gabe Pereyra
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - harvey-ai-midseniorstaff-software-engineer-agents
+- date: '2026-03-17'
+  type: post_submission
+  contact: Ankush Gola
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - langchain-senior-backend-engineer-enterprise-readiness-identity
+- date: '2026-03-17'
+  type: post_submission
+  contact: Erick Friis
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - langchain-senior-backend-engineer-enterprise-readiness-identity
+- date: '2026-03-17'
+  type: post_submission
+  contact: Jacob Lee
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - langchain-senior-backend-engineer-enterprise-readiness-identity
+- date: '2026-03-17'
+  type: post_submission
+  contact: Eric Han
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - langchain-senior-backend-engineer-enterprise-readiness-identity
+- date: '2026-03-17'
+  type: reconnect
+  contact: Kristian Freeman
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - cloudflare-models-engineer-developer-relations
+- date: '2026-03-17'
+  type: reconnect
+  contact: Craig Dennis
+  channel: linkedin
+  note: Connection accepted — DM sent with portfolio link and teaching angle
+  related_targets:
+  - cloudflare-models-engineer-developer-relations
+- date: '2026-03-17'
+  type: reconnect
+  contact: Aly Cabral
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - cloudflare-models-engineer-developer-relations
+- date: '2026-03-17'
+  type: reconnect
+  contact: Ayush Sood
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - figma-software-engineer-developer-experience
+- date: '2026-03-17'
+  type: reconnect
+  contact: Shu Zhang
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - perplexity-full-stack-software-engineer-applied-ai
+- date: '2026-03-17'
+  type: reconnect
+  contact: Raman Malik
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - perplexity-full-stack-software-engineer-applied-ai
+- date: '2026-03-17'
+  type: reconnect
+  contact: Reza Shabani
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - replit-software-engineer-product-infrastructure-typescript-devex
+- date: '2026-03-17'
+  type: reconnect
+  contact: Matt Palmer
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - replit-software-engineer-product-infrastructure-typescript-devex
+- date: '2026-03-17'
+  type: reconnect
+  contact: Dean Bubar
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - replit-software-engineer-product-infrastructure-typescript-devex
+- date: '2026-03-17'
+  type: reconnect
+  contact: Craig Cannon
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - supabase-developer-relations-engineer-san-francisco-ca
+- date: '2026-03-17'
+  type: reconnect
+  contact: Jon Meyers
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - supabase-developer-relations-engineer-san-francisco-ca
+- date: '2026-03-17'
+  type: reconnect
+  contact: Michaela Burpoe
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - supabase-developer-relations-engineer-san-francisco-ca
+- date: '2026-03-17'
+  type: seed
+  contact: Alex Albert
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - anthropic-developer-education-lead
+- date: '2026-03-17'
+  type: seed
+  contact: Anthony Morris
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - anthropic-developer-education-lead
+- date: '2026-03-17'
+  type: seed
+  contact: Scott Goodfriend
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - anthropic-developer-education-lead
+- date: '2026-03-17'
+  type: seed
+  contact: Jamie Kosoy
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - stripe-full-stack-engineer-developer-experience-product-platform
+- date: '2026-03-17'
+  type: seed
+  contact: Matthew Fuller
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - stripe-full-stack-engineer-developer-experience-product-platform
+- date: '2026-03-17'
+  type: seed
+  contact: David Dieulivol
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - gitlab-staff-backend-engineer-developer-experience-ruby
+- date: '2026-03-17'
+  type: seed
+  contact: Luke Duncalfe
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - gitlab-staff-backend-engineer-developer-experience-ruby
+- date: '2026-03-17'
+  type: seed
+  contact: Marina Mosti
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - gitlab-staff-backend-engineer-developer-experience-ruby
+- date: '2026-03-17'
+  type: seed
+  contact: Hudson Yeo
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - runway-mts
+- date: '2026-03-17'
+  type: seed
+  contact: Logan Tills
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - runway-mts
+- date: '2026-03-17'
+  type: seed
+  contact: Cristóbal Valenzuela
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - runway-mts
+- date: '2026-03-17'
+  type: seed
+  contact: Hassan El Mghari
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - together-ai
+- date: '2026-03-17'
+  type: seed
+  contact: Jibu Chacko
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - together-ai
+- date: '2026-03-17'
+  type: seed
+  contact: Shadi Baqleh
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - deepgram-staff-developer-advocate
+- date: '2026-03-17'
+  type: seed
+  contact: Natalie Rutgers
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - deepgram-staff-developer-advocate
+- date: '2026-03-17'
+  type: seed
+  contact: Danny Kim
+  channel: linkedin
+  note: Connection request sent
+  related_targets:
+  - deepgram-staff-developer-advocate
+- date: '2026-03-17'
+  type: post_submission
+  contact: Craig Dennis
+  channel: linkedin
+  note: Connection accepted — DM sent with portfolio link and teaching angle
+  related_targets:
+  - cloudflare-models-engineer-developer-relations

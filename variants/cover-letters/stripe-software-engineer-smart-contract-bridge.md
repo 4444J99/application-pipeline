@@ -1,15 +1,14 @@
 Dear Stripe Hiring Team,
 
-I build systems that cannot be left in an invalid state. 113 repositories governed by a promotion state machine with four named states (LOCAL → CANDIDATE → PUBLIC → GRADUATED), forward-only transitions, and governance-rules.json enforced by CI on every push. 50 validated dependency edges with zero violations. 23,470 tests across two testing strategies: live-data validation against contracts, and isolated unit tests for reproducibility.
+I build systems that cannot be left in an invalid state. 113 repositories governed by a promotion state machine with four named states (LOCAL → CANDIDATE → PUBLIC_PROCESS → GRADUATED), forward-only transitions, and governance-rules.json enforced by CI on every push. 50 validated dependency edges across 8 GitHub organizations with zero violations — no state skipping, no silent failures, every transition validated before it executes. 23,470 tests enforce these invariants across two strategies: live-data validation against actual contracts, and isolated unit tests with monkeypatching for reproducibility.
 
-The engineering challenge on Bridge — correctness guarantees across distributed state transitions — is structurally identical to what I have already built. My state machine governs repository lifecycle rather than payment lifecycle, but the invariants are the same: no state skipping, no silent failures, every transition validated before execution.
+The engineering challenge at Bridge — correctness guarantees across distributed state transitions in a payment context — is structurally identical to what I have already built. My state machine governs repository lifecycle rather than stablecoin settlement, but the invariants are the same: atomicity of transitions, fail-fast on invalid intermediate states, and an audit trail that makes every state change traceable. The dependency validation system I designed (43 directed edges across organ boundaries, checked weekly by automated scripts, zero circular dependencies enforced since inception) operates under the same constraint as payment infrastructure: a single misclassified edge breaks the entire downstream pipeline.
 
-My stack is Python and TypeScript across 22 languages. I have built YAML schema validation pipelines, typed contract enforcement, 104 CI/CD pipelines where a failure at any gate blocks the transition. The system coordinates 82,000 files across 12 organizations — the kind of multi-surface infrastructure complexity that Bridge handles across payment networks and stablecoin rails.
+My stack spans Python and TypeScript across 22 languages — the same polyglot discipline Bridge requires across smart contract platforms, API layers, and settlement networks. I have built YAML schema validation pipelines with JSON Schema contracts in CI, typed enforcement with Zod, and 104 CI/CD pipelines where a failure at any gate blocks the promotion. The system coordinates 82,000 files across 12 organizations — the kind of multi-surface infrastructure complexity that Bridge handles across payment networks, blockchain runtimes, and stablecoin rails.
 
-I am based in New York City and available for SF or NYC.
+The documentation architecture is equally relevant to Bridge's work. 739,000 words of structured governance documentation — not prose, but architecture plans, registry contracts, session logs, and auto-generated context files that keep 113 repositories navigable for both human engineers and AI assistants. Variable binding propagates live metrics into documentation automatically. When Bridge needs to communicate protocol changes, settlement logic, or integration specifications across partners, the documentation infrastructure I have built is the kind of system that makes that communication reliable at scale.
 
-Portfolio: https://4444j99.github.io/portfolio/
-GitHub: https://github.com/meta-organvm
+I am based in New York City and available for San Francisco or NYC. The full system is public: https://github.com/meta-organvm. My portfolio at https://4444j99.github.io/portfolio/ shows 20 case studies with consistent problem-approach-evidence-outcome structure.
 
 Sincerely,
 Anthony James Padavano
