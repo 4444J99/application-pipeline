@@ -6,13 +6,36 @@
 
 ---
 
-## 1. Overview
+## 1. Purpose
 
-The Studium Generale ORGANVM (SGO) is a self-sovereign academic organ — an internal university housed within ORGAN-I (Theoria) with cross-organ intake authority. It intakes questions from any organ, researches them through structured methodology, produces tiered academic works (papers, theses, dissertations), defends them before the self-checking authority's IRA panel (serving as Faculty Senate), publishes through ORGAN-V (Logos) and external channels, and archives in ORGAN-I's research corpus.
+The Studium Generale ORGANVM exists for three reasons, in this order:
+
+### 1.1 Self-Fulfillment (Primary)
+
+The practitioner grows by doing the work. Research is not a means to publication — publication is a byproduct of research. The SGO exists because understanding is intrinsically valuable: the act of taking a question seriously, pursuing it through formal methodology, and producing a defended answer makes the practitioner more capable, more rigorous, and more intellectually alive. Every defended work changes the person who wrote it. That change is the primary output. The paper is the receipt.
+
+This is not decorative philosophy. It is a design constraint. The SGO must never optimize for publication volume, citation count, or credential accumulation at the expense of intellectual depth. If a question requires three years of study before it yields a publishable paper, the SGO supports that timeline. The Studium is not a factory; it is a practice.
+
+### 1.2 Promotion (Secondary)
+
+Defended works demonstrate capability. They serve as portfolio assets, grant application evidence, and proof that the practitioner operates at institutional depth. "Promotion" here carries dual meaning:
+
+- **External promotion:** The works promote the practitioner's professional standing — demonstrated research capability, formal methodology, published contributions to knowledge
+- **ORGANVM promotion:** The works participate in the organ system's promotion state machine (LOCAL → CANDIDATE → PUBLIC_PROCESS → GRADUATED → ARCHIVED), governed by the same rules as every other ORGANVM artifact (see Section 5)
+
+### 1.3 Proof of Theoretical Power (Tertiary)
+
+The SGO's defended works, certified by the self-checking authority with ICC scores and disagreement patterns, constitute proof that the ORGANVM system can produce knowledge at academic standard. When the system publishes a paper on arXiv and it receives citations, or submits to a journal and passes peer review, the external validation proves that the internal institution is real — not aspirational, not decorative, but functionally equivalent to the academic institutions it parallels.
+
+This proof compounds: each external validation strengthens the SGO's credibility, which strengthens the authority's calibration data, which strengthens the next defense, which produces a stronger work. The proof of theoretical power is not a one-time demonstration but a self-reinforcing cycle.
+
+## 2. Overview
+
+The Studium Generale ORGANVM (SGO) is a self-sovereign academic organ — an internal university housed within ORGAN-I (Theoria) with cross-organ intake authority. It intakes questions from any organ (formally through commissions and informally through an inquiry log), researches them through structured methodology, produces tiered academic works (papers, theses, dissertations), defends them before the self-checking authority's IRA panel (serving as Faculty Senate), publishes through ORGAN-V (Logos) and external channels, and archives in ORGAN-I's research corpus.
 
 The SGO forms a symbiotic dual organism with the self-governing evaluative authority: the SGO produces knowledge; the authority certifies it. The authority's IRA machinery (ICC, kappa, consensus, persona-driven panels) serves as the academic review infrastructure. The SGO gives the authority its highest-stakes purpose (certifying original contributions to knowledge). The authority gives the SGO its credibility mechanism (statistical agreement across diverse evaluative perspectives).
 
-## 2. Organ Placement
+## 3. Organ Placement
 
 - **Parent organ:** ORGAN-I (Theoria)
 - **Repository:** `organvm-i-theoria/studium-generale/`
@@ -21,7 +44,7 @@ The SGO forms a symbiotic dual organism with the self-governing evaluative autho
 - **Governance source:** ORGAN-IV (Taxis) governance protocols apply; the self-checking authority provides the defense mechanism
 - **Dependency flow:** Consumes from I (theory), produces for V (publication) and META (institutional knowledge). Does not violate I→II→III unidirectional constraint — the SGO is a Theoria sub-organ, not a new organ.
 
-## 3. Institutional Structure
+## 4. Institutional Structure
 
 ### 3.1 Eight Faculties
 
@@ -65,7 +88,7 @@ The human operator as Beer's System 5:
 - Makes final accept/revise/reject decisions when ICC < threshold
 - Does NOT grade — governs the grading institution
 
-## 4. Three Tiers of Academic Work
+## 5. Three Tiers of Academic Work
 
 | Tier | Name | Scope | Panel Size | ICC Threshold | Length |
 |------|------|-------|------------|---------------|--------|
@@ -73,7 +96,107 @@ The human operator as Beer's System 5:
 | II | **Thesis** | Multi-chapter argument | 5 (Standing + 1 Guest) | > 0.70 | 50-100 pages |
 | III | **Dissertation** | Original contribution, generalizable | 6 (Standing + 2 Guests) | > 0.75 + Provost review | 100-300 pages |
 
-## 5. Defense Protocol
+## 6. Promotion State Machine Integration
+
+SGO works participate in the same promotion state machine as every other ORGANVM artifact. This ensures academic works are governed by the same lifecycle discipline as code repositories, essays, and governance documents.
+
+### 5.1 State Mapping
+
+| ORGANVM State | SGO Analog | Trigger | Governance |
+|---------------|------------|---------|------------|
+| **LOCAL** | Draft in progress | Author begins work | No formal review; work is private to the author |
+| **CANDIDATE** | Submitted for defense | Author declares work ready; submits metadata | Defense panel is convened; evidence assembly begins |
+| **PUBLIC_PROCESS** | Under defense / revision | Panel evaluates; ICC computed; verdict rendered | If "Revise": returns to LOCAL-equivalent with feedback. If "Pass": advances |
+| **GRADUATED** | Published externally | Defended work submitted to arXiv, journal, or conference | External peer review provides validation data |
+| **ARCHIVED** | Historical record | Work superseded by later research, or question resolved | Preserved in archive; cited by successor works |
+
+### 5.2 Transition Rules
+
+- **LOCAL → CANDIDATE**: Author self-declares. No gate — anyone (the Provost, in practice) can submit work for defense at any time. Premature submission is punished by the defense itself (low ICC, "Revise" verdict).
+- **CANDIDATE → PUBLIC_PROCESS**: Automatic upon panel convocation. The act of convening the panel moves the work into public process.
+- **PUBLIC_PROCESS → GRADUATED**: Requires defense pass (ICC ≥ tier threshold). For dissertations, additionally requires Provost review.
+- **PUBLIC_PROCESS → LOCAL**: "Revise" verdict returns the work to draft state with dimension-specific feedback. The work retains its ID and history — revision is not restart.
+- **GRADUATED → ARCHIVED**: Provost decision, typically when successor work supersedes the original or when the research question is resolved by subsequent developments.
+- **No state skipping**: A work cannot jump from LOCAL to GRADUATED. Every work must be defended. This is the same anti-shortcut principle that governs ORGANVM repository promotion.
+
+### 5.3 seed.yaml Contract
+
+Every SGO work has a `seed.yaml` declaring its promotion state, faculty membership, and metadata — the same contract structure used by every ORGANVM repository:
+
+```yaml
+id: SGO-2026-D-002
+title: "Recursive Institutional Governance Through Multi-Model Evaluative Consensus"
+organ: I  # Theoria
+sub_organ: studium-generale
+faculty: [governance, meta-cognition]
+tier: dissertation
+status: LOCAL  # → CANDIDATE → PUBLIC_PROCESS → GRADUATED → ARCHIVED
+author: "@4444J99"
+commission:
+  from_organ: IV
+  question: "What governance architecture ensures viability for AI-augmented institutions?"
+defense:
+  panel: null  # populated upon CANDIDATE transition
+  icc: null
+  verdict: null
+  date: null
+publications:
+  arxiv: null
+  journal: null
+  conference: null
+created: "2026-03-15"
+last_modified: "2026-03-17"
+```
+
+## 7. The Inquiry Log (Informal Intake)
+
+### 6.1 Purpose
+
+The commission system (Section 8) handles formal intake — an organ submits a structured YAML request. But research does not begin with formal requests. It begins with noticing: a failure that reveals a gap, a pattern that suggests a principle, a conversation that surfaces a question, a reading that provokes a connection.
+
+The **Inquiry Log** is the SGO's researcher's notebook — a low-friction capture mechanism for observations, questions, and hunches that have not yet crystallized into formal commissions.
+
+### 6.2 Structure
+
+```yaml
+# studium-generale/commissions/inquiry-log.yaml
+entries:
+  - id: INQ-2026-001
+    date: "2026-03-15"
+    source: "threshold calibration crisis in application pipeline"
+    observation: "A scoring model recalibration made the 9.0 threshold unattainable. No automated metric detected this. The IRA facility caught it through subjective dimension assessment."
+    question: "Under what conditions do semantic failures evade syntactic quality checks?"
+    potential_faculty: [governance, meta-cognition]
+    potential_tier: paper
+    status: raw  # raw → developing → commissioned → absorbed
+
+  - id: INQ-2026-002
+    date: "2026-03-17"
+    source: "designing the SGO itself"
+    observation: "The act of designing a self-governing academic institution required synthesizing Beer, Ashby, Maturana/Varela, Luhmann, psychometrics, and institutional theory. No single tradition suffices."
+    question: "Is there a general theory of self-governing evaluative institutions that unifies these traditions?"
+    potential_faculty: meta-cognition
+    potential_tier: dissertation
+    status: developing
+```
+
+### 6.3 Lifecycle
+
+| Status | Meaning | Transition |
+|--------|---------|-----------|
+| **raw** | Captured observation, not yet explored | Author reflects; adds context over days/weeks |
+| **developing** | Question is sharpening; literature connections forming | Author decides: worth a commission? |
+| **commissioned** | Promoted to formal Research Commission | Enters the commission pipeline (Section 8) |
+| **absorbed** | Folded into an existing commission or work | Linked to the absorbing work's ID |
+| **dormant** | Not currently active but preserved | May reactivate if context changes |
+
+### 6.4 Governance
+
+- **No approval needed** to add entries. The log is the Provost's private notebook. Anything can go in.
+- **Quarterly review**: The Provost reviews the inquiry log during epistemic audits. Raw entries older than 90 days are either developed, absorbed, or marked dormant.
+- **The log is the SGO's immune system**: It detects what the formal commission system cannot — the questions that no organ knows to ask, because they emerge from practice rather than planning.
+
+## 8. Defense Protocol
 
 1. **Submission** — Work submitted with metadata (title, faculty, tier, abstract, methodology, claimed contributions)
 2. **Evidence Assembly** — Adapter collects: full text, citations, methodology section, data/proofs, claimed contributions
@@ -87,7 +210,7 @@ The human operator as Beer's System 5:
 7. **Provost Review** (Dissertation only) — Human reads work + evaluations; may override
 8. **Certification** — Machine-readable YAML record: work_id, panel, ICC, per-dimension scores, verdict
 
-## 6. Defense Rubric
+## 9. Defense Rubric
 
 ### 6.1 Universal Dimensions (All Faculties, All Tiers)
 
@@ -117,7 +240,7 @@ Each faculty adds 1-2 dimensions reflecting its domain. Examples:
 - **Creative Practice:** Aesthetic Coherence, Conceptual Grounding
 - **Discourse:** Argument Architecture, Audience Calibration
 
-## 7. Research Pipeline
+## 10. Research Pipeline
 
 ### 7.1 Intake (Commission System)
 
@@ -168,7 +291,7 @@ External responses (journal acceptance/rejection, peer review feedback, citation
 
 The external academic world is the SGO's ultimate ground truth — the SGO doesn't replace external validation, it prepares for it rigorously and learns from it systematically.
 
-## 8. Inaugural Dissertations
+## 11. Inaugural Dissertations
 
 ### 8.1 SGO-2026-D-001: The Precision Pipeline
 
@@ -190,7 +313,7 @@ The external academic world is the SGO's ultimate ground truth — the SGO doesn
 | Status | Draft complete (~2,459 lines, Ch 0-11) |
 | Remaining | Second instantiation, human baseline, expanded panel, longitudinal data, 80+ references |
 
-## 9. Filesystem Architecture
+## 12. Filesystem Architecture
 
 ```
 organvm-i-theoria/
@@ -203,7 +326,8 @@ organvm-i-theoria/
       │   ├── faculty-registry.yaml     # Faculty definitions + rubrics
       │   └── senate-config.yaml        # Panel composition rules
       ├── commissions/
-      │   ├── active/                   # In-progress research
+      │   ├── inquiry-log.yaml         # Informal intake (researcher's notebook)
+      │   ├── active/                   # In-progress formal commissions
       │   └── completed/               # Archived commissions
       ├── works/
       │   ├── papers/                   # Tier I
@@ -229,7 +353,7 @@ organvm-i-theoria/
           └── external-feedback.yaml   # Journal response tracking
 ```
 
-## 10. Per-Organ Rubric Proposals
+## 13. Per-Organ Rubric Proposals
 
 ### ORGAN-I (Theoria)
 | Dimension | Type | Weight |
@@ -309,7 +433,7 @@ organvm-i-theoria/
 | Governance Documentation | subjective | 0.15 |
 | Omega Progress | objective | 0.15 |
 
-## 11. The Dual Organism Symbiosis
+## 14. The Dual Organism Symbiosis
 
 The self-checking authority and the SGO are two expressions of one institutional function: **the capacity to evaluate rigorously.**
 
@@ -323,7 +447,7 @@ Together: the SGO produces knowledge → the authority certifies it → certific
 
 This is the autopoietic academic organism: immune system (authority) ensures health; nervous system (SGO) ensures intelligence. Neither viable alone. Together, an institution.
 
-## 12. Implementation Roadmap
+## 15. Implementation Roadmap
 
 | Phase | Deliverable | Dependencies |
 |-------|-------------|-------------|
@@ -338,7 +462,7 @@ This is the autopoietic academic organism: immune system (authority) ensures hea
 | 9 | Deploy per-organ rubrics for ORGAN-IV (Taxis) governance diagnostic | Phase 3 |
 | 10 | Meta-authority dashboard aggregating cross-organ health | Phase 9 |
 
-## 13. Operational Costs
+## 16. Operational Costs
 
 | Activity | Frequency | Cost |
 |----------|-----------|------|
