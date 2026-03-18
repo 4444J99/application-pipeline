@@ -56,7 +56,7 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-  follow_up_count: 4
+  follow_up_count: 5
 tags:
 - auto-sourced
 source: source_jobs.py
@@ -97,4 +97,10 @@ follow_up:
   contact: Manan Mehta
   type: dm
   note: Connection ACCEPTED — Applied AI @ OpenAI. Send DM.
+  response: none
+- date: '2026-03-18'
+  channel: linkedin
+  contact: Manan Mehta
+  type: dm
+  note: DM sent after acceptance — shared portfolio + governance architecture context
   response: none

@@ -68,7 +68,7 @@ conversion:
   response_type: rejected
   time_to_response_days: 3
   feedback: null
-  follow_up_count: 1
+  follow_up_count: 2
 tags:
 - job-tier-3
 - submit-order-5
@@ -86,4 +86,10 @@ follow_up:
   contact: Logan Tills
   type: dm
   note: Connection ACCEPTED — Account Executive @ Runway. Send DM.
+  response: none
+- date: '2026-03-18'
+  channel: linkedin
+  contact: Logan Tills
+  type: dm
+  note: DM sent after acceptance — shared portfolio + creative infrastructure context
   response: none

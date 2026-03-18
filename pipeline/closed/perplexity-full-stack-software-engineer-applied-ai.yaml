@@ -56,7 +56,7 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: No response after 21 days. Auto-acknowledge only (Greenhouse). Closed as expired.
-  follow_up_count: 1
+  follow_up_count: 2
 tags:
 - auto-sourced
 - curated-fit
@@ -68,4 +68,10 @@ follow_up:
   contact: Shu Zhang
   type: dm
   note: Connection ACCEPTED — MTS @ Perplexity. Send DM.
+  response: none
+- date: '2026-03-18'
+  channel: linkedin
+  contact: Shu Zhang
+  type: dm
+  note: DM sent after acceptance — shared portfolio + agentic search overlap
   response: none

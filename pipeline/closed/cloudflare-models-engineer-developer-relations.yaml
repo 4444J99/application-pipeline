@@ -55,16 +55,22 @@ conversion:
   response_type: acknowledged
   time_to_response_days: 3
   feedback: No response after 21 days. Auto-acknowledge only (Greenhouse). Closed as expired.
-  follow_up_count: 1
+  follow_up_count: 2
 tags:
 - auto-sourced
 - curated-fit
 source: source_jobs.py
-last_touched: "2026-03-17"
+last_touched: "2026-03-18"
 follow_up:
 - date: '2026-03-17'
   channel: linkedin
   contact: Craig Dennis
   type: dm
   note: Connection accepted — DM sent with portfolio link and teaching angle
+  response: none
+- date: '2026-03-18'
+  channel: linkedin
+  contact: Craig Dennis
+  type: dm
+  note: DM sent after acceptance — shared portfolio + AI inference interest
   response: none
