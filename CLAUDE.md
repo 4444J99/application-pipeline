@@ -416,6 +416,31 @@ For entries with `target.portal: greenhouse`:
 - `daily_batch.py` and `daily_pipeline.py` are deprecated (moved to `scripts/deprecated/`). Use `standup.py --section plan` and `campaign.py --execute` instead
 - Never commit secrets or local submission data (`.submit-config.yaml`, `.greenhouse-answers/`, `.env`)
 
+## Academic & Institutional Context
+
+This pipeline is the first case study for two cross-cutting ORGANVM systems:
+
+### The Self-Governing Evaluative Authority
+A multi-model IRA (inter-rater agreement) facility that evaluates this pipeline's quality across 9 dimensions using 4 AI raters with distinct personas. Implements Beer's Viable System Model System 3* (independent audit). The authority is domain-agnostic — the pipeline is its first client, not its reason for existing.
+
+- Authority dissertation: `meta-organvm/praxis-perpetua/research/dissertation-institutional-authority/`
+- Supporting docs: `meta-organvm/praxis-perpetua/research/2026-03-15-institutional-immune-system.md`, `2026-03-15-self-governing-institution-of-checks.md`
+- Journal paper (Doc A): `organvm-v-logos/public-process/research/2026-03-15-ai-as-psychometrician.md`
+
+### The Studium Generale ORGANVM (SGO)
+ORGANVM's internal university. This pipeline's thesis (Ch 1-10 in `docs/thesis/`) is SGO-2026-D-001. The evaluative authority's dissertation is SGO-2026-D-002.
+
+- SGO design spec: `docs/superpowers/specs/2026-03-17-studium-generale-organvm-design.md`
+- Research corpus index: `meta-organvm/praxis-perpetua/research/README.md`
+
+### Thesis Chapters
+| Chapter | File | Content |
+|---------|------|---------|
+| Ch 1-7 | `docs/thesis/01-07` | MCDA framework, proofs, competitive analysis |
+| Ch 8 | `docs/thesis/08-evaluative-capacity.md` | IRA facility as pipeline self-regulation |
+| Ch 9 | `docs/thesis/09-conductor-methodology.md` | Production + evaluation as co-constitutive |
+| Ch 10 | `docs/thesis/10-generalization.md` | Generalization to other domains |
+
 ## Relationship to Corpus
 
 Canonical identity statements, metrics, and evidence live in `organvm-corpvs-testamentvm/docs/applications/00-covenant-ark.md`. This repo consumes those as source of truth and composes them into submission-ready materials. When metrics change, update covenant-ark first, then propagate to blocks here. Run `python scripts/check_metrics.py` to verify consistency.
