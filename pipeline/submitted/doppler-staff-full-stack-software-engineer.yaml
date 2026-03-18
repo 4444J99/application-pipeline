@@ -10,68 +10,8 @@ target:
   portal: ashby
   location: Remote - USA
   location_class: us-remote
-  description: Why Now 2025 has been a breakout year for Doppler. We’ve helped over
-    50,000 startups and enterprises manage their secrets at scale, and landed our
-    first million-dollar customer. We've shipped some of our most exciting features
-    yet, expanded our customer base, and sharpened our focus like never before. With
-    a strong foundation in community, we're scaling and monetizing with ambitious
-    goals across product, growth, sales, and hiring. The momentum is real, and we’re
-    just getting started. About Doppler Doppler's mission is to make it easy and secure
-    for developers of every experience level and teams of any size to manage their
-    app configuration and secrets. But hasn't this been done? Developers tend to be
-    either struggling with the manual management of .env files , or wrestling with
-    an overly complex secrets manager that's not built for software development. Doppler
-    is changing that by making app configuration and secrets management easy, intuitive,
-    and scalable. It's the SecretOps platform built by developers for developers.
-    Our team is entrepreneurial, with a bias for action. We never back down from a
-    spirited debate and believe we are all responsible for exploring the hard questions.
-    We value self-awareness and meaningful impact. We are open to unconventional approaches
-    and have learned not to judge a book by its cover. Your time is your most valuable
-    resource, so you set your hours. We use Slack to communicate and default to zero
-    meetings. We aim to document everything. We also recommend you invest your time
-    in 10% compounding time . Who We Are Doppler is a developer-first secrets management
-    platform that enables engineers and security teams to securely store their secrets
-    across any cloud infrastructure or deployment environment at scale. The Role We
-    are looking for a Staff Full Stack Engineer who can own new features and projects
-    from inception to completion. You will be designing both frontend and backend
-    architectures while promoting secure engineering practices in a fast-paced development
-    environment. Typically these projects range across the stack, from building our
-    React frontend, to extending functionality within our secrets engine that manages
-    highly sensitive data. You will serve as a technical leader, setting architectural
-    direction and ensuring long-term scalability of the codebase. Part of what makes
-    Doppler loved is its simplicity and intuitiveness; we hope you can help carry
-    that torch. About the Team Doppler Engineering is a team comprised of Full-Stack/Product,
-    Data, Growth, and Infrastructure Engineers. We’re a security-first team that genuinely
-    cares about the quality of what we build. We collaborate with high trust and we
-    are constantly trying to improve how we work and deliver software. As a Staff
-    Engineer, you’ll work cross-functionally across teams to help define and uphold
-    technical standards. You will unblock teams and show impact through leadership
-    and collaboration. What You’ll Do Build out features across frontend and backend
-    services Design, implement, and extend database models to support new features
-    Collaborate with product and design to provide feedback on features from a developer’s
-    perspective Approach everything you do from a security-first perspective Lead
-    technical architecture and help shape Doppler’s long-term vision Mentor other
-    engineers through code reviews, pairing, and technical guidance Champion engineering
-    best practices and process improvements across the organization What You’ll Bring
-    to the Table 8+ years of experience in full-stack development Experience building
-    frontend and backend web services in Node.js + React Experience with SQL databases
-    (PostgreSQL) A love for the craft with a curiosity and passion to constantly learn
-    new things Experience building features or products from inception to delivery
-    Preferred Experience Knowledge and passion for security-first engineering Passion
-    for helping grow development teams and improving processes Experience deploying
-    software with Kubernetes Experience developing a large-scale monolith Experience
-    designing large-scale React apps Experience or interest in learning Go (CLI, Terraform
-    Provider, Kubernetes Operator) Passion for technically leading and mentoring others
-    Benefits Equity at an early-stage, fast-growing startup Premium health insurance
-    (medical, dental, vision) Guilt Free Unlimited PTO - 3-week minimum strongly encouraged!
-    Upward Mobility Learning and Development Stipend Wealth Advisor 401k Pregnancy
-    & Family Leave Fertility & Adoption Benefits Equal Compensation (regardless of
-    gender or race) For a full list of our benefits check our Perks Notion Page .
-    Closing We've built a great product our customers love. Our churn is low, and
-    active usage continues to rise. We just need to amplify our reach to educate the
-    market that secrets management can be fast, secure, and affordable for teams and
-    organizations of any size. And most importantly, we need to continue encouraging
-    Developers to stop adhering to archa
+  description: Why Now 2025 has been a breakout year for Doppler. We’ve helped over 50,000 startups and enterprises manage their secrets at scale, and landed our first million-dollar customer. We've shipped some of our most exciting features yet, expanded our customer base, and sharpened our focus like never before. With a strong foundation in community, we're scaling and monetizing with ambitious goals across product, growth, sales, and hiring. The momentum is real, and we’re just getting started. About Doppler Doppler's mission is to make it easy and secure for developers of every experience level and teams of any size to manage their app configuration and secrets. But hasn't this been done? Developers tend to be either struggling with the manual management of .env files , or wrestling with an overly complex secrets manager that's not built for software development. Doppler is changing that by making app configuration and secrets management easy, intuitive, and scalable. It's the SecretOps platform built by developers for developers. Our team is entrepreneurial, with a bias for action. We never back down from a spirited debate and believe we are all responsible for exploring the hard questions. We value self-awareness and meaningful impact. We are open to unconventional approaches and have learned not to judge a book by its cover. Your time is your most valuable resource, so you set your hours. We use Slack to communicate and default to zero meetings. We aim to document everything. We also recommend you invest your time in 10% compounding time . Who We Are Doppler is a developer-first secrets management platform that enables engineers and security teams to securely store their secrets across any cloud infrastructure or deployment environment at scale. The Role We are looking for a Staff Full Stack Engineer who can own new features and projects from inception to completion. You will be designing both frontend and backend architectures while promoting secure engineering practices in a fast-paced development environment. Typically these projects range across the stack, from building our React frontend, to extending functionality within our secrets engine that manages highly sensitive data. You will serve as a technical leader, setting architectural direction and ensuring long-term scalability of the codebase. Part of what makes Doppler loved is its simplicity and intuitiveness; we hope you can help carry that torch. About the Team Doppler Engineering is a team comprised of Full-Stack/Product, Data, Growth, and Infrastructure Engineers. We’re a security-first team that genuinely cares about the quality of what we build. We collaborate with high trust and we are constantly trying to improve how we work and deliver software. As a Staff Engineer, you’ll work cross-functionally across teams to help define and uphold technical standards. You will unblock teams and show impact through leadership and collaboration. What You’ll Do Build out features across frontend and backend services Design, implement, and extend database models to support new features Collaborate with product and design to provide feedback on features from a developer’s perspective Approach everything you do from a security-first perspective Lead technical architecture and help shape Doppler’s long-term vision Mentor other engineers through code reviews, pairing, and technical guidance Champion engineering best practices and process improvements across the organization What You’ll Bring to the Table 8+ years of experience in full-stack development Experience building frontend and backend web services in Node.js + React Experience with SQL databases (PostgreSQL) A love for the craft with a curiosity and passion to constantly learn new things Experience building features or products from inception to delivery Preferred Experience Knowledge and passion for security-first engineering Passion for helping grow development teams and improving processes Experience deploying software with Kubernetes Experience developing a large-scale monolith Experience designing 
+    large-scale React apps Experience or interest in learning Go (CLI, Terraform Provider, Kubernetes Operator) Passion for technically leading and mentoring others Benefits Equity at an early-stage, fast-growing startup Premium health insurance (medical, dental, vision) Guilt Free Unlimited PTO - 3-week minimum strongly encouraged! Upward Mobility Learning and Development Stipend Wealth Advisor 401k Pregnancy & Family Leave Fertility & Adoption Benefits Equal Compensation (regardless of gender or race) For a full list of our benefits check our Perks Notion Page . Closing We've built a great product our customers love. Our churn is low, and active usage continues to rise. We just need to amplify our reach to educate the market that secrets management can be fast, secure, and affordable for teams and organizations of any size. And most importantly, we need to continue encouraging Developers to stop adhering to archa
 deadline:
   date: null
   type: rolling
@@ -115,10 +55,11 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
+  follow_up_count: 5
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-03-17'
+last_touched: "2026-03-18"
 outreach:
   linkedin_searches:
   - role: Engineering Manager
@@ -131,3 +72,34 @@ outreach:
 status_meta:
   submitted_by: 4jp
   submitted_at: '2026-03-17'
+follow_up:
+- date: '2026-03-18'
+  channel: linkedin
+  contact: Emily Curry
+  type: dm
+  note: Connection request sent — Head of Engineering
+  response: none
+- date: '2026-03-18'
+  channel: linkedin
+  contact: Amber Britton
+  type: dm
+  note: Connection request sent — CEO
+  response: none
+- date: '2026-03-18'
+  channel: linkedin
+  contact: Brian Vallelunga
+  type: dm
+  note: Connection request sent — Chairman
+  response: none
+- date: '2026-03-18'
+  channel: linkedin
+  contact: Nic Manoogian
+  type: dm
+  note: Connection request sent
+  response: none
+- date: '2026-03-18'
+  channel: linkedin
+  contact: Phillip Chao
+  type: dm
+  note: Connection request sent — Co-Founder
+  response: none
