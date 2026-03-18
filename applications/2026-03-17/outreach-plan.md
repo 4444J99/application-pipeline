@@ -44,9 +44,9 @@
 - **Status:** Submitted March 17 (Day 0)
 - **Portal:** https://jobs.ashbyhq.com/doppler/6d6b52a7-cfb0-47fb-84c1-79bc737c53dd
 - **Contacts** (connect with 2-3):
-  - ★ **Brian Vallelunga** — [linkedin.com/in/vallelungabrian](https://www.linkedin.com/in/vallelungabrian/) (Founder & CEO) · ✅ Sent
-  - **Thomas Piccirello** — [linkedin.com/in/piccirello](https://www.linkedin.com/in/piccirello/) (Co-Founder & CTO) · ✅ Sent
-  - **Nic Manoogian** — [linkedin.com/in/nmanoogian](https://www.linkedin.com/in/nmanoogian/) (Senior Software Engineer) · ✅ Sent
+  - ★ **Brian Vallelunga** — [linkedin.com/in/brianvallelunga](https://www.linkedin.com/in/brianvallelunga/) (Founder & CEO) · ⚠️ URL needs verification
+  - **Thomas Piccirello** — [linkedin.com/in/thomaspiccirello](https://www.linkedin.com/in/thomaspiccirello/) (Co-Founder & CTO) · ⚠️ URL needs verification
+  - **Nic Manoogian** — [linkedin.com/in/nicmanoogian](https://www.linkedin.com/in/nicmanoogian/) (Engineering Manager) · ⚠️ URL needs verification
 - **Connection message (<300 chars):**
   > Hi [Name] — every one of my 113 repos has a seed.yaml config contract, CI-validated, registry as single source of truth. That's what Doppler does at enterprise scale. Applied for Staff Full-Stack. Would love to connect.
 - **If accepted — DM:**
