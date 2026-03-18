@@ -10,8 +10,62 @@ target:
   portal: ashby
   location: New York
   location_class: us-onsite
-  description: 'Why Harvey At Harvey, we’re transforming how legal and professional services operate — not incrementally, but end-to-end. By combining frontier agentic AI, an enterprise-grade platform, and deep domain expertise, we’re reshaping how critical knowledge work gets done for decades to come. This is a rare chance to help build a generational company at a true inflection point. With 1000+ customers in 58+ countries, strong product-market fit, and world-class investor support, we’re scaling fast and defining a new category in real time. The work is ambitious, the bar is high, and the opportunity for growth — personal, professional, and financial — is unmatched. Our team is sharp, motivated, and deeply committed to the mission. We move fast, operate with intensity, and take real ownership of the problems we tackle — from early thinking to long-term outcomes. We stay close to our customers — from leadership to engineers — and work together to solve real problems with urgency and care. If you thrive in ambiguity, push for excellence, and want to help shape the future of work alongside others who raise the bar, we invite you to build with us. At Harvey, the future of professional services is being written today — and we’re just getting started. Role Overview As a Software Engineer, Agents, you''ll build the systems that make our AI agents indispensable to legal professionals. You will design environments and actions for agentic professional work, make model selection decisions, manage context windows, create optimal tools, and develop evals that enable faster iteration loops to unlock new capabilities. We''re looking for engineers and researchers who are immersed in the space, driven to ship impactful products, and are experienced in using practical evaluations to drive task completion quality and customer delight. Representative Projects Save weeks of effort on high pressure M&A deals by automating information requests and diligence checks across hundreds of thousands of files with retrieval and file editing agents. Dramatically speed up deal turnaround speed by improving the latency and quality of agents on applying a standard legal "playbook" to contracts. Ensure that our clients win their complex, data-hungry litigation cases by optimizing our multi-source retrieval agents. Enable board-ready PowerPoint generation by tuning the harness and libraries for coding agents. What You''ll Do Partner with customers and PMs to understand legal workflows, design practical evaluations that capture what “excellent” means, and ship agents that get the job done. Optimize agent performance through prompt engineering, model selection, tool design, skill writing, context window management, and eval harness development. Work with our model infra team to design and implement infrastructure for low-latency agent execution, including caching strategies, parallel tool calls, or subagent patterns. Improve our observability and instrumentation to profile agent behavior, identify bottlenecks, and drive optimization decisions. Stay current on new developments in agentic systems and bring those learnings back to the products we build. What You Have Passion for building effective domain-specific agents. Iterative mindset: you develop proof of concepts, make decisions quickly, and ship v0s. Comfortable with when and how to use evaluations to drive quality. Humble and adaptable about code and frameworks. We expect you to drive adoption of new best practices as they develop. 3+ years (post-BS/MS) of software engineering experience. We are hiring for this role at the Mid, Senior, and Staff levels. Proficiency in Python and experience working with LLM APIs and agent frameworks. Experience with shipping user-facing products, either on the backend or full-stack. Compensation Range $165,000 – $312,000 USD Please find our CA applicant privacy notice here . #LI-BB1 Harvey is an equal opportunity employer and does not discriminate on the basis of race, gender, sexual orientation, gender identity/expression, national origin, disability, age, genetic information,
-    veteran status, marital status, pregnancy or related condition, or any other basis protected by law. We are committed to providing reasonable accommodations to applicants with disabilities, and requests can be made by emailing accommodations@harvey.ai'
+  description: "Why Harvey At Harvey, we\u2019re transforming how legal and professional\
+    \ services operate \u2014 not incrementally, but end-to-end. By combining frontier\
+    \ agentic AI, an enterprise-grade platform, and deep domain expertise, we\u2019\
+    re reshaping how critical knowledge work gets done for decades to come. This is\
+    \ a rare chance to help build a generational company at a true inflection point.\
+    \ With 1000+ customers in 58+ countries, strong product-market fit, and world-class\
+    \ investor support, we\u2019re scaling fast and defining a new category in real\
+    \ time. The work is ambitious, the bar is high, and the opportunity for growth\
+    \ \u2014 personal, professional, and financial \u2014 is unmatched. Our team is\
+    \ sharp, motivated, and deeply committed to the mission. We move fast, operate\
+    \ with intensity, and take real ownership of the problems we tackle \u2014 from\
+    \ early thinking to long-term outcomes. We stay close to our customers \u2014\
+    \ from leadership to engineers \u2014 and work together to solve real problems\
+    \ with urgency and care. If you thrive in ambiguity, push for excellence, and\
+    \ want to help shape the future of work alongside others who raise the bar, we\
+    \ invite you to build with us. At Harvey, the future of professional services\
+    \ is being written today \u2014 and we\u2019re just getting started. Role Overview\
+    \ As a Software Engineer, Agents, you'll build the systems that make our AI agents\
+    \ indispensable to legal professionals. You will design environments and actions\
+    \ for agentic professional work, make model selection decisions, manage context\
+    \ windows, create optimal tools, and develop evals that enable faster iteration\
+    \ loops to unlock new capabilities. We're looking for engineers and researchers\
+    \ who are immersed in the space, driven to ship impactful products, and are experienced\
+    \ in using practical evaluations to drive task completion quality and customer\
+    \ delight. Representative Projects Save weeks of effort on high pressure M&A deals\
+    \ by automating information requests and diligence checks across hundreds of thousands\
+    \ of files with retrieval and file editing agents. Dramatically speed up deal\
+    \ turnaround speed by improving the latency and quality of agents on applying\
+    \ a standard legal \"playbook\" to contracts. Ensure that our clients win their\
+    \ complex, data-hungry litigation cases by optimizing our multi-source retrieval\
+    \ agents. Enable board-ready PowerPoint generation by tuning the harness and libraries\
+    \ for coding agents. What You'll Do Partner with customers and PMs to understand\
+    \ legal workflows, design practical evaluations that capture what \u201Cexcellent\u201D\
+    \ means, and ship agents that get the job done. Optimize agent performance through\
+    \ prompt engineering, model selection, tool design, skill writing, context window\
+    \ management, and eval harness development. Work with our model infra team to\
+    \ design and implement infrastructure for low-latency agent execution, including\
+    \ caching strategies, parallel tool calls, or subagent patterns. Improve our observability\
+    \ and instrumentation to profile agent behavior, identify bottlenecks, and drive\
+    \ optimization decisions. Stay current on new developments in agentic systems\
+    \ and bring those learnings back to the products we build. What You Have Passion\
+    \ for building effective domain-specific agents. Iterative mindset: you develop\
+    \ proof of concepts, make decisions quickly, and ship v0s. Comfortable with when\
+    \ and how to use evaluations to drive quality. Humble and adaptable about code\
+    \ and frameworks. We expect you to drive adoption of new best practices as they\
+    \ develop. 3+ years (post-BS/MS) of software engineering experience. We are hiring\
+    \ for this role at the Mid, Senior, and Staff levels. Proficiency in Python and\
+    \ experience working with LLM APIs and agent frameworks. Experience with shipping\
+    \ user-facing products, either on the backend or full-stack. Compensation Range\
+    \ $165,000 \u2013 $312,000 USD Please find our CA applicant privacy notice here\
+    \ . #LI-BB1 Harvey is an equal opportunity employer and does not discriminate\
+    \ on the basis of race, gender, sexual orientation, gender identity/expression,\
+    \ national origin, disability, age, genetic information, veteran status, marital\
+    \ status, pregnancy or related condition, or any other basis protected by law.\
+    \ We are committed to providing reasonable accommodations to applicants with disabilities,\
+    \ and requests can be made by emailing accommodations@harvey.ai"
 deadline:
   date: null
   type: rolling
@@ -50,6 +104,7 @@ timeline:
   posting_date: null
   date_added: '2026-03-17'
   discovered: '2026-03-17T17:05:33.924720+00:00'
+  submitted: '2026-03-17'
 conversion:
   response_received: false
   response_type: null
@@ -59,7 +114,7 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-03-17"
+last_touched: '2026-03-17'
 status_meta:
   submitted_by: 4jp
   submitted_at: '2026-03-17'
