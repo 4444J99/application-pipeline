@@ -350,6 +350,155 @@ def check_cover_letter_quality(entry: dict) -> list[str]:
     return issues
 
 
+# --- Outreach plan generation ---
+
+
+def generate_daily_outreach_plan() -> str | None:
+    """Generate a consolidated outreach plan for all entries submitted today.
+
+    Reads all submitted entries, filters to today's submissions,
+    and produces a markdown document with LinkedIn search URLs,
+    connection messages, and follow-up DMs for each.
+
+    Returns the output path, or None if no submissions today.
+    """
+    from urllib.parse import quote
+
+    today_str = date.today().isoformat()
+    today_fmt = date.today().strftime("%B %d, %Y")
+
+    submitted_dir = PIPELINE_DIR_SUBMITTED
+    todays_entries = []
+    for f in sorted(submitted_dir.glob("*.yaml")):
+        data = yaml.safe_load(f.read_text())
+        timeline = data.get("timeline", {})
+        if isinstance(timeline, dict) and str(timeline.get("submitted", ""))[:10] == today_str:
+            todays_entries.append(data)
+
+    if not todays_entries:
+        return None
+
+    lines = [
+        f"# Outreach Plan — {today_fmt}",
+        "",
+        f"{len(todays_entries)} applications submitted today. Connect with hiring contacts within 1-3 days.",
+        "",
+        "---",
+        "",
+    ]
+
+    for i, entry in enumerate(todays_entries, 1):
+        org = entry.get("target", {}).get("organization", "Unknown")
+        name = entry.get("name", "Unknown Role")
+        url = entry.get("target", {}).get("application_url", "")
+        eid = entry.get("id", "?")
+        title = name.lower()
+
+        # Derive search terms from role context
+        if "forward deployed" in title or "fde" in title:
+            terms = ["Head of Forward Deployed Engineering", "Engineering Manager"]
+        elif "solutions engineer" in title:
+            terms = ["Solutions Engineering Manager", "Head of Solutions"]
+        elif "technical writer" in title or "documentation" in title:
+            terms = ["Technical Writing Manager", "Head of Documentation"]
+        elif "developer advocate" in title or "devrel" in title:
+            terms = ["Head of Developer Relations", "DevRel Manager"]
+        elif "agent" in title:
+            terms = ["Engineering Manager AI", "Head of AI"]
+        elif "platform" in title or "infrastructure" in title:
+            terms = ["Engineering Manager Platform", "VP Engineering"]
+        elif "full stack" in title or "staff" in title:
+            terms = ["Engineering Manager", "VP Engineering"]
+        else:
+            terms = ["Engineering Manager", "VP Engineering"]
+
+        search_urls = []
+        for term in terms[:2]:
+            q = quote(f"{term} {org}")
+            search_urls.append((term, f"https://www.linkedin.com/search/results/people/?keywords={q}&origin=GLOBAL_SEARCH_HEADER"))
+
+        # Role-specific connection message (300 char max)
+        role_short = name.replace(f"{org} ", "")
+        conn_msg = (
+            f"Hi [Name] — 113 repos, 82K files, 23,470 tests, 739K words of governance docs. "
+            f"Applied for {role_short}. Would love to connect."
+        )
+        if len(conn_msg) > 300:
+            conn_msg = conn_msg[:297] + "..."
+
+        # Follow-up DM template
+        dm_template = (
+            f"Thanks for connecting. Context beyond the resume — I maintain a 113-repository "
+            f"system across 8 GitHub organizations with automated governance, documentation "
+            f"architecture (739K words), and 23,470 tests. Happy to walk through how the "
+            f"patterns map to {org}'s work.\n\n"
+            f"Portfolio: https://4444j99.github.io/portfolio/\n"
+            f"GitHub: https://github.com/meta-organvm"
+        )
+
+        # Check for existing contacts at this org
+        known_contacts = []
+        contacts_path = SIGNALS_DIR / "contacts.yaml"
+        if contacts_path.exists():
+            try:
+                contacts_data = yaml.safe_load(contacts_path.read_text()) or {}
+                for contact in contacts_data.get("contacts", []):
+                    if isinstance(contact, dict) and contact.get("organization", "").lower() == org.lower():
+                        cname = contact.get("name", "?")
+                        curl = contact.get("linkedin_url", "")
+                        known_contacts.append((cname, curl))
+            except Exception:
+                pass
+
+        lines.extend([
+            f"### [ ] {i}. {org} — {role_short}",
+            f"- **Status:** Submitted {today_fmt} (Day 0)",
+            f"- **Portal:** {url}",
+            "- **Contacts** (connect with 2-3):",
+        ])
+        if known_contacts:
+            for ci, (cname, curl) in enumerate(known_contacts[:3]):
+                star = "★ " if ci == 0 else ""
+                if curl:
+                    lines.append(f"  - {star}**{cname}** — [{curl}]({curl})")
+                else:
+                    lines.append(f"  - {star}**{cname}**")
+        else:
+            lines.extend([
+                f"  - ★ **[Search: {terms[0]}]** — [Find on LinkedIn]({search_urls[0][1]})",
+                f"  - **[Search: {terms[1]}]** — [Find on LinkedIn]({search_urls[1][1]})",
+                f'  - **[Recruiter]** — search "{org} recruiter" on LinkedIn',
+            ])
+        lines.extend([
+            "- **Connection message (<300 chars):**",
+            f"  > {conn_msg}",
+            "- **If accepted — DM:**",
+            f"  > {dm_template}",
+            f'- **Log:** `python scripts/followup.py --log {eid} --channel linkedin --contact "[Name]" --note "Connection request sent"`',
+            "",
+            "---",
+            "",
+        ])
+
+    lines.extend([
+        "## Rules",
+        "",
+        "1. Find the most relevant person — hiring manager > team lead > recruiter",
+        "2. Never say \"following up on my application\" — lead with what you bring",
+        "3. Log every action with the followup.py command",
+        "4. 300 character limit on LinkedIn connection messages",
+        "5. If they accept → send a longer DM with portfolio link and specific context",
+        "",
+    ])
+
+    # Write to applications/ directory
+    apps_dir = REPO_ROOT / "applications" / today_str
+    apps_dir.mkdir(parents=True, exist_ok=True)
+    output_path = apps_dir / "outreach-plan.md"
+    output_path.write_text("\n".join(lines))
+    return str(output_path)
+
+
 # --- Record mode ---
 
 
@@ -414,6 +563,11 @@ def record_submission(filepath: Path, entry: dict) -> None:
     print(f"  Date: {today_str}")
     print(f"  Moved: {filepath.name} -> pipeline/submitted/")
     print("  Conversion log updated")
+
+    # Regenerate daily outreach plan
+    outreach_path = generate_daily_outreach_plan()
+    if outreach_path:
+        print(f"  Outreach plan: {outreach_path}")
 
 
 def _append_conversion_log(entry: dict, submitted_date: str, submitted_by: str | None = None) -> None:

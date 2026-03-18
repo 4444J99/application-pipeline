@@ -13,12 +13,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 from validate_signals import (
     AGENT_MODES,
     OUTCOMES,
+    OUTREACH_CHANNELS,
+    OUTREACH_TYPES,
     SIGNAL_TYPES,
     validate_agent_actions,
     validate_all_signals,
     validate_contacts,
     validate_conversion_log,
     validate_hypotheses,
+    validate_network,
+    validate_outreach_log,
     validate_referential_integrity,
     validate_signal_actions,
 )
@@ -255,3 +259,219 @@ def test_contacts_bad_date(signals_dir):
     errors = []
     validate_contacts(errors)
     assert any("not-a-date" in e for e in errors)
+
+
+# --- Outreach log tests ---
+
+
+def test_outreach_log_valid(signals_dir):
+    _write_yaml(signals_dir / "outreach-log.yaml", {
+        "entries": [{
+            "date": "2026-03-17",
+            "type": "post_submission",
+            "contact": "Jane Smith",
+            "channel": "linkedin",
+            "note": "Connection request sent",
+            "related_targets": ["test-entry-1"],
+        }]
+    })
+    errors = []
+    count = validate_outreach_log(errors)
+    assert count == 1
+    assert errors == []
+
+
+def test_outreach_log_missing_contact(signals_dir):
+    _write_yaml(signals_dir / "outreach-log.yaml", {
+        "entries": [{
+            "date": "2026-03-17",
+            "type": "reconnect",
+            "channel": "linkedin",
+            "note": "No contact field",
+        }]
+    })
+    errors = []
+    validate_outreach_log(errors)
+    assert any("contact" in e for e in errors)
+
+
+def test_outreach_log_invalid_type(signals_dir):
+    _write_yaml(signals_dir / "outreach-log.yaml", {
+        "entries": [{
+            "date": "2026-03-17",
+            "type": "invalid_type",
+            "contact": "Jane",
+            "channel": "linkedin",
+        }]
+    })
+    errors = []
+    validate_outreach_log(errors)
+    assert any("type" in e for e in errors)
+
+
+def test_outreach_log_invalid_channel(signals_dir):
+    _write_yaml(signals_dir / "outreach-log.yaml", {
+        "entries": [{
+            "date": "2026-03-17",
+            "type": "seed",
+            "contact": "Jane",
+            "channel": "telegram",
+        }]
+    })
+    errors = []
+    validate_outreach_log(errors)
+    assert any("channel" in e for e in errors)
+
+
+def test_outreach_log_bad_date(signals_dir):
+    _write_yaml(signals_dir / "outreach-log.yaml", {
+        "entries": [{
+            "date": "not-a-date",
+            "type": "seed",
+            "contact": "Jane",
+            "channel": "linkedin",
+        }]
+    })
+    errors = []
+    validate_outreach_log(errors)
+    assert any("date" in e for e in errors)
+
+
+def test_outreach_log_invalid_targets(signals_dir):
+    _write_yaml(signals_dir / "outreach-log.yaml", {
+        "entries": [{
+            "date": "2026-03-17",
+            "type": "seed",
+            "contact": "Jane",
+            "channel": "linkedin",
+            "related_targets": "not-a-list",
+        }]
+    })
+    errors = []
+    validate_outreach_log(errors)
+    assert any("related_targets" in e for e in errors)
+
+
+def test_outreach_log_missing_file(signals_dir):
+    errors = []
+    count = validate_outreach_log(errors)
+    assert count == 0
+    assert errors == []
+
+
+def test_outreach_log_missing_entries_key(signals_dir):
+    _write_yaml(signals_dir / "outreach-log.yaml", {"wrong_key": []})
+    errors = []
+    validate_outreach_log(errors)
+    assert any("entries" in e for e in errors)
+
+
+# --- Network graph tests ---
+
+
+def test_network_valid(signals_dir):
+    _write_yaml(signals_dir / "network.yaml", {
+        "nodes": [
+            {"name": "Alice", "organization": "Acme"},
+            {"name": "Bob", "organization": "Widgets"},
+        ],
+        "edges": [
+            {"from": "Alice", "to": "Bob", "strength": 5},
+        ],
+    })
+    errors = []
+    count = validate_network(errors)
+    assert count == 2
+    assert errors == []
+
+
+def test_network_duplicate_node(signals_dir):
+    _write_yaml(signals_dir / "network.yaml", {
+        "nodes": [
+            {"name": "Alice", "organization": "Acme"},
+            {"name": "Alice", "organization": "Other"},
+        ],
+        "edges": [],
+    })
+    errors = []
+    validate_network(errors)
+    assert any("duplicate" in e for e in errors)
+
+
+def test_network_edge_missing_from(signals_dir):
+    _write_yaml(signals_dir / "network.yaml", {
+        "nodes": [{"name": "Alice"}],
+        "edges": [{"to": "Alice", "strength": 3}],
+    })
+    errors = []
+    validate_network(errors)
+    assert any("from" in e for e in errors)
+
+
+def test_network_edge_strength_out_of_range(signals_dir):
+    _write_yaml(signals_dir / "network.yaml", {
+        "nodes": [{"name": "Alice"}, {"name": "Bob"}],
+        "edges": [{"from": "Alice", "to": "Bob", "strength": 15}],
+    })
+    errors = []
+    validate_network(errors)
+    assert any("strength" in e for e in errors)
+
+
+def test_network_edge_strength_zero(signals_dir):
+    _write_yaml(signals_dir / "network.yaml", {
+        "nodes": [{"name": "Alice"}, {"name": "Bob"}],
+        "edges": [{"from": "Alice", "to": "Bob", "strength": 0}],
+    })
+    errors = []
+    validate_network(errors)
+    assert any("strength" in e for e in errors)
+
+
+def test_network_missing_file(signals_dir):
+    errors = []
+    count = validate_network(errors)
+    assert count == 0
+    assert errors == []
+
+
+def test_network_nodes_not_list(signals_dir):
+    _write_yaml(signals_dir / "network.yaml", {"nodes": "bad", "edges": []})
+    errors = []
+    validate_network(errors)
+    assert any("nodes" in e for e in errors)
+
+
+def test_network_node_missing_name(signals_dir):
+    _write_yaml(signals_dir / "network.yaml", {
+        "nodes": [{"organization": "NoName"}],
+        "edges": [],
+    })
+    errors = []
+    validate_network(errors)
+    assert any("name" in e for e in errors)
+
+
+def test_validate_all_includes_new_validators(signals_dir):
+    """validate_all_signals should include outreach-log and network in stats."""
+    _write_yaml(signals_dir / "signal-actions.yaml", {"actions": []})
+    _write_yaml(signals_dir / "conversion-log.yaml", {"entries": []})
+    _write_yaml(signals_dir / "hypotheses.yaml", {"hypotheses": []})
+    _write_yaml(signals_dir / "agent-actions.yaml", {"runs": []})
+    _write_yaml(signals_dir / "outreach-log.yaml", {"entries": []})
+    _write_yaml(signals_dir / "network.yaml", {"nodes": [], "edges": []})
+    errors, stats = validate_all_signals()
+    assert "outreach-log" in stats
+    assert "network" in stats
+
+
+def test_outreach_types_constant():
+    assert "post_submission" in OUTREACH_TYPES
+    assert "reconnect" in OUTREACH_TYPES
+    assert "seed" in OUTREACH_TYPES
+    assert "dm" in OUTREACH_TYPES
+
+
+def test_outreach_channels_constant():
+    assert "linkedin" in OUTREACH_CHANNELS
+    assert "email" in OUTREACH_CHANNELS

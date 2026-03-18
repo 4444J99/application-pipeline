@@ -4,6 +4,8 @@ import sys
 from datetime import date, timedelta
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from followup import (
@@ -265,3 +267,109 @@ def test_init_follow_ups_dry_run_safe():
     # dry_run=True reads files but doesn't write — should not crash
     count = init_follow_ups(dry_run=True)
     assert isinstance(count, int)
+
+
+# --- log_followup directory search ---
+
+
+def test_log_followup_finds_closed_entry(tmp_path, monkeypatch):
+    """log_followup should find entries in closed/ directory."""
+    import followup
+    import yaml as _yaml
+
+    # Create a closed entry
+    closed_dir = tmp_path / "pipeline" / "closed"
+    closed_dir.mkdir(parents=True)
+    entry_data = {
+        "id": "test-closed-entry",
+        "status": "outcome",
+        "outcome": "rejected",
+        "target": {"organization": "TestOrg"},
+        "timeline": {"submitted": "2026-02-24"},
+        "follow_up": [],
+        "conversion": {"follow_up_count": 0},
+    }
+    entry_file = closed_dir / "test-closed-entry.yaml"
+    with open(entry_file, "w") as f:
+        _yaml.dump(entry_data, f)
+
+    # Create outreach log
+    outreach_dir = tmp_path / "signals"
+    outreach_dir.mkdir(parents=True)
+    with open(outreach_dir / "outreach-log.yaml", "w") as f:
+        _yaml.dump({"entries": []}, f)
+
+    # Patch directories
+    monkeypatch.setattr(followup, "ALL_PIPELINE_DIRS", [
+        tmp_path / "pipeline" / "active",
+        tmp_path / "pipeline" / "submitted",
+        closed_dir,
+    ])
+    monkeypatch.setattr(followup, "OUTREACH_LOG", outreach_dir / "outreach-log.yaml")
+
+    # Should not raise — previously this failed with "Entry not found"
+    followup.log_followup(
+        "test-closed-entry", "linkedin", "Test Contact",
+        "Connection request sent", "connect"
+    )
+
+    # Verify the entry was updated
+    with open(entry_file) as f:
+        updated = _yaml.safe_load(f)
+    assert len(updated["follow_up"]) == 1
+    assert updated["follow_up"][0]["contact"] == "Test Contact"
+    assert updated["conversion"]["follow_up_count"] == 1
+
+
+def test_log_followup_finds_active_entry(tmp_path, monkeypatch):
+    """log_followup should find entries in active/ directory."""
+    import followup
+    import yaml as _yaml
+
+    active_dir = tmp_path / "pipeline" / "active"
+    active_dir.mkdir(parents=True)
+    entry_data = {
+        "id": "test-active-entry",
+        "status": "drafting",
+        "target": {"organization": "TestOrg"},
+        "follow_up": [],
+        "conversion": {"follow_up_count": 0},
+    }
+    entry_file = active_dir / "test-active-entry.yaml"
+    with open(entry_file, "w") as f:
+        _yaml.dump(entry_data, f)
+
+    outreach_dir = tmp_path / "signals"
+    outreach_dir.mkdir(parents=True)
+    with open(outreach_dir / "outreach-log.yaml", "w") as f:
+        _yaml.dump({"entries": []}, f)
+
+    monkeypatch.setattr(followup, "ALL_PIPELINE_DIRS", [
+        active_dir,
+        tmp_path / "pipeline" / "submitted",
+        tmp_path / "pipeline" / "closed",
+    ])
+    monkeypatch.setattr(followup, "OUTREACH_LOG", outreach_dir / "outreach-log.yaml")
+
+    followup.log_followup(
+        "test-active-entry", "linkedin", "Contact",
+        "Sent", "connect"
+    )
+
+    with open(entry_file) as f:
+        updated = _yaml.safe_load(f)
+    assert len(updated["follow_up"]) == 1
+
+
+def test_log_followup_entry_not_found(tmp_path, monkeypatch):
+    """log_followup should exit with error for nonexistent entries."""
+    import followup
+
+    monkeypatch.setattr(followup, "ALL_PIPELINE_DIRS", [tmp_path])
+
+    with pytest.raises(SystemExit) as exc_info:
+        followup.log_followup(
+            "nonexistent-entry", "linkedin", "Contact",
+            "Sent", "connect"
+        )
+    assert exc_info.value.code == 1
