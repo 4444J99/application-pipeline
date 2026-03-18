@@ -14,3 +14,6 @@ Correctness, auditability, and explicit error handling are not constraints I wor
 
 Anthony James Padavano
 New York City
+
+Sincerely,
+Anthony James Padavano

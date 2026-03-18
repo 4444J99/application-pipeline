@@ -1,0 +1,115 @@
+id: snorkel-ai-forward-deployed-engineer-data-as-a-service
+name: Snorkel AI Forward Deployed Engineer - Data-as-a-Service
+track: job
+status: submitted
+outcome: null
+target:
+  organization: Snorkel AI
+  url: https://boards.greenhouse.io/snorkelai
+  application_url: https://job-boards.greenhouse.io/snorkelai/jobs/5689470004
+  portal: greenhouse
+  location: New York City, NY (Hybrid); Redwood City, CA (Hybrid); San Francisco,
+    CA (Hybrid)
+  location_class: us-onsite
+  description: '<div class="content-intro"><p><strong>About Snorkel</strong></p> <p>At
+    Snorkel, we believe meaningful AI doesn’t start with the model, it starts with
+    the data.</p> <p>We’re on a mission to help enterprises transform expert knowledge
+    into specialized AI at scale. The AI landscape has gone through incredible changes
+    between 2015, when Snorkel started as a research project in the Stanford AI Lab,
+    to the generative AI breakthroughs of today. But one thing has remained constant:
+    the data you use to build AI is the key to achieving differentiation, high performance,
+    and production-ready systems. We work with some of the world’s largest organizations
+    to empower scientists, engineers, financial experts, product creators, journalists,
+    and more to build custom AI with their data faster than ever before. Excited to
+    help us redefine how AI is built? Apply to be the newest Snorkeler!</p></div><h2><strong>About
+    the Role</strong></h2> <p>Snorkel AI is hiring engineers who will work directly
+    on Snorkel projects,&nbsp; partnering with leading labs and enterprises to design,
+    develop, and deliver high quality AI/ML data products for their most critical
+    AI initiatives. This is a high-impact role focused on end-to-end ownership of
+    the AI data pipeline lifecycle. This includes developing and deploying ML-based
+    workflows, and building the technical foundations that make our human-in-the-loop
+    (HITL) data generation and review faster and more effective.&nbsp;</p> <p>You’ll
+    work at the critical intersection of data science, data engineering, AI engineering
+    and operations, partnering closely with our DaaS Delivery Operations team and
+    cross-functional stakeholders. You’ll develop technical specifications, design
+    evaluation workflows, implement quality standards, measurement frameworks, and
+    ML-assisted applications which improve our data pipelines and unblock projects
+    through technical innovation.</p> <p>This role is ideal for someone who is comfortable
+    working throughout the delivery lifecycle, rolling up their sleeves to solve complex
+    multi-faceted problems, thrives as a technical communicator and works well as
+    a key member of a team.</p> <h2><strong>Main Responsibilities</strong></h2> <h3><strong>Project
+    Execution &amp; Delivery</strong></h3> <ul> <li>Build and deploy evaluators, design
+    and implement quality measurement systems to validate project outputs and ensure
+    deliverables meet client expectations</li> <li>Generate synthetic datasets by
+    developing or adapting existing pipelines to accelerate client engagements and
+    augment training data</li> <li>Package and deliver production-grade datasets with
+    standardized formatting, comprehensive documentation, and quality assurance</li>
+    <li>Configure and build custom applications and off-platform solutions for non-standard
+    or specialized client requirements</li> </ul> <h3><strong>Production &amp; Technical
+    Partnership</strong></h3> <ul> <li>Define production specifications and workflows,
+    securing technical alignment with client teams to enable seamless go-live transitions</li>
+    <li>Provide ongoing technical support to Delivery Managers, addressing complex
+    questions, resolving technical blockers, and supporting customer rebuttals</li>
+    <li>Maintain specification consistency and alignment across customer and internal
+    teams throughout the engagement lifecycle</li> <li>Identify and document workflow
+    best practices and automation opportunities, collaborating with DaaS Engineering
+    to continuously improve delivery capabilities</li> </ul> <h3><strong>Technical
+    Leadership &amp; Innovation</strong></h3> <ul> <li>Maintain solution leaderboards
+    and execute custom model benchmarking on existing datasets to demonstrate technical
+    capabilities</li> <li>Drive continuous improvement of technical assets, evaluation
+    frameworks, and delivery processes to enhance speed, quality, and scalability</li>
+    </ul> <h2><strong>What We’re Looking For</strong></h2> <ul> <li>2+ years of experience
+    in data science, engineering, or solution development roles. Strong practical
+    experience with Python and SQL data tooling required</li> <li>Familiarity with
+    ML and LLM-based solutions, applying ML techniques in production contexts, and
+    validation and evaluation of ML and LLM-based</li> <li>Experience integrating
+    systems via API</li> </ul> <p>Compensation range for Tier 1 locations of San Francisco
+    Bay Area and New York City, $172K - $300K OTE. All offers also include equity
+    in the form of employee stock options. Our compensation ranges are determined
+    by role, level, and location. Within the range, individual pay is determined by
+    work location and additional factors, including job-related skills, experience,
+    and relevant education or training.</p> <h2>Why Join Snorkel AI?</h2> <p>At Snorkel
+    AI, we''re building the future of data-centric AI. Our Expert Data-as-a-Service
+    organization partners with world-class customers to solve some of the hardest
+    data challenges — creating training and evaluation data that power the next generation
+    of '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used:
+    framing: framings/documentation-engineer
+    evidence: evidence/differentiators
+    methodology: methodology/ai-conductor
+    credentials: pitches/credentials-creative-tech
+    work_samples: evidence/work-samples
+  variant_ids:
+    cover_letter: cover-letters/snorkel-ai-forward-deployed-engineer-data-as-a-service
+  materials_attached:
+  - resumes/batch-03/snorkel-ai-forward-deployed-engineer-data-as-a-service/snorkel-ai-forward-deployed-engineer-data-as-a-service-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-18'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-18'
+  discovered: '2026-03-18T17:32:05.628588+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-18'
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-03-18'

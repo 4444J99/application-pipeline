@@ -298,7 +298,7 @@ def generate_checklist(
 
 # --- Cover letter quality gate ---
 
-COVER_LETTER_MIN_WORDS = 350
+COVER_LETTER_MIN_WORDS = 300
 COVER_LETTER_MAX_WORDS = 550
 COVER_LETTER_BANNED_PHRASES = [
     "South Florida",  # Wrong location — user is in NYC

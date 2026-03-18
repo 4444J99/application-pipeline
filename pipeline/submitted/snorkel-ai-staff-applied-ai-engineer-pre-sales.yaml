@@ -1,0 +1,115 @@
+id: snorkel-ai-staff-applied-ai-engineer-pre-sales
+name: Snorkel AI Staff Applied AI Engineer - Pre-Sales
+track: job
+status: submitted
+outcome: null
+target:
+  organization: Snorkel AI
+  url: https://boards.greenhouse.io/snorkelai
+  application_url: https://job-boards.greenhouse.io/snorkelai/jobs/5831080004
+  portal: greenhouse
+  location: New York City, NY (Hybrid); Redwood City, CA (Hybrid); San Francisco,
+    CA (Hybrid); United States (Remote)
+  location_class: us-remote
+  description: '<div class="content-intro"><p><strong>About Snorkel</strong></p> <p>At
+    Snorkel, we believe meaningful AI doesn’t start with the model, it starts with
+    the data.</p> <p>We’re on a mission to help enterprises transform expert knowledge
+    into specialized AI at scale. The AI landscape has gone through incredible changes
+    between 2015, when Snorkel started as a research project in the Stanford AI Lab,
+    to the generative AI breakthroughs of today. But one thing has remained constant:
+    the data you use to build AI is the key to achieving differentiation, high performance,
+    and production-ready systems. We work with some of the world’s largest organizations
+    to empower scientists, engineers, financial experts, product creators, journalists,
+    and more to build custom AI with their data faster than ever before. Excited to
+    help us redefine how AI is built? Apply to be the newest Snorkeler!</p></div><h2>About
+    Snorkel</h2> <p>We’re on a mission to democratize AI by building the definitive
+    AI data development platform. The AI landscape has gone through incredible change
+    between 2016, when Snorkel started as a research project in the Stanford AI Lab,
+    to the generative AI breakthroughs of today. But one thing has remained constant:
+    the data you use to build AI is the key to achieving differentiation, high performance,
+    and production-ready systems. We work with some of the world’s largest organizations
+    to empower scientists, engineers, financial experts, product creators, journalists,
+    and more to build custom AI with their data faster than ever before. Excited to
+    help us redefine how AI is built? Apply to be the newest Snorkeler!</p> <p>As
+    an&nbsp;<strong>Applied AI Engineer (Pre-Sales)</strong>, you will partner closely
+    with Sales and our AI Solution Practice Leaders during pre-sales engagements.
+    You will lead technical discovery and solution scoping to identify high-value
+    use cases, and develop tailored demos and pilots that demonstrate how modern GenAI
+    and machine learning techniques can drive measurable business outcomes. You will
+    also translate proposed solutions into clearly scoped, technically sound proposals
+    and Statement of Works (SOWs) that set realistic expectations and position engagements
+    for success, while collaborating with delivery teams during initial implementation.</p>
+    <p>This role sits at the intersection of deep technical problem-solving and customer
+    partnership. You will help customers unpack complex business challenges, quickly
+    prototype solutions, and clearly communicate technical approaches to both engineering
+    teams and senior business stakeholders. From early architecture discussions to
+    demo development, you will play a key role in helping organizations adopt AI effectively
+    while surfacing field insights that inform our product and research roadmap.</p>
+    <h2>Main Responsibilities</h2> <ul> <li>Partner closely with Sales and our AI
+    Solution Practice Leaders to shape technical strategy across active prospects,
+    win technical evaluations, and ensure a seamless transition to post-sales delivery
+    through structured handoff documentation and clear expectation alignment.</li>
+    <li>Lead structured technical discovery engagements with prospects to understand
+    business objectives, success criteria, data landscape, architectural constraints,
+    security considerations, and organizational readiness.</li> <li>Translate discovery
+    findings into well-defined GenAI solution architectures that demonstrate technical
+    feasibility and business impact using internal frameworks, and complementary third-party
+    technologies.</li> <li>Design, build and deliver bespoke demos, including evaluation
+    pipelines, dataset strategy, retrieval-augmented generation systems, fine-tuning
+    workflows, prompt engineering strategies, and agentic architectures tailored to
+    specific customer use cases and senior business stakeholders.</li> <li>Author
+    and contribute to custom proposals, including Statements of Work and RFP/RFI responses,
+    ensuring scope clarity, architectural soundness, realistic effort estimates, and
+    alignment with delivery capabilities.</li> <li>Systematically capture reusable
+    patterns from bespoke demos and evolve them into reference architectures, demo
+    assets, benchmarks, and internal solution playbooks.</li> <li>Annual travel up
+    to 25%.</li> </ul> <h2>Preferred Qualifications</h2> <ul> <li>B.S. in Computer
+    Science, Engineering, Math/Statistics, or equivalent experience.</li> <li>5+ years
+    in customer-facing technical roles (pre-sales, solutions engineering, or applied
+    AI), including discovery, scoping, demos, proof-of-value engagements, and RFP
+    responses.</li> <li>Hands-on Python experience and familiarity with the modern
+    Gen AI stack -&nbsp; LLM ecosystems, RAG, vector databases, data processing, synthetic
+    dataset curation, evaluation workflows, LLM orchestration and agent authoring
+    tools.</li> <li>Expertise across the predictive ML stack, including classical
+    ML (e.g., scikit-learn) and data processing frameworks (e.g., pandas, Spark).</li>
+    <'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used:
+    framing: framings/documentation-engineer
+    evidence: evidence/differentiators
+    methodology: methodology/ai-conductor
+    credentials: pitches/credentials-creative-tech
+    work_samples: evidence/work-samples
+  variant_ids:
+    cover_letter: cover-letters/snorkel-ai-staff-applied-ai-engineer-pre-sales
+  materials_attached:
+  - resumes/batch-03/snorkel-ai-staff-applied-ai-engineer-pre-sales/snorkel-ai-staff-applied-ai-engineer-pre-sales-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-18'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-18'
+  discovered: '2026-03-18T17:32:05.633291+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-18'
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-03-18'

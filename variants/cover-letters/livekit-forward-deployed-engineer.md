@@ -12,3 +12,6 @@ I hold a Meta Full-Stack Developer certification and have been teaching technica
 
 Anthony James Padavano
 New York City
+
+Sincerely,
+Anthony James Padavano

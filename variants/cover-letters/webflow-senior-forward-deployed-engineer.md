@@ -12,3 +12,6 @@ I hold a Meta Full-Stack Developer certification and an MFA. I'd welcome the opp
 
 Anthony James Padavano
 New York City
+
+Sincerely,
+Anthony James Padavano
