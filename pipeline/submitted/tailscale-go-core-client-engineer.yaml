@@ -10,67 +10,8 @@ target:
   portal: greenhouse
   location: Remote (United States)
   location_class: us-remote
-  description: '<div class="content-intro"><p><strong>About Tailscale&nbsp;</strong></p>
-    <p>Tailscale is building the new Internet by delivering software that makes it
-    easy to securely interconnect people and their devices, no matter where they are.
-    From hobbyists to multinational corporations, teams of every size use Tailscale
-    each day to protect their networks, share access to internal tools, and more.
-    We''re building a future for the Internet that''s easy, sensible, and safe, like
-    it used to be. Founded in 2019 and fully distributed, we''re backed by Accel,
-    CRV, Insight, Heavybit, and Uncork Capital.</p></div><p><span style="font-size:
-    12pt;"><strong>Job Description</strong></span></p> <p>We’re hiring a Go Core Client
-    Engineer. This remote role is for an engineer who will design, implement, and
-    operate the Go-based shared client code that powers our product. You’ll work on
-    core client subsystems: connection management, NAT traversal, control connection,
-    encrypted transport, client lifecycle, and cross-platform runtime. You will be
-    expected to ship end-to-end features, and improve reliability, performance, and
-    observability.</p> <p><span style="font-size: 12pt;"><strong>Key Responsibilities</strong></span></p>
-    <ul> <li>Design, implement, test, and maintain core client features in Go: connection
-    orchestration, reconnection strategies, NAT traversal, encrypted transport lifecycle,
-    and sync logic.</li> <li>Ship end-to-end client work: design, implementation,
-    launch, and observability (metrics, logs, traces).</li> <li>Diagnose and reduce
-    client performance and reliability issues.</li> <li>Collaborate closely with product,
-    per-platform clients, and platform teams.</li> <li>Champion engineering excellence
-    by driving code quality, architectural reviews, and design documentation.</li>
-    <li>Provide technical leadership and mentorship to other engineers, fostering
-    a culture of learning and knowledge sharing.</li> </ul> <p><span style="font-size:
-    12pt;"><strong>What We Are Looking For</strong></span></p> <p>The list below captures
-    the skills and experiences we use to evaluate candidates. A strong candidate will
-    typically demonstrate a subset of those items. You don’t need to meet every bullet
-    to be a good fit, and we consider the overall combination of skills, growth potential,
-    and impact.</p> <ul> <li>Strong production experience writing and shipping Go
-    code (experience with Go is required).</li> <li>Experience operating large Go
-    codebases and designing robust client or distributed systems.</li> <li>Startup
-    mindset: flexibility to adjust to changing priorities and thrive in an async,
-    remote environment.</li> <li>Strong written and verbal communication and the ability
-    to collaborate across product and engineering stakeholders</li> </ul> <p><span
-    style="font-size: 12pt;"><strong>Nice to Have</strong></span></p> <ul> <li>Experience
-    with concurrency, performance tuning, and debugging.</li> <li>Solid networking
-    and systems fundamentals: IP, routing, NATs, TCP/UDP, and TLS.</li> <li>Experience
-    with P2P, WireGuard or similar encrypted transports and NAT traversal techniques.</li>
-    </ul> <p>As a company, we strive to maintain fair and equitable compensation practices
-    within our team across all roles and all levels. Tailscale''s compensation package
-    includes base salary, equity, and comprehensive benefits. The salary range displayed
-    on each job posting represents the target range for a new hire''s base salary.
-    Individual offers may vary based on experience and skill set.</p><div class="content-pay-transparency"><div
-    class="pay-input"><div class="title">US Pay Range</div><div class="pay-range"><span>$163,000</span><span
-    class="divider">&mdash;</span><span>$226,000 USD</span></div></div></div><div
-    class="content-conclusion"><p><em data-stringify-type="italic">Frequently cited
-    statistics show that people who identify with historically marginalized groups
-    are likely to apply to jobs only if they meet 100% of the qualifications.&nbsp;</em><strong
-    data-stringify-type="bold"><em data-stringify-type="italic">We encourage you to
-    help us break that statistic!</em></strong></p> <p><strong>What We Offer</strong></p>
-    <ul> <li><strong>An inclusive, flexible environment where you can be your authentic
-    self.</strong> We recognize the impact of diverse voices and backgrounds on the
-    growth of our people, product, and company. And that flexibility in how and when
-    you work empowers our team to integrate work and life.</li> <li><strong>A competitive
-    total compensation package.</strong> This includes a base salary, an equity incentive
-    plan and variable commission (for quota-based roles).</li> <li><strong>Comprehensive
-    group benefits with no waiting period. </strong>Take advantage of coverage for
-    health, vision, dental, and more for you and your family!</li> <li><strong>Remote
-    first company</strong>—most of our teams work fully remotely. Enjoy a change of
-    scenery wherever you can get wifi, participate in virtual and in-person social
-    events, and leverage our corporate c'
+  description: '<div class="content-intro"><p><strong>About Tailscale&nbsp;</strong></p> <p>Tailscale is building the new Internet by delivering software that makes it easy to securely interconnect people and their devices, no matter where they are. From hobbyists to multinational corporations, teams of every size use Tailscale each day to protect their networks, share access to internal tools, and more. We''re building a future for the Internet that''s easy, sensible, and safe, like it used to be. Founded in 2019 and fully distributed, we''re backed by Accel, CRV, Insight, Heavybit, and Uncork Capital.</p></div><p><span style="font-size: 12pt;"><strong>Job Description</strong></span></p> <p>We’re hiring a Go Core Client Engineer. This remote role is for an engineer who will design, implement, and operate the Go-based shared client code that powers our product. You’ll work on core client subsystems: connection management, NAT traversal, control connection, encrypted transport, client lifecycle, and cross-platform runtime. You will be expected to ship end-to-end features, and improve reliability, performance, and observability.</p> <p><span style="font-size: 12pt;"><strong>Key Responsibilities</strong></span></p> <ul> <li>Design, implement, test, and maintain core client features in Go: connection orchestration, reconnection strategies, NAT traversal, encrypted transport lifecycle, and sync logic.</li> <li>Ship end-to-end client work: design, implementation, launch, and observability (metrics, logs, traces).</li> <li>Diagnose and reduce client performance and reliability issues.</li> <li>Collaborate closely with product, per-platform clients, and platform teams.</li> <li>Champion engineering excellence by driving code quality, architectural reviews, and design documentation.</li> <li>Provide technical leadership and mentorship to other engineers, fostering a culture of learning and knowledge sharing.</li> </ul> <p><span style="font-size: 12pt;"><strong>What We Are Looking For</strong></span></p> <p>The list below captures the skills and experiences we use to evaluate candidates. A strong candidate will typically demonstrate a subset of those items. You don’t need to meet every bullet to be a good fit, and we consider the overall combination of skills, growth potential, and impact.</p> <ul> <li>Strong production experience writing and shipping Go code (experience with Go is required).</li> <li>Experience operating large Go codebases and designing robust client or distributed systems.</li> <li>Startup mindset: flexibility to adjust to changing priorities and thrive in an async, remote environment.</li> <li>Strong written and verbal communication and the ability to collaborate across product and engineering stakeholders</li> </ul> <p><span style="font-size: 12pt;"><strong>Nice to Have</strong></span></p> <ul> <li>Experience with concurrency, performance tuning, and debugging.</li> <li>Solid networking and systems fundamentals: IP, routing, NATs, TCP/UDP, and TLS.</li> <li>Experience with P2P, WireGuard or similar encrypted transports and NAT traversal techniques.</li> </ul> <p>As a company, we strive to maintain fair and equitable compensation practices within our team across all roles and all levels. Tailscale''s compensation package includes base salary, equity, and comprehensive benefits. The salary range displayed on each job posting represents the target range for a new hire''s base salary. Individual offers may vary based on experience and skill set.</p><div class="content-pay-transparency"><div class="pay-input"><div class="title">US Pay Range</div><div class="pay-range"><span>$163,000</span><span class="divider">&mdash;</span><span>$226,000 USD</span></div></div></div><div class="content-conclusion"><p><em data-stringify-type="italic">Frequently cited statistics show that people who identify with historically marginalized groups are likely to apply to jobs only if they meet 100% of the qualifications.&nbsp;</em><strong data-stringify-type="bold"><em data-stringify-type="italic">We encourage you to help us break that statistic!</em></strong></p>
+    <p><strong>What We Offer</strong></p> <ul> <li><strong>An inclusive, flexible environment where you can be your authentic self.</strong> We recognize the impact of diverse voices and backgrounds on the growth of our people, product, and company. And that flexibility in how and when you work empowers our team to integrate work and life.</li> <li><strong>A competitive total compensation package.</strong> This includes a base salary, an equity incentive plan and variable commission (for quota-based roles).</li> <li><strong>Comprehensive group benefits with no waiting period. </strong>Take advantage of coverage for health, vision, dental, and more for you and your family!</li> <li><strong>Remote first company</strong>—most of our teams work fully remotely. Enjoy a change of scenery wherever you can get wifi, participate in virtual and in-person social events, and leverage our corporate c'
 deadline:
   date: null
   type: rolling
@@ -104,10 +45,30 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
+  follow_up_count: 3
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-03-18'
+last_touched: "2026-03-18"
 status_meta:
   submitted_by: 4jp
   submitted_at: '2026-03-18'
+follow_up:
+- date: '2026-03-18'
+  channel: linkedin
+  contact: Andrew Mitchell
+  type: dm
+  note: Connection request sent — VP Engineering
+  response: none
+- date: '2026-03-18'
+  channel: linkedin
+  contact: Matt Provost
+  type: dm
+  note: Connection request sent
+  response: none
+- date: '2026-03-18'
+  channel: linkedin
+  contact: Aleksandar Pesic
+  type: dm
+  note: Connection request sent
+  response: none
