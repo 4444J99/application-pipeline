@@ -1,0 +1,114 @@
+id: instacart-senior-software-engineer-ii-storage
+name: Instacart Senior Software Engineer II, Storage
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Instacart
+  url: https://boards.greenhouse.io/instacart
+  application_url: https://instacart.careers/job/?gh_jid=7564947
+  portal: greenhouse
+  location: United States - Remote
+  location_class: us-remote
+  description: '<div class="content-intro"><p><strong>We''re transforming the grocery
+    industry</strong></p> <p><span class="im">At Instacart, we invite the world to
+    share love through food because we believe everyone should have access to the
+    food they love and more time to enjoy it together. Where others see a simple need
+    for grocery delivery, we see exciting complexity and endless opportunity to serve
+    the varied needs of our community. We work to deliver an essential service that
+    customers rely on to get their groceries and household goods, while also offering
+    safe and flexible earnings opportunities to Instacart Personal Shoppers.</span></p>
+    <p>Instacart has become a lifeline for millions of people, and we’re building
+    the team to help push our shopping cart forward. If you’re ready to do the best
+    work of your life, come join our table.</p> <p><strong>Instacart is a Flex First
+    team </strong></p> <p>There’s no one-size fits all approach to how we do our best
+    work. Our employees have the flexibility to choose where they do their best work—whether
+    it’s from home, an office, or your favorite coffee shop—while staying connected
+    and building community through regular in-person events. <a href="https://instacart.careers/remote/"
+    target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://instacart.careers/remote/&amp;source=gmail&amp;ust=1651869232122000&amp;usg=AOvVaw37OlxP8hAKN7nq4YwHQH7e">Learn
+    more about our flexible approach to where we work.</a></p></div><h2>OVERVIEW</h2>
+    <p>Instacart is powered by a robust set of cloud services. Our backend systems
+    power the clients used by millions of customers every year to buy their groceries
+    online. These systems must also support tight integration with the largest retailers
+    in the US and Canada. Engineering at Instacart provides the opportunity to work
+    on challenging scaling problems while also designing the features that will define
+    our industry. Large-scale caching and storage plays an integral role in delivering
+    efficient, performant experiences to customers. You will have the opportunity
+    to own and build a whole new set of foundational engineering components in an
+    open collaborative environment serving millions of requests daily.</p> <h2>ABOUT
+    THE TEAM</h2> <p>Instacart’s storage needs are ever-evolving and growing. The
+    Database Storage team are stewards of the database infrastructure that supports
+    Instacart’s core lines of business. The scale of this involves hundreds of clusters
+    holding petabytes of data, with continuous 24/7 monitoring and uptime requirements.
+    In response to this dynamic, demanding environment, the nature of our work is
+    to innovate the automated monitoring &amp; control-plane systems that run the
+    clusters, as well as related supporting services like database proxies, snapshotting
+    and backups, working with major cloud providers, supporting multiple environments
+    for development and testing, data privacy and compliance at the infrastructure
+    level. At the same time, we’re investing and preparing for Instacart’s future
+    growth and success with forward-looking architectural shifts including distributed
+    database systems, AI Agent-based monitoring and operations, tiered database storage.
+    We’re focused on solutions that directly impact Instacart through stability, productivity
+    and cost management, visible at the Executive level.</p> <h2>ABOUT THE JOB</h2>
+    <p>If you’re excited by distributed systems at massive scale, real‑time data challenges,
+    and opportunities to shape the future of AI‑powered commerce, this team offers
+    a chance for outsized impact in a fast‑paced environment:&nbsp;</p> <ul> <li>You
+    will be a senior engineer in the team responsible for Storage platforms, with
+    a large amount of ownership and autonomy for setting technical direction, reporting
+    to an engineering manager.</li> <li>You will work closely with other application
+    engineering teams and internal stakeholders, owning a large part of the process
+    from problem understanding to shipping the solution.</li> <li>You will ship high
+    quality, scalable and robust solutions with a sense of urgency.</li> <li>You will
+    have the freedom to suggest and drive high-impact initiatives related to Storage
+    solutions that unlock new innovations, accelerate application development, create
+    resiliency &amp; high-availability, and right-size storage needs company-wide.</li>
+    </ul> <p>Instacart''s technology is constantly changing and adapting. Some of
+    the technologies you would use at Instacart include:</p> <ul> <li>Languages: Go,
+    Python and Rust</li> <li>Core Platforms: RDS, Postgres, Yugabyte, EC2 and selected
+    GCP services</li> <li>Observability and Analytics: Datadog, Cloudwatch, Sentry
+    and Snowflake</li> </ul> <p>If you have experience with these technologies, you
+    will have the opportunity to dive deeper. If you haven''t used these technologies
+    you will have the chance to learn from the collective experience of our team.</p>
+    <h2>ABOUT YOU</h2> <p>Minimum Qualifications:</p> <ul> <li>5+ years of working
+    experie'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-16'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:32.880318+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-18"

@@ -1,0 +1,114 @@
+id: samsara-staff-software-engineer-developer-ecosystem
+name: Samsara Staff Software Engineer - Developer Ecosystem
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Samsara
+  url: https://boards.greenhouse.io/samsara
+  application_url: https://www.samsara.com/company/careers/roles/7547233?gh_jid=7547233
+  portal: greenhouse
+  location: Remote - UK
+  location_class: international
+  description: '<div class="content-intro"><p><span style="font-family: arial, helvetica,
+    sans-serif;"><strong>Who we are</strong></span></p> <p><span style="font-weight:
+    300; font-family: arial, helvetica, sans-serif;">Samsara (NYSE: IOT) is the pioneer
+    of the Connected Operations™ Cloud, which is a platform that enables organizations
+    that depend on physical operations to harness Internet of Things (IoT) data to
+    develop actionable insights and improve their operations. At Samsara, we are helping
+    improve the safety, efficiency and sustainability of the physical operations that
+    power our global economy. Representing more than 40% of global GDP, these industries
+    are the infrastructure of our planet, including agriculture, construction, field
+    services, transportation, and manufacturing — and we are excited to help digitally
+    transform their operations at scale.</span></p> <p><span style="font-weight: 300;
+    font-family: arial, helvetica, sans-serif;">Working at Samsara means you’ll help
+    define the future of physical operations and be on a team that’s shaping an exciting
+    array of product solutions, including Video-Based Safety, Vehicle Telematics,
+    Apps and Driver Workflows, and Equipment Monitoring. As part of a recently public
+    company, you’ll have the autonomy and support to make an impact as we build for
+    the long term.</span></p></div><p><strong>About the role:</strong></p> <p>The
+    global economy runs on physical operations, yet the data that powers them remains
+    fragmented and slow. We are building the system of record that connects vehicles,
+    equipment, and sites, creating a central nervous system for the industries that
+    power our world.</p> <p>You will architect the developer ecosystem that allows
+    our customers and partners to build the next generation of solutions for transport,
+    construction, and utilities, powered by Samsara''s data and AI.</p> <p>This is
+    a remote position open to candidates residing in Poland or the United Kingdom.</p>
+    <h4><strong>Key Responsibilities:</strong></h4> <ul> <li>Architect the data nervous
+    system for physical operations, evolving our high-throughput eventing platform
+    into the core data pipeline for customer and internal AI initiatives.</li> <li>Own
+    the strategy and architecture for our serverless compute platform, empowering
+    thousands of developers to run complex logic directly on Samsara''s data streams.</li>
+    <li>Spearhead the technical vision for our external APIs, establishing the architectural
+    governance that ensures consistency and scalability across all Samsara products.</li>
+    <li>Operate as a force-multiplier for engineering, mentoring senior engineers
+    and driving technical alignment on our most complex systems.</li> <li>Define the
+    multi-year technical roadmap for our developer platform by partnering directly
+    with product leadership and our largest enterprise customers.</li> </ul> <p><strong>What
+    We Look For:&nbsp;</strong></p> <ul> <li>Proven impact architecting and operating
+    large-scale data streaming systems. You have the scars from building and scaling
+    Kafka systems in production.</li> <li>A builder''s mindset for data and AI. You
+    see beyond the event stream and can architect the connection between Kafka, data
+    lakes, and ML infrastructure to unlock new intelligence.</li> <li>Pragmatic expertise
+    in serverless compute. You understand the trade-offs and can design architectures
+    that are powerful for developers and efficient to operate.</li> <li>A history
+    of owning public-facing APIs. You''ve established the technical vision and governance
+    that enables an entire ecosystem of developers to build with confidence.</li>
+    <li>Intellectual honesty in leadership. You align multiple engineering teams around
+    a complex technical vision and drive it from concept to customer delivery.</li>
+    <li>A drive to raise the standard. Your technical depth and clarity of thought
+    elevate the engineers you work with.</li> </ul><div class="content-conclusion"><p><strong>Total
+    Rewards</strong></p> <p>At Samsara, we build for the people who keep the global
+    economy moving. We want owners, not passengers, which is why <a href="https://www.samsara.com/company/careers/benefits">our
+    rewards</a> are designed to fuel high-impact builders. Our compensation program
+    delivers above-market total compensation through a combination of base salary,
+    performance-based bonus/variable pay, and equity (for eligible roles) in a high-growth
+    public company. We meaningfully differentiate pay for our top performers, who
+    have the opportunity to earn above-market compensation that can outpace the broader
+    market over time.</p> <p>Beyond compensation, we provide the foundations that
+    enable long-term success: a flexible, employee-led remote model, a professional
+    development stipend, comprehensive health and parental leave plans, and more.
+    If you’re ready to build for the long term and own the outcome, your journey starts
+    here.</p> <p><strong>Flexible Working&nbsp;</strong></p> <p><span style="font-weight:
+    400;">At Samsara, we embrace a flexible working '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.4
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-16'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:34.122253+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-18"

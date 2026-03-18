@@ -1,0 +1,112 @@
+id: datadog-staff-software-engineer-frontend
+name: Datadog Staff Software Engineer - Frontend
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Datadog
+  url: https://boards.greenhouse.io/datadog
+  application_url: https://careers.datadoghq.com/detail/7375183/?gh_jid=7375183
+  portal: greenhouse
+  location: New York, New York, USA
+  location_class: us-onsite
+  description: '<p class="p1">Datadog’s Staff Engineers are our technical leaders
+    operating at the forefront of technology, building solutions that take us through
+    at least our next five years of growth. They do this in three major ways:</p>
+    <p class="p1">As individual contributors, they bring world class technical abilities
+    to deliver industry leading systems in areas such as data visualization, virtual
+    runtime profiling, and planet scale streaming.</p> <p class="p1">As technical
+    leaders they bring experienced technical breadth and communication skills to tackling
+    design and architectural problems spanning the organization, charting the right
+    course, then leading delivery.</p> <p class="p1">In both roles they participate
+    in the staff engineering community and help us learn from what the industry is
+    doing and what we''ve built before, and so improve company wide standards around
+    software and systems engineering.<span class="Apple-converted-space">&nbsp;</span></p>
+    <p class="p1">Examples of projects you might take on as a staff engineer include
+    designing and implementing a major improvement to a system or tool that many application
+    engineering teams depend on, developing a new Datadog product line from initial
+    outline to public launch (and beyond), or breaking down a complex UX problem,
+    solving the fundamental workflows, and polishing your solution until it feels
+    totally intuitive.</p> <p class="p1"><em data-renderer-mark="true">Datadog values
+    people from all walks of life. We understand not everyone will meet all the above
+    qualifications on day one. That''s okay. If you’re passionate about technology
+    and want to grow your skills, we encourage you to apply.</em></p> <p class="p2"><em
+    data-stringify-type="italic">At Datadog, we place value in our office culture
+    - the relationships that it builds, the creativity it brings to the table, and
+    the collaboration of being together. We operate as a hybrid workplace to ensure
+    our employees can create a work-life harmony that best fits them.</em></p> <p
+    class="p2">&nbsp;</p> <p class="p1"><strong data-renderer-mark="true">What You’ll
+    Do:</strong></p> <ul class="ul1"> <li class="li3"><span class="s1">Use your expertise
+    to design and deliver technology that will power the next generation of products</span></li>
+    <li class="li3"><span class="s1">Take cross-team decisions that will influence
+    the Datadog frontend community at large</span></li> <li class="li3"><span class="s1">Lead
+    through example and excellence, helping the people around you grow</span></li>
+    <li class="li3">Improve processes on your team, and across the whole of frontend
+    engineering</li> </ul> <p class="p1"><strong data-renderer-mark="true">Who You
+    Are:</strong></p> <ul class="ul1"> <li class="li3">10+ years of relevant engineering
+    experience</li> <li class="li3">4+ years of technical leadership experience, including
+    both effective communication of complex concepts and experience coordinating across
+    teams to ship critical products</li> <li class="li3">Strong UI/UX intuition, adept
+    at working closely with product design and product management stakeholders to
+    develop a shared vision and deliver on it</li> <li class="li3">You have led development
+    of high-complexity, high-performance interactive browser applications, including
+    architecture, interaction design, and optimization</li> <li class="li3">Ability
+    to bring best practices from across the world of software engineering and adapt
+    them to the frontend environment</li> <li class="li4">Knowledge of React and TypeScript</li>
+    <li class="li4">You have demonstrated ability to use AI coding tools in day-to-day
+    workflows and validate, critique, and refine AI-generated output</li> <li class="li4">You’re
+    motivated to push the boundaries of how AI can improve software engineering best
+    practices and contribute to building AI-enabled products</li> </ul> <p><span class="s1"><br></span><strong
+    data-renderer-mark="true">Benefits and Growth:</strong></p> <ul> <li data-renderer-start-pos="7933">High
+    income earning opportunities based on individual performance</li> <li data-renderer-start-pos="8002">New
+    hire stock equity (RSUs) and employee stock purchase plan (ESPP)</li> <li data-renderer-start-pos="8074">Continuous
+    professional development, product training, and career pathing</li> <li data-renderer-start-pos="8206">Intradepartmental
+    mentor and buddy program for in-house networking</li> <li data-renderer-start-pos="8276">An
+    inclusive company culture, ability to join our Community Guilds (Datadog employee
+    resource groups)</li> <li data-renderer-start-pos="8381">Access to Inclusion Talks,
+    our Internal panel discussions</li> <li data-renderer-start-pos="8442">Free, global
+    Spring Health benefits for employees and dependents age 6+</li> <li data-renderer-start-pos="8517">Competitive
+    global benefits</li> <li data-renderer-start-pos="8548">Giving programs<br><br></li>
+    <li style="color: white; font-weight: bold;"><strong>#LI-SH1</strong></li> </ul>
+    <p style="color: white;">#LI-Hybrid</p><div class="co'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-16'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:32.597646+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-18"

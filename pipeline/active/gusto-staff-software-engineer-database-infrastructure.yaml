@@ -1,0 +1,114 @@
+id: gusto-staff-software-engineer-database-infrastructure
+name: Gusto Staff Software Engineer, Database Infrastructure
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Gusto
+  url: https://boards.greenhouse.io/gusto
+  application_url: https://job-boards.greenhouse.io/gusto/jobs/7413644
+  portal: greenhouse
+  location: Denver, CO;San Francisco, CA;New York, NY;Los Angeles, CA;Seattle, WA
+  location_class: us-onsite
+  description: '<div class="content-intro"><p style="line-height: 1.2;">&nbsp;</p>
+    <hr> <p><strong>About Gusto</strong></p> <p><span style="font-weight: 400;">At
+    Gusto, we''re on a mission to grow the small business economy. We handle the hard
+    stuff—like payroll, health insurance, 401(k)s, and HR—so owners can focus on their
+    craft and customers. With teams in Denver, San Francisco, and New York, we’re
+    proud to support more than 400,000 small businesses across the country, and we’re
+    building a workplace that represents and celebrates the customers we serve. Learn
+    more about our </span><a href="https://gusto.com/about/careers/total-rewards"><span
+    style="font-weight: 400;">Total Rewards philosophy</span></a><span style="font-weight:
+    400;">.&nbsp;</span></p></div><p><strong>About the Role:</strong></p> <p>We''re
+    looking for an experienced engineer with deep expertise in distributed data systems
+    to shape the future of Gusto''s storage layer. You''ll manage complex migrations,
+    architect high-scale systems, and set standards for automation, resiliency, and
+    security. This is a high-impact role where you''ll implement distributed database
+    solutions that enable Gusto''s continued growth and scale.</p> <p><strong>About
+    the Team:</strong></p> <p>The Datastores Infrastructure Engineering team designs,
+    builds, and operates the data platforms that power Gusto''s product: MySQL, Postgres,
+    Redis, Kafka, and S3. We ensure our infrastructure is consistent, reliable, and
+    ready to support Gusto''s growing needs. As we transition to self-hosted distributed
+    databases, the team is focused on reducing blast radius, improving operational
+    resilience, and enabling sustainable scale.</p> <p><strong>Here’s what you’ll
+    do day-to-day:</strong></p> <ul> <li>Architect, deploy, and own the full lifecycle
+    of distributed database systems (TiDB) on Kubernetes at scale, ensuring high availability,
+    data consistency, and operational excellence</li> <li>Coordinate complex, zero-downtime
+    migrations from monolithic to distributed architectures, including vertical sharding
+    to isolate Product Services</li> <li>Define and drive efficiency improvements
+    across the storage infrastructure through query optimization, caching strategies,
+    and workload management</li> <li>Define standards and build reliable automation
+    to ensure data consistency, integrity, and security across distributed systems</li>
+    <li>Continuously improve operational excellence by reducing on-call burden through
+    sustainable, long-term solutions</li> <li>Partner with product engineering teams
+    and technical collaborators to enable rapid and reliable product development</li>
+    <li>Mentor engineers across the Datastores Infrastructure team on best practices
+    for operating complex, self-hosted distributed systems, actively developing our
+    collective operational expertise</li> </ul> <p><strong>Here’s what we''re looking
+    for:</strong></p> <ul> <li>12+ years of software engineering experience building
+    and scaling large-scale infrastructure systems</li> <li>Hands-on experience building
+    and operating distributed databases on Kubernetes (strongly preferred: TiDB; alternatively:
+    CockroachDB, Vitess, Citus, or similar solutions)</li> <li>Deep expertise in distributed
+    data systems including horizontal sharding, partitioning strategies, and distributed
+    transaction management</li> <li>Proven experience coordinating complex, zero-downtime
+    migrations affecting production systems at scale</li> <li>5+ years of AWS experience
+    with RDS, Aurora, caching systems (Redis/ValKey), streaming platforms (Kafka),
+    and infrastructure optimization at scale</li> <li>Strong communication skills
+    with the ability to simplify technical complexity and collaborate on technical
+    direction across teams</li> <li>Curiosity and ability to operate in an AI-native
+    environment, leveraging AI tooling to enhance infrastructure operations, driving
+    improvements in&nbsp; query optimization, performance evaluation, and infrastructure
+    automation</li> <li>Bonus: Experience with service extraction and vertical sharding
+    from monolithic architectures</li> <li>Bonus: Experience working with Ruby on
+    Rails or similar MVC frameworks at scale</li> </ul> <p class="p1">Our cash compensation
+    amount for this role is targeted at $200,000-$230,000 /yr in Denver &amp; most
+    remote locations, and $230,000-$270,000 /yr for San Francisco, Seattle &amp; New
+    York. Final offer amounts are determined by multiple factors, including candidate
+    experience and expertise, and may vary from the amounts listed above.</p> <p class="p1">&nbsp;</p><div
+    class="content-conclusion"><hr> <p><span style="font-weight: 400;">Gusto has physical
+    office spaces in Denver, San Francisco, and New York City. Employees who are based
+    in those locations will be expected to work from the office on designated days
+    approximately <strong>2-3 days </strong>per week (or more depending on role).
+    The same office expectations apply to all Symmetry roles, Gusto''s subsidiary,
+    whose physical office is in Scottsdale.</span></p> <p>Note: Th'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-16'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:32.789924+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-18"

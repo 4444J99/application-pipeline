@@ -1,0 +1,100 @@
+id: stripe-staff-software-engineer-billing-subscriptions
+name: Stripe Staff Software Engineer, Billing Subscriptions
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=5846766
+  portal: greenhouse
+  location: Toronto, Canada, Canada Remote
+  location_class: international
+  description: '<h2>Who we are</h2> <h3>About Stripe</h3> <p>Stripe is a financial
+    infrastructure platform for businesses. Millions of companies—from the world’s
+    largest enterprises to the most ambitious startups—use Stripe to accept payments,
+    grow their revenue, and accelerate new business opportunities. Our mission is
+    to increase the GDP of the internet, and we have a staggering amount of work ahead.
+    That means you have an unprecedented opportunity to put the global economy within
+    everyone’s reach while doing the most important work of your career.</p> <h3>About
+    the team</h3> <p>Join Stripe''s Subscriptions team to help people start, run and
+    scale businesses with complex recurring payments from anywhere in the world. Our
+    users depend on our products to make it easy to accept recurring payments: from
+    selling SaaS subscriptions, to orchestrating multi-stage contracts, and allowing
+    merchants to utilize powerful quote lifecycle features. We deliver these capabilities
+    at scale to manage millions of recurring payments a day, for businesses ranging
+    from exciting, fast moving startups to large, world-spanning companies.</p> <h2>What
+    you’ll do</h2> <p>Subscriptions team members have the opportunity to design and
+    extend Stripe''s public Contracts API, build abstractions spanning multiple teams
+    and think about the future of Stripe''s Billing architecture. We are looking for
+    a Staff Engineer who is passionate about delighting users and building elegant
+    APIs that enable merchants to run and scale their businesses on top of Stripe.
+    You will work closely with our highly technical users to understand their needs
+    and to build products that help them be more successful on Stripe.</p> <h3>Responsibilities</h3>
+    <ul> <li>Help build our next generation Subscription primitives that will power
+    many higher order APIs</li> <li>Lead by example in designing, developing and delivering
+    optimized, delightful product experiences</li> <li>Partner closely with engineering,
+    product, and design leadership to define our product-led growth strategy</li>
+    <li>Establish best practices, frameworks, and repeatable processes that enable
+    us to measure the impact of every feature that we ship</li> <li>Make effective
+    tradeoffs that consider business priorities, user experience, and a sustainable
+    technical foundation</li> <li>Develop and lead the team to execute against both
+    short-term and long-term roadmaps</li> <li>Work in a variety of languages and
+    technologies, including Ruby, Java and Typescript</li> <li>Mentor and coach individual
+    contributors to become the next generation of leaders at Stripe</li> </ul> <h2><strong>Who
+    you are</strong></h2> <p>We’re looking for someone who meets the minimum requirements
+    to be considered for the role. If you meet these requirements, you are encouraged
+    to apply. The preferred qualifications are a bonus, not a requirement.</p> <h3>Minimum
+    requirements</h3> <ul> <li>This is a Staff-level role - that typically means 10+
+    years of experience building, operating, and evolving large-scale production systems</li>
+    <li>You can work effectively across the stack from top to bottom, comfortably
+    navigating codebases with different languages and tools</li> <li>You’re self-directed
+    and can operate autonomously across multiple teams to deliver scaled impact</li>
+    <li>Experience as a technical lead, including defining the roadmap for large,
+    complex projects spanning multiple teams and functions</li> <li>Experience mentoring
+    and growing senior engineers as their technical leader</li> </ul> <h3><strong>Preferred
+    qualifications</strong></h3> <ul> <li>You have a strong technical background,
+    including experience designing and engineering products and user surfaces for
+    high-impact products</li> <li>Experience with experimentation</li> <li>Experience
+    with data-driven decision making</li> </ul>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-16'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:32.682486+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-18"

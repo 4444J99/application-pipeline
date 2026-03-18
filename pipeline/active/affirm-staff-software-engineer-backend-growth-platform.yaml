@@ -1,0 +1,114 @@
+id: affirm-staff-software-engineer-backend-growth-platform
+name: Affirm Staff Software Engineer, Backend (Growth Platform)
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Affirm
+  url: https://boards.greenhouse.io/affirm
+  application_url: https://job-boards.greenhouse.io/affirm/jobs/7581666003
+  portal: greenhouse
+  location: Remote Canada
+  location_class: international
+  description: '<div class="content-intro"><p>Affirm is reinventing credit to make
+    it more honest and friendly, giving consumers the flexibility to buy now and pay
+    later without any hidden fees or compounding interest.</p></div><p>The Growth
+    Platform team builds shared backend platforms that power incentives, experimentation,
+    personalization, and data-driven decisioning across Affirm’s consumer and merchant
+    experiences, directly influencing customer acquisition, engagement, and retention.</p>
+    <h3>What you’ll do</h3> <ul> <li> <p>You will be responsible for setting technical
+    strategy for your team on a year-long time scale, owning backend platforms that
+    power incentives and growth initiatives across Affirm.</p> </li> <li> <p>You will
+    collaborate with product management, analytics, and partner teams to shape technical
+    direction for incentive systems, ensuring long-term sustainability, correctness,
+    and clear trade-offs that inform roadmap decisions.</p> </li> <li> <p>You will
+    act as a force-multiplier by defining platform abstractions, APIs, and architectural
+    patterns that enable product teams to safely launch, experiment with, and evolve
+    incentive-based experiences.</p> </li> <li> <p>You take ownership of your team’s
+    operations and availability by ensuring robust monitoring, alerting, playbooks,
+    and on-call practices are in place for business-critical incentive and growth
+    systems.&nbsp;</p> </li> <li> <p>You will foster a culture of quality and ownership
+    by setting clear design and code review standards, and advocating for them beyond
+    your immediate team through written proposals and technical discussions.</p> </li>
+    <li> <p>You will help develop talent on your team by providing actionable feedback,
+    technical guidance, and leadership on complex, high-impact systems.<br>&nbsp;</p>
+    </li> </ul> <h3>What we look for</h3> <ul> <li> <p>You have 8+ years of experience
+    designing, developing, and launching backend systems at scale using languages
+    like Python or Kotlin.</p> </li> <li> <p>You have an extensive track record of
+    developing highly available distributed systems using technologies such as AWS,
+    MySQL, Spark, and Kubernetes.</p> </li> <li> <p>You have experience building or
+    evolving shared backend platforms that support Rewards, Loyalty, Incentives, Experimentation,
+    or other growth-critical workflows used by multiple product teams.</p> </li> <li>
+    <p>You have led complex technical initiatives that required cross-team alignment,
+    long-term architectural thinking, and influence without direct authority.</p>
+    </li> <li> <p>You have experience delivering major features, system components,
+    or deprecating existing functionality through the definition and execution of
+    a clear technical plan. You write high quality code that is easily understood
+    and used by others.</p> </li> <li> <p>You thrive in ambiguity, and are comfortable
+    moving from low-level language idioms to the architecture of large-scale systems
+    to understand how they work end to end.</p> </li> <li> <p>Your growth and impact
+    trajectory demonstrates that you have mastered gathering, incorporating, and iterating
+    on feedback from engineering and cross-functional peers.</p> </li> <li> <p>You
+    have strong verbal and written communication skills that support effective collaboration
+    with a global engineering organization.</p> </li> <li> <p>This position requires
+    either equivalent practical experience or a Bachelor’s degree in a related field.<br>&nbsp;</p>
+    </li> </ul> <div> <p data-pm-slice="1 1 []">Pay Grade - P<br>Equity Grade - 7<br><br>Employees
+    new to Affirm typically come in at the start of the pay range. Affirm focuses
+    on providing a simple and transparent pay structure which is based on a variety
+    of factors, including location, experience and job-related skills.&nbsp;<br><br>Base
+    pay is part of a total compensation package that may include monthly stipends
+    for health, wellness and tech spending, and benefits (including 100% subsidized
+    medical coverage, dental and vision for you and your dependents). In addition,
+    the employees may be eligible for equity rewards offered by Affirm Holdings, Inc.
+    (parent company).<br><br>CAN base pay range per year: $178,000 - $228,000<br><br>This
+    posting is for an existing vacancy.</p> </div> <p>#LI Remote&nbsp;</p><div class="content-conclusion"><div>
+    <p>Affirm is proud to be a remote-first company! The majority of our roles are
+    remote and you can work almost anywhere within the country of employment. Affirmers
+    in proximal roles have the flexibility to work remotely, but will occasionally
+    be required to work out of their assigned Affirm office. A limited number of roles
+    remain office-based due to the nature of their job responsibilities.</p> <p><span
+    style="font-weight: 400;">We’re extremely proud to offer competitive benefits
+    that are anchored to our core value of people come first. Some key highlights
+    of our benefits package include:&nbsp;</span></p> <ul> <li style="font-weight:
+    400;"><span style="font-weight: 400;">Health care coverage - Affir'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-16'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:32.836093+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-18"

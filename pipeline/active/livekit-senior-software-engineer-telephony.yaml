@@ -1,0 +1,89 @@
+id: livekit-senior-software-engineer-telephony
+name: LiveKit Senior Software Engineer, Telephony
+track: job
+status: qualified
+outcome: null
+target:
+  organization: LiveKit
+  url: https://jobs.ashbyhq.com/livekit
+  application_url: https://jobs.ashbyhq.com/livekit/d9a2f119-0c83-4b39-a7de-7d2c0fe2edf9
+  portal: ashby
+  location: Remote, U.S
+  location_class: remote-global
+  description: 'LiveKit is building the infrastructure layer for the voice-driven
+    era of computing. Our platform gives developers everything they need to build,
+    test, deploy, scale, and observe agents in production. Founded in 2021, LiveKit
+    powers voice AI applications for OpenAI, xAI, Salesforce, Coursera, Spotify, and
+    thousands of others, collectively facilitating billions of calls each year. You''ll
+    thrive at LiveKit if you: obsess with crafting code that is fast, reliable and
+    practical for the problem are known as the go-to person for tackling tough technical
+    problems work hard and can build and ship fast can clearly explain complex technical
+    concepts to others are a fast learner, frequently picking up new languages and
+    tools The best way to impress us is with thoughtful Issues and/or PRs on our Github
+    repos 😊 About This Role: Voice has connected people for over a century — and it’s
+    entering a new era. As a Telephony Engineer, you’ll help reimagine how calls,
+    media, and intelligence flow through modern networks. From SIP and RTP to AI-driven
+    voice experiences, your work will directly impact how businesses and customers
+    communicate across industries worth billions. What You’ll Do: Design, build, and
+    operate telephony services that manage phone numbers, carrier integrations, and
+    SIP trunks at scale Develop reliable signaling and media systems that bridge traditional
+    telephony with WebRTC and AI pipelines Work closely with carriers and global vendors
+    to expand number coverage, improve routing, and ensure regulatory compliance Collaborate
+    with the SFU, Developer Success, Infrastructure and SDK teams to make voice features
+    easily accessible to developers Monitor and optimize voice quality, latency, and
+    reliability using observability and debugging tools Contribute to the evolution
+    of modern, developer-friendly APIs for telephony and media control Who You Are:
+    You’re a strong senior software engineer who thrives in complex, distributed systems
+    — ideally with experience in Go, C, or C++ You have a deep understanding of APIs,
+    backend architecture, and large-scale real-time systems You think beyond code
+    — you understand how infrastructure choices shape products, developer experience,
+    and end-user impact You’ve ideally worked on a developer platform or communications
+    product and appreciate the nuances of reliability, latency, and usability You’re
+    hands-on, curious, and comfortable diving into protocols, packet captures, or
+    production issues when needed You collaborate well across teams, communicate clearly,
+    and value simplicity in design and execution You care about building the foundation
+    for how people — and AI — will communicate in the next decade Our Commitment to
+    You An opportunity to build something truly impactful to the world Contribute
+    to open source alongside world-class engineers Competitive salary and equity package
+    Health, dental, and vision benefits Flexible vacation policy'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: null
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:33.830724+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-18"

@@ -1,0 +1,111 @@
+id: coreweave-senior-software-engineer-sandboxes-virtualization
+name: 'CoreWeave Senior Software Engineer, Sandboxes & Virtualization '
+track: job
+status: qualified
+outcome: null
+target:
+  organization: CoreWeave
+  url: https://boards.greenhouse.io/coreweave
+  application_url: https://coreweave.com/careers/job?4659153006&board=coreweave&gh_jid=4659153006
+  portal: greenhouse
+  location: Livingston, NJ / New York, NY / Sunnyvale, CA / Bellevue, WA
+  location_class: us-onsite
+  description: '<div class="content-intro"><div> <div> <div class="gmail_quote"> <div>
+    <div><span id="m_1770241969069985273m_-2746164444908759431gmail-docs-internal-guid-131e4fb0-7fff-b4e9-ff50-e8cf32449b1b">CoreWeave
+    is The Essential Cloud for AI™. Built for pioneers by pioneers, CoreWeave delivers
+    a platform of technology, tools, and teams that enables innovators to build and
+    scale AI with confidence. Trusted by leading AI labs, startups, and global enterprises,
+    CoreWeave combines superior infrastructure performance with deep technical expertise
+    to accelerate breakthroughs and turn compute into capability. Founded in 2017,
+    CoreWeave became a publicly traded company (Nasdaq: CRWV) in March 2025. Learn
+    more at&nbsp;<a href="http://www.coreweave.com/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.coreweave.com&amp;source=gmail&amp;ust=1762613132717000&amp;usg=AOvVaw3D-UOhNaqEvF5BEWxjYyAU">www.coreweave.com</a>.</span></div>
+    </div> </div> </div> </div></div><p>What You’ll Do:</p> <p><strong>About the Team</strong><strong><br></strong>The
+    team is responsible for building and operating secure, high-performance runtime
+    environments that power multi-tenant Kubernetes platforms at scale. We sit at
+    the intersection of container runtimes, lightweight virtualization, GPU infrastructure,
+    and Linux systems engineering. Our mission is to deliver robust, isolated, and
+    efficient execution environments for GPU-accelerated and AI-driven workloads,
+    partnering closely with security, platform, and GPU infrastructure teams to define
+    and implement best-in-class isolation and performance standards.</p> <p><strong>About
+    the Role:</strong><strong><br></strong>In this role, you will design, build, and
+    evolve secure sandboxed runtime environments for workloads running on Kubernetes,
+    with a strong emphasis on runtime isolation, performance, and security. You will
+    develop platforms that integrate container runtimes, lightweight virtual machines,
+    and virtualization technologies, while engineering support for GPU-accelerated
+    workloads in multi-tenant environments. Day-to-day, you’ll design GPU-aware sandboxing
+    and scheduling strategies, optimize containerization and I/O performance for latency-sensitive
+    workloads, and build systems capable of safely executing untrusted or shared GPU
+    workloads. You’ll also contribute to architectural decisions across Linux internals,
+    container runtimes, virtualization layers, and GPU drivers to ensure long-term
+    scalability and operational excellence.</p> <p><strong>Who You Are:</strong></p>
+    <ul> <li>3+ years of experience in systems, platform, infrastructure, or production
+    engineering roles building and operating software at scale.<br><br></li> <li>Strong
+    hands-on experience with Kubernetes, container orchestration, and cloud-native
+    architectures, including building Kubernetes-native components (e.g., controllers,
+    operators, or scheduling extensions).<br><br></li> <li>Demonstrated experience
+    designing, implementing, or operating secure execution environments such as container
+    runtimes, sandboxed workloads, or virtualized systems.<br><br></li> <li>Practical
+    experience with lightweight virtualization and sandboxing technologies (e.g.,
+    Kata Containers, gVisor, KubeVirt, QEMU, or similar).<br><br></li> <li>Experience
+    supporting or optimizing GPU-accelerated workloads in multi-tenant environments,
+    including knowledge of GPU scheduling, isolation, device passthrough, mediated
+    devices, or GPU virtualization concepts.<br><br></li> <li>Proficiency in systems-oriented
+    programming (Go, C/C++, Rust, or Bash) with a strong understanding of Linux internals
+    and operating system behavior.<br><br></li> <li>Experience diagnosing and resolving
+    complex performance, reliability, or isolation issues across containers, virtual
+    machines, and underlying infrastructure.<br><br></li> <li>Experience conducting
+    profiling, benchmarking, and performance tuning across runtime, virtualization,
+    and GPU stacks.<br><br></li> </ul> <p><strong>Preferred:</strong></p> <ul> <li>Experience
+    building systems for safely executing untrusted or sensitive workloads in shared
+    environments.<br><br></li> <li>Familiarity with GPU drivers and low-level virtualization
+    or I/O optimization techniques.<br><br></li> <li>Experience defining threat models
+    and implementing runtime security policies in multi-tenant systems.<br><br></li>
+    </ul> <p><strong>Wondering if you’re a good fit?</strong></p> <p>We believe in
+    investing in our people, and value candidates who can bring their own diversified
+    experiences to our teams – even if you aren''t a 100% skill or experience match.
+    Here are a few qualities we’ve found compatible with our team. If some of this
+    describes you, we’d love to talk.</p> <ul> <li>You love building high-performance
+    systems that operate reliably under extreme scale and demand.<br><br></li> <li>You’re
+    curious about the intersection of security, virtualization, Kubernetes, and GPU
+    infrastructure.<br><br></li> <li>You’re an expert in rea'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-16'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:32.724828+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-18"

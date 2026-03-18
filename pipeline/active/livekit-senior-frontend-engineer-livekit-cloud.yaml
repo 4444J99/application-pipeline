@@ -1,0 +1,101 @@
+id: livekit-senior-frontend-engineer-livekit-cloud
+name: LiveKit Senior Frontend Engineer, LiveKit Cloud
+track: job
+status: qualified
+outcome: null
+target:
+  organization: LiveKit
+  url: https://jobs.ashbyhq.com/livekit
+  application_url: https://jobs.ashbyhq.com/livekit/3cdfdc0c-c69d-42cf-b61b-3806b35fcc85
+  portal: ashby
+  location: Remote, U.S
+  location_class: remote-global
+  description: 'LiveKit is building the infrastructure layer for the voice-driven
+    era of computing. Our platform gives developers everything they need to build,
+    test, deploy, scale, and observe agents in production. Founded in 2021, LiveKit
+    powers voice AI applications for OpenAI, xAI, Salesforce, Coursera, Spotify, and
+    thousands of others, collectively facilitating billions of calls each year. You''ll
+    thrive at LiveKit if you: obsess with crafting code that is fast, reliable and
+    practical for the problem are known as the go-to person for tackling tough technical
+    problems work hard and can build and ship fast can clearly explain complex technical
+    concepts to others are a fast learner, frequently picking up new languages and
+    tools The best way to impress us is with thoughtful Issues and/or PRs on our Github
+    repos 😊 About This Role: We''re looking for a Senior Frontend Engineer to help
+    build the dashboard and developer experience that thousands of companies use to
+    build, deploy, and observe their voice AI applications. Our frontend team is small,
+    high-impact, and deeply technical. Our stack is modern and ambitious: React with
+    Server Components, Next.js, Vercel, TypeScript, Tailwind CSS, and a protobuf based
+    API layer with auto-generated type-safe clients. You''ll own significant product
+    surfaces: the Cloud Dashboard, Session Analytics, Agent Insights, Billing, Account
+    Management and more, with dozens of new product features in active development.
+    You''ll have real autonomy and direct influence on the developer experience. If
+    you want to work at the intersection of great UI engineering and cutting-edge
+    AI infrastructure, this is the role. What You''ll Do: Build and evolve LiveKit
+    Cloud''s Dashboard, the primary interface developers use to create, deploy, monitor,
+    and debug their voice AI agents Own major product surfaces across the Cloud Dashboard,
+    Session Analytics, Agent Insights, deployment workflows, and dozens of new highly-demanded
+    features in active development Work across the full React component lifecycle,
+    from design system primitives to complex, stateful application views with real-time
+    data Integrate deeply with backend services through our gRPC-web / Connect Query
+    layer, working with auto-generated protobuf clients for 100+ service APIs Contribute
+    to and extend our shared design system and component library used across multiple
+    LiveKit web properties Integrate with third-party services and APIs to extend
+    platform capabilities across billing, analytics, authentication, and more Work
+    cross-functionally with Product Managers, Product Designers, Executives, and GTM
+    teams to translate user needs into polished product experiences Who You Are: You
+    have deep experience building production web applications with React and Next.js
+    (App Router, Server Components, server actions) You write clean, type-safe TypeScript
+    and have strong opinions about component architecture, state management, and data
+    fetching patterns You''re product-minded and thrive in a complex product with
+    many interconnected surfaces. You think about user workflows and edge cases holistically,
+    not just individual components You have experience building or contributing to
+    design systems You care about performance, accessibility, and polish, and you
+    ship with attention to detail You''ve worked with real-time or data-heavy UIs
+    and understand the challenges of rendering dynamic, streaming content You thrive
+    on a small team where you own large surface areas and ship with high autonomy
+    Nice to have: Experience with Go, gRPC, or protocol buffers, with the ability
+    to unblock yourself by making straightforward backend enhancements when needed
+    We offer An opportunity to build something truly impactful to the world Contribute
+    to open source alongside world-class engineers Competitive salary and equity package
+    Health, dental, and vision benefits Flexible vacation policy'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: null
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:33.834985+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-18"

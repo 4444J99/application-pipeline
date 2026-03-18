@@ -1,0 +1,97 @@
+id: cursor-software-engineer-bugbot
+name: Cursor Software Engineer, Bugbot
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Cursor
+  url: https://jobs.ashbyhq.com/cursor
+  application_url: https://jobs.ashbyhq.com/cursor/88d47f97-0bea-448c-9abb-4720e4acf17a
+  portal: ashby
+  location: SF / NY / Remote
+  location_class: us-remote
+  description: 'Our mission is to automate coding. The first step in our journey is
+    to build the best tool for professional programmers, using a combination of inventive
+    research, design, and engineering. Our organization is very flat, and our team
+    is small and talent dense. We particularly like people who are truth-seeking,
+    passionate, and creative. We enjoy spirited debate, crazy ideas, and shipping
+    code. About the role We''re hiring a Software Engineer to work on Bugbot . Bugbot
+    reviews pull requests, catches bugs, suggests improvements, and is becoming a
+    critical part of how engineering teams ship software. As LLMs rapidly mature,
+    the surface area of what Bugbot can do is expanding just as fast. From the model
+    integration and agent harness improvement to the product UI, integrations, and
+    onboarding experience, you’ll maintain Bugbot being the industry''s best AI code
+    reviewer. This is a full-stack IC role where you''ll ship features end-to-end
+    and directly shape how millions of engineers interact with AI during code review.
+    What you’ll do Launch new Bugbot features end-to-end from defining the feature
+    and building the UI to wiring up the backend and iterating on model behavior so
+    that each release meaningfully improves code review quality. You can check out
+    Bugbot blog post for some examples of how Bugbot was improved in the past: https://cursor.com/blog/building-bugbot
+    . Evolve the review pipeline adapting prompting strategies, model routing, context
+    selection, and agent orchestration to take advantage of new capabilities while
+    managing cost and latency. Build integrations that embed Bugbot into every engineer''s
+    workflow making AI-assisted review a seamless, default part of the development
+    loop. Own product quality and reliability monitor precision and recall, triage
+    false positives, improve observability across the review pipeline, and ensure
+    Bugbot earns trust with every review it posts. Design onboarding and adoption
+    flows that help teams go from first install to daily active usage. Partner with
+    ML, infrastructure, and product teams to inform model improvements with real-world
+    review data, shape the Bugbot roadmap, and scale the system as adoption grows.
+    You will own Bugbot''s product surface end-to-end: features, integrations, review
+    pipeline, onboarding, configuration, and the user experience of AI code review.
+    You will not own foundation model training or core infrastructure services — but
+    you will be a key consumer and collaborator, driving requirements based on what
+    Bugbot needs. You will not be a backend-only engineer or an ML researcher who
+    doesn''t ship product. This role requires you to move fluidly between the model
+    layer and the product layer. Quality is the product. A code review assistant that
+    posts noisy or unhelpful comments is worse than no assistant at all. You''ll be
+    obsessive about making Bugbot''s output genuinely useful. You obsess about your
+    evals. You may be a fit if You’ve built or worked on agents that integrate into
+    the code review or CI/CD workflow. You’ve shipped full-stack product features
+    end-to-end and enjoy moving between frontend, backend, and model integration.
+    You care deeply about developer experience and collecting new evals from customers
+    and internal team members. You can hold the tension between "ship fast to learn"
+    and "don''t erode trust with bad suggestions." You’ve launched a product or feature
+    to external users and owned the full loop: onboarding, documentation, feedback,
+    and iteration.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: null
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:33.470193+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-18"

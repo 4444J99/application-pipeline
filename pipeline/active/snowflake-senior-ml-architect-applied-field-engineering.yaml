@@ -1,0 +1,106 @@
+id: snowflake-senior-ml-architect-applied-field-engineering
+name: Snowflake Senior ML Architect, Applied Field Engineering
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/eef762a3-04d3-4787-9468-845cbc067069
+  portal: ashby
+  location: US-NC-Remote
+  location_class: us-remote
+  description: "Snowflake is about empowering enterprises to achieve their full potential\
+    \ \u2014 and people too. With a culture that\u2019s all in on impact, innovation,\
+    \ and collaboration, Snowflake is the sweet spot for building big, moving fast,\
+    \ and taking technology \u2014 and careers \u2014 to the next level. Our Applied\
+    \ Field Engineering organization is seeking an experienced customer facing AI\
+    \ ML Solutions Architect who can provide strategic and technical advisory, and\
+    \ hands-on expertise while working with technical decision makers and data scientists\
+    \ to design and architect AI ML solutions built on the Snowflake AI Data Cloud.\
+    \ This is a strategic role that works closely with cross-functional teams, including\
+    \ product, engineering, and the broader field organization to ensure successful\
+    \ execution and customer adoption of Snowflake\u2019s AI & ML solutions. IN THIS\
+    \ ROLE YOU WILL GET TO: Be the technical expert in the room that positions Snowflake\u2019\
+    s AI and ML features and value to technical stakeholders at Snowflake\u2019s customers\
+    \ across the Americas. Partner with Snowflake account team teams and customer\
+    \ champions to scope and drive POCs to success and technical wins that prove the\
+    \ value of Snowflake\u2019s capabilities, including executive readouts and business\
+    \ value cases. Build compelling AI ML demos and proof of concept (POCs) for customer\
+    \ Collaborate with Snowflake\u2019s product and engineering teams to influence\
+    \ Snowflake\u2019s AI and ML roadmaps based on customer feedback. Publish content\
+    \ that helps the team and company scale beyond your individual efforts, like blog\
+    \ posts, presentations at conferences, or technical collateral like notebooks\
+    \ and demos. Influence, tailor and maintain Sales Engineering AI and ML selling\
+    \ assets, including customer presentations, demonstrations, and customer stories.\
+    \ ON DAY ONE, WE WILL EXPECT YOU TO HAVE: 5+ years of experience building and\
+    \ deploying machine learning and generative AI solutions in the cloud. MLOps experience\
+    \ on a major ML platform (e.g., Databricks, SageMaker): built shared pipelines/templates\
+    \ for teams and deployed/operated production models with monitoring and alerts;\
+    \ wrote unit/integration tests and used Git/CI. Hands-on scripting experience\
+    \ with Python, with experience using libraries such as Pandas, HuggingFace, XGBoost,\
+    \ PyTorch, TensorFlow, SciKit-Learn or similar. Have the following AI and ML Engineering\
+    \ skills: Data Cleansing Work with large datasets, and perform data quality evaluation/checks\
+    \ Feature engineering Determine relevant features for training and evaluation\
+    \ Optimization of model performance/accuracy MLOps and lifecycle management Strong\
+    \ skills presenting to both technical and executive audiences, whether impromptu\
+    \ on a whiteboard or using presentations and demos Bachelor\u2019s Degree required,\
+    \ Masters Degree in computer science, engineering, mathematics or related fields,\
+    \ or equivalent experience preferred. BONUS POINTS FOR EXPERIENCE WITH THE FOLLOWING:\
+    \ Working knowledge of tools in the LLM ecosystem such as LangChain, LlamaIndex,\
+    \ and NeMo-Guard. Experience and understanding of large-scale infrastructure-as-a-service\
+    \ platforms (e.g. AWS, Microsoft Azure, GCP, etc.) 1+ years of practical Snowflake\
+    \ experience. Every Snowflake employee is expected to follow the company\u2019\
+    s confidentiality and security standards for handling sensitive data. Snowflake\
+    \ employees must abide by the company\u2019s data security plan as an essential\
+    \ part of their duties. It is every employee's duty to keep customer information\
+    \ secure and confidential. The application window is expected to be open until\
+    \ January 1, 2026. This opportunity will remain posted based on business needs,\
+    \ which may be before or after the specified date. Snowflake is growing fast,\
+    \ and we\u2019re scaling our team to help enable and accelerate our growth. We\
+    \ are looking for people who share our values, challenge ordinary thinking, and\
+    \ push the pace of innovation while building a future for themselves and Snowflake.\
+    \ How do you want to make your impact? For jobs located in the United States,\
+    \ please visit the job posting on the Snowflake Careers Site for salary and benefits\
+    \ information: careers.snowflake.com"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.7
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: null
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:33.761760+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-18"

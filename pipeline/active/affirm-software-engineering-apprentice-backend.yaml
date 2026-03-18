@@ -1,0 +1,115 @@
+id: affirm-software-engineering-apprentice-backend
+name: Affirm Software Engineering Apprentice, Backend
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Affirm
+  url: https://boards.greenhouse.io/affirm
+  application_url: https://job-boards.greenhouse.io/affirm/jobs/7647925003
+  portal: greenhouse
+  location: Remote US
+  location_class: us-remote
+  description: '<div class="content-intro"><p>Affirm is reinventing credit to make
+    it more honest and friendly, giving consumers the flexibility to buy now and pay
+    later without any hidden fees or compounding interest.</p></div><p data-pm-slice="1
+    3 []">We’re currently seeking a Software Engineering Apprentice to join our Engineering
+    team.&nbsp;This apprenticeship will last 6 months and consist of dedicated one-on-one
+    technical mentorship, an Affirm-specific technical project, and a curriculum designed
+    to guide Apprentices through Affirm’s technical stack. We are particularly interested
+    in candidates that have a passion to change the consumer finance industry for
+    the better.&nbsp;</p> <h2><br>What You''ll Do</h2> <ul> <li> <p>Work with a team
+    of engineers to build, maintain, and scale our critical experimentation, feature
+    flag, and feature store infrastructure serving millions of customers.</p> </li>
+    <li> <p>You will ship code and monitor the deployment of your work. Our Apprenticeship
+    projects are not isolated or intended to be thrown away; your team will depend
+    on your contributions.</p> </li> <li> <p>We will pair you with a dedicated mentor
+    who will be by your side to give advice and ensure the success of your project.
+    You can expect to meet with them on a regular basis and receive feedback.</p>
+    </li> <li> <p>Apprentices will have the opportunity to share their work with the
+    engineering organization upon completion of the program.</p> </li> <li> <p data-pm-slice="1
+    1 []">With the support of your team, you will work on tasks that contribute to
+    the team''s projects and goals.</p> </li> <li> <p data-pm-slice="1 1 []">You will
+    work collaboratively and proactively with your team and stakeholders, bringing
+    them along for your work and helping to create visibility and dialog regarding
+    the risks and trade-offs related to your work.</p> </li> <li> <p data-pm-slice="1
+    1 []">You will strike the right balance of speed and quality in your work, ensuring
+    that we hit our business goals while protecting our systems from downtime.</p>
+    </li> <li> <p data-pm-slice="1 1 []">You will contribute to a sense of community
+    on your team by engaging in growth and development activities.</p> </li> </ul>
+    <h2>&nbsp;<br>What We Look For</h2> <ul> <li> <p>Must be located within the United
+    States</p> </li> <li> <p>Ages 18+, no college degree requirements. Affirm seeks
+    technical proficiency via a coding school, online certification, community college,
+    or self-taught equivalent</p> </li> <li> <p>Have previously worked on large scale
+    coding projects, including work that you may have done during a bootcamp experience
+    or on your own</p> </li> <li> <p>Always excited to learn and thrive in a fast
+    pace environment</p> </li> <li> <p>Ability to work both independently and collaboratively</p>
+    </li> <li> <p>Have sound judgement for working among ambiguity</p> </li> <li>
+    <p>Be able to display empathy, humbleness, and kindness</p> </li> </ul> <p>&nbsp;</p>
+    <div> <p><strong data-stringify-type="bold">Compensation is a set amount for the
+    Apprentice role with no range.</strong><br>USA hourly base pay: $55.00<br>USA
+    monthly base pay: $9,500</p> </div> <div><em>Please note that visa sponsorship
+    is not available for this position.</em></div><div class="content-conclusion"><div>
+    <p>Affirm is proud to be a remote-first company! The majority of our roles are
+    remote and you can work almost anywhere within the country of employment. Affirmers
+    in proximal roles have the flexibility to work remotely, but will occasionally
+    be required to work out of their assigned Affirm office. A limited number of roles
+    remain office-based due to the nature of their job responsibilities.</p> <p><span
+    style="font-weight: 400;">We’re extremely proud to offer competitive benefits
+    that are anchored to our core value of people come first. Some key highlights
+    of our benefits package include:&nbsp;</span></p> <ul> <li style="font-weight:
+    400;"><span style="font-weight: 400;">Health care coverage - Affirm covers all
+    premiums for all levels of coverage for you and your dependents&nbsp;</span></li>
+    <li style="font-weight: 400;"><span style="font-weight: 400;">Flexible Spending
+    Wallets - generous stipends for spending on Technology, Food, various Lifestyle
+    needs, and family forming expenses</span></li> <li style="font-weight: 400;"><span
+    style="font-weight: 400;">Time off - competitive vacation and holiday schedules
+    allowing you to take time off to rest and recharge</span></li> <li style="font-weight:
+    400;"><span style="font-weight: 400;">ESPP - An employee stock purchase plan enabling
+    you to buy shares of Affirm at a discount</span></li> </ul> <p><span style="font-weight:
+    400;">We believe It’s On Us to provide an inclusive interview experience for all,
+    including people with disabilities. We are happy to provide reasonable accommodations
+    to candidates in need of individualized support during the hiring process.</span></p>
+    <p class="p1">[For U.S. positions that could be performed in Los Angeles or San
+    Francisc'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:32.834174+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-18"
