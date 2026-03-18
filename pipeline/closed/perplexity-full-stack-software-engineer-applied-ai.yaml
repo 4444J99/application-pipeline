@@ -21,10 +21,7 @@ amount:
 fit:
   score: 5.7
   identity_position: independent-engineer
-  framing: "Full-stack applied AI engineer who built agentic-titan (1,095 tests, multi-agent\
-    \ orchestration) and a 14-script AI-integrated pipeline system \u2014 demonstrating\
-    \ the systems engineering discipline that applied AI demands across TypeScript\
-    \ and Python."
+  framing: "Full-stack applied AI engineer who built agentic-titan (1,095 tests, multi-agent orchestration) and a 14-script AI-integrated pipeline system — demonstrating the systems engineering discipline that applied AI demands across TypeScript and Python."
   dimensions:
     mission_alignment: 5
     evidence_match: 5
@@ -58,12 +55,17 @@ conversion:
   response_received: true
   response_type: null
   time_to_response_days: null
-  feedback: No response after 21 days. Auto-acknowledge only (Greenhouse). Closed
-    as expired.
-  follow_up_count: 0
+  feedback: No response after 21 days. Auto-acknowledge only (Greenhouse). Closed as expired.
+  follow_up_count: 1
 tags:
 - auto-sourced
 - curated-fit
 source: source_jobs.py
-last_touched: '2026-02-26'
-follow_up: []
+last_touched: "2026-03-18"
+follow_up:
+- date: '2026-03-18'
+  channel: linkedin
+  contact: Shu Zhang
+  type: dm
+  note: Connection ACCEPTED — MTS @ Perplexity. Send DM.
+  response: none
