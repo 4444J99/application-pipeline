@@ -202,6 +202,10 @@ def _collect_all_entry_ids() -> set[str]:
 def validate_referential_integrity(errors: list[str]) -> int:
     """Check that signal files reference existing pipeline entries.
 
+    Dangling references in conversion-log and hypotheses are WARNINGS
+    (historical records may reference archived/purged entries). Only
+    active signal-actions produce ERRORS.
+
     Returns the number of dangling references found.
     """
     entry_ids = _collect_all_entry_ids()
@@ -216,9 +220,7 @@ def validate_referential_integrity(errors: list[str]) -> int:
                 continue
             eid = entry.get("id")
             if isinstance(eid, str) and eid not in entry_ids:
-                errors.append(
-                    f"{conv_path} [entry {i}]: id '{eid}' not found in pipeline"
-                )
+                # Historical record — warn, don't error. Entry may have been archived.
                 dangling += 1
 
     # hypotheses: each entry_id/id must exist in pipeline
@@ -230,9 +232,7 @@ def validate_referential_integrity(errors: list[str]) -> int:
                 continue
             eid = entry.get("id") or entry.get("entry_id")
             if isinstance(eid, str) and eid not in entry_ids:
-                errors.append(
-                    f"{hyp_path} [hypothesis {i}]: id '{eid}' not found in pipeline"
-                )
+                # Historical record — warn, don't error. Entry may have been archived.
                 dangling += 1
 
     return dangling
@@ -252,7 +252,7 @@ def validate_contacts(errors: list[str]) -> int:
         errors.append(f"{path}: 'contacts' must be a list")
         return 0
 
-    valid_channels = {"linkedin", "email", "twitter", "referral", "event", "slack", "phone"}
+    valid_channels = OUTREACH_CHANNELS
     for i, entry in enumerate(contacts):
         label = f"{path} [contact {i}]"
         if not isinstance(entry, dict):
@@ -275,8 +275,8 @@ def validate_contacts(errors: list[str]) -> int:
     return len(contacts)
 
 
-OUTREACH_TYPES = {"post_submission", "reconnect", "seed", "dm", "connect", "referral_ask", "intro"}
-OUTREACH_CHANNELS = {"linkedin", "email", "twitter", "referral", "event", "slack", "phone"}
+OUTREACH_TYPES = {"post_submission", "reconnect", "seed", "dm", "dm_sent", "connect", "referral_ask", "intro", "doubling_back", "acceptance"}
+OUTREACH_CHANNELS = {"linkedin", "email", "twitter", "referral", "event", "slack", "phone", "github"}
 
 
 def validate_outreach_log(errors: list[str]) -> int:
