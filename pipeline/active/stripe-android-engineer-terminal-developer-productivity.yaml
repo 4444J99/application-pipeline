@@ -1,0 +1,116 @@
+id: stripe-android-engineer-terminal-developer-productivity
+name: Stripe Android Engineer, Terminal Developer Productivity
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7550154
+  portal: greenhouse
+  location: San Francisco, Seattle, Remote in US
+  location_class: us-remote
+  description: "<h1><strong>Who we are</strong></h1> <h2><strong>About Stripe</strong></h2>\
+    \ <p>Stripe is a financial infrastructure platform for businesses. Millions of\
+    \ companies\u2014from the world\u2019s largest enterprises to the most ambitious\
+    \ startups\u2014use Stripe to accept payments, grow their revenue, and accelerate\
+    \ new business opportunities. Our mission is to increase the GDP of the internet,\
+    \ and we have a staggering amount of work ahead. That means you have an unprecedented\
+    \ opportunity to put the global economy within everyone\u2019s reach while doing\
+    \ the most important work of your career.</p> <h2><strong>About the team</strong></h2>\
+    \ <p>Stripe Terminal helps our users extend their online presence to the physical\
+    \ world. The Terminal team\u2019s mission is to make it as easy for businesses\
+    \ to accept in-person payments as the Stripe API has done for online payments\
+    \ \u2013 building for Unified Commerce. With Terminal, businesses can unify their\
+    \ in-person and online experiences, unlocking payments use cases that are right\
+    \ for their business model \u2013 whether it\u2019s creating a modern retail experience,\
+    \ extending their website to a pop-up store, or enabling a mobile point-of-sale\
+    \ at their next event.</p> <p>Within Terminal, the Developer Productivity team\
+    \ empowers mobile, full-stack and embedded/firmware engineers to ship high-quality\
+    \ products quickly and safely. We build tools, processes and infrastructure that\
+    \ accelerate engineers across multiple teams. Our work is critical to supporting\
+    \ Stripe\u2019s in-person payment products and, ultimately, to helping increase\
+    \ the GDP of the internet.</p> <p>We own a diverse tech stack, including build\
+    \ and developer productivity tooling for mobile engineers; release tooling that\
+    \ enables Terminal releases across SDKs, Android apps and firmware; and test automation\
+    \ infrastructure that helps product engineers ensure the quality and reliability\
+    \ of what they ship. As an engineer on this team, you\u2019ll shape and deliver\
+    \ major pieces of this tooling and infrastructure and help raise the bar for developer\
+    \ experience across Terminal.</p> <h1><strong>What you\u2019ll do</strong></h1>\
+    \ <h2><strong>Responsibilities</strong></h2> <ul> <li>Design, build and maintain\
+    \ tools, libraries and infrastructure that improve the productivity of Terminal\
+    \ engineers across mobile, backend and embedded systems.</li> <li>Collaborate\
+    \ closely with mobile engineers to understand their workflows and pain points\
+    \ and translate them into practical short-term and long-term solutions.</li> <li>Contribute\
+    \ to and improve our build, CI/CD and test automation systems for Terminal SDKs,\
+    \ Android apps and firmware.</li> <li>Work with stakeholders across Terminal to\
+    \ prioritize work, balance competing needs and ensure your solutions integrate\
+    \ cleanly into existing workflows.</li> <li>Own projects end-to-end, from problem\
+    \ discovery and design through implementation, rollout and ongoing operation.</li>\
+    \ <li>Participate in code reviews, design discussions and documentation to maintain\
+    \ a high bar for code quality, reliability and developer experience.</li> <li>Mentor\
+    \ other engineers in areas such as build, test and release best practices, helping\
+    \ to spread strong developer productivity practices across the team.</li> </ul>\
+    \ <h1><strong>Who you are</strong></h1> <p>We\u2019re looking for someone who\
+    \ meets the minimum requirements to be considered for the role. If you meet these\
+    \ requirements, you are encouraged to apply. The preferred qualifications are\
+    \ a bonus, not a requirement.</p> <h2><strong>Minimum requirements</strong></h2>\
+    \ <ul> <li>BS or MS in Computer Science or a related field, or equivalent practical\
+    \ experience.</li> <li>6+ years of software engineering experience, including\
+    \ meaningful experience with backend systems and at least one of: Android/mobile\
+    \ or embedded/firmware development.</li> <li>Experience designing, implementing\
+    \ and maintaining production systems or developer tooling.</li> <li>Understanding\
+    \ of how to build scalable, reliable and observable services, pipelines, or tooling.</li>\
+    \ <li>Experience owning projects from design through implementation, rollout and\
+    \ ongoing support.</li> <li>Ability to thrive in a collaborative environment involving\
+    \ multiple stakeholders and subject matter experts.</li> <li>Strong communication\
+    \ skills and the ability to explain technical concepts clearly to different audiences.</li>\
+    \ <li>Based in the PST time zone</li> </ul> <h2><strong>Preferred qualifications</strong></h2>\
+    \ <ul> <li>Proficiency in one or more of: Kotlin, Java, or Go.</li> <li>Experience\
+    \ building tools or platforms to improve developer productivity, with clear empathy\
+    \ for internal developer users.</li> <li>Experience with CI/CD tooling and pipelines\
+    \ (e.g. Jenkins, GitLab CI, GitHub Actions) and modern build systems.</li> <li>Experience\
+    \ designing and maintaining automated testing infrastructure (e.g. integration/end-to-end\
+    \ tests, test orchestration, or reducing test flakiness).</li> <li>Experience\
+    \ with Android build and test tooling (e.g. Gradle, emulators, device farm"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-16'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:32.611424+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

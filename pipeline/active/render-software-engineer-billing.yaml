@@ -1,0 +1,117 @@
+id: render-software-engineer-billing
+name: Render Software Engineer, Billing
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Render
+  url: https://jobs.ashbyhq.com/render
+  application_url: https://jobs.ashbyhq.com/render/57a61c00-fa74-402d-89cd-1a1b936e14d5
+  portal: ashby
+  location: 'Remote: United States'
+  location_class: us-remote
+  description: "At Render, we\u2019re building the modern cloud platform for developers\
+    \ creating AI-native, full-stack, multi-service applications. Our mission is to\
+    \ eliminate the tradeoff between the power of hyperscalers and the simplicity\
+    \ of developer-friendly platforms\u2014so teams can ship fast, scale reliably,\
+    \ and focus on their product, not infrastructure. Unlike complex hyperscalers\
+    \ or ephemeral edge/serverless solutions, Render offers a developer-first experience\
+    \ with persistent compute, dynamic autoscaling, built-in orchestration, and observability,\
+    \ allowing teams to launch, scale, and manage real-world applications without\
+    \ writing infrastructure code or managing servers. Whether you're building LLM-powered\
+    \ applications, scalable SaaS products, or async processing pipelines, Render\
+    \ empowers teams to move fast and scale confidently from MVP to millions of users.\
+    \ Our platform is trusted by over 4.5 million developers worldwide and continues\
+    \ to grow rapidly. In February 2026, we raised an additional $100M in Series C\
+    \ financing, bringing our total funding to $257M, to accelerate our vision of\
+    \ making cloud infrastructure both powerful and intuitive\u2014designed for the\
+    \ speed of modern AI development. We\u2019re a diverse and talented team that\
+    \ values craft, velocity, and user experience. If you\u2019re excited to help\
+    \ shape the future of the intelligent cloud and empower developers everywhere,\
+    \ we\u2019d love to hear from you. Applying to Render We're seeking candidates\
+    \ who possess high integrity, humility, and an insatiable drive to learn. Through\
+    \ reasoned discussions and continuous feedback, we strive to improve both individually\
+    \ and collectively. We foster an environment of mutual trust and respect, empowering\
+    \ effective debate to achieve the best outcomes for our customers and team. We\
+    \ especially encourage members of underrepresented groups in the tech community\
+    \ to apply and understand that not all successful candidates will meet each requirement\
+    \ listed. Our interview process is unique to each role, and we value the candidate\
+    \ experience just as much as our customer experience. We hope your conversations\
+    \ with us reflect a thoughtful process that is illuminative, enjoyable, and respectful\
+    \ of your time. About the Role Billing is mission-critical to Render\u2019s success.\
+    \ As a Software Engineer, Billing you\u2019ll design, implement, and maintain\
+    \ systems that ensure customers are billed accurately, reliably, and transparently\
+    \ as we scale. You will collaborate with Finance, Product, and Customer Experience\
+    \ teams to integrate third-party platforms, evolve our usage-based billing systems,\
+    \ and deliver the infrastructure that supports Render\u2019s growing business\
+    \ model. This role requires technical depth, precision, and strong cross-functional\
+    \ collaboration. You\u2019ll be the engineer others depend on to make sure usage\
+    \ data flows seamlessly, customers are charged correctly, and our systems are\
+    \ robust against complexity at scale. You will: Build, operate, and improve Render\u2019\
+    s usage-based billing systems . Integrate with and maintain third-party billing\
+    \ systems (e.g., Orb, Metronome, or similar). Collaborate closely with Finance,\
+    \ Product, and Support Engineering teams to ensure accurate, reliable billing\
+    \ and reporting. Work with large-scale databases and data pipelines to capture,\
+    \ transform, and reconcile usage data. Monitor, troubleshoot, and continuously\
+    \ improve billing reliability and performance. Contribute to architectural decisions\
+    \ about how billing integrates with the broader Render platform. Help shape internal\
+    \ processes, documentation, and best practices for billing operations. We're looking\
+    \ for: 3+ years of professional experience building or operating usage-based billing\
+    \ systems . Hands-on experience integrating and working with third-party billing\
+    \ systems such as Orb, Metronome, Stripe, or similar platforms . Strong expertise\
+    \ in Go and production-grade databases (SQL or NoSQL). Ability to work effectively\
+    \ across functions with Finance, Customer Experience, and Product teams. Detail-oriented\
+    \ mindset with a strong sense of ownership and accountability in mission-critical\
+    \ systems. Pragmatism and problem-solving skills to balance accuracy, scalability,\
+    \ and developer experience. Nice-to-haves: Experience working in a high-growth\
+    \ startup or scaling environment. Familiarity with financial reconciliation and\
+    \ reporting processes. Background in distributed systems or event-driven architectures.\
+    \ Willingness to mentor others and help scale Render\u2019s engineering culture.\
+    \ If this role excites you but you don\u2019t meet every single requirement, we\u2019\
+    d still love to hear from you\u2014your unique experience might be just what we\
+    \ need. Benefits This opportunity is also eligible for equity with early-exercise\
+    \ options and extended exercise windows. 4 weeks of paid vacation. 14 weeks of\
+    \ fully paid parental leave for all parents to bond with a newly born, adopted,\
+    \ or fostered child. We will also work with you to create a supportive plan of\
+    \ return. Long-term disability, life insurance, and "
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: null
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:33.573651+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

@@ -1,0 +1,117 @@
+id: pinecone-senior-software-engineer-experience-platform
+name: Pinecone Senior Software Engineer, Experience Platform
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Pinecone
+  url: https://jobs.ashbyhq.com/pinecone
+  application_url: https://jobs.ashbyhq.com/pinecone/773e953d-8f53-4313-93b4-35a553bad1cb
+  portal: ashby
+  location: US Remote
+  location_class: us-remote
+  description: "About Pinecone Pinecone is the leading vector database for building\
+    \ accurate and performant AI applications at scale in production. Pinecone's mission\
+    \ is to make AI knowledgeable. More than 9000 customers across various industries\
+    \ have shipped AI applications faster and more confidently with Pinecone's developer-friendly\
+    \ technology. Pinecone is based in New York and raised $138M in funding from Andreessen\
+    \ Horowitz, ICONIQ, Menlo Ventures, and Wing Venture Capital. About the Team and\
+    \ Role: The Experience Platform team is at the center of one of the most exciting\
+    \ transitions in software development history \u2014 the shift from human-driven\
+    \ to agent-driven product experiences. We own Pinecone's API, clients, authentication,\
+    \ revenue, and observability systems, and right now that means redesigning all\
+    \ of it for a world where AI agents are first-class users alongside humans. This\
+    \ is a wide-scope role. You'll own things end-to-end \u2014 from backend architecture\
+    \ to API design to SDK and web surfaces. You\u2019ll be working closely with product,\
+    \ design, and other engineering teams to identify user needs and build the right\
+    \ thing, at the right abstraction level, at the right time. Along the way, you\
+    \ will be building high-leverage platform capabilities that accelerate Pinecone\u2019\
+    s product development and user growth systems. We're looking for an engineer who\
+    \ sees this moment for what it is: a rare opportunity to shape how developers\
+    \ and agents interact with a category-defining product. You're not waiting to\
+    \ see how the industry figures out MCP, agentic workflows, and AI-native interfaces\
+    \ \u2014 you're already experimenting, already forming opinions, already building.\
+    \ You know that speed and leverage matter more than labor, and you've internalized\
+    \ AI-assisted development not as a productivity trick but as a fundamentally different\
+    \ way of working. Responsibilities: Pioneer our agent experience. Shape how AI\
+    \ agents interact with Pinecone \u2014 designing interfaces, protocols (MCP),\
+    \ and tooling that make Pinecone the easiest and most capable platform for agentic\
+    \ workflows to build on. Ship end-to-end experiences across API, SDK, CLI, and\
+    \ web. You'll own the full surface, from the HTTP layer to the UI, and you'll\
+    \ make calls across all of it. Build systems that multiply team output. We care\
+    \ about what ships, not how many hours went into it. Design AI-powered workflows,\
+    \ automated quality gates, and high-leverage platform capabilities that let a\
+    \ small team move at a pace that would otherwise require 10x the headcount. Set\
+    \ the standard for AI-assisted development on the team. Use the best tools available\
+    \ \u2014 Claude Code, Cursor, or whatever works \u2014 and help establish patterns\
+    \ that make the whole team faster. Collaborate with product, design, and engineering\
+    \ to identify what users (and agents) actually need and build it at the right\
+    \ abstraction level, at the right time. Build observable, auditable systems with\
+    \ monitoring, alerting, and verification mechanisms \u2014 because in a high-velocity\
+    \ environment, you need systems that tell you when something's wrong. Requirements:\
+    \ Senior Engineers at Pinecone operate with high autonomy. You'll be an active\
+    \ partner in setting strategy on APIs, agent interfaces, observability, and developer\
+    \ experience \u2014 not just executing on a roadmap. We care more about how you\
+    \ think and how you work than whether your resume checks every box. You should\
+    \ have: At least 4 years of software engineering experience A bias toward automation\
+    \ and leverage \u2014 you reach for systems and tooling before you reach for elbow\
+    \ grease Hands-on experience shipping with AI coding tools (Claude Code, Cursor,\
+    \ Copilot, or similar) as a genuine part of your workflow Proven ability to design\
+    \ and deliver versioned APIs, SDKs, or client libraries Proficiency building web\
+    \ interfaces with React or similar Experience with at least one major cloud provider\
+    \ (AWS, GCP, Azure) Strong intuition for what makes APIs easy for both humans\
+    \ and agents to use correctly Bonus points for: Experience building or consuming\
+    \ MCP servers, or designing APIs explicitly for agent use cases Familiarity with\
+    \ agentic frameworks and the emerging patterns around tool use, orchestration,\
+    \ and agent-to-agent communication Strong familiarity with a compiled language\
+    \ like Rust, Go, or Java Experience with large-scale open-source projects Experience\
+    \ developing database or query engine SDKs Perks & Benefits: Comprehensive health\
+    \ coverage including medical, dental, vision, and mental health resources 401(k)\
+    \ Plan Equity award Flexible time off Paid parental leave Annual Company Retreat\
+    \ WFH Equipment Stipend Diversity, Equity, Inclusion and Belonging (DEIB) are\
+    \ the cornerstone of everything we do at Pinecone. Studies have shown that women\
+    \ and people of color are less likely to apply for jobs unless they believe they\
+    \ meet every one of the qualifications in a job description. Our top priority\
+    \ is finding the best candidate for the job and if you are interested in the position,\
+    \ we would encourage you to"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: null
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:33.748353+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

@@ -1,0 +1,111 @@
+id: stripe-backend-engineerapi-payments-and-risk
+name: Stripe Backend Engineer/API, Payments and Risk
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=6692166
+  portal: greenhouse
+  location: Toronto, Canada Remote
+  location_class: international
+  description: "<p><strong><em>Note:&nbsp;</em></strong><em>if you are an intern,\
+    \ new grad, staff, frontend or fullstack applicant, please do not apply using\
+    \ this link and visit our </em><a href=\"https://stripe.com/jobs/search\"><em>jobs\
+    \ page</em></a><em> for those specific postings.</em></p> <h2><strong>Who we are</strong></h2>\
+    \ <h3><strong>About Stripe</strong></h3> <p>Stripe is a financial infrastructure\
+    \ platform for businesses. Millions of companies - from the world\u2019s largest\
+    \ enterprises to the most ambitious startups - use Stripe to accept payments,\
+    \ grow their revenue, and accelerate new business opportunities. Our mission is\
+    \ to increase the GDP of the internet, and we have a staggering amount of work\
+    \ ahead. That means you have an unprecedented opportunity to put the global economy\
+    \ within everyone's reach while doing the most important work of your career.</p>\
+    \ <h3><strong>About the Organization&nbsp;</strong></h3> <p><strong>Payments and\
+    \ Risk </strong><em>Sub-orgs within Payments and Risk: Link and OCS, Payments\
+    \ Acceptance, Risk</em></p> <p>The Payments organization focuses on developing\
+    \ products and platforms that enable users to accept payments from customers efficiently.\
+    \ This includes building APIs for processing payments, enabling regional, non-card\
+    \ payment options, and extending Stripe's capabilities to make it easy for businesses\
+    \ to accept in-person payments. Optimized Checkout and Link teams work to create\
+    \ best-in-class checkout experiences that enhance customer satisfaction and drive\
+    \ merchant conversion rates. The Risk Engineering team develops products that\
+    \ minimize financial and regulatory risks while ensuring a seamless user experience,\
+    \ thereby safeguarding Stripe\u2019s brand and financial stability.&nbsp;</p>\
+    \ <p><strong>Team Matching:</strong> exact team matching for one of the subteams\
+    \ will begin during final stages.<em> Please note we may also consider you for\
+    \ different orgs based on your experience, location, etc. </em>More information\
+    \ on our team matching process can be found <a href=\"https://docs.google.com/document/d/1zvJkO2c7GzukHG-_oqc5wbOLajpuh5FjbmZPcZPU1o0/edit?tab=t.0#heading=h.ahb3b6nrktv1\"\
+    >here</a>.&nbsp;</p> <h2><strong>What you\u2019ll do</strong></h2> <p>We\u2019\
+    re looking for Backend engineers who want to make an impact on managing money\
+    \ at a global scale with a passion for building ergonomic APIs. You\u2019ll play\
+    \ a key role in extending our balance management platform and in building out\
+    \ a new funds accessibility platform leveraged by enterprises and SMBs alike.\
+    \ Our team collaborates with many cross-functional teams \u2013 from Infrastructure\
+    \ to Product \u2013&nbsp; at Stripe to deliver innovative solutions that address\
+    \ evolving user needs.</p> <h3><strong>Responsibilities</strong></h3> <ul> <li>Scope,\
+    \ design, build, and maintain APIs, services, and large-scale systems that reliably\
+    \ and efficiently handle billions of money movement requests</li> <li>Debug and\
+    \ solve critical production issues across services and multiple levels of the\
+    \ stack</li> <li>Mentor engineers to help them grow</li> <li>Collaborate with\
+    \ stakeholders across the company to build new features at large-scale, while\
+    \ improving internal engineering standards, tooling, and processes</li> <li>Collaborate\
+    \ effectively in a distributed and hybrid team, maintaining open communication\
+    \ and strong connections with colleagues</li> </ul> <h2><strong>Who you are</strong></h2>\
+    \ <p>We're looking for someone who meets the minimum requirements to be considered\
+    \ for the role. If you meet these requirements, you are encouraged to apply. The\
+    \ preferred qualifications are a bonus, not a requirement.</p> <h3><strong>Minimum\
+    \ requirements</strong></h3> <ul> <li>2-12+ years of industry software engineering\
+    \ experience (does not include internships nor includes co-ops)</li> <li>Strong\
+    \ coding skills in any programming language <em>(we understand new languages can\
+    \ be learned on the job so our interview process is language agnostic)</em></li>\
+    \ <li>Strong collaboration skills, can work across workstreams within your team\
+    \ and contribute to your peers\u2019 success</li> <li>Have the ability to thrive\
+    \ on a high level of autonomy, responsibility, and think of yourself as entrepreneurial</li>\
+    \ <li>Interest in working as a generalist across varying technologies and stacks\
+    \ to solve problems and delight both internal and external users</li> </ul> <h3><strong>Preferred\
+    \ Qualifications</strong></h3> <ul> <li> <ul> <li>Experience with large-scale\
+    \ financial tracking systems</li> <li>Good understanding and practical knowledge\
+    \ in cloud based services (e.g. gRPC, GraphQL, Docker/Kubernetes, cloud services\
+    \ such as AWS, etc.)&nbsp;</li> </ul> </li> </ul>"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-16'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:32.618750+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

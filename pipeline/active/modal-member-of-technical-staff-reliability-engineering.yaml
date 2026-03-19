@@ -1,0 +1,86 @@
+id: modal-member-of-technical-staff-reliability-engineering
+name: Modal Member of Technical Staff - Reliability Engineering
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Modal
+  url: https://jobs.ashbyhq.com/modal
+  application_url: https://jobs.ashbyhq.com/modal/84467a68-6876-4730-9d80-6c6f3d0c2d71
+  portal: ashby
+  location: New York
+  location_class: us-onsite
+  description: "About Us: Modal provides the infrastructure foundation for AI teams.\
+    \ With instant GPU access, sub-second container startups, and native storage,\
+    \ Modal makes it simple to train models, run batch jobs, and serve low-latency\
+    \ inference. We have thousands of customers who rely on us for production AI workloads,\
+    \ including Lovable, Scale AI, Substack, and Suno. We're a fast-growing team based\
+    \ out of NYC, SF, and Stockholm. We've hit 9-figure ARR and recently raised a\
+    \ Series B at a $1.1B valuation. Our investors include Lux Capital , Redpoint\
+    \ Ventures , Amplify Partners , and Elad Gil . Working at Modal means joining\
+    \ one of the fastest-growing AI infrastructure organizations at an early stage,\
+    \ with many opportunities to grow within the company. Our team includes creators\
+    \ of popular open-source projects (e.g. Seaborn , Luigi ), academic researchers,\
+    \ international olympiad medalists, and experienced engineering and product leaders\
+    \ with decades of experience. The Role: At Modal, we sell cloud services atop\
+    \ which our customers run their critical production systems. As a rapidly growing\
+    \ new cloud infrastructure company, we seek to improve our reliability dramatically\
+    \ while scaling the size of our platform and customer base. This role is for people\
+    \ who are deep systems thinkers and love stacking nines. You would be the first\
+    \ reliability-focused hire at the company with the opportunity to define the company\u2019\
+    s reliability systems and practices, and be a critical partner for our development\
+    \ teams. Identify architectural changes to improve reliability, performance and\
+    \ availability. Foster a culture of reliability across Modal\u2019s engineering\
+    \ organization. Design and implement key operational processes such as deployments,\
+    \ upgrades, rollbacks, and postmortem review. Join a core engineering team and\
+    \ participate in on-call rotation, responding to production incidents. Build monitoring\
+    \ systems that ensure the highest quality service for our customers. Debug production\
+    \ issues across all services and levels of the stack. Requirements: 5+ years of\
+    \ experience writing high-quality production code. 2+ years of on-call experience\
+    \ for critical production services. Strong cloud skills, and deep familiarity\
+    \ with at least one hyperscaler cloud (AWS preferred). Familiarity with auto scaling,\
+    \ fleet management, and capacity planning at scale. Experience owning and scaling\
+    \ Kubernetes clusters to thousands of nodes a plus. Experience with systems safety\
+    \ research (e.g. STAMP) and control theory a plus. Ability to work in-person in\
+    \ our NYC, SF or Stockholm offices."
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: null
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:33.716558+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

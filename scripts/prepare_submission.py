@@ -83,6 +83,33 @@ def prepare_entry(entry_id: str, entry: dict) -> dict:
             shutil.copy2(cl_src, dest)
             result["files"].append(str(dest))
 
+    # 2b. Cover letter quality check
+    cl_dest = app_path / f"{file_prefix}-Cover-Letter.md"
+    if cl_dest.exists():
+        cl_text = cl_dest.read_text()
+        issues = []
+        words = len(cl_text.split())
+        if words < 300:
+            issues.append(f'Too short: {words} words (min 300)')
+        if words > 550:
+            issues.append(f'Too long: {words} words (max 550)')
+        if cl_text.startswith('#') or cl_text.startswith('---'):
+            issues.append('Starts with markdown header — should be plain text')
+        if 'Sincerely' not in cl_text:
+            issues.append('Missing closing (Sincerely)')
+        if 'New York' not in cl_text and 'NYC' not in cl_text:
+            issues.append('Missing NYC location')
+        banned = ["South Florida", "I don't have", "I haven't", "gap I'm being transparent"]
+        for phrase in banned:
+            if phrase in cl_text:
+                issues.append(f'Banned phrase: "{phrase}"')
+        if issues:
+            print('    QUALITY ISSUES:')
+            for issue in issues:
+                print(f'      ✗ {issue}')
+        else:
+            print(f'    Cover letter passes quality check ({words}w)')
+
     # 3. Portal questions — scrape and generate answers
     print("  [3/5] Portal questions...")
     if url:
@@ -109,8 +136,25 @@ def prepare_entry(entry_id: str, entry: dict) -> dict:
         result["files"].append(str(app_path / "entry.yaml"))
 
     # 5. Outreach URLs
-    print("  [5/5] Outreach URLs...")
+    print("  [5/6] Outreach URLs...")
     _add_outreach_to_entry(entry_path, entry)
+
+    # 6. Interview prep
+    print("  [6/6] Interview prep...")
+    try:
+        prep_dir = REPO_ROOT / "applications" / "interview-prep"
+        prep_dir.mkdir(parents=True, exist_ok=True)
+        prep_path = prep_dir / f"{entry_id}.md"
+        r = subprocess.run(
+            ["python", "scripts/interview_prep.py", "--target", entry_id],
+            capture_output=True, text=True, timeout=30,
+        )
+        if r.stdout.strip():
+            prep_path.write_text(r.stdout)
+            result["files"].append(str(prep_path))
+            print(f"    Generated: {prep_path.name}")
+    except Exception as e:
+        print(f"    Interview prep skipped: {e}")
 
     print(f"  → {app_path} ({len(result['files'])} files)")
     return result

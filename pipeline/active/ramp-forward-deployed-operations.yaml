@@ -1,0 +1,117 @@
+id: ramp-forward-deployed-operations
+name: Ramp Forward Deployed Operations
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Ramp
+  url: https://jobs.ashbyhq.com/ramp
+  application_url: https://jobs.ashbyhq.com/ramp/a4d92b2a-bda6-439e-ba72-3a23e41e495f
+  portal: ashby
+  location: New York, NY (HQ)
+  location_class: us-onsite
+  description: "About Ramp Ramp is building the smart infrastructure for finance teams,\
+    \ embedded in the transaction flow of every dollar a business spends. We automate\
+    \ how over $100B in annualized spend flows in and out of 50,000+ companies: authorizing\
+    \ payments, flagging risk, categorizing spend, and closing books. The problems\
+    \ are high-stakes, data-dense, and unforgiving. We hire people with high agency\
+    \ and high urgency. We look for slope over intercept. We care less about where\
+    \ you trained and more about what you\u2019ve built. At Ramp, everyone is a builder\
+    \ who owns problems end to end and makes consequential decisions that shape the\
+    \ outcome. The median Ramp customer saves 5% and grows revenue 16% in their first\
+    \ year \u2013 far in excess of businesses operating without Ramp. We believe every\
+    \ ambitious company deserves the same. If you want to build systems that directly\
+    \ shape how companies move and manage billions, Ramp is the place to do it. About\
+    \ the Role Ramp's Forward Deployed Engineering (FDE) team helps Ramp win upmarket\
+    \ and in our biggest new verticals. Since fall 2024, FDE has grown from 2 to 25+\
+    \ engineers operating across the enterprise customer lifecycle. Nearly half are\
+    \ former founders. We ship fast, work directly with customers, and build solutions\
+    \ that generalize across the enterprise. We're looking for the COO of FDE \u2014\
+    \ an AI-native operator and strategic partner who will design and run the operating\
+    \ system for FDE. Own the systems, processes, and information architecture that\
+    \ let this team scale its impact without scaling headcount. Build agent-powered\
+    \ workflows end to end, drive operational rigor across teams, and deliver significant\
+    \ business outcomes tied to revenue and customer activation. Over time, you'll\
+    \ grow into a key voice in where FDE invests \u2014 working with strategic finance,\
+    \ product, and sales leadership to shape the team's roadmap and priorities. You'll\
+    \ work across the entire FDE org alongside Solutions, GTM, Product, and Product\
+    \ Ops. What You'll Do Design and run agent-powered operations. Build agent-driven\
+    \ workflows for triage, SOW generation, and scoping so engineers spend time building,\
+    \ not answering questions. Every solved problem should mean the next customer\
+    \ with that problem doesn't need an engineer. Own information architecture. Design\
+    \ how customer and product context flows through our systems so AI and humans\
+    \ access the right information at the right time. Drive a unified customer hub\
+    \ with prioritized feature requests, SOW status, and engagement history. Build\
+    \ and scale processes. Standardize SOWs end to end. Create playbooks for scoping,\
+    \ handoffs, and post-launch ownership that actually get adopted. You're not writing\
+    \ docs; you're changing how the team works. Operate across the business. Close\
+    \ operational gaps across FDE, Solutions, Product, GTM, and Premier Support. Unify\
+    \ project trackers, intake systems, and roadmaps into a single source of truth.\
+    \ Partner with Product Ops to bring best practices into FDE. Drive business impact\
+    \ and strategy. Own FDE's contribution to revenue and customer activation timelines.\
+    \ Use data to find bottlenecks, measure improvements, and prioritize the highest-leverage\
+    \ work. Surface patterns from enterprise engagements to inform where FDE and product\
+    \ should invest next. What You'll Need Demonstrated AI fluency and results \u2014\
+    \ you've used AI/agent tools to ship real outcomes, not just experiment. You can\
+    \ point to workflows you built or processes you automated with AI. 3+ years in\
+    \ a high-ownership operator role \u2014 consulting, startup ops, chief of staff,\
+    \ product ops, business ops. The common thread: you've built and run systems that\
+    \ made an organization meaningfully more effective. Systems thinking and technical\
+    \ fluency \u2014 you turn messy, ad hoc processes into structured, repeatable\
+    \ systems. You understand APIs, databases, and data flows at a conceptual level.\
+    \ You don't need to write code, but you can't treat the product as a black box.\
+    \ Operational rigor \u2014 you don't just design processes; you drive adoption,\
+    \ enforce accountability, and iterate until they stick across multiple teams.\
+    \ Exceptional communication and ownership \u2014 you hold your own in rooms with\
+    \ engineers, PMs, and sales leaders. You've created outcomes by the force of your\
+    \ own initiative, not just executed on work handed to you. Nice to Have Experience\
+    \ in enterprise SaaS and high-growth startups Computer Science degree / background\
+    \ Background building or deploying AI agents / LLM-powered workflows in production\
+    \ Benefits (for U.S.-based full-time employees) 100% medical, dental & vision\
+    \ insurance coverage for you Partially covered for your dependents One Medical\
+    \ annual membership 401k (including employer match on contributions made while\
+    \ employed by Ramp) Flexible PTO Fertility HRA (up to $10,000 per year) Parental\
+    \ Leave Unlimited AI token usage Pet insurance Centralized home-office equipment\
+    \ ordering for all employees Health and Wellness stipend In-office perks: lunch,\
+    \ snacks, drinks, and more Budget for intra"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: null
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:33.490273+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

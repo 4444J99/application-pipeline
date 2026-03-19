@@ -1,0 +1,104 @@
+id: affirm-senior-software-engineer-backend-consumer-engineering
+name: Affirm Senior Software Engineer, Backend (Consumer Engineering)
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Affirm
+  url: https://boards.greenhouse.io/affirm
+  application_url: https://job-boards.greenhouse.io/affirm/jobs/7663436003
+  portal: greenhouse
+  location: Remote Canada
+  location_class: international
+  description: <div class="content-intro"><p>Affirm is reinventing credit to make
+    it more honest and friendly, giving consumers the flexibility to buy now and pay
+    later without any hidden fees or compounding interest.</p></div><p>Affirm is reinventing
+    credit to make it more honest and friendly, giving consumers the flexibility to
+    buy now and pay later without any hidden fees or compounding interest.<br><br>Consumer
+    Growth Experience Engineering (CGX) builds the platforms and end-to-end experiences
+    that power Affirm’s consumer growth across push, email, app, and web. We own the
+    core engagement surfaces and systems that help customers discover value, onboard
+    seamlessly, and take confident next steps by using personalization, segmentation,
+    and experimentation to deliver the right experience at the right moment.</p> <p>Our
+    work sits at the intersection of product, analytics, design, platform, and growth.
+    We focus on building scalable, reliable tooling and consumer experiences that
+    enable rapid go-to-market, improve conversion and activation, and grow long-term
+    customer value. If you’re excited about shaping high-impact consumer journeys,
+    solving ambiguous growth problems, and turning strategy into measurable outcomes
+    at scale, CGX is the team for you.<br><br><strong>What You'll Do</strong></p>
+    <ul> <li data-start="2" data-end="211">You will be responsible for owning and
+    delivering quarterly goals for your team, leading engineers through ambiguity
+    to solve open-ended problems, and ensuring that everyone is supported throughout
+    delivery.</li> <li data-start="214" data-end="493">You will support peers and
+    stakeholders in the product development lifecycle by collaborating with product
+    management, design, and analytics, participating in ideation, articulating technical
+    constraints, and partnering on decisions that properly consider risks and trade-offs.</li>
+    <li data-start="496" data-end="622">You will proactively identify project, process,
+    technology, or business issues, advocate for them, and lead in solving them.</li>
+    <li data-start="625" data-end="817">You will support the operations and availability
+    of your team’s artifacts by creating and monitoring metrics, escalating when needed,
+    and supporting “keep the lights on” and on-call efforts.</li> <li data-start="820"
+    data-end="1017">You will foster a culture of quality and ownership by setting
+    or improving code review and design standards for your team, and advocating for
+    them beyond your team through writing and tech talks.</li> <li data-start="1020"
+    data-end="1121">You will help develop talent on your team by providing feedback
+    and guidance, and leading by example.</li> </ul> <p><br><br><br><strong>What We
+    Look For</strong></p> <ul> <li data-start="2" data-end="222">You have experience
+    leading significant mobile initiatives (React Native or native), including defining
+    architecture, coordinating cross-functional launches, and maintaining high reliability
+    in production environments.</li> <li data-start="225" data-end="430">You have
+    experience working across the React Native and native boundaries (Swift/Kotlin),
+    debugging platform-specific issues and improving developer tooling, CI/CD, and
+    release processes for mobile apps.</li> <li data-start="433" data-end="602">You
+    have experience implementing experimentation, feature flagging, and analytics
+    instrumentation in mobile applications, ensuring safe rollouts and measurable
+    impact.</li> <li data-start="605" data-end="695">You have experience shipping
+    web apps using declarative UI frameworks like React or Vue.</li> <li data-start="698"
+    data-end="757">You are proficient in working with JavaScript/TypeScript.</li>
+    <li data-start="760" data-end="828">You have a total of 4+ years of experience
+    as a software engineer.</li> <li data-start="831" data-end="985">You are experienced
+    in designing, developing, and launching backend systems at scale using technologies
+    like Python, Kotlin, AWS, MySQL, and Kubernetes.</li> <li data-start="988" data-end="1223">You
+    have experience defining a technical plan for the delivery of a significant feature
+    or system component with an elegant, simple, and extensible design, and you write
+    high-quality code that is easily understood and used by others.</li> <li data-start="1226"
+    data-end="1393">You are proficient at making significant changes in a large codebase
+    and have developed a suite of tools and practices that enable you and your team
+    to do so safely.</li> <li data-start="1396" data-end="1548">Your experience demonstrates
+    that you take ownership of your growth, proactively seeking feedback from your
+    team, your manager, and your stakeholders.</li> <li data-start="1551" data-end="1677">You
+    have strong verbal and written communication skills that support effective collaboration
+    with a global engineering team.</li> <li data-start="1680" data-end="1784">This
+    position requires either equivalent practical experience or a Bachelor’s degree
+    in a related field.</li> </ul> <p>&nbsp;</p> <div> <div> <p><strong>Pay Gra
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: documentation-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-18'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-18'
+  discovered: '2026-03-18T17:32:05.664988+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

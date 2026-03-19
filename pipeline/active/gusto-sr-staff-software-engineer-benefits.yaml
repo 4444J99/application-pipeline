@@ -1,0 +1,117 @@
+id: gusto-sr-staff-software-engineer-benefits
+name: Gusto Sr. Staff Software Engineer, Benefits
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Gusto
+  url: https://boards.greenhouse.io/gusto
+  application_url: https://job-boards.greenhouse.io/gusto/jobs/7357719
+  portal: greenhouse
+  location: Denver, CO;San Francisco, CA;New York, NY;Los Angeles, CA;Seattle, WA;Toronto,
+    Ontario, CAN - Remote
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><p style=\"line-height: 1.2;\">&nbsp;</p>\
+    \ <hr> <p><strong>About Gusto</strong></p> <p><span style=\"font-weight: 400;\"\
+    >At Gusto, we're on a mission to grow the small business economy. We handle the\
+    \ hard stuff\u2014like payroll, health insurance, 401(k)s, and HR\u2014so owners\
+    \ can focus on their craft and customers. With teams in Denver, San Francisco,\
+    \ and New York, we\u2019re proud to support more than 400,000 small businesses\
+    \ across the country, and we\u2019re building a workplace that represents and\
+    \ celebrates the customers we serve. Learn more about our </span><a href=\"https://gusto.com/about/careers/total-rewards\"\
+    ><span style=\"font-weight: 400;\">Total Rewards philosophy</span></a><span style=\"\
+    font-weight: 400;\">.&nbsp;</span></p></div><p><strong>About the Role</strong></p>\
+    \ <p>As a Staff Software Engineer on the Benefits Advisory team, you will drive\
+    \ key architectural improvements to Gusto's benefits platform as we transition\
+    \ to an AI-native company. This is a full-stack role where you will design and\
+    \ build platform capabilities that enable customers to explore, apply for, and\
+    \ maintain their benefits within your product area.</p> <p>Your work will focus\
+    \ on transforming our benefits opportunity, shopping and renewal flows, creating\
+    \ clear system boundaries that enable efficient reuse and increased scalability,\
+    \ allowing the ability to offer a wider variety of products more quickly. You\
+    \ will design services that continue to scale the organization while enabling\
+    \ novel AI-driven interfaces to deliver a delightful benefits shopping experience.&nbsp;</p>\
+    \ <p>You\u2019ll operate at the intersection of marketing, sales, and engineering.&nbsp;\
+    \ If you are passionate about building highly scalable systems that can reason,\
+    \ predict, and personalize to unlock Gusto Benefits\u2019 next phase of sustainable\
+    \ growth, we\u2019d love to have you join our team.</p> <p><strong>About the Team</strong></p>\
+    \ <p>The Benefits Advisory team is building the next generation of infrastructure\
+    \ that powers benefits applications, making it easier than ever to give customers\
+    \ access to the absolute best benefits for their needs.</p> <p>Our mission is\
+    \ to build a robust system that informs our customers of the most relevant benefits\
+    \ options, making it easier than ever to confidently fulfill benefits that fit\
+    \ our customers current and future needs.. We\u2019re building a world-class technology\
+    \ platform designed to understand customer context in real-time, and continuously\
+    \ improve through data and feedback. This means rapid experimentation, fast learning,\
+    \ and strong cross-functional partnership.</p> <p>We prioritize quality, observability,\
+    \ and uptime because these intelligent systems are fundamental to Gusto's growth\
+    \ and brand. We partner closely with Marketing, Sales, and Operations to build\
+    \ and connect the AI-powered tools they use every day.</p> <p><strong>Here\u2019\
+    s what we're looking for:</strong></p> <ul> <li>Architect and evolve our customer-facing\
+    \ web platforms with a focus on scale, performance, and AI-driven personalization</li>\
+    \ <li>Design, build, and maintain shared services to enable rapid iteration on\
+    \ product offerings</li> <li>Implement and optimize key workflows for a best-in-class\
+    \ customer experience.</li> <li>Write high-quality, well-tested code across the\
+    \ stack, leveraging AI-powered tools to accelerate&nbsp; development and improve\
+    \ reliability</li> <li>Support, mentor, and up-level fellow engineers on the team,\
+    \ helping to establish best practices for AI-native design patterns.</li> <li>Partner\
+    \ cross-functionally with Marketing, Sales, Operations and leadership to translate\
+    \ business needs into technical solutions that fit our needs now and in the future.</li>\
+    \ <li>Contribute to the technical roadmap for your area of the Benefits Advisory\
+    \ platform, ensuring your work aligns with Gusto's AI-native strategy and team\
+    \ goals</li> </ul> <p><strong>Here\u2019s what we're looking for:</strong></p>\
+    \ <ul> <li>8+ years of experience building scalable full-stack web applications\
+    \ with expertise in both frontend (React, TypeScript) and backend (API development,\
+    \ data modeling)</li> <li>Experience applying AI tools to accelerate full-stack\
+    \ development, improve code quality, and build intelligent user experiences. Familiar\
+    \ with AI-driven personalization patterns and willing to experiment with AI techniques\
+    \ to improve the benefits shopping experience</li> <li>Deep experience building\
+    \ modern and accessible frontend applications with technologies such as React,\
+    \ TypeScript, and Next.js.</li> <li>Deep experience with backend API development,\
+    \ data modeling and database design</li> <li>Deep experience in CI/CD and observability.</li>\
+    \ <li>Ability to act as a thought partner for both technical (Engineering, AI/Data)\
+    \ and business (Sales, Operations) teams.</li> <li>A balance of pragmatic execution\
+    \ and long-term architectural thinking to build a scalable, intelligent platform.</li>\
+    \ <li>Experience enabling productivity across large engineering organizations.</li>\
+    \ <li>Nice to have:</li>"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-16'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:32.778416+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

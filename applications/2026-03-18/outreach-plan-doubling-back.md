@@ -59,7 +59,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 - **Contacts:**
   - ★ **John Gilhuly** — [linkedin.com/in/john-gilhuly-25a15888](https://www.linkedin.com/in/john-gilhuly-25a15888/) (Field Engineering, Cursor/Anysphere)
   - **Aman Sanger** — [linkedin.com/in/aman-sanger-482243171](https://www.linkedin.com/in/aman-sanger-482243171/) (Co-Founder, Anysphere/Cursor)
-  - **Arvid Lunnemark** — [linkedin.com/in/arvid-lunnemark](https://www.linkedin.com/in/arvid-lunnemark/) (Co-Founder, Anysphere/Cursor)
+  - **Baltazar Zuñiga Ruiz** — [linkedin.com/in/baltaazr](https://www.linkedin.com/in/baltaazr/) (Engineer, Anysphere/Cursor)
 - **Connection message:**
   > Hi [Name] — AI-assisted development is my daily workflow: multi-model orchestration, 23,470 tests, agentic pipeline automation. I use Cursor and build the kind of systems your FDE team deploys. Would love to connect.
 - **Log:** `python scripts/followup.py --log cursor-forward-deployed-engineer --channel linkedin --contact "[Name]" --note "Reconnection request sent"`
@@ -146,7 +146,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 - **Prior:** FDE (3 regions), Prompt Specialist, Inference, Data Engineering, SRE, Security, Applied ML — all research-only.
 - **Contacts:**
   - ★ **Meor Amer** — [linkedin.com/in/meoramer](https://my.linkedin.com/in/meoramer) (Developer Relations, Cohere)
-  - **Sandra Kublik** — [linkedin.com/in/sandrakublik](https://pl.linkedin.com/in/sandrakublik) (Developer Relations, Cohere)
+  - **Ryan Wirth** — [linkedin.com/in/ryankwirth](https://www.linkedin.com/in/ryankwirth/) (Member of Technical Staff, Cohere — ex-Palantir FDE)
   - **Saurav Velleleth** — [linkedin.com/in/saurav-vell](https://www.linkedin.com/in/saurav-vell/) (Solutions Architect, Cohere — may be transitioning to OpenAI, verify)
 - **Connection message:**
   > Hi [Name] — multi-model orchestration (I integrate Anthropic, Google, and evaluate across providers), prompt engineering at scale, 739K words of technical documentation. Would love to connect.
@@ -170,7 +170,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 - **Contacts:**
   - ★ **Brandon West** — [linkedin.com/in/bmwest](https://www.linkedin.com/in/bmwest/) (Advocacy Team Lead, Developer Experience, Datadog)
   - **Ameet Talwalkar** — [linkedin.com/in/atalwalkar](https://www.linkedin.com/in/atalwalkar/) (Chief Scientist, Datadog)
-  - **Nolan Ouyang** — [linkedin.com/in/nolan-ouyang-8347a2305](https://www.linkedin.com/in/nolan-ouyang-8347a2305/) (Senior Machine Learning Engineer, Datadog)
+  - **Casen Lerner** — [linkedin.com/in/casen-lerner-4071a1214](https://www.linkedin.com/in/casen-lerner-4071a1214/) (Machine Learning Engineer, Datadog)
 - **Connection message:**
   > Hi [Name] — observability architecture, 104 CI/CD pipelines, daily health monitoring, signal validation across 113 repos. Plus 100+ courses taught. The monitoring-to-teaching pipeline is direct. Would love to connect.
 

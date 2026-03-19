@@ -1,0 +1,116 @@
+id: squarespace-staff-software-engineer-java-domains-email
+name: Squarespace Staff Software Engineer, Java (Domains Email)
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Squarespace
+  url: https://boards.greenhouse.io/squarespace
+  application_url: http://www.squarespace.com/about/careers?gh_jid=7641161
+  portal: greenhouse
+  location: New York City
+  location_class: us-onsite
+  description: "<p>Squarespace is looking for a Backend Staff Software Engineer to\
+    \ lead the technical direction of our Business Email team. This team is the engine\
+    \ behind one of our high-growth product categories, serving as a critical pillar\
+    \ in our mission to help entrepreneurs succeed. We are selling more than just\
+    \ a service; we are building the indispensable communication hub that allows millions\
+    \ of users to manage their professional identity.</p> <p>In this role, You\u2019\
+    ll work closely with product, engineering, and cross-functional partners to evolve\
+    \ a complex backend that powers customer-facing email experiences, integrations,\
+    \ and infrastructure. This is a hands-on role with real technical depth, paired\
+    \ with broad influence across the org.</p> <p>This is a hybrid role based in our\
+    \ NYC office (3 days per week), reporting to the Engineering Manager of Email.</p>\
+    \ <h2>You'll Get To...</h2> <ul> <li>Serve as a key technical leader, driving\
+    \ the architecture, design, and implementation of new and existing business email\
+    \ products</li> <li>Provide hands-on guidance to the large engineering team, mentoring\
+    \ senior and mid-level engineers, helping them grow in system design, decision-making,\
+    \ and ownership</li> <li>Write high-quality Java code and stay close to execution,\
+    \ ensuring the delivery of high-quality, scalable, and maintainable solutions</li>\
+    \ <li>Partner deeply with Product, Design, Growth, Marketing, and BizDev to translate\
+    \ business goals into robust technical solutions</li> <li>Identify and proactively\
+    \ address systemic issues (performance, operability, resiliency, security) before\
+    \ they become problems</li> <li>Balance short-term delivery with long-term health,\
+    \ making thoughtful tradeoffs and communicating them clearly to stakeholders</li>\
+    \ </ul> <h2>Who We're Looking For</h2> <ul> <li>10+ years of backend engineering\
+    \ experience, with significant time building and operating large-scale, customer-facing\
+    \ systems</li> <li>Deep expertise in Java and backend service development (APIs,\
+    \ async processing, data stores, messaging systems)</li> <li>Strong experience\
+    \ with distributed systems, including reliability, scaling, and failure modes\
+    \ in production</li> <li>A proven track record of technical leadership at Staff\
+    \ or Senior-plus level, influencing architecture across multiple teams</li> <li>Experience\
+    \ evolving existing systems \u2014 modernizing, simplifying, and strengthening\
+    \ them without unnecessary rewrites</li> <li>The ability to communicate complex\
+    \ technical concepts clearly to both technical and non-technical partners</li>\
+    \ <li>A mindset oriented toward mentorship, collaboration, and inclusive technical\
+    \ leadership</li> </ul> <h2><strong>Your team and manager will</strong></h2> <ul>\
+    \ <li>Provide opportunities that align with your interests, career growth, and\
+    \ the growth of the company</li> <li>Create an inclusive environment that\u2019\
+    s psychologically safe and encourages learning&nbsp;</li> <li>Work with you to\
+    \ build a personalized career growth plan with clear expectations and milestones</li>\
+    \ </ul> <h2><strong>Benefits &amp; Perks</strong></h2> <ul> <li>A choice between\
+    \ medical plans with an option for 100% covered premiums&nbsp;</li> <li>Fertility\
+    \ and adoption benefits</li> <li>Access to supplemental insurance plans for additional\
+    \ coverage</li> <li>Headspace mindfulness app subscription</li> <li>Global Employee\
+    \ Assistance Program</li> <li>Retirement benefits with employer match</li> <li>Flexible\
+    \ paid time off</li> <li>12 weeks paid parental leave and family care leave</li>\
+    \ <li>Pretax commuter benefit</li> <li>Education reimbursement</li> <li>Employee\
+    \ donation match to community organizations</li> <li>7 Global Employee Resource\
+    \ Groups (ERGs)</li> <li>Dog-friendly workplace</li> <li>Free lunch and snacks</li>\
+    \ <li>Private rooftop</li> <li>Hack week twice per year</li> </ul> <h3>Cash Compensation\
+    \ Range: $185,500 - $299,000 USD</h3> <p>The base salary for this position will\
+    \ vary based on job-related criteria including relevant skills, experience, and\
+    \ location, among other factors.</p> <p>In addition to the cash compensation above\
+    \ (which includes base salary and, where applicable for eligible roles, may include\
+    \ overtime pay), Squarespace employees are eligible to be granted an option to\
+    \ purchase our common stock. Sales positions generally offer a competitive On\
+    \ Target Earnings (OTE) incentive structure in addition to base salary.</p> <h2><strong>About\
+    \ Squarespace</strong></h2> <p>Squarespace is a design-driven platform helping\
+    \ entrepreneurs build brands and businesses online. We empower millions of customers\
+    \ in more than 200 countries and territories with all the tools they need to create\
+    \ an online presence, build an audience, monetize, and scale their business. Our\
+    \ suite of products range from websites, domains, ecommerce, and marketing tools,\
+    \ as well as tools for scheduling with Acuity and creating and managing social\
+    \ media presence with Bio Sites and Unfold. Our team of more than 1,700 is headquartered\
+    \ in New York City, with offices in Du"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:32.956892+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

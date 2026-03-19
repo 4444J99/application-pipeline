@@ -581,8 +581,20 @@ def _is_acceptable_location(entry: dict) -> bool:
     loc = (entry.get("target", {}).get("location", "") or "").lower()
     loc_class = (entry.get("target", {}).get("location_class", "") or "").lower()
 
-    # Remote is always acceptable
+    # Remote is acceptable only if it includes US/USA/United States
     if "remote" in loc or "remote" in loc_class:
+        # "Remote" alone is ambiguous — need US qualifier
+        us_markers = {"usa", "us", "united states", "u.s", "america", "new york", "nyc"}
+        loc_words = loc.lower()
+        if any(m in loc_words for m in us_markers):
+            return True
+        # "Remote" with no country qualifier — check location_class
+        if "us" in loc_class or "usa" in loc_class:
+            return True
+        # Bare "Remote" with no US signal — reject
+        if loc.strip().lower() in {"remote", "remote "}:
+            return False
+        # Has other text besides remote — let it through (benefit of doubt)
         return True
 
     # NYC-metro is acceptable

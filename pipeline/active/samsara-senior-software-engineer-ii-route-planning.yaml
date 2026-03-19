@@ -1,0 +1,116 @@
+id: samsara-senior-software-engineer-ii-route-planning
+name: Samsara Senior Software Engineer II - Route Planning
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Samsara
+  url: https://boards.greenhouse.io/samsara
+  application_url: https://www.samsara.com/company/careers/roles/7266575?gh_jid=7266575
+  portal: greenhouse
+  location: Remote - SF Bay Area
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><p><span style=\"font-family: arial,\
+    \ helvetica, sans-serif;\"><strong>Who we are</strong></span></p> <p><span style=\"\
+    font-weight: 300; font-family: arial, helvetica, sans-serif;\">Samsara (NYSE:\
+    \ IOT) is the pioneer of the Connected Operations\u2122 Cloud, which is a platform\
+    \ that enables organizations that depend on physical operations to harness Internet\
+    \ of Things (IoT) data to develop actionable insights and improve their operations.\
+    \ At Samsara, we are helping improve the safety, efficiency and sustainability\
+    \ of the physical operations that power our global economy. Representing more\
+    \ than 40% of global GDP, these industries are the infrastructure of our planet,\
+    \ including agriculture, construction, field services, transportation, and manufacturing\
+    \ \u2014 and we are excited to help digitally transform their operations at scale.</span></p>\
+    \ <p><span style=\"font-weight: 300; font-family: arial, helvetica, sans-serif;\"\
+    >Working at Samsara means you\u2019ll help define the future of physical operations\
+    \ and be on a team that\u2019s shaping an exciting array of product solutions,\
+    \ including Video-Based Safety, Vehicle Telematics, Apps and Driver Workflows,\
+    \ and Equipment Monitoring. As part of a recently public company, you\u2019ll\
+    \ have the autonomy and support to make an impact as we build for the long term.</span></p></div><p><strong>About\
+    \ the role:</strong></p> <p>Are you interested in building solutions that help\
+    \ our customers deliver their cargo safely, efficiently and save fleet costs in\
+    \ the process? If so, the Route Planning team might be the right fit for you.</p>\
+    \ <p>We are a 0-1 team within Samsara that is actively building smart route planning\
+    \ solutions that model our customer\u2019s real world operations such as delivering\
+    \ to hard to reach locations on busy urban streets, maximize their fleet capacity\
+    \ by recommending the right vehicles to use, drive familiar routes or plan for\
+    \ those surprise deliveries, all the while staying compliant with the ever changing\
+    \ rules of commercial navigation</p> <p>This is a remote position open to candidates\
+    \ residing in the US and Canada. Relocation assistance will not be provided for\
+    \ this role.</p> <p>&nbsp;</p> <p><strong>You should apply if:</strong></p> <ul>\
+    \ <li><strong>You want to impact the industries that run our world:</strong> The\
+    \ software, firmware, and hardware you build will result in real-world impact\u2014\
+    helping to keep the lights on, get food into grocery stores, and most importantly,\
+    \ ensure workers return home safely.</li> <li><strong>You want to build for scale:</strong>\
+    \ With over 2.3 million IoT devices deployed to our global customers, you will\
+    \ work on a range of new and mature technologies driving scalable innovation for\
+    \ customers across industries driving the world's physical operations.</li> <li><strong>You\
+    \ are a life-long learner:</strong> We have ambitious goals. Every Samsarian has\
+    \ a growth mindset as we work with a wide range of technologies, challenges, and\
+    \ customers that push us to learn on the go.</li> <li><strong>You believe customers\
+    \ are more than a number: </strong>Samsara engineers enjoy a rare closeness to\
+    \ the end user and you will have the opportunity to participate in customer interviews,\
+    \ collaborate with customer success and product managers, and use metrics to ensure\
+    \ our work is translating into better customer outcomes.</li> <li><strong>You\
+    \ are a team player:</strong> Working on our Samsara Engineering teams requires\
+    \ a mix of independent effort and collaboration. Motivated by our mission, we\u2019\
+    re all racing toward our connected operations vision, and we intend to win\u2014\
+    together.</li> </ul> <p><em>&nbsp;</em></p> <p><strong>In this role, you will:</strong>&nbsp;</p>\
+    \ <ul> <li>Own the design and implementation of backend services that effortlessly\
+    \ scale no matter size of the fleet</li> <li>Work with the product manager and\
+    \ our UX designer closely to design and build intuitive UI interfaces that makes\
+    \ the route planner\u2019s job more efficient</li> <li>Partner with the engineering\
+    \ manager and advocate for technical excellence on the team</li> <li>Navigate\
+    \ tradeoffs between moving fast and building for the long term using customer\
+    \ impact as the north star</li> <li>Act as a simplifier that ensures our solutions\
+    \ are built to serve our diverse customer base</li> <li>Communicate your work\
+    \ to not just engineering audiences but also our sales partners to maintain a\
+    \ tight feedback loop</li> <li>Champion, role model, and embed Samsara\u2019s\
+    \ cultural principles (Focus on Customer Success, Build for the Long Term, Adopt\
+    \ a Growth Mindset, Be Inclusive, Win as a Team) as we scale globally and across\
+    \ new offices</li> </ul> <p><strong>Minimum requirements for the role:</strong></p>\
+    \ <ul> <li>Bachelor\u2019s degree in Computer Science or equivalent practical\
+    \ experience</li> <li>8+ years of experience as a software engineer</li> <li>Demonstrated\
+    \ ability executing in ambiguous environments and delivering customer value</li>\
+    \ <li>Excellent communication skills, both written and verbal&nbs"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-16'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:34.091111+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

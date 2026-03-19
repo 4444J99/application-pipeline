@@ -1,0 +1,117 @@
+id: datadog-technical-curriculum-developer-security
+name: Datadog Technical Curriculum Developer - Security
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Datadog
+  url: https://boards.greenhouse.io/datadog
+  application_url: https://careers.datadoghq.com/detail/7627229/?gh_jid=7627229
+  portal: greenhouse
+  location: California, USA, Remote; Colorado, USA, Remote; Illinois, USA, Remote;
+    New York, USA, Remote; Washington, USA, Remote
+  location_class: us-remote
+  description: "<p data-renderer-start-pos=\"58\">As a Technical Curriculum Developer,\
+    \ you will join our Customer Education &amp; Training team to help us deliver\
+    \ exceptional cloud engineering content to our customers, including the <a class=\"\
+    _ymio1r31 _ypr0glyw _zcxs1o36 _mizu194a _1ah3dkaa _ra3xnqa1 _128mdkaa _1cvmnqa1\
+    \ _4davt94y _4bfu18uv _1hms8stv _ajmmnqa1 _vchhusvi _kqswh2mm _ect4ttxp _syaz13af\
+    \ _1a3b18uv _4fpr8stv _5goinqa1 _f8pj13af _9oik18uv _1bnxglyw _jf4cnqa1 _30l313af\
+    \ _1nrm18uv _c2waglyw _1iohnqa1 _9h8h12zz _10531ra0 _1ien1ra0 _n0fx1ra0 _1vhv17z1\"\
+    \ href=\"https://learn.datadoghq.com/\" data-renderer-mark=\"true\"><u data-renderer-mark=\"\
+    true\">Datadog Learning Center</u></a>, workshops, and certification exams. Working\
+    \ closely with our engineering, product, and customer success teams, you will\
+    \ work hands-on with the software, devops, and security technologies that Datadog\
+    \ monitors. You have strong security, software development, and instructional\
+    \ expertise to create new self-paced and instructor-led training for our customers.\
+    \ You will improve existing learning content for the ever-expanding solutions\
+    \ that we offer.</p> <p data-renderer-start-pos=\"714\"><strong data-renderer-mark=\"\
+    true\">What You\u2019ll Do:&nbsp;</strong></p> <ul> <li>Collaborate with our engineering\
+    \ and product teams to produce <strong>engaging high quality training courses</strong>\
+    \ and content for Datadog\u2019s customer and partner curriculums</li> <li>Collaborate\
+    \ with stakeholders to evaluate customer training requirements, and turn those\
+    \ requirements into a <strong>roadmap</strong> with clearly scoped courses that\
+    \ have well defined <strong>learning paths</strong></li> <li>Communicate with\
+    \ customers to <strong>understand their technical needs</strong> in order to build\
+    \ courses that help them become proficient in using Datadog products</li> <li>Create\
+    \ high quality <strong>hands-on labs</strong> that can be delivered both as self\
+    \ paced online programs or instructor-led training</li> <li><strong>Review demo\
+    \ code</strong> <strong>and courses</strong> created by other curriculum developers.\
+    \ Coach them to improve the technical and instructional quality of their work\
+    \ in line with their manager\u2019s quarterly milestones.</li> <li><strong>Coach\
+    \ experts</strong> around the company to deliver live workshops at Datadog events.</li>\
+    \ <li>Write application and infrastructure code to <strong>enhance existing learning\
+    \ project applications</strong> so that customers can learn to use Datadog security\
+    \ features</li> <li>Help <strong>create and maintain</strong> the technical systems\
+    \ and environments used in hands-on labs (GitHub Actions, disk image build workflows,\
+    \ installation scripts, and others)</li> </ul> <p><strong data-renderer-mark=\"\
+    true\">Who You Are:&nbsp;</strong></p> <ul> <li>You are a technical practitioner\
+    \ with experience in security, software development, devops, technical curriculum\
+    \ development, or related experience in creating educational material for an engineering\
+    \ and developer audience</li> <li>You have hands-on experience, specialist knowledge,\
+    \ or other experience in building learning content in cloud infrastructure, full-stack\
+    \ web development, mobile development, and/or microservices.</li> <li>You are\
+    \ able to transform dry technical topics into engaging, informative and interesting\
+    \ educational materials</li> <li>You are proficient in using services on AWS or\
+    \ other cloud providers that integrate with Datadog security products, such as\
+    \ cloud storage, logging, and access management policies.</li> <li>You are familiar\
+    \ with at least one Infrastructure as Code tool such as Terraform, AWS CloudFormation,\
+    \ Pulumi, or similar</li> <li>You are comfortable using Docker or Kubernetes</li>\
+    \ <li>You are familiar with one or more security standards such as OWASP, certified\
+    \ ethical hacker, CNCF Security Certification, AWS Certified Security Specialty,\
+    \ Microsoft Certified: Azure Security Engineer, HashiCorp Vault certification,\
+    \ or other</li> </ul> <p data-renderer-start-pos=\"3123\"><em data-renderer-mark=\"\
+    true\">Datadog values people from all walks of life. We understand not everyone\
+    \ will meet all the above qualifications on day one. That's okay. If you\u2019\
+    re passionate about technology and want to grow your skills, we encourage you\
+    \ to apply.</em></p> <p data-renderer-start-pos=\"3358\"><strong data-renderer-mark=\"\
+    true\">Benefits and Growth:&nbsp;</strong></p> <ul> <li>New hire stock equity\
+    \ (RSUs) and employee stock purchase plan (ESPP)</li> <li>Continuous professional\
+    \ development, product training, and career pathing</li> <li>Intradepartmental\
+    \ mentor and buddy program for in-house networking</li> <li>An inclusive company\
+    \ culture, ability to join our Community Guilds (Datadog employee resource groups)</li>\
+    \ <li>Access to Inclusion Talks, our internal panel discussions</li> <li>Free,\
+    \ global mental health benefits for employees and dependents age 6+</li> <li>Competitive\
+    \ global benefits</li> </ul> <p data-renderer-start-pos=\"3876\"><em data-renderer-mark=\"\
+    true\">Benefits and Growth listed above ma"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-16'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:32.609455+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

@@ -1,0 +1,109 @@
+id: supabase-platform-engineer-data
+name: 'Supabase Platform Engineer: Data'
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Supabase
+  url: https://jobs.ashbyhq.com/supabase
+  application_url: https://jobs.ashbyhq.com/supabase/9073c0cd-2545-473a-b2ac-63e4615c69b5
+  portal: ashby
+  location: Remote
+  location_class: remote-global
+  description: "About Supabase Supabase is the Postgres development platform, built\
+    \ by developers for developers. We provide a complete backend solution including\
+    \ Database, Auth, Storage, Edge Functions, Realtime, and Vector Search. All services\
+    \ are deeply integrated and designed for growth. About the Role We are seeking\
+    \ a Platform Software Engineer with deep experience in distributed systems to\
+    \ help design, build, and maintain core platform services. You will work primarily\
+    \ in TypeScript and Go to deliver reliable, scalable, and secure systems that\
+    \ power Supabase at massive scale. What you'll be doing: Design and implement\
+    \ distributed services and APIs that power the Supabase Platform. Lead projects\
+    \ that improve scalability, reliability, and cost efficiency across existing systems.\
+    \ Build data-intensive workflows, background jobs, and event-driven pipelines.\
+    \ Own service SLIs/SLOs and collaborate on incident response and post-incident\
+    \ reviews. Improve system observability with metrics, logging, tracing, and profiling.\
+    \ Contribute to our CI/CD and release processes to ship safely and quickly. Partner\
+    \ with product teams to deliver features end-to-end, from design docs to production.\
+    \ Write clear design documents, RFCs, and high-quality tests. What we're looking\
+    \ for: Experienced in designing and operating distributed systems, with strong\
+    \ foundations in consistency, fault tolerance, partitioning, consensus, and back\
+    \ pressure. Proficient in TypeScript and/or Go, ideally with 5+ years building\
+    \ production services in one or both languages (other languages also considered).\
+    \ Comfortable with cloud infrastructure (AWS preferred) and container orchestration.\
+    \ Familiar with multi-tenant architectures, API design, and data modelling. Knowledgeable\
+    \ about networking fundamentals and security best practices. Experienced with\
+    \ Infrastructure as Code (Pulumi preferred; Terraform/CDK also fine). Comfortable\
+    \ participating in on-call rotations for large-scale production systems. Nice\
+    \ to have: Experience with Postgres internals, logical replication, or CDC pipelines.\
+    \ Experience with service meshes, workload identity, or zero-trust networking.\
+    \ Background in performance engineering and capacity planning. Open source contributions\
+    \ in systems, databases, or runtime tooling. What We Offer Fully Remote We hire\
+    \ globally. We believe you can do your best work from anywhere. There are no Supabase\
+    \ offices, but we provide a WeWork membership or co-working allowance you can\
+    \ use anywhere in the world. ESOP Every team member receives ESOP (equity ownership)\
+    \ in the company. We want everyone to share in the upside of what we\u2019re building\
+    \ together. Tech Allowance Use this budget to set up your ideal work environment\u2014\
+    laptop, monitor, headphones, or whatever helps you do your best work. Health Benefits\
+    \ Supabase covers 100% of health insurance for employees and 80% for dependents,\
+    \ wherever you are. Your wellbeing and your family\u2019s health are important\
+    \ to us. Annual Off-Sites Once a year, the entire company gathers in a new city\
+    \ for a week of connection, collaboration, and fun. It\u2019s a highlight of our\
+    \ year. Flexible Work We operate asynchronously and trust you to manage your own\
+    \ time. You know what needs to be done and when. Professional Development Every\
+    \ team member receives an annual education allowance to spend on learning\u2014\
+    courses, books, conferences, or anything that supports your growth. About the\
+    \ Team Supabase was born-remote and open-source-first. We believe our globally\
+    \ distributed team is our secret weapon in building tools developers love. 280+\
+    \ team members 55+ countries 20+ languages spoken $500M raised 500,000+ community\
+    \ members We move fast, build in public, and use what we ship. If it\u2019s in\
+    \ your project, we probably use it in ours too. We believe deeply in the open-source\
+    \ ecosystem and strive to support\u2014not replace\u2014existing tools and communities.\
+    \ Hiring Process We keep things simple, async-friendly, and respectful of your\
+    \ time: Apply \u2013 Our team will review your application. Intro Call \u2013\
+    \ A short video chat to get to know each other. Interviews \u2013 Up to four calls\
+    \ with: Team Leads Future teammates Someone cross-functional from product, growth,\
+    \ or engineering (depending on the role) Someone from our leadership/founding\
+    \ team Decision \u2013 We may follow up with a final question or go straight to\
+    \ offer. All communication is remote and we aim to move fast."
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.7
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: null
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:33.438018+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

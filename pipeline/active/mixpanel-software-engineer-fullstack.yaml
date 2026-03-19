@@ -1,0 +1,102 @@
+id: mixpanel-software-engineer-fullstack
+name: Mixpanel Software Engineer, Fullstack
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Mixpanel
+  url: https://boards.greenhouse.io/mixpanel
+  application_url: https://job-boards.greenhouse.io/mixpanel/jobs/7670800
+  portal: greenhouse
+  location: San Francisco, US (Remote)
+  location_class: us-remote
+  description: '<div class="content-intro"><p><strong>About Mixpanel</strong></p>
+    <p>Mixpanel turns data clarity into innovation. Trusted by more than 29,000 companies,
+    including Workday, Pinterest, LG, and Rakuten Viber, Mixpanel’s AI-first digital
+    analytics help teams accelerate adoption, improve retention, and ship with confidence.
+    Powering this is an industry-leading platform that combines product and web analytics,
+    session replay, experimentation, feature flags, and metric trees. Mixpanel delivers
+    insights that customers trust. Visit <a href="mixpanel.com" target="_blank">mixpanel.com</a>
+    to learn more.</p></div><p><strong>About The Role</strong></p> <p>Experimentation
+    and Feature Flags are core to how modern product teams ship safely and learn fast
+    - and one of the most exciting areas of Mixpanel''s AI vision. We''re building
+    AI-native capabilities into the experiment workflow and this role puts you at
+    the center of that.</p> <p>As a full stack engineer, you''ll own the UIs that
+    make complex statistical and targeting concepts feel simple and powerful to our
+    users, while also going deep into the backend to ship end-to-end. You''ll work
+    closely with EPD partners in a fast-paced, product-led environment where your
+    work directly impacts how thousands of teams build and improve their products.</p>
+    <p><strong>What You''ll Do</strong></p> <ul> <li>Build and ship customer-facing
+    features across the Experimentation and Feature Flag products</li> <li>Own frontend
+    architecture and UI quality - you sweat the details that make complex workflows
+    feel intuitive</li> <li>Design and implement backend APIs and services to support
+    complete, well-integrated features</li> <li>Collaborate with Product, Design,
+    and GTM to define and deliver high-quality solutions</li> <li>Lead projects from
+    idea through launch, including monitoring and follow-up</li> <li>Navigate trade-offs
+    between product scope, speed, statistical correctness, and maintainability</li>
+    </ul> <p>&nbsp;</p> <p><strong><span class="notion-enable-hover" data-token-index="0">What
+    We''re Looking For</span></strong></p> <ul> <li>Frontend-leaning full stack experience:
+    strong in React/JavaScript, CSS; comfortable on the backend (Python, Golang)</li>
+    <li>Sharp product instincts and attention to UI/UX detail</li> <li>Proven ability
+    to own problems end-to-end and ship customer value</li> <li>Bonus: Familiarity
+    with experimentation or feature flag platforms (e.g. Statsig, LaunchDarkly, Optimizely)</li>
+    <li>Bonus: Interest in statistical concepts</li> <li>Bonus: Curiosity around DevOps
+    and production engineering</li> </ul> <p><strong>Additional Resources&nbsp;</strong></p>
+    <ul> <li><a href="https://www.linkedin.com/company/mixpanel-inc-/life/14c165ce-2dcd-43fd-8971-0e7e1932bcc0/?viewAsMember=true&amp;lipi=urn%3Ali%3Apage%3Acompanies_company_life_life%3B055e4f0d-41ed-4d1b-bf1b-b80f9a320121"
+    target="_blank">Engineering Life Page&nbsp;</a></li> <li><a href="https://engineering.mixpanel.com/"
+    target="_blank">Engineering Blog</a></li> </ul> <p>&nbsp;</p><div class="content-conclusion"><p><strong>Benefits
+    and Perks</strong><strong><br></strong></p> <ul> <li>Comprehensive Medical, Vision,
+    and Dental Care</li> <li>Mental Wellness Benefit</li> <li>Generous Vacation Policy
+    &amp; Additional Company Holidays</li> <li>Enhanced Parental Leave</li> <li>Volunteer
+    Time Off</li> <li>Additional US Benefits: Pre-Tax Benefits including 401(K), Wellness
+    Benefit, Holiday Break</li> </ul> <p><em>*please note that benefits and perks
+    for contract positions will vary*</em></p> <p><strong>Culture Values</strong></p>
+    <ul> <li><strong>Make Bold Bets:</strong> We choose courageous action over comfortable
+    progress.</li> <li><strong>Innovate with Insight:</strong> We tackle decisions
+    with rigor and judgment - combining data, experience and collective wisdom to
+    drive&nbsp;powerful outcomes.</li> <li><strong>One Team:</strong> We collaborate
+    across boundaries to achieve far greater impact than any of us could accomplish
+    alone.</li> <li><strong>Candor with Connection:</strong> We build meaningful relationships
+    that enable honest feedback and direct conversations.</li> <li><strong>Champion
+    the Customer:</strong> We seek to deeply understand our customers’ needs, ensuring
+    their success is our north star.</li> <li><strong>Powerful Simplicity:</strong>
+    We find elegant solutions to complex problems, making sophisticated things accessible.</li>
+    </ul> <p><strong>Why choose Mixpanel?</strong></p> <p>We’re a leader in analytics
+    with over 9,000 customers and $277M raised from prominent investors: like Andreessen-Horowitz,
+    Sequoia, YC, and, most recently, Bain Capital. Mixpanel’s pioneering event-based
+    data analytics platform offers a powerful yet simple solution for companies to
+    understand user behaviors and easily track overarching company success metrics.
+    Our accomplished teams continuously facilitate our expansion by tackling the ever-evolving
+    challenges tied to scaling, reliability, design, and service. Choosing to work
+    at Mixpanel '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T18:47:27.027303+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

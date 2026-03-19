@@ -1,0 +1,97 @@
+id: modal-developer-relations-engineer-sandboxes
+name: Modal Developer Relations Engineer, Sandboxes
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Modal
+  url: https://jobs.ashbyhq.com/modal
+  application_url: https://jobs.ashbyhq.com/modal/5113f35e-988d-41bc-a899-3261a9454e40
+  portal: ashby
+  location: New York
+  location_class: us-onsite
+  description: "About Us: Modal provides the infrastructure foundation for AI teams.\
+    \ With instant GPU access, sub-second container startups, and native storage,\
+    \ Modal makes it simple to train models, run batch jobs, and serve low-latency\
+    \ inference. We have thousands of customers who rely on us for production AI workloads,\
+    \ including Lovable, Scale AI, Substack, and Suno. We're a fast-growing team based\
+    \ out of NYC, SF, and Stockholm. We've hit 9-figure ARR and recently raised a\
+    \ Series B at a $1.1B valuation. Our investors include Lux Capital , Redpoint\
+    \ Ventures , Amplify Partners , and Elad Gil . Working at Modal means joining\
+    \ one of the fastest-growing AI infrastructure organizations at an early stage,\
+    \ with many opportunities to grow within the company. Our team includes creators\
+    \ of popular open-source projects (e.g. Seaborn , Luigi ), academic researchers,\
+    \ international olympiad medalists, and experienced engineering and product leaders\
+    \ with decades of experience. The Role: Modal builds AI infrastructure products\
+    \ that developers love. That's how we grew so quickly and why word-of-mouth remains\
+    \ one of our most important channels today. From powering one of the largest vibe-coding\
+    \ platforms at Lovable to enabling teams like Ramp to build their own internal\
+    \ coding agents , Modal Sandboxes are used by developers to safely execute AI-generated\
+    \ code at scale. We're now hiring our first developer relations engineer focused\
+    \ on Modal Sandboxes. Whether it\u2019s banger tweets , in-depth technical resources\
+    \ or long-form talks , we want to meet developers by any medium necessary and\
+    \ empower them to build and ship novel AI products. In this role, you will primarily\
+    \ be creating and distributing technical content that is unique, educational,\
+    \ and practical. This content will be the first Modal touchpoint for many of our\
+    \ users. We want to not only showcase the power and developer experience of Modal,\
+    \ but also be a trusted resource for them when it comes to implementing new AI\
+    \ technologies. In this role, you will: Ship high quality technical content (videos,\
+    \ cookbooks, integrations, creative mini-apps) that teaches developers how to\
+    \ use Modal Sandboxes for LLM-powered code execution, vibe-coding apps, RL environments\
+    \ and beyond. Distill the latest advancements in AI technology and educate developers\
+    \ on how to incorporate them. Give demos/talks about Modal and adjacent tools\
+    \ at developer events. Engage with users in our community, both online (X, LinkedIn,\
+    \ Slack) and at in-person events. Build relationships, integrations, and joint\
+    \ marketing activities with other developer-focused companies Set objectives that\
+    \ are aligned with the greater GTM team and track the impact of the initiatives\
+    \ you work on. Requirements: We are looking for someone who: Has built something\
+    \ that rhymes with a vibe-coding platform, hosted background agents, or other\
+    \ AI systems that execute generated code in isolated environments. 3+ years as\
+    \ a software engineer and at least 1 year experience using ML, LLMs, or agentic\
+    \ systems. Is energized by the AI developer community and wants to help developers\
+    \ adopt new technologies. Loves teaching. Has excellent technical communication\
+    \ skills. Is metrics-driven and takes quantitative approaches to prioritizing\
+    \ initiatives. Is excited about working in-person in the NYC, SF or Stockholm\
+    \ office. Bonus: you're not afraid to think outside the box when it comes to compelling\
+    \ technical content. Bonus: you already have a developer following on social media!"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: null
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:33.712471+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

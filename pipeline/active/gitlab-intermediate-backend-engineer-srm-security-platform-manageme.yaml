@@ -1,0 +1,117 @@
+id: gitlab-intermediate-backend-engineer-srm-security-platform-manageme
+name: 'GitLab Intermediate Backend Engineer, SRM: Security Platform Management'
+track: job
+status: qualified
+outcome: null
+target:
+  organization: GitLab
+  url: https://boards.greenhouse.io/gitlab
+  application_url: https://job-boards.greenhouse.io/gitlab/jobs/8443325002
+  portal: greenhouse
+  location: Remote
+  location_class: remote-global
+  description: "<div class=\"content-intro\"><p>GitLab is the intelligent orchestration\
+    \ platform for DevSecOps. GitLab enables organizations to increase developer productivity,\
+    \ improve operational efficiency, reduce security and compliance risk, and accelerate\
+    \ digital transformation. More than 50 million registered users and more than\
+    \ 50% of the Fortune 100* trust GitLab to ship better, more secure software faster.</p>\
+    \ <p>The same principles built into our products are reflected in how our team\
+    \ works: we embrace AI as a core productivity multiplier, with all team members\
+    \ expected to incorporate AI into their daily workflows to drive efficiency, innovation,\
+    \ and impact. GitLab is where careers accelerate, innovation flourishes, and every\
+    \ voice is valued. Our high-performance culture is driven by our <a href=\"https://handbook.gitlab.com/handbook/values/\"\
+    >values</a> and continuous knowledge exchange, enabling our team members to reach\
+    \ their full potential while collaborating with industry leaders to solve complex\
+    \ problems. <a href=\"https://www.youtube.com/watch?v=OuZIb5zszQI\">Co-create\
+    \ the future with us</a> as we build technology that transforms how the world\
+    \ develops software.</p> <p>*<em>Fortune 500\xAE is a registered trademark of\
+    \ Fortune Media IP Limited, used under license. Claim based on GitLab data. Fortune\
+    \ 100 refers to the top 20% ranked companies in the 2025 Fortune 500 list, published\
+    \ in June 2025. Fortune and Fortune Media IP Limited are not affiliated with,\
+    \ and do not endorse products or services of GitLab.</em></p></div><h4>An overview\
+    \ of this role</h4> <p>As an Intermediate Backend Engineer on our next-generation\
+    \ Security Platform Management team, you will help build GitLab\u2019s enterprise\
+    \ security solutions from the ground up. You\u2019ll design and develop greenfield\
+    \ backend services that close competitive gaps and position GitLab as a single\
+    \ platform for enterprise security, directly shaping how thousands of organizations\
+    \ understand and manage their security posture at scale. Working closely with\
+    \ a distributed team of 8 engineers, a Product Manager, and a UX designer across\
+    \ the US, Israel, and India, you\u2019ll own critical backend systems and APIs\
+    \ that power capabilities like a new Security Manager role system, asset inventory\
+    \ with posture sharing, logical asset gathering with statistics, and unified configuration\
+    \ for GitLab\u2019s security tools.</p> <p>Some examples of our projects:</p>\
+    \ <ul> <li value=\"1\">Building a new Security Manager role system to centralize\
+    \ and streamline security administration</li> <li value=\"2\">Creating assets\
+    \ inventory and posture sharing capabilities, including logical asset gathering\
+    \ and unified configuration for all GitLab security tools</li> </ul> <h4>What\
+    \ you\u2019ll do</h4> <ul> <li value=\"1\">Design and develop next-generation\
+    \ Security Platform Management capabilities that strengthen GitLab\u2019s enterprise\
+    \ security offering</li> <li value=\"2\">Build and optimize scalable backend services\
+    \ and data models in Ruby on Rails with PostgreSQL for large volumes of security\
+    \ data</li> <li value=\"3\">Develop and maintain robust REST and GraphQL APIs\
+    \ that power security workflows across the GitLab platform</li> <li value=\"4\"\
+    >Collaborate with Infrastructure, Policies, and Security Insights teams to deliver\
+    \ cross-functional security features end to end</li> <li value=\"5\">Implement\
+    \ and refine unified configuration mechanisms for GitLab\u2019s suite of security\
+    \ tools to simplify management at scale</li> <li value=\"6\">Work within focused,\
+    \ feature-specific squads to deliver high-impact, well-tested functionality with\
+    \ minimal context switching</li> <li value=\"7\">Contribute to technical design\
+    \ decisions, code reviews, and standards that shape the architecture of GitLab\u2019\
+    s security platform</li> </ul> <h4>What you\u2019ll bring</h4> <ul> <li value=\"\
+    1\">Proficiency in backend development with Ruby on Rails, including building\
+    \ and maintaining production services</li> <li value=\"2\">Experience designing\
+    \ and optimizing PostgreSQL schemas and queries for large-scale data</li> <li\
+    \ value=\"3\">Experience building and maintaining REST and GraphQL APIs that integrate\
+    \ with complex products or platforms</li> <li value=\"4\">Familiarity with Git-based\
+    \ workflows and continuous integration and delivery (CI/CD), ideally using GitLab</li>\
+    \ <li value=\"5\">Knowledge of Elasticsearch and NoSQL database technologies,\
+    \ or interest in learning and applying them</li> <li value=\"6\">Experience working\
+    \ in collaborative, cross-functional teams with product management and design</li>\
+    \ <li value=\"7\">Ability to work autonomously in an all-remote, asynchronous\
+    \ environment while staying aligned with team goals</li> <li value=\"8\">Interest\
+    \ in security domains and in building scalable, reliable solutions for enterprise\
+    \ customers, with openness to transferable experience from related areas</li>\
+    \ </ul> <h4>About the team</h4> <p>The Security Platform Management team sits\
+    \ within GitLab\u2019s Security Risk Management area and is responsible for building\
+    \ new platform capabilities that help "
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:32.540479+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

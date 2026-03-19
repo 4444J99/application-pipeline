@@ -1,0 +1,115 @@
+id: poolside-ai-member-of-engineering-pre-training-data-engineering
+name: Poolside AI Member of Engineering (Pre-training / Data Engineering)
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Poolside AI
+  url: https://jobs.ashbyhq.com/poolside
+  application_url: https://jobs.ashbyhq.com/poolside/ac8683a2-4b78-4d10-a528-fa6524548d90
+  portal: ashby
+  location: Remote (EMEA/East Coast)
+  location_class: international
+  description: "ABOUT POOLSIDE In this decade, the world will create Artificial General\
+    \ Intelligence. There will only be a small number of companies who will achieve\
+    \ this. Their ability to stack advantages and pull ahead will define the winners.\
+    \ These companies will move faster than anyone else. They will attract the world's\
+    \ most capable talent. They will be on the forefront of applied research, engineering,\
+    \ infrastructure and deployment at scale. They will continue to scale their training\
+    \ to larger & more capable models. They will be given the right to raise large\
+    \ amounts of capital along their journey to enable this. They will create powerful\
+    \ economic engines. They will obsess over the success of their users and customers.\
+    \ Poolside exists to be this company : to build a world where AI will be the engine\
+    \ behind economically valuable work and scientific progress. We believe the fastest\
+    \ way to reach AGI lies in accelerating software development itself, by reshaping\
+    \ the developer experience with agentic systems, coding assistants, and the frontier\
+    \ models that power them. We deploy these systems directly into the development\
+    \ environments of security-conscious enterprises. ABOUT OUR TEAM We were founded\
+    \ in the US and have our home there, but our team is distributed across Europe\
+    \ and North America. We get our fix of in-person collaboration (and croissants)\
+    \ in Paris each month for 3 days, always Monday-Wednesday, with an open invitation\
+    \ to stay the whole week. We also do longer off-sites once a year. Our team is\
+    \ a multidisciplinary blend of research, engineering, and business experts. What\
+    \ unites us is our deep care for what we build together. We\u2019re in a race\
+    \ that requires hard work, intellectual curiosity, and obsession; to balance this\
+    \ intensity, we\u2019ve assembled a team of low ego and kind-hearted individuals\
+    \ who have built the special culture Poolside has. By building collaboratively\
+    \ and with intention, we create a compounding effect that moves the entire company\
+    \ forward towards our mission: reaching AGI through intelligence systems built\
+    \ for software development. ABOUT THE ROLE You will be a core member of our Pretraining\
+    \ Data team, responsible for building and scaling our Model Factory: our system\
+    \ for quickly training, scaling, and experimenting with our foundation models.\
+    \ This is a hands-on role where your #1 mission is to architect and maintain the\
+    \ high-performance pipelines that transform trillions of raw tokens into the high-quality\
+    \ dataset \"fuel\" our models require. To enable us to conduct and implement latest\
+    \ research, you\u2019ll be engineering the ingestion, deduplication, and streaming\
+    \ systems that handle petabyte-scale data. You will bridge the gap between raw\
+    \ web crawls and our GPU clusters, directly influencing model performance through\
+    \ superior data modeling, algorithmic sorting, and distributed pipeline optimization.\
+    \ You will be closely collaborating with other teams like Pretraining, Postraining,\
+    \ Evals, and Product to generate high-quality datasets that map to missing model\
+    \ capabilities and downstream use cases. Curious about the tech? Take a deep dive\
+    \ into our pretraining data stack in this blogpost from our 'Model Factory' series.\
+    \ YOUR MISSION To deliver large, high-quality, and diverse datasets of natural\
+    \ language and source code for training Poolside models and coding agents. RESPONSIBILITIES\
+    \ Build and maintain high-performance pipelines for trillions of tokens. Deliver\
+    \ diverse and high quality datasets for pre-training foundation models. Closely\
+    \ work with other teams such as Pretraining, Posttraining, Evals and Product to\
+    \ to ensure alignment on the quality of the models delivered. SKILLS & EXPERIENCE\
+    \ Strong background in building production-grade, distributed data systems for\
+    \ machine learning, with experience in: Orchestration: Slurm, Airflow, or Dagster\
+    \ Observability & Reliability: CI/CD, Grafana, Prometheus, etc. Infra: Git, Docker,\
+    \ k8s, cloud managed services Batch inference (ex: vLLM) Performance obsession,\
+    \ especially with large-scale GPU clusters and distributed pipelines Expert-level\
+    \ python knowledge and ability to write clean and maintainable code Strong algorithmic\
+    \ foundations Proficiency with libraries like Polars, Dask, or PySpark Nice to\
+    \ have: Experience in building trillion-scale SOTA pretraining datasets Experience\
+    \ translating research to production at scale Experience with OCR, web crawling,\
+    \ or evals Prior experience pre-training LLMs PROCESS Intro call with Eiso, our\
+    \ CTO & Co-Founder Technical Interview(s) with one of our Founding Engineers Team\
+    \ fit call with the People team Final interview with one of our Founding Engineers\
+    \ BENEFITS Fully remote work & flexible hours 37 days/year of vacation & holidays\
+    \ Health insurance allowance for you & dependents Company-provided equipment Well-being,\
+    \ always-be-learning & home office allowances Frequent team get togethers Diverse\
+    \ & inclusive people-first culture"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.4
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: null
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:33.701765+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

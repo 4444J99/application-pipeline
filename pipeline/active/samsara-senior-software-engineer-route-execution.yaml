@@ -1,0 +1,116 @@
+id: samsara-senior-software-engineer-route-execution
+name: Samsara Senior Software Engineer - Route Execution
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Samsara
+  url: https://boards.greenhouse.io/samsara
+  application_url: https://www.samsara.com/company/careers/roles/7569229?gh_jid=7569229
+  portal: greenhouse
+  location: Remote - US
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><p><span style=\"font-family: arial,\
+    \ helvetica, sans-serif;\"><strong>Who we are</strong></span></p> <p><span style=\"\
+    font-weight: 300; font-family: arial, helvetica, sans-serif;\">Samsara (NYSE:\
+    \ IOT) is the pioneer of the Connected Operations\u2122 Cloud, which is a platform\
+    \ that enables organizations that depend on physical operations to harness Internet\
+    \ of Things (IoT) data to develop actionable insights and improve their operations.\
+    \ At Samsara, we are helping improve the safety, efficiency and sustainability\
+    \ of the physical operations that power our global economy. Representing more\
+    \ than 40% of global GDP, these industries are the infrastructure of our planet,\
+    \ including agriculture, construction, field services, transportation, and manufacturing\
+    \ \u2014 and we are excited to help digitally transform their operations at scale.</span></p>\
+    \ <p><span style=\"font-weight: 300; font-family: arial, helvetica, sans-serif;\"\
+    >Working at Samsara means you\u2019ll help define the future of physical operations\
+    \ and be on a team that\u2019s shaping an exciting array of product solutions,\
+    \ including Video-Based Safety, Vehicle Telematics, Apps and Driver Workflows,\
+    \ and Equipment Monitoring. As part of a recently public company, you\u2019ll\
+    \ have the autonomy and support to make an impact as we build for the long term.</span></p></div><p><strong>About\
+    \ the role:</strong></p> <p>As a Senior Software Engineer on Samsara\u2019s Route\
+    \ Execution team, you\u2019ll build the systems that power route planning, optimization,\
+    \ dispatch, and real-time tracking for fleets across logistics, field services,\
+    \ and delivery. <br><br>You\u2019ll work across the stack, with an emphasis on\
+    \ distributed systems powering our dispatch state machine, to improve dispatcher\
+    \ tools, driver experiences, and scalable backend APIs that handle geospatial\
+    \ and real-time data at scale. You\u2019ll partner with design, product, and mobile\
+    \ to ship reliable, performant features that customers use every day.&nbsp;</p>\
+    \ <p>Our stack features Golang for backend services, GraphQL for data fetching,\
+    \ and TypeScript + React for our web client. We also use React Native for our\
+    \ mobile app. Direct experience with these technologies is not required.</p> <p>This\
+    \ is a remote position open to candidates residing in the US or Canada. Relocation\
+    \ assistance will not be provided for this role.</p> <p>&nbsp;</p> <p><strong>In\
+    \ this role, you will:&nbsp;</strong></p> <ul> <li>Develop scalable backend services\
+    \ that handle tracking and execution of hundreds of thousands of routes in real\
+    \ time, along with reporting and suggested optimizations to better utilize vehicles,\
+    \ drivers, and take optimal routes to accomplish their work.</li> <li>Create web\
+    \ interfaces that allow dispatchers and fleet managers to create and manage routes\
+    \ and deliveries for their entire organization from a single pane of glass.</li>\
+    \ <li>Implement APIs and integrations with TMS/ERP systems that process millions\
+    \ of route events a day.</li> <li>Bringing to life our next-gen commercial navigation\
+    \ features that utilize real-time data (weather, live traffic, hours of service)\
+    \ into our route tracking flow to make routes accurate and dynamically optimal\
+    \ for our customers.</li> </ul> <p><strong>Minimum requirements for the role:</strong></p>\
+    \ <ul> <li>Bachelor's Degree in Computer Science/Engineering or equivalent practical\
+    \ experience.</li> <li>4+ years of relevant industry experience in software development.</li>\
+    \ <li>Strong programming/coding fundamentals.</li> <li>Experience designing and\
+    \ architecting large, high-scale systems.</li> <li>Excellent communication, collaboration,\
+    \ and problem-solving skills, with a demonstrated ability to manage technical\
+    \ discussions.</li> <li>An ability to estimate, communicate, and deliver upon\
+    \ project milestones with your team.</li> <li>Located in the US or Canada</li>\
+    \ </ul> <p><strong>An ideal candidate also has:</strong></p> <ul> <li>Demonstrated\
+    \ experience in routing, dispatch and navigation systems.</li> <li>Contributed\
+    \ heavily to driving significant value to their customers.</li> <li>Enjoys understanding\
+    \ our users and what would make their day-to-day processes easier to manage.</li>\
+    \ <li>Loves shipping features that our customers use immediately.</li> <li>Seeks\
+    \ to iterate on new products based on customer feedback.</li> <li>Proactive growth\
+    \ mindset and improve on the status quo.&nbsp;</li> </ul><div class=\"content-pay-transparency\"\
+    ><div class=\"pay-input\"><div class=\"description\"><p><span style=\"font-size:\
+    \ 16px;\">The range of annual base salary for full-time employees for this position\
+    \ is below. Please note that base pay offered may vary depending on factors including\
+    \ your city of residence, job-related knowledge, skills, and experience. This\
+    \ role is also eligible for an initial RSU grant with no vesting cliff, and ongoing\
+    \ refresh opportunities tied to performance, subject to plan terms and conditions.\
+    \ Learn more about our total rewards and benefits below.</span></p></div><div\
+    \ class=\"title\">Annual Base Salary</div>"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-16'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:34.098918+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"

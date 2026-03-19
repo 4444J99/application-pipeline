@@ -1,0 +1,115 @@
+id: robinhood-software-backend-engineer-credit-cards-banking-infrastructur
+name: Robinhood Software Backend Engineer, Credit Cards & Banking Infrastructure
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7170008?t=gh_src=&gh_jid=7170008
+  portal: greenhouse
+  location: Bellevue, WA; Menlo Park, CA; New York, NY
+  location_class: us-onsite
+  description: "<div class=\"content-intro\"><h2>Join us in building the future of\
+    \ finance.</h2> <p>Our mission is to democratize finance for all. <a href=\"https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048\"\
+    \ target=\"_blank\">An estimated $124 trillion of assets</a> will be inherited\
+    \ by younger generations in the next two decades. The largest transfer of wealth\
+    \ in human history. If you\u2019re ready to be at the epicenter of this historic\
+    \ cultural and financial shift, keep reading.</p></div><h2><strong>Join us in\
+    \ building the future of finance.</strong></h2> <p>Our mission is to democratize\
+    \ finance for all. <a href=\"https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048\"\
+    >An estimated $124 trillion of assets</a> will be inherited by younger generations\
+    \ in the next two decades. The largest transfer of wealth in human history. If\
+    \ you\u2019re ready to be at the epicenter of this historic cultural and financial\
+    \ shift, keep reading.</p> <h2><strong>About the team + role</strong></h2> <p>The\
+    \ Money Infrastructure team builds the backbone of Robinhood\u2019s Credit Card\
+    \ and Banking products. We own the core infrastructure, reliability, scalability,\
+    \ observability, incident response, and developer experience that make money movement\
+    \ safe, correct, and fast at scale. We also lead adoption of AI-powered engineering\
+    \ tooling that helps teams build faster, review better, monitor more intelligently,\
+    \ and operate with greater clarity. Our mandate is simple: raise the technical\
+    \ ceiling of the organization and remove the friction that slows it down.</p>\
+    \ <p>As a Software Backend Engineer, Credit Card &amp; Banking Infrastructure,\
+    \ you\u2019ll work on the high-leverage systems problems that matter most as the\
+    \ business grows. You\u2019ll design and build backend and platform capabilities\
+    \ that improve resiliency, simplify complexity, strengthen operational excellence,\
+    \ and accelerate engineering teams across the stack. This is a strong fit for\
+    \ an engineer with range, ambition, and a high quality bar\u2014someone who wants\
+    \ to learn quickly, take ownership early, and help shape the infrastructure behind\
+    \ products used at massive scale.</p> <p>This role is based in our Bellevue, WA,\
+    \ or New York, NY office(s), with in-person attendance expected at least 3 days\
+    \ per week.</p> <p>At Robinhood, we believe in the power of in-person work to\
+    \ accelerate progress, spark innovation, and strengthen community. Our office\
+    \ experience is intentional, energizing, and designed to fully support high-performing\
+    \ teams.</p> <h2><strong>What you\u2019ll do</strong></h2> <ul> <li>Improve the\
+    \ scalability, reliability, and performance of core money movement and ledger-adjacent\
+    \ systems, including resilience under rapid traffic spikes.</li> <li>Find and\
+    \ fix structural weaknesses in architecture and operations to reduce incidents,\
+    \ manual toil, and on-call burden.</li> <li>Build internal tooling and automation\
+    \ that make engineers faster and more effective, including AI-assisted workflows\
+    \ for diagnosis, testing, and operational analysis.</li> <li>Raise the bar on\
+    \ observability and operational excellence through better dashboards, alerting,\
+    \ runbooks, and incident follow-through.</li> <li>Partner across Credit Card &amp;\
+    \ Banking to shape technical designs, harden service boundaries, and deliver safe,\
+    \ high-quality launches.<br><br></li> </ul> <h2><strong>What you bring</strong></h2>\
+    \ <ul> <li>A passion for building and operating production backend systems where\
+    \ correctness, security, and reliability are non-negotiable.<br>Strong distributed\
+    \ systems fundamentals and a track record of working effectively in service-oriented\
+    \ architectures at scale.</li> <li>The ability to spot leverage: you use metrics,\
+    \ traces, and incident data to uncover root causes and drive meaningful improvements.</li>\
+    \ <li>Clear, confident technical communication, and excellent cross-functional\
+    \ collaboration skills.</li> <li>Sound engineering judgment and strong ownership\u2014\
+    you can make smart trade-offs, execute with urgency, and raise the bar around\
+    \ you.</li> <li>You are looking to do your best work somewhere where you\u2019\
+    ll be surrounded, challenged, and inspired by people who run just as fast as you\
+    \ do.<br><br></li> </ul> <h2><strong>What we offer</strong></h2> <ul> <li>Challenging\
+    \ work with opportunities to grow your career</li> <li>Compensation tied to performance,\
+    \ including bonus programs, equity ownership, and 401(k) matching</li> <li>Comprehensive\
+    \ benefits, including 100% paid health insurance for employees with 90% coverage\
+    \ for dependents</li> <li>Lifestyle wallet - a flexible benefits spending account\
+    \ for wellness, learning, and more</li> <li>Employer-paid life &amp; disability\
+    \ insurance, fertility benefits, and mental health benefits</li> <li>Time off\
+    \ to recharge including company holidays, paid time off, sick time, parental leave,\
+    \ and more!</li> <li>Exceptional office experience with catered meals, events,\
+    \ and comfortable workspaces.</li> <"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.7
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-17'
+  posting_date: '2026-03-16'
+  date_added: '2026-03-17'
+  discovered: '2026-03-17T17:05:32.817875+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-19"
