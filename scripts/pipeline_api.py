@@ -241,7 +241,7 @@ def score_entry(
             )
 
         if all_entries:
-            entries = load_score_entries(entry_id=None, include_pool=True)
+            entries = load_score_entries(entry_id=None, include_pool=False)
             if not entries:
                 return ScoreResult(
                     status=ResultStatus.ERROR,

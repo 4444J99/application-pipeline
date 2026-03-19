@@ -172,7 +172,11 @@ def load_entries(entry_id: str | None = None, include_pool: bool = False) -> lis
     """Load pipeline entries as (filepath, data) tuples.
 
     If entry_id given, load only that one.
-    If include_pool, also scan research_pool/ (for --all scoring).
+    If include_pool, also scan research_pool/ (for explicit --include-pool flag).
+
+    Default (include_pool=False): loads active/ + submitted/ + closed/ only.
+    Research pool entries are ONLY scored via --auto-qualify, which has its
+    own dedicated loading logic in run_auto_qualify().
     """
     if entry_id:
         filepath, data = load_entry_by_id(entry_id)
@@ -858,7 +862,10 @@ def run_triage_staged(
 def main():
     parser = argparse.ArgumentParser(description="Score pipeline entries against rubric")
     parser.add_argument("--target", help="Score a single entry by ID")
-    parser.add_argument("--all", action="store_true", help="Score all entries")
+    parser.add_argument("--all", action="store_true",
+                        help="Score all entries in active/submitted/closed (NOT research_pool)")
+    parser.add_argument("--include-pool", action="store_true",
+                        help="Include research_pool in --all scoring (usually not needed)")
     parser.add_argument("--qualify", action="store_true",
                         help="Show APPLY/SKIP recommendations based on score threshold")
     parser.add_argument("--explain", action="store_true",
@@ -924,8 +931,10 @@ def main():
     if args.review_compressed:
         args.all = True
 
-    # --all includes research pool for full-dataset scoring
-    include_pool = args.all and not args.target
+    # --all scores active/submitted/closed only. Research pool entries are
+    # scored exclusively via --auto-qualify (which has its own loading logic).
+    # Use --include-pool to explicitly rescore research_pool entries in-place.
+    include_pool = getattr(args, "include_pool", False) and not args.target
     entries = load_entries(args.target if args.target else None, include_pool=include_pool)
     if not entries:
         print("No entries found.", file=sys.stderr)
