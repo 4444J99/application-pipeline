@@ -1,0 +1,112 @@
+id: coinbase-senior-software-engineer-data-platform
+name: Coinbase Senior Software Engineer - Data Platform
+track: job
+status: staged
+outcome: null
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7728790?gh_jid=7728790
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><p>Ready to be pushed beyond what you\
+    \ think you\u2019re capable of?</p> <p>At Coinbase, our mission is to increase\
+    \ economic freedom in the world. It\u2019s a massive, ambitious opportunity that\
+    \ demands the best of us, every day, as we build the emerging onchain platform\
+    \ \u2014 and with it, the future global financial system.</p> <p>To achieve our\
+    \ mission, we\u2019re seeking a very specific candidate. We want someone who is\
+    \ passionate about our mission and who believes in the power of crypto and blockchain\
+    \ technology to update the financial system. We want someone who is eager to leave\
+    \ their mark on the world, who relishes the pressure and privilege of working\
+    \ with high caliber colleagues, and who actively seeks feedback to keep leveling\
+    \ up. We want someone who will run towards, not away from, solving the company\u2019\
+    s hardest problems.</p> <p>Our <a href=\"https://www.coinbase.com/mission\">work\
+    \ culture</a> is intense and isn\u2019t for everyone. But if you want to build\
+    \ the future alongside others who excel in their disciplines and expect the same\
+    \ from you, there\u2019s no better place to be.</p> <p>While many roles at Coinbase\
+    \ are remote-first, we are not remote-only. In-person participation is required\
+    \ throughout the year. Team and company-wide offsites are held multiple times\
+    \ annually to foster collaboration, connection, and alignment. Attendance is expected\
+    \ and fully supported.</p></div><p>The mission of the Platform Product Group engineers\
+    \ is to build a trusted, scalable and compliant platform to operate with speed,\
+    \ efficiency and quality. Our teams build and maintain the platforms critical\
+    \ to the existence of Coinbase. There are many teams that make up this group which\
+    \ include Product Foundations (i.e. Identity, Payment, Risk, Proofing &amp; Regulatory,\
+    \ Finhub), Machine Learning, Customer Experience, and Infrastructure.</p> <p>The\
+    \ Data Platform team builds and operates systems to centralize all of Coinbase's\
+    \ internal and third-party data, making it easy for teams across the company to\
+    \ access, process, and transform that data for analytics, machine learning, and\
+    \ powering end-user experiences. As an engineer on the team you will contribute\
+    \ to the full spectrum of our systems, from managing foundational processing and\
+    \ data storage, to building and maintaining scalable pipelines, to developing\
+    \ frameworks, tools, and internal applications to make that data easily and efficiently\
+    \ available to other teams and systems.</p> <p><strong>What you\u2019ll be doing\
+    \ (ie. job duties):</strong></p> <ul> <li>Design, build, and operate our foundational\
+    \ data-heavy services: storage (cloud data warehouse, data lake), orchestration\
+    \ (Airflow), batch processing (Spark, SQL), streaming services (Kafka), query\
+    \ federation and caching, time-series db, graph db, and real-time event aggregation\
+    \ stores.</li> <li>Build and maintain data integration &amp; process SDKs for\
+    \ use by internal services and product teams throughout Coinbase.</li> <li>Design\
+    \ and build self-service applications to empower our users to manage and troubleshoot\
+    \ their own data pipelines running on our platforms.</li> <li>Design and build\
+    \ services for end-to-end data security and data observability: managing access\
+    \ controls across multiple storage and access layers, tracking data quality, cataloging\
+    \ datasets and their lineage, usage auditing.</li> <li>Convert functional requests\
+    \ from data analysts, ML, and security &amp; compliance into reusable and scalable\
+    \ patterns; and assemble data microservices into data platforms for critical business\
+    \ verticals and user cohorts.</li> </ul> <p><strong>What we look for in you (ie.\
+    \ job requirements):</strong></p> <ul> <li>You have at least 5+ years of experience\
+    \ in software engineering.</li> <li>You have Strong Python, Go, or Java backend\
+    \ development skills.</li> <li>You have general experience working with data systems\
+    \ or data pipelines.</li> <li>You are familiar with design patterns such as scale-out,\
+    \ caching, key/value, and columnar.</li> <li>You leverage SQL, Python, Airflow,\
+    \ and BI expertise to analyze data for operational insights.</li> </ul> <p><strong>Nice\
+    \ to Have:</strong></p> <ul> <li>Crypto-forward experience, including familiarity\
+    \ with onchain activity such as interacting with Ethereum addresses, using ENS,\
+    \ and engaging with dApps or blockchain-based services</li> </ul> <p>Job #: P76450</p>\
+    \ <p>*Answers to crypto-related questions may be used to evaluate your onchain\
+    \ experience</p> <p>#LI-Remote</p> <div id=\"fortidlp-input-element-parent\"></div><div\
+    \ class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"description\"\
+    ><p><strong>Pay Transparency Notice:</strong><strong><em> </em></strong>Depending\
+    \ on your work location, the target annual <strong>base </strong>salary for this\
+    \ position can range as detailed below. Total compensation may also include equity\
+    \ and bonus eligibility and benefits (including medical, dental, vision and 401(k)).</p></div><div\
+    \ class=\"title\">Annual base salary range (excluding equity and bonus):</"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used:
+    framing: framings/documentation-engineer
+    evidence: evidence/differentiators
+    methodology: methodology/ai-conductor
+    credentials: pitches/credentials-creative-tech
+    work_samples: evidence/work-samples
+  variant_ids:
+    cover_letter: cover-letters/coinbase-senior-software-engineer-data-platform
+  materials_attached:
+  - resumes/batch-03/coinbase-senior-software-engineer-data-platform/coinbase-senior-software-engineer-data-platform-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.091696+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

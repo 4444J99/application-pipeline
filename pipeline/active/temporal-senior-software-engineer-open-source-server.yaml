@@ -1,0 +1,110 @@
+id: temporal-senior-software-engineer-open-source-server
+name: Temporal Senior Software Engineer, Open Source Server
+track: job
+status: staged
+outcome: null
+target:
+  organization: Temporal
+  url: https://boards.greenhouse.io/temporaltechnologies
+  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/4290103007
+  portal: greenhouse
+  location: United States - Remote Opportunity
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><h3><strong>About Us</strong></h3> <div>Temporal\
+    \ is an open source programming model that can simplify code, make applications\
+    \ more reliable, and help developers focus on the important things like delivering\
+    \ features faster. We are on a mission to be the reliable foundation of every\
+    \ developer\u2019s toolbox, and are building the team that will make that happen.</div>\
+    \ <div>&nbsp;</div> <div>Our values guide us \u2014they are present in how we\
+    \ show up, make decisions, and work together to make an impact. We\u2019re curious,\
+    \ driven, collaborative, genuine and humble.</div> <div>&nbsp;</div> <div>Temporal\
+    \ is growing and we are looking for those who share our values, challenge 'standard'\
+    \ thinking, and want to influence our future. If you have a passion for improving\
+    \ the developer experience, building world-class open-source software and communities,\
+    \ and want to be a part of our amazing team, we'd love to hear from you!</div></div><div>\
+    \ <h3><strong>Summary</strong></h3> </div> <div> <div>As a <strong>Senior Engineer</strong>,\
+    \ you will get the chance to design, build, and maintain significant portions\
+    \ of our backend functionality for highly scalable, multi-tenant services. Examples\
+    \ of the key distributed systems components you\u2019ll own include Quotas, Throttling,\
+    \ Visibility, Task Processing, Matching etc. Working in the highly collaborative\
+    \ <strong>Open Source Server team</strong>, we\u2019ll look to build a new enterprise\
+    \ offering that involves both on-premise and dedicated cloud offerings. The Open\
+    \ Source Server team works on core Temporal. See <a href=\"https://github.com/temporalio/temporal\"\
+    >Temporal Git here</a>.&nbsp;</div> <div>&nbsp;</div> <div><em>To see more details\
+    \ about projects the OSS team is working on and demo videos, click&nbsp;<a href=\"\
+    https://temporalio.notion.site/Join-the-OSS-Team-at-Temporal-2058fc567738803c86e7f42ea0353cee\"\
+    \ target=\"_blank\">here</a> - [new window opens]</em></div> <div> <h3><strong>What\
+    \ You'll Do</strong></h3> </div> <div> <ul> <li>Design and implement core backend\
+    \ service features.</li> <li>Provide appropriate test coverage for unit, integration,\
+    \ and performance for your feature ownership area.</li> <li>Clearly document design\
+    \ choices and operational knowledge to successfully deploy and run service with\
+    \ those features.</li> <li>Provide appropriate service level logs and metrics\
+    \ to make features operational for cloud service setup.</li> <li>Provide appropriate\
+    \ alerts, dashboards, and runbooks for production.</li> </ul> </div> <div> <h3><strong>What\
+    \ You'll Bring</strong></h3> </div> <div> <ul> <li>At least 6 years of experience\
+    \ in a production environment as an \"Arranger\" and/or \"Builder/Enhancer\" of\
+    \ highly scalable distributed systems.&nbsp;<em><a href=\"https://temporalio.notion.site/Distributed-Systems-Concurrency-2526e6dfce4947d39fd3a40f9f07652a\"\
+    >see HERE</a> for more info re: \"Arranger\" and/or \"Builder/Enhancer\"</em></li>\
+    \ <li>Solid computer science fundamentals in distributed systems concepts including\
+    \ multi-threading and concurrency.</li> <li>Experience writing concurrent code\
+    \ in production with languages like Go or Java or other applicable languages with\
+    \ skill level as \"high end of Intermediate\" and/or \"Advanced\" or \"Expert\"\
+    \ levels. <em><a href=\"https://temporalio.notion.site/Distributed-Systems-Concurrency-2526e6dfce4947d39fd3a40f9f07652a\"\
+    >see HERE</a> for more info re: \"high end of Intermediate\" and/or \"Advanced\"\
+    \ or \"Expert levels\"</em></li> <li>Experience working with Open Source Systems.</li>\
+    \ <li>Experience building and running services on AWS. Bonus: Microsoft Azure\
+    \ and Google GCP experience.</li> <li>Experience with Elastic Search or Clickhouse</li>\
+    \ <li>Experience in building K8s controllers and/or CRDs is a plus</li> <li>Experience\
+    \ with KEDA and/or Argo is a plus</li> </ul> </div> <div> <h3><strong>Compensation</strong></h3>\
+    \ </div> <div> <ul> <li>The estimated pay range for this role is $160,000 - $220,000.</li>\
+    \ <li>Additionally, this role is eligible to participate in Temporal's equity\
+    \ plan.</li> </ul> </div> <p>&nbsp;</p> </div><div class=\"content-conclusion\"\
+    ><div><em>Compensation ranges reflect salary and commission compensation (when\
+    \ applicable) across several geographic markets. Employment offers carefully consider\
+    \ multiple factors, including prior experience, knowledge, expertise, skillset,\
+    \ market location, and job level assessed during the interview process.</em></div>\
+    \ <div>&nbsp;</div> <div><em>Employee benefits and perks below are for full-time\
+    \ employees, part-time or temporary positions are excluded.&nbsp;</em></div> <div>&nbsp;</div>\
+    \ <div> <div><strong>U.S. Benefits&nbsp;</strong></div> <div> <ul> <li>Unlimited\
+    \ PTO, 12 Holidays + 2 Floating Holidays</li> <li>100% Premiums Coverage for Medical,\
+    \ Dental, and Vision</li> <li>AD&amp;D, LT &amp; ST Disability, and Life Insurance\
+    \ (Standard &amp; Supplemental Available)</li> <li>Empower 401K Plan</li> <li>Additional\
+    \ Perks for Learning &amp; Development, Lifestyle Spending, In-Home Office Setup,\
+    \ Professional"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: documentation-engineer
+submission:
+  effort_level: standard
+  blocks_used:
+    framing: framings/documentation-engineer
+    evidence: evidence/differentiators
+    methodology: methodology/ai-conductor
+    credentials: pitches/credentials-creative-tech
+    work_samples: evidence/work-samples
+  variant_ids:
+    cover_letter: cover-letters/temporal-senior-software-engineer-open-source-server
+  materials_attached:
+  - resumes/batch-03/temporal-senior-software-engineer-open-source-server/temporal-senior-software-engineer-open-source-server-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.665102+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'
