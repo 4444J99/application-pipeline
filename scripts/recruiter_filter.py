@@ -17,7 +17,6 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import os
 import re
 import sys
 from pathlib import Path
@@ -27,7 +26,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pipeline_lib import (
     ALL_PIPELINE_DIRS,
     REPO_ROOT,
-    load_entries,
 )
 
 # === CANONICAL METRICS (single source of truth) ===

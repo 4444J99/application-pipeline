@@ -560,3 +560,785 @@ entries:
   note: DM sent after acceptance — shared portfolio + AI inference interest
   related_targets:
   - cloudflare-models-engineer-developer-relations
+- channel: linkedin
+  contact: Vincent Jiang
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: AdenHQ
+  type: doubling_back
+- channel: linkedin
+  contact: Timothy Zhang
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: AdenHQ
+  type: doubling_back
+- channel: linkedin
+  contact: Adel Burieva
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: AdenHQ
+  type: doubling_back
+- channel: github
+  contact: bryanadenhq
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: AdenHQ
+  type: doubling_back
+- channel: github
+  contact: RichardTang-Aden
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: AdenHQ
+  type: doubling_back
+- channel: linkedin
+  contact: Jake Cooper
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Railway
+  related_targets:
+  - railway-developer-relations
+  type: doubling_back
+- channel: linkedin
+  contact: Jake Runzer
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Railway
+  related_targets:
+  - railway-developer-relations
+  type: doubling_back
+- channel: linkedin
+  contact: Rahul Parmar
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Railway
+  related_targets:
+  - railway-developer-relations
+  type: doubling_back
+- channel: linkedin
+  contact: Mason Egger
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Temporal
+  related_targets:
+  - temporal-senior-developer-success-engineer-emea
+  type: doubling_back
+- channel: linkedin
+  contact: Angie Byron
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Temporal
+  related_targets:
+  - temporal-senior-developer-success-engineer-emea
+  type: doubling_back
+- channel: linkedin
+  contact: Cecil Phillip
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Temporal
+  related_targets:
+  - temporal-senior-developer-success-engineer-emea
+  type: doubling_back
+- channel: linkedin
+  contact: John Gilhuly
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Cursor
+  related_targets:
+  - cursor-forward-deployed-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Aman Sanger
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Cursor
+  related_targets:
+  - cursor-forward-deployed-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Baltazar Zuñiga Ruiz
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Cursor
+  related_targets:
+  - cursor-forward-deployed-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Merve Noyan
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Hugging Face
+  related_targets:
+  - huggingface-dev-advocate
+  type: doubling_back
+- channel: linkedin
+  contact: Thomas Simonini
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Hugging Face
+  related_targets:
+  - huggingface-dev-advocate
+  type: doubling_back
+- channel: linkedin
+  contact: Julien Chaumond
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Hugging Face
+  related_targets:
+  - huggingface-dev-advocate
+  type: doubling_back
+- channel: linkedin
+  contact: Colin Jarvis
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: OpenAI
+  related_targets:
+  - openai-se-evals
+  type: doubling_back
+- channel: linkedin
+  contact: Omer Khan
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: OpenAI
+  related_targets:
+  - openai-se-evals
+  type: doubling_back
+- channel: linkedin
+  contact: Brice Challamel
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: OpenAI
+  related_targets:
+  - openai-se-evals
+  type: doubling_back
+- channel: linkedin
+  contact: Sean Saito
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: OpenAI
+  related_targets:
+  - openai-se-evals
+  type: doubling_back
+- channel: linkedin
+  contact: Sam Passaglia
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: OpenAI
+  related_targets:
+  - openai-se-evals
+  type: doubling_back
+- channel: linkedin
+  contact: Manan Mehta
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: OpenAI
+  related_targets:
+  - openai-se-evals
+  type: doubling_back
+- channel: linkedin
+  contact: Antonio Calero
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Grafana Labs
+  related_targets:
+  - grafana-labs-senior-software-engineer-grafana-databases-managed-services-
+  type: doubling_back
+- channel: linkedin
+  contact: Sean Carolan
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Grafana Labs
+  related_targets:
+  - grafana-labs-senior-software-engineer-grafana-databases-managed-services-
+  type: doubling_back
+- channel: linkedin
+  contact: Marie Cruz
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Grafana Labs
+  related_targets:
+  - grafana-labs-senior-software-engineer-grafana-databases-managed-services-
+  type: doubling_back
+- channel: linkedin
+  contact: Liudmila Molkova
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Grafana Labs
+  related_targets:
+  - grafana-labs-senior-software-engineer-grafana-databases-managed-services-
+  type: doubling_back
+- channel: linkedin
+  contact: Aidan Sims
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Scale AI
+  related_targets:
+  - scale-ai-applied-ai-engineer-enterprise-genai
+  type: doubling_back
+- channel: linkedin
+  contact: Ravi Tadinada
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Scale AI
+  related_targets:
+  - scale-ai-applied-ai-engineer-enterprise-genai
+  type: doubling_back
+- channel: linkedin
+  contact: Kelly Devens
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Scale AI
+  related_targets:
+  - scale-ai-applied-ai-engineer-enterprise-genai
+  type: doubling_back
+- channel: linkedin
+  contact: Lorenzo Porras
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Weights & Biases
+  related_targets:
+  - weights-biases-chief-of-staff-product-engineering
+  type: doubling_back
+- channel: linkedin
+  contact: Keisuke Kamata
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Weights & Biases
+  related_targets:
+  - weights-biases-chief-of-staff-product-engineering
+  type: doubling_back
+- channel: linkedin
+  contact: Chris Van Pelt
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Weights & Biases
+  related_targets:
+  - weights-biases-chief-of-staff-product-engineering
+  type: doubling_back
+- channel: linkedin
+  contact: Michael Talarico
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: MongoDB
+  related_targets:
+  - mongodb-lead-engineering-search-query-platform-availability
+  type: doubling_back
+- channel: linkedin
+  contact: Eric Tsai
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: MongoDB
+  related_targets:
+  - mongodb-lead-engineering-search-query-platform-availability
+  type: doubling_back
+- channel: linkedin
+  contact: Pia Kochar
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: MongoDB
+  related_targets:
+  - mongodb-lead-engineering-search-query-platform-availability
+  type: doubling_back
+- channel: linkedin
+  contact: Meor Amer
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Cohere
+  related_targets:
+  - cohere-forward-deployed-engineer-infrastructure-specialist-north-am
+  type: doubling_back
+- channel: linkedin
+  contact: Ryan Wirth
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Cohere
+  related_targets:
+  - cohere-forward-deployed-engineer-infrastructure-specialist-north-am
+  type: doubling_back
+- channel: linkedin
+  contact: Saurav Velleleth
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Cohere
+  related_targets:
+  - cohere-forward-deployed-engineer-infrastructure-specialist-north-am
+  type: doubling_back
+- channel: linkedin
+  contact: Emily Udagawa
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Notion
+  related_targets:
+  - notion-software-engineer-developer-experience
+  type: doubling_back
+- channel: linkedin
+  contact: Breandan O'Ceallachain
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Notion
+  related_targets:
+  - notion-software-engineer-developer-experience
+  type: doubling_back
+- channel: linkedin
+  contact: Austin Louden
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Notion
+  related_targets:
+  - notion-software-engineer-developer-experience
+  type: doubling_back
+- channel: linkedin
+  contact: Brandon West
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Datadog
+  related_targets:
+  - datadog-senior-ai-engineer-ai-developer-workflows
+  type: doubling_back
+- channel: linkedin
+  contact: Ameet Talwalkar
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Datadog
+  related_targets:
+  - datadog-senior-ai-engineer-ai-developer-workflows
+  type: doubling_back
+- channel: linkedin
+  contact: Casen Lerner
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Datadog
+  related_targets:
+  - datadog-senior-ai-engineer-ai-developer-workflows
+  type: doubling_back
+- channel: linkedin
+  contact: John Chang
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: ElevenLabs
+  related_targets:
+  - elevenlabs-enterprise-solutions-engineer-eu-french-speaking
+  type: doubling_back
+- channel: linkedin
+  contact: Vijay Pemmaraju
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: ElevenLabs
+  related_targets:
+  - elevenlabs-enterprise-solutions-engineer-eu-french-speaking
+  type: doubling_back
+- channel: linkedin
+  contact: Sana Ajani
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: ElevenLabs
+  related_targets:
+  - elevenlabs-enterprise-solutions-engineer-eu-french-speaking
+  type: doubling_back
+- channel: linkedin
+  contact: Carly Richmond
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Elastic
+  related_targets:
+  - elastic-elastic-ai-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: JD Armada
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Elastic
+  related_targets:
+  - elastic-elastic-ai-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Josh Devins
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Elastic
+  related_targets:
+  - elastic-elastic-ai-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Boris Besemer
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Vercel
+  related_targets:
+  - vercel-developer-success-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Nic Discepoli
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Vercel
+  related_targets:
+  - vercel-developer-success-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Luis Fernando Alvarez David
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Vercel
+  related_targets:
+  - vercel-developer-success-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Daniel Zaltsman
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: PostHog
+  related_targets:
+  - posthog-clickhouse-operations-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Lucas Faria
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: PostHog
+  related_targets:
+  - posthog-clickhouse-operations-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: James Hawkins
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: PostHog
+  related_targets:
+  - posthog-clickhouse-operations-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Will Koh
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Ramp
+  related_targets:
+  - ramp-applied-ai-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Will Ye
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Ramp
+  related_targets:
+  - ramp-applied-ai-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Ashwin Kumar
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Ramp
+  related_targets:
+  - ramp-applied-ai-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Samuel Heinz
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Airtable
+  related_targets:
+  - airtable-lead-forward-deployed-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Maximilian Treml
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Airtable
+  related_targets:
+  - airtable-lead-forward-deployed-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Sean McCullough
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Airtable
+  related_targets:
+  - airtable-lead-forward-deployed-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Alex Kroman
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: AssemblyAI
+  related_targets:
+  - assemblyai-applied-ai-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Dylan Fox
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: AssemblyAI
+  related_targets:
+  - assemblyai-applied-ai-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Mimi Chiang
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: AssemblyAI
+  related_targets:
+  - assemblyai-applied-ai-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Jerry Liu
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Character AI
+  related_targets:
+  - character-ai-machine-learning-infrastructure-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Jun Du
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Character AI
+  related_targets:
+  - character-ai-machine-learning-infrastructure-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: James Groeneveld
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Character AI
+  related_targets:
+  - character-ai-machine-learning-infrastructure-engineer
+  type: doubling_back
+- channel: linkedin
+  contact: Anurag Goel
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Render
+  related_targets:
+  - render-software-engineer-growth
+  type: doubling_back
+- channel: linkedin
+  contact: Michael Greer
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Render
+  related_targets:
+  - render-software-engineer-growth
+  type: doubling_back
+- channel: linkedin
+  contact: Juan Manuel Perafan
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: dbt Labs
+  related_targets:
+  - dbt-labs-lead-curriculum-developer
+  type: doubling_back
+- channel: linkedin
+  contact: Matthew Shaver
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: dbt Labs
+  related_targets:
+  - dbt-labs-lead-curriculum-developer
+  type: doubling_back
+- channel: linkedin
+  contact: Beth Hipple
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: dbt Labs
+  related_targets:
+  - dbt-labs-lead-curriculum-developer
+  type: doubling_back
+- channel: linkedin
+  contact: Michael Hatfield
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Twilio
+  related_targets:
+  - twilio-software-architect-reliability-engineering
+  type: doubling_back
+- channel: linkedin
+  contact: Joe Chung
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Twilio
+  related_targets:
+  - twilio-software-architect-reliability-engineering
+  type: doubling_back
+- channel: linkedin
+  contact: Peter Janovsky
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Twilio
+  related_targets:
+  - twilio-software-architect-reliability-engineering
+  type: doubling_back
+- channel: linkedin
+  contact: Luvo Dlulisa
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Wikimedia
+  related_targets:
+  - wikimedia-senior-software-engineer-wikimedia-enterprise
+  type: doubling_back
+- channel: linkedin
+  contact: Thomas Chin
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Wikimedia
+  related_targets:
+  - wikimedia-senior-software-engineer-wikimedia-enterprise
+  type: doubling_back
+- channel: linkedin
+  contact: Kartik Mistry
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Wikimedia
+  related_targets:
+  - wikimedia-senior-software-engineer-wikimedia-enterprise
+  type: doubling_back
+- channel: linkedin
+  contact: Gerfried Stocker
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Ars Electronica
+  related_targets:
+  - prix-ars-digital-humanity
+  type: doubling_back
+- channel: linkedin
+  contact: Veronika Liebl
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Ars Electronica
+  related_targets:
+  - prix-ars-digital-humanity
+  type: doubling_back
+- channel: linkedin
+  contact: Matthew Gardiner
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Ars Electronica
+  related_targets:
+  - prix-ars-digital-humanity
+  type: doubling_back
+- channel: linkedin
+  contact: Ann Neumann
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: MIT Museum
+  related_targets:
+  - mit-museum-curator-visual-arts-media-technology
+  type: doubling_back
+- channel: linkedin
+  contact: Deborah Douglas
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: MIT Museum
+  related_targets:
+  - mit-museum-curator-visual-arts-media-technology
+  type: doubling_back
+- channel: linkedin
+  contact: Seth Riskin
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: MIT Museum
+  related_targets:
+  - mit-museum-curator-visual-arts-media-technology
+  type: doubling_back
+- channel: linkedin
+  contact: Christiane Paul
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Whitney Museum
+  related_targets:
+  - whitney-museum-digital-exhibitions-manager
+  type: doubling_back
+- channel: linkedin
+  contact: Tim Kovolenko
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Whitney Museum
+  related_targets:
+  - whitney-museum-digital-exhibitions-manager
+  type: doubling_back
+- channel: linkedin
+  contact: Farris Wahbeh
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Whitney Museum
+  related_targets:
+  - whitney-museum-digital-exhibitions-manager
+  type: doubling_back
+- channel: linkedin
+  contact: Justin Hackney
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Wonder Studios
+  related_targets:
+  - wonder-studios-creative-technologist
+  type: doubling_back
+- channel: linkedin
+  contact: Xavier Collins
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Wonder Studios
+  related_targets:
+  - wonder-studios-creative-technologist
+  type: doubling_back
+- channel: linkedin
+  contact: Sasha Okshteyn
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Watermill Center
+  related_targets:
+  - watermill-center
+  type: doubling_back
+- channel: linkedin
+  contact: Elise Herget
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Watermill Center
+  related_targets:
+  - watermill-center
+  type: doubling_back
+- channel: linkedin
+  contact: Christophe De Jaeger
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: S+T+ARTS / Gluon
+  related_targets:
+  - starts-prize
+  type: doubling_back
+- channel: linkedin
+  contact: Kathleen Flynn
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Foundation for Contemporary Arts
+  related_targets:
+  - fca-emergency
+  type: doubling_back
+- channel: linkedin
+  contact: Alijah Webb
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Foundation for Contemporary Arts
+  related_targets:
+  - fca-emergency
+  type: doubling_back
+- channel: linkedin
+  contact: April Swanson
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Artadia
+  related_targets:
+  - artadia-nyc
+  type: doubling_back
+- channel: linkedin
+  contact: Bora Kim
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: Artadia
+  related_targets:
+  - artadia-nyc
+  type: doubling_back
+- channel: linkedin
+  contact: Veronika Liebl
+  date: '2026-03-18'
+  note: Connection request sent — doubling-back outreach (relationship seed)
+  organization: S+T+ARTS / Ars Electronica
+  related_targets:
+  - starts-prize
+  type: doubling_back

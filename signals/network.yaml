@@ -17,8 +17,8 @@ nodes:
   organization: AdenHQ
   role: Unknown
   degree: 1
-  channel: email
-  last_interaction: '2026-03-13'
+  channel: linkedin
+  last_interaction: '2026-03-18'
   tags: []
 - name: Erika Hanson
   organization: Anduril
@@ -109,7 +109,7 @@ nodes:
   role: ''
   degree: 1
   channel: linkedin
-  last_interaction: '2026-03-17'
+  last_interaction: '2026-03-18'
   tags: []
 - name: Aly Cabral
   organization: Cloudflare
@@ -130,7 +130,7 @@ nodes:
   role: ''
   degree: 1
   channel: linkedin
-  last_interaction: '2026-03-17'
+  last_interaction: '2026-03-18'
   tags: []
 - name: Raman Malik
   organization: Perplexity
@@ -249,7 +249,7 @@ nodes:
   role: ''
   degree: 1
   channel: linkedin
-  last_interaction: '2026-03-17'
+  last_interaction: '2026-03-18'
   tags: []
 - name: Cristóbal Valenzuela
   organization: Runway
@@ -292,6 +292,762 @@ nodes:
   degree: 1
   channel: linkedin
   last_interaction: '2026-03-17'
+  tags: []
+- name: Timothy Zhang
+  organization: AdenHQ
+  role: Co-Founder
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Adel Burieva
+  organization: AdenHQ
+  role: Co-Founder
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: bryanadenhq
+  organization: AdenHQ
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: RichardTang-Aden
+  organization: AdenHQ
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Jake Cooper
+  organization: Railway
+  role: CEO & Co-Founder
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Jake Runzer
+  organization: Railway
+  role: Senior Software Engineer / Founding Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Rahul Parmar
+  organization: Railway
+  role: GTM
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Mason Egger
+  organization: Temporal
+  role: Sr. Technical Curriculum Developer / Developer Advocate
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Angie Byron
+  organization: Temporal
+  role: Senior Manager, Community & Advocacy
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Cecil Phillip
+  organization: Temporal
+  role: Staff Developer Advocate
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: John Gilhuly
+  organization: Cursor
+  role: Field Engineering
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Aman Sanger
+  organization: Cursor
+  role: Co-Founder
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Baltazar Zuñiga Ruiz
+  organization: Cursor
+  role: Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Merve Noyan
+  organization: Hugging Face
+  role: ML Advocacy Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Thomas Simonini
+  organization: Hugging Face
+  role: Developer Advocate
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Julien Chaumond
+  organization: Hugging Face
+  role: Co-Founder & CTO
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Colin Jarvis
+  organization: OpenAI
+  role: Global Head of Forward Deployed Engineering
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Omer Khan
+  organization: OpenAI
+  role: Hiring FDEs
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Brice Challamel
+  organization: OpenAI
+  role: Head of AI Strategy & Adoption
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Sean Saito
+  organization: OpenAI
+  role: Forward Deployed Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Sam Passaglia
+  organization: OpenAI
+  role: Forward Deployed Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Manan Mehta
+  organization: OpenAI
+  role: Forward Deployed Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Antonio Calero
+  organization: Grafana Labs
+  role: Developer Advocate
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Sean Carolan
+  organization: Grafana Labs
+  role: Staff Solutions Engineer, Pre-Sales
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Marie Cruz
+  organization: Grafana Labs
+  role: Senior Developer Advocate
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Liudmila Molkova
+  organization: Grafana Labs
+  role: Staff Developer Advocate
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Aidan Sims
+  organization: Scale AI
+  role: Forward Deployed Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Ravi Tadinada
+  organization: Scale AI
+  role: Senior SWE / Tech Lead, Forward Deployed
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Kelly Devens
+  organization: Scale AI
+  role: Solutions Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Lorenzo Porras
+  organization: Weights & Biases
+  role: AI Solutions Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Keisuke Kamata
+  organization: Weights & Biases
+  role: Manager, AI Solutions Engineering
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Chris Van Pelt
+  organization: Weights & Biases
+  role: CPO
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Michael Talarico
+  organization: MongoDB
+  role: Senior Forward Deployed AI Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Eric Tsai
+  organization: MongoDB
+  role: Director
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Pia Kochar
+  organization: MongoDB
+  role: MongoDB, NYC
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Meor Amer
+  organization: Cohere
+  role: Developer Relations
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Ryan Wirth
+  organization: Cohere
+  role: Member of Technical Staff
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Saurav Velleleth
+  organization: Cohere
+  role: Solutions Architect
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Emily Udagawa
+  organization: Notion
+  role: Solutions Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Breandan O'Ceallachain
+  organization: Notion
+  role: Solutions Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Austin Louden
+  organization: Notion
+  role: Tech Lead Manager, Mobile/DevEx
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Brandon West
+  organization: Datadog
+  role: Advocacy Team Lead, Developer Experience
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Ameet Talwalkar
+  organization: Datadog
+  role: Chief Scientist
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Casen Lerner
+  organization: Datadog
+  role: Machine Learning Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: John Chang
+  organization: ElevenLabs
+  role: Forward Deployment
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Vijay Pemmaraju
+  organization: ElevenLabs
+  role: Forward Deployed Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Sana Ajani
+  organization: ElevenLabs
+  role: ElevenLabs
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Carly Richmond
+  organization: Elastic
+  role: Principal Developer Advocate & Advocate Manager
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: JD Armada
+  organization: Elastic
+  role: Developer Advocate
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Josh Devins
+  organization: Elastic
+  role: Senior Principal Engineer, Search ML Lead
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Boris Besemer
+  organization: Vercel
+  role: Developer Success Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Nic Discepoli
+  organization: Vercel
+  role: Technical Marketing
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Luis Fernando Alvarez David
+  organization: Vercel
+  role: Senior Solutions Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Daniel Zaltsman
+  organization: PostHog
+  role: Developer Marketing
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Lucas Faria
+  organization: PostHog
+  role: Product Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: James Hawkins
+  organization: PostHog
+  role: CEO & Co-Founder
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Will Koh
+  organization: Ramp
+  role: Applied AI
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Will Ye
+  organization: Ramp
+  role: Software Engineer, Applied AI
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Ashwin Kumar
+  organization: Ramp
+  role: Applied AI
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Samuel Heinz
+  organization: Airtable
+  role: Solutions Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Maximilian Treml
+  organization: Airtable
+  role: Solutions Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Sean McCullough
+  organization: Airtable
+  role: Director of Engineering, Scale & Solutions
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Alex Kroman
+  organization: AssemblyAI
+  role: Chief Product & Technology Officer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Dylan Fox
+  organization: AssemblyAI
+  role: Founder & CEO
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Mimi Chiang
+  organization: AssemblyAI
+  role: Senior Software Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Jerry Liu
+  organization: Character AI
+  role: Senior Engineering Leader
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Jun Du
+  organization: Character AI
+  role: Infrastructure & Security
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: James Groeneveld
+  organization: Character AI
+  role: Production Systems / Observability
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Anurag Goel
+  organization: Render
+  role: Founder & CEO
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Michael Greer
+  organization: Render
+  role: VP of Engineering
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Juan Manuel Perafan
+  organization: dbt Labs
+  role: Curriculum / Analytics Engineering Education
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Matthew Shaver
+  organization: dbt Labs
+  role: dbt Labs
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Beth Hipple
+  organization: dbt Labs
+  role: dbt Fundamentals Curriculum
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Michael Hatfield
+  organization: Twilio
+  role: Platform Engineering Leader
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Joe Chung
+  organization: Twilio
+  role: VP of Engineering
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Peter Janovsky
+  organization: Twilio
+  role: Senior Software Architect
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Luvo Dlulisa
+  organization: Wikimedia
+  role: Software Engineer, Wikimedia Enterprise
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Thomas Chin
+  organization: Wikimedia
+  role: Senior Software Engineer, Data Platform
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Kartik Mistry
+  organization: Wikimedia
+  role: Staff Software Engineer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Gerfried Stocker
+  organization: Ars Electronica
+  role: Co-CEO & Artistic Director
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Veronika Liebl
+  organization: S+T+ARTS
+  role: Managing & Festival Director
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Matthew Gardiner
+  organization: Ars Electronica
+  role: Head of Art Science Research Strategies, Futurelab
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Ann Neumann
+  organization: MIT Museum
+  role: Director of Galleries and Exhibitions
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Deborah Douglas
+  organization: MIT Museum
+  role: Senior Director of Collections & Curator
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Seth Riskin
+  organization: MIT Museum
+  role: MIT Museum Studio
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Christiane Paul
+  organization: Whitney Museum
+  role: Adjunct Curator of Digital Art
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Tim Kovolenko
+  organization: Whitney Museum
+  role: Digital Programs Producer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Farris Wahbeh
+  organization: Whitney Museum
+  role: Director of Research Resources
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Justin Hackney
+  organization: Wonder Studios
+  role: Co-Founder & Chief Creative Officer
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Xavier Collins
+  organization: Wonder Studios
+  role: Co-Founder & CEO
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Sasha Okshteyn
+  organization: Watermill Center
+  role: Associate Director of Artist Programs
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Elise Herget
+  organization: Watermill Center
+  role: Watermill Center
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Christophe De Jaeger
+  organization: S+T+ARTS
+  role: Founder/Director, Gluon
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Kathleen Flynn
+  organization: Foundation for Contemporary Arts
+  role: Deputy Director
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Alijah Webb
+  organization: Foundation for Contemporary Arts
+  role: Program Associate
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: April Swanson
+  organization: Artadia
+  role: Program Manager
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Bora Kim
+  organization: Artadia
+  role: Program Director / Interim Executive Director
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Mario T.
+  organization: Stripe
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Martin Melin
+  organization: Stripe
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Gilbert Pellegrom
+  organization: Stripe
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Emily Curry
+  organization: Doppler
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Amber Britton
+  organization: Doppler
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Brian Vallelunga
+  organization: Doppler
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Nic Manoogian
+  organization: Doppler
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Phillip Chao
+  organization: Doppler
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Masaru Hayashi
+  organization: Notion
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Lalit Kapoor
+  organization: Notion
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Joseph Antonakakis
+  organization: Notion
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Emmitt Smith
+  organization: Coinbase
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Rohan Agarwal
+  organization: Coinbase
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Sumithra MK
+  organization: Coinbase
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Gerald Kanapathy
+  organization: Snorkel AI
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Katrina Cabral
+  organization: Snorkel AI
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Zach Kleinbaum
+  organization: Snorkel AI
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Varun Bais
+  organization: Toast
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Stephen Barnes
+  organization: Toast
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Alexander Baumann
+  organization: Toast
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Utkarsh Sengar
+  organization: Webflow
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Clint Burns
+  organization: Webflow
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Haley Moreno
+  organization: Webflow
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: David Zhao
+  organization: LiveKit
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Russ d'Sa
+  organization: LiveKit
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Adrian Cowham
+  organization: LiveKit
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Andrew Mitchell
+  organization: Tailscale
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Matt Provost
+  organization: Tailscale
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Aleksandar Pesic
+  organization: Tailscale
+  role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
   tags: []
 edges:
 - from: Anthony Padavano
@@ -398,7 +1154,7 @@ edges:
   note: Connection request sent
 - from: Anthony Padavano
   to: Shu Zhang
-  strength: 3
+  strength: 4
   relationship_type: reconnect
   created: '2026-03-17'
   note: Connection request sent
@@ -500,7 +1256,7 @@ edges:
   note: Connection request sent
 - from: Anthony Padavano
   to: Logan Tills
-  strength: 2
+  strength: 4
   relationship_type: seed
   created: '2026-03-17'
   note: Connection request sent
@@ -539,4 +1295,760 @@ edges:
   strength: 2
   relationship_type: seed
   created: '2026-03-17'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Timothy Zhang
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Adel Burieva
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: bryanadenhq
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: RichardTang-Aden
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Jake Cooper
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Jake Runzer
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Rahul Parmar
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Mason Egger
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Angie Byron
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Cecil Phillip
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: John Gilhuly
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Aman Sanger
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Baltazar Zuñiga Ruiz
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Merve Noyan
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Thomas Simonini
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Julien Chaumond
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Colin Jarvis
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Omer Khan
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Brice Challamel
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Sean Saito
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Sam Passaglia
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Manan Mehta
+  strength: 4
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Antonio Calero
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Sean Carolan
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Marie Cruz
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Liudmila Molkova
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Aidan Sims
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Ravi Tadinada
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Kelly Devens
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Lorenzo Porras
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Keisuke Kamata
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Chris Van Pelt
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Michael Talarico
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Eric Tsai
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Pia Kochar
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Meor Amer
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Ryan Wirth
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Saurav Velleleth
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Emily Udagawa
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Breandan O'Ceallachain
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Austin Louden
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Brandon West
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Ameet Talwalkar
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Casen Lerner
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: John Chang
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Vijay Pemmaraju
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Sana Ajani
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Carly Richmond
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: JD Armada
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Josh Devins
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Boris Besemer
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Nic Discepoli
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Luis Fernando Alvarez David
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Daniel Zaltsman
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Lucas Faria
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: James Hawkins
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Will Koh
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Will Ye
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Ashwin Kumar
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Samuel Heinz
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Maximilian Treml
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Sean McCullough
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Alex Kroman
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Dylan Fox
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Mimi Chiang
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Jerry Liu
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Jun Du
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: James Groeneveld
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Anurag Goel
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Michael Greer
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Juan Manuel Perafan
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Matthew Shaver
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Beth Hipple
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Michael Hatfield
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Joe Chung
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Peter Janovsky
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Luvo Dlulisa
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Thomas Chin
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Kartik Mistry
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Gerfried Stocker
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Veronika Liebl
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Matthew Gardiner
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Ann Neumann
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Deborah Douglas
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Seth Riskin
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Christiane Paul
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Tim Kovolenko
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Farris Wahbeh
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Justin Hackney
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Xavier Collins
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Sasha Okshteyn
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Elise Herget
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Christophe De Jaeger
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Kathleen Flynn
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Alijah Webb
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: April Swanson
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Bora Kim
+  strength: 2
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Mario T.
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Martin Melin
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Gilbert Pellegrom
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Emily Curry
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent — Head of Engineering
+- from: Anthony Padavano
+  to: Amber Britton
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent — CEO
+- from: Anthony Padavano
+  to: Brian Vallelunga
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent — Chairman
+- from: Anthony Padavano
+  to: Nic Manoogian
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Phillip Chao
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent — Co-Founder
+- from: Anthony Padavano
+  to: Masaru Hayashi
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Lalit Kapoor
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Joseph Antonakakis
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Emmitt Smith
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent — recruiter
+- from: Anthony Padavano
+  to: Rohan Agarwal
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Sumithra MK
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Gerald Kanapathy
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent — Head of Delivery DaaS
+- from: Anthony Padavano
+  to: Katrina Cabral
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Zach Kleinbaum
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Varun Bais
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent — hiring backend
+- from: Anthony Padavano
+  to: Stephen Barnes
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Alexander Baumann
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Utkarsh Sengar
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent — VP Engineering
+- from: Anthony Padavano
+  to: Clint Burns
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Haley Moreno
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: David Zhao
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent — Co-Founder
+- from: Anthony Padavano
+  to: Russ d'Sa
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Adrian Cowham
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Andrew Mitchell
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent — VP Engineering
+- from: Anthony Padavano
+  to: Matt Provost
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
+  note: Connection request sent
+- from: Anthony Padavano
+  to: Aleksandar Pesic
+  strength: 2
+  relationship_type: post_submission
+  created: '2026-03-19'
   note: Connection request sent

@@ -10,7 +10,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 1. AdenHQ — Agentic Hive Platform — Inbound Lead (YC-backed)
+### [x] 1. AdenHQ — Agentic Hive Platform — Inbound Lead (YC-backed)
 - **Context:** 5 team members starred your portfolio on GitHub. One emailed requesting open-source contributions. Site says hiring. Building an agentic hive product — direct overlap with ORGANVM multi-agent orchestration.
 - **Type:** Inbound interest (highest quality lead)
 - **Contacts:**
@@ -30,7 +30,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 2. Railway — Developer Relations — Rejected
+### [x] 2. Railway — Developer Relations — Rejected
 - **Prior:** Applied via Ashby. Score 7.2. Outcome: rejected. DevRel role is currently an open hire.
 - **Contacts:**
   - ★ **Jake Cooper** — [linkedin.com/in/thejakecooper](https://www.linkedin.com/in/thejakecooper/) (CEO & Co-Founder, Railway)
@@ -42,7 +42,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 3. Temporal — Staff Developer Advocate / Technical Writer — Rejected + Withdrawn
+### [x] 3. Temporal — Staff Developer Advocate / Technical Writer — Rejected + Withdrawn
 - **Prior:** Two applications. Technical Writer: rejected. Staff Dev Advocate EMEA: withdrawn.
 - **Contacts:**
   - ★ **Mason Egger** — [linkedin.com/in/mason-egger](https://www.linkedin.com/in/mason-egger/) (Sr. Technical Curriculum Developer / Developer Advocate, Temporal)
@@ -54,7 +54,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 4. Cursor — Forward Deployed Engineer — Expired + Deferred
+### [x] 4. Cursor — Forward Deployed Engineer — Expired + Deferred
 - **Prior:** FDE expired. Client Infrastructure deferred then closed.
 - **Contacts:**
   - ★ **John Gilhuly** — [linkedin.com/in/john-gilhuly-25a15888](https://www.linkedin.com/in/john-gilhuly-25a15888/) (Field Engineering, Cursor/Anysphere)
@@ -66,7 +66,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 5. Hugging Face — Developer Advocate Engineer — Withdrawn
+### [x] 5. Hugging Face — Developer Advocate Engineer — Withdrawn
 - **Prior:** Applied, then withdrawn.
 - **Contacts:**
   - ★ **Merve Noyan** — [linkedin.com/in/merve-noyan-28b1a113a](https://www.linkedin.com/in/merve-noyan-28b1a113a/) (ML Advocacy Engineer, Hugging Face)
@@ -82,7 +82,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 6. OpenAI — 53 Roles Researched
+### [x] 6. OpenAI — 53 Roles Researched
 - **Prior:** SE Applied Evals withdrawn. Technical Deployment Lead currently submitted. 20+ researched FDE/platform roles.
 - **Note:** Already have a live submission. Outreach here is about broadening contacts beyond the submitted role.
 - **Contacts:**
@@ -97,7 +97,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 7. Grafana Labs — 16 Roles Researched
+### [x] 7. Grafana Labs — 16 Roles Researched
 - **Prior:** Staff Developer Advocacy, Staff AI Engineer, Senior Solutions Engineer — all research-only.
 - **Contacts:**
   - ★ **Antonio Calero** — [linkedin.com/in/antonio-calero-40a126100](https://www.linkedin.com/in/antonio-calero-40a126100/) (Developer Advocate, Grafana Labs)
@@ -109,7 +109,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 8. Scale AI — 15 Roles Researched
+### [x] 8. Scale AI — 15 Roles Researched
 - **Prior:** Applied AI Engineer, Senior FDE, Solutions Engineer — all research-only.
 - **Contacts:**
   - ★ **Aidan Sims** — [linkedin.com/in/aidan-sims](https://www.linkedin.com/in/aidan-sims/) (Forward Deployed Engineer, Scale AI)
@@ -120,7 +120,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 9. Weights & Biases — 12 Roles Researched
+### [x] 9. Weights & Biases — 12 Roles Researched
 - **Prior:** Forward Deployed Engineer — research-only.
 - **Contacts:**
   - ★ **Lorenzo Porras** — [linkedin.com/in/lorenzo-porras](https://www.linkedin.com/in/lorenzo-porras/) (AI Solutions Engineer, W&B — ex-Twilio)
@@ -131,7 +131,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 10. MongoDB — 11 Roles Researched
+### [x] 10. MongoDB — 11 Roles Researched
 - **Prior:** Senior SWE FDE AI Engineer, Lead Engineering — research-only.
 - **Contacts:**
   - ★ **Michael Talarico** — [linkedin.com/in/michaelrtalarico](https://www.linkedin.com/in/michaelrtalarico/) (Senior Forward Deployed AI Engineer, MongoDB)
@@ -142,7 +142,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 11. Cohere — 10 Roles Researched
+### [x] 11. Cohere — 10 Roles Researched
 - **Prior:** FDE (3 regions), Prompt Specialist, Inference, Data Engineering, SRE, Security, Applied ML — all research-only.
 - **Contacts:**
   - ★ **Meor Amer** — [linkedin.com/in/meoramer](https://my.linkedin.com/in/meoramer) (Developer Relations, Cohere)
@@ -153,7 +153,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 12. Notion — 9 Roles Researched
+### [x] 12. Notion — 9 Roles Researched
 - **Prior:** Dev Experience withdrawn. Solutions Engineer Commercial currently submitted.
 - **Note:** Live submission exists. Broaden contacts.
 - **Contacts:**
@@ -165,7 +165,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 13. Datadog — 9 Roles Researched
+### [x] 13. Datadog — 9 Roles Researched
 - **Prior:** 6 Senior AI Engineer variants, Technical Curriculum Developer Security — all research-only.
 - **Contacts:**
   - ★ **Brandon West** — [linkedin.com/in/bmwest](https://www.linkedin.com/in/bmwest/) (Advocacy Team Lead, Developer Experience, Datadog)
@@ -176,7 +176,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 14. ElevenLabs — 8 Roles Researched
+### [x] 14. ElevenLabs — 8 Roles Researched
 - **Prior:** Enterprise Solutions, FDE Software, FDE Strategist, Website Engineering — all research-only.
 - **Contacts:**
   - ★ **John Chang** — [linkedin.com/in/john-chang-8b426717](https://www.linkedin.com/in/john-chang-8b426717/) (Forward Deployment, ElevenLabs)
@@ -187,7 +187,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 15. Elastic — 7 Roles Researched
+### [x] 15. Elastic — 7 Roles Researched
 - **Prior:** AI Engineer, Global Talent Community — research-only.
 - **Contacts:**
   - ★ **Carly Richmond** — [linkedin.com/in/carly-richmond-b4b03563](https://www.linkedin.com/in/carly-richmond-b4b03563/) (Principal Developer Advocate & Advocate Manager, Elastic)
@@ -202,7 +202,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 16. Vercel — 3 Roles Researched
+### [x] 16. Vercel — 3 Roles Researched
 - **Prior:** Developer Success, CDN Security, Growth — research-only.
 - **Contacts:**
   - ★ **Boris Besemer** — [linkedin.com/in/borisbesemer](https://www.linkedin.com/in/borisbesemer/) (Developer Success Engineer, Vercel)
@@ -213,7 +213,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 17. PostHog — 3 Roles Researched
+### [x] 17. PostHog — 3 Roles Researched
 - **Prior:** Developer Marketer, ClickHouse Ops, SRE — research-only.
 - **Contacts:**
   - ★ **Daniel Zaltsman** — [linkedin.com/in/danielzaltsman](https://www.linkedin.com/in/danielzaltsman/) (Developer Marketing, PostHog)
@@ -224,7 +224,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 18. Ramp — 5 Roles Researched
+### [x] 18. Ramp — 5 Roles Researched
 - **Prior:** Applied AI, Forward Deployed Ops, SWE FDE — research-only.
 - **Contacts:**
   - ★ **Will Koh** — [linkedin.com/in/willkoh](https://www.linkedin.com/in/willkoh/) (Applied AI, Ramp)
@@ -235,7 +235,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 19. Airtable — 2 Roles Researched
+### [x] 19. Airtable — 2 Roles Researched
 - **Prior:** Lead FDE, SWE Android — research-only.
 - **Contacts:**
   - ★ **Samuel Heinz** — [linkedin.com/in/samueljheinz](https://www.linkedin.com/in/samueljheinz/) (Solutions Engineer, Airtable)
@@ -246,7 +246,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 20. AssemblyAI — 2 Roles Researched
+### [x] 20. AssemblyAI — 2 Roles Researched
 - **Prior:** Applied AI Engineer, Senior SWE ML — research-only.
 - **Contacts:**
   - ★ **Alex Kroman** — [linkedin.com/in/alexkroman](https://www.linkedin.com/in/alexkroman/) (Chief Product & Technology Officer, AssemblyAI)
@@ -257,7 +257,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 21. Character AI — 2 Roles Researched
+### [x] 21. Character AI — 2 Roles Researched
 - **Prior:** ML Infra Engineer, SWE Growth — research-only.
 - **Contacts:**
   - ★ **Jerry Liu** — [linkedin.com/in/personjerry](https://www.linkedin.com/in/personjerry/) (Senior Engineering Leader, Character.AI)
@@ -268,7 +268,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 22. Render — 2 Roles Researched
+### [x] 22. Render — 2 Roles Researched
 - **Prior:** SWE Growth, SWE Security — research-only.
 - **Contacts:**
   - ★ **Anurag Goel** — [linkedin.com/in/anuragoel](https://www.linkedin.com/in/anuragoel/) (Founder & CEO, Render)
@@ -278,7 +278,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 23. dbt Labs — 1 Role Researched
+### [x] 23. dbt Labs — 1 Role Researched
 - **Prior:** Lead Curriculum Developer — research-only.
 - **Contacts:**
   - ★ **Juan Manuel Perafan** — [linkedin.com/in/jmperafan](https://www.linkedin.com/in/jmperafan/) (Curriculum / Analytics Engineering Education, dbt Labs)
@@ -289,7 +289,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 24. Twilio — 1 Role Researched
+### [x] 24. Twilio — 1 Role Researched
 - **Prior:** Software Architect, Reliability Engineering — research-only.
 - **Contacts:**
   - ★ **Michael Hatfield** — [linkedin.com/in/michael-hatfield-b5167956](https://www.linkedin.com/in/michael-hatfield-b5167956/) (Platform Engineering Leader, Twilio)
@@ -300,7 +300,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 25. Wikimedia — 1 Role Researched
+### [x] 25. Wikimedia — 1 Role Researched
 - **Prior:** Senior SWE, Wikimedia Enterprise — research-only.
 - **Contacts:**
   - ★ **Luvo Dlulisa** — [linkedin.com/in/luvo-dlulisa-51975b15b](https://www.linkedin.com/in/luvo-dlulisa-51975b15b/) (Software Engineer, Wikimedia Enterprise)
@@ -315,7 +315,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 26. Ars Electronica — Prix Interactive Art+ / Digital Humanity — Expired
+### [x] 26. Ars Electronica — Prix Interactive Art+ / Digital Humanity — Expired
 - **Prior:** Both prize submissions expired.
 - **Contacts:**
   - ★ **Gerfried Stocker** — [linkedin.com/in/gerfried-stocker-b841265](https://at.linkedin.com/in/gerfried-stocker-b841265/) (Co-CEO & Artistic Director, Ars Electronica)
@@ -326,7 +326,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 27. MIT Museum — Curator of Visual Arts, Media & Technology — Research Only
+### [x] 27. MIT Museum — Curator of Visual Arts, Media & Technology — Research Only
 - **Contacts:**
   - ★ **Ann Neumann** — [linkedin.com/in/ann-neumann-0b68875](https://www.linkedin.com/in/ann-neumann-0b68875/) (Director of Galleries and Exhibitions, MIT Museum)
   - **Deborah Douglas** — [linkedin.com/in/deborah-douglas-24b52219a](https://www.linkedin.com/in/deborah-douglas-24b52219a/) (Senior Director of Collections & Curator of Science/Technology, MIT Museum)
@@ -336,7 +336,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 28. Whitney Museum — Digital Exhibitions Manager — Research Only
+### [x] 28. Whitney Museum — Digital Exhibitions Manager — Research Only
 - **Contacts:**
   - ★ **Christiane Paul** — [linkedin.com/in/christiane-paul-4554aa80](https://www.linkedin.com/in/christiane-paul-4554aa80/) (Adjunct Curator of Digital Art, Whitney Museum)
   - **Tim Kovolenko** — [linkedin.com/in/tim-kovolenko-2a975361](https://www.linkedin.com/in/tim-kovolenko-2a975361/) (Digital Programs Producer, Whitney Museum)
@@ -346,7 +346,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 29. Wonder Studios — Creative Technologist — Research Only
+### [x] 29. Wonder Studios — Creative Technologist — Research Only
 - **Prior:** AI-native creative studio. Backed by OpenAI, DeepMind, ElevenLabs. Actively hiring Creative Technologists.
 - **Contacts:**
   - ★ **Justin Hackney** — [linkedin.com/in/justin-hackney-847b444a](https://www.linkedin.com/in/justin-hackney-847b444a/) (Co-Founder & Chief Creative Officer, Wonder Studios — ex-ElevenLabs Creative Director)
@@ -356,7 +356,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 30. Watermill Center — International Summer Program — Expired
+### [x] 30. Watermill Center — International Summer Program — Expired
 - **Prior:** Summer program submission expired.
 - **Contacts:**
   - ★ **Sasha Okshteyn** — [linkedin.com/in/sasha-okshteyn-30628515](https://www.linkedin.com/in/sasha-okshteyn-30628515/) (Associate Director of Artist Programs, Watermill Center)
@@ -366,7 +366,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 31. S+T+ARTS — Prize 2026 — Expired
+### [x] 31. S+T+ARTS — Prize 2026 — Expired
 - **Prior:** Prize submission expired March 4. Administered by Gluon (Brussels) consortium.
 - **Contacts:**
   - ★ **Veronika Liebl** — [linkedin.com/in/veronika-liebl-481b1a111](https://www.linkedin.com/in/veronika-liebl-481b1a111/) (Managing Director, Ars Electronica — operational lead for S+T+ARTS Prize)
@@ -376,7 +376,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 32. Foundation for Contemporary Arts — Emergency Grants — Withdrawn
+### [x] 32. Foundation for Contemporary Arts — Emergency Grants — Withdrawn
 - **Contacts:**
   - ★ **Kathleen Flynn** — [linkedin.com/in/kathleen-flynn-645a62b](https://www.linkedin.com/in/kathleen-flynn-645a62b/) (Deputy Director, Foundation for Contemporary Arts)
   - **Alijah Webb** — [linkedin.com/in/alijah-webb-38972913a](https://www.linkedin.com/in/alijah-webb-38972913a/) (Program Associate, Foundation for Contemporary Arts — manages 5 grant programs)
@@ -385,7 +385,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 
 ---
 
-### [ ] 33. Artadia — NYC Awards — Withdrawn
+### [x] 33. Artadia — NYC Awards — Withdrawn
 - **Contacts:**
   - ★ **April Swanson** — [linkedin.com/in/april-swanson-17355137](https://www.linkedin.com/in/april-swanson-17355137/) (Program Manager, Artadia)
   - **Bora Kim** — [linkedin.com/in/bora-kim-0327b162](https://www.linkedin.com/in/bora-kim-0327b162/) (Program Director / Interim Executive Director, Artadia — verify on profile)

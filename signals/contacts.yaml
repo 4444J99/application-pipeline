@@ -23,8 +23,12 @@ contacts:
     type: email
     note: 'Inbound: Discord invite for AI agent builder community (Hive). Multiple
       team members subsequently starred/followed GitHub profile.'
+  - date: '2026-03-18'
+    type: doubling_back
+    note: Connection request sent — doubling-back outreach
   pipeline_entries: []
-  tags: []
+  tags:
+  - doubling-back-2026-03-18
   next_action: ''
   next_action_date: ''
 - name: Erika Hanson
@@ -574,6 +578,1867 @@ contacts:
     note: Connection request sent
   pipeline_entries:
   - deepgram-staff-developer-advocate
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Timothy Zhang
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: AdenHQ
+  pipeline_entries: []
+  relationship_strength: 1
+  role: Co-Founder
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Adel Burieva
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: AdenHQ
+  pipeline_entries: []
+  relationship_strength: 1
+  role: Co-Founder
+  tags:
+  - doubling-back-2026-03-18
+- channel: github
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: bryanadenhq
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: AdenHQ
+  pipeline_entries: []
+  relationship_strength: 1
+  role: ''
+  tags:
+  - doubling-back-2026-03-18
+- channel: github
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: RichardTang-Aden
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: AdenHQ
+  pipeline_entries: []
+  relationship_strength: 1
+  role: ''
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Jake Cooper
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Railway
+  pipeline_entries:
+  - railway-developer-relations
+  relationship_strength: 1
+  role: CEO & Co-Founder
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Jake Runzer
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Railway
+  pipeline_entries:
+  - railway-developer-relations
+  relationship_strength: 1
+  role: Senior Software Engineer / Founding Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Rahul Parmar
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Railway
+  pipeline_entries:
+  - railway-developer-relations
+  relationship_strength: 1
+  role: GTM
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Mason Egger
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Temporal
+  pipeline_entries:
+  - temporal-senior-developer-success-engineer-emea
+  relationship_strength: 1
+  role: Sr. Technical Curriculum Developer / Developer Advocate
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Angie Byron
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Temporal
+  pipeline_entries:
+  - temporal-senior-developer-success-engineer-emea
+  relationship_strength: 1
+  role: Senior Manager, Community & Advocacy
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Cecil Phillip
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Temporal
+  pipeline_entries:
+  - temporal-senior-developer-success-engineer-emea
+  relationship_strength: 1
+  role: Staff Developer Advocate
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: John Gilhuly
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Cursor
+  pipeline_entries:
+  - cursor-forward-deployed-engineer
+  relationship_strength: 1
+  role: Field Engineering
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Aman Sanger
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Cursor
+  pipeline_entries:
+  - cursor-forward-deployed-engineer
+  relationship_strength: 1
+  role: Co-Founder
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Baltazar Zuñiga Ruiz
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Cursor
+  pipeline_entries:
+  - cursor-forward-deployed-engineer
+  relationship_strength: 1
+  role: Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Merve Noyan
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Hugging Face
+  pipeline_entries:
+  - huggingface-dev-advocate
+  relationship_strength: 1
+  role: ML Advocacy Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Thomas Simonini
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Hugging Face
+  pipeline_entries:
+  - huggingface-dev-advocate
+  relationship_strength: 1
+  role: Developer Advocate
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Julien Chaumond
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Hugging Face
+  pipeline_entries:
+  - huggingface-dev-advocate
+  relationship_strength: 1
+  role: Co-Founder & CTO
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Colin Jarvis
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: OpenAI
+  pipeline_entries:
+  - openai-se-evals
+  relationship_strength: 1
+  role: Global Head of Forward Deployed Engineering
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Omer Khan
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: OpenAI
+  pipeline_entries:
+  - openai-se-evals
+  relationship_strength: 1
+  role: Hiring FDEs
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Brice Challamel
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: OpenAI
+  pipeline_entries:
+  - openai-se-evals
+  relationship_strength: 1
+  role: Head of AI Strategy & Adoption
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Sean Saito
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: OpenAI
+  pipeline_entries:
+  - openai-se-evals
+  relationship_strength: 1
+  role: Forward Deployed Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Sam Passaglia
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: OpenAI
+  pipeline_entries:
+  - openai-se-evals
+  relationship_strength: 1
+  role: Forward Deployed Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Manan Mehta
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: OpenAI
+  pipeline_entries:
+  - openai-se-evals
+  relationship_strength: 1
+  role: Forward Deployed Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Antonio Calero
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Grafana Labs
+  pipeline_entries:
+  - grafana-labs-senior-software-engineer-grafana-databases-managed-services-
+  relationship_strength: 1
+  role: Developer Advocate
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Sean Carolan
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Grafana Labs
+  pipeline_entries:
+  - grafana-labs-senior-software-engineer-grafana-databases-managed-services-
+  relationship_strength: 1
+  role: Staff Solutions Engineer, Pre-Sales
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Marie Cruz
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Grafana Labs
+  pipeline_entries:
+  - grafana-labs-senior-software-engineer-grafana-databases-managed-services-
+  relationship_strength: 1
+  role: Senior Developer Advocate
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Liudmila Molkova
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Grafana Labs
+  pipeline_entries:
+  - grafana-labs-senior-software-engineer-grafana-databases-managed-services-
+  relationship_strength: 1
+  role: Staff Developer Advocate
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Aidan Sims
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Scale AI
+  pipeline_entries:
+  - scale-ai-applied-ai-engineer-enterprise-genai
+  relationship_strength: 1
+  role: Forward Deployed Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Ravi Tadinada
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Scale AI
+  pipeline_entries:
+  - scale-ai-applied-ai-engineer-enterprise-genai
+  relationship_strength: 1
+  role: Senior SWE / Tech Lead, Forward Deployed
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Kelly Devens
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Scale AI
+  pipeline_entries:
+  - scale-ai-applied-ai-engineer-enterprise-genai
+  relationship_strength: 1
+  role: Solutions Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Lorenzo Porras
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Weights & Biases
+  pipeline_entries:
+  - weights-biases-chief-of-staff-product-engineering
+  relationship_strength: 1
+  role: AI Solutions Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Keisuke Kamata
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Weights & Biases
+  pipeline_entries:
+  - weights-biases-chief-of-staff-product-engineering
+  relationship_strength: 1
+  role: Manager, AI Solutions Engineering
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Chris Van Pelt
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Weights & Biases
+  pipeline_entries:
+  - weights-biases-chief-of-staff-product-engineering
+  relationship_strength: 1
+  role: CPO
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Michael Talarico
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: MongoDB
+  pipeline_entries:
+  - mongodb-lead-engineering-search-query-platform-availability
+  relationship_strength: 1
+  role: Senior Forward Deployed AI Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Eric Tsai
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: MongoDB
+  pipeline_entries:
+  - mongodb-lead-engineering-search-query-platform-availability
+  relationship_strength: 1
+  role: Director
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Pia Kochar
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: MongoDB
+  pipeline_entries:
+  - mongodb-lead-engineering-search-query-platform-availability
+  relationship_strength: 1
+  role: MongoDB, NYC
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Meor Amer
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Cohere
+  pipeline_entries:
+  - cohere-forward-deployed-engineer-infrastructure-specialist-north-am
+  relationship_strength: 1
+  role: Developer Relations
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Ryan Wirth
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Cohere
+  pipeline_entries:
+  - cohere-forward-deployed-engineer-infrastructure-specialist-north-am
+  relationship_strength: 1
+  role: Member of Technical Staff
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Saurav Velleleth
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Cohere
+  pipeline_entries:
+  - cohere-forward-deployed-engineer-infrastructure-specialist-north-am
+  relationship_strength: 1
+  role: Solutions Architect
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Emily Udagawa
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Notion
+  pipeline_entries:
+  - notion-software-engineer-developer-experience
+  relationship_strength: 1
+  role: Solutions Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Breandan O'Ceallachain
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Notion
+  pipeline_entries:
+  - notion-software-engineer-developer-experience
+  relationship_strength: 1
+  role: Solutions Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Austin Louden
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Notion
+  pipeline_entries:
+  - notion-software-engineer-developer-experience
+  relationship_strength: 1
+  role: Tech Lead Manager, Mobile/DevEx
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Brandon West
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Datadog
+  pipeline_entries:
+  - datadog-senior-ai-engineer-ai-developer-workflows
+  relationship_strength: 1
+  role: Advocacy Team Lead, Developer Experience
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Ameet Talwalkar
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Datadog
+  pipeline_entries:
+  - datadog-senior-ai-engineer-ai-developer-workflows
+  relationship_strength: 1
+  role: Chief Scientist
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Casen Lerner
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Datadog
+  pipeline_entries:
+  - datadog-senior-ai-engineer-ai-developer-workflows
+  relationship_strength: 1
+  role: Machine Learning Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: John Chang
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: ElevenLabs
+  pipeline_entries:
+  - elevenlabs-enterprise-solutions-engineer-eu-french-speaking
+  relationship_strength: 1
+  role: Forward Deployment
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Vijay Pemmaraju
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: ElevenLabs
+  pipeline_entries:
+  - elevenlabs-enterprise-solutions-engineer-eu-french-speaking
+  relationship_strength: 1
+  role: Forward Deployed Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Sana Ajani
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: ElevenLabs
+  pipeline_entries:
+  - elevenlabs-enterprise-solutions-engineer-eu-french-speaking
+  relationship_strength: 1
+  role: ElevenLabs
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Carly Richmond
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Elastic
+  pipeline_entries:
+  - elastic-elastic-ai-engineer
+  relationship_strength: 1
+  role: Principal Developer Advocate & Advocate Manager
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: JD Armada
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Elastic
+  pipeline_entries:
+  - elastic-elastic-ai-engineer
+  relationship_strength: 1
+  role: Developer Advocate
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Josh Devins
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Elastic
+  pipeline_entries:
+  - elastic-elastic-ai-engineer
+  relationship_strength: 1
+  role: Senior Principal Engineer, Search ML Lead
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Boris Besemer
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Vercel
+  pipeline_entries:
+  - vercel-developer-success-engineer
+  relationship_strength: 1
+  role: Developer Success Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Nic Discepoli
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Vercel
+  pipeline_entries:
+  - vercel-developer-success-engineer
+  relationship_strength: 1
+  role: Technical Marketing
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Luis Fernando Alvarez David
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Vercel
+  pipeline_entries:
+  - vercel-developer-success-engineer
+  relationship_strength: 1
+  role: Senior Solutions Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Daniel Zaltsman
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: PostHog
+  pipeline_entries:
+  - posthog-clickhouse-operations-engineer
+  relationship_strength: 1
+  role: Developer Marketing
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Lucas Faria
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: PostHog
+  pipeline_entries:
+  - posthog-clickhouse-operations-engineer
+  relationship_strength: 1
+  role: Product Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: James Hawkins
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: PostHog
+  pipeline_entries:
+  - posthog-clickhouse-operations-engineer
+  relationship_strength: 1
+  role: CEO & Co-Founder
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Will Koh
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Ramp
+  pipeline_entries:
+  - ramp-applied-ai-engineer
+  relationship_strength: 1
+  role: Applied AI
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Will Ye
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Ramp
+  pipeline_entries:
+  - ramp-applied-ai-engineer
+  relationship_strength: 1
+  role: Software Engineer, Applied AI
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Ashwin Kumar
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Ramp
+  pipeline_entries:
+  - ramp-applied-ai-engineer
+  relationship_strength: 1
+  role: Applied AI
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Samuel Heinz
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Airtable
+  pipeline_entries:
+  - airtable-lead-forward-deployed-engineer
+  relationship_strength: 1
+  role: Solutions Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Maximilian Treml
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Airtable
+  pipeline_entries:
+  - airtable-lead-forward-deployed-engineer
+  relationship_strength: 1
+  role: Solutions Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Sean McCullough
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Airtable
+  pipeline_entries:
+  - airtable-lead-forward-deployed-engineer
+  relationship_strength: 1
+  role: Director of Engineering, Scale & Solutions
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Alex Kroman
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: AssemblyAI
+  pipeline_entries:
+  - assemblyai-applied-ai-engineer
+  relationship_strength: 1
+  role: Chief Product & Technology Officer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Dylan Fox
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: AssemblyAI
+  pipeline_entries:
+  - assemblyai-applied-ai-engineer
+  relationship_strength: 1
+  role: Founder & CEO
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Mimi Chiang
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: AssemblyAI
+  pipeline_entries:
+  - assemblyai-applied-ai-engineer
+  relationship_strength: 1
+  role: Senior Software Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Jerry Liu
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Character AI
+  pipeline_entries:
+  - character-ai-machine-learning-infrastructure-engineer
+  relationship_strength: 1
+  role: Senior Engineering Leader
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Jun Du
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Character AI
+  pipeline_entries:
+  - character-ai-machine-learning-infrastructure-engineer
+  relationship_strength: 1
+  role: Infrastructure & Security
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: James Groeneveld
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Character AI
+  pipeline_entries:
+  - character-ai-machine-learning-infrastructure-engineer
+  relationship_strength: 1
+  role: Production Systems / Observability
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Anurag Goel
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Render
+  pipeline_entries:
+  - render-software-engineer-growth
+  relationship_strength: 1
+  role: Founder & CEO
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Michael Greer
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Render
+  pipeline_entries:
+  - render-software-engineer-growth
+  relationship_strength: 1
+  role: VP of Engineering
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Juan Manuel Perafan
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: dbt Labs
+  pipeline_entries:
+  - dbt-labs-lead-curriculum-developer
+  relationship_strength: 1
+  role: Curriculum / Analytics Engineering Education
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Matthew Shaver
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: dbt Labs
+  pipeline_entries:
+  - dbt-labs-lead-curriculum-developer
+  relationship_strength: 1
+  role: dbt Labs
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Beth Hipple
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: dbt Labs
+  pipeline_entries:
+  - dbt-labs-lead-curriculum-developer
+  relationship_strength: 1
+  role: dbt Fundamentals Curriculum
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Michael Hatfield
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Twilio
+  pipeline_entries:
+  - twilio-software-architect-reliability-engineering
+  relationship_strength: 1
+  role: Platform Engineering Leader
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Joe Chung
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Twilio
+  pipeline_entries:
+  - twilio-software-architect-reliability-engineering
+  relationship_strength: 1
+  role: VP of Engineering
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Peter Janovsky
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Twilio
+  pipeline_entries:
+  - twilio-software-architect-reliability-engineering
+  relationship_strength: 1
+  role: Senior Software Architect
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Luvo Dlulisa
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Wikimedia
+  pipeline_entries:
+  - wikimedia-senior-software-engineer-wikimedia-enterprise
+  relationship_strength: 1
+  role: Software Engineer, Wikimedia Enterprise
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Thomas Chin
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Wikimedia
+  pipeline_entries:
+  - wikimedia-senior-software-engineer-wikimedia-enterprise
+  relationship_strength: 1
+  role: Senior Software Engineer, Data Platform
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Kartik Mistry
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Wikimedia
+  pipeline_entries:
+  - wikimedia-senior-software-engineer-wikimedia-enterprise
+  relationship_strength: 1
+  role: Staff Software Engineer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Gerfried Stocker
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Ars Electronica
+  pipeline_entries:
+  - prix-ars-digital-humanity
+  relationship_strength: 1
+  role: Co-CEO & Artistic Director
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Veronika Liebl
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Ars Electronica
+  pipeline_entries:
+  - prix-ars-digital-humanity
+  relationship_strength: 1
+  role: Managing & Festival Director
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Matthew Gardiner
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Ars Electronica
+  pipeline_entries:
+  - prix-ars-digital-humanity
+  relationship_strength: 1
+  role: Head of Art Science Research Strategies, Futurelab
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Ann Neumann
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: MIT Museum
+  pipeline_entries:
+  - mit-museum-curator-visual-arts-media-technology
+  relationship_strength: 1
+  role: Director of Galleries and Exhibitions
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Deborah Douglas
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: MIT Museum
+  pipeline_entries:
+  - mit-museum-curator-visual-arts-media-technology
+  relationship_strength: 1
+  role: Senior Director of Collections & Curator
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Seth Riskin
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: MIT Museum
+  pipeline_entries:
+  - mit-museum-curator-visual-arts-media-technology
+  relationship_strength: 1
+  role: MIT Museum Studio
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Christiane Paul
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Whitney Museum
+  pipeline_entries:
+  - whitney-museum-digital-exhibitions-manager
+  relationship_strength: 1
+  role: Adjunct Curator of Digital Art
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Tim Kovolenko
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Whitney Museum
+  pipeline_entries:
+  - whitney-museum-digital-exhibitions-manager
+  relationship_strength: 1
+  role: Digital Programs Producer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Farris Wahbeh
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Whitney Museum
+  pipeline_entries:
+  - whitney-museum-digital-exhibitions-manager
+  relationship_strength: 1
+  role: Director of Research Resources
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Justin Hackney
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Wonder Studios
+  pipeline_entries:
+  - wonder-studios-creative-technologist
+  relationship_strength: 1
+  role: Co-Founder & Chief Creative Officer
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Xavier Collins
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Wonder Studios
+  pipeline_entries:
+  - wonder-studios-creative-technologist
+  relationship_strength: 1
+  role: Co-Founder & CEO
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Sasha Okshteyn
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Watermill Center
+  pipeline_entries:
+  - watermill-center
+  relationship_strength: 1
+  role: Associate Director of Artist Programs
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Elise Herget
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Watermill Center
+  pipeline_entries:
+  - watermill-center
+  relationship_strength: 1
+  role: Watermill Center
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Christophe De Jaeger
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: S+T+ARTS / Gluon
+  pipeline_entries:
+  - starts-prize
+  relationship_strength: 1
+  role: Founder/Director, Gluon
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Kathleen Flynn
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Foundation for Contemporary Arts
+  pipeline_entries:
+  - fca-emergency
+  relationship_strength: 1
+  role: Deputy Director
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Alijah Webb
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Foundation for Contemporary Arts
+  pipeline_entries:
+  - fca-emergency
+  relationship_strength: 1
+  role: Program Associate
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: April Swanson
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Artadia
+  pipeline_entries:
+  - artadia-nyc
+  relationship_strength: 1
+  role: Program Manager
+  tags:
+  - doubling-back-2026-03-18
+- channel: linkedin
+  interactions:
+  - date: '2026-03-18'
+    note: Connection request sent — doubling-back outreach
+    type: doubling_back
+  name: Bora Kim
+  next_action: DM if accepted
+  next_action_date: '2026-03-25'
+  organization: Artadia
+  pipeline_entries:
+  - artadia-nyc
+  relationship_strength: 1
+  role: Program Director / Interim Executive Director
+  tags:
+  - doubling-back-2026-03-18
+- name: Mario T.
+  organization: Stripe
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - stripe-software-engineer-smart-contract-bridge
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Martin Melin
+  organization: Stripe
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - stripe-software-engineer-smart-contract-bridge
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Gilbert Pellegrom
+  organization: Stripe
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - stripe-software-engineer-smart-contract-bridge
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Emily Curry
+  organization: Doppler
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent — Head of Engineering
+  pipeline_entries:
+  - doppler-staff-full-stack-software-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Amber Britton
+  organization: Doppler
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent — CEO
+  pipeline_entries:
+  - doppler-staff-full-stack-software-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Brian Vallelunga
+  organization: Doppler
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent — Chairman
+  pipeline_entries:
+  - doppler-staff-full-stack-software-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Nic Manoogian
+  organization: Doppler
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - doppler-staff-full-stack-software-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Phillip Chao
+  organization: Doppler
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent — Co-Founder
+  pipeline_entries:
+  - doppler-staff-full-stack-software-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Masaru Hayashi
+  organization: Notion
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - notion-solutions-engineer-commercial
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Lalit Kapoor
+  organization: Notion
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - notion-solutions-engineer-commercial
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Joseph Antonakakis
+  organization: Notion
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - notion-solutions-engineer-commercial
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Emmitt Smith
+  organization: Coinbase
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent — recruiter
+  pipeline_entries:
+  - coinbase-senior-software-engineer-developer-money-movement-risk
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Rohan Agarwal
+  organization: Coinbase
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - coinbase-senior-software-engineer-developer-money-movement-risk
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Sumithra MK
+  organization: Coinbase
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - coinbase-senior-software-engineer-developer-money-movement-risk
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Gerald Kanapathy
+  organization: Snorkel AI
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent — Head of Delivery DaaS
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent — Head of Delivery DaaS
+  pipeline_entries:
+  - snorkel-ai-staff-applied-ai-engineer-pre-sales
+  - snorkel-ai-forward-deployed-engineer-data-as-a-service
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Katrina Cabral
+  organization: Snorkel AI
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - snorkel-ai-staff-applied-ai-engineer-pre-sales
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Zach Kleinbaum
+  organization: Snorkel AI
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - snorkel-ai-forward-deployed-engineer-data-as-a-service
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Varun Bais
+  organization: Toast
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent — hiring backend
+  pipeline_entries:
+  - toast-senior-backend-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Stephen Barnes
+  organization: Toast
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - toast-senior-backend-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Alexander Baumann
+  organization: Toast
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - toast-senior-backend-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Utkarsh Sengar
+  organization: Webflow
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent — VP Engineering
+  pipeline_entries:
+  - webflow-senior-forward-deployed-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Clint Burns
+  organization: Webflow
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - webflow-senior-forward-deployed-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Haley Moreno
+  organization: Webflow
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - webflow-senior-forward-deployed-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: David Zhao
+  organization: LiveKit
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent — Co-Founder
+  pipeline_entries:
+  - livekit-forward-deployed-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Russ d'Sa
+  organization: LiveKit
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - livekit-forward-deployed-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Adrian Cowham
+  organization: LiveKit
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - livekit-forward-deployed-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Andrew Mitchell
+  organization: Tailscale
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent — VP Engineering
+  pipeline_entries:
+  - tailscale-go-core-client-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Matt Provost
+  organization: Tailscale
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - tailscale-go-core-client-engineer
+  tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Aleksandar Pesic
+  organization: Tailscale
+  role: ''
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-18'
+    type: post_submission
+    note: Connection request sent
+  pipeline_entries:
+  - tailscale-go-core-client-engineer
   tags: []
   next_action: ''
   next_action_date: ''
