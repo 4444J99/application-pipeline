@@ -31,6 +31,10 @@ jobs:
         run: |
           python scripts/verify_all.py | tee quality-verify.log
 
+      - name: Recruiter filter — stale metrics & red flags (mandatory)
+        run: |
+          python scripts/recruiter_filter.py --base | tee quality-recruiter.log
+
       - name: Preflight snapshot (advisory)
         run: |
           python scripts/preflight.py --status staged | tee quality-preflight.log || true
@@ -42,6 +46,7 @@ jobs:
           name: quality-artifacts-${{ github.run_id }}-${{ matrix.python-version }}
           path: |
             quality-verify.log
+            quality-recruiter.log
             quality-preflight.log
 
   full-regression:
@@ -65,6 +70,10 @@ jobs:
         run: |
           python scripts/preflight.py --status staged | tee quality-preflight.log || true
 
+      - name: Recruiter filter — full materials check (mandatory)
+        run: |
+          python scripts/recruiter_filter.py --full | tee quality-recruiter.log
+
       - name: Outcome learning drift snapshot
         run: |
           python scripts/outcome_learner.py --drift-check | tee quality-outcome-learner.log
@@ -77,4 +86,5 @@ jobs:
           path: |
             quality-verify.log
             quality-preflight.log
+            quality-recruiter.log
             quality-outcome-learner.log
