@@ -1422,3 +1422,91 @@ entries:
   organization: FAU
   channel: linkedin
   note: Connection accepted — FAU / personal network
+- date: '2026-03-19'
+  type: acceptance
+  contact: Lucas Faria
+  organization: PostHog
+  channel: linkedin
+  note: Connection accepted — doubling-back outreach. DM queued.
+  related_targets:
+  - posthog-clickhouse-operations-engineer
+- date: '2026-03-19'
+  type: acceptance
+  contact: Luvo Dlulisa
+  organization: Wikimedia
+  channel: linkedin
+  note: Connection accepted — doubling-back outreach. DM queued.
+  related_targets:
+  - wikimedia-senior-software-engineer-wikimedia-enterprise
+- date: '2026-03-19'
+  type: dm_sent
+  contact: Mason Egger
+  organization: Temporal
+  channel: linkedin
+  note: DM sent after acceptance — shared portfolio + domain context
+  related_targets:
+  - temporal-senior-developer-success-engineer-emea
+- date: '2026-03-19'
+  type: dm_sent
+  contact: Cecil Phillip
+  organization: Temporal
+  channel: linkedin
+  note: DM sent after acceptance — shared portfolio + domain context
+  related_targets:
+  - temporal-senior-developer-success-engineer-emea
+- date: '2026-03-19'
+  type: dm_sent
+  contact: Christophe De Jaeger
+  organization: S+T+ARTS / Gluon
+  channel: linkedin
+  note: DM sent after acceptance — shared portfolio + domain context
+  related_targets:
+  - starts-prize
+- date: '2026-03-19'
+  type: dm_sent
+  contact: Beth Hipple
+  organization: dbt Labs
+  channel: linkedin
+  note: DM sent after acceptance — shared portfolio + domain context
+  related_targets:
+  - dbt-labs-lead-curriculum-developer
+- date: '2026-03-19'
+  type: dm_sent
+  contact: Juan Manuel Perafan
+  organization: dbt Labs
+  channel: linkedin
+  note: DM sent after acceptance — shared portfolio + domain context
+  related_targets:
+  - dbt-labs-lead-curriculum-developer
+- date: '2026-03-19'
+  type: dm_sent
+  contact: Breandan O'Ceallachain
+  organization: Notion
+  channel: linkedin
+  note: DM sent after acceptance — shared portfolio + domain context
+  related_targets:
+  - notion-software-engineer-developer-experience
+- date: '2026-03-19'
+  type: dm_sent
+  contact: Lorenzo Porras
+  organization: Weights & Biases
+  channel: linkedin
+  note: DM sent after acceptance — shared portfolio + domain context
+  related_targets:
+  - weights-biases-chief-of-staff-product-engineering
+- date: '2026-03-19'
+  type: dm_sent
+  contact: Lucas Faria
+  organization: PostHog
+  channel: linkedin
+  note: DM sent after acceptance — shared portfolio + domain context
+  related_targets:
+  - posthog-clickhouse-operations-engineer
+- date: '2026-03-19'
+  type: dm_sent
+  contact: Luvo Dlulisa
+  organization: Wikimedia
+  channel: linkedin
+  note: DM sent after acceptance — shared portfolio + domain context
+  related_targets:
+  - wikimedia-senior-software-engineer-wikimedia-enterprise

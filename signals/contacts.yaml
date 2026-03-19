@@ -690,13 +690,16 @@ contacts:
   - date: '2026-03-18'
     type: acceptance
     note: LinkedIn connection accepted
+  - date: '2026-03-19'
+    type: dm_sent
+    note: DM sent — shared portfolio + domain context
   name: Mason Egger
-  next_action: Send DM with portfolio link and context
-  next_action_date: '2026-03-18'
+  next_action: Await reply
+  next_action_date: '2026-03-26'
   organization: Temporal
   pipeline_entries:
   - temporal-senior-developer-success-engineer-emea
-  relationship_strength: 3
+  relationship_strength: 4
   role: Sr. Technical Curriculum Developer / Developer Advocate
   tags:
   - doubling-back-2026-03-18
@@ -723,13 +726,16 @@ contacts:
   - date: '2026-03-18'
     type: acceptance
     note: LinkedIn connection accepted
+  - date: '2026-03-19'
+    type: dm_sent
+    note: DM sent — shared portfolio + domain context
   name: Cecil Phillip
-  next_action: Send DM with portfolio link and context
-  next_action_date: '2026-03-18'
+  next_action: Await reply
+  next_action_date: '2026-03-26'
   organization: Temporal
   pipeline_entries:
   - temporal-senior-developer-success-engineer-emea
-  relationship_strength: 3
+  relationship_strength: 4
   role: Staff Developer Advocate
   tags:
   - doubling-back-2026-03-18
@@ -1026,13 +1032,16 @@ contacts:
   - date: '2026-03-19'
     type: acceptance
     note: LinkedIn connection accepted
+  - date: '2026-03-19'
+    type: dm_sent
+    note: DM sent — shared portfolio + domain context
   name: Lorenzo Porras
-  next_action: Send DM with portfolio link and context
-  next_action_date: '2026-03-19'
+  next_action: Await reply
+  next_action_date: '2026-03-26'
   organization: Weights & Biases
   pipeline_entries:
   - weights-biases-chief-of-staff-product-engineering
-  relationship_strength: 3
+  relationship_strength: 4
   role: AI Solutions Engineer
   tags:
   - doubling-back-2026-03-18
@@ -1179,13 +1188,16 @@ contacts:
   - date: '2026-03-19'
     type: acceptance
     note: LinkedIn connection accepted
+  - date: '2026-03-19'
+    type: dm_sent
+    note: DM sent — shared portfolio + domain context
   name: Breandan O'Ceallachain
-  next_action: Send DM with portfolio link and context
-  next_action_date: '2026-03-19'
+  next_action: Await reply
+  next_action_date: '2026-03-26'
   organization: Notion
   pipeline_entries:
   - notion-software-engineer-developer-experience
-  relationship_strength: 3
+  relationship_strength: 4
   role: Solutions Engineer
   tags:
   - doubling-back-2026-03-18
@@ -1404,13 +1416,19 @@ contacts:
   - date: '2026-03-18'
     note: Connection request sent — doubling-back outreach
     type: doubling_back
+  - date: '2026-03-19'
+    type: acceptance
+    note: LinkedIn connection accepted
+  - date: '2026-03-19'
+    type: dm_sent
+    note: DM sent — shared portfolio + domain context
   name: Lucas Faria
-  next_action: DM if accepted
-  next_action_date: '2026-03-25'
+  next_action: Await reply
+  next_action_date: '2026-03-26'
   organization: PostHog
   pipeline_entries:
   - posthog-clickhouse-operations-engineer
-  relationship_strength: 1
+  relationship_strength: 4
   role: Product Engineer
   tags:
   - doubling-back-2026-03-18
@@ -1647,13 +1665,16 @@ contacts:
   - date: '2026-03-19'
     type: acceptance
     note: LinkedIn connection accepted
+  - date: '2026-03-19'
+    type: dm_sent
+    note: DM sent — shared portfolio + domain context
   name: Juan Manuel Perafan
-  next_action: Send DM with portfolio link and context
-  next_action_date: '2026-03-19'
+  next_action: Await reply
+  next_action_date: '2026-03-26'
   organization: dbt Labs
   pipeline_entries:
   - dbt-labs-lead-curriculum-developer
-  relationship_strength: 3
+  relationship_strength: 4
   role: Curriculum / Analytics Engineering Education
   tags:
   - doubling-back-2026-03-18
@@ -1680,13 +1701,16 @@ contacts:
   - date: '2026-03-19'
     type: acceptance
     note: LinkedIn connection accepted
+  - date: '2026-03-19'
+    type: dm_sent
+    note: DM sent — shared portfolio + domain context
   name: Beth Hipple
-  next_action: Send DM with portfolio link and context
-  next_action_date: '2026-03-19'
+  next_action: Await reply
+  next_action_date: '2026-03-26'
   organization: dbt Labs
   pipeline_entries:
   - dbt-labs-lead-curriculum-developer
-  relationship_strength: 3
+  relationship_strength: 4
   role: dbt Fundamentals Curriculum
   tags:
   - doubling-back-2026-03-18
@@ -1740,13 +1764,19 @@ contacts:
   - date: '2026-03-18'
     note: Connection request sent — doubling-back outreach
     type: doubling_back
+  - date: '2026-03-19'
+    type: acceptance
+    note: LinkedIn connection accepted
+  - date: '2026-03-19'
+    type: dm_sent
+    note: DM sent — shared portfolio + domain context
   name: Luvo Dlulisa
-  next_action: DM if accepted
-  next_action_date: '2026-03-25'
+  next_action: Await reply
+  next_action_date: '2026-03-26'
   organization: Wikimedia
   pipeline_entries:
   - wikimedia-senior-software-engineer-wikimedia-enterprise
-  relationship_strength: 1
+  relationship_strength: 4
   role: Software Engineer, Wikimedia Enterprise
   tags:
   - doubling-back-2026-03-18
@@ -1983,13 +2013,16 @@ contacts:
   - date: '2026-03-19'
     type: acceptance
     note: LinkedIn connection accepted
+  - date: '2026-03-19'
+    type: dm_sent
+    note: DM sent — shared portfolio + domain context
   name: Christophe De Jaeger
-  next_action: Send DM with portfolio link and context
-  next_action_date: '2026-03-19'
+  next_action: Await reply
+  next_action_date: '2026-03-26'
   organization: S+T+ARTS / Gluon
   pipeline_entries:
   - starts-prize
-  relationship_strength: 3
+  relationship_strength: 4
   role: Founder/Director, Gluon
   tags:
   - doubling-back-2026-03-18
