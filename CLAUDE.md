@@ -109,6 +109,7 @@ Scripts are independent CLIs but some import functions from each other:
 - **`external_validator.py`** imports from `pipeline_market.py` — fetches salary data from BLS OES API, skill demand from Remotive API, org signals from GitHub API. Stores to `strategy/external-validation-cache.json`. Used by `audit_system.py` for external validation audit.
 - **`network_graph.py`** — Network graph with BFS/DFS path-finding, hop-decay scoring (Granovetter weak-ties theory), tie-strength tracking. Ingests from `contacts.yaml` and `outreach-log.yaml`. Stores to `signals/network.yaml`. Reverse-syncs to `contacts.yaml` via `--sync-contacts`.
 - **`score_network.py`** imports from `network_graph.py` — `_score_from_graph()` queries the network graph for org proximity, combined with entry-level signals via `max(entry_score, graph_score)`.
+- **`recruiter_filter.py`** — Pre-submission gate: validates materials against canonical metrics (single source of truth), detects red flags (passive language, "Independent"), checks cover letter existence/quality, auto-fixes stale metrics in base resumes. Run `run.py recruiter` before any submission.
 - All other scripts are standalone CLIs that read/write pipeline YAML files.
 
 ## Module Architecture
@@ -263,7 +264,7 @@ pytest tests/test_compose.py::test_name -v             # Single test
 
 ## Quick Commands
 
-Single-word command protocol via `python scripts/run.py <command>`. 97 standalone + 24 parameterized = 121 commands.
+Single-word command protocol via `python scripts/run.py <command>`. 99 standalone + 24 parameterized = 123 commands.
 
 | Command | What It Does |
 |---------|-------------|
@@ -430,6 +431,8 @@ For entries with `target.portal: greenhouse`:
 - Pipeline YAML filenames use kebab-case matching the `id` field
 - Block filenames are descriptive and match reference paths in pipeline YAML
 - Variant filenames follow `{target-type}-v{n}.md` or `{target-specific-name}.md` pattern
+- **Test count distinction:** 23,470 tests = system-wide across all ORGANVM repos; 3,266 = this pipeline specifically. Use "23,470 tests" in outward-facing materials (resumes, cover letters, LinkedIn); use "3,266 tests" for pipeline-specific claims.
+- **Canonical metrics** are defined in `scripts/recruiter_filter.py` CANONICAL dict. Update there first when metrics change; run `python scripts/run.py recruiter --fix` to propagate to base resumes.
 - All narrative text uses covenant-ark metrics (update there first, propagate here)
 - Prefer `pathlib.Path` for filesystem logic; explicit YAML field validation over implicit assumptions
 - `daily_batch.py` and `daily_pipeline.py` are deprecated (moved to `scripts/deprecated/`). Use `standup.py --section plan` and `campaign.py --execute` instead

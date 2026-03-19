@@ -471,7 +471,7 @@ nodes:
   organization: Weights & Biases
   role: AI Solutions Engineer
   channel: linkedin
-  last_interaction: '2026-03-18'
+  last_interaction: '2026-03-19'
   tags: []
 - name: Keisuke Kamata
   organization: Weights & Biases
@@ -531,7 +531,7 @@ nodes:
   organization: Notion
   role: Solutions Engineer
   channel: linkedin
-  last_interaction: '2026-03-18'
+  last_interaction: '2026-03-19'
   tags: []
 - name: Austin Louden
   organization: Notion
@@ -717,7 +717,7 @@ nodes:
   organization: dbt Labs
   role: Curriculum / Analytics Engineering Education
   channel: linkedin
-  last_interaction: '2026-03-18'
+  last_interaction: '2026-03-19'
   tags: []
 - name: Matthew Shaver
   organization: dbt Labs
@@ -729,7 +729,7 @@ nodes:
   organization: dbt Labs
   role: dbt Fundamentals Curriculum
   channel: linkedin
-  last_interaction: '2026-03-18'
+  last_interaction: '2026-03-19'
   tags: []
 - name: Michael Hatfield
   organization: Twilio
@@ -849,7 +849,7 @@ nodes:
   organization: S+T+ARTS
   role: Founder/Director, Gluon
   channel: linkedin
-  last_interaction: '2026-03-18'
+  last_interaction: '2026-03-19'
   tags: []
 - name: Kathleen Flynn
   organization: Foundation for Contemporary Arts
@@ -1046,6 +1046,30 @@ nodes:
 - name: Aleksandar Pesic
   organization: Tailscale
   role: ''
+  channel: linkedin
+  last_interaction: '2026-03-18'
+  tags: []
+- name: Gabriela dos Santos
+  organization: FAU / Miami New Times
+  role: Writer, educator
+  channel: linkedin
+  last_interaction: '2026-03-19'
+  tags: []
+- name: Hendreck Joseph
+  organization: FAU
+  role: Filmmaker
+  channel: linkedin
+  last_interaction: '2026-03-19'
+  tags: []
+- name: Suzanne Sink, PhD
+  organization: FAU
+  role: Educator / systems
+  channel: linkedin
+  last_interaction: '2026-03-19'
+  tags: []
+- name: Justin Piesco
+  organization: FAU
+  role: Content Manager
   channel: linkedin
   last_interaction: '2026-03-18'
   tags: []
@@ -1340,7 +1364,7 @@ edges:
   note: ''
 - from: Anthony Padavano
   to: Mason Egger
-  strength: 2
+  strength: 4
   relationship_type: crm_contact
   created: '2026-03-19'
   note: ''
@@ -1352,7 +1376,7 @@ edges:
   note: ''
 - from: Anthony Padavano
   to: Cecil Phillip
-  strength: 2
+  strength: 4
   relationship_type: crm_contact
   created: '2026-03-19'
   note: ''
@@ -1472,7 +1496,7 @@ edges:
   note: ''
 - from: Anthony Padavano
   to: Lorenzo Porras
-  strength: 2
+  strength: 4
   relationship_type: crm_contact
   created: '2026-03-19'
   note: ''
@@ -1532,7 +1556,7 @@ edges:
   note: ''
 - from: Anthony Padavano
   to: Breandan O'Ceallachain
-  strength: 2
+  strength: 4
   relationship_type: crm_contact
   created: '2026-03-19'
   note: ''
@@ -1718,7 +1742,7 @@ edges:
   note: ''
 - from: Anthony Padavano
   to: Juan Manuel Perafan
-  strength: 2
+  strength: 4
   relationship_type: crm_contact
   created: '2026-03-19'
   note: ''
@@ -1730,7 +1754,7 @@ edges:
   note: ''
 - from: Anthony Padavano
   to: Beth Hipple
-  strength: 2
+  strength: 4
   relationship_type: crm_contact
   created: '2026-03-19'
   note: ''
@@ -1850,7 +1874,7 @@ edges:
   note: ''
 - from: Anthony Padavano
   to: Christophe De Jaeger
-  strength: 2
+  strength: 4
   relationship_type: crm_contact
   created: '2026-03-19'
   note: ''
@@ -2052,3 +2076,27 @@ edges:
   relationship_type: post_submission
   created: '2026-03-19'
   note: Connection request sent
+- from: Anthony Padavano
+  to: Gabriela dos Santos
+  strength: 4
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Hendreck Joseph
+  strength: 4
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Suzanne Sink, PhD
+  strength: 4
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''
+- from: Anthony Padavano
+  to: Justin Piesco
+  strength: 4
+  relationship_type: crm_contact
+  created: '2026-03-19'
+  note: ''

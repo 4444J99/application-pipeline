@@ -725,10 +725,22 @@ def main():
     checklist, issues = generate_checklist(entry, profile, legacy)
 
     if args.check:
-        # Validation only — run metrics freshness check on blocks_used
+        # Validation only — run metrics freshness + recruiter filter
         name = entry.get("name", target_id)
         metric_issues = _check_metrics_freshness(entry)
-        all_issues = issues + metric_issues
+
+        # Recruiter/hiring-manager filter (pre-submission gate)
+        recruiter_issues = []
+        try:
+            from recruiter_filter import check_entry as recruiter_check_entry
+            findings = recruiter_check_entry(target_id)
+            for f in findings:
+                if f["severity"] in ("error", "warning"):
+                    recruiter_issues.append(f"[{f['severity'].upper()}] {f['message']}")
+        except ImportError:
+            pass  # recruiter_filter not available — skip gracefully
+
+        all_issues = issues + metric_issues + recruiter_issues
 
         if not all_issues:
             print(f"PASS: {name} — ready to submit")

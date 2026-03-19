@@ -687,13 +687,16 @@ contacts:
   - date: '2026-03-18'
     note: Connection request sent — doubling-back outreach
     type: doubling_back
+  - date: '2026-03-18'
+    type: acceptance
+    note: LinkedIn connection accepted
   name: Mason Egger
-  next_action: DM if accepted
-  next_action_date: '2026-03-25'
+  next_action: Send DM with portfolio link and context
+  next_action_date: '2026-03-18'
   organization: Temporal
   pipeline_entries:
   - temporal-senior-developer-success-engineer-emea
-  relationship_strength: 1
+  relationship_strength: 3
   role: Sr. Technical Curriculum Developer / Developer Advocate
   tags:
   - doubling-back-2026-03-18
@@ -717,13 +720,16 @@ contacts:
   - date: '2026-03-18'
     note: Connection request sent — doubling-back outreach
     type: doubling_back
+  - date: '2026-03-18'
+    type: acceptance
+    note: LinkedIn connection accepted
   name: Cecil Phillip
-  next_action: DM if accepted
-  next_action_date: '2026-03-25'
+  next_action: Send DM with portfolio link and context
+  next_action_date: '2026-03-18'
   organization: Temporal
   pipeline_entries:
   - temporal-senior-developer-success-engineer-emea
-  relationship_strength: 1
+  relationship_strength: 3
   role: Staff Developer Advocate
   tags:
   - doubling-back-2026-03-18
@@ -1017,13 +1023,16 @@ contacts:
   - date: '2026-03-18'
     note: Connection request sent — doubling-back outreach
     type: doubling_back
+  - date: '2026-03-19'
+    type: acceptance
+    note: LinkedIn connection accepted
   name: Lorenzo Porras
-  next_action: DM if accepted
-  next_action_date: '2026-03-25'
+  next_action: Send DM with portfolio link and context
+  next_action_date: '2026-03-19'
   organization: Weights & Biases
   pipeline_entries:
   - weights-biases-chief-of-staff-product-engineering
-  relationship_strength: 1
+  relationship_strength: 3
   role: AI Solutions Engineer
   tags:
   - doubling-back-2026-03-18
@@ -1167,13 +1176,16 @@ contacts:
   - date: '2026-03-18'
     note: Connection request sent — doubling-back outreach
     type: doubling_back
+  - date: '2026-03-19'
+    type: acceptance
+    note: LinkedIn connection accepted
   name: Breandan O'Ceallachain
-  next_action: DM if accepted
-  next_action_date: '2026-03-25'
+  next_action: Send DM with portfolio link and context
+  next_action_date: '2026-03-19'
   organization: Notion
   pipeline_entries:
   - notion-software-engineer-developer-experience
-  relationship_strength: 1
+  relationship_strength: 3
   role: Solutions Engineer
   tags:
   - doubling-back-2026-03-18
@@ -1632,13 +1644,16 @@ contacts:
   - date: '2026-03-18'
     note: Connection request sent — doubling-back outreach
     type: doubling_back
+  - date: '2026-03-19'
+    type: acceptance
+    note: LinkedIn connection accepted
   name: Juan Manuel Perafan
-  next_action: DM if accepted
-  next_action_date: '2026-03-25'
+  next_action: Send DM with portfolio link and context
+  next_action_date: '2026-03-19'
   organization: dbt Labs
   pipeline_entries:
   - dbt-labs-lead-curriculum-developer
-  relationship_strength: 1
+  relationship_strength: 3
   role: Curriculum / Analytics Engineering Education
   tags:
   - doubling-back-2026-03-18
@@ -1662,13 +1677,16 @@ contacts:
   - date: '2026-03-18'
     note: Connection request sent — doubling-back outreach
     type: doubling_back
+  - date: '2026-03-19'
+    type: acceptance
+    note: LinkedIn connection accepted
   name: Beth Hipple
-  next_action: DM if accepted
-  next_action_date: '2026-03-25'
+  next_action: Send DM with portfolio link and context
+  next_action_date: '2026-03-19'
   organization: dbt Labs
   pipeline_entries:
   - dbt-labs-lead-curriculum-developer
-  relationship_strength: 1
+  relationship_strength: 3
   role: dbt Fundamentals Curriculum
   tags:
   - doubling-back-2026-03-18
@@ -1962,13 +1980,16 @@ contacts:
   - date: '2026-03-18'
     note: Connection request sent — doubling-back outreach
     type: doubling_back
+  - date: '2026-03-19'
+    type: acceptance
+    note: LinkedIn connection accepted
   name: Christophe De Jaeger
-  next_action: DM if accepted
-  next_action_date: '2026-03-25'
+  next_action: Send DM with portfolio link and context
+  next_action_date: '2026-03-19'
   organization: S+T+ARTS / Gluon
   pipeline_entries:
   - starts-prize
-  relationship_strength: 1
+  relationship_strength: 3
   role: Founder/Director, Gluon
   tags:
   - doubling-back-2026-03-18
@@ -2440,5 +2461,65 @@ contacts:
   pipeline_entries:
   - tailscale-go-core-client-engineer
   tags: []
+  next_action: ''
+  next_action_date: ''
+- name: Gabriela dos Santos
+  organization: FAU / Miami New Times
+  role: Writer, educator
+  channel: linkedin
+  relationship_strength: 3
+  interactions:
+  - date: '2026-03-19'
+    type: acceptance
+    note: LinkedIn connection accepted — FAU / personal network
+  pipeline_entries: []
+  tags:
+  - fau-network
+  - personal
+  next_action: ''
+  next_action_date: ''
+- name: Hendreck Joseph
+  organization: FAU
+  role: Filmmaker
+  channel: linkedin
+  relationship_strength: 3
+  interactions:
+  - date: '2026-03-19'
+    type: acceptance
+    note: LinkedIn connection accepted — FAU / personal network
+  pipeline_entries: []
+  tags:
+  - fau-network
+  - personal
+  next_action: ''
+  next_action_date: ''
+- name: Suzanne Sink, PhD
+  organization: FAU
+  role: Educator / systems
+  channel: linkedin
+  relationship_strength: 3
+  interactions:
+  - date: '2026-03-19'
+    type: acceptance
+    note: LinkedIn connection accepted — FAU / personal network
+  pipeline_entries: []
+  tags:
+  - fau-network
+  - personal
+  next_action: ''
+  next_action_date: ''
+- name: Justin Piesco
+  organization: FAU
+  role: Content Manager
+  channel: linkedin
+  relationship_strength: 3
+  interactions:
+  - date: '2026-03-18'
+    type: acceptance
+    note: LinkedIn connection accepted — FAU / personal network
+  pipeline_entries: []
+  tags:
+  - fau-network
+  - personal
   next_action: ''
   next_action_date: ''
