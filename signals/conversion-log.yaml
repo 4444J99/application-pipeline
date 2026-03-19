@@ -1015,3 +1015,37 @@ entries:
   response_date: null
   time_to_response_days: null
   feedback: null
+- id: coinbase-senior-software-engineer-data-platform
+  submitted: '2026-03-19'
+  submitted_by: 4jp
+  track: job
+  identity_position: founder-operator
+  composition_method: blocks
+  blocks_used:
+  - framings/documentation-engineer
+  - evidence/differentiators
+  - methodology/ai-conductor
+  - pitches/credentials-creative-tech
+  - evidence/work-samples
+  variant_id: cover-letters/coinbase-senior-software-engineer-data-platform
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
+- id: temporal-senior-software-engineer-open-source-server
+  submitted: '2026-03-19'
+  submitted_by: 4jp
+  track: job
+  identity_position: documentation-engineer
+  composition_method: blocks
+  blocks_used:
+  - framings/documentation-engineer
+  - evidence/differentiators
+  - methodology/ai-conductor
+  - pitches/credentials-creative-tech
+  - evidence/work-samples
+  variant_id: cover-letters/temporal-senior-software-engineer-open-source-server
+  outcome: null
+  response_date: null
+  time_to_response_days: null
+  feedback: null
