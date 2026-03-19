@@ -184,15 +184,103 @@ These repos are architecturally isomorphic to what you build daily.
 
 ---
 
+## TIER 1B — Major Discoveries from Full Scan
+
+These weren't in the initial map but rank as high as Tier 1.
+
+### 21. langchain-ai/langgraph ★26,897 [Python]
+- **What:** Build resilient language agents as graphs — state machines for AI
+- **Your overlap:** This IS your promotion state machine. Graph-based FSM with forward-only enforcement, multi-agent coordination, pydantic models.
+- **Contribution angle:** State machine patterns, testing, workflow engine design
+- **Organ:** IV (Taxis) → `contrib--langchain-langgraph/`
+- **Network:** Connected with Ankush Gola (Co-Founder), Erick Friis, Jacob Lee, Eric Han
+
+### 22. openai/openai-agents-python ★20,128 [Python]
+- **What:** Lightweight framework for multi-agent workflows
+- **Your overlap:** Multi-agent orchestration, AI-conductor methodology, planning systems
+- **Contribution angle:** Agent lifecycle, testing infrastructure, documentation
+- **Organ:** IV (Taxis) → `contrib--openai-agents/`
+- **Network:** Colin Jarvis (Global Head FDE), Omer Khan, 4 more FDEs connected
+
+### 23. makenotion/notion-mcp-server ★4,065 [TypeScript]
+- **What:** Official Notion MCP Server
+- **Your overlap:** MCP server infrastructure — you build and deploy these
+- **Contribution angle:** MCP patterns, error handling, testing
+- **Organ:** IV (Taxis) → `contrib--notion-mcp/`
+- **Network:** Breandan O'Ceallachain (Solutions Engineer) accepted + DM sent
+
+### 24. cloudflare/agents ★4,578 [TypeScript]
+- **What:** Build and deploy AI Agents on Cloudflare Workers
+- **Your overlap:** Multi-agent orchestration, state machines on serverless
+- **Contribution angle:** Agent state management, workflow patterns
+- **Organ:** IV (Taxis) → `contrib--cloudflare-agents/`
+- **Network:** Craig Dennis (Dev Educator) — already connected, viewed profile 1d ago
+
+### 25. openai/evals ★18,042 [Python]
+- **What:** Framework for evaluating LLMs — open-source benchmark registry
+- **Your overlap:** IRA facility, multi-model evaluation, scoring rubrics, pytest harnesses
+- **Contribution angle:** Eval harnesses, testing patterns, quality rubrics
+- **Organ:** I (Theoria) → `contrib--openai-evals/`
+
+### 26. huggingface/smolagents ★26,158 [Python]
+- **What:** Barebones library for agents that think in code
+- **Your overlap:** Agent workflow engine, multi-agent patterns
+- **Contribution angle:** Agent patterns, testing, documentation
+- **Organ:** IV (Taxis) → `contrib--hf-smolagents/`
+- **Network:** Merve Noyan + Thomas Simonini connected
+
+### 27. DataDog/integrations-core ★1,099 [Python]
+- **What:** 800+ Python integrations for Datadog Agent — each with tests and CI
+- **Your overlap:** 23,470-test scale pattern. This IS your testing philosophy at scale.
+- **Contribution angle:** New integration, test infrastructure, CI patterns
+- **Organ:** III (Ergon) → `contrib--datadog-integrations/`
+- **Network:** Brandon West (Advocacy Lead), Ameet Talwalkar (Chief Scientist) connected
+
+### 28. PostHog/posthog ★32,135 [Python]
+- **What:** All-in-one developer analytics — product analytics, session replay, A/B testing
+- **Your overlap:** Conversion funnels, A/B tracking, event analytics, pytest at scale
+- **Contribution angle:** Analytics pipeline, testing, observability
+- **Organ:** III (Ergon) → `contrib--posthog/`
+- **Network:** Lucas Faria (Product Engineer) accepted + DM sent
+
+### 29. temporalio/sdk-python ★993 [Python]
+- **What:** Temporal Python SDK for durable workflow execution
+- **Your overlap:** Your pipeline's state machine IS a Temporal workflow conceptually
+- **Contribution angle:** SDK testing, workflow patterns, documentation
+- **Organ:** IV (Taxis) → `contrib--temporal-sdk/`
+- **Network:** Mason Egger + Cecil Phillip both accepted + DMs sent
+
+## TIER 2B — MCP Ecosystem (Emerging, High Impact)
+
+Every MCP server is a contribution target where you have direct expertise.
+
+| Repo | Stars | Lang | Org Network Status |
+|------|-------|------|--------------------|
+| `makenotion/notion-mcp-server` | 4,065 | TS | Breandan accepted |
+| `elevenlabs/elevenlabs-mcp` | 1,269 | Python | John Chang, Vijay connected |
+| `elastic/mcp-server-elasticsearch` | 629 | Rust | Carly Richmond, JD Armada connected |
+| `dbt-labs/dbt-mcp` | 514 | Python | Beth Hipple, Juan Manuel accepted |
+| `railwayapp/railway-mcp-server` | 165 | TS | Jake Cooper connected |
+| `PostHog/mcp` | 143 | TS | Lucas Faria accepted |
+| `webflow/mcp-server` | 108 | TS | Utkarsh Sengar connected |
+| `wandb/wandb-mcp-server` | 41 | Python | Lorenzo Porras accepted |
+| `scaleapi/mcp-atlas` | 49 | Python | Aidan Sims connected |
+| `DopplerHQ/mcp-server` | 0 | TS | Emily Curry connected |
+
+**Strategy:** MCP is the emerging protocol. You built MCP servers. Every one of these is a low-friction, high-signal contribution — and you have contacts at every single org.
+
+---
+
 ## Contribution Cadence
 
-| Week | Action | Budget |
-|------|--------|--------|
-| **This week** | AdenHQ/Hive — claim issue, submit first PR | 1 PR |
-| **Next week** | Anthropic Skills — contribute 1-2 skills from a-i--skills | 1 PR |
-| **Week 3** | MCP ecosystem — dbt-mcp or elevenlabs-mcp or elastic-mcp | 1 PR |
-| **Week 4** | LangChain or LiveKit — agent framework contribution | 1 PR |
-| **Ongoing** | 1 PR/week, rotating across tiers based on current ORGANVM work |
+| Week | Action | Budget | Why Now |
+|------|--------|--------|---------|
+| **This week (Mar 19-23)** | AdenHQ/Hive — claim issue, submit first PR | 1 PR | Inbound lead, email sent, 5 follows done |
+| **Week 2 (Mar 24-30)** | LangGraph — state machine patterns | 1 PR | 4 LangChain contacts connected, your FSM IS their domain |
+| **Week 3 (Mar 31-Apr 6)** | Anthropic Skills — contribute 1-2 skills from a-i--skills | 1 PR | 3 Anthropic contacts, you have 101 skills ready |
+| **Week 4 (Apr 7-13)** | MCP ecosystem — dbt-mcp or notion-mcp | 1 PR | Beth Hipple + Juan Manuel + Breandan all accepted DMs |
+| **Week 5 (Apr 14-20)** | Temporal SDK or LiveKit Agents | 1 PR | Mason Egger + Cecil Phillip both accepted, deep DM exchange |
+| **Ongoing** | 1 PR/week, rotating by current ORGANVM work context + warmest network contact |
 
 ---
 

@@ -1,0 +1,103 @@
+id: perplexity-forward-deployed-engineer-applied-ai
+name: Perplexity Forward Deployed Engineer - Applied AI
+track: job
+status: staged
+outcome: null
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/aa511ea8-96e3-42ba-b28f-5e222170bcee
+  portal: ashby
+  location: New York City
+  location_class: us-onsite
+  description: "Introduction Perplexity is building AI systems that integrate directly\
+    \ into how enterprises operate. Our API Platform powers search, retrieval, and\
+    \ automation across structured and unstructured data, while Perplexity Computer\
+    \ extends this into the execution of an AI system that navigates tools, interacts\
+    \ with applications, and completes multi-step workflows. Together, these platforms\
+    \ form a new integration layer, connecting models, data, and enterprise systems\
+    \ into end-to-end workflows. About the Role We\u2019re looking for Forward Deployed\
+    \ Engineers to work directly with customers to design and deploy these integrations\
+    \ in production. You\u2019ll embed with teams, connect Perplexity into their existing\
+    \ stack, and build systems that automate real work. This role spans two closely\
+    \ connected areas: API Platform: integrating search, retrieval, and AI capabilities\
+    \ into enterprise systems Perplexity Computer: deploying agentic workflows that\
+    \ operate across tools, applications, and data Why Join Us Perplexity\u2019s platforms\
+    \ are redefining how AI is integrated into enterprise operations. You\u2019ll\
+    \ work on cutting-edge AI systems , building end-to-end workflows and integrations\
+    \ that solve real business problems at scale. This is a unique opportunity to\
+    \ influence both product and adoption , embed AI deeply in enterprise workflows,\
+    \ and shape the future of how organizations operationalize AI. Responsibilities\
+    \ Design, build, and deploy end-to-end integrations between Perplexity and enterprise\
+    \ systems (data platforms, internal tools, SaaS applications), translating business\
+    \ workflows into production-grade AI systems Work directly with customer teams\
+    \ to embed AI into existing processes, owning deployments from initial architecture\
+    \ through production rollout and ongoing optimization Develop and operationalize\
+    \ integrations using APIs, event-driven architectures, and workflow orchestration,\
+    \ including deploying Perplexity Computer for multi-step, agent-driven workflows\
+    \ across tools and environments Design and build production systems that combine\
+    \ retrieval, reasoning, and execution across enterprise environments, applying\
+    \ deep expertise in LLM capabilities, implementation patterns, and the AI stack\
+    \ to drive performance, security, and customer impact Debug and resolve issues\
+    \ across APIs, infrastructure, and external dependencies, ensuring reliability,\
+    \ performance, and scalability in production Prototype new integration patterns\
+    \ and build reusable architectures that accelerate adoption across customers Partner\
+    \ with Sales and Product to unlock new use cases, drive expansion, and translate\
+    \ deployment learnings into product and platform improvements What we're looking\
+    \ for 5+ years of experience in software engineering, forward deployed engineering,\
+    \ solutions engineering, or similar roles, with a track record of building and\
+    \ shipping production systems in customer-facing environments Strong programming\
+    \ ability in Python (plus one of JavaScript/TypeScript, Java, etc.) with experience\
+    \ developing integrations, prototypes, and scalable applications Deep experience\
+    \ with APIs and distributed systems, including authentication, latency optimization,\
+    \ and debugging across complex, multi-system environments Production experience\
+    \ building LLM-powered systems, including prompt engineering, agent workflows,\
+    \ evaluation, and deploying AI systems at scale Proven ability to design and implement\
+    \ automated, end-to-end workflows that integrate across enterprise systems and\
+    \ replace manual processes High ownership and ability to operate in ambiguous\
+    \ environments, with strong system design, rapid prototyping skills, and end-to-end\
+    \ execution Excellent communication and collaboration skills, with experience\
+    \ working cross-functionally and engaging both technical teams and executive stakeholders\
+    \ Nice-to-Haves Experience with search systems, retrieval-augmented generation\
+    \ (RAG), or AI/ML APIs Background in developer tools, platform engineering, or\
+    \ high-scale/low-latency system design History of working at startups or small\
+    \ teams, owning customer projects end-to-end Experience with enterprise IT systems\
+    \ or AI deployment patterns in regulated industries (finance, healthcare, life\
+    \ sciences)"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used:
+    framing: framings/documentation-engineer
+    evidence: evidence/differentiators
+    methodology: methodology/ai-conductor
+    credentials: pitches/credentials-creative-tech
+    work_samples: evidence/work-samples
+  variant_ids:
+    cover_letter: cover-letters/perplexity-forward-deployed-engineer-applied-ai
+  materials_attached:
+  - resumes/batch-03/perplexity-forward-deployed-engineer-applied-ai/perplexity-forward-deployed-engineer-applied-ai-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.901891+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'
