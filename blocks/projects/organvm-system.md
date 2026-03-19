@@ -27,7 +27,7 @@ The eight-organ system coordinates:
 - **ORGAN-VII (Kerygma):** 4 repos — POSSE distribution, marketing
 - **META-ORGANVM:** 7 repos — cross-system governance, registry, dashboard
 
-Key infrastructure: `registry-v2.json` as single source of truth, `governance-rules.json` encoding constitutional principles, automated dependency validation (31 edges, 0 violations), promotion state machine (LOCAL → CANDIDATE → PUBLIC_PROCESS → GRADUATED → ARCHIVED), 5 GitHub Actions workflows for autonomous governance.
+Key infrastructure: `registry-v2.json` as single source of truth, `governance-rules.json` encoding constitutional principles, automated dependency validation (50 edges, 0 violations), promotion state machine (LOCAL → CANDIDATE → PUBLIC_PROCESS → GRADUATED → ARCHIVED), 5 GitHub Actions workflows for autonomous governance.
 
 ## Links
 - Portfolio: https://4444j99.github.io/portfolio/

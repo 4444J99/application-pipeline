@@ -10,7 +10,7 @@
 
 Dear Harvey AI Hiring Team,
 
-23,470 verified tests across 20 repositories. 845 tests in a single multi-agent orchestration framework. 88 MCP tools exposing a 113-repository system graph to AI agents. These aren't team outputs — they're what one practitioner built using a methodology I call AI-conductor: human directs the architecture, AI generates volume, human reviews every output.
+23,470 verified tests across 20 repositories. 1,095+ tests in a single multi-agent orchestration framework. 88 MCP tools exposing a 113-repository system graph to AI agents. These aren't team outputs — they're what one practitioner built using a methodology I call AI-conductor: human directs the architecture, AI generates volume, human reviews every output.
 
 I'm applying because Harvey is doing exactly what I've been building toward: agents that do real knowledge work, not toy demos. Your representative projects — M&A diligence agents operating across hundreds of thousands of files, playbook agents that change contract turnaround speed, retrieval agents for litigation — are the hard end of agentic systems. I've been building at that hard end independently.
 

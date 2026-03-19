@@ -69,6 +69,7 @@ COMMANDS = {
     "warmintro":   ("warm_intro_audit.py", [],            "Warm intro audit: referral paths and org density"),
 
     # -- Validation & Health --
+    "recruiter":   ("recruiter_filter.py", [],             "Recruiter/hiring-manager filter: stale metrics, red flags, formatting"),
     "validate":    ("validate.py", [],                   "Pipeline YAML schema validation"),
     "metrics":     ("check_metrics.py", [],              "Metric consistency check across blocks/profiles/strategy"),
     "health":      ("daily_pipeline_health.py", [],      "Daily pipeline integrity and freshness check"),

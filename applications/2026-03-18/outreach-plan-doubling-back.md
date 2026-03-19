@@ -239,7 +239,7 @@ Secondary outreach: reconnecting with closed/researched orgs and new inbound lea
 - **Prior:** Lead FDE, SWE Android — research-only.
 - **Contacts:**
   - ★ **Samuel Heinz** — [linkedin.com/in/samueljheinz](https://www.linkedin.com/in/samueljheinz/) (Solutions Engineer, Airtable)
-  - **Matt Quagliana** — [linkedin.com/in/mattquagliana](https://www.linkedin.com/in/mattquagliana) (Solutions Engineer, Airtable)
+  - **Maximilian Treml** — [linkedin.com/in/tremlmaximilian](https://www.linkedin.com/in/tremlmaximilian/) (Solutions Engineer, Airtable)
   - **Sean McCullough** — [linkedin.com/in/mcculloughsean](https://www.linkedin.com/in/mcculloughsean/) (Director of Engineering, Scale & Solutions, Airtable)
 - **Connection message:**
   > Hi [Name] — data-driven pipeline orchestration, YAML schema governance, 113 repos of structured infrastructure. The structured data patterns map to Airtable's core. Would love to connect.

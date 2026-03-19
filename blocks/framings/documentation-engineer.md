@@ -23,7 +23,7 @@ tier: single
 
 - **Scale:** 739K words of structured documentation across 113 repos — not padded prose, but architecture plans, SOPs, session logs, governance rules, registry data, and generated context files
 - **Auto-generation:** contextmd system generates CLAUDE.md/GEMINI.md/AGENTS.md from templates + registry; no manual sync across the system
-- **Variable binding:** Live metrics (22,885 code files, 3.6K test files, 104 CI/CD workflows) propagate into all documentation automatically via Python binding layer
+- **Variable binding:** Live metrics (22,885 code files, 2,349 test files, 104 CI/CD workflows) propagate into all documentation automatically via Python binding layer
 - **Validation:** Every doc format has a JSON Schema contract; automated CI validation on all corpus docs
 - **Process governance:** praxis-perpetua corpus — 6 SOPs, 5 templates, session self-critique logs; institutional knowledge as versioned, structured docs not team convention
 - **Teaching:** 11 years, 100+ courses, 2,000+ students — composition, rhetoric, writing at scale is the same discipline as documentation architecture
