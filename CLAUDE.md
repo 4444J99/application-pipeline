@@ -264,7 +264,7 @@ pytest tests/test_compose.py::test_name -v             # Single test
 
 ## Quick Commands
 
-Single-word command protocol via `python scripts/run.py <command>`. 99 standalone + 24 parameterized = 123 commands.
+Single-word command protocol via `python scripts/run.py <command>`. 101 standalone + 25 parameterized = 126 commands.
 
 | Command | What It Does |
 |---------|-------------|

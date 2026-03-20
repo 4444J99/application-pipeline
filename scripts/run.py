@@ -39,6 +39,7 @@ COMMANDS = {
     "preflight":   ("preflight.py", [],                  "Batch submission readiness"),
     "resumes":     ("build_resumes.py", [],              "Rebuild PDF resumes from JSON/Markdown sources"),
     "archive":     ("archive_research.py", ["--report"], "Show archival candidates"),
+    "prune":       ("prune_research.py", [],              "Prune research_pool: archive low-score, org-capped, auto-stale, age-stale entries (dry-run)"),
     "triagegate":  ("triage.py", [],                      "Triage gate: demote sub-threshold staged, resolve org-cap"),
     "triage":      ("smart_triage.py", [],               "Smart triage: decay-scored research entry ranking"),
 
@@ -118,6 +119,7 @@ COMMANDS = {
     "ira":         ("diagnose_ira.py", [],                   "Inter-rater agreement report (auto-loads ratings/*.json)"),
     "rateall":     ("generate_ratings.py", ["--compute-ira"], "Multi-model rating session with IRA computation"),
     "sysaudit":    ("audit_system.py", [],                   "System integrity audit: claims, wiring, logic"),
+    "canonical":   ("verify_canonical.py", [],               "Verify CANONICAL metrics in recruiter_filter.py against actual system state"),
     "validate-external": ("external_validator.py", [],           "Refresh external validation cache and compare"),
     "calibrate":  ("external_validator.py", ["--calibrate"],       "Calibrate thresholds from external data (dry-run)"),
     "mode":        ("pipeline_mode.py", ["--compare"],          "Show pipeline mode and compare thresholds"),
