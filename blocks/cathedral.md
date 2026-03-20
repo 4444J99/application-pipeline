@@ -4,7 +4,7 @@ I am a creator of complex systems. My work is organized into an **eight-organ sy
 
 ## Core Evidence
 - **Architecture**: 113 repositories (94 active).
-- **Rigor**: 2349 automated tests.
+- **Rigor**: 4,015+ automated tests.
 - **Velocity**: 33 named development sprints.
 - **Thought**: 49 published essays (~739K words).
 

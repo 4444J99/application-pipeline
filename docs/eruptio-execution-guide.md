@@ -3,7 +3,7 @@
 **Date:** 2026-02-18
 **Status:** STAGED — all materials ready, awaiting execution
 **Purpose:** Break the hermetic seal. Deploy product, submit applications, open revenue channel.
-**Planned omega movement:** 1/17 → 3/17 MET (#5, #8, #9). Requires human execution of each action below.
+**Planned omega movement:** 8/17 → 10/17 MET (#5, #8, #9). Requires human execution of each action below.
 
 ---
 
@@ -175,7 +175,7 @@ This is a **performing arts** grant. Lead with governance-as-choreography, commu
 **Platform:** pen.org | **Award:** up to $3,500 | **Fit: 9/10**
 
 ### Key fields:
-- **Professional Writing Credentials:** MFA, 42 essays, ~879K+ words, 11 years teaching
+- **Professional Writing Credentials:** MFA, 49 essays, ~879K+ words, 11 years teaching
 - **Financial Hardship Statement** (~200 words): in `scripts/legacy-submission/pen-america.md`
 - **Use of Funds** (~100 words): same file
 - **Writing Sample:** Link to public-process essays
