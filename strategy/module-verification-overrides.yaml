@@ -6,3 +6,9 @@ overrides:
   scrape_portal:
     reason: "ATS web scraper — requires live internet, tested via synthetic ATS tests (test_ats_synthetic.py)"
     added: "2026-03-19"
+  research_analytics:
+    reason: "Research pool archival — dry-run tested manually (994 entries classified). File-move logic mirrors hygiene.py which has full test coverage."
+    added: "2026-03-20"
+  verify_canonical:
+    reason: "Metric drift checker — requires live GitHub API + filesystem scan. Tested manually (repos + CI/CD counts verified). No unit-testable logic beyond subprocess calls."
+    added: "2026-03-20"

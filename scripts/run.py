@@ -39,7 +39,7 @@ COMMANDS = {
     "preflight":   ("preflight.py", [],                  "Batch submission readiness"),
     "resumes":     ("build_resumes.py", [],              "Rebuild PDF resumes from JSON/Markdown sources"),
     "archive":     ("archive_research.py", ["--report"], "Show archival candidates"),
-    "prune":       ("prune_research.py", [],              "Prune research_pool: archive low-score, org-capped, auto-stale, age-stale entries (dry-run)"),
+    "prune":       ("research_analytics.py", [],              "Research pool analytics: classify, org-capped, auto-stale, age-stale entries (dry-run)"),
     "triagegate":  ("triage.py", [],                      "Triage gate: demote sub-threshold staged, resolve org-cap"),
     "triage":      ("smart_triage.py", [],               "Smart triage: decay-scored research entry ranking"),
 
