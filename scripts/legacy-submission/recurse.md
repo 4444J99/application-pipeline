@@ -58,7 +58,7 @@ Recurse Center aligns precisely with the trajectory of this practice — the com
 
 ---
 
-Systems artist and auteur-producer. Creator of the ORGANVM eight-organ system: 113 repositories across 8 GitHub organizations coordinating theory, art, commerce, governance, and public process through automated governance. 48 published essays, 33 development sprints, ~410K+ of documentation. 18 years professional experience across creative systems design, college instruction (11 years, 2,000+ students), multimedia production, and project management. MFA Creative Writing, Meta Full-Stack Developer certification. Based in New York City.
+Systems artist and auteur-producer. Creator of the ORGANVM eight-organ system: 113 repositories across 8 GitHub organizations coordinating theory, art, commerce, governance, and public process through automated governance. 48 published essays, 33 development sprints, ~739K+ of documentation. 18 years professional experience across creative systems design, college instruction (11 years, 2,000+ students), multimedia production, and project management. MFA Creative Writing, Meta Full-Stack Developer certification. Based in New York City.
 
 ---
 
@@ -86,7 +86,7 @@ Symbolic operating system: 1,254 tests, 85% coverage, 21 organ handlers, custom 
 
 **URL:** `https://github.com/meta-organvm/organvm-corpvs-testamentvm`
 
-Governance corpus: 410K+ words, registry, orchestration specs, 33 sprint records
+Governance corpus: 739K+ words, registry, orchestration specs, 33 sprint records
 
 ### Sample 5: life-my--midst--in
 
@@ -99,7 +99,7 @@ Interactive identity platform: 291 tests, 44 DB tables, Inverted Interview parad
 1. AI-augmented creative practice, not AI-generated art — AI serves as compositional instrument; the vision is human.
 2. Solo production at institutional scale — one person built and documented a 113-repository system across 8 organizations.
 3. Governance as creative medium — registry design, dependency graphs, and promotion pipelines are generative structures.
-4. Radical transparency at system scale — ~410K+ of documentation, 33 sprint specs, 12 ADRs, a constitution.
+4. Radical transparency at system scale — ~739K+ of documentation, 33 sprint specs, 12 ADRs, a constitution.
 
 ---
 

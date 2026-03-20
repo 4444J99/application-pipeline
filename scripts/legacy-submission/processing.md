@@ -42,7 +42,7 @@ I use AI tools as compositional instruments, the way Brian Eno treated the studi
 
 ---
 
-Eleven years teaching at 8+ institutions — 2,000+ students across 100+ courses — taught me that the most powerful pedagogy makes complex systems visible and navigable. The eight-organ system (113 repositories, 48 essays, ~410K+ of documentation) is simultaneously a creative work AND a teaching instrument: every architectural decision is documented, every mistake published, every sprint specified.
+Eleven years teaching at 8+ institutions — 2,000+ students across 100+ courses — taught me that the most powerful pedagogy makes complex systems visible and navigable. The eight-organ system (113 repositories, 48 essays, ~739K+ of documentation) is simultaneously a creative work AND a teaching instrument: every architectural decision is documented, every mistake published, every sprint specified.
 
 Processing Foundation Fellowship aligns precisely with the trajectory of this practice — the combination of creative rigor, technical depth, and public documentation that defines the eight-organ methodology.
 
@@ -101,7 +101,7 @@ Interactive portfolio with generative art (p5.js), CMYK design system, 19 curate
 
 **URL:** `https://github.com/meta-organvm/organvm-corpvs-testamentvm`
 
-Governance corpus: 410K+ words, registry, orchestration specs, 33 sprint records
+Governance corpus: 739K+ words, registry, orchestration specs, 33 sprint records
 
 ### Sample 4: life-my--midst--in
 
@@ -117,7 +117,7 @@ Generative art meta-system connecting theory to practice
 
 ## Key Differentiators (if asked "what makes you different")
 
-1. Radical transparency at system scale — ~410K+ of documentation, 33 sprint specs, 12 ADRs, a constitution.
+1. Radical transparency at system scale — ~739K+ of documentation, 33 sprint specs, 12 ADRs, a constitution.
 2. Process-as-product methodology — the 48 essays aren't marketing; they ARE the creative work.
 3. Cross-domain integration — the eight-organ model bridges theory, art, commerce, governance, and community.
 4. Solo production at institutional scale — one person built and documented a 113-repository system across 8 organizations.

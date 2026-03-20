@@ -99,7 +99,7 @@ Interactive identity platform: 291 tests, 44 DB tables, Inverted Interview parad
 
 **URL:** `https://github.com/meta-organvm/organvm-corpvs-testamentvm`
 
-Governance corpus: 410K+ words, registry, orchestration specs, 33 sprint records
+Governance corpus: 739K+ words, registry, orchestration specs, 33 sprint records
 
 ### Sample 5: Metasystem Master
 

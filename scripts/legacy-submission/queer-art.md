@@ -58,7 +58,7 @@ Queer|Art Mentorship Program aligns precisely with the trajectory of this practi
 
 ---
 
-Systems artist and auteur-producer. Creator of the ORGANVM eight-organ system: 113 repositories across 8 GitHub organizations coordinating theory, art, commerce, governance, and public process through automated governance. 48 published essays, 33 development sprints, ~410K+ of documentation. 18 years professional experience across creative systems design, college instruction (11 years, 2,000+ students), multimedia production, and project management. MFA Creative Writing, Meta Full-Stack Developer certification. Based in New York City.
+Systems artist and auteur-producer. Creator of the ORGANVM eight-organ system: 113 repositories across 8 GitHub organizations coordinating theory, art, commerce, governance, and public process through automated governance. 48 published essays, 33 development sprints, ~739K+ of documentation. 18 years professional experience across creative systems design, college instruction (11 years, 2,000+ students), multimedia production, and project management. MFA Creative Writing, Meta Full-Stack Developer certification. Based in New York City.
 
 ---
 
@@ -86,7 +86,7 @@ Interactive identity platform: 291 tests, 44 DB tables, Inverted Interview parad
 
 **URL:** `https://github.com/meta-organvm/organvm-corpvs-testamentvm`
 
-Governance corpus: 410K+ words, registry, orchestration specs, 33 sprint records
+Governance corpus: 739K+ words, registry, orchestration specs, 33 sprint records
 
 ### Sample 5: Metasystem Master
 
@@ -97,7 +97,7 @@ Generative art meta-system connecting theory to practice
 ## Key Differentiators (if asked "what makes you different")
 
 1. Cross-domain integration — the eight-organ model bridges theory, art, commerce, governance, and community.
-2. Radical transparency at system scale — ~410K+ of documentation, 33 sprint specs, 12 ADRs, a constitution.
+2. Radical transparency at system scale — ~739K+ of documentation, 33 sprint specs, 12 ADRs, a constitution.
 3. Process-as-product methodology — the 48 essays aren't marketing; they ARE the creative work.
 4. Solo production at institutional scale — one person built and documented a 113-repository system across 8 organizations.
 

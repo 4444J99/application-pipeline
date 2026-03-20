@@ -110,7 +110,7 @@ Systems artist and writer. Creator of the ORGANVM eight-organ system: 113 reposi
 
 **URL:** `https://github.com/meta-organvm/organvm-corpvs-testamentvm`
 
-Governance corpus: 410K+ words, registry, orchestration specs, 33 sprint records
+Governance corpus: 739K+ words, registry, orchestration specs, 33 sprint records
 
 ### Sample 3: Portfolio Site
 
