@@ -1,8 +1,15 @@
 # Studium Generale ORGANVM — Design Specification
 
 **Date:** 2026-03-17
-**Status:** Approved
+**Status:** Approved (implementation location revised 2026-03-19)
 **Scope:** Internal university, research engine, and publication house for the ORGANVM eight-organ system
+
+> **Migration Note (2026-03-19):** This spec originally placed the SGO at
+> `organvm-i-theoria/studium-generale/`. Three concurrent sessions concluded
+> that `meta-organvm/praxis-perpetua/` is the correct home — it already contained
+> 47+ research docs, 64 SOPs, and the full SGO-2026-D-002 dissertation. Governance
+> YAMLs were migrated to praxis-perpetua; studium-generale is now ARCHIVED.
+> See `meta-organvm/praxis-perpetua/governance/charter.yaml` for the living charter.
 
 ---
 
