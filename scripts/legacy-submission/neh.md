@@ -62,7 +62,7 @@ Copy everything between the lines:
 
 ---
 
-Adjunct instructor and systems artist. MFA in Creative Writing (Florida Atlantic University, 2018). 11 years teaching writing, creative technology, and digital media at 8+ institutions, including 100+ courses and 2,000+ students. Currently building the eight-organ creative-institutional system: 97 repositories across 8 organizations, 42 published essays, 404,000+ words — all produced using the "AI-conductor" methodology for human-AI collaboration. Research interests: governance as artistic medium, AI-augmented creative production, documentation-as-practice, and the pedagogy of structured creativity.
+Adjunct instructor and systems artist. MFA in Creative Writing (Florida Atlantic University, 2018). 11 years teaching writing, creative technology, and digital media at 8+ institutions, including 100+ courses and 2,000+ students. Currently building the eight-organ creative-institutional system: 97 repositories across 8 organizations, 48 published essays, 404,000+ words — all produced using the "AI-conductor" methodology for human-AI collaboration. Research interests: governance as artistic medium, AI-augmented creative production, documentation-as-practice, and the pedagogy of structured creativity.
 
 ---
 
@@ -92,4 +92,4 @@ Adjunct instructor and systems artist. MFA in Creative Writing (Florida Atlantic
 - **No program theme fits:** Skip this cycle. NEH runs Summer Programs annually. Don't force a bad fit — your time is better spent on higher-fit applications (Creative Capital, WFF Housing, Headlands).
 - **Application asks for institutional letterhead:** Ask your most recent employer for a brief letter confirming your teaching role. If that's not possible, provide your teaching history with dates and institutions.
 - **Word limits tighter than expected:** Cut the third paragraph first (classroom application). The first two paragraphs carry the essential credential + research narrative.
-- **They ask about published research:** The 42 essays and 404K-word corpus IS published research. Frame it as: "42 published nonfiction essays constituting a sustained research program into creative systems design, AI-augmented production, and governance as artistic medium."
+- **They ask about published research:** The 48 essays and 404K-word corpus IS published research. Frame it as: "42 published nonfiction essays constituting a sustained research program into creative systems design, AI-augmented production, and governance as artistic medium."

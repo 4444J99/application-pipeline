@@ -54,7 +54,7 @@ Copy everything between the lines:
 
 I build autonomous creative systems and treat their governance as an artistic medium.
 
-My practice centers on the eight-organ system — a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 100 repositories. Rather than producing individual artworks, I produce the systems that generate, coordinate, and sustain creative work over time.
+My practice centers on the eight-organ system — a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 113 repositories. Rather than producing individual artworks, I produce the systems that generate, coordinate, and sustain creative work over time.
 
 This isn't project-based art. It's infrastructure-as-practice: registry design, dependency validation, promotion state machines, automated health checks, and public documentation are all artistic decisions. The choice of how work moves between organs (Theory -> Art -> Commerce) is as important as any individual output.
 
@@ -72,7 +72,7 @@ Copy everything between the lines:
 
 ---
 
-The eight-organ system coordinates 100 repositories across 8 GitHub organizations: Theory (ORGAN-I), Art (ORGAN-II), Commerce (ORGAN-III), Governance (ORGAN-IV), Public Process (ORGAN-V), Community (ORGAN-VI), Marketing (ORGAN-VII), and Meta (ORGAN-VIII). Key features: machine-readable registry as single source of truth, automated dependency validation (no circular dependencies, no back-edges), formal promotion state machine, 11 GitHub Actions workflows for autonomous governance, 77+ CI/CD pipelines, and ~404K+ words of public documentation including 42 published essays.
+The eight-organ system coordinates 113 repositories across 8 GitHub organizations: Theory (ORGAN-I), Art (ORGAN-II), Commerce (ORGAN-III), Governance (ORGAN-IV), Public Process (ORGAN-V), Community (ORGAN-VI), Marketing (ORGAN-VII), and Meta (ORGAN-VIII). Key features: machine-readable registry as single source of truth, automated dependency validation (no circular dependencies, no back-edges), formal promotion state machine, 11 GitHub Actions workflows for autonomous governance, 77+ CI/CD pipelines, and ~404K+ words of public documentation including 48 published essays.
 
 The system operates autonomously: daily health checks, weekly metrics refresh, automated essay distribution via POSSE (Mastodon + Discord + RSS), and a self-generating status dashboard.
 

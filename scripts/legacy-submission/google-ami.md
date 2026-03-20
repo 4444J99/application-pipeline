@@ -32,9 +32,9 @@
 
 Production-grade AI orchestration with creative-artistic applications.
 
-My practice centers on the eight-organ system: a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 100 repositories. I don't produce individual artworks. I produce the *systems* that generate, coordinate, and sustain creative work — and the visible record of how those systems are built is itself the primary creative output.
+My practice centers on the eight-organ system: a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 113 repositories. I don't produce individual artworks. I produce the *systems* that generate, coordinate, and sustain creative work — and the visible record of how those systems are built is itself the primary creative output.
 
-The process of creation is the product. The 42 essays I've published aren't reflections on the work; they ARE the work — the creative process rendered into prose in real time. The governance rules — registry design, dependency graphs, promotion pipelines — aren't bureaucratic overhead; they're generative constraints, the way a composer's harmonic rules shape what melodies can emerge.
+The process of creation is the product. The 48 essays I've published aren't reflections on the work; they ARE the work — the creative process rendered into prose in real time. The governance rules — registry design, dependency graphs, promotion pipelines — aren't bureaucratic overhead; they're generative constraints, the way a composer's harmonic rules shape what melodies can emerge.
 
 I work in the tradition of solo producers who became orchestras: Brian Eno treating the studio as a compositional instrument, Trent Reznor building entire albums alone because nobody else would commit at the necessary intensity. I use AI tools the way these practitioners used their technologies — as instruments for realizing an architectural vision, not as replacements for creative judgment.
 
@@ -46,7 +46,7 @@ The eight-organ system is simultaneously: (a) working infrastructure that produc
 
 ---
 
-The eight-organ system coordinates 100 repositories across 8 GitHub organizations through automated governance: 82+ CI/CD workflows, 31 dependency edges with zero violations, a formal promotion state machine, and 2,349+ automated tests across the flagship frameworks (agentic-titan: 1,095 tests, recursive-engine: 1,254 tests). Built using the AI-conductor methodology — AI generates volume, human directs architecture.
+The eight-organ system coordinates 113 repositories across 8 GitHub organizations through automated governance: 104 CI workflows, 50 dependency edges with zero violations, a formal promotion state machine, and 4,000+ automated tests across the flagship frameworks (agentic-titan: 1,095 tests, recursive-engine: 1,254 tests). Built using the AI-conductor methodology — AI generates volume, human directs architecture.
 
 Google Artists + Machine Intelligence Grants represents a critical opportunity to sustain and extend this practice. The work is built, documented, and operational — what it needs now is the time and resources to deepen, not to start over.
 
@@ -58,7 +58,7 @@ Google Artists + Machine Intelligence Grants represents a critical opportunity t
 
 ---
 
-Systems artist and auteur-producer. Creator of the ORGANVM eight-organ system: 100 repositories across 8 GitHub organizations coordinating theory, art, commerce, governance, and public process through automated governance. 42 published essays, 33 development sprints, ~410K+ of documentation. 18 years professional experience across creative systems design, college instruction (11 years, 2,000+ students), multimedia production, and project management. MFA Creative Writing, Meta Full-Stack Developer certification. Based in New York City.
+Systems artist and auteur-producer. Creator of the ORGANVM eight-organ system: 113 repositories across 8 GitHub organizations coordinating theory, art, commerce, governance, and public process through automated governance. 48 published essays, 33 development sprints, ~410K+ of documentation. 18 years professional experience across creative systems design, college instruction (11 years, 2,000+ students), multimedia production, and project management. MFA Creative Writing, Meta Full-Stack Developer certification. Based in New York City.
 
 ---
 
@@ -97,7 +97,7 @@ Interactive identity platform: 291 tests, 44 DB tables, Inverted Interview parad
 ## Key Differentiators (if asked "what makes you different")
 
 1. AI-augmented creative practice, not AI-generated art — AI serves as compositional instrument; the vision is human.
-2. Solo production at institutional scale — one person built and documented a 100-repository system across 8 organizations.
+2. Solo production at institutional scale — one person built and documented a 113-repository system across 8 organizations.
 3. Governance as creative medium — registry design, dependency graphs, and promotion pipelines are generative structures.
 4. Radical transparency at system scale — ~410K+ of documentation, 33 sprint specs, 12 ADRs, a constitution.
 

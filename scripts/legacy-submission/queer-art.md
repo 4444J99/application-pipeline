@@ -32,9 +32,9 @@
 
 Building creative infrastructure from lived experience of precarity.
 
-My practice centers on the eight-organ system: a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 100 repositories. I don't produce individual artworks. I produce the *systems* that generate, coordinate, and sustain creative work — and the visible record of how those systems are built is itself the primary creative output.
+My practice centers on the eight-organ system: a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 113 repositories. I don't produce individual artworks. I produce the *systems* that generate, coordinate, and sustain creative work — and the visible record of how those systems are built is itself the primary creative output.
 
-The process of creation is the product. The 42 essays I've published aren't reflections on the work; they ARE the work — the creative process rendered into prose in real time. The governance rules — registry design, dependency graphs, promotion pipelines — aren't bureaucratic overhead; they're generative constraints, the way a composer's harmonic rules shape what melodies can emerge.
+The process of creation is the product. The 48 essays I've published aren't reflections on the work; they ARE the work — the creative process rendered into prose in real time. The governance rules — registry design, dependency graphs, promotion pipelines — aren't bureaucratic overhead; they're generative constraints, the way a composer's harmonic rules shape what melodies can emerge.
 
 I work in the tradition of solo producers who became orchestras: Brian Eno treating the studio as a compositional instrument, Trent Reznor building entire albums alone because nobody else would commit at the necessary intensity. I use AI tools the way these practitioners used their technologies — as instruments for realizing an architectural vision, not as replacements for creative judgment.
 
@@ -46,7 +46,7 @@ The eight-organ system is simultaneously: (a) working infrastructure that produc
 
 ---
 
-The eight-organ system grows from lived experience of precarity — housing instability, recovery, the specific vulnerability of building a creative practice without institutional support. ORGAN-VI (Community) and ORGAN-V (Public Process) exist because creative infrastructure should be visible, shared, and governed by the people it serves. 42 published essays document this practice transparently, including the failures.
+The eight-organ system grows from lived experience of precarity — housing instability, recovery, the specific vulnerability of building a creative practice without institutional support. ORGAN-VI (Community) and ORGAN-V (Public Process) exist because creative infrastructure should be visible, shared, and governed by the people it serves. 48 published essays document this practice transparently, including the failures.
 
 Queer|Art Mentorship Program aligns precisely with the trajectory of this practice — the combination of creative rigor, technical depth, and public documentation that defines the eight-organ methodology.
 
@@ -58,7 +58,7 @@ Queer|Art Mentorship Program aligns precisely with the trajectory of this practi
 
 ---
 
-Systems artist and auteur-producer. Creator of the ORGANVM eight-organ system: 100 repositories across 8 GitHub organizations coordinating theory, art, commerce, governance, and public process through automated governance. 42 published essays, 33 development sprints, ~410K+ of documentation. 18 years professional experience across creative systems design, college instruction (11 years, 2,000+ students), multimedia production, and project management. MFA Creative Writing, Meta Full-Stack Developer certification. Based in New York City.
+Systems artist and auteur-producer. Creator of the ORGANVM eight-organ system: 113 repositories across 8 GitHub organizations coordinating theory, art, commerce, governance, and public process through automated governance. 48 published essays, 33 development sprints, ~410K+ of documentation. 18 years professional experience across creative systems design, college instruction (11 years, 2,000+ students), multimedia production, and project management. MFA Creative Writing, Meta Full-Stack Developer certification. Based in New York City.
 
 ---
 
@@ -68,7 +68,7 @@ Systems artist and auteur-producer. Creator of the ORGANVM eight-organ system: 1
 
 **URL:** `https://organvm-v-logos.github.io/public-process/`
 
-42 essays documenting creative methodology in real time (~142K words)
+48 essays documenting creative methodology in real time (~142K words)
 
 ### Sample 2: Portfolio Site
 
@@ -98,8 +98,8 @@ Generative art meta-system connecting theory to practice
 
 1. Cross-domain integration — the eight-organ model bridges theory, art, commerce, governance, and community.
 2. Radical transparency at system scale — ~410K+ of documentation, 33 sprint specs, 12 ADRs, a constitution.
-3. Process-as-product methodology — the 42 essays aren't marketing; they ARE the creative work.
-4. Solo production at institutional scale — one person built and documented a 100-repository system across 8 organizations.
+3. Process-as-product methodology — the 48 essays aren't marketing; they ARE the creative work.
+4. Solo production at institutional scale — one person built and documented a 113-repository system across 8 organizations.
 
 ---
 

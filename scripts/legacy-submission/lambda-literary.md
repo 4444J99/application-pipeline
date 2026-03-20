@@ -38,7 +38,7 @@ Submit 15-25 pages from published essays. Recommended selections:
 
 Building creative infrastructure from lived experience of precarity.
 
-My practice centers on the eight-organ system — a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 100 repositories and 8 GitHub organizations. The 42 published essays documenting this process aren't reflections on the work; they ARE the work — the creative process rendered into prose in real time.
+My practice centers on the eight-organ system — a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 113 repositories and 8 GitHub organizations. The 48 published essays documenting this process aren't reflections on the work; they ARE the work — the creative process rendered into prose in real time.
 
 I use AI tools as compositional instruments, the way Brian Eno treated the studio. The architectural vision, governance design, and editorial judgment are the creative work. The result: a documented methodology for solo production at institutional scale, built over 5+ years and 33 development sprints.
 
@@ -48,7 +48,7 @@ I use AI tools as compositional instruments, the way Brian Eno treated the studi
 
 ---
 
-Systems artist and auteur-producer. Creator of the ORGANVM eight-organ system: 100 repositories across 8 GitHub organizations coordinating theory, art, commerce, governance, and public process through automated governance. 42 published essays, 33 development sprints, ~410K+ of documentation. 18 years professional experience across creative systems design, college instruction (11 years, 2,000+ students), multimedia production, and project management. MFA Creative Writing, Meta Full-Stack Developer certification. Based in New York City.
+Systems artist and auteur-producer. Creator of the ORGANVM eight-organ system: 113 repositories across 8 GitHub organizations coordinating theory, art, commerce, governance, and public process through automated governance. 48 published essays, 33 development sprints, ~410K+ of documentation. 18 years professional experience across creative systems design, college instruction (11 years, 2,000+ students), multimedia production, and project management. MFA Creative Writing, Meta Full-Stack Developer certification. Based in New York City.
 
 ---
 

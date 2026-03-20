@@ -42,14 +42,14 @@ Copy everything between the lines:
 
 I propose to develop *Governance as Performance* — a series of installations and performance works that make the invisible architecture of creative systems visible, audible, and participatory.
 
-My practice centers on the eight-organ system: a documented infrastructure coordinating 100 software repositories across 8 organizations through formal governance rules — dependency graphs, promotion state machines, automated validation workflows. I've built this system over 5+ years, producing 42 published essays and 404,000+ words of documentation along the way. The governance model — the rules that decide how work flows between theory, art, commerce, and community — is itself the primary artistic output.
+My practice centers on the eight-organ system: a documented infrastructure coordinating 100 software repositories across 8 organizations through formal governance rules — dependency graphs, promotion state machines, automated validation workflows. I've built this system over 5+ years, producing 48 published essays and 404,000+ words of documentation along the way. The governance model — the rules that decide how work flows between theory, art, commerce, and community — is itself the primary artistic output.
 
 At Watermill, I want to translate this invisible architecture into collaborative performance.
 
 #### Three Proposed Works
 
 **1. The Conductor's Score (Installation)**
-A real-time visualization of the eight-organ system's dependency graph projected onto a wall-sized surface. Each of the 100 repositories appears as a node; the 31 validated dependency edges glow as data flows between them. The system's actual GitHub activity — commits, issues, workflow runs — drives the visualization in real time. Visitors can trigger events (opening issues, requesting promotions) that ripple through the graph. The installation makes governance *visible* — the audience sees an institutional structure operating as a living organism.
+A real-time visualization of the eight-organ system's dependency graph projected onto a wall-sized surface. Each of the 113 repositories appears as a node; the 31 validated dependency edges glow as data flows between them. The system's actual GitHub activity — commits, issues, workflow runs — drives the visualization in real time. Visitors can trigger events (opening issues, requesting promotions) that ripple through the graph. The installation makes governance *visible* — the audience sees an institutional structure operating as a living organism.
 
 **2. The Orchestration (Collaborative Performance)**
 A structured improvisation for 6-12 performers, using the eight-organ system's governance rules as a performance score. Each performer represents one organ (Theory, Art, Commerce, Governance, Public Process, Community, Marketing, Meta). The dependency rules become movement rules: ORGAN-I (Theory) can pass material to ORGAN-II (Art), but ORGAN-II cannot pass material back. The no-back-edges constraint that governs the software system becomes a choreographic constraint that shapes what movements, sounds, and gestures can flow between performers. Robert Wilson's formal compositional methodology — treating time, space, and structure as equal elements — is the natural context for this work.
@@ -65,7 +65,7 @@ The collaborative environment — 60-100 artists from 30+ countries — offers s
 
 #### About the Artist
 
-MFA in Creative Writing. 11 years teaching at 8+ institutions. Systems artist and creative technologist building at the intersection of governance, generative art, and AI-augmented production. The eight-organ system coordinates 100 repositories across 8 organizations, 42 published essays, 404,000+ words of public documentation, and 82+ CI/CD pipelines — all built by a single practitioner using AI as a compositional instrument. 5+ year NYC resident. LGBTQ+.
+MFA in Creative Writing. 11 years teaching at 8+ institutions. Systems artist and creative technologist building at the intersection of governance, generative art, and AI-augmented production. The eight-organ system coordinates 113 repositories across 8 organizations, 48 published essays, 404,000+ words of public documentation, and 82+ CI/CD pipelines — all built by a single practitioner using AI as a compositional instrument. 5+ year NYC resident. LGBTQ+.
 
 #### Links
 
@@ -86,7 +86,7 @@ Copy everything between the lines:
 
 I design environments where creative organisms grow — and then I document the process of growing them.
 
-My practice centers on the eight-organ system: a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 100 repositories and 8 GitHub organizations. I don't produce individual artworks. I produce the systems that generate, coordinate, and sustain creative work — and the visible record of how those systems are built is itself the primary creative output.
+My practice centers on the eight-organ system: a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 113 repositories and 8 GitHub organizations. I don't produce individual artworks. I produce the systems that generate, coordinate, and sustain creative work — and the visible record of how those systems are built is itself the primary creative output.
 
 The governance rules — registry design, dependency graphs, promotion pipelines — aren't bureaucratic overhead; they're generative constraints, the way a composer's harmonic rules shape what melodies can emerge. Every architectural decision is an artistic decision.
 
@@ -102,7 +102,7 @@ Copy everything between the lines:
 
 ---
 
-Systems artist and creative technologist. MFA Creative Writing, 11 years teaching at 8+ NYC institutions. Builds the eight-organ creative-institutional system: 100 repositories across 8 organizations, 42 essays, 404,000+ words — all produced solo using AI as a compositional instrument. The governance model IS the art. Based in NYC. LGBTQ+. Seeking to translate digital governance into collaborative performance at Watermill.
+Systems artist and creative technologist. MFA Creative Writing, 11 years teaching at 8+ NYC institutions. Builds the eight-organ creative-institutional system: 113 repositories across 8 organizations, 48 essays, 404,000+ words — all produced solo using AI as a compositional instrument. The governance model IS the art. Based in NYC. LGBTQ+. Seeking to translate digital governance into collaborative performance at Watermill.
 
 ---
 
@@ -120,13 +120,13 @@ Every page includes a generative p5.js visual layer with CMYK color logic and Jo
 
 **URL:** `https://github.com/meta-organvm`
 
-100 repositories across 8 organizations. Machine-readable registry, automated dependency validation, formal promotion state machine, 11 governance workflows. The architecture IS the artwork.
+113 repositories across 8 organizations. Machine-readable registry, automated dependency validation, formal promotion state machine, 11 governance workflows. The architecture IS the artwork.
 
 ### Sample 3: Public Process Essay Series
 
 **URL:** `https://organvm-v-logos.github.io/public-process/`
 
-42 published essays (~134,000 words) documenting construction of the system in real time. Building-in-public as performance.
+48 published essays (~134,000 words) documenting construction of the system in real time. Building-in-public as performance.
 
 ### Sample 4: Generative Art Framework
 

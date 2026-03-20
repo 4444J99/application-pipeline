@@ -6,13 +6,13 @@
 **Deadline:** March 15, 2026 (confirm on site — deadline may vary slightly)
 **Program dates:** August 12–22, 2026 (10 days, Middlebury, VT)
 **Award:** Participant Scholarship ($4,440 value — covers tuition, room, and board)
-**Fit:** 7/10 — MFA + 42 essays is strong for nonfiction track
-**Identity position:** Writer (MFA, 42 essays, 134K+ published words)
+**Fit:** 7/10 — MFA + 48 essays is strong for nonfiction track
+**Identity position:** Writer (MFA, 48 essays, 134K+ published words)
 **Benefits cliff:** Not income — scholarship covers program costs, not a stipend. SNAP-safe.
 
 ---
 
-> Bread Loaf is the oldest and most prestigious English-language writers' conference in America, founded in 1926. The nonfiction track is ideal — you have an MFA and 42 published essays. Participant Scholarships cover the full cost. The conference offers workshops, lectures, readings, and one-on-one meetings with faculty. The credential alone ("Bread Loaf participant") opens doors across literary and academic worlds.
+> Bread Loaf is the oldest and most prestigious English-language writers' conference in America, founded in 1926. The nonfiction track is ideal — you have an MFA and 48 published essays. Participant Scholarships cover the full cost. The conference offers workshops, lectures, readings, and one-on-one meetings with faculty. The credential alone ("Bread Loaf participant") opens doors across literary and academic worlds.
 
 ---
 
@@ -68,7 +68,7 @@ The writing has gotten better. The early essays are functional — they explain 
 
 But I am writing in isolation. My MFA (Florida Atlantic University, 2018) gave me foundations in craft, but my current practice — writing about technical systems for a public audience — has no workshop community, no peer readers, no faculty mentors working in similar territory. I am making up this form as I go.
 
-Bread Loaf's nonfiction track offers what I cannot provide for myself: rigorous feedback from writers and editors working at the highest level, a community of practitioners to test these essays against, and the structured time to revise work that has been published but not yet refined into its strongest form. I am not looking for validation. I am looking for the kind of editorial challenge that makes the next 42 essays significantly better than the first 42.
+Bread Loaf's nonfiction track offers what I cannot provide for myself: rigorous feedback from writers and editors working at the highest level, a community of practitioners to test these essays against, and the structured time to revise work that has been published but not yet refined into its strongest form. I am not looking for validation. I am looking for the kind of editorial challenge that makes the next 48 essays significantly better than the first 42.
 
 ---
 
@@ -117,7 +117,7 @@ I am an adjunct instructor earning approximately $12,000 per year. I receive SNA
 ## If Something Goes Wrong
 
 - **They ask for a published book:** You do not have a published book. Lead with: "42 published nonfiction essays (~134,000 words) constituting a sustained five-year writing practice." Bread Loaf accepts applicants who have not yet published a book — that's what the conference is for.
-- **Writing sample requirements differ from expected:** Adapt. If they want shorter samples (10 pages), use excerpts. If they want unpublished work only, note that many of the 42 essays exist in draft forms with significant revision potential — select a recent draft that hasn't been published yet.
+- **Writing sample requirements differ from expected:** Adapt. If they want shorter samples (10 pages), use excerpts. If they want unpublished work only, note that many of the 48 essays exist in draft forms with significant revision potential — select a recent draft that hasn't been published yet.
 - **Genre confusion — "is this nonfiction?":** Yes. These are essays in the tradition of personal/intellectual nonfiction. The fact that the subject matter involves software systems doesn't change the genre. John McPhee writes nonfiction about geology. You write nonfiction about creative systems.
 - **Application fee:** Some conferences charge application fees. If there's a fee and it's a hardship, check for fee waivers or contact the admissions office directly.
 - **Travel logistics:** Middlebury, VT is reachable by bus (Greyhound/Peter Pan NYC→Burlington, then shuttle) or Amtrak (NYC→Middlebury via Burlington). Budget $50-100 round trip if scholarship doesn't cover travel.
