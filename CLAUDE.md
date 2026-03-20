@@ -450,8 +450,9 @@ A multi-model IRA (inter-rater agreement) facility that evaluates this pipeline'
 - Journal paper (Doc A): `organvm-v-logos/public-process/research/2026-03-15-ai-as-psychometrician.md`
 
 ### The Studium Generale ORGANVM (SGO)
-ORGANVM's internal university. This pipeline's thesis (Ch 1-10 in `docs/thesis/`) is SGO-2026-D-001. The evaluative authority's dissertation is SGO-2026-D-002.
+ORGANVM's internal university, research engine, and publication house. **Home: `meta-organvm/praxis-perpetua/`** (governance YAMLs, defense rubrics, research corpus, dissertations). This pipeline's thesis (Ch 1-10 in `docs/thesis/`) is SGO-2026-D-001. The evaluative authority's dissertation is SGO-2026-D-002.
 
+- SGO home: `meta-organvm/praxis-perpetua/` (governance/, strategy/, research/, commissions/)
 - SGO design spec: `docs/superpowers/specs/2026-03-17-studium-generale-organvm-design.md`
 - Research corpus index: `meta-organvm/praxis-perpetua/research/README.md`
 
