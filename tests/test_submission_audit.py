@@ -8,7 +8,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from pipeline_lib import PIPELINE_DIR_ACTIVE, detect_entry_portal, load_entries
+from pipeline_lib import detect_entry_portal, load_entries
 from submission_audit import (
     PRE_SUBMIT_STATUSES,
     SUBMITTABLE_PORTALS,

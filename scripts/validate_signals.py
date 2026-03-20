@@ -275,7 +275,7 @@ def validate_contacts(errors: list[str]) -> int:
     return len(contacts)
 
 
-OUTREACH_TYPES = {"post_submission", "reconnect", "seed", "dm", "dm_sent", "connect", "referral_ask", "intro", "doubling_back", "acceptance"}
+OUTREACH_TYPES = {"post_submission", "reconnect", "seed", "dm", "dm_sent", "connect", "referral_ask", "intro", "doubling_back", "acceptance", "github_engagement", "phone_call"}
 OUTREACH_CHANNELS = {"linkedin", "email", "twitter", "referral", "event", "slack", "phone", "github"}
 
 

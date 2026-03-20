@@ -22,7 +22,6 @@ import argparse
 import json
 import subprocess
 import sys
-import time
 from datetime import date
 from pathlib import Path
 
@@ -30,7 +29,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from pipeline_lib import REPO_ROOT, SIGNALS_DIR, atomic_write
+from pipeline_lib import SIGNALS_DIR, atomic_write
 
 CONTACTS_PATH = SIGNALS_DIR / "contacts.yaml"
 
@@ -290,7 +289,7 @@ def update_contacts(
     """
     updated = 0
     added = 0
-    today = date.today().isoformat()
+    date.today().isoformat()
 
     for login, actor in actors.items():
         score = actor["score"]

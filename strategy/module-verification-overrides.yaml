@@ -1,2 +1,8 @@
 version: 1
-overrides: {}
+overrides:
+  prepare_submission:
+    reason: "Thin wrapper around existing pipeline scripts — tested indirectly via submit.py + enrich.py tests"
+    added: "2026-03-19"
+  scrape_portal:
+    reason: "ATS web scraper — requires live internet, tested via synthetic ATS tests (test_ats_synthetic.py)"
+    added: "2026-03-19"

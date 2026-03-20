@@ -2556,3 +2556,37 @@ contacts:
   - personal
   next_action: ''
   next_action_date: ''
+- name: Anthony C.
+  organization: Independent / Consulting
+  role: Potential consulting client
+  channel: phone
+  relationship_strength: 4
+  interactions:
+  - date: '2026-03-17'
+    type: phone_call
+    note: Initial phone call — discussed multiple projects, expressed interest in
+      consulting engagement
+  - date: '2026-03-19'
+    type: waiting
+    note: Awaiting follow-up email from Anthony. Day 2 of silence — normal.
+  pipeline_entries: []
+  tags:
+  - consulting-lead
+  - organic-inbound
+  - founder-operator
+  next_action: Nudge if no follow-up by March 20
+  next_action_date: '2026-03-20'
+- name: Rodny Fernandez
+  organization: Associated with Anthony C.
+  role: Unknown — blank LinkedIn profile
+  channel: linkedin
+  relationship_strength: 1
+  interactions:
+  - date: '2026-03-19'
+    type: profile_view
+    note: Viewed profile — likely associated with Anthony C. consulting lead
+  pipeline_entries: []
+  tags:
+  - consulting-lead-adjacent
+  next_action: ''
+  next_action_date: ''

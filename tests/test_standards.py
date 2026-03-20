@@ -839,7 +839,6 @@ class TestLevel4BugFixes:
             ]}, f)
         monkeypatch.setattr(standards, "REPO_ROOT", tmp_path)
         # Patch path to use tmp_path
-        original = standards._load_hypotheses
         def patched():
             import yaml as _y
             with open(hyp_file) as fh:

@@ -21,7 +21,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from pipeline_lib import ALL_PIPELINE_DIRS, DIMENSION_ORDER, REPO_ROOT, load_entries
+from pipeline_lib import ALL_PIPELINE_DIRS, DIMENSION_ORDER, load_entries
 
 # Import WEIGHTS from score.py (avoids circular import through pipeline_lib)
 from score import WEIGHTS

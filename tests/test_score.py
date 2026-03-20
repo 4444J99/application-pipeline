@@ -851,7 +851,7 @@ def test_composite_job_weights():
     creative_score = compute_composite(dims, "grant")
 
     # Manually compute expected job score with precision weights
-    expected_job = round(
+    round(
         8 * 0.25 + 7 * 0.20 + 3 * 0.20 + 6 * 0.15
         + 8 * 0.10 + 6 * 0.05 + 5 * 0.03 + 9 * 0.01 + 5 * 0.01,
         1,

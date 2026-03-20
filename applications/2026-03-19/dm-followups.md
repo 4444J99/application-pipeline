@@ -131,16 +131,11 @@
 
 ### Recommended Actions Today
 
-1. **DM Xavier Collins** — he viewed you 2h ago after you connected. Strike while hot:
-   > Thanks for connecting, Xavier. I build creative technology infrastructure — generative art (p5.js, Three.js), multi-agent orchestration, 113 repos of production systems. Wonder Studios' AI-native approach to filmmaking is exactly the intersection I work at. Would love to learn more about what you're building.
-   >
-   > Portfolio: https://4444j99.github.io/portfolio/
-
-2. **DM Craig Dennis** (Cloudflare) — he viewed you 1d ago, already connected. Re-engage:
-   > Hey Craig — saw you checked out my profile. Been building out the multi-agent orchestration system further since we connected. 113 repos, 23,470 tests, AI-conductor methodology. Happy to walk through any of it. How's the AI education work at Cloudflare going?
-   >
-   > Portfolio: https://4444j99.github.io/portfolio/
-
-3. **Check Rodny Fernandez's profile** — viewed 3h ago, not connected. If relevant, send connect request.
-4. **Check Alexis C.'s profile** — 2nd degree, 1 mutual. Managing Director could be valuable depending on industry.
-5. **Identify UMATR recruiters** — check the recruiter viewer section for specifics.
+1. ~~**DM Xavier Collins**~~ — viewed profile but **did NOT accept connection**. Cannot DM yet. Monitor for acceptance.
+2. ~~**DM Craig Dennis**~~ — **ALREADY DONE** (Tuesday, March 17). Sent connection message + follow-up DM with portfolio, GTC reference, and DevRel context.
+3. ~~**Rodny Fernandez**~~ — **RESOLVED.** Blank profile, associated with Anthony C. (organic consulting lead). No action on Rodny directly.
+4. ~~**Alexis C.**~~ — **RESOLVED.** Also associated with Anthony C. consulting lead. No separate action.
+5. ~~**UMATR + Vertisystem recruiters**~~ — **RESOLVED.** Both viewed 1 month ago. Stale staffing agencies. Ignore unless they reach out.
+6. **Anthony C. — consulting lead** — Phone call March 17. Awaiting his follow-up email. **Nudge March 20 if no response.**
+7. **Carly Richmond (Elastic)** — Viewed profile, connection pending. Dev Advocate Lead, ★ first contact on Elastic doubling-back entry. **Do not re-request. Wait up to 7 days (March 25).**
+8. **Xavier Collins (Wonder Studios)** — Viewed profile, connection pending. **Do not re-request. DM immediately if he accepts.**
