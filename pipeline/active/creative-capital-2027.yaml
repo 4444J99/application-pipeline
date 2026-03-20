@@ -19,7 +19,7 @@ amount:
   type: lump_sum
   benefits_cliff_note: Exceeds Medicaid -> Essential Plan. Call NYLAG.
 fit:
-  score: 8.2
+  score: 8.1
   original_score: 8.8
   identity_position: systems-artist
   framing: Systems artist presenting ORGANVM—a 103-repository autonomous ecosystem
@@ -38,7 +38,7 @@ fit:
     strategic_value: 10
     financial_alignment: 4
     effort_to_value: 7
-    deadline_feasibility: 9
+    deadline_feasibility: 7
     portal_friction: 6
 submission:
   effort_level: deep
