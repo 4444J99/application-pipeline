@@ -365,7 +365,8 @@ LaunchAgent plist files in `launchd/` for macOS scheduled tasks:
 | `daily-deferred` | Daily 6:00 AM | `check_deferred.py --alert` |
 | `daily-monitor` | Daily 6:30 AM | `monitor_pipeline.py --strict` |
 | `weekly-backup` | Sunday 2:00 AM | `backup_pipeline.py create` |
-| `agent-biweekly` | Mon/Thu 7:00 AM | `agent.py --execute --yes` |
+| `daily-intake-triage` | Daily 6:15 AM | `score.py --all --include-pool` |
+| `agent-daily` | Daily 7:00 AM | `agent.py --execute --yes` |
 | `weekly-briefing` | Sunday 7:00 PM | `weekly_brief.py --save` |
 | `calendar-refresh` | Daily 6:45 AM | `calendar_export.py --output ~/Calendar/pipeline-deadlines.ics --follow-ups` |
 
