@@ -22,4 +22,4 @@ Anthony James Padavano
 Systems Artist & Independent Engineer
 MFA, Creative Writing
 Full-Stack Developer (Meta)
-Miami, FL, USA
+New York City

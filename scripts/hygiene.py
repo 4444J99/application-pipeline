@@ -15,6 +15,7 @@ Usage:
 """
 
 import argparse
+import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -25,6 +26,11 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from ats_verification import (
+    NATIVE_CAREER_PAGES,
+    resolve_application_url,
+    verify_posting_accepts_applications,
+)
 from pipeline_lib import (
     ACTIONABLE_STATUSES,
     COMPANY_CAP,
@@ -50,6 +56,46 @@ from yaml_mutation import YAMLEditor
 
 HTTP_TIMEOUT = 10
 STALE_ROLLING_DAYS = 30
+
+# ---------------------------------------------------------------------------
+# Hard eligibility patterns — requirements the candidate cannot meet
+# ---------------------------------------------------------------------------
+
+# Each tuple: (compiled regex, human-readable label, severity)
+# severity: "hard" = auto-disqualify, "warn" = flag for review
+HARD_ELIGIBILITY_PATTERNS = [
+    (re.compile(r"(?:active|current|existing)\s+(?:TS/?SCI|top\s*secret)", re.IGNORECASE),
+     "Requires active TS/SCI clearance", "hard"),
+    (re.compile(r"(?:full[- ]?scope\s+)?polygraph", re.IGNORECASE),
+     "Requires polygraph", "hard"),
+    (re.compile(r"(?:active|current|existing)\s+(?:secret|security)\s+clearance", re.IGNORECASE),
+     "Requires active security clearance", "hard"),
+    (re.compile(r"must\s+(?:hold|have|possess|maintain|obtain)\s+.*?(?:security\s+clearance|TS/?SCI|top\s*secret)", re.IGNORECASE),
+     "Requires security clearance", "hard"),
+    (re.compile(r"(?:eligible|ability)\s+to\s+obtain\s+.*?(?:clearance|TS/?SCI)", re.IGNORECASE),
+     "Requires clearance eligibility", "warn"),
+    (re.compile(r"requires?\s+(?:verification\s+of\s+)?U\.?S\.?\s+citizenship", re.IGNORECASE),
+     "Requires U.S. citizenship verification", "warn"),
+]
+
+
+def check_hard_eligibility(entry: dict) -> list[tuple[str, str]]:
+    """Scan entry description for hard eligibility requirements.
+
+    Returns list of (label, severity) tuples for each matched pattern.
+    """
+    description = ""
+    target = entry.get("target", {})
+    if isinstance(target, dict):
+        description = target.get("description", "")
+    if not description:
+        return []
+
+    hits = []
+    for pattern, label, severity in HARD_ELIGIBILITY_PATTERNS:
+        if pattern.search(description):
+            hits.append((label, severity))
+    return hits
 
 
 # ---------------------------------------------------------------------------
@@ -201,7 +247,28 @@ def run_check_postings(entries: list[dict]) -> list[dict]:
             job_id = _extract_greenhouse_job_id(app_url) if portal == "greenhouse" else None
             found = app_url in live_urls or (job_id and job_id in live_ids)
 
-            if not found and live_urls:  # only flag if we got API results
+            if portal == "ashby" and found:
+                # Deep Ashby check: API says it exists, but does it accept apps?
+                is_live, reason = verify_posting_accepts_applications(e)
+                if not is_live:
+                    org = target.get("organization", "").lower()
+                    if org in NATIVE_CAREER_PAGES:
+                        native_url = resolve_application_url(e)
+                        issues.append({
+                            "id": entry_id, "portal": portal, "board": board,
+                            "url": app_url, "native_url": native_url,
+                            "reason": "native_career_page",
+                        })
+                        print(f"  [NATIVE] {entry_id} — Ashby dead, apply at: {native_url}")
+                    else:
+                        issues.append({
+                            "id": entry_id, "portal": portal, "board": board,
+                            "url": app_url, "reason": "posting_null",
+                        })
+                        print(f"  [DEAD] {entry_id} — Ashby posting null (no application form)")
+                else:
+                    print(f"  [LIVE] {entry_id}")
+            elif not found and live_urls:  # only flag if we got API results
                 issues.append({"id": entry_id, "portal": portal, "board": board, "url": app_url})
                 print(f"  [CLOSED] {entry_id} — posting no longer on {portal}/{board}")
             elif not live_urls:
@@ -375,6 +442,12 @@ def check_gate(entry: dict) -> list[str]:
     issues = []
     track = entry.get("track", "unknown")
 
+    # Hard eligibility gate — clearance, citizenship, etc.
+    eligibility_hits = check_hard_eligibility(entry)
+    for label, severity in eligibility_hits:
+        prefix = "HARD GATE" if severity == "hard" else "WARNING"
+        issues.append(f"{prefix}: {label}")
+
     # Universal checks
     fit = entry.get("fit", {})
     if not isinstance(fit, dict) or not fit.get("score"):
@@ -495,6 +568,24 @@ def run_full_report(entries: list[dict]):
             dl_date, _ = get_deadline(e)
             print(f"  {e.get('id', '?')} — {dl_date} ({abs(days_until(dl_date))}d ago)")
 
+    # Hard eligibility (clearance/citizenship)
+    clearance_blocks = []
+    for e in entries:  # scan ALL entries, not just actionable
+        hits = check_hard_eligibility(e)
+        if hits:
+            hard = [h for h in hits if h[1] == "hard"]
+            warn = [h for h in hits if h[1] == "warn"]
+            clearance_blocks.append((e.get("id", "?"), e.get("status", "?"), hard, warn))
+    if clearance_blocks:
+        print(f"\nCLEARANCE / ELIGIBILITY BLOCKS ({len(clearance_blocks)}):")
+        for eid, status, hard, warn in clearance_blocks:
+            flags = []
+            for label, _ in hard:
+                flags.append(f"HARD: {label}")
+            for label, _ in warn:
+                flags.append(f"WARN: {label}")
+            print(f"  {eid} [{status}] — {', '.join(flags)}")
+
     # Gate failures
     gate_failures = []
     for e in active:
@@ -521,12 +612,13 @@ def run_full_report(entries: list[dict]):
             print(f"  ... and {len(stale) - 10} more")
 
     # Summary
-    total_issues = len(missing_url) + len(expired) + len(gate_failures) + len(stale)
+    total_issues = len(missing_url) + len(expired) + len(gate_failures) + len(stale) + len(clearance_blocks)
     print(f"\n{'=' * 60}")
     if total_issues == 0:
         print(f"ALL CLEAR — {len(active)} entries, no hygiene issues")
     else:
         print(f"ISSUES FOUND: {total_issues} total")
+        print(f"  Clearance/eligibility: {len(clearance_blocks)}")
         print(f"  Missing URLs: {len(missing_url)}")
         print(f"  Expired deadlines: {len(expired)}")
         print(f"  Gate failures: {len(gate_failures)}")

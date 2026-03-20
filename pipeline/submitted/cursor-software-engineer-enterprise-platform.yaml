@@ -1,13 +1,13 @@
 id: cursor-software-engineer-enterprise-platform
 name: Cursor Software Engineer, Enterprise Platform
 track: job
-status: staged
+status: submitted
 outcome: null
 target:
   organization: Cursor
   url: https://jobs.ashbyhq.com/cursor
-  application_url: https://jobs.ashbyhq.com/cursor/b6807f07-c4b7-4435-8c4c-0bef35865ad7
-  portal: ashby
+  application_url: https://www.cursor.com/careers/software-engineer-enterprise-platform
+  portal: cursor-native
   location: SF / Remote
   location_class: us-remote
   description: "Our mission is to automate coding. The first step in our journey is\
@@ -90,6 +90,7 @@ submission:
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-03-19'
+  submitted: "2026-03-20"
   posting_date: null
   date_added: '2026-03-19'
   discovered: '2026-03-19T21:28:35.875264+00:00'
@@ -101,4 +102,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-03-19'
+last_touched: "2026-03-20"

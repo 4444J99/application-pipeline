@@ -1,7 +1,7 @@
 id: perplexity-forward-deployed-engineer-applied-ai
 name: Perplexity Forward Deployed Engineer - Applied AI
 track: job
-status: staged
+status: submitted
 outcome: null
 target:
   organization: Perplexity
@@ -99,6 +99,7 @@ submission:
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-03-19'
+  submitted: "2026-03-20"
   posting_date: null
   date_added: '2026-03-19'
   discovered: '2026-03-19T21:28:35.901891+00:00'
@@ -110,4 +111,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-03-19'
+last_touched: "2026-03-20"

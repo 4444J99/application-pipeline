@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anthony James Padavano — Cover Letter — deepgram-backend-engineer-inference-services</title>
+<style>
+  @page {
+    size: 8.5in 11in;
+    margin: 0.45in 0.55in;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 10.5pt;
+    line-height: 1.5;
+    color: #1a1a1a;
+    width: 7.4in;
+    max-width: 7.4in;
+    margin: 0 auto;
+    padding: 0.45in 0.55in;
+    display: flex;
+    flex-direction: column;
+    min-height: 10.1in;
+  }
+
+  @media print {
+    body {
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      min-height: 100vh;
+    }
+  }
+
+  /* Header — matches resume header exactly */
+  header {
+    text-align: center;
+    margin-bottom: 12pt;
+    padding-bottom: 8pt;
+    border-bottom: 1.5pt solid #1a1a1a;
+  }
+
+  header h1 {
+    font-size: 16pt;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 0.2pt;
+    margin-bottom: 3pt;
+  }
+
+  header .title-line {
+    font-size: 10.5pt;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 4pt;
+  }
+
+  header .contact {
+    font-size: 8pt;
+    color: #333;
+  }
+
+  header .contact a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  /* Letter body */
+  .letter-body {
+    margin-top: 10pt;
+    flex: 1;
+  }
+
+  .letter-body p {
+    margin-bottom: 11pt;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .letter-body strong {
+    font-weight: bold;
+  }
+
+  .letter-body em {
+    font-style: italic;
+  }
+
+  /* Sign-off */
+  .sign-off {
+    margin-top: 18pt;
+  }
+
+  .sign-off p {
+    margin-bottom: 2pt;
+  }
+
+  .sign-off .name {
+    font-weight: bold;
+    font-size: 10.5pt;
+  }
+
+  .sign-off .credentials {
+    font-size: 9pt;
+    color: #444;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Anthony James Padavano</h1>
+  <div class="title-line">Backend Engineer &amp; Python Systems Architect</div>
+  <div class="contact">
+    New York City &nbsp;|&nbsp; 561-602-7300 &nbsp;|&nbsp; padavano.anthony@gmail.com
+  </div>
+</header>
+
+<div class="letter-body">
+<p>Dear Deepgram Hiring Team,</p>
+<p>The architecture of an inference service — accept a request, route it to the right model, manage the execution pipeline, return a structured response, handle failure gracefully — is the same architecture I designed for the application pipeline's API integration layer. stdlib urllib, not requests. YAML schema contracts on inputs and outputs. Retry logic with structured error handling. Shared library architecture (pipeline_lib.py) decomposed into focused modules with clean public interfaces. 40+ scripts, one coherent system.</p>
+<p>I build in Python at scale: 14.5K Python tests across 116 repositories, 8 GitHub organizations, 104 CI/CD pipelines. The pipeline_lib.py decomposition — extracting pipeline_entry_state.py, pipeline_freshness.py, and pipeline_market.py while maintaining backward-compatible re-exports — is the kind of refactoring that keeps a backend system extensible as it grows. I did it because it was the right architectural move, not because anyone asked me to.</p>
+<p>The multi-agent work connects most directly to inference service design patterns. agentic-titan (TypeScript, 1,095+ tests, 18 development phases) implements agent coordination with parallel execution, task decomposition, and backpressure — the same patterns that appear in any system managing concurrent model inference requests. agent--claude-smith (Claude Agent SDK) adds session persistence and self-correction loops. I understand these patterns as engineering problems, not just AI abstractions.</p>
+<p>What I find compelling about Deepgram specifically is the inference challenge: real-time speech recognition at the latency requirements your product demands is a hard systems problem. My background is not in audio ML, but it is in designing Python backends that stay correct under load — YAML validation gates, automated regression detection, structured error propagation, and a 23,470-test suite that catches regressions before they reach production.</p>
+<p>I am based in New York City. I would welcome the opportunity to discuss the inference services engineering challenges at Deepgram.</p>
+</div>
+
+<div class="sign-off">
+  <p>Sincerely,</p>
+  <p class="name">Anthony James Padavano</p>
+  <p class="credentials">Founder & Operator | Full-Stack Developer (Meta) | New York City</p>
+</div>
+
+</body>
+</html>

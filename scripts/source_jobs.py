@@ -758,12 +758,25 @@ def create_pipeline_entry(job: dict) -> tuple[str, dict]:
     """Generate a pipeline YAML dict for a job posting.
 
     Returns (entry_id, yaml_dict).
+    Resolves native career page URLs for companies that host their own forms.
     """
+    from ats_verification import NATIVE_CAREER_PAGES, _ashby_slug_from_title
+
     company_slug = _slugify(job["company_display"])
     title_slug = _slugify(job["title"])
     entry_id = f"{company_slug}-{title_slug}"
 
     today = date.today().isoformat()
+
+    # Resolve native career page URLs for companies like Cursor
+    app_url = job["url"]
+    portal = job["portal"]
+    org_lower = job.get("company_display", "").lower()
+    if portal == "ashby" and org_lower in NATIVE_CAREER_PAGES:
+        template = NATIVE_CAREER_PAGES[org_lower]
+        slug = _ashby_slug_from_title(job.get("title", ""))
+        app_url = template.format(slug=slug)
+        portal = f"{org_lower}-native"
 
     entry = {
         "id": entry_id,
@@ -774,8 +787,8 @@ def create_pipeline_entry(job: dict) -> tuple[str, dict]:
         "target": {
             "organization": job["company_display"],
             "url": job.get("company_url", ""),
-            "application_url": job["url"],
-            "portal": job["portal"],
+            "application_url": app_url,
+            "portal": portal,
             "location": job.get("location", ""),
             "location_class": classify_location(job.get("location", "")),
             "description": job.get("description", ""),

@@ -38,6 +38,8 @@ COMMANDS = {
     "enrichall":   ("enrich.py", ["--all", "--dry-run"], "Preview all enrichments"),
     "preflight":   ("preflight.py", [],                  "Batch submission readiness"),
     "resumes":     ("build_resumes.py", [],              "Rebuild PDF resumes from JSON/Markdown sources"),
+    "coverletters": ("build_cover_letters.py", [],       "Build cover letter PDFs from markdown"),
+    "drift":       ("resume_drift_report.py", [],        "Resume drift analysis: batch vs base similarity"),
     "archive":     ("archive_research.py", ["--report"], "Show archival candidates"),
     "prune":       ("research_analytics.py", [],              "Research pool analytics: classify, org-capped, auto-stale, age-stale entries (dry-run)"),
     "triagegate":  ("triage.py", [],                      "Triage gate: demote sub-threshold staged, resolve org-cap"),

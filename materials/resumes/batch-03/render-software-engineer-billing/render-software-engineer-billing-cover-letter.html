@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anthony James Padavano — Cover Letter — render-software-engineer-billing</title>
+<style>
+  @page {
+    size: 8.5in 11in;
+    margin: 0.45in 0.55in;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 10.5pt;
+    line-height: 1.5;
+    color: #1a1a1a;
+    width: 7.4in;
+    max-width: 7.4in;
+    margin: 0 auto;
+    padding: 0.45in 0.55in;
+    display: flex;
+    flex-direction: column;
+    min-height: 10.1in;
+  }
+
+  @media print {
+    body {
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      min-height: 100vh;
+    }
+  }
+
+  /* Header — matches resume header exactly */
+  header {
+    text-align: center;
+    margin-bottom: 12pt;
+    padding-bottom: 8pt;
+    border-bottom: 1.5pt solid #1a1a1a;
+  }
+
+  header h1 {
+    font-size: 16pt;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 0.2pt;
+    margin-bottom: 3pt;
+  }
+
+  header .title-line {
+    font-size: 10.5pt;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 4pt;
+  }
+
+  header .contact {
+    font-size: 8pt;
+    color: #333;
+  }
+
+  header .contact a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  /* Letter body */
+  .letter-body {
+    margin-top: 10pt;
+    flex: 1;
+  }
+
+  .letter-body p {
+    margin-bottom: 11pt;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .letter-body strong {
+    font-weight: bold;
+  }
+
+  .letter-body em {
+    font-style: italic;
+  }
+
+  /* Sign-off */
+  .sign-off {
+    margin-top: 18pt;
+  }
+
+  .sign-off p {
+    margin-bottom: 2pt;
+  }
+
+  .sign-off .name {
+    font-weight: bold;
+    font-size: 10.5pt;
+  }
+
+  .sign-off .credentials {
+    font-size: 9pt;
+    color: #444;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Anthony James Padavano</h1>
+  <div class="title-line">Full-Stack Engineer &amp; State Machine Systems Builder</div>
+  <div class="contact">
+    New York City &nbsp;|&nbsp; 561-602-7300 &nbsp;|&nbsp; padavano.anthony@gmail.com
+  </div>
+</header>
+
+<div class="letter-body">
+<p>Dear Render Hiring Team,</p>
+<p>The application pipeline I built and operate is a state machine in the billing sense: each entry moves through a defined lifecycle (research → qualified → drafting → staged → submitted → acknowledged → interview → outcome), transitions are forward-only with hard validation gates, there is a deferred state for entries blocked by external factors, and every transition is logged to a YAML audit trail. advance.py enforces the transitions; check_outcomes.py monitors stale responses and alerts on entries that have gone quiet. The structure is not coincidental — subscription lifecycle management and application lifecycle management are the same architectural problem.</p>
+<p>I designed this discipline into the system because correctness under state transitions is hard to retrofit. The same principle applies to billing: a subscription that moves from trialing to active to past_due to canceled and back to active via a reactivation path needs explicit state validation at every transition, audit logging, and guard clauses that prevent invalid sequences. I have built that for my own domain; I understand why it matters for Render's.</p>
+<p>On the technical side: 23,470 tests (14.5K Python, 8.9K TypeScript), 113 repositories, 8 GitHub organizations, 104 CI/CD pipelines. The full stack: Python (pytest, ruff, Typer, PyYAML, ruamel.yaml), TypeScript (React 18, Node.js, Vitest, Zod, Express, Astro 5). I have also built the Zod schema validation, YAML contract enforcement, and code-level guards that prevent test fixtures from corrupting production data — a correctness discipline that billing systems require.</p>
+<p>Render is a product I respect because it stays out of the developer's way while handling genuinely complex infrastructure. The billing layer is the part of the product that customers feel most directly when something goes wrong. I want to work on systems where correctness is non-negotiable.</p>
+<p>I am based in New York City. I would be glad to discuss the billing engineering challenges at Render.</p>
+</div>
+
+<div class="sign-off">
+  <p>Sincerely,</p>
+  <p class="name">Anthony James Padavano</p>
+  <p class="credentials">Founder & Operator | Full-Stack Developer (Meta) | New York City</p>
+</div>
+
+</body>
+</html>

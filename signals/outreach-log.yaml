@@ -1559,3 +1559,54 @@ entries:
   organization: Independent / Consulting
   channel: phone
   note: Initial phone call — discussed multiple consulting projects. Awaiting follow-up.
+- date: '2026-03-20'
+  type: acceptance
+  contact: Keisuke Kamata
+  organization: Weights & Biases
+  channel: linkedin
+  note: Connection accepted — replied "Wow cool!!! Thank you for reaching out to me!" DM queued.
+  related_targets:
+  - weights-biases-chief-of-staff-product-engineering
+- date: '2026-03-20'
+  type: dm_sent
+  contact: Keisuke Kamata
+  organization: Weights & Biases
+  channel: linkedin
+  note: DM sent about multi-model evaluation. Keisuke replied "let me get back next week" with positive emojis. Follow up Mon/Tue 2026-03-23/24.
+  related_targets:
+  - weights-biases-chief-of-staff-product-engineering
+- date: '2026-03-20'
+  type: acceptance
+  contact: Varun Bais
+  organization: Toast
+  channel: linkedin
+  note: Connection accepted — replied "Hi Anthony, Nice to meet you"
+  related_targets:
+  - toast-senior-backend-engineer
+  - toast-senior-software-engineer-front-end
+- date: '2026-03-20'
+  type: dm_sent
+  contact: Varun Bais
+  organization: Toast
+  channel: linkedin
+  note: Asked about config platform team. Varun not on that stack but referred Shmuel Rosansky (very senior engineer). Unsolicited warm referral.
+  related_targets:
+  - toast-senior-backend-engineer
+  - toast-senior-software-engineer-front-end
+- date: '2026-03-20'
+  type: referral_received
+  contact: Varun Bais
+  organization: Toast
+  channel: linkedin
+  note: 'Varun referred Shmuel Rosansky (linkedin.com/in/shmuelr) — senior engineer at Toast. Varun said: "he is one of the very senior engineers." Cannot name-drop Varun (too junior to be known).'
+  related_targets:
+  - toast-senior-backend-engineer
+  - toast-senior-software-engineer-front-end
+- date: '2026-03-20'
+  type: employer_response
+  contact: Giselle Collins
+  organization: Anduril
+  channel: email
+  note: Recruiter asked to confirm TS/SCI with Full Scope Polygraph. Do not hold clearance. Responding with honest no + ask about non-clearance roles.
+  related_targets:
+  - anduril-lead-technical-writer-intelligence-systems

@@ -461,7 +461,11 @@ def generate_cover_letter(
         "Do NOT fabricate any experience, metrics, or evidence. "
         "Lead with numbers and concrete achievements. "
         "One sentence, one claim — maintain scannability. "
-        "Target length: 350-450 words. "
+        "Target length: 550-700 words (MUST fill a full page at 10pt font). "
+        "Structure: salutation, 4-5 substantial paragraphs, closing with sign-off. "
+        "Location: New York City (NOT South Florida or Miami). "
+        "Never apologize for gaps — lead with what you bring. "
+        "No commas in role titles — use '&' or parentheses. "
         "Output the cover letter directly without preamble."
     )
 

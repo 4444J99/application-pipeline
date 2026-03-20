@@ -171,7 +171,7 @@ def build_tailoring_prompt(entry: dict, sections: dict[str, str], cover_letter: 
         "- **Preserve all factual claims** — do not fabricate experience, metrics, or projects",
         "- **Reorder and re-emphasize** to front-load what's most relevant for this role",
         "- **Keep the same HTML structure** — same tags, same classes, same general format",
-        "- **TITLE_LINE**: Change the subtitle to match the role focus (max ~6 words, uppercase in display)",
+        "- **TITLE_LINE**: Change the subtitle to match the role focus (max ~6 words, uppercase in display). NO COMMAS — use '&' or parentheses instead (e.g. 'Backend Engineer & API Systems' not 'Software Engineer, Backend')",
         "- **PROFILE**: Lead with the most relevant signal for this role. Keep to one paragraph.",
         "- **SKILLS**: Reorder to put role-relevant skills first. You may remove less relevant ones.",
         "- **PROJECTS**: Reorder projects by relevance. Rewrite descriptions to emphasize role-relevant aspects.",
@@ -183,7 +183,7 @@ def build_tailoring_prompt(entry: dict, sections: dict[str, str], cover_letter: 
         "Content that is too short looks sparse; too long overflows to 2 pages.",
         "",
         "- **TITLE_LINE**: 4-8 words (e.g. 'STAFF DEVELOPER ADVOCATE (PLATFORM ENGINEERING)')",
-        "- **PROFILE**: One paragraph, 5-6 lines (~350-450 characters). Include: role framing, key metrics (103 repos, 2349+ tests, 94 CI/CD), methodology note, credentials, identity.",
+        "- **PROFILE**: One paragraph, 5-6 lines (~350-450 characters). Include: role framing, key metrics (113 repos, 23,470 tests, 104 CI/CD), methodology note, credentials, identity.",
         "- **SKILLS**: 20-25 skills, single line wrapping to 2-3 lines",
         "- **PROJECTS**: Exactly 5 project entries. Each entry: bold title line + 2-3 line description (~150-200 chars). Total section ~800-1000 chars.",
         "- **EXPERIENCE**: 4 entries. First entry (Independent Engineer): 4 bullets, each wrapping to 2 lines (~120-150 chars each). Other 3 entries: 1 bullet each wrapping to 2 lines.",
@@ -277,6 +277,8 @@ def integrate_tailored_sections(entry_id: str, output_text: str, identity: str |
     html = load_base_template(identity)
 
     if "TITLE_LINE" in parsed_sections:
+        # Strip commas from title lines — use & or parentheses instead
+        parsed_sections["TITLE_LINE"] = parsed_sections["TITLE_LINE"].replace(",", " &mdash;")
         html = re.sub(
             r'(<div class="title-line">).*?(</div>)',
             lambda m: m.group(1) + parsed_sections["TITLE_LINE"] + m.group(2),

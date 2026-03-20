@@ -1050,13 +1050,19 @@ contacts:
   - date: '2026-03-18'
     note: Connection request sent — doubling-back outreach
     type: doubling_back
+  - date: '2026-03-20'
+    note: Connection accepted — replied enthusiastically. DM queued.
+    type: acceptance
+  - date: '2026-03-20'
+    note: DM sent about multi-model eval. Replied "let me get back next week" with positive emojis.
+    type: dm_sent
   name: Keisuke Kamata
-  next_action: DM if accepted
-  next_action_date: '2026-03-25'
+  next_action: Follow up with IRA framework overview (4 raters, ICC+kappa, quarterly recalibration)
+  next_action_date: '2026-03-23'
   organization: Weights & Biases
   pipeline_entries:
   - weights-biases-chief-of-staff-product-engineering
-  relationship_strength: 1
+  relationship_strength: 4
   role: Manager, AI Solutions Engineering
   tags:
   - doubling-back-2026-03-18
@@ -2330,18 +2336,43 @@ contacts:
   next_action_date: ''
 - name: Varun Bais
   organization: Toast
-  role: ''
+  role: SWE-2
   channel: linkedin
-  relationship_strength: 2
+  relationship_strength: 5
   interactions:
   - date: '2026-03-18'
     type: post_submission
     note: Connection request sent — hiring backend
+  - date: '2026-03-20'
+    type: acceptance
+    note: Connection accepted — replied "Nice to meet you"
+  - date: '2026-03-20'
+    type: dm_sent
+    note: Asked about config platform. Not on that stack.
+  - date: '2026-03-20'
+    type: referral_received
+    note: Referred Shmuel Rosansky (very senior engineer at Toast). Cannot name-drop Varun.
   pipeline_entries:
   - toast-senior-backend-engineer
-  tags: []
-  next_action: ''
-  next_action_date: ''
+  - toast-senior-software-engineer-front-end
+  tags:
+  - referral-source
+  next_action: Follow up after Shmuel outreach — thank Varun for the lead
+  next_action_date: '2026-03-23'
+- name: Shmuel Rosansky
+  organization: Toast
+  role: Senior Engineer
+  channel: linkedin
+  relationship_strength: 0
+  interactions: []
+  pipeline_entries:
+  - toast-senior-backend-engineer
+  - toast-senior-software-engineer-front-end
+  tags:
+  - referred-by-varun-bais
+  - warm-intro-pending
+  next_action: Send connection request with backend context
+  next_action_date: '2026-03-20'
 - name: Stephen Barnes
   organization: Toast
   role: ''
