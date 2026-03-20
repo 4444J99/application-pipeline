@@ -20,7 +20,7 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 7.5
+  score: 7.6
   identity_position: educator
   dimensions:
     mission_alignment: 10
@@ -29,7 +29,7 @@ fit:
     network_proximity: 4
     strategic_value: 5
     financial_alignment: 5
-    effort_to_value: 5
+    effort_to_value: 7
     deadline_feasibility: 9
     portal_friction: 5
 submission:

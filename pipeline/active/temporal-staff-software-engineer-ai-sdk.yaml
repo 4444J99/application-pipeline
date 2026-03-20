@@ -20,7 +20,7 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 9.0
+  score: 9.1
   identity_position: creative-technologist
   dimensions:
     mission_alignment: 10
@@ -29,7 +29,7 @@ fit:
     network_proximity: 10
     strategic_value: 6
     financial_alignment: 5
-    effort_to_value: 5
+    effort_to_value: 7
     deadline_feasibility: 9
     portal_friction: 5
 submission:
