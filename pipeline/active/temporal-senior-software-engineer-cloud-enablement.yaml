@@ -1,0 +1,114 @@
+id: temporal-senior-software-engineer-cloud-enablement
+name: 'Temporal Senior Software Engineer, Cloud Enablement '
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Temporal
+  url: https://boards.greenhouse.io/temporaltechnologies
+  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/5038882007
+  portal: greenhouse
+  location: United States - Remote Opportunity
+  location_class: us-remote
+  description: <div class="content-intro"><h3><strong>About Us</strong></h3> <div>Temporal
+    is an open source programming model that can simplify code, make applications
+    more reliable, and help developers focus on the important things like delivering
+    features faster. We are on a mission to be the reliable foundation of every developer’s
+    toolbox, and are building the team that will make that happen.</div> <div>&nbsp;</div>
+    <div>Our values guide us —they are present in how we show up, make decisions,
+    and work together to make an impact. We’re curious, driven, collaborative, genuine
+    and humble.</div> <div>&nbsp;</div> <div>Temporal is growing and we are looking
+    for those who share our values, challenge 'standard' thinking, and want to influence
+    our future. If you have a passion for improving the developer experience, building
+    world-class open-source software and communities, and want to be a part of our
+    amazing team, we'd love to hear from you!</div></div><div> <h3><strong>Summary</strong></h3>
+    </div> <div> <div> <p>We are hiring a&nbsp;<strong>Senior Software Engineer</strong>&nbsp;to
+    join the <strong>Cloud Enablement team</strong>, part of Temporal’s <strong>Cloud
+    Global Services (CGS)</strong> organization.</p> <p>The Cloud Enablement team
+    focuses on applying and extending the <strong>Temporal OSS replication stack</strong>
+    to power critical Temporal Cloud capabilities. These include <strong>High Availability
+    (HA) namespaces</strong>, <strong>error detection and</strong> <strong>automated
+    failover</strong>, and <strong>migration of workloads and namespaces</strong>
+    between self-hosted Temporal clusters and Temporal Cloud, as well as within Temporal
+    Cloud.</p> As a Senior Engineer, you will work on backend systems that sit at
+    the core of Temporal Cloud’s enterprise offerings. These systems must be <strong>correct,
+    reliable, observable, and safe to operate at scale</strong>, even in the presence
+    of partial failures, network partitions, and evolving customer workloads. You’ll
+    collaborate closely with other engineers in CGS Replication Foundations, Cloud,
+    Infrastructure, and OSS teams to deliver production-grade features used by customers
+    running mission-critical workflows.</div> <div> <h3><strong>What You'll Do</strong></h3>
+    </div> <div> <ul> <li>Design and implement backend features that apply and extend
+    the <strong>Temporal OSS replication stack</strong> to new Temporal Cloud capabilities</li>
+    <li>Contribute to <strong>Temporal Cloud High Availability</strong> features,
+    including:</li> <ul> <li>Namespace replication within and across regions and cloud
+    providers</li> <li>Monitoring replication health and lag</li> <li>Supporting manual
+    and automated failover workflows</li> </ul> <li>Build and improve <strong>namespace</strong>
+    <strong>migration systems</strong>, including:</li> <ul> <li>Migration of namespaces
+    and workloads between <strong>self-hosted Temporal clusters and Temporal Cloud</strong></li>
+    <li>Migration between Temporal Cloud environments or regions</li> <li>Tooling
+    that supports safe cutover, validation, and rollback</li> </ul> <li>Own medium-to-large
+    features end-to-end, from design through production rollout and long-term maintenance</li>
+    <li>Write clear design documentation describing system behavior, tradeoffs, and
+    failure modes</li> <li>Ensure features are production-ready by delivering:</li>
+    <ul> <li>Service-level logs, metrics, and tracing</li> <li>Alerts, dashboards,
+    and operational runbooks</li> </ul> <li>Participate in operational ownership,
+    including on-call rotations, incident response, and postmortems</li> <li>Collaborate
+    with teammates to continuously improve reliability, operability, and development
+    velocity</li> </ul> </div> <div> <h3><strong>What You'll Bring</strong></h3> </div>
+    <div> <ul> <li>Strong experience designing and building <strong>distributed backend
+    systems</strong> with a focus on reliability and scalability</li> <li>Hands-on
+    experience operating <strong>production systems</strong>, including debugging
+    failures and improving observability</li> <li>Experience developing <strong>highly
+    concurrent systems</strong></li> <li>Demonstrated ability to write concurrent
+    production code, preferably in <strong>Go</strong> (Java or similar languages
+    also welcome)</li> <li>Solid understanding of <strong>failure modes, replication,
+    and resiliency patterns</strong> in distributed systems</li> <li>Ability to independently
+    drive work from problem definition to delivery, while collaborating closely with
+    peers and stakeholders</li> <li>A mindset focused on building systems that are
+    <strong>safe to operate, easy to reason about, and resilient to change</strong></li>
+    </ul> </div> <div> <h3><strong>Nice to Have</strong></h3> <ul> <li>Experience
+    with <strong>replication, failover, or disaster recovery systems</strong></li>
+    <li>Experience designing or operating <strong>migration tooling</strong> for distributed
+    systems</li> <li>Familiarity with cloud infrastructure and containerized environments
+    (e.g., Kube
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 9.0
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 10
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.658219+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

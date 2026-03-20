@@ -2,7 +2,7 @@
 
 I build creative systems — the governance IS the artwork.
 
-My practice centers on the ORGANVM eight-organ system: a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 105 repositories and 8 GitHub organizations. In the tradition of media art institutions like ZKM, I position the system itself as the primary site of aesthetic inquiry.
+My practice centers on the ORGANVM eight-organ system: a documented infrastructure coordinating theory, generative art, commercial products, governance, public process, community, and marketing across 116 repositories and 8 GitHub organizations. In the tradition of media art institutions like ZKM, I position the system itself as the primary site of aesthetic inquiry.
 
 The process of creation is the product. My methodology, "Governance as Art," transforms the administrative and technical orchestration of a massive digital ecosystem into a performative act. The 42 published essays documenting this process are not mere metadata; they are the work itself — a real-time rendering of creative labor into a living, searchable corpus of over 810,000 words.
 

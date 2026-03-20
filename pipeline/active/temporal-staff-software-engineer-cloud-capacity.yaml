@@ -1,0 +1,114 @@
+id: temporal-staff-software-engineer-cloud-capacity
+name: Temporal Staff Software Engineer, Cloud Capacity
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Temporal
+  url: https://boards.greenhouse.io/temporaltechnologies
+  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/4766700007
+  portal: greenhouse
+  location: United States OR Canada - Remote Opportunity
+  location_class: us-remote
+  description: '<div class="content-intro"><h3><strong>About Us</strong></h3> <div>Temporal
+    is an open source programming model that can simplify code, make applications
+    more reliable, and help developers focus on the important things like delivering
+    features faster. We are on a mission to be the reliable foundation of every developer’s
+    toolbox, and are building the team that will make that happen.</div> <div>&nbsp;</div>
+    <div>Our values guide us —they are present in how we show up, make decisions,
+    and work together to make an impact. We’re curious, driven, collaborative, genuine
+    and humble.</div> <div>&nbsp;</div> <div>Temporal is growing and we are looking
+    for those who share our values, challenge ''standard'' thinking, and want to influence
+    our future. If you have a passion for improving the developer experience, building
+    world-class open-source software and communities, and want to be a part of our
+    amazing team, we''d love to hear from you!</div></div><div> <h3><span style="font-size:
+    12pt;"><strong>Summary</strong></span></h3> </div> <div> <div>The Cloud Capacity
+    team plays a critical role in ensuring the Temporal Cloud is scalable, efficient,
+    and reliable for our customers’ most important workloads. As a Staff Engineer,
+    you’ll lead high-impact initiatives to build systems that intelligently manage
+    and forecast resource needs, directly influencing our infrastructure efficiency,
+    customer experience, and platform cost strategy.</div> <div>&nbsp;</div> <div><span
+    style="font-size: 12pt;"><strong>What You''ll Do</strong></span></div> <div> <ul>
+    <li>Drive the technical vision and roadmap for Temporal’s Cloud Capacity systems
+    in partnership with engineering and product leadership.</li> <li>Design and implement
+    infrastructure to track resource utilization, forecast consumption, and support
+    automated capacity planning at scale.</li> <li>Lead development of a resource
+    manager that optimizes infrastructure efficiency based on usage trends, cost insights,
+    and evolving customer needs.</li> <li>Collaborate cross-functionally with Product,
+    Cloud Infrastructure, and Finance to inform business-critical decisions around
+    provisioning, pricing, and scaling.</li> <li>Guide long-term strategy to support
+    intelligent autoscaling, workload isolation, and predictable performance in a
+    multi-tenant cloud environment.</li> </ul> </div> <div><span style="font-size:
+    12pt;"><strong>What You''ll Bring</strong></span></div> <div> <ul> <li>Proven
+    experience contributing to large-scale infrastructure efforts spanning cloud compute,
+    storage, and networking systems.</li> <li>Strong product and operational intuition
+    around managing cloud costs, utilization tracking, and workload forecasting.</li>
+    <li>A track record of designing distributed systems and services in a production
+    cloud environment (preferably AWS, GCP, or Azure).</li> <li>Hands-on experience
+    with container orchestration technologies (e.g., Kubernetes) and the surrounding
+    ecosystem.</li> <li>Exceptional collaboration and communication skills—you influence
+    through clarity, and you bring others along for the journey.</li> <li>Comfortable
+    aligning cross-functional stakeholders on complex infrastructure problems, including
+    executives and finance partners.</li> <li>6+ years of experience building production
+    software using Go, Java, or similar languages.</li> </ul> </div> <div><span style="font-size:
+    12pt;"><strong>Compensation</strong></span></div> <div> <ul> <li>The estimated
+    pay range for this role is $212,000 - $286,000 depending on experience and location.</li>
+    <li>Additionally, this role is eligible to participate in Temporal''s equity plan.</li>
+    </ul> </div> </div><div class="content-conclusion"><div><em>Compensation ranges
+    reflect salary and commission compensation (when applicable) across several geographic
+    markets. Employment offers carefully consider multiple factors, including prior
+    experience, knowledge, expertise, skillset, market location, and job level assessed
+    during the interview process.</em></div> <div>&nbsp;</div> <div><em>Employee benefits
+    and perks below are for full-time employees, part-time or temporary positions
+    are excluded.&nbsp;</em></div> <div>&nbsp;</div> <div> <div><strong>U.S. Benefits&nbsp;</strong></div>
+    <div> <ul> <li>Unlimited PTO, 12 Holidays + 2 Floating Holidays</li> <li>100%
+    Premiums Coverage for Medical, Dental, and Vision</li> <li>AD&amp;D, LT &amp;
+    ST Disability, and Life Insurance (Standard &amp; Supplemental Available)</li>
+    <li>Empower 401K Plan</li> <li>Additional Perks for Learning &amp; Development,
+    Lifestyle Spending, In-Home Office Setup, Professional Memberships, WFH Meals,
+    Internet Stipend and more!</li> </ul> </div> </div> <div> <div><strong>International
+    Benefits</strong></div> <div> <p>Paid Time Off (PTO) and Benefits outside the
+    United States vary by country, and are issued in partnership with <a class="postings-link"
+    href="http://remote.com/">Remote.com</a>.&nbsp; Additionally, Temporal offers
+    perks to all international employees for learning &amp;'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 9.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 10
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.677669+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

@@ -1,0 +1,112 @@
+id: reddit-senior-software-engineer-site-defense
+name: Reddit Senior Software Engineer, Site Defense
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Reddit
+  url: https://boards.greenhouse.io/reddit
+  application_url: https://job-boards.greenhouse.io/reddit/jobs/7542779
+  portal: greenhouse
+  location: New York City, NY
+  location_class: us-onsite
+  description: '<div class="content-intro"><div class="c-message_kit__blocks c-message_kit__blocks--rich_text">
+    <div class="c-message__message_blocks c-message__message_blocks--rich_text" data-qa="message-text">
+    <div class="p-block_kit_renderer" data-qa="block-kit-renderer"> <div class="p-block_kit_renderer__block_wrapper
+    p-block_kit_renderer__block_wrapper--first"> <div class="p-rich_text_block"> <div
+    class="p-rich_text_section">Reddit is a community of communities. It’s built on
+    shared interests, passion, and trust, and is home to the most open and authentic
+    conversations on the internet. Every day, Reddit users submit, vote, and comment
+    on the topics they care most about. With 100,000+ active communities and approximately
+    121 million daily active unique visitors, Reddit is one of the internet’s largest
+    sources of information. For more information, visit <a class="c-link" href="http://www.redditinc.com/"
+    target="_blank" data-stringify-link="http://redditinc.com" data-sk="tooltip_parent">www.redditinc.com</a>.</div>
+    </div> </div> </div> </div> </div></div><p>We are looking for a Senior Software
+    Engineer to join the Site Defense team within Reddit’s Infrastructure organization.
+    Site Defense is responsible for protecting Reddit at internet scale—serving as
+    the first line of defense against DDoS attacks, automated abuse, large-scale scraping,
+    and other network-level threats. This is a high impact role that sits at the intersection
+    of distributed systems, networking, security, and applied machine learning. You
+    will help design and operate critical infrastructure that safeguards Reddit’s
+    availability, performance, and trust.</p> <p><strong>You will:</strong></p> <ul>
+    <li>Design, build, and operate high-scale, low-latency systems that protect Reddit
+    from DDoS attacks, bots, and automated abuse.</li> <li>Analyze, develop and evolve
+    ingress-level defenses across CDN, edge, and internal infrastructure layers.</li>
+    <li>Build systems to detect, score, and mitigate malicious traffic in real time
+    at per-request and per-user granularity</li> <li>Partner closely within Infrastructure
+    and with Security, and internal Safety teams to balance security, performance,
+    and user experience</li> <li>Mentor junior engineers in their professional growth.</li>
+    <li>Contribute to the team’s ML-at-Ingress initiatives, including experimenting
+    with models for traffic classification, bot detection, and anomaly detection</li>
+    <li>Own services end-to-end, including design, implementation, on-call, and operational
+    excellence</li> <li>Participate in incident response and post-incident analysis
+    for large-scale network or abuse events</li> </ul> <p><strong>You have:</strong></p>
+    <ul> <li>5+ years of experience building and operating high throughput and low
+    latency production distributed systems.</li> <li>Software development experience
+    in one or more general purpose programming languages; Python, Go, Rust, Java,
+    C++.</li> <li>Excellent communication skills to collaborate with a service-oriented
+    team and company.</li> <li>Experience with DDoS mitigation, WAFs, bot management,
+    or abuse prevention systems.</li> <li>Experience with networking fundamentals
+    (HTTP, TLS, TCP/IP, proxies, CDNs, load balancing).</li> </ul> <p><strong>Nice
+    to have:</strong></p> <ul> <li>Prior experience with cloud infrastructure systems
+    (Kubernetes, AWS / GCE ecosystems).</li> <li>Familiarity with ML systems in production,
+    especially real-time inference or feature pipelines.</li> <li>Knowledge of traffic
+    analysis, anomaly detection, or large-scale telemetry systems.</li> </ul> <p><strong>Benefits:</strong></p>
+    <ul> <li>Comprehensive Healthcare Benefits and Income Replacement Programs</li>
+    <li>401k with Employer Match</li> <li>Global Benefit programs that fit your lifestyle,
+    from workspace to professional development to caregiving support</li> <li>Family
+    Planning Support</li> <li>Gender-Affirming Care</li> <li>Mental Health &amp; Coaching
+    Benefits</li> <li>Flexible Vacation &amp; Paid Volunteer Time Off</li> <li>Generous
+    Paid Parental Leave&nbsp;</li> </ul> <p>#LI-remote, #LI-JS5</p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p><strong>Pay Transparency:</strong></p>
+    <p>This job posting may span more than one career level.</p> <p>In addition to
+    base salary, this job is eligible to receive equity in the form of restricted
+    stock units, and depending on the position offered, it may also be eligible to
+    receive a commission. Additionally, Reddit offers a wide range of benefits to
+    U.S.-based employees, including medical, dental, and vision insurance, 401(k)
+    program with employer match, generous time off for vacation, and parental leave.
+    To learn more, please visit <a href="https://www.redditinc.com/careers/" target="_blank">https://www.redditinc.com/careers/</a>.</p>
+    <p>To provide greater transparency to candidates, we share base salary ranges
+    for all US-based job postings regardless of state. We set standard base pay ranges
+    for all roles based on functi'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.308564+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

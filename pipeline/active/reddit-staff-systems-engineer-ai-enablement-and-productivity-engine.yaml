@@ -1,0 +1,112 @@
+id: reddit-staff-systems-engineer-ai-enablement-and-productivity-engine
+name: Reddit Staff Systems Engineer, AI Enablement and Productivity Engineering
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Reddit
+  url: https://boards.greenhouse.io/reddit
+  application_url: https://job-boards.greenhouse.io/reddit/jobs/7336592
+  portal: greenhouse
+  location: Remote - United States
+  location_class: us-remote
+  description: <div class="content-intro"><div class="c-message_kit__blocks c-message_kit__blocks--rich_text">
+    <div class="c-message__message_blocks c-message__message_blocks--rich_text" data-qa="message-text">
+    <div class="p-block_kit_renderer" data-qa="block-kit-renderer"> <div class="p-block_kit_renderer__block_wrapper
+    p-block_kit_renderer__block_wrapper--first"> <div class="p-rich_text_block"> <div
+    class="p-rich_text_section">Reddit is a community of communities. It’s built on
+    shared interests, passion, and trust, and is home to the most open and authentic
+    conversations on the internet. Every day, Reddit users submit, vote, and comment
+    on the topics they care most about. With 100,000+ active communities and approximately
+    121 million daily active unique visitors, Reddit is one of the internet’s largest
+    sources of information. For more information, visit <a class="c-link" href="http://www.redditinc.com/"
+    target="_blank" data-stringify-link="http://redditinc.com" data-sk="tooltip_parent">www.redditinc.com</a>.</div>
+    </div> </div> </div> </div> </div></div><p>Reddit Corporate Engineering is seeking
+    a Systems Engineer to wrangle all the things AI for corporate engineering with
+    a focus on integrations, governance and security. This role involves ensuring
+    seamless connectivity between platforms and Generative AI tools, keeping a keen
+    eye on both the points of integration and the data moving back and forth. You'll
+    play a key role in shaping our Generative AI tool governance, establishing a platform-first
+    approach to Agent and Tool creation with Generative AI, and driving forward what
+    corporate AI can do for teams across the company</p> <p>This position will design
+    and implement process and policy around the role of Generative AI within our software
+    stack, with a careful eye to balancing risk while still driving enablement of
+    the business. You will be responsible for ensuring seamless and secure connectivity
+    between our existing platforms and new Gen AI tools, with a special focus on software
+    lifecycle management and implementing access policies through our secure service
+    edge platform.</p> <p><strong>What We Can Expect From You</strong>:</p> <ul> <li>You
+    have a proven track record of integrating with the known SaaS vendors. For example,
+    you know your way around Okta, Cloudflare, and Google Workspace.</li> <li>You're
+    always looking for ways to improve efficiency and can scale services using automation
+    tools that utilize the latest AI models and trends.</li> <li>You have top-notch
+    analytical and problem-solving skills.</li> <li>You love sharing your knowledge
+    and mentoring others in your area of expertise.</li> <li>You're a fantastic team
+    player who's dedicated, a quick learner, and thrives in a collaborative, fast-paced
+    environment.</li> <li>You can spearhead the design of a robust and scalable data
+    infrastructure to support Gen AI solutions, ensuring seamless integration between
+    data sources, pipelines, and storage.</li> <li>You can offer hands-on data engineering
+    support to teams testing Gen AI solutions; troubleshoot data issues, optimize
+    data workflows, and refine data architectures as needed.</li> <li>You can implement
+    automation tools and frameworks to streamline data flow through the pipelines,
+    guaranteeing data availability and reliability.</li> <li>You stay current on Generative
+    AI trends and can evaluate and integrate cutting-edge tools, frameworks, and practices
+    to enhance our capabilities continually.</li> <li>You're a natural leader who
+    can mentor junior engineers and collaborating teams, fostering a culture of excellence,
+    teamwork, and continuous learning.</li> </ul> <p><strong>Role Responsibilities​:</strong></p>
+    <ul> <li>Design and maintain the infrastructure required for multi-agent orchestration,
+    ensuring that internal AI agents can securely interact with Reddit’s SaaS stack
+    (Google Workspace, Jira, Slack)</li> <li>Lead the deployment of AI-enabling infrastructure
+    using Terraform and CI/CD patterns, treating system prompts, model parameters,
+    and agent logic as version-controlled code.</li> <li>Establish the standard for
+    <strong>Non-Human Identity Management,</strong> ensuring every AI agent operates
+    under a specific service identity with scoped permissions (RBAC) and loggable
+    interactions</li> <li>Implement automated LLM guardrails across internal corporate
+    data sources and AI interface points</li> <li>Secure and curate the catalog of
+    internal MCP servers, preventing prompt injection attacks and ensuring secure
+    execution environments for autonomous tasks.</li> <li>Manage the "AI Unit Economics"
+    for Corporate Engineering, implementing strategies for visibility into token consumption
+    and spend across multiple platforms.</li> <li>Collaborate closely with Security
+    Engineering, Legal, Privacy, and Support teams when evaluating software and during
+    technical design phases.</li> <li>Find and implement internal process and automation
+    enhancements.</li> <li>Serve as an escalation point for the global Corporate Engineeri
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.332883+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

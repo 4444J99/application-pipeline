@@ -1,0 +1,104 @@
+id: mongodb-security-software-engineer-infrastructure-security-staff-or-
+name: MongoDB Security Software Engineer,  Infrastructure Security (Staff or Senior)
+track: job
+status: qualified
+outcome: null
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=6982487
+  portal: greenhouse
+  location: Austin; Boston; Chicago; New York City; Pittsburgh; Raleigh; United States;
+    Washington DC
+  location_class: us-onsite
+  description: '<p>We are hiring an experienced Security Software Engineer (Staff
+    or Senior) for our Infrastructure Security team to design and build scalable security
+    controls and services within MongoDB Atlas multi-cloud infrastructure.</p> <p>The
+    team sits within the Site Reliability Engineering organization and works with
+    other engineering teams to ensure that our infrastructure adheres to the highest
+    security standards.</p> <p>This role can be based out of our NYC HQ office, or
+    work fully remotely on standard East Coast business hours.</p> <h3>Responsibilities:</h3>
+    <ul> <li>Design and build core security primitives and services that protect MongoDB
+    Atlas compute, networking, and identity across AWS, Azure, and GCP.</li> <li>Build
+    secure-by-default infrastructure using Linux security mechanisms (AppArmor, SELinux,
+    seccomp, cgroups), Kubernetes, and eBPF to enforce runtime policies and gain deep
+    visibility into systems behaviour.</li> <li>Develop APIs, automation, and tooling
+    that manage security posture at scale (CSPM, vulnerability management, workload
+    identity) and provide monitoring, logging, and alerting pipelines that integrate
+    with our tooling (Grafana, Splunk, Victoria Metrics.)</li> <li>Integrate security
+    into our CI/CD and infrastructure-as-code workflows (Terraform) so that security
+    controls are versioned, reviewed, and deployed just like any other code.</li>
+    <li>Lead complex projects end‑to‑end, from problem discovery and design docs to
+    implementation, rollout, and long‑term ownership.</li> <li>Collaborate with SRE,
+    platform and product engineering teams to define secure architectures for new
+    infrastructure and services.</li> </ul> <h3>Qualifications:</h3> <p>You might
+    be a great fit if you match some of the following:</p> <ul> <li>5+ years of experience
+    in Software Engineering, Site Reliability Engineering, or similar roles, preferably
+    with relevant security work.</li> <li>Proficiency with at least one programming
+    language (Java, Golang, Rust, Python, or C/C++) and experience with infrastructure-as-code
+    tools (Terraform) to automate security configurations and processes.</li> <li>A
+    deep understanding of Linux and networking concepts, including low-level fundamentals,
+    and how they work together in complex systems.</li> <li>Experience building security-related
+    features or platforms such as runtime monitoring, CSPM, or vulnerability management.</li>
+    <li>Experience with a cloud provider (AWS, GCP, or Azure) and their security best
+    practices and building blocks.</li> <li>Hands-on experience with Kubernetes and
+    its security ecosystem (e.g. RBAC, OPA/Gatekeeper, Kyverno, eBPF, Falco, Tetragon).</li>
+    <li>A systems mindset: you think about failure modes, performance, observability,
+    and operability alongside security and correctness.</li> <li>Strong communication
+    skills and the ability to explain complex security concepts and tradeoffs to both
+    technical and non-technical stakeholders.</li> </ul> <p>About MongoDB</p> <p>MongoDB
+    is built for change, empowering our customers and our people to innovate at the
+    speed of the market. We have redefined the database for the AI era, enabling innovators
+    to create, transform, and disrupt industries with software. MongoDB’s unified
+    database platform—the most widely available, globally distributed database on
+    the market—helps organizations modernize legacy workloads, embrace innovation,
+    and unleash AI. Our cloud-native platform, MongoDB Atlas, is the only globally
+    distributed, multi-cloud database and is available across AWS, Google Cloud, and
+    Microsoft Azure.</p> <p>With offices worldwide and nearly 60,000 customers—including
+    75% of the Fortune 100 and AI-native startups—relying on MongoDB for their most
+    important applications, we’re powering the next era of software.</p> <p>Our compass
+    at MongoDB is our <a href="https://www.mongodb.com/company">Leadership Commitment,</a>
+    guiding how and why we make decisions, show up for each other, and win. It’s what
+    makes us MongoDB.&nbsp;</p> <p>To drive the personal growth and business impact
+    of our employees, we’re committed to developing a supportive and enriching culture
+    for everyone. <a href="https://www.mongodb.com/company/blog/culture/employee-benefits-that-make-a-difference-at-mongodb">From
+    employee affinity groups, to fertility assistance and a generous parental leave
+    policy</a>, we value our employees’ wellbeing and want to support them along every
+    step of their professional and personal journeys.<a href="https://www.mongodb.com/blog/channel/culture">
+    Learn more about what it’s like to work at MongoDB</a>, and help us make an impact
+    on the world!</p> <p>MongoDB is committed to providing any necessary accommodations
+    for individuals with disabilities within our application and interview process.
+    To request an accommodation due to a disability, please inform your recruiter.</p>
+    <p>MongoDB, Inc. provides equal employment opportunities to all employees and
+    applicants for employment and prohibits discrimination and harassment of any type '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.8
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.260221+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

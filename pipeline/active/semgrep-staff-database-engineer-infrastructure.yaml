@@ -1,0 +1,114 @@
+id: semgrep-staff-database-engineer-infrastructure
+name: 'Semgrep Staff Database Engineer, Infrastructure '
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Semgrep
+  url: https://jobs.ashbyhq.com/semgrep
+  application_url: https://jobs.ashbyhq.com/semgrep/b4315a60-3bdd-404d-8e46-f5d9a75b443c
+  portal: ashby
+  location: San Francisco, Boston, New York, Denver
+  location_class: us-onsite
+  description: 'About Semgrep Semgrep, the leader in code security for builders, empowers
+    invention without friction. Teams catch, flag, and fix real issues before they
+    ship, powered by security that learns as they build. Semgrep secures code as it’s
+    written and provides guardrails that pave the road for developers to move fast
+    and stay secure. Built for builders and trusted by security, Semgrep lives where
+    developers work, delivering fixes without breaking flow, and giving security teams
+    visibility, control, and confidence. Semgrep gets smarter as you build, with AI
+    that learns your context to cut false positives and prioritize reachable vulnerabilities,
+    validated by 95% of security reviewers across 6M+ findings. Semgrep makes zero
+    false positives a reality with AppSec teams triaging 80% fewer false positives
+    across Code and Supply Chain, dramatically shrinking the backlog. Founded in San
+    Francisco and backed by Menlo Ventures, Felicis Ventures, Lightspeed Venture Partners,
+    Redpoint Ventures, and Sequoia Capital, Semgrep is recognized by Gartner in Application
+    Security Testing and is trusted by leading organizations, including Snowflake,
+    Dropbox, and Figma. Learn more at semgrep.dev . About the team Semgrep’s Infrastructure
+    team is responsible for building and maintaining Semgrep’s internal developer
+    platform which supports many applications including our flagship Code, Supply
+    Chain, and Secrets products, the Semgrep Cloud Platform and Semgrep Managed Scanning.
+    Our team mission is to enable Semgrep’ers to effectively and confidently build,
+    run, and manage their systems. We do this by providing a tightly integrated platform
+    for going “from code to cloud” including CI/CD systems, Kubernetes on AWS cloud
+    environments, and tools for operating software in production. About the role We
+    are looking for a Database Engineer or Database Admin (DBA) with Postgres experience
+    who is passionate about scalable, secure, performant, and reliable software. You
+    will: Own major infrastructure initiatives end-to-end, from working with stakeholders
+    to identify needs through implementation, onboarding, and maintenance Develop
+    technical strategy, working cross functionally with other leaders at the company
+    to determine the evolution of our cloud data infrastructure Collaborate with engineers
+    and product managers to support them in building the best possible products Architect
+    and build simple, maintainable, extensible and observable software systems Advise,
+    mentor, and sponsor other engineers inside and outside the team Maintain the database
+    systems we operate as part of our platform You are ideal for this role if: You
+    have 7+ years of experience operating and maintaining production databases. You
+    have strong hands on experience with Postgres, RDS and/or Aurora You are passionate
+    about improving the availability and reliability of database systems You know
+    to work iteratively, fail fast, manage risk, and effectively respond to incidents
+    You have experience leading complex initiatives and working across teams You are
+    a thoughtful mentor and lifelong learner Location : This is a hybrid role with
+    the expectation you’ll join us 3+ days per week in either our San Francisco, New
+    York, Boston or Denver offices. Compensation : The estimated starting annual salary
+    range for this position is $204,500 to $288,000 USD. The actual base salary will
+    be determined based on a number of factors, which may include job-related skills,
+    relevant experience, qualifications, location, internal equity, and market data.
+    In addition to base salary, total compensation may include equity, variable compensation,
+    and benefits. We view equity as a meaningful part of our compensation philosophy
+    and a way for employees to share in the long-term value they help create. Compensation
+    ranges are reviewed regularly and may be adjusted as the role, individual performance,
+    or market conditions evolve. What we offer (FTE only) Our goal is to competitively
+    and fairly compensate every Semgrep employee with a system that equally rewards
+    those who are vocal and those who are less comfortable making demands during the
+    final steps of the hiring process. To that end, we generate internal compensation
+    bands that are used when discussing and negotiating salaries. We update these
+    based on market data to make sure they’re above the average for comparable roles.
+    We invest in our employees’ well-being and long-term success through a competitive,
+    market-aligned benefits program that meets or exceeds local market standards across
+    all of the regions in which we hire. Benefits offerings vary by location to reflect
+    local requirements and norms. For more detailed, location-specific information,
+    please visit Semgrep Benefits . Who we are We bring together people from a wide
+    range of backgrounds and disciplines—from physics and philosophy to formal methods
+    research and full-fledged corporations. We’re new parents and new grads, dog lovers
+    and dogfooders. We get together often to bike, bake, and meet up in p'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.334471+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

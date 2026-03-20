@@ -1,0 +1,27 @@
+{
+  "date": "2026-03-20",
+  "total_entries": 339,
+  "actionable_count": 280,
+  "stale_count": 0,
+  "avg_score": 8.29,
+  "org_cap_violations": 35,
+  "status_distribution": {
+    "qualified": 273,
+    "staged": 7,
+    "deferred": 5,
+    "submitted": 22,
+    "acknowledged": 1,
+    "outcome": 30,
+    "withdrawn": 1
+  },
+  "track_distribution": {
+    "job": 319,
+    "grant": 6,
+    "residency": 4,
+    "fellowship": 1,
+    "emergency": 2,
+    "writing": 4,
+    "prize": 3
+  },
+  "scores_above_9": 35
+}

@@ -17,7 +17,7 @@
   - **Jackie Wallace** — [linkedin.com/in/jackie-wallace-79666532](https://www.linkedin.com/in/jackie-wallace-79666532/) · ✅ Sent
   - **Heather Floss** — [linkedin.com/in/heatherfloss](https://www.linkedin.com/in/heatherfloss/) · ✅ Sent
 - **Connection message (<300 chars):**
-  > Hi [Name] — docs-as-code at scale: 739K words, 113 repos, schema validation on every CI run. Applied for Lead Technical Writer on Intelligence Systems. The rigor Anduril applies to hardware docs is what I apply to software governance. Would love to connect.
+  > Hi [Name] — docs-as-code at scale: ~741K+ words, 113 repos, schema validation on every CI run. Applied for Lead Technical Writer on Intelligence Systems. The rigor Anduril applies to hardware docs is what I apply to software governance. Would love to connect.
 - **If accepted — DM:**
   > Thanks for connecting. Context beyond the resume — my system uses machine-readable seed.yaml contracts per repo, automated schema validation on every CI run, and a promotion state machine governing how docs move between maturity levels. Same rigor Anduril applies to hardware docs, applied to software governance. Happy to walk through it.
   >
@@ -70,9 +70,9 @@
   - **Craig Dennis** — [linkedin.com/in/craigsdennis](https://www.linkedin.com/in/craigsdennis/) (DevRel, Portland) · ✅ **Accepted invitation**
   - **Aly Cabral** — [linkedin.com/in/aly-cabral-83682664](https://www.linkedin.com/in/aly-cabral-83682664/) (Austin) · ✅ Sent
 - **Connection message (<300 chars):**
-  > Hi [Name] — 113-repo system, 104 CI/CD pipelines. Applied for Models Engineer DevRel. Interested in Cloudflare's AI inference work. Would love to stay in touch.
+  > Hi [Name] — 116-repo system, 104 CI/CD pipelines. Applied for Models Engineer DevRel. Interested in Cloudflare's AI inference work. Would love to stay in touch.
 - **Craig Dennis — accepted.** Follow up with DM:
-  > Thanks for connecting, Craig. I maintain a 113-repo system with 104 CI/CD pipelines and documentation governance across 8 orgs. Applied for Models Engineer DevRel a few weeks ago — regardless of that role, I'm interested in what Cloudflare is building in AI inference. Would love to hear about what's on the DevRel roadmap.
+  > Thanks for connecting, Craig. I maintain a 116-repo system with 104 CI/CD pipelines and documentation governance across 8 orgs. Applied for Models Engineer DevRel a few weeks ago — regardless of that role, I'm interested in what Cloudflare is building in AI inference. Would love to hear about what's on the DevRel roadmap.
   >
   > Portfolio: https://4444j99.github.io/portfolio/
 - **Log:** `python scripts/followup.py --log cloudflare-models-engineer-developer-relations --channel linkedin --contact "Craig Dennis" --note "Connection accepted — send DM"`
@@ -85,7 +85,7 @@
   - ★ **Ayush Sood** — [linkedin.com/in/ayushsood](https://www.linkedin.com/in/ayushsood) (Engineering Manager) · ✅ Sent
   - ~~**Bersabel Tadesse** — [linkedin.com/in/brsbl](https://www.linkedin.com/in/brsbl)~~ ⚠️ No longer at Figma — removed
 - **Connection message (<300 chars):**
-  > Hi [Name] — developer tooling: CLI tools, schema validation, quality gates across 113 repos. Applied for DevEx SWE. DX at Figma's scale is fascinating work.
+  > Hi [Name] — developer tooling: CLI tools, schema validation, quality gates across 116 repos. Applied for DevEx SWE. DX at Figma's scale is fascinating work.
 - **Log:** `python scripts/followup.py --log figma-software-engineer-developer-experience --channel linkedin --contact "Ayush Sood" --note "Reconnect — expired role"`
 
 ---
@@ -96,7 +96,7 @@
   - ★ **Shu Zhang** — [linkedin.com/in/zhang-shu](https://www.linkedin.com/in/zhang-shu/) · ✅ Sent
   - **Raman Malik** — [linkedin.com/in/ramanrmalik](https://www.linkedin.com/in/ramanrmalik/) · ✅ Sent
 - **Connection message (<300 chars):**
-  > Hi [Name] — Python + TypeScript, multi-agent orchestration, 23,470 tests across 20 repos. Applied for Applied AI. Interested in agentic search.
+  > Hi [Name] — Python + TypeScript, multi-agent orchestration, 23,470 tests across 116 repos. Applied for Applied AI. Interested in agentic search.
 - **Log:** `python scripts/followup.py --log perplexity-full-stack-software-engineer-applied-ai --channel linkedin --contact "Shu Zhang" --note "Reconnect — expired role"`
 
 ---
@@ -120,7 +120,7 @@
   - **Jon Meyers** — [linkedin.com/in/jon-meyers](https://www.linkedin.com/in/jon-meyers/) (DevRel Engineer) · ✅ Sent
   - **Michaela Burpoe** — [linkedin.com/in/michaelaburpoe](https://www.linkedin.com/in/michaelaburpoe/) (Recruiting) · ✅ Sent
 - **Connection message (<300 chars):**
-  > Hi [Name] — 739K words of docs, 100+ courses taught, MFA in Creative Writing. Applied for DevRel. Teaching + technical writing is unusual and valuable.
+  > Hi [Name] — ~741K+ words of docs, 100+ courses taught, MFA in Creative Writing. Applied for DevRel. Teaching + technical writing is unusual and valuable.
 - **Log:** `python scripts/followup.py --log supabase-developer-relations-engineer-san-francisco-ca --channel linkedin --contact "Craig Cannon" --note "Reconnect — expired role"`
 
 ---
@@ -181,7 +181,7 @@
   - ★ **Hassan El Mghari** — [linkedin.com/in/nutlope](https://www.linkedin.com/in/nutlope/) (SWE, full-stack AI) · ✅ Sent
   - **Jibu Chacko** — [linkedin.com/in/jibsonline](https://www.linkedin.com/in/jibsonline/) · ✅ Sent
 - **Connection message (<300 chars):**
-  > Hi [Name] — AI orchestration, docs-first: 739K words, 23,470 tests, governance architecture. Applied for DX Lead. Interested in Together's open model work.
+  > Hi [Name] — AI orchestration, docs-first: ~741K+ words, 23,470 tests, governance architecture. Applied for DX Lead. Interested in Together's open model work.
 - **Log:** `python scripts/followup.py --log together-ai --channel linkedin --contact "Hassan El Mghari" --note "Seed — rejected"`
 
 ---

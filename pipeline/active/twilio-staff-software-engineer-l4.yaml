@@ -1,0 +1,103 @@
+id: twilio-staff-software-engineer-l4
+name: Twilio Staff Software Engineer (L4)
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Twilio
+  url: https://boards.greenhouse.io/twilio
+  application_url: https://job-boards.greenhouse.io/twilio/jobs/7716279
+  portal: greenhouse
+  location: Remote - Colombia
+  location_class: remote-global
+  description: '<div class="content-intro"><p><strong>Who we are&nbsp;</strong></p>
+    <p>At Twilio, we’re shaping the future of communications, all from the comfort
+    of our homes. We deliver innovative solutions to<a class="c-link" href="https://customers.twilio.com/"
+    target="_blank" data-stringify-link="https://customers.twilio.com/" data-sk="tooltip_parent">&nbsp;hundreds
+    of thousands of businesses&nbsp;</a>and empower millions of developers worldwide
+    to craft personalized customer experiences.</p> <p>Our dedication to <a class="c-link"
+    href="https://www.twilio.com/en-us/blog/open-work" target="_blank" data-stringify-link="https://www.twilio.com/en-us/blog/open-work"
+    data-sk="tooltip_parent">remote-first work</a>, and strong culture of connection
+    and global inclusion means that no matter your location, you’re part of a vibrant
+    team with diverse experiences making a global impact each day. As we continue
+    to revolutionize how the world interacts, we’re acquiring new skills and experiences
+    that make work feel truly rewarding. Your career at Twilio is in your hands.<br><br>We
+    use Artificial Intelligence (AI) to help make our hiring process efficient. That
+    said, every hiring decision is made by real Twilions!</p> <p><span style="color:
+    rgb(255, 255, 255);">.</span></p></div><p><strong>See yourself at Twilio</strong></p>
+    <p>Join the team as our next Staff Software Engineer in the Enterprise AI Engineering
+    team.</p> <p><strong>About the job</strong></p> <p>Twilio is undergoing a major
+    business transformation powered by Enterprise AI, supported by a dedicated engineering
+    team building the foundations for a unified, secure, and scalable operating system
+    across GTM functions (Sales, Support, Operations, etc.) as well as Internal non-GTM
+    functions (Finance, HR, Legal, etc.) Our platform is designed to support a multitude
+    of business functions by deploying intelligent agentic solutions that automate
+    complex workflows and deliver unprecedented user experiences. We''re building
+    the future of work at Twilio, and this role offers the opportunity to be at the
+    forefront of enterprise AI innovation. This role focuses specifically on transforming
+    how Twilio''s Customer Support organization operates through AI-powered tools
+    and agentic products.</p> <p>We are looking for <strong>Full-Stack Engineers</strong>
+    who view AI as a fundamental shift in the software development lifecycle of engineering
+    products and the delivery of beautiful, engaging user experiences.&nbsp; This
+    is an opportunity to deliver innovative software products and solutions across
+    every business function in the company such as Sales, Marketing, GTM, HR, Finance
+    and Legal.</p> <p>Joining this team means building <strong>production grade, full-stack
+    AI applications</strong>. You won’t just be wrapping APIs; you will be engineering
+    the entire lifecycle of agentic applications.</p> <p>As a Staff Software Engineer
+    within Enterprise AI, you are the technical heartbeat of our products. Your role
+    is to bridge the gap between bleeding-edge AI research and robust, full-stack
+    production systems.</p> <p><strong>Responsibilities</strong></p> <p>In this role,
+    you’ll:</p> <ul> <li>Co-lead the design and development of our software infrastructure,
+    driving technical vision and strategy to ensure scalability, reliability, and
+    performance.</li> <li>Drive the development of sophisticated, stateful web applications.
+    You will oversee the integration of complex React-based front-ends with backend
+    modular services, ensuring a seamless UI experience.</li> <li>Serve as developer
+    leader in distributed systems, data technologies, with strong software engineering
+    skills.</li> <li>Drive technical innovation and research to stay at the forefront
+    of emerging data technologies and best practices.</li> <li>Mentor and elevate
+    a team of high-performing engineers. You don’t just write great code; you foster
+    a culture of technical excellence, helping senior and mid-level engineers level
+    up through deep-dive code reviews and architectural workshops.</li> <li>Collaborate
+    closely with cross-functional teams to understand business requirements and translate
+    them into scalable and efficient technical solutions.</li> <li>Continuously adapt
+    to the evolving JavaScript ecosystem to maximize engineering efficiency.</li>
+    <li>Ensure data quality, integrity, and security throughout the data lifecycle,
+    adhering to industry best practices and compliance standards.</li> </ul> <p><strong>Qualifications&nbsp;</strong></p>
+    <p>Twilio values diverse experiences from all kinds of industries, and we encourage
+    everyone who meets the required qualifications to apply. If your career is just
+    starting or hasn''t followed a traditional path, don''t let that stop you from
+    considering Twilio. We are always looking for people who will bring something
+    new to the table!</p> <p><strong>*Required:</strong></p> <ul> <li>Bachelor''s
+    degree in Computer Science, Engineering, or a related field.</li> <li>8+ years
+    of experience in data engineering, software de'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.7
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.239056+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

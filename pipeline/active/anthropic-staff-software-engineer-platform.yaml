@@ -1,0 +1,114 @@
+id: anthropic-staff-software-engineer-platform
+name: Anthropic Staff Software Engineer, Platform
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/5023089008
+  portal: greenhouse
+  location: San Francisco, CA | New York City, NY
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>About Anthropic</strong></h2>
+    <p>Anthropic’s mission is to create reliable, interpretable, and steerable AI
+    systems. We want AI to be safe and beneficial for our users and for society as
+    a whole. Our team is a quickly growing group of committed researchers, engineers,
+    policy experts, and business leaders working together to build beneficial AI systems.</p></div><h2><strong>About
+    the role:</strong></h2> <p>We are looking for backend / platform software engineers
+    to join our Product Foundations org. We build foundational primitives that help
+    accelerate product development across Anthropic. Some examples of what we own
+    and maintain are our core sampling pipeline, our rate limiting platform, and our
+    RAG platform.</p> <p>We have multiple teams that are currently hiring. Team placement
+    occurs after the interview process, taking into account your interests and experience
+    alongside organizational needs. This flexible approach allows us to match talented
+    engineers with the platform efforts where they''ll have the greatest impact and
+    growth potential:</p> <p><strong>Platform Accel: </strong>We work on maximizing
+    the developer productivity of product engineers at Anthropic. You''ll architect
+    and optimize the critical development infrastructure that powers our AI product
+    development, including dev environments, developer tooling, and CI/CD pipelines.
+    You’ll partner closely with product teams to understand their development workflow
+    and eliminate friction points. Your work will have an extraordinary multiplier
+    effect, enhancing productivity across our entire product organization and accelerating
+    our mission.<br><br><strong>Service Infra:&nbsp;</strong>we build and maintain
+    the core infrastructure that powers Anthropic''s engineering organization, from
+    service mesh and observability systems to deployment pipelines and shared libraries.
+    Our work enables product teams to build and operate reliable services at scale,
+    making us a critical force multiplier across the entire company.</p> <p><strong>Multicloud:</strong>
+    We build and maintain the infrastructure that enables Anthropic to operate across
+    multiple cloud providers. We focus on cloud-agnostic tooling, cross-cloud networking,
+    and multi-region deployments.</p> <p><strong>Auth &amp; Identity: </strong>We
+    build and maintain the critical infrastructure that powers identity and authentication
+    across Anthropic''s product suite. We work closely with product teams, security,
+    support, and trust &amp; safety as customers. We create scalable solutions for
+    user authentication, authorization, role-based access control, and single sign-on
+    that form the backbone of our company''s identity management operations. We maintain
+    a user-centric approach, building reliable systems that our users and company
+    can depend on as we tackle complex challenges at the intersection of security,
+    scalability, and user experience.</p> <p><strong>Connectivity:</strong> We build
+    the infrastructure that enables Claude to safely interact with the outside world
+    through the use of tools. Our team owns the platform that provides secure, isolated
+    execution environments as well as the infrastructure that connects Claude to external
+    services via the Model Context Protocol (MCP). You''ll work on challenging problems
+    at the intersection of security and capability: designing sandboxes that are both
+    secure and performant, building reliable MCP infrastructure, and expanding our
+    platform for enterprise deployments. We collaborate closely with product teams
+    across <a href="http://claude.ai/">Claude.ai</a>, API, and Claude Code to deliver
+    the execution capabilities that make Claude genuinely useful for real-world tasks.
+    Relevant experience includes containerization, secure execution environments,
+    and developing for enterprise requirements.</p> <h2><strong>Responsibilities:</strong></h2>
+    <ul> <li>Build and scale platform components to handle Anthropic’s rapid growth</li>
+    <li>Design and architect platform components that are composable and deliver value
+    for a variety of use cases</li> <li>Collaborate closely with product teams to
+    understand their needs and build platform capabilities that accelerate their feature
+    delivery</li> <li>Make build vs buy decisions, evaluating and implementing 3rd
+    party solutions when most impactful</li> <li>Set technical direction and vision
+    for various product and platform features</li> <li>Partner with research to quickly
+    prototype and launch new capabilities based on research breakthroughs</li> </ul>
+    <h2><strong>You might be a good fit if you:</strong></h2> <ul> <li>Have 6+ years
+    of practical experience as a backend or platform engineer building scalable distributed
+    systems&nbsp;</li> <li>Have strong coding skills and experience with service-oriented
+    architectures</li> <li>Have worked in early start-up or otherwise fast moving,
+    rapidly evolving environments, and have ideally built products from 0 to 1&nbsp;</li>
+    <li>Take full ownership of your work, navigate am'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.9
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.944790+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

@@ -1,0 +1,113 @@
+id: temporal-staff-software-engineer-visibility
+name: Temporal Staff Software Engineer, Visibility
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Temporal
+  url: https://boards.greenhouse.io/temporaltechnologies
+  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/5038324007
+  portal: greenhouse
+  location: United States - Remote Opportunity
+  location_class: us-remote
+  description: '<div class="content-intro"><h3><strong>About Us</strong></h3> <div>Temporal
+    is an open source programming model that can simplify code, make applications
+    more reliable, and help developers focus on the important things like delivering
+    features faster. We are on a mission to be the reliable foundation of every developer’s
+    toolbox, and are building the team that will make that happen.</div> <div>&nbsp;</div>
+    <div>Our values guide us —they are present in how we show up, make decisions,
+    and work together to make an impact. We’re curious, driven, collaborative, genuine
+    and humble.</div> <div>&nbsp;</div> <div>Temporal is growing and we are looking
+    for those who share our values, challenge ''standard'' thinking, and want to influence
+    our future. If you have a passion for improving the developer experience, building
+    world-class open-source software and communities, and want to be a part of our
+    amazing team, we''d love to hear from you!</div></div><div> <p><span style="font-size:
+    12pt;"><strong>Staff Engineer – Cloud Data Store (Visibility)</strong></span></p>
+    <p>Temporal is an open-source programming model that can simplify code, make applications
+    more reliable, and help developers focus on the important things like delivering
+    features faster. We are on a mission to be the reliable foundation of every developer''s
+    toolbox, and are building the team that will make that happen.</p> <p>Our values
+    guide us — they are present in how we show up, make decisions, and work together
+    to make an impact. We''re curious, driven, collaborative, genuine, and humble.</p>
+    <p>Temporal is growing and we are looking for those who share our values, challenge
+    "standard" thinking, and want to influence our future. If you have a passion for
+    improving the developer experience, building world-class open-source software
+    and communities, and want to be part of our amazing team, we''d love to hear from
+    you!</p> <p>⸻</p> <p><span style="font-size: 12pt;"><strong>Summary</strong></span></p>
+    <p>Cloud Data Store (CDS) owns the storage, retrieval, and lifecycle of all workflow
+    data at planet scale. We design the persistence APIs, build storage abstractions
+    that run across cloud vendors, and deliver the observability that lets customers
+    trust their state machines for years.</p> <p>[To see more detail re: the Temporal
+    CDS Eng team,&nbsp;<a href="https://temporalio.notion.site/Join-Temporal-s-Cloud-Data-Storage-CDS-Team-21b8fc56773880028492cfbd915b0b60"
+    target="_blank">click here</a> [new window]</p> <p>A core part of CDS is Temporal
+    <strong>Visibility</strong>: the system that powers workflow listing, filtering,
+    search, and observability across massive, long-lived state machines. Visibility
+    has demanding characteristics — high write throughput, complex secondary indexing,
+    low-latency queries, strict correctness guarantees, and the need to operate continuously
+    while schemas and backends evolve.</p> <p>As a Staff Engineer on CDS, you will
+    take a leading role in a ground-up rewrite of the Visibility persistence layer,
+    with the goal of making it dramatically more performant, scalable, and operable.
+    This includes evaluating and driving deep integrations with modern analytical
+    and search data stores such as ClickHouse and Elasticsearch, with a strong preference
+    for self-hosted operation (while supporting managed offerings where appropriate).</p>
+    <p>You will design, build, and operate significant portions of our backend for
+    highly scalable, multi-tenant services, and own large technical initiatives end-to-end
+    — from initial design through live data migration, rollout, and long-term operational
+    stewardship.</p> <p>⸻</p> <p><span style="font-size: 12pt;"><strong>What You''ll
+    Do</strong></span></p> <p>Re-architect Temporal Visibility at scale<br>&nbsp;
+    &nbsp; • &nbsp; &nbsp;Lead the design and implementation of a new persistence
+    layer for Temporal Visibility, informed by its real-world access patterns (high-volume
+    writes, time-based queries, filtering, sorting, and pagination across long-running
+    workflows).<br>&nbsp; &nbsp; • &nbsp; &nbsp;Evaluate and select the most appropriate
+    storage technologies (e.g., ClickHouse, Elasticsearch, or complementary systems),
+    clearly articulating tradeoffs around indexing models, consistency, cost, latency,
+    and operational complexity.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Design schemas, APIs,
+    and query models that make Visibility both powerful and intuitive for customers.</p>
+    <p>Deliver safe, large-scale data migrations<br>&nbsp; &nbsp; • &nbsp; &nbsp;Plan
+    and execute online migrations of live Visibility data from existing persistence
+    stores to new backends, at scale and without customer downtime.<br>&nbsp; &nbsp;
+    • &nbsp; &nbsp;Design dual-write, backfill, validation, and cutover strategies
+    that prioritize correctness, observability, and rollback safety.<br>&nbsp; &nbsp;
+    • &nbsp; &nbsp;Build tooling and automation to validate data integrity and performance
+    throughout the migration lifecycle.</p> <p>Own performance, reliability, and opera'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 9.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 10
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.694834+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

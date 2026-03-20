@@ -1,0 +1,115 @@
+id: ramp-agentic-operator-growth-marketing
+name: Ramp Agentic Operator, Growth Marketing
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Ramp
+  url: https://jobs.ashbyhq.com/ramp
+  application_url: https://jobs.ashbyhq.com/ramp/51acae48-933b-4c71-be48-3e9317cf3ab7
+  portal: ashby
+  location: New York, NY (HQ)
+  location_class: us-onsite
+  description: 'About Ramp Ramp is building the smart infrastructure for finance teams,
+    embedded in the transaction flow of every dollar a business spends. We automate
+    how over $100B in annualized spend flows in and out of 50,000+ companies: authorizing
+    payments, flagging risk, categorizing spend, and closing books. The problems are
+    high-stakes, data-dense, and unforgiving. We hire people with high agency and
+    high urgency. We look for slope over intercept. We care less about where you trained
+    and more about what you’ve built. At Ramp, everyone is a builder who owns problems
+    end to end and makes consequential decisions that shape the outcome. The median
+    Ramp customer saves 5% and grows revenue 16% in their first year – far in excess
+    of businesses operating without Ramp. We believe every ambitious company deserves
+    the same. If you want to build systems that directly shape how companies move
+    and manage billions, Ramp is the place to do it. We''re looking for an AI Agent
+    Operator and Architect to join the team that designs, builds, and operates AI
+    agents for our Marketing team. This isn''t a role where you use AI to work faster,
+    it''s a role where you build AI that does the work and recursively learns. You''re
+    equal parts product thinker and engineer. You''ll take marketing workflows - content
+    production, lead enrichment, campaign ops, etc. - and break them down into agent
+    architectures: skills, tools, evals, memory, and orchestration layers that run
+    24/7 and get better on their own. This role has real autonomy and requires real
+    conviction. Our marketing team already deeply leverages AI. Your job is to be
+    part of the team that takes us from "AI-assisted" to "agent-operated" - where
+    fleets of agents execute work autonomously, around the clock, and improve without
+    someone kicking things off. What You’ll Do Build AI agents from scratch that autonomously
+    run marketing workflows: content generation, campaign development and launches,
+    paid channel optimization, creative testing, and more. Break down workflows into
+    the pieces agents actually need: skills, tools, evals, guardrails, memory, and
+    feedback loops. You''ll care a lot about getting this decomposition right. Build
+    evaluation frameworks that measure agent quality, catch regressions, and drive
+    improvement without someone babysitting the system. Design self-improving loops.
+    Agents should monitor their own outputs, learn from outcomes, and get sharper
+    over time. The bar: it works at 3am on a Sunday and is better by Monday. Own everything
+    from identifying which workflows to automate, to prototyping, to production deployment,
+    to monitoring and iteration. You are the PM and the engineer. Stay plugged into
+    the cutting edge of agentic AI, new model capabilities, tool-use patterns, multi-agent
+    orchestration, MCP, evals frameworks, and bring what you learn into production
+    fast. Build reusable agent infrastructure, internal tooling, and documentation
+    so the rest of the marketing team can operate and trust what you''ve built. You’ll
+    Thrive If You Can mock up an MVP and then go build the thing. You scope what matters,
+    why, and then ship it yourself. PM brain, engineer hands. Are extremely AI-pilled.
+    You live in the frontier. You''ve read the papers, run the benchmarks, broken
+    the models. You have strong opinions on tool-use vs. code-gen agents, when to
+    use RAG vs. fine-tuning, and how to build evals that actually matter. Think in
+    systems and loops and not tasks and tickets. You want to design processes where
+    agents trigger other agents, outputs become inputs, and the whole system compounds
+    without someone pressing "run." Have built and shipped agents in production and
+    not something theoretical. Real systems that ran on their own, handled edge cases,
+    and got better over time. Are process-oriented in a way most "AI people" aren''t.
+    You know the difference between a cool demo and a reliable agent is evals, observability,
+    structured outputs, error handling, and constant iteration on failure modes. Experiment
+    fast and cheap. You validate agent architectures with quick tests before sinking
+    time into production builds. High failure rate is fine when your feedback loops
+    are tight. Are fluent across the modern AI stack without being religious about
+    any of it. Communicate clearly, own your work completely, and don''t wait to be
+    told what to build next. Nice to Haves Familiarity with marketing systems like
+    HubSpot, Segment, Amplitude, Salesforce, similar GTM platforms, or a willingness
+    to learn. You''ve built multi-agent systems with orchestration layers and inter-agent
+    communication. You''ve shipped internal tools or platforms that other teams actually
+    adopted and relied on. Benefits (for U.S.-based full-time employees) 100% medical,
+    dental & vision insurance coverage for you Partially covered for your dependents
+    One Medical annual membership 401k (including employer match on contributions
+    made while employed by Ramp) Flexible PTO Fertility HRA (up to $10,000 per year)
+    Parental Leave Unlimited AI token usage Pe'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.8
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.833669+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

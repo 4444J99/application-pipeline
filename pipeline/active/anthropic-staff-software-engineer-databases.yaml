@@ -1,0 +1,114 @@
+id: anthropic-staff-software-engineer-databases
+name: Anthropic Staff+ Software Engineer, Databases
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/5151069008
+  portal: greenhouse
+  location: San Francisco, CA | New York City, NY | Seattle, WA
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>About Anthropic</strong></h2>
+    <p>Anthropic’s mission is to create reliable, interpretable, and steerable AI
+    systems. We want AI to be safe and beneficial for our users and for society as
+    a whole. Our team is a quickly growing group of committed researchers, engineers,
+    policy experts, and business leaders working together to build beneficial AI systems.</p></div><h2
+    class="heading"><strong>About the role</strong></h2> <p>We''re looking for experienced
+    engineers to build and scale the database infrastructure that powers both Claude''s
+    product offerings and Anthropic''s research initiatives. As a Software Engineer
+    on the Databases team, you will architect and operate database systems that both
+    enable millions of users to interact with Claude and support cutting-edge AI research.</p>
+    <p>This is a unique opportunity to tackle database challenges at unprecedented
+    scale. You''ll develop the database strategy for Anthropic, design systems that
+    handle billions of API requests, create storage solutions that work seamlessly
+    across GCP, AWS, and diverse deployment models, and build the reliable data layer
+    that accelerates research experimentation.</p> <h2 class="heading"><strong>Responsibilities:</strong></h2>
+    <ul> <li>Drive the technical direction for database solutions used across Product
+    and Research</li> <li>Design and implement database solutions that scale to support
+    millions of users across Claude''s product ecosystem</li> <li>Build and scale
+    database systems through 100x+ growth while maintaining reliability and performance</li>
+    <li>Architect data storage solutions that work seamlessly across GCP, AWS, first-party
+    deployments, third-party deployments, and other environments</li> <li>Develop
+    database infrastructure that serves both product and research workloads with different
+    performance characteristics</li> <li>Partner with product and research teams to
+    understand data requirements and build infrastructure that accelerates innovation</li>
+    <li>Optimize database performance, reliability, and cost efficiency at massive
+    scale</li> <li>Make critical build vs. buy decisions for database technologies</li>
+    </ul> <h2 class="heading"><strong>You might be a good fit if you:</strong></h2>
+    <ul> <li>Have 10+ years (not including internships or co-ops) of experience in
+    a Software Engineer role, building and scaling database systems</li> <li>Have
+    3+ years (not including internships or co-ops) of experience leading large scale,
+    complex projects or teams as an engineer or tech lead</li> <li>Possess deep expertise
+    in distributed database architectures and OLTP systems at scale</li> <li>Have
+    successfully scaled databases through massive growth at high-growth companies</li>
+    <li>Can balance the speed of a startup environment with the reliability needs
+    of production systems</li> <li>Excel at technical leadership and cross-functional
+    collaboration</li> <li>Are passionate about building the data layer that enables
+    next-generation AI capabilities</li> </ul> <h2 class="heading"><strong>Strong
+    candidates may also have:</strong></h2> <ul> <li>Deep expertise scaling PostgreSQL,
+    MySQL, DynamoDB, or similar database systems</li> <li>Experience with Redis, Temporal,
+    vector databases, or async job processing frameworks</li> <li>Experience building
+    multi-cloud or hybrid cloud database solutions</li> <li>Knowledge of database
+    orchestration and automation at scale</li> <li>Background at companies known for
+    database excellence</li> </ul> <p><em>Note: Prior AI/ML infrastructure experience
+    is not required. We value deep infrastructure/databases expertise from any domain.</em></p>
+    <p><strong><em>Deadline to apply:</em></strong><em> None. Applications will be
+    reviewed on a rolling basis.</em></p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p>The annual compensation range for
+    this role is listed below.&nbsp;</p> <p>For sales roles, the range provided is
+    the role’s On Target Earnings ("OTE") range, meaning that the range includes both
+    the sales commissions/sales bonuses target and annual base salary for the role.</p></div><div
+    class="title">Annual Salary:</div><div class="pay-range"><span>$320,000</span><span
+    class="divider">&mdash;</span><span>$485,000 USD</span></div></div></div><div
+    class="content-conclusion"><h2><strong>Logistics</strong></h2> <p><strong>Education
+    requirements: </strong>We require at least a Bachelor''s degree in a related field
+    or equivalent experience.<strong><br><br>Location-based hybrid policy:</strong>
+    Currently, we expect all staff to be in one of our offices at least 25% of the
+    time. However, some roles may require more time in our offices.</p> <p><strong
+    data-stringify-type="bold">Visa sponsorship:</strong>&nbsp;We do sponsor visas!
+    However, we aren''t able to successfully sponsor visas for every role and every
+    candidate. But if we make you an offer, we will make every reasonable effort to
+    get you a visa, and we retain an immigration lawyer to help wit'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.9
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.934697+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

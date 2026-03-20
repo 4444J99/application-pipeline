@@ -30,9 +30,9 @@ Audiences participate at multiple levels:
 
 ## Technical Implementation
 
-The system coordinates 105 repositories across 8 GitHub organizations through a machine-readable registry (`registry-v2.json`), automated dependency validation (39 edges, 0 violations, 0 circular dependencies), and a formal promotion state machine.
+The system coordinates 116 repositories across 8 GitHub organizations through a machine-readable registry (`registry-v2.json`), automated dependency validation (39 edges, 0 violations, 0 circular dependencies), and a formal promotion state machine.
 
-Core technology per art output: TypeScript/React + Socket.io + OSC (Omni-Dromenon), SuperCollider + Pure Data + p5.js (Brahma), Next.js 16 + React Three Fiber (MET4), Next.js 14 + FastAPI + Neo4j (KRYPTO-VELAMEN). Infrastructure: 96+ CI/CD pipelines, Docker Compose, 2,349+ automated tests.
+Core technology per art output: TypeScript/React + Socket.io + OSC (Omni-Dromenon), SuperCollider + Pure Data + p5.js (Brahma), Next.js 16 + React Three Fiber (MET4), Next.js 14 + FastAPI + Neo4j (KRYPTO-VELAMEN). Infrastructure: 104+ CI/CD pipelines, Docker Compose, 2,349+ automated tests.
 
 **Exhibition configuration:** Recommended setup is three screens with audio — Omni-Dromenon audience interface (interactive), Brahma Visual Cortex (live synthesis visualization), governance dashboard (system health and dependency graph) — with SuperCollider generative audio and audience mobile participation. Full installation: 4m x 6m, dedicated WiFi AP, optional projection.
 
@@ -58,4 +58,4 @@ The dependency graph itself (ORGAN-I theory feeds ORGAN-II art feeds ORGAN-III p
 
 ORGANVM's constitutional governance — machine-readable rules, dependency validation, promotion pipelines — parallels European institutional design. The system's approach to AI deployment resonates with the EU AI Act's emphasis on human oversight and transparency.
 
-The project extends the European media art tradition of Ars Electronica, ZKM, and Transmediale — advancing systems aesthetics from observation to operational governance. Every repository is public. Every decision is documented. The ~879K+ words of documentation function as a digital commons: reusable governance patterns and a documented methodology for creative production at institutional scale. Radical transparency as both creative principle and civic contribution.
+The project extends the European media art tradition of Ars Electronica, ZKM, and Transmediale — advancing systems aesthetics from observation to operational governance. Every repository is public. Every decision is documented. The ~741K+ words of documentation function as a digital commons: reusable governance patterns and a documented methodology for creative production at institutional scale. Radical transparency as both creative principle and civic contribution.

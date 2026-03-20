@@ -1,0 +1,109 @@
+id: reddit-ios-software-engineer-ad-formats
+name: Reddit iOS Software Engineer, Ad Formats
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Reddit
+  url: https://boards.greenhouse.io/reddit
+  application_url: https://job-boards.greenhouse.io/reddit/jobs/7414849
+  portal: greenhouse
+  location: New York City, NY
+  location_class: us-onsite
+  description: '<div class="content-intro"><div class="c-message_kit__blocks c-message_kit__blocks--rich_text">
+    <div class="c-message__message_blocks c-message__message_blocks--rich_text" data-qa="message-text">
+    <div class="p-block_kit_renderer" data-qa="block-kit-renderer"> <div class="p-block_kit_renderer__block_wrapper
+    p-block_kit_renderer__block_wrapper--first"> <div class="p-rich_text_block"> <div
+    class="p-rich_text_section">Reddit is a community of communities. It’s built on
+    shared interests, passion, and trust, and is home to the most open and authentic
+    conversations on the internet. Every day, Reddit users submit, vote, and comment
+    on the topics they care most about. With 100,000+ active communities and approximately
+    121 million daily active unique visitors, Reddit is one of the internet’s largest
+    sources of information. For more information, visit <a class="c-link" href="http://www.redditinc.com/"
+    target="_blank" data-stringify-link="http://redditinc.com" data-sk="tooltip_parent">www.redditinc.com</a>.</div>
+    </div> </div> </div> </div> </div></div><div id="model-response-message-contentr_d544900f933717a6"
+    class="markdown markdown-main-panel tutor-markdown-rendering stronger enable-updated-hr-color">
+    <p data-sourcepos="7:1-7:319">The <strong>Brand Ad Formats team</strong> drives
+    the development of ad formats that help advertisers maximize reach and brand impact.
+    They focus on high-visibility, awareness-driven solutions that create memorable
+    experiences for Reddit users. By delivering guaranteed placements and engaging
+    ad interactions, they support major brand initiatives and help advertisers achieve
+    measurable outcomes. Their work includes evolving existing formats and launching
+    entirely new ones to keep Reddit’s ad offerings fresh and competitive.The team
+    is working on multiple new formats including a fully customizable interactive
+    ad format, and an ad format that uses AI to incorporate User-Generated Content.</p>
+    <p>The Ad Formats team is seeking a skilled iOS engineer with a product-focused
+    mindset to join the team.</p> <p><strong>Responsibilities:</strong></p> <ul> <li><strong>Build
+    Ad experiences</strong> and create patterns for Reddit’s iOS app that enhance
+    our ads’ performance and functionality.</li> <li>Collaborate across product, design,
+    and engineering teams to <strong>innovate and implement sophisticated</strong>
+    solutions for complex challenges.</li> <li>Engage in the full development cycle:
+    <strong>design, develop, QA, experiment, analyze, and deploy</strong>.</li> </ul>
+    <p><strong>Required Qualifications:</strong></p> <ul> <li>Proficiency in iOS engineering
+    and the Swift programming language, with at least 3 years of experience in software
+    development</li> <li>Strong software engineering fundamentals</li> <li>A willingness
+    to tackle the challenges of creating data-intensive, highly responsive, and fault-tolerant
+    apps</li> <li>An openness to explore innovative approaches to software development</li>
+    </ul> <p><strong>Bonus points:</strong></p> <ul> <li>Experience working on ad
+    tech</li> <li>Able to work full stack</li> </ul> <p><strong>Technologies used
+    on the team include:</strong></p> <ul> <li>Languages: Swift, Go, Python</li> <li>Frameworks:
+    SliceKit, Thrift, gRPC</li> <li>Datastores: Postgres, DynamoDB, BigQuery</li>
+    <li>Tools: Kubernetes, Argo, Docker</li> </ul> <p data-sourcepos="31:1-31:13"><strong>Benefits:</strong></p>
+    <ul> <li data-renderer-start-pos="5039" data-local-id="7a8141b5-f7ba-4353-bdee-caf575fee079">Comprehensive
+    Healthcare Benefits and Income Replacement Programs</li> <li data-renderer-start-pos="5108"
+    data-local-id="7a8141b5-f7ba-4353-bdee-caf575fee079">401k with Employer Match</li>
+    <li data-renderer-start-pos="5136" data-local-id="7a8141b5-f7ba-4353-bdee-caf575fee079">Global
+    Benefit programs that fit your lifestyle, from workspace to professional development
+    to caregiving support</li> <li data-renderer-start-pos="5253" data-local-id="7a8141b5-f7ba-4353-bdee-caf575fee079">Family
+    Planning Support</li> <li data-renderer-start-pos="5280" data-local-id="7a8141b5-f7ba-4353-bdee-caf575fee079">Gender-Affirming
+    Care</li> <li data-renderer-start-pos="5305" data-local-id="7a8141b5-f7ba-4353-bdee-caf575fee079">Mental
+    Health &amp; Coaching Benefits</li> <li data-renderer-start-pos="5342" data-local-id="7a8141b5-f7ba-4353-bdee-caf575fee079">Flexible
+    Vacation &amp; Paid Volunteer Time Off</li> <li data-renderer-start-pos="5389"
+    data-local-id="7a8141b5-f7ba-4353-bdee-caf575fee079">Generous Paid Parental Leave</li>
+    </ul> </div><div class="content-pay-transparency"><div class="pay-input"><div
+    class="description"><p><strong>Pay Transparency:</strong></p> <p>This job posting
+    may span more than one career level.</p> <p>In addition to base salary, this job
+    is eligible to receive equity in the form of restricted stock units, and depending
+    on the position offered, it may also be eligible to receive a commission. Additionally,
+    Reddit offers a wide range of benefits to U.S.-based employees, including medic'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.286370+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

@@ -1,0 +1,113 @@
+id: reddit-software-engineer
+name: Reddit Software Engineer
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Reddit
+  url: https://boards.greenhouse.io/reddit
+  application_url: https://job-boards.greenhouse.io/reddit/jobs/6909093
+  portal: greenhouse
+  location: Remote - Ontario, Canada
+  location_class: international
+  description: '<div class="content-intro"><div class="c-message_kit__blocks c-message_kit__blocks--rich_text">
+    <div class="c-message__message_blocks c-message__message_blocks--rich_text" data-qa="message-text">
+    <div class="p-block_kit_renderer" data-qa="block-kit-renderer"> <div class="p-block_kit_renderer__block_wrapper
+    p-block_kit_renderer__block_wrapper--first"> <div class="p-rich_text_block"> <div
+    class="p-rich_text_section">Reddit is a community of communities. It’s built on
+    shared interests, passion, and trust, and is home to the most open and authentic
+    conversations on the internet. Every day, Reddit users submit, vote, and comment
+    on the topics they care most about. With 100,000+ active communities and approximately
+    121 million daily active unique visitors, Reddit is one of the internet’s largest
+    sources of information. For more information, visit <a class="c-link" href="http://www.redditinc.com/"
+    target="_blank" data-stringify-link="http://redditinc.com" data-sk="tooltip_parent">www.redditinc.com</a>.</div>
+    </div> </div> </div> </div> </div></div><p>Reddit has a flexible workforce!&nbsp;
+    If you happen to live close to one of our physical office locations our doors
+    are open for you to come into the office as often as you''d like. Don''t live
+    near one of our offices? No worries: You can apply to work remotely in any country
+    in which we have a physical presence.</p> <h3>Team Description</h3> <p>Reddit
+    is poised to rapidly innovate and grow like no other time in its history. We’re
+    currently hiring across three distinct teams:</p> <p><strong><em>Ad Safety &amp;
+    Verification Team</em></strong></p> <p>The mission of the Ads Safety &amp; Verification
+    team is to protect the Reddit ads ecosystem so that users have a safe ads experience
+    and legitimate advertisers trust Reddit. This team builds full stack, high scale
+    products that span Reddit’s consumer-facing apps and ads systems. They own integrations
+    with metrics verification and brand safety partners and operate services that
+    scale to reliably handle tens of millions of requests per day.</p> <p><strong><em>Ads
+    Creative Management (ACM) Team</em></strong></p> <p>The Ads Creative Management
+    team focuses on the tools and systems advertisers use to create and manage their
+    ad content. From images and videos to headlines and full post creatives, they
+    enable efficient creative management and innovation across the campaign lifecycle.
+    They work closely with AI teams to provide intelligent content suggestions and
+    automation, helping advertisers launch high-quality campaigns faster and more
+    effectively.</p> <p><strong><em>Brand Innovation Team</em></strong></p> <p>The
+    Brand Innovation team drives the development of new ad formats that help advertisers
+    maximize reach and brand impact. They focus on high-visibility, awareness-driven
+    solutions that create memorable experiences for Reddit users. By delivering guaranteed
+    placements and engaging ad interactions, they support major brand initiatives
+    and help advertisers achieve measurable outcomes. Their work includes evolving
+    existing formats and launching entirely new ones to keep Reddit’s ad offerings
+    fresh and competitive.<br><br></p> <h3>Role Description:</h3> <p>This is a generalist
+    mid-level backend position within the Ads Organization. Ads is the fuel that powers
+    Reddit’s mission. As a backend engineer on the team, candidates might work on:</p>
+    <ul> <li>Microservices and APIs that power our advertiser-facing product, ads.reddit.com</li>
+    <li>Distributed systems that ensure the right ad gets shown to the right user
+    at the right time</li> <li>Backends that power interactive user experiences on
+    our ads like Polls and Games</li> <li>Real time, data intensive systems that measure
+    the performance of our ad campaigns</li> <li>Infrastructure that supports all
+    of the above</li> </ul> <p>Technologies used on the team include:</p> <ul> <li>Languages:
+    Go, Python, Scala</li> <li>Frameworks: Spark, Thrift, Baseplate, Kafka</li> <li>Datastores:
+    Postgres, BigQuery, Redis, Druid&nbsp;</li> <li>Tools: Kubernetes, Argo, Docker</li>
+    </ul> <p>Mid-level engineers are expected to absorb best practices and learn exceptionally
+    quickly while being effective core contributors. Engineers at this level must
+    be able to code independently, but may work with senior engineers on the design
+    of complex solutions. The most important skills an engineer at this level must
+    possess are 1) coachability and an eagerness to grow, 2) deep passion for coding,
+    and 3) excellent independent learning skills, all while operating as a fully functioning
+    member of an engineering team.</p> <h3>Responsibilities:</h3> <ul> <li>Work with
+    product managers to design and implement Ads products.</li> <li>Collaborate closely
+    with the platform and data teams while building new features.</li> <li>Lead the
+    processes needed to improve operational stability, including improving code quality,
+    delivering dashboards and data visualizations.</li> <li>Build extensible components
+    that would align with the'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.4
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.310600+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

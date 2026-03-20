@@ -14,14 +14,14 @@ tier: single
 
 | Metric | Value |
 |--------|-------|
-| Total repositories | 113 |
-| Implementation status | 59 ACTIVE |
+| Total repositories | 116 |
+| Implementation status | 62 ACTIVE |
 | GitHub organizations | 8 |
-| Published essays | 49 (~200K+ words) |
+| Published essays | 0 (~741K+ words) |
 | Total documentation | ~410K+ words |
 | Named development sprints | 33+ |
-| CI/CD workflows | 104 |
-| Dependency edges | 50 validated |
+| CI/CD workflows | 104+ |
+| Dependency edges | 55 validated |
 | Back-edge violations | 0 |
 | Circular dependencies | 0 |
 | CLAUDE.md coverage | 100% |

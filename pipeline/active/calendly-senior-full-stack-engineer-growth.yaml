@@ -1,0 +1,114 @@
+id: calendly-senior-full-stack-engineer-growth
+name: Calendly Senior Full Stack Engineer, Growth
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Calendly
+  url: https://boards.greenhouse.io/calendly
+  application_url: https://job-boards.greenhouse.io/calendly/jobs/8430528002
+  portal: greenhouse
+  location: Remote - US
+  location_class: us-remote
+  description: '<div class="content-intro"><h4><strong>What’s in it for you?&nbsp;</strong></h4>
+    <p>Ready to make a serious impact? Millions of people already rely on Calendly,
+    and we’re still in the midst of exciting product growth — it’s a fantastic time
+    to join us. Everything you’ll work on here will accelerate your career to the
+    next level. If you want to learn, grow, and do the best work of your life alongside
+    the best people you’ve ever worked with, then we hope you’ll consider allowing
+    Calendly to be a part of your professional journey.</p></div><h4><strong>About
+    the team &amp; opportunity</strong></h4> <p>This role focuses on building and
+    running high-impact experiments that improve how users discover, adopt, and pay
+    for Calendly within our Growth organization. You’ll work across the stack, partner
+    closely with product and analysts, and ship changes that are measured in real
+    business outcomes.</p> <p>This is <strong>not</strong> a traditional feature team
+    role. The work is fast-moving, iterative, and data-driven. You’ll regularly balance
+    speed, quality, and long-term maintainability while operating in an environment
+    with incomplete information.</p> <h4><strong>What we value on Growth </strong></h4>
+    <ul> <li>Ownership and follow-through; You care about results and learning, not
+    just delivery</li> <li>Sound judgment paired with a bias toward action</li> <li>Technical
+    leadership that raises the bar for the team</li> <li>Curiosity, humility, and
+    openness to diverse perspectives</li> </ul> <h4><strong>A day in the life of a
+    Senior Full Stack Engineer at Calendly</strong></h4> <ul> <li>Design, build, and
+    ship full-stack growth experiments end-to-end</li> <li>Improve key metrics across
+    acquisition, activation, engagement, and monetization</li> <li>Collaborate daily
+    with product managers, designers, and analysts</li> <li>Analyze experiment results
+    and iterate quickly based on data</li> <li>Contribute to our experimentation platform
+    and growth infrastructure</li> <li>Make thoughtful engineering tradeoffs in pursuit
+    of impact</li> </ul> <p><strong>On a typical week, you might:</strong></p> <ul>
+    <li>Build and ship an experiment that impacts a core funnel step</li> <li>Partner
+    with product, design, and analysts to refine a hypothesis or flow</li> <li>Review
+    experiment results and decide what to iterate, keep, or remove</li> <li>Improve
+    or extend internal tooling that supports experimentation</li> <li>Review code,
+    mentor teammates, and participate in team ceremonies</li> </ul> <h4><strong>What
+    do we need from you?</strong></h4> <ul> <li>5+ years of professional software
+    experience, with much of that working on user growth (acquisition, activation,
+    retention) or monetization</li> <li>Strong, hands-on full-stack engineering skills,
+    with the ability to independently design, build, and ship production changes across
+    frontend and backend systems</li> <li>Demonstrated experience running product
+    experiments end-to-end</li> <li>A data-driven approach to problem solving</li>
+    <li>The judgment to balance speed and quality in a growth environment</li> <li>Comfort
+    operating in ambiguous problem spaces where the path forward is not fully defined
+    and success is measured by outcomes, not effort</li> <li>A collaborative working
+    style and the ability to partner deeply with product, design, and analytics to
+    drive results</li> <li>A collaborative mindset and a willingness to give and receive
+    feedback</li> <li>Authorized to work lawfully in the United States of America
+    as Calendly does not engage in immigration sponsorship at this time.</li> </ul>
+    <h4><strong>Strong candidates might:</strong></h4> <ul> <li>Arrive with clear
+    points of view on what experiments to run, why they matter, and how to evaluate
+    their impact</li> <li>Be able to quickly dive into data to uncover growth or monetization
+    opportunities</li> <li>Demonstrate ownership beyond implementation, from hypothesis
+    formulation through post-launch analysis and follow-ups</li> <li>Have experience
+    scaling growth systems or experimentation platforms in a production environment</li>
+    </ul> <h4><strong>Our stack</strong></h4> <p>You don’t need experience with everything
+    below, but you should be excited to work across it:</p> <ul> <li><em>Backend:
+    </em>Ruby on Rails, Grape, PostgreSQL, Redis</li> <li><em>Frontend: </em>React,
+    TypeScript</li> <li><em>Infrastructure: </em>Google Cloud Platform, Kubernetes,
+    Argo Workflows</li> </ul><div class="content-pay-transparency"><div class="pay-input"><div
+    class="title">Tier 1 Salary Hiring Range</div><div class="pay-range"><span>$224,400</span><span
+    class="divider">&mdash;</span><span>$271,920 USD</span></div></div><div class="pay-input"><div
+    class="title">Tier 2 Salary Hiring Range</div><div class="pay-range"><span>$205,700</span><span
+    class="divider">&mdash;</span><span>$249,260 USD</span></div></div><div class="pay-input"><div
+    class="title">Tier 3 Salary Hiring Range</div><div class="pay-range"><span>$187,000</span><span
+    class="divider">&mdash;</span><span>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.021341+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

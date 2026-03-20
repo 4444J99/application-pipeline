@@ -1,0 +1,114 @@
+id: temporal-staff-software-engineer-compute-temporal-cloud
+name: Temporal Staff Software Engineer, Compute (Temporal Cloud)
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Temporal
+  url: https://boards.greenhouse.io/temporaltechnologies
+  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/5068388007
+  portal: greenhouse
+  location: United States - Remote Opportunity
+  location_class: us-remote
+  description: '<div class="content-intro"><h3><strong>About Us</strong></h3> <div>Temporal
+    is an open source programming model that can simplify code, make applications
+    more reliable, and help developers focus on the important things like delivering
+    features faster. We are on a mission to be the reliable foundation of every developer’s
+    toolbox, and are building the team that will make that happen.</div> <div>&nbsp;</div>
+    <div>Our values guide us —they are present in how we show up, make decisions,
+    and work together to make an impact. We’re curious, driven, collaborative, genuine
+    and humble.</div> <div>&nbsp;</div> <div>Temporal is growing and we are looking
+    for those who share our values, challenge ''standard'' thinking, and want to influence
+    our future. If you have a passion for improving the developer experience, building
+    world-class open-source software and communities, and want to be a part of our
+    amazing team, we''d love to hear from you!</div></div><div> <h3>&nbsp;</h3> <div>
+    <p><strong>Staff Software Engineer, Compute (Temporal Cloud)</strong></p> <p>Temporal
+    powers durable execution for the world’s most demanding AI and enterprise systems.
+    The Compute team at Temporal makes that durability feel effortless by building
+    the managed compute primitives that run workers and other execution systems across
+    Temporal Cloud.</p> <p>We’re solving a hard platform problem: make compute transparent,
+    elastic, safe-by-default, observable, and multi-cloud — without turning customers
+    into infrastructure operators. We build platform primitives that span a variety
+    of execution environments (e.g., serverless-style runtimes, containerized fleets,
+    and customer-controlled deployments). Our work sits at the intersection of control
+    plane + data plane: scaling decisions, isolation boundaries, multi-tenant safety,
+    and production-grade observability. If you’ve built autoscaling systems, multi-tenant
+    platforms, or cloud infrastructure, you’ll find a lot to love here.</p> <p>As
+    part of this role, you will:</p> <p><strong>Invent</strong></p> <ul> <li>Create
+    new managed compute primitives that feel first-class in Temporal Cloud: crisp
+    abstractions, clean APIs, and an extension story across compute providers.</li>
+    <li>Design self-optimizing autoscaling systems (signals, backstops, debouncing,
+    guardrails) that scale worker fleets safely and predictably.</li> <li>Define the
+    Open Source Server ↔ Cloud boundary for compute capabilities, keeping the architecture
+    cohesive and maintainable.</li> </ul> <p><strong>Own</strong></p> <ul> <li>Architect,
+    build, and operate services on the hot path of task execution where performance
+    and correctness are customer-visible.</li> <li>Deliver real-world cloud integrations
+    (e.g., customer-account execution): IAM boundaries, secure credentials handling,
+    networking constraints, quotas, and failure modes.</li> <li>Make operability a
+    feature: SLOs, tracing/metrics, load and failure testing, incident reviews, and
+    continuous hardening.</li> <li>Ship end-to-end: API design, rollout strategy,
+    backwards compatibility, and long-term maintenance.</li> </ul> <p><strong>Teach</strong></p>
+    <ul> <li>Raise the bar through design docs, strong reviews, pragmatic technical
+    leadership, and mentorship.</li> <li>Lead through influence across teams (Server,
+    SDKs, Security, Control Plane) to land coherent platform changes.</li> </ul> <p><strong>What
+    you bring</strong></p> <ul> <li>Significant experience building distributed systems
+    or multi-tenant platform services (design, implementation, and production operations).</li>
+    <li>Strong systems fundamentals: concurrency, performance, reliability, and failure-mode
+    thinking.</li> <li>A record of shipping platform primitives used by other engineers/customers
+    (APIs, control planes, data planes).</li> <li>Comfort owning outcomes: SLOs, incident
+    response, and improving on-call quality over time.</li> <li>Excellent written
+    communication and crisp tradeoff thinking. (Go experience is a plus; judgment
+    matters most.)</li> </ul> <p><strong>Nice to have</strong></p> <ul> <li>Experience
+    building cloud infrastructure platforms.</li> <li>Experience with IAM/security
+    boundaries for cross-account execution models.</li> <li>Having built Kubernetes
+    controllers / CRDs or heterogeneous worker fleet operations,</li> </ul> </div>
+    <div> <div> <h3><strong>Compensation</strong></h3> </div> <div> <ul> <li>The estimated
+    pay range for this role is $230,000 - $275,000</li> <li>Additionally, this role
+    is eligible to participate in Temporal''s equity plan.</li> </ul> </div> </div>
+    <h3>&nbsp;</h3> </div><div class="content-conclusion"><div><em>Compensation ranges
+    reflect salary and commission compensation (when applicable) across several geographic
+    markets. Employment offers carefully consider multiple factors, including prior
+    experience, knowledge, expertise, skillset, market location, and job level assessed
+    during the interview process.</em></div> <div>&nbsp;</div> <div><em>Employee benefits
+    and perks below are for full-time empl'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 9.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 10
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.683905+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

@@ -1,0 +1,104 @@
+id: temporal-senior-software-engineer-cloud-capacity
+name: Temporal Senior Software Engineer, Cloud Capacity
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Temporal
+  url: https://boards.greenhouse.io/temporaltechnologies
+  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/5084780007
+  portal: greenhouse
+  location: United States, Remote Opportunity
+  location_class: us-remote
+  description: <div class="content-intro"><h3><strong>About Us</strong></h3> <div>Temporal
+    is an open source programming model that can simplify code, make applications
+    more reliable, and help developers focus on the important things like delivering
+    features faster. We are on a mission to be the reliable foundation of every developer’s
+    toolbox, and are building the team that will make that happen.</div> <div>&nbsp;</div>
+    <div>Our values guide us —they are present in how we show up, make decisions,
+    and work together to make an impact. We’re curious, driven, collaborative, genuine
+    and humble.</div> <div>&nbsp;</div> <div>Temporal is growing and we are looking
+    for those who share our values, challenge 'standard' thinking, and want to influence
+    our future. If you have a passion for improving the developer experience, building
+    world-class open-source software and communities, and want to be a part of our
+    amazing team, we'd love to hear from you!</div></div><h2 data-section-id="1yom3yh"
+    data-start="167" data-end="179">Summary</h2> <p data-start="180" data-end="534">The
+    Cloud Capacity team plays a critical role in ensuring Temporal Cloud is scalable,
+    efficient, and reliable for our customers’ most important workloads. As a Senior
+    Software Engineer, you’ll design and build systems that help manage and forecast
+    resource needs, improving infrastructure efficiency, customer experience, and
+    platform cost effectiveness.</p> <h2 data-section-id="17fyts0" data-start="541"
+    data-end="560">What You'll Do</h2> <ul> <li data-start="561" data-end="1288">Design
+    and implement systems to track resource utilization, forecast consumption, and
+    support capacity planning at scale</li> <li data-start="561" data-end="1288">Build
+    and evolve components of a resource manager that improves infrastructure efficiency
+    based on usage patterns and cost insights</li> <li data-start="561" data-end="1288">Contribute
+    to autoscaling, workload isolation, and performance improvements in a multi-tenant
+    cloud environment</li> <li data-start="561" data-end="1288">Partner with engineers
+    across Cloud Infrastructure, Product, and other teams to deliver scalable and
+    reliable solutions</li> <li data-start="561" data-end="1288">Participate in design
+    discussions, propose technical approaches, and contribute to long-term improvements
+    of capacity systems</li> <li data-start="561" data-end="1288">Debug and resolve
+    production issues, improving system reliability and operational excellence</li>
+    </ul> <h2 data-section-id="1qyhe8r" data-start="1295" data-end="1317">What You'll
+    Bring</h2> <ul> <li data-start="1318" data-end="1847">Experience building and
+    operating distributed systems in a production cloud environment (AWS, GCP, or
+    Azure)</li> <li data-start="1318" data-end="1847">Strong understanding of infrastructure
+    systems including compute, storage, and networking fundamentals</li> <li data-start="1318"
+    data-end="1847">Hands-on experience with container orchestration technologies
+    (e.g., Kubernetes)</li> <li data-start="1318" data-end="1847">Ability to reason
+    about system performance, scalability, and reliability tradeoffs</li> <li data-start="1318"
+    data-end="1847">Solid coding skills in Go, Java, or similar languages</li> <li
+    data-start="1318" data-end="1847">Effective collaborator who communicates clearly
+    and works well across teams</li> <li data-start="1318" data-end="1847">4–7+ years
+    of experience building production software</li> </ul> <h2 data-section-id="3wa6cx"
+    data-start="1934" data-end="1951">Compensation</h2> <p>The estimated pay range
+    for this role is $176,000 - $237,000 depending on experience and location.</p>
+    <p>Additionally, this role is eligible to participate in Temporal's equity plan.</p><div
+    class="content-conclusion"><div><em>Compensation ranges reflect salary and commission
+    compensation (when applicable) across several geographic markets. Employment offers
+    carefully consider multiple factors, including prior experience, knowledge, expertise,
+    skillset, market location, and job level assessed during the interview process.</em></div>
+    <div>&nbsp;</div> <div><em>Employee benefits and perks below are for full-time
+    employees, part-time or temporary positions are excluded.&nbsp;</em></div> <div>&nbsp;</div>
+    <div> <div><strong>U.S. Benefits&nbsp;</strong></div> <div> <ul> <li>Unlimited
+    PTO, 12 Holidays + 2 Floating Holidays</li> <li>100% Premiums Coverage for Medical,
+    Dental, and Vision</li> <li>AD&amp;D, LT &amp; ST Disability, and Life Insurance
+    (Standard &amp; Supplemental Available)</li> <li>Empower 401K Plan</li> <li>Additional
+    Perks for Learning &amp; Development, Lifestyle Spending, In-Home Office Setup,
+    Professional Memberships, WFH Meals, Internet Stipend and more!</li> </ul> </div>
+    </div> <div> <div><strong>International Benefits</strong></div> <div> <p>Paid
+    Time Off (PTO) and Benefits outside the United States vary by country, and are
+    issued in partnership with <a class="postings-link" href="http://remote.com/">Remote.com</a>.&nbsp;
+    Additionally, Temporal off
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 9.0
+  identity_position: documentation-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.218563+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

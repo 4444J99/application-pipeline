@@ -1,6 +1,6 @@
 Dear Cursor Hiring Team,
 
-I use Cursor daily to govern a system that most enterprise platform teams would recognize: 113 repositories across 8 GitHub organizations, each with config contracts (CLAUDE.md), a promotion state machine (LOCAL → CANDIDATE → PUBLIC → GRADUATED), and automated enforcement gates. Registry-v2.json is the single source of truth. seed.yaml declares every repo's tier, dependency edges, and CI subscriptions. The system currently manages 50 dependency edges, 104 CI/CD pipelines, and 23,470 tests. I built all of it.
+I use Cursor daily to govern a system that most enterprise platform teams would recognize: 116 repositories across 8 GitHub organizations, each with config contracts (CLAUDE.md), a promotion state machine (LOCAL → CANDIDATE → PUBLIC → GRADUATED), and automated enforcement gates. Registry-v2.json is the single source of truth. seed.yaml declares every repo's tier, dependency edges, and CI subscriptions. The system currently manages 55 dependency edges, 104 CI/CD pipelines, and 23,470 tests. I built all of it.
 
 Enterprise platform engineering at Cursor means making these governance patterns work for engineering organizations at scale — the same challenge I solved at the organizational level, now applied to customer infrastructure. The configuration-driven governance model I designed for ORGANVM maps directly to what enterprise Cursor deployments need: consistent behavior across teams, auditable policy enforcement, and tooling that gets out of engineers' way while maintaining correctness guarantees.
 

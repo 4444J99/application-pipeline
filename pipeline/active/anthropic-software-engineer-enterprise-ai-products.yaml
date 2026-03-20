@@ -1,0 +1,114 @@
+id: anthropic-software-engineer-enterprise-ai-products
+name: Anthropic Software Engineer, Enterprise AI Products
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/4941996008
+  portal: greenhouse
+  location: New York City, NY; San Francisco, CA | New York City, NY
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>About Anthropic</strong></h2>
+    <p>Anthropic’s mission is to create reliable, interpretable, and steerable AI
+    systems. We want AI to be safe and beneficial for our users and for society as
+    a whole. Our team is a quickly growing group of committed researchers, engineers,
+    policy experts, and business leaders working together to build beneficial AI systems.</p></div><h1>About
+    the Role</h1> <p>We''re building Claude into the AI that everyone uses at work.
+    Not a demo, not a chatbot sidebar — a tool that professionals across industries
+    rely on every day to do substantive work. We''re looking for experienced software
+    engineers to join the Enterprise &amp; Verticals team, where we build the products
+    that make that real.</p> <p>This is a rare engineering role where you don''t just
+    build on top of a model — you shape the model itself. Every engineer on this team
+    works directly with Anthropic''s research organization, including post-training,
+    to make Claude better at the specific tasks your products need to solve. Whether
+    you''re working on general enterprise tooling or a specific industry vertical,
+    you''ll identify capability gaps, collaborate with researchers on domain-specific
+    improvements, and see those improvements ship in your products.</p> <p>This team
+    owns two complementary surfaces:</p> <p><strong>Enterprise AI Products.</strong>
+    General-purpose features that make Claude useful for any knowledge worker — products
+    like Cowork, plugins, skills, and the connective tissue that lets Claude operate
+    effectively across workflows. A big part of this work is understanding why users
+    aren''t activating, what''s blocking adoption, and building the capabilities that
+    close those gaps. You''ll work on the systems that make Claude a daily-use tool
+    for enterprise customers across industries.</p> <p><strong>Vertical AI Products.</strong>
+    Purpose-built experiences for specific industries where Claude can transform complex
+    professional workflows. We''re currently building for three verticals, with more
+    to come:</p> <ul> <li><strong>Financial Services</strong> — from data retrieval
+    and analysis to institutional-quality report generation, building AI experiences
+    that meet the standards of the world''s largest financial institutions.</li> <li><strong>Healthcare</strong>
+    — from clinical documentation and prior authorization to care coordination and
+    patient management, solving critical challenges for healthcare systems while ensuring
+    accuracy and compliance.</li> <li><strong>Legal</strong> — from document review
+    and contract analysis to regulatory compliance and matter management, building
+    tools that handle the precision, confidentiality, and nuance that legal work demands.</li>
+    </ul> <h2>Representative Projects</h2> <ul> <li>Build an Office add-in that lets
+    Claude read, analyze, and generate content within Excel and Word — operating within
+    the constraints of host application sandboxes and third-party platform APIs</li>
+    <li>Design the plugins and skills infrastructure that lets Claude learn new domain-specific
+    capabilities — from financial modeling templates to clinical documentation workflows
+    — and make them discoverable and composable for enterprise users</li> <li>Build
+    the customization and distribution layer to allow enterprise power users capture,
+    refine, and share their enhanced workflows.</li> <li>Develop a document generation
+    pipeline that produces institutional-quality investment research reports, translating
+    Claude''s analytical capabilities into outputs that meet the formatting, sourcing,
+    and compliance standards of a top-tier bank</li> <li>Instrument and diagnose activation
+    funnels to understand why enterprise users sign up but don''t adopt Claude for
+    daily work, then build the product changes that close those gaps</li> <li>Design
+    the context and memory architecture that lets multiple Claude agents working across
+    different product surfaces — Cowork, chat, Office add-ins, vertical tools — share
+    a unified understanding of a user''s projects, preferences, and in-flight work
+    so that nothing falls through the cracks as people move between tools</li> <li>Identify
+    high-toil workflows that enterprise users repeat daily — reformatting reports,
+    reconciling data across systems, triaging inbound requests — and apply new model
+    capabilities to automate or eliminate them, measuring the impact on time saved
+    and user retention</li> <li>Build hybrid workflow systems where Claude agents
+    and people collaborate asynchronously on complex tasks — for example, an agent
+    that drafts a first-pass contract review overnight, flags items that need human
+    judgment, and routes those decisions back through a structured interface so the
+    attorney can review and approve in minutes rather than hours</li> <li>Collaborate
+    with post-training researchers to improve Claude''s performance on clinical documentation
+    tasks, identifying specific failure modes in patient note summarization and helping
+    design training data to address them</li> </ul> '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.9
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.882248+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

@@ -1,0 +1,113 @@
+id: calendly-senior-full-stack-engineer-meeting-intelligence
+name: Calendly Senior Full Stack Engineer, Meeting Intelligence
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Calendly
+  url: https://boards.greenhouse.io/calendly
+  application_url: https://job-boards.greenhouse.io/calendly/jobs/8390060002
+  portal: greenhouse
+  location: Remote - US
+  location_class: us-remote
+  description: <div class="content-intro"><h4><strong>What’s in it for you?&nbsp;</strong></h4>
+    <p>Ready to make a serious impact? Millions of people already rely on Calendly,
+    and we’re still in the midst of exciting product growth — it’s a fantastic time
+    to join us. Everything you’ll work on here will accelerate your career to the
+    next level. If you want to learn, grow, and do the best work of your life alongside
+    the best people you’ve ever worked with, then we hope you’ll consider allowing
+    Calendly to be a part of your professional journey.</p></div><p><strong>About
+    the team &amp; opportunity&nbsp;</strong></p> <p>What’s so great about working
+    on Calendly’s Engineering team?&nbsp;</p> <p>We make things possible for our customers
+    through innovation.</p> <p>Why do we need you? Well, we are looking for a Full
+    Stack Engineer III&nbsp; who will bring deep technical know-how, system design
+    knowledge and a healthy dose of fun to the team. You will report to the Engineering
+    Manager for the Notetaker group and will play a key role in designing and supporting
+    the core features and architecture that underpin Calendly’s AI Notetaker and meeting
+    recaps.</p> <p><strong>A day in the life of a Full Stack Engineer at Calendly</strong></p>
+    <p>The Calendly Notetaker is built on a modern, service-based architecture and
+    is scaling usage and user-base rapidly - targeting significant further growth
+    over the course of 2026. We need ambitious, experienced engineers who can help
+    us drive this stage of growth. As an engineer at Calendly, you will both build
+    new features and work to scale our platform and architecture. You will build tooling
+    and automation to fine tune our delivery process as you grow into a service oriented
+    specialist. You will also learn to work with multiple technologies such as Google
+    Cloud Platform, Kubernetes, Argo Workflows, NodeJS, React, Golang, PostgreSQL,
+    Redis, to name a few.</p> <p>When you join Calendly, you get the opportunity to
+    deliver on a product used by millions and known for its best-in-class quality.
+    Help us continue to deliver critical features to our users with excellence.</p>
+    <p>On a typical day, <strong>you</strong> will be working on:&nbsp;</p> <ul> <li>Collaborate
+    within your team to build new features that expand Notetaker functionality and
+    add support for additional user types.&nbsp;</li> <li>Contribute to platform scaling
+    initiatives.</li> <li>Meet regularly with Product and Design to fine tune requirements.</li>
+    <li>Attend agile ceremonies to help your team plan out their work and get it done.</li>
+    <li>Work across squads to improve Engineering practices at Calendly.</li> <li>Review
+    implementation plans and pull requests from your peers.</li> <li>Mentor and coach
+    other team members.</li> </ul> <p>&nbsp;</p> <p><strong>What do we need from you?</strong></p>
+    <ul> <li>8+ years of Software Development experience at a SaaS or technology company.</li>
+    <li>Professional experience with Node is preferred. Experience with React or a
+    comparable UI framework is also desirable.</li> <li>Professional experience with
+    TypeScript.&nbsp;</li> <li>Ability to adapt to new technologies, changing requirements,
+    and evolving organizational needs</li> <li>Hands-on experience with Service-Oriented
+    Architectures (SOA), microservices, and involvement in significant product-scaling
+    initiatives.</li> <li>Proven ability to own features end-to-end, including technical
+    discovery, implementation, testing, release, and ongoing maintenance.</li> <li>Experience
+    using AI coding assistants (Copilot, Cursor, etc.) as productivity tools, with
+    a clear understanding of generated code and the ability to defend implementation
+    choices.</li> <li>Availability for participation in on-call rotation, ensuring
+    prompt and effective responses to business-critical alerts outside of regular
+    working hours</li> </ul> <ul> <li>Authorized to work lawfully in the United States
+    of America as Calendly does not engage in immigration sponsorship at this time.</li>
+    </ul> <p><strong>What’s in it for you?&nbsp;</strong></p> <p>Ready to make a serious
+    impact? Millions of people already rely on Calendly’s products, and we’re still
+    in the midst of our growth curve — it’s a fantastic time to join us. Everything
+    you’ll work on here will accelerate your career to the next level. If you want
+    to learn, grow, and do the best work of your life alongside the best people you’ve
+    ever worked with, then we hope you’ll consider allowing Calendly to be a part
+    of your professional journey.</p><div class="content-pay-transparency"><div class="pay-input"><div
+    class="title">Tier 1 Salary Hiring Range</div><div class="pay-range"><span>$224,400</span><span
+    class="divider">&mdash;</span><span>$271,920 USD</span></div></div><div class="pay-input"><div
+    class="title">Tier 2 Salary Hiring Range</div><div class="pay-range"><span>$205,700</span><span
+    class="divider">&mdash;</span><span>$249,260 USD</span></div></div><div class="pay-input"><div
+    class="title">Tier 3 Salary Hiring Range</div><div cl
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.023356+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

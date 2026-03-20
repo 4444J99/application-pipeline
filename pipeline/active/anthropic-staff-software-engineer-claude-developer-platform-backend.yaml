@@ -1,0 +1,115 @@
+id: anthropic-staff-software-engineer-claude-developer-platform-backend
+name: Anthropic Staff Software Engineer, Claude Developer Platform (Backend)
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/4988878008
+  portal: greenhouse
+  location: New York City, NY; San Francisco, CA
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>About Anthropic</strong></h2>
+    <p>Anthropic’s mission is to create reliable, interpretable, and steerable AI
+    systems. We want AI to be safe and beneficial for our users and for society as
+    a whole. Our team is a quickly growing group of committed researchers, engineers,
+    policy experts, and business leaders working together to build beneficial AI systems.</p></div><div>
+    <h2>About the role</h2> <p>Anthropic is seeking talented and experienced Software
+    Engineers to join our Claude Developer Platform team and help build the world''s
+    most trusted AI platform for developers. Since launch, the Claude API has seen
+    rapid growth and adoption by companies of all sizes to build AI applications with
+    our industry-leading models. The API serves as the primary channel for safely
+    and broadly distributing AI''s benefits across all sectors of the economy. You''ll
+    work on building and scaling frontier models and agentic capabilities while ensuring
+    they''re easy to use, safe, and provide a world-class developer experience.</p>
+    <p><em>We have multiple roles open on this team and are looking for experienced
+    engineers at different stages in their career who are excited about this space
+    and our mission. Team placement occurs after the interview process, taking into
+    account your interests and experience alongside organizational needs. Here are
+    some example teams:</em></p> <ul> <li><strong>API Core: </strong>You’ll deliver
+    reliable and performant foundational intelligence via the Claude API and help
+    users get the most intelligence, speed, and value from our models. You’ll focus
+    on launching new models and working with Inference and Research to bring new foundational
+    capabilities to our users. You’ll do this while making sure our APIs are performant
+    and reliable for all users from startups to enterprise.<br><br></li> <li><strong>API
+    Capabilities:</strong> You''ll work on shipping the world''s most intelligent
+    and capable APIs, partnering directly with research to bring frontier capabilities
+    to developers. This team owns core capabilities including vision, tool use, and
+    computer use. Your work will directly impact how developers interact with our
+    most advanced models.<br><br></li> <li><strong>API Knowledge:</strong> You''ll
+    focus on transforming Claude into a true knowledge worker by ensuring the model
+    has access to and understanding of the right knowledge at the right time. You''ll
+    work on making it possible for developers to securely give Claude access to their
+    data while automatically processing and retrieving relevant information. You''ll
+    partner directly with research to bring state-of-the-art retrieval advancements
+    to developers.<br><br></li> <li><strong>Developer Experience:</strong> You’ll
+    focus on building products and tools to enable developers to harness the full
+    power of LLMs to create successful, reliable, and groundbreaking applications
+    with ease. You’ll build the tools to accelerate developers from idea to deployment.
+    You''ll help figure out how to leverage Claude to improve developer''s usage of
+    the API, such as generating and evaluating prompts while collaborating closely
+    with the teams above to bring Claude''s current and future capabilities to developers.<br><br></li>
+    <li><strong>API Agents: </strong>You''ll focus on building the infrastructure
+    and APIs that enable developers to create powerful agentic applications within
+    the Claude API. You''ll help developers with agent orchestration through capabilities
+    like tool use, multi-step reasoning, and long-running task execution that allow
+    Claude to take actions and accomplish complex goals on behalf of users. You''ll
+    partner with research to bring cutting-edge agent capabilities to production.</li>
+    </ul> <h2>Responsibilities</h2> <ul> <li>Design and implement products that we
+    launch in the Claude API, serving hundreds of thousands of developers</li> <li>Partner
+    with research teams to productize cutting-edge model capabilities</li> <li>Participate
+    in API design reviews to ensure consistent, intuitive developer experiences</li>
+    <li>Collaborate with cross-functional teams to ship a world-class product</li>
+    <li>Support and debug production issues through on-call rotations</li> <li>Design
+    processes (e.g. postmortem review, incident response, on-call rotations) that
+    help the team operate effectively and never fail the same way twice</li> <li>Partner
+    with partner teams ensure sure new product features are integrated into the developer
+    console in an intuitive way</li> <li>Use product sense to propose and implement
+    improvements to the developer experience of using the API</li> </ul> <h2>You may
+    be a good fit if you:</h2> <ul> <li>Have 8+ years of relevant industry experience,
+    3+ years leading large scale, complex projects or teams as an engineer or tech
+    lead</li> <li>Are passionate about designing tasteful APIs and developer-focused
+    products</li> <li>Enjoy talking directly with users and view "product" as part
+    of your job</li> <li>Can work independently and '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.9
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.930324+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

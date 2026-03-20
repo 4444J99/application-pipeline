@@ -1,0 +1,115 @@
+id: harvey-ai-senior-forward-deployed-engineer
+name: Harvey AI Senior Forward Deployed Engineer
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Harvey AI
+  url: https://jobs.ashbyhq.com/harvey
+  application_url: https://jobs.ashbyhq.com/harvey/10900071-f75f-49da-bff7-7e9db5e9b1f9
+  portal: ashby
+  location: New York
+  location_class: us-onsite
+  description: 'Why Harvey At Harvey, we’re transforming how legal and professional
+    services operate — not incrementally, but end-to-end. By combining frontier agentic
+    AI, an enterprise-grade platform, and deep domain expertise, we’re reshaping how
+    critical knowledge work gets done for decades to come. This is a rare chance to
+    help build a generational company at a true inflection point. With 1000+ customers
+    in 58+ countries, strong product-market fit, and world-class investor support,
+    we’re scaling fast and defining a new category in real time. The work is ambitious,
+    the bar is high, and the opportunity for growth — personal, professional, and
+    financial — is unmatched. Our team is sharp, motivated, and deeply committed to
+    the mission. We move fast, operate with intensity, and take real ownership of
+    the problems we tackle — from early thinking to long-term outcomes. We stay close
+    to our customers — from leadership to engineers — and work together to solve real
+    problems with urgency and care. If you thrive in ambiguity, push for excellence,
+    and want to help shape the future of work alongside others who raise the bar,
+    we invite you to build with us. At Harvey, the future of professional services
+    is being written today — and we’re just getting started. Role Overview As a senior
+    member of our founding Forward Deployed Engineer (FDE) team, you’ll embed with
+    Harvey’s enterprise customers (Am Law firms, in-house teams at large enterprises,
+    and other professional services organizations) to turn cutting‑edge AI systems
+    into production‑grade workflows that deliver measurable outcomes fast. You’ll
+    move from prototype to deployment quickly, surface patterns from the field, and
+    feed them back into Harvey’s platform and product roadmap. You’ll start from open‑ended,
+    high‑leverage problems, design and implement end‑to‑end solutions with real users
+    and data, and ship to production under tight feedback loops. This role is based
+    in New York, NY. We use an in-person work model and offer relocation assistance
+    to new employees.. What You''ll Do Embed with customers to map out workflows,
+    de‑risk constraints, and define crisp success metrics for custom builds. Design
+    → prototype → productionize custom workflows: customize knowledge sources and
+    retrieval pipelines, tool use/agents, prompts, and guardrails; then harden them
+    for reliability, observability, and scale. Integrate workflows with clients systems
+    (DMS, KM, ticketing, identity/SSO) and data sources; standing up secure connectors
+    to the rest of the Harvey platform. Build and maintain evals & harnesses that
+    capture real‑world quality on a client-by-client basis, wiring those signals into
+    iteration loops and model choices. Operationalize adoption: run training, write
+    crisp runbooks, and hand-off durable playbooks to customer champions—and to Harvey
+    product/eng—so wins scale beyond one account. Surface field patterns (recurring
+    prompts, tools, workflows, failure modes) that inform platform capabilities and
+    future product bets. How you will make a 10x Impact High Beta : You understand
+    that volatility is the normal course of action, and you embrace it. You assume
+    failure is the most likely outcome, so you fail fast and learn. You are transparent
+    about failure, and you actively try to kill your own ideas by tackling the hardest
+    problems first. You don’t subscribe to sunk costs. Unreasonable hospitality :
+    You practice unreasonable hospitality, grounding your technical work in a deep
+    obsession with the customer. You will spend as much time understanding the "why"
+    from users as you do building the "what," ensuring our bets are aimed at solving
+    real, meaningful problems. Action, action, and still more action : You live by
+    a relentless bias for action. You believe progress is measured by what you build
+    and learn, not what you discuss in meetings. You prioritize shipping and getting
+    real-world feedback over perfecting a plan on paper. Contrarian, with common sense
+    : You constantly think about what’s missing, not what’s working well today. You
+    feel uncomfortable when an idea becomes consensus. But you match ambitious ideas
+    with pragmatic execution. You find the most straightforward path to de-risk a
+    complex concept, focusing on proving value quickly rather than over-engineering
+    a solution. What You Have 5+ years building and operating production software
+    with meaningful 0→1 ownership and the ability to operate under ambiguity. Experience
+    building LLM‑powered applications (retrieval, tools/agents, structured outputs,
+    prompt/runtime safety) and taking them to production. Comfort working directly
+    with customers—from scoping ambiguous problems to shipping, integrating, training,
+    and iterating on adoption. Practical experience with evals (designing task suites,
+    pipelines, and dashboards that reflect user quality); you use evals to drive model/product
+    decisions. Clear, concise communication; low‑ego collaboration; appetite for in‑person
+    pairing with teammates and customers in NYC. Compensation Range $200,000-'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.9
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.000962+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"

@@ -1,0 +1,114 @@
+id: anthropic-ui-software-engineer-claudeai-consumer-product
+name: 'Anthropic UI Software Engineer, Claude.ai Consumer Product '
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/5026097008
+  portal: greenhouse
+  location: San Francisco, CA | New York City, NY | Seattle, WA
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>About Anthropic</strong></h2>
+    <p>Anthropic’s mission is to create reliable, interpretable, and steerable AI
+    systems. We want AI to be safe and beneficial for our users and for society as
+    a whole. Our team is a quickly growing group of committed researchers, engineers,
+    policy experts, and business leaders working together to build beneficial AI systems.</p></div><div
+    data-qa="job-description"> <h2><strong>About the role:</strong></h2> <p>Claude.ai
+    is one of the most-used AI products in the world, and the experience we build
+    for our users directly shapes how people interact with AI every day. We''re looking
+    for a talented engineer to join the team that builds the consumer web app — the
+    interfaces, interactions, and moments that turn Claude from a capable model into
+    a product people genuinely enjoy using.</p> <p>This is a product engineering role
+    first and foremost. You''ll work closely with designers and product managers to
+    bring features from concept to shipped experience, obsessing over the details
+    that make the difference: how something feels when you first land on it, how smoothly
+    a new interaction flows, how an interface holds up under real-world use. Great
+    UX isn''t just about how something looks — it''s about how fast it feels, how
+    reliably it works, and how well it adapts to the device and context someone is
+    using it on. You won''t need to be building backend infrastructure or platform
+    tooling — your focus is on crafting the best possible experience for the people
+    using Claude.ai on the web.</p> <p>The pace is fast, the product is evolving quickly,
+    and the opportunity to have a visible, direct impact on how millions of people
+    use AI is real. If you love building consumer products and care about getting
+    the details right, this could be a great fit.</p> <h2><strong>Responsibilities:</strong></h2>
+    <ul> <li>Build and ship user-facing features for claude.ai''s web experience,
+    working closely with designers to bring detailed, polished interactions to life</li>
+    <li>Translate design intent into high-quality implementations — paying close attention
+    to accessibility and the small details that add up to a great product feel</li>
+    <li>Build responsive applications that work well across devices and screen sizes,
+    and actively care about the performance characteristics that shape how the product
+    feels to use — latency, responsiveness, and reliability are first-class concerns,
+    not afterthoughts</li> <li>Collaborate tightly with product managers to understand
+    user needs, shape feature scope, and make informed tradeoffs as you build</li>
+    <li>Iterate quickly based on user feedback and internal testing, improving the
+    experience on a continuous basis</li> <li>Work with the UI Platform team to consume
+    shared components and tooling effectively, and flag gaps or pain points that would
+    help the broader team move faster</li> <li>Help maintain a high bar for code quality
+    and consistency within the consumer product codebase</li> </ul> <h2><strong>You
+    may be a good fit if you:</strong></h2> <ul> <li>Have 5+ years of experience building
+    consumer-facing web products, with a strong emphasis on UI quality and user experience</li>
+    <li>Are proficient in React, Next.js, and TypeScript, and have experience with
+    Node.js on the backend side of the stack</li> <li>Genuinely care about the user
+    experience — not just how something looks, but how fast it loads, how reliably
+    it works, and how it feels across devices. You think about latency and responsiveness
+    the same way you think about design</li> <li>Collaborate well with designers and
+    product managers, and enjoy the iterative process of turning a design into something
+    that works beautifully in the browser</li> <li>Are comfortable working in a fast-moving
+    environment where priorities shift and shipping quickly matters</li> <li>Pick
+    up slack, even if it goes outside your job description</li> </ul> <h2><strong>Strong
+    candidates may also have experience with:</strong></h2> <ul> <li>Accessibility
+    best practices and building inclusive user interfaces</li> <li>Performance optimization
+    for consumer web apps — profiling, reducing bundle size, improving rendering performance,
+    and understanding where latency comes from end-to-end</li> <li>Designing and implementing
+    responsive layouts that work well across screen sizes and devices</li> <li>Working
+    on products with real-time or streaming interactions (chat interfaces, live updates,
+    etc.)</li> <li>User research or usability testing, or a track record of incorporating
+    user feedback into product decisions</li> <li>Working on AI/ML products or in
+    fast-moving consumer product environments</li> </ul> <h2><strong>Candidates need
+    not have:</strong></h2> <ul> <li>100% of the skills needed to perform the job</li>
+    <li>Formal certifications or education credentials</li> </ul> </div><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p>The annual compensation range for
+    this role is listed below.&nbsp;'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.9
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.952977+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-20"
