@@ -120,6 +120,7 @@ COMMANDS = {
     "rateall":     ("generate_ratings.py", ["--compute-ira"], "Multi-model rating session with IRA computation"),
     "sysaudit":    ("audit_system.py", [],                   "System integrity audit: claims, wiring, logic"),
     "canonical":   ("verify_canonical.py", [],               "Verify CANONICAL metrics in recruiter_filter.py against actual system state"),
+    "intake":      ("score.py", ["--all", "--include-pool"],  "Intake triage: score all entries including research_pool"),
     "validate-external": ("external_validator.py", [],           "Refresh external validation cache and compare"),
     "calibrate":  ("external_validator.py", ["--calibrate"],       "Calibrate thresholds from external data (dry-run)"),
     "mode":        ("pipeline_mode.py", ["--compare"],          "Show pipeline mode and compare thresholds"),

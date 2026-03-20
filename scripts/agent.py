@@ -26,6 +26,7 @@ from pipeline_api import (
     score_entry,
 )
 from pipeline_lib import (
+    ALL_PIPELINE_DIRS_WITH_POOL,
     SIGNALS_DIR,
     can_advance,
     get_deadline,
@@ -473,7 +474,7 @@ def main():
         parser.print_help()
         sys.exit(1)
 
-    entries = load_entries()
+    entries = load_entries(dirs=ALL_PIPELINE_DIRS_WITH_POOL)
     if args.target:
         entries = [e for e in entries if e.get("id") == args.target]
         if not entries:
