@@ -104,8 +104,9 @@ Scripts are independent CLIs but some import functions from each other:
 - **`interview_prep.py`** imports from `org_intelligence.py`, `skills_gap.py` — Interview prep document generator combining org intelligence, skills gaps, STAR questions, and block talking points.
 - **`recalibrate.py`** imports from `score.py` — Quarterly rubric recalibration: proposes scoring weight adjustments based on outcome patterns. Requires `--apply --yes` to modify `scoring-rubric.yaml`.
 - **`diagnose.py`** imports from `launchd_manager.py` — uses `get_agent_status()` for operational maturity measurement. Loads rubric from `strategy/system-grading-rubric.yaml`.
-- **`diagnose_ira.py`** — standalone; computes ICC, kappa, and consensus from rating JSON files in `ratings/`. Includes `partition_dimensions()` for separating objective ground truth from subjective rated dimensions.
-- **`generate_ratings.py`** imports from `diagnose.py` — uses COLLECTORS, PROMPT_GENERATORS, OBJECTIVE_DIMENSIONS, SUBJECTIVE_DIMENSIONS for multi-model IRA rating. Calls Anthropic and Google APIs.
+- **`diagnose_ira.py`** — standalone; computes ICC (intraclass correlation coefficient), Cohen's kappa, Fleiss kappa, and consensus from rating JSON files in `ratings/`. Includes `partition_dimensions()` for separating objective ground truth from subjective rated dimensions. The core IRA diagnostic tool.
+- **`generate_ratings.py`** imports from `diagnose.py` — uses COLLECTORS, PROMPT_GENERATORS, OBJECTIVE_DIMENSIONS, SUBJECTIVE_DIMENSIONS for multi-model IRA rating. Calls Anthropic and Google APIs. Produces rating JSON files consumed by `diagnose_ira.py`.
+- **`standards.py`** imports from `diagnose.py`, `diagnose_ira.py`, `audit_system.py`, and other validators — hierarchical standards validation framework with a five-level oversight architecture (triad regulators: 3 gates per level, ≥2/3 quorum). Wraps existing validators and adds Level 4-5 assessment gates. Designed for meta-ORGANVM portability — data classes and orchestration are organ-agnostic. Loads rubric from `strategy/system-standards.yaml`.
 - **`external_validator.py`** imports from `pipeline_market.py` — fetches salary data from BLS OES API, skill demand from Remotive API, org signals from GitHub API. Stores to `strategy/external-validation-cache.json`. Used by `audit_system.py` for external validation audit.
 - **`network_graph.py`** — Network graph with BFS/DFS path-finding, hop-decay scoring (Granovetter weak-ties theory), tie-strength tracking. Ingests from `contacts.yaml` and `outreach-log.yaml`. Stores to `signals/network.yaml`. Reverse-syncs to `contacts.yaml` via `--sync-contacts`.
 - **`score_network.py`** imports from `network_graph.py` — `_score_from_graph()` queries the network graph for org proximity, combined with entry-level signals via `max(entry_score, graph_score)`.
@@ -227,12 +228,16 @@ python scripts/diagnose.py                             # System diagnostic score
 python scripts/diagnose.py --json --rater-id opus > ratings/opus.json  # JSON for IRA
 python scripts/diagnose.py --subjective-only           # Generate prompts for AI raters
 python scripts/diagnose.py --objective-only            # Only automated measurements
-python scripts/diagnose_ira.py ratings/*.json          # IRA report from rating files
+python scripts/diagnose_ira.py ratings/*.json          # IRA report from rating files (ICC, Cohen's kappa, Fleiss kappa)
 python scripts/diagnose_ira.py ratings/*.json --consensus  # With consensus scores
 python scripts/generate_ratings.py                        # Full multi-model rating session
 python scripts/generate_ratings.py --rater architect-opus  # Single rater only
 python scripts/generate_ratings.py --dry-run               # Show prompts without API calls
 python scripts/generate_ratings.py --compute-ira           # Run IRA after rating
+python scripts/standards.py                               # Full hierarchical standards audit (5-level, triad regulators)
+python scripts/standards.py --level 2                     # Single level only
+python scripts/standards.py --json                        # Machine-readable output
+python scripts/standards.py --run-all                     # All levels (no cascade stop on failure)
 python scripts/external_validator.py                       # Fetch + compare + report
 python scripts/external_validator.py --fetch-only          # Refresh validation cache only
 python scripts/external_validator.py --compare-only        # Compare using existing cache
@@ -320,9 +325,10 @@ Single-word command protocol via `python scripts/run.py <command>`. 102 standalo
 | `notify` | Notification dispatcher config check |
 | `weeklybrief` | Weekly executive brief |
 | `diagnose` | System diagnostic scorecard (objective dimensions) |
-| `ira` | Inter-rater agreement report (needs ratings/*.json) |
+| `ira` | Inter-rater agreement report (ICC, Cohen's kappa, Fleiss kappa — needs ratings/*.json) |
 | `rateall` | Multi-model IRA rating session with diverse AI panel |
 | `validate-external` | Refresh external validation cache and compare against scoring inputs |
+| `standards` | Hierarchical standards audit (5-level oversight, triad regulators, ≥2/3 quorum) |
 
 **With target ID:** `score <id>`, `enrich <id>`, `advance <id>`, `compose <id>`, `draft <id>`, `submit <id>`, `check <id>`, `record <id>`, `gate <id>`, `contacts <id>`, `hypothesis <id>`, `alchemize <id>`, `answers <id>`, `tailor <id>`, `review <id>`, `cultivate <id>`, `textmatch <id>`, `skillsgap <id>`, `orgdetail <org>`, `interviewprep <id>`, `netpath <org>`, `netscore <id>`
 
