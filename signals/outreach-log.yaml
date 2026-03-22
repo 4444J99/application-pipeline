@@ -276,8 +276,8 @@ entries:
   type: dm
   contact: Craig Dennis
   channel: linkedin
-  note: Follow-up DM sent after connection acceptance — portfolio link and teaching
-    angle
+  note: Follow-up DM sent after connection acceptance — portfolio link and 
+    teaching angle
   related_targets:
   - cloudflare-models-engineer-developer-relations
 - date: '2026-03-18'
@@ -536,14 +536,16 @@ entries:
   type: post_submission
   contact: Manan Mehta
   channel: linkedin
-  note: DM sent after acceptance — shared portfolio + governance architecture context
+  note: DM sent after acceptance — shared portfolio + governance architecture 
+    context
   related_targets:
   - openai-technical-deployment-lead-forward-deployed-engineering-fde-n
 - date: '2026-03-18'
   type: post_submission
   contact: Logan Tills
   channel: linkedin
-  note: DM sent after acceptance — shared portfolio + creative infrastructure context
+  note: DM sent after acceptance — shared portfolio + creative infrastructure 
+    context
   related_targets:
   - runway-mts
 - date: '2026-03-18'
@@ -1558,13 +1560,15 @@ entries:
   contact: Anthony C.
   organization: Independent / Consulting
   channel: phone
-  note: Initial phone call — discussed multiple consulting projects. Awaiting follow-up.
+  note: Initial phone call — discussed multiple consulting projects. Awaiting 
+    follow-up.
 - date: '2026-03-20'
   type: acceptance
   contact: Keisuke Kamata
   organization: Weights & Biases
   channel: linkedin
-  note: Connection accepted — replied "Wow cool!!! Thank you for reaching out to me!" DM queued.
+  note: Connection accepted — replied "Wow cool!!! Thank you for reaching out to
+    me!" DM queued.
   related_targets:
   - weights-biases-chief-of-staff-product-engineering
 - date: '2026-03-20'
@@ -1572,7 +1576,8 @@ entries:
   contact: Keisuke Kamata
   organization: Weights & Biases
   channel: linkedin
-  note: DM sent about multi-model evaluation. Keisuke replied "let me get back next week" with positive emojis. Follow up Mon/Tue 2026-03-23/24.
+  note: DM sent about multi-model evaluation. Keisuke replied "let me get back 
+    next week" with positive emojis. Follow up Mon/Tue 2026-03-23/24.
   related_targets:
   - weights-biases-chief-of-staff-product-engineering
 - date: '2026-03-20'
@@ -1589,7 +1594,8 @@ entries:
   contact: Varun Bais
   organization: Toast
   channel: linkedin
-  note: Asked about config platform team. Varun not on that stack but referred Shmuel Rosansky (very senior engineer). Unsolicited warm referral.
+  note: Asked about config platform team. Varun not on that stack but referred 
+    Shmuel Rosansky (very senior engineer). Unsolicited warm referral.
   related_targets:
   - toast-senior-backend-engineer
   - toast-senior-software-engineer-front-end
@@ -1598,7 +1604,9 @@ entries:
   contact: Varun Bais
   organization: Toast
   channel: linkedin
-  note: 'Varun referred Shmuel Rosansky (linkedin.com/in/shmuelr) — senior engineer at Toast. Varun said: "he is one of the very senior engineers." Cannot name-drop Varun (too junior to be known).'
+  note: 'Varun referred Shmuel Rosansky (linkedin.com/in/shmuelr) — senior engineer
+    at Toast. Varun said: "he is one of the very senior engineers." Cannot name-drop
+    Varun (too junior to be known).'
   related_targets:
   - toast-senior-backend-engineer
   - toast-senior-software-engineer-front-end
@@ -1607,6 +1615,197 @@ entries:
   contact: Giselle Collins
   organization: Anduril
   channel: email
-  note: Recruiter asked to confirm TS/SCI with Full Scope Polygraph. Do not hold clearance. Responding with honest no + ask about non-clearance roles.
+  note: Recruiter asked to confirm TS/SCI with Full Scope Polygraph. Do not hold
+    clearance. Responding with honest no + ask about non-clearance roles.
   related_targets:
   - anduril-lead-technical-writer-intelligence-systems
+- date: '2026-03-21'
+  type: post_submission
+  contact: Sylvie Carr
+  channel: linkedin
+  note: Connect request sent — Managing Editor, likely hiring manager
+  related_targets:
+  - anthropic-engineering-editorial-lead
+- date: '2026-03-21'
+  type: post_submission
+  contact: Jake Eaton
+  channel: linkedin
+  note: Connect request sent — editorial team peer
+  related_targets:
+  - anthropic-engineering-editorial-lead
+- date: '2026-03-21'
+  type: post_submission
+  contact: Keir Bradwell
+  channel: linkedin
+  note: Connect request sent — editorial team
+  related_targets:
+  - anthropic-engineering-editorial-lead
+- date: '2026-03-21'
+  type: post_submission
+  contact: Aman Karmani
+  channel: linkedin
+  note: Connect request sent — VP Infrastructure
+  related_targets:
+  - cursor-software-engineer-enterprise-platform
+- date: '2026-03-21'
+  type: post_submission
+  contact: Jeremy Stribling
+  channel: linkedin
+  note: Connect request sent — founding engineer
+  related_targets:
+  - cursor-software-engineer-enterprise-platform
+- date: '2026-03-21'
+  type: post_submission
+  contact: Alex Haugland
+  channel: linkedin
+  note: Connect request sent — distributed systems eng
+  related_targets:
+  - cursor-software-engineer-enterprise-platform
+- date: '2026-03-21'
+  type: post_submission
+  contact: Ben Cohen
+  channel: linkedin
+  note: Connect request sent — Staff Applied Scientist, AI Research
+  related_targets:
+  - datadog-senior-ai-engineer-apm-experiences
+- date: '2026-03-21'
+  type: post_submission
+  contact: Pierre Lacave
+  channel: linkedin
+  note: Connect request sent — Senior SE, APM
+  related_targets:
+  - datadog-senior-ai-engineer-apm-experiences
+- date: '2026-03-21'
+  type: post_submission
+  contact: Kemal Akkoyun
+  channel: linkedin
+  note: Connect request sent — infra/performance eng
+  related_targets:
+  - datadog-senior-ai-engineer-apm-experiences
+- date: '2026-03-21'
+  type: post_submission
+  contact: Nikola Whallon
+  channel: linkedin
+  note: Connect request sent — Staff SE, inference
+  related_targets:
+  - deepgram-backend-engineer-inference-services
+- date: '2026-03-21'
+  type: post_submission
+  contact: James Hillyerd
+  channel: linkedin
+  note: Connect request sent — backend Go/Rust
+  related_targets:
+  - deepgram-backend-engineer-inference-services
+- date: '2026-03-21'
+  type: post_submission
+  contact: Brent George
+  channel: linkedin
+  note: Connect request sent — Senior SE backend
+  related_targets:
+  - deepgram-backend-engineer-inference-services
+- date: '2026-03-21'
+  type: post_submission
+  contact: Emily Jorgens
+  channel: linkedin
+  note: Connect request sent — Head of Enterprise BD
+  related_targets:
+  - perplexity-forward-deployed-engineer-applied-ai
+- date: '2026-03-21'
+  type: post_submission
+  contact: Tony Wu
+  channel: linkedin
+  note: Connect request sent — VP Engineering
+  related_targets:
+  - perplexity-forward-deployed-engineer-applied-ai
+- date: '2026-03-21'
+  type: post_submission
+  contact: Mark Imbriaco
+  channel: linkedin
+  note: Connect request sent — Head of Engineering
+  related_targets:
+  - railway-infrastructure-engineer
+- date: '2026-03-21'
+  type: post_submission
+  contact: Lawrence Gripper
+  channel: linkedin
+  note: Connect request sent — infra eng, ex-GitHub
+  related_targets:
+  - railway-infrastructure-engineer
+- date: '2026-03-21'
+  type: post_submission
+  contact: Charith Amarasinghe
+  channel: linkedin
+  note: Connect request sent — infra eng
+  related_targets:
+  - railway-infrastructure-engineer
+- date: '2026-03-21'
+  type: post_submission
+  contact: Jibu Chacko
+  channel: linkedin
+  note: Connection accepted — immediate warm referral to Joe B. (TA) within 3 
+    min
+  related_targets:
+  - together-ai-senior-developer-productivity-engineer
+- date: '2026-03-21'
+  type: post_submission
+  contact: Joe B.
+  channel: linkedin
+  note: Warm referral from Jibu Chacko — email wall on LinkedIn, asked Jibu for 
+    direct intro
+  related_targets:
+  - together-ai-senior-developer-productivity-engineer
+- date: '2026-03-21'
+  type: seed
+  contact: Noah Beddome
+  channel: linkedin
+  note: DM + comment on hiring post — platform eng DevEx/Infra roles at 
+    Owner.com. Warm path via Forrest Buff (ex-Datadog). Ex-Datadog security 
+    leader.
+  related_targets: []
+- date: '2026-03-21'
+  type: seed
+  contact: Forrest Buff
+  channel: linkedin
+  note: Mutual friend with Noah Beddome (Owner.com). Ex-Datadog. Marines 
+    connection via Chris.
+  related_targets: []
+- date: '2026-03-21'
+  type: contribution
+  contact: primeinc
+  channel: github
+  note: 'PR #39 submitted to primeinc/github-stars — CodeQL security scan workflow
+    (issue #28)'
+  related_targets: []
+- date: '2026-03-21'
+  type: contribution
+  contact: ipqwery
+  channel: github
+  note: 'PR #8 submitted to ipqwery/ipapi-py — Codecov integration (issue #1)'
+  related_targets: []
+- date: '2026-03-21'
+  type: contribution
+  contact: anthropics
+  channel: github
+  note: 'PR #723 submitted to anthropics/skills — testing-patterns skill'
+  related_targets:
+  - anthropic-engineering-editorial-lead
+- date: '2026-03-21'
+  type: contribution
+  contact: langchain-ai
+  channel: github
+  note: 'PR #7237 submitted to langchain-ai/langgraph — restart-safety put_writes
+    coverage (issue #7201)'
+  related_targets: []
+- date: '2026-03-21'
+  type: contribution
+  contact: dbt-labs
+  channel: github
+  note: 'PR #669 submitted to dbt-labs/dbt-mcp — OAuth page wording fix (issue #609)'
+  related_targets: []
+- date: '2026-03-22'
+  type: contribution
+  contact: temporalio
+  channel: github
+  note: 'PR #1385 submitted to temporalio/sdk-python — document telemetry config fields
+    (issue #1121)'
+  related_targets: []

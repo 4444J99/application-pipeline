@@ -10,70 +10,8 @@ target:
   portal: greenhouse
   location: New York, New York, USA
   location_class: us-onsite
-  description: "<h2><strong>The opportunity</strong></h2> <p>Datadog\u2019s APM Experiences\
-    \ team owns the core product experience for <a href=\"https://docs.datadoghq.com/tracing/\"\
-    >Application Performance Monitoring</a> \u2014 including distributed tracing,\
-    \ service representation, and more. We\u2019re building a new wave of AI-powered\
-    \ capabilities that help customers <em>detect, resolve, and prevent</em> performance\
-    \ issues faster. In this role, you will lead end\u2011to\u2011end development\
-    \ of LLM- and Agent\u2011based features that can:</p> <ul> <li>Debug and investigate\
-    \ application performance issues down to the root cause, as both a developer assistant\
-    \ and a fully autonomous agent</li> <li>Proactively recommend performance and\
-    \ reliability-based optimizations to prevent the next incident</li> <li>Automatically\
-    \ create intelligent monitors and SLOs for the most important business flows and\
-    \ critical paths</li> </ul> <p>This is a highly product\u2011minded engineering\
-    \ role: you\u2019ll work from problem discovery and UX all the way to reliable,\
-    \ scalable production systems.</p> <h2><strong>What you\u2019ll do</strong></h2>\
-    \ <ul> <li><strong>Shape AI experiences for APM.</strong> Design and ship LLM/agentic\
-    \ workflows that analyze traces, metrics, logs, and other telemetry to generate\
-    \ diagnoses, explanations, and guided fixes.</li> <li><strong>Own the full loop.</strong>\
-    \ Prototype quickly, define success metrics and evals, run experiments, iterate,\
-    \ and ultimately productionize for scale and reliability.</li> <li><strong>Build\
-    \ robust agent systems.</strong> Develop tools, retrieval and planning strategies,\
-    \ and guardrails; manage prompts/evals; design fallbacks and human\u2011in\u2011\
-    the\u2011loop paths.</li> <li><strong>Integrate with Datadog\u2019s platform.</strong>\
-    \ Leverage surfaces like Trace Explorer, Service Catalog, monitors, and workflows\
-    \ to deliver end\u2011to\u2011end value in the APM UI.</li> <li><strong>Partner\
-    \ deeply.</strong> Collaborate with PM, Design, and partner teams to build cohesive\
-    \ experiences.</li> <li><strong>Raise the bar on engineering.</strong> Write performant,\
-    \ maintainable backend code, own services in production, and improve reliability\
-    \ for high\u2011throughput, low\u2011latency data systems.</li> </ul> <h2><strong>Who\
-    \ you are</strong></h2> <p><strong>Product\u2011minded engineer who ships AI to\
-    \ production</strong></p> <ul> <li>4+ years building backend or real-time ML systems;\
-    \ you value simplicity, correctness, and performance</li> <li>Proven experience\
-    \ delivering LLM/agent features to production (prompting, tooling, evals, safety/guardrails)</li>\
-    \ <li>Comfortable owning user journeys, iterating from prototype \u2192 alpha\
-    \ \u2192 GA, and measuring impact with clear product metrics</li> <li>You have\
-    \ demonstrated ability to use AI coding tools in day-to-day workflows and validate,\
-    \ critique, and refine AI-generated output</li> <li>You\u2019re motivated to push\
-    \ the boundaries of how AI can improve software engineering best practices and\
-    \ contribute to building AI-enabled products</li> </ul> <p><strong>Strong ML /\
-    \ applied science fundamentals</strong></p> <ul> <li>Solid grasp of the ML lifecycle\
-    \ (task definition, dataset collection, modeling, evaluation, deployment, iteration)\
-    \ and statistics (experiment design, confidence intervals)</li> <li>Experience\
-    \ choosing/modeling the right technique for the job (e.g., anomaly detection,\
-    \ ranking/recommendation, NLP), and knowing when a heuristic beats a model</li>\
-    \ <li>Fluency with offline/online evals for AI systems; can build reliable golden\
-    \ sets and automatic regressions</li> </ul> <p><strong>Distributed systems &amp;\
-    \ observability savvy</strong></p> <ul> <li>Experience with microservices performance:\
-    \ tracing, latency breakdowns, concurrency, and resiliency patterns</li> <li>Proficient\
-    \ in Go, Java, or Python; strong API/service design; production ops (monitoring,\
-    \ alerting, on\u2011call rotation)</li> </ul> <p><strong>Nice to have</strong></p>\
-    \ <ul> <li>Hands\u2011on with distributed tracing stacks (OpenTelemetry/Datadog\
-    \ APM), profilers, and logs/metrics pipelines</li> <li>Exposure to planning/agent\
-    \ frameworks, tool\u2011use orchestration, RAG, and retrieval/indexing for observability\
-    \ data</li> <li>Familiarity with SLO/SLA practices and incident response</li>\
-    \ </ul> <h4>Benefits and Growth:</h4> <ul> <li>Get to build tools for software\
-    \ engineers, just like yourself. And use the tools we build to accelerate our\
-    \ development.</li> <li>Have a lot of influence on product direction and impact\
-    \ on the business.</li> <li>Work with skilled, knowledgeable, and kind teammates\
-    \ who are happy to teach and learn.</li> <li>Competitive global benefits.</li>\
-    \ <li>Continuous professional development.<br><br></li> </ul> <p><em>Benefits\
-    \ and Growth listed above may vary based on the country of your employment and\
-    \ the nature of your employment with Datadog.</em></p> <p>&nbsp;</p> <p style=\"\
-    color: white;\">#LI-Hybrid</p><div class=\"content-pay-transparency\"><div class=\"\
-    pay-input\"><div class=\"description\"><p>Datadog offers a competitive salary\
-    \ and equity package, and may include variable compensation. Actual compe"
+  description: "<h2><strong>The opportunity</strong></h2> <p>Datadog’s APM Experiences team owns the core product experience for <a href=\"https://docs.datadoghq.com/tracing/\">Application Performance Monitoring</a> — including distributed tracing, service representation, and more. We’re building a new wave of AI-powered capabilities that help customers <em>detect, resolve, and prevent</em> performance issues faster. In this role, you will lead end‑to‑end development of LLM- and Agent‑based features that can:</p> <ul> <li>Debug and investigate application performance issues down to the root cause, as both a developer assistant and a fully autonomous agent</li> <li>Proactively recommend performance and reliability-based optimizations to prevent the next incident</li> <li>Automatically create intelligent monitors and SLOs for the most important business flows and critical paths</li> </ul> <p>This is a highly product‑minded engineering role: you’ll work from problem discovery and UX all the way to reliable, scalable production systems.</p> <h2><strong>What you’ll do</strong></h2> <ul> <li><strong>Shape AI experiences for APM.</strong> Design and ship LLM/agentic workflows that analyze traces, metrics, logs, and other telemetry to generate diagnoses, explanations, and guided fixes.</li> <li><strong>Own the full loop.</strong> Prototype quickly, define success metrics and evals, run experiments, iterate, and ultimately productionize for scale and reliability.</li> <li><strong>Build robust agent systems.</strong> Develop tools, retrieval and planning strategies, and guardrails; manage prompts/evals; design fallbacks and human‑in‑the‑loop paths.</li> <li><strong>Integrate with Datadog’s platform.</strong> Leverage surfaces like Trace Explorer, Service Catalog, monitors, and workflows to deliver end‑to‑end value in the APM UI.</li> <li><strong>Partner deeply.</strong> Collaborate with PM, Design, and partner teams to build cohesive experiences.</li> <li><strong>Raise the bar on engineering.</strong> Write performant, maintainable backend code, own services in production, and improve reliability for high‑throughput, low‑latency data systems.</li> </ul> <h2><strong>Who you are</strong></h2> <p><strong>Product‑minded engineer who ships AI to production</strong></p> <ul> <li>4+ years building backend or real-time ML systems; you value simplicity, correctness, and performance</li> <li>Proven experience delivering LLM/agent features to production (prompting, tooling, evals, safety/guardrails)</li> <li>Comfortable owning user journeys, iterating from prototype → alpha → GA, and measuring impact with clear product metrics</li> <li>You have demonstrated ability to use AI coding tools in day-to-day workflows and validate, critique, and refine AI-generated output</li> <li>You’re motivated to push the boundaries of how AI can improve software engineering best practices and contribute to building AI-enabled products</li> </ul> <p><strong>Strong ML / applied science fundamentals</strong></p> <ul> <li>Solid grasp of the ML lifecycle (task definition, dataset collection, modeling, evaluation, deployment, iteration) and statistics (experiment design, confidence intervals)</li> <li>Experience choosing/modeling the right technique for the job (e.g., anomaly detection, ranking/recommendation, NLP), and knowing when a heuristic beats a model</li> <li>Fluency with offline/online evals for AI systems; can build reliable golden sets and automatic regressions</li> </ul> <p><strong>Distributed systems &amp; observability savvy</strong></p> <ul> <li>Experience with microservices performance: tracing, latency breakdowns, concurrency, and resiliency patterns</li> <li>Proficient in Go, Java, or Python; strong API/service design; production ops (monitoring, alerting, on‑call rotation)</li> </ul> <p><strong>Nice to have</strong></p> <ul> <li>Hands‑on with distributed tracing stacks (OpenTelemetry/Datadog APM), profilers, and logs/metrics pipelines</li> <li>Exposure to planning/agent frameworks, tool‑use orchestration, RAG, and retrieval/indexing for observability
+    data</li> <li>Familiarity with SLO/SLA practices and incident response</li> </ul> <h4>Benefits and Growth:</h4> <ul> <li>Get to build tools for software engineers, just like yourself. And use the tools we build to accelerate our development.</li> <li>Have a lot of influence on product direction and impact on the business.</li> <li>Work with skilled, knowledgeable, and kind teammates who are happy to teach and learn.</li> <li>Competitive global benefits.</li> <li>Continuous professional development.<br><br></li> </ul> <p><em>Benefits and Growth listed above may vary based on the country of your employment and the nature of your employment with Datadog.</em></p> <p>&nbsp;</p> <p style=\"color: white;\">#LI-Hybrid</p><div class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"description\"><p>Datadog offers a competitive salary and equity package, and may include variable compensation. Actual compe"
 deadline:
   date: null
   type: rolling
@@ -118,7 +56,27 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
+  follow_up_count: 3
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-03-20"
+last_touched: "2026-03-21"
+follow_up:
+- date: '2026-03-21'
+  channel: linkedin
+  contact: Ben Cohen
+  type: dm
+  note: Connect request sent — Staff Applied Scientist, AI Research
+  response: none
+- date: '2026-03-21'
+  channel: linkedin
+  contact: Pierre Lacave
+  type: dm
+  note: Connect request sent — Senior SE, APM
+  response: none
+- date: '2026-03-21'
+  channel: linkedin
+  contact: Kemal Akkoyun
+  type: dm
+  note: Connect request sent — infra/performance eng
+  response: none
