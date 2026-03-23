@@ -1809,3 +1809,11 @@ entries:
   note: 'PR #1385 submitted to temporalio/sdk-python — document telemetry config fields
     (issue #1121)'
   related_targets: []
+- date: '2026-03-22'
+  type: reciprocal
+  contact: Matthew Diakonov
+  channel: github
+  note: 'Replied to his 3 comments on agentic-titan #20 (parallel failure handling).
+    Starred fazm, social-autoposter, whatsapp2llm. He builds fazm (voice AI Mac agent),
+    Mediar ($2.8M seed), screenpipe. SF-based.'
+  related_targets: []
