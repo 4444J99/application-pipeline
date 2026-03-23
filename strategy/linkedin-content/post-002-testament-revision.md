@@ -1,5 +1,5 @@
 ---
-title: "Post #3 — The Bridge Revision"
+title: "Post #2 — The Bridge Revision"
 subtitle: "The inaugural post rewritten through its own formalization"
 status: DRAFT
 date: 2026-03-23
