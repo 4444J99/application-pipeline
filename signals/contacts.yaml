@@ -1,16 +1,53 @@
 contacts:
 - name: Tony Carbone
   organization: Alternative Funding Group
-  role: Unknown
-  channel: email
-  relationship_strength: 2
+  role: Managing Partner
+  channel: phone
+  relationship_strength: 6
   interactions:
-  - date: '2026-03-13'
-    type: email
-    note: 'Inbound: interested in scaling underwriting automation and SaaS expansion
-      for MCA/forward funding. Found via GitHub projects.'
-  pipeline_entries: []
-  tags: []
+  - date: '2026-03-04'
+    type: linkedin_inbound
+    note: 'Inbound LinkedIn DM: saw GitHub work, MCA paid campaigns, underwriting
+      automation + lead gen engine at Alternative Funding Group.'
+  - date: '2026-03-05'
+    type: email_inbound
+    note: 'Cold email (tony@altfunding.com): Quick call — MCA + SaaS expansion. Cited
+      Forward Funding background. Two ventures: Alt Funding Group + Flyland.com (healthcare).'
+  - date: '2026-03-09'
+    type: email_follow_up
+    note: 'Follow-up email: exploring other options, wants input before deciding direction.'
+  - date: '2026-03-12'
+    type: email_reply
+    note: 'User replied via email, shared phone number. Also replied on LinkedIn.'
+  - date: '2026-03-14'
+    type: scheduling
+    note: 'Tony proposed Monday call, shared cell 305-546-5774.'
+  - date: '2026-03-17'
+    type: call
+    note: '40-min call. Discussed: rehab ad campaigns, therapy.org/Flyland.com buildout,
+      MCA sales automation, bank statement scraping. User pitched front-load then
+      maintenance. Bonded over NY roots. Tony awaiting follow-up.'
+  pipeline_entries:
+  - alternative-funding-group-technical-partner
+  tags:
+  - inbound
+  - mca
+  - healthcare-saas
+  next_action: 'Text follow-up: reference sales automation piece, pitch front-load approach'
+  next_action_date: '2026-03-24'
+- name: Alexis C.
+  organization: Alternative Funding Group
+  role: Managing Director / Owner
+  channel: linkedin
+  relationship_strength: 1
+  interactions:
+  - date: '2026-03-19'
+    type: profile_view
+    note: "Viewed profile 4 days after Tony's call. Likely vetting at Tony's direction."
+  pipeline_entries:
+  - alternative-funding-group-technical-partner
+  tags:
+  - business-partner-of-tony-carbone
   next_action: ''
   next_action_date: ''
 - name: Vincent Jiang

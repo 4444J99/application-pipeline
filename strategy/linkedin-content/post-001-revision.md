@@ -35,7 +35,7 @@ This convergence isn't decorative. It's what happens when you treat craft as eng
 1. Parker, T. & Stone, M. NYU masterclass (2014). The "but/therefore" causal connector rule.
 2. Aristotle, *Poetics* (~335 BCE). Recognition (*anagnorisis*) as the structural mechanism of dramatic impact.
 3. ORGANVM system — seed.yaml contract schema: github.com/meta-organvm
-4. Narratological Algorithmic Lenses — 14 completed studies: github.com/ivviiviivvi/narratological-algorithmic-lenses
+4. Narratological Algorithmic Lenses — 14 completed studies: github.com/organvm-i-theoria/narratological-algorithmic-lenses
 
 ## Testament Audit
 
