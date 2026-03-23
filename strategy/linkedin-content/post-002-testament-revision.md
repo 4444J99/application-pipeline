@@ -12,9 +12,10 @@ precis: >
   linear algebra converge on the same structural constraint. This post is
   the before/after.
 images:
-  - linkedin-01-network.png (contribution network topology)
-  - linkedin-02-phases.png (campaign phases)
-  - linkedin-03-symbiote.png (cross-organ symbiote)
+  - post002-01-audit.png (before/after Testament audit scores)
+  - post002-02-rhetorical-space.png (ℝ³ rhetorical vector space — post migration)
+  - post002-03-network.png (contribution network with real star counts)
+  - post002-04-recursive.png (recursive proof — THEREFORE chain with feedback loop)
   - location: /Users/4jp/Workspace/organvm-iv-taxis/orchestration-start-here/contrib_engine/artifacts/
 ---
 
