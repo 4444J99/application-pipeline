@@ -35,6 +35,7 @@ Career application pipeline repo — personal infrastructure for managing grant,
 - `strategy/` — Strategic documents (funding strategy, scoring rubric, identity positions, campaign reports)
 - `scripts/` — Python CLI tooling (all scripts import from `pipeline_lib.py`). Includes ATS-specific submitters for Greenhouse, Lever, and Ashby portals.
 - `docs/` — Architecture rationale and workflow guide
+- `.claude/memory/` — Session memory backup (synced from `~/.claude/projects/.../memory/`). Must be committed and pushed on every session close. 22 files: 7 feedback rules, 12 project records, 2 consulting pivot records, 1 index.
 
 ## Pipeline State Machine
 
