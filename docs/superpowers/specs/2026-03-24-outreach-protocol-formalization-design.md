@@ -23,6 +23,15 @@ Formally:
 ∀m ∈ M: Testament(m) ∧ Protocol(M)
 ```
 
+**Vacuous satisfaction:** Testament articles whose structural preconditions are unmet
+are vacuously satisfied. For short-form messages (connect notes, DMs):
+- Art. IV (Non-Submersible Units, 4-8 sections) — no sections exist → axiom precondition unmet → vacuously true
+- Art. V (Collision Geometry, multi-thread convergence) — single short message has one thread → vacuously true
+- Art. VII (Citation Discipline, endnote format) — no citations present → vacuously true
+
+This is mathematically correct (∀x ∈ ∅: P(x) is trivially true) but stated explicitly
+to prevent implementation confusion in validators.
+
 ## 3. Deliverables
 
 | Deliverable | Location | Purpose |
@@ -98,11 +107,14 @@ Theorem 0 (Conservation of Conversational Energy):
   The total energy budget is finite and bounded:
     E(S₀) ≤ E_max (platform-dependent constant)
 
-  Each message consumes attention:
-    a_{n+1} < a_n  (strict monotonic decrease within a phase)
+  Each OUTBOUND message consumes attention:
+    a_{n+1} < a_n  for consecutive outbound turns within a phase
 
-  But the acceptance boundary partially restores it:
-    a_post > a_pre  (the act of accepting signals renewed willingness)
+  INBOUND messages (recipient turns) may partially restore attention:
+    a_post_inbound ≥ a_pre_inbound  (recipient engagement signals interest)
+
+  The acceptance boundary provides a larger restoration:
+    a_post_accept > a_pre_accept  (the act of accepting signals renewed willingness)
 
   THEREFORE: the Protocol's laws are all energy-optimal —
   they minimize attention cost while maximizing the τ·ω + μ product.
@@ -744,6 +756,10 @@ def identify_tensions(recipient: Agent) -> list[Tension]:
 The inhabitation function:
   I(q, r) = Σᵢ wᵢ · overlap(q, domainᵢ(r))
 
+  where overlap(q, d) = semantic_similarity(q.text, d.description)
+  implemented as TF-IDF cosine similarity (using the project's existing
+  text_match.py engine) or embedding-based cosine similarity when available.
+
 Empirical weights:
   w_tension = 0.35, w_decision = 0.30, w_role = 0.20, w_org = 0.10, w_public = 0.05
 
@@ -981,12 +997,19 @@ Theorem C-2 (The Seed-Harvest Isomorphism):
 
   Both satisfy: specific ∧ recoverable ∧ (falsifiable ∨ frame_novel)
 
-Theorem C-3 (The ρ-I Coupling):
-  ρ(m) + I(m) ≈ 1
+Theorem C-3 (The ρ-I Directional Coupling):
+  ∂ρ/∂n < 0 → capacity for I increases
 
-  As self-description decreases, inhabitation must increase.
-  Conservation: the content budget is allocated either to self-description
-  or to recipient-focus. As one decreases, the other increases.
+  As self-description decreases across turns, more content budget
+  becomes available for recipient-focused inhabitation. This is a
+  DIRECTIONAL coupling, not a strict conservation: ρ(m) + I(m) ≈ 1
+  holds only when content is binary (about sender or about recipient).
+  Messages referencing third parties, shared context, or abstract topics
+  may have both low ρ and low I simultaneously.
+
+  The soft constraint: ρ(m) + I(m) ≥ 0.7 (at least 70% of content
+  is either self-referential or recipient-focused; at most 30% is
+  neutral/third-party).
 
 Theorem C-4 (The Energy-Closure Bound):
   max_turns ≤ E₀ / c₀
@@ -1042,10 +1065,28 @@ Inputs: connect note text, recipient Agent (from contacts.yaml), pipeline entry.
 
 ### Phase 4: Integration with Existing Pipeline
 
-- `outreach_templates.py` — upgrade `generate_connect_note()` to run P-I validation; reject hooks that fail specificity/validity gate
-- `outreach_engine.py` — add `generate_acceptance_dm()` stage that invokes DMComposer when a connection acceptance is logged
-- `followup.py` — integrate thread health checks (P-VII) into follow-up scheduling
-- `run.py` — add `protocol` quick command for running Protocol validation on a message sequence
+**`outreach_templates.py`:**
+- Upgrade `generate_connect_note()` to run P-I validation as a post-generation gate. Generation produces candidate text; `validate_hook_planting()` runs on the result; if it fails, the template is regenerated with tighter constraints. Not a wrapper — a feedback loop.
+- Expand `position_hooks` dict from 5 to all 9 canonical identity positions (add: documentation-engineer, governance-architect, platform-orchestrator, founder-operator). Same expansion for `position_evidence` in `generate_cold_email()`.
+- New function: `generate_acceptance_dm_template(entry, connect_note_text)` that invokes DMComposer.
+
+**`outreach_engine.py`:**
+- Add `"acceptance"` to the lifecycle stages alongside the existing `PROTOCOL` dict (connect/email/followup).
+- New function: `prepare_acceptance_dm(entry_id, connect_note_text)` triggered when an acceptance is logged in outreach-log.yaml (type: acceptance).
+- Wiring: recipient `Agent` constructed from `contacts.yaml` via `pipeline_lib.load_contacts()` → filter by name/org → construct Agent dataclass with role, org, org_size, known tensions.
+- The existing `prepare_outreach()` flow (which operates on `submitted`/`staged` entries) remains unchanged. Acceptance DMs are a parallel path, not a modification of the existing pipeline.
+
+**`followup.py`:**
+- Import `validate_thread_health()` from `protocol_validator.py`.
+- Before generating follow-up actions for a contact, check thread health. If P-VII flags diminishing returns or closure, suppress the follow-up and log the reason.
+
+**`run.py`:**
+- Add `protocol <entry-id>` quick command: runs Protocol validation on all outreach messages for an entry.
+- Add `compose-dm <entry-id>` quick command: composes an acceptance DM using DMComposer and prints to stdout.
+
+**New shared types** (in `protocol_types.py`, following the project's module decomposition pattern):
+- `Message`, `Agent`, `Claim`, `Tension`, `Question` — core domain types
+- `ContinuityAnalysis`, `DecayAnalysis`, `QuestionAnalysis`, `InhabitationAnalysis`, `ResourceAnalysis`, `ThreadAnalysis`, `ProtocolReport` — result dataclasses
 
 ### Phase 5: Test Coverage
 
@@ -1083,6 +1124,28 @@ tests/test_dm_composer.py
   - test_compose_acceptance_dm_posthog
   - test_composed_dm_passes_all_protocol_articles
   - test_composed_dm_passes_all_testament_articles
+  - test_compose_rejects_hookless_connect_note
+  - test_compose_handles_missing_recipient_data
+  - test_compose_handles_no_portfolio_url
+  - test_compose_refuses_followup_after_closure
+
+tests/test_cross_article_couplings.py
+  - test_seed_harvest_isomorphism_hook_validity_implies_question_validity
+  - test_seed_harvest_isomorphism_question_validity_implies_hook_validity
+  - test_energy_closure_bound_thread_exceeding_budget_flagged
+  - test_energy_closure_bound_thread_within_budget_passes
+  - test_rho_i_directional_coupling_low_rho_enables_high_i
+  - test_rho_i_soft_floor_enforced
+  - test_testament_integration_all_13_articles_on_composed_dm
+
+tests/test_outreach_templates.py (EXISTING — add Protocol-integrated tests)
+  - test_generate_connect_note_passes_hook_planting
+  - test_generate_connect_note_all_9_positions_covered
+  - test_connect_note_primary_hook_in_notification_window
+
+tests/test_outreach_engine.py (EXISTING — add acceptance DM tests)
+  - test_prepare_acceptance_dm_produces_valid_output
+  - test_acceptance_dm_wires_recipient_from_contacts
 ```
 
 ---
