@@ -310,17 +310,17 @@ def _generate_question(recipient: Agent, tensions: list) -> str:
             f"the one that doesn't have a clean answer?"
         )
 
-    if "ceo" in role_lower or "founder" in role_lower or "co-ceo" in role_lower:
-        return (
-            f"{org} bet on a specific thesis early. At this point, has that bet "
-            f"paid off in ways you didn't expect, or mostly in the ways you predicted?"
-        )
-
     if "artistic director" in role_lower or "curator" in role_lower:
         return (
             f"Most submissions treat technology as material rather than institution. "
             f"Is governance-as-medium something {org} is actively tracking, "
             f"or is it still too structural for most applicants?"
+        )
+
+    if "ceo" in role_lower or "founder" in role_lower or "co-ceo" in role_lower:
+        return (
+            f"{org} bet on a specific thesis early. At this point, has that bet "
+            f"paid off in ways you didn't expect, or mostly in the ways you predicted?"
         )
 
     if "recruiter" in role_lower:
