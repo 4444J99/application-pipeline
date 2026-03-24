@@ -1122,7 +1122,21 @@ nodes:
   channel: linkedin
   last_interaction: '2026-03-23'
   tags: []
+- name: Scott Lefler
+  organization: Lefler Design
+  role: Owner / Designer / Marketer
+  degree: 1
+  channel: imessage
+  last_interaction: '2026-03-23'
+  tags:
+  - partnership
+  - 10yr-friend
 edges:
+- from: Anthony Padavano
+  to: Scott Lefler
+  strength: 8
+  relationship_type: partnership
+  note: 'Build+sell partnership. 10yr friend. Content engine product. FaceTime 2026-03-23.'
 - from: Anthony Padavano
   to: Tony Carbone
   strength: 2
