@@ -1941,3 +1941,46 @@ entries:
   note: 'Public comment reply on Bridge Audit LinkedIn post. Former boss at FAU Writing
     Center 10 years ago — she hired user for the position.'
   related_targets: []
+- date: '2026-03-24'
+  type: acceptance
+  contact: Mario Tayah
+  channel: linkedin
+  note: 'Connection accepted. Was "Mario T." pre-connection. Head of Engineering at
+    Stripe. Linked to Bridge smart contract role.'
+  related_targets:
+  - stripe-software-engineer-smart-contract-bridge
+- date: '2026-03-24'
+  type: acceptance
+  contact: Gerfried Stocker
+  channel: linkedin
+  note: 'Connection accepted. Co-CEO & Artistic Director of Ars Electronica. Prix
+    Ars submissions already sent.'
+  related_targets:
+  - prix-ars-digital-humanity
+- date: '2026-03-24'
+  type: acceptance
+  contact: James Hawkins
+  channel: linkedin
+  note: 'Connection accepted. Co-CEO of PostHog. Open-source product analytics.'
+  related_targets:
+  - posthog-clickhouse-operations-engineer
+- date: '2026-03-24'
+  type: acceptance
+  contact: Matt Fleming
+  channel: linkedin
+  note: 'Connection accepted. Strativ Group recruiter, also in environmental TIC.'
+  related_targets: []
+- date: '2026-03-24'
+  type: acceptance
+  contact: Bruce Jackson Jr.
+  channel: linkedin
+  note: 'Connection accepted. Public figure, songwriter. Community contact — not pipeline-relevant.'
+  related_targets: []
+- date: '2026-03-24'
+  type: engagement
+  contact: Suzanne Sink PhD
+  channel: linkedin
+  note: 'Amended comment on original Bridge Audit post — rhetoric training credit.
+    Suzanne responded sharing her own academic-to-private-sector trajectory. Thread
+    complete — strong reconnection.'
+  related_targets: []

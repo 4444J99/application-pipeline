@@ -1520,13 +1520,16 @@ contacts:
   - date: '2026-03-18'
     note: Connection request sent — doubling-back outreach
     type: doubling_back
+  - date: '2026-03-24'
+    type: acceptance
+    note: Connection accepted.
   name: James Hawkins
-  next_action: DM if accepted
-  next_action_date: '2026-03-25'
+  next_action: DM — open-source infrastructure, PostHog philosophy
+  next_action_date: '2026-03-26'
   organization: PostHog
   pipeline_entries:
   - posthog-clickhouse-operations-engineer
-  relationship_strength: 1
+  relationship_strength: 2
   role: CEO & Co-Founder
   tags:
   - doubling-back-2026-03-18
@@ -1901,13 +1904,16 @@ contacts:
   - date: '2026-03-18'
     note: Connection request sent — doubling-back outreach
     type: doubling_back
+  - date: '2026-03-24'
+    type: acceptance
+    note: Connection accepted.
   name: Gerfried Stocker
-  next_action: DM if accepted
-  next_action_date: '2026-03-25'
+  next_action: DM — ORGANVM governance-as-artwork, Prix Ars submission
+  next_action_date: '2026-03-24'
   organization: Ars Electronica
   pipeline_entries:
   - prix-ars-digital-humanity
-  relationship_strength: 1
+  relationship_strength: 2
   role: Co-CEO & Artistic Director
   tags:
   - doubling-back-2026-03-18
@@ -2172,20 +2178,24 @@ contacts:
   role: Program Director / Interim Executive Director
   tags:
   - doubling-back-2026-03-18
-- name: Mario T.
+- name: Mario Tayah
   organization: Stripe
-  role: ''
+  role: Head of Engineering
   channel: linkedin
-  relationship_strength: 2
+  relationship_strength: 3
   interactions:
   - date: '2026-03-18'
     type: post_submission
     note: Connection request sent
+  - date: '2026-03-24'
+    type: acceptance
+    note: Connection accepted. Full name revealed — was "Mario T." pre-connection.
   pipeline_entries:
   - stripe-software-engineer-smart-contract-bridge
-  tags: []
-  next_action: ''
-  next_action_date: ''
+  tags:
+  - engineering-leadership
+  next_action: DM — reference Bridge role, ask about eng culture
+  next_action_date: '2026-03-24'
 - name: Martin Melin
   organization: Stripe
   role: ''
@@ -2776,18 +2786,21 @@ contacts:
   organization: Strativ Group
   role: Recruitment Consultant Tech
   channel: linkedin
-  relationship_strength: 1
+  relationship_strength: 2
   linkedin: https://www.linkedin.com/in/matttfleming/
   interactions:
   - date: '2026-03-23'
     type: seed
     note: Connection request + message sent. Tech recruitment consultant.
+  - date: '2026-03-24'
+    type: acceptance
+    note: Connection accepted. LinkedIn headline now shows environmental TIC focus.
   pipeline_entries: []
   tags:
   - recruiter
   - strativ-group
-  next_action: Await response
-  next_action_date: '2026-03-30'
+  next_action: Light thank-you DM
+  next_action_date: '2026-03-26'
 - name: Ben Reading
   organization: Strativ Group
   role: US-based Recruiter
@@ -2839,3 +2852,17 @@ contacts:
   - strativ-group
   next_action: Follow up — she accepted, door is open
   next_action_date: '2026-03-24'
+- name: Bruce Jackson Jr.
+  organization: ''
+  role: Public Figure, Songwriter & Entertainer
+  channel: linkedin
+  relationship_strength: 1
+  interactions:
+  - date: '2026-03-24'
+    type: acceptance
+    note: Connection accepted. Not pipeline-relevant — community contact.
+  pipeline_entries: []
+  tags:
+  - community
+  next_action: ''
+  next_action_date: ''
