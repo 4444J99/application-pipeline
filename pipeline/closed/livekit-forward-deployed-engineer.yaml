@@ -1,8 +1,8 @@
 id: livekit-forward-deployed-engineer
 name: LiveKit Forward Deployed Engineer
 track: job
-status: submitted
-outcome: null
+status: outcome
+outcome: rejected
 target:
   organization: LiveKit
   url: https://jobs.ashbyhq.com/livekit
@@ -51,15 +51,15 @@ timeline:
   date_added: '2026-03-18'
   discovered: '2026-03-18T17:32:05.767495+00:00'
 conversion:
-  response_received: false
-  response_type: null
+  response_received: true
+  response_type: rejection
   time_to_response_days: null
   feedback: null
   follow_up_count: 3
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-03-18"
+last_touched: '2026-03-23'
 status_meta:
   submitted_by: 4jp
   submitted_at: '2026-03-18'

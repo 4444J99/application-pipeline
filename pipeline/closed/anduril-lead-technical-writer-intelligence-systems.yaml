@@ -1,8 +1,8 @@
 id: anduril-lead-technical-writer-intelligence-systems
 name: Anduril Lead Technical Writer, Intelligence Systems
 track: job
-status: submitted
-outcome: null
+status: outcome
+outcome: rejected
 target:
   organization: Anduril
   url: https://boards.greenhouse.io/andurilindustries
@@ -50,15 +50,15 @@ timeline:
   discovered: '2026-03-13T10:16:06.531032+00:00'
   submitted: '2026-03-15'
 conversion:
-  response_received: false
-  response_type: null
+  response_received: true
+  response_type: rejection
   time_to_response_days: null
   feedback: null
   follow_up_count: 3
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-03-17'
+last_touched: '2026-03-22'
 status_meta:
   submitted_by: 4jp
   submitted_at: '2026-03-15'

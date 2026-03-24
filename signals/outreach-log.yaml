@@ -1825,3 +1825,119 @@ entries:
     (first external PR to his repo). Reciprocating his 3 comments on agentic-titan
     #20. Also replied to his FUSION→FISSION question.'
   related_targets: []
+- date: '2026-03-23'
+  type: connection_accepted
+  contact: Scott Lefler
+  channel: linkedin
+  note: 'LinkedIn connection accepted. Partnership pitch sent same day via iMessage.
+    10yr friend, Lefler.Design owner.'
+  related_targets:
+  - lefler-padavano-automation-partnership
+- date: '2026-03-23'
+  type: connection_accepted
+  contact: Kartik Mistry
+  channel: linkedin
+  note: 'Staff Software Engineer at Wikimedia Foundation. OSS-aligned. New connection.'
+  related_targets: []
+- date: '2026-03-23'
+  type: connection_accepted
+  contact: Carly Richmond
+  channel: linkedin
+  note: 'Developer Advocate Lead @ Elastic. International keynote speaker, UI developer,
+    blogger. New connection.'
+  related_targets: []
+- date: '2026-03-23'
+  type: inbound_recruiter
+  contact: Strativ Group recruiter
+  channel: linkedin
+  note: '3 recruiters viewed profile including Strativ Group (staffing/recruiting).
+    Inbound interest from Bridge Audit post (197 impressions).'
+  related_targets: []
+- date: '2026-03-23'
+  type: content_engagement
+  contact: Suzanne Sink PhD
+  channel: linkedin
+  note: 'Commented on Bridge Audit post: "Interesting work with some impactful implications."
+    Post at 197 impressions, 1 reaction, 1 comment. Second LinkedIn post ever.'
+  related_targets: []
+- date: '2026-03-23'
+  type: inmail
+  contact: Brent George
+  channel: linkedin
+  note: 'InMail sent to Tech Lead Manager at Deepgram. Third touchpoint after connect
+    request (3/21) and two profile views (3/22, 3/23). Escalating warm signal.'
+  related_targets:
+  - deepgram-backend-engineer-inference-services
+- date: '2026-03-23'
+  type: seed
+  contact: Kieran Haynes
+  channel: linkedin
+  note: 'Connection request + message sent to AI Recruitment Manager at Strativ Group.
+    Cold outreach to UK-based recruiter expanding US market.'
+  related_targets: []
+- date: '2026-03-23'
+  type: seed
+  contact: Sam Evely
+  channel: linkedin
+  note: 'Connection request + message sent to US Expansion SaaS/AI recruiter at Strativ
+    Group.'
+  related_targets: []
+- date: '2026-03-23'
+  type: seed
+  contact: Matt Fleming
+  channel: linkedin
+  note: 'Connection request + message sent to Recruitment Consultant Tech at Strativ
+    Group.'
+  related_targets: []
+- date: '2026-03-23'
+  type: seed
+  contact: Ben Reading
+  channel: linkedin
+  note: 'Connection request + message sent to US-based recruiter at Strativ Group.'
+  related_targets: []
+- date: '2026-03-23'
+  type: seed
+  contact: Jacob Allan
+  channel: linkedin
+  note: 'Connection request + message sent to US contract market recruiter at Strativ
+    Group.'
+  related_targets: []
+- date: '2026-03-23'
+  type: seed
+  contact: Serena Cooper
+  channel: linkedin
+  note: 'Connection request + message sent to Austin HQ setup recruiter at Strativ
+    Group.'
+  related_targets: []
+- date: '2026-03-23'
+  type: follow_up
+  contact: Keisuke Kamata
+  channel: linkedin
+  note: 'DM follow-up to Manager AI Solution Engineer at Weights & Biases. Continuing
+    existing conversation about multi-model eval. He said "let me get back next week"
+    on 3/20.'
+  related_targets:
+  - weights-biases-chief-of-staff-product-engineering
+- date: '2026-03-23'
+  type: dm
+  contact: Kartik Mistry
+  channel: linkedin
+  note: 'DM sent to Staff Software Engineer at Wikimedia Foundation. Just connected
+    — first direct message.'
+  related_targets:
+  - wikimedia-senior-software-engineer-wikimedia-enterprise
+- date: '2026-03-23'
+  type: dm
+  contact: Carly Richmond
+  channel: linkedin
+  note: 'DM sent to Developer Advocate Lead at Elastic. Just connected — first direct
+    message.'
+  related_targets:
+  - elastic-elastic-ai-engineer
+- date: '2026-03-23'
+  type: engagement
+  contact: Suzanne Sink PhD
+  channel: linkedin
+  note: 'Public comment reply on Bridge Audit LinkedIn post. Former boss at FAU Writing
+    Center 10 years ago — she hired user for the position.'
+  related_targets: []

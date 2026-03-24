@@ -56,11 +56,11 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-  follow_up_count: 3
+  follow_up_count: 4
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-03-21"
+last_touched: "2026-03-23"
 follow_up:
 - date: '2026-03-21'
   channel: linkedin
@@ -85,4 +85,16 @@ follow_up:
   contact: Brent George
   type: profile_view
   note: "Tech Lead Manager at Deepgram viewed profile (20h ago). Now following. Warm signal post-submission."
+  response: none
+- date: '2026-03-23'
+  channel: linkedin
+  contact: Brent George
+  type: profile_view
+  note: "Second profile view in 2 days (1h ago). Escalating interest — actively tracking, not casual."
+  response: none
+- date: '2026-03-23'
+  channel: linkedin
+  contact: Brent George
+  type: inmail
+  note: "InMail sent to Tech Lead Manager. Third touchpoint after connect request and two profile views. Escalating warm signal."
   response: none

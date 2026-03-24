@@ -477,7 +477,7 @@ nodes:
   organization: Weights & Biases
   role: Manager, AI Solutions Engineering
   channel: linkedin
-  last_interaction: '2026-03-18'
+  last_interaction: '2026-03-23'
   tags: []
 - name: Chris Van Pelt
   organization: Weights & Biases
@@ -577,9 +577,9 @@ nodes:
   tags: []
 - name: Carly Richmond
   organization: Elastic
-  role: Principal Developer Advocate & Advocate Manager
+  role: Developer Advocate Lead
   channel: linkedin
-  last_interaction: '2026-03-18'
+  last_interaction: '2026-03-23'
   tags: []
 - name: JD Armada
   organization: Elastic
@@ -765,7 +765,7 @@ nodes:
   organization: Wikimedia
   role: Staff Software Engineer
   channel: linkedin
-  last_interaction: '2026-03-18'
+  last_interaction: '2026-03-23'
   tags: []
 - name: Gerfried Stocker
   organization: Ars Electronica
@@ -1065,13 +1065,62 @@ nodes:
   organization: FAU
   role: Educator / systems
   channel: linkedin
-  last_interaction: '2026-03-19'
+  last_interaction: '2026-03-23'
   tags: []
 - name: Justin Piesco
   organization: FAU
   role: Content Manager
   channel: linkedin
   last_interaction: '2026-03-18'
+  tags: []
+- name: Brent George
+  organization: Deepgram
+  role: Tech Lead Manager
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-23'
+  tags: []
+- name: Kieran Haynes
+  organization: Strativ Group
+  role: AI Recruitment Manager
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-23'
+  tags: []
+- name: Sam Evely
+  organization: Strativ Group
+  role: US Expansion SaaS/AI Recruiter
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-23'
+  tags: []
+- name: Matt Fleming
+  organization: Strativ Group
+  role: Recruitment Consultant Tech
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-23'
+  tags: []
+- name: Ben Reading
+  organization: Strativ Group
+  role: US-based Recruiter
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-23'
+  tags: []
+- name: Jacob Allan
+  organization: Strativ Group
+  role: US Contract Market Recruiter
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-23'
+  tags: []
+- name: Serena Cooper
+  organization: Strativ Group
+  role: Austin HQ Setup Recruiter
+  degree: 1
+  channel: linkedin
+  last_interaction: '2026-03-23'
   tags: []
 edges:
 - from: Anthony Padavano
@@ -2090,13 +2139,55 @@ edges:
   note: ''
 - from: Anthony Padavano
   to: Suzanne Sink, PhD
-  strength: 4
+  strength: 5
   relationship_type: crm_contact
   created: '2026-03-19'
-  note: ''
+  note: Former boss at FAU Writing Center 10 years ago
 - from: Anthony Padavano
   to: Justin Piesco
   strength: 4
   relationship_type: crm_contact
   created: '2026-03-19'
   note: ''
+- from: Anthony Padavano
+  to: Brent George
+  strength: 2
+  relationship_type: inmail
+  created: '2026-03-23'
+  note: InMail sent to Tech Lead Manager at Deepgram
+- from: Anthony Padavano
+  to: Kieran Haynes
+  strength: 1
+  relationship_type: seed
+  created: '2026-03-23'
+  note: Connection request + message to Strativ Group recruiter
+- from: Anthony Padavano
+  to: Sam Evely
+  strength: 1
+  relationship_type: seed
+  created: '2026-03-23'
+  note: Connection request + message to Strativ Group recruiter
+- from: Anthony Padavano
+  to: Matt Fleming
+  strength: 1
+  relationship_type: seed
+  created: '2026-03-23'
+  note: Connection request + message to Strativ Group recruiter
+- from: Anthony Padavano
+  to: Ben Reading
+  strength: 1
+  relationship_type: seed
+  created: '2026-03-23'
+  note: Connection request + message to Strativ Group recruiter
+- from: Anthony Padavano
+  to: Jacob Allan
+  strength: 1
+  relationship_type: seed
+  created: '2026-03-23'
+  note: Connection request + message to Strativ Group recruiter
+- from: Anthony Padavano
+  to: Serena Cooper
+  strength: 1
+  relationship_type: seed
+  created: '2026-03-23'
+  note: Connection request + message to Strativ Group recruiter

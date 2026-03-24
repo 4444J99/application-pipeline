@@ -1,8 +1,8 @@
 id: notion-solutions-engineer-commercial
 name: Notion Solutions Engineer, Commercial
 track: job
-status: submitted
-outcome: null
+status: outcome
+outcome: rejected
 target:
   organization: Notion
   url: https://jobs.ashbyhq.com/notion
@@ -114,15 +114,15 @@ timeline:
   discovered: '2026-03-17T17:05:33.426805+00:00'
   submitted: '2026-03-17'
 conversion:
-  response_received: false
-  response_type: null
+  response_received: true
+  response_type: rejection
   time_to_response_days: null
   feedback: null
   follow_up_count: 3
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-03-18'
+last_touched: '2026-03-23'
 outreach:
   linkedin_searches:
   - role: Solutions Engineering Manager

@@ -1,4 +1,34 @@
 contacts:
+- name: Scott Lefler
+  organization: Lefler Design
+  role: Owner / Designer / Marketer
+  channel: imessage
+  relationship_strength: 8
+  linkedin: https://www.linkedin.com/in/scott-lefler-576619100/
+  interactions:
+  - date: '2026-03-23'
+    type: call
+    note: '1-hour FaceTime. Scott on $12K retainer with a company, has freelancing
+      network. Proposed partnership: user builds backend/automation, Scott does UI/UX
+      + marketing + sales. Scott wants specificity — tie to value metrics (30% more
+      booked calls, save 20hrs/week). Discussed lead gen systems, AI sales assistants,
+      social media automation. Build in public strategy. User shared consilium-simplex
+      as starting point for bespoke luxury automation.'
+  - date: '2026-03-23'
+    type: imessage
+    note: 'Follow-up texts confirming partnership intent. Scott: "We just need a product!"
+      User: "will return to chat w product." Scott wants measurable value props.'
+  pipeline_entries:
+  - lefler-padavano-automation-partnership
+  tags:
+  - partnership
+  - consulting
+  - 10yr-friend
+  - design
+  - marketing
+  next_action: 'Return with specific product concept — lead gen or social media automation
+    with measurable value prop'
+  next_action_date: '2026-03-24'
 - name: Tony Carbone
   organization: Alternative Funding Group
   role: Managing Partner
@@ -1093,9 +1123,13 @@ contacts:
   - date: '2026-03-20'
     note: DM sent about multi-model eval. Replied "let me get back next week" with positive emojis.
     type: dm_sent
+  - date: '2026-03-23'
+    note: DM follow-up on multi-model eval conversation. He said "let me get back next
+      week" on 3/20 — following up as scheduled.
+    type: dm_follow_up
   name: Keisuke Kamata
-  next_action: Follow up with IRA framework overview (4 raters, ICC+kappa, quarterly recalibration)
-  next_action_date: '2026-03-23'
+  next_action: Await response to follow-up DM
+  next_action_date: '2026-03-30'
   organization: Weights & Biases
   pipeline_entries:
   - weights-biases-chief-of-staff-product-engineering
@@ -1354,14 +1388,17 @@ contacts:
   - date: '2026-03-18'
     note: Connection request sent — doubling-back outreach
     type: doubling_back
+  - date: '2026-03-23'
+    note: Connection accepted. DM sent — first direct message.
+    type: dm_sent
   name: Carly Richmond
-  next_action: DM if accepted
-  next_action_date: '2026-03-25'
+  next_action: Await response to DM
+  next_action_date: '2026-03-30'
   organization: Elastic
   pipeline_entries:
   - elastic-elastic-ai-engineer
-  relationship_strength: 1
-  role: Principal Developer Advocate & Advocate Manager
+  relationship_strength: 2
+  role: Developer Advocate Lead
   tags:
   - doubling-back-2026-03-18
 - channel: linkedin
@@ -1843,13 +1880,16 @@ contacts:
   - date: '2026-03-18'
     note: Connection request sent — doubling-back outreach
     type: doubling_back
+  - date: '2026-03-23'
+    note: Connection accepted. DM sent — first direct message.
+    type: dm_sent
   name: Kartik Mistry
-  next_action: DM if accepted
-  next_action_date: '2026-03-25'
+  next_action: Await response to DM
+  next_action_date: '2026-03-30'
   organization: Wikimedia
   pipeline_entries:
   - wikimedia-senior-software-engineer-wikimedia-enterprise
-  relationship_strength: 1
+  relationship_strength: 2
   role: Staff Software Engineer
   tags:
   - doubling-back-2026-03-18
@@ -2596,19 +2636,33 @@ contacts:
   next_action_date: ''
 - name: Suzanne Sink, PhD
   organization: FAU
-  role: Educator / systems
+  role: Educator / Rhetoric / Writing Center Director
   channel: linkedin
-  relationship_strength: 3
+  relationship_strength: 7
   interactions:
+  - date: '2016'
+    type: hire
+    note: 'Hired user for FAU Writing Center. Taught contrastive rhetoric — user''s
+      first immersion. How different cultures form argument in different shapes: Asian
+      circular structure vs Western linear. Foundational influence on the bridge between
+      humanities and engineering that defines the user''s work today.'
   - date: '2026-03-19'
     type: acceptance
     note: LinkedIn connection accepted — FAU / personal network
+  - date: '2026-03-23'
+    type: engagement
+    note: 'Public comment on Bridge Audit post: "Interesting work with some impactful
+      implications." The post formalizes the rhetoric she taught into algorithms —
+      full circle.'
   pipeline_entries: []
   tags:
   - fau-network
   - personal
-  next_action: ''
-  next_action_date: ''
+  - former-boss
+  - mentor
+  - rhetoric-origin
+  next_action: Deepen reconnection — she saw the arc from writing center to systems architect
+  next_action_date: '2026-03-30'
 - name: Justin Piesco
   organization: FAU
   role: Content Manager
@@ -2658,3 +2712,124 @@ contacts:
   - consulting-lead-adjacent
   next_action: ''
   next_action_date: ''
+- name: Brent George
+  organization: Deepgram
+  role: Tech Lead Manager
+  channel: linkedin
+  relationship_strength: 2
+  interactions:
+  - date: '2026-03-21'
+    type: connect_request
+    note: Connection request sent — Senior SE backend at Deepgram
+  - date: '2026-03-22'
+    type: profile_view
+    note: Viewed profile (20h ago). Now following. Warm signal post-submission.
+  - date: '2026-03-23'
+    type: profile_view
+    note: Second profile view in 2 days. Escalating interest.
+  - date: '2026-03-23'
+    type: inmail
+    note: InMail sent. Third touchpoint after connect request and two profile views.
+  pipeline_entries:
+  - deepgram-backend-engineer-inference-services
+  tags:
+  - warm-signal
+  next_action: Await InMail response
+  next_action_date: '2026-03-30'
+- name: Kieran Haynes
+  organization: Strativ Group
+  role: AI Recruitment Manager
+  channel: linkedin
+  relationship_strength: 1
+  linkedin: https://www.linkedin.com/in/kieranhaynes/
+  interactions:
+  - date: '2026-03-23'
+    type: seed
+    note: Connection request + message sent. Cold outreach to UK-based recruiter expanding
+      US AI market.
+  pipeline_entries: []
+  tags:
+  - recruiter
+  - strativ-group
+  next_action: Await response
+  next_action_date: '2026-03-30'
+- name: Sam Evely
+  organization: Strativ Group
+  role: US Expansion SaaS/AI Recruiter
+  channel: linkedin
+  relationship_strength: 1
+  linkedin: https://www.linkedin.com/in/recruitment-saas-ecom-ai/
+  interactions:
+  - date: '2026-03-23'
+    type: seed
+    note: Connection request + message sent. US expansion SaaS/AI recruiter.
+  pipeline_entries: []
+  tags:
+  - recruiter
+  - strativ-group
+  next_action: Await response
+  next_action_date: '2026-03-30'
+- name: Matt Fleming
+  organization: Strativ Group
+  role: Recruitment Consultant Tech
+  channel: linkedin
+  relationship_strength: 1
+  linkedin: https://www.linkedin.com/in/matttfleming/
+  interactions:
+  - date: '2026-03-23'
+    type: seed
+    note: Connection request + message sent. Tech recruitment consultant.
+  pipeline_entries: []
+  tags:
+  - recruiter
+  - strativ-group
+  next_action: Await response
+  next_action_date: '2026-03-30'
+- name: Ben Reading
+  organization: Strativ Group
+  role: US-based Recruiter
+  channel: linkedin
+  relationship_strength: 1
+  linkedin: https://www.linkedin.com/in/benreadingatstrativ/
+  interactions:
+  - date: '2026-03-23'
+    type: seed
+    note: Connection request + message sent. US-based recruiter.
+  pipeline_entries: []
+  tags:
+  - recruiter
+  - strativ-group
+  next_action: Await response
+  next_action_date: '2026-03-30'
+- name: Jacob Allan
+  organization: Strativ Group
+  role: US Contract Market Recruiter
+  channel: linkedin
+  relationship_strength: 1
+  linkedin: https://www.linkedin.com/in/jacoballan/
+  interactions:
+  - date: '2026-03-23'
+    type: seed
+    note: Connection request + message sent. US contract market recruiter.
+  pipeline_entries: []
+  tags:
+  - recruiter
+  - strativ-group
+  next_action: Await response
+  next_action_date: '2026-03-30'
+- name: Serena Cooper
+  organization: Strativ Group
+  role: Austin HQ Setup Recruiter
+  channel: linkedin
+  relationship_strength: 1
+  linkedin: https://www.linkedin.com/in/serena-cooper-44b163195/
+  interactions:
+  - date: '2026-03-23'
+    type: seed
+    note: Connection request + message sent. Austin HQ setup recruiter.
+  pipeline_entries: []
+  tags:
+  - recruiter
+  - strativ-group
+  next_action: Await response
+  next_action_date: '2026-03-30'
