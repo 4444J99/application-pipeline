@@ -70,6 +70,7 @@ COMMANDS = {
     "hydrate":     ("hydrate_followups.py", [],              "Hydrate relationship metadata from LinkedIn/Email"),
     "cultivate":   ("cultivate.py", ["--candidates"],       "Relationship cultivation candidates"),
     "warmintro":   ("warm_intro_audit.py", [],            "Warm intro audit: referral paths and org density"),
+    "compose-dm":  ("dm_composer.py", ["--all-pending"],  "Compose Protocol-validated acceptance DMs for pending contacts"),
 
     # -- Validation & Health --
     "recruiter":   ("recruiter_filter.py", [],             "Recruiter/hiring-manager filter: stale metrics, red flags, formatting"),
@@ -171,6 +172,7 @@ PARAM_COMMANDS = {
     "netpath":    ("network_graph.py", ["--path"],             "Find paths to org in network graph"),
     "netscore":   ("network_graph.py", ["--score"],            "Network proximity score for single entry"),
     "interviewprep": ("interview_prep.py", ["--target"],     "Generate interview prep for single entry"),
+    "dm":         ("dm_composer.py", ["--contact"],         "Compose acceptance DM for a contact"),
     "greenhouse-submit": ("greenhouse_submit.py", ["--target"], "Greenhouse dry-run preview for single entry"),
     "outreach":   ("outreach_templates.py", ["--target"],       "Generate outreach templates for an entry"),
 }
