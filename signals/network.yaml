@@ -8,11 +8,19 @@ nodes:
   tags: []
 - name: Tony Carbone
   organization: Alternative Funding Group
-  role: Unknown
+  role: Managing Partner
   degree: 1
-  channel: email
-  last_interaction: '2026-03-13'
+  channel: phone
+  last_interaction: '2026-03-23'
   tags: []
+- name: Alexis C.
+  organization: Alternative Funding Group
+  role: Managing Director / Owner
+  degree: 2
+  channel: linkedin
+  last_interaction: '2026-03-19'
+  tags:
+  - business-partner-of-tony-carbone
 - name: Vincent Jiang
   organization: AdenHQ
   role: Unknown
@@ -1143,6 +1151,15 @@ edges:
   relationship_type: crm_contact
   created: '2026-03-17'
   note: ''
+- from: Anthony Padavano
+  to: Alexis C.
+  strength: 1
+  relationship_type: crm_contact
+  note: 'Tony Carbone business partner. Viewed profile 2026-03-19 after Tony call.'
+- from: Tony Carbone
+  to: Alexis C.
+  strength: 8
+  relationship_type: business_partner
 - from: Anthony Padavano
   to: Vincent Jiang
   strength: 2

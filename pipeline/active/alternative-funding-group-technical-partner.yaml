@@ -71,6 +71,12 @@ tags:
 source: linkedin-inbound
 last_touched: '2026-03-23'
 follow_up:
+- date: '2026-03-04'
+  channel: linkedin
+  contact: Tony Carbone
+  type: inbound
+  note: "LinkedIn DM: saw GitHub work, MCA paid campaigns, underwriting automation + lead gen."
+  response: none
 - date: '2026-03-05'
   channel: email
   contact: Tony Carbone
@@ -82,12 +88,6 @@ follow_up:
   contact: Tony Carbone
   type: follow_up
   note: "Follow-up: exploring other options, wants input before deciding direction."
-  response: none
-- date: '2026-03-04'
-  channel: linkedin
-  contact: Tony Carbone
-  type: inbound
-  note: "LinkedIn DM: saw GitHub work, MCA paid campaigns, underwriting automation + lead gen."
   response: none
 - date: '2026-03-11'
   channel: linkedin

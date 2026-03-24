@@ -56,7 +56,7 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-  follow_up_count: 4
+  follow_up_count: 6
 tags:
 - auto-sourced
 source: source_jobs.py
