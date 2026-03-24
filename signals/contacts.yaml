@@ -946,13 +946,16 @@ contacts:
   - date: '2026-03-18'
     note: Connection request sent — doubling-back outreach
     type: doubling_back
+  - date: '2026-03-24'
+    note: Connection accepted.
+    type: acceptance
   name: Sean Saito
-  next_action: DM if accepted
-  next_action_date: '2026-03-25'
+  next_action: Send DM — OpenAI FDE, warm now
+  next_action_date: '2026-03-24'
   organization: OpenAI
   pipeline_entries:
   - openai-se-evals
-  relationship_strength: 1
+  relationship_strength: 2
   role: Forward Deployed Engineer
   tags:
   - doubling-back-2026-03-18
@@ -2821,15 +2824,18 @@ contacts:
   organization: Strativ Group
   role: Austin HQ Setup Recruiter
   channel: linkedin
-  relationship_strength: 1
+  relationship_strength: 2
   linkedin: https://www.linkedin.com/in/serena-cooper-44b163195/
   interactions:
   - date: '2026-03-23'
     type: seed
     note: Connection request + message sent. Austin HQ setup recruiter.
+  - date: '2026-03-24'
+    note: Connection accepted.
+    type: acceptance
   pipeline_entries: []
   tags:
   - recruiter
   - strativ-group
-  next_action: Await response
-  next_action_date: '2026-03-30'
+  next_action: Follow up — she accepted, door is open
+  next_action_date: '2026-03-24'
