@@ -276,8 +276,8 @@ entries:
   type: dm
   contact: Craig Dennis
   channel: linkedin
-  note: Follow-up DM sent after connection acceptance — portfolio link and 
-    teaching angle
+  note: Follow-up DM sent after connection acceptance — portfolio link and teaching
+    angle
   related_targets:
   - cloudflare-models-engineer-developer-relations
 - date: '2026-03-18'
@@ -536,16 +536,14 @@ entries:
   type: post_submission
   contact: Manan Mehta
   channel: linkedin
-  note: DM sent after acceptance — shared portfolio + governance architecture 
-    context
+  note: DM sent after acceptance — shared portfolio + governance architecture context
   related_targets:
   - openai-technical-deployment-lead-forward-deployed-engineering-fde-n
 - date: '2026-03-18'
   type: post_submission
   contact: Logan Tills
   channel: linkedin
-  note: DM sent after acceptance — shared portfolio + creative infrastructure 
-    context
+  note: DM sent after acceptance — shared portfolio + creative infrastructure context
   related_targets:
   - runway-mts
 - date: '2026-03-18'
@@ -1560,15 +1558,14 @@ entries:
   contact: Anthony C.
   organization: Independent / Consulting
   channel: phone
-  note: Initial phone call — discussed multiple consulting projects. Awaiting 
-    follow-up.
+  note: Initial phone call — discussed multiple consulting projects. Awaiting follow-up.
 - date: '2026-03-20'
   type: acceptance
   contact: Keisuke Kamata
   organization: Weights & Biases
   channel: linkedin
-  note: Connection accepted — replied "Wow cool!!! Thank you for reaching out to
-    me!" DM queued.
+  note: Connection accepted — replied "Wow cool!!! Thank you for reaching out to me!"
+    DM queued.
   related_targets:
   - weights-biases-chief-of-staff-product-engineering
 - date: '2026-03-20'
@@ -1576,8 +1573,8 @@ entries:
   contact: Keisuke Kamata
   organization: Weights & Biases
   channel: linkedin
-  note: DM sent about multi-model evaluation. Keisuke replied "let me get back 
-    next week" with positive emojis. Follow up Mon/Tue 2026-03-23/24.
+  note: DM sent about multi-model evaluation. Keisuke replied "let me get back next
+    week" with positive emojis. Follow up Mon/Tue 2026-03-23/24.
   related_targets:
   - weights-biases-chief-of-staff-product-engineering
 - date: '2026-03-20'
@@ -1594,8 +1591,8 @@ entries:
   contact: Varun Bais
   organization: Toast
   channel: linkedin
-  note: Asked about config platform team. Varun not on that stack but referred 
-    Shmuel Rosansky (very senior engineer). Unsolicited warm referral.
+  note: Asked about config platform team. Varun not on that stack but referred Shmuel
+    Rosansky (very senior engineer). Unsolicited warm referral.
   related_targets:
   - toast-senior-backend-engineer
   - toast-senior-software-engineer-front-end
@@ -1615,8 +1612,8 @@ entries:
   contact: Giselle Collins
   organization: Anduril
   channel: email
-  note: Recruiter asked to confirm TS/SCI with Full Scope Polygraph. Do not hold
-    clearance. Responding with honest no + ask about non-clearance roles.
+  note: Recruiter asked to confirm TS/SCI with Full Scope Polygraph. Do not hold clearance.
+    Responding with honest no + ask about non-clearance roles.
   related_targets:
   - anduril-lead-technical-writer-intelligence-systems
 - date: '2026-03-21'
@@ -1742,32 +1739,30 @@ entries:
   type: post_submission
   contact: Jibu Chacko
   channel: linkedin
-  note: Connection accepted — immediate warm referral to Joe B. (TA) within 3 
-    min
+  note: Connection accepted — immediate warm referral to Joe B. (TA) within 3 min
   related_targets:
   - together-ai-senior-developer-productivity-engineer
 - date: '2026-03-21'
   type: post_submission
   contact: Joe B.
   channel: linkedin
-  note: Warm referral from Jibu Chacko — email wall on LinkedIn, asked Jibu for 
-    direct intro
+  note: Warm referral from Jibu Chacko — email wall on LinkedIn, asked Jibu for direct
+    intro
   related_targets:
   - together-ai-senior-developer-productivity-engineer
 - date: '2026-03-21'
   type: seed
   contact: Noah Beddome
   channel: linkedin
-  note: DM + comment on hiring post — platform eng DevEx/Infra roles at 
-    Owner.com. Warm path via Forrest Buff (ex-Datadog). Ex-Datadog security 
-    leader.
+  note: DM + comment on hiring post — platform eng DevEx/Infra roles at Owner.com.
+    Warm path via Forrest Buff (ex-Datadog). Ex-Datadog security leader.
   related_targets: []
 - date: '2026-03-21'
   type: seed
   contact: Forrest Buff
   channel: linkedin
-  note: Mutual friend with Noah Beddome (Owner.com). Ex-Datadog. Marines 
-    connection via Chris.
+  note: Mutual friend with Noah Beddome (Owner.com). Ex-Datadog. Marines connection
+    via Chris.
   related_targets: []
 - date: '2026-03-21'
   type: contribution
@@ -1829,29 +1824,29 @@ entries:
   type: connection_accepted
   contact: Scott Lefler
   channel: linkedin
-  note: 'LinkedIn connection accepted. Partnership pitch sent same day via iMessage.
-    10yr friend, Lefler.Design owner.'
+  note: LinkedIn connection accepted. Partnership pitch sent same day via iMessage.
+    10yr friend, Lefler.Design owner.
   related_targets:
   - lefler-padavano-automation-partnership
 - date: '2026-03-23'
   type: connection_accepted
   contact: Kartik Mistry
   channel: linkedin
-  note: 'Staff Software Engineer at Wikimedia Foundation. OSS-aligned. New connection.'
+  note: Staff Software Engineer at Wikimedia Foundation. OSS-aligned. New connection.
   related_targets: []
 - date: '2026-03-23'
   type: connection_accepted
   contact: Carly Richmond
   channel: linkedin
-  note: 'Developer Advocate Lead @ Elastic. International keynote speaker, UI developer,
-    blogger. New connection.'
+  note: Developer Advocate Lead @ Elastic. International keynote speaker, UI developer,
+    blogger. New connection.
   related_targets: []
 - date: '2026-03-23'
   type: inbound_recruiter
   contact: Strativ Group recruiter
   channel: linkedin
-  note: '3 recruiters viewed profile including Strativ Group (staffing/recruiting).
-    Inbound interest from Bridge Audit post (197 impressions).'
+  note: 3 recruiters viewed profile including Strativ Group (staffing/recruiting).
+    Inbound interest from Bridge Audit post (197 impressions).
   related_targets: []
 - date: '2026-03-23'
   type: content_engagement
@@ -1864,125 +1859,125 @@ entries:
   type: inmail
   contact: Brent George
   channel: linkedin
-  note: 'InMail sent to Tech Lead Manager at Deepgram. Third touchpoint after connect
-    request (3/21) and two profile views (3/22, 3/23). Escalating warm signal.'
+  note: InMail sent to Tech Lead Manager at Deepgram. Third touchpoint after connect
+    request (3/21) and two profile views (3/22, 3/23). Escalating warm signal.
   related_targets:
   - deepgram-backend-engineer-inference-services
 - date: '2026-03-23'
   type: seed
   contact: Kieran Haynes
   channel: linkedin
-  note: 'Connection request + message sent to AI Recruitment Manager at Strativ Group.
-    Cold outreach to UK-based recruiter expanding US market.'
+  note: Connection request + message sent to AI Recruitment Manager at Strativ Group.
+    Cold outreach to UK-based recruiter expanding US market.
   related_targets: []
 - date: '2026-03-23'
   type: seed
   contact: Sam Evely
   channel: linkedin
-  note: 'Connection request + message sent to US Expansion SaaS/AI recruiter at Strativ
-    Group.'
+  note: Connection request + message sent to US Expansion SaaS/AI recruiter at Strativ
+    Group.
   related_targets: []
 - date: '2026-03-23'
   type: seed
   contact: Matt Fleming
   channel: linkedin
-  note: 'Connection request + message sent to Recruitment Consultant Tech at Strativ
-    Group.'
+  note: Connection request + message sent to Recruitment Consultant Tech at Strativ
+    Group.
   related_targets: []
 - date: '2026-03-23'
   type: seed
   contact: Ben Reading
   channel: linkedin
-  note: 'Connection request + message sent to US-based recruiter at Strativ Group.'
+  note: Connection request + message sent to US-based recruiter at Strativ Group.
   related_targets: []
 - date: '2026-03-23'
   type: seed
   contact: Jacob Allan
   channel: linkedin
-  note: 'Connection request + message sent to US contract market recruiter at Strativ
-    Group.'
+  note: Connection request + message sent to US contract market recruiter at Strativ
+    Group.
   related_targets: []
 - date: '2026-03-23'
   type: seed
   contact: Serena Cooper
   channel: linkedin
-  note: 'Connection request + message sent to Austin HQ setup recruiter at Strativ
-    Group.'
+  note: Connection request + message sent to Austin HQ setup recruiter at Strativ
+    Group.
   related_targets: []
 - date: '2026-03-23'
   type: follow_up
   contact: Keisuke Kamata
   channel: linkedin
-  note: 'DM follow-up to Manager AI Solution Engineer at Weights & Biases. Continuing
+  note: DM follow-up to Manager AI Solution Engineer at Weights & Biases. Continuing
     existing conversation about multi-model eval. He said "let me get back next week"
-    on 3/20.'
+    on 3/20.
   related_targets:
   - weights-biases-chief-of-staff-product-engineering
 - date: '2026-03-23'
   type: dm
   contact: Kartik Mistry
   channel: linkedin
-  note: 'DM sent to Staff Software Engineer at Wikimedia Foundation. Just connected
-    — first direct message.'
+  note: DM sent to Staff Software Engineer at Wikimedia Foundation. Just connected
+    — first direct message.
   related_targets:
   - wikimedia-senior-software-engineer-wikimedia-enterprise
 - date: '2026-03-23'
   type: dm
   contact: Carly Richmond
   channel: linkedin
-  note: 'DM sent to Developer Advocate Lead at Elastic. Just connected — first direct
-    message.'
+  note: DM sent to Developer Advocate Lead at Elastic. Just connected — first direct
+    message.
   related_targets:
   - elastic-elastic-ai-engineer
 - date: '2026-03-23'
   type: engagement
   contact: Suzanne Sink PhD
   channel: linkedin
-  note: 'Public comment reply on Bridge Audit LinkedIn post. Former boss at FAU Writing
-    Center 10 years ago — she hired user for the position.'
+  note: Public comment reply on Bridge Audit LinkedIn post. Former boss at FAU Writing
+    Center 10 years ago — she hired user for the position.
   related_targets: []
 - date: '2026-03-24'
   type: acceptance
   contact: Mario Tayah
   channel: linkedin
-  note: 'Connection accepted. Was "Mario T." pre-connection. Head of Engineering at
-    Stripe. Linked to Bridge smart contract role.'
+  note: Connection accepted. Was "Mario T." pre-connection. Head of Engineering at
+    Stripe. Linked to Bridge smart contract role.
   related_targets:
   - stripe-software-engineer-smart-contract-bridge
 - date: '2026-03-24'
   type: acceptance
   contact: Gerfried Stocker
   channel: linkedin
-  note: 'Connection accepted. Co-CEO & Artistic Director of Ars Electronica. Prix
-    Ars submissions already sent.'
+  note: Connection accepted. Co-CEO & Artistic Director of Ars Electronica. Prix Ars
+    submissions already sent.
   related_targets:
   - prix-ars-digital-humanity
 - date: '2026-03-24'
   type: acceptance
   contact: James Hawkins
   channel: linkedin
-  note: 'Connection accepted. Co-CEO of PostHog. Open-source product analytics.'
+  note: Connection accepted. Co-CEO of PostHog. Open-source product analytics.
   related_targets:
   - posthog-clickhouse-operations-engineer
 - date: '2026-03-24'
   type: acceptance
   contact: Matt Fleming
   channel: linkedin
-  note: 'Connection accepted. Strativ Group recruiter, also in environmental TIC.'
+  note: Connection accepted. Strativ Group recruiter, also in environmental TIC.
   related_targets: []
 - date: '2026-03-24'
   type: acceptance
   contact: Bruce Jackson Jr.
   channel: linkedin
-  note: 'Connection accepted. Public figure, songwriter. Community contact — not pipeline-relevant.'
+  note: Connection accepted. Public figure, songwriter. Community contact — not pipeline-relevant.
   related_targets: []
 - date: '2026-03-24'
   type: engagement
   contact: Suzanne Sink PhD
   channel: linkedin
-  note: 'Amended comment on original Bridge Audit post — rhetoric training credit.
+  note: Amended comment on original Bridge Audit post — rhetoric training credit.
     Suzanne responded sharing her own academic-to-private-sector trajectory. Thread
-    complete — strong reconnection.'
+    complete — strong reconnection.
   related_targets: []
 - date: '2026-03-24'
   type: dm
@@ -2015,9 +2010,8 @@ entries:
   type: dm
   contact: Serena Cooper
   channel: linkedin
-  note: 'DM sent. Hook: 113 repos + profile view signal. Question: what AI infra
-    roles are you staffing — platform or model-side? Manual override for recruiter
-    context.'
+  note: 'DM sent. Hook: 113 repos + profile view signal. Question: what AI infra roles
+    are you staffing — platform or model-side? Manual override for recruiter context.'
   related_targets: []
 - date: '2026-03-24'
   type: dm
@@ -2025,4 +2019,62 @@ entries:
   channel: linkedin
   note: 'DM sent. Hook: Strativ profile view signal. Question: still staffing AI/platform
     roles or shifted to environmental TIC? Manual override for role ambiguity.'
+  related_targets: []
+- date: '2026-03-24'
+  type: dm
+  contact: Sean Saito
+  channel: linkedin
+  note: DM sent. Multi-model evaluative authority, ICC/kappa, psychometric calibration.
+    Asked about rater drift validation.
+  related_targets:
+  - openai-technical-deployment-lead-forward-deployed-engineering-fde-n
+- date: '2026-03-23'
+  type: dm
+  contact: Keisuke Kamata
+  channel: linkedin
+  note: Follow-up DM as promised. Multi-model eval overview, ICC/kappa scoring. Asked
+    about W&B evaluation at product level.
+  related_targets:
+  - weights-biases-chief-of-staff-product-engineering
+- date: '2026-03-23'
+  type: dm
+  contact: Brent George
+  channel: linkedin
+  note: DM sent. Inference services — already built the patterns you are hiring for.
+  related_targets:
+  - deepgram-backend-engineer-inference-services
+- date: '2026-03-19'
+  type: dm
+  contact: Breandan O'Ceallachain
+  channel: linkedin
+  note: DM sent. Knowledge architecture, 113 repos, Solutions Engineer application
+    mentioned.
+  related_targets:
+  - notion-solutions-engineer-commercial
+- date: '2026-03-18'
+  type: dm
+  contact: Adel Burieva
+  channel: linkedin
+  note: DM sent. Polymorphic topology engine, state-machine invariants, Hive architecture
+    discussion.
+  related_targets: []
+- date: '2026-03-18'
+  type: dm
+  contact: Manan Mehta
+  channel: linkedin
+  note: DM sent. Documentation governance infra, Jinja2 templates, FDE Technical Deployment
+    Lead application.
+  related_targets:
+  - openai-technical-deployment-lead-forward-deployed-engineering-fde-n
+- date: '2026-03-18'
+  type: dm
+  contact: Logan Tills
+  channel: linkedin
+  note: DM sent. Systems artist, governance-as-artwork, Research Tools MTS role.
+  related_targets: []
+- date: '2026-03-18'
+  type: dm
+  contact: Shu Zhang
+  channel: linkedin
+  note: DM sent. Multi-agent orchestration, Applied AI role at Perplexity.
   related_targets: []

@@ -1,0 +1,123 @@
+Matt Fleming
+Open the options list in your conversation with Anthony James Padavano and Matt Fleming
+You: Thanks for connecting, Matt. Saw Strativ is expanding into the US market — the profile view caught my eye. Are you still staffing AI/platform engineering roles, or has the focus shifted toward the environmental TIC side? https://4444j99.github.io/portfolio/
+Serena Cooper
+Serena Cooper
+8:09 PM
+Open the options list in your conversation with Serena Cooper and Anthony James Padavano
+You: Thanks for connecting, Serena. The connect mentioned 113 repos and distributed systems — happy to expand on any of that. What kinds of AI infra roles are you staffing right now? Curious whether the demand is more platform-side or model-side. https://4444j99.github.io/portfolio/
+🦔 james hawkins
+🦔 james hawkins
+8:07 PM
+Open the options list in your conversation with 🦔 james hawkins and Anthony James Padavano
+You: Thanks for connecting, James. The conversion funnels — that's not abstract. Not a product — an actual operating system with A/B tracked materials and outcome attribution feeding back into composition strategy. PostHog bet on a specific thesis early. At this point, has that bet paid off in ways you didn't expect, or mostly in the ways you predicted? https://4444j99.github.io/portfolio/
+Gerfried Stocker
+Gerfried Stocker
+8:05 PM
+Open the options list in your conversation with Gerfried Stocker and Anthony James Padavano
+You: Thanks for connecting, Gerfried. The governance-as-artwork — that's not abstract. 113 repositories, 8 organizations, a promotion state machine that governs lifecycle from LOCAL through GRADUATED. The system itself is the work. Most submissions treat technology as material rather than institution. Is governance-as-medium something Ars Electronica is actively tracking, or is it still too structural for most applicants? https://4444j99.github.io/portfolio/
+Mario Tayah
+Mario Tayah
+8:03 PM
+Open the options list in your conversation with Mario Tayah and Anthony James Padavano
+You: Thanks for connecting, Mario. The correctness guarantees — that's not abstract. Forward-only transitions, CI-enforced validation, audit trail on every state change. Same invariants Stripe infrastructure requires, different domain. How does Stripe handle the tension between reliability vs velocity? That seems like the defining eng constraint right now. https://4444j99.github.io/portfolio/
+Sean Saito
+Sean Saito
+7:40 AM
+Open the options list in your conversation with Sean Saito and Anthony James Padavano
+You: Thanks for accepting Sean. I've been building something directly in your lane — a self-governing evaluative authority that uses multi-model cross-provider panels (Anthropic + Google) to rate system quality across 9 dimensions with full psychometric calibration. The core: 4 AI raters with distinct personas (systems architect, QA lead, pragmatic operator, external auditor), each running on different models at different temperatures. The system computes ICC(2,1), Cohen's kappa (pairwise), and Fleiss kappa (multi-rater), partitions dimensions into objective ground truth vs. subjective rated, generates consensus scores, and flags disagreement patterns. On top of that there's a 5-level hierarchical standards audit with triad regulators (3 gates per level, 2/3 quorum required) — basically Beer's Viable System Model System 3* implemented as an independent audit function. Same LLM-as-judge pattern OpenAI evals uses but with psychometric calibration layered on. The question I keep hitting is how to validate that the raters themselves aren't drifting — which I imagine is exactly what your team thinks about at scale. Would love to compare approaches. Happy to share the codebase if useful.
+Keisuke Kamata
+Keisuke Kamata
+Mar 23
+Open the options list in your conversation with Keisuke Kamata and Anthony James Padavano
+You: Hey Keisuke — following up as promised. I put together a quick overview of the multi-model evaluation system I mentioned — 4 AI raters with distinct personas, ICC/Cohen's kappa scoring, consensus generation. It's the calibration problem applied to AI-as-evaluator. Happy to share the technical details if you're curious. Also interested in how W&B thinks about evaluation at the product level — seems like natural overlap.
+Brent George
+Brent George
+Mar 23
+Open the options list in your conversation with Brent George and Anthony James Padavano
+You: Inference services — already built the patterns you're hiring for
+Carly Richmond
+Carly Richmond
+Mar 23
+Open the options list in your conversation with Carly Richmond and Anthony James Padavano
+You: Thanks for connecting, Carly. I've been following your talks — the intersection of developer advocacy and engineering resonates with how I think about documentation and public-facing technical work. I recently formalized 14 narrative theorists into audit algorithms and pointed them at my own LinkedIn post — turns out the same structural rules that make a conference talk land apply to state machine design. Would love to compare notes on how you approach technical storytelling at Elastic.
+Kartik Mistry
+Kartik Mistry
+Mar 23
+Open the options list in your conversation with Kartik Mistry and Anthony James Padavano
+You: Thanks for connecting, Kartik. I've been doing a lot of open-source contribution work lately — PRs across 7 repos in the last week — and Wikimedia's approach to collaborative infrastructure has always been a reference point for how I think about systems. I'd love to hear what you're working on at the Foundation. Always interested in how large-scale OSS projects manage contributor pipelines and code quality at that scale.
+Varun Bais
+Varun Bais
+Mar 20
+Open the options list in your conversation with Varun Bais and Anthony James Padavano
+Varun: You're welcome
+Lucas Faria
+Lucas Faria
+Mar 19
+Open the options list in your conversation with Lucas Faria and Anthony James Padavano
+You: Thanks for connecting, Lucas. I build product analytics into my own pipeline infrastructure — conversion funnels, A/B variant tracking, snapshot trend analysis, weekly velocity reports. PostHog's open-source approach to product analytics resonates because I architect the same patterns from scratch. Would love to learn more about what you're shipping. Portfolio: https://4444j99.github.io/portfolio/
+Luvo Dlulisa
+Luvo Dlulisa
+Mar 19
+Open the options list in your conversation with Luvo Dlulisa and Anthony James Padavano
+You: Thanks for connecting, Luvo. I build open-source infrastructure at scale — 113 repos, documentation governance, knowledge architecture with registry validation. Wikimedia's mission of open knowledge maps directly to what I'm building. Would love to learn more about the Enterprise engineering work. Portfolio: https://4444j99.github.io/portfolio/
+Lorenzo Porras
+Lorenzo Porras
+Mar 19
+Open the options list in your conversation with Lorenzo Porras and Anthony James Padavano
+You: Thanks for connecting, Lorenzo. I build multi-model AI orchestration with experiment tracking patterns — inter-rater agreement facility across 4 AI raters, 23,470 tests, 104 CI/CD pipelines. The evaluation and deployment infrastructure I've built maps directly to what W&B enables for ML teams. Would love to learn more about the AI Solutions Engineering practice. Portfolio: https://4444j99.github.io/portfolio/
+Breandan O'Ceallachain
+Breandan O'Ceallachain
+Mar 19
+Open the options list in your conversation with Breandan O'Ceallachain and Anthony James Padavano
+You: Thanks for connecting, Breandan. Knowledge architecture is my core practice — 113 repos, 739K words, semantic organization with quality governance and registry validation. I build the kind of structured knowledge systems that Notion enables at scale. Currently have a Solutions Engineer application in as well. Happy to walk through the infrastructure. Portfolio: https://4444j99.github.io/portfolio/
+Juan Manuel Perafan
+Juan Manuel Perafan
+Mar 19
+Open the options list in your conversation with Juan Manuel Perafan and Anthony James Padavano
+You: Thanks for connecting, Juan Manuel. Your analytics engineering education work resonates — I've taught 100+ courses and built a data pipeline system (113 repos, schema validation, conversion funnel analytics) that applies the same rigor dbt brings to transformation workflows. Would love to exchange ideas on curriculum architecture. Portfolio: https://4444j99.github.io/portfolio/
+Beth Hipple
+Beth Hipple
+Mar 19
+Open the options list in your conversation with Beth Hipple and Anthony James Padavano
+You: Thanks for connecting, Beth. I've taught 100+ courses and built 739K words of documentation governance — curriculum design is central to my practice. I also build data pipeline infrastructure (YAML-driven, schema-validated, CI-enforced) that maps to dbt's transformation model. Would love to learn more about how dbt approaches curriculum development. Portfolio: https://4444j99.github.io/portfolio/
+Christophe De Jaeger
+Christophe De Jaeger
+Mar 19
+Open the options list in your conversation with Christophe De Jaeger and Anthony James Padavano
+You: Thanks for connecting, Christophe. I build governance-as-artwork — a 113-repo institutional system with a promotion state machine, dependency validation, and audit trails as creative medium. The intersection of technology and institutional design that S+T+ARTS champions is exactly where my practice lives. I'd love to stay connected for future prize cycles and Gluon collaborations. Portfolio: https://4444j99.github.io/portfolio/
+Cecil Phillip
+Cecil Phillip
+Mar 19
+Open the options list in your conversation with Cecil Phillip and Anthony James Padavano
+You: Thanks for connecting, Cecil. I build workflow orchestration infrastructure — promotion state machine with durable execution guarantees, 113 repos governed by forward-only transitions, 23,470 tests. The patterns I use daily are Temporal's model applied to creative-institutional systems. Would love to learn more about what the DevRel team is building.  Portfolio: https://4444j99.github.io/portfolio/
+Mason Egger
+Mason Egger
+Mar 19
+Open the options list in your conversation with Mason Egger and Anthony James Padavano
+You: Thanks for connecting, Mason. I build durable workflow orchestration across 113 repos — forward-only state machine, 23,470 tests, CI-enforced validation on every transition. Temporal's execution model maps directly to how I architect pipeline infrastructure. I also have 100+ courses taught and 739K words of documentation governance, so the curriculum side resonates too. Portfolio: https://4444j99.github.io/portfolio/
+Adel Burieva
+Adel Burieva
+Mar 18
+Open the options list in your conversation with Adel Burieva and Anthony James Padavano
+You: I jumped in briefly the other day! I'm going to dive back in today—I'd love to see how your #architecture or #dev channels are tackling state-machine invariants. Your point about 'unlearning linear flowcharts' is exactly why I built Agentic Titan. I'm using a polymorphic topology engine that switches between 9 coordination patterns (swarm vs pipeline vs ring) at runtime based on the task state. Managing 113 repos and 23k+ tests has taught me that 'evolution' is only safe if you have a strict promotion state machine. Would love to compare notes on how the Hive handles those same production-grade constraints!
+Manan Mehta
+Manan Mehta
+Mar 18
+Open the options list in your conversation with Manan Mehta and Anthony James Padavano
+You: Thanks for connecting, Manan. Context beyond the resume — I build documentation governance infrastructure at institutional scale: auto-generated context files from Jinja2 templates bound to live registry data, promotion state machines governing maturity levels, 50 validated dependency edges with zero violations across 113 repos. Applied for the Technical Deployment Lead on the FDE team. The patterns that make my system navigable for AI assistants are the same patterns an FDE applies to enterprise customers. Portfolio: https://4444j99.github.io/portfolio/ GitHub: https://github.com/meta-organvm
+Logan Tills
+Logan Tills
+Mar 18
+Open the options list in your conversation with Logan Tills and Anthony James Padavano
+You: Thanks for connecting, Logan. I'm a systems artist building creative infrastructure at institutional scale — 113 repos, 82K files, 739K words of governance documentation, 49 published essays. Applied for the Research Tools MTS role previously. The intersection of generative AI and governance-as-artwork is my primary practice. Would love to hear what Runway is working on next. Portfolio: https://4444j99.github.io/portfolio/
+Shu Zhang
+Shu Zhang
+Mar 18
+Open the options list in your conversation with Shu Zhang and Anthony James Padavano
+You: Thanks for connecting, Shu. Python + TypeScript, multi-agent orchestration (845-test framework with 9 topology patterns), 23,470 tests across 20 repos. Applied for the Applied AI role. Interested in what Perplexity is doing with agentic search — the retrieval + generation patterns overlap with the corpus-driven scoring system I've built. Portfolio: https://4444j99.github.io/portfolio/ GitHub: https://github.com/meta-organvm
+Craig Dennis
+Craig Dennis
+Mar 17
+Open the options list in your conversation with Craig Dennis and Anthony James Padavano
+You: Thanks for connecting, Craig. Your Workers AI content from GTC caught my eye — the inference story Cloudflare is building is compelling. Quick context on me: I maintain a 113-repo governance system with 739K words of documentation and 104 CI/CD pipelines. I've also taught 100+ courses to 2,000+ students — the teacher-to-builder pipeline is core to how I work. Applied for the Models Engineer DevRel role a few weeks back, but regardless of that specific position, I'd love to hear what's on the DevRel roadmap. Portfolio: https://4444j99.github.io/portfolio/
