@@ -112,6 +112,10 @@ Scripts are independent CLIs but some import functions from each other:
 - **`network_graph.py`** — Network graph with BFS/DFS path-finding, hop-decay scoring (Granovetter weak-ties theory), tie-strength tracking. Ingests from `contacts.yaml` and `outreach-log.yaml`. Stores to `signals/network.yaml`. Reverse-syncs to `contacts.yaml` via `--sync-contacts`.
 - **`score_network.py`** imports from `network_graph.py` — `_score_from_graph()` queries the network graph for org proximity, combined with entry-level signals via `max(entry_score, graph_score)`.
 - **`recruiter_filter.py`** — Pre-submission gate: validates materials against canonical metrics (single source of truth), detects red flags (passive language, "Independent"), checks cover letter existence/quality, auto-fixes stale metrics in base resumes. Run `run.py recruiter` before any submission.
+- **`protocol_types.py`** — Domain types for the Outreach Protocol: Message, Agent, Claim, Tension, Question, and 7 validation result dataclasses. Imported by protocol_validator.py and dm_composer.py.
+- **`protocol_validator.py`** — Outreach Protocol enforcement: validates messages against 7 formal articles (P-I Hook Planting, P-II Continuity, P-III Ratio Decay, P-IV Terminal Question, P-V Inhabitation, P-VI Bare Resource, P-VII Thread Parity). `validate_full_sequence()` runs all articles.
+- **`dm_composer.py`** — Acceptance DM composition using Protocol constraints. Recovers connect notes from outreach plan markdown files, generates Protocol-compliant DMs, validates output. `--contact`, `--all-pending`, `--target` modes. Run `run.py dm <contact>` or `run.py compose-dm`.
+- **`reconcile_outreach.py`** — LinkedIn DM history ingestion and backfill. Parses pasted message history, diffs against outreach-log.yaml, backfills all three signal files. **Known bug:** contact name parser misattributes DMs (IRF-APP-014).
 - All other scripts are standalone CLIs that read/write pipeline YAML files.
 
 ## Module Architecture
