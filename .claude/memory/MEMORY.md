@@ -60,6 +60,8 @@
 - [Outreach: new contacts only](feedback_outreach_new_contacts.md) — Never recycle already-contacted people into outreach plans. Research fresh contacts per submission.
 - [Never defer to human](feedback_never_defer_to_human.md) — The human is the conductor. Never ask them to run CLI commands, set passwords, or do mechanical work the system can do programmatically.
 - [No skips, no N/A](feedback_no_skips_no_na.md) — Every index check produces DONE or VACUUM. "Skip" and "N/A" are forbidden — they are vacuums disguised as decisions. Water constantly flowing.
+- [Log tool fixes](feedback_log_tool_fixes.md) — When fixing bugs or building tools, log what changed. Don't silently fix things.
+- [Building for others fortifies](feedback_building_for_others.md) — Solving their problems > solves ours higher. Every venture hardens the studio. None pay tomorrow, all have income potential. Explore every path.
 
 ## Project Memories
 - [System Purpose](project_system_purpose.md) — Core mission: Scan → Match → Build → Apply → Follow up. Everything else is armor plating.
@@ -76,3 +78,9 @@
 - [Tony Carbone / Alt Funding Group](project_tony_carbone_altfunding_2026-03.md) — Inbound consulting lead, 40-min call, 5 workstreams (MCA + Flyland.com healthcare SaaS), awaiting follow-up
 - [Consulting Pivot 2026-03-23](project_consulting_pivot_2026-03-23.md) — Tony (client) + Scott Lefler (build+sell partner) converging same week. Jobs = weakest link. Scrapper repo is bridge.
 - [Session Arc 2026-03-21/23](project_session_2026-03-21-23.md) — 7 PRs across 7 OSS repos, 30 outreach, 8 contribution workspaces, Hive fusion architecture, Matthew Diakonov reciprocal
+- [Outreach Data Gap 2026-03-24](project_outreach_data_gap_2026-03-24.md) — 30 DMs sent but only 19 logged. Three files need updating per DM, no single ingestion point. Need reconcile tool.
+- [Three-Pillar Strategy 2026-03-24](project_three_pillar_strategy_2026-03-24.md) — Jobs (runway) + Grants (validation) + Consulting (bridge to studio). Pipeline 90% optimized for jobs, needs rebalancing. Studio dream = Pixar/ILM built on ORGANVM.
+- [Weekly Rhythm & Creation-First 2026-03-24](project_weekly_rhythm_2026-03-24.md) — Creation is the constant, pillars orbit it. Mon=jobs, Tue=grants, Wed=consulting, Thu/Fri=deep build. Daily artifact posting. Jobs ONLY on Monday.
+- [Dustin Dipaulo Ventures 2026-03-24](project_dustin_dipaulo_ventures_2026-03-24.md) — 3 ventures: music DSP alternative, AI audit consulting, neurodivergent fashion. Peer co-creator.
+- [Maddie Ventures 2026-03-24](project_maddie_ventures_2026-03-24.md) — 3 ventures: non-profit housing, water funnel (her domain, asked for help), atemporal atlas (Zelda-style layered maps). Awaiting her transcripts/voice notes.
+- [Pillar 3 Full Network 2026-03-24](project_pillar3_full_network_2026-03-24.md) — 6 partners, 12+ ventures. Tony (fintech), Scott (design), Dustin (UI/UX), Maddie (water/housing), Rob (fitness/chess/HokageChess), Jessica (18K heartbreak audience + behavioral blockchain repo exists).
