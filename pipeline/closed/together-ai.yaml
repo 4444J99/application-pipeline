@@ -18,7 +18,7 @@ amount:
   type: salary
   benefits_cliff_note: null
 fit:
-  score: 7.1
+  score: 6.8
   original_score: 6.1
   identity_position: independent-engineer
   framing: Independent engineer with DX and documentation expertise — 810K+ words,
@@ -38,13 +38,13 @@ fit:
     portal_friction: 5
 submission:
   effort_level: complex
-  blocks_used: 
+  blocks_used:
     framing: framings/independent-engineer
     evidence: evidence/differentiators
     work_samples: evidence/work-samples
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
-  variant_ids: 
+  variant_ids:
     cover_letter: cover-letters/together-ai-lead-dx-documentation
   materials_attached:
   - resumes/batch-01/together-ai/together-ai-resume.html
@@ -71,15 +71,25 @@ conversion:
   feedback: null
   follow_up_count: 0
 tags:
-  - job-tier-2
-  - submit-order-4
+- job-tier-2
+- submit-order-4
 source: 04-application-tracker.md
-notes: |
-  Salary range $160,000-$240,000.
+notes: 'Salary range $160,000-$240,000.
+
   PRIORITY: Tier 2 — Apply with Targeted Narrative (submit fourth).
+
   DX + documentation is a real strength. 810K+ words, 100% README coverage, 42 essays.
-  The DX role values someone who makes complex systems understandable — that's what the
+
+  The DX role values someone who makes complex systems understandable — that''s what
+  the
+
   essays and teaching demonstrate.
+
   Gap to bridge: "Lead" implies team management experience, which is missing.
-last_touched: "2026-03-03"
+
+  '
+last_touched: '2026-03-03'
 follow_up: []
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-02-24'

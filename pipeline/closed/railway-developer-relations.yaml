@@ -19,7 +19,7 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.7
+  score: 8.2
   identity_position: independent-engineer
   dimensions:
     mission_alignment: 9
@@ -31,7 +31,10 @@ fit:
     effort_to_value: 7
     deadline_feasibility: 9
     portal_friction: 5
-  framing: Independent engineer building production-grade infrastructure at institutional scale (103 repos, 2,349+ tests, 128 GH Actions workflows). Specialist in removing developer friction through automated governance and scannable "Storefront" layers for complex systems.
+  framing: Independent engineer building production-grade infrastructure at institutional
+    scale (103 repos, 2,349+ tests, 128 GH Actions workflows). Specialist in removing
+    developer friction through automated governance and scannable "Storefront" layers
+    for complex systems.
 submission:
   effort_level: standard
   blocks_used:
@@ -57,12 +60,14 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-03-13"
+last_touched: '2026-03-13'
 follow_up: []
 status_meta:
   reviewed_by: 4jp
   reviewed_at: '2026-03-03'
   review_note: autofix-unblocker
+  submitted_by: 4jp
+  submitted_at: '2026-02-26'
 conversion.response_received: true
 conversion.response_type: rejection
 conversion.feedback: not moving forward

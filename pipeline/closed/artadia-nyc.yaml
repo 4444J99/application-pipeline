@@ -18,7 +18,7 @@ amount:
   type: lump_sum
   benefits_cliff_note: SNAP-safe
 fit:
-  score: 8.1
+  score: 7.1
   original_score: 8.0
   identity_position: systems-artist
   framing: Systems-based art practice rooted in recursive structures and generative
@@ -45,10 +45,10 @@ submission:
     methodology: methodology/governance-as-art
     evidence: evidence/differentiators
     framing: framings/systems-artist
-  variant_ids: 
+  variant_ids:
     cover_letter: cover-letters/grant-art-template
-  materials_attached: 
-    - resumes/base/multimedia-specialist.pdf
+  materials_attached:
+  - resumes/base/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-02-14'
@@ -73,5 +73,9 @@ conversion:
   feedback: null
 tags: []
 source: 04-application-tracker.md
-notes: 2026 cycle is Chicago (Cook County) only. NYC cycle not currently open. Revisit when NYC cycle announced.
-last_touched: "2026-02-23"
+notes: 2026 cycle is Chicago (Cook County) only. NYC cycle not currently open. Revisit
+  when NYC cycle announced.
+last_touched: '2026-02-23'
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-02-14'

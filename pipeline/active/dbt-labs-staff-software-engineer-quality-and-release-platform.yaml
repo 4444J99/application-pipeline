@@ -114,11 +114,14 @@ tags:
 source: source_jobs.py
 last_touched: '2026-03-25'
 outreach:
-  linkedin_searches:
+- linkedin_searches:
   - role: Engineering Manager Platform
     search_url: https://www.linkedin.com/search/results/people/?keywords=Engineering%20Manager%20Platform%20dbt%20Labs&origin=GLOBAL_SEARCH_HEADER
   - role: VP Engineering
     search_url: https://www.linkedin.com/search/results/people/?keywords=VP%20Engineering%20dbt%20Labs&origin=GLOBAL_SEARCH_HEADER
   contact_name: null
   contact_url: null
-  status: pending
+  status: planned
+status_meta:
+  reviewed_by: 4jp
+  approved_at: '2026-03-25'

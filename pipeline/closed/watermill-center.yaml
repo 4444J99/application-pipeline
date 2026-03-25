@@ -3,30 +3,30 @@ name: Watermill Center International Summer Program
 track: residency
 status: outcome
 outcome: expired
-
 target:
   organization: Watermill Center
   url: https://watermillcenter.org
   application_url: https://watermillcenter.slideroom.com
   portal: slideroom
-
 deadline:
-  date: "2026-02-18"
+  date: '2026-02-18'
   time: null
   type: hard
-
 amount:
   value: 0
   currency: USD
   type: in_kind
   benefits_cliff_note: null
-
 fit:
-  score: 5.5
+  score: 5.3
   original_score: 6.8
   identity_position: systems-artist
-  framing: "Systems artist engaging interdisciplinary collaboration in intensive residency context"
-  lead_organs: [II, VI, META]
+  framing: Systems artist engaging interdisciplinary collaboration in intensive residency
+    context
+  lead_organs:
+  - II
+  - VI
+  - META
   dimensions:
     mission_alignment: 6
     evidence_match: 2
@@ -42,30 +42,30 @@ submission:
   blocks_used:
     artist_statement: identity/2min
     project_description: projects/organvm-system
-  variant_ids: 
+  variant_ids:
     cover_letter: cover-letters/grant-art-template
-  materials_attached: 
-    - resumes/base/multimedia-specialist.pdf
+  materials_attached:
+  - resumes/base/multimedia-specialist.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
-
 timeline:
-  researched: "2026-02-14"
+  researched: '2026-02-14'
   date_added: 2026-02-14
-  qualified: "2026-02-16"
-  materials_ready: "2026-02-18"
+  qualified: '2026-02-16'
+  materials_ready: '2026-02-18'
   submitted: null
   acknowledged: null
   interview: null
-  outcome_date: "2026-02-23"
-
+  outcome_date: '2026-02-23'
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
-
-last_touched: "2026-02-23"
-
+last_touched: '2026-02-23'
 tags: []
 source: 04-application-tracker.md
-notes: "Deadline passed Feb 18 2026 without submission. Archived as expired by standup system."
+notes: Deadline passed Feb 18 2026 without submission. Archived as expired by standup
+  system.
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-02-14'

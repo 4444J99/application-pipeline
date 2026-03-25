@@ -18,7 +18,7 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.7
+  score: 8.2
   identity_position: independent-engineer
   dimensions:
     mission_alignment: 9
@@ -32,7 +32,7 @@ fit:
     portal_friction: 5
 submission:
   effort_level: standard
-  blocks_used: 
+  blocks_used:
     framing: framings/independent-engineer
     evidence: evidence/differentiators
     work_samples: evidence/work-samples
@@ -53,9 +53,12 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-02-26"
+last_touched: '2026-02-26'
 withdrawal_reason:
   reason: ineligible
   detail: Requires on-site in Tokyo, Japan — outside NYC metro location filter
   date: '2026-02-25'
   reopen: false
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-02-24'

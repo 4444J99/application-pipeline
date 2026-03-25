@@ -10,18 +10,19 @@ target:
   portal: custom
   location: Ft. Lauderdale, FL (remote possible)
   location_class: us-remote
-  description: >
-    Inbound opportunity from Tony Carbone (Managing Partner). Tony explicitly stated
-    he "hunted down" and "studied" the user — not passive discovery. Key attraction:
+  description: 'Inbound opportunity from Tony Carbone (Managing Partner). Tony explicitly
+    stated he "hunted down" and "studied" the user — not passive discovery. Key attraction:
     public-record-data-scrapper repo (50-state UCC aggregation platform for MCA industry,
     https://github.com/organvm-iii-ergon/public-record-data-scrapper). Two ventures:
     (1) Alternative Funding Group — MCA underwriting automation, lead gen engine,
-    sales team automation, bank statement public records scraping.
-    (2) Flyland.com — healthcare SaaS buildout, South Florida rehabilitation
-    ad campaigns, therapy.org (or similar powerful domain) development.
-    Tony looking for someone to front-load technical solutions then hand off to maintenance.
-    Frustrated with offshore labor that strings projects along without solving permanently.
-    Tony promised to send a write-up on scope — has not sent it yet (as of 2026-03-23).
+    sales team automation, bank statement public records scraping. (2) Flyland.com
+    — healthcare SaaS buildout, South Florida rehabilitation ad campaigns, therapy.org
+    (or similar powerful domain) development. Tony looking for someone to front-load
+    technical solutions then hand off to maintenance. Frustrated with offshore labor
+    that strings projects along without solving permanently. Tony promised to send
+    a write-up on scope — has not sent it yet (as of 2026-03-23).
+
+    '
 deadline:
   date: null
   type: rolling
@@ -43,13 +44,13 @@ fit:
     effort_to_value: 6
     deadline_feasibility: 9
     portal_friction: 6
-  framing: >
-    Technical partner with 15+ years MCA domain expertise and production-grade
-    automation skills. Front-loads solutions for permanent resolution — not
-    perpetual maintenance. ORGANVM infrastructure proves institutional-scale
-    orchestration capability.
+  framing: 'Technical partner with 15+ years MCA domain expertise and production-grade
+    automation skills. Front-loads solutions for permanent resolution — not perpetual
+    maintenance. ORGANVM infrastructure proves institutional-scale orchestration capability.
+
+    '
 submission:
-  effort_level: custom
+  effort_level: standard
   blocks_used: {}
   variant_ids: {}
   materials_attached: []
@@ -76,52 +77,56 @@ follow_up:
   channel: linkedin
   contact: Tony Carbone
   type: inbound
-  note: "LinkedIn DM: saw GitHub work, MCA paid campaigns, underwriting automation + lead gen."
+  note: 'LinkedIn DM: saw GitHub work, MCA paid campaigns, underwriting automation
+    + lead gen.'
   response: none
 - date: '2026-03-05'
   channel: email
   contact: Tony Carbone
   type: inbound
-  note: "Cold email: Quick call — MCA + SaaS expansion. Cited Forward Funding background, GitHub work."
+  note: 'Cold email: Quick call — MCA + SaaS expansion. Cited Forward Funding background,
+    GitHub work.'
   response: none
 - date: '2026-03-09'
   channel: email
   contact: Tony Carbone
   type: follow_up
-  note: "Follow-up: exploring other options, wants input before deciding direction."
+  note: 'Follow-up: exploring other options, wants input before deciding direction.'
   response: none
 - date: '2026-03-11'
   channel: linkedin
   contact: Tony Carbone
   type: reply
-  note: "User replied on LinkedIn expressing interest."
+  note: User replied on LinkedIn expressing interest.
   response: positive
 - date: '2026-03-12'
   channel: email
   contact: Tony Carbone
   type: reply
-  note: "User replied via email, shared phone number 561.602.7300."
+  note: User replied via email, shared phone number 561.602.7300.
   response: positive
 - date: '2026-03-14'
   channel: linkedin
   contact: Tony Carbone
   type: scheduling
-  note: "Tony proposed Monday call anytime 11am-6pm, shared cell 305-546-5774."
+  note: Tony proposed Monday call anytime 11am-6pm, shared cell 305-546-5774.
   response: positive
 - date: '2026-03-17'
   channel: phone
   contact: Tony Carbone
   type: call
-  note: >
-    40-min call. Discussed: (1) South FL rehab ad campaigns, (2) therapy.org/Flyland.com
+  note: '40-min call. Discussed: (1) South FL rehab ad campaigns, (2) therapy.org/Flyland.com
     buildout, (3) MCA sales team automation, (4) bank statement public records scraping,
-    (5) frustration with offshore labor. User pitched front-load work then maintenance approach.
-    Bonded over both being from NY. Tony lives in FL now. User mentioned housing search
-    and willingness to relocate to FL for projects.
+    (5) frustration with offshore labor. User pitched front-load work then maintenance
+    approach. Bonded over both being from NY. Tony lives in FL now. User mentioned
+    housing search and willingness to relocate to FL for projects.
+
+    '
   response: positive
 - date: '2026-03-19'
   channel: linkedin
   contact: Alexis C.
   type: profile_view
-  note: "Tony's business partner (Managing Director/Owner) viewed profile after call. Vetting signal."
+  note: Tony's business partner (Managing Director/Owner) viewed profile after call.
+    Vetting signal.
   response: none

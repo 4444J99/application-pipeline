@@ -141,12 +141,19 @@ EFFORT_MINUTES = {
 }
 
 # Canonical scoring dimensions — single source of truth for score.py and validate.py.
+# Core 9 dimensions (used across all pillars):
 DIMENSION_ORDER = [
     "mission_alignment", "evidence_match", "track_record_fit",
     "network_proximity", "strategic_value", "financial_alignment",
     "effort_to_value", "deadline_feasibility", "portal_friction",
 ]
-VALID_DIMENSIONS = set(DIMENSION_ORDER)
+# Pillar-specific dimensions (added 2026-03-25 for three-pillar rubric):
+PILLAR_DIMENSIONS = [
+    "studio_alignment", "remote_flexibility",       # Pillar 1: Jobs
+    "narrative_fit", "prestige_multiplier", "cycle_urgency",  # Pillar 2: Grants
+    "recurring_potential", "client_fit",             # Pillar 3: Consulting
+]
+VALID_DIMENSIONS = set(DIMENSION_ORDER) | set(PILLAR_DIMENSIONS)
 
 # Valid status transitions: each status maps to the set of statuses it can reach.
 # Single source of truth — imported by validate.py and advance.py.

@@ -5,7 +5,7 @@ status: outcome
 identity_position: systems-artist
 outcome: expired
 outcome_date: '2026-03-13'
-outcome_note: 'Deadline was 2026-03-04; expired without submission'
+outcome_note: Deadline was 2026-03-04; expired without submission
 target:
   organization: Ars Electronica
   url: https://ars.electronica.art
@@ -21,7 +21,7 @@ amount:
   type: lump_sum
   benefits_cliff_note: null
 fit:
-  score: 9.1
+  score: 7.7
   original_score: 8.0
   identity_position: systems-artist
   framing: Systems artist presenting the "ORGANVM Metasystem"—a 103-repository autonomous
@@ -122,3 +122,5 @@ status_meta:
   reviewed_by: 4jp
   reviewed_at: '2026-03-03'
   review_note: autofix-unblocker
+  submitted_by: 4jp
+  submitted_at: '2026-02-24'

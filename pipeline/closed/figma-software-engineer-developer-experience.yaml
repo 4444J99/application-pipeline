@@ -9,7 +9,7 @@ target:
   url: https://boards.greenhouse.io/figma
   application_url: https://boards.greenhouse.io/figma/jobs/5790627004?gh_jid=5790627004
   portal: greenhouse
-  location: "San Francisco, CA \u2022 New York, NY \u2022 United States"
+  location: San Francisco, CA • New York, NY • United States
   location_class: us-onsite
 deadline:
   date: null
@@ -19,12 +19,11 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.2
+  score: 7.8
   identity_position: independent-engineer
-  framing: "Developer experience engineer with component-driven design system architecture,\
-    \ TypeScript strict mode, 94 CI/CD pipelines, and a documentation-first methodology\
-    \ \u2014 building infrastructure that makes complex systems feel effortless to\
-    \ use."
+  framing: Developer experience engineer with component-driven design system architecture,
+    TypeScript strict mode, 94 CI/CD pipelines, and a documentation-first methodology
+    — building infrastructure that makes complex systems feel effortless to use.
   dimensions:
     mission_alignment: 9
     evidence_match: 10
@@ -67,3 +66,6 @@ tags:
 source: source_jobs.py
 last_touched: '2026-02-26'
 follow_up: []
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-02-24'

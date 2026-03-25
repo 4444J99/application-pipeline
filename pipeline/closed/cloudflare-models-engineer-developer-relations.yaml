@@ -19,9 +19,11 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.7
+  score: 8.2
   identity_position: independent-engineer
-  framing: "AI model integration engineer with 810K+ words of technical communication — building agentic orchestration frameworks and MCP server infrastructure while documenting the methodology transparently for other developers."
+  framing: AI model integration engineer with 810K+ words of technical communication
+    — building agentic orchestration frameworks and MCP server infrastructure while
+    documenting the methodology transparently for other developers.
   dimensions:
     mission_alignment: 9
     evidence_match: 10
@@ -54,13 +56,14 @@ conversion:
   response_received: true
   response_type: acknowledged
   time_to_response_days: 3
-  feedback: No response after 21 days. Auto-acknowledge only (Greenhouse). Closed as expired.
+  feedback: No response after 21 days. Auto-acknowledge only (Greenhouse). Closed
+    as expired.
   follow_up_count: 2
 tags:
 - auto-sourced
 - curated-fit
 source: source_jobs.py
-last_touched: "2026-03-18"
+last_touched: '2026-03-18'
 follow_up:
 - date: '2026-03-17'
   channel: linkedin
@@ -74,3 +77,6 @@ follow_up:
   type: dm
   note: DM sent after acceptance — shared portfolio + AI inference interest
   response: none
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-02-24'

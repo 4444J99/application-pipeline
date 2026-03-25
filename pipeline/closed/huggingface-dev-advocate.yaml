@@ -18,7 +18,7 @@ amount:
   type: salary
   benefits_cliff_note: null
 fit:
-  score: 7.3
+  score: 7.0
   original_score: 6.1
   identity_position: independent-engineer
   framing: Independent engineer and developer advocate — 810K+ words documentation,
@@ -38,13 +38,13 @@ fit:
     portal_friction: 5
 submission:
   effort_level: complex
-  blocks_used: 
+  blocks_used:
     framing: framings/independent-engineer
     evidence: evidence/differentiators
     work_samples: evidence/work-samples
     credentials: pitches/credentials-creative-tech
     methodology: methodology/ai-conductor
-  variant_ids: 
+  variant_ids:
     cover_letter: cover-letters/huggingface-dev-advocate-hub-enterprise
   materials_attached:
   - resumes/batch-01/huggingface-dev-advocate/huggingface-dev-advocate-resume.html
@@ -71,20 +71,34 @@ conversion:
   time_to_response_days: null
   feedback: null
 tags:
-  - job-tier-1
-  - submit-order-2
+- job-tier-1
+- submit-order-2
 source: 04-application-tracker.md
-notes: |
-  Salary range $120,000-$160,000.
-  PRIORITY: Tier 1 — Apply Now (submit second). Role where the full body of work is evidence.
-  42 essays (810K+ words) = sustained technical writing. 11 years teaching 2,000+ students
-  = proven communication. 103 public repos = open-source at scale. Dev advocacy is the
-  intersection of engineering + communication + community — all three demonstrated strengths.
-  Honest gaps: Limited ML knowledge (but dev advocacy doesn't require training models).
+notes: 'Salary range $120,000-$160,000.
+
+  PRIORITY: Tier 1 — Apply Now (submit second). Role where the full body of work is
+  evidence.
+
+  42 essays (810K+ words) = sustained technical writing. 11 years teaching 2,000+
+  students
+
+  = proven communication. 103 public repos = open-source at scale. Dev advocacy is
+  the
+
+  intersection of engineering + communication + community — all three demonstrated
+  strengths.
+
+  Honest gaps: Limited ML knowledge (but dev advocacy doesn''t require training models).
+
   No prior dev advocate title (but teaching IS advocacy).
-last_touched: "2026-02-26"
+
+  '
+last_touched: '2026-02-26'
 withdrawal_reason:
   reason: effort_too_high
   detail: Complex effort, poor fit score — withdrawn during emergency triage sprint
   date: '2026-02-25'
   reopen: false
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-02-14'

@@ -21,9 +21,20 @@ REQUIRED_FIELDS = {"id", "name", "track", "status"}
 VALID_OUTCOMES = {"accepted", "rejected", "withdrawn", "expired", None}
 VALID_DEADLINE_TYPES = {"hard", "rolling", "window", "tba", "fixed"}
 VALID_TIMEZONES = {"ET", "CT", "MT", "PT", "EST", "CST", "MST", "PST", "EDT", "CDT", "MDT", "PDT", "UTC", "GMT"}
-VALID_PORTALS = {"submittable", "slideroom", "email", "custom", "web", "greenhouse", "workable", "lever", "ashby", "smartrecruiters"}
+VALID_PORTALS = {
+    "submittable", "slideroom", "email", "custom", "web", "greenhouse",
+    "workable", "lever", "ashby", "smartrecruiters",
+    # Native ATS portals (2026-03-25)
+    "cursor-native", "notion-native",
+}
 VALID_AMOUNT_TYPES = {"lump_sum", "stipend", "salary", "fee", "in_kind", "variable"}
-VALID_POSITIONS = {"systems-artist", "creative-technologist", "educator", "community-practitioner", "independent-engineer"}
+VALID_POSITIONS = {
+    "systems-artist", "creative-technologist", "educator",
+    "community-practitioner", "independent-engineer",
+    # Added 2026-03-25: full 9-position canonical set from strategy/identity-positions.md
+    "documentation-engineer", "governance-architect",
+    "platform-orchestrator", "founder-operator",
+}
 VALID_EFFORT_LEVELS = {"quick", "standard", "deep", "complex"}
 VALID_OUTREACH_TYPES = {
     "pre_submission", "warm_contact", "info_session",

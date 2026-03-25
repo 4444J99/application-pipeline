@@ -466,3 +466,57 @@ actions:
   impact: TBD
   entry_id: sofi-senior-software-engineer-agentic-test-platform
   reason: Manual advancement by user
+- signal_id: advance-creative-capital-2027-2026-03-25
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting (Manual advancement by user)
+  triggered_action: advance to drafting
+  action_date: '2026-03-25'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: creative-capital-2027
+  reason: Manual advancement by user
+- signal_id: advance-dbt-labs-staff-software-engineer-quality-and-release-platform-2026-03-25
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting (Manual advancement by user)
+  triggered_action: advance to drafting
+  action_date: '2026-03-25'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: dbt-labs-staff-software-engineer-quality-and-release-platform
+  reason: Manual advancement by user
+- signal_id: advance-lacma-art-tech-2026-03-25
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting (Manual advancement by user)
+  triggered_action: advance to drafting
+  action_date: '2026-03-25'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: lacma-art-tech
+  reason: Manual advancement by user
+- signal_id: advance-whiting-nonfiction-2026-03-25
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting (Manual advancement by user)
+  triggered_action: advance to drafting
+  action_date: '2026-03-25'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: whiting-nonfiction
+  reason: Manual advancement by user
+- signal_id: advance-pioneer-works-2026-03-25
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting (Manual advancement by user)
+  triggered_action: advance to drafting
+  action_date: '2026-03-25'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: pioneer-works
+  reason: Manual advancement by user
+- signal_id: advance-eyebeam-plurality-2026-03-25
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting (Manual advancement by user)
+  triggered_action: advance to drafting
+  action_date: '2026-03-25'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: eyebeam-plurality
+  reason: Manual advancement by user

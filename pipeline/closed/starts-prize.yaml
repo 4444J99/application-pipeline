@@ -5,7 +5,7 @@ status: outcome
 identity_position: systems-artist
 outcome: expired
 outcome_date: '2026-03-13'
-outcome_note: 'Deadline was 2026-03-04; expired without submission'
+outcome_note: Deadline was 2026-03-04; expired without submission
 target:
   organization: S+T+ARTS
   url: https://starts-prize.aec.at
@@ -21,7 +21,7 @@ amount:
   type: lump_sum
   benefits_cliff_note: null
 fit:
-  score: 8.9
+  score: 7.5
   original_score: 8.3
   identity_position: systems-artist
   framing: Independent systems artist and engineer building production-grade AI orchestration
@@ -134,3 +134,5 @@ status_meta:
   reviewed_by: 4jp
   reviewed_at: '2026-03-03'
   review_note: autofix-unblocker
+  submitted_by: 4jp
+  submitted_at: '2026-02-14'

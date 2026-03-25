@@ -18,7 +18,7 @@ amount:
   type: lump_sum
   benefits_cliff_note: null
 fit:
-  score: 6.7
+  score: 6.0
   original_score: 7.1
   identity_position: systems-artist
   framing: Systems artist with urgent need for project-specific emergency support
@@ -65,15 +65,26 @@ conversion:
   feedback: null
 withdrawal_reason:
   reason: other
-  detail: Deferred until "Proof of Presentation" (confirmed exhibition/performance date) is secured.
+  detail: Deferred until "Proof of Presentation" (confirmed exhibition/performance
+    date) is secured.
   date: '2026-02-25'
   reopen: true
 tags: []
 source: 04-application-tracker.md
-notes: |
-  Qualification Assessment (2026-02-25):
-  - Hard Gate 1: Requires committed exhibition/performance dates (contract/invitation required).
+notes: 'Qualification Assessment (2026-02-25):
+
+  - Hard Gate 1: Requires committed exhibition/performance dates (contract/invitation
+  required).
+
   - Hard Gate 2: Sudden, unanticipated opportunity or unexpected/unbudgeted expense.
-  - Profile Fit: Strong fit for Performance Art or Visual Arts framing if date is secured.
+
+  - Profile Fit: Strong fit for Performance Art or Visual Arts framing if date is
+  secured.
+
   - Amount: $500-$3,000 (avg $2,200).
-last_touched: "2026-02-25"
+
+  '
+last_touched: '2026-02-25'
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-02-14'

@@ -18,10 +18,11 @@ amount:
   type: salary
   benefits_cliff_note: null
 fit:
-  score: 7.6
+  score: 7.2
   original_score: 6.5
   identity_position: independent-engineer
-  framing: Independent engineer building research tooling infrastructure — 21K code files, 94 CI/CD pipelines, creative-AI systems bridging art and production
+  framing: Independent engineer building research tooling infrastructure — 21K code
+    files, 94 CI/CD pipelines, creative-AI systems bridging art and production
   lead_organs:
   - II
   - III
@@ -73,13 +74,21 @@ tags:
 - job-tier-3
 - submit-order-5
 source: manual
-notes: |
-  Salary range $240,000-$290,000.
+notes: 'Salary range $240,000-$290,000.
+
   PRIORITY: Tier 3 — Apply If Time Permits (submit fifth).
-  Score is 5.7 (second highest), but role leans toward ML research infrastructure more than
-  systems engineering. Creative-AI bridge via ORGAN-II is real, but role likely needs more
-  hands-on ML pipeline experience. Good application, lower probability of advancing past screen.
-last_touched: "2026-03-18"
+
+  Score is 5.7 (second highest), but role leans toward ML research infrastructure
+  more than
+
+  systems engineering. Creative-AI bridge via ORGAN-II is real, but role likely needs
+  more
+
+  hands-on ML pipeline experience. Good application, lower probability of advancing
+  past screen.
+
+  '
+last_touched: '2026-03-18'
 follow_up:
 - date: '2026-03-18'
   channel: linkedin
@@ -93,3 +102,6 @@ follow_up:
   type: dm
   note: DM sent after acceptance — shared portfolio + creative infrastructure context
   response: none
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-02-24'

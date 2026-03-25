@@ -19,7 +19,7 @@ amount:
   type: fee
   benefits_cliff_note: null
 fit:
-  score: 8.2
+  score: 7.0
   original_score: 8.7
   identity_position: community-practitioner
   framing: Queer writer and community practitioner leveraging a 103-repository digital
@@ -77,3 +77,6 @@ source: 04-application-tracker.md
 notes: $250/feature.
 last_touched: '2026-02-26'
 follow_up: []
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-02-26'

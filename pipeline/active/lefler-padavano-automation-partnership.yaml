@@ -10,17 +10,17 @@ target:
   portal: custom
   location: Remote
   location_class: us-remote
-  description: >
-    Partnership with Scott Lefler (10+ year friend, Owner of Lefler Design).
-    Scott on $12K retainer with existing company, has freelancing network and
-    client base. Proposed model: Padavano builds backend/automation products,
-    Scott handles UI/UX, marketing, and sales. Build in public strategy.
-    Scott wants measurable value propositions tied to specific verticals:
-    lead gen systems, AI sales assistants, internal tools for content generation,
-    dashboard tools, social media management automation. Target: elevated/luxury
-    clientele (Scott's prior experience with luxury realtors). Products serve
-    both partners' personal needs AND are packaged for client sales.
-    Scott: "We just need a product!"
+  description: 'Partnership with Scott Lefler (10+ year friend, Owner of Lefler Design).
+    Scott on $12K retainer with existing company, has freelancing network and client
+    base. Proposed model: Padavano builds backend/automation products, Scott handles
+    UI/UX, marketing, and sales. Build in public strategy. Scott wants measurable
+    value propositions tied to specific verticals: lead gen systems, AI sales assistants,
+    internal tools for content generation, dashboard tools, social media management
+    automation. Target: elevated/luxury clientele (Scott''s prior experience with
+    luxury realtors). Products serve both partners'' personal needs AND are packaged
+    for client sales. Scott: "We just need a product!"
+
+    '
 deadline:
   date: null
   type: rolling
@@ -42,13 +42,14 @@ fit:
     effort_to_value: 6
     deadline_feasibility: 9
     portal_friction: 6
-  framing: >
-    Technical co-founder in a build-and-sell partnership. Padavano builds the
-    automation engines, Lefler wraps with design and sells into his network.
-    Products dogfooded internally first, then packaged for clients. Consulting
-    model with productized service potential.
+  framing: 'Technical co-founder in a build-and-sell partnership. Padavano builds
+    the automation engines, Lefler wraps with design and sells into his network. Products
+    dogfooded internally first, then packaged for clients. Consulting model with productized
+    service potential.
+
+    '
 submission:
-  effort_level: custom
+  effort_level: standard
   blocks_used: {}
   variant_ids: {}
   materials_attached: []
@@ -76,19 +77,20 @@ follow_up:
   channel: facetime
   contact: Scott Lefler
   type: call
-  note: >
-    1-hour FaceTime. Scott on $12K retainer, has network to sell into.
-    Proposed: user builds, Scott designs + markets + sells.
-    Scott wants specificity and value metrics. Discussed lead gen, AI sales
-    assistants, social media automation. Build in public strategy.
+  note: '1-hour FaceTime. Scott on $12K retainer, has network to sell into. Proposed:
+    user builds, Scott designs + markets + sells. Scott wants specificity and value
+    metrics. Discussed lead gen, AI sales assistants, social media automation. Build
+    in public strategy.
+
+    '
   response: positive
 - date: '2026-03-23'
   channel: imessage
   contact: Scott Lefler
   type: follow_up
-  note: >
-    Texts confirming partnership. User shared consilium-simplex as luxury
-    automation draft. Scott: "tie to value — increase booked calls 30%,
-    save 20 hrs/week." User: "will return with product." Scott ready to
-    start building in public immediately.
+  note: 'Texts confirming partnership. User shared consilium-simplex as luxury automation
+    draft. Scott: "tie to value — increase booked calls 30%, save 20 hrs/week." User:
+    "will return with product." Scott ready to start building in public immediately.
+
+    '
   response: positive

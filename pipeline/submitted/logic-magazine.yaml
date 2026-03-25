@@ -19,7 +19,7 @@ amount:
   type: fee
   benefits_cliff_note: null
 fit:
-  score: 7.5
+  score: 6.5
   original_score: 8.3
   identity_position: creative-technologist
   framing: Creative technologist writing critically about computation, labor, and
@@ -73,5 +73,8 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $1,200-$2,000/essay. Themed rolling deadlines.
-last_touched: "2026-02-26"
+last_touched: '2026-02-26'
 follow_up: []
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-02-26'

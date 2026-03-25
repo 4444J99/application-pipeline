@@ -19,7 +19,7 @@ amount:
   type: fee
   benefits_cliff_note: null
 fit:
-  score: 6.6
+  score: 5.7
   original_score: 8.0
   identity_position: creative-technologist
   framing: Systems thinker writing long-form essays on technology, culture, and institutional
@@ -70,5 +70,8 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $1/word, ~$3K/essay. Pitch to pitches@noemamag.com.
-last_touched: "2026-02-26"
+last_touched: '2026-02-26'
 follow_up: []
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-02-26'
