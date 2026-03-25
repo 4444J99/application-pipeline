@@ -1,0 +1,103 @@
+id: twilio-developer-evangelist
+name: Twilio Developer Evangelist
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Twilio
+  url: https://boards.greenhouse.io/twilio
+  application_url: https://job-boards.greenhouse.io/twilio/jobs/7579499
+  portal: greenhouse
+  location: Remote - US
+  location_class: us-remote
+  description: '<div class="content-intro"><p><strong>Who we are&nbsp;</strong></p>
+    <p>At Twilio, we’re shaping the future of communications, all from the comfort
+    of our homes. We deliver innovative solutions to<a class="c-link" href="https://customers.twilio.com/"
+    target="_blank" data-stringify-link="https://customers.twilio.com/" data-sk="tooltip_parent">&nbsp;hundreds
+    of thousands of businesses&nbsp;</a>and empower millions of developers worldwide
+    to craft personalized customer experiences.</p> <p>Our dedication to <a class="c-link"
+    href="https://www.twilio.com/en-us/blog/open-work" target="_blank" data-stringify-link="https://www.twilio.com/en-us/blog/open-work"
+    data-sk="tooltip_parent">remote-first work</a>, and strong culture of connection
+    and global inclusion means that no matter your location, you’re part of a vibrant
+    team with diverse experiences making a global impact each day. As we continue
+    to revolutionize how the world interacts, we’re acquiring new skills and experiences
+    that make work feel truly rewarding. Your career at Twilio is in your hands.<br><br>We
+    use Artificial Intelligence (AI) to help make our hiring process efficient. That
+    said, every hiring decision is made by real Twilions!</p> <p><span style="color:
+    rgb(255, 255, 255);">.</span></p></div><p><strong>See yourself at Twilio</strong></p>
+    <p>Join the team as Twilio’s next Developer Evangelist.</p> <p><strong>About the
+    job</strong></p> <p>This position is needed to help us inspire and equip a global
+    network of millions of developers who will build the future of customer engagement.
+    The Developer Evangelist specializing in AI technology will define developer relations
+    and build the AI community in the Bay Area, while sustaining a relationship that
+    fuels every developer''s journey to know, use and love Twilio. The Developer Evangelist
+    will serve as the regional liaison for local developer communities, build Twilio-powered
+    solutions, such as SMS, Voice and Email, to address developer needs and partner
+    with Marketing, Product and additional cross-functional teams.&nbsp; The role
+    requires an understanding of the AI developer community and technical knowledge,
+    as well as the ability to take complex ideas and make them accessible in order
+    to inspire creativity through code.</p> <p><strong>Responsibilities</strong></p>
+    <p>In this role, you’ll:</p> <ul> <li>Help us inspire and equip developers to
+    build with Twilio products and AI technology, ensuring an exceptional developer
+    experience with Twilio.</li> <li>Be an active and authentic participant in the
+    developer community wherever they gather online and offline. For many of those
+    developers, you will be "the face" of Twilio -- the person they ping when they
+    need help. They will feel like VIPs because they know you. And when someone who
+    works at Twilio needs to talk to developers in the Bay Area and North America
+    developer community, they''ll come to you.</li> <li>Attend, plan and speak at
+    in-person and virtual events.</li> <li>Write clear and empathetic content that
+    breaks down the complex into the understandable while telling stories with code,
+    equipping developers with knowledge of tools and techniques.</li> <li>Navigate
+    cross-functional collaboration and partner within Twilio to align with program
+    and engagement objectives.</li> <li>Drive projects independently from inception
+    to completion, outlining key milestones and ensuring deadlines are met.</li> <li>Communicate
+    project plans, progress, and outcomes effectively to stakeholders at all levels
+    within the region and across the company.</li> </ul> <p><strong>Qualifications&nbsp;</strong></p>
+    <p>Twilio values diverse experiences from all kinds of industries, and we encourage
+    everyone who meets the required qualifications to apply. If your career is just
+    starting or hasn''t followed a traditional path, don''t let that stop you from
+    considering Twilio. We are always looking for people who will bring something
+    new to the table!</p> <p><strong>*Required:</strong></p> <ul> <li>Proficient in
+    writing Python, PHP, Node, C# (.NET), or Java with insights into web frameworks
+    within or across these languages.</li> <li>Technical foundational expertise in
+    AI tools, technologies and/or platforms.</li> <li>Ability to navigate the emerging
+    AI developer ecosystem, community and emerging industry trends.&nbsp;</li> <li>A
+    love of teaching others, curiosity and excitement about technology.</li> <li>3-5
+    years of experience writing production code, with strong empathy for developers
+    to successfully guide their building process.</li> <li>Experience in cross-functional
+    collaboration with teams like sales, support, product and marketing.</li> <li>Creative
+    and collaborative problem-solving skills, with a focus on data-driven decision-making
+    for system and process improvements.</li> <li>Skilled in storytelling to highlight
+    developers building on Twilio and inspire others.</li> <li>Experience in public
+    speaking, writing, and/or organizing engaging programs.</li> </ul> <p><strong>Desired:'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.8
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.415748+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-25"

@@ -1,0 +1,103 @@
+id: twilio-software-architect-reliability-engineering
+name: Twilio Software Architect, Reliability Engineering
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Twilio
+  url: https://boards.greenhouse.io/twilio
+  application_url: https://job-boards.greenhouse.io/twilio/jobs/7658259
+  portal: greenhouse
+  location: Remote - US
+  location_class: us-remote
+  description: '<div class="content-intro"><p><strong>Who we are&nbsp;</strong></p>
+    <p>At Twilio, we’re shaping the future of communications, all from the comfort
+    of our homes. We deliver innovative solutions to<a class="c-link" href="https://customers.twilio.com/"
+    target="_blank" data-stringify-link="https://customers.twilio.com/" data-sk="tooltip_parent">&nbsp;hundreds
+    of thousands of businesses&nbsp;</a>and empower millions of developers worldwide
+    to craft personalized customer experiences.</p> <p>Our dedication to <a class="c-link"
+    href="https://www.twilio.com/en-us/blog/open-work" target="_blank" data-stringify-link="https://www.twilio.com/en-us/blog/open-work"
+    data-sk="tooltip_parent">remote-first work</a>, and strong culture of connection
+    and global inclusion means that no matter your location, you’re part of a vibrant
+    team with diverse experiences making a global impact each day. As we continue
+    to revolutionize how the world interacts, we’re acquiring new skills and experiences
+    that make work feel truly rewarding. Your career at Twilio is in your hands.<br><br>We
+    use Artificial Intelligence (AI) to help make our hiring process efficient. That
+    said, every hiring decision is made by real Twilions!</p> <p><span style="color:
+    rgb(255, 255, 255);">.</span></p></div><p><strong>See yourself at Twilio</strong></p>
+    <p>Join the team as Twilio’s next Reliability Architect.</p> <p><strong>About
+    the job</strong></p> <p>As an Architect in SRE, you will drive the technical strategy,
+    vision and outcomes for Twilio’s Reliability Engineering organization. You will
+    define and lead solutions and initiatives that ensure Twilio products are reliable
+    worldwide, and you will define standards and guide engineering teams on best practices
+    for designing, building, and operating resilient systems. This role is pivotal
+    to Twilio’s commitment to operational excellence, scalability, and pragmatic,
+    large-scale systems design in the cloud.</p> <p><strong>Responsibilities</strong></p>
+    <p>In this role, you’ll:</p> <ul> <li>Partner with senior technical leaders across
+    Twilio to set and communicate the reliability strategy, translating business goals
+    into measurable outcomes.</li> <li>Influence company-wide architectural decisions
+    while balancing long-term vision with near-term and compliance needs.</li> <li>Lead
+    the design, implementation, and operation of scalable solutions and paved roads
+    that enable reliable, high-traffic services;&nbsp;</li> <li>Influence company-wide
+    architectural decisions to focus on availability, performance, resilience, and
+    cost efficiency using Kubernetes, AWS, Terraform, and modern observability.</li>
+    <li>Ensure integrity and quality across the service lifecycle; design fault-tolerant
+    architectures, incident response, disaster recovery, and capacity/cost management.</li>
+    <li>Collaborate with product and cross-functional teams to identify reliability
+    risks and convert them into actionable designs, programs, and tooling.</li> <li>Establish
+    and champion reliability practices and drive systemic improvements.</li> <li>Mentor
+    and grow engineers and technical leaders</li> <li>Track and apply emerging SRE,
+    cloud, and large-scale systems best practices; introduce pragmatic innovations
+    that improve reliability at scale.</li> </ul> <p><strong>Qualifications&nbsp;</strong></p>
+    <p>Twilio values diverse experiences from all kinds of industries, and we encourage
+    everyone who meets the required qualifications to apply. If your career is just
+    starting or hasn''t followed a traditional path, don''t let that stop you from
+    considering Twilio. We are always looking for people who will bring something
+    new to the table!</p> <p><strong>*Required:</strong></p> <ul> <li>15+ years of
+    experience in Reliability Engineering, Software Engineering, DevOps roles with
+    a focus on infrastructure, backend systems, and reliability, including as a principal/architect.</li>
+    <li>Strong experience in driving strategic technical decisions and defining long-term
+    technical vision.</li> <li>In-depth understanding of the role of Reliability Engineering
+    in a large and diverse SaaS organization.</li> <li>Experience driving cross-org
+    technical architecture outcomes.</li> <li>Knowledge of cloud architecture, devops
+    practices, and large-scale systems design with microservices.</li> <li>Bachelor''s
+    or Master''s degree in Computer Science, Engineering, or a related field (or equivalent
+    experience).</li> <li>Strong production experience, including operational management,
+    scaling, partitioning strategies, and tuning for performance and reliability in
+    high-scale environments.</li> <li>Hands-on experience with Kubernetes (e.g., EKS),
+    deploying and managing stateful services, and cloud services like AWS.</li> <li>Proficiency
+    in infrastructure-as-code tools such as Terraform or CloudFormation for automating
+    infrastructure.</li> <li>Expertise in observability tools (e.g., Prometheus, Grafana,
+    Datadog) for monitoring distributed systems and setting up alerting.</li> <li>Proficient
+    in at '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.8
+  identity_position: documentation-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.432169+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-25"

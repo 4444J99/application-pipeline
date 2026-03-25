@@ -1,0 +1,103 @@
+id: coinbase-senior-software-engineer-developer-payments
+name: 'Coinbase Senior Software Engineer, Developer (Payments) '
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7746671?gh_jid=7746671
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+  description: <div class="content-intro"><p>Ready to be pushed beyond what you think
+    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
+    in the world. It’s a massive, ambitious opportunity that demands the best of us,
+    every day, as we build the emerging onchain platform — and with it, the future
+    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
+    candidate. We want someone who is passionate about our mission and who believes
+    in the power of crypto and blockchain technology to update the financial system.
+    We want someone who is eager to leave their mark on the world, who relishes the
+    pressure and privilege of working with high caliber colleagues, and who actively
+    seeks feedback to keep leveling up. We want someone who will run towards, not
+    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
+    culture</a> is intense and isn’t for everyone. But if you want to build the future
+    alongside others who excel in their disciplines and expect the same from you,
+    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
+    we are not remote-only. In-person participation is required throughout the year.
+    Team and company-wide offsites are held multiple times annually to foster collaboration,
+    connection, and alignment. Attendance is expected and fully supported.</p></div><p>The
+    CDP Payments team builds the APIs and infrastructure that let businesses instantly
+    move, convert, and accept value across fiat currencies, stablecoins, and crypto
+    — through a single, unified API that abstracts away blockchain and payment rail
+    complexity.&nbsp;We power stablecoin payouts, cross-border payments, and fiat-to-crypto
+    conversions for some of the biggest names in fintech, trading, and global payments
+    — including major PSPs, neobanks, remittance providers, and institutional clients.&nbsp;<br><br>In
+    short, we're building the payment rails of the future, where money moves 24/7,
+    instantly, across borders and asset types.</p> <p><strong>What you'll be doing:&nbsp;</strong></p>
+    <ul> <li>Design, build, and ship the core APIs and backend services that power
+    global payments for CDP customers.&nbsp;</li> <li>Owning end-to-end delivery of
+    high-impact features — think integrating new payment rails (Onchain Payments,
+    ACH, Wire), building stablecoin bank account infrastructure, and designing cross-border
+    payment flows that convert fiat to stablecoins and back in seconds.&nbsp;</li>
+    <li>Lead cross-functional projects with Money Movement, CDP Foundations and various
+    Platform teams, and your code will handle real money flowing through production
+    systems used by some of the largest financial institutions in the world.</li>
+    </ul> <p><strong>What we look for in you:&nbsp;</strong></p> <ul> <li>You have
+    at least 5 years of experience in software engineering.</li> <li>You are customer-obsessed,
+    and love shipping products that delight customers</li> <li>You highly value continuous
+    improvement, resourcefulness, and hold a high bar for yourself and those around
+    you</li> <li>Scrappy self-starter mindset with willingness to push through friction
+    to improve customer UX.</li> <li>Strong engineering skills; you can build reliable
+    backend services that handle real-world edge cases.</li> <li>Solid understanding
+    of distributed systems, microservices architecture, and event-driven patterns;
+    you design and integrate cleanly with internal and third-party services.</li>
+    <li>You write high-quality, well-tested code to meet the needs of your customers.</li>
+    <li>Excellent communication and collaboration skills, with the ability to work
+    closely with designers and product managers.</li> <li>Passion for great developer
+    tooling and opinions on what makes developer platforms excellent.</li> <li>Passion
+    for onchain/Web3 and understanding of blockchain technologies, particularly Ethereum
+    and other EVM-compatible chains.</li> <li>Demonstrates the ability to responsibly
+    use generative AI tools and copilots (e.g., LibreChat, Gemini, Glean) in daily
+    workflows, continuously learn as tools evolve, and apply human‑in‑the‑loop practices
+    to deliver business‑ready outputs and drive measurable improvements in efficiency,
+    cost, and quality.</li> </ul> <p><strong>Nice to haves:&nbsp;</strong></p> <ul>
+    <li>You have gone through a rapid growth in your company (from startup to mid-size).</li>
+    <li>You have experience building on top of&nbsp; Blockchain technology (such as
+    Bitcoin, Ethereum etc..)</li> <li>You have experience decomposing a large monolith
+    into microservices.</li> <li>You’ve built financial, high reliability or security
+    systems.</li> </ul> <div id="fortidlp-input-element-parent"></div><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p><strong>Pay Transparency Notice:</strong><strong><em>
+    </em></strong>Depending on your work location, the target annual <strong>base
+    </strong>salary for this position can range as detailed belo
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 9.0
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.659912+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-25"

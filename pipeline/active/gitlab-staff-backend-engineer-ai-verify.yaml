@@ -1,0 +1,104 @@
+id: gitlab-staff-backend-engineer-ai-verify
+name: GitLab Staff Backend Engineer (AI), Verify
+track: job
+status: qualified
+outcome: null
+target:
+  organization: GitLab
+  url: https://boards.greenhouse.io/gitlab
+  application_url: https://job-boards.greenhouse.io/gitlab/jobs/8448283002
+  portal: greenhouse
+  location: Remote, APAC; Remote, Canada; Remote, Ireland; Remote, Netherlands; Remote,
+    United Kingdom; Remote, US
+  location_class: international
+  description: '<div class="content-intro"><p>GitLab is the intelligent orchestration
+    platform for DevSecOps. GitLab enables organizations to increase developer productivity,
+    improve operational efficiency, reduce security and compliance risk, and accelerate
+    digital transformation. More than 50 million registered users and more than 50%
+    of the Fortune 100* trust GitLab to ship better, more secure software faster.</p>
+    <p>The same principles built into our products are reflected in how our team works:
+    we embrace AI as a core productivity multiplier, with all team members expected
+    to incorporate AI into their daily workflows to drive efficiency, innovation,
+    and impact. GitLab is where careers accelerate, innovation flourishes, and every
+    voice is valued. Our high-performance culture is driven by our <a href="https://handbook.gitlab.com/handbook/values/">values</a>
+    and continuous knowledge exchange, enabling our team members to reach their full
+    potential while collaborating with industry leaders to solve complex problems.
+    <a href="https://www.youtube.com/watch?v=OuZIb5zszQI">Co-create the future with
+    us</a> as we build technology that transforms how the world develops software.</p>
+    <p>*<em>Fortune 500® is a registered trademark of Fortune Media IP Limited, used
+    under license. Claim based on GitLab data. Fortune 100 refers to the top 20% ranked
+    companies in the 2025 Fortune 500 list, published in June 2025. Fortune and Fortune
+    Media IP Limited are not affiliated with, and do not endorse products or services
+    of GitLab.</em></p></div><div class="c-message_actions__container c-message__actions">
+    <h2><strong>An overview of this role</strong></h2> <p>As a Staff Backend Engineer
+    (AI) in the Verify stage at GitLab, you''ll help shape and scale the core infrastructure
+    behind GitLab CI. You''ll play a central role in how we integrate AI into CI/CD
+    workflows. Your work will impact performance, reliability, and usability for people
+    running millions of CI jobs, from small teams to the largest enterprises.</p>
+    <p>AI is a top priority in the year ahead. In this role, you''ll go beyond using
+    AI tools and help define how we design, build, and iterate on AI-assisted and
+    agentic CI experiences. You''ll set standards for what good looks like across
+    our AI agent portfolio, including how we measure success, how we instrument behavior
+    in production, and how we account for large language model limitations. You''ll
+    also help responsibly integrate GitLab''s Duo Agent Platform into CI workflows
+    at scale, on a foundation that''s fast, reliable, secure, and observable.</p>
+    <p>We have ambitious goals for <a href="https://gitlab.com/groups/gitlab-org/-/work_items/20586"><em>Agentic
+    CI</em> in FY27</a>. As a Staff Engineer, you will:</p> <ul> <li>Partner with
+    Engineering, Product, and UX leadership to pressure-test our priorities: where
+    we can move faster, where we''re missing data, and where there''s whitespace to
+    innovate. Part of this includes learning and growing with the Engineering team
+    you will collaborate closely with.</li> <li>Define what success looks like across
+    our agent portfolio and make sure we''re tracking against it — not just shipping,
+    but learning.</li> <li>Bring a sharp eye to the competitive landscape, helping
+    us understand what it takes to keep GitLab CI best-in-class in an increasingly
+    agentic world.</li> <li>Examples of <strong><em>Agentic CI</em></strong> work
+    we have planned for the upcoming year:</li> <ul> <li><a href="https://gitlab.com/groups/gitlab-org/-/work_items/20443"><strong>AI
+    Pipeline Builder</strong></a>, the foundational CI agent that auto-creates pipelines
+    for new projects and serves as the launchpad for onboarding new CI users.</li>
+    <li>Automate the <a href="https://gitlab.com/gitlab-org/gitlab/-/work_items/588753"><strong>Fix
+    a Failing Pipeline</strong> flow</a> at scale – from dogfooding on internal GitLab
+    projects through to safe, controlled rollout for customers, solving real infrastructure
+    and scalability challenges.</li> <li>Build the <a href="https://gitlab.com/groups/gitlab-org/-/work_items/20904">instrumentation
+    and observability</a> layer that makes agentic CI trustworthy — trigger volume
+    dashboards, retry rates, cost safeguards — so we can measure what''s working,
+    catch what isn''t, and iterate with confidence.</li> <li>Harden the CI pipeline
+    execution infrastructure that these agents depend on: database access patterns,
+    background processing, and job orchestration built to handle the additional load
+    that AI-driven automation introduces at enterprise scale.</li> </ul> </ul> <h2><strong>What
+    you’ll do</strong></h2> <ul> <li>Shape and scale GitLab CI backend infrastructure
+    to improve performance, reliability, and usability for users running jobs at high
+    volume.</li> <li>Design and implement AI-powered features for Agentic CI, including
+    agents, agentic flows, and LLM-backed tooling that integrates with GitLab''s Duo
+    Agent Platform.</li> <li>Define what success looks like for AI in CI before you
+    build, including baselines, m'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.6
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.506828+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-25"

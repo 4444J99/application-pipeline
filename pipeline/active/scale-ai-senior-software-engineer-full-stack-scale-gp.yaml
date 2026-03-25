@@ -1,0 +1,103 @@
+id: scale-ai-senior-software-engineer-full-stack-scale-gp
+name: Scale AI  Senior Software Engineer,  Full-Stack – Scale GP
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Scale AI
+  url: https://boards.greenhouse.io/scaleai
+  application_url: https://job-boards.greenhouse.io/scaleai/jobs/4637484005
+  portal: greenhouse
+  location: San Francisco, CA; New York, NY
+  location_class: us-onsite
+  description: '<p>Scale GP (Scale Generative AI Platform) is an enterprise-grade
+    Generative AI platform providing APIs for knowledge retrieval, inference, evaluation,
+    and more. We are seeking a strong Senior <strong>Full-Stack Engineer</strong>
+    to help us build, scale, and refine our rapidly growing product. The ideal candidate
+    is deeply grounded in software engineering best practices and experienced in developing
+    and scaling modern web applications end-to-end. You will work across the stack—from
+    React/TypeScript frontends to Python-based backends—while integrating with LLMs
+    and machine learning systems.</p> <p>You will solve complex challenges in scalability,
+    reliability, and product experience while owning significant product areas in
+    a fast-paced environment.</p> <h3><strong>What You’ll Do</strong></h3> <ul> <li><strong>Own
+    major full-stack product areas</strong>, driving features from design through
+    production deployment.<br><br></li> <li><strong>Build modern frontend experiences</strong>
+    using React and TypeScript, ensuring performance, usability, and responsiveness.<br><br></li>
+    <li><strong>Develop reliable backend services</strong> in Python, working with
+    distributed systems, data pipelines, and ML/LLM components.<br><br></li> <li><strong>Integrate
+    with LLMs, vector databases, and AI infrastructure</strong> to power intelligent
+    product experiences.<br><br></li> <li><strong>Deliver experiments and new features
+    quickly</strong>, maintaining high quality and tight feedback loops with customers.<br><br></li>
+    <li><strong>Collaborate across product, ML, and infrastructure teams</strong>
+    to shape the direction of Scale GP.<br><br></li> <li><strong>Adapt quickly</strong>—learning
+    new technologies, frameworks, and tools as needed across the stack.<br><br></li>
+    </ul> <h3><strong>Ideal Experience</strong></h3> <ul> <li><strong>5+ years of
+    full-time engineering experience</strong>, post-graduation.<br><br></li> <li>Strong
+    experience developing <strong>full-stack applications</strong> using <strong>React,
+    TypeScript, and Python</strong>.<br><br></li> <li>Experience scaling or shipping
+    products at <strong>high-growth startups</strong>.<br><br></li> <li>Familiarity
+    with <strong>LLMs, vector databases, embeddings, or other modern AI tooling</strong>
+    (tinkering or production experience welcome).<br><br></li> <li>Proficiency with
+    <strong>SQL</strong> and modern API development.<br><br></li> <li>Experience with
+    <strong>Kubernetes</strong>, containerization, and microservice architectures.<br><br></li>
+    <li>Experience working with at least one major cloud provider (AWS, GCP, or Azure).</li>
+    </ul><div class="content-pay-transparency"><div class="pay-input"><div class="description"><p><em>Compensation
+    packages at Scale for eligible roles include base salary, equity, and benefits.
+    The range displayed on each job posting reflects the minimum and maximum target
+    for new hire salaries for the position, determined by work location and additional
+    factors, including job-related skills, experience, interview performance, and
+    relevant education or training. Scale employees in eligible roles are also granted
+    equity based compensation, subject to Board of Director approval. Your recruiter
+    can share more about the specific salary range for your preferred location during
+    the hiring process, and confirm whether the hired role will be eligible for equity
+    grant. You’ll also receive benefits including, but not limited to: Comprehensive
+    health, dental and vision coverage, retirement benefits, a learning and development
+    stipend, and generous PTO. Additionally, this role may be eligible for additional
+    benefits such as a commuter stipend.</em></p></div><div class="title">Please reference
+    the job posting''s subtitle for where this position will be located. For pay transparency
+    purposes, the base salary range for this full-time position in the locations of
+    San Francisco, New York, Seattle is:</div><div class="pay-range"><span>$216,200</span><span
+    class="divider">&mdash;</span><span>$270,250 USD</span></div></div></div><div
+    class="content-conclusion"><p><strong><em>PLEASE NOTE:&nbsp;</em></strong><em>Our
+    policy requires a 90-day waiting period before reconsidering candidates for the
+    same role. This allows us to ensure a fair and thorough evaluation of all applicants.</em></p>
+    <p><strong>About Us:</strong></p> <p><em>At Scale, our mission is to develop reliable
+    AI systems for the world''s most important decisions. Our products provide the
+    high-quality data and full-stack technologies that power the world''s leading
+    models, and help enterprises and governments build, deploy, and oversee AI applications
+    that deliver real impact. We work closely with industry leaders like Meta, Cisco,
+    DLA Piper, Mayo Clinic, Time Inc., the Government of Qatar, and U.S. government
+    agencies including the Army and Air Force. We are expanding our team to accelerate
+    the development of AI applications.</em></p> <p><em>We believe that everyone should
+    be able to bring their whole selves to wor'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.8
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.470425+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-25"

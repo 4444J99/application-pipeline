@@ -1,0 +1,103 @@
+id: scale-ai-senior-software-engineer-connectivity
+name: Scale AI Senior Software Engineer, Connectivity
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Scale AI
+  url: https://boards.greenhouse.io/scaleai
+  application_url: https://job-boards.greenhouse.io/scaleai/jobs/4654275005
+  portal: greenhouse
+  location: San Francisco, CA; New York, NY
+  location_class: us-onsite
+  description: '<h2><strong>Senior Software Engineer, Platform — Connectivity</strong></h2>
+    <p>The Connectivity team owns the core platform that enables Scale to continuously
+    generate, evaluate, and deliver high-quality training data to our customers. Our
+    systems sit at the center of Scale’s data and AI infrastructure, powering large-scale
+    workflows while supporting frontier AI capabilities such as multi-modality, long-horizon
+    reasoning, and agentic behavior.</p> <p>We’re looking for a senior engineer with
+    <strong>deep experience</strong> <strong>building robust platforms</strong>, someone
+    who brings strong architectural judgment, a bias toward correctness and reliability,
+    and the ability to design systems that scale and evolve cleanly over time. This
+    is a backend-heavy role with full-stack expectations and significant ownership
+    from design through long-term operation.</p> <h3><strong>What You’ll Do</strong></h3>
+    <ul> <li><strong>Design and own foundational platform systems</strong> that support
+    scalable data generation, evaluation, and bespoke customer delivery across Scale’s
+    ecosystem.</li> <li><strong>Architect extensible, production-grade services</strong>
+    that can support frontier AI workflows, including multi-modal inputs, long-running
+    processes, and agentic orchestration.</li> <li><strong>Build and operate distributed
+    systems at scale</strong>, with strong guarantees around correctness, reliability,
+    observability, and cost efficiency.</li> <li><strong>Integrate with public LLM
+    APIs</strong> and AI services, designing abstractions that are resilient to model
+    churn, latency variability, and evolving usage patterns.</li> <li><strong>Design
+    and maintain data transformation and processing systems</strong>, supporting complex
+    schema evolution, customization, and high-throughput workloads.</li> <li><strong>Partner
+    closely with infrastructure, product, and customer-facing teams</strong> to define
+    requirements, shape technical direction, and deliver seamless integration experiences
+    for customers.</li> <li><strong>Lead multi-quarter technical initiatives</strong>,
+    including authoring and driving a 6+ month technical roadmap for major platform
+    investments.</li> <li><strong>Apply strong engineering judgment in ambiguous problem
+    spaces</strong>, balancing speed with long-term maintainability and operational
+    excellence.</li> <li><strong>Raise the quality bar</strong> through thoughtful
+    system design reviews, rigorous code reviews, and mentorship grounded in real-world
+    production experience.</li> </ul> <h3><strong>Ideal Experience</strong></h3> <ul>
+    <li>7+ years of professional software engineering experience, with a strong background
+    in building and operating large-scale, production-grade platforms.<br><br></li>
+    <li>Deep expertise in distributed systems and cloud-native architectures, including
+    Kubernetes, microservices, event-driven systems, caching, and production databases.<br><br></li>
+    <li>Proven ability to lead multi-quarter technical initiatives, work effectively
+    across cross-functional teams, and apply strong architectural judgment in ambiguous
+    environments.<br><br></li> <li>Preferred: Experience integrating with public LLM
+    APIs and designing systems that handle scale, reliability, latency, and cost tradeoffs.<br><br></li>
+    </ul> <p>Preferred: Experience building or operating data processing and transformation
+    systems supporting complex workflows and evolving schemas.</p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p><em>Compensation packages at Scale
+    for eligible roles include base salary, equity, and benefits. The range displayed
+    on each job posting reflects the minimum and maximum target for new hire salaries
+    for the position, determined by work location and additional factors, including
+    job-related skills, experience, interview performance, and relevant education
+    or training. Scale employees in eligible roles are also granted equity based compensation,
+    subject to Board of Director approval. Your recruiter can share more about the
+    specific salary range for your preferred location during the hiring process, and
+    confirm whether the hired role will be eligible for equity grant. You’ll also
+    receive benefits including, but not limited to: Comprehensive health, dental and
+    vision coverage, retirement benefits, a learning and development stipend, and
+    generous PTO. Additionally, this role may be eligible for additional benefits
+    such as a commuter stipend.</em></p></div><div class="title">Please reference
+    the job posting''s subtitle for where this position will be located. For pay transparency
+    purposes, the base salary range for this full-time position in the locations of
+    San Francisco, New York, Seattle is:</div><div class="pay-range"><span>$216,200</span><span
+    class="divider">&mdash;</span><span>$270,250 USD</span></div></div></div><div
+    class="content-conclusion"><p><strong><em>PLEASE NOTE:&nbsp;</em></strong><em>Our
+    policy requires a 90-day waiting period before reconsidering candidates '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.8
+  identity_position: documentation-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.468590+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-25"

@@ -1,0 +1,103 @@
+id: twilio-senior-product-engineer-backend
+name: Twilio Senior Product Engineer (Backend)
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Twilio
+  url: https://boards.greenhouse.io/twilio
+  application_url: https://job-boards.greenhouse.io/twilio/jobs/7472456
+  portal: greenhouse
+  location: Remote - US
+  location_class: us-remote
+  description: '<div class="content-intro"><p><strong>Who we are&nbsp;</strong></p>
+    <p>At Twilio, we’re shaping the future of communications, all from the comfort
+    of our homes. We deliver innovative solutions to<a class="c-link" href="https://customers.twilio.com/"
+    target="_blank" data-stringify-link="https://customers.twilio.com/" data-sk="tooltip_parent">&nbsp;hundreds
+    of thousands of businesses&nbsp;</a>and empower millions of developers worldwide
+    to craft personalized customer experiences.</p> <p>Our dedication to <a class="c-link"
+    href="https://www.twilio.com/en-us/blog/open-work" target="_blank" data-stringify-link="https://www.twilio.com/en-us/blog/open-work"
+    data-sk="tooltip_parent">remote-first work</a>, and strong culture of connection
+    and global inclusion means that no matter your location, you’re part of a vibrant
+    team with diverse experiences making a global impact each day. As we continue
+    to revolutionize how the world interacts, we’re acquiring new skills and experiences
+    that make work feel truly rewarding. Your career at Twilio is in your hands.<br><br>We
+    use Artificial Intelligence (AI) to help make our hiring process efficient. That
+    said, every hiring decision is made by real Twilions!</p> <p><span style="color:
+    rgb(255, 255, 255);">.</span></p></div><p><strong>See yourself at Twilio</strong></p>
+    <p>Join the team as a Senior Software Engineer for Stytch, where you''ll shape
+    the next generation of identity products.</p> <p><strong>About the job</strong></p>
+    <p>As a Senior Software Engineer you will help scale Stytch’s core product as
+    we bring Stytch capabilities to Twilio’s full customer base, delivering secure,
+    developer-first identity experiences. You’ll build backend APIs that power authentication,
+    authorization, and emerging agentic and non-human identity use cases. You’ll partner
+    closely with product and engineering leadership to design and deliver high-impact
+    customer-facing features, and evolve our platform for Twilio’s scale. This is
+    a rare chance to operate like a startup within Twilio: you’ll work in a high-ownership
+    environment with startup speed, backed by Twilio’s reach and scale.</p> <p><strong>Responsibilities</strong></p>
+    <ul> <li>Build and own backend product capabilities for Stytch’s identity platform
+    on Twilio—shipping new API surfaces and core authentication flows, including agentic
+    and non-human identity use cases.</li> <li>Partner with Product and Engineering
+    leadership to set direction, translate customer needs into product capabilities,
+    and deliver high-impact roadmap features.</li> <li>Collaborate across Twilio and
+    Stytch teams to align on architecture, integrate platform capabilities, and unblock
+    cross-team initiatives.</li> <li>Operate with deep technical ownership: author
+    design docs, drive key technical decisions, review code, and stay close to the
+    systems you ship.</li> <li>Build in ambiguity—break down complex problems, make
+    pragmatic tradeoffs, and design developer experiences that delight our customers.</li>
+    <li>Improve production quality and resilience through strong observability, incident
+    response and remediation.</li> <li>Mentor and support other engineers through
+    pairing, feedback, and knowledge-sharing, helping raise the team’s technical bar
+    and culture.</li> </ul> <p><strong>Qualifications&nbsp;</strong></p> <p>Twilio
+    values diverse experiences from all kinds of industries, and we encourage everyone
+    who meets the required qualifications to apply. If your career is just starting
+    or hasn''t followed a traditional path, don''t let that stop you from considering
+    Twilio. We are always looking for people who will bring something new to the table!</p>
+    <p>&nbsp;</p> <p><strong>*Required:</strong></p> <ul> <li>6+ years experience
+    in designing, building and operating high-scale, mission critical cloud based
+    production systems.</li> <li>Familiarity with a production-grade code base in
+    a modern programming language, applying best practice coding standards and writing
+    high quality code.</li> <li>Extensive experience with RESTful API design and development.</li>
+    <li>Bachelor’s degree in Computer Science or related industry experience.</li>
+    <li>Excellent written and verbal communication skills.</li> <li>Schedule: ability
+    to work non-standard, on-call rotation weekend and holiday hours.</li> </ul> <p><strong>Desired:</strong></p>
+    <ul> <li>Familiarity with Go, TypeScript, and DynamoDB</li> <li>Experience building
+    developer tools or SDKs</li> <li>Experience building and owning products consumed
+    by paying customers</li> </ul> <p>Builder at heart. Through a hobby or your profession,
+    you are passionate about being hands on and seeing your work come to life.</p>
+    <p><strong>Location</strong></p> <p>This role will be remote, but is not eligible
+    to be hired in San Francisco, CA, Oakland, CA, San Jose, CA, or the surrounding
+    areas.</p> <p><strong>Travel&nbsp;</strong></p> <p>We prioritize connection and
+    opportunities to build relationships with our customers and each other. For this
+    role, you ma'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.8
+  identity_position: documentation-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.425848+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-25"

@@ -1,0 +1,103 @@
+id: coinbase-software-engineer-developer-wallets-and-onchain-tools
+name: 'Coinbase Software Engineer, Developer (Wallets and Onchain Tools) '
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7673310?gh_jid=7673310
+  portal: greenhouse
+  location: Remote - Canada
+  location_class: international
+  description: '<div class="content-intro"><p>Ready to be pushed beyond what you think
+    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
+    in the world. It’s a massive, ambitious opportunity that demands the best of us,
+    every day, as we build the emerging onchain platform — and with it, the future
+    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
+    candidate. We want someone who is passionate about our mission and who believes
+    in the power of crypto and blockchain technology to update the financial system.
+    We want someone who is eager to leave their mark on the world, who relishes the
+    pressure and privilege of working with high caliber colleagues, and who actively
+    seeks feedback to keep leveling up. We want someone who will run towards, not
+    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
+    culture</a> is intense and isn’t for everyone. But if you want to build the future
+    alongside others who excel in their disciplines and expect the same from you,
+    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
+    we are not remote-only. In-person participation is required throughout the year.
+    Team and company-wide offsites are held multiple times annually to foster collaboration,
+    connection, and alignment. Attendance is expected and fully supported.</p></div><p>The
+    CDP APIs are the easiest way for developers to get started with building crypto
+    applications. <a href="https://docs.google.com/document/d/1az9HxBYUc0ztc-8B-VsIz57vB_invt4oZBk0fCmFF2A/edit#heading=h.7amer2xm1d9q">Conceived
+    by Coinbase CEO Brian Armstrong</a>, these APIs enable those with no prior knowledge
+    of crypto to begin using crypto in under 30 seconds. The CDP APIs are positioned
+    to bring the next million developers onchain, enabling trading, lending, payments,
+    and more.</p> <p>The CDP Wallets &amp; Onchain Tools team owns both server-side
+    APIs and client-side libraries across different languages. The team is looking
+    for a dynamic software engineer to build a platform that accelerates web3 development.
+    The ideal candidate is passionate about every aspect of an excellent developer
+    experience: designing APIs and SDKs, authoring clear and informative documentation,
+    building compelling onboarding flows, and incorporating feedback directly from
+    customers. They must be comfortable working across both frontend and backend codebases
+    and able to deliver high velocity and high quality simultaneously. The team includes
+    some of the most prolific and tenured software engineers at Coinbase and is excited
+    to ship a game-changing set of APIs and SDKs at breakneck speed.</p> <p><strong>Job
+    Description:&nbsp;</strong></p> <ul> <li>Design, develop, and maintain ergonomic,
+    open-source SDKs using Typescript, React, React Native, Android, iOS, Unity, and
+    Flutter</li> <li>Interface with and conformant HTTP REST API definitions using
+    OpenAPI specifications</li> <li>Author, publish, and maintain clear and concise
+    documentation, including quickstart and how-to guides, to increase adoption of
+    the SDKs</li> <li>Work closely with many different teams at Coinbase to integrate
+    wallets and onchain tools into internal products, ensuring consistency of concepts,
+    style, and design</li> <li>Work directly with customers to collect their feedback
+    and iteratively improve the Data APIs and SDKs</li> <li>Evangelize the SDK in
+    the crypto community to gain greater adoption</li> <li>Build compelling sample
+    applications end-to-end using the products to demonstrate their value and pressure-test
+    the developer experience</li> <li>Troubleshoot and debug complex fullstack issues,
+    ensuring stability, reliability, and security</li> <li>Participate in code reviews
+    and provide constructive feedback to maintain high code quality standards</li>
+    </ul> <p><strong>Requirements:</strong></p> <ul> <li>3+ years of experience in
+    fullstack development</li> <li>Fluency in Golang, Typescript, React, and React
+    Native</li> <li>Experience with user authentication, Identity and Access Management
+    systems, public key cryptography, browser and mobile persistent storage mechanisms</li>
+    <li>Established reputation in open source communities, with operational knowledge
+    of how to grow adoption of GitHub repos</li> <li>Strong understanding of distributed
+    systems, microservices architecture, streaming-based systems, and event-driven
+    architectures</li> <li>Excellent verbal and written communication skills, with
+    an eye for detail and a passion for clear, comprehensive developer documentation</li>
+    <li>Fluency with crypto wallets, including key management, cryptography, and blockchain
+    protocols (e.g. EVM, Solana)</li> <li>Understanding of security best practices
+    and experience with implementing secure coding practices for financial systems</li>
+    <li>Demonstrates the ability to responsibly use generative AI tools and copilots
+    (e.g., LibreChat, Gemini, Glean) in daily workflows, continuously learn as t'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.9
+  identity_position: documentation-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.663453+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-25"

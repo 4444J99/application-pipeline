@@ -1,0 +1,102 @@
+id: coreweave-senior-software-engineer-box-office
+name: CoreWeave Senior Software Engineer, Box-Office
+track: job
+status: qualified
+outcome: null
+target:
+  organization: CoreWeave
+  url: https://boards.greenhouse.io/coreweave
+  application_url: https://coreweave.com/careers/job?4610724006&board=coreweave&gh_jid=4610724006
+  portal: greenhouse
+  location: Livingston, NJ / New York, NY / Sunnyvale, CA / Bellevue, WA
+  location_class: us-onsite
+  description: '<div class="content-intro"><div> <div> <div class="gmail_quote"> <div>
+    <div><span id="m_1770241969069985273m_-2746164444908759431gmail-docs-internal-guid-131e4fb0-7fff-b4e9-ff50-e8cf32449b1b">CoreWeave
+    is The Essential Cloud for AI™. Built for pioneers by pioneers, CoreWeave delivers
+    a platform of technology, tools, and teams that enables innovators to build and
+    scale AI with confidence. Trusted by leading AI labs, startups, and global enterprises,
+    CoreWeave combines superior infrastructure performance with deep technical expertise
+    to accelerate breakthroughs and turn compute into capability. Founded in 2017,
+    CoreWeave became a publicly traded company (Nasdaq: CRWV) in March 2025. Learn
+    more at&nbsp;<a href="http://www.coreweave.com/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.coreweave.com&amp;source=gmail&amp;ust=1762613132717000&amp;usg=AOvVaw3D-UOhNaqEvF5BEWxjYyAU">www.coreweave.com</a>.</span></div>
+    </div> </div> </div> </div></div><h3><span style="text-decoration: underline;"><strong>What
+    You’ll Do:</strong></span></h3> <p>The Fleet Engineering Team is responsible for
+    the automated provisioning and management of CoreWeave’s ever-expanding fleet
+    of hardware nodes and node-types. Playing a central role in CoreWeave’s growth
+    strategy, this team is engaged in streamlining and coordinating the domains of
+    node provisioning, hardware RMA, datacenter operations, and platform services
+    into a cohesive, zero-touch, and high-reliability engine of fleet management.</p>
+    <h3><span style="text-decoration: underline;"><strong>About the role:</strong></span></h3>
+    <p>We are seeking a Senior Full-Stack Engineer to join the Box-Office Team to
+    help us build, run and refine our automation reliability, efficiency, scalability
+    and user experience. This individual will join a team of mixed-skill engineers
+    focused on all aspects of hardware lifecycle management. As a member of the Box-Office
+    Team, you would have the opportunity to:</p> <ul> <li>Develop applications, user
+    experiences, reporting automations, API endpoints, and other fleet management
+    tooling and UIs.</li> <li>Assess and improve existing User Interfaces, adding
+    new features and simplifying the user experience.</li> <li>Resolve integration
+    challenges between our infrastructure and our vendors’ APIs, focusing on making
+    the interactions plain to understand and robust.</li> <li>Design and implement
+    solutions to fascinating problems at scale for multi-site deployment and management
+    of CoreWeave’s global hardware fleet, including interfaces for managing the deployment
+    and maintenance of said fleet.</li> <li>Create test plans, deployment automation,
+    dashboards, alerts, and insights into our fleet operations as well as participate
+    in the Fleet Provisioning Automation on-call rotation.</li> <li>Grow, change,
+    invest in your teammates, be invested-in, share your ideas, listen to others,
+    be curious, have fun, and, above all, be yourself.</li> </ul> <h3><span style="text-decoration:
+    underline;"><strong>Who You Are: </strong></span></h3> <p>We believe in investing
+    in our people, and value candidates who can bring their own diversified experiences
+    to our teams – even if you aren''t a 100% skill or experience match. Here are
+    some qualities we’ve found compatible with our team. If a portion of this resonates
+    with you, we’d love to talk.&nbsp;</p> <ul> <li>You have 5 or more years experience
+    in a software or infrastructure engineering industry.</li> <li>You have experience
+    designing and implementing container-based microservices and integrating open-source
+    tools to customize solutions.</li> <li>You believe in the value of automation
+    and will champion practices that drive reliability and prioritize the CoreWeave
+    customer experience.</li> <li>You have a good end to end understanding of what
+    a UI needs to be successful, and how to build it to high quality standards in
+    a reasonable time frame. You can explain trade offs of build versus import and
+    are able to choose the best path.</li> <li>Proficiency in React, Typescript, and
+    Golang.</li> </ul> <h3><span style="text-decoration: underline;"><strong>Why CoreWeave?</strong></span></h3>
+    <p>At CoreWeave, we work hard, have fun, and move fast!&nbsp; We’re in an exciting
+    stage of hyper-growth that you will not want to miss out on. We’re not afraid
+    of a little chaos, and we’re constantly learning. Our team cares deeply about
+    how we build our product and how we work together, which is represented through
+    our core values:&nbsp;</p> <ul> <li>Be Curious at Your Core</li> <li>Act Like
+    an Owner</li> <li>Empower Employees</li> <li>Deliver Best-in-Class Client Experiences</li>
+    <li>Achieve More Together</li> </ul> <p>We support and encourage an entrepreneurial
+    outlook and independent thinking. We foster an environment that encourages collaboration
+    and provides the opportunity to develop innovative solutions to complex problems.
+    As we get set for take off, the growth opportunities within the organization are
+    constantly e'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-25'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.533442+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-25"

@@ -1,0 +1,103 @@
+id: toast-staff-software-engineer-application-infrastructure
+name: Toast Staff Software Engineer - Application Infrastructure
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7727235
+  portal: greenhouse
+  location: Remote, USA
+  location_class: us-remote
+  description: '<p>Toast creates technology to help restaurants and local businesses
+    succeed in a digital world, helping business owners operate, increase sales, engage
+    customers, and keep employees happy.</p> <p>We are looking for an experienced
+    software engineer to play a critical role in further scaling and developing Toast’s
+    cloud platform and infrastructure. Toast’s platform processes billions of requests
+    per day from hundreds of internal services and hundreds of thousands of mobile
+    devices; these numbers grow exponentially year over year as we add new restaurants
+    and capabilities to the platform. Our team is responsible for developing secure,
+    observable, highly available, large-scale shared services and infrastructure.<br><br></p>
+    <p><strong>A day in the life (Responsibilities)</strong></p> <ul> <li>Architect,
+    design, and deliver ultra-reliable, high-performance services and infrastructure
+    used by millions</li> <li>Uncover and resolve performance bottlenecks across infrastructure,
+    databases, and APIs</li> <li>Define and enable adherence to engineering best practices,
+    coding standards, and architectural guidelines</li> <li>Collaborate closely with
+    the Product team to influence features, technical direction, and long-term product
+    vision</li> <li>Leverage cutting edge AI tools to enhance your development workflow,
+    improve velocity, and help pioneer new approaches to building - contributing to
+    a culture of innovation and productivity across the team.</li> </ul> <p>&nbsp;</p>
+    <p><strong>What you''ll need to thrive (Requirements)</strong></p> <ul> <li>Hands-on
+    experience building and operating complex, mission-critical, large-scale distributed
+    systems in the Cloud</li> <li>Expertise in asynchronous messaging, event-driven
+    architecture, APIs, and integration patterns</li> <li>Track record of delivering
+    clean, maintainable, and resilient code that stands the test of time</li> <li>Proficiency
+    in Java or Kotlin preferred (experience in other modern programming languages
+    also valued)</li> <li>Exceptional communication and collaboration skills, with
+    demonstrated ability to align and inspire cross-functional teams</li> <li>A demonstrated
+    record of mentoring junior team members and enhancing the team''s effectiveness</li>
+    </ul> <p>&nbsp;</p> <p><strong>Tech Stack</strong></p> <p>Our team builds and
+    operates on a modern, cloud-native stack with heavy use of AWS, developing services
+    and shared libraries in Kotlin and Go backed by PostgreSQL and DynamoDB. Infrastructure
+    is provisioned and managed with Terraform. We oversee Toast’s sharded PostgreSQL
+    databases, drive the organization’s use of Apache Pulsar to enable event-driven
+    architecture at scale, and provide developers with tools and services to easily
+    schedule recurring jobs. Our systems also power customer engagement, integrating
+    with SMS and email providers to reliably deliver millions of messages per day.&nbsp;
+    We embrace AI-driven software development at Toast, using tools such as Claude
+    Code, Cursor, and more.</p> <p data-pm-slice="1 1 []">&nbsp;</p> <p data-pm-slice="1
+    1 []"><strong>AI at Toast</strong></p> <p>At Toast, one of our company values
+    is that we''re hungry to build and learn. We believe learning new AI tools empowers
+    us to build for our customers faster, more independently, and with higher quality.
+    We provide these tools across all disciplines, from Engineering and Product to
+    Sales and Support, and are inspired by how our Toasters are already driving real
+    value with them. The people who thrive here are those who embrace changes that
+    let us build more for our customers; it’s a core part of our culture.</p> <p data-pm-slice="1
+    1 []">&nbsp;</p> <p data-pm-slice="1 1 []"><strong>Our Total Rewards Philosophy&nbsp;<br></strong>We
+    strive to provide competitive compensation and benefits programs that help to
+    attract, retain, and motivate the best and brightest people in our industry. Our
+    total rewards package goes beyond great earnings potential and provides the means
+    to a healthy lifestyle with the flexibility to meet Toasters’ changing needs.
+    Learn more about our benefits at&nbsp;<a class="c-link" href="https://careers.toasttab.com/toast-benefits"
+    target="_blank" data-stringify-link="https://careers.toasttab.com/toast-benefits"
+    data-sk="tooltip_parent" data-remove-tab-index="true">https://careers.toasttab.com/toast-benefits</a>.</p><div
+    class="content-pay-transparency"><div class="pay-input"><div class="description"><p><span
+    style="font-weight: 400;">The base salary range for this role is listed below.
+    The starting salary will be determined based on skills and experience. </span>In
+    addition to base salary, our total rewards components include cash compensation
+    (overtime, bonus/commissions, if eligible), benefits, and equity (if eligible).</p></div><div
+    class="title">Pay Range</div><div class="pay-range"><span>$168,000</span><span
+    class="divider">&mdash;</span><span>$269,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><strong>How Toast Uses AI in its Hi'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.8
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.793516+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-25"
