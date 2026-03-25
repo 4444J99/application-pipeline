@@ -275,8 +275,16 @@ def validate_contacts(errors: list[str]) -> int:
     return len(contacts)
 
 
-OUTREACH_TYPES = {"post_submission", "reconnect", "seed", "dm", "dm_sent", "connect", "referral_ask", "intro", "doubling_back", "acceptance", "github_engagement", "phone_call"}
-OUTREACH_CHANNELS = {"linkedin", "email", "twitter", "referral", "event", "slack", "phone", "github"}
+OUTREACH_TYPES = {
+    "post_submission", "reconnect", "seed", "dm", "dm_sent", "connect",
+    "referral_ask", "intro", "doubling_back", "acceptance", "github_engagement",
+    "phone_call",
+    # Organic types (emerged 2026-03-17 → 2026-03-25 from real outreach activity)
+    "contribution", "reciprocal", "engagement", "content_engagement",
+    "connection_accepted", "inbound_recruiter", "employer_response",
+    "inmail", "follow_up", "referral_received",
+}
+OUTREACH_CHANNELS = {"linkedin", "email", "twitter", "referral", "event", "slack", "phone", "github", "imessage", "discord"}
 
 
 def validate_outreach_log(errors: list[str]) -> int:

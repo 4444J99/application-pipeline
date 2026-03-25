@@ -63,8 +63,8 @@ contacts:
   - inbound
   - mca
   - healthcare-saas
-  next_action: 'Text follow-up: reference sales automation piece, pitch front-load approach'
-  next_action_date: '2026-03-24'
+  next_action: 'Follow-up text if no response by Friday. Reference coverage dashboard prototype.'
+  next_action_date: '2026-03-28'
 - name: Alexis C.
   organization: Alternative Funding Group
   role: Managing Director / Owner
@@ -2662,7 +2662,7 @@ contacts:
   channel: linkedin
   relationship_strength: 7
   interactions:
-  - date: '2016'
+  - date: '2016-01-01'
     type: hire
     note: 'Hired user for FAU Writing Center. Taught contrastive rhetoric — user''s
       first immersion. How different cultures form argument in different shapes: Asian
