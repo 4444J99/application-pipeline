@@ -1,0 +1,27 @@
+{
+  "date": "2026-03-25",
+  "raters": {
+    "architect-opus": {
+      "architecture": 7,
+      "documentation": 9
+    },
+    "qa-sonnet": {
+      "analytics_intelligence": 9,
+      "sustainability": 8
+    },
+    "auditor-sonnet": {
+      "analytics_intelligence": 9,
+      "sustainability": 7
+    }
+  },
+  "consensus": {
+    "analytics_intelligence": 9,
+    "architecture": 7,
+    "documentation": 9,
+    "sustainability": 7.5
+  },
+  "notes": {
+    "pragmatist-haiku": "FAILED \u2014 context too long for haiku model",
+    "method": "Subagent-based IRA with 3 model tiers (opus/sonnet/sonnet)"
+  }
+}
