@@ -757,6 +757,46 @@ def format_json_output(
 
 
 # ---------------------------------------------------------------------------
+# IRA consensus loader
+# ---------------------------------------------------------------------------
+
+def _load_ira_consensus(scores: dict[str, dict]) -> None:
+    """Load latest IRA consensus ratings for unrated subjective dimensions.
+
+    Scans ratings/*.json for the most recent session file, extracts consensus
+    scores, and injects them into the scores dict for any subjective dimension
+    not already scored by an objective collector.
+    """
+    ratings_dir = Path(__file__).resolve().parent.parent / "ratings"
+    if not ratings_dir.exists():
+        return
+
+    # Find the most recent session file
+    session_files = sorted(ratings_dir.glob("session-*.json"), reverse=True)
+    if not session_files:
+        return
+
+    try:
+        data = json.loads(session_files[0].read_text())
+    except Exception:
+        return
+
+    consensus = data.get("consensus", {})
+    source_date = data.get("date", "unknown")
+
+    for dim_key in SUBJECTIVE_DIMENSIONS:
+        if dim_key in scores:
+            continue  # Already scored by objective collector
+        if dim_key in consensus:
+            score_val = consensus[dim_key]
+            if isinstance(score_val, (int, float)) and score_val > 0:
+                scores[dim_key] = {
+                    "score": score_val,
+                    "evidence": f"IRA consensus from {source_date} ({session_files[0].name})",
+                }
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
@@ -790,6 +830,10 @@ def main():
     if not args.subjective_only:
         for dim_key, collector in COLLECTORS.items():
             scores[dim_key] = collector()
+
+    # Load latest IRA consensus for subjective dimensions
+    if not args.objective_only:
+        _load_ira_consensus(scores)
 
     if args.json:
         output = format_json_output(scores, rubric, rater_id=args.rater_id)
