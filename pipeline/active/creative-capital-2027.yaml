@@ -1,7 +1,7 @@
 id: creative-capital-2027
 name: Creative Capital 2027 Open Call
 track: grant
-status: qualified
+status: drafting
 identity_position: systems-artist
 outcome: null
 target:
@@ -19,7 +19,7 @@ amount:
   type: lump_sum
   benefits_cliff_note: Exceeds Medicaid -> Essential Plan. Call NYLAG.
 fit:
-  score: 8.1
+  score: 7.0
   original_score: 8.8
   identity_position: systems-artist
   framing: Systems artist presenting ORGANVM—a 103-repository autonomous ecosystem
@@ -77,7 +77,7 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: null
-last_touched: "2026-03-15"
+last_touched: "2026-03-25"
 status_meta:
   reviewed_by: 4jp
   reviewed_at: '2026-03-03'

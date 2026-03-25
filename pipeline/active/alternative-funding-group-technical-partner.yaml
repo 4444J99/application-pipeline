@@ -30,18 +30,19 @@ amount:
   currency: USD
   type: fee
 fit:
-  score: 8.5
+  score: 5.4
+  original_score: 8.5
   identity_position: founder-operator
   dimensions:
-    mission_alignment: 8
-    evidence_match: 9
-    track_record_fit: 9
+    mission_alignment: 4
+    evidence_match: 1
+    track_record_fit: 6
     network_proximity: 8
-    strategic_value: 7
+    strategic_value: 6
     financial_alignment: 7
-    effort_to_value: 8
-    deadline_feasibility: 10
-    portal_friction: 10
+    effort_to_value: 6
+    deadline_feasibility: 9
+    portal_friction: 6
   framing: >
     Technical partner with 15+ years MCA domain expertise and production-grade
     automation skills. Front-loads solutions for permanent resolution — not

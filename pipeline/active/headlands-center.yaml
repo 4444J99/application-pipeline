@@ -19,7 +19,7 @@ amount:
   type: stipend
   benefits_cliff_note: null
 fit:
-  score: 7.4
+  score: 6.5
   original_score: 8.9
   identity_position: systems-artist
   framing: Systems artist working across computation and material practice in immersive
@@ -36,7 +36,7 @@ fit:
     strategic_value: 7
     financial_alignment: 9
     effort_to_value: 7
-    deadline_feasibility: 7
+    deadline_feasibility: 6
     portal_friction: 6
 submission:
   effort_level: standard

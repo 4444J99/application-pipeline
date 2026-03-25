@@ -1,7 +1,7 @@
 id: dbt-labs-staff-software-engineer-quality-and-release-platform
 name: dbt Labs Staff Software Engineer, Quality and Release Platform
 track: job
-status: qualified
+status: staged
 outcome: null
 target:
   organization: dbt Labs
@@ -79,13 +79,24 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 9.0
+  score: 8.5
   identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 10
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}
   variant_ids: {}
   materials_attached:
+  - resumes/batch-03/dbt-labs-staff-software-engineer-quality-and-release-platform/dbt-labs-staff-software-engineer-quality-and-release-platform-resume.html
   - resumes/base/platform-orchestrator-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -101,4 +112,13 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-03-25"
+last_touched: '2026-03-25'
+outreach:
+  linkedin_searches:
+  - role: Engineering Manager Platform
+    search_url: https://www.linkedin.com/search/results/people/?keywords=Engineering%20Manager%20Platform%20dbt%20Labs&origin=GLOBAL_SEARCH_HEADER
+  - role: VP Engineering
+    search_url: https://www.linkedin.com/search/results/people/?keywords=VP%20Engineering%20dbt%20Labs&origin=GLOBAL_SEARCH_HEADER
+  contact_name: null
+  contact_url: null
+  status: pending

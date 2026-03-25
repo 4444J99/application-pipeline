@@ -1,7 +1,7 @@
 id: anduril-senior-software-engineer-estimation-tracking
 name: Anduril Senior Software Engineer, Estimation & Tracking
 track: job
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Anduril
@@ -79,13 +79,24 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 8.9
+  score: 8.4
   identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}
   variant_ids: {}
   materials_attached:
+  - resumes/batch-03/anduril-senior-software-engineer-estimation-tracking/anduril-senior-software-engineer-estimation-tracking-resume.html
   - resumes/base/founder-operator-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -101,4 +112,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-03-25"
+last_touched: '2026-03-25'
