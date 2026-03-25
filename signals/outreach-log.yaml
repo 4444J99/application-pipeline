@@ -1984,3 +1984,45 @@ entries:
     Suzanne responded sharing her own academic-to-private-sector trajectory. Thread
     complete — strong reconnection.'
   related_targets: []
+- date: '2026-03-24'
+  type: dm
+  contact: Mario Tayah
+  channel: linkedin
+  note: 'Protocol-validated DM sent. Hook: correctness guarantees → state transition
+    invariants. Question: reliability vs velocity tension at Stripe/Bridge. All 7
+    Protocol articles PASS.'
+  related_targets:
+  - stripe-software-engineer-smart-contract-bridge
+- date: '2026-03-24'
+  type: dm
+  contact: Gerfried Stocker
+  channel: linkedin
+  note: 'Protocol-validated DM sent. Hook: governance-as-artwork → 113 repos, LOCAL→GRADUATED.
+    Question: is governance-as-medium being tracked by Ars Electronica? All 7 Protocol
+    articles PASS.'
+  related_targets:
+  - prix-ars-digital-humanity
+- date: '2026-03-24'
+  type: dm
+  contact: James Hawkins
+  channel: linkedin
+  note: 'Protocol-validated DM sent. Hook: conversion funnels → A/B tracked operating
+    system. Question: founding thesis bet — expected vs predicted. All 7 Protocol
+    articles PASS.'
+  related_targets:
+  - posthog-clickhouse-operations-engineer
+- date: '2026-03-24'
+  type: dm
+  contact: Serena Cooper
+  channel: linkedin
+  note: 'DM sent. Hook: 113 repos + profile view signal. Question: what AI infra
+    roles are you staffing — platform or model-side? Manual override for recruiter
+    context.'
+  related_targets: []
+- date: '2026-03-24'
+  type: dm
+  contact: Matt Fleming
+  channel: linkedin
+  note: 'DM sent. Hook: Strativ profile view signal. Question: still staffing AI/platform
+    roles or shifted to environmental TIC? Manual override for role ambiguity.'
+  related_targets: []

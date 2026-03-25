@@ -1523,13 +1523,16 @@ contacts:
   - date: '2026-03-24'
     type: acceptance
     note: Connection accepted.
+  - date: '2026-03-24'
+    type: dm
+    note: Protocol-validated DM sent. Founding thesis bet question.
   name: James Hawkins
-  next_action: DM — open-source infrastructure, PostHog philosophy
-  next_action_date: '2026-03-26'
+  next_action: Await response
+  next_action_date: '2026-03-31'
   organization: PostHog
   pipeline_entries:
   - posthog-clickhouse-operations-engineer
-  relationship_strength: 2
+  relationship_strength: 3
   role: CEO & Co-Founder
   tags:
   - doubling-back-2026-03-18
@@ -1907,13 +1910,16 @@ contacts:
   - date: '2026-03-24'
     type: acceptance
     note: Connection accepted.
+  - date: '2026-03-24'
+    type: dm
+    note: Protocol-validated DM sent. Governance-as-medium question.
   name: Gerfried Stocker
-  next_action: DM — ORGANVM governance-as-artwork, Prix Ars submission
-  next_action_date: '2026-03-24'
+  next_action: Await response
+  next_action_date: '2026-03-31'
   organization: Ars Electronica
   pipeline_entries:
   - prix-ars-digital-humanity
-  relationship_strength: 2
+  relationship_strength: 3
   role: Co-CEO & Artistic Director
   tags:
   - doubling-back-2026-03-18
@@ -2190,12 +2196,15 @@ contacts:
   - date: '2026-03-24'
     type: acceptance
     note: Connection accepted. Full name revealed — was "Mario T." pre-connection.
+  - date: '2026-03-24'
+    type: dm
+    note: Protocol-validated DM sent. Reliability vs velocity tension question.
   pipeline_entries:
   - stripe-software-engineer-smart-contract-bridge
   tags:
   - engineering-leadership
-  next_action: DM — reference Bridge role, ask about eng culture
-  next_action_date: '2026-03-24'
+  next_action: Await response
+  next_action_date: '2026-03-31'
 - name: Martin Melin
   organization: Stripe
   role: ''
@@ -2784,7 +2793,7 @@ contacts:
   next_action_date: '2026-03-30'
 - name: Matt Fleming
   organization: Strativ Group
-  role: Recruitment Consultant Tech
+  role: Recruitment Consultant Tech / Environmental TIC
   channel: linkedin
   relationship_strength: 2
   linkedin: https://www.linkedin.com/in/matttfleming/
@@ -2795,12 +2804,15 @@ contacts:
   - date: '2026-03-24'
     type: acceptance
     note: Connection accepted. LinkedIn headline now shows environmental TIC focus.
+  - date: '2026-03-24'
+    type: dm
+    note: DM sent. Still staffing AI/platform roles or shifted to environmental TIC?
   pipeline_entries: []
   tags:
   - recruiter
   - strativ-group
-  next_action: Light thank-you DM
-  next_action_date: '2026-03-26'
+  next_action: Await response
+  next_action_date: '2026-03-31'
 - name: Ben Reading
   organization: Strativ Group
   role: US-based Recruiter
@@ -2835,7 +2847,7 @@ contacts:
   next_action_date: '2026-03-30'
 - name: Serena Cooper
   organization: Strativ Group
-  role: Austin HQ Setup Recruiter
+  role: Senior Tech Recruiter - Cyber Security
   channel: linkedin
   relationship_strength: 2
   linkedin: https://www.linkedin.com/in/serena-cooper-44b163195/
@@ -2846,12 +2858,15 @@ contacts:
   - date: '2026-03-24'
     note: Connection accepted.
     type: acceptance
+  - date: '2026-03-24'
+    type: dm
+    note: DM sent. What AI infra roles are you staffing — platform or model-side?
   pipeline_entries: []
   tags:
   - recruiter
   - strativ-group
-  next_action: Follow up — she accepted, door is open
-  next_action_date: '2026-03-24'
+  next_action: Await response
+  next_action_date: '2026-03-31'
 - name: Bruce Jackson Jr.
   organization: ''
   role: Public Figure, Songwriter & Entertainer
