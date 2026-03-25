@@ -62,6 +62,7 @@
 - [No skips, no N/A](feedback_no_skips_no_na.md) — Every index check produces DONE or VACUUM. "Skip" and "N/A" are forbidden — they are vacuums disguised as decisions. Water constantly flowing.
 - [Log tool fixes](feedback_log_tool_fixes.md) — When fixing bugs or building tools, log what changed. Don't silently fix things.
 - [Building for others fortifies](feedback_building_for_others.md) — Solving their problems > solves ours higher. Every venture hardens the studio. None pay tomorrow, all have income potential. Explore every path.
+- [IRA model limits](feedback_ira_model_limits.md) — Never send full CLAUDE.md to Haiku. Use Sonnet minimum for all raters, or break evidence into chunks. If you know it'll hit context, split it preemptively.
 
 ## Project Memories
 - [System Purpose](project_system_purpose.md) — Core mission: Scan → Match → Build → Apply → Follow up. Everything else is armor plating.
