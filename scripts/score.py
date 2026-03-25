@@ -63,35 +63,57 @@ _RUBRIC = _load_rubric()
 
 # --- Dimension weights (must sum to 1.0)
 # Loaded from strategy/scoring-rubric.yaml with hardcoded fallback.
-_DEFAULT_WEIGHTS = {
-    "mission_alignment": 0.25,
-    "evidence_match": 0.20,
-    "track_record_fit": 0.15,
-    "network_proximity": 0.12,
-    "strategic_value": 0.10,
-    "financial_alignment": 0.08,
-    "effort_to_value": 0.05,
-    "deadline_feasibility": 0.03,
-    "portal_friction": 0.02,
+_DEFAULT_WEIGHTS_GRANT = {
+    "mission_alignment": 0.20,
+    "narrative_fit": 0.18,
+    "evidence_match": 0.15,
+    "prestige_multiplier": 0.12,
+    "cycle_urgency": 0.10,
+    "network_proximity": 0.08,
+    "track_record_fit": 0.07,
+    "strategic_value": 0.05,
+    "financial_alignment": 0.03,
+    "effort_to_value": 0.02,
 }
 _DEFAULT_WEIGHTS_JOB = {
-    "mission_alignment": 0.25,
-    "evidence_match": 0.20,
-    "network_proximity": 0.20,
-    "track_record_fit": 0.15,
-    "strategic_value": 0.10,
-    "financial_alignment": 0.05,
-    "effort_to_value": 0.03,
-    "deadline_feasibility": 0.01,
+    "network_proximity": 0.22,
+    "deadline_feasibility": 0.18,
+    "evidence_match": 0.18,
+    "mission_alignment": 0.13,
+    "studio_alignment": 0.08,
+    "remote_flexibility": 0.07,
+    "strategic_value": 0.06,
+    "effort_to_value": 0.04,
+    "track_record_fit": 0.02,
+    "financial_alignment": 0.01,
     "portal_friction": 0.01,
 }
+_DEFAULT_WEIGHTS_CONSULTING = {
+    "network_proximity": 0.22,
+    "recurring_potential": 0.18,
+    "studio_alignment": 0.15,
+    "client_fit": 0.12,
+    "evidence_match": 0.10,
+    "mission_alignment": 0.08,
+    "strategic_value": 0.07,
+    "effort_to_value": 0.05,
+    "financial_alignment": 0.03,
+}
 
-WEIGHTS = _RUBRIC.get("weights", _DEFAULT_WEIGHTS)
+# Load from rubric YAML with fallbacks
+WEIGHTS = _RUBRIC.get("weights", _DEFAULT_WEIGHTS_GRANT)
 WEIGHTS_JOB = _RUBRIC.get("weights_job", _DEFAULT_WEIGHTS_JOB)
+WEIGHTS_GRANT = _RUBRIC.get("weights_grant", _DEFAULT_WEIGHTS_GRANT)
+WEIGHTS_CONSULTING = _RUBRIC.get("weights_consulting", _DEFAULT_WEIGHTS_CONSULTING)
+
+# Pillar track mapping
+_GRANT_TRACKS = {"grant", "residency", "fellowship", "prize", "writing", "emergency"}
+_CONSULTING_TRACKS = {"consulting"}
 
 # Validate weight dicts sum to 1.0
-assert abs(sum(WEIGHTS.values()) - 1.0) < 1e-9, f"WEIGHTS sum to {sum(WEIGHTS.values())}, not 1.0"
-assert abs(sum(WEIGHTS_JOB.values()) - 1.0) < 1e-9, f"WEIGHTS_JOB sum to {sum(WEIGHTS_JOB.values())}, not 1.0"
+for _name, _w in [("WEIGHTS", WEIGHTS), ("WEIGHTS_JOB", WEIGHTS_JOB),
+                   ("WEIGHTS_GRANT", WEIGHTS_GRANT), ("WEIGHTS_CONSULTING", WEIGHTS_CONSULTING)]:
+    assert abs(sum(_w.values()) - 1.0) < 1e-9, f"{_name} sum to {sum(_w.values())}, not 1.0"
 
 # Thresholds from rubric (with fallback)
 _THRESHOLDS = _RUBRIC.get("thresholds", {})
@@ -354,7 +376,14 @@ def get_weights(track: str) -> dict:
     If a calibration file exists with sufficient outcome data (n>=10),
     blends calibrated weights at 30% with base weights at 70%.
     """
-    base = WEIGHTS_JOB if track == "job" else WEIGHTS
+    if track == "job":
+        base = WEIGHTS_JOB
+    elif track in _CONSULTING_TRACKS:
+        base = WEIGHTS_CONSULTING
+    elif track in _GRANT_TRACKS:
+        base = WEIGHTS_GRANT
+    else:
+        base = WEIGHTS  # fallback to grant weights (legacy default)
 
     try:
         from outcome_learner import load_calibration

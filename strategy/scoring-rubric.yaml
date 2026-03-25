@@ -1,36 +1,86 @@
-version: "2.0"
+version: "3.0"
 description: >
-  9-dimension weighted scoring rubric for pipeline entries.
+  Three-pillar scoring rubric: separate weights for jobs, grants, and consulting.
   Source of truth for score.py weights and auto-qualify thresholds.
   Precision-over-volume: network_proximity added, throughput dimensions reduced.
+  v3.0 (2026-03-25): refactored from 2-rubric to 3-rubric pillar model.
 
-# Precision weights for creative/grant/residency tracks (must sum to 1.0)
-weights:
-  mission_alignment: 0.25
-  evidence_match: 0.20
-  track_record_fit: 0.15
-  network_proximity: 0.12
-  strategic_value: 0.10
-  financial_alignment: 0.08
-  effort_to_value: 0.05
-  deadline_feasibility: 0.03
-  portal_friction: 0.02
-
-# Engagement-calibrated weights for job track (2026-03-17)
+# --------------------------------------------------------------------------
+# PILLAR 1: JOB WEIGHTS (track = "job")
+# --------------------------------------------------------------------------
+# Engagement-calibrated weights (2026-03-17)
 # Based on N=26 engagement signal: deadline_feasibility (+1.75) and
 # network_proximity (+1.24) predict reads; track_record_fit (-1.17)
 # and financial_alignment (-1.33) hurt. Moderated from raw proposal
 # (47.8%/33.8%) to avoid overfit on small sample.
+# Added (2026-03-25): remote_flexibility and studio_alignment for
+# three-pillar rebalancing. Redistributed from portal_friction and
+# track_record_fit which had negligible impact.
 weights_job:
-  deadline_feasibility: 0.20
-  network_proximity: 0.25
-  evidence_match: 0.20
-  mission_alignment: 0.15
-  strategic_value: 0.08
-  effort_to_value: 0.05
-  track_record_fit: 0.04
-  financial_alignment: 0.02
+  network_proximity: 0.22
+  deadline_feasibility: 0.18
+  evidence_match: 0.18
+  mission_alignment: 0.13
+  studio_alignment: 0.08
+  remote_flexibility: 0.07
+  strategic_value: 0.06
+  effort_to_value: 0.04
+  track_record_fit: 0.02
+  financial_alignment: 0.01
   portal_friction: 0.01
+
+# --------------------------------------------------------------------------
+# PILLAR 2: GRANT / RESIDENCY / FELLOWSHIP / PRIZE / WRITING WEIGHTS
+# --------------------------------------------------------------------------
+# Creative/institutional tracks. Mission alignment dominates.
+# Added (2026-03-25): cycle_urgency (window-driven deadlines),
+# prestige_multiplier (Creative Capital vs Awesome Foundation aren't equal),
+# narrative_fit (does ORGANVM story map to funder's mission).
+# Renamed from generic "weights" to explicit "weights_grant".
+weights_grant:
+  mission_alignment: 0.20
+  narrative_fit: 0.18
+  evidence_match: 0.15
+  prestige_multiplier: 0.12
+  cycle_urgency: 0.10
+  network_proximity: 0.08
+  track_record_fit: 0.07
+  strategic_value: 0.05
+  financial_alignment: 0.03
+  effort_to_value: 0.02
+
+# --------------------------------------------------------------------------
+# PILLAR 3: CONSULTING / RETAINER / FREELANCE WEIGHTS
+# --------------------------------------------------------------------------
+# Revenue with autonomy. Relationship-driven, not portal-driven.
+# New dimensions: recurring_potential (retainer > project),
+# client_fit (respect autonomy, scope clarity),
+# studio_alignment (does this harden the studio).
+weights_consulting:
+  network_proximity: 0.22
+  recurring_potential: 0.18
+  studio_alignment: 0.15
+  client_fit: 0.12
+  evidence_match: 0.10
+  mission_alignment: 0.08
+  strategic_value: 0.07
+  effort_to_value: 0.05
+  financial_alignment: 0.03
+
+# --------------------------------------------------------------------------
+# LEGACY: default weights (backward compat — maps to weights_grant)
+# --------------------------------------------------------------------------
+weights:
+  mission_alignment: 0.20
+  narrative_fit: 0.18
+  evidence_match: 0.15
+  prestige_multiplier: 0.12
+  cycle_urgency: 0.10
+  network_proximity: 0.08
+  track_record_fit: 0.07
+  strategic_value: 0.05
+  financial_alignment: 0.03
+  effort_to_value: 0.02
 
 thresholds:
   # Recalibrated 2026-03-15: thresholds were set before network_proximity (0.20 weight)
