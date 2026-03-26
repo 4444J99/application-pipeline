@@ -1,0 +1,15 @@
+Anthony James Padavano
+New York, NY
+padavano.anthony@gmail.com
+561-602-7300
+
+
+The hardest problem in People Technology is not building AI that works -- it is building AI that people trust enough to act on. Hiring managers will not change their process because a model says so. Recruiters will not adopt a tool that feels like surveillance dressed as efficiency. The AI engineer who succeeds in this space is the one who understands that adoption is a governance problem, not a feature problem. That is the problem I have been solving.
+
+I know Greenhouse from the API side. I built a pipeline that submits through its public Job Board API, parses its custom question schemas, and tracks entities through lifecycle stages that mirror the hiring funnel Grafana's People team lives inside every day. That is not the interesting part. The interesting part is what I built around it: a governance layer where every state transition is audited, every scoring decision is explainable across nine weighted dimensions, and every automated action leaves a trail that a human can interrogate after the fact. I built this because I learned the hard way that automated systems people cannot inspect are automated systems people will route around. The AI workflows Grafana wants to bring to People data -- whether that is candidate scoring, workforce planning, or internal mobility -- will face the same adoption barrier. The system has to be legible, or it dies on the vine.
+
+My approach to AI is what I call conductor methodology: the human directs, the AI generates volume, the human reviews. This is not a philosophical preference; it is an engineering pattern I enforce through tooling. My multi-model evaluation framework uses four distinct AI raters with different personas to assess quality across nine dimensions, then reconciles their outputs using inter-rater agreement metrics. The point is not to replace human judgment but to give humans structured, auditable input that makes their decisions faster and more consistent. That pattern applies directly to People workflows: AI that surfaces candidates, flags attrition risk, or recommends development paths -- but always with the reasoning visible and the human holding the pen.
+
+I have spent a decade teaching complex systems to people who did not ask to learn them. That empathy for the end user -- the recruiter, the HRBP, the hiring manager who just wants to fill the role -- is what separates AI tooling that ships from AI tooling that gets adopted.
+
+Anthony James Padavano
