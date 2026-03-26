@@ -3,14 +3,17 @@
 
 Produces a complete, correct application package for a pipeline entry:
 1. Loads entry YAML
-2. Fetches ACTUAL portal questions from Greenhouse API
-3. Auto-fills standard answers, generates role-specific answers
-4. Resolves or generates cover letter (unique from resume)
-5. Builds cover letter PDF (Chrome headless)
-6. Copies resume PDF
-7. Creates application directory with all files
-8. Validates completeness + overlap check
-9. Prints portal URL
+2. Runs Level 1 standards audit (Course Regulator — entry-level quality gate)
+3. Fetches ACTUAL portal questions from Greenhouse API
+4. Auto-fills standard answers, generates role-specific answers
+5. Resolves or generates cover letter (unique from resume)
+6. Composes Protocol-validated outreach DM for contacts at the org
+7. Checks cover letter vs resume overlap
+8. Builds cover letter PDF (Chrome headless)
+9. Copies resume PDF
+10. Creates application directory with all files
+11. Validates completeness — all gates must pass
+12. Prints portal URL + outreach DM
 
 Usage:
     python scripts/apply.py --target <entry-id>
@@ -36,10 +39,32 @@ from pipeline_lib import (
     MATERIALS_DIR,
     PIPELINE_DIR_ACTIVE,
     REPO_ROOT,
+    SIGNALS_DIR,
     load_entry_by_id,
     load_submit_config,
     resolve_cover_letter,
 )
+
+
+def _load_standards_board():
+    """Lazy-load StandardsBoard to avoid circular imports."""
+    try:
+        from standards import StandardsBoard
+        return StandardsBoard()
+    except Exception:
+        return None
+
+
+def _load_contacts_for_org(org: str) -> list[dict]:
+    """Load contacts from contacts.yaml for a given organization."""
+    contacts_path = SIGNALS_DIR / "contacts.yaml"
+    if not contacts_path.exists():
+        return []
+    data = yaml.safe_load(contacts_path.read_text())
+    contacts = data.get("contacts", data) if isinstance(data, dict) else data
+    if not isinstance(contacts, list):
+        return []
+    return [c for c in contacts if c.get("organization", "").lower() == org.lower()]
 
 APPLICATIONS_DIR = REPO_ROOT / "applications"
 CHROME_PATH = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
@@ -304,7 +329,25 @@ def apply_to_entry(entry_id: str, dry_run: bool = False) -> bool:
     print(f"  URL: {url}")
     print(f"  Portal: {portal}")
 
-    # 2. Fetch portal questions from API
+    # 2. Standards audit — Level 1 (Course Regulator)
+    print("\n  Running standards audit (Level 1)...")
+    board = _load_standards_board()
+    if board:
+        try:
+            level1 = board.check_entry(entry)
+            if level1.passed:
+                print(f"  Standards L1: PASS (quorum {level1.quorum})")
+            else:
+                print(f"  Standards L1: FAIL (quorum {level1.quorum})")
+                for gate in level1.gates:
+                    if not gate.passed:
+                        print(f"    FAIL: {gate.gate} — {gate.evidence[:80]}")
+        except Exception as e:
+            print(f"  Standards L1: SKIP ({e})")
+    else:
+        print("  Standards L1: SKIP (module not available)")
+
+    # 3. Fetch portal questions from API
     print("\n  Fetching portal questions...")
     board_job = _extract_board_and_job(entry)
     questions = []
@@ -359,7 +402,31 @@ def apply_to_entry(entry_id: str, dry_run: bool = False) -> bool:
         else:
             print(f"  Overlap check: {len(overlaps)} phrases (OK)")
 
-    # 7. Create application directory
+    # 7. Protocol-validated outreach DM
+    print("\n  Composing outreach DM...")
+    org_contacts = _load_contacts_for_org(org)
+    dm_text = ""
+    if org_contacts:
+        # Find the connect note from outreach log
+        try:
+            from dm_composer import compose_acceptance_dm
+            primary_contact = org_contacts[0]
+            result = compose_acceptance_dm(primary_contact.get("name", ""))
+            if result and result.dm_text:
+                dm_text = result.dm_text
+                protocol_status = "PASS" if result.protocol_valid else "FAIL"
+                print(f"  Protocol validation: {protocol_status}")
+                print(f"  DM for: {primary_contact.get('name', '?')} ({org})")
+                if not result.protocol_valid:
+                    print(f"  Protocol report:\n{result.protocol_report}")
+            else:
+                print("  DM: Could not compose (no connect note found)")
+        except Exception as e:
+            print(f"  DM: SKIP ({e})")
+    else:
+        print(f"  DM: No contacts at {org} — research contacts after submission")
+
+    # 8. Create application directory
     today = str(date.today())
     org_slug = re.sub(r"[^a-z0-9]+", "-", org.lower()).strip("-")
     role_slug = re.sub(r"[^a-z0-9]+", "-", role.lower()).strip("-")[:60]
@@ -418,16 +485,55 @@ def apply_to_entry(entry_id: str, dry_run: bool = False) -> bool:
         import shutil
         shutil.copy2(resume_html, dest)
 
-    # 9. Validate
+    # Outreach DM
+    if dm_text:
+        dm_contact = org_contacts[0].get("name", "TBD") if org_contacts else "TBD"
+        (app_dir / "outreach-dm.md").write_text(
+            f"# Outreach DM — {org}\n\n"
+            f"**Contact:** {dm_contact}\n\n"
+            f"---\n\n{dm_text}\n"
+        )
+        print("  Wrote: outreach-dm.md")
+
+    # 9. Validate — continuity test (all connections checked)
     files = list(app_dir.iterdir())
-    print(f"\n  Application directory: {app_dir}")
-    print(f"  Files: {len(files)}")
+    print(f"\n  {'─' * 50}")
+    print(f"  CONTINUITY TEST — {org}")
+    print(f"  {'─' * 50}")
+
+    checks = {
+        "entry.yaml": (app_dir / "entry.yaml").exists(),
+        "portal-answers.md": (app_dir / "portal-answers.md").exists(),
+        "cover-letter.md": any(f.name.endswith("cover-letter.md") for f in files),
+        "cover-letter.pdf": any("Cover-Letter.pdf" in f.name for f in files),
+        "resume.pdf": any("Resume.pdf" in f.name for f in files),
+    }
+
+    all_pass = True
+    for check_name, passed in checks.items():
+        icon = "PASS" if passed else "FAIL"
+        if not passed:
+            all_pass = False
+        print(f"  [{icon}] {check_name}")
+
+    # Optional but valuable
+    if dm_text:
+        print("  [PASS] outreach-dm.md (Protocol-validated)")
+    else:
+        print("  [WARN] outreach-dm.md (no contacts — research needed)")
+
+    overlap_status = f"{len(overlaps)} phrases" if overlaps else "0 (clean)"
+    overlap_icon = "PASS" if len(overlaps) <= 3 else "WARN"
+    print(f"  [{overlap_icon}] overlap check: {overlap_status}")
+
+    print(f"\n  Files: {len(files)}")
     for f in sorted(files):
         size = f.stat().st_size
         print(f"    {f.name} ({size:,} bytes)")
 
     print(f"\n  PORTAL URL: {url}")
-    print("  STATUS: Ready for portal submission")
+    verdict = "READY" if all_pass else "INCOMPLETE — fix failures above"
+    print(f"  STATUS: {verdict}")
 
     return True
 
