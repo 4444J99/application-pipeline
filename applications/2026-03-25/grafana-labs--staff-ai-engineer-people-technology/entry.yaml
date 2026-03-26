@@ -1,0 +1,118 @@
+id: grafana-labs-staff-ai-engineer-people-technology-us-remote
+name: Grafana Labs Staff AI Engineer, People Technology | US | Remote
+track: job
+status: staged
+outcome: null
+target:
+  organization: Grafana Labs
+  url: https://boards.greenhouse.io/grafanalabs
+  application_url: https://job-boards.greenhouse.io/grafanalabs/jobs/5830873004
+  portal: greenhouse
+  location: United States (Remote)
+  location_class: us-remote
+  description: '<div class="content-intro"><p>Grafana Labs is a remote-first, open-source
+    powerhouse. There are more than 20M users of Grafana, the open source visualization
+    tool, around the globe, monitoring everything from beehives to climate change
+    in the Alps. The instantly recognizable dashboards have been spotted everywhere
+    from a NASA launch and Minecraft HQ to Wimbledon and the Tour de France. Grafana
+    Labs also helps more than 3,000 companies -- including Bloomberg, JPMorgan Chase,
+    and eBay -- manage their observability strategies with the Grafana LGTM Stack,
+    which can be run fully managed with <a href="https://grafana.com/products/cloud/">Grafana
+    Cloud</a> or self-managed with the <a href="https://grafana.com/products/enterprise/">Grafana
+    Enterprise Stack</a>, both featuring scalable metrics (<a href="https://grafana.com/oss/mimir/">Grafana
+    Mimir</a>), logs (<a href="https://grafana.com/oss/loki/">Grafana Loki</a>), and
+    traces (<a href="https://grafana.com/oss/tempo/">Grafana Tempo</a>).</p> <p>We’re
+    scaling fast and staying true to what makes us different: an open-source legacy,
+    a global collaborative culture, and a passion for meaningful work. Our team thrives
+    in an innovation-driven environment where transparency, autonomy, and trust fuel
+    everything we do.</p> <p>You may not meet every requirement, and that’s okay.
+    If this role excites you, we’d love you to raise your hand for what could be a
+    truly career-defining opportunity.</p></div><p>This is a remote opportunity and
+    we are looking for candidates from the U.S.</p> <p></p> <p><strong>The Opportunity</strong></p>
+    <p>Grafana Labs is looking for a <strong>Staff AI Engineer, People Technology</strong>
+    to help build the next generation of AI-powered systems that support our global
+    workforce and People programs. This role sits within the <strong>People Technology
+    team</strong>, partnering closely with People Operations, Talent Acquisition,
+    Enablement, Finance, and Go-to-Market teams to design intelligent workflows and
+    data products that improve how we hire, develop, and support Grafanistas worldwide.</p>
+    <p>At Grafana Labs, we believe AI should be actually useful. Our approach to AI
+    is grounded in solving real problems and creating practical tools that help teams
+    work better. As part of this philosophy, you’ll apply AI thoughtfully within our
+    People systems, building solutions that improve how we operate and support team
+    members.</p> <p>As our first People Team AI Engineer, you’ll architect and implement
+    AI-driven solutions that unlock insights from our People data ecosystem, including
+    BigQuery and systems such as Workday, Greenhouse, Docebo, Tangelo, and Salesforce.
+    Your work will focus on creating scalable data pipelines, automation, and AI-powered
+    workflows that drive operational efficiency and deliver actionable insights for
+    People leaders.</p> <p>This role requires both technical depth and a strong understanding
+    of data governance, privacy, and responsible AI practices. You’ll help establish
+    standards for anonymization, ethical AI usage, and secure handling of sensitive
+    People data while building systems that empower the People team to make data-informed
+    decisions.</p> <p>As a Staff-level engineer, you will also set technical direction,
+    mentor other engineers, and influence how AI is adopted and governed across the
+    broader organization, not just within the People team.</p> <p>This is an opportunity
+    to play a foundational role in shaping how AI supports the employee lifecycle
+    at Grafana Labs, from recruiting and onboarding to development, engagement, and
+    workforce planning.</p> <p><strong>What You''ll Be Doing</strong></p> <p>AI Architecture
+    &amp; People Data Intelligence</p> <ul> <li>Design and build AI-powered workflows,
+    agents, and analytics tools that transform People data into actionable insights
+    and reduce manual processes across the People Team</li> <li>Architect solutions
+    that leverage BigQuery as the central data layer, integrating platforms such as
+    Workday, Greenhouse, Docebo, Tangelo, Salesforce, and other internal systems</li>
+    <li>Establish and maintain CI/CD pipelines, testing frameworks, and observability
+    standards for AI systems and automated workflows</li> <li>Define prompt engineering
+    standards, version control practices, and evaluation frameworks for LLM-based
+    systems operating on People data</li> <li>Partner with People Analytics to ensure
+    AI systems operate on well-governed, high-quality datasets and align with established
+    workforce metrics and data models</li> <li>Build internal dashboards, AI assistants,
+    or automated workflows that support reporting, insights, and operational efficiency</li>
+    <li>Collaborate with People partners to translate business problems into scalable
+    technical solutions</li> <li>Define and track success metrics and measurable business
+    outcomes for AI initiatives, including efficiency gains, time savings, and decision
+    quality improvements</li> </ul> <p>Responsible AI, Security &amp; Data Governance</p>
+    <ul> <li>Design '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/batch-03/grafana-labs-staff-ai-engineer-people-technology-us-remote/grafana-labs-staff-ai-engineer-people-technology-us-remote-resume.html
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.635099+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-25'
+status_meta:
+  reviewed_by: 4jp
+  approved_at: '2026-03-25'
