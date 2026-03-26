@@ -67,3 +67,9 @@ signals/notification-log.yaml
 signals/standup-log.yaml
 signals/agent-actions.yaml
 signals/traffic-signals.yaml
+
+# Backups (not tracked)
+backups/
+application_pipeline.egg-info/
+scripts_list.txt
+tests_list.txt
