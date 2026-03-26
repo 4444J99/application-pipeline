@@ -322,6 +322,29 @@ def apply_to_entry(entry_id: str, dry_run: bool = False) -> bool:
 
     org = entry.get("target", {}).get("organization", "")
     role = entry.get("name", "")
+
+    # 1b. CLEARANCE GATE — check before anything else
+    desc = entry.get("target", {}).get("description", "").lower()
+    # Check eligibility first (softer) to avoid false-positive hard blocks
+    eligibility_terms = re.findall(r"(eligible.*clearance|eligib.*obtain|eligib.*security)", desc)
+    # Hard blocks: must CURRENTLY HOLD (not just eligible)
+    clearance_terms = re.findall(
+        r"(active.*clearance|must hold.*clearance|requires active.*clearance|"
+        r"current.*clearance required|hold a ts.sci|active ts.sci|polygraph required)",
+        desc,
+    )
+    # If the posting says "eligible to obtain" but NOT "must hold active", it's soft
+    if clearance_terms:
+        print("  CLEARANCE GATE: HARD BLOCK — requires active clearance")
+        for t in clearance_terms:
+            print(f"    Found: \"{t}\"")
+        print("  ABORTING — do not apply without active clearance")
+        return False
+    elif eligibility_terms:
+        print("  CLEARANCE GATE: SOFT — requires eligibility (US citizen = eligible)")
+        for t in eligibility_terms:
+            print(f"    Found: \"{t}\"")
+        print("  Proceeding — you are eligible as a US citizen")
     url = entry.get("target", {}).get("application_url", "")
     portal = entry.get("target", {}).get("portal", "")
     print(f"  Organization: {org}")
