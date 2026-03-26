@@ -157,6 +157,7 @@ PARAM_COMMANDS = {
     "compose":  ("compose.py", ["--target"],             "Compose submission from blocks"),
     "draft":    ("draft.py", ["--target"],               "Draft from profile content"),
     "submit":   ("submit.py", ["--target"],              "Generate portal-ready checklist"),
+    "apply":    ("apply.py", ["--target"],               "Full application pipeline: fetch questions, generate answers, build PDFs"),
     "check":    ("submit.py", ["--check"],               "Pre-submit validation"),
     "record":   ("submit.py", ["--target", None, "--record"], "Record completed submission"),
     "gate":     ("hygiene.py", ["--gate"],               "Track-specific readiness gate"),
