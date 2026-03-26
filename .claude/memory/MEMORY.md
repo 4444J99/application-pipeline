@@ -63,6 +63,7 @@
 - [Log tool fixes](feedback_log_tool_fixes.md) — When fixing bugs or building tools, log what changed. Don't silently fix things.
 - [Building for others fortifies](feedback_building_for_others.md) — Solving their problems > solves ours higher. Every venture hardens the studio. None pay tomorrow, all have income potential. Explore every path.
 - [IRA model limits](feedback_ira_model_limits.md) — Never send full CLAUDE.md to Haiku. Use Sonnet minimum for all raters, or break evidence into chunks. If you know it'll hit context, split it preemptively.
+- [Never list commands](feedback_never_defer_commands.md) — Never present commands for the user to run. Run them all, in order, automatically. The only "your action" is what physically can't be done programmatically.
 
 ## Project Memories
 - [System Purpose](project_system_purpose.md) — Core mission: Scan → Match → Build → Apply → Follow up. Everything else is armor plating.
@@ -85,3 +86,4 @@
 - [Dustin Dipaulo Ventures 2026-03-24](project_dustin_dipaulo_ventures_2026-03-24.md) — 3 ventures: music DSP alternative, AI audit consulting, neurodivergent fashion. Peer co-creator.
 - [Maddie Ventures 2026-03-24](project_maddie_ventures_2026-03-24.md) — 3 ventures: non-profit housing, water funnel (her domain, asked for help), atemporal atlas (Zelda-style layered maps). Awaiting her transcripts/voice notes.
 - [Pillar 3 Full Network 2026-03-24](project_pillar3_full_network_2026-03-24.md) — 6 partners, 12+ ventures. Tony (fintech), Scott (design), Dustin (UI/UX), Maddie (water/housing), Rob (fitness/chess/HokageChess), Jessica (18K heartbreak audience + behavioral blockchain repo exists).
+- [Session Arc 2026-03-25](project_session_2026-03-25.md) — 20+ commits, diagnostic 3.5→8.3, rubric refactor, apply.py built, 5 apps with API questions, repo reorg Phase 1, Maddie roadmap, 3 diseases cured.

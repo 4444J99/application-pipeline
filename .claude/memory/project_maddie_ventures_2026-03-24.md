@@ -60,3 +60,19 @@ Maddie sent full data dump:
 - She also asked for the "file/doc namer" tool made for her aunt — wants to pay $20 for a quick utility
 
 **Revenue signal:** Maddie is a PAYING client, not just a collaborator. She explicitly offered to pay. The water funnel is her existing business — she has customers, a product, and a domain. This is Pillar 3 revenue.
+
+**Current sites:**
+- **stopdrinkingacid.com** — her existing water funnel / "main pillar." Baseline to improve against.
+- **eaucohub.com** — her business funnel. Currently has an outdated Mayan calendar. Financial pillar ties into the water site.
+- **elevatealign.com** — the personal brand / master site. She wants the interactive spiral to live here. References a previous version ("like we had it that one time") — there's prior art of a live, movable spiral UI they built together. This is the true hub.
+
+**Architecture (3 domains, hub-and-spoke):**
+- **elevatealign.com** = personal brand hub (interactive spiral navigation, master base)
+  - → **stopdrinkingacid.com** = water pillar (content funnel + product)
+  - → **eaucohub.com** = business/financial pillar
+  - → (future spokes: housing non-profit, other ventures)
+
+**Her framework: "Sovereign Systems" — 4 pillars with spiral navigation.**
+Build order (her words): bones of structure/spiral FIRST → mini spiral for water branch → build water out → plug in business → finish base/spiral.
+
+She has her own governance model. The studio isn't imposing ORGANVM — it's helping her build HER system using the same methodology.
