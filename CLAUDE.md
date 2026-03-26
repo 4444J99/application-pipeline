@@ -9,12 +9,48 @@ Career application pipeline repo — personal infrastructure for managing grant,
 **Owner:** @4444J99 (personal/liminal — not an organ repo)
 **Parent:** `~/Workspace/4444J99/application-pipeline/`
 
+## Three-Pillar Model
+
+The pipeline serves three revenue pillars for the ORGANVM studio:
+
+| Pillar | Purpose | Scoring Rubric | Track |
+|--------|---------|---------------|-------|
+| **1. Jobs** | Runway (temporary funding) | `weights_job` — network_proximity + deadline_feasibility + studio_alignment + remote_flexibility | `job` |
+| **2. Grants & Funding** | Validation + non-dilutive capital | `weights_grant` — mission_alignment + narrative_fit + prestige_multiplier + cycle_urgency | `grant`, `residency`, `fellowship`, `prize`, `writing`, `emergency` |
+| **3. Consulting** | Bridge to studio (recurring revenue, full autonomy) | `weights_consulting` — network_proximity + recurring_potential + studio_alignment + client_fit | `consulting` |
+
+**North star:** ORGANVM is a studio — a Pixar, an ILM. Jobs buy time. Grants validate the art. Consulting builds the client base.
+
+## Canonical Application Flow
+
+**ALWAYS use `apply.py` to generate application packages.** Never create files manually.
+
+```bash
+python scripts/apply.py --target <entry-id>     # Single entry
+python scripts/apply.py --batch                  # All staged entries
+python scripts/apply.py --target <id> --dry-run  # Preview
+```
+
+The command runs this pipeline automatically:
+1. **Clearance gate** — hard-blocks entries requiring active clearance, soft-passes eligibility-only
+2. **Standards audit** (Level 1) — triad regulators with quorum
+3. **Greenhouse API question fetch** — real portal fields, not invented
+4. **Answer generation** — standard auto-fill + role-specific free-text
+5. **Cover letter resolution** — from variants, unique from resume (WHY not WHAT)
+6. **Protocol-validated outreach DM** — composed for org contacts, 7 articles checked
+7. **Overlap check** — cover letter vs resume, <3 shared 4-word phrases
+8. **PDF build** — Chrome headless, 1 page
+9. **Application directory** — `applications/YYYY-MM-DD/<org>--<role>/`
+10. **Continuity test** — all connections verified before declaring READY
+
+**Outreach rule:** NEVER recycle already-contacted people. Research 3 FRESH contacts per submission.
+
 ## Pipeline Philosophy: Precision Over Volume
 
 **Effective 2026-03-04.** The pipeline optimizes for finding perfect-fit roles and building relationships, not throughput.
 
 - **Max 1-2 applications per week**, each deeply researched
-- **Minimum score 9.0** to apply; network_proximity >= 5 preferred
+- **Minimum score 7.0** to apply (recalibrated 2026-03-15 from 9.0); network_proximity >= 5 preferred
 - **9 scoring dimensions** including `network_proximity` (referral = 8x hire rate)
 - **Max 10 actionable entries** (qualified+drafting+staged) at any time; max 1 per organization. Note: the `active/` directory may contain more files including recently-promoted research entries awaiting triage.
 - **Daily split:** 2hr research, 2hr relationships, 1hr application work
@@ -25,17 +61,33 @@ Career application pipeline repo — personal infrastructure for managing grant,
 
 ## Architecture
 
-- `pipeline/` — One YAML file per application, organized into `active/`, `submitted/`, `closed/`, and `research_pool/` subdirectories (schema in `_schema.yaml`)
+**Root follows Minimal Root philosophy — only architectural pillars at top level.**
+
+- `pipeline/` — One YAML file per application, organized into `active/`, `submitted/`, `closed/`, `research_pool/`, and `archive/` subdirectories (schema in `_schema.yaml`)
   - `research_pool/` holds auto-sourced research-status entries, separated from actionable entries to keep `active/` lean (~30 files vs ~1000)
+  - `archive/drafts/` — old markdown checklists (historical, not active)
 - `blocks/` — Modular narrative building blocks with tiered depth (60s / 2min / 5min / cathedral). Each block has frontmatter: `title`, `category`, `tags`, `identity_positions`, `tracks`, `tier`. Regenerate the tag index with `python scripts/build_block_index.py`.
-- `variants/` — A/B tracked material versions with outcome attribution (e.g. `cover-letters/`, `project-descriptions/`)
-- `materials/` — Raw materials (resumes, CVs, work samples, headshots). Resumes organized into `base/` (5 identity-position templates) and `batch-NN/` (target-tailored versions, current: `batch-03/`).
-- `targets/profiles/` — 44 target-specific profile JSONs with pre-written artist statements, bios, work samples
-- `signals/` — Conversion analytics (conversion-log.yaml, patterns.md, outreach-log.yaml, standup-log.yaml)
-- `strategy/` — Strategic documents (funding strategy, scoring rubric, identity positions, campaign reports)
-- `scripts/` — Python CLI tooling (all scripts import from `pipeline_lib.py`). Includes ATS-specific submitters for Greenhouse, Lever, and Ashby portals.
-- `docs/` — Architecture rationale and workflow guide
-- `.claude/memory/` — Session memory backup (synced from `~/.claude/projects/.../memory/`). Must be committed and pushed on every session close. 22 files: 7 feedback rules, 12 project records, 2 consulting pivot records, 1 index.
+- `materials/` — All submission materials consolidated:
+  - `resumes/` — `base/` (9 identity-position templates) and `batch-NN/` (target-tailored, current: `batch-03/`)
+  - `variants/` — A/B tracked material versions (cover-letters, project-descriptions, statements)
+  - `targets/profiles/` — 1,030+ target-specific profile JSONs with pre-written artist statements, bios, work samples
+  - `targets/grants/`, `targets/jobs/`, `targets/residencies/` — track-specific research
+  - `cvs/`, `headshots/`, `work-samples/`
+- `applications/` — Dated submission bundles (`applications/YYYY-MM-DD/<org>--<role>/`). Each contains: entry.yaml, portal-answers.md, cover-letter.md/.pdf, resume.pdf, outreach-dm.md. Generated by `apply.py`.
+- `signals/` — Conversion analytics and observability data:
+  - `contacts.yaml`, `outreach-log.yaml`, `network.yaml` — relationship CRM
+  - `conversion-log.yaml`, `hypotheses.yaml`, `signal-actions.yaml` — pipeline signals
+  - `daily-health/`, `daily-snapshots/`, `weekly-brief/` — automated reports
+  - `ratings/` — IRA inter-rater agreement session results
+- `strategy/` — Strategic documents (scoring rubric, identity positions, market intelligence, agent rules)
+- `scripts/` — 160+ Python CLI tools (all import from `pipeline_lib.py`)
+- `docs/` — Architecture rationale, thesis chapters, venture roadmaps, specs
+  - `docs/superpowers/specs/` — design specifications
+  - `docs/ventures/` — client project roadmaps (Pillar 3)
+  - `docs/reports/` — evaluation reports and checklists
+- `.config/` — Tooling configs (`metrics.yaml`) and `launchd/` plist files
+- `.claude/memory/` — Session memory backup (synced from `~/.claude/projects/.../memory/`). Must be committed and pushed on every session close. 33 files.
+- `intake/` — Ingestion staging area (CSV exports, LinkedIn data). Not part of active pipeline.
 
 ## Pipeline State Machine
 
@@ -72,7 +124,7 @@ Every application must align with one of nine canonical positions defined in `st
 Three content layers feed into submissions:
 
 1. **Blocks** (`blocks/`) — Reusable narrative modules authored manually. Referenced by path in pipeline YAML `submission.blocks_used` (e.g. `identity/2min`, `projects/organvm-system`). See `blocks/README.md` for the tier system.
-2. **Profiles** (`targets/profiles/*.json`) — Target-specific pre-written content: artist statements at 3 lengths, bios, work samples.
+2. **Profiles** (`materials/targets/profiles/*.json`) — Target-specific pre-written content: artist statements at 3 lengths, bios, work samples.
 3. **Legacy scripts** (`scripts/legacy-submission/`) — 32 pre-pipeline paste-ready submissions, parsed via `pipeline_lib.load_legacy_script()`.
 
 **Fallback pattern**: `draft.py` and `compose.py --profile` check blocks first, then fall back to profile content, then legacy scripts. Entries don't need `blocks_used` fully populated.
@@ -115,7 +167,10 @@ Scripts are independent CLIs but some import functions from each other:
 - **`protocol_types.py`** — Domain types for the Outreach Protocol: Message, Agent, Claim, Tension, Question, and 7 validation result dataclasses. Imported by protocol_validator.py and dm_composer.py.
 - **`protocol_validator.py`** — Outreach Protocol enforcement: validates messages against 7 formal articles (P-I Hook Planting, P-II Continuity, P-III Ratio Decay, P-IV Terminal Question, P-V Inhabitation, P-VI Bare Resource, P-VII Thread Parity). `validate_full_sequence()` runs all articles.
 - **`dm_composer.py`** — Acceptance DM composition using Protocol constraints. Recovers connect notes from outreach plan markdown files, generates Protocol-compliant DMs, validates output. `--contact`, `--all-pending`, `--target` modes. Run `run.py dm <contact>` or `run.py compose-dm`.
-- **`reconcile_outreach.py`** — LinkedIn DM history ingestion and backfill. Parses pasted message history, diffs against outreach-log.yaml, backfills all three signal files. **Known bug:** contact name parser misattributes DMs (IRF-APP-014).
+- **`reconcile_outreach.py`** — LinkedIn DM history ingestion and backfill. Parses pasted message history (anchors on "Open the options list" line for contact attribution), diffs against outreach-log.yaml, backfills all three signal files.
+- **`apply.py`** — **THE canonical application command.** Single command that runs the full pipeline: clearance gate → standards audit (Level 1) → Greenhouse API question fetch → auto-fill answers → cover letter resolution → Protocol-validated DM composition → overlap check → PDF build → application directory creation → continuity test. `run.py apply <id>` or `--batch` for all staged. **Use this for all future applications — never bypass it with manual file creation.**
+- **`log_dm.py`** — Single-command DM logging across all 3 signal files (contacts.yaml, outreach-log.yaml, network.yaml). `run.py logdm <contact> --note "..."`. Solves the 3-file-per-DM friction.
+- **`standards.py`** — Hierarchical standards validation: 5-level oversight (Course → Department → University → National → Federal) with triad regulators (3 gates per level, ≥2/3 quorum). Wired into apply.py as Level 1 pre-submission gate.
 - All other scripts are standalone CLIs that read/write pipeline YAML files.
 
 ## Module Architecture
@@ -354,7 +409,7 @@ Single-word command protocol via `python scripts/run.py <command>`. 102 standalo
 
 | File | Purpose |
 |------|---------|
-| `strategy/scoring-rubric.yaml` | Scoring dimensions, weights, thresholds (loaded by `score.py`) |
+| `strategy/scoring-rubric.yaml` | Three-pillar scoring rubric v3.0: `weights_job` (11 dims incl. studio_alignment, remote_flexibility), `weights_grant` (10 dims incl. narrative_fit, prestige_multiplier, cycle_urgency), `weights_consulting` (9 dims incl. recurring_potential, client_fit). `score.py` dispatches by track. |
 | `strategy/agent-rules.yaml` | Agent decision rules and thresholds (loaded by `agent.py`) |
 | `strategy/market-intelligence-2026.json` | Market data, portal friction, benchmarks (loaded by many scripts) |
 | `signals/signal-actions.yaml` | Signal-to-action audit trail (written by `advance.py`, `log_signal_action.py`) |
