@@ -32,7 +32,7 @@ from diagnose import (
 )
 from pipeline_lib import REPO_ROOT
 
-RATINGS_DIR = REPO_ROOT / "ratings"
+RATINGS_DIR = REPO_ROOT / "signals" / "ratings"
 PERSONAS_PATH = REPO_ROOT / "strategy" / "rater-personas.yaml"
 
 

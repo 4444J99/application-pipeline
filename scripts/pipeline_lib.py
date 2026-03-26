@@ -52,9 +52,9 @@ ALL_PIPELINE_DIRS = [PIPELINE_DIR_ACTIVE, PIPELINE_DIR_SUBMITTED, PIPELINE_DIR_C
 ALL_PIPELINE_DIRS_WITH_POOL = ALL_PIPELINE_DIRS + [PIPELINE_DIR_RESEARCH_POOL]
 
 BLOCKS_DIR = REPO_ROOT / "blocks"
-VARIANTS_DIR = REPO_ROOT / "variants"
-PROFILES_DIR = REPO_ROOT / "targets" / "profiles"
-DRAFTS_DIR = REPO_ROOT / "pipeline" / "drafts"
+VARIANTS_DIR = REPO_ROOT / "materials" / "variants"
+PROFILES_DIR = REPO_ROOT / "materials" / "targets" / "profiles"
+DRAFTS_DIR = REPO_ROOT / "pipeline" / "archive" / "drafts"
 SIGNALS_DIR = REPO_ROOT / "signals"
 SUBMISSIONS_DIR = REPO_ROOT / "pipeline" / "submissions"
 LEGACY_DIR = REPO_ROOT / "scripts" / "legacy-submission"

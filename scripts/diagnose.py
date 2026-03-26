@@ -28,7 +28,7 @@ from pipeline_lib import REPO_ROOT
 RUBRIC_PATH = REPO_ROOT / "strategy" / "system-grading-rubric.yaml"
 SCRIPTS_DIR = REPO_ROOT / "scripts"
 TESTS_DIR = REPO_ROOT / "tests"
-RATINGS_DIR = REPO_ROOT / "ratings"
+RATINGS_DIR = REPO_ROOT / "signals" / "ratings"
 
 
 def load_rubric() -> dict:
@@ -767,7 +767,7 @@ def _load_ira_consensus(scores: dict[str, dict]) -> None:
     scores, and injects them into the scores dict for any subjective dimension
     not already scored by an objective collector.
     """
-    ratings_dir = Path(__file__).resolve().parent.parent / "ratings"
+    ratings_dir = Path(__file__).resolve().parent.parent / "signals" / "ratings"
     if not ratings_dir.exists():
         return
 
