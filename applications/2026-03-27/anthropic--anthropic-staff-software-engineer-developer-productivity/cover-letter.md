@@ -5,7 +5,7 @@ https://4444j99.github.io/portfolio/
 
 Dear Anthropic Developer Productivity Team,
 
-I am obsessed with reducing friction in the software development lifecycle. I’ve built a 37-script CLI pipeline for ORGANVM that coordinates 113 repositories, 104 CI/CD pipelines, and ~766K+ words of documentation—as a single practitioner. I am applying for the Staff+ Software Engineer (Developer Productivity) role because I build the exact kind of automated guardrails and internal tools that allow frontier engineering and research to scale without collapsing under their own volume.
+I am obsessed with reducing friction in the software development lifecycle. I’ve built a 37-script CLI pipeline for ORGANVM that coordinates 113 repositories, 104 CI/CD pipelines, and ~739K+ words of documentation—as a single practitioner. I am applying for the Staff+ Software Engineer (Developer Productivity) role because I build the exact kind of automated guardrails and internal tools that allow frontier engineering and research to scale without collapsing under their own volume.
 
 My approach to developer productivity is rooted in three production-grade systems I’ve designed and maintained.
 
