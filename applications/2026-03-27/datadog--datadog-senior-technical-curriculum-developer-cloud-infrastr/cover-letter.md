@@ -1,13 +1,6 @@
-# Cover Letter: Datadog Senior Technical Curriculum Developer - Cloud Infrastructure
-
-**Role:** Datadog Senior Technical Curriculum Developer - Cloud Infrastructure
-**Apply:** https://careers.datadoghq.com/detail/7555494/?gh_jid=7555494
-
----
-
 Anthony Padavano
 Remote (US-based)
-anthony@4444j99.io
+padavano.anthony@gmail.com
 https://4444j99.github.io/portfolio/
 
 Dear Datadog Customer Education Team,

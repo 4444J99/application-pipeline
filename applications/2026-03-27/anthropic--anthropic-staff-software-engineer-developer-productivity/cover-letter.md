@@ -1,13 +1,6 @@
-# Cover Letter: Anthropic Staff+ Software Engineer, Developer Productivity
-
-**Role:** Anthropic Staff+ Software Engineer, Developer Productivity
-**Apply:** https://job-boards.greenhouse.io/anthropic/jobs/5110511008
-
----
-
 Anthony Padavano
 New York City, NY
-anthony@4444j99.io
+padavano.anthony@gmail.com
 https://4444j99.github.io/portfolio/
 
 Dear Anthropic Developer Productivity Team,

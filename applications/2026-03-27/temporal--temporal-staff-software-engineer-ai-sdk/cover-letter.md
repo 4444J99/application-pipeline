@@ -1,13 +1,6 @@
-# Cover Letter: Temporal Staff Software Engineer - AI SDK
-
-**Role:** Temporal Staff Software Engineer - AI SDK
-**Apply:** https://job-boards.greenhouse.io/temporaltechnologies/jobs/4853421007
-
----
-
 Anthony Padavano
 Remote (US-based)
-anthony@4444j99.io
+padavano.anthony@gmail.com
 https://4444j99.github.io/portfolio/
 
 Dear Temporal AI SDK Team,

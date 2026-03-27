@@ -1,13 +1,6 @@
-# Cover Letter: Cursor Software Engineer, Reliability
-
-**Role:** Cursor Software Engineer, Reliability
-**Apply:** https://www.cursor.com/careers/software-engineer-reliability
-
----
-
 Anthony Padavano
 New York City, NY (Open to SF relocation)
-anthony@4444j99.io
+padavano.anthony@gmail.com
 https://4444j99.github.io/portfolio/
 
 Dear Anysphere Team,

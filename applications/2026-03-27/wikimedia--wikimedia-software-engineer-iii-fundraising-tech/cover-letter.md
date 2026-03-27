@@ -1,13 +1,6 @@
-# Cover Letter: Wikimedia Software Engineer III, Fundraising Tech
-
-**Role:** Wikimedia Software Engineer III, Fundraising Tech
-**Apply:** https://job-boards.greenhouse.io/wikimedia/jobs/7736459
-
----
-
 Anthony Padavano
 Remote (US-based)
-anthony@4444j99.io
+padavano.anthony@gmail.com
 https://4444j99.github.io/portfolio/
 
 Dear Wikimedia Foundation Hiring Team,

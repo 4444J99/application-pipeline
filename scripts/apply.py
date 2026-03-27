@@ -508,6 +508,17 @@ def apply_to_entry(entry_id: str, dry_run: bool = False) -> bool:
         import shutil
         shutil.copy2(resume_html, dest)
 
+    # HARD RULE CHECKS — automated, not memory-dependent
+    # Rule 1: No "Independent Engineer" anywhere
+    for check_file in app_dir.iterdir():
+        if check_file.suffix in (".md", ".html"):
+            content = check_file.read_text()
+            if "Independent Engineer" in content:
+                print(f"  RED FLAG: '{check_file.name}' contains 'Independent Engineer' — must use ORGANVM")
+    # Rule 2: Cover letter must not have metadata headers
+    if cover_letter and cover_letter.startswith("#"):
+        print("  RED FLAG: Cover letter starts with markdown header — strip metadata")
+
     # Outreach DM
     if dm_text:
         dm_contact = org_contacts[0].get("name", "TBD") if org_contacts else "TBD"
