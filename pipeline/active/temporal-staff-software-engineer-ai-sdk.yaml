@@ -10,8 +10,66 @@ target:
   portal: greenhouse
   location: United States - Remote Opportunity
   location_class: us-remote
-  description: "<div class=\"content-intro\"><h3><strong>About Us</strong></h3> <div>Temporal is an open source programming model that can simplify code, make applications more reliable, and help developers focus on the important things like delivering features faster. We are on a mission to be the reliable foundation of every developer’s toolbox, and are building the team that will make that happen.</div> <div>&nbsp;</div> <div>Our values guide us —they are present in how we show up, make decisions, and work together to make an impact. We’re curious, driven, collaborative, genuine and humble.</div> <div>&nbsp;</div> <div>Temporal is growing and we are looking for those who share our values, challenge 'standard' thinking, and want to influence our future. If you have a passion for improving the developer experience, building world-class open-source software and communities, and want to be a part of our amazing team, we'd love to hear from you!</div></div><p><strong>Summary</strong></p> <p>We have an opening to hire a <strong>Staff Software Engineer - AI SDK.</strong>&nbsp;</p> <p>Temporal provides durable execution, the systems foundation used for reliable AI at leaders such as OpenAI, Lovable, Replit, and many others. As a member of the AI SDK team, you will be creating building blocks to support the expanding ecosystem of AI applications.</p> <p>Under the hood, non-trivial AI applications quickly become distributed systems. Fault tolerance and other challenges quickly become evident in tasks requiring reasoning, tool calls, memory management, human-in-the loop interactivity, and ambient or background processing. Temporal removes the complexity otherwise inherent in such applications, allowing simple code that works as intended every time.</p> <p>The AI SDK team is pushing to keep Temporal at the forefront of AI applications. Because the landscape is constantly changing, we engage heavily in prototyping to ensure that the abstractions we develop meet the needs of emerging applications. We also ensure that Temporal integrates well with leading AI frameworks and libraries.</p> <p>Most of Temporal’s work is open source—see for yourself here: <a href=\"https://github.com/temporalio\" target=\"_blank\">https://github.com/temporalio</a>&nbsp;[new window]</p> <p><strong>What You Will Do</strong></p> <ul> <li>Work as a Software Engineer.</li> <li>Design and implement Temporal AI SDK features supporting a broad variety of frameworks and libraries.</li> <li>Develop a deep understanding of AI application development techniques, including emerging approaches and architectures.</li> <li>Work with multiple programming languages, primarily Python and TypeScript.</li> <li>Make extensive use of AI coding tools, especially to ensure quality across a large number of integrations.</li> <li>Take end-to-end ownership of new features, working with other teams to deliver exceptional reliability and a great developer experience.</li> <li>Serve as a domain expert on AI design patterns, collaborating with field staff to provide best-practices and canonical examples.</li> <li>Work directly with our developer community to debug issues that need expert attention, and get feedback on Temporal SDK features and APIs.</li> <li>Write public technical documentation describing Temporal concepts and APIs.</li> <li>Go the extra mile to support a customer in need, on the rare occasion that AI SDK engineering expertise is needed.</li> <li>Travel to meet your coworkers for a week once or twice a year.</li> <li>Attend the occasional developer conference to talk about how great Temporal is (optional).</li> </ul> <p><strong>What You Won’t Do</strong></p> <ul> <li>Work as a Data Scientist, Data Analyst, Devops SWE, or SRE.</li> <li>Work in an office (unless you want to, but you’d be by yourself). Temporal is a fully-remote company.</li> <li>Commit code that’s poorly-tested or works “most of the time”. Temporal aspires to be “Reliable as Gravity”, and we expect our code to be the same.</li> <li>Work behind closed doors. The SDKs are open source—that means PRs and comments
-    are open to the public, too.</li> <li>Sit in meetings all day. We mostly communicate in writing, and use meetings mainly for status updates and thorny issues that need input from the whole group.</li> <li>Wake up to pager alerts. We’re extremely active in supporting our customers and the community, but we don’t do 24/7 on-call.</li> </ul> <p><strong>What You’ll Bring</strong></p> <ul> <li>Experience and passion for harnessing generative AI, particularly for agents and coding.</li> <li>A deep understanding of how to use AI to increase quality, not only to increase quantity.&nbsp;</li> <li>A sense of taste in code and software development practice. Your approach should be opinionated and thoughtful, but not dogmatic.</li> <li>A track record of open source software contributions, including contributions to 3rd party libraries.&nbsp;</li> <li>Fluency in multiple programming languages, and an affinity for learn"
+  description: '<div class="content-intro"><h3><strong>About Us</strong></h3> <div>Temporal
+    is an open source programming model that can simplify code, make applications
+    more reliable, and help developers focus on the important things like delivering
+    features faster. We are on a mission to be the reliable foundation of every developer’s
+    toolbox, and are building the team that will make that happen.</div> <div>&nbsp;</div>
+    <div>Our values guide us —they are present in how we show up, make decisions,
+    and work together to make an impact. We’re curious, driven, collaborative, genuine
+    and humble.</div> <div>&nbsp;</div> <div>Temporal is growing and we are looking
+    for those who share our values, challenge ''standard'' thinking, and want to influence
+    our future. If you have a passion for improving the developer experience, building
+    world-class open-source software and communities, and want to be a part of our
+    amazing team, we''d love to hear from you!</div></div><p><strong>Summary</strong></p>
+    <p>We have an opening to hire a <strong>Staff Software Engineer - AI SDK.</strong>&nbsp;</p>
+    <p>Temporal provides durable execution, the systems foundation used for reliable
+    AI at leaders such as OpenAI, Lovable, Replit, and many others. As a member of
+    the AI SDK team, you will be creating building blocks to support the expanding
+    ecosystem of AI applications.</p> <p>Under the hood, non-trivial AI applications
+    quickly become distributed systems. Fault tolerance and other challenges quickly
+    become evident in tasks requiring reasoning, tool calls, memory management, human-in-the
+    loop interactivity, and ambient or background processing. Temporal removes the
+    complexity otherwise inherent in such applications, allowing simple code that
+    works as intended every time.</p> <p>The AI SDK team is pushing to keep Temporal
+    at the forefront of AI applications. Because the landscape is constantly changing,
+    we engage heavily in prototyping to ensure that the abstractions we develop meet
+    the needs of emerging applications. We also ensure that Temporal integrates well
+    with leading AI frameworks and libraries.</p> <p>Most of Temporal’s work is open
+    source—see for yourself here: <a href="https://github.com/temporalio" target="_blank">https://github.com/temporalio</a>&nbsp;[new
+    window]</p> <p><strong>What You Will Do</strong></p> <ul> <li>Work as a Software
+    Engineer.</li> <li>Design and implement Temporal AI SDK features supporting a
+    broad variety of frameworks and libraries.</li> <li>Develop a deep understanding
+    of AI application development techniques, including emerging approaches and architectures.</li>
+    <li>Work with multiple programming languages, primarily Python and TypeScript.</li>
+    <li>Make extensive use of AI coding tools, especially to ensure quality across
+    a large number of integrations.</li> <li>Take end-to-end ownership of new features,
+    working with other teams to deliver exceptional reliability and a great developer
+    experience.</li> <li>Serve as a domain expert on AI design patterns, collaborating
+    with field staff to provide best-practices and canonical examples.</li> <li>Work
+    directly with our developer community to debug issues that need expert attention,
+    and get feedback on Temporal SDK features and APIs.</li> <li>Write public technical
+    documentation describing Temporal concepts and APIs.</li> <li>Go the extra mile
+    to support a customer in need, on the rare occasion that AI SDK engineering expertise
+    is needed.</li> <li>Travel to meet your coworkers for a week once or twice a year.</li>
+    <li>Attend the occasional developer conference to talk about how great Temporal
+    is (optional).</li> </ul> <p><strong>What You Won’t Do</strong></p> <ul> <li>Work
+    as a Data Scientist, Data Analyst, Devops SWE, or SRE.</li> <li>Work in an office
+    (unless you want to, but you’d be by yourself). Temporal is a fully-remote company.</li>
+    <li>Commit code that’s poorly-tested or works “most of the time”. Temporal aspires
+    to be “Reliable as Gravity”, and we expect our code to be the same.</li> <li>Work
+    behind closed doors. The SDKs are open source—that means PRs and comments are
+    open to the public, too.</li> <li>Sit in meetings all day. We mostly communicate
+    in writing, and use meetings mainly for status updates and thorny issues that
+    need input from the whole group.</li> <li>Wake up to pager alerts. We’re extremely
+    active in supporting our customers and the community, but we don’t do 24/7 on-call.</li>
+    </ul> <p><strong>What You’ll Bring</strong></p> <ul> <li>Experience and passion
+    for harnessing generative AI, particularly for agents and coding.</li> <li>A deep
+    understanding of how to use AI to increase quality, not only to increase quantity.&nbsp;</li>
+    <li>A sense of taste in code and software development practice. Your approach
+    should be opinionated and thoughtful, but not dogmatic.</li> <li>A track record
+    of open source software contributions, including contributions to 3rd party libraries.&nbsp;</li>
+    <li>Fluency in multiple programming languages, and an affinity for learn'
 deadline:
   date: null
   type: rolling
@@ -32,7 +90,9 @@ fit:
     effort_to_value: 7
     deadline_feasibility: 9
     portal_friction: 5
-  framing: A systems architect building durable agentic loops and self-referential state machines for ORGANVM, bridging the gap between non-deterministic AI outputs and production-grade reliability.
+  framing: A systems architect building durable agentic loops and self-referential
+    state machines for ORGANVM, bridging the gap between non-deterministic AI outputs
+    and production-grade reliability.
 submission:
   effort_level: standard
   blocks_used:
@@ -59,4 +119,7 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-03-27"
+last_touched: '2026-03-27'
+status_meta:
+  reviewed_by: 4jp
+  approved_at: '2026-03-27'

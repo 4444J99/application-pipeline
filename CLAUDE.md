@@ -460,11 +460,24 @@ make lint            # ruff check scripts/ tests/
 make validate        # Schema + ID map + rubric validation
 make verify          # Full verify_all.py (CI-parity)
 make verify-quick    # Fast verification gates (verify_all.py --quick)
+
+# Ecosystem integration (sync external data into pipeline scoring)
+make refresh-ecosystem      # Sync metrics from ORGANVM system-snapshot.json
+make refresh-prestige       # Enrich company prestige from GitHub signals
+make derive-positions       # Derive identity position relevance from organ activity
+make classify               # Auto-classify entries into 9 identity positions
+make refresh-all            # All ecosystem refreshes
+
+# Feedback loops (calibrate scoring from real outcomes)
+make recalibrate-engagement # Propose weight adjustments from engagement signals
+make block-engagement       # Correlate blocks with engagement vs silence
+make github-proximity       # Update contacts from GitHub interaction signals
+make refresh-intelligence   # Full ecosystem + feedback cycle
 ```
 
 ## Testing Patterns
 
-- Tests live in `tests/` (~1,977 tests) and use pytest
+- Tests live in `tests/` (~2,968 tests across 100 test files) and use pytest
 - Scripts use `sys.path.insert(0, ...)` to add `scripts/` to the import path (no package installation needed)
 - **Two test styles**: (1) live-data tests validate against actual YAML files, block directories, and profiles; (2) isolated tests use `tmp_path`, `monkeypatch`, and `capsys` for unit testing script logic
 - `pytest-mock` available; `monkeypatch.setattr` used extensively for isolating filesystem, `sys.argv`, and module globals
