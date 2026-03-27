@@ -195,10 +195,12 @@ def validate_package(package_dir: Path) -> MaterialsReport:
                 first_body = line
                 break
         # Rhetorician revision: recognition anchor includes numbers, proper nouns, and specific claims
+        # Recognition anchors: digits, word-form numbers, proper nouns, specific action verbs
         has_number = bool(re.search(r"\d+", first_body))
+        has_word_number = bool(re.search(r"(?i)\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|twenty|thirty|forty|fifty|sixty|hundred|thousand)\b", first_body))
         has_proper_noun = bool(re.search(r"[A-Z][a-z]+(?:\s[A-Z][a-z]+)", first_body))
-        has_specific_claim = bool(re.search(r"(?:built|designed|governed|maintained|operated|taught)", first_body, re.I))
-        has_anchor = has_number or has_proper_noun or has_specific_claim
+        has_specific_claim = bool(re.search(r"(?:built|designed|governed|maintained|operated|taught|spent|run|managed)", first_body, re.I))
+        has_anchor = has_number or has_word_number or has_proper_noun or has_specific_claim
         results.append(ArticleResult("M-VII", "Storefront Gate", has_anchor,
                                      "" if has_anchor else "first sentence lacks recognition anchor (number or proper noun)"))
     else:
@@ -219,9 +221,12 @@ def validate_package(package_dir: Path) -> MaterialsReport:
 
     # M-IX: Triple Layer (heuristic — checks for evidence of all three)
     if cl_text:
-        has_pathos = bool(re.search(r"(?i)(constraint|forced|alone|without|honest|felt)", cl_text))
-        has_ethos = bool(re.search(r"(?i)(built|designed|maintained|taught|produced|operated)", cl_text))
-        has_logos = bool(re.search(r"\d+", cl_text))
+        # Broader pathos detection: vulnerability, stakes, human experience, constraint
+        has_pathos = bool(re.search(r"(?i)(constraint|forced|alone|without|honest|felt|struggle|failure|broke|cost|waking|tired|afraid|trust|stakes|paid the price|gave up|lost|risk|fear|difficult|hard way|lesson|mistake|personally)", cl_text))
+        # Broader ethos detection: demonstrated action verbs
+        has_ethos = bool(re.search(r"(?i)(built|designed|maintained|taught|produced|operated|architected|created|developed|engineered|led|managed|authored|governed|implemented|deployed)", cl_text))
+        # Logos: numbers, evidence, mechanism, causal language
+        has_logos = bool(re.search(r"(\d+|because|therefore|produces|results in|leads to|evidence|mechanism|demonstrated)", cl_text))
         all_three = has_pathos and has_ethos and has_logos
         results.append(ArticleResult("M-IX", "Triple Layer", all_three,
                                      "" if all_three else "missing dimension(s)"))
