@@ -70,11 +70,83 @@ Time_budget ∈ {6_seconds (ATS scan), 30_seconds (initial read), 2_minutes (dee
 
 The Materials Protocol optimizes for the 30-second read:
   P(advance | 30_seconds) is the target metric.
+```
 
-Axiom 0 (The Attention Budget):
+### Foundational Attention Axioms (imported from Attention Mechanics meta-theory)
+
+```
+ATT-A0: Attention is the ur-currency of all narrative; it precedes and
+        transcends any specific medium. (Applies to resumes and cover letters
+        as temporal documents — the reader moves through them linearly.)
+
+ATT-A1: Every narrative medium evolves mechanisms to solve the same fundamental
+        problem: sustaining engagement through time.
+
+ATT-A2: Temporal arts must fill time to make time vanish; silence in music =
+        "and then" in narrative = DEAD SPACE on a resume = attention collapse.
+
+ATT-A3: The purest attention mechanisms are those producing involuntary
+        physiological responses. (Numbers in the first sentence produce
+        involuntary credibility calibration.)
+
+ATT-A4: Sustained attention requires either anticipation-satisfaction cycles
+        or prediction-failure-recalibration cycles. (The cover letter's
+        narrative arc uses the latter: "you'd expect X, but actually Y.")
+
+ATT-A5: As media become more simultaneous, they can pack more attention-sustaining
+        mechanisms per unit time, but each mechanism must remain causally operative.
+        (Every metric on the resume must EARN its space by doing causal work.)
+
+Axiom 0 (The Attention Budget — derived from ATT-A0 + ATT-A2):
   A reviewer allocates attention monotonically: first impression is irreversible.
   Dead space, formatting inconsistency, or generic language in the first 3 seconds
-  terminates the evaluation.
+  terminates the evaluation. This is not psychology — it is the physics of
+  temporal attention allocation.
+
+  At every micro-moment t, the reviewer implicitly asks:
+    "Why should I continue rather than disengage?"
+  (ATT-A1, The Attention-Sustenance Problem)
+
+  The Materials Protocol's answer: every square inch of the page
+  must provide continuous justification for continued reading.
+```
+
+### Constitutional Laws (imported from Praxis Perpetua)
+
+```
+Art. I (Identity Must Be Declared): Every document declares what it is.
+  Resume = structured evidence. Cover letter = narrative argument. Portal answers = direct response.
+  No document pretends to be something else.
+
+Art. II (Records Are Immutable): Output files in batch-NN/ are historical artifacts.
+  Fix the base template, not the output. (The Base-Not-Output Principle, M-II.1)
+
+Art. III (Transition Requires Readiness): Materials advance from draft → staged → submitted
+  only when they DEMONSTRATE readiness through validation. Not because someone declares them ready.
+
+Art. VI (Entropy Is The Default): Materials degrade unless actively maintained.
+  Metrics go stale. Templates drift. Rules get forgotten.
+  The Materials Validator is the energy that maintains order.
+```
+
+### Voice Constitution Integration
+
+```
+The Voice Constitution defines 8 invariants and 11 anti-patterns that apply to ALL text
+produced under the orchestrator's authority — including resumes and cover letters.
+
+Key invariants for submission materials:
+  INV-01 (System-first): Lead with the system, not the anecdote
+  INV-02 (Ontology before implementation): Define what ORGANVM IS before what it DOES
+  INV-06 (Procedural transmutation): Convert vague intuitions into named, typed structures
+  INV-07 (Anti-flattening): Resist generic language; maintain signal density
+
+Key anti-patterns to enforce:
+  AP-01 (Generic smoothness): "leverage core competencies" → REJECT
+  AP-02 (Chatty filler): "It's worth noting that" → REJECT
+  AP-03 (Emotional reassurance replacing specification): "I'm passionate about" → REJECT
+  AP-08 (Enthusiasm replacing architecture): "I'm excited to" → REJECT
+  AP-09 (Generic motivational filler): "Making a difference" → REJECT
 ```
 
 ---
