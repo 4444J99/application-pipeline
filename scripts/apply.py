@@ -269,22 +269,46 @@ def _check_overlap(cover_letter: str, resume_html: str) -> list[str]:
 
 
 def _build_cover_letter_pdf(md_path: Path, pdf_path: Path) -> bool:
-    """Convert cover letter markdown to PDF via Chrome headless."""
+    """Convert cover letter markdown to PDF via Chrome headless.
+
+    Uses the resume-matching template at materials/resumes/base/cover-letter-template.html.
+    Falls back to build_cover_letters.py's template if available.
+    """
     md_text = md_path.read_text()
 
-    # Simple MD → HTML
-    html = (
-        '<!DOCTYPE html><html><head><style>'
-        'body { font-family: Georgia, serif; font-size: 11pt; line-height: 1.5; '
-        'margin: 1in; color: #1a1a1a; } p { margin: 0 0 0.8em 0; }'
-        '</style></head><body>\n'
-    )
-    for line in md_text.strip().split("\n"):
+    # Load the proper template (matches resume visual identity)
+    template_path = MATERIALS_DIR / "resumes" / "base" / "cover-letter-template.html"
+    if template_path.exists():
+        template = template_path.read_text()
+    else:
+        # Fallback — but this should never happen
+        template = (
+            '<!DOCTYPE html><html><head><style>'
+            'body{font-family:Georgia,serif;font-size:9pt;line-height:1.35;'
+            'margin:0.45in 0.55in;color:#1a1a1a}p{margin:0 0 8pt 0}'
+            '</style></head><body>\n{{BODY}}\n</body></html>'
+        )
+
+    # Extract letter body (skip header lines, "Dear...", "Sincerely")
+    lines = md_text.strip().split("\n")
+    body_lines = []
+    in_body = False
+    for line in lines:
         line = line.strip()
-        if line.startswith("#") or not line:
+        if line.startswith("Dear ") or line.startswith("To "):
+            in_body = True
             continue
-        html += f"<p>{line}</p>\n"
-    html += "</body></html>"
+        if line in ("Sincerely,", "Sincerely"):
+            break
+        if line in ("Anthony Padavano", "Anthony James Padavano") and not in_body:
+            continue
+        if in_body and line:
+            body_lines.append(f"    <p>{line}</p>")
+        elif not in_body:
+            continue
+
+    body_html = "\n".join(body_lines)
+    html = template.replace("{{BODY}}", body_html).replace("{{NAME}}", "Anthony James Padavano")
 
     html_path = md_path.with_suffix(".html")
     html_path.write_text(html)
@@ -518,6 +542,22 @@ def apply_to_entry(entry_id: str, dry_run: bool = False) -> bool:
     # Rule 2: Cover letter must not have metadata headers
     if cover_letter and cover_letter.startswith("#"):
         print("  RED FLAG: Cover letter starts with markdown header — strip metadata")
+    # Rule 3: Cover letter word count (550-700 target, RED FLAG if < 500)
+    if cover_letter:
+        cl_words = len(cover_letter.split())
+        if cl_words < 500:
+            print(f"  RED FLAG: Cover letter is {cl_words} words — minimum 550, target 550-700")
+        elif cl_words < 550:
+            print(f"  WARNING: Cover letter is {cl_words} words — target 550-700")
+    # Rule 4: Resume experience entry count (minimum 4)
+    if resume_html and resume_html.exists():
+        resume_content = resume_html.read_text()
+        entry_count = resume_content.count("entry-header")
+        if entry_count < 4:
+            print(f"  RED FLAG: Resume has {entry_count} experience entries — minimum 4")
+        # Rule 5: No columnar layout in experience
+        if "grid-template-columns" in resume_content or "column-count" in resume_content:
+            print("  RED FLAG: Resume uses columnar layout — must be vertical stacked")
 
     # Outreach DM
     if dm_text:

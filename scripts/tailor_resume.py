@@ -136,7 +136,7 @@ def extract_sections(html: str) -> dict[str, str]:
     if m:
         sections["PROJECTS"] = m.group(2).strip()
 
-    # Experience — the independent engineer entry bullets
+    # Experience — all 4 entries (ORGANVM + Instructor + Digital Marketing + Multimedia)
     m = re.search(
         r'(Experience</div>\s*<div class="section-content">)\s*(.*?)\s*(</div>\s*</div>\s*<div class="section">\s*<div class="section-label">Education)',
         html, re.DOTALL,
@@ -175,18 +175,25 @@ def build_tailoring_prompt(entry: dict, sections: dict[str, str], cover_letter: 
         "- **PROFILE**: Lead with the most relevant signal for this role. Keep to one paragraph.",
         "- **SKILLS**: Reorder to put role-relevant skills first. You may remove less relevant ones.",
         "- **PROJECTS**: Reorder projects by relevance. Rewrite descriptions to emphasize role-relevant aspects.",
-        "- **EXPERIENCE**: Reorder bullet points to emphasize most relevant experience.",
+        "- **EXPERIENCE**: Reorder bullet points within each entry to emphasize most relevant experience. DO NOT remove entries. DO NOT change the layout structure.",
+        "",
+        "## HARD RULES (violations will be rejected)",
+        "",
+        "1. **Employer is ORGANVM** — NEVER 'Independent Engineer', 'Self-Employed', or 'Freelance'. The first experience entry employer is always ORGANVM.",
+        "2. **ALL 4 experience entries MUST be preserved** — ORGANVM (2020–Present), Instructor (2015–Present), Digital Marketing Manager (2023–2024), Multimedia Specialist (2011–2020). These show 18 years of career breadth. NEVER drop any entry.",
+        "3. **VERTICAL STACKED layout ONLY** — each experience entry is a full-width `<div class='entry'>` block. NEVER use columns, grids, flexbox rows, or side-by-side layouts for experience entries.",
+        "4. **Keep the EXACT same HTML structure** — same `<div>` nesting, same CSS classes, same tag hierarchy as the input. Do not invent new layouts.",
         "",
         "## Content Length Targets (CRITICAL — resume must fill exactly 1 page)",
         "",
         "The final resume MUST fill 95-98% of a single 8.5x11 page at 8.4pt Georgia.",
         "Content that is too short looks sparse; too long overflows to 2 pages.",
         "",
-        "- **TITLE_LINE**: 4-8 words (e.g. 'STAFF DEVELOPER ADVOCATE (PLATFORM ENGINEERING)')",
+        "- **TITLE_LINE**: 4-8 words (e.g. 'STAFF DEVELOPER ADVOCATE (PLATFORM ENGINEERING)'). NO COMMAS.",
         "- **PROFILE**: One paragraph, 5-6 lines (~350-450 characters). Include: role framing, key metrics (113 repos, 23,470 tests, 104 CI/CD), methodology note, credentials, identity.",
         "- **SKILLS**: 20-25 skills, single line wrapping to 2-3 lines",
         "- **PROJECTS**: Exactly 5 project entries. Each entry: bold title line + 2-3 line description (~150-200 chars). Total section ~800-1000 chars.",
-        "- **EXPERIENCE**: 4 entries. First entry (Independent Engineer): 4 bullets, each wrapping to 2 lines (~120-150 chars each). Other 3 entries: 1 bullet each wrapping to 2 lines.",
+        "- **EXPERIENCE**: 4 entries. First entry (ORGANVM): 4 bullets, each wrapping to 2 lines (~120-150 chars each). Other 3 entries: 1 bullet each wrapping to 2 lines.",
         "",
         "If in doubt, write MORE rather than less — it's easier to trim a 2-page resume to 1 than to fill a sparse page.",
         "",

@@ -1,46 +1,54 @@
 ---
-name: Resume and cover letter quality — identity, format, and project diversity
-description: Three recurring failures that must be caught automatically. Independent Engineer is DEAD. Cover letters must match resume formatting. Projects must rotate — never the same 5 repos.
+name: Resume and cover letter quality — COMPLETE rules (original + amendments)
+description: ALL rules for resume and cover letter production. Original rules from 2026-03-20 PLUS amendments from 2026-03-26. Rules are ADDITIVE — new rules never replace old ones.
 type: feedback
 ---
 
-Three failures identified 2026-03-26 that keep recurring. These are NOT suggestions — they are hard rules.
+**PRINCIPLE: Rules are ADDITIVE. New rules AMEND, never overwrite. Every rule ever established remains in force unless explicitly revoked by the user.**
 
-## 1. "Independent Engineer" is DEAD — use ORGANVM
+## ORIGINAL RULES (from feedback_cover_letter_quality.md, 2026-03-20)
 
-The title "Independent Engineer" must NEVER appear on any resume or cover letter. The role attribution is to ORGANVM — the system's name, the studio's name. "Independent Engineer" makes the user look unemployed. ORGANVM makes them look like they run something.
+### Cover Letter Standards
+1. **Location:** New York City. Never "South Florida" or "Miami."
+2. **Format (dual output):** Cover letters authored in markdown (`cover-letter.md`) AND built to resume-styled PDF via `build_cover_letters.py`. The HTML template matches the resume visual identity.
+3. **Length:** Must fill a full page — **550-700 words**, 4-5 substantial paragraphs. 300-400 words is HALF A PAGE and unacceptable.
+4. **MCP is Anthropic's protocol**, not OpenAI's.
+5. **Never apologize for gaps.** Lead with what you bring.
+6. **No commas in role titles** — use "&" or parentheses.
+7. **Metrics must be current:** 113 repos, 104 CI/CD, 23,470 tests, 739K words, 82K files, 50 dependency edges (from CANONICAL dict in recruiter_filter.py).
 
-**Why:** User said "makes me look like a goddamn clown." The identity reframe happened 2026-03-15 (see project_identity_reframe_2026-03-15.md). Documentation Engineer was identified as the lead position. The system has 9 identity positions — "Independent Engineer" is one of them but it should NEVER be the default. ORGANVM is the employer name, not "Independent" or "Self-Employed."
+### Resume Standards (from feedback_base_not_output.md)
+8. **Fix BASE templates, never patch outputs.** When a structural change is needed, modify the 9 base templates in `materials/resumes/base/`. The tailoring system propagates changes on the next `tailor_resume.py` run. NEVER touch batch-NN files for systemic fixes.
+9. **Resume must fill exactly 1 page** — 95-98% fill. Not half, not overflowing.
+10. **4 experience entries minimum:** ORGANVM (2020–Present), Instructor (2015–Present), Digital Marketing Manager (2023–2024), Multimedia Specialist (2011–2020). These show 18 years of career breadth.
+11. **Vertical stacked layout** for experience entries — full-width bullets. NEVER columnar/grid layout. Columns create dead space and make entries look thin.
 
-**How to apply:**
-- `tailor_resume.py`: the experience section must say "ORGANVM" as the employer, not "Independent Engineer"
-- `apply.py`: validate that no generated material contains "Independent Engineer" as a title or role
-- Resume EXPERIENCE section: "Software Engineer & [role-specific title]" at ORGANVM, not "Independent Engineer"
-- Add as a recruiter_filter.py RED FLAG check
+## AMENDMENTS (2026-03-26)
 
-## 2. Cover letter format must match resume format
+### A1. "Independent Engineer" is DEAD — use ORGANVM
+The title "Independent Engineer" must NEVER appear on any resume or cover letter. ORGANVM is the employer name. "Software Engineer & [role-specific title]" at ORGANVM.
 
-Cover letters must have the SAME header/footer styling as the resume — same font, same layout, same visual identity. Currently the cover letter HTML template is a bare `<p>` wrapper while the resume has a proper styled template. They look like they came from two different people.
+### A2. Cover letter visual parity with resume
+Same header (name centered, contact info, border), same font family (Georgia), same page dimensions. Built via `build_cover_letters.py` which has the matching template. The `apply.py` bare `<p>` wrapper is NOT acceptable — use the proper template at `materials/resumes/base/cover-letter-template.html`.
 
-**Why:** User said "the cover letter doesn't follow the same format as the resume, it has garbage on the header and footer." A hiring manager receives both PDFs — they must look like one package.
+### A3. Project diversity — rotate per role
+Include 15-20 projects in the tailor prompt organized by domain. Select 5 most relevant per role. The default 5 (ORGANVM System, agentic-titan, agent--claude-smith, Application Pipeline, Portfolio) are FALLBACK only. Domain-specific rotation:
+- DevRel: essays, portfolio, teaching tools
+- AI/ML: agentic-titan, IRA facility, multi-model evaluation
+- Platform: CI/CD infrastructure, LaunchAgents, registry governance
+- Arts: generative art, Metasystem Master, p5.js
+- Financial Services: governance, audit trails, state machine
 
-**How to apply:**
-- `build_cover_letters.py` or the HTML generation in `apply.py`: use the same CSS template as `build_resumes.py`
-- Header: Name, location, contact info — same layout as resume
-- No "Dear Hiring Team" garbage formatting — clean, professional, matching
-- Audit: if resume PDF exists, cover letter PDF must use the same template
+## ENFORCEMENT
 
-## 3. Project diversity — rotate, don't repeat the same 5
-
-The resume keeps showcasing the same 5 projects (ORGANVM Eight-Organ System, agentic-titan, agent--claude-smith, Application Pipeline, Portfolio). There are 113+ repositories. The resume should highlight projects RELEVANT to the specific role, not the same generic 5.
-
-**Why:** User said "are there not some more options to showcase what ORGANVM does other than the same goddamn 5 repos." The system has repos covering: generative art, modular synthesis, recursive engines, data pipelines, governance frameworks, community platforms, editorial systems, CLI tools, MCP servers, and more.
-
-**How to apply:**
-- `tailor_resume.py`: when generating resume prompts, include a LARGER menu of projects (15-20) organized by domain relevance, not just the default 5
-- For DevRel roles: showcase essays, portfolio, teaching tools
-- For AI/ML roles: showcase agentic-titan, IRA facility, multi-model evaluation
-- For Platform roles: showcase CI/CD infrastructure, LaunchAgents, registry governance
-- For Arts roles: showcase generative art repos, Metasystem Master, p5.js work
-- For Financial Services: showcase governance, audit trails, state machine
-- The default 5 are FALLBACK, not the primary selection
+All rules must be checked AUTOMATICALLY by `apply.py` before declaring READY:
+- [ ] Cover letter word count >= 550 (RED FLAG if < 500)
+- [ ] No "Independent Engineer" in any generated file
+- [ ] Cover letter built via matching template (not bare HTML)
+- [ ] Resume has >= 4 experience entries
+- [ ] Resume is exactly 1 page
+- [ ] Cover letter is exactly 1 page
+- [ ] Projects are not the same 5 defaults (check against a blocklist)
+- [ ] Metrics match CANONICAL dict
+- [ ] Employer is ORGANVM, not "Independent" or "Self-Employed"
+- [ ] Experience entries are vertical/stacked, not columnar
