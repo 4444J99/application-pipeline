@@ -151,6 +151,80 @@ def extract_sections(html: str) -> dict[str, str]:
 # resolve_cover_letter is imported from pipeline_lib
 
 
+def _load_project_menu(entry: dict) -> str:
+    """Load domain-relevant projects from the registry for the prompt."""
+    import yaml as _yaml
+    registry_path = REPO_ROOT / "blocks" / "projects" / "registry.yaml"
+    if not registry_path.exists():
+        return ""
+
+    data = _yaml.safe_load(registry_path.read_text())
+    projects = data.get("projects", [])
+
+    # Determine target domains from entry description
+    desc = entry.get("target", {}).get("description", "").lower()
+
+    # Map identity positions and keywords to registry domains
+    domain_scores: dict[str, float] = {}
+    domain_keywords = {
+        "ai-ml": ["ai", "machine learning", "agent", "llm", "model", "inference"],
+        "platform": ["infrastructure", "ci/cd", "deploy", "kubernetes", "platform", "reliability"],
+        "devtools": ["developer", "cli", "sdk", "tooling", "productivity", "dx"],
+        "education": ["curriculum", "teaching", "education", "training", "learning"],
+        "arts": ["art", "creative", "generative", "performance", "gallery"],
+        "finserv": ["financial", "compliance", "audit", "governance", "banking", "fintech"],
+        "documentation": ["documentation", "docs", "writing", "editorial", "content"],
+        "formal-systems": ["formal", "verification", "proof", "symbolic", "recursive"],
+        "audio": ["audio", "music", "synthesis", "supercollider"],
+        "community": ["community", "collaboration", "open source"],
+    }
+
+    for domain, keywords in domain_keywords.items():
+        score = sum(1 for kw in keywords if kw in desc)
+        if score > 0:
+            domain_scores[domain] = score
+
+    # Always include platform and ai-ml as baseline
+    domain_scores.setdefault("platform", 0.5)
+    domain_scores.setdefault("ai-ml", 0.5)
+
+    # Sort domains by relevance
+    top_domains = sorted(domain_scores, key=lambda d: -domain_scores[d])[:4]
+
+    # Select projects matching top domains, excluding default 5
+    default_names = {"organvm-system", "agentic-titan", "agent-claude-smith",
+                     "application-pipeline", "showcase-portfolio"}
+    relevant = []
+    for p in projects:
+        if p["name"] in default_names:
+            continue
+        if any(d in p.get("domains", []) for d in top_domains):
+            relevant.append(p)
+
+    if len(relevant) < 10:
+        # Pad with non-default projects from any domain
+        for p in projects:
+            if p["name"] not in default_names and p not in relevant:
+                relevant.append(p)
+            if len(relevant) >= 15:
+                break
+
+    # Format as a menu
+    menu_lines = ["## Domain-Relevant Project Menu (M-VIII: select 5 from this list, NOT the defaults)", ""]
+    menu_lines.append(f"**Top domains for this role:** {', '.join(top_domains)}")
+    menu_lines.append("")
+    menu_lines.append("**Choose 5 projects from this list that best match the role:**")
+    menu_lines.append("")
+    for p in relevant[:20]:
+        domains = ", ".join(p.get("domains", []))
+        menu_lines.append(f"- **{p['name']}** [{domains}]")
+    menu_lines.append("")
+    menu_lines.append("**DO NOT use these defaults unless no better option exists:** " + ", ".join(sorted(default_names)))
+    menu_lines.append("")
+
+    return "\n".join(menu_lines)
+
+
 def build_tailoring_prompt(entry: dict, sections: dict[str, str], cover_letter: str) -> str:
     """Generate a prompt for AI to produce customized resume sections."""
     entry_id = entry.get("id", "?")
@@ -206,6 +280,8 @@ def build_tailoring_prompt(entry: dict, sections: dict[str, str], cover_letter: 
         cover_letter or "(No cover letter available)",
         "",
         "---",
+        "",
+        _load_project_menu(entry),
         "",
         "## Current Resume Sections",
         "",
