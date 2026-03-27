@@ -183,9 +183,20 @@ Theorem M-I.2 (The Overflow Penalty):
 
   A 2-page resume for a non-executive role signals inability to prioritize.
 
-Corollary M-I.1:
-  For cover letters: 550 ≤ words(d) ≤ 700
+Corollary M-I.1 (Track-Conditional Fill — Rhetorician revision):
+  fill_target(d) = f(track, identity_position)
+
+  DevRel / Documentation-Engineer: 650-700 words (upper range — narrative depth expected)
+  Platform / Software-Engineer: 550-600 words (lower range — concision valued)
+  Arts / Systems-Artist: 600-700 words (mid-upper — conceptual density)
+  Default: 550-700 words
+
   For resumes: content length calibrated to 8.4pt Georgia at 0.45in margins
+
+Corollary M-I.2 (Derived Word Count — Practitioner revision):
+  words(cl) = solve_for_fill(template_params, target_fill=0.95)
+  The 550-700 range is derived from current template parameters (9pt Georgia,
+  0.45in margins, header height). If template changes, range adapts.
 ```
 
 #### Algorithm
@@ -732,9 +743,33 @@ Theorem C-3 (Pipeline Integrity):
 
 ---
 
-## 6. Three-Persona Hardening
+## 6. Three-Persona Hardening — Integrated Revisions
 
-*[To be conducted after initial formalization — Rhetorician, Mathematician, Practitioner review in round-robin]*
+Conducted 2026-03-27. Three personas reviewed all 12 articles in round-robin.
+
+### Rhetorician (teaches Aristotle, studied Perelman)
+
+**M-I revision:** fill_target must be CONDITIONAL on track + identity position. DevRel/Documentation-Engineer get 650-700 (narrative depth expected). Platform/Software-Engineer get 550-600 (concision valued). One-size-fits-all is a heuristic masquerading as a law. **APPLIED to Corollary M-I.1.**
+
+**M-VII revision:** "contains_number" in first sentence is too narrow. Aristotle's recognition pleasure (A1) says pleasure comes from recognizing representations. A number is ONE form — a SPECIFIC PROPER NOUN also works. "I build with Claude Code every day" (gold standard) contains NO number but works because "Claude Code" is a recognition anchor for the Anthropic reviewer. Revise: `recognition_anchor ∈ {number, proper_noun_relevant_to_reviewer, specific_falsifiable_claim}`. **APPLIED to validator.**
+
+**M-IX revision:** θ > 0 for all three dimensions is necessary but insufficient. The PROPORTION shifts across document types. In a resume bullet, ethos dominates (8:1:1). In a cover letter paragraph, roughly 3:4:3 (pathos:ethos:logos). Add: `β(p) > β_min(document_type)`. **NOTED — full implementation deferred to semantic scoring phase.**
+
+### Mathematician (reads proofs like a compiler)
+
+**M-IV revision:** `value(m, d) = CANONICAL[m]` assumes strict string equality, but CANONICAL has formatting ("23,470", "739K"). Need normalization: `normalize(value(m, d)) = normalize(CANONICAL[m])` handling K/M suffixes, commas, "+" suffixes. **NOTED — delegated to recruiter_filter.py's existing logic.**
+
+**M-V revision:** 4-word phrase overlap misses SEMANTIC overlap without lexical overlap. "128 GitHub Actions workflows" and "I designed every release pipeline" describe the same thing differently. Add: `overlap_total = max(overlap_lexical, α · overlap_semantic)` using TF-IDF cosine from text_match.py. **NOTED — optional enhancement for v2.**
+
+**M-II revision:** Entry count via `count("entry-header")` is global — should be scoped to EXPERIENCE section parent. Could false-positive on mislabeled project entries. **NOTED — current heuristic is adequate given known template structure.**
+
+### Practitioner (500 LinkedIn DMs, 50 resumes, tracks response rates)
+
+**M-VIII revision:** 15-project menu requires pre-written, role-tagged descriptions or AI will hallucinate. Need `blocks/projects/registry.yaml` mapping every project to domain tags + 1-sentence description + key metrics. Current `blocks/projects/` has ~12 files. **NOTED — registry construction is IRF item.**
+
+**M-VI revision:** String matching ("border-bottom: 1.5pt") is fragile. Real check: LOCK the cover letter template to be derived FROM the resume template CSS. Template derivation should be automated so they CAN'T drift. **APPLIED — cover-letter-template.html derives from resume CSS.**
+
+**M-XII revision:** 550-700 is DERIVED from template parameters. If template changes, range changes. State as derived constraint: `words(cl) = solve_for_fill(template_params, target_fill=0.95)`. **APPLIED to Corollary M-I.2.**
 
 ---
 

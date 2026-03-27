@@ -194,7 +194,11 @@ def validate_package(package_dir: Path) -> MaterialsReport:
             if len(line) > 40 and not line.startswith("Anthony") and not line.startswith("New York"):
                 first_body = line
                 break
-        has_anchor = bool(re.search(r"\d+", first_body)) or bool(re.search(r"[A-Z][a-z]+(?:\s[A-Z][a-z]+)", first_body))
+        # Rhetorician revision: recognition anchor includes numbers, proper nouns, and specific claims
+        has_number = bool(re.search(r"\d+", first_body))
+        has_proper_noun = bool(re.search(r"[A-Z][a-z]+(?:\s[A-Z][a-z]+)", first_body))
+        has_specific_claim = bool(re.search(r"(?:built|designed|governed|maintained|operated|taught)", first_body, re.I))
+        has_anchor = has_number or has_proper_noun or has_specific_claim
         results.append(ArticleResult("M-VII", "Storefront Gate", has_anchor,
                                      "" if has_anchor else "first sentence lacks recognition anchor (number or proper noun)"))
     else:
