@@ -1,0 +1,1124 @@
+projects:
+- name: a-mavs-olevm
+  domains:
+  - ai-ml
+  - arts
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - creative-coding
+  - generative-art
+  - p5js
+  - portfolio
+  - react
+  - testing
+- name: a-recursive-root
+  domains:
+  - ai-ml
+  - finserv
+  - formal-systems
+  tags:
+  - ai
+  - blockchain
+  - formal-systems
+  - python
+  - recursive
+  - symbolic
+  - testing
+- name: academic-publication
+  domains:
+  - arts
+  tags:
+  - creative-coding
+  - generative-art
+- name: adaptive-personal-syllabus
+  domains:
+  - ai-ml
+  - community
+  - education
+  - finserv
+  - platform
+  tags:
+  - ai
+  - blockchain
+  - ci-cd
+  - community
+  - curriculum
+  - database
+  - education
+  - learning
+- name: agent-claude-smith
+  domains:
+  - ai-ml
+  - platform
+  tags:
+  - agent
+  - ai
+  - ci-cd
+  - docker
+  - governance
+  - orchestration
+  - testing
+  - typescript
+- name: agentic-titan
+  domains:
+  - ai-ml
+  - arts
+  - platform
+  tags:
+  - agent
+  - ai
+  - api
+  - ci-cd
+  - database
+  - docker
+  - fastapi
+  - governance
+- name: ai-chat-exporter
+  domains:
+  - ai-ml
+  - devtools
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - developer-tools
+  - platform
+  - react
+  - testing
+  - typescript
+- name: ai-council-coliseum
+  domains:
+  - ai-ml
+  - arts
+  - finserv
+  tags:
+  - ai
+  - blockchain
+  - creative-coding
+  - database
+  - docker
+  - fastapi
+  - generative-art
+  - python
+- name: ai-skills
+  domains:
+  - ai-ml
+  - finserv
+  - platform
+  tags:
+  - agent
+  - ai
+  - blockchain
+  - ci-cd
+  - governance
+  - knowledge-graph
+  - orchestration
+  - p5js
+- name: alchemia-ingestvm
+  domains:
+  - ai-ml
+  - formal-systems
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - governance
+  - infrastructure
+  - python
+  - symbolic
+  - system
+  - testing
+- name: alchemical-synthesizer
+  domains:
+  - ai-ml
+  - arts
+  - audio
+  - formal-systems
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - creative-coding
+  - generative-art
+  - osc
+  - p5js
+  - python
+  - supercollider
+- name: anon-hookup-now
+  domains:
+  - devtools
+  - platform
+  tags:
+  - ci-cd
+  - developer-tools
+  - platform
+- name: application-pipeline
+  domains:
+  - devtools
+  - platform
+  tags:
+  - python
+  - testing
+  - automation
+  - cli
+  - yaml
+  - state-machine
+  - ci-cd
+  - developer-tools
+- name: archive-past-works
+  domains:
+  - ai-ml
+  - arts
+  - audio
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - creative-coding
+  - database
+  - generative-art
+  - osc
+  - python
+  - supercollider
+- name: art-from-auto-revision
+  domains:
+  - ai-ml
+  - arts
+  - platform
+  tags:
+  - creative-coding
+  - generative-art
+  - governance
+  - orchestration
+  - performance
+  - python
+  - testing
+  - three-js
+- name: art-from-narratological-lenses
+  domains:
+  - arts
+  tags:
+  - creative-coding
+  - generative-art
+  - python
+  - testing
+- name: artist-toolkit-and-templates
+  domains:
+  - arts
+  tags:
+  - creative-coding
+  - generative-art
+- name: audio-synthesis-bridge
+  domains:
+  - arts
+  - audio
+  tags:
+  - audio
+  - creative-coding
+  - generative-art
+  - osc
+  - supercollider
+  - testing
+  - typescript
+  - websocket
+- name: auto-revision-epistemic-engine
+  domains:
+  - ai-ml
+  - finserv
+  - formal-systems
+  - platform
+  tags:
+  - ai
+  - blockchain
+  - ci-cd
+  - formal-systems
+  - orchestration
+  - python
+  - recursive
+  - symbolic
+- name: call-function-ontological
+  domains:
+  - ai-ml
+  - formal-systems
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - formal-systems
+  - nlp
+  - python
+  - react
+  - recursive
+  - symbolic
+- name: card-trade-social
+  domains:
+  - ai-ml
+  - devtools
+  - finserv
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - database
+  - developer-tools
+  - docker
+  - fintech
+  - gamification
+  - platform
+- name: case-studies-methodology
+  domains:
+  - ai-ml
+  - arts
+  - audio
+  tags:
+  - ai
+  - creative-coding
+  - generative-art
+  - osc
+  - testing
+  - typescript
+  - websocket
+- name: chthon-oneiros
+  domains:
+  - arts
+  tags:
+  - creative-coding
+  - generative-art
+- name: classroom-rpg-aetheria
+  domains:
+  - ai-ml
+  - devtools
+  - education
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - developer-tools
+  - education
+  - platform
+  - react
+  - testing
+  - three-js
+- name: client-sdk
+  domains:
+  - arts
+  tags:
+  - creative-coding
+  - generative-art
+  - react
+  - testing
+  - three-js
+  - typescript
+  - websocket
+- name: cognitive-archaelogy-tribunal
+  domains:
+  - ai-ml
+  - formal-systems
+  - platform
+  tags:
+  - ai
+  - api
+  - ci-cd
+  - database
+  - fastapi
+  - formal-systems
+  - knowledge-graph
+  - python
+- name: collective-persona-operations
+  domains:
+  - formal-systems
+  tags:
+  - formal-systems
+  - identity
+  - recursive
+  - symbolic
+- name: commerce-meta
+  domains:
+  - devtools
+  - platform
+  tags:
+  - developer-tools
+  - governance
+  - platform
+- name: community-hub
+  domains:
+  - community
+  - education
+  tags:
+  - archive
+  - community
+  - docker
+  - education
+  - fastapi
+  - learning
+  - testing
+  - websocket
+- name: distribution-strategy
+  domains:
+  - devtools
+  - platform
+  tags:
+  - automation
+  - ci-cd
+  - testing
+- name: example-ai-collaboration
+  domains:
+  - ai-ml
+  - arts
+  - audio
+  tags:
+  - ai
+  - creative-coding
+  - database
+  - generative-art
+  - osc
+  - python
+  - supercollider
+  - testing
+- name: example-choreographic-interface
+  domains:
+  - ai-ml
+  - arts
+  - audio
+  tags:
+  - ai
+  - creative-coding
+  - generative-art
+  - osc
+  - testing
+  - websocket
+- name: example-generative-music
+  domains:
+  - arts
+  - audio
+  tags:
+  - creative-coding
+  - generative-art
+  - music
+  - osc
+  - supercollider
+  - testing
+  - typescript
+  - websocket
+- name: example-interactive-installation
+  domains:
+  - ai-ml
+  - arts
+  - audio
+  tags:
+  - ai
+  - audio
+  - creative-coding
+  - docker
+  - generative-art
+  - osc
+  - react
+  - supercollider
+- name: example-theatre-dialogue
+  domains:
+  - ai-ml
+  - arts
+  tags:
+  - ai
+  - creative-coding
+  - generative-art
+  - testing
+  - websocket
+- name: fetch-familiar-friends
+  domains:
+  - ai-ml
+  - devtools
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - database
+  - developer-tools
+  - platform
+  - react
+  - testing
+  - typescript
+- name: gamified-coach-interface
+  domains:
+  - ai-ml
+  - devtools
+  tags:
+  - ai
+  - database
+  - developer-tools
+  - gamification
+  - knowledge-graph
+  - platform
+  - python
+  - testing
+- name: generative-music
+  domains:
+  - arts
+  - audio
+  tags:
+  - music
+  - audio
+  - generative-art
+  - creative-coding
+  - p5js
+  - algorithmic-composition
+- name: hokage-chess
+  domains:
+  - ai-ml
+  - devtools
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - developer-tools
+  - platform
+  - python
+  - testing
+  - typescript
+- name: koinonia-db
+  domains:
+  - community
+  - education
+  tags:
+  - community
+  - database
+  - education
+  - learning
+  - python
+- name: krypto-velamen
+  domains:
+  - ai-ml
+  - arts
+  tags:
+  - ai
+  - creative-coding
+  - docker
+  - fastapi
+  - generative-art
+  - knowledge-graph
+  - microservices
+  - nlp
+- name: learning-resources
+  domains:
+  - ai-ml
+  - arts
+  - audio
+  - education
+  tags:
+  - ai
+  - creative-coding
+  - docker
+  - education
+  - generative-art
+  - osc
+  - p5js
+  - performance
+- name: life-betterment-simulation
+  domains:
+  - ai-ml
+  - arts
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - creative-coding
+  - generative-art
+  - python
+  - testing
+- name: life-my-midst-in
+  domains:
+  - ai-ml
+  - devtools
+  - platform
+  tags:
+  - ai
+  - api
+  - ci-cd
+  - database
+  - developer-tools
+  - docker
+  - identity
+  - platform
+- name: linguistic-atomization-framework
+  domains:
+  - ai-ml
+  - arts
+  - formal-systems
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - formal-systems
+  - generative-art
+  - nlp
+  - python
+  - recursive
+  - symbolic
+- name: meta-source-ledger-output
+  domains:
+  - arts
+  - formal-systems
+  tags:
+  - formal-systems
+  - generative-art
+  - identity
+  - p5js
+  - react
+  - recursive
+  - symbolic
+  - three-js
+- name: metasystem-master
+  domains:
+  - ai-ml
+  - arts
+  - audio
+  - finserv
+  tags:
+  - ai
+  - api
+  - audio
+  - blockchain
+  - creative-coding
+  - database
+  - docker
+  - generative-art
+- name: mfa-thesis-portfolio
+  domains:
+  - arts
+  - platform
+  tags:
+  - ci-cd
+  - creative-coding
+  - generative-art
+  - react
+  - testing
+  - typescript
+- name: mirror-mirror
+  domains:
+  - ai-ml
+  - devtools
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - database
+  - developer-tools
+  - platform
+  - react
+  - testing
+  - three-js
+- name: multi-camera-livestream
+  domains:
+  - ai-ml
+  - devtools
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - developer-tools
+  - platform
+  - testing
+  - typescript
+- name: my-block-warfare
+  domains:
+  - ai-ml
+  - devtools
+  - platform
+  tags:
+  - ai
+  - api
+  - ci-cd
+  - database
+  - developer-tools
+  - game-design
+  - nlp
+  - platform
+- name: my-father-mother
+  domains:
+  - ai-ml
+  - devtools
+  tags:
+  - ai
+  - database
+  - developer-tools
+  - docker
+  - platform
+  - python
+- name: my-knowledge-base
+  domains:
+  - ai-ml
+  - formal-systems
+  - platform
+  tags:
+  - ai
+  - api
+  - ci-cd
+  - database
+  - docker
+  - formal-systems
+  - knowledge-graph
+  - microservices
+- name: narratological-algorithmic-lenses
+  domains:
+  - ai-ml
+  - arts
+  - formal-systems
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - fastapi
+  - formal-systems
+  - generative-art
+  - python
+  - react
+  - recursive
+- name: nexus-babel-alexandria
+  domains:
+  - general
+  tags:
+  - nlp
+  - linguistics
+  - literary-analysis
+  - multilingual
+  - api
+  - fastapi
+  - knowledge-graph
+  - canon
+- name: omni-dromenon-engine
+  domains:
+  - arts
+  - audio
+  tags:
+  - performance
+  - audience-participation
+  - generative-art
+  - creative-coding
+  - websocket
+  - typescript
+  - supercollider
+  - osc
+- name: orchestration-start-here
+  domains:
+  - ai-ml
+  - platform
+  tags:
+  - agent
+  - ai
+  - ci-cd
+  - governance
+  - orchestration
+  - python
+  - testing
+- name: organon-noumenon
+  domains:
+  - ai-ml
+  - formal-systems
+  tags:
+  - ai
+  - database
+  - formal-systems
+  - microservices
+  - python
+  - recursive
+  - symbolic
+  - testing
+- name: organvm-corpus
+  domains:
+  - ai-ml
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - docker
+  - governance
+  - infrastructure
+  - p5js
+  - python
+  - system
+- name: organvm-engine
+  domains:
+  - platform
+  tags:
+  - governance
+  - infrastructure
+  - python
+  - system
+- name: organvm-system
+  domains:
+  - documentation
+  - platform
+  tags:
+  - system
+  - infrastructure
+  - governance
+  - ci-cd
+  - testing
+  - documentation
+  - scale
+  - architecture
+- name: petasum-super-petasum
+  domains:
+  - ai-ml
+  - platform
+  tags:
+  - agent
+  - ai
+  - ci-cd
+  - governance
+  - orchestration
+  - testing
+- name: public-process
+  domains:
+  - ai-ml
+  - documentation
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - database
+  - documentation
+  - essays
+  - python
+  - testing
+  - writing
+- name: public-record-data-scrapper
+  domains:
+  - ai-ml
+  - devtools
+  - platform
+  tags:
+  - ai
+  - api
+  - ci-cd
+  - database
+  - developer-tools
+  - docker
+  - platform
+  - react
+- name: radix-recursiva
+  domains:
+  - ai-ml
+  - finserv
+  - formal-systems
+  - platform
+  tags:
+  - ai
+  - blockchain
+  - ci-cd
+  - formal-systems
+  - python
+  - recursive
+  - symbolic
+  - testing
+- name: reading-group-curriculum
+  domains:
+  - ai-ml
+  - community
+  - education
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - community
+  - education
+  - learning
+  - testing
+- name: recursive-engine
+  domains:
+  - ai-ml
+  - audio
+  - formal-systems
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - formal-systems
+  - identity
+  - microservices
+  - orchestration
+  - osc
+  - python
+- name: reverse-engine-recursive-run
+  domains:
+  - ai-ml
+  - formal-systems
+  - platform
+  tags:
+  - ai
+  - api
+  - ci-cd
+  - database
+  - docker
+  - formal-systems
+  - governance
+  - python
+- name: salon-archive
+  domains:
+  - ai-ml
+  - community
+  - education
+  - platform
+  tags:
+  - ai
+  - archive
+  - ci-cd
+  - community
+  - education
+  - learning
+- name: scalable-lore-expert
+  domains:
+  - ai-ml
+  - formal-systems
+  tags:
+  - ai
+  - database
+  - docker
+  - fastapi
+  - formal-systems
+  - knowledge-graph
+  - microservices
+  - nlp
+- name: schema-definitions
+  domains:
+  - finserv
+  - platform
+  tags:
+  - fintech
+  - governance
+  - infrastructure
+  - python
+  - system
+  - testing
+- name: search-local-happy-hour
+  domains:
+  - ai-ml
+  - devtools
+  tags:
+  - ai
+  - database
+  - developer-tools
+  - platform
+  - react
+  - testing
+  - three-js
+  - typescript
+- name: select-or-left-or-right-or
+  domains:
+  - ai-ml
+  - devtools
+  - finserv
+  tags:
+  - ai
+  - blockchain
+  - database
+  - developer-tools
+  - platform
+  - react
+  - websocket
+- name: sema-metra-alchemica-mundi
+  domains:
+  - ai-ml
+  - formal-systems
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - formal-systems
+  - recursive
+  - symbolic
+  - testing
+  - typescript
+- name: shared-remembrance-gateway
+  domains:
+  - ai-ml
+  - arts
+  - finserv
+  - platform
+  tags:
+  - ai
+  - api
+  - blockchain
+  - ci-cd
+  - creative-coding
+  - database
+  - docker
+  - generative-art
+- name: showcase-portfolio
+  domains:
+  - ai-ml
+  - arts
+  tags:
+  - ai
+  - creative-coding
+  - generative-art
+  - portfolio
+  - testing
+  - typescript
+- name: social-automation
+  domains:
+  - devtools
+  - platform
+  tags:
+  - api
+  - automation
+  - ci-cd
+  - database
+- name: sovereign-ecosystem-real-estate
+  domains:
+  - ai-ml
+  - devtools
+  - finserv
+  - platform
+  tags:
+  - ai
+  - blockchain
+  - ci-cd
+  - database
+  - developer-tools
+  - nlp
+  - platform
+  - react
+- name: starts-prize-art-outputs
+  domains:
+  - arts
+  - audio
+  tags:
+  - performance
+  - generative-art
+  - supercollider
+  - queer
+  - audience-participation
+  - creative-coding
+  - installation
+- name: system-dashboard
+  domains:
+  - arts
+  - platform
+  tags:
+  - fastapi
+  - generative-art
+  - governance
+  - infrastructure
+  - system
+  - testing
+- name: system-governance-framework
+  domains:
+  - ai-ml
+  - formal-systems
+  - platform
+  tags:
+  - ai
+  - api
+  - ci-cd
+  - formal-systems
+  - governance
+  - python
+  - recursive
+  - symbolic
+- name: tab-bookmark-manager
+  domains:
+  - ai-ml
+  - devtools
+  - platform
+  tags:
+  - ai
+  - api
+  - ci-cd
+  - database
+  - developer-tools
+  - docker
+  - microservices
+  - nlp
+- name: the-actual-news
+  domains:
+  - ai-ml
+  - devtools
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - database
+  - developer-tools
+  - docker
+  - microservices
+  - platform
+  - testing
+- name: the-invisible-ledger
+  domains:
+  - ai-ml
+  - devtools
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - database
+  - developer-tools
+  - platform
+  - react
+  - testing
+  - three-js
+- name: trade-perpetual-future
+  domains:
+  - ai-ml
+  - devtools
+  - finserv
+  - platform
+  tags:
+  - ai
+  - blockchain
+  - ci-cd
+  - database
+  - developer-tools
+  - fintech
+  - platform
+  - react
+- name: universal-mail-automation
+  domains:
+  - ai-ml
+  - devtools
+  tags:
+  - ai
+  - developer-tools
+  - platform
+  - python
+- name: universal-node-network
+  domains:
+  - ai-ml
+  - platform
+  tags:
+  - agent
+  - ci-cd
+  - database
+  - governance
+  - microservices
+  - orchestration
+  - testing
+- name: universal-waveform-explorer
+  domains:
+  - arts
+  - audio
+  - platform
+  tags:
+  - audio
+  - ci-cd
+  - creative-coding
+  - generative-art
+  - osc
+  - testing
+  - typescript
+- name: your-fit-tailored
+  domains:
+  - ai-ml
+  - devtools
+  - platform
+  tags:
+  - ai
+  - ci-cd
+  - database
+  - developer-tools
+  - platform
+  - testing
+count: 89
