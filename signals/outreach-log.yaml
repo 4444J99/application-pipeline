@@ -2192,3 +2192,23 @@ entries:
     Applied for Specialist SA ML/AI. DM pending.
   related_targets:
   - databricks-specialist-solutions-architect-ml-ai-engineer-financial-serv
+- date: '2026-03-26'
+  type: inbound_recruiter
+  contact: Strativ Group recruiters (5)
+  channel: linkedin
+  note: 5 recruiters from Strativ Group and other companies viewed profile.
+  related_targets: []
+- date: '2026-03-26'
+  type: inbound_recruiter
+  contact: Paul Pham
+  channel: linkedin
+  note: Paul Pham (Senior Quality Engineer, dbt Labs) viewed profile. Connected same
+    day.
+  related_targets:
+  - dbt-labs-staff-software-engineer-quality-and-release-platform
+- date: '2026-03-25'
+  type: inbound_recruiter
+  contact: Someone at Patexia
+  channel: linkedin
+  note: Unknown person at Patexia viewed profile. IP/patent analytics company.
+  related_targets: []
