@@ -1,7 +1,7 @@
 id: anduril-senior-software-engineer-estimation-tracking
 name: Anduril Senior Software Engineer, Estimation & Tracking
 track: job
-status: staged
+status: submitted
 outcome: null
 target:
   organization: Anduril
@@ -10,67 +10,7 @@ target:
   portal: greenhouse
   location: Irvine, California, United States; Remote
   location_class: us-remote
-  description: <div class="content-intro"><p>Anduril Industries is a defense technology
-    company with a mission to transform U.S. and allied military capabilities with
-    advanced technology. By bringing the expertise, technology, and business model
-    of the 21st century’s most innovative companies to the defense industry, Anduril
-    is changing how military systems are designed, built and sold. Anduril’s family
-    of systems is powered by Lattice OS, an AI-powered operating system that turns
-    thousands of data streams into a realtime, 3D command and control center. As the
-    world enters an era of strategic competition, Anduril is committed to bringing
-    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
-    to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p>The
-    Counter Intrusion MSE team develops systems that provide force protection capabilities,
-    monitoring the perimeter of secure areas, land or sea, for approaching people,
-    vehicles, and vessels. We live in a world where security officers are increasingly
-    overwhelmed by sensor data feeds. Our products leverage advanced sensor fusion
-    and autonomy to seamlessly render activity in the environment to Lattice's common
-    operating picture. This relieves operators of our system from a ton of burden
-    and allows our customers to get more done with fewer personnel. Increasingly Counter
-    Intrusion MSEs are working on projects to bring customers' existing legacy security
-    systems into the Lattice ecosystem. Key to this effort is building scalable software
-    solutions so that we can service many customers without requiring bespoke software
-    for each one. The Counter Intrusion team is responsible for the development, testing,
-    deployment, and sustainment of our family of systems. We work closely with other
-    teams from product, engineering, sales, logistics, operations, and mission success.</p>
-    <h3>ABOUT THE JOB</h3> <p>We are looking for a Senior Software Engineer to join
-    our growing team either remotely or in Irvine, CA. Anduril is developing software
-    at the intersection of machine learning, computer vision, and sensor fusion. In
-    this role you will be bringing together data from robots, cameras, radars, and
-    many other sources into a single combined operational picture which enables both
-    autonomous systems and end users to complete their missions. We develop cutting
-    edge software for autonomous operation and situational awareness by having sensors
-    and systems that work together to improve over time.<br><br><strong>WHAT YOU'LL
-    DO</strong></p> <ul> <li>Design and develop robust and efficient C++ software
-    for real-time tracking and fusion.</li> <li>Conduct data analysis and performance
-    evaluation to validate and improve tracking system capabilities.</li> <li>Contribute
-    to the full software development lifecycle, including requirements analysis, design,
-    coding, testing, and deployment.</li> <li>Stay up to date with the latest developments
-    in tracking and fusion technology.</li> <li>Write clear and maintainable code
-    with comprehensive documentation.</li> <li>Provide technical leadership and mentorship
-    to junior engineers.</li> </ul> <p><strong>REQUIRED QUALIFICATIONS</strong></p>
-    <ul> <li>MS or PhD in Robotics, Computer Science, Applied Math, Physics or related
-    field</li> <li>Proficiency in production-grade C++ and Python software development</li>
-    <li>Strong background in linear algebra and probability/stochastic processes.</li>
-    <li>Strong communication skill and the ability to take large problems and break
-    them down into actionable parts</li> <li>Eligible to obtain and hold a U.S. Top
-    Secret security clearance</li> </ul> <h4><strong>PREFERRED QUALIFICATIONS</strong></h4>
-    <ul> <li>We are looking for engineers with professional experience in one or more
-    of the following areas and are interested in learning more:</li> <li>Experience
-    processing sensor measurements from Radar, Electro-Optical Sensors, RF Sensors,
-    or LIDAR</li> <li>Experience with sensor characterization and modeling</li> <li>Familiarity
-    with classical and contemporary approaches for state estimation and tracking (e.g.
-    Kalman Filter, EKF, Particle Filter)</li> <li>Multi-target prediction and tracking
-    (e.g., Multi-hypothesis tracking)</li> <li>Derivation of performance metrics and
-    analysis of system performance</li> <li>Camera and sensor calibration</li> <li>Familiarity
-    with non-linear optimization frameworks like Ceres, g2o, GTSAM, etc</li> <li>Probabilistic
-    inference and Bayesian likelihood estimation (e.g., Markov Chain Monte Carlo)</li>
-    <li>Experience in unmanned systems</li> <li>Experience in Docker, CircleCI, Linux</li>
-    </ul><div class="content-pay-transparency"><div class="pay-input"><div class="title">US
-    Salary Range</div><div class="pay-range"><span>$220,000</span><span class="divider">&mdash;</span><span>$330,000
-    USD</span></div></div></div><div class="content-conclusion"><p><span data-contrast="auto">The
-    salary range for this role is an estimate based on a wide range of compensation
-    factors,
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century’s most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril’s family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p>The Counter Intrusion MSE team develops systems that provide force protection capabilities, monitoring the perimeter of secure areas, land or sea, for approaching people, vehicles, and vessels. We live in a world where security officers are increasingly overwhelmed by sensor data feeds. Our products leverage advanced sensor fusion and autonomy to seamlessly render activity in the environment to Lattice's common operating picture. This relieves operators of our system from a ton of burden and allows our customers to get more done with fewer personnel. Increasingly Counter Intrusion MSEs are working on projects to bring customers' existing legacy security systems into the Lattice ecosystem. Key to this effort is building scalable software solutions so that we can service many customers without requiring bespoke software for each one. The Counter Intrusion team is responsible for the development, testing, deployment, and sustainment of our family of systems. We work closely with other teams from product, engineering, sales, logistics, operations, and mission success.</p> <h3>ABOUT THE JOB</h3> <p>We are looking for a Senior Software Engineer to join our growing team either remotely or in Irvine, CA. Anduril is developing software at the intersection of machine learning, computer vision, and sensor fusion. In this role you will be bringing together data from robots, cameras, radars, and many other sources into a single combined operational picture which enables both autonomous systems and end users to complete their missions. We develop cutting edge software for autonomous operation and situational awareness by having sensors and systems that work together to improve over time.<br><br><strong>WHAT YOU'LL DO</strong></p> <ul> <li>Design and develop robust and efficient C++ software for real-time tracking and fusion.</li> <li>Conduct data analysis and performance evaluation to validate and improve tracking system capabilities.</li> <li>Contribute to the full software development lifecycle, including requirements analysis, design, coding, testing, and deployment.</li> <li>Stay up to date with the latest developments in tracking and fusion technology.</li> <li>Write clear and maintainable code with comprehensive documentation.</li> <li>Provide technical leadership and mentorship to junior engineers.</li> </ul> <p><strong>REQUIRED QUALIFICATIONS</strong></p> <ul> <li>MS or PhD in Robotics, Computer Science, Applied Math, Physics or related field</li> <li>Proficiency in production-grade C++ and Python software development</li> <li>Strong background in linear algebra and probability/stochastic processes.</li> <li>Strong communication skill and the ability to take large problems and break them down into actionable parts</li> <li>Eligible to obtain and hold a U.S. Top Secret security clearance</li> </ul> <h4><strong>PREFERRED QUALIFICATIONS</strong></h4> <ul> <li>We are looking for engineers with professional experience in one or more of the following areas and are interested in learning more:</li> <li>Experience processing sensor measurements from Radar, Electro-Optical Sensors, RF Sensors, or LIDAR</li> <li>Experience with sensor characterization and modeling</li> <li>Familiarity with classical and contemporary approaches for state estimation and tracking (e.g. Kalman Filter, EKF, Particle Filter)</li> <li>Multi-target prediction and tracking (e.g., Multi-hypothesis tracking)</li> <li>Derivation of performance metrics and analysis of system performance</li> <li>Camera and sensor calibration</li> <li>Familiarity with non-linear optimization frameworks like Ceres, g2o, GTSAM, etc</li> <li>Probabilistic inference and Bayesian likelihood estimation (e.g., Markov Chain Monte Carlo)</li> <li>Experience in unmanned systems</li> <li>Experience in Docker, CircleCI, Linux</li> </ul><div class="content-pay-transparency"><div class="pay-input"><div class="title">US Salary Range</div><div class="pay-range"><span>$220,000</span><span class="divider">&mdash;</span><span>$330,000 USD</span></div></div></div><div class="content-conclusion"><p><span data-contrast="auto">The salary range for this role is an estimate based on a wide range of compensation factors,
 deadline:
   date: null
   type: rolling
@@ -96,23 +36,27 @@ submission:
   blocks_used: {}
   variant_ids: {}
   materials_attached:
-  - resumes/batch-03/anduril-senior-software-engineer-estimation-tracking/anduril-senior-software-engineer-estimation-tracking-resume.html
-  - resumes/base/founder-operator-resume.html
+    - resumes/batch-03/anduril-senior-software-engineer-estimation-tracking/anduril-senior-software-engineer-estimation-tracking-resume.html
+    - resumes/base/founder-operator-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-03-25'
   posting_date: '2026-03-24'
   date_added: '2026-03-25'
   discovered: '2026-03-25T10:18:33.960093+00:00'
+  submitted: "2026-03-26"
 conversion:
   response_received: false
   response_type: null
   time_to_response_days: null
   feedback: null
 tags:
-- auto-sourced
+  - auto-sourced
 source: source_jobs.py
 last_touched: '2026-03-25'
 status_meta:
   reviewed_by: 4jp
   approved_at: '2026-03-25'
+outreach:
+  - contact_name: Steven Schoenecker, Spencer Fishman, Mitchell Sayer
+    status: completed

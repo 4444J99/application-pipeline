@@ -1,0 +1,61 @@
+id: datadog-senior-technical-curriculum-developer-cloud-infrastructure
+name: Datadog Senior Technical Curriculum Developer - Cloud Infrastructure
+track: job
+status: staged
+outcome: null
+target:
+  organization: Datadog
+  url: https://boards.greenhouse.io/datadog
+  application_url: https://careers.datadoghq.com/detail/7555494/?gh_jid=7555494
+  portal: greenhouse
+  location: California, USA, Remote; New York, USA, Remote
+  location_class: us-remote
+  description: "<p>As a Senior Technical Curriculum Developer, you will join our Customer Education &amp; Training team to deliver exceptional cloud engineering learning content to our customers, including the Datadog Learning Center, workshops, and certifications. You will work closely with both our engineering and product teams. You will be hands-on with the cloud technologies Datadog monitors. You have strong technical devops or software development expertise with GCP, Azure, and other cloud hosting platforms (not all are required). You will create new labs and improve existing learning content for the ever-expanding solutions that we offer.&nbsp;</p> <p><strong>What You’ll Do:&nbsp;</strong></p> <ul> <li>Partner with our cloud engineering and product teams to produce engaging high quality training courses and content for Datadog’s customer and partner curriculums</li> <li>Collaborate with other team members to evaluate customer training requirements. Turn those requirements into a roadmap with clearly scoped courses and well defined learning paths</li> <li>Create high quality courses that can be delivered both as self paced online programs or instructor-led training</li> <li>Develop supplemental and supporting courseware and documentation, including workshops, hands-on labs, and webinars</li> <li>Create, maintain, and improve the technical systems and environments used in hands-on labs (using the Instruqt hands-on lab platform)</li> <li>Mentor existing staff in cloud engineering best practices, instructional design insights, and technical collaboration</li> </ul> <p><strong>Who You Are:&nbsp;</strong></p> <ul> <li>You are an experienced technical curriculum developer, software developer, or devops professional with five or more years of experience building online learning curriculum, hands-on labs, and instructor-led training material for a cloud engineering and software developer audience</li> <li>You have hands-on experience or specialized knowledge in building learning content for devops and software development professionals in the cloud (one or more of Azure, GCP, Kubernetes, Docker, Terraform, Puppet, Ansible, service mesh, etc.)</li> <li>You are comfortable with at least one programming language (Python, Java, any .NET language, Go, JavaScript)</li> <li>You enjoy transforming dry technical topics into engaging, informative and interesting educational materials</li> <li>You have experience and interest in improving training operations (design, efficiency and functionality of the Learning Center and internal tooling)</li> </ul> <p><em>Datadog values people from all walks of life. We understand not everyone will meet all the above qualifications on day one. That's okay. If you’re passionate about technology and want to grow your skills, we encourage you to apply.&nbsp;</em></p> <p><strong>Benefits and Growth:&nbsp;</strong></p> <ul> <li>New hire stock equity (RSUs) and employee stock purchase plan (ESPP)</li> <li>Continuous professional development, product training, and career pathing</li> <li>Intradepartmental mentor and buddy program for in-house networking</li> <li>An inclusive company culture, ability to join our Community Guilds (Datadog employee resource groups)</li> <li>Access to Inclusion Talks, our Internal panel discussions</li> <li>Free, global mental health benefits for employees and dependents age 6+</li> <li>Competitive global benefits</li> </ul> <p><em>Benefits and Growth listed above may vary based on the country of your employment and the nature of your employment with Datadog.</em></p> <p>&nbsp;</p> <p style=\"color: white;\">#LI-Remote</p><div class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"description\"><p>Datadog offers a competitive salary and equity package, and may include variable compensation. Actual compensation is based on factors such as the candidate's skills, qualifications, and experience. In addition, Datadog offers a wide range of best in class, comprehensive and inclusive employee benefits for this role including healthcare, dental, parental planning, and
+    mental health benefits, a 401(k) plan and match, paid time off, fitness reimbursements, and a discounted employee stock purchase plan.</p></div><div class=\"title\">The reasonably estimated yearly salary for this role at Datadog is:</div><div class=\"pay-range\"><span>$162,000</span><span class=\"divider\">&mdash;</span><span>$180,000 USD</span></div></div></div><div class=\"content-conclusion\"><hr> <p><strong>About Datadog:&nbsp;</strong></p> <p>Datadog (NASDAQ: DDOG) is a global SaaS business, delivering a rare combination of growth and profitability. We are on a mission to break down silos and solve complexity in the cloud age by enabling digital transformation, cloud migration, and infrastructure monitoring of our customers’ entire technology stacks. Built by engineers, for engineers, Datadog is used by organizations of all sizes across a wide range of industries. Together, we champion professional development, div"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: educator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 7
+    deadline_feasibility: 9
+    portal_friction: 5
+  framing: A technical educator and systems architect with 11 years of experience and 2,000+ students, building AI-driven curriculum engines that bridge the gap between complex observability and human comprehension.
+submission:
+  effort_level: standard
+  blocks_used:
+    framing: framings/educator-researcher
+    evidence: evidence/differentiators
+    work_samples: evidence/work-samples
+    project: projects/classroom-rpg-aetheria
+  variant_ids:
+    cover_letter: cover-letters/datadog-senior-technical-curriculum-developer-cloud-infrastructure-alchemized
+  materials_attached:
+  - resumes/batch-03/datadog-senior-technical-curriculum-developer-cloud-infrastructure/datadog-senior-technical-curriculum-developer-cloud-infrastructure-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.989366+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-27"

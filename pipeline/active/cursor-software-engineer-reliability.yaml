@@ -1,0 +1,58 @@
+id: cursor-software-engineer-reliability
+name: Cursor Software Engineer, Reliability
+track: job
+status: staged
+outcome: null
+target:
+  organization: Cursor
+  url: https://jobs.ashbyhq.com/cursor
+  application_url: https://www.cursor.com/careers/software-engineer-reliability
+  portal: cursor-native
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Our mission is to automate coding. The first step in our journey is to build the best tool for professional programmers, using a combination of inventive research, design, and engineering. Our organization is very flat, and our team is small and talent dense. We particularly like people who are truth-seeking, passionate, and creative. We enjoy spirited debate, crazy ideas, and shipping code. About the role We’re hiring a Software Engineer, Reliability to help Cursor scale with a high reliability bar. You will work across the stack (client, backend services, model routing/integrations, and infra) to find the reliability bottlenecks that most impact users, ship durable fixes, and build the tooling and guardrails that keep us fast and stable. This is a strongly engineering-focused role. It is not a program management role, and it is not an ops-only SRE role. What you’ll do Own reliability work end-to-end , from user-facing symptoms (crashes, latency, streaming failures) to root causes in services, infrastructure, or vendor dependencies. Design and implement resilience patterns for upstream dependency failures (for example model providers): fallbacks, routing strategies, and degraded-mode designs. Build and maintain reliability guardrails that make teams faster and safer: deployment safety, rollbacks, operational playbooks, automated checks, and standards for production readiness. Improve observability (metrics, logs, traces, and client telemetry) so engineers can quickly answer “Is it up?” and “What changed?” Reduce operational toil through automation and better tooling. Partner with product and infrastructure engineering teams as a drop-in reliability multiplier: embed on the highest-impact problems and drive them to a durable technical outcome. Participate in an on-call rotation and help improve incident response practices over time (severity definitions, runbooks, retrospectives, and clear ownership of follow-up fixes). You will own a small set of high-leverage reliability “themes” at a time (for example client crash rate, streaming reliability, deploy safety). You drive these end-to-end until the reliability bar measurably moves. You will not be “responsible for everyone’s metrics” by default. You will build the system and partner with teams; service owners ultimately own their service SLOs and fixes. You will not be the owner of all CI/CD. You will raise the production-readiness bar with guardrails and tooling, while infrastructure and product teams own their pipelines and day-to-day workflows. On-call is part of the job , but the goal is to eliminate recurring incidents and toil, not to be a permanent triage function. You may be a fit if Have a track record of improving reliability by empowering other engineers with excellent tooling, guardrails, and simple operational systems. Own problems end-to-end, learn quickly, and enjoy working across layers (client symptoms, service behavior, infra primitives, and third-party dependencies). Prefer pragmatic, high-leverage fixes over perfection, and can raise standards without becoming “the voice of no.” Are comfortable leading through influence: aligning teams on the “why,” landing changes in multiple codebases, and driving clarity on ownership. Strong experience owning reliability for production systems, including both incident response and long-term engineering fixes. Strong software engineering instincts. You write code to automate, eliminate recurring operational work, and prevent regressions. Expert-level experience in at least one of: Go, Node/TypeScript, or Python. Deep practical knowledge of cloud infrastructure (AWS) and modern deployment/orchestration patterns (Kubernetes and/or ECS). Experience with observability systems and practices (metrics, logs, traces, and alerting). Clear communication and cross-team leadership. Bonus points Experience with multi-region architecture and global distribution strategies. Experience with networking and long-lived connection workloads (for example HTTP/2 streaming). Experience building reliability programs in high-growth
+    orgs with incredibly high velocity. #LI-DNI'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 6
+  framing: A reliability-focused software engineer who built a 113-repo ecosystem governed by self-healing state machines, specializing in cross-repo guardrails and automated coherence audits.
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids:
+    cover_letter: cover-letters/cursor-software-engineer-reliability-alchemized
+  materials_attached:
+  - resumes/batch-03/cursor-software-engineer-reliability/cursor-software-engineer-reliability-resume.html
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: null
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.779013+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-27"

@@ -70,3 +70,23 @@ rules:
     enabled: true
     require_score: 8.5
     severity: routine
+
+  # Rule 8: Identity enforcement
+  identity_organic:
+    enabled: true
+    forbid: ["Independent Engineer", "Self-Employed"]
+    require: "ORGANVM"
+    severity: urgent
+
+  # Rule 9: Formatting parity
+  formatting_parity:
+    enabled: true
+    match_template: true
+    severity: urgent
+
+  # Rule 10: Project rotation
+  project_diversity:
+    enabled: true
+    min_projects: 15
+    rotate_count: 3
+    severity: routine

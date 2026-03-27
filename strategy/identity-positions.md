@@ -5,7 +5,7 @@ Nine framings of the same body of work for different audiences. Derived from cov
 ## Rules
 
 - **Never** say "I am an engineer" or "software engineer" in art/grant contexts — use "systems artist," "creative technologist," or "auteur-producer"
-- **Exception:** For job-track applications at AI labs, use "independent engineer" or "systems engineer" framing (see Position #5)
+- **Exception:** For job-track applications at AI labs, lead with the scale of the ORGANVM system (see Position #5)
 - **Never** frame the system as a portfolio piece for an engineering job in grant contexts — the system IS the creative practice
 - The process of creation IS the product — this is the thesis, not a metaphor
 - "Solo production at institutional scale" is the method descriptor
@@ -61,7 +61,7 @@ Nine framings of the same body of work for different audiences. Derived from cov
 
 ---
 
-## 5. Independent Engineer
+## 5. Software Engineer @ ORGANVM
 
 **For:** AI lab engineering roles, developer tooling positions, infrastructure engineering
 **Narrative:** "5 years building production-grade Python/TypeScript infrastructure at scale — 113 repos, 22,885 code files, 3.6K tests, 104 CI/CD pipelines, governance as architecture"
