@@ -2,9 +2,9 @@
 
 Strategic analysis of all active job entries, ranked by fit-to-effort ROI.
 
-**Date:** 2026-02-25
+**Date:** 2026-03-26
 **Identity Position:** independent-engineer / educator (varies by role)
-**Pipeline state:** 16 submitted (13 active, 2 expired, 1 withdrawn), 10 Anthropic in research
+**Pipeline state:** 21 submitted (18 active, 2 expired, 1 withdrawn), 10 Anthropic in research
 
 ## Submission Priority — Next Batch
 
@@ -12,10 +12,15 @@ Strategic analysis of all active job entries, ranked by fit-to-effort ROI.
 
 | # | Entry | Score | Location | Key Rationale |
 |---|-------|-------|----------|---------------|
-| 1 | anthropic-developer-education-lead | 7.4 | SF / NYC | Teaching background is DIRECT match — 11yr, 2K students, ~741K+ words |
-| 2 | anthropic-founding-developer-relations-lead | 7.2 | SF / NYC | Devrel trifecta: writing + teaching + OSS. "Founding" favors builders |
-| 3 | anthropic-developer-relations-mcp | 7.0 | SF | Daily MCP user, custom servers, claude-code integration |
-| 4 | huggingface-dev-advocate | 6.2 | Remote | Full body of work as evidence (already staged, materials ready) |
+| 1 | temporal-staff-swe-ai-sdk | 8.6 | Remote | Durable execution match for recursive-engine/governance work |
+| 2 | wikimedia-swe-iii-fundraising | 8.5 | Remote | Public interest/transparency alignment; solo-operated infra evidence |
+| 3 | anthropic-staff-swe-dev-prod | 8.4 | NYC | 37-script CLI suite evidence; obsession with reducing friction |
+| 4 | cursor-swe-reliability | 8.4 | SF | Built self-healing state machines for 113+ repos; guardrails focus |
+| 5 | datadog-sr-tech-curriculum | 8.4 | Remote | 11yr teaching + AI-driven curriculum engine bridge |
+| 6 | anthropic-developer-education-lead | 7.4 | SF / NYC | Teaching background is DIRECT match — 11yr, 2K students, ~766K+ words |
+| 7 | anthropic-founding-developer-relations-lead | 7.2 | SF / NYC | Devrel trifecta: writing + teaching + OSS. "Founding" favors builders |
+| 8 | anthropic-developer-relations-mcp | 7.0 | SF | Daily MCP user, custom servers, claude-code integration |
+| 9 | huggingface-dev-advocate | 6.2 | Remote | Full body of work as evidence (already staged, materials ready) |
 
 ### Tier 2 — Submit This Week (Emergency Grants — Quick Effort)
 
@@ -49,6 +54,16 @@ Strategic analysis of all active job entries, ranked by fit-to-effort ROI.
 | anthropic-developer-community-lead-japan | Tokyo | Outside NYC metro |
 | anthropic-applied-ai-engineer-startups | London | Outside NYC metro |
 | anthropic-forward-deployed-engineer-applied-ai | Paris | Outside NYC metro |
+
+## Previously Submitted (2026-03-26 Batch)
+
+| # | Entry | Score | Tier | Portal | Status |
+|---|-------|-------|------|--------|--------|
+| 1 | dbt-labs-staff-swe-quality-release | 8.5 | Tier 1 | greenhouse | Submitted |
+| 2 | anduril-senior-swe-estimation-tracking | 8.4 | Tier 1 | greenhouse | Submitted |
+| 3 | grafana-labs-staff-ai-engineer-people | 8.3 | Tier 1 | greenhouse | Submitted |
+| 4 | twilio-developer-evangelist | 8.3 | Tier 1 | greenhouse | Submitted |
+| 5 | databricks-specialist-sa-ml-ai-finserv | 7.4 | Tier 2 | greenhouse | Submitted |
 
 ## Previously Submitted (2026-02-24 Batch)
 

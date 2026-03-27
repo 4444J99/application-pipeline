@@ -4,7 +4,6 @@
 # See docs/system-standards.md for human-readable reference.
 
 version: "1.0"
-
 tiers:
   1:
     name: Operational Integrity
@@ -18,13 +17,11 @@ tiers:
     name: Empirical Validity
     description: Are the criteria grounded in reality?
     gate: advisory
-
 evidence_lifecycle:
   states: [assumed, calibrating, validated]
   transitions:
     assumed_to_calibrating: "observation_count >= 1"
     calibrating_to_validated: "observation_count >= min_sample"
-
 standards:
   # -- Level 2 / Tier 1: Department (Schema Enforcement) --
   weight_sum_general:
@@ -37,7 +34,6 @@ standards:
     check: "abs(sum - 1.0) < 0.001"
     validator: validate.validate_scoring_rubric
     source: strategy/scoring-rubric.yaml
-
   weight_sum_job:
     level: 2
     tier: 1
@@ -48,7 +44,6 @@ standards:
     check: "abs(sum - 1.0) < 0.001"
     validator: validate.validate_scoring_rubric
     source: strategy/scoring-rubric.yaml
-
   weight_sum_system_grading:
     level: 2
     tier: 1
@@ -58,7 +53,6 @@ standards:
     check: "abs(sum - 1.0) < 0.001"
     validator: diagnose.load_rubric
     source: strategy/system-grading-rubric.yaml
-
   state_machine_valid:
     level: 2
     tier: 1
@@ -66,7 +60,6 @@ standards:
     category: pipeline
     description: All entry status transitions follow VALID_TRANSITIONS
     validator: validate.validate_entry
-
   dimensions_consistent:
     level: 2
     tier: 1
@@ -74,7 +67,6 @@ standards:
     category: wiring
     description: DIMENSION_ORDER == rubric keys == VALID_DIMENSIONS
     validator: audit_system.audit_wiring
-
   threshold_ordering:
     level: 2
     tier: 1
@@ -82,7 +74,6 @@ standards:
     category: scoring
     description: tier1_cutoff > tier2_cutoff > tier3_cutoff
     validator: audit_system.audit_logic
-
   high_prestige_ranges:
     level: 2
     tier: 1
@@ -90,7 +81,6 @@ standards:
     category: constants
     description: All HIGH_PRESTIGE org scores in 1-10
     validator: audit_system.audit_wiring
-
   role_fit_tier_ranges:
     level: 2
     tier: 1
@@ -98,7 +88,6 @@ standards:
     category: constants
     description: All ROLE_FIT_TIERS dimension scores in 1-10
     validator: audit_system.audit_wiring
-
   rubric_weights_match_code:
     level: 2
     tier: 1
@@ -106,7 +95,6 @@ standards:
     category: wiring
     description: scoring-rubric.yaml weights == score.py _DEFAULT_WEIGHTS
     validator: audit_system.audit_wiring
-
   system_rubric_matches_diagnose:
     level: 2
     tier: 1
@@ -114,7 +102,6 @@ standards:
     category: wiring
     description: system-grading-rubric.yaml dims == diagnose.py collectors+generators
     validator: audit_system.audit_wiring
-
   lint_clean:
     level: 2
     tier: 1
@@ -123,7 +110,6 @@ standards:
     description: Zero ruff lint errors in scripts/ and tests/
     validator: subprocess
     command: [python, -m, ruff, check, scripts/, tests/]
-
   tests_pass:
     level: 2
     tier: 1
@@ -132,7 +118,6 @@ standards:
     description: Full pytest suite passes
     validator: subprocess
     command: [python, -m, pytest, tests/, -q]
-
   verification_matrix_complete:
     level: 2
     tier: 1
@@ -141,7 +126,6 @@ standards:
     description: All modules have corresponding test coverage
     validator: subprocess
     command: [python, scripts/verification_matrix.py, --strict]
-
   signal_integrity:
     level: 2
     tier: 1
@@ -149,7 +133,6 @@ standards:
     category: data
     description: All signal YAML files pass schema and referential integrity
     validator: validate_signals.validate_all_signals
-
   # -- Level 3 / Tier 2: University (System Quality) --
   icc_agreement:
     level: 3
@@ -160,7 +143,6 @@ standards:
     threshold: 0.61
     target: 0.81
     validator: diagnose_ira.compute_icc
-
   claim_provenance_ratio:
     level: 3
     tier: 2
@@ -170,7 +152,6 @@ standards:
     threshold: 0.80
     target: 1.0
     validator: audit_system.audit_claims
-
   diagnostic_composite:
     level: 3
     tier: 2
@@ -180,7 +161,6 @@ standards:
     threshold: 6.0
     target: 8.0
     validator: diagnose.compute_composite
-
   wiring_integrity:
     level: 3
     tier: 2
@@ -189,7 +169,6 @@ standards:
     description: All wiring checks pass
     threshold: 1.0
     validator: audit_system.audit_wiring
-
   logical_consistency:
     level: 3
     tier: 2
@@ -198,7 +177,6 @@ standards:
     description: All logic checks pass
     threshold: 1.0
     validator: audit_system.audit_logic
-
   math_proofs_pass:
     level: 3
     tier: 1
@@ -207,7 +185,6 @@ standards:
     description: All mathematical certifications pass
     validator: subprocess
     command: [python, -m, pytest, tests/test_math_proofs.py, -q]
-
   # -- Level 4 / Tier 3: National (Outcome Accreditation) --
   weight_outcome_correlation:
     level: 4
@@ -219,7 +196,6 @@ standards:
     threshold: 0.3
     validator: standards.NationalRegulator.gate_outcome
     evidence_status: assumed
-
   weight_drift:
     level: 4
     tier: 3
@@ -231,7 +207,6 @@ standards:
     check: "avg_drift <= 0.15"
     validator: standards.NationalRegulator.gate_recalibration
     evidence_status: assumed
-
   hypothesis_accuracy:
     level: 4
     tier: 3
@@ -242,7 +217,6 @@ standards:
     threshold: 0.5
     validator: standards.NationalRegulator.gate_hypothesis
     evidence_status: assumed
-
   # -- Level 5 / Tier 3: Federal (Source Legitimacy) --
   source_quality:
     level: 5
@@ -258,7 +232,6 @@ standards:
       unsourced: 0
     threshold: 2.5
     validator: standards.FederalRegulator.gate_source_quality
-
   benchmark_alignment:
     level: 5
     tier: 3
@@ -267,7 +240,6 @@ standards:
     description: Pipeline metrics align with external industry baselines
     threshold: 0.7
     validator: standards.FederalRegulator.gate_benchmark
-
   source_freshness:
     level: 5
     tier: 3
@@ -277,7 +249,28 @@ standards:
     threshold: 0.8
     max_age_years: 2
     validator: standards.FederalRegulator.gate_temporal
-
+  identity_organic:
+    level: 2
+    tier: 1
+    gate: "2A"
+    category: identity
+    description: "'Independent Engineer' must NEVER appear; use 'ORGANVM' as employer"
+    check: "no 'Independent Engineer' in generated artifacts"
+    validator: standards.IdentityRegulator.no_independent_engineer
+  formatting_parity:
+    level: 2
+    tier: 1
+    gate: "2A"
+    category: formatting
+    description: "Cover letter header/footer must match resume visual identity"
+    validator: standards.FormattingRegulator.parity_check
+  project_diversity:
+    level: 2
+    tier: 1
+    gate: "2A"
+    category: content
+    description: "Rotate showcased projects; avoid repeating the same 5 repos"
+    validator: standards.ContentRegulator.project_rotation
 meta_evaluation:
   cycle: quarterly
   criteria:
