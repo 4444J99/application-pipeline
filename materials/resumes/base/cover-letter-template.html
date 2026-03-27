@@ -3,50 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anthony James Padavano — Cover Letter</title>
+<title>{{NAME}} — Cover Letter</title>
 <style>
   @page {
     size: 8.5in 11in;
     margin: 0.45in 0.55in;
   }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
+  * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 10.5pt;
-    line-height: 1.5;
+    font-size: 9pt;
+    line-height: 1.35;
     color: #1a1a1a;
     width: 7.4in;
     max-width: 7.4in;
     margin: 0 auto;
     padding: 0.45in 0.55in;
-    display: flex;
-    flex-direction: column;
-    min-height: 10.1in;
   }
-
   @media print {
-    body {
-      padding: 0;
-      width: 100%;
-      max-width: 100%;
-      min-height: 100vh;
-    }
+    body { padding: 0; width: 100%; max-width: 100%; }
   }
-
-  /* Header — matches resume header exactly */
   header {
     text-align: center;
-    margin-bottom: 12pt;
-    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+    padding-bottom: 7pt;
     border-bottom: 1.5pt solid #1a1a1a;
   }
-
   header h1 {
     font-size: 16pt;
     font-weight: bold;
@@ -54,86 +36,45 @@
     letter-spacing: 0.2pt;
     margin-bottom: 3pt;
   }
-
-  header .title-line {
-    font-size: 10.5pt;
-    font-weight: normal;
-    font-style: normal;
-    letter-spacing: 2pt;
-    text-transform: uppercase;
-    color: #444;
-    margin-bottom: 4pt;
-  }
-
   header .contact {
     font-size: 8pt;
     color: #333;
   }
-
   header .contact a {
-    color: #333;
-    text-decoration: none;
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-underline-offset: 1.5pt;
   }
-
-  /* Letter body */
   .letter-body {
-    margin-top: 10pt;
-    flex: 1;
+    margin-top: 16pt;
   }
-
   .letter-body p {
-    margin-bottom: 11pt;
+    margin-bottom: 8pt;
     text-align: justify;
-    hyphens: auto;
+    text-indent: 0;
   }
-
-  .letter-body strong {
-    font-weight: bold;
+  .signature {
+    margin-top: 20pt;
   }
-
-  .letter-body em {
-    font-style: italic;
-  }
-
-  /* Sign-off */
-  .sign-off {
-    margin-top: 18pt;
-  }
-
-  .sign-off p {
+  .signature p {
     margin-bottom: 2pt;
-  }
-
-  .sign-off .name {
-    font-weight: bold;
-    font-size: 10.5pt;
-  }
-
-  .sign-off .credentials {
-    font-size: 9pt;
-    color: #444;
   }
 </style>
 </head>
 <body>
-
-<header>
-  <h1>Anthony James Padavano</h1>
-  <div class="title-line">{{TITLE_LINE}}</div>
-  <div class="contact">
-    New York City &nbsp;|&nbsp; 561-602-7300 &nbsp;|&nbsp; padavano.anthony@gmail.com
+  <header>
+    <h1>Anthony James Padavano</h1>
+    <div class="contact">
+      New York, NY &nbsp;&middot;&nbsp;
+      padavano.anthony@gmail.com &nbsp;&middot;&nbsp;
+      561-602-7300 &nbsp;&middot;&nbsp;
+      <a href="https://4444j99.github.io/portfolio/">Portfolio</a> &nbsp;&middot;&nbsp;
+      <a href="https://www.linkedin.com/in/anthonyjamespadavano">LinkedIn</a> &nbsp;&middot;&nbsp;
+      <a href="https://github.com/meta-organvm">GitHub</a>
+    </div>
+  </header>
+  <div class="letter-body">
+{{BODY}}
   </div>
-</header>
-
-<div class="letter-body">
-{{LETTER_BODY}}
-</div>
-
-<div class="sign-off">
-  <p>Sincerely,</p>
-  <p class="name">Anthony James Padavano</p>
-  <p class="credentials">{{CREDENTIALS}}</p>
-</div>
-
 </body>
 </html>
