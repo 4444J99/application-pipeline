@@ -1,8 +1,14 @@
 22,885 code files. 4,274 test files across 70 of 113 repositories. 104 CI/CD pipelines. 50 validated dependency edges with zero violations — all designed, built, and maintained by a single practitioner. This is not freelance consulting or contract work: it is sustained independent production at engineering-team scale, five years of Python and TypeScript across 113 repositories coordinated through 8 GitHub organizations.
 
+### The protocol at scale
+
 Methodology: AI-Conductor Model
 
+### What formalization reveals
+
 Human directs architecture; AI generates volume; human reviews and refines.
+
+### The discipline
 
 The AI-conductor model treats AI tools as compositional instruments — the way Brian Eno treated the recording studio or Brian Wilson directed session musicians. The human practitioner provides architectural vision, governance design, and editorial judgment. AI provides execution capacity at scale.
 
@@ -12,6 +18,6 @@ The model is documented transparently in 49 published essays. It's reusable: oth
 
 ~739K+ words of documentation produced by one person using this methodology.
 
-Check out the full ORGANVM project: https://4444j99.github.io/portfolio/
+Portfolio: https://4444j99.github.io/portfolio/GitHub: https://github.com/meta-organvm
 
 #ai #llm #agent #orchestration #machine-learning

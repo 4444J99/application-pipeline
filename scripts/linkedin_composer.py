@@ -129,7 +129,7 @@ class LinkedInComposer:
 
         return warnings
 
-    def compose(self, block_id: str, position: str = None) -> None:
+    def compose(self, block_id: str, position: str = None, testament: bool = True) -> None:
         """Generate and save LinkedIn drafts."""
         block = self.loader.load(block_id)
         fm = block["frontmatter"]
@@ -148,8 +148,11 @@ class LinkedInComposer:
                 print(f"  ⚠️  No opening template found for position: {pos}")
                 continue
 
-            # Basic "Scale-first" composition
-            draft = self._generate_scale_first(opening, body, fm)
+            # Generate draft based on mode
+            if testament:
+                draft = self._generate_testament_draft(opening, body, fm)
+            else:
+                draft = self._generate_scale_first(opening, body, fm)
             
             warnings = self.validate_draft(draft)
             
@@ -170,8 +173,7 @@ class LinkedInComposer:
         # Clean up remaining headers
         clean_body = re.sub(r"^#+\s+", "", body, flags=re.MULTILINE)
         
-        # LinkedIn doesn't support markdown bold/italic in most clients, but some symbols work.
-        # We'll just strip the bold markers for now to keep it clean.
+        # Strip bold markers
         clean_body = re.sub(r"\*\*([^*]+)\*\*", r"\1", clean_body)
         
         # Ensure no more than two consecutive newlines
@@ -192,17 +194,54 @@ class LinkedInComposer:
         
         return "".join(sections).strip()
 
+    def _generate_testament_draft(self, opening: str, body: str, fm: dict) -> str:
+        """Apply Testament discipline: Causation, Triple Layer, Subheading Spine."""
+        # Clean structural headers
+        clean_body = re.sub(r"^#+\s+(One-Line|Short|Key Metric).*$", "", body, flags=re.MULTILINE | re.IGNORECASE)
+        clean_body = re.sub(r"^#+\s+", "", clean_body, flags=re.MULTILINE)
+        clean_body = re.sub(r"\*\*([^*]+)\*\*", r"\1", clean_body)
+        
+        # Split into paragraphs and remove empty ones
+        paragraphs = [p.strip() for p in clean_body.split("\n\n") if p.strip()]
+        
+        # Build subheading spine based on Testament patterns
+        subheadings = ["The protocol at scale", "What formalization reveals", "The discipline"]
+        
+        content_parts = []
+        for i, para in enumerate(paragraphs):
+            if i < len(subheadings):
+                content_parts.append(f"### {subheadings[i]}\n\n{para}")
+            else:
+                content_parts.append(para)
+
+        # Structure the Testament post
+        tags = " ".join([f"#{t}" for t in fm.get("tags", [])[:5]])
+        
+        sections = [
+            opening,
+            "\n\n",
+            "\n\n".join(content_parts),
+            "\n\n",
+            "Portfolio: https://4444j99.github.io/portfolio/",
+            "GitHub: https://github.com/meta-organvm",
+            "\n\n",
+            tags
+        ]
+        
+        return "".join(sections).strip()
+
 
 def main():
     parser = argparse.ArgumentParser(description="Compose LinkedIn posts from narrative blocks.")
     parser.add_argument("--block", required=True, help="Block ID (e.g., methodology/ai-conductor)")
     parser.add_argument("--position", help="Optional identity position to force")
+    parser.add_argument("--no-testament", action="store_true", help="Disable Testament discipline")
     
     args = parser.parse_args()
     
     composer = LinkedInComposer()
     try:
-        composer.compose(args.block, args.position)
+        composer.compose(args.block, args.position, testament=not args.no_testament)
     except Exception as e:
         print(f"❌ Error: {e}")
         sys.exit(1)
