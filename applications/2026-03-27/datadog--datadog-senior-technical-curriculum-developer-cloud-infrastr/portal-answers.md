@@ -30,7 +30,7 @@ padavano.anthony@gmail.com
 
 ## Resume/CV (required)
 
-
+[Attach: Anthony-Padavano-Datadog-Resume.pdf]
 
 ## LinkedIn Profile
 
@@ -50,11 +50,11 @@ Yes
 
 ## Are you legally authorised to work full-time in the country where this job is based? (required)
 
-
+Yes
 
 ## In what location(s) are you available to work? (required)
 
-
+New York City, NY — open to remote or hybrid
 
 ## How did you hear about this opportunity? (required)
 

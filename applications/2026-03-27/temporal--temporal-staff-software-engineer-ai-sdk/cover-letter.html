@@ -9,26 +9,44 @@
     size: 8.5in 11in;
     margin: 0.45in 0.55in;
   }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   body {
     font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 9pt;
-    line-height: 1.35;
+    font-size: 9.5pt;
+    line-height: 1.42;
     color: #1a1a1a;
     width: 7.4in;
     max-width: 7.4in;
     margin: 0 auto;
     padding: 0.45in 0.55in;
+    display: flex;
+    flex-direction: column;
+    min-height: 10.1in;
   }
+
   @media print {
-    body { padding: 0; width: 100%; max-width: 100%; }
+    body {
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      min-height: 100vh;
+    }
   }
+
+  /* Header — matches resume header exactly */
   header {
     text-align: center;
-    margin-bottom: 14pt;
-    padding-bottom: 7pt;
+    margin-bottom: 12pt;
+    padding-bottom: 8pt;
     border-bottom: 1.5pt solid #1a1a1a;
   }
+
   header h1 {
     font-size: 16pt;
     font-weight: bold;
@@ -36,49 +54,90 @@
     letter-spacing: 0.2pt;
     margin-bottom: 3pt;
   }
+
+  header .title-line {
+    font-size: 9.5pt;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 4pt;
+  }
+
   header .contact {
     font-size: 8pt;
     color: #333;
   }
+
   header .contact a {
-    color: #1a1a1a;
-    text-decoration: underline;
-    text-underline-offset: 1.5pt;
+    color: #333;
+    text-decoration: none;
   }
+
+  /* Letter body */
   .letter-body {
-    margin-top: 16pt;
+    margin-top: 10pt;
+    flex: 1;
   }
+
   .letter-body p {
-    margin-bottom: 8pt;
+    margin-bottom: 9pt;
     text-align: justify;
-    text-indent: 0;
+    hyphens: auto;
   }
-  .signature {
-    margin-top: 20pt;
+
+  .letter-body strong {
+    font-weight: bold;
   }
-  .signature p {
+
+  .letter-body em {
+    font-style: italic;
+  }
+
+  /* Sign-off */
+  .sign-off {
+    margin-top: 14pt;
+  }
+
+  .sign-off p {
     margin-bottom: 2pt;
+  }
+
+  .sign-off .name {
+    font-weight: bold;
+    font-size: 9.5pt;
+  }
+
+  .sign-off .credentials {
+    font-size: 9pt;
+    color: #444;
   }
 </style>
 </head>
 <body>
-  <header>
-    <h1>Anthony James Padavano</h1>
-    <div class="contact">
-      New York, NY &nbsp;&middot;&nbsp;
-      padavano.anthony@gmail.com &nbsp;&middot;&nbsp;
-      561-602-7300 &nbsp;&middot;&nbsp;
-      <a href="https://4444j99.github.io/portfolio/">Portfolio</a> &nbsp;&middot;&nbsp;
-      <a href="https://www.linkedin.com/in/anthonyjamespadavano">LinkedIn</a> &nbsp;&middot;&nbsp;
-      <a href="https://github.com/meta-organvm">GitHub</a>
-    </div>
-  </header>
-  <div class="letter-body">
-    <p>Temporal's durable execution model solved a problem I had been fighting by hand for three years before I found the language for it. I run a software system alone — eight interconnected organizations, thousands of automated processes — and the central lesson of that experience is not about scale. It is about what happens when something fails at 3 AM and no one else is coming to fix it. That constraint shaped everything I understand about making non-deterministic computation trustworthy.</p>
-    <p>The gap between "this AI agent works" and "this AI agent works durably" is the gap Temporal's SDK team is closing, and it is a gap I have lived inside. When I began orchestrating multi-model workflows — routing tasks through language models, waiting on external signals, persisting intermediate state across sessions that might last hours or days — I built my own retry logic, my own checkpointing, my own state serialization. It worked, in the way that hand-rolled infrastructure always works: until it doesn't. I learned that the hard way. A workflow that succeeded ninety-seven times out of a hundred felt reliable right up until the three failures cascaded into corrupted state that took a weekend to untangle. That experience taught me something no documentation could: durability is not a feature you bolt on. It is a property of the execution model itself, or it does not exist.</p>
-    <p>What I bring to the AI SDK team is the perspective of someone who has been both the builder and the sole operator of stateful agent infrastructure — and who understands viscerally why developers need the platform to handle the hard parts. I have designed forward-only progression constraints where every transition is validated before it commits, because I discovered that allowing rollback in a system with external side effects is not flexibility but a source of silent corruption. I have built self-correction hooks into autonomous agents not because the architecture was elegant but because I got tired of waking up to find an agent had spent four hours confidently producing garbage after a single malformed input. Every guardrail in my system exists because its absence cost me something real — time, data, or trust in my own tooling.</p>
-    <p>The teaching dimension matters here too. I spent eleven years in college classrooms watching the exact moment a student's understanding breaks — the micro-expression before they nod along without comprehension. That skill translates directly to SDK design. An API that is technically correct but conceptually opaque will produce developers who use it wrong in ways that only surface in production. I think about developer experience the way I think about pedagogy: the goal is not to expose every mechanism but to make the correct path feel obvious and the incorrect path feel unnatural. Temporal already does this better than anyone in the workflow space. The AI domain, where non-determinism is the default rather than the exception, demands that same rigor applied to an entirely new class of failure modes — model hallucination, context window overflow, tool-call loops, partial completions that look complete.</p>
-    <p>I want to build the infrastructure that makes agentic workflows as reliable as traditional Temporal workflows already are. Not because reliability is an abstract virtue, but because I have spent years being the person who pays the price when it is absent. That is not a perspective you get from building at a company with an SRE team. It is what you get from building alone, at night, knowing that every shortcut you take is a debt you will personally repay.</p>
+
+<header>
+  <h1>Anthony James Padavano</h1>
+  <div class="title-line">Staff Software Engineer &amp; Durable AI Systems</div>
+  <div class="contact">
+    New York City &nbsp;|&nbsp; 561-602-7300 &nbsp;|&nbsp; padavano.anthony@gmail.com
   </div>
+</header>
+
+<div class="letter-body">
+<p>Temporal's durable execution model solved a problem I had been fighting by hand for three years before I found the language for it. I run a software system alone — eight interconnected organizations, thousands of automated processes — and the central lesson of that experience is not about scale. It is about what happens when something fails at 3 AM and no one else is coming to fix it. That constraint shaped everything I understand about making non-deterministic computation trustworthy.</p>
+<p>The gap between "this AI agent works" and "this AI agent works durably" is the gap Temporal's SDK team is closing, and it is a gap I have lived inside. When I began orchestrating multi-model workflows — routing tasks through language models, waiting on external signals, persisting intermediate state across sessions that might last hours or days — I built my own retry logic, my own checkpointing, my own state serialization. It worked, in the way that hand-rolled infrastructure always works: until it doesn't. I learned that the hard way. A workflow that succeeded ninety-seven times out of a hundred felt reliable right up until the three failures cascaded into corrupted state that took a weekend to untangle. That experience taught me something no documentation could: durability is not a feature you bolt on. It is a property of the execution model itself, or it does not exist.</p>
+<p>What I bring to the AI SDK team is the perspective of someone who has been both the builder and the sole operator of stateful agent infrastructure — and who understands viscerally why developers need the platform to handle the hard parts. I have designed forward-only progression constraints where every transition is validated before it commits, because I discovered that allowing rollback in a system with external side effects is not flexibility but a source of silent corruption. I have built self-correction hooks into autonomous agents not because the architecture was elegant but because I got tired of waking up to find an agent had spent four hours confidently producing garbage after a single malformed input. Every guardrail in my system exists because its absence cost me something real — time, data, or trust in my own tooling.</p>
+<p>The teaching dimension matters here too. I spent eleven years in college classrooms watching the exact moment a student's understanding breaks — the micro-expression before they nod along without comprehension. That skill translates directly to SDK design. An API that is technically correct but conceptually opaque will produce developers who use it wrong in ways that only surface in production. I think about developer experience the way I think about pedagogy: the goal is not to expose every mechanism but to make the correct path feel obvious and the incorrect path feel unnatural. Temporal already does this better than anyone in the workflow space. The AI domain, where non-determinism is the default rather than the exception, demands that same rigor applied to an entirely new class of failure modes — model hallucination, context window overflow, tool-call loops, partial completions that look complete.</p>
+<p>I want to build the infrastructure that makes agentic workflows as reliable as traditional Temporal workflows already are. Not because reliability is an abstract virtue, but because I have spent years being the person who pays the price when it is absent. That is not a perspective you get from building at a company with an SRE team. It is what you get from building alone, at night, knowing that every shortcut you take is a debt you will personally repay.</p>
+</div>
+
+<div class="sign-off">
+  <p>Sincerely,</p>
+  <p class="name">Anthony James Padavano</p>
+  <p class="credentials">Creative Technologist | MFA, Creative Writing | New York City</p>
+</div>
+
 </body>
 </html>

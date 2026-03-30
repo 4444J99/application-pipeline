@@ -204,14 +204,23 @@ def _answer_question(question: dict, entry: dict, personal: dict) -> str:
                     return v
         return "Acknowledge"
 
-    # Yes/No qualification questions — analyze the question content
+    # Yes/No qualification questions — answer based on content, NOT blanket "Yes"
     if field_type == "multi_value_single_select" and values == ["Yes", "No"]:
-        # These are qualification questions — answer based on the content
         q_text = label
-        # Experience questions — generally Yes
-        if any(kw in q_text for kw in ["experience", "worked with", "led", "used", "have you"]):
+        # Positive qualification: authorized, eligible, open to, willing, comfortable
+        if any(kw in q_text for kw in [
+            "authorized", "eligible", "open to", "willing", "comfortable",
+            "acknowledge", "consent", "agree", "confirm",
+        ]):
             return "Yes"
-        return "Yes"
+        # Negative qualification: require sponsorship, previously employed, interviewed before
+        if any(kw in q_text for kw in [
+            "sponsorship", "previously", "interviewed", "employed by",
+            "worked for", "conflict", "history with",
+        ]):
+            return "No"
+        # Unknown — leave blank for human review rather than guessing
+        return ""
 
     # Free text fields — this is the opportunity for unique content
     if field_type in ("input_text", "textarea") and not any(
@@ -268,11 +277,13 @@ def _check_overlap(cover_letter: str, resume_html: str) -> list[str]:
     return list(overlaps)
 
 
-def _build_cover_letter_pdf(md_path: Path, pdf_path: Path) -> bool:
+def _build_cover_letter_pdf(
+    md_path: Path, pdf_path: Path, entry: dict | None = None
+) -> bool:
     """Convert cover letter markdown to PDF via Chrome headless.
 
-    Uses the resume-matching template at materials/resumes/base/cover-letter-template.html.
-    Falls back to build_cover_letters.py's template if available.
+    Uses the resume-matching template at materials/resumes/base/cover-letter-template.html
+    with title-line, credentials, and sign-off matching the resume visual identity.
     """
     md_text = md_path.read_text()
 
@@ -284,52 +295,132 @@ def _build_cover_letter_pdf(md_path: Path, pdf_path: Path) -> bool:
         # Fallback — but this should never happen
         template = (
             '<!DOCTYPE html><html><head><style>'
-            'body{font-family:Georgia,serif;font-size:9pt;line-height:1.35;'
-            'margin:0.45in 0.55in;color:#1a1a1a}p{margin:0 0 8pt 0}'
+            'body{font-family:Georgia,serif;font-size:10.5pt;line-height:1.5;'
+            'margin:0.45in 0.55in;color:#1a1a1a}p{margin:0 0 11pt 0}'
             '</style></head><body>\n{{BODY}}\n</body></html>'
         )
 
-    # Extract letter body (skip header lines, "Dear...", "Sincerely")
+    # Identity position → title-line and credentials for template
+    TITLE_LINES = {
+        "systems-artist": "Systems Artist & Creative Technologist",
+        "creative-technologist": "Creative Technologist & Systems Builder",
+        "independent-engineer": "Software Engineer & Systems Architect",
+        "documentation-engineer": "Documentation Engineer & Systems Architect",
+        "educator": "Educator & Learning Architect",
+        "platform-orchestrator": "Platform Engineer & Systems Builder",
+        "governance-architect": "Governance & Compliance Architect",
+        "founder-operator": "Full-Stack Engineer & Systems Builder",
+        "community-practitioner": "Community Practitioner & Creative Technologist",
+    }
+    CREDENTIALS = {
+        "systems-artist": "Systems Artist & Creative Technologist | MFA, Creative Writing | New York City",
+        "creative-technologist": "Creative Technologist | MFA, Creative Writing | New York City",
+        "independent-engineer": "Software Engineer | Full-Stack Developer (Meta) | New York City",
+        "documentation-engineer": "Documentation Engineer | MFA, Creative Writing | New York City",
+        "educator": "Educator & Learning Architect | MFA, Creative Writing | New York City",
+        "platform-orchestrator": "Platform Engineer | Full-Stack Developer (Meta) | New York City",
+        "governance-architect": "Governance & Compliance Architect | New York City",
+        "founder-operator": "Founder & Operator | Full-Stack Developer (Meta) | New York City",
+        "community-practitioner": "Community Practitioner | MFA, Creative Writing | New York City",
+    }
+
+    position = "independent-engineer"
+    if entry:
+        position = (
+            entry.get("submission", {}).get("identity_position", "")
+            or entry.get("fit", {}).get("identity_position", "")
+            or entry.get("identity_position", "")
+            or "independent-engineer"
+        )
+
+    title_line = TITLE_LINES.get(position, "Software Engineer & Systems Architect")
+    credentials = CREDENTIALS.get(
+        position, "Software Engineer & Systems Architect | MFA, Creative Writing | New York City"
+    )
+
+    # Try to match title-line from resume HTML if available
+    # Entry ID from entry dict or derive from app dir name
+    entry_id = entry.get("id", "") if entry else ""
+    if not entry_id:
+        entry_id = md_path.parent.name
+    resume_dir = MATERIALS_DIR / "resumes" / "batch-03" / entry_id
+    if resume_dir.exists():
+        for rhtml in resume_dir.glob("*.html"):
+            m = re.search(r'class="title-line"[^>]*>([^<]+)<', rhtml.read_text())
+            if m:
+                title_line = m.group(1).strip()
+                break
+
+    # Convert markdown to HTML paragraphs — blank-line-separated paragraphs
     lines = md_text.strip().split("\n")
-    body_lines = []
-    in_body = False
+    paragraphs = []
+    current = []
     for line in lines:
-        line = line.strip()
-        if line.startswith("Dear ") or line.startswith("To "):
-            in_body = True
-            continue
-        if line in ("Sincerely,", "Sincerely"):
+        stripped = line.strip()
+        if stripped == "":
+            if current:
+                paragraphs.append(" ".join(current))
+                current = []
+        else:
+            current.append(stripped)
+    if current:
+        paragraphs.append(" ".join(current))
+
+    # Build body HTML, skipping sign-off and author lines
+    SKIP_PATTERNS = (
+        "Anthony Padavano", "Anthony James Padavano", "New York, NY",
+        "New York City", "padavano.anthony@gmail.com",
+    )
+    body_parts = []
+    for para in paragraphs:
+        if para.startswith("Sincerely,") or para.startswith("Sincerely."):
             break
-        if line in ("Anthony Padavano", "Anthony James Padavano") and not in_body:
+        if any(para.startswith(s) for s in SKIP_PATTERNS):
             continue
-        if in_body and line:
-            body_lines.append(f"    <p>{line}</p>")
-        elif not in_body:
-            continue
+        # Convert markdown formatting
+        text = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", para)
+        text = re.sub(r"\*([^*]+)\*", r"<em>\1</em>", text)
+        text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+        body_parts.append(f"<p>{text}</p>")
 
-    body_html = "\n".join(body_lines)
-    html = template.replace("{{BODY}}", body_html).replace("{{NAME}}", "Anthony James Padavano")
+    body_html = "\n".join(body_parts)
 
-    html_path = md_path.with_suffix(".html")
+    # Substitute all template placeholders
+    html = template.replace("{{BODY}}", body_html)
+    html = html.replace("{{TITLE_LINE}}", title_line)
+    html = html.replace("{{CREDENTIALS}}", credentials)
+
+    html_path = md_path.with_suffix(".html").resolve()
     html_path.write_text(html)
 
-    try:
-        subprocess.run(
-            [
-                CHROME_PATH,
-                "--headless",
-                "--disable-gpu",
-                "--no-sandbox",
-                "--print-to-pdf=" + str(pdf_path),
-                "--print-to-pdf-no-header",
-                str(html_path),
-            ],
-            capture_output=True,
-            timeout=30,
-        )
-        return pdf_path.exists()
-    except Exception:
-        return False
+    file_url = f"file://{html_path}"
+    abs_pdf = pdf_path.resolve()
+    for headless_flag in ["--headless=new", "--headless"]:
+        if abs_pdf.exists():
+            abs_pdf.unlink()
+        try:
+            result = subprocess.run(
+                [
+                    CHROME_PATH,
+                    headless_flag,
+                    "--disable-gpu",
+                    "--no-sandbox",
+                    "--disable-software-rasterizer",
+                    "--no-pdf-header-footer",
+                    f"--print-to-pdf={abs_pdf}",
+                    file_url,
+                ],
+                capture_output=True,
+                timeout=30,
+            )
+            if result.returncode == 0 and abs_pdf.exists() and abs_pdf.stat().st_size > 0:
+                return True
+        except subprocess.TimeoutExpired:
+            subprocess.run(["pkill", "-f", f"chrome.*{html_path.name}"], capture_output=True)
+            continue
+        except FileNotFoundError:
+            break
+    return False
 
 
 def apply_to_entry(entry_id: str, dry_run: bool = False) -> bool:
@@ -375,6 +466,24 @@ def apply_to_entry(entry_id: str, dry_run: bool = False) -> bool:
     print(f"  Role: {role}")
     print(f"  URL: {url}")
     print(f"  Portal: {portal}")
+
+    # 1c. APPLICATION URL LIVENESS CHECK
+    if url:
+        import urllib.request
+        import urllib.error
+        try:
+            req = urllib.request.Request(url, method="HEAD")
+            req.add_header("User-Agent", "Mozilla/5.0")
+            resp = urllib.request.urlopen(req, timeout=10)
+            if resp.status >= 400:
+                print(f"  URL CHECK: WARNING — returned HTTP {resp.status}")
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                print(f"  URL CHECK: DEAD LINK — HTTP 404. Job posting may have been removed.")
+            else:
+                print(f"  URL CHECK: WARNING — HTTP {e.code}")
+        except Exception:
+            print(f"  URL CHECK: Could not verify (timeout or network error)")
 
     # 2. Standards audit — Level 1 (Course Regulator)
     print("\n  Running standards audit (Level 1)...")
@@ -507,6 +616,14 @@ def apply_to_entry(entry_id: str, dry_run: bool = False) -> bool:
     (app_dir / "portal-answers.md").write_text("\n".join(pa_lines))
     print(f"  Wrote: portal-answers.md ({len(answers)} answers)")
 
+    # Portal answer validation — catch blank required fields
+    blank_required = [a for a in answers if a["required"] and not a["answer"].strip()]
+    if blank_required:
+        print(f"  PORTAL VALIDATION: {len(blank_required)} BLANK REQUIRED FIELD(S):")
+        for a in blank_required:
+            print(f"    BLANK: {a['label']}")
+        print("  These must be filled before submission.")
+
     # Cover letter
     if cover_letter:
         cl_path = app_dir / "cover-letter.md"
@@ -516,7 +633,7 @@ def apply_to_entry(entry_id: str, dry_run: bool = False) -> bool:
         # Build PDF
         pdf_name = f"Anthony-Padavano-{org.replace(' ', '-')}-Cover-Letter.pdf"
         pdf_path = app_dir / pdf_name
-        if _build_cover_letter_pdf(cl_path, pdf_path):
+        if _build_cover_letter_pdf(cl_path, pdf_path, entry=entry):
             print(f"  Built: {pdf_name}")
         else:
             print("  WARNING: Failed to build cover letter PDF")

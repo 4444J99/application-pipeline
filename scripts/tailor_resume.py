@@ -35,6 +35,32 @@ from pipeline_lib import (
 WORK_DIR = Path(__file__).resolve().parent / ".alchemize-work"
 RESUMES_DIR = MATERIALS_DIR / "resumes"
 
+# Truncation patterns — conjunctions/prepositions/articles at sentence end = always truncated
+# Full nouns (systems, pipelines, deployment) are legitimate endings and NOT flagged
+_TRUNCATION_TAIL = re.compile(
+    r'\b(and|to|the|of|for|in|with|across|through|from|into|by|or|a|an)\.\s*$'
+)
+_COMMA_PERIOD = re.compile(r',\.\s*$')
+
+
+def validate_sentence_completeness(html: str) -> list[str]:
+    """Check resume HTML for truncated sentences in project descriptions and bullets.
+
+    Returns list of truncated text snippets. Empty list = all clean.
+    """
+    warnings = []
+    # Extract project-desc content
+    for m in re.finditer(r'class="project-desc">(.*?)</div>', html, re.DOTALL):
+        text = re.sub(r'<[^>]+>', '', m.group(1)).strip()
+        if _TRUNCATION_TAIL.search(text) or _COMMA_PERIOD.search(text):
+            warnings.append(text)
+    # Extract li content
+    for m in re.finditer(r'<li>(.*?)</li>', html, re.DOTALL):
+        text = re.sub(r'<[^>]+>', '', m.group(1)).strip()
+        if _TRUNCATION_TAIL.search(text) or _COMMA_PERIOD.search(text):
+            warnings.append(text)
+    return warnings
+
 BASE_RESUME_BY_IDENTITY = {
     "independent-engineer": RESUMES_DIR / "base" / "independent-engineer-resume.html",
     "educator": RESUMES_DIR / "base" / "educator-resume.html",
@@ -257,6 +283,7 @@ def build_tailoring_prompt(entry: dict, sections: dict[str, str], cover_letter: 
         "2. **ALL 4 experience entries MUST be preserved** — ORGANVM (2020–Present), Instructor (2015–Present), Digital Marketing Manager (2023–2024), Multimedia Specialist (2011–2020). These show 18 years of career breadth. NEVER drop any entry.",
         "3. **VERTICAL STACKED layout ONLY** — each experience entry is a full-width `<div class='entry'>` block. NEVER use columns, grids, flexbox rows, or side-by-side layouts for experience entries.",
         "4. **Keep the EXACT same HTML structure** — same `<div>` nesting, same CSS classes, same tag hierarchy as the input. Do not invent new layouts.",
+        "5. **EVERY sentence must be COMPLETE.** Never truncate mid-phrase. Endings like 'Manages.', 'and.', 'across 8 GitHub.', 'pipelines,.' are REJECTED. If hitting character targets requires truncation, EXCEED the target. A complete sentence that is too long is infinitely better than a truncated one.",
         "",
         "## Content Length Targets (CRITICAL — resume must fill exactly 1 page)",
         "",
@@ -414,6 +441,14 @@ def integrate_tailored_sections(entry_id: str, output_text: str, identity: str |
             count=1,
             flags=re.DOTALL,
         )
+
+    # Validate sentence completeness before writing
+    truncation_warnings = validate_sentence_completeness(html)
+    if truncation_warnings:
+        print(f"  WARNING: {len(truncation_warnings)} truncated sentence(s) detected:")
+        for w in truncation_warnings:
+            print(f"    TRUNCATED: ...{w[-80:]}")
+        print("  Resume written but NEEDS MANUAL REVIEW — truncated content detected.")
 
     # Write per-entry resume HTML to current batch dir (per-role subfolder)
     role_dir = RESUMES_DIR / CURRENT_BATCH / entry_id

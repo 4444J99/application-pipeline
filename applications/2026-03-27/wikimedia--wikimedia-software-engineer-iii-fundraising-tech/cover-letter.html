@@ -9,26 +9,44 @@
     size: 8.5in 11in;
     margin: 0.45in 0.55in;
   }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   body {
     font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 9pt;
-    line-height: 1.35;
+    font-size: 9.5pt;
+    line-height: 1.42;
     color: #1a1a1a;
     width: 7.4in;
     max-width: 7.4in;
     margin: 0 auto;
     padding: 0.45in 0.55in;
+    display: flex;
+    flex-direction: column;
+    min-height: 10.1in;
   }
+
   @media print {
-    body { padding: 0; width: 100%; max-width: 100%; }
+    body {
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      min-height: 100vh;
+    }
   }
+
+  /* Header — matches resume header exactly */
   header {
     text-align: center;
-    margin-bottom: 14pt;
-    padding-bottom: 7pt;
+    margin-bottom: 12pt;
+    padding-bottom: 8pt;
     border-bottom: 1.5pt solid #1a1a1a;
   }
+
   header h1 {
     font-size: 16pt;
     font-weight: bold;
@@ -36,49 +54,90 @@
     letter-spacing: 0.2pt;
     margin-bottom: 3pt;
   }
+
+  header .title-line {
+    font-size: 9.5pt;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 4pt;
+  }
+
   header .contact {
     font-size: 8pt;
     color: #333;
   }
+
   header .contact a {
-    color: #1a1a1a;
-    text-decoration: underline;
-    text-underline-offset: 1.5pt;
+    color: #333;
+    text-decoration: none;
   }
+
+  /* Letter body */
   .letter-body {
-    margin-top: 16pt;
+    margin-top: 10pt;
+    flex: 1;
   }
+
   .letter-body p {
-    margin-bottom: 8pt;
+    margin-bottom: 9pt;
     text-align: justify;
-    text-indent: 0;
+    hyphens: auto;
   }
-  .signature {
-    margin-top: 20pt;
+
+  .letter-body strong {
+    font-weight: bold;
   }
-  .signature p {
+
+  .letter-body em {
+    font-style: italic;
+  }
+
+  /* Sign-off */
+  .sign-off {
+    margin-top: 14pt;
+  }
+
+  .sign-off p {
     margin-bottom: 2pt;
+  }
+
+  .sign-off .name {
+    font-weight: bold;
+    font-size: 9.5pt;
+  }
+
+  .sign-off .credentials {
+    font-size: 9pt;
+    color: #444;
   }
 </style>
 </head>
 <body>
-  <header>
-    <h1>Anthony James Padavano</h1>
-    <div class="contact">
-      New York, NY &nbsp;&middot;&nbsp;
-      padavano.anthony@gmail.com &nbsp;&middot;&nbsp;
-      561-602-7300 &nbsp;&middot;&nbsp;
-      <a href="https://4444j99.github.io/portfolio/">Portfolio</a> &nbsp;&middot;&nbsp;
-      <a href="https://www.linkedin.com/in/anthonyjamespadavano">LinkedIn</a> &nbsp;&middot;&nbsp;
-      <a href="https://github.com/meta-organvm">GitHub</a>
-    </div>
-  </header>
-  <div class="letter-body">
-    <p>Wikimedia processes donations from nearly every country on earth, in dozens of currencies, through infrastructure that must be transparent enough for public audit and robust enough that a single mishandled transaction erodes donor trust at global scale. I built a system with the same constraint — not at Wikimedia's volume, but with the same non-negotiable demand for auditability — because when you are the sole operator of interconnected organizations, you cannot hide from your own failures. Every state transition in my infrastructure is recorded, every promotion between stages is gated and validated, and every decision is reconstructible after the fact. I did not choose that architecture because it was elegant. I chose it because the alternative was waking up to a system in an unexplainable state and having no one to ask what happened.</p>
-    <p>The discipline of transparent infrastructure is something I arrived at through pain rather than principle. Early in my work, I built systems that functioned but could not explain themselves. A process would fail, and I would spend hours reverse-engineering what sequence of events led to the failure because the logs told me what happened but not why. That experience converted me — there is no softer word for it — to the position that auditability is not a reporting layer you add on top of working software. It is a structural property of the data model itself. Every record in my pipeline carries its provenance: when it was created, which gate it passed through, what score it received, who or what advanced it, and what the state was at the moment of transition. Wikimedia's fundraising infrastructure, where donors and the public have a legitimate right to understand how their contributions flow through the system, demands this same posture. The difference is that at Wikimedia, the stake is not just operational clarity — it is institutional legitimacy.</p>
-    <p>I bring a perspective that most engineers at public-interest technology organizations do not have: I have built for transparency while also building for myself, which means I know where the temptation to cut corners lives. When the deadline is tight and the feature is overdue, the first thing an engineer sacrifices is the audit trail. I know this because I have felt that temptation, and I know the cost of yielding to it — the debugging session three months later when you need the context you did not record. At Wikimedia, where the codebase is open and the mission depends on public confidence, that discipline is not optional. It is the product.</p>
-    <p>The teaching background matters here in a way that is specific to Wikimedia's culture. I spent over a decade working in open-access education — public colleges, community colleges, institutions where the students were first-generation, working-class, often skeptical that the system was built for them. That experience gave me a deep commitment to technology that serves a public rather than extracts from one, and a practiced ability to make complex systems legible to non-technical stakeholders. Fundraising technology sits at the intersection of engineering and trust: the donor who gives twenty dollars to keep Wikipedia free needs to believe — and needs to be able to verify — that their contribution was handled with the same rigor as a major institutional grant. Building infrastructure worthy of that trust is not just an engineering problem. It is a civic one.</p>
-    <p>I want to build fundraising infrastructure at Wikimedia because the mission aligns with how I already build. Transparency, auditability, public accountability — these are not values I would need to adopt. They are constraints I chose for my own work before I had any external reason to, because I discovered that systems you can trust are systems that can explain themselves.</p>
+
+<header>
+  <h1>Anthony James Padavano</h1>
+  <div class="title-line">Software Engineer &amp; Transparent Infrastructure Systems</div>
+  <div class="contact">
+    New York City &nbsp;|&nbsp; 561-602-7300 &nbsp;|&nbsp; padavano.anthony@gmail.com
   </div>
+</header>
+
+<div class="letter-body">
+<p>Wikimedia processes donations from nearly every country on earth, in dozens of currencies, through infrastructure that must be transparent enough for public audit and robust enough that a single mishandled transaction erodes donor trust at global scale. I built a system with the same constraint — not at Wikimedia's volume, but with the same non-negotiable demand for auditability — because when you are the sole operator of interconnected organizations, you cannot hide from your own failures. Every state transition in my infrastructure is recorded, every promotion between stages is gated and validated, and every decision is reconstructible after the fact. I did not choose that architecture because it was elegant. I chose it because the alternative was waking up to a system in an unexplainable state and having no one to ask what happened.</p>
+<p>The discipline of transparent infrastructure is something I arrived at through pain rather than principle. Early in my work, I built systems that functioned but could not explain themselves. A process would fail, and I would spend hours reverse-engineering what sequence of events led to the failure because the logs told me what happened but not why. That experience converted me — there is no softer word for it — to the position that auditability is not a reporting layer you add on top of working software. It is a structural property of the data model itself. Every record in my pipeline carries its provenance: when it was created, which gate it passed through, what score it received, who or what advanced it, and what the state was at the moment of transition. Wikimedia's fundraising infrastructure, where donors and the public have a legitimate right to understand how their contributions flow through the system, demands this same posture. The difference is that at Wikimedia, the stake is not just operational clarity — it is institutional legitimacy.</p>
+<p>I bring a perspective that most engineers at public-interest technology organizations do not have: I have built for transparency while also building for myself, which means I know where the temptation to cut corners lives. When the deadline is tight and the feature is overdue, the first thing an engineer sacrifices is the audit trail. I know this because I have felt that temptation, and I know the cost of yielding to it — the debugging session three months later when you need the context you did not record. At Wikimedia, where the codebase is open and the mission depends on public confidence, that discipline is not optional. It is the product.</p>
+<p>The teaching background matters here in a way that is specific to Wikimedia's culture. I spent over a decade working in open-access education — public colleges, community colleges, institutions where the students were first-generation, working-class, often skeptical that the system was built for them. That experience gave me a deep commitment to technology that serves a public rather than extracts from one, and a practiced ability to make complex systems legible to non-technical stakeholders. Fundraising technology sits at the intersection of engineering and trust: the donor who gives twenty dollars to keep Wikipedia free needs to believe — and needs to be able to verify — that their contribution was handled with the same rigor as a major institutional grant. Building infrastructure worthy of that trust is not just an engineering problem. It is a civic one.</p>
+<p>I want to build fundraising infrastructure at Wikimedia because the mission aligns with how I already build. Transparency, auditability, public accountability — these are not values I would need to adopt. They are constraints I chose for my own work before I had any external reason to, because I discovered that systems you can trust are systems that can explain themselves.</p>
+</div>
+
+<div class="sign-off">
+  <p>Sincerely,</p>
+  <p class="name">Anthony James Padavano</p>
+  <p class="credentials">Founder & Operator | Full-Stack Developer (Meta) | New York City</p>
+</div>
+
 </body>
 </html>

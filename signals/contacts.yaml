@@ -3105,3 +3105,210 @@ contacts:
       Would love to connect.'
   pipeline_entries:
   - databricks-specialist-solutions-architect-ml-ai-engineer-financial-serv
+- name: Dylan Kozlowski
+  organization: Wikimedia
+  role: Engineering Manager, Fundraising Tech
+  channel: linkedin
+  linkedin: https://www.linkedin.com/in/dylan-kozlowski-686a5011
+  relationship_strength: 1
+  interactions:
+  - date: '2026-03-28'
+    type: seed
+    note: Connection request sent — hiring manager for SWE III Fundraising Tech
+  pipeline_entries:
+  - wikimedia-software-engineer-iii-fundraising-tech
+  tags:
+  - hiring-manager
+  - batch-2026-03-28
+  next_action: Await acceptance
+  next_action_date: '2026-04-04'
+- name: Elliott Eggleston
+  organization: Wikimedia
+  role: Lead Software Engineer (Tech Lead), Fundraising Tech
+  channel: linkedin
+  linkedin: https://www.linkedin.com/in/elliot-eggleston-4829a2108
+  relationship_strength: 1
+  interactions:
+  - date: '2026-03-28'
+    type: seed
+    note: Connection request sent — tech lead on Fundraising Tech team
+  pipeline_entries:
+  - wikimedia-software-engineer-iii-fundraising-tech
+  tags:
+  - tech-lead
+  - batch-2026-03-28
+  next_action: Await acceptance
+  next_action_date: '2026-04-04'
+- name: Christine Stone
+  organization: Wikimedia
+  role: Software Engineer III, Fundraising Tech
+  channel: linkedin
+  linkedin: https://www.linkedin.com/in/christineastone
+  relationship_strength: 1
+  interactions:
+  - date: '2026-03-28'
+    type: seed
+    note: Connection request sent — same role on same team
+  pipeline_entries:
+  - wikimedia-software-engineer-iii-fundraising-tech
+  tags:
+  - peer
+  - batch-2026-03-28
+  next_action: Await acceptance
+  next_action_date: '2026-04-04'
+- name: Spencer Judge
+  organization: Temporal
+  role: SDK Team Lead
+  channel: linkedin
+  linkedin: https://www.linkedin.com/in/spencer-judge-b2531046/
+  relationship_strength: 1
+  interactions:
+  - date: '2026-03-28'
+    type: seed
+    note: Connection request sent — SDK Team Lead, likely hiring manager for Staff
+      SWE AI SDK
+  pipeline_entries:
+  - temporal-staff-software-engineer-ai-sdk
+  tags:
+  - hiring-manager
+  - batch-2026-03-28
+  next_action: Await acceptance
+  next_action_date: '2026-04-04'
+- name: Melissa Herrera
+  organization: Temporal
+  role: Senior Developer Advocate, AI
+  channel: linkedin
+  linkedin: https://www.linkedin.com/in/herrera-melissa/
+  relationship_strength: 1
+  interactions:
+  - date: '2026-03-28'
+    type: seed
+    note: Connection request sent — AI-focused developer advocate
+  pipeline_entries:
+  - temporal-staff-software-engineer-ai-sdk
+  tags:
+  - devrel
+  - batch-2026-03-28
+  next_action: Await acceptance
+  next_action_date: '2026-04-04'
+- name: Melanie Warrick
+  organization: Temporal
+  role: Developer Relations Engineer (AI)
+  channel: linkedin
+  linkedin: https://www.linkedin.com/in/melaniewarrick/
+  relationship_strength: 1
+  interactions:
+  - date: '2026-03-28'
+    type: seed
+    note: Connection request sent — DevRel AI focus, ex-Google ML
+  pipeline_entries:
+  - temporal-staff-software-engineer-ai-sdk
+  tags:
+  - devrel
+  - batch-2026-03-28
+  next_action: Await acceptance
+  next_action_date: '2026-04-04'
+- name: Roy Williams III
+  organization: Anthropic
+  role: Head of Foundation (Infrastructure & Developer Productivity)
+  channel: linkedin
+  linkedin: https://www.linkedin.com/in/roywilliamsiii/
+  relationship_strength: 1
+  interactions:
+  - date: '2026-03-28'
+    type: seed
+    note: Connection request sent — org leader for Infra & DevProd, role reports into
+      his org
+  pipeline_entries:
+  - anthropic-staff-software-engineer-developer-productivity
+  tags:
+  - org-leader
+  - batch-2026-03-28
+  next_action: Await acceptance
+  next_action_date: '2026-04-04'
+- name: Dmitry Petrashko
+  organization: Anthropic
+  role: Member of Technical Staff (Infrastructure)
+  channel: linkedin
+  linkedin: https://www.linkedin.com/in/darkdimius/
+  relationship_strength: 1
+  interactions:
+  - date: '2026-03-28'
+    type: seed
+    note: Connection request sent — ex-Stripe Staff Eng & Tech Advisor to Head of
+      Infra
+  pipeline_entries:
+  - anthropic-staff-software-engineer-developer-productivity
+  tags:
+  - peer
+  - batch-2026-03-28
+  next_action: Await acceptance
+  next_action_date: '2026-04-04'
+- name: Nikhil Saxena
+  organization: Anthropic
+  role: Member of Technical Staff
+  channel: linkedin
+  linkedin: https://www.linkedin.com/in/nsax/
+  relationship_strength: 1
+  interactions:
+  - date: '2026-03-28'
+    type: seed
+    note: Connection request sent — NYC-based engineer
+  pipeline_entries:
+  - anthropic-staff-software-engineer-developer-productivity
+  tags:
+  - peer
+  - batch-2026-03-28
+  next_action: Await acceptance
+  next_action_date: '2026-04-04'
+- name: Tammer Galal
+  organization: Datadog
+  role: Manager, Customer Education & Training
+  channel: linkedin
+  linkedin: https://www.linkedin.com/in/tammergalal/
+  relationship_strength: 1
+  interactions:
+  - date: '2026-03-28'
+    type: seed
+    note: Connection request sent — hiring manager for Sr Tech Curriculum Developer
+  pipeline_entries:
+  - datadog-senior-technical-curriculum-developer-cloud-infrastructure
+  tags:
+  - hiring-manager
+  - batch-2026-03-28
+  next_action: Await acceptance
+  next_action_date: '2026-04-04'
+- name: Tara Schofield
+  organization: Datadog
+  role: Technical Curriculum Developer (Cloud Security)
+  channel: linkedin
+  linkedin: https://www.linkedin.com/in/tarascho/
+  relationship_strength: 1
+  interactions:
+  - date: '2026-03-28'
+    type: seed
+    note: Connection request sent — peer on same Customer Education team
+  pipeline_entries:
+  - datadog-senior-technical-curriculum-developer-cloud-infrastructure
+  tags:
+  - peer
+  - batch-2026-03-28
+  next_action: Await acceptance
+  next_action_date: '2026-04-04'
+- name: Peter Souter
+  organization: Datadog
+  role: Director, Cloud Education Engineering
+  channel: linkedin
+  linkedin: https://uk.linkedin.com/in/peter-souter-7bb67a38
+  relationship_strength: 1
+  interactions:
+  - date: '2026-03-28'
+    type: seed
+    note: Connection request sent — Director of Cloud Education Engineering
+  pipeline_entries:
+  - datadog-senior-technical-curriculum-developer-cloud-infrastructure
+  tags:
+  - leadership
+  - batch-2026-03-28
+  next_action: Await acceptance
+  next_action_date: '2026-04-04'

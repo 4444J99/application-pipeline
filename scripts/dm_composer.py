@@ -42,6 +42,9 @@ OUTREACH_PLANS_GLOB = [
 ]
 
 PORTFOLIO_URL = "https://4444j99.github.io/portfolio/"
+LINKEDIN_URL = "https://www.linkedin.com/in/anthonyjamespadavano"
+GITHUB_URL = "https://github.com/meta-organvm"
+PROFILE_LINKS = f"{PORTFOLIO_URL}\n{LINKEDIN_URL}\n{GITHUB_URL}"
 
 
 # ---------------------------------------------------------------------------
@@ -226,7 +229,7 @@ def _generate_protocol_dm(
     if hook_dev:
         parts.append(hook_dev.strip())
     parts.append(question)
-    parts.append(PORTFOLIO_URL)
+    parts.append(PROFILE_LINKS)
 
     return "\n\n".join(parts)
 

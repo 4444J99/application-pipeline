@@ -9,26 +9,44 @@
     size: 8.5in 11in;
     margin: 0.45in 0.55in;
   }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   body {
     font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 9pt;
-    line-height: 1.35;
+    font-size: 9.5pt;
+    line-height: 1.42;
     color: #1a1a1a;
     width: 7.4in;
     max-width: 7.4in;
     margin: 0 auto;
     padding: 0.45in 0.55in;
+    display: flex;
+    flex-direction: column;
+    min-height: 10.1in;
   }
+
   @media print {
-    body { padding: 0; width: 100%; max-width: 100%; }
+    body {
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      min-height: 100vh;
+    }
   }
+
+  /* Header — matches resume header exactly */
   header {
     text-align: center;
-    margin-bottom: 14pt;
-    padding-bottom: 7pt;
+    margin-bottom: 12pt;
+    padding-bottom: 8pt;
     border-bottom: 1.5pt solid #1a1a1a;
   }
+
   header h1 {
     font-size: 16pt;
     font-weight: bold;
@@ -36,49 +54,90 @@
     letter-spacing: 0.2pt;
     margin-bottom: 3pt;
   }
+
+  header .title-line {
+    font-size: 9.5pt;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 4pt;
+  }
+
   header .contact {
     font-size: 8pt;
     color: #333;
   }
+
   header .contact a {
-    color: #1a1a1a;
-    text-decoration: underline;
-    text-underline-offset: 1.5pt;
+    color: #333;
+    text-decoration: none;
   }
+
+  /* Letter body */
   .letter-body {
-    margin-top: 16pt;
+    margin-top: 10pt;
+    flex: 1;
   }
+
   .letter-body p {
-    margin-bottom: 8pt;
+    margin-bottom: 9pt;
     text-align: justify;
-    text-indent: 0;
+    hyphens: auto;
   }
-  .signature {
-    margin-top: 20pt;
+
+  .letter-body strong {
+    font-weight: bold;
   }
-  .signature p {
+
+  .letter-body em {
+    font-style: italic;
+  }
+
+  /* Sign-off */
+  .sign-off {
+    margin-top: 14pt;
+  }
+
+  .sign-off p {
     margin-bottom: 2pt;
+  }
+
+  .sign-off .name {
+    font-weight: bold;
+    font-size: 9.5pt;
+  }
+
+  .sign-off .credentials {
+    font-size: 9pt;
+    color: #444;
   }
 </style>
 </head>
 <body>
-  <header>
-    <h1>Anthony James Padavano</h1>
-    <div class="contact">
-      New York, NY &nbsp;&middot;&nbsp;
-      padavano.anthony@gmail.com &nbsp;&middot;&nbsp;
-      561-602-7300 &nbsp;&middot;&nbsp;
-      <a href="https://4444j99.github.io/portfolio/">Portfolio</a> &nbsp;&middot;&nbsp;
-      <a href="https://www.linkedin.com/in/anthonyjamespadavano">LinkedIn</a> &nbsp;&middot;&nbsp;
-      <a href="https://github.com/meta-organvm">GitHub</a>
-    </div>
-  </header>
-  <div class="letter-body">
-    <p>Three years ago I mass-applied to sixty engineering roles in four days and got zero interviews. That failure — total, quantifiable, humiliating — became the most productive constraint of my career. It forced me to build a system where every application is scored, tracked, validated, and gated before submission, where no process advances without meeting threshold criteria, and where every failure is recorded as data rather than absorbed as discouragement. I did not set out to build a reliability engineering practice. I set out to stop wasting my own time. The discipline that emerged is indistinguishable.</p>
-    <p>Reliability at the scale Cursor operates — where millions of developers trust AI-assisted editing with their production code — is a constraint problem dressed up as an infrastructure problem. I know this because I have lived the single-operator version of it. When you are the only person responsible for a system spanning eight organizations with automated coherence checks running on every commit, there is no incident response team. There is no escalation path. There is you, the logs, and the question: did I build this well enough that the failure mode is recoverable, or did I build it in a way that lets a small error cascade into something I will spend a weekend untangling? That question, asked thousands of times across hundreds of subsystems, produces an engineer who thinks about failure as a first-class design input rather than a thing to handle after the happy path works.</p>
-    <p>The specific reliability challenge of AI-powered development tools is that the failure modes are novel and often invisible. A traditional editor crashes or it does not. An AI-assisted editor can fail by succeeding — producing code that compiles, passes lint, looks correct, and introduces a subtle bug that only manifests under load. I have built validation layers for exactly this class of problem: multi-gate verification where automated checks catch what a single pass misses, where forward-only state transitions prevent partial rollbacks from creating inconsistency, where every state change is auditable because trust in the system depends on being able to reconstruct what happened and why. These are not theoretical preferences. They are scars from the times I did not have them.</p>
-    <p>What teaching gave me — and this is not obvious, but it is load-bearing — is the ability to build systems that degrade gracefully for humans, not just for machines. I spent over a decade watching people interact with complex material under pressure, and the universal pattern is: when something goes wrong, they do not read the error message. They panic, undo everything, and try again from scratch. Reliable systems have to account for that. Cursor's reliability is not just uptime and latency — it is the confidence a developer feels that the AI suggestion will not break their flow, that the editor will not eat their work, that the undo path is trustworthy. I design for that specific anxiety because I have felt it, and because I have seen it in two thousand students and in my own hands at 2 AM when a deployment went sideways.</p>
-    <p>I want to work on reliability at Cursor because this is the moment when AI-assisted development either earns permanent trust or permanently loses it. The guardrails that exist in these early years will shape developer behavior for a generation. I have spent three years building those guardrails alone, for a system where every failure was my personal responsibility. The chance to bring that instinct to a product used by millions is the most natural next step I can imagine.</p>
+
+<header>
+  <h1>Anthony James Padavano</h1>
+  <div class="title-line">Software Engineer &amp; Reliability Systems Builder</div>
+  <div class="contact">
+    New York City &nbsp;|&nbsp; 561-602-7300 &nbsp;|&nbsp; padavano.anthony@gmail.com
   </div>
+</header>
+
+<div class="letter-body">
+<p>Three years ago I mass-applied to sixty engineering roles in four days and got zero interviews. That failure — total, quantifiable, humiliating — became the most productive constraint of my career. It forced me to build a system where every application is scored, tracked, validated, and gated before submission, where no process advances without meeting threshold criteria, and where every failure is recorded as data rather than absorbed as discouragement. I did not set out to build a reliability engineering practice. I set out to stop wasting my own time. The discipline that emerged is indistinguishable.</p>
+<p>Reliability at the scale Cursor operates — where millions of developers trust AI-assisted editing with their production code — is a constraint problem dressed up as an infrastructure problem. I know this because I have lived the single-operator version of it. When you are the only person responsible for a system spanning eight organizations with automated coherence checks running on every commit, there is no incident response team. There is no escalation path. There is you, the logs, and the question: did I build this well enough that the failure mode is recoverable, or did I build it in a way that lets a small error cascade into something I will spend a weekend untangling? That question, asked thousands of times across hundreds of subsystems, produces an engineer who thinks about failure as a first-class design input rather than a thing to handle after the happy path works.</p>
+<p>The specific reliability challenge of AI-powered development tools is that the failure modes are novel and often invisible. A traditional editor crashes or it does not. An AI-assisted editor can fail by succeeding — producing code that compiles, passes lint, looks correct, and introduces a subtle bug that only manifests under load. I have built validation layers for exactly this class of problem: multi-gate verification where automated checks catch what a single pass misses, where forward-only state transitions prevent partial rollbacks from creating inconsistency, where every state change is auditable because trust in the system depends on being able to reconstruct what happened and why. These are not theoretical preferences. They are scars from the times I did not have them.</p>
+<p>What teaching gave me — and this is not obvious, but it is load-bearing — is the ability to build systems that degrade gracefully for humans, not just for machines. I spent over a decade watching people interact with complex material under pressure, and the universal pattern is: when something goes wrong, they do not read the error message. They panic, undo everything, and try again from scratch. Reliable systems have to account for that. Cursor's reliability is not just uptime and latency — it is the confidence a developer feels that the AI suggestion will not break their flow, that the editor will not eat their work, that the undo path is trustworthy. I design for that specific anxiety because I have felt it, and because I have seen it in two thousand students and in my own hands at 2 AM when a deployment went sideways.</p>
+<p>I want to work on reliability at Cursor because this is the moment when AI-assisted development either earns permanent trust or permanently loses it. The guardrails that exist in these early years will shape developer behavior for a generation. I have spent three years building those guardrails alone, for a system where every failure was my personal responsibility. The chance to bring that instinct to a product used by millions is the most natural next step I can imagine.</p>
+</div>
+
+<div class="sign-off">
+  <p>Sincerely,</p>
+  <p class="name">Anthony James Padavano</p>
+  <p class="credentials">Platform Engineer | Full-Stack Developer (Meta) | New York City</p>
+</div>
+
 </body>
 </html>

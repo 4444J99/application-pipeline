@@ -19,7 +19,7 @@
   body {
     font-family: 'Georgia', 'Times New Roman', serif;
     font-size: 8.4pt;
-    line-height: 1.28;
+    line-height: 1.30;
     color: #1a1a1a;
     width: 7.4in;
     max-width: 7.4in;
@@ -38,7 +38,7 @@
   /* Header — compact single line */
   header {
     text-align: center;
-    margin-bottom: 8pt;
+    margin-bottom: 9pt;
     padding-bottom: 7pt;
     border-bottom: 1.5pt solid #1a1a1a;
   }
@@ -70,7 +70,7 @@
   .section {
     display: flex;
     gap: 12pt;
-    padding: 4pt 0;
+    padding: 5pt 0;
     border-bottom: 0.5pt solid #ccc;
   }
 
@@ -116,7 +116,7 @@
 
   /* Employment entries */
   .entry {
-    margin-bottom: 5pt;
+    margin-bottom: 6pt;
   }
 
   .entry:last-child {
@@ -159,7 +159,7 @@
 
   /* Projects */
   .project {
-    margin-bottom: 4pt;
+    margin-bottom: 5pt;
   }
 
   .project:last-child {
@@ -239,27 +239,27 @@
 
 <div class="project">
       <div class="project-title">auto-revision-epistemic-engine &mdash; Self-Healing Coherence Auditor</div>
-      <div class="project-desc">Automated system for detecting and fixing regressions in cross-repository coherence. Ensures audit trails.</div>
+      <div class="project-desc">Automated system for detecting and fixing regressions in cross-repository coherence. Ensures audit trails remain consistent across 113 repos, flagging drift before it propagates to dependent services.</div>
     </div>
 
     <div class="project">
       <div class="project-title">alchemia-ingestvm &mdash; Cross-Org Observability Engine</div>
-      <div class="project-desc">High-throughput ingestion pipeline providing daily health monitoring and signal validation across 8 GitHub.</div>
+      <div class="project-desc">High-throughput ingestion pipeline providing daily health monitoring and signal validation across 8 GitHub organizations. Detects degraded states, tracks cross-repo dependency health, and surfaces actionable alerts via structured observability dashboards.</div>
     </div>
 
     <div class="project">
       <div class="project-title">call-function-ontological &mdash; Formal Validation Framework</div>
-      <div class="project-desc">Ontological layer for structured function invocation with typed schemas and validation gates. Ensures.</div>
+      <div class="project-desc">Ontological layer for structured function invocation with typed schemas and validation gates. Ensures input correctness at the boundary before execution, preventing cascading failures in downstream systems.</div>
     </div>
 
     <div class="project">
       <div class="project-title">alchemical-synthesizer &mdash; Signal-Flow Reliability Architecture</div>
-      <div class="project-desc">Compositional system managing complex non-deterministic logic flows. Maintains truthful state models even.</div>
+      <div class="project-desc">Compositional system managing complex non-deterministic logic flows. Maintains truthful state models even under partial failures, with fallback routing and degraded-mode operation for upstream dependency outages.</div>
     </div>
 
     <div class="project">
       <div class="project-title">ai-chat-exporter &mdash; Developer Workflow Reliability Tooling</div>
-      <div class="project-desc">CLI tool for exporting AI chat sessions into structured development artifacts with schema validation and.</div>
+      <div class="project-desc">CLI tool for exporting AI chat sessions into structured development artifacts with schema validation and reproducible output formats. Eliminates manual transcription toil in AI-assisted development workflows.</div>
     </div>
 
   </div>
@@ -277,9 +277,9 @@
       <div class="entry-org">ORGANVM</div>
       <ul>
         <li><strong>Reliability Engineering:</strong> 23,470 tests and 104 CI/CD pipelines ensuring cross-organization coherence.</li>
-        <li><strong>CI/CD Infrastructure:</strong> 128 GitHub Actions workflows (18 reusable templates) with promotion state.</li>
-        <li><strong>Observability &amp; Verification:</strong> Monorepo-scale health monitoring with signal validation gates, URL.</li>
-        <li><strong>Developer Tooling:</strong> 37-script Python CLI suite (700+ tests) with schema validation, API integrations,.</li>
+        <li><strong>CI/CD Infrastructure:</strong> 128 GitHub Actions workflows (18 reusable templates) with promotion state machine enforcing LOCAL &rarr; CANDIDATE &rarr; PUBLIC &rarr; GRADUATED deployment gates across all repositories.</li>
+        <li><strong>Observability &amp; Verification:</strong> Monorepo-scale health monitoring with signal validation gates, URL liveness checks, staleness detection, and automated incident alerting across all services.</li>
+        <li><strong>Developer Tooling:</strong> 37-script Python CLI suite (700+ tests) with schema validation, API integrations, and batch processing that reduces operational toil and prevents regressions before deployment.</li>
       </ul>
     </div>
 
@@ -290,7 +290,7 @@
       </div>
       <div class="entry-org">Miami Dade College, Keiser University, Nova Southeastern, FAU, Young Harris, Tarrant County, Broward, Palm Beach State</div>
       <ul>
-        <li>100+ courses across 8 institutions; 2,000+ students. Systematic feedback methodology, technical communication, and.</li>
+        <li>100+ courses across 8 institutions; 2,000+ students. Systematic feedback methodology, technical communication, and cross-team mentoring that scaled knowledge transfer across diverse cohorts.</li>
       </ul>
     </div>
 
@@ -301,7 +301,7 @@
       </div>
       <div class="entry-org">Miami Dade College Foundation (nonprofit)</div>
       <ul>
-        <li>Rebuilt foundation website with reliability-focused architecture; designed data-driven fundraising campaigns increasing.</li>
+        <li>Rebuilt foundation website with reliability-focused architecture; designed data-driven fundraising campaigns increasing donor engagement by 32%.</li>
       </ul>
     </div>
 

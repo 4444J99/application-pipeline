@@ -9,26 +9,44 @@
     size: 8.5in 11in;
     margin: 0.45in 0.55in;
   }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   body {
     font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 9pt;
-    line-height: 1.35;
+    font-size: 9.5pt;
+    line-height: 1.42;
     color: #1a1a1a;
     width: 7.4in;
     max-width: 7.4in;
     margin: 0 auto;
     padding: 0.45in 0.55in;
+    display: flex;
+    flex-direction: column;
+    min-height: 10.1in;
   }
+
   @media print {
-    body { padding: 0; width: 100%; max-width: 100%; }
+    body {
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      min-height: 100vh;
+    }
   }
+
+  /* Header — matches resume header exactly */
   header {
     text-align: center;
-    margin-bottom: 14pt;
-    padding-bottom: 7pt;
+    margin-bottom: 12pt;
+    padding-bottom: 8pt;
     border-bottom: 1.5pt solid #1a1a1a;
   }
+
   header h1 {
     font-size: 16pt;
     font-weight: bold;
@@ -36,49 +54,90 @@
     letter-spacing: 0.2pt;
     margin-bottom: 3pt;
   }
+
+  header .title-line {
+    font-size: 9.5pt;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 4pt;
+  }
+
   header .contact {
     font-size: 8pt;
     color: #333;
   }
+
   header .contact a {
-    color: #1a1a1a;
-    text-decoration: underline;
-    text-underline-offset: 1.5pt;
+    color: #333;
+    text-decoration: none;
   }
+
+  /* Letter body */
   .letter-body {
-    margin-top: 16pt;
+    margin-top: 10pt;
+    flex: 1;
   }
+
   .letter-body p {
-    margin-bottom: 8pt;
+    margin-bottom: 9pt;
     text-align: justify;
-    text-indent: 0;
+    hyphens: auto;
   }
-  .signature {
-    margin-top: 20pt;
+
+  .letter-body strong {
+    font-weight: bold;
   }
-  .signature p {
+
+  .letter-body em {
+    font-style: italic;
+  }
+
+  /* Sign-off */
+  .sign-off {
+    margin-top: 14pt;
+  }
+
+  .sign-off p {
     margin-bottom: 2pt;
+  }
+
+  .sign-off .name {
+    font-weight: bold;
+    font-size: 9.5pt;
+  }
+
+  .sign-off .credentials {
+    font-size: 9pt;
+    color: #444;
   }
 </style>
 </head>
 <body>
-  <header>
-    <h1>Anthony James Padavano</h1>
-    <div class="contact">
-      New York, NY &nbsp;&middot;&nbsp;
-      padavano.anthony@gmail.com &nbsp;&middot;&nbsp;
-      561-602-7300 &nbsp;&middot;&nbsp;
-      <a href="https://4444j99.github.io/portfolio/">Portfolio</a> &nbsp;&middot;&nbsp;
-      <a href="https://www.linkedin.com/in/anthonyjamespadavano">LinkedIn</a> &nbsp;&middot;&nbsp;
-      <a href="https://github.com/meta-organvm">GitHub</a>
-    </div>
-  </header>
-  <div class="letter-body">
-    <p>Over eleven years and more than a hundred college courses, I developed one reliable diagnostic: the exact moment a student's understanding breaks is the moment their eyes go from tracking you to performing tracking. They are still nodding. They have stopped receiving. Every educator knows this moment exists. Most curriculum developers have never stood in front of a room and watched for it, because most curriculum developers come from engineering, not from teaching. I come from both, and the intersection is what makes cloud infrastructure education a problem I am unusually equipped to solve.</p>
-    <p>Datadog's learning platform teaches engineers to observe their systems — to instrument, to query, to correlate signals across distributed infrastructure. That is a domain where comprehension failure has real production consequences. An engineer who half-understands distributed tracing will misconfigure it, miss the signal in the noise, and blame the tool. I have seen the equivalent in every writing classroom I have ever taught: a student who half-understands thesis structure will produce an essay that feels wrong without knowing why, and they will blame the assignment. The pedagogical fix is identical in both cases — you do not explain the concept again. You restructure the sequence so the prerequisite understanding is verified before the next layer is introduced. I have done this for rhetorical argument, for structured feedback methodology, for systems-level thinking. The domain is different at Datadog. The learning architecture is the same.</p>
-    <p>What distinguishes my approach is that I have built the infrastructure I would be teaching about. I run a system with automated quality gates across eight interconnected organizations — not observing it from the outside, but operating it daily, seeing where monitoring catches real problems and where it generates noise that trains you to ignore alerts. That operational experience means I can write a lab exercise about setting up dashboards and know which metric the learner will misconfigure, because I misconfigured it myself and remember the forty-five minutes I spent wondering why the graph looked wrong. Curriculum built from that kind of embodied knowledge is different from curriculum built by reading documentation and writing quizzes. It anticipates the learner's mistakes rather than responding to them.</p>
-    <p>The MFA in Creative Writing is not decorative on this application. Technical curriculum development is a writing problem at its core — structure, pacing, clarity under constraint, knowing when a paragraph needs to be cut because it serves the author's ego rather than the reader's understanding. I have written over a hundred and forty thousand words of public documentation explaining my own infrastructure to general audiences, and the discipline of making complex systems legible is the same discipline that produces effective hands-on learning modules. Every essay I published was tested against the question: does this make the reader capable of something they were not capable of before? That is the only question a curriculum module needs to answer, and I have been asking it professionally for over a decade.</p>
-    <p>I want to build learning experiences at Datadog because the gap between "an engineer who can use observability tools" and "an engineer who understands what they are observing" is the same gap I have spent my entire career trying to close — first in writing classrooms, then in my own engineering practice, and now in the cloud infrastructure domain where the consequences of that gap are measured in downtime and lost revenue rather than poor grades.</p>
+
+<header>
+  <h1>Anthony James Padavano</h1>
+  <div class="title-line">Senior Technical Curriculum Developer &amp; Cloud Infrastructure</div>
+  <div class="contact">
+    New York City &nbsp;|&nbsp; 561-602-7300 &nbsp;|&nbsp; padavano.anthony@gmail.com
   </div>
+</header>
+
+<div class="letter-body">
+<p>Over eleven years and more than a hundred college courses, I developed one reliable diagnostic: the exact moment a student's understanding breaks is the moment their eyes go from tracking you to performing tracking. They are still nodding. They have stopped receiving. Every educator knows this moment exists. Most curriculum developers have never stood in front of a room and watched for it, because most curriculum developers come from engineering, not from teaching. I come from both, and the intersection is what makes cloud infrastructure education a problem I am unusually equipped to solve.</p>
+<p>Datadog's learning platform teaches engineers to observe their systems — to instrument, to query, to correlate signals across distributed infrastructure. That is a domain where comprehension failure has real production consequences. An engineer who half-understands distributed tracing will misconfigure it, miss the signal in the noise, and blame the tool. I have seen the equivalent in every writing classroom I have ever taught: a student who half-understands thesis structure will produce an essay that feels wrong without knowing why, and they will blame the assignment. The pedagogical fix is identical in both cases — you do not explain the concept again. You restructure the sequence so the prerequisite understanding is verified before the next layer is introduced. I have done this for rhetorical argument, for structured feedback methodology, for systems-level thinking. The domain is different at Datadog. The learning architecture is the same.</p>
+<p>What distinguishes my approach is that I have built the infrastructure I would be teaching about. I run a system with automated quality gates across eight interconnected organizations — not observing it from the outside, but operating it daily, seeing where monitoring catches real problems and where it generates noise that trains you to ignore alerts. That operational experience means I can write a lab exercise about setting up dashboards and know which metric the learner will misconfigure, because I misconfigured it myself and remember the forty-five minutes I spent wondering why the graph looked wrong. Curriculum built from that kind of embodied knowledge is different from curriculum built by reading documentation and writing quizzes. It anticipates the learner's mistakes rather than responding to them.</p>
+<p>The MFA in Creative Writing is not decorative on this application. Technical curriculum development is a writing problem at its core — structure, pacing, clarity under constraint, knowing when a paragraph needs to be cut because it serves the author's ego rather than the reader's understanding. I have written over a hundred and forty thousand words of public documentation explaining my own infrastructure to general audiences, and the discipline of making complex systems legible is the same discipline that produces effective hands-on learning modules. Every essay I published was tested against the question: does this make the reader capable of something they were not capable of before? That is the only question a curriculum module needs to answer, and I have been asking it professionally for over a decade.</p>
+<p>I want to build learning experiences at Datadog because the gap between "an engineer who can use observability tools" and "an engineer who understands what they are observing" is the same gap I have spent my entire career trying to close — first in writing classrooms, then in my own engineering practice, and now in the cloud infrastructure domain where the consequences of that gap are measured in downtime and lost revenue rather than poor grades.</p>
+</div>
+
+<div class="sign-off">
+  <p>Sincerely,</p>
+  <p class="name">Anthony James Padavano</p>
+  <p class="credentials">Educator & Learning Architect | MFA, Creative Writing | New York City</p>
+</div>
+
 </body>
 </html>

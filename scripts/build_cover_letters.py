@@ -190,7 +190,7 @@ def build_cover_letter(md_path: Path, chrome: str) -> tuple[bool, int]:
         title_line = TITLE_LINES.get(position, DEFAULT_TITLE_LINE)
 
     # Splice into template
-    html = template.replace("{{LETTER_BODY}}", body_html)
+    html = template.replace("{{BODY}}", body_html)
     html = html.replace("{{CREDENTIALS}}", credentials)
     html = html.replace("{{TITLE_LINE}}", title_line)
     html = html.replace(
