@@ -25,6 +25,9 @@ help:
 	@echo "  block-engagement       Correlate blocks with engagement vs silence"
 	@echo "  github-proximity       Update contacts from GitHub interaction signals"
 	@echo "  refresh-intelligence   Full ecosystem + feedback cycle"
+	@echo ""
+	@echo "Artifact Generation:"
+	@echo "  compose-linkedin       Generate LinkedIn drafts from narrative blocks"
 
 install-dev:
 	$(PYTHON) -m pip install -e ".[dev]"
@@ -79,3 +82,8 @@ refresh-all: refresh-ecosystem refresh-prestige derive-positions
 
 refresh-intelligence: refresh-all recalibrate-engagement block-engagement github-proximity
 	@echo "Full intelligence cycle complete."
+
+# Artifact generation
+compose-linkedin:
+	@read -p "Enter block path (e.g., methodology/ai-conductor): " block; \
+	$(PYTHON) scripts/linkedin_composer.py --block $$block
