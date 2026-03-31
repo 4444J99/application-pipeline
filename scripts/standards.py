@@ -295,10 +295,21 @@ class CourseRegulator(_BaseRegulator):
 
     def gate_evidence(self, entry: dict) -> GateResult:
         """Gate 1B: TF-IDF evidence match.
-        Adapter: text_match.analyze_entry() returns dict with overall_similarity."""
+        Adapter: text_match.analyze_entry() returns TextMatchResult with overall_similarity."""
         try:
-            result = text_match_mod.analyze_entry(entry)
-            sim = result.get("overall_similarity", 0.0)
+            entry_id = entry.get("id", "")
+            if not entry_id:
+                return GateResult("evidence", False, None, "entry has no id")
+            cached = text_match_mod.load_corpus_cache()
+            if cached:
+                idf, corpus_size = cached
+            else:
+                idf, _, corpus_size = text_match_mod.build_corpus()
+            result = text_match_mod.analyze_entry(entry_id, entry, idf, corpus_size)
+            if result is None:
+                return GateResult("evidence", False, None,
+                                  "no research text available for TF-IDF")
+            sim = result.overall_similarity
             passed = sim >= EVIDENCE_MATCH_THRESHOLD
             evidence = f"TF-IDF similarity={sim:.3f} (threshold={EVIDENCE_MATCH_THRESHOLD})"
             return GateResult("evidence", passed, round(sim, 3), evidence)

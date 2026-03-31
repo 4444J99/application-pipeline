@@ -268,23 +268,43 @@ class TestCourseGateEvidence:
     """Gate 1B: wraps text_match.analyze_entry."""
 
     def test_evidence_gate_passes(self, monkeypatch):
+        from dataclasses import dataclass
+
+        @dataclass
+        class _MockResult:
+            entry_id: str = "test-entry"
+            overall_similarity: float = 0.75
+
+        monkeypatch.setattr("standards.text_match_mod.load_corpus_cache",
+                            lambda: ({}, 10))
         monkeypatch.setattr("standards.text_match_mod.analyze_entry",
-                            lambda entry, **kw: {"overall_similarity": 0.75, "top_matches": []})
+                            lambda eid, entry, idf, cs: _MockResult())
         reg = CourseRegulator()
         result = reg.gate_evidence({"id": "test-entry"})
         assert result.passed is True
         assert result.score == 0.75
 
     def test_evidence_gate_low_match(self, monkeypatch):
+        from dataclasses import dataclass
+
+        @dataclass
+        class _MockResult:
+            entry_id: str = "test-entry"
+            overall_similarity: float = 0.15
+
+        monkeypatch.setattr("standards.text_match_mod.load_corpus_cache",
+                            lambda: ({}, 10))
         monkeypatch.setattr("standards.text_match_mod.analyze_entry",
-                            lambda entry, **kw: {"overall_similarity": 0.15, "top_matches": []})
+                            lambda eid, entry, idf, cs: _MockResult())
         reg = CourseRegulator()
         result = reg.gate_evidence({"id": "test-entry"})
         assert result.passed is False
 
     def test_evidence_gate_exception_handled(self, monkeypatch):
-        def raise_error(entry, **kw):
+        def raise_error(eid, entry, idf, cs):
             raise RuntimeError("no posting")
+        monkeypatch.setattr("standards.text_match_mod.load_corpus_cache",
+                            lambda: ({}, 10))
         monkeypatch.setattr("standards.text_match_mod.analyze_entry", raise_error)
         reg = CourseRegulator()
         result = reg.gate_evidence({"id": "test-entry"})
