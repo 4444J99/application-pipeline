@@ -1,9 +1,9 @@
 id: creative-capital-2027
 name: Creative Capital 2027 Open Call
 track: grant
-status: staged
+status: withdrawn
 identity_position: systems-artist
-outcome: null
+outcome: withdrawn
 target:
   organization: Creative Capital
   url: https://creative-capital.org
@@ -76,8 +76,13 @@ conversion:
   feedback: null
 tags: []
 source: 04-application-tracker.md
-notes: null
-last_touched: '2026-03-25'
+notes: Removed from schedule on 2026-03-29. Strong artistic fit, but the reward structure is not aligned with current decision criteria.
+last_touched: '2026-03-31'
+withdrawal_reason:
+  reason: strategic_shift
+  detail: Removed from schedule on 2026-03-29; not applying because the reward is not aligned.
+  date: '2026-03-29'
+  reopen: false
 status_meta:
   reviewed_by: 4jp
   reviewed_at: '2026-03-03'

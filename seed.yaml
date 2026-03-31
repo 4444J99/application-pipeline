@@ -9,13 +9,13 @@ metadata:
   tier: flagship
   promotion_status: LOCAL
   revenue_model: open-core
-  last_validated: "2026-03-30"
+  last_validated: "2026-03-31"
   description: >-
     Multi-track application management engine — structured conversion pipeline
     for jobs, grants, residencies, fellowships, and consulting engagements.
     State machine, scoring rubric, ATS integrations, outreach protocol, quality
     gates, resume/CL tailoring, contact CRM, and forced revision workflow.
-    161 scripts, 3,266 tests, 127 CLI commands. Extractable as a general-purpose
+    161 scripts, 3,379 tests, 127 CLI commands. Extractable as a general-purpose
     product; currently running one production instance (personal).
   tags:
     - application-engine
@@ -35,7 +35,7 @@ metadata:
 # ENGINE (reusable product — extractable to organvm-iii-ergon):
 #   scripts/          154 of 161 scripts are engine (state machine, scoring,
 #                     ATS clients, outreach, quality gates, CLI framework)
-#   tests/            Test suite (3,266 tests) — engine validation
+#   tests/            Test suite (3,379 tests) — engine validation
 #   strategy/         Engine configs: scoring-rubric.yaml, agent-rules.yaml,
 #                     system-standards.yaml, rater-personas.yaml, notifications.yaml
 #   docs/             Architecture, SOPs, thesis, verification blueprints
