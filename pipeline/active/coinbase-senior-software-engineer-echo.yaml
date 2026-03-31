@@ -1,0 +1,103 @@
+id: coinbase-senior-software-engineer-echo
+name: Coinbase Senior Software Engineer, Echo
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7569402?gh_jid=7569402
+  portal: greenhouse
+  location: Remote - UK
+  location_class: international
+  description: '<div class="content-intro"><p>Ready to be pushed beyond what you think
+    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
+    in the world. It’s a massive, ambitious opportunity that demands the best of us,
+    every day, as we build the emerging onchain platform — and with it, the future
+    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
+    candidate. We want someone who is passionate about our mission and who believes
+    in the power of crypto and blockchain technology to update the financial system.
+    We want someone who is eager to leave their mark on the world, who relishes the
+    pressure and privilege of working with high caliber colleagues, and who actively
+    seeks feedback to keep leveling up. We want someone who will run towards, not
+    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
+    culture</a> is intense and isn’t for everyone. But if you want to build the future
+    alongside others who excel in their disciplines and expect the same from you,
+    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
+    we are not remote-only. In-person participation is required throughout the year.
+    Team and company-wide offsites are held multiple times annually to foster collaboration,
+    connection, and alignment. Attendance is expected and fully supported.</p></div><p><span
+    style="font-weight: 400;">Coinbase is seeking experienced backend engineers to
+    join our team to build out the next generation of crypto-forward products and
+    features.&nbsp; You will solve unique, large scale, highly complex technical problems,
+    bridging the constraints posed by web-scale applications and blockchain technology.
+    You will help build the next generation of systems to make cryptocurrency accessible
+    to everyone across the globe, operating real-time applications with high frequency,
+    low latency updates, and managing the most secure, dockerized infrastructure running
+    in the cloud.</span></p> <div class="c-message_kit__blocks c-message_kit__blocks--rich_text">
+    <div class="c-message__message_blocks c-message__message_blocks--rich_text" data-qa="message-text">
+    <div class="p-block_kit_renderer" data-qa="block-kit-renderer"> <div class="p-block_kit_renderer__block_wrapper
+    p-block_kit_renderer__block_wrapper--first"> <div class="p-rich_text_block"> <div
+    class="p-rich_text_section">The Echo team is responsible for two innovative products
+    in the capital formation space; Echo and Sonar. We are a small team that operate
+    as a startup within the larger org, and we’re committed to shipping impactful
+    product at a fast pace. Echo, our marketplace for private investments has facilitated
+    over 300 deals and $150m invested since 2024, and Sonar - our public sales and
+    compliance platform - enables customers to run their own token sales. To date,
+    sales using Sonar’s technology have received over $1.5b of commitments. Our engineering
+    team works across the whole stack and is empowered to take ownership of large
+    projects.</div> </div> </div> </div> </div> </div> <p><strong>What you''ll be
+    doing:</strong></p> <ul> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Build new services to meet critical product and business needs using Golang.</span></li>
+    <li style="font-weight: 400;"><span style="font-weight: 400;">Design scalable
+    systems to solve novel problems with modern cloud technology and industry best
+    practices.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Articulate a long term vision for maintaining and scaling our backend systems
+    and the teams running them.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Work with engineers, designers, product managers and senior leadership to
+    turn our product and technical vision into a tangible roadmap every quarter.</span></li>
+    <li style="font-weight: 400;"><span style="font-weight: 400;">Write high quality,
+    well tested code to meet the needs of your customers.</span></li> </ul> <p><strong>What
+    we look for in you:</strong></p> <ul> <li style="font-weight: 400;"><span style="font-weight:
+    400;">You have at least 5 years of experience in software engineering.</span></li>
+    <li style="font-weight: 400;"><span style="font-weight: 400;">You’ve designed,
+    built, scaled and maintained production services, and know how to compose a service
+    oriented architecture.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">You write high quality, well tested code to meet the needs of your customers.</span></li>
+    <li style="font-weight: 400;"><span style="font-weight: 400;">You’re passionate
+    about building an open financial system that brings the world together.</span></li>
+    </ul> <p><strong>Nice to haves:</strong></p> <ul> <li><span style="font-weight:
+    400;">You have gone through a rapid growth in your company (from startup to mid-size).</span></li>
+    <li><span style="font-weight: 400;">Experience with&nbsp; growth experiments or
+    A/B'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-29'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.991412+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-30"

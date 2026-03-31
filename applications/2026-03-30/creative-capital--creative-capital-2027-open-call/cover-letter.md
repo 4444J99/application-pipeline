@@ -2,7 +2,7 @@
 
 Dear Creative Capital,
 
-I am applying for the 2027 Open Call with ORGANVM, a living creative system that treats governance infrastructure as an artistic medium.
+ORGANVM is a living creative system that treats governance infrastructure as an artistic medium. This letter presents the project for the 2027 Open Call.
 
 ## The Project
 
@@ -34,6 +34,6 @@ Creative Capital support would fund three initiatives:
 
 The end-state is not a solo operation. It is a multi-media production studio — but one that started from the most constrained possible position to prove that the architecture works before scaling.
 
-Thank you for your consideration.
+ORGANVM is ready to become visible. Creative Capital is the right frame.
 
 Anthony Padavano

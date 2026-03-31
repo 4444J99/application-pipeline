@@ -1,0 +1,103 @@
+id: coinbase-senior-software-engineer-frontend-identity
+name: Coinbase Senior Software Engineer, Frontend - Identity
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7395606?gh_jid=7395606
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+  description: '<div class="content-intro"><p>Ready to be pushed beyond what you think
+    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
+    in the world. It’s a massive, ambitious opportunity that demands the best of us,
+    every day, as we build the emerging onchain platform — and with it, the future
+    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
+    candidate. We want someone who is passionate about our mission and who believes
+    in the power of crypto and blockchain technology to update the financial system.
+    We want someone who is eager to leave their mark on the world, who relishes the
+    pressure and privilege of working with high caliber colleagues, and who actively
+    seeks feedback to keep leveling up. We want someone who will run towards, not
+    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
+    culture</a> is intense and isn’t for everyone. But if you want to build the future
+    alongside others who excel in their disciplines and expect the same from you,
+    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
+    we are not remote-only. In-person participation is required throughout the year.
+    Team and company-wide offsites are held multiple times annually to foster collaboration,
+    connection, and alignment. Attendance is expected and fully supported.</p></div><p>The
+    team manages everything related to a user''s identity at Coinbase. This includes
+    login, signup, OAuth, account security, and multi-factor authentication. The Horizontal
+    Frontend team within the Identity org is responsible for building and maintaining
+    the frontend surfaces that power these critical user interactions. The team works
+    closely with backend pods to deliver seamless, scalable, and reliable user experiences.</p>
+    <p>The team is also focused on migrating main frontend views to React Native,
+    enabling a unified codebase across platforms. Additionally, the team is working
+    on initiatives like multi-user and multi-organization support, ensuring Coinbase
+    products can scale to meet the needs of businesses and organizations. The challenging
+    part is building world-class frontend experiences while maintaining low latencies
+    and high reliability, all while collaborating with multiple cross-functional teams
+    (XFN) at scale.</p> <p><strong>What You''ll Be Doing:</strong></p> <ul> <li>Build
+    and enhance frontend experiences for login, signup, OAuth, account security, and
+    multi-user/multi-organization support.</li> <li>Contribute to the migration of
+    main frontend views to React Native, ensuring a unified and efficient codebase
+    across platforms.</li> <li>Design and implement scalable, maintainable, and high-performance
+    user interfaces using modern frontend technologies like React and TypeScript.</li>
+    <li>Collaborate with backend engineers, designers, product managers, and senior
+    leadership to turn product and technical visions into tangible roadmaps.</li>
+    <li>Maintain low-latency, highly reliable frontend surfaces to deliver a world-class
+    user experience.</li> <li>Write high-quality, well-tested code to meet the needs
+    of Coinbase’s growing user base.</li> </ul> <p><strong>What We Look For in You:</strong></p>
+    <ul> <li>You have at least 5+ years of experience in frontend software engineering.</li>
+    <li>You’ve designed, built, scaled, and maintained production-grade frontend systems.</li>
+    <li>You have expertise in modern frontend frameworks like React and TypeScript.</li>
+    <li>You write high-quality, well-tested code to meet the needs of your customers.</li>
+    <li>You’re passionate about building an open financial system that brings the
+    world together.</li> <li>Demonstrates the ability to responsibly use generative
+    AI tools and copilots (e.g., LibreChat, Gemini, Glean) in daily workflows, continuously
+    learn as tools evolve, and apply human-in-the-loop practices to deliver business-ready
+    outputs and drive measurable improvements in efficiency, cost, and quality.</li>
+    </ul> <p><strong>Nice to Haves:</strong></p> <ul> <li>Experience with React Native
+    or migrating web views to mobile platforms.</li> <li>You have gone through a rapid
+    growth phase in your company (from startup to mid-size).</li> <li>Familiarity
+    with authentication, identity, or security domains.</li> <li>Experience optimizing
+    frontend performance for low-latency, high-reliability systems.</li> <li>Crypto-forward
+    experience, including familiarity with on-chain activity such as interacting with
+    Ethereum addresses, using ENS, and engaging with dApps or blockchain-based services.</li>
+    </ul> <p>Job #: P74160</p> <p>#LI-Remote</p> <p><span style="font-weight: 400;">Pay
+    Transparency Notice:&nbsp; Depending on your work location, the target annual
+    salary for this position can range from $</span><span style="font-weight: 400;">[Zone
+    3 Pay]</span><span style="font-weight: 400;"> to $</span><span style="font-weight:
+    400;">[Zone 1 Pay] </span><span style="font-weight: 400;">+ target bonus + t'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.001469+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-30"

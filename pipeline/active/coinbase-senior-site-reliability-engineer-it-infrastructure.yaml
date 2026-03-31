@@ -1,0 +1,103 @@
+id: coinbase-senior-site-reliability-engineer-it-infrastructure
+name: Coinbase Senior Site Reliability Engineer, IT Infrastructure
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7663545?gh_jid=7663545
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+  description: '<div class="content-intro"><p>Ready to be pushed beyond what you think
+    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
+    in the world. It’s a massive, ambitious opportunity that demands the best of us,
+    every day, as we build the emerging onchain platform — and with it, the future
+    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
+    candidate. We want someone who is passionate about our mission and who believes
+    in the power of crypto and blockchain technology to update the financial system.
+    We want someone who is eager to leave their mark on the world, who relishes the
+    pressure and privilege of working with high caliber colleagues, and who actively
+    seeks feedback to keep leveling up. We want someone who will run towards, not
+    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
+    culture</a> is intense and isn’t for everyone. But if you want to build the future
+    alongside others who excel in their disciplines and expect the same from you,
+    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
+    we are not remote-only. In-person participation is required throughout the year.
+    Team and company-wide offsites are held multiple times annually to foster collaboration,
+    connection, and alignment. Attendance is expected and fully supported.</p></div><p><strong>What
+    you’ll be doing (ie. job duties):</strong><strong>&nbsp;</strong></p> <ul> <li>Partner
+    with the Coinbase Infrastructure team to support and extend existing ci/cd frameworks
+    to support IT services, including enterprise network platforms&nbsp;</li> <li>Partner
+    with security and compliance to build surveillance tooling into deployment pipelines</li>
+    <li>Design and implement automation to streamline overall operational IT support
+    workflows&nbsp;</li> <li>Action Kubernetes deployment, implementation, and support</li>
+    <li>Build a technological roadmap based on product requirements</li> <li>Participate
+    in on-call to support the AWS service deployment pipeline</li> <li>Promote DevSecOps
+    mentality and establish best practices to ensure top-tier cloud security&nbsp;</li>
+    <li>Set and maintain a standard of excellence for technical documentation across
+    IT engineering&nbsp;</li> <li>Participate in an operational environment with strict
+    SLAs and managed incident response and disaster recovery strategies</li> <li>Facilitate
+    incident response, conduct root cause analysis and blameless retrospectives</li>
+    <li>Define metrics and design/implement automation opportunities based on monitoring/observability</li>
+    <li>Developing and maintaining integrations with other systems, such as source
+    control and build systems</li> <li>Troubleshooting and resolving technical issues
+    with internal toolings</li> </ul> <p><strong>What we look for in you (ie. job
+    requirements):</strong><strong>&nbsp;</strong></p> <ul> <li>At least 8 years experience
+    supporting network infrastructure</li> <li>At least 8 years experience automating
+    cloud infrastructure</li> <li>Proficient in at least one scripting languages (Bash,
+    python, Ruby, Go, etc)</li> <li>Proficiency with version control using CI/CD (Git)</li>
+    <li>Strong experience supporting AWS services and CI/CD workflows using terraform
+    or equivalent framework</li> <li>Strong experience with configuration management
+    systems like Terraform, Ansible, Chef, Puppet, or Salt</li> <li>Strong experience
+    with containers and containers orchestration like Docker and Kubernetes</li> <li>Demonstrated
+    ability to responsibly use generative AI tools and copilots (e.g., LibreChat,
+    Gemini, Glean) in daily workflows, continuously learn as tools evolve, and apply
+    human-in-the-loop practices to deliver business-ready outputs and drive measurable
+    improvements in efficiency, cost, and quality</li> </ul> <p><strong>Nice to haves:</strong></p>
+    <ul> <li>Expertise with linux, bash, ruby, python and/or go</li> <li>Expertise
+    automating EC2 or containers deployment with terraform</li> <li>Strong network
+    security fundamentals</li> <li>Experience managing and leveraging log aggregation&nbsp;&nbsp;</li>
+    <li>Experience working in a highly regulated environment</li> <li>Experience in
+    a fast-paced, high-growth company</li> <li>Experience in a Remote-first IT environment</li>
+    </ul> <p>Job #: P76227</p> <div id="fortidlp-input-element-parent"></div><div
+    class="content-pay-transparency"><div class="pay-input"><div class="description"><p><strong>Pay
+    Transparency Notice:</strong><strong><em> </em></strong>Depending on your work
+    location, the target annual <strong>base </strong>salary for this position can
+    range as detailed below. Total compensation may also include equity and bonus
+    eligibility and benefits (including medical, dental, vision and 401(k)).</p></div><div
+    class="title">Annual base salary range (excluding equity and bonus):</div><div
+    class="pay-range"><span>$186,065</span><span class="divider">&mdash;</span><span>$218,900
+    USD</span></div'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-29'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.940353+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-30"

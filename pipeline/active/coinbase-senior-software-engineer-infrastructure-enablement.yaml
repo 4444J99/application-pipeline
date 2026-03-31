@@ -1,0 +1,103 @@
+id: coinbase-senior-software-engineer-infrastructure-enablement
+name: Coinbase Senior Software Engineer - Infrastructure Enablement
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7701837?gh_jid=7701837
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+  description: '<div class="content-intro"><p>Ready to be pushed beyond what you think
+    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
+    in the world. It’s a massive, ambitious opportunity that demands the best of us,
+    every day, as we build the emerging onchain platform — and with it, the future
+    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
+    candidate. We want someone who is passionate about our mission and who believes
+    in the power of crypto and blockchain technology to update the financial system.
+    We want someone who is eager to leave their mark on the world, who relishes the
+    pressure and privilege of working with high caliber colleagues, and who actively
+    seeks feedback to keep leveling up. We want someone who will run towards, not
+    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
+    culture</a> is intense and isn’t for everyone. But if you want to build the future
+    alongside others who excel in their disciplines and expect the same from you,
+    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
+    we are not remote-only. In-person participation is required throughout the year.
+    Team and company-wide offsites are held multiple times annually to foster collaboration,
+    connection, and alignment. Attendance is expected and fully supported.</p></div><div
+    class="p-rich_text_section"> <p>The Infrastructure Enablement team creates standardized,
+    high-performance "paved roads" to accelerate development, ensure security, and
+    unlock new capabilities across Coinbase. This role is for our Blockchain Infra
+    domain, which focuses on our foundational blockchain systems. This includes our
+    Global Blockchain Sync (GBS) service — which provides quick storage and recovery
+    of blockchain state — and our new Bare Metal Platform for specialized blockchain
+    (like Solana). We are migrating legacy systems, abstracting complexity, and ensuring
+    our core infrastructure is robust and efficient.</p> <br><strong>What you’ll be
+    doing (Job Duties)</strong> <ul> <li>Evolve, scale, and maintain the Global Blockchain
+    Sync (GBS) service, ensuring reliable, up-to-date snapshots for all protocols.</li>
+    <li>Help build new standardized Paved Road infrastructure for GCP &amp; AWS.</li>
+    <li>Design, build, and automate the new "Bare Metal Platform" to standardize provisioning
+    for high-performance workloads.</li> <li>Partner with internal customers (Base,
+    Blockchain teams) and partners (Compute, Security) to deliver secure, self-service
+    infrastructure.</li> </ul> <strong>What we look for in you (Job Requirements)</strong>
+    <ul> <li>5+ years of software engineering experience, with a focus on infrastructure,
+    backend, or SRE.</li> <li>Strong, hands-on experience with public cloud infrastructure,
+    particularly <strong>AWS and GCP</strong>.</li> <li>Deep experience with container
+    orchestration systems (<strong>Kubernetes</strong>, GKE, EKS) and container runtimes.</li>
+    <li>Proven ability to build robust backend services and automation (e.g., in Go,
+    Python).</li> <li>Ability to hold a high bar for quality, is a self-starter, and
+    has strong interpersonal skills.</li> <li>Experience scaling and managing large-scale,
+    mission-critical, stateful infrastructure.</li> <li>Code Quality: Know what high-quality
+    infrastructure-as-code looks like and foster an environment that creates it.</li>
+    <li>Core Values: Exhibit our core values: clear communication, positive energy,
+    continuous learning, and efficient execution.</li> <li>Adaptability: Flexibility
+    to adapt and pivot in a dynamic environment—specifically the ambiguity involved
+    in building a platform from scratch.</li> <li>Demonstrates the ability to responsibly
+    use generative AI tools and copilots (e.g., LibreChat, Gemini, Glean) in daily
+    workflows, continuously learn as tools evolve, and apply human-in-the-loop practices
+    to deliver business-ready outputs and drive measurable improvements in efficiency,
+    cost, and quality.</li> </ul> <strong>Nice to Haves</strong> <ul> <li>Experience
+    with <strong>bare-metal provisioning</strong> and automation (e.g., MAAS, Tinkerbell,
+    or tools like Ansible/Terraform).</li> <li>Experience writing, building, or implementing
+    a Kubernetes operator.</li> <li>Experience with high-performance storage solutions
+    (e.g., ZFS).</li> <li>Knowledge of blockchain node operations or state management.</li>
+    </ul> </div> <p>Job# P76263</p> <p><span style="font-weight: 400;">*Answers to
+    crypto-related questions may be used to evaluate your onchain experience.</span></p>
+    <p>#LI-Remote</p> <p>&nbsp;</p> <div id="fortidlp-input-element-parent"></div><div
+    class="content-pay-transparency"><div class="pay-input"><div class="description"><p><strong>Pay
+    Transparency Notice:</strong><strong><em> </em></strong>Depending on your work
+    location, the target annual <strong>base </strong>salary for this position can
+    range as detailed below. Total compensation may also<strong> </strong>in'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-29'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.010790+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-30"

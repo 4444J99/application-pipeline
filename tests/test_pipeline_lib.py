@@ -45,6 +45,7 @@ from pipeline_lib import (
 
 # --- Constants ---
 
+
 def test_repo_root_exists():
     assert REPO_ROOT.exists()
     assert (REPO_ROOT / "pipeline").exists()
@@ -79,6 +80,7 @@ def test_effort_minutes_values():
 
 # --- load_entries ---
 
+
 def test_load_entries_returns_list():
     entries = load_entries()
     assert isinstance(entries, list)
@@ -107,6 +109,7 @@ def test_load_entries_skips_schema():
 
 # --- load_entry_by_id ---
 
+
 def test_load_entry_by_id_found():
     filepath, data = load_entry_by_id("creative-capital-2027")
     assert filepath is not None
@@ -121,6 +124,7 @@ def test_load_entry_by_id_not_found():
 
 
 # --- parse_date ---
+
 
 def test_parse_date_valid():
     result = parse_date("2026-02-23")
@@ -146,6 +150,7 @@ def test_parse_date_accepts_date_object():
 
 # --- parse_datetime ---
 
+
 def test_parse_datetime_valid():
     result = parse_datetime("2026-02-23")
     assert result is not None
@@ -159,6 +164,7 @@ def test_parse_datetime_none():
 
 
 # --- format_amount ---
+
 
 def test_format_amount_usd():
     assert format_amount({"value": 50000, "currency": "USD"}) == "$50,000"
@@ -190,6 +196,7 @@ def test_format_amount_not_dict():
 
 # --- get_effort ---
 
+
 def test_get_effort_present():
     entry = {"submission": {"effort_level": "deep"}}
     assert get_effort(entry) == "deep"
@@ -207,6 +214,7 @@ def test_get_effort_null():
 
 # --- get_score ---
 
+
 def test_get_score_present():
     entry = {"fit": {"score": 8.5}}
     assert get_score(entry) == 8.5
@@ -223,6 +231,7 @@ def test_get_score_zero():
 
 
 # --- get_deadline ---
+
 
 def test_get_deadline_hard():
     entry = {"deadline": {"date": "2026-03-01", "type": "hard"}}
@@ -247,14 +256,17 @@ def test_get_deadline_missing():
 
 # --- days_until ---
 
+
 def test_days_until_future():
     from datetime import timedelta
+
     future = date.today() + timedelta(days=10)
     assert days_until(future) == 10
 
 
 def test_days_until_past():
     from datetime import timedelta
+
     past = date.today() - timedelta(days=5)
     assert days_until(past) == -5
 
@@ -277,9 +289,7 @@ def test_profile_id_map_no_direct_match():
     """Mapped entry IDs should NOT have a direct profile (that's why they're mapped)."""
     for entry_id in PROFILE_ID_MAP:
         filepath = PROFILES_DIR / f"{entry_id}.json"
-        assert not filepath.exists(), (
-            f"{entry_id}.json exists directly — remove from PROFILE_ID_MAP"
-        )
+        assert not filepath.exists(), f"{entry_id}.json exists directly — remove from PROFILE_ID_MAP"
 
 
 # --- load_profile with ID mapping ---
@@ -580,9 +590,7 @@ def test_default_load_entries_excludes_pool():
 
     # No pool file should appear in default load
     overlap = default_files & pool_files
-    assert len(overlap) == 0, (
-        f"Default load_entries() includes pool entries: {overlap}"
-    )
+    assert len(overlap) == 0, f"Default load_entries() includes pool entries: {overlap}"
 
 
 def test_load_entries_with_pool_includes_pool():
@@ -593,9 +601,7 @@ def test_load_entries_with_pool_includes_pool():
     if pool_entries:
         all_files = {e["_file"] for e in all_entries}
         pool_files = {e["_file"] for e in pool_entries}
-        assert pool_files.issubset(all_files), (
-            "Pool entries missing from ALL_PIPELINE_DIRS_WITH_POOL load"
-        )
+        assert pool_files.issubset(all_files), "Pool entries missing from ALL_PIPELINE_DIRS_WITH_POOL load"
 
 
 # --- load_block / load_variant ---
@@ -638,6 +644,7 @@ def test_load_variant_path_traversal():
 def test_parse_date_datetime_object():
     """PyYAML may parse timestamps as datetime objects — parse_date should extract .date()."""
     from datetime import datetime
+
     dt = datetime(2026, 3, 1, 14, 30, 0)
     result = parse_date(dt)
     assert result == date(2026, 3, 1)
@@ -675,8 +682,10 @@ def test_atomic_write_no_partial(tmp_path):
 
 
 def test_dimension_order_matches_valid_dimensions():
-    """DIMENSION_ORDER list and VALID_DIMENSIONS set should contain the same items."""
-    assert set(DIMENSION_ORDER) == VALID_DIMENSIONS
+    """VALID_DIMENSIONS should be a superset of DIMENSION_ORDER (core + pillar-specific)."""
+    # DIMENSION_ORDER has 9 core dimensions; VALID_DIMENSIONS adds 7 pillar-specific
+    assert set(DIMENSION_ORDER).issubset(VALID_DIMENSIONS)
+    assert len(VALID_DIMENSIONS) == 16  # 9 core + 7 pillar-specific
 
 
 def test_dimension_order_has_nine_dimensions():

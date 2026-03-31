@@ -1,0 +1,103 @@
+id: coinbase-senior-software-engineer-consumer-engineering-test-infrastru
+name: Coinbase Senior Software Engineer - Consumer Engineering Test Infrastructure
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7350279?gh_jid=7350279
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+  description: '<div class="content-intro"><p>Ready to be pushed beyond what you think
+    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
+    in the world. It’s a massive, ambitious opportunity that demands the best of us,
+    every day, as we build the emerging onchain platform — and with it, the future
+    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
+    candidate. We want someone who is passionate about our mission and who believes
+    in the power of crypto and blockchain technology to update the financial system.
+    We want someone who is eager to leave their mark on the world, who relishes the
+    pressure and privilege of working with high caliber colleagues, and who actively
+    seeks feedback to keep leveling up. We want someone who will run towards, not
+    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
+    culture</a> is intense and isn’t for everyone. But if you want to build the future
+    alongside others who excel in their disciplines and expect the same from you,
+    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
+    we are not remote-only. In-person participation is required throughout the year.
+    Team and company-wide offsites are held multiple times annually to foster collaboration,
+    connection, and alignment. Attendance is expected and fully supported.</p></div><div
+    class="p-rich_text_section"> <p>The Consumer Eng Test Infrastructure (CETI) team
+    is dedicated to elevating product quality across Coinbase. We achieve this by
+    equipping engineering teams with world-class testing tools and frameworks. Our
+    goal is to make the process of writing, running, and maintaining high-quality
+    tests seamless, enabling teams to catch issues early, ship with confidence, and
+    minimize friction in their development workflow.</p> As a Software Engineer on
+    the CETI team, you will be a key contributor to the design and development of
+    our scalable testing infrastructure, frameworks, and tools, which are tightly
+    integrated into our CI/CD pipelines. You will collaborate closely with engineers
+    across the company to understand pain points, drive the adoption of best practices,
+    and define the future of testing at Coinbase.<br> <p><strong>What You''ll Be Doing:</strong></p>
+    <ul> <li><strong>Infrastructure &amp; Tool Development:</strong> Design, develop,
+    and maintain robust, fast, and scalable automated test frameworks, tools, and
+    infrastructure.</li> <li><strong>Quality Enablement:</strong> Partner with engineering
+    teams to enhance test coverage, reduce test flakiness, and streamline the debugging
+    experience.</li> <li><strong>CI/CD Optimization:</strong> Optimize CI/CD pipelines
+    to ensure the most efficient and rapid test execution.</li> <li><strong>Best Practices
+    &amp; Culture:</strong> Advocate for and drive the adoption of testing best practices
+    across unit, integration, and end-to-end testing, promoting a high-quality testing
+    culture while maintaining development velocity.</li> <li><strong>Observability:</strong>
+    Build comprehensive dashboards and provide insights that empower teams to track
+    and improve the quality of their tests.</li> <li><strong>Test Environment Stability:</strong>
+    Collaborate with platform, infrastructure, CX, consumer, and SRE teams to ensure
+    that test environments are stable, scalable, and accurately reflect production
+    conditions.</li> <li><strong>Technology Exploration:</strong> Research and evaluate
+    emerging testing technologies (web, mobile, AI/ML, backend) and integrate them
+    into our ecosystem where appropriate.</li> </ul> <p><strong>What We''re Looking
+    For:</strong></p> <ul> <li><strong>Technical Foundation:</strong> A strong background
+    in software engineering, with experience in languages such as Python, Java, JavaScript,
+    Go, or similar.</li> <li><strong>Infrastructure Knowledge:</strong> Familiarity
+    with infrastructure technologies (e.g., Kubernetes, Docker, Terraform) and experience
+    with cloud environments (AWS, GCP, or Azure).</li> <li><strong>Developer Experience
+    Focus:</strong> Experience in building scalable developer tools and a passion
+    for improving developer productivity and experience.</li> <li><strong>Reliability
+    &amp; Performance:</strong> Experience with observability, debugging, and profiling
+    techniques to enhance software reliability and performance.</li> <li><strong>Collaboration
+    &amp; Influence:</strong> The ability to effectively collaborate with diverse
+    teams across the company and influence positive changes in engineering culture.</li>
+    </ul> </div> <p><span style="font-weight: 400;">Job #: P72920</span></p> <p><span
+    style="font-weight: 400;">*Answers to crypto-related questions may be used to
+    evaluate your onchain experience</span></p> <p>#LI-Remote</p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p><strong>Pay Transparency Notice:</strong><strong><em>
+    </em></strong>Depending on your work location, the target annual <strong>bas'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-29'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.981103+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-30"

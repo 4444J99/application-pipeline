@@ -1,0 +1,104 @@
+id: coinbase-staff-software-engineer
+name: Coinbase Staff Software Engineer
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7606771?gh_jid=7606771
+  portal: greenhouse
+  location: Remote - Canada; Remote - USA
+  location_class: us-remote
+  description: '<div class="content-intro"><p>Ready to be pushed beyond what you think
+    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
+    in the world. It’s a massive, ambitious opportunity that demands the best of us,
+    every day, as we build the emerging onchain platform — and with it, the future
+    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
+    candidate. We want someone who is passionate about our mission and who believes
+    in the power of crypto and blockchain technology to update the financial system.
+    We want someone who is eager to leave their mark on the world, who relishes the
+    pressure and privilege of working with high caliber colleagues, and who actively
+    seeks feedback to keep leveling up. We want someone who will run towards, not
+    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
+    culture</a> is intense and isn’t for everyone. But if you want to build the future
+    alongside others who excel in their disciplines and expect the same from you,
+    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
+    we are not remote-only. In-person participation is required throughout the year.
+    Team and company-wide offsites are held multiple times annually to foster collaboration,
+    connection, and alignment. Attendance is expected and fully supported.</p></div><div>The
+    Top of Funnel team is responsible for capturing organic user interest through
+    SEO and optimizing the logged-out web experience to convert curious visitors into
+    Coinbase users. We serve over 5 million pageviews per month across critical logged-out
+    surfaces including Asset Detail Pages, How-to-Buy pages, Converter pages, and
+    marketing landing pages.<br>We are seeking a Staff Software Engineer with deep
+    frontend expertise and strong backend capabilities to lead technical strategy
+    across our logged-out web platform. You will architect and build performant, SEO-optimized
+    web experiences, define the future of our marketing attribution and user tracking,
+    and ensure our Marketing Server infrastructure delivers reliable, scalable SSR
+    at the edge. This role requires someone who can work across the full stack — from
+    React/Next.js frontend to Node.js/Go backend services — while driving technical
+    leadership and mentoring engineers across the team.<br>As Coinbase expands into
+    the Everything Exchange — spanning equities, derivatives, prediction markets,
+    and DEX assets — our team is building the scalable programmatic systems that generate
+    millions of SEO-optimized pages and the self-serve marketing tools that reduce
+    engineering dependency. You''ll be at the center of this effort, shaping the technical
+    strategy that powers how the world discovers Coinbase.<br><br>What you''ll be
+    doing:</div> <ul> <li>Drive rapid experimentation by leveraging best practices
+    and tooling to create a repeatable, simple framework for quick logged-out experimentation</li>
+    <li>Build and optimize programmatic SEO pages that scale across millions of assets
+    (crypto, equities, derivatives, prediction markets)</li> <li>Optimize logged-out
+    web experiences for SEO, web performance, and user conversion</li> <li>Architect
+    multi-product logged-out experiences to support Coinbase''s asset expansion</li>
+    <li>Scale marketing and user tracking to enable marketing teams to effectively
+    manage and optimize campaigns across multiple user segments and channels</li>
+    <li>Improve marketing attribution, measurement, and data quality across ad platforms</li>
+    <li>Provide technical leadership across the team and work closely with management
+    and stakeholders to define strategic roadmaps</li> <li>Mentor and coach engineers
+    across the team on design techniques, coding standards, and growth engineering
+    best practices</li> <li>Identify and drive technical debt reduction and performance
+    improvements across the logged-out platform</li> </ul> <div>What we look for in
+    you:</div> <ul> <li>Frontend Expertise: Deep experience with React, TypeScript,
+    and modern web frameworks (Next.js or similar)</li> <li>Full Stack Capability:
+    Proficiency with backend languages and patterns, GraphQL/API design</li> <li>Web
+    Performance: Expert understanding of Core Web Vitals, SSR optimization, caching
+    strategies (CDN, edge), and mobile-first development</li> <li>Experimentation
+    Mindset: Track record of running rapid A/B tests and data-driven experimentation;
+    comfortable with hypothesis-driven development</li> <li>Impact-Driven: Motivated
+    by outcomes over outputs. Identifies and pursues high-impact opportunities, backed
+    by data</li> <li>High Agency: Takes accountability and actively seeks out opportunities
+    to deliver results. Understands how their work drives meaningful impact to the
+    growth of Coinbase</li> <li>High Velocity: Preferred mode of operation is fast.
+    Knows how to balance velocity and quality. Invests in tools, systems, and processes
+    to increase velocity</li> <li>8+ years of experience in software engineeri'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-29'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.072741+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-30"

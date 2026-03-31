@@ -1,0 +1,105 @@
+id: airtable-software-engineer-product-backend-8-yoe
+name: Airtable Software Engineer, Product Backend (8+ YOE)
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Airtable
+  url: https://boards.greenhouse.io/airtable
+  application_url: https://job-boards.greenhouse.io/airtable/jobs/7845287002
+  portal: greenhouse
+  location: San Francisco, CA; Remote (Seattle, WA only)
+  location_class: us-remote
+  description: '<div class="content-intro"><p>Airtable is the no-code app platform
+    that empowers people closest to the work to accelerate their most critical business
+    processes. More than 500,000 organizations, including 80% of the Fortune 100,
+    rely on Airtable to transform how work gets done.</p></div><p>Airtable’s mission
+    is to bring the power of computing and software development to everyone. We are
+    developing a powerful and extensible platform that our customers can leverage
+    to solve a variety of different problems and workflows. We’ve seen our most sophisticated
+    customers use the product to run global processes across thousands of employees,
+    coordinate precision manufacturing pipelines, and consolidate previously siloed
+    mission-critical data into a single source of truth. The complexity of these use
+    cases requires us to be extremely thoughtful about how we design and implement
+    new functionality in the product and make sure it’s both easy to use and comprehend
+    for our customers and maintainable for us.</p> <p>As a <strong>Full-Stack, Backend
+    </strong>engineer at Airtable, you will have the opportunity to work with customers
+    to deeply understand their needs and workflows. You will collaborate with cross-functional
+    partners across product management, design, research and data science to create
+    innovative new features that enable our customers to do their best work. You will
+    be responsible for owning and executing the end-to-end implementation of these
+    new features that will contribute to making our toolkit even more powerful and
+    successful.</p> <p>We currently have openings on:</p> <ul> <li><strong>The Enterprise
+    Growth Team (Full-Stack/BE)</strong> delivers the foundational building blocks
+    and collaboration primitives that enable enterprise builders to leverage AI to
+    create, collaborate, and scale with confidence. This pod supports Airtable''s
+    broader goals by ensuring that our largest enterprises are provided with robust,
+    AI-first primitives that can be used and then scaled to solve any problem our
+    users might face. Beyond this, we serve as the stewards for experience quality
+    and user delight across the Airtable product.</li> <li><strong>The Monetization
+    Team (Full-Stack/BE)</strong>&nbsp;is a high-impact team focused on driving user
+    engagement and revenue across Airtable’s core surfaces, including sharing, pricing,
+    and payments. Engineers on this team build polished, user-facing features, run
+    experiments that shape product direction, and maintain the systems that power
+    billing and purchasing. You’ll collaborate closely with Product, Design, and Data,
+    leverage AI to personalize the user journey, and play a key role in helping users
+    discover and unlock the full value of Airtable.</li> <li><strong>The Platform
+    Interoperability Team</strong>&nbsp;<strong>(Full-Stack/BE)</strong> builds the
+    systems that allow agents, integrations, and connected workflows to interact with
+    Airtable as a platform. As AI agents become a primary interface for how work gets
+    done, we''re ensuring Airtable is a first-class participant in that ecosystem.
+    This team''s mission is to make Airtable the most capable and well-connected platform
+    in the agentic ecosystem. We''re building the infrastructure that lets humans
+    and agents alike treat Airtable as a source of truth they can reliably act on,
+    whether through direct integrations, AI-powered workflows, or large-scale data
+    operations.</li> </ul> <p><strong><em>Please note: </em><em>while we employ a
+    hybrid working model at Airtable (flexible in working from the office or elsewhere),
+    we are only hiring in the following locations at this time:</em></strong></p>
+    <ul> <li><strong><em>Based in the San Francisco Bay Area and are open to coming
+    into our office (Embarcadero) at least ~2-3 times/week for team collaboration</em></strong></li>
+    <li><strong><em>Based in New York City and are open to coming into our office
+    (Soho) at least ~2-3 times/week for team collaboration</em></strong></li> <li><strong><em>Based
+    remotely in the greater Seattle area</em></strong></li> </ul> <h1><strong>What
+    you''ll do</strong></h1> <ul> <li>Design and build systems that dramatically increase
+    the scalability and performance of all applications built on Airtable, to earn
+    the trust of our customers through predictable, reliable, and thoughtful interactions.</li>
+    <li>Work at the deep backend of the Airtable software stack within the Enterprise
+    Product portion of the org, just above the Infrastructure org.</li> <li>Partner
+    with product managers, designers, and data scientists to understand the needs
+    of potential users and build a product that unlocks their potential.</li> <li>Work
+    alongside and learn from a talented group of engineers with a diverse range of
+    experiences and backgrounds.</li> </ul> <h1><strong>Who you are</strong></h1>
+    <ul> <li>You have 8+ years of industry experience with modern systems development,
+    ideally database internals development.</li> <li>You are interested in programming
+    in TypeScript and Rust.</li> <li>You are'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.842687+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-03-30"
