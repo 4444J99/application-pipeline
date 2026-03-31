@@ -520,3 +520,30 @@ actions:
   impact: TBD
   entry_id: eyebeam-plurality
   reason: Manual advancement by user
+- signal_id: advance-ramp-software-engineer-fraud-identity-2026-03-31
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting (Manual advancement by user)
+  triggered_action: advance to drafting
+  action_date: '2026-03-31'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: ramp-software-engineer-fraud-identity
+  reason: Manual advancement by user
+- signal_id: advance-deepgram-solutions-engineer-enterprise-2026-03-31
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting (Manual advancement by user)
+  triggered_action: advance to drafting
+  action_date: '2026-03-31'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: deepgram-solutions-engineer-enterprise
+  reason: Manual advancement by user
+- signal_id: advance-livekit-staff-developer-advocate-community-events-2026-03-31
+  signal_type: score_threshold
+  description: Advanced qualified -> drafting (Manual advancement by user)
+  triggered_action: advance to drafting
+  action_date: '2026-03-31'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: livekit-staff-developer-advocate-community-events
+  reason: Manual advancement by user
