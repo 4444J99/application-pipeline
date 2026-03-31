@@ -1,0 +1,87 @@
+id: headlands-center
+name: Headlands Center for the Arts
+track: residency
+status: outcome
+identity_position: systems-artist
+outcome: expired
+target:
+  organization: Headlands Center for the Arts
+  url: https://headlands.org
+  application_url: https://headlands.org/program/artist-in-residence
+  portal: custom
+deadline:
+  date: '2026-04-01'
+  time: null
+  type: window
+amount:
+  value: 4000
+  currency: USD
+  type: stipend
+  benefits_cliff_note: null
+fit:
+  score: 6.5
+  original_score: 8.9
+  identity_position: systems-artist
+  framing: Systems artist working across computation and material practice in immersive
+    residency context
+  lead_organs:
+  - I
+  - II
+  - META
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 1
+    strategic_value: 7
+    financial_alignment: 9
+    effort_to_value: 7
+    deadline_feasibility: 3
+    portal_friction: 6
+submission:
+  effort_level: standard
+  blocks_used:
+    artist_statement: identity/5min
+    project_description: projects/organvm-system
+    methodology: methodology/governance-as-art
+    evidence: evidence/differentiators
+    framing: framings/systems-artist
+  variant_ids:
+    cover_letter: cover-letters/grant-art-template
+  materials_attached:
+  - resumes/batch-03/headlands-center/headlands-center-resume.html
+  - resumes/batch-03/headlands-center/headlands-center-resume.pdf
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-02-14'
+  date_added: 2026-02-14
+  qualified: '2026-02-16'
+  materials_ready: '2026-03-01'
+  submitted: null
+  acknowledged: null
+  interview: null
+  outcome_date: null
+portal_fields:
+  fields:
+  - name: artist_statement
+  - name: project_description
+  - name: work_samples
+  - name: bio
+  - name: references
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags: []
+source: 04-application-tracker.md
+notes: Fully funded plus $1K/month stipend. Application window Apr 1 - Jun 1 2026.
+last_touched: '2026-03-03'
+status_meta:
+  reviewed_by: 4jp
+  reviewed_at: '2026-03-03'
+  review_note: autofix-unblocker
+deferral:
+  reason: below_actionable_threshold
+  note: Score below top-10 cutoff (8.3); preserved for future re-evaluation
+  deferred_date: '2026-03-13'

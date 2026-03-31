@@ -344,8 +344,10 @@ def fetch_greenhouse_jobs(
     jobs = data.get("jobs", [])
     results = []
     for job in jobs:
-        raw_date = job.get("updated_at", "")
+        # Prefer first_published (true posting date) over updated_at (last edit)
+        raw_date = job.get("first_published") or job.get("updated_at", "")
         posting_date = raw_date[:10] if raw_date else None
+        date_source = "first_published" if job.get("first_published") else "updated_at_fallback"
         results.append({
             "title": job.get("title", ""),
             "id": str(job.get("id", "")),
@@ -356,6 +358,7 @@ def fetch_greenhouse_jobs(
             "portal": "greenhouse",
             "company_url": f"https://boards.greenhouse.io/{board}",
             "posting_date": posting_date,
+            "date_source": date_source,
             "description": "",
         })
 
@@ -431,6 +434,7 @@ def fetch_lever_jobs(company: str) -> list[dict]:
             "portal": "lever",
             "company_url": f"https://jobs.lever.co/{company}",
             "posting_date": posting_date,
+            "date_source": "created_at",
             "description": description,
         })
     return results
@@ -453,8 +457,10 @@ def fetch_ashby_jobs(company: str) -> list[dict]:
     results = []
     for job in jobs:
         posting_url = f"https://jobs.ashbyhq.com/{company}/{job.get('id', '')}"
-        raw_date = job.get("publishedDate") or job.get("updatedAt", "")
+        # Fix: API returns publishedAt, not publishedDate
+        raw_date = job.get("publishedAt") or job.get("updatedAt", "")
         posting_date = raw_date[:10] if raw_date else None
+        date_source = "published_at" if job.get("publishedAt") else "updated_at_fallback"
         desc_html = job.get("descriptionHtml", "") or ""
         description = _strip_html(desc_html) if desc_html else ""
         results.append({
@@ -467,6 +473,7 @@ def fetch_ashby_jobs(company: str) -> list[dict]:
             "portal": "ashby",
             "company_url": f"https://jobs.ashbyhq.com/{company}",
             "posting_date": posting_date,
+            "date_source": date_source,
             "description": description,
         })
     return results
@@ -507,6 +514,7 @@ def fetch_smartrecruiters_jobs(company_id: str) -> list[dict]:
             "portal": "smartrecruiters",
             "company_url": f"https://jobs.smartrecruiters.com/{company_id}",
             "posting_date": posting_date,
+            "date_source": "released_date",
         })
     return results
 
@@ -542,6 +550,7 @@ def fetch_workable_jobs(subdomain: str) -> list[dict]:
             "portal": "workable",
             "company_url": f"https://{subdomain}.workable.com",
             "posting_date": posting_date,
+            "date_source": "published_on",
         })
     return results
 
@@ -624,6 +633,7 @@ def fetch_jobspy_jobs(
                 "portal": portal,
                 "company_url": "",
                 "posting_date": posting_date,
+                "date_source": "jobspy_date_posted",
             })
 
     # Deduplicate by URL within JobSpy results
@@ -729,7 +739,8 @@ def _format_posting_age(job: dict) -> str:
 def filter_by_freshness(jobs: list[dict], max_hours: float = FRESH_ONLY_MAX_HOURS) -> tuple[list[dict], list[dict]]:
     """Split jobs into fresh (within max_hours) and stale (older).
 
-    Jobs with no posting_date are treated as fresh (benefit of the doubt).
+    Jobs with no posting_date are treated as stale — if we can't verify
+    freshness, we don't risk applying to a months-old listing.
 
     Returns:
         (fresh_jobs, skipped_jobs)
@@ -738,7 +749,9 @@ def filter_by_freshness(jobs: list[dict], max_hours: float = FRESH_ONLY_MAX_HOUR
     skipped = []
     for job in jobs:
         hours = _posting_age_hours(job)
-        if hours is not None and hours > max_hours:
+        if hours is None:
+            skipped.append(job)
+        elif hours > max_hours:
             skipped.append(job)
         else:
             fresh.append(job)
@@ -818,6 +831,7 @@ def create_pipeline_entry(job: dict) -> tuple[str, dict]:
         "timeline": {
             "researched": today,
             "posting_date": job.get("posting_date"),
+            "date_source": job.get("date_source", "unknown"),
             "date_added": today,
             "discovered": datetime.now(UTC).isoformat(),
         },

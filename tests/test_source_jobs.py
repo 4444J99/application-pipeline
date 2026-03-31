@@ -17,6 +17,7 @@ from source_jobs import (
     fetch_ashby_jobs,
     fetch_greenhouse_jobs,
     fetch_lever_jobs,
+    filter_by_freshness,
     filter_by_title,
 )
 
@@ -417,3 +418,114 @@ def test_create_entry_description_defaults_to_empty():
     }
     _, entry = create_pipeline_entry(job)
     assert entry["target"]["description"] == ""
+
+
+# --- posting date accuracy ---
+
+
+def test_greenhouse_uses_first_published(monkeypatch):
+    """Greenhouse must use first_published, not updated_at, for posting_date."""
+    list_payload = _make_greenhouse_list_response([
+        {"id": 42, "title": "Software Engineer", "absolute_url": "https://example.com/42",
+         "location": {"name": "Remote"},
+         "first_published": "2026-01-15T09:00:00-05:00",
+         "updated_at": "2026-03-29T22:00:00-04:00"},
+    ])
+    detail_payload = _make_greenhouse_detail_response("<p>desc</p>")
+
+    def fake_http_get(url: str) -> bytes:
+        if "/jobs/42" in url and url.endswith("/42"):
+            return detail_payload
+        return list_payload
+
+    monkeypatch.setattr("source_jobs._http_get", fake_http_get)
+    jobs = fetch_greenhouse_jobs("testboard", title_keywords=["software engineer"], title_excludes=[])
+    assert len(jobs) == 1
+    assert jobs[0]["posting_date"] == "2026-01-15", f"Expected first_published date, got {jobs[0]['posting_date']}"
+    assert jobs[0]["date_source"] == "first_published"
+
+
+def test_greenhouse_falls_back_to_updated_at(monkeypatch):
+    """Without first_published, Greenhouse falls back to updated_at."""
+    list_payload = _make_greenhouse_list_response([
+        {"id": 43, "title": "Software Engineer", "absolute_url": "https://example.com/43",
+         "location": {"name": "Remote"},
+         "updated_at": "2026-03-29T22:00:00-04:00"},
+    ])
+    detail_payload = _make_greenhouse_detail_response("<p>desc</p>")
+
+    def fake_http_get(url: str) -> bytes:
+        if "/jobs/43" in url and url.endswith("/43"):
+            return detail_payload
+        return list_payload
+
+    monkeypatch.setattr("source_jobs._http_get", fake_http_get)
+    jobs = fetch_greenhouse_jobs("testboard", title_keywords=["software engineer"], title_excludes=[])
+    assert len(jobs) == 1
+    assert jobs[0]["posting_date"] == "2026-03-29"
+    assert jobs[0]["date_source"] == "updated_at_fallback"
+
+
+def test_ashby_uses_published_at(monkeypatch):
+    """Ashby must use publishedAt (not the nonexistent publishedDate)."""
+    payload = json.dumps({"jobs": [
+        {"id": "ash-1", "title": "Software Engineer", "location": "Remote",
+         "publishedAt": "2026-02-10T12:00:00+00:00",
+         "updatedAt": "2026-03-30T08:00:00+00:00",
+         "descriptionHtml": "<p>desc</p>"},
+    ]}).encode()
+
+    monkeypatch.setattr("source_jobs._http_get", lambda url: payload)
+    jobs = fetch_ashby_jobs("testco")
+    assert len(jobs) == 1
+    assert jobs[0]["posting_date"] == "2026-02-10", f"Expected publishedAt date, got {jobs[0]['posting_date']}"
+    assert jobs[0]["date_source"] == "published_at"
+
+
+def test_filter_freshness_rejects_null_date():
+    """Jobs without posting_date must be rejected, not given benefit of the doubt."""
+    jobs = [
+        {"title": "No Date Job", "posting_date": None},
+        {"title": "Fresh Job", "posting_date": "2026-03-31"},
+    ]
+    fresh, skipped = filter_by_freshness(jobs, max_hours=72)
+    assert len(skipped) == 1
+    assert skipped[0]["title"] == "No Date Job"
+
+
+def test_filter_freshness_passes_recent():
+    """Jobs within the freshness window pass."""
+    from datetime import UTC, datetime, timedelta
+    recent = (datetime.now(UTC) - timedelta(hours=12)).strftime("%Y-%m-%d")
+    jobs = [{"title": "Fresh", "posting_date": recent}]
+    fresh, skipped = filter_by_freshness(jobs, max_hours=72)
+    assert len(fresh) == 1
+    assert len(skipped) == 0
+
+
+def test_filter_freshness_rejects_old():
+    """Jobs outside the freshness window are rejected."""
+    from datetime import UTC, datetime, timedelta
+    old = (datetime.now(UTC) - timedelta(days=30)).strftime("%Y-%m-%d")
+    jobs = [{"title": "Old", "posting_date": old}]
+    fresh, skipped = filter_by_freshness(jobs, max_hours=72)
+    assert len(fresh) == 0
+    assert len(skipped) == 1
+
+
+def test_date_source_persisted_in_pipeline_entry():
+    """Pipeline entry timeline includes date_source from the job dict."""
+    job = {
+        "title": "Software Engineer",
+        "id": "789",
+        "url": "https://example.com/apply",
+        "location": "Remote",
+        "company": "testco",
+        "company_display": "TestCo",
+        "portal": "greenhouse",
+        "company_url": "https://boards.greenhouse.io/testco",
+        "posting_date": "2026-01-15",
+        "date_source": "first_published",
+    }
+    _, entry = create_pipeline_entry(job)
+    assert entry["timeline"]["date_source"] == "first_published"

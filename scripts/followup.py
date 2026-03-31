@@ -219,9 +219,16 @@ def _append_outreach_log(entry_id: str, channel: str, contact: str, note: str, f
     if not OUTREACH_LOG.exists():
         OUTREACH_LOG.write_text("entries: []\n")
     with open(OUTREACH_LOG) as f:
-        log_data = yaml.safe_load(f) or {}
+        log_data = yaml.safe_load(f)
 
-    entries = log_data.get("entries", []) or []
+    # Handle both formats: flat list or dict with "entries" key
+    if isinstance(log_data, list):
+        entries = log_data
+    elif isinstance(log_data, dict):
+        entries = log_data.get("entries", []) or []
+    else:
+        entries = []
+
     entries.append({
         "date": date.today().isoformat(),
         "type": "post_submission",
@@ -230,10 +237,9 @@ def _append_outreach_log(entry_id: str, channel: str, contact: str, note: str, f
         "note": note,
         "related_targets": [entry_id],
     })
-    log_data["entries"] = entries
 
     with open(OUTREACH_LOG, "w") as f:
-        yaml.dump(log_data, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
+        yaml.dump(entries, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
 
 
 def init_follow_ups(dry_run: bool = True) -> int:

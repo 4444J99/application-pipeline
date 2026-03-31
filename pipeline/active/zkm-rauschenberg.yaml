@@ -1,7 +1,7 @@
 id: zkm-rauschenberg
 name: ZKM Rauschenberg Residencies
 track: residency
-status: deferred
+status: drafting
 outcome: null
 target:
   organization: ZKM Center for Art and Media
@@ -31,7 +31,7 @@ fit:
   dimensions:
     mission_alignment: 10
     evidence_match: 10
-    track_record_fit: 9
+    track_record_fit: 10
     network_proximity: 1
     strategic_value: 8
     financial_alignment: 7
@@ -79,4 +79,4 @@ deferral:
 tags: []
 source: 04-application-tracker.md
 notes: Studio access for 3 months. In-kind support.
-last_touched: '2026-02-26'
+last_touched: '2026-03-31'

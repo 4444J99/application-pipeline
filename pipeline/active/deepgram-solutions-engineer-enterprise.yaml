@@ -1,7 +1,7 @@
 id: deepgram-solutions-engineer-enterprise
 name: Deepgram Solutions Engineer, Enterprise
 track: job
-status: qualified
+status: staged
 outcome: null
 target:
   organization: Deepgram
@@ -82,18 +82,30 @@ amount:
 fit:
   score: 8.3
   identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}
   variant_ids: {}
   materials_attached:
+  - resumes/batch-03/deepgram-solutions-engineer-enterprise/deepgram-solutions-engineer-enterprise-resume.html
   - resumes/base/founder-operator-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   researched: '2026-03-30'
-  posting_date: null
+  posting_date: '2026-03-26'
   date_added: '2026-03-30'
   discovered: '2026-03-31T02:25:35.296324+00:00'
+  date_source: published_at
 conversion:
   response_received: false
   response_type: null
@@ -102,4 +114,13 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-03-30"
+last_touched: '2026-03-31'
+outreach:
+  linkedin_searches:
+  - role: Solutions Engineering Manager
+    search_url: https://www.linkedin.com/search/results/people/?keywords=Solutions%20Engineering%20Manager%20Deepgram&origin=GLOBAL_SEARCH_HEADER
+  - role: Head of Solutions
+    search_url: https://www.linkedin.com/search/results/people/?keywords=Head%20of%20Solutions%20Deepgram&origin=GLOBAL_SEARCH_HEADER
+  contact_name: null
+  contact_url: null
+  status: pending
