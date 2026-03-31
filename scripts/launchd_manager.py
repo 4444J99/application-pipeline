@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-LAUNCHD_DIR = REPO_ROOT / "launchd"
+LAUNCHD_DIR = REPO_ROOT / ".config" / "launchd"
 USER_LAUNCH_AGENTS = Path.home() / "Library" / "LaunchAgents"
 LOG_DIR = Path.home() / "System" / "Logs"
 

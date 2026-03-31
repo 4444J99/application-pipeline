@@ -6,7 +6,7 @@
     <string>com.4jp.pipeline.daily-monitor</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/opt/anaconda3/bin/python</string>
+        <string>/Users/4jp/Workspace/4444J99/application-pipeline/.venv/bin/python</string>
         <string>/Users/4jp/Workspace/4444J99/application-pipeline/scripts/monitor_pipeline.py</string>
         <string>--strict</string>
     </array>
