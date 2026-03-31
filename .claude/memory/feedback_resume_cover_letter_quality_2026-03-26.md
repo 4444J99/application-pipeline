@@ -39,15 +39,51 @@ Include 15-20 projects in the tailor prompt organized by domain. Select 5 most r
 - Arts: generative art, Metasystem Master, p5.js
 - Financial Services: governance, audit trails, state machine
 
+## AMENDMENTS (2026-03-28)
+
+### A4. Cover letter template is the single source of truth
+**`materials/resumes/base/cover-letter-template.html`** is the ONE template for all cover letters. Both `apply.py` and `build_cover_letters.py` consume it. Template placeholders: `{{BODY}}`, `{{TITLE_LINE}}`, `{{CREDENTIALS}}`. Never use `{{LETTER_BODY}}` or `{{NAME}}` — those are dead placeholders.
+
+### A5. Cover letter rendering specifications
+- **Font:** Georgia serif, 9.5pt body, line-height 1.42 (fits 550-700 words on 1 page)
+- **Header:** Name (16pt italic) + title-line (9.5pt uppercase, letter-spacing 2pt) + contact (8pt). Must match resume header structure.
+- **Title-line:** Pulled from batch-03 resume HTML if available, else derived from identity position via `TITLE_LINES` dict.
+- **Sign-off:** "Sincerely," + bold name + credentials line (from identity position via `CREDENTIALS` dict). Template handles this — never include sign-off in markdown body.
+- **Paragraph spacing:** 9pt margin-bottom, justified text, auto-hyphens.
+- **Page fill:** Flexbox column layout with `min-height: 10.1in`, letter-body `flex: 1`.
+- **Contact format:** `New York City | 561-602-7300 | padavano.anthony@gmail.com` (pipes, not dots).
+
+### A6. Chrome headless PDF build rules
+- **Always use absolute file:// URLs.** `file_url = f"file://{html_path.resolve()}"`. Relative paths cause ERR_INVALID_URL.
+- **Always use `--no-pdf-header-footer`** flag (NOT `--print-to-pdf-no-header` which is deprecated).
+- **Try `--headless=new` first**, fall back to `--headless` for older Chrome versions.
+- **Verify page count after build.** Cover letters must be exactly 1 page. 2+ pages means font/spacing needs tightening.
+
+### A7. Identity position flows into cover letter
+`apply.py` reads `fit.identity_position` (or `submission.identity_position`) from the entry YAML and uses it to populate:
+1. Title-line in header (if no resume HTML match found)
+2. Credentials line in sign-off
+3. Both keyed from the same `TITLE_LINES` / `CREDENTIALS` dicts that `build_cover_letters.py` uses
+
+### A8. Markdown body filtering
+When converting cover-letter.md → HTML body:
+- Skip lines starting with: "Anthony Padavano", "Anthony James Padavano", "New York, NY", "New York City", "padavano.anthony@gmail.com"
+- Stop at "Sincerely," (template handles sign-off)
+- Blank-line-separated paragraphs (join continuation lines within paragraphs)
+- Convert `**bold**` → `<strong>`, `*italic*` → `<em>`, strip markdown links
+
 ## ENFORCEMENT
 
 All rules must be checked AUTOMATICALLY by `apply.py` before declaring READY:
 - [ ] Cover letter word count >= 550 (RED FLAG if < 500)
 - [ ] No "Independent Engineer" in any generated file
-- [ ] Cover letter built via matching template (not bare HTML)
+- [ ] Cover letter built via base template (not bare HTML or inline styles)
+- [ ] Cover letter has title-line matching identity position
+- [ ] Cover letter has sign-off with credentials
 - [ ] Resume has >= 4 experience entries
 - [ ] Resume is exactly 1 page
-- [ ] Cover letter is exactly 1 page
+- [ ] Cover letter is exactly 1 page (verified by PDF page count)
+- [ ] PDF has no browser headers/footers (--no-pdf-header-footer)
 - [ ] Projects are not the same 5 defaults (check against a blocklist)
 - [ ] Metrics match CANONICAL dict
 - [ ] Employer is ORGANVM, not "Independent" or "Self-Employed"

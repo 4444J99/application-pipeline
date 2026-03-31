@@ -100,6 +100,7 @@
 - [Triptych Architecture 2026-03-30](project_triptych_architecture_2026-03-30.md) — Aerarium (grants) + Pipeline (jobs) + Consulting = three faces, shared infra, distinct process. SOP-INST-001 applies to all three.
 - [Quadrant-Mask-Content Loop 2026-03-30](project_quadrant_mask_content_loop_2026-03-30.md) — Every application = research = content feedstock. Q1→Narrator, Q2→Strategist, Q3→Architect, Q4→Integrator. Pipeline markets itself through its own operation.
 - [Funder-Fit Lessons 2026-03-30](project_funder_fit_lessons_2026-03-30.md) — CC + NLnet both deferred. Gate works. 89 NLnet projects analyzed: 0 governance tools. Reframe Cvrsvs as seed.yaml spec or DAG validator or GH Action. Past Winners Analysis is a HARD GATE in Phase 1.
+- [Session 2026-03-31](project_session_2026-03-31.md) — CLAUDE.md compression 43.7k→27.6k chars (37%), merged Commands/Quick Commands/CLI, restructured Script Dependency Graph, all behavioral rules preserved
 
 ## References
 - [OpenClaw Gateway Setup](reference_openclaw_setup_2026-03-31.md) — OpenClaw v2026.3.28 at ~/.openclaw/, Ollama gateway port 18789, llama3.2:3b primary, no cloud auth

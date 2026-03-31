@@ -1,21 +1,17 @@
 ---
-name: Outreach data persistence gap
-description: LinkedIn DM activity is not persisting back to pipeline signal files — outreach-log, contacts, network all lag behind actual activity. 30 DMs sent but only 19 logged. Root cause is no single ingestion point.
+name: Outreach data persistence gap — RESOLVED 2026-03-25
+description: LinkedIn DM activity was not persisting to signal files. RESOLVED with log_dm.py (single-command) and reconcile_outreach.py (batch backfill). Both operational.
 type: project
 ---
 
-LinkedIn outreach actions are happening but not being logged consistently across the three signal files (outreach-log.yaml, contacts.yaml, network.yaml).
+**STATUS: RESOLVED 2026-03-25**
 
-**Why:** Each DM requires updating 3 files separately. `followup.py --log` only updates outreach-log and the entry YAML, not contacts or network. No batch reconciliation tool exists.
+LinkedIn outreach actions were happening but not being logged consistently across the three signal files (outreach-log.yaml, contacts.yaml, network.yaml).
 
-**Impact:** Warm-path analysis showed 3/23 when the real number was 10/23. Standup/followup dashboards show stale data. Protocol validator can't find connect notes. Network graph underreports.
+**Root cause:** Each DM required updating 3 files separately.
 
-**How to apply:** Build a reconciliation tool (`reconcile.py` or `log-dm` command) that:
-1. Accepts pasted LinkedIn DM history
-2. Parses contact names, dates, message text
-3. Diffs against existing logged data
-4. Backfills outreach-log.yaml, contacts.yaml, network.yaml in one pass
+**Fix (two tools):**
+1. `log_dm.py` — single-command DM logging. `run.py logdm "Contact" --note "..."` updates all three files in one shot. For daily use.
+2. `reconcile_outreach.py` — batch reconciliation. Parses pasted LinkedIn DM history (anchors on "Open the options list" line for contact attribution), diffs against logged data, backfills gaps. For periodic catch-up.
 
-Also consider: `log-dm` single command for real-time logging of individual DMs across all three files.
-
-Identified 2026-03-24. User expressed frustration ("very annoying"). Priority fix for next session.
+Both committed and operational as of 2026-03-25.
