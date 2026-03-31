@@ -29,7 +29,7 @@ fit:
   dimensions:
     mission_alignment: 4
     evidence_match: 7
-    track_record_fit: 6
+    track_record_fit: 5
     network_proximity: 8
     strategic_value: 5
     financial_alignment: 9
