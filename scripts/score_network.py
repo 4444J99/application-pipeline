@@ -14,7 +14,7 @@ from __future__ import annotations
 from datetime import date
 from pathlib import Path
 
-from pipeline_lib import parse_date
+from pipeline_lib import parse_date, load_identity
 
 _NETWORK_DECAY = {
     "response_fresh": 30,
@@ -135,7 +135,8 @@ def _score_from_graph(entry: dict) -> int:
         network = load_network()
         if not network.get("nodes"):
             return 1
-        result = score_org_proximity(network, "Anthony Padavano", org)
+        me = load_identity()["person"]["short_name"]
+        result = score_org_proximity(network, me, org)
         return result.get("score", 1)
     except Exception:
         return 1

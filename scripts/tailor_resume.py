@@ -28,6 +28,7 @@ from pipeline_lib import (
     REPO_ROOT,
     load_entries,
     load_entry_by_id,
+    load_identity,
     resolve_cover_letter,
     update_last_touched,
 )
@@ -399,8 +400,9 @@ def integrate_tailored_sections(entry_id: str, output_text: str, identity: str |
         # Also update the <title> tag
         title_text = re.sub(r'<[^>]+>', '', parsed_sections["TITLE_LINE"])
         title_text = title_text.replace("&amp;", "&").strip()
+        full_name = load_identity()["person"]["full_name"]
         html = re.sub(
-            r'(<title>Anthony James Padavano — ).*?(</title>)',
+            f'(<title>{full_name} — ).*?(</title>)',
             lambda m: m.group(1) + title_text + m.group(2),
             html,
             count=1,

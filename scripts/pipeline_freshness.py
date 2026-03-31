@@ -5,6 +5,7 @@ from __future__ import annotations
 import re
 from datetime import UTC, date, datetime
 from pathlib import Path
+from typing import TypeAlias
 
 from pipeline_entry_state import parse_date as _parse_date
 from pipeline_market import build_market_intelligence_loader
@@ -31,6 +32,9 @@ PIPELINE_DIR_RESEARCH_POOL = REPO_ROOT / "pipeline" / "research_pool"
 
 # Tracks exempt from the 72h freshness gate (they have fixed deadlines, not posting freshness)
 _DEADLINE_TRACKS = frozenset({"grant", "residency", "fellowship", "creative", "writing"})
+
+DateLike: TypeAlias = str | date | datetime | None
+EntryData: TypeAlias = dict[str, object]
 
 
 def flush_stale_active_jobs(*, quiet: bool = False) -> int:
@@ -78,7 +82,7 @@ def flush_stale_active_jobs(*, quiet: bool = False) -> int:
     return flushed
 
 
-def get_entry_era(entry: dict) -> str:
+def get_entry_era(entry: EntryData) -> str:
     """Derive 'volume' or 'precision' from timeline.submitted and pivot date."""
     timeline = entry.get("timeline", {})
     if not isinstance(timeline, dict):
@@ -110,7 +114,7 @@ def _load_freshness_thresholds() -> tuple[float, float, float]:
         return float(JOB_FRESH_HOURS), float(JOB_WARM_HOURS), float(JOB_STALE_HOURS)
 
 
-def _parse_datetime_aware(date_str: str | date | datetime | None) -> datetime | None:
+def _parse_datetime_aware(date_str: DateLike) -> datetime | None:
     """Parse date/datetime values into timezone-aware UTC datetimes."""
     if not date_str:
         return None
@@ -132,17 +136,17 @@ def _parse_datetime_aware(date_str: str | date | datetime | None) -> datetime | 
     return None
 
 
-def get_posting_age_hours(entry: dict) -> float | None:
+def get_posting_age_hours(entry: EntryData) -> float | None:
     """Compute posting age in hours using timeline/posting-related fields."""
 
-    def _is_date_only(raw_value: str | date | datetime | None) -> bool:
+    def _is_date_only(raw_value: DateLike) -> bool:
         if isinstance(raw_value, date) and not isinstance(raw_value, datetime):
             return True
         if isinstance(raw_value, str):
             return bool(re.fullmatch(r"\d{4}-\d{2}-\d{2}", raw_value.strip()))
         return False
 
-    def _hours_from_date_only(raw_value: str | date | datetime | None) -> float | None:
+    def _hours_from_date_only(raw_value: DateLike) -> float | None:
         parsed = _parse_date(raw_value)
         if parsed is None:
             return None
@@ -174,7 +178,7 @@ def get_posting_age_hours(entry: dict) -> float | None:
     return delta.total_seconds() / 3600.0
 
 
-def get_freshness_tier(entry: dict) -> str | None:
+def get_freshness_tier(entry: EntryData) -> str | None:
     """Return one of hot/warm/cooling/stale for job entries."""
     if entry.get("track") != "job":
         return None
@@ -193,7 +197,7 @@ def get_freshness_tier(entry: dict) -> str | None:
     return "stale"
 
 
-def compute_freshness_score(entry: dict) -> float:
+def compute_freshness_score(entry: EntryData) -> float:
     """Return a 0.0-1.0 linear freshness decay multiplier for job entries."""
     if entry.get("track") != "job":
         return 1.0

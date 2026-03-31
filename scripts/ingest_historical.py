@@ -26,11 +26,17 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from pipeline_lib import REPO_ROOT, SIGNALS_DIR
+from pipeline_lib import REPO_ROOT, SIGNALS_DIR, load_identity
 
 INTAKE_DIR = REPO_ROOT / "intake"
 LINKEDIN_DIR = INTAKE_DIR / "linkedin-export" / "LinkedInDataExport_12-25-2025" / "Jobs"
-APPLYALL_CSV = INTAKE_DIR / "Anthony_Padavano_applied_applications.csv"
+def get_applyall_csv_path() -> Path:
+    """Return the path to the ApplyAll CSV, using identity if available."""
+    full_name = load_identity()["person"]["full_name"]
+    slug = full_name.replace(" ", "_")
+    return INTAKE_DIR / f"{slug}_applied_applications.csv"
+
+APPLYALL_CSV = get_applyall_csv_path()
 OUTPUT_PATH = SIGNALS_DIR / "historical-outcomes.yaml"
 
 # ATS portal classification from URL patterns
@@ -182,12 +188,14 @@ def compute_stats(records: list[dict]) -> dict:
 
 def write_historical_outcomes(records: list[dict], output_path: Path = OUTPUT_PATH) -> Path:
     """Write historical outcomes to YAML."""
+    full_name = load_identity()["person"]["full_name"]
+    slug = full_name.replace(" ", "_")
     data = {
         "metadata": {
             "generated": datetime.now().isoformat(),
             "source_files": [
                 "intake/linkedin-export/LinkedInDataExport_12-25-2025/Jobs/Job Applications*.csv",
-                "intake/Anthony_Padavano_applied_applications.csv",
+                f"intake/{slug}_applied_applications.csv",
             ],
             "total_records": len(records),
             "note": "Historical pre-pipeline applications. All outcomes are 'expired' (no response received).",

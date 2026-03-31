@@ -1,23 +1,117 @@
-name: application-pipeline
-organ: LIMINAL
-tier: standard
-status: LOCAL
-description: >
-  Career application pipeline — structured conversion tracking,
-  modular narrative blocks, variant testing, and analytics for
-  grant/residency/job applications.
+schema_version: "1.0"
+organ: III
+organ_name: Commerce
+repo: application-pipeline
+org: organvm-iii-ergon
 
-produces: []
+metadata:
+  implementation_status: PRODUCTION
+  tier: flagship
+  promotion_status: LOCAL
+  revenue_model: open-core
+  last_validated: "2026-03-30"
+  description: >-
+    Multi-track application management engine — structured conversion pipeline
+    for jobs, grants, residencies, fellowships, and consulting engagements.
+    State machine, scoring rubric, ATS integrations, outreach protocol, quality
+    gates, resume/CL tailoring, contact CRM, and forced revision workflow.
+    161 scripts, 3,266 tests, 127 CLI commands. Extractable as a general-purpose
+    product; currently running one production instance (personal).
+  tags:
+    - application-engine
+    - conversion-pipeline
+    - state-machine
+    - scoring-rubric
+    - ats-integration
+    - outreach-protocol
+    - crm
+    - quality-gates
+    - flagship-product
+
+# ═══════════════════════════════════════════
+# EXTRACTION BOUNDARY
+# ═══════════════════════════════════════════
+#
+# ENGINE (reusable product — extractable to organvm-iii-ergon):
+#   scripts/          154 of 161 scripts are engine (state machine, scoring,
+#                     ATS clients, outreach, quality gates, CLI framework)
+#   tests/            Test suite (3,266 tests) — engine validation
+#   strategy/         Engine configs: scoring-rubric.yaml, agent-rules.yaml,
+#                     system-standards.yaml, rater-personas.yaml, notifications.yaml
+#   docs/             Architecture, SOPs, thesis, verification blueprints
+#   pyproject.toml    Package definition
+#
+# INSTANCE (personal data — stays in 4444J99):
+#   pipeline/         72 YAML entries (personal applications)
+#   applications/     Submission bundles (personal)
+#   materials/        Resumes, cover letters, profiles (personal)
+#   signals/          CRM contacts, outreach log, conversion data (personal)
+#   blocks/           126 narrative modules (personal voice, reusable pattern)
+#   intake/           Ingestion staging (personal)
+#   strategy/         Market intel, funding research, campaign plans (personal)
+#
+# MIXED (engine pattern + instance content):
+#   blocks/           The STRUCTURE is engine (tier system, frontmatter schema);
+#                     the CONTENT is instance (personal narrative)
+#   strategy/         scoring-rubric.yaml is engine; market-intelligence.json is instance
+#
+# 7 scripts with instance coupling (reference personal data):
+#   check_email.py, check_email_constants.py, generate_project_blocks.py,
+#   materials_validator.py, prepare_submission.py, refresh_from_ecosystem.py,
+#   standards.py
+#
+# EXTRACTION PATTERN: Same as Cvrsvs Honorvm (NLnet proposal).
+#   1. Extract engine scripts into standalone package
+#   2. Replace personal references with configurable identity module
+#   3. Instance loads identity + data from a config directory
+#   4. Engine provides: state machine, scoring, ATS, outreach, quality gates
+#   5. Instance provides: entries, contacts, materials, blocks, signals
+
+produces:
+  - target: organvm-iii-ergon/commerce--meta
+    type: consulting-scoring
+    description: Client fit scoring rubric (weights_consulting) consumed by commerce operations
+
+  - target: meta-organvm/aerarium--res-publica
+    type: grant-pipeline-infrastructure
+    description: State machine, quality gates, and outreach protocol reusable for grant applications
+
+  - target: organvm-v-logos/public-process
+    type: methodology-essays
+    description: Pipeline methodology documented as public process essays
+
+  - target: 4444j99/portfolio
+    type: portfolio-evidence
+    description: Pipeline architecture as portfolio case study
+
+  - target: meta-organvm/praxis-perpetua
+    type: dissertation-evidence
+    description: Pipeline thesis chapters (Ch 1-10) as SGO dissertation SGO-2026-D-001
+
 consumes:
-  - source: META-ORGANVM/organvm-corpvs-testamentvm
-    edge: covenant-ark-metrics
-    description: Canonical identity statements, metrics, evidence inventory
+  - type: canonical-metrics
+    source: meta-organvm/organvm-corpvs-testamentvm
+    description: Covenant-ark metrics, identity statements, evidence inventory
 
-subscriptions: []
+  - type: governance-rules
+    source: meta-organvm/organvm-corpvs-testamentvm
+    description: System governance rules for standards validation
 
-tags:
-  - career-infrastructure
-  - application-tracking
-  - narrative-blocks
+  - type: sops
+    source: meta-organvm/aerarium--res-publica
+    description: SOP-INST-001 (Forced Revision Protocol) — applies to all application tracks
 
-implementation_status: ACTIVE
+  - type: orchestration-signals
+    source: organvm-iv-taxis
+    description: Cross-organ coordination and identity position definitions
+
+subscriptions:
+  - event: governance.updated
+    source: ORGAN-IV
+    action: Review compliance with updated governance rules
+  - event: metrics.refreshed
+    source: META-ORGANVM
+    action: Propagate canonical metrics to blocks and materials
+  - event: engagement.milestone-completed
+    source: ORGAN-III
+    action: Update consulting track entries from commerce--meta signals

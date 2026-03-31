@@ -1,0 +1,171 @@
+# identity.yaml — All personal data in one place.
+# Every hardcoded name, number, URL, and location in the engine
+# must resolve from this file. If it's not here, it's a bug.
+#
+# Engine scripts load this via: from pipeline_lib import load_identity
+# Templates reference these as variables, never literals.
+
+# ═══════════════════════════════════════════
+# PERSON
+# ═══════════════════════════════════════════
+person:
+  full_name: "Anthony James Padavano"
+  short_name: "Anthony Padavano"
+  first_name: "Anthony"
+  last_name: "Padavano"
+  preferred_first_name: "Anthony"
+  preferred_last_name: "Padavano"
+  email: "padavano.anthony@gmail.com"
+  phone: "561-602-7300"
+  location: "New York City"
+  location_short: "New York, NY"
+  country: "United States"
+  timezone: "Eastern (ET)"
+  pronouns: "he/him"
+  identity_markers:
+    - "LGBTQ+"
+
+# ═══════════════════════════════════════════
+# LINKS
+# ═══════════════════════════════════════════
+links:
+  portfolio: "https://4444j99.github.io/portfolio/"
+  linkedin: "https://www.linkedin.com/in/anthonyjamespadavano"
+  github_personal: "https://github.com/4444J99"
+  github_system: "https://github.com/meta-organvm"
+  public_process: "https://organvm-v-logos.github.io/public-process/"
+
+# ═══════════════════════════════════════════
+# EMPLOYER / SYSTEM
+# ═══════════════════════════════════════════
+employer:
+  name: "ORGANVM"
+  description: "Eight-organ creative-institutional metasystem"
+  repo_count: 113
+  org_count: 8
+  file_count: "82K"
+  word_count: "739K"
+  essay_count: 48
+  sprint_count: 33
+  dependency_edges: 50
+
+# ═══════════════════════════════════════════
+# CREDENTIALS
+# ═══════════════════════════════════════════
+credentials:
+  education:
+    - degree: "M.F.A. Creative Writing"
+      institution: "Florida Atlantic University"
+      years: "2015–2018"
+    - degree: "B.A. English Literature"
+      institution: "CUNY College of Staten Island"
+      years: "2010–2014"
+  certifications:
+    - "Full-Stack Developer, Meta (2024)"
+    - "UX Design, Google (2023)"
+    - "Digital Marketing, Google (2023)"
+    - "Project Management, Google (2023)"
+  years_experience: 15  # 2011–present (first website with unnamedplay-r/etceter4)
+
+# ═══════════════════════════════════════════
+# CANONICAL METRICS (single source of truth)
+# ═══════════════════════════════════════════
+metrics:
+  repos: 113
+  ci_cd_pipelines: 104
+  github_actions_workflows: 128
+  reusable_templates: 18
+  tests_system_wide: 23470
+  tests_pipeline: 3266
+  words_documentation: "739K"
+  essays_published: 48
+  files_total: "82K"
+  agent_definitions: 32
+  cli_commands: 127
+  dependency_edges: 50
+  students_taught: "2,000+"
+  courses_taught: "100+"
+  institutions_taught: 8
+  teaching_years: 11
+  views_multimedia: "17.5M+"
+  fundraising_generated: "$2M"
+
+# ═══════════════════════════════════════════
+# EXPERIENCE ENTRIES (the 4 required entries)
+# ═══════════════════════════════════════════
+experience:
+  - title_template: "{role_specific_title}"  # Filled by tailoring engine
+    employer: "ORGANVM"
+    years: "2020–Present"
+  - title: "Instructor — Composition & Writing"
+    employer: "Miami Dade College, Keiser University, Nova Southeastern, FAU, Young Harris, Tarrant County, Broward, Palm Beach State"
+    years: "2015–Present"
+  - title: "Digital Marketing Manager"
+    employer: "Miami Dade College Foundation (nonprofit)"
+    years: "2023–2024"
+  - title: "Multimedia Specialist"
+    employer: "AJP Media Arts — clients incl. Boca Ballet Theatre, Forward Funding, Arts in Boca"
+    years: "2011–2020"
+
+# ═══════════════════════════════════════════
+# IDENTITY POSITIONS (9 canonical)
+# ═══════════════════════════════════════════
+identity_positions:
+  systems-artist:
+    title_line: "Systems Artist & Creative Technologist"
+    credentials_line: "Systems Artist & Creative Technologist | MFA, Creative Writing | New York City"
+  creative-technologist:
+    title_line: "Creative Technologist & Systems Builder"
+    credentials_line: "Creative Technologist | MFA, Creative Writing | New York City"
+  independent-engineer:
+    title_line: "Software Engineer & Systems Architect"
+    credentials_line: "Software Engineer | Full-Stack Developer (Meta) | New York City"
+  documentation-engineer:
+    title_line: "Documentation Engineer & Systems Architect"
+    credentials_line: "Documentation Engineer | MFA, Creative Writing | New York City"
+  educator:
+    title_line: "Educator & Learning Architect"
+    credentials_line: "Educator & Learning Architect | MFA, Creative Writing | New York City"
+  platform-orchestrator:
+    title_line: "Platform Engineer & Systems Builder"
+    credentials_line: "Platform Engineer | Full-Stack Developer (Meta) | New York City"
+  governance-architect:
+    title_line: "Governance & Compliance Architect"
+    credentials_line: "Governance & Compliance Architect | New York City"
+  founder-operator:
+    title_line: "Full-Stack Engineer & Systems Builder"
+    credentials_line: "Founder & Operator | Full-Stack Developer (Meta) | New York City"
+  community-practitioner:
+    title_line: "Community Practitioner & Creative Technologist"
+    credentials_line: "Community Practitioner | MFA, Creative Writing | New York City"
+
+# ═══════════════════════════════════════════
+# STANDARD PORTAL ANSWERS
+# ═══════════════════════════════════════════
+portal_defaults:
+  work_authorized: "Yes"
+  sponsorship_needed: "No"
+  how_heard: "LinkedIn"
+  open_to_relocation: "Yes"
+  us_citizen: true
+  previously_employed: "No"
+  sanctions_clear: true
+  interviewed_before_default: "No"
+
+# ═══════════════════════════════════════════
+# TOOL PATHS (environment-specific)
+# ═══════════════════════════════════════════
+tools:
+  chrome_paths:
+    - "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    - "/Applications/Chromium.app/Contents/MacOS/Chromium"
+    - "google-chrome"
+    - "chromium"
+
+# ═══════════════════════════════════════════
+# COVER LETTER TEMPLATE
+# ═══════════════════════════════════════════
+cover_letter:
+  contact_format: "{location} | {phone} | {email}"
+  sign_off: "Sincerely,"
+  # Template placeholders: {{BODY}}, {{TITLE_LINE}}, {{CREDENTIALS}}

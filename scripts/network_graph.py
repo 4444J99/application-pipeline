@@ -44,6 +44,7 @@ from pipeline_lib import (
     ALL_PIPELINE_DIRS,
     SIGNALS_DIR,
     atomic_write,
+    load_identity,
 )
 
 NETWORK_FILE = SIGNALS_DIR / "network.yaml"
@@ -336,8 +337,7 @@ def score_org_proximity(network: dict, source: str, target_org: str) -> dict:
 
 # --- Ingest from existing data ---
 
-
-def ingest_from_contacts_and_outreach(network: dict, me: str = "Anthony Padavano") -> int:
+def ingest_from_contacts_and_outreach(network: dict, me: str | None = None) -> int:
     """Ingest contacts.yaml and outreach-log.yaml into the network graph.
 
     - Each contact becomes a node
@@ -345,6 +345,8 @@ def ingest_from_contacts_and_outreach(network: dict, me: str = "Anthony Padavano
     - Pipeline entries' organizations are set on nodes
     - Returns count of new items added
     """
+    if me is None:
+        me = load_identity()["person"]["short_name"]
     added = 0
 
     # Ensure self node
@@ -587,12 +589,14 @@ def display_map(network: dict, source: str):
     print_tree(source, 0)
 
 
-def sync_to_contacts(network: dict, me: str = "Anthony Padavano") -> int:
+def sync_to_contacts(network: dict, me: str | None = None) -> int:
     """Sync network graph nodes into contacts.yaml.
 
     Creates new contacts for nodes not already in contacts.yaml.
     Does not overwrite existing contacts. Returns count of new contacts added.
     """
+    if me is None:
+        me = load_identity()["person"]["short_name"]
     contacts_file = SIGNALS_DIR / "contacts.yaml"
     if contacts_file.exists():
         with open(contacts_file) as f:
@@ -688,7 +692,7 @@ def main():
     args = parser.parse_args()
 
     network = load_network()
-    me = "Anthony Padavano"
+    me = load_identity()["person"]["short_name"]
 
     if args.ingest:
         added = ingest_from_contacts_and_outreach(network, me)

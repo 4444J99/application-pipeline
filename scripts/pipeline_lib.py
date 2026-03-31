@@ -41,6 +41,35 @@ is_actionable = _entry_state.is_actionable
 is_deferred = _entry_state.is_deferred
 can_advance = _entry_state.can_advance
 
+# ═══════════════════════════════════════════
+# IDENTITY — single source of truth for all personal data
+# ═══════════════════════════════════════════
+IDENTITY_PATH = REPO_ROOT / "config" / "identity.yaml"
+_identity_cache: dict | None = None
+
+
+def load_identity() -> dict:
+    """Load identity config. Cached after first call.
+
+    Every script that needs personal data (name, email, phone, URLs, metrics,
+    credentials, identity positions) MUST call this instead of hardcoding values.
+    """
+    global _identity_cache
+    if _identity_cache is not None:
+        return _identity_cache
+    if IDENTITY_PATH.exists():
+        _identity_cache = yaml.safe_load(IDENTITY_PATH.read_text())
+    else:
+        # Minimal fallback — should never happen in production
+        _identity_cache = {
+            "person": {"full_name": "Unknown", "email": "", "phone": ""},
+            "links": {},
+            "metrics": {},
+            "identity_positions": {},
+        }
+    return _identity_cache
+
+
 PIPELINE_DIR_ACTIVE = REPO_ROOT / "pipeline" / "active"
 PIPELINE_DIR_SUBMITTED = REPO_ROOT / "pipeline" / "submitted"
 PIPELINE_DIR_CLOSED = REPO_ROOT / "pipeline" / "closed"

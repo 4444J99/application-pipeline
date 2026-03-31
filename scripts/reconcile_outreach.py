@@ -23,7 +23,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from pipeline_lib import SIGNALS_DIR
+from pipeline_lib import SIGNALS_DIR, load_identity
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CONTACTS_PATH = SIGNALS_DIR / "contacts.yaml"
@@ -95,12 +95,14 @@ def _parse_date(date_str: str, reference_year: int = 2026) -> str:
     return str(date.today())
 
 
-def _extract_contact_from_options_line(line: str, owner: str = "Anthony James Padavano") -> str | None:
+def _extract_contact_from_options_line(line: str, owner: str | None = None) -> str | None:
     """Extract contact name from 'Open the options list in your conversation with X and Y'.
 
     LinkedIn generates this line for every conversation. The owner (you) is always
     one of the two names; the other is the contact.
     """
+    if owner is None:
+        owner = load_identity()["person"]["full_name"]
     m = re.search(
         r"Open the options list in your conversation with (.+?) and (.+?)$",
         line,

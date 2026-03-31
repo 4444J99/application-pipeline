@@ -20,6 +20,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from pipeline_lib import load_identity
+
 
 
 # ---------------------------------------------------------------------------
@@ -177,11 +179,12 @@ def validate_package(package_dir: Path) -> MaterialsReport:
     # M-VI: Visual Identity Parity
     cl_html_text = _read_file(cl_html) if cl_html else ""
     if cl_html_text:
+        full_name = load_identity()["person"]["full_name"]
         parity_ok = ("Georgia" in cl_html_text and
-                     "Anthony James Padavano" in cl_html_text and
+                     full_name in cl_html_text and
                      "border-bottom" in cl_html_text)
         results.append(ArticleResult("M-VI", "Visual Parity", parity_ok,
-                                     "" if parity_ok else "cover letter template doesn't match resume"))
+                                     "" if parity_ok else f"cover letter template doesn't match resume (expected {full_name})"))
     else:
         results.append(ArticleResult("M-VI", "Visual Parity", False, "no cover letter HTML found"))
 

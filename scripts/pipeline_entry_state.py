@@ -3,9 +3,14 @@
 from __future__ import annotations
 
 from datetime import date, datetime
+from typing import TypeAlias
+
+AmountData: TypeAlias = dict[str, object]
+DateLike: TypeAlias = str | date | datetime | None
+EntryData: TypeAlias = dict[str, object]
 
 
-def parse_date(date_str: str | date | datetime | None) -> date | None:
+def parse_date(date_str: DateLike) -> date | None:
     """Parse an ISO date string (YYYY-MM-DD) into a date object."""
     if not date_str:
         return None
@@ -19,7 +24,7 @@ def parse_date(date_str: str | date | datetime | None) -> date | None:
         return None
 
 
-def parse_datetime(date_str: str | date | datetime | None) -> datetime | None:
+def parse_datetime(date_str: DateLike) -> datetime | None:
     """Parse an ISO date string into a datetime object."""
     if not date_str:
         return None
@@ -29,7 +34,7 @@ def parse_datetime(date_str: str | date | datetime | None) -> datetime | None:
         return None
 
 
-def format_amount(amount: dict | None) -> str:
+def format_amount(amount: AmountData | None) -> str:
     """Format an amount dict for display."""
     if not amount or not isinstance(amount, dict):
         return "—"
@@ -47,7 +52,7 @@ def format_amount(amount: dict | None) -> str:
     return f"${value:,}"
 
 
-def get_effort(entry: dict) -> str:
+def get_effort(entry: EntryData) -> str:
     """Get effort level from submission, defaulting to 'standard'."""
     submission = entry.get("submission", {})
     if isinstance(submission, dict):
@@ -55,7 +60,7 @@ def get_effort(entry: dict) -> str:
     return "standard"
 
 
-def get_score(entry: dict) -> float:
+def get_score(entry: EntryData) -> float:
     """Get composite fit score."""
     fit = entry.get("fit", {})
     if isinstance(fit, dict):
@@ -66,7 +71,7 @@ def get_score(entry: dict) -> float:
     return 0.0
 
 
-def get_deadline(entry: dict) -> tuple[date | None, str]:
+def get_deadline(entry: EntryData) -> tuple[date | None, str]:
     """Return (deadline_date, deadline_type)."""
     deadline = entry.get("deadline", {})
     if not isinstance(deadline, dict):
@@ -79,20 +84,20 @@ def days_until(target_date: date) -> int:
     return (target_date - date.today()).days
 
 
-def is_actionable(entry: dict) -> bool:
+def is_actionable(entry: EntryData) -> bool:
     """Return True if entry is in an actionable status (can be worked on)."""
     status = entry.get("status", "")
     return status in ("research", "qualified", "drafting", "staged")
 
 
-def is_deferred(entry: dict) -> bool:
+def is_deferred(entry: EntryData) -> bool:
     """Return True if entry is deferred (blocked by external factors)."""
     status = entry.get("status", "")
     deferral = entry.get("deferral")
     return status == "deferred" and isinstance(deferral, dict)
 
 
-def can_advance(entry: dict, target_status: str | None = None) -> tuple[bool, str]:
+def can_advance(entry: EntryData, target_status: str | None = None) -> tuple[bool, str]:
     """Check if an entry can advance to target status."""
     current_status = entry.get("status", "")
     entry_id = entry.get("id", "unknown")

@@ -29,6 +29,7 @@ from pipeline_lib import (
     load_block,
     load_entries,
     load_entry_by_id,
+    load_identity,
     load_profile,
     resolve_cover_letter,
 )
@@ -431,11 +432,13 @@ def _template_cover_letter(
         sections.append(para)
 
     # Closing
+    identity = load_identity()
+    full_name = identity["person"]["full_name"]
     sections.append(
         "I would welcome the opportunity to discuss how my experience "
         f"can contribute to {org}'s mission. Thank you for your consideration."
     )
-    sections.append("Sincerely,\nAnthony James Padavano")
+    sections.append(f"Sincerely,\n{full_name}")
 
     return "\n\n".join(sections)
 
