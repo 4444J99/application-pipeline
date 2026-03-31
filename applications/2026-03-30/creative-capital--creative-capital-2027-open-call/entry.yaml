@@ -1,7 +1,7 @@
 id: creative-capital-2027
 name: Creative Capital 2027 Open Call
 track: grant
-status: staged
+status: drafting
 identity_position: systems-artist
 outcome: null
 target:
@@ -57,7 +57,7 @@ submission:
 timeline:
   researched: '2026-02-14'
   date_added: 2026-02-14
-  qualified: '2026-03-15'
+  qualified: "2026-03-15"
   materials_ready: null
   acknowledged: null
   interview: null
@@ -77,7 +77,7 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: null
-last_touched: '2026-03-25'
+last_touched: "2026-03-25"
 status_meta:
   reviewed_by: 4jp
   reviewed_at: '2026-03-03'

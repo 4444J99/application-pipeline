@@ -100,6 +100,12 @@ COMMANDS = {
     "funding-metrics": ("funding_metrics.py", [],            "Aggregate funding performance and velocity metrics"),
     "tracker":     ("blind_spot_tracker.py", [],         "Blind spot progress tracker with actionable items"),
 
+    # -- LinkedIn Content --
+    "linkedin":       ("linkedin_composer.py", ["--history"],    "LinkedIn content pipeline: history + series state"),
+    "linkedinaudit":  ("linkedin_composer.py", ["--audit-all"],  "Audit all DRAFT/READY LinkedIn posts against Testament"),
+    "linkedinnext":   ("linkedin_composer.py", ["--next"],       "Recommend next LinkedIn post based on series analysis"),
+    "linkedinblocks": ("linkedin_composer.py", ["--list"],       "List blocks available for LinkedIn adaptation"),
+
     # -- Content & Jobs --
     "sourcejobs":  ("source_jobs.py", ["--fetch", "--dry-run"], "Preview new job postings from ATS APIs"),
     "purgejobs":   ("hygiene.py", ["--prune-research", "--flash"], "Archive research_pool entries >72h old (flash reaper)"),

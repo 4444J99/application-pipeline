@@ -26,8 +26,10 @@ help:
 	@echo "  github-proximity       Update contacts from GitHub interaction signals"
 	@echo "  refresh-intelligence   Full ecosystem + feedback cycle"
 	@echo ""
-	@echo "Artifact Generation:"
-	@echo "  compose-linkedin       Generate LinkedIn drafts from narrative blocks"
+	@echo "LinkedIn Content:"
+	@echo "  linkedin               Show posting history and series state"
+	@echo "  linkedin-audit         Audit all DRAFT/READY posts against Testament"
+	@echo "  linkedin-next          Recommend next post based on series analysis"
 
 install-dev:
 	$(PYTHON) -m pip install -e ".[dev]"
@@ -83,7 +85,12 @@ refresh-all: refresh-ecosystem refresh-prestige derive-positions
 refresh-intelligence: refresh-all recalibrate-engagement block-engagement github-proximity
 	@echo "Full intelligence cycle complete."
 
-# Artifact generation
-compose-linkedin:
-	@read -p "Enter block path (e.g., methodology/ai-conductor): " block; \
-	$(PYTHON) scripts/linkedin_composer.py --block $$block
+# LinkedIn content pipeline
+linkedin:
+	$(PYTHON) scripts/linkedin_composer.py --history
+
+linkedin-audit:
+	$(PYTHON) scripts/linkedin_composer.py --audit-all
+
+linkedin-next:
+	$(PYTHON) scripts/linkedin_composer.py --next
