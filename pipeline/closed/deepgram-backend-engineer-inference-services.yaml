@@ -1,8 +1,8 @@
 id: deepgram-backend-engineer-inference-services
 name: Deepgram Backend Engineer- Inference Services
 track: job
-status: submitted
-outcome: null
+status: outcome
+outcome: rejected
 target:
   organization: Deepgram
   url: https://jobs.ashbyhq.com/deepgram
@@ -112,15 +112,17 @@ timeline:
   date_added: '2026-03-19'
   discovered: '2026-03-19T21:28:35.800842+00:00'
 conversion:
-  response_received: false
-  response_type: null
-  time_to_response_days: null
+  response_received: true
+  response_type: rejected
+  time_to_response_days: 12
   feedback: null
   follow_up_count: 6
+  outcome_stage: resume_screen
+  rejection_signal: automated
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-03-23'
+last_touched: "2026-04-01"
 follow_up:
 - date: '2026-03-21'
   channel: linkedin

@@ -547,3 +547,15 @@ actions:
   impact: TBD
   entry_id: livekit-staff-developer-advocate-community-events
   reason: Manual advancement by user
+- signal_id: first-interview-conversion-grafana-2026-04-01
+  signal_type: conversion_data
+  description: 'First pipeline interview conversion: Grafana Labs Staff AI Engineer,
+    People Technology. 5-day response. Applied outside pipeline 2026-03-26, screen
+    invitation 2026-03-31.'
+  triggered_action: Created retroactive pipeline entry at interview status. Logged
+    contact (Ryan McKellips). Scheduled recruiter screen.
+  action_date: '2026-04-01'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: grafana-labs-staff-ai-engineer-people-technology-nasa-remote
+  reason: "First positive conversion \u2014 milestone for pipeline validation"

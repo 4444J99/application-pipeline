@@ -1,7 +1,7 @@
 id: temporal-senior-software-engineer-open-source-server
 name: Temporal Senior Software Engineer, Open Source Server
 track: job
-status: submitted
+status: acknowledged
 outcome: null
 target:
   organization: Temporal
@@ -107,14 +107,14 @@ timeline:
   date_added: '2026-03-19'
   discovered: '2026-03-19T21:28:34.665102+00:00'
 conversion:
-  response_received: false
-  response_type: null
+  response_received: true
+  response_type: acknowledged
   time_to_response_days: null
   feedback: null
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-03-19'
+last_touched: "2026-04-01"
 status_meta:
   submitted_by: 4jp
   submitted_at: '2026-03-19'

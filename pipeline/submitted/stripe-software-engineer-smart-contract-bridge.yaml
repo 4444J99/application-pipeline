@@ -1,7 +1,7 @@
 id: stripe-software-engineer-smart-contract-bridge
 name: Stripe Software Engineer - Smart Contract, Bridge
 track: job
-status: submitted
+status: acknowledged
 outcome: null
 target:
   organization: Stripe
@@ -10,8 +10,59 @@ target:
   portal: greenhouse
   location: San Francisco or New York
   location_class: us-onsite
-  description: <h2><strong>Who we are </strong></h2> <h3><strong>About Bridge</strong></h3> <p>We’re creating an entirely new payments platform, built with stablecoins, to simplify global money movement. Bridge enables faster, cheaper payments and borderless access to dollars via stablecoins. Through our APIs, businesses can send and receive funds across borders faster / cheaper vs. SWIFT and other fiat-only rails. Our virtual accounts enable international consumers and businesses to easily access, store and spend US dollars. Our payouts infrastructure enables platforms to disburse USD to anyone globally. We believe many trillions of dollars will move and settle through stablecoin payment rails. Bridge is pulling this future forward.&nbsp;</p> <p>We are building largely in San Francisco, and have a small team of people who have previously built financial infrastructure at some of the world’s leading companies (Coinbase, Stripe, Square, Brex, Upstart, DoorDash, Airbnb) and each and every one of them chose Bridge because they fundamentally believe that stablecoins will be a critical piece of financial infrastructure that allows for the improvement of global money movement.</p> <h3><strong>About the Role</strong></h3> <p>As one of the first blockchain engineers at Bridge, you will be given the autonomy to work on projects that are truly global in scale and aim to give customers access to products they've never had access to. Many of the use cases that we work on today didn't exist several months ago and that's because our team is dedicated to constant improvement for our partners and end users. Our Engineers have outsized ownership over projects so if you are looking for increased autonomy working on a completely greenfield opportunity, Bridge is the place for you.</p> <h3><strong>Responsibilities</strong></h3> <ul> <li> <p>Build out multi-chain hot wallet infrastructure to support increased reliability of our payments.</p> </li> <li> <p>Build smart contracts to increase hot wallet payment throughput.</p> </li> <li> <p>Build smart contract platform to issue custom stablecoins across multiple blockchains (EVM, Solana, Stellar, etc).</p> </li> <li> <p>Build smart contract monitoring systems to detect anomalous events (especially related to minting and burning).</p> </li> <li> <p>Design and develop blockchain-based applications and protocols to support stablecoin transactions and integrations.</p> </li> <li> <p>Collaborate with cross-functional teams to understand business requirements and translate them into technical specifications.</p> </li> <li> <p>Implement and maintain smart contracts, ensuring security and efficiency.</p> </li> <li> <p>Perform thorough testing and debugging of blockchain applications.</p> </li> <li> <p>Optimize blockchain performance and scalability.</p> </li> <li> <p>Stay up-to-date with the latest developments in blockchain technology and integrate relevant advancements into our solutions.</p> </li> <li> <p>Provide technical guidance and support to other team members.</p> </li> <li> <p>Contribute to the overall architecture and design of our blockchain systems.</p> </li> </ul> <h3><strong>Qualifications</strong></h3> <ul> <li> <p>Bachelor’s or Master’s degree in Computer Science, Engineering, or a related field.</p> </li> <li> <p>We are open to hiring engineers at various levels of seniority but in general we would look for somebody with 5+ years of experience.</p> </li> <li> <p>Strong proficiency in blockchain platforms such as Ethereum, Solana or others.</p> </li> <li> <p>Experience with smart contract development using Solidity or other relevant languages.</p> </li> <li> <p>Deep understanding of cryptographic principles and blockchain protocols.</p> </li> <li> <p>Experience with decentralized finance (DeFi) and stablecoins is highly desirable.</p> </li> <li> <p>Knowledge of security best practices in blockchain development.</p> </li> <li> <p>An enlarged sense of ownership and the ability to lead and influence the design and direction of our products.</p> </li> <li> <p>An ability to thrive in a fast
-    paced environment.</p> </li> <li> <p>A growth mindset and a constant curiosity and fearlessness to dive into the unknown.</p> </li> <li> <p>Excellent written and verbal communication skills, including the ability to write clear technical documentation.</p> </li> </ul>
+  description: <h2><strong>Who we are </strong></h2> <h3><strong>About Bridge</strong></h3>
+    <p>We’re creating an entirely new payments platform, built with stablecoins, to
+    simplify global money movement. Bridge enables faster, cheaper payments and borderless
+    access to dollars via stablecoins. Through our APIs, businesses can send and receive
+    funds across borders faster / cheaper vs. SWIFT and other fiat-only rails. Our
+    virtual accounts enable international consumers and businesses to easily access,
+    store and spend US dollars. Our payouts infrastructure enables platforms to disburse
+    USD to anyone globally. We believe many trillions of dollars will move and settle
+    through stablecoin payment rails. Bridge is pulling this future forward.&nbsp;</p>
+    <p>We are building largely in San Francisco, and have a small team of people who
+    have previously built financial infrastructure at some of the world’s leading
+    companies (Coinbase, Stripe, Square, Brex, Upstart, DoorDash, Airbnb) and each
+    and every one of them chose Bridge because they fundamentally believe that stablecoins
+    will be a critical piece of financial infrastructure that allows for the improvement
+    of global money movement.</p> <h3><strong>About the Role</strong></h3> <p>As one
+    of the first blockchain engineers at Bridge, you will be given the autonomy to
+    work on projects that are truly global in scale and aim to give customers access
+    to products they've never had access to. Many of the use cases that we work on
+    today didn't exist several months ago and that's because our team is dedicated
+    to constant improvement for our partners and end users. Our Engineers have outsized
+    ownership over projects so if you are looking for increased autonomy working on
+    a completely greenfield opportunity, Bridge is the place for you.</p> <h3><strong>Responsibilities</strong></h3>
+    <ul> <li> <p>Build out multi-chain hot wallet infrastructure to support increased
+    reliability of our payments.</p> </li> <li> <p>Build smart contracts to increase
+    hot wallet payment throughput.</p> </li> <li> <p>Build smart contract platform
+    to issue custom stablecoins across multiple blockchains (EVM, Solana, Stellar,
+    etc).</p> </li> <li> <p>Build smart contract monitoring systems to detect anomalous
+    events (especially related to minting and burning).</p> </li> <li> <p>Design and
+    develop blockchain-based applications and protocols to support stablecoin transactions
+    and integrations.</p> </li> <li> <p>Collaborate with cross-functional teams to
+    understand business requirements and translate them into technical specifications.</p>
+    </li> <li> <p>Implement and maintain smart contracts, ensuring security and efficiency.</p>
+    </li> <li> <p>Perform thorough testing and debugging of blockchain applications.</p>
+    </li> <li> <p>Optimize blockchain performance and scalability.</p> </li> <li>
+    <p>Stay up-to-date with the latest developments in blockchain technology and integrate
+    relevant advancements into our solutions.</p> </li> <li> <p>Provide technical
+    guidance and support to other team members.</p> </li> <li> <p>Contribute to the
+    overall architecture and design of our blockchain systems.</p> </li> </ul> <h3><strong>Qualifications</strong></h3>
+    <ul> <li> <p>Bachelor’s or Master’s degree in Computer Science, Engineering, or
+    a related field.</p> </li> <li> <p>We are open to hiring engineers at various
+    levels of seniority but in general we would look for somebody with 5+ years of
+    experience.</p> </li> <li> <p>Strong proficiency in blockchain platforms such
+    as Ethereum, Solana or others.</p> </li> <li> <p>Experience with smart contract
+    development using Solidity or other relevant languages.</p> </li> <li> <p>Deep
+    understanding of cryptographic principles and blockchain protocols.</p> </li>
+    <li> <p>Experience with decentralized finance (DeFi) and stablecoins is highly
+    desirable.</p> </li> <li> <p>Knowledge of security best practices in blockchain
+    development.</p> </li> <li> <p>An enlarged sense of ownership and the ability
+    to lead and influence the design and direction of our products.</p> </li> <li>
+    <p>An ability to thrive in a fast paced environment.</p> </li> <li> <p>A growth
+    mindset and a constant curiosity and fearlessness to dive into the unknown.</p>
+    </li> <li> <p>Excellent written and verbal communication skills, including the
+    ability to write clear technical documentation.</p> </li> </ul>
 deadline:
   date: null
   type: rolling
@@ -52,15 +103,15 @@ timeline:
   discovered: '2026-03-17T17:05:32.675080+00:00'
   submitted: '2026-03-17'
 conversion:
-  response_received: false
-  response_type: null
-  time_to_response_days: null
+  response_received: true
+  response_type: acknowledged
+  time_to_response_days: 15
   feedback: null
   follow_up_count: 5
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-03-31"
+last_touched: "2026-04-01"
 outreach:
 - linkedin_searches:
   - role: Engineering Manager

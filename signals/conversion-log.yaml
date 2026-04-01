@@ -807,9 +807,9 @@ entries:
   - pitches/credentials-creative-tech
   - evidence/work-samples
   variant_id: cover-letters/harvey-ai-midseniorstaff-software-engineer-agents
-  outcome: null
-  response_date: null
-  time_to_response_days: null
+  outcome: acknowledged
+  response_date: '2026-04-01'
+  time_to_response_days: 15
   feedback: null
 - id: langchain-senior-backend-engineer-enterprise-readiness-identity
   submitted: '2026-03-17'
@@ -824,9 +824,9 @@ entries:
   - pitches/credentials-creative-tech
   - evidence/work-samples
   variant_id: cover-letters/langchain-senior-backend-engineer-enterprise-readiness-identity
-  outcome: null
-  response_date: null
-  time_to_response_days: null
+  outcome: acknowledged
+  response_date: '2026-04-01'
+  time_to_response_days: 15
   feedback: null
 - id: openai-technical-deployment-lead-forward-deployed-engineering-fde-n
   submitted: '2026-03-17'
@@ -841,9 +841,9 @@ entries:
   - pitches/credentials-creative-tech
   - evidence/work-samples
   variant_id: cover-letters/openai-technical-deployment-lead-forward-deployed-engineering-fde-n
-  outcome: null
-  response_date: null
-  time_to_response_days: null
+  outcome: acknowledged
+  response_date: '2026-04-01'
+  time_to_response_days: 15
   feedback: null
 - id: stripe-software-engineer-smart-contract-bridge
   submitted: '2026-03-17'
@@ -858,9 +858,9 @@ entries:
   - pitches/credentials-creative-tech
   - evidence/work-samples
   variant_id: cover-letters/stripe-software-engineer-smart-contract-bridge
-  outcome: null
-  response_date: null
-  time_to_response_days: null
+  outcome: acknowledged
+  response_date: '2026-04-01'
+  time_to_response_days: 15
   feedback: null
 - id: notion-solutions-engineer-commercial
   submitted: '2026-03-17'
@@ -926,8 +926,8 @@ entries:
   - pitches/credentials-creative-tech
   - evidence/work-samples
   variant_id: cover-letters/snorkel-ai-staff-applied-ai-engineer-pre-sales
-  outcome: null
-  response_date: null
+  outcome: acknowledged
+  response_date: '2026-04-01'
   time_to_response_days: null
   feedback: null
 - id: snorkel-ai-forward-deployed-engineer-data-as-a-service
@@ -943,8 +943,8 @@ entries:
   - pitches/credentials-creative-tech
   - evidence/work-samples
   variant_id: cover-letters/snorkel-ai-forward-deployed-engineer-data-as-a-service
-  outcome: null
-  response_date: null
+  outcome: acknowledged
+  response_date: '2026-04-01'
   time_to_response_days: null
   feedback: null
 - id: toast-senior-backend-engineer
@@ -1028,10 +1028,12 @@ entries:
   - pitches/credentials-creative-tech
   - evidence/work-samples
   variant_id: cover-letters/coinbase-senior-software-engineer-data-platform
-  outcome: null
-  response_date: null
+  outcome: rejected
+  response_date: '2026-04-01'
   time_to_response_days: null
   feedback: null
+  outcome_stage: resume_screen
+  rejection_signal: screened
 - id: temporal-senior-software-engineer-open-source-server
   submitted: '2026-03-19'
   submitted_by: 4jp
@@ -1045,7 +1047,27 @@ entries:
   - pitches/credentials-creative-tech
   - evidence/work-samples
   variant_id: cover-letters/temporal-senior-software-engineer-open-source-server
-  outcome: null
-  response_date: null
+  outcome: acknowledged
+  response_date: '2026-04-01'
   time_to_response_days: null
   feedback: null
+- id: grafana-labs-staff-ai-engineer-people-technology-nasa-remote
+  submitted: '2026-03-26'
+  submitted_by: 4jp
+  track: job
+  identity_position: platform-orchestrator
+  composition_method: manual
+  blocks_used: []
+  variant_id: null
+  channel: direct
+  portal: greenhouse
+  resume_variant: null
+  cover_letter_present: false
+  custom_answers: true
+  follow_up_count: 0
+  outcome: null
+  outcome_stage: null
+  response_date: '2026-03-31'
+  time_to_response_days: 5
+  feedback: null
+  note: First interview conversion. Applied outside pipeline directly on Greenhouse.
