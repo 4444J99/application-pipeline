@@ -9,6 +9,8 @@ target:
   url: https://www.dorisduke.org/grants/projects/artists-make-technology-lab
   application_url: https://dorisduke.givingdata.com/portal/campaign/AMT2026
   portal: custom
+  location: New York City
+  location_class: us-onsite
   contact: AMTLab@dorisduke.org
 deadline:
   date: '2026-03-02'

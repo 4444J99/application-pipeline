@@ -9,6 +9,8 @@ target:
   url: https://awesomefoundation.org
   application_url: https://awesomefoundation.org/en/chapters/nyc
   portal: custom
+  location: New York City
+  location_class: us-onsite
 deadline:
   date: null
   time: null

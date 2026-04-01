@@ -9,6 +9,8 @@ target:
   url: https://logicmag.io
   application_url: https://logicmag.io/pitch
   portal: custom
+  location: New York City
+  location_class: us-onsite
 deadline:
   date: null
   time: null

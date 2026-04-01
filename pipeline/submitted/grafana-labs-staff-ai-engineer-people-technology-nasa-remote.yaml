@@ -5,8 +5,8 @@ status: interview
 outcome: null
 target:
   organization: Grafana Labs
-  url: https://boards.greenhouse.io/grafanalabs
-  application_url: https://boards.greenhouse.io/grafanalabs
+  url: https://grafana.com/about/careers/
+  application_url: https://job-boards.greenhouse.io/grafanalabs/jobs/5830873004
   portal: greenhouse
   location: US | Remote
   location_class: us-remote
@@ -14,7 +14,7 @@ deadline:
   date: null
   type: rolling
 amount:
-  value: 0
+  value: 192000
   currency: USD
   type: salary
 fit:
