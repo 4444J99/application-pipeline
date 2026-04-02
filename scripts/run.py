@@ -153,6 +153,7 @@ COMMANDS = {
     "weeklybrief": ("weekly_brief.py", [],                   "Weekly executive brief"),
     "status":      ("pipeline_status.py", [],            "Full pipeline status overview"),
     "signallog":   ("log_signal_action.py", ["--list"],   "Signal-to-action audit trail"),
+    "quicklog":    ("quicklog.py", [],                   "Quick-log an external submission"),
 }
 
 # --- Parameterized commands (word + target ID) ---
@@ -184,7 +185,6 @@ PARAM_COMMANDS = {
     "logdm":      ("log_dm.py", ["--contact"],             "Log a DM for a contact to all 3 signal files"),
     "greenhouse-submit": ("greenhouse_submit.py", ["--target"], "Greenhouse dry-run preview for single entry"),
     "outreach":   ("outreach_templates.py", ["--target"],       "Generate outreach templates for an entry"),
-    "quicklog":   ("quicklog.py", ["--org", None, "--role"],    "Quick-log an external submission"),
 }
 
 

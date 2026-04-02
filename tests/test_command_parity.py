@@ -41,3 +41,11 @@ def test_run_standalone_validate_command_parity():
     assert "validate" in COMMANDS
     script, _args, _desc = COMMANDS["validate"]
     assert script == "validate.py"
+
+
+def test_run_standalone_quicklog_command_parity():
+    """quicklog is a flag-driven dispatcher command, not an entry-id command."""
+    assert "quicklog" in COMMANDS
+    script, _args, _desc = COMMANDS["quicklog"]
+    assert script == "quicklog.py"
+    assert "quicklog" not in PARAM_COMMANDS
