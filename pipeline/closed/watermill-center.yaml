@@ -9,8 +9,7 @@ target:
   application_url: https://watermillcenter.slideroom.com
   portal: slideroom
 deadline:
-  date: '2026-02-18'
-  time: null
+  date: '2026-03-21'
   time: "23:59:59 UTC"
   timezone: "UTC"
   type: hard
