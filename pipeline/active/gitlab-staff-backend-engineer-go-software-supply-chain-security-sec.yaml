@@ -1,0 +1,116 @@
+id: gitlab-staff-backend-engineer-go-software-supply-chain-security-sec
+name: 'GitLab Staff Backend Engineer (Go), Software Supply Chain Security: Secrets
+  Management'
+track: job
+status: qualified
+outcome: null
+target:
+  organization: GitLab
+  url: https://boards.greenhouse.io/gitlab
+  application_url: https://job-boards.greenhouse.io/gitlab/jobs/8432235002
+  portal: greenhouse
+  location: Remote, Canada; Remote, Ireland; Remote, Israel; Remote, Netherlands;
+    Remote, United Kingdom; Remote, US
+  location_class: international
+  description: '<div class="content-intro"><p>GitLab is the intelligent orchestration
+    platform for DevSecOps. GitLab enables organizations to increase developer productivity,
+    improve operational efficiency, reduce security and compliance risk, and accelerate
+    digital transformation. More than 50 million registered users and more than 50%
+    of the Fortune 100* trust GitLab to ship better, more secure software faster.</p>
+    <p>The same principles built into our products are reflected in how our team works:
+    we embrace AI as a core productivity multiplier, with all team members expected
+    to incorporate AI into their daily workflows to drive efficiency, innovation,
+    and impact. GitLab is where careers accelerate, innovation flourishes, and every
+    voice is valued. Our high-performance culture is driven by our <a href="https://handbook.gitlab.com/handbook/values/">values</a>
+    and continuous knowledge exchange, enabling our team members to reach their full
+    potential while collaborating with industry leaders to solve complex problems.
+    <a href="https://www.youtube.com/watch?v=OuZIb5zszQI">Co-create the future with
+    us</a> as we build technology that transforms how the world develops software.</p>
+    <p>*<em>Fortune 500® is a registered trademark of Fortune Media IP Limited, used
+    under license. Claim based on GitLab data. Fortune 100 refers to the top 20% ranked
+    companies in the 2025 Fortune 500 list, published in June 2025. Fortune and Fortune
+    Media IP Limited are not affiliated with, and do not endorse products or services
+    of GitLab.</em></p></div><h4>An overview of this role</h4> <p>You''ll join GitLab''s
+    Software Supply Chain Security stage as the <span class="textBold">Staff Engineer,
+    Secrets Management</span>, providing technical leadership for GitLab''s strategic
+    investment in integrated secrets management. You''ll set the technical direction
+    for GitLab Secrets Manager, our OpenBao-powered solution that helps customers
+    securely store, distribute, and manage the lifecycle of secrets used across CI/CD
+    pipelines. This role sits at the intersection of the GitLab platform and the OpenBao
+    open source project: you''ll drive architecture decisions for multi-tenant secrets
+    management at scale, guide integration into GitLab, and contribute upstream so
+    we can deliver capabilities customers can trust.</p> <p>In your first year, your
+    success will look like a clear, scalable architecture for GitLab Secrets Manager,
+    reliable performance that meets GitLab.com needs in partnership with Infrastructure
+    teams, and strong cross-team alignment across Pipeline Security, Authentication,
+    and Platform. You''ll also represent GitLab in OpenBao''s governance and technical
+    discussions, helping ensure our product direction and upstream contributions reinforce
+    each other.</p> <h4>How we interview</h4> <p>Our process includes technical interviews
+    and stakeholder conversations focused on how you partner across functions and
+    drive alignment.</p> <p>You should expect questions about how you collaborate
+    with cross-functional partners and communicate tradeoffs in ambiguous, high-impact
+    work.</p> <h4>What you''ll do</h4> <ul> <li value="1">Lead the technical strategy
+    for GitLab Secrets Manager, setting architecture direction for secure, multi-tenant
+    secrets management at scale.</li> <li value="2">Own the integration between GitLab
+    and OpenBao, including namespaces, authentication mechanisms, and policy management.</li>
+    <li value="3">Collaborate with Pipeline Security, Authentication, and Platform
+    teams to propose, review, and deliver cross-team secrets management improvements.</li>
+    <li value="4">Partner with GitLab.com Infrastructure teams to ensure secrets management
+    meets reliability, performance, and operational requirements.</li> <li value="5">Represent
+    GitLab in the OpenBao open source project by contributing features upstream, participating
+    in technical steering discussions, and maintaining strong technical credibility.</li>
+    <li value="6">Mentor and advise engineers on secrets management, cryptographic
+    systems, and secure architecture patterns, raising the quality and consistency
+    of designs and implementations.</li> <li value="7">Interface with engineering
+    managers and senior leadership to scope initiatives, clarify tradeoffs, and unblock
+    delivery across teams.</li> <li value="8">Engage with customers and external stakeholders
+    to understand real-world needs and communicate GitLab''s secrets management capabilities
+    and roadmap direction.</li> </ul> <h4>What you''ll bring</h4> <ul> <li value="1">Experience
+    designing and operating secrets management systems (for example, HashiCorp Vault,
+    OpenBao, or cloud-native offerings), including secure storage, access control,
+    and audit logging.</li> <li value="2">Ability to lead architecture decisions for
+    resilient, multi-tenant services that handle secrets operations at scale, including
+    high availability and cluster management patterns.</li> <li value="3">Working
+    knowledge of cryptographic and key management concepts, such as encryption in
+    tra'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.8
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.827697+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-02"

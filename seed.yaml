@@ -9,13 +9,13 @@ metadata:
   tier: flagship
   promotion_status: LOCAL
   revenue_model: open-core
-  last_validated: "2026-04-01"
+  last_validated: "2026-04-02"
   description: >-
     Multi-track application management engine — structured conversion pipeline
     for jobs, grants, residencies, fellowships, and consulting engagements.
     State machine, scoring rubric, ATS integrations, outreach protocol, quality
     gates, resume/CL tailoring, contact CRM, and forced revision workflow.
-    161 scripts, 3,379 tests, 127 CLI commands. Extractable as a general-purpose
+    163 scripts, 3,379 tests, 128 CLI commands. Extractable as a general-purpose
     product; currently running one production instance (personal).
   tags:
     - application-engine
@@ -83,6 +83,10 @@ produces:
   - target: 4444j99/portfolio
     type: portfolio-evidence
     description: Pipeline architecture as portfolio case study
+
+  - target: organvm-iii-ergon
+    type: commercial-strategy
+    description: Strategia Ergon — roadmap for productization and income generation (strategia--ergon.md)
 
   - target: meta-organvm/praxis-perpetua
     type: dissertation-evidence

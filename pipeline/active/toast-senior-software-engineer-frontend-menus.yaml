@@ -1,0 +1,114 @@
+id: toast-senior-software-engineer-frontend-menus
+name: Toast Senior Software Engineer (Frontend), Menus
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7649620
+  portal: greenhouse
+  location: US (remote)
+  location_class: remote-global
+  description: '<p><strong>Location(s):&nbsp;</strong>US (remote), Boston (hybrid),
+    or New York (hybrid)</p> <p><strong>Role focus: </strong>Fullstack, frontend leaning</p>
+    <p>&nbsp;</p> <p>Every restaurant is unique, and a restaurant’s menu expresses
+    its individual brand and product offerings. Inside a Toast restaurant, the definition
+    of the menu becomes the common language between guests, servers, and the kitchen.
+    In our digital ordering products, a great menu serves as both a billboard and
+    a roadmap to an excellent dining experience. It is the central hub for restaurant
+    configuration– it determines what guests can order, how the dishes are presented
+    and priced in different contexts, where they are routed for fulfillment and how
+    they are coursed, how they are prepared, whether the ingredients are still available,
+    and how they are classified for reporting. A menu is always evolving: kitchens
+    create new dishes, managers experiment with pricing and presentation, and staff
+    optimize the menu for restaurant operations.&nbsp;</p> <p>We create products to
+    satisfy the vast breadth of our restaurants, from single-location coffee shops
+    to complex enterprise brands with thousands of locations. We offer an extremely
+    powerful and configurable menu platform, and our team exists to ensure that this
+    flexibility can be managed effectively at any scale. This includes feature-rich
+    menu data models, APIs for both first and third party integrations (eg: DoorDash
+    and other ordering partners), and the user experiences for configuring menus that
+    meet a vast variety of needs, from complex customer segments (eg: Pizza shops)
+    to our evolving Retail platform.&nbsp;</p> <p>We are looking for a senior engineer
+    who is motivated by these challenges and eager to transform our menus architecture
+    to meet the dynamic needs of our customers and our rapidly growing business. Come
+    join our team to make an impact on this critical domain that affects all Toast
+    customers!</p> <p><strong>About this </strong><strong><em>roll</em></strong><strong>*
+    (Responsibilities)&nbsp;</strong></p> <ul> <li>Lead frontend architecture decisions
+    for complex, high-scale menu management workflows</li> <li>Design scalable, maintainable,
+    and reliable UI patterns that support enterprise customers managing thousands
+    of locations</li> <li>Build, deploy, and maintain resilient, scalable features
+    within Toast’s menu management platform</li> <li>Collaborate with UX, PM, QA and
+    Engineering to define, design, and build best-in-class solutions in a complex
+    and fast-moving environment</li> <li>Champion best practices for development,
+    deployment and quality life-cycles</li> <li>Contribute to and evolve Toast’s design
+    system and shared frontend libraries to ensure consistency and scalability across
+    products</li> <li>Guide the growth &amp; development of peer engineers with mentoring
+    and coaching</li> <li>Collaborate with team to plan and estimate work</li> <li>Influence
+    frontend standards and best practices across Toast R&amp;D</li> </ul> <p><strong>Do
+    you have the right </strong><strong><em>ingredients*</em></strong><strong>? (Requirements)</strong></p>
+    <ul> <li>5+ years of experience building and maintaining production software systems</li>
+    <li>Bachelor’s degree in Computer Science, Software Engineering, Computer Engineering,
+    or related field.</li> <li style="font-weight: bold;"><strong>Deep experience
+    building large-scale React applications with TypeScript</strong></li> <li>Experience
+    designing scalable component architectures and managing complex client-side state
+    in large applications</li> <li>Experience designing and consuming GraphQL and
+    REST APIs, including schema evolution, versioning, and client-side data management
+    strategies</li> <li>Actively leverages AI-assisted development tools to accelerate
+    iteration, improve code quality, and enhance architectural exploration</li> <li>Demonstrated
+    ability to lead the design and delivery of high-impact, scalable solutions in
+    complex, data-intensive user interfaces</li> <li>Experience contributing to or
+    evolving shared component libraries or design systems used across multiple teams</li>
+    <li>Experience monitoring and debugging production frontend systems using logging,
+    metrics, and tracing tools</li> <li>Strong leadership and mentoring skills</li>
+    <li>Excellent communication skills, with the ability to articulate complex technical
+    concepts to diverse audiences</li> <li>Passionate about driving innovation and
+    continuously improving engineering practices</li> </ul> <p data-pm-slice="1 1
+    []"><strong>AI at Toast</strong></p> <p>At Toast, one of our company values is
+    that we''re hungry to build and learn. We believe learning new AI tools empowers
+    us to build for our customers faster, more independently, and with higher quality.
+    We provide these tools across all disciplines, from Engineering and Product to
+    Sales and Support, and are inspired by how our Toasters are already driving real
+    value with them. The people who thrive here are those who embrace cha'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.350528+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-02"

@@ -1,0 +1,115 @@
+id: samsara-cpq-salesforce-developer
+name: Samsara CPQ Salesforce Developer
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Samsara
+  url: https://boards.greenhouse.io/samsara
+  application_url: https://www.samsara.com/company/careers/roles/7602286?gh_jid=7602286
+  portal: greenhouse
+  location: Remote - Canada
+  location_class: international
+  description: '<div class="content-intro"><p><span style="font-family: arial, helvetica,
+    sans-serif;"><strong>Who we are</strong></span></p> <p><span style="font-weight:
+    300; font-family: arial, helvetica, sans-serif;">Samsara (NYSE: IOT) is the pioneer
+    of the Connected Operations™ Cloud, which is a platform that enables organizations
+    that depend on physical operations to harness Internet of Things (IoT) data to
+    develop actionable insights and improve their operations. At Samsara, we are helping
+    improve the safety, efficiency and sustainability of the physical operations that
+    power our global economy. Representing more than 40% of global GDP, these industries
+    are the infrastructure of our planet, including agriculture, construction, field
+    services, transportation, and manufacturing — and we are excited to help digitally
+    transform their operations at scale.</span></p> <p><span style="font-weight: 300;
+    font-family: arial, helvetica, sans-serif;">Working at Samsara means you’ll help
+    define the future of physical operations and be on a team that’s shaping an exciting
+    array of product solutions, including Video-Based Safety, Vehicle Telematics,
+    Apps and Driver Workflows, and Equipment Monitoring. As part of a recently public
+    company, you’ll have the autonomy and support to make an impact as we build for
+    the long term.</span></p></div><p><strong>About the role:</strong></p> <p>The
+    Salesforce Developer will be responsible for the design and development of flexible
+    and scalable solutions on the Salesforce and CPQ platforms. This role requires
+    that you understand Salesforce and CPQ design and development best practices and
+    can apply them to the delivery of business solutions. The Developer will work
+    with technical and cross-functional business teams to implement enhancements and
+    projects, and resolve incidents, and requires a combination of analytical, technical,
+    business acumen, and communication skills.</p> <p>You will develop tools to help
+    scale our revenue-generating operations and increase sales efficiency. This is
+    a multi-faceted role where you will work multi-functionally with our Sales, Customer
+    Success, Product, Growth, Marketing, and Finance teams.</p> <p>This is a remote
+    role and is open to candidates residing in Canada.</p> <p><strong>In this role,
+    you will:</strong></p> <ul> <li>Develop secure, scalable technical solutions on
+    the Salesforce and CPQ platforms.</li> <li>Create and collaborate on the solution
+    and technical design artifacts, and present and participate in cross-functional
+    review sessions.</li> <li>Communicate technical solutions and design tradeoffs
+    to Business Applications team members as well as business stakeholders.</li> <li>Display
+    expertise in Salesforce and CPQ functionality and features, through all interactions
+    on Business Applications projects.</li> <li>Provide technical support for new
+    projects, enhancements, and bug fixes related to solutions being delivered on
+    the Salesforce &amp; CPQ platform.</li> <li>Work with Business system analysts
+    to design &amp; implement end-to-end automation.</li> <li>Analyze business processes
+    to identify inefficiencies and critical metrics.</li> <li>Coordinate and collaborate
+    with other developers and team members to obtain requirements, develop solution
+    designs, and manage UATs, and post-go-live activities.</li> <li>Establish best
+    practices and standards for well-designed, testable, efficient code with high
+    quality.</li> <li>Champion, role model, and embed Samsara’s cultural principles
+    (Focus on Customer Success, Build for the Long Term, Adopt a Growth Mindset, Be
+    Inclusive, Win as a Team) as we scale globally and across new offices.</li> </ul>
+    <p><strong>Minimum requirements for the role:</strong></p> <ul> <li>Bachelor''s
+    degree in Computer Science or equivalent</li> <li>5+ years of salesforce development
+    experience or 3+ years of experience and a Master’s Degree.</li> <li>2+ years
+    extensive knowledge of Salesforce Sales Cloud or Salesforce CPQ&nbsp; experience</li>
+    <li>Web services experience preferred (REST, SOAP)</li> <li>Familiarity with integrated
+    applications such as Mulesoft preferred</li> <li>Self-starter, self-motivated,
+    able to work independently, prioritize effectively, and perform multiple tasks
+    under minimal supervision</li> <li>Experience in contributing to setting up CI/CD
+    pipeline&nbsp;</li> <li>Experience in agile development methodology</li> <li>Familiarity
+    with Apex Enterprise Design Patterns is a plus</li> <li>Excellent communication
+    skills and proven success in a dynamic and collaborative environment</li> <li>Experience
+    designing test plans, performing unit testing, and writing test classes to ensure
+    proper code coverage</li> <li>Strong problem-solving skills</li> </ul> <p><strong>An
+    ideal candidate also has:</strong></p> <ul> <li>Highly organized, detail-oriented,
+    and able to work independently</li> <li>Working knowledge of Web and Javascript
+    frameworks</li> <li>Certifications: Platform Developer, Platform App Builder,
+    and other preferred</l'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.220001+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-02"

@@ -202,6 +202,7 @@ Three interfaces: `python scripts/run.py <command>` (quick aliases), `pipeline <
 | `submit <id>` | `submit.py` | `--record`, `--check` |
 | `record <id>` | `submit.py --record` | Record submission |
 | `apply <id>` | `apply.py` | `--batch`, `--dry-run` |
+| `quicklog` | `quicklog.py` | `--org X --role Y --date YYYY-MM-DD` |
 | `preflight` | `preflight.py` | Batch submission readiness |
 | `gate <id>` | clearance gate | Pre-submission check |
 | **Composition** | | |

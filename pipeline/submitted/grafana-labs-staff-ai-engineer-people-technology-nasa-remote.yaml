@@ -18,15 +18,16 @@ amount:
   currency: USD
   type: salary
 fit:
-  score: 7.0
+  score: 5.9
+  original_score: 7.0
   identity_position: platform-orchestrator
   dimensions:
-    mission_alignment: 7
-    evidence_match: 7
-    track_record_fit: 7
-    network_proximity: 3
-    strategic_value: 7
-    financial_alignment: 7
+    mission_alignment: 4
+    evidence_match: 1
+    track_record_fit: 5
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 9
     effort_to_value: 7
     deadline_feasibility: 9
     portal_friction: 5
@@ -34,7 +35,8 @@ submission:
   effort_level: standard
   blocks_used: {}
   variant_ids: {}
-  materials_attached: []
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.pdf
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
   submitted: '2026-03-26'
@@ -62,7 +64,7 @@ tags:
 - applied-outside-pipeline
 - first-interview-conversion
 source: manual
-last_touched: '2026-04-01'
+last_touched: "2026-04-02"
 status_meta:
   submitted_by: 4jp
   submitted_at: '2026-03-26'

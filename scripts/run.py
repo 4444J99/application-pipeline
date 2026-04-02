@@ -184,6 +184,7 @@ PARAM_COMMANDS = {
     "logdm":      ("log_dm.py", ["--contact"],             "Log a DM for a contact to all 3 signal files"),
     "greenhouse-submit": ("greenhouse_submit.py", ["--target"], "Greenhouse dry-run preview for single entry"),
     "outreach":   ("outreach_templates.py", ["--target"],       "Generate outreach templates for an entry"),
+    "quicklog":   ("quicklog.py", ["--org", None, "--role"],    "Quick-log an external submission"),
 }
 
 

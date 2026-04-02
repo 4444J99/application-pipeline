@@ -1,0 +1,114 @@
+id: toast-senior-software-engineer-voice-ai
+name: Toast Senior Software Engineer, Voice AI
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7701541
+  portal: greenhouse
+  location: US (remote)
+  location_class: remote-global
+  description: '<p><strong>Location(s):&nbsp;</strong>US (remote), Boston (hybrid),
+    or New York (hybrid)</p> <p>&nbsp;</p> <p><strong>Bready* to make a change?</strong></p>
+    <p>Now, more than ever, the Toast team is committed to our customers. Our focus
+    is on building the restaurant platform that helps restaurants adapt, take control,
+    and get back to what they do best: building the businesses they love. And because
+    our technology is purpose-built for restaurants, by restaurant people, restaurants
+    can trust that we’ll deliver on their needs for today while investing in experiences
+    that will power their restaurant of the future.</p> <p><strong>Who We Are</strong></p>
+    <p>The Voice AI team is responsible for building and advancing Toast’s restaurant
+    Voice products, as well as working closely with the integrated Websites, Branded
+    App, and Online Ordering teams. This group is highly product oriented, with a
+    laser-focus on creating top tier Voice-driven consumer experiences for restaurants
+    and their guests, starting with Voice Ordering and Voice Answering. The Voice
+    AI team’s work advances the cutting edge of low-latency AI, audio processing,
+    and system architecture to provide fast and genuine Voice ordering for our customers.
+    The team rigorously measures and iterates on product performance to build compelling
+    voice-driven experiences, so be prepared to innovate in a new product paradigm
+    on products built for massive scale and exacting product quality.</p> <p>&nbsp;</p>
+    <p><strong>About this roll* (Responsibilities)</strong></p> <p>In this role, your
+    focus will be on improving the core Voice AI stack, using your technical chops
+    to influence not just the code, but also product and business strategies. This
+    is a golden opportunity for a hands-on, entrepreneurial engineer who thrives in
+    a modern tech stack environment, loves solving real-world problems through technology
+    and AI. You’ll identify where you can create impact, run experiments, iterate
+    quickly, and have a strong role in shaping the future of Voice AI here at Toast.
+    Here’s what you’ll be doing:</p> <ul> <li><strong>Design, scope, and implement</strong>
+    cutting-edge solutions using a mix of technologies.</li> <li><strong>Raise the
+    bar</strong> to boost quality, performance, usability, and scalability of the
+    Voice AI product.</li> <li><strong>Collaborate closely</strong> with Design and
+    Product stakeholders to chase product-market fit.</li> <li><strong>Drive discovery
+    of high-impact opportunities</strong> with your team and turn them into reality.</li>
+    <li><strong>Be an awesome teammate</strong> who’s all in on collaboration and
+    collective success.</li> <li><strong>Work across teams </strong>to ensure that
+    every part of our product ecosystem works seamlessly together to deliver the best
+    possible experience for our customers.</li> </ul> <p>&nbsp;</p> <p><strong>Do
+    you have the right ingredients*? (Requirements)</strong></p> <ul> <li>5+ years
+    of experience developing <strong>fullstack</strong> web applications</li> <li>Proficient
+    in backend technologies like <strong>Java/Kotlin</strong>, and <strong>Python</strong>.</li>
+    <li>Skilled with frontend frameworks like React, and CSS frameworks like Tailwind
+    or Bootstrap.</li> <li>Experienced in building on AWS, with tools like Docker
+    and Git.</li> <li>Comfortable turning high-fidelity UX designs from Figma into
+    reality.</li> <li>Adept at designing databases and architectures that scale and
+    perform well.</li> <li>Enthusiastic to employ AI-based tooling to expand impact
+    and improve work.</li> <li>Proven at implementing LLMs and AI inference for real-world
+    applications by utilizing evolving best practices for AI-product building.</li>
+    <li>Thrive in a collaborative, team-based environment where you ship features
+    together.</li> <li>Passionate about making users happy and seeing people use your
+    product in the wild.</li> <li>Embrace the agile mindset—ship quickly, iterate,
+    and refine.</li> </ul> <p data-pm-slice="1 1 []"><strong>AI at Toast</strong></p>
+    <p>At Toast, one of our company values is that we''re hungry to build and learn.
+    We believe learning new AI tools empowers us to build for our customers faster,
+    more independently, and with higher quality. We provide these tools across all
+    disciplines, from Engineering and Product to Sales and Support, and are inspired
+    by how our Toasters are already driving real value with them. The people who thrive
+    here are those who embrace changes that let us build more for our customers; it’s
+    a core part of our culture.</p> <p data-pm-slice="1 1 []"><strong>Our Total Rewards
+    Philosophy&nbsp;<br></strong>We strive to provide competitive compensation and
+    benefits programs that help to attract, retain, and motivate the best and brightest
+    people in our industry. Our total rewards package goes beyond great earnings potential
+    and provides the means to a healthy lifestyle with the flexibility to meet Toasters’
+    changing needs. Learn more about our benefits at&nbsp;<a class="c-link" href="https://careers.toastt'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.379080+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-02"
