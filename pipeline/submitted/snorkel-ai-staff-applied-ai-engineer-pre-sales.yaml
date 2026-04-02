@@ -2,6 +2,12 @@ id: snorkel-ai-staff-applied-ai-engineer-pre-sales
 name: Snorkel AI Staff Applied AI Engineer - Pre-Sales
 track: job
 status: deferred
+deferral:
+  reason: strategic_hold
+  date: "2026-04-01"
+deferral:
+  reason: strategic_hold
+  date: "2026-04-01"
 outcome: null
 target:
   organization: Snorkel AI

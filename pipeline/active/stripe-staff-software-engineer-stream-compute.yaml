@@ -2,6 +2,12 @@ id: stripe-staff-software-engineer-stream-compute
 name: Stripe Staff Software Engineer, Stream Compute
 track: job
 status: deferred
+deferral:
+  reason: strategic_hold
+  date: "2026-04-01"
+deferral:
+  reason: strategic_hold
+  date: "2026-04-01"
 outcome: null
 target:
   organization: Stripe

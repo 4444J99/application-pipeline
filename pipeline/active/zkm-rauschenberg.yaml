@@ -10,7 +10,7 @@ target:
   portal: custom
 deadline:
   date: '2026-04-12'
-  time: null
+  time: '23:59:59 UTC'
   type: hard
 amount:
   value: 0

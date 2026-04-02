@@ -8,7 +8,6 @@ deferral:
   note: "Score below 9.0 precision minimum; deadline imminent but not worth diluting pipeline focus"
   deferred_date: '2026-03-13'
 identity_position: educator
-outcome: null
 target:
   organization: Google
   url: https://experiments.withgoogle.com
@@ -78,6 +77,8 @@ source: 04-application-tracker.md
 notes: null
 last_touched: '2026-03-03'
 status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-03-13'
   reviewed_by: 4jp
   reviewed_at: '2026-03-03'
   review_note: autofix-unblocker

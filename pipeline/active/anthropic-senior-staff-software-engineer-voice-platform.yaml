@@ -2,6 +2,9 @@ id: anthropic-senior-staff-software-engineer-voice-platform
 name: Anthropic Senior / Staff+ Software Engineer, Voice Platform
 track: job
 status: deferred
+deferral:
+  reason: strategic_hold
+  date: '2026-04-01'
 outcome: null
 target:
   organization: Anthropic

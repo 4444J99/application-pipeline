@@ -11,6 +11,8 @@ target:
 deadline:
   date: '2026-02-18'
   time: null
+  time: "23:59:59 UTC"
+  timezone: "UTC"
   type: hard
 amount:
   value: 0

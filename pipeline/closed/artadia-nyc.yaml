@@ -11,6 +11,8 @@ target:
 deadline:
   date: '2026-03-01'
   time: null
+  time: "23:59:59 EST"
+  timezone: "EST"
   type: hard
 amount:
   value: 15000
