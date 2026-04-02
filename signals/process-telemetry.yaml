@@ -1,0 +1,16 @@
+# SPEC-023 Process Telemetry
+# Tracks execution runs and compliance evidence.
+
+runs: []
+# - run_id: 
+#   procedure_id: 
+#   artifact_id: 
+#   started_at: 
+#   completed_at: 
+#   steps_executed: []
+#   retries: 0
+#   manual_interventions: 0
+#   defects_found: 0
+#   verification_pass: true
+#   outcome_quality: 1.0
+#   revision_required: false

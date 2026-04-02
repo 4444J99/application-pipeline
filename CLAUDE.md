@@ -416,6 +416,19 @@ Canonical identity statements, metrics, and evidence live in `organvm-corpvs-tes
 - No formal coverage threshold; prioritize regression coverage for pipeline state and YAML schema changes
 - Full local CI-parity check: `python scripts/verify_all.py` (or `make verify`)
 
+## Governance & Compliance (SPEC-023)
+
+Every execution in this pipeline follows **SPEC-023: Process Sequence Governance**.
+
+1. **Genesis Rule**: No application advance without a linked Genesis SOP and target Artifact.
+2. **Evidence Rule**: Advance to `submitted` REQUIRES recorded outreach in `outreach-log.yaml` (Level 1 compliance).
+3. **Completion Rule**: Achievement is only marked when:
+    - PDF artifact exists (`applications/`)
+    - Outreach evidence exists (`signals/outreach-log.yaml`)
+    - Process Telemetry is recorded (`signals/process-telemetry.yaml`)
+
+Refer to `docs/SOP-application-genesis.md` for the canonical submission sequence.
+
 ## Dependencies
 
 - Python 3.11+ (venv at `.venv/` uses Python 3.14)

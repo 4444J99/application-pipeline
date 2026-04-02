@@ -92,6 +92,10 @@ produces:
     type: dissertation-evidence
     description: Pipeline thesis chapters (Ch 1-10) as SGO dissertation SGO-2026-D-001
 
+  - target: META-ORGANVM
+    type: governance-pilot-evidence
+    description: Governed application submission sequence (SPEC-023 compliance)
+
 consumes:
   - type: canonical-metrics
     source: meta-organvm/organvm-corpvs-testamentvm
