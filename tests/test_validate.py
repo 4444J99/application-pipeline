@@ -10,6 +10,7 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from validate import (
+    VALID_DIMENSIONS,
     VALID_DEFERRAL_REASONS,
     VALID_TRANSITIONS,
     _reachable_statuses,
@@ -138,6 +139,31 @@ def test_invalid_outcome():
         filepath = _write_yaml(tmp_path, "test-entry.yaml", data)
         errors = validate_entry(filepath)
         assert any("Invalid outcome" in e for e in errors)
+
+
+def test_duplicate_yaml_key_fails_validation():
+    """Duplicate mapping keys should fail validation instead of silently overwriting."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        filepath = tmp_path / "test-entry.yaml"
+        filepath.write_text(
+            "\n".join(
+                [
+                    "id: test-entry",
+                    "name: Test Entry",
+                    "track: prize",
+                    "status: outcome",
+                    "outcome: expired",
+                    "deadline:",
+                    "  date: '2026-03-04'",
+                    "  time: null",
+                    '  time: "23:59:59 UTC"',
+                    "  type: hard",
+                ]
+            )
+        )
+        errors = validate_entry(filepath)
+        assert any("duplicate key" in e.lower() for e in errors)
 
 
 def test_all_valid_tracks():
@@ -320,31 +346,13 @@ def test_validate_scoring_rubric_valid():
     """A valid rubric file should pass rubric validation."""
     with tempfile.TemporaryDirectory() as tmp:
         path = Path(tmp) / "rubric.yaml"
+        weight = 1 / len(VALID_DIMENSIONS)
+        valid_weights = {dim: weight for dim in sorted(VALID_DIMENSIONS)}
         path.write_text(
             yaml.dump(
                 {
-                    "weights": {
-                        "mission_alignment": 0.25,
-                        "evidence_match": 0.20,
-                        "track_record_fit": 0.15,
-                        "network_proximity": 0.12,
-                        "strategic_value": 0.10,
-                        "financial_alignment": 0.08,
-                        "effort_to_value": 0.05,
-                        "deadline_feasibility": 0.03,
-                        "portal_friction": 0.02,
-                    },
-                    "weights_job": {
-                        "mission_alignment": 0.25,
-                        "evidence_match": 0.20,
-                        "network_proximity": 0.20,
-                        "track_record_fit": 0.15,
-                        "strategic_value": 0.10,
-                        "financial_alignment": 0.05,
-                        "effort_to_value": 0.03,
-                        "deadline_feasibility": 0.01,
-                        "portal_friction": 0.01,
-                    },
+                    "weights": valid_weights,
+                    "weights_job": valid_weights,
                     "thresholds": {
                         "score_range_min": 1,
                         "score_range_max": 10,

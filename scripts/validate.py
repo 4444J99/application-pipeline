@@ -56,6 +56,36 @@ VALID_DEFERRAL_REASONS = {
 VALID_LOCATION_CLASSES = {"us-onsite", "us-remote", "remote-global", "international", "unknown"}
 SCORING_RUBRIC_PATH = REPO_ROOT / "strategy" / "scoring-rubric.yaml"
 
+
+class _UniqueKeyLoader(yaml.SafeLoader):
+    """YAML loader that rejects duplicate mapping keys."""
+
+
+def _construct_mapping_no_duplicates(loader, node, deep=False):
+    mapping = {}
+    for key_node, value_node in node.value:
+        key = loader.construct_object(key_node, deep=deep)
+        if key in mapping:
+            raise yaml.constructor.ConstructorError(
+                "while constructing a mapping",
+                node.start_mark,
+                f"found duplicate key ({key!r})",
+                key_node.start_mark,
+            )
+        mapping[key] = loader.construct_object(value_node, deep=deep)
+    return mapping
+
+
+_UniqueKeyLoader.add_constructor(
+    yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG,
+    _construct_mapping_no_duplicates,
+)
+
+
+def load_yaml_strict(text: str):
+    """Parse YAML and fail on duplicate keys."""
+    return yaml.load(text, Loader=_UniqueKeyLoader)
+
 def _reachable_statuses(from_status: str) -> set[str]:
     """Return all statuses reachable from a given status via valid transitions."""
     reachable = set()
@@ -78,7 +108,7 @@ def validate_entry(filepath: Path, warnings: list[str] | None = None) -> list[st
 
     try:
         with open(filepath) as f:
-            data = yaml.safe_load(f)
+            data = load_yaml_strict(f.read())
     except yaml.YAMLError as e:
         return [f"YAML parse error: {e}"]
 
@@ -581,7 +611,7 @@ def validate_scoring_rubric(path: Path = SCORING_RUBRIC_PATH) -> list[str]:
         return [f"Scoring rubric not found: {path}"]
 
     try:
-        rubric = yaml.safe_load(path.read_text()) or {}
+        rubric = load_yaml_strict(path.read_text()) or {}
     except yaml.YAMLError as exc:
         return [f"Scoring rubric YAML parse error: {exc}"]
 
@@ -861,7 +891,7 @@ def main():
                     continue
                 try:
                     with open(filepath) as f:
-                        entry_data = yaml.safe_load(f)
+                        entry_data = load_yaml_strict(f.read())
                     if isinstance(entry_data, dict):
                         all_entries.append(entry_data)
                 except yaml.YAMLError:
