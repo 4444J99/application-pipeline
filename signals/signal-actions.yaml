@@ -118,4 +118,58 @@ actions:
   responsible: '@4444J99'
   impact: TBD
   entry_id: grafana-labs-staff-ai-engineer-people-technology-nasa-remote
-  reason: First positive conversion — milestone for pipeline validation
+  reason: "First positive conversion \u2014 milestone for pipeline validation"
+- signal_id: advance-affirm-senior-software-engineer-infrastructure-2026-04-03
+  signal_type: score_threshold
+  description: Advanced qualified -> deferred (Manual advancement by user)
+  triggered_action: advance to deferred
+  action_date: '2026-04-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: affirm-senior-software-engineer-infrastructure
+  reason: Manual advancement by user
+- signal_id: advance-instacart-senior-software-engineer-ii-page-builder-retailer-platform-2026-04-03
+  signal_type: score_threshold
+  description: Advanced qualified -> deferred (Manual advancement by user)
+  triggered_action: advance to deferred
+  action_date: '2026-04-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: instacart-senior-software-engineer-ii-page-builder-retailer-platform
+  reason: Manual advancement by user
+- signal_id: advance-mongodb-senior-software-engineer-atlas-stream-processing-2026-04-03
+  signal_type: score_threshold
+  description: Advanced qualified -> deferred (Manual advancement by user)
+  triggered_action: advance to deferred
+  action_date: '2026-04-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: mongodb-senior-software-engineer-atlas-stream-processing
+  reason: Manual advancement by user
+- signal_id: advance-scale-ai-senior-software-engineer-2026-04-03
+  signal_type: score_threshold
+  description: Advanced qualified -> deferred (Manual advancement by user)
+  triggered_action: advance to deferred
+  action_date: '2026-04-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: scale-ai-senior-software-engineer
+  reason: Manual advancement by user
+- signal_id: advance-dbt-labs-senior-developer-experience-advocate-2026-04-03
+  signal_type: score_threshold
+  description: Advanced qualified -> deferred (Manual advancement by user)
+  triggered_action: advance to deferred
+  action_date: '2026-04-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: dbt-labs-senior-developer-experience-advocate
+  reason: Manual advancement by user
+- signal_id: advance-snowflake-senior-security-architect-applied-field-engineering-afe-2026-04-03
+  signal_type: score_threshold
+  description: Advanced qualified -> deferred (Manual advancement by user)
+  triggered_action: advance to deferred
+  action_date: '2026-04-03'
+  responsible: '@4444J99'
+  impact: TBD
+  entry_id: snowflake-senior-security-architect-applied-field-engineering-afe
+  reason: Manual advancement by user

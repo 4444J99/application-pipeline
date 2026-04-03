@@ -24,8 +24,7 @@ fit:
   score: 6.5
   original_score: 8.3
   identity_position: creative-technologist
-  framing: Creative technologist writing critically about computation, labor, and
-    digital systems
+  framing: Creative technologist writing critically about computation, labor, and digital systems
   lead_organs:
   - I
   - V
@@ -71,12 +70,18 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-  follow_up_count: 0
+  follow_up_count: 1
 tags: []
 source: 04-application-tracker.md
 notes: $1,200-$2,000/essay. Themed rolling deadlines.
-last_touched: '2026-02-26'
-follow_up: []
+last_touched: "2026-04-03"
+follow_up:
+- date: '2026-04-03'
+  channel: email
+  contact: ''
+  type: check_in
+  note: Follow-up tracking closed — past all protocol windows. No further action.
+  response: none
 status_meta:
   submitted_by: 4jp
   submitted_at: '2026-02-26'

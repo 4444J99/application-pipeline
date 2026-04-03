@@ -239,7 +239,7 @@ def _append_outreach_log(entry_id: str, channel: str, contact: str, note: str, f
     })
 
     with open(OUTREACH_LOG, "w") as f:
-        yaml.dump(entries, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
+        yaml.dump({"entries": entries}, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
 
 
 def init_follow_ups(dry_run: bool = True) -> int:

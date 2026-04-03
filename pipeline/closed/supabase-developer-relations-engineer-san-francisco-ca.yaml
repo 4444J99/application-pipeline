@@ -21,9 +21,7 @@ amount:
 fit:
   score: 8.2
   identity_position: independent-engineer
-  framing: 'Developer relations trifecta: 103 public repos demonstrating engineering
-    credibility, 810K+ words demonstrating communication range, and 11 years teaching
-    2,000+ students demonstrating community instinct — all verifiable, all public.'
+  framing: 'Developer relations trifecta: 103 public repos demonstrating engineering credibility, 810K+ words demonstrating communication range, and 11 years teaching 2,000+ students demonstrating community instinct — all verifiable, all public.'
   dimensions:
     mission_alignment: 9
     evidence_match: 10
@@ -57,13 +55,19 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-  follow_up_count: 0
+  follow_up_count: 1
 tags:
 - auto-sourced
 - curated-fit
 source: source_jobs.py
-last_touched: '2026-02-26'
-follow_up: []
+last_touched: "2026-04-03"
+follow_up:
+- date: '2026-04-03'
+  channel: email
+  contact: ''
+  type: check_in
+  note: Follow-up tracking closed — past all protocol windows. No further action.
+  response: none
 status_meta:
   submitted_by: 4jp
   submitted_at: '2026-02-24'

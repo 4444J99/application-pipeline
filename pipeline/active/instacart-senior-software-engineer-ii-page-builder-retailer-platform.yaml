@@ -1,7 +1,7 @@
 id: instacart-senior-software-engineer-ii-page-builder-retailer-platform
 name: Instacart Senior Software Engineer II, Page Builder (Retailer Platform)
 track: job
-status: qualified
+status: deferred
 outcome: null
 target:
   organization: Instacart
@@ -111,4 +111,9 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-04-02"
+last_touched: '2026-04-03'
+deferral:
+  reason: strategic_hold
+  resume_date: '2026-04-15'
+  note: Deferred during S54 triage — restore precision mode compliance (16 to 10 actionable
+    entries)

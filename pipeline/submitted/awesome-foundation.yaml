@@ -24,8 +24,7 @@ fit:
   score: 5.4
   original_score: 8.5
   identity_position: community-practitioner
-  framing: Queer technologist building a digital instrument for community survival
-    and authentic expression
+  framing: Queer technologist building a digital instrument for community survival and authentic expression
   lead_organs:
   - II
   - V
@@ -70,12 +69,18 @@ conversion:
   response_type: null
   time_to_response_days: null
   feedback: null
-  follow_up_count: 0
+  follow_up_count: 1
 tags: []
 source: 04-application-tracker.md
 notes: Monthly rolling deadline.
-last_touched: '2026-02-25'
-follow_up: []
+last_touched: "2026-04-03"
+follow_up:
+- date: '2026-04-03'
+  channel: email
+  contact: ''
+  type: check_in
+  note: Follow-up tracking closed — past all protocol windows. No further action.
+  response: none
 status_meta:
   submitted_by: 4jp
   submitted_at: '2026-02-25'
