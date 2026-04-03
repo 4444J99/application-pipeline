@@ -6,7 +6,7 @@
 - **output_artifacts**: PDF application bundle in `applications/YYYY-MM-DD/<id>/`.
 - **command_sequence**: 
     1. `python scripts/apply.py --target <id>`
-    2. `python scripts/followup.py --log <id> --channel ... --note "Outreach pre-submission"`
+    2. `python scripts/followup.py --log <id> --channel linkedin --note "Outreach pre-submission"`
     3. `python scripts/advance.py <id> --to submitted`
 - **quality_gates**: 
     - `apply.py` Level 1 gate (standards.py) passes.
