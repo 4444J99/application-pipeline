@@ -62,6 +62,9 @@ def flush_stale_active_jobs(*, quiet: bool = False) -> int:
         if track in _DEADLINE_TRACKS:
             continue
 
+        if data.get("status") == "deferred":
+            continue
+
         age = get_posting_age_hours(data)
         if age is None or age <= stale_hours:
             continue

@@ -1,12 +1,13 @@
 id: samsara-senior-software-engineer-growth
 name: Samsara Senior Software Engineer, Growth
 track: job
-status: qualified
-outcome: null
+status: deferred
+outcome:
 target:
   organization: Samsara
   url: https://boards.greenhouse.io/samsara
-  application_url: https://www.samsara.com/company/careers/roles/7745837?gh_jid=7745837
+  application_url: 
+    https://www.samsara.com/company/careers/roles/7745837?gh_jid=7745837
   portal: greenhouse
   location: Remote - US
   location_class: us-remote
@@ -73,7 +74,7 @@ target:
     influencing adoption of AI, and implementing product development best practices.</li>
     <li>Champion, role m'
 deadline:
-  date: null
+  date:
   type: rolling
 amount:
   value: 0
@@ -82,6 +83,16 @@ amount:
 fit:
   score: 7.2
   identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}
@@ -97,10 +108,13 @@ timeline:
   discovered: '2026-04-02T10:15:29.181448+00:00'
 conversion:
   response_received: false
-  response_type: null
-  time_to_response_days: null
-  feedback: null
+  response_type:
+  time_to_response_days:
+  feedback:
 tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-04-02"
+deferral:
+  reason: strategic_hold
+  resume_date: '2026-04-15'

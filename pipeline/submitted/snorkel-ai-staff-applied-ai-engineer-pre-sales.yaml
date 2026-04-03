@@ -4,15 +4,15 @@ track: job
 status: deferred
 deferral:
   reason: strategic_hold
-  date: "2026-04-01"
-outcome: null
+  resume_date: '2026-04-15'
+outcome:
 target:
   organization: Snorkel AI
   url: https://boards.greenhouse.io/snorkelai
   application_url: https://job-boards.greenhouse.io/snorkelai/jobs/5831080004
   portal: greenhouse
-  location: New York City, NY (Hybrid); Redwood City, CA (Hybrid); San Francisco,
-    CA (Hybrid); United States (Remote)
+  location: New York City, NY (Hybrid); Redwood City, CA (Hybrid); San 
+    Francisco, CA (Hybrid); United States (Remote)
   location_class: us-remote
   description: '<div class="content-intro"><p><strong>About Snorkel</strong></p> <p>At
     Snorkel, we believe meaningful AI doesn’t start with the model, it starts with
@@ -77,7 +77,7 @@ target:
     ML (e.g., scikit-learn) and data processing frameworks (e.g., pandas, Spark).</li>
     <'
 deadline:
-  date: null
+  date:
   type: rolling
 amount:
   value: 0
@@ -117,8 +117,8 @@ timeline:
 conversion:
   response_received: true
   response_type: acknowledged
-  time_to_response_days: null
-  feedback: null
+  time_to_response_days:
+  feedback:
   follow_up_count: 2
 tags:
 - auto-sourced

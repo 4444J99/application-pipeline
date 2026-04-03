@@ -1,12 +1,13 @@
 id: neo4j-solutions-engineer-india-startup-program
 name: 'Neo4j Solutions Engineer (India Startup Program) '
 track: job
-status: qualified
-outcome: null
+status: deferred
+outcome:
 target:
   organization: Neo4j
   url: https://boards.greenhouse.io/neo4j
-  application_url: https://boards.greenhouse.io/neo4j/jobs/4668879006?gh_jid=4668879006
+  application_url: 
+    https://boards.greenhouse.io/neo4j/jobs/4668879006?gh_jid=4668879006
   portal: greenhouse
   location: 'Remote: India'
   location_class: international
@@ -71,7 +72,7 @@ target:
     architecture, professional services, customer success, or a similar customer-facing
     technical role.</li> <'
 deadline:
-  date: null
+  date:
   type: rolling
 amount:
   value: 0
@@ -105,10 +106,13 @@ timeline:
   discovered: '2026-03-31T16:16:16.904086+00:00'
 conversion:
   response_received: false
-  response_type: null
-  time_to_response_days: null
-  feedback: null
+  response_type:
+  time_to_response_days:
+  feedback:
 tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-04-02"
+deferral:
+  reason: strategic_hold
+  resume_date: '2026-04-15'

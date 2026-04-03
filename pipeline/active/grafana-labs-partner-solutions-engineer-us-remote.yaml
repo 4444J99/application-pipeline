@@ -1,8 +1,8 @@
 id: grafana-labs-partner-solutions-engineer-us-remote
 name: 'Grafana Labs Partner Solutions Engineer | US | Remote '
 track: job
-status: qualified
-outcome: null
+status: deferred
+outcome:
 target:
   organization: Grafana Labs
   url: https://boards.greenhouse.io/grafanalabs
@@ -72,7 +72,7 @@ target:
     process. All of our roles include Restricted Stock Units (RSUs), giving every
     team m'
 deadline:
-  date: null
+  date:
   type: rolling
 amount:
   value: 0
@@ -106,10 +106,14 @@ timeline:
   discovered: '2026-03-31T16:16:16.894515+00:00'
 conversion:
   response_received: false
-  response_type: null
-  time_to_response_days: null
-  feedback: null
+  response_type:
+  time_to_response_days:
+  feedback:
 tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: "2026-04-02"
+deferral:
+  reason: strategic_hold
+  resume_date: '2026-04-07'
+  note: interview_active
