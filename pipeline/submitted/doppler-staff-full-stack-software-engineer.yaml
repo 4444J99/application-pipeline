@@ -60,7 +60,7 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-03-31"
+last_touched: "2026-04-04"
 outreach:
 - linkedin_searches:
   - role: Engineering Manager
@@ -122,3 +122,6 @@ follow_up:
   type: check_in
   note: Day 14 final follow-up window — queued for LinkedIn outreach
   response: none
+follow_up.protocol.connect_date: '2026-03-17'
+follow_up.protocol.email_date: '2026-03-18'
+follow_up.protocol.followup_date: '2026-03-24'

@@ -75,7 +75,7 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: $250/feature.
-last_touched: "2026-04-03"
+last_touched: "2026-04-04"
 follow_up:
 - date: '2026-04-03'
   channel: email
@@ -86,3 +86,6 @@ follow_up:
 status_meta:
   submitted_by: 4jp
   submitted_at: '2026-02-26'
+follow_up.protocol.connect_date: '2026-02-26'
+follow_up.protocol.email_date: '2026-02-27'
+follow_up.protocol.followup_date: '2026-03-05'

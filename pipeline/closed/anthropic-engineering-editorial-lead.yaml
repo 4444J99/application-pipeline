@@ -1,0 +1,146 @@
+id: anthropic-engineering-editorial-lead
+name: Anthropic Engineering Editorial Lead
+track: job
+status: outcome
+outcome: rejected
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/5138099008
+  portal: greenhouse
+  location: San Francisco, CA | New York City, NY
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>About Anthropic</strong></h2>
+    <p>Anthropic’s mission is to create reliable, interpretable, and steerable AI
+    systems. We want AI to be safe and beneficial for our users and for society as
+    a whole. Our team is a quickly growing group of committed researchers, engineers,
+    policy experts, and business leaders working together to build beneficial AI systems.</p></div><h2><strong>About
+    the role</strong></h2> <p>Anthropic is looking for an Editorial Lead to own our
+    engineering blog — one of the most visible ways we share how we build, what we
+    learn, and why it matters. This is a role for someone who can bridge the gap between
+    highly technical work and a broad, curious readership, turning complex engineering
+    stories into posts that are rigorous, accessible, and compelling to read.</p>
+    <p>You’ll work closely with engineering and research teams to identify the stories
+    worth telling, then lead the editorial process from first draft through to publication.
+    This isn’t a role where you’ll be writing everything yourself — a big part of
+    the job is drawing out great writing from engineers who have deep expertise, and
+    helping them turn that expertise into something the wider world can learn from.</p>
+    <h2><strong>Responsibilities</strong></h2> <ul> <li>Define and maintain the editorial
+    strategy for the engineering blog, including editorial calendar, content mix,
+    and voice and tone guidelines</li> <li>Source and develop blog post ideas in collaboration
+    with engineering and research teams, identifying work that is well-suited to external
+    publication</li> <li>Edit posts end-to-end — from substantive feedback on structure
+    and clarity through to line-level polish — while preserving technical accuracy
+    and the author’s voice</li> <li>Coach and support engineers through the writing
+    and revision process, helping produce strong drafts and building their confidence
+    as contributors over time</li> <li>Work with engineering leadership and developer
+    relations to ensure published content is coordinated with other developer content,
+    aligns with team priorities, and is appropriately timed relative to product launches,
+    research releases, or other milestones</li> <li>Coordinate with communications
+    and marketing teams on promotion and audience strategy for published posts</li>
+    <li>Coordinate with design on diagrams and visuals that support technical content</li>
+    </ul> <h2><strong>You may be a good fit if you</strong></h2> <ul> <li>Have 5+
+    years of editorial experience, with a strong track record of editing technical
+    or complex content for broad audiences</li> <li>Are an exceptionally skilled editor
+    — someone who can improve a piece significantly without losing what made it worth
+    reading in the first place</li> <li>Have curiosity about engineering and technology,
+    and can get up to speed quickly on new technical topics</li> <li>Are skilled at
+    drawing out ideas from subject-matter experts and helping them articulate their
+    thinking clearly on the page</li> <li>Can think strategically about content —
+    not just individual posts, but how they collectively build a coherent picture
+    of the organization’s engineering work</li> <li>Are comfortable working across
+    teams and navigating the competing priorities that come with turning internal
+    work into external-facing content</li> </ul> <h2><strong>Strong candidates may
+    also</strong></h2> <ul> <li>Have a background in technical writing, developer
+    communications, or engineering&nbsp;</li> <li>Have experience running or significantly
+    contributing to a technical blog or publication</li> <li>Be familiar with the
+    AI and machine learning landscape, and how technical work in this space is communicated
+    to practitioner and general audiences</li> <li>Have experience building or scaling
+    editorial workflows — including processes for review, approval, and publication
+    — within a fast-moving organisation</li> <li>Have a portfolio that demonstrates
+    editing work on technically dense material</li> </ul><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p>The annual compensation range for
+    this role is listed below.&nbsp;</p> <p>For sales roles, the range provided is
+    the role’s On Target Earnings ("OTE") range, meaning that the range includes both
+    the sales commissions/sales bonuses target and annual base salary for the role.</p></div><div
+    class="title">Annual Salary:</div><div class="pay-range"><span>$255,000</span><span
+    class="divider">&mdash;</span><span>$320,000 USD</span></div></div></div><div
+    class="content-conclusion"><h2><strong>Logistics</strong></h2> <p><strong>Education
+    requirements: </strong>We require at least a Bachelor''s degree in a related field
+    or equivalent experience.<strong><br><br>Location-based hybrid policy:</strong>
+    Currently, we expect all staff to be in one of our offices at least 25% of the
+    time. However, some roles may require more time in our offices.</p> <p><strong
+    data-stringify-type="bold">Visa sponsorship:</strong>&nbsp;We do s'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 7
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used:
+    framing: framings/documentation-engineer
+    evidence: evidence/differentiators
+    methodology: methodology/ai-conductor
+    credentials: pitches/credentials-creative-tech
+    work_samples: evidence/work-samples
+  variant_ids:
+    cover_letter: cover-letters/anthropic-engineering-editorial-lead
+  materials_attached:
+  - resumes/batch-03/anthropic-engineering-editorial-lead/anthropic-engineering-editorial-lead-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  submitted: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.827281+00:00'
+conversion:
+  response_received: true
+  response_type: rejected
+  time_to_response_days: 25
+  feedback: null
+  follow_up_count: 3
+  outcome_stage: resume_screen
+  rejection_signal: screened
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-14"
+follow_up:
+- date: '2026-03-21'
+  channel: linkedin
+  contact: Sylvie Carr
+  type: dm
+  note: Connect request sent — Managing Editor, likely hiring manager
+  response: none
+- date: '2026-03-21'
+  channel: linkedin
+  contact: Jake Eaton
+  type: dm
+  note: Connect request sent — editorial team peer
+  response: none
+- date: '2026-03-21'
+  channel: linkedin
+  contact: Keir Bradwell
+  type: dm
+  note: Connect request sent — editorial team
+  response: none
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-03-20'

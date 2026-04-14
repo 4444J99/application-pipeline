@@ -1,0 +1,106 @@
+id: grafana-labs-staff-software-engineer-grafana-databases-managed-services-i
+name: 'Grafana Labs Staff Software Engineer - Grafana Databases, Managed Services
+  | Ireland | Remote  '
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Grafana Labs
+  url: https://boards.greenhouse.io/grafanalabs
+  application_url: https://job-boards.greenhouse.io/grafanalabs/jobs/5968728004
+  portal: greenhouse
+  location: Republic of Ireland (Remote)
+  location_class: international
+  description: '<div class="content-intro"><p>Grafana Labs is a remote-first, open-source
+    powerhouse. There are more than 20M users of Grafana, the open source visualization
+    tool, around the globe, monitoring everything from beehives to climate change
+    in the Alps. The instantly recognizable dashboards have been spotted everywhere
+    from a NASA launch and Minecraft HQ to Wimbledon and the Tour de France. Grafana
+    Labs also helps more than 3,000 companies -- including Bloomberg, JPMorgan Chase,
+    and eBay -- manage their observability strategies with the Grafana LGTM Stack,
+    which can be run fully managed with <a href="https://grafana.com/products/cloud/">Grafana
+    Cloud</a> or self-managed with the <a href="https://grafana.com/products/enterprise/">Grafana
+    Enterprise Stack</a>, both featuring scalable metrics (<a href="https://grafana.com/oss/mimir/">Grafana
+    Mimir</a>), logs (<a href="https://grafana.com/oss/loki/">Grafana Loki</a>), and
+    traces (<a href="https://grafana.com/oss/tempo/">Grafana Tempo</a>).</p> <p>We’re
+    scaling fast and staying true to what makes us different: an open-source legacy,
+    a global collaborative culture, and a passion for meaningful work. Our team thrives
+    in an innovation-driven environment where transparency, autonomy, and trust fuel
+    everything we do.</p> <p>You may not meet every requirement, and that’s okay.
+    If this role excites you, we’d love you to raise your hand for what could be a
+    truly career-defining opportunity.</p></div><p><strong>This is a remote opportunity
+    and we would be interested in applicants located in Ireland time zones only at
+    this time.&nbsp;</strong></p> <h2>Staff Software Engineer - Grafana Databases,
+    Managed Services</h2> <h4><strong>The Opportunity:&nbsp;</strong></h4> <p>The
+    Managed Services team is a newly formed squad within the Databases department.
+    It owns and operates shared, production-critical infrastructure that powers Grafana
+    Cloud’s next-generation database products (Mimir, Loki, and Tempo). Today, this
+    includes operating 100+ WarpStream clusters across multiple cloud providers and
+    regions, with continued growth anticipated for the future. WarpStream acts as
+    the streaming backbone for ingestion and read/write decoupling across databases.
+    It sits directly on the hot path for metrics, logs, and traces, handling high-throughput,
+    multi-consumer workloads at massive scale.</p> <p>In addition to streaming infrastructure,
+    the team works closely with high-volume analytical and storage systems that power
+    query-heavy and aggregation-heavy workloads, where latency, compression behavior,
+    storage layout, and scaling characteristics matter deeply.</p> <p><strong>What
+    You’ll Be Doing:</strong></p> <p>As a Staff Engineer on Managed Services, you
+    will operate at both the system and team level. You will help shape how we run
+    and evolve shared database infrastructure while remaining deeply hands-on in production.
+    This involves:</p> <ul> <li>Operating and evolving 100+ multi-cloud streaming
+    clusters and related database infrastructure</li> <li>Diagnosing and eliminating
+    cross-layer failure modes (e.g., object storage latency, noisy neighbors, control-plane
+    bottlenecks, query performance regressions, etc.)</li> <li>Designing safe upgrade
+    and rollout strategies at scale</li> <li>Improving observability, automation,
+    and operational ergonomics</li> <li>Partnering closely with database and platform
+    teams to ensure safe scaling, partitioning, consumer fan-out, and query performance</li>
+    <li>Working directly with distributed systems behavior, Kubernetes scheduling
+    dynamics, storage engines, compression trade-offs, etc.</li> <li>Serving as a
+    primary escalation point and on-call for relevant incidents</li> <li>Owning the
+    relationship with all system vendors, including WarpStream Labs and others.</li>
+    </ul> <p>At the Staff level, your scope includes advanced systems ownership and
+    informal technical leadership:</p> <ul> <li>Help define and evolve the technical
+    direction for operating WarpStream and adjacent shared database systems at scale</li>
+    <li>Lead complex initiatives such as migrations, rollout improvements, and reliability
+    investments</li> <li>Establish best practices around SLOs, scaling limits, failure
+    isolation, and change safety</li> <li>Investigate and drive resolution of multi-layer
+    incidents spanning storage, compute, networking, and control-plane dependencies</li>
+    <li>Identify systemic risks across 100+ clusters and contribute architectural
+    improvements that reduce recurring issues</li> <li>Improve systems toil and operational
+    ergonomics with automation</li> <li>Partner with database and platform teams to
+    align on strategy and long-term scalability</li> <li>Mentor and support engineers
+    as the team matures</li> <li>As we are remote-first and our engineering organization
+    is largely remote, we provide guidance and meet regularly using video calls, so
+    an independent attitude and good communication skills are a must.</li> </ul> <p>Of
+    course, there is an on-call component to this role and on'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-14'
+  posting_date: '2026-04-13'
+  date_source: first_published
+  date_added: '2026-04-14'
+  discovered: '2026-04-14T10:23:06.705139+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-14"

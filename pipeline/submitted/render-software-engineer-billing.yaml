@@ -10,68 +10,8 @@ target:
   portal: ashby
   location: 'Remote: United States'
   location_class: us-remote
-  description: 'At Render, we’re building the modern cloud platform for developers
-    creating AI-native, full-stack, multi-service applications. Our mission is to
-    eliminate the tradeoff between the power of hyperscalers and the simplicity of
-    developer-friendly platforms—so teams can ship fast, scale reliably, and focus
-    on their product, not infrastructure. Unlike complex hyperscalers or ephemeral
-    edge/serverless solutions, Render offers a developer-first experience with persistent
-    compute, dynamic autoscaling, built-in orchestration, and observability, allowing
-    teams to launch, scale, and manage real-world applications without writing infrastructure
-    code or managing servers. Whether you''re building LLM-powered applications, scalable
-    SaaS products, or async processing pipelines, Render empowers teams to move fast
-    and scale confidently from MVP to millions of users. Our platform is trusted by
-    over 4.5 million developers worldwide and continues to grow rapidly. In February
-    2026, we raised an additional $100M in Series C financing, bringing our total
-    funding to $257M, to accelerate our vision of making cloud infrastructure both
-    powerful and intuitive—designed for the speed of modern AI development. We’re
-    a diverse and talented team that values craft, velocity, and user experience.
-    If you’re excited to help shape the future of the intelligent cloud and empower
-    developers everywhere, we’d love to hear from you. Applying to Render We''re seeking
-    candidates who possess high integrity, humility, and an insatiable drive to learn.
-    Through reasoned discussions and continuous feedback, we strive to improve both
-    individually and collectively. We foster an environment of mutual trust and respect,
-    empowering effective debate to achieve the best outcomes for our customers and
-    team. We especially encourage members of underrepresented groups in the tech community
-    to apply and understand that not all successful candidates will meet each requirement
-    listed. Our interview process is unique to each role, and we value the candidate
-    experience just as much as our customer experience. We hope your conversations
-    with us reflect a thoughtful process that is illuminative, enjoyable, and respectful
-    of your time. About the Role Billing is mission-critical to Render’s success.
-    As a Software Engineer, Billing you’ll design, implement, and maintain systems
-    that ensure customers are billed accurately, reliably, and transparently as we
-    scale. You will collaborate with Finance, Product, and Customer Experience teams
-    to integrate third-party platforms, evolve our usage-based billing systems, and
-    deliver the infrastructure that supports Render’s growing business model. This
-    role requires technical depth, precision, and strong cross-functional collaboration.
-    You’ll be the engineer others depend on to make sure usage data flows seamlessly,
-    customers are charged correctly, and our systems are robust against complexity
-    at scale. You will: Build, operate, and improve Render’s usage-based billing systems
-    . Integrate with and maintain third-party billing systems (e.g., Orb, Metronome,
-    or similar). Collaborate closely with Finance, Product, and Support Engineering
-    teams to ensure accurate, reliable billing and reporting. Work with large-scale
-    databases and data pipelines to capture, transform, and reconcile usage data.
-    Monitor, troubleshoot, and continuously improve billing reliability and performance.
-    Contribute to architectural decisions about how billing integrates with the broader
-    Render platform. Help shape internal processes, documentation, and best practices
-    for billing operations. We''re looking for: 3+ years of professional experience
-    building or operating usage-based billing systems . Hands-on experience integrating
-    and working with third-party billing systems such as Orb, Metronome, Stripe, or
-    similar platforms . Strong expertise in Go and production-grade databases (SQL
-    or NoSQL). Ability to work effectively across functions with Finance, Customer
-    Experience, and Product teams. Detail-oriented mindset with a strong sense of
-    ownership and accountability in mission-critical systems. Pragmatism and problem-solving
-    skills to balance accuracy, scalability, and developer experience. Nice-to-haves:
-    Experience working in a high-growth startup or scaling environment. Familiarity
-    with financial reconciliation and reporting processes. Background in distributed
-    systems or event-driven architectures. Willingness to mentor others and help scale
-    Render’s engineering culture. If this role excites you but you don’t meet every
-    single requirement, we’d still love to hear from you—your unique experience might
-    be just what we need. Benefits This opportunity is also eligible for equity with
-    early-exercise options and extended exercise windows. 4 weeks of paid vacation.
-    14 weeks of fully paid parental leave for all parents to bond with a newly born,
-    adopted, or fostered child. We will also work with you to create a supportive
-    plan of return. Long-term disability, life insurance, and '
+  description: 'At Render, we’re building the modern cloud platform for developers creating AI-native, full-stack, multi-service applications. Our mission is to eliminate the tradeoff between the power of hyperscalers and the simplicity of developer-friendly platforms—so teams can ship fast, scale reliably, and focus on their product, not infrastructure. Unlike complex hyperscalers or ephemeral edge/serverless solutions, Render offers a developer-first experience with persistent compute, dynamic autoscaling, built-in orchestration, and observability, allowing teams to launch, scale, and manage real-world applications without writing infrastructure code or managing servers. Whether you''re building LLM-powered applications, scalable SaaS products, or async processing pipelines, Render empowers teams to move fast and scale confidently from MVP to millions of users. Our platform is trusted by over 4.5 million developers worldwide and continues to grow rapidly. In February 2026, we raised an additional $100M in Series C financing, bringing our total funding to $257M, to accelerate our vision of making cloud infrastructure both powerful and intuitive—designed for the speed of modern AI development. We’re a diverse and talented team that values craft, velocity, and user experience. If you’re excited to help shape the future of the intelligent cloud and empower developers everywhere, we’d love to hear from you. Applying to Render We''re seeking candidates who possess high integrity, humility, and an insatiable drive to learn. Through reasoned discussions and continuous feedback, we strive to improve both individually and collectively. We foster an environment of mutual trust and respect, empowering effective debate to achieve the best outcomes for our customers and team. We especially encourage members of underrepresented groups in the tech community to apply and understand that not all successful candidates will meet each requirement listed. Our interview process is unique to each role, and we value the candidate experience just as much as our customer experience. We hope your conversations with us reflect a thoughtful process that is illuminative, enjoyable, and respectful of your time. About the Role Billing is mission-critical to Render’s success. As a Software Engineer, Billing you’ll design, implement, and maintain systems that ensure customers are billed accurately, reliably, and transparently as we scale. You will collaborate with Finance, Product, and Customer Experience teams to integrate third-party platforms, evolve our usage-based billing systems, and deliver the infrastructure that supports Render’s growing business model. This role requires technical depth, precision, and strong cross-functional collaboration. You’ll be the engineer others depend on to make sure usage data flows seamlessly, customers are charged correctly, and our systems are robust against complexity at scale. You will: Build, operate, and improve Render’s usage-based billing systems . Integrate with and maintain third-party billing systems (e.g., Orb, Metronome, or similar). Collaborate closely with Finance, Product, and Support Engineering teams to ensure accurate, reliable billing and reporting. Work with large-scale databases and data pipelines to capture, transform, and reconcile usage data. Monitor, troubleshoot, and continuously improve billing reliability and performance. Contribute to architectural decisions about how billing integrates with the broader Render platform. Help shape internal processes, documentation, and best practices for billing operations. We''re looking for: 3+ years of professional experience building or operating usage-based billing systems . Hands-on experience integrating and working with third-party billing systems such as Orb, Metronome, Stripe, or similar platforms . Strong expertise in Go and production-grade databases (SQL or NoSQL). Ability to work effectively across functions with Finance, Customer Experience, and Product teams. Detail-oriented mindset with a strong sense of ownership and accountability in mission-critical
+    systems. Pragmatism and problem-solving skills to balance accuracy, scalability, and developer experience. Nice-to-haves: Experience working in a high-growth startup or scaling environment. Familiarity with financial reconciliation and reporting processes. Background in distributed systems or event-driven architectures. Willingness to mentor others and help scale Render’s engineering culture. If this role excites you but you don’t meet every single requirement, we’d still love to hear from you—your unique experience might be just what we need. Benefits This opportunity is also eligible for equity with early-exercise options and extended exercise windows. 4 weeks of paid vacation. 14 weeks of fully paid parental leave for all parents to bond with a newly born, adopted, or fostered child. We will also work with you to create a supportive plan of return. Long-term disability, life insurance, and '
 deadline:
   date: null
   type: rolling
@@ -119,7 +59,10 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-03-20'
+last_touched: "2026-04-04"
 status_meta:
   submitted_by: 4jp
   submitted_at: '2026-03-20'
+follow_up.protocol.connect_date: '2026-03-20'
+follow_up.protocol.email_date: '2026-03-21'
+follow_up.protocol.followup_date: '2026-03-27'

@@ -1,0 +1,98 @@
+id: grafana-labs-staff-ai-engineer-people-technology-nasa-remote
+name: Grafana Labs Staff AI Engineer - People Technology | NASA | Remote
+track: job
+status: outcome
+outcome: rejected
+target:
+  organization: Grafana Labs
+  url: https://grafana.com/about/careers/
+  application_url: https://job-boards.greenhouse.io/grafanalabs/jobs/5830873004
+  portal: greenhouse
+  location: US | Remote
+  location_class: us-remote
+  description: 'Staff AI Engineer, People Technology. First AI engineer for the People
+    team. Focus: Architecting AI-driven solutions for insights from BigQuery, Workday,
+    Greenhouse, etc. Technical direction, mentoring, data governance, and responsible
+    AI practices.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 192484
+  currency: USD
+  type: salary
+fit:
+  score: 6.1
+  original_score: 7.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 4
+    evidence_match: 2
+    track_record_fit: 5
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 9
+    effort_to_value: 7
+    deadline_feasibility: 9
+    portal_friction: 5
+  extracted_keywords:
+  - People Technology
+  - BigQuery
+  - Google Cloud Platform
+  - Python
+  - SQL
+  - Data Governance
+  - Responsible AI
+  - Workday
+  - Greenhouse
+  framing: Platform orchestrator with deep experience in data engineering and responsible
+    AI. Applying technical leadership to build the foundational AI layer for internal
+    People systems.
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.pdf
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  submitted: '2026-03-26'
+  acknowledged: '2026-03-31'
+  interview: '2026-04-01'
+conversion:
+  response_received: true
+  response_type: rejected
+  time_to_response_days: 19
+  feedback: null
+  follow_up_count: 0
+  channel: direct
+  resume_variant: null
+  cover_letter_present: false
+  custom_answers: true
+  outcome_stage: interview
+  rejection_signal: personalized
+follow_up:
+- date: '2026-04-01'
+  channel: email
+  contact: Ryan McKellips
+  type: check_in
+  note: Scheduled recruiter screen via Guide.co self-schedule. Mon Apr 6 10:30-11:00
+    AM EDT. Google Meet, audio only, BrightHire notetaker.
+  response: none
+tags:
+- applied-outside-pipeline
+- first-interview-conversion
+source: manual
+last_touched: "2026-04-14"
+status_meta:
+  submitted_by: 4jp
+  submitted_at: '2026-03-26'
+  review_note: Applied directly on Greenhouse outside pipeline; retroactively created
+    at interview status after recruiter screen invitation received 2026-03-31
+network:
+  contacts:
+  - name: Ryan McKellips
+    role: Recruiter
+    connection_type: direct
+    status: active
+    note: Point of contact for scheduled screen on 2026-04-06

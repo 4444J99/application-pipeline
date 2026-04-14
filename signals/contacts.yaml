@@ -3327,3 +3327,18 @@ contacts:
   tags: []
   next_action: ''
   next_action_date: ''
+- name: Matt
+  organization: ResponsiveAds
+  role: ''
+  channel: email
+  relationship_strength: 1
+  interactions:
+  - date: '2026-04-04'
+    type: cold_outreach
+    note: 'Cold outreach for Ad Format & Template Product Management Lead role. Role
+      is a skip but contact is warm. Email: matt@responsiveads.com'
+  pipeline_entries: []
+  tags:
+  - cold-outreach
+  next_action: ''
+  next_action_date: ''

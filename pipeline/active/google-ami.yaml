@@ -1,7 +1,7 @@
 id: google-ami
 name: Google AMI Grants
 track: grant
-status: qualified
+status: drafting
 identity_position: creative-technologist
 outcome: null
 target:
@@ -22,10 +22,7 @@ fit:
   score: 7.2
   original_score: 9.0
   identity_position: creative-technologist
-  framing: Creative technologist presenting the "ORGANVM Metasystem"—a production-grade
-    AI orchestration framework designed to explore the frontier of human-agent creative
-    collaboration. Seeking to collaborate with Google AMI to build more steerable,
-    transparent, and beautiful AI-native cultural instruments.
+  framing: Creative technologist presenting the "ORGANVM Metasystem"—a production-grade AI orchestration framework designed to explore the frontier of human-agent creative collaboration. Seeking to collaborate with Google AMI to build more steerable, transparent, and beautiful AI-native cultural instruments.
   lead_organs:
   - I
   - III
@@ -76,7 +73,7 @@ conversion:
 tags: []
 source: 04-application-tracker.md
 notes: Watch for cycle opening. TBA deadline.
-last_touched: "2026-04-02"
+last_touched: "2026-04-04"
 status_meta:
   reviewed_by: 4jp
   reviewed_at: '2026-03-03'
@@ -85,3 +82,9 @@ deferral:
   reason: below_actionable_threshold
   note: Score below top-10 cutoff (8.3); preserved for future re-evaluation
   deferred_date: '2026-03-13'
+submission.variant_ids.cover_letter: variants/cover-letters/google-ami.md
+submission.blocks_used.identity: identity/2min
+submission.blocks_used.framing: framings/creative-technologist
+submission.materials_attached:
+- resumes/batch-03/google-ami/google-ami-resume.html
+- materials/resumes/batch-03/google-ami/google-ami-resume.pdf

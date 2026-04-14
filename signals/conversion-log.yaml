@@ -333,10 +333,12 @@ entries:
   - methodology/process-as-product
   - evidence/work-samples
   variant_id: variants/project-pitches/awesome-foundation-nyc.md
-  outcome: null
-  response_date: null
-  time_to_response_days: null
+  outcome: rejected
+  response_date: '2026-04-14'
+  time_to_response_days: 48
   feedback: null
+  outcome_stage: resume_screen
+  rejection_signal: automated
 - id: gay-lesbian-review
   submitted: '2026-02-26'
   track: writing
@@ -909,10 +911,12 @@ entries:
   - pitches/credentials-creative-tech
   - evidence/work-samples
   variant_id: cover-letters/coinbase-senior-software-engineer-developer-money-movement-risk
-  outcome: null
-  response_date: null
+  outcome: rejected
+  response_date: '2026-04-14'
   time_to_response_days: null
   feedback: null
+  outcome_stage: resume_screen
+  rejection_signal: screened
 - id: snorkel-ai-staff-applied-ai-engineer-pre-sales
   submitted: '2026-03-18'
   submitted_by: 4jp
@@ -943,10 +947,12 @@ entries:
   - pitches/credentials-creative-tech
   - evidence/work-samples
   variant_id: cover-letters/snorkel-ai-forward-deployed-engineer-data-as-a-service
-  outcome: acknowledged
-  response_date: '2026-04-01'
+  outcome: rejected
+  response_date: '2026-04-14'
   time_to_response_days: null
   feedback: null
+  outcome_stage: resume_screen
+  rejection_signal: screened
 - id: toast-senior-backend-engineer
   submitted: '2026-03-18'
   submitted_by: 4jp
@@ -977,8 +983,8 @@ entries:
   - pitches/credentials-creative-tech
   - evidence/work-samples
   variant_id: cover-letters/webflow-senior-forward-deployed-engineer
-  outcome: null
-  response_date: null
+  outcome: acknowledged
+  response_date: '2026-04-14'
   time_to_response_days: null
   feedback: null
 - id: livekit-forward-deployed-engineer
@@ -1065,9 +1071,10 @@ entries:
   cover_letter_present: false
   custom_answers: true
   follow_up_count: 0
-  outcome: null
-  outcome_stage: null
-  response_date: '2026-03-31'
-  time_to_response_days: 5
+  outcome: rejected
+  outcome_stage: interview
+  response_date: '2026-04-14'
+  time_to_response_days: 19
   feedback: null
   note: First interview conversion. Applied outside pipeline directly on Greenhouse.
+  rejection_signal: personalized
