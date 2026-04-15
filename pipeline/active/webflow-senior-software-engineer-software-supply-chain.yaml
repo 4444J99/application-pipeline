@@ -1,7 +1,7 @@
 id: webflow-senior-software-engineer-software-supply-chain
 name: Webflow Senior Software Engineer, Software Supply Chain
 track: job
-status: qualified
+status: drafting
 outcome: null
 target:
   organization: Webflow
@@ -10,67 +10,8 @@ target:
   portal: greenhouse
   location: Argentina Remote
   location_class: remote-global
-  description: '<p>At Webflow, we’re building the world’s leading AI-native Digital
-    Experience Platform, and we’re doing it as a remote-first company built on trust,
-    transparency, and a whole lot of creativity. This work takes grit, because we
-    move fast, without ever sacrificing craft or quality. Our mission is to bring
-    development superpowers to everyone. From entrepreneurs launching their first
-    idea to global enterprises scaling their digital presence, we empower teams to
-    design, launch, and optimize for the web without barriers. We believe the future
-    of the web, and work, is more open, more creative, and more equitable. And we’re
-    here to build it together.</p> <p>We’re looking for a <strong>Senior Software
-    Engineer, Software Supply Chain</strong> to modernize and secure the technical
-    foundation upon which all Webflow engineers build. In this role, you’ll lead the
-    execution of critical platform migrations and shape the automated systems that
-    keep our core dependencies up to date such as Node.js, React<strong> </strong>and
-    much more. This is a high-impact role focused on hardening our software supply
-    chain and enabling world-class developer velocity through a seamless, up-to-date
-    tech stack.</p> <h1><strong>About the role:</strong></h1> <ul> <li>Location: Remote-first
-    (Argentina)</li> <li>Permanent, full-time employee (this is not a contractor position)</li>
-    <li>Application Information:</li> <ul> <li>Application deadline: applications
-    accepted on an ongoing basis until position is closed and filled</li> <li>This
-    posting is for a new position]</li> </ul> <li>Reporting to the Senior Engineering
-    Manager</li> </ul> <p>As a<strong> Senior Software Engineer, Software Supply Chain</strong>,
-    you’ll …&nbsp;</p> <ul> <li>Modernize core platforms by executing high-impact
-    foundational upgrades to improve runtime performance, enable new features and
-    adhere to security requirements.</li> <li>Standardize frontend architecture by
-    driving coordinated upgrades across our monorepo and micro-frontends, leveraging
-    automated codemods to minimize manual refactoring for other teams.</li> <li>Scale
-    automated governance by leveraging AI to evolve our use of tools from simple patch
-    updates to automated, risk-based merging of non-breaking changes.</li> <li>Optimize
-    build performance by partnering with teams to modernize our toolchain (e.g., Nx,
-    Rspack, SWC) to drastically reduce CI wait times and the memory footprint of our
-    applications.</li> <li>Eliminate technical debt by systematically identifying
-    and remediate package vulnerabilities and version drift, moving Webflow to a proactive,
-    "secure-by-default" posture.</li> <li>Champion developer velocity by acting as
-    a champion, helping product teams navigate complex breaking changes in core libraries
-    while maintaining a high bar for code quality and craft.</li> </ul> <h1><strong>About
-    you:</strong></h1> <p>Requirements:</p> <ul> <li>BS / BA college degree or relevant
-    experience</li> <li>Business-level fluency to read, write and speak in English</li>
-    </ul> <p>You’ll thrive as a <strong>Senior Software Engineer, Software Supply
-    Chain</strong> if you:</p> <ul> <li>Have 5+ years of experience in software engineering,
-    with a proven track record of managing large-scale framework migrations and dependency
-    upgrades in complex production environments.</li> <li>Possess deep technical depth
-    in the Node.js, TypeScript, and React ecosystems, including familiarity with common
-    libraries like Express, Nest.js, and Mongoose.</li> <li>Have hands-on experience
-    with modern build systems and testing frameworks such as Nx, Vite/Webpack, SWC,
-    and Playwright.</li> <li>Passionate about eliminating manual toil through automation
-    to improve the lives of your fellow engineers.</li> <li>Balance the urgency of
-    modernizing the tech stack with the need to maintain stability and performance
-    for our millions of users.</li> <li>Distill complex technical trade-offs into
-    clear plans and coordinate high-visibility changes across many different stakeholders.</li>
-    <li>Stay curious and open to growth — demonstrating a proactive embrace of AI,
-    and actively building and applying fluency in emerging technologies to elevate
-    how we work, drive faster outcomes, and expand collective impact.</li> </ul> <h3><strong>Our
-    Core Behaviors:</strong></h3> <ul> <li><strong>Build lasting customer trust.</strong>
-    We build trust by taking action that puts customer trust first.</li> <li><strong>Win
-    together. </strong>We play to win, and we win as one team. Success at Webflow
-    isn''t a solo act.</li> <li><strong>Reinvent ourselves.</strong> We don''t just
-    improve what exists, we imagine what''s possible.</li> <li><strong>Deliver with
-    speed, quality, and craft. </strong>We move fast because the moment demands it,
-    and we do so without lowering the bar.</li> </ul> <h3><strong>Benefits</strong></h3>
-    <ul> <li><strong>Ownership in what you help build.</strong> Every permanent Webflower
-    receives equity (RSUs) in our growing, privately held company.</li> <li><strong>Health '
+  description: '<p>At Webflow, we’re building the world’s leading AI-native Digital Experience Platform, and we’re doing it as a remote-first company built on trust, transparency, and a whole lot of creativity. This work takes grit, because we move fast, without ever sacrificing craft or quality. Our mission is to bring development superpowers to everyone. From entrepreneurs launching their first idea to global enterprises scaling their digital presence, we empower teams to design, launch, and optimize for the web without barriers. We believe the future of the web, and work, is more open, more creative, and more equitable. And we’re here to build it together.</p> <p>We’re looking for a <strong>Senior Software Engineer, Software Supply Chain</strong> to modernize and secure the technical foundation upon which all Webflow engineers build. In this role, you’ll lead the execution of critical platform migrations and shape the automated systems that keep our core dependencies up to date such as Node.js, React<strong> </strong>and much more. This is a high-impact role focused on hardening our software supply chain and enabling world-class developer velocity through a seamless, up-to-date tech stack.</p> <h1><strong>About the role:</strong></h1> <ul> <li>Location: Remote-first (Argentina)</li> <li>Permanent, full-time employee (this is not a contractor position)</li> <li>Application Information:</li> <ul> <li>Application deadline: applications accepted on an ongoing basis until position is closed and filled</li> <li>This posting is for a new position]</li> </ul> <li>Reporting to the Senior Engineering Manager</li> </ul> <p>As a<strong> Senior Software Engineer, Software Supply Chain</strong>, you’ll …&nbsp;</p> <ul> <li>Modernize core platforms by executing high-impact foundational upgrades to improve runtime performance, enable new features and adhere to security requirements.</li> <li>Standardize frontend architecture by driving coordinated upgrades across our monorepo and micro-frontends, leveraging automated codemods to minimize manual refactoring for other teams.</li> <li>Scale automated governance by leveraging AI to evolve our use of tools from simple patch updates to automated, risk-based merging of non-breaking changes.</li> <li>Optimize build performance by partnering with teams to modernize our toolchain (e.g., Nx, Rspack, SWC) to drastically reduce CI wait times and the memory footprint of our applications.</li> <li>Eliminate technical debt by systematically identifying and remediate package vulnerabilities and version drift, moving Webflow to a proactive, "secure-by-default" posture.</li> <li>Champion developer velocity by acting as a champion, helping product teams navigate complex breaking changes in core libraries while maintaining a high bar for code quality and craft.</li> </ul> <h1><strong>About you:</strong></h1> <p>Requirements:</p> <ul> <li>BS / BA college degree or relevant experience</li> <li>Business-level fluency to read, write and speak in English</li> </ul> <p>You’ll thrive as a <strong>Senior Software Engineer, Software Supply Chain</strong> if you:</p> <ul> <li>Have 5+ years of experience in software engineering, with a proven track record of managing large-scale framework migrations and dependency upgrades in complex production environments.</li> <li>Possess deep technical depth in the Node.js, TypeScript, and React ecosystems, including familiarity with common libraries like Express, Nest.js, and Mongoose.</li> <li>Have hands-on experience with modern build systems and testing frameworks such as Nx, Vite/Webpack, SWC, and Playwright.</li> <li>Passionate about eliminating manual toil through automation to improve the lives of your fellow engineers.</li> <li>Balance the urgency of modernizing the tech stack with the need to maintain stability and performance for our millions of users.</li> <li>Distill complex technical trade-offs into clear plans and coordinate high-visibility changes across many different stakeholders.</li> <li>Stay curious and open to growth — demonstrating a proactive embrace of AI,
+    and actively building and applying fluency in emerging technologies to elevate how we work, drive faster outcomes, and expand collective impact.</li> </ul> <h3><strong>Our Core Behaviors:</strong></h3> <ul> <li><strong>Build lasting customer trust.</strong> We build trust by taking action that puts customer trust first.</li> <li><strong>Win together. </strong>We play to win, and we win as one team. Success at Webflow isn''t a solo act.</li> <li><strong>Reinvent ourselves.</strong> We don''t just improve what exists, we imagine what''s possible.</li> <li><strong>Deliver with speed, quality, and craft. </strong>We move fast because the moment demands it, and we do so without lowering the bar.</li> </ul> <h3><strong>Benefits</strong></h3> <ul> <li><strong>Ownership in what you help build.</strong> Every permanent Webflower receives equity (RSUs) in our growing, privately held company.</li> <li><strong>Health '
 deadline:
   date: null
   type: rolling
@@ -81,6 +22,16 @@ amount:
 fit:
   score: 8.3
   identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
 submission:
   effort_level: standard
   blocks_used: {}
@@ -102,4 +53,10 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-04-14"
+last_touched: "2026-04-15"
+submission.variant_ids.cover_letter: variants/cover-letters/webflow-senior-software-engineer-software-supply-chain.md
+submission.blocks_used.identity: identity/2min
+submission.blocks_used.methodology: methodology/ai-conductor
+submission.materials_attached:
+- resumes/base/founder-operator-resume.html
+- resumes/base/independent-engineer-resume.html
