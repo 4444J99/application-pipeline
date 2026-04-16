@@ -99,7 +99,7 @@
 
 ---
 
-## IRF CARRY-FORWARD (Not Yet Updated in IRF)
+## IRF CARRY-FORWARD (Ingested 2026-04-16, commit `a73b3d9`)
 
 | Item | IRF Action Needed |
 |------|-------------------|
