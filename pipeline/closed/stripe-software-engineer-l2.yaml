@@ -1,0 +1,99 @@
+id: stripe-software-engineer-l2
+name: Stripe Software Engineer L2
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7812279
+  portal: greenhouse
+  location: Seattle, WA
+  location_class: us-onsite
+  description: '<h2><strong>Who we are</strong></h2> <h3><strong>About Stripe</strong></h3>
+    <p>Stripe, LLC. is a financial infrastructure platform for businesses. Millions
+    of companies - from the world’s largest enterprises to the most ambitious startups
+    - use Stripe to accept payments, grow their revenue, and accelerate new business
+    opportunities. Our mission is to increase the GDP of the internet, and we have
+    a staggering amount of work ahead. That means you have an unprecedented opportunity
+    to put the global economy within everyone''s reach while doing the most important
+    work of your career.</p> <h2><strong>What you’ll do</strong></h2> <h3><strong>Responsibilities</strong></h3>
+    <ul> <li>Design, build, productionize, and maintain APls, services, and systems
+    across Stripe''s engineering teams using Ruby, React, Typescript, and other programming
+    languages.</li> <li>Predict and measure the performance and outcomes of designed
+    systems.</li> <li>&nbsp;Collaborate with engineers and other cross-functional
+    roles across the company to build new billing features at large-scale to make
+    it easier to businesses for collect and manage their payments.</li> <li>Analyze
+    user needs, feedback, and product requirements to determine technical specifications
+    and the feasibility of design and implementation, taking cost and time constraints
+    into account.&nbsp;</li> <li>Implement technical designs through a series of programming
+    tasks while upholding high engineering standards.</li> <li>Implement unit, functional,
+    and integration tests to prevent bugs and regressions.</li> <li>Improve engineering
+    standards, tooling, and processes ensuring operational excellence and contribute
+    to team''s on-call rotation.</li> <li>Debug and identify the root cause of errors
+    in a complex system across multiple service components.</li> <li>Provide mentorship
+    and help onboard and spin up new hires for the team.</li> </ul> <h2><strong>Who
+    you are</strong></h2> <h3><strong>Minimum requirements</strong></h3> <p>Bachelor’s
+    degree or foreign equivalent in Computer science, Human-Computer Interaction or
+    related fields, plus 18 months of software engineering experience.</p> <p><strong>This
+    position requires following:</strong></p> <ul> <li>1.5 years of experience working
+    with Ruby, React, Typescript, and other relevant programming languages and frameworks;&nbsp;</li>
+    <li>1.5 years of experience translating business needs into software requirements
+    and designs and implementing industry standard design patterns;&nbsp;</li> <li>1.5
+    years of experience with using SQL or related query languages to perform data
+    analysis;&nbsp;</li> <li>1.5 years of experience working with API development,
+    participating in team''s oncall to provide emergency response, and debugging production
+    issues across services;&nbsp;</li> <li>1.5 years of experience leading cross team
+    projects, scoping implementation plans, and managing cross team dependencies;
+    and&nbsp;</li> <li>1.5 years of experience participating in team''s on-call rotation,
+    providing emergency responses, debugging and mitigating production issues.</li>
+    </ul> <p><strong>Salary: </strong>$156,800 – $235,200/yr.&nbsp;&nbsp;</p> <p>This
+    salary range represents the base salary range for the role and any sales commissions/sales
+    bonuses targets, if applicable, would be in addition to the base salary.</p> <p>40
+    hrs/week.</p> <p>Up to 50% remote work permitted.&nbsp;</p> <p>Multiple Positions
+    Available.</p> <p>Additional benefits for this role may include: equity, company
+    bonus or sales commissions/bonuses; 401(k) plan; medical, dental, and vision benefits;
+    and wellness stipends. - WA11 <strong><span style="color: rgb(255, 255, 255);">#LI-DNI</span></strong></p>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-14'
+  posting_date: '2026-04-13'
+  date_source: first_published
+  date_added: '2026-04-14'
+  discovered: '2026-04-14T10:23:06.718778+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,115 @@
+id: singlestore-software-engineer-ai-platforms
+name: SingleStore Software Engineer (AI Platforms)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: SingleStore
+  url: https://boards.greenhouse.io/singlestore
+  application_url: https://job-boards.greenhouse.io/singlestore/jobs/7573638
+  portal: greenhouse
+  location: India
+  location_class: international
+  description: '<h2><strong>Software Engineer (AI Platforms)</strong></h2> <h3><strong>About
+    SingleStore</strong></h3> <p>At SingleStore, we’re not just building a database
+    company, we’re defining the future of data management. Going beyond multi-cloud,
+    we offer customers flexible networking, storage, and compute options to meet their
+    requirements. With a few clicks, our cloud service spins up production grade infrastructure
+    using the latest capabilities of major cloud providers and the industry standard
+    Kubernetes ecosystem.</p> <p>As data systems evolve, the “database” is no longer
+    just where queries run, it’s becoming the foundation for realtime AI applications:
+    retrieval, reasoning, agent workflows, and intelligent automation over enterprise
+    data. That’s the direction we’re building toward.</p> <h3><strong>About the AI
+    Platform Team</strong></h3> <p>We build the software platform that powers AI native
+    experiences across SingleStore: AI/ML capabilities, agent runtimes, tool integration,
+    and the operational layer required to run these systems reliably at scale. Our
+    work sits at the intersection of distributed systems, cloud infrastructure, and
+    practical applied AI.</p> <p>This team is not “pure research”, it’s engineering
+    heavy. You’ll build product grade systems that let customers safely and reliably
+    use AI on their data.</p> <h3><strong>Role Summary</strong></h3> <p>We are looking
+    for a Software Engineer to design and implement core platform capabilities for
+    AI/ML and AI Agents in SingleStore Cloud. You’ll work on services that enable
+    model/tool orchestration (e.g.&nbsp; MCP style tool discovery and execution),
+    agent workflows, retrieval pipelines (embeddings/vector search), evaluation/observability,
+    and secure multi tenant operations.</p> <p>You will likely find yourself using
+    Go and Python, Kubernetes, cloud primitives, and the right tools for the job,&nbsp;
+    while applying solid AI/ML fundamentals to make correct engineering decisions.</p>
+    <p>&nbsp;</p> <h2><strong>Role and Responsibilities</strong></h2> <ul> <li>Build
+    and evolve backend services that power AI features: agent orchestration, tool
+    execution, retrieval/RAG pipelines, and model serving integrations.</li> <li>Design
+    APIs and control plane workflows for AI platform components (tenant-aware, secure
+    by default, observable).</li> <li>Implement MCP style tool discovery / integration
+    patterns so agents can safely call tools, connectors, and internal services.</li>
+    <li>Work closely with product managers, designers, customers, and partner engineering
+    teams to deliver high quality AI experiences.</li> <li>Engineer for reliability
+    and scale: latency, cost controls, rate limiting, fallbacks, rollouts, and incident
+    response readiness.</li> <li>Establish best practices around evaluation: offline
+    test sets, regression detection, prompt/model/version tracking, and quality gates.</li>
+    <li>Contribute to secure AI by design approaches: permissions, data access boundaries,
+    prompt injection defenses, and auditability.</li> <li>Mentor junior engineers
+    and contribute to a welcoming, high ownership team environment.</li> </ul> <p>&nbsp;</p>
+    <h2><strong>Required Skills and Experience</strong></h2> <p>This is a software
+    engineering role that requires strong fundamentals <strong>plus</strong> working
+    knowledge of AI/ML concepts.</p> <ul> <li>Strong software engineering skills with
+    experience in <strong>distributed systems</strong> (Go, Python, or similar).</li>
+    <li>Experience building <strong>cloud native services</strong>: Kubernetes, containers,
+    service-to-service APIs, CI/CD.</li> <li>4+ years of experience working on a <strong>SaaS
+    product</strong> or production platform.</li> <li>Solid understanding of <strong>AI/ML
+    fundamentals</strong> (you don’t need to be a researcher, but you should understand
+    concepts well enough to build correct systems):</li> <ul> <li>Supervised learning
+    basics (training vs inference, overfitting, evaluation metrics, classification,
+    anomaly detection, forecasting, regression etc.)</li> <li>LLM basics (tokens,
+    context windows, prompting, tool/function calling concepts)</li> <li>Embeddings
+    + vector search fundamentals (similarity, indexing tradeoffs, retrieval pitfalls)</li>
+    </ul> <li>Strong debugging and problem-solving skills, including incident-style
+    troubleshooting across services and infrastructure.</li> <li>Intellectual curiosity
+    about investigating issues that impact product quality, reliability, latency,
+    and business metrics.</li> <li>Passion for building robust, maintainable systems
+    in a fast-paced, team-oriented environment.</li> </ul> <p>&nbsp;</p> <h2><strong>Nice
+    to Have (Preferred)</strong></h2> <ul> <li>Hands on experience with <strong>AI
+    agents</strong> and orchestration frameworks (tool calling, workflows, planners/executors).</li>
+    <li>Practical experience with <strong>RAG systems</strong>, reranking, grounding,
+    and evaluation strategies.</li> <li>Experience with model serving patterns (batch/online
+    inference, caching, streaming respons'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.859983+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,114 @@
+id: launchdarkly-sr-backend-engineer-warehouse-integrations
+name: LaunchDarkly Sr. Backend Engineer - Warehouse Integrations
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: LaunchDarkly
+  url: https://boards.greenhouse.io/launchdarkly
+  application_url: https://job-boards.greenhouse.io/launchdarkly/jobs/7683986003
+  portal: greenhouse
+  location: India
+  location_class: international
+  description: <h4><strong>About the Job:</strong></h4> <p data-renderer-start-pos="5863"
+    data-local-id="f0a6be33c71e">The Warehouse Integrations team at Launchdarkly builds
+    the infrastructure that lets LaunchDarkly customers connect their enterprise data
+    warehouses to unlock advanced capabilities like warehouse-native experimentation
+    and real-time metrics.</p> <p data-renderer-start-pos="6105" data-local-id="2e553d01ff39">As
+    a Senior Backend Engineer, you'll be a key architect for scaling this platform
+    and expanding our warehouse integrations footprint. You'll lead the design and
+    implementation of core infrastructure - from integration connectors and data export
+    pipelines to health checks and operational monitoring, while mentoring engineers
+    and setting technical direction for the team.</p> <p data-renderer-start-pos="6478"
+    data-local-id="8707b0b49162">This is a critical role in LaunchDarkly's strategy
+    to meet customers where their data lives and enable data-driven feature experimentation
+    at scale.</p> <h4>Responsibilities:</h4> <ul class="ak-ul" data-local-id="fbee970fd37e"
+    data-indent-level="1"> <li> <p data-renderer-start-pos="6652" data-local-id="e53a3bdd2b5a">Architect
+    and design scalable warehouse integration infrastructure that enables LaunchDarkly
+    to support multiple enterprise data warehouse platforms and add new integrations
+    systematically.</p> </li> <li> <p data-renderer-start-pos="6845" data-local-id="4c079b334023">Build
+    and own core backend services and APIs that power warehouse connectivity, including
+    data export pipelines, health checks, authentication flows, and operational monitoring.</p>
+    </li> <li> <p data-renderer-start-pos="7026" data-local-id="55c29355e82b">Drive
+    technical excellence by establishing design patterns, frameworks, and best practices
+    for warehouse integrations that the team uses as they scale.</p> </li> <li> <p
+    data-renderer-start-pos="7181" data-local-id="e5ea223ee0c1">Partner with cross-functional
+    teams to define integration roadmaps, resolve technical blockers, and ensure warehouse-native
+    features are delivered reliably.</p> </li> <li> <p data-renderer-start-pos="7341"
+    data-local-id="8c475e335ce4">Lead technical design reviews and author tech specs
+    for complex, cross-cutting integration work, and setting standards for implementation.</p>
+    </li> <li> <p data-renderer-start-pos="7483" data-local-id="44e42b74fc0f">Mentor
+    and support backend engineers on the team through code reviews, design discussions,
+    and regular guidance, fostering strong fundamentals and ownership mindset.</p>
+    </li> <li> <p data-renderer-start-pos="7652" data-local-id="5c06301e0f1b">Communicate
+    effectively across technical and non-technical audiences, articulating complex
+    system decisions, trade-offs, and progress to stakeholders, engineers, and peers.</p>
+    </li> <li> <p data-renderer-start-pos="7828" data-local-id="0f2f8685312e">Improve
+    reliability and operational maturity of warehouse integrations through observability,
+    monitoring, load testing, and production incident response.</p> </li> <li> <p
+    data-renderer-start-pos="7985" data-local-id="9ab4f3408df0">Actively participate
+    in on-call rotation to support production systems, diagnose issues in distributed
+    environments, and implement lasting fixes.</p> </li> </ul> <h4>Qualifications:</h4>
+    <ul class="ak-ul" data-local-id="0db4924f4906" data-indent-level="1"> <li> <p
+    data-renderer-start-pos="8156" data-local-id="1949060cef4b">8+ years of professional
+    backend software engineering experience, with a demonstrated track record of designing
+    and shipping scalable, production-grade systems in complex domains</p> </li> <li>
+    <p data-renderer-start-pos="8338" data-local-id="66b1deeeabf1">Proven expertise
+    in distributed systems design and implementation, including experience with topics
+    such as consistency models, replication, consensus, and failure handling in large-scale
+    environments</p> </li> <li> <p data-renderer-start-pos="8542" data-local-id="bd761f54ca6d">Strong
+    programming proficiency in Go, Java, Rust, or C++ with the ability to ramp up
+    quickly on new technologies and languages</p> </li> <li> <p data-renderer-start-pos="8672"
+    data-local-id="845437aabfe4">Solid understanding of domain modeling and system
+    design principles, particularly for building reusable abstractions, internal frameworks,
+    and integration infrastructure</p> </li> <li> <p data-renderer-start-pos="8845"
+    data-local-id="5735aa83b1d5">Hands-on experience designing and building scalable
+    APIs that support both internal tooling and customer-facing integrations</p> </li>
+    <li> <p data-renderer-start-pos="8973" data-local-id="a87fc89a8ee2">Proficiency
+    with observability best practices including metrics, structured logging, distributed
+    tracing, and alerting, with experience diagnosing complex production issues in
+    distributed systems</p> </li> <li> <p data-renderer-start-pos="9172" data-local-id="a4a91b1d010e">Familiarity
+    with modern data warehouse and analytics platforms, including understanding of
+    data models, que
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.807079+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

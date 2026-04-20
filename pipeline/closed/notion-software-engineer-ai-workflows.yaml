@@ -1,0 +1,117 @@
+id: notion-software-engineer-ai-workflows
+name: Notion Software Engineer, AI Workflows
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Notion
+  url: https://jobs.ashbyhq.com/notion
+  application_url: https://jobs.ashbyhq.com/notion/17330e14-83db-49a4-ae31-411690d97dba
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: 'About Us: Notion helps you build beautiful tools for your life’s work.
+    In today''s world of endless apps and tabs, Notion provides one place for teams
+    to get everything done, seamlessly connecting docs, notes, projects, calendar,
+    and email—with AI built in to find answers and automate work. Millions of users,
+    from individuals to large organizations like Toyota, Figma, and OpenAI, love Notion
+    for its flexibility and choose it because it helps them save time and money. In-person
+    collaboration is essential to Notion''s culture. We require all team members to
+    work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor
+    Days. Certain teams or positions may require additional in-office workdays. About
+    the Role: We''re looking for an AI Product Engineer to join the team responsible
+    for Notion''s Custom Agents — which help teams automate their recurring workflows
+    like filing tasks, writing reports, and answering questions in a knowledge base.
+    As an AI Product Engineer, you''ll help define and build cutting-edge AI-powered
+    features into this core product experience, leveraging LLMs, embeddings, and other
+    AI technologies to make Notion''s Custom Agents more intelligent, capable and
+    reliable at scale. What You''ll Achieve: Work with the team to prototype and experiment
+    with new AI features Productionize and scale asynchronous workflows across Notion’s
+    systems Collaborate across AI, Infrastructure and Product teams to deliver high
+    quality experiences for users Stay up-to-date with the latest AI technologies
+    and trends Skills You''ll Need to Bring: Expertise building and prototyping: You
+    have experience building AI products using LLMs, embeddings and other ML technologies.
+    You understand how parts of a system fit together from UI to data model, are familiar
+    with relational databases like Postgres or MySQL, and have experience building
+    products from ground up. Problem-solving: You approach problems holistically,
+    starting with a clear and accurate understanding of the context. You think critically
+    about the implications of what you''re building and how it will impact real people''s
+    lives. You can navigate ambiguity flawlessly, decompose complex problems into
+    clean solutions, while also balancing the business impact of what you’re building.
+    Empathetic communication and collaboration: You communicate nuanced ideas clearly,
+    whether you''re explaining technical decisions in writing or brainstorming in
+    real time. In disagreements, you engage thoughtfully with other perspectives and
+    compromise when needed. You enjoy collaborating with both fellow engineers and
+    cross-functional partners. You are a lifelong learner and invest in both your
+    own growth and the growth, learning, and development of your teammates. Impact-orientation
+    and user focus: You care about business impact and prioritize projects accordingly.
+    You understand the balance between craft, speed, and the bottom line. You think
+    critically about the implications of what you''re building, and how it shapes
+    real people''s lives. You understand that reach comes with responsibility for
+    our impact—good and bad. Work isn''t a solo endeavor for you, and you enjoy collaborating
+    cross-functionally to accomplish shared goals. Nice to Haves: You''re proficient
+    with any part of our technology stack: React, TypeScript, Node.js, and Postgres.
+    You have experience driving teams toward shared goals and can balance business
+    priorities with individuals’ strengths, areas of interest, and career development
+    goals. You''ve heard of computing pioneers like Ada Lovelace, Douglas Engelbart,
+    Alan Kay, and others—and understand why we''re big fans of their work. You have
+    interests outside of technology, such as in art, history, or social sciences.
+    We hire talented and passionate people from a variety of backgrounds because we
+    want our global employee base to represent the wide diversity of our customers.
+    If you’re excited about a role but your past experience doesn’t align perfectly
+    with every bullet point listed in the job description, we still encourage you
+    to apply. If you’re a builder at heart, share our company values, and enthusiastic
+    about making software toolmaking ubiquitous, we want to hear from you. Notion
+    is proud to be an equal opportunity employer. We do not discriminate in hiring
+    or any employment decision based on race, color, religion, national origin, age,
+    sex (including pregnancy, childbirth, or related medical conditions), marital
+    status, ancestry, physical or mental disability, genetic information, veteran
+    status, gender identity or expression, sexual orientation, or other applicable
+    legally protected characteristic. Notion considers qualified applicants with criminal
+    histories, consistent with applicable federal, state and local law. Notion is
+    also committed to providing reasonable accommodations for qualified individuals
+    with disabilities and disabled veterans in our job application procedures. If
+    you need assistance or an accommodation due to a disability, please let yo'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-08'
+  posting_date: '2026-04-07'
+  date_source: published_at
+  date_added: '2026-04-08'
+  discovered: '2026-04-08T10:15:26.263565+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

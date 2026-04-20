@@ -1,0 +1,118 @@
+id: coinbase-staff-software-engineer-policies-platform-identity
+name: Coinbase Staff Software Engineer (Policies Platform - Identity)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7739523?gh_jid=7739523
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><p>Ready to be pushed beyond what you\
+    \ think you\u2019re capable of?</p> <p>At Coinbase, our mission is to increase\
+    \ economic freedom in the world. It\u2019s a massive, ambitious opportunity that\
+    \ demands the best of us, every day, as we build the emerging onchain platform\
+    \ \u2014 and with it, the future global financial system.</p> <p>To achieve our\
+    \ mission, we\u2019re seeking a very specific candidate. We want someone who is\
+    \ passionate about our mission and who believes in the power of crypto and blockchain\
+    \ technology to update the financial system. We want someone who is eager to leave\
+    \ their mark on the world, who relishes the pressure and privilege of working\
+    \ with high caliber colleagues, and who actively seeks feedback to keep leveling\
+    \ up. We want someone who will run towards, not away from, solving the company\u2019\
+    s hardest problems.</p> <p>Our <a href=\"https://www.coinbase.com/mission\">work\
+    \ culture</a> is intense and isn\u2019t for everyone. But if you want to build\
+    \ the future alongside others who excel in their disciplines and expect the same\
+    \ from you, there\u2019s no better place to be.</p> <p>While many roles at Coinbase\
+    \ are remote-first, we are not remote-only. In-person participation is required\
+    \ throughout the year. Team and company-wide offsites are held multiple times\
+    \ annually to foster collaboration, connection, and alignment. Attendance is expected\
+    \ and fully supported.</p></div><p class=\"mb-2 whitespace-pre-wrap\">We're hiring\
+    \ a Staff Software Engineer to be the technical anchor for the Policies Platform\
+    \ \u2014 Coinbase's foundational engine for policy management, decisioning, and\
+    \ authorization. As a Staff Engineer on the Policies Platform, you'll be a technical\
+    \ anchor for one of Coinbase's most critical infrastructure teams. You'll set\
+    \ the technical direction for the platform's evolution, leading the shift to an\
+    \ AI-native, self-serve policy engine while building alignment across engineering,\
+    \ compliance, legal, and product teams. Your decisions will shape how dozens of\
+    \ engineering teams across Coinbase author, deploy, and trust compliance logic\
+    \ at scale. The Policies Platform powers policy management, decisioning, and authorization\
+    \ across 20+ domains and 40+ dependent services, handling millions of requests\
+    \ per minute. This role requires someone who can operate in ambiguity, drive clarity,\
+    \ and build systems that create leverage far beyond any single team.</p> <p class=\"\
+    mb-2 whitespace-pre-wrap\"><strong>What you'll be doing:</strong></p> <ul> <li\
+    \ class=\"mb-2 whitespace-pre-wrap\">Own the technical strategy and architecture\
+    \ for the Policies Platform \u2014 including the AI-native policy authoring system,\
+    \ Policy Framework v2, edge authorization, and the self-serve developer experience.</li>\
+    \ <li class=\"mb-2 whitespace-pre-wrap\">Define and drive the technical roadmap,\
+    \ making deliberate tradeoffs between speed, reliability, and long-term scalability\
+    \ as the platform expands to support new Coinbase products and international regulatory\
+    \ requirements.</li> <li class=\"mb-2 whitespace-pre-wrap\">Lead the most ambiguous,\
+    \ highest-risk initiatives on the team \u2014 including AI-powered impact simulation\
+    \ before policy changes ship, AI chatbot for compliance self-service, and embedding\
+    \ authorization into API gateway-level signed tokens.</li> <li class=\"mb-2 whitespace-pre-wrap\"\
+    >Secure cross-team alignment and commitment \u2014 working with 20+ dependent\
+    \ domain teams, regulatory/compliance stakeholders, and engineering leadership\
+    \ to drive adoption of new platform standards and patterns.</li> <li class=\"\
+    mb-2 whitespace-pre-wrap\">Define engineering processes and quality practices\
+    \ \u2014 from code review standards for policy-as-code, to CI/CD pipeline requirements\
+    \ for automated load and regression testing.</li> <li class=\"mb-2 whitespace-pre-wrap\"\
+    >Maintain high technical output while simultaneously elevating the capabilities\
+    \ of the broader team \u2014 you lead by doing, not just advising.</li> <li class=\"\
+    mb-2 whitespace-pre-wrap\">Contribute to org-wide initiatives including OKR planning,\
+    \ technical prioritization, and long-term platform strategy in partnership with\
+    \ engineering leadership.</li> </ul> <p class=\"mb-2 whitespace-pre-wrap\"><strong>What\
+    \ we look for in you:</strong></p> <ul> <li class=\"mb-2 whitespace-pre-wrap\"\
+    >8+ years of software engineering experience, with a track record of architecting\
+    \ and delivering systems at scale \u2014 high-throughput, high-availability services\
+    \ serving millions of requests in production.</li> <li class=\"mb-2 whitespace-pre-wrap\"\
+    >Proven experience leading AI/LLM product development \u2014 building AI agents,\
+    \ code generation systems, or developer-facing AI tooling in production environments.</li>\
+    \ <li class=\"mb-2 whitespace-pre-wrap\">Strong command of Go, gRPC, Kubernetes,\
+    \ and service mesh architectures.</li> <li class=\"mb-2 whitespace-pre-wrap\"\
+    >Ability to drive technical clarity in ambiguous, high-stakes situations \u2014\
+    \ you can take a vague problem (\"compliance teams can't self-serve\"), define\
+    \ the right solution space, and execute i"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.670613+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

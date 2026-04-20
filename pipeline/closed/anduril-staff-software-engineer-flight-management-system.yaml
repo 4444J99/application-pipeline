@@ -1,0 +1,117 @@
+id: anduril-staff-software-engineer-flight-management-system
+name: Anduril Staff Software Engineer, Flight Management System
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5101245007?gh_jid=5101245007
+  portal: greenhouse
+  location: Boston, Massachusetts, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>About the Team</h3> <p>Anduril’s
+    Maritime Division has assembled a diverse team of experts in software, robotics,
+    artificial intelligence, sensor fusion, and data analysis to create software and
+    hardware solutions that radically evolve the capabilities of our customers. We
+    are fielding the next generation of autonomous systems to tackle the extremely
+    challenging industry demands of maritime operations. Anduril has brought to market
+    a unique, ultra-long-range, full-ocean-depth underwater vessel platform and a
+    completely refreshed maritime vehicle and flexible manufacturing architecture
+    that scales from "small" to "extra-large" vehicle sizes. Today, Anduril is executing
+    on billion-dollar contracts while simultaneously performing Robot-as-a-Service
+    (RaaS) AUV operations.<br><br>We are seeking to sustain our early successes with
+    deep investment in an expanded product portfolio. These products, including Dive-XL,
+    Dive-LD, Copperhead, Seabed Sentry, and other unannounced systems, will deliver
+    a coherent system-of-systems, enabling the end-to-end conduct of a variety of
+    autonomous missions in the maritime domain. If you are passionate about solving
+    problems that have real impact and working on systems that directly contribute
+    to achieving national strategic priorities, we want you to join Anduril’s Maritime
+    Division and help us build the future of defense capability.</p> <h3>About the
+    Job</h3> <p>Staff Software Engineers lead the delivery of a variety of embedded
+    and/or safety critical software integrated in to our products, acting as technical
+    leads, extremely senior individual contributors, and/or as team leads that are
+    also hands-on contributors. This includes device management, drivers, firmware,
+    power management, networking, and contingency management and recovery. We expect
+    Staff Software Engineers to demonstrate unparalleled end-to-end outcome ownership,
+    driving the rapid architecting, design, delivery, support, and evolution of next
+    generation autonomous platforms through their entire product life-cycle.</p> <h4>What
+    You’ll Do</h4> <ul> <li>Own customer success through the design and delivery of
+    a multi-year, multi-stakeholder software roadmap that spans across multiple teams.</li>
+    <li>Leverage internal product and program-specific engineering teams to rapidly
+    deliver capability beyond the scope of current platforms, with a clear path for
+    both architecture and capability evolution over time</li> <li>Partner with external
+    teams, collaborating on interfacing requirements between diverse systems and technologies</li>
+    <li>Lead teams that architect, design and implement trusted, safety critical Vehicle
+    Management Systems that balance constraints, restrictions and requirements in
+    a multi-stakeholder environment.</li> <li>Contribute to the design and development
+    of a company wide roadmap for software inputs to autonomous systems</li> <li>Architect,
+    design and implement scalable vehicle sub-systems including sensor processing,
+    state estimation, contingency management, actuation, payload interfaces, and mission
+    systems interfaces</li> <li>Drive the development of real-time embedded software
+    using an RTOS</li> <li>Drive the development of device drivers and interfaces
+    to a variety of sensors and actuators</li> <li>Act as a subject matter expert
+    for software engineering, representing software equities in a multi-stakeholder
+    environment including engineering, business and sales leadership.</li> <li>Drive
+    the design and implementation of development processes for the initial delivery
+    and subsequent iteration of software, including full lifecycle testing</li> <li>Drive
+    the creation of test and simulation fixtures that operate with both software-
+    and hardware-in-the-loop</li> <li>Support vehicle manufacturing and deployment</li>
+    <li>Lead teams of multi-disciplinary engineers, including as a mentor for Senior
+    Software Engineers from differing backgrounds</li> <li>Travel to co-locate with
+    end-users and/or other teams up to 20% of the time</li> </ul> <h4>Required Qualifications</h4>
+    <ul> <li>Bachelor’s degree in Robotics, Mechatronics, Computer Science, Engineering,
+    a relevant field, or equivalent experience</li> <li>Experience in a leadership
+    position within a high perfo
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-08'
+  posting_date: '2026-04-07'
+  date_source: first_published
+  date_added: '2026-04-08'
+  discovered: '2026-04-08T10:15:26.270350+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

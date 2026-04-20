@@ -1,0 +1,108 @@
+id: anduril-software-engineer-modelling-simulation-advanced-capabilities
+name: Anduril Software Engineer, Modelling & Simulation, Advanced Capabilities
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/4981877007?gh_jid=4981877007
+  portal: greenhouse
+  location: London, England, United Kingdom
+  location_class: international
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p id="SoftwareEngineer,Modelling&amp;SimulationAdvancedCapabilities-ABOUTTHETEAM"><strong>ABOUT
+    THE TEAM</strong></p> <p id="SoftwareEngineer,Modelling&amp;SimulationAdvancedCapabilities-AndurilisseekingaSoftwareEngineertojointheManeuverDominanceAdvancedCapabilitiesteaminourLondonoffice.Theteamisastrategic/future-lookingorganisationfocusedondelivering3corecomponents-CapabilityStrat">Anduril
+    is seeking a Software Engineer to join the Maneuver Dominance Advanced Capabilities
+    team in our London office. The team is a strategic/future-looking organisation
+    focused on delivering 3 core components - Capability Strategy, Mission Advantage&nbsp;and
+    Maneuver Advantage. Leveraging analysis, Wargaming and Warfighter centric thinking,
+    the team guides how Maneuver Dominance incubates, builds and deploys the capabilities
+    needed to dominate in a future fight.</p> <p id="SoftwareEngineer,Modelling&amp;SimulationAdvancedCapabilities-ABOUTTHEJOB"><strong>ABOUT
+    THE JOB</strong></p> <p id="SoftwareEngineer,Modelling&amp;SimulationAdvancedCapabilities-YouwillbethefirstsoftwareengineeringhireforourAdvancedCapabilitiesteam.Youwillleaddevelopmentofmodelling&amp;simulationapplications,infrastructureandservicestoenableoperationsanalysisandwargaminginsupp">This
+    will be the first software engineering hire for our Advanced Capabilities team
+    in London. You will lead development of modelling &amp; simulation applications,
+    infrastructure and services to enable operations analysis and wargaming in support
+    of our product development and our customers. The ideal candidate would be practical,
+    hands-on and a self starter with high growth potential.</p> <p><strong>WHAT YOU'LL
+    DO</strong></p> <ul> <li>Work on challenging problems in a fast-paced environment
+    across our portfolio of programs and products.</li> <li>Develop our Modeling,
+    Simulation, and Analysis (MS&amp;A) framework to support mission-level concept
+    exploration, tactics development, autonomous behaviors, and Software-in-the-Loop
+    (SITL) product development.</li> <li>Develop simulation models for sensors, comms,
+    movement, tactical behaviors, weapon effects, electronic effects, command and
+    control, and others.</li> <li>Partner with Operations Analysis team members to
+    deliver simulations capabilities that enable efficient Monte Carlo and Design
+    of Experiments analysis.</li> <li>Partner with capability teams like Mission Autonomy
+    to deliver simulation capabilities to help accelerate development.</li> <li>Work
+    with multi-disciplinary subject matter experts to understand and adequately model
+    pertinent sub-system, system and system of system dynamics.</li> </ul> <p><br><strong>REQUIRED
+    SKILLS</strong></p> <ul> <li>Advanced proficiency with C++ and/or Rust.</li> <li>Advanced
+    proficiency with Python.</li> <li>Modeling, Simulation, and Analysis engineering
+    or related industry background.</li> <li>Demonstrated curiosity and ability to
+    learn outside of core discipline.</li> <li data-uuid="890cc3c7-d150-4b11-a753-30e2f6fdcf22">Eligible
+    to obtain and maintain an active UKSV Security Clearance</li> </ul> <p><br><strong>PREFERRED
+    QUALIFICATIONS</strong></p> <ul> <li>Experience with aerospace/aeronautical systems
+    (including fixed wing, rockets, satellites, rotorcraft, etc.)&nbsp;</li> <li>Experience
+    in flight dynamics/platform physics and control</li> <li>Experience with developing
+    sub-system and system level models (air vehicles, ground vehicles, ground-based
+    sensors and other types of complex systems)</li> <li>Experience working with/developing
+    multi-system mission level simulations in one or more domains (subsurface, surface,
+    ground, air, and space)</li> <li>Experience in military simulation fields delivering
+    configurable scenario-based environments for operations analysis and wargaming</li>
+    <li>Experience of working within a start up environment.&nbsp;</li> </ul><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work experience, education and/or training, critical skills, and/or business considerations.
+    Highly competitive equity grants are included in the majo
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:34.108411+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

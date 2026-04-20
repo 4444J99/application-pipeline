@@ -1,0 +1,80 @@
+id: perplexity-staff-backend-software-engineer-api-platform
+name: 'Perplexity Staff Backend Software Engineer - API Platform '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/9ac5e638-85f6-4308-bcd5-7dfe0a30a79b
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Perplexity is redefining how people search, reason, and interact with
+    information. Our API team sits at the core of this vision, designing and operating
+    the high-performance interfaces that expose Perplexity’s intelligence to developers,
+    enterprises, and products worldwide. This team owns the architecture, reliability,
+    and security of the APIs that power everything from real-time LLM queries to enterprise-scale
+    integrations. As a Staff Backend Engineer, you will shape the technical foundation
+    of Perplexity’s external platform. You’ll architect distributed systems, optimize
+    performance at scale, and set engineering standards that ensure our APIs are fast,
+    resilient, and a delight to build on. Tech Stack: Python | Go | PostgreSQL | DynamoDB
+    | Redis | FastAPI | React | Bazel | GitHub | AWS Key Responsibilities Design,
+    build, and operate mission-critical APIs in Python, Go, or Rust optimized for
+    low latency, high throughput, and strong consistency. Lead major technical initiatives,
+    from new platform components to multi-team system redesigns. Improve system reliability
+    and security by implementing rate limiting, authentication, observability (metrics,
+    tracing, logging), and automated testing. Collaborate across teams to determine
+    when to extend existing systems versus build new, specialized services. Translate
+    customer needs into scalable platform capabilities and generalized API features.
+    Uphold engineering excellence through design reviews, code quality, and internal
+    documentation. Qualifications 5+ years of backend engineering experience with
+    Python, Go, or Rust. Strong understanding of high-traffic API design: versioning,
+    schema evolution, idempotency, auth patterns, and performance tuning. Hands-on
+    experience running AWS services, plus fluency with Kubernetes, CI/CD, and modern
+    DevOps practices. Experience with LLM or natural-language APIs (latency tuning,
+    streaming, model orchestration) is a strong plus. Strong customer empathy and
+    product sense, ensuring the APIs you build are ergonomic, well-documented, and
+    easy to adopt.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.912822+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

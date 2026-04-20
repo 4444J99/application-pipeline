@@ -1,0 +1,114 @@
+id: robinhood-staff-machine-learning-engineer-agentic
+name: Robinhood Staff Machine Learning Engineer, Agentic
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7676714?t=gh_src=&gh_jid=7676714
+  portal: greenhouse
+  location: Bellevue, WA; Menlo Park, CA
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><p><span style="font-size: 10pt;"><span
+    style="font-size: 12pt;"><strong>About the team + role</strong></span><br>We are
+    building an elite team, applying frontier technologies to the world’s biggest
+    financial problems. We’re looking for bold thinkers. Sharp problem-solvers. Builders
+    who are wired to make an impact. Robinhood isn’t a place for complacency, it’s
+    where ambitious people do the best work of their careers. We’re a high-performing,
+    fast-moving team with ethics at the center of everything we do. Expectations are
+    high, and so are the rewards.</span></p> <p><span style="font-size: 10pt;">The
+    Agentic AI team builds agentic AI systems that power intelligent, reliable customer
+    experiences across Robinhood products. The team focuses on reducing the time to
+    ship agents with fine-tuned models and while doing so enables other teams to build,
+    evaluate, and improve their own agents. You will contribute to a culture grounded
+    in first-principles thinking, high performance, and strong focus on customer outcomes!</span></p>
+    <p><span style="font-size: 10pt;">As a Staff Machine Learning Engineer (IC6),
+    you will define and uphold the quality bar for agentic systems across the organization.
+    You will design evaluation frameworks, guide model selection, and partner with
+    product, data science, and engineering teams to ensure systems meet clear standards
+    for correctness, safety, latency, and user satisfaction. Your work will shape
+    how agentic systems are built, evaluated, and improved across Robinhood!</span></p>
+    <p><span style="font-size: 10pt;">This role is based in our Bellevue, WA or Menlo
+    Park, CA office, with in-person attendance expected at least 3 days per week.</span></p>
+    <p><span style="font-size: 10pt;">At Robinhood, we believe in the power of in-person
+    work to accelerate progress, spark innovation, and strengthen community. Our office
+    experience is intentional, energizing, and designed to fully support high-performing
+    teams.</span></p> <p><span style="font-size: 10pt;"><span style="font-size: 12pt;"><strong>What
+    you’ll do</strong></span><br>● Define and implement evaluation frameworks that
+    measure agent performance, including task success, correctness, tool usage reliability,
+    latency, safety, and user satisfaction</span><br><span style="font-size: 10pt;">●
+    Evaluate frontier and fine-tuned models across quality, latency, cost, and edge
+    cases to determine appropriate use cases</span><br><span style="font-size: 10pt;">●
+    Partner with product managers, data scientists, and engineers to translate evaluation
+    results into clear launch criteria for agentic systems</span><br><span style="font-size:
+    10pt;">● Analyze production issues, identify root causes, and prioritize improvements
+    to increase system reliability and performance</span><br><span style="font-size:
+    10pt;">● Build visibility into agent performance through metrics, monitoring,
+    and reporting that inform roadmap decisions</span></p> <p><span style="font-size:
+    10pt;"><span style="font-size: 12pt;"><strong>What you bring</strong></span><br>●
+    You have deep experience defining and measuring quality for agentic or machine
+    learning systems using evaluation frameworks, datasets, and scorecards</span><br><span
+    style="font-size: 10pt;">● You have experience evaluating large language models
+    or similar systems, including understanding tradeoffs in performance, cost, and
+    latency</span><br><span style="font-size: 10pt;">● You have demonstrated ability
+    to analyze production issues and lead initiatives that improve system quality
+    across multiple teams</span><br><span style="font-size: 10pt;">● You are comfortable
+    working with engineers, data scientists, and product partners to deliver measurable
+    improvements in system performance</span><br><span style="font-size: 10pt;">●
+    You have experience building or operating systems in regulated environments or
+    working with AI evaluation and observability tools (nice to have)</span></p> <p
+    class="p1"><span style="font-size: 12pt;"><strong>What we offer</strong></span><br>●
+    Challenging, high-impact work to grow your career<br>● Performance driven compensation
+    with multipliers for outsized impact, bonus programs, equity ownership, and 401(k)
+    matching<br>● Best in class benefits to fuel your work, including 100% paid health
+    insurance for employees with 90% coverage for dependents<br>● Lifestyle wallet
+    - a highly flexible benefits spending account for wellness, learning, and more<br>●
+    Employer-paid life &amp; disability '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.152043+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

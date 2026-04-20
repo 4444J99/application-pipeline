@@ -1,0 +1,114 @@
+id: anduril-senior-site-reliability-engineer-developer-connected-warfare
+name: Anduril Senior Site Reliability Engineer - Developer, Connected Warfare
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/4277285007?gh_jid=4277285007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p><span style="text-decoration:
+    underline;"><strong>ABOUT THE TEAM</strong></span></p> <p>If you are an experienced
+    SRE who is passionate about building the platform that delivers capabilities to
+    directly improve the experience of the warfighter, this is the job for you.&nbsp;<br><br>Site
+    Reliability Engineers (SRE) work with technical leaders and System Deployment
+    Engineers to determine technical direction and deliver with thorough analysis,
+    designs and code. They are comfortable leading small, focused projects as well
+    as making major contributions to it. They deliver tools, features and enable the
+    deployment engineers to execute efficiently.&nbsp;</p> <p><span style="text-decoration:
+    underline;"><strong>WHAT YOU’LL DO</strong></span></p> <ul> <li>Develop solutions
+    to support deployment engineers in new and existing markets that enable Anduril
+    to efficiently deliver war fighting capabilities</li> <li>Collaborate with multi-disciplined
+    teams to define and execute integration strategies that support deployment engineer
+    needs</li> <li>Design, develop, and deliver solutions using modern technologies
+    that ensure scalable and fault tolerant delivery of systems to the warfighter</li>
+    <li>Build strong relationships with internal and external customers to identify
+    technical solutions to their problems</li> <li>Improve Anduril’s operational capabilities
+    by improving our core product offering through root cause analysis and creating
+    tooling capable of managing large scale deployments</li> <li>Drive continuous
+    organizational improvement by leading post-mortem events involving diverse stakeholders</li>
+    <li>Lead the organization in building scalable, sustainable mechanisms to continue
+    delivering to customers at the pace the business is scaling</li> <li>Eligible
+    to obtain and maintain an active U.S. Secret security clearance</li> </ul> <h4>PREFERRED
+    QUALIFICATIONS</h4> <ul> <li>Ability to drive consensus across internal and external
+    stakeholders</li> <li>Experience developing and delivering solution to evolving
+    problems in complex environments</li> <li>Experience in the technical, programmatic,
+    and operational challenges of developing and deploying autonomous weapon systems
+    across command echelons</li> <li>Experience delivering and maintaining systems
+    that run on air-gapped and security-hardened networks</li> <li>Experience building
+    scalable solutions along with plans for implementation. Not just the end state,
+    but what are the steps needed to get there while maintaining the customer experience</li>
+    <li>Experience performing data-driven root cause analysis on complex systems</li>
+    <li>Ability to understand, debug, and modify software written languages such as
+    Go, Python, Rust, or C++</li> <li>Excellent written and verbal communication skills</li>
+    </ul> <h4>REQUIRED QUALIFICATIONS</h4> <ul> <li>STEM degree or equivalent technical
+    experience</li> <li>Technical expertise and demonstrated performance in one or
+    more of the following areas: networking, cloud technologies, application development,
+    hardware design, and/or cybersecurity</li> <li>Minimum of 7 years of operations
+    and engineering experience</li> </ul><div class="content-pay-transparency"><div
+    class="pay-input"><div class="title">US Salary Range</div><div class="pay-range"><span>$191,000</span><span
+    class="divider">&mdash;</span><span>$208,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work experience, education and/or training, critical skills, and/or business considerations.
+    Highly competitive equity grants are included in the majority of full time offers;
+    and are considered part of Anduril''s total compensation package. Additionally,
+    Anduril offers top-tier benefits for full-time employees, including:</span><span
+    data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></p>
+    <p><strong><span data-contrast="auto">Healthcare Benefits&nbsp;</span></strong></p>
+    <ul> <'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.926493+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

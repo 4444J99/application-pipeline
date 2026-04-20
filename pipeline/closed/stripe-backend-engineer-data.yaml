@@ -1,0 +1,111 @@
+id: stripe-backend-engineer-data
+name: Stripe Backend Engineer, Data
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=6865161
+  portal: greenhouse
+  location: Canada
+  location_class: international
+  description: '<h2>Who we are</h2> <h3>About Stripe</h3> <p><span style="font-weight:
+    400;">Stripe is a financial infrastructure platform for businesses. Millions of
+    companies—from the world’s largest enterprises to the most ambitious startups—use
+    Stripe to accept payments, grow their revenue, and accelerate new business opportunities.
+    Our mission is to increase the GDP of the internet, and we have a staggering amount
+    of work ahead. That means you have an unprecedented opportunity to put the global
+    economy within everyone’s reach while doing the most important work of your career.</span></p>
+    <h3>About the team</h3> <p>The Data Foundations team drives Data Engineering and
+    Data Apps &amp; Tooling work across Stripe, enabling Stripes to leverage data
+    to make informed decisions and build user-centric products. We provide tools and
+    infrastructure to move, store, process, and analyze data, both at rest and in
+    motion. We are looking for talented data-minded software engineers to help us
+    manage business-critical data leveraged across the entire organization. If you
+    are passionate about data, excited about designing data pipelines and data-driven
+    user experiences, and motivated by having an outsized impact on the business,
+    we want to hear from you.</p> <p><strong>Team Matching:</strong> exact team matching
+    for one of the subteams will begin during final stages.<em> Please note we may
+    also consider you for different orgs based on your experience, location, etc.
+    </em>More information on our team matching process can be found <a href="https://docs.google.com/document/d/1zvJkO2c7GzukHG-_oqc5wbOLajpuh5FjbmZPcZPU1o0/edit?tab=t.0#heading=h.ahb3b6nrktv1">here</a>.</p>
+    <h2>What you’ll do</h2> <p>Every record in our data warehouse is vitally important
+    for the businesses that use Stripe, so we’re looking for people with a strong
+    background in software engineering and data to help us scale while maintaining
+    correct and complete data. You’ll be working with a variety of internal teams
+    across Product, Data Science, and GTM to help them solve their data needs. Your
+    work will provide visibility into how these stakeholders and the Data Foundations
+    organization are performing and how we can deliver a better experience to Stripe''s
+    customers.</p> <h3>Responsibilities</h3> <ul> <li>Design, develop, and own data
+    pipelines, models, and products that power the Product, Data Science, and GTM
+    functions</li> <li>Develop strong subject matter expertise and manage the SLAs
+    for both data pipelines and full stack web applications that support these critical
+    stakeholders</li> <li>Build and refine Stripe''s data foundations - infrastructure,
+    pipelines, and tools to enable various teams at Stripe - working with Scala, Spark,
+    and Airflow</li> <li>Leverage LLM and Agents at scale to produce high-quality
+    data on ambiguous problems</li> <li>Refine our existing data marts that help the
+    GTM organization forecast the future potential performance of the business and
+    reliably measure ongoing attainment toward targets</li> <li>Build data services
+    that track key product metrics and measure the impact of different strategies
+    employed by teams in the field</li> <li>Our tech stack is Spark, Scala, Java,
+    SQL, and Python - and while we don’t expect everyone on the team to be an expert
+    in all of these, you will work across all of these technologies throughout your
+    tenure on the team</li> </ul> <h2><strong>Who you are</strong></h2> <p>We’re looking
+    for someone who meets the minimum requirements to be considered for the role.
+    If you meet these requirements, you are encouraged to apply. The preferred qualifications
+    are a bonus, not a requirement.</p> <h3>Minimum requirements</h3> <ul> <li><strong>Must
+    have 6+ years of experience</strong> in a Software Engineering role, with a focus
+    on building and maintaining data services, or data-intensive applications.&nbsp;</li>
+    <li>A strong engineering background and are interested in data</li> <li>Prior
+    experience with writing and debugging data pipelines using a distributed data
+    framework (Spark / Hadoop / Pig etc)</li> <li>An inquisitive nature in diving
+    into data inconsistencies to pinpoint issues, and resolve deep rooted data quality
+    issues</li> <li>Knowledge of a backend development language (such as Scala, Java,
+    or Go) and strong SQL experience</li> <li>The ability to communicate cross-functionally,
+    derive requirements and architect shared datasets</li> <li>A strong engineering
+    background and an interest in data</li> </ul> <h3><strong>Preferred requirements</strong></h3>
+    <ul> <li>Experience creating and maintaining Data Marts to power business reporting
+    needs</li> <li>Experience working with Product or GTM (Sales/Marketing) teams</li>
+    </ul> <p>&nbsp;</p>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.738196+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

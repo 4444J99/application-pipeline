@@ -1,0 +1,118 @@
+id: dbt-labs-senior-customer-solutions-engineer-us
+name: 'dbt Labs Senior Customer Solutions Engineer - US '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: dbt Labs
+  url: https://boards.greenhouse.io/dbtlabsinc
+  application_url: https://job-boards.greenhouse.io/dbtlabsinc/jobs/4683349005
+  portal: greenhouse
+  location: US - Remote
+  location_class: remote-global
+  description: "<div class=\"content-intro\"><p><strong>About Us&nbsp;</strong></p>\
+    \ <p>dbt Labs is the pioneer of analytics engineering, helping data teams transform\
+    \ raw data into reliable, actionable insights. Since 2016, we\u2019ve grown from\
+    \ an open source project into the leading analytics engineering platform, now\
+    \ used by over 90,000 teams every week, driving data transformations and AI use\
+    \ cases.&nbsp;</p> <p>As of February 2025, we\u2019ve surpassed $100 million in\
+    \ annual recurring revenue (ARR) and serve more than 5,400 dbt Platform customers,\
+    \ including AstraZeneca, Sky, Nasdaq, Volvo, JetBlue, and SafetyCulture.&nbsp;</p>\
+    \ <p>We\u2019re backed by top-tier investors including Andreessen Horowitz, Sequoia\
+    \ Capital, and Altimeter. At our core, we believe in empowering data practitioners:</p>\
+    \ <ul> <li>Reliable, high-quality data is the fuel that propels AI-powered data\
+    \ engineering. </li> <li>AI is changing data work, fast. dbt\u2019s data control\
+    \ plane keeps data engineers ahead of that curve.</li> <li>We empower engineers\
+    \ to deliver reliable, governed data faster, cheaper, and at scale.</li> </ul>\
+    \ <p>dbt Labs is now synonymous with analytics engineering, defining the modern\
+    \ data stack and serving as the data control plane for enterprise teams around\
+    \ the world. And we\u2019re just getting started.. We\u2019re growing fast and\
+    \ building a team of passionate, curious people across the globe. Learn more about\
+    \ what makes us special by checking out our <a href=\"https://www.getdbt.com/about-us/values\"\
+    >values</a>.</p></div><p><strong>dbt Labs</strong> is on a mission to help analysts\
+    \ create and disseminate organizational knowledge. As a<strong> Technical Solutions\
+    \ Specialist</strong>, you\u2019ll serve as a frontline problem solver, working\
+    \ deeply across our customer base to guide them through complex technical challenges\
+    \ with empathy, clarity, and precision. You\u2019ll work at the intersection of\
+    \ technical troubleshooting, customer education, and internal escalation, and\
+    \ play a critical role in helping our users succeed with dbt.</p> <p>&nbsp;</p>\
+    \ <h3><strong>What You\u2019ll Be Responsible For:</strong></h3> <ul> <li><strong>Diagnosing\
+    \ and resolving</strong> technically complex issues related to dbt, SQL queries,\
+    \ templating languages (Jinja/Liquid), and cloud data platforms.</li> <li><strong>Clarifying\
+    \ customer goals and context</strong> before jumping into solutions \u2014 ensuring\
+    \ that any workaround or fix is anchored in what the customer truly needs.</li>\
+    \ <li><strong>Root cause analysis</strong> \u2014 narrowing down issues quickly\
+    \ and precisely, resulting in faster time-to-resolution or high-quality escalation\
+    \ to engineering.</li> <li><strong>Communication excellence</strong> \u2014 setting\
+    \ expectations, providing timely updates, and ensuring that even long-running\
+    \ cases resolve with high customer satisfaction.</li> <li><strong>Bringing others\
+    \ along</strong> \u2014 explaining <em>why</em> something is happening, not just\
+    \ what\u2019s happening, in a way that builds trust and shared understanding.</li>\
+    \ <li><strong>Creating documentation and internal enablement material</strong>\
+    \ that help the broader team level up and improve efficiency across the support\
+    \ org.</li> </ul> <p>&nbsp;</p> <h3>Success Looks Like:&nbsp;</h3> <ul> <li>You\
+    \ <strong>understand how dbt fits into the modern data stack</strong>, and how\
+    \ our users use dbt in concert with other tools like Snowflake, BigQuery, GitHub,\
+    \ Airflow, or Okta.</li> <li>You consistently <strong>solve a high percentage\
+    \ of tickets</strong>, handle 6\u201310 cases per 4-hour shift, and <strong>reduce\
+    \ time-to-solution</strong> for users.</li> <li>You escalate issues <strong>with\
+    \ precision</strong>, submitting clear, reproducible bugs or feature requests\
+    \ \u2014 not vague or misrouted cases.</li> <li>Customers consistently rate you\
+    \ highly through <strong>CSAT surveys</strong>, even when their problems are complex\
+    \ or solutions take time.</li> <li>Your documentation is referenced regularly\
+    \ by peers, indicating <strong>internal impact and knowledge leadership</strong>.</li>\
+    \ </ul> <p>&nbsp;</p> <h3><strong>What We\u2019re Looking For:</strong></h3> <h3><strong>Must-Haves:</strong></h3>\
+    \ <ul> <li>5+ years in a&nbsp;<strong>technical consulting, advanced support,\
+    \ or software development</strong> role within a SaaS environment.</li> <li>Proven\
+    \ experience <strong>troubleshooting SQL queries</strong>, templating languages\
+    \ like <strong>Jinja or Liquid</strong>, and working with <strong>YAML configurations</strong>.</li>\
+    \ <li>Excellent written and verbal communication; able to explain symptoms, root\
+    \ causes, and solutions clearly.</li> <li>Hands-on experience in <strong>managing\
+    \ escalations to Engineering</strong>, with attention to reproducibility and clarity.</li>\
+    \ <li>A collaborative, humble, and detail-oriented teammate who is <strong>passionate\
+    \ about helping others succeed</strong>.</li> <li>Comfortable working with <strong>distributed\
+    \ teams across time zones</strong> \u2014 especially cross-region Engineering\
+    \ partners.</li> </ul> <h3><strong>Nice-to-Haves:</strong></h3> <ul> <li>Prior "
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 10
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-09'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.078897+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

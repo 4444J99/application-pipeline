@@ -1,0 +1,115 @@
+id: anduril-lead-software-engineer-mission-system-maritime
+name: Anduril Lead Software Engineer, Mission System, Maritime
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5033767007?gh_jid=5033767007
+  portal: greenhouse
+  location: Boston, Massachusetts, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p>Anduril
+    is fielding the next generation of Autonomous Underwater Vehicles (AUVs) to tackle
+    the extremely challenging industry demands of seabed exploration. Anduril has
+    brought to the market a unique, ultra-long-range, full-ocean-depth platform and
+    a completely refreshed maritime vehicle and flexible manufacturing architecture
+    that scales from "large" to "extra-large" vehicle sizes. Today, Anduril is executing
+    on multi-million-dollar contracts while simultaneously performing Robot-as-a-Service
+    (RaaS) AUV operations.</p> <h3>ABOUT THE JOB</h3> <p>We are looking for a Lead
+    Mission Systems Software Engineer to join our rapidly growing Maritime team in
+    Boston or Quincy, MA. In this role, you will design and develop the core decision-making
+    and autonomy software that powers our autonomous underwater vehicles. You will
+    lead the architecture, implementation, and deployment of the logic that enables
+    these systems to understand their environment, navigate safely, respond to obstacles
+    or threats, and execute complex missions with limited human involvement. You will
+    provide technical leadership and hands on contributions across software development,
+    establishing a long term software roadmap, and leading the team through execution
+    of that plan. Collaborating closely with program leadership and cross-functional
+    teams from other Anduril products, you’ll ensure that designs align with customer
+    requirements while maintaining traceability to program office technical decisions.
+    You will act as a subject matter expert in mission systems development and integration,
+    presenting to customers and demonstrating overall system performance. If you enjoy
+    tackling complex technical challenges and owning the development of high-impact
+    products, this role is for you.</p> <h4>WHAT YOU'LL DO</h4> <ul> <li>Act as a
+    technical leader on a small team owning software for <a href="https://www.anduril.com/copperhead">Copperhead</a></li>
+    <ul> <li>Draw on both your technical expertise and leadership skills to set objectives,
+    build cross-functional teams, and rapidly drive projects to completion</li> </ul>
+    <li>Drive the design and implementation of development processes for the initial
+    delivery and subsequent iteration of payloads and mission systems</li> <li>Act
+    as the technical owner for an entire mission system, including stakeholder and
+    customer engagement, requirements definition, roadmap management, team coordination,
+    design, implementation, sustainment and evolution</li> <li>Organize integration
+    events, scoping key deliverables and impact to broader program</li> <li>Own customer
+    success through the design and delivery of a fully operational mission system</li>
+    <li>Leverage internal product and program-specific engineering teams to rapidly
+    deliver capability beyond the scope of current platforms, with a clear path for
+    both architecture and capability evolution over time</li> <li>Generate system
+    solutions to improve reliability, ease-of-use, and capability across a variety
+    of customer missions</li> <li>Write and maintain core libraries (frame transformations,
+    targeting and guidance, communications, etc.) that all robotics platforms at Anduril
+    will use</li> <li>Own major feature development for Copperhead and manage rollout
+    to the fleet</li> <li>Author documents to fulfill specific customer requests,
+    including white papers and reports</li> <li>Travel up to 15% of time to build,
+    test, and deploy capabilities in the real world, and collaborate with other teams
+    or end-users</li> </ul> <h4>REQUIRED QUALIFICATIONS</h4> <ul> <li>Strong engineering
+    background from industry or school, ideally in areas/fields such as Robotics,
+    Computer Science, Software Engineering, Mechatronics, Electrical Engineering,
+    Mathematics, or Physics</li> <li>Experience in a leadership position within a
+    high performing technology organization</li> <li>Proven understanding of data
+    structures, algorithms, concurrency, and code optimization</li> <li>6+ years of
+    professional C++ or Rust programming experience in a Linux development environment</li>
+    <li>Experience troubleshooting and analyzing remotely deployed software systems</li>
+    <li>Experience with the development and sustainment of distributed software
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.848619+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

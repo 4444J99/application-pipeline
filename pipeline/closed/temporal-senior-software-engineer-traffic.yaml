@@ -1,0 +1,115 @@
+id: temporal-senior-software-engineer-traffic
+name: 'Temporal Senior Software Engineer, Traffic '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Temporal
+  url: https://boards.greenhouse.io/temporaltechnologies
+  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/5037889007
+  portal: greenhouse
+  location: United States  - Remote Opportunity
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><h3><strong>About Us</strong></h3> <div>Temporal\
+    \ is an open source programming model that can simplify code, make applications\
+    \ more reliable, and help developers focus on the important things like delivering\
+    \ features faster. We are on a mission to be the reliable foundation of every\
+    \ developer\u2019s toolbox, and are building the team that will make that happen.</div>\
+    \ <div>&nbsp;</div> <div>Our values guide us \u2014they are present in how we\
+    \ show up, make decisions, and work together to make an impact. We\u2019re curious,\
+    \ driven, collaborative, genuine and humble.</div> <div>&nbsp;</div> <div>Temporal\
+    \ is growing and we are looking for those who share our values, challenge 'standard'\
+    \ thinking, and want to influence our future. If you have a passion for improving\
+    \ the developer experience, building world-class open-source software and communities,\
+    \ and want to be a part of our amazing team, we'd love to hear from you!</div></div><h2><strong>Summary</strong></h2>\
+    \ <p>We are seeking a Senior Software Engineer to join our Infrastructure Traffic\
+    \ team, where you will contribute to the design, development, and execution of\
+    \ projects across traffic management, network optimization, and cloud orchestration.\
+    \ This is an exciting opportunity to impact the scalability, reliability, and\
+    \ operational excellence of Temporal's networking infrastructure while growing\
+    \ your technical expertise.<em> [Click <a href=\"https://temporalio.notion.site/Join-the-Traffic-Team-at-Temporal-2e98fc56773880f3b8f5f5d35f23d82a?pvs=74\"\
+    >here</a> to see more detail on our Traffic Team]</em></p> <h2><strong>What You'll\
+    \ Do</strong></h2> <h3><strong>Invent</strong></h3> <ul> <li>Design and develop\
+    \ systems that optimize network traffic and support global expansion.</li> <li>Contribute\
+    \ to architectural decisions for high-impact projects, ensuring scalability and\
+    \ reliability.</li> <li>Participate in technical roadmap discussions for network\
+    \ scalability, performance, and engineering velocity.</li> <li>Uphold a culture\
+    \ of engineering and operational excellence.</li> </ul> <h3><strong>Own</strong></h3>\
+    \ <ul> <li>Partner with engineering, product, and security teams to align on network\
+    \ infrastructure goals.</li> <li>Participate in design reviews for critical projects\
+    \ with attention to system-level tradeoffs and network scalability.</li> <li>Implement\
+    \ \"secure by default\" network systems in collaboration with security teams.</li>\
+    \ <li>Engage with customers and internal teams to understand business requirements\
+    \ and deliver effective solutions.</li> </ul> <h3><strong>Learn</strong></h3>\
+    \ <ul> <li>Develop expertise in leveraging Temporal's software to build and scale\
+    \ networking infrastructure.</li> <li>Gather insights into customer needs and\
+    \ incorporate them into technical decision-making for traffic management and networking\
+    \ strategies.</li> <li>Stay current with technology advancements in traffic management,\
+    \ networking, and cloud orchestration.</li> </ul> <h3><strong>Collaborate</strong></h3>\
+    \ <ul> <li>Share best practices and design principles for building reliable and\
+    \ scalable networking systems.</li> <li>Work closely with teammates to ensure\
+    \ roadmaps are cohesive and deliverables are on track.</li> <li>Contribute to\
+    \ a collaborative and growth-oriented environment.</li> </ul> <h2><strong>What\
+    \ You'll Bring</strong></h2> <ul> <li>Experience working on engineering efforts\
+    \ focused on network traffic management, network optimization, or cloud orchestration.</li>\
+    \ <li>Strong collaboration and communication skills, with the ability to work\
+    \ effectively across teams.</li> <li>Experience contributing to technical planning\
+    \ and making system-level tradeoffs.</li> <li>At least 5+ years of coding experience\
+    \ in languages like Go, Java, or similar, with experience writing concurrent and\
+    \ distributed code.</li> <li>Experience designing and building distributed systems,\
+    \ leveraging concurrency primitives, and optimizing network performance.</li>\
+    \ <li>Solid understanding of traffic and networking systems, with exposure to\
+    \ adjacent infrastructure domains.</li> <li>Experience with cloud providers such\
+    \ as AWS, GCP, or Azure.</li> <li>A strong sense of ownership and the ability\
+    \ to balance short-term priorities with longer-term goals.</li> </ul> <h2><strong>Compensation</strong></h2>\
+    \ <ul> <li>The estimated pay range for this role is $176,000 - $237,000 depending\
+    \ on experience and location.</li> <li>Additionally, this role is eligible to\
+    \ participate in Temporal's equity plan.</li> </ul><div class=\"content-conclusion\"\
+    ><div><em>Compensation ranges reflect salary and commission compensation (when\
+    \ applicable) across several geographic markets. Employment offers carefully consider\
+    \ multiple factors, including prior experience, knowledge, expertise, skillset,\
+    \ market location, and job level assessed during the interview process.</em></div>\
+    \ <div>&nbsp;</div> <div><em>Employee benefits and perks below are for full-time\
+    \ employees, part-time or temporary positions are excluded.&nbsp;</em></div> "
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 10
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.669251+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,115 @@
+id: postman-senior-engineer-backend-workspaces
+name: Postman Senior Engineer, Backend - Workspaces
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Postman
+  url: https://boards.greenhouse.io/postman
+  application_url: https://job-boards.greenhouse.io/postman/jobs/7534301003
+  portal: greenhouse
+  location: Bengaluru, Karnataka, India
+  location_class: international
+  description: '<div class="content-intro"><h2><strong>Who Are We?</strong></h2> <p>Postman
+    is the world’s leading API platform, used by more than 45 million+ developers
+    and 500,000 organizations, including 98% of the Fortune 500. Postman is helping
+    developers and professionals across the globe build the API-first world by simplifying
+    each step of the API lifecycle and streamlining collaboration—enabling users to
+    create better APIs, faster.</p> <p>The company is headquartered in San Francisco
+    and has offices in Boston, New York, Austin, Tokyo, London, and Bangalore - where
+    Postman was founded. Postman is privately held, with funding from Battery Ventures,
+    BOND, Coatue, CRV, Insight Partners, and Nexus Venture Partners. Learn more at
+    postman.com or connect with Postman on X via @getpostman.</p> <p>P.S: We highly
+    recommend reading <a href="https://api-first-world.com/">The "API-First World"
+    graphic novel</a> to understand the bigger picture and our vision at Postman.</p></div><h3
+    data-start="232" data-end="251">The Opportunity</h3> <p>The workspaces team is
+    responsible for establishing workspaces as a source of truth in Postman. Workspaces
+    are the core of our Postman API Platform and are responsible for enabling seamless
+    API collaboration. With more than 45M users on our platform, this team is responsible
+    for solving challenges in API collaboration across multiple pillars like API development,
+    testing, prototyping, discovery, distribution &amp; change management. The team
+    owns tier-0/1 business critical systems handling ~21M requests on a daily basis
+    and this will just continue to grow. The work of this team directly impacts Postman’s
+    end users, experience and business in multiple ways thereby contributing towards
+    our larger organization goals like Monthly Active Users, Self-serve revenue &amp;
+    Sales-serve revenue.</p> <p data-start="253" data-end="657">&nbsp;</p> <p>We are
+    looking for an experienced engineer who will help in taking workspaces to the
+    next level. This person will lead a key set of initiatives that needs close working
+    with the community, product and business stakeholders to improve the end user
+    experience, constantly striving towards excellence to establish Postman as the
+    best tool for API collaboration. Apart from this, he/she would oversee the complete
+    technical landscape to deliver the best integrated product experience for our
+    Postman users, own &amp; drive the engineering/technical strategy for the team
+    to not just meet product requirements but help it scale for next 2-5 years by
+    having futuristic lenses.</p> <p>Our goal is to have 100M connected developers
+    and we want you to join us in this amazing journey.</p> <p><strong>What You’ll
+    Do</strong><br><br></p> <ul> <li>Shape the Future of APIs: Contribute to the development
+    of cutting-edge APIs and products in collaboration with a dynamic, cross-functional
+    team that includes Product Managers, Designers, and Engineers specializing in
+    Support, Quality, Security, and Platform.</li> <li>Innovate Through Prototypes:
+    Rapidly construct functional prototypes to address both internal and external
+    use-cases, driving our product’s evolution.</li> <li>Lead &amp; Mentor: Offer
+    technical leadership and mentorship to your fellow engineers, sharing best practices
+    and elevating our collective expertise.</li> <li>Shape Our Path: Be an integral
+    contributor to roadmap planning, coordinating with all stakeholders to align our
+    products with strategic goals.</li> <li>Own Systems Architecting: Lead the architecting
+    and design of collection systems, partnering with stakeholders to ensure robust
+    functionality and strategic integration.</li> <li>Enhance System Maturity: Take
+    ownership of the maturation of existing systems, defining initiatives to enhance
+    functionality, reliability, and performance.</li> <li>Drive Architectural Evolution:
+    Identify and champion initiatives that drive architectural improvement and innovation.</li>
+    </ul> <p><strong>About You</strong><strong><br></strong></p> <ul> <li>Cloud and
+    Distributed Systems Expert: You bring experience with cloud computing and distributed
+    systems, having worked on customer-facing systems at scale.</li> <li>Data Management
+    Maestro: Your knowledge of data management fundamentals and data storage principles
+    is solid.</li> <li>Experienced Builder: With at least 5+ years of experience building
+    applications in high-level programming languages - especially Javascript, Python,
+    or Ruby. We primarily code in Javascript.</li> <li>Versatile Developer: A fair
+    understanding of front-end technologies, networking, analytics at a fundamental
+    level, and proficiency in Backend engineering characterize your skill set.</li>
+    <li>Passionate Technologist: You''re driven by a passion for utilizing various
+    tools and technologies to devise end-to-end solutions.</li> <li>Code Craftsperson:
+    Your code is testable, maintainable, and easy to understand by others.</li> <li>Communicator:
+    You can demystify technical concepts, effectively sharing knowledge with produc'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.053480+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

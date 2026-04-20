@@ -1,0 +1,96 @@
+id: character-ai-software-engineer-monetization
+name: Character AI Software Engineer, Monetization
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Character AI
+  url: https://jobs.ashbyhq.com/character
+  application_url: https://jobs.ashbyhq.com/character/902c3060-f41f-4bb0-b23d-988055e94f3c
+  portal: ashby
+  location: Redwood City, CA
+  location_class: us-onsite
+  description: About the Role We are scaling personalized AI to billions of users
+    and monetization is at the core of making this vision sustainable. Our monetization
+    team is reimagining how users interact with virtual currency, subscriptions, and
+    premium features in ways that feel intuitive, rewarding, and fun. We’re looking
+    for a product engineer who thrives at the intersection of core product, commerce,
+    and user experience—someone excited to design and build systems that not only
+    drive revenue but also enhance user delight. If you have experience with subscriptions,
+    ads, virtual economies, or in-app purchase flows, and care deeply about building
+    high-quality user experiences we’d love to work with you. What you’ll do Build
+    and optimize user-facing features across mobile and web that power payments, subscriptions,
+    and in-app purchase flows. Design and experiment with monetization surfaces, from
+    virtual currency systems to premium upsells to advertising. Partner closely with
+    design and product to create delightful, performant, and trustworthy purchase
+    experiences. Collaborate with data science to define monetization success metrics,
+    run experiments, and analyze outcomes. Work with backends to design scalable,
+    reliable systems for payments, entitlements, and transactions. Maintain a high
+    bar for UI/UX polish, performance, and privacy in sensitive user flows. Help shape
+    the company’s approach to monetization experimentation, including frameworks for
+    A/B testing and iteration velocity. Who you are Experience in consumer products
+    with monetization, IAP, or subscription flows. Deep understanding of Typescript,
+    React, React Native, Tailwind, HTML, and modern front-end best practices. Comfortable
+    contributing to backend services, ideally with Python or Golang, especially for
+    payments or commerce systems. Demonstrated experience shipping user-facing features
+    that drove measurable monetization or engagement outcomes. Proven ability to thrive
+    in a fast-paced environment, balancing iteration speed with quality and reliability.
+    Excellent communication and collaboration skills across engineering, product,
+    design, and data. Nice to Have Background in gaming, virtual currencies, or digital
+    goods ecosystems. Prior experience with payment processors, subscription platforms,
+    or marketplace ecosystems. Passion for user psychology, reward systems, and designing
+    engaging monetization loops. Exposure to startup or zero-to-one product development
+    environments. About Character.AI Character.AI empowers people to connect, learn
+    and tell stories through interactive entertainment. Over 20 million people visit
+    Character.AI every month, using our technology to supercharge their creativity
+    and imagination. Our platform lets users engage with tens of millions of characters,
+    enjoy unlimited conversations, and embark on infinite adventure s. In just two
+    years, we achieved unicorn status and were honored as Google Play's AI App of
+    the Year—a testament to our innovative technology and visionary approach. Join
+    us and be a part of establishing this new entertainment paradigm while shaping
+    the future of Consumer AI! At Character, we value diversity and welcome applicants
+    from all backgrounds. As an equal opportunity employer, we firmly uphold a non-discrimination
+    policy based on race, religion, national origin, gender, sexual orientation, age,
+    veteran status, or disability. Your unique perspectives are vital to our success.
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.888274+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

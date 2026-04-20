@@ -1,0 +1,109 @@
+id: replit-software-engineer-growth
+name: Replit Software Engineer, Growth
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Replit
+  url: https://jobs.ashbyhq.com/replit
+  application_url: https://jobs.ashbyhq.com/replit/447a6e11-b06b-4cc5-9203-cd55883f2af4
+  portal: ashby
+  location: Foster City, CA (Hybrid) In office M,W,F
+  location_class: us-onsite
+  description: 'Replit is the agentic software creation platform that enables anyone
+    to build applications using natural language. With millions of users worldwide,
+    Replit is democratizing software development by removing traditional barriers
+    to application creation. About the Role We are seeking a highly technical, data-driven
+    Growth Engineer to help scale our product and expand key user metrics across acquisition,
+    activation, retention, and monetization. Growth Engineering sits at the intersection
+    of engineering, product, and marketing—leveraging code, experimentation, and analytics
+    to uncover opportunities and deliver measurable impact. What You’ll Do Drive Experimentation
+    & Optimization Design, implement, and analyze rapid A/B and multivariate tests
+    to validate hypotheses and improve key KPIs. Identify bottlenecks in user funnels
+    and develop technical solutions to improve conversion rates throughout the user
+    lifecycle. Build and Scale Growth Features Build growth-oriented product features
+    such as onboarding flows, referral systems, and automated engagement loops. Develop
+    scalable code and infrastructure that supports growth initiatives and experimentation
+    frameworks. Leverage Data & Metrics Collaborate with data teams to instrument
+    tracking, build dashboards, and derive insights from user behavior data. Use SQL
+    and analytics tools to deeply analyze cohorts, engagement metrics, and experiment
+    outcomes. Cross-Functional Collaboration Partner closely with product managers,
+    designers, marketers, and data scientists to align on growth goals and execution
+    plans. Translate business goals into technical requirements and implement pragmatic
+    solutions that drive sustainable growth. Continuous Innovation Stay updated on
+    industry trends and growth-oriented technologies and propose new tactics to accelerate
+    growth. Automate repetitive tasks and build internal tools to empower faster experimentation
+    and execution. Required Qualifications Bachelor’s degree in Computer Science,
+    Engineering, or related technical field (or equivalent experience). 3+ years of
+    professional software engineering experience. Strong programming skills (e.g.,
+    Node, Python, JavaScript/TypeScript, Go ). Experience with data analysis and database
+    query languages (e.g., SQL ). Familiarity with instrumentation, analytics tools
+    (e.g., Amplitude ), and experimentation frameworks. Comfort with designing and
+    interpreting experiments grounded in statistical thinking. What Sucess Looks Like:
+    Measurable improvements in user acquisition, onboarding, retention, and activation
+    via experiments. Scalable, well-instrumented growth capabilities that reduce manual
+    effort and increase velocity. Growth strategies and systems that become integrated
+    into product development and long-term planning. Why Join Us This is a rare opportunity
+    to be among the first engineers on a newly formed Growth team, with significant
+    ownership and influence over both technical direction and product outcomes. You’ll
+    be working on a product that scaled from ~2M to 250M users in under a year, operating
+    in a massive and still largely untapped market. The impact of your work will be
+    visible, measurable, and foundational to how the company grows next. Impact how
+    engineering and product teams scale solutions for millions of users. Competitive
+    compensation and benefits tailored to growth-focused engineers. This is a full-time
+    role that can be held from our Foster City, CA office. The hybrid role has an
+    in-office requirement of Monday, Wednesday, and Friday Full-Time Employee Benefits
+    Include: 💰 Competitive Salary & Equity 💹 401(k) Program with a 4% match ⚕️ Health,
+    Dental, Vision and Life Insurance 🩼 Short Term and Long Term Disability 🚼 Paid
+    Parental, Medical, Caregiver Leave 🚗 Commuter Benefits 📱 Monthly Wellness Stipend
+    🧑‍💻 Autonomous Work Environment 🖥 In Office Set-Up Reimbursement 🏝 Flexible Time
+    Off (FTO) + Holidays 🚀 Quarterly Team Gatherings ☕ In Office Amenities Want to
+    learn more about what we are up to? Meet the Replit Agent Replit: Make an app
+    for that Replit Blog Amjad TED Talk Interviewing + Culture at Replit Operating
+    Principles Reasons not to work at Replit To achieve our mission of making programming
+    more accessible around the world, we need our team to be representative of the
+    world. We welcome your unique perspective and experiences in shaping this product.
+    We encourage people from all kinds of backgrounds to apply, including and especially
+    candidates from underrepresented and non-traditional backgrounds.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.945176+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

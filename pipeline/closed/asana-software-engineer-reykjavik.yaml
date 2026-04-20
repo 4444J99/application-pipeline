@@ -1,0 +1,116 @@
+id: asana-software-engineer-reykjavik
+name: Asana Software Engineer, Reykjavik
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Asana
+  url: https://boards.greenhouse.io/asana
+  application_url: https://www.asana.com/jobs/apply/5480143?gh_jid=5480143
+  portal: greenhouse
+  location: Reykjavík
+  location_class: unknown
+  description: '<p>The Infrastructure team builds the foundation we need to support
+    our web and mobile applications, as well as our robust API. We build and operate
+    the software that enables Asana’s security, scalability, and speed. Each day,
+    we combine industry best-practices and innovation to support this product-focused
+    company.</p> <p>We’re looking for an experienced Infrastructure Software Engineer
+    with a passion for Site Reliability and Operability. You will work with a world-class
+    team of engineers on deploying and operating existing systems, and building new
+    ones for challenges that are unique to our problem space. You will have a unique
+    opportunity to design, develop, and operate services that power Asana, and work
+    on cross-functional projects to help define the future of our infrastructure,
+    and how we architect and operate critical services at scale.</p> <p>This role
+    is based in our Reykjavik office with an office-centric hybrid schedule. The standard
+    in-office days are Monday, Tuesday, and Thursday. Most Asanas have the option
+    to work from home on Wednesdays. Working from home on Fridays depends on the type
+    of work you do and the teams with which you partner. If you''re interviewing for
+    this role, your recruiter will share more about the in-office requirements.</p>
+    <p><strong>What you’ll achieve</strong></p> <ul> <li>Analyze problems, consider
+    alternative solutions/trade-offs, and make key technical implementation decisions
+    to help guide engineering vision at Asana</li> <li>Work on cross-functional projects
+    to help define the future of infrastructure for Asana, how we architect and operate
+    critical services at scale</li> <li>Collaborate with other infrastructure teams
+    to define our service oriented architecture</li> <li>Develop frameworks, services,
+    and the necessary tooling to power our application and enable other engineering
+    teams</li> <li>Evangelize good code and solid engineering and operability practices</li>
+    <li>Co-create and follow best practices of running applications in the cloud (AWS)
+    and all the state-of-the-art tooling around it</li> <li>Support design reviews,
+    communicate constraints, and help engineers make the right trade-offs</li> <li>Develop
+    high quality code and keep our services up and running by being part of our on-call
+    rotation and investigate and resolve production problems</li> </ul> <p><strong>About
+    you</strong></p> <ul> <li>Expertise in programming and computer science, and have
+    an interest in distributed systems</li> <li>5+ years writing and shipping production
+    code</li> <li>Looking for an environment where you and your teammates empower
+    one another to become the best versions of yourselves and to move towards a shared
+    goal</li> <li>Are willing and able to collaborate with different roles and functions
+    across Asana with a keen sense of empathy</li> <li>Fast learner and excited to
+    contribute from day one</li> <li>Demonstrated curiosity about AI tools and emerging
+    technologies, with a willingness to learn and leverage them to enhance productivity,
+    collaboration, or decision-making</li> </ul> <p>At Asana, we''re committed to
+    building teams that include a variety of backgrounds, perspectives, and skills,
+    as this is critical to helping us achieve our mission. If you''re interested in
+    this role and don''t meet every listed requirement, we still encourage you to
+    apply.</p> <p><strong>What we’ll offer</strong></p> <p>Our comprehensive compensation
+    package plays a big part in how we recognize you for the impact you have on our
+    path to achieving our mission. We believe that compensation should be reflective
+    of the value you create relative to the market value of your role. To ensure pay
+    is fair and not impacted by biases, we''re committed to looking at market value
+    which is why we check ourselves and conduct a yearly pay equity audit.</p> <p>For
+    this role, the estimated annual base salary range is between 13,050,000 ISK -
+    20,160,000 ISK. The actual base salary will vary based on various factors, including
+    market and individual qualifications objectively assessed during the interview
+    process. The listed range above is a guideline, and the base salary range for
+    this role may be modified.</p> <p>In addition to base salary, your compensation
+    package may include additional components such as equity, sales incentive pay
+    (for most sales roles), and benefits. If you''re interviewing for this role, speak
+    with your Talent Acquisition Partner to learn more about the total compensation
+    and benefits for this role.</p> <p>We strive to provide equitable and competitive
+    benefits packages that support our employees worldwide and include:</p> <ul> <li>Mental
+    health, wellness &amp; fitness benefits</li> <li>Career coaching &amp; support</li>
+    <li>Inclusive family building benefits</li> <li>Long-term savings or retirement
+    plans</li> <li>In-office culinary options to cater to your dietary preferences&nbsp;</li>
+    </ul> <p>These are just some of the benefits we offer, and benefits may vary based
+    on role, country, and local '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.224129+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

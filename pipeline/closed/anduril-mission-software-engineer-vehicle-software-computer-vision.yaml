@@ -1,0 +1,101 @@
+id: anduril-mission-software-engineer-vehicle-software-computer-vision
+name: Anduril Mission Software Engineer, Vehicle Software, Computer Vision
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/4734570007?gh_jid=4734570007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3><strong>ABOUT THE TEAM</strong></h3>
+    <p>Air Dominance &amp; Strike (AD&amp;S) is responsible for autonomous robotics
+    systems like the Fury unmanned fighter jet and the Barracuda family of advanced
+    effects. The AD&amp;S Vehicle Software team is responsible for the software running
+    on these systems. Our software engineers collaborate with other engineering disciplines
+    to develop software for vehicle control, networking, sensor integration, and telemetry.
+    We are looking for engineers excited to build the foundational vehicle software
+    stack that supports the wide range of AD&amp;S initiatives, from early concept
+    simulation to first flight to live operations to large scale fleet management.</p>
+    <h3>ABOUT THE JOB</h3> <p><span data-contrast="auto">We are seeking a software
+    engineer specialized in machine vision for development of guidance systems on
+    a large air vehicle. Engineers in this role will primarily work on implementing
+    novel image processing algorithms from various image sources and sensors.&nbsp;
+    These will be both conventional and state of the art machine learning approaches.&nbsp;
+    Additionally, the role requires the ability to work with other sensor sources
+    and develop sensor fusion algorithms.</span><span data-ccp-props="{}">&nbsp;</span></p>
+    <p><br><strong>WHAT YOU’LL DO</strong></p> <ul> <li><span data-contrast="auto">Integrate
+    and write tests for camera calibration code</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;201341983&quot;:0,&quot;335551550&quot;:1,&quot;335551620&quot;:1,&quot;335559685&quot;:720,&quot;335559737&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240,&quot;335559740&quot;:259,&quot;335559991&quot;:360}">&nbsp;</span></li>
+    <li><span data-contrast="auto">Develop and refine algorithms for real-time image
+    processing and analysis.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></li>
+    <li><span data-contrast="auto">Write, test, and maintain high-quality code in
+    Python and C++.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></li>
+    <li><span data-contrast="auto">Optimize software for performance, reliability,
+    and scalability</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></li>
+    <li><span data-contrast="auto">Process and evaluate images from live tests used
+    by camera systems in various flight conditions.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></li>
+    <li><span data-contrast="auto">Debug and troubleshoot software and hardware issues
+    as they arise.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></li>
+    <li><span data-contrast="auto">Propose and implement improvements to enhance system
+    performance and capabilities</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></li>
+    </ul> <h4>REQUIRED QUALIFICATIONS</h4> <ul> <li><span data-contrast="auto">BS,
+    MS, or PhD in Computer Science, Electrical Engineering, Mathematics, Physics,
+    or related field.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    <li><span data-contrast="auto">4+ years of experience writing production software
+    (C or C++ preferred).</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    <li><span data-contrast="auto">Direct experience with camera systems, calibration,
+    and pose estimation.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    <li><span data-contrast="auto">Experience working with IMUs and impleme
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.863823+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

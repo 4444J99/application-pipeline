@@ -1,0 +1,111 @@
+id: snowflake-staff-ai-engineer-cortex-code-quality
+name: Snowflake Staff AI Engineer - Cortex Code Quality
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/ae43323e-8b10-4c01-b1af-987145191d01
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Snowflake is about empowering enterprises to
+    achieve their full potential and people too. With a culture that’s all in on impact,
+    innovation, and collaboration, Snowflake is the sweet spot for building big, moving
+    fast, and taking technology and careers to the next level. About the Role The
+    Cortex Code team is building the future of coding agents for working with data.
+    See our flagship product in action: Cortex Code in Action: Live Demos + AMA .
+    As a Staff AI Engineer on Cortex Code Quality , you will help define architect
+    agent behavior at enterprise scale by building the agentic systems and methodology
+    that make our users build cutting edge agentic systems that are efficient, repeatable,
+    auditable, and shippable . You’ll partner with modeling, platform, and product
+    leadership to turn customer pain into golden scenarios , metrics , and experiment
+    loops that the whole team can trust. What you will do in this role: Agent strategy
+    & systems: Own major pillars of the quality stack: tuning agent behavior to engage
+    on next generation agentic coding tasks. Hill-climb infrastructure: Design and
+    evolve pipelines and tooling that support large-scale experimentation, error mining,
+    and iteration on prompts/tools/workflows with clear before/after signals. Deep
+    analysis & prioritization: Lead postmortems on quality regressions; cluster failure
+    modes; translate findings into a prioritized roadmap for engineering and modeling
+    partners. Cross-functional leadership: Align product, infra, and applied AI on
+    what “good” means for critical customer workflows; mentor engineers and uplevel
+    eval craft across the team. Production-minded rigor: Ensure quality systems are
+    dependable in practice—reproducible runs, stable datasets, versioning, and operational
+    clarity when things drift. Requirements: Bachelor’s degree in Computer Science,
+    Engineering, Statistics, or a related field. Master’s or higher preferred but
+    not a requirement. 8+ years of experience shipping AI/ML-backed software in production,
+    including Staff-level ownership of technical direction, cross-team delivery, and
+    mentoring. Strong track record building and operating eval harnesses , measurement
+    , and/or experimentation loops for LLM/agent systems—not only one-off benchmarks.
+    Proficiency in programming languages such as Python , TypeScript , Go (strong
+    in at least two). Exceptional communication skills: crisp writeups, constructive
+    debate, and ability to influence without authority across engineering and product.
+    (Optional) Experience with data engineering pipelines (dbt, Airflow), data modeling,
+    data analysis, retrieval systems, and semantic layers is a plus. Nice to have
+    Deep experience with agentic coding tools (IDE agents, CLI agents) and intuition
+    for model strengths, failure modes, and prompting limits. Background in data engineering
+    (dbt, Airflow), analytics, retrieval / RAG, or semantic layers—highly relevant
+    for data-centric coding agents. Prior work on LLM observability, safety/guardrails,
+    or quality systems used as release gates in production. You may be a particularly
+    good fit if you Have built and owned complex quality + data pipelines —substantial
+    state, branching logic, and operational requirements. Thrive in high-intensity
+    environments with short feedback loops and high standards for rigor. Take ambiguous
+    “quality is slipping” problems to completion: you care about clear metrics , reproducibility
+    , and sustained improvement —not one-off score bumps. Are a power user of modern
+    coding agents and care about turning intuition into systematic measurement and
+    team-wide practice . About Snowflake Snowflake is the AI Data Cloud trusted by
+    the world''s most innovative companies. We''re shipping production-ready AI applications
+    at scale and want you to join us in building the future of how businesses interact
+    with their data through Cortex Code , Cortex agents , Cortex analyst , Cortex
+    search . Snowflake is growing fast, and we’re scaling our team to help enable
+    and accelerate our growth. We are looking for people who share our values, challenge
+    ordinary thinking, and push the pace of innovation while building a future for
+    themselves and Snowflake. How do you want to make your impact? For jobs located
+    in the United States, please visit the job posting on the Snowflake Careers Site
+    for salary and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: null
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.519194+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

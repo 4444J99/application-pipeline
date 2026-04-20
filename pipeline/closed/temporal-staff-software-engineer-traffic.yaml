@@ -1,0 +1,116 @@
+id: temporal-staff-software-engineer-traffic
+name: Temporal Staff Software Engineer, Traffic
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Temporal
+  url: https://boards.greenhouse.io/temporaltechnologies
+  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/5016895007
+  portal: greenhouse
+  location: United States or Canada - Remote Opportunity
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><h3><strong>About Us</strong></h3> <div>Temporal\
+    \ is an open source programming model that can simplify code, make applications\
+    \ more reliable, and help developers focus on the important things like delivering\
+    \ features faster. We are on a mission to be the reliable foundation of every\
+    \ developer\u2019s toolbox, and are building the team that will make that happen.</div>\
+    \ <div>&nbsp;</div> <div>Our values guide us \u2014they are present in how we\
+    \ show up, make decisions, and work together to make an impact. We\u2019re curious,\
+    \ driven, collaborative, genuine and humble.</div> <div>&nbsp;</div> <div>Temporal\
+    \ is growing and we are looking for those who share our values, challenge 'standard'\
+    \ thinking, and want to influence our future. If you have a passion for improving\
+    \ the developer experience, building world-class open-source software and communities,\
+    \ and want to be a part of our amazing team, we'd love to hear from you!</div></div><p><span\
+    \ style=\"font-size: 12pt;\"><strong>Summary</strong></span></p> <p><span style=\"\
+    font-size: 12pt;\">We are seeking a&nbsp;<strong>Staff Software Engineer</strong>\
+    \ to join our Infrastructure Traffic team, where you will play a key role in driving\
+    \ the technical strategy, execution, and leadership of projects across traffic\
+    \ management, network optimization, and cloud orchestration. This is an exciting\
+    \ opportunity to significantly impact the scalability, reliability, and operational\
+    \ excellence of Temporal\u2019s networking infrastructure, while also mentoring\
+    \ and guiding the team. <em>[Click <a href=\"https://temporalio.notion.site/Join-the-Traffic-Team-at-Temporal-2e98fc56773880f3b8f5f5d35f23d82a?pvs=74\"\
+    >here</a> to see more detail on our Traffic Team]</em></span></p> <h3><span style=\"\
+    font-size: 12pt;\"><strong>What You'll Do</strong></span></h3> <h4><span style=\"\
+    font-size: 12pt;\"><strong>Invent</strong></span></h4> <ul> <li style=\"font-size:\
+    \ 12pt;\"><span style=\"font-size: 12pt;\">Lead the design and development of\
+    \ systems that optimize network traffic and scale for global expansion.</span></li>\
+    \ <li style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\">Drive architectural\
+    \ decisions for high-impact projects, ensuring scalability and reliability.</span></li>\
+    \ <li style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\">Co-author long-term\
+    \ technical roadmaps that set the vision for network scalability, performance,\
+    \ and engineering velocity.</span></li> <li style=\"font-size: 12pt;\"><span style=\"\
+    font-size: 12pt;\">Set the standard for a culture of engineering and operational\
+    \ excellence.</span></li> </ul> <h4><span style=\"font-size: 12pt;\"><strong>Own</strong></span></h4>\
+    \ <ul> <li style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\">Build and\
+    \ nurture effective partnerships across engineering, product, and security teams\
+    \ to align on network infrastructure goals.</span></li> <li style=\"font-size:\
+    \ 12pt;\"><span style=\"font-size: 12pt;\">Lead and conduct design reviews for\
+    \ critical projects with a focus on system-level tradeoffs and network scalability.</span></li>\
+    \ <li style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\">Drive the design\
+    \ and implementation of \u201Csecure by default\u201D network systems in collaboration\
+    \ with security teams.</span></li> <li style=\"font-size: 12pt;\"><span style=\"\
+    font-size: 12pt;\">Act as a key stakeholder by engaging with customers and internal\
+    \ teams to understand business requirements and deliver innovative solutions.</span></li>\
+    \ </ul> <h4><span style=\"font-size: 12pt;\"><strong>Learn</strong></span></h4>\
+    \ <ul> <li style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\">Deeply\
+    \ understand how to leverage Temporal\u2019s software to build and scale networking\
+    \ infrastructure.</span></li> <li style=\"font-size: 12pt;\"><span style=\"font-size:\
+    \ 12pt;\">Gather insights into customer needs and incorporate them into technical\
+    \ decision-making for traffic management and networking strategies.</span></li>\
+    \ <li style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\">Stay at the\
+    \ forefront of technology advancements in traffic management, networking, and\
+    \ cloud orchestration.</span></li> </ul> <h4><span style=\"font-size: 12pt;\"\
+    ><strong>Collaborate</strong></span></h4> <ul> <li style=\"font-size: 12pt;\"\
+    ><span style=\"font-size: 12pt;\">Mentor and guide engineers, sharing best practices\
+    \ and design principles for building reliable and scalable networking systems.</span></li>\
+    \ <li style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\">Drive alignment\
+    \ across teams, ensuring roadmaps are cohesive and deliverables are on track.</span></li>\
+    \ <li style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\">Foster a collaborative\
+    \ and growth-oriented environment, helping others improve while continuing to\
+    \ expand your own expertise.</span><br><br></li> </ul> <h3><span style=\"font-size:\
+    \ 12pt;\"><strong>What You'll Bring</strong></span></h3> <ul> <li style=\"font-size:\
+    \ 12pt;\"><span style=\"font-size: 12pt;\">Proven experience leading complex engineering\
+    \ efforts focused on network traffic management, network optimizatio"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 10
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.692466+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

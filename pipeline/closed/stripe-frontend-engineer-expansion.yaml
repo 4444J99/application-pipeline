@@ -1,0 +1,103 @@
+id: stripe-frontend-engineer-expansion
+name: Stripe Frontend Engineer, Expansion
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7531155
+  portal: greenhouse
+  location: Barcelona, Madrid
+  location_class: international
+  description: <p><strong>Who we are</strong></p> <h3><strong>About Stripe</strong></h3>
+    <p>Stripe is a financial infrastructure platform for businesses. Millions of companies—from
+    the world’s largest enterprises to the most ambitious startups—use Stripe to accept
+    payments, grow their revenue, and accelerate new business opportunities. Our mission
+    is to increase the GDP of the internet, and we have a staggering amount of work
+    ahead. That means you have an unprecedented opportunity to put the global economy
+    within everyone’s reach while doing the most important work of your career.</p>
+    <h3><strong>About the team</strong></h3> <p>Web Presence and Platform is organized
+    into two pillars, each of which is grouped into pods that focus on the central
+    tenets of Stripe's public mission. The Presence pillar creates industry-leading
+    designs for Stripe’s front door surfaces, educating customers about the power
+    of our platform, sharing Stripe’s ideas and expertise with the public, and driving
+    adoption. The Platform pillar builds the internal machinery that powers these
+    surfaces, and is responsible for making our websites fast, stable, and easy to
+    update.</p> <p>Together we design and build stripe.com and other sites that amount
+    to what is, for many, their first impression of Stripe. As such, WPP offers exciting
+    opportunities to have a major impact on Stripe’s success. We want to make every
+    pixel count, we want it to be enthralling, and we want to help other Stripes seamlessly
+    benefit from our systematic work.</p> <h2><strong>What you’ll do</strong></h2>
+    <p>The Expansion pod brings creativity and executional rigor to attracting new
+    prospects and driving conversion, focusing on user journeys, interactive and highly
+    polished tools for users, and building targeted experiences for our global users.</p>
+    <p>As a frontend engineer you will reimagine the user experience moments that
+    contribute to acquisition journeys. You will build delightful and original interactive
+    tools and resources that attract users. You will collaborate deeply across design,
+    engineering, and cross-functional teams and work across teams and tech stacks
+    to create new site capabilities.&nbsp; You’ll enable prospective clients to self-select
+    into the right Stripe product lines, bring additional partners into the authoring
+    process while upholding our high quality bar, and directly impact Stripe’s success
+    by marrying data-driven rigor with our deep commitment to craft.</p> <h3><strong>Responsibilities</strong></h3>
+    <ul> <li>Work closely with other engineers, pairing, mentoring, and continually
+    building a culture of excellence</li> <li>Build beautiful, best-in-class end-user
+    experiences to solve complex problems</li> <li>Utilize, maintain, and extend our
+    design systems</li> <li>Integrate our web platform with self-serve authoring and
+    experimentation</li> </ul> <h2><strong>Who you are</strong></h2> <p>We’re looking
+    for someone who meets the minimum requirements to be considered for the role.
+    If you meet these requirements, you are encouraged to apply. The preferred qualifications
+    are a bonus, not a requirement.</p> <h3><strong>Minimum requirements</strong></h3>
+    <ul> <li>2+ years of relevant web front-end development or creative technology
+    experience at a tech-forward, product-driven company</li> <li>Experience writing
+    clear, elegant code in a team environment</li> <li>Excellent verbal and written
+    communication</li> <li>Passion for engineering solutions focused around growth
+    hacking &amp; enablement&nbsp;</li> </ul> <h3><strong>Preferred qualifications</strong></h3>
+    <ul> <li>A good understanding of the formal elements of design, not just limited
+    to the web and including typography, layout, balance, and proportion</li> <li>Experience
+    building highly complex interactive tools, including state management and data
+    fetching</li> <li>Proficiency with React, with a focus on interactions, animation,
+    performance, and polish</li> <li>Experience with A/B testing, synthetic monitoring,
+    or accessibility testing</li> </ul>
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.750897+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

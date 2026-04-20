@@ -1,0 +1,93 @@
+id: perplexity-software-engineer-agentic-commerce
+name: 'Perplexity Software Engineer - Agentic Commerce '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/e7f59bee-4960-4b86-a0f5-b312cafd10bc
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Perplexity is seeking a Software Engineer to own and evolve the billing
+    platform that powers monetization across all Perplexity products. You''ll build
+    the abstractions and infrastructure that let product teams launch new paid offerings,
+    run pricing experiments, and convert users into paying customers — without needing
+    to understand billing internals. This is a high-leverage role on a small team.
+    The usage-based billing system this team owns is the foundation that monetizes
+    Perplexity Computer and our agentic products — metering every action an AI agent
+    takes in real time, enforcing credit budgets, and settling costs across entirely
+    new interaction models. You''ll work across subscriptions, usage-based billing,
+    and enterprise contracts to ensure every revenue path is reliable, observable,
+    and easy to extend. Tech Stack: Python | Go | Stripe | PostgreSQL | AWS | Docker
+    Responsibilities Design and maintain billing API abstractions that enable product
+    teams to ship new SKUs, pricing models, and monetization experiments with minimal
+    friction Build and operate the subscription, invoicing, and usage-based billing
+    systems that serve millions of users across consumer and enterprise plans Establish
+    reliability standards for billing — tiered SLOs organized by customer impact,
+    proactive monitoring, and alerting to catch revenue-affecting issues before customers
+    do Partner with Finance, Data Science, Growth, and Security teams to ensure billing
+    data is accurate, auditable, and compliant Expand payment method coverage and
+    optimize authorization rates to improve conversion globally Build internal tooling
+    that empowers Support and Finance teams to diagnose and resolve billing issues
+    quickly Collaborate with security and privacy teams to build secure, compliant
+    checkout and payment flows Qualifications 4+ years of industry experience in software
+    engineering Direct experience building or scaling billing, payments, subscription,
+    or monetization systems Deep familiarity with payment processors (Stripe, Square,
+    etc) — including subscriptions, invoicing, disputes, refunds, and webhooks Demonstrated
+    experience of and appetite for building in-house billing solutions that rival
+    leading best-in-class buy options Strong backend engineering skills in Python
+    with the ability to reason about complex distributed systems Experience working
+    with relational databases (PostgreSQL) and making data-informed decisions to prioritize
+    work Self-motivated with strong ownership instincts — you ship major features
+    ahead of schedule or add feature improvements without asking for permission Track
+    record of cross-functional collaboration with Finance, Support, or Growth stakeholders
+    Nice to Haves 2+ years of hands-on experience with the Stripe APIs and SDKs Experience
+    with usage-based or metered billing models Experience with Apple and Google Play
+    in-app purchase billing Familiarity with growth experimentation and PLG/self-serve
+    SaaS monetization Experience building platform constructs that support pricing
+    experiments and A/B testing Full-stack experience (our frontend is Next.js/React/TypeScript)
+    Experience in a regulatory or compliance-heavy billing environment'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: null
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.293616+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,117 @@
+id: webflow-staff-software-engineer-developer-productivity
+name: Webflow Staff Software Engineer, Developer Productivity
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Webflow
+  url: https://boards.greenhouse.io/webflow
+  application_url: https://job-boards.greenhouse.io/webflow/jobs/7746645
+  portal: greenhouse
+  location: U.S. Remote
+  location_class: us-remote
+  description: "<p>At Webflow, we\u2019re building the world\u2019s leading AI-native\
+    \ Digital Experience Platform, and we\u2019re doing it as a remote-first company\
+    \ built on trust, transparency, and a whole lot of creativity. This work takes\
+    \ grit, because we move fast, without ever sacrificing craft or quality. Our mission\
+    \ is to bring development superpowers to everyone. From entrepreneurs launching\
+    \ their first idea to global enterprises scaling their digital presence, we empower\
+    \ teams to design, launch, and optimize for the web without barriers. We believe\
+    \ the future of the web, and work, is more open, more creative, and more equitable.\
+    \ And we\u2019re here to build it together.</p> <p>We\u2019re looking for a <strong>Staff\
+    \ Software Engineer, Developer Productivity </strong>to define and drive the future\
+    \ of how Webflow engineers build, test, and deliver software. In this role, you\u2019\
+    ll operate as a technical leader owning the end to end deployment strategy and\
+    \ shaping the systems that enable engineering velocity at scale. This is a high\
+    \ impact role focused on reducing cycle time, increasing reliability and enabling\
+    \ world-class developer experience across Webflow.</p> <h1><strong>About the role:</strong></h1>\
+    \ <ul> <li>Location: Remote-first (United States; BC &amp; ON, Canada)</li> <li>Full-time</li>\
+    \ <li>Permanent</li> <li>Exempt</li> </ul> <p>&nbsp;</p> <ul> <li>Our cash compensation\
+    \ amount for this role ranges depending on the cost of labor of the geographic\
+    \ area. The ranges shared below may change if you are hired in another geographic\
+    \ location.&nbsp;</li> </ul> <ul> <li>United States&nbsp; (all figures cited below\
+    \ in USD and pertain to workers in the United States) <ul> <li>Zone A:&nbsp;<span\
+    \ data-sheets-root=\"1\">187,000</span> - <span data-sheets-root=\"1\">289,000</span></li>\
+    \ <li>Zone B:&nbsp;<span data-sheets-root=\"1\">175,000</span> - <span data-sheets-root=\"\
+    1\">271,000</span></li> <li>Zone C:&nbsp;<span data-sheets-root=\"1\">164,000</span>\
+    \ - <span data-sheets-root=\"1\">254,000</span></li> </ul> </li> <li>Canada&nbsp;\
+    \ (All figures cited below in CAD and pertain to workers in ON &amp; BC, Canada)\
+    \ <ul> <li><span data-sheets-root=\"1\">212,000</span> - <span data-sheets-root=\"\
+    1\">328,000</span></li> </ul> </li> </ul> <p>This salary range may be inclusive\
+    \ of several career levels at Webflow and will be narrowed during the interview\
+    \ process based on a number of factors, including the candidate\u2019s<strong>\
+    \ </strong>market location, job related experience, knowledge, qualifications,\
+    \ and skills. Benefits/additional compensation for this role may include: equity,\
+    \ company bonus or sales commissions/bonuses; retirement plans; health benefits;\
+    \ and wellness stipends<em><br></em></p> <p>Please visit our <a href=\"https://webflow.com/careers#pay-zones\"\
+    >Careers page</a> for more information on which locations are included in each\
+    \ of our geographic pay zones. However, please confirm the zone for your specific\
+    \ location with your recruiter.</p> <ul> <li>Application Information: <ul> <li>Application\
+    \ deadline: applications accepted on an ongoing basis until position is closed\
+    \ and filled</li> <li>This posting is for a new position</li> </ul> </li> <li>Reporting\
+    \ to the Engineering Manager</li> </ul> <p>As a <strong>Staff Software Engineer,\
+    \ Developer Productivity </strong>you\u2019ll:</p> <ul> <li>Define and drive Webflow\u2019\
+    s end-to-end deployment strategy, from CI pipelines to production rollout.</li>\
+    \ <li>Own and evolve our GitOps-based deployment platform (e.g., ArgoCD, Argo\
+    \ Rollouts), ensuring scalability, reliability, and ease of use.</li> <li>Design\
+    \ and implement safe, progressive delivery mechanisms (canary, blue/green, feature\
+    \ flags, automated rollback).</li> <li>Set technical direction across teams, guiding\
+    \ architecture decisions that improve developer velocity and system reliability.</li>\
+    \ <li>Establish and evangelize best practices for CI/CD, release engineering,\
+    \ and environment management across the organization.</li> <li>Identify and eliminate\
+    \ bottlenecks to drive step-function improvements in developer productivity and\
+    \ cycle time.</li> <li>Build and evolve internal tooling to improve testing, and\
+    \ deployment workflows.</li> <li>Ensure high reliability and operational excellence\
+    \ through strong observability, monitoring, and incident-driven improvements.</li>\
+    \ <li>Mentor engineers and act as a force multiplier, influencing teams through\
+    \ technical leadership, design reviews, and cross-team collaboration.</li> </ul>\
+    \ <p>&nbsp;</p> <h1><strong>About you:</strong></h1> <p>Requirements:</p> <ul>\
+    \ <li>BA/BS degree or equivalent experience</li> </ul> <p>You\u2019ll thrive as\
+    \ a <strong>Staff Software Engineer, Developer Productivity</strong> if:</p> <ul>\
+    \ <li>Have deep expertise in modern deployment systems, including Kubernetes,\
+    \ GitOps workflows, and tools like ArgoCD and Argo Rollouts.</li> <li>Have successfully\
+    \ designed and scaled CI/CD systems for large engineering organizations.</li>\
+    \ <li>Are comfortable owning ambiguous, cross-cutting problems and turning them\
+    \ into clear technical strate"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.717735+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

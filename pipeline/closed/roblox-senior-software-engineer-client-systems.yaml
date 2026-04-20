@@ -1,0 +1,114 @@
+id: roblox-senior-software-engineer-client-systems
+name: Roblox Senior Software Engineer, Client Systems
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Roblox
+  url: https://boards.greenhouse.io/roblox
+  application_url: https://careers.roblox.com/jobs/7283870?gh_jid=7283870
+  portal: greenhouse
+  location: San Mateo, CA, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p><span style="font-weight: 400;">Every
+    day, tens of millions of people come to Roblox to explore, create, play, learn,
+    and connect with friends in 3D immersive digital experiences– all created by our
+    global community of developers and creators.&nbsp;</span></p> <p><span style="font-weight:
+    400;">At Roblox, we’re building the tools and platform that empower our community
+    to bring any experience that they can imagine to life. Our vision is to reimagine
+    the way people come together, from anywhere in the world, and on any device.</span><strong>
+    </strong><span style="font-weight: 400;">We’re on a mission to connect a billion
+    people with optimism and civility, and looking for amazing talent to help us get
+    there.&nbsp;</span></p> <p><span style="font-weight: 400;">A career at Roblox
+    means you’ll be working to shape the future of human interaction, solving unique
+    technical challenges at scale, and helping to create safer, more civil shared
+    experiences for everyone.</span></p></div><p>As <strong>Senior Software Engineer
+    </strong>on the Consumer Frontend team, you will leverage the Roblox tech stack
+    and tools to build groundbreaking experiences that push the boundaries of what
+    is possible on the platform. Your efforts will not only help create amazing content,
+    but more importantly, will help us highlight issues, improve and extend our animation
+    tech, tools and pipeline for all developers. These efforts will enable our game
+    developers to create engaging and delightful experiences for our millions of players.</p>
+    <p>We are looking for a Senior Software Engineer who is passionate about Client
+    side development. You need to be proficient in C++ or building client side system
+    libraries on mobile/Desktop platforms. Prior experience building C++ based applications,
+    libraries/frameworks or SDK is highly desirable.</p> <h4><strong>You will:</strong></h4>
+    <ul> <li>Be the primary C++ expert in the team and drive frontend C++ strategy
+    for extending our interface layer.</li> <li>Work with stakeholders across Engineering,
+    Product, and Design to expand frontend ecosystems and drive technical enhancements
+    in engineering space.</li> <li>Implement innovative solutions to feature requests
+    and collaborate with the Roblox Surface owners on new initiatives.</li> <li>Have
+    fun working with our internal team members and community developers to improve
+    the overall state of Lua App on Roblox</li> </ul> <h4><strong>You have:</strong></h4>
+    <ul> <li>4+ years of experience with significant knowledge of system or mobile
+    programming.</li> <li><strong>Proficiency in C++:</strong> Strong C++ programming
+    skills with an ability to write high quality, performant code; experience with
+    Lua is a plus</li> <li><strong>Passion about building frameworks and libraries:</strong>
+    You are driven to build a strong platform with world class design patterns and
+    cutting edge system architecture.</li> <li><strong>Performance focus</strong>:
+    You embrace software performance considerations, with an ability to implement
+    performant solutions for platforms including mobile.</li> <li><strong>Personally
+    Motivated:</strong> Self-sufficient, self-organized and able to take ownership
+    of a project throughout its full lifecycle</li> <li><strong>A Team player mentality:</strong>
+    Ability to work closely with and inspire the rest of your team while displaying
+    excellent interpersonal and communication skills</li> </ul><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p>For roles that are based at our
+    headquarters in San Mateo, CA: The starting base pay for this position is as shown
+    below. The actual base pay is dependent upon a variety of job-related factors
+    such as professional background, training, work experience, location, business
+    needs and market demand. Therefore, in some circumstances, the actual salary could
+    fall outside of this expected range. This pay range is subject to change and may
+    be modified in the future. All full-time employees are also eligible for equity
+    compensation and for benefits as described on <strong><a href="https://careers.roblox.com/total-rewards">this
+    page</a></strong>.</p></div><div class="title">Annual Salary Range</div><div class="pay-range"><span>$195,780</span><span
+    class="divider">&mdash;</span><span>$242,100 USD</span></div></div></div><div
+    class="content-conclusion"><p>Roles that are based in an office are onsite Tuesday,
+    Wednesday, and Thursday, with optional presence on Monday and Friday (unless otherwise
+    noted).</p> <p>Roblox provides equal employment opportunities to all employees
+    and applicants for employment and prohibits discrimination and harassment of any
+    type without regard to race, color, religion, age, sex, national origin, disability
+    status, genetics, protected veteran status, sexual orientation, gender identity
+    or expression, or any other characteristic protected by federal, state or local
+    laws. Roblox also provides reasonable accommodations to candidates with qualify'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.795945+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

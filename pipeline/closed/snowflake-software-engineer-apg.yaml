@@ -1,0 +1,115 @@
+id: snowflake-software-engineer-apg
+name: Snowflake Software Engineer - APG
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/5f4ae8d3-bf84-430d-8f9f-325f14ddf947
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. The Applied Performance Group (APG) Engineering
+    team provides a highly strategic function at Snowflake, with direct impact to
+    our product direction, as well as to our bottom line. APG engineers are a key
+    bridge between Engineering and our Sales organization, support organization, and
+    other engineering organizations at Snowflake. They are called on to help with
+    our most challenging customer performance issues, and help deliver some of our
+    biggest deals. In addition, APG plays a strategic role in competitive benchmarking,
+    defining and/or utilizing industry benchmarks to compare Snowflake performance
+    against our competitors. APG Engineers are at the cutting edge of innovation at
+    Snowflake, pioneering Snowflake deployments with the newest technology and working
+    with Engineering and Product Management to continuously improve the product and
+    ensure we continue building the best Cloud Data Platform in the industry. A successful
+    Applied Performance Engineer will have a broad range of skills and experience
+    ranging from strong SQL skills, data warehousing, data architecture, data engineering,
+    transaction processing, security, performance analysis, analytics, etc. He/she
+    will have the insight to make the connection between a customer’s specific business
+    problems and Snowflake’s solution, the customer-facing skills to communicate that
+    connection and vision to a wide variety of technical and executive audiences,
+    and the technical skills to be able to not only build and execute proof-of-concepts
+    and benchmarks, but also to provide consultative assistance in areas of product
+    direction. The person we’re looking for shares our passion about reinventing the
+    data platform and thrives in the dynamic environment. That means having the flexibility
+    and willingness to jump in and get done what needs to be done to make Snowflake
+    and our customers successful. It means keeping up to date on the ever-evolving
+    technologies for data and analytics in order to be an authoritative resource for
+    both Snowflake and customers. And it means working collaboratively with a broad
+    range of people both inside and outside the company. RESPONSIBILITIES: Be an expert
+    on the topics of Snowflake architecture, query processing, workload profiling,
+    data engineering, and Snowflake tools Be an expert in competitor solutions/products
+    for analytics and data engineering Define, automate, execute, and publish competitive
+    benchmarks Partner closely with other engineering teams to deliver both results
+    and guidance on performance gaps, challenges, advantages, and disadvantages Collaborate
+    with Product Management and Engineering to continuously improve Snowflake’s products
+    and eco-system roadmaps. OUR IDEAL APPLIED PERFORMANCE ENGINEER WILL HAVE: Minimum
+    2 years of experience in technical role delivering Database, Data Warehouse, or
+    Data Engineering implementations and/or benchmark initiatives Experience and ability
+    to work directly with other engineering teams, product managers, and various levels
+    of management Strong communication skills, able to effectively communicate ideas
+    and technical concepts to both technical and executive audiences Broad understanding
+    of cloud platforms and solutions, including experience and understanding of large-scale
+    infrastructure-as-a-service platforms (e.g. Amazon AWS, Microsoft Azure, OpenStack)
+    Proven track record of experience with Snowflake competitors Deep understanding
+    of complete data engineering and analytics stack and workflow, from data ingestion
+    and load to transformation to data platform design to BI and analytics tools Deep
+    technical expertise in databases, data warehouses, data processing, and applications
+    Coding/programming experience in process automation Strong SQL performance analysis
+    experience, Python and/or Java expertise, and the ability to use tools to identify
+    and articulate performance issues STRONGLY DESIRED: Extensive knowledge of and
+    experience with large-scale databases and distributed data processing technology
+    (e.g. Databricks, Spark, Netezza, Oracle, Teradata, Greenplum, Google BigQuery,
+    Amazon Redshift, Microsoft Synapse, Postgres, Apache Spark, Ray, Dask, Apache
+    Kafka, Apache Flink, etc.) Software development experience with C/C++, Java, Scala,
+    Spark Scripting experience with Python, Ruby, Perl, Bash Knowledge of and experience
+    with AI and Machine Learning technologies either in use (eg. using a coding assistant),
+    or in development (eg. using technologies like PyTorch for training and inference).
+    University degree in computer science, engineering, mathematics or related fields,
+    or equivalent experience. Every Snowflake employee is expected to follow the company’s
+    confidentiality and security standards for handling sensitive d'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.164995+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

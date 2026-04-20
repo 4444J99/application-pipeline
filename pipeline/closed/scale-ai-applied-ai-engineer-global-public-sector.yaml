@@ -1,0 +1,114 @@
+id: scale-ai-applied-ai-engineer-global-public-sector
+name: Scale AI Applied AI Engineer, Global Public Sector
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Scale AI
+  url: https://boards.greenhouse.io/scaleai
+  application_url: https://job-boards.greenhouse.io/scaleai/jobs/4413992005
+  portal: greenhouse
+  location: Doha, Qatar; London, UK
+  location_class: international
+  description: <p>Scale’s rapidly growing Global Public Sector team is focused on
+    using AI to address critical challenges facing the public sector around the world.
+    Our core work consists of:</p> <ul> <li>Creating custom AI applications that will
+    impact millions of citizens</li> <li>Generating high-quality training data for
+    national LLMs</li> <li>Upskilling and advisory services to spread the impact of
+    AI</li> </ul> <p>We are hiring Applied AI Engineers to build custom end-to-end
+    AI applications for our public sector clients using the latest developments in
+    the field of AI. You will also get the opportunity to develop and be part of creating
+    custom datasets, evaluations, and fine-tuning these sophisticated models to maximize
+    performance and apply on real world use cases with global reach.&nbsp;</p> <p>At
+    Scale, we’re not just building AI solutions—we are building repeatable blocks
+    to enable the public sector to transform their operations and better serve citizens
+    through cutting-edge technology. If you’re ready to shape the future of AI in
+    the public sector and be a member of our rapidly expanding team, we’d love to
+    hear from you.</p> <p><strong>You will:</strong></p> <ul> <li>Partner with public
+    sector clients to deeply understand their challenges and define AI-driven solutions&nbsp;</li>
+    <li>Build and deploy end-to-end AI applications into production leveraging latest
+    developments from the biggest AI labs, and open source models</li> <li>Collaborate
+    with cross-functional teams, including data annotation specialists, to create
+    high-quality training datasets</li> <li>Design and maintain robust evaluation
+    frameworks to ensure the reliability and effectiveness of AI models</li> <li>Participate
+    in customer engagements, including occasional travel (approximately two weeks
+    per quarter)</li> <li>Contribute to the scaling of AI capabilities in the public
+    sector through hands-on knowledge sharing</li> </ul> <p><strong>Ideally you’d
+    have:</strong></p> <ul> <li>A strong engineering background, with a Bachelor’s
+    degree in Computer Science, Mathematics, or a related quantitative field (or equivalent
+    practical experience)</li> <li>7+ years of post-graduation engineering experience,
+    with demonstrated proficiency in languages such as Python, TypeScript/JavaScript,
+    Java, or C++.</li> <li>2+ years of experience applying AI/ML in production environments,
+    such as deploying deep learning solutions, building generative/agentic AI applications
+    or setting up evaluations pipelines</li> <li>Familiarity with cloud-based machine
+    learning tools and platforms (e.g. AWS, GCP, Azure)</li> <li>Strong problem-solving
+    skills, with a data-driven approach to iterating on machine learning models and
+    datasets</li> <li>Excellent written and verbal communication skills to collaborate
+    effectively in a cross-functional environment</li> </ul> <p><strong>Nice to haves:</strong></p>
+    <ul> <li>Experience working at a startup, particularly as founding engineer</li>
+    <li>Experience building and deploying large-scale AI solutions</li> <li>Strong
+    written and verbal communication skills to operate in a cross-functional team
+    environment</li> <li>Proficiency in Arabic (if focused on language models)</li>
+    </ul><div class="content-conclusion"><p><strong><em>PLEASE NOTE:&nbsp;</em></strong><em>Our
+    policy requires a 90-day waiting period before reconsidering candidates for the
+    same role. This allows us to ensure a fair and thorough evaluation of all applicants.</em></p>
+    <p><strong>About Us:</strong></p> <p><em>At Scale, our mission is to develop reliable
+    AI systems for the world's most important decisions. Our products provide the
+    high-quality data and full-stack technologies that power the world's leading models,
+    and help enterprises and governments build, deploy, and oversee AI applications
+    that deliver real impact. We work closely with industry leaders like Meta, Cisco,
+    DLA Piper, Mayo Clinic, Time Inc., the Government of Qatar, and U.S. government
+    agencies including the Army and Air Force. We are expanding our team to accelerate
+    the development of AI applications.</em></p> <p><em>We believe that everyone should
+    be able to bring their whole selves to work, which is why we are proud to be an
+    inclusive and equal opportunity workplace. We are committed to equal employment
+    opportunity regardless of race, color, ancestry, religion, sex, national origin,
+    sexual orientation, age, citizenship, marital status, disability status, gender
+    identity or Veteran status.&nbsp;</em></p> <p><em>We are committed to working
+    with and providing reasonable accommodations to applicants with physical and mental
+    disabilities. If you need assistance and/or a reasonable accommodation in the
+    application or recruiting process due to a disability, please contact us at accommodations@scale.com.
+    Please see the United States Department of Labor's </em><a href="https://www.eeoc.gov/sites/default/files/2023-06/22-088_EEOC_KnowYourRights6.12ScreenRdr.pdf"><em>Know
+    Your Rights poster</em></a><em> for additional inf
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.632870+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,109 @@
+id: anduril-software-engineer-visual-simulation-advanced-capabilities
+name: Anduril Software Engineer  Visual Simulation, Advanced Capabilities
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/4981881007?gh_jid=4981881007
+  portal: greenhouse
+  location: London, England, United Kingdom
+  location_class: international
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p id="SoftwareEngineer(VisualSimulation)AdvancedCapabilities-ABOUTTHETEAM"><strong>ABOUT
+    THE TEAM</strong></p> <p id="SoftwareEngineer(VisualSimulation)AdvancedCapabilities-AndurilisseekingaSoftwareEngineer(VisualSimulation)tojointheManeuverDominanceAdvancedCapabilitiesteaminourLondonoffice.Theteamisastrategic/future-lookingorganisationfocusedondelivering3corecomponents-">Anduril
+    is seeking a Software Engineer (Visual Simulation) to join the Maneuver Dominance
+    Advanced Capabilities team in our London office. The team is a strategic/future-looking
+    organisation focused on delivering 3 core components - Capability Strategy, Mission
+    Advantage and Maneuver Advantage. Leveraging analysis, Wargaming and Warfighter
+    centric thinking, the team guides how Maneuver Dominance incubates, builds and
+    deploys the capabilities needed to dominate in a future fight.</p> <p id="SoftwareEngineer(VisualSimulation)AdvancedCapabilities-ABOUTTHEJOB"><strong>ABOUT
+    THE ROLE</strong></p> <p>You will lead development of novel Augmented Reality
+    and Virtual Reality user experiences that enable operations analysis and wargaming
+    in support of our product development and our customers. The ideal candidate would
+    be practical, hands-on and a self starter with high growth potential.&nbsp; You
+    will have <strong>extensive UE5 production experience</strong> with demonstrable
+    environment work (production or shipped installations). A <strong>strong artistic
+    eye</strong> for composition and detail combined with solid engineering habits
+    (testing, documentation, version control for tools).&nbsp; With a strong&nbsp;background
+    in&nbsp;<strong>systems development</strong> inside Unreal: editor tooling, Blueprints,
+    editor scripting (Python) and proven delivery of reusable editor/runtime systems.</p>
+    <p id="SoftwareEngineer(VisualSimulation)AdvancedCapabilities-YouwillleaddevelopmentofnovelAugmentedRealityandVirtualRealityuserexperiencesthatenableoperationsanalysisandwargaminginsupportofourproductdevelopmentandourcustomers.Theidealcandidatewouldbepractical,h"></p>
+    <p>In this role, you will work on challenging real world problems in a fast-paced
+    environment across our portfolio of programs and products.&nbsp; Develop and maintain
+    core capabilities in Unreal Engine such as a terrain rendering pipeline, vehicle
+    physics models, and many more.&nbsp; &nbsp;You will work with other platform teams
+    at Anduril to ensure our service integrates seamlessly with other core services
+    Integrate various plugins and third party capabilities into our platform, figuring
+    out how to best make use of them and working around or fixing any bugs.&nbsp;Collaborate
+    closely with other teams across the company to enable them to integrate synthetic
+    imagery and bring back lessons learned to help improve our product.&nbsp;Develop
+    cutting-edge Augmented Reality and Virtual Reality simulation tools that model
+    battlefield vehicles to assess performance and integration in complex mission
+    scenarios.<br>Create interactive tools that facilitate human interaction with
+    these simulations.</p> <p>&nbsp;</p> <p><strong>WHAT YOU''LL DO</strong></p> <ul>
+    <li>Develop simulation visuals for sensors, comms, movement, tactical behaviors,
+    weapon effects, electronic effects, command and control, and others.</li> <li>Develop
+    and maintain core capabilities in Unreal Engine such as a terrain rendering pipeline,
+    vehicle physics models, and many more.</li> <li>Work with other platform teams
+    at Anduril to ensure our service integrates seamlessly with other core services
+    Integrate various plugins and third party capabilities into our platform, figuring
+    out how to best make use of them and working around or fixing any bugs.</li> <li>Collaborate
+    closely with other teams across the company to enable them to integrate synthetic
+    imagery and bring back lessons learned to help improve our product.</li> <li>Partner
+    with Operations Analysis and other Software Engineering team members to deliver
+    simulations capabilities to create high fidelity immersive environments.</li>
+    <li>Partner with capability teams like Mission Autonomy to deliver simulation
+    capabilities to help accelerate product development.</li> <li>Work with multi-disciplinary
+    subject matter experts to understand and '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:34.123275+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

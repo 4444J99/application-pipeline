@@ -1,0 +1,118 @@
+id: dbt-labs-ai-engineer-go-to-market
+name: dbt Labs AI Engineer, Go-To-Market
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: dbt Labs
+  url: https://boards.greenhouse.io/dbtlabsinc
+  application_url: https://job-boards.greenhouse.io/dbtlabsinc/jobs/4674836005
+  portal: greenhouse
+  location: US - Remote
+  location_class: remote-global
+  description: "<div class=\"content-intro\"><p><strong>About Us&nbsp;</strong></p>\
+    \ <p>dbt Labs is the pioneer of analytics engineering, helping data teams transform\
+    \ raw data into reliable, actionable insights. Since 2016, we\u2019ve grown from\
+    \ an open source project into the leading analytics engineering platform, now\
+    \ used by over 90,000 teams every week, driving data transformations and AI use\
+    \ cases.&nbsp;</p> <p>As of February 2025, we\u2019ve surpassed $100 million in\
+    \ annual recurring revenue (ARR) and serve more than 5,400 dbt Platform customers,\
+    \ including AstraZenica, Sky, Nasdaq, Volvo, JetBlue, and SafetyCulture.&nbsp;</p>\
+    \ <p>We\u2019re backed by top-tier investors including Andreessen Horowitz, Sequoia\
+    \ Capital, and Altimeter. At our core, we believe in empowering data practitioners:</p>\
+    \ <ul> <li>Reliable, high-quality data is the fuel that propels AI-powered data\
+    \ engineering. </li> <li>AI is changing data work, fast. dbt\u2019s data control\
+    \ plane keeps data engineers ahead of that curve.</li> <li>We empower engineers\
+    \ to deliver reliable, governed data faster, cheaper, and at scale.</li> </ul>\
+    \ <p>dbt Labs is now synonymous with analytics engineering, defining the modern\
+    \ data stack and serving as the data control plane for enterprise teams around\
+    \ the world. And we\u2019re just getting started.. We\u2019re growing fast and\
+    \ building a team of passionate, curious people across the globe. Learn more about\
+    \ what makes us special by checking out our <a href=\"https://www.getdbt.com/about-us/values\"\
+    >values</a>.</p></div><p><strong>The Opportunity</strong></p> <p>At dbt Labs,\
+    \ data is the product, the language, and the mission. As our GTM AI Engineer,\
+    \ you'll be the architect behind improving the productivity of our GTM organization\
+    \ through AI-powered and AI-assisted GTM workflows. This is a high-impact, high-agency\
+    \ role sitting at the intersection of engineering, automation, and go-to-market\
+    \ strategy, directly influencing revenue performance, sales productivity, pipeline\
+    \ generation, and conversion rates.&nbsp;</p> <p>You'll partner with senior GTM\
+    \ leadership and GTM Operations to build the AI-powered infrastructure that defines\
+    \ how dbt Labs goes to market. You'll own the full lifecycle: uncovering inefficiencies,\
+    \ defining what \"better\" looks like, designing the solution, and building, shipping,\
+    \ and iterating. This role is ideal for someone who thinks like a sales leader,\
+    \ works like a product manager and builds like an engineer, and who wants their\
+    \ work to directly move the needle on revenue growth.</p> <p><strong>In this role\
+    \ you can expect to:</strong></p> <ul> <li>GTM owner of building AI capabilities\
+    \ and agents to automate GTM AI use cases and workflow to improve GTM productivity</li>\
+    \ <li>Build and deploy AI agents that reduce manual data entry and enhance outbound\
+    \ personalization at scale.</li> <li>Enable GTM broader GTM organization AI tools\
+    \ and capabilities and drive deeper adoption by building highest impact AI use\
+    \ cases</li> <li>Implement AI-driven outbound programs using tools like Clay,\
+    \ Glean, Claude and LLM APIs to automate account research, data enrichment, and\
+    \ personalized outreach sequences in support of marketing pipeline goals.</li>\
+    \ <li>Work directly with GTM operations (revenue ops, marketing ops, enablement\
+    \ etc) to identify productivity improvement opportunities and leverage AI to improve\
+    \ operations and sales productivity</li> <li>Experiment rapidly by prototyping\
+    \ AI solutions for current manual processes, measuring results, and iterating\
+    \ to improve GTM funnel conversion improvement.</li> </ul> <p><strong>You are\
+    \ good fit if you have:</strong></p> <ul> <li>3\u20135 years of experience in\
+    \ GTM Engineering, Marketing Operations, Revenue Operations, or a closely related\
+    \ technical role with a track record of driving measurable results.</li> <li>Hands-on\
+    \ experience applying AI and automation to GTM problems \u2014 you can walk us\
+    \ through concrete examples.</li> <li>Proficiency with modern AI and automation\
+    \ tools such as Clay, n8n, Zapier, Gumloop, or GPT/Claude APIs.</li> <li>Experience\
+    \ with CRM and marketing platforms such as Salesforce, HubSpot, or Marketo.</li>\
+    \ <li>A strong understanding of the sales funnel and the business logic behind\
+    \ the data you're moving.</li> <li>A bias toward action \u2014 you move from idea\
+    \ \u2192 experiment \u2192 solution quickly and thrive in ambiguity.</li> <li>The\
+    \ ability to communicate clearly with both technical and non-technical stakeholders.</li>\
+    \ </ul> <p><strong>You\u2019ll have an edge if you have:</strong></p> <ul> <li>Experience\
+    \ with sales platforms like Salesforce, Clari, Gong, Outreach etc.</li> <li>Familiarity\
+    \ with customer data platforms like Segment or Hightouch, and analytics tools\
+    \ like Looker, Tableau, Omni \u2014 a natural fit with the dbt ecosystem.</li>\
+    \ <li>Exposure to newer GTM AI tooling such as Claude Code, Parallel, Unify, or\
+    \ Cursor.</li> <li>Experience designing or optimizing marketing attribution models,\
+    \ lead scoring, or conversion funnels.</li> <li>Experience in a product-led growth\
+    \ (PLG) or B2B SaaS environment.</li> </ul>"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 10
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.645539+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

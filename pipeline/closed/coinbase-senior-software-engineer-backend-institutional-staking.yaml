@@ -1,0 +1,114 @@
+id: coinbase-senior-software-engineer-backend-institutional-staking
+name: Coinbase Senior Software Engineer, Backend (Institutional - Staking)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7539765?gh_jid=7539765
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+  description: '<div class="content-intro"><p>Ready to be pushed beyond what you think
+    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
+    in the world. It’s a massive, ambitious opportunity that demands the best of us,
+    every day, as we build the emerging onchain platform — and with it, the future
+    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
+    candidate. We want someone who is passionate about our mission and who believes
+    in the power of crypto and blockchain technology to update the financial system.
+    We want someone who is eager to leave their mark on the world, who relishes the
+    pressure and privilege of working with high caliber colleagues, and who actively
+    seeks feedback to keep leveling up. We want someone who will run towards, not
+    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
+    culture</a> is intense and isn’t for everyone. But if you want to build the future
+    alongside others who excel in their disciplines and expect the same from you,
+    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
+    we are not remote-only. In-person participation is required throughout the year.
+    Team and company-wide offsites are held multiple times annually to foster collaboration,
+    connection, and alignment. Attendance is expected and fully supported.</p></div><p><strong>Coinbase
+    Institutional - Making the Future Real</strong></p> <p>Without us, crypto is just
+    a whitepaper. We make it real. Coinbase Institutional builds cutting-edge platforms
+    that allow thousands of the world’s largest financial institutions to trade, custody,
+    and participate in the global cryptoeconomy. From launching industry "firsts"
+    to scaling secure infrastructure for hundreds of digital assets, we provide the
+    trusted gateways for staking, governance, and web3. Whether it’s prime brokerage
+    or international markets, we are building the scalable tech and seamless UI that
+    empowers the biggest players on the planet to move money forward.</p> <p><strong>Join
+    us, and build the infrastructure for what’s next.</strong></p> <p>The <em><strong>Institutional
+    Staking Engineering team</strong></em> is responsible for building and maintaining
+    the systems required to safely manage billions of dollars of staked digital assets
+    across multiple blockchain networks. Staking is an integral part of the Custody
+    experience because it allows customers to earn a yield on their digital assets.
+    The Institutional Staking Engineering team also plays an important role in helping
+    to secure underlying blockchain networks by unlocking billions of dollars worth
+    of assets for staking that would otherwise remain unstaked on the sideline. These
+    additional funds contribute to security of networks by increasing the costs of
+    51% attacks and increasing the diversity and decentralization of validators.</p>
+    <p><strong>What you''ll be doing:</strong></p> <ul> <li style="font-weight: 400;"><span
+    style="font-weight: 400;">Build new services to meet critical product and business
+    needs using Golang.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Design scalable systems to solve novel problems with modern cloud technology
+    and industry best practices.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Articulate a long term vision for maintaining and scaling our backend systems
+    and the teams running them.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Work with engineers, designers, product managers and senior leadership to
+    turn our product and technical vision into a tangible roadmap every quarter.</span></li>
+    <li style="font-weight: 400;"><span style="font-weight: 400;">Write high quality,
+    well tested code to meet the needs of your customers.</span></li> </ul> <p><strong>What
+    we look for in you:</strong></p> <ul> <li style="font-weight: 400;"><span style="font-weight:
+    400;">You have at least 5 years of experience in software engineering.</span></li>
+    <li style="font-weight: 400;"><span style="font-weight: 400;">You’ve designed,
+    built, scaled and maintained production services, and know how to compose a service
+    oriented architecture.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">You write high quality, well tested code to meet the needs of your customers.</span></li>
+    <li style="font-weight: 400;"><span style="font-weight: 400;">You’re passionate
+    about building an open financial system that brings the world together.</span></li>
+    </ul> <p><strong>Nice to haves:</strong></p> <ul> <li><span style="font-weight:
+    400;">You have gone through a rapid growth in your company (from startup to mid-size).</span></li>
+    <li><span style="font-weight: 400;">Experience with&nbsp; growth experiments or
+    A/B testing frameworks.</span></li> <li><span style="font-weight: 400;">You have
+    experience with Blockchain technology (such as Bitcoin, Ethereum etc..)</span></li>
+    <li><span style="'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-29'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.960059+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

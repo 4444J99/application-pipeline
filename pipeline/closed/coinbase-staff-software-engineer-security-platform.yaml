@@ -1,0 +1,114 @@
+id: coinbase-staff-software-engineer-security-platform
+name: Coinbase Staff Software Engineer, Security Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7597667?gh_jid=7597667
+  portal: greenhouse
+  location: Remote - India
+  location_class: international
+  description: '<div class="content-intro"><p>Ready to be pushed beyond what you think
+    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
+    in the world. It’s a massive, ambitious opportunity that demands the best of us,
+    every day, as we build the emerging onchain platform — and with it, the future
+    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
+    candidate. We want someone who is passionate about our mission and who believes
+    in the power of crypto and blockchain technology to update the financial system.
+    We want someone who is eager to leave their mark on the world, who relishes the
+    pressure and privilege of working with high caliber colleagues, and who actively
+    seeks feedback to keep leveling up. We want someone who will run towards, not
+    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
+    culture</a> is intense and isn’t for everyone. But if you want to build the future
+    alongside others who excel in their disciplines and expect the same from you,
+    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
+    we are not remote-only. In-person participation is required throughout the year.
+    Team and company-wide offsites are held multiple times annually to foster collaboration,
+    connection, and alignment. Attendance is expected and fully supported.</p></div><p><strong>About
+    the team</strong></p> <p>Coinbase stores a large amount of digital currency making
+    us a top tier target on the internet. Security is core to our mission and has
+    been a key competitive differentiator for us as we scale. If you’re looking to
+    fight on the front lines in a high-intensity environment, we’d like to speak with
+    you about joining our security team.</p> <p>As a Staff Software Engineer in Security
+    Platform Engineering team, you will be working on building capabilities and solutions
+    for a variety of security use cases. Our team builds and maintains the platforms
+    critical for security, compliance and privacy at Coinbase. You will be working
+    on designing innovative services and solutions for the Workforce IAM Platform,
+    enhancing employee access management efficiency and improving security oversight.&nbsp;We
+    highly value individuals with intellectual curiosity and openness. We collaborate
+    across the organization, helping our engineers think big and take risks while
+    building a culture of diversity, positive energy, and blameless truth-seeking.</p>
+    <p><strong>What you’ll be doing</strong></p> <ul> <li>Build new services to meet
+    critical product and business needs using Golang.</li> <li>Design scalable systems
+    to solve novel problems with modern cloud technology and industry best practices.</li>
+    <li>Articulate a long term vision for maintaining and scaling our backend systems
+    and the teams running them.</li> <li>Work with engineers, designers, product managers
+    and senior leadership to turn our product and technical vision into a tangible
+    roadmap every quarter.</li> <li>Write high quality, well tested code to meet the
+    needs of your customers.</li> <li>Support operational activities associated with
+    generation and management of digital material</li> <li>Lead an India-based IAM
+    pod, serving as the primary technical lead in India; driving end-to-end delivery
+    and execution quality.</li> </ul> <p><strong>What we look for in you</strong></p>
+    <ul> <li>You have at least 8 years of experience in software engineering.</li>
+    <li>You’ve designed, built, scaled and maintained production services, and know
+    how to compose a service oriented architecture.</li> <li>You write high quality,
+    well tested code to meet the needs of your customers.</li> <li>You’ve experience
+    in engineering roles with a focus on cybersecurity, systems security and Identity
+    &amp; Access Management.</li> <li>You’re passionate about building an open financial
+    system that brings the world together.</li> </ul> <p><strong>Nice to haves</strong></p>
+    <ul> <li>You have gone through a rapid growth in your company (from startup to
+    mid-size).</li> <li>You have experience decomposing a large monolith into microservices.</li>
+    <li>You’ve worked with Golang, Ruby, Docker, Rails, Postgres, MongoDB or DynamoDB.</li>
+    <li>You’ve built financial, high reliability or security systems.</li> </ul> <p>Job
+    # - <strong>P75882</strong></p> <div id="fortidlp-input-element-parent"></div><div
+    class="content-pay-transparency"><div class="pay-input"><div class="description"><p><strong>Pay
+    Transparency Notice:</strong> The target annual <strong>base</strong> salary for
+    this position can range as detailed below. Total compensation may<strong> </strong>also
+    include equity and bonus eligibility and benefits (including medical, dental,
+    and vision).</p> <div id="fortidlp-input-element-parent"></div></div><div class="title">Annual
+    base salary range (excluding equity and bonus):</div><div class="pay-range"><span>₹9,424,500</span><span
+    class="divider">&mdash;</span><span>₹9,424,500 INR</span></div>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-29'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.103387+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

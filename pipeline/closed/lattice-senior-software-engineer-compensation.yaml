@@ -1,0 +1,116 @@
+id: lattice-senior-software-engineer-compensation
+name: Lattice Senior Software Engineer, Compensation
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Lattice
+  url: https://boards.greenhouse.io/lattice
+  application_url: https://lattice.com/job?gh_jid=8494207002
+  portal: greenhouse
+  location: Remote - Canada
+  location_class: international
+  description: '<h2><strong>This is Engineering at Lattice</strong></h2> <p>Lattice’s
+    Engineering team is continuously working to better both our product and our craft.
+    We use a modern, cutting-edge tech stack aimed at developer productivity and delight.
+    We strive for maintainable, robust, and performant code. We’re highly collaborative
+    and continuously iterative and work closely with designers and product managers.
+    We prioritize not only great technical architecture but also an amazing product
+    experience.<br><br>Compensation is a domain where product decisions directly impact
+    how companies pay their people. Our team builds flexible systems that support
+    a wide range of complex, real-world configurations, requiring engineers to deeply
+    understand customer needs, model nuanced scenarios, and ensure accuracy and trust
+    at every step.</p> <h2><strong>What You Will Do</strong></h2> <ul> <li>You’ll
+    be responsible for building software to help companies create cultures in which
+    their employees thrive.</li> <li>Partner with other engineers to build and own
+    products across a modern tech stack. Our current stack includes React, Relay Modern,
+    GraphQL, Node, and PostgreSQL. We rely on AWS to host our infrastructure.</li>
+    <li>Work closely with other product teams to understand and solve overarching
+    pain points.</li> <li>Own the execution of complex projects, including those that
+    require cross-functional collaboration with product managers and designers.</li>
+    <li>Provide substantial mentorship to less experienced colleagues, helping to
+    refine their technical craft and expand their knowledge.</li> <li>Make contributions
+    to our engineering practices, identifying and evangelizing improvements to improve
+    our team output.</li> </ul> <h2><strong>What You Will Bring to the Table</strong></h2>
+    <p>You have 5+ years of professional experience writing and maintaining production-level
+    applications.</p> <ul> <li>You have experience with modern programming languages
+    such as TypeScript, Ruby, and Python.</li> <li>You have experience working on
+    and maintaining services for an organization operating at scale.</li> <li>You
+    have experience building systems that are adopted by the wider engineering org.</li>
+    <li>You’re no stranger to SQL, you know how to efficiently model data and write
+    performant queries in a relational database like PostgreSQL.</li> <li>You know
+    the ins and outs of maintaining and scaling an application actively serving customers
+    in production.</li> <li>You seek out the root cause when debugging software defects,
+    and champion improvements that prevent future issues. You are familiar with operations
+    tasks such as monitoring application performance over time or troubleshooting
+    issues with production applications.</li> <li>You’re clear and concise in explaining
+    your thought process and in enumerating the tradeoffs made in your work.</li>
+    <li>You love mentoring and supporting other software engineers who are newer to
+    the industry.</li> </ul> <p><strong>Location Requirement:</strong><br>This role
+    is open to candidates located in British Columbia or Ontario, Canada. At this
+    time, we are only able to hire employees residing in these provinces.</p> <p>___</p>
+    <p><em data-stringify-type="italic">The estimated annual cash salary for this
+    role is CAD $123,750 - CAD $165,000. This position is also eligible for incentive
+    stock options, subject to the terms of Lattice’s applicable plans.</em></p> <p><em
+    data-stringify-type="italic">Benefits: The Company offers the following benefits
+    for this position, subject to applicable eligibility requirements: Medical insurance;
+    Dental insurance; Life, AD&amp;D, and Disability Insurance; Natural Disaster Support
+    Program; Wellness Apps; Paid Parental Leave, Paid Time off inclusive of holidays
+    and sick time; One time WFH Office Set-Up Stipend; Retirement Plan; Financial
+    Planning; and Learning &amp; Development Budget.</em></p> <p><em data-stringify-type="italic">Note
+    on Pay Transparency:</em><br><em data-stringify-type="italic">Lattice provides
+    an estimate of the compensation for roles that may be hired as required by regulations.
+    Compensation may vary based on (a) location, as Lattice factors in specific location
+    when benchmarking compensation for most roles; (b) individual candidate skills
+    and qualifications; and (c) individual candidate experience. </em><em data-stringify-type="italic">Additionally,
+    Lattice leverages current market data to determine compensation, so posted compensation
+    figures are subject to change as new market data becomes available. The salary,
+    other compensation, and benefits information is accurate as of the date of this
+    posting. Lattice reserves the right to modify this information at any time, subject
+    to applicable law.</em></p> <p><em data-stringify-type="italic">Lattice welcomes
+    and encourages applications from people with disabilities. Accommodations are
+    available on request for candidates taking part in all aspects of the recruitment
+    and selection process.</em></p> <p><em data-stringify'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-08'
+  posting_date: '2026-04-08'
+  date_source: first_published
+  date_added: '2026-04-08'
+  discovered: '2026-04-08T10:15:26.224788+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

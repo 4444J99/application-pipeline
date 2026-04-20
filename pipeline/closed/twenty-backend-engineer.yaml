@@ -1,0 +1,116 @@
+id: twenty-backend-engineer
+name: Twenty Backend Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Twenty
+  url: https://jobs.ashbyhq.com/twenty
+  application_url: https://jobs.ashbyhq.com/twenty/c745288c-7ea3-4240-ae29-14fc4fdedcdf
+  portal: ashby
+  location: Washington DC
+  location_class: unknown
+  description: 'About the Company At Twenty, we''re taking on one of the most critical
+    challenges of our time: defending democracies in the digital age. We develop revolutionary
+    technologies that operate at the intersection of the cyber and electromagnetic
+    domains, where the speed of operations exceeds human sensing and complexity transcends
+    conventional boundaries. Our team doesn''t just solve problems – we deliver game-changing
+    outcomes that directly impact national security. We''re pragmatic optimists who
+    understand that while our mission of protecting America and its allies is challenging,
+    success is possible. Role Summary You’ll build the backend systems that power
+    Twenty’s cyber and electromagnetic capabilities—software that ingests real-time
+    operational signals, models complex relationships, and serves high-throughput
+    APIs at machine speed. You’ll design and ship reliable services in Go, working
+    with known-hard problems like graph data modeling, event-driven architectures,
+    and performance at scale. You’ll partner closely with product, frontend, and domain
+    experts to turn operator needs into durable platform capabilities. This role spans
+    both cloud and on-premises environments supporting mission-critical U.S. national
+    security outcomes. Who You Are You care about building systems that have real-world
+    impact, especially in national security and defense of democracies. You’re excited
+    by hard backend problems: throughput, latency, correctness, and operability under
+    pressure. You take pride in clean interfaces—APIs that are intuitive, consistent,
+    and built to evolve. You think in systems: data models, services, and workflows
+    that work together reliably. You’re pragmatic and iterative—ship value quickly,
+    then harden, measure, and improve. You collaborate well across disciplines, communicate
+    clearly, and welcome direct feedback. You default to ownership: you notice gaps,
+    propose solutions, and drive them to completion. What You’ll Do Design and implement
+    scalable backend services in Go that improve operator decision-making and response.
+    Build high-performance APIs that power customer-facing workflows and internal
+    platform capabilities. Model complex relationships in graph databases and optimize
+    schemas and queries for speed and clarity. Implement event-driven systems (e.g.,
+    with NATS) to process real-time operational data streams. Develop and maintain
+    automated tests to protect correctness, security, and performance as the system
+    evolves. Build and operate microservices deployed on AWS, with an eye toward resilience
+    and cost-aware scaling. Create and improve CI/CD pipelines that enable fast, secure
+    delivery of new capabilities. Partner with cyber operations experts to translate
+    domain needs into robust product features. Collaborate with frontend engineers
+    on API contracts and data structures that are efficient and usable. Evaluate new
+    technologies and patterns that could unlock better operational outcomes. Must
+    Have You have 3+ years of professional software development experience building
+    backend (or full-stack) applications. You have strong proficiency with Go (Golang)
+    and have shipped production services with it. You have experience working with
+    graph databases (Neo4j, AWS Neptune, or similar), including schema design and
+    query performance. You have working knowledge of event-driven architectures and
+    message queues/streaming systems. You have experience building and maintaining
+    APIs (REST and/or GraphQL). You have experience with cloud infrastructure, ideally
+    AWS, and understand cloud-native deployment patterns. You have hands-on experience
+    with containerization and microservices architectures. You have a strong foundation
+    in secure coding practices and can reason about security tradeoffs. You have a
+    bachelor’s degree in Computer Science, Software Engineering, or a related field,
+    or equivalent practical experience. Nice To Have You’ve delivered software in
+    defense, security, or other mission-critical environments. You’ve built systems
+    for analysts, operators, or high-tempo users where speed and reliability matter.
+    You’ve integrated AI/ML capabilities into production systems (inference, pipelines,
+    or tooling). You have experience with large-scale data processing and analytics
+    workloads. You’ve contributed meaningfully to open-source projects. You’ve used
+    observability tooling (metrics, tracing, logging) to debug and improve production
+    systems. Tech Environment (You Might Work With) Go (Golang), GraphQL/REST Graph
+    databases (Neo4j, AWS Neptune) and complex graph schemas NATS and event-driven
+    architectures AWS, microservices, containers CI/CD pipelines, automated testing
+    frameworks, infrastructure-as-code patterns Monitoring and observability tools
+    Security / Work Environment Some positions may require eligibility to obtain and
+    maintain a U.S. Government security clearance. This role may involve work in a
+    controlled environment. If this role sounds like you, apply and share with us
+    your interest. Some positions may require el'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.352016+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,96 @@
+id: snowflake-infrastructure-engineer-observe-by-snowflake
+name: Snowflake Infrastructure Engineer, Observe by Snowflake
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/143a2248-564b-4cfa-85f5-d47bac911d74
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Observe by Snowflake is an AI-powered observability
+    platform built on the Snowflake Data Cloud and engineered for scale. We ingest
+    and store logs, metrics, traces, and events on an open, scalable data lake using
+    open formats like Apache Iceberg, delivering deep correlation and long-term analytics
+    at dramatically lower cost. A dynamic Knowledge Graph and chat-based AI SRE provide
+    rich context and guided workflows so teams can move from detection to root cause
+    and resolution significantly faster. The Infrastructure team at Observe by Snowflake
+    is responsible for building, scaling, and operating the development and production
+    environments that power our observability platform. We are a small, highly collaborative
+    team with a broad scope, focused on delivering reliable infrastructure while continuously
+    improving the systems that support our engineers and customers. What You’ll Do
+    Design, build, and operate scalable cloud infrastructure in AWS supporting a high-scale
+    observability platform. Improve system reliability, performance, and operational
+    visibility across development and production environments. Develop and maintain
+    CI/CD pipelines and internal tooling to improve developer productivity and deployment
+    safety. Identify and mitigate security risks, and help maintain internal security
+    standards and compliance requirements. Build infrastructure that supports high
+    availability, scalability, and operational resilience Participate in an on-call
+    rotation, contributing to incident response and post-incident improvements. Partner
+    closely with engineering teams to ensure infrastructure supports evolving product
+    and platform needs. What We’re Looking For 2+ years of experience in Infrastructure
+    Engineering, Site Reliability Engineering (SRE), DevOps, or related roles. Experience
+    operating container orchestration platforms such as Kubernetes Hands-on experience
+    managing cloud infrastructure using Infrastructure-as-Code tools such as Terraform,
+    Ansible, or similar. Strong programming skills in Go, Python, or similar languages,
+    with a focus on automation and systems development. Experience supporting production
+    systems at scale, with a focus on reliability and operational excellence. Strong
+    problem-solving skills and the ability to balance short-term operational needs
+    with long-term infrastructure design. Experience with AWS, GCP, and Azure Nice
+    to Have Experience operating large-scale distributed systems. Familiarity with
+    observability platforms, telemetry pipelines, or monitoring infrastructure. Experience
+    improving developer platform tooling or internal infrastructure platforms. Experience
+    working in high-growth or rapidly evolving engineering environments. Snowflake
+    is growing fast, and we’re scaling our team to help enable and accelerate our
+    growth. We are looking for people who share our values, challenge ordinary thinking,
+    and push the pace of innovation while building a future for themselves and Snowflake.
+    How do you want to make your impact? For jobs located in the United States, please
+    visit the job posting on the Snowflake Careers Site for salary and benefits information:
+    careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.217528+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

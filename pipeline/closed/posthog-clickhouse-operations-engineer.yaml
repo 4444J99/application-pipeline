@@ -1,0 +1,102 @@
+id: posthog-clickhouse-operations-engineer
+name: 'PostHog ClickHouse Operations Engineer '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: PostHog
+  url: https://jobs.ashbyhq.com/posthog
+  application_url: https://jobs.ashbyhq.com/posthog/43dbf072-0fc1-48c9-8c1e-7416db7d4a14
+  portal: ashby
+  location: Remote
+  location_class: remote-global
+  description: 'About PostHog We''re shipping every product that companies need from
+    their first day, to the day they IPO, and beyond. The operating system for folks
+    who build products. We started with open-source product analytics, launched out
+    of Y Combinator''s W20 cohort . We''ve since shipped more than a dozen products
+    , including: A built-in data warehouse , so users can query product and customer
+    data together using custom SQL insights. A customer data platform , so they can
+    send their data wherever they need with ease. PostHog AI, an AI-powered analyst
+    that answers product questions, helps users find useful session recordings, and
+    writes custom SQL queries. Next on the roadmap are CRM, Workflow, revenue analytics,
+    and support products. When we say every product, we really mean it! We are: Product-led
+    . More than 100,000 companies have installed PostHog, mostly driven by word-of-mouth.
+    We have intensely strong product-market fit. Well-funded. We''ve raised more than
+    $100m from some of the world''s top investors . We''re set up for a long, ambitious
+    journey. Default alive . Revenue is growing 10% MoM on average, and we''re very
+    efficient. We raise money to push ambition and grow faster, not to keep the lights
+    on. We''re focused on building an awesome product for end users, hiring exceptional
+    teammates, shipping fast, and being as weird as possible . What you''ll be doing
+    ClickHouse is the core piece of infrastructure at PostHog . Every product and
+    customer relies on it to ingest, store, and query data. We need someone to automate,
+    manage, and maintain ClickHouse as we grow towards capturing trillions of events
+    per year and having one of the world’s largest clusters. This includes ClickHouse
+    operations and scaling infrastructure, as well as node and instance-level performance
+    optimization. We want to ensure that we have the right hardware deployed at the
+    right time for each workload on ClickHouse. You''ll build systems and automations
+    for the provisioning and scaling of our large ClickHouse clusters, handling over
+    100 PB''s of data. You''ll have the ability to investigate and experiment using
+    the latest hardware that cloud providers have to offer in order to find the optimal
+    setup for our solution. And yes, You''ll have a budget to do this. You''ll be
+    using Terraform, Ansible, and Kubernetes to automate the dynamic provisioning
+    of instances and work on a bleeding edge ClickHouse implementation, like open
+    format backed tables, and not just maintenance. We''re also building a query optimizer
+    for ClickHouse, which means you will work on query performance tooling. You’ll
+    fit right in if: You bring OLAP Database Experience. This role is focussed on
+    ClickHouse, but if you bring strong experience with other OLAP Databases, that''s
+    great. We''re looking for people that went into the internals of ClickHouse and
+    other OLAP Databases, not high level users. You bring experience in automating
+    Dynamic provisioning instances. Strong experience with utilizing Terraform, Ansible
+    and K8s is important. You bring experience with Scale and Complexity! We''re building
+    and operating high-scale complex data storage solutions, we need you to have experience
+    with the challenges this brings. You bring the Stack we need. We build using Python,
+    Terraform, Ansible, Kubernetes, AWS, and Zookeeper (An alternative to Zookeeper
+    is fine) You’re ready to do the best work of your career. We have incredible distribution,
+    a big financial cushion and an amazing team. There’s probably no better place
+    to see how far you can go. If this sounds like you, we should talk. We are committed
+    to ensuring a fair and accessible interview process. If you need any accommodations
+    or adjustments, please let us know. What’s in it for you? Now that we''ve told
+    you what you''ll be building with us, let''s talk about what we''ll be building
+    for you.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.6
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.378690+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

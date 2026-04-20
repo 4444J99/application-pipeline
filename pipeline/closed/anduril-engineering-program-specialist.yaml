@@ -1,0 +1,115 @@
+id: anduril-engineering-program-specialist
+name: Anduril Engineering Program Specialist
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5087300007?gh_jid=5087300007
+  portal: greenhouse
+  location: Irvine, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p>We are
+    building the future of situational awareness. The Sentry platform integrates robotics,
+    autonomy, hardware, and software to deliver mission-critical capabilities in defense
+    and security. With a rapidly growing fleet and an expanding set of modular hardware
+    platforms, our product organization partners closely with engineering, supply
+    chain, manufacturing, and operations to deliver complex systems at scale.<br><br></p>
+    <h3>ABOUT THE JOB</h3> <p>We are looking for an Engineering Program Specialist
+    to improve the systems, processes, and tooling that enable our software teams
+    to develop, deploy, and operate at scale. This role sits within the Product Management
+    Organization and works day-to-day with software engineers, TPMs, and operations
+    teams to establish better engineering practices, improve observability across
+    our production fleet, maintain critical documentation and knowledge systems, support
+    data operations, and drive continuous improvements to developer workflows and
+    project execution.<br><br></p> <h4>WHAT YOU’LL DO</h4> <p>Technical Documentation
+    &amp; Knowledge Management</p> <ul> <li>Drive improvements to technical documentation,
+    runbooks, and knowledge bases; ensure engineering documentation remains current,
+    discoverable, and organized across functions.</li> <li>Establish and maintain
+    system architecture documentation and service dependency mapping to improve developer
+    onboarding and the organization’s understanding.</li> </ul> <p>Scaling Operations
+    &amp; Operational Readiness</p> <ul> <li>Identify and drive mitigation of operational
+    scalability risks as deployed systems grow from prototypes to hundreds of assets.</li>
+    <li>Improve deployment automation and operational procedures to support faster,
+    more reliable asset deployment and fleet management at massive scale.</li> </ul>
+    <p>Software Release &amp; Observability</p> <ul> <li>Partner with engineering
+    teams to establish and maintain monitoring, logging, and observability practices
+    for deployed software releases and firmware/hardware subsystems.</li> <li>Define
+    KPIs for our fleet of deployed systems with engineering; identify gaps in observability
+    before they become issues in production.</li> </ul> <p>Data Operations Support</p>
+    <ul> <li>Coordinate with engineering and model operations teams to support CV
+    data collection pipelines, dataset management workflows, and data quality initiatives.</li>
+    <li>Coordinate with Test &amp; Evaluation teams to collect real-world data at
+    test sites aimed at improving model performance and filling gaps in training datasets.</li>
+    </ul> <p>Program &amp; Developer Support</p> <ul> <li>Support sprint planning
+    and execution by managing Jira workflows, tracking work progress, and implementing
+    automations that improve ticket hygiene and project visibility.</li> <li>Streamline
+    ticket creation and project tracking processes to reduce administrative overhead
+    for engineers while maintaining clear accountability and project timelines.</li>
+    </ul> <h4>REQUIRED QUALIFICATIONS</h4> <ul> <li><strong>3+ years</strong> minimum
+    experience in product development operations, program operations, or similar roles
+    within software or hardware/software organizations</li> <li>Strong understanding
+    of software development lifecycles, CI/CD pipelines, and production operations
+    in Agile environments; comfortable enough with technical systems to understand
+    engineering pain points and propose actionable improvements</li> <li>Experience
+    working with engineering tools and systems such as Datadog, CircleCI, Jira, Confluence,
+    git-based workflows, and dataset management platforms like FiftyOne and WandB</li>
+    <li>Ability to operate effectively in fast-paced, ambiguous environments with
+    strong communication skills across engineering, product, and operations teams</li>
+    <li>Eligible to obtain and maintain an active U.S. Secret security clearance</li>
+    </ul> <h4>PREFERRED QUALIFICATIONS</h4> <ul> <li>Active TS/SCI or DHS Security
+    Clearance</li> <li>Experience in robotics, aerospace, defense, or similarly complex
+    software domains.</li> </ul><div class="content-pay-transparency"><div class="pay-input"><div
+    class="title">US Salary Range</div><div class="pay-range"><span>$98,000</sp
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.826965+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

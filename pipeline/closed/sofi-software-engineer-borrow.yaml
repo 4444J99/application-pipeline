@@ -1,0 +1,115 @@
+id: sofi-software-engineer-borrow
+name: SoFi Software Engineer, Borrow
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: SoFi
+  url: https://boards.greenhouse.io/sofi
+  application_url: https://sofi.com/careers/job/7655008003?gh_jid=7655008003
+  portal: greenhouse
+  location: Cottonwood Heights, UT
+  location_class: us-onsite
+  description: '<div class="content-intro"><p><a href="https://www.sofi.com/sofi-employee-applicant-privacy-notice/"
+    target="_blank"><strong>Employee Applicant Privacy Notice</strong></a></p> <p><strong>Who
+    we are:</strong></p> <div> <p>Shape a brighter financial future with us.</p> <p>Together
+    with our members, we’re changing the way people think about and interact with
+    personal finance.</p> <p>We’re a next-generation financial services company and
+    national bank using innovative, mobile-first technology to help our millions of
+    members reach their goals. The industry is going through an unprecedented transformation,
+    and we’re at the forefront. We’re proud to come to work every day knowing that
+    what we do has a direct impact on people’s lives, with our core values guiding
+    us every step of the way. <strong>Join us to invest in yourself, your career,
+    and the financial world.</strong></p> </div></div><p><strong>*Strong preference
+    will be given to those candidates currently in the Helena or Seattle, Washington
+    area</strong></p> <p><strong>Software Engineer</strong></p> <p>We are looking
+    for eager Software Engineers excited to dive in and help build and support the
+    cutting edge technology systems of the Lending Platform teams. SoFi is trying
+    to push the boundaries of lending and provide next-level products for our members
+    and investors, and we are seeking anyone with big ideas and a drive to help achieve
+    our goals.&nbsp;</p> <p>As a software engineer, you will be part of a team that
+    is empowered to make technical decisions that have direct impact on the success
+    of the business. You will be in the middle of it all – working with partner teams
+    in Lending Engineering and Data Science, implementing new functionality, architecting
+    our system, squashing bugs, maintaining the health of our code, delivering scalable
+    and highly-available services, supporting data pipelines, and continually growing
+    as an engineer. The ideal candidate is both forward-thinking and hands-on, has
+    a strong sense of ownership and drive for delivery, and is a good mentor and co-worker.&nbsp;</p>
+    <p>At SoFi, we pride ourselves on the collaboration between Product, Design, and
+    Engineering and so you will be involved in the entire product lifecycle, from
+    ideation through building, testing, deploying, monitoring, supporting, and continual
+    improvements and evolution of mission-critical systems. You’ll face and solve
+    a wide range of challenges: technical, product, and operational, shaping your
+    personal growth and career along the way, as well as using your areas of expertise
+    to grow the capabilities of the rest of the team.</p> <p><strong>What You’ll Do:</strong></p>
+    <ul> <li>Use different object-oriented programming languages to build performant
+    and scalable applications in a cloud-based microservice architecture</li> <li>Participate
+    in shaping the technical architecture of the product</li> <li>Own technical solutions
+    for new product requirements</li> <li>Deliver highly available and scalable services
+    in a production environment</li> <li>Generate ideas for new initiatives and technologies</li>
+    <li>Collaborate with business stakeholders, product management, operations, and
+    peer technical teams to focus on delivering impactful products</li> <li>Mentoring
+    other members of the team and helping foster a learning environment within the
+    team across multiple offices</li> <li>Work in our core stack: Java, Kotlin, Microservices,
+    Spring Boot, Kafka, AWS, PostgreSQL and MongoDB</li> </ul> <p><strong>What You’ll
+    Need:</strong></p> <ul> <li>Bachelor’s Degree, in a technical field</li> <li>2+
+    years programming experience, ideally on a modern, microservice stack</li> <li>Our
+    core stack is: Java, Kotlin, Microservices, Spring Boot, Kafka, AWS, PostgreSQL,
+    MongoDB and Snowflake. Expertise with any modern Java frameworks, REST APIs, and
+    SQL and NoSQL databases.</li> <li>Strong sense of accountability and ownership;
+    driving a project from inception to completion</li> <li>Willingness to roll up
+    your sleeves, collaborate with others and get stuff done</li> <li>Experience working
+    in a team coding environment, refining designs together, working through code
+    reviews and managing requests</li> <li>Passionate about broadening your technical
+    skill set, trying out new ideas, and teaching others</li> <li>Effective communication
+    and ability to work independently with limited support or supervision</li> <li>Desire
+    to grow, learn, and collaborate with a team of engineers</li> </ul> <p><strong>Nice
+    to Have:</strong></p> <ul> <li>Full-stack engineering experience, or willingness
+    to expand your skills across our entire stack</li> <li>Experience with Kafka,
+    Docker, Kubernetes, Spring Boot, python, React, JavaScript, cloud infrastructure,
+    DBT, Airflow, Terraform and CI/CD</li> <li>Experience with cloud native services,
+    especially AWS services such as Lambda, Kinesis, SQS, S3 and/or Athena</li> <li>Fintech/finance
+    experience</li> <li>Experience solving data-heavy problems such as designing/building
+    a data'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.449677+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

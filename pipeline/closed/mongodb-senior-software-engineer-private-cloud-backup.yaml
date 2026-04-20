@@ -1,0 +1,114 @@
+id: mongodb-senior-software-engineer-private-cloud-backup
+name: MongoDB Senior Software Engineer, Private Cloud Backup
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7578651
+  portal: greenhouse
+  location: Dublin; Ireland
+  location_class: international
+  description: <p>The Enterprise Advanced team is a diverse group of individuals across
+    Europe and India, who develop software to run MongoDB on any type of infrastructure
+    at global scale. Our software and services allow users to deploy fault-tolerant,
+    globally distributed MongoDB clusters in minutes. The main focus of this department
+    is to adapt our software to manage MongoDB clusters which are deployed in data
+    centers or private and hybrid cloud platforms.</p> <p>The Backup Team delivers
+    essential infrastructure to help our customers in their hour of need - providing
+    the ability to quickly restore a massive, distributed database to any point in
+    time at the click of a button. The Backup Team’s mission is to make MongoDB backup
+    more reliable, faster, and also cheaper.&nbsp; This team is responsible for the
+    Backup Agent (Go), the extensive server-side infrastructure (Java) which manages
+    100s of TB of data and processes billions of operations per day, and the user
+    interface (Javascript)&nbsp; that customers use to manage their backups. Common
+    project themes are performance, scaling, and ease of use.&nbsp;</p> <div id="message-list_1769788823.197109"
+    data-qa="virtual-list-item" data-item-key="1769788823.197109"> <div data-qa="message_container"
+    data-qa-unprocessed="false" data-qa-placeholder="false" data-msg-ts="1769788823.197109"
+    data-msg-channel-id="D09RUNCS8P8"> <div data-qa-hover="true"> <div> <div> <div
+    data-qa="message_content"> <div> <div data-qa="message-text"> <div data-qa="block-kit-renderer">
+    <div> <div> <div>This role can be based out of our Dublin office, or remotely
+    in the Ireland region.</div> </div> </div> </div> </div> </div> </div> </div>
+    </div> </div> </div> </div> <h3>We're looking for someone who is</h3> <ul> <li>Skilled
+    at writing large-scale, distributed backend systems in a compiled language (Java,
+    C#, Go, etc.)</li> <li>Fond of chasing down tough problems in a distributed systems
+    environment</li> <li>Cool under pressure - has wrangled production crises, and
+    secretly finds this a little fun</li> <li>Experienced with Linux, and able to
+    correlate application performance problems with underlying hardware limits</li>
+    <li>Comfortable working across the stack of a modern web application</li> <li>Always
+    striving to expand their knowledge</li> <li>Curious, collaborative and intellectually
+    honest&nbsp;</li> </ul> <h3>Responsibilities</h3> <ul> <li>Work closely with product
+    teams, considering the user’s perspective while helping the team achieve success</li>
+    <li>Collaborate with team members over best practices and core concepts</li> <li>Hold
+    yourself accountable to your actions, maintaining the balance between accomplishing
+    goals with research &amp; development</li> <li>Own<a href="https://www.mongodb.com/company">
+    our core values</a> and adhere to them in your work, and stay up to date with
+    best practices in web engineering&nbsp;</li> </ul> <h3>Success Measures</h3> <p>A
+    Software Engineer will be successful in this role when they</p> <ul> <li>Are open,
+    honest and willing to contribute and collaborate with others</li> <li>Develop
+    confidence in finding their way across the platform</li> <li>Can take responsibility
+    for the planning and execution of a major feature, representing Engineering when
+    working with Product and Design</li> <li>Are willing to learn and contribute to
+    all parts of the stack</li> <li>Are resolute in their approach to problem solving,
+    balancing the needs of their team with the willingness to get to the bottom of
+    issues</li> </ul> <h3>About MongoDB</h3> <p>MongoDB is built for change, empowering
+    our customers and our people to innovate at the speed of the market. We have redefined
+    the database for the AI era, enabling innovators to create, transform, and disrupt
+    industries with software. MongoDB’s unified database platform—the most widely
+    available, globally distributed database on the market—helps organizations modernize
+    legacy workloads, embrace innovation, and unleash AI. Our cloud-native platform,
+    MongoDB Atlas, is the only globally distributed, multi-cloud database and is available
+    across AWS, Google Cloud, and Microsoft Azure.</p> <p>With offices worldwide and
+    nearly 60,000 customers—including 75% of the Fortune 100 and AI-native startups—relying
+    on MongoDB for their most important applications, we’re powering the next era
+    of software.</p> <p>Our compass at MongoDB is our <a href="https://www.mongodb.com/company">Leadership
+    Commitment,</a> guiding how and why we make decisions, show up for each other,
+    and win. It’s what makes us MongoDB.&nbsp;</p> <p>To drive the personal growth
+    and business impact of our employees, we’re committed to developing a supportive
+    and enriching culture for everyone. <a href="https://www.mongodb.com/company/blog/culture/employee-benefits-that-make-a-difference-at-mongodb">From
+    employee affinity groups, to fertility assistance and a generous parental leave
+    policy</a>, we value our employees’ wellbeing and want to support them along every
+    step of their profession
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.321900+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

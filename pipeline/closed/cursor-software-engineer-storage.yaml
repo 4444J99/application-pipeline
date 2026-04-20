@@ -1,0 +1,87 @@
+id: cursor-software-engineer-storage
+name: Cursor Software Engineer, Storage
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Cursor
+  url: https://jobs.ashbyhq.com/cursor
+  application_url: https://www.cursor.com/careers/software-engineer-storage
+  portal: cursor-native
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Our mission is to automate coding. The first step in our journey is
+    to build the best tool for professional programmers, using a combination of inventive
+    research, design, and engineering. Our organization is very flat, and our team
+    is small and talent dense. We particularly like people who are truth-seeking,
+    passionate, and creative. We enjoy spirited debate, crazy ideas, and shipping
+    code. About the Role As a Software Engineer on the Storage team at Cursor, you''ll
+    own the data layer that underpins every product surface: the databases, caches,
+    and the strategy for how teams provision, query, and scale their data stores.
+    Millions of developers depend on Cursor every day, and the future of our storage
+    architecture is one of the highest-leverage problems at the company: get it right,
+    and every team ships faster, every product surface gets more reliable, and Cursor
+    can scale to meet explosive demand. You''ll design and execute the path to a robust,
+    multi-database topology built for that growth. Example projects include... Designing
+    the next-generation data architecture: evolving our storage layer into a partitioned,
+    resilient topology that keeps pace with Cursor''s rapid growth. Building query
+    attribution and guardrails: instrumenting every database query by service, catching
+    bad patterns before they hit production, and making it impossible to ship problematic
+    queries without review. Defining the "when to use what" strategy for data stores:
+    creating clear guidance and golden pathways so every team picks the right engine
+    for their workload without second-guessing. Owning cache infrastructure end-to-end:
+    reliability, capacity planning, and patterns that let product teams move fast
+    without worrying about cache correctness. You may be a fit if You have deep experience
+    with relational databases at scale, especially Postgres, MySQL, or similar OLTP
+    systems. You''ve tackled database sharding, migration, or decomposition problems
+    in production environments. You understand the tradeoffs between different storage
+    engines and can help teams make the right choices for their workloads. You care
+    about operational excellence: backups, monitoring, query performance, and capacity
+    planning are things you think about proactively. You have strong software engineering
+    fundamentals and enjoy building systems that other engineers depend on. Applying
+    If there appears to be a fit, we''ll reach out to schedule 2-3 short technicals.
+    After, we''ll schedule an onsite in our office, where you''ll work on a small
+    project, discuss ideas, and meet the team. #LI-DNI'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 6
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-07'
+  posting_date: '2026-04-07'
+  date_source: published_at
+  date_added: '2026-04-07'
+  discovered: '2026-04-07T10:15:28.438932+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

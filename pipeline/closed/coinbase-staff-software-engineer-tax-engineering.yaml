@@ -1,0 +1,118 @@
+id: coinbase-staff-software-engineer-tax-engineering
+name: Coinbase Staff Software Engineer - Tax Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7773216?gh_jid=7773216
+  portal: greenhouse
+  location: Remote - Canada
+  location_class: international
+  description: "<div class=\"content-intro\"><p>Ready to be pushed beyond what you\
+    \ think you\u2019re capable of?</p> <p>At Coinbase, our mission is to increase\
+    \ economic freedom in the world. It\u2019s a massive, ambitious opportunity that\
+    \ demands the best of us, every day, as we build the emerging onchain platform\
+    \ \u2014 and with it, the future global financial system.</p> <p>To achieve our\
+    \ mission, we\u2019re seeking a very specific candidate. We want someone who is\
+    \ passionate about our mission and who believes in the power of crypto and blockchain\
+    \ technology to update the financial system. We want someone who is eager to leave\
+    \ their mark on the world, who relishes the pressure and privilege of working\
+    \ with high caliber colleagues, and who actively seeks feedback to keep leveling\
+    \ up. We want someone who will run towards, not away from, solving the company\u2019\
+    s hardest problems.</p> <p>Our <a href=\"https://www.coinbase.com/mission\">work\
+    \ culture</a> is intense and isn\u2019t for everyone. But if you want to build\
+    \ the future alongside others who excel in their disciplines and expect the same\
+    \ from you, there\u2019s no better place to be.</p> <p>While many roles at Coinbase\
+    \ are remote-first, we are not remote-only. In-person participation is required\
+    \ throughout the year. Team and company-wide offsites are held multiple times\
+    \ annually to foster collaboration, connection, and alignment. Attendance is expected\
+    \ and fully supported.</p></div><p>We're hiring a Staff Software Engineer to technically\
+    \ lead the Tax Engineering team within the Consumer Product Group. Tax Engineering\
+    \ sits at the intersection of every trade, every payment, and every product Coinbase\
+    \ ships on the hot path. When a user buys Bitcoin, sells an equity, earns staking\
+    \ rewards, or redeems an Advisor-managed strategy, our systems calculate cost\
+    \ basis, track gain/loss, determine withholding obligations, and produce the reporting\
+    \ that keeps Coinbase compliant across every product line and legal entity globally.\
+    \ As the Staff Software Engineer on the team you'll define multi-quarter technical\
+    \ strategies, build systems with stringent correctness and scalability requirements,\
+    \ and set the technical direction for how Coinbase handles one of the most complex\
+    \ domains in financial services.</p> <p>Ownership &amp; impact</p> <p class=\"\
+    mb-2 whitespace-pre-wrap\">In this role, you will:</p> <ul> <li><strong>Own the\
+    \ architecture and evolution</strong> of real-time and offline systems that calculate,\
+    \ track, and report taxes for crypto transactions at scale \u2014 ensuring correctness,\
+    \ low latency, and 24x7 availability.</li> <li><strong>Define multi-quarter technical\
+    \ strategies</strong> for the Tax Platform, identifying opportunities to simplify\
+    \ complexity, improve reliability, and expand capabilities as Coinbase launches\
+    \ new asset types and products.</li> <li><strong>Architect and build distributed\
+    \ systems</strong> that power tax calculation engines, cost basis tracking, and\
+    \ tax reporting APIs \u2014 serving millions of customers with strict accuracy\
+    \ requirements.</li> <li><strong>Lead technical design and code reviews</strong>,\
+    \ setting standards for quality, performance, and maintainability across the team.\
+    \ Mentor engineers and elevate the technical bar.</li> <li><strong>Partner cross-functionally</strong>\
+    \ with product, data, compliance, and frontend teams to deliver tax features that\
+    \ meet regulatory requirements and delight customers \u2014 from annual tax reports\
+    \ to real-time gain/loss calculations.</li> <li><strong>Drive operational excellence</strong>\
+    \ by owning system reliability, incident response, and performance optimization\
+    \ for critical tax infrastructure that operates at the scale and speed of crypto\
+    \ markets.</li> </ul> <p class=\"mb-2 whitespace-pre-wrap\"><strong>Minimum qualifications</strong></p>\
+    \ <ul> <li>8+ years of experience in software engineering, with significant experience\
+    \ architecting and developing solutions to ambiguous, high-impact problems.</li>\
+    \ <li>Proven track record designing, building, scaling, and maintaining production-level\
+    \ distributed systems with stringent correctness and availability requirements.</li>\
+    \ <li>Strong experience with backend languages (e.g., Go, Python, or similar)\
+    \ and modern infrastructure patterns including microservices, event-driven architectures,\
+    \ and REST/GraphQL API design.</li> <li>Deep expertise in data-intensive systems\
+    \ \u2014 experience with Kafka, Clickhouse, or similar tools for real-time and\
+    \ batch processing at scale.</li> <li>Demonstrated technical leadership: leading\
+    \ large projects with long-term impact, mentoring engineers, and driving alignment\
+    \ across teams on technical strategy.</li> <li>Excellent judgment on prioritization\
+    \ and the ability to break down ambiguous problems into actionable technical plans.</li>\
+    \ <li>Demonstrates the ability to responsibly use generative AI tools and copilots\
+    \ (e.g., LibreChat, Gemini, Glean) in daily workflows, continuously learn as tools\
+    \ evolve, and apply human-in-the-loop practices to deliver business-ready outputs\
+    \ and drive measurable impr"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-09'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.130966+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

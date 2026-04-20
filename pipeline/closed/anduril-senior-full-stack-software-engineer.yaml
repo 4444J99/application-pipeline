@@ -1,0 +1,115 @@
+id: anduril-senior-full-stack-software-engineer
+name: Anduril Senior Full Stack Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5093535007?gh_jid=5093535007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM&nbsp;</h3> <p>We
+    are looking for a Senior Full Stack Senior Software Engineer to join the ArsenalOS
+    team. As a Full Stack Senior Software Engineer on ArsenalOS you will be architecting
+    and implementing mission-critical solutions that enforce lean business process,
+    add multiplicative leverage to Anduril employees, and scale Anduril into a next-generation
+    defense prime.<br><br></p> <h3>ABOUT THE JOB</h3> <p>As a member of ArsenalOS
+    you will be an integral part of building out Forge, Anduril’s custom supply chain,
+    manufacturing, and deployment mission execution software. We spend time on the
+    factory floor, then provide solutions for the issues the factory faces.</p> <p>The
+    ideal candidate will have expertise in developing custom software solutions that
+    optimize production processes, analyze manufacturing data, and drive industry-changing
+    improvements. They should be proficient in programming languages relevant to web
+    development and industrial applications, have experience with data analytics and
+    visualization, and understand the principles of modern manufacturing. The ability
+    to translate complex manufacturing challenges into elegant software solutions
+    is crucial, as is a passion for pushing the boundaries of what's possible in industrial
+    technology. This role requires a mix of technical prowess, creative problem-solving,
+    and the vision to see how software can reshape manufacturing practices across
+    the industry.</p> <h4>WHAT YOU’LL DO&nbsp;</h4> <ul> <li>Own and deliver features
+    for Forge, Anduril’s production platform.</li> <li>Level up our team’s applications
+    through quality code contribution and writing tests.</li> <li>Leverage frontier
+    AI tooling for development, and contribute to our local Forge harness.</li> <li>Partner
+    with the factory floor to enable high rate build of Roadrunner, Fury, and other
+    Anduril products.</li> <li>Join an on-call rotation for Forge support of the production
+    floor.</li> <li>Collaborate cross-functionally with systems architecture, software
+    product and design, factory systems, and production digital tools.</li> </ul>
+    <h4>REQUIRED QUALIFICATIONS&nbsp;</h4> <ul> <li>6+ years of experience in a software
+    engineering role building products, ideally in a fast-paced environment.</li>
+    <li>Have an area of deep expertise in one or more portions of full stack web development
+    (i.e. backend, frontend, integration).</li> <li>Degree in Computer Science, Information
+    Systems, Electrical Engineering or related technical degree.</li> <li>Experience
+    working with large enterprise applications and platforms with high availability
+    requirements.</li> <li>Proficiency with web-based technologies such as Javascript,
+    React, Typescript, and web frameworks such as React or NextJS.</li> <li>U.S. Person
+    status is required as this position needs to access export controlled data.</li>
+    </ul> <p>&nbsp;</p> <h4>PREFERRED QUALIFICATIONS</h4> <ul> <li>Experience in hyper
+    growth startup-like environments, with demonstrated successes in scaling and maturing
+    software development processes, team culture and methods, and ability to balance
+    short-term and long-term trade offs.</li> <li>Understanding of three letter acronyms
+    such as ERP, MES, WMS, CRM, etc.</li> <li>Eligible to obtain and maintain a U.S.
+    Top Secret Security clearance.</li> <li>Experience in manufacturing industries
+    with hands on experience on assembly lines.</li> </ul> <p>&nbsp;</p> <p>&nbsp;</p><div
+    class="content-pay-transparency"><div class="pay-input"><div class="title">US
+    Salary Range</div><div class="pay-range"><span>$191,000</span><span class="divider">&mdash;</span><span>$253,000
+    USD</span></div></div></div><div class="content-conclusion"><p><span data-contrast="auto">The
+    salary range for this role is an estimate based on a wide range of compensation
+    factors, inclusive of base salary only. Actual salary offer may vary based on
+    (but not limited to) work experience, education and/or training, critical skills,
+    and/or business considerations. Highly competitive equity grants are included
+    in the majority of full time offers; and are considered part of Anduril's total
+    compensation package. Additionally, Anduril offers top-tier benefits for full-time
+    employees, including:</span><span data
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.581778+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

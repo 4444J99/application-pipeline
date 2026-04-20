@@ -1,0 +1,114 @@
+id: posthog-backend-engineer-billing
+name: PostHog Backend Engineer — Billing
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: PostHog
+  url: https://jobs.ashbyhq.com/posthog
+  application_url: https://jobs.ashbyhq.com/posthog/1803b1de-d33b-4542-8e38-b6c4954cb789
+  portal: ashby
+  location: Remote
+  location_class: remote-global
+  description: 'About PostHog We''re shipping every product that companies need to
+    run their business from their first day, to the day they IPO, and beyond. The
+    operating system for folks who build software. We started with open-source product
+    analytics, launched out of Y Combinator''s W20 cohort . We''ve since shipped more
+    than a dozen products , including: A built-in data warehouse , so users can query
+    product and customer data together using custom SQL insights. A customer data
+    platform , so they can send their data wherever they need with ease. PostHog AI
+    , an AI-powered analyst that answers product questions, helps users find useful
+    session recordings, and writes custom SQL queries. Next on the roadmap are CRM,
+    Workflow, revenue analytics, and support products. When we say every product that
+    companies need to run their business, we really mean it! We are: Product-led .
+    More than 100,000 companies have installed PostHog, mostly driven by word-of-mouth.
+    We have intensely strong product-market fit. Default alive . Revenue is growing
+    10% MoM on average, and we''re very efficient. We raise money to push ambition
+    and grow faster, not to keep the lights on. Well-funded. We''ve raised more than
+    $100m from some of the world''s top investors . We''re set up for a long, ambitious
+    journey. We''re focused on building an awesome product for end users, hiring exceptional
+    teammates, shipping fast, and being as weird as possible Who we’re looking for
+    Someone has to make sure PostHog actually gets paid. That''s us. We have 14+ usage-based
+    products, subscription add-ons, and soon seat-based pricing with credit pools.
+    Every dollar PostHog makes flows through what we build. If we screw up, customers
+    lose trust and churn - doesn''t matter how good the product is. Execs, product,
+    and GTM teams can''t make good decisions without the data we provide. We launch
+    new products all the time and we always want to do what makes sense for customers
+    rather than fit things into a rigid existing system. That means we need to build
+    billing infrastructure that''s modular enough to support whatever we throw at
+    it next, fast enough to iterate on without breaking things, and reliable enough
+    that the numbers are always right. Getting all three perfect at once is impossible
+    - finding the right balance is the main challenge. Are we there yet? Not even
+    close. But you''ll help us get there faster. What you''ll be doing Scaling our
+    billing system to $100M+ revenue ( the hundy ) by the end of 2026, and well beyond
+    (the billy?). Building billing primitives flexible enough that launching a new
+    pricing model doesn''t require rearchitecting everything. Making our usage reporting
+    and limiting near-realtime. Turning usage and messy raw invoice data into actionable
+    internal reports, accurate forecasts, and compliant financials. Making all of
+    the above go brrr. Example projects: PostHog is generally very open about what
+    we build, but our billing repo understandably isn''t. Here''s a taste of what
+    we''re working on right now though (see our team page for more): Implementing
+    a new, ledger-based revenue model and re-building all dashboards and investor
+    reports on top of it. Making billing the source of truth for pricing, subscriptions
+    and invoicing. Shipping 5+ pricing launches and changes this quarter, including
+    two new pricing models. You’ll fit right in if: Strong backend engineer. Python,
+    SQL, and complex data modeling should feel like home. Edge cases make you excited,
+    not anxious. Experience with data pipelines, task queues, and workflow orchestration
+    - we still have a lot of Celery but are leaning more into Temporal and Dagster.
+    If you''ve done something manually twice (or seen someone else do it) - you''re
+    already building an automation or an internal tool to make it easier. Happy paths
+    are maybe 10% of billing. You treat error handling, rollbacks, and retries as
+    the actual work - not TODOs you''ll "get to later". You don''t need someone to
+    tell you what to build. You''ve started a company, led a major project from scratch,
+    or shipped an impressive side project. Nice to haves: You''ve built and scaled
+    usage-based billing systems before (and have the scars to prove it). You get weirdly
+    excited about revenue modeling, forecasting and accounting ledgers. You have a
+    decent guess which one of these we made up: Q2C / AR / B2R / GAAP / ASC 606 /
+    NRR. This role is not for you if: You only want to work with other engineers -
+    billing touches every team at PostHog, from product to finance to GTM to marketing.
+    You need clearly defined requirements before you start building. You think billing
+    is a solved problem - we thought so too, once. If you have a disability, please
+    let us know if there''s any way we can make the interview process better for you
+    - we''re happy to accommodate! #LI-DNI'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.384662+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

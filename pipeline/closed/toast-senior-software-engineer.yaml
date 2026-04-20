@@ -1,0 +1,114 @@
+id: toast-senior-software-engineer
+name: Toast Senior Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7522622
+  portal: greenhouse
+  location: Bangalore, India
+  location_class: international
+  description: '<p>Toast has grown to be a leading hospitality software company in
+    the US and is now setting its sights on our next stages of growth.&nbsp; As the
+    business continues to grow, there is increased demand to enhance the enterprise
+    level of support in the product. Toast customers who managed several restaurants
+    a few years ago are now expanding their business and adding new locations. New
+    enterprise customers are looking to leverage Toast technology to support the growth
+    of their business in new ways. These exciting new opportunities will require Toast
+    to bolster our product offerings</p> <p><strong>Are you bready* for a change?</strong></p>
+    <p>We are building the ‘Enterprise Payments’ team from the ground up, that will
+    help lead Toast on its journey for expansion to Enterprise customers (like Marriott&nbsp;
+    etc), globally. This team will help fuel Toast’s expansion by developing&nbsp;
+    &amp; supporting a strong payments foundation.</p> <p>As a Senior-Software-Engineer
+    on this&nbsp; team, you would get to build, innovate and upscale the next generation
+    of our software solutions, with a Global first mindset, working closely with UX/PM/QA
+    and customers to deliver the most value that fits our customers market and culture.&nbsp;</p>
+    <p><strong>About this </strong><strong><em>roll</em></strong><strong>* (Responsibilities)&nbsp;</strong></p>
+    <ul> <li>Design, build, deploy, and maintain highly resilient and scalable features
+    across Toast’s Enterprise line-of-products.</li> <li>Lead complex projects that
+    may span multiple teams &amp; systems.</li> <li>Collaborate with PM, UX &amp;
+    QA, and other engineers, on the development of new features &amp; products.</li>
+    <li>Partner with a wide array of teams across Toast.</li> <li>Drive high-quality
+    team output and ensure that the team makes solid technical decisions.</li> <li>Collaborate
+    with peer engineers, provide design feedback, and participate in code reviews.</li>
+    <li>Champion best practices for SDLC &amp; CICD life-cycles.</li> <li>Ensure quality
+    by building automated testing for changes.</li> <li>Roll* features out to customers,
+    ensuring successful delivery and operation, including monitoring for success and/or
+    failures.</li> <li>Mentor &amp; coach your peer engineers.</li> </ul> <p><strong>Do
+    you have the right </strong><strong><em>ingredients*</em></strong><strong>? (Requirements)</strong></p>
+    <ul> <li>Bachelor’s or Master’s degree preferred</li> <li>5+ years experience
+    building backend services and RESTFUL APIs.</li> <li>Proficiency in Object Oriented
+    Programming Languages such as Java, Kotlin etc.&nbsp;</li> <li>Have strong understanding
+    &amp; hands-on experience of building fault-tolerant, highly-scalable &amp; secure
+    distributed systems.</li> <li>Proficiency with sql/nosql databases, strong understanding
+    of distributed datastores and knowledge of when to use what.</li> <li>Strong foundations
+    in data structures &amp; algorithms.</li> <li>Passion for building great software
+    products.</li> <li>You demonstrate humility, empathy and respectfulness.</li>
+    <li>Deep understanding of testing, quality, and proficiency in SDLC&nbsp; best
+    practices.</li> <li>Proficiency in testing applications &amp; delivering high-quality,
+    reliable apps to production.</li> <li>Excellent cross-team communication skills
+    on complex technical topics.</li> <li>Experience working with Cloud Infrastructure
+    (AWS or similar).</li> </ul> <p><strong>Special Sauce* </strong>(Nice to Haves)</p>
+    <ul> <li>Have knowledge and hands-on experience of building Android applications.</li>
+    </ul> <p>We are hiring individuals with a wide range of experience so if you have
+    more or less than these exact roles, please still apply!</p> <p><strong>Work Mode:
+    </strong>This role follows a hybrid work model, requiring a minimum of 2 days
+    per week in the office.</p> <p><strong>What we use to make our dish: (Our Tech
+    Stack)</strong></p> <ul> <li>Android apps built using Kotlin &amp; Java.</li>
+    <li>Backend services which follow a microservice architecture written using Kotlin,
+    Java and DropWizard</li> <li>Event driven messaging &amp; streaming using Apache
+    Pulsar &amp; RabbitMQ.</li> <li>Apache Camel for implementing Enterprise Integration
+    Pattern.</li> <li>React &amp; ES6 based Frontend SPAs leveraging Tailwind, GraphQL
+    and Storybook.</li> <li>DynamoDb &amp; Postgres as core persistence data-storage
+    layers.</li> <li>Datadog &amp; Sentry for system and application metric and monitoring.&nbsp;</li>
+    <li>Splunk for log aggregation.</li> <li>FireHydrant for alerting.</li> </ul><div
+    class="content-conclusion"><p><strong>How Toast Uses AI in its Hiring Process</strong></p>
+    <p>Throughout the hiring process, our goal is to get to know you. We use AI tools
+    to support our recruiters and interviewers with tasks like note-taking, summarization,
+    and documentation of interviews to ensure they can be fully focused on your conversation.
+    All hiring decisions are made by people.</p> <p><strong><strong data-stringify-type="bold">Diversity,
+    Equity, '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.459722+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

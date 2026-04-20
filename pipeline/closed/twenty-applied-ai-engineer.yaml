@@ -1,0 +1,116 @@
+id: twenty-applied-ai-engineer
+name: Twenty Applied AI Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Twenty
+  url: https://jobs.ashbyhq.com/twenty
+  application_url: https://jobs.ashbyhq.com/twenty/490ea911-5a82-449a-89ed-c40f2beff9d5
+  portal: ashby
+  location: Washington DC
+  location_class: unknown
+  description: 'About the Company At Twenty, we''re taking on one of the most critical
+    challenges of our time: defending democracies in the digital age. We develop revolutionary
+    technologies that operate at the intersection of the cyber and electromagnetic
+    domains, where the speed of operations exceeds human sensing and complexity transcends
+    conventional boundaries. Our team doesn''t just solve problems – we deliver game-changing
+    outcomes that directly impact national security. We''re pragmatic optimists who
+    understand that while our mission of protecting America and its allies is challenging,
+    success is possible. Role Summary You’ll build and ship language-model-powered
+    systems that strengthen Twenty’s mission-critical cyber capabilities for U.S.
+    national security. You’ll own the end-to-end workflow—from curating specialized
+    datasets and post-training models to deploying reliable inference and retrieval
+    systems in production. You’ll partner closely with product and engineering to
+    translate real operational needs into high-performing AI features, operating across
+    cloud and on-premises environments where speed, correctness, and security matter.
+    Who You Are You’re motivated by real-world outcomes and want your work to directly
+    impact national security missions. You care about rigor: clean data, measurable
+    evaluation, and repeatable experiments beat demos. You balance research curiosity
+    with product instincts—you ship, observe, iterate, and harden. You’re comfortable
+    working across cloud and on-premises constraints and adapting to the environment.
+    You communicate clearly with engineers and non-ML partners, and you write documentation
+    people use. You think in systems: models, retrieval, infrastructure, and feedback
+    loops all have to work together. You thrive in fast-moving teams with high standards,
+    direct feedback, and high ownership. What You’ll Do Create, clean, and maintain
+    high-quality training and evaluation datasets for specialized AI use cases. Fine-tune
+    language models (small specialized through medium foundation models) for mission
+    needs. Implement post-training and alignment approaches to improve task performance
+    and reliability. Build retrieval-augmented generation (RAG) systems that ground
+    model outputs in external knowledge. Develop and optimize model serving infrastructure
+    for production deployments. Design evaluation frameworks and test harnesses to
+    measure quality, latency, and regressions. Integrate AI capabilities into applications
+    and workflows using modern orchestration frameworks. Collaborate with cross-functional
+    partners to identify high-leverage use cases and deliver solutions. Produce clear
+    technical documentation for models, datasets, and operational processes. Must
+    Have You have 4+ years of professional software development experience building
+    and supporting ML/AI-enabled applications. You have strong Python skills and deep
+    learning experience with PyTorch, TensorFlow, or JAX. You have hands-on experience
+    with LLM post-training methods (e.g., continued pre-training, SFT, RLHF, DPO,
+    PPO, GRPO). You have experience curating, cleaning, and preprocessing datasets
+    for training and evaluation. You have working knowledge of relational, graph,
+    and vector database concepts. You have experience designing or using evaluation
+    metrics and testing procedures for LLMs and agents. You have experience integrating
+    LLM/agent systems using frameworks like Pydantic-AI, LangChain/LangGraph, or CrewAI.
+    You have a Bachelor’s degree in Computer Science, Software Engineering, or a related
+    field (or equivalent practical experience). Nice To Have You have deployed models
+    to production and supported them through real-world usage and incidents. You have
+    experience with distributed training systems and performance debugging at scale.
+    You have implemented quantization or other optimization techniques to improve
+    inference efficiency. You have strong prompt engineering and model alignment instincts
+    for reliability and control. You have experience building MLOps/LLMOps/AgentOps
+    practices (versioning, rollout, monitoring). Tech Environment (You Might Work
+    With) Deep learning stacks: PyTorch, TensorFlow, JAX LLMOps and serving: vLLM,
+    TensorRT, ONNX Retrieval and storage: pgvector, ChromaDB, Pinecone, Milvus, Weaviate;
+    relational/graph databases Orchestration: Pydantic-AI, LangChain/LangGraph, CrewAI
+    Infra: Docker, Kubernetes; cloud platforms (AWS, GCP, Azure) Experiment and artifact
+    tracking: dataset/prompt/model versioning Security / Work Environment Must be
+    eligible to obtain and maintain a U.S. Government security clearance. If this
+    role sounds like you, apply and share with us your interest. Some positions may
+    require eligibility to obtain a U.S. Government security clearance. Any clearance
+    requirement will be listed in the role description. Twenty is an equal opportunity
+    employer. We consider all qualified applicants without regard to race, color,
+    religion, sex, sexual orientation, gender identity, national origin, age, veteran
+    statu'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.349946+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

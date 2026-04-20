@@ -1,0 +1,116 @@
+id: relativity-senior-infrastructure-engineer
+name: Relativity Senior Infrastructure Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Relativity
+  url: https://boards.greenhouse.io/relativity
+  application_url: https://boards.greenhouse.io/relativity/jobs/8487244002?gh_jid=8487244002
+  portal: greenhouse
+  location: Cape Canaveral, Florida
+  location_class: unknown
+  description: '<div class="content-intro"><p><span style="font-family: arial, helvetica,
+    sans-serif; font-size: 10pt;">At Relativity Space, we’re building rockets to serve
+    today’s needs and tomorrow’s breakthroughs. Our&nbsp;Terran R vehicle will deliver
+    customer payloads to orbit, meeting the growing demand for launch&nbsp;capacity.
+    But that’s just the start. Achieving commercial success with Terran R will unlock
+    new&nbsp;opportunities to advance science, exploration, and innovation, pioneering
+    progress that reaches beyond&nbsp;the known.</span></p> <p><span style="font-family:
+    arial, helvetica, sans-serif; font-size: 10pt;">Joining Relativity means becoming
+    part of something where autonomy, ownership, and impact exist at every level.
+    Here, you''re not just executing tasks; you''re solving problems that haven’t
+    been solved before, helping develop a rocket, a factory, and a business from the
+    ground up. Whether you’re in propulsion, manufacturing, software, avionics, or
+    a corporate function, you’ll collaborate across teams, shape decisions, and see
+    your work come to life in record time. Relativity is a place where creativity
+    and </span><span style="font-family: arial, helvetica, sans-serif; font-size:
+    10pt;">technical rigor go hand in hand, and your voice will help define the stories
+    we’re writing together. Now&nbsp;is a unique moment in time where it’s early enough
+    to leave your mark on the product, the process, and&nbsp;the culture, but far
+    enough along that Terran R is tangible and picking up momentum. The most&nbsp;meaningful
+    work of your career is waiting. Join us.</span></p></div><p><span style="font-family:
+    arial, helvetica, sans-serif; font-size: 10pt;"><strong><span data-contrast="none">About
+    the Team:</span></strong></span></p> <p><span style="font-family: arial, helvetica,
+    sans-serif; font-size: 10pt;">The Launch team operates at the intersection of
+    every major aspect of Terran R, from stages and payloads to ground systems, launch,
+    landing, and refurbishment. The Cape is the only place where you see it all come
+    together, offering a level of exposure and responsibility unmatched elsewhere
+    in the program. This is where first flights happen, where history is built on
+    top of history, and where the scale of what''s underway is unlike anything in
+    modern aerospace. The mission stays the same, but the work evolves with every
+    milestone: from first launch to reuse, high-cadence operations, and beyond. If
+    you''re looking to define what''s next in space launch and write a new playbook,
+    not just repeat what’s already been done, this is where it happens.</span></p>
+    <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong><span
+    data-contrast="none">About the Role:</span></strong></span></p> <p><span style="font-family:
+    arial, helvetica, sans-serif; font-size: 10pt;">As a Senior Infrastructure Engineer,
+    you connect various internal technical teams to define architectural, structural,
+    heavy civil, electrical, mechanical, plumbing, fire protection, &amp; industrial
+    requirements and will be our owner’s representative to outside facing consultants
+    and contractors. You will work closely with other test &amp; launch team members
+    including infrastructure, fluids, electrical, command &amp; control, mechanical,
+    and support Test Operations during test processing and operations.</span></p>
+    <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">You
+    will be responsible for managing the development, design, and construction of
+    new infrastructure projects and will be responsible for the development of construction
+    drawings, request for proposals, competitive bidding, bid evaluations, sub-contractor
+    selections, sub-contractor management, and construction management. You will plan
+    and execute the work to install and operate best-in-class test site solutions
+    to meet stringent cost and schedule requirements in a very competitive environment.</span></p>
+    <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong><span
+    data-contrast="none">About You:</span></strong></span></p> <p><span style="font-family:
+    arial, helvetica, sans-serif; font-size: 10pt;">As a member of the Infrastructure
+    team at Relativity, you will be at the forefront of creating world class launch
+    sites. You enjoy working with teams and are able to work autonomously to ensure
+    project completion. You have a strong background in field engineering, construction
+    engineering, and project management, and you have a passion for taking ideas and
+    designs and making them become a reality in the built environment. You are a learner
+    and doer at heart, who continuously engages across technical and operations teams
+    to achieve amazing outcomes. You are willing to travel up 25% to support ongoing
+    design, construction, testing, and operations across Relativity’s sites</span></p>
+    <ul> <li style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span
+    style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Ba'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-02'
+  posting_date: '2026-04-01'
+  date_source: first_published
+  date_added: '2026-04-02'
+  discovered: '2026-04-02T10:15:29.167936+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,116 @@
+id: replit-senior-software-engineer-enterprise-platform
+name: Replit Senior Software Engineer, Enterprise Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Replit
+  url: https://jobs.ashbyhq.com/replit
+  application_url: https://jobs.ashbyhq.com/replit/7b4bc2fe-5860-4f56-8746-aabb852cf0e1
+  portal: ashby
+  location: Foster City, CA (Hybrid) In office M,W,F
+  location_class: us-onsite
+  description: 'Replit is the agentic software creation platform that enables anyone
+    to build applications using natural language. With millions of users worldwide,
+    Replit is democratizing software development by removing traditional barriers
+    to application creation. About the Role Join our Enterprise Platform team and
+    build the infrastructure foundations that enable the world''s largest organizations
+    to run Replit within their security and compliance boundaries. As a Software Engineer
+    on this team, you''ll design and implement the deployment flexibility, networking
+    capabilities, authorization systems, and data controls that enterprises require,
+    from single-tenant architectures and private connectivity to custom policy enforcement
+    and customer-managed encryption. You''ll work at the intersection of cloud infrastructure
+    and enterprise requirements, partnering with Platform Engineering, Security, and
+    Sales to ship capabilities that unlock adoption at demanding organizations. What
+    You''ll Do Build enterprise deployment infrastructure: Design and implement single-tenant
+    and dedicated deployment options, enabling customers to run Replit with the isolation
+    guarantees their security posture requires. Implement private networking capabilities:
+    Build VPC peering, private connectivity, and static IP configurations that allow
+    enterprises to integrate Replit into their existing network architectures. Design
+    authorization services: Build the authorization infrastructure that enforces custom
+    enterprise policies; enabling fine-grained access controls, custom permission
+    models, and policy enforcement that integrates with customers'' existing identity
+    and governance systems. Ship data protection features: Implement bring-your-own-key
+    (BYOK) encryption, customer-managed keys, and data residency controls that give
+    enterprises ownership over their most sensitive data. Develop infrastructure automation:
+    Write Terraform modules and automation that enable reliable, repeatable enterprise
+    deployments across regions and configurations. Debug and harden systems: Dive
+    deep into complex infrastructure problems spanning networking, authorization,
+    Kubernetes, and cloud services to make our enterprise platform more robust and
+    diagnosable. Partner with go-to-market teams: Collaborate with Sales and Customer
+    Success to understand enterprise infrastructure requirements, scope technical
+    solutions, and unblock deployments. Contribute to technical strategy: Help define
+    SLAs/SLOs for enterprise infrastructure reliability; participate in build-vs-buy
+    decisions for complex infrastructure capabilities. Required Skills and Experience
+    4+ years of experience in Infrastructure Engineering, Platform Engineering, or
+    similar roles. Strong programming skills in Go, Typescript or Python; you write
+    high-quality, well-tested code. Experience with Kubernetes and cloud-native technologies
+    in production environments. Solid understanding of cloud networking: VPCs, peering,
+    private connectivity, load balancers, DNS. Experience with infrastructure as code
+    (Terraform) and configuration management. Familiarity with authentication and
+    authorization systems: OAuth/OIDC, RBAC/ABAC models, policy enforcement. Familiarity
+    with security and encryption fundamentals: TLS, encryption at rest, key management
+    concepts. Strong debugging skills with an ability to trace issues across distributed
+    systems. Excellent written communication; you can explain technical tradeoffs
+    clearly to both engineers and non-technical stakeholders. Nice to Have Experience
+    with Google Cloud Platform (GCP) services, networking, and IAM. Experience building
+    multi-tenant or single-tenant SaaS infrastructure. Familiarity with enterprise
+    compliance frameworks (SOC 2, FedRAMP, HIPAA) and how they translate to infrastructure
+    requirements. Experience with customer-managed encryption keys (CMEK/BYOK) implementations.
+    Background in developer platforms, cloud IDEs, or developer productivity products.
+    This is a full-time role that can be held from our Foster City, CA office. The
+    role has an in-office requirement of Monday, Wednesday, and Friday. Full-Time
+    Employee Benefits Include: 💰 Competitive Salary & Equity 💹 401(k) Program with
+    a 4% match ⚕️ Health, Dental, Vision and Life Insurance 🩼 Short Term and Long
+    Term Disability 🚼 Paid Parental, Medical, Caregiver Leave 🚗 Commuter Benefits
+    📱 Monthly Wellness Stipend 🧑‍💻 Autonomous Work Environment 🖥 In Office Set-Up
+    Reimbursement 🏝 Flexible Time Off (FTO) + Holidays 🚀 Quarterly Team Gatherings
+    ☕ In Office Amenities Want to learn more about what we are up to? Meet the Replit
+    Agent Replit: Make an app for that Replit Blog Amjad TED Talk Interviewing + Culture
+    at Replit Operating Principles Reasons not to work at Replit To achieve our mission
+    of making programming more accessible around the world, we need our team to be
+    representative of the world. We welcome your unique perspective and experiences
+    in shaping this product. We encourage people from all kinds of backgrounds to
+    apply, includin'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.965603+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

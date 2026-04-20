@@ -1,0 +1,95 @@
+id: infisical-founding-technical-writer-us-canada
+name: Infisical Founding Technical Writer (US & Canada)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Infisical
+  url: https://jobs.ashbyhq.com/infisical
+  application_url: https://jobs.ashbyhq.com/infisical/d52e9080-a575-493a-8792-dbba28c50d49
+  portal: ashby
+  location: United States & Canada
+  location_class: us-onsite
+  description: 'Infisical is looking to hire exceptional talent to join our teams
+    in building the open source security infrastructure stack for the AI era. We''re
+    building a generational company with a world-class team. This isn’t a place to
+    coast — but if you want to grow fast, take ownership, and solve tough problems,
+    you’ll be challenged like nowhere else. What We''re Looking For We’re looking
+    for a Founding Technical Writer who is excited to write technical documentation
+    and drive adoption of Infisical across the ecosystem. This is a high-impact role
+    focused on helping developers succeed with Infisical by owning our documentation,
+    guides, and materials. You''ll shape how developers discover, learn, and grow
+    with Infisical by writing documentation, and engaging with the community through
+    technical content and conversation. You’ll work closely with engineering and marketing
+    to: Develop and maintain technical documentation with docs-as-code, including
+    code samples, implementation guides, and feature references. Create educational
+    materials such as self-paced courses to help developers go from zero to hero on
+    secrets management. Own product updates, white papers, and the developer newsletter.
+    Collaborate with engineering to continuously review and improve documentation
+    accuracy and usability. Requirements Bachelor’s degree in computer science or
+    2+ years of experience in developer relations, developer advocacy, technical content
+    marketing, or technical writing. Strong understanding of software engineering
+    concepts, developer tooling, and infrastructure. Exceptional written and verbal
+    communication skills with the ability to explain complex topics clearly. Based
+    in the US or Canada. How You''ll Grow As a Founding Technical Writer at Infisical,
+    you’ll have a front-row seat in helping make Infisical the standard for secrets
+    management and secure infrastructure. By owning documentation, and community engagement,
+    you’ll shape how developers adopt and succeed with the product. This is a high-impact
+    role where your work will directly influence how quickly Infisical is adopted
+    across the ecosystem — giving you a unique opportunity to grow as a trusted voice
+    in the developer and security communities. Team, Values & Benefits Our team brings
+    experience from companies like Figma, AWS, and Red Hat. We operate primarily as
+    a remote team but maintain a strong presence in San Francisco, where we have an
+    office. We also get together in person throughout the year for off-sites, conferences,
+    and team gatherings. At Infisical, we offer competitive compensation, including
+    both salary and equity options. Additional benefits, such as a lunch stipend and
+    a work setup budget, are available with more details to be found on our careers
+    page . About Us Infisical is the open source security infrastructure platform
+    that engineers use for secrets management, internal PKI, key management, and SSH
+    workflow orchestration. We help developers and organizations securely manage over
+    1.5 billion secrets each month including application configuration, database credentials,
+    certificates, and more. We’ve raised $19M from Y Combinator, Google, and Elad
+    Gil, and our customers include Hugging Face, Lucid, and LG. Join us on a mission
+    to make security easier for all developers — starting with secrets management.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.366747+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

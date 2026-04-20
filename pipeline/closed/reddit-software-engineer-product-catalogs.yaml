@@ -1,0 +1,114 @@
+id: reddit-software-engineer-product-catalogs
+name: Reddit Software Engineer, Product Catalogs
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Reddit
+  url: https://boards.greenhouse.io/reddit
+  application_url: https://job-boards.greenhouse.io/reddit/jobs/7761320
+  portal: greenhouse
+  location: Amsterdam, Netherlands
+  location_class: international
+  description: '<div class="content-intro"><div class="c-message_kit__blocks c-message_kit__blocks--rich_text">
+    <div class="c-message__message_blocks c-message__message_blocks--rich_text" data-qa="message-text">
+    <div class="p-block_kit_renderer" data-qa="block-kit-renderer"> <div class="p-block_kit_renderer__block_wrapper
+    p-block_kit_renderer__block_wrapper--first"> <div class="p-rich_text_block"> <div
+    class="p-rich_text_section">Reddit is a community of communities. It’s built on
+    shared interests, passion, and trust, and is home to the most open and authentic
+    conversations on the internet. Every day, Reddit users submit, vote, and comment
+    on the topics they care most about. With 100,000+ active communities and approximately
+    121 million daily active unique visitors, Reddit is one of the internet’s largest
+    sources of information. For more information, visit <a class="c-link" href="http://www.redditinc.com/"
+    target="_blank" data-stringify-link="http://redditinc.com" data-sk="tooltip_parent">www.redditinc.com</a>.</div>
+    </div> </div> </div> </div> </div></div><p>Reddit has a flexible first workforce!
+    if you happen to live close to our physical office location our doors are open
+    for you to come into the office as often as you''d like. Don''t live near one
+    of our offices? No worries: You can apply to work remotely from the Netherlands.</p>
+    <p>We are looking for a skilled backend software engineer to join the Product
+    Catalogs team. Our team builds products and infrastructure that enable retail
+    advertisers to succeed on Reddit. On our team, you’d work projects like:</p> <ul>
+    <li>Catalog System Scaling - In order to support larger and more sophisticated
+    advertisers, we must scale our system to support millions of products per customer.
+    You’ll have the opportunity to perform load testing, identify bottlenecks, and
+    deploy optimizations to make these customers successful.</li> <li>Catalog Management
+    - With millions of products, advertisers need tools to manage those products,
+    identify errors, and build campaigns based on subsets of products.</li> <li>Product
+    Enhancement - Leveraging AI, LLMs and Reddit organic data to make our products
+    more appealing to users by showcasing products popular with Redditors, enhancing
+    product image backgrounds with GenAI, and much more!</li> </ul> <p>Technologies
+    used on the team include:</p> <ul> <li>Languages: Python, Scala, Go</li> <li>Frameworks:
+    gRPC, Thrift, Baseplate, Kafka</li> <li>Datastores: Postgres, BigQuery, Redis,
+    TiDB</li> <li>Tools: Kubernetes, Airflow</li> </ul> <p><strong>Responsibilities:</strong></p>
+    <ul> <li>Develop, maintain, and scale our product catalogs backend</li> <li>Contribute
+    to the development of features to make our product easier to use</li> <li>Produce
+    robust and sustainable code and demonstrate proficiency in debugging systems beyond
+    your immediate responsibilities.</li> <li>Uphold high-quality standards within
+    the team.</li> </ul> <p><strong>Required Qualifications:</strong></p> <ul> <li>A
+    Bachelor''s degree or equivalent experience in a quantitative or computer science-related
+    field (e.g., mathematics, statistics, economics, finance, computer science)</li>
+    <li>4+ years of full-time backend software engineering experience in a scalable
+    computing environment</li> <li>Experience in backend development, with a passion
+    for learning and adapting to new technologies that you lacked prior experience
+    with</li> <li>Strong communication and collaboration skills, with the ability
+    to work effectively with diverse stakeholders independently</li> </ul> <p><strong>Nice
+    to Have:</strong></p> <ul> <li>Prior experience in the ads or ecommerce space</li>
+    </ul> <p>If you''re a talented software engineer looking for a new challenge,
+    and you''re passionate about building scalable systems and great customer experiences,
+    we encourage you to apply for this exciting opportunity!</p> <p><strong>What We
+    Offer:</strong></p> <ul> <li>A dynamic, supportive work environment with a diverse
+    team of engineers and cross-functional partners</li> <li>Opportunities for professional
+    growth and development, with a focus on continuous learning and skill-building</li>
+    <li>A competitive salary and benefits package, with a focus on work-life balance
+    and employee well-being</li> <li>Flexible work arrangements, including remote
+    work options, to support your individual needs and preferences</li> <li>The chance
+    to work on high-impact projects that drive real results for our users and advertisers</li>
+    </ul> <p><strong>Benefits:</strong></p> <ul> <li>Global Benefit programs that
+    fit your lifestyle, from workspace to professional development to caregiving support</li>
+    <li>Family Planning Support</li> <li>Gender-Affirming Care</li> <li>Mental Health
+    &amp; Coaching Benefits</li> <li>Private Pension plan with Employer-matching</li>
+    <li>100% employer-sponsored group medical plan &nbsp;</li> <li>Income Replacement
+    Programs</li> <li>Flexible Vacation &amp; Paid Volunteer Time Off</li> <li>Generous
+    Paid Parental Leave</li> </ul><d'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.165896+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

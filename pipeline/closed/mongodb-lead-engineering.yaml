@@ -1,0 +1,115 @@
+id: mongodb-lead-engineering
+name: MongoDB Lead, Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7590547
+  portal: greenhouse
+  location: Gurugram
+  location_class: unknown
+  description: '<p>We are seeking an Engineering Lead to join our growing Gurugram
+    Product &amp; Technology team to provide technical direction, direct architecture,
+    and implement core parts of a new platform we are building to make it easier for
+    customers to build AI applications using MongoDB.&nbsp;</p> <p>As an Engineering
+    Lead on this new team, you will be responsible for leading and growing an engineering
+    team, taking on challenging, high-visibility projects that improve and enhance
+    the performance, scalability, and reliability of the distributed systems infrastructure
+    for this new product. MongoDB engineering teams pride themselves on building high-quality
+    software and living MongoDB cultural values every day – we value intellectual
+    curiosity and honesty, and building together in an environment that prioritizes
+    collaboration over competition.</p> <p>We are looking to speak to candidates who
+    are based in Gurugram for our hybrid working model.</p> <h3>Position Expectations</h3>
+    <ul> <li>Provide technical leadership and mentorship to a team of engineers, fostering
+    a culture of innovation, quality, and continuous improvement.</li> <li>Drive the
+    architectural vision for the platform, ensuring it runs equally well on public
+    clouds, private cloud environments and on-premise.</li> <li>Work with product
+    managers, program managers, design &amp; analytics teams and other teams to define,
+    prioritize and deliver new features that delight our users and drive platform
+    improvements</li> <li>Take responsibility for the planning and execution of major
+    features, raise delivery risks</li> <li>Own the monitoring, operations, and maintenance
+    of the systems your team develops</li> <li>Enable the team to operate efficiently
+    by removing technical obstacles, coordinating with other teams on dependencies,
+    and prioritizing the team''s overall well-being</li> <li>Contribute to planning
+    for organizational growth, including allocation of engineering resources, participate
+    in hiring and assignment of projects</li> </ul> <h3>Qualifications</h3> <ul> <li>8+
+    years of experience of building distributed systems, and/or foundational cloud
+    services at scale and experience in languages like Python, Golang, Java or Rust.&nbsp;</li>
+    <li>2+ years of experience managing a team of 3+ engineers and providing technical
+    leadership</li> <li>Track record in hiring, mentoring, and growing high-performing
+    software engineering teams, experience working with remote teams and a passion
+    for mentoring and career development of the team</li> <li>Excellent verbal and
+    written technical communication skills and desire to collaborate with colleagues,
+    other teams, and lead projects</li> <li>Strong background in building core components
+    for high-scale compute or data processing / distributed systems</li> <li>Have
+    led the launch of new features and maintained them in production</li> <li>Bonus
+    points for experience with containerization and orchestration platforms (e.g.
+    Kubernetes) and AI frameworks and tools</li> <li>Be a force multiplier in our
+    software development process. Enable teams to deliver great products through leadership
+    and technical contributions</li> <li>Eager to learn, with a strong technical background</li>
+    </ul> <h3>Success Measures</h3> <ul> <li>In the first month, you’ll have understood
+    the surface area, the high level architecture of the new platform. You’ll have
+    initiated one-on-one’s with your team members.</li> <li>In three months, you’ll
+    have on-boarded onto the team and contributed to the design and development of
+    a core platform capability</li> <li>In six months, you will have taken on full
+    responsibility for projects slated for the subsequent quarter. You’ll have started
+    growth conversations with your team members and begun to understand their longer-term
+    career aspirations</li> <li>In twelve months, you’ll have led the development
+    of multiple new features and performed a full annual cycle of performance and
+    growth conversations with your team members. Additionally, you’ll have contributed
+    to the vision for the future of the platform and helped develop a plan to achieve
+    that vision</li> </ul> <h3>About MongoDB</h3> <p>MongoDB is built for change,
+    empowering our customers and our people to innovate at the speed of the market.
+    We have redefined the database for the AI era, enabling innovators to create,
+    transform, and disrupt industries with software. MongoDB’s unified database platform—the
+    most widely available, globally distributed database on the market—helps organizations
+    modernize legacy workloads, embrace innovation, and unleash AI. Our cloud-native
+    platform, MongoDB Atlas, is the only globally distributed, multi-cloud database
+    and is available across AWS, Google Cloud, and Microsoft Azure.</p> <p>With offices
+    worldwide and nearly 60,000 customers—including 75% of the Fortune 100 and AI-native
+    startups—relying on MongoDB for their most important applications, we’re powering
+    the next era of software.</p> <p>Our compass at MongoDB is our <a href="https:'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.249578+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

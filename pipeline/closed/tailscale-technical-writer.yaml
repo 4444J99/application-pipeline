@@ -1,0 +1,119 @@
+id: tailscale-technical-writer
+name: Tailscale Technical Writer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Tailscale
+  url: https://boards.greenhouse.io/tailscale
+  application_url: https://job-boards.greenhouse.io/tailscale/jobs/4684062005
+  portal: greenhouse
+  location: Remote (United States)
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><p><strong>About Tailscale&nbsp;</strong></p>\
+    \ <p>Tailscale is building the new Internet by delivering software that makes\
+    \ it easy to securely interconnect people and their devices, no matter where they\
+    \ are. From hobbyists to multinational corporations, teams of every size use Tailscale\
+    \ each day to protect their networks, share access to internal tools, and more.\
+    \ We're building a future for the Internet that's easy, sensible, and safe, like\
+    \ it used to be. Founded in 2019 and fully distributed, we're backed by Accel,\
+    \ CRV, Insight, Heavybit, and Uncork Capital.</p></div><h3><span style=\"font-size:\
+    \ 12pt;\"><strong>Job Description</strong></span></h3> <p>We are looking for a\
+    \ Technical Writer to join our Documentation team to help us create and deliver\
+    \ world-class product documentation, tutorials, conceptual guides, and examples\
+    \ that help networking and security professionals and software engineers understand\
+    \ when, why, and how to use Tailscale's products and features.</p> <p>The ideal\
+    \ candidate will have a proven track record of producing high-quality product\
+    \ documentation for a highly-technical audience and have some experience with\
+    \ networking and security concepts.</p> <h3><span style=\"font-size: 12pt;\"><strong>Key\
+    \ Responsibilities</strong></span></h3> <ul> <li>You'll use your experience as\
+    \ a writer and technical practitioner to produce, test, and maintain quality,\
+    \ consistent, contextualized, and technically accurate documentation for our products\
+    \ that help customers and prospects understand how Tailscale solves their existing\
+    \ problems.</li> <li>You\u2019ll develop how-to guides, conceptual topics, reference\
+    \ guides, tutorials, and other technical content, and you\u2019ll understand when\
+    \ each content type is appropriate.</li> <li>You\u2019ll write content for a diverse\
+    \ audience including software developers, infrastructure engineers, security practitioners,\
+    \ and decision-makers, adjusting your content and tone to fit your audience.</li>\
+    \ <li>You\u2019ll update and refine existing content to reflect changes to the\
+    \ product and feedback from training sessions, surveys, and collected metrics.</li>\
+    \ <li>You\u2019ll build strong relationships as you collaborate with subject-matter\
+    \ experts, product managers, and your team to plan, organize, write, edit, review,\
+    \ and evolve our documentation.</li> <li>You'll collaborate with other content\
+    \ creators to ensure that content you develop aligns with the organization's goals\
+    \ and strategies, and you'll engage our community of users through active participation\
+    \ in our community spaces.</li> <li>You\u2019ll support engineers and other subject-matter\
+    \ experts who contribute to our documentation, helping them improve their writing\
+    \ through guidance and content reviews.</li> <li>You\u2019ll contribute to information\
+    \ architecture and platform improvements to help customers find answers faster.</li>\
+    \ <li>You'll become an expert in Tailscale's features and products, and understand\
+    \ our customer's needs and pain points so you can serve them better.</li> </ul>\
+    \ <h3><strong style=\"font-size: 12pt;\">What We Are Looking For</strong></h3>\
+    \ <ul> <li>You have at least 3 years of professional technical writing and editing\
+    \ experience creating high-quality, code-heavy product documentation and how-to\
+    \ guides for a diverse technical audience. You can explain how something works,\
+    \ as well as when and why a customer would need it.</li> <li>You are technically\
+    \ proficient. You have hands-on experience with networking or security products,\
+    \ and are comfortable in technical conversations with other practitioners, including\
+    \ engineers and product managers.</li> <li>You are comfortable with Git, GitHub,\
+    \ Markdown, and the command-line interface, and have experience using a docs-as-code\
+    \ publishing workflow.</li> <li>You\u2019re a strong editor who can guide others\
+    \ through the outlining and writing process, and you can catch inconsistencies\
+    \ in tone, flow, and structure.</li> <li>You can drive multiple projects from\
+    \ the beginning to completion, and you can collaborate with other writers, editors,\
+    \ product managers, and subject-matter experts to deliver high-quality work at\
+    \ scale.</li> <li>You\u2019re just as comfortable integrating the work of others\
+    \ as you are creating your own content, and you know how to use multiple tools\
+    \ and sources to deliver quality content.</li> <li>You have excellent written\
+    \ and verbal English communication skills, and you are as comfortable receiving\
+    \ and applying feedback as you are providing it to peers.</li> <li>You're excited\
+    \ to learn new technologies and grow your skills with a team of professional writers\
+    \ who care about documentation and customer experience.</li> <li>You're interested\
+    \ in how LLMs and automation can help writers produce and maintain content as\
+    \ products evolve.</li> </ul> <h3>Nice to Have</h3> <ul> <li>You have software\
+    \ development experience.</li> <li>You've contributed to open-source software\
+    \ projects or communities.</li> </ul> <p>As a company, we strive to maintain fair\
+    \ and equitable compensa"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.6
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 9
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-10'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.191790+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

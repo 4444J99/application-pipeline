@@ -1,0 +1,112 @@
+id: replit-software-engineer-mobile
+name: Replit Software Engineer, Mobile
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Replit
+  url: https://jobs.ashbyhq.com/replit
+  application_url: https://jobs.ashbyhq.com/replit/8fbbe594-596a-4a4f-844b-dc00111e717f
+  portal: ashby
+  location: Foster City, CA (Hybrid) In office M,W,F
+  location_class: us-onsite
+  description: 'Replit is the agentic software creation platform that enables anyone
+    to build applications using natural language. With millions of users worldwide,
+    Replit is democratizing software development by removing traditional barriers
+    to application creation. About The Role : In this role, you will shape our Agent
+    experience on mobile, build innovative new features and interactions, and enable
+    anyone with a phone to create software for their phones and assist with our mobile
+    UI/UX. Our mobile app is built with Typescript, React, React Native, Expo, and
+    Apollo/GraphQL. Who You Are : We''re looking for mobile-focused developers who
+    can thrive in a React Native environment and are also passionate about mobile
+    UI/UX. You fit this role if you match one of these profiles: 1. The React Native
+    Expert You''re an experienced React Native developer with a proven track record
+    of shipping mobile apps, with a keen eye for mobile UI/UX. 2. The Mobile Web Specialist
+    You have deep experience with mobile web development and understand the unique
+    challenges of mobile interfaces, performance optimization, and responsive design.
+    You''re passionate about UX/UI and ready to transition your mobile expertise to
+    React Native development. 3. The Native Developer Exploring Cross-Platform You''re
+    a skilled mobile native developer (iOS/Android) who''s interested in exploring
+    React Native as a cross-platform solution. You bring valuable native platform
+    knowledge and are open to learning TypeScript-based development. What You Will
+    Do : Collaborate closely with a team of designers, mobile and UX engineers to
+    streamline the mobile app towards AI-first creation. Introduce new features that
+    make creation on mobile easier and faster. Improve the quality and observability
+    of the app. Proactively identify what our software creators need to make building
+    on mobile delightful. Required Experience : You can demonstrate 5+ years of professional
+    software development experience, including: Experience optimizing UI rendering
+    performance Experience debugging and deploying iOS or Android apps You are comfortable
+    or excited to build with React/CSS and React Native. You are familiar with UI/UX
+    patterns on iOS or Android Bonus Points : You’ve built and shipped your own apps
+    to the world This is a full-time role that can be held from our Foster City, CA
+    office. The hybrid role has an in-office requirement of Monday, Wednesday, and
+    Friday. Full-Time Employee Benefits Include: 💰 Competitive Salary & Equity 💹 401(k)
+    Program with a 4% match ⚕️ Health, Dental, Vision and Life Insurance 🩼 Short Term
+    and Long Term Disability 🚼 Paid Parental, Medical, Caregiver Leave 🚗 Commuter
+    Benefits 📱 Monthly Wellness Stipend 🧑‍💻 Autonomous Work Environment 🖥 In Office
+    Set-Up Reimbursement 🏝 Flexible Time Off (FTO) + Holidays 🚀 Quarterly Team Gatherings
+    ☕ In Office Amenities Want to learn more about what we are up to? Meet the Replit
+    Agent Replit: Make an app for that Replit Blog Amjad TED Talk Interviewing + Culture
+    at Replit Operating Principles Reasons not to work at Replit To achieve our mission
+    of making programming more accessible around the world, we need our team to be
+    representative of the world. We welcome your unique perspective and experiences
+    in shaping this product. We encourage people from all kinds of backgrounds to
+    apply, including and especially candidates from underrepresented and non-traditional
+    backgrounds. This is a full-time role that can be held from our Foster City, CA
+    office. The hybrid role has an in-office requirement of Monday, Wednesday, and
+    Friday. Full-Time Employee Benefits Include: 💰 Competitive Salary & Equity 💹 401(k)
+    Program with a 4% match ⚕️ Health, Dental, Vision and Life Insurance 🩼 Short Term
+    and Long Term Disability 🚼 Paid Parental, Medical, Caregiver Leave 🚗 Commuter
+    Benefits 📱 Monthly Wellness Stipend 🧑‍💻 Autonomous Work Environment 🖥 In Office
+    Set-Up Reimbursement 🏝 Flexible Time Off (FTO) + Holidays 🚀 Quarterly Team Gatherings
+    ☕ In Office Amenities Want to learn more about what we are up to? Meet the Replit
+    Agent Replit: Make an app for that Replit Blog Amjad TED Talk Interviewing + Culture
+    at Replit Operating Principles Reasons not to work at Replit To achieve our mission
+    of making programming more accessible around the world, we need our team to be
+    representative of the world. We welcome your unique perspective and experiences
+    in shaping this product. We encourage people from all kinds of backgrounds to
+    apply, including and especially candidates from underrepresented and non-traditional
+    backgrounds.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.6
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-10'
+  date_source: published_at
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.195550+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

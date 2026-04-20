@@ -1,0 +1,115 @@
+id: datadog-senior-software-engineer
+name: Datadog Senior Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Datadog
+  url: https://boards.greenhouse.io/datadog
+  application_url: https://careers.datadoghq.com/detail/4599148/?gh_jid=4599148
+  portal: greenhouse
+  location: Bordeaux, France; Lyon, France; Madrid, Spain; Nantes, France; Paris,
+    France; Sophia Antipolis, France
+  location_class: international
+  description: '<p><span style="font-weight: 400;">We are building the best platform
+    in the world for engineers to understand, scale, and protect their systems, applications,
+    and teams. We operate at high scale—trillions of data points per day—providing
+    always-on alerting, metrics visualization, logs, application tracing, and security
+    insights for tens of thousands of companies. Our engineering culture values pragmatism,
+    honesty, and simplicity to solve hard problems the right way</span><span style="font-weight:
+    400;">.</span></p> <p><em><span style="font-weight: 400;">At Datadog, we place
+    value in our office culture - the relationships that it builds, the creativity
+    it brings to the table, and the collaboration of being together. We operate as
+    a hybrid workplace to ensure our employees can create a work-life harmony that
+    best fits them.</span></em></p> <p>&nbsp;</p> <p><strong>What You’ll Do:&nbsp;</strong></p>
+    <ul> <li style="font-weight: 400;"><span style="font-weight: 400;">Solve a scaling
+    bottleneck in a critical service</span></li> <li style="font-weight: 400;"><span
+    style="font-weight: 400;">Deploy a new feature to production, progressively rolling
+    it out with feature flags</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Investigate and fix a production issue from a service your team owns</span></li>
+    <li style="font-weight: 400;"><span style="font-weight: 400;">Design a way to
+    scale up a service for more traffic</span></li> <li style="font-weight: 400;"><span
+    style="font-weight: 400;">With your team, plan the most important projects to
+    work on next</span><span style="font-weight: 400;"><br></span></li> </ul> <p>&nbsp;</p>
+    <p><strong>Who You Are:&nbsp;</strong></p> <ul> <li style="font-weight: 400;"><span
+    style="font-weight: 400;">You have significant experience in one or more languages</span></li>
+    <li style="font-weight: 400;"><span style="font-weight: 400;">You value code simplicity
+    and performance</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">You can design architecture to solve problems at high scale</span></li>
+    <li style="font-weight: 400;"><span style="font-weight: 400;">You have a BS/MS/PhD
+    in a scientific field or equivalent experience</span></li> <li style="font-weight:
+    400;"><span style="font-weight: 400;">You want to work in a fast, high-growth
+    startup environment that respects its engineers and customers</span></li> <li
+    style="font-weight: 400;"><span style="font-weight: 400;"><span data-sheets-root="1">You’re
+    excited about leveraging AI tools to enhance how you code, solve problems, and
+    build – or eager to learn how</span></span></li> <li style="font-weight: 400;"><span
+    style="font-weight: 400;"><span data-sheets-root="1">You have demonstrated ability
+    to use AI coding tools in day-to-day workflows and validate, critique, and refine
+    AI-generated output</span></span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;"><span data-sheets-root="1">Bonus: You’re motivated to push the boundaries
+    of how AI can improve software engineering best practices and contribute to building
+    AI-enabled products</span></span></li> </ul> <p><em><span style="font-weight:
+    400;">Datadog values people from all walks of life. We understand not everyone
+    will meet all the above qualifications on day one. That''s okay. If you’re passionate
+    about technology and want to grow your skills, we encourage you to apply.&nbsp;</span></em></p>
+    <p>&nbsp;</p> <p><strong>Benefits and Growth:&nbsp;</strong></p> <ul> <li style="font-weight:
+    400;"><span style="font-weight: 400;">New hire stock equity (RSUs) and employee
+    stock purchase plan (ESPP)</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Continuous professional development, product training, and career pathing</span></li>
+    <li style="font-weight: 400;"><span style="font-weight: 400;">Intradepartmental
+    mentor and buddy program for in-house networking</span></li> <li style="font-weight:
+    400;"><span style="font-weight: 400;">An inclusive company culture, ability to
+    join our Community Guilds (Datadog employee resource groups)</span></li> <li style="font-weight:
+    400;"><span style="font-weight: 400;">Access to Inclusion Talks, our Internal
+    panel discussions</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Free, global mental health benefits for employees and dependents age 6+</span></li>
+    <li style="font-weight: 400;"><span style="font-weight: 400;">Competitive global
+    benefits</span></li> </ul> <p><span style="font-weight: 400;"><br></span><em><span
+    style="font-weight: 400;">Benefits and Growth listed above may vary based on the
+    country of your employment and the nature of your employment with Datadog.</span></em></p>
+    <h4><span style="color: white;">#LI-NC4</span></h4> <p style="color: white;">#LI-Hybrid</p><div
+    class="content-conclusion"><hr> <p><strong>About Datadog:&nbsp;</strong></p> <p>Datadog
+    (NASDAQ: DDOG) is a global SaaS business, delivering a rare combination of growth
+    and p'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.8
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.978112+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,115 @@
+id: asana-senior-software-engineer-admin-area
+name: Asana Senior Software Engineer, Admin Area
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Asana
+  url: https://boards.greenhouse.io/asana
+  application_url: https://www.asana.com/jobs/apply/5966756?gh_jid=5966756
+  portal: greenhouse
+  location: Vancouver, BC
+  location_class: international
+  description: '<p><span style="font-family: arial, helvetica, sans-serif;">The Product
+    team builds features end-to-end. From designing our data models to implementing
+    the subtle interaction behaviors that differentiate good software from great software.
+    We work closely with UI designers and are supported by our infrastructure team.
+    We aim to delight users with both large new features and smaller, daily product
+    enhancements—thanks to our continuous deployment architecture. We want to create
+    a superlative user experience, down to the smallest details.</span></p> <p><span
+    style="font-family: arial, helvetica, sans-serif;">We are looking for a Senior
+    Software Engineer to join the Data Management team in our Vancouver Office. The
+    team plays a vital role in understanding the Asana data graph and ensuring the
+    integrity and compliant use of data across the product. You’ll work on essential
+    features touching the entire customer data lifecycle, such as data exports, object
+    archiving, trashing &amp; recovery, and audit logs. All of these are fundamental
+    for Enterprise customers and involve handling and managing large-scale datasets
+    to ensure smooth and secure operations.</span></p> <p><span style="font-family:
+    arial, helvetica, sans-serif;">Being part of this team will provide you with the
+    opportunity to dive deep into Asana’s data graph, gaining a deep understanding
+    of how data is managed at scale. While compliance is a key focus, our work goes
+    beyond and empowers customers to efficiently manage their data across large, complex
+    environments. You will implement efficient algorithms for handling vast datasets
+    and work closely with cross-functional teams, including core infrastructure, product,
+    and legal, to deliver scalable, secure solutions.</span></p> <p><span style="font-family:
+    arial, helvetica, sans-serif;">This role is based in our Vancouver office with
+    an office-centric hybrid schedule. The standard in-office days are Monday, Tuesday,
+    and Thursday. Most Asanas have the option to work from home on Wednesdays. Working
+    from home on Fridays depends on the type of work you do and the teams with which
+    you partner. If you''re interviewing for this role, your recruiter will share
+    more about the in-office requirements.</span></p> <p><span style="font-family:
+    arial, helvetica, sans-serif;"><strong>What you’ll achieve</strong></span></p>
+    <ul> <li style="font-family: arial, helvetica, sans-serif;"><span style="font-family:
+    arial, helvetica, sans-serif;">Work in a high-performance, dynamic team with a
+    strong focus on velocity and software quality</span></li> <li style="font-family:
+    arial, helvetica, sans-serif;"><span style="font-family: arial, helvetica, sans-serif;">Contribute
+    to building a complex SaaS application that is a market leader in its segment&nbsp;</span></li>
+    <li style="font-family: arial, helvetica, sans-serif;"><span style="font-family:
+    arial, helvetica, sans-serif;">Be exposed to Asana’s core infrastructure, particularly
+    how data is represented, stored and deleted in the storage layer.</span></li>
+    <li style="font-family: arial, helvetica, sans-serif;"><span style="font-family:
+    arial, helvetica, sans-serif;">Work with asynchronous jobs and efficiently and
+    implement algorithms that efficiently traverse the Asana Work Graph</span></li>
+    <li style="font-family: arial, helvetica, sans-serif;"><span style="font-family:
+    arial, helvetica, sans-serif;">Work with legal to implement data ownership rules,
+    requiring simple and effective technical solutions to make this process easy and
+    clear to customers.&nbsp;</span></li> <li style="font-family: arial, helvetica,
+    sans-serif;"><span style="font-family: arial, helvetica, sans-serif;">Drive large,
+    impactful projects, delivering features that will be rolled out and used in large
+    organizations</span></li> <li style="font-family: arial, helvetica, sans-serif;"><span
+    style="font-family: arial, helvetica, sans-serif;">Support other teams and stakeholders
+    that work in the team’s space</span></li> </ul> <p><span style="font-family: arial,
+    helvetica, sans-serif;"><strong>About you</strong></span></p> <ul> <li style="font-family:
+    arial, helvetica, sans-serif;"><span style="font-family: arial, helvetica, sans-serif;">Experience
+    working in ambiguous and complex technical spaces and creating clarity and alignment
+    with partners and stakeholders</span></li> <li style="font-family: arial, helvetica,
+    sans-serif;"><span style="font-family: arial, helvetica, sans-serif;">Comfortable
+    and autonomously diving deep into the weeds of complex technical contexts, to
+    make sense of them, and then share their knowledge in a clear way with people
+    in different roles and with different technical backgrounds</span></li> <li style="font-family:
+    arial, helvetica, sans-serif;"><span style="font-family: arial, helvetica, sans-serif;">Have
+    a strong understanding of software concepts and design patterns that make solutions
+    scalable and robust.</span></li> <li style="font-family: arial, helvetica, sans-serif;"><span
+    style="font'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.202786+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

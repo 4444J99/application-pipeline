@@ -1,0 +1,115 @@
+id: anduril-forward-deployed-engineer-air-defense-fde
+name: Anduril Forward Deployed Engineer, Air Defense (FDE)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5057206007?gh_jid=5057206007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE ROLE</h3> <div>Anduril’s
+    Deployment Operations group is seeking a Forward Deployed Engineer (internally
+    know at Anduril as Technical Operations Engineer) to join our Air Defense team.
+    This is a Costa Mesa based role and not eligible for remote/hybrid work.</div>
+    <div><br>As a member of Anduril’s Technical Operations team, you will be responsible
+    for deploying and supporting Anduril’s products all over the world. You will go
+    forward with products early on in their lifecycle and work with engineering teams
+    to iteratively improve them over time. The challenges you will encounter are innumerable
+    and unpredictable, but you will be expected to take ownership of delivering the
+    technical solution.</div> <div><br>You must be both a teacher and a student, able
+    to coach teammates on systems that you’ve gained intimate familiarity with and
+    then transition into mastering the next system. You’ll also guide users through
+    product employment and troubleshooting, advise account managers on how to structure
+    an operation to ensure technical success, and communicate specific recommendations
+    for product refinement to engineering teams.<br><br><strong>WHAT YOU'LL DO<br></strong></div>
+    <div> <ul> <li>Support military air defense projects by executing technical operations,
+    conducting field maintenance, providing customer field support and training</li>
+    <li>Tackle complex issues related to hardware, software, and networking in unstructured
+    situations, driving them to resolution</li> <li>Communicate field issue status
+    to internal and customer teams, keeping them informed.</li> <li>Support the development
+    and implementation of comprehensive operational and logistical plans for various
+    events</li> <li>Ensure high availability and performance of air defense systems</li>
+    <li>Maintain support plans for hardware and software</li> <li>Assist in event
+    planning and resource allocation, keeping key stakeholders informed about Technical
+    Operations requirements</li> <li>Incident response root-cause analyses (RCAs)
+    for defense systems in the field</li> <li>Conduct post-incident reviews and implement
+    preventive measures</li> <li>Maintain up-to-date documentation</li> </ul> </div>
+    <div><strong>REQUIRED QUALIFICATIONS</strong><br> <ul> <li>3+ years of experience
+    of strong problem solving in unstructured environments at the interface of hardware,
+    software, and networking.</li> <li>Ability to climb towers to install, maintain,
+    and repair sensor equipment and components including cameras, radars, and Pan
+    Tilt Units (PTU).</li> <li>Strong mechanical aptitude to troubleshoot and repair
+    critical site infrastructure including generators, solar power systems, and hydraulic
+    systems.</li> <li>Experience performing preventative maintenance on tower structure
+    components including guy wires, anchors, lightning protection systems and other
+    structural elements to ensure structural integrity and safety.</li> <li>Ability
+    to meet health and medical requirements in advance of deployments in accordance
+    with DFARS <a>252.225-7040</a>, DoDI 3020.41, and/or any additional requirements
+    outlined by region or supporting force, as applicable.</li> <li>Ability to travel
+    to remote regions of the world for up to two months at a time (up to 80% of the
+    year).</li> <li>Ability to relocate, if not already local to be onsite in Costa
+    Mesa, CA</li> <li>Eligible to obtain and maintain a U.S. Top Secret/Secret clearance.</li>
+    </ul> <strong>PREFERRED QUALIFICATIONS</strong><br> <ul> <li>B.S. in mechanical
+    engineering, aerospace engineering, computer science, or related technical field</li>
+    <li>Network+ and Linux+ or equivalent experience preferred.</li> <li>Prior tower
+    climbing experience with relevant certifications (Tower Climbing, OSHA 10/30).</li>
+    <li data-stringify-indent="0" data-stringify-border="0">Experience with Fiber
+    and RF systems (PtP, PtMP, mesh), understanding basic antenna concepts &amp; spectrum
+    analysis.</li> <li data-stringify-indent="0" data-stringify-border="0">Terminating
+    power cables with NEMA connectors or RJ45 connectors.</li> <li>Ability to lift
+    50-70 lbs.</li> <li>Experience operating specialized equipment including aerial
+    lifts and forklifts.</li> <li>Valid Commercial Driver's License (CDL).</li> <
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.834119+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

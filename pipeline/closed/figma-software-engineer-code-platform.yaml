@@ -1,0 +1,116 @@
+id: figma-software-engineer-code-platform
+name: Figma Software Engineer, Code Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Figma
+  url: https://boards.greenhouse.io/figma
+  application_url: https://boards.greenhouse.io/figma/jobs/5759501004?gh_jid=5759501004
+  portal: greenhouse
+  location: San Francisco, CA • New York, NY • United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Figma is growing our team of passionate
+    creatives and builders on a mission to make design accessible to all. Figma’s
+    platform helps teams bring ideas to life—whether you''re brainstorming, creating
+    a prototype, translating designs into code, or iterating with AI. From idea to
+    product, Figma empowers teams to streamline workflows, move faster, and work together
+    in real time from anywhere in the world. If you''re excited to shape the future
+    of design and collaboration, join us!</p></div><div class="section page-centered">
+    <p>Figma is a critical part of modern product development, where design and code
+    are core primitives in how builders create, iterate, and ship products. Figma’s
+    Code Platform team builds the foundational infrastructure that enables seamless
+    translation between design, code, and AI-powered creation. Our work powers products
+    such as AI Assistant, Make, Sites, and other Figma surfaces.</p> <p>This team’s
+    and our work will be at the precipice of powering what is possible downstream
+    for users to easily go between design and code. Our mission is to power the interoperability
+    of design &lt;-&gt; code so it can be seamless and magical for our customers;
+    but also ergonomic, scalable, and extendable for the company.</p> <p>We’re hiring
+    engineers to join Code Platform to work on our core code translation infrastructure.
+    This role will focus primarily on deep technical execution, and depending on level
+    and experience, may also include technical leadership responsibilities such as
+    architectural ownership, mentoring, and driving multi-quarter initiatives.</p>
+    <p>You’ll work on systems that translate between HTML, JSX, structured design
+    models, and LLM-friendly representations, directly impacting latency, correctness,
+    and product velocity across Figma. This is a rare opportunity to improve and evolve
+    one of the most strategically important abstractions in the company.</p> <p>This
+    is a full time role that can be held from one of our US hubs or remotely in the
+    United States.&nbsp;</p> <h4>What you''ll do at Figma:</h4> <ul> <li>Design, build,
+    and improve code ↔ design translation pipelines</li> <li>Diagnose and resolve
+    performance bottlenecks<strong> </strong>and long-running tasks that impact product
+    SLAs</li> <li>Improve correctness, reconciliation, and fidelity across complex
+    design system and layout edge cases</li> <li>Build scalable serialization pipelines,
+    internal APIs, and platform utilities</li> <li>Partner with Figma Make, AI Assistant,
+    and Sites leads to define the long term product enablement</li> <li>Improve observability
+    and ownership of key metrics (latency, success rate, correctness)</li> <li>Support
+    and drive architectural direction and long-term platform strategy for a translation
+    surface</li> <li>Mentor engineers and shape the long-term team structure</li>
+    </ul> <h4>We’d love to hear from you if you have:</h4> <ul> <li>5+ years of software
+    engineering experience, especially in web, platform or infrastructure engineering</li>
+    <li>Strong TypeScript/JavaScript and modern frontend fundamentals</li> <li>Deep
+    experience with declarative UI systems (React, JSX, or similar)</li> <li>Familiarity
+    with ASTs, code transformation, or compilation concepts</li> <li>Experience debugging
+    performance, rendering, or pipeline latency issues</li> <li>Experience building
+    complex, cross-team platforms with multiple stakeholder groups</li> </ul> <h4><strong>While
+    it’s not required, it’s an added plus if you also have:</strong></h4> <ul> <li>Experience
+    building design systems or component libraries</li> <li>Platform or infrastructure
+    engineering experience (APIs, observability, SLAs)</li> <li>Rendering, layout,
+    or graphics pipeline knowledge</li> <li>Experience with structured representations
+    used by LLMs</li> </ul> <p>At Figma, one of our values is Grow as you go. We believe
+    in hiring smart, curious people who are excited to learn and develop their skills.
+    If you’re excited about this role but your past experience doesn’t align perfectly
+    with the points outlined in the job description, we encourage you to apply anyways.
+    You may be just the right candidate for this or other roles.</p> </div><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p><strong><span style="font-size:
+    16px;">Pay Transparency Disclosure</span></strong></p> <p>If based in Figma’s
+    San Francisco or New York hub offices, this role has the annual base salary range
+    stated below.&nbsp;&nbsp;&nbsp;&nbsp;</p> <p>Job level and actual compensation
+    will be decided based on factors including, but not limited to, individual qualifications
+    objectively assessed during the interview process (including skills and prior
+    relevant experience, potential impact, and scope of role), market demands, and
+    specific work location. The listed range is a guideline, and the range for this
+    role may be modified. For roles that are available to be filled remotely, the
+    pay range is localized according to employee w'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.8
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 7
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-01-13'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.802277+00:00'
+  date_source: first_published
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

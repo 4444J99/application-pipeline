@@ -1,0 +1,107 @@
+id: anduril-security-software-engineer-endpoint-security
+name: Anduril Security Software Engineer - Endpoint Security
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5086962007?gh_jid=5086962007
+  portal: greenhouse
+  location: Washington, District of Columbia, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE JOB&nbsp;</h3> <p>We're
+    seeking a Security Software Engineer to develop novel security tooling for securing
+    embedded Linux systems and Android devices. The ideal candidate can develop, test,
+    and debug an endpoint detection and response agent with mission critical security
+    responsibilities.<br><br><strong>WHAT YOU’LL DO</strong></p> <ul> <li>Design and
+    develop cybersecurity tools for realtime embedded, embedded Linux, and Android
+    systems.</li> <li>Implement an endpoint detection and response agent for use on
+    Anduril products.</li> <li>Develop thorough testing and qualification procedures
+    for security critical components.</li> <li>Collaborate with cross-functional teams
+    to identify specific security needs and implement solutions.</li> <li>Conduct
+    code reviews and ensure adherence to security best practices.</li> <li>Stay updated
+    on the latest security threats and technologies.</li> </ul> <h4>REQUIRED QUALIFICATIONS&nbsp;</h4>
+    <ul> <li>2+ years of software development experience in some combination of Golang,
+    Rust, or C/C++.</li> <li>Experience with Linux observability and eBPF.</li> <li>Strong
+    understanding of Linux security internals.</li> <li>Experience debugging and optimizing
+    performance of Linux software.</li> <li>Experience with CI/CD and test automation,
+    including for mobile and embedded devices.</li> <li>Solid understanding of cybersecurity
+    principles and practices.</li> <li>Ability to obtain and hold a U.S. Secret security
+    clearance.</li> </ul> <h4>PREFERRED QUALIFICATIONS&nbsp;</h4> <ul> <li>Knowledge
+    of security frameworks and compliance standards.</li> <li>Experience in mobile
+    development, specifically on Android platforms.</li> <li>Experience implementing
+    EDR tooling.</li> <li>Experience with SOC operations, forensics, and incident
+    response practices.</li> <li>Strong problem-solving and analytical skills.</li>
+    <li>Excellent communication and teamwork abilities.</li> </ul><div class="content-pay-transparency"><div
+    class="pay-input"><div class="title">US Salary Range</div><div class="pay-range"><span>$166,000</span><span
+    class="divider">&mdash;</span><span>$253,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work experience, education and/or training, critical skills, and/or business considerations.
+    Highly competitive equity grants are included in the majority of full time offers;
+    and are considered part of Anduril's total compensation package. Additionally,
+    Anduril offers top-tier benefits for full-time employees, including:</span><span
+    data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></p>
+    <p><strong><span data-contrast="auto">Healthcare Benefits&nbsp;</span></strong></p>
+    <ul> <li><strong><span data-contrast="none">US Roles:</span></strong><span data-contrast="none">&nbsp;Comprehensive
+    medical, dental, and vision plans at little to no cost to you.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    <li><strong><span data-contrast="none">UK &amp; AUS Roles:</span></strong><span
+    data-contrast="none">&nbsp;We cover full cost of medical insurance premiums for
+    you and your dependents.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    <li><strong><span data-contrast="auto">IE Roles:</span></strong> <span data-contrast="none">We
+    offer an annual contribution toward your private health insurance for you and
+    your dependents.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    </ul> <p><strong><span data-contrast="auto">Additional Benefits</s
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.889988+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

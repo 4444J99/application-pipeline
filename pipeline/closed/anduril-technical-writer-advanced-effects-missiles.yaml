@@ -1,0 +1,115 @@
+id: anduril-technical-writer-advanced-effects-missiles
+name: Anduril Technical Writer, Advanced Effects Missiles
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5048074007?gh_jid=5048074007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM<strong>&nbsp;</strong></h3>
+    <p>Anduril’s Mission Success team is a cross-functional group that partners with
+    every business line and supports all products that Anduril builds. Our responsibilities
+    include product operations, training and adoption, and user documentation. We
+    are seeking an experienced Technical Writer to create and maintain user documentation
+    across our diverse business lines. We believe that the quality of our documentation
+    should reflect the quality of products, which are world-class.</p> <h3>ABOUT THE
+    JOB&nbsp;</h3> <p>As a Technical Writer, your mission is to partner with our numerous
+    product and operations teams to deliver accurate, updated, and easy-to-understand
+    documentation on how to use Anduril products. You will do whatever it takes to
+    organize our engineering and program delivery functions in this mission. In this
+    role, you will work closely with engineers, operations, and various subject matter
+    experts to understand our products, identify user workflows, and use documentation
+    to close the gap. As such, the technical Writer will play a foundational role
+    in setting the bar for tone, voice, and quality across our written artifacts.<br>With
+    Anduril’s focus on defense and national security, user documentation plays a critical
+    role in ensuring front-line operators know how to leverage the “arsenal of democracy.”
+    Your mission is to make the process of learning how to operate systems as easy
+    and seamless as possible, with exceptionally well written and presented artifacts.<br>You
+    will identify relevant stakeholders and lead them through a documentation roadmap
+    with established key milestones and targets. You will engage subject matter experts
+    at the right time, and you will guide them towards a finished user-facing document
+    that plainly meets customer needs. Finally, you will work with our account teams
+    to ensure that contract deliverables are accurate, on-time, and in the right format.<br>Written
+    content artifacts under this charter may include things like: technical manuals,
+    operational manuals, maintenance manuals, procedures, checklists, templates, user
+    guides, troubleshooting guides, and release notes. You will partner with account,
+    product, and engineering teams across all phases of product development to ensure
+    users have the right documentation available.<br><br>Along with our commercial
+    offerings outlined above, Anduril is pursuing Programs with the GOV, which require
+    documentation in standards such as MIL-STD-40051D, and S1000D, delivered via IADs.
+    Familiarity with these standards and delivery methods, is highly desired.<br><br><strong>WHAT
+    YOU’LL DO&nbsp;</strong></p> <ul> <li>Generate, review, and edit documentation
+    that is user-focused. Work with engineering and operations to deliver task, conditions,
+    standard-centric documentation</li> <li>Evaluate and prioritize tasks required
+    to successfully support product documentation efforts and keep them on track.
+    Help drive the best decision for the company by using a data-driven approach and
+    consider input from stakeholders to ensure well-informed decisions.</li> <li>Communicate
+    and help manage expectations. Ensure risks are noted with adequate time, and shared
+    with leadership.</li> <li>Help build a culture of technical documentation by contributing
+    to the living documentation process, ensuring that those that come after you learn
+    from your acquired Anduril experience.</li> </ul> <h4>REQUIRED QUALIFICATIONS</h4>
+    <ul> <li>4+ years of demonstrated excellence generating technical documentation</li>
+    <li>Experience writing technical user-facing documentation</li> <li>Experience
+    reading and interpreting engineering documentation</li> <li>Experience building
+    content in a variety of formats (Word, XML, etc)</li> <li>Eligible to obtain and
+    maintain an active U.S. Top Secret security clearance</li> </ul> <h4>PREFERRED
+    QUALIFICATIONS</h4> <ul> <li>Military exposure and experience, particularly with
+    military technical documentation writing and formatting standards, guidelines,
+    and verbiage (MIL-STD-40051, S1000D, etc)</li> <li>Strong communication (written
+    and verbal) and interpersonal skills, with emphasis on technical subjects</li>
+    <li>Passion for excellent documentation an'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:34.163691+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,117 @@
+id: anthropic-senior-software-engineer-research-tools
+name: Anthropic Senior+ Software Engineer, Research Tools
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/4981828008
+  portal: greenhouse
+  location: San Francisco, CA | New York City, NY
+  location_class: us-onsite
+  description: "<div class=\"content-intro\"><h2><strong>About Anthropic</strong></h2>\
+    \ <p>Anthropic\u2019s mission is to create reliable, interpretable, and steerable\
+    \ AI systems. We want AI to be safe and beneficial for our users and for society\
+    \ as a whole. Our team is a quickly growing group of committed researchers, engineers,\
+    \ policy experts, and business leaders working together to build beneficial AI\
+    \ systems.</p></div><h2 class=\"heading\"><strong>About the role</strong></h2>\
+    \ <p>Anthropic's research teams are pushing the boundaries of AI safety and capability\
+    \ research, and they need exceptional tools to do their best work. As a Software\
+    \ Engineer on the Research Tools team, you'll build the infrastructure and applications\
+    \ that enable our researchers to iterate quickly, run complex experiments, and\
+    \ extract insights from frontier AI systems.</p> <p>This role sits at the intersection\
+    \ of product thinking and full-stack engineering. You'll work directly with researchers\
+    \ and engineers to deeply understand their workflows, identify bottlenecks, and\
+    \ rapidly ship solutions that multiply their productivity. Whether you're building\
+    \ human feedback interfaces for model evaluation, creating platforms for experiment\
+    \ orchestration, or developing novel visualization tools for understanding model\
+    \ behavior, your work will directly accelerate our mission to build safe, reliable\
+    \ AI systems.</p> <p>We're looking for someone who can operate with high agency\
+    \ in an ambiguous environment\u2014someone who can be dropped into a research\
+    \ team, quickly develop domain expertise, and independently drive impactful projects\
+    \ from conception to delivery.<br><br><strong><em>No ML or Research experience\
+    \ is required</em></strong></p> <h2 class=\"heading\"><strong>Responsibilities</strong></h2>\
+    \ <ul> <li> <p>Build and maintain full-stack applications and infrastructure that\
+    \ researchers use daily to conduct experiments, collect feedback, and analyze\
+    \ results</p> </li> <li> <p>Partner closely with research teams to understand\
+    \ their workflows, pain points, and requirements, translating these into technical\
+    \ solutions</p> </li> <li> <p>Design intuitive interfaces and abstractions that\
+    \ make complex research tasks accessible and efficient</p> </li> <li> <p>Create\
+    \ reusable platforms and tools that accelerate the development of new research\
+    \ applications</p> </li> <li> <p>Rapidly prototype and iterate on solutions, gathering\
+    \ feedback from users and refining based on real-world usage</p> </li> <li> <p>Take\
+    \ ownership of complete product areas, from understanding user needs through design,\
+    \ implementation, and ongoing iteration</p> </li> <li> <p>Contribute to technical\
+    \ strategy and architectural decisions for research tooling</p> </li> <li> <p>Mentor\
+    \ other engineers and help establish best practices for research application development</p>\
+    \ </li> </ul> <h2 class=\"heading\"><strong>You may be a good fit if you</strong></h2>\
+    \ <ul> <li> <p>Have 5+ years of software engineering experience with a strong\
+    \ focus on full-stack development</p> </li> <li> <p>Excel at rapid iteration and\
+    \ shipping\u2014you can move from concept to working prototype quickly</p> </li>\
+    \ <li> <p>Have experience building tools, platforms, or infrastructure for technical\
+    \ users (engineers, researchers, data scientists, analysts, etc.)</p> </li> <li>\
+    \ <p>Demonstrate high agency and ability to operate independently in ambiguous\
+    \ environments</p> </li> <li> <p>Can quickly develop deep understanding of complex\
+    \ technical domains</p> </li> <li> <p>Have strong product instincts and can identify\
+    \ the right problems to solve</p> </li> <li> <p>Are proficient with modern web\
+    \ technologies (React, TypeScript, Python, etc.)</p> </li> <li> <p>Have a track\
+    \ record of building user-facing applications that are actually used and loved\
+    \ by their target audience</p> </li> <li> <p>Communicate effectively with both\
+    \ technical and non-technical stakeholders</p> </li> <li> <p>Care about the societal\
+    \ impacts of your work and are motivated by Anthropic's mission</p> </li> </ul>\
+    \ <h2 class=\"heading\"><strong>Strong candidates may also have</strong></h2>\
+    \ <ul> <li> <p>Experience building research tools, scientific software, or experimentation\
+    \ platforms</p> </li> <li> <p>Background in machine learning, AI research, or\
+    \ working closely with ML researchers</p> </li> <li> <p>Founded or been an early\
+    \ engineer at a startup, particularly one focused on developer or researcher tools</p>\
+    \ </li> <li> <p>Built open-source tools or platforms with active user communities</p>\
+    \ </li> <li> <p>Experience with data visualization, interactive interfaces, or\
+    \ novel interaction paradigms</p> </li> <li> <p>Contributed to engineering platforms\
+    \ or internal tooling at scale (similar to Heroku, Vercel, or other platform-as-a-service\
+    \ products)</p> </li> <li> <p>Experience leveraging AI/LLMs to build more powerful\
+    \ or efficient tools</p> </li> <li> <p>Previous work in creative tools, artist\
+    \ tools, or other domains requiring deep user empathy</p> </li> <li> <p>Domain\
+    \ knowledge in areas like human-computer"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.858181+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

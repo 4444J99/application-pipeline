@@ -1,0 +1,112 @@
+id: snowflake-staff-software-engineer-cortex-code-platform
+name: Snowflake Staff Software Engineer — Cortex Code Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/feeb61fb-3208-4f36-b645-a3cd6f8fa3c4
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Snowflake is about empowering enterprises to
+    achieve their full potential — and people too. With a culture that’s all in on
+    impact, innovation, and collaboration, Snowflake is the sweet spot for building
+    big, moving fast, and taking technology — and careers — to the next level. About
+    the Role The Cortex Code team is building the future of coding agents for working
+    with data. See our flagship product in action: Cortex Code in Action: Live Demos
+    + AMA . As a Staff Software Engineer on Cortex Code Platform , you will own the
+    backend infrastructure that makes agent sessions, tools, and integrations reliable
+    and secure at enterprise scale —including AI security , containerized execution
+    , and distributed data systems under real customer load. You’ll partner closely
+    with product, applied AI, and security to ship pragmatic platform improvements
+    with clear operational guardrails. What you will do in this role: Platform architecture
+    & delivery: Design and build scalable services, APIs, and core primitives for
+    orchestration, session lifecycle, tool execution boundaries, and Snowflake ecosystem
+    integration. AI security & safe execution: Threat-model agent workflows; enforce
+    least-privilege access to customer context, safe secret/credential handling, and
+    controls that reduce injection, tool misuse, and exfiltration risk without blocking
+    velocity. Container infrastructure: Operate secure, cost-aware container execution
+    for agents—images, isolation, limits/scheduling, networking, and production operability
+    (warm pools, cold starts, rollouts). Distributed data systems: Build and evolve
+    data-intensive platform components (durable workflows, queues/streaming where
+    needed, caching, backpressure, consistency tradeoffs) with strong observability
+    and capacity discipline. Leadership & production excellence: Drive cross-team
+    execution through design docs and mentorship; define SLOs, incident patterns,
+    and rollout practices; stay hands-on in code (we use Go , TypeScript , Python
+    , and cloud-native building blocks—mix varies by project). Requirements: Bachelor’s
+    degree in Computer Science, Engineering, or a related field. Master’s or higher
+    preferred but not a requirement. 8+ years shipping distributed systems / backend
+    platform software in production, with Staff-level scope (architecture ownership,
+    cross-team delivery, mentoring). Production experience with container orchestration
+    (e.g., Kubernetes-class patterns) and distributed data systems (queues/streaming,
+    partitioning, replication, failure modes). Strong security fundamentals for cloud
+    services (threat modeling, least privilege, secrets management) plus practical
+    judgment for AI/agent risks. Proficiency in Go and/or comparable backend languages;
+    ability to contribute in TypeScript and/or Python as needed. Strong communication
+    skills and ability to collaborate effectively in a team environment. Nice to have
+    Multi-tenant SaaS, workflow orchestration, or high-throughput async systems at
+    scale. Sandboxed execution, LLM serving/streaming patterns, or deep Snowflake
+    platform integration experience. You may be a particularly good fit if you Have
+    built and owned complex platforms—many moving parts, meaningful state, and demanding
+    operational requirements. Thrive in high-intensity environments with short feedback
+    loops and high standards for rigor. Take problems to completion: you care about
+    production reliability, clear metrics, and sustainable engineering velocity. Act
+    as a force multiplier through architecture, tooling, and mentorship—especially
+    where security, containers, and data systems intersect. About Snowflake Snowflake
+    is the AI Data Cloud trusted by the world''s most innovative companies. We''re
+    shipping production-ready AI applications at scale and want you to join us in
+    building the future of how businesses interact with their data through Cortex
+    Code , Cortex agents , Cortex analyst , Cortex search . Snowflake is growing fast,
+    and we’re scaling our team to help enable and accelerate our growth. We are looking
+    for people who share our values, challenge ordinary thinking, and push the pace
+    of innovation while building a future for themselves and Snowflake. How do you
+    want to make your impact? For jobs located in the United States, please visit
+    the job posting on the Snowflake Careers Site for salary and benefits information:
+    careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: null
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.524746+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

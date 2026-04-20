@@ -1,0 +1,115 @@
+id: temporal-senior-software-engineer-cloud-data-storage
+name: Temporal Senior Software Engineer, Cloud Data Storage
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Temporal
+  url: https://boards.greenhouse.io/temporaltechnologies
+  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/4770137007
+  portal: greenhouse
+  location: United States - Remote Opportunity
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><h3><strong>About Us</strong></h3> <div>Temporal\
+    \ is an open source programming model that can simplify code, make applications\
+    \ more reliable, and help developers focus on the important things like delivering\
+    \ features faster. We are on a mission to be the reliable foundation of every\
+    \ developer\u2019s toolbox, and are building the team that will make that happen.</div>\
+    \ <div>&nbsp;</div> <div>Our values guide us \u2014they are present in how we\
+    \ show up, make decisions, and work together to make an impact. We\u2019re curious,\
+    \ driven, collaborative, genuine and humble.</div> <div>&nbsp;</div> <div>Temporal\
+    \ is growing and we are looking for those who share our values, challenge 'standard'\
+    \ thinking, and want to influence our future. If you have a passion for improving\
+    \ the developer experience, building world-class open-source software and communities,\
+    \ and want to be a part of our amazing team, we'd love to hear from you!</div></div><div>\
+    \ <h3>&nbsp;</h3> <div> <p><strong>Summary</strong></p> <p>Cloud Data Store (CDS)\
+    \ owns the storage, retrieval, and lifecycle of all workflow data at planet scale.\
+    \ We design the persistence APIs, build storage abstractions that run across cloud\
+    \ vendors, and deliver the observability that lets customers trust their state\
+    \ machines for years. <em><strong>[To see more detail re: the Temporal CDS Eng\
+    \ team, <a href=\"https://temporalio.notion.site/Join-Temporal-s-Cloud-Data-Store-CDS-Team-21b8fc56773880028492cfbd915b0b60\"\
+    \ target=\"_blank\">click here</a>]</strong></em></p> <p>As a <strong>Senior Software\
+    \ Engineer</strong>, you will get the chance to design, build, and maintain significant\
+    \ portions of our backend functionality for highly scalable, multi-tenant services.\
+    \ You\u2019ll own the custom persistence stack for Temporal Cloud which includes\
+    \ a Write Ahead Log, various metadata stores (Cassandra, etcd), multi-level caches,\
+    \ tiered storage etc.&nbsp;</p> <h3><strong>What You'll Do</strong></h3> <ul>\
+    \ <li><strong>Design &amp; build distributed data systems</strong> \u2013 craft\
+    \ APIs, schemas, and replication paths that keep petabytes of workflow history\
+    \ durable and query-able. Clearly document design choices and operational knowledge\
+    \ to successfully deploy and run service with those features.</li> <li><strong>Drive\
+    \ reliability &amp; performance</strong> \u2013 own SLOs, create chaos-test plans,\
+    \ profile hot paths, and lead incident reviews.&nbsp;</li> <li><strong>Technical\
+    \ leadership</strong> \u2013 break down roadmap epics, mentor mid-level engineers,\
+    \ steward design docs through RFC.&nbsp;</li> <li><strong>Cross-team collaboration</strong>\
+    \ \u2013 partner with the Server, Cloud, and DX teams to land features end-to-end.&nbsp;</li>\
+    \ </ul> <h3><strong>What You'll Bring</strong></h3> <ul> <li>5 or more years of\
+    \ experience as an \"Arranger\" and/or \"Builder/Enhancer\" of highly scalable\
+    \ distributed systems.<a href=\"https://temporalio.notion.site/Distributed-Systems-Concurrency-2526e6dfce4947d39fd3a40f9f07652a\"\
+    > <em>see HERE</em></a><em> for more info re: \"Arranger\" and/or \"Builder/Enhancer\"\
+    </em></li> <li>Solid computer science fundamentals in distributed systems concepts\
+    \ including multi-threading and concurrency.</li> <li>Experience writing concurrent\
+    \ code in production with languages like Go or Java or other applicable languages\
+    \ with skill level as \"high end of Intermediate\" and/or \"Advanced\" or \"Expert\"\
+    \ levels.<a href=\"https://temporalio.notion.site/Distributed-Systems-Concurrency-2526e6dfce4947d39fd3a40f9f07652a\"\
+    > <em>see HERE</em></a><em> for more info re: \"high end of Intermediate\" and/or\
+    \ \"Advanced\" or \"Expert levels\"</em></li> <li>Experience building and running\
+    \ services on AWS. Bonus: Microsoft Azure and Google GCP experience.</li> </ul>\
+    \ <h3><strong>Nice to Have</strong></h3> <ul> <li>Prior contributions to Temporal,\
+    \ Cadence, or other workflow engines.</li> <li>Deep expertise in a storage domain\
+    \ (LSM trees, columnar stores, transactional logs, etc.).</li> <li>Operated multi-region,\
+    \ \u226599.99 % uptime services.</li> <li>Experience working with Open Source\
+    \ Systems.</li> <li>Experience in building K8s controllers and/or CRDs is a plus</li>\
+    \ </ul> </div> <div> <div> <div> <div> <h3><strong>Compensation</strong></h3>\
+    \ </div> <div> <ul> <li>The estimated pay range for this role is $180,000 - $225,000\
+    \ depending on locale.</li> <li>Additionally, this role is eligible to participate\
+    \ in Temporal's equity plan.</li> </ul> </div> </div> </div> </div> </div><div\
+    \ class=\"content-conclusion\"><div><em>Compensation ranges reflect salary and\
+    \ commission compensation (when applicable) across several geographic markets.\
+    \ Employment offers carefully consider multiple factors, including prior experience,\
+    \ knowledge, expertise, skillset, market location, and job level assessed during\
+    \ the interview process.</em></div> <div>&nbsp;</div> <div><em>Employee benefits\
+    \ and perks below are for full-time employees, part-time or temporary positions\
+    \ are excluded.&nbsp;</em></div> <div>&nbsp;</div> <div> <div><strong>U.S. Benefits&nbsp;</strong></div>"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 10
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.655879+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

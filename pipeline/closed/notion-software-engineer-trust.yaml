@@ -1,0 +1,116 @@
+id: notion-software-engineer-trust
+name: Notion Software Engineer, Trust
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Notion
+  url: https://jobs.ashbyhq.com/notion
+  application_url: https://jobs.ashbyhq.com/notion/0517ac3d-544c-4499-a810-cb794d0f8458
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: 'About Us: Notion helps you build beautiful tools for your life’s work.
+    In today''s world of endless apps and tabs, Notion provides one place for teams
+    to get everything done, seamlessly connecting docs, notes, projects, calendar,
+    and email—with AI built in to find answers and automate work. Millions of users,
+    from individuals to large organizations like Toyota, Figma, and OpenAI, love Notion
+    for its flexibility and choose it because it helps them save time and money. In-person
+    collaboration is essential to Notion''s culture. We require all team members to
+    work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor
+    Days. Certain teams or positions may require additional in-office workdays. About
+    The Role: Millions of people use Notion — and this number is increasing every
+    day. That means millions of people trust us to keep their data secure and private,
+    and we value this more than anything. We want to keep earning trust, while also
+    continuing to amaze our users with the tools they can build in Notion. As a member
+    of the Trust Engineering team, you''ll have many opportunities to safeguard Notion''s
+    customers and partner with product and infrastructure teams to integrate security
+    and trust into Notion''s technology stack, promoting sustainable growth towards
+    becoming a universally used product. What You''ll Achieve: Build product features,
+    platforms, and tools to protect Notion’s customers from account takeovers, phishing,
+    objectionable content, spam and other kinds of fraud and abuse Build controls
+    and guardrails for AI features to make Notion the trusted AI workspace Partner
+    closely with cross-functional teams to improve the safety, privacy, and security
+    of the Notion ecosystem What We’re Looking For: You have 2 - 4 years of engineering
+    experience and can decompose tricky problems and work towards a clean solution,
+    by yourself or with teammates. Pragmatic and business-oriented: You care about
+    business impact and prioritize projects accordingly. You don''t just go after
+    cool stuff—you understand the balance between craft, speed, and the bottom line.
+    You may be opinionated, but you''re not ideological and can learn new technologies
+    as you go. Empathetic communication: You communicate nuanced ideas clearly, whether
+    you''re explaining technical decisions in writing or brainstorming in real time.
+    In disagreements, you engage thoughtfully with other perspectives and compromise
+    when needed. Team player: You understand when work is better, together. You enjoy
+    collaborating cross-functionally to accomplish shared goals, and you care about
+    learning, growing, and helping others to do the same. You don’t need to be an
+    AI expert, but you’re curious and willing to adopt AI tools to work smarter and
+    deliver better results. Ideally, you are comfortable using tools like Claude Code
+    or Codex. Nice to Haves: Domain expertise : You have engineering experience in
+    trust, safety, security, and privacy. Cross-functional collaboration : You have
+    a history of strong cross-functional collaboration with trust and safety ops,
+    legal, and/or other non-technical teams. Technology stack : You''re proficient
+    with any part of our technology stack: React, TypeScript, Node.js, Postgres, Dynamo,
+    Memcached. Startup mentality: You are comfortable navigating the fast moving,
+    unstructured nature of a hyper-growth startup. You are self-motivated to add value
+    and bias towards action. Our customers come from all walks of life and so do we.
+    We hire great people from a wide variety of backgrounds, not just because it''s
+    the right thing to do, but because it makes our company stronger. If you share
+    our values and our enthusiasm for small businesses, you will find a home at Notion.
+    Notion is proud to be an equal opportunity employer. We do not discriminate in
+    hiring or any employment decision based on race, color, religion, national origin,
+    age, sex (including pregnancy, childbirth, or related medical conditions), marital
+    status, ancestry, physical or mental disability, genetic information, veteran
+    status, gender identity or expression, sexual orientation, or other applicable
+    legally protected characteristic. Notion considers qualified applicants with criminal
+    histories, consistent with applicable federal, state and local law. Notion is
+    also committed to providing reasonable accommodations for qualified individuals
+    with disabilities and disabled veterans in our job application procedures. If
+    you need assistance or an accommodation due to a disability, please let your recruiter
+    know. Notion is committed to providing highly competitive cash compensation, equity,
+    and benefits. The compensation offered for this role will be based on multiple
+    factors such as location, the role’s scope and complexity, and the candidate’s
+    experience and expertise, and may vary from the range provided below. For roles
+    based in San Francisco or New York City, the estimated base salary range for this
+    role is $139,000 - $204,000 per year. By clicking “Submit Application”, I'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: null
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.766103+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

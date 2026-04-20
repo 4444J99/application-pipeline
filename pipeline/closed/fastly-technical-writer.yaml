@@ -1,0 +1,118 @@
+id: fastly-technical-writer
+name: Fastly Technical Writer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Fastly
+  url: https://boards.greenhouse.io/fastly
+  application_url: https://www.fastly.com/about/jobs/apply?gh_jid=7782764
+  portal: greenhouse
+  location: Denver, CO; New York City, NY; San Francisco, CA
+  location_class: us-onsite
+  description: "<div class=\"content-intro\"><p>Fastly helps people stay better connected\
+    \ with the things they love. Fastly\u2019s edge cloud platform enables customers\
+    \ to create great digital experiences quickly, securely, and reliably by processing,\
+    \ serving, and securing our customers\u2019 applications as close to their end-users\
+    \ as possible \u2014 at the edge of the Internet. The platform is designed to\
+    \ take advantage of the modern internet, to be programmable, and to support agile\
+    \ software development. Fastly\u2019s customers include many of the world\u2019\
+    s most prominent companies, including GitHub, Yelp, Paramount, and JetBlue.</p>\
+    \ <p>We're building a more trustworthy Internet. Come join us.</p></div><p><strong>Posting\
+    \ Open Date: </strong>April 7, 2026</p> <p><strong>Anticipated Posting Close Date*:\
+    \ </strong>April 30, 2026</p> <p><em>*Job posting may close early due to the volume\
+    \ of applicants.</em></p> <p><strong>Technical Writer (This role can be remote\
+    \ within the US)</strong></p> <p>Fastly's Documentation team makes edge computing,\
+    \ cloud security, and content delivery delightfully easy to understand. We're\
+    \ looking for a Technical Writer who can tell customers not just how to use our\
+    \ products but when and why they'd want to, and turn that into documentation that\
+    \ makes them feel capable, not confused. You'll work alongside a small, collaborative\
+    \ team that believes documentation is a product, one that Fastly displays with\
+    \ pride. If you get a kick out of structuring information so well that customers\
+    \ can solve problems on their own, finding the signal in the noise of dense technical\
+    \ material, and writing content where every word earns its place, we'd love to\
+    \ hear from you.</p> <p><strong>What You'll Do:</strong></p> <ul> <li>Own documentation\
+    \ for Fastly products and features from kickoff through publication. You'll work\
+    \ with product managers, engineers, and subject matter experts to translate technical\
+    \ complexity into clear content.</li> <li>Write and maintain different types of\
+    \ documentation, including tutorials, how-to guides, technical references, and\
+    \ explanations, understanding what each one is for and when customers need which.</li>\
+    \ <li>Contribute to information architecture improvements that make our documentation\
+    \ easier to navigate, reducing the distance between a customer's question and\
+    \ the answer they need.</li> <li>Review your teammates' work with a thoughtful\
+    \ eye for clarity, consistency, and alignment with our style, tone, and voice\
+    \ guidelines, and welcome the same from them.</li> <li>Collaborate with Product,\
+    \ Engineering, and Client Services to ensure documentation stays accurate as products\
+    \ evolve and customer needs shift.</li> <li>Support engineers and developers who\
+    \ contribute to documentation directly, helping them improve their writing through\
+    \ content reviews and guidance.</li> </ul> <p><strong>What We're Looking For:&nbsp;</strong></p>\
+    \ <ul> <li>A bachelor's degree or equivalent training in technical communication,\
+    \ and typically 4 or more years of professional experience not just documenting\
+    \ <em>how</em> something works, but understanding <em>when</em> and <em>why</em>\
+    \ a customer would need it.</li> <li>Experience writing for diverse technical\
+    \ audiences, from software developers and security engineers to DevOps teams and\
+    \ engineering leadership, with the judgment to calibrate depth and tone for each.</li>\
+    \ <li>The ability to break down projects into tasks, plan and estimate the work,\
+    \ and regularly meet deadlines, taking ownership of your work while knowing when\
+    \ to loop in the team. You know the docs don't write themselves.</li> <li>Solid\
+    \ command of docs-as-code tooling: version control systems (e.g., Git), lightweight\
+    \ markup languages (e.g., Markdown, MDX), and collaborative workflows built around\
+    \ code review concepts.</li> <li>A growth mindset when it comes to feedback: you\
+    \ actively seek it, you apply it, and you give it constructively. You'd still\
+    \ rather put something out there for the team to tear apart than have everyone\
+    \ stare at a blank page.</li> </ul> <p><strong>We\u2019ll be super impressed if\
+    \ you have experience in any of these:&nbsp;</strong></p> <ul> <li>Working with\
+    \ CDN, edge computing, web security, or cloud infrastructure products.</li> <li>Working\
+    \ in environments where documentation carries contractual or legal weight, where\
+    \ word choices matter beyond just style.</li> <li>Using the Diataxis documentation\
+    \ framework (or a similar structured content methodology) to organize and improve\
+    \ documentation sets.</li> <li>Writing or maintaining API reference documentation,\
+    \ especially for RESTful APIs.</li> <li>Contributing to accessibility initiatives,\
+    \ ensuring documentation works for all users regardless of ability.</li> <li>Experience\
+    \ with static site generators (Gatsby, Astro, Hugo) or custom documentation tooling.</li>\
+    \ </ul> <p><strong>Work Hours:</strong></p> <ul> <li>This position will require\
+    \ you to be available during core business hours.&nbsp;</li> </ul> <p><strong>Work\
+    \ Location(s) &amp; Travel Requirements:</strong></"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-08'
+  posting_date: '2026-04-07'
+  date_source: first_published
+  date_added: '2026-04-08'
+  discovered: '2026-04-08T10:15:26.219364+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,113 @@
+id: toast-intranet-technical-developer
+name: Toast Intranet Technical Developer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7762010
+  portal: greenhouse
+  location: London, UK
+  location_class: international
+  description: <p>Toast creates technology to help restaurants and local businesses
+    succeed in a digital world, helping business owners operate, increase sales, engage
+    customers, and keep employees happy. We are seeking a Intranet Technical Developer
+    / Architect responsible for the technical architecture, extensibility, and operational
+    stability of The Pantry, Toast’s enterprise intranet and employee knowledge platform
+    built on the Unily CMS.</p> <p>The Pantry serves as the central destination for
+    employees to access policies, procedures, operational guidance, and company knowledge.
+    As the platform grows across the organisation, it must remain structured, searchable,
+    and technically scalable so employees can easily locate reliable information.</p>
+    <p><strong>A day in the life (Responsibilities)&nbsp;</strong></p> <p>This role
+    owns the technical foundation of the platform, including CMS configuration, structured
+    knowledge architecture, search optimisation, and system integrations. The CMS
+    Technical Architect / Developer ensures The Pantry’s navigation structures, templates,
+    metadata models, and integrations are designed to scale as the organisation grows.</p>
+    <p>While Toast’s <strong>Centres</strong> of Excellence (COEs) author and maintain
+    subject-matter knowledge, The Pantry team maintains the platform architecture
+    and technical infrastructure that supports it. This role sits at the intersection
+    of CMS engineering, information architecture, and enterprise knowledge systems,
+    enabling The Pantry to function as a reliable and intelligent employee knowledge
+    platform.</p> <p><strong>What you'll need to thrive (Requirements)</strong></p>
+    <ul> <li>Candidates should have several years of experience working with enterprise
+    CMS or intranet platforms, with demonstrated experience configuring and maintaining
+    systems such as Unily, SharePoint, Confluence, or Adobe Experience Manager.</li>
+    <li>Strong familiarity with CMS development tools is required, including experience
+    working with CSS, JavaScript, and CMS APIs.</li> <li>Candidates should also have
+    a strong understanding of information architecture and structured content design,
+    along with experience managing complex knowledge environments.</li> <li>Equally
+    important is the ability to translate technical CMS constraints into clear guidance
+    for business stakeholders and collaborate effectively with cross-functional teams.</li>
+    <li>Direct experience working with the Unily CMS platform is strongly preferred.</li>
+    <li>Experience supporting enterprise search optimisation, structured knowledge
+    systems, or AI-driven knowledge retrieval frameworks is also valuable.</li> <li>Candidates
+    with experience supporting internal employee experience platforms or knowledge
+    management systems will be especially successful in this role.</li> </ul> <p data-pm-slice="1
+    1 []"><strong>AI at Toast</strong></p> <p>At Toast, one of our company values
+    is that we're hungry to build and learn. We believe learning new AI tools empowers
+    us to build for our customers faster, more independently, and with higher quality.
+    We provide these tools across all disciplines, from Engineering and Product to
+    Sales and Support, and are inspired by how our Toasters are already driving real
+    value with them. The people who thrive here are those who embrace changes that
+    let us build more for our customers; it’s a core part of our culture.</p> <p><br><strong>Our
+    Total Rewards Philosophy</strong></p> <p>We strive to provide competitive compensation
+    and benefits programs that help to attract, retain, and motivate the best and
+    brightest people in our industry. Our total rewards package goes beyond great
+    earnings potential and provides the means to a healthy lifestyle with the flexibility
+    to meet Toasters’ changing needs. Learn more about our benefits at <a class="c-link"
+    href="https://careers.toasttab.com/toast-benefits" target="_blank" data-stringify-link="https://careers.toasttab.com/toast-benefits"
+    data-sk="tooltip_parent" data-remove-tab-index="true">https://careers.toasttab.com/toast-benefits</a>.</p><div
+    class="content-conclusion"><p><strong>How Toast Uses AI in its Hiring Process</strong></p>
+    <p>Throughout the hiring process, our goal is to get to know you. We use AI tools
+    to support our recruiters and interviewers with tasks like note-taking, summarization,
+    and documentation of interviews to ensure they can be fully focused on your conversation.
+    All hiring decisions are made by people.</p> <p><strong><strong data-stringify-type="bold">Diversity,
+    Equity, and Inclusion is Baked into our Recipe for Success</strong></strong></p>
+    <p>At Toast, our employees are our secret ingredient—when they thrive, we thrive.&nbsp;The
+    restaurant industry is one of the most diverse, and we embrace that diversity
+    with authenticity, inclusivity, respect, and humility. By embedding these principles
+    into our culture and design, we create equitable opportunities for all and raise
+    the bar in delivering exceptional experiences.</p> <p><span style="font-wei
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.308600+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

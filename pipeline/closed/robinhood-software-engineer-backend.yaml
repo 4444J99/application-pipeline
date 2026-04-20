@@ -1,0 +1,117 @@
+id: robinhood-software-engineer-backend
+name: Robinhood Software Engineer, Backend
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7263592?t=gh_src=&gh_jid=7263592
+  portal: greenhouse
+  location: Menlo Park, CA; New York, NY
+  location_class: us-onsite
+  description: "<div class=\"content-intro\"><h2>Join us in building the future of\
+    \ finance.</h2> <p>Our mission is to democratize finance for all. <a href=\"https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048\"\
+    \ target=\"_blank\">An estimated $124 trillion of assets</a> will be inherited\
+    \ by younger generations in the next two decades. The largest transfer of wealth\
+    \ in human history. If you\u2019re ready to be at the epicenter of this historic\
+    \ cultural and financial shift, keep reading.</p></div><h3 data-start=\"240\"\
+    \ data-end=\"267\">About the team + role</h3> <p data-start=\"268\" data-end=\"\
+    710\">We are building an elite team, applying frontier technologies to the world\u2019\
+    s biggest financial problems. We\u2019re looking for bold thinkers. Sharp problem-solvers.\
+    \ Builders who are wired to make an impact. Robinhood isn\u2019t a place for complacency,\
+    \ it\u2019s where ambitious people do the best work of their careers. We\u2019\
+    re a high-performing, fast-moving team with ethics at the center of everything\
+    \ we do. Expectations are high, and so are the rewards.</p> <p data-start=\"268\"\
+    \ data-end=\"710\">As a Software Engineer, you\u2019ll build and own backend services,\
+    \ infrastructure, and data systems that support Robinhood\u2019s core financial\
+    \ products. You\u2019ll solve complex scalability challenges while gaining deep\
+    \ expertise in U.S. financial systems and making a direct impact on the products\
+    \ used by millions.</p> <p data-start=\"712\" data-end=\"1071\">The <strong data-start=\"\
+    716\" data-end=\"729\">Brokerage</strong> team\u2019s mission is to pave the way\
+    \ for launching new features, expanding into diverse financial services, and welcoming\
+    \ millions more people into the financial system. The team owns critical services\
+    \ that support trading and brokerage infrastructure and partners closely with\
+    \ other engineering, product, and operations teams across Robinhood.</p> <p data-start=\"\
+    1073\" data-end=\"1374\">The <strong data-start=\"81\" data-end=\"95\">Incentives</strong>\
+    \ team drives user growth and engagement through both strategic incentives and\
+    \ platform capabilities. One sub-team focuses on increasing net deposits by testing\
+    \ incentive and non-incentive levers, while the other builds Robinhood\u2019s\
+    \ centralized, scalable platform to support personalized, company-wide rewards.</p>\
+    \ <p data-start=\"1073\" data-end=\"1374\">The <strong data-start=\"73\" data-end=\"\
+    85\">Identity</strong> team protects both Robinhood and its customers by preventing\
+    \ fraud and ensuring regulatory compliance. They own key systems for identity\
+    \ verification, KYC, and fraud prevention across all products, and collaborate\
+    \ closely with teams like Data Science, Brokerage, Crypto, and Security to support\
+    \ global expansion and product launches.</p> <p data-start=\"1688\" data-end=\"\
+    1801\">These roles are based in our <strong data-start=\"1714\" data-end=\"1732\"\
+    >Menlo Park, CA or New York City, NY</strong>&nbsp;office, with in-person attendance\
+    \ expected at least 3 days per week.</p> <p data-start=\"1803\" data-end=\"2029\"\
+    >At Robinhood, we believe in the power of in-person work to accelerate progress,\
+    \ spark innovation, and strengthen community. Our office experience is intentional,\
+    \ energizing, and designed to fully support high-performing teams.</p> <hr data-start=\"\
+    2031\" data-end=\"2034\"> <h3 data-start=\"2036\" data-end=\"2054\">What you\u2019\
+    ll do</h3> <ul data-start=\"2055\" data-end=\"2533\"> <li data-start=\"2055\"\
+    \ data-end=\"2179\"> <p data-start=\"2057\" data-end=\"2179\">Design, build, test,\
+    \ and deploy scalable backend services and systems with a strong emphasis on long-term\
+    \ maintainability.</p> </li> <li data-start=\"2180\" data-end=\"2295\"> <p data-start=\"\
+    2182\" data-end=\"2295\">Develop product-facing features and platform enhancements\
+    \ that meet strict correctness and scalability standards.</p> </li> <li data-start=\"\
+    2296\" data-end=\"2402\"> <p data-start=\"2298\" data-end=\"2402\">Identify and\
+    \ implement improvements to system performance, engineering productivity, and\
+    \ risk reduction.</p> </li> <li data-start=\"2403\" data-end=\"2533\"> <p data-start=\"\
+    2405\" data-end=\"2533\">Collaborate closely with client teams, cross-functional\
+    \ partners, and external vendors to deliver impactful technical solutions.</p>\
+    \ </li> </ul> <hr data-start=\"2535\" data-end=\"2538\"> <h3 data-start=\"2540\"\
+    \ data-end=\"2558\">What you bring</h3> <ul data-start=\"2559\" data-end=\"3075\"\
+    > <li data-start=\"2559\" data-end=\"2608\"> <p data-start=\"2561\" data-end=\"\
+    2608\">2+ years of experience in software development.</p> </li> <li data-start=\"\
+    2609\" data-end=\"2727\"> <p data-start=\"2611\" data-end=\"2727\">Strong track\
+    \ record of successfully delivering large-scope technical projects in cross-functional\
+    \ team environments.</p> </li> <li data-start=\"2728\" data-end=\"2796\"> <p data-start=\"\
+    2730\" data-end=\"2796\">Commitment to high standards in code quality and review\
+    \ processes.</p> </li> <li data-start=\"2797\" data-end=\"2906\"> <p data-start=\"\
+    2799\" data-end=\"2906\">Solid understanding of backend development, system design,\
+    \ and the intersection of product and engineering.</p> </li> <li data-start"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.148126+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

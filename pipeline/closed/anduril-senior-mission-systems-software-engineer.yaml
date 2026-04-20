@@ -1,0 +1,111 @@
+id: anduril-senior-mission-systems-software-engineer
+name: Anduril Senior Mission Systems Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/4805044007?gh_jid=4805044007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p data-pm-slice="1 1 []"><strong>WHY
+    WE ARE HERE</strong><br>We are seeking a senior software engineer for mission
+    systems development of the Fury. Fury is a&nbsp;<strong>high-performance, multi-mission</strong>
+    group 5 autonomous air vehicle (AAV) enabling trusted and collaborative autonomy
+    for the high-end fight. Engineers in this role will architect, develop, deploy,
+    and test software spanning the air vehicle. Our software engineers collaborate
+    with other engineering disciplines to develop software for fire control, networking,
+    sensor integration, and telemetry. We are looking for engineers excited to build
+    the foundational mission systems software stack that supports a wide range of
+    initiatives, from early concept simulation to first flight to live operations
+    to large scale fleet management.<br><br><strong>WHAT YOU'LL DO</strong></p> <ul>
+    <li>Design and write software services for controlling payloads, sensors, and
+    radios, which are deployed to real hardware.</li> <li>Integrate 3rd party hardware
+    into the greater ecosystem of a large air vehicle.</li> <li>Test software-hardware
+    integrations in both virtualized and real-world environments.</li> <li>Enable
+    and collaborate with multiple teams to plan, build, and test complex functionality.</li>
+    <li>Drive software requirements and specifications with cyber and safety considerations.</li>
+    <li>Own and maintain parts of the software roadmap, with detailed breakdown of
+    work and milestones tracked against broader program deliverables.</li> </ul> <p><strong>REQUIRED
+    QUALIFICATIONS</strong></p> <ul> <li>Strong engineering background from industry
+    or school, ideally in areas/fields such as Computer Science, Software Engineering,
+    Mathematics, or Physics</li> <li>5+ years working on Linux systems with a variety
+    of programming languages such as C++, C, Rust, Python, Go, or Zig (to include
+    internship experience)</li> <li>Experience deploying containerized software via
+    orchestration tools such as Docker or Kubernetes</li> <li>A desire to work on
+    critical software that has a real-world impact</li> <li>Currently possesses and
+    is able to maintain an active U.S. Secret security clearance</li> </ul> <p><strong>PREFERRED
+    QUALIFICATIONS</strong></p> <ul> <li>Experience working in air-gapped environments
+    (without network connectivity) on RHEL systems</li> <li>Knowledge of defense technology
+    and tactics, especially in the air domain</li> <li>Knowledge of distributed communication
+    networks and message standards</li> <li>Knowledge of Nix and NixOS</li> </ul>
+    <p>&nbsp;</p> <p>&nbsp;</p><div class="content-pay-transparency"><div class="pay-input"><div
+    class="title">US Salary Range</div><div class="pay-range"><span>$191,000</span><span
+    class="divider">&mdash;</span><span>$253,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work experience, education and/or training, critical skills, and/or business considerations.
+    Highly competitive equity grants are included in the majority of full time offers;
+    and are considered part of Anduril's total compensation package. Additionally,
+    Anduril offers top-tier benefits for full-time employees, including:</span><span
+    data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></p>
+    <p><strong><span data-contrast="auto">Healthcare Benefits&nbsp;</span></strong></p>
+    <ul> <li><strong><span data-contrast="none">US Roles:</span></strong><span data-contrast="none">&nbsp;Comprehensive
+    medical, dental, and vision plans at little to no cost to you.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    <li><strong><span data-contrast="none">UK &amp; AUS Roles:</span></strong><span
+    data-contrast="none">&nbsp;We cover full cost of medical insurance premiums for
+    you and your dependents.</span><span data-ccp-props="{&q
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.911761+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

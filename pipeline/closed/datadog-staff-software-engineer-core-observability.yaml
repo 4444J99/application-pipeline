@@ -1,0 +1,115 @@
+id: datadog-staff-software-engineer-core-observability
+name: Datadog Staff Software Engineer, Core Observability
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Datadog
+  url: https://boards.greenhouse.io/datadog
+  application_url: https://careers.datadoghq.com/detail/7547123/?gh_jid=7547123
+  portal: greenhouse
+  location: Paris, France
+  location_class: international
+  description: '<p><strong>About Datadog:</strong></p> <p>We''re on a mission to build
+    the best platform in the world for engineers to understand and scale their systems,
+    applications, and teams.&nbsp; We operate at high scale—trillions of data points
+    per day—providing always-on alerting, metrics visualization, logs, and application
+    tracing for tens of thousands of companies. Our engineering culture values pragmatism,
+    honesty, and simplicity to solve hard problems the right way.</p> <p>&nbsp;</p>
+    <p><strong>The team:</strong><strong><br></strong>The Core Observability team
+    at Datadog ensures our internal observability use cases are met with reliability,
+    scalability, and cost-efficiency—leveraging our own platform at Datadog scale.
+    As a Staff Software Engineer, you’ll operate as a senior technical leader with
+    broad, cross-functional impact. You’ll architect resilient and scalable observability
+    systems, influence product direction, and drive multi-team initiatives that benefit
+    both internal stakeholders and external customers. This role offers the opportunity
+    to shape long-term observability strategy, elevate engineering quality across
+    the organization, and mentor other senior engineers in a high-scale, pragmatic
+    environment.</p> <p>&nbsp;</p> <p><em>At Datadog, we place value in our office
+    culture - the relationships that it builds, the creativity it brings to the table,
+    and the collaboration of being together. We operate as a hybrid workplace to ensure
+    our employees can create a work-life harmony that best fits them.</em></p> <p>&nbsp;</p>
+    <p><strong>What You’ll Do:&nbsp;</strong></p> <ul> <li>Translate organization-wide
+    observability needs into actionable technical strategies that influence product
+    roadmaps and engineering priorities.</li> <li>Lead delivery of complex, multi-org
+    initiatives—from problem framing through production deployment—at global scale.</li>
+    <li>Architect resilient, scalable solutions to cross-org challenges including
+    disaster recovery, telemetry ingestion, and multi-region readiness.</li> <li>Partner
+    with engineering, infrastructure, product, and security teams to align observability
+    practices, improve internal platforms, and shape roadmap direction.</li> <li>Improve
+    operational excellence company-wide by refining SLOs, on-call processes, automation,
+    and runbooks to reduce risk and improve reliability.</li> <li>Act as the senior
+    technical authority for all telemetry production and consumption, guiding long-term
+    strategy and alignment.</li> <li>Mentor senior engineers, influence design principles,
+    and elevate technical standards across the Core Observability domain.</li> </ul>
+    <p>&nbsp;</p> <p><strong>Who You Are:&nbsp;</strong></p> <ul> <li>8+ years of
+    experience in software or systems engineering with a focus on large-scale distributed
+    systems.</li> <li>Deep expertise in observability domains including metrics, logs,
+    traces, telemetry pipelines, and reliability frameworks.</li> <li>Proven operational
+    experience owning or building critical infrastructure, including on-call participation.</li>
+    <li>Skilled at navigating ambiguity and turning complex technical or organizational
+    challenges into clear action plans.</li> <li>Experienced in leading long-term
+    architectural transformations and cross-org technical initiatives.</li> <li>Strong
+    communicator with the ability to build alignment and understanding across diverse
+    technical and non-technical audiences.</li> <li>Highly autonomous and impact-driven,
+    with a track record of identifying and solving high-leverage problems without
+    needing direction.</li> </ul> <p>&nbsp;</p> <p><em>Datadog values people from
+    all walks of life. We understand not everyone will meet all the above qualifications
+    on day one. That''s okay. If you’re passionate about technology and want to grow
+    your skills, we encourage you to apply.&nbsp;</em></p> <p>&nbsp;</p> <p><strong>Benefits
+    and Growth:</strong></p> <ul> <li>New hire stock equity (RSUs) and employee stock
+    purchase plan (ESPP)</li> <li>Continuous professional development, product training,
+    and career pathing</li> <li>Intradepartmental mentor and buddy program for in-house
+    networking</li> <li>An inclusive company culture, ability to join our Community
+    Guilds (Datadog employee resource groups)</li> <li>Access to Inclusion Talks,
+    our Internal panel discussions</li> <li>Free, global mental health benefits for
+    employees and dependents age 6+</li> <li>Competitive global benefits</li> </ul>
+    <p><em><br></em><em>Benefits and Growth listed above may vary based on the country
+    of your employment and the nature of your employment with Datadog.</em></p> <p>&nbsp;</p>
+    <p style="color: white;">#LI-Hybrid</p><div class="content-conclusion"><hr> <p><strong>About
+    Datadog:&nbsp;</strong></p> <p>Datadog (NASDAQ: DDOG) is a global SaaS business,
+    delivering a rare combination of growth and profitability. We are on a mission
+    to break down silos and solve complexity in the cloud age by enabling digital
+    transformation, cloud migration, and infrastructure'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.001866+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

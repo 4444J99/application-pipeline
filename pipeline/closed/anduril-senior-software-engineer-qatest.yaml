@@ -1,0 +1,115 @@
+id: anduril-senior-software-engineer-qatest
+name: Anduril Senior Software Engineer, QA/Test
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/4956882007?gh_jid=4956882007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p>Anduril
+    Maritime delivers platforms, systems, and integrated effects in the maritime domain.
+    Our autonomous vehicles (sub-surface and surface) are the cornerstone of these
+    capabilities, and we continually strive to push the boundaries of the possible
+    in terms of endurance, autonomy and mission capability. The Maritime team develops
+    and maintains core products and payloads, and adapts and applies those products
+    to serve a wide variety of defense, IC and commercial customers in US and international
+    markets.</p> <h3>ABOUT THE JOB</h3> <div class="ewa-rteLine">As a Senior Software
+    Engineer, QA/Test on the Maritime Digital Production team, you will ensure the
+    reliability, performance, and usability of the systems that power digital shipbuilding.
+    You’ll write and maintain automated unit and integration tests, validate complex
+    integrations across APIs and data systems, and embed quality into every stage
+    of the development process.</div> <div class="ewa-rteLine">&nbsp;</div> <div class="ewa-rteLine">You’ll
+    develop and maintain automated testing frameworks, identify and document issues,
+    and collaborate closely with developers to diagnose and resolve problems quickly.
+    Your work will directly safeguard production operations by ensuring each release
+    meets rigorous standards for accuracy, speed, and interoperability.</div> <div
+    class="ewa-rteLine">&nbsp;</div> <div class="ewa-rteLine">You’ll work alongside
+    digital, manufacturing, and corporate technology teams across Anduril in a high-tech,
+    fast-paced culture of innovation that values precision, transparency, and continuous
+    improvement. If you take pride in building systems that perform flawlessly under
+    pressure and want to see your work directly support real-world production, you’ll
+    be helping build the future of digital shipbuilding and the next generation of
+    maritime vehicles.</div> <h4>WHAT YOU''LL DO</h4> <ul> <li>Develop Integration
+    Tests: Create and maintain integration tests to verify that different modules
+    and systems work together seamlessly.</li> <li>Test Automation: Implement automated
+    testing frameworks to streamline the testing process and improve efficiency.</li>
+    <li>Bug Identification and Reporting: Identify, document, and track bugs to facilitate
+    timely resolution by the development team.</li> <li>Collaborate with Developers:
+    Work closely with developers to understand requirements and design effective test
+    plans.</li> <li>Maintain Test Documentation: Ensure up-to-date documentation of
+    test cases, procedures, and results.</li> </ul> <h4>REQUIRED QUALIFICATIONS</h4>
+    <ul> <li>Proficiency in coding/scripting languages used for test automation (e.g.,
+    Python, JavaScript).</li> <li>Experience with automated testing frameworks (e.g.,
+    Selenium, JUnit).</li> <li>Familiarity with CI/CD pipelines and integrating automated
+    tests into the deployment process.</li> <li>Strong understanding of software testing
+    methodologies and best practices.</li> <li>Experience with version control systems
+    (e.g., Git).</li> <li>Excellent analytical and problem-solving skills.</li> <li>Strong
+    communication and collaboration abilities.</li> <li>Eligible to obtain and maintain
+    an active U.S. Secret security clearance.</li> </ul> <h4>PREFERRED QUALIFICATIONS</h4>
+    <ul> <li>Previous experience in a manufacturing or industrial setting.</li> <li>Familiarity
+    with testing tools and platforms (e.g., Jenkins, GitHub Actions).</li> <li>Knowledge
+    of API testing tools (e.g., Postman, Swagger).</li> <li>Experience with performance
+    testing and load testing tools (e.g., JMeter).</li> </ul><div class="content-pay-transparency"><div
+    class="pay-input"><div class="title">US Salary Range</div><div class="pay-range"><span>$146,000</span><span
+    class="divider">&mdash;</span><span>$194,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work experience, education and/or training, critical skills, and/or business considerations.
+    Highly competitive equity grants are included in the majority of full time offers;
+    and are'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:34.012142+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

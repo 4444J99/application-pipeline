@@ -1,0 +1,108 @@
+id: replit-staff-software-engineer-replit-cloud
+name: Replit Staff Software Engineer, Replit Cloud
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Replit
+  url: https://jobs.ashbyhq.com/replit
+  application_url: https://jobs.ashbyhq.com/replit/f98605a1-36d2-4b2f-b9be-f66064a02645
+  portal: ashby
+  location: Foster City, CA (Hybrid) In office M,W,F
+  location_class: us-onsite
+  description: 'Replit is the agentic software creation platform that enables anyone
+    to build applications using natural language. With millions of users worldwide,
+    Replit is democratizing software development by removing traditional barriers
+    to application creation. Replit is building the world’s most accessible AI coding
+    agent. Replit Agent can be used by anybody to bring their ideas to life. Whether
+    it’s an app for yourself, the next great startup idea, or a tool to make you more
+    productive at work, Replit Agent can help build it. Replit builds complete apps
+    better than anybody thanks to our full suite of services that handle app integrations,
+    storage, hosting, analytics, and more. We don’t just build apps in development,
+    we handle the full lifecycle into production and beyond. About the role: Help
+    power the development of Replit Agent as a technical leader for the Replit Cloud
+    organization. You will report to the Vice President of Engineering. The Replit
+    Cloud team builds Replit’s first party cloud infrastructure so users can build,
+    scale, and succeed entirely on Replit. They manage databases, application storage,
+    app publishing and hosting, development/production environment splitting, custom
+    domains, and more. By having a set of first party services that integrate seamlessly,
+    you will power one of Replit’s key product differentiators. You will: Help lead
+    major projects, either by taking new products from 0->1 or doubling down on our
+    first party primitives to keep winning users. Work closely with designers and
+    product managers, to quickly iterate on Replit Cloud to continually grow and improve
+    the product. Identify the hardest technical and/or quality problems holding us
+    back, and then build solutions. Mentor and develop new senior engineers to help
+    grow the team. Ship product and build infrastructure as a true full stack builder
+    using: TypeScript, React, CSS, Postgres, Go, and Terraform. Examples of what you
+    could do: Leverage our unique cloud infrastructure to build differentiated full
+    product experiences, helping non-technical or semi-technical users remove roadblocks
+    to success. Leverage AI agents to proactively optimize or suggest app improvements
+    on latency, reliability, SEO, and more. Be part of engineering leadership, steering
+    teams towards the highest impact work and supporting initiatives across the company.
+    Required skills and experience: Bachelor’s degree in Computer Science or related
+    field, OR equivalent real-world experience in engineering roles 10+ years of experience
+    in software with at least 3+ years in a technical leadership role. Preferred Qualifications
+    Experience building user facing platform as a service products. Experience with
+    AI/agentic systems. Previous experience at a high-growth startup. Bonus Points
+    : Open source project contributions. What we value : Problem-solving mindset:
+    Ability to approach complex operational challenges systematically and devise effective
+    solutions Self-directed and autonomous: Capable of working independently while
+    collaborating effectively with cross-functional teams Strong communication skills:
+    Ability to explain complex technical concepts to both technical and non-technical
+    audiences Continuous learning: Passion for staying current with industry best
+    practices and new technologies Focus on automation: Strong belief in automating
+    repetitive tasks and building self-healing systems Full-Time Employee Benefits
+    Include: 💰 Competitive Salary & Equity 💹 401(k) Program with a 4% match ⚕️ Health,
+    Dental, Vision and Life Insurance 🩼 Short Term and Long Term Disability 🚼 Paid
+    Parental, Medical, Caregiver Leave 🚗 Commuter Benefits 📱 Monthly Wellness Stipend
+    🧑‍💻 Autonomous Work Environment 🖥 In Office Set-Up Reimbursement 🏝 Flexible Time
+    Off (FTO) + Holidays 🚀 Quarterly Team Gatherings ☕ In Office Amenities Want to
+    learn more about what we are up to? Meet the Replit Agent Replit: Make an app
+    for that Replit Blog Amjad TED Talk Interviewing + Culture at Replit Operating
+    Principles Reasons not to work at Replit To achieve our mission of making programming
+    more accessible around the world, we need our team to be representative of the
+    world. We welcome your unique perspective and experiences in shaping this product.
+    We encourage people from all kinds of backgrounds to apply, including and especially
+    candidates from underrepresented and non-traditional backgrounds.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: null
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.769943+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,109 @@
+id: snowflake-software-engineer-frontend-fullstack-data-governance-securit
+name: Snowflake Software Engineer – Frontend / Fullstack (Data Governance & Security
+  UI)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/3d9d64b3-3744-4d80-a7e5-693bf0759cfc
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. About the Team The team owns the core Experience
+    that customers use to manage and protect their data and accounts in Snowflake.
+    Our charter spans: Data Governance (data classification, tagging, policies) Data
+    Quality (data quality monitoring, observability, lineage) Database Security &
+    IAM (RBAC, access control, privileges) Account & Organization Manageability (account
+    configuration, monitoring, lifecycle) We build opinionated, high-impact product
+    experiences that let admins, data stewards, and builders understand what’s happening
+    to their data, control who can do what, and quickly act when something looks wrong.
+    We work end-to-end with PM, UX, and backend teams across Snowflake, and we are
+    increasingly leveraging AI-powered workflows and assistants to make complex governance
+    and security tasks feel simple. About the Role We are looking for a Software Engineer
+    with strong frontend skills and solid full-stack experience to help build the
+    next generation of governance and security experiences in Horizon. You will: Partner
+    closely with PM and UX to translate product requirements into clear product experiences
+    and MVPs. Implement features across the full stack (React/TypeScript, UI platforms,
+    APIs, data models). Embrace and apply AI (agents, copilots, recommendations, auto-configuration)
+    to enhance user productivity and developer velocity. What You Will Do Contribute
+    to core product experiences: Build and deliver features across data governance,
+    data quality, security, IAM, and account manageability in Horizon. Participate
+    in technical design: Assist with the technical design for frontend projects (navigation,
+    information architecture, performance, accessibility) and drive your tasks to
+    completion. Develop full-stack solutions: Collaborate with backend teams to integrate
+    APIs and data models that unlock great UX. Apply AI thoughtfully: Integrate AI-powered
+    workflows and copilots into governance and security UIs. Use AI tools to accelerate
+    development while maintaining engineering standards. Partner with product & UX:
+    Support roadmaps and product requirements with a strong technical mindset. Instrument
+    experiences with telemetry and iterate based on customer feedback. Maintain quality
+    & reliability: Follow best practices for frontend architecture, testing, performance,
+    and accessibility. Ensure features are operationally ready and resilient. Collaborate
+    and share knowledge: Participate actively in code reviews and design discussions
+    to ensure high code quality. Core Requirements 3+ years of professional software
+    engineering experience, including time building production web applications. Solid
+    experience in modern frontend development, specifically with React and TypeScript.
+    Demonstrated full-stack capability: Comfortable working with backend services,
+    APIs, and data models. Ability to understand system boundaries and data contracts.
+    Experience with product-driven engineering: Experience partnering with PM/UX to
+    shape and implement requirements. Willingness to use telemetry and feedback to
+    inform engineering decisions. Experience contributing to the delivery of features
+    from design through rollout. Strong communication skills and the ability to explain
+    technical decisions clearly. BS/MS in Computer Science or related field, or equivalent
+    practical experience. Preferred Qualifications Experience building UIs for data
+    governance, data lineage, security, IAM, or complex admin management. Experience
+    using or contributing to design systems or shared frontend infrastructure. Hands-on
+    experience with TypeScript, React, Java, Python or Go. Exposure to building or
+    integrating AI-driven product experiences. Experience working in cloud-native
+    environments like AWS, Azure, or GCP. Snowflake is growing fast, and we’re scaling
+    our team to help enable and accelerate our growth. We are looking for people who
+    share our values, challenge ordinary thinking, and push the pace of innovation
+    while building a future for themselves and Snowflake. How do you want to make
+    your impact? For jobs located in the United States, please visit the job posting
+    on the Snowflake Careers Site for salary and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: null
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.531309+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

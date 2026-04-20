@@ -1,0 +1,117 @@
+id: calendly-full-stack-engineer-iii
+name: Calendly Full Stack Engineer III
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Calendly
+  url: https://boards.greenhouse.io/calendly
+  application_url: https://job-boards.greenhouse.io/calendly/jobs/8464846002
+  portal: greenhouse
+  location: Remote - US
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><h4><strong>What\u2019s in it for you?&nbsp;</strong></h4>\
+    \ <p>Ready to make a serious impact? Millions of people already rely on Calendly,\
+    \ and we\u2019re still in the midst of exciting product growth \u2014 it\u2019\
+    s a fantastic time to join us. Everything you\u2019ll work on here will accelerate\
+    \ your career to the next level. If you want to learn, grow, and do the best work\
+    \ of your life alongside the best people you\u2019ve ever worked with, then we\
+    \ hope you\u2019ll consider allowing Calendly to be a part of your professional\
+    \ journey.</p></div><h4><strong>About the team &amp; opportunity&nbsp;</strong></h4>\
+    \ <p>What\u2019s so great about working on Calendly\u2019s Engineering team?&nbsp;</p>\
+    \ <p>We make things possible for our customers through innovation.</p> <p>Why\
+    \ do we need you? Well, we are looking for a Full Stack Engineer who will bring\
+    \ technical know-how and enthusiasm to our team. You will report to one of our\
+    \ Engineering Managers and will be responsible for supporting features and architecture\
+    \ designed to maintain our users\u2019 confidence in Calendly.&nbsp;</p> <h4><strong>A\
+    \ day in the life of a Full Stack Engineer at Calendly</strong></h4> <p>The Calendly\
+    \ platform is a monolith that is being decomposed into various services in order\
+    \ for us to scale our platform and team. We need ambitious, experienced engineers\
+    \ who can help us drive this stage of growth. As an engineer at Calendly, you\
+    \ will both build new features and work to scale our platform and architecture.\
+    \ You will build tooling and automation to fine tune our delivery process as you\
+    \ grow into a service oriented specialist. You will also learn to work with multiple\
+    \ technologies such as Google Cloud Platform, Go, Typescript, NodeJS, React, PostgreSQL,\
+    \ Redis, Kubernetes, Rails, to name a few.</p> <p>When you join Calendly, you\
+    \ get the opportunity to deliver on a product used by millions and known for its\
+    \ best-in-class quality. Help us continue to deliver critical features to our\
+    \ users with excellence.</p> <p>On a typical day, <strong>you</strong> will be\
+    \ working on:&nbsp;</p> <ul> <li>Collaborating within your team to build new features\
+    \ that are targeted at our highest impact enterprise customers</li> <li>Contributing\
+    \ to platform scaling initiatives</li> <li>Meeting regularly with Product and\
+    \ Design to fine tune requirements</li> <li>Attending agile ceremonies to help\
+    \ your team plan out their work and get it done</li> <li>Working across squads\
+    \ to improve Engineering practices at Calendly</li> <li>Reviewing implementation\
+    \ plans and pull requests from your peers</li> <li>Mentoring and coaching other\
+    \ team members</li> </ul> <p><strong>What do we need from you?</strong></p> <ul>\
+    \ <li>4-6 years of professional software development experience in a SaaS or technology-driven\
+    \ environment.</li> <li>Strong, hands-on full-stack engineering skills, with the\
+    \ ability to independently design, build, and ship production changes across frontend\
+    \ and backend systems</li> <li>Experience building and maintaining Node.js services\
+    \ that interface with distributed APIs, LLMs, or similar mixed-stack environments.</li>\
+    \ <li>Hands-on experience with Service-Oriented Architectures (SOA), microservices,\
+    \ and involvement in monolith-to-services modernization or large-scale refactoring\
+    \ initiatives.</li> <li>Proven ability to own features end-to-end, including technical\
+    \ discovery, design, implementation, testing, release, and ongoing maintenance.</li>\
+    \ <li>Strong analytical and problem-solving skills, with the ability to dissect\
+    \ complex systems, identify root causes of issues, and deliver scalable, maintainable\
+    \ solutions.</li> <li>A commitment to writing clean, reliable, and maintainable\
+    \ code, with an emphasis on readability, simplicity, and performance.</li> <li>Adaptability\
+    \ to new technologies, evolving architectural patterns, and changing organizational\
+    \ priorities.</li> <li>Experience using AI coding assistants (Copilot, Cursor,\
+    \ etc.) as productivity tools, with a clear understanding of generated code and\
+    \ the ability to defend implementation choices.</li> <li>Availability for participation\
+    \ in an on-call rotation, ensuring timely and effective responses to critical\
+    \ production issues outside of regular working hours.</li> <li>Authorized to work\
+    \ lawfully in the United States, as Calendly does not offer immigration sponsorship\
+    \ at this time.</li> </ul><div class=\"content-pay-transparency\"><div class=\"\
+    pay-input\"><div class=\"title\">Tier 1 Salary Hiring Range</div><div class=\"\
+    pay-range\"><span>$187,680</span><span class=\"divider\">&mdash;</span><span>$227,424\
+    \ USD</span></div></div><div class=\"pay-input\"><div class=\"title\">Tier 2 Salary\
+    \ Hiring Range</div><div class=\"pay-range\"><span>$172,040</span><span class=\"\
+    divider\">&mdash;</span><span>$208,472 USD</span></div></div><div class=\"pay-input\"\
+    ><div class=\"title\">Tier 3 Salary Hiring Range</div><div class=\"pay-range\"\
+    ><span>$156,400</span><span class=\"divider\">&mdash;</span><span>$189,520 USD</span></div></div></div><div\
+    \ class=\"content-conclusion\"><p>The ranges l"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.018068+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

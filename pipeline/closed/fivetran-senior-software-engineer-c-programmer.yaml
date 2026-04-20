@@ -1,0 +1,115 @@
+id: fivetran-senior-software-engineer-c-programmer
+name: Fivetran Senior Software Engineer - C Programmer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Fivetran
+  url: https://boards.greenhouse.io/fivetran
+  application_url: https://www.fivetran.com/careers/job?gh_jid=7670728003
+  portal: greenhouse
+  location: Novi Sad, South Bačka, Serbia, EMEA
+  location_class: international
+  description: '<div class="content-intro"><p>From Fivetran’s founding until now,
+    our mission has remained the same: to make access to data as simple and reliable
+    as electricity. With Fivetran, customer data arrives in their warehouses, canonical
+    and ready to query, with no engineering or maintenance required. We’re proud that
+    more organizations continue to leverage our technology every day to become truly
+    data-driven.</p></div><p><span style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;"><strong>About the Role</strong></span></p> <p><span style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;">Fivetran is building data pipelines
+    to power the modern data stack for thousands of companies.</span></p> <p><span
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">We''re looking
+    for a Senior Software Engineer to join our mission critical database connector
+    team and perform a healthy mix of design and implementation tasks to advance the
+    technical foundation behind the Fivetran product offering.</span></p> <p><span
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">As a senior
+    engineer in the database connector team, focusing on capturing data from relational
+    databases, you will contribute to the entire software development lifecycle for
+    the capabilities critical to making our largest enterprise customers successful.
+    You will collaborate with engineers across the engineering organization as we
+    identify opportunities for product improvements. You will be responsible for ensuring
+    the technical excellence of your team and own services by reviewing code and contributing
+    to architectural designs.</span></p> <p><span style="font-family: helvetica, arial,
+    sans-serif; font-size: 10pt;">A successful candidate will be experienced and confident
+    enough to be decisive when needed, and be practical enough to build and iterate
+    on the system while it''s in production. Having strong ownership and proactiveness
+    is key to the success of this role.</span></p> <p><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">This is a full-time position based out of
+    our Novi Sad office. Our hybrid work model offers a blend of remote flexibility
+    and in-person collaboration, including two days in the office each week to connect
+    and build as a team.</span></p> <p><span style="font-family: helvetica, arial,
+    sans-serif; font-size: 10pt;"><strong>Technologies You’ll Use</strong></span></p>
+    <ul> <li style="font-family: helvetica, arial, sans-serif; font-size: 10pt;"><span
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">C, Java, SQL,
+    Google BigQuery, Snowflake</span></li> <li style="font-family: helvetica, arial,
+    sans-serif; font-size: 10pt;"><span style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;">Database and/or Postgres specific</span></li> <li style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;"><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">GCP, AWS, Azure</span></li> </ul> <p><span
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;"><strong>What
+    You’ll Do</strong></span></p> <ul> <li style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;"><span style="font-family: helvetica, arial, sans-serif; font-size:
+    10pt;">Design, implement and test code.&nbsp;</span></li> <li style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;"><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">Review and approve technical design documents
+    and pull requests.</span></li> <li style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;"><span style="font-family: helvetica, arial, sans-serif; font-size:
+    10pt;">Mentor other members of the team and assist with their challenges.</span></li>
+    <li style="font-family: helvetica, arial, sans-serif; font-size: 10pt;"><span
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">Care and take
+    ownership of our database connectors, and leverage your skills towards improving
+    code quality by identifying issues, gaps, and maintaining the code.&nbsp;</span></li>
+    <li style="font-family: helvetica, arial, sans-serif; font-size: 10pt;"><span
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">Collaborate
+    with different parties (sibling teams, PM, Customer support and sales) to deliver
+    the best product with high quality and scalability.</span></li> <li style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;"><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">Work across the project lifecycle: requirements,
+    design, prototype, implementation, review, testing, release, and monitor product
+    and iterate again with feedbacks.</span></li> </ul> <p><span style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;"><strong>Skills We’re Looking For</strong></span></p>
+    <ul> <li style="font-family: helvetica, arial, sans-serif; font-size: 10pt;"><span
+    style="font-family: helvetica, '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.025283+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

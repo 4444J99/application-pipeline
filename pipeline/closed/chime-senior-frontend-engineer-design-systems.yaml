@@ -1,0 +1,115 @@
+id: chime-senior-frontend-engineer-design-systems
+name: Chime Senior Frontend Engineer, Design Systems
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Chime
+  url: https://boards.greenhouse.io/chime
+  application_url: https://boards.greenhouse.io/chime/jobs/8375225002?gh_jid=8375225002
+  portal: greenhouse
+  location: San Francisco, CA, USA
+  location_class: us-onsite
+  description: '<h3><strong>About the role&nbsp;</strong></h3> <p>We are looking for
+    a Senior Front-End Engineer to join our Design Systems and play a key role in
+    helping evolve our core foundations across products.&nbsp;</p> <p>As the senior
+    front-end engineer, you will collaborate with a team of experienced engineers
+    and designers to create innovative solutions focused on the underlying system
+    that powers our user experiences — from tokens and typography to color, patterns,
+    and component architecture.</p> <p>You will also have the opportunity to shape
+    the roadmap for our internal applications and mobile app, driving impactful projects
+    from concept to completion. Working closely with product managers, operations
+    teams, and other engineering teams, you''ll influence the design and functionality
+    of the experience that all of our members use every day.</p> <p>The base salary
+    offered for this role and level of experience will begin at $164,000 and up to
+    $227,000. Full-time employees are also eligible for a bonus, competitive equity
+    package, and benefits. The actual base salary offered may be higher, depending
+    on your location, skills, qualifications, and experience.&nbsp;</p> <h3><strong>In
+    this role, you can expect to</strong></h3> <ul> <li>Exercise technical leadership
+    for high-impact projects&nbsp;</li> <li>Advocate for and implement best practices
+    in UX development, ensuring a seamless and consistent user experience across all
+    our applications</li> <li>Implement product features and provide support or work
+    with backend engineers to define and integrate platform APIs</li> <li>Mentor,
+    document, and share knowledge as part of your immediate team as well as through
+    Chime Engineering as a whole</li> <li>Foster collaboration across engineering
+    teams to create reusable, scalable solutions, contributing to architecture blueprints
+    that benefit the entire organization.</li> <li>Lead projects by defining timelines,
+    managing scope, overseeing development, and ensuring quality</li> <li>Contribute
+    to a culture of continuous improvement by actively participating in sprint ceremonies
+    and process refinement</li> <li>Participate in a community of practice (guild)
+    around how our frontend ecosystem is architected, developed, tested, deployed,
+    and released. Foster the community’s creativity, innovation, and learning.&nbsp;</li>
+    <li>Engineers are required to participate in on-call rotation. Being on call may
+    include responding to incidents outside of regular working hours when necessary.</li>
+    </ul> <h3><strong>To thrive in this role, you have</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+    <ul> <li>Deep knowledge and ability to navigate all aspects of front-end development,
+    with 6+ years of active web and/or mobile development experience with React, React
+    Native and Typescript</li> <li>Demonstrated ability to be a team player as well
+    as a top-level individual contributor in a cross-functional environment, collaborating
+    with engineers, designers and product managers</li> <li>Work across the stack
+    (React Native, Native iOS/Android, GraphQL API, CI/Build systems)&nbsp;</li> <li>Familiarity
+    with modern front-end build pipelines and tooling and web front end technologies
+    and frameworks</li> <li>Strong communication skills, with the ability to articulate
+    design decisions and rationale</li> <li>Desire to drive engineering culture within
+    your immediate team, as well as within the larger organization</li> <li>Strong
+    leadership skills and the ability to work with cross-functional partners to define
+    requirements, manage scope, and execute on software projects</li> <li>Proficiency
+    in writing thorough and effective tests for your code, including unit tests and
+    integration tests, along with experience in rolling out features through a gradual
+    process, closely monitoring their impact and scaling up through a slow ramp to
+    ensure stability and performance.</li> </ul> <p>#LI-Hybrid #LI-AA1</p><div class="content-conclusion"><h2><strong>A
+    little about us</strong></h2> <p>At Chime, we believe that everyone can achieve
+    financial progress. We created Chime—a financial technology company, not a bank*—on
+    the premise that core banking services should be helpful, easy, and free. Through
+    our user-friendly tools and intuitive platforms, we empower our members to take
+    control of their finances and work towards their goals. Whether it''s starting
+    a savings account, purchasing a first car or home, launching a business, or pursuing
+    higher education, we''re proud to have helped millions unlock their financial
+    potential.</p> <p>We''re a team of problem solvers, dreamers, and builders with
+    one shared obsession: our members. From day one, Chimers have worked tirelessly
+    to out-hustle and out-execute competitors to bring our mission to life. Their
+    grit and determination inspire us to work harder every day to deliver the very
+    best experience possible. We each bring an owner''s mindset to our work, refusing
+    to be outdone and holding ourselves accountable to meet and '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.196781+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

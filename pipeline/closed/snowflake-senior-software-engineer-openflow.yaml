@@ -1,0 +1,115 @@
+id: snowflake-senior-software-engineer-openflow
+name: Snowflake Senior Software Engineer - Openflow
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/afa654dd-0431-4030-9878-1e48c27465bd
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. The Snowflake Openflow team is building Snowflake’s
+    next-generation open, extensible, and secure data integration platform for real-time,
+    scalable, bi-directional data movement, powered by Apache NiFi. We enable customers
+    to move structured and multi-modal unstructured data across any source and any
+    sink—Snowflake and non-Snowflake alike—through a single, cloud-native platform
+    that supports batch and streaming, and flexible runtimes spanning Snowflake-managed
+    (SPCS) and Bring Your Own Cloud (BYOC) data planes. Our team includes original
+    creators and core contributors to Apache NiFi and industry leaders in data integration,
+    now focused on bringing NiFi’s proven strengths—visual flows, rich connectors,
+    and powerful routing—to Snowflake’s AI Data Cloud at enterprise scale. We work
+    end to end across high-performance runtimes, and curated connectors, partnering
+    closely with product, field, and open-source communities to help customers continuously
+    ingest data, power AI and analytics workloads, and make smarter decisions in real
+    time. AS A SENIOR SOFTWARE ENGINEER ON THE SNOWFLAKE OPENFLOW TEAM, YOU WILL:
+    Design and implement features in Openflow’s control plane and data plane , contributing
+    to reliable, scalable, and secure services that power real-time, bi-directional
+    data movement for our customers. Build and evolve distributed systems for batch
+    and streaming workloads , enabling high-throughput, low-latency data pipelines
+    across Snowflake and non-Snowflake environments, for both structured and multi-modal
+    unstructured data. Own medium-sized projects end to end —from requirements clarification
+    and technical design through implementation, testing, rollout, and follow-up improvements—with
+    appropriate guidance from Staff and Principal engineers. Take operational ownership
+    of the components you build , including monitoring, on-call participation, incident
+    response, and contributing to post-incident reviews and reliability improvements.
+    Apply and promote solid engineering practices in your area—clean code, robust
+    testing, observability, security, and documentation—to keep our platform easy
+    to operate and evolve. Collaborate closely with peers across engineering, product,
+    and design , translating ambiguous requirements into clear technical plans, breaking
+    work into milestones, and communicating progress and risks. Analyze and improve
+    performance, scalability, and reliability of existing services and pipelines,
+    using metrics, profiling, and experimentation to guide optimizations. Mentor junior
+    engineers and interns , providing constructive code reviews, design feedback,
+    and sharing domain knowledge in Openflow, Snowflake, and distributed systems.
+    Contribute to shared platform tooling and patterns , helping make it easier for
+    Openflow teams to build, deploy, and operate high-quality connectors and runtimes.
+    OUR IDEAL SENIOR SOFTWARE ENGINEER WILL HAVE: 7+ years of industry experience
+    building and operating backend or platform services, including significant hands-on
+    work with distributed systems. Strong computer science fundamentals , including
+    algorithms, data structures, and systems design, with the ability to apply them
+    pragmatically in production code. Practical experience with distributed systems
+    concepts , such as concurrency, replication, partitioning, streaming, and fault
+    tolerance, and how they impact correctness, performance, and operability. Solid
+    understanding of operating systems and networking basics , including multi-threading,
+    memory management, storage, and debugging performance/scale issues. Proficiency
+    in Java or a similar object-oriented language (e.g., Scala, Go, C++), and experience
+    working in large, shared codebases. Experience building cloud-native services
+    on at least one major cloud provider (AWS, Azure, or GCP), using containers, CI/CD,
+    and modern monitoring/logging stacks. A track record of delivering high-quality,
+    maintainable solutions to non-trivial engineering problems, balancing speed with
+    long-term reliability and simplicity. Strong collaboration and communication skills
+    , with the ability to work effectively with teammates across locations, give and
+    receive feedback, and explain technical trade-offs clearly. BS in Computer Science
+    or a related field, or equivalent practical experience building and shipping distributed
+    systems. (Bonus) Experience with data integration, observability, or streaming/flow
+    technologies (e.g., Apache NiFi, Kafka, Flink, Airflow, or similar) or with analytics/data
+    platforms . Every Snowflake employee is expected to follow the company’s confidentiality
+    and security standards for handling sensitive data. Snowflake employees must abide
+    by the company’s data security plan as an essential '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.175495+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,101 @@
+id: perplexity-software-engineer-acceleration
+name: Perplexity Software Engineer - Acceleration
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/c03bf199-9faa-48a4-809d-095c72b06000
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Perplexity is seeking creative, AI-pilled engineers to join our Acceleration
+    team. Our company is reshaping the way people navigate the internet and the wider
+    world. The Acceleration team''s mandate is to continually uplevel the way our
+    company and our teams operate, to deliver order-of-magnitude improvements in product
+    and user experience. Just as Perplexity is heralding an agentic future for the
+    internet, you will ensure that our company makes the best use of AI tools and
+    agents to multiply the leverage of our lean, mission-focused teams. Today, Perplexity
+    uses AI tools across everything we do, from frontend and backend engineering to
+    applied AI research and business operations. Tomorrow’s AI technology will be
+    even more capable, and the Acceleration team will lead both software and process
+    engineering to harness AI so that the company can deliver at maximum velocity.
+    The ideal candidate will possess sound technical judgment forged in the trenches
+    of internet-scale companies, paired with voracious use of today’s most advanced
+    AI tools/models and a capacious imagination to rethink how work gets done in the
+    leading companies of tomorrow. They should thrive in a hybrid role that marries
+    facets of AI product development, infrastructure/platform engineering, developer
+    experience, and more. Responsibilities Identify, prioritize, and execute on the
+    highest-potential opportunities to accelerate Perplexity’s delivery cadence with
+    frontier AI capabilities. Develop empathy for the nuances of our technical and
+    business teams’ work across disciplines and verticals, toward collaborating with
+    them to harness AI in new ways. Make our codebases, systems, and knowledge stores
+    legible to AI. Help the company triangulate toward the optimal point on the quality-velocity
+    Pareto frontier, while shifting that frontier outward with AI tools and agents.
+    Keep abreast of new AI tools/models and make maximally effective use of them in
+    your own work, setting an example across the company and inspiring others to do
+    the same. Help the company make high-conviction bets on specific technologies
+    in situations where indecision is a comfortable and tempting default. Work with
+    engineering leadership, recruiting, and others to ensure we instill an AI-forward
+    culture and select for those who will thrive in such an environment. Note: this
+    is an extremely technical and hands-on role. Strong vision and creativity is necessary
+    but not sufficient for success. You will be expected to build both prototypes
+    and production systems, as well as to reengineer our codebases, infrastructure,
+    processes, and anything else that must evolve to realize this vision. Qualifications
+    4 to 20+ years of industry experience, ideally with a substantial portion focused
+    on infrastructure/platform engineering or developer acceleration in environments
+    featuring significant technical complexity. Daily use of AI models/tools, along
+    with strong intuition on their jagged frontiers. Proficiency with Python, along
+    with experience and/or desire to learn more about Rust, TypeScript, Go, and other
+    languages. Strong understanding of (and empathy for) the work of technical staff
+    across disciplines, along with an enthusiasm to learn about the work of business
+    and operations teams. Broad working knowledge of the typical stacks used by AI
+    product & applied research companies. (For example: you don’t need to have experience
+    hand-rolling CUDA kernels, but you should know what CUDA is and when/where/why
+    it’s used.) An obsession with improving the legibility of (and reducing brittleness
+    in) both software and human-orchestrated processes. Experience navigating tricky
+    exploration-exploitation tradeoffs, balancing the need to ship today with the
+    need to build capacity for tomorrow.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.920039+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

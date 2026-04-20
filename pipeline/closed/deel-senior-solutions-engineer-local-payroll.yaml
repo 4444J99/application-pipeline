@@ -1,0 +1,116 @@
+id: deel-senior-solutions-engineer-local-payroll
+name: Deel Senior Solutions Engineer - Local Payroll
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Deel
+  url: https://jobs.ashbyhq.com/deel
+  application_url: https://jobs.ashbyhq.com/deel/586d1329-b1ec-4fb5-91e0-efd3cc9a89b2
+  portal: ashby
+  location: UK
+  location_class: international
+  description: 'Who we are is what we do. Deel is the all-in-one payroll and HR platform
+    for global teams. Our vision is to unlock global opportunity for every person,
+    team, and business. Built for the way the world works today, Deel combines HRIS,
+    payroll, compliance, benefits, performance, and equipment management into one
+    seamless platform. With AI-powered tools and a fully owned payroll infrastructure,
+    Deel supports every worker type in 150+ countries—helping businesses scale smarter,
+    faster, and more compliantly. Among the largest globally distributed companies
+    in the world, our team of 7,000 spans more than 100 countries, speaks 74 languages,
+    and brings a connected and dynamic culture that drives continuous learning and
+    innovation for our customers. Why should you be part of our success story? As
+    the fastest-growing Software as a Service (SaaS) company in history, Deel is transforming
+    how global talent connects with world-class companies – breaking down borders
+    that have traditionally limited both hiring and career opportunities. We''re not
+    just building software; we''re creating the infrastructure for the future of work,
+    enabling a more diverse and inclusive global economy. In 2024 alone, we paid $11.2
+    billion to workers in nearly 100 currencies and provided healthcare and benefits
+    to workers in 109 countries—ensuring people get paid and protected, no matter
+    where they are. Our momentum is reflected in our achievements and customer satisfaction:
+    CNBC Disruptor 50, Forbes Cloud 100, Deloitte Fast 500, and repeated recognition
+    on Y Combinator’s top companies list – all while maintaining a 4.83 average rating
+    from 15,000 reviews across G2, Trustpilot, Captera, Apple and Google. Your experience
+    at Deel will be a career accelerator. At the forefront of the global work revolution,
+    you''ll tackle complex challenges that impact millions of people''s working lives.
+    With our momentum—backed by a $17.3 billion valuation and $1 B in Annual Recurring
+    Revenue (ARR) in just over five years—you''ll drive meaningful impact while building
+    expertise that makes you a sought-after leader in the transformation of global
+    work. Job Purpose As the Senior Pre-Sales Product Specialist (solutions engineer)
+    at Deel Local Payroll, you are a core enabler of complex sales execution and product
+    confidence across regions. You are vital in supporting Account Executives with
+    enterprise and multinational prospects, designing tailored demos, managing tender
+    submissions, building proof-of-concepts (POCs), and helping launch demo environments
+    in new territories. You work closely with sales, product, and implementation teams
+    to bridge customer requirements with platform capabilities, especially in highly
+    regulated or multi-country environments. Your expertise drives trust, solution
+    clarity, and conversion in high-value deals. Multinational & Enterprise Pre-Sales
+    Execution • Lead the creation and delivery of high-impact demo environments and
+    POCs for complex and multinational opportunities • Build region-specific demo
+    companies to support market expansion and AE selling effectiveness in new countries
+    • Design and deliver custom product walk-throughs aligned to the prospect’s use
+    cases, compliance needs, and workflows • Support AEs and Solution Consultants
+    during discovery, solution mapping, and sales presentations with strategic guidance
+    Tender & RFP Management • Manage end-to-end execution of all RFPs, RFIs, RFQs,
+    and formal tenders—ensuring content is compliant, high-quality, and on-brand •
+    Coordinate across teams to ensure timelines are met and submissions reflect both
+    product capability and commercial intent • Own internal knowledge and templates
+    to streamline repeat submissions and reduce turnaround time Testing & Product
+    Functionality Support • Collaborate with Product and QA teams to test new platform
+    features and validate regional compliance ahead of release • Help simulate and
+    refine workflows across various countries to ensure product readiness and competitive
+    edge • Provide feedback loops between what customers want and how the product
+    behaves in real-life demo/test conditions Enablement & Strategic Advisory • Coach
+    and enable Account Executives, BDMs, and partners on demo best practices and product
+    positioning • Deliver internal sessions to upskill commercial teams on new features,
+    integrations, or regional nuances • Act as a go-to expert on the product’s capabilities
+    across Africa and the UAE, especially for large, high-stakes deals Qualifications
+    • 6–8+ years of experience in Pre-Sales, Solution Consulting, or Technical Product
+    Enablement within SaaS or enterprise software • Strong exposure to multi-country
+    payroll, HRIS platforms, or regulatory-driven SaaS environments • Demonstrated
+    experience managing complex tenders, RFPs, and POCs at scale • Deep understanding
+    of enterprise buying cycles and stakeholder dynamics • Ability to work cross-functionally
+    with Sales, Product, Implementation, and QA teams • Excellent communication skills—able
+    to break'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: null
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.555255+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

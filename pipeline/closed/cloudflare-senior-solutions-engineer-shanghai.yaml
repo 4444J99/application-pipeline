@@ -1,0 +1,117 @@
+id: cloudflare-senior-solutions-engineer-shanghai
+name: Cloudflare Senior Solutions Engineer, Shanghai
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Cloudflare
+  url: https://boards.greenhouse.io/cloudflare
+  application_url: https://boards.greenhouse.io/cloudflare/jobs/7765245?gh_jid=7765245
+  portal: greenhouse
+  location: Hybrid
+  location_class: unknown
+  description: '<div class="content-intro"><div><strong>About Us</strong></div> <div>
+    <p>At Cloudflare, we are on a mission to help build a better Internet. Today the
+    company runs one of the world’s largest networks that powers millions of websites
+    and other Internet properties for customers ranging from individual bloggers to
+    SMBs to Fortune 500 companies. Cloudflare protects and accelerates any Internet
+    application online without adding hardware, installing software, or changing a
+    line of code. Internet properties powered by Cloudflare all have web traffic routed
+    through its intelligent global network, which gets smarter with every request.
+    As a result, they see significant improvement in performance and a decrease in
+    spam and other attacks. Cloudflare was named to Entrepreneur Magazine’s Top Company
+    Cultures list and ranked among the World’s Most Innovative Companies by Fast Company.&nbsp;</p>
+    <p>At Cloudflare, we’re not looking for people who wait for a polished roadmap;
+    we’re looking for the builders who see the cracks in the Internet that everyone
+    else has simply learned to live with. We value candidates who have the instinct
+    to spot a "normalized" problem and the AI-native curiosity to create a solution
+    using the latest tools. Our culture is built on iteration, leveraging AI to ship
+    faster today to make it better tomorrow, while ensuring that every improvement,
+    no matter how small, is shared across the team to lift everyone up. If you’re
+    the type of person who values curiosity over bureaucracy, and that AI is a partner
+    in solving tough problems to keep the Internet moving forward, you’ll fit right
+    in.</p> </div></div><p><strong>Available Work Location: Shanghai, China&nbsp;</strong></p>
+    <h3><strong>What you’ll do</strong></h3> <p>You are the technical keystone through
+    the entire sales cycle - pre and post sales. You will work closely with our Enterprise
+    prospects and customers in Greater China region to educate, empower, and ensure
+    their success on the Cloudflare platform. You will leverage your technical expertise
+    in Cloudflare’s global distributed network and technology to find best-fit solutions
+    for prospects, to train and onboard new customers via video-conference, in person,
+    or through documentation, and to support the long-term success of the customer.
+    As an expert on web/mobile security and performance, you are a trusted source
+    for developing new firewall rules from log files, crafting performance caching
+    and delivery strategies, and creating or repurposing internal tools and scripts
+    for customers.</p> <p>As a Solutions Engineer, you are the technical customer
+    advocate within Cloudflare. To aid your customers, you will work closely with
+    every team at Cloudflare, from Sales and Product to Engineering and Customer Support.
+    Your goal of customer success should drive you through the entire organization
+    as you seek out and create scalable solutions for your customer’s needs.</p> <h3><strong><br>What
+    we''re looking for&nbsp;</strong></h3> <p>Our Solutions Engineers come from a
+    wide range of backgrounds: financial consulting, engineering, software development,
+    product management, customer support &amp; project delivery. We''re serious about
+    building a diverse team. When hiring we look for diversity of experience combined
+    with genuine curiosity for our technology.</p> <p>Ultimately, you are passionate
+    about technology and have the ability to explain complex technical concepts in
+    easy-to-understand terms. You are naturally curious, and an avid builder who is
+    not afraid to get your hands dirty. You appreciate the diversity of challenges
+    in working with customers, and look forward to helping them realize the full promise
+    of Cloudflare. On the Solutions Engineering team, you will find a collaborative
+    environment where everyone brings different strengths and jumps in to help each
+    other.</p> <p><strong>Additional experience might include a combination of the
+    skills below:</strong></p> <ul> <li>Ability to manage a project, work to deadlines,
+    and prioritize between competing demands;</li> <li>Hands on technically.</li>
+    <li>Understanding of “how the internet works”. For example:</li> <ul> <li>Know
+    the differences between TCP &amp; UDP, and understand what kinds of applications
+    may favor one over the other;</li> <li>Can explain the difference between authoritative
+    DNS &amp; recursive DNS;</li> <li>You understand the role of a firewall, why TLS
+    (SSL) plays an increasingly important role on today''s Internet, a solid understanding
+    of HTTP and a willingness to dive deeper into the quirks of clients &amp; servers
+    alike;</li> </ul> </ul> <p><strong>Bonus Points</strong></p> <ul> <li>Previous
+    experience in a sales or consulting role covering East China region.&nbsp;</li>
+    <li>Fluency in Mandarin and English to support regional customers;</li> <li>Demonstrated
+    experience with a scripting language (e.g. Python, JavaScript, Bash) and a desire
+    to expand those skills;</li> <li>You''ve built a web application before, or contributed
+    to an exist'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-31'
+  posting_date: '2026-03-31'
+  date_source: first_published
+  date_added: '2026-03-31'
+  discovered: '2026-03-31T16:16:16.899645+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

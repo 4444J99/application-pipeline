@@ -1,0 +1,108 @@
+id: stripe-solutions-engineer-bridge
+name: Stripe Solutions Engineer, Bridge
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7434912
+  portal: greenhouse
+  location: San Francisco, CA | New York, NY | Remote
+  location_class: unknown
+  description: <h2><strong>Who we are </strong></h2> <h3><strong>About Bridge</strong></h3>
+    <p>We’re creating an entirely new payments platform, built with stablecoins, to
+    simplify global money movement. Bridge enables faster, cheaper payments and borderless
+    access to dollars via stablecoins. Through our APIs, businesses can send and receive
+    funds across borders faster / cheaper vs. SWIFT and other fiat-only rails. Our
+    virtual accounts enable international consumers and businesses to easily access,
+    store and spend US dollars. Our payouts infrastructure enables platforms to disburse
+    USD to anyone globally. We believe many trillions of dollars will move and settle
+    through stablecoin payment rails. Bridge is pulling this future forward.</p> <p>We
+    have a small team of people who have previously built financial infrastructure
+    at some of the world’s leading companies (Coinbase, Stripe, Square, Brex, Upstart,
+    DoorDash, Airbnb) and each and every one of them chose Bridge because they fundamentally
+    believe that stablecoins will be a critical piece of financial infrastructure
+    that allows for the improvement of global money movement.<br><br></p> <h3><strong>About
+    the team</strong></h3> <p>The Solutions Engineering team partners with our GTM
+    teams and customers to realize their full potential through the adoption of prescriptive
+    solutions that drive their growth and success.</p> <p>You will work with founders,
+    C-level executives, finance leaders, product design and engineering teams across
+    a range of startups to large global brands and platforms who are building financial
+    services solutions.&nbsp;<br><br></p> <h2><strong>What you’ll do</strong></h2>
+    <p>You will be a part of the founding team of Solutions Engineers making sure
+    Bridge customers understand the value of our solutions, that they know how to
+    properly integrate with our technology, and that they’re supported throughout
+    their journey with Bridge. You will design the strategy for this team, and execute
+    it.<br><br></p> <h3><strong>Responsibilities</strong></h3> <ul> <li> <p>Support
+    key new logo pursuits alongside the sales team.</p> </li> <li> <p>Help signed
+    customers integrate and go live with Bridge solutions.</p> </li> <li> <p>Cultivate
+    and deliver expansion opportunities and product adoption within existing customer
+    base.</p> </li> <li> <p>Drive thought leadership and be a trusted advisor for
+    key business and technical stakeholders including CIO, CTO, COO, CRO, CDO, Head
+    of Product Engineering, and Head of Payments.&nbsp;</p> </li> <li> <p>Work to
+    deeply understand the customer’s business objectives, and then design and apply
+    Bridge’s solutions to their challenges.</p> </li> <li> <p>Lead strategy engagements
+    with users to align to business priorities, design solutions and secure the technical
+    win by performing in-depth customer discovery, evangelizing the proposed solutions
+    through executive briefings, readouts, presentations and solution demos.&nbsp;</p>
+    </li> <li> <p>Bring understanding of the market to our Product and Engineering
+    teams by acting as the “Voice of the User.”</p> </li> <li> <p>Act as a crucial
+    part of the GTM team, providing technical insight and solutions to prospective
+    and existing platform users. Guide and provide technical expertise on Bridge and
+    its benefits.</p> </li> </ul> <p>&nbsp;</p> <h3><strong>Minimum requirements</strong></h3>
+    <ul> <li> <p>5+ years of experience in a similar customer-facing engineering role
+    such as solution consultant, solutions architect, or sales engineer, for a global
+    software enterprise.</p> </li> <li> <p>Executive engagement skills and presence,
+    with an ability to establish strong relationships with key decision makers and
+    build credibility at all levels.</p> </li> <li> <p>Effective group-facilitation
+    skills and confidence in proposing and leading customer meetings to gain strategic
+    footing and pursue opportunities.</p> </li> <li> <p>Thorough understanding of
+    the software development lifecycle and API architecture.</p> </li> <li> <p>Outstanding
+    spoken and written communication skills, presentation skills, and confidence in
+    explaining complex concepts to both technical and non-technical audiences.</p>
+    </li> <li> <p>Strong organizational and time management skills and the ability
+    to juggle competing priorities while working with multiple strategic opportunities
+    and customers.</p> </li> </ul>
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.792196+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

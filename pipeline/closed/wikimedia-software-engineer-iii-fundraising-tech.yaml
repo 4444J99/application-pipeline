@@ -1,0 +1,126 @@
+id: wikimedia-software-engineer-iii-fundraising-tech
+name: Wikimedia Software Engineer III, Fundraising Tech
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Wikimedia
+  url: https://boards.greenhouse.io/wikimedia
+  application_url: https://job-boards.greenhouse.io/wikimedia/jobs/7736459
+  portal: greenhouse
+  location: Remote
+  location_class: remote-global
+  description: "<p><strong>Summary</strong></p> <p>We are searching for an experienced\
+    \ full-stack software engineer to join the Wikimedia Fundraising Technology team.&nbsp;\
+    \ Each year, small donations from hundreds of thousands of individuals constitute\
+    \ the majority of the budget for the Wikimedia Foundation. This money is used\
+    \ primarily for projects, such as Wikipedia, and operational costs. We are looking\
+    \ for someone who wants to help Wikimedia\u2019s non-profit fundraising efforts\
+    \ to become more accessible worldwide, while maintaining integrity and scalability\
+    \ across changing markets and over numerous engagement methods.</p> <p><strong>We'd\
+    \ like you to do these things:</strong></p> <ul> <li>Support Wikimedia\u2019s\
+    \ online fundraising goals worldwide by developing tools and features that empower\
+    \ users to create effective fundraising campaigns</li> <li>Write code to integrate\
+    \ with payment providers and other tools and services, both internal and third-party</li>\
+    \ <li>Help the team surface important patterns and trends by improving internal\
+    \ visibility and reporting capabilities</li> <li>Share the ongoing responsibility\
+    \ of maintaining the security and integrity of the existing donation infrastructure</li>\
+    \ <li>Provide an increased level of engineering support during high-traffic or\
+    \ critical campaigns</li> </ul> <p><strong>We'd like you to have these skills:</strong></p>\
+    \ <ul> <li>Two years experience developing in PHP or similar web scripting language(s)</li>\
+    \ <li>Experience developing, deploying, and debugging in LAMP environments</li>\
+    \ <li>BS in Computer Science or the equivalent in relevant work experience</li>\
+    \ <li>Knowledge of MySQL and other relational databases</li> <li>Comfortable working\
+    \ with JavaScript/HTML/CSS for front-end development</li> <li>Experience integrating\
+    \ with third-party web APIs, and maintaining those integrations</li> <li>Highly\
+    \ collaborative work style</li> <li>Ability to work confidently in open source\
+    \ environments</li> </ul> <p><strong>And it would be even more awesome if you\
+    \ have experience with:</strong></p> <ul> <li>Open-source software architecture\
+    \ and development</li> <li>Payments-related code</li> <li>CiviCRM or other customer\
+    \ relationship management software</li> <li>MediaWiki and other open source PHP-based\
+    \ content management systems</li> <li>Working remotely, or with a distributed\
+    \ team</li> <li>Developing and maintaining software with high security and accuracy\
+    \ requirements, at scale</li> </ul> <h4>About the Wikimedia Foundation</h4> <p>The\
+    \ Wikimedia Foundation is the nonprofit organization that operates Wikipedia and\
+    \ the other Wikimedia free knowledge projects. Our vision is a world in which\
+    \ every single human can freely share in the sum of all knowledge. We believe\
+    \ that everyone has the potential to contribute something to our shared knowledge,\
+    \ and that everyone should be able to access that knowledge freely. We host Wikipedia\
+    \ and the Wikimedia projects, build software experiences for reading, contributing,\
+    \ and sharing Wikimedia content, support the volunteer communities and partners\
+    \ who make Wikimedia possible, and advocate for policies that enable Wikimedia\
+    \ and free knowledge to thrive.&nbsp;</p> <p>The Wikimedia Foundation is a charitable,\
+    \ not-for-profit organization that relies on donations. We receive donations from\
+    \ millions of individuals around the world, with an average donation of about\
+    \ $15. We also receive donations through institutional grants and gifts. The Wikimedia\
+    \ Foundation is a United States 501(c)(3) tax-exempt organization with offices\
+    \ in San Francisco, California, USA.</p> <p><em><strong>As an equal opportunity\
+    \ employer, the Wikimedia Foundation values having a diverse workforce and continuously\
+    \ strives to maintain an inclusive and equitable workplace. We encourage people\
+    \ with a diverse range of backgrounds to apply. We do not discriminate against\
+    \ any person based upon their race, traits historically associated with race,\
+    \ religion, color, national origin, sex, pregnancy or related medical conditions,\
+    \ parental status, sexual orientation, gender identity, gender expression, age,\
+    \ status as a protected veteran, status as an individual with a disability, genetic\
+    \ information, or any other legally protected characteristics.</strong></em></p>\
+    \ <p>The Wikimedia Foundation is a remote-first organization with staff members\
+    \ including contractors based 40+ countries<strong>*</strong>. Salaries at the\
+    \ Wikimedia Foundation are set in a way that is competitive, equitable, and consistent\
+    \ with our values and culture. The anticipated annual pay range of this position\
+    \ for applicants based within the United States is US$92,267 to US$118,045 with\
+    \ multiple individualized factors, including cost of living in the location, being\
+    \ the determinants of the offered pay. For applicants located outside of the US,\
+    \ the pay range will be adjusted to the country of hire. We neither ask for nor\
+    \ take into consideration the salary history of applicants. The compensation for\
+    \ a successful applicant will be based on their s"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 10
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+  framing: A systems architect who builds high-integrity, transparent infrastructure
+    at institutional scale, bridging the gap between technical complexity and global
+    accessibility through automated governance and semantic structuring.
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids:
+    cover_letter: cover-letters/wikimedia-software-engineer-iii-fundraising-tech-alchemized
+  materials_attached:
+  - resumes/batch-03/wikimedia-software-engineer-iii-fundraising-tech/wikimedia-software-engineer-iii-fundraising-tech-resume.html
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+  submitted_date: '2026-03-28'
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.814592+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"
+status_meta:
+  reviewed_by: 4jp
+  approved_at: '2026-03-27'

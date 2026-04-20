@@ -1,0 +1,94 @@
+id: replit-senior-software-engineer-money
+name: Replit Senior Software Engineer, Money
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Replit
+  url: https://jobs.ashbyhq.com/replit
+  application_url: https://jobs.ashbyhq.com/replit/0a71787b-1b86-4f86-be79-0a9723d75cc7
+  portal: ashby
+  location: Foster City, CA (Hybrid) In office M,W,F
+  location_class: us-onsite
+  description: 'Replit is the agentic software creation platform that enables anyone
+    to build applications using natural language. With millions of users worldwide,
+    Replit is democratizing software development by removing traditional barriers
+    to application creation. About the role: This is a Product Engineering role specialized
+    in billing systems, and will lead that space at Replit. It’s a direct line to
+    business impact. But it’s also critical to get right for our users. These are
+    some of the most critical user journeys to get right. Getting them wrong creates
+    the most frustrating experiences for users. So we’re looking for engineers who
+    can build reliable and scalable billing systems and abstractions, while also translating
+    that to an intuitive and friendly user experience. You will: Lead the design and
+    implementation of all new billing and invoicing systems at Replit. Create seamless
+    user experiences for users related to billing and invoicing, for both consumer
+    and enterprise users. Build new abstractions and APIs for other engineers at Replit
+    to monetize their new products. Iterate on pricing and packaging tactics to drive
+    revenue growth. Examples include coupon codes and referral systems. Create monitoring
+    and feedback systems so that we can proactively spot problems, fix them, and optimize
+    performance. Required skills and experience: 4+ years of full stack product experience,
+    with strong skills working on the backend. Direct working experience in at least
+    one of the following: Subscription invoicing systems Usage based billing systems
+    Self-directed and comfortable working autonomously in ambiguous environments.
+    Excellent problem-solving skills with ability to debug complex billing issues
+    and edge cases. Experience implementing customer-facing billing interfaces that
+    simplify complex pricing structures. Tools + Tech Stack for this role: TypeScript,
+    React, Postgres, GraphQL, and Nodejs. Bonus Points : Experience working with Orb,
+    Metronome, or Stripe usage based billing. Experience with coupons, referral programs,
+    or other monetization growth tactics. This is a full-time role that can be held
+    from our Foster City, CA office. The hybrid role has an in-office requirement
+    of Monday, Wednesday, and Friday. Full-Time Employee Benefits Include: 💰 Competitive
+    Salary & Equity 💹 401(k) Program with a 4% match ⚕️ Health, Dental, Vision and
+    Life Insurance 🩼 Short Term and Long Term Disability 🚼 Paid Parental, Medical,
+    Caregiver Leave 🚗 Commuter Benefits 📱 Monthly Wellness Stipend 🧑‍💻 Autonomous
+    Work Environment 🖥 In Office Set-Up Reimbursement 🏝 Flexible Time Off (FTO) +
+    Holidays 🚀 Quarterly Team Gatherings ☕ In Office Amenities Want to learn more
+    about what we are up to? Meet the Replit Agent Replit: Make an app for that Replit
+    Blog Amjad TED Talk Interviewing + Culture at Replit Operating Principles Reasons
+    not to work at Replit To achieve our mission of making programming more accessible
+    around the world, we need our team to be representative of the world. We welcome
+    your unique perspective and experiences in shaping this product. We encourage
+    people from all kinds of backgrounds to apply, including and especially candidates
+    from underrepresented and non-traditional backgrounds.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.947041+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

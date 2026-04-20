@@ -1,0 +1,116 @@
+id: openai-security-solutions-engineer-pre-sales-security-specialist-ap
+name: OpenAI Security Solutions Engineer, Pre-Sales (Security Specialist) - APAC
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: OpenAI
+  url: https://jobs.ashbyhq.com/openai
+  application_url: https://jobs.ashbyhq.com/openai/215b02db-1cbf-4f97-8866-7a460ddf7b35
+  portal: ashby
+  location: Singapore
+  location_class: international
+  description: 'Careers | Security Solutions Engineer, Pre-Sales Technical Success
+    — Singapore About the Team The Technical Success team is responsible for ensuring
+    the safe and effective deployment of ChatGPT and OpenAI API applications for developers
+    and enterprises, acting as a trusted advisor so customers maximize value from
+    our models and products. As OpenAI’s enterprise footprint grows—especially across
+    regulated industries—security and compliance diligence is increasingly happening
+    live with CISOs, risk teams, privacy officers, and auditors. About the Role We
+    are hiring a Security Solutions Engineer to serve as the customer-facing security
+    and compliance pre-sales subject matter expert for priority customer accounts—especially
+    in regulated industries. You will lead security deep dives, diligence workflows,
+    and questionnaires, and help customers understand OpenAI’s security posture, controls,
+    and architectural patterns. This role is designed to increase deal velocity and
+    customer confidence while reducing the operational load on internal security teams
+    by owning the customer-facing workstream and escalating selectively. This role
+    is based in Singapore. We use a hybrid work model of 3 days in the office per
+    week and offer relocation assistance to new employees. In this role, you will
+    Lead customer security engagements end-to-end : discovery, security deep dives,
+    live calls, follow-ups, and action tracking—especially for regulated customers.
+    Own security questionnaires/RFIs for priority customers: coordinate inputs, ensure
+    accuracy, drive turnaround time, and manage escalations. Translate security posture
+    into customer-relevant narratives : data flows, tenant boundaries, identity and
+    access controls, encryption, logging/monitoring, incident response, privacy controls,
+    and risk mitigations. Guide customers to standardized resources (e.g., trust collateral)
+    and explain what is standard vs. what requires escalation or exceptions. Partner
+    closely with GRC and Security teams to escalate non-standard requirements, clarify
+    control intent, and ensure customer-facing responses remain aligned with approved
+    posture. Create scalable enablement : playbooks, FAQs, response libraries, and
+    training that reduce repeated work for Solutions Engineers and Sales. Represent
+    the voice of regulated customers internally by identifying themes and recurring
+    blockers; propose improvements to packaging, documentation, and product readiness.
+    You’ll thrive in this role if you Have 5+ years (guideline) in a customer-facing
+    security role such as security pre-sales/solutions engineering, security consulting,
+    security architecture, or GRC-adjacent customer advisory in B2B SaaS or cloud
+    environments. Can credibly engage and influence CISOs, security architects, privacy
+    teams, and procurement/risk stakeholders in real-time discussions. Have working
+    knowledge of common frameworks and requirements (e.g., SOC 2, ISO 27001, GDPR
+    ; DORA ; bonus for regulated regimes like FedRAMP/HIPAA/PCI/DORA depending on
+    segment). Understand modern cloud/security fundamentals: IAM, network/security
+    architecture, encryption/key management concepts, logging/monitoring, vulnerability
+    management, incident response, and secure SDLC. Are strong in structured writing
+    and can produce crisp, consistent answers under time pressure (questionnaires,
+    RFIs, executive summaries). Can operate in ambiguity, own problems end-to-end,
+    and create repeatable processes that scale beyond yourself. About OpenAI OpenAI
+    is an AI research and deployment company dedicated to ensuring that general-purpose
+    artificial intelligence benefits all of humanity. We push the boundaries of the
+    capabilities of AI systems and seek to safely deploy them to the world through
+    our products. AI is an extremely powerful tool that must be created with safety
+    and human needs at its core, and to achieve our mission, we must encompass and
+    value the many different perspectives, voices, and experiences that form the full
+    spectrum of humanity. We are an equal opportunity employer, and we do not discriminate
+    on the basis of race, religion, color, national origin, sex, sexual orientation,
+    age, veteran status, disability, genetic information, or other applicable legally
+    protected characteristic. For additional information, please see OpenAI’s Affirmative
+    Action and Equal Employment Opportunity Policy Statement . Background checks for
+    applicants will be administered in accordance with applicable law, and qualified
+    applicants with arrest or conviction records will be considered for employment
+    consistent with those laws, including the San Francisco Fair Chance Ordinance,
+    the Los Angeles County Fair Chance Ordinance for Employers, and the California
+    Fair Chance Act, for US-based candidates. For unincorporated Los Angeles County
+    workers: we reasonably believe that criminal history may have a direct, adverse
+    and negative relationship with the following job duties, potentially resulting
+    in the withdrawal of a conditional offer of employme'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.640839+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

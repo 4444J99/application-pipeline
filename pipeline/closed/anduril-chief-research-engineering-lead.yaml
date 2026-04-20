@@ -1,0 +1,114 @@
+id: anduril-chief-research-engineering-lead
+name: Anduril Chief Research Engineering Lead
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5077994007?gh_jid=5077994007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p>We are seeking a&nbsp;<strong>Chief
+    </strong><strong>Research Engineer Lead</strong> to drive innovations in autonomous
+    vehicle technology using deep learning and reinforcement learning. In this dynamic
+    role, you will design state-of-the-art algorithms and systems that enable safe,
+    efficient, and intelligent autonomous capabilities. Today, employing mass quantities
+    of “autonomous” robots requires heavy human oversight and execution. Anduril is
+    leveraging AI approaches to offload operator burden and speed up execution via
+    realtime monitoring, recommendations to users, and multi-modal interaction patterns.
+    You will apply proven and un-proven approaches to create prototypes for expanding
+    the capability of autonomous systems.</p> <h4>What You’ll Do</h4> <ul> <li><strong>Develop
+    Advanced Algorithms</strong> - Design and implement deep learning and reinforcement
+    learning algorithms to improve sensor perception, prediction, and decision-making
+    for autonomous vehicles.</li> <li><strong>Apply Agentic Reasoning</strong> - Design
+    and implement integrated agents and AI models to solve for end-user autonomous
+    systems workflows.</li> <li><strong>End-to-End System Integration</strong> - Collaborate
+    with cross-functional teams to integrate research prototypes into robust, production-ready
+    systems including simulation environments and real-world platforms.</li> <li><strong>Research
+    &amp; Experimentation</strong> - Conduct research into reinforcement learning
+    strategies and deep architectures, iterate on experimental designs, and evaluate
+    performance using rigorous quantitative metrics.</li> <li><strong>Data-Driven
+    Innovation </strong>-<strong> </strong>Utilize real-world and synthetic data to
+    enhance model robustness and generalization, leveraging scalable training pipelines
+    on distributed systems.</li> </ul> <h4>Required Qualifications</h4> <ul> <li>PhD
+    or Master’s degree in Computer Science, Robotics, Machine Learning, or a related
+    field, or equivalent practical experience.</li> <li>Demonstrated proficiency in
+    deep learning frameworks (e.g., PyTorch, TensorFlow, JAX) including LLM fine-tuning.</li>
+    <li>Solid experience with reinforcement learning methods and their application
+    to autonomous systems.</li> <li>Experience with simulation or real-world validation
+    for autonomous vehicles is highly desirable.</li> <li>Proven experience in deep
+    learning research and development, particularly in generative AI. This includes
+    diffusion models and autoregressive generative models.</li> <li>Eligible to obtain
+    and maintain an active U.S. Top Secret security clearance</li> <li>Travel up to
+    30% of time to build, test, and deploy capabilities in the real world</li> </ul>
+    <p><strong>Preferred Qualifications</strong></p> <ul> <li>Novel application track
+    record and experience including first author publications, participation in peer
+    reviewed conferences, contribution to open source projects, and demonstrated contribution
+    to the ML and AI community.</li> <li>Experience in multi-modal sensor data processing
+    (e.g., cameras, LiDAR, radar).</li> <li>Familiarity with ML Ops best practices,
+    including model versioning and reproducible research pipelines.</li> <li>Strong
+    programming skills in Python and familiarity with C/C++ is a plus.</li> <li>General
+    software engineering experience solving motion planning or related robotics problems.</li>
+    </ul><div class="content-pay-transparency"><div class="pay-input"><div class="title">US
+    Salary Range</div><div class="pay-range"><span>$254,000</span><span class="divider">&mdash;</span><span>$336,000
+    USD</span></div></div></div><div class="content-conclusion"><p><span data-contrast="auto">The
+    salary range for this role is an estimate based on a wide range of compensation
+    factors, inclusive of base salary only. Actual salary offer may vary based on
+    (but not limited to) work experience, education and/or training, critical skills,
+    and/or business considerations. Highly competitive equity grants are included
+    in the majority of full time offers; and are considered part of Anduril's total
+    compensation package. Additionally, Anduril offers top-tier benefits for full-time
+    employees, including:</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&q
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.819696+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

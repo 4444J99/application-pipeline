@@ -1,0 +1,117 @@
+id: zapier-software-engineer-enterprise-zone-backend-full-stack-multipl
+name: Zapier Software Engineer, Enterprise Zone (Backend & Full Stack) — Multiple
+  Levels
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Zapier
+  url: https://jobs.ashbyhq.com/zapier
+  application_url: https://jobs.ashbyhq.com/zapier/15a66155-32c2-466a-a6cb-7cf554727d11
+  portal: ashby
+  location: NAMER
+  location_class: unknown
+  description: 'AI at Zapier At Zapier , we build and use automation every day to
+    make work more efficient, creative, and human. So if you’re using AI tools while
+    applying here - that’s great! We just ask that you use them responsibly and transparently
+    . Check out our guidance on How to Collaborate with AI During Zapier’s Hiring
+    Process , including how to use AI tools like ChatGPT, Claude, Gemini, or others
+    during our hiring process - and when not to. Job Posted: December 1, 2025 Latest
+    update: February 19, 2026 Location: Americas - North, Central and South America
+    Hi there! Zapier is leading the way in AI automation. We''ve helped small businesses
+    increase productivity and serve their customers better through an extensive platform
+    of integrations, robust workflow automations, and practical AI applications. As
+    we continue our mission to make automation work for everyone, our current focus
+    is to unlock that vast potential within Enterprise customers—organizations comprising
+    dozens, hundreds, or even thousands of employees. These companies already recognize
+    the value of automation; we are now empowering them to implement it at scale,
+    ensuring control, visibility, and confidence in their chosen tools. To do this,
+    Zapier is expanding its Enterprise zone and hiring across a number of roles and
+    levels, including backend, fullstack, and frontend engineers. We''re looking for
+    engineers passionate about solving complex problems and delivering new value to
+    customers, driving innovation in workflow management, and changing the future
+    of automation for some of the largest companies in industry. The Enterprise zone
+    is made up of several teams. We''re currently hiring across three of them: Enterprise
+    Response Asset Management Insights Team Focus The Enterprise Response team is
+    crucial for maintaining the resilience and reliability of our systems, particularly
+    during critical periods, mostly for our largest customers. This team innovates
+    in high-demand customer areas and delivers highly requested core features that
+    span multiple teams and organizational boundaries. This team touches every part
+    of the stack and plays a critical role in ensuring our biggest customers get fast,
+    dependable service. In this role, you''ll: Lead responses to critical incidents
+    and customer-impacting events Work directly with enterprise customers Collaborate
+    across engineering, product, and support to solve urgent problems Build internal
+    tools and improve core product features based on real-world, customer feedback
+    Build a new extensible platform for account and organization-level settings, applying
+    declarative controls, VPC connections to on-prem data, and instrumenting account-wide
+    AI guardrail controls The Asset Management team is responsible for building and
+    scaling the systems that make every Zapier asset, across products and workspaces,
+    discoverable, governable, and portable. You will be responsible for architecting
+    and deepening enterprise-grade Platform APIs to manage assets across multiple
+    products, ensuring consistency, reliability, and performance at scale for all
+    of our customers. In this role, you''ll: Design and implement scalable backend
+    architecture and APIs for asset cataloguing, ownership, and security Build intuitive,
+    unified interfaces for organizing, transferring, and governing assets across accounts
+    and products Embed AI technology into core product experiences to proactively
+    monitor and suggest optimizations to account management Drive technical alignment
+    with senior leaders and stakeholders across the organization Deliver fast-paced
+    solutions and POCs, prioritizing impact over deep polish, while balancing short-term
+    execution with long-term technical vision Tackle challenges in data standards,
+    compliance automation, and cross-product integrations This team is central to
+    Zapier''s multi-product strategy, unlocking faster product onboarding, reducing
+    manual support burden, and delivering key enterprise capabilities. The Enterprise
+    Insights team builds and maintains the core systems that support our customers.
+    We''re not following an existing playbook, we''re writing it. Here, you will help
+    build a strong account oversight platform that connects and supports Zapier''s
+    products. You''ll work on: Building scalable platforms like User Notifications,
+    Unified Smart Inboxes, Audit Logs, Public APIs to give customers better visibility,
+    control, and access across Zapier. Supporting key use cases such as compliance,
+    error tracking, and transactional alerts through reliable communication systems.
+    Creating and improving observability features like SLOs, alerts, and dashboards
+    to help Zapier grow. Strengthening core systems as we expand to serve larger and
+    more complex customers. Leading important projects from start to finish — using
+    AI to speed up development and improve the customer experience, while working
+    closely with your team. All of these roles are instrumental in ensuring Zapier
+    can deliver on their upmarket strategy and mission. They have a direct impa'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.399929+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

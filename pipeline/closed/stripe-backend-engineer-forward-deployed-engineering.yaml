@@ -1,0 +1,116 @@
+id: stripe-backend-engineer-forward-deployed-engineering
+name: Stripe Backend Engineer, Forward Deployed Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7249744
+  portal: greenhouse
+  location: San Francisco, CA | New York, NY | Remote
+  location_class: unknown
+  description: '<h2>Who we are</h2> <h3>About Stripe</h3> <p><span style="font-weight:
+    400;">Stripe is a financial infrastructure platform for businesses. Millions of
+    companies—from the world’s largest enterprises to the most ambitious startups—use
+    Stripe to accept payments, grow their revenue, and accelerate new business opportunities.
+    Our mission is to increase the GDP of the internet, and we have a staggering amount
+    of work ahead. That means you have an unprecedented opportunity to put the global
+    economy within everyone’s reach while doing the most important work of your career.</span></p>
+    <h3>About the team</h3> <p>The Forward Deployed Engineering (FDE) team exists
+    to solve the hardest problems our most complex enterprise users face, and to turn
+    those solutions into platform capabilities that scale to everyone. We work across
+    Revenue Suite, Payments, and adjacent products. This is not a support function.
+    It is an engineering team that sits at the boundary between Stripe''s platform
+    and the real-world complexity of how large enterprises actually use it.</p> <p>The
+    traditional FDE playbook, one engineer per user who manually rebuilds context
+    every rotation, is how every infrastructure company has done it for a decade.
+    It does not scale. We are building something different: an agent-augmented model
+    where AI handles the context-heavy, structured work (integration mapping, state
+    reconciliation, infrastructure shadow testing, diagnostics) and human FDEs focus
+    on the parts that require engineering judgment, product thinking, and direct user
+    relationships. The goal is to build engineering muscle that lets us serve every
+    strategic user through the platform, not just the handful we can staff individually.</p>
+    <p>We''ve proven the approach with some of the world''s most demanding enterprise
+    users, delivering measurable auth rate improvements, unblocking critical platform
+    migrations, closing multi-product integration gaps, and driving real revenue.
+    Now we''re scaling the model. If you want to solve hard user problems, build reusable
+    platform solutions, and help shape how forward deployed engineering works as a
+    discipline, this is the team.&nbsp;</p> <h2>What you’ll do</h2> <p>As an Engineer
+    on the RFA Forward Deployed Engineering team, you will:</p> <ul> <li><strong>Work
+    alongside AI agents to serve users at scale.</strong> This is central to how our
+    team operates. AI agents maintain real-time integration maps, run shadow tests
+    against user setups, and perform automated state reconciliation between Stripe
+    and user systems. Your job is the work that requires an engineer: making judgment
+    calls on ambiguous problems, building relationships with user engineering teams,
+    making product decisions, and designing solutions. You will also help shape the
+    tooling itself, identifying what should be automated and what needs to stay human.</li>
+    <li><strong>Engage directly with users.</strong> You will work with Stripe''s
+    most strategic enterprise users to understand their revenue, billing, and payments
+    requirements. You translate what you learn into technical solutions, and you bring
+    that user reality back to product teams. This is a genuinely user-facing role,
+    not user-facing in the "I read a dashboard" sense.</li> <li><strong>Build across
+    product boundaries.</strong> You will design and deploy products and solutions
+    that address product-market fit gaps, not just in Billing but across multi-product
+    boundaries (Payments + Invoicing + Global LPMs). You embed within Stripe product
+    engineering teams to co-develop the highest-leverage capabilities.</li> <li><strong>Build
+    reusable solutions, not one-off fixes.</strong> Contribute to a customization
+    framework for RFA and adjacent products: tailored billing logic, financial workflows,
+    integrations (custom metering, product catalog integrations, checkout flows).
+    Build patterns and blueprints that scale beyond the individual engagement.</li>
+    <li><strong>Provide architectural guidance.</strong> Review user architectures,
+    advise on best practices, and optimize integration and performance for complex
+    enterprise environments. Contribute to a growing library of architectural patterns
+    for the field.</li> <li><strong>Resolve critical technical challenges.</strong>
+    Diagnose and fix complex product/engineering problems across the stack. Identify
+    systemic improvements that prevent recurrence and improve platform stability.</li>
+    <li><strong>Inform the product roadmap.</strong> The integration gaps, migration
+    friction, and multi-product failures you surface directly shape Stripe''s product
+    strategy. You advocate for what users actually need based on what you''ve seen
+    firsthand.</li> <li><strong>Raise the bar on engineering.</strong> Improve engineering
+    standards, tooling, and processes within the team. Help build for sustainability
+    as the team grows.</li> </ul> <h2><strong>Who you are</strong></h2> <p>You''re
+    a strong engineer who also thinks like a product person. You''re comfortable with
+    ambiguity, you''d rather talk to a u'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.741855+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

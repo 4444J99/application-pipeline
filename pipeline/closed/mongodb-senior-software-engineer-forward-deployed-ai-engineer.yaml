@@ -1,0 +1,115 @@
+id: mongodb-senior-software-engineer-forward-deployed-ai-engineer
+name: MongoDB Senior Software Engineer, Forward Deployed AI Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7392902
+  portal: greenhouse
+  location: Dublin
+  location_class: international
+  description: '<p>MongoDB is looking for an outstanding person to join our newly
+    created Forward Deployed Engineering team and take on a key role in our extended
+    R&amp;D organization. Forward Deployed Engineering is linking the work of teams
+    engaged on application modernization roles with our Product and Engineering teams.</p>
+    <p>We are looking to speak to candidates who are based in Dublin for our hybrid
+    working model.</p> <p>Many organizations have built up large estates of legacy
+    applications. Lack of scalability and resilience, long development times, operating
+    cost, and inability to run on cloud are common issues with these applications.
+    To address these issues, organizations are engaging in large transformational
+    Application Modernisation programs. MongoDB is recognized as the developer data
+    platform of choice for transactional systems that provide the best scalability,
+    resiliency and developer experience in the cloud as well as on premises. Organizations
+    are continuously migrating workloads from these legacy applications to new platforms,
+    often based on microservices, using MongoDB.&nbsp;</p> <p>Such transformations
+    are time intensive and often risky. Tooling based on generative AI promises to
+    accelerate these transformations in a way never seen before. Forward Deployed
+    Engineering is responsible for exploring the possibilities of Generative AI&nbsp;
+    technologies and providing invaluable feedback to MongoDB’s R&amp;D teams to drive
+    future capabilities of MongoDB and the MongoDB ecosystem.</p> <p>Application Modernization
+    Engineers will work alongside project teams that are executing Application Modernisation
+    projects with customers. The successful candidate will be responsible for evaluation,
+    build, and applying tools in modernization&nbsp; projects, facilitating the usage
+    of such tools and processes across the different project teams, identifying opportunities
+    for tooling deployment, selecting potential 3rd party tools, contributing to the
+    development of tooling prototypes and helping to shape the product roadmap.</p>
+    <h3>Our ideal candidate will have</h3> <ul> <li>4+ years of experience as a field
+    engineer or professional services consultant or full stack developer working directly
+    with Enterprise clients&nbsp;</li> <li>Proficiency in Java or C#, and some familiarity
+    with common database access patterns and frameworks in one or more of these languages</li>
+    <li>Strong knowledge about enterprise-scale software architectures, application
+    development methodologies, and software deployment and operations</li> <li>Experience
+    developing enterprise applications using relational databases, and employing SQL
+    and stored procedures with Oracle, MS SQL Server, Sybase and/or PostgreSQL databases</li>
+    <li>Experience of using and developing with MongoDB and JSON based Document models
+    is highly desirable</li> <li>Problem solving skills, including the ability to
+    collaborate across disciplines and teams to come up with creative solutions to
+    technical and business challenges</li> <li>Willingness to dive into a complex
+    domain, ask the right questions, and bring new software tools and technologies
+    to the table to solve customer problems</li> <li>Great communication skills (both
+    spoken and written), within the team and in customer meetings</li> <li>Good understanding
+    of Generative AI concepts, tools, and services. Any experience to build new applications/tools
+    using Generative AI is a big plus. That includes Cursor, Claude Code, Gemini,
+    and OpenAI APIs</li> <li>And finally, a strong interest in how AI supported toolchains
+    can improve application development</li> </ul> <h3>Position Expectations</h3>
+    <ul> <li>Contribute to customer application modernization initiatives at any or
+    all phases of the application lifecycle: assessment and analysis; planning and
+    design; data modeling; application code conversion, development, test and build;
+    integration and release configuration, production operations, application optimisation,
+    and best practices adoption</li> <li>Test drive MongoDB migration products to
+    deliver on customer use cases and drive adoption of the product. Deliver concise
+    feedback to the rest of the development organisation</li> <li>Work closely with
+    Product and Engineering teams to influence the direction of the MongoDB product
+    roadmap</li> <li>Personally execute POCs including developing or extending existing
+    tools when necessary and appropriate for customer success, with an eye towards
+    reusability and eventual integration with our products. These are often on premises
+    at client locations</li> <li>Maintain a broad and deep technical understanding
+    of the product line and the underlying technologies and protocols</li> <li>Work
+    as part of a wider delivery team comprising consulting engineers from MongoDB
+    Professional Services, project managers, and account teams</li> <li>Assist sales
+    teams in evaluating opportunities with prospects and customers</li> <li>Willingness
+    to work on site with customers for 7 days per month, which includes'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: creative-technologist
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/creative-technologist-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.308438+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

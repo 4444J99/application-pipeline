@@ -1,0 +1,115 @@
+id: scale-ai-solutions-engineer-clearance-required
+name: Scale AI Solutions Engineer (Clearance Required)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Scale AI
+  url: https://boards.greenhouse.io/scaleai
+  application_url: https://job-boards.greenhouse.io/scaleai/jobs/4663481005
+  portal: greenhouse
+  location: Washington, DC
+  location_class: us-onsite
+  description: '<p>Our customer base is growing exponentially, and you will be on
+    the front lines of ensuring that the world''s most innovative companies become
+    passionate, lifelong, Scale customers. Our Solutions Engineers ensure customers''
+    first experiences with Scale''s technology are flawless and lead to a successful
+    long-term partnership. The work will vary daily, and we’re looking for technical
+    experts excited to solve tough problems. As a solution engineer, you will be a
+    part of helping shape our early-stage federal business by re-envisioning our commercial
+    product offerings for our federal clients.</p> <p><strong>What you''ll do:</strong></p>
+    <ul> <li>Become an expert on the end-to-ends of Scale Products</li> <li>Create
+    tailored demonstrations and collateral for federal stakeholders at both the executive
+    and analyst level.</li> <li>Partner with Scale Account Executives to deliver customer
+    pilots according to requirements agreed by the customer.</li> <li>Integrate and
+    ingest a variety of external datasets to solve government use cases.</li> <li>Interact
+    with customers on a day-to-day basis to understand their pain points and design
+    solutions</li> <li>Work with internal product and engineering teams to turn customer
+    requirements into Scale capabilities</li> <li>Understand public sector mission
+    sets and strategic objectives to better showcase Scales products.</li> </ul> <p><strong>Ideally
+    you''d have:</strong></p> <ul> <li>Strong engineering background, preferably in
+    computer science, mathematics, or other quantitative fields</li> <li>Strong communication
+    skills - ability to interact with both technical and non-technical customers at
+    all levels</li> <li>At ease with technology, able to quickly pick up new tech
+    stacks and troubleshoot</li> <li>Previous experience working with Public Sector
+    customers - our business is diverse and growing across both National Security
+    and Federal Civilian communities.&nbsp;</li> <li>Proficiency in scripting languages
+    such as Python, Javascript/Typescript, Bash scripts, or programming languages.</li>
+    <li>A strong desire to roll up your sleeves and help build a business in an extremely
+    fast-paced environment</li> <li style="font-weight: bold;"><span style="text-decoration:
+    underline;"><strong>Active US Government Security Clearance (TS / SCI required)</strong></span></li>
+    <li>Based in the Washington, DC area or willing to relocate</li> <li>Background
+    working in AI/ML, particularly Generative AI and Large Language Models</li> </ul><div
+    class="content-pay-transparency"><div class="pay-input"><div class="description"><p><em>Compensation
+    packages at Scale for eligible roles include base salary, equity, and benefits.
+    The range displayed on each job posting reflects the minimum and maximum target
+    for new hire salaries for the position, determined by work location and additional
+    factors, including job-related skills, experience, interview performance, and
+    relevant education or training. Scale employees in eligible roles are also granted
+    equity based compensation, subject to Board of Director approval. Your recruiter
+    can share more about the specific salary range for your preferred location during
+    the hiring process, and confirm whether the hired role will be eligible for equity
+    grant. You’ll also receive benefits including, but not limited to: Comprehensive
+    health, dental and vision coverage, retirement benefits, a learning and development
+    stipend, and generous PTO. Additionally, this role may be eligible for additional
+    benefits such as a commuter stipend.</em></p></div><div class="title">The base
+    salary range for this full-time position in the location of Washington DC is:</div><div
+    class="pay-range"><span>$185,000</span><span class="divider">&mdash;</span><span>$220,000
+    USD</span></div></div></div><div class="content-conclusion"><p><strong><em>PLEASE
+    NOTE:&nbsp;</em></strong><em>Our policy requires a 90-day waiting period before
+    reconsidering candidates for the same role. This allows us to ensure a fair and
+    thorough evaluation of all applicants.</em></p> <p><strong>About Us:</strong></p>
+    <p><em>At Scale, our mission is to develop reliable AI systems for the world''s
+    most important decisions. Our products provide the high-quality data and full-stack
+    technologies that power the world''s leading models, and help enterprises and
+    governments build, deploy, and oversee AI applications that deliver real impact.
+    We work closely with industry leaders like Meta, Cisco, DLA Piper, Mayo Clinic,
+    Time Inc., the Government of Qatar, and U.S. government agencies including the
+    Army and Air Force. We are expanding our team to accelerate the development of
+    AI applications.</em></p> <p><em>We believe that everyone should be able to bring
+    their whole selves to work, which is why we are proud to be an inclusive and equal
+    opportunity workplace. We are committed to equal employment opportunity regardless
+    of race, color, ancestry, religion, sex, national origin, sexual orientation,
+    age, citizenship, marital status, disabilit'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.490644+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

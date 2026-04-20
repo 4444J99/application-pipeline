@@ -1,0 +1,119 @@
+id: anthropic-software-engineer-billing-platform
+name: Anthropic Software Engineer, Billing Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/5146261008
+  portal: greenhouse
+  location: San Francisco, CA | New York City, NY
+  location_class: us-onsite
+  description: "<div class=\"content-intro\"><h2><strong>About Anthropic</strong></h2>\
+    \ <p>Anthropic\u2019s mission is to create reliable, interpretable, and steerable\
+    \ AI systems. We want AI to be safe and beneficial for our users and for society\
+    \ as a whole. Our team is a quickly growing group of committed researchers, engineers,\
+    \ policy experts, and business leaders working together to build beneficial AI\
+    \ systems.</p></div><h2 class=\"heading\"><strong>About the role</strong></h2>\
+    \ <p>Anthropic exists to ensure the world safely navigates the transition through\
+    \ transformative AI. That work is funded by commercial revenue \u2014 and every\
+    \ dollar of it runs through Billing Platform. We build and operate the infrastructure\
+    \ that turns product usage into revenue across everything Anthropic ships: <a\
+    \ class=\"text-accent-secondary-100 underline\" href=\"http://Claude.ai\" target=\"\
+    _blank\">Claude.ai</a>, the Developer Platform, Claude Code, and whatever comes\
+    \ next. The faster we can price it, charge for it, and account for it correctly,\
+    \ the faster Anthropic can fund the mission.</p> <p>We\u2019re looking for a software\
+    \ engineer to join Billing. Depending on where you land, you might be building\
+    \ the integration contracts product teams plug into so they can launch a paid\
+    \ SKU without becoming billing experts, automating the quote-to-cash lifecycle\
+    \ so enterprise deals don\u2019t bottleneck on manual ops, or building the reconciliation\
+    \ and data foundations that keep every revenue number trustworthy at audit time.\
+    \ This is production-critical infrastructure where correctness is non-negotiable\
+    \ \u2014 a rounding error here is a revenue discrepancy somewhere else \u2014\
+    \ and you\u2019ll work closely with Finance, Product, Sales, and Accounting to\
+    \ build systems that scale with the business.</p> <h2 class=\"heading\"><strong>What\
+    \ you\u2019ll do</strong></h2> <ul> <li> <p>Design and ship billing capabilities\
+    \ end to end \u2014 pricing primitives, payment flows, contract and entitlement\
+    \ models, revenue data pipelines \u2014 depending on the surface area you own.</p>\
+    \ </li> <li> <p>Build for correctness first. Billing data is financial data; you\u2019\
+    ll develop the instincts for where idempotency, reconciliation, and audit trails\
+    \ matter and where they don\u2019t.</p> </li> <li> <p>Own the interfaces. Whether\
+    \ it\u2019s the billing API a product team integrates against or the revenue dataset\
+    \ Finance closes the books on, you\u2019ll design contracts that hide the complexity\
+    \ and hold up under change.</p> </li> <li> <p>Make build-vs-buy calls. We lean\
+    \ heavily on third-party billing, payment, and tax platforms, and you\u2019ll\
+    \ decide where to extend them and where to build our own primitives around them.</p>\
+    \ </li> <li> <p>Own the payments stack. Authorization rates and retry logic so\
+    \ a good card doesn\u2019t silently decline, processing cost as a real number\
+    \ you drive down, automated dispute response, and fraud controls that stop bad\
+    \ actors without blocking real customers.</p> </li> <li> <p>Drive down the manual\
+    \ work. Enterprise contract amendments, pricing config changes, billing support\
+    \ escalations \u2014 a lot of it is still human-in-the-loop, and closing that\
+    \ gap is a direct line to scale.</p> </li> <li> <p>Operate what you ship. You\u2019\
+    ll own SLOs on customer-facing flows, instrument the revenue pipeline so discrepancies\
+    \ surface before month-end close, and be on the hook when it pages.</p> </li>\
+    \ <li> <p>Partner across the company. Growth wants promotional mechanics, Sales\
+    \ wants quote flexibility, Finance wants GAAP-clean data, product teams want it\
+    \ yesterday \u2014 you\u2019ll help thread that needle.</p> </li> </ul> <h2 class=\"\
+    heading\"><strong>You may be a good fit if you</strong></h2> <ul> <li> <p>Have\
+    \ 6+ years building backend or platform systems in production \u2014 distributed\
+    \ systems, service-oriented architectures, data-intensive pipelines.</p> </li>\
+    \ <li> <p>Have a track record of shipping in fast-moving environments where the\
+    \ requirements shift under you and you still land something correct and maintainable.</p>\
+    \ </li> <li> <p>Care about correctness and data integrity as first-class design\
+    \ concerns, not afterthoughts \u2014 and know how to build systems that are easy\
+    \ to reason about when money is on the line.</p> </li> <li> <p>Enjoy cross-functional\
+    \ work. Billing sits between Product, Finance, Sales, and Legal, and a lot of\
+    \ the job is translating between those worlds.</p> </li> </ul> <h2 class=\"heading\"\
+    ><strong>Strong candidates may also have</strong></h2> <ul> <li> <p>Built billing,\
+    \ payments, subscription, or fintech systems before \u2014 and know firsthand\
+    \ how a small pricing change ripples through the whole stack.</p> </li> <li> <p>Direct\
+    \ experience integrating or extending third-party billing and payment platforms,\
+    \ and opinions on where they fall short.</p> </li> <li> <p>Worked on revenue reconciliation,\
+    \ financial reporting pipelines, or systems that had to survive an audit.</p>\
+    \ </li> <li> <p>Experience with enterprise commerce \u2014 CPQ, quote-to-cash,\
+    \ contract management, or the operational side of B2B billing.</p> </li> <li>\
+    \ <p>Owned payments optimization in a sel"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.870507+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

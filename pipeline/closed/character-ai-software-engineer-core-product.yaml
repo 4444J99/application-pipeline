@@ -1,0 +1,88 @@
+id: character-ai-software-engineer-core-product
+name: Character AI Software Engineer, Core Product
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Character AI
+  url: https://jobs.ashbyhq.com/character
+  application_url: https://jobs.ashbyhq.com/character/140e81c9-c989-4e95-9768-f4f6e7f6759c
+  portal: ashby
+  location: Redwood City, CA
+  location_class: us-onsite
+  description: About the role and team We are building the future of open-ended interactions
+    between people and intelligent agents. This requires rethinking design, user interfaces,
+    workflows and interactivity from first principles. We’re looking for a Core Product
+    engineer who is genuinely excited about this future and can make significant contributions
+    to our front-end development efforts. If you are a skilled software engineer with
+    a deep passion for front end development, design, craft, and you thrive in a fast-paced,
+    agile environment, we encourage you to apply for this exciting opportunity. What
+    you’ll do Develop highly performant, visually appealing, and user-friendly interfaces
+    that push the boundaries of what's possible. Enhance and refine our user interface,
+    focusing on engaging our users by fulfilling their needs, desires, and expectations.
+    Collaborate closely with the design team to translate visionary concepts into
+    tangible user experiences and product interfaces. Establish, evolve, and maintain
+    design foundations, systems, and patterns for the team, setting the bar for product
+    consistency and quality. Collaborate with others to define and implement new product
+    features and design patterns Who you are Experience as a Front-End or Full-Stack
+    Software Engineer with a strong focus on user experience and design systems Deep
+    understanding of Typescript, React, React Native, Tailwind, HTML, and modern front-end
+    best practices. Demonstrated experience with building features and experiences
+    for consumer products Passionate about the pixels, an exceptional eye for detail,
+    and a focus on craft and polish Proven ability to work in a fast-paced development
+    environment and deliver timely results. Excellent communication and collaboration
+    skills across engineering, product, design, and data. About Character.AI Character.AI
+    empowers people to connect, learn and tell stories through interactive entertainment.
+    Over 20 million people visit Character.AI every month, using our technology to
+    supercharge their creativity and imagination. Our platform lets users engage with
+    tens of millions of characters, enjoy unlimited conversations, and embark on infinite
+    adventure s. In just two years, we achieved unicorn status and were honored as
+    Google Play's AI App of the Year—a testament to our innovative technology and
+    visionary approach. Join us and be a part of establishing this new entertainment
+    paradigm while shaping the future of Consumer AI! At Character, we value diversity
+    and welcome applicants from all backgrounds. As an equal opportunity employer,
+    we firmly uphold a non-discrimination policy based on race, religion, national
+    origin, gender, sexual orientation, age, veteran status, or disability. Your unique
+    perspectives are vital to our success.
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.885357+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,115 @@
+id: anduril-senior-software-engineer-site-reliability
+name: Anduril Senior Software Engineer, Site Reliability
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5077999007?gh_jid=5077999007
+  portal: greenhouse
+  location: Sydney, New South Wales, Australia
+  location_class: international
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p>At Anduril Australia we are
+    developing unmanned systems for subsurface and other domains that will leverage
+    unsupervised autonomy for the delivery of long endurance, multi-mission capability
+    to our customers. These projects, including but not limited to the Extra Large
+    Autonomous Undersea Vehicle (XL-AUV) Program, require Senior Site Reliability
+    Engineers with deep experience in modern software development, delivery and sustainment
+    toolchains. The Senior Site Reliability Engineer strives to leverage their experience
+    to rapidly architect, design, delivery, support and evolve toolchains required
+    to delivery next-generation autonomous systems.</p> <h3>WHAT YOU'LL DO</h3> <ul>
+    <li>Lead the design, development, implementation and support of next-generation
+    software delivery toolchains that enable the continuous and secure delivery of
+    capabilities orders of magnitude faster than the competition, including in times
+    of national crisis and across multiple national security classification domains</li>
+    <li>Manage modern ICT systems at the infrastructure layer, including providers
+    and/or technologies such as AWS, Azure, and VMWare ESXi</li> <li>Manage modern
+    ICT systems at the operating system layer, including operating systems such as
+    NixOS, Ubuntu, Red Hat, and Microsoft Windows</li> <li>Manage modern ICT systems
+    at the orchestration layer, including technologies such as OpenShift, Kubernetes,
+    Docker and Terraform</li> <li>Manage modern ICT systems at the application layer,
+    including Github Enterprise, CircleCI and a variety of proprietary applications</li>
+    <li>Contribute to our Nix managed build and deployment systems</li> <li>Contribute
+    to the management of ICT hardware systems in a limited capacity</li> <li>Advocate
+    for and implement best-practice security measures within Anduril’s software toolchain</li>
+    <li>Work as a member of a multi-disciplinary software team, including as a mentor
+    for Software Engineers from differing backgrounds</li> </ul> <h3>REQUIRED QUALIFICATIONS</h3>
+    <ul> <li>Bachelor’s degree in Computer Science, Software Engineering, a relevant
+    field, or equivalent experience</li> <li>Experience in a senior role for the delivery
+    of a software and/or hardware system with a mature software delivery, security
+    and operations capability</li> <li>Experience with the design, implementation
+    and operation of horizontally scaled cloud technologies</li> <li>Experience troubleshooting
+    and analyzing remotely deployed software systems</li> <li>Capacity to work holistically
+    on software enabled capabilities up and down the software stack and through lifecycle
+    through design, implementation, operation and sustainment</li> <li>Capacity to
+    act as the technical owner for a software service, including stakeholder engagement,
+    requirements definition, roadmap management, team co-ordination, design, implementation,
+    sustainment and evolution</li> <li>Capacity to learn and grow individually, while
+    mentoring junior team members effectively, building team cohesion and capacity</li>
+    <li>Ability to obtain and maintain an Australian Government Security Clearance</li>
+    </ul> <h3>PREFERRED QUALIFICATIONS</h3> <ul> <li>Experience writing cloud-native
+    services using C++, Rust, Python and/or Go</li> <li>Experience with the NixOS
+    operating system and the Nix programming language</li> <li>Systems and/or application
+    programming skills including algorithms, data structures, concurrency and optimization</li>
+    <li>Experience managing infrastructure with Terraform</li> <li>A strong understanding
+    of networking, particularly in cloud and hybrid environments</li> <li>A strong
+    knowledge of and experience with deploying applications with Kubernetes and maintaining
+    Kubernetes clusters</li> <li>Desire to learn and grow in to other roles that require
+    experience as a Senior Software Engineer, such as Principal Software Engineer
+    and/or Engineering Manager</li> <li>Desire to grow in to a Tech-Lead-Manager role,
+    with responsibility for line management of engineers, in addition to delivery</li>
+    </ul><div class="content-conclusion"><p><span data-contrast="auto">The salary
+    range for this role is an estimate based on a wide range of compensation factors,
+    inclusive of base salary only. Actual salary offer may v
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.412432+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,116 @@
+id: snowflake-backend-engineer-streamlit-in-snowflake
+name: Snowflake Backend Engineer - Streamlit in Snowflake
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/835f1520-c728-44d4-87e0-ef81de35db4b
+  portal: ashby
+  location: US-WA-Bellevue
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Snowflake is revolutionizing how organizations
+    build and deploy data applications by bringing the power of Streamlit directly
+    into the Snowflake Data Cloud. We are seeking a talented Backend Engineer to join
+    our Streamlit in Snowflake (SiS) team, where you''ll build the robust infrastructure
+    and APIs that power seamless, enterprise-grade data application experiences running
+    natively within Snowflake''s secure, scalable platform. As a Backend Software
+    Engineer on the SiS team, you will work with cutting-edge cloud technologies and
+    distributed systems, including Python, Go, Snowflake''s compute infrastructure,
+    and cloud-native architectures. You''ll be instrumental in building the backend
+    services and APIs that enable the next generation of data application development
+    tools, allowing organizations to create powerful, interactive applications that
+    scale to enterprise workloads without ever leaving their data warehouse. Your
+    work will directly impact how enterprises worldwide interact with their data,
+    building the performant, secure backend systems that make complex analytics accessible
+    while maintaining Snowflake''s hallmarks of security, governance, and performance.
+    WHAT YOU''LL DO: We''re looking for Backend engineers who are excited about building
+    enterprise-grade infrastructure and services for Streamlit in Snowflake, empowering
+    organizations to unlock the full potential of their data through robust application
+    development capabilities within the Snowflake ecosystem. RESPONSIBILITIES: Build
+    industry-leading backend features and APIs that enterprise users and data teams
+    depend on within the Snowflake platform Design and implement scalable backend
+    services that seamlessly integrate with Snowflake''s native compute, storage,
+    and security infrastructure Lead projects that span backend architecture, data
+    processing pipelines, and cloud infrastructure within Snowflake''s distributed
+    system Promote strong collaboration within cross-functional teams of Design, Product,
+    Engineering, and Cloud Infrastructure Build for enterprise scale, performance,
+    and security to serve large organizations and their data workloads, handling high-throughput
+    and low-latency requirements Contribute to the technical architecture and product
+    vision for data application development in the cloud Ensure seamless integration
+    with Snowflake''s security model, governance features, multi-tenant architecture,
+    and data isolation requirements Design and optimize APIs for performance, reliability,
+    and developer experience Implement robust monitoring, observability, and error
+    handling for production systems YOU MIGHT THRIVE IN THIS ROLE IF YOU: 3+ years
+    of experience building backend systems for enterprise web applications or cloud-based
+    platforms Strong development skills in Python, Go, or Java, with deep experience
+    in cloud-native architectures Proficiency in designing and implementing RESTful
+    APIs, GraphQL, or gRPC services with focus on performance and scalability Deep
+    understanding of distributed systems, microservices architecture, and cloud infrastructure
+    patterns Experience with enterprise software requirements including security,
+    governance, multi-tenancy, data isolation, or platform engineering Strong system
+    design skills, including understanding of scalability patterns, caching strategies,
+    and performance optimization Knowledge of cloud platforms (AWS, Azure, GCP) and
+    hands-on experience with containerization (Docker, Kubernetes) and infrastructure-as-code
+    Experience with data processing, streaming systems, or working with large-scale
+    data platforms is highly desirable Hunger to build exceptional backend systems
+    that scale to enterprise requirements and handle mission-critical workloads Deep
+    passion for learning and proactively developing new skills, with ability to communicate
+    technical concepts clearly across engineering and business stakeholders Thrive
+    in dynamic environments with evolving priorities, bringing clarity and organization
+    to complex enterprise requirements Understanding of data workflows, analytics
+    tools, and data platform architectures is a plus Experience with security and
+    compliance requirements in enterprise software environments (SOC 2, GDPR, HIPAA)
+    is preferred Familiarity with frontend technologies (React, TypeScript) to collaborate
+    effectively with frontend teams is a bonus Snowflake is growing fast, and we’re
+    scaling our team to help enable and accelerate our growth. We are looking for
+    people who share our values, challenge ordinary thinking, and push the pace of
+    innovation while building a future for themselves and Snowflake. How do you want
+    to make your impact? For jobs located in the United States, please visit the job
+    posting on the Snowflake Ca'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.220920+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

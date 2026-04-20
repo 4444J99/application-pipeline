@@ -1,0 +1,115 @@
+id: mongodb-software-engineer-code-generation
+name: MongoDB Software Engineer, Code Generation
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7311666
+  portal: greenhouse
+  location: California; Colorado; Montana; Nevada; New Mexico; Oregon; Utah; Washington
+  location_class: unknown
+  description: <p>MongoDB is building a world-class team in North America to create
+    tooling that helps customers modernize their applications and migrate their data
+    from legacy relational databases to MongoDB in real-time. As companies modernise
+    legacy workloads and data ecosystems, they are increasingly drawn to the flexibility
+    and scalability of the document model. The tools developed by the Code Generation
+    and Data Migration team are critical in this journey, helping customers with schema
+    modeling, code generation, initial data loads, and continuous data synchronization.</p>
+    <p>We're looking for a Senior Engineer with a strong background in computer science
+    fundamentals, systems design, experience in the Java ecosystem, streaming systems,
+    and data-intensive applications to join our engineering team. In this role, you
+    will be instrumental in designing, building, and optimizing the underlying data
+    structures, algorithms, and database interactions that power our generative AI
+    platform, code generation and migration tools. This involves crafting sophisticated
+    orchestration layers, robust integration points, and high-performance data systems
+    that seamlessly connect and leverage advanced AI capabilities for code generation
+    and&nbsp; building a sophisticated data migration suite using a modern technology
+    stack, which includes Java, Spring Boot, Kafka, Debezium, and React.You will work
+    on critical components that ensure the scalability, efficiency, and reliability
+    of our services, collaborating closely with AI researchers, product management
+    and other engineers to design and implement cutting-edge products that solve complex
+    customer challenges.</p> <p>This role will be based out of North America in the
+    PST and MST zones only.</p> <h3>The ideal candidate for this role will have</h3>
+    <ul> <li>2+ years of&nbsp; engineering experience in backend systems, distributed
+    systems, or core platform development</li> <li>Experience in one or several of
+    Java, Rust, C/C++, and/or Python, with a strong understanding of systems-level
+    programming, memory management, and performance tuning</li> <li>Experience with
+    streaming data platforms such as Apache Kafka and Change Data Capture (CDC) tools
+    like Debezium</li> <li>Experience with relational data modeling and hands-on experience
+    with at least one SQL database (Postgres, MySQL, etc)</li> <li>Exposure to client-side
+    technologies such as JavaScript and React is a plus</li> <li>Good understanding
+    of algorithms, data structures and their time and space complexity</li> <li>Curiosity,
+    a positive attitude, and a drive to continue learning</li> <li>Excellent verbal
+    and written communication skills</li> </ul> <h3>Nice to Have</h3> <ul> <li>Familiarity
+    with cloud-native distributed systems (e.g., Kubernetes)</li> <li>Experience with
+    NoSQL databases and understanding of their trade-offs is great, but not required.
+    We'll teach you NoSQL</li> <li>Contributions to relevant open-source projects</li>
+    </ul> <h3>Position Expectations</h3> <ul> <li>Contribute high-quality, well-tested
+    backend code to the data migration engine and core components of our generative
+    AI orchestration platform</li> <li>Collaborate effectively with Product Management,
+    AI researchers and machine learning engineers and designers to build and deliver
+    on the product roadmap</li> <li>Work to develop robust and efficient backend services
+    that orchestrate AI functionalities</li> <li>Identify and address performance
+    bottlenecks and architectural challenges in our systems, particularly within data
+    flow and orchestration</li> <li>Participate actively in code reviews to enforce
+    best practices and patterns</li> <li>Help troubleshoot and resolve complex technical
+    issues in our distributed systems</li> <li>Give and solicit feedback on technical
+    design documents and pull requests</li> <li>Perform tasks related to process such
+    as CI/CD, quality, testing, etc&nbsp;</li> </ul> <h3>Success Measures</h3> <p>Within
+    the first three months, you will have:</p> <ul> <li>Familiarize yourself with
+    the MongoDB database and aggregation language</li> <li>Familiarize yourself with
+    the backend tech stack including Java, Spring Boot, and Kafka</li> <li>Set up
+    software development infrastructure (tech stack, build tools, etc) to enable development
+    using the relevant tech stacks</li> <li>Started collaborating with your peers
+    and contributed to code reviews</li> </ul> <p>Within six months, you will have:</p>
+    <ul> <li>Familiarised yourself with the rest of our the application modernization
+    tool stack</li> <li>Delivered at least one large scale feature that spans the
+    entire tech stack</li> <li>Reviewed and contributed to scope and technical design
+    documents</li> </ul> <p>Within 12 months, you will have:</p> <ul> <li>Become a
+    key contributor to our backend stack, capable of taking on complex features independently</li>
+    <li>Helped recruit and interview new members of the team</li> <li>Collaborated
+    effectively with other teams at MongoDB on cross-functional projects</li> </u
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.902394+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

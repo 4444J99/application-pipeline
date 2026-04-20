@@ -1,0 +1,115 @@
+id: anduril-senior-software-engineer-mission-simulation
+name: Anduril Senior Software Engineer, Mission Simulation
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/4871675007?gh_jid=4871675007
+  portal: greenhouse
+  location: Seattle, Washington, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p>We are seeking a mid-level&nbsp;<strong>Modeling,
+    Simulation, and Analysis Engineer</strong>&nbsp;to join our team.</p> <p><strong>ABOUT
+    THE TEAM</strong></p> <p>In this role, you will:</p> <ul> <li>Develop cutting-edge
+    simulation tools that model battlefield vehicles to assess performance and integration
+    in complex mission scenarios.</li> <li>Create interactive tools that facilitate
+    human interaction with these simulations.</li> </ul> <p>The ideal candidate has
+    experience working on aerospace systems and understands the right fidelity of
+    system level modeling required to model large scale, many-on-many missions. The
+    role requires the individual to be proficient in vehicle/sub-system modeling and
+    well-versed in coding practices and software integration practices. If you have
+    a passion for flight and like the idea of building a physics based digital representation
+    of air vehicles and payloads, this is the role for you!</p> <p><strong>WHAT YOU''LL
+    DO</strong></p> <ul> <li>Work on challenging problems in a fast-paced environment
+    across our portfolio of programs and products.</li> <li>Develop our Modeling,
+    Simulation, and Analysis (MS&amp;A) framework to support mission-level concept
+    exploration, tactics development, autonomous behaviors, and Software-in-the-Loop
+    (SITL) product development.</li> <li>Develop simulation models for sensors, comms,
+    movement, tactical behaviors, weapon effects, electronic effects, command and
+    control, and others.</li> <li>Partner with Operations Analysis team members to
+    deliver simulations capabilities that enable efficient Monte Carlo and Design
+    of Experiments analysis.</li> <li>Partner with capability teams like Mission Autonomy
+    to deliver simulation capabilities to help accelerate development.</li> <li>Work
+    with multi-disciplinary subject matter experts to understand and adequately model
+    pertinent sub-system, system and system of system dynamics.</li> </ul> <p><strong>REQUIRED
+    QUALIFICATIONS</strong></p> <ul> <li><strong>Senior Modeling Simulation Engineer</strong>:
+    8 or more years of experience in Modeling, Simulation, and Analysis engineering
+    or related technical experience</li> <li><strong>Modeling Simulation Engineer</strong>:
+    3 or more years of experience in Modeling, Simulation, and Analysis engineering
+    or related technical experience</li> <li>Proficient with C++</li> <li>Working
+    experience with Python</li> <li>Experience with aerospace/aeronautical systems
+    (including fixed wing, rockets, satellites, rotorcraft, etc.) and/or subsea vehicles.</li>
+    <li>Experience in flight dynamics/platform physics and control</li> <li>Experience
+    with high performance and multi-threaded programming</li> <li>Demonstrated curiosity
+    and ability to learn outside of core discipline</li> <li>U.S. Person status is
+    required as this position needs to access export-controlled data.</li> </ul> <p><strong>PREFERRED
+    QUALIFICATIONS</strong></p> <ul> <li>Advanced proficiency with C++</li> <li>Experience
+    with Python</li> <li>Experience with developing sub-system and system level models
+    (air vehicles, ground vehicles, ground-based sensors and other types of complex
+    systems)</li> <li>Experience working with/developing multi-system mission level
+    simulations in one or more domains (subsurface, surface, ground, air, and space)</li>
+    <li>Experience in military simulation fields delivering configurable scenario-based
+    environments for operations analysis and wargaming (e.g., AFSIM, NGTS, etc.)</li>
+    <li>Startup experience</li> </ul> <p>&nbsp;</p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="title">US Salary Range</div><div class="pay-range"><span>$191,000</span><span
+    class="divider">&mdash;</span><span>$253,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work experience, education and/or training, critical skills, and/or business considerations.
+    Highly competitive equity grants are included in the majority of full time offers;
+    and are considered part of Anduril''s total compensation package. Additionally,
+    Anduril offe'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.995476+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,107 @@
+id: gusto-staff-software-engineer-payments-risk
+name: Gusto Staff Software Engineer, Payments / Risk
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Gusto
+  url: https://boards.greenhouse.io/gusto
+  application_url: https://job-boards.greenhouse.io/gusto/jobs/7822587
+  portal: greenhouse
+  location: San Francisco, CA - Hybrid; New York, NY - Hybrid
+  location_class: us-onsite
+  description: '<div class="content-intro"><p style="line-height: 1.2;">&nbsp;</p>
+    <hr> <p><strong>About Gusto</strong></p> <p>At Gusto, we''re on a mission to grow
+    the small business economy. We handle the hard stuff — payroll, health insurance,
+    401(k)s, and HR — so owners can focus on their craft and their customers. With
+    teams in Denver, San Francisco, and New York, we support more than 400,000 small
+    businesses nationwide and are building a workplace that reflects the people we
+    serve.</p> <p>&nbsp;<br>All full-time employees receive competitive base pay,
+    benefits, and equity (RSUs) — because everyone who helps build Gusto should share
+    in its success. Offer amounts are determined by role, level, and location. Learn
+    more about our<a href="https://gusto.com/about/careers/total-rewards" target="_blank">
+    <u>Total Rewards philosophy</u></a>.</p> <p>&nbsp;<br>AI is a fundamental part
+    of how work gets done at Gusto. We expect all team members to actively engage
+    with AI tools relevant to their role and grow their fluency as the technology
+    evolves. AI experience requirements vary by role and will be assessed during the
+    interview process.</p></div><p><strong>About the Role:</strong></p> <p>We''re
+    looking for seasoned full-stack software engineers to join the teams behind Gusto''s
+    payments and risk platforms to serve small business owners every day.</p> <p>As
+    a Staff Software Engineer, you''ll operate across the full lifecycle of either
+    the payments or risk system: shaping architecture early in the design process,
+    building self-service internal features and APIs, and owning their performance
+    long after launch. That means engineering the core business engine, enabling product
+    teams with reliable backend services, and setting the engineering standard for
+    those around you.</p> <p>If you''re drawn to enabling world-class money movement
+    or financial risk system with impact — helping power the livelihoods of millions
+    using Gusto products — join us!</p> <p><strong>About the Teams:</strong></p> <p
+    class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Payments
+    – The Payments team owns all money movement operations across Gusto''s suite of
+    products </strong>— enabling funds to move safely between partners, employers,
+    employees, and government authorities. As a Payments Engineer, you''ll build new
+    payments capabilities across US and international markets, and help rearchitect
+    our payments platform to scale for the future.</p> <p class="font-claude-response-body
+    break-words whitespace-normal leading-[1.7]"><strong>Risk –&nbsp;The Risk team
+    builds best-in-class experiences that protect Gusto and our customers from financial
+    and reputational harm</strong>. As a Risk Engineer, you''ll develop infrastructure
+    for two core areas: bad actor prevention — stopping fraudsters from abusing Gusto''s
+    platform while reducing false positives — and credit underwriting and collections,
+    enabling faster, broader access to credit while minimizing financial loss.</p>
+    <p><strong>Here’s what you’ll do day-to-day:</strong></p> <ul> <li><strong>Design,
+    build, and test</strong> Gusto core money movement or risk platform services –
+    payment rails, ledgering, wallets, fraud, decisioning engine, KYC, AML, and compliance
+    capabilities, among others</li> <li>Mentor other engineers to help solve some
+    of the hardest technical problems out there in very complex domains and at a large
+    scale</li> <li>Help scale one of the largest Ruby/Rails and Javascript/React applications
+    in the world</li> <li>Collaborate with our Product Engineering, Product Management,
+    Data, Design, and financial operations teams to understand customer pain points,
+    come up with solutions, and then <strong>prototype, iterate, and launch&nbsp;</strong></li>
+    <li>Build platforms that engineering teams rely on, and trust to deliver products
+    that our&nbsp;<strong>customers genuinely love</strong></li> </ul> <p><strong>Here’s
+    what we''re looking for:</strong></p> <ul> <li>Successful applicants typically
+    have 8+ years of software development experience</li> <li>Passion for creating&nbsp;<strong>scalable,
+    efficient money movement platforms</strong>&nbsp;for users</li> <li>Experience
+    leveraging AI tools or systems to accelerate development, improve testing, and
+    deliver new platform capabilities</li> <li><strong>Curiosity and experimentation
+    with emerging AI frameworks</strong>, applying and sharing best practices to evaluate
+    and scale AI use safely across teams</li> <li>Experience owning multi-quarter
+    projects that solve complex engineering problems and make measurable user impact
+    at scale</li> <li>Experience with large scale refactors, performance and reliability
+    issues, and a strong sense of ownership over all aspects of your platform area</li>
+    <li>Ability to mentor engineers to maximize their performance and impact</li>
+    </ul> <p><strong>Others:</strong></p> <ul> <li>Experience in, or interest working
+    in, Ruby on Rails&nbsp;</li> <li>Appreciation for a collaborative, test-driven
+    environment</li> '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-16'
+  date_source: first_published
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.464863+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

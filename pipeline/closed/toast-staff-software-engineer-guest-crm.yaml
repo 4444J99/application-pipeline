@@ -1,0 +1,113 @@
+id: toast-staff-software-engineer-guest-crm
+name: Toast Staff Software Engineer, Guest CRM
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7451993
+  portal: greenhouse
+  location: Dublin
+  location_class: international
+  description: '<p>Toast is driven by building the restaurant platform that helps
+    restaurants adapt, take control, and get back to what they do best: building the
+    businesses they love. Because our technology is purpose-built for restaurants,
+    by restaurant people - and increasingly shaped by AI in both what we build and
+    how we build - restaurants can trust that we’ll deliver on their needs for today
+    while investing in the experiences that will power their restaurant of the future.</p>
+    <p>&nbsp;</p> <p><strong>Are you bready* for a change?</strong></p> <p>We’re seeking
+    a Staff Software Engineer to work within our team focused on building Marketing
+    &amp; CRM systems that empower restaurants to drive engagement, retention and
+    growth. <strong>You’ll join a high-impact, high-ownership flex engineering team
+    focused on rapid experimentation across the Guest Engagement ecosystem. </strong>You’ll
+    help build, test and iterate on new products and experiences, using customer outcomes
+    to guide decision-making and ensure we deliver meaningful value with speed and
+    quality.</p> <p>&nbsp;</p> <p><strong>About this&nbsp;</strong><strong><em>roll</em></strong><strong>*
+    (Responsibilities)&nbsp;</strong></p> <ul> <li>Collaborate closely with product
+    &amp; design to rapidly experiment, validate hypotheses and iterate toward net-new
+    products and experiences that drive meaningful engagement.</li> <li>Design, build
+    and deploy highly resilient and scalable systems that are critical to our restaurants’
+    success.</li> <li>Implement and advocate for high observability standards to measure
+    product reliability, uncover customer value unlocks and inform data-driven iteration.</li>
+    <li>Collaborate with team members and engineers across the company to deliver
+    cohesive, high-quality solutions.</li> <li>Champion engineering best practices,
+    raising the bar for code quality, architecture and operational excellence for
+    both your team and the broader organization.</li> <li>Leverage cutting-edge AI
+    tools to accelerate development workflows and help pioneer new approaches to building
+    software.</li> </ul> <p>&nbsp;</p> <p><strong>Do you have the right&nbsp;</strong><strong><em>ingredients*</em></strong><strong>?
+    (Requirements)</strong></p> <ul> <li>Driven by impact and solving for the customer</li>
+    <li>Strong experience with Kotlin, Java or another object-oriented language</li>
+    <li>Proven track record of delivering reliable services within a distributed architecture
+    to production.</li> <li>Ability to break down complex problems and communicate
+    solutions clearly throughout cross-functional teams.</li> <li>Values personal
+    and team growth, balancing task completion with platform stability.</li> </ul>
+    <p>&nbsp;<strong>What we use to make our dish: (Our Tech Stack)</strong></p> <ul>
+    <li>A core of <strong>Java &amp; Kotlin</strong> based backend services.</li>
+    <li><strong>React</strong> SPAs leveraging Tailwind, GraphQL and Storybook.</li>
+    <li><strong>Android</strong> app built in Java &amp; Kotlin running in the restaurant.</li>
+    <li><strong>PostgreSQL</strong> and <strong>Dynamodb </strong>for persistence.</li>
+    <li>Pulsar, Camel and RabbitMQ for message-based integrations.</li> <li>And many
+    more technologies that help us build a top class platform.</li> </ul> <p><br>#LI-HYBRID<br>#BI-Hybrid</p>
+    <p data-pm-slice="1 1 []"><strong>AI at Toast</strong></p> <p>At Toast, one of
+    our company values is that we''re hungry to build and learn. We believe learning
+    new AI tools empowers us to build for our customers faster, more independently,
+    and with higher quality. We provide these tools across all disciplines, from Engineering
+    and Product to Sales and Support, and are inspired by how our Toasters are already
+    driving real value with them. The people who thrive here are those who embrace
+    changes that let us build more for our customers; it’s a core part of our culture.</p>
+    <p data-pm-slice="1 1 []"><strong>Our Total Rewards Philosophy&nbsp;<br></strong>We
+    strive to provide competitive compensation and benefits programs that help to
+    attract, retain, and motivate the best and brightest people in our industry. Our
+    total rewards package goes beyond great earnings potential and provides the means
+    to a healthy lifestyle with the flexibility to meet Toasters’ changing needs.
+    Learn more about our benefits at&nbsp;<a class="c-link" href="https://careers.toasttab.com/toast-benefits"
+    target="_blank" data-stringify-link="https://careers.toasttab.com/toast-benefits"
+    data-sk="tooltip_parent" data-remove-tab-index="true">https://careers.toasttab.com/toast-benefits</a>.</p><div
+    class="content-conclusion"><p><strong>How Toast Uses AI in its Hiring Process</strong></p>
+    <p>Throughout the hiring process, our goal is to get to know you. We use AI tools
+    to support our recruiters and interviewers with tasks like note-taking, summarization,
+    and documentation of interviews to ensure they can be fully focused on your conversation.
+    All hiring decisions are made by people.</p> <p><strong><strong data-stringify-t'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.426961+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

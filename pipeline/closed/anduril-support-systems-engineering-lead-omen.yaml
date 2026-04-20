@@ -1,0 +1,115 @@
+id: anduril-support-systems-engineering-lead-omen
+name: Anduril Support Systems Engineering Lead, Omen
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5055754007?gh_jid=5055754007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h2>Job Description</h2> <p>Anduril
+    is seeking a Support Systems Engineering Lead to join the Omen team at our Costa
+    Mesa HQ. Omen is Anduril’s hover-to-cruise autonomous air vehicle (AAV) that packs
+    the endurance, payload, and mission flexibility of much larger airplanes into
+    a novel runway-independent Group 3 platform. Omen can operate from ship decks,
+    beaches, or remote island clearings, providing true runway independence and freedom
+    of maneuver across defense and civilian domains. Omen is the first tail-sitter
+    aircraft with a mass-production contract, with an order of 50 systems representing
+    a decisive investment that anchors production and accelerates the development
+    of future systems.<br><br>You will work on new aircraft development, bringing
+    pragmatic Support Systems thinking to complement and enhance the overall capability,
+    ensuring that end-user needs are met in challenging operational environments.
+    You will be part of a lean, high-ownership culture where you directly shape the
+    product and operate at a velocity to fly new designs within months, not years.<br><br><strong>WHAT
+    YOU’LL DO</strong></p> <ul> <li>Architect, plan, and lead the design and development
+    of a broad Support System (including deployment, supply, operations and maintenance;
+    and everything in between)</li> <li>Hire, develop, and grow a hands-on Engineering
+    team focused on practical Support System solutions</li> <li>Collaborate with customer
+    stakeholders on a comprehensive concept of employment to ensure operational needs
+    are understood</li> <li>Own ‘Day In The Life Of’ decomposition activities to influence
+    functional decomposition shaping the design of the Air Vehicle and Mission Systems</li>
+    <li>Design, fabricate and test, Air Vehicle and Mission System transport and handling
+    equipment to enable rapid deployment in a range of challenging operational environments</li>
+    <li>Identify appropriate standards and associated interfaces for supply systems
+    (such as fueling and charging) as inputs to design</li> <li>Leverage emerging
+    technologies to develop maintenance systems, operational processes, and training
+    approaches that set new standards for what good looks like</li> <li>Collaborate
+    with peers across the Division to drive a consistent approach and ‘look and feel’
+    of a Common Support System across the Product ecosystem enhancing customer experience
+    and familiarity</li> <li>Develop and own the Omen Project Reliability and Maintainability
+    Plan (RMP)</li> </ul> <p><br><strong>REQUIRED QUALIFICATIONS AND ATTRIBUTES </strong></p>
+    <ul> <li>Bachelor degree or higher in Mechanical or Aerospace Engineering or aviation
+    related technical discipline</li> <li>10+ years of experience in Aviation, Aerospace
+    or product development/design environments including technology maturation</li>
+    <li>Familiarity in applying Systems Engineering, and first-hand understanding
+    of benefits and limitations of the approach</li> <li>Experience working in operational
+    environments performing logistics, maintenance, or training roles including familiarity
+    with supporting fielded systems in the control of customers.</li> <li>Be focused
+    on both design and operation for maximum safety</li> <li>Strong bias for action
+    and extremely high ownership in fast paced environment</li> <li>Ability to break
+    complex problems into achievable challenges for consumption by the team</li> <li>Experience
+    with high voltage systems/batteries and/or hybrid powertrains</li> <li>Trade or
+    Mechanic qualifications considered advantageous</li> <li>Defense Industry or Military
+    Service background highly desirable</li> <li>A sincere commitment to a positive,
+    inclusive, and collaborative culture</li> <li>Eligible to obtain and maintain
+    a security clearance in United States, United Kingdom, or Australia</li> </ul><div
+    class="content-pay-transparency"><div class="pay-input"><div class="title">US
+    Salary Range</div><div class="pay-range"><span>$191,000</span><span class="divider">&mdash;</span><span>$253,000
+    USD</span></div></div></div><div class="content-conclusion"><p><span data-contrast="auto">The
+    salary range for this role is an estimate based on a wide range of compensation
+    factors, inclusive of base salary only. Actual salary offer may vary based on
+    (but '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:34.158321+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

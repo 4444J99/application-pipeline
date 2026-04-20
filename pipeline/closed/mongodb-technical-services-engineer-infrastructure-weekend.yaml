@@ -1,0 +1,115 @@
+id: mongodb-technical-services-engineer-infrastructure-weekend
+name: MongoDB Technical Services Engineer, Infrastructure - Weekend
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7460019
+  portal: greenhouse
+  location: Palo Alto
+  location_class: us-onsite
+  description: <h3>About the team</h3> <p>MongoDB Technical Services Engineers use
+    their outstanding problem solving and customer service skills, along with their
+    deep technical experience, to advise customers and to solve their complex MongoDB
+    problems. Technical Service Engineers are specialists in the entire MongoDB ecosystem
+    - database server, drivers, our management suite, as well as services such as<a
+    href="https://cloud.mongodb.com/"> Atlas</a>, Cloud Manager, Compass to name a
+    few. Our engineers combine their MongoDB expertise with passion, initiative, teamwork,
+    and a great sense of humor to achieve exceptional results for our customers. We’re
+    looking for individuals who want to dig into the details of how “big data” and
+    “web-scale” systems are successfully assembled and operated every day by organizations
+    of every size and flavor.</p> <h3>Shift Information:</h3> <ul> <li>We are looking
+    to speak to candidates who are interested in working out of our Palo Alto, CA
+    office under our in-office working model Monday to Friday for the first 3-6 months
+    depending on ramping speed.&nbsp;</li> <li>Once considered ramped, they will transition
+    to a permanent Wednesday - Sunday 8am-5pm work week (with 3 in-office days) to
+    provide weekend coverage alongside other peers. Saturdays and Sundays are considered
+    fully online workdays and not an on-call shift.</li> <li>Due to the 24/7 nature
+    of our support organization, certain events throughout the year will require volunteering
+    for coverage outside one’s normal work days or work hours (i.e. regional offsites,
+    regional holidays, etc). These are typically announced weeks in advance with a
+    sign-up system that considers equitability.</li> </ul> <h3>Why MongoDB is a fantastic
+    place to work and build your career</h3> <ul> <li>Be a part of the company that’s
+    reinventing the database, passionate about innovation and speed</li> <li>Enjoy
+    a fun, inspiring culture that is engineering focused</li> <li>Work with exceptionally
+    talented people around the globe</li> <li>Learn, contribute, and make an impact
+    on the product and community</li> </ul> <h3>Cool things you’ll do</h3> <ul> <li>In
+    this cross‑functional role as a Technical Services Engineer, you will work with
+    the largest and most demanding customers to drive successful implementations of
+    MongoDB Server, MongoDB Search, and managed backups on Kubernetes platforms</li>
+    <li>Enhance your technical troubleshooting expertise and experience as a TSE (Technical
+    Services Engineer) by working on customer use cases, evaluating solutions, customer
+    business pain points, application architectures, and Cloud infrastructure configurations</li>
+    <li>Collaborate with enterprise customers to design, implement, and troubleshoot
+    backup strategies for massive production environments—scaling to petabytes of
+    data—while ensuring high availability, disaster recovery readiness, and compliance
+    with retention requirements</li> <li>Opportunity to shape the roadmap of products,
+    tooling, and the core database by providing product feedback</li> </ul> <h3>What
+    You Need/What we are looking for</h3> <ul> <li>Patience, empathy, and a genuine
+    desire to help others</li> <li>Excellent communication skills, both written and
+    verbal, with internal and external stakeholders</li> <li>The ability to think
+    on your feet, remain calm under pressure, and find solutions to challenges in
+    real-time</li> <li>Strong diagnostic/troubleshooting aptitude, with significant
+    experience troubleshooting end-to-end technical issues in production environments</li>
+    <li>Full understanding of Linux systems and networking concepts, including firewalls,
+    load balancers, performance tuning, storage management</li> <li>1+ years of experience
+    in a Support role working directly with customers.</li> <li>2+ years of experience
+    with administering RDBMSs such as Oracle, Postgres, mySQL etc. MongoDB experience
+    is preferred.</li> <li>3+ years or more of combined experience in the following
+    technical domains (ideally with some experience in the rest) <ul> <li>Experience
+    operating in and managing Kubernetes clusters.</li> <li>Experience with DevOps
+    practices and Infrastructure-as-code.</li> <li>Experience with Disaster Recovery
+    situations (Backup management, Snapshot Restores, Return-to-service operations)</li>
+    </ul> </li> <li>5+ years of mixed experience with Cloud (AWS, GCP, Azure) and
+    on-prem infrastructure administration in a production environment.</li> </ul>
+    <h3>Bonus Points</h3> <ul> <li>Experience with AI topics, development, and supporting
+    technologies such as Vector Search</li> <li>Experience managing large-scale databases
+    (RDBMS or NoSQL or both) and monitoring them via products like Prometheus or Grafana</li>
+    <li>Experience with specific MongoDB products like Ops Manager, Cloud Manager,
+    Atlas, Kubernetes Operator/Controller</li> <li>Experience coding in one or more
+    of Python, Java, Go, Ruby, C, C++</li> <li>Experience with personal test labs
+    and reproducing issues locally to drive resolution of issues</li> <li>E
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.360564+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

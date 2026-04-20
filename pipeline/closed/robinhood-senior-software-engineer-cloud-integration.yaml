@@ -1,0 +1,113 @@
+id: robinhood-senior-software-engineer-cloud-integration
+name: Robinhood Senior Software Engineer, Cloud Integration
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7648454?t=gh_src=&gh_jid=7648454
+  portal: greenhouse
+  location: Ljubljana, Slovenia
+  location_class: unknown
+  description: '<div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><h2><strong>About the Team + Role:&nbsp;</strong></h2>
+    <p>Bitstamp made history in 2011 as the world’s first regulated crypto exchange.
+    Today, we are entering an ambitious new chapter as part of the <strong>Robinhood</strong>
+    family. The <strong>Cloud Engineering Team</strong> is at the heart of this transformation,
+    owning the AWS foothold that enables our global expansion and ensures the world’s
+    longest-running exchange remains unshakeable.</p> <p>We are currently bridging
+    the gap between our legacy monolith architecture and a modern, high-velocity ecosystem.
+    This team doesn''t just "run" the platform; we are the architects of its modernization,
+    moving toward <strong>full containerization</strong> and <strong>fully automated
+    operational responsibilities</strong> to deliver at "Robinhood speed."</p> <p>As
+    a <strong>Senior Backend Engineer</strong> integrated into the Cloud Engineering
+    team, you will be a key driver of our modernization strategy. You aren''t just
+    writing features; you are rewriting the rules of how our core platform operates.
+    You will take ownership of the code changes necessary to decompose our monolith
+    into a containerized, scalable environment while ensuring seamless integration
+    with <strong>Robinhood’s global systems</strong>.</p> <p><strong>The role is located
+    in the office location(s) listed on this job description which will align with
+    our in-office working environment. Please connect with your recruiter for more
+    information regarding our in-office philosophy and expectations.</strong></p>
+    <p>Applications for this role will be accepted through March 30th, 2026.</p> <p>Requires
+    participation in an on-call rotation to support business needs.</p> <h3><strong>What
+    You’ll Do:</strong></h3> <ul> <li><strong>Containerize the Core:</strong> Lead
+    the effort to containerize our monolith application, making the critical code
+    adjustments required to modernize our deployment and scaling workflows.</li> <li><strong>Robinhood
+    Ecosystem Integration:</strong> Manage and execute high-priority integration projects
+    that align Bitstamp’s backend with Robinhood’s global infrastructure.</li> <li><strong>Evolve
+    the Stack:</strong> Identify and implement backend improvements that enhance platform
+    performance and reduce operational toil through <strong>intelligent automation</strong>
+    (with and without AI).</li> <li><strong>End-to-End Ownership:</strong> Take full
+    responsibility for complex projects from design to deployment, working independently
+    with limited supervision and making meaningful decisions to improve system effectiveness.</li>
+    <li><strong>Cross-Functional Influence:</strong> Collaborate with teams across
+    the organization to interpret complex technical requirements and influence processes
+    that enhance our overall engineering velocity.</li> <li><strong>Maintain Platform
+    Integrity:</strong> Participate in the <strong>on-call rotation</strong>, applying
+    your deep knowledge of the system to solve difficult problems and ensure 24/7
+    reliability.</li> </ul> <h3><strong>What You Bring:</strong></h3> <ul> <li><strong>Applied
+    Expertise:</strong> 4–5+ years of relevant experience in backend engineering,
+    with a strong background in <strong>containerization</strong> (Docker, Kubernetes)
+    and modernizing legacy architectures.</li> <li><strong>Technical Depth:</strong>
+    Advanced knowledge of backend disciplines and practical experience with <strong>AWS
+    services</strong> (ECS, EC2, Aurora, DynamoDB).</li> <li><strong>Proven Autonomy:</strong>
+    An experienced contributor who has managed entire projects or processes, coordinating
+    across different job areas to solve difficult, multi-faceted problems.</li> <li><strong>Operational
+    Pragmatism:</strong> Someone who thrives on the challenge of taking a stable system
+    and "paving the road" toward automation while balancing necessary day-to-day operational
+    tasks.</li> <li><strong>Collaboration &amp; Influence:</strong> Strong communication
+    skills to guide and coach other employees, and the ability to influence stakeholders
+    outside of your immediate department to reach technical agreements.</li> <li><strong>Project
+    Mastery:</strong> Practical knowledge of project management and the ability to
+    manage complex administrative and technical logistics within a fast-moving organization.</li>
+    </ul><div class="content-conclusion"><p>Click <a href="https://careers.robinhood.com/benefits"
+    target="_blank">here</a> to learn more about our Total Rewards, which vary by
+    region '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.130341+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

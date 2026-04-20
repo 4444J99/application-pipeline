@@ -1,0 +1,116 @@
+id: anduril-data-engineer-infrastructure-finops
+name: Anduril Data Engineer, Infrastructure FinOps
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5090905007?gh_jid=5090905007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p class="p2"><strong>ABOUT THE
+    TEAM</strong><br><br>Anduril’s Infrastructure Engineering organization provides
+    the digital foundations for all aspects of our business. We are<br>evolving into
+    a more data-driven approach for designing, building, and managing the critical
+    infrastructure that ingests, transforms, and serves massive datasets to power
+    analytics, machine learning, and intelligent applications.<br><br><strong>ABOUT
+    THE JOB</strong><br><br>We are seeking a highly skilled Data Engineer with a strong
+    software engineering foundation to help build and scale our next-generation data
+    platform. This is a high-impact role where you will have the autonomy to architect
+    robust systems that unlock critical business insights from complex, large-scale
+    data<br><br><strong>WHAT YOU’LL DO</strong><br><br><strong>Design and Build Scalable
+    Data Pipelines:</strong> Architect, develop, and maintain robust and efficient
+    ETL/ELT pipelines to<br>process petabyte-scale data from a wide variety of sources
+    using platforms like Google BigQuery , Databricks, and<br>Palantir Foundry .<br><strong>Apply
+    Software Engineering Principles:</strong> Treat data infrastructure as a software
+    product. Develop reusable<br>frameworks, libraries, and tools to accelerate data
+    pipeline development and ensure reliability , using best practices like<br>version
+    control, code reviews, and CI/CD.<br><strong>Architect and Model Data:</strong>
+    Design and implement well-structured, performant data models and schemas in our
+    data<br>warehouse and data lakehouse environments, optimized for both analytical
+    querying and application use.<br><strong>Ensure Data Quality and Reliability:
+    </strong>Implement comprehensive data quality checks, monitoring, and alerting
+    to<br>proactively identify and resolve data issues. Troubleshoot and optimize
+    performance bottlenecks in data processing and<br>storage layers.<br><strong>Be
+    a Force Multiplier:</strong> Collaborate closely with data scientists, analysts,
+    software engineers, and business stakeholders<br><br><strong>REQUIRED QUALIFICATIONS</strong><br><br></p>
+    <ul> <li>5+ years of experience in a data engineering or a similar software engineering
+    role, ideally building data products in a fast-paced environment.</li> <li>Strong
+    programming proficiency in Python.</li> <li>Hands-on expertise with at least one
+    major cloud data platform such as Google BigQuery, Databricks, or an enterprise
+    data system like Palantir Foundry.</li> <li>Expert-level SQL and query optimization
+    skills on large-scale datasets.</li> <li>Solid understanding of data modeling
+    concepts, ETL/ELT design patterns, and data warehousing/lakehouse principles.</li>
+    <li>Experience with a major cloud environment (GCP, AWS, Azure), including its
+    security ecosystem and containerization technologies (Docker, Kubernetes).</li>
+    <li>Must be eligible to obtain and maintain a US Top Secret security clearance.</li>
+    </ul> <p class="p2"><strong>PREFERRED QUALIFICATIONS</strong></p> <ul> <li>Hands-on
+    experience with data orchestration and transformation tools like Spark, PySpark,
+    and dbt.</li> <li>Experience with Infrastructure as Code (e.g., Terraform, CloudFormation)
+    for managing data resources.</li> <li>Knowledge of real-time data streaming technologies
+    (e.g., Kafka, Flink, Pub/Sub).</li> <li>Experience implementing CI/CD pipelines
+    for data applications (e.g., GitHub Actions, Jenkins).</li> <li>Experience with
+    or a strong interest in learning how to develop data services and data products
+    using modern software architecture and API design principles.</li> <li>Familiarity
+    with data visualization tools, such as Tableau</li> </ul><div class="content-pay-transparency"><div
+    class="pay-input"><div class="title">US Salary Range</div><div class="pay-range"><span>$146,000</span><span
+    class="divider">&mdash;</span><span>$194,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work experience, education and/or training, critical skills, and/or business considerations.
+    Highly competitive equity grants are inclu'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.1
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-03'
+  posting_date: '2026-04-02'
+  date_source: first_published
+  date_added: '2026-04-03'
+  discovered: '2026-04-03T10:15:35.561359+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

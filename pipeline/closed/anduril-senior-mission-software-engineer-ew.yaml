@@ -1,0 +1,109 @@
+id: anduril-senior-mission-software-engineer-ew
+name: Anduril Senior Mission Software Engineer, EW
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5034439007?gh_jid=5034439007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p><strong>ABOUT THE TEAM</strong><br>Anduril’s
+    Electronic Warfare (EW) team is seeking an experienced embedded software engineer
+    to support next-generation electronic warfare platforms in production. As a Production
+    Embedded software engineer, you’ll develop and maintain EW product software specific
+    to a production environment, collaborate with manufacturing and test automation
+    engineers to improve testability, and collaborate with the wider embedded software
+    organization to ensure a seamless new product introduction.<br><br><strong>WHAT
+    YOU'LL DO</strong></p> <ul> <li>Contribute to design reviews acting as an expert
+    in Built In Test, design for test, and fault isolation and detection.</li> <li>Define
+    Built In Test strategy and requirements for automated testing, supporting fault
+    detection, isolation, and reporting.</li> <li>Develop and maintain production
+    SW builds that enable testing and troubleshooting at board-level and unit-level
+    RF test stations.</li> <li>Develop and regression test high-reliability software
+    for controlling our electronic warfare assets, seamlessly integrated with production
+    test automation.</li> <li>Utilize infrastructure providing deterministic builds
+    and configuration management for production deployment, guaranteeing software
+    traceability and minimizing the maintenance burden of manufacturing.</li> </ul>
+    <p><strong>REQUIRED QUALIFICATIONS</strong></p> <ul> <li>7+ years professional
+    experience in software engineering</li> <li>Experience (professional or in the
+    setting of an open source community) working with typed functional programming
+    languages (Haskell or Rust)</li> <li>Experience with Built In Test development</li>
+    <li>Eligible to obtain and maintain an active U.S. Secret security clearance</li>
+    </ul> <p><strong>PREFERRED QUALIFICATIONS</strong></p> <ul> <li>Experience with
+    software-defined digital radio systems</li> <li>Experience with MATLAB, especially
+    C code generation.</li> <li>Experience with FPGA development (Verilog, VHDL, etc.),
+    especially Xilinx devices and tools.</li> <li>Experience with graphics programming
+    (OpenGL, DirectX, Vulkan, etc.)</li> <li>Experience with Nix/NixOS</li> <li>Experience
+    with Linux boot stages</li> <li>Basic understanding of RF test equipment, such
+    as signal generators, spectrum analyzers&nbsp;</li> </ul><div class="content-pay-transparency"><div
+    class="pay-input"><div class="title">US Salary Range</div><div class="pay-range"><span>$191,000</span><span
+    class="divider">&mdash;</span><span>$253,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work experience, education and/or training, critical skills, and/or business considerations.
+    Highly competitive equity grants are included in the majority of full time offers;
+    and are considered part of Anduril's total compensation package. Additionally,
+    Anduril offers top-tier benefits for full-time employees, including:</span><span
+    data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></p>
+    <p><strong><span data-contrast="auto">Healthcare Benefits&nbsp;</span></strong></p>
+    <ul> <li><strong><span data-contrast="none">US Roles:</span></strong><span data-contrast="none">&nbsp;Comprehensive
+    medical, dental, and vision plans at little to no cost to you.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    <li><strong><span data-contrast="none">UK &amp; AUS Roles:</span></strong><span
+    data-contrast="none">&nbsp;We cover full cost of medical insurance premiums for
+    you and your dependents.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    <li><strong><span data-contrast="auto">IE Roles:</span></strong> <span data-c
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.904522+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

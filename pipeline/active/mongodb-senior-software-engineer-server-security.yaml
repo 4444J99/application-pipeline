@@ -1,0 +1,104 @@
+id: mongodb-senior-software-engineer-server-security
+name: MongoDB Senior Software Engineer, Server Security
+track: job
+status: qualified
+outcome: null
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7815677
+  portal: greenhouse
+  location: New York City
+  location_class: us-onsite
+  description: '<p>We are hiring a Senior Software Engineer to join our Server Security
+    team. The Server Security team is a development-focused group within MongoDB''s
+    core engineering organization. Operating "close to the bottom of the stack," the
+    team builds features that enable database users to secure their data globally.
+    You will work on critical components including:</p> <ul> <li>Cryptography: <a
+    href="https://www.mongodb.com/docs/manual/core/queryable-encryption/">Queryable
+    Encryption</a>, at-rest data encryption, and fundamental cryptographic principles.</li>
+    <li>Identity &amp; Access: Authentication and authorization systems, TLS, and
+    X.509 certificate management</li> <li>Network Security: High-performance, low-latency
+    networking protocols (PKI, Hashing, CRLs)</li> <li>System Integrity: Resilience,
+    observability, and compliance assurance within a large-scale distributed database</li>
+    </ul> <p>Our team champions a strong culture of inclusivity, diversity, and collaboration.
+    If you want to work on a collaborative team that applies distributed systems fundamentals
+    to deliver core features of a popular database, join us! Let’s change what’s possible
+    for application developers, system architects, and database operators.</p> <h3>The
+    role</h3> <p>As a Senior Engineer, you will apply distributed systems fundamentals
+    to deliver core security features. You will be a leader in improving MongoDB''s
+    security posture by owning features and leading investigations into complex areas
+    of the codebase. What you’ll do:</p> <ul> <li>Build and test new security features
+    in a large, feature-rich C++ codebase</li> <li>Work across engineering, cloud
+    services, and support teams to coordinate feature rollouts and changes</li> <li>Stand
+    for code quality and security best practices, assisting fellow engineers in writing
+    well-reasoned, secure code</li> <li>Use strong diagnostic intuition to solve thorny
+    technical issues related to distributed systems, concurrency, and OS internals</li>
+    </ul> <p>This role can be remote or hybrid anywhere in the USA or Canada. We will
+    prioritize candidates who are already located in one of these countries.</p> <h3>Candidate
+    Profile</h3> <p>We are looking for a highly technical engineer who thrives on
+    the theory and practice of large-scale distributed system design.</p> <ul> <li>5+
+    years of experience building distributed systems</li> <li>Proficiency in a compiled
+    language (C++, Rust, Go, Java, or similar). Technical interviews will be conducted
+    in a compiled language of your choice</li> <li>Ability to reason about how specific
+    design choices impact a distributed system like MongoDB</li> <li>Understands modern
+    computer architecture and internals to the degree that they can reason about how
+    specific design choices plays out in a system like MongoDB</li> <li>Degree in
+    Computer Science or similar field, or equivalent practical experience, with strong
+    competencies in data structures, algorithms, and software design/architecture</li>
+    <li>Excellent communication skills to synthesize complex technical implications
+    for diverse stakeholders</li> </ul> <h3>Success Measures</h3> <ul> <li>In your
+    first month, you’ll understand the high-level architecture of MongoDB, dive into
+    the details of your team’s components, and resolve a few bugs</li> <li>In the
+    first three months, you’ll contribute to the development of a project slated for
+    the next release of MongoDB, take on code review responsibilities, and participate
+    in design reviews for new features</li> <li>In the first six months, you’ll lead
+    the development of a new feature and help mentor new engineers on the team</li>
+    </ul> <h3>About MongoDB</h3> <p>MongoDB is built for change, empowering our customers
+    and our people to innovate at the speed of the market. We have redefined the database
+    for the AI era, enabling innovators to create, transform, and disrupt industries
+    with software. MongoDB’s unified database platform, the most widely available,
+    globally distributed database on the market, helps organizations modernize legacy
+    workloads, embrace innovation, and unleash AI. Our cloud-native platform, MongoDB
+    Atlas, is the only globally distributed, multi-cloud database and is available
+    across AWS, Google Cloud, and Microsoft Azure.</p> <p>With offices worldwide and
+    over 60,000 customers, including 75% of the Fortune 100 and AI-native startups,
+    relying on MongoDB for their most important applications, we’re powering the next
+    era of software.</p> <p>Our compass at MongoDB is our <a href="https://www.mongodb.com/company">Leadership
+    Commitment,</a> guiding how and why we make decisions, show up for each other,
+    and win. It’s what makes us MongoDB.&nbsp;</p> <p>To drive the personal growth
+    and business impact of our employees, we’re committed to developing a supportive
+    and enriching culture for everyone. <a href="https://www.mongodb.com/company/blog/culture/employee-benefits-that-make-a-difference-at-mongodb">From
+    employee affinity groups, to fertility assistance and a generous paren'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-17'
+  date_source: first_published
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.461936+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-18"

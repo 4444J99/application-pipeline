@@ -1,0 +1,115 @@
+id: chime-senior-software-engineer-deposits-insights
+name: Chime Senior Software Engineer, Deposits & Insights
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Chime
+  url: https://boards.greenhouse.io/chime
+  application_url: https://boards.greenhouse.io/chime/jobs/8322458002?gh_jid=8322458002
+  portal: greenhouse
+  location: San Francisco, CA, USA
+  location_class: us-onsite
+  description: '<h3><strong>About the role</strong></h3> <p>The Deposit &amp; Insights
+    team is looking for a skilled backend engineer to join our team. You''ll be leveraging
+    deeply individualized spending insights and member spending behavior to help our
+    members have the best tools at their disposal to spend and safely. This role involves
+    collaborating cross functionally, experimenting quickly, and iterating on solutions
+    to find the best points of conversion.</p> <p>The base salary offered for this
+    role and level of experience will begin at $164,000 and up to $227,000. Full-time
+    employees are also eligible for a bonus, competitive equity package, and benefits.
+    The actual base salary offered may be higher, depending on your location, skills,
+    qualifications, and experience.</p> <h3><strong>In this role, you can expect to&nbsp;</strong></h3>
+    <ul> <li>Drive technical design and architectural decisions, while mentoring engineers
+    and fostering cross-functional collaboration</li> <li>Lead and contribute to multiple
+    projects simultaneously, balancing ownership of key initiatives with support across
+    broader team efforts</li> <li>Build and maintain robust, low-latency APIs and
+    backend services that power our Trust and Safety platforms</li> <li>Become the
+    domain expert in our platform architecture, providing technical decisions and
+    solutions to refine our maturing platforms</li> <li>Partner with data engineers,
+    analysts, and product managers to ship impactful features that enhance member
+    protection and experience</li> <li>Improve platform reliability and performance
+    through thoughtful system architecture, observability practices, and automation</li>
+    <li>Evolve our experimentation, policy lifecycle, and ML integration capabilities
+    to support smarter and faster decision-making at scale</li> <li>Engineers are
+    required to participate in on-call rotation. Being on call may include responding
+    to incidents outside of regular working hours when necessary.</li> </ul> <h3><strong>To
+    thrive in this role, you have</strong></h3> <ul> <li>5+ years of experience developing
+    software in a production environment at scale</li> <li>Prior experience serving
+    as a technical lead for a team and on complex projects—driving architectural decisions,
+    coordinating execution, and aligning cross-functional teams</li> <li>Proven experience
+    with Ruby on Rails or comparable frameworks</li> <li>Experience with transactional
+    databases and caching systems</li> <li>Deep understanding of architectural patterns
+    for large-scale web applications</li> <li>Commitment to mentoring engineers and
+    fostering team development</li> <li>An appreciation of maintainable and well-tested
+    code</li> <li>Curiosity and passion for diving deeply into system architectures
+    and technical challenges</li> <li>Experience in fast-paced or early-stage environments
+    is a strong plus</li> </ul> <p><strong>#LI-Hybrid #LI-GC1</strong></p><div class="content-conclusion"><h2><strong>A
+    little about us</strong></h2> <p>At Chime, we believe that everyone can achieve
+    financial progress. We created Chime—a financial technology company, not a bank*—on
+    the premise that core banking services should be helpful, easy, and free. Through
+    our user-friendly tools and intuitive platforms, we empower our members to take
+    control of their finances and work towards their goals. Whether it''s starting
+    a savings account, purchasing a first car or home, launching a business, or pursuing
+    higher education, we''re proud to have helped millions unlock their financial
+    potential.</p> <p>We''re a team of problem solvers, dreamers, and builders with
+    one shared obsession: our members. From day one, Chimers have worked tirelessly
+    to out-hustle and out-execute competitors to bring our mission to life. Their
+    grit and determination inspire us to work harder every day to deliver the very
+    best experience possible. We each bring an owner''s mindset to our work, refusing
+    to be outdone and holding ourselves accountable to meet and exceed the highest
+    bars for our teams, our company, and our members.</p> <p>We believe in being bold,
+    dreaming big, and taking risks, while also working together, embracing our diverse
+    perspectives, and giving each other honest feedback. Our culture remains deeply
+    entrepreneurial, encouraging every Chimer to see themselves as stewards of our
+    mission to help everyday Americans unlock their financial progress.&nbsp;</p>
+    <p>We know that to achieve our mission, we must earn and keep people''s trust—so
+    we hold ourselves to the highest standards of integrity in everything we do. These
+    aren''t just words on a wall—our values are embedded in every aspect of our business,
+    serving as a north star that guides us as we work to help millions achieve their
+    financial potential.</p> <p>Because if we don''t—who will?</p> <p>*Chime is a
+    financial technology company, not a bank. Banking services provided by The Bancorp
+    Bank, N.A. or Stride Bank, N.A., Members FDIC.</p> <h2><strong>What we offer for
+    our full-time, regular employees</strong></h2> <u'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.201840+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

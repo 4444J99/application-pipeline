@@ -1,0 +1,116 @@
+id: mongodb-software-engineer-3-atlas-data-federation-customer-experienc
+name: MongoDB  Software Engineer 3, Atlas Data Federation Customer Experience
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7551186
+  portal: greenhouse
+  location: New York City
+  location_class: us-onsite
+  description: "<h3>About the Team</h3> <p>The Atlas Data Federation and Archiving\
+    \ (ADFA) Customer Experience team supports the Atlas Data Federation system which\
+    \ empowers customers to create virtual databases that can query, transform, and\
+    \ analyze data across multiple sources (MongoDB clusters and cloud object storage)\
+    \ through a unified MongoDB query interface, without moving or copying the underlying\
+    \ data. The ADF system handles&nbsp; hundreds of millions of queries per month,\
+    \ processing exabytes of customer data.</p> <h3>About the Role</h3> <p>This role\
+    \ is responsible for designing, building and testing high-impact projects and\
+    \ enhancing the scalability, performance, durability, availability and reliability\
+    \ of the Atlas Data Federation distributed systems. We value intellectual curiosity\
+    \ and honesty, and building together in an environment that prioritizes collaboration\
+    \ over competition.</p> <p><em>Our team is distributed across North America. The\
+    \ position is open to our \u201Cin office\u201D, \u201Cflexible\u201D, or fully\
+    \ remote working models with convenient work hours for each time-zone.</em></p>\
+    \ <p>If you are passionate about data management, distributed systems, and leadership,\
+    \ and are excited to work on high-impact, high-growth projects, we would love\
+    \ to hear from you.</p> <h3>Role Responsibilities</h3> <ul> <li>Design, architect,\
+    \ build, and deliver core pieces of Atlas with focus on storage systems, query\
+    \ engine, and customer facing components with coding in Go, Java, and React</li>\
+    \ <li>Approach problems from a customer-focused perspective and use data to propose\
+    \ high ROI improvements to our product and operations</li> <li>Collaborate with\
+    \ colleagues and other teams in Atlas to scope, spec and deliver new features</li>\
+    \ <li>Define your top priorities and focuses, communicate them, and execute against\
+    \ them</li> <li>Improve and maintain our codebase by applying best practices and\
+    \ fundamental software design principles</li> </ul> <h3>Candidate Profile</h3>\
+    \ <ul> <li>3+ years experience in software engineering, primarily focused on cloud-native\
+    \ backend systems</li> <li>B.Sc / M.Sc in Computer Science or similar field, or\
+    \ equivalent practical experience.</li> <li>Proficient in a modern compiled programming\
+    \ language (Go, Java, C#, C++, etc.)</li> <li>Experience implementing, and operating\
+    \ distributed storage systems with high availability and durability guarantees</li>\
+    \ <li>Enjoys working with others towards a common goal</li> <li>You're a self-starter!\
+    \ You're comfortable organizing your own time and propose changes backed by data</li>\
+    \ <li>Is curious, collaborative, empathetic, coachable and intellectually honest</li>\
+    \ <li>Great diagnostics skills, considering edge cases in designs with a bias\
+    \ for simplicity</li> <li>Has a passion for problem solving and learning new things\
+    \ in the domains of computer science and software engineering</li> </ul> <h3>Nice\
+    \ to haves</h3> <ul> <li>Experience building and testing full-stack systems (using\
+    \ React or similar frameworks)</li> <li>Oncall experience and having customer\
+    \ first approach when considering different approaches</li> <li>Experience designing\
+    \ Data Lake protocols (and similar e.g. Delta Lake, Hudi,...)&nbsp;</li> <li>Experience\
+    \ optimizing throughput in distributed storage systems</li> <li>Experience working\
+    \ with multiple cloud providers (AWS, GCP, Azure)</li> </ul> <h3>Success Measures</h3>\
+    \ <ul> <li>In 1 month, you'll learn about the system and ask quality questions,\
+    \ go through the inner &amp; outer loop</li> <li>In 3 months, you'll have contributed\
+    \ to a large project</li> <li>In 6 months, you\u2019ll be leading the design and\
+    \ execution of your own project</li> </ul> <h3>About MongoDB</h3> <p>MongoDB is\
+    \ built for change, empowering our customers and our people to innovate at the\
+    \ speed of the market. We have redefined the database for the AI era, enabling\
+    \ innovators to create, transform, and disrupt industries with software. MongoDB\u2019\
+    s unified database platform\u2014the most widely available, globally distributed\
+    \ database on the market\u2014helps organizations modernize legacy workloads,\
+    \ embrace innovation, and unleash AI. Our cloud-native platform, MongoDB Atlas,\
+    \ is the only globally distributed, multi-cloud database and is available across\
+    \ AWS, Google Cloud, and Microsoft Azure.</p> <p>With offices worldwide and nearly\
+    \ 60,000 customers\u2014including 75% of the Fortune 100 and AI-native startups\u2014\
+    relying on MongoDB for their most important applications, we\u2019re powering\
+    \ the next era of software.</p> <p>Our compass at MongoDB is our <a href=\"https://www.mongodb.com/company\"\
+    >Leadership Commitment,</a> guiding how and why we make decisions, show up for\
+    \ each other, and win. It\u2019s what makes us MongoDB.&nbsp;</p> <p>To drive\
+    \ the personal growth and business impact of our employees, we\u2019re committed\
+    \ to developing a supportive and enriching culture for everyone. <a href=\"https://www.mongodb.com/company/blog/culture/employee-benefits-that-make-a-difference-at-mongodb\"\
+    >From employee affinity groups, to fertility assistance and a g"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.339505+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

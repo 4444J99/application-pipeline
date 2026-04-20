@@ -1,0 +1,116 @@
+id: sierra-ai-software-engineer-agent-data-platform
+name: Sierra AI Software Engineer, Agent Data Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sierra AI
+  url: https://jobs.ashbyhq.com/sierra
+  application_url: https://jobs.ashbyhq.com/sierra/0c892d11-9f19-4b8d-9c2b-409346c52b7a
+  portal: ashby
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: 'About us At Sierra, we’re creating a platform to help businesses build
+    better, more human customer experiences with AI. We are primarily an in-person
+    company based in San Francisco, with growing offices in Atlanta, New York, London,
+    Paris, Singapore, and Japan. We are guided by a set of values that are at the
+    core of our actions and define our culture: Trust, Customer Obsession, Craftsmanship,
+    Intensity, and Family. These values are the foundation of our work, and we are
+    committed to upholding them in everything we do. Our co-founders are Bret Taylor
+    and Clay Bavor . Bret currently serves as Board Chair of OpenAI. Previously, he
+    was co-CEO of Salesforce (which had acquired the company he founded, Quip) and
+    CTO of Facebook. Bret was also one of Google''s earliest product managers and
+    co-creator of Google Maps. Before founding Sierra, Clay spent 18 years at Google,
+    where he most recently led Google Labs. Earlier, he started and led Google’s AR/VR
+    effort, Project Starline, and Google Lens. Before that, Clay led the product and
+    design teams for Google Workspace. What you''ll do You’ll join a full-stack data
+    team building the systems making our AI agents measurably smarter with every interaction,
+    building the real-time pipelines, analytics products, and deep personalization
+    primitives that turn millions of conversations into business outcomes. You’ll
+    work across these areas: Data Foundations: Architect and build our core platform
+    to handle data at scale with low latency. This includes our real-time eventing
+    infrastructure, streaming and batch ETL pipelines, and our Iceberg-based data
+    lakehouse. You will own the systems for interactive OLAP querying, orchestration,
+    and experimentation, ensuring our data is trustworthy, fast, and easy to use for
+    the entire organization. Memory & Personalization: Power the next generation of
+    intelligent experiences. You will develop the systems for long-term agent memory,
+    build reusable Customer Data Platform (CDP) primitives, and implement the optimization
+    loops that allow our agents to personalize interactions and demonstrably lift
+    business outcomes. What you''ll bring We’re excited to meet candidates who bring
+    depth in one of these areas: Platform Engineering You have designed, built, and
+    operated large-scale data systems, processing terabytes or petabytes of data with
+    technologies like Spark, Flink, Trino/Presto, and data lakehouse formats like
+    Iceberg or Hudi. You possess strong backend and distributed systems fundamentals
+    in a language like Go, Scala, or Python. You understand the trade-offs of different
+    storage engines, query plans, and data serialization formats. You have a history
+    of implementing pragmatic data governance, lineage, and testing. You’ve built
+    platforms that are cost-aware, highly operable, and a delight for other engineers
+    to build upon. You''re well-versed in data modeling best practices (dimensional
+    modeling, star/snowflake schemas, slowly changing dimensions) and know how to
+    optimize analytical query patterns for both traditional OLAP systems and modern
+    cloud data warehouses. Product Engineering You have a portfolio of shipped data
+    products, including analytics dashboards, data visualization tools, or alerting
+    and exploration systems. You are a skilled full-stack engineer (e.g., TypeScript/React
+    and a service layer like Go), with a keen eye for performance, API design, and
+    polish. You excel at turning ambiguous questions into clear, intuitive interfaces.
+    You have strong product sense around information architecture, handling empty
+    states, and making complex data explainable. You have practical experience with
+    ML-powered product features, such as personalization, recommendations, or classification
+    systems. Shared Qualities Strong software engineering background with 4-7+ years
+    of hands-on development experience in building and shipping production systems
+    or products. A passion for being on the frontier of AI products. High agency and
+    a bias to action in a high-autonomy environment. Degree in Computer Science or
+    related field, or equivalent professional experience. Even better... Deep experience
+    with event streaming platforms (e.g., Kafka, Kinesis) and real-time data processing.
+    Experience with modern data visualization libraries (e.g., ECharts, D3.js) and
+    the principles of building performant, reusable charting components for complex
+    data. Production experience with recommender systems or optimization loops (e.g.,
+    multi-armed bandits, ranking). A track record of leading complex technical projects
+    or mentoring other engineers. Our values Trust: We build trust with our customers
+    with our accountability, empathy, quality, and responsiveness. We build trust
+    in AI by making it more accessible, safe, and useful. We build trust with each
+    other by showing up for each other professionally and personally, creating an
+    environment that enables all of us to do our best work. Customer Obsession: We
+    deeply understand our customers’ business goals and relentlessly focus on dr'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.281590+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

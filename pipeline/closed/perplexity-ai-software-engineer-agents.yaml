@@ -1,0 +1,89 @@
+id: perplexity-ai-software-engineer-agents
+name: Perplexity AI Software Engineer - Agents
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/bc1a6878-8de9-48c2-a791-95b2f8f27261
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Perplexity is seeking an energetic engineer to join our highly driven
+    Agents engineering team. The Agents team consists of AI/ML, backend, and full-stack
+    engineers who collaborate to build delightful agentic experiences within our Comet
+    ecosystem and Perplexity Computer , our platform for generalized frontier intelligence.
+    Our vision is to empower our users with AI agents that can faithfully actualize
+    their intent, however and wherever expressed, through open-ended interactions
+    with the world. As an engineer on our Agents team, you will bring AI expertise,
+    sharp product intuition, and a tinkerer''s mindset to advance the frontier of
+    what agents can accomplish for our millions of devoted users. You will work across
+    applied research and engineering to solve many open problems in AI, including:
+    Designing AI agents to navigate the digital world and perform increasingly valuable
+    units of work for our users; Training action and decision models that determine,
+    based on complex multimodal states, how to accomplish user-specified objectives;
+    Providing consistently excellent experiences across desktop, mobile, headless
+    cloud, and other environments through flexible abstractions and frictionless backgrounding;
+    Developing permission architectures, payload classifiers, and other methods to
+    implement secure-by-design agentic capabilities; Designing optimal data representations
+    and modes of interaction between agents and their environments; and much, much
+    more. Responsibilities Drive cutting-edge AI capabilities across multiple layers
+    of a rapidly growing product in the AI agents space. Develop and leverage cutting-edge
+    AI models, infrastructure, and browser technologies to advance the capability
+    frontier and scale those capabilities for a rapidly growing userbase. Ensure a
+    high craft and quality bar, in both AI agent performance and user experience.
+    Collaborate with fellow engineers, designers, product managers, data scientists,
+    and others across the company to integrate core Perplexity functionality into
+    our frontier agentic products and vice-versa. Contribute to product reliability,
+    code quality, AI evaluation, testing, and maintenance across the broader team.
+    Qualifications Strong foundational familiarity with the full AI product stack.
+    Proficiency in Python (bonus points for TypeScript, Go, and/or Rust). Significant
+    experience in at least one of the following areas: Context engineering and tool
+    interfaces for frontier AI models Post-training and reinforcement learning (particularly
+    for multimodal models) Browser technologies (CDP, Playwright, extension development,
+    etc.) Strong product intuition and taste for user experience excellence. Comfortable
+    working with a small, fast-moving team, must be willing to dive in and take ownership.
+    A passion for shipping products that surprise and delight.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.916370+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

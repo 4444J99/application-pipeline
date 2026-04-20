@@ -1,0 +1,114 @@
+id: mongodb-software-engineer-3-search-systems-replication-routing
+name: MongoDB Software Engineer 3, Search Systems Replication & Routing
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7235322
+  portal: greenhouse
+  location: San Francisco
+  location_class: us-onsite
+  description: '<p><a href="https://www.mongodb.com/docs/atlas/atlas-search/">Atlas
+    Search</a> is a multi-cloud service that allows users to execute complex full
+    text and vector search queries using the <a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/search/">MongoDB
+    Query Language</a>. Our users are free to focus on relevance and data retrieval
+    instead of the machinery needed to search data at scale.</p> <p>Our team is building
+    the cloud-based distributed systems software responsible for the lifecycle of
+    search indexes including: data ingestion, index building, partitioning, performance,
+    availability, and backup management. Our product is quickly gaining traction with
+    customers and we are making core architectural improvements that you will contribute
+    to.</p> <p>This role is based in San Francisco, CA with an in-office or hybrid
+    work model.</p> <h3>Successful candidates will have the following qualities:</h3>
+    <ul> <li>2+ years of hands-on experience designing, building, testing, and maintaining
+    industrial-strength backend software in a complex codebase</li> <li>Experience
+    developing distributed systems and multithreaded applications</li> <li>Experience
+    with at least one modern statically typed programming language, and interest in
+    working with Java</li> <li>Excellent verbal and written technical communication
+    skills and enthusiasm for collaborating closely with colleagues</li> <li>A growth
+    mindset and the desire to learn quickly through taking on challenges, reflecting
+    on outcomes, and incorporating feedback</li> <li>A strong sense of ownership over
+    their work, from initial design all the way through maintaining code in production</li>
+    </ul> <h3>You will:</h3> <ul> <li>Contribute to the design, implementation, and
+    support of projects that improve the scalability of Atlas Search to make using
+    it a seamless experience for even the largest workloads</li> <li>Work with a collaborative
+    team that prioritizes sound technical decision-making and building systems that
+    our customers love and that we are proud of as engineers</li> <li>Have the opportunity
+    to lead projects and own subsystems</li> <li>Provide input on the team’s roadmap
+    and help determine the architecture of our system</li> </ul> <h3>Success measures:</h3>
+    <ul> <li>In 3 months you’ll have a solid high-level understanding of what our
+    team does and how we operate. You’ll have contributed to the development of an
+    existing project and completed several small improvements or bug fixes</li> <li>In
+    6 months you’ll be reviewing code and project designs, and be an active participant
+    in team meetings</li> <li>In 12 months you’ll have a thorough understanding of
+    the systems our team owns and have led a small project. You’ll have proposed small
+    improvements to our code, product, or team processes</li> </ul> <h3>About MongoDB</h3>
+    <p>MongoDB is built for change, empowering our customers and our people to innovate
+    at the speed of the market. We have redefined the database for the AI era, enabling
+    innovators to create, transform, and disrupt industries with software. MongoDB’s
+    unified database platform—the most widely available, globally distributed database
+    on the market—helps organizations modernize legacy workloads, embrace innovation,
+    and unleash AI. Our cloud-native platform, MongoDB Atlas, is the only globally
+    distributed, multi-cloud database and is available across AWS, Google Cloud, and
+    Microsoft Azure.</p> <p>With offices worldwide and nearly 60,000 customers—including
+    75% of the Fortune 100 and AI-native startups—relying on MongoDB for their most
+    important applications, we’re powering the next era of software.</p> <p>Our compass
+    at MongoDB is our <a href="https://www.mongodb.com/company">Leadership Commitment,</a>
+    guiding how and why we make decisions, show up for each other, and win. It’s what
+    makes us MongoDB.</p> <p>To drive the personal growth and business impact of our
+    employees, we’re committed to developing a supportive and enriching culture for
+    everyone.&nbsp;<a href="https://www.mongodb.com/company/blog/culture/employee-benefits-that-make-a-difference-at-mongodb">From
+    employee affinity groups, to fertility assistance and a generous parental leave
+    policy</a>, we value our employees’ wellbeing and want to support them along every
+    step of their professional and personal journeys.<a href="https://www.mongodb.com/blog/channel/culture">
+    Learn more about what it’s like to work at MongoDB</a>, and help us make an impact
+    on the world!</p> <p>MongoDB is committed to providing any necessary accommodations
+    for individuals with disabilities within our application and interview process.
+    To request an accommodation due to a disability, please inform your recruiter.</p>
+    <p>MongoDB, Inc. provides equal employment opportunities to all employees and
+    applicants for employment and prohibits discrimination and harassment of any type
+    and makes all hiring decisions without regard to race, color, religion, age, sex,
+    national origin, disability status, genetics'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.899035+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

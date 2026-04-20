@@ -1,0 +1,115 @@
+id: roblox-software-engineer-creator-translation
+name: Roblox Software Engineer, Creator Translation
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Roblox
+  url: https://boards.greenhouse.io/roblox
+  application_url: https://careers.roblox.com/jobs/7786397?gh_jid=7786397
+  portal: greenhouse
+  location: San Mateo, CA, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p><span style="font-weight: 400;">Every
+    day, tens of millions of people come to Roblox to explore, create, play, learn,
+    and connect with friends in 3D immersive digital experiences– all created by our
+    global community of developers and creators.&nbsp;</span></p> <p><span style="font-weight:
+    400;">At Roblox, we’re building the tools and platform that empower our community
+    to bring any experience that they can imagine to life. Our vision is to reimagine
+    the way people come together, from anywhere in the world, and on any device.</span><strong>
+    </strong><span style="font-weight: 400;">We’re on a mission to connect a billion
+    people with optimism and civility, and looking for amazing talent to help us get
+    there.&nbsp;</span></p> <p><span style="font-weight: 400;">A career at Roblox
+    means you’ll be working to shape the future of human interaction, solving unique
+    technical challenges at scale, and helping to create safer, more civil shared
+    experiences for everyone.</span></p></div><p><strong>We''re looking for an outstanding
+    engineer to join our Creator Services Translation team</strong> where you will
+    make direct impacts and contributions across Roblox. You will build highly scalable
+    systems to help creators to continuously deliver fully immersive experiences that
+    feel native and seamless. You will help drive the expansion of language families
+    and locales that support over 100M CCU on the platform, enrich translation media
+    types (images, audios, meshes, etc.), and improve the translation quality to be
+    industry-leading and further enhance the safety for for Roblox.</p> <p><strong>You
+    Will:</strong></p> <ul> <li>Tackle and solve challenging full-stack problems that
+    touch the client, game engine, backend services and machine learning models autonomously.</li>
+    <li>Own product verticals and projects from implementation plan, execution, launch,
+    and quick iteration based on feedback.</li> <li>Work closely with product, design,
+    and partner teams to maintain high execution quality and pace.</li> <li>Proactively
+    gather community feedback and respond swiftly to their needs, ensuring our products
+    evolve to deliver exceptional value.</li> </ul> <p><strong>You Have:</strong></p>
+    <ul> <li><strong>Experience: </strong>1+ years of industry experience. You’ve
+    designed and led implementation on highly scalable and reliable distributed backend
+    systems. You have an understanding of or hands-on experience in microservices.</li>
+    <li><strong>Knowledge:</strong> You are proficient in one or more programming
+    languages (C#, C++, Go, Python or similar programming language). Deep understanding
+    of C++ is a plus, familiarity with game engine is a plus, familiarity with machine
+    learning is a plus.</li> <li><strong>Curiosity:</strong> You are curious and passionate
+    about industry trends and new technologies, such as AI and agents. You are able
+    to apply them to practical problems.</li> <li><strong>Strong Teamwork:</strong>
+    You are able to collaborate in cross-functional and cross team projects to deliver
+    the most curated technical solution.</li> <li><strong>Long-term Mindset:</strong>
+    You are willing to take the long view to drive collaboration and build the systems.</li>
+    </ul> <p>Please note the Company may not be able to employ candidates who have
+    United States work authorization related to certain U.S. visa categories, or support
+    future F-1 or H-1B sponsorship at this time.</p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p>For roles that are based at our
+    headquarters in San Mateo, CA: The starting base pay for this position is as shown
+    below. The actual base pay is dependent upon a variety of job-related factors
+    such as professional background, training, work experience, location, business
+    needs and market demand. Therefore, in some circumstances, the actual salary could
+    fall outside of this expected range. This pay range is subject to change and may
+    be modified in the future. All full-time employees are also eligible for equity
+    compensation and for benefits as described on <strong><a href="https://careers.roblox.com/total-rewards">this
+    page</a></strong>.</p></div><div class="title">Annual Salary Range</div><div class="pay-range"><span>$153,120</span><span
+    class="divider">&mdash;</span><span>$196,750 USD</span></div></div></div><div
+    class="content-conclusion"><p>Roles that are based in an office are onsite Tuesday,
+    Wednesday, and Thursday, with optional presence on Monday and Friday (unless otherwise
+    noted).</p> <p>Roblox provides equal employment opportunities to all employees
+    and applicants for employment and prohibits discrimination and harassment of any
+    type without regard to race, color, religion, age, sex, national origin, disability
+    status, genetics, protected veteran status, sexual orientation, gender identity
+    or expression, or any other characteristic protected by federal, state or local
+    laws. Roblox also provides reasonable accommodations to candidates with qualifyi'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-10'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.188352+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

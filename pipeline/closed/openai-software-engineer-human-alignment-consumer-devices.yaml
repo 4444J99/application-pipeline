@@ -1,0 +1,116 @@
+id: openai-software-engineer-human-alignment-consumer-devices
+name: OpenAI Software Engineer - Human Alignment, Consumer Devices
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: OpenAI
+  url: https://jobs.ashbyhq.com/openai
+  application_url: https://jobs.ashbyhq.com/openai/95ec6a88-fbd8-4e9c-9924-53d6c2afd51a
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'About the Team The Future of Computing Research team is an applied
+    research team within the Consumer Devices group focused on developing new methods,
+    models, and evaluation frameworks that support our vision for the future of computing.
+    We work at the frontier of multimodal AI, helping turn emerging model capabilities
+    into product experiences that are useful, delightful, and worthy of long-term
+    trust. Our work explores a new class of AI systems that can learn over time, adapt
+    to individuals, and support people in the flow of daily life. This includes long-term
+    memory, user modeling, and personalization systems that are aligned not just with
+    immediate satisfaction, but with a person’s broader goals, values, and well-being.
+    We work closely across research, engineering, design, product, and safety to define
+    what it means to build AI systems that know you over time, act at the right moment,
+    and help in ways that are context-aware, respectful, and demonstrably beneficial.
+    About the Role We are looking for a Software Engineer to join the Human Alignment
+    Team within Future of Computing Research to build the infrastructure, data systems,
+    and evaluation foundations for next-generation multimodal models. This role is
+    focused on the systems that make rigorous product-grounded research possible.
+    You will build the pipelines that transform messy real-world signals into usable
+    training and evaluation substrates, the tooling that supports human feedback,
+    and the evaluation platforms that help us measure model behavior with precision
+    and credibility. The best candidates for this role have strong engineering fundamentals,
+    but also strong research taste: they know that, especially in human-centered AI
+    systems, measurement is often the core problem. This role is based in San Francisco,
+    CA. We use a hybrid work model of four days in the office per week and offer relocation
+    assistance to new employees. In this role, you will: Build evaluation and data
+    foundations for next-generation personalized and multimodal AI systems. Partner
+    closely with researchers to turn fuzzy behavioral questions into rigorous evals,
+    datasets, rubrics, and scorecards. Design and implement human-data pipelines,
+    grader systems, and experiment infrastructure for product-grounded research. Create
+    evaluation frameworks for subjective, contextual, and long-horizon behaviors.
+    Develop reproducible pipelines for collecting, processing, joining, and analyzing
+    multimodal signals from real-world studies and product usage. Help define what
+    should count as meaningful progress, and build the systems that let the team measure
+    it with confidence. Work across research, safety, design, and engineering to ensure
+    that what we optimize for is both technically sound and human-centered. Prototype
+    quickly, iterate on measurement frameworks, and improve the team’s ability to
+    debug, compare, and trust behavioral results. Shape the infrastructure and methodology
+    that future OpenAI products will rely on for personalization, adaptation, and
+    evaluation. You might thrive in this role if you: Have strong software engineering
+    fundamentals and experience building data, backend, ML, or evaluation systems.
+    Have excellent research taste and strong judgment about what is worth measuring,
+    how to measure it, and when a metric is misleading. Enjoy working on ambiguous,
+    early-stage problems where the hardest part is often defining the right evaluation
+    rather than implementing the obvious one. Have experience with human-in-the-loop
+    systems, annotation pipelines, experimentation platforms, or evaluation tooling.
+    Are rigorous about data quality, reproducibility, metric design, and empirical
+    correctness. Are motivated by human-centered AI and excited by the challenge of
+    measuring behaviors that are subtle, contextual, and difficult to benchmark. Want
+    to help define the research infrastructure behind a new category of AI products.
+    About OpenAI OpenAI is an AI research and deployment company dedicated to ensuring
+    that general-purpose artificial intelligence benefits all of humanity. We push
+    the boundaries of the capabilities of AI systems and seek to safely deploy them
+    to the world through our products. AI is an extremely powerful tool that must
+    be created with safety and human needs at its core, and to achieve our mission,
+    we must encompass and value the many different perspectives, voices, and experiences
+    that form the full spectrum of humanity. We are an equal opportunity employer,
+    and we do not discriminate on the basis of race, religion, color, national origin,
+    sex, sexual orientation, age, veteran status, disability, genetic information,
+    or other applicable legally protected characteristic. For additional information,
+    please see OpenAI’s Affirmative Action and Equal Employment Opportunity Policy
+    Statement . Background checks for applicants will be administered in accordance
+    with applicable law, and qualified applicants with arrest or conviction records
+    will be considered for employment consiste'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.711496+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

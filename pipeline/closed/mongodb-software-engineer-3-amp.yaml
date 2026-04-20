@@ -1,0 +1,115 @@
+id: mongodb-software-engineer-3-amp
+name: MongoDB Software Engineer 3, AMP
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7593785
+  portal: greenhouse
+  location: Gurugram
+  location_class: unknown
+  description: <p>We are looking for an experienced Software Engineer with a strong
+    background in building software testkits/frameworks. You will lead a talented
+    team building a complex product suite using a modern stack. The ideal candidate
+    will be designing and building automated frameworks that validate functional equivalence,
+    performance benchmarks, and data integrity. From leveraging LLMs for unit test
+    generation to building contract testing frameworks, your work will be the safety
+    net for the world’s largest enterprise migrations.</p> <p>We are looking to speak
+    to candidates who are based in Gurugram for our hybrid working model.</p> <h3>The
+    ideal candidate for this role will have</h3> <ul> <li>2-3 years of commercial
+    software development experience with at least one JVM language such as Java, preferably
+    using the Spring ecosystem</li> <li>Experience integrating Large Language Models
+    (LLMs) into the developer workflow to automate unit test generation and edge-case
+    discovery</li> <li>Experience building developer tools, infrastructure, or complex
+    testing frameworks</li> <li>Solid experience in software architecture and development</li>
+    <li>Experience in application/database modernization with proven ability to design
+    and implement frameworks that ensure database state equivalence across different
+    implementation</li> <li>&nbsp;Must understand change data capture, event-driven
+    database interception (MongoDB listeners, RDBMS triggers), and state comparison
+    algorithms with pattern-based exclusions</li> <li>Strong Spring Boot (or equivalent
+    Java framework), MongoDB (or equivalent), and JDBC/JPA skills required.</li> <li>Experience
+    with relational and document data modeling and hands-on experience with at least
+    one SQL database (Postgres, MySQL, etc) and at least one document database (e.g.
+    MongoDB)</li> <li>Good understanding of algorithms, data structures and their
+    time and space complexity</li> <li>Curiosity, a positive attitude, and a drive
+    to continue learning</li> <li>Excellent verbal and written communication skills</li>
+    </ul> <h3>Position Expectations</h3> <ul> <li>Contribute high-quality, well-tested
+    code to the modernization and framework team and its surrounding services</li>
+    <li>Collaborate effectively with Product Management, other engineers, and designers
+    to build and deliver on the product roadmap</li> <li>Participate actively in code
+    reviews to enforce best practices and patterns</li> <li>Help troubleshoot and
+    resolve complex technical issues in our distributed systems</li> <li>Give and
+    solicit feedback on technical design documents and pull requests</li> <li>Perform
+    tasks related to process such as CI/CD, quality, testing, etc&nbsp;</li> </ul>
+    <h3>Success Measures</h3> <p>Within the first three months, you will have:</p>
+    <ul> <li>Familiarize yourself with the MongoDB <a href="../../sdash/3268714">Modernization
+    Infrastructure &amp; Frameworks</a> stack.</li> <li>Set up software development
+    infrastructure (tech stack, build tools, etc) to enable development using the
+    relevant tech stacks</li> <li>Started collaborating with your peers and contributed
+    to code reviews and design reviews.</li> </ul> <p>Within six months, you will
+    have:</p> <ul> <li>Familiarised yourself with the rest of our the application
+    modernization tool stack</li> <li>Delivered at least one large scale feature that
+    spans the entire tech stack</li> <li>Reviewed and contributed to scope and technical
+    design documents</li> </ul> <p>Within 12 months, you will have:</p> <ul> <li>Become
+    a key contributor to our stack, capable of taking on complex features independently</li>
+    <li>Helped recruit and interview new members of the team</li> <li>Collaborated
+    effectively with other teams at MongoDB on cross-functional projects</li> </ul>
+    <h3>About MongoDB</h3> <p>MongoDB is built for change, empowering our customers
+    and our people to innovate at the speed of the market. We have redefined the database
+    for the AI era, enabling innovators to create, transform, and disrupt industries
+    with software. MongoDB’s unified database platform—the most widely available,
+    globally distributed database on the market—helps organizations modernize legacy
+    workloads, embrace innovation, and unleash AI. Our cloud-native platform, MongoDB
+    Atlas, is the only globally distributed, multi-cloud database and is available
+    across AWS, Google Cloud, and Microsoft Azure.</p> <p>With offices worldwide and
+    nearly 60,000 customers—including 75% of the Fortune 100 and AI-native startups—relying
+    on MongoDB for their most important applications, we’re powering the next era
+    of software.</p> <p>Our compass at MongoDB is our <a href="https://www.mongodb.com/company">Leadership
+    Commitment,</a> guiding how and why we make decisions, show up for each other,
+    and win. It’s what makes us MongoDB.&nbsp;</p> <p>To drive the personal growth
+    and business impact of our employees, we’re committed to developing a supportive
+    and enriching culture for everyone. <a href="https://www.mongodb.com/company/blog/cu
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.335164+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

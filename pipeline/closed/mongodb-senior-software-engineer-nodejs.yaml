@@ -1,0 +1,115 @@
+id: mongodb-senior-software-engineer-nodejs
+name: MongoDB Senior Software Engineer, Node.js
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7672827
+  portal: greenhouse
+  location: Dublin; Ireland
+  location_class: international
+  description: <h3>Our Database Experience (DBX) Team</h3> <p>The Database Experience
+    team builds the libraries and tools that developers use day-to-day working with
+    MongoDB. Our mission is to increase developer adoption, satisfaction and retention
+    by providing a reliable, enjoyable interface for developers and other end-users.</p>
+    <p>Our senior engineers are typically specialists in a particular programming
+    language, but are capable of contributing to projects in other languages as well.</p>
+    <p>For this role, we're looking for someone who will enjoy designing, writing,
+    and supporting open source libraries for the JavaScript ecosystem developers that
+    use MongoDB. This is an opportunity to make a major impact at MongoDB as Node.js
+    is one of the most popular runtimes for MongoDB users, and our driver has over
+    6 million weekly npm downloads.</p> <p>This role can be based out of our Dublin
+    office or remotely in Ireland.</p> <h3>In This Role You Will…</h3> <ul> <li>Maintain
+    and build features for the MongoDB Node.js Driver along with its dependencies
+    and native C++ addons (bson, mongodb-client-encryption, @mongodb-js/zstd, kerberos)</li>
+    <li>Contribute to JavaScript open source client libraries and MongoDB AI/ML integrations
+    and ODMs (e.g., mongoose)</li> <li>Contribute to the common driver specifications
+    supporting the full range of MongoDB features</li> <li>Investigate bugs and support
+    requests from commercial customers, open source users, and internal users for
+    the libraries our team maintains</li> <li>Collaborate closely with peers in our
+    distributed world-wide engineering team</li> </ul> <h3>You’re Right For This Role
+    If You…</h3> <ul> <li>Have deep knowledge of the JavaScript ecosystem, especially
+    as it relates to backend and infrastructure development, and an interest in staying
+    up-to-date on ecosystem trends and best practices and incorporating them into
+    your work</li> <li>Are interested in focusing exclusively on building backend
+    libraries and tools for other developers</li> <li>Are fascinated by, and have
+    experience working with concurrency, parallelism and distributed systems</li>
+    <li>Want to participate in Open Source software development and communities</li>
+    <li>Communicate well, internally and externally, both in writing and face-to-face</li>
+    <li>Advocate for testing and agile development best practices</li> <li>Can make
+    pragmatic design tradeoffs while balancing features, maintainability, and delivery
+    time</li> <li>Enjoy collaborating with and elevate the skills and expertise of
+    those around you</li> </ul> <h3>For This Role You Must Have…</h3> <ul> <li>Have
+    4+ years of experience writing high-quality software</li> <li>Significant experience
+    working with JavaScript/TypeScript on the backend of your application(s)</li>
+    <li>Experience with databases, relational or non-relational</li> <li>Good written
+    and spoken English communication skills</li> </ul> <h3>It Helps If You Have…</h3>
+    <ul> <li>Experience contributing to open source projects</li> <li>Experience building
+    production applications with mongoose and/or the Node.js driver itself</li> <li>Experience
+    using or contributing to open source AI frameworks/integrations such as LangChain
+    or n8n</li> <li>Experience working with MongoDB and the document model</li> <li>A
+    diversity of experience writing tests for the software you developed (unit, integration,
+    end to end, performance, etc)</li> <li>A working knowledge of C++</li> </ul> <h3>Success
+    Measures</h3> <ul> <li>Within one month, you will understand the high-level architecture
+    of the driver and how MongoDB works, and will have completed a few small bug fixes
+    and/or feature tickets</li> <li>Within three months, you will be contributing
+    effectively day-to-day, fixing bugs, implementing planned features, and thoroughly
+    reviewing your colleagues’ pull requests</li> <li>Within six months, you will
+    have implemented major features, planned new features, contributed to our common
+    driver specifications, and will be collaborating with the Product team to help
+    craft our roadmap</li> <li>Within twelve months, you'll have significantly improved
+    the quality, performance and maintainability of our codebase, and will be taking
+    the lead in designing and specifying major new features</li> </ul> <h3>About MongoDB</h3>
+    <p>MongoDB is built for change, empowering our customers and our people to innovate
+    at the speed of the market. We have redefined the database for the AI era, enabling
+    innovators to create, transform, and disrupt industries with software. MongoDB’s
+    unified database platform, the most widely available, globally distributed database
+    on the market, helps organizations modernize legacy workloads, embrace innovation,
+    and unleash AI. Our cloud-native platform, MongoDB Atlas, is the only globally
+    distributed, multi-cloud database and is available across AWS, Google Cloud, and
+    Microsoft Azure.</p> <p>With offices worldwide and over 60,000 customers, including
+    75% of the Fortune 100 and AI-native startups, relying on MongoDB for
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.8
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.317673+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,118 @@
+id: coinbase-staff-software-engineer-backend-platform-payment-rails
+name: Coinbase Staff Software Engineer, Backend - Platform (Payment Rails)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7789395?gh_jid=7789395
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><p>Ready to be pushed beyond what you\
+    \ think you\u2019re capable of?</p> <p>At Coinbase, our mission is to increase\
+    \ economic freedom in the world. It\u2019s a massive, ambitious opportunity that\
+    \ demands the best of us, every day, as we build the emerging onchain platform\
+    \ \u2014 and with it, the future global financial system.</p> <p>To achieve our\
+    \ mission, we\u2019re seeking a very specific candidate. We want someone who is\
+    \ passionate about our mission and who believes in the power of crypto and blockchain\
+    \ technology to update the financial system. We want someone who is eager to leave\
+    \ their mark on the world, who relishes the pressure and privilege of working\
+    \ with high caliber colleagues, and who actively seeks feedback to keep leveling\
+    \ up. We want someone who will run towards, not away from, solving the company\u2019\
+    s hardest problems.</p> <p>Our <a href=\"https://www.coinbase.com/mission\">work\
+    \ culture</a> is intense and isn\u2019t for everyone. But if you want to build\
+    \ the future alongside others who excel in their disciplines and expect the same\
+    \ from you, there\u2019s no better place to be.</p> <p>While many roles at Coinbase\
+    \ are remote-first, we are not remote-only. In-person participation is required\
+    \ throughout the year. Team and company-wide offsites are held multiple times\
+    \ annually to foster collaboration, connection, and alignment. Attendance is expected\
+    \ and fully supported.</p></div><p>We are looking for a Staff Software Engineer\
+    \ to join the Payment Rails team within Coinbase's Platform organization. Payment\
+    \ Rails is the foundational infrastructure that powers every fiat and crypto money\
+    \ movement at Coinbase\u2014processing billions of dollars in transaction volume\
+    \ across payment methods, gateways, and settlement systems. In this role, you'll\
+    \ own the architecture and technical direction of our payment rails infrastructure,\
+    \ designing fault-tolerant, high-reliability systems that enable seamless transfers\
+    \ at global scale while maintaining the safety and compliance standards our customers\
+    \ depend on.</p> <p><strong>What you\u2019ll be doing (ie. job duties):</strong></p>\
+    \ <ul> <li>Own the technical strategy, architecture, and roadmap for Payment Rails\u2014\
+    designing APIs, orchestration layers, and integrations that consolidate fragmented\
+    \ payment flows into a cohesive, multi-tenant platform other teams can build on.</li>\
+    \ <li>Build and scale complex distributed systems that process high-volume, high-reliability\
+    \ payment traffic\u2014designing for fault isolation, graceful degradation, strong\
+    \ observability, and clear SLOs for Tier-0/Tier-1 services.</li> <li>Drive an\
+    \ AI-first approach to engineering workflows\u2014identify where AI-powered tools\
+    \ can accelerate development, improve code quality, and enhance operational efficiency\
+    \ across the team and broader engineering org.</li> <li>Partner cross-functionally\
+    \ with Product, Risk, Compliance, and Operations to translate ambiguous business\
+    \ requirements into well-scoped technical solutions that balance speed, safety,\
+    \ and regulatory requirements.</li> <li>Lead high-stakes scaling initiatives and\
+    \ define the technical direction for how Coinbase moves money\u2014anticipating\
+    \ bottlenecks before they occur and driving proactive, systematic improvements.</li>\
+    \ <li>Raise the engineering bar across Payment Rails and adjacent orgs by establishing\
+    \ paved roads, design patterns, and best practices that elevate team technical\
+    \ quality through mentorship, design reviews, and process improvements.</li> <li>Mentor\
+    \ and train other team members on design techniques and coding standards</li>\
+    \ </ul> <p><strong>What we look for in you (ie. job requirements):</strong></p>\
+    \ <ul> <li>8+ years of experience in software engineering.</li> <li>Experience\
+    \ building payment systems, financial infrastructure, or high-volume transactional\
+    \ systems.</li> <li>You've designed and built fault-tolerant, highly reliable\
+    \ distributed systems at scale\u2014with a demonstrable track record of architecting\
+    \ systems that handle billions of dollars in transaction volume.</li> <li>Platform-builder\
+    \ mindset: you've led efforts to turn fragmented services and bespoke integrations\
+    \ into coherent, reusable platforms (e.g., shared frameworks, unified APIs, multi-tenant\
+    \ architectures).</li> <li>Strong operational excellence: experience owning production\
+    \ reliability, leading high-severity incident response, and driving systemic improvements\
+    \ from postmortems across multiple teams or domains.</li> <li>Collaborative leadership:\
+    \ history of influencing across teams and organizations without direct authority,\
+    \ driving consensus on high-impact technical decisions, and representing your\
+    \ area in org-level forums.</li> <li>Demonstrates the ability to responsibly use\
+    \ generative AI tools and copilots (e.g., LibreChat, Gemini, Glean) in daily workflows,\
+    \ continuously learn as tools evolve, and apply human-in-the-loop practices to\
+    \ deliver business-ready outputs and drive measurable improvements in efficiency,\
+    \ cost, and quality.</li> </ul> <p><strong>Nice to haves:</strong></p> <ul> "
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-08'
+  posting_date: '2026-04-07'
+  date_source: first_published
+  date_added: '2026-04-08'
+  discovered: '2026-04-08T10:15:26.231635+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

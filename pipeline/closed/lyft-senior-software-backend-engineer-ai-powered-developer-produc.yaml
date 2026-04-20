@@ -1,0 +1,116 @@
+id: lyft-senior-software-backend-engineer-ai-powered-developer-produc
+name: Lyft Senior Software (Backend) Engineer, AI-Powered Developer Productivity (Rider
+  Quality)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Lyft
+  url: https://boards.greenhouse.io/lyft
+  application_url: https://app.careerpuck.com/job-board/lyft/job/8481872002?gh_jid=8481872002
+  portal: greenhouse
+  location: Toronto, Canada
+  location_class: international
+  description: <p>At Lyft, our purpose is to serve and connect. We aim to achieve
+    this by cultivating a work environment where all team members belong and have
+    the opportunity to thrive.</p> <p>Our core philosophy is to empower developers
+    to self-serve rather than be bottlenecked by a central quality team. We believe
+    that by creating smart, automated tooling, we can eliminate common roadblocks,
+    making developers happier and more productive.</p> <p>The Rider Quality team is
+    focused on elevating quality, testing, and accessibility across our mobile platforms.
+    We are currently shifting our strategy to heavily leverage automation and AI to
+    revolutionize how we approach testing. We're not doing traditional QA - we're
+    building the future of quality engineering.</p> <p>This is a chance to step into
+    a Senior role where you won't just write code; you'll design systems that define
+    how hundreds of engineers deliver product faster, happier, and with fewer bugs.
+    We are fundamentally shifting away from manual processes and existing automation
+    frameworks that struggle to keep up, betting heavily on Artificial Intelligence
+    and agentic frameworks to drive a massive "shift left" in our organization.</p>
+    <p>Success in this role is measured by tangible impact, including increased developer
+    satisfaction, engineering hours saved, and bugs/incidents avoided in production.</p>
+    <p>We are seeking a highly skilled and innovative Senior Software Engineer to
+    join our team. You will be instrumental in building the next generation of our
+    quality assurance platform. You will be responsible for designing and developing
+    advanced AI-powered tooling for test case generation, review, and execution. Your
+    work will directly impact our ability to provide fast, actionable feedback to
+    developers, "shifting left" to ensure quality from the earliest stages of development.</p>
+    <p>You will play a key role in integrating these tools into our existing developer
+    workflows, ensuring seamless adoption and maximum impact. We are looking for someone
+    with a strong background in software engineering who is passionate about automation
+    and can think creatively about how to apply cutting-edge technology to solve complex
+    quality challenges.</p> <p><strong>What you'll accomplish:</strong></p> <ul> <li><strong>Pave
+    the path:</strong> You will be the architect of self-service tooling, creating
+    "paved paths" that eliminate developer friction and bottlenecks. Your work will
+    directly increase the productivity and happiness of our entire mobile engineering
+    organization.</li> <li><strong>Be an AI pioneer:</strong> You will design, build,
+    and deploy our in-house AI tooling (using Python and Go), tackling complex problems
+    like automatic test case generation, smart test execution, and comprehensive accessibility
+    monitoring from design to production.</li> <li><strong>Scale and impact:</strong>
+    You will own the strategy for integrating these intelligent systems into the developer
+    workflow, ensuring fast, continuous feedback and ensuring a world-class, accessible
+    experience for every rider.</li> </ul> <h2>Responsibilities:</h2> <ul> <li>Design,
+    build, and deploy AI-powered tools and agentic frameworks to automate test case
+    generation, review, and execution.</li> <li>Create self-service tooling and paved
+    paths that empower developers to own quality and receive fast feedback without
+    waiting on manual processes.</li> <li>Integrate new automation tools and workflows
+    into our CI/CD pipeline to provide fast, continuous feedback to engineering teams.</li>
+    <li>Collaborate with our QA and Test Automation Engineers to understand current
+    testing challenges and develop automated solutions.</li> <li>Architect and implement
+    accessibility testing and monitoring solutions across the entire value stream,
+    from design to production.</li> <li>Mentor junior engineers and contribute to
+    a culture of engineering excellence and innovation.</li> <li>Work with technologies
+    including Python and Go for tooling development, with an understanding of mobile
+    platforms (Swift and Kotlin) for integration.</li> </ul> <h2>Experience:</h2>
+    <ul> <li>You have a Bachelor’s degree in Computer Science, a related field, or
+    equivalent practical experience.</li> <li>You have 5+ years of experience as a
+    software engineer with a strong background in building scalable and reliable systems.</li>
+    <li>You have experience with or a strong interest in AI and machine learning,
+    particularly as it applies to software testing and quality assurance.</li> <li>You
+    are proficient in Python and/or Go.</li> <li>You have an understanding of mobile
+    development principles, with prior experience in Swift or Kotlin a strong plus,
+    or the ability to learn mobile concepts quickly.</li> <li>You are a proactive
+    problem-solver with a knack for identifying inefficiencies and building automated
+    solutions.</li> <li>You have excellent communication and collaboration skills,
+    able to work effectively with cross-functional teams.</li> </ul> <h2><strong>Benefits:</strong></h
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.154113+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

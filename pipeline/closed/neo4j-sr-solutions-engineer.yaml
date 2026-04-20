@@ -1,0 +1,105 @@
+id: neo4j-sr-solutions-engineer
+name: Neo4j Sr. Solutions Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Neo4j
+  url: https://boards.greenhouse.io/neo4j
+  application_url: https://boards.greenhouse.io/neo4j/jobs/4673915006?gh_jid=4673915006
+  portal: greenhouse
+  location: 'Remote: Boston area'
+  location_class: us-remote
+  description: '<div class="content-intro"><div><span style="font-size: 18pt;"><strong>About
+    Neo4j:</strong></span></div> <div> <p>Neo4j is the graph intelligence platform
+    that transforms data into knowledge to power the next generation of intelligent
+    applications and AI systems. It includes enterprise-ready knowledge graphs for
+    accurate, explainable, and governed AI; the most comprehensive, trusted, and easy-to-deploy
+    graph capabilities across any environment and data source; and an unmatched ecosystem
+    trusted by 84 of the Fortune 100 and supported by the world’s largest graph community.&nbsp;Intelligence
+    that works. Results that matter.</p> <p>Built to work everywhere and integrate
+    with everything across every cloud for dynamic, personalized, and autonomous AI
+    systems. We deliver quicker results, contextual knowledge, and solutions that
+    impact customers and employees across the business.</p> </div> <div><span style="font-size:
+    18pt;"><strong>Our Vision:&nbsp;</strong></span></div> <div> <p><span style="font-weight:
+    400;">At Neo4j, we have always strived to help the world make sense of data.&nbsp;&nbsp;</span></p>
+    <p><span style="font-weight: 400;">As business, society and knowledge become increasingly
+    connected, our technology promotes innovation by helping organizations to find
+    and understand data relationships. We created, drive and lead the graph database
+    category, and we’re disrupting how organizations leverage their data to innovate
+    and stay competitive.</span></p> </div></div><p>At Neo4j, our Solution Engineers
+    are pivotal to our company’s success. As a critical member of our regional go-to-market
+    team, you will partner with our sales executives to showcase the value of our
+    graph data platform and manage the technical aspects of the sales cycle. You will
+    help organizations across industries such as Financial Services, Telecommunications,
+    Technology and Life Sciences understand the business and technical value of representing
+    data using Neo4j graph database and analytics technology.. You will grow as a
+    thought leader in graphs and solve our customers’ high-value problems beyond traditional
+    data solutions.</p> <p><strong>What Success Looks Like:</strong></p> <ul> <li>Developing
+    and honing subject matter expertise to effectively discern and understand the
+    true needs of our customers, present technology solutions that target those needs,
+    and all in all, demonstrate thought leadership and the value of Neo4j through
+    platform and use case demonstrations, solution architecting, workshops, and conferences.</li>
+    <li>Meeting and exceeding regional revenue goals, as a result of helping Sales
+    to qualify and validate opportunities from a technical perspective and accelerate
+    the sales cycle and adoption of Neo4j.</li> <li>Collaborating effectively with
+    Sales, Professional Services, Product Management, etc to deliver continuous value
+    to customers and ensure a seamless customer experience as they embark on the graph
+    journey.</li> </ul> <p><strong>What You’ll Do:</strong></p> <ul> <li>Confidently
+    articulate the business and technical value of Neo4j to customers and prospects
+    as a key technical advisor and advocate for our products and services</li> <li>Actively
+    drive and run the technology evaluation stage of the sales cycles.</li> <li>Work
+    across a number of opportunities in parallel and manage day-to-day activities
+    such as opportunity qualification, technical discovery, presentations, platform
+    and use case demonstrations, proof of value, sizing, and documentation of technical
+    decision criteria.</li> <li>Build and nurture rapport with customer stakeholders
+    at all levels and be the trusted advisor to them to help them understand what
+    they can achieve with Neo4j.</li> <li>Co-create reference and solution architectures
+    with our customers, including integrating Neo4j with their existing architecture
+    and applications within a public cloud (AWS, Azure, or GCP) or on-premise environment.</li>
+    <li>Stay current on latest Neo4j capabilities, including but not limited to usage
+    and integration with third-party tools and services.</li> <li>Distill and communicate
+    customer needs and product feedback to Product Management, Engineering, Marketing,
+    and Sales.</li> <li>Help drive demand through the participation in account-based
+    marketing events as well as industry-known conferences and trade shows.</li> <li>Lead
+    by example and actively foster an environment of teamwork, transparency, creativity,
+    and continuous improvement.</li> <li>Travel as needed to assist in deal creation
+    and closure, and provide support to your team as required.</li> </ul> <p><strong>What
+    You’ll Bring:</strong></p> <ul> <li>5+ years of customer-facing experience in
+    a similar capacity (Sales/Presales/Solutions Engineer, Solutions Architect, Technical
+    Consultant, etc), ideally in a similar high-growth, scaling environment.</li>
+    <li>Experience working with different data technologies in either of the following
+    areas: enterprise data architecture, data analytics, data science or cl'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-16'
+  date_source: first_published
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.533063+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,113 @@
+id: anthropic-applied-ai-engineer
+name: Anthropic Applied AI Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/5055488008
+  portal: greenhouse
+  location: Tokyo, Japan
+  location_class: international
+  description: '<div class="content-intro"><h2><strong>About Anthropic</strong></h2>
+    <p>Anthropic’s mission is to create reliable, interpretable, and steerable AI
+    systems. We want AI to be safe and beneficial for our users and for society as
+    a whole. Our team is a quickly growing group of committed researchers, engineers,
+    policy experts, and business leaders working together to build beneficial AI systems.</p></div><h2
+    class="heading"><strong>About Anthropic</strong></h2><p>Anthropic’s mission is
+    to create reliable, interpretable, and steerable AI systems. We want AI to be
+    safe and beneficial for our users and for society as a whole. Our team is a quickly
+    growing group of committed researchers, engineers, policy experts, and business
+    leaders working together to build beneficial AI systems.</p><p><strong>As a member
+    of the Applied AI team at Anthropic, you will be a technical Product Engineer
+    focused on becoming a trusted technical advisor to customers as they adopt Claude.
+    You will work closely with customer product and engineering teams as they ship
+    new products powered by Claude: advising on architecture design decisions, developing
+    evaluation frameworks, and guiding customers through the most cutting edge implementation
+    patterns for LLMs.</strong></p><p><strong>Working closely with our Sales, Product,
+    and Engineering teams, you''ll guide customers from technical discovery through
+    successful deployment. You''ll combine deep engineering expertise with customer-facing
+    skills to help customers understand the potential of working with LLMs and build
+    innovative solutions that address complex business challenges while maintaining
+    our high standards for safety and reliability.&nbsp;</strong></p><p><strong>Responsibilities:</strong></p><ul><li><p>Serve
+    as a technical advisor to Anthropic customers as they deploy new products &amp;
+    workflows with our models: from discovery through deployment, coordinating internally
+    across multiple teams to drive customer success</p></li><li><p>Partner with account
+    executives to deeply understand customer product requirements and architect technical
+    solutions, ensuring alignment between business objectives and technical implementation</p></li><li><p>Guide
+    technical architecture decisions and help customers build state-of-the-art products
+    &amp; workflows with LLMs via API</p></li><li><p>Develop customized pilots, prototypes,
+    and evaluation suites that make the case for customer deployment of our models
+    into customer products and workflows via our API</p></li><li><p>Lead hands-on
+    technical workshops and code reviews with customer engineering teams</p></li><li><p>Identify
+    common design patterns and contribute insights back to our Product and Engineering
+    teams&nbsp;</p></li><li><p>Maintain strong knowledge of the latest developments
+    in LLM capabilities, implementation patterns, and AI product development stacks</p></li><li><p>Travel
+    occasionally to customer sites for workshops, implementation support, and building
+    relationships</p></li><li><p>Attend conferences, lead speaking engagements, write
+    blog posts and white papers on topics surrounding the AI space</p></li></ul><p><strong>You
+    may be a good fit if you have:&nbsp;</strong></p><ul><li><p>4+ years of experience
+    in a technical roles such as Customer Engineer, Forward Deployed Engineer, Software
+    Engineer or Technical Product Manager with a desire to work closely with customers</p></li><li><p><em>Production
+    experience with LLMs</em> including advanced prompt engineering, agent development,
+    evaluation frameworks, and deployment at scale</p></li><li><p><em>Strong programming
+    skills with proficiency in Python</em> and experience building production applications</p></li><li><p>Expertise
+    working with common LLM implementation patterns, prompt engineering, evaluation
+    frameworks, agent frameworks, and retrieval frameworks.</p></li><li><p>Ability
+    to navigate ambiguity and execute across domains with <em>intellectual openness</em>,
+    finding simple solutions to complex problems</p></li><li><p><em>High cooperation</em>
+    mindset for cross-organizational collaboration, balancing competing priorities
+    with <em>integrity</em></p></li><li><p>Passion for advancing <em>safe, beneficial
+    AI systems</em> through creative technical applications</p></li><li><p>Exceptional
+    communication skills to convey technical concepts to diverse stakeholders while
+    maintaining a <em>low ego</em> and collaborative approach</p></li></ul><p><strong>Deadline
+    to apply:&nbsp;</strong>None. Applications will be reviewed on a rolling basis.&nbsp;</p><div
+    class="content-conclusion"><h2><strong>Logistics</strong></h2> <p><strong>Education
+    requirements: </strong>We require at least a Bachelor''s degree in a related field
+    or equivalent experience.<strong><br><br>Location-based hybrid policy:</strong>
+    Currently, we expect all staff to be in one of our offices at least 25% of the
+    time. However, some roles may require more time in our offices.</p> <p><strong
+    data-stringify-type="bold">Visa sponsorship:</str'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.821397+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

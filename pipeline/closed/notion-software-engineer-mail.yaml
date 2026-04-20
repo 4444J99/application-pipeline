@@ -1,0 +1,119 @@
+id: notion-software-engineer-mail
+name: Notion Software Engineer, Mail
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Notion
+  url: https://jobs.ashbyhq.com/notion
+  application_url: https://jobs.ashbyhq.com/notion/ff54d0b3-d30f-4622-b6e6-9b9c6e4132ea
+  portal: ashby
+  location: New York, New York
+  location_class: us-onsite
+  description: "About Us: Notion helps you build beautiful tools for your life\u2019\
+    s work. In today's world of endless apps and tabs, Notion provides one place for\
+    \ teams to get everything done, seamlessly connecting docs, notes, projects, calendar,\
+    \ and email\u2014with AI built in to find answers and automate work. Millions\
+    \ of users, from individuals to large organizations like Toyota, Figma, and OpenAI,\
+    \ love Notion for its flexibility and choose it because it helps them save time\
+    \ and money. In-person collaboration is essential to Notion's culture. We require\
+    \ all team members to work from our offices on Mondays, Tuesdays, and Thursdays,\
+    \ our designated Anchor Days. Certain teams or positions may require additional\
+    \ in-office workdays. About The Role: We\u2019re building Notion Mail to rethink\
+    \ how email fits into the bigger picture of your work. Over time, it reduces context\
+    \ switching, connects email to the rest of Notion, and uses AI to help people\
+    \ move faster from \u201Cinbox\u201D to \u201Cdone.\u201D We\u2019re looking for\
+    \ a backend engineer to help build and evolve the systems behind Notion Mail,\
+    \ including the infrastructure, data models, and asynchronous workflows that make\
+    \ high-quality syncing and AI-powered experiences possible. On the backend, you\u2019\
+    ll work on services that power inbox intelligence, such as auto-triage and auto-drafting\
+    \ workflows, and the reliability and observability that these experiences depend\
+    \ on. You\u2019ll collaborate closely with product, design, and other engineering\
+    \ teams, and you\u2019ll have meaningful ownership in a product that\u2019s early\
+    \ enough for your work to shape the foundation and direction. What You'll Achieve:\
+    \ Own systems and infrastructure that power AI-assisted email communication workflows\
+    \ at scale. Build and evolve reliable data flows and models that keep email state\
+    \ accurate and up to date. Design asynchronous processing systems that support\
+    \ high-volume, low-latency product experiences. Partner cross-functionally with\
+    \ engineering, product, and design to deliver end-to-end features from backend\
+    \ foundations to customer facing experiences. Help keep production systems healthy\
+    \ by strengthening observability, improving performance, and increasing operational\
+    \ reliability over time. Skills You'll Need to Bring: Systems design & production\
+    \ infrastructure experience: You\u2019ve designed systems with clear tradeoffs,\
+    \ and you have hands on experience with infrastructure topics like Kubernetes,\
+    \ observability/telemetry (e.g., Honeycomb), and operating reliable production\
+    \ systems. Strong data modeling skills: You can design durable data models and\
+    \ APIs that are correct, evolvable, and performant as product requirements grow.\
+    \ Ownership and initiative : You thrive in a fast-moving, unstructured environment\
+    \ and are comfortable taking ownership of ambiguous problems. You act with a bias\
+    \ toward action and focus on results. Pragmatic problem-solver : You prioritize\
+    \ business impact and understand the balance between craft, speed, and long-term\
+    \ maintainability. You\u2019re opinionated but not ideological, and you learn\
+    \ new technologies as you go. Collaborative and empathetic : You work well across\
+    \ teams, offer guidance to unblock others, and communicate clearly when aligning\
+    \ on technical direction. You don\u2019t need to be an AI expert, but you\u2019\
+    re curious and willing to adopt AI tools to work smarter and deliver better results\
+    \ Nice to Haves: Past full stack experience, or interest in doing some full stack\
+    \ work over time Experience building high-volume asynchronous job execution and\
+    \ orchestration systems Hands-on experience with AWS infrastructure and a background\
+    \ in distributed systems We hire talented and passionate people from a variety\
+    \ of backgrounds because we want our global employee base to represent the wide\
+    \ diversity of our customers. If you\u2019re excited about a role but your past\
+    \ experience doesn\u2019t align perfectly with every bullet point listed in the\
+    \ job description, we still encourage you to apply. If you\u2019re a builder at\
+    \ heart, share our company values, and enthusiastic about making software toolmaking\
+    \ ubiquitous, we want to hear from you. Notion is proud to be an equal opportunity\
+    \ employer. We do not discriminate in hiring or any employment decision based\
+    \ on race, color, religion, national origin, age, sex (including pregnancy, childbirth,\
+    \ or related medical conditions), marital status, ancestry, physical or mental\
+    \ disability, genetic information, veteran status, gender identity or expression,\
+    \ sexual orientation, or other applicable legally protected characteristic. Notion\
+    \ considers qualified applicants with criminal histories, consistent with applicable\
+    \ federal, state and local law. Notion is also committed to providing reasonable\
+    \ accommodations for qualified individuals with disabilities and disabled veterans\
+    \ in our job application procedures. If you need assistance or an accommodation\
+    \ due to a disability, please let your recruiter know. Notion is committed to\
+    \ providing highly competitive cash compensation, equity, and benefits. The compensation\
+    \ offe"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.755066+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

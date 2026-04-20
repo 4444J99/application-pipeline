@@ -1,0 +1,116 @@
+id: notion-forward-deployed-software-engineer-developer-platform
+name: Notion Forward Deployed Software Engineer, Developer Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Notion
+  url: https://jobs.ashbyhq.com/notion
+  application_url: https://jobs.ashbyhq.com/notion/d5d75b07-7f89-4b3f-b0a6-bb77c5613140
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: 'About Us: Notion helps you build beautiful tools for your life’s work.
+    In today''s world of endless apps and tabs, Notion provides one place for teams
+    to get everything done, seamlessly connecting docs, notes, projects, calendar,
+    and email—with AI built in to find answers and automate work. Millions of users,
+    from individuals to large organizations like Toyota, Figma, and OpenAI, love Notion
+    for its flexibility and choose it because it helps them save time and money. In-person
+    collaboration is essential to Notion''s culture. We require all team members to
+    work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor
+    Days. Certain teams or positions may require additional in-office workdays. About
+    the role: Notion is currently at an inflection point where we’re evolving from
+    a loved product for teams to an essential AI platform for some of the world’s
+    largest customers. In this role you’ll work at the intersection of cutting edge
+    AI capabilities and real world enterprise problems to shape what AI-native productivity
+    looks like for our customers. In this role you’d be a founding member of a new
+    team whose culture you’ll get to help build from the ground up. Your initial focus
+    will be building custom AI solutions on top of our most advanced AI systems with
+    our largest Enterprise customers and design partners. Over time we expect this
+    role and team to be the frontlines of our product development, working with our
+    most advanced customers to build for and with them and then bringing that knowledge
+    back to Notion’s AI platform. Skills You''ll Need to Bring: Customer-facing -
+    You can conduct discovery interviews, navigate customer stakeholder relationships
+    and communicate technical concepts to non-technical audiences. You''re comfortable
+    spending significant time working directly with customers and collaborating closely
+    with both our Go-to-Market teams (Sales, Solutions, Customer Success) and EPD
+    (Engineering, Product, Design) to drive customer success. Strong engineering fundamentals
+    - You have 4-8 years of experience as a Software Engineer or an equivalent role
+    at a technology company and can write production-quality code, conduct system
+    design, and make sound technical decisions. AI tooling and automation - You''re
+    passionate about building LLM-based tools and you’ve built custom integrations
+    or workflow automations that have been game changing. You''re excited to co-create
+    the next generation of AI-native products with our customers Systems thinking
+    - You can analyze a business and translate it into the right data model, ontology,
+    and technical architecture. You understand how to map real-world processes into
+    databases, relationships, and AI workflows without extensive hand-holding. High
+    agency and comfort with ambiguity - You have a healthy disregard for the status
+    quo and can figure things out independently. You''re excited about defining a
+    new role and function, not just executing within an established one. You can handle
+    the ambiguity of prototyping solutions before clear patterns emerge. You don’t
+    need to be an AI expert, but you’re curious and willing to adopt AI tools to work
+    smarter and deliver better results Nice to Haves: Forward Deployed Engineer experience
+    - You''ve worked as a Forward Deployed Engineer or related role in in similar
+    environments. You''ve built tailored solutions for enterprise customers and helped
+    them succeed with complex technical products. Deep familiarity with Notion - You
+    already understand and love Notion as a product. You''ve built sophisticated workspaces,
+    understand databases and relations, and have opinions about how Notion should
+    evolve for enterprise use cases. Developer API experience - You''ve built systems
+    and tools that other engineers use. You understand how to design APIs, abstractions,
+    and developer experiences. You think in terms of scalability, maintainability,
+    and enabling others. We hire talented and passionate people from a variety of
+    backgrounds because we want our global employee base to represent the wide diversity
+    of our customers. If you’re excited about a role but your past experience doesn’t
+    align perfectly with every bullet point listed in the job description, we still
+    encourage you to apply. If you’re a builder at heart, share our company values,
+    and enthusiastic about making software toolmaking ubiquitous, we want to hear
+    from you. Notion is proud to be an equal opportunity employer. We do not discriminate
+    in hiring or any employment decision based on race, color, religion, national
+    origin, age, sex (including pregnancy, childbirth, or related medical conditions),
+    marital status, ancestry, physical or mental disability, genetic information,
+    veteran status, gender identity or expression, sexual orientation, or other applicable
+    legally protected characteristic. Notion considers qualified applicants with criminal
+    histories, consistent with applicable federal, state and local law. Notion is
+    also committed to providing reasonable accommodations f'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.765309+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

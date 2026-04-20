@@ -1,0 +1,109 @@
+id: roblox-senior-software-engineer-creator-collaboration
+name: Roblox Senior Software Engineer - Creator Collaboration
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Roblox
+  url: https://boards.greenhouse.io/roblox
+  application_url: https://careers.roblox.com/jobs/7776689?gh_jid=7776689
+  portal: greenhouse
+  location: San Mateo, CA, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p><span style="font-weight: 400;">Every
+    day, tens of millions of people come to Roblox to explore, create, play, learn,
+    and connect with friends in 3D immersive digital experiences– all created by our
+    global community of developers and creators.&nbsp;</span></p> <p><span style="font-weight:
+    400;">At Roblox, we’re building the tools and platform that empower our community
+    to bring any experience that they can imagine to life. Our vision is to reimagine
+    the way people come together, from anywhere in the world, and on any device.</span><strong>
+    </strong><span style="font-weight: 400;">We’re on a mission to connect a billion
+    people with optimism and civility, and looking for amazing talent to help us get
+    there.&nbsp;</span></p> <p><span style="font-weight: 400;">A career at Roblox
+    means you’ll be working to shape the future of human interaction, solving unique
+    technical challenges at scale, and helping to create safer, more civil shared
+    experiences for everyone.</span></p></div><p>Roblox Studio is the creation engine
+    behind millions of immersive 3D experiences built by creators around the world.
+    As a Senior Software Engineer focused on Collaboration, you’ll be building workflows
+    in Roblox Studio and our platform enabling creators and AI agents to collaborate
+    at scale by creating, sharing, and managing content. The ideal candidate has C++
+    &amp; game engine experience and enjoys solving complex software problems.</p>
+    <p>We believe that collaborative teams are the future of building one’s imagination
+    on Roblox and you will be designing and building features which unlock that vision.
+    Join us in our mission to make collaboration at scale performant, frictionless,
+    and most of all fun!</p> <h2><strong>You Will:</strong></h2> <ul> <li>Plan and
+    deliver complex technical features E2E in our game engine and in the Roblox Studio
+    that will allow developers to grow in our community</li> <li>Work with UX designers
+    and Product Manager to come up with optimal solutions</li> <li>Work cross functionally,
+    across teams and technology platforms to deliver high quality and amazing user
+    functionality</li> <li>Improve the product quality by fostering automation testing</li>
+    <li>Participate in building the world''s best professional application for massively
+    multiplayer game development</li> </ul> <h2><strong>You Have:</strong></h2> <ul>
+    <li>5+ years in developing and deploying user-facing applications</li> <li>Bachelor''s
+    degree in Computer Science, or a similar technical field</li> <li>1+ years of
+    experience with C++ or another lower-level language</li> <li>Experience with UI
+    frameworks like React, Cocoa, QT, or others is a plus</li> <li>Experience with
+    3D scene and game development tools and workflows is a plus</li> </ul> <p>&nbsp;</p><div
+    class="content-pay-transparency"><div class="pay-input"><div class="description"><p>For
+    roles that are based at our headquarters in San Mateo, CA: The starting base pay
+    for this position is as shown below. The actual base pay is dependent upon a variety
+    of job-related factors such as professional background, training, work experience,
+    location, business needs and market demand. Therefore, in some circumstances,
+    the actual salary could fall outside of this expected range. This pay range is
+    subject to change and may be modified in the future. All full-time employees are
+    also eligible for equity compensation and for benefits as described on <strong><a
+    href="https://careers.roblox.com/total-rewards">this page</a></strong>.</p></div><div
+    class="title">Annual Salary Range</div><div class="pay-range"><span>$196,750</span><span
+    class="divider">&mdash;</span><span>$243,290 USD</span></div></div></div><div
+    class="content-conclusion"><p>Roles that are based in an office are onsite Tuesday,
+    Wednesday, and Thursday, with optional presence on Monday and Friday (unless otherwise
+    noted).</p> <p>Roblox provides equal employment opportunities to all employees
+    and applicants for employment and prohibits discrimination and harassment of any
+    type without regard to race, color, religion, age, sex, national origin, disability
+    status, genetics, protected veteran status, sexual orientation, gender identity
+    or expression, or any other characteristic protected by federal, state or local
+    laws. Roblox also provides reasonable accommodations to candidates with qualifying
+    disabilities or religious beliefs during the recruiting process.</p></div>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-07'
+  posting_date: '2026-04-06'
+  date_source: first_published
+  date_added: '2026-04-07'
+  discovered: '2026-04-07T10:15:28.434684+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

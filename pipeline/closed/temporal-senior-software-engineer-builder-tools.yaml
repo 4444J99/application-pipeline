@@ -1,0 +1,106 @@
+id: temporal-senior-software-engineer-builder-tools
+name: Temporal Senior Software Engineer, Builder Tools
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Temporal
+  url: https://boards.greenhouse.io/temporaltechnologies
+  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/5111582007
+  portal: greenhouse
+  location: United States, Remote Opportunity
+  location_class: us-remote
+  description: <div class="content-intro"><h3><strong>About Us</strong></h3> <div>Temporal
+    is an open source programming model that can simplify code, make applications
+    more reliable, and help developers focus on the important things like delivering
+    features faster. We are on a mission to be the reliable foundation of every developer’s
+    toolbox, and are building the team that will make that happen.</div> <div>&nbsp;</div>
+    <div>Our values guide us —they are present in how we show up, make decisions,
+    and work together to make an impact. We’re curious, driven, collaborative, genuine
+    and humble.</div> <div>&nbsp;</div> <div>Temporal is growing and we are looking
+    for those who share our values, challenge 'standard' thinking, and want to influence
+    our future. If you have a passion for improving the developer experience, building
+    world-class open-source software and communities, and want to be a part of our
+    amazing team, we'd love to hear from you!</div></div><h3>Summary</h3> <p>Join
+    our Builder Tools Team as a Senior Software Engineer. Our mission is to empower
+    a company of builders by delivering a frictionless, standardized ecosystem of
+    core engineering tools. We partner directly with teams across the company to standardize
+    workflows and create a tight feedback loop with product leadership to influence
+    own own product direction.</p> <h3>What You’ll Do</h3> <ul> <li>Build and maintain
+    internal engineering tooling that improves builder flow and reduces friction across
+    the company.</li> <li>Provide guidance, best practices, and automation to support
+    adoption of AI agentic coding tools.</li> <li>Develop and operate internally facing
+    agents.</li> <li>Implement and improve developer workflows, including guardrails,
+    evaluation approaches, and guidance that enables safe adoption of new tooling.</li>
+    <li>Own development and operation of our internal agent platform.</li> <li>Partner
+    with teams across Engineering, Product, Sales, and G&amp;A to understand where
+    AI could accelerate their work or improve the quality of outcomes.</li> <li>Build
+    measurement and feedback loops (usage, reliability, cost, and cycle time) to quantify
+    impact and guide iteration.</li> <li>Own documentation and enablement materials
+    that help builders succeed using the paved roads.</li> <li>Participate in on-call
+    to support internal users.</li> </ul> <h3>What You’ll Bring</h3> <ul> <li>Strong
+    software engineering fundamentals and experience shipping and operating production-quality
+    internal platforms or developer tooling.</li> <li>Experience leveraging modern
+    agentic coding tools such as Codex and Claude Code.</li> <li>Proficiency in one
+    or more programming languages commonly used at Temporal, such as Go, TypeScript/JavaScript,
+    Python, or Java.</li> <li>Experience building workflow automation or internal
+    tools (CLI tools, services, GitHub automation, cloud automation, or similar).</li>
+    <li>Strong judgment about when to standardize versus when to enable flexibility,
+    and how to remove friction without compromising reliability.</li> <li>Comfort
+    working cross-functionally, including partnering with non-traditional developers
+    and translating needs into usable solutions.</li> <li>Ability to use data and
+    qualitative feedback together to prioritize and measure impact.</li> <li>Clear
+    written communication, including documentation that enables self-service.</li>
+    </ul> <h3>Nice to Haves</h3> <ul> <li>Experience building internal agents and
+    operating an agent platform</li> <li>Familiarity with developer productivity measurement
+    frameworks such as SPACE and DORA metrics.</li> </ul> <h3>Compensation</h3> <ul>
+    <li>Base Salary Range - $176,000 - $237,600, depending on qualifications and location</li>
+    <li>Equity Options - Eligible for stock options as part of Temporal’s equity plan</li>
+    </ul><div class="content-conclusion"><div><em>Compensation ranges reflect salary
+    and commission compensation (when applicable) across several geographic markets.
+    Employment offers carefully consider multiple factors, including prior experience,
+    knowledge, expertise, skillset, market location, and job level assessed during
+    the interview process.</em></div> <div>&nbsp;</div> <div><em>Employee benefits
+    and perks below are for full-time employees, part-time or temporary positions
+    are excluded.&nbsp;</em></div> <div>&nbsp;</div> <div> <div><strong>U.S. Benefits&nbsp;</strong></div>
+    <div> <ul> <li>Unlimited PTO, 12 Holidays + 2 Floating Holidays</li> <li>100%
+    Premiums Coverage for Medical, Dental, and Vision</li> <li>AD&amp;D, LT &amp;
+    ST Disability, and Life Insurance (Standard &amp; Supplemental Available)</li>
+    <li>Empower 401K Plan</li> <li>Additional Perks for Learning &amp; Development,
+    Lifestyle Spending, In-Home Office Setup, Professional Memberships, WFH Meals,
+    Internet Stipend and more!</li> </ul> </div> </div> <div> <div><strong>International
+    Benefits</strong></div> <div> <p>Paid Time Off (PTO) and Benefits outside the
+    United States vary by country, and are issued in partnership with <a class="pos
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-16'
+  date_source: first_published
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.408336+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

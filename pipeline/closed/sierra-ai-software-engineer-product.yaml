@@ -1,0 +1,117 @@
+id: sierra-ai-software-engineer-product
+name: 'Sierra AI Software Engineer, Product '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sierra AI
+  url: https://jobs.ashbyhq.com/sierra
+  application_url: https://jobs.ashbyhq.com/sierra/931d7b36-20ce-458c-99aa-6c853486f2b5
+  portal: ashby
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: 'About us At Sierra, we’re creating a platform to help businesses build
+    better, more human customer experiences with AI. We are primarily an in-person
+    company based in San Francisco, with growing offices in Atlanta, New York, London,
+    Paris, Singapore, and Japan. We are guided by a set of values that are at the
+    core of our actions and define our culture: Trust, Customer Obsession, Craftsmanship,
+    Intensity, and Family. These values are the foundation of our work, and we are
+    committed to upholding them in everything we do. Our co-founders are Bret Taylor
+    and Clay Bavor . Bret currently serves as Board Chair of OpenAI. Previously, he
+    was co-CEO of Salesforce (which had acquired the company he founded, Quip) and
+    CTO of Facebook. Bret was also one of Google''s earliest product managers and
+    co-creator of Google Maps. Before founding Sierra, Clay spent 18 years at Google,
+    where he most recently led Google Labs. Earlier, he started and led Google’s AR/VR
+    effort, Project Starline, and Google Lens. Before that, Clay led the product and
+    design teams for Google Workspace. As an Early Career Software Engineer at Sierra,
+    you’ll join a small, highly collaborative engineering organization building the
+    core platform behind AI-powered customer experiences. You’ll work alongside experienced
+    engineers to design, build, and improve production systems that power intelligent
+    agents used by real customers every day. This role is designed for early-career
+    engineers who are eager to learn, curious about AI systems, and excited to grow
+    by shipping real product. You’ll start with well-scoped projects, receive close
+    mentorship, and steadily take on more ownership as you develop your technical
+    skills and product intuition. Early Career engineers are placed on teams based
+    on business needs, your interests, and your strengths, with opportunities to learn
+    across different parts of the system over time. What you’ll do Build and ship
+    production features across backend services, APIs, and user-facing components
+    Collaborate with senior engineers to design, implement, and iterate on systems
+    that support AI agents and customer workflows Write clean, well-tested code and
+    participate in code reviews to learn best practices and improve system quality
+    Help improve the reliability, performance, and scalability of existing systems
+    through debugging, testing, and incremental improvements Partner with product
+    managers, designers, and other engineers to understand customer problems and translate
+    them into technical solutions Learn how large-scale, real-world systems are built,
+    monitored, and evolved in production Team placement New Grad engineers may join
+    one of several teams, including but not limited to: Agent Architecture – Help
+    build the core foundations of how AI agents reason, retrieve information, and
+    are evaluated Insights & Data – Work on tools and systems that analyze conversational
+    data, monitor agent performance, and enable experimentation Voice & Real-Time
+    Systems – Build bleeding edge voice AI systems by improving transcription and
+    synthesis quality in cascaded models, as well as bringing voice-to-voice models
+    to life. Team placement is flexible and may evolve as the company grows and your
+    interests develop. Our values Trust: We build trust with our customers with our
+    accountability, empathy, quality, and responsiveness. We build trust in AI by
+    making it more accessible, safe, and useful. We build trust with each other by
+    showing up for each other professionally and personally, creating an environment
+    that enables all of us to do our best work. Customer Obsession: We deeply understand
+    our customers’ business goals and relentlessly focus on driving outcomes, not
+    just technical milestones. Everyone at the company knows and spends time with
+    our customers. When our customer is having an issue, we drop everything and fix
+    it. Craftsmanship: We get the details right, from the words on the page to the
+    system architecture. We have good taste. When we notice something isn’t right,
+    we take the time to fix it. We are proud of the products we produce. We continuously
+    self-reflect to continuously self-improve. Intensity: We know we don’t have the
+    luxury of patience. We play to win. We care about our product being the best,
+    and when it isn’t, we fix it. When we fail, we talk about it openly and without
+    blame so we succeed the next time. Family: We know that balance and intensity
+    are compatible, and we model it in our actions and processes. We are the best
+    technology company for parents. We support and respect each other and celebrate
+    each other’s personal and professional achievements. What we offer We want our
+    benefits to reflect our values and offer the following to full-time employees:
+    Flexible (Unlimited) Paid Time Off Medical, Dental, and Vision benefits for you
+    and your family Life Insurance and Disability Benefits Retirement Plan (e.g.,
+    401K, pension) with Sierra match Parental Leave Fertility and family building
+    benefits through Carrot Lunch, as well'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.304907+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

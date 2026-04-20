@@ -1,0 +1,116 @@
+id: notion-software-engineer-fullstack-early-career
+name: Notion Software Engineer, Fullstack, Early Career
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Notion
+  url: https://jobs.ashbyhq.com/notion
+  application_url: https://jobs.ashbyhq.com/notion/f7399542-9122-481a-bf64-43bf8093748b
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: 'About Us Notion helps you build beautiful tools for your life’s work.
+    In today''s world of endless apps and tabs, Notion provides one place for teams
+    to get everything done, seamlessly connecting docs, notes, projects, calendar,
+    and email—with AI built in to find answers and automate work. Millions of users,
+    from individuals to large organizations like Toyota, Figma, and OpenAI, love Notion
+    for its flexibility and choose it because it helps them save time and money. In-person
+    collaboration is essential to Notion''s culture. We require all team members to
+    work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor
+    Days. Certain teams or positions may require additional in-office workdays. About
+    the Role As an Early Career Software Engineer at Notion, you’ll help shape core
+    user experiences and accelerate how people discover value in Notion. You''ll tackle
+    meaningful challenges with increasing autonomy, crafting code that millions of
+    users will experience. You''ll take ownership of projects that matter, make critical
+    technical decisions, and contribute your unique perspective to our product vision.
+    Working alongside passionate experts across design, product, and data, you''ll
+    help shape the future of how people work. We’re hiring early career engineers
+    to join us across several teams at Notion. Your recruiter will partner with you
+    to find the team that best aligns with your interests and where you can make the
+    highest impact. What You’ll Achieve Plan, build, and ship product features from
+    conception to launch, then iterate based on insights and user feedback. Improve
+    performance, reliability, and quality of key experiences used by millions of users
+    and thousands of organizations. Run experiments that drive activation, retention,
+    collaboration, and revenue, partnering with design, data science, and research.
+    Build internal tools and platform improvements that help all engineers ship quickly
+    and safely. Contribute to team norms, code quality, and a culture of learning
+    and thoughtful tradeoffs. Areas you might work on Core Notion product features:
+    Help develop, improve, and maintain features for our flagship product, focusing
+    on the editor, databases, sharing, or other key areas that power millions of workflows.
+    AI and automation: Help develop and integrate intelligent features that make Notion
+    more powerful, contextual, and efficient for our users. Growth and activation:
+    Work on features that help new users discover Notion''s value, improve onboarding
+    experiences, and increase user engagement. Platform and infrastructure: Contribute
+    to the systems that power Notion''s backend services, ensuring reliability, scalability,
+    and performance as our user base grows. Skills You’ll Bring Proven track record
+    of execution: You have a minimum of 1 year (and up to 3 years) of full-time professional
+    engineering experience, including building world-class product experiences as
+    part of an engineering team. You have solid fundamentals in data structures, algorithms,
+    and distributed systems, with a product-minded, pragmatic approach to solving
+    problems. Thoughtful problem-solving: You approach problems holistically, starting
+    with a clear and accurate understanding of the context. You think about the implications
+    of what you''re building and how it will impact real people''s lives. You can
+    navigate ambiguity successfully, decompose complex problems into clean solutions,
+    while also balancing the business impact of what you’re building. Impact-driven
+    approach to technology: You see technologies as tools to achieve user impact rather
+    than ends in themselves. You care more about building successful systems that
+    solve real problems than about using specific tech stacks or following trends.
+    You stay current with the latest tools like Cursor, Claude Code, and other AI-assisted
+    development environments, you''re pragmatic about choosing the right tool for
+    the job, focusing on what delivers the most value to users and the business. Proactive
+    communication and high agency: You own your work, communicating clearly about
+    progress and blockers. You don''t wait for instructions for every step but rather
+    show initiative in identifying what needs to be done and driving projects forward.
+    You ask questions when needed while independently finding solutions to problems.
+    You don’t need to be an AI expert, but you’re curious and willing to adopt AI
+    tools to work smarter and deliver better results Nice to Have Experience with
+    parts of our stack like React, TypeScript, Node.js, Postgres, or with experimentation
+    and analytics tooling. Exposure to distributed systems, observability, CI/CD,
+    or infrastructure fundamentals. An interest in product quality and craft, and
+    in helping others stay in flow. You''ve heard of computing pioneers like Ada Lovelace,
+    Douglas Engelbart, Alan Kay, and others—and understand why we''re big fans of
+    their work. We hire talented and passionate people from a variety of backgrounds
+    because we want our global employee base '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.723592+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

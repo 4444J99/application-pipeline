@@ -1,0 +1,117 @@
+id: sierra-ai-developer-relations-engineer
+name: Sierra AI Developer Relations Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sierra AI
+  url: https://jobs.ashbyhq.com/sierra
+  application_url: https://jobs.ashbyhq.com/sierra/7053ca02-ee36-48cc-b331-9d795a966c4c
+  portal: ashby
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: 'About us At Sierra, we’re creating a platform to help businesses build
+    better, more human customer experiences with AI. We are primarily an in-person
+    company based in San Francisco, with growing offices in Atlanta, New York, London,
+    Paris, Singapore, and Japan. We are guided by a set of values that are at the
+    core of our actions and define our culture: Trust, Customer Obsession, Craftsmanship,
+    Intensity, and Family. These values are the foundation of our work, and we are
+    committed to upholding them in everything we do. Our co-founders are Bret Taylor
+    and Clay Bavor . Bret currently serves as Board Chair of OpenAI. Previously, he
+    was co-CEO of Salesforce (which had acquired the company he founded, Quip) and
+    CTO of Facebook. Bret was also one of Google''s earliest product managers and
+    co-creator of Google Maps. Before founding Sierra, Clay spent 18 years at Google,
+    where he most recently led Google Labs. Earlier, he started and led Google’s AR/VR
+    effort, Project Starline, and Google Lens. Before that, Clay led the product and
+    design teams for Google Workspace. What you’ll do Write the playbook for onboarding
+    and educating customers onto Sierra – both the Agent SDK and Agent Studio, our
+    no-code platform. Lead the creation and execution of developer training and enablement
+    programs. Build content that scales — including technical documentation, educational
+    videos, onboarding paths, and sample repositories for SDK adoption. Develop and
+    deploy AI Agents as an Agent Software Engineer, building the knowledge to become
+    a world-leading expert on agent development. Work with our marketing teams to
+    publish developer case studies and success stories to inspire and connect our
+    growing technical community. What you''ll bring Passion for helping customers
+    across small and large enterprises learn to build exceptional AI Agents. Degree
+    in Computer Science or related field, or equivalent professional experience. 4+
+    years of experience in hands-on software development of highly technical products
+    or developer relations roles. Excellent written and verbal communication skills
+    and a desire to apply them in hands-on training sessions. Desire, excitement,
+    and enthusiasm for building an in-person, global community around developing AI
+    Agents. Strong technical skills and familiarity with modern software development
+    — especially developer tooling, SDKs, and APIs. Demonstrated experience in designing
+    and executing technical training, certification, or community initiatives. Even
+    better... Previous experience developing agents using open source tools like LangGraph
+    or interacting with MCP servers. Familiarity with agent platforms, developer communities,
+    or early-stage developer product ecosystems. Proficiency with TypeScript, and
+    comfort with writing code in collaboration with agents like Claude, Codex or Cursor
+    Experience collaborating across product, engineering, and go-to-market teams to
+    launch strategic initiatives. Our values Trust: We build trust with our customers
+    with our accountability, empathy, quality, and responsiveness. We build trust
+    in AI by making it more accessible, safe, and useful. We build trust with each
+    other by showing up for each other professionally and personally, creating an
+    environment that enables all of us to do our best work. Customer Obsession: We
+    deeply understand our customers’ business goals and relentlessly focus on driving
+    outcomes, not just technical milestones. Everyone at the company knows and spends
+    time with our customers. When our customer is having an issue, we drop everything
+    and fix it. Craftsmanship: We get the details right, from the words on the page
+    to the system architecture. We have good taste. When we notice something isn’t
+    right, we take the time to fix it. We are proud of the products we produce. We
+    continuously self-reflect to continuously self-improve. Intensity: We know we
+    don’t have the luxury of patience. We play to win. We care about our product being
+    the best, and when it isn’t, we fix it. When we fail, we talk about it openly
+    and without blame so we succeed the next time. Family: We know that balance and
+    intensity are compatible, and we model it in our actions and processes. We are
+    the best technology company for parents. We support and respect each other and
+    celebrate each other’s personal and professional achievements. What we offer We
+    want our benefits to reflect our values and offer the following to full-time employees:
+    Flexible (Unlimited) Paid Time Off Medical, Dental, and Vision benefits for you
+    and your family Life Insurance and Disability Benefits Retirement Plan (e.g.,
+    401K, pension) with Sierra match Parental Leave Fertility and family building
+    benefits through Carrot Lunch, as well as delicious snacks and coffee to keep
+    you energized Discretionary Benefit Stipend giving people the ability to spend
+    where it matters most Free alphorn lessons These benefits are further detailed
+    in Sierra''s policies, may vary by region, and are subject to change at any time,
+    consisten'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.266992+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

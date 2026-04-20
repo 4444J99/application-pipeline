@@ -1,0 +1,115 @@
+id: wikimedia-staff-software-engineer
+name: Wikimedia Staff Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Wikimedia
+  url: https://boards.greenhouse.io/wikimedia
+  application_url: https://job-boards.greenhouse.io/wikimedia/jobs/7545157
+  portal: greenhouse
+  location: Remote
+  location_class: remote-global
+  description: '<p><strong>Staff Software Engineer&nbsp;</strong></p> <p><strong>PLEASE
+    NOTE:</strong> We will only be considering hiring within UTC-3 to UTC+3 due to
+    the geographical location of the team.</p> <p>The Wikimedia Foundation is seeking
+    an experienced and mission-driven <strong>Staff Software Engineer&nbsp;</strong>to
+    join the Tools Platform team and provide senior technical leadership for Toolforge—the
+    platform that powers over 3,300 community-built tools responsible for roughly
+    <strong>30% of all edits</strong> across Wikipedia and its sister projects.</p>
+    <p>This is a critical individual contributor role at the intersection of platform
+    software, developer experience, and production infrastructure. You will lead the
+    design and implementation of the software systems and workflows that tool developers
+    depend on to build, deploy, operate, and sustain tools at scale.</p> <h3><strong>Why
+    this role matters</strong></h3> <p>Community tool developers extend Wikimedia
+    far beyond what staff teams alone can build. They automate moderation, support
+    editors, process data, and enable entirely new workflows. Toolforge is their production
+    platform.</p> <p>Today, Toolforge has strong infrastructure foundations, and we''re
+    looking for Staff-level software engineers focused on developer workflows, lifecycle
+    tooling, and product experience.</p> <p>As a Staff Software Engineer, you will
+    shape how contributors interact with Toolforge end-to-end—reducing friction, improving
+    reliability, and setting technical direction for a multi-year platform strategy.</p>
+    <h3><strong>You’ll be responsible for:</strong></h3> <ul> <li>Providing Staff-level
+    technical leadership for the software and product experience layer of Toolforge.</li>
+    <li>Designing and building the platform software and user-facing workflows used
+    to create, deploy, debug, and maintain tools.</li> <li>Leading the redesign of
+    Toolforge’s tool creation and maintenance UI</li> <li>Defining and implementing
+    golden paths for common workloads such as Bots, Web tools and Data-processing
+    tools</li> <li>Partnering closely with SREs to ensure platform software integrates
+    cleanly with production infrastructure and operational practices.</li> <li>Acting
+    as a technical multiplier for the team by mentoring engineers, raising engineering
+    standards, and guiding architectural decisions.</li> </ul> <h3><strong>What we’re
+    looking for</strong></h3> <ul> <li>Extensive experience as a senior or Staff-level
+    software engineer working on platforms, developer tools, or infrastructure-adjacent
+    systems.</li> <li>Strong architectural skills across APIs, backend services, and
+    user-facing workflows.</li> <li>Experience designing and building developer platforms:
+    build systems, deployment pipelines, lifecycle tooling, or similar.</li> <li>Ability
+    to work effectively across roles—partnering with SREs, product, developer advocates,
+    and volunteer contributors.</li> <li>Comfort operating in open, distributed, and
+    asynchronous environments.</li> </ul> <h3><strong>Bonus points if you have:</strong></h3>
+    <ul> <li>Experience contributing to or leading open-source projects.</li> <li>Familiarity
+    with Toolforge, Wikimedia Cloud Services, or large-scale contributor platforms.</li>
+    <li>A strong interest in improving developer experience and lowering barriers
+    to entry for technical contributors.</li> </ul> <p>&nbsp;</p> <h4>About the Wikimedia
+    Foundation</h4> <p>The Wikimedia Foundation is the nonprofit organization that
+    operates Wikipedia and the other Wikimedia free knowledge projects. Our vision
+    is a world in which every single human can freely share in the sum of all knowledge.
+    We believe that everyone has the potential to contribute something to our shared
+    knowledge, and that everyone should be able to access that knowledge freely. We
+    host Wikipedia and the Wikimedia projects, build software experiences for reading,
+    contributing, and sharing Wikimedia content, support the volunteer communities
+    and partners who make Wikimedia possible, and advocate for policies that enable
+    Wikimedia and free knowledge to thrive.&nbsp;</p> <p>The Wikimedia Foundation
+    is a charitable, not-for-profit organization that relies on donations. We receive
+    donations from millions of individuals around the world, with an average donation
+    of about $15. We also receive donations through institutional grants and gifts.
+    The Wikimedia Foundation is a United States 501(c)(3) tax-exempt organization
+    with offices in San Francisco, California, USA.</p> <p><em><strong>As an equal
+    opportunity employer, the Wikimedia Foundation values having a diverse workforce
+    and continuously strives to maintain an inclusive and equitable workplace. We
+    encourage people with a diverse range of backgrounds to apply. We do not discriminate
+    against any person based upon their race, traits historically associated with
+    race, religion, color, national origin, sex, pregnancy or related medical conditions,
+    parental status, sexual orientation, gender identity, gender expression, age'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.1
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 10
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.816588+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

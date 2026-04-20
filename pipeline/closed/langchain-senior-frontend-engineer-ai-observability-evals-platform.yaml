@@ -1,0 +1,93 @@
+id: langchain-senior-frontend-engineer-ai-observability-evals-platform
+name: 'LangChain Senior Frontend Engineer, AI Observability & Evals Platform '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: LangChain
+  url: https://jobs.ashbyhq.com/langchain
+  application_url: https://jobs.ashbyhq.com/langchain/afb91b9b-46d5-4c9d-aa84-a4f1a3f74263
+  portal: ashby
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: 'About Us: At LangChain, our mission is to make intelligent agents
+    ubiquitous. We build the foundation for agent engineering in the real world, helping
+    developers move from prototypes to production-ready AI agents that teams can rely
+    on. We began as widely adopted open-source tools and have grown to also offer
+    a platform for building, evaluating, deploying, and operating agents at scale.
+    Today, LangChain, LangGraph, LangSmith, and Agent Builder are used by teams shipping
+    real AI products across startups and large enterprises. Millions of developers
+    trust LangChain to power AI teams at companies like Replit, Clay, Coinbase, Workday,
+    Lyft, Cloudflare, Harvey, Rippling, Vanta, and 35% of the Fortune 500 . With $125M
+    raised at Series B from IVP, Sequoia, Benchmark, CapitalG, and Sapphire Ventures
+    , we’re at a stage where we’re continuing to develop new products, growth is accelerating,
+    and all team members have meaningful impact on what we build and how we work together.
+    LangChain is a place where your contributions can shape how this technology shows
+    up in the real world. About the role: (In person 5 days/week in San Francisco,
+    CA, New York, Boston ) We’re looking to bring on an experienced frontend engineer
+    to develop and enhance new features on LangSmith, our enterprise platform product
+    for LLM application observability, testing, and debugging. What You Will Do: Develop
+    new user-facing features using React & Typescript Build reusable components and
+    front-end libraries for future use Translate designs and wireframes into high-quality
+    code Optimize components for maximum performance across a vast array of web-capable
+    devices and browsers Collaborate with fullstack and backend developers and UX/UI
+    designers, to enhance usability You’re a good fit if you have: Extensive front-end
+    engineering experience with strong proficiency in React, JavaScript and TypeScript
+    Hands-on experience with front-end development tools like Babel, Vite, Webpack,
+    NPM, and Yarn Familiarity with REST APIs and experience working closely with fullstack
+    and backend engineers Knowledge of modern authorization mechanisms, such as JWTs
+    A passion for user experience, design and building clean, engaging, and intuitive
+    interfaces Strong written and oral communication skills, with the ability to explain
+    technical concepts clearly and concisely to both technical and non-technical stakeholders
+    The DNA to thrive in a start-up, fast-paced environment. Views unstructured environments
+    as an opportunity to figure out the most impactful work and help define the future
+    success of the company An ownership mind-set. You are self-driven and look for
+    opportunities to make an impact. Strong computer science fundamentals, ideally
+    with a degree in computer science or related field Compensation & Benefits: We
+    offer competitive compensation that includes base salary, meaningful equity, and
+    benefits such as health and dental coverage, flexible vacation, a 401(k) plan,
+    and life insurance. Actual compensation will vary based on role, level, and location.
+    For team members in the EU and UK, we provide locally competitive benefits aligned
+    with regional norms and regulations. Annual salary range: $175,000-$225,000 USD'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.056661+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

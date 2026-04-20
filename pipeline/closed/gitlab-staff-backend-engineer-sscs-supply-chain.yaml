@@ -1,0 +1,117 @@
+id: gitlab-staff-backend-engineer-sscs-supply-chain
+name: 'GitLab Staff Backend Engineer,  SSCS: Supply Chain'
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: GitLab
+  url: https://boards.greenhouse.io/gitlab
+  application_url: https://job-boards.greenhouse.io/gitlab/jobs/8480559002
+  portal: greenhouse
+  location: Remote, India
+  location_class: international
+  description: "<div class=\"content-intro\"><p>GitLab is the intelligent orchestration\
+    \ platform for DevSecOps. GitLab enables organizations to increase developer productivity,\
+    \ improve operational efficiency, reduce security and compliance risk, and accelerate\
+    \ digital transformation. More than 50 million registered users and more than\
+    \ 50% of the Fortune 100* trust GitLab to ship better, more secure software faster.</p>\
+    \ <p>The same principles built into our products are reflected in how our team\
+    \ works: we embrace AI as a core productivity multiplier, with all team members\
+    \ expected to incorporate AI into their daily workflows to drive efficiency, innovation,\
+    \ and impact. GitLab is where careers accelerate, innovation flourishes, and every\
+    \ voice is valued. Our high-performance culture is driven by our <a href=\"https://handbook.gitlab.com/handbook/values/\"\
+    >values</a> and continuous knowledge exchange, enabling our team members to reach\
+    \ their full potential while collaborating with industry leaders to solve complex\
+    \ problems. <a href=\"https://www.youtube.com/watch?v=OuZIb5zszQI\">Co-create\
+    \ the future with us</a> as we build technology that transforms how the world\
+    \ develops software.</p> <p>*<em>Fortune 500\xAE is a registered trademark of\
+    \ Fortune Media IP Limited, used under license. Claim based on GitLab data. Fortune\
+    \ 100 refers to the top 20% ranked companies in the 2025 Fortune 500 list, published\
+    \ in June 2025. Fortune and Fortune Media IP Limited are not affiliated with,\
+    \ and do not endorse products or services of GitLab.</em></p></div><h3><strong>An\
+    \ overview of this role</strong></h3> <p>As a Staff Backend Engineer at GitLab,\
+    \ you will help shape a major investment in our Software Supply Chain Security\
+    \ offering. In this role, you'll serve as a senior technical leader for backend\
+    \ systems that help customers secure how software is built, verified, and delivered\
+    \ inside the GitLab platform. You'll work on foundational capabilities across\
+    \ package policy enforcement, build provenance, artifact signing, and malicious\
+    \ package detection, with a strong focus on enterprise-grade security and performance.</p>\
+    \ <p>You'll define architecture before systems are built, write clear technical\
+    \ proposals, and guide implementation across interconnected parts of GitLab such\
+    \ as CI/CD, dependency management, and security workflows. This role is a strong\
+    \ fit for someone who enjoys solving complex backend problems, influencing technical\
+    \ direction across teams, and building security features that matter to customers\
+    \ facing real threats. You'll do this in GitLab's remote, asynchronous, and values-driven\
+    \ environment, where written communication, ownership, and teamwork are central\
+    \ to how we work.</p> <p>Some examples of our projects:</p> <ul> <li>Dependency\
+    \ Firewall for package policy enforcement across supported registries</li> <li>Artifact\
+    \ attestation and signing using supply chain security standards and the Sigstore\
+    \ ecosystem</li> </ul> <h3><strong>What you\u2019ll do</strong></h3> <ul> <li>Define\
+    \ and drive the technical architecture for the SSCS Add-On, including backend\
+    \ systems for package policy enforcement, provenance generation, artifact signing,\
+    \ and malicious package detection.</li> <li>Lead design and implementation work\
+    \ for Supply-chain Levels for Software Artifacts (SLSA) Level 2 and Level 3 capabilities\
+    \ within GitLab CI/CD.</li> <li>Architect integrations with Sigstore services\
+    \ such as Cosign, Fulcio, and Rekor, including approaches for signing workflows,\
+    \ verification, and trust boundaries.</li> <li>Design backend services and request\
+    \ paths that support allow, deny, and quarantine package policies with strong\
+    \ performance and reliability expectations.</li> <li>Review merge requests with\
+    \ a focus on security, architectural consistency, maintainability, and test quality.</li>\
+    \ <li>Mentor Backend Engineers across experience levels, helping raise the technical\
+    \ bar through design guidance, feedback, and hiring participation.</li> <li>Partner\
+    \ with Product, Infrastructure, Authentication, Authorization, and Security counterparts\
+    \ on cross-team technical decisions.</li> <li>Contribute to relevant open source\
+    \ and industry conversations, including working groups related to software supply\
+    \ chain security where appropriate.</li> </ul> <h3><strong>What you\u2019ll bring</strong></h3>\
+    \ <ul> <li>Strong experience building backend applications with Ruby on Rails\
+    \ in a high-scale production environment.</li> <li>Professional experience with\
+    \ Go for backend or infrastructure-oriented services.</li> <li>A track record\
+    \ of leading architecture across multiple systems and influencing technical direction\
+    \ through strong engineering judgment.</li> <li>Experience writing clear technical\
+    \ proposals, request for comments documents, and decision records in an async,\
+    \ documentation-first environment.</li> <li>A solid security mindset and comfort\
+    \ working on products where trust, risk reduction, and secure defaults are central\
+    \ requirements.</li> <li>Familiarity with software supply chain security co"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-10'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.108505+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,116 @@
+id: gitlab-senior-backend-engineer-ror-sscs-pipeline-security
+name: 'GitLab Senior Backend Engineer (RoR), SSCS: Pipeline Security'
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: GitLab
+  url: https://boards.greenhouse.io/gitlab
+  application_url: https://job-boards.greenhouse.io/gitlab/jobs/8432221002
+  portal: greenhouse
+  location: Remote, Canada; Remote, Ireland; Remote, Israel; Remote, Netherlands;
+    Remote, United Kingdom; Remote, US
+  location_class: international
+  description: '<div class="content-intro"><p>GitLab is the intelligent orchestration
+    platform for DevSecOps. GitLab enables organizations to increase developer productivity,
+    improve operational efficiency, reduce security and compliance risk, and accelerate
+    digital transformation. More than 50 million registered users and more than 50%
+    of the Fortune 100* trust GitLab to ship better, more secure software faster.</p>
+    <p>The same principles built into our products are reflected in how our team works:
+    we embrace AI as a core productivity multiplier, with all team members expected
+    to incorporate AI into their daily workflows to drive efficiency, innovation,
+    and impact. GitLab is where careers accelerate, innovation flourishes, and every
+    voice is valued. Our high-performance culture is driven by our <a href="https://handbook.gitlab.com/handbook/values/">values</a>
+    and continuous knowledge exchange, enabling our team members to reach their full
+    potential while collaborating with industry leaders to solve complex problems.
+    <a href="https://www.youtube.com/watch?v=OuZIb5zszQI">Co-create the future with
+    us</a> as we build technology that transforms how the world develops software.</p>
+    <p>*<em>Fortune 500® is a registered trademark of Fortune Media IP Limited, used
+    under license. Claim based on GitLab data. Fortune 100 refers to the top 20% ranked
+    companies in the 2025 Fortune 500 list, published in June 2025. Fortune and Fortune
+    Media IP Limited are not affiliated with, and do not endorse products or services
+    of GitLab.</em></p></div><h3>An overview of this role</h3> <p>As a <span class="textBold">Senior
+    Backend Engineer</span> on the Pipeline Security team, you''ll take technical
+    ownership of GitLab''s native Secrets Manager, a production system built on <span
+    class="textBold">OpenBao</span> that helps secure sensitive credentials across
+    <span class="textBold">GitLab CI/CD</span> pipelines. You''ll work at the intersection
+    of backend engineering and infrastructure, shaping architecture in <span class="textBold">Ruby
+    on Rails</span> and <span class="textBold">Go</span>, guiding decisions around
+    role-based access control (RBAC), <span class="textBold">GraphQL</span> APIs,
+    and <span class="textBold">Kubernetes</span> deployment configuration. In your
+    first year, you''ll help move Secrets Manager toward general availability, establish
+    technical patterns the team can build on, and represent the team''s point of view
+    in cross-functional discussions.&nbsp;You''ll have end-to-end ownership, from
+    design through production operations, with room to identify what should be built
+    next and improve how the team delivers secure, reliable features.</p> <h3>What
+    you''ll do</h3> <ul> <li value="1"><span class="textBold">Build</span> and maintain
+    secure, readable backend code primarily in <span class="textBold">Ruby on Rails</span>,
+    with some development in <span class="textBold">Go</span> for targeted components.</li>
+    <li value="2"><span class="textBold">Design</span> backend architecture for complex
+    security features, including secrets access control, pipeline security enforcement,
+    and <span class="textBold">OpenBao</span> integration.</li> <li value="3"><span
+    class="textBold">Lead</span> the development of role-based access control models,
+    <span class="textBold">GraphQL</span> APIs, and supporting application patterns
+    for features owned by the team.</li> <li value="4"><span class="textBold">Own</span>
+    features end to end, from technical design and implementation through deployment,
+    validation, and production support.</li> <li value="5"><span class="textBold">Collaborate</span>
+    with Product, security partners, and other engineering teams to document tradeoffs,
+    align on direction, and deliver iteratively in a distributed environment.</li>
+    <li value="6"><span class="textBold">Improve</span> code quality, maintainability,
+    security, and performance through code review, design iteration, and internal
+    standards for a high-scale web environment.</li> <li value="7"><span class="textBold">Build</span>
+    and maintain <span class="textBold">Helm</span> charts, including configuration,
+    tuning, documentation, and automated testing for Kubernetes-based deployments.</li>
+    <li value="8"><span class="textBold">Validate</span> features in Kubernetes environments,
+    including GitLab Cloud Native and Cloud Native Hybrid deployments, using GitLab
+    testing and performance testing frameworks.</li> </ul> <h3>What you''ll bring</h3>
+    <ul> <li value="1"><span class="textBold">Experience</span> building and maintaining
+    backend features with a focus on secure design, data handling, and production
+    reliability.</li> <li value="2"><span class="textBold">Ability</span> to write
+    production-quality code in <span class="textBold">Ruby on Rails</span>, including
+    use of framework security patterns and review for common application risks.</li>
+    <li value="3"><span class="textBold">Working knowledge</span> of <span class="textBold">CI/CD</span>
+    concepts and the ways pipelines can be misconfigured, abu'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-10'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.823541+00:00'
+  date_source: first_published
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

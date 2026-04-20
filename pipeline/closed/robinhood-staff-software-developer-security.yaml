@@ -1,0 +1,113 @@
+id: robinhood-staff-software-developer-security
+name: Robinhood Staff Software Developer, Security
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7343918?t=gh_src=&gh_jid=7343918
+  portal: greenhouse
+  location: Toronto, Canada
+  location_class: international
+  description: '<div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><h2><strong>About the team + role</strong></h2>
+    <p>The Detection &amp; Response Platform and Tooling (DRPT) team builds and operates
+    the platforms that give security teams clear visibility, high-quality signals,
+    and dependable operational controls to protect customers and the business. The
+    team works closely with Security, IT, and infrastructure partners to support day-to-day
+    security operations and long-term platform scalability. DRPT focuses on durable
+    systems, clear interfaces, and operational standards that support a growing product
+    ecosystem. The team values pragmatic engineering, clear ownership, and thoughtful
+    trade-offs.</p> <p>As a Staff Software Developer, Security, you will serve as
+    the technical lead for DRPT, shaping the platform roadmap and guiding how detection
+    and response systems are designed, built, and operated! You will lead delivery
+    across multiple initiatives, balancing hands-on engineering with technical direction
+    and mentorship. This role sets standards for internal platforms and third-party
+    security tooling, with a focus on reliability, clarity, and long-term maintainability.
+    Your work directly supports the security needs of new products and customer segments
+    as Robinhood grows.</p> <p><strong>The role is located in the office location(s)
+    listed on this job description which will align with our in-office working environment.
+    Please connect with your recruiter for more information regarding our in-office
+    philosophy and expectations.</strong></p> <h2><strong>What you’ll do</strong></h2>
+    <ul> <li>Lead end-to-end delivery for multiple platform initiatives, from technical
+    proposals and system design through implementation, rollout, and ongoing operation.</li>
+    <li>Partner with Security, IT, and platform engineering teams to translate operational
+    needs into well-defined services and APIs, including ownership boundaries and
+    service reliability targets.</li> <li>Design, build, and operate scalable systems
+    for high-volume telemetry ingestion, detection-as-code workflows, and node-level
+    runtime telemetry using technologies such as eBPF-based tooling.</li> <li>Provide
+    technical mentorship through design reviews, code reviews, and regular feedback
+    that strengthens system design skills and collaboration across teams.</li> <li>Evaluate
+    and influence vendor and platform strategy by setting quality standards for third-party
+    security tools and contributing input to vendor roadmaps.</li> </ul> <h2><strong>What
+    you bring</strong></h2> <ul> <li>You have several years of experience leading
+    teams or large initiatives across design, planning, execution, and long-term maintenance
+    with measurable outcomes.</li> <li>You remain hands-on in your work, contributing
+    code, reviewing changes, debugging production issues, and evaluating tools and
+    technologies as needed.</li> <li>You have experience designing and operating distributed
+    systems or data and streaming pipelines in production environments.</li> <li>You
+    can align partners across organizational boundaries by clearly explaining trade-offs,
+    documenting decisions, and guiding work in ambiguous problem spaces.</li> <li>You
+    have experience operating software against defined service reliability targets,
+    using logs and metrics to diagnose issues, and participating in on-call rotations.</li>
+    <li>You have a record of mentoring engineers through clear, practical technical
+    guidance and feedback on collaboration and execution.</li> <li>You bring 8+ years
+    of software development experience, including 5+ years designing and operating
+    large-scale distributed systems.</li> <li>You are comfortable working in Go and
+    Python.</li> <li>It’s a plus (not required) if you have experience with SIEM or
+    data platforms such as Falcon Logscale (Humio), Splunk, or Databricks.</li> <li>It’s
+    helpful (but not required) if you’re familiar with streaming and runtime telemetry
+    tooling such as Kafka and Tetragon.</li> <li>Bonus (optional): experience with
+    cloud-native systems, including Kubernetes and infrastructure-as-code tools like
+    Terraform.</li> </ul> <p>&nbsp;</p> <p>Our team is committed to providing an inclusive
+    and welcoming interview experience for all candidates. If you require a specific
+    accommodation during the application or interview process due to a physical or
+    mental condition, please complete this&nbsp;<a class="decorated-link" href="https://robinhood.hracuity.net/webform/index/752875e4-42ba-4dff-9951-fd51e315997e"
+    target="_new" data-start="2658" data-end="'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.156008+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

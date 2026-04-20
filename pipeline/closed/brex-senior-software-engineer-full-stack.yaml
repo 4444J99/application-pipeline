@@ -1,0 +1,115 @@
+id: brex-senior-software-engineer-full-stack
+name: Brex Senior Software Engineer, Full Stack
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Brex
+  url: https://boards.greenhouse.io/brex
+  application_url: https://www.brex.com/careers/8472632002?gh_jid=8472632002
+  portal: greenhouse
+  location: Vancouver, British Columbia, Canada
+  location_class: international
+  description: '<div class="content-intro"><p><strong>Why join us</strong></p> <p>Brex
+    is the AI-powered spend platform. We help companies spend with confidence with
+    integrated corporate cards, banking, and global payments, plus intuitive software
+    for travel and expenses. Tens of thousands of companies from startups to enterprises
+    — including DoorDash, Flexport, and Compass — use Brex to proactively control
+    spend, reduce costs, and increase efficiency on a global scale.</p> <p><span style="font-weight:
+    400;">Working at Brex allows you to push your limits, challenge the status quo,
+    and collaborate with some of the brightest minds in the industry. We’re committed
+    to building a diverse team and inclusive culture and believe your potential should
+    only be limited by how big you can dream. We make this a reality by empowering
+    you with the tools, resources, and support you need to grow your career.</span></p></div><p><strong>Engineering
+    at Brex</strong></p> <p>Engineering at Brex is about building systems that scale
+    with speed and intention. Our teams span Software, Data, Security, and IT, and
+    operate with high autonomy and deep collaboration. We tackle hard technical problems,
+    own our outcomes, and push for excellence at every level — from architecture to
+    deployment. It’s an environment where engineering is a craft, and builders become
+    leaders.</p> <p><strong>What you’ll do</strong></p> <p>As a Senior Full-Stack
+    Software Engineer on our Task Workflows Platform team, you will build and scale
+    the foundational infrastructure that powers core experiences across Brex. You
+    will work across our extensive suite of platforms - including our multi-channel
+    notifications engine, collaborative commenting system, and dynamic workflow rule
+    builder. You will also play a pivotal role in evolving our task orchestration
+    infrastructure infrastructure, helping us transition from a centralized, generic
+    experience into highly tailored, purpose-built solutions for specific product
+    domains.</p> <p>You will tackle complex full-stack challenges, from designing
+    scalable backend APIs and rule-evaluation engines for custom automations, to crafting
+    intuitive frontend UX for our domain-specific task interfaces and workflow builders.
+    Beyond core platform work, you will be part of a team that directly shapes broader
+    product experiences - including leveraging AI to streamline user workflows and
+    supporting the continuous evolution of our productivity tools in web and mobile.</p>
+    <p><strong>Where you’ll work</strong></p> <p>This role will be based in&nbsp;Vancouver
+    office. We are a hybrid environment that combines the energy and connections of
+    being in the office with the benefits and flexibility of working from home. We
+    currently require a minimum of three coordinated days in the office per week on
+    Monday, Wednesday and Thursday. As a perk, we also have up to four weeks per year
+    of fully remote work!</p> <p><strong>Responsibilities</strong></p> <ul> <li>Work
+    with engineers across the company to build new features and products end-to-end</li>
+    <li>Own problems end-to-end, thinking through everything from user experience,
+    data models, scalability, operability and ongoing metrics.</li> <li>Provide technical
+    leadership to team by driving roadmap direction, architectural design and mentorship</li>
+    <li>Work side-by-side with user-facing teams (Sales, Support) to best understand
+    the needs of our customers.</li> <li>Tune and polish features to a high degree
+    of excellence.</li> <li>Identify and implement reliability and performance improvements</li>
+    <li>Uphold our high engineering standards and bring consistency to the codebases,
+    infrastructure, and processes you will encounter</li> </ul> <p><strong>Requirements</strong></p>
+    <ul> <li>7+ years of professional experience designing, developing, and deploying
+    full-stack products</li> <li>Strong proficiency in backend programming languages
+    (Java, Kotlin, Python)</li> <li>Experience architecting, building, and maintaining
+    scalable, high-availability distributed systems</li> <li>Experience designing
+    and optimizing SQL and/or NoSQL databases, including data modeling, query performance
+    tuning, and schema design</li> <li>Experience building and maintaining RESTful
+    APIs and/or GraphQL services</li> <li>Experience with modern frontend technologies
+    and tools like ES6+, React, TypeScript, and Webpack</li> </ul> <p><strong>Bonus
+    points</strong></p> <ul> <li>Experience collaborating with cross-functional stakeholders
+    and specialists in product, design, and operations</li> <li>Experience driving
+    initiatives at a broader level across an organization or company</li> <li>Experience
+    running in-product experiments, A/B testing</li> <li>Experience and interest in
+    leveraging AI developer tools</li> </ul> <p><strong>Compensation</strong></p>
+    <p>The expected salary range for this role is $192,000 - $240,000. However, the
+    starting base pay will depend on a number of factors, including the candidate’s
+    location, skills, experience, market demands, and '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.627262+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

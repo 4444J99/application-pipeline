@@ -1,0 +1,116 @@
+id: robinhood-senior-software-engineer-backend
+name: Robinhood Senior Software Engineer, Backend
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7264931?t=gh_src=&gh_jid=7264931
+  portal: greenhouse
+  location: Menlo Park, CA; New York, NY
+  location_class: us-onsite
+  description: "<div class=\"content-intro\"><h2>Join us in building the future of\
+    \ finance.</h2> <p>Our mission is to democratize finance for all. <a href=\"https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048\"\
+    \ target=\"_blank\">An estimated $124 trillion of assets</a> will be inherited\
+    \ by younger generations in the next two decades. The largest transfer of wealth\
+    \ in human history. If you\u2019re ready to be at the epicenter of this historic\
+    \ cultural and financial shift, keep reading.</p></div><h2>Senior Software Engineer,\
+    \ Backend</h2> <h3>About the team + role</h3> <p>We are building an elite team,\
+    \ applying frontier technologies to the world\u2019s biggest financial problems.\
+    \ We\u2019re looking for bold thinkers. Sharp problem-solvers. Builders who are\
+    \ wired to make an impact. Robinhood isn\u2019t a place for complacency, it\u2019\
+    s where ambitious people do the best work of their careers. We\u2019re a high-performing,\
+    \ fast-moving team with ethics at the center of everything we do. Expectations\
+    \ are high, and so are the rewards.</p> <p>Robinhood\u2019s engineering organization\
+    \ spans Crypto, Brokerage, and Core Engineering, each responsible for systems\
+    \ that are foundational to how customers invest and manage their money! These\
+    \ teams build and operate platforms for trading, custody, ledgers, reporting,\
+    \ payments, and shared infrastructure, with a strong focus on correctness, reliability,\
+    \ and customer trust. Engineers partner closely with product, design, data, and\
+    \ infrastructure teams to deliver software that performs at scale.</p> <p>As a\
+    \ Senior Software Engineer, you will design and build large-scale distributed\
+    \ systems that support real-time trading, balances, and platform capabilities.\
+    \ You will lead technically complex projects, contribute to architectural decisions,\
+    \ and collaborate with frontend and data partners to deliver well-structured APIs.\
+    \ Your work will directly influence system performance, operational safety, and\
+    \ long-term maintainability across core Robinhood products.</p> <p>This role is\
+    \ based in our <strong>Menlo Park, CA</strong> and <strong>New York, NY</strong>\
+    \ offices, with in-person attendance expected at least <strong>3 days per week.</strong></p>\
+    \ <p>At Robinhood, we believe in the power of in-person work to accelerate progress,\
+    \ spark innovation, and strengthen community. Our office experience is intentional,\
+    \ energizing, and designed to fully support high-performing teams.</p> <h3>What\
+    \ you\u2019ll do</h3> <ul> <li> <p>Build and evolve scalable backend systems,\
+    \ balancing performance, reliability, and long-term maintainability.</p> </li>\
+    \ <li> <p>Design, implement, test, and release product-facing features with strict\
+    \ correctness and availability requirements.</p> </li> <li> <p>Partner with frontend\
+    \ and data engineers to define and refine REST APIs that serve millions of customers.</p>\
+    \ </li> <li> <p>Lead large, technically complex projects from design through execution.</p>\
+    \ </li> <li> <p>Mentor junior engineers through code reviews, design discussions,\
+    \ and hands-on technical guidance.</p> </li> <li> <p>Identify opportunities to\
+    \ improve system performance, developer productivity, and operational risk.</p>\
+    \ </li> </ul> <h3>What you bring</h3> <ul> <li> <p>5+ years of professional software\
+    \ development experience.</p> </li> <li> <p>3+ years of experience building low-latency,\
+    \ large-scale distributed systems in production environments.</p> </li> <li> <p>Experience\
+    \ designing and operating highly concurrent systems and well-structured REST APIs.</p>\
+    \ </li> <li> <p>Demonstrated ownership of large projects with sustained impact\
+    \ on a system or team.</p> </li> <li> <p>Strong technical judgment and the ability\
+    \ to prioritize work aligned with business and reliability goals.</p> </li> <li>\
+    \ <p>Ability to break down complex problems and deliver practical, high-quality\
+    \ solutions.</p> </li> <li> <p>Experience mentoring other engineers and contributing\
+    \ to technical direction on new initiatives.</p> </li> </ul> <h3>What we offer</h3>\
+    \ <ul> <li> <p>Challenging, high-impact work to grow your career</p> </li> <li>\
+    \ <p>Performance driven compensation with multipliers for outsized impact, bonus\
+    \ programs, equity ownership, and 401(k) matching</p> </li> <li> <p>Best in class\
+    \ benefits to fuel your work, including 100% paid health insurance for employees\
+    \ with 90% coverage for dependents</p> </li> <li> <p>Lifestyle wallet \u2014 a\
+    \ highly flexible benefits spending account for wellness, learning, and more</p>\
+    \ </li> <li> <p>Employer-paid life &amp; disability insurance, fertility benefits,\
+    \ and mental health benefits</p> </li> <li> <p>Time off to recharge including\
+    \ company holidays, paid time off, sick time, parental leave, and more!</p> </li>\
+    \ <li> <p>Exceptional office experience with catered meals, events, and comfortable\
+    \ workspaces</p> </li> </ul> <hr> <p>&nbsp;</p><div class=\"content-pay-transparency\"\
+    ><div class=\"pay-input\"><div class=\"description\"><p><strong>In addition to\
+    \ the base pay range listed below, this role is also eligible "
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.127584+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

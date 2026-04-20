@@ -1,0 +1,93 @@
+id: pika-senior-software-engineer-agent
+name: Pika Senior Software Engineer, Agent
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Pika
+  url: https://jobs.ashbyhq.com/pika
+  application_url: https://jobs.ashbyhq.com/pika/d70aebf3-9798-43f9-aa83-1056c714ecf9
+  portal: ashby
+  location: Palo Alto HQ
+  location_class: us-onsite
+  description: 'Senior Software Engineer, Agent Department: Engineering | Location:
+    Palo Alto HQ | Type: Full-time, On-site About the Role We''re looking for a Senior
+    Agent Engineer to push the boundaries of what AI agents can do at Pika. You''ll
+    work on the systems that give AI agents their personality, memory, reasoning,
+    multi-modal capabilities, and ability to act autonomously across platforms. This
+    is the core of what makes Pika''s AI products feel alive. You''ll design agent
+    architectures, build tool-use frameworks, optimize LLM interactions, and create
+    the systems that allow agents to learn, remember, and evolve over time. If you''re
+    excited about building AI systems that feel genuinely intelligent — not just wrappers
+    over chat APIs — this role is for you. What You''ll Do • Design and evolve the
+    agent runtime — the core loop that handles reasoning, tool use, memory retrieval,
+    and response generation • Build agent capabilities — image generation, voice synthesis,
+    video creation, web browsing, code execution, and other skills • Optimize LLM
+    integration — prompt engineering, context window management, multi-provider model
+    routing (Claude, GPT, Gemini, open-source), cost optimization, and latency reduction
+    • Implement memory systems — long-term memory, working memory, episodic recall,
+    and semantic search so agents learn from every interaction • Design autonomous
+    behaviors — proactive actions, scheduled tasks, and goal-directed behavior that
+    makes agents feel self-directed • Build evaluation and quality systems — benchmarks,
+    A/B testing, and metrics for agent behavior, personality consistency, and response
+    quality • Experiment with new architectures — multi-agent collaboration, planning,
+    chain-of-thought reasoning, and other emerging patterns • Collaborate with product
+    and design to translate AI capabilities into intuitive user experiences What We''re
+    Looking For • 5+ years of software engineering experience, with 2+ years working
+    with LLMs or AI agent systems • Deep understanding of LLM capabilities and limitations
+    — you know how to get the best out of frontier models • Experience building agent
+    systems — tool use, function calling, multi-step reasoning, retrieval-augmented
+    generation (RAG) • Strong prompt engineering skills — system prompts, few-shot
+    learning, chain-of-thought, structured output • Proficiency in TypeScript and/or
+    Python • Understanding of embedding models and vector search for memory and retrieval
+    • Comfortable with rapid experimentation — you ship experiments, measure results,
+    and iterate • Product intuition — you understand what makes an AI agent feel "alive"
+    vs. robotic • Clear communication skills and a team-first mindset Nice to Have
+    • Experience with multi-modal AI (image generation, TTS, speech-to-text, video
+    generation) • Experience with agent frameworks (LangChain, AutoGPT, CrewAI, or
+    custom runtimes) • Background in NLP, computational linguistics, or cognitive
+    science • Experience with fine-tuning, RLHF, or DPO • Familiarity with AI safety
+    and alignment considerations • Experience with real-time/streaming LLM responses
+    • Previous startup experience — comfortable with ambiguity and moving fast'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.032084+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

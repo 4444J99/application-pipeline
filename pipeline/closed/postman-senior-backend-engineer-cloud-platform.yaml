@@ -1,0 +1,115 @@
+id: postman-senior-backend-engineer-cloud-platform
+name: Postman Senior Backend Engineer, Cloud Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Postman
+  url: https://boards.greenhouse.io/postman
+  application_url: https://job-boards.greenhouse.io/postman/jobs/7419694003
+  portal: greenhouse
+  location: San Francisco, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>Who Are We?</strong></h2> <p>Postman
+    is the world’s leading API platform, used by more than 45 million+ developers
+    and 500,000 organizations, including 98% of the Fortune 500. Postman is helping
+    developers and professionals across the globe build the API-first world by simplifying
+    each step of the API lifecycle and streamlining collaboration—enabling users to
+    create better APIs, faster.</p> <p>The company is headquartered in San Francisco
+    and has offices in Boston, New York, Austin, Tokyo, London, and Bangalore - where
+    Postman was founded. Postman is privately held, with funding from Battery Ventures,
+    BOND, Coatue, CRV, Insight Partners, and Nexus Venture Partners. Learn more at
+    postman.com or connect with Postman on X via @getpostman.</p> <p>P.S: We highly
+    recommend reading <a href="https://api-first-world.com/">The "API-First World"
+    graphic novel</a> to understand the bigger picture and our vision at Postman.</p></div><h2><strong>The
+    Opportunity</strong></h2> <p>As a&nbsp;Senior Backend Engineer&nbsp;on the&nbsp;Cloud
+    Platform team, you will play a key role in building the core systems and services
+    that power Postman’s internal platform. You’ll help create new backend services
+    that manage how we deploy, scale, and operate our infrastructure and product services,
+    leveraging&nbsp;Java, Spring Boot, and Hibernate (JPA)&nbsp;on top of&nbsp;cloud-native
+    technologies like Kubernetes, ArgoCD, Istio, and Terraform.</p> <p>This role is
+    highly impactful: the systems you build will be used across Postman engineering,
+    enabling faster delivery, better scalability, and a stronger developer experience.
+    You’ll also have the opportunity to contribute to open source, shaping tools that
+    extend beyond Postman’s boundaries.</p> <h2>What You’ll Do</h2> <ul> <li>Design
+    and develop backend services in Java and Spring Boot to support Postman’s internal
+    Cloud Platform.<br><br></li> <li>Architect new services that manage service deployment,
+    lifecycle, and scaling across Kubernetes clusters.<br><br></li> <li>Implement
+    GitOps workflows (ArgoCD) to support continuous delivery.<br><br></li> <li>Integrate
+    with cloud-native tooling such as Istio, Helm, and Terraform.<br><br></li> <li>Apply
+    strong software engineering practices: testing, code reviews, CI/CD, and documentation.<br><br></li>
+    <li>Drive innovation by contributing to open-source projects where applicable.<br><br></li>
+    <li>Collaborate cross-functionally with Cloud Architects, DevOps engineers, and
+    product teams to align solutions with business needs.<br><br></li> <li>Ensure
+    performance, reliability, and scalability of services that run at Postman’s scale.</li>
+    </ul> <h2>About You</h2> <ul> <li>5+ years of professional experience in backend
+    software development.</li> <li> <p>Strong expertise in Java, Spring Boot, and
+    Hibernate (JPA).</p> </li> <li> <p>Proven experience designing and maintaining
+    APIs and distributed backend services.</p> </li> <li> <p>Familiarity with Kubernetes,
+    Argo, Istio, and Terraform.</p> </li> <li> <p>Strong understanding of software
+    design principles (scalability, extensibility, resilience).</p> </li> <li> <p>Experience
+    with build and testing tools (Gradle, Maven, JUnit).</p> </li> <li> <p>Proficiency
+    with Git and Gitflow workflows.</p> </li> <li> <p>Excellent collaboration and
+    communication skills.</p> </li> <li>Strong security mindset and awareness of compliance
+    frameworks.</li> </ul> <p>The reasonably estimated base salary for this role ranges
+    from $210,000 to $240,000, plus a competitive equity package. Actual compensation
+    is based on the candidate''s skills, qualifications, and experience.</p><div class="content-conclusion"><h2
+    data-renderer-start-pos="4036"><strong data-renderer-mark="true">What Else?</strong></h2>
+    <p data-renderer-start-pos="4048">In addition to Postman''s pay-on-performance
+    philosophy, and a flexible schedule working with a fun, collaborative team, Postman
+    offers a comprehensive set of benefits, including full medical coverage, flexible
+    PTO, wellness reimbursement, and a monthly lunch stipend. Along with that, our
+    wellness programs will help you stay in the best of your physical and mental health.
+    Our frequent and fascinating team-building events will keep you connected, while
+    our donation-matching program can support the causes you care about. We’re building
+    a long-term company with an inclusive culture where everyone can be the best version
+    of themselves.&nbsp;</p> <p data-renderer-start-pos="4048">At Postman we value
+    in person collaboration. We are in office 5 days a week for all roles based out
+    of our hubs in San Francisco Bay Area, Boston, Austin, Tokyo and London. For roles
+    based in Bangalore, employees currently work in the office three days a week and
+    will transition to five days per week by the end of the year. We were thoughtful
+    in our approach which is based on collaboration and grounded in feedback from
+    our workforce, leadership team, and peers. The benefits of our in office model
+    w'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-25'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.623044+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

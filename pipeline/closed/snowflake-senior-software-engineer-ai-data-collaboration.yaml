@@ -1,0 +1,92 @@
+id: snowflake-senior-software-engineer-ai-data-collaboration
+name: Snowflake Senior Software Engineer-  AI Data Collaboration
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/5062e617-2b1d-4214-8839-322a832f2fad
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. The Internal Collaboration team builds software
+    to share data, apps, and AI models across different business units, regions, and
+    clouds within a single organization—without moving or copying the data. The team
+    builds the Internal Marketplace as a data product storefront for our users. AS
+    A SENIOR SOFTWARE ENGINEER - INTERNAL COLLABORATION YOU WILL: Lead highly impactful
+    initiatives around Snowflake Data Collaboration and Internal Marketplace Innovate
+    and build highly secured and reliable software to allow customers to be data-driven.
+    Architect and build systems that enable our customers to manage every critical
+    aspect of the data product lifecycle, including curation, discovery, governance,
+    policy configurations, certification, publishing, observability. Design and implement
+    highly available distributed platforms within the global Snowflake. Revolutionize
+    how organizations distribute, consume, and use data as a strategic business asset.
+    Ensure operational readiness of the services and meet the commitments to our customers
+    regarding reliability, availability and performance. OUR IDEAL SENIOR SOFTWARE
+    ENGINEER - INTERNAL COLLABORATION, WILL HAVE: 7+ years industry experience designing,
+    building and supporting large-scale applications and distributed systems in production.
+    Strong programming skills in Java, Scala, or C++ with an emphasis on performance
+    and reliability. Experience with AI-driven/first software development Experience
+    building cloud applications and working with public cloud providers like AWS,
+    Azure, or GCP. Deep understanding of distributed transaction processing, concurrency
+    control, and high-performance query engines. Familiarity with Marketplace applications
+    and product lifecycle management Familiarity with data governance, security, and
+    access control models in distributed data systems. BS/MS/PhD in Computer Science
+    or related majors, or equivalent experience. ABOUT INTERNAL COLLABORATION: Learn
+    more about Snowflake Internal Marketplace : Learn more about Snowflake Applications
+    and Collaboration Every Snowflake employee is expected to follow the company’s
+    confidentiality and security standards for handling sensitive data. Snowflake
+    employees must abide by the company’s data security plan as an essential part
+    of their duties. It is every employee''s duty to keep customer information secure
+    and confidential. Snowflake is growing fast, and we’re scaling our team to help
+    enable and accelerate our growth. We are looking for people who share our values,
+    challenge ordinary thinking, and push the pace of innovation while building a
+    future for themselves and Snowflake. How do you want to make your impact? For
+    jobs located in the United States, please visit the job posting on the Snowflake
+    Careers Site for salary and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.205712+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

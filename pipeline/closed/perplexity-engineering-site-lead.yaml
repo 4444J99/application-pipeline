@@ -1,0 +1,115 @@
+id: perplexity-engineering-site-lead
+name: Perplexity Engineering Site Lead
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/638e6823-be7f-46c6-9675-7b1197fc9b8c
+  portal: ashby
+  location: London
+  location_class: international
+  description: 'Perplexity is revolutionizing how people discover and interact with
+    information through AI-powered search and knowledge tools. As we expand our global
+    footprint, we''re establishing a strategic presence in London to drive innovation
+    and growth across Europe. The Role: We''re seeking an exceptional Site Lead to
+    establish and scale our London office. This is a unique opportunity to shape Perplexity''s
+    presence in one of the world''s leading tech hubs, building teams and culture
+    from the ground up while driving technical excellence in infrastructure and AI
+    systems. As Site Lead, you''ll serve as the face of Perplexity in London, responsible
+    for building our technical organization, fostering a world-class engineering culture,
+    and directly managing one or more infrastructure teams. You''ll report to senior
+    leadership and work cross-functionally with teams across our global footprint.
+    The individual in this role will manage teams in LON themselves while also facilitating.
+    Responsibilities: Site Leadership & Culture Establish and lead Perplexity''s London
+    office, setting the cultural foundation and operating principles Build a collaborative,
+    high-performance engineering culture that aligns with Perplexity''s values while
+    embracing the strengths of the London tech ecosystem Serve as the primary point
+    of contact for all London-based activities and represent the site in company-wide
+    strategic discussions Partner with People/HR, Finance, and Operations to ensure
+    seamless site operations Drive local community engagement, partnerships, and Perplexity''s
+    brand presence in the London and European tech community Technical Leadership:
+    Directly manage and mentor one or more infrastructure or AI infrastructure teams
+    in London (5-15+ engineers) Set technical direction and strategy for London-based
+    infrastructure initiatives in alignment with company-wide goals Drive architectural
+    decisions and technical excellence across teams Ensure robust systems for deployment,
+    monitoring, scalability, and reliability of infrastructure supporting AI/ML workloads
+    Collaborate with engineering leaders globally to align on technical standards,
+    best practices, and cross-site initiatives Team Building & Talent: Build and scale
+    high-performing infrastructure and AI infrastructure teams through strategic hiring
+    Develop and execute talent acquisition strategy for the London site in partnership
+    with recruiting Create career development frameworks and growth opportunities
+    for engineers Foster technical mentorship and knowledge sharing across teams and
+    sites Cross-functional Collaboration: Partner with Product, Engineering, and Research
+    teams globally to understand infrastructure needs and deliver solutions Coordinate
+    with other site leads and engineering leaders to ensure effective cross-site collaboration
+    Contribute to company-wide infrastructure strategy and roadmap planning Facilitate
+    knowledge transfer and best practice sharing across global teams Qualifications:
+    Required 10+ years of experience in software engineering with 5+ years in infrastructure,
+    cloud infrastructure, or AI infrastructure roles 3+ years of people management
+    experience, including building and scaling teams Proven track record of establishing
+    or significantly growing an engineering site or office Deep technical expertise
+    in distributed systems, cloud platforms (AWS, GCP, or Azure), and infrastructure
+    automation Experience with infrastructure supporting large-scale AI/ML systems,
+    including: GPU infrastructure and orchestration ML training and inference pipelines
+    Model serving and deployment at scale Strong understanding of modern infrastructure
+    technologies: Kubernetes, Terraform, container orchestration, CI/CD systems Demonstrated
+    ability to set technical vision and drive execution across multiple teams Excellent
+    communication and stakeholder management skills Experience working in fast-paced,
+    high-growth technology companies Passion for building inclusive, diverse, and
+    high-performing teams Preferred Experience at companies focused on AI/ML, search,
+    or large-scale consumer applications Previous experience as a site lead, office
+    lead, or similar multi-team leadership role Background in building infrastructure
+    for LLM training or inference Contributions to open-source infrastructure or AI
+    infrastructure projects Experience scaling teams from 0 to 20+ engineers Active
+    involvement in the London or European tech community MBA or advanced technical
+    degree What Success Looks Like: 30 Days Deep understanding of Perplexity''s infrastructure,
+    technology stack, and organizational structure Established relationships with
+    key stakeholders across engineering, product, and leadership Initial hiring plan
+    and culture strategy for London site established Help the Search, API, AI and
+    Infra teams build out their hiring pipelines 90 Days Core infrastructure team
+    established and ramping in London Clear technical roadmap and priorities defined
+    for London-based teams Site culture and operating rhythms establis'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.9
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.898681+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,116 @@
+id: sierra-ai-software-engineer-frontend
+name: Sierra AI Software Engineer, Frontend
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sierra AI
+  url: https://jobs.ashbyhq.com/sierra
+  application_url: https://jobs.ashbyhq.com/sierra/f391b10c-7a4a-42b4-9887-dd32b31d6e4e
+  portal: ashby
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: 'About us At Sierra, we’re creating a platform to help businesses build
+    better, more human customer experiences with AI. We are primarily an in-person
+    company based in San Francisco, with growing offices in Atlanta, New York, London,
+    Paris, Singapore, and Japan. We are guided by a set of values that are at the
+    core of our actions and define our culture: Trust, Customer Obsession, Craftsmanship,
+    Intensity, and Family. These values are the foundation of our work, and we are
+    committed to upholding them in everything we do. Our co-founders are Bret Taylor
+    and Clay Bavor . Bret currently serves as Board Chair of OpenAI. Previously, he
+    was co-CEO of Salesforce (which had acquired the company he founded, Quip) and
+    CTO of Facebook. Bret was also one of Google''s earliest product managers and
+    co-creator of Google Maps. Before founding Sierra, Clay spent 18 years at Google,
+    where he most recently led Google Labs. Earlier, he started and led Google’s AR/VR
+    effort, Project Starline, and Google Lens. Before that, Clay led the product and
+    design teams for Google Workspace. What You''ll Do: Own frontend across product
+    and marketing surfaces : You will work across both our core product interface
+    and customer-facing web pages, ensuring a cohesive, polished user experience across
+    all touch points. This includes building features in the web app and also collaborating
+    on our website to keep branding and user experience consistent and high-quality.
+    Lead design system and UI components : You’ll design, build, and maintain a scalable
+    design system and reusable component library that empowers all our engineers and
+    designers. By delivering robust, high-quality UI components and infrastructure,
+    you will ensure consistency and excellence across all product surfaces. You’ll
+    also collaborate with designers to establish guidelines and patterns, enabling
+    the team to rapidly build beautiful, consistent UIs with confidence. Craft pixel-perfect
+    user experiences : Work closely with our design team to translate Figma designs
+    into reality with pixel-perfect precision and delightful interactions. You will
+    partner with designers to refine UI patterns and ensure every detail is right
+    – from typography and spacing to motion and hover states. We care deeply about
+    design craft, so you’ll sweat the details to build an interface that feels elegant,
+    intuitive, and “just right” for users. Champion frontend excellence : As the senior
+    frontend expert, you will set and uphold high standards for performance, accessibility,
+    and code quality. You’ll optimize our frontend for speed (efficient loading, bundle
+    size, smooth rendering) and ensure our product works flawlessly across browsers
+    and devices. You will also incorporate best practices for accessibility and internationalization,
+    making our product usable by all customers. Move fast with pragmatism and quality
+    : In our startup environment, you’ll iterate quickly to ship improvements and
+    new features. You’ll make thoughtful engineering trade-offs that balance rapid
+    delivery with maintainability and polish. This means knowing when to build a quick
+    solution and when to invest in the long-term path – always keeping user experience
+    and business impact in mind. Full-stack involvement : While your focus will be
+    frontend, you should be comfortable venturing into the backend when needed. You’ll
+    integrate frontend features with our GraphQL API and occasionally update server-side
+    code (we use Go/gqlgen) to unblock frontend work. In short, you’ll do what it
+    takes across the stack to deliver a great end-to-end product experience – without
+    ever sacrificing our high bar for UI quality. What You''ll Bring: Frontend expertise
+    and modern skills : Extensive experience (5+ years) building world-class web interfaces
+    using React, TypeScript, HTML and CSS. You have a proven track record of shipping
+    polished user interfaces in production products . Bonus points if you’ve worked
+    with Tailwind or similar modern CSS frameworks for rapid development. Design sense
+    and attention to detail : You have a keen eye for good design and care deeply
+    about the details of the user experience. We look for people who share our passion
+    for software craftsmanship and getting even the smallest details right—this aligns
+    with Sierra’s value of craftsmanship . You take pride in creating pixel-perfect,
+    intuitive UIs and will proactively fix even minor UI issues because you value
+    quality. Strong collaboration and communication : You excel at working closely
+    with designers and product managers to achieve the best outcome. You partner with
+    product and design teams to craft beautiful user experiences , and you communicate
+    clearly about tradeoffs and solutions. You’re open to feedback and can articulate
+    your ideas in discussions, ensuring everyone is on the same page. Self-motivation
+    and drive : You are intensely goal-oriented and proactive, able to take ownership
+    of projects with minimal guidance. You’ve thrived in fast-paced environments and
+    have a track record '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.269390+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

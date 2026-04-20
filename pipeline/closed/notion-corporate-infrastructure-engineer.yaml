@@ -1,0 +1,116 @@
+id: notion-corporate-infrastructure-engineer
+name: Notion Corporate Infrastructure Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Notion
+  url: https://jobs.ashbyhq.com/notion
+  application_url: https://jobs.ashbyhq.com/notion/95e258d9-2a3e-4da1-b190-b71cd524c555
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: 'About Us: Notion helps you build beautiful tools for your life’s work.
+    In today''s world of endless apps and tabs, Notion provides one place for teams
+    to get everything done, seamlessly connecting docs, notes, projects, calendar,
+    and email—with AI built in to find answers and automate work. Millions of users,
+    from individuals to large organizations like Toyota, Figma, and OpenAI, love Notion
+    for its flexibility and choose it because it helps them save time and money. In-person
+    collaboration is essential to Notion''s culture. We require all team members to
+    work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor
+    Days. Certain teams or positions may require additional in-office workdays. About
+    the Role: We''re looking for a seasoned Corporate Infrastructure Engineer to architect
+    and maintain the physical and network systems that keep Notion running across
+    our global offices. You''ll shape the infrastructure backbone of a company transforming
+    how the world works—designing, supporting, and evolving the IT systems that power
+    collaboration for millions. Based in San Francisco, you''ll build and deliver
+    solutions with real autonomy on a team that trusts your expertise. Partner with
+    world‑class engineers across Security, IT Operations, and IT Systems Engineering
+    to directly influence our global IT strategy. Work hands‑on with cutting‑edge
+    technologies, mentor the broader IT team, and see your impact every day as resilient
+    network architecture and optimized operations enable hundreds to do their best
+    work. If complex systems, collaborative problem‑solving, and building world‑class
+    infrastructure motivate you, let''s talk. What You''ll Achieve: Help design through
+    deploy our corporate IT stack - from network services and storage to virtualization
+    and MDF/IDF operations - so everything just works for our teammates Keep systems
+    humming day to day: install, configure, monitor, document, and automate across
+    our IT infrastructure Coach and mentor members of the IT support team so everyone
+    can do their best work Jump in on tactical escalations and bring issues to a clear,
+    timely resolution Continually review our environment and propose pragmatic improvements
+    that boost performance, reliability, and scalability as we grow globally Share
+    knowledge with the broader IT team and run trainings to help the whole org level
+    up Support office buildouts and expansions, including occasional travel to our
+    global locations Nurture vendor relationships with ISPs, data circuit providers,
+    low‑voltage cablers, and security systems integrators Handle hands‑on hardware
+    work as needed, including installing and maintaining equipment, and safely lifting
+    up to 50lbs to heights of up to 6ft Skills You''ll Need to Bring: 7+ years configuring
+    and maintaining corporate infrastructure end to end: network and security, configuration
+    management, virtualization (IaaS/AWS), and on‑prem hardware supporting global
+    office locations You''re comfortable at the command line on macOS, Windows, and
+    Linux, and you design and build MDF/IDF infrastructure with care for power, cooling,
+    and monitoring You''re network‑hardware savvy with Aruba, Juniper, Cisco, Meraki,
+    Palo Alto, and other major vendors, and have a strong foundation in protocols,
+    models, and core networking concepts You design and implement AV backends for
+    large‑scale internal company events You keep systems healthy with monitoring tools
+    like NMS, ELK Stack, MRTG, Nagios, Splunk, Cacti, and Syslog You script and automate
+    in Python, PowerShell, or similar, and bring identity and access expertise across
+    Directory Services (AD, LDAP), RADIUS, SAML, PKI, and PAM You''re curious, collaborative,
+    and detail‑oriented, with strong communication skills and a pragmatic security
+    mindset You build productive partnerships with ISPs and technology vendors You
+    don’t need to be an AI expert, but you’re curious and willing to adopt AI tools
+    to work smarter and deliver better results We hire talented and passionate people
+    from a variety of backgrounds because we want our global employee base to represent
+    the wide diversity of our customers. If you’re excited about a role but your past
+    experience doesn’t align perfectly with every bullet point listed in the job description,
+    we still encourage you to apply. If you’re a builder at heart, share our company
+    values, and enthusiastic about making software toolmaking ubiquitous, we want
+    to hear from you. Notion is proud to be an equal opportunity employer. We do not
+    discriminate in hiring or any employment decision based on race, color, religion,
+    national origin, age, sex (including pregnancy, childbirth, or related medical
+    conditions), marital status, ancestry, physical or mental disability, genetic
+    information, veteran status, gender identity or expression, sexual orientation,
+    or other applicable legally protected characteristic. Notion considers qualified
+    applicants with criminal histories, consistent with applicable federal, state
+    and local law. Notion is also co'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.735928+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

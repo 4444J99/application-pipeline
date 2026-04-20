@@ -1,0 +1,114 @@
+id: anthropic-software-engineer-windows-claude-code
+name: Anthropic Software Engineer, Windows (Claude Code)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/5098506008
+  portal: greenhouse
+  location: San Francisco, CA | Seattle, WA
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>About Anthropic</strong></h2>
+    <p>Anthropic’s mission is to create reliable, interpretable, and steerable AI
+    systems. We want AI to be safe and beneficial for our users and for society as
+    a whole. Our team is a quickly growing group of committed researchers, engineers,
+    policy experts, and business leaders working together to build beneficial AI systems.</p></div><p><strong>About
+    the Role</strong></p> <p>At Anthropic, we believe new AI capabilities are best
+    achieved through secure foundations, not in spite of them. As capabilities grow
+    more advanced, it is critical that progress moves forward safely and for the benefit
+    of all society. It is the reason why security sits at the center of our work,
+    and not as an afterthought.</p> <p>We''re specifically looking for a Software
+    Engineer with deep Windows expertise to help us build and maintain Claude Code,
+    our AI-powered coding assistant. The ideal candidate will have a passion for developer
+    tools, strong experience building CLI applications on Windows, and a desire to
+    ensure Windows developers have a first-class experience with our tools.</p> <p>Claude
+    Code is used by developers around the world, and a significant portion of them
+    work in Windows environments. This role is critical to ensuring our product works
+    seamlessly for Windows users—from installation to daily workflows.</p> <p>&nbsp;</p>
+    <p><strong>Responsibilities</strong></p> <ul> <li> <p>Design, build, and maintain
+    Windows-specific features and infrastructure for Claude Code</p> </li> <li> <p>Own
+    the Windows developer experience, ensuring Claude Code installs, runs, and performs
+    reliably across Windows environments</p> </li> <li> <p>Develop and maintain PowerShell
+    integrations and scripts that enable smooth Windows workflows</p> </li> <li> <p>Collaborate
+    with the broader Claude Code team to ensure cross-platform compatibility and feature
+    parity</p> </li> <li> <p>Work with Windows package managers (Chocolatey, winget,
+    scoop) to streamline installation and updates for Windows users</p> </li> <li>
+    <p>Debug and resolve Windows-specific issues, including file system, permissions,
+    and shell compatibility challenges</p> </li> <li> <p>Engage directly with Windows
+    developers inside and outside Anthropic to gather feedback and improve user experience</p>
+    </li> <li> <p>Contribute to technical documentation to help Windows users get
+    the most out of Claude Code</p> </li> </ul> <p>&nbsp;</p> <p><strong>You May Be
+    a Good Fit If You</strong></p> <ul> <li> <p>Have deep Windows development experience,
+    including PowerShell scripting and Windows system integration</p> </li> <li> <p>Have
+    experience building and maintaining CLI applications</p> </li> <li> <p>Are passionate
+    about developer tools and understand what makes tools useful and adoptable</p>
+    </li> <li> <p>Can work independently to identify and solve Windows-specific challenges</p>
+    </li> <li> <p>Have shipped software used by developers in production Windows environments</p>
+    </li> <li> <p>Care about the societal impacts and ethics of your work</p> </li>
+    <li>Have 5+ years of work experience</li> </ul> <p>&nbsp;</p> <p><strong>Strong
+    Candidates May Also Have Experience With</strong></p> <ul> <li> <p>Have strong
+    TypeScript development experience</p> </li> <li> <p>Linux and/or macOS development
+    (cross-platform thinking)</p> </li> <li> <p>Cross-platform compatibility considerations
+    and tooling</p> </li> <li> <p>Windows package managers (Chocolatey, winget, scoop)</p>
+    </li> <li> <p>Working with large codebases and quickly jumping into unfamiliar
+    development environments</p> </li> <li> <p>Working with container orchestration
+    and cloud infrastructure (especially Windows containers)</p> </li> <li> <p>Hands-on
+    experience working with large language models and prompt engineering</p> </li>
+    <li> <p>Node.js/Bun runtime environments</p> </li> <li> <p>Building and maintaining
+    developer tools at scale</p> </li> </ul> <p>&nbsp;</p> <p><strong>Why Join Anthropic?</strong></p>
+    <p>This is an opportunity to shape the future of AI-driven development tools while
+    working alongside top engineers and researchers in the field. You''ll play a key
+    role in ensuring Claude Code delivers an exceptional experience for the millions
+    of developers who work on Windows every day.</p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p>The annual compensation range for
+    this role is listed below.&nbsp;</p> <p>For sales roles, the range provided is
+    the role’s On Target Earnings ("OTE") range, meaning that the range includes both
+    the sales commissions/sales bonuses target and annual base salary for the role.</p></div><div
+    class="title">Annual Salary:</div><div class="pay-range"><span>$320,000</span><span
+    class="divider">&mdash;</span><span>$485,000 USD</span></div></div></div><div
+    class="content-conclusion"><h2><strong>Logistics</strong></h2> <p><strong>Education
+    requirements: </strong>We require at least a Bachelor''s degree in a related fi'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.912973+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

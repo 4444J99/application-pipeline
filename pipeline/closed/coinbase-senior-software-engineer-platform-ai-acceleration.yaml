@@ -1,0 +1,114 @@
+id: coinbase-senior-software-engineer-platform-ai-acceleration
+name: 'Coinbase Senior Software Engineer (Platform - AI Acceleration) '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7697499?gh_jid=7697499
+  portal: greenhouse
+  location: Remote - Canada
+  location_class: international
+  description: <div class="content-intro"><p>Ready to be pushed beyond what you think
+    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
+    in the world. It’s a massive, ambitious opportunity that demands the best of us,
+    every day, as we build the emerging onchain platform — and with it, the future
+    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
+    candidate. We want someone who is passionate about our mission and who believes
+    in the power of crypto and blockchain technology to update the financial system.
+    We want someone who is eager to leave their mark on the world, who relishes the
+    pressure and privilege of working with high caliber colleagues, and who actively
+    seeks feedback to keep leveling up. We want someone who will run towards, not
+    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
+    culture</a> is intense and isn’t for everyone. But if you want to build the future
+    alongside others who excel in their disciplines and expect the same from you,
+    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
+    we are not remote-only. In-person participation is required throughout the year.
+    Team and company-wide offsites are held multiple times annually to foster collaboration,
+    connection, and alignment. Attendance is expected and fully supported.</p></div><p>Coinbase
+    is on a mission to become an "AI-Native" company by 2028, fundamentally transforming
+    how we operate across all functions. As a <strong>Senior Software Engineer </strong>in
+    this space, you will drive AI adoption across Coinbase by working within one or
+    more AI Growth Pods — internal accelerators that partner with engineering and
+    non-engineering functions to identify, prototype, and scale high-impact AI automation
+    solutions.</p> <p>You will drive initiatives from ideation to initial implementation
+    and broader productionalization, while ensuring these solutions deliver tangible
+    ROI and pave the way for broader AI adoption. This role requires a unique blend
+    of strategic thinking, hands-on technical ability, and exceptional cross-functional
+    collaboration.</p> <p><strong>What You'll Do:</strong></p> <ul> <li>Partner with
+    teams across the organization to deeply understand workflows, identify pain points,
+    and uncover high-leverage opportunities for AI automation and efficiency gains.
+    Translate complex business challenges into actionable AI use cases.</li> <li>Apply
+    advanced GenAI techniques, including large language models (LLMs) and Agentic
+    AI, to rapidly design, build, and iterate on functional prototypes (e.g., AI agents,
+    custom copilots, intelligent workflows) that address business needs. Write high-quality,
+    well-tested code in Python and Golang to support these solutions.</li> <li>Collaborate
+    with cross-functional teams to evolve prototypes into scalable, secure, production-grade
+    AI solutions aligned with long-term organizational goals.</li> <li>Provide guidance
+    on AI capabilities, responsible AI usage, prompt engineering best practices, and
+    strategic integration of AI into daily operations. Mentor team members on design
+    principles, coding standards, and AI productivity tools adoption.</li> <li>Pilot
+    new AI solutions with functional teams, gather feedback, iterate on prototypes,
+    and support adoption to ensure demonstrable value and smooth transitions.</li>
+    <li>Partner with central AI Platform and DevX teams to leverage existing infrastructure,
+    contribute to shared knowledge bases, and ensure scalability and security of solutions.</li>
+    <li>Work with Security, Legal, and Compliance teams to ensure all AI solutions
+    adhere to strict security, privacy, and ethical guidelines, especially for sensitive
+    data and high-risk workflows.</li> <li>Define success metrics, track ROI, and
+    effectively communicate the value delivered by AI initiatives to stakeholders.</li>
+    <li>Continuously research and experiment with emerging AI models, tools, and industry
+    best practices to bring cutting-edge solutions to Coinbase.</li> </ul> <p><strong>What
+    We're Looking For:</strong></p> <ul> <li>5+ years of experience in software engineering,
+    with at least 6 months focused on applied AI, Generative AI, or intelligent automation.</li>
+    <li>Strong Software Engineering Skills:&nbsp;&nbsp; <ul> <li>Proven expertise
+    in designing, building, scaling, and maintaining production services, with a strong
+    understanding of microservices architecture.&nbsp;&nbsp;</li> <li>Ability to write
+    high-quality, well-tested code that meets customer needs.&nbsp;&nbsp;</li> <li>Strong
+    technical skills in system design, coding, and debugging complex technical issues
+    to enhance system reliability and scalability.&nbsp;&nbsp;</li> </ul> </li> <li>AI
+    &amp; Automation Skills:&nbsp;&nbsp; <ul> <li>Understanding of LLM capabilities,
+    limitations, and architectures (e.g., RAG, agents, fine-tuning concepts).&nbsp;&nbsp;</li>
+    <li>Hands-on experience with AI tools and platforms (e.g., ente
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-29'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.031137+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

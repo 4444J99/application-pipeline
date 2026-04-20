@@ -1,0 +1,115 @@
+id: mongodb-lead-engineering-search-query-platform-availability
+name: MongoDB Lead, Engineering- Search Query Platform & Availability
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7523899
+  portal: greenhouse
+  location: Toronto
+  location_class: international
+  description: '<p>MongoDB Search and Vector Search allows users to execute complex
+    search queries and build RAG applications using the MongoDB Query Language. Our
+    users are free to focus on relevance and data retrieval instead of the machinery
+    needed to search data at scale.</p> <p>We are seeking a Lead Engineer to lead
+    the MongoDB Search Query Platform &amp; Availability team, ensuring querying and
+    indexing tasks are highly available. Enable the vector and lexical search teams
+    to more effectively enhance the product by solving common platform challenges
+    at scale.</p> <p>We are looking to speak to candidates<strong> </strong>who are
+    based in Toronto for our hybrid working model.</p> <h3>You''re an ideal candidate
+    if:</h3> <ul> <li>You have 2 or more years of experience managing a team of software
+    engineers</li> <li>You have strong technical judgment that you use to effectively
+    guide engineering decisions without necessarily writing code yourself</li> <li>You
+    have first-hand experience developing complex systems like databases, distributed
+    systems, or high-performance applications and you use this context to understand
+    the challenges your team faces</li> <li>You enjoy coaching, career development,
+    and creating growth opportunities to help your team reach their full potential</li>
+    <li>You care about building a diverse, inclusive environment where engineers can
+    do their best work</li> <li>You put the customer first and don''t hesitate to
+    cross team boundaries in search of the right solution</li> </ul> <h3>As an Engineering
+    Manager on the Search team, you will:</h3> <ul> <li>Lead and grow a team, managing
+    all aspects of people management including hiring, growth, compensation, and performance
+    management</li> <li>Be directly responsible for the results your team delivers</li>
+    <li>Play a key role in defining the roadmap for the next 12 months</li> <li>Drive
+    improvements to processes and tools especially those that allow us to confidently
+    make changes to high risk parts of our codebase</li> <li>Handle (or lead the effort
+    to handle) time-sensitive customer escalations</li> <li>Collaborate with stakeholders
+    and engineering teams across the company to jointly work on large initiatives</li>
+    <li>Work with product managers, program managers, and other teams to specify,
+    prioritize and deliver new features that delight our users</li> <li>Ensure high
+    quality and velocity in the design and implementation of new functionality in
+    Search and Vector Search</li> <li>Be open to occasional (twice a year) travel
+    to the US</li> </ul> <h3>Success Measures:</h3> <ul> <li>In the first month:</li>
+    <ul> <li>You have understood the high level architecture of the Search and Vector
+    Search and the team''s responsibilities</li> <li>You are starting to develop relationships
+    with key stakeholders</li> <li>You have gained familiarity with the required day-to-day
+    processes to manage the team</li> </ul> <li>In three months:</li> <ul> <li>You
+    have taken over management of your team, and are starting to build trust with
+    your reports</li> <li>You have hired two new engineers to the team</li> <li>You
+    have assumed responsibility for the day-to-day processes necessary to keep the
+    lights on</li> <li>You are involved in reviewing the design for new features and
+    helping the team navigate technical challenges</li> </ul> <li>In six months:</li>
+    <ul> <li>You have established your role as a leader in the organization such that
+    team members naturally go to you for guidance</li> <li>You have hired and onboarded
+    two new engineers to the team</li> <li>You are beginning to involve yourself in
+    planning and roadmapping efforts</li> <li>You are leading the planning and execution
+    of a new major feature</li> <li>You have produced a roadmap that has buy in from
+    your counterparts</li> </ul> <li>In twelve months:</li> <ul> <li>You have performed
+    a full annual cycle of performance and growth conversations with your team members</li>
+    <li>You have contributed to the vision for the future of the Search team and helped
+    develop a plan to achieve that vision</li> <li>You have increased the capability
+    and velocity of your team in measurable ways</li> </ul> </ul> <h3><span style="color:
+    #000000; background-color: transparent;">About MongoDB</span></h3> <p style="font-family:
+    Helvetica, Arial, sans-serif; font-style: normal; font-weight: 400; color: rgb(0,
+    0, 0); margin: 0px !important; padding: 0px !important;"><span style="color: #000000;
+    background-color: transparent;">MongoDB is built for change, empowering our customers
+    and our people to innovate at the speed of the market. We have redefined the database
+    for the AI era, enabling innovators to create, transform, and disrupt industries
+    with software. MongoDB’s unified database platform—the most widely available,
+    globally distributed database on the market—helps organizations modernize legacy
+    workloads, embrace innovation, and unleash AI. Our cloud-native platform, MongoDB
+    Atlas, is the only globally distributed, multi-cloud database and is availab'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.8
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.252295+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

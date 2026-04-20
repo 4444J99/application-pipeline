@@ -1,0 +1,106 @@
+id: sentry-senior-software-engineer-ai
+name: Sentry Senior Software Engineer, AI
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sentry
+  url: https://jobs.ashbyhq.com/sentry
+  application_url: https://jobs.ashbyhq.com/sentry/6eb8d5f2-977e-4ff4-bdbe-fccb8747b5d7
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: About Sentry Bad software is everywhere, and we’re tired of it. Sentry
+    is on a mission to help developers write better software faster so we can get
+    back to enjoying technology. With more than $217 million in funding and 100,000+
+    organizations that believe we’re on to something, we're building performance and
+    error monitoring tools that help companies like Disney, Microsoft, and Atlassian
+    spend less time fixing bugs and more time building products. Sentry embraces a
+    hybrid work model across our global hubs, with Mondays, Tuesdays, and Thursdays
+    set as in-office anchor days to encourage meaningful collaboration. If you like
+    to selfishly build things that make your digital life better, come help us build
+    the next generation of software monitoring tools. About the role As a Senior Software
+    Engineer on Sentry’s AI/ML team, you’ll be directly responsible for developing
+    the platform used by our debugging agents. This role is crucial; you will be at
+    the forefront of integrating AI and machine learning into our core products, from
+    issue triage and resolution to predictive analytics for application performance
+    monitoring. Your work will help companies around the globe gain actionable insights
+    into their software, enabling them to build better products, faster. In this role
+    you will Build state-of-the-art agentic AI platforms to triage, debug, and solve
+    real production issues Leverage Sentry’s novel (and massive) dataset of errors,
+    spans, and profiles Own the development of major initiatives in the AI/ML space
+    You'll love this job if you Are driven by impact and enjoy working on high-stakes,
+    high-visibility projects Enjoy building things. You will have the opportunity
+    to join the AI/ML team as one of its foundational members Thrive in cross-functional
+    teams and enjoy building features alongside developers and product teams Qualifications
+    Minimum 5+ years of professional experience with Bachelor’s degree in computer
+    science, machine learning, or a related field Demonstrated expertise building
+    production-grade agentic systems and tools You are comfortable writing production
+    quality code (we use Python and Typescript) Familiarity with deep learning frameworks
+    (we use PyTorch) Familiarity in deploying machine learning models at scale in
+    production environments The base salary range (or hourly wage range, if applicable)
+    that Sentry reasonably expects to pay for this position is $190,000 to $288,000
+    USD . A successful candidate’s actual base salary (or hourly wage) amount will
+    be determined by a variety of relevant factors including, without limitation,
+    the candidate’s work location, education, work and other relevant experience,
+    skills, and job-related knowledge. A successful candidate will be eligible to
+    participate in Sentry’s employee benefit plans/programs applicable to the candidate’s
+    position (including incentive compensation, equity grants, paid time off, and
+    group health insurance coverage). See Sentry Benefits for more details about the
+    Company’s benefit plans/programs. Equal Opportunity at Sentry Sentry is committed
+    to providing equal employment opportunities to its employees and candidates for
+    employment regardless of race, color, ancestry, religion, sex, national origin,
+    sexual orientation, age, citizenship, marital status, disability, gender identity,
+    veteran status, or other legally-protected characteristic. This commitment includes
+    the provision of reasonable accommodations to employees and candidates for employment
+    with physical or mental disabilities who require such accommodations in order
+    to (a) perform the essential functions of their jobs, or (b) seek employment with
+    Sentry. We strive to build a diverse team, with an inclusive culture where every
+    teammate can thrive. Sentry is an open-source company because we believe that
+    everyone, everywhere, should have the ability and tools to make great software.
+    Software should be accessible. That starts with making our industry accessible.
+    If you need assistance or an accommodation due to a disability, you may contact
+    us at accommodations@sentry.io . Want to learn more about how Sentry handles applicant
+    data? Get the details in our Applicant Privacy Policy .
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.236132+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

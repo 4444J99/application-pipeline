@@ -1,0 +1,117 @@
+id: reddit-staff-software-engineer-ads-api
+name: Reddit Staff Software Engineer, Ads API
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Reddit
+  url: https://boards.greenhouse.io/reddit
+  application_url: https://job-boards.greenhouse.io/reddit/jobs/7167630
+  portal: greenhouse
+  location: Remote - United States
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><div class=\"c-message_kit__blocks c-message_kit__blocks--rich_text\"\
+    > <div class=\"c-message__message_blocks c-message__message_blocks--rich_text\"\
+    \ data-qa=\"message-text\"> <div class=\"p-block_kit_renderer\" data-qa=\"block-kit-renderer\"\
+    > <div class=\"p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first\"\
+    > <div class=\"p-rich_text_block\"> <div class=\"p-rich_text_section\">Reddit\
+    \ is a community of communities. It\u2019s built on shared interests, passion,\
+    \ and trust, and is home to the most open and authentic conversations on the internet.\
+    \ Every day, Reddit users submit, vote, and comment on the topics they care most\
+    \ about. With 100,000+ active communities and approximately 121 million daily\
+    \ active unique visitors, Reddit is one of the internet\u2019s largest sources\
+    \ of information. For more information, visit <a class=\"c-link\" href=\"http://www.redditinc.com/\"\
+    \ target=\"_blank\" data-stringify-link=\"http://redditinc.com\" data-sk=\"tooltip_parent\"\
+    >www.redditinc.com</a>.</div> </div> </div> </div> </div> </div></div><h3><strong>Team\
+    \ Description</strong></h3> <p>The Ads API team is a growing group that is critically\
+    \ important to the future of Reddit's business. This team's ownership is both\
+    \ horizontal and vertical: we own the platform layer that other product teams\
+    \ use to surface their features, as well as the external-facing APIs that third-party\
+    \ partners rely on to manage campaigns and generate reports. We also own the core\
+    \ products used by external customers in their integration, such as rate limiting,\
+    \ authentication, and SDKs.&nbsp;</p> <p>The Ads API team has a dual mandate.\
+    \ First, by providing world-class tools and infrastructure, we enable our partners\
+    \ to grow their business and, in turn, grow Reddit\u2019s advertising ecosystem.\
+    \ Second, by providing an easy-to-use and safe internal platform, we enable other\
+    \ teams across Reddit to expose functionality they own as part of our standardized\
+    \ Ads API platform.</p> <h3><strong>Role Description</strong></h3> <p>Reporting\
+    \ to the Ads API Engineering Manager, the person in this role will be the primary\
+    \ technical driver and architect for the Ads API team. This is a high-agency position\
+    \ for an engineer who can navigate ambiguity and take decisive ownership of the\
+    \ platform's technical direction in collaboration with other engineers, teams,\
+    \ and stakeholders. It is best classified as the Tech Lead archetype of Staff\
+    \ Engineer, and the most successful candidates will have experience serving in\
+    \ this capacity previously.</p> <p>This role acts as both a technically adept\
+    \ deep coder and a force multiplier. It is responsible for working cross-functionally\
+    \ to help establish the long-term technical vision for the Ads API, ensuring our\
+    \ systems are highly available and capable of scaling with the marketplace. In\
+    \ this role you will lead large-scale projects through the entire software development\
+    \ lifecycle, from concept through implementation until delivery. You will also\
+    \ be the rising tide that raises all boats around you, serving as a technical\
+    \ leader and mentor to the Ads API team.</p> <h3><strong>What You\u2019ll Do</strong></h3>\
+    \ <ul> <li><strong>Steer:</strong> Work with the team to select, scope, and drive\
+    \ high-leverage projects that accelerate the development of the Ads API to help\
+    \ Reddit achieve its ambitious goals.</li> <li><strong>Architect:</strong> Help\
+    \ define the 2+ year technical roadmap for the platform, translating complex business\
+    \ needs into a clear strategy for highly available and performant backend services.</li>\
+    \ <li><strong>Build:</strong> Execute on a strategy to create a world-class developer\
+    \ experience for our external 3P partners, focusing on API design, versioning,\
+    \ security, discoverability, and usability.</li> <li><strong>Amplify:</strong>\
+    \ Mentor, coach, and collaborate with other technical contributors, fostering\
+    \ a culture of empathetic technical excellence and proactive problem-solving.</li>\
+    \ <li><strong>Collaborate:</strong> Work together with a variety of cross-functional\
+    \ teams, including Product Management, Product Marketing, and Sales, to ensure\
+    \ the Ads API meets the needs of all stakeholders.</li> <li><strong>Evolve:</strong>\
+    \ Learn and improve technical and non-technical abilities, staying up-to-date\
+    \ on trends and best practices in the Ads API space across the industry.</li>\
+    \ </ul> <h3><strong>Qualifications</strong></h3> <ul> <li><strong>Experience:</strong>\
+    \ 7+ years of software engineering experience, with a track record of leading\
+    \ large-scale technical projects that require cross-team and cross-functional\
+    \ collaboration.</li> <li><strong>Backend Expertise:</strong> Strong experience\
+    \ in large-scale distributed systems and developing highly scalable and reliable\
+    \ backend services.</li> <li><strong>Technical Ability:</strong> Expertise in\
+    \ at least one general-purpose programming language (e.g., Go, Python, Scala,\
+    \ Java, or C++) and ability to grow expertise in Python and Go.</li> <li><strong>Leadership:</strong>\
+    \ Demonstrated ability t"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.317656+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

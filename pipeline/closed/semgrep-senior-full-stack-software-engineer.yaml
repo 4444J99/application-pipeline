@@ -1,0 +1,115 @@
+id: semgrep-senior-full-stack-software-engineer
+name: Semgrep Senior Full Stack Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Semgrep
+  url: https://jobs.ashbyhq.com/semgrep
+  application_url: https://jobs.ashbyhq.com/semgrep/21496f9a-feaf-4c11-a83c-3b46c621b778
+  portal: ashby
+  location: San Francisco Office
+  location_class: us-onsite
+  description: 'About Semgrep Semgrep, the leader in code security for builders, empowers
+    invention without friction. Teams catch, flag, and fix real issues before they
+    ship, powered by security that learns as they build. Semgrep secures code as it’s
+    written and provides guardrails that pave the road for developers to move fast
+    and stay secure. Built for builders and trusted by security, Semgrep lives where
+    developers work, delivering fixes without breaking flow, and giving security teams
+    visibility, control, and confidence. Semgrep gets smarter as you build, with AI
+    that learns your context to cut false positives and prioritize reachable vulnerabilities,
+    validated by 95% of security reviewers across 6M+ findings. Semgrep makes zero
+    false positives a reality with AppSec teams triaging 80% fewer false positives
+    across Code and Supply Chain, dramatically shrinking the backlog. Founded in San
+    Francisco and backed by Menlo Ventures, Felicis Ventures, Lightspeed Venture Partners,
+    Redpoint Ventures, and Sequoia Capital, Semgrep is recognized by Gartner in Application
+    Security Testing and is trusted by leading organizations, including Snowflake,
+    Dropbox, and Figma. Learn more at semgrep.dev . About the role As a Fullstack
+    Engineer, you’ll work across the stack to design, build and maintain a fast and
+    reliable user experience for our customers. You’ll collaborate closely with designers
+    and product managers to develop flows that help AppSec professionals and developers
+    alike to achieve their security goals, own the end-to-end implementation of features
+    in our frontend and backend and scale these systems as we continue to grow rapidly
+    this year. Our stack utilizes Typescript and React on the Frontend, Python, Flask
+    and SQLAlchemy on the Backend, is deployed via Kubernetes and hosted on AWS. Professional
+    experience with these technologies is preferred but not required provided you
+    are open to learning them quickly! This is a hybrid role with the expectation
+    you’ll join us 3+ days per week in our San Francisco, New York, Boston or Denver
+    offices depending on team. Remote employment will be considered for exceptional
+    candidates as well. Compensation The estimated starting annual salary range for
+    this position is $163,000 to $246,500 USD.. The actual base salary will be determined
+    based on a number of factors, which may include job-related skills, relevant experience,
+    qualifications, location, internal equity, and market data. In addition to base
+    salary, total compensation may include equity, variable compensation, and benefits.
+    We view equity as a meaningful part of our compensation philosophy and a way for
+    employees to share in the long-term value they help create. Compensation ranges
+    are reviewed regularly and may be adjusted as the role, individual performance,
+    or market conditions evolve. What we offer (FTE only) Our goal is to competitively
+    and fairly compensate every Semgrep employee with a system that equally rewards
+    those who are vocal and those who are less comfortable making demands during the
+    final steps of the hiring process. To that end, we generate internal compensation
+    bands that are used when discussing and negotiating salaries. We update these
+    based on market data to make sure they’re above the average for comparable roles.
+    We invest in our employees’ well-being and long-term success through a competitive,
+    market-aligned benefits program that meets or exceeds local market standards across
+    all of the regions in which we hire. Benefits offerings vary by location to reflect
+    local requirements and norms. For more detailed, location-specific information,
+    please visit Semgrep Benefits . Who we are We bring together people from a wide
+    range of backgrounds and disciplines—from physics and philosophy to formal methods
+    research and full-fledged corporations. We’re new parents and new grads, dog lovers
+    and dogfooders. We get together often to bike, bake, and meet up in parks. In
+    our interactions, we believe respect and honesty go hand in hand, and prioritize
+    both. Semgrep is an equal-opportunity employer seeking a diverse range of backgrounds.
+    We value who you are — including your cultural heritage, your socioeconomic status,
+    your age, your race, your gender, your sexual orientation, your disabilities.
+    We value what’s vitally important to you — your family, your religion, your politics.
+    We value what you love in this world — your music, your weekend pursuits. We believe
+    in welcoming varied professional backgrounds, educations, and interests. If you’re
+    exceptional in your role, believe in Semgrep’s mission, and treat Semgrep’s values
+    as your own, you belong here. Please Note: For US-based roles open to remote work,
+    we are currently able to hire employees in the following states only: Arizona,
+    California, Colorado, Connecticut, District of Columbia, Florida, Georgia, Illinois,
+    Maryland, Massachusetts, Michigan, Missouri, Nebraska, New Jersey, New York, North
+    Carolina, Oregon, Tennessee, Texas, Virginia, Washington, and Wisconsin.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.321866+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

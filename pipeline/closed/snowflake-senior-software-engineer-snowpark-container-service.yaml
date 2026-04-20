@@ -1,0 +1,101 @@
+id: snowflake-senior-software-engineer-snowpark-container-service
+name: Snowflake Senior Software Engineer - Snowpark Container Service
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/dcbd8798-31d0-4551-acf4-0d7a8f8d7757
+  portal: ashby
+  location: US-WA-Bellevue
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. We are looking for a talented and passionate
+    Senior Software Engineer for our Snowpark Container Service , part of our Snowflake
+    Compute Platform - to build our elastic, high-scale, high-performance, cloud native
+    compute platform to enable bringing Compute to Data effortless and simple. Snowpark
+    Container Services is a fully managed container offering that helps our customers
+    easily deploy, manage, and scale containerized applications without having to
+    move data out of Snowflake. As a fully managed service, it comes with Snowflake
+    security, configuration, and operational best practices built in. You will be
+    part of this highly productive, fast moving, and growing team that is critical
+    to realizing Snowflake’s Data Cloud Mission. AS A SENIOR SOFTWARE ENGINEER, YOU
+    WILL: ● Design and develop features, understand customer requirements and meet
+    business goals. ● Lead a team of engineers, including mentoring and guiding them,
+    and build technical direction and strategy for large and critical parts of the
+    product surface area. ● Manage all aspects of the Project, including Design, Coding,
+    Reviews, Testing, Observability, Tooling and On-Call support. ● Build highly reliable
+    and fault-tolerant software to meet the needs of the largest customers. ● Ensure
+    operational readiness and maintainability of the service with heavy focus on reliability,
+    availability, debuggability and performance. ● Design and build Kubernetes based
+    OCI compliant container compute platform features and capabilities that scale
+    and evolve with changing business and customer needs. ● Snowpark Container Services
+    is still in an early stage of development - it is an amazing opportunity for outsized
+    impact on Snowflake’s growth story. OUR IDEAL CANDIDATE WILL HAVE MOST OF THE
+    FOLLOWING QUALIFICATIONS: ● Excitement to learn new things - passion to learn
+    and grow are keys to success on this team. ● Be a team player - Our team culture
+    is a priority. Transparency, knowledge sharing, fun events, and helping each other
+    are all part of our work environment ● Work across functions and across teams
+    - we don’t only work on code that we own, we work with other parts of Snowflake
+    every day. ● 7+ years of industry experience building features and capabilities
+    of large scale systems or infrastructure level platforms. ● Extremely strong fundamental
+    computer science skills and experience building distributed systems. ● Hands-on
+    coding experience in Java, C++ or Go is highly desirable ● Ability to work on-site
+    in our downtown Bellevue office. BONUS POINTS FOR THE FOLLOWING INDUSTRY EXPERIENCE:
+    ● Experience building products or services with Kubernetes. ● Designing and implementing
+    products and features with multi-cloud support (AWS, Azure, GCP). ● Implementing
+    multi-tenant systems with focus on performance, isolation and security. Every
+    Snowflake employee is expected to follow the company’s confidentiality and security
+    standards for handling sensitive data. Snowflake employees must abide by the company’s
+    data security plan as an essential part of their duties. It is every employee''s
+    duty to keep customer Snowflake is growing fast, and we’re scaling our team to
+    help enable and accelerate our growth. We are looking for people who share our
+    values, challenge ordinary thinking, and push the pace of innovation while building
+    a future for themselves and Snowflake. How do you want to make your impact? For
+    jobs located in the United States, please visit the job posting on the Snowflake
+    Careers Site for salary and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.212057+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

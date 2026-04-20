@@ -1,0 +1,117 @@
+id: chime-senior-software-engineer-cards-success
+name: Chime Senior Software Engineer, Cards Success
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Chime
+  url: https://boards.greenhouse.io/chime
+  application_url: https://boards.greenhouse.io/chime/jobs/8470615002?gh_jid=8470615002
+  portal: greenhouse
+  location: San Francisco, CA, USA
+  location_class: us-onsite
+  description: '<p><strong>About the Role</strong></p> <p>The Cards Success Team is
+    hiring a senior backend engineer to elevate how members perceive and utilize cards.
+    You’ll contribute to projects around member awareness pertaining to cards, expanding
+    benefits with their cards, and key functionality for new product offerings. In
+    this role, you''ll have the opportunity to shape our existing and new products
+    by collaborating with various product, design, and engineering partners.</p> <p>The
+    base salary offered for this role and level of experience will begin at $164,000.00
+    and up to $227,000.00. Full-time employees are also eligible for a bonus, competitive
+    equity package, and benefits. The actual base salary offered may be higher, depending
+    on your location, skills, qualifications, and experience.</p> <p><strong>In this
+    role, you can expect to</strong></p> <ul> <li>Design, develop, test, refactor
+    and scale backend implementations of new and existing consumer product features</li>
+    <li>Collaborate with multi-functional teams to understand member struggles and
+    come up with creative solutions</li> <li>Proactively find opportunities for improving
+    the reliability and scalability of our systems</li> <li>Work across the engineering
+    team to improve and uphold high technical standards</li> <li>Engineers are required
+    to participate in on-call rotation. Being on call may include responding to incidents
+    outside of regular working hours when necessary.</li> </ul> <p><strong>To thrive
+    in this role, you have&nbsp;</strong></p> <ul> <li>5+ years of experience in software
+    engineering</li> <li>Comfort working across the stack and an eagerness to learn
+    new technologiesExperience designing APIs and working with transactional databases
+    and caching systemsA product mindset with a strong bias toward experimentation,
+    iteration, and measuring impactExposure to large-scale architecture patterns and
+    an appreciation for clean, maintainable codeA collaborative spirit and strong
+    communication skills, with experience working cross-functionally</li> <li>Experience
+    working in a fast-paced, product-focused environment (Fintech experience is a
+    plus)</li> </ul><div class="content-conclusion"><h2><strong>A little about us</strong></h2>
+    <p>At Chime, we believe that everyone can achieve financial progress. We created
+    Chime—a financial technology company, not a bank*—on the premise that core banking
+    services should be helpful, easy, and free. Through our user-friendly tools and
+    intuitive platforms, we empower our members to take control of their finances
+    and work towards their goals. Whether it''s starting a savings account, purchasing
+    a first car or home, launching a business, or pursuing higher education, we''re
+    proud to have helped millions unlock their financial potential.</p> <p>We''re
+    a team of problem solvers, dreamers, and builders with one shared obsession: our
+    members. From day one, Chimers have worked tirelessly to out-hustle and out-execute
+    competitors to bring our mission to life. Their grit and determination inspire
+    us to work harder every day to deliver the very best experience possible. We each
+    bring an owner''s mindset to our work, refusing to be outdone and holding ourselves
+    accountable to meet and exceed the highest bars for our teams, our company, and
+    our members.</p> <p>We believe in being bold, dreaming big, and taking risks,
+    while also working together, embracing our diverse perspectives, and giving each
+    other honest feedback. Our culture remains deeply entrepreneurial, encouraging
+    every Chimer to see themselves as stewards of our mission to help everyday Americans
+    unlock their financial progress.&nbsp;</p> <p>We know that to achieve our mission,
+    we must earn and keep people''s trust—so we hold ourselves to the highest standards
+    of integrity in everything we do. These aren''t just words on a wall—our values
+    are embedded in every aspect of our business, serving as a north star that guides
+    us as we work to help millions achieve their financial potential.</p> <p>Because
+    if we don''t—who will?</p> <p>*Chime is a financial technology company, not a
+    bank. Banking services provided by The Bancorp Bank, N.A. or Stride Bank, N.A.,
+    Members FDIC.</p> <h2><strong>What we offer for our full-time, regular employees</strong></h2>
+    <ul> <li>🏢 Our in-office work policy is designed to keep you connected - with
+    four days a week in the office and Fridays from home for those near one of our
+    offices, plus team and company-wide events depending on location. Whether you’re
+    coming in regularly or are part of our fully remote program, you’ll stay engaged
+    with your work and teammates.</li> <li>💻 In-office perks including backup child,
+    elder, and/or pet care, plus a subsidized commuter benefit to support your regular
+    commute</li> <li>💰 Competitive salary based on experience</li> <li>✨ 401k match
+    plus great medical, dental, vision, life, and disability benefits</li> <li>🏝 Generous
+    vacation policy and company-wide Chime Days, bonus company-wide paid days off</li>
+    <li>🫂 1% of you'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-04'
+  posting_date: '2026-04-03'
+  date_source: first_published
+  date_added: '2026-04-04'
+  discovered: '2026-04-04T10:23:06.054189+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

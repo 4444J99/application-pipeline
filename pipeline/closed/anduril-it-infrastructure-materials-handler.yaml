@@ -1,0 +1,115 @@
+id: anduril-it-infrastructure-materials-handler
+name: Anduril IT Infrastructure Materials Handler
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5088179007?gh_jid=5088179007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h2><strong>ABOUT THE ROLE<br></strong></h2>
+    <p>We are seeking a highly organized and detail-oriented IT Infrastructure Materials
+    Handler to manage the end-to-end logistics of IT hardware and equipment. This
+    critical role ensures the timely and accurate flow of materials, enabling our
+    IT Infrastructure team to efficiently build and maintain core network and compute
+    infrastructure deployed globally. Working closely with the Shipping &amp; Receiving
+    and Infrastructure Engineering &amp; Deployment teams, you will play a pivotal
+    role in scaling our enterprise, supporting corporate offices, classified spaces,
+    manufacturing facilities, warehousing, and test &amp; evaluation spaces.</p> <h3>&nbsp;<br><strong>WHAT
+    YOU'LL DO</strong><br><br><strong>Receiving &amp; Inventory Management:</strong>
+    </h3> <ul> <li>Receive, inspect, and validate incoming IT Infrastructure hardware
+    and equipment shipments against purchase orders and packing lists.</li> <li>Utilize
+    PackageX or similar systems for accurate package validation and auditing.</li>
+    <li>Perform unboxing, asset tagging, and physical inventory intake of all new
+    equipment.</li> <li>Maintain precise inventory records within Netbox, Oomnitza,
+    and other relevant ERP management systems.</li> <li>Conduct regular inventory
+    audits to ensure accuracy, reconcile discrepancies, and maintain optimal stock
+    levels.</li> <li>Establish a system to monitor and track inventory levels for
+    essential IT consumables (e.g., optics, fiber/copper patch cords, cage nuts),
+    automatically alerting responsible parties when reorder thresholds are met to
+    ensure timely replenishment and prevent shortages.</li> </ul> <h3><strong>Logistics
+    &amp; Deployment Support:</strong> </h3> <ul> <li>Coordinate and execute the shipping
+    and receiving of IT infrastructure gear to and from new or existing sites.</li>
+    <li>Manage the reclamation, inventory, and redeployment of specialized shipping
+    containers (e.g., Pelican cases).</li> <li>Collaborate with local personnel to
+    facilitate site decommissioning activities and the efficient retrieval of hardware.</li>
+    <li>Process and re-inventory decommissioned hardware for reuse, disposal, or return.</li>
+    <li>Provide ad-hoc logistics support for drop shipments and project-specific needs,
+    including potential on-call assistance for engineers.</li> <li>Manage the logistics
+    for Return Merchandise Authorization (RMA) processes, including packaging, shipping,
+    and tracking.</li> <li>Coordinate international shipments as required, ensuring
+    compliance with customs regulations and proper documentation.</li> </ul> <h3><strong>Collaboration
+    &amp; Process Improvement:</strong> </h3> <ul> <li>Collaborate with Spend and
+    Program Managers to generate reports for budgetary planning and resource allocation
+    related to IT hardware.</li> <li>Work closely with the Infrastructure TPMs and
+    Shipping &amp; Receiving stakeholders to identify and implement continuous process
+    improvements in logistics workflows.</li> <li>Provide logistical input to help
+    determine time commitments and resource needs for build teams, ensuring efficient
+    project planning.</li> </ul> <h3><strong>REQUIRED QUALIFICATIONS</strong></h3>
+    <ul> <li>2+ years of experience in logistics, warehouse operations, inventory
+    management, or IT asset management.</li> <li>Proven ability to manage and maintain
+    accurate inventory records.</li> <li>Experience with shipping and receiving processes,
+    including package validation and freight coordination.</li> <li>Exceptional organizational
+    skills and meticulous attention to detail.</li> <li>Strong communication skills,
+    both written and verbal, with the ability to collaborate effectively with various
+    teams.</li> <li>Ability to lift and move IT equipment (e.g., servers, network
+    devices) weighing up to 50 lbs.</li> <li>Experience with or ability to quickly
+    learn inventory management software (e.g., Netbox, Oomnitza, etc) and PackageX.</li>
+    <li>Ability to work independently and troubleshoot logistical issues efficiently.</li>
+    </ul> <h3><strong>PREFERRED QUALIFICATIONS</strong></h3> <ul> <li>Familiarity
+    with IT infrastructure hardware components (servers, networking equipment, storage).</li>
+    <li>Experience with ticketing systems (e.g., Airtable, Jira) fo
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.841265+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

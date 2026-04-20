@@ -1,0 +1,114 @@
+id: anduril-software-engineer-lattice-c2-ui
+name: Anduril Software Engineer, Lattice C2 UI
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5027348007?gh_jid=5027348007
+  portal: greenhouse
+  location: Costa Mesa, California, United States; Seattle, Washington, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p>The
+    Lattice Command and Control (C2) UI team builds and maintains the common web application
+    components that bring the Lattice for C2 primitives to web applications across
+    Anduril’s different divisions. We serve as the backbone of the C2 application
+    development process, enabling our engineers to focus on building innovative features
+    for Lattice applications rather than reinventing infrastructure. Our team develops
+    the shared building blocks utilized throughout Anduril's customer-facing web applications
+    to communicate with the Lattice C2 backend services to understand the <a href="https://developer.anduril.com/guides/entities/overview">common
+    operating picture</a>, <a href="https://developer.anduril.com/guides/tasks/overview">convey
+    intent</a> to autonomous agents, <a href="https://developer.anduril.com/guides/objects/overview">store
+    and access files</a> across Lattice, and more. Our mission is to accelerate development
+    cycles and equip our engineering teams with robust framework to interact with
+    Lattice OS to create exceptional web applications that advance Anduril's defense
+    technology goals.</p> <h3>ABOUT THE JOB</h3> <p>We are seeking a Software Engineer
+    to join our growing team during its formative stage. In this position, you will
+    help shape how Anduril engineers build and deliver web software. You will contribute
+    to designing and implementing foundational web frameworks to interact with Lattice
+    OS services. Your work will span multiple technical domains as you identify friction
+    points and craft elegant solutions to improve our development infrastructure.
+    This role requires a solid foundation in web technologies, efficient front-end
+    data structures, and the ability to optimize communication with the back-end.
+    If you're a collaborative problem-solver who finds satisfaction in creating tools
+    that amplify the effectiveness of other engineers, we want to talk to you.</p>
+    <h4>WHAT YOU’LL DO</h4> <ul> <li>Design, build, test, deploy, and maintain tooling
+    that helps Anduril increase engineering velocity and product quality</li> <li>Proactively
+    identify pain points and opportunities to improve our dev experience and infrastructure</li>
+    <li>Work across the stack (front-end, back-end, build, CI/CD) to get things done</li>
+    <li>Support and mentor fellow engineers on engineering best practices, and on
+    how to best use our tools</li> </ul> <h4>REQUIRED QUALIFICATIONS</h4> <ul> <li>Bachelor's
+    degree in Computer Science or related field; or equivalent industry experience</li>
+    <li>Experience building production web applications in JavaScript or TypeScript
+    (we use TypeScript, React, and RxJS)</li> <li>Proficiency with modern backend
+    programming languages such as C++, Rust, or Golang.</li> <li>Familiarity with
+    algorithms, data structures, automated testing, and other technical tools</li>
+    <li>High empathy for your fellow engineers (our customers)</li> <li>Minimum 3
+    years of software engineering experience</li> <li>Must be a U.S. Person due to
+    required access to U.S. export controlled information or facilities</li> </ul>
+    <h4>PREFERRED QUALIFICATIONS</h4> <ul> <li>Have a bias for action and taking ownership.
+    You have a track record of solving a problem if you see one.</li> <li>Experience
+    maintaining continuous integration systems (we use CircleCI)</li> <li>Experience
+    or interest working in monorepos with modern build systems like Bazel, Buck, Nx,
+    etc. (we use Bazel)</li> <li>Experience or interest working in Go</li> <li>Experience
+    with gRPC/protobuf or similar technologies</li> </ul><div class="content-pay-transparency"><div
+    class="pay-input"><div class="title">US Salary Range</div><div class="pay-range"><span>$166,000</span><span
+    class="divider">&mdash;</span><span>$220,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work experience, education and/or training, critical skills, and/or business considerations.
+    Highly competitive equity grants are included in the majority of full time offers;
+    and are considered part of Anduril's
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.596815+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

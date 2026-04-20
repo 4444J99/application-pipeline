@@ -1,0 +1,113 @@
+id: robinhood-salesforce-applications-developer
+name: Robinhood Salesforce Applications Developer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7729315?t=gh_src=&gh_jid=7729315
+  portal: greenhouse
+  location: Toronto, Canada
+  location_class: international
+  description: '<div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><h2><strong>About the team + role</strong></h2>
+    <p>The Corporate Engineering Platform Tooling team builds and maintains internal
+    systems that support Robinhood’s customer support, marketing, and legal operations.
+    The team develops reliable internal platforms that enable teams across the company
+    to manage customer interactions, operational workflows, and compliance processes.
+    Engineers on this team maintain the Salesforce environment that powers these operations
+    while ensuring system stability, data security, and scalable architecture. The
+    team works closely with internal business teams to translate operational needs
+    into reliable technical solutions.</p> <p>As a Salesforce Applications Developer,
+    you will design, build, and maintain solutions within Robinhood’s Salesforce environment.
+    You will develop custom applications, integrations, and configurations that support
+    operational teams across the company. This role focuses on building reliable systems,
+    improving platform performance, and delivering scalable Salesforce capabilities
+    that support a growing user base. Your work will directly support the internal
+    tools that help Robinhood teams serve customers efficiently and accurately!</p>
+    <p><strong>The role is located in the office location(s) listed on this job description
+    which will align with our in-office working environment. Please connect with your
+    recruiter for more information regarding our in-office philosophy and expectations.</strong></p>
+    <h2><strong>What you’ll do</strong></h2> <ul> <li>Design and develop applications,
+    configurations, and integrations within Robinhood’s Salesforce environment to
+    support internal operational systems.</li> <li>Build and maintain custom functionality
+    using Salesforce Lightning, Apex, and Visualforce to support internal workflows
+    and business requirements.</li> <li>Monitor system reliability and respond to
+    operational issues through on-call participation and incident resolution processes.</li>
+    <li>Translate business requirements from internal teams into scalable Salesforce
+    technical solutions and integrations.</li> <li>Implement and maintain secure Salesforce
+    configurations, including user permissions, custom objects, validation rules,
+    and automation tools.</li> <li>Leverage AI-assisted development tools (e.g., Claude,
+    Cursor) to accelerate the creation of Apex code, Flows, and Salesforce metadata,
+    improving development velocity and efficiency.</li> <li>Demonstrate strong problem-solving
+    skills by investigating and resolving issues reported by business teams, identifying
+    root causes, and implementing scalable fixes.</li> </ul> <h2><strong>What you
+    bring</strong></h2> <ul> <li>2-5 years of experience building and maintaining
+    Salesforce environments supporting enterprise-scale systems.</li> <li>Experience
+    developing Salesforce applications using Lightning, Apex, and Visualforce.</li>
+    <li>Ability to design, test, debug, package, and deploy scalable Salesforce solutions
+    with clear documentation.</li> <li>Experience implementing integrations between
+    Salesforce and internal or third-party systems.</li> <li>Strong understanding
+    of Salesforce configuration tools including custom objects, flows, validation
+    rules, and platform security controls.</li> <li>Experience leveraging AI-assisted
+    development tools (e.g., Claude, Cursor) to accelerate the development of Apex
+    code, Flows, and Salesforce metadata while maintaining code quality and best practices.</li>
+    </ul> <p>&nbsp;</p> <p>Our team is committed to providing an inclusive and welcoming
+    interview experience for all candidates. If you require a specific accommodation
+    during the application or interview process due to a physical or mental condition,
+    please complete this<a href="https://robinhood.hracuity.net/webform/index/752875e4-42ba-4dff-9951-fd51e315997e">
+    Applicant Accommodation Form</a> to notify our team. The form should only be completed
+    if you need a specific accommodation.</p> <p><strong>AI Usage Disclosure:</strong>
+    Robinhood uses artificial intelligence (AI) tools to support parts of our recruiting
+    process. These tools enhance the efficiency and consistency of our hiring process;
+    however, all hiring decisions are made by our hiring teams.</p> <p><strong>Vacancy
+    Notice: </strong>This job posting represents an existing vacancy that we are actively
+    seeking to fill.</p><div class="content-pay-transparency"><div class="pay-input"><div
+    class="description"><p><strong>In addition to the base pay range li'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.120228+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

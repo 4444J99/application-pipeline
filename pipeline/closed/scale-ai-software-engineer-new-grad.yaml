@@ -1,0 +1,115 @@
+id: scale-ai-software-engineer-new-grad
+name: Scale AI Software Engineer - New Grad
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Scale AI
+  url: https://boards.greenhouse.io/scaleai
+  application_url: https://job-boards.greenhouse.io/scaleai/jobs/4605996005
+  portal: greenhouse
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: '<p>At Scale, our mission is to accelerate the development of AI applications.
+    For 8 years, Scale has been the leading AI data foundry, helping fuel the most
+    exciting advancements in AI, including: generative AI, defense applications, and
+    autonomous vehicles. With our recent Series F round, we’re accelerating the abundance
+    of frontier data to pave the road to Artificial General Intelligence (AGI), and
+    building upon our prior model evaluation work with enterprise customers and governments,
+    to deepen our capabilities and offerings for both public and private evaluations.</p>
+    <p>&nbsp;</p> <p><strong>Example Projects:</strong></p> <ul> <li>Ship tools to
+    accelerate the growth of new qualified contributors on Scale’s labeling platform</li>
+    <li>Build methodical fraud-detection systems to remove bad actors and keep Scale’s
+    contributor base safe and trusted.&nbsp;</li> <li>Use models to estimate the quality
+    of tasks and labelers, and guarantee quality on requests at large scale.</li>
+    <li>Devise advanced matching algorithms to match labelers to customers for optimal
+    turnaround and accuracy.</li> <li>Build methods to automatically measure, train,
+    and optimally match labelers to tasks based on performance</li> <li>Create optimized
+    and efficient UI/UX tooling, in combination with ML algorithms, for 100k+ labelers
+    to complete billions of complex tasks</li> <li>Develop new AI infrastructure products
+    to visualize, query, and explore Scale data</li> <li>Create a customer service
+    RAG application that handles 1000s of questions a day</li> <li>Integrate a cutting-edge
+    ML model that predicts churn with a customer''s retention system</li> </ul> <p>&nbsp;</p>
+    <p><strong>Requirements:</strong></p> <ul> <li>A graduation date in Fall 2025
+    or Spring 2026 with a Bachelor’s degree (or equivalent) in a relevant field (Computer
+    Science, EECS, Computer Engineering, Statistics)&nbsp;</li> <li>Product engineering
+    experience such as building web apps full-stack, integrating with relevant APIs
+    and services, talking to customers, figuring out ‘what’ to build and then iterating</li>
+    <li>Previous Product/Software Engineering Internship experience&nbsp;</li> <li>Track
+    record of shipping high-quality products and features at scale</li> <li>Experience
+    building systems that process large volumes of data</li> <li>Experience with Typescript,
+    React, Python and/or MongoDB</li> </ul><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p><em>Compensation packages at Scale
+    for eligible roles include base salary, equity, and benefits. The range displayed
+    on each job posting reflects the minimum and maximum target for new hire salaries
+    for the position, determined by work location and additional factors, including
+    job-related skills, experience, interview performance, and relevant education
+    or training. Scale employees in eligible roles are also granted equity based compensation,
+    subject to Board of Director approval. Your recruiter can share more about the
+    specific salary range for your preferred location during the hiring process, and
+    confirm whether the hired role will be eligible for equity grant. You’ll also
+    receive benefits including, but not limited to: Comprehensive health, dental and
+    vision coverage, retirement benefits, a learning and development stipend, and
+    generous PTO. Additionally, this role may be eligible for additional benefits
+    such as a commuter stipend.</em></p></div><div class="title">The base salary range
+    for this full-time position in the location of San Francisco is:</div><div class="pay-range"><span>$124,000</span><span
+    class="divider">&mdash;</span><span>$155,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><strong><em>PLEASE NOTE:&nbsp;</em></strong><em>Our
+    policy requires a 90-day waiting period before reconsidering candidates for the
+    same role. This allows us to ensure a fair and thorough evaluation of all applicants.</em></p>
+    <p><strong>About Us:</strong></p> <p><em>At Scale, our mission is to develop reliable
+    AI systems for the world''s most important decisions. Our products provide the
+    high-quality data and full-stack technologies that power the world''s leading
+    models, and help enterprises and governments build, deploy, and oversee AI applications
+    that deliver real impact. We work closely with industry leaders like Meta, Cisco,
+    DLA Piper, Mayo Clinic, Time Inc., the Government of Qatar, and U.S. government
+    agencies including the Army and Air Force. We are expanding our team to accelerate
+    the development of AI applications.</em></p> <p><em>We believe that everyone should
+    be able to bring their whole selves to work, which is why we are proud to be an
+    inclusive and equal opportunity workplace. We are committed to equal employment
+    opportunity regardless of race, color, ancestry, religion, sex, national origin,
+    sexual orientation, age, citizenship, marital status, disability status, gender
+    identity or Veteran status.&nbsp;</em></p> <p><em>We are committed to working
+    with and providi'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.483177+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

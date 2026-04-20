@@ -1,0 +1,117 @@
+id: deel-full-stack-engineer-front-end-heavy
+name: Deel Full Stack Engineer (Front-end Heavy)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Deel
+  url: https://jobs.ashbyhq.com/deel
+  application_url: https://jobs.ashbyhq.com/deel/334d3287-9864-4425-bcb0-0cbbf8f3a4ea
+  portal: ashby
+  location: EMEA
+  location_class: international
+  description: 'Who we are is what we do. Deel is the all-in-one payroll and HR platform
+    for global teams. Our vision is to unlock global opportunity for every person,
+    team, and business. Built for the way the world works today, Deel combines HRIS,
+    payroll, compliance, benefits, performance, and equipment management into one
+    seamless platform. With AI-powered tools and a fully owned payroll infrastructure,
+    Deel supports every worker type in 150+ countries—helping businesses scale smarter,
+    faster, and more compliantly. Among the largest globally distributed companies
+    in the world, our team of 7,000 spans more than 100 countries, speaks 74 languages,
+    and brings a connected and dynamic culture that drives continuous learning and
+    innovation for our customers. Why should you be part of our success story? As
+    the fastest-growing Software as a Service (SaaS) company in history, Deel is transforming
+    how global talent connects with world-class companies – breaking down borders
+    that have traditionally limited both hiring and career opportunities. We''re not
+    just building software; we''re creating the infrastructure for the future of work,
+    enabling a more diverse and inclusive global economy. In 2024 alone, we paid $11.2
+    billion to workers in nearly 100 currencies and provided healthcare and benefits
+    to workers in 109 countries—ensuring people get paid and protected, no matter
+    where they are. Our momentum is reflected in our achievements and customer satisfaction:
+    CNBC Disruptor 50, Forbes Cloud 100, Deloitte Fast 500, and repeated recognition
+    on Y Combinator’s top companies list – all while maintaining a 4.83 average rating
+    from 15,000 reviews across G2, Trustpilot, Captera, Apple and Google. Your experience
+    at Deel will be a career accelerator. At the forefront of the global work revolution,
+    you''ll tackle complex challenges that impact millions of people''s working lives.
+    With our momentum—backed by a $17.3 billion valuation and $1 B in Annual Recurring
+    Revenue (ARR) in just over five years—you''ll drive meaningful impact while building
+    expertise that makes you a sought-after leader in the transformation of global
+    work. Get ready to: Be a part of a truly cross-functional team; Backend Engineers,
+    Frontend Engineers, Product Teams, Designers and QA’s. Participate in product
+    planning (From discovery all the way to deployment); We want your input at all
+    stages of the Software Development Lifecycle! Collaborate! Our teams work together
+    to develop robust new features, API’s, continuously improve our industry-leading
+    products and find and fix any bugs at DeelSpeed. Ensure our customers receive
+    a white-glove experience with our products! Fully own the development of features
+    on the client, server, service, and database The bits and bytes that you’ll bring
+    to your new team: You will develop high-quality, responsive web applications using
+    TypeScript, Javascript, React, Express. Experience with NestJS, Vite, and Next.js
+    is a plus. You will design and implement server-side APIs, data models, and business
+    logic using mainly Express framework You will create client-side function-based
+    React components, hooks, stories, and tests to interact with your server-side
+    work You will create and optimize database schemas, queries, and interactions
+    with Postgres. You will build reusable and modular components on both the front
+    and back end that promote code reusability, maintainability, and scalability.
+    You will perform thorough testing, debugging, and troubleshooting of applications
+    to ensure high-quality deliverables. You will stay updated with emerging web development
+    trends, frameworks, and best practices, and recommend improvements to enhance
+    development processes. You will participate in code reviews and provide constructive
+    feedback to team members to maintain code quality standards. You will communicate
+    project progress, challenges, and solutions effectively to team members and stakeholders.
+    Contribute to the continuous improvement of development processes, methodologies,
+    and tools. You''re the Engineer we''re looking for if you: At least 4 years of
+    Full-Stack experience, with a focus on TypeScript development. Expert in the art
+    of designing, coding, testing, and maintaining applications using the tech listed
+    above. Thrive in a collaborative, remote-first work culture where teamwork and
+    camaraderie are key. Embrace independence and take ownership of your projects,
+    yet also excel in a team setting and love to contribute. Communicate complex ideas
+    with ease and enjoy collaborating with diverse teams of technical and non-technical
+    stakeholders. Are passionate about solving customer problems with your coding
+    superpowers, and are a natural at troubleshooting issues. Take a business-focused
+    approach to software development, with a keen eye on delivering high-value outcomes
+    for our clients. Obsess over details, and always keep the customer experience
+    top of mind. Extra brownie points if you: Have experience with SaaS products running
+    24/7 on a major cloud vendor'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-07'
+  posting_date: '2026-04-07'
+  date_source: published_at
+  date_added: '2026-04-07'
+  discovered: '2026-04-07T10:15:28.450831+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

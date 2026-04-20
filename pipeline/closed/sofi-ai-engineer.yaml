@@ -1,0 +1,116 @@
+id: sofi-ai-engineer
+name: SoFi AI Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: SoFi
+  url: https://boards.greenhouse.io/sofi
+  application_url: https://sofi.com/careers/job/7684401003?gh_jid=7684401003
+  portal: greenhouse
+  location: CA - San Francisco
+  location_class: us-onsite
+  description: <div class="content-intro"><p><a href="https://www.sofi.com/sofi-employee-applicant-privacy-notice/"
+    target="_blank"><strong>Employee Applicant Privacy Notice</strong></a></p> <p><strong>Who
+    we are:</strong></p> <div> <p>Shape a brighter financial future with us.</p> <p>Together
+    with our members, we’re changing the way people think about and interact with
+    personal finance.</p> <p>We’re a next-generation financial services company and
+    national bank using innovative, mobile-first technology to help our millions of
+    members reach their goals. The industry is going through an unprecedented transformation,
+    and we’re at the forefront. We’re proud to come to work every day knowing that
+    what we do has a direct impact on people’s lives, with our core values guiding
+    us every step of the way. <strong>Join us to invest in yourself, your career,
+    and the financial world.</strong></p> </div></div><p><strong>The role:</strong></p>
+    <p>SoFi’s <strong>AI Engineer</strong> is a hands-on engineering role within SoFi’s
+    growing independent risk organization, focused on building agentic AI systems
+    to solve real-world, high-impact problems. This role will be instrumental in designing,
+    prototyping, and deploying AI systems that enhance risk management and internal
+    workflows.</p> <p>This role sits at the intersection of the intelligence layer,
+    including LLMs, agents, and orchestration, and the experience layer, which focuses
+    on how users interact with and derive value from the AI systems developed. You
+    will work closely with the Senior Manager of AI Engineering within the Risk Analytics
+    group to build systems that are technically strong, intuitive, reliable, and impactful
+    for end users.</p> <p><strong>What you’ll do:&nbsp;</strong></p> <ul> <li><strong>Architect
+    and Develop Agentic AI Systems:</strong> Design, build, and orchestrate AI systems
+    that leverage multi-step reasoning, tool use, and structured workflows, using
+    frameworks such as LangGraph or similar approaches. Incorporate planning, memory,
+    tool integration, and adaptive control flow to enable automated decisioning, risk
+    insights, and internal platforms.</li> <li><strong>Design the Experience Layer:</strong>
+    Work closely with stakeholders to define how users interact with AI systems, including
+    designing intuitive workflows, interfaces, and feedback loops that drive adoption
+    and trust.</li> <li><strong>Context Engineering and System Design:</strong> Structure
+    inputs, outputs, and system context to improve reliability and performance of
+    LLM systems, including prompt design, retrieval strategies, and workflow composition.</li>
+    <li><strong>Productionize AI Systems:</strong> Develop production-grade services
+    and APIs, integrate agents into real systems, and ensure scalability, reliability,
+    and maintainability.</li> <li><strong>AI Observability and Evaluation:</strong>
+    Build tracing, debugging, and evaluation frameworks to understand system behavior
+    and continuously improve agent performance.</li> <li><strong>Cross-Functional
+    Collaboration:</strong> Partner with risk, engineering, and business teams to
+    translate ambiguous problems into working AI systems and deliver measurable outcomes.</li>
+    <li><strong>Proof of Concepts and Innovation:</strong> Identify opportunities
+    to automate workflows using AI, rapidly prototype solutions, and evaluate new
+    tools and approaches by staying up-to-date with latest trends in AI</li> </ul>
+    <p><strong>What you’ll need:</strong></p> <ul> <li>Bachelor’s or Master’s degree
+    in Computer Science, Data Science, Artificial Intelligence, Machine Learning,
+    or a related field.</li> <li>Two to five years of software development experience,
+    with hands-on experience building and shipping AI-powered applications or workflows.</li>
+    <li>Experience working with LLMs and building applications using prompting, APIs,
+    or agent frameworks.</li> <li>Familiarity with agentic patterns such as tool use,
+    multi-step reasoning, or workflow orchestration.</li> <li>Experience structuring
+    inputs and outputs for LLM systems through context engineering, including prompt
+    design and retrieval-based approaches.</li> <li>Experience building backend services
+    and APIs, with Python preferred.</li> <li>Familiarity with cloud platforms such
+    as AWS, Azure, or GCP and modern development practices.</li> <li>Experience working
+    with data, including structured or unstructured data, and building pipelines for
+    downstream applications.</li> <li>Understanding of how to evaluate AI systems,
+    including defining success metrics and iterating based on performance.</li> <li>Strong
+    problem-solving skills and the ability to work through ambiguous problems.</li>
+    <li>Strong communication and collaboration skills, with the ability to work cross-functionally.</li>
+    <li>An ownership mindset with a bias for action in building and shipping solutions.</li>
+    </ul> <p><strong>Nice to have:</strong></p> <ul> <li>Experience with frameworks
+    for building agentic applications such as LangGraph.</li> <li>Experience designing
+    us
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-31'
+  posting_date: '2026-03-31'
+  date_source: first_published
+  date_added: '2026-03-31'
+  discovered: '2026-03-31T16:16:16.912076+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,115 @@
+id: postman-senior-software-engineer-postman-insights
+name: Postman Senior Software Engineer, Postman Insights
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Postman
+  url: https://boards.greenhouse.io/postman
+  application_url: https://job-boards.greenhouse.io/postman/jobs/7539839003
+  portal: greenhouse
+  location: San Francisco, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>Who Are We?</strong></h2> <p>Postman
+    is the world’s leading API platform, used by more than 45 million+ developers
+    and 500,000 organizations, including 98% of the Fortune 500. Postman is helping
+    developers and professionals across the globe build the API-first world by simplifying
+    each step of the API lifecycle and streamlining collaboration—enabling users to
+    create better APIs, faster.</p> <p>The company is headquartered in San Francisco
+    and has offices in Boston, New York, Austin, Tokyo, London, and Bangalore - where
+    Postman was founded. Postman is privately held, with funding from Battery Ventures,
+    BOND, Coatue, CRV, Insight Partners, and Nexus Venture Partners. Learn more at
+    postman.com or connect with Postman on X via @getpostman.</p> <p>P.S: We highly
+    recommend reading <a href="https://api-first-world.com/">The "API-First World"
+    graphic novel</a> to understand the bigger picture and our vision at Postman.</p></div><h2>The
+    <strong>Opportunity</strong></h2> <p>With <a href="https://www.postman.com/product/postman-insights/">Postman
+    Insights</a>, our vision is to help all developers more quickly find and fix production
+    issues. Our vision is to provide productive dashboards within 15 minutes of a
+    developer signing up for an account. With our first product, we aim to provide
+    the fastest, easiest way to find and fix failing APIs.</p> <p>We are looking for
+    a high-ownership, product-oriented infrastructure engineer to help us scale our
+    product to bigger users. Postman Insights works by watching API traffic at the
+    network level, in real-time. You’ll get to work on exciting scaling problems,
+    balancing long-term infrastructure goals with short-to-medium term product needs.</p>
+    <p><a href="https://www.youtube.com/watch?v=OHMxgRuW9H8&amp;t=3370s">Watch our
+    launch demo</a> from POST/CON.</p> <h2><strong>What you’ll do</strong></h2> <ul>
+    <li>Design, build, and scale our backend infrastructure to process time-series
+    network traffic, at large scale, in real-time.</li> <li>Build and maintain AI
+    algorithms to analyze time-series network data to improve API discovery, metrics,
+    and more.</li> <li>Take ownership of the engineering roadmap for the backend infrastructure
+    of Postman Insights, setting the technical direction and priorities.</li> <li>Collaborate
+    with documentation and marketing teams to help explain the capabilities and limitations
+    that the infrastructure unlocks.</li> <li>Partner with the broader team to make
+    design and architecture decisions for Postman Insights.</li> <li>Support the engineering
+    manager in growing the team by contributing to technical planning, onboarding
+    new members, and participating in hiring efforts.</li> </ul> <h2><strong>About
+    you</strong></h2> <p>You’re an engineer who thrives on diving into the unknown,
+    collaborating with others, and tackling challenging, complex problems with a can-do
+    attitude. You have a passion for delivering seamless and delightful experiences
+    to users, no matter how intricate the technical hurdles may be.</p> <p>As one
+    of the first dedicated engineers in the platform area for Postman Insights, you’ll
+    play a critical role in shaping the foundation of this team. Your work will not
+    only directly impact the success of our platform but also set the stage for expanding
+    the team and scaling our capabilities in this space.</p> <h3>Previous Experience</h3>
+    <p>Must have:</p> <ul> <li>7+ years of experience shipping production-grade software.</li>
+    <li>Experience scaling large-scale software systems.</li> <li>Proven ability to
+    work independently, with at least two significant projects where you were either
+    the primary contributor delivering substantial portions of the work and/or led
+    a team of engineers to successfully execute the project.</li> <li>Strong communication
+    skills, with a track record of aligning cross-functional stakeholders and unblocking
+    challenges to meet business objectives.</li> <li>Based in the San Francisco Bay
+    Area.</li> </ul> <p>Nice-to-have:</p> <ul> <li>Experience working on an early-stage
+    product.</li> <li>Experience working with time-series data.</li> <li>Experience
+    collaborating with distributed teams across multiple time zones.</li> </ul> <p>The
+    reasonably estimated base salary for this role ranges from $210,000 to 240,000,
+    plus a competitive equity package. Actual compensation is based on the candidate''s
+    skills, qualifications, and experience.</p><div class="content-conclusion"><h2
+    data-renderer-start-pos="4036"><strong data-renderer-mark="true">What Else?</strong></h2>
+    <p data-renderer-start-pos="4048">In addition to Postman''s pay-on-performance
+    philosophy, and a flexible schedule working with a fun, collaborative team, Postman
+    offers a comprehensive set of benefits, including full medical coverage, flexible
+    PTO, wellness reimbursement, and a monthly lunch stipend. Along with that, our
+    wellness programs will help you stay in the best of your physical and mental health.
+    Our frequent and fascinating team-buil'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.877926+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

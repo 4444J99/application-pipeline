@@ -1,0 +1,115 @@
+id: anduril-senior-software-engineer-simulation-platform
+name: 'Anduril Senior Software Engineer, Simulation Platform '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5088646007?gh_jid=5088646007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM&nbsp;</h3> <p>The
+    Simulation Platform team owns the core architecture and infrastructure of Anduril''s
+    high-fidelity, multi-domain military mission simulator. It models hundreds of
+    entities--aircraft, ships, submarines, satellites, ground vehicles--moving, sensing,
+    communicating, and engaging across realistic physical environments. The simulator
+    powers training, mission planning, autonomy development, and hardware-in-the-loop
+    testing across Anduril''s product portfolio. It connects to live systems, integrates
+    with Anduril''s Lattice platform, and runs inside a GUI for interactive scenario
+    authoring.&nbsp; Mission Sim is a large, mature C++20 codebase with an Entity-Component-System
+    architecture, a stable C ABI plugin system, embedded scripting, and a variety
+    of physics-based models. Keeping this system fast, correct, extensible, and pleasant
+    to develop against at scale, with a growing team of model developers is our job.</p>
+    <h3>ABOUT THE ROLE</h3> <p>Platform work is leverage. Every API you design, every
+    millisecond you shave off the frame loop, every rough edge you smooth in the developer
+    experience — it multiplies across every model, every scenario, and every engineer
+    which builds atop Anduril’s mission simulator. You''ll work on a genuinely complex
+    system (real-time, multi-domain, deterministic, plugin-extensible) where architectural
+    decisions have concrete, measurable consequences and correctness matters. The
+    simulator is how Anduril tests autonomy before it touches hardware, how operators
+    train on mission scenarios, and how engineers validate that sensors and platforms
+    behave as expected.&nbsp; This platform is what makes that possible at scale.<br><br>This
+    role is open to senior engineers and strong mid-career engineers who are ready
+    to own significant pieces of a complex system. If you''ve spent your career building
+    applications and want to shift toward framework and infrastructure work, this
+    role is for you!&nbsp;</p> <h3>WHAT YOU''LL DO</h3> <ul> <li>Performance and scale
+    — keep the simulation loop fast enough for real-time and faster-than-real-time
+    execution with hundreds of concurrent entities; reasoning about memory layout,
+    cache behavior, and contention as entity counts grow</li> <li>Custom Entity-Component-System
+    architecture that underpins the entire simulator: entity lifecycle, component
+    storage, system registration, and the update loop</li> <li>Plugin and SDK development:
+    maintain a versioned C ABI, enabling external teams to extend the simulator</li>
+    <li>Integration architecture: gRPC services, DIS protocol interoperability, networking
+    messaging, and file recording for playback</li> <li>Support domain experts in
+    integrating new and enhancing existing capability models</li> </ul> <h4>REQUIRED
+    QUALIFICATIONS</h4> <ul> <li>3 years of professional experience with C++20 and
+    strong C++ skills; you should be comfortable with templates, move semantics, smart
+    pointers, and the kinds of design decisions that show up in framework code</li>
+    <li>Experience designing internal APIs and frameworks that other engineers build
+    on — you care about backwards-compatibility, ergonomics, not just correctness</li>
+    <li>Solid understanding of systems programming fundamentals: memory management,
+    shared libraries, ABI stability, linking, and platform-level concerns</li> <li>Comfort
+    with linear algebra and applied math</li> <li>Familiarity with Linux based C++
+    development toolchains</li> <li>Ability to reason about performance-sensitive
+    code--cache behavior, memory layout, algorithmic complexity</li> <li>Clear technical
+    communication and ability to work in a large, shared codebase with architectural
+    decision making that impacts a growing team</li> <li>Eligibility to obtain and
+    maintain an active U.S. Government Secret security clearance</li> </ul> <h4>PREFERRED
+    QUALIFICATIONS</h4> <ul> <li>5+ years of professional experience with C++20</li>
+    <li>Experience with military simulation, defense modeling &amp; simulation (M&amp;S),
+    or related domains</li> <li>Experience with Entity-Component-System architectures
+    or game engine design patterns</li> <li>Familiarity with gRPC, DIS (IEEE 1278.1)
+    distributed simulation standard</li> <li>Experience with Python/C++ inter'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.592609+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

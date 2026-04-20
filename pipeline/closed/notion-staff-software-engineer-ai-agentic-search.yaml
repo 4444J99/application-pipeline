@@ -1,0 +1,115 @@
+id: notion-staff-software-engineer-ai-agentic-search
+name: Notion Staff Software Engineer, AI Agentic Search
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Notion
+  url: https://jobs.ashbyhq.com/notion
+  application_url: https://jobs.ashbyhq.com/notion/25aa4f5c-a0df-4dd7-82b6-ea97c8cad12e
+  portal: ashby
+  location: Hyderabad, India
+  location_class: international
+  description: 'About Us: Notion helps you build beautiful tools for your life’s work.
+    In today''s world of endless apps and tabs, Notion provides one place for teams
+    to get everything done, seamlessly connecting docs, notes, projects, calendar,
+    and email—with AI built in to find answers and automate work. Millions of users,
+    from individuals to large organizations like Toyota, Figma, and OpenAI, love Notion
+    for its flexibility and choose it because it helps them save time and money. In-person
+    collaboration is essential to Notion''s culture. We require all team members to
+    work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor
+    Days. Certain teams or positions may require additional in-office workdays. About
+    The Role: We are seeking a Staff Software Engineer with 10+ years of experience
+    to work in the AI Connectors team. AI Connectors power AI agentic search, enabling
+    customers to find answers across applications like Slack, Google Drive, Salesforce,
+    and GitHub through Notion AI connectors . You''ll build the end-to-end AI agentic
+    search experience: Design and ship connectors from scratch, keeping third-party
+    data continuously in sync. Build semantic search infrastructure powered by vector
+    embeddings and efficient storage systems. Transform natural language questions
+    into intelligent queries across multiple data sources. Implement ranking systems
+    that surface the most relevant results while respecting user permissions and access
+    controls. Scale to millions of documents across thousands of customers. You''re
+    a builder who thrives in fast-paced environments with a track record of shipping
+    frequently: Expert in distributed systems, data pipelines, vector databases, and
+    production infrastructure. You write clean code, take end-to-end ownership, and
+    make pragmatic architectural decisions under ambiguity. You mentor teammates and
+    deliver projects that enable intelligent agentic search experiences at enterprise
+    scale. What You''ll Achieve: You’ll work with a team of engineers and cross-functional
+    partners across product, design, data science, and user research to define a product
+    strategy and drive execution through conception, research, implementation, and
+    maintenance. You’ll build and maintain foundational pieces of Notion’s building
+    blocks, enabling a wide array of use cases in Notion such as docs, wikis, issue
+    tracking, project management, and more. You’ll contribute to the overall performance,
+    reliability, and robustness of the Notion product, ensuring it scales elegantly
+    across many dimensions. You’ll partner with engineering leaders to identify and
+    execute against high leverage technical investment that ensure the long-term flexibility
+    and sustainability of our core systems. Skills You''ll Need to Bring: Proven track
+    record of execution: You have 10+ years of fullstack engineering experience, including
+    building world-class product experiences alongside a team of engineers. Shipping
+    quality user interfaces: You partner closely with product and deign to craft beautiful
+    user experiences for large audiences, leveraging web technologies like HTML, CSS,
+    JavaScript, and a modern UI framework like React. If you''ve experienced the technical
+    challenges of rapid growth, that''s a plus. Building the team: You enjoy collaborating
+    with both fellow engineers and cross-functional partners. You are a lifelong learner
+    and invest in both your own growth, but also the growth, learning, and development
+    of your teammates. Thoughtful problem-solving: You approach problems holistically,
+    starting with a clear and accurate understanding of the context. You think critically
+    about the implications of what you''re building and how it will impact real people''s
+    lives. You can navigate ambiguity flawlessly, decompose complex problems into
+    clean solutions, while also balancing the business impact of what you’re building.
+    Not ideological about technology: To you, technologies and programming languages
+    are about tradeoffs. You may be opinionated, but you''re not ideological and can
+    learn new technologies as you go. Empathetic communication: You communicate nuanced
+    ideas clearly, whether you''re explaining technical decisions in writing or brainstorming
+    in real time. In disagreements, you engage thoughtfully with other perspectives
+    and compromise when needed. You don’t need to be an AI expert, but you’re curious
+    and willing to adopt AI tools to work smarter and deliver better results. Nice
+    to Haves: You''re proficient with any part of our technology stack: React, TypeScript,
+    Node.js, and Postgres. You have built or contributed to an internal platform or
+    framework in the past. You have experience driving teams toward shared goals and
+    can balance business priorities with individuals’ strengths, areas of interest,
+    and career development goals. You''ve heard of computing pioneers like Ada Lovelace,
+    Douglas Engelbart, Alan Kay, and others—and understand why we''re big fans of
+    their work. You have interests outside of technology, such as in art, history,'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.748809+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

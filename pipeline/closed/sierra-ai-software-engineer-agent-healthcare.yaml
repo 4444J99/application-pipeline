@@ -1,0 +1,116 @@
+id: sierra-ai-software-engineer-agent-healthcare
+name: Sierra AI Software Engineer, Agent - Healthcare
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sierra AI
+  url: https://jobs.ashbyhq.com/sierra
+  application_url: https://jobs.ashbyhq.com/sierra/eb3ee157-3d2a-412a-88a2-e2cfc5647a66
+  portal: ashby
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: 'About us At Sierra, we’re creating a platform to help businesses build
+    better, more human customer experiences with AI. We are primarily an in-person
+    company based in San Francisco, with growing offices in Atlanta, New York, London,
+    Paris, Singapore, and Japan. We are guided by a set of values that are at the
+    core of our actions and define our culture: Trust, Customer Obsession, Craftsmanship,
+    Intensity, and Family. These values are the foundation of our work, and we are
+    committed to upholding them in everything we do. Our co-founders are Bret Taylor
+    and Clay Bavor . Bret currently serves as Board Chair of OpenAI. Previously, he
+    was co-CEO of Salesforce (which had acquired the company he founded, Quip) and
+    CTO of Facebook. Bret was also one of Google''s earliest product managers and
+    co-creator of Google Maps. Before founding Sierra, Clay spent 18 years at Google,
+    where he most recently led Google Labs. Earlier, he started and led Google’s AR/VR
+    effort, Project Starline, and Google Lens. Before that, Clay led the product and
+    design teams for Google Workspace. About the Healthcare team Healthcare is one
+    of Sierra''s fastest-growing industries—our agents already reach over 50% of U.S.
+    families. We partner with leading health plans, providers, and healthcare platforms
+    to deliver AI agents that handle some of the most sensitive and high stakes conversations
+    in any industry. From helping members understand their benefits to resolving billing
+    questions with empathy, our healthcare agents are transforming how patients and
+    policyholders interact with the healthcare system. Our healthcare customers include
+    major health insurance networks, nonprofit providers, multi-site primary and urgent
+    care practices, healthcare diagnostics companies, and healthcare financial platforms.
+    We''re proud that our work with partners like Sutter Health, Stellarus, and R1
+    RCM is demonstrating what''s possible when conversational AI truly understands
+    context and nuance. Join us to transform the patient experience across the healthcare
+    system—and help build technology that makes care more accessible, more human and
+    more affordable for everyone. What you''ll do Design and deliver production-grade
+    AI agents for healthcare: You''ll build and ship highly performant, reliable,
+    and empathetic AI agents that handle sensitive patient and member interactions.
+    These agents help people understand their coverage, find providers, schedule appointments,
+    navigate billing, and more—all while maintaining strict HIPAA compliance and the
+    trust that healthcare demands. Drive the Agent Development Life Cycle (ADLC):
+    You''ll have complete ownership and autonomy from initial pilot through deployment
+    and continuous iteration. You''ll be responsible for building, tuning, and evolving
+    AI agents in production environments serving healthcare payers, providers, and
+    platforms. Partner with healthcare leaders: You''ll work directly with executives
+    and technical teams at health plans, provider networks, and healthcare technology
+    companies to understand their most pressing challenges - from managing high call
+    volumes to reducing administrative burden and building AI agents that transform
+    how they operate at scale. Navigate healthcare complexity: You’ll develop deep
+    expertise in healthcare systems and workflows, including integrations across EHR
+    and patient access platforms, payer and provider operations, and common healthcare
+    data and interoperability standards. You’ll become fluent in the nuances of benefits
+    and eligibility, claims and billing, scheduling and intake, and translate that
+    understanding into exceptional, trustworthy AI experiences. Build the future of
+    the platform: Your direct work with healthcare customers will guide the evolution
+    of Sierra''s core platform. You''ll surface unmet needs, prototype new tools and
+    features, and collaborate with research, product, and platform to shape the future
+    of AI agent development in healthcare. Example projects These are examples of
+    projects our healthcare team has worked on: Build AI agents for major health insurance
+    networks that handle detailed questions such as, "What''s my co-pay for a primary
+    care visit?" and "How many physical therapy sessions do I have left?" Develop
+    voice and chat agents for healthcare providers that help members find in-network
+    specialists, check availability, and locate providers based on specialty or location;
+    Create AI agents for multi-site primary and urgent care providers that manage
+    appointments and answer common questions across 30+ clinics; Build agents that
+    replace lengthy paper intake forms with conversational experiences, boosting pre-visit
+    intake conversion rates; Develop AI agents for healthcare financial platforms
+    that help patients understand billing, payment status, explanations of benefits,
+    and financial assistance eligibility - all while maintaining HIPAA compliance
+    and strong PHI/data privacy safeguards. Experiment with the latest voice models
+    and integrate them at scale for healthcare ent'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.309336+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

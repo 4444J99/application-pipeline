@@ -1,0 +1,116 @@
+id: roblox-senior-software-engineer-fullstack-safety-experience
+name: 'Roblox Senior Software Engineer - Fullstack, Safety Experience '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Roblox
+  url: https://boards.greenhouse.io/roblox
+  application_url: https://careers.roblox.com/jobs/7776654?gh_jid=7776654
+  portal: greenhouse
+  location: San Mateo, CA, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p><span style="font-weight: 400;">Every
+    day, tens of millions of people come to Roblox to explore, create, play, learn,
+    and connect with friends in 3D immersive digital experiences– all created by our
+    global community of developers and creators.&nbsp;</span></p> <p><span style="font-weight:
+    400;">At Roblox, we’re building the tools and platform that empower our community
+    to bring any experience that they can imagine to life. Our vision is to reimagine
+    the way people come together, from anywhere in the world, and on any device.</span><strong>
+    </strong><span style="font-weight: 400;">We’re on a mission to connect a billion
+    people with optimism and civility, and looking for amazing talent to help us get
+    there.&nbsp;</span></p> <p><span style="font-weight: 400;">A career at Roblox
+    means you’ll be working to shape the future of human interaction, solving unique
+    technical challenges at scale, and helping to create safer, more civil shared
+    experiences for everyone.</span></p></div><p><strong>WHY SAFETY?</strong></p>
+    <p>At Roblox, we strive to connect a billion people with optimism and civility,
+    and the Safety organization’s mission is to become the leader in civil immersive
+    online communities. We systematically detect, remove, and prevent problematic
+    accounts, content and behavior, and we make Roblox accounts secure and free from
+    compromise. We cover a broad area of the tech spectrum, including machine learning,
+    classifiers for 3D models, experimentation, automation, detection workflows, and
+    AI-powered text filters. Aligned and partnering with product teams, we use this
+    toolbelt to discover new opportunities, influence and shape the product roadmap
+    and prioritization, build safety products, and measure the impact on our community
+    of users and developers. In doing so, we keep Roblox safe, civil, and inclusive,
+    and we foster positive relationships between people around the world.</p> <p><strong>WHY
+    Safety Applications?</strong></p> <p>As we scale, the complexity and volume of
+    safety threats have grown exponentially, making Trust and Safety the single most
+    critical engineering problem we face. The platform’s ability to achieve its mission
+    hinges entirely on the foundational tooling we build.</p> <p>We are not just responding
+    to incidents; We are building the scalable operating system for all of Roblox’s
+    Trust &amp; Safety strategy. As a Senior Full-stack Engineer on the Safety Application
+    pod within the Safety Experience, you will be instrumental in developing our in-house
+    safety applications. This role emphasizes building intuitive, scalable, and AI-agentic-powered
+    tooling for daily Roblox safety acts. If you are passionate about solving complex,
+    high-impact problems in an adversarial landscape, this is the team for you. You
+    will report to the Engineering Manager of the Safety Application Team.</p> <p><strong>You
+    Will:</strong></p> <ul> <li>Assume ownership of the complete lifecycle for full-stack
+    features within Safety labeling and Investigative tooling, encompassing technical
+    specification, implementation, rollout, monitoring, and iteration, ensuring alignment
+    with the designated pod roadmap.</li> <li>Engage in close collaboration with Operations,
+    Product Managers, and partner safety pods to translate ambiguous workflows and
+    pain points into clear requirements and pragmatic technical designs, thoughtfully
+    balancing immediate needs with long-term platformization objectives.</li> <li>Define
+    the architectural direction for the next generation of safety applications, integrating
+    Artificial Intelligence methodologies.</li> <li>Contribute to and maintain shared
+    moderation primitives (e.g., Compliance, Quality Assurance, Traffic Routing, workforce
+    management, and agentic AI labeling) to facilitate the streamlined onboarding
+    of new safety surfaces by integrator teams.</li> <li>Take complete responsibility
+    for projects throughout their entire lifecycle.</li> <li>Drive cross-functional
+    engagement and lead technical initiatives to ensure the widespread adoption and
+    success of our core safety applications.</li> <li>Report directly to the Engineering
+    Manager of Safety Applications.</li> </ul> <p><strong>You Have:</strong></p> <ul>
+    <li>5+ years of experience in software development.</li> <li>Distributed Systems
+    Architecture: Proven ability to design and implement robust, high-throughput microservices
+    (handling thousands of requests per second) while maintaining a strict focus on
+    system safety and security.&nbsp;</li> <li>Full-Stack Proficiency: Experience
+    with both front-end (e.g., React, Vue, Angular) and back-end technologies (e.g.,=
+    Python, Java, Go) to deliver end-to-end features.</li> <li>Safety-Driven Mindset:
+    A strong commitment to designing, implementing, and maintaining systems that prioritize
+    user safety, data integrity, and compliance with safety policies.</li> <li>Equivalent
+    experience or a BS in Computer Science, Applied Math, Physics, Engineering, Statistics,
+    or another technical field.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-07'
+  posting_date: '2026-04-06'
+  date_source: first_published
+  date_added: '2026-04-07'
+  discovered: '2026-04-07T10:15:28.436172+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

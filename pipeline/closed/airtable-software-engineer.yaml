@@ -1,0 +1,114 @@
+id: airtable-software-engineer
+name: Airtable Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Airtable
+  url: https://boards.greenhouse.io/airtable
+  application_url: https://job-boards.greenhouse.io/airtable/jobs/8495850002
+  portal: greenhouse
+  location: New York, NY
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Airtable is the no-code app platform
+    that empowers people closest to the work to accelerate their most critical business
+    processes. More than 500,000 organizations, including 80% of the Fortune 100,
+    rely on Airtable to transform how work gets done.</p></div><p>As a Software Engineer
+    at Airtable, you will have the opportunity to work with customers to deeply understand
+    their needs and workflows. You will collaborate with cross-functional partners
+    across product management and design to create innovative new features that enable
+    our customers to do their best work. You will be responsible for owning and executing
+    the end-to-end implementation of these new features that will contribute to making
+    our toolkit even more powerful and successful.</p> <p><strong><em>Please note:
+    while we employ a hybrid working model at Airtable (flexible in working from the
+    office or elsewhere), we are only hiring in the following locations at this time:</em></strong></p>
+    <ul> <li><strong><em>Based in the San Francisco Bay Area and are open to coming
+    into our office (Embarcadero) at least ~2-3 times/week for team collaboration</em></strong></li>
+    <li><strong><em>Based in New York City and are open to coming into our office
+    (Soho) at least ~2-3 times/week for team collaboration</em></strong></li> <li><strong><em>Based
+    remotely in the greater Seattle area</em></strong></li> </ul> <h1><strong>What
+    you''ll do</strong></h1> <ul> <li>Spec and build product features that are beautiful,
+    consistent, and fast, that encourage exploration, and that earn the trust of our
+    customers through predictable, reliable, and thoughtful interactions.</li> <li>Work
+    at all levels of the stack, from AWS, Node.js, and SQL to React and HTML to build
+    and maintain end-to-end products on Airtable.</li> <li>Partner with product managers
+    and designers to understand the needs of potential users and build a product that
+    unlocks their potential.</li> <li>Design and implement maintainable APIs, implement
+    complex business logic by building backend systems, and build products that are
+    intuitive and useful.</li> </ul> <h1><strong>Who you are</strong></h1> <ul> <li>You
+    have a Bachelor''s degree, or foreign equivalent, in Computer Science, Engineering
+    (any field), or closely related quantitative discipline, and two (2) years of
+    experience in the job offered or in any occupation in a related field.</li> <li>You
+    have these skills: (1) Node.js; (2) SQL; (3) SQS; (4) Git; (5) JavaScript; (6)
+    React and HTML; (7) Scala; (8) Kafka; (9) Java; (10) Python; (11) Rust; (12) AWS;
+    (13) DynamoDB; and (14) AWS Lambda.</li> <li>Any suitable combination of education,
+    training and experience is acceptable. Experience can be gained through coursework,
+    scholastic achievement, or work experience.</li> <li style="font-style: italic;">Part-time
+    telecommuting is an option. Hybrid work from Airtable''s offices in New York,
+    NY.</li> </ul> <p>Submit resume with references using the apply button on this
+    posting</p> <p><span style="font-weight: 400;">Airtable is an equal opportunity
+    employer. We embrace diversity and strive to create a workplace where everyone
+    has an equal opportunity to thrive. We welcome people of different backgrounds,
+    experiences, abilities, and perspectives. All qualified applicants will receive
+    consideration for employment without regard to race, color, religion, sex, sexual
+    orientation, gender identity, national origin, disability, protected veteran status
+    or any characteristic protected by applicable federal and state laws, regulations
+    and ordinances. Learn more about your </span><a href="https://drive.google.com/file/d/1jAj2by1bto5g8Xqn9hWNAwPOMGNd_fM6/view?usp=sharing"><span
+    style="font-weight: 400;">EEO rights as an applicant</span></a><strong>.&nbsp;</strong></p>
+    <p><span style="font-weight: 400;">VEVRAA-Federal Contractor</span></p> <p><span
+    style="font-weight: 400;">If you have a medical condition, disability, or religious
+    belief/practice which inhibits your ability to participate in any part of the
+    application or interview process, please complete our </span><a href="https://airtable.com/shrq13fCV8h1sx2t8"><span
+    style="font-weight: 400;">Accommodations Request Form</span></a><span style="font-weight:
+    400;"> </span><span style="font-weight: 400;">and let us know how we may assist
+    you. Airtable is committed to participating in the interactive process and providing
+    reasonable accommodations to qualified applicants.</span></p> <p><span style="font-weight:
+    400; font-size: 8pt; color: rgb(255, 255, 255);">#LI-DNI</span></p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><hr> <p>Compensation awarded to successful
+    candidates will vary based on their work location, relevant skills, and experience.</p>
+    <p><span data-slate-node="text"><span data-slate-leaf="true"><span data-slate-string="true">Our
+    total compensation package also includes the opportunity to receive benefits,
+    restricted stock units, and may include incen'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-08'
+  posting_date: '2026-04-07'
+  date_source: first_published
+  date_added: '2026-04-08'
+  discovered: '2026-04-08T10:15:26.216515+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

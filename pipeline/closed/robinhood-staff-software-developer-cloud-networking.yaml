@@ -1,0 +1,113 @@
+id: robinhood-staff-software-developer-cloud-networking
+name: Robinhood Staff Software Developer, Cloud Networking
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7301788?t=gh_src=&gh_jid=7301788
+  portal: greenhouse
+  location: Toronto, Canada
+  location_class: international
+  description: '<div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><h3 data-start="235" data-end="260">About
+    the team + role</h3> <p data-start="262" data-end="587">The Cloud Networking team’s
+    mission is to build scalable, secure, and reliable networking infrastructure that
+    powers communication across all Robinhood services. We enable our engineering
+    teams to build and operate microservices seamlessly by providing foundational
+    networking capabilities that are resilient and transparent.</p> <p data-start="235"
+    data-end="260">We’re looking for a Staff Software Platform Engineer to design,
+    build, and evolve our foundational platform for large-scale services—focusing
+    on AWS, Kubernetes (K8s) on Amazon EKS, modern networking, and a robust Istio
+    service mesh to deliver secure, reliable, and performant systems. This role is
+    part of the Network Service Discovery and Communication (SDC) team, responsible
+    for service discovery, traffic management, and resilient service-to-service communication
+    across our platform.</p> <p data-start="1059" data-end="1301">The role is located
+    in the office location(s) listed on this job description which will align with
+    our in-office working environment. Please connect with your recruiter for more
+    information regarding our in-office philosophy and expectations.</p> <h3 data-start="1303"
+    data-end="1321">What you’ll do</h3> <ul> <li>Lead technical strategy and execution
+    for platform networking, traffic management, and service-to-service communication
+    across multi-tenant/multi-cluster <strong>EKS</strong> environments.</li> <li>Design
+    and operate resilient service mesh topologies with <strong>Istio</strong>, including
+    mTLS, traffic policies, ingress/egress, rate limiting, and observability, with
+    <strong>Envoy</strong>-based extensions where appropriate.</li> <li>Define and
+    implement platform standards for <strong>HTTP/REST</strong> and <strong>gRPC</strong>
+    APIs, including versioning, contract governance, and performance/SLO baselines.</li>
+    <li>Build automation, tooling, and paved roads in <strong>Python</strong> and
+    <strong>Go (Golang)</strong> to improve developer productivity, operational safety,
+    and release velocity.</li> <li>Create and maintain <strong>Terraform</strong>-based
+    <strong>Infrastructure as Code (IaC)</strong> modules, pipelines, and guardrails
+    for secure, auditable, and scalable infrastructure changes.</li> <li>Partner with
+    security, networking, and application teams to drive end-to-end solutions for
+    identity, encryption, zero-downtime migrations, and incident readiness.</li> <li>Provide
+    technical leadership: drive roadmaps, set success metrics, de-risk complex projects,
+    communicate tradeoffs, and mentor senior engineers.</li> </ul> <h3 data-start="1876"
+    data-end="1894">What you bring</h3> <ul> <li>Experience with <strong>AWS</strong>
+    network communication fundamentals (VPCs, subnets, routing, security groups, NLB/ALB,
+    PrivateLink, NAT, DNS).</li> <li>Strong understanding of <strong>Kubernetes (K8s)</strong>
+    and <strong>AWS EKS</strong> operations at scale (cluster lifecycle, node pools,
+    autoscaling, admission control, CRDs).</li> <li>Strong understanding of <strong>HTTP/REST</strong>
+    and <strong>gRPC</strong> protocol fundamentals, including performance, reliability,
+    and backward compatibility.</li> <li>Strong understanding of <strong>Istio</strong>
+    service mesh; <strong>Envoy</strong> experience is a strong plus.</li> <li>Exceptional
+    <strong>traffic communication troubleshooting</strong> skills across L3–L7, including
+    packet capture/analysis, Envoy/Istio telemetry, and debugging DNS/TLS/MTLS and
+    routing policies.</li> <li>Strong scripting/programming skills in <strong>Python</strong>
+    and <strong>Golang</strong>.</li> <li>Experience with <strong>Terraform</strong>
+    and <strong>Infrastructure as Code (IaC)</strong> best practices.</li> <li>Strong
+    <strong>leadership</strong> skills to lead projects end-to-end: planning, execution,
+    stakeholder alignment, and presentation/communication.</li> </ul> <p data-start="2466"
+    data-end="2956">Our team is committed to providing an inclusive and welcoming
+    interview experience for all candidates. If you require a specific accommodation
+    during the application or interview process due to a physical or mental condition,
+    please complete this <a class="decorated-link" href="https://robinhood.hracuity.net/webform/index/752875e4-42ba-4dff-9951-fd51e315997e"
+    target="_new" data-start="2713" data-end="2826">Applicant Accommodation Form</a>
+    to notify our team. The form should only be completed '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.154046+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

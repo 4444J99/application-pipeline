@@ -1,0 +1,116 @@
+id: langchain-product-marketing-agent-infrastructure
+name: LangChain Product Marketing - Agent Infrastructure
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: LangChain
+  url: https://jobs.ashbyhq.com/langchain
+  application_url: https://jobs.ashbyhq.com/langchain/c0706500-4575-4150-88a7-e189ecb96d60
+  portal: ashby
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: 'About LangChain: At LangChain, our mission is to make intelligent
+    agents ubiquitous. We provide the agent engineering platform and open source frameworks
+    developers need to ship reliable agents fast. Our open source frameworks, LangChain
+    and LangGraph, see 100+ million downloads per month and help developers build
+    agents with speed and granular control. LangSmith offers observability, evaluation,
+    and deployment for rapid iteration, enabling teams to transform LLM systems into
+    dependable production experiences. LangChain is trusted by millions of developers
+    worldwide and powers AI teams at companies like Replit, Clay, Cloudflare, Harvey,
+    Rippling, Vanta, and Workday. About the role: We''re looking for a senior PMM
+    to own go-to-market for LangSmith''s infrastructure products: LangSmith Deployment,
+    Sandboxes, and adjacent self-hosted and cloud infrastructure offerings. LangSmith
+    Deployment gives teams the flexibility to run LangSmith in their own cloud or
+    on-prem environment — meeting enterprise security, compliance, and data residency
+    requirements. Sandboxes give developers safe, isolated environments to build and
+    test agents without impacting production. You''ll own messaging for a technically
+    sophisticated audience, launch new capabilities in a fast-moving market, and build
+    the enablement that helps our sales team win complex enterprise deals. What You''ll
+    Do: Lead product launches. AI infrastructure moves fast, and we ship to match.
+    You''ll partner with product and GTM to launch new infrastructure capabilities
+    and platform updates in ways that resonate with technical buyers and stand out
+    in a crowded market. Own positioning, messaging, and the infrastructure narrative
+    for LangSmith Deployment, Sandboxes, and adjacent infra products. You''ll shape
+    how customers think about building, deploying, and scaling agents, and how we
+    show up in the market, from the homepage to sales decks. Build sales enablement
+    that helps close enterprise deals. Our buyers are platform engineers, DevOps leads,
+    and AI/ML infrastructure teams evaluating self-hosted and cloud deployment options.
+    You''ll create the talk tracks, use case briefs, battlecards, and objection handling
+    the sales team needs. Own competitive positioning . You''ll stay close to the
+    landscape and define differentiation that holds up to scrutiny in enterprise procurement
+    conversations. Partner on pricing and packaging for infrastructure products, bringing
+    market and customer observations into decisions. Create content that helps buyers
+    move forward. Customer stories, web content, technical use cases: the materials
+    that help champions make the case for LangSmith internally and help enterprise
+    buyers clear procurement hurdles. Feed the product roadmap. You''ll synthesize
+    customer conversations, win/loss signals, and competitive trends into clear feedback
+    that helps our product and engineering teams decide what to build next. What You''ll
+    Bring: You have 4-8+ years of product marketing experience. You''ve owned positioning
+    and messaging for a technical product or platform end-to-end — not just contributed
+    to it. You''ve been the person accountable for the narrative, and you can point
+    to results. You''ve marketed developer tools, cloud infrastructure, DevOps platforms,
+    or AI/ML infrastructure. You understand how infrastructure buyers evaluate build
+    vs. buy, what procurement looks like in security-conscious enterprises, and what
+    drives expansion from a land to a platform deal. You''re comfortable in a room
+    with platform engineers, security architects, and VP+ leaders. You can follow
+    a technical conversation about deployment topologies, network isolation, environment
+    management, or container orchestration, ask good questions, and turn what you
+    learn into clear messaging. You understand the enterprise infrastructure buying
+    motion and know how to arm a sales team to navigate it. You like to ship. You''d
+    rather get something strong out the door and iterate than wait for perfect, without
+    losing the bigger narrative. You write clearly. Your product messaging, architecture
+    briefs, and enablement materials are written for the customer, not for internal
+    stakeholders. You have a genuine curiosity about how AI agents are reshaping the
+    infrastructure layer of software. You''ll be carrying the narrative for some of
+    LangSmith''s most strategically important products, and that curiosity comes through
+    in the work. You use AI tools in your own work and you''re always looking for
+    new ways to increase your effectiveness with them. You know how to tell customer
+    stories that make the case for infrastructure products, translating deployment
+    flexibility and security controls into business outcomes. Nice to Have: Familiarity
+    with the LLM/agent developer ecosystem. You''ve used or marketed self-hosted AI
+    tools, agent runtimes, or similar developer infrastructure. Experience marketing
+    cloud infrastructure, Kubernetes-based platforms, or containerized deployment
+    solutions. Experience with both product-led and sale'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: null
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.473647+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

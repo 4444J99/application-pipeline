@@ -1,0 +1,115 @@
+id: anduril-optimization-software-engineer
+name: Anduril Optimization Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5089067007?gh_jid=5089067007
+  portal: greenhouse
+  location: Washington, District of Columbia, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p><strong>ABOUT THE TEAM</strong><br>Anduril
+    Labs is a multidisciplinary team of technologists, solution architects, engineers,
+    and military subject matter experts. Its mission is to drive innovation across
+    all Anduril business units and product lines by developing novel concepts and
+    next-generation technologies that enhance Anduril’s competitive edge and give
+    its customers a decisive technological advantage over its adversaries.<br><strong><br>ABOUT
+    THE JOB</strong><br>We are looking for a talented mid-level Software Engineer
+    with a strong background in optimization to join our growing team at Anduril Labs.
+    In this role, you will be instrumental in developing advanced algorithms and software
+    solutions to tackle complex, multi-domain optimization problems critical to national
+    defense and Anduril’s autonomous systems.<br><br>The ideal candidate possesses
+    deep expertise in classical optimization algorithms, robust Python programming
+    skills, and a solid foundation in data modeling. Experience with developing hybrid
+    quantum optimization solutions is a plus. You will leverage state-of-the-art,
+    GenAI-powered development tools such as Claude Code to accelerate solution development
+    and enhance our optimization software. This role demands creative problem-solving,
+    a self-starter mentality, and the ability to rapidly apply algorithmic theory
+    and mathematic modeling to practical, real-world optimization challenges. You
+    will be designing, implementing, and deploying optimization algorithms and services
+    that integrate seamlessly into larger defense systems, working across various
+    platforms (on-prem, cloud, and hybrid quantum computing environments). Familiarity
+    with modeling linear and non-linear optimization problems, rapid prototyping,
+    integrating optimization solutions into existing architectures, leveraging APIs,
+    and utilizing open-source tools will be crucial. <br><br>If you thrive in a dynamic
+    environment that values creative problem-solving, love writing code, excel as
+    both an individual contributor and team player, are eager to learn, and bring
+    a can-do attitude, this role is for you.</p> <h4><strong>WHAT YOU’LL DO</strong></h4>
+    <ul> <li>Design, develop, and implement highly efficient optimization algorithms
+    and software solutions to solve challenging problems in areas such as resource
+    allocation, scheduling, routing, mission planning, control systems, and supply
+    chain logistics.</li> <li>Apply classical optimization techniques (e.g., linear
+    programming, mixed-integer linear programming, combinatorial optimization, network
+    flow, dynamic programming, heuristics, metaheuristics) to model and explore novel
+    approaches.</li> <li>Utilize GenAI tools (e.g., OpenAI Codes, Claude Code, GitHub
+    Copilot) to rapidly prototype, refine, and test algorithmic solutions, improving
+    development velocity and code quality.</li> <li>Develop robust data models and
+    efficient data pipelines to support complex optimization problems, ensuring data
+    integrity and efficient processing for algorithmic inputs and outputs.</li> <li>Collaborate
+    with multidisciplinary teams (software engineers, data scientists, domain experts,
+    product managers) to integrate optimization engines and services into larger defense
+    systems and platforms.</li> <li>Perform rigorous testing, validation, and performance
+    analysis of optimization solutions, ensuring scalability, reliability, and accuracy
+    under diverse operational conditions.</li> <li>Participate actively in the entire
+    Software Development Lifecycle (SDLC) from requirements gathering and design to
+    deployment, monitoring, and maintenance.</li> <li>Support Anduril- and customer-funded
+    R&amp;D efforts, contributing to technical documentation, presentations, and patent
+    applications.</li> </ul> <h4><strong>REQUIRED QUALIFICATIONS</strong></h4> <ul>
+    <li>Bachelor's degree in Computer Science, Software Engineering, Applied Mathematics,
+    Operations Research, or a related quantitative field.</li> <li>3+ years of professional
+    experience in software development with a dedicated focus on optimization, algorithmic
+    problem-solving, or operations research.</li> <li>Experience solving optimization
+    problems in defense, transportation, supply chain, logistics, network optimizatio
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.874911+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

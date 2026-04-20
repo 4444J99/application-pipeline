@@ -1,0 +1,116 @@
+id: anduril-engineering-development-technician
+name: Anduril Engineering Development Technician
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5099166007?gh_jid=5099166007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3><strong>ABOUT THE TEAM</strong></h3>
+    <p>Anduril’s Tactical Recon &amp; Strike (TRS) is a division with two missions:
+    1) build highly capable autonomous drones, and 2) build solid rocket motors at
+    scale. We transform products like Ghost, Anvil, Bolt, and Altius from early concepts
+    into fully operational capabilities by partnering closely with specialist engineering,
+    operations, and production teams. Through our Anduril Rocket Motor Systems (RMS)
+    team, we design and manufacture solid rocket motors using advanced materials,
+    proprietary formulations, and high-volume production methods—delivering safe,
+    reliable propulsion systems that support a wide range of mission requirements.
+    TRS hires software engineers &amp; hardware engineers, who are excited to build
+    across a diverse and powerful portfolio—from autonomous aerial systems to high-performance
+    solid rocket motors. Our teams contribute to highly capable autonomous robotics
+    systems and propulsion products that operate reliably in the most demanding mission
+    environment.</p> <h3><strong>ABOUT THE JOB</strong></h3> <p>The Engineering Development
+    Technician will be a hands-on liaison with engineering, helping to carry out ideas
+    from concept to reality. A strong background in troubleshooting, manufacturing,
+    R&amp;D, and qualification testing is desired. Working directly with the product
+    engineering team, this position will primarily support the manufacturing and development
+    of Anduril''s drone products within the Tactical Recon and Strike division. The
+    goal of the team is to support new product engineering through all phases of product
+    life-cycles, including build and test of pre-production, qualification, and flight
+    hardware, as well as supporting existing production lines and managing rework
+    of non-conforming hardware. As a development technician, you will also be responsible
+    for supporting engineering on planned and unplanned repairs, modifications, and
+    upgrades of engineering development test fleet. The ideal candidate is highly
+    skilled in mechanical and electrical disciplines, hands-on, flexible, a quick
+    learner, works well in a fast-paced environment, and possesses a can-do attitude.</p>
+    <h4><strong>WHAT YOU’LL DO</strong></h4> <ul> <li>Support new product engineering
+    during development and pre-production phases of hardware life-cycles, including
+    building pre-production, qualification, and production hardware.</li> <li>Assist
+    with transitioning product lines from engineering development to full rate production.</li>
+    <li>Support new product engineering in the setup and activation of production
+    lines and development/qualification of hardware test setups.</li> <li>Support
+    new product engineering in rework and recovery efforts on non-conforming hardware.</li>
+    <li>Assist with maintenance/upgrades of HITL and engineering vehicle fleet.</li>
+    <li>Provide detailed feedback to engineering team on process improvements, common
+    issues, line layout, and work instructions.</li> <li>Train production technicians
+    during transition of product from pilot line to full rate production</li> <li>Create
+    detailed quality issue documentation for issues that occur during builds.</li>
+    <li>Maintain engineering pilot line and tool storage.</li> </ul> <p><strong>REQUIRED
+    QUALIFICATIONS</strong></p> <ul> <li>High school diploma or equivalency certificate.</li>
+    <li>5+ years of experience in manufacturing, mechanical builds, equipment assembly/test.</li>
+    <li>Must be able to lift 25 lbs unassisted.</li> <li>Must be able to climb ladders
+    and be comfortable working in tight spaces.</li> <li>Must be able to move repetitively,
+    bend or twist, and use hands to handle, control, or feel objects, tools or controls.</li>
+    <li>Must be willing to work all shifts, overtime, and weekends as needed.</li>
+    <li>Must be willing to travel up to 20%.</li> </ul> <p><strong>PREFERRED QUALIFICICATIONS</strong></p>
+    <ul> <li>Experience working with engineers in development and production environments.</li>
+    <li>Able to work independently and problem solve efficiently with minimal supervision.</li>
+    <li>Positive attitude and able to work well on a team.</li> <li>Willingness to
+    provide constructive feedback to the engineering and production teams to improve
+    tooling designs,'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-07'
+  posting_date: '2026-04-06'
+  date_source: first_published
+  date_added: '2026-04-07'
+  discovered: '2026-04-07T10:15:28.452631+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

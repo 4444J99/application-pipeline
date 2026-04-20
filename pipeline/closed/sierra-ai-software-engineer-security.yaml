@@ -1,0 +1,116 @@
+id: sierra-ai-software-engineer-security
+name: Sierra AI Software Engineer, Security
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sierra AI
+  url: https://jobs.ashbyhq.com/sierra
+  application_url: https://jobs.ashbyhq.com/sierra/201c6046-acb5-4fd4-a685-e993f34ec0d1
+  portal: ashby
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: 'About us At Sierra, we’re creating a platform to help businesses build
+    better, more human customer experiences with AI. We are primarily an in-person
+    company based in San Francisco, with growing offices in Atlanta, New York, London,
+    Paris, Singapore, and Japan. We are guided by a set of values that are at the
+    core of our actions and define our culture: Trust, Customer Obsession, Craftsmanship,
+    Intensity, and Family. These values are the foundation of our work, and we are
+    committed to upholding them in everything we do. Our co-founders are Bret Taylor
+    and Clay Bavor . Bret currently serves as Board Chair of OpenAI. Previously, he
+    was co-CEO of Salesforce (which had acquired the company he founded, Quip) and
+    CTO of Facebook. Bret was also one of Google''s earliest product managers and
+    co-creator of Google Maps. Before founding Sierra, Clay spent 18 years at Google,
+    where he most recently led Google Labs. Earlier, he started and led Google’s AR/VR
+    effort, Project Starline, and Google Lens. Before that, Clay led the product and
+    design teams for Google Workspace. What you''ll do Build the Foundations of Trust.
+    Design and ship systems that make Sierra’s platform secure by default — spanning
+    privacy, identity, authentication, authorization, and data security. You’ll work
+    across backend services, APIs, and infrastructure layers to embed security-conscious
+    design into the core of our product. Own Cross-Cutting Systems. Partner with product
+    and platform teams to implement and evolve Sierra’s trust primitives: identity
+    management, access control, auditability, and data lifecycle management. You’ll
+    make pragmatic design trade-offs between usability, performance, and security.
+    Secure Agentic AI Systems. Build controls that ensure AI agents can''t leak customer
+    data, execute unauthorized actions, or be manipulated into unintended behavior.
+    Design runtime policy enforcement for tool use, implement safe agent sandboxing,
+    and create boundaries that protect data while keeping agents powerful and useful.
+    Automate and Scale Security-Adjacent Workflows. Create developer-friendly tooling
+    to reduce risk and friction — whether through automating security checks in CI/CD,
+    enforcing privacy boundaries through schema validation, or instrumenting runtime
+    monitoring for sensitive events. What you''ll bring Strong Software Engineering
+    Skills. Experience building and maintaining production systems in Python, Go,
+    or TypeScript. You’re comfortable designing APIs, integrating with authentication
+    or identity frameworks, and shipping high-quality code in a fast-paced environment.
+    Security Mindset. You may not be a dedicated security engineer, but you think
+    like one — considering how data flows, where it’s stored, who can access it, and
+    how to design for least privilege and transparency. Product and Platform Mindset.
+    You care about building secure systems that enable , not block, innovation. You
+    work closely with product teams to make trade-offs clear and help them move quickly
+    without sacrificing trust. Curiosity and Ownership. You’re the kind of engineer
+    who goes deep — tracing how a token propagates through the stack, or how an LLM
+    might interact with internal APIs — because you want to understand and strengthen
+    the system. Even better if… You’ve worked on privacy , identity , trust & safety
+    , auth/authz , or data protection systems. You’ve built security frameworks, libraries,
+    or tooling that developers actually use or integrated security automation into
+    CI/CD pipelines. You have exposure to AI systems or care about designing secure-by-default
+    LLM applications . You think like an attacker — you naturally ask "what could
+    go wrong?" when reviewing designs or while building systems. You''ve found or
+    fixed real security issues in production systems. You thrive in 0→1 environments
+    , where foundational systems have to balance speed, reliability, and trust. Our
+    values Trust: We build trust with our customers with our accountability, empathy,
+    quality, and responsiveness. We build trust in AI by making it more accessible,
+    safe, and useful. We build trust with each other by showing up for each other
+    professionally and personally, creating an environment that enables all of us
+    to do our best work. Customer Obsession: We deeply understand our customers’ business
+    goals and relentlessly focus on driving outcomes, not just technical milestones.
+    Everyone at the company knows and spends time with our customers. When our customer
+    is having an issue, we drop everything and fix it. Craftsmanship: We get the details
+    right, from the words on the page to the system architecture. We have good taste.
+    When we notice something isn’t right, we take the time to fix it. We are proud
+    of the products we produce. We continuously self-reflect to continuously self-improve.
+    Intensity: We know we don’t have the luxury of patience. We play to win. We care
+    about our product being the best, and when it isn’t, we fix it. When we fail,
+    we talk about it openly and without blame so we su'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.302670+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,84 @@
+id: perplexity-seniorstaff-software-engineer-infrastructure
+name: Perplexity Senior/Staff Software Engineer - Infrastructure
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/2cef7831-6ed3-4663-aec4-57f79f08c95a
+  portal: ashby
+  location: London
+  location_class: international
+  description: 'Perplexity is looking for experienced Infrastructure Engineers to
+    join our small team revolutionizing the way people search and interact with the
+    internet. You will be responsible for leading the design, implementation, and
+    scaling of tools, systems, and platforms that empower web, mobile, and browser
+    engineers to build state-of-the-art products. You’ll play a critical role in enabling
+    our product, AI, and developer teams to innovate quickly while ensuring reliability,
+    security, and performance at scale. Tech Stack: Python | Go | TypeScript | PostgreSQL
+    | DynamoDB | Redis | FastAPI | React | Bazel | GitHub | AWS Teams Hiring Senior/Staff
+    Platform The Platform team is the backbone of Perplexity’s product reliability,
+    scalability, and performance, enabling every product and AI team to build with
+    confidence. This small, high-impact group builds and maintains critical infrastructure—from
+    backend systems such as authentication, real-time data flows, and service orchestration
+    to frontend frameworks that ensure fast, reliable, and secure user experiences.
+    By setting rigorous standards for code quality, uptime, and developer productivity,
+    the Platform team ensures everyone at Perplexity can innovate at speed on top
+    of a robust, well-architected foundation. Senior/Staff DevX DevX (Developer Experience)
+    empowers engineers across Perplexity to build, ship, and iterate faster than ever.
+    The team owns internal platforms for source control, build, test, and deployment—removing
+    friction from every step of product development. They architect seamless onboarding,
+    blazing-fast CI/CD, and developer tools that unlock creativity and safety at scale.
+    Through deep collaboration and high autonomy, the DevX team amplifies the impact
+    of every engineer, making rapid, reliable innovation possible across the company.
+    Senior/Staff Cloud Infra The Cloud Infra team architects and operates the mission-critical
+    cloud infrastructure behind Perplexity’s global platform. This team designs and
+    scales compute, storage, and networking systems for high-throughput, low-latency
+    workloads, blending a mix of proactive project work and operational support. The
+    team collaborates closely with product, AI research, security, and the rest of
+    Perplexity’s teams to ensure our services are always available, reliable, and
+    as fast as curiosity demands—building infrastructure that grows in lockstep with
+    user and model scale.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.921694+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

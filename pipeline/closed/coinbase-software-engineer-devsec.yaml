@@ -1,0 +1,115 @@
+id: coinbase-software-engineer-devsec
+name: Coinbase Software Engineer, DevSec
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7595352?gh_jid=7595352
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+  description: '<div class="content-intro"><p>Ready to be pushed beyond what you think
+    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
+    in the world. It’s a massive, ambitious opportunity that demands the best of us,
+    every day, as we build the emerging onchain platform — and with it, the future
+    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
+    candidate. We want someone who is passionate about our mission and who believes
+    in the power of crypto and blockchain technology to update the financial system.
+    We want someone who is eager to leave their mark on the world, who relishes the
+    pressure and privilege of working with high caliber colleagues, and who actively
+    seeks feedback to keep leveling up. We want someone who will run towards, not
+    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
+    culture</a> is intense and isn’t for everyone. But if you want to build the future
+    alongside others who excel in their disciplines and expect the same from you,
+    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
+    we are not remote-only. In-person participation is required throughout the year.
+    Team and company-wide offsites are held multiple times annually to foster collaboration,
+    connection, and alignment. Attendance is expected and fully supported.</p></div><p>The
+    Developer Security team secures Coinbase''s software supply chain and builds automation
+    to find and fix vulnerabilities at scale. We own artifact scanning, dependency
+    analysis, vulnerability management, and security agents that automate remediation
+    across the company. As a Software Engineer on this team, you will build and ship
+    features across these systems. You will work with engineers across Coinbase to
+    make security a natural part of how they build software.</p> <p><strong>What you’ll
+    be doing (ie. job duties):</strong></p> <ul> <li>Build and maintain services to
+    meet critical product and business needs using Golang.</li> <li>Deliver features
+    and small-to-medium projects end-to-end: design, implementation, deployment, and
+    monitoring.</li> <li>Author technical design documents and break down complex
+    features into individual tasks.</li> <li>Write high quality, well tested code
+    to meet the needs of your customers.</li> <li>Improve code quality and address
+    technical debt within your ownership area.</li> <li>Participate in on-call rotations,
+    code reviews, and incident response.</li> <li>Work with engineers, product managers,
+    and security partners to deliver on the team''s roadmap.</li> </ul> <p><strong>What
+    we look for in you (ie. job requirements):</strong></p> <ul> <li>At least 2 years
+    of experience in software engineering.</li> <li>You have built, deployed, and
+    maintained production services and understand service-oriented architecture.</li>
+    <li>You write high quality, well tested code.</li> <li>You can author technical
+    design documents and break down features into discrete tasks.</li> <li>You actively
+    use modern tooling (including AI-assisted development) to ship faster and learn
+    new domains quickly.</li> <li>You are passionate about building an open financial
+    system that brings the world together.</li> </ul> <p><strong>Nice to haves:</strong></p>
+    <ul> <li>Experience with security tooling or security-adjacent engineering (e.g.,
+    SLSA, Sigstore, artifact scanning, SBOM).</li> <li>Familiarity with Artifactory,
+    Xray, or similar supply chain security platforms.</li> <li>Experience with Golang,
+    Docker, Kubernetes, Postgres, MongoDB, gRPC.</li> <li>Experience with cloud infrastructure
+    (AWS or GCP).</li> <li>You have worked at a company during a period of rapid growth.</li>
+    </ul> <p>Job #: 75879</p> <div id="fortidlp-input-element-parent"></div><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p><strong>Pay Transparency Notice:</strong><strong><em>
+    </em></strong>Depending on your work location, the target annual <strong>base
+    </strong>salary for this position can range as detailed below. Total compensation
+    may also include equity and bonus eligibility and benefits (including medical,
+    dental, vision and 401(k)).</p></div><div class="title">Annual base salary range
+    (excluding equity and bonus):</div><div class="pay-range"><span>$152,405</span><span
+    class="divider">&mdash;</span><span>$179,300 USD</span></div></div></div><div
+    class="content-conclusion"><p><span style="font-weight: 400;">Please be advised
+    that each candidate may submit a maximum of four applications within any 30-day
+    period. We encourage you to carefully evaluate how your skills and interests align
+    with Coinbase''s roles before applying.</span></p> <h3>Commitment to Equal Opportunity</h3>
+    <p>Coinbase is proud to be an Equal Opportunity Employer.&nbsp; All qualified
+    applicants will receive consideration for employment without regard to race, color,
+    religion, creed, gender, national origin, age, disability, veteran status, sex,
+    gender'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-29'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.051746+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

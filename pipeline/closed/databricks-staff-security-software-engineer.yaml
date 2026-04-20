@@ -1,0 +1,108 @@
+id: databricks-staff-security-software-engineer
+name: Databricks Staff Security Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Databricks
+  url: https://boards.greenhouse.io/databricks
+  application_url: https://databricks.com/company/careers/open-positions/job?gh_jid=7932280002
+  portal: greenhouse
+  location: United States
+  location_class: us-onsite
+  description: '<p data-pm-slice="1 1 []"><strong>RDQ226R609 - <em>This role can be
+    based anywhere in the United States.</em></strong></p> <p>At Databricks, we are
+    obsessed with enabling data teams to solve the world''s toughest problems, from
+    security threat detection to cancer drug development. We do this by building and
+    running the world''s best data and AI infrastructure platform, so our customers
+    can focus on the high-value challenges that are central to their missions.</p>
+    <p>As a member of the Security Continuous Monitoring team, you will help build
+    and scale Databricks Security systems built on top of the Databricks platform.
+    You will design, test, and implement data pipelines to assess security configurations
+    of Cloud, SaaS and on-premise tooling. You will design and deploy robust supporting
+    security tools for managing and assessing security state, integrate with third-party
+    applications, and interact with cloud APIs (AWS, Azure, GCP, Terraform). You will
+    plan and lead, end-to-end, projects supporting data collection and integration
+    with vulnerability and threat detection efforts.</p> <p>You will be an individual
+    contributor on the Security Continuous Monitoring team at Databricks, reporting
+    to the Director of Continuous Monitoring.</p> <p><strong>What we look for:</strong></p>
+    <ul> <li>8+ years of software engineering experience, with 4+ years specifically
+    in security-related engineering (preferred)</li> <li>6+ years of experience building
+    large scale distributed systems with a focus on reliability and observability</li>
+    <li>Experience with Python, Git/GitHub, and CI/CD automation, and Terraform</li>
+    <li>Expertise in securing at least one major cloud environment (AWS, Azure, GCP)</li>
+    <li>Experience with software security and systems that handle sensitive data.
+    FedRAMP Moderate/High experience preferred.</li> <li>Experience with data correlation
+    engine preferred</li> <li>Excellent communication skills, with the ability to
+    collaborate effectively across teams and present complex ideas clearly to stakeholders
+    at all levels.</li> <li>A leadership mindset with the ability to mentor peers,
+    drive strategic initiatives, and influence the organization’s security direction.</li>
+    <li>Bias to action and passion for delivering high-quality solutions.</li> <li>Bachelor''s
+    degree in Computer Science or related field, or equivalent experience.</li> </ul>
+    <p>#li-remote</p><div class="content-conclusion"><p><strong>About Databricks</strong></p>
+    <p><span style="font-family: arial, sans-serif;">Databricks is the data and AI
+    company. More than 10,000 organizations worldwide — including Comcast, Condé Nast,
+    Grammarly, and over 50% of the Fortune 500 — rely on the Databricks Data Intelligence
+    Platform to unify and democratize data, analytics and AI. Databricks is headquartered
+    in San Francisco, with offices around the globe and was founded by the original
+    creators of Lakehouse, Apache Spark™, Delta Lake and MLflow. To learn more, follow
+    Databricks on&nbsp;<span style="color: rgb(255, 54, 33);"><a style="color: rgb(255,
+    54, 33);" href="https://twitter.com/databricks" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://twitter.com/databricks&amp;source=gmail&amp;ust=1700237575733000&amp;usg=AOvVaw03FL8fJvOD97ytN02f5G2C">Twitter</a>,&nbsp;<a
+    style="color: rgb(255, 54, 33);" href="https://www.linkedin.com/company/databricks"
+    target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.linkedin.com/company/databricks&amp;source=gmail&amp;ust=1700237575733000&amp;usg=AOvVaw15dLk3q8VxTfHEgCUg7NSt">LinkedIn</a>&nbsp;<span
+    style="color: rgb(0, 0, 0);">and</span>&nbsp;<a style="color: rgb(255, 54, 33);"
+    href="https://www.facebook.com/databricksinc" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.facebook.com/databricksinc&amp;source=gmail&amp;ust=1700237575733000&amp;usg=AOvVaw39EcncitnlqV72EG2-RqXJ">Facebook</a></span>.<br><br><strong>Benefits<br><br></strong></span>At
+    Databricks, we strive to provide comprehensive benefits and perks that meet the
+    needs of all of our employees. For specific details on the benefits offered in
+    your region, please visit&nbsp;<a href="https://www.mybenefitsnow.com/databricks">https://www.mybenefitsnow.com/databricks</a>.&nbsp;<br><br></p>
+    <p><strong>Our Commitment to Diversity and Inclusion</strong></p> <p>At Databricks,
+    we are committed to fostering a diverse and inclusive culture where everyone can
+    excel. We take great care to ensure that our hiring practices are inclusive and
+    meet equal employment opportunity standards. Individuals looking for employment
+    at Databricks are considered without regard to age, color, disability, ethnicity,
+    family or marital status, gender identity or expression, language, national origin,
+    physical and mental ability, political affiliation, race, religion, sexual orientation,
+    socio-economic status, veteran status, and other protected characteristics.</p>
+    <p><strong>Compliance</strong></p> <p><strong><span style="fon'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.735005+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

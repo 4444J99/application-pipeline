@@ -1,0 +1,116 @@
+id: cohere-applied-ai-engineer-agentic-workflows
+name: Cohere Applied AI Engineer – Agentic Workflows
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Cohere
+  url: https://jobs.ashbyhq.com/cohere
+  application_url: https://jobs.ashbyhq.com/cohere/1fa01a03-9253-4f62-8f10-0fe368b38cb9
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Who are we? Our mission is to scale intelligence to serve humanity.
+    We’re training and deploying frontier models for developers and enterprises who
+    are building AI systems to power magical experiences like content generation,
+    semantic search, RAG, and agents. We believe that our work is instrumental to
+    the widespread adoption of AI. We obsess over what we build. Each one of us is
+    responsible for contributing to increasing the capabilities of our models and
+    the value they drive for our customers. We like to work hard and move fast to
+    do what’s best for our customers. Cohere is a team of researchers, engineers,
+    designers, and more, who are passionate about their craft. Each person is one
+    of the best in the world at what they do. We believe that a diverse range of perspectives
+    is a requirement for building great products. Join us on our mission and shape
+    the future! Who are we? Our mission is to scale intelligence to serve humanity.
+    We’re training and deploying frontier models for developers and enterprises who
+    are building AI systems to power magical experiences like content generation,
+    semantic search, RAG, and Agents. We believe that our work is instrumental to
+    the widespread adoption of AI. We obsess over what we build. Each one of us is
+    responsible for contributing to increasing the capabilities of our models and
+    the value they drive for our customers. We like to work hard and move fast to
+    do what’s best for our customers. Cohere is a team of researchers, engineers,
+    designers, and more, who are passionate about their craft. Each person is one
+    of the best in the world at what they do. We believe that a diverse range of perspectives
+    is a requirement for building great products. Join us on our mission and shape
+    the future! Why this role? We’re a fast-growing startup building production-grade
+    AI agents for enterprise customers at scale. We’re looking for Software Engineers
+    with Applied AI experience who can own the design, build, and deployment of agentic
+    workflows powered by Large Language Models (LLMs) —from early prototypes to production-grade
+    AI agents, to deliver concrete business value in enterprise workflows. In this
+    role, you’ll work closely with customers on real-world business problems, often
+    building first-of-their-kind agent workflows that integrate LLMs with tools, APIs,
+    and data sources. While our pace is startup-fast, the bar is enterprise-high:
+    agents must be reliable, observable, safe, and auditable from day one. You’ll
+    collaborate closely with customers, product, and platform teams, and help shape
+    how agentic systems are built, evaluated, and deployed at scale. What You’ll Do
+    Customer-Facing Technical Impact Work closely with enterprise customers to translate
+    high-value, ambiguous business problems into well-framed agentic problems with
+    clear success criteria and evaluation methodologies. Provide technical leadership
+    across the full development and evaluation lifecycle, including post-deployment
+    iteration, for agentic workflows. Contribute to shared frameworks and patterns
+    that enable consistent delivery across customers. Agent Design, Build and Production
+    launches Lead the design, build, and delivery of LLM-powered agents that reason,
+    plan, and act across tools and data sources with enterprise-grade reliability
+    and performance. Balance rapid iteration with enterprise requirements, evolving
+    prototypes into stable, reusable solutions. Define and apply evaluation and quality
+    standards to measure success, failures, and regressions. Debug real-world agent
+    behavior and systematically improve prompts, workflows, tools, and guardrails.
+    Team Mentorship & Organizational Impact Mentor engineers across distributed teams.
+    Drive clarity in ambiguous situations, build alignment, and raise engineering
+    quality across the organization. Required Skills & Experience Technical Foundations
+    & Applied AI Production Engineering: Substantial experience building, shipping,
+    and maintaining production-grade software (Python/TypeScript). You understand
+    how to write clean, testable, observable and scalable code. Agentic Architectures:
+    Hands-on experience building agents that plan and execute multi-step tasks (ReAct,
+    Plan-and-Execute) and interact with external APIs/tools. The LLM Stack: Deep familiarity
+    with Frontier Models (GPT, Claude, Gemini), RAG, vector databases (Pinecone, Weaviate,
+    etc.), and orchestration frameworks (LangGraph, CrewAI, or custom state machines).
+    Rigorous Evaluation: Proven ability to move beyond "trial and error" by building
+    robust evaluation frameworks to measure agent accuracy, safety, and latency. Leadership
+    & Impact Stakeholder Mastery: Experience leading technical discussions with enterprise
+    customers to translate ambiguous business needs into concrete technical specs.
+    Experience mentoring distributed teams and setting the architectural standards
+    for AI/Agentic systems. Additional Requirements Strong written and verbal communication
+    skills. Ability and interest to travel up to 25%, flexible.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.363263+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

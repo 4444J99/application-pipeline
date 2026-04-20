@@ -1,0 +1,121 @@
+id: toast-staff-software-engineer
+name: Toast Staff Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7531142
+  portal: greenhouse
+  location: 'Boston, MA or Remote, US '
+  location_class: us-remote
+  description: "<p>Toast creates technology to help restaurants and local businesses\
+    \ succeed in a digital world, helping business owners operate, increase sales,\
+    \ engage customers, and keep employees happy. We are looking for a Staff Software\
+    \ Engineer to join the Orders Cloud Sync Team.</p> <p>On the Orders Cloud Sync\
+    \ Team, our mission is to provide a state of the art platform for processing and\
+    \ synchronizing changes to orders that enables Toast to build complex and customizable\
+    \ workflows for our customers.</p> <p>As a Staff Software Engineer on this team,\
+    \ you\u2019ll play a key role in designing and implementing new features, evolving\
+    \ our architecture and tooling to ensure efficient high-quality delivery, and\
+    \ working with many other Toast R&amp;D teams to bring high-visibility product\
+    \ experiences to life, ensuring that over 1 billion order changes per week across\
+    \ over 150,000 customers are processed quickly and accurately.</p> <p><strong>A\
+    \ day in the life (Responsibilities)</strong></p> <ul> <li>Design, build, deploy,\
+    \ and maintain highly resilient and scalable systems that are critical to our\
+    \ customers\u2019 success</li> <li>Lead complex projects that span multiple teams\
+    \ to improve functionality and reliability for our customers</li> <li>Design solutions\
+    \ that anticipate and accommodate future needs while considering tradeoffs</li>\
+    \ <li>Effectively communicate technical direction, guide our team through execution\
+    \ while driving team quality practices</li> <li>Act as a force multiplier in improving\
+    \ engineering productivity</li> <li>Diagnose performance bottlenecks and implement\
+    \ optimizations</li> <li>Leverage cutting edge AI tools to enhance your development\
+    \ workflow, improve velocity, and help pioneer new approaches to building - contributing\
+    \ to a culture of innovation and productivity across the team.</li> </ul> <p><strong>What\
+    \ you'll need to thrive (Requirements)</strong></p> <ul> <li>You are respectful,\
+    \ empathetic, and humble</li> <li>You have experience presenting complex project\
+    \ plans and helping teams realize them</li> <li>You have experience shipping complex\
+    \ mission critical production services</li> <li>You have ownership over complex\
+    \ high-scale systems and experience scaling distributed systems</li> <li>You have\
+    \ a growth mindset with an emphasis on improving yourself and your functional\
+    \ area</li> <li>You are viewed as a leader in your functional area and are trusted\
+    \ to make technical decisions that impact short and long term business objectives</li>\
+    \ </ul> <p><strong>Our Tech Stack</strong></p> <p>Our products run on a stack\
+    \ that ranges from guest and restaurant-facing Android tablets, to backend Kotlin\
+    \ and Java services, to internal, guest-facing, and restaurant-facing web apps.\
+    \ Our backend services follow a microservice architecture written using Kotlin/Java\
+    \ and DropWizard; we use AWS extensively, ranging from DynamoDB to RDS to Lambda.\
+    \ We have our own platform for dealing with user management, canary deployments,\
+    \ and robust load balancing. We store data in a set of sharded Postgres databases\
+    \ and utilize Apache Spark for large scale data workloads including query and\
+    \ batch processing. The web front-end is built using React and ES6. Our main point\
+    \ of sale application is an Android application written in Java and Kotlin. For\
+    \ data between tablets and our cloud platform, we rely on Pulsar event driven\
+    \ architecture along with some RabbitMQ clusters as well as direct tablet communication\
+    \ to the back end.</p> <p data-pm-slice=\"1 1 []\"><strong>AI at Toast</strong></p>\
+    \ <p>At Toast, one of our company values is that we're hungry to build and learn.\
+    \ We believe learning new AI tools empowers us to build for our customers faster,\
+    \ more independently, and with higher quality. We provide these tools across all\
+    \ disciplines, from Engineering and Product to Sales and Support, and are inspired\
+    \ by how our Toasters are already driving real value with them. The people who\
+    \ thrive here are those who embrace changes that let us build more for our customers;\
+    \ it\u2019s a core part of our culture.</p> <p data-pm-slice=\"1 1 []\"><strong>Our\
+    \ Total Rewards Philosophy&nbsp;<br></strong>We strive to provide competitive\
+    \ compensation and benefits programs that help to attract, retain, and motivate\
+    \ the best and brightest people in our industry. Our total rewards package goes\
+    \ beyond great earnings potential and provides the means to a healthy lifestyle\
+    \ with the flexibility to meet Toasters\u2019 changing needs. Learn more about\
+    \ our benefits at&nbsp;<a href=\"https://careers.toasttab.com/toast-benefits\"\
+    >https://careers.toasttab.com/toast-benefits</a>.</p> <p data-pm-slice=\"1 1 []\"\
+    >#LI-REMOTE</p><div class=\"content-pay-transparency\"><div class=\"pay-input\"\
+    ><div class=\"description\"><p><span style=\"font-weight: 400;\">The base salary\
+    \ range for this role is listed below. The starting salary will be determined\
+    \ based on skills and experience. </span>In addition to base salary, our total\
+    \ rewards components include cash compensation (overtime, bonus/commissions, if\
+    \ eligible), benefits, "
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.397948+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"
+deferral:
+  reason: strategic_hold
+  resume_date: '2026-04-15'

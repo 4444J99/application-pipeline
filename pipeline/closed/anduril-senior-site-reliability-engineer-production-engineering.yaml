@@ -1,0 +1,116 @@
+id: anduril-senior-site-reliability-engineer-production-engineering
+name: 'Anduril Senior Site Reliability Engineer, Production Engineering '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5057941007?gh_jid=5057941007
+  portal: greenhouse
+  location: Seattle, Washington, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p>The
+    Production Engineering team is a newly formed organization within Anduril's Software
+    Platform, dedicated to ensuring the reliability, performance, and scalability
+    of mission-critical systems that directly support our warfighters in the field.
+    We solve complex reliability challenges at massive scale, ensuring that critical
+    components of Lattice—Anduril's autonomous command and control platform—operates
+    flawlessly in the most demanding operational environments.<br><br>This is a foundational
+    role and you will be among the first hires building this team from the ground
+    up. You'll have the unique opportunity to shape the technical direction, establish
+    best practices, and define what production engineering excellence means at Anduril.
+    Our team operates at the intersection of software engineering and systems reliability,
+    building the infrastructure, tooling, and processes that keep our systems operational
+    24/7/365.</p> <h3>ABOUT THE ROLE</h3> <p>We are seeking an experienced Senior
+    Site Reliability Engineer who is passionate about building resilient, highly available
+    systems that scale to meet the demands of the core systems powering Lattice. You
+    will work closely with platform engineering teams, product developers, and field
+    operations to proactively identify reliability risks, implement defensive strategies,
+    and continuously improve the operational excellence of our software platform.
+    If you thrive on solving hard problems at scale and want your work to have direct
+    impact on national security, this is the role for you.</p> <h4>WHAT YOU’LL DO</h4>
+    <ul> <li>Design and implement comprehensive monitoring, observability, and alerting
+    systems to ensure early detection of reliability issues across the Lattice platform</li>
+    <li>Drive incident response and conduct blameless postmortems to identify systemic
+    improvements and prevent recurrence of production issues</li> <li>Build and maintain
+    infrastructure automation using tools like Terraform, Kubernetes operators, and
+    custom tooling to manage large-scale distributed systems</li> <li>Establish and
+    track Service Level Objectives (SLOs) and Error Budgets to balance feature velocity
+    with system reliability</li> <li>Partner with software engineering teams to improve
+    system architecture for reliability, implementing patterns like circuit breakers,
+    graceful degradation, and chaos engineering</li> <li>Develop capacity planning
+    models and performance testing frameworks to ensure systems can handle growth
+    and peak operational demands</li> <li>Create runbooks, documentation, and training
+    materials to enable teams to operate production systems effectively</li> <li>Lead
+    cross-functional efforts to improve deployment safety through progressive rollouts,
+    automated testing, and rollback capabilities</li> <li>Implement security best
+    practices and compliance controls for production environments handling sensitive
+    defense data</li> <li>Build tooling and automation to reduce toil and improve
+    operational efficiency for the engineering organization</li> <li>Participate in
+    on-call rotations and serve as an escalation point for critical production incidents</li>
+    </ul> <h4>REQUIRED QUALIFICATIONS</h4> <ul> <li>7+ years of engineering experience
+    with at least 3+ years focused on SRE, production operations, or infrastructure
+    engineering</li> <li>Bachelor's degree in Computer Science, Engineering, or equivalent
+    practical experience</li> <li>Deep expertise with Kubernetes in production environments,
+    including operational challenges at scale (100+ nodes)</li> <li>Strong programming
+    skills in one or more languages such as Go, Python, Rust, or Java with ability
+    to build production-grade tooling</li> <li>Proven experience designing and implementing
+    observability stacks (metrics, logging, tracing) using tools like Prometheus,
+    Grafana, ELK/EFK, or equivalent</li> <li>Hands-on experience with cloud platforms
+    (AWS, Azure, or GCP) and infrastructure as code practices</li> <li>Demonstrated
+    ability to debug complex distributed systems issues across multiple layers of
+    the stack</li> <li>Track record of improving system reliability through architectural
+    changes, not just operational band-aids</li> <li>Strong incident management and
+    c
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.928288+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,114 @@
+id: mongodb-senior-java-software-engineer-client-libraries
+name: MongoDB Senior Java Software Engineer, Client Libraries
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7194687
+  portal: greenhouse
+  location: Toronto; Vancouver
+  location_class: international
+  description: <h3>Our Database Experience (DBX) Team</h3> <p>The Database Experience
+    team builds the libraries and tools that developers use day-to-day working with
+    MongoDB. Our mission is to increase developer adoption, satisfaction and retention
+    by providing a reliable, enjoyable interface for developers and other end-users.</p>
+    <p>For this role, we're looking for someone who would enjoy designing, writing,
+    and supporting open-source libraries using MongoDB. You will have the opportunity
+    to work with other veteran Java programmers, as you deepen your knowledge of the
+    Java ecosystem, and help streamline and increase the adoption of MongoDB.</p>
+    <p>We are looking to speak to candidates who are based near one of our Canada
+    office for our hybrid working model.</p> <h3>You might be right for this role
+    if you</h3> <ul> <li>Have 4+ years of experience writing high-quality software</li>
+    <li>Have experience implementing libraries or applications in Java, or other languages
+    that run on the JVM</li> <li>Are fascinated by, and have experience working with
+    concurrency, parallelism and distributed systems</li> <li>Want to participate
+    in open-source software development and communities</li> <li>Communicate well,
+    internally and externally, both in writing and face-to-face</li> <li>Advocate
+    for testing and modern development best practices</li> <li>Can make pragmatic
+    design tradeoffs while balancing features, maintainability, and delivery time</li>
+    <li>Elevate the skills and expertise of those around you</li> <li>Are excited
+    by our <a href="https://www.mongodb.com/company">mission and values</a></li> </ul>
+    <h3>&nbsp;You'll be on the team responsible for</h3> <ul> <li><a href="https://github.com/mongodb/mongo-java-driver">Java
+    driver</a>, <a href="https://github.com/mongodb/mongo-java-driver/tree/master/driver-reactive-streams">Java
+    Reactive Streams Driver</a>, <a href="https://github.com/mongodb/mongo-java-driver/tree/master/driver-scala">Scala
+    Driver</a>, <a href="https://github.com/mongodb/mongo-java-driver/tree/main/driver-kotlin-sync">Kotlin
+    Driver</a>, <a href="https://github.com/mongodb/mongo-spark">Spark Connector</a>,
+    and other JVM-based projects</li> <li>Integrations with other open-source software,
+    such as <a href="https://github.com/mongodb/mongo-hibernate">ORM frameworks</a>
+    and AI tools</li> <li>Testing, delivering and supporting the above across multiple
+    operating systems, JDKs, and MongoDB releases</li> </ul> <h3>You'll have responsibilities
+    beyond writing code, including</h3> <ul> <li>Working with our Product, Server,
+    Cloud, and other driver teams on designs and specifications for new customer-facing
+    MongoDB features</li> <li>Investigating bugs and support requests from commercial
+    and open-source customers for the libraries and tools our team maintains</li>
+    <li>Seeking out speaking or writing opportunities to engage with our developer
+    community</li> <li>Mentoring junior engineers in both technical and non-technical
+    professional skills</li> </ul> <h3>Success in this role means</h3> <ul> <li>Within
+    three months, you will contribute effectively day-to-day, fix bugs, implement
+    planned features, and thoroughly review your colleagues’ pull requests</li> <li>Within
+    six months, you will confidently lead projects, provide mentorship and technical
+    guidance to colleagues, and contribute to process improvements</li> <li>Within
+    a year, you will demonstrate strong technical ownership, influence team and product
+    growth through effective communication and collaboration, and contribute to high-impact
+    product enhancements</li> </ul> <h3>About MongoDB</h3> <p>MongoDB is built for
+    change, empowering our customers and our people to innovate at the speed of the
+    market. We have redefined the database for the AI era, enabling innovators to
+    create, transform, and disrupt industries with software. MongoDB’s unified database
+    platform—the most widely available, globally distributed database on the market—helps
+    organizations modernize legacy workloads, embrace innovation, and unleash AI.
+    Our cloud-native platform, MongoDB Atlas, is the only globally distributed, multi-cloud
+    database and is available across AWS, Google Cloud, and Microsoft Azure.</p> <p>With
+    offices worldwide and nearly 60,000 customers—including 75% of the Fortune 100
+    and AI-native startups—relying on MongoDB for their most important applications,
+    we’re powering the next era of software.</p> <p>Our compass at MongoDB is our
+    <a href="https://www.mongodb.com/company">Leadership Commitment,</a> guiding how
+    and why we make decisions, show up for each other, and win. It’s what makes us
+    MongoDB.</p> <p>To drive the personal growth and business impact of our employees,
+    we’re committed to developing a supportive and enriching culture for everyone.
+    <a href="https://www.mongodb.com/company/blog/culture/employee-benefits-that-make-a-difference-at-mongodb">From
+    employee affinity groups, to fertility assistance and a generous parental leave
+    policy</a>, we value our employees’ wellbeing and want
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.8
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.271669+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

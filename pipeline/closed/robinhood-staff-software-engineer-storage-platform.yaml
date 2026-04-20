@@ -1,0 +1,113 @@
+id: robinhood-staff-software-engineer-storage-platform
+name: Robinhood Staff Software Engineer, Storage Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7729014?t=gh_src=&gh_jid=7729014
+  portal: greenhouse
+  location: Bellevue, WA
+  location_class: us-onsite
+  description: <div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><h2><strong>About the team + role</strong></h2>
+    <p>We are building an elite team, applying frontier technologies to the world’s
+    biggest financial problems. We’re looking for bold thinkers. Sharp problem-solvers.
+    Builders who are wired to make an impact. Robinhood isn’t a place for complacency,
+    it’s where ambitious people do the best work of their careers. We’re a high-performing,
+    fast-moving team with ethics at the center of everything we do. Expectations are
+    high, and so are the rewards.</p> <p>The <strong>Storage Platform</strong> team
+    builds and operates the platform that powers database access across Robinhood.
+    We own relational (Postgres/Aurora), key-value (DynamoDB), and caching systems,
+    along with the SDKs, control plane automation, and data plane services that enable
+    safe and reliable access at scale. Our mission is to standardize and strengthen
+    how services connect to storage, improve reliability and performance, and reduce
+    operational overhead through automation. We manage thousands of databases and
+    hundreds of caching clusters supporting millions of users and critical brokerage
+    workloads. Availability is our highest priority — our systems are designed to
+    meet strict uptime targets, including no downtime during market hours.</p> <p>As
+    a <strong>Staff Software Engineer</strong>, you will design and evolve the core
+    infrastructure that underpins Robinhood’s storage systems. You’ll lead complex
+    distributed systems initiatives such as horizontal sharding, proxy-based query
+    routing, connection pooling, and cross-shard transactions. You’ll work on improving
+    database reliability, performance, and cost efficiency across multi-region deployments.
+    This role has a direct impact on system availability, latency, and resiliency
+    for customer-facing products and internal engineering teams.</p> <p>Here are a
+    few talks + blog posts from the team!</p> <ul> <li><a href="https://youtu.be/MBvyZENChk0?si=1cNuPCHvMvrZAZww&amp;t=2022">Listen</a>
+    to our director speak to the work we are building!</li> <li><a href="https://www.linkedin.com/pulse/bridging-infrastructure-ai-robinhoods-mcp-powered-ecosystem-vinodh-tzxzc/">Read</a>
+    a blog post or <a href="https://www.youtube.com/watch?v=fiCkcvXyxUo">listen</a>
+    to this chat from members of the team!</li> </ul> <p>This role is based in our
+    <strong>Bellevue, WA</strong> office, with in-person attendance expected at least
+    <strong>3 days per week</strong>.</p> <p>At Robinhood, we believe in the power
+    of in-person work to accelerate progress, spark innovation, and strengthen community.
+    Our office experience is intentional, energizing, and designed to fully support
+    high-performing teams.</p> <h2><strong>What you’ll do</strong></h2> <ul> <li>Design
+    and implement distributed storage systems, including sharding strategies, query
+    routing layers, and database proxy services</li> <li>Improve availability, failover,
+    and disaster recovery capabilities across multi-region deployments</li> <li>Build
+    and enhance control plane automation that manages thousands of databases and caching
+    clusters at scale</li> <li>Optimize database performance and throughput by analyzing
+    query patterns, improving connection pooling, and implementing observability standards</li>
+    <li>Partner with product and infrastructure teams to standardize how services
+    connect to Postgres, NoSQL, and caching systems while meeting regulatory and security
+    requirements</li> </ul> <h2><strong>What you bring</strong></h2> <ul> <li>Deep
+    expertise in PostgreSQL (Aurora PostgreSQL preferred) and strong understanding
+    of relational database internals</li> <li>Experience building or operating distributed
+    systems, including horizontal sharding, replication, and distributed transactions
+    (e.g., two-phase commit)</li> <li>Proficiency in Go and/or Rust, with experience
+    building backend or infrastructure services</li> <li>Hands-on experience with
+    Kubernetes, AWS managed services (RDS, DynamoDB), and observability tooling (metrics,
+    logging, tracing)</li> <li>Strong understanding of system reliability, performance
+    tuning, and cost optimization in high-scale production environments</li> </ul>
+    <h2><strong>What we offer</strong></h2> <ul> <li>Challenging, high-impact work
+    to grow your career.</li> <li>Performance-driven compensation with multipliers
+    for outsized impact, bonus programs, equity ownership, and 401(k) matching.</li>
+    <li>Best-in-class benefits to fuel your work, including 100% paid health insurance
+    for employees with 90% c
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.162607+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

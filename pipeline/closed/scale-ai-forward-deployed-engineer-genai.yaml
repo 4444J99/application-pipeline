@@ -1,0 +1,117 @@
+id: scale-ai-forward-deployed-engineer-genai
+name: 'Scale AI Forward Deployed Engineer, GenAI '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Scale AI
+  url: https://boards.greenhouse.io/scaleai
+  application_url: https://job-boards.greenhouse.io/scaleai/jobs/4593571005
+  portal: greenhouse
+  location: San Francisco, CA; New York, NY
+  location_class: us-onsite
+  description: "<p><strong>About Scale AI</strong></p> <p>At Scale AI, our mission\
+    \ is to accelerate the development of AI applications. For 8 years, Scale has\
+    \ been the leading AI data foundry, helping fuel the most exciting advancements\
+    \ in AI, including generative AI, defense applications, and autonomous vehicles.\
+    \ With our recent Series F round, we\u2019re accelerating the abundance of frontier\
+    \ data to pave the road to Artificial General Intelligence (AGI) and building\
+    \ upon our prior model evaluation work with enterprise customers and governments\
+    \ to deepen our capabilities and offerings for public and private evaluations.</p>\
+    \ <p><strong>About Data Engine</strong></p> <p>Our Generative AI Data Engine powers\
+    \ the world\u2019s most advanced LLMs and generative models through world-class\
+    \ RLHF (Reinforcement Learning with Human Feedback), human data generation, model\
+    \ evaluation, safety, and alignment. The data we produce is some of the most critical\
+    \ work for how humanity will interact with AI.</p> <p><strong>About Our FDE Team</strong></p>\
+    \ <p>Generating high-quality data is the core problem our business solves. We\
+    \ aim to make producing and delivering high-quality data seamless and efficient\
+    \ for operators and customers. Our Team is building customer and operator-specific\
+    \ infrastructure to provide high-quality data with low turnaround time. You'll\
+    \ be exposed to the cutting edge of the Generative AI industry while directly\
+    \ interfacing with the leading model-building organizations in the space, including\
+    \ the top AI research labs and government agencies.&nbsp;</p> <p>Join us in shaping\
+    \ the future of Artificial General Intelligence. As a Forward Deployed Engineer,\
+    \ you'll be at the forefront of providing the critical data infrastructure that\
+    \ powers the most advanced AI models, directly influencing how humanity interacts\
+    \ with AI. You will work with the world\u2019s leading AI companies and government\
+    \ agencies to solve their most complex AI data-related problems.</p> <p><strong>Responsibilities:</strong></p>\
+    \ <ul> <li>Drive Impact: Directly contribute to the advancement of AI by delivering\
+    \ critical data solutions for leading AI innovators and government agencies.</li>\
+    \ <li>Customer Collaboration: Interact daily with our technical customers, understanding\
+    \ their unique challenges and translating them into impactful solutions.</li>\
+    \ <li>End-to-End Development: Design, build, and deploy features across the entire\
+    \ stack, from front-end interfaces to back-end systems and infrastructure.</li>\
+    \ <li>Rapid Experimentation: Deliver high-quality experiments quickly, iterating\
+    \ quickly to meet customer needs and drive innovation.</li> <li>Strategic Influence:\
+    \ Play a key role in shaping our engineering culture, values, and processes, contributing\
+    \ to the growth of our team and the evolution of our product.</li> <li>Diverse\
+    \ Projects: Engage in a dynamic mix of designing and deploying cutting-edge data\
+    \ solutions, collaborating with leading AI researchers, and directly influencing\
+    \ the product roadmap. You'll work on everything from large-scale system architecture\
+    \ to customer-facing front-end application design.</li> <li>Leadership Growth:\
+    \ This role offers a unique opportunity to lead critical projects, shape our engineering\
+    \ culture, and accelerate your career growth in the rapidly evolving field of\
+    \ Generative AI. You'll be positioned to become a future leader in a company defining\
+    \ the next era of technology.</li> </ul> <p><strong>Requirements:</strong></p>\
+    \ <ul> <li>At least 2 years of relevant experience is preferred</li> <li>Proven\
+    \ track record of shipping high-quality products and features at scale.</li> <li>Strong\
+    \ problem-solving skills and the ability to work independently or as part of a\
+    \ collaborative team.</li> <li>Desire to thrive in a fast-paced, dynamic environment.</li>\
+    \ <li>Ability to turn business and product ideas into engineering solutions.</li>\
+    \ <li>Strong coding abilities and the ability to effectively communicate complex\
+    \ technical concepts to both technical and non-technical audiences.</li> <li>Ability\
+    \ to adapt quickly to the ever-changing world of generative AI.</li> <li>Excited\
+    \ to join a dynamic, hybrid team in either San Francisco or New York City.</li>\
+    \ </ul> <p><strong>Preferred Qualifications:</strong></p> <ul> <li>Experience\
+    \ with large-scale data processing and distributed systems.</li> <li>Familiarity\
+    \ with machine learning and AI concepts.</li> <li>Experience working directly\
+    \ with enterprise customers.</li> <li>Experience with cloud-based infrastructure.</li>\
+    \ </ul><div class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"\
+    description\"><p><em>Compensation packages at Scale for eligible roles include\
+    \ base salary, equity, and benefits. The range displayed on each job posting reflects\
+    \ the minimum and maximum target for new hire salaries for the position, determined\
+    \ by work location and additional factors, including job-related skills, experience,\
+    \ interview performance, and relevant education or training. Scale employees in\
+    \ eligible roles are a"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.443023+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

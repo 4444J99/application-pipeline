@@ -1,0 +1,116 @@
+id: scale-ai-senior-software-engineer-backend-frontier-data
+name: "Scale AI Senior Software Engineer, Backend \u2014 Frontier Data"
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Scale AI
+  url: https://boards.greenhouse.io/scaleai
+  application_url: https://job-boards.greenhouse.io/scaleai/jobs/4648525005
+  portal: greenhouse
+  location: San Francisco, CA; New York, NY
+  location_class: us-onsite
+  description: "<p>The Frontier Data team builds the data and systems that power Scale\u2019\
+    s most advanced Frontier AI use cases (agentic capabilities like coding agents,\
+    \ tool use, and GUI / computer-use automation). Our work sits at the intersection\
+    \ of applied AI and robust backend engineering: we turn messy, ambiguous problems\
+    \ into scalable platforms and pipelines that reliably produce high-quality outcomes.</p>\
+    \ <p>We\u2019re looking for a <strong>Senior Backend Engineer</strong> who thrives\
+    \ in ambiguity, moves fast, and enjoys tackling daunting challenges - someone\
+    \ who can design and build scalable systems while partnering closely with research,\
+    \ product, operations, and other engineering teams.</p> <h3><strong>What You\u2019\
+    ll Do</strong></h3> <ul> <li>Own major backend systems for frontier agentic data\
+    \ products, driving projects from early exploration through production deployment.<br><br></li>\
+    \ <li>Build scalable services and pipelines that support agent workflows (e.g.,\
+    \ coding, tool-use orchestration, GUI/computer-use tasks), with strong reliability\
+    \ and observability.<br><br></li> <li>Architect modular, reusable backend systems\
+    \ that adapt to evolving product needs while maintaining scalability, reliability,\
+    \ and clean interfaces.<br><br></li> <li>Operate in high-ambiguity environments:\
+    \ break down open-ended problems, propose approaches, and execute with speed and\
+    \ clarity.<br><br></li> <li>Partner cross-functionally with product, research/ML,\
+    \ and infrastructure teams to define requirements and ship impactful systems.<br><br></li>\
+    \ <li>Improve system performance and cost efficiency through thoughtful architecture,\
+    \ profiling, and iterative optimization.<br><br></li> <li>Raise the engineering\
+    \ bar through design reviews, code reviews, and pragmatic best practices.<br><br></li>\
+    \ </ul> <h3><strong>Ideal Experience</strong></h3> <ul> <li><strong>5+ years</strong>\
+    \ of full-time software engineering experience (post-graduation).<br><br></li>\
+    \ <li>Strong backend engineering fundamentals: <strong>distributed systems</strong>,\
+    \ <strong>API design</strong>, data modeling, and production reliability.</li>\
+    \ <li>Strong experience with Docker and containerized development/production environments\
+    \ (building images, debugging, and operating container-based services.<br><br></li>\
+    \ <li>Demonstrated ability to <strong>ship quickly</strong> in ambiguous, fast-changing\
+    \ environments (high-growth startup experience is a plus).<br><br></li> <li>Experience\
+    \ building systems that scale: queues, async processing, workflow engines, data\
+    \ pipelines, or similar.<br><br></li> <li>Comfort working close to AI/ML systems\
+    \ (production experience welcome; curiosity and strong fundamentals also valued).<br><br></li>\
+    \ <li>Proficiency with <strong>SQL</strong> and modern database-backed application\
+    \ development.</li> <li>&nbsp;</li> </ul><div class=\"content-pay-transparency\"\
+    ><div class=\"pay-input\"><div class=\"description\"><p><em>Compensation packages\
+    \ at Scale for eligible roles include base salary, equity, and benefits. The range\
+    \ displayed on each job posting reflects the minimum and maximum target for new\
+    \ hire salaries for the position, determined by work location and additional factors,\
+    \ including job-related skills, experience, interview performance, and relevant\
+    \ education or training. Scale employees in eligible roles are also granted equity\
+    \ based compensation, subject to Board of Director approval. Your recruiter can\
+    \ share more about the specific salary range for your preferred location during\
+    \ the hiring process, and confirm whether the hired role will be eligible for\
+    \ equity grant. You\u2019ll also receive benefits including, but not limited to:\
+    \ Comprehensive health, dental and vision coverage, retirement benefits, a learning\
+    \ and development stipend, and generous PTO. Additionally, this role may be eligible\
+    \ for additional benefits such as a commuter stipend.</em></p></div><div class=\"\
+    title\">Please reference the job posting's subtitle for where this position will\
+    \ be located. For pay transparency purposes, the base salary range for this full-time\
+    \ position in the locations of San Francisco, New York, Seattle is:</div><div\
+    \ class=\"pay-range\"><span>$216,200</span><span class=\"divider\">&mdash;</span><span>$270,250\
+    \ USD</span></div></div></div><div class=\"content-conclusion\"><p><strong><em>PLEASE\
+    \ NOTE:&nbsp;</em></strong><em>Our policy requires a 90-day waiting period before\
+    \ reconsidering candidates for the same role. This allows us to ensure a fair\
+    \ and thorough evaluation of all applicants.</em></p> <p><strong>About Us:</strong></p>\
+    \ <p><em>At Scale, our mission is to develop reliable AI systems for the world's\
+    \ most important decisions. Our products provide the high-quality data and full-stack\
+    \ technologies that power the world's leading models, and help enterprises and\
+    \ governments build, deploy, and oversee AI applications that deliver real impact.\
+    \ We work closely with industry leaders like Meta, Cisco, DLA Piper, Mayo Clinic,\
+    \ Time Inc., the Government of Qatar, and U.S. government agencies includ"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.464503+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

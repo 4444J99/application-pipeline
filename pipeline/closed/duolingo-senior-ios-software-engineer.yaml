@@ -1,0 +1,113 @@
+id: duolingo-senior-ios-software-engineer
+name: Duolingo Senior iOS Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Duolingo
+  url: https://boards.greenhouse.io/duolingo
+  application_url: https://careers.duolingo.com/jobs/8393272002?gh_jid=8393272002
+  portal: greenhouse
+  location: Pittsburgh, PA
+  location_class: us-onsite
+  description: '<p>Our mission at Duolingo is to develop the best education in the
+    world and make it universally available. It’s a big mission, and that’s where
+    you come in!</p> <p>At Duolingo, you’ll join a team that cares about finding <a
+    href="https://blog.duolingo.com/tag/engineering/?utm_source=greenhouse.com&amp;utm_medium=referral&amp;utm_campaign=engblog_gh_091224">innovative
+    solutions to complex technical problems</a>, running countless experiments (300+
+    at a time!) with our massive user base to make data-driven decisions, and educating
+    our users and employees alike. You’ll have limitless learning opportunities, mentorship
+    and collaboration with world-class minds, and a variety of projects with large
+    scopes — while doing work that’s both fun and meaningful.&nbsp;</p> <p>Join our
+    life-changing mission to develop education for our half a billion (and growing!)
+    learners around the world.</p> <hr> <h2><strong>About the role</strong></h2> <p><strong>Short
+    Form Area:<br></strong><br>As an iOS engineer in the Short Form Area, you''ll
+    build features that make up the core of the learning experience on Duolingo. Our
+    short-form lessons are where learners spend the majority of their time on the
+    app, and our area''s mission is to make these sessions more effective and engaging.
+    You''ll work on adding new exercises that support our learners in practicing skills
+    like recall and production in bite-sized formats, as well as creating other ways
+    to help learners build foundational skills in a new language. We''re looking for
+    engineers who are passionate about improving how we teach.</p> <h4><strong>🧠&nbsp;
+    You will...</strong></h4> <ul> <li>Collaborate on software projects with product
+    design and backend aspects</li> <li>Develop, release, and maintain native iOS
+    applications, primarily in Swift</li> <li>Mentor and set technical direction for
+    junior engineers across the company</li> </ul> <p>&nbsp;</p> <h4><strong>✅&nbsp;
+    You have...</strong></h4> <ul> <li>A Bachelor’s degree in Computer Science or
+    a related technical field</li> <li>A solid foundation in computer science with
+    strong competencies in data structures, algorithms, and software design</li> <li>Programming
+    experience in Swift</li> </ul> <p>&nbsp;</p> <h4><strong>⭐&nbsp; Exceptional candidates
+    will have...</strong></h4> <ul> <li>Strong proficiency in Swift, with proven ability
+    to build and maintain production-level applications</li> <li>Strong technical
+    knowledge of iOS mobile application development for iPhone/iPad using Swift with
+    Cocoa Touch and related frameworks</li> <li>Experience designing clean and maintainable
+    APIs</li> <li>Experience with multithreaded programming</li> <li>Experience writing
+    unit tests and testable code</li> <li>Knowledge of iOS SDK performance tools and
+    optimization techniques</li> </ul> <p>&nbsp;</p> <hr><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p><strong>We post a multi-level salary
+    range for all of our roles.</strong></p> <p><em>This is not inclusive of the rest
+    of our awesome portfolio that includes equity compensation and world-class benefits.
+    Our salary ranges are the same for all US locations. Your recruiter can share
+    more details about the range for a specific level during the hiring process. </em><em>The
+    actual salary within the range is determined by many factors including but not
+    limited to, skills, experience, education, and internal equity.</em></p></div><div
+    class="title">Salary Range: </div><div class="pay-range"><span>$177,700</span><span
+    class="divider">&mdash;</span><span>$240,400 USD</span></div></div></div><div
+    class="content-conclusion"><p class="Z7ph2">Take a peek at how we care for our
+    employees'' holistic well-being with our benefits<a class="Z7ph2" href="https://careers.duolingo.com/#benefits">&nbsp;here</a>.</p>
+    <p class="Z7ph2">We will do everything we can within reason to make sure that
+    your interview takes place in an environment that fairly and accurately assesses
+    your skills. If you need assistance or accommodation, please contact&nbsp;<a class="Z7ph2"
+    href="mailto:accommodations@duolingo.com" target="_blank" data-stringify-link="mailto:accommodations@duolingo.com"
+    data-sk="tooltip_parent">accommodations@duolingo.com</a>.</p> <p class="Z7ph2">Duolingo
+    is proud to be an Equal Employment Opportunity employer. We do not discriminate
+    based upon race, religion, color, national origin, gender (including pregnancy,
+    childbirth, or related medical conditions), sexual orientation, gender identity,
+    gender expression, age, status as a protected veteran, status as an individual
+    with a disability, or other applicable legally protected characteristics.</p>
+    <p class="Z7ph2">By applying for this position your data will be processed as
+    per the<a class="Z7ph2" href="https://docs.google.com/document/d/e/2PACX-1vTX9GKeRMOMA9Vtm0vfGibrYPYz8ysl0Dg8KSXgj_PxeT5ChsdnNZZWtpxu4t7xillTPGnngnKCjIbV/pub">&nbsp;Duolingo
+    Applicant Privacy Notice</a>.</p> <p class="Z7ph2">Sign up for job alerts&nbsp;<a
+    href="h'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.168619+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

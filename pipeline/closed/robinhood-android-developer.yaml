@@ -1,0 +1,114 @@
+id: robinhood-android-developer
+name: Robinhood Android Developer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/5702135?t=gh_src=&gh_jid=5702135
+  portal: greenhouse
+  location: Toronto, Canada
+  location_class: international
+  description: <div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><p><strong>About the team + role</strong></p>
+    <p>We are building an elite team, applying frontier technologies to the world’s
+    biggest financial problems.<strong> </strong>We’re looking for bold thinkers.
+    Sharp problem-solvers. Builders who are wired to make an impact. Robinhood isn’t
+    a place for complacency, it’s where ambitious people do the best work of their
+    careers. We’re a high-performing, fast-moving team with ethics at the center of
+    everything we do. Expectations are high, and so are the rewards.&nbsp;</p> <p>We’re
+    excited to invite talented and motivated Android Developers to join our award-winning
+    team to help expand Robinhood’s mobile experience for our customers.</p> <p>The
+    <strong>Margins Team</strong> builds and operates the systems that allow customers
+    to borrow against their investments and trade on margin safely. They own the core
+    margin platform—covering eligibility, margin calculations, interest, risk controls,
+    and liquidation logic—ensuring Robinhood can offer leverage while protecting customers
+    and the firm. This is a high-stakes, highly regulated space where correctness,
+    resilience, and real-time decision-making are critical.</p> <p>As an <strong>Android
+    Engineer on the Margins team</strong>, you’ll build customer-facing mobile experiences
+    that surface margin functionality in a clear, intuitive, and responsible way.
+    You’ll work closely with backend, product, design, and risk partners to deliver
+    performant and reliable Android features, helping translate complex margin concepts
+    into simple workflows while meeting Robinhood’s high bar for safety, quality,
+    and user experience.</p> <p>The role is based in our <strong>Toronto, Canada</strong>
+    office, with in-person attendance expected at least <strong>3 days per week</strong>.</p>
+    <p>At Robinhood, we believe in the power of in-person work to accelerate progress,
+    spark innovation, and strengthen community. Our office experience is intentional,
+    energizing, and designed to fully support high-performing teams.&nbsp;</p> <h2><strong>What
+    you’ll do</strong></h2> <ul> <li>Work with a fast-growing team to revolutionize
+    finance at speed and scale</li> <li>Build smooth, stable, and elegant products
+    with Kotlin and the newest Android APIs</li> <li>Own features from inception to
+    design, implementation, and launch</li> <li>Work cross-functionally with Product
+    Designers, Product Managers, Backend Developers, and Data team</li> <li>Work with
+    Kotlin, Android SDK &amp; Jetpack Compose, MVVM, Coroutines &amp; Flow (preferred)
+    OR RxJava, and Retrofit &amp; Room</li> </ul> <h2><strong>What you bring</strong></h2>
+    <ul> <li>3+ years of professional Android development experience building consumer
+    Android applications at scale, preferably in Kotlin and Compose</li> <li>Attention
+    to detail, passion for writing clean, readable and maintainable code</li> <li>Proficiency
+    in Kotlin or Java, and Jetpack</li> <li>Desire to improve Robinhood's app and
+    codebase to ensure outstanding quality for our all users</li> <li>Strong product
+    sense and ability to collaborate with Product Managers and Designers</li> <li>Excellent
+    communication skills and passion for solving technical challenges</li> <li>Bachelor’s
+    degree in Computer Science or a related field preferred; equivalent training or
+    work experience also acceptable</li> </ul> <h2><strong>What we offer</strong></h2>
+    <ul> <li>Challenging, high-impact work to grow your career</li> <li>Performance
+    driven compensation with multipliers for outsized impact, bonus programs, and
+    equity ownership</li> <li>Top tier benefits to fuel your work, including supplemental
+    health insurance, ancillary insurance, and mental health support programs</li>
+    <li>Lifestyle wallet - a highly flexible employer-paid benefits spending account
+    expenses beyond traditional benefits such as wellness, childcare, learning, and
+    more.</li> <li>Time off to recharge including company holidays, paid time off,
+    sick time, paid volunteer time off, parental leave, and more!</li> <li>Exceptional
+    office experience with catered meals, events, and comfortable workspaces.&nbsp;</li>
+    <li>Monthly commuter stipend to help offset in-office commuting costs</li> </ul>
+    <p>Our team is committed to providing an inclusive and welcoming interview experience
+    for all candidates. If you require a specific accommodation during the application
+    or interview process due to a physical or mental condition, please complete this<a
+    href="https://robinhood.hracuity.net/webform/inde
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.124677+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

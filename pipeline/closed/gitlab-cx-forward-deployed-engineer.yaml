@@ -1,0 +1,106 @@
+id: gitlab-cx-forward-deployed-engineer
+name: 'GitLab CX Forward Deployed Engineer '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: GitLab
+  url: https://boards.greenhouse.io/gitlab
+  application_url: https://job-boards.greenhouse.io/gitlab/jobs/8504801002
+  portal: greenhouse
+  location: Remote, Australia; Remote, Singapore
+  location_class: international
+  description: '<div class="content-intro"><p>GitLab is the intelligent orchestration
+    platform for DevSecOps. GitLab enables organizations to increase developer productivity,
+    improve operational efficiency, reduce security and compliance risk, and accelerate
+    digital transformation. More than 50 million registered users and more than 50%
+    of the Fortune 100* trust GitLab to ship better, more secure software faster.</p>
+    <p>The same principles built into our products are reflected in how our team works:
+    we embrace AI as a core productivity multiplier, with all team members expected
+    to incorporate AI into their daily workflows to drive efficiency, innovation,
+    and impact. GitLab is where careers accelerate, innovation flourishes, and every
+    voice is valued. Our high-performance culture is driven by our <a href="https://handbook.gitlab.com/handbook/values/">values</a>
+    and continuous knowledge exchange, enabling our team members to reach their full
+    potential while collaborating with industry leaders to solve complex problems.
+    <a href="https://www.youtube.com/watch?v=OuZIb5zszQI">Co-create the future with
+    us</a> as we build technology that transforms how the world develops software.</p>
+    <p>*<em>Fortune 500® is a registered trademark of Fortune Media IP Limited, used
+    under license. Claim based on GitLab data. Fortune 100 refers to the top 20% ranked
+    companies in the 2025 Fortune 500 list, published in June 2025. Fortune and Fortune
+    Media IP Limited are not affiliated with, and do not endorse products or services
+    of GitLab.</em></p></div><h2><strong>An overview of this role</strong></h2> <p>As
+    a Staff Forward Deployed Engineer at GitLab, you will work at the intersection
+    of customer outcomes, product direction, and hands-on engineering. This role is
+    focused on strategic accounts in the APJ region, where you will help customers
+    adopt GitLab and the GitLab Duo Agent Platform in complex enterprise environments,
+    including self-managed, regulated, and constrained deployments. You will guide
+    deep technical discovery, design practical adoption paths, and build reusable
+    solutions that help customers move from early platform use into broader CI/CD,
+    security, compliance, and AI-enabled workflows.</p> <p>This is not a traditional
+    consulting role centered on one-off delivery. Instead, you will use customer issues
+    to create durable technical assets, shape architecture patterns, and influence
+    upstream product and engineering decisions when field needs point to a broader
+    solution. Your work will help reduce time to value for strategic customers while
+    improving how GitLab scales adoption across similar environments.</p> <p>Some
+    examples of our projects:</p> <ul> <li>Building a regulated-environment deployment
+    accelerator for GitLab Duo Agent Platform in self-managed or constrained environments</li>
+    <li>Authoring reusable reference architectures for AI Gateway, identity, runners,
+    network boundaries, model connectivity, and governance controls</li> </ul> <h2><strong>What
+    you’ll do</strong></h2> <ul> <li>Conduct deep technical discovery in selected
+    strategic accounts to assess platform readiness, evaluate constraints, and identify
+    high-value adoption opportunities across GitLab and GitLab Duo Agent Platform.</li>
+    <li>Lead architecture and delivery design for complex enterprise environments
+    where platform migration, regulated requirements, and product boundaries intersect.</li>
+    <li>Partner with customer stakeholders and GitLab account teams to prioritize
+    use cases based on business impact, technical feasibility, repeatability, and
+    long-term platform value.</li> <li>Design and build bounded proofs, prototypes,
+    deployment patterns, and reusable accelerators across source code management,
+    CI/CD, security, compliance, and AI-enabled workflows.</li> <li>Architect self-managed
+    and enterprise deployments, including runners, access controls, network boundaries,
+    observability, AI Gateway, model connectivity, and governance controls.</li> <li>Turn
+    recurring field patterns into reusable assets such as runbooks, templates, design
+    notes, technical guidance, product briefs, and reference architectures that can
+    be used across accounts.</li> <li>Contribute code, technical designs, or architecture
+    changes when strategically necessary, in partnership with product and engineering,
+    to address blockers that should be solved upstream.</li> <li>Travel as needed
+    for strategic customer engagements, architecture workshops, and team coordination,
+    with expected travel up to <strong>50%</strong>.</li> </ul> <h2><strong>What you’ll
+    bring</strong></h2> <ul> <li>Experience in software engineering, platform architecture,
+    forward deployed engineering, technical consulting, or similar customer-facing
+    engineering roles.</li> <li>Strong software engineering fundamentals, including
+    the ability to read, reason about, and contribute to production systems, ideally
+    with experience in Ruby on Rails and/or Go.</li> <li>Strong systems design and
+    software architecture skills, with experience evaluat'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-16'
+  date_source: first_published
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.439011+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

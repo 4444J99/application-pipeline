@@ -1,0 +1,115 @@
+id: openai-quality-engineer-rack-infrastructure-site-operations-stargat
+name: OpenAI Quality Engineer - Rack Infrastructure & Site Operations - Stargate
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: OpenAI
+  url: https://jobs.ashbyhq.com/openai
+  application_url: https://jobs.ashbyhq.com/openai/fff7b15d-a1a0-441f-90f1-5efcae7f0051
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'About the Team OpenAI, in partnership with our capital and technology
+    partners, is building a global network of advanced datacenters to support the
+    most demanding AI workloads. The Industrial Compute team ensures that all datacenter
+    systems are manufactured, delivered, and commissioned to the highest standards
+    of quality, reliability, and performance. We work closely with manufacturing partners,
+    engineering teams, and operations staff to ensure that every component is delivered
+    ready for installation, startup, and long-term service. About the Role We are
+    seeking an experienced Quality Engineer (QE) to drive Product and Site Quality
+    initiatives across OpenAI’s infrastructure ecosystem. In this role, you will establish,
+    implement, and manage a comprehensive, quality-focused program across our global
+    supply chain network, ensuring excellence from design through deployment. You
+    will be responsible for end-to-end quality of finished products, as well as maintaining
+    and elevating manufacturing site quality standards. Working cross-functionally
+    with Design (NPI) and Engineering teams, you will help achieve First Pass Yield
+    (FPY), quality, and reliability targets. This includes leading site and fixture
+    validation efforts, driving yield improvement initiatives (Yield Bridge, CPI),
+    and implementing robust corrective and preventive actions (CAPA) to resolve issues
+    at their root cause. In addition, you will play a key role in supplier quality
+    management, assessing and qualifying new vendors, overseeing ongoing supplier
+    performance, and ensuring readiness for future business awards. You will lead
+    vendor audits, monitor key performance metrics, and coordinate corrective actions
+    to ensure predictable delivery schedules, reduced operational risk, and high system
+    reliability. By partnering closely with external suppliers and internal Engineering
+    and Operations stakeholders, you will help ensure OpenAI’s datacenter infrastructure
+    is delivered on time, meets the highest quality standards, and supports reliable,
+    scalable operations. Key Responsibilities Develop and establish a datacenter-focused
+    manufacturing quality program that supports global deployment schedules. Conduct
+    vendor capability assessments, quality audits, and improve vendor performance
+    across production, testing, and delivery phases. Develop and track quality metrics
+    to assess manufacturing performance and identify trends and work to refine processes,
+    training, and quality controls to mitigate deployment risks. Establish effective
+    cross-functional communication between manufacturing sites, datacenter design
+    teams, and operations. Collaborate with engineering, sourcing, and site operations
+    to establish quality processes and standards with project goals. Mentor supplier
+    teams and provide structured feedback to drive continuous improvement. Audit quality
+    activities at supplier sites to verify compliance with requirements and lead corrective
+    and preventive action plans for audit findings and quality nonconformances. Facilitate
+    root cause analysis and drive systemic process improvements for recurring manufacturing
+    issues and DC quality and reliability issues. Travel Domestic and international
+    travel as needed (estimated 30%) to manufacturing sites, datacenter locations,
+    and partner facilities. Minimum Qualifications 10+ years in manufacturing quality
+    management, supplier quality engineering, process improvement, or datacenter engineering/operations.
+    Bachelor’s degree in engineering, manufacturing, construction management, or related
+    field (or equivalent work experience). Demonstrated ability to analyze data, solve
+    problems, and improve manufacturing processes. Proven track record managing deliverables
+    for complex projects or supplier programs. Strong communication skills with experience
+    influencing both technical and executive audiences. Preferred Qualifications Technical
+    knowledge of datacenter infrastructure systems, including mechanical, electrical,
+    and compute components. Experience in supplier performance management for mission-critical
+    facilities. ASQ Certified Quality Engineer, Quality Manager, Quality Auditor or
+    Lean Six Sigma certified Green Belt. PMP or equivalent project management certification.
+    Experience in industrial or high-volume manufacturing environments. About OpenAI
+    OpenAI is an AI research and deployment company dedicated to ensuring that general-purpose
+    artificial intelligence benefits all of humanity. We push the boundaries of the
+    capabilities of AI systems and seek to safely deploy them to the world through
+    our products. AI is an extremely powerful tool that must be created with safety
+    and human needs at its core, and to achieve our mission, we must encompass and
+    value the many different perspectives, voices, and experiences that form the full
+    spectrum of humanity. We are an equal opportunity employer, and we do not discriminate
+    on the basis of race, religion, color, national origin, sex, sexual orientation,
+    age, veteran status, disability, '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: null
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.757015+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

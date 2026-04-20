@@ -1,0 +1,82 @@
+id: stripe-staff-backend-engineer-privy
+name: Stripe Staff Backend Engineer, Privy
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7235875
+  portal: greenhouse
+  location: NYC-Privy
+  location_class: us-onsite
+  description: "<h2><strong>Who we are</strong></h2> <h3><strong>About Privy</strong></h3>\
+    \ <p>Our mission is to make privacy and user ownership the default online. We\
+    \ build simple, flexible developer tooling that make it easy to build products\
+    \ that put users first. By leveraging modern cryptography, we shift the status\
+    \ quo around digital ownership and protect the accounts and assets of millions\
+    \ of users.</p> <p>Learn more about Privy: <a href=\"https://privy.io/blog/announcing-our-acquisition-by-stripe\"\
+    >Privy and Stripe: Bringing crypto to everyone</a></p> <h2><strong>What you\u2019\
+    ll do</strong></h2> <p>Engineering at Privy is not just about writing world-class\
+    \ code. We create software that turns complex technical systems into delightful\
+    \ developer tools. We assemble tried-and-true primitives into intuitive, responsive\
+    \ APIs and beautiful interfaces. We believe in open-source work and transparency\
+    \ with our teammates and users. We encourage each other to think big, run experiments\
+    \ and follow our curiosity so we can build better tooling that lets developers\
+    \ shine and empower their users.</p> <h2><strong>Who you are</strong></h2> <h3><strong>Minimum\
+    \ requirements</strong></h3> <ul> <li>8+ years of experience building and maintaining\
+    \ a production system at scale</li> <li>An understanding of modern API development\
+    \ best practices and design</li> <li>Experience in building data models, managing\
+    \ database migrations and best practices, and infrastructure configuration</li>\
+    \ <li>An ability to thrive in a fast paced environment.</li> <li>A growth mindset\
+    \ and a constant curiosity and fearlessness to dive into the unknown.</li> <li>An\
+    \ ability to write maintainable, well-tested, modular code, but also be pragmatic\
+    \ about moving fast.</li> <li>Excellent written and verbal communication skills,\
+    \ including the ability to write clear technical documentation.</li> </ul> <h3><strong>Preferred\
+    \ qualifications</strong></h3> <ul> <li>Strong preference for experience in an\
+    \ API-based business and in payments, fintech, or crypto.</li> <li>Written open-source\
+    \ developer tooling</li> <li>Published about your work (open source code, internal\
+    \ or external presentations, blog posts, etc.)</li> <li>Past experience working\
+    \ in authentication or security</li> </ul>"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.793975+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

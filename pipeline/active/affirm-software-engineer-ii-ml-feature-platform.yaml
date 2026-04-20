@@ -1,0 +1,105 @@
+id: affirm-software-engineer-ii-ml-feature-platform
+name: Affirm Software Engineer II (ML Feature Platform)
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Affirm
+  url: https://boards.greenhouse.io/affirm
+  application_url: https://job-boards.greenhouse.io/affirm/jobs/7694296003
+  portal: greenhouse
+  location: Remote Canada
+  location_class: international
+  description: '<div class="content-intro"><p>Affirm is reinventing credit to make
+    it more honest and friendly, giving consumers the flexibility to buy now and pay
+    later without any hidden fees or compounding interest.</p></div><p>ML Feature
+    Platform is one of the two teams that compose the ML Platform at Affirm, the other
+    team being ML Training &amp; Serving Platform. The two platform teams work closely
+    together to create the ML + Data flywheel that empowers Affirm.&nbsp;</p> <p>ML
+    Feature Platform’s mission is to: Grow Affirm’s business by building a delightful,
+    self-serve platform for developing and serving data for machine learning and decisioning.</p>
+    <p>As the feature platform team, we own multiple artifacts that in aggregate own
+    the end-to-end flows for features. This includes:&nbsp;</p> <ul> <li> <p>Feature
+    creation, exploration, and serving</p> </li> <li> <p>Data storage, availability,
+    and visibility</p> </li> <li> <p>Offline backfilling infrastructure and platform
+    improvements</p> </li> </ul> <p>This scope means your work will have a direct
+    impact on the everyday lives and capabilities for our end users: MLEs, Analysts,
+    and decisioning teams. Additionally as the primary data source for ML and online
+    decisioning, our platform’s performance is critical to Affirm’s availability and
+    latency goals.</p> <p>We’re looking for engineers who are passionate about ML
+    enablement and believe that platform level improvements can bring snowball effects
+    across the company.</p> <p><br><strong>What You''ll Do</strong><br><br>· With
+    the support of your team’s tech lead and manager, you will break down larger projects
+    into individual tasks, deliver them in multiple phases, and collaborate with others
+    to ensure timely delivery of your work.<br>· You will support your peers and stakeholders
+    in the product development lifecycle by collaborating with product management,
+    design &amp; analytics by participating in ideation, articulating technical constraints,
+    and partnering on decisions that properly consider risks and trade-offs.<br>·
+    You will support the operations and availability of your team’s artifacts by creating
+    and monitoring metrics, escalating when needed, and supporting “keep the lights
+    on” &amp; on-call efforts.<br>· You will contribute to a sense of community on
+    your team by engaging in growth and development activities such as participation
+    in the interview process.<br><br><strong>What We Look For</strong><br><br>· You
+    have a total of 1.5+ years of experience as a software engineer.<br>You have experience
+    designing, developing and launching backend systems and are proficient in one
+    of Python or Kotlin.<br>· You are familiar with the building blocks of distributed
+    systems, and the technologies like AWS, MySQL and Kubernetes.<br>· You have mastered
+    taking a simple problem or business scenario into a solution that interacts with
+    multiple software components, and executing on it by writing clear, easily understood,
+    well tested and extensible code.<br>· You are comfortable navigating a large code
+    base, debugging others'' code, and providing feedback to other engineers through
+    code reviews.<br>· Your experience demonstrates that you take ownership of your
+    growth, proactively seeking feedback from your team, your manager, and your stakeholders.<br>·
+    You have strong verbal and written communication skills that support effective
+    collaboration with our global engineering team.<br>· This position requires either
+    equivalent practical experience or a Bachelor’s degree in a related field.</p>
+    <p>&nbsp;</p> <p><strong>Pay Grade - L</strong><br><strong>Equity Grade - 5</strong><br><br>Employees
+    new to Affirm typically come in at the start of the pay range. Affirm focuses
+    on providing a simple and transparent pay structure which is based on a variety
+    of factors, including location, experience and job-related skills.<br><br>Base
+    pay is part of a total compensation package that may include monthly stipends
+    for health, wellness and tech spending, and benefits (including 100% subsidized
+    medical coverage, dental and vision for you and your dependents). In addition,
+    the employees may be eligible for equity rewards offered by Affirm Holdings, Inc.
+    (parent company).<br><br>CAN base pay range per year: $125,000 - $175,000<br><br>This
+    posting is for an existing vacancy.<br><br>#LI-Remote</p><div class="content-conclusion"><div>
+    <p>Affirm is proud to be a remote-first company! The majority of our roles are
+    remote and you can work almost anywhere within the country of employment. Affirmers
+    in proximal roles have the flexibility to work remotely, but will occasionally
+    be required to work out of their assigned Affirm office. A limited number of roles
+    remain office-based due to the nature of their job responsibilities.</p> <p><span
+    style="font-weight: 400;">We’re extremely proud to offer competitive benefits
+    that are anchored to our core value of people come first. Some key highlights
+    of our benefits package include:&nbsp;</span></p> <ul> <li style="font-wei'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-17'
+  date_source: first_published
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.536009+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-18"

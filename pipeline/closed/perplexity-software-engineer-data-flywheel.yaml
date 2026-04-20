@@ -1,0 +1,81 @@
+id: perplexity-software-engineer-data-flywheel
+name: Perplexity Software Engineer - Data Flywheel
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/7755eb0a-0f51-4286-b75e-591e44c741bc
+  portal: ashby
+  location: London
+  location_class: international
+  description: Perplexity serves tens of millions of users daily with reliable, high-quality
+    answers grounded in an LLM-first search engine and specialized data sources. The
+    Answer Quality team ensures that our prompts, tools, search, and specialized datasets,
+    combined with both frontier and in-house models, create the best possible experience
+    for our users. As our product evolves, our evaluations must remain fast, accurate,
+    and actionable. In this role, you will build the data flywheel that serves teams
+    across Perplexity. Responsibilities Build the systems and pipelines that enable
+    Search, Product, and other teams to independently access and utilize reliable
+    eval verdicts without bottlenecks Take ownership of the "evals-to-product" loop,
+    autonomously determining the best way to turn raw signals into durable datasets
+    that power decision-making across the company Build a robust simulator pipeline
+    capable of replaying user interactions with the product in formats legible to
+    LLMs and VLMs, reflecting product changes as they are shipped Maintain data trust
+    by implementing monitoring, lineage, and quality checks, ensuring downstream consumers
+    can rely on the results implicitly Operate in a small, high-impact team where
+    your work directly shapes how Perplexity measures and improves Answer Quality
+    Qualifications 3+ years of software engineering experience shipping production
+    systems Strong proficiency in Python and SQL with the ability to write production-grade,
+    maintainable code Experience with big data systems including distributed compute
+    and large-scale storage Solid fundamentals in data modeling, system design, and
+    debugging distributed systems Experience with AWS and lakehouse ecosystems like
+    Databricks or Spark Comfortable with agentic coding workflows and using AI-assisted
+    development tools to iterate faster Preferred Qualifications Data engineering
+    background including pipelines, orchestration, and warehousing patterns Familiarity
+    with LLM/VLM interfaces, tokenization, structured formats, and multimodal payloads
+    Experience with evaluation platforms, experimentation systems, or machine learning
+    infrastructure Prior work supporting customer-facing products at scale
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.924980+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

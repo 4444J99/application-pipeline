@@ -1,0 +1,112 @@
+id: harvey-ai-infrastructure-security-engineer
+name: Harvey AI Infrastructure Security Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Harvey AI
+  url: https://jobs.ashbyhq.com/harvey
+  application_url: https://jobs.ashbyhq.com/harvey/735fd3f1-8be0-444f-b377-3dc5f17fc02e
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Why Harvey At Harvey, we’re transforming how legal and professional
+    services operate — not incrementally, but end-to-end. By combining frontier agentic
+    AI, an enterprise-grade platform, and deep domain expertise, we’re reshaping how
+    critical knowledge work gets done for decades to come. This is a rare chance to
+    help build a generational company at a true inflection point. With 1000+ customers
+    in 58+ countries, strong product-market fit, and world-class investor support,
+    we’re scaling fast and defining a new category in real time. The work is ambitious,
+    the bar is high, and the opportunity for growth — personal, professional, and
+    financial — is unmatched. Our team is sharp, motivated, and deeply committed to
+    the mission. We move fast, operate with intensity, and take real ownership of
+    the problems we tackle — from early thinking to long-term outcomes. We stay close
+    to our customers — from leadership to engineers — and work together to solve real
+    problems with urgency and care. If you thrive in ambiguity, push for excellence,
+    and want to help shape the future of work alongside others who raise the bar,
+    we invite you to build with us. At Harvey, the future of professional services
+    is being written today — and we’re just getting started. Role Overview Some of
+    the world''s largest companies and their law firms use Harvey’s AI capabilities
+    to deliver world-class client services at unprecedented scale and efficiency.
+    Harvey allows high-performing professionals to gain deep domain knowledge faster,
+    understand the big picture, and tackle more complex challenges in less time. Security
+    is at the heart of what we do. Our customers trust us with their most sensitive
+    data, and we take that responsibility seriously. As part of our team, you’ll help
+    us maintain a secure, trustworthy, and compliant platform—an essential foundation
+    for everything we build. As an Infrastructure Security Engineer, you’ll design
+    and build secure-by-default infrastructure that product teams can rely on. This
+    includes designing and implementing processes and technologies for least privilege,
+    isolating different components, managing attack surface, and implementing layers
+    of tenant isolation on our multi-tenant SaaS offering. You’ll also create frameworks
+    and repeatable patterns that enable our research and engineering teams to move
+    quickly and independently—without sacrificing security. Our security program at
+    Harvey is driven by our collective offensive security experience: breaking into
+    systems at other companies (in white-hat capacities), responding to real security
+    incidents, and learning from other companies’ data breaches. We regularly conduct
+    penetration tests and red team exercises. At the same time, we are all software
+    engineers - contributing code daily and approaching security with an engineering-first
+    mindset. What You''ll Do Incorporate secure design principles into our cloud architecture.
+    Develop isolation mechanisms (e.g. sandboxing) in collaboration with our product
+    engineering team Review security-critical configuration changes and act as Codeowner
+    for security-critical parts of our cloud configurations (everything is IaC) Audit
+    our existing cloud environment for vulnerabilities Develop policies and procedures
+    for the secure creation and operation of our cloud environments What You Have
+    5+ years experience in Security Engineering, Software Engineering, or Site Reliability
+    Engineering roles Demonstrated experience writing high-quality software and building
+    production-grade infrastructure and raising the quality bar of engineering teams
+    Strong fundamentals in networking, operating systems, and cryptographic protocols
+    In-depth knowledge of Kubernetes, common misconfigurations, and privilege escalation
+    vectors Demonstrated ability to find weaknesses (e.g. privilege escalation) in
+    real-world cloud environments Experience applying security best practices in cloud
+    environments (AWS, Azure, or Google Cloud) (No experience with generative AI or
+    legal required) Bonus Familiarity with large-scale Infrastructure as Code (IaC)
+    deployments Familiarity with Kubernetes Admission Controllers and policy enforcement
+    Exposure to multi-cloud environments Compensation Range $201,000 - $260,000 USD
+    Please find our CA applicant privacy notice here . #LI-KV1 Harvey is an equal
+    opportunity employer and does not discriminate on the basis of race, gender, sexual
+    orientation, gender identity/expression, national origin, disability, age, genetic
+    information, veteran status, marital status, pregnancy or related condition, or
+    any other basis protected by law. We are committed to providing reasonable accommodations
+    to applicants with disabilities, and requests can be made by emailing accommodations@harvey.ai'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.996704+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

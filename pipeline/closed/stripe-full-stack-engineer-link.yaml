@@ -1,0 +1,94 @@
+id: stripe-full-stack-engineer-link
+name: Stripe Full Stack Engineer, Link
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=6447175
+  portal: greenhouse
+  location: Toronto, Remote in Canada
+  location_class: international
+  description: "<h2>Who we are</h2> <h3>About the Organization&nbsp;</h3> <p>Link\
+    \ is a digital wallet designed for effortless and secure online payments and digital\
+    \ transactions. With Link, consumers enjoy convenience and peace of mind: it works\
+    \ on any device or browser, is backed by the highest security mechanisms, offers\
+    \ purchase protections on eligible items, and ensures seamless and quick payments.\
+    \ Across the Link Engineering org, we focus on building delightful payment experiences\
+    \ and to allow our global consumer base to pay with their preferred payment methods.\
+    \ Our team\u2019s work spans the entire stack from front-end experiences, to infrastructure\
+    \ that supports low-latency transactions, to intelligent systems that help protect\
+    \ consumers and merchants from bad actors.</p> <p>Team Matching: exact team matching\
+    \ for one of the subteams will begin during final stages. Please note we may also\
+    \ consider you for different orgs based on your experience, location, etc. More\
+    \ information on our team matching process can be found <a href=\"https://docs.google.com/document/d/1zvJkO2c7GzukHG-_oqc5wbOLajpuh5FjbmZPcZPU1o0/edit?tab=t.0#heading=h.ahb3b6nrktv1\"\
+    >here</a>.</p> <h2>What you\u2019ll do</h2> <p>We\u2019re looking for engineers\
+    \ who want to make an impact on payments at a global scale. You\u2019ll play a\
+    \ key role in expanding our product suite and the infrastructure that supports\
+    \ it. Our team collaborates with many cross-functional teams and many other teams\
+    \ across Stripe to deliver innovative solutions that address evolving user needs.</p>\
+    \ <h3>Responsibilities</h3> <ul> <li>Build and design the next generation of Stripe\
+    \ products, to meet the high growth needs of our company and customers for years\
+    \ to come.</li> <li>Debug and solve critical production issues across services\
+    \ and multiple levels of the stack</li> <li>Mentor engineers to help them grow</li>\
+    \ <li>Collaborate with stakeholders across the company to build new features at\
+    \ large-scale, while improving internal engineering standards, tooling, and processes</li>\
+    \ <li>Collaborate effectively in a distributed and hybrid team, maintaining open\
+    \ communication and strong connections with colleagues</li> </ul> <h2>Who you\
+    \ are</h2> <p>We're looking for someone who meets the minimum requirements to\
+    \ be considered for the role. If you meet these requirements, you are encouraged\
+    \ to apply. The preferred qualifications are a bonus, not a requirement.</p> <h3>Minimum\
+    \ requirements</h3> <ul> <li>2-10+ years of industry software engineering experience\
+    \ (does not include internships nor includes co-ops)</li> <li>Strong coding skills\
+    \ in any programming language&nbsp;</li> <li>Strong collaboration skills, can\
+    \ work across workstreams within your team and contribute to your peers\u2019\
+    \ success</li> <li>Have the ability to thrive on a high level of autonomy, responsibility,\
+    \ and think of yourself as entrepreneurial</li> <li>Interest in working as a generalist\
+    \ across varying technologies and stacks to solve problems and delight both internal\
+    \ and external users</li> </ul> <h3>Preferred Qualifications</h3> <ul> <li>Experience\
+    \ with large-scale financial tracking systems</li> <li>Good understanding and\
+    \ practical knowledge in cloud based services (e.g. gRPC, GraphQL, Docker/Kubernetes,\
+    \ cloud services such as AWS, etc.)&nbsp;</li> </ul>"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.762647+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,116 @@
+id: poolside-ai-member-of-engineering-inference
+name: Poolside AI Member of Engineering (Inference)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Poolside AI
+  url: https://jobs.ashbyhq.com/poolside
+  application_url: https://jobs.ashbyhq.com/poolside/7f52749a-92c3-4427-8e51-7fffd0e41b6d
+  portal: ashby
+  location: Remote (EMEA/East Coast)
+  location_class: international
+  description: "ABOUT POOLSIDE In this decade, the world will create Artificial General\
+    \ Intelligence. There will only be a small number of companies who will achieve\
+    \ this. Their ability to stack advantages and pull ahead will define the winners.\
+    \ These companies will move faster than anyone else. They will attract the world's\
+    \ most capable talent. They will be on the forefront of applied research, engineering,\
+    \ infrastructure and deployment at scale. They will continue to scale their training\
+    \ to larger & more capable models. They will be given the right to raise large\
+    \ amounts of capital along their journey to enable this. They will create powerful\
+    \ economic engines. They will obsess over the success of their users and customers.\
+    \ Poolside exists to be this company : to build a world where AI will be the engine\
+    \ behind economically valuable work and scientific progress. We believe the fastest\
+    \ way to reach AGI lies in accelerating software development itself, by reshaping\
+    \ the developer experience with agentic systems, coding assistants, and the frontier\
+    \ models that power them. We deploy these systems directly into the development\
+    \ environments of security-conscious enterprises. ABOUT OUR TEAM We were founded\
+    \ in the US and have our home there, but our team is distributed across Europe\
+    \ and North America. We get our fix of in-person collaboration (and croissants)\
+    \ in Paris each month for 3 days, always Monday-Wednesday, with an open invitation\
+    \ to stay the whole week. We also do longer off-sites once a year. Our team is\
+    \ a multidisciplinary blend of research, engineering, and business experts. What\
+    \ unites us is our deep care for what we build together. We\u2019re in a race\
+    \ that requires hard work, intellectual curiosity, and obsession; to balance this\
+    \ intensity, we\u2019ve assembled a team of low ego and kind-hearted individuals\
+    \ who have built the special culture Poolside has. By building collaboratively\
+    \ and with intention, we create a compounding effect that moves the entire company\
+    \ forward towards our mission: reaching AGI through intelligence systems built\
+    \ for software development. ABOUT THE ROLE You will be focused on building out\
+    \ our multi-device inference of Large Language Models, both standard transformers\
+    \ and custom linear attention architectures. You will be working with lowered\
+    \ precision inference and tensor parallelism. You will be comfortable diving into\
+    \ vLLM, Torch, AWS libraries. You will be working on improvements for both NVIDIA\
+    \ and AWS hardware. You will be working on the bleeding edge of what's possible\
+    \ and will find yourself, hacking and testing the latest vendor solutions. We\
+    \ are rewrite-in-Rust-friendly. YOUR MISSION To develop and continuously improve\
+    \ the inference of LLMs for source code generation, optimizing for the lowest\
+    \ latency, the highest throughput, and the best hardware utilization. RESPONSIBILITIES\
+    \ Follow the latest research on LLMs, inference and source code generation Propose\
+    \ and evaluate innovations, both in the quality and the efficiency of the inference\
+    \ Monitor and implement LLM inference metrics in production Write high-quality\
+    \ high-performance Python, Cython, C/C++, Triton, ThunderKittens, native CUDA,\
+    \ Amazon Neuron code Work in the team: plan future steps, discuss, and always\
+    \ stay in touch SKILLS & EXPERIENCE Experience with Large Language Models (LLM)\
+    \ Confident knowledge of the computational properties of transformers Knowledge/Experience\
+    \ with cutting-edge inference tricks Knowledge/Experience of distributed and lower\
+    \ precision inference Knowledge of deep learning fundamentals Strong engineering\
+    \ background Theoretical computer science knowledge is a must Experience with\
+    \ programming for hardware accelerators SIMD algorithms Expert in matrix multiplication\
+    \ bottlenecks Know hardware operation latencies by heart Research experience Nice\
+    \ to have but not required: Author of scientific papers on any of the topics:\
+    \ applied deep learning, LLMs, source code generation, etc Can freely discuss\
+    \ the latest papers and descend to fine details You have strong opinions, weakly\
+    \ held Programming experience Linux Git Python with PyTorch or Jax C/C++, CUDA,\
+    \ Triton, ThunderKittens Use modern tools and are always looking to improve Opinionated\
+    \ but reasonable, practical, and not afraid to ignore best practices Strong critical\
+    \ thinking and ability to question code quality policies when applicable Prior\
+    \ experience in non-ML programming is a nice to have PROCESS Intro call with one\
+    \ of our Founding Engineers Technical Interview(s) with one of our Founding Engineers\
+    \ Team fit call with the People team Final interview with one of our Founding\
+    \ Engineers BENEFITS Fully remote work & flexible hours 37 days/year of vacation\
+    \ & holidays Health insurance allowance for you & dependents Company-provided\
+    \ equipment Well-being, always-be-learning & home office allowances Frequent team\
+    \ get togethers Diverse & inclusive people-first culture"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.037014+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,87 @@
+id: perplexity-software-engineer-security
+name: Perplexity Software Engineer - Security
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/6c9b3c71-85ba-47db-bce5-44fd9fa95d03
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'About the Role Perplexity is seeking a hands-on Software Engineer
+    to build and evolve the software, automations, and systems that power our security
+    operations. This role focuses on engineering security tools and internal AI-driven
+    agents that improve detection and response, vulnerability management, and the
+    overall security posture of our products and infrastructure. Responsibilities
+    Design, build, and maintain software and automation that improves our detection
+    and response program, including alert enrichment, triage workflows, and investigation
+    tooling. Implement and enhance internal AI agents and security bots that assist
+    with monitoring, investigations, reporting, and other security operation tasks.
+    Develop and operate systems and workflows that support the bug bounty and vulnerability
+    disclosure program, including intake, triage, prioritization, and remediation
+    tracking. Partner with product and engineering teams to threat model new features
+    and systems, propose mitigations, and add guardrails into designs and implementations.
+    Contribute to secure-by-default libraries, services, and patterns that make it
+    easy for teams to build secure features. Integrate security signals from cloud,
+    endpoints, SaaS, and applications into cohesive pipelines and data models that
+    support detection and analysis. Build automation to reduce manual work in incident
+    response, containment, and remediation. Collaborate with security engineers and
+    other software engineers to review designs and code, and to continuously improve
+    our security tooling and platforms. Qualifications 4+ years of experience as a
+    software engineer with significant time spent building security-related tools,
+    platforms, or automations, or in a security engineering role with strong software
+    development responsibilities. Proficiency in at least one major programming language
+    (such as Python, Go, or TypeScript) and experience building production services,
+    CLIs, or internal tools. Experience integrating with security-relevant systems
+    such as logging pipelines, SIEMs, EDR, cloud APIs, or identity platforms. Practical
+    experience with threat modeling, secure design, or application security reviews
+    for services or features. Experience operating or contributing to bug bounty or
+    vulnerability management programs is a plus. Familiarity with cloud infrastructure
+    (AWS preferred) and modern SaaS environments. Ability to work closely with cross-functional
+    teams, own projects end-to-end, and ship pragmatic, high-impact improvements.
+    Bonus: Experience designing or improving AI-powered agents or automation used
+    for security operations.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.915017+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

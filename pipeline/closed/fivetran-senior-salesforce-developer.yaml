@@ -1,0 +1,115 @@
+id: fivetran-senior-salesforce-developer
+name: Fivetran Senior Salesforce Developer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Fivetran
+  url: https://boards.greenhouse.io/fivetran
+  application_url: https://www.fivetran.com/careers/job?gh_jid=7662632003
+  portal: greenhouse
+  location: Novi Sad, South Bačka, Serbia, EMEA
+  location_class: international
+  description: '<div class="content-intro"><p>From Fivetran’s founding until now,
+    our mission has remained the same: to make access to data as simple and reliable
+    as electricity. With Fivetran, customer data arrives in their warehouses, canonical
+    and ready to query, with no engineering or maintenance required. We’re proud that
+    more organizations continue to leverage our technology every day to become truly
+    data-driven.</p></div><p><span style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;"><strong><strong>About the Role</strong></strong></span></p>
+    <p><span style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">Fivetran
+    builds data pipelines that power the modern data stack for thousands of companies
+    worldwide.</span></p> <p><span style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;">We’re looking for a Systems Engineer III (Salesforce Developer)
+    to design, build, and scale our Salesforce platform to support a rapidly growing
+    global business. In this role, you’ll develop robust, production-ready solutions
+    across Apex, Lightning Web Components, and integrations, ensuring the platform
+    remains scalable, performant, and aligned with business needs.</span></p> <p><span
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">You will play
+    a key role in end-to-end feature development, including solution design, implementation,
+    testing, and deployment. A strong focus of this role is building maintainable,
+    well-architected solutions that minimize technical debt while supporting long-term
+    platform scalability.</span></p> <p><span style="font-family: helvetica, arial,
+    sans-serif; font-size: 10pt;">Salesforce serves as a critical source of truth
+    at Fivetran. You’ll help maintain system reliability, support cross-functional
+    stakeholders, and ensure new features and enhancements are delivered through structured
+    development and release processes.</span></p> <p><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">You’ll work closely with Revenue Operations
+    and stakeholders across Marketing, Finance, Sales, Analytics, Product, Customer
+    Success, and Engineering to ensure Salesforce continues to scale with the business.</span></p>
+    <p><span style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">This
+    role requires strong ownership, sound technical judgment, and the ability to operate
+    effectively in a fast-paced environment. You’ll participate in solution design
+    reviews, sprint planning, and ongoing platform improvements while helping maintain
+    high standards for code quality and system governance.</span></p> <p><span style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;">This is a high-visibility role
+    with meaningful impact across the organization.</span></p> <p><span style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;">This is a full-time position based
+    out of our Novi Sad office. Our hybrid work model offers a blend of remote flexibility
+    and in-person collaboration, including two days in the office each week to connect
+    and build as a team.</span></p> <p><span style="font-family: helvetica, arial,
+    sans-serif; font-size: 10pt;"><strong>Technologies You’ll Use</strong></span></p>
+    <p><span style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">Salesforce
+    CRM (Sales Cloud, Salesforce CPQ), Apex, Lightning Web Components (LWC), Salesforce
+    APIs (REST/SOAP), Flow, Validation Rules, Approval Processes, Record Types, Dynamic
+    Forms, Reports and Dashboards, Data Loader, Permission Sets and Role Hierarchy,
+    Sharing Rules, Copado, Git, GitHub, Connected Apps, Integration Management, JSON,
+    REST</span></p> <p><span style="font-family: helvetica, arial, sans-serif; font-size:
+    10pt;"><strong>What You’ll Do</strong></span></p> <ul> <li style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;"><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">Design and develop scalable, production-ready
+    Salesforce solutions using Apex, Lightning Web Components, and declarative tools
+    where appropriate.</span></li> <li style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;"><span style="font-family: helvetica, arial, sans-serif; font-size:
+    10pt;">Build well-tested, maintainable code with structured QA and regression
+    validation before production release.</span></li> <li style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;"><span style="font-family: helvetica, arial,
+    sans-serif; font-size: 10pt;">Evaluate multiple technical approaches, clearly
+    explain trade-offs, and recommend solutions aligned with scalability and long-term
+    maintainability.</span></li> <li style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;"><span style="font-family: helvetica, arial, sans-serif; font-size:
+    10pt;">Translate business requirements into technical designs and break down complex
+    initiatives into clear, executable tasks.</span></li> <li style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;"><'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.023177+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

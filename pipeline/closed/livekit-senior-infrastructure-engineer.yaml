@@ -1,0 +1,87 @@
+id: livekit-senior-infrastructure-engineer
+name: LiveKit Senior Infrastructure Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: LiveKit
+  url: https://jobs.ashbyhq.com/livekit
+  application_url: https://jobs.ashbyhq.com/livekit/1355f64e-b394-4982-8de6-6fd3e6e8f30d
+  portal: ashby
+  location: Remote, U.S
+  location_class: remote-global
+  description: "LiveKit is revolutionizing the AI landscape by providing the essential\
+    \ network infrastructure that powers multimodal AI interfaces, enabling seamless\
+    \ audio and visual interactions. Founded in 2021, LiveKit has rapidly grown to\
+    \ support over 3 Billion calls annually, 100,000+ developers globally, and industry\
+    \ giants like OpenAI, Character AI, Spotify, and Meta. You'll thrive at LiveKit\
+    \ if you: obsess with crafting code that is fast, reliable and practical for the\
+    \ problem are known as the go-to person for tackling tough technical problems\
+    \ work hard and can build and ship fast can clearly explain complex technical\
+    \ concepts to others are a fast learner, frequently picking up new languages and\
+    \ tools The best way to impress us is with thoughtful Issues and/or PRs on our\
+    \ Github repos \U0001F60A LiveKit is on a mission to help developers create and\
+    \ scale real-time experiences. We are hiring a Software Engineer / Site Reliability\
+    \ Engineer to help manage and scale the core components of the LiveKit infrastructure.\
+    \ Reliability and performance of our globally distributed architecture is critical\
+    \ and a top priority. What You'll Do Build and own the foundational infrastructure\
+    \ that our products run upon. Work directly on our products' golang code base\
+    \ to implement SRE related objectives. Take a data driven approach to quantifying\
+    \ system performance and reliability and use it to drive project priorities. Oncall\
+    \ participation including leading incident management for complex situations.\
+    \ Work on automation and advanced configuration management to allow our team to\
+    \ manage large numbers of clusters distributed across the world running various\
+    \ products. Work with infrastructure vendors when their solutions aren't meeting\
+    \ our real time performance and reliability needs. Who You Are A balance of strengths\
+    \ in both software engineering and large scale system administration. Experience\
+    \ managing complex multi-region distributed systems running on top of container\
+    \ orchestration systems like Kubernetes. Passionate about maintainability and\
+    \ keeping system complexity at bay, but able to balance this with meeting launch\
+    \ deadlines. Bonus Points Incident management training and experience being an\
+    \ Incident Commander. Experience with Linux networking, overlay networks, and\
+    \ Kubernetes CNIs. Low level knowledge for troubleshooting and tuning latency\
+    \ sensitive workloads. Our Commitments to You We offer: A competitive salary and\
+    \ equity package. Health, dental, and vision benefits Flexible vacations Remote\
+    \ work environment with necessary equipment provided."
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.130888+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

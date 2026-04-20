@@ -1,0 +1,116 @@
+id: sofi-sr-software-engineer-data-foundations
+name: SoFi Sr Software Engineer, Data Foundations
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: SoFi
+  url: https://boards.greenhouse.io/sofi
+  application_url: https://sofi.com/careers/job/7695839003?gh_jid=7695839003
+  portal: greenhouse
+  location: CA - San Francisco; WA - Seattle; UT - Cottonwood Heights
+  location_class: us-onsite
+  description: <div class="content-intro"><p><a href="https://www.sofi.com/sofi-employee-applicant-privacy-notice/"
+    target="_blank"><strong>Employee Applicant Privacy Notice</strong></a></p> <p><strong>Who
+    we are:</strong></p> <div> <p>Shape a brighter financial future with us.</p> <p>Together
+    with our members, we’re changing the way people think about and interact with
+    personal finance.</p> <p>We’re a next-generation financial services company and
+    national bank using innovative, mobile-first technology to help our millions of
+    members reach their goals. The industry is going through an unprecedented transformation,
+    and we’re at the forefront. We’re proud to come to work every day knowing that
+    what we do has a direct impact on people’s lives, with our core values guiding
+    us every step of the way. <strong>Join us to invest in yourself, your career,
+    and the financial world.</strong></p> </div></div><p><strong>The Role</strong></p>
+    <p>Join us in revolutionizing the lending landscape. SoFi is seeking enthusiastic
+    Senior Software Engineers who are ready to lead the development of key advancement
+    to the next generation of our financial services platform.&nbsp;</p> <p>Data Foundations
+    leads the path on building the central platform-level foundation and infrastructure
+    that powers SoFi's entire data ecosystem. Their scope spans Infrastructure &amp;
+    Core Primitives and Platform Operations — essentially the backbone that enables
+    all data capabilities across the organization. Key qualifications of this role
+    include:</p> <ul> <li>Leading the technical evolution of one or more key platform
+    subsystems.</li> <li>Resolving problems in the platform design and implementation
+    that weren’t clearly anticipated, taking requirements with ambiguity and proposing
+    durable technical solutions.</li> <li>Expertly leverage existing solution patterns
+    and understand when to differentiate resulting in well-structured, maintainable
+    code.</li> <li>Ability to understand data models, APIs, scaling concerns, and
+    failure modes in order to make effective trade-offs between maintainability and
+    performance.</li> <li>Creating stability by writing meaningful tests, considering
+    observability, and leveraging your ability to debug complex issues across multiple
+    system layers.</li> <li>The ability to create clear design and operational documentation.</li>
+    <li>Contributes to code reviews, is a role model for more junior engineers, and
+    contributes to team efficiency, beyond personal output.</li> </ul> <p><strong>What
+    You’ll Do</strong></p> <p>As an emerging leader within our team, you will focus
+    on building out the backend services for our next-generation Lending Platform.
+    This role involves full product lifecycle engagement, from initial concept to
+    deployment. Key responsibilities include implementing new capabilities, ensuring
+    code quality, and delivering highly-available, scalable services. Success requires
+    close technical collaboration with Product, Marketing, Operations, Business, Legal,
+    and Compliance teams. You will be responsible for translating business requirements
+    from these stakeholders into effective technical solutions that provide outstanding
+    value to our members.</p> <p><strong>What You’ll Need</strong></p> <ul> <li>Bachelor's
+    or Master's degree in Computer Science, or Software Engineering</li> <li>3+ years
+    as a professional, full-time Software Engineer, or similar relevant work experience.</li>
+    <li>Proficient coding in Java, Kotlin, or other similar object-oriented programming
+    language.</li> <li>Proficient working with GIT and related CI/CD systems.</li>
+    <li>Experience with public cloud compute, storage, and infrastructure.</li> <li>Experience
+    with any data warehousing solution like Snowflake and IAC tools to provision platform
+    infrastructure.</li> <li>Experience with Kafka, Docker, Kubernetes, and Spring
+    Boot or similar frameworks.</li> <li>Deep understanding of relational and document
+    database fundamentals.</li> <li>Deep understanding of fundamental distributed
+    systems concepts.</li> </ul> <p><strong>Nice To Have</strong></p> <ul> <li>Full-Stack
+    experience in both back-end (Kafka, Redis, Docker) and front-end (JavaScript,
+    TypeScript, React).</li> <li>Experience with microservices design principles and
+    architecture.</li> <li>Experience with workflow orchestration technology (AWS
+    step function, Airflow, Temporal).</li> </ul> <p>We're driven to push boundaries
+    and deliver exceptional products to help our members achieve financial stability.
+    If you have the passion and a commitment to customer success, we want to hear
+    from you.</p><div class="content-conclusion"><div class="gmail_default"><strong>Compensation
+    and Benefits</strong></div> <div class="gmail_default">The base pay range for
+    this role is listed below. Final base pay offer will be determined based on individual
+    factors such as the candidate’s experience, skills, and location.&nbsp;</div>
+    <div class="gmail_default">&nbsp;</div> <div class="gmail_default">To view all
+    of our comprehensive&nbsp;and com
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-14'
+  posting_date: '2026-04-13'
+  date_source: first_published
+  date_added: '2026-04-14'
+  discovered: '2026-04-14T10:23:06.723165+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

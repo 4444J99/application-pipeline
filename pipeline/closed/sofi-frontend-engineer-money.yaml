@@ -1,0 +1,116 @@
+id: sofi-frontend-engineer-money
+name: SoFi Frontend Engineer, Money
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: SoFi
+  url: https://boards.greenhouse.io/sofi
+  application_url: https://sofi.com/careers/job/7687952003?gh_jid=7687952003
+  portal: greenhouse
+  location: WA - Seattle
+  location_class: us-onsite
+  description: '<div class="content-intro"><p><a href="https://www.sofi.com/sofi-employee-applicant-privacy-notice/"
+    target="_blank"><strong>Employee Applicant Privacy Notice</strong></a></p> <p><strong>Who
+    we are:</strong></p> <div> <p>Shape a brighter financial future with us.</p> <p>Together
+    with our members, we’re changing the way people think about and interact with
+    personal finance.</p> <p>We’re a next-generation financial services company and
+    national bank using innovative, mobile-first technology to help our millions of
+    members reach their goals. The industry is going through an unprecedented transformation,
+    and we’re at the forefront. We’re proud to come to work every day knowing that
+    what we do has a direct impact on people’s lives, with our core values guiding
+    us every step of the way. <strong>Join us to invest in yourself, your career,
+    and the financial world.</strong></p> </div></div><h2><span style="font-size:
+    12pt; font-family: arial, helvetica, sans-serif;"><strong>The role</strong></span></h2>
+    <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">We
+    are seeking a Frontend Engineer with a specialty in frontend web implementations
+    to play a pivotal role in our Money product architecture transformation, focusing
+    on the evolution of our banking core and the implementation of enhanced account
+    structures, including readiness for new products like CDs. This position involves
+    maturing our central member-facing services, particularly in areas such as entitlements,
+    permissions, and data management, which are critical to supporting integrated
+    product offerings like SoFi Plus. You’ll be working within a highly collaborative
+    environment where planning and executing through a unified campaign lens is essential
+    due to the complexity and interdependencies of these initiatives.</span></p> <p><span
+    style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">At SoFi, we
+    pride ourselves on the collaboration between Product, Design, and Engineering,
+    and you will be involved in the entire product lifecycle, from ideation through
+    building, deploying, and continual improvement and evolution - and you’ll be working
+    with an all-star team of talented engineers.</span></p> <h2><span style="font-size:
+    12pt; font-family: arial, helvetica, sans-serif;"><strong>What you’ll do:</strong></span></h2>
+    <ul> <li style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><span
+    style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Work on React-based
+    web applications with a cross-functional team.</span></li> <li style="font-size:
+    12pt; font-family: arial, helvetica, sans-serif;"><span style="font-size: 12pt;
+    font-family: arial, helvetica, sans-serif;">Develop testable and accessible web
+    applications.</span></li> <li style="font-size: 12pt; font-family: arial, helvetica,
+    sans-serif;"><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Work
+    with designers to identify and solve potential implementation issues.</span></li>
+    <li style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><span
+    style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Generate,
+    enhance, and promote ideas for useful new projects and technologies.</span></li>
+    <li style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><span
+    style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Deliver and
+    operate highly available and scalable services in a production environment.</span></li>
+    <li style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><span
+    style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Communicate
+    with project leads, product managers, and other software developers on multiple
+    projects.</span></li> </ul> <h2><span style="font-size: 12pt; font-family: arial,
+    helvetica, sans-serif;"><strong>What you’ll need:</strong></span></h2> <ul> <li
+    style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><span style="font-size:
+    12pt; font-family: arial, helvetica, sans-serif;">Bachelor’s degree, ideally in
+    a technical field, but we understand great engineers come from a variety of different
+    backgrounds and we also consider relevant work experience.</span></li> <li style="font-size:
+    12pt; font-family: arial, helvetica, sans-serif;"><span style="font-size: 12pt;
+    font-family: arial, helvetica, sans-serif;">2+ years of experience with modern
+    JavaScript libraries, tooling, and frameworks.</span></li> <li style="font-size:
+    12pt; font-family: arial, helvetica, sans-serif;"><span style="font-size: 12pt;
+    font-family: arial, helvetica, sans-serif;">Strong knowledge of front-end technologies.</span></li>
+    <li style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><span
+    style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Familiarity
+    with responsive design/development and mobile-web best practices.</span></li>
+    <li style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><span
+    style="font-size: 12pt'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-10'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.209672+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,115 @@
+id: anduril-telecommunications-infrastructure-analyst-factory-systems
+name: Anduril Telecommunications Infrastructure Analyst - Factory Systems
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5080659007?gh_jid=5080659007
+  portal: greenhouse
+  location: Ashville, Ohio, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p><strong>ABOUT THE JOB:</strong></p>
+    <p>We are seeking a Telecommunications Infrastructure Analyst with a proven track
+    record in IT infrastructure facility assessments and strategic planning. This
+    role demands a strong ability to gather and evaluate comprehensive infrastructure
+    requirements, including power, cooling, structured cabling, network capacity,
+    and security. You will leverage your extensive experience to translate technical
+    findings into actionable Statements of Work (SOWs), collaborating effectively
+    with diverse stakeholders and third-party design teams. Your deep understanding
+    of corporate IT standards, security policies, and vendor-agnostic network technologies
+    will be crucial in ensuring reliable, scalable, and secure infrastructure solutions.<br><br></p>
+    <p><strong>WHAT YOU"LL DO:</strong></p> <ul> <li>You will establish and maintain
+    the critical bridge between the Facilities organization and the external low-voltage
+    design and integration vendors providing essential IT technical consultation to
+    both parties to ensure successful technical outcomes.</li> <li>Conduct site visits
+    to assess infrastructure needs, including power, cooling, structured cabling,
+    network capacity, and security.</li> <li>Develop technical site plans in collaboration
+    with third-party architects, low-voltage design firms, and engineering teams.</li>
+    <li>Ensure compliance with corporate IT standards and security policies.</li>
+    <li>Gather comprehensive infrastructure requirements and conduct detailed evaluations.</li>
+    <li>Translate complex technical details into actionable SOWs.</li> <li>Communicate
+    and collaborate with internal and external stakeholders to ensure project success.</li>
+    <li>Provide clear, concise, and opinionated guidance, and push back when necessary
+    to ensure project alignment and success.</li> <li>Manage changes to project scope,
+    schedule, and costs using appropriate verification techniques.</li> </ul> <p><strong>REQUIRED
+    QUALIFICATIONS:</strong></p> <ul> <li>Minimum of 6 years of experience in a Network
+    and/or Systems Infrastructure role.</li> <li>Minimum of 4 years of experience
+    in infrastructure analysis, site build, and M&amp;A assessments.</li> <li>Proven
+    experience in gathering and evaluating infrastructure requirements.</li> <li>Strong
+    ability to translate technical details into actionable SOWs.</li> <li>Strong understanding
+    of construction phases and analyzing construction drawings</li> <li>Excellent
+    communication and collaboration skills; capable of effectively working with diverse
+    stakeholders.</li> <li>Strong understanding of corporate IT standards and security
+    policies.</li> <li>Ability to conduct thorough site assessments (power, cooling,
+    structured cabling, network capacity, security).</li> <li>Experience working with
+    third-party architects, low-voltage design firms, and engineering teams.</li>
+    <li>Extensive experience with vendor-agnostic network switching, wireless, and
+    routing.</li> <li>Experience with ticketing systems and managing a ticket queue.</li>
+    <li>Passion for technology and a team-focused attitude.</li> <li>Ability to learn
+    new technologies quickly.</li> <li>Strong documentation skills.</li> <li>Strong
+    problem-solving skills.</li> <li>Ability to travel for remote deployments when
+    required.</li> <li>Must be able and willing to lift 50 pounds.</li> </ul> <p><strong>PREFERRED
+    QUALIFICATIONS:</strong></p> <ul> <li>Currently holds or can obtain a BICSI RCDD
+    (Registered Communications Distribution Designer) Certification</li> <li>Certification
+    in project management or related fields.</li> <li>Experience in large-scale infrastructure
+    projects.</li> <li>Familiarity with M&amp;A processes and assessments.</li> </ul>
+    <p>&nbsp;</p><div class="content-pay-transparency"><div class="pay-input"><div
+    class="title">US Salary Range</div><div class="pay-range"><span>$99,000</span><span
+    class="divider">&mdash;</span><span>$131,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work experience, education and/or training, critic
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:34.172452+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

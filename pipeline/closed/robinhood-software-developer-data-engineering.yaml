@@ -1,0 +1,113 @@
+id: robinhood-software-developer-data-engineering
+name: Robinhood Software Developer, Data Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7454438?t=gh_src=&gh_jid=7454438
+  portal: greenhouse
+  location: Toronto, Canada
+  location_class: international
+  description: '<div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><h2><strong>About the team + role&nbsp;</strong></h2>
+    <p data-start="498" data-end="687">With a strong and growing engineering hub in
+    Toronto, our teams in Canada are essential to building exceptional financial products
+    and supporting our mission to democratize finance for all!</p> <p data-start="689"
+    data-end="1142">Robinhood is a metrics-driven company where data is foundational
+    to every decision—from long-term strategy to daily operations. As a Software Developer
+    on our Data Engineering team, you''ll help build and maintain the core datasets
+    that power analytics, experimentation, and machine learning across Robinhood.
+    These foundational data assets include application events, database snapshots,
+    and derived metrics that track the performance of our products.</p> <p data-start="1144"
+    data-end="1369">You’ll work closely with engineers, data scientists, and business
+    teams to design scalable, intuitive pipelines and tooling. This is a unique opportunity
+    to influence how data supports our decision-making for years to come.</p> <p><strong>The
+    role is located in the office location(s) listed on this job description which
+    will align with our in-office working environment. Please connect with your recruiter
+    for more information regarding our in-office philosophy and expectations.</strong></p>
+    <h2><strong>What you’ll do&nbsp;</strong></h2> <ul> <li>Help define and build
+    key datasets across all Robinhood product areas. Lead the evolution of these datasets
+    as use cases grow.</li> <li>Build scalable data pipelines using Python, Spark
+    and Airflow to move data from different applications into our data lake.</li>
+    <li>Partner with upstream engineering teams to enhance data generation patterns.</li>
+    <li>Partner with data consumers across Robinhood to understand consumption patterns
+    and design intuitive data models.</li> <li>Ideate and contribute to shared data
+    engineering tooling and standards.</li> <li>Define and promote data engineering
+    best practices across the company.</li> </ul> <h2><strong>What you bring</strong></h2>
+    <ul> <li>3+ years of professional experience building end-to-end data pipelines</li>
+    <li>Hands-on software engineering experience, with the ability to write production-level
+    code in Python for user-facing applications, services, or systems (not just data
+    scripting or automation).</li> <li>Expert at building and maintaining large-scale
+    data pipelines using open source frameworks (Spark, Flink, etc)</li> <li>Strong
+    SQL (Presto, Spark SQL, etc) skills.</li> <li>Experience solving problems across
+    the data stack (Data Infrastructure, Analytics and Visualization platforms)</li>
+    <li>Expert collaborator with the ability to democratize data through actionable
+    insights and solutions.</li> </ul> <p data-start="2487" data-end="2941">Our team
+    is committed to providing an inclusive and welcoming interview experience for
+    all candidates. If you require a specific accommodation during the application
+    or interview process due to a physical or mental condition, please complete this
+    <a class="decorated-link" href="https://robinhood.hracuity.net/webform/index/752875e4-42ba-4dff-9951-fd51e315997e"
+    target="_new" data-start="2734" data-end="2847">Applicant Accommodation Form</a>
+    to notify our team. The form should only be completed if you need a specific accommodation.</p>
+    <p data-start="2943" data-end="3193">AI Usage Disclosure: Robinhood uses artificial
+    intelligence (AI) tools to support parts of our recruiting process. These tools
+    enhance the efficiency and consistency of our hiring process; however, all hiring
+    decisions are made by our hiring teams.</p> <p data-start="3195" data-end="3298">Vacancy
+    Notice: This job posting represents an existing vacancy that we are actively seeking
+    to fill.</p><div class="content-pay-transparency"><div class="pay-input"><div
+    class="description"><p><strong>In addition to the base pay range listed below,
+    this role is also eligible for bonus opportunities + equity + benefits.</strong></p>
+    <p>Base pay for the successful applicant will depend on a variety of job-related
+    factors, which may include education, training, experience, location, business
+    needs, or market demands. The expected base pay range for this role is based on
+    the location where the work will be performed.</p> <p><span style="text-decoration:
+    underline;">Base Pay Range:</span></p></div><div class="title">Toronto, ON</div><div
+    class="pay-range"><span>$136,000</span><span class="divider">&mdash;</span><span>$160,'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.146069+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

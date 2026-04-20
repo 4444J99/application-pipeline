@@ -1,0 +1,116 @@
+id: anduril-senior-system-software-engineer
+name: Anduril Senior System Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5095564007?gh_jid=5095564007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p><strong>ABOUT THE TEAM:</strong><br>Anduril’s
+    Maritime Division has assembled a diverse team of experts in software, robotics,
+    artificial intelligence, sensor fusion, and data analysis to create software and
+    hardware solutions that radically evolve the capabilities of our customers. We
+    are fielding the next generation of autonomous systems to tackle the extremely
+    challenging industry demands of maritime operations. Anduril has brought to market
+    a unique, ultra-long-range, full-ocean-depth underwater vessel platform and a
+    completely refreshed maritime vehicle and flexible manufacturing architecture
+    that scales from "small" to "extra-large" vehicle sizes. Today, Anduril is executing
+    on billion-dollar contracts while simultaneously performing Robot-as-a-Service
+    (RaaS) AUV operations.<br><br>We are continuing to expand our product portfolio,
+    now moving into the surface maritime domain. Products like Dive-XL, Dive-LD, Copperhead,
+    Seabed Sentry, and surface products in the pipeline will create a system-of-systems
+    that enable a multitude of autonomous missions across all maritime domains. If
+    you are passionate about solving problems that have real impact and working on
+    systems that directly contribute to achieving national strategic priorities, we
+    want you to join Anduril’s Maritime Division and help us build the future of defense
+    capability.<br><br><strong>ABOUT THE JOB: </strong><br>We are seeking a highly
+    motivated and experienced Mission Software Systems Engineer to join our team in
+    Costa Mesa, California. You will work closely with the program leadership and
+    a wide spectrum of cross-departments as part of a team focused on solving hard
+    problems and changing the industry forever. In this role you will be responsible
+    for designing, integrating, and managing complex, software-intensive mission autonomy
+    systems based on the Lattice OS, with specific focus on integration into a coherent,
+    consistent, and complete system for ASVs. You will bridge the gap between hardware
+    and software, and between ship control and mission operations, handling the entire
+    lifecycle across ConOps development, requirements development and analysis, design,
+    testing, optimization, and maintenance. Join our dynamic team and help us build
+    the next generation of autonomous maritime systems.<br><br><strong>WHAT YOU''LL
+    DO:</strong><br>The ideal candidate should have strong experience building or
+    supporting developer experience platforms, internal tools, and/or platform engineering
+    solutions. They should have proficiency with networking and related cloud-native
+    technologies, and have solid programming skills in languages such as C++, Go,
+    or Rust.</p> <ul> <li>Participate in development and maintenance of the mission
+    system to vehicle autonomy / management system interface in accordance with software
+    architecture principles.</li> <li>Lead development and maintenance of the mission
+    system to payload management system interface in accordance with software architecture
+    principles.</li> <li>Perform analysis of ConOps, DRMs, and mission flows, and
+    develop mission behavior concepts with associated definition of inputs and outputs
+    list, collaborating with a cross-functional team.</li> <li>Own the build package
+    and configuration of the mission autonomy software for the MCS, OCS, and PDK instantiations.</li>
+    <li>Build, checkout, and deliver the PDK to payload development teams.</li> <li>Support
+    integration, checkout, debug, and test of mission autonomy as installed on each
+    type of ship.</li> <li>Active contributor to HITL development, maintenance, and
+    use.</li> <li>Hands-on co-lead for integration of each payload with the mission
+    system on each type of ship.</li> <li>Support ship V&amp;V planning for at-sea
+    activity.</li> <li>Own the software build and configuration of ASV MissionSim,
+    and perform validation testing of mission autonomy; responsible for acquisition,
+    curation, and maintenance of scenarios and data sets required to support simulations.</li>
+    <li>Work closely with other electrical, mechanical, software, firmware, and test
+    engineers to deliver fully functional products</li> <li>Work in a fast-paced environment
+    balancing schedule against cost and performance parameters</li> <li>Conduct peer-leve'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-01'
+  posting_date: '2026-03-31'
+  date_source: first_published
+  date_added: '2026-04-01'
+  discovered: '2026-04-01T10:18:24.693824+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

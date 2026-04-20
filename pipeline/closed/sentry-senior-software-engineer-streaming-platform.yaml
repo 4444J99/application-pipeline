@@ -1,0 +1,116 @@
+id: sentry-senior-software-engineer-streaming-platform
+name: Sentry Senior Software Engineer, Streaming Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sentry
+  url: https://jobs.ashbyhq.com/sentry
+  application_url: https://jobs.ashbyhq.com/sentry/725e606d-3299-4aea-a120-d202ffbdc1aa
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: 'About Sentry Bad software is everywhere, and we’re tired of it. Sentry
+    is on a mission to help developers write better software faster so we can get
+    back to enjoying technology. With more than $217 million in funding and 100,000+
+    organizations that believe we’re on to something, we''re building performance
+    and error monitoring tools that help companies like Disney, Microsoft, and Atlassian
+    spend less time fixing bugs and more time building products. Sentry embraces a
+    hybrid work model across our global hubs, with Mondays, Tuesdays, and Thursdays
+    set as in-office anchor days to encourage meaningful collaboration. If you like
+    to selfishly build things that make your digital life better, come help us build
+    the next generation of software monitoring tools. About the role The Streaming
+    Platform team at Sentry is building the next generation of infrastructure that
+    powers our ingestion pipelines and real-time data processing systems. Our platform
+    ingests, processes, and distributes hundreds of thousands of events per second
+    with low latency and high reliability. We are creating a system that makes it
+    easy for Sentry engineers to deploy and run streaming applications at scale by
+    simplifying the complexity of Kafka, scaling consumers automatically, and managing
+    state so product teams can focus on building great experiences for developers.
+    As part of this team, you will work on challenges at the intersection of distributed
+    systems, real-time data processing, and developer experience. You will help us
+    create a self-service streaming platform that improves stability, accelerates
+    time to production, and reduces operational overhead. In this role you will Design,
+    build, and operate components of our Streaming Platform, including Kafka, the
+    streaming runtime, high-level APIs, and developer-facing abstractions. Implement
+    resilient, high-throughput stream processing systems that handle unbounded datasets
+    with strong correctness guarantees (delivery, checkpointing, watermarking, and
+    more). Build scalable automation and control plane for Kafka fleet management
+    and improve efficiency. Partner with product engineers to ensure our abstractions
+    enable fast, reliable, and consistent ingestion pipelines. Improve observability,
+    monitoring, and failover for mission-critical real-time systems. You’ll love this
+    job if you You enjoy working on distributed systems at scale and care about reliability
+    and performance. You like building abstractions that make complex infrastructure
+    easier for others to use. You are motivated by designing systems that balance
+    flexibility for developers with best practices for stability. You are excited
+    to shape how Sentry handles near real-time ingestion and analytics at scale. You
+    value being part of a collaborative team where your contributions make a broad
+    impact across the company. Qualifications 5+ years of software engineering experience,
+    with background in distributed systems, data infrastructure, or real-time streaming.
+    Proficiency in a programming language such as Python, Rust, Go, or Java (we primarily
+    use Python and Rust, but experience in similar languages is valuable). Experience
+    with streaming technologies such as Kafka, Flink, Spark Streaming, or similar
+    tools. Strong understanding of partitioning, watermarks, windowing, stateful/stateless
+    processing, and delivery guarantees. Experience building and operating systems
+    in cloud environments such as Kubernetes, AWS, or GCP. Nice to have: experience
+    with ClickHouse, Arrow or other columnar data processing, or modern streaming
+    SQL engines such as Materialize or RisingWave. The base salary range that Sentry
+    reasonably expects to pay for this position is $190,000 to $280,000 USD . A successful
+    candidate’s actual base salary amount will be determined by a variety of relevant
+    factors including, without limitation, the candidate’s work location, education,
+    work and other relevant experience, skills, and job-related knowledge. A successful
+    candidate will be eligible to participate in Sentry’s employee benefit plans/programs
+    applicable to the candidate’s position (including incentive compensation, equity
+    grants, paid time off, and group health insurance coverage). See Sentry Benefits
+    for more details about the Company’s benefit plans/programs. Equal Opportunity
+    at Sentry Sentry is committed to providing equal employment opportunities to its
+    employees and candidates for employment regardless of race, color, ancestry, religion,
+    sex, national origin, sexual orientation, age, citizenship, marital status, disability,
+    gender identity, veteran status, or other legally-protected characteristic. This
+    commitment includes the provision of reasonable accommodations to employees and
+    candidates for employment with physical or mental disabilities who require such
+    accommodations in order to (a) perform the essential functions of their jobs,
+    or (b) seek employment with Sentry. We strive to build a diverse team, with an
+    inclusive culture where every teammate can thrive. Sen'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.237951+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

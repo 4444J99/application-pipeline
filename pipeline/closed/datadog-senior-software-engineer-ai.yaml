@@ -1,0 +1,115 @@
+id: datadog-senior-software-engineer-ai
+name: Datadog Senior Software Engineer (AI)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Datadog
+  url: https://boards.greenhouse.io/datadog
+  application_url: https://careers.datadoghq.com/detail/7566827/?gh_jid=7566827
+  portal: greenhouse
+  location: Madrid, Spain
+  location_class: international
+  description: '<p>At Datadog, we leverage AI across our observability platform to
+    improve monitoring, speed up incident resolution, and ensure data reliability
+    for cloud applications.</p> <p>Datadog’s <a href="https://docs.datadoghq.com/deployment_gates/">Deployment
+    Gates</a> team builds customer-facing systems that decide whether software should
+    ship to production. Deployment Gates sit directly in customers’ CI/CD pipelines
+    and use observability data to answer one of the hardest questions in software
+    delivery:<br>Given everything we know right now, is this deployment safe to proceed?<em><br></em><em><br></em>In
+    this role, you will:</p> <ul> <li> <p class="p1">Work on an analysis service that
+    prevents incidents by detecting faulty software changes in production before they
+    reach clients</p> </li> <li>Lead the design of progressive deployment automation,
+    starting with zero-setup, conservative AI rules and evolving toward adaptive gates
+    that learn from incidents and organizational patterns</li> <li>Design the foundation
+    for autonomous remediation, connecting what changed in code to what broke in production,
+    from blocking and rolling back unsafe deployments to proposing fixes and enforcing
+    policies</li> </ul> <p>This is a highly product‑minded engineering role: you’ll
+    work from problem discovery and UX all the way to reliable, scalable production
+    systems.</p> <p><em>At Datadog, we place value in our office culture - the relationships
+    that it builds, the creativity it brings to the table, and the collaboration of
+    being together. We operate as a hybrid workplace to ensure our employees can create
+    a work-life harmony that best fits them.</em></p> <p>&nbsp;</p> <p><strong>What
+    you’ll do:</strong></p> <ul> <li>Build AI-driven deployment gates: Design and
+    ship decision systems that evaluate customer deployments using CI/CD context and
+    Datadog telemetry, producing safe, explainable allow/block outcomes</li> <li>Own
+    evals and rollout: Define precision, recall, and trust metrics; build offline
+    and online evals; validate changes in shadow mode; and safely promote improvements
+    to enforcement</li> <li>Design for robustness and safety: Implement conservative
+    defaults, guardrails, fallbacks, and human-in-the-loop paths so gates behave predictably
+    under noisy or incomplete data</li> <li>Partner closely with Product: Work hand-in-hand
+    with the Product Manager to translate customer problems, adoption signals, and
+    roadmap goals into concrete technical decisions and iterations</li> <li>Integrate
+    across the Datadog platform: Partner with internal AI teams building the Faulty
+    Deployment Detection pipeline, as well as teams working on LLMs and AI agents</li>
+    <li>Own production systems: Build and operate reliable backend services that run
+    in the critical path of customer deployments, and be on-call for those services</li>
+    </ul> <p>&nbsp;</p> <p><strong>Who you are:</strong></p> <ul> <li>A Product‑minded
+    engineer who ships AI to production</li> <li>You have 5+ years experience with
+    backend systems and microservices performance: tracing, latency breakdowns, concurrency,
+    and resiliency patterns</li> <li>You are proficient in a modern programming language;
+    strong API/service design; production ops (monitoring, alerting, on‑call rotation)</li>
+    <li>You have proven experience delivering software based on LLM/agent features
+    to production</li> <li class="p1">You are comfortable owning user journeys, iterating
+    from prototype → alpha → GA, and measuring impact with clear product metrics</li>
+    <li>An End-to-end AI implementation owner: You understands the end-to-end LLM
+    product lifecycle</li> <li>Fluent with offline/online evals for AI systems</li>
+    <li>You have demonstrated ability to use AI coding tools in day-to-day workflows
+    and validate, critique, and refine AI-generated output</li> </ul> <p>&nbsp;</p>
+    <p><strong>Bonus Point:</strong></p> <ul> <li>Experience with Continuous Delivery
+    tools (i.e. ArgoCD / Argo Rollouts, Spinnaker, Octopus Deploy)</li> <li>Exposure
+    to planning/agent frameworks, tool‑use orchestration, RAG, and retrieval/indexing
+    for observability data</li> <li>You’re motivated to push the boundaries of how
+    AI can improve software engineering best practices and contribute to building
+    AI-enabled products</li> </ul> <p><em>Datadog values people from all walks of
+    life. We understand not everyone will meet all the above qualifications on day
+    one. That''s okay. If you’re passionate about technology and want to grow your
+    skills, we encourage you to apply.&nbsp;</em></p> <p>&nbsp;</p> <p><strong>Benefits
+    and Growth:&nbsp;</strong></p> <ul> <li>New hire stock equity (RSUs) and employee
+    stock purchase plan (ESPP)</li> <li>Continuous professional development, product
+    training, and career pathing</li> <li>Intradepartmental mentor and buddy program
+    for in-house networking</li> <li>An inclusive company culture, ability to join
+    our Community Guilds (Datadog employee resource groups)</li> <li>Access to Inclusion
+    Talks, our Internal panel discussions</li> <li>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.980254+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

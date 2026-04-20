@@ -1,0 +1,115 @@
+id: amplitude-staff-software-engineer
+name: Amplitude Staff Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Amplitude
+  url: https://boards.greenhouse.io/amplitude
+  application_url: https://job-boards.greenhouse.io/amplitude/jobs/8446569002
+  portal: greenhouse
+  location: Vancouver, BC, Canada
+  location_class: international
+  description: '<div class="content-intro"><p>Amplitude is the leading AI analytics
+    platform, helping over 4,700 customers—including Atlassian, Burger King, NBCUniversal,
+    Square, and Under Armour—build better products and digital experiences. With powerful
+    AI Agents embedded across our platform, teams can analyze, test, and optimize
+    user experiences faster than ever. Ranked #1 across multiple categories in G2’s
+    Winter 2026 Report, Amplitude is the best-in-class solution for product, data,
+    and marketing teams. Learn more at <a href="http://amplitude.com">amplitude.com</a>.</p>
+    <p>As an organization, we deliver for our customers by living our values. We operate
+    from a place of humility, take ownership of problems and successes, approach challenges
+    with a growth mindset, and put our customers at the center of everything we do.</p>
+    <p><strong>Amplitude’s Commitment to Diversity Equity &amp; Inclusion (DEI): </strong>Amplitude
+    believes that diversity enables the creation of better products, improves the
+    ability to solve complex problems, and drives more powerful solutions. We strive
+    to create an environment of inclusion—one focused on psychological safety, empathy,
+    and human connection—that will allow employees of all backgrounds to thrive.</p></div><p>The
+    <strong>Activation</strong> team at Amplitude is building a leading insights-driven
+    activation platform that empowers businesses to unlock customer insights and make
+    faster, smarter, and more cost-effective decisions. Our platform enables customers
+    to proactively improve data quality, intelligently discover key audiences, and
+    seamlessly activate data across a wide range of channels.</p> <p>In addition,
+    we are building powerful Journey Orchestration capabilities that allow customers
+    to design, automate, and optimize end-to-end customer experiences. This includes
+    enabling real-time, behavior-based triggers, cross-channel coordination, experimentation
+    within journeys, and intelligent decisioning powered by customer insights. Our
+    goal is to help businesses move from static audience activation to dynamic, personalized
+    journeys that adapt instantly to user behavior and drive measurable outcomes.</p>
+    <p>We are responsible for building and maintaining scalable real-time and batch
+    data pipelines that move data into and out of Amplitude and across our partner
+    ecosystem. Today, this platform processes over 800 petabytes of data per month—and
+    it''s growing rapidly.</p> <p><strong>In this role, you’ll tackle challenging
+    infrastructure problems such as:</strong></p> <p>Designing systems to handle extreme
+    throughputOptimizing for millisecond-level latenciesBuilding resilient architectures
+    with near-zero downtime. You will also work closely with Product and Customers
+    to shape the strategy and roadmap for both core platform capabilities and new
+    product features.&nbsp;Our tech stack includes modern technologies such as Kafka,
+    Temporal, real-time stream processing, Redis/Elasticache, Amazon S3, DynamoDB,
+    Kubernetes, and Terraform. You’ll join a team of curious, innovative engineers
+    who love solving hard problems and sharing ideas.</p> <p>&nbsp;<strong>As a </strong><strong>SOFTWARE
+    ENGINEER</strong><strong>, you will:&nbsp;</strong></p> <ul> <li>Collaborate closely
+    with Product and Design to turn ideas into working features</li> <li>Build backend
+    services that integrate with a variety of data warehouses and cloud platforms</li>
+    <li>Optimize the performance and scalability of our data import/export infrastructure
+    to handle ever-growing data volumes</li> <li>Lead engineering discussions and
+    set the bar for technical excellence and best practices</li> <li>Mentor junior
+    engineers and support their growth and success</li> <li>Define and drive the architectural
+    vision for the product, ensuring long-term scalability and maintainability</li>
+    </ul> <p><strong>You''ll be a great addition to the team if you have:</strong></p>
+    <ul> <li>A strong sense of ownership and agency, with a desire to lead product
+    and engineering initiatives from idea to execution.</li> <li>Strong problem solving
+    and analytical skills.</li> <li>Willingness to dive into new code bases, languages
+    and frameworks.</li> <li>Enjoy working with customers and partners in solving
+    problems and providing value.</li> <li>Strong foundation in programming, algorithms,
+    and software application design</li> </ul> <p><strong>At a minimum, you need to
+    have:</strong></p> <ul> <li>B.S., M.S., or Ph.D. in Computer Science or another
+    technical field</li> <li>6+ years of experience working in a Software Engineering
+    role</li> <li>Previous experience with Python or Java is a plus</li> <li>Previous
+    experience in distributed systems, data processing and analytics is a plus</li>
+    <li>Previous experience with ETL/ETL pipelines is a plus</li> <li>Technical leadership
+    of an engineering team is a plus</li> </ul> <h3>Who We Are</h3> <p><strong>The
+    Company:&nbsp;</strong>Amplitude is filled with humble, life-long learners who
+    are eager to help one another and the compan'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.262399+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

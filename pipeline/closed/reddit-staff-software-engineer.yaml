@@ -1,0 +1,116 @@
+id: reddit-staff-software-engineer
+name: Reddit Staff Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Reddit
+  url: https://boards.greenhouse.io/reddit
+  application_url: https://job-boards.greenhouse.io/reddit/jobs/7167631
+  portal: greenhouse
+  location: Remote - United States
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><div class=\"c-message_kit__blocks c-message_kit__blocks--rich_text\"\
+    > <div class=\"c-message__message_blocks c-message__message_blocks--rich_text\"\
+    \ data-qa=\"message-text\"> <div class=\"p-block_kit_renderer\" data-qa=\"block-kit-renderer\"\
+    > <div class=\"p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first\"\
+    > <div class=\"p-rich_text_block\"> <div class=\"p-rich_text_section\">Reddit\
+    \ is a community of communities. It\u2019s built on shared interests, passion,\
+    \ and trust, and is home to the most open and authentic conversations on the internet.\
+    \ Every day, Reddit users submit, vote, and comment on the topics they care most\
+    \ about. With 100,000+ active communities and approximately 121 million daily\
+    \ active unique visitors, Reddit is one of the internet\u2019s largest sources\
+    \ of information. For more information, visit <a class=\"c-link\" href=\"http://www.redditinc.com/\"\
+    \ target=\"_blank\" data-stringify-link=\"http://redditinc.com\" data-sk=\"tooltip_parent\"\
+    >www.redditinc.com</a>.</div> </div> </div> </div> </div> </div></div><h3>Team\
+    \ Description</h3> <p><strong><em>Ads Business Manager</em></strong></p> <p>The\
+    \ Business Manager team stands out for its genuinely inclusive and collaborative\
+    \ culture, where not only is open feedback central, but every opinion and idea\
+    \ is truly valued and given space to shape our direction. Here, diverse perspectives\
+    \ are seen as a core strength, fostering a team dynamic where everyone feels empowered\
+    \ to contribute and innovate. On a day-to-day basis, engineers tackle complex,\
+    \ high-stakes challenges at the core of Reddit\u2019s ads platform which include\
+    \ innovating on permissions systems, building agency and LCS solutions, and driving\
+    \ adoption among Reddit's largest advertisers. From ideation to delivery, our\
+    \ engineers are trusted with end-to-end ownership of their projects, working closely\
+    \ in cross-functional collaboration with PMs, UX, and partner teams. This hands-on\
+    \ approach means every team member plays a direct and visible role in delivering\
+    \ high-impact, user-focused solutions for some of Reddit\u2019s most strategic\
+    \ advertisers.</p> <p><em><strong>Ads API</strong></em></p> <p>The Ads API team\
+    \ is a growing group that is critically important to the future of Reddit's business.\
+    \ This team's ownership is both horizontal and vertical: we own the platform layer\
+    \ that other product teams use to surface their features, as well as the external-facing\
+    \ APIs that third-party partners rely on to manage campaigns and generate reports.\
+    \ We also own the core products used by external customers in their integration,\
+    \ such as rate limiting, authentication, and SDKs.&nbsp;</p> <p>The Ads API team\
+    \ has a dual mandate. First, by providing world-class tools and infrastructure,\
+    \ we enable our partners to grow their business and, in turn, grow Reddit\u2019\
+    s advertising ecosystem. Second, by providing an easy-to-use and safe internal\
+    \ platform, we enable other teams across Reddit to expose functionality they own\
+    \ as part of our standardized Ads API platform.</p> <h3><strong>Qualifications</strong></h3>\
+    \ <ul> <li><strong>Experience:</strong> 7+ years of software engineering experience,\
+    \ with a track record of leading large-scale technical projects that require cross-team\
+    \ and cross-functional collaboration.</li> <li><strong>Backend Expertise:</strong>\
+    \ Strong experience in large-scale distributed systems and developing highly scalable\
+    \ and reliable backend services.</li> <li><strong>Technical Ability:</strong>\
+    \ Expertise in at least one general-purpose programming language (e.g., Go, Python,\
+    \ Scala, Java, or C++) and ability to grow expertise in Python and Go.</li> <li><strong>Leadership:</strong>\
+    \ Demonstrated ability to disambiguate complex problems, align stakeholders with\
+    \ different priorities, and aggressively prioritize to execute effectively.</li>\
+    \ <li><strong>Communication:</strong> Excellent communication skills employed\
+    \ to drive toward consensus, navigate disagreements, and influence decisions across\
+    \ the engineering organization.</li> <li><strong>Agency:</strong> A bias for action.\
+    \ The ability to identify what needs to be done, take the initiative to make it\
+    \ happen without waiting for direction, and finish the swing.</li> </ul> <h3><strong>Preferred\
+    \ Qualifications</strong></h3> <ul> <li>Direct experience as a Tech Lead or in\
+    \ a similar function.</li> <li>Previous success as part of a Platform team with\
+    \ other engineering teams serving as customers.&nbsp;</li> <li>Expertise in Python\
+    \ and/or Go.</li> </ul><div class=\"content-pay-transparency\"><div class=\"pay-input\"\
+    ><div class=\"description\"><p><strong>Pay Transparency:</strong></p> <p>This\
+    \ job posting may span more than one career level.</p> <p>In addition to base\
+    \ salary, this job is eligible to receive equity in the form of restricted stock\
+    \ units, and depending on the position offered, it may also be eligible to receive\
+    \ a commission. Additionally, Reddit offers a wide range of benefits to U.S.-based\
+    \ employees, including medical, dental, and vision insurance, 4"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.315649+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

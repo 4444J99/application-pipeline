@@ -1,0 +1,103 @@
+id: snowflake-ai-engineer-cortex-code-quality
+name: Snowflake AI Engineer - Cortex Code Quality
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/217b1d27-815a-4ad1-b8b7-8fe52e57cd26
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Snowflake is about empowering enterprises to
+    achieve their full potential — and people too. With a culture that’s all in on
+    impact, innovation, and collaboration, Snowflake is the sweet spot for building
+    big, moving fast, and taking technology — and careers — to the next level.About
+    the Role The Cortex Code team is building the future of coding agents for working
+    with data. See our flagship product in action: Cortex Code in Action: Live Demos
+    + AMA . Your work will directly impact how developers and businesses build with
+    data. You''ll own the full AI engineering lifecycle: design, prompt/tool engineering,
+    evals, deployment, measurement, and optimization. You''ll work with a small, high-powered
+    modeling and infrastructure team. What you will do in this role: Own features
+    end-to-end for Snowflake Cortex Code products. Build agentic workflows, coding
+    harnesses, evaluation pipelines. Build enterprise-grade context engineering: function
+    calling, tool schemas, guardrails, agent teams, and verification/repair. Design
+    evals and hillclimb : create golden sets, create rubrics and metrics, analyze
+    errors, run experiments to hill climb on the metrics. Partner with product and
+    infra: translate customer problems into products and experiments. Collaborate
+    with infrastructure teams to productionize improvements. Work with an elite team
+    of engineers towards building great products Requirements: Bachelor’s degree in
+    Computer Science, Engineering, Statistics or a related field. Master’s or higher
+    degree preferred but not a requirement. 5+ years of experience shipping AI features
+    in production. Proficiency in programming languages such as Python, Typescript,
+    Go Strong communication skills and ability to collaborate effectively in a team
+    environment. (Optional) Experience working with data engineering pipelines (dbt,
+    airflow), data modeling, data analysis, retrieval systems, and semantic layers
+    is a plus. Nice to have: Deep experience with agentic coding tools (e.g. IDE agents,
+    CLI agents) and intuition for model strengths, failure modes, and prompting limits.
+    Background in data engineering (dbt, Airflow), data modeling, analytics, retrieval
+    / RAG, or semantic layers — highly relevant for data-centric coding agents. Prior
+    work on eval harnesses, LLM observability, or safety / guardrails in production.
+    You may be a particularly good fit if you: Have built and owned complex systems
+    — pipelines, orchestration, or software with substantial state, branching logic,
+    and operational requirements. Thrive in high-intensity environments with short
+    feedback loops and high standards for rigor. Take problems to completion independently:
+    you don’t stop at a prototype; you care about production reliability and clear
+    metrics. Are a power user of modern coding agents and care about turning that
+    intuition into systematic measurement and improvement. About Snowflake Snowflake
+    is the AI Data Cloud trusted by the world''s most innovative companies. We''re
+    shipping production-ready AI applications at scale and want you to join us in
+    building the future of how businesses interact with their data through Cortex
+    Code , Cortex agents , Cortex analyst , Cortex search . Snowflake is growing fast,
+    and we’re scaling our team to help enable and accelerate our growth. We are looking
+    for people who share our values, challenge ordinary thinking, and push the pace
+    of innovation while building a future for themselves and Snowflake. How do you
+    want to make your impact? For jobs located in the United States, please visit
+    the job posting on the Snowflake Careers Site for salary and benefits information:
+    careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: null
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.514695+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

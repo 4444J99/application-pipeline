@@ -1,0 +1,113 @@
+id: neo4j-software-engineer-core-database-kernel
+name: Neo4j Software Engineer - Core Database (Kernel)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Neo4j
+  url: https://boards.greenhouse.io/neo4j
+  application_url: https://boards.greenhouse.io/neo4j/jobs/4555260006?gh_jid=4555260006
+  portal: greenhouse
+  location: Malmö
+  location_class: unknown
+  description: '<div class="content-intro"><div><span style="font-size: 18pt;"><strong>About
+    Neo4j:</strong></span></div> <div> <p>Neo4j is the graph intelligence platform
+    that transforms data into knowledge to power the next generation of intelligent
+    applications and AI systems. It includes enterprise-ready knowledge graphs for
+    accurate, explainable, and governed AI; the most comprehensive, trusted, and easy-to-deploy
+    graph capabilities across any environment and data source; and an unmatched ecosystem
+    trusted by 84 of the Fortune 100 and supported by the world’s largest graph community.&nbsp;Intelligence
+    that works. Results that matter.</p> <p>Built to work everywhere and integrate
+    with everything across every cloud for dynamic, personalized, and autonomous AI
+    systems. We deliver quicker results, contextual knowledge, and solutions that
+    impact customers and employees across the business.</p> </div> <div><span style="font-size:
+    18pt;"><strong>Our Vision:&nbsp;</strong></span></div> <div> <p><span style="font-weight:
+    400;">At Neo4j, we have always strived to help the world make sense of data.&nbsp;&nbsp;</span></p>
+    <p><span style="font-weight: 400;">As business, society and knowledge become increasingly
+    connected, our technology promotes innovation by helping organizations to find
+    and understand data relationships. We created, drive and lead the graph database
+    category, and we’re disrupting how organizations leverage their data to innovate
+    and stay competitive.</span></p> </div></div><p><span style="font-size: 18pt;"><strong>The
+    Role:</strong></span></p> <p>Do you like to solve advanced and complex computer
+    science problems? Do you want to be part of a team that values user success and
+    where you can have intellectually honest discussions? <br><br>We are looking for
+    an experienced backend engineer who is able to solve technical challenges and
+    deliver high-quality code to join our talented, innovative Kernel team. You will
+    be part of a brilliant, energetic, and fun team of engineers working on the development
+    of the storage engines, transaction handling, indexes,&nbsp;data import&nbsp;and
+    page cache in order to build the core of the graph database!<br><br>You will be
+    part of an international team based in Malmö and London.<br><br><br><strong>What
+    you will do:</strong></p> <ul> <li>Build and ship new features for the core of
+    the leading graph database</li> <li>Write high-quality, testable, and efficient
+    code</li> <li>Promote new ideas, take an active part in features discussions and
+    roadmap prioritisation</li> <li>Integrate research and technologies into the database
+    core - the team regularly reads research papers to see if there are some new ideas
+    to incorporate into the product</li> <li>“Do what you want weeks” to work on your
+    own product enhancements and integrations<br><br></li> </ul> <p><strong>You''ll
+    thrive in this role if:</strong></p> <ul> <li>You have experience designing multi-threaded
+    systems and algorithms</li> <li>You have a deep understanding of system design,
+    data structures, and algorithms</li> <li>You are proficient in Java or a C-style
+    programming language</li> <li>You have strong troubleshooting skills</li> <li>You
+    have knowledge about performance profiling and optimisation</li> <li>You have
+    experience with leading and delivering development projects</li> <li>You are humble.
+    Being able to discuss ideas and, challenge each other to build better solutions
+    together</li> <li>You have good communication skills and a sense of humour!</li>
+    </ul> <p>&nbsp;</p> <p><strong>You may also have experience and interest in the
+    following:</strong></p> <ul> <li>Database management systems</li> <li>Deep JVM
+    experience</li> <li>Experience with large codebases</li> </ul> <p><em>#LI-Hybrid</em></p><div
+    class="content-conclusion"><div><span style="font-size: 18pt;"><strong>Why Join
+    Neo4j?</strong></span></div> <div> <p>Neo4j is, without question, the most popular
+    graph intelligence platform in the world. We have customers in every industry
+    globally, and our products are a proven product/market fit. Joining our team is
+    an opportunity to shape the future of data and analytics. Below are just a few
+    exciting facts about Neo4j.&nbsp;</p> <ul> <li>Neo4j is one of the fastest-scaling
+    technology companies in this industry. It <a href="https://neo4j.com/press-releases/neo4j-revenue-milestone-2024/">recently
+    surpassed $200M</a> in annual recurring revenue (ARR), doubling its ARR <a href="https://neo4j.com/press-releases/2021-company-momentum/">over
+    the past three years.</a>&nbsp;</li> <li>Raised the biggest funding round in database
+    history ($325M Series F). Backed by world-class investors like Eurazeo, GV (formerly
+    Google Ventures), and Inovia Capital, Neo4j has raised over $600M in funding and
+    is currently valued at over $2Bn. This puts Neo4j among the most well-funded database
+    companies in history.</li> <li>84% of the Fortune 100 and 58% of the Fortune 500
+    use Neo4j. Examples include <a href="https://neo4j.com/case-studies/boston-scient'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.742172+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

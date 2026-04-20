@@ -1,0 +1,115 @@
+id: anduril-senior-software-engineer-perception
+name: Anduril Senior Software Engineer,  Perception
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/4775819007?gh_jid=4775819007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p>Anduril’s
+    Tactical Recon &amp; Strike (TRS) is a division with two missions: 1) build highly
+    capable autonomous drones, and 2) build solid rocket motors at scale. We transform
+    products like Ghost, Anvil, Bolt, and Altius from early concepts into fully operational
+    capabilities by partnering closely with specialist engineering, operations, and
+    production teams. Through our Anduril Rocket Motor Systems (RMS) team, we design
+    and manufacture solid rocket motors using advanced materials, proprietary formulations,
+    and high-volume production methods—delivering safe, reliable propulsion systems
+    that support a wide range of mission requirements. TRS hires software engineers
+    &amp; hardware engineers, who are excited to build across a diverse and powerful
+    portfolio—from autonomous aerial systems to high-performance solid rocket motors.
+    Our teams contribute to highly capable autonomous robotics systems and propulsion
+    products that operate reliably in the most demanding mission environment.</p>
+    <h3>ABOUT THE JOB</h3> <p>We are seeking Senior Software Engineers specializing
+    in Computer Vision and Machine Learning Engineering. You will leverage cutting-edge
+    research to solve our most challenging perception problems for our UAVs, bringing
+    deep expertise in Object Detection, Object Tracking, or related perception domains.
+    This role requires hands-on proficiency in C++ and/or Python within a Linux environment.
+    If you are passionate about tackling complex technical challenges in computer
+    vision and perception, we encourage you to apply.</p> <p><strong>This position
+    will be located at our headquarters in Costa Mesa, CA (relocation benefits provided).</strong><br><br></p>
+    <h4>WHAT YOU’LL DO</h4> <ul> <li>Propose and prototype innovative solutions to
+    solve real world problems, leveraging the latest state-of-the-art techniques in
+    the field.</li> <li>Develop and maintain core libraries and runtime applications.</li>
+    <li>Integrate classical and geometric methods in computer vision with ML methods.</li>
+    <li>Work with ML and Data Infra team to construct various benchmarks for analyzing
+    system performance.</li> </ul> <h4><br>REQUIRED QUALIFICATIONS</h4> <ul> <li>MS
+    or PhD in Machine Learning, Robotics or Computer Science, with emphasis on Computer
+    Vision.</li> <li>BS in Computer Science, Machine Learning, Electrical Engineering,
+    or related field.</li> <li>4+ years experience developing and benchmarking ML
+    algorithms on large-scale datasets.</li> <li>High proficiency in C++ development
+    in a Linux environment.</li> <li>Experience deploying models with TensorRT and
+    ONNX.</li> <li>Experience with Python development and deep learning frameworks
+    such as PyTorch and TensorFlow.</li> <li>Experience writing and maintaining automated
+    continuous integration tests.</li> <li>Experience in one or more of the following:</li>
+    <ul> <li>Object Detection, Object Tracking, Instance Segmentation, Semantic Segmentation,
+    Semantic change Detection.</li> </ul> <li>Experience in one or more of the following:</li>
+    <ul> <li>Visual Odometry, SLAM, Multi-view Geometry, Structure from Motion, 3D
+    Geometry, Discriminative Correlation Filters, Stereo, Neural 3D Reconstruction,
+    RGB-D and LIDAR Sensor Fusion.</li> </ul> <li style="font-weight: bold;"><strong>Eligible
+    to obtain and maintain an active U.S. Secret security clearance.</strong></li>
+    </ul> <h4>PREFERRED QUALIFICATIONS</h4> <ul> <li>Experience troubleshooting and
+    analyzing remotely deployed software systems.</li> <li>Proficient in Python.</li>
+    <li>Proficient in CUDA.</li> </ul><div class="content-pay-transparency"><div class="pay-input"><div
+    class="title">US Salary Range</div><div class="pay-range"><span>$220,000</span><span
+    class="divider">&mdash;</span><span>$292,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work experience, education and/or training, critical skills, and/or business considerations.
+    Highly competitive equity grants are included in the majority of full time offers;
+    and are considered part of '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: educator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/educator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:34.006442+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

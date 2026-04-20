@@ -1,0 +1,107 @@
+id: anduril-senior-embedded-software-engineer
+name: Anduril Senior Embedded Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5101254007?gh_jid=5101254007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><div><strong>ABOUT THE TEAM</strong><br><br>Our
+    DeviceOS team develops the operating system that powers Anduril’s robots. As a
+    member of the DeviceOS team you will build Anduril’s platform for running software
+    on Anduril’s robotics systems. Your software will be deployed on robots operating
+    on land, sea, and air. You will be responsible for the full lifecycle of software
+    development projects including design, implementation, automated testing, field
+    testing, and deployment support.<br><br><strong>WHAT YOU''LL DO</strong></div>
+    <ul> <li>Board bring-up and maintenance on embedded ARM boards (device trees,
+    bootloaders, kernel drivers, etc)</li> <li>Customize vendor BSPs for use with
+    NixOS systems</li> <li>Help secure our embedded Linux systems</li> </ul> <div><strong>REQUIRED
+    QUALIFICATIONS </strong></div> <ul> <li>Familiarity with triaging vulnerability
+    reports and mitigating vulnerabilities by patching system components.</li> <li>Experience
+    with Linux kernel development</li> <li>Experience with uboot, EDK2, platform firmware,
+    etc</li> <li>Interest in using Nix/NixOS as an alternative to Yocto, buildroot,
+    etc</li> <li>Experience with C or Rust</li> <li>U.S. Person status is required
+    as this position needs to access export controlled data.</li> </ul> <div><strong>PREFERRED
+    QUALIFICATIONS</strong></div> <ul> <li>Experience developing embedded Linux systems
+    using Yocto, buildroot, or similar systems</li> <li>Familiarity with packaging
+    CUDA libraries and applications</li> <li>Familiarity with functional programming
+    paradigms</li> <li>Experience with one or more of the following languages: C++,
+    Python, Go, Haskell</li> </ul><div class="content-pay-transparency"><div class="pay-input"><div
+    class="title">US Salary Range</div><div class="pay-range"><span>$170,000</span><span
+    class="divider">&mdash;</span><span>$230,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work experience, education and/or training, critical skills, and/or business considerations.
+    Highly competitive equity grants are included in the majority of full time offers;
+    and are considered part of Anduril''s total compensation package. Additionally,
+    Anduril offers top-tier benefits for full-time employees, including:</span><span
+    data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></p>
+    <p><strong><span data-contrast="auto">Healthcare Benefits&nbsp;</span></strong></p>
+    <ul> <li><strong><span data-contrast="none">US Roles:</span></strong><span data-contrast="none">&nbsp;Comprehensive
+    medical, dental, and vision plans at little to no cost to you.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    <li><strong><span data-contrast="none">UK &amp; AUS Roles:</span></strong><span
+    data-contrast="none">&nbsp;We cover full cost of medical insurance premiums for
+    you and your dependents.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    <li><strong><span data-contrast="auto">IE Roles:</span></strong> <span data-contrast="none">We
+    offer an annual contribution toward your private health insurance for you and
+    your dependents.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    </ul> <p><strong><span data-contrast="auto">Additional Benefits</span></strong><span
+    data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></p>
+    <ul> <li><strong><span data-contrast="auto">Income Protection</span></strong>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-08'
+  posting_date: '2026-04-07'
+  date_source: first_published
+  date_added: '2026-04-08'
+  discovered: '2026-04-08T10:15:26.267018+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

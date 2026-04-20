@@ -1,0 +1,114 @@
+id: fivetran-senior-software-engineer-databases
+name: Fivetran Senior Software Engineer - Databases
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Fivetran
+  url: https://boards.greenhouse.io/fivetran
+  application_url: https://www.fivetran.com/careers/job?gh_jid=7663240003
+  portal: greenhouse
+  location: Oakland, California, United States, AMER
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>From Fivetran’s founding until now,
+    our mission has remained the same: to make access to data as simple and reliable
+    as electricity. With Fivetran, customer data arrives in their warehouses, canonical
+    and ready to query, with no engineering or maintenance required. We’re proud that
+    more organizations continue to leverage our technology every day to become truly
+    data-driven.</p></div><p><strong><span style="font-size: 10pt;">About the Role</span></strong></p>
+    <p><span style="font-size: 10pt;">Fivetran is building data pipelines to power
+    the modern data stack for thousands of companies.</span></p> <p><span style="font-size:
+    10pt;">We’re seeking an enthusiastic Senior Software Engineer to join our fast-growing
+    data company. As a part of the databases team, you will help drive performance
+    improvements, improve reliability/architecture and build new features for our
+    data pipeline services.</span></p> <p><span style="font-size: 10pt;">This is a
+    full-time, hybrid position based out of our Oakland office or our Toronto office.
+    Our hybrid work model offers a blend of remote flexibility and in-person collaboration,
+    including two days in the office each week to connect and build as a team.</span></p>
+    <p><strong><span style="font-size: 10pt;">Technologies You’ll Use</span></strong></p>
+    <ul> <li style="font-size: 10pt;"> <p><span style="font-size: 10pt;">Java</span></p>
+    </li> <li style="font-size: 10pt;"> <p><span style="font-size: 10pt;">NoSQL databases:
+    MongoDB, Amazon DynamoDB, Azure Cosmos DB</span></p> </li> <li style="font-size:
+    10pt;"> <p><span style="font-size: 10pt;">Relational databases: IBM Db2, CockroachDB</span></p>
+    </li> <li style="font-size: 10pt;"> <p><span style="font-size: 10pt;">AWS, GCP,
+    Azure</span></p> </li> <li style="font-size: 10pt;"> <p><span style="font-size:
+    10pt;">Bazel, Docker, Kubernetes, Github</span></p> </li> </ul> <p><strong><span
+    style="font-size: 10pt;">What You’ll Do</span></strong></p> <ul> <li style="font-size:
+    10pt;"> <p><span style="font-size: 10pt;">Write and deliver code reliably, along
+    with automated tests (unit and integration)</span></p> </li> <li style="font-size:
+    10pt;"> <p><span style="font-size: 10pt;">Break down project work into tasks with
+    effort estimates</span></p> </li> <li style="font-size: 10pt;"> <p><span style="font-size:
+    10pt;">Give and receive feedback through code reviews</span></p> </li> <li style="font-size:
+    10pt;"> <p><span style="font-size: 10pt;">Independently create technical designs
+    for new features and actively seek feedback</span></p> </li> <li style="font-size:
+    10pt;"> <p><span style="font-size: 10pt;">Write common components to be used within
+    the team or department</span></p> </li> <li style="font-size: 10pt;"> <p><span
+    style="font-size: 10pt;">Mentor other engineers on improving all aspects of their
+    code, according to established coding practices</span></p> </li> <li style="font-size:
+    10pt;"> <p><span style="font-size: 10pt;">Collaborate daily with team members
+    to develop new features and improvements while minimizing technical debt</span></p>
+    </li> <li style="font-size: 10pt;"> <p><span style="font-size: 10pt;">Resolve
+    customer issues in collaboration with customer support</span></p> </li> <li style="font-size:
+    10pt;"> <p><span style="font-size: 10pt;">Work across the software development
+    lifecycle: requirements, design, prototype, implementation, review, release, and
+    monitoring</span></p> </li> </ul> <p><strong><span style="font-size: 10pt;">Skills
+    We’re Looking For</span></strong></p> <ul> <li style="font-size: 10pt;"> <p><span
+    style="font-size: 10pt;">Expertise in Java development</span></p> </li> <li style="font-size:
+    10pt;"> <p><span style="font-size: 10pt;">Experience developing reliable software
+    with high-volume data management under strict SLAs</span></p> </li> <li style="font-size:
+    10pt;"> <p><span style="font-size: 10pt;">Experience working with popular cloud
+    platforms (e.g. AWS, GCP, Azure)</span></p> </li> <li style="font-size: 10pt;">
+    <p><span style="font-size: 10pt;">Knowledge of popular NoSQL databases (e.g. MongoDB,
+    Amazon DynamoDB)</span></p> </li> <li style="font-size: 10pt;"> <p><span style="font-size:
+    10pt;">Knowledge of and appreciation for clean code practices</span></p> </li>
+    <li style="font-size: 10pt;"> <p><span style="font-size: 10pt;">Ability to troubleshoot
+    problematic code and identify root cause(s)</span></p> </li> </ul> <p><strong><span
+    style="font-size: 10pt;">Optional Bonus Skills​</span></strong></p> <ul> <li style="font-size:
+    10pt;"> <p><span style="font-size: 10pt;">Experience working with change data
+    capture for MongoDB, Amazon DynamoDB and/or IBM Db2</span></p> </li> <li style="font-size:
+    10pt;"> <p><span style="font-size: 10pt;">Experience developing data integration
+    tools (ETL or ELT)</span></p> </li> <li style="font-size: 10pt;"> <p><span style="font-size:
+    10pt;">Experience identifying and optimizing performance bottlenecks in distributed
+    systems</span></p> </li> </ul> <p><sp'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.597368+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

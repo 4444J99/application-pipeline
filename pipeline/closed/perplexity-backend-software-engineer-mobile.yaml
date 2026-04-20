@@ -1,0 +1,72 @@
+id: perplexity-backend-software-engineer-mobile
+name: 'Perplexity Backend Software Engineer - Mobile '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/f400c8b0-22aa-4952-b24c-4cacda96787e
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Perplexity is looking for an experienced Backend Engineer to join
+    our small team revolutionizing the way people search and interact with the internet.
+    You will be responsible for leading design, implementation, and scaling of backend
+    systems that power web, mobile, and browser products. Tech Stack: Python | PostgreSQL
+    | DynamoDB | Redis | FastAPI Responsibilities Build scalable systems that ingest
+    and process data from the web, files, and other sources. Optimize interfaces that
+    interact with databases and caching systems. Collaborate with PMs, frontend engineers,
+    and other stakeholders to understand product requirements. Work closely with AI,
+    Search, and Data Science teams to iterate on non-deterministic systems. Manage
+    a complex orchestration system with many moving parts and interfaces. Scale, optimize,
+    and load balance multiple services with rapidly changing needs. Qualifications
+    Strong experience with Python Strong experience with databases and caching Experience
+    with AWS cloud infrastructure at scale Experience working with high-scale data
+    and non-deterministic systems like LLMs 4+ years of engineering experience AI
+    is at the heart of what we build, and using it effectively is an expectation for
+    every role here. During interviews, we want to see how you think and make decisions—qualities
+    that will directly influence our AI development. With that in mind, please avoid
+    using AI tools throughout the process unless we indicate otherwise.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.905911+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

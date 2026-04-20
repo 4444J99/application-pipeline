@@ -1,0 +1,114 @@
+id: toast-staff-software-engineer-gtm-and-ai-strategy
+name: Toast Staff Software Engineer, GTM and AI Strategy
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7716476
+  portal: greenhouse
+  location: Dublin, Ireland
+  location_class: international
+  description: <p>Toast creates technology to help restaurants and local businesses
+    succeed in a digital world, helping business owners operate, increase sales, engage
+    customers, and keep employees happy.</p> <p>Toast is looking for a hands-on <strong>Staff
+    Software Engineer </strong>to join the <strong>AI &amp; Strategy Engineering</strong>
+    team. In this role, you will be a primary builder of 0-to-1 tools designed to
+    revolutionize how our sales teams operate. This isn't about maintaining legacy
+    systems; it’s about writing the code and building the intelligence models that
+    eliminate friction across the Go-To-Market stack.</p> <p>Working under a Senior
+    technical leader, you will be responsible for the "heavy lifting" of backend engineering
+    and Machine Learning implementation. You will bridge our custom quoting software
+    and Salesforce with intelligent, agentic workflows that allow sales users to make
+    faster, data-backed decisions.</p> <p><strong>A day in the life (Responsibilities)&nbsp;</strong></p>
+    <ul> <li><strong>Hands-on Execution:</strong> Spend the majority of your time
+    "hands-on-keyboard," architecting and coding high-performance backend services
+    and ML pipelines.</li> <li><strong>0-to-1 Development:</strong> Build and prototype
+    new internal products from scratch that leverage LLMs and Agentic AI to automate
+    account research, lead prioritization, and complex quoting logic.</li> <li><strong>Core
+    Intelligence Models:</strong> Design and implement ML models that provide real-time
+    recommendations to sales users, reducing manual entry and increasing deal velocity.</li>
+    <li><strong>Infrastructure Integration:</strong> Develop the backend connective
+    tissue between our custom quoting engine, Salesforce, and internal data lakes
+    to ensure a seamless, low-latency end-to-end experience.</li> <li><strong>Technical
+    Problem Solving:</strong> Act as a domain expert to solve complex synchronization
+    and architectural challenges across the GTM stack, ensuring systems are scalable
+    and resilient.</li> <li><strong>Quality &amp; Mentorship:</strong> Drive engineering
+    excellence through rigorous code reviews, automated testing, and by modeling best
+    practices for&nbsp; engineers on the team.</li> <li><strong>Build Great Products:</strong>
+    Deliver significant core capabilities that have broad impact; take high-level
+    goals and turn them into sequenced, production-ready code.</li> <li><strong>Problem
+    Solve:</strong> Anticipate shifts in product needs and build flexible, decoupled
+    backend systems that can evolve with our AI strategy.</li> <li><strong>Deliver
+    Quality:</strong> Ensure the reliability of GTM tools by building deep observability
+    into every service you ship.</li> </ul> <p><strong>What you'll need to thrive
+    (Requirements)</strong></p> <ul> <li><strong>Deep Backend Expertise:</strong>
+    Extensive experience in backend languages (Java, Go, Python) with a track record
+    of building complex, distributed systems.</li> <li><strong>Applied AI/ML Skills:</strong>
+    Practical, hands-on experience deploying Machine Learning models and building
+    with LLMs (e.g., LangChain, RAG architectures, or Model Fine-tuning) in a production
+    environment.</li> <li><strong>Technical Complexity:</strong> Experience building
+    or deeply integrating with complex enterprise software, specifically custom quoting
+    engines or CRM internals (Salesforce Apex/LWC).</li> <li><strong>Systems Architecture:</strong>
+    Ability to design event-driven architectures and manage data flow across disparate
+    systems with high integrity.</li> <li><strong>Education:</strong> Bachelor’s or
+    Master’s degree in Computer Science, or a related technical field.</li> </ul>
+    <p><strong>What will help you stand out (Nonessential Skills/Nice to Haves)</strong></p>
+    <ul> <li>Experience building internal "Sales Tech" or "Fintech" tools that directly
+    impact revenue.</li> <li>Familiarity with AWS data services (SageMaker, Lambda,
+    SQS).</li> <li>A passion for removing "human-in-the-loop" friction through intelligent
+    automation.</li> </ul> <p>&nbsp;</p> <p><strong>**This is a hybrid role requiring
+    in-office collaboration two days per week in our </strong><a href="https://maps.app.goo.gl/UCAtUXLfXjryCqMw8"><strong>Dublin</strong></a><strong>
+    office.**</strong></p> <p>#LI-HYBRID</p> <p>#BI-Hybrid</p> <p>&nbsp;</p> <p><strong>AI
+    at Toast</strong></p> <p>At Toast, one of our company values is that we're hungry
+    to build and learn. We believe learning new AI tools empowers us to build for
+    our customers faster, more independently, and with higher quality. We provide
+    these tools across all disciplines, from Engineering and Product to Sales and
+    Support, and are inspired by how our Toasters are already driving real value with
+    them. The people who thrive here are those who embrace changes that let us build
+    more for our customers; it’s a core part of our culture.</p> <p>&nbsp;</p> <p><strong>Our
+    Total Rewards Philosophy </strong><strong><br></strong>We strive to provide competitive
+    compensation and benefits programs that help
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.468017+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

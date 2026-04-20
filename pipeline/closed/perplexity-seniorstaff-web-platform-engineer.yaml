@@ -1,0 +1,109 @@
+id: perplexity-seniorstaff-web-platform-engineer
+name: Perplexity Senior/Staff Web Platform Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/cf179df1-3d69-4a9d-bda0-0c423efa9255
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: About Perplexity Perplexity AI’s mission is to build the world’s best
+    answer engine and AI-native browser that make finding and understanding information
+    effortless for everyone. The team is a fast-growing group of researchers, engineers,
+    designers, and business leaders working together to create safe, reliable, and
+    delightful AI products used by millions of people and organizations. About the
+    role Perplexity is looking for experienced Software Engineers to join a new Web
+    Platform team. This team is critical to the development infrastructure behind
+    Perplexity’s web-based products, including the core answer experience and the
+    Comet AI browser surfaces. You will be responsible for building and maintaining
+    the systems that enable Perplexity’s product teams to deliver high‑quality, performant
+    single‑page web applications across desktop, mobile web, and the Comet browser.
+    You will work on initiatives such as DevProd infrastructure for our SPAs, build
+    tooling and CI pipelines, performance optimization for query and browsing flows,
+    and migrations and refactors of core web surfaces. You will own and evolve our
+    frontend platform, including build tools, linting and type‑safety workflows, and
+    improved alerting and monitoring systems, to ensure fast, reliable, and consistent
+    web experiences across multiple product surfaces. Responsibilities Optimize performance
+    for critical web flows (search, answer rendering, browsing), with a focus on improving
+    application response speed and perceived latency. Design and implement solutions
+    for customizable user interfaces and experience components across Perplexity and
+    Comet. Develop and improve frontend alerting and monitoring systems to ensure
+    reliability and rapid incident response for web experiences. Build self-serve
+    capabilities and primitives that allow feature teams to ship frontend components
+    and flows quickly without deep platform expertise. Support developer productivity
+    initiatives to improve the ergonomics of web development at Perplexity (tooling,
+    CI/CD, local dev workflows, documentation). Contribute to upgrading and maintaining
+    core web technologies (e.g., React, TypeScript, build tooling) used across Perplexity’s
+    web stack. Collaborate closely with product, design, search, infra, and mobile
+    teams to deliver cohesive, performant web experiences end to end. Participate
+    in planning and roadmap discussions to ensure appropriate scoping, sequencing,
+    and engineering allocation for platform work. You may be a good fit if you have
+    6+ years of practical experience as a software engineer with a strong focus on
+    web technologies. Deep expertise in modern JavaScript frameworks, particularly
+    React. Experience optimizing web application performance and working with metrics
+    such as time-to-first-byte, time-to-interactive, and application response speed.
+    A strong technical background in frontend and/or full-stack development, ideally
+    on high-traffic consumer or prosumer products. Familiarity with frontend monitoring
+    and alerting systems (e.g., Sentry, Datadog, Grafana, OpenTelemetry-based tooling).
+    A track record of successfully managing technical migrations or large refactors
+    in production web environments. Experience supporting developer productivity and
+    building tooling or abstractions that other engineers rely on daily. Excellent
+    collaboration skills and the ability to work effectively across product, design,
+    and multiple engineering teams. A history of delivering high-quality, scalable
+    software in production environments. Strong candidates may have Experience working
+    with AI products or integrating AI models into web applications, particularly
+    in search, chat, or browsing experiences. Background in design systems implementation
+    and shared component libraries used across multiple product surfaces. Experience
+    with multi-region deployment architectures and edge rendering for low-latency
+    global web performance. Knowledge of accessibility standards (WCAG) and practical
+    implementation in complex, interactive web UIs. Proficiency with TypeScript and
+    strong typing systems, including building well-typed internal libraries and SDKs.
+    Experience with frontend performance optimization techniques (profiling, code
+    splitting, caching strategies, image optimization, RUM). Background in building
+    developer tools or infrastructure for web teams, such as scaffolding tools, CLIs,
+    or shared CI/CD pipelines.
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.918256+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

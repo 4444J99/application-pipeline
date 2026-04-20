@@ -1,0 +1,119 @@
+id: affirm-senior-ciam-software-engineer
+name: Affirm Senior CIAM Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Affirm
+  url: https://boards.greenhouse.io/affirm
+  application_url: https://job-boards.greenhouse.io/affirm/jobs/7671388003
+  portal: greenhouse
+  location: Remote US
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><p>Affirm is reinventing credit to make\
+    \ it more honest and friendly, giving consumers the flexibility to buy now and\
+    \ pay later without any hidden fees or compounding interest.</p></div><p>Affirm\
+    \ is building the next generation of customer identity and authentication. This\
+    \ role is a hands-on engineering position inside Information Security, focused\
+    \ on designing and shipping core CIAM capabilities that protect customers and\
+    \ support growth.</p> <p>You will build and operate backend services that power\
+    \ registration, login, authorization, and account lifecycle flows across B2C and\
+    \ B2B experiences. You will work closely with partner engineering teams and ensure\
+    \ identity features are delivered with strong security fundamentals, reliability,\
+    \ and operational rigor.</p> <h3>What you\u2019ll do</h3> <ul> <li>Design, build,\
+    \ and operate core CIAM backend services that support customer registration, authentication,\
+    \ authorization, account lifecycle, and profile management for B2C and B2B platforms.</li>\
+    \ <li>Implement and extend identity standards such as OAuth 2.0, OIDC, SAML, and\
+    \ SCIM in code, ensuring correctness, scalability, and clean integration patterns.</li>\
+    \ <li>Develop backend APIs and services in Python and Kotlin that expose identity\
+    \ capabilities to web, mobile, and partner applications.</li> <li>Integrate CIAM\
+    \ platforms with internal systems, including user data stores, messaging, fraud\
+    \ signals, and downstream customer platforms.</li> <li>Own secure authentication\
+    \ and account flows end to end, including MFA, step-up authentication, device\
+    \ binding, consent, and adaptive authentication logic.</li> <li>Automate CIAM\
+    \ infrastructure and deployments using Infrastructure as Code and CI/CD pipelines,\
+    \ treating identity as a core platform service.</li> <li>Monitor, debug, and optimize\
+    \ CIAM services for performance, resilience, and abuse detection in high-scale\
+    \ environments.</li> </ul> <h3>What we look for</h3> <ul> <li>Strong experience\
+    \ designing and implementing CIAM systems, with deep, hands-on knowledge of OAuth\
+    \ 2.0, OIDC, SAML, and SCIM beyond basic configuration.</li> <li>5+ years of professional\
+    \ backend software engineering experience</li> <li>Strong production experience\
+    \ in Python or a similar backend language</li> <li>Experience designing APIs,\
+    \ automation frameworks, and distributed systems</li> <li>Hands-on experience\
+    \ building and maintaining CI/CD pipelines</li> <li>Experience with GitHub-based\
+    \ development workflows and Buildkite or similar build systems</li> <li>Experience\
+    \ with cloud-native development, preferably AWS</li> <li>Hands-on experience extending\
+    \ and integrating CIAM platforms such as Okta, Auth0, Ping Identity, ForgeRock,\
+    \ or Azure AD B2C using custom code, hooks, and APIs.</li> <li>Solid understanding\
+    \ of backend and distributed systems fundamentals, including API design, data\
+    \ modeling, latency, error handling, and observability.</li> <li>Experience with\
+    \ Infrastructure as Code and automation tools such as Terraform, plus CI/CD pipelines\
+    \ for deploying backend services.</li> <li>Strong security fundamentals applied\
+    \ through engineering, including access control models, token handling, encryption,\
+    \ MFA, and privacy by design.</li> <li>Clear communication skills and the ability\
+    \ to work closely with product, frontend, mobile, and security teams while owning\
+    \ backend identity services.</li> <li>Familiarity with tools such as Cursor and\
+    \ other AI-augmented development environments</li> </ul> <p class=\"p-small\"\
+    \ data-pm-slice=\"1 1 []\">&nbsp;</p> <p class=\"p-small\" data-pm-slice=\"1 1\
+    \ []\"><span data-formula-id=\"UiWCfEIrRy\" data-error=\"false\" data-placeholder=\"\
+    false\" data-loading=\"false\" data-recalculating=\"false\" data-inactive=\"false\"\
+    >Base Pay Grade - N</span></p> <p class=\"p-small\"><span data-formula-id=\"HGrSJuA6kN\"\
+    \ data-error=\"false\" data-placeholder=\"false\" data-loading=\"false\" data-recalculating=\"\
+    false\" data-inactive=\"false\">Equity Grade - USA 8</span></p> <p class=\"p-small\"\
+    ><br>Employees new to Affirm typically come in at the start of the pay range.\
+    \ Affirm focuses on providing a simple and transparent pay structure which is\
+    \ based on a variety of factors, including location, experience and job-related\
+    \ skills.<br><br>Base pay is part of a total compensation package that may include\
+    \ equity rewards, monthly stipends for health, wellness and tech spending, and\
+    \ benefits (including 100% subsidized medical coverage, dental and vision for\
+    \ you and your dependents.)<br><br>USA base pay range (CA, WA, NY, NJ, CT) per\
+    \ year: $190,000 - $240,000<br>USA base pay range (all other U.S. states) per\
+    \ year: $169,000 - $219,000<br><br>#LI-Remote</p><div class=\"content-conclusion\"\
+    ><div> <p>Affirm is proud to be a remote-first company! The majority of our roles\
+    \ are remote and you can work almost anywhere within the country of employment.\
+    \ Affirmers in proximal roles have the flexibility to work remotely, but will\
+    \ occasionally be required to work out of their assigned Affirm office. A limited\
+    \ number of roles remain"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-09'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.146197+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

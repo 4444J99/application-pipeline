@@ -1,0 +1,114 @@
+id: new-relic-software-engineer-2
+name: New Relic Software Engineer 2
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: New Relic
+  url: https://boards.greenhouse.io/newrelic
+  application_url: https://job-boards.greenhouse.io/newrelic/jobs/5123824008
+  portal: greenhouse
+  location: Bangalore, India
+  location_class: international
+  description: '<div class="content-intro"><p>We are a global team of innovators and
+    pioneers dedicated to shaping the future of observability. At New Relic, we build
+    an intelligent platform that empowers companies to thrive in an AI-first world
+    by giving them unparalleled insight into their complex systems. As we continue
+    to expand our global footprint, we''re looking for passionate people to join our
+    mission. If you''re ready to help the world''s best companies optimize their digital
+    applications, we invite you to explore a career with us!</p></div><p><br>Drafted
+    by: <a href="mailto:zmutchler@newrelic.com"><span data-rich-links="{&quot;per_n&quot;:&quot;Zack
+    Mutchler&quot;,&quot;per_e&quot;:&quot;zmutchler@newrelic.com&quot;,&quot;type&quot;:&quot;person&quot;}">Zack
+    Mutchler</span></a></p> <p>Job post location(s): Bengaluru, Karnataka, India</p>
+    <h2>Your opportunity</h2> <p>New Relic is looking for a Software Engineer to join
+    our Demo Engineering team in <strong>Bengaluru, India</strong>. This role is a
+    critical part of the Technical Marketing organization, where you will build and
+    maintain the production-level demo environments used to showcase our platform''s
+    innovation to the world.</p> <p>We are looking for a curious, self-driven engineer
+    who views a Jira ticket as a starting point for a larger solution. You will thrive
+    here if you enjoy researching complex technical challenges, forming a hypothesis,
+    and defending your architectural decisions within a globally distributed team.
+    You will have the support of a local peer in Bengaluru and documented engineering
+    standards to ensure your success.</p> <h2>What you’ll do</h2> <ul> <li><strong>Drive
+    Platform Innovation:</strong> Own the availability and performance of the demo
+    platform, ensuring it remains a scalable foundation for Sales and Marketing.</li>
+    <li><strong>Execute with Autonomy:</strong> Research potential solutions for platform
+    bottlenecks and present defended technical recommendations rather than waiting
+    for instruction.</li> <li><strong>Automate Everything:</strong> Create and maintain
+    automated deployment pipelines and load generation profiles to ensure our systems
+    are "always-on" and easy to deploy.</li> <li><strong>Communicate Clearly:</strong>
+    Document your findings and processes in Confluence runbooks and maintain active,
+    transparent communication across Slack to bridge global time zones.</li> <li><strong>Maintain
+    Engineering Excellence:</strong> Perform production redeployments, conduct smoke
+    tests for new features, and ensure every code change meets our established DevOps
+    best practices.</li> </ul> <h2>This role requires</h2> <ul> <li><strong>2+ years
+    of Kubernetes Administration:</strong> Proven experience managing containerized
+    environments.</li> <li><strong>2+ years of Cloud Infrastructure:</strong> Experience
+    administering environments in AWS, Azure, or GCP.</li> <li><strong>1+ years of
+    Infrastructure as Code:</strong> Hands-on automation experience using Terraform.</li>
+    <li><strong>1+ years of CI/CD Tooling:</strong> Experience with automation tools
+    such as GitHub Actions, Jenkins, or CircleCI.</li> <li><strong>Programming Familiarity:</strong>
+    Proficiency in at least one language, such as Python, Java, Go, or Node.js.</li>
+    <li><strong>Ownership Mindset:</strong> A track record of taking full accountability
+    for solutions and responding to help tickets using SRE methodologies.</li> </ul>
+    <h2>Bonus points if you have</h2> <p><strong>Load Generation Experience: Familiarity
+    with tools like Locust or Chaos Toolkit to simulate realistic traffic patterns.</strong><strong>Front-end
+    Exposure: Experience with browser development or technologies like React and JavaScript.</strong><strong>Open
+    Source Contribution: A history of contributing to or working with open-source
+    projects.</strong><strong>Collaborative Spirit: A "connected" approach to work,
+    valuing partnership with Product Managers and Engineers across time zones.</strong></p><div
+    class="content-conclusion"><p>Fostering a diverse, welcoming and inclusive environment
+    is important to us. We work hard to make everyone feel comfortable bringing their
+    best, most authentic selves to work every day. We celebrate our talented Relics’
+    different backgrounds and abilities, and recognize the different paths they took
+    to reach us – including nontraditional ones. Their experiences and perspectives
+    inspire us to make our products and company the best they can be. We’re looking
+    for people who feel connected to our mission and values, not just candidates who
+    check off all the boxes.&nbsp;</p> <p>If you require a reasonable accommodation
+    to complete any part of the application or recruiting process, please reach out
+    to <a href="mailto:resume@newrelic.com" target="_blank">resume@newrelic.com</a>.</p>
+    <p>We believe in empowering all Relics to achieve professional and business success
+    through a flexible workforce model. This model allows us to work in a variety
+    of workplaces that best support our success, including fully off'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.648319+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

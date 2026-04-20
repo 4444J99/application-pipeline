@@ -1,0 +1,115 @@
+id: openai-rack-product-engineer-ai-rack-infrastructure-stargate
+name: OpenAI Rack Product Engineer, AI Rack Infrastructure - Stargate
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: OpenAI
+  url: https://jobs.ashbyhq.com/openai
+  application_url: https://jobs.ashbyhq.com/openai/4042f9ab-2df3-4745-986a-cf2063bd840b
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: About the Team OpenAI, in partnership with our capital and technology
+    partners, is building a global network of advanced datacenters to support the
+    most demanding AI workloads. The Industrial Compute team ensures that datacenter
+    infrastructure systems are designed, manufactured, and deployed with exceptional
+    reliability, scalability, and performance. We work closely with engineering teams,
+    manufacturing partners, construction teams, and datacenter operations to ensure
+    rack systems are built, validated, and deployed efficiently across our rapidly
+    expanding global infrastructure footprint. Our work spans product definition,
+    design validation, manufacturing readiness, and field deployment—ensuring that
+    rack infrastructure supports the performance, reliability, and operational needs
+    of OpenAI’s compute platforms. About the Role We are seeking an experienced Rack
+    Product Engineer to own the technical development, manufacturing readiness, and
+    lifecycle performance of rack infrastructure deployed across OpenAI’s datacenters.
+    They are the overall engineering subject matter expert for managing, test, quality,
+    and manufacturing engineering responsible for scaling manufacturing operations
+    and meeting on time delivery. This role sits at the intersection of hardware design,
+    manufacturing, supplier engagement, and datacenter deployment. You will work closely
+    with compute, mechanical, power, and networking teams to define rack architectures
+    and ensure they are manufacturable, scalable, and operationally reliable. You
+    will partner with contract manufacturers and suppliers to ensure rack systems
+    are built to specification, while also working internally to drive design improvements,
+    resolve field issues, and support rapid infrastructure deployment at global scale.
+    Travel Domestic and international travel as needed (estimated 30% ) to manufacturing
+    sites, supplier facilities, and datacenter deployments. Key Responsibilities Own
+    the technical definition and lifecycle management of rack infrastructure deployed
+    across OpenAI datacenters. Drive rack architecture decisions across mechanical
+    structure, power distribution, cooling interfaces, and compute/network integration.
+    Translate system requirements into manufacturable rack-level designs capable of
+    supporting large-scale global deployment. Partner with design and manufacturing
+    teams to ensure rack systems are optimized for manufacturability, assembly, serviceability,
+    and datacenter installation. Support New Product Introduction (NPI) activities
+    including prototype builds, pilot runs, and ramp-to-volume readiness. Collaborate
+    with rack manufacturers and component suppliers to ensure production builds meet
+    design intent and deployment schedules. Serve as the primary technical interface
+    between OpenAI engineering teams and manufacturing partners. Investigate and resolve
+    rack-related issues encountered during manufacturing, integration, and datacenter
+    deployment. Lead cross-functional root cause analysis and drive design or process
+    improvements to prevent recurring issues. Partner with datacenter construction
+    and operations teams to support deployment readiness, factory and site acceptance
+    testing, and field issue resolution. Coordinate with engineering, sourcing, manufacturing,
+    and operations teams to align rack development with global infrastructure deployment
+    schedules and maintain critical product documentation. Minimum Qualifications
+    10+ years of experience in hardware product engineering, system integration, manufacturing
+    engineering, or datacenter infrastructure engineering. Bachelor's degree in Mechanical
+    Engineering, Electrical Engineering, Systems Engineering, or a related field (or
+    equivalent experience). Experience developing and deploying rack-level infrastructure
+    for compute systems or datacenters. Demonstrated ability to drive cross-functional
+    technical programs from concept through manufacturing and deployment. Strong analytical
+    and problem-solving skills with experience resolving complex hardware integration
+    issues. Preferred Qualifications Experience with hyperscale datacenter infrastructure
+    or large-scale compute deployments. Deep familiarity with rack architectures,
+    liquid cooling, power distribution systems, and compute integration. Experience
+    working with ODMs, JDMs, or contract manufacturers. Knowledge of design for manufacturing
+    (DFM) and design for assembly (DFA) principles. Experience supporting NPI programs
+    and hardware ramp-to-volume production. Lean Six Sigma or equivalent process improvement
+    training. About OpenAI OpenAI is an AI research and deployment company dedicated
+    to ensuring that general-purpose artificial intelligence benefits all of humanity.
+    We push the boundaries of the capabilities of AI systems and seek to safely deploy
+    them to the world through our products. AI is an extremely powerful tool that
+    must be created with safety and human needs at its core, and to achieve our mission,
+    we must encompass and value the many different perspectives
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.715503+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

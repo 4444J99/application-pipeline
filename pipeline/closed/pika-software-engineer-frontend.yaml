@@ -1,0 +1,83 @@
+id: pika-software-engineer-frontend
+name: Pika Software Engineer, Frontend
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Pika
+  url: https://jobs.ashbyhq.com/pika
+  application_url: https://jobs.ashbyhq.com/pika/289a363e-3a1b-4cf5-958d-5d8a52eff21d
+  portal: ashby
+  location: Palo Alto HQ
+  location_class: us-onsite
+  description: 'About the Role We''re looking for a Frontend Engineer to help shape
+    how Pika feels. You''ll own meaningful parts of our product UI — building interfaces
+    that are fast, polished, and delightful to use. This role is ideal for someone
+    who cares deeply about quality: the micro-interactions, the performance, the craft
+    that separates good products from great ones. What You''ll Do • Build and own
+    core UI surfaces across Pika''s web products • Write clean, maintainable code
+    that serves as the foundation for how we build UI going forward • Collaborate
+    closely with design to translate concepts into polished, performant interfaces
+    • Optimize for performance — fast initial loads, smooth interactions, minimal
+    bundle sizes • Identify ways to make the product better and drive them forward
+    What We''re Looking For • Strong TypeScript and React skills, with a focus on
+    well-structured, reusable component architecture • Deep understanding of how to
+    organize and scale React codebases — clean abstractions, thoughtful patterns,
+    maintainable systems • Experience implementing smooth, performant animations (CSS,
+    Motion, GSAP, or similar) • A strong sense of craft — the polish and refinement
+    that elevates good products to great ones • Familiarity with Next.js, Tailwind,
+    and modern frontend tooling • Comfort working in a fast-paced environment where
+    you own projects end-to-end • Clear communication and ability to collaborate across
+    design and engineering Nice to Have • Based in or around Palo Alto, CA • Background
+    in design or strong design sensibility About Pika At Pika, we''re crafting a future
+    where video creation is seamless, intuitive, and universally accessible. Our vision
+    is set on a world where videos transcend entertainment, serving as a canvas for
+    everyone''s unique expression. Harnessing AI''s transformative power, we aim to
+    dismantle the technical barriers that have traditionally made video production
+    an exclusive field. We''re a small, focused team of highly curious builders who
+    value efficiency, collaboration, and creative ambition. We move quickly, care
+    deeply about craft, and believe great technology is built by people who take ownership
+    and think long-term. Our headquarters is based in Palo Alto, CA, and we work on-site
+    5 days a week.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.033590+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

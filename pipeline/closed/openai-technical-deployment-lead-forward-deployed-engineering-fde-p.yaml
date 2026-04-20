@@ -1,0 +1,115 @@
+id: openai-technical-deployment-lead-forward-deployed-engineering-fde-p
+name: OpenAI Technical Deployment Lead, Forward Deployed Engineering (FDE)- Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: OpenAI
+  url: https://jobs.ashbyhq.com/openai
+  application_url: https://jobs.ashbyhq.com/openai/e6df42d0-6789-459e-b77b-62d7c5fd78da
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'About the team OpenAI’s Forward Deployed Engineering (FDE) org sits
+    at the intersection of product, engineering, research, and go-to-market. We take
+    frontier platform capabilities into the real world with design partners, turning
+    raw customer signal into shipped software, repeatable patterns, and durable products.
+    The FDE Platform team is primarily a leverage function that scales the FDE org’s
+    impact to OpenAI’s platform and products. We provide hands-on leverage by embedding
+    with customer-tagged FDE pods to aid in architecting, product shaping, refactoring,
+    and building. This team is perfect for highly collaborative software engineers
+    who love innovating on cutting-edge products with other builders. About the role
+    This is a founding Technical Deployment Lead (TDL) role for the FDE Platform team.
+    You will be accountable for making our earliest design partner deployments successful,
+    from initial scoping and success criteria through production adoption and demonstrated
+    value. This is an ops-heavy, technically deep role: you will drive alignment across
+    OpenAI and customer stakeholders, run the delivery plan across interdependent
+    workstreams, and ensure enterprise constraints are handled upfront rather than
+    discovered late. You will work closely with B2B Platform and FDE Platform teams
+    to drive crisp execution, clear tradeoffs, and a path to scalable rollout for
+    our platform design partners. Success is defined by delivered outcomes and adoption
+    in critical workflows, not activity or slideware. Success will be measured by
+    platform outcomes that are measured by successful deployments. Deployments should
+    deliver measurable value against customer goals, drive adoption, and become critical
+    to their workflows. Additional measures of success include delivery reliability
+    (milestones hit, low reopen/churn), operating leverage (patterns reused across
+    deployments), judgment under pressure, and product impact (field signal that shifts
+    roadmaps/architectures). This role is based in San Francisco or New York City
+    . We use a hybrid work model of 3 days in the office per week. We offer relocation
+    assistance. Travel up to 50% is required. In this role you will Define pilot scope
+    and success criteria: Partner with customer sponsors and technical leads to translate
+    goals into a concrete plan, measurable outcomes, and clear acceptance criteria.
+    Own the delivery plan across work streams: Build and run integrated milestones,
+    dependencies, and execution rhythms across Applied, platform engineers, and customer
+    teams. Drive stakeholder alignment and decision-making: Lead internal and external
+    working sessions, keep tradeoffs explicit, unblock decisions, and escalate crisply
+    when needed. Ensure enterprise readiness from day one: Pressure-test security
+    posture, permissions and access boundaries, audit-ability, and deployment/infra
+    requirements as part of the delivery plan. Manage production adoption and value
+    realization: Drive onboarding, enablement, and change management so deployments
+    land in real workflows and deliver measurable impact. Run multiple deployments
+    with rigor: Maintain clear status, risks, and mitigations across concurrent pilots,
+    and continuously adjust plans to protect outcomes. Convert learnings into actionable
+    next steps: Synthesize what worked and what broke into clear requirements, sequencing
+    proposals, and improvements to the platform delivery approach. You might thrive
+    in this role if you Have 5+ years leading complex, customer-facing technical delivery
+    where you owned outcomes end-to-end in high-ambiguity environments. Are deeply
+    credible with senior technical stakeholders and can whiteboard architectures,
+    reason about enterprise deployment constraints, and go in the weeds when required.
+    Have strong instincts for enterprise security and governance , including permissions/RBAC,
+    audit trails, data access boundaries, and rollout safety. Bring an ops-first background
+    (e.g., platform delivery leadership, technical program/delivery leadership, product/engineering
+    operations) and a track record of driving execution through matrixed teams. Communicate
+    with executive presence: you can align sponsors, make tradeoffs legible, and keep
+    teams focused on the critical path under pressure. About OpenAI OpenAI is an AI
+    research and deployment company dedicated to ensuring that general-purpose artificial
+    intelligence benefits all of humanity. We push the boundaries of the capabilities
+    of AI systems and seek to safely deploy them to the world through our products.
+    AI is an extremely powerful tool that must be created with safety and human needs
+    at its core, and to achieve our mission, we must encompass and value the many
+    different perspectives, voices, and experiences that form the full spectrum of
+    humanity. We are an equal opportunity employer, and we do not discriminate on
+    the basis of race, religion, color, national origin, sex, sexual orientation,
+    age, veteran status, disability, genetic information, or other applicable legall'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.688813+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

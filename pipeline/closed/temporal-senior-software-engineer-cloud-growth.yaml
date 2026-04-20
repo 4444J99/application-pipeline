@@ -1,0 +1,116 @@
+id: temporal-senior-software-engineer-cloud-growth
+name: Temporal Senior Software Engineer, Cloud Growth
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Temporal
+  url: https://boards.greenhouse.io/temporaltechnologies
+  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/5039232007
+  portal: greenhouse
+  location: United States  - Remote Opportunity
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><h3><strong>About Us</strong></h3> <div>Temporal\
+    \ is an open source programming model that can simplify code, make applications\
+    \ more reliable, and help developers focus on the important things like delivering\
+    \ features faster. We are on a mission to be the reliable foundation of every\
+    \ developer\u2019s toolbox, and are building the team that will make that happen.</div>\
+    \ <div>&nbsp;</div> <div>Our values guide us \u2014they are present in how we\
+    \ show up, make decisions, and work together to make an impact. We\u2019re curious,\
+    \ driven, collaborative, genuine and humble.</div> <div>&nbsp;</div> <div>Temporal\
+    \ is growing and we are looking for those who share our values, challenge 'standard'\
+    \ thinking, and want to influence our future. If you have a passion for improving\
+    \ the developer experience, building world-class open-source software and communities,\
+    \ and want to be a part of our amazing team, we'd love to hear from you!</div></div><div\
+    \ class=\"notion-selectable notion-sub_sub_header-block\" data-block-id=\"2fb8fc56-7738-8026-8b06-d05f166c3c30\"\
+    > <div> <h4 id=\":r1h:\" class=\"content-editable-leaf-rtl notranslate\" data-content-editable-leaf=\"\
+    true\"><span class=\"notion-enable-hover\" data-token-index=\"0\">Summary</span></h4>\
+    \ <div>We\u2019re looking for a&nbsp;<span class=\"notion-enable-hover\" data-token-index=\"\
+    1\">Senior Software Engineer</span> to join our high-impact team focused on <span\
+    \ class=\"notion-enable-hover\" data-token-index=\"3\">product scalability, customer\
+    \ experience, and revenue growth</span>. Our team owns business-critical services\
+    \ including <span class=\"notion-enable-hover\" data-token-index=\"5\">customer\
+    \ onboarding and off-boarding</span>, <span class=\"notion-enable-hover\" data-token-index=\"\
+    7\">billing and metering</span>, <span class=\"notion-enable-hover\" data-token-index=\"\
+    9\">cloud marketplace integrations</span>, and <a class=\"notion-link-token notion-focusable-token\
+    \ notion-enable-hover\" href=\"https://docs.temporal.io/cloud/nexus\" data-token-index=\"\
+    11\"><span class=\"link-annotation-2fb8fc56-7738-8043-936a-c12a04671207-1533370404\"\
+    >Cloud Nexus</span></a>. Cloud Nexus is a foundational platform that connects\
+    \ Temporal Applications through a scalable, self-service ecosystem with a unified\
+    \ API abstraction layer.</div> </div> </div> <div class=\"notion-selectable notion-text-block\"\
+    \ data-block-id=\"2fb8fc56-7738-8043-936a-c12a04671207\"> <div>&nbsp;</div> </div>\
+    \ <div class=\"notion-selectable notion-text-block\" data-block-id=\"2fb8fc56-7738-80cf-9a8d-e212d9ae041b\"\
+    > <div> <div> <div id=\":r1j:\" class=\"content-editable-leaf-rtl notranslate\"\
+    \ data-content-editable-leaf=\"true\">In this role, you\u2019ll <span class=\"\
+    notion-enable-hover\" data-token-index=\"1\">lead technical direction</span> and\
+    \ build systems that directly impact Temporal\u2019s <span class=\"notion-enable-hover\"\
+    \ data-token-index=\"3\">revenue engine and customer journey</span>. You\u2019\
+    ll partner closely with engineers, product managers, finance, revenue operations,\
+    \ support, and sales to design resilient architectures, drive cross-functional\
+    \ execution, and raise the reliability and scalability bar for our billing, metering,\
+    \ and customer lifecycle platforms. If you enjoy owning ambiguous, high-leverage\
+    \ problems and building durable systems that scale with the business, we\u2019\
+    d love to meet you.</div> </div> </div> </div> <p data-start=\"1021\" data-end=\"\
+    1066\"><em data-start=\"1021\" data-end=\"1064\">[This is not an internal deployment\
+    \ role]</em></p> <div class=\"notion-selectable notion-sub_sub_header-block\"\
+    \ data-block-id=\"2fb8fc56-7738-80bc-9333-cb30e239c9d1\"> <div> <h4 id=\":r1k:\"\
+    \ class=\"content-editable-leaf-rtl notranslate\" data-content-editable-leaf=\"\
+    true\"><span class=\"notion-enable-hover\" data-token-index=\"0\">What You\u2019\
+    ll Do</span></h4> <div> <ul> <li><span class=\"notion-enable-hover\" data-token-index=\"\
+    0\">Lead the Design of Business-Critical Systems:</span> Own end-to-end technical\
+    \ design and delivery for services that power customer acquisition, onboarding/off-boarding,\
+    \ and revenue operations.</li> </ul> </div> </div> </div> <div class=\"notion-selectable\
+    \ notion-bulleted_list-block\" data-block-id=\"2fb8fc56-7738-8009-9c42-e6b95f198c37\"\
+    > <div> <ul> <li><span class=\"notion-enable-hover\" data-token-index=\"0\">Drive\
+    \ Architectural Excellence:</span> Define and evolve system architecture for high-throughput,\
+    \ fault-tolerant metering and billing pipelines; make principled tradeoffs across\
+    \ correctness, latency, cost, and operability.</li> </ul> </div> </div> <div class=\"\
+    notion-selectable notion-bulleted_list-block\" data-block-id=\"2fb8fc56-7738-8015-9ebc-d2352cb90f04\"\
+    > <div class=\"notion-selectable notion-bulleted_list-block\" data-block-id=\"\
+    2fb8fc56-7738-8015-9ebc-d2352cb90f04\"> <ul> <li><span class=\"notion-enable-hover\"\
+    \ data-token-index=\"0\">Own Cross-Functional Execution:</span> Partner with Finance,\
+    \ RevOps, and Sales to translate business needs into robust, scalable systems\u2014\
+    anticipating edge cases, ensuring audit-ability, and aligning stakeholders on\
+    \ milestones and risks.</li> </ul> </div> "
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 10
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.660495+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

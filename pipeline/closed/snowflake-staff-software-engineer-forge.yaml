@@ -1,0 +1,99 @@
+id: snowflake-staff-software-engineer-forge
+name: 'Snowflake Staff Software Engineer - Forge '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/a6292a81-7cf7-4e29-bb77-f7d0935e7bdb
+  portal: ashby
+  location: US-WA-Bellevue
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. About the Team The Apps & Experiences (AppEx)
+    organization powers the unified user experience (Snowsight) for Snowflake. Every
+    major Snowflake customer interacts with our platform through these surfaces, making
+    AppEx central to both customer satisfaction and revenue growth. Within Appex,
+    our team sits at the intersection of AI, platform, and user experience. We are
+    on a mission to create an AI‑first, scalable, maintainable, and extensible platform
+    to build all Snowflake user experience features. The team owns: The serving layer
+    that powers Snowsight, Snowflake Intelligence, and UX features Developer tooling
+    that enable our engineers to move fast and deliver Frontend infrastructure and
+    shared services for product teams CI pipelines that ensure fast and reliable builds
+    Testing and validation platform that maintains code and product quality The monitoring
+    and logging stack that ensures observability and trust What You Will Do As a software
+    engineer on the team, you will play a central role in delivering the next generation
+    of tools and evolve our developer infrastructure and tooling to be scalable, highly
+    performant, and AI-first. Design and build AI-first platforms, tools, and best
+    practices to significantly enhance the developer experience for Snowsight Drive
+    strategy and initiatives to improve agentic development workflows and build infrastructure
+    to support 10x increases in developer productivity Improve platform reliability
+    by investing in observability, alerting, SLOs, and automated remediation across
+    our systems. Collaborate with product managers, architects, other engineering
+    teams, and business groups, to drive end-to-end solutions. Contribute to improving
+    our engineering processes, tooling, and standards. What We’re Looking For Our
+    ideal Staff Software Engineer will have: Strong passion for making developers
+    highly productive. 7+ years industry experience developing tools for large codebases.
+    Passion for AI-first processes and for building platforms that enable many teams
+    to move faster while keeping systems maintainable and safe. Experience with or
+    strong interest in AI or LLM-based applications (agents, prompt/tool engineering,
+    evals, or productionized AI features) Experience working on enterprise-grade build
+    systems. Excellent problem solving skills, and strong CS fundamentals including
+    data structures, algorithms, and distributed systems. Fluency in Go, Java, or
+    Python. Ability to work in a team environment, collaborate well, and mentor junior
+    engineers. A strategic mindset and strong sense of what to prioritize for maximum
+    impact. Excellent interpersonal communication skills. Outstanding written and
+    oral English language skills Ability to work on-site at our Bellevue, WA or Menlo
+    Park, CA offices. If you’re excited about building the platform and AI systems
+    that power how the world’s largest companies experience Snowflake, we’d love to
+    hear from you. Snowflake is growing fast, and we’re scaling our team to help enable
+    and accelerate our growth. We are looking for people who share our values, challenge
+    ordinary thinking, and push the pace of innovation while building a future for
+    themselves and Snowflake. How do you want to make your impact? For jobs located
+    in the United States, please visit the job posting on the Snowflake Careers Site
+    for salary and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.222922+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

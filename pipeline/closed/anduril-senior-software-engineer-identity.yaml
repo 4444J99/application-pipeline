@@ -1,0 +1,107 @@
+id: anduril-senior-software-engineer-identity
+name: Anduril Senior Software Engineer, Identity
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5084466007?gh_jid=5084466007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p>Anduril''s
+    Security Engineering team is looking for a Software Engineer to design and build
+    a modern identity platform that protects the infrastructure around our defense
+    technology products.</p> <h3>WHAT YOU''LL DO</h3> <ul> <li>Build an identity engine
+    that powers the whole company and supercharges our security program</li> <li>Create
+    applications that enable and enforce our identity framework across the company</li>
+    <li>Develop integrations that unify identities across IdPs, cloud providers, SaaS
+    tools, and internal systems</li> <li>Automate identity lifecycle operations: provisioning,
+    access reviews, offboarding</li> <li>Collaborate with other IAM engineers and
+    partner teams to define architecture and ship iteratively</li> </ul> <h3>REQUIRED
+    QUALIFICATIONS</h3> <ul> <li>Strong programming ability in one or more general
+    purpose languages (Go, Rust, etc)</li> <li>Experience with one or more infrastructure
+    as code languages (e.g., Terraform, AWS CDK) in a production capacity</li> <li>Experience
+    with identity protocols (SAML, OIDC, SCIM, OAuth) or identity providers (Okta,
+    Azure AD, etc.)</li> <li>Proven ability to translate system design requirements
+    into clean, maintainable implementations</li> <li>Experience leading or contributing
+    to architecture and design reviews</li> <li>Experience working with cloud platforms
+    and deploying applications through CI/CD pipelines</li> <li>Ability to work autonomously,
+    take ownership of projects, and collaborate across teams</li> <li>Eligible to
+    obtain and maintain a U.S. TS clearance</li> </ul> <h3>PREFERRED QUALIFICATIONS</h3>
+    <ul> <li>Have worked in environments with complex identity or access issues, troubleshooting
+    across distributed systems</li> <li>Familiarity with RBAC, ABAC, or policy-as-code
+    frameworks (e.g., OPA, Cedar)</li> <li>Experience building bespoke solutions in
+    high-growth and high-complexity environments</li> <li>Experience with AWS, Azure,
+    or GCP ecosystems and tooling</li> </ul><div class="content-pay-transparency"><div
+    class="pay-input"><div class="title">US Salary Range</div><div class="pay-range"><span>$191,000</span><span
+    class="divider">&mdash;</span><span>$253,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work experience, education and/or training, critical skills, and/or business considerations.
+    Highly competitive equity grants are included in the majority of full time offers;
+    and are considered part of Anduril''s total compensation package. Additionally,
+    Anduril offers top-tier benefits for full-time employees, including:</span><span
+    data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></p>
+    <p><strong><span data-contrast="auto">Healthcare Benefits&nbsp;</span></strong></p>
+    <ul> <li><strong><span data-contrast="none">US Roles:</span></strong><span data-contrast="none">&nbsp;Comprehensive
+    medical, dental, and vision plans at little to no cost to you.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    <li><strong><span data-contrast="none">UK &amp; AUS Roles:</span></strong><span
+    data-contrast="none">&nbsp;We cover full cost of medical insurance premiums for
+    you and your dependents.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    <li><strong><span data-contrast="auto">IE Roles:</span></strong> <span data-contrast="none">We
+    offer an annual contribution toward your private health insurance for you and
+    your dependents.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li> '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.589026+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

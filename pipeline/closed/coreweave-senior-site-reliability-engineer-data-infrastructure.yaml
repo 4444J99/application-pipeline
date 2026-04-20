@@ -1,0 +1,117 @@
+id: coreweave-senior-site-reliability-engineer-data-infrastructure
+name: CoreWeave Senior Site Reliability Engineer, Data Infrastructure
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: CoreWeave
+  url: https://boards.greenhouse.io/coreweave
+  application_url: https://coreweave.com/careers/job?4671535006&board=coreweave&gh_jid=4671535006
+  portal: greenhouse
+  location: New York, NY / Bellevue, WA
+  location_class: us-onsite
+  description: "<div class=\"content-intro\"><div> <div> <div class=\"gmail_quote\"\
+    > <div> <div><span id=\"m_1770241969069985273m_-2746164444908759431gmail-docs-internal-guid-131e4fb0-7fff-b4e9-ff50-e8cf32449b1b\"\
+    >CoreWeave is The Essential Cloud for AI\u2122. Built for pioneers by pioneers,\
+    \ CoreWeave delivers a platform of technology, tools, and teams that enables innovators\
+    \ to build and scale AI with confidence. Trusted by leading AI labs, startups,\
+    \ and global enterprises, CoreWeave combines superior infrastructure performance\
+    \ with deep technical expertise to accelerate breakthroughs and turn compute into\
+    \ capability. Founded in 2017, CoreWeave became a publicly traded company (Nasdaq:\
+    \ CRWV) in March 2025. Learn more at&nbsp;<a href=\"http://www.coreweave.com/\"\
+    \ target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?q=http://www.coreweave.com&amp;source=gmail&amp;ust=1762613132717000&amp;usg=AOvVaw3D-UOhNaqEvF5BEWxjYyAU\"\
+    >www.coreweave.com</a>.</span></div> </div> </div> </div> </div></div><p><strong>What\
+    \ You\u2019ll Do:</strong></p> <p>The Platform &amp; Infrastructure Engineering\
+    \ team in the Data Infrastructure organization is responsible for the reliability,\
+    \ scalability, and security of the company\u2019s data platform. The team builds\
+    \ and operates the foundational systems that power data ingestion, transformation,\
+    \ analytics, and internal AI workloads at scale. We operate with production-grade\
+    \ discipline, supporting mission-critical services with stringent uptime requirements\
+    \ and a focus on automation, observability, and resilience.</p> <p><strong>About\
+    \ the role:</strong></p> <p>As a Senior Site Reliability Engineer, you will own\
+    \ the reliability and performance of our Kubernetes-based data platform. You will\
+    \ design and operate highly available, multi-region systems, ensuring our services\
+    \ meet strict uptime and latency targets. Day-to-day, you\u2019ll work on scaling\
+    \ infrastructure, improving deployment pipelines, and hardening our security posture.\
+    \ You\u2019ll play a key role in evolving our DevSecOps practices while partnering\
+    \ closely with engineering teams to ensure services are built for reliability\
+    \ from day one.</p> <p><strong>Who You Are:&nbsp;</strong></p> <ul> <li>5+ years\
+    \ of experience in Site Reliability Engineering, Platform Engineering, or Infrastructure\
+    \ Engineering roles</li> <li>Deep expertise in Kubernetes and containerized software\
+    \ services, including cluster design, operations, and troubleshooting in production\
+    \ environments</li> <li>Strong experience building and operating CI/CD systems,\
+    \ including tools such as Argo CD and GitHub Actions</li> <li>Proven experience\
+    \ owning production systems with high availability requirements (\u226599.99%\
+    \ uptime), including incident response, SLI/SLO/SLA definition, error budgets,\
+    \ and postmortems</li> <li>Hands-on experience designing and operating geo-replicated,\
+    \ multi-region, active-active systems, including traffic routing, failover strategies,\
+    \ and data consistency tradeoffs</li> <li>Strong experience building and owning\
+    \ observability components, including metrics, logging, and tracing (e.g., Prometheus,\
+    \ Grafana, OpenTelemetry).</li> <li>Experience with infrastructure as code (e.g.,\
+    \ Helm, Terraform, Pulumi) and automated environment provisioning</li> <li>Strong\
+    \ understanding of system performance tuning, capacity planning, and resource\
+    \ optimization in distributed systems</li> <li>Experience implementing and operating\
+    \ security best practices in cloud-native environments (e.g., secrets management,\
+    \ network policies, vulnerability scanning)</li> </ul> <p><strong>Preferred:</strong></p>\
+    \ <ul> <li>Experience operating data platforms or data-intensive workloads (e.g.,\
+    \ Spark, Airflow, Kafka, Flink)</li> <li>Familiarity with service mesh technologies\
+    \ (e.g., Istio, Linkerd)</li> <li>Experience working in regulated environments\
+    \ with compliance frameworks such as GDPR, SOC 2, HIPAA, or SOX</li> <li>Background\
+    \ in building internal developer platforms or self-service infrastructure</li>\
+    \ </ul> <p><strong>Wondering if you\u2019re a good fit? </strong><strong>We believe\
+    \ in investing in our people, and value candidates who can bring their own diversified\
+    \ experiences to our teams \u2013 even if you aren't a 100% skill or experience\
+    \ match.</strong><strong> Here are a few qualities we\u2019ve found compatible\
+    \ with our team. If some of this describes you, we\u2019d love to talk.&nbsp;</strong></p>\
+    \ <ul> <li>You love building highly reliable systems that operate at scale</li>\
+    \ <li>You\u2019re curious about how to continuously improve system resilience,\
+    \ security, and operations</li> <li>You\u2019re an expert in diagnosing and solving\
+    \ complex distributed systems problems</li> </ul> <p><strong>Why CoreWeave?</strong></p>\
+    \ <p>At CoreWeave, we work hard, have fun, and move fast!&nbsp; We\u2019re in\
+    \ an exciting stage of hyper-growth that you will not want to miss out on. We\u2019\
+    re not afraid of a little chaos, and we\u2019re constantly learning. Our team\
+    \ cares deeply about how we build our product and how we work together, which\
+    \ is represented through our core values:&nb"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-09'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.088796+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

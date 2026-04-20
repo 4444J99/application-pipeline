@@ -1,0 +1,90 @@
+id: pika-senior-software-engineer-database
+name: Pika Senior Software Engineer, Database
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Pika
+  url: https://jobs.ashbyhq.com/pika
+  application_url: https://jobs.ashbyhq.com/pika/8786c478-36e2-44a7-a5a3-0e2628152437
+  portal: ashby
+  location: Palo Alto HQ
+  location_class: us-onsite
+  description: 'Senior Software Engineer, Database Department: Engineering | Location:
+    Palo Alto HQ | Type: Full-time, On-site About the Role We''re looking for a Senior
+    Database Engineer to own the data layer that powers Pika''s products. As our platform
+    scales to millions of users, we need someone who can design storage architectures
+    that are fast, reliable, and cost-efficient — spanning relational databases, caching
+    layers, vector search, object storage, and analytics pipelines. You''ll be responsible
+    for schema design, query optimization, data pipeline architecture, and building
+    the retrieval systems that power our AI features. This is a high-ownership role
+    where you define how data flows through the entire product. What You''ll Do •
+    Design and own the data architecture — schema design, migration strategy, and
+    storage topology for user data, media, and AI model outputs • Build high-performance
+    query layers — optimize reads/writes for real-time product interactions with sub-100ms
+    targets on critical paths • Implement vector search and retrieval systems — semantic
+    search, embedding storage, and retrieval-augmented generation (RAG) pipelines
+    • Scale storage systems — capacity planning, sharding strategies, replication,
+    and backup/recovery for growing data volumes • Design and optimize caching layers
+    — Redis architecture, eviction strategies, cache invalidation patterns for session
+    state and hot data • Build data pipelines — ETL for analytics, usage tracking,
+    cost attribution, and operational metrics • Ensure data reliability — backup strategies,
+    point-in-time recovery, data integrity checks, and disaster recovery planning
+    • Establish data modeling best practices across the engineering team What We''re
+    Looking For • 5+ years of experience designing and operating databases in production
+    at scale • Deep PostgreSQL expertise — indexing strategies, query optimization,
+    partitioning, JSONB, extensions • Experience with caching systems — Redis architecture,
+    eviction strategies, cache invalidation patterns • Familiarity with object storage
+    (S3 or equivalent) for media and large assets • Understanding of vector databases
+    (pgvector, Pinecone, Weaviate, or similar) for semantic search • Strong data modeling
+    skills — you can design schemas that balance normalization, performance, and developer
+    ergonomics • Strong SQL and query optimization skills — you read EXPLAIN plans
+    for fun • Experience with database reliability — replication, failover, backup/restore,
+    monitoring • Clear communication skills and a team-first mindset Nice to Have
+    • Experience with time-series data (activity metrics, usage analytics) • Experience
+    building analytics or reporting pipelines • Familiarity with event sourcing or
+    append-only data patterns • Knowledge of data privacy and compliance (GDPR, data
+    deletion workflows) • Experience with graph databases for relationship modeling
+    • Previous startup experience — comfortable with ambiguity and moving fast'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.030639+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

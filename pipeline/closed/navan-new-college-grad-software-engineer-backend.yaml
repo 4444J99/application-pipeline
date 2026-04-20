@@ -1,0 +1,107 @@
+id: navan-new-college-grad-software-engineer-backend
+name: Navan New College Grad Software Engineer (Backend)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Navan
+  url: https://boards.greenhouse.io/tripactions
+  application_url: https://navan.com/careers/openings?gh_jid=7777949
+  portal: greenhouse
+  location: Palo Alto, CA
+  location_class: us-onsite
+  description: <p>Navan is on a mission to revolutionize the corporate journey as
+    the world's only all-in-one travel, corporate card, and expense management platform.
+    As a Backend Engineer on the Expense team, you won’t just be writing code—you’ll
+    be building the engine behind the world’s most seamless, "no-touch" expense management
+    platform.</p> <p>We are looking for a builder who is passionate about eliminating
+    the manual drudgery of receipts and reports. You will work closely with a team
+    of talented engineers, product managers and designers to identify customer needs
+    and build innovative solutions to solve them. You will analyze and optimize UI
+    for quality, efficiency and performance. In addition, will quickly ramp up on
+    the existing features and you’ll be responsible for shipping the features into
+    production. &nbsp; If you’re ready to ship high-impact features to a global user
+    base and optimize the backend infrastructure that makes business travel feel like
+    magic, let's talk.</p> <p>&nbsp;</p> <p><strong>What You'll Do</strong></p> <ul>
+    <li><strong>Build the Foundation:</strong> Contribute to the design and implementation
+    of high-performance API endpoints and backend services that power our "all-in-one"
+    travel and expense platform.</li> <li><strong>Bridge Code &amp; Data:</strong>
+    Apply your knowledge of CS fundamentals to translate complex business logic into
+    clean, scalable code using domain object modeling and modern ORM technologies.</li>
+    <li><strong>Learn to Scale:</strong> Collaborate with senior mentors to navigate
+    the real-world technical trade-offs required to build distributed backend processes
+    that support a global user base.</li> <li><strong>Ship with Impact:</strong> Directly
+    enhance the traveler experience by building and shipping innovative features that
+    turn manual expense reporting into a seamless, "no-touch" reality.</li> <li><strong>Master
+    the Ecosystem:</strong> Gain hands-on experience across the entire development
+    lifecycle, from architecting backend logic to ensuring the reliability of services
+    in a production environment.</li> <li><strong>Power the Mission:</strong> Join
+    a team dedicated to "powering the people who power business" by eliminating friction
+    at the intersection of travel and finance.</li> </ul> <p><strong>What We're Looking
+    For</strong></p> <ul> <li><strong>Technical Foundation:</strong> A BS or MS in
+    Computer Science, Computer Engineering, or a related field.</li> <li><strong>API
+    Craftsmanship:</strong> Proven experience designing and implementing high-performance
+    APIs and core backend services.</li> <li><strong>Product Mindset:</strong> A genuine
+    passion for delivering quality, end-user-facing products that solve real-world
+    problems.</li> <li><strong>Agility:</strong> The ability to quickly implement,
+    iterate, and pivot based on new ideas and customer feedback.</li> <li><strong>Collaborative
+    Spirit:</strong> A proactive communicator who thrives when working with designers,
+    PMs, and fellow engineers to bridge the gap between "possible" and "shippable."</li>
+    <li><strong>Traveler Obsession:</strong> Excitement for taking on projects that
+    directly improve the lives of travelers and finance teams alike.</li> <li><strong>Growth
+    Mindset:</strong> A willingness to operate and lead within a fast-paced, high-growth
+    environment where the bar is set high.</li> </ul><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p>The posted pay range represents
+    the&nbsp;anticipated&nbsp;low and high end of the compensation for this position
+    and is subject to change based on business need. To determine a successful candidate’s
+    starting pay, we carefully consider a variety of factors, including primary work
+    location, an evaluation of the candidate’s skills and experience, market demands,
+    and internal parity.<br><br>For roles with on-target-earnings (OTE), the pay range
+    includes both base salary and target incentive compensation. Target incentive
+    compensation for some roles may include a ramping draw period. Compensation is
+    higher for those who exceed targets. Candidates may receive more information from
+    the recruiter.</p></div><div class="title">Pay Range</div><div class="pay-range"><span>$79,650</span><span
+    class="divider">&mdash;</span><span>$177,000 USD</span></div></div></div>
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-04'
+  posting_date: '2026-04-03'
+  date_source: first_published
+  date_added: '2026-04-04'
+  discovered: '2026-04-04T10:23:06.058959+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

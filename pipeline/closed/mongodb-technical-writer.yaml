@@ -1,0 +1,113 @@
+id: mongodb-technical-writer
+name: MongoDB Technical Writer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7743754
+  portal: greenhouse
+  location: Dublin
+  location_class: international
+  description: '<p>The Drivers Documentation team is a hands-on and enthusiastic group
+    of engineers who are passionate about teaching developers how to work with data
+    and build applications. We are hiring a “Technical Writer, Drivers” to help us
+    create world-class documentation for MongoDB''s developer-focused products --
+    in particular, MongoDB Drivers and Connectors.</p> <p>Our team works closely with
+    MongoDB''s engineering and product organizations to deliver outstanding developer
+    documentation for everyone, regardless of where they are in their software engineering
+    career. Every month, hundreds of thousands of developers turn to our content to
+    help them build microservices, backend and line of business applications, and
+    other projects that are used by millions of people worldwide.</p> <p>We are looking
+    to speak to candidates who are based in Dublin for our hybrid working model.</p>
+    <h3>The team is responsible for the following documentation:&nbsp;</h3> <ul> <li><a
+    href="https://www.mongodb.com/docs/drivers/">MongoDB Drivers</a>, including <a
+    href="https://www.mongodb.com/docs/drivers/node/current/">Node</a>, <a href="https://www.mongodb.com/docs/drivers/java/sync/current/">Java</a>,
+    <a href="https://www.mongodb.com/docs/drivers/go/current/">Go</a>, <a href="https://www.mongodb.com/docs/drivers/csharp/current/">.NET/C#</a>,
+    and more!&nbsp;</li> <li><a href="https://www.mongodb.com/docs/spark-connector/current/">MongoDB
+    Spark Connector</a></li> <li>MongoDB <a href="https://www.mongodb.com/docs/manual/core/queryable-encryption/">Queryable
+    Encryption</a> and <a href="https://www.mongodb.com/docs/manual/core/csfle/">Client-Side
+    Field Level Encryption</a></li> </ul> <h3>Candidate Profile:&nbsp;</h3> <p>Candidates
+    must have 3+ years of combined experience in one or more of the following roles:
+    technical writer, developer advocate, and/or&nbsp; software engineer. Beyond industry
+    experience, we are looking for someone who is:</p> <ul> <li>Experienced with developing
+    and shipping modern line-of-business applications OR has extensive experience
+    contributing to complex documentation sites, preferably in a docs-as-code environment</li>
+    <li>Experienced with using great developer documentation and educational materials.
+    You are excited to empower other developers by creating best-in-class documentation</li>
+    <li>Experienced with and enjoys deep investigations of new technical concepts
+    plus teaching others what you’ve learned</li> <li>Eager to keep learning and growing.
+    Passionate about giving and receiving feedback</li> <li>Empathetic with developers
+    of different skill levels and backgrounds to understand what they might find challenging</li>
+    </ul> <h3>Position Expectations:</h3> <ul> <li>Work with technical and non-technical
+    teams to meet the documentation needs of our users</li> <li>Research functionality
+    and features and validate it through testing</li> <li>Develop sample apps &amp;
+    code examples to help users kickstart their projects or refresh themselves on
+    syntax</li> <li>Write documentation for MongoDB <a href="https://www.mongodb.com/docs/drivers/">Drivers</a>
+    and <a href="https://www.mongodb.com/docs/tools-and-connectors/#connectors">Connectors</a>.
+    MongoDB develops many official drivers and connectors that users rely on every
+    day</li> <li>Develop tools that help us create and maintain content</li> </ul>
+    <h3>Success Measures</h3> <ul> <li>Within three months, you’ll be comfortable
+    with our tools and writing style and be able to apply them when authoring new
+    content for MongoDB Drivers and Connectors. You’ll also have completed our company’s
+    required technical onboarding.</li> <li>Within six months, you’ll have gained
+    enough product expertise to propose and deliver new projects while building relationships
+    with the teams that we work with. You’ll also be applying our writing style and
+    coding best practices in both your own work and reviews of your teammates’ work.</li>
+    <li>Within twelve months, you’ll have taken ownership of a subject area and be
+    able to estimate and deliver the related work. By this time, you’ll have performed
+    a full annual cycle of performance and growth conversations with your manager.</li>
+    </ul> <h3>About MongoDB</h3> <p>MongoDB is built for change, empowering our customers
+    and our people to innovate at the speed of the market. We have redefined the database
+    for the AI era, enabling innovators to create, transform, and disrupt industries
+    with software. MongoDB’s unified database platform, the most widely available,
+    globally distributed database on the market, helps organizations modernize legacy
+    workloads, embrace innovation, and unleash AI. Our cloud-native platform, MongoDB
+    Atlas, is the only globally distributed, multi-cloud database and is available
+    across AWS, Google Cloud, and Microsoft Azure.</p> <p>With offices worldwide and
+    over 60,000 customers, including 75% of the Fortune 100 and AI-native startups,
+    relying on MongoDB for their most important applications, we’re powering the next
+    era of software.<'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.918689+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

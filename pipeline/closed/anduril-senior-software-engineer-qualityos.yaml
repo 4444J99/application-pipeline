@@ -1,0 +1,114 @@
+id: anduril-senior-software-engineer-qualityos
+name: Anduril Senior Software Engineer, QualityOS
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5087166007?gh_jid=5087166007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p><strong>ABOUT THE JOB:</strong></p>
+    <p>We are looking for Senior Software Engineers to join our Internal Tools team.
+    As a Senior Software Engineer on Anduril’s Internal Tools team you will be architecting
+    and implementing mission-critical applications that enforce lean business process,
+    add multiplicative leverage to Anduril employees, and scale Anduril into a next-generation
+    defense prime.<br><br>As a member of the internal tools team you will be an integral
+    part of building out QualityOS—Anduril’s custom production quality management
+    system. Your decisions will have a large impact on the company today and into
+    the future. We are looking not only for a software engineer that has a knack for
+    quickly understanding complex systems, but one that dives in and creates features
+    driving bottom-line value for the business.<br><br>A Software Engineer in this
+    role should possess strong collaborative skills to integrate seamlessly into a
+    team focused on revolutionizing manufacturing through innovative tools and insights.
+    The ideal candidate will have expertise in developing custom software solutions
+    that optimize production processes, analyze manufacturing data, and drive industry-changing
+    improvements.</p> <p><strong>WHAT YOU'LL DO:</strong></p> <ul> <ul> <li>Work in
+    a mini-startup environment to create elegant SaaS or on-premise solutions that
+    are better than what current market solutions can offer.</li> <li>Level up our
+    team’s applications through quality code contribution.</li> <li>Have an area of
+    deep expertise in a portion of the full stack (i.e. backend, frontend, integration).</li>
+    <li>Work with a high-functioning team of developers with an emphasis on finishing
+    business-critical projects</li> <li>Automate company operations to drive bottom-line
+    dollar savings</li> </ul> </ul> <p><strong>REQUIRED QUALIFICATIONS:</strong></p>
+    <ul> <ul> <li>5+ years of experience in a software engineering role building products,
+    ideally in a fast-paced environment</li> <li>Degree in Computer Science, Information
+    Systems, Electrical Engineering or related technical degree</li> <li>Experience
+    working with large enterprise applications and platforms with high availability
+    requirements</li> <li>Proficiency with web-based technologies such as Javascript,
+    React, Typescript, or other web-development frameworks such as Remix or NextJS</li>
+    <li>Ability to empathize with end-users, to turn needs into features, and to balance
+    user experience with engineering constraints</li> <li>U.S. Person status is required
+    as this position needs to access export controlled data</li> </ul> </ul> <p><strong>PREFERRED
+    QUALIFICATIONS:</strong></p> <ul> <ul> <li>We encourage people from all backgrounds
+    to apply but our tech stack uses AWS, Typescript, and React/Remix so familiarity
+    with all of these tools will be particularly helpful</li> <li>Experience in hyper
+    growth startup-like environments. Demonstrated successes in scaling and maturing
+    software development processes, team culture and methods, and ability to balance
+    short-term and long-term trade offs</li> <li>Eligible to obtain and maintain a
+    U.S. TS/S clearance</li> <li>Experience with quality management &amp; incident
+    management systems (QMS)</li> <li>Experience leveraging SOTA AI models and agentic
+    tooling for software development</li> </ul> </ul> <p>&nbsp;</p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="title">US Salary Range</div><div class="pay-range"><span>$191,000</span><span
+    class="divider">&mdash;</span><span>$253,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work experience, education and/or training, critical skills, and/or business considerations.
+    Highly competitive equity grants are included in the majority of full time offers;
+    and are considered part of Anduril's total compensation package. Additionally,
+    Anduril offers top-tier benefits for full-time employees, including:</span><span
+    data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&qu
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:34.013952+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

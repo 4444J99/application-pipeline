@@ -1,0 +1,115 @@
+id: openai-software-engineer-chatgpt-infrastructure
+name: 'OpenAI Software Engineer, ChatGPT Infrastructure '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: OpenAI
+  url: https://jobs.ashbyhq.com/openai
+  application_url: https://jobs.ashbyhq.com/openai/e6981259-c1d0-46de-8376-56bde28cfb10
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'About the Team ChatGPT is a rapidly evolving system: new capabilities
+    ship continuously, product surfaces change quickly, and usage patterns shift week-to-week.
+    Supporting that pace requires infrastructure that can handle real production constraints—high
+    concurrency, unpredictable traffic patterns, complex dependency graphs, and frequent
+    change. The job of ChatGPT Infrastructure is to build and operate the platforms
+    that make fast iteration possible without breaking performance or reliability.
+    We design the shared systems, data paths, rollout mechanisms, and reliability
+    guardrails that teams rely on when shipping changes to ChatGPT at scale. We focus
+    on high-leverage infrastructure: primitives and “golden paths” that turn hard-won
+    operational lessons into defaults—so engineers don’t need to rediscover the same
+    failure modes, latency pitfalls, or integration issues each time they build something
+    new. About the Role We’re hiring Senior and Staff engineers to design and build
+    infrastructure systems that sit underneath ChatGPT and multiply the effectiveness
+    of the teams building user experiences. This is not a “keep the lights on” role.
+    It’s a platform-building role: you’ll define interfaces, develop core abstractions,
+    and create tooling that makes safe, fast iteration the norm. Your work will show
+    up as less friction, fewer regressions, better performance, and systems that scale
+    gracefully as the product expands. Where You Can Have Impact You might work on
+    one or more of these areas (without being locked into any single lane): Platform
+    foundations & frameworks: core libraries, service frameworks, and shared components
+    that standardize how systems are built, integrated, and evolved. Scalability &
+    performance primitives: patterns and infrastructure that reduce tail latency,
+    improve throughput, and keep costs predictable as demand grows. Reliability guardrails:
+    mechanisms that prevent outages by design—rate limiting, load shedding, dependency
+    isolation, backpressure, safe fallbacks, and “make it hard to regress” controls.
+    Developer productivity via golden paths: paved roads for common workflows (data
+    access patterns, service integration patterns, request lifecycle patterns) that
+    are fast, safe, and easy to use. Observability & debugging systems: instrumentation,
+    metrics models, and investigative tooling that turn “it’s slow” into a precise,
+    actionable diagnosis. Safe change management: deployment and rollout systems that
+    support rapid iteration with confidence—progressive delivery, automated verification,
+    and fast rollback strategies. Interface and contract design across boundaries:
+    clean APIs and stable contracts that reduce coupling and allow independent evolution
+    across a complex ecosystem. What You’ll Do Build and evolve infrastructure platforms
+    that many engineers and services depend on. Translate messy real-world constraints
+    into clean abstractions: simple APIs, enforceable contracts, safe defaults. Drive
+    improvements in reliability and performance through principled design, measurement,
+    and iterative hardening. Partner across engineering and product to identify systemic
+    pain points and turn them into reusable solutions. Own outcomes end-to-end: design
+    → implementation → rollout → operational maturity. Qualifications Minimum Qualifications
+    Experience building and operating large-scale distributed systems in production
+    (high throughput, concurrency, and failure handling). Strong fundamentals in systems
+    design, including caching, consistency, queueing/backpressure, and resilient dependency
+    management. Ability to reason about performance (latency distributions, tail behavior,
+    bottlenecks) and translate that into concrete engineering work. Track record of
+    building platforms or shared infrastructure that improves velocity and correctness
+    for other teams. Strong communication and collaboration skills—aligning on interfaces,
+    navigating tradeoffs, and driving cross-team execution. Preferred Qualifications
+    Experience designing paved roads / golden paths (frameworks, libraries, self-serve
+    tooling) that shape engineering behavior at scale. Deep understanding of reliability
+    techniques: graceful degradation, circuit breakers, load shedding, rate limiting,
+    and fault isolation. Experience building systems for safe iteration: progressive
+    delivery, correctness checks, automated rollout gates, and production validation.
+    Strong instincts for API and contract design—how to create interfaces that are
+    stable, evolvable, and hard to misuse. Prior work that demonstrates “force multiplier”
+    impact: enabling many teams through a small number of well-chosen primitives.
+    About OpenAI OpenAI is an AI research and deployment company dedicated to ensuring
+    that general-purpose artificial intelligence benefits all of humanity. We push
+    the boundaries of the capabilities of AI systems and seek to safely deploy them
+    to the world through our products. AI is an extremely powerful tool that must
+    be created with safety and human needs at its core, '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.584768+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,117 @@
+id: scale-ai-senior-forward-deployed-data-scientistengineer
+name: Scale AI Senior Forward Deployed Data Scientist/Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Scale AI
+  url: https://boards.greenhouse.io/scaleai
+  application_url: https://job-boards.greenhouse.io/scaleai/jobs/4636227005
+  portal: greenhouse
+  location: San Francisco, CA; New York, NY
+  location_class: us-onsite
+  description: "<p>At Scale AI, we are accelerating the development of artificial\
+    \ intelligence by providing the essential, data-centric infrastructure for building\
+    \ and deploying advanced AI systems. We are looking for a Forward Deployed Data\
+    \ Scientist/Engineer to architect and build the sophisticated data solutions that\
+    \ solve our customers' most complex challenges. This role is for a first-principles\
+    \ thinker who thrives on ambiguity, enjoys solving novel customer problems, and\
+    \ has a passion for applying rigorous data science to deliver measurable business\
+    \ impact.</p> <p>You'll work on a mix of cutting-edge, customer-facing AI implementations.\
+    \ Our team powers projects like TIME\u2019s Person of the Year AI experience,\
+    \ where our technology helped shape one of the most iconic features in media.\
+    \ Leveraging Scale's powerful data infrastructure, you will build bespoke evaluation\
+    \ frameworks, deploy custom statistical models, and architect data pipelines.\
+    \ Your work will play a crucial role in shaping how AI delivers measurable value\
+    \ in real-world applications for industry-leading companies.</p> <p>You'll be\
+    \ exposed to the cutting edge of the Generative AI industry while directly interfacing\
+    \ with leading enterprise organizations, including top industry leaders in telecommunications,\
+    \ e-commerce, finance, education, publication, insurance, and health.</p> <h3>Responsibilities:</h3>\
+    \ <ul> <li>Drive Impact: Directly contribute to the advancement of AI by delivering\
+    \ critical data science infrastructure and insights for leading AI innovators\
+    \ and enterprise customers.</li> <li>Customer Collaboration: Interact daily with\
+    \ our technical customers, deeply understanding their unique challenges and translating\
+    \ ambiguous business problems into concrete data-driven solutions and robust statistical\
+    \ models.</li> <li>End-to-End Data Solution Development: Design, build, and deploy\
+    \ solutions across the entire data lifecycle\u2014from data ingestion and pipeline\
+    \ construction to statistical modeling, experimentation, model evaluation, and\
+    \ insight generation.</li> <li>Rapid Experimentation: Design and deliver high-quality\
+    \ experiments (e.g., A/B tests, marketplace modeling), iterating quickly to validate\
+    \ hypotheses, meet customer needs, and drive innovation.</li> <li>Strategic Influence:\
+    \ Act as the voice of the customer to our internal Product, Engineering, and Data\
+    \ Science teams, channeling real-world insights to influence our product roadmap\
+    \ and technical strategy.</li> <li>Diverse Projects: Engage in a dynamic mix of\
+    \ designing and deploying cutting-edge data solutions, from building LLM evaluation\
+    \ frameworks to adapting statistical models for novel economic and business problems.</li>\
+    \ <li>Leadership Growth: This role offers a unique opportunity to lead critical\
+    \ customer-facing projects, shape our data culture, and accelerate your career\
+    \ growth. You'll be positioned to become a future leader in a company defining\
+    \ the next era of technology.</li> </ul> <h3>Requirements:</h3> <ul> <li>5+ years\
+    \ of relevant industry experience in a highly analytical role (e.g., Data Science,\
+    \ ML Engineering, Quantitative Analysis).</li> <li>Proven track record of shipping\
+    \ high-quality data products, models, or features at scale.</li> <li>Strong problem-solving\
+    \ skills and the ability to turn abstract business and product ideas into concrete\
+    \ data science and engineering solutions.</li> <li>Expert-level coding abilities\
+    \ in Python for data science (e.g., Pandas, NumPy, Scikit-learn) and mastery of\
+    \ complex SQL across large datasets.</li> <li>Ability to effectively communicate\
+    \ complex technical concepts to both technical and non-technical audiences.</li>\
+    \ <li>Desire to thrive in a fast-paced, dynamic environment and adapt quickly\
+    \ to the ever-changing world of Generative AI.</li> <li>Excited to join a dynamic,\
+    \ hybrid team in either San Francisco or New York City.</li> </ul> <h3>Preferred\
+    \ Qualifications:</h3> <ul> <li>Experience in a client-facing or consultative\
+    \ role (e.g., Forward Deployed Engineer, Solutions Architect, Data Science Consultant).</li>\
+    \ <li>Deep expertise in designing metrics, diagnosing data inconsistencies, and\
+    \ building evaluation frameworks for ML/LLM systems.</li> <li>Experience with\
+    \ large-scale data processing frameworks and distributed systems (e.g., Spark,\
+    \ Ray).</li> <li>Familiarity with marketplace experimentation, causal inference,\
+    \ and advanced statistical modeling.</li> <li>Experience with cloud-based infrastructure\
+    \ and data warehousing (e.g., AWS, GCP, Snowflake, BigQuery).</li> </ul><div class=\"\
+    content-pay-transparency\"><div class=\"pay-input\"><div class=\"description\"\
+    ><p><em>Compensation packages at Scale for eligible roles include base salary,\
+    \ equity, and benefits. The range displayed on each job posting reflects the minimum\
+    \ and maximum target for new hire salaries for the position, determined by work\
+    \ location and additional factors, including job-related skills, experience, interview\
+    \ performance, and relevant education or training. Scale employees in eligible\
+    \ roles "
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.458794+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

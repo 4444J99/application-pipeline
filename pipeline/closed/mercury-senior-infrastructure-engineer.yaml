@@ -1,0 +1,116 @@
+id: mercury-senior-infrastructure-engineer
+name: Mercury Senior Infrastructure Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Mercury
+  url: https://boards.greenhouse.io/mercury
+  application_url: https://job-boards.greenhouse.io/mercury/jobs/5832466004
+  portal: greenhouse
+  location: San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada
+    or United States
+  location_class: us-remote
+  description: '<p>Imagine being a pioneer, venturing through the uncharted territories
+    of the cloud. You''re not just navigating; you''re shaping the landscape, constructing
+    robust architectures that withstand the tests of time and scale. At Mercury, your
+    mission, should you choose to accept it, is to help steer our cloud infrastructure
+    into the future. With projects as dynamic as migrating our entire fleet to ECS
+    and building out our golden paths for service deployment, your role is pivotal.
+    This isn''t just a job; it''s an epic tale of transformation and triumph.</p>
+    <p>As a senior member of our infrastructure team, you will be equipped with essential
+    tools and technologies designed for scaling and enhancing Mercury''s infrastructure:</p>
+    <ul> <li><strong>AWS Services</strong>: Proficiently utilize EC2, RDS, IAM, Networking,
+    Opensearch, and ECS to build and manage robust cloud environments.</li> <li><strong>Terraform</strong>:
+    Leverage Terraform for infrastructure as code to efficiently manage and provision
+    our cloud resources.</li> <li><strong>Agentic Infrastructure: </strong>Build the
+    frameworks around using AI safely in our infrastructure, both for the agents and
+    the users that kick off those agents.</li> <li><strong>Monitoring and Observability
+    Tools</strong>: Employ Prometheus, Grafana, Opensearch, and OpenTelemetry to maintain
+    high availability and monitor system health.</li> <li><strong>Version Control
+    and CI/CD</strong>: Manage code and automate deployments using GitHub &amp; GitHub
+    Actions.</li> </ul> <p>As we gear up for the next stages of Mercury''s growth,
+    you will:</p> <ul> <li>Build our “Infrastructure Platform” to support the growing
+    needs of the Engineering Organization.</li> <li>Focus on building a platform that
+    is AI friendly while still usable for engineers. We want our users to be humans
+    <em>and</em> Agents.</li> <li>Lead key infrastructure projects, break-down complex
+    initiatives, and define our infrastructure strategy through detailed RFCs and
+    technical specifications.</li> </ul> <p>Must haves:</p> <ul> <li>You have 5+ years
+    of experience with AWS</li> <li>You have extensive experience, ideally 3 years
+    or more, with observability and monitoring tools like Prometheus, Grafana, and
+    OpenTelemetry, optimizing system performance and reliability.</li> <li>You have
+    demonstrated ability in technical writing, with at least 3 years of experience
+    creating detailed technical documentation, RFCs, and tech specs that clearly communicate
+    complex ideas.</li> </ul> <p>The ideal candidate should:</p> <ul> <li>You bring
+    at least 2 years of experience leading infrastructure projects in regulated environments
+    such as HITRUST or SOC2, ensuring compliance and security.</li> <li>You have 3+
+    years of experience managing large-scale Terraform implementations, including
+    the setup and maintenance of Terraform CI/CD pipelines.</li> <li>You have 2+ years
+    of experience writing code. We are building an Infrastructure Platform from scratch
+    and there is plenty of code to write to support that.</li> <li>Experience mentoring
+    and elevating those around you, we are force multipliers for the engineering org.</li>
+    </ul> <p>If this role interests you, we invite you to explore our public demo
+    at <a href="https://demo.mercury.com/">demo.mercury.com</a>.&nbsp;</p> <p>The
+    total rewards package at Mercury includes base salary, equity, and benefits. Our
+    salary and equity ranges are highly competitive within the SaaS and fintech industry
+    and are updated regularly using the most reliable compensation survey data for
+    our industry. New hire offers are made based on a candidate’s experience, expertise,
+    geographic location, and internal pay equity relative to peers.</p> <p>Our target
+    new hire base salary ranges for this role are the following:</p> <ul> <li>US employees:
+    $200,700 - $250,900</li> <li>Canadian employees: CAD $189,700 - $237,100</li>
+    </ul> <p>Mercury values diversity &amp; belonging and is proud to be an Equal
+    Employment Opportunity employer. All individuals seeking employment at Mercury
+    are considered without regard to race, color, religion, national origin, age,
+    sex, marital status, ancestry, physical or mental disability, veteran status,
+    gender identity, sexual orientation, or any other legally protected characteristic.
+    We are committed to providing reasonable accommodations throughout the recruitment
+    process for applicants with disabilities or special needs. If you need assistance,
+    or an accommodation, please let your recruiter know once you are contacted about
+    a role.</p> <p>We use Covey as part of our hiring and / or promotional process
+    for jobs in NYC and certain features may qualify it as an AEDT. As part of the
+    evaluation process we provide Covey with job requirements and candidate submitted
+    applications. We began using <a href="https://getcovey.com/product/covey-scout-inbound">Covey
+    Scout for Inbound </a>on January 22, 2024.&nbsp;</p> <p><a href="https://getcovey.com/nyc-local-law-144">[Please
+    see the independent bias audit report co'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.034022+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

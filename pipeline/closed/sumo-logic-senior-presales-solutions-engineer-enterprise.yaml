@@ -1,0 +1,115 @@
+id: sumo-logic-senior-presales-solutions-engineer-enterprise
+name: Sumo Logic Senior Presales Solutions Engineer - Enterprise
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sumo Logic
+  url: https://boards.greenhouse.io/sumologic
+  application_url: https://job-boards.greenhouse.io/sumologic/jobs/7761601
+  portal: greenhouse
+  location: United States
+  location_class: us-onsite
+  description: <h2>Senior Solutions Engineer, Enterprise</h2> <p>As a<strong> Senior
+    Solutions Engineer</strong>, you will be the primary technical resource for our
+    Enterprise Accounts team. You will share your product and technical expertise
+    through presentations, product demonstrations, and technical evaluations (Proof
+    Of Values). As the technical expert, you will work with clients to understand
+    their requirements and pain points, then design the right solution for their business
+    needs. During the sales cycle you will guide clients through trials and POVs,
+    demonstrating Sumo Logic’s ability to meet and exceed their requirements and building
+    a positive relationship that will provide continuous value to our customers. Finally,
+    you will have the opportunity to work cross-functionally with our Product Management
+    and Engineering teams to share your knowledge and experiences to ultimately improve
+    our business and our customers’ success.</p> <p>We seek talent who wants to leverage
+    their technical and people skills to help deliver solutions to clients directly
+    and become a trusted advisor in the process. Above all else, you should be highly
+    self-motivated and extremely curious to learn more Sumo Logic and the vast problems
+    that it can solve.</p> <h4>Responsibilities</h4> <ul> <li>Partner with the Account
+    Executives / Account Managers to understand customer challenges and mains, and
+    articulate Sumo Logic’s value proposition, vision, and strategy to customers</li>
+    <li>Technically close complex opportunities through advanced competitive knowledge,
+    technical skill, and credibility</li> <li>Understand and help orchestrate all
+    phases of the sales cycle, including leading technical validations during the
+    Proof of Value phase&nbsp;</li> <li>Be successful working with all levels of an
+    organization, from executives down to individual developers and Site Reliability
+    Engineers</li> <li>Deliver product and technical demonstrations of the Sumo Logic
+    service</li> <li>Work cross functionally with Product Management and Engineering
+    to improve the Sumo Logic service based on your experience with customers</li>
+    </ul> <h4>Required Qualifications and Skills</h4> <ul> <li>B.S. in Computer Science,
+    Engineering, or a related field; M.S. in Computer Science, Engineering, or a related
+    field (preferred)</li> <li>4+ years as a Solutions Engineer (preferred), Solutions
+    Architect (preferred), Sales Engineer (preferred), Implementation Consultant,
+    Support Engineer, Site Reliability Engineer, or a Software Developer with experience
+    leading projects and/or working with customers</li> <li>Hands on knowledge of
+    Security related products, technologies, and sources such as IDS/IPS, SIEM/Log
+    Management, Network / Endpoint Security, Threat Detection, Incident Response,
+    MSSP/MDR, Threat Feeds, CASB, etc</li> <li>Experience with open source collections
+    (Telegraf, FluentBit, FluentD, Open Telemetry, etc.) (preferred)</li> <li>Experience
+    with leading and running technical validations like Proof of Value (preferred)</li>
+    <li>Experience selling and working with pure SaaS solutions in multi-tenant architectures</li>
+    <li>Experience with Amazon Web Services (AWS), Google Cloud Platform (GCP), Microsoft
+    Azure (certification is preferred)</li> <li>A broad background and understanding
+    of technical infrastructure (servers, networking devices, storage, etc.)</li>
+    <li>Modern application architecture (micro-services, containers) understanding
+    and experience working with Kubernetes, Docker, and/or Lambda (preferred)</li>
+    <li>Experience with various monitoring tools like Splunk, Datadog, Elastic, New
+    Relic, etc. (preferred)</li> <li>Comfortable working in a dynamic, fast-paced
+    startup environment and experience at a successful startup (preferred)</li> <li>Strong
+    written and verbal communication skills, as well as business and technical acumen</li>
+    </ul> <h2><strong>About Us</strong></h2> <p>Sumo Logic, Inc. helps make the digital
+    world secure, fast, and reliable by unifying critical security and operational
+    data through its Intelligent Operations Platform. Built to address the increasing
+    complexity of modern cybersecurity and cloud operations challenges, we empower
+    digital teams to move from reaction to readiness—combining agentic AI-powered
+    SIEM and log analytics into a single platform to detect, investigate, and resolve
+    modern challenges. Customers around the world rely on Sumo Logic for trusted insights
+    to protect against security threats, ensure reliability, and gain powerful insights
+    into their digital environments. For more information, visit<a href="http://www.sumologic.com/"
+    target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.sumologic.com/&amp;source=gmail&amp;ust=1763582776811000&amp;usg=AOvVaw2tkPOBgFpGkG4SEdY6I_TY">&nbsp;www.sumologic.com.</a></p>
+    <p><a href="https://www.sumologic.com/privacy-statement/">Sumo Logic Privacy Policy</a>.
+    Employees will be responsible for complying with applicable federal privacy laws
+    and regulations, as well as orga
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-02'
+  posting_date: '2026-04-01'
+  date_source: first_published
+  date_added: '2026-04-02'
+  discovered: '2026-04-02T10:15:29.166305+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

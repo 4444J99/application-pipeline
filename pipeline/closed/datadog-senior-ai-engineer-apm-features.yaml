@@ -1,0 +1,115 @@
+id: datadog-senior-ai-engineer-apm-features
+name: Datadog Senior AI Engineer - APM Features
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Datadog
+  url: https://boards.greenhouse.io/datadog
+  application_url: https://careers.datadoghq.com/detail/7601886/?gh_jid=7601886
+  portal: greenhouse
+  location: Paris, France
+  location_class: international
+  description: <p>The APM Features team builds intelligent troubleshooting experiences
+    that help customers quickly understand and resolve performance issues in complex
+    distributed systems. We work at the intersection of observability, product, and
+    AI, transforming large volumes of noisy telemetry data into clear explanations,
+    insights, and actionable conclusions.</p> <p>This team is in an early, highly
+    exploratory phase of applying LLMs and agentic workflows to real production APM
+    problems. Engineers collaborate closely to prototype, test, and iterate on ideas,
+    learning from experimentation and focusing on useful, reliable customer outcomes.
+    Correctness, clarity, and product impact are central to how we work.</p> <p>As
+    one of the first AI Engineers in EMEA for this team, you’ll help shape how AI
+    engineering is practiced locally, working closely with peers to influence the
+    future of AI-powered troubleshooting at Datadog.</p> <p><em>At Datadog, we place
+    value in our office culture - the relationships that it builds, the creativity
+    it brings to the table, and the collaboration of being together. We operate as
+    a hybrid workplace to ensure our employees can create a work-life harmony that
+    best fits them.</em></p> <p>&nbsp;</p> <p><strong>What you’ll do:</strong></p>
+    <ul> <li>Design and build AI-powered troubleshooting features for APM workflows
+    using LLMs and agentic systems</li> <li>Help users diagnose and resolve performance
+    issues by synthesizing large volumes of observability data, including traces,
+    metrics, and logs</li> <li>Prototype, experiment, and iterate on AI-driven experiences,
+    using evidence and user feedback to guide decisions and focus on real user value</li>
+    <li>Define inputs, outputs, and success criteria for LLM-based systems operating
+    in evolving and sometimes ambiguous environments</li> <li>Build agentic workflows
+    with strong guardrails, balancing autonomy, safety, correctness, and reliability</li>
+    <li>Lead features end-to-end in collaboration with peers and partners, from problem
+    discovery through production and iteration</li> <li>Design and maintain evaluation
+    loops, including offline evaluations, benchmarks, and A/B tests</li> <li>Write
+    and own production backend services, contributing to reliable, scalable systems</li>
+    </ul> <p>&nbsp;</p> <p><strong>Who you are:</strong></p> <ul> <li>A senior, product-minded
+    engineer with experience shipping AI systems to production</li> <li>Comfortable
+    working in evolving problem spaces and proactively identifying meaningful opportunities
+    to build</li> <li>Hands-on experience with LLMs or agentic systems, including
+    prompting, tooling, evaluation, and guardrails</li> <li>Experience using AI coding
+    tools such as Cursor, Claude Code, or similar, with the ability to reflect on
+    what worked, what didn’t, and why</li> <li>A strong sense for correctness, failure
+    modes, and how to measure and improve quality in AI systems</li> <li>Comfortable
+    experimenting, learning from outcomes, and iterating thoughtfully</li> <li>Solid
+    ML and applied science fundamentals, including experiment design and statistics</li>
+    <li>You have demonstrated ability to use AI coding tools in day-to-day workflows
+    and validate, critique, and refine AI-generated output</li> </ul> <p><strong>Bonus
+    points:</strong></p> <p>These are helpful but not required - we don’t expect candidates
+    to have experience with everything listed below.</p> <ul> <li>Exposure to agent
+    frameworks, tool-use orchestration, retrieval-augmented generation (RAG), and
+    indexing large-scale telemetry data</li> <li>Familiarity with SLO/SLA practices
+    and incident response</li> <li>Hands-on experience with distributed tracing systems
+    (OpenTelemetry, Datadog APM), profilers, or logs and metrics pipelines</li> <li>You’re
+    motivated to push the boundaries of how AI can improve software engineering best
+    practices and contribute to building AI-enabled products</li> </ul> <p>Distributed
+    systems fundamentals and familiarity with observability concepts.</p> <p><em>Datadog
+    values people from all walks of life. We understand not everyone will meet all
+    the above qualifications on day one. That's okay. If you’re passionate about technology
+    and want to grow your skills, we encourage you to apply.&nbsp;</em></p> <h4>&nbsp;</h4>
+    <p><strong>Benefits and Growth:&nbsp;</strong></p> <ul> <li>New hire stock equity
+    (RSUs) and employee stock purchase plan (ESPP)</li> <li>Continuous professional
+    development, product training, and career pathing</li> <li>Intradepartmental mentor
+    and buddy program for in-house networking</li> <li>An inclusive company culture,
+    ability to join our Community Guilds (Datadog employee resource groups)</li> <li>Access
+    to Inclusion Talks, our Internal panel discussions</li> <li>Free, global mental
+    health benefits for employees and dependents age 6+</li> <li>Competitive global
+    benefits</li> </ul> <p><br><em>Benefits and Growth listed above may vary based
+    on the country of your employment and the nature of your employment with Datadog.</em></p>
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.965478+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

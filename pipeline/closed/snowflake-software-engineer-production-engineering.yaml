@@ -1,0 +1,88 @@
+id: snowflake-software-engineer-production-engineering
+name: 'Snowflake Software Engineer - Production Engineering '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/0745faaf-63aa-449d-8cbd-bee6e8a0632b
+  portal: ashby
+  location: PL-Warsaw
+  location_class: international
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. The Production Engineering Team at Snowflake
+    is responsible for driving the reliability tools and processes that ensure Snowflake
+    consistently delivers a top-tier experience for its customers. This includes championing
+    Service Level Objectives (SLOs) across all of Engineering, building the infrastructure
+    necessary for rapid detection of reliability issues, and deeply engaging in system
+    health verification after releases. We think about production reliability end-to-end:
+    how do we proactively prevent issues, quickly detect and diagnose problems when
+    they arise, and efficiently resolve them to minimize impact. We drive the culture
+    of learning from every incident. RESPONSIBILITIES: Improve the whole lifecycle
+    of services—from inception and design, deployment, operation, and refinement.
+    Scale systems sustainably by automation; Participate in changes that improve reliability
+    and velocity. Establish and practice low noise incident response rotations and
+    blameless postmortems to prevent problem recurrence. Write and review code. Develop
+    documentation and capacity plans, and debug the hardest problems on large distributed
+    systems. Collaborate with software engineers to establish, maintain, and optimize
+    functional and performance SLOs. Participate in a 12x7 on-call rotation. MINIMAL
+    QUALIFICATIONS: Bachelor''s degree in Computer Science, a related technical field
+    involving software engineering, or equivalent practical experience. Proficient
+    in at least one modern programming language, preferably Golang. Systematic problem-solving
+    methods, effective communication skills. PREFERRED QUALIFICATIONS: 3+ years industry
+    experience of building and supporting large scale systems in production. Experience
+    in modern observability tools and production monitoring practices. Experience
+    with containers and container orchestration systems such as Kubernetes Experience
+    in deploying, managing, and operating scalable and fault tolerant Linux infrastructure.
+    Hands-on experience with one of more public cloud providers (AWS, Azure, or GCP)
+    Snowflake is growing fast, and we’re scaling our team to help enable and accelerate
+    our growth. We are looking for people who share our values, challenge ordinary
+    thinking, and push the pace of innovation while building a future for themselves
+    and Snowflake. How do you want to make your impact? For jobs located in the United
+    States, please visit the job posting on the Snowflake Careers Site for salary
+    and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.200583+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

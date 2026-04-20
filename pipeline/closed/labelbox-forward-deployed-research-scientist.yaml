@@ -1,0 +1,116 @@
+id: labelbox-forward-deployed-research-scientist
+name: Labelbox Forward Deployed Research Scientist
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Labelbox
+  url: https://boards.greenhouse.io/labelbox
+  application_url: https://job-boards.greenhouse.io/labelbox/jobs/5101375007
+  portal: greenhouse
+  location: San Francisco Bay Area
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>Shape the Future of AI</strong></h2>
+    <p>At Labelbox, we''re building the critical infrastructure that powers breakthrough
+    AI models at leading research labs and enterprises. Since 2018, we''ve been pioneering
+    data-centric approaches that are fundamental to AI development, and our work becomes
+    even more essential as AI capabilities expand exponentially.</p> <h2><strong>About
+    Labelbox</strong></h2> <p>We''re the only company offering three integrated solutions
+    for frontier AI development:</p> <ol> <li><strong>Enterprise Platform &amp; Tools</strong>:
+    Advanced annotation tools, workflow automation, and quality control systems that
+    enable teams to produce high-quality training data at scale</li> <li><strong>Frontier
+    Data Labeling Service</strong>: Specialized data labeling through Alignerr, leveraging
+    subject matter experts for next-generation AI models</li> <li><strong>Expert Marketplace</strong>:
+    Connecting AI teams with highly skilled annotators and domain experts for flexible
+    scaling</li> </ol> <h2><strong>Why Join Us</strong></h2> <ul> <li><strong>High-Impact
+    Environment</strong>: We operate like an early-stage startup, focusing on impact
+    over process. You''ll take on expanded responsibilities quickly, with career growth
+    directly tied to your contributions.</li> <li><strong>Technical Excellence</strong>:
+    Work at the cutting edge of AI development, collaborating with industry leaders
+    and shaping the future of artificial intelligence.</li> <li><strong>Innovation
+    at Speed</strong>: We celebrate those who take ownership, move fast, and deliver
+    impact. Our environment rewards high agency and rapid execution.</li> <li><strong>Continuous
+    Growth</strong>: Every role requires continuous learning and evolution. You''ll
+    be surrounded by curious minds solving complex problems at the frontier of AI.</li>
+    <li><strong>Clear Ownership</strong>: You''ll know exactly what you''re responsible
+    for and have the autonomy to execute. We empower people to drive results through
+    clear ownership and metrics.</li> </ul></div><h2><strong>Role Overview</strong></h2>
+    <p>Alignerr is Labelbox''s human data organization — we produce the training data
+    that frontier AI labs use to build their most capable models. Our Forward Deployed
+    Research Team sits at the intersection of research science and client delivery,
+    embedding research capability directly into the engagements that drive our business.</p>
+    <p>This is not a traditional research scientist role. You will not spend months
+    pursuing a single research question. You will work on multiple client engagements
+    simultaneously, operating on timescales of days to weeks. You will sit in scoping
+    meetings with research teams at major AI labs, reason scientifically about data
+    strategy in real time, fine-tune open-weight models to validate our data methodology,
+    and collaborate with our Applied Research team to turn client-grounded findings
+    into published work. The pace is fast, the problems are applied, and the feedback
+    loops are short.</p> <p>We are looking for someone who finds that energizing,
+    not compromising.</p> <h2><strong>Your Impact</strong></h2> <ul> <li> <p><strong>Engage
+    directly with frontier lab research teams.</strong> You will be in the room during
+    client scoping meetings — not as support staff, but as a technical peer. You''ll
+    engage on methodology, challenge assumptions about data requirements, and shape
+    project specifications based on a scientific understanding of how data composition
+    affects model outcomes.</p> <p><strong>Develop deep scientific understanding of
+    client engagements.</strong> For each project, you will build a working model
+    of the client''s architecture, training methodology, and target capabilities.
+    You''ll use this understanding to reason about why a particular data strategy
+    will or won''t work, identify risks early, and iterate with empirical grounding
+    — not intuition.</p> <p><strong>Run ablation studies and fine-tune open-weight
+    models.</strong> You will fine-tune models on client data (and proxy data) to
+    empirically measure the impact of our data on model performance. This is how we
+    validate that what we deliver actually improves our customers'' models — and how
+    we catch problems before the client does.</p> <p><strong>Consult on workflow and
+    quality systems.</strong> You will partner with our Human Data Operations team
+    to review annotation schemas, task designs, and quality rubrics before projects
+    go into execution. Your job is to ensure the spec is technically sound — that
+    the data we produce will actually serve the client''s training objectives.</p>
+    <p><strong>Collaborate with Applied Research on publications and benchmarks.</strong>
+    Our Applied Research team owns the long-horizon research agenda. Your role is
+    to feed them signal from the field — generalizable findings, reusable methodologies,
+    empirical results — and help drive joint projects to completion. You will contribute
+    to benchmarks, white papers, and conference submissions tha'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-14'
+  posting_date: '2026-04-13'
+  date_source: first_published
+  date_added: '2026-04-14'
+  discovered: '2026-04-14T10:23:06.701757+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,113 @@
+id: robinhood-technical-sourcer-infrastructure-engineering
+name: Robinhood Technical Sourcer, Infrastructure Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7630005?t=gh_src=&gh_jid=7630005
+  portal: greenhouse
+  location: Toronto, Canada
+  location_class: international
+  description: '<div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><h2><strong>About the team + role</strong></h2>
+    <p>Technical Recruiting is seeking a Sourcer to join the Tech Recruiting team
+    at Robinhood. This role is essential in supporting our efforts to hire top Infrastructure
+    Engineering talent. As a Sourcer, you will collaborate with leaders across various
+    teams to identify and engage world-class candidates, ensuring a positive experience
+    for both the candidates and hiring teams. Additionally, this position offers the
+    opportunity to contribute to the broader Technical Recruiting organization as
+    needed.\</p> <p><strong>The role is located in the office location(s) listed on
+    this job description which will align with our in-office working environment.
+    Please connect with your recruiter for more information regarding our in-office
+    philosophy and expectations.</strong></p> <h2><strong>What you’ll do</strong></h2>
+    <ul> <li>Partner closely with recruiters and hiring managers to become a subject
+    matter expert for the teams you support and be able to articulate the organizational
+    impact of open positions&nbsp;</li> <li>Build and maintain diverse sourcing pipelines
+    by leveraging multiple channels (e.g., LinkedIn Recruiter, internal talent pools,
+    events, referrals, and outbound tools)</li> <li>Conduct targeted outreach and
+    manage candidate engagement through early-stage funnel steps, ensuring timely
+    follow-ups and a strong candidate experience</li> <li>Share talent market insights
+    (e.g., competitor mapping, location-specific supply, role trends) to influence
+    sourcing strategy and prioritization</li> <li>Use data to track sourcing activity,
+    pipeline health, and conversion trends while maintaining strong data integrity</li>
+    </ul> <h2><strong>What you bring</strong></h2> <ul> <li>3+ years of sourcing experience
+    (or equivalent experience in recruiting) with a focus on technical or engineering
+    roles</li> <li>Experience sourcing for Infrastructure Engineering roles (preferred)
+    or demonstrated ability to ramp quickly in a new technical domain</li> <li>Demonstrated
+    ability to proactively source and engage passive candidates (beyond inbound applicants)
+    using structured search and outreach strategies</li> <li>Strong collaboration
+    skills and comfort partnering across levels, with a clear, thoughtful communication
+    style</li> <li>Commitment to delivering an inclusive, candidate-first experience
+    throughout the sourcing process</li> <li>Outstanding written and verbal and communication
+    skills across all levels&nbsp;</li> <li>Experience using Applicant Tracking Systems
+    and recruiting tools (ideally including Greenhouse, Gem, ChatGPT, and LinkedIn
+    Recruiter)</li> </ul> <p>Our team is committed to providing an inclusive and welcoming
+    interview experience for all candidates. If you require a specific accommodation
+    during the application or interview process due to a physical or mental condition,
+    please complete this<a href="https://robinhood.hracuity.net/webform/index/752875e4-42ba-4dff-9951-fd51e315997e">
+    Applicant Accommodation Form</a> to notify our team. The form should only be completed
+    if you need a specific accommodation.</p> <p><strong>AI Usage Disclosure:</strong>
+    Robinhood uses artificial intelligence (AI) tools to support parts of our recruiting
+    process. These tools enhance the efficiency and consistency of our hiring process;
+    however, all hiring decisions are made by our hiring teams.</p> <p><strong>Vacancy
+    Notice: </strong>This job posting represents an existing vacancy that we are actively
+    seeking to fill.</p><div class="content-pay-transparency"><div class="pay-input"><div
+    class="description"><p><strong>In addition to the base pay range listed below,
+    this role is also eligible for bonus opportunities + equity + benefits.</strong></p>
+    <p>Base pay for the successful applicant will depend on a variety of job-related
+    factors, which may include education, training, experience, location, business
+    needs, or market demands. The expected base pay range for this role is based on
+    the location where the work will be performed.</p> <p><span style="text-decoration:
+    underline;">Base Pay Range:</span></p></div><div class="title">Toronto, ON</div><div
+    class="pay-range"><span>$76,500</span><span class="divider">&mdash;</span><span>$90,000
+    CAD</span></div></div></div><div class="content-conclusion"><p>Click <a href="https://careers.robinhood.com/benefits"
+    target="_blank">here</a> to learn more about our Total Rewards, which vary by
+    region and entity.</p> <p>If our mission energize'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.166476+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

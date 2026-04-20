@@ -1,0 +1,113 @@
+id: datadog-senior-ai-engineer
+name: Datadog Senior AI Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Datadog
+  url: https://boards.greenhouse.io/datadog
+  application_url: https://careers.datadoghq.com/detail/7731292/?gh_jid=7731292
+  portal: greenhouse
+  location: Paris, France
+  location_class: international
+  description: '<p>We’re a new team building AI-assisted tools to make Datadog developers
+    more effective, by autonomously generating tests, fixing bugs, and improving performance.</p>
+    <p>We’re looking for a product-minded generalist to help us quickly define and
+    ship products that make all Datadog customers 10x developers.</p> <p><em>At Datadog,
+    we place value in our office culture - the relationships and collaboration it
+    builds and the creativity it brings to the table. We operate as a hybrid workplace
+    to ensure our Datadogs can create a work-life harmony that best fits them.</em></p>
+    <h4>&nbsp;</h4> <h4>What You’ll Do:</h4> <ul> <li>Work closely with our users,
+    designers, PMs, and data scientists on cutting edge and delightful LLM-based agents.</li>
+    <li>Work on prompts, evals, and agent tools for working with code, and on the
+    engineering to productionize these systems and integrate them with Datadog products.</li>
+    <li>Prototype and see what works well in the real world, iterate closely with
+    our users, and then ship.</li> <li>Follow the latest research on LLM prompting,
+    agents, and code editing.</li> <li>Work with other Datadog teams to expand capabilities,
+    for example integrating with the Datadog IDE extensions to deliver a CoPilot-like
+    assistant, or Dynamic Instrumentation to collect more runtime data from production
+    and pre-production environments.</li> </ul> <h4>&nbsp;</h4> <h4>Who You Are:</h4>
+    <ul> <li>You’re a backend engineer with at least 5 years of professional experience
+    (Go, Java, Python) who values code simplicity and performance. You’ve shipped
+    software that uses LLMs to production.</li> <li>You are passionate about Generative
+    AI and its ability to help software engineers be more productive.</li> <li>You
+    have relevant experience with Large Language Models, large-scale systems and data
+    sets, machine learning, or adjacent fields.</li> <li>You are a great community
+    ambassador and can drive hard technical conversations towards a pragmatic solution.</li>
+    <li>You want to work in a fast, high-growth startup environment that respects
+    its engineers and customers.</li> <li>You have experience writing developer tools
+    (such as IDEs, static code analysis tools, or compilers).</li> <li>You have demonstrated
+    ability to use AI coding tools in day-to-day workflows and validate, critique,
+    and refine AI-generated output.</li> <li>Bonus: you’re motivated to push the boundaries
+    of how AI can improve software engineering best practices and contribute to building
+    AI-enabled products.</li> </ul> <p><em>Datadog values people from all walks of
+    life. We understand not everyone will meet all the above qualifications on day
+    one. That''s okay. If you’re passionate about technology and want to grow your
+    skills, we encourage you to apply.<br><br></em></p> <p><strong>Benefits and Growth:&nbsp;</strong></p>
+    <ul> <li>New hire stock equity (RSUs) and employee stock purchase plan (ESPP)</li>
+    <li>Continuous professional development, product training, and career pathing</li>
+    <li>Intradepartmental mentor and buddy program for in-house networking</li> <li>An
+    inclusive company culture, ability to join our Community Guilds (Datadog employee
+    resource groups)</li> <li>Access to Inclusion Talks, our Internal panel discussions</li>
+    <li>Free, global mental health benefits for employees and dependents age 6+</li>
+    <li>Competitive global benefits</li> </ul> <p><br><em>Benefits and Growth listed
+    above may vary based on the country of your employment and the nature of your
+    employment with Datadog.</em></p> <p>&nbsp;</p> <p style="color: white;">#LI-Hybrid</p><div
+    class="content-conclusion"><hr> <p><strong>About Datadog:&nbsp;</strong></p> <p>Datadog
+    (NASDAQ: DDOG) is a global SaaS business, delivering a rare combination of growth
+    and profitability. We are on a mission to break down silos and solve complexity
+    in the cloud age by enabling digital transformation, cloud migration, and infrastructure
+    monitoring of our customers’ entire technology stacks. Built by engineers, for
+    engineers, Datadog is used by organizations of all sizes across a wide range of
+    industries. Together, we champion professional development, diversity of thought,
+    innovation, and work excellence to empower continuous growth. Join the pack and
+    become part of a collaborative, pragmatic, and thoughtful people-first community
+    where we solve tough problems, take smart risks, and celebrate one another. Learn
+    more about #DatadogLife on <a href="https://www.instagram.com/datadoghq/?hl=en"
+    target="_blank">Instagram</a>, <a href="https://www.linkedin.com/company/datadog"
+    target="_blank">LinkedIn,</a> and <a href="https://learn.datadoghq.com/" target="_blank">Datadog
+    Learning Center. </a></p> <hr> <p data-renderer-start-pos="215"><strong data-renderer-mark="true">Equal
+    Opportunity at Datadog:</strong></p> <p>Datadog is proud to offer <a href="https://www.eeoc.gov/sites/default/files/2023-06/22-088_EEOC_KnowYourRights6.12ScreenRdr.pdf"
+    target="_blank">equal employment opportunity</a> to everyone regardles'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: creative-technologist
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/creative-technologist-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.959320+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

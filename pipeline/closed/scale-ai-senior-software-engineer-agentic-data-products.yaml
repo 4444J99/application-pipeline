@@ -1,0 +1,115 @@
+id: scale-ai-senior-software-engineer-agentic-data-products
+name: Scale AI Senior Software Engineer, Agentic Data Products
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Scale AI
+  url: https://boards.greenhouse.io/scaleai
+  application_url: https://job-boards.greenhouse.io/scaleai/jobs/4653827005
+  portal: greenhouse
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: '<p>Scale GP is Scale’s enterprise Generative AI platform, providing
+    APIs and infrastructure for knowledge retrieval, inference, evaluation, and intelligent
+    automation. We power mission-critical workflows for leading enterprises by helping
+    teams turn complex data and models into reliable, production-ready AI systems.</p>
+    <p>We’re forming a new Agentic Data Products team focused on building the next
+    generation of agent-powered tools that ground AI in real operational workflows.
+    Our goal is to help enterprises demystify their data layers and deploy intelligent,
+    agentic systems that can reason over data, take action, and deliver measurable
+    outcomes.</p> <p>This is a 0→1 build team. We’re looking for a sharp, product-minded
+    Senior Engineer who thrives in ambiguity, moves quickly, and enjoys building new
+    systems from scratch alongside customers and cross-functional partners. You’ll
+    work closely with product, forward-deployed engineers, data scientists, and applied
+    AI teams to turn real-world problems into scalable, production solutions.</p>
+    <p>If you like shipping fast, owning outcomes, and working across the stack—from
+    polished frontends to distributed backends to LLM integrations—this role is for
+    you.</p> <h3>What You’ll Do</h3> <ul> <li>Own major full-stack product areas,
+    driving features from concept and design through production deployment</li> <li>Build
+    intuitive, high-performance frontend experiences using React + TypeScript</li>
+    <li>Develop reliable backend services in Python, working with distributed systems,
+    data pipelines, and AI/ML infrastructure</li> <li>Integrate LLMs, vector databases,
+    and agentic frameworks to power intelligent workflows and decision-making systems</li>
+    <li>Ship quickly through tight experimentation loops while maintaining high quality
+    and reliability</li> <li>Help define the technical direction and architecture
+    of a brand-new team and product surface</li> <li>Adapt across the stack and learn
+    new tools as needed to solve real problems end-to-end</li> </ul> <h3>Ideal Experience</h3>
+    <ul> <li>5+ years of full-time software engineering experience</li> <li>0-1 product
+    build experience&nbsp;</li> <li>Familiarity with LLMs, embeddings, vector databases,
+    or modern AI data products/tools&nbsp;</li> <li>Experience with distributed systems
+    and cloud-based architectures</li> <li>Prior experience mentoring or leading team&nbsp;</li>
+    </ul> <h3>What We Value</h3> <ul> <li>Strong product intuition and customer empathy</li>
+    <li>Bias toward action and rapid iteration</li> <li>Ownership mentality — you
+    see problems through to outcomes</li> <li>Comfort collaborating across engineering,
+    product, data science, and applied AI</li> <li>Excitement about building agentic
+    systems that make AI genuinely useful in the real world</li> </ul> <p><em>Please
+    note that in order to maintain integrity to our Scale titling philosophy, we do
+    not internally use titles such as “senior,” but have levels to reflect seniority.
+    Our Talent Acquisition team works closely with our employees to provide them the
+    opportunity to grow their careers and demonstrate the scope of work in other ways
+    aside from job titles. If you have further questions, please direct them to your
+    recruiter and/or hiring manager, who can provide more insight.</em></p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p><em>Compensation packages at Scale
+    for eligible roles include base salary, equity, and benefits. The range displayed
+    on each job posting reflects the minimum and maximum target for new hire salaries
+    for the position, determined by work location and additional factors, including
+    job-related skills, experience, interview performance, and relevant education
+    or training. Scale employees in eligible roles are also granted equity based compensation,
+    subject to Board of Director approval. Your recruiter can share more about the
+    specific salary range for your preferred location during the hiring process, and
+    confirm whether the hired role will be eligible for equity grant. You’ll also
+    receive benefits including, but not limited to: Comprehensive health, dental and
+    vision coverage, retirement benefits, a learning and development stipend, and
+    generous PTO. Additionally, this role may be eligible for additional benefits
+    such as a commuter stipend.</em></p></div><div class="title">The base salary range
+    for this full-time position in the location of San Francisco is:</div><div class="pay-range"><span>$216,200</span><span
+    class="divider">&mdash;</span><span>$270,250 USD</span></div></div></div><div
+    class="content-conclusion"><p><strong><em>PLEASE NOTE:&nbsp;</em></strong><em>Our
+    policy requires a 90-day waiting period before reconsidering candidates for the
+    same role. This allows us to ensure a fair and thorough evaluation of all applicants.</em></p>
+    <p><strong>About Us:</strong></p> <p><em>At Scale, our mission is to develop reliable
+    AI systems for the world''s most important decisions. Our products provide the
+    high-q'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.462530+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,115 @@
+id: anduril-senior-software-engineer-devops
+name: Anduril Senior Software Engineer, DevOps
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/4954965007?gh_jid=4954965007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p>Anduril
+    Maritime delivers platforms, systems, and integrated effects in the maritime domain.
+    Our autonomous vehicles (sub-surface and surface) are the cornerstone of these
+    capabilities, and we continually strive to push the boundaries of the possible
+    in terms of endurance, autonomy and mission capability. The Maritime team develops
+    and maintains core products and payloads, and adapts and applies those products
+    to serve a wide variety of defense, IC and commercial customers in US and international
+    markets.</p> <h3>ABOUT THE JOB</h3> <p>As a Senior Software Engineer, DevOps on
+    the Maritime Digital Shipbuilding team, you will build and operate the infrastructure
+    that keeps our digital production systems running at full speed. You’ll develop
+    and manage CI/CD pipelines, automate infrastructure with code, and deploy applications
+    and machine learning models across cloud and edge environments with security,
+    traceability, and reliability in mind.<br><br>You’ll work closely with software,
+    data, and operations engineers to turn designs into working systems—streamlining
+    development, improving performance, and keeping production stable as we scale.
+    You’ll also collaborate with digital, manufacturing, and corporate technology
+    teams across Anduril in a high-tech, fast-paced culture of innovation focused
+    on solving real problems and delivering results.<br><br>If you’re driven to build
+    systems that last, thrive on deep technical challenges, and want to see your work
+    directly shape how we design, build, and sustain complex platforms, you’ll be
+    helping build the future of digital shipbuilding and the next generation of maritime
+    vehicles.</p> <h4>WHAT YOU''LL DO</h4> <ul> <li>Build and Manage CI/CD Pipelines:
+    Develop and maintain CI/CD pipelines using tools like GitHub Actions and Jfrog
+    Artifactory to ensure seamless integration and deployment of machine learning
+    models and applications.</li> <li>Infrastructure as Code (IaC): Utilize Terraform
+    and Ansible to automate infrastructure provisioning and management on cloud platforms
+    such as Azure, AWS, or Google Cloud Platform (GCP).</li> <li>Containerization
+    and Orchestration: Implement containerization solutions with Docker and manage
+    container orchestration using Kubernetes to ensure reliable deployment and scaling
+    of applications.</li> <li>Model Management and Deployment: Set up and maintain
+    model registries and feature stores (e.g., MLflow, Kubeflow), and manage deployment
+    pipelines for both batch and real-time inference.</li> <li>Monitoring and Logging:
+    Establish comprehensive monitoring and logging solutions using tools like ELK
+    Stack (Elasticsearch, Logstash, Kibana), Prometheus, and Grafana to ensure the
+    smooth operation of deployment environments.</li> <li>Collaborate with Cross-Functional
+    Teams: Work closely with development, data science, and operations teams to foster
+    collaboration and ensure the efficient and effective deployment of machine learning
+    models.</li> <li>Optimize Performance: Utilize parallel computing frameworks such
+    as CUDA and OpenCL to accelerate high-performance computing tasks, ensuring timely
+    processing of large datasets and complex simulations.</li> </ul> <h4>REQUIRED
+    QUALIFICATIONS</h4> <ul> <li>Advanced proficiency in programming languages (Python
+    for scripting and integration).</li> <li>Experience with CI/CD tools like GitHub
+    Actions, Jfrog Artifactory, and Git.</li> <li>Proficiency with IaC tools (Terraform,
+    Ansible).</li> <li>Experience with cloud platforms (Azure, AWS, GCP).</li> <li>Proficiency
+    in containerization (Docker) and container orchestration (Kubernetes).</li> <li>Knowledge
+    of model registries and feature stores (e.g., MLflow, Kubeflow).</li> <li>Experience
+    with logging and monitoring tools (ELK Stack, Prometheus, Grafana).</li> <li>Understanding
+    of parallel computing frameworks (CUDA, OpenCL).</li> <li>Strong collaboration
+    skills and proficiency with collaborative tools (JIRA, Confluence).</li> <li>Eligible
+    to obtain and maintain an active U.S. Secret security clearance.</li> </ul> <h4>PREFERRED
+    QUALIFICATIONS</h4> <ul> <li>Previous experience in a manufacturing or industrial
+    setting.</li> <li>Familiarity with observability concepts and tools.</li> <li>Knowl'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.954506+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

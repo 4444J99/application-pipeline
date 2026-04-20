@@ -1,0 +1,115 @@
+id: anthropic-audiovisual-broadcast-engineer-it-engineering
+name: Anthropic Audiovisual Broadcast Engineer, IT Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/5114812008
+  portal: greenhouse
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: <div class="content-intro"><h2><strong>About Anthropic</strong></h2>
+    <p>Anthropic’s mission is to create reliable, interpretable, and steerable AI
+    systems. We want AI to be safe and beneficial for our users and for society as
+    a whole. Our team is a quickly growing group of committed researchers, engineers,
+    policy experts, and business leaders working together to build beneficial AI systems.</p></div><h2><strong>About
+    the Role</strong></h2> <p>As an AV Broadcast Engineer, you'll serve as the technical
+    engineering lead ensuring flawless execution of the events and broadcasts that
+    enable communication across our global organization. You'll act as both technical
+    director and primary escalation point for complex production challenges, bringing
+    deep expertise in audio DSP, video broadcast systems, and camera technologies
+    to every event—from intimate executive presentations to company-wide all-hands
+    broadcasts reaching thousands of participants.</p> <p>This is an opportunity to
+    define what world-class event production looks like at a cutting-edge AI research
+    organization. You'll drive the long-term vision for how events and broadcasts
+    evolve for the audiovisual team while working at the intersection of hands-on
+    engineering and strategic infrastructure planning—making real-time technical decisions
+    during live productions while collaborating on the global broadcast standards
+    and systems that scale with our organization. Your work directly enables the collaboration
+    and transparency that advance our AI safety mission.</p> <h2 class="heading"><strong>Responsibilities</strong></h2>
+    <p><strong>Engineering Lead &amp; Technical Escalation</strong></p> <ul> <li>Serve
+    as primary technical escalation point for the events team during complex productions
+    and technical challenges</li> <li>Design and optimize audio and video systems
+    for event spaces including DSP configuration, microphone placement, and camera
+    configurations</li> <li>Troubleshoot sophisticated technical issues requiring
+    deep understanding of signal paths, network architecture, and system integration</li>
+    <li>Oversee and mentor events team members on technical best practices, equipment
+    operation, and troubleshooting methodologies</li> <li>Manage relationships with
+    AV integrators for system upgrades, installations, and complex technical support</li>
+    </ul> <p><strong>Event Production &amp; Technical Direction</strong></p> <ul>
+    <li>Work collaboratively with onsite events team to ensure seamless technical
+    execution and successful event outcomes</li> <li>Consult and design technical
+    setups for events ranging from intimate executive presentations to company-wide
+    broadcasts</li> <li>Coordinate with event stakeholders to translate production
+    goals into technical solutions and equipment requirements</li> <li>Drive global
+    event support efforts, ensuring consistent technical standards and knowledge sharing
+    across office locations</li> </ul> <p><strong>System Maintenance &amp; Optimization</strong></p>
+    <ul> <li>Oversee preventative maintenance programs for event spaces, ensuring
+    engineering-level diagnostics and procedures are followed</li> <li>Optimize existing
+    AV systems through firmware updates, DSP tuning, camera tuning, network configuration,
+    and equipment calibration</li> <li>Delegate hands-on maintenance tasks to onsite
+    technicians as appropriate while maintaining oversight and quality control</li>
+    <li>Maintain and test inventory of professional event equipment including wireless
+    microphones, cameras, and portable production gear</li> <li>Identify systemic
+    issues requiring architectural improvements and collaborate with AV Engineering
+    team on solutions</li> </ul> <p><strong>Global Broadcast Design &amp; Infrastructure</strong></p>
+    <ul> <li>Contribute to architectural decisions for broadcast studios, streaming
+    infrastructure, and event technology across global offices</li> <li>Collaborate
+    with AV Engineering team on standardization of broadcast workflows, equipment
+    specifications, and technical requirements</li> <li>Provide technical input on
+    office expansion projects requiring event spaces or broadcast capabilities</li>
+    <li>Document engineering standards, system designs, and technical specifications
+    for global deployment</li> </ul> <h2 class="heading"><strong>You May Be a Good
+    Fit If You:</strong></h2> <ul> <li>Have 7+ years of hands-on experience in broadcast
+    engineering, live sound reinforcement, or technical event production</li> <li>Possess
+    deep technical expertise in audio DSP, microphone techniques, and acoustic optimization
+    for speech</li> <li>Bring strong knowledge of video broadcast systems including
+    camera operations, signal flow, and multi-camera production</li> <li>Can operate
+    as both the engineer solving complex problems and the technical director calling
+    shots during live productions</li> <li>Excel at building relationships with stakeholders,
+    translating technical concepts into business value</li> <li>Take ownership of
+    technical quality end-to-end, from s
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.823307+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

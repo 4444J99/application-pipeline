@@ -1,0 +1,118 @@
+id: toast-senior-software-engineer-mobile-devops
+name: 'Toast Senior Software Engineer, Mobile DevOps '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7781930
+  portal: greenhouse
+  location: Remote, US
+  location_class: remote-global
+  description: "<p>Toast creates technology to help restaurants and local businesses\
+    \ succeed in a digital world, helping business owners operate, increase sales,\
+    \ engage customers, and keep employees happy.</p> <p>The Toast POS app is the\
+    \ central pillar of Toast\u2019s restaurant products. Every day, hundreds of thousands\
+    \ of servers, hosts, bartenders, and chefs use Toast\u2019s POS to serve millions\
+    \ of guests. Our POS product is constantly evolving, and the POS Productivity\
+    \ team builds the platform that makes this evolution possible.</p> <p>Our mission\
+    \ is to make it as easy as possible for 150+ Android engineers to develop new\
+    \ features and deliver them with high confidence and quality. We are customer-obsessed\u2014\
+    our customers are our fellow developers, and luckily for us, they are just a Slack\
+    \ message away! We strive to make it easy for people to do the right thing by\
+    \ default.</p> <p>The team manages a broad technical domain, including CI/CD,\
+    \ the local developer experience, and release engineering for the POS app. Its\
+    \ projects cover Android app development, Java and Kotlin backend services in\
+    \ AWS, React UIs, and more. The team is an excellent fit for Android engineers\
+    \ with experience with mobile DevOps\u2013CI/CD, and build and release processes.</p>\
+    \ <p>The team\u2019s current primary goals are boosting build speeds and significantly\
+    \ reducing our lead time to value by optimizing POS developers\u2019 build/test\
+    \ cycles, and making updates to the mobile app release platform to allow Toast\
+    \ to manage concurrent releases across multiple projects.</p> <p><strong>A day\
+    \ in the life (Responsibilities)</strong><span data-sheets-root=\"1\"><br></span></p>\
+    \ <ul> <li>Deliver rapid, high-quality output, leveraging AI tooling to accelerate\
+    \ development and improve code quality.</li> <li>Provide feedback and participate\
+    \ in code reviews to ensure implementation meets requirements.</li> <li>Participate\
+    \ in architectural discussions and influence the team\u2019s and POS teams\u2019\
+    \ technical roadmap.</li> <li>Mentor and provide technical guidance to other team\
+    \ members.</li> <li>Partner closely with the developer community, release manager\
+    \ and QA functions to develop DevEx, feature flag (FF) management and release\
+    \ strategies.</li> <li>Leverage cutting edge AI tools to enhance your development\
+    \ workflow, improve velocity, and help pioneer new approaches to building - contributing\
+    \ to a culture of innovation and productivity across the team.</li> </ul> <p><strong>What\
+    \ you'll need to thrive (Requirements)</strong></p> <ul> <li>Deep experience with\
+    \ Android development and a strong interest in full-stack work (Java/Kotlin Cloud\
+    \ services, React UIs).</li> <li>Proven experience in mobile CI/CD and release\
+    \ engineering, particularly with Jenkins and Gradle.</li> <li>A self-starter who\
+    \ takes initiative without waiting for direction and thrives in a fast-paced environment.</li>\
+    \ <li>Passionate about improving the day-to-day lives of fellow engineers and\
+    \ removing friction from their workflows.</li> <li>Ability to explain complex\
+    \ technical tradeoffs to diverse audiences and build consensus among technical\
+    \ leads.</li> <li>Experience using AI tools to enhance productivity and a drive\
+    \ to automate \"the right thing\" by default.</li> </ul> <p data-pm-slice=\"1\
+    \ 1 []\"><strong>AI at Toast</strong></p> <p>At Toast, one of our company values\
+    \ is that we're hungry to build and learn. We believe learning new AI tools empowers\
+    \ us to build for our customers faster, more independently, and with higher quality.\
+    \ We provide these tools across all disciplines, from Engineering and Product\
+    \ to Sales and Support, and are inspired by how our Toasters are already driving\
+    \ real value with them. The people who thrive here are those who embrace changes\
+    \ that let us build more for our customers; it\u2019s a core part of our culture.</p>\
+    \ <p data-pm-slice=\"1 1 []\"><strong>Our Total Rewards Philosophy&nbsp;<br></strong>We\
+    \ strive to provide competitive compensation and benefits programs that help to\
+    \ attract, retain, and motivate the best and brightest people in our industry.\
+    \ Our total rewards package goes beyond great earnings potential and provides\
+    \ the means to a healthy lifestyle with the flexibility to meet Toasters\u2019\
+    \ changing needs. Learn more about our benefits at&nbsp;<a href=\"https://careers.toasttab.com/toast-benefits\"\
+    >https://careers.toasttab.com/toast-benefits</a>.</p> <p data-pm-slice=\"1 1 []\"\
+    >#LI-REMOTE</p><div class=\"content-pay-transparency\"><div class=\"pay-input\"\
+    ><div class=\"description\"><p><span data-sheets-root=\"1\">The base salary range\
+    \ for this role is listed below. The starting salary will be determined based\
+    \ on skills, experience, and geographic location. In addition to base salary,\
+    \ our total rewards components include cash compensation (overtime, bonus/commissions\
+    \ if eligible), equity, and benefits. You can learn more about how we align pay\
+    \ with local labor markets in our <a class=\"in-cell-link\" href=\"https://careers.toasttab.com/us-pay-zones\"\
+    \ target=\"_blank\">Geographic Pay Zone Philosophy</a>.</span></p></div><div class="
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-09'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.217104+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

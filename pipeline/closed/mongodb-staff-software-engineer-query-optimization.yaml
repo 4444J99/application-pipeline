@@ -1,0 +1,116 @@
+id: mongodb-staff-software-engineer-query-optimization
+name: MongoDB Staff Software Engineer, Query (Optimization)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7602834
+  portal: greenhouse
+  location: United States
+  location_class: us-onsite
+  description: '<p>Join the MongoDB Server Query Optimization team, and help us build
+    a world-class distributed open-source query optimizer. Our team plays a crucial
+    role in the experience and performance of data processing. We are responsible
+    for the MongoDB Query Language and the lifecycle of each query, through parsing,
+    optimization and plan selection.</p> <p>We have a presence across the US and Europe
+    including New York, Dublin, Seattle, Palo Alto, and Chicago. We support office-based
+    and remote work and align projects with convenient work hours for each time zone.</p>
+    <p>We have tons of interesting problems to solve with a direct impact on users
+    for transactional, time-series, and analytical workloads. The team is endeavoring
+    to systematically rewrite every major component of our optimization and execution
+    systems. We need your help to design and build the heart of a distributed, flexible
+    schema, document database.</p> <h3><strong>Candidate Profile</strong></h3> <ul>
+    <li>10+ years of experience in data management systems</li> <li>Experience with
+    building production-level code with a large user base, robust design structure
+    and rigorous code quality</li> <li>Degree in Computer Science or similar field,
+    or equivalent practical experience, with strong competencies in data structures,
+    algorithms, and software design/architecture</li> <li>Experience with large code
+    bases written in C++ or another systems programming language. You''ll need to
+    trace down defects, estimate work complexity, and design evolution and integration
+    strategies as we rewrite different components of the system</li> <li>Passion for
+    the theory and practice of database query engines, as well as hands-on or academic
+    experience in the database domain</li> </ul> <h3><strong>Position Expectations</strong></h3>
+    <ul> <li>Innovate in the area of flexible schema databases. Help us build a world-class
+    query optimization system</li> <li>Research state-of-the art query systems to
+    inform our design</li> <li>Leverage deep knowledge of the strength and weakness
+    of the product and of industry trends to provide technical vision and direction&nbsp;</li>
+    <li>Set initiative level strategy, architect plans, and lead the team towards
+    successful execution</li> <li>Advise management on decisions related to roadmap,
+    processes, architecture and design</li> <li>Identify, design, implement, test,
+    and support new features related to query performance and robustness, query language
+    enhancements, diagnostics, and integration with other products and tools</li>
+    <li>Work with other engineers to coordinate seamless changes in a feature-rich,
+    large code base</li> <li>Work with other teams including client drivers, cloud
+    services, enterprise tools, support, consulting, education, and marketing to coordinate
+    changes or contribute to their projects</li> <li>Influence and grow team members
+    through active mentoring, coaching and leading by example</li> </ul> <h3><strong>Success
+    Measures</strong></h3> <ul> <li>In three months you’ll have contributed to the
+    development of a project slated for the next major version, as well as fixed a
+    few bugs in a minor version of our latest stable release series; You''ll have
+    learned about MongoDB''s project lifecycle, and our long-term goals for the system</li>
+    <li>In six months, you’ll have taken on code review responsibilities and are playing
+    an active role in drafting and reviewing the design for new features; You have
+    expanded the team''s horizons by presenting a favorite paper or system architecture
+    related to query systems</li> <li>In twelve months, on the basis of your extensive
+    past experience in the query space, you have contributed to the long-term technical
+    roadmap of the MongoDB Query team</li> </ul> <p>​​This role can be based out of
+    our US or Canadian offices or remotely in the North America region.<br><br></p>
+    <h3>About MongoDB</h3> <p>MongoDB is built for change, empowering our customers
+    and our people to innovate at the speed of the market. We have redefined the database
+    for the AI era, enabling innovators to create, transform, and disrupt industries
+    with software. MongoDB’s unified database platform—the most widely available,
+    globally distributed database on the market—helps organizations modernize legacy
+    workloads, embrace innovation, and unleash AI. Our cloud-native platform, MongoDB
+    Atlas, is the only globally distributed, multi-cloud database and is available
+    across AWS, Google Cloud, and Microsoft Azure.</p> <p>With offices worldwide and
+    nearly 60,000 customers—including 75% of the Fortune 100 and AI-native startups—relying
+    on MongoDB for their most important applications, we’re powering the next era
+    of software.</p> <p>Our compass at MongoDB is our <a href="https://www.mongodb.com/company">Leadership
+    Commitment,</a> guiding how and why we make decisions, show up for each other,
+    and win. It’s what makes us MongoDB.&nbsp;</p> <p>To drive the personal growth
+    and business impact of our employees, we’re committed to developing a supportive
+    and '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.358592+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

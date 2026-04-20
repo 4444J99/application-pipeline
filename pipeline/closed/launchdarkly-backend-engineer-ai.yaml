@@ -1,0 +1,113 @@
+id: launchdarkly-backend-engineer-ai
+name: LaunchDarkly Backend Engineer, AI
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: LaunchDarkly
+  url: https://boards.greenhouse.io/launchdarkly
+  application_url: https://job-boards.greenhouse.io/launchdarkly/jobs/7649833003
+  portal: greenhouse
+  location: Hybrid - San Francisco Bay Area
+  location_class: us-onsite
+  description: '<h4><strong>About the Job:</strong></h4> <p data-renderer-start-pos="5864"
+    data-local-id="2cf1e22f63a5">As a Backend Engineer on LaunchDarkly’s AI Configs
+    team, you''ll build critical systems such as the web application that customers
+    interact with on a daily basis and distributed systems that power AI evaluations
+    at scale. These systems enable customers to control, monitor, and optimize their
+    GenAI functionality. You’ll primarily work in Go and Python, and will work directly
+    with other technologies and tools such as AWS, CockroachDB, and Datadog.</p> <p
+    data-renderer-start-pos="6315" data-local-id="ecad61a986d1">LaunchDarkly’s AI
+    Configs team is on a mission to manage the complete software development lifecycle
+    for GenAI features, from configuring to benchmarking to observing and beyond.
+    This team has a huge opportunity ahead of it; we''re growing fast and we need
+    your help writing the next chapter in our story.</p> <h4>Responsibilities:</h4>
+    <ul class="ak-ul" data-local-id="51121610-94ac-48b0-b74b-6c23db82d852" data-indent-level="1">
+    <li> <p data-renderer-start-pos="6646" data-local-id="bebf36f7da34">Build and
+    maintain scalable backend services and APIs that power the AI Configs product</p>
+    </li> <li> <p data-renderer-start-pos="6737" data-local-id="ba0f527920df">Collaborate
+    with internal stakeholders, including product managers, designers, and other LaunchDarkly
+    engineering teams, to understand real-world challenges and improve GenAI workflows
+    using our own platform.</p> </li> <li> <p data-renderer-start-pos="6949" data-local-id="0d939ac82d59">Continuously
+    optimize the performance, reliability, and scalability of backend systems</p>
+    </li> <li> <p data-renderer-start-pos="7039" data-local-id="226a9b5cc791">Participate
+    in architecture and design discussions, offering thoughtful input and collaborating
+    with senior engineers to identify tradeoffs and make well-informed decisions</p>
+    </li> <li> <p data-renderer-start-pos="7215" data-local-id="5587ea801ebc">Keep
+    up-to-date with the latest developments in the AI field and in software development
+    best practices</p> </li> <li> <p data-renderer-start-pos="7322" data-local-id="e7c919c39cac">Take
+    ownership of code in production, participate in on-call rotations, and help improve
+    the reliability and maintainability of our systems over time.</p> </li> </ul>
+    <h4>Qualifications:</h4> <ul class="ak-ul" data-local-id="df799356-719b-4e22-bd8b-806bbf656739"
+    data-indent-level="1"> <li> <p data-renderer-start-pos="7501" data-local-id="1edc9fb04ad3"><span
+    class="fabric-text-color-mark" data-renderer-mark="true" data-text-custom-color="#ff5630">2-4
+    </span>years of experience with server-side programming languages (e.g. in Java
+    / Scala, Ruby, Python, Golang)</p> </li> <li>Willingness to work 2 days per week
+    in our Oakland, CA office for mentorship and learning purposes.&nbsp;</li> <li>
+    <p data-renderer-start-pos="7631" data-local-id="71c0da220703">Hands-on experience
+    building GenAI features or working with Large Language Models (LLMs), either through
+    direct model integration or leveraging AI APIs like OpenAI, Google Cloud AI, or
+    AWS Bedrock.</p> </li> <li> <p data-renderer-start-pos="7832" data-local-id="4668a3dc5012">Understanding
+    of prompt engineering, fine-tuning models, or deploying AI services in production
+    environments.</p> </li> <li> <p data-renderer-start-pos="7945" data-local-id="3bb4dc7e386e">Experience
+    with designing, implementing, and maintaining RESTful APIs</p> </li> <li> <p data-renderer-start-pos="8018"
+    data-local-id="1d2da00e0b12">Experience writing production-ready code with emphasis
+    on quality and maintainability</p> </li> <li> <p data-renderer-start-pos="8107"
+    data-local-id="edb4e3ce6710">Experience with distributed systems or data ingestion</p>
+    </li> <li> <p data-renderer-start-pos="8164" data-local-id="fcce5034f727">Strong
+    computer science fundamentals</p> </li> <li> <p data-renderer-start-pos="8204"
+    data-local-id="07909e58a25c">Committed to working in a communicative, collaborative
+    environment</p> </li> <li> <p data-renderer-start-pos="8274" data-local-id="3a8a098571a5">Comfortable
+    navigating ambiguous challenges in a rapidly evolving domain, and excited about
+    staying at the forefront of AI advancements</p> </li> <li> <p data-renderer-start-pos="8413"
+    data-local-id="37cbb51edbcf">Strong sense of ownership and accountability for
+    delivering impactful solutions</p> </li> <li> <p data-renderer-start-pos="8496"
+    data-local-id="c0c32642115e">Proven ability to work closely with Product and Design
+    teams to define requirements for new features in a fast-paced iterative environment</p>
+    </li> </ul> <div> <p class="p1"><strong>Pay:</strong></p> <p class="p1"><em>Target
+    pay ranges based on Geographic Zones* for Level 2:</em></p> <ul class="ul1"> <li
+    class="li1">Zone 1: <em>San Francisco/Bay Area or NYC Metropolitan Area, Boston,
+    Seattle</em> - $136,500 - $187,660**</li> <li class="li1">Zone 2:<em> Irvine,
+    LA, Monterey, Santa Barbara, Santa Rosa, Austin, Portland, Philadel'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.629648+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

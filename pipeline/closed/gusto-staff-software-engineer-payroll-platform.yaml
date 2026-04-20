@@ -1,0 +1,118 @@
+id: gusto-staff-software-engineer-payroll-platform
+name: Gusto Staff Software Engineer - Payroll Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Gusto
+  url: https://boards.greenhouse.io/gusto
+  application_url: https://job-boards.greenhouse.io/gusto/jobs/7441084
+  portal: greenhouse
+  location: Denver, CO;San Francisco, CA;New York, NY;Seattle, WA
+  location_class: us-onsite
+  description: "<div class=\"content-intro\"><p style=\"line-height: 1.2;\">&nbsp;</p>\
+    \ <hr> <p><strong>About Gusto</strong></p> <p><span style=\"font-weight: 400;\"\
+    >At Gusto, we're on a mission to grow the small business economy. We handle the\
+    \ hard stuff\u2014like payroll, health insurance, 401(k)s, and HR\u2014so owners\
+    \ can focus on their craft and customers. With teams in Denver, San Francisco,\
+    \ and New York, we\u2019re proud to support more than 400,000 small businesses\
+    \ across the country, and we\u2019re building a workplace that represents and\
+    \ celebrates the customers we serve. Learn more about our </span><a href=\"https://gusto.com/about/careers/total-rewards\"\
+    ><span style=\"font-weight: 400;\">Total Rewards philosophy</span></a><span style=\"\
+    font-weight: 400;\">.&nbsp;</span></p></div><p><strong>About the Role:</strong></p>\
+    \ <p>We\u2019re hiring a Staff Software Engineer to join Gusto\u2019s Payroll\
+    \ Platform team, where you\u2019ll build backend product infrastructure that powers\
+    \ payroll experiences across Gusto. This is a fully backend role focused on designing\
+    \ and evolving internal APIs and services used by other product teams to deliver\
+    \ accurate, compliant, and scalable payroll. You\u2019ll own complex technical\
+    \ problems end-to-end, partner closely with other engineering teams, and help\
+    \ raise the bar on how payroll capabilities are built and consumed across the\
+    \ company.</p> <p><strong>About the Team:</strong></p> <p>The Payroll Platform\
+    \ team builds the foundational services that make payroll possible at Gusto. Our\
+    \ customers are internal product teams building payroll, time, contractor, and\
+    \ accountant experiences, as well as external partners through Gusto Embedded\
+    \ Payroll. We focus on creating reliable, performant, and well-designed APIs that\
+    \ abstract away payroll complexity and enable teams to move faster with confidence.\
+    \ Our work sits at the intersection of backend product engineering, developer\
+    \ experience, and large-scale systems in a highly regulated domain.</p> <p><strong>Here\u2019\
+    s what you\u2019ll do day-to-day:</strong></p> <ul> <li>Design, build, and maintain\
+    \ backend services and APIs that support core payroll workflows and are consumed\
+    \ by multiple Gusto engineering teams</li> <li>Own a primary domain within the\
+    \ Payroll Platform, taking responsibility for system health, correctness, scalability,\
+    \ and long-term evolution</li> <li>Act as a technical partner to other engineering\
+    \ teams, collaborating closely to understand their needs, guide platform adoption,\
+    \ and co-design solutions that scale across use cases</li> <li>Author and drive\
+    \ architecture and design documents, contributing to technical direction while\
+    \ balancing near-term delivery with long-term platform goals</li> <li>Improve\
+    \ system performance, reliability, and observability as we scale payroll processing\
+    \ for hundreds of thousands of businesses</li> <li>Collaborate cross-functionally\
+    \ with Product, Design, Data, Compliance, and Operations to deliver compliant\
+    \ and customer-impacting solutions</li> <li>Routinely leverage AI-assisted development\
+    \ tools to accelerate development, improve code quality, and documentation, and\
+    \ help normalize and spread effective usage across the team.</li> </ul> <p><strong>&nbsp;</strong></p>\
+    \ <p><strong>Here\u2019s what we're looking for:</strong></p> <ul> <li> <ul> <li>8+\
+    \ years of professional software engineering experience, with a strong focus on\
+    \ backend development</li> <li>Experience building and scaling internal platforms,\
+    \ shared services, or foundational APIs that support multiple product teams</li>\
+    \ <li>Proven ability to work independently on ambiguous problems, from understanding\
+    \ the business need through delivery and iteration</li> <li>Strong system design\
+    \ skills, including experience with performance optimization, scalability, and\
+    \ reliability in production systems</li> <li>Actively uses AI-assisted development\
+    \ tools (LLMs, Claude Code, Cursor) in daily engineering work and is comfortable\
+    \ helping teams adopt effective, responsible usage</li> <li>Experience collaborating\
+    \ across teams and acting as a technical partner in a product-focused engineering\
+    \ organization</li> <li>Proficiency in one or more backend programming languages;\
+    \ experience with Ruby is strongly preferred but not required</li> </ul> </li>\
+    \ </ul> <p><strong>Please note that travel to Gusto\u2019s Denver office for onboarding\
+    \ is required for this position.</strong> If you have any questions regarding\
+    \ this requirement, please share with your recruiter.</p> <p>Our cash compensation\
+    \ amount for this role is targeted at $163,000/yr to $204,000/yr in Denver &amp;\
+    \ most remote locations, and $197,000/yr to $247,000/yr for San Francisco, Seattle\
+    \ &amp; New York. Stock equity is additional. Final offer amounts are determined\
+    \ by multiple factors including candidate experience and expertise and may vary\
+    \ from the amounts listed above.</p> <p>&nbsp;</p> <p>&nbsp;</p> <p>#LI-DNI</p><div\
+    \ class=\"content-conclusion\"><hr> <p><span style=\"font-weight: 400;\">Gusto\
+    \ has physical office spaces in Denver, San Francisco, and New York City. Employees\
+    \ who"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.072540+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

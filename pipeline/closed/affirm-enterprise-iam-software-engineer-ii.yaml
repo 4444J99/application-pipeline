@@ -1,0 +1,118 @@
+id: affirm-enterprise-iam-software-engineer-ii
+name: Affirm Enterprise IAM Software Engineer II
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Affirm
+  url: https://boards.greenhouse.io/affirm
+  application_url: https://job-boards.greenhouse.io/affirm/jobs/7675825003
+  portal: greenhouse
+  location: Remote Canada
+  location_class: international
+  description: "<div class=\"content-intro\"><p>Affirm is reinventing credit to make\
+    \ it more honest and friendly, giving consumers the flexibility to buy now and\
+    \ pay later without any hidden fees or compounding interest.</p></div><p>We are\
+    \ building the next generation of Identity and Access Management at Affirm. This\
+    \ role is ideal for someone who wants to break into IAM and blend software engineering\
+    \ skills with process-driven operations.</p> <p>You will support the day-to-day\
+    \ operations of our enterprise IAM program while also contributing to scripting,\
+    \ bug fixes, and backend coding. This is intentionally a 50/50 role: half focused\
+    \ on operational process and execution, and half focused on technical delivery.</p>\
+    \ <p>SailPoint is the core systems in our environment. You will work directly\
+    \ within SailPoint and the surrounding automation and integration code.</p> <h3><strong>What\
+    \ You\u2019ll Do</strong></h3> <ul> <li>Support the daily operations of our enterprise\
+    \ IAM program, including intake, triage, and execution of access lifecycle work</li>\
+    \ <li>Run and improve core IAM processes (joiner/mover/leaver, access requests,\
+    \ certifications, and break-glass patterns)</li> <li>Partner with Security, IT,\
+    \ and Engineering stakeholders to coordinate changes with clear ownership, approvals,\
+    \ and auditability</li> <li>Troubleshoot and resolve IAM-related issues, including\
+    \ access failures, provisioning bugs, and workflow errors</li> <li>Write and maintain\
+    \ scripts and small services that automate repetitive IAM tasks and reduce manual\
+    \ effort</li> <li>Contribute backend code and bug fixes in our IAM automation\
+    \ codebase (including tests and safe rollout practices)</li> <li>Help document\
+    \ runbooks, standard operating procedures, and operational metrics for the program</li>\
+    \ <li>Participate in on-call or escalation rotations as needed for IAM-owned systems</li>\
+    \ </ul> <p>Example problems you may work on:</p> <ul> <li>Debugging a provisioning\
+    \ workflow that intermittently fails and adding monitoring + automated retries</li>\
+    \ <li>Writing a script to reconcile access between source systems and SailPoint</li>\
+    \ <li>Improving a Jira intake workflow so requests are validated and routed correctly\
+    \ before execution</li> <li>Building a small API integration to connect an internal\
+    \ system to identity lifecycle events</li> </ul> <h3><strong>What We\u2019re Looking\
+    \ For</strong></h3> <ul> <li>2+ years of professional software engineering experience\
+    \ (or equivalent internship/co-op experience with strong projects)</li> <li>Ability\
+    \ to write production-quality code in Python or a similar backend language</li>\
+    \ <li>Comfort working with operational processes, tickets/requests, and cross-functional\
+    \ stakeholders</li> <li>Experience with APIs, scripting, and debugging distributed\
+    \ systems issues</li> <li>Familiarity with CI/CD and GitHub-based workflows</li>\
+    \ <li>Familiarity with cloud environments (AWS preferred)</li> <li>Strong written\
+    \ communication and documentation habits</li> </ul> <h2>Nice to Have</h2> <ul>\
+    \ <li>Any exposure to IAM/IGA/SSO concepts (e.g., SAML/OIDC, SCIM, RBAC)</li>\
+    \ <li>Experience with SailPoint, Auth0, Okta, OneLogin, or similar identity platforms</li>\
+    \ <li>Experience with infrastructure as code (Terraform or similar)</li> <li>Familiarity\
+    \ with compliance/audit-driven environments (SOC 2, SOX, ISO, PCI)</li> </ul>\
+    \ <p class=\"p-small\" data-pm-slice=\"1 1 []\">&nbsp;</p> <p class=\"p-small\"\
+    \ data-pm-slice=\"1 1 []\"><span data-formula-id=\"UiWCfEIrRy\" data-error=\"\
+    false\" data-placeholder=\"false\" data-loading=\"false\" data-recalculating=\"\
+    false\" data-inactive=\"false\">Base Pay Grade - L</span></p> <p class=\"p-small\"\
+    ><span data-formula-id=\"HGrSJuA6kN\" data-error=\"false\" data-placeholder=\"\
+    false\" data-loading=\"false\" data-recalculating=\"false\" data-inactive=\"false\"\
+    >Equity Grade - Canada 5</span></p> <p class=\"p-small\">Employees new to Affirm\
+    \ typically come in at the start of the pay range. Affirm focuses on providing\
+    \ a simple and transparent pay structure which is based on a variety of factors,\
+    \ including location, experience and job-related skills. [IF APPLICABLE] For sales\
+    \ roles, the range provided is the role\u2019s On Target Earnings (\"OTE\") range,\
+    \ which includes the annual base pay and the sales incentive target.<br><br>Base\
+    \ pay is part of a total compensation package that may include monthly stipends\
+    \ for health, wellness and tech spending, and benefits (including 100% subsidized\
+    \ medical coverage, dental and vision for you and your dependents). In addition,\
+    \ the employees may be eligible for equity rewards offered by Affirm Holdings,\
+    \ Inc. (parent company).<br><br>CAN base pay range per year: $125,000 - $175,000<br><br>#LI-Remote</p><div\
+    \ class=\"content-conclusion\"><div> <p>Affirm is proud to be a remote-first company!\
+    \ The majority of our roles are remote and you can work almost anywhere within\
+    \ the country of employment. Affirmers in proximal roles have the flexibility\
+    \ to work remotely, but will occasionally be required to work out of their assigned\
+    \ Affirm office. A limited number of roles "
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-09'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.142419+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

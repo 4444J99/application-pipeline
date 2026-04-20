@@ -1,0 +1,116 @@
+id: perplexity-backend-software-engineer
+name: 'Perplexity Backend Software Engineer '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/2b5a9f9c-7cd5-4579-b7c2-69d09e0214c8
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Perplexity is looking for an experienced Backend Engineer to join
+    our small team revolutionizing the way people search and interact with the internet.
+    You will be responsible for leading design, implementation, and scaling of backend
+    systems that power web, mobile, and browser products. Tech Stack: Python | Go
+    | Rust | TypeScript | FastAPI | PostgreSQL | Redis | Docker | vLLM | AWS Teams
+    Hiring File Agent The File Agent team builds and owns the intelligent, scalable,
+    and secure platform that enables agentic file editing and processing across Perplexity
+    products. They design the infrastructure and APIs that allow agents to autonomously
+    modify, restructure, and generate files across formats and storage systems. The
+    team delivers capabilities and performance improvements for both human-in-the-loop
+    and automated file processing. Enterprise Growth The Enterprise Growth team builds
+    the core platform capabilities that make Perplexity a secure, reliable, and adoption-driving
+    product for enterprise customers, owning end-to-end experiences across enterprise
+    authentication (SSO, SCIM, RBAC), org creation and onboarding (white-glove and
+    self-serve flows, invitations, discovery of existing orgs), and admin control
+    and visibility (feature/model/connector controls, Comet controls, audit logs,
+    usage analytics, and growth-related upsell surfaces) to ensure enterprises can
+    confidently deploy Perplexity at scale and realize measurable business impact.
+    Growth The Growth team shapes how millions of people experience Perplexity. We
+    rapidly experiment and launch new ideas across all user-facing surfaces at Perplexity
+    including onboarding, verticals like Students, and premium Max Tier. We build
+    AI-powered features such as personalized prompts, auto-generated study guides,
+    and contextual upsell nudges, driving user activation, retention, and revenue
+    across all platforms. We own Perplexity’s growth platform, including experimentation
+    framework, feature flagging, and notifications, to mobilize impactful feature
+    development across the company. Engineers have outsized impact, building both
+    the product and the platform that power our company’s growth. Commerce The Commerce
+    team owns the full commerce stack: payments infrastructure, agentic commerce capabilities,
+    and emerging monetization opportunities as we explore what''s possible. The team
+    builds and scales billing infrastructure across consumer subscriptions, enterprise
+    plans, API usage (Sonar), and premium features. We also develop and maintain secure,
+    scalable systems—including agentic payments that autonomously interact with payment
+    platforms—ensuring reliable financial transactions for millions of users worldwide.
+    By shaping both user experience and revenue infrastructure, the Commerce team
+    sits at the core of Perplexity’s growth and sustainability. Core Experience The
+    Core Experience team designs and builds the refined human‑machine interface at
+    the heart of Perplexity: the core asking experience across web, mobile, Comet
+    and Computer. We own the cross-platform foundations that make querying feel effortless—expressive
+    UX patterns, tight frontend interactions, and clear information hierarchy—while
+    maintaining the clean abstractions and performant APIs that client platform teams
+    rely on. This team is engineering-led and highly technical, working closely with
+    platform owners to solve hard cross-cutting problems and uphold uncompromising
+    standards for design, architecture, and craft. We obsess over core quality—latency,
+    reliability, and extensibility—so Perplexity stays fast, consistent, and scalable
+    as LLMs and agents evolve. Live Events With AI-powered exploration and browsing,
+    personalization and memory, live data visualization, comparison, and checkout,
+    Perplexity is reimagining the consumer experience across verticals such as travel,
+    shopping, health, real estate, finance, sports, live events and ticketing, and
+    more. Each of these verticals represents an opportunity for Perplexity to disrupt
+    massive markets dominated by slower-moving incumbents. Agentic actions powered
+    by Comet unlock novel consumer experiences such as automated shopping and travel
+    purchases, restaurant reservations, complete travel itineraries planned and booked
+    from scratch, automated investing and financial analysis, and more. Senior/Staff
+    Platform The Platform team is the backbone of Perplexity’s product reliability,
+    scalability, and performance, enabling every product and AI team to build with
+    confidence. This small, high-impact group builds and maintains critical infrastructure—from
+    backend systems such as authentication, real-time data flows, and service orchestration
+    to frontend frameworks that ensure fast, reliable, and secure user experiences.
+    By setting rigorous standards for code quality, uptime, and developer productivity,
+    the Platform team ensures everyone at Perplexity can innovate at speed on top
+    of a robust, well-architected foundation. Senior/Staff Data Platform The Data
+    Platform team builds th'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.926328+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,116 @@
+id: openai-software-engineer-reliability
+name: 'OpenAI Software Engineer, Reliability '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: OpenAI
+  url: https://jobs.ashbyhq.com/openai
+  application_url: https://jobs.ashbyhq.com/openai/1faee5e7-3b2f-4d8c-9a6f-ff0f2a4a42a7
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Join the engineering teams that bring OpenAI’s ideas safely to the
+    world!! The Applied Engineering team works across research, engineering, product,
+    and design to bring OpenAI’s technology to consumers and businesses. We seek to
+    learn from deployment and distribute the benefits of AI, while ensuring that this
+    powerful tool is used responsibly and safely. Safety is more important to us than
+    unfettered growth. About the Role As OpenAI continues to grow, we are looking
+    for experienced, problem-solving engineers to ensure our systems scale. Our success
+    depends on our ability to quickly iterate on products while also ensuring that
+    they are performant and reliable. You will work in a deeply iterative, collaborative,
+    fast-paced environment to bring our technology to millions of users around the
+    world, and ensure it’s delivered with safety and reliability in mind. Successful
+    candidates will play a crucial role in ensuring the reliability, scalability,
+    and performance of our systems as we continue to expand. As a reliability expert,
+    you will be at the forefront of maintaining and enhancing the stability, scalability,
+    and performance of our rapidly evolving infrastructure. You will work closely
+    with cross-functional teams, including software engineers, product managers, and
+    data scientists, to build and maintain resilient systems that can handle our growing
+    user base and workload. In this role, you will: Design and implement solutions
+    to ensure the scalability of our infrastructure to meet rapidly increasing demands.
+    Build and maintain the load, chaos and synthetic testing software leveraged by
+    development teams to make the systems they design and operate more reliable. Build
+    and maintain automation tools to streamline repetitive tasks and improve system
+    reliability. Build and maintain the platform for CPU/storage, GPU, and network
+    lifecycle management to drive efficiency, accountability and support dynamic optimization
+    of our resources. Implement fault-tolerant and resilient design patterns to minimize
+    service disruptions. Develop and maintain service level objectives (SLOs) and
+    service level indicators (SLIs) to measure and ensure system reliability. Partner
+    with researchers, engineers, product managers, and designers to bring new features
+    and research capabilities to the world. Participate in an on-call rotation to
+    respond to critical incidents and ensure 24/7 system availability. You might thrive
+    in this role if you: Have a track record of accelerating engineering reliability
+    by empowering your fellow engineers with excellent tooling and systems. Have a
+    humble attitude, an eagerness to help your colleagues, and a desire to do whatever
+    it takes to make the team succeed. Own problems end-to-end, and are willing to
+    pick up whatever knowledge you''re missing to get the job done. Enjoy seeking
+    out and addressing bottlenecks and areas for performance improvement in our systems.
+    Utilize Infrastructure as Code (IaC) principles to automate infrastructure provisioning
+    and configuration management. Are experienced in collaborating with cross-functional
+    teams to ensure that reliability and scalability are considered in the design
+    and development of new features and services. Qualifications: Bachelor''s degree
+    in Computer Science, Information Technology, or a related field (or equivalent
+    work experience). Proven experience as an SWE focused on reliability or a similar
+    role in a fast-paced, rapidly scaling company. Strong proficiency in cloud infrastructure.
+    Proficiency in programming languages. Experience with containerization technologies
+    and container orchestration platforms like Kubernetes. Knowledge of IaC tools
+    such as Terraform or CloudFormation. Excellent problem-solving and troubleshooting
+    skills. Strong communication and collaboration skills. Experience with observability
+    tools such as DataDog, Prometheus, Grafana and Splunk. Experience with microservices
+    architecture and service mesh technologies. Knowledge of security best practices
+    in cloud environments. This role is exclusively based in our San Francisco HQ.
+    We offer relocation assistance to new employees. About OpenAI OpenAI is an AI
+    research and deployment company dedicated to ensuring that general-purpose artificial
+    intelligence benefits all of humanity. We push the boundaries of the capabilities
+    of AI systems and seek to safely deploy them to the world through our products.
+    AI is an extremely powerful tool that must be created with safety and human needs
+    at its core, and to achieve our mission, we must encompass and value the many
+    different perspectives, voices, and experiences that form the full spectrum of
+    humanity. We are an equal opportunity employer, and we do not discriminate on
+    the basis of race, religion, color, national origin, sex, sexual orientation,
+    age, veteran status, disability, genetic information, or other applicable legally
+    protected characteristic. For additional information, please see OpenAI’s Affirmative
+    Action and Equal Employment Opportu'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.437171+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

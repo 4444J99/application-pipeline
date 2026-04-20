@@ -1,0 +1,107 @@
+id: snowflake-senior-software-engineer-database-engineering
+name: Snowflake Senior Software Engineer - Database Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/6dab6ed8-97c8-4413-b95f-31b84dafd5c3
+  portal: ashby
+  location: US-WA-Bellevue
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Snowflake is a high-growth, cloud-native data
+    platform company committed to empowering enterprises to achieve their full potential.
+    With a culture built on impact, innovation, and collaboration, we offer an environment
+    where you can build large-scale systems, move fast, and take your technology career
+    to the next level. We are seeking a highly talented and experienced Software Engineer
+    to join our Database Engineering team. In this role, you will be a key contributor
+    to the evolution of our core product: an elastic, large-scale, high-performance
+    data processing system. We are looking for smart, enthusiastic engineers who can
+    quickly master complex technical areas and are passionate about building new,
+    industry-leading technologies. AS A SOFTWARE ENGINEER AT SNOWFLAKE, YOU WILL:
+    Design and implement novel query optimization or distributed data processing algorithms
+    to maintain Snowflake''s industry-leading data warehousing capabilities. Design,
+    develop, and support a petabyte-scale cloud database system, ensuring it is highly
+    parallel and fault-tolerant. Develop and implement the new service architecture
+    required to enable the next generation of the Snowflake Data Cloud. Analyze, understand,
+    and resolve complex performance and scalability bottlenecks within the system.
+    Own the end-to-end delivery of your projects, including identifying solutions,
+    design, implementation, rigorous testing, and safe production rollout. Ensure
+    operational readiness and execute production operations of services, meeting our
+    customer commitments for durability, availability, and performance. Build high-quality,
+    highly reliable software that meets the demands of the world''s largest companies.
+    Develop tools to provide customers with greater insight into their workloads.
+    Evangelize best practices for database usage and end-to-end system architecture.
+    Mentor and support the professional growth of junior engineers on the team. OUR
+    IDEAL SOFTWARE ENGINEER WILL HAVE: 5+ years of industry experience working on
+    commercial or open-source software. Strong fluency in Java or C++. Excellent problem-solving
+    skills and a deep understanding of Computer Science fundamentals, including data
+    structures, algorithms, and distributed systems. Strong systems programming skills,
+    including experience with multi-threading and concurrency. A solid foundation
+    in distributed systems concepts (e.g., consistency, scaling, failure recovery).
+    Experience with implementation testing, debugging, and documentation , specifically
+    within a Linux development environment. Bachelor’s degree or foreign equivalent
+    in Computer Science, Software Engineering, or a related field. BONUS POINTS FOR
+    EXPERIENCE WITH THE FOLLOWING: SQL or other database technologies including internal
+    design and implementation. Query optimization, query execution, compiler design
+    and implementation. Experience with internals of distributed key value stores
+    like FoundationDB and storage engines like RocksDB, InnoDB, BerkeleyDB etc. Experience
+    with MySQL, PostgreSQL internals Data warehouse design, database systems, and
+    large-scale data processing solutions like Hadoop and Spark. Experience in database
+    replication technology Big data storage technologies and their applications, e.g.,
+    HDFS, Cassandra, Columnar Databases, etc. Every Snowflake employee is expected
+    to follow the company’s confidentiality and security standards for handling sensitive
+    data. Snowflake employees must abide by the company’s data security plan as an
+    essential part of their duties. It is every employee''s duty to keep customer
+    information secure and confidential. Snowflake is growing fast, and we’re scaling
+    our team to help enable and accelerate our growth. We are looking for people who
+    share our values, challenge ordinary thinking, and push the pace of innovation
+    while building a future for themselves and Snowflake. How do you want to make
+    your impact? For jobs located in the United States, please visit the job posting
+    on the Snowflake Careers Site for salary and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.189183+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

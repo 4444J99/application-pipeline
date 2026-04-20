@@ -1,0 +1,110 @@
+id: replit-senior-software-engineer-agent-platform
+name: Replit Senior Software Engineer, Agent Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Replit
+  url: https://jobs.ashbyhq.com/replit
+  application_url: https://jobs.ashbyhq.com/replit/b82de6f8-aebf-47b8-8bdc-39ea33807975
+  portal: ashby
+  location: Foster City, CA (Hybrid) In office M,W,F
+  location_class: us-onsite
+  description: 'Replit is the agentic software creation platform that enables anyone
+    to build applications using natural language. With millions of users worldwide,
+    Replit is democratizing software development by removing traditional barriers
+    to application creation. About Replit Replit is building the world’s most ubiquitous
+    AI coding agent. Replit Agent can be used by anybody to bring their ideas to life.
+    Whether it’s an app for yourself, the next great startup idea, or a tool to make
+    you more productive at work, Replit Agent can help build it. Replit is also the
+    leader in secure vibe coding. We protect apps, give users features to manage security
+    risks, and help them vibe code more safely. About the Role In this role you will
+    build powerful tools that help product engineers iterate rapidly on the Agent
+    experience and directly enhance the core Agent itself. You’ll bridge the gap between
+    the AI team (working on the core Agent logic) and the UX team (crafting delightful
+    Agent experiences), enabling both groups to excel within their specialties. This
+    role blends systems engineering, developer experience and product engineering.
+    We tackle complex challenges across the full stack, from browser-based interfaces
+    to high-performance backends to Linux systems engineering. We’re looking for engineers
+    who have a keen sense of the product experience and how to power it with performant
+    systems. On this team, you’ll have the opportunity to grow your skills across
+    our infrastructure and product, and to lead end-to-end efforts with meaningful
+    impact. We value diverse perspectives and encourage candidates from all backgrounds
+    and experiences to apply. You Will Build high-throughput backend applications
+    and services, like streaming chat between user and agent. Design a collaborative
+    "Multiplayer Computer" that lets humans and AI agents work together on shared
+    shells, filesystems, and state—conflict-free and in real time. Develop infrastructure
+    (frontend & backend) that empowers product engineers to rapidly ship delightful
+    user experiences. Design and build durable, well-crafted interfaces between the
+    Agent and internal systems, as well as external agentic systems (MCP) Required
+    Skills and Experience 5+ years professional experience in building backend services,
+    systems and platforms Someone who values simplicity and pragmatism—you think radically
+    but ship incrementally. Self-directed and comfortable working autonomously. Collaborative
+    and team-oriented with a strong sense of shared ownership. Preferred Qualifications
+    Experience across the full-stack. Experience building AI powered tooling or products.
+    Experience with collaborative editing technologies such as Operational Transforms
+    (OT), CRDTs, or the inner workings of Git. Experience with event sourcing systems.
+    What We Value Problem-solving mindset: Ability to approach complex operational
+    challenges systematically and devise effective solutions Self-directed and autonomous:
+    Capable of working independently while collaborating effectively with cross-functional
+    teams Strong communication skills: Ability to explain complex technical concepts
+    to both technical and non-technical audiences Continuous learning: Passion for
+    staying current with industry best practices and new technologies Focus on automation:
+    Strong belief in automating repetitive tasks and building self-healing systems
+    This is a full-time role that can be held from our Foster City, CA office. The
+    hybrid role has an in-office requirement of Monday, Wednesday, and Friday. Full-Time
+    Employee Benefits Include: 💰 Competitive Salary & Equity 💹 401(k) Program with
+    a 4% match ⚕️ Health, Dental, Vision and Life Insurance 🩼 Short Term and Long
+    Term Disability 🚼 Paid Parental, Medical, Caregiver Leave 🚗 Commuter Benefits
+    📱 Monthly Wellness Stipend 🧑‍💻 Autonomous Work Environment 🖥 In Office Set-Up
+    Reimbursement 🏝 Flexible Time Off (FTO) + Holidays 🚀 Quarterly Team Gatherings
+    ☕ In Office Amenities Want to learn more about what we are up to? Meet the Replit
+    Agent Replit: Make an app for that Replit Blog Amjad TED Talk Interviewing + Culture
+    at Replit Operating Principles Reasons not to work at Replit To achieve our mission
+    of making programming more accessible around the world, we need our team to be
+    representative of the world. We welcome your unique perspective and experiences
+    in shaping this product. We encourage people from all kinds of backgrounds to
+    apply, including and especially candidates from underrepresented and non-traditional
+    backgrounds.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.956164+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

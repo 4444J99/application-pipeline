@@ -1,0 +1,116 @@
+id: cloudflare-senior-solutions-engineer-based-in-melbourne
+name: Cloudflare Senior Solutions Engineer (based in Melbourne)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Cloudflare
+  url: https://boards.greenhouse.io/cloudflare
+  application_url: https://boards.greenhouse.io/cloudflare/jobs/7794080?gh_jid=7794080
+  portal: greenhouse
+  location: Distributed
+  location_class: unknown
+  description: '<div class="content-intro"><div><strong>About Us</strong></div> <div>
+    <p>At Cloudflare, we are on a mission to help build a better Internet. Today the
+    company runs one of the world’s largest networks that powers millions of websites
+    and other Internet properties for customers ranging from individual bloggers to
+    SMBs to Fortune 500 companies. Cloudflare protects and accelerates any Internet
+    application online without adding hardware, installing software, or changing a
+    line of code. Internet properties powered by Cloudflare all have web traffic routed
+    through its intelligent global network, which gets smarter with every request.
+    As a result, they see significant improvement in performance and a decrease in
+    spam and other attacks. Cloudflare was named to Entrepreneur Magazine’s Top Company
+    Cultures list and ranked among the World’s Most Innovative Companies by Fast Company.&nbsp;</p>
+    <p>At Cloudflare, we’re not looking for people who wait for a polished roadmap;
+    we’re looking for the builders who see the cracks in the Internet that everyone
+    else has simply learned to live with. We value candidates who have the instinct
+    to spot a "normalized" problem and the AI-native curiosity to create a solution
+    using the latest tools. Our culture is built on iteration, leveraging AI to ship
+    faster today to make it better tomorrow, while ensuring that every improvement,
+    no matter how small, is shared across the team to lift everyone up. If you’re
+    the type of person who values curiosity over bureaucracy, and that AI is a partner
+    in solving tough problems to keep the Internet moving forward, you’ll fit right
+    in.</p> </div></div><p><strong>Available Location: Melbourne</strong>, <strong>Australia</strong></p>
+    <hr> <p><strong>About the Role</strong></p> <p>We have an exciting opportunity
+    for an experienced Senior Solutions Engineer to work with our top tier customers
+    and become their Trusted Advisor for their security and business goals. The successful
+    applicant will have a track record of working with large enterprise organisations
+    in driving business and technical outcomes through technology solutions, with
+    experience in engaging at the C-level with Business and Technology stakeholders.<br><br><strong>Responsibilities:</strong></p>
+    <ul> <li>Land an end-to-end value prop for web security &amp; performance that
+    spans the breadth of Cloudflare Product offerings.</li> <li>Empower customers
+    in their security adoption journey, helping them to define a secure strategy,&nbsp;</li>
+    <li>Architecture of necessary security controls aligned with Cloudflare Security
+    and Performance product suites</li> <li>You will work closely with Account Executives
+    to educate your prospective customers on how they can obtain success on the Cloudflare
+    platform</li> <li>Apply technical knowledge to architect security solutions that
+    meet business, IT, Regulation and Compliance needs, infusing key security technologies
+    where appropriate.</li> <li>Be a Voice of the Customer to share insights and best
+    practices, connect with Global Engineering and Product teams at Cloudflare to
+    remove blockers and influence the roadmap.</li> <li>Maintain long-term trusted
+    adviser relationships with the peers at your customers and work hand-in-hand with
+    the Customer Success team to ensure your customers are delighted with Cloudflare
+    offerings.</li> </ul> <p><strong>Key Skills:</strong></p> <ul> <li>7+ years experience
+    in a pre-sales SE role;</li> <li>Relationship Building. Proven track record of
+    building deep technical relationships with senior security executives in large
+    or highly strategic accounts. Experience in managing various stakeholder relationships
+    to get consensus on security solutions/projects.</li> <li>Problem Solving. Ability
+    to solve customer security, compliance, and data protection problems through Cloudflare''s
+    technology stack . Acknowledged for driving decisions collaboratively, resolving
+    conflicts and ensuring follow through with exceptional verbal and written communication
+    skills. Presentation skills with a high degree of comfort with both large and
+    small audiences (Senior Executives, Security teams, Security admins, DevSecOps,
+    Cloud Security architect teams).</li> <li>Customer Focus. Customer obsessed leader
+    with an “I will get it done" approach to solving customer challenges.</li> <li>Value
+    Realisation. Ability to understand customer business objectives and outcomes and
+    the ability to quickly leverage tech solutions to accomplish those outcomes.</li>
+    <li>Trusted Technical Advisor. Ability to build strong relationships with senior
+    security stakeholders and quickly build credibility and be viewed as a trusted
+    advisor.</li> </ul> <p><strong>Technical Skills:</strong></p> <ul> <li>Understanding
+    of “how the internet works”. For example: Know the differences between TCP &amp;
+    UDP, and understand what kinds of applications may favor one over the other;</li>
+    <li>Can explain the difference between authoritative DNS &amp; recursive DNS;</li>
+    <li>Understand the role '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-09'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.168986+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

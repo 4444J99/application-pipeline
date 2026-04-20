@@ -1,0 +1,116 @@
+id: harvey-ai-staff-software-engineer-core-infrastructure
+name: Harvey AI Staff Software Engineer, Core Infrastructure
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Harvey AI
+  url: https://jobs.ashbyhq.com/harvey
+  application_url: https://jobs.ashbyhq.com/harvey/15dfbe0b-f6e2-4bee-a906-65e31dfc5b23
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: Why Harvey At Harvey, we’re transforming how legal and professional
+    services operate — not incrementally, but end-to-end. By combining frontier agentic
+    AI, an enterprise-grade platform, and deep domain expertise, we’re reshaping how
+    critical knowledge work gets done for decades to come. This is a rare chance to
+    help build a generational company at a true inflection point. With 1000+ customers
+    in 58+ countries, strong product-market fit, and world-class investor support,
+    we’re scaling fast and defining a new category in real time. The work is ambitious,
+    the bar is high, and the opportunity for growth — personal, professional, and
+    financial — is unmatched. Our team is sharp, motivated, and deeply committed to
+    the mission. We move fast, operate with intensity, and take real ownership of
+    the problems we tackle — from early thinking to long-term outcomes. We stay close
+    to our customers — from leadership to engineers — and work together to solve real
+    problems with urgency and care. If you thrive in ambiguity, push for excellence,
+    and want to help shape the future of work alongside others who raise the bar,
+    we invite you to build with us. At Harvey, the future of professional services
+    is being written today — and we’re just getting started. Role Overview As a Staff
+    Software Engineer on the Core Infrastructure team at Harvey, you'll play a critical
+    role in designing and building new infrastructure systems while equally scaling
+    and strengthening our existing infrastructure. Our infrastructure is the foundation
+    that powers every user interaction with Harvey — processing billions of prompt
+    tokens and millions of daily requests across our global legal AI platform. You'll
+    work in an environment balanced between innovation — building new systems — and
+    operational excellence, ensuring that Harvey remains resilient and efficient as
+    it scales products, regions, customers, and usage. Your contributions will directly
+    impact the reliability, scalability, and security of our platform as we serve
+    the world's leading law firms and professional service providers. This role is
+    based in San Francisco, CA. We use an in-person work model and offer relocation
+    assistance to new employees. What You’ll Do Design and build scalable, fault-tolerant
+    infrastructure systems that power Harvey's AI platform across multiple cloud regions
+    Own and evolve our multi-cloud infrastructure (Azure, GCP), including Kubernetes
+    orchestration, networking, and container management Lead technical initiatives
+    around observability, incident response, and operational excellence — building
+    systems that enable rapid detection and resolution of issues Architect and optimize
+    our distributed systems for reliability, including load balancing, quota management,
+    and failover mechanisms Partner with Product Engineering and Security teams to
+    ensure our infrastructure is an accelerant, not a constraint Drive infrastructure-as-code
+    practices using tools like Terraform and Pulumi to enable reproducible, auditable
+    deployments Mentor engineers and raise the technical bar across the organization
+    through code reviews, design reviews, and technical leadership Representative
+    Projects Design and implement a next-generation model proxy architecture that
+    routes millions of daily inference requests while maintaining model API compatibility
+    and enabling seamless model integration Build distributed rate limiting and quota
+    management systems using Redis-backed algorithms to handle bursty traffic patterns
+    without degrading user experience Architect multi-region deployment strategies
+    that meet strict data residency requirements for global enterprise customers Develop
+    comprehensive observability infrastructure with granular SLA monitoring, burn
+    rate alerts, and detailed token attribution for cost tracking Lead the evolution
+    of our CI/CD pipelines to improve developer velocity while maintaining production
+    stability What You Have 10+ years of experience in Infrastructure Engineering
+    or Platform Engineering in a production environment Long track record building
+    and scaling complex, large-scale distributed systems Deep proficiency with cloud
+    infrastructure platforms (Azure preferred; GCP or AWS experience transfers well)
+    Strong fluency in Infrastructure as Code (IaC) tools — Terraform, Pulumi, or CloudFormation
+    Solid understanding of Kubernetes, container orchestration, networking, and cloud
+    security at scale Experience with observability tools (Datadog, Sentry) and incident
+    response practices (PagerDuty, Incident.io ) Strong programming skills in Python,
+    Go, or similar languages Excellent problem-solving skills, a "spidey sense" of
+    where things could go wrong, and a commitment to operational excellence Nice to
+    Have Experience building infrastructure for AI/ML workloads or high-throughput
+    inference systems Background with distributed rate limiting, load balancing, or
+    quota management systems Experience operating multi-tenant platforms with strict
+    security and compliance requirements Track record
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.977971+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

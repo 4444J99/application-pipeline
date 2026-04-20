@@ -1,0 +1,115 @@
+id: anduril-senior-software-engineer-data-analytics
+name: Anduril Senior Software Engineer, Data & Analytics
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/4874833007?gh_jid=4874833007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p>The
+    Data &amp; Analytics team builds the core data infrastructure that powers Anduril's
+    operations. We design and implement scalable data architectures that model how
+    Anduril functions across the organization. You will develop high-performance data
+    systems that serve as the digital twin of our operations, creating both the backend
+    services and internal-facing applications that drive mission-critical decision-making.
+    If you are invested in Anduril's mission and interested in building mission-critical
+    data systems, you're in the right place.</p> <h3>ABOUT THE JOB</h3> <p>We're looking
+    for people who excel at building robust data systems. Designing schemas, optimizing
+    performance, and writing the code that powers data-intensive applications. You
+    prioritize engineering excellence and are interested in pushing the boundaries
+    of what data systems can achieve within an organization - never settling for pipelines
+    to dashboards and always pushing the bounds of what is possible . As a Senior
+    Software Engineer, you should be a technical all-star who can take complicated
+    or opaque asks and turn them into business value.<br><br><strong>WHAT YOU'LL DO</strong></p>
+    <p>&nbsp;</p> <ul> <li>Design and implement scalable database schemas and data
+    models that serve Anduril's core operational needs</li> <li>Build performant data
+    processing pipelines that transform raw data for dozens of use cases</li> <li>Architect
+    end-to-end data solutions - from database design through service layers to integration
+    points to frontend applications</li> <li>Collaborate with cross-functional stakeholders
+    to understand complex business requirements and translate them into technical
+    solutions</li> <li>Contribute to the technical roadmap for our data systems and
+    help make critical architecture decisions</li> <li>Implement and enforce best
+    practices for data integrity, security, and performance optimization</li> <li>Build
+    domain expertise in areas such as Finance, Supply Chain, Manufacturing, People,
+    and Sustainment to better design data models</li> <li>Be a force multiplier for
+    the Data &amp; Analytics team - embody our principle of Velocity.</li> <li>Palantir
+    Foundry is our central hub for data driven applications, visualizations and large
+    scale data analysis across the Anduril org. We manage a large user base and provide
+    true data self service at scale.</li> <li>We use SQLMesh for data transformations,
+    giving our engineers the ability to work with SQL while enjoying software engineering
+    best practices like version control, testing, and CI/CD for data pipelines.</li>
+    <li>For querying data, we utilize Athena, an aws serverless solution that allows
+    our team to run analytics directly on our data lake without managing infrastructure.</li>
+    <li>We've implemented Apache Iceberg as our table format, providing advanced data
+    management capabilities like schema evolution and time travel queries.</li> <li>We
+    use Flyte for orchestration. It is a highly scalable, kubernetes native modern
+    orchestration platform similar to Airflow or Dagster.</li> </ul> <p>&nbsp;</p>
+    <h4><strong>REQUIRED QUALIFICATIONS</strong></h4> <p>&nbsp;</p> <ul> <li>5+ years
+    of professional software engineering experience with a focus on data-intensive
+    applications</li> <li>Strong experience in database design and optimization</li>
+    <li>Proficiency in Python &amp; SQL</li> <li>Experience with cloud infrastructure
+    and distributed systems</li> <li>Understanding of data modeling concepts and best
+    practices</li> <li>Experience implementing security controls for sensitive data</li>
+    <li>Ability to drive technical projects from conception to completion in a fast-paced
+    environment</li> <li>Excellent communication skills and ability to collaborate
+    with cross-functional teams</li> <li>Eligible to obtain and maintain an active
+    U.S. Secret security clearance</li> </ul> <p>&nbsp;</p> <p>&nbsp;</p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="title">US Salary Range</div><div class="pay-range"><span>$166,000</span><span
+    class="divider">&mdash;</span><span>$220,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based o
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.948820+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

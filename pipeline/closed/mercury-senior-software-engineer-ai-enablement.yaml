@@ -1,0 +1,120 @@
+id: mercury-senior-software-engineer-ai-enablement
+name: Mercury Senior Software Engineer - AI Enablement
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Mercury
+  url: https://boards.greenhouse.io/mercury
+  application_url: https://job-boards.greenhouse.io/mercury/jobs/5850044004
+  portal: greenhouse
+  location: San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada
+    or United States
+  location_class: us-remote
+  description: "<p>In 1600, William Gilbert published&nbsp;<em>De Magnete</em>\u2014\
+    the first systematic study of magnetism. He didn't just theorize; he built instruments,\
+    \ ran experiments, and shared what he learned so that others could go further.\
+    \ Three centuries later, those foundations helped power the modern world.</p>\
+    \ <p>At Mercury, we're making a deliberate, company-wide bet on AI. Frontier users\
+    \ are already pushing boundaries\u2014building agents, automating workflows, moving\
+    \ fast. But they're doing it in silos. This role exists to change that: to take\
+    \ those scattered experiments and turn them into shared infrastructure, shared\
+    \ context, and shared capability. The goal is a multiplier effect\u2014where the\
+    \ most ambitious AI work inside Mercury lifts the velocity of everyone else.</p>\
+    \ <h2><strong>What you'll do</strong></h2> <p>You'll join a team that has already\
+    \ started building Mercury's internal AI platform and enablement layer. Your work\
+    \ will be to <strong>extend, harden, and scale what's in motion</strong>, and\
+    \ to help partner teams adopt it.</p> <h3><strong>Extend the AI platform foundation</strong></h3>\
+    \ <ul> <li>Build and evolve MCP servers that connect internal systems and data\
+    \ sources into a coherent interface for agents and engineers.</li> <li>Expand\
+    \ and operate our LLM gateway infrastructure: routing, rate limiting, cost attribution,\
+    \ and observability across teams.</li> <li>Turn early patterns into durable defaults:\
+    \ shared prompt libraries, guardrails, and policy-as-code so teams can move fast\
+    \ safely.</li> </ul> <h3><strong>Strengthen the shared company knowledge layer</strong></h3>\
+    \ <ul> <li>Shape and maintain structured context artifacts\u2014clean, reliable,\
+    \ agent-consumable\u2014so LLMs working in Mercury's systems can reason accurately\
+    \ about our domain.</li> <li>Improve internal knowledge discoverability and retrieval\
+    \ so both humans and agents can quickly find accurate answers.</li> <li>Partner\
+    \ with domain teams to standardize key sources of truth, and keep them fresh.</li>\
+    \ </ul> <h3><strong>Enable faster prototyping and iteration across the company</strong></h3>\
+    \ <ul> <li>Build and refine sandbox environments and tooling that let engineers\
+    \ experiment with AI safely and at speed.</li> <li>Create self-service scaffolding\
+    \ so non-engineers\u2014PMs, ops, finance\u2014can prototype and deploy AI-powered\
+    \ workflows with minimal hand-holding.</li> <li>Build playgrounds and evaluation\
+    \ harnesses so internal AI agents can be tested and iterated in controlled environments\
+    \ before hitting production.</li> </ul> <p><em>This list is illustrative. Priorities\
+    \ will shift as we learn; the right person will help choose the next highest-leverage\
+    \ work.</em></p> <h2><strong>The ideal candidate</strong></h2> <ul> <li>Has 5+\
+    \ years of backend development experience in complex, production systems\u2014\
+    you've built things that other engineers depended on.</li> <li>Is fluent across\
+    \ programming languages and can navigate platform engineering, infrastructure,\
+    \ and developer tooling without needing a map.</li> <li>Has hands-on experience\
+    \ building LLM-powered systems\u2014RAG pipelines, agents, eval frameworks\u2014\
+    and has shipped at least one of these to production.</li> <li>Understands the\
+    \ real tradeoffs in AI deployments: cost modeling, observability, latency, and\
+    \ safety\u2014not just the exciting parts.</li> <li>Is high-agency and self-directed.\
+    \ You can operate effectively without tightly-defined scope, find the highest-leverage\
+    \ work, and get it done.</li> <li>Communicates clearly across technical and non-technical\
+    \ audiences\u2014you can explain what you built and why it matters.</li> </ul>\
+    \ <p>The total rewards package at Mercury includes base salary, equity, and benefits.\
+    \ Our salary and equity ranges are highly competitive within the SaaS and fintech\
+    \ industry and are updated regularly using the most reliable compensation survey\
+    \ data for our industry. New hire offers are made based on a candidate\u2019s\
+    \ experience, expertise, geographic location, and internal pay equity relative\
+    \ to peers.</p> <p>Our target new hire base salary ranges for this role are the\
+    \ following:</p> <ul> <li>US employees (any location): $166,600 - $218,700</li>\
+    \ <li>Canadian employees (any location): CAD 157,400 - 206,650</li> </ul> <p>Mercury\
+    \ values diversity &amp; belonging and is proud to be an Equal Employment Opportunity\
+    \ employer. All individuals seeking employment at Mercury are considered without\
+    \ regard to race, color, religion, national origin, age, sex, marital status,\
+    \ ancestry, physical or mental disability, veteran status, gender identity, sexual\
+    \ orientation, or any other legally protected characteristic. We are committed\
+    \ to providing reasonable accommodations throughout the recruitment process for\
+    \ applicants with disabilities or special needs. If you need assistance, or an\
+    \ accommodation, please let your recruiter know once you are contacted about a\
+    \ role.</p> <p>We use Covey as part of our hiring and / or promotional process\
+    \ for jobs in NYC and certain features may qualify it as an AEDT. As part of the\
+    \ evaluation pro"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-07'
+  posting_date: '2026-04-06'
+  date_source: first_published
+  date_added: '2026-04-07'
+  discovered: '2026-04-07T10:15:28.406105+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

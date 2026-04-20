@@ -1,0 +1,116 @@
+id: notion-software-engineer-data-platform
+name: Notion Software Engineer, Data Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Notion
+  url: https://jobs.ashbyhq.com/notion
+  application_url: https://jobs.ashbyhq.com/notion/91156750-4050-4621-aa45-0fb068308d2c
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: 'About Us: Notion helps you build beautiful tools for your life’s work.
+    In today''s world of endless apps and tabs, Notion provides one place for teams
+    to get everything done, seamlessly connecting docs, notes, projects, calendar,
+    and email—with AI built in to find answers and automate work. Millions of users,
+    from individuals to large organizations like Toyota, Figma, and OpenAI, love Notion
+    for its flexibility and choose it because it helps them save time and money. In-person
+    collaboration is essential to Notion''s culture. We require all team members to
+    work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor
+    Days. Certain teams or positions may require additional in-office workdays. About
+    The Role: Join Notion’s Data Platform team as we build out the data infrastructure
+    for Notion''s next phase of large enterprise customers and novel agentic data
+    use cases. You’ll help design and build the core data platform that powers Notion’s
+    AI, analytics, and search while meeting stringent security, privacy, and compliance
+    requirements. This role focuses on the data platform layer (storage, compute,
+    pipelines, governance) and partners closely with Infrastructure, Security, Search
+    Platform, AI, and Data Engineering. What You''ll Do: Design and evolve the data
+    lakehouse Build and operate core lakehouse components (e.g., Iceberg/Hudi/Delta
+    tables, catalogs, schema management) that serve as the source of truth for analytics,
+    AI, and search. Own critical data pipelines and services Design, implement, and
+    harden batch and streaming pipelines (Spark, Kafka, etc.) that move and transform
+    data reliably across regions. Advance EKM and encryption-by-design Work with Security
+    and platform teams to integrate Enterprise Key Management (EKM) into data workflows,
+    including file- and record-level encryption and safe key handling in Spark and
+    storage systems. Improve data access, auditability, and residency Build primitives
+    for fine-grained access control, auditing, and data residency so customers can
+    see who accessed what, where, and under which guarantees. Drive reliability and
+    observability Raise the operational bar for our data stack: improve on-call experience,
+    debugging, and alerting for data jobs and services. Optimize large-scale performance
+    and cost Tackle performance and cost challenges across Kafka, Spark, and storage
+    for very large workspaces (20k+ users, multi-cell deployments) Shape the platform
+    roadmap Empower product and infrastructure engineering teams reliable, scalable
+    data infrastructure to enable novel large volume, agentic use cases. Skills You''ll
+    Need: Experience: 2+ years building and operating data platforms or large-scale
+    infrastructure for SaaS or similar environments. Programming: Strong skills in
+    at least one of Python, Scala, or Typescript; comfortable working with SQL for
+    analytics and data modeling. Distributed data systems: Hands-on experience with
+    Spark or similar distributed processing systems, including debugging and performance
+    tuning. Streaming & ingestion: Experience with Kafka or equivalent streaming systems;
+    familiarity with CDC/ingestion patterns (e.g., Debezium, Fivetran, custom connectors).
+    Lakehouse / storage: Experience with data lakes and table formats (Iceberg, Hudi,
+    or Delta) and/or data catalogs and schema evolution. Operations: Comfortable owning
+    services and pipelines in production, including on-call, incident response, and
+    reliability improvements. Nice To Haves: Experience working in an applied data
+    platform setting, such as Trust and Safety, and/or directly with enterprise customers
+    or on features like data residency, analytics product, EKM, or compliance-driven
+    auditing. Security & governance: Practical understanding of access control, encryption
+    at rest/in transit, and auditing as they apply to data platforms. Prior work on
+    Databricks, Unity Catalog, Lake Formation , or similar catalog/governance systems.
+    Experience designing or improving observability for data platforms (e.g., Honeycomb,
+    OpenTelemetry, metrics/trace-heavy debugging). Our customers come from all walks
+    of life and so do we. We hire great people from a wide variety of backgrounds,
+    not just because it''s the right thing to do, but because it makes our company
+    stronger. If you share our values and our enthusiasm for small businesses, you
+    will find a home at Notion. Notion is proud to be an equal opportunity employer.
+    We do not discriminate in hiring or any employment decision based on race, color,
+    religion, national origin, age, sex (including pregnancy, childbirth, or related
+    medical conditions), marital status, ancestry, physical or mental disability,
+    genetic information, veteran status, gender identity or expression, sexual orientation,
+    or other applicable legally protected characteristic. Notion considers qualified
+    applicants with criminal histories, consistent with applicable federal, state
+    and local law. Notion is also committed to providing reasonable accommodations
+    for qualified individua'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.727640+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

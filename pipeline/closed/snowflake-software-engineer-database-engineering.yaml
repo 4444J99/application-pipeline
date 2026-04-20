@@ -1,0 +1,98 @@
+id: snowflake-software-engineer-database-engineering
+name: Snowflake Software Engineer - Database Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/db1375f0-ea5d-404a-b640-259f94dbc995
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. We’re hiring talented Software Engineers to
+    join the Snowflake Database Engineering team! In this role you will work directly
+    with our team to evolve our elastic, large scale, high-performance data processing
+    system. We need smart engineers who can pick up and understand complex technical
+    areas quickly – and who are enthusiastic about building new technologies! AS A
+    SOFTWARE ENGINEER AT SNOWFLAKE, YOU WILL: Design, develop, and support a petabyte-scale
+    cloud database that is highly parallel and fault-tolerant. Build high-quality
+    and highly reliable software to meet the needs of some of the largest companies
+    on the planet. Analyze and understand performance and scalability bottlenecks
+    in the system and solve them. Pinpoint problems, instrument relevant components
+    as needed, and ultimately implement solutions. Design and implement novel query
+    optimization or distributed data processing algorithms which allow Snowflake to
+    provide industry leading data warehousing capabilities. Design and implement the
+    new service architecture required to enable the Snowflake Data Cloud Develop tools
+    for improving our customers'' insights into their workloads. OUR IDEAL SOFTWARE
+    ENGINEER WILL HAVE: 2+ years industry experience working on commercial or open-source
+    software. Fluency in Java or C++. Familiarity with development in a Linux environment.
+    Excellent problem solving skills, and strong CS fundamentals including data structures,
+    algorithms, and distributed systems. Systems programming skills including multi-threading,
+    concurrency, etc. Experience with implementation testing, debugging and documentation.
+    Bachelor’s degree or foreign equivalent in Computer Science, Software Engineering
+    or related field; Masters or PhD preferred. Ability to work on-site in our Menlo
+    Park / Bellevue / Berlin office. BONUS POINTS FOR EXPERIENCE WITH THE FOLLOWING:
+    SQL or other database technologies including internal design and implementation.
+    Query optimization, query execution, compiler design and implementation. Experience
+    with internals of distributed key value stores like FoundationDB and storage engines
+    like RocksDB, InnoDB, BerkeleyDB etc. Experience with MySQL, PostgreSQL internals
+    Data warehouse design, database systems, and large-scale data processing solutions
+    like Hadoop and Spark. Large scale distributed systems, transactions and consistency
+    models. Experience in database replication technology Big data storage technologies
+    and their applications, e.g., HDFS, Cassandra, Columnar Databases, etc. Every
+    Snowflake employee is expected to follow the company’s confidentiality and security
+    standards for handling sensitive data. Snowflake employees must abide by the company’s
+    data security plan as an essential part of their duties. It is every employee''s
+    duty to keep customer information secure and confidential. Snowflake is growing
+    fast, and we’re scaling our team to help enable and accelerate our growth. We
+    are looking for people who share our values, challenge ordinary thinking, and
+    push the pace of innovation while building a future for themselves and Snowflake.
+    How do you want to make your impact? For jobs located in the United States, please
+    visit the job posting on the Snowflake Careers Site for salary and benefits information:
+    careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.140882+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

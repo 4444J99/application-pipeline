@@ -1,0 +1,114 @@
+id: contentful-platform-engineer
+name: Contentful Platform Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Contentful
+  url: https://boards.greenhouse.io/contentful
+  application_url: https://job-boards.greenhouse.io/contentful/jobs/7544103
+  portal: greenhouse
+  location: Denver, Colorado, United States
+  location_class: us-onsite
+  description: '<h2>About the Opportunity</h2> <p>We are seeking a <strong>Data Platform
+    Engineer</strong> to help design, build, and scale our next-generation data platform
+    centered on <strong>Snowflake</strong>. This role will be instrumental in building
+    a modern data ecosystem leveraging tools including <strong>dbt Cloud, Airflow,
+    Atlan, Tableau, Okta, Terraform, and Monte Carlo</strong>.</p> <p>You will join
+    a small, cross-geography engineering team operating with a <strong>product mindset</strong>
+    - delivering iterative value, partnering closely with business and analytics stakeholders,
+    and owning both build and run responsibilities of a mission-critical platform.</p>
+    <h2>What to expect?</h2> <h3><strong>Platform Architecture &amp; Development</strong></h3>
+    <ul> <li>Design, implement, and evolve a scalable, secure Snowflake-based enterprise
+    data architecture.</li> <li>Build robust data transformation pipelines using <strong>dbt
+    Cloud</strong>, ensuring adherence to modeling standards and best practices.</li>
+    <li>Develop and maintain orchestrated workflows.</li> <li>Implement data governance
+    and catalog capabilities through <strong>Atlan</strong>.</li> <li>Partner with
+    analytics teams to enable performant, governed data assets for <strong>Tableau</strong>
+    and other downstream tools.</li> </ul> <h3><strong>Infrastructure &amp; DevOps</strong></h3>
+    <ul> <li>Implement Infrastructure-as-Code using <strong>Terraform</strong> for
+    provisioning data infrastructure components and foundational infrastructure in
+    AWS.</li> <li>Manage identity and access control through <strong>Okta</strong>,
+    ensuring secure, role-based authentication and authorization.</li> <li>Maintain
+    CI/CD pipelines in CircleCI, supporting reliable and automated deployment processes.</li>
+    <li>Configure monitoring, observability, and data reliability workflows with <strong>Monte
+    Carlo</strong>.</li> </ul> <h3><strong>Operational Excellence</strong></h3> <ul>
+    <li>Own and operate platform components encompassing incident response, observability,
+    performance and cost optimization.</li> <li>Maintain high availability and resilience
+    across data pipelines and platform infrastructure.</li> <li>Define and uphold
+    SLAs, runbooks, and best practices for operational support.</li> <li>Participate
+    in an on-call rotation and help improve operational processes over time.</li>
+    </ul> <h3><strong>Cross-Functional Collaboration</strong></h3> <ul> <li>Work closely
+    with data engineering, analytics, product, and security teams across geographies.</li>
+    <li>Support a product-led approach: gather requirements, shape roadmap priorities,
+    and continuously deliver iterative improvements.</li> <li>Provide technical guidance
+    and evangelize engineering best practices within the data ecosystem.</li> </ul>
+    <h2>What do you need to be successful?</h2> <h3><strong>Required</strong></h3>
+    <ul> <li>5+ years experience in data engineering, platform engineering, or similar
+    technical roles.</li> <li>Hands-on experience with <strong>Snowflake</strong>,
+    including warehouse design, performance tuning, security, and governance.</li>
+    <li>Strong proficiency with <strong>dbt (Cloud or Core)</strong> and modern data
+    modeling approaches.</li> <li>Experience configuring <strong>Airflow</strong>
+    for orchestrating complex workflows.</li> <li>Solid understanding of <strong>Terraform</strong>
+    (or equivalent IaC tooling).</li> <li>Experience with CI/CD: pipeline implementation,
+    testing automation, etc.</li> <li>Familiarity with <strong>Okta</strong> or similar
+    identity management platforms.</li> <li>Exposure to data reliability tools such
+    as <strong>Monte Carlo</strong> (or similar).</li> <li>Strong SQL skills and familiarity
+    with Python for pipeline scripting.</li> <li>Experience supporting production
+    systems (incident management, SLAs, monitoring).</li> <li>Ability to work effectively
+    in distributed, cross-functional teams.</li> <li>Strong communication skills and
+    a collaborative mindset.</li> </ul> <h3><strong>Preferred</strong></h3> <ul> <li>Experience
+    implementing data governance frameworks or catalogs (e.g., Atlan, Alation, Collibra).</li>
+    <li>Background in platform or product engineering environments.</li> <li>Experience
+    supporting analytics tools such as <strong>Tableau</strong> at scale.</li> <li>Knowledge
+    of secure data architectures and compliance best practices.</li> <li>Experience
+    utilizing AI for development.</li> </ul> <h2>What''s in it for you?</h2> <ul>
+    <li>Join an ambitious tech company reshaping the way people build digital experiences</li>
+    <li>Full-time employees receive Stock Options for the opportunity to share in
+    the success of our company</li> <li>Comprehensive healthcare package covering
+    100% of monthly health premiums for employees&nbsp; and 85% of costs for your
+    dependents.&nbsp;</li> <li>Fertility and family building benefits, including a
+    lifetime reimbursable wallet to support your growing family.</li> <li>We value<strong>
+    Work-Life balance </strong>and<strong> You Time</strong>!<strong> </st'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.082891+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

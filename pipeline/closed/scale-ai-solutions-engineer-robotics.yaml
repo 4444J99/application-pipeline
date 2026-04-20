@@ -1,0 +1,115 @@
+id: scale-ai-solutions-engineer-robotics
+name: Scale AI Solutions Engineer, Robotics
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Scale AI
+  url: https://boards.greenhouse.io/scaleai
+  application_url: https://job-boards.greenhouse.io/scaleai/jobs/4640096005
+  portal: greenhouse
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: '<p>The next frontier for AI is the physical world. At Scale, we''re
+    pioneering this shift, moving artificial intelligence from digital spaces into
+    robotics and autonomous systems. Our Robotics team is building the data platform
+    that will power the future of Physical AI. We are looking for a pivotal Solutions
+    Engineer to join this team.</p> <p>As a Solutions Engineer, you''ll be a trusted
+    technical partner, building deep relationships with some of the world''s most
+    innovative model builders and renowned robotics companies.&nbsp; You will partner
+    closely with Product, Sales and Machine Learning Engineers to guide prospective
+    customers through the pre-sales process, delivering customized demos and pilots
+    that secure the "technical win." You''ll define customer technical requirements,
+    develop actionable Statements of Work, and collaborate with the delivery team
+    on initial implementation. Your relentless curiosity about customer needs, combined
+    with your expert knowledge of Scale''s products will allow you to design creative
+    and impactful solutions.</p> <p>This is a critical role that directly influences
+    multi-million dollar contracts and initiatives. You''ll travel globally to conduct
+    on-site technical workshops and scope new projects, while also leading demos and
+    pilots for new prospects. You''ll be part of a tight-knit, specialized team, influencing
+    a rapidly growing business that is expanding into new product areas.</p> <p><strong>In
+    this role, you will:</strong></p> <ul> <li>Partner with Scale Account Executives
+    and Engagement Managers to deliver new customer pilots and grow technical relationships
+    with existing clients.</li> <li>Work with Product Engineering and Product Management
+    to influence our product roadmap based on your frontline insights.</li> <li>Become
+    a domain expert in next-generation Robotics and physical AI (e.g. VLMs, VLAs,
+    World Models)</li> <li>Be accountable for the technical customer experience and
+    commercial growth, expanding relationships and use cases with existing customers.</li>
+    <li>Collaborate with highly technical engineers at our customer sites to ensure
+    satisfaction with our data, software platforms, and workflows.</li> <li>Design
+    and develop playbooks, demos, and other tools to ensure efficient and successful
+    pilots and customer expansions.</li> <li>Pioneer the development of a global Robotics
+    Data Marketplace, actively seeking out and engaging with key international partners
+    to build a comprehensive data ecosystem.</li> <li>Evangelize Scale by interacting
+    with customers at major industry events and academic conferences.</li> </ul> <p><strong>You
+    have:</strong></p> <ul> <li>A strong engineering background, preferably in Robotics,
+    Mechatronics, Computer Science, Mathematics, or other Engineering fields.</li>
+    <li>3+ years of experience developing with Python, C++, Java, and/or other scripting
+    languages.</li> <li>Hands-on experience in Robotics and Physical AI</li> <li>Exceptional
+    project management and interpersonal skills, strong attention to detail, and a
+    strong sense of ownership.</li> <li>The presentation skills and technical credibility
+    to speak confidently with a variety of stakeholders, from executives to front-line
+    engineers.</li> <li>A high level of comfort communicating effectively across internal
+    and external organizations.</li> <li>Regular travel within the Bay Area.</li>
+    <li>International travel approximately once every two months.</li> <li>Intellectual
+    curiosity, empathy, and the ability to operate with a high degree of autonomy.</li>
+    </ul> <p><strong>Bonus points if you have:</strong></p> <ul> <li>Prior sales,
+    solutions engineering,&nbsp; or partnership experience with a track record of
+    successfully achieving quota.</li> <li>Ideally would have experience selling complex
+    technical solutions to enterprises with deal sizes of $500K to $5M+.</li> </ul><div
+    class="content-pay-transparency"><div class="pay-input"><div class="description"><p><em>Compensation
+    packages at Scale for eligible roles include base salary, equity, and benefits.
+    The range displayed on each job posting reflects the minimum and maximum target
+    for new hire salaries for the position, determined by work location and additional
+    factors, including job-related skills, experience, interview performance, and
+    relevant education or training. Scale employees in eligible roles are also granted
+    equity based compensation, subject to Board of Director approval. Your recruiter
+    can share more about the specific salary range for your preferred location during
+    the hiring process, and confirm whether the hired role will be eligible for equity
+    grant. You’ll also receive benefits including, but not limited to: Comprehensive
+    health, dental and vision coverage, retirement benefits, a learning and development
+    stipend, and generous PTO. Additionally, this role may be eligible for additional
+    benefits such as a commuter stipend.</em></p></div><div class="title">The base
+    salary range for this full-time position in the location of San '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: educator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/educator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.494460+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

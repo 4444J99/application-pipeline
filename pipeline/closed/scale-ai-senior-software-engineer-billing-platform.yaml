@@ -1,0 +1,123 @@
+id: scale-ai-senior-software-engineer-billing-platform
+name: Scale AI Senior Software Engineer, Billing Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Scale AI
+  url: https://boards.greenhouse.io/scaleai
+  application_url: https://job-boards.greenhouse.io/scaleai/jobs/4630325005
+  portal: greenhouse
+  location: San Francisco, CA; New York, NY
+  location_class: us-onsite
+  description: "<p><strong>About Scale</strong></p> <p>At Scale AI, our mission is\
+    \ to accelerate the development of AI applications. For 8 years, Scale has been\
+    \ the leading AI data foundry, helping fuel the most exciting advancements in\
+    \ AI, including: generative AI, defense applications, and autonomous vehicles.\
+    \ With our recent Series F round, we\u2019re accelerating the abundance of frontier\
+    \ data to pave the road to Artificial General Intelligence (AGI), and building\
+    \ upon our prior model evaluation work with enterprise customers and governments,\
+    \ to deepen our capabilities and offerings for both public and private evaluations.</p>\
+    \ <p><strong>About Data Engine</strong></p> <p>Our Generative AI Data Engine powers\
+    \ the world\u2019s most advanced LLMs and generative models through world-class\
+    \ RLHF (Reinforcement Learning with Human Feedback), human data generation, model\
+    \ evaluation, safety, and alignment. The data we are producing is some of the\
+    \ most important work for how humanity will interact with AI.</p> <p><strong>About\
+    \ our Billing Team</strong></p> <p>We\u2019re looking for entrepreneurial Software\
+    \ Engineers to join our Billing Platform team. In this role, you'll have the opportunity\
+    \ to drive the revenue tracking and billing system for our Generative AI products.\
+    \ You\u2019ll be deeply involved in building flexible, new systems to support\
+    \ customer billing use cases, implementing complex billing partitioning schemes\
+    \ based on dynamic criteria, and/or improving customer invoice generation and\
+    \ balance visibility. You\u2019ll also get widespread exposure to the forefront\
+    \ of the AI race as Scale sees it in enterprises, startups, governments, and large\
+    \ tech companies.<br><br>The ideal person is a natural entrepreneurial engineer\
+    \ who can take an ambiguous scope and lead the execution of outcomes, doing what\
+    \ it takes to hit them incl coding, talking to customers, defining requirements,\
+    \ etc. We strongly believe the best engineers own outcomes and deeply understand\
+    \ customer problems.</p> <h3><strong>Responsibilities:</strong></h3> <ul> <li>Design,\
+    \ implement, and operate flexible and accurate financial systems</li> <li>Work\
+    \ across backend, frontend, and accounting-related systems</li> <li>Deliver at\
+    \ a high velocity and level of quality to engage our customers</li> <li>Work across\
+    \ the entire product lifecycle from conceptualization through production</li>\
+    \ <li>Be able, and willing, to multi-task and learn new technologies quickly</li>\
+    \ <li>Provide critical input in the Billing team\u2019s roadmap and technical\
+    \ direction</li> <li>Work closely with cross-functional partners like finance,\
+    \ product, software engineers, and operations to identify opportunities for business\
+    \ impact, understand, refine and prioritize requirements for billing schemes and\
+    \ financial infrastructure.</li> </ul> <h3><strong>Requirements:</strong></h3>\
+    \ <ul> <li>5+ years of software engineering experience, ideally in high-growth,\
+    \ product-focused environments</li> <li>Proven track record of shipping production\
+    \ systems at scale</li> <li>Drive reliability and performance across critical\
+    \ infrastructure systems, ensuring our platforms scale predictably and operate\
+    \ with high availability.</li> <li>Strong technical depth in one or more areas:\
+    \ front-end frameworks, distributed systems, data infrastructure, or developer\
+    \ tooling</li> <li>Experience working across the stack, ideally with React, TypeScript,\
+    \ Node.js, Python, MongoDB, Elasticsearch, and/or Temporal</li> <li>Strong product\
+    \ sense and ability to translate ambiguous problems into technical solutions</li>\
+    \ <li>Comfortable working in a fast-paced, high-ownership environment with a bias\
+    \ toward execution</li> <li>Excited to join a dynamic hybrid team based in San\
+    \ Francisco or New York City</li> </ul><div class=\"content-pay-transparency\"\
+    ><div class=\"pay-input\"><div class=\"description\"><p><em>Compensation packages\
+    \ at Scale for eligible roles include base salary, equity, and benefits. The range\
+    \ displayed on each job posting reflects the minimum and maximum target for new\
+    \ hire salaries for the position, determined by work location and additional factors,\
+    \ including job-related skills, experience, interview performance, and relevant\
+    \ education or training. Scale employees in eligible roles are also granted equity\
+    \ based compensation, subject to Board of Director approval. Your recruiter can\
+    \ share more about the specific salary range for your preferred location during\
+    \ the hiring process, and confirm whether the hired role will be eligible for\
+    \ equity grant. You\u2019ll also receive benefits including, but not limited to:\
+    \ Comprehensive health, dental and vision coverage, retirement benefits, a learning\
+    \ and development stipend, and generous PTO. Additionally, this role may be eligible\
+    \ for additional benefits such as a commuter stipend.</em></p></div><div class=\"\
+    title\">Please reference the job posting's subtitle for where this position will\
+    \ be located. For pay transparency purposes, the base salary range for this full-time\
+    \ position in the locations of San Francisco, New Yor"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: creative-technologist
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 7
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used:
+    framing: framings/creative-technologist
+    evidence: evidence/differentiators
+    work_samples: evidence/work-samples
+    credentials: pitches/credentials-creative-tech
+    methodology: methodology/process-as-product
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/creative-technologist-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.466531+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,113 @@
+id: reddit-senior-software-engineer-android-test-engineering
+name: Reddit Senior Software Engineer, Android Test Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Reddit
+  url: https://boards.greenhouse.io/reddit
+  application_url: https://job-boards.greenhouse.io/reddit/jobs/7488988
+  portal: greenhouse
+  location: Los Angeles, CA
+  location_class: us-onsite
+  description: <div class="content-intro"><div class="c-message_kit__blocks c-message_kit__blocks--rich_text">
+    <div class="c-message__message_blocks c-message__message_blocks--rich_text" data-qa="message-text">
+    <div class="p-block_kit_renderer" data-qa="block-kit-renderer"> <div class="p-block_kit_renderer__block_wrapper
+    p-block_kit_renderer__block_wrapper--first"> <div class="p-rich_text_block"> <div
+    class="p-rich_text_section">Reddit is a community of communities. It’s built on
+    shared interests, passion, and trust, and is home to the most open and authentic
+    conversations on the internet. Every day, Reddit users submit, vote, and comment
+    on the topics they care most about. With 100,000+ active communities and approximately
+    121 million daily active unique visitors, Reddit is one of the internet’s largest
+    sources of information. For more information, visit <a class="c-link" href="http://www.redditinc.com/"
+    target="_blank" data-stringify-link="http://redditinc.com" data-sk="tooltip_parent">www.redditinc.com</a>.</div>
+    </div> </div> </div> </div> </div></div><p>The Test Engineering team within the
+    Quality Engineering (QE) org is looking for a Senior Software Engineer who can
+    work in a highly collaborative environment, design/develop tools, test frameworks,
+    and define processes to help the teams to own and be accountable for quality.
+    The mission of the Quality Engineering org is to enable quality in all engineering
+    teams at Reddit by providing robust test tools and frameworks that help establish
+    quality standards across the development pipelines.</p> <p><strong>Responsibilities:&nbsp;</strong></p>
+    <ul> <li>Help in building an Engineering culture that enables quality in all software
+    feature development teams across Reddit.</li> <li>Develop and evolve test automation
+    frameworks, tools, and services.</li> <li>Analyze production issues, identify
+    test gaps across the entire testing stack and make systemic improvements to automated
+    testing</li> <li>Maintain test infrastructure stability in non-production environments.</li>
+    <li>Participate in troubleshooting and triaging of issues with different teams
+    to drive towards root cause identification and resolution.</li> <li>Influence
+    the entire engineering organization on unit/integration/end-to-end tests.</li>
+    </ul> <p><strong>Required Qualifications:&nbsp;</strong></p> <ul> <li>5+ years
+    of experience as an SDET, or as a Software Engineer for Android platform</li>
+    <li>3+ years in Android development</li> <li>Experience in designing and building
+    scalable automated test frameworks, tools, and services for testing mobile applications</li>
+    <li>Experience in writing, executing, and monitoring automated test suites using
+    a variety of technologies such as Espresso and/or, UIAutomator using Kotlin.</li>
+    <li>Preferred experience in JetPack Compose.</li> <li>Experience in unit, snapshot,
+    and end-to-end testing of Android applications</li> <li>Experience in building
+    test frameworks and automated tests for native Mobile applications&nbsp;</li>
+    <li>Strong understanding of CI/CD process and quality checks in the workflow.</li>
+    <li>Strong understanding of QA methodologies for mobile applications releases.&nbsp;</li>
+    <li>Working proficiency and communication skills in verbal and written English.</li>
+    </ul> <p><strong>Benefits:</strong></p> <ul> <li>Comprehensive Healthcare Benefits
+    and Income Replacement Programs</li> <li>401k with Employer Match</li> <li>Global
+    Benefit programs that fit your lifestyle, from workspace to professional development
+    to caregiving support</li> <li>Family Planning Support</li> <li>Gender-Affirming
+    Care</li> <li>Mental Health &amp; Coaching Benefits</li> <li>Flexible Vacation
+    &amp; Paid Volunteer Time Off</li> <li>Generous Paid Parental Leave&nbsp;</li>
+    </ul> <p>&nbsp;</p> <p>&nbsp;</p><div class="content-pay-transparency"><div class="pay-input"><div
+    class="description"><p><strong>Pay Transparency:</strong></p> <p>This job posting
+    may span more than one career level.</p> <p>In addition to base salary, this job
+    is eligible to receive equity in the form of restricted stock units, and depending
+    on the position offered, it may also be eligible to receive a commission. Additionally,
+    Reddit offers a wide range of benefits to U.S.-based employees, including medical,
+    dental, and vision insurance, 401(k) program with employer match, generous time
+    off for vacation, and parental leave. To learn more, please visit <a href="https://www.redditinc.com/careers/"
+    target="_blank">https://www.redditinc.com/careers/</a>.</p> <p>To provide greater
+    transparency to candidates, we share base salary ranges for all US-based job postings
+    regardless of state. We set standard base pay ranges for all roles based on function,
+    level, and country location, benchmarked against similar stage growth companies.
+    Final offer amounts are determined by multiple factors including, skills, depth
+    of work experience and relevant licenses/credentials, and may vary from the amounts
+    listed below.</p></div><div class="title"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.306555+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,84 @@
+id: perplexity-ai-engineer-applied-ml
+name: Perplexity AI Engineer, Applied ML
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/3c656963-876a-458d-bca6-916a42a24c1a
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Perplexity is looking for an Applied ML Engineer to design, build,
+    and iterate on cutting-edge AI models powering our core experience. As an expert
+    in machine learning and artificial intelligence, you will develop scalable and
+    impactful solutions for user personalization, query understanding, and content
+    discovery - fulfilling the curiosity of millions of users across the globe. Key
+    Responsibilities Apply state-of-the-art ML and LLM techniques to solve problems
+    spanning: Personalization (LLM memory, context summarization, retrieval and ranking);
+    Query Understanding (intent modeling, rewriting, agentic decomposition); Content
+    Discovery (feed ranking and surfacing) Rigorously evaluate LLM/ML models with
+    both offline and online techniques, designing experiments and metrics that provide
+    deep insight into quality and impact. Own the entire model lifecycle from research
+    to production: data analysis, modeling, evaluation, offline/online A/B testing,
+    and iterative improvement. Collaborate cross-functionally with engineers, PMs,
+    data scientists, and designers to ensure our AI drives meaningful product improvements.
+    Stay at the forefront of ML/AI innovation by evaluating and incorporating emerging
+    research and algorithms into the product lifecycle. Preferred Qualifications 5+
+    years experience building and shipping robust ML/AI models for large-scale, user-facing
+    or data-driven products. Deep expertise in deep learning (PyTorch, TensorFlow,
+    JAX), LLMs, information retrieval, content summarization, recommendation systems,
+    NLP, and/or ranking. Strong software engineering skills (Python, production-quality
+    codebases, collaborative development). In-depth experience with the full ML lifecycle:
+    data analysis, feature engineering, iterative model development, rigorous evaluation,
+    and ongoing monitoring/improvement. Proven collaborator and communicator; excels
+    in high-velocity, cross-functional teams. Curious, driven by end-user/product
+    impact, and passionate about advancing the state of applied ML and AI. BS, MS,
+    or PhD in Computer Science, Engineering, or related field (or equivalent experience).
+    Bonus Points For Experience with LLM prompt engineering, Retrieval-augmented generation
+    (RAG) based systems. Experience in large scale user-centric and content-centric
+    personalization challenges (user modeling, retrieval, content ranking, etc). Open-source
+    or published contributions in ML, NLP, IR, or relevant research fields.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.908201+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

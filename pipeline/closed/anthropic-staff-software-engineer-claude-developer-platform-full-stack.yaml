@@ -1,0 +1,113 @@
+id: anthropic-staff-software-engineer-claude-developer-platform-full-stack
+name: Anthropic Staff Software Engineer, Claude Developer Platform (Full Stack)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/4561282008
+  portal: greenhouse
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>About Anthropic</strong></h2>
+    <p>Anthropic’s mission is to create reliable, interpretable, and steerable AI
+    systems. We want AI to be safe and beneficial for our users and for society as
+    a whole. Our team is a quickly growing group of committed researchers, engineers,
+    policy experts, and business leaders working together to build beneficial AI systems.</p></div><div>
+    <div> <h2>About the role:</h2> </div> <div> <p>Anthropic is looking for a product-minded
+    engineer to build a world-class developer experience for the <a href="https://www.claude.com/platform/api">Anthropic
+    API</a>. You’ll build the tools to accelerate developers from idea to deployment.
+    In particular, you''ll help figure out how to leverage Claude to improve developer''s
+    usage of the API, such as generating and evaluating prompts. You’ll collaborate
+    closely with other product teams to bring Claude''s current and future capabilities
+    to developers.</p> <p><em>We have multiple roles open on this team and are looking
+    for experienced engineers at different stages in their career who are excited
+    about this space and our mission.</em></p> <div class="row mt4 mb3" data-qa="posting-list-0">
+    <div class="col internal-job-requirements-container"> <h2 class="text-h3_5 text-gray-700
+    mb2">Responsibilities:</h2> <ul class="pt1 text-gray-700"> <li>Build out the frontend
+    and backend for helping developers bring their applications to production&nbsp;</li>
+    <li>Partner with partner teams ensure sure new product features are integrated
+    into the developer console in an intuitive way</li> <li>Use product sense to propose
+    and implement improvements to the developer experience of using the API</li> <li>Work
+    with researchers to understand new model capabilities and design unique products
+    that help users maximize their use of the Anthropic API</li> </ul> </div> </div>
+    <div class="row mt4 mb3" data-qa="posting-list-1"> <div class="col internal-job-requirements-container">
+    <h2 class="text-h3_5 text-gray-700 mb2">You might be a good fit if you:</h2> <ul
+    class="pt1 text-gray-700"> <li>Have 7-10+ years building production full-stack
+    software with a focus on usability</li> <li>Have strong communication skills and
+    user empathy to understand needs</li> <li>Are an expert in modern web development
+    stacks (React, Next.js, etc)</li> <li>Have demonstrated a strong product mindset
+    and a focus on iterative product development</li> <li>Startup experience, building
+    products from zero to one</li> <li>Experience building APIs and/or developer products
+    for external developers</li> </ul> </div> </div> <div class="row mt4 mb3" data-qa="posting-list-2">
+    <div class="col internal-job-requirements-container"> <h2 class="text-h3_5 text-gray-700
+    mb2">Strong candidates may also:</h2> <ul class="pt1 text-gray-700"> <li>Have
+    experience with React and frontend frameworks</li> <li>Have experience with REST
+    APIs</li> <li>Have experience building products for developers</li> </ul> <p><strong>Deadline
+    to apply:&nbsp;</strong>None. Applications will be reviewed on a rolling basis.&nbsp;</p>
+    <p><strong>Location Preference:</strong> Preference will be given to candidates
+    based in the SF or Bay Area as these positions are part of an SF-based team.</p>
+    </div> </div> </div> </div><div class="content-pay-transparency"><div class="pay-input"><div
+    class="description"><p>The annual compensation range for this role is listed below.&nbsp;</p>
+    <p>For sales roles, the range provided is the role’s On Target Earnings ("OTE")
+    range, meaning that the range includes both the sales commissions/sales bonuses
+    target and annual base salary for the role.</p></div><div class="title">Annual
+    Salary:</div><div class="pay-range"><span>$320,000</span><span class="divider">&mdash;</span><span>$405,000
+    USD</span></div></div></div><div class="content-conclusion"><h2><strong>Logistics</strong></h2>
+    <p><strong>Education requirements: </strong>We require at least a Bachelor''s
+    degree in a related field or equivalent experience.<strong><br><br>Location-based
+    hybrid policy:</strong> Currently, we expect all staff to be in one of our offices
+    at least 25% of the time. However, some roles may require more time in our offices.</p>
+    <p><strong data-stringify-type="bold">Visa sponsorship:</strong>&nbsp;We do sponsor
+    visas! However, we aren''t able to successfully sponsor visas for every role and
+    every candidate. But if we make you an offer, we will make every reasonable effort
+    to get you a visa, and we retain an immigration lawyer to help with this.</p>
+    <p><strong>We encourage you to apply even if you do not believe you meet every
+    single qualification.</strong> Not all strong candidates will meet every single
+    qualification as listed.&nbsp; Research shows that people who identify as being
+    from underrepresented groups are more prone to experiencing imposter syndrome
+    and doubting the strength of their candidacy, so we urge you not to exclude yourself
+    prematurely and to submit an application if you''re interested in this w'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.1
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.932418+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,85 @@
+id: character-ai-staff-software-engineer-ai-platform
+name: Character AI Staff Software Engineer, AI Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Character AI
+  url: https://jobs.ashbyhq.com/character
+  application_url: https://jobs.ashbyhq.com/character/2673e467-097e-43c0-ba0d-83e54b3a9cb1
+  portal: ashby
+  location: Redwood City, CA
+  location_class: us-onsite
+  description: 'About the Role As a Staff Software Engineer - AI Platform at Character,
+    you''ll have the opportunity to work on a diverse and exciting set of projects
+    spanning both software engineering and data for AI domains. Your initial focus
+    will be on three key areas: Support the research team by building the tooling
+    and datasets that help us train the best models Activate our "data flywheel":
+    Develop data pipelines and collaborate with ML researchers to ensure continuous
+    improvement of our AI models and alignment with human feedback. Support our data
+    infrastructure (Spark, Beam, GCP). Requirements: B.A.S. in Computer Science or
+    equivalent experience. 5+ years minimum experience in data engineering within
+    a consumer-facing technology company Experience building data warehousing and
+    data pipelines with Big Query, dbt, Ray, Beam and Spark. Experience with ML/LLMs
+    In-depth experience building and managing infrastructure in a cloud environment
+    (esp. GCP) Strong Python and SQL experience Desired Experience: Experience setting
+    up containerization with Docker and Kubernetes Familiarity with PyTorch Excellent
+    problem-solving skills and the ability to work independently and as part of a
+    team Strong communication and collaboration skills Experience writing and maintaining
+    Golang and Terraform code You will be a good fit if you are proactive and have
+    a “get things done” mindset. Given our current pace of growth and load on our
+    systems, most people have had a significant impact during their first week at
+    the company. About Character.AI Character.AI empowers people to connect, learn
+    and tell stories through interactive entertainment. Over 20 million people visit
+    Character.AI every month, using our technology to supercharge their creativity
+    and imagination. Our platform lets users engage with tens of millions of characters,
+    enjoy unlimited conversations, and embark on infinite adventure s. In just two
+    years, we achieved unicorn status and were honored as Google Play''s AI App of
+    the Year—a testament to our innovative technology and visionary approach. Join
+    us and be a part of establishing this new entertainment paradigm while shaping
+    the future of Consumer AI! At Character, we value diversity and welcome applicants
+    from all backgrounds. As an equal opportunity employer, we firmly uphold a non-discrimination
+    policy based on race, religion, national origin, gender, sexual orientation, age,
+    veteran status, or disability. Your unique perspectives are vital to our success.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.893134+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

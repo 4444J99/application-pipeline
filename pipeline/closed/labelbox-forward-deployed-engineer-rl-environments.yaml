@@ -1,0 +1,116 @@
+id: labelbox-forward-deployed-engineer-rl-environments
+name: Labelbox Forward Deployed Engineer, RL Environments
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Labelbox
+  url: https://boards.greenhouse.io/labelbox
+  application_url: https://job-boards.greenhouse.io/labelbox/jobs/5101187007
+  portal: greenhouse
+  location: San Francisco Bay Area
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>Shape the Future of AI</strong></h2>
+    <p>At Labelbox, we''re building the critical infrastructure that powers breakthrough
+    AI models at leading research labs and enterprises. Since 2018, we''ve been pioneering
+    data-centric approaches that are fundamental to AI development, and our work becomes
+    even more essential as AI capabilities expand exponentially.</p> <h2><strong>About
+    Labelbox</strong></h2> <p>We''re the only company offering three integrated solutions
+    for frontier AI development:</p> <ol> <li><strong>Enterprise Platform &amp; Tools</strong>:
+    Advanced annotation tools, workflow automation, and quality control systems that
+    enable teams to produce high-quality training data at scale</li> <li><strong>Frontier
+    Data Labeling Service</strong>: Specialized data labeling through Alignerr, leveraging
+    subject matter experts for next-generation AI models</li> <li><strong>Expert Marketplace</strong>:
+    Connecting AI teams with highly skilled annotators and domain experts for flexible
+    scaling</li> </ol> <h2><strong>Why Join Us</strong></h2> <ul> <li><strong>High-Impact
+    Environment</strong>: We operate like an early-stage startup, focusing on impact
+    over process. You''ll take on expanded responsibilities quickly, with career growth
+    directly tied to your contributions.</li> <li><strong>Technical Excellence</strong>:
+    Work at the cutting edge of AI development, collaborating with industry leaders
+    and shaping the future of artificial intelligence.</li> <li><strong>Innovation
+    at Speed</strong>: We celebrate those who take ownership, move fast, and deliver
+    impact. Our environment rewards high agency and rapid execution.</li> <li><strong>Continuous
+    Growth</strong>: Every role requires continuous learning and evolution. You''ll
+    be surrounded by curious minds solving complex problems at the frontier of AI.</li>
+    <li><strong>Clear Ownership</strong>: You''ll know exactly what you''re responsible
+    for and have the autonomy to execute. We empower people to drive results through
+    clear ownership and metrics.</li> </ul></div><p><strong>The Role</strong></p>
+    <p>We’re hiring a Forward Deployed Engineer to own the design, development, and
+    operationalization of reinforcement learning environments. You’ll build the sandboxed,
+    reproducible execution environments that AI agents interact with during training
+    and evaluation—things like terminal-based task benchmarks, browser and computer-use
+    environments, and tool-augmented agentic workspaces.</p> <p>This is a hands-on
+    engineering role. You’ll write production-quality infrastructure code, integrate
+    with open-source RL tooling, and work closely with our data operations team to
+    ensure environments are robust, observable, and ready for human annotators and
+    model agents alike. You won’t be doing ML research, but you’ll need to deeply
+    understand how RL training loops consume environments and where the bottlenecks
+    live.</p> <p><strong>What You’ll Do</strong></p> <ul> <li>Design, build, and maintain
+    sandboxed RL environments for agentic AI training—including terminal emulators,
+    browser automation harnesses, computer-use simulators, and tool-augmented workspaces
+    (e.g., environments built on frameworks like TerminalBench, OSWorld, and Tau-bench)</li>
+    <li>Develop reproducible, containerized execution environments (Docker, VMs, lightweight
+    sandboxes) that support deterministic task rollouts and reward signal collection</li>
+    <li>Integrate with and extend open-source agentic tooling and custom CLI/API harnesses
+    to enable multi-step agent interaction</li> <li>Build instrumentation and observability
+    layers—structured logging, trajectory capture, state snapshotting—so training
+    runs and human annotation sessions produce clean, auditable data</li> <li>Collaborate
+    with data operations to design task curricula and evaluation protocols that stress-test
+    model capabilities across environment types</li> <li>Own environment deployment
+    and reliability: CI/CD pipelines, automated testing of environment configurations,
+    and monitoring for drift or breakage across versions</li> <li>Rapidly prototype
+    new environment types as client and internal requirements evolve, moving from
+    spec to working system in days, not weeks</li> </ul> <p><strong>What We’re Looking
+    For</strong></p> <p><strong>Required</strong></p> <ul> <li>2+ years of professional
+    software engineering experience, with strong fundamentals in Python and at least
+    one systems-level language (Go, Rust, C++)</li> <li>Demonstrated experience with
+    containerization and sandboxing (Docker, Podman, Firecracker, or similar) in production
+    or near-production contexts</li> <li>Familiarity with RL concepts: MDPs, reward
+    shaping, episode structure, observation/action spaces. You don’t need to have
+    trained models, but you need to understand what an environment must provide to
+    an RL training loop</li> <li>Experience building or maintaining developer tooling,
+    CLI tools, or infrastructure automation</li> <li>Comfort working with browser
+    automation fram'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-08'
+  posting_date: '2026-04-07'
+  date_source: first_published
+  date_added: '2026-04-08'
+  discovered: '2026-04-08T10:15:26.214709+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,116 @@
+id: sentry-staff-software-engineer-billing
+name: Sentry Staff Software Engineer, Billing
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sentry
+  url: https://jobs.ashbyhq.com/sentry
+  application_url: https://jobs.ashbyhq.com/sentry/a7c8d934-e638-44b0-bcf6-6897118706fe
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: 'About Sentry Bad software is everywhere, and we’re tired of it. Sentry
+    is on a mission to help developers write better software faster so we can get
+    back to enjoying technology. With more than $217 million in funding and 100,000+
+    organizations that believe we’re on to something, we''re building performance
+    and error monitoring tools that help companies like Disney, Microsoft, and Atlassian
+    spend less time fixing bugs and more time building products. Sentry embraces a
+    hybrid work model across our global hubs, with Mondays, Tuesdays, and Thursdays
+    set as in-office anchor days to encourage meaningful collaboration. If you like
+    to selfishly build things that make your digital life better, come help us build
+    the next generation of software monitoring tools. About the team The Billing &
+    Revenue engineering team sits at the intersection of product, finance, and infrastructure.
+    They''re responsible for ensuring every observable event—errors, logs, traces,
+    session replays—gets accurately measured, priced, and billed. Their work directly
+    impacts company revenue and customer trust, requiring distributed systems expertise,
+    attention to financial accuracy, and deep understanding of product usage patterns.
+    The team works cross-functionally with product, engineering, BizOps, marketing,
+    and sales to build systems that enable new products and pricing models. About
+    the role As a Staff Software Engineer you will be a key technical leader, setting
+    engineering culture and solving tough problems. You will architect and build the
+    next generation of Sentry’s usage tracking pipeline, processing hundreds of billions
+    of events daily with low latency and financial-grade accuracy. You will design
+    flexible pricing primitives that support everything from per-event usage billing
+    to complex enterprise contracts, enabling product and sales teams to experiment
+    rapidly while maintaining revenue accuracy and reduced time-to-market for new
+    products. You will lead technical decisions on data consistency challenges unique
+    to billing—like handling event delays, retroactive pricing changes, and distributed
+    count reconciliation across our infrastructure. You will establish billing-specific
+    engineering standards across Sentry—defining patterns for usage tracking, financial
+    data modeling, and audit logging that other teams can adopt You will love this
+    job if you Want to solve the "easy to explain, hard to build" problems—like ensuring
+    a customer''s bill matches their usage perfectly, even when processing hundreds
+    of billions of events daily across distributed systems. Thrive on constraints
+    that force elegant design: financial accuracy is non-negotiable, customer trust
+    depends on billing transparency, and the system must scale with Sentry''s user
+    and product growth without rearchitecting every year. Enjoy partnering across
+    the organization—from BizOps and sales to marketing and leadership—where your
+    code directly impacts ARR and your architectural decisions show up in board-level
+    metrics. To thrive in this role, you have Built or significantly improved systems
+    that handle financial data or high-stakes accuracy requirements—billing systems,
+    payment processing, accounting platforms, or financial data pipelines. Experience
+    with data modeling — distilling complex business problems into elegant, maintainable
+    schemas Mentored engineers through ambiguous, high-stakes projects where technical
+    decisions have direct revenue implications. Operated services at Sentry’s scale
+    (millions of events per second) where reliability includes uptime and also financial
+    correctness. Not sure if you meet 100% of the qualifications? We encourage you
+    to apply anyway. We''re interested in people are excited about this opportunity
+    and eager to grow. The base salary range (or hourly wage range, if applicable)
+    that Sentry reasonably expects to pay for this position is $240,000 to $300,000
+    USD . A successful candidate’s actual base salary (or hourly wage) amount will
+    be determined by a variety of relevant factors including, without limitation,
+    the candidate’s work location, education, work and other relevant experience,
+    skills, and job-related knowledge. A successful candidate will be eligible to
+    participate in Sentry’s employee benefit plans/programs applicable to the candidate’s
+    position (including incentive compensation, equity grants, paid time off, and
+    group health insurance coverage). See Sentry Benefits for more details about the
+    Company’s benefit plans/programs. Equal Opportunity at Sentry Sentry is committed
+    to providing equal employment opportunities to its employees and candidates for
+    employment regardless of race, color, ancestry, religion, sex, national origin,
+    sexual orientation, age, citizenship, marital status, disability, gender identity,
+    veteran status, or other legally-protected characteristic. This commitment includes
+    the provision of reasonable accommodations to employees and candidates for employment
+    with physical or mental disabilities who require such accommodation'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.258272+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

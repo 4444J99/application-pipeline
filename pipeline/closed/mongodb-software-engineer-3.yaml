@@ -1,0 +1,116 @@
+id: mongodb-software-engineer-3
+name: MongoDB Software Engineer 3
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7523911
+  portal: greenhouse
+  location: Palo Alto; Seattle
+  location_class: us-onsite
+  description: '<h3>About the Role</h3> <p>We’re looking for a Software Engineer 3
+    to help build the next-generation inference platform that supports embedding models
+    used for semantic search, retrieval, and AI-native experiences in MongoDB Atlas.</p>
+    <p>You’ll join the broader Search and AI Platform organization and collaborate
+    with ML researchers and engineers from our Voyage.ai acquisition. Together, we’re
+    building infrastructure for real-time, low-latency, and high-scale inference —
+    fully integrated with Atlas and designed for developer-first experiences.</p>
+    <p>As a Software Engineer 3, you''ll focus on building core systems and services
+    that power model inference at scale. You''ll own key components of the infrastructure,
+    work across teams to ensure tight integration with Atlas, and contribute to a
+    platform designed for reliability, performance, and ease of use.</p> <p>This role
+    is based in Palo Alto, CA or Seattle, WA with an in-office or hybrid working model.</p>
+    <h3>What You’ll Do</h3> <ul> <li>Design and build components of a multi-tenant
+    inference platform integrated directly with MongoDB Atlas, supporting semantic
+    search and hybrid retrieval</li> <li>Collaborate with AI engineers and researchers
+    to productionize inference for embedding models and rerankers — enabling both
+    batch and real-time use cases</li> <li>Contribute to platform capabilities such
+    as latency-aware routing, model versioning, health monitoring, and observability</li>
+    <li>Improve performance, autoscaling, GPU utilization, and resource efficiency
+    in a cloud-native environment</li> <li>Work across product, infrastructure, and
+    ML teams to ensure the inference platform meets the scale, reliability, and latency
+    demands of Atlas users</li> <li>Gain hands-on experience with tools like vLLM
+    and container orchestration with Kubernetes.</li> </ul> <h3>Who You Are</h3> <ul>
+    <li>2+ years of experience building backend or infrastructure systems at scale</li>
+    <li>Strong software engineering skills in languages such as Go, Rust, Python,
+    or C++, with an emphasis on performance and reliability</li> <li>Experienced in
+    cloud-native architectures, distributed systems, and multi-tenant service design</li>
+    <li>Familiar with concepts in ML model serving and inference runtimes, even if
+    not directly deploying models</li> <li>Knowledge of vector search systems (e.g.,
+    Faiss, HNSW, ScaNN) is a plus</li> <li>Comfortable working across functional teams,
+    including ML researchers, backend engineers, and platform teams</li> <li>Motivated
+    to work on systems integrated into MongoDB Atlas and used by thousands of developers</li>
+    </ul> <h3>Nice to Have</h3> <ul> <li>Experience integrating infrastructure with
+    production ML workloads</li> <li>Understanding of hybrid retrieval, prompt-driven
+    systems, or retrieval-augmented generation (RAG)</li> <li>Contributions to open-source
+    infrastructure for ML serving or search</li> </ul> <h3>Why Join Us</h3> <ul> <li>Be
+    part of building the AI foundation of the world’s most popular developer data
+    platform</li> <li>Collaborate with ML researchers from Voyage.ai to bring novel
+    ideas into scalable systems</li> <li>Tackle challenging problems in inference,
+    observability, and distributed infrastructure</li> <li>Work in a culture that
+    emphasizes mentorship, ownership, and technical excellence</li> </ul> <h3><span
+    style="color: #000000; background-color: transparent;">About MongoDB</span></h3>
+    <p style="margin: 0px !important; padding: 0px !important;"><span style="color:
+    #000000; background-color: transparent;">MongoDB is built for change, empowering
+    our customers and our people to innovate at the speed of the market. We have redefined
+    the database for the AI era, enabling innovators to create, transform, and disrupt
+    industries with software. MongoDB’s unified database platform—the most widely
+    available, globally distributed database on the market—helps organizations modernize
+    legacy workloads, embrace innovation, and unleash AI. Our cloud-native platform,
+    MongoDB Atlas, is the only globally distributed, multi-cloud database and is available
+    across AWS, Google Cloud, and Microsoft Azure.</span></p> <p style="margin: 0px
+    !important; padding: 0px !important;">&nbsp;</p> <p style="margin: 0px !important;
+    padding: 0px !important;"><span style="color: #000000; background-color: transparent;">With
+    offices worldwide and nearly 60,000 customers—including 75% of the Fortune 100
+    and AI-native startups—relying on MongoDB for their most important applications,
+    we’re powering the next era of software.</span></p> <p style="margin: 0px !important;
+    padding: 0px !important;">&nbsp;</p> <p style="margin: 0px !important; padding:
+    0px !important;"><span style="color: #000000; background-color: transparent;">Our
+    compass at MongoDB is our </span><u style="color: #1155cc; background-color: transparent;"><a
+    href="https://www.mongodb.com/company">Leadership Commitment,</a></u><span style="color:
+    #000000; background-color: transparent;"> guiding how and why we make decisions,
+    s'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.333178+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,87 @@
+id: character-ai-software-engineer-applied-ml-discovery-recommendation-search
+name: Character AI Software Engineer, Applied ML (Discovery, Recommendation & Search)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Character AI
+  url: https://jobs.ashbyhq.com/character
+  application_url: https://jobs.ashbyhq.com/character/3cfa1472-4f6d-46fa-bd08-f6de0833a53f
+  portal: ashby
+  location: Redwood City, CA
+  location_class: us-onsite
+  description: 'About the Role As a Software / ML Engineer you will work cross functionally
+    with product, data science and data platform to identify, design and implement
+    the applied ML models and infra, ranging from the model optimization, data pipeline
+    to model training and serving infrastructure, on one of the fastest growing native
+    AI consumer applications on the market today. You will work on implementation
+    of our ML backend systems to power the discovery surfaces including recommendation,
+    ranking and search, supporting new AI generated content formats on our product
+    while working with the team to support optimizing our existing systems. Requirements:
+    B.A.S. in Computer Science or equivalent experience. 5+ years of industry experience
+    Experience building/consuming RESTful and gRPC based web-services Experience building
+    and managing infrastructure in a cloud environment (GCP, AWS or Azure) Familiar
+    with one of the popular ML Frameworks like Pytorch, Tensorflow Experience writing
+    highly performant service in a modern typed language Experience configuring and
+    maintaining CI/CD pipelines and automated testing Desired Experience: Experience
+    with shipping intelligent features, end-to-end, and from idea to production Experience
+    with understanding, designing or implementing a full pipeline from data ingestion
+    to model training. Experience with production AI/ML systems and services including
+    optimizing GPU/TPU deployments Experience working with vector databases or other
+    feature storage You will be a good fit if you are proactive and have a “get things
+    done” mindset. Given our current pace of growth and load on our systems, most
+    people have had a significant impact during their first week at the company. About
+    Character.AI Character.AI empowers people to connect, learn and tell stories through
+    interactive entertainment. Over 20 million people visit Character.AI every month,
+    using our technology to supercharge their creativity and imagination. Our platform
+    lets users engage with tens of millions of characters, enjoy unlimited conversations,
+    and embark on infinite adventure s. In just two years, we achieved unicorn status
+    and were honored as Google Play''s AI App of the Year—a testament to our innovative
+    technology and visionary approach. Join us and be a part of establishing this
+    new entertainment paradigm while shaping the future of Consumer AI! At Character,
+    we value diversity and welcome applicants from all backgrounds. As an equal opportunity
+    employer, we firmly uphold a non-discrimination policy based on race, religion,
+    national origin, gender, sexual orientation, age, veteran status, or disability.
+    Your unique perspectives are vital to our success.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.891757+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

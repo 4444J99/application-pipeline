@@ -1,0 +1,77 @@
+id: perplexity-senior-ios-software-engineer
+name: 'Perplexity Senior iOS Software Engineer '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/1dc97d9e-565e-4079-9fba-40fab14a3602
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: Perplexity AI is looking for a Senior iOS Engineer to join our small
+    team revolutionizing the way people search and interact with the internet. You
+    will be responsible for building new experiences and improving the performance
+    of Perplexity’s iOS app. The ideal candidate should have strong programming skills,
+    an interest in search and large language models, and a passion for delivering
+    a great UX backed by a quality UI. Responsibilities You will develop a native
+    iOS app for Perplexity's evolving product You will define the processes around
+    mobile development, including planning, testing, releasing, and monitoring You
+    will work with the core team to design and implement novel mobile experiences
+    Qualifications 5+ years industry experience Strong Swift fundamentals and a proven
+    track record of working with a modern iOS stack built with Swift, SwiftUI (iOS16+)
+    and UIKit Enjoys the craft of building nice UI, creating a good UX, and writing
+    reusable and testable code Understands low-level intricacies, and knows how to
+    profile and measure app performance and speed Comfortable working with a small,
+    fast-moving team, and must be willing to dive in and take ownership A passion
+    for iOS development, and enjoys experimenting with what's new with each iteration
+    of iOS and iPadOS Nice to have Experience with related platforms like macOS and
+    tools like Mac Catalyst Experience with WebSockets, HTTP Experience with concurrency
+    and multithreading (GCD, critical sections, race conditions) AI is at the heart
+    of what we build, and using it effectively is an expectation for every role here.
+    During interviews, we want to see how you think and make decisions—qualities that
+    will directly influence our AI development. With that in mind, please avoid using
+    AI tools throughout the process unless we indicate otherwise.
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.7
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.900677+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,116 @@
+id: chime-software-engineer-growth-paid-ads-acquisition
+name: Chime Software Engineer, Growth - Paid Ads & Acquisition
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Chime
+  url: https://boards.greenhouse.io/chime
+  application_url: https://boards.greenhouse.io/chime/jobs/8466472002?gh_jid=8466472002
+  portal: greenhouse
+  location: San Francisco, CA, USA
+  location_class: us-onsite
+  description: '<h3><strong>About the Role</strong></h3> <p>Chime’s Growth Engineering
+    team is focused on building product experiences that directly move business metrics
+    and help millions of people achieve financial progress. Within Growth, the Paid
+    Ads &amp; Acquisition Engineering team owns the systems that power user acquisition
+    at scale - from marketing data pipelines to attribution and spend optimization.
+    You’ll directly influence how Chime deploys and optimizes hundreds of millions
+    in paid media spend.</p> <p>As a Growth Engineer on this team, you will work at
+    the intersection of product, data, and marketing. You’ll build and maintain data-intensive
+    systems that enable efficient paid acquisition, power experimentation, and unlock
+    new growth channels such as partnerships and incentives. This role is well-suited
+    for engineers who enjoy working with data pipelines, distributed systems, and
+    ambiguous problem spaces where measurement and iteration are critical.</p> <p>The
+    base salary offered for this role and level of experience will begin at $133,000
+    and up to $184,000. Full-time employees are also eligible for a bonus, competitive
+    equity package, and benefits. The actual base salary offered may be higher, depending
+    on your location, skills, qualifications, and experience.</p> <h3><strong>In this
+    role, you can expect to:</strong></h3> <ul> <li>Build and scale backend services,
+    data pipelines, and APIs that power Chime’s paid acquisition and marketing systems</li>
+    <li>Develop and maintain integrations with major ad platforms (Meta, Google, TikTok,
+    Affiliate etc), including conversion APIs, reverse ETL pipelines, Airflow workflows,
+    and data integrations that enable campaign execution and measurement</li> <li>Partner
+    closely with marketing, data science, analytics, and product teams to improve
+    acquisition efficiency and performance</li> <li>Design measurement systems for
+    LTV/CAC, attribution, and incrementality</li> <li>Support and evolve incentive
+    and partnership platforms that drive new user acquisition channels</li> <li>Rapidly
+    prototype and iterate on experiments that improve conversion, CAC efficiency,
+    and downstream user quality</li> <li>Analyze system and campaign performance post-launch
+    to inform optimizations and strategy</li> <li>Improve reliability, scalability,
+    and observability of data and backend systems</li> <li>Contribute to a culture
+    of technical excellence through code reviews, mentorship, and best practices</li>
+    </ul> <h3><strong>To thrive in this role, you have:</strong></h3> <ul> <li>3+
+    years of experience building scalable software or data systems in production environments</li>
+    <li>Experience with backend development (Ruby on Rails, Golang, or similar) and/or
+    data infrastructure</li> <li>Familiarity with data pipelines, orchestration tools
+    (e.g. Airflow), and modern data stacks</li> <li>Experience designing APIs and
+    working with databases, event streams, or data warehouses</li> <li>Interest in
+    or exposure to marketing systems such as attribution, paid ads platforms, or growth
+    analytics</li> <li>A strong product and metrics mindset, with a focus on experimentation
+    and measurable impact</li> <li>Comfort working across the stack and navigating
+    ambiguity in fast-moving environments</li> <li>Strong collaboration and communication
+    skills with cross-functional partners</li> </ul> <h3><strong>Bonus:</strong></h3>
+    <ul> <li>Experience with reverse ETL tools such as Hightouch</li> <li>Background
+    in growth engineering, paid acquisition, or marketing tech (MarTech) systems</li>
+    <li>Experience with attribution modeling, incrementality testing, or spend optimization
+    systems</li> <li>Exposure to incentive platforms or partnership integrations</li>
+    </ul> <p>#LI-Hybrid #LI-SB1</p><div class="content-conclusion"><h2><strong>A little
+    about us</strong></h2> <p>At Chime, we believe that everyone can achieve financial
+    progress. We created Chime—a financial technology company, not a bank*—on the
+    premise that core banking services should be helpful, easy, and free. Through
+    our user-friendly tools and intuitive platforms, we empower our members to take
+    control of their finances and work towards their goals. Whether it''s starting
+    a savings account, purchasing a first car or home, launching a business, or pursuing
+    higher education, we''re proud to have helped millions unlock their financial
+    potential.</p> <p>We''re a team of problem solvers, dreamers, and builders with
+    one shared obsession: our members. From day one, Chimers have worked tirelessly
+    to out-hustle and out-execute competitors to bring our mission to life. Their
+    grit and determination inspire us to work harder every day to deliver the very
+    best experience possible. We each bring an owner''s mindset to our work, refusing
+    to be outdone and holding ourselves accountable to meet and exceed the highest
+    bars for our teams, our company, and our members.</p> <p>We believe in being bold,
+    dreaming big, and taking risks, while also working together, embracing our diverse
+    perspect'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.211517+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,118 @@
+id: lattice-senior-software-engineer-ai
+name: Lattice Senior Software Engineer, AI
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Lattice
+  url: https://boards.greenhouse.io/lattice
+  application_url: https://lattice.com/job?gh_jid=8431495002
+  portal: greenhouse
+  location: Remote - British Columbia, Canada
+  location_class: international
+  description: "<h2><strong>This is Engineering at Lattice</strong></h2> <p>Lattice\u2019\
+    s Engineering team is continuously improving both our product and our craft. We\
+    \ build maintainable, performant systems using modern technologies, and we collaborate\
+    \ closely with product and design to deliver exceptional user experiences.</p>\
+    \ <p>Our AI Engineering team is building the systems that power how AI works across\
+    \ Lattice. We\u2019ve laid the foundations: traces are flowing and evals are running\
+    \ - and we\u2019re now focused on defining how our AI products are measured, improved,\
+    \ and trusted at scale. This is a high-ownership role where you\u2019ll help shape\
+    \ evaluation methodology, agent architecture, and the core systems that determine\
+    \ how AI performs in production.</p> <h2><strong>What You Will Do</strong></h2>\
+    \ <h4><strong>Evaluation Infrastructure</strong></h4> <ul> <li>Design and ship\
+    \ a robust, end-to-end AI evaluation framework, covering offline evals, production\
+    \ tracing, and human-in-the-loop feedback loops, connected across all of Lattice\u2019\
+    s AI use cases.</li> <li>Define and instrument the metrics that actually matter:\
+    \ agent task completion, hallucination rates, response quality, user engagement,\
+    \ and downstream business outcomes.</li> <li>Build and maintain evaluation datasets,\
+    \ test harnesses, and automated scoring pipelines to catch regressions before\
+    \ they ship.</li> <li>Identify and surface the drivers of agent quality improvement,\
+    \ giving the team clear signals on where to invest.</li> </ul> <h4><strong>Agent\
+    \ Architecture &amp; Infrastructure</strong></h4> <ul> <li>Architect and implement\
+    \ reusable agent infrastructure: multi-turn conversation workflows, recommendation\
+    \ services, LLM DAGs, and standardized agent topology patterns using LangGraph.</li>\
+    \ <li>Build and scale RAG pipelines and retrieval infrastructure, including vector\
+    \ store management and retrieval quality optimization.</li> <li>Make principled\
+    \ build vs. buy decisions across LLM providers, agent frameworks, and evaluation\
+    \ tooling, balancing capability, cost, latency, and vendor risk.</li> <li>Contribute\
+    \ to production AI systems with a strong focus on reliability, observability,\
+    \ and performance, not just prototypes.</li> </ul> <h4><strong>Technical Leadership\
+    \ &amp; Collaboration</strong></h4> <ul> <li>Own projects end-to-end: scope them,\
+    \ drive them to completion, and bring in the right people at the right time.</li>\
+    \ <li>Partner with engineering leads and managers to inform technical direction\
+    \ on agent quality and evaluation strategy you\u2019ll be expected to hold intelligent,\
+    \ substantive conversations about methodology, not just implementation.</li> <li>Raise\
+    \ the AI engineering bar across the broader team through code review, documentation,\
+    \ and thoughtful technical debate.</li> </ul> <h2><strong>What You Will Bring\
+    \ to the Table</strong></h2> <h4><strong>Experience</strong></h4> <ul> <li>5+\
+    \ years of professional software engineering experience with significant time\
+    \ spent on production AI/ML systems.</li> <li>Deep hands-on experience with LLM-based\
+    \ systems: prompt engineering, RAG pipelines, agent orchestration, evaluation\
+    \ metrics, and model fine-tuning.</li> <li>Proven ability to work with data and\
+    \ understand statistics, especially in experiments.</li> <li>Proven ability to\
+    \ build and operate agentic AI systems in production: multi-step workflows, multi-agent\
+    \ topologies, and the failure modes that come with them.</li> <li>Strong command\
+    \ of AI evaluation: you\u2019ve built eval frameworks before, you know the difference\
+    \ between a good eval and a vanity metric, and you have opinions about it.</li>\
+    \ <li>Production-grade Python engineering: clean, maintainable, testable code.</li>\
+    \ </ul> <h4><strong>Technical Skills</strong></h4> <ul> <li>LangGraph or comparable\
+    \ agent orchestration frameworks. You\u2019ve built real agent workflows with\
+    \ it, not just tutorials.</li> <li>LangSmith or comparable LLM observability tooling\
+    \ for tracing, evaluation, and debugging.</li> <li>Reads AI papers &amp; blogs\
+    \ regularly and is a trusted source of AI trends.</li> <li>Vector databases (Pinecone\
+    \ or similar) and retrieval system design.</li> <li>AWS ecosystem or other cloud\
+    \ infrastructure (ex GCP). Comfortable with lambdas, queues, and cloud-native\
+    \ architecture.</li> <li>Familiarity with TypeScript is a plus. Our full-stack\
+    \ engineers use it and cross-pollination is valuable.</li> </ul> <h4><strong>Ways\
+    \ of Working</strong></h4> <ul> <li>Clear eyes: you see problems as they are,\
+    \ not as you\u2019d like them to be. You surface hard truths early and address\
+    \ them directly.</li> <li>Ship, shipmate, self: you prioritize the product and\
+    \ your teammates. Low ego, high ownership.</li> <li>You\u2019re as comfortable\
+    \ in ambiguity as you are in well-defined problems: early foundations mean you\u2019\
+    ll encounter both.</li> <li>Strong technical communication: you can debate evaluation\
+    \ methodology with an AI lead and explain it clearly to an EM in the same afternoon.</li>\
+    \ </ul> <h4><strong>Nice to Have</strong></h4> <ul> <li>Experience with RLHF,\
+    \ LoRA, o"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.036180+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

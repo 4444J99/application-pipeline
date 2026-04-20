@@ -1,0 +1,116 @@
+id: anduril-software-engineer-devops-discovery
+name: Anduril Software Engineer, DevOps, Discovery
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/4981660007?gh_jid=4981660007
+  portal: greenhouse
+  location: Washington, District of Columbia, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3><strong>ABOUT THE TEAM</strong></h3>
+    <p>The Discovery team at Anduril is at the forefront of incubating and maturing
+    high-potential, software-defined, AI-native offerings that meet the toughest,
+    newest challenges across hardware, software, space, and cyber domains. We''re
+    the architects of mission autonomy and mesh networking, delivering scalable hardware
+    solutions that meet some of the most urgent national security needs. By working
+    hand-in-hand with elite teams in Perception, AI, Motion Planning, Hardware, Test
+    Engineering, Space, Networking, and Vehicle hardware, we craft cutting-edge, end-to-end
+    systems that redefine mission success.</p> <h3><strong>ABOUT THE JOB</strong></h3>
+    <p>As a DevOps Software Engineer on the Discovery team, you will solve a wide
+    variety of problems involving networking, autonomy, systems integration, robotics,
+    and more, while making pragmatic engineering tradeoffs along the way. Your efforts
+    will ensure that Anduril products seamlessly work together to achieve critical
+    outcomes. You are not a DevOps person who knows a little coding, you are a coder
+    who knows CI/CD.<br><br>You’ll work closely with software, data, and operations
+    engineers to turn designs into working systems—streamlining development, improving
+    performance, and keeping production stable as we scale. You’ll also collaborate
+    with digital, manufacturing, and corporate technology teams across Anduril in
+    a high-tech, fast-paced culture of innovation focused on solving real problems
+    and delivering results.<br><br>Above all, Software Engineers must be driven by
+    a “Whatever It Takes” mindset—executing in an expedient, scalable, and pragmatic
+    way while keeping the mission top-of-mind and making sound engineering decisions
+    to deliver successful outcomes on-time and with high quality. Not only will you
+    build our systems, but you''ll also work directly with customers to deploy it.<br><br><strong>WHAT
+    YOU’LL DO</strong></p> <ul> <li>Build and Manage CI/CD Pipelines: Develop and
+    maintain CI/CD pipelines using tools like CircleCI, GitHub Actions, and Jfrog
+    Artifactory to ensure seamless integration and deployment of machine learning
+    models and applications.</li> <li>Infrastructure as Code (IaC): Utilize Terraform
+    and Ansible to automate infrastructure provisioning and management on cloud platforms
+    such as Azure, AWS, or Google Cloud Platform (GCP).</li> <li>Containerization
+    and Orchestration: Use Kubernetes to ensure reliable deployment and scaleability
+    of applications.</li> <li>Model Management and Deployment: Set up and maintain
+    model registries and feature stores (e.g., MLflow, Kubeflow), and manage deployment
+    pipelines for both batch and real-time inference.</li> <li>Monitoring and Logging:
+    Establish comprehensive monitoring and logging solutions using tools like ELK
+    Stack (Elasticsearch, Logstash, Kibana), Prometheus, Vector, Loki, and Grafana
+    to ensure the smooth operation of deployment environments.</li> <li>Collaborate
+    with Cross-Functional Teams: Work closely with development, data science, and
+    operations teams to foster collaboration and ensure the efficient and effective
+    deployment of machine learning models.</li> </ul> <h4><strong>REQUIRED QUALIFICATIONS</strong></h4>
+    <ul> <li>Currently possesses and is able to maintain an active U.S. Top Secret
+    security clearance</li> <li>Strong engineering background from industry or school,
+    ideally in areas/fields such as Computer Science, Software Engineering, Mathematics,
+    or Physics</li> <li>3+ years working with a variety of programming languages such
+    as Java, Python, C++, Rust, Go, JavaScript, etc.</li> <li>Experience with CI/CD
+    tools like GitHub Actions, CircleCI, FluxCD, Jfrog Artifactory, and Git.</li>
+    <li>Proficiency with IaC tools (Terraform, Ansible).</li> <li>Experience with
+    cloud platforms (Azure, AWS, GCP).</li> <li>Proficiency in containerization (Docker)
+    and container orchestration (Kubernetes).</li> <li>Ability to quickly understand
+    and navigate complex systems and established code bases</li> <li>A desire to work
+    on critical software that has a real-world impact</li> </ul> <h4><strong>PREFERRED
+    QUALIFICATIONS</strong></h4> <ul> <li>Strong background with focus in Physics,
+    Mathematics, and/or Motion Planning to infor'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:34.073307+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,117 @@
+id: zapier-devops-engineer-release-engineering-platform-cicd
+name: Zapier DevOps Engineer - Release Engineering (Platform & CI/CD)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Zapier
+  url: https://jobs.ashbyhq.com/zapier
+  application_url: https://jobs.ashbyhq.com/zapier/6948a0e6-a580-4e9d-b109-20652d9a1507
+  portal: ashby
+  location: India
+  location_class: international
+  description: 'AI at Zapier At Zapier , we build and use automation every day to
+    make work more efficient, creative, and human. So if you’re using AI tools while
+    applying here - that’s great! We just ask that you use them responsibly and transparently
+    . Check out our guidance on How to Collaborate with AI During Zapier’s Hiring
+    Process , including how to use AI tools like ChatGPT, Claude, Gemini, or others
+    during our hiring process - and when not to. Job Posted: April 13th, 2026 Location:
+    India Zapier is entering its next stage of growth, expanding enterprise capabilities,
+    scaling AI-driven development workflows, and increasing the sophistication of
+    our delivery systems. As our product surface area grows and AI becomes an increasing
+    part of our development lifecycle, so does the complexity of shipping software
+    safely, reliably, and efficiently. We’re looking for an L3 DevOps Engineer (mid-level)
+    and a L4 Sr. DevOps Engineer to help build and evolve the systems that move code
+    from commit to production across Zapier. These are highly hands-on roles for experienced
+    engineers who operate with strong autonomy, take ownership of complex problems,
+    and deliver high-quality platform systems that scale across the organization.
+    If you enjoy designing and building critical infrastructure, improving developer
+    workflows, and owning meaningful technical challenges end-to-end, this role is
+    for you. Here''s what each level looks like: L3 — Software Engineer: You understand
+    how the systems you work on fit together end-to-end. You can take a well-defined
+    task and deliver it from start to finish, including tests, docs, and deployment.
+    You call out risks early, ask for help when you''re stuck, and communicate often
+    about your progress. You debug issues using logs and metrics, and when something
+    is beyond your reach, you know who to bring in. You use AI tools in your daily
+    work and stay responsible for the quality of what ships. L4 — Senior Software
+    Engineer: You go beyond your own tasks. You lead the technical design of projects,
+    especially complex ones that involve other teams. You define the work, break it
+    down for others, and help the team deliver. When things go wrong, you evaluate
+    impact, coordinate the response, and drive long-term fixes. You create patterns
+    and best practices that others adopt. You mentor engineers, give feedback that
+    improves how people think, and spot recurring problems that become roadmap-level
+    improvements. Note: We evaluate your skills and qualifications during the interview
+    process and match them to Zapier''s leveling requirements. The final compensation
+    will depend on the level and where you land in our comp bands. Team Focus Release
+    Engineering owns the systems, standards, and workflows that move code from commit
+    to production — reliably, efficiently, and securely — across Zapier’s platform.
+    Our mission is to make software delivery: Predictable Observable Cost-efficient
+    Scalable AI-ready and evolving We standardize CI/CD patterns, improve pipeline
+    performance, reduce delivery friction, and partner with Infra and Security to
+    ensure our release systems are durable and enterprise-ready. In This Role, You’ll
+    Build & Own Critical CI/CD and Deployment Systems Design, implement, and operate
+    CI/CD pipelines and deployment workflows Improve pipeline performance (duration,
+    reliability, and cost) Build and evolve standardized CI templates and Golden Paths
+    Implement validation gates, testing strategies, and deployment safeguards Contribute
+    to rollout strategies (progressive delivery, feature flags, rollback mechanisms)
+    You will spend the majority of your time building production systems and shipping
+    impactful changes. Own Delivery of Complex Initiatives Own end-to-end delivery
+    of projects or major components within broader initiatives Participate in discovery
+    and solution design with Tech Leads and cross-functional partners Define technical
+    approaches through design docs, spikes, or PoCs Break down work into clear, executable
+    tasks and drive them to completion Proactively identify risks, tradeoffs, and
+    scope changes Ensure work meets the Definition of Done, including reliability,
+    observability, and rollout readiness You are accountable for delivering outcomes,
+    not just completing tasks. Drive Technical Design & Decision-Making Lead design
+    efforts for your projects and contribute to broader system design Evaluate tradeoffs
+    across performance, cost, reliability, and developer experience Write clear technical
+    design documents and influence decisions through strong reasoning Raise and resolve
+    ambiguity, proposing pragmatic and scalable solutions You operate with a high
+    degree of autonomy in technical decision-making within your scope. Collaborate
+    Across Platform & Engineering Partner with Infrastructure, Security, and other
+    engineering teams Work with Product and Design (when applicable) to align on scope
+    and tradeoffs Support adoption of platform tooling and CI/CD standards Communicate
+    progress, risks, and decisions clearly in a'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-14'
+  posting_date: '2026-04-13'
+  date_source: published_at
+  date_added: '2026-04-14'
+  discovered: '2026-04-14T10:23:06.726376+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

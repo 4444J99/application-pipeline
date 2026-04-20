@@ -1,0 +1,110 @@
+id: snowflake-applied-ai-engineer
+name: Snowflake Applied AI Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/a6a3e9d2-b045-466a-8074-1613c07891fe
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Where Data Does More. Join the Snowflake team.
+    At Snowflake, we are building a high-impact team to help the world’s most innovative
+    companies unlock the power of AI. As an Applied AI Engineer in our Cortex AI team,
+    you will be a hands-on builder and a critical technical partner to our most strategic
+    customers, placing you at the forefront of the enterprise AI revolution. You won''t
+    just be working with cutting-edge technology; you will be deploying it to solve
+    real-world business problems at a massive scale. This role places you at the intersection
+    of product, engineering, and customer success, building production-grade AI systems
+    using Snowpark, Cortex, and our native LLM capabilities. IN THIS ROLE AT SNOWFLAKE,
+    YOU WILL: Drive Customer Impact: Architect, build, and deploy enterprise-grade
+    AI solutions, including sophisticated AI agents. Own the end-to-end lifecycle
+    from prototype to production, directly solving our customers'' most complex business
+    challenges. Deliver with Velocity: Rapidly design, iterate, and ship high-quality
+    code and ML pipelines. Translate ambiguous business objectives into robust, scalable,
+    and performant solutions using Python and SQL. Productionize AI at Scale: Own
+    the full lifecycle of AI solution implementation, from developing prototypes to
+    deploying, monitoring, and optimizing them in secure, large-scale production environments.
+    Be a Strategic Technical Advisor: Partner directly with customer data science
+    and engineering teams, serving as a technical expert and trusted advisor on how
+    to best leverage AI for their business challenges. Collaborate to Innovate: Work
+    cross-functionally with Snowflake’s Product and Engineering teams to share real-world
+    feedback from the customers, directly influencing the future of Snowflake''s AI
+    platform. WE''RE LOOKING FOR CANDIDATES WHO HAVE: Minimum Qualifications: Bachelor’s
+    degree in Computer Science, Engineering, a related technical field, or equivalent
+    practical experience. 2+ years of professional software engineering experience,
+    A passion for tackling complex and ambiguous technical challenges, leveraging
+    cutting-edge research and AI to deliver impactful solutions. Experience building,
+    evaluating and tuning applications and pipelines that involve machine learning
+    models or data-intensive systems.Familiarity with core data science libraries
+    and tools (e.g., pandas, numpy, Snowpark). Excellent problem-solving and communication
+    skills, with an ability to articulate complex technical concepts to diverse stakeholders.
+    A desire to thrive in a fast-paced, dynamic environment and the ability to adapt
+    quickly to the ever-changing world of Generative AI. Preferred Qualifications:
+    Proven experience building and productionizing applications using LLMs, especially
+    with technologies like RAG and agentic workflows. Hands-on experience with the
+    MLOps lifecycle, including model deployment, monitoring, and evaluation in a cloud
+    environment (AWS, Azure, or GCP). Experience in a customer-facing role (e.g.,
+    solutions architect, sales engineer, or professional services). Startup experience
+    WHY JOIN OUR TEAM AT SNOWFLAKE? Join us in shaping the future of AI and data cloud
+    technology. You''ll work with cutting-edge AI tools and technologies while solving
+    complex challenges for enterprise customers. Our team offers the unique opportunity
+    to drive innovation at scale, working with some of the world''s leading organizations
+    while having access to Snowflake''s advanced AI capabilities and infrastructure.
+    Every Snowflake employee is expected to follow the company’s confidentiality and
+    security standards for handling sensitive data. Snowflake employees must abide
+    by the company’s data security plan as an essential part of their duties. It is
+    every employee''s duty to keep customer information secure and confidential. Snowflake
+    is growing fast, and we’re scaling our team to help enable and accelerate our
+    growth. We are looking for people who share our values, challenge ordinary thinking,
+    and push the pace of innovation while building a future for themselves and Snowflake.
+    How do you want to make your impact? For jobs located in the United States, please
+    visit the job posting on the Snowflake Careers Site for salary and benefits information:
+    careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.177553+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

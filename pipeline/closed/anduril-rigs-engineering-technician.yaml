@@ -1,0 +1,107 @@
+id: anduril-rigs-engineering-technician
+name: Anduril Rigs Engineering Technician
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5052102007?gh_jid=5052102007
+  portal: greenhouse
+  location: London, England, United Kingdom
+  location_class: international
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE ROLE</h3> <p>The
+    Rigs Engineering Technician is a crucial role responsible for assisting in the&nbsp;design,
+    development and delivery of vital test platforms to help deliver Anduril’s future
+    products. The individual will use their experience to plan, build and operate
+    viable test facility infrastructure including workshops and test asset inventory
+    infrastructure. The candidate will play a pivotal role in defining unique solutions
+    to problems with limited information and short time frames. They will leverage
+    their knowledge to assist and advance solutions that enable testing and verification
+    for key stakeholders.</p> <p>&nbsp;</p> <h4>WHAT YOU'LL DO</h4> <ul> <li>Test
+    Asset Design and Build</li> <li>Test Platform Construction</li> <li>Test Facility
+    Operations</li> <li>Inventory Management and PlanningReporting</li> <li>Cross-functional
+    Collaboration<br><br></li> </ul> <h4>REQUIRED QUALIFICATIONS</h4> <ul> <li>Bachelor’s
+    degree in Engineering, or a related field. Minimum of 5 years of experience in
+    aerospace/automotive technician roles, test technician roles, or similar, with
+    experience in test and verification activities.</li> <li>Experience in operating
+    large scale verification and validation rig equipment.&nbsp;</li> <li>Strong experience
+    in electrical wiring installations.</li> <li>Proficiency with oscilloscopes, multimeters
+    and other test&nbsp;equipment.</li> <li>Skill in maintenance and use of 3D printing
+    equipment.</li> <li>Experience in creating and operating development workshops
+    and facilities.</li> <li>Exceptional critical thinking and problem-solving abilities
+    with a proactive approach to identifying and resolving issues.</li> <li>Excellent
+    written and verbal communication skills, with the ability to present complex information
+    clearly and concisely to diverse audiences.</li> </ul> <h4>PREFERRED QUALIFICATIONS</h4>
+    <ul> <li>Experience in working with high voltage systems.</li> <li>Experience
+    in a specific industry relevant to Automotive, Aviation or high-tech engineering.</li>
+    </ul> <p>&nbsp;</p><div class="content-conclusion"><p><span data-contrast="auto">The
+    salary range for this role is an estimate based on a wide range of compensation
+    factors, inclusive of base salary only. Actual salary offer may vary based on
+    (but not limited to) work experience, education and/or training, critical skills,
+    and/or business considerations. Highly competitive equity grants are included
+    in the majority of full time offers; and are considered part of Anduril's total
+    compensation package. Additionally, Anduril offers top-tier benefits for full-time
+    employees, including:</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></p>
+    <p><strong><span data-contrast="auto">Healthcare Benefits&nbsp;</span></strong></p>
+    <ul> <li><strong><span data-contrast="none">US Roles:</span></strong><span data-contrast="none">&nbsp;Comprehensive
+    medical, dental, and vision plans at little to no cost to you.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    <li><strong><span data-contrast="none">UK &amp; AUS Roles:</span></strong><span
+    data-contrast="none">&nbsp;We cover full cost of medical insurance premiums for
+    you and your dependents.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    <li><strong><span data-contrast="auto">IE Roles:</span></strong> <span data-contrast="none">We
+    offer an annual contribution toward your private health insurance for you and
+    your dependents.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    </ul> <p><strong><span data-contrast="auto">Additional Benefits</span></strong><span
+    data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.397523+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,116 @@
+id: notion-software-engineer-permissions
+name: Notion Software Engineer, Permissions
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Notion
+  url: https://jobs.ashbyhq.com/notion
+  application_url: https://jobs.ashbyhq.com/notion/66b1756e-843d-4118-89d1-08667eb6fa27
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: 'About Us: Notion helps you build beautiful tools for your life’s work.
+    In today''s world of endless apps and tabs, Notion provides one place for teams
+    to get everything done, seamlessly connecting docs, notes, projects, calendar,
+    and email—with AI built in to find answers and automate work. Millions of users,
+    from individuals to large organizations like Toyota, Figma, and OpenAI, love Notion
+    for its flexibility and choose it because it helps them save time and money. In-person
+    collaboration is essential to Notion''s culture. We require all team members to
+    work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor
+    Days. Certain teams or positions may require additional in-office workdays. About
+    The Role: The Permissions team scales some of our most important primitives for
+    enterprise customers: permissions, user roles, and access management . Your work
+    will include: Identifying and executing against technical investments that ensure
+    the long-term quality, reliability, and performance of these primitives Building
+    end-user facing functionality to meet complex product needs Answering important
+    and technically challenging questions like, “How do we represent teams of people
+    in enterprise workspaces?” and “How can we give our users the most granular access
+    controls?” Defining team norms, operating principles, team culture, and much more
+    What You''ll Achieve: You''ll design and scale granular permission models and
+    access control systems that feel intuitive despite underlying complexity, enabling
+    Notion users to collaborate with confidence. You’ll work with a team of engineers
+    and cross-functional partners across product, design, data science, and user research
+    to define a product strategy for representing organization structures—teams, groups,
+    and hierarchies—within Notion workspaces, solving complex problems around access
+    delegation and permission inheritance. You’ll contribute to the overall performance,
+    reliability, and robustness of the Notion product, ensuring it scales elegantly
+    across many dimensions. You’ll partner with engineering leaders to identify and
+    execute against high leverage technical investment that ensure the long-term flexibility
+    and sustainability of our core systems. Skills You''ll Need to Bring: Proven track
+    record of execution: You have 7+ years of engineering experience, including several
+    years building world-class product experiences alongside a team of engineers.
+    Tech leadership experience: You have previously held positions where you were
+    responsible for making key technical decisions, guiding a team through complex
+    projects, and mentoring junior team members. Pragmatic and business oriented :
+    You prioritize business impact and understand the balance between craft, speed,
+    and long-term maintainability. You’re opinionated but not ideological, and you
+    learn new technologies as you go. Building the team: You enjoy collaborating with
+    both fellow engineers and cross-functional partners. You are a lifelong learner
+    and invest in both your own growth, but also the growth, learning, and development
+    of your teammates. Thoughtful problem-solving: You approach problems holistically,
+    starting with a clear and accurate understanding of the context. You think critically
+    about the implications of what you''re building and how it will impact real people''s
+    lives. You can navigate ambiguity flawlessly, decompose complex problems into
+    clean solutions, while also balancing the business impact of what you’re building.
+    Empathetic communication: You communicate nuanced ideas clearly, whether you''re
+    explaining technical decisions in writing or brainstorming in real time. In disagreements,
+    you engage thoughtfully with other perspectives and compromise when needed. You
+    don’t need to be an AI expert, but you’re curious and willing to adopt AI tools
+    to work smarter and deliver better results. Nice to Haves: You''re proficient
+    with any part of our technology stack: React, TypeScript, Node.js, and Postgres.
+    You have experience driving teams toward shared goals and are excited to navigate
+    product ambiguity in order to drive Notion’s future as an AI-first product You''ve
+    heard of computing pioneers like Ada Lovelace, Douglas Engelbart, Alan Kay, and
+    others—and understand why we''re big fans of their work. You have interests outside
+    of technology, such as in art, history, or social sciences. We hire talented and
+    passionate people from a variety of backgrounds because we want our global employee
+    base to represent the wide diversity of our customers. If you’re excited about
+    a role but your past experience doesn’t align perfectly with every bullet point
+    listed in the job description, we still encourage you to apply. If you’re a builder
+    at heart, share our company values, and enthusiastic about making software toolmaking
+    ubiquitous, we want to hear from you. Notion is proud to be an equal opportunity
+    employer. We do not discriminate in hiring or any employment decision based on
+    race, color, religion, national '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.763265+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

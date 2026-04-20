@@ -1,0 +1,98 @@
+id: langchain-senior-backend-engineer-langsmith-deployments
+name: LangChain Senior Backend Engineer, LangSmith Deployments
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: LangChain
+  url: https://jobs.ashbyhq.com/langchain
+  application_url: https://jobs.ashbyhq.com/langchain/cb61f821-d8c4-4ec5-940d-3fd83be63a5f
+  portal: ashby
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: 'About LangChain At LangChain, our mission is to make intelligent agents
+    ubiquitous. We build the foundation for agent engineering in the real world, helping
+    developers move from prototypes to production-ready AI agents that teams can rely
+    on. We began as widely adopted open-source tools and have grown to also offer
+    a platform for building, evaluating, deploying, and operating agents at scale.
+    Today, LangChain, LangGraph, LangSmith, and Agent Builder are used by teams shipping
+    real AI products across startups and large enterprises. Millions of developers
+    trust LangChain to power AI teams at companies like Replit, Clay, Coinbase, Workday,
+    Lyft, Cloudflare, Harvey, Rippling, Vanta, and 35% of the Fortune 500 . With $125M
+    raised at Series B from IVP, Sequoia, Benchmark, CapitalG, and Sapphire Ventures
+    , we’re at a stage where we’re continuing to develop new products, growth is accelerating,
+    and all team members have meaningful impact on what we build and how we work together.
+    LangChain is a place where your contributions can shape how this technology shows
+    up in the real world. About the role In person 5 days/week in San Francisco, CA
+    or New York, NY We''re building purpose-built infrastructure for running AI agents.
+    Unlike traditional web apps, agents run for long durations, collaborate asynchronously
+    with humans and other agents, and need to survive failures mid-execution. LangSmith
+    Deployments is the runtime that makes this work, with durable checkpointing, fault-tolerant
+    orchestration, and horizontal scaling, deployed across cloud and self-hosted environments.
+    We''re looking for a Senior Backend Engineer to work on this system. While the
+    focus is on backend development, strong familiarity with Kubernetes (K8s), Terraform
+    (Tf), and other DevOps tooling is highly preferred. Design distributed queue and
+    worker systems that handle concurrent agent execution, background tasks, and multi-agent
+    coordination across horizontally scalable infrastructure Own core data infrastructure
+    — state persistence, atomic job claiming, connection management, and schema evolution
+    Collaborate on architectural decisions, ensuring solutions are scalable and robust.
+    Ship resumable streaming infrastructure so clients can disconnect and reconnect
+    mid-execution without losing state Instrument and monitor production systems —
+    tracing, metrics, and alerting to keep the platform healthy Participate in on-call
+    rotations and own incident response for the runtime Create and maintain technical
+    documentation, including system design and operational runbooks. Contribute to
+    and extend open-source LangGraph, which is used by thousands of developers to
+    build agent applications How to be successful in this role 4+ years of professional
+    backend engineering experience Strong proficiency in Go and/or python Experience
+    with distributed systems — conensus mechanisms, queueing, state machines, and/or
+    workflow orchestration Experience with scaling and sharding databases in high
+    throughput environments Familiarity with Kubernetes, infrastructure-as-code, and
+    at least one major cloud platform Strong communication skills and ability to work
+    cross-functionally on a small team Compensation & Benefits We offer competitive
+    compensation that includes base salary, meaningful equity, and benefits such as
+    health and dental coverage, flexible vacation, a 401(k) plan, and life insurance.
+    Actual compensation will vary based on role, level, and location. For team members
+    in the EU and UK, we provide locally competitive benefits aligned with regional
+    norms and regulations. Annual salary range: $175,000-$225,00 USD'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.065618+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

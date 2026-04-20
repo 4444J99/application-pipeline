@@ -1,0 +1,88 @@
+id: cursor-software-engineer-devex
+name: Cursor Software Engineer, DevEx
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Cursor
+  url: https://jobs.ashbyhq.com/cursor
+  application_url: https://jobs.ashbyhq.com/cursor/010063bd-6083-4fc0-a455-e6f0193b5347
+  portal: ashby
+  location: SF / NY
+  location_class: us-onsite
+  description: 'Our mission is to automate coding. The first step in our journey is
+    to build the best tool for professional programmers, using a combination of inventive
+    research, design, and engineering. Our organization is very flat, and our team
+    is small and talent dense. We particularly like people who are truth-seeking,
+    passionate, and creative. We enjoy spirited debate, crazy ideas, and shipping
+    code. About the Role You will be a core contributor on the DevEx team, designing
+    and building the systems, tools, and workflows that make every Cursor developer
+    incredibly productive. Your mission is to create a world-class developer experience
+    inside Cursor: fast builds, intuitive tooling, reliable environments, and seamless
+    CI/CD. You’ll architect, implement, and operate the foundations that power our
+    engineering organization—from local development to global deployments. You’ll
+    set technical direction within the team, write and review code, and collaborate
+    across engineering to make it effortless for developers to build, test, and ship
+    quickly. Excellence means Cursor engineers feel like they’re working in the best
+    development environment in the world—one so good that parts of it could eventually
+    become external features of Cursor itself. Example Projects Include Building a
+    multi-platform development environment that works seamlessly across macOS, Windows,
+    and Linux. Designing and maintaining CI/CD systems—merge queues, build caching,
+    flaky test quarantine, observability, and safe rollout pipelines. Automating developer
+    machine provisioning—from laptop setup and reset automation to interview and onboarding
+    workflows. Partnering with backend and infrastructure teams to ensure local testing
+    and debugging just work , with near-perfect parity between development and CI
+    environments. You may be a fit if Have experience working on developer productivity,
+    internal platform, infrastructure, or build/test systems. Regularly write and
+    review code, and enjoy improving build systems, scripting CI pipelines, and refining
+    developer tooling. Have built or maintained tooling or infrastructure for large-scale
+    or multi-language codebases. Care deeply about developer velocity, reliability,
+    and maintainability, and apply sound technical judgment to improve them. Are energized
+    by tightening feedback loops and making development feel effortless, fast, and
+    enjoyable. We''re in-person with cozy offices in North Beach, San Francisco and
+    Manhattan, New York, replete with well-stocked libraries. Applying If there appears
+    to be a fit, we''ll reach to schedule 2-3 short technicals. After, we''ll schedule
+    an onsite in our office, where you''ll work on a small project, discuss ideas,
+    and meet the team.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.876906+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

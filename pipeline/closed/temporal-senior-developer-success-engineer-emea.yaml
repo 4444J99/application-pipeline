@@ -1,0 +1,115 @@
+id: temporal-senior-developer-success-engineer-emea
+name: Temporal Senior Developer Success Engineer - EMEA
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Temporal
+  url: https://boards.greenhouse.io/temporaltechnologies
+  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/5031597007
+  portal: greenhouse
+  location: London, UK
+  location_class: international
+  description: '<div class="content-intro"><h3><strong>About Us</strong></h3> <div>Temporal
+    is an open source programming model that can simplify code, make applications
+    more reliable, and help developers focus on the important things like delivering
+    features faster. We are on a mission to be the reliable foundation of every developer’s
+    toolbox, and are building the team that will make that happen.</div> <div>&nbsp;</div>
+    <div>Our values guide us —they are present in how we show up, make decisions,
+    and work together to make an impact. We’re curious, driven, collaborative, genuine
+    and humble.</div> <div>&nbsp;</div> <div>Temporal is growing and we are looking
+    for those who share our values, challenge ''standard'' thinking, and want to influence
+    our future. If you have a passion for improving the developer experience, building
+    world-class open-source software and communities, and want to be a part of our
+    amazing team, we''d love to hear from you!</div></div><h3><strong>Summary</strong></h3>
+    <p>The <strong>Senior Developer Success Engineer</strong> will be the frontline
+    technical expert for our developer community. You will help users deploy and scale
+    Temporal in cloud-native environments. You will also troubleshoot complex infrastructure
+    issues, optimize performance, and develop automation solutions. This role is ideal
+    for someone who thrives on solving distributed systems challenges and improving
+    the developer experience.</p> <h3><strong>What You''ll Do</strong></h3> <ul> <li>Be
+    a keen <strong>learner</strong>:</li> <ul> <li>At Temporal, you’ll work with cloud-native,<strong>
+    </strong>highly scalable infrastructure spanning<strong> </strong>AWS, GCP, Kubernetes,
+    and microservices. You’ll gain deep expertise in distributed systems orchestration,
+    networking, and observability while learning from complex, real-world customer
+    use cases.</li> <li>Our stack includes Go, Python, Typescript, Java, and .Net
+    providing continuous opportunities to hone your programming skills in distributed
+    systems design, testing and troubleshooting, automation, resilience engineering,
+    and performance tuning.</li> </ul> <li>Be a passionate <strong>problem solver</strong>:</li>
+    <ul> <li>If you enjoy tackling scalability, reliability, and troubleshooting challenges
+    in distributed systems, you’ll thrive in this role.&nbsp;</li> <li>You’ll work
+    directly with developers to troubleshoot complex issues, help them optimize performance
+    and reliability, contribute to improving user experience, and help them be successful
+    with using Temporal.</li> <li>You''ll develop and troubleshoot implementation
+    patterns (use cases, SDK options, code reviews), observability solutions (Grafana,
+    Prometheus), networking issues (load balancing, DNS, ingress/egress), and infrastructure
+    operations (Terraform, IaC) to help customers run Temporal efficiently at scale.</li>
+    <li>Once ramped up, we expect you to independently drive technical solutions,
+    whether debugging complex production issues or designing best practices. Don''t
+    worry—we have seasoned engineers and mentors to support you along the way!</li>
+    </ul> <li>Be a great <strong>communicator</strong>:</li> <ul> <li>As a Senior
+    Developer Success Engineer you will engage directly with developers, engineering
+    teams, and product teams to understand distributed systems challenges and provide
+    solutions that enhance scalability, performance, and reliability.</li> <li>Your
+    insights will influence platform improvements, from enhancing observability tooling
+    to developing self-service solutions that simplify troubleshooting (e.g., building
+    diagnostic tools similar to Twilio’s Network Test).</li> <li>You’ll serve as a
+    bridge between developers and Temporal engineering, ensuring that reliability,
+    performance, and developer experience remain top priorities as Temporal scales.</li>
+    </ul> </ul> <h3><strong>What You''ll Bring</strong></h3> <ul> <li>6+ years of
+    experience as a developer, preferably fluent in one or more of the following languages:
+    Python, Java, Golang, TypeScript, DotNet.</li> <li>Experience with deploying and
+    managing medium to large-scale architectures (e.g., Kubernetes or Docker).</li>
+    <li>Experience with monitoring tools such as Prometheus and Grafana and troubleshooting
+    performance and availability issues.</li> <li>Minimum of one year experience in
+    an internal or external customer-facing role.</li> <li>Passion for helping others
+    regardless of who they are or how they act.</li> <li>Experience working with or
+    as part of remote teams.</li> <li>Strong written and verbal communication skills.</li>
+    <li>Seek to understand first, lead with data, and rely on facts.</li> </ul> <h3><strong>Nice
+    to Have</strong></h3> <ul> <li>Previous experience in customer-facing positions
+    such as a professional services consultant, solutions architect, customer engineer,
+    etc.</li> <li>Experience with security certificate management and implementation.</li>
+    <li>Ability to understand use cases and translate them into Temporal design decisions
+    and architecture'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 10
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.651118+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,113 @@
+id: sofi-staff-software-engineer-lantern
+name: SoFi Staff Software Engineer, Lantern
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: SoFi
+  url: https://boards.greenhouse.io/sofi
+  application_url: https://sofi.com/careers/job/7658595003?gh_jid=7658595003
+  portal: greenhouse
+  location: 'WA - Seattle '
+  location_class: us-onsite
+  description: '<div class="content-intro"><p><a href="https://www.sofi.com/sofi-employee-applicant-privacy-notice/"
+    target="_blank"><strong>Employee Applicant Privacy Notice</strong></a></p> <p><strong>Who
+    we are:</strong></p> <div> <p>Shape a brighter financial future with us.</p> <p>Together
+    with our members, we’re changing the way people think about and interact with
+    personal finance.</p> <p>We’re a next-generation financial services company and
+    national bank using innovative, mobile-first technology to help our millions of
+    members reach their goals. The industry is going through an unprecedented transformation,
+    and we’re at the forefront. We’re proud to come to work every day knowing that
+    what we do has a direct impact on people’s lives, with our core values guiding
+    us every step of the way. <strong>Join us to invest in yourself, your career,
+    and the financial world.</strong></p> </div></div><h2><span style="font-size:
+    12pt;"><strong><strong>The Role</strong></strong></span></h2> <p>This role is
+    focused on the Lantern team at SoFi. Our mission is to build and grow a financial
+    marketplace, building both a compelling supplier experience for providers of financial
+    products, as well as a compelling user experience in suggesting the right financial
+    products for our users. Ideal candidates have a passion for designing beautiful
+    APIs and well architected systems.</p> <p>We are looking for a Staff Software
+    Engineer to join our Small Business team to help build the next generation financial
+    products for small businesses. The successful candidate will have a strong background
+    in designing, developing, and maintaining robust back-end systems. As a Staff
+    Back-End Software Engineer, you will play a crucial role in ensuring the scalability,
+    performance, and security of our platform.<br>&nbsp;</p> <p><span style="font-size:
+    12pt;"><strong><strong>Key Responsibilities</strong></strong></span></p> <ul>
+    <li> <p>Lead the development and testing of our systems and services</p> </li>
+    <li> <p>Participate in shaping the technical architecture of the product</p> </li>
+    <li> <p>Help translate product requirements into user stories and technical solutions</p>
+    </li> <li> <p>Deliver highly available and scalable services in a production environment</p>
+    </li> <li> <p>Mentor other engineers, support the technical culture, and help
+    grow the team</p> </li> <li> <p>Generate ideas for new initiatives and technologies</p>
+    </li> <li> <p>Drive operational excellence in our business processes to deliver
+    higher service quality</p> </li> <li> <p>Communicate with project leads, product
+    managers and other software developers<br>&nbsp;</p> </li> </ul> <p><span style="font-size:
+    12pt;"><strong><strong>Requirements</strong></strong></span></p> <ul> <li> <p>Bachelor’s
+    Degree in Computer Science or related field</p> </li> <li> <p>8+ years programming
+    experience, ideally on a modern stack.</p> </li> <li> <p>Our core stack is Java/
+    Kotlin/ Spring / AWS/ PostgreSQL, and we run on Kubernetes in a service oriented
+    architecture.</p> </li> <li> <p>4+ years Java, Kotlin or other OO programming
+    experience&nbsp;</p> </li> <li> <p>A solid understanding of relational databases
+    and ORMs</p> </li> <li> <p>Experience working on microservice-based applications.</p>
+    </li> <li> <p>Experience working with GIT and CI/CD systems.</p> </li> <li> <p>Effective
+    communication skills</p> </li> <li> <p>Willingness to roll up your sleeves, collaborate
+    with others and get stuff done</p> </li> <li> <p>Solid sense of responsibility;
+    driving a project from inception to completion</p> </li> <li> <p>Experience working
+    in a collaborative coding environment, refining designs together, working through
+    code reviews and managing pull requests</p> </li> <li> <p>View Unit and Integration
+    test as 1st class citizen in software development</p> </li> <li> <p>Desire to
+    grow, learn and collaborate with team of engineers.<br>&nbsp;</p> </li> </ul>
+    <p><span style="font-size: 12pt;"><strong><strong>Nice To Have</strong></strong></span></p>
+    <ul> <li> <p>Experience scaling highly available, mission critical systems</p>
+    </li> <li> <p>Full-stack experience, either toward systems (kafka, temporal, docker),
+    databases (DynamoDB), or front-end (javascript/typescript, react)</p> </li> <li>
+    <p>Insurance Industry Experience: Familiarity with the insurance industry and
+    its specific regulatory requirements.</p> </li> </ul><div class="content-conclusion"><div
+    class="gmail_default"><strong>Compensation and Benefits</strong></div> <div class="gmail_default">The
+    base pay range for this role is listed below. Final base pay offer will be determined
+    based on individual factors such as the candidate’s experience, skills, and location.&nbsp;</div>
+    <div class="gmail_default">&nbsp;</div> <div class="gmail_default">To view all
+    of our comprehensive&nbsp;and competitive&nbsp;benefits, visit our&nbsp;<strong><a
+    href="https://sofietyinfo.sofi.com/sofi-benefits" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://sofiety'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.814155+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

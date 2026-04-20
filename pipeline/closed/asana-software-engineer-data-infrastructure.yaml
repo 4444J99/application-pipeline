@@ -1,0 +1,115 @@
+id: asana-software-engineer-data-infrastructure
+name: 'Asana Software Engineer, Data Infrastructure '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Asana
+  url: https://boards.greenhouse.io/asana
+  application_url: https://www.asana.com/jobs/apply/7367282?gh_jid=7367282
+  portal: greenhouse
+  location: Warsaw
+  location_class: international
+  description: '<p>We’re looking for a Software Engineer with experience in cloud
+    infrastructure and a strong interest in big data systems. You will be a member
+    of our Data Platform Infrastructure team in Warsaw, responsible for systems that
+    move, store, and govern Asana’s data.</p> <p>This role is based in our Warsaw
+    office with an office-centric hybrid schedule. The standard in-office days are
+    Monday, Tuesday, and Thursday. Most Asanas have the option to work from home on
+    Wednesdays. Working from home on Fridays depends on the type of work you do, and
+    your recruiter can share more about the in-office requirements.</p> <p>Our employees
+    in Poland are employed under a contract of employment.&nbsp;</p> <p><strong>The
+    Role &amp; Tech Stack</strong></p> <p>The Data Infrastructure teams build and
+    own the entire lifecycle of data - from Asana’s product surfaces to the analytical
+    warehouse and back:</p> <ul> <li>Provisioning and scaling AWS and Databricks environments</li>
+    <li>Building and maintaining ingestion systems that sync data from Asana’s product
+    surfaces into our data lake</li> <li>Developing orchestration frameworks to simplify
+    pipeline development and testing for other engineering teams</li> <li>Creating
+    attribution and reporting systems to provide visibility into platform spend and
+    resource usage</li> </ul> <p><strong>What you''ll achieve:&nbsp;</strong></p>
+    <ul> <li>Write production code for backend and infrastructure services that support
+    data reliability and timeliness</li> <li>Build internal CLI tools or APIs that
+    allow Data Consumers to self-serve infrastructure without needing deep AWS knowledge</li>
+    <li>Lead end-to-end projects, from scoping and design through to rollout, working
+    across multiple data infrastructure teams</li> </ul> <p><strong>About you:</strong></p>
+    <ul> <li>Software Engineering or Data Engineering background - you’re comfortable
+    writing production code, designing systems or working with Data stack. We use
+    AWS, Databricks, Spark, Python, Scala, but care more about engineering fundamentals
+    than specific domain experience.</li> <li>4+ years of experience designing and
+    implementing production code for backend, infrastructure, data systems.</li> <li>Experience
+    with major cloud platforms (AWS, GCP, or Azure), Terraform, and monitoring tooling
+    like Datadog, Grafana or similar.</li> <li>Familiarity with distributed data processing
+    systems (e.g. Databricks, Spark, Snowflake or similar systems).</li> <li>Demonstrates
+    curiosity about AI tools and emerging technologies, with a willingness to learn
+    and leverage them to enhance productivity, collaboration, or decision-making.</li>
+    </ul> <p>At Asana, we''re committed to building teams that include a variety of
+    backgrounds, perspectives, and skills, as this is critical to helping us achieve
+    our mission. If you''re interested in this role and don''t meet every listed requirement,
+    we still encourage you to apply.</p> <p><strong>What we’ll offer</strong> :</p>
+    <ul> <li>Generous, transparent and fair compensation system&nbsp;</li> <li>Contract
+    of Employment (and the option of 50% tax deductible costs for author’s rights
+    usage in respect of applicable roles)&nbsp;</li> <li>Health insurance with dental
+    and travel coverage (Lux Med)&nbsp;</li> <li>Meals reimbursement on the days that
+    you work from the office&nbsp;</li> <li>Career growth budget&nbsp;</li> <li>Home
+    office setup budget&nbsp;</li> <li>Gym/Fitness reimbursement&nbsp;</li> <li>Fertility
+    healthcare and family-forming support with Carrot&nbsp;</li> <li>Mental health
+    support in Modern Health&nbsp;</li> <li>Group life insurance&nbsp;</li> <li>MacBooks
+    with all necessary accessories&nbsp;</li> </ul> <p>For this role, the estimated
+    base salary range is between 23,667 PLN - 32,917 PLN gross per month (subject
+    to all taxes and necessary deductions) . The actual base salary will vary based
+    on various factors, including market and individual qualifications objectively
+    assessed during the interview process. The listed range above is a guideline,
+    and the base salary range for this role may be modified.</p> <p>#LI-Hybrid #LI-KM2</p><div
+    class="content-conclusion"><p><strong>About us</strong></p> <p data-pm-slice="1
+    1 []">Asana is a leading platform for human + AI collaboration. Millions of teams
+    around the world rely on Asana to achieve their most important goals, faster.
+    Asana has been named to Fortune''s Best Workplaces for 7+ years and recognized
+    by Fast Company, Forbes, and Gartner for excellence in workplace culture and innovation.
+    We offer an exceptional office-centric culture while adopting the best elements
+    of hybrid models to ensure that every one of our global team members can work
+    together effortlessly. With 13+ offices all over the world, we are always looking
+    for individuals who care about building technology that drives positive change
+    in the world and a culture where everyone feels that they belong.</p> <p data-pm-slice="1
+    1 []"><strong><a class="LinkThemeablePresentation LinkPrimaryPresentation LinkPrimaryP'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.219898+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

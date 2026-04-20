@@ -1,0 +1,104 @@
+id: pinecone-staff-developer-advocate
+name: 'Pinecone Staff Developer Advocate '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Pinecone
+  url: https://jobs.ashbyhq.com/pinecone
+  application_url: https://jobs.ashbyhq.com/pinecone/4433b308-1ff4-4b5f-9184-810e5d9844f6
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'About Pinecone Pinecone is the leading vector database for building
+    accurate and performant AI applications at scale in production. Pinecone''s mission
+    is to make AI knowledgeable. More than 9000 customers across various industries
+    have shipped AI applications faster and more confidently with Pinecone''s developer-friendly
+    technology. Pinecone is based in New York and raised $138M in funding from Andreessen
+    Horowitz, ICONIQ, Menlo Ventures, and Wing Venture Capital. About the Team and
+    Role: We’re hiring a Staff Developer Advocate to own the Pinecone community —online
+    and in-person—with a particular focus on building a strong SF/Bay Area presence.
+    This role is for a senior, hands-on technical communicator who can build developer
+    relationships at scale, run high-signal programs, and translate community needs
+    into product feedback and compelling learning experiences. To succeed in this
+    role, you must be able to build and teach with Pinecone’s AI products—showing
+    developers how to create reliable, scalable AI applications where knowledge and
+    retrieval are central. You’ll translate best practices into practical learning
+    experiences through tutorials, short-form videos, docs contributions, hackathon
+    mentorship, and social posts. Because the team and customer base are scaling quickly,
+    you should be comfortable operating with high autonomy and strong judgment in
+    a fast-paced environment. If you’re excited about: Learning new technologies and
+    helping others succeed with that technology. Playing a central role in an exciting
+    and rapidly expanding community. Shaping the course of a fast-growing company
+    and product category. Working with colleagues who value clarity, creativity, passion,
+    initiative, and thoughtfulness. Then we want to talk to you! Responsibilities:
+    Community Programs (Global) Lead and grow Pinecone’s Discord : drive engagement,
+    improve onboarding, set norms, and keep the space high-signal. Run recurring office
+    hours that consistently help developers unblock, learn best practices, and ship.
+    Support and scale community programs that create real builder outcomes (templates,
+    challenge weeks, help channels, expert AMAs). Events (SF/Bay Area) Own Pinecone’s
+    SF-area community presence: local meetups, hackathons, and larger Bay Area events
+    . Develop event programming (themes, speaker selection, talks/workshops), run
+    promotion and attendance growth, and ensure each event produces reusable assets
+    and follow-on engagement. Technical content + assets Create and maintain hands-on
+    technical assets (sample apps, demos, code walkthroughs) aligned to Pinecone’s
+    core developer use cases: RAG systems and retrieval quality Knowledge management
+    patterns using Assistant and other incubating products Platform/infra patterns
+    for scale and reliability Publish content across Pinecone channels and external
+    platforms, grounded in what the community is actually trying to build. Requirements:
+    8+ years of experience in a technical role such as software engineering, solution
+    engineering, or machine learning. Proficient in 2+ programming languages. Owned
+    and grown a technical developer community. Ran in person developer events end
+    to end. Shipped demos and sample code and taught them clearly. Strong writing
+    and live speaking and Q&A. Fluent in LLM apps and RAG and strong API instincts.
+    SF based preferred with up to 20% travel. Perks & Benefits: Comprehensive health
+    coverage including medical, dental, vision, and mental health resources 401(k)
+    Plan Equity award Flexible time off Paid parental leave Annual Company Retreat
+    WFH Equipment Stipend All qualified applicants will receive considerations for
+    employment without regard to race, color, religion, sex, age, disability, marital
+    status, familial status, sexual orientation, pregnancy, gender identity, gender
+    expression, national origin, ancestry, citizenship status, veteran status, and
+    any other legally protected status under federal, state, or local anti-discrimination
+    laws.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.113630+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,116 @@
+id: reddit-staff-software-engineer-identity
+name: 'Reddit Staff Software Engineer, Identity '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Reddit
+  url: https://boards.greenhouse.io/reddit
+  application_url: https://job-boards.greenhouse.io/reddit/jobs/7595446
+  portal: greenhouse
+  location: Remote - United States
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><div class=\"c-message_kit__blocks c-message_kit__blocks--rich_text\"\
+    > <div class=\"c-message__message_blocks c-message__message_blocks--rich_text\"\
+    \ data-qa=\"message-text\"> <div class=\"p-block_kit_renderer\" data-qa=\"block-kit-renderer\"\
+    > <div class=\"p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first\"\
+    > <div class=\"p-rich_text_block\"> <div class=\"p-rich_text_section\">Reddit\
+    \ is a community of communities. It\u2019s built on shared interests, passion,\
+    \ and trust, and is home to the most open and authentic conversations on the internet.\
+    \ Every day, Reddit users submit, vote, and comment on the topics they care most\
+    \ about. With 100,000+ active communities and approximately 121 million daily\
+    \ active unique visitors, Reddit is one of the internet\u2019s largest sources\
+    \ of information. For more information, visit <a class=\"c-link\" href=\"http://www.redditinc.com/\"\
+    \ target=\"_blank\" data-stringify-link=\"http://redditinc.com\" data-sk=\"tooltip_parent\"\
+    >www.redditinc.com</a>.</div> </div> </div> </div> </div> </div></div><h3><strong>Team\
+    \ Description</strong></h3> <p>Identity is a critical dependency across the Reddit\
+    \ Ads stack, and the complexity of our identity systems has increased significantly\
+    \ as we expand signals sources, invest in privacy resiliency, and scale global\
+    \ traffic. The Identity Infrastructure pod owns systems that sit directly on the\
+    \ hot path for attribution, measurement, and ads delivery. Decisions made in this\
+    \ layer have outsized impact on performance, correctness, and long-term platform\
+    \ flexibility, and require consistent technical leadership to avoid fragmentation\
+    \ and short-term tradeoffs.</p> <p>This role is needed to provide clear technical\
+    \ ownership and direction for Identity Infrastructure. A Staff Engineer in this\
+    \ position will set architectural standards, guide the evolution of our identity\
+    \ graph and matching systems, and ensure we are building solutions that scale\
+    \ with the business while meeting reliability and privacy requirements. Without\
+    \ a dedicated technical lead at this level, we risk slower execution, increased\
+    \ operational burden, and misalignment across teams that depend on identity as\
+    \ a shared foundation.</p> <h3><strong>Role Description</strong></h3> <p>The Attribution\
+    \ &amp; Identity team owns the core systems that resolve, link, and serve user\
+    \ identity across Reddit Ads. This includes probabilistic and deterministic matching,\
+    \ identity graph construction, and low-latency services used throughout the ads\
+    \ signals and attribution stack. We build foundational infrastructure that directly\
+    \ impacts ads performance, privacy resiliency, and platform scale.</p> <p>We are\
+    \ looking for a Staff Engineer to serve as the technical lead for the Identity\
+    \ Infrastructure pod within the team. This role is for someone who can set technical\
+    \ direction, design and evolve large scale identity systems, and lead a team through\
+    \ complex, ambiguous problem spaces while remaining hands-on in critical areas.</p>\
+    \ <p>We are looking for a staff-level backend engineer, here are some specifics:</p>\
+    \ <ul> <li>6+ years of building backend systems in production</li> <li>2+ years\
+    \ in a technical leadership role, including driving architecture, leading design\
+    \ reviews and mentoring engineers</li> <li>Prior experience designing and operating\
+    \ large-scale distributed systems and data pipelines</li> <li>Experience with\
+    \ data engineering platforms such as Spark, Flink or similar batch or stream processing\
+    \ systems</li> </ul> <h3><strong>Preferred Experience</strong></h3> <ul> <li>Experienced\
+    \ working on identity-related systems such as probabilistic matching, identity\
+    \ graphs, device fingerprinting or similar user resolution frameworks.</li> <li>Experience\
+    \ working in Ads or Ads adjacent spaces</li> <li>Experience collaborating and\
+    \ building infrastructure for ML teams</li> </ul> <p>Benefits:&nbsp;</p> <ul>\
+    \ <li>Comprehensive Healthcare Benefits and Income Replacement Programs</li> <li>401k\
+    \ Match</li> <li>Family Planning Support</li> <li>Gender-Affirming Care</li> <li>Mental\
+    \ Health &amp; Coaching Benefits</li> <li>Flexible Vacation &amp; Reddit Global\
+    \ Days Off</li> <li>Generous paid Parental Leave&nbsp;&nbsp;</li> <li>Paid Volunteer\
+    \ time off</li> </ul> <p><br>#li-remote</p><div class=\"content-pay-transparency\"\
+    ><div class=\"pay-input\"><div class=\"description\"><p><strong>Pay Transparency:</strong></p>\
+    \ <p>This job posting may span more than one career level.</p> <p>In addition\
+    \ to base salary, this job is eligible to receive equity in the form of restricted\
+    \ stock units, and depending on the position offered, it may also be eligible\
+    \ to receive a commission. Additionally, Reddit offers a wide range of benefits\
+    \ to U.S.-based employees, including medical, dental, and vision insurance, 401(k)\
+    \ program with employer match, generous time off for vacation, and parental leave.\
+    \ To learn more, please visit <a href=\"https://www.redditinc.com/careers/\" target=\"\
+    _blank\">https://www.redditinc.com/careers/</a>.</p> <p>To provide g"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.326677+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

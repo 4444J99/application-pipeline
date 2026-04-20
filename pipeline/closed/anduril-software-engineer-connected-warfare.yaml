@@ -1,0 +1,115 @@
+id: anduril-software-engineer-connected-warfare
+name: Anduril Software Engineer, Connected Warfare
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/4776690007?gh_jid=4776690007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p><strong>ABOUT THE TEAM</strong></p>
+    <p>The&nbsp;Connected Warfare division builds systems to support global command
+    and control missions. We create joint, time sensitive, multi domain, ubiquitous,
+    connected mesh ecosystems. Our ecosystem enables connected warfare with disproportional
+    impact by connecting every robot, human, and sensor in every domain, bringing
+    together hundreds of thousands of end points across the globe. We are the substrate
+    that provides the source of truth for time sensitive decision, effectively transforming
+    the way that militaries close kills chains and enable mission autonomy.</p> <p>The
+    Menace Platform group is developing a first of it’s kind Platform built for the
+    tactical edge, where connectivity is contested, latency costs lives, and resilience
+    defines victory. Built on Anduril’s field-proven Menace and Voyager systems, and
+    powered by the company’s Lattice orchestration framework and distributed Fabric
+    and Data Mesh, the Menace Platform allows warfighters, allies, and partners to
+    deploy applications, share data, and make decisions at machine speed—even when
+    disconnected.</p> <p>As a Software Engineer in the Menace Platform group, you
+    will be responsible for solving novel problems aligned with the goal of creating
+    the next generation distributed data layer and mesh ecosystem for the United States
+    and its allies. You will build the foundation that supports this mission. We spend
+    time thinking critically and designing intentionally against what the system’s
+    end state needs to look like while making pragmatic tradeoffs to deliver against
+    customers’ immediate needs. We keep the mission top-of-mind while making sound
+    engineering decisions to deliver on-time, high quality software and pre-emptively
+    meet the challenges of the future.<br><br><strong>WHAT YOU’LL DO </strong></p>
+    <ul> <li>Own software spanning Menace Platform: mesh platform, data interfaces,
+    and release management</li> <li>Deliver well architected systems through clear
+    interfaces across components, code reviews, design reviews and modern software
+    engineering practices.</li> <li>Champion test-ability, portability, monitoring,
+    scalability, reliability, and maintainability as core parts of software delivery.</li>
+    <li>Generate software solutions from problem definition and solution design, through
+    to implementation and delivery to customers</li> <li>Collaborate across multiple
+    teams to plan, build, and test complex functionality</li> <li>Triage issues, root
+    cause failures, and coordinate next-steps</li> <li>Travel up to 10% of time to
+    collaborate with teammates and understand real world operating conditions</li>
+    </ul> <p><strong>REQUIRED QUALIFICATIONS</strong></p> <ul> <li>3+ years experience
+    designing and developing software</li> <li>A bias towards rapid delivery and iteration,
+    extreme ownership, and strong opinions with low ego</li> <li>Ability to quickly
+    understand and navigate complex systems and established code bases</li> <li>A
+    desire to work on critical software that has a real-world impact</li> <li>A bias
+    towards rapid delivery and iteration, extreme ownership, and strong opinions with
+    low ego</li> <li>Eligible to obtain and maintain an active U.S. Top Secret security
+    clearance</li> </ul> <p><strong>PREFERRED QUALIFICATIONS</strong></p> <ul> <li>Experience
+    designing APIs for use in distributed systems</li> <li>Experience building modeling
+    and simulation environments for distributed systems operating in non-standard
+    networking conditions</li> <li>Familiarity with modern build and deployment tooling
+    (e.g. NixOS, Terraform)</li> <li>Familiarity with industry standard cloud platforms
+    (AWS, Azure) and software infrastructure fundamentals (networking, security, distributed
+    systems)</li> <li>A deep, demonstrated understanding of how computers and networks
+    work, from a single desktop to a multi-cluster cloud node</li> <li>Professional
+    software development lifecycle experience using tools such as version control,
+    CICD systems, etc.</li> <li>Familiarity with industry standard monitoring, logging,
+    and data management tools and best practices</li> </ul><div class="content-pay-transparency"><div
+    class="pay-input"><div class="title">US Salary Range</div><div class="pay-range"><span>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:34.065665+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

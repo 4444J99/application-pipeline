@@ -1,0 +1,116 @@
+id: anduril-senior-orbital-software-engineer-space
+name: Anduril Senior Orbital Software Engineer, Space
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/4872454007?gh_jid=4872454007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p>Anduril's
+    Space team is dedicated to expanding our AI-powered capabilities into the final
+    frontier, enhancing Space Domain Awareness, Space Control, and Command and Control
+    for U.S. military and allied partners. We're developing fully integrated hardware
+    and software systems, including Lattice for Space Missions and modular payloads,
+    to address growing threats in space and ensure our Guardians maintain a decisive
+    advantage in this contested warfighting domain.</p> <h3>ABOUT THE JOB</h3> <p>As
+    a Senior Orbital Software Engineer on Space, you will own the architecture and
+    deployment of software solutions that support specific customer missions for on-orbit
+    spacecraft operations and mission management. As a senior software engineer, you
+    will provide guidance and oversight to a team developing modular capabilities
+    to support the DoD and IC customers across the space domain. This will involve
+    architecture of an orbital software system in coordination with the Anduril Lattice
+    software platform team, algorithms, techniques and coding development to support
+    orbital systems and their interfacing with multi-domain systems. The Anduril orbital
+    software capability development will ensure integration with legacy systems that
+    have been part of our nation’s critical defense for decades as well as new space
+    systems being added to the cache of orbital and ground-based capabilities. The
+    role will also be responsible for the interfaces to multi-modal payload platforms,
+    bus platforms and networking solutions in proliferated satellite constellations<br><br>We
+    work with mission partners and operators to deploy reliable and robust capabilities
+    on operationally-relevant fielding timelines to meet complex challenges across
+    the DOD and IC.</p> <h4><strong>WHAT YOU’LL DO</strong></h4> <ul> <li>Own the
+    software solutions that are deployed to customers.</li> <li>Own the development
+    of on-orbit software capabilities to enable delivery of end-to-end mission systems.</li>
+    <li>Integrate with legacy systems to unlock 21st-century capabilities.</li> <li>Write
+    code to improve products and scale the mission capability to different users and
+    customers.</li> <li>Collaborate across multiple teams to plan, build, and test
+    complex functionality.</li> <li>Create and analyze metrics that are leveraged
+    for debugging and monitoring.</li> <li>Triage issues, root cause failures, and
+    coordinate next-steps.</li> <li>Partner with end-users to turn needs into features
+    while balancing user experience with engineering constraints.</li> </ul> <h4>REQUIRED
+    QUALIFICATIONS</h4> <ul> <li>Strong engineering background from industry or school,
+    ideally in areas/fields such as Computer Science, Software Engineering, Mathematics,
+    or Physics.</li> <li>Ability to quickly understand and navigate complex systems
+    and detailed requirements.</li> <li>Capable of solving complex technical problems
+    with little oversight.</li> <li>Clear communication and organizational skills
+    including documentation and training material.</li> <li>Ideally 8+ years working
+    with a variety of programming languages such as Python, C++, Rust, or Go</li>
+    <li>Experience with spacecraft software systems and spacecraft operations.</li>
+    <li>Experience with satellite mission autonomy to include fault isolation and
+    recovery systems.</li> <li>Eligible to obtain and maintain an active U.S. Secret
+    security clearance.</li> </ul> <h4>PREFERRED QUALIFICATIONS</h4> <ul> <li>Advanced
+    expertise with Python, Go, Rust, or C++.</li> <li>Experience with deployment tooling
+    like Kubernetes, OpenShift, or Helm.</li> <li>A desire to work on critical software
+    in the space domain.</li> <li>Experience with OMS/UCI standards and modular software
+    services development.</li> </ul> <p>&nbsp;</p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="title">US Salary Range</div><div class="pay-range"><span>$191,000</span><span
+    class="divider">&mdash;</span><span>$253,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.915344+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

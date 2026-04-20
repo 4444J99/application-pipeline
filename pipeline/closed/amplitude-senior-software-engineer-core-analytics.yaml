@@ -1,0 +1,115 @@
+id: amplitude-senior-software-engineer-core-analytics
+name: Amplitude Senior Software Engineer, Core Analytics
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Amplitude
+  url: https://boards.greenhouse.io/amplitude
+  application_url: https://job-boards.greenhouse.io/amplitude/jobs/8423428002
+  portal: greenhouse
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Amplitude is the leading AI analytics
+    platform, helping over 4,700 customers—including Atlassian, Burger King, NBCUniversal,
+    Square, and Under Armour—build better products and digital experiences. With powerful
+    AI Agents embedded across our platform, teams can analyze, test, and optimize
+    user experiences faster than ever. Ranked #1 across multiple categories in G2’s
+    Winter 2026 Report, Amplitude is the best-in-class solution for product, data,
+    and marketing teams. Learn more at <a href="http://amplitude.com">amplitude.com</a>.</p>
+    <p>As an organization, we deliver for our customers by living our values. We operate
+    from a place of humility, take ownership of problems and successes, approach challenges
+    with a growth mindset, and put our customers at the center of everything we do.</p>
+    <p><strong>Amplitude’s Commitment to Diversity Equity &amp; Inclusion (DEI): </strong>Amplitude
+    believes that diversity enables the creation of better products, improves the
+    ability to solve complex problems, and drives more powerful solutions. We strive
+    to create an environment of inclusion—one focused on psychological safety, empathy,
+    and human connection—that will allow employees of all backgrounds to thrive.</p></div><p><strong>About
+    The Role &amp; Team</strong></p> <p>We’re looking for a Fullstack Engineer to
+    join the Core Analytics team, the group behind our flagship analytics product
+    loved by thousands of product teams worldwide. <br>You’ll work with our Product
+    Manager and Designer to define, build, and ship end-to-end features that elevate
+    the Analytics experience. You’ll own your impact from shaping product direction
+    to delivering performant, reliable, and delightful user experiences.</p> <p>Our
+    engineers are customer-focused and solve complex data problems to deliver a better
+    user experience. We deliver value quickly and iteratively. If you’re passionate
+    about building exceptional data-powered experiences that help businesses understand
+    their customers, we’d love to meet you.</p> <p>The team’s mission is to deliver
+    a fast, intuitive, and reliable Analytics platform that empowers customers to
+    confidently uncover insights about their products while driving infrastructure
+    initiatives that strengthen and scale the platform.<br><br></p> <p>&nbsp;<strong>As
+    a Senior Engineer, you will:&nbsp;</strong></p> <ul> <li>Work with Product Management
+    and Design to generate and turn novel ideas for solving customer problems into
+    engineering solutions</li> <li>Drive business impact through owning the end-to-end
+    delivery of projects</li> <li>Have a strong critical thinking and problem-solving
+    mindset with attention to detail&nbsp;</li> <li>Get involved in performance optimization
+    and scaling efforts</li> <li>Drive business impact through leading the highest-leverage
+    projects</li> <li>Have interest or experience in technical leadership of an engineering
+    team</li> <li>Mentor and contribute to the success of other engineers on the team</li>
+    </ul> <p>&nbsp;</p> <p><strong>You''ll be a great addition to the team if you:</strong></p>
+    <ul> <li>5+ years of experience building and improving robust, scalable backends
+    and developing interactive, user-facing applications or websites.</li> <li>Understand
+    the whole stack and flow of user-facing web applications.</li> <li>Backend experience
+    with application backends, microservices, and supporting high-throughput ingestion
+    systems</li> <li>Strong critical thinking and problem-solving mindset with attention
+    to detail</li> <li>Have exceptional communication skills and a proven track record
+    of successful delivery and execution</li> <li>Can synthesize customer input and
+    architectural knowledge to create an outsized engineering impact</li> <li>Excellent
+    communication skills and ability to adapt to changing requirements</li> <li>Have
+    a constant desire to learn and grow in the field of web development</li> <li>Have
+    experience in CI/CD pipelines</li> <li>Strong practitioner of automated testing</li>
+    <li>Have familiarity with the following: React, TypeScript, Node.js, Python, JavaScript,
+    Redux, AWS</li> <li>Have interest or experience in technical leadership of an
+    engineering team</li> </ul> <h2>Who We Are</h2> <p><strong>The Company: </strong>Amplitude
+    is filled with humble, life-long learners who are eager to help one another and
+    the company succeed. Our values of growth mindset, ownership, and humility are
+    core to the way we work: we’re tenacious in the face of challenges, we take the
+    initiative to solve problems that drive our shared success, and we operate from
+    a place of empathy and openness, seeking to understand many points of view.&nbsp;</p>
+    <p><strong>The Product: </strong>Amplitude is a digital analytics platform—we
+    help companies capture data they can trust, uncover clear insights about customer
+    behavior, and take faster action. This empowers teams to build better product
+    experiences that drive business growth. We’re super proud of what we’ve built
+    and continue to expan'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.256771+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

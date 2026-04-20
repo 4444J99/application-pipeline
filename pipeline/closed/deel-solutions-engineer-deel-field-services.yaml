@@ -1,0 +1,115 @@
+id: deel-solutions-engineer-deel-field-services
+name: Deel Solutions Engineer - Deel Field Services
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Deel
+  url: https://jobs.ashbyhq.com/deel
+  application_url: https://jobs.ashbyhq.com/deel/07706d90-d267-4438-847b-c6de2dc0db62
+  portal: ashby
+  location: APAC
+  location_class: international
+  description: 'Who we are is what we do. Deel is the all-in-one payroll and HR platform
+    for global teams. Our vision is to unlock global opportunity for every person,
+    team, and business. Built for the way the world works today, Deel combines HRIS,
+    payroll, compliance, benefits, performance, and equipment management into one
+    seamless platform. With AI-powered tools and a fully owned payroll infrastructure,
+    Deel supports every worker type in 150+ countries—helping businesses scale smarter,
+    faster, and more compliantly. Among the largest globally distributed companies
+    in the world, our team of 7,000 spans more than 100 countries, speaks 74 languages,
+    and brings a connected and dynamic culture that drives continuous learning and
+    innovation for our customers. Why should you be part of our success story? As
+    the fastest-growing Software as a Service (SaaS) company in history, Deel is transforming
+    how global talent connects with world-class companies – breaking down borders
+    that have traditionally limited both hiring and career opportunities. We''re not
+    just building software; we''re creating the infrastructure for the future of work,
+    enabling a more diverse and inclusive global economy. In 2024 alone, we paid $11.2
+    billion to workers in nearly 100 currencies and provided healthcare and benefits
+    to workers in 109 countries—ensuring people get paid and protected, no matter
+    where they are. Our momentum is reflected in our achievements and customer satisfaction:
+    CNBC Disruptor 50, Forbes Cloud 100, Deloitte Fast 500, and repeated recognition
+    on Y Combinator’s top companies list – all while maintaining a 4.83 average rating
+    from 15,000 reviews across G2, Trustpilot, Captera, Apple and Google. Your experience
+    at Deel will be a career accelerator. At the forefront of the global work revolution,
+    you''ll tackle complex challenges that impact millions of people''s working lives.
+    With our momentum—backed by a $17.3 billion valuation and $1 B in Annual Recurring
+    Revenue (ARR) in just over five years—you''ll drive meaningful impact while building
+    expertise that makes you a sought-after leader in the transformation of global
+    work. About the Role We''re looking for a Solutions Engineer (Consultant) to join
+    our Field Services team across APAC. This role partners directly with our Account
+    Executives to support enterprise clients evaluating Deel''s platform for field
+    services and onsite workforce management. Here''s what makes this different: we''re
+    prioritising deep field services industry experience over traditional SE backgrounds.
+    If you''ve spent your career in oil & gas, mining, EPC, shipbuilding, construction,
+    offshore, or renewables and you understand how these workforces actually get structured,
+    deployed, and managed across borders - this role was built for you. You''ll be
+    instrumental in translating complex client needs into actionable, scalable, and
+    compliant solutions, supporting every stage of the sales process from discovery
+    through to implementation hand-off. What You''ll Do Lead as the technical authority
+    for Deel''s Field Services segment, driving enterprise pre-sales across staffing,
+    RPO, and project-based organisations with credibility and industry expertise Own
+    the end-to-end technical sales cycle: leading discovery, shaping solutions, responding
+    to RFPs, delivering tailored demos, and running architecture workshops Translate
+    complex, multi-jurisdictional requirements into clear, scalable, and compliant
+    solution designs with defined implementation roadmaps and success metrics Advise
+    customers on structuring compliant workforce models, including secondments, shadow
+    payroll, and offshore/rotational employment frameworks Partner with Product, Engineering,
+    and Operations to resolve technical challenges, advocate for customer needs, and
+    accelerate deal progression Build, refine, and scale a field service-specific
+    pre-sales asset library, including demo narratives, compliance frameworks, workforce
+    models, and objection-handling playbooks Maintain deep expertise in global employment
+    regulations, immigration shifts, and offshore workforce trends to ensure real-world
+    relevance in every customer conversation What You''ll Bring 7+ years of deep,
+    practical knowledge of the field services industry, gained through direct experience
+    working within or alongside offshore, onshore, or project-based workforce environments
+    (EPC, oil & gas, mining, shipyard, construction, renewables, defence contracting)
+    Firsthand understanding of how these workforces are structured, deployed, and
+    managed across multiple jurisdictions Demonstrated ability to advise on designing
+    compliant, commercially sound workforce arrangements across borders Solid awareness
+    of compliance frameworks, with tax and shadow payroll experience especially valued.
+    Mobility or commercial exposure is a bonus. Outstanding presentation and storytelling
+    skills, always focused on customer value. Multilingual capability is a bonus.
+    Entrepreneurial DNA with a positive, can-do attitude Collaborative team play'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: null
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.559589+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

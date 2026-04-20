@@ -1,0 +1,111 @@
+id: anduril-senior-software-engineer-embedded-cc-flight-software
+name: Anduril Senior Software Engineer, Embedded C/C++ Flight Software
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5009210007?gh_jid=5009210007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE JOB</h3> <p>At Anduril,
+    our Software Engineers are at the forefront of defense technology, crafting high-impact,
+    cutting-edge solutions that redefine innovation. You'll dive into a diverse range
+    of projects, partnering with brilliant minds across disciplines to engineer robust
+    software systems that empower our mission-critical operations. We're seeking talented
+    Embedded C/C++ Flight software engineers on several teams to contribute to projects
+    that are shaping the future of defense.</p> <h4><strong>WHAT YOU’LL DO</strong></h4>
+    <ul> <li>Design, develop, and implement real-time, safety-critical flight software
+    in C/C++ for embedded systems within aerospace and defense platforms.</li> <li>Engineer
+    highly efficient and reliable embedded software solutions, focusing on resource
+    constraints, low-level hardware interaction, and deterministic behavior.</li>
+    <li>Collaborate closely with hardware engineers, systems engineers, and aerospace
+    specialists to integrate flight software with avionics, sensors, and control systems.</li>
+    <li>Develop and execute rigorous testing methodologies, including unit, integration,
+    and system-level testing in simulation and on actual flight hardware.</li> <li>Contribute
+    to the full software development lifecycle, from requirements analysis and architecture
+    design to coding, verification, and validation of flight-critical software.</li>
+    </ul> <h4><strong>REQUIRED QUALIFICATIONS</strong></h4> <ul> <li><strong>Deep
+    Systems Knowledge:</strong> A strong academic background in Computer Science,
+    Electrical Engineering, Aerospace Engineering, or a related field, with a focus
+    on embedded systems and real-time computing.</li> <li><strong>Mastery of Embedded
+    C/C++:</strong> Minimum of 5 years of demonstrated professional experience developing
+    safety-critical, real-time embedded software using C or C++.</li> <li><strong>Aerospace/Flight
+    Software Expertise:</strong> Proven experience working with flight software principles,
+    real-time operating systems (RTOS), and understanding of aerospace hardware interfaces
+    and protocols.</li> <li><strong>Navigating Embedded Systems:</strong> Proven capability
+    to rapidly understand and contribute to complex embedded software architectures,
+    device drivers, and low-level hardware interactions.</li> <li><strong>Commitment
+    to Mission Criticality:</strong> A profound passion for building highly reliable,
+    safety-critical flight software that directly ensures mission success and public
+    safety.</li> <li>Eligible to obtain and maintain an active U.S. Top Secret security
+    clearance.</li> </ul> <p><em>This job post is inclusive of openings within various
+    teams. Successful candidates will be matched to a specific team at a subsequent
+    stage of the recruitment process.</em></p> <p><em>The roles considered for this
+    job post may require travel. The extent of travel will vary by role.</em></p><div
+    class="content-pay-transparency"><div class="pay-input"><div class="title">US
+    Salary Range</div><div class="pay-range"><span>$191,000</span><span class="divider">&mdash;</span><span>$253,000
+    USD</span></div></div></div><div class="content-conclusion"><p><span data-contrast="auto">The
+    salary range for this role is an estimate based on a wide range of compensation
+    factors, inclusive of base salary only. Actual salary offer may vary based on
+    (but not limited to) work experience, education and/or training, critical skills,
+    and/or business considerations. Highly competitive equity grants are included
+    in the majority of full time offers; and are considered part of Anduril's total
+    compensation package. Additionally, Anduril offers top-tier benefits for full-time
+    employees, including:</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></p>
+    <p><strong><span data-contrast="auto">Healthcare Benefits&nbsp;</span></strong></p>
+    <ul> <li><strong><span data-contrast="none">US Roles:</span></strong><span data-contrast="none">&nbsp;Comprehensive
+    medical, dental, and vision plans at little to no cost to you.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;3
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.958330+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

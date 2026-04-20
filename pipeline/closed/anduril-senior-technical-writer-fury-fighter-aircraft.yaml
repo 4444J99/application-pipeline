@@ -1,0 +1,115 @@
+id: anduril-senior-technical-writer-fury-fighter-aircraft
+name: Anduril Senior Technical Writer, Fury Fighter Aircraft
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5004964007?gh_jid=5004964007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p>Anduril’s
+    Mission Success team is a cross-functional group that partners with every business
+    line and supports all products that Anduril builds. Our responsibilities include
+    product operations, training and adoption, and user documentation. We are seeking
+    an experienced senior technical writer to lead high-profile and demanding programs
+    for our government customers. We believe that the quality of our documentation
+    should reflect the quality of products, which are world-class.</p> <h3>ABOUT THE
+    JOB</h3> <p>As a Senior Technical Writer on our Fury Team, your mission is to
+    take extreme ownership of Technical Data Module development and delivery, providing
+    accurate, updated, and easy-to-understand documentation on how to use Anduril
+    products. You will do whatever it takes to organize our engineering and program
+    delivery functions in this mission. In this role, you will work closely with engineers,
+    operations, and various subject matter experts as well as Gov representatives,
+    to understand our products, identify user workflows, and use documentation to
+    close the gap. You will utilize your excellent leadership skills to drive the
+    team to deliver contractually required deliverables on time and defect-free.&nbsp;<br><br>With
+    Anduril’s focus on defense and national security, user documentation plays a critical
+    role in ensuring front-line operators know how to leverage the “arsenal of democracy.”
+    Your mission is to make the process of learning how to operate systems as easy
+    and seamless as possible, with exceptionally written and presented artifacts.<br><br>You
+    will identify relevant stakeholders and lead them through a documentation roadmap
+    with established key milestones and targets. This will require an in-depth understanding
+    of what teams are relevant to documentation, and what an organized effort toward
+    collaboration entails. You are to ensure that stakeholders are engaged at the
+    right time, and you will guide them towards a finished user-facing document that
+    plainly meets customer needs. Finally, you will work with our account teams to
+    ensure that contract deliverables are accurate, on-time, and in the right format.&nbsp;Written
+    content artifacts under this charger may include things like: technical manuals,
+    operational manuals, maintenance manuals, procedures, checklists, templates, user
+    guides, troubleshooting guides, and release notes. You will partner with account,
+    product, and engineering teams across all phases of product development to ensure
+    users have the right documentation available.<br><br></p> <h4>WHAT YOU’LL DO</h4>
+    <ul> <li>Generate, review, and edit s1000d data modules in Siemens Rapid Author</li>
+    <li>Manage scope and schedule for all contractual milestones related to Tech Manual
+    (TM) Development, for both internal teams and 1099 partners.</li> <li>Monitor
+    overall team progress and provide weekly status reporting to leadership and stakeholders</li>
+    <li>Manage risk and provide thorough, excellent communication about those risks
+    and all other change.</li> <li>Manage communication with the Gov regarding TM
+    development.</li> <li>Lead, educate and motivate a team of Tech Writers to deliver
+    contract deliverables.</li> <li>Act as the single point of contact for all comms
+    related to the TM project both internally, as well as with the customer.</li>
+    </ul> <h4>REQUIRED QUALIFICATIONS</h4> <ul> <li>6+ years of demonstrated excellence
+    generating technical documentation</li> <li>Experience reading and interpreting
+    engineering documentation</li> <li>Experience in working with Level of Repair
+    Analysis (LORA) and Maintenance Task Analysis (MTA) to plan and construct S1000D
+    Publications</li> <li>Experience building DOD-focused content in XML</li> <li>Eligible
+    to obtain and maintain an active U.S. Secret security clearance</li> </ul> <h4>PREFERRED
+    QUALIFICATIONS</h4> <ul> <li>Experience creating S1000D data modules, ideally
+    MIL-STD-3048 experience</li> <li>Previous experience creating technical documentation
+    in Aerospace and Defense (for DoD)</li> <li>Military exposure and experience,
+    particularly with military technical documentation writing and formatting standards,
+    guidelines, and verbiage</li> <li>Prior military aviation service</li> '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:34.045518+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

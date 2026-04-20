@@ -1,0 +1,79 @@
+id: perplexity-staff-full-stack-software-engineer
+name: 'Perplexity Staff Full Stack Software Engineer '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/8df04206-7b62-4163-9d94-a4f28680eeb1
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: Perplexity is seeking an experienced Staff Full Stack Engineer to help
+    revolutionize the way people search and interact online. In this role, you'll
+    translate cutting-edge AI advances into products that are both useful and engaging.
+    Our tech stack includes Python, Go, Rust, TypeScript, React FastAPI, PostgreSQL,
+    Redis, Docker, vLLM, and AWS. Roles and teams at Perplexity are fluid. By applying
+    to this position, you will be eligible to join teams across Perplexity Engineering.
+    During the interview process, we look forward to learning more about your unique
+    talents and figuring out where in our organization you’ll grow and thrive the
+    most. Responsibilities Building new 0-1 products at high scale Working closely
+    with Product, Design, and Data to ship experiments and learn Launching new features,
+    experiments, campaigns, and partnerships in a fast-moving environment Building
+    core growth infrastructure such as notification platforms, ad attribution, and
+    more Analyzing performance metrics and user feedback to identify opportunities
+    for improvement and optimization Building delightful and data-proven user journeys
+    Qualifications Strong programming skills with the ability to work across the full
+    stack Self-motivated with a willingness to take ownership of tasks Good quantitative
+    understanding of data and experimentation Experience making data-driven decisions
+    and measuring impact of those decisions (experimentation, feature flags, adhoc
+    analysis) A passion for shipping quality products 8+ years of industry experience
+    How we work with AI AI is at the heart of what we build, and using it effectively
+    is an expectation for every role here. During interviews, we will be excited to
+    see how you think and understand how you make decisions—qualities that would directly
+    influence our AI development—there may be an opportunity for you to showcase your
+    AI skills; however, we ask that you kindly avoid using AI tools throughout the
+    process unless we explicitly indicate otherwise.
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.929409+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

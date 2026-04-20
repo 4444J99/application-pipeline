@@ -1,0 +1,115 @@
+id: mongodb-software-engineer-3-cloud-alerts-platform
+name: MongoDB Software Engineer 3, Cloud Alerts Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7736144
+  portal: greenhouse
+  location: Dublin
+  location_class: international
+  description: '<p>The database market is massive and MongoDB is at the forefront
+    of its disruption. At MongoDB, we are transforming how developers build and run
+    applications. Our distributed systems power mission-critical services used by
+    thousands of customers around the globe.</p> <p>We are looking for a Software
+    Engineer to join the Cloud Core Alerts Platform team, building scalable, fault-tolerant,
+    and highly available systems that process millions of events and alerts in real
+    time.</p> <p>We are looking to speak to candidates who are based in Dublin for
+    our hybrid working model.</p> <h3>Our domain includes</h3> <ul> <li>Alert Streaming
+    Systems: Real-time alerting pipelines using Apache Flink and Amazon Kinesis, delivering
+    critical insights for MongoDB Atlas customers</li> <li>Event Systems: SOA-based
+    event platforms leveraging gRPC and streaming architectures to power the MongoDB
+    activity feed at scale</li> <li>Communication Systems: Distributed services to
+    deliver alert notifications through multiple channels (email, SMS, Slack, PagerDuty)
+    with reliability and resilience</li> <li>Third-Party Integrations: Securely managing
+    customer credentials and integrating with external observability providers, ensuring
+    encryption at rest and in transit</li> <li>Cross-team Collaboration: Partnering
+    with the broader Customer Observability teams to provide unified telemetry and
+    monitoring experiences</li> </ul> <h3>What you’ll do</h3> <ul> <li>Design and
+    build distributed systems that process millions of events per second with high
+    availability and low latency</li> <li>Lead end-to-end projects from design to
+    production, ensuring scalability, observability, and operational excellence</li>
+    <li>Evolve our streaming alerting and eventing platforms, improving reliability,
+    throughput, and developer experience</li> <li>Collaborate with cross-functional
+    teams to integrate alerting, event, and communication services into the broader
+    customer observability ecosystem</li> <li>Develop secure, multi-tenant integrations
+    with third-party providers, handling sensitive customer credentials safely</li>
+    <li>Champion best practices in distributed systems design, including resilience,
+    scalability, and fault tolerance</li> <li>Mentor and guide other engineers, sharing
+    expertise on distributed architectures and streaming technologies</li> </ul> <h3>Who
+    you are</h3> <ul> <li>Familiar in distributed systems, with at least 2+ years
+    of backend engineering experience (Java, Go, or similar)</li> <li>Familiar with
+    service-oriented architectures (SOA) and inter-service communication using gRPC
+    or REST</li> <li>Good understanding of AWS (or other hyperscalers), cloud networking,
+    and infrastructure-as-code patterns</li> <li>Comfortable working in high-scale
+    environments with millions of events and alerts per day</li> <li>A strong communicator,
+    collaborator, and a problem solver</li> </ul> <h3>Technologies we use</h3> <ul>
+    <li>Languages &amp; Frameworks: Java</li> <li>Streaming &amp; Messaging: Apache
+    Flink, Amazon Kinesis, Kafka</li> <li>Service Frameworks: gRPC, Protobuf, REST</li>
+    <li>Datastores: MongoDB, S3</li> <li>Cloud &amp; Infrastructure: AWS, Kubernetes,
+    Terraform</li> </ul> <h3>Why Join Us</h3> <ul> <li>Work on scalable distributed
+    systems that directly impact thousands of global customers</li> <li>Be part of
+    a team modernizing and evolving core observability services for MongoDB Atlas</li>
+    <li>Collaborate with world-class engineers and leaders driving innovation in real-time
+    alerting and event processing</li> <li>Enjoy a supportive, inclusive, and growth-oriented
+    culture</li> </ul> <h3>About MongoDB</h3> <p>MongoDB is built for change, empowering
+    our customers and our people to innovate at the speed of the market. We have redefined
+    the database for the AI era, enabling innovators to create, transform, and disrupt
+    industries with software. MongoDB’s unified database platform, the most widely
+    available, globally distributed database on the market, helps organizations modernize
+    legacy workloads, embrace innovation, and unleash AI. Our cloud-native platform,
+    MongoDB Atlas, is the only globally distributed, multi-cloud database and is available
+    across AWS, Google Cloud, and Microsoft Azure.</p> <p>With offices worldwide and
+    over 60,000 customers, including 75% of the Fortune 100 and AI-native startups,
+    relying on MongoDB for their most important applications, we’re powering the next
+    era of software.</p> <p>Our compass at MongoDB is our <a href="https://www.mongodb.com/company">Leadership
+    Commitment,</a> guiding how and why we make decisions, show up for each other,
+    and win. It’s what makes us MongoDB.&nbsp;</p> <p>To drive the personal growth
+    and business impact of our employees, we’re committed to developing a supportive
+    and enriching culture for everyone. <a href="https://www.mongodb.com/company/blog/culture/employee-benefits-that-make-a-difference-at-mongodb">From
+    employee affinity groups, to fertility assistance and a generous parental leave
+    policy</a>, '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.889553+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,108 @@
+id: airbyte-software-engineer-platform
+name: Airbyte Software Engineer, Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Airbyte
+  url: https://jobs.ashbyhq.com/airbyte
+  application_url: https://jobs.ashbyhq.com/airbyte/702e1178-140c-45e3-bb19-25a86cc66925
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Airbyte is the open‑source standard for data movement. We''ve enabled
+    data teams to move data from applications, APIs, unstructured sources and databases
+    to data warehouses, lakes, and AI applications. With tens of thousands of connectors
+    built and hundreds of thousands of companies adopting Airbyte, we''ve proven the
+    economics of data integration at scale. And now Airbyte is building the frontier
+    agentic data infrastructure, purpose-built for AI agents that need fast, accurate
+    access to data across hundreds of sources. Our mission: make data available and
+    actionable, everywhere. We''ve raised $181M from the world''s top investors (Benchmark,
+    Accel, Altimeter, Coatue, Y Combinator, etc.) and we believe in product-led growth,
+    where we build something awesome that all our users love. We’ve raised enough
+    capital to explore boldly, but we still choose to move quickly, stay scrappy,
+    and experiment constantly as we find the right paths in an AI-native landscape.
+    The Role: You''ll be the infrastructure and reliability engineer on the Data Replication
+    team - a full-stack product team running over 3 million sync jobs a week powering
+    thousands of data use cases across multiple regions and clouds. You’ll build and
+    maintain the infrastructure, set reliability standards, drive down incidents,
+    and make it easier and safer for engineers to ship through tooling. You''re equally
+    comfortable in a Terraform file, a Kubernetes cluster, and a postmortem doc. We
+    expect engineers here to actively use AI as a force multiplier - agentic tools
+    to automate toil, augment incident response, and build smarter internal tooling.
+    If you''re not already doing this, you should be excited to start. We care as
+    much about how you work as what you build. Trust, directness, and craftsmanship
+    matter here. What You’ll Do: Own the infrastructure underpinning the Data Replication
+    platform - Kubernetes clusters, CI/CD pipelines, secrets management, networking,
+    and cloud resource configuration across AWS and GCP. Partner with product engineers
+    to reliably integrate product features with infrastructure. Maintain and enhance
+    observability, alerting, and anomaly detection with an eye towards LLM automation.
+    Maintain and enhance AI-augmented release and internal tooling: canary deployments,
+    progressive rollouts, automated release qualification, and rollback automation
+    - with an eye towards LLM automation. Set the infrastructure bar for the team
+    - build self-serve tooling, write runbooks, and coach engineers to own more of
+    their stack. What You’ll Need: 7+ years in infrastructure, platform engineering,
+    SRE, or DevOps. Hands-on ownership of Kubernetes, Helm, and Terraform in production
+    environments. Deep experience with observability stacks (Prometheus, Grafana,
+    Datadog) and on-call operations. Experience with CI/CD pipeline ownership and
+    developer tooling. Ability & willingness to read backend code to understand how
+    systems break and instrument them correctly. Fluency with AI tools - LLMs and
+    agentic frameworks to automate, debug faster, and reduce toil. A startup-ready
+    mindset: comfortable with ambiguity, moving fast, and owning problems end-to-end.
+    Nice To Have: Data pipelines, replication systems, or ETL/ELT platforms. Control
+    plane / data plane architectures or internal developer platforms. Experience with
+    Airbyte, CDKs, or connector-based architectures. Location: Onsite 5 days/week
+    in San Francisco, CA If you find this role exciting, we encourage you to apply
+    even if you think you don’t meet all of the requirements! Airbyte is an equal
+    opportunity employer that does not discriminate on the basis of actual or perceived
+    race, creed, color, religion, national origin, ancestry, age, physical or mental
+    disability, pregnancy, genetic information, sex, sexual orientation, gender identity
+    or expression, marital status, familial status, domestic violence victim status,
+    veteran or military status, or any other legally recognized protected basis under
+    federal, state or local laws. Pursuant to the San Francisco Fair Chance Ordinance,
+    we will consider for employment qualified applicants with arrest and conviction
+    records. Airbyte is committed to providing reasonable accommodations for qualified
+    individuals with disabilities in our job application procedures. Please let us
+    know if you need assistance or accommodations due to a disability.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.139039+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

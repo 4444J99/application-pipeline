@@ -1,0 +1,88 @@
+id: greptile-developer-advocate
+name: Greptile Developer Advocate
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Greptile
+  url: https://jobs.ashbyhq.com/greptile
+  application_url: https://jobs.ashbyhq.com/greptile/30f32ab6-37b1-40d3-82ac-f48dc64a3611
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: We want to build agents that autonomously validate code changes. Today
+    that looks like AI that reviews pull requests in GitHub, catching bugs and enforcing
+    standards. We’re reviewing close to 1B lines of code a month now for over 3,000
+    companies. This role is for someone who wants to be a public voice in the AI developer
+    ecosystem, while helping Greptile’s users succeed and helping the product land
+    with clarity. Problems We're Excited About The AI coding conversation is noisy.
+    Can we publish signal and taste that developers actually trust. Code quality is
+    hard to define but easy to feel. Can we stand for readable, maintainable, well
+    reviewed code, and make that concrete through examples. Most DevRel content is
+    either marketing or docs. Can we do both, with a real point of view. Launches
+    fail when the story is unclear. Can we make every release feel obvious, useful,
+    and easy to adopt. Trajectory 7,000+ customers Raised $30M from Benchmark, YC,
+    Paul Graham, Initialized Team We have assembled a small, talent dense team who
+    have scaled critical functions at companies like Stripe, Google, Figma, etc. Responsibilities
+    (in order of how much time you’ll likely spend on each) Be a voice in AI coding.
+    Track what is happening, publish commentary, and help lead signature projects
+    like the State of AI Coding Report. Evangelize Greptile’s story and features.
+    Turn what we build into clear messaging, demos, examples, and narratives that
+    developers trust. Own launches and customer communication. Write announcements,
+    walkthroughs, and release notes, then make sure users adopt new features successfully.
+    Keep our documentation accurate and useful. Improve onboarding, quickstarts, examples,
+    structure, and clarity so new users can get started without friction. Drive adoption
+    in open source and high signal teams. Identify great repos and contributors, help
+    them adopt Greptile, answer questions, and collect feedback. Do unscalable things
+    for the first 100. Qualifications Strong writing and speaking skills, with the
+    ability to explain technical ideas simply. Enough technical depth to write code
+    examples, debug basic issues, and collaborate closely with engineers. Familiarity
+    with developer platforms like GitHub, Twitter, and Hacker News, and how their
+    cultures work. Experience contributing to open source, building developer tooling,
+    or doing community work is a plus. You will like this role if You consume AI developer
+    content constantly and want to have a point of view in public. You care about
+    engineering craft and you want to raise the bar on what good AI assisted code
+    review looks like. You like launches, fast iteration, and being close to users.
+    You enjoy being a builder and a communicator, not just one or the other.
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.374977+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

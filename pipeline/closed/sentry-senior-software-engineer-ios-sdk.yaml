@@ -1,0 +1,116 @@
+id: sentry-senior-software-engineer-ios-sdk
+name: Sentry Senior Software Engineer (iOS), SDK
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sentry
+  url: https://jobs.ashbyhq.com/sentry
+  application_url: https://jobs.ashbyhq.com/sentry/fd2082fa-556c-4c7a-97d9-df21f204eeb2
+  portal: ashby
+  location: Vienna, Austria
+  location_class: unknown
+  description: About Sentry Bad software is everywhere, and we’re tired of it. Sentry
+    is on a mission to help developers write better software faster so we can get
+    back to enjoying technology. With more than $217 million in funding and 100,000+
+    organizations that believe we’re on to something, we're building performance and
+    error monitoring tools that help companies like Disney, Microsoft, and Atlassian
+    spend less time fixing bugs and more time building products. Sentry embraces a
+    hybrid work model across our global hubs, with Mondays, Tuesdays, and Thursdays
+    set as in-office anchor days to encourage meaningful collaboration. If you like
+    to selfishly build things that make your digital life better, come help us build
+    the next generation of software monitoring tools. Ready to build the future of
+    mobile app monitoring? This is no ordinary engineering role. At Sentry, our Mobile
+    SDK team creates the next generation of tools for developers worldwide, processing
+    over a billion events every single day. We're looking for a talented Senior iOS
+    SDK Engineer to join our team of experts. You'll dive deep into Apple's most advanced
+    technology, from powerful new APIs and SwiftUI to Foundation Models. If you love
+    using cutting-edge tech to solve complex challenges, you've found your team. What
+    you will achieve in this role As the owner of our iOS SDK, you will guide its
+    development from the core architecture to the final product experience. You'll
+    pioneer exciting new features like Session Replay and next-generation performance
+    monitoring, all while mastering Apple's latest innovations like modern concurrency
+    and on-device AI. You will design robust, high-quality APIs built to handle massive
+    scale, and you'll get to shape the overall vision for mobile at Sentry. Ultimately,
+    you will be the go-to expert, helping our teams solve the most complex and interesting
+    customer challenges. Why you will love this role We're looking for someone who
+    is passionate about their craft and loves building elegant, intuitive tools that
+    other developers are excited to use. You'll have the chance to contribute full-time
+    to a major open-source project and see the immediate impact of your work in our
+    fast-paced environment. You will be surrounded by thoughtful, collaborative engineers
+    who are dedicated to a culture of excellence, constantly pushing each other to
+    learn, grow, and produce their best work. Qualifications 5+ years of professional
+    experience as a Software Engineer, with a strong focus on mobile platforms, and
+    ideally in SDK development and/or developer tooling Deep experience developing
+    for the iOS platform using Swift and Objective-C A strong understanding of mobile
+    architecture, patterns, and best practices Experience leveraging AI-powered development
+    tools to enhance productivity and code quality Excellent written and spoken English
+    communication skills Well-organized with a high level of attention to detail and
+    accuracy You live in the Vienna area or are willing to relocate for this incredible
+    opportunity Bonus Points Knowledge of the app monitoring and observability space
+    Familiarity with low-level programming (C/C++) A track record of maintaining or
+    contributing to open-source libraries Experience with other mobile platforms or
+    frameworks (Android + Kotlin/Java, React Native + JavaScript/TypeScript, Flutter
+    + Dart) We are obliged by law to quote the minimum wage of EUR 60,844,-- gross
+    per year for this position, in accordance with the respective collective agreement
+    (IT-KV). The salary that Sentry offers you is adjusted to the current market situation
+    and our starting point is EUR 99,000-- gross per year. A successful candidate
+    will be eligible to participate in Sentry’s employee benefit plans/programs applicable
+    to the candidate’s position (including incentive compensation, equity grants,
+    paid time off, and group health insurance coverage). See Sentry Benefits for more
+    details about the Company’s benefit plans/programs. Equal Opportunity at Sentry
+    Sentry is committed to providing equal employment opportunities to its employees
+    and candidates for employment regardless of race, color, ancestry, religion, sex,
+    national origin, sexual orientation, age, citizenship, marital status, disability,
+    gender identity, veteran status, or other legally-protected characteristic. This
+    commitment includes the provision of reasonable accommodations to employees and
+    candidates for employment with physical or mental disabilities who require such
+    accommodations in order to (a) perform the essential functions of their jobs,
+    or (b) seek employment with Sentry. We strive to build a diverse team, with an
+    inclusive culture where every teammate can thrive. Sentry is an open-source company
+    because we believe that everyone, everywhere, should have the ability and tools
+    to make great software. Software should be accessible. That starts with making
+    our industry accessible. If you need assistance or an accommodation due to a disability,
+    you may contact us at accommodations
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.252193+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

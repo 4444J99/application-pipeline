@@ -1,0 +1,118 @@
+id: gitlab-intermediate-backend-engineer-sscs-supply-chain
+name: 'GitLab Intermediate Backend Engineer,  SSCS: Supply Chain'
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: GitLab
+  url: https://boards.greenhouse.io/gitlab
+  application_url: https://job-boards.greenhouse.io/gitlab/jobs/8480565002
+  portal: greenhouse
+  location: Remote, India
+  location_class: international
+  description: "<div class=\"content-intro\"><p>GitLab is the intelligent orchestration\
+    \ platform for DevSecOps. GitLab enables organizations to increase developer productivity,\
+    \ improve operational efficiency, reduce security and compliance risk, and accelerate\
+    \ digital transformation. More than 50 million registered users and more than\
+    \ 50% of the Fortune 100* trust GitLab to ship better, more secure software faster.</p>\
+    \ <p>The same principles built into our products are reflected in how our team\
+    \ works: we embrace AI as a core productivity multiplier, with all team members\
+    \ expected to incorporate AI into their daily workflows to drive efficiency, innovation,\
+    \ and impact. GitLab is where careers accelerate, innovation flourishes, and every\
+    \ voice is valued. Our high-performance culture is driven by our <a href=\"https://handbook.gitlab.com/handbook/values/\"\
+    >values</a> and continuous knowledge exchange, enabling our team members to reach\
+    \ their full potential while collaborating with industry leaders to solve complex\
+    \ problems. <a href=\"https://www.youtube.com/watch?v=OuZIb5zszQI\">Co-create\
+    \ the future with us</a> as we build technology that transforms how the world\
+    \ develops software.</p> <p>*<em>Fortune 500\xAE is a registered trademark of\
+    \ Fortune Media IP Limited, used under license. Claim based on GitLab data. Fortune\
+    \ 100 refers to the top 20% ranked companies in the 2025 Fortune 500 list, published\
+    \ in June 2025. Fortune and Fortune Media IP Limited are not affiliated with,\
+    \ and do not endorse products or services of GitLab.</em></p></div><h3><strong>An\
+    \ overview of this role</strong></h3> <p>As an Intermediate Backend Engineer on\
+    \ the SSCS Add-On team at GitLab, you'll help build a dedicated software supply\
+    \ chain security feature for regulated enterprise organizations. In this role,\
+    \ you'll contribute to capabilities that help customers control software dependencies,\
+    \ verify artifact integrity, and identify malicious packages before they reach\
+    \ production.</p> <p>Your work will sit at the intersection of backend engineering,\
+    \ product integration, and security-focused development. You'll build in Ruby\
+    \ on Rails, work alongside Go services as needed, and help connect Add-On functionality\
+    \ with GitLab's existing security scanning experience so findings are surfaced\
+    \ consistently for users. Because the team is small, you'll have meaningful influence\
+    \ on implementation details, team practices, and the product experience.</p> <p>This\
+    \ role is part of GitLab's all-remote, async-first, values-driven environment,\
+    \ where clear written communication and thoughtful coordination across time zones\
+    \ are essential.</p> <h3><strong>What you\u2019ll do</strong></h3> <ul> <li>Implement\
+    \ well-scoped backend features across the Add-On's supply chain security product,\
+    \ including package policy integrations, ingestion pipeline improvements, signing\
+    \ and verification support, and reliability-focused work, delivering maintainable\
+    \ code on agreed timelines and meeting team-defined delivery commitments.</li>\
+    \ <li>Build and maintain integrations between Add-On functionality and GitLab's\
+    \ existing software composition analysis scanning infrastructure so findings appear\
+    \ consistently and accurately in merge request security reports, reducing integration\
+    \ issues and supporting a reliable user experience.</li> <li>Write and maintain\
+    \ comprehensive automated test coverage, including RSpec and integration tests,\
+    \ to improve test reliability, reduce regressions, and support safe, consistent\
+    \ releases as the codebase grows.</li> <li>Take on work across multiple feature\
+    \ areas as priorities evolve, contributing as a generalist where the team needs\
+    \ support most.</li> <li>Participate actively in code review by giving thoughtful,\
+    \ actionable feedback and incorporating feedback constructively into your own\
+    \ work to help maintain code quality and reduce rework.</li> <li>Contribute clear\
+    \ internal documentation for the features and behavior you ship so teammates can\
+    \ support, extend, and troubleshoot the product effectively.</li> <li>Coordinate\
+    \ with adjacent Software Supply Chain Security teams, including Dependency Firewall\
+    \ and Malware Database, as the Add-On brings together capabilities from across\
+    \ GitLab, helping deliver aligned functionality and smoother cross-team execution.</li>\
+    \ <li>Collaborate effectively in an async-first environment across global time\
+    \ zones, including occasional off-hours overlap when needed, to keep work moving\
+    \ and decisions documented clearly.</li> </ul> <h3><strong>What you\u2019ll bring</strong></h3>\
+    \ <ul> <li>Backend development experience with the ability to deliver maintainable\
+    \ production code.</li> <li>Solid proficiency in Ruby on Rails and strong PostgreSQL\
+    \ fundamentals.&nbsp;</li> <li>Familiarity with Golang, or a willingness to learn\
+    \ and work across both Ruby on Rails and Go.</li> <li>Strong testing discipline,\
+    \ including experience with RSpec or an equivalent testing framework.</li> <li>Clear,\
+    \ direct written communication skills and experience collaborating with distributed\
+    \ teamm"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-07'
+  posting_date: '2026-04-06'
+  date_source: first_published
+  date_added: '2026-04-07'
+  discovered: '2026-04-07T10:15:28.397531+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

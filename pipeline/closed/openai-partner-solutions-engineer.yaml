@@ -1,0 +1,115 @@
+id: openai-partner-solutions-engineer
+name: OpenAI Partner Solutions Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: OpenAI
+  url: https://jobs.ashbyhq.com/openai
+  application_url: https://jobs.ashbyhq.com/openai/d2752459-fa0e-44cb-ba72-25ec22648853
+  portal: ashby
+  location: Tokyo, Japan
+  location_class: international
+  description: 'About the Team The Technical Success team is responsible for ensuring
+    the safe and effective deployment of ChatGPT and OpenAI API applications for developers
+    and enterprises. We act as a trusted advisor and thought leader for our customers,
+    ensuring developers and enterprises maximize value from our models and products.
+    As a Partner Solutions Engineer, you’ll work with global system integrators, advisory
+    agencies, multinational system integrations, and regional system integrators to
+    deliver high-quality services and solutions to a diverse range of customers. About
+    the Role We are seeking an experienced Partner Solutions Engineer to join our
+    team and support the growth of our partner network. In this role, you will collaborate
+    closely with partners to ensure they can effectively deploy and integrate OpenAI’s
+    products, including ChatGPT Enterprise, the OpenAI Platform and Codex. You will
+    provide deep technical enablement, guide partners through the implementation of
+    AI solutions, and help them identify high-value use cases. Your efforts will accelerate
+    partners’ time to productivity, ensuring they deliver exceptional results for
+    our joint customers while maintaining high-quality standards. You will work closely
+    with the Partnerships, Sales, Customer Success, Security, and Product teams, and
+    report to the Head of Technical Success Japan. This role is based in Tokyo. We
+    operate under a hybrid work model, with 3 days in the office per week, and offer
+    relocation assistance to new employees. In this role, you will: Conduct technical
+    assessments of prospective partners to ensure alignment with OpenAI''s strategic
+    goals and their ability to drive technology adoption. Align with Revenue Partnerships
+    team as one virtual team with shared goals Develop and deliver tailored technical
+    enablement programs; provide ongoing support as partners integrate and deploy
+    solutions. Collaborate with partners'' sales teams to qualify and close opportunities;
+    offer technical guidance through demos, architectural recommendations, and showcasing
+    the business value of OpenAI solutions. Lead technical support during partners''
+    initial projects to ensure successful implementations; mentor their technical
+    teams towards self-sufficiency in delivering OpenAI-powered solutions. Serve as
+    a trusted advisor by addressing complex technical inquiries, ensuring quality
+    of partner-delivered services, and providing product feedback to inform future
+    strategies. Create and maintain internal documentation and playbooks outlining
+    best practices for partner engagements; share insights from successful use cases
+    to empower internal teams and partners. You’ll thrive in this role if you: Have
+    7+ years of experience in a technical pre-sales role, managing C-level technical
+    and business relationships with complex global organizations. Experience working
+    with Global SIs is a plus. Have a track record of successfully enabling and scaling
+    SI and Consulting partner networks with a focus on delivering high-quality customer
+    outcomes. Demonstrate a thorough understanding of IT security principles and customer
+    requirements for technical B2B SaaS products, with experience providing higher-level
+    security and compliance support. Have delivered prototypes of Generative AI/traditional
+    ML solutions and have knowledge of network/cloud architecture. Have industry experience
+    in programming languages like Python or Javascript and working with REST APIs.
+    Are an effective presenter and communicator who can translate business and technical
+    topics to all audiences, including senior leaders. Own problems end-to-end and
+    are willing to pick up whatever knowledge you''re missing to get the job done.
+    Have a humble attitude, an eagerness to help your colleagues, and a desire to
+    do whatever it takes to make the team succeed. About OpenAI OpenAI is an AI research
+    and deployment company dedicated to ensuring that general-purpose artificial intelligence
+    benefits all of humanity. We push the boundaries of the capabilities of AI systems
+    and seek to safely deploy them to the world through our products. AI is an extremely
+    powerful tool that must be created with safety and human needs at its core, and
+    to achieve our mission, we must encompass and value the many different perspectives,
+    voices, and experiences that form the full spectrum of humanity. We are an equal
+    opportunity employer, and we do not discriminate on the basis of race, religion,
+    color, national origin, sex, sexual orientation, age, veteran status, disability,
+    genetic information, or other applicable legally protected characteristic. For
+    additional information, please see OpenAI’s Affirmative Action and Equal Employment
+    Opportunity Policy Statement . Background checks for applicants will be administered
+    in accordance with applicable law, and qualified applicants with arrest or conviction
+    records will be considered for employment consistent with those laws, including
+    the San Francisco Fair Chance Ordinance, the Los Angeles County Fair Chan'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.680488+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

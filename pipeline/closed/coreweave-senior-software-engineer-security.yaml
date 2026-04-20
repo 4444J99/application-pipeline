@@ -1,0 +1,113 @@
+id: coreweave-senior-software-engineer-security
+name: CoreWeave Senior Software Engineer, Security
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: CoreWeave
+  url: https://boards.greenhouse.io/coreweave
+  application_url: https://coreweave.com/careers/job?4651859006&board=coreweave&gh_jid=4651859006
+  portal: greenhouse
+  location: ' Sunnyvale, CA '
+  location_class: us-onsite
+  description: '<div class="content-intro"><div> <div> <div class="gmail_quote"> <div>
+    <div><span id="m_1770241969069985273m_-2746164444908759431gmail-docs-internal-guid-131e4fb0-7fff-b4e9-ff50-e8cf32449b1b">CoreWeave
+    is The Essential Cloud for AI™. Built for pioneers by pioneers, CoreWeave delivers
+    a platform of technology, tools, and teams that enables innovators to build and
+    scale AI with confidence. Trusted by leading AI labs, startups, and global enterprises,
+    CoreWeave combines superior infrastructure performance with deep technical expertise
+    to accelerate breakthroughs and turn compute into capability. Founded in 2017,
+    CoreWeave became a publicly traded company (Nasdaq: CRWV) in March 2025. Learn
+    more at&nbsp;<a href="http://www.coreweave.com/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.coreweave.com&amp;source=gmail&amp;ust=1762613132717000&amp;usg=AOvVaw3D-UOhNaqEvF5BEWxjYyAU">www.coreweave.com</a>.</span></div>
+    </div> </div> </div> </div></div><p><strong>What You’ll Do:</strong></p> <p>As
+    a Senior Software Engineer in the Security organization at CoreWeave, you will
+    design, build and deploy services, platforms and tools that help provide common
+    foundational capabilities that various security programs and initiatives rely
+    on to keep CoreWeave secure. Automation to eliminate manual steps involved in
+    understanding security risks, remediating and preventing them would be the charter.&nbsp;</p>
+    <p>The work sits at the intersection of engineering systems and regulatory requirements,
+    translating requirements into scalable, reliable, production grade infrastructure.
+    Often this means building production infrastructure from scratch in many cases,
+    and would need end to end ownership of systems including design, development,
+    testing and deployment including implementing effective integration pipelines
+    (CI/CD) and offering a reliable production system that should be highly available
+    and function at scale.</p> <p>You will partner closely with various security teams
+    including GRC, platform engineering, and security domain teams to translate business
+    needs into durable technical needs, while retaining full engineering ownership
+    of how those systems are designed, built, and operated.</p> <p><em>In this role,
+    you will:</em></p> <ul> <li>Design and build scalable systems.</li> <li>Develop
+    control integrations and data pipelines to normalize security telemetry across
+    IAM, logs, scanners, and CCM/GRC tools.&nbsp;</li> <li>Build metrics engines,
+    dashboards, and insights pipelines that provide real-time visibility into compliance
+    health and emerging risks.</li> </ul> <p><em>On this team, you will:</em></p>
+    <ul> <li>You’ll tackle security &amp; compliance puzzles at cutting-edge scale
+    and complexity</li> <li>You’ll collaborate with brilliant engineers who are redefining
+    compliance adherence for cloud infrastructure.</li> <li>You''ll have the freedom
+    and responsibility to innovate, experiment, and influence how we establish assurance
+    pipelines.&nbsp;</li> </ul> <p>Investing in our people is one of our top priorities,
+    and we value candidates who can bring their diversified experiences to our teams.
+    Here are some qualities we’ve found compatible with our team. We''d love to talk
+    about whether this aligns with your experience and interests and what you’re excited
+    to work on next.</p> <p><strong>Who You Are:</strong></p> <p><em>Minimum Qualifications</em></p>
+    <ul> <li>A Bachelor’s degree in Information Security, Computer Science, or a related
+    field or equivalent job experience.</li> <li>At least 7+ years of hands-on experience
+    in programing languages like Go&nbsp;</li> <li>At least 3+ years of hands-on experience
+    deploying and managing Kubernetes clusters in a production environment</li> <li>Experience
+    building high qps and critical distributed systems.</li> <li>Familiarity with
+    modern CI/CD practices and Infrastructure-as-Code tooling.&nbsp;</li> <li>Proven
+    experience building and deploying containerized applications</li> <li>Strong experience
+    with technical architectures involving data flows, event driven architecture,
+    access controls, retention, and third-party integrations.</li> <li>Strong hands-on
+    experience with cloud infrastructure (AWS, GCP).</li> </ul> <p><strong>Preferred:</strong></p>
+    <ul> <li>Information Security Engineering experience.</li> <li>Expertise in major
+    compliance and security frameworks (SOC 2, ISO 27001, PCI DSS, HIPAA, FedRAMP,
+    NIST, CSF).</li> <li>Background in building automation for distributed cloud environments
+    at scale</li> <li>Experience with remote-access solutions like Teleport (real
+    bonus points if you’ve submitted PRs on their product)</li> <li>Understanding
+    of the SSO protocols, specifically OIDC and SAML</li> <li>Hands-on experience
+    with PKI and mTLS</li> </ul> <p>If you''re eager to elevate compliance into a
+    creative, strategic force within a fast-paced, forward-thinking company, we''d
+    love to hear from you!</p> <p><em data-stringify-type="italic">The base salary
+    range for'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-25'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.555674+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

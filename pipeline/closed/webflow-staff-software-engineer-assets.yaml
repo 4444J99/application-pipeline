@@ -1,0 +1,118 @@
+id: webflow-staff-software-engineer-assets
+name: Webflow Staff Software Engineer, Assets
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Webflow
+  url: https://boards.greenhouse.io/webflow
+  application_url: https://job-boards.greenhouse.io/webflow/jobs/7788111
+  portal: greenhouse
+  location: U.S. Remote
+  location_class: us-remote
+  description: "<p>At Webflow, we\u2019re building the world\u2019s leading AI-native\
+    \ Digital Experience Platform, and we\u2019re doing it as a remote-first company\
+    \ built on trust, transparency, and a whole lot of creativity. This work takes\
+    \ grit, because we move fast, without ever sacrificing craft or quality. Our mission\
+    \ is to bring development superpowers to everyone. From entrepreneurs launching\
+    \ their first idea to global enterprises scaling their digital presence, we empower\
+    \ teams to design, launch, and optimize for the web without barriers. We believe\
+    \ the future of the web, and work, is more open, more creative, and more equitable.\
+    \ And we\u2019re here to build it together.</p> <p>We\u2019re looking for a Staff\
+    \ Software Engineer, Assets to help us solve challenging problems to address emerging\
+    \ customer needs and behaviors. The ideal candidate can move fast but with high\
+    \ quality, and views the early stages of product development as a creative canvas\
+    \ and opportunity for high impact.</p> <h1><strong>About the role:</strong></h1>\
+    \ <ul> <li>Location: Remote-first (United States; BC &amp; ON, Canada)</li> <li>Full-time</li>\
+    \ <li>Permanent</li> <li>Exempt</li> <li>The cash compensation for this role is\
+    \ tailored to align with the cost of labor in different geographic markets. We've\
+    \ structured the base pay ranges for this role into zones for our geographic markets,\
+    \ and the specific base pay within the range will be determined by the candidate\u2019\
+    s geographic location, job-related experience, knowledge, qualifications, and\
+    \ skills. <ul> <li>United States &nbsp;(all figures cited below are in USD and\
+    \ pertain to workers in the United States)<br> <ul> <li>Zone A: <span data-sheets-root=\"\
+    1\">187,000</span> - <span data-sheets-root=\"1\">238,000</span></li> <li>Zone\
+    \ B: <span data-sheets-root=\"1\">175,000</span> - <span data-sheets-root=\"1\"\
+    >223,000</span></li> <li>Zone C: <span data-sheets-root=\"1\">164,000</span> -\
+    \ <span data-sheets-root=\"1\">209,000</span></li> </ul> </li> </ul> </li> <li>The\
+    \ cash compensation for this role is tailored to align with the cost of labor\
+    \ in different geographic markets. The specific base pay within this range will\
+    \ be determined by the candidate\u2019s geographic location, job-related experience,\
+    \ knowledge, qualifications, and skills. <ul> <li>Canada (figures cited below\
+    \ are in CAD and pertain to workers in ON &amp; BC, Canada) <ul> <li><span data-sheets-root=\"\
+    1\">212,000</span> - <span data-sheets-root=\"1\">270,000</span></li> </ul> </li>\
+    \ </ul> </li> </ul> <p>This role is also eligible to participate in Webflow's\
+    \ company-wide bonus program. Target amounts are a percentage of base salary and\
+    \ vary by career level. Payouts are based on company performance against established\
+    \ financial and operational goals.&nbsp;</p> <p>Please visit our <a href=\"https://webflow.com/careers#pay-zones\"\
+    >Careers page</a> for more information on which locations are included in each\
+    \ of our geographic pay zones. However, please confirm the zone for your specific\
+    \ location with your recruiter.</p> <ul> <li>Application Information: <ul> <li>Application\
+    \ deadline: applications accepted on an ongoing basis until position is closed\
+    \ and filled</li> <li>This posting is for a new position</li> </ul> </li> <li>Reporting\
+    \ to the Director, Engineering</li> </ul> <p>As a backend Staff Engineer, you\u2019\
+    ll:&nbsp;</p> <ul> <li>Architect, design, and evolve backend systems, platform\
+    \ services, and APIs using Python and related technologies.</li> <li>Partner closely\
+    \ with data scientists and machine learning engineers to productionize AI/ML capabilities\
+    \ and integrate models into reliable backend infrastructure.</li> <li>Design and\
+    \ scale distributed systems that process large volumes of data with strong performance,\
+    \ availability, and operational excellence.</li> <li>Build secure, resilient data\
+    \ storage and retrieval systems, with a focus on data integrity, privacy, and\
+    \ governance.</li> <li>Work across the full product lifecycle, from early concept\
+    \ exploration and technical design through implementation, launch, and ongoing\
+    \ production ownership.</li> <li>Lead complex, cross-team technical initiatives\
+    \ that influence roadmap execution and raise the engineering bar across the organization.</li>\
+    \ <li>Produce maintainable, well-tested, observable code and improve the systems,\
+    \ tooling, and standards that support long-term engineering quality.</li> <li>Mentor\
+    \ engineers across the team, sharing expertise in backend architecture, distributed\
+    \ systems, and engineering best practices.</li> <li>Stay current with industry\
+    \ trends and emerging technologies, and proactively identify opportunities to\
+    \ improve our backend platform, infrastructure, and development workflows.</li>\
+    \ </ul> <h1><strong>About you:</strong></h1> <p>Requirements:</p> <ul> <li>BA/BS\
+    \ degree or equivalent experience</li> </ul> <p>You\u2019ll thrive in this role\
+    \ if you:</p> <ul> <li>Bring 7+ years of software engineering experience, including\
+    \ deep expertise in backend engineering and distributed systems at scale.</li>\
+    \ <li>Have a strong technical foundat"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-09'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.161257+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

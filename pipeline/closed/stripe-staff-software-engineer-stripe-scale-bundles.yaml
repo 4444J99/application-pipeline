@@ -1,0 +1,116 @@
+id: stripe-staff-software-engineer-stripe-scale-bundles
+name: Stripe Staff Software Engineer, Stripe Scale & Bundles
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7718488
+  portal: greenhouse
+  location: N/A
+  location_class: unknown
+  description: <h1><strong>Who we are</strong></h1> <h3><strong>About Stripe</strong></h3>
+    <p>Stripe is a financial infrastructure platform for businesses. Millions of companies—from
+    the world's largest enterprises to the most ambitious startups—use Stripe to accept
+    payments, grow their revenue, and accelerate new business opportunities. Our mission
+    is to increase the GDP of the internet, and we have a staggering amount of work
+    ahead. That means you have an unprecedented opportunity to put the global economy
+    within everyone's reach while doing the most important work of your career.</p>
+    <h3><strong>About the team</strong></h3> <p>The Packaging team within User Billing
+    is responsible for Stripe Scale — Stripe's flagship product bundle that brings
+    together Payments, Radar, Tax, and other Stripe products into a unified, tiered
+    pricing offering for self-serve and sales-assisted users. A core part of our approach
+    is using Stripe's own Billing product to power how we charge for Stripe itself
+    — essentially making Stripe our own most demanding customer. This "dogfooding"
+    strategy means we integrate our external-facing subscription, usage-based billing,
+    and entitlement products into our internal monetization stack, generating real-world
+    insights that directly improve our products for enterprise customers with complex
+    billing needs.</p> <p>This is a uniquely cross-functional domain. Stripe Scale
+    sits at the intersection of pricing strategy, subscription management, entitlements,
+    usage-based billing, fee calculation, and settlement — spanning both Stripe's
+    internal commerce platform and Stripe's external Billing product. The Packaging
+    team partners closely with Product, Sales, Finance, Accounting, Connect, Tax,
+    Revenue Recognition, and many product engineering teams across Stripe to define,
+    price, and operationalize bundles.</p> <p>As the team grows beyond Stripe Scale
+    into additional bundle offerings, we need a technical leader who can not only
+    design and build complex distributed systems, but also navigate the organizational
+    complexity of delivering a product that touches nearly every corner of Stripe.</p>
+    <h2><strong>What you'll do</strong></h2> <p>We're looking for a Staff Engineer
+    who combines deep technical skill with exceptional relationship-building and communication
+    abilities. You will be the connective tissue between the Packaging team and its
+    many stakeholders, driving alignment across engineering, product, and business
+    functions while ensuring sound technical execution.</p> <h2><strong>You will:</strong></h2>
+    <ul> <li>Drive cross-team technical strategy and alignment for Stripe Scale and
+    future bundles, working across Stripe's internal commerce platform, Stripe Billing,
+    Connect, Tax, Revenue Recognition, Accounting, and Finance to ensure cohesive
+    system design and delivery</li> <li>Be the primary technical point of contact
+    for partner teams, proactively building relationships, establishing shared context,
+    and creating clarity on dependencies, timelines, and tradeoffs</li> <li>Lead the
+    design of complex, multi-system integrations — we use Stripe's own Billing product
+    to bill for Stripe, which means you'll architect systems spanning subscription
+    orchestration, billing routing, usage tracking, entitlement management, fee settlement,
+    and invoice generation across both internal and external billing platforms</li>
+    <li>Translate ambiguous business requirements into clear technical plans, working
+    closely with Product and business stakeholders to identify the right technical
+    approach for evolving packaging and pricing strategies (e.g., new tiers, bundle
+    versioning, sales-sold transitions)</li> <li>Drive decision-making through influence,
+    not authority, bringing engineering leaders and cross-functional partners together
+    to resolve competing priorities, negotiate resource commitments, and align on
+    roadmaps — especially in areas where the Packaging team depends on other teams'
+    delivery</li> <li>Ensure operational excellence by establishing strong patterns
+    for testing, incident response, and billing accuracy across the dual-system architecture
+    (internal commerce platform + Stripe Billing) — where misbillings directly impact
+    Stripe's revenue and user trust</li> <li>Mentor and uplevel engineers on the team,
+    with a particular emphasis on cross-team collaboration skills, stakeholder management,
+    and writing clear technical proposals and decision documents</li> <li>Communicate
+    transparently and proactively to leadership and partner teams — surfacing risks
+    early, framing tradeoffs clearly, and building trust through consistent follow-through</li>
+    </ul> <h2><strong>Responsibilities</strong></h2> <ul> <li>Own and evolve the technical
+    roadmap for the Packaging domain, balancing near-term delivery (Stripe Scale GA
+    and beyond) with long-term platform investments for future bundles</li> <li>Drive
+    interoperability across Stripe's internal commerce platform, Stripe Billing, and
+    the broader product ecosystem — ensuring that pricing, subscriptions, e
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-03'
+  posting_date: '2026-04-02'
+  date_source: first_published
+  date_added: '2026-04-03'
+  discovered: '2026-04-03T10:15:35.509549+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

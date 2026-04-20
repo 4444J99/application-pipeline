@@ -1,0 +1,116 @@
+id: sierra-ai-software-engineer-mobile
+name: Sierra AI Software Engineer, Mobile
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sierra AI
+  url: https://jobs.ashbyhq.com/sierra
+  application_url: https://jobs.ashbyhq.com/sierra/a0b9444b-2354-4db3-8fe8-87892e2e282e
+  portal: ashby
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: 'About us At Sierra, we’re creating a platform to help businesses build
+    better, more human customer experiences with AI. We are primarily an in-person
+    company based in San Francisco, with growing offices in Atlanta, New York, London,
+    Paris, Singapore, and Japan. We are guided by a set of values that are at the
+    core of our actions and define our culture: Trust, Customer Obsession, Craftsmanship,
+    Intensity, and Family. These values are the foundation of our work, and we are
+    committed to upholding them in everything we do. Our co-founders are Bret Taylor
+    and Clay Bavor . Bret currently serves as Board Chair of OpenAI. Previously, he
+    was co-CEO of Salesforce (which had acquired the company he founded, Quip) and
+    CTO of Facebook. Bret was also one of Google''s earliest product managers and
+    co-creator of Google Maps. Before founding Sierra, Clay spent 18 years at Google,
+    where he most recently led Google Labs. Earlier, he started and led Google’s AR/VR
+    effort, Project Starline, and Google Lens. Before that, Clay led the product and
+    design teams for Google Workspace. The role We’re looking for a Software Engineer
+    focused on iOS and/or Android to own our Experience SDKs — the native building
+    blocks our customers use to embed Sierra’s chat and voice agents into their mobile
+    apps. You’ll be the technical lead for how Sierra shows up on mobile: UI surfaces,
+    animations, voice interactions, performance, and deep operating-system integrations.
+    You’ll work closely with design and our web frontend team to make the mobile experience
+    feel as considered and cohesive as our core product. What you’ll do Own the mobile
+    Experience SDKs for iOS and Android. Lead the architecture, implementation, and
+    evolution of our native SDKs that embed Sierra chat and voice agents into customer
+    apps. Make them a joy to integrate for other engineers and a delight to use for
+    end users. Deepen OS-level integrations and interactions. Push into platform-native
+    capabilities: notifications, background execution, voice and audio routing, app
+    extensions, system share sheets, in-app attachments, deep links, and other operating-system
+    surfaces that make agents feel truly “at home” on each platform. Design and ship
+    best-in-class mobile interfaces. Work hand-in-hand with our design team to translate
+    Figma concepts into fluid, responsive mobile experiences. Sweat the details on
+    motion, gesture handling, transitions, and accessibility so the agent feels fast,
+    natural, and trustworthy on every device. Create a robust SDK developer experience.
+    Define clear APIs, documentation, and sample apps that make it simple for customer
+    engineering teams to integrate Sierra. Focus on stability, versioning, upgrade
+    paths, and metrics so that our mobile surfaces are as reliable as they are beautiful.
+    Collaborate tightly with web frontend and product teams. Partner with our React/TypeScript
+    frontend engineers to keep interactions, visual language, and behavior coherent
+    across web and mobile. Work closely with product and PMM to bring new agent features
+    to mobile in a way that feels native to each platform. Champion quality, performance,
+    and craftsmanship. Set the bar for mobile engineering quality at Sierra: smooth
+    animations, low latency, resilient offline behavior, and thoughtful error states.
+    Instrument and profile the experience, then iterate to keep it fast and reliable
+    at scale. Work across the stack when needed. While your center of gravity will
+    be Swift and/or Kotlin, you’ll occasionally dip into backend services (Go, GraphQL)
+    or frontend code to unblock features or fine-tune end-to-end flows, working with
+    the broader Product Engineering team. What you’ll bring Deep mobile engineering
+    expertise. Significant experience (typically 6–10+ years) building high-quality
+    native mobile apps or SDKs on iOS (Swift) and/or Android (Kotlin). You’ve shipped
+    production code used by large numbers of users and have the scars and judgment
+    that come with that. Strong SDK and API design instincts. You’ve built or maintained
+    SDKs, libraries, or shared frameworks before. You care about clean API surfaces,
+    versioning, and backward compatibility, and you empathize with external developers
+    trying to integrate your work. Product and UX sensitivity. You have a good feel
+    for interaction design and visual quality. You notice details like animation timing,
+    gesture ergonomics, and accessibility, and you’re willing to iterate with design
+    until the experience feels “just right.” This lines up strongly with our value
+    of craftsmanship. High-bandwidth collaboration. You communicate clearly with designers,
+    product managers, and other engineers. You can walk through tradeoffs, explain
+    constraints, and adjust plans quickly as we learn from customers. Strong sense
+    of ownership. You’re comfortable owning big areas end to end, from rough concept
+    through launch and iteration. You’ve thrived in fast-moving environments, can
+    operate with limited structure, and care about shipping meaningful improvements
+    quickly wit'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.300626+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,115 @@
+id: cloudflare-software-engineer-resiliency
+name: Cloudflare Software Engineer- Resiliency
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Cloudflare
+  url: https://boards.greenhouse.io/cloudflare
+  application_url: https://boards.greenhouse.io/cloudflare/jobs/6980179?gh_jid=6980179
+  portal: greenhouse
+  location: Hybrid
+  location_class: unknown
+  description: '<div class="content-intro"><div><strong>About Us</strong></div> <div>
+    <p>At Cloudflare, we are on a mission to help build a better Internet. Today the
+    company runs one of the world’s largest networks that powers millions of websites
+    and other Internet properties for customers ranging from individual bloggers to
+    SMBs to Fortune 500 companies. Cloudflare protects and accelerates any Internet
+    application online without adding hardware, installing software, or changing a
+    line of code. Internet properties powered by Cloudflare all have web traffic routed
+    through its intelligent global network, which gets smarter with every request.
+    As a result, they see significant improvement in performance and a decrease in
+    spam and other attacks. Cloudflare was named to Entrepreneur Magazine’s Top Company
+    Cultures list and ranked among the World’s Most Innovative Companies by Fast Company.&nbsp;</p>
+    <p>At Cloudflare, we’re not looking for people who wait for a polished roadmap;
+    we’re looking for the builders who see the cracks in the Internet that everyone
+    else has simply learned to live with. We value candidates who have the instinct
+    to spot a "normalized" problem and the AI-native curiosity to create a solution
+    using the latest tools. Our culture is built on iteration, leveraging AI to ship
+    faster today to make it better tomorrow, while ensuring that every improvement,
+    no matter how small, is shared across the team to lift everyone up. If you’re
+    the type of person who values curiosity over bureaucracy, and that AI is a partner
+    in solving tough problems to keep the Internet moving forward, you’ll fit right
+    in.</p> </div></div><p><strong>Available Locations: <span class="il">Bengaluru</span></strong></p>
+    <p><strong><span class="il">About The Team</span></strong></p> <p><span class="il">Cloudflare’s
+    Infrastructure Team builds and runs the systems and software that support our
+    solutions that handle trillions of requests per month. We ensure that all of the
+    new and existing features and functionality that Cloudflare offers can be managed
+    at scale and meet the needs of our massively growing, global customer base.</span></p>
+    <p><strong>About The Role&nbsp;</strong></p> <p>As a Engineer: Resiliency, you
+    will be part of a team responsible for developing and maintaining the systems
+    that manage Cloudflare’s infrastructure at scale. You will work on expanding and
+    evolving the suite of automations that allow our Infrastructure Operations partners
+    to provision, expand, repair, and decommission our rapidly growing fleet of servers.
+    Your work will contribute to an increasingly autonomous system that reduces manual
+    effort and supports Cloudflare’s growth. You will play a key role in the development
+    of the infrastructure that powers Cloudflare’s scale.</p> <p>You will collaborate
+    with the team to understand business needs and develop technical solutions. You
+    will thrive in a fast-paced iterative engineering environment and work closely
+    with internal customers to understand their requirements.</p> <p><strong>The "AI-First"
+    Mandate:</strong> In this role, AI is a tool for strategic mastery. You will be
+    expected to integrate AI into your workflow—utilizing LLMs and predictive analytics
+    to synthesize partner intelligence, monitor regulatory shifts, and automate regional
+    reporting. This allows you to maintain high-level diplomacy while scaling your
+    impact across the broader APAC and EMEA regions.</p> <p><strong>Examples of desirable
+    skills, knowledge and experience.</strong></p> <ul> <li>At least 5+ years of hands-on
+    software development experience on meaningfully complex systems.</li> <li>Excellent
+    proficiency in one of Python, Go, or Rust, with deep understanding of the language
+    and its best practices.</li> <li>Experience working with Linux systems</li> <li>Basic
+    networking knowledge, like VLAN, Routing, DNS, etc</li> <li>Experience building
+    both backend systems and frontend widgets.</li> <li>Ability to contribute to planning,
+    development, and execution to meet commitments and deliver with predictability.</li>
+    <li>Experience implementing tools, processes, internal instrumentation, and methodologies.</li>
+    <li>Comfortable working on projects with tight deadlines and short release cycles.</li>
+    <li>Experience with DCIM, CMDB, IPAM, and other Data Center and Asset Lifecycle
+    Management tools is a plus</li> <li>Excellent verbal and written English language
+    skills.</li> </ul> <p class="p1"><strong>Fraud Alert:</strong>&nbsp;<em>Do not
+    fall victim to recruitment fraud. Cloudflare never charges application fees or
+    requires candidates to purchase third-party certifications or training as a condition
+    of employment. All official communication comes strictly from @</em><a href="http://cloudflare.com/"><span
+    class="s1"><em>cloudflare.com</em></span></a><em>&nbsp;email addresses.</em></p><div
+    class="content-conclusion"><p><strong>What Makes Cloudflare Special?</strong></p>
+    <p><span style="font-weight: 400;">We’re not just a highly ambitious, large-scale
+    techno'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.639034+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

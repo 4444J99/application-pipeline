@@ -1,0 +1,118 @@
+id: anthropic-software-engineer-compute-efficiency
+name: Anthropic Software Engineer, Compute Efficiency
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/5108982008
+  portal: greenhouse
+  location: San Francisco, CA | New York City, NY
+  location_class: us-onsite
+  description: "<div class=\"content-intro\"><h2><strong>About Anthropic</strong></h2>\
+    \ <p>Anthropic\u2019s mission is to create reliable, interpretable, and steerable\
+    \ AI systems. We want AI to be safe and beneficial for our users and for society\
+    \ as a whole. Our team is a quickly growing group of committed researchers, engineers,\
+    \ policy experts, and business leaders working together to build beneficial AI\
+    \ systems.</p></div><p>At Anthropic, we are building some of the most complex\
+    \ and large-scale AI infrastructure in the world. As that infrastructure scales\
+    \ rapidly, so does the imperative to optimize how we use it. As a Software Engineer\
+    \ for Compute Efficiency on the Capacity team, you will play a central role in\
+    \ making our systems more performant, cost-effective, and sustainable\u2014without\
+    \ compromising reliability or latency.</p> <p>You will work across the full infrastructure\
+    \ stack, from cloud platforms and networking to application-level performance,\
+    \ and will bridge the gap between high-level research needs and low-level hardware\
+    \ constraints to build the most efficient AI infrastructure in the world. You\
+    \ will help with building the telemetry, cost attribution, and optimization frameworks\
+    \ that ensure every dollar of our infrastructure investment delivers maximum value.\
+    \ This is a high-impact, cross-functional role at the intersection of systems\
+    \ engineering, financial optimization, and AI infrastructure.</p> <p>&nbsp;</p>\
+    \ <p>Responsibilities:</p> <ul> <li> <p>Build and evolve telemetry and monitoring\
+    \ systems to provide deep visibility into infrastructure performance, utilization,\
+    \ and costs across our cloud and datacenter fleets.</p> </li> <li> <p>Design and\
+    \ implement cost attribution frameworks for our multi-tenant infrastructure, enabling\
+    \ teams to understand and optimize their resource consumption.</p> </li> <li>\
+    \ <p>Identify and resolve performance bottlenecks and capacity hotspots through\
+    \ deep analysis of distributed systems at scale.</p> </li> <li> <p>Partner closely\
+    \ with cloud service providers and internal stakeholders to optimize cluster configurations,\
+    \ workload placement, and resource utilization across AI training and inference\
+    \ workloads\u2014including large-scale clusters spanning thousands to hundreds\
+    \ of thousands of machines.</p> </li> <li> <p>Develop and champion engineering\
+    \ practices around efficiency, driving a culture of performance awareness and\
+    \ cost-conscious design across Anthropic.</p> </li> <li> <p>Collaborate with research\
+    \ and product teams to deeply understand their infrastructure needs, and design\
+    \ solutions that balance performance with cost efficiency.</p> </li> <li> <p>Drive\
+    \ architectural improvements and code-level optimizations across multiple services\
+    \ and platforms to deliver measurable utilization and performance gains.</p> </li>\
+    \ </ul> <p>&nbsp;</p> <p>You may be a good fit if you:</p> <ul> <li> <p>Have 6+\
+    \ years of relevant industry experience, 1+ year leading large scale, complex\
+    \ projects or teams as a software engineer or tech lead</p> </li> <li> <p>Deep\
+    \ expertise in distributed systems at scale, with a strong focus on infrastructure\
+    \ reliability, scalability, and continuous improvement.</p> </li> <li> <p>Strong\
+    \ proficiency in at least one programming language (e.g., Python, Rust, Go, Java)</p>\
+    \ </li> <li> <p>Hands-on experience with cloud infrastructure, including Kubernetes,\
+    \ Infrastructure as Code, and major cloud providers such as AWS or GCP.</p> </li>\
+    \ <li> <p>Experience optimizing end-to-end performance of distributed systems,\
+    \ including workload right-sizing and resource utilization tuning.</p> </li> <li>\
+    \ <p>You possess a deep curiosity for how things work under the hood and have\
+    \ a proven ability to work independently to solve opaque performance issues</p>\
+    \ </li> <li> <p>Experience designing or working with performance and utilization\
+    \ monitoring tools in large-scale, distributed environments.</p> </li> <li> <p>Strong\
+    \ problem-solving skills with the ability to work independently and navigate ambiguity.</p>\
+    \ </li> <li> <p>Excellent communication and collaboration skills\u2014you will\
+    \ work closely with internal and external stakeholders to build consensus and\
+    \ drive projects forward.</p> </li> </ul> <p><br>Strong candidates may have:</p>\
+    \ <ul> <li> <p>Experience with machine learning infrastructure workloads as well\
+    \ as associated networking technologies like NCCL.</p> </li> <li> <p>Low level\
+    \ systems experience, for example linux kernel tuning and eBPF&nbsp;</p> </li>\
+    \ <li> <p>Quickly understanding systems design tradeoffs, keeping track of rapidly\
+    \ evolving software systems</p> </li> <li> <p>Published work in performance optimization\
+    \ and scaling distributed systems</p> </li> </ul><div class=\"content-pay-transparency\"\
+    ><div class=\"pay-input\"><div class=\"description\"><p>The annual compensation\
+    \ range for this role is listed below.&nbsp;</p> <p>For sales roles, the range\
+    \ provided is the role\u2019s On Target Earnings (\"OTE\") range, meaning that\
+    \ the range includes both the sales commissions/sales bonuses target and annual\
+    \ base sala"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.873905+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

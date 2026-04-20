@@ -1,0 +1,118 @@
+id: gitlab-intermediate-backend-engineer-sscs-ai-governance
+name: 'GitLab Intermediate Backend Engineer, SSCS: AI Governance'
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: GitLab
+  url: https://boards.greenhouse.io/gitlab
+  application_url: https://job-boards.greenhouse.io/gitlab/jobs/8480551002
+  portal: greenhouse
+  location: Remote, India
+  location_class: international
+  description: "<div class=\"content-intro\"><p>GitLab is the intelligent orchestration\
+    \ platform for DevSecOps. GitLab enables organizations to increase developer productivity,\
+    \ improve operational efficiency, reduce security and compliance risk, and accelerate\
+    \ digital transformation. More than 50 million registered users and more than\
+    \ 50% of the Fortune 100* trust GitLab to ship better, more secure software faster.</p>\
+    \ <p>The same principles built into our products are reflected in how our team\
+    \ works: we embrace AI as a core productivity multiplier, with all team members\
+    \ expected to incorporate AI into their daily workflows to drive efficiency, innovation,\
+    \ and impact. GitLab is where careers accelerate, innovation flourishes, and every\
+    \ voice is valued. Our high-performance culture is driven by our <a href=\"https://handbook.gitlab.com/handbook/values/\"\
+    >values</a> and continuous knowledge exchange, enabling our team members to reach\
+    \ their full potential while collaborating with industry leaders to solve complex\
+    \ problems. <a href=\"https://www.youtube.com/watch?v=OuZIb5zszQI\">Co-create\
+    \ the future with us</a> as we build technology that transforms how the world\
+    \ develops software.</p> <p>*<em>Fortune 500\xAE is a registered trademark of\
+    \ Fortune Media IP Limited, used under license. Claim based on GitLab data. Fortune\
+    \ 100 refers to the top 20% ranked companies in the 2025 Fortune 500 list, published\
+    \ in June 2025. Fortune and Fortune Media IP Limited are not affiliated with,\
+    \ and do not endorse products or services of GitLab.</em></p></div><h3><strong>An\
+    \ overview of this role</strong></h3> <p>As an Intermediate Backend Engineer on\
+    \ the AI Governance team at GitLab, you'll help build a paid product designed\
+    \ for regulated enterprise organizations that need to audit, govern, and demonstrate\
+    \ compliance for AI agent usage inside GitLab. This is product work with direct\
+    \ customer impact. You'll contribute to features that support visibility into\
+    \ how AI agents and related tools are used, and you'll help lay the foundation\
+    \ for governance controls that enterprise customers rely on.</p> <p>You'll join\
+    \ a small team with clear product direction, technical guidance from experienced\
+    \ backend engineers, and meaningful ownership from the start. This role is well\
+    \ suited for an engineer with experience in backend development who writes solid\
+    \ tests and wants to grow by shipping real features in an evolving product area.\
+    \ You'll work in GitLab's all-remote, asynchronous environment, collaborating\
+    \ across teams as the AI Governance roadmap continues to expand.</p> <h3><strong>What\
+    \ you\u2019ll do</strong></h3> <ul> <li>Implement well-scoped backend features\
+    \ across the AI Governance product area, including event normalization utilities,\
+    \ storage layer enhancements, API endpoint additions, export support, and registry\
+    \ integrations, delivering production-ready work that ships on schedule.</li>\
+    \ <li>Build and maintain automated test coverage for your work using RSpec or\
+    \ equivalent tools to improve reliability and support safe, consistent releases.</li>\
+    \ <li>Grow your knowledge of AI governance, agent-related product architecture,\
+    \ and integration patterns through hands-on delivery and teamwork so you can contribute\
+    \ more effectively as the roadmap evolves.</li> <li>Work closely with senior and\
+    \ staff engineers to deliver solutions that are reliable, maintainable, and aligned\
+    \ with the product direction and release goals.</li> <li>Work asynchronously with\
+    \ cross-functional partners and nearby engineering teams working on related governance\
+    \ and AI capabilities to help maintain smooth delivery across teams.</li> <li>Take\
+    \ ownership of your scoped work and deliver with a high level of follow-through\
+    \ in a fast-moving product area, closing tasks with clear status updates and consistent\
+    \ execution.</li> </ul> <h3><strong>What you\u2019ll bring</strong></h3> <ul>\
+    \ <li>Demonstrated backend development experience building and shipping production\
+    \ features.</li> <li>Proficiency with Ruby on Rails and solid fundamentals in\
+    \ PostgreSQL.</li> <li>Experience building and maintaining automated test coverage\
+    \ with RSpec or an equivalent testing framework.</li> <li>Experience communicating\
+    \ clearly in writing with teammates in an async environment.</li> <li>Demonstrated\
+    \ ability to drive scoped work through completion and follow through on commitments.</li>\
+    \ <li>Experience with, or exposure to, audit event systems, telemetry pipelines,\
+    \ or compliance-focused tooling.</li> <li>Experience learning new technical domains\
+    \ and applying that understanding to product development.</li> <li>Additional\
+    \ experience with GraphQL APIs, event-driven architecture patterns, Python, or\
+    \ data-focused databases such as ClickHouse.</li> </ul> <h3><strong>About the\
+    \ team</strong></h3> <p>You'll join the AI Governance team within GitLab's Secure,\
+    \ Scale, and Compliance area. We focus on helping organizations gain visibility\
+    \ into and govern AI usage inside GitLab. Our work spans two broad problem spaces:\
+    \ visibility, such as audit events, u"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-07'
+  posting_date: '2026-04-06'
+  date_source: first_published
+  date_added: '2026-04-07'
+  discovered: '2026-04-07T10:15:28.395801+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

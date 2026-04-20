@@ -1,0 +1,90 @@
+id: snowflake-senior-software-engineer-data-clean-room-applications
+name: Snowflake Senior Software Engineer - Data Clean Room Applications
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/f4a4fc50-0bda-418e-a8ca-203dea81e801
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Let’s build the future of secure data collaboration
+    together! The Data Clean Rooms Applications team builds services and applications
+    that empower secure multi-party collaboration on sensitive data while strictly
+    preserving its privacy. Customers can seamlessly combine and analyze data from
+    different parties using an agentic interface, our easy-to-use UI, or programmatically
+    via developer APIs. With these APIs, a technical audience can build custom applications,
+    customize complex analysis templates, train advanced AI/ML models, and leverage
+    proprietary models, all while maintaining absolute privacy guarantees. You will
+    join a fast-paced, collaborative team of engineers on a journey to provide customers
+    with an integrated set of innovative, AI-enabled capabilities to analyze data
+    in a privacy-preserving way. You will have a real opportunity to impact and shape
+    the future of secure data collaboration at Snowflake. AS A SENIOR SOFTWARE ENGINEER
+    IN DATA CLEAN ROOMS, YOU WILL: Architect and build highly scalable infrastructure
+    that enables secure, multi-party collaboration. Design and implement core clean
+    room features and services, intelligent agents, and robust developer APIs to expand
+    platform capabilities and support custom AI/ML workflows. Partner closely with
+    Product Management and cross-functional teams to drive complex projects from ideation
+    and system design through to production deployment. Mentor peers and foster a
+    warm, supportive culture of innovation, cross-team collaboration, and technical
+    excellence. OUR IDEAL CANDIDATE WILL HAVE MOST OF THE FOLLOWING QUALIFICATIONS:
+    8+ years of industry experience designing, building, and supporting large-scale
+    distributed systems in production. Expert-level development skills in Python,
+    Java, or similar languages. Deep understanding of database systems, cloud data
+    platforms, or distributed storage architectures. Experience with data privacy,
+    privacy-preserving analytics, and deploying AI/ML solutions (experience building
+    or integrating AI agents is a plus). Strong computer science fundamentals. BS/MS
+    in Computer Science or related majors, or equivalent experience. Snowflake is
+    growing fast, and we’re scaling our team to help enable and accelerate our growth.
+    We are looking for people who share our values, challenge ordinary thinking, and
+    push the pace of innovation while building a future for themselves and Snowflake.
+    How do you want to make your impact? For jobs located in the United States, please
+    visit the job posting on the Snowflake Careers Site for salary and benefits information:
+    careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.210548+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

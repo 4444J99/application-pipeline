@@ -1,0 +1,115 @@
+id: coinbase-senior-software-engineer-eaa
+name: Coinbase Senior Software Engineer (EAA)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7483221?gh_jid=7483221
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+  description: <div class="content-intro"><p>Ready to be pushed beyond what you think
+    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
+    in the world. It’s a massive, ambitious opportunity that demands the best of us,
+    every day, as we build the emerging onchain platform — and with it, the future
+    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
+    candidate. We want someone who is passionate about our mission and who believes
+    in the power of crypto and blockchain technology to update the financial system.
+    We want someone who is eager to leave their mark on the world, who relishes the
+    pressure and privilege of working with high caliber colleagues, and who actively
+    seeks feedback to keep leveling up. We want someone who will run towards, not
+    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
+    culture</a> is intense and isn’t for everyone. But if you want to build the future
+    alongside others who excel in their disciplines and expect the same from you,
+    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
+    we are not remote-only. In-person participation is required throughout the year.
+    Team and company-wide offsites are held multiple times annually to foster collaboration,
+    connection, and alignment. Attendance is expected and fully supported.</p></div><ul>
+    <li><strong>Team</strong>&nbsp;- The Agent Productivity Tools (APT) team is a
+    vital part of Coinbase’s Enterprise Applications and Architecture org, responsible
+    for building the customer experience platforms that streamlines the customer service
+    and compliance processes with innovative services, tools and applications that
+    improve the efficiency and effectiveness of CX agents. This helps resolve customer
+    issues and compliance KYC processes faster, with greater accuracy, and ultimately
+    this leads to higher customer satisfaction levels and a better overall compliant
+    experience for our customers.</li> <li><strong>Role&nbsp;</strong>- You will be
+    building applications that will enable Coinbase Customer Agents and other users
+    to increase their productivity, drive automation, and deliver impact at scale
+    through AI/ML-based technologies.</li> </ul> <p><strong>What you’ll be doing&nbsp;</strong></p>
+    <ul> <li>Build complete user features including Golang and cloud technologies&nbsp;</li>
+    <li>Lead assessment and implementation of third-party tools.</li> <li>Deliver
+    cross-functional outcomes to complex problems in collaboration with product, design,
+    security, data or other engineering teams</li> <li>Demonstrate a keen awareness
+    of Coinbase’s platform, development practices, and various technical domains and
+    build upon them to efficiently deliver improvements across multiple teams.</li>
+    <li>Participate in an environment where innovative ideas are regularly generated,
+    vetted, and transformed into action.</li> <li>Foresee potential issues before
+    they arise and adapt their own approach, working within constraints to avoid adverse
+    impact.</li> <li>Communicate across the company to technical and non-technical
+    leaders with ease.</li> <li>Quickly distill complex technical themes so that an
+    entry level, non-tech team member can understand them.&nbsp;</li> <li>Mentor team
+    members in design techniques and best practices in coding, testing, release/deploy
+    process, documentation, metrics/logging and scaling.</li> <li>Working with teams
+    and teammates across multiple time zones.</li> </ul> <p><strong>What we look for
+    in you&nbsp;</strong></p> <ul> <li>You have at least 5 years of experience in
+    software engineering and at least 5 years of experience in developing large scale
+    systems with Golang and cloud technologies and shipping user-facing features.</li>
+    <li>Experience with third-party vendor integrations.</li> <li>You enjoy and have
+    experience with large-scale, high-traffic platforms and implementing scalable,
+    robust services in the real world.&nbsp;</li> <li>You have experience in authoring
+    and contributing to technical architecture and implementing them.&nbsp;</li> <li>Experience
+    in AWS, Kubernetes, Terraform, BuildKite or similar.&nbsp;</li> <li>Experience
+    in rate limiters, caching, load balancing, circuit breakers, metrics, logging,
+    tracing, debugging etc.</li> <li>Experience in event driven architectures (Kafka,
+    MQ etc.), proficiency in either SQL or NoSQL DBs, understanding of concepts like
+    gRPC, GraphQL, ETL.</li> <li>Proficiency in Go.</li> </ul> <p><strong>Nice to
+    haves:</strong></p> <ul> <li>Python, Ruby</li> <li>SaaS platform experience</li>
+    </ul> <p>P75245</p> <p>#LI-Remote</p> <div id="fortidlp-input-element-parent"></div><div
+    class="content-pay-transparency"><div class="pay-input"><div class="description"><p><strong>Pay
+    Transparency Notice:</strong><strong><em> </em></strong>Depending on your work
+    location, the target annual <strong>base </strong>salary for this position can
+    range as detailed below. Total compensation may also includ
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-29'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.986376+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

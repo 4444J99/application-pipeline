@@ -1,0 +1,125 @@
+id: fivetran-staff-software-engineer-data-lakes
+name: Fivetran Staff Software Engineer, Data Lakes
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Fivetran
+  url: https://boards.greenhouse.io/fivetran
+  application_url: https://www.fivetran.com/careers/job?gh_jid=7686700003
+  portal: greenhouse
+  location: Remote, Germany, EMEA
+  location_class: international
+  description: "<div class=\"content-intro\"><p>From Fivetran\u2019s founding until\
+    \ now, our mission has remained the same: to make access to data as simple and\
+    \ reliable as electricity. With Fivetran, customer data arrives in their warehouses,\
+    \ canonical and ready to query, with no engineering or maintenance required. We\u2019\
+    re proud that more organizations continue to leverage our technology every day\
+    \ to become truly data-driven.</p></div><p><span style=\"font-family: helvetica,\
+    \ arial, sans-serif; font-size: 10pt;\"><strong>About the Role</strong></span></p>\
+    \ <p><span style=\"font-size: 10pt;\">We\u2019re seeking a Staff Software Engineer\
+    \ to contribute to the technical architecture, design, and development of Fivetran\u2019\
+    s Managed Data Lake product offering. As part of a senior engineering team, you\u2019\
+    ll partner with product and engineering teams to build scalable, high-performance\
+    \ systems, advance open-source technologies, and set technical standards that\
+    \ raise the bar across the organization.</span></p> <p><span style=\"font-size:\
+    \ 10pt;\">This is a full-time remote position based out of Germany.&nbsp;</span></p>\
+    \ <p><span style=\"font-size: 10pt;\"><strong>Technologies You\u2019ll Use</strong></span></p>\
+    \ <ul> <li style=\"font-size: 10pt;\"><span style=\"font-size: 10pt;\">Java, Postgres,\
+    \ Temporal, gRPC</span></li> <li style=\"font-size: 10pt;\"><span style=\"font-size:\
+    \ 10pt;\">AWS, GCP, Azure, Istio, Kubernetes, Grafana</span></li> <li style=\"\
+    font-size: 10pt;\"><span style=\"font-size: 10pt;\">Iceberg, Polaris, Delta Lake,\
+    \ Parquet, DuckDB</span></li> </ul> <p><span style=\"font-size: 10pt;\"><strong>What\
+    \ You\u2019ll Do</strong></span></p> <ul> <li style=\"font-size: 10pt;\"><span\
+    \ style=\"font-size: 10pt;\">Partner closely with product teams to understand\
+    \ requirements and design cutting-edge new capabilities that go directly into\
+    \ customer\u2019s hands.</span></li> <li style=\"font-size: 10pt;\"><span style=\"\
+    font-size: 10pt;\">Design, develop, implement, and operate highly reliable large-scale\
+    \ data lake systems in cooperation with a dedicated data lake engineering team\
+    \ and our SRE teams.</span></li> <li style=\"font-size: 10pt;\"><span style=\"\
+    font-size: 10pt;\">Drive significant performance, latency, and availability improvements\
+    \ for our data lake services</span></li> <li style=\"font-size: 10pt;\"><span\
+    \ style=\"font-size: 10pt;\">Ensure operational excellence of the services and\
+    \ meet the commitments to our customers regarding security, reliability, availability,\
+    \ and performance.</span></li> <li style=\"font-size: 10pt;\"><span style=\"font-size:\
+    \ 10pt;\">Investigate and resolve fault-tolerance and high availability issues\
+    \ as well as performance and scale challenges both inside and across service boundaries.</span></li>\
+    \ <li style=\"font-size: 10pt;\"><span style=\"font-size: 10pt;\">Embrace Fivetran\
+    \ innovations with open-source standards and toolsets.</span></li> <li style=\"\
+    font-size: 10pt;\"><span style=\"font-size: 10pt;\">Set technical directions and\
+    \ influence cross-functional teams.</span></li> </ul> <p><span style=\"font-size:\
+    \ 10pt;\"><strong>Skills We\u2019re Looking For</strong></span></p> <ul> <li style=\"\
+    font-size: 10pt;\"><span style=\"font-size: 10pt;\">5+ years of hands-on experience\
+    \ maintaining and operating high-performance containerized applications that span\
+    \ multiple services.</span></li> <li style=\"font-size: 10pt;\"><span style=\"\
+    font-size: 10pt;\">Deep understanding of cloud infrastructure, deployment, service\
+    \ orchestration, software optimizations and performance engineering of highly\
+    \ distributed services.</span></li> <li style=\"font-size: 10pt;\"><span style=\"\
+    font-size: 10pt;\">Proven track record of leading and delivering large and complicated\
+    \ projects.</span></li> <li style=\"font-size: 10pt;\"><span style=\"font-size:\
+    \ 10pt;\">Strong development skills in Java.</span></li> <li style=\"font-size:\
+    \ 10pt;\"><span style=\"font-size: 10pt;\">Experience running and debugging Kubernetes\
+    \ containerized services.</span></li> <li style=\"font-size: 10pt;\"><span style=\"\
+    font-size: 10pt;\">Solid experience with public clouds (AWS, Azure, GCP).</span></li>\
+    \ <li style=\"font-size: 10pt;\"><span style=\"font-size: 10pt;\">Growth mindset\
+    \ and excitement about breaking the status quo by seeking innovative solutions.</span></li>\
+    \ <li style=\"font-size: 10pt;\"><span style=\"font-size: 10pt;\">Excellent team\
+    \ player who is consistent in making everyone around you better.</span></li> </ul>\
+    \ <p><span style=\"font-size: 10pt;\"><strong>Bonus Skills</strong></span></p>\
+    \ <ul> <li style=\"font-size: 10pt;\"><span style=\"font-size: 10pt;\">Hands-on\
+    \ experience with high-performance relational data management systems.</span></li>\
+    \ <li style=\"font-size: 10pt;\"><span style=\"font-size: 10pt;\">Demonstrated\
+    \ knowledge of columnar storage formats.</span></li> <li style=\"font-size: 10pt;\"\
+    ><span style=\"font-size: 10pt;\">Strongly prefer an MS in Computer Science.</span></li>\
+    \ </ul> <p><span style=\"font-family: helvetica, arial, sans-serif; font-size:\
+    \ 10pt;\" data-sheets-root=\"1\">#LI-IM1</span></p> <p><span style=\"font-family:\
+    \ helvetica, arial, sans-serif; font-size: 10pt;"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-02'
+  posting_date: '2026-04-02'
+  date_source: first_published
+  date_added: '2026-04-02'
+  discovered: '2026-04-02T10:15:29.162731+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"
+submission.variant_ids.cover_letter: variants/cover-letters/fivetran-staff-software-engineer-data-lakes.md
+submission.blocks_used.identity: identity/2min
+submission.blocks_used.methodology: methodology/ai-conductor
+submission.materials_attached:
+- resumes/base/founder-operator-resume.html
+- resumes/base/independent-engineer-resume.html

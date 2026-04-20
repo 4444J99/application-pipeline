@@ -1,0 +1,118 @@
+id: twilio-staff-software-engineer-l4-data-platform
+name: Twilio Staff Software Engineer (L4) Data Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Twilio
+  url: https://boards.greenhouse.io/twilio
+  application_url: https://job-boards.greenhouse.io/twilio/jobs/7782805
+  portal: greenhouse
+  location: Remote - US
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><p><strong>Who we are&nbsp;</strong></p>\
+    \ <p>At Twilio, we\u2019re shaping the future of communications, all from the\
+    \ comfort of our homes. We deliver innovative solutions to<a class=\"c-link\"\
+    \ href=\"https://customers.twilio.com/\" target=\"_blank\" data-stringify-link=\"\
+    https://customers.twilio.com/\" data-sk=\"tooltip_parent\">&nbsp;hundreds of thousands\
+    \ of businesses&nbsp;</a>and empower millions of developers worldwide to craft\
+    \ personalized customer experiences.</p> <p>Our dedication to <a class=\"c-link\"\
+    \ href=\"https://www.twilio.com/en-us/blog/open-work\" target=\"_blank\" data-stringify-link=\"\
+    https://www.twilio.com/en-us/blog/open-work\" data-sk=\"tooltip_parent\">remote-first\
+    \ work</a>, and strong culture of connection and global inclusion means that no\
+    \ matter your location, you\u2019re part of a vibrant team with diverse experiences\
+    \ making a global impact each day. As we continue to revolutionize how the world\
+    \ interacts, we\u2019re acquiring new skills and experiences that make work feel\
+    \ truly rewarding. Your career at Twilio is in your hands.<br><br>We use Artificial\
+    \ Intelligence (AI) to help make our hiring process efficient. That said, every\
+    \ hiring decision is made by real Twilions!</p> <p><span style=\"color: rgb(255,\
+    \ 255, 255);\">.</span></p></div><p><strong>See yourself at Twilio</strong></p>\
+    \ <p>Join the team as Twilio's next Staff Software Engineer on our Data &amp;\
+    \ Analytics Platform</p> <p><strong>Who we are &amp; why we\u2019re hiring</strong></p>\
+    \ <p>Twilio powers real-time business communications and data solutions that help\
+    \ <a href=\"https://customers.twilio.com/\">companies and developers worldwide</a>\
+    \ build better applications and customer experiences.</p> <p>Although we're headquartered\
+    \ in San Francisco, we have presence throughout South America, Europe, Asia and\
+    \ Australia. We're on a journey to becoming a global company that actively opposes\
+    \ racism and all forms of oppression and bias. At Twilio, we support <a href=\"\
+    https://www.twilio.com/company/diversity\">diversity, equity &amp; inclusion</a>\
+    \ wherever we do business.</p> <p><strong>About the job</strong></p> <p>We are\
+    \ seeking an experienced Staff Engineer to join our Data Substrate team. In this\
+    \ role, you will be responsible for architecting scalable and reliable data solutions,\
+    \ collaborating closely with cross-functional partners driving technical innovation,\
+    \ and mentoring a team of talented engineers. The ideal candidate will have deep\
+    \ expertise in data systems, strong leadership skills, and a proven track record\
+    \ of delivering complex data projects at scale.<br>&nbsp;&nbsp;</p> <p><strong>Responsibilities</strong></p>\
+    \ <p>In this role, you\u2019ll:</p> <ul> <li>Serve as a subject matter expert\
+    \ in distributed systems, data technologies, with strong software engineering\
+    \ skills&nbsp;</li> <li>Architect and implement scalable and efficient data systems,\
+    \ storage solutions, and processing frameworks using state-of-the-art technologies.</li>\
+    \ <li>Drive technical innovation and research to stay at the forefront of emerging\
+    \ data technologies and best practices.</li> <li>Mentor and coach a team of talented\
+    \ engineers, fostering a culture of technical excellence, collaboration, and continuous\
+    \ learning.</li> <li>Collaborate closely with cross-functional teams to understand\
+    \ business requirements and translate them into scalable and efficient technical\
+    \ solutions.</li> <li>Ensure data quality, integrity, and security throughout\
+    \ the data lifecycle, adhering to industry best practices and compliance standards.</li>\
+    \ </ul> <p>&nbsp;</p> <p><strong>Qualifications&nbsp;</strong></p> <p>Not all\
+    \ applicants will have skills that match a job description exactly. Twilio values\
+    \ diverse experiences in other industries, and we encourage everyone who meets\
+    \ the required qualifications to apply. While having \u201Cdesired\u201D qualifications\
+    \ make for a strong candidate, we encourage applicants with alternative experiences\
+    \ to also apply. If your career is just starting or hasn't followed a traditional\
+    \ path, don't let that stop you from considering Twilio. We are always looking\
+    \ for people who will bring something new to the table!</p> <p>&nbsp;</p> <p><strong>Required:</strong></p>\
+    \ <ul> <li>Bachelor's or Master's degree in Computer Science, Engineering, or\
+    \ a related field.</li> <li>8+ years of experience in software development, or\
+    \ a related field.</li> <li>Proven track record of architecting and delivering\
+    \ complex data projects at scale, with a deep understanding of data infrastructure\
+    \ and distributed systems.</li> <li>Expertise in big data technologies such as\
+    \ Hadoop, Spark, Kafka, and other distributed computing systems.</li> <li>Experience\
+    \ designing, building, and operating large-scale systems using AWS technologies.</li>\
+    \ <li>Proficiency in programming languages such as Python, Java, or Scala, with\
+    \ strong problem-solving skills and attention to detail.</li> <li>Experience designing\
+    \ or working with Data Lakehouse architectures, including hands-on experience\
+    \ with Hudi, Iceberg, or Delta data "
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-07'
+  posting_date: '2026-04-06'
+  date_source: first_published
+  date_added: '2026-04-07'
+  discovered: '2026-04-07T10:15:28.400865+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,118 @@
+id: datadog-staff-ai-engineer-mcp-services
+name: Datadog Staff AI Engineer - MCP Services
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Datadog
+  url: https://boards.greenhouse.io/datadog
+  application_url: https://careers.datadoghq.com/detail/7627404/?gh_jid=7627404
+  portal: greenhouse
+  location: France, Remote; Germany, Remote; Ireland, Remote; Italy, Remote; Spain,
+    Remote; Switzerland, Remote
+  location_class: international
+  description: "<p>Datadog\u2019s MCP team is scaling the capabilities of our MCP\
+    \ Services \u2014 an interface that enables external agents like Claude and Cursor,\
+    \ as well as internal Datadog AI Agents, to interact with Datadog data. As a Staff\
+    \ Engineer, you\u2019ll play a critical role in evolving this agent-friendly tool\
+    \ surface, enabling agentic workflows across metrics, logs, and incidents etc.\
+    \ You'll drive forward advanced evaluation frameworks for agentic systems and\
+    \ contribute to the next generation of agent-tool interaction models. This is\
+    \ a fast-evolving space with deep ambiguity and high impact \u2014 ideal for someone\
+    \ eager to help shape Datadog\u2019s applied AI future.</p> <p><em>At Datadog,\
+    \ we place value in our office culture - the relationships and collaboration it\
+    \ builds and the creativity it brings to the table. We operate as a hybrid workplace\
+    \ to ensure our Datadogs can create a work-life harmony that best fits them.</em></p>\
+    \ <p>&nbsp;</p> <p><strong>What You\u2019ll Do:</strong></p> <ul> <li>Lead efforts\
+    \ to improve Datadog\u2019s public-facing MCP server, enabling intelligent agents\
+    \ to discover and interact with our services</li> <li>Design and implement agentic\
+    \ tool surfaces tailored for evaluation and production use across a wide variety\
+    \ of AI agents</li> <li>Build and maintain advanced evaluation pipelines for measuring\
+    \ agent performance on Datadog workflows (e.g., investigations, incident triage,\
+    \ metric queries)</li> <li>Investigate and resolve failure cases by analyzing\
+    \ tool output, improving query parsing, and enhancing agent feedback mechanisms</li>\
+    \ <li>Collaborate across Applied AI and internal teams to align on shared standards\
+    \ for tool integration and data access</li> </ul> <p>&nbsp;</p> <p><strong>Who\
+    \ You Are:</strong></p> <ul> <li>Experienced Staff-level engineer with a strong\
+    \ background in applied AI, agentic programming, and/or the following: LLM-powered\
+    \ automation pipelines, LLM orchestration frameworks (e.g., LangChain, LangGraph,\
+    \ CrewAI), Agent orchestration and tool-use systems</li> <li>Comfortable working\
+    \ in high ambiguity and fast-changing environments; able to define and prioritize\
+    \ direction autonomously</li> <li>Skilled in building evaluation frameworks for\
+    \ LLM agents or AI systems, including metrics design and data instrumentation</li>\
+    \ <li>Bonus: Experience working with the MCP standard or contributing to agent-compatible\
+    \ tooling surfaces, familiarity with building and evaluating ReAct agentic loops</li>\
+    \ <li>Strong systems thinking, able to reason across multiple agents, tools, and\
+    \ user scenarios</li> <li>Passionate about pushing boundaries in agent-augmented\
+    \ software and eager to shape evolving interfaces</li> <li>You have demonstrated\
+    \ ability to use AI coding tools in day-to-day workflows and validate, critique,\
+    \ and refine AI-generated output</li> <li>You\u2019re motivated to push the boundaries\
+    \ of how AI can improve software engineering best practices and contribute to\
+    \ building AI-enabled products</li> </ul> <p><em>Datadog values people from all\
+    \ walks of life. We understand not everyone will meet all the above qualifications\
+    \ on day one. That's okay. If you\u2019re passionate about technology and want\
+    \ to grow your skills, we encourage you to apply.</em></p> <p>&nbsp;</p> <p><strong>Benefits\
+    \ and Growth:</strong></p> <ul> <li>Generous and competitive benefits package</li>\
+    \ <li>New hire stock equity (RSUs) and employee stock purchase plan</li> <li>Continuous\
+    \ career development and pathing opportunities</li> <li>Employee-focused best\
+    \ in class onboarding</li> <li>Internal mentor and cross-departmental buddy program</li>\
+    \ <li>Friendly and inclusive workplace culture<br><br></li> </ul> <p><em>Benefits\
+    \ and Growth listed above may vary based on the country of your employment and\
+    \ the nature of your employment with Datadog.</em></p> <p style=\"color: white;\"\
+    >#LI-Remote</p><div class=\"content-conclusion\"><hr> <p><strong>About Datadog:&nbsp;</strong></p>\
+    \ <p>Datadog (NASDAQ: DDOG) is a global SaaS business, delivering a rare combination\
+    \ of growth and profitability. We are on a mission to break down silos and solve\
+    \ complexity in the cloud age by enabling digital transformation, cloud migration,\
+    \ and infrastructure monitoring of our customers\u2019 entire technology stacks.\
+    \ Built by engineers, for engineers, Datadog is used by organizations of all sizes\
+    \ across a wide range of industries. Together, we champion professional development,\
+    \ diversity of thought, innovation, and work excellence to empower continuous\
+    \ growth. Join the pack and become part of a collaborative, pragmatic, and thoughtful\
+    \ people-first community where we solve tough problems, take smart risks, and\
+    \ celebrate one another. Learn more about #DatadogLife on <a href=\"https://www.instagram.com/datadoghq/?hl=en\"\
+    \ target=\"_blank\">Instagram</a>, <a href=\"https://www.linkedin.com/company/datadog\"\
+    \ target=\"_blank\">LinkedIn,</a> and <a href=\"https://learn.datadoghq.com/\"\
+    \ target=\"_blank\">Datadog Learning Center. </a></p> <hr> <p data-renderer-start-pos=\"\
+    215\"><strong data-renderer-mark=\"true\">Eq"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.991544+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

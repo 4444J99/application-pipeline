@@ -1,0 +1,116 @@
+id: singlestore-senior-software-engineer-helios
+name: SingleStore Senior Software Engineer, Helios
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: SingleStore
+  url: https://boards.greenhouse.io/singlestore
+  application_url: https://job-boards.greenhouse.io/singlestore/jobs/7568057
+  portal: greenhouse
+  location: United States
+  location_class: us-onsite
+  description: '<p>SingleStore engineers build the real-time data platform powering
+    some of the world’s most demanding applications. Our cloud-native architecture
+    enables high-performance transactional and analytical workloads at scale, and
+    our teams ship production code continuously throughout the year.</p> <p>We operate
+    in a fast-moving, highly collaborative environment where engineers own their work
+    end-to-end and partner closely across Product, Sales, and Go-To-Market teams to
+    deliver meaningful business impact.</p> <p><strong>Position Summary</strong></p>
+    <p>We are seeking a Senior Software Engineer to join the Helios team and play
+    a critical role in designing and delivering core capabilities for SingleStore’s
+    cloud-managed service. This is a senior technical leadership role with end-to-end
+    ownership of large, release-defining projects at the intersection of distributed
+    systems, cloud infrastructure, and database technology.</p> <p>The focus of this
+    role is on cloud based metering and billing for all Helios products and features.
+    You will be responsible for building and maintaining the bookkeeping system and
+    integrations that powers millions in cloud revenue with extreme attention to detail.</p>
+    <p>As a Software Engineer, you will set technical direction, solve complex system-level
+    problems, and act as a force multiplier across the organization. You will work
+    closely with Product and customer-facing teams to ensure our platform meets the
+    needs of both long-standing enterprise customers and new adopters.</p> <p>This
+    role is ideal for an engineer who thrives on deep technical challenges, takes
+    pride in building durable systems, and enjoys mentoring others while remaining
+    hands-on.</p> <p>Note: This role is open across multiple levels. Final leveling
+    (Senior, Staff, or Principal) will be determined based on experience, scope of
+    impact, and demonstrated technical leadership throughout the interview process.</p>
+    <p><strong>Role and Responsibilities</strong></p> <ul> <li>Lead technical design
+    and decision-making for large, release-defining projects impacting SingleStore’s
+    cloud platform.</li> <li>Design and implement new capabilities across networking,
+    control plane, and managed service infrastructure.</li> <li>Solve complex, mission-critical
+    system problems with solutions that are scalable, maintainable, and resilient.</li>
+    <li>Collaborate closely with Product Management to translate customer and business
+    requirements into robust technical solutions.</li> <li>Investigate and resolve
+    difficult issues in production and development environments while balancing multiple
+    responsibilities.</li> <li>Communicate complex technical decisions and trade-offs
+    clearly, including their impact on system performance, reliability, and business
+    outcomes.</li> <li>Mentor and guide engineers on system design, coding standards,
+    and architectural best practices, raising the technical bar across the team.</li>
+    <li>Participate in customer POCs and technical engagements, helping optimize performance,
+    reliability, and adoption.</li> <li>Partner cross-functionally with teams including
+    Sales, Marketing, and G&amp;A to support product delivery and customer success.</li>
+    </ul> <h4><strong>Required Skills and Experience</strong></h4> <ul> <li>4+ years
+    of experience developing and debugging system-level software in Golang or similar
+    language</li> <li>Familiarity with distributed systems managed via Kubernetes.</li>
+    <li>Demonstrated ability to design and build highly reliable, high-performance
+    system software.</li> <li>Experience working in environments where performance,
+    scalability, and reliability are critical.</li> <li>Bachelor’s degree in Computer
+    Science or equivalent practical experience.</li> </ul> <p><strong>Preferred Qualifications</strong></p>
+    <ul> <li>Experience building cloud-native SaaS platforms.</li> <li>Experience
+    working with frontend web frameworks like React.</li> <li>Background with cloud
+    based metering and billing and generally accepted account practices.</li> </ul>
+    <p>SingleStore delivers our cloud-native database with the speed and scale to
+    power the world’s data-intensive applications. With a distributed SQL database
+    that introduces simplicity to your data architecture by unifying transactions
+    and analytics, SingleStore empowers digital leaders to deliver exceptional, real-time
+    data experiences to their customers. SingleStore is venture-backed and headquartered
+    in San Francisco with offices in Sunnyvale, Raleigh, Seattle, Boston, London,
+    Lisbon, Bangalore, Dublin and Kyiv.&nbsp;</p> <p>Consistent with our commitment
+    to diversity &amp; inclusion, we value individuals with the ability to work on
+    diverse teams and with a diverse range of people.</p> <p><em>To all recruitment
+    agencies: SingleStore does not accept agency resumes. Please do not forward resumes
+    to SingleStore employees. SingleStore is not responsible for any fees related
+    to unsolicited resumes and will not pay fees to any third-party agency or company
+    that does not have a'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.853905+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

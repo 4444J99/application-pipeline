@@ -1,0 +1,116 @@
+id: new-relic-senior-software-engineer
+name: New Relic Senior Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: New Relic
+  url: https://boards.greenhouse.io/newrelic
+  application_url: https://job-boards.greenhouse.io/newrelic/jobs/5171020008
+  portal: greenhouse
+  location: Hyderabad, India
+  location_class: international
+  description: '<div class="content-intro"><p>We are a global team of innovators and
+    pioneers dedicated to shaping the future of observability. At New Relic, we build
+    an intelligent platform that empowers companies to thrive in an AI-first world
+    by giving them unparalleled insight into their complex systems. As we continue
+    to expand our global footprint, we''re looking for passionate people to join our
+    mission. If you''re ready to help the world''s best companies optimize their digital
+    applications, we invite you to explore a career with us!</p></div><p><strong>Your
+    opportunity</strong></p> <p>At New Relic, we provide businesses with a state-of-the-art
+    observability platform, leveraging advanced technologies to deliver real-time
+    insights into the performance of software applications and infrastructure. As
+    a company at the forefront of the industry, we enable organizations to monitor,
+    analyze, and optimize their systems to achieve enhanced reliability, performance,
+    and user experience. Join us in our mission to revolutionize observability and
+    empower businesses in today''s dynamic digital landscape.</p> <p style="line-height:
+    1.2;">&nbsp;</p> <p><strong>What you''ll do</strong></p> <ul> <li>Drive the design,
+    development, and enhancement of core features and functionalities of our observability
+    platform, leveraging cutting-edge technologies to deliver scalable and reliable
+    solutions</li> <li>Act as a subject matter expert, guiding and mentoring a team
+    of talented software engineers to achieve technical excellence and deliver high-quality
+    code</li> <li>Collaborate with cross-functional teams to design and implement
+    robust, scalable, and efficient systems that meet the demands of our growing customer
+    base</li> <li>Stay ahead of industry trends and emerging technologies, constantly
+    researching and experimenting with innovative solutions to enhance our observability
+    platform</li> <li>Work closely with product managers, designers, and stakeholders
+    to translate business requirements into technical solutions, advocating for best
+    practices and promoting a collaborative work environment</li> <li>Be proactive
+    in identifying and addressing performance bottlenecks, applying optimizations,
+    and maintaining the stability and availability of our platform</li> <li>Encourage
+    a culture of continuous learning, improvement, and innovation within the engineering
+    team, sharing knowledge and promoting professional growth</li> </ul> <p style="line-height:
+    1.2;">&nbsp;</p> <p><strong>This role requires</strong><strong><br></strong></p>
+    <ul> <li>Bachelor’s degree, software development, engineering, or a related technical
+    field</li> <li>5+ years of experience working as a software engineer working in
+    Java and/or Go with a strong computer science background and an aptitude for learning
+    new languages quickly</li> <li>Experience with front-end technologies (e.g., HTML,
+    CSS, JavaScript, React)</li> <li>Demonstrated experience in designing, developing,
+    and maintaining large-scale software systems, utilizing modern programming languages
+    and frameworks</li> <li>Proven ability to lead and mentor a team of software engineers,
+    guiding them towards technical excellence, and ensuring the delivery of high-quality
+    code</li> <li>Strong understanding of scalable distributed systems and microservices
+    architecture, with the ability to design and implement solutions that meet performance
+    and scalability requirements</li> <li>Passion for exploring new technologies and
+    finding creative solutions to complex problems, keeping up with industry trends
+    and advancements in observability and related domains</li> <li>Excellent collaboration
+    abilities, with the capacity to work effectively with cross-functional teams,
+    present ideas, and communicate technical concepts clearly</li> <li>Keep up to
+    date with technologies - AWS/Azure/GCP, serverless, Docker, Kubernetes among others</li>
+    </ul> <p><strong>Bonus points if you have</strong><strong><br></strong></p> <ul>
+    <li>Contribution to open source projects</li> <li>Experience working with or building
+    GraphQL schemas</li> <li>Experience building and maintaining high throughput pipelines
+    and distributed systems</li> <li>Experience working on an Observability product,
+    especially in the SaaS vendor space</li> </ul><div class="content-conclusion"><p>Fostering
+    a diverse, welcoming and inclusive environment is important to us. We work hard
+    to make everyone feel comfortable bringing their best, most authentic selves to
+    work every day. We celebrate our talented Relics’ different backgrounds and abilities,
+    and recognize the different paths they took to reach us – including nontraditional
+    ones. Their experiences and perspectives inspire us to make our products and company
+    the best they can be. We’re looking for people who feel connected to our mission
+    and values, not just candidates who check off all the boxes.&nbsp;</p> <p>If you
+    require a reasonable accommodation to complete any part of the application or
+    recruiting process, please reach out to <a hr'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-07'
+  posting_date: '2026-04-07'
+  date_source: first_published
+  date_added: '2026-04-07'
+  discovered: '2026-04-07T10:15:28.407866+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,115 @@
+id: snowflake-staff-cloud-support-engineer-data-integration-etl-clients-co
+name: Snowflake Staff Cloud Support Engineer - Data Integration & ETL, Clients & Connectivity
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/70d8b449-c4a1-478d-a542-7b4274227f44
+  portal: ashby
+  location: SA-Riyadh-MSO
+  location_class: unknown
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Staff Cloud Support Engineer - Data Integration
+    & ETL, Clients & Connectivity Build the future of the AI Data Cloud. Join the
+    Snowflake team. Snowflake Support is committed to providing high-quality resolutions
+    to help deliver data-driven business insights and results. We are a team of subject
+    matter experts collectively working toward our customers’ success. We form partnerships
+    with customers by listening, learning, and building connections. Snowflake’s Support
+    team is expanding! We are looking for a Staff Cloud Support Engineer who likes
+    working with data and solving a wide variety of issues utilizing their technical
+    experience having worked on a variety of operating systems, database technologies,
+    big data, data integration, connectors, and networking. As a Staff Cloud Support
+    Engineer , your role is to delight our customers with your passion and knowledge
+    of Snowflake Data Warehouse. Customers will look to you for technical guidance
+    and expert advice with regard to their effective and optimal use of Snowflake.
+    You will be the voice of the customer regarding product feedback and improvements
+    for Snowflake’s product and engineering teams. You will play an integral role
+    in building knowledge within the team and be part of strategic initiatives for
+    organizational and process improvements. You will develop a strong understanding
+    of the customer’s use case and how they leverage the Snowflake platform. You will
+    deliver exceptional service, enabling them to achieve the highest levels of continuity
+    and performance from their Snowflake implementation. Ideally, you have worked
+    in a 24x7 environment, handled technical case escalations and incident management,
+    worked in technical support for an RDBMS, been on-call during weekends, and are
+    familiar with database release management. Applicants should be flexible with
+    schedule changes to meet business needs. AS A STAFF CLOUD SUPPORT ENGINEER AT
+    SNOWFLAKE, YOU WILL: Drive technical solutions to complex problems, providing
+    in-depth analysis and guidance to Snowflake customers and partners using the following
+    methods of communication: email, web, and phone Adhere to response and resolution
+    SLAs and escalation processes in order to ensure fast resolution of customer issues
+    that exceed expectations Demonstrate good problem-solving skills and be process-oriented
+    Utilize the Snowflake environment, connectors, 3rd party partner software, and
+    tools to investigate issues Document known solutions to the internal and external
+    knowledge base Report well-documented bugs and feature requests arising from customer-submitted
+    requests Partner with engineering teams in prioritizing and resolving customer
+    requests Participate in a variety of Support initiatives Provide support coverage
+    during holidays and weekends based on business needs OUR IDEAL STAFF CLOUD SUPPORT
+    ENGINEER WILL HAVE: Bachelor’s or Master’s degree in Computer Science or equivalent
+    discipline 8+ years experience in a Technical Support environment or a similar
+    technical function in a customer-facing role. Excellent writing and communication
+    skills in English with attention to detail. Ability to work in a highly collaborative
+    environment across global teams Experience in configuring/troubleshooting one
+    or more of the following drivers - ODBC, JDBC, Python Connector, NodeJS, Go, .Net,
+    etc. Strong understanding of Amazon AWS Services such as S3, SQS, SNS, Lambda
+    Functions, API Gateway, VPC, Route 53, and/or similar services in Microsoft Azure
+    and Google Cloud Ecosystems Experience with table formats (Delta, Iceberg) Understanding
+    of data loading/unloading process in Snowflake. Understanding Snowflake streams
+    and tasks. Expertise in database migration processes. SQL skills, including JOINS,
+    Common Table Expressions (CTEs), and Window Functions. Familiarity with containerization
+    technologies like Docker and Kubernetes. Advanced proficiency with Spark and Kafka
+    Experience with Data Loading of File Formats such as CSV, Parquet, JSON, etc Proficiency
+    in reading and understanding Python and Java code. Experience in using third-party
+    troubleshooting tools such as Wireshark, Fiddler, Process Monitor/Explorer, Linux
+    performance tools, etc. Experience in API Programming, e.g., REST API, Python
+    API, SQL API, etc. Familiarity with at least one of the following: ETL/ELT, reporting
+    tools such as AWS Glue, EMR, Azure Data Factory, Informatica, Matillion, Tableau,
+    Fivetran, HVR, etc. Experience in capturing and analyzing the tcpdumps, heap dump,
+    and stack traces Familiarity with database-related concepts and writing SQL queries
+    Experience in troubleshooting database connectivity issues/code Excellent ability
+    to troubleshoot on a variety of operating systems (Windows'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.195079+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

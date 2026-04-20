@@ -1,0 +1,116 @@
+id: replit-senior-infrastructure-engineer
+name: Replit Senior Infrastructure Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Replit
+  url: https://jobs.ashbyhq.com/replit
+  application_url: https://jobs.ashbyhq.com/replit/16c85abc-763c-4f36-ab67-64f416343384
+  portal: ashby
+  location: Foster City, CA (Hybrid) In office M,W,F
+  location_class: us-onsite
+  description: 'Replit is the agentic software creation platform that enables anyone
+    to build applications using natural language. With millions of users worldwide,
+    Replit is democratizing software development by removing traditional barriers
+    to application creation. About the Role: Join our Infrastructure Engineering team
+    and help ensure the reliability, scalability, and performance of Replit''s infrastructure
+    that serves millions of developers worldwide. As a Senior Infrastructure Engineer,
+    you will bridge the gap between development and operations, implementing automation
+    and establishing best practices that enable our platform to scale efficiently
+    while maintaining high availability. We are seeking Senior Infrastructure Engineers
+    who are passionate about building and maintaining resilient systems at scale.
+    Your mission will be to proactively find and analyze reliability problems across
+    our stack, then design and implement software and systems to address them. You
+    will build robust monitoring solutions, automate operational tasks, and continuously
+    improve our infrastructure''s reliability. You Will: Drive Automation and Infrastructure
+    as Code: Build and improve automation to eliminate toil and operational work.
+    Maintain CI/CD pipelines and infrastructure automation using tools like Terraform
+    or Pulumi. Create self-healing systems that can automatically respond to common
+    failure scenarios. Optimize Performance and Infrastructure: Collaborate with core
+    infrastructure and product teams to performance tune and optimize our cloud deployments
+    (Kubernetes, Docker, GCP). Identify and resolve performance bottlenecks and implement
+    capacity planning strategies. Elevate Developer Experience: Design and implement
+    improvements to our build, test, and deployment systems to make software delivery
+    faster, safer, and more reliable for all engineers. Drive Cross-Team Improvements:
+    Partner with service owners across Replit to understand their pain points, and
+    collaborate on implementing build/test/deploy enhancements within their specific
+    services. Build Shared Tooling: Create and maintain centralized tooling and automation
+    that improves the engineering lifecycle, from local development to production
+    monitoring. Debug and Harden Systems: Dive deep into debugging difficult technical
+    problems, making our systems and products more robust, operable, and easier to
+    diagnose. Collaborate on Design Reviews: Participate in feature and system design
+    reviews, contributing expertise on security, scale, and operational considerations.
+    Build and Integrate: Write high-quality, well-tested code to meet the needs of
+    your customers, including building pipelines to integrate with 3rd party vendors.
+    Required Skills and Experience: 4+ years of experience in Site Reliability Engineering
+    or similar roles (DevOps, Systems Engineering, Infrastructure Engineering). Strong
+    programming skills in languages like Python or Go. You write high-quality, well-tested
+    code. Solid understanding of distributed systems. You''ve built, scaled, and maintained
+    production services and understand service-oriented architecture. Experience with
+    container orchestration platforms (Kubernetes) and cloud-native technologies.
+    Experience implementing and maintaining monitoring/observability solutions, with
+    strong skills in debugging and performance tuning. Strong incident management
+    skills with experience participating in incident response and demonstrated critical
+    thinking under pressure. Experience with infrastructure as code (e.g., Terraform)
+    and configuration management tools. Excellent written and verbal communication
+    skills, with an ability to explain technical concepts clearly. A willingness to
+    dive into understanding, debugging, and improving any layer of the stack. You''re
+    passionate about making software creation accessible and empowering the next generation
+    of builders. Bonus Points: Experience with Google Cloud Platform (GCP) services
+    and tools. Knowledge of modern observability platforms (Prometheus, Grafana, Datadog,
+    etc.). Experience building reliable systems capable of handling high throughput
+    and low latency. Experience with Go and Terraform. Familiarity with working in
+    rapid-growth environments. This is a full-time role that can be held from our
+    Foster City, CA office. The role has an in-office requirement of Monday, Wednesday,
+    and Friday. Full-Time Employee Benefits Include: 💰 Competitive Salary & Equity
+    💹 401(k) Program with a 4% match ⚕️ Health, Dental, Vision and Life Insurance
+    🩼 Short Term and Long Term Disability 🚼 Paid Parental, Medical, Caregiver Leave
+    🚗 Commuter Benefits 📱 Monthly Wellness Stipend 🧑‍💻 Autonomous Work Environment
+    🖥 In Office Set-Up Reimbursement 🏝 Flexible Time Off (FTO) + Holidays 🚀 Quarterly
+    Team Gatherings ☕ In Office Amenities Want to learn more about what we are up
+    to? Meet the Replit Agent Replit: Make an app for that Replit Blog Amjad TED Talk
+    Interviewing + Culture at Replit Operating Principles Reasons not to work at Replit
+    To achieve our missi'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.958079+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

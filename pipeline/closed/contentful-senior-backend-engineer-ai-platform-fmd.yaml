@@ -1,0 +1,116 @@
+id: contentful-senior-backend-engineer-ai-platform-fmd
+name: Contentful Senior Backend Engineer - AI Platform (f/m/d)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Contentful
+  url: https://boards.greenhouse.io/contentful
+  application_url: https://job-boards.greenhouse.io/contentful/jobs/7776562
+  portal: greenhouse
+  location: London, England, United Kingdom
+  location_class: international
+  description: '<h2><strong>About the opportunity</strong></h2> <p><strong>Join Contentful
+    as a Senior AI Software Engineer (f/m/d) and innovate with AI Integrations</strong></p>
+    <p>At Contentful, we empower thousands of customers to manage content at scale
+    with speed, flexibility, and precision. We are seeking talented Senior AI Software
+    Engineers (f/m/d) to join our AI Platform team—a group dedicated to building and
+    maintaining an internal AI platform that accelerates innovation across our organization.</p>
+    <p>As a key contributor, you will help shape the internal AI ecosystem by developing
+    scalable, high-performance AI integrations, APIs, tools and documentation that
+    empower feature teams to efficiently test, deliver and maintain cutting-edge AI-driven
+    products. Acting as both a support and consultancy resource, you’ll collaborate
+    closely with feature teams to enhance their development capabilities and bring
+    AI-powered solutions to life. By building intuitive internal tooling and fostering
+    seamless integration of AI technologies, your work will drive efficiency and innovation
+    throughout Contentful.</p> <p>If you are passionate about advancing AI technology,
+    enabling teams with powerful tools, and redefining how we build and deliver AI
+    solutions, we’d love to have you join us. Together, we’ll build systems that set
+    new standards for AI integration and empower our teams to create smarter, more
+    impactful content solutions.</p> <h2><strong>What to expect?&nbsp;</strong></h2>
+    <ul> <li><strong>Collaborate and Innovate:</strong> Work closely with product
+    managers, designers, and other engineers to build best-in-class AI-enabled features
+    for our customers, ensuring seamless integration of AI technologies with existing
+    systems.</li> <li><strong>Platform Development:</strong> Design, develop, and
+    maintain scalable AI platform features using <em>TypeScript and Node.js</em>,
+    to enable feature teams, while ensuring they are compatible with other services,
+    and APIs.</li> <li><strong>AI Integration:</strong> Implement and integrate AI
+    technologies, such as generative AI, machine learning models, or NLP, to enhance
+    our platform’s capabilities, optimize processes, and improve user experiences.</li>
+    <li><strong>Holistic Thinking:</strong> Think critically about the interactions
+    between AI models and product components to ensure a cohesive and intuitive user
+    experience.</li> <li><strong>Rapid Problem-Solving:</strong> Quickly fix bugs
+    and solve problems, particularly related to AI performance, model integration,
+    or data pipeline issues, to enhance customer satisfaction.</li> <li><strong>Continuous
+    Improvement:</strong> Participate in code reviews and contribute to improving
+    our AI development processes, ensuring that the AI components are scalable, efficient,
+    and maintainable.</li> <li><strong>Stay Current: </strong>Keep up-to-date with
+    the latest industry trends, particularly in the domains of AI and machine learning,
+    ensuring the platform stays competitive by leveraging cutting-edge AI technologies.</li>
+    </ul> <h2><strong>What you need to be successful?</strong></h2> <ul> <li><strong>API
+    and Service Design</strong>: Proven experience in building APIs and services that
+    efficiently handle large volumes of traffic. Deep interest in clean code practices
+    and familiarity with enterprise architectural design patterns</li> <li><strong>Serverless
+    Architectures</strong>: Experience with serverless architectures, ideally edge
+    compute environments such as Cloudflare Workers.</li> <li><strong>Asynchronous
+    Systems</strong>: Experience with building and maintaining asynchronous systems
+    for automation and bulk use cases.</li> <li><strong>Containerization and Orchestration:</strong>
+    Experience with Docker and Kubernetes, especially in deploying AI models or microservices.</li>
+    <li><strong>Enterprise Solutions:</strong> Knowledge with implementing enterprise
+    ready governance features such as RBAC, audit logging, and compliance frameworks.&nbsp;</li>
+    <li><strong>Cloud Services Familiarity:</strong> Knowledge of cloud platforms
+    like AWS, Azure, or GCP. Experience with services such as AWS SageMaker, Google
+    AI, or Azure Machine Learning is a plus.</li> <li><strong>Problem-Solving Skills:</strong>
+    A natural problem-solver who brings forward innovative ideas to integrate and
+    features within product workflows, leading to practical solutions and product
+    growth.</li> <li><strong>Collaborative Mindset:</strong> Excellent communication
+    skills and the ability to collaborate effectively in a team environment.</li>
+    <li><strong>Adaptability:</strong> Ability to organize and prioritize competing
+    workloads in a fast-paced, AI-driven environment, ensuring AI and software systems
+    align with business objectives.</li> </ul> <p>Preferred:</p> <ul> <li><strong>AI
+    and Machine Learning Expertise:</strong> Skills in integrating and implementing
+    AI/ML solutions within a product development environment. Skills in foundational
+    models, prompt engineering and understanding to validat'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-03'
+  posting_date: '2026-04-02'
+  date_source: first_published
+  date_added: '2026-04-03'
+  discovered: '2026-04-03T10:15:35.530201+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,116 @@
+id: openai-full-stack-software-engineer-frontier-exploration
+name: OpenAI Full-Stack Software Engineer, Frontier Exploration
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: OpenAI
+  url: https://jobs.ashbyhq.com/openai
+  application_url: https://jobs.ashbyhq.com/openai/c3391b6b-2305-4b03-880f-57bc52217420
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'About the Team OpenAI Labs explores the edges of what’s possible with
+    AI. We start from the latest breakthroughs – or overlooked research with untapped
+    potential – and expand their capabilities by prototyping entirely new ways for
+    people to benefit from AI. About the Role As a Full-Stack Software Engineer on
+    the Labs team, you will create new ways for people to interact with AI. Your work
+    will begin as rapid internal experiments: prototypes built to explore surprising
+    capabilities or novel interfaces. Some will spark entirely new products or research
+    directions, shaping how millions of people experience AI. Across projects, you’ll
+    ship these ideas internally, learn from how people use them, and – if they prove
+    promising – hand them off to product teams to take forward before moving on to
+    the next frontier. Sometimes you’ll start by playing with a researcher’s early
+    demo, identify emerging behaviors, and push on them in collaboration with researchers.
+    Other times, you’ll start from a capability that hasn’t yet been fully explored
+    and design a novel interface around it. We’re looking for creative people who
+    love to tinker and explore, chasing sparks of magic and shaping them into experiences
+    that help the world go further and discover new possibilities. Location This role
+    is based in San Francisco, CA. We use a hybrid work model of 3 days in the office
+    per week and offer relocation assistance to new employees. In this role, you will:
+    Explore emerging capabilities and collaborate with researchers to uncover surprising
+    new behaviors – whether from the model itself or from how people respond – and
+    push their limits through creative experimentation. Design and prototype new interfaces
+    and interaction patterns that rethink how people experience AI, making powerful
+    capabilities feel intuitive, delightful, and inspiring. Bring ideas to life quickly,
+    turning concepts into working demos – and evolving those prototypes into robust,
+    testable experiences ready for real-world feedback. Ship early, learn from real
+    usage, and iterate fast – refining ideas based on how people actually use them.
+    Hand off the most promising prototypes to product teams to scale before moving
+    on to the next frontier. You might thrive in this role if you: Have demonstrated
+    experience building and shipping full-stack applications, from intuitive interfaces
+    to reliable backend systems. Build things for fun and care deeply about craft:
+    curiosity drives you, and creating is how you explore ideas. Are energized by
+    ambiguity and excited to turn novel capabilities into tangible, working experiences.
+    Have a refined product taste and intuition for what great interactions should
+    feel like. Care about how ideas work in people’s hands and evolve through real
+    use. Value iteration as much as invention; refining is part of the creative process.
+    About OpenAI OpenAI is an AI research and deployment company dedicated to ensuring
+    that general-purpose artificial intelligence benefits all of humanity. We push
+    the boundaries of the capabilities of AI systems and seek to safely deploy them
+    to the world through our products. AI is an extremely powerful tool that must
+    be created with safety and human needs at its core, and to achieve our mission,
+    we must encompass and value the many different perspectives, voices, and experiences
+    that form the full spectrum of humanity. We are an equal opportunity employer,
+    and we do not discriminate on the basis of race, religion, color, national origin,
+    sex, sexual orientation, age, veteran status, disability, genetic information,
+    or other applicable legally protected characteristic. For additional information,
+    please see OpenAI’s Affirmative Action and Equal Employment Opportunity Policy
+    Statement . Background checks for applicants will be administered in accordance
+    with applicable law, and qualified applicants with arrest or conviction records
+    will be considered for employment consistent with those laws, including the San
+    Francisco Fair Chance Ordinance, the Los Angeles County Fair Chance Ordinance
+    for Employers, and the California Fair Chance Act, for US-based candidates. For
+    unincorporated Los Angeles County workers: we reasonably believe that criminal
+    history may have a direct, adverse and negative relationship with the following
+    job duties, potentially resulting in the withdrawal of a conditional offer of
+    employment: protect computer hardware entrusted to you from theft, loss or damage;
+    return all computer hardware in your possession (including the data contained
+    therein) upon termination of employment or end of assignment; and maintain the
+    confidentiality of proprietary, confidential, and non-public information. In addition,
+    job duties require access to secure and protected information technology systems
+    and related data security obligations. To notify OpenAI that you believe this
+    job posting is non-compliant, please submit a report through this form . No response
+    will be provided to inquiries unrelated to job posting compliance'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.539577+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

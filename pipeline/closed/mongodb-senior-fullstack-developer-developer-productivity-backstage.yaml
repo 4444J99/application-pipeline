@@ -1,0 +1,115 @@
+id: mongodb-senior-fullstack-developer-developer-productivity-backstage
+name: MongoDB Senior Fullstack Developer, Developer Productivity (Backstage)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7549155
+  portal: greenhouse
+  location: United States
+  location_class: us-onsite
+  description: <p>As a Senior Fullstack Developer on the Developer Productivity -
+    Developer Experience team, you will design and build scalable features for MongoDB’s
+    Internal Developer Portal using Backstage. You’ll collaborate closely with product,
+    design, and engineering teams to improve developer workflows and internal tooling.
+    The role involves contributing to architectural decisions, writing clean and maintainable
+    code, and promoting best practices.</p> <p>This role can be based remotely in
+    the United States.</p> <h3>Our ideal candidate will have</h3> <ul> <li>6+ years
+    of professional software engineer experience with a strong focus on fullstack
+    development</li> <li>Proven ability to build scalable, performance optimized,
+    modern web applications using MongoDB, Node.js, TypeScript/JavaScript, and React</li>
+    <li>Hands-on experience with unit testing (Cypress, Jest, Playwright, etc.)</li>
+    <li>Experience integrating CI/CD pipelines, monitoring tools, and cloud infrastructure
+    (AWS/GCP/Azure)</li> <li>Hands-on experience leveraging Kubernetes, Helm, and
+    modern infrastructure-as-code tools</li> <li>Solid understanding of API Integrations
+    and other kinds of service discovery mechanisms to build/maintain a robust service
+    catalog</li> <li>Experience working within distributed systems and have designed
+    highly-scalable systems across various projects</li> <li>Demonstrate sound engineering
+    practices like continuous delivery and automated testing</li> <li>You have impact
+    through your communication skills and can successfully partner with different
+    engineering teams across domains such as product developers, platforms engineers
+    and SREs, etc.</li> <li>Comfortable writing and reviewing technical design documents
+    and specifications</li> </ul> <h3>What makes you stand out?</h3> <ul> <li>Hands-on
+    experience working with Backstage (by Spotify), including platform extensions,
+    portal management, and integrating various systems and tools to make them available
+    to end users</li> <li>Deep understanding of the Backstage architecture, including
+    plugin development, software catalog, scaffolder, and TechDocs</li> <li>Bonus
+    points if you have experience in using and applying large language models; Experience
+    with AI application development is a plus</li> </ul> <h3>Interview process</h3>
+    <p>Upon successfully passing the preliminary screenings, candidates will be invited
+    to participate in live coding assessments, followed by a system design evaluation,
+    to determine the alignment of their technical proficiencies with the requirements
+    of the role.</p> <h3>Success measures</h3> <ul> <li>In 3 months, you've gained
+    a deep understanding of the Developer Productivity team ecosystem and build and
+    deployment workflows</li> <li>In 6 months, you are successfully contributing to
+    our projects, including deploying code to production and taking on troubleshooting
+    issues and resolving bugs</li> <li>In 9 months, you are successfully leading aspects
+    of the technical architecture and enhancement of our tech stack, and technical
+    roadmaps for the teams</li> <li>In 12 months, you are successfully contributing
+    to mentoring and growing other team members</li> </ul> <h3>About MongoDB</h3>
+    <p>MongoDB is built for change, empowering our customers and our people to innovate
+    at the speed of the market. We have redefined the database for the AI era, enabling
+    innovators to create, transform, and disrupt industries with software. MongoDB’s
+    unified database platform—the most widely available, globally distributed database
+    on the market—helps organizations modernize legacy workloads, embrace innovation,
+    and unleash AI. Our cloud-native platform, MongoDB Atlas, is the only globally
+    distributed, multi-cloud database and is available across AWS, Google Cloud, and
+    Microsoft Azure.</p> <p>With offices worldwide and nearly 60,000 customers—including
+    75% of the Fortune 100 and AI-native startups—relying on MongoDB for their most
+    important applications, we’re powering the next era of software.</p> <p>Our compass
+    at MongoDB is our <a href="https://www.mongodb.com/company">Leadership Commitment,</a>
+    guiding how and why we make decisions, show up for each other, and win. It’s what
+    makes us MongoDB.&nbsp;</p> <p>To drive the personal growth and business impact
+    of our employees, we’re committed to developing a supportive and enriching culture
+    for everyone. <a href="https://www.mongodb.com/company/blog/culture/employee-benefits-that-make-a-difference-at-mongodb">From
+    employee affinity groups, to fertility assistance and a generous parental leave
+    policy</a>, we value our employees’ wellbeing and want to support them along every
+    step of their professional and personal journeys.<a href="https://www.mongodb.com/blog/channel/culture">
+    Learn more about what it’s like to work at MongoDB</a>, and help us make an impact
+    on the world!</p> <p>MongoDB is committed to providing any necessary accommodations
+    for individuals with disabilities within our application and interview process.
+    To request an accommod
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.268896+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

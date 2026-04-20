@@ -1,0 +1,114 @@
+id: mongodb-site-reliability-engineer-senior-or-staff-infrastructure-sec
+name: MongoDB Site Reliability Engineer (Senior or Staff), Infrastructure Security
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=6864997
+  portal: greenhouse
+  location: Ontario; Quebec
+  location_class: unknown
+  description: <p>We are looking for an experienced<strong> </strong>Staff Engineer
+    for our SRE, InfraSec team, to guide the security of our cloud-based infrastructure.
+    As a Staff SRE, you will be very hands-on technically while also mentoring a small
+    team of SREs.</p> <p>The InfraSec team collaborates closely with other engineering
+    teams to ensure that our infrastructure adheres to the highest security standards.
+    They build essential security infrastructure and implement controls that reinforce
+    the platform’s security posture.</p> <p>This is an SRE team, which means you can
+    expect a highly hands-on approach, tackling the technical challenges of implementing
+    large scale solutions.This team is deeply involved in the technical aspects of
+    security and the nuances of its actual implementation.</p> <p>This role will be
+    based remotely in Canada.</p> <h3>Responsibilities:</h3> <p>Cloud Security Design
+    and Implementation:&nbsp;&nbsp;</p> <ul> <li>Help lead the design and deployment
+    of security solutions for cloud platforms (AWS, Azure, GCP), including network
+    and compute security, identity management, and cloud security posture management
+    (CSPM)</li> </ul> <p>Automation and Monitoring:&nbsp;&nbsp;</p> <ul> <li>Build
+    automated solutions for real-time security monitoring, logging, and alerting in
+    cloud environments. Leverage native cloud services and third-party tools for runtime
+    security monitoring and anomaly detection</li> </ul> <p>Security Tooling:</p>
+    <ul> <li>Evaluate, implement, and manage cloud-native security tools and platforms
+    for endpoint security, identity management (IAM), and CSPM&nbsp;</li> </ul> <h3>Qualifications:</h3>
+    <p>Experience:&nbsp;&nbsp;</p> <ul> <li>7+ years of experience in SRE, infrastructure
+    engineering or similar role, with a strong focus on security work, with ideally
+    2+ years in a senior or staff engineering role</li> </ul> <p>Security Mindset:</p>
+    <ul> <li>A comprehensive understanding of all facets of cloud environment security,
+    spanning from foundational OS networking layers to cloud provider configurations.
+    Proven experience in leading projects within security-focused areas, such as runtime
+    scanning, security observability, CSPM, and more</li> </ul> <p>Cloud Expertise:&nbsp;&nbsp;</p>
+    <ul> <li>Strong experience with at least one cloud platform (AWS, Azure, GCP),
+    including expertise in IAM, VPC networking, security groups, and cloud security
+    tools (e.g., GuardDuty, Security Hub, CloudTrail)</li> </ul> <p>Coding/Automation:&nbsp;&nbsp;</p>
+    <ul> <li>Proficiency in at least one programming language (we use Golang but are
+    language agnostic when it comes to hiring ) and experience with infrastructure-as-code
+    tools (Terraform, CloudFormation, Ansible) to automate security configurations
+    and processes</li> </ul> <p>Linux and Networking</p> <ul> <li>Understanding of
+    the underlying Linux and networking concepts, including low-level fundamentals,
+    and how they work together in complex systems</li> </ul> <p>Communication and
+    Leadership Skills:&nbsp;&nbsp;</p> <ul> <li>Strong ability to explain complex
+    security concepts to both technical and non-technical teams. Ability to lead a
+    small technical team and ensure success both meeting the team goals as well as
+    personal growth for all team members</li> </ul> <h3>About MongoDB</h3> <p>MongoDB
+    is built for change, empowering our customers and our people to innovate at the
+    speed of the market. We have redefined the database for the AI era, enabling innovators
+    to create, transform, and disrupt industries with software. MongoDB’s unified
+    database platform—the most widely available, globally distributed database on
+    the market—helps organizations modernize legacy workloads, embrace innovation,
+    and unleash AI. Our cloud-native platform, MongoDB Atlas, is the only globally
+    distributed, multi-cloud database and is available across AWS, Google Cloud, and
+    Microsoft Azure.</p> <p>With offices worldwide and nearly 60,000 customers—including
+    75% of the Fortune 100 and AI-native startups—relying on MongoDB for their most
+    important applications, we’re powering the next era of software.</p> <p>Our compass
+    at MongoDB is our <a href="https://www.mongodb.com/company">Leadership Commitment,</a>
+    guiding how and why we make decisions, show up for each other, and win. It’s what
+    makes us MongoDB.&nbsp;</p> <p>To drive the personal growth and business impact
+    of our employees, we’re committed to developing a supportive and enriching culture
+    for everyone. <a href="https://www.mongodb.com/company/blog/culture/employee-benefits-that-make-a-difference-at-mongodb">From
+    employee affinity groups, to fertility assistance and a generous parental leave
+    policy</a>, we value our employees’ wellbeing and want to support them along every
+    step of their professional and personal journeys.<a href="https://www.mongodb.com/blog/channel/culture">
+    Learn more about what it’s like to work at MongoDB</a>, and help us make an impact
+    on the world!</p> <p>MongoDB is committed to providing any necessary accommodations
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.6
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.325772+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

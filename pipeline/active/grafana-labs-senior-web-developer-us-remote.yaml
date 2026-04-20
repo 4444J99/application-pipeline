@@ -1,0 +1,103 @@
+id: grafana-labs-senior-web-developer-us-remote
+name: Grafana Labs Senior Web Developer | US | Remote
+track: job
+status: qualified
+outcome: null
+target:
+  organization: Grafana Labs
+  url: https://boards.greenhouse.io/grafanalabs
+  application_url: https://job-boards.greenhouse.io/grafanalabs/jobs/5973678004
+  portal: greenhouse
+  location: United States (Remote)
+  location_class: us-remote
+  description: '<div class="content-intro"><p>Grafana Labs is a remote-first, open-source
+    powerhouse. There are more than 20M users of Grafana, the open source visualization
+    tool, around the globe, monitoring everything from beehives to climate change
+    in the Alps. The instantly recognizable dashboards have been spotted everywhere
+    from a NASA launch and Minecraft HQ to Wimbledon and the Tour de France. Grafana
+    Labs also helps more than 3,000 companies -- including Bloomberg, JPMorgan Chase,
+    and eBay -- manage their observability strategies with the Grafana LGTM Stack,
+    which can be run fully managed with <a href="https://grafana.com/products/cloud/">Grafana
+    Cloud</a> or self-managed with the <a href="https://grafana.com/products/enterprise/">Grafana
+    Enterprise Stack</a>, both featuring scalable metrics (<a href="https://grafana.com/oss/mimir/">Grafana
+    Mimir</a>), logs (<a href="https://grafana.com/oss/loki/">Grafana Loki</a>), and
+    traces (<a href="https://grafana.com/oss/tempo/">Grafana Tempo</a>).</p> <p>We’re
+    scaling fast and staying true to what makes us different: an open-source legacy,
+    a global collaborative culture, and a passion for meaningful work. Our team thrives
+    in an innovation-driven environment where transparency, autonomy, and trust fuel
+    everything we do.</p> <p>You may not meet every requirement, and that’s okay.
+    If this role excites you, we’d love you to raise your hand for what could be a
+    truly career-defining opportunity.</p></div><p></p> <h1>Senior Web Developer -
+    Documentation Platform</h1> <p><strong>This is a remote position. We are looking
+    for candidates in the US (EST only).</strong></p> <p><strong>The Opportunity:</strong></p>
+    <p>Grafana Cloud is our composable observability platform that integrates metrics,
+    logs, and traces with Grafana. It allows our customers to leverage the best open
+    source observability software without the overhead of maintaining their own stack.&nbsp;</p>
+    <p>We are looking for a Senior Frontend Engineer to own the user experience across
+    our documentation and educational properties. This role focuses on improving user
+    success via our <a href="https://grafana.com/docs/">Hugo website</a>, <a href="https://play.grafana.org/d/to6j8mh/grafana-play-home?doc=%2Fdocs%2Flearning-paths%2Fmacos-integration%2F&amp;source=learning-hub">Pathfinder
+    (our interactive in-product learning tool)</a>, and the <a href="https://grafana.com/docs/learning-hub/">Learning
+    Hub</a>.</p> <p><strong>What You’ll Be Doing:</strong></p> <ul> <li>Expand the
+    external enablement through the Learning Hub.</li> <li>Continue development of
+    a first-class documentation site for both human and AI consumers.</li> <li>Collaborate
+    with other engineering teams on continuously improving the integration of the
+    website and the user-facing product</li> </ul> <p><strong>What Makes You a Great
+    Fit:</strong></p> <ul> <li>Solid experience (4+ years) with web development technologies
+    and static site generators.</li> <li>Excellent communication skills.</li> <li>Experience
+    or comfort working with backends written in Golang.</li> <li>Experience or comfort
+    working with Kubernetes.</li> <li>Strong practice of effective CI/CD.</li> <li>Strong
+    understanding of web application security best practices</li> </ul> <p><strong>Bonus
+    points For:</strong></p> <ul> <li>You are comfortable working in a remote-first
+    company&nbsp;</li> <li>You understand the importance of communication and stakeholder
+    engagement and management</li> <li>You enjoy learning, growing, and supporting
+    others to do the same.&nbsp;</li> <li>You enjoy transforming ideas into working
+    code.</li> <li>You enjoy working on complex solutions. Grafana is a highly technical
+    product and has avid followers who rely on it every day and care deeply about
+    its documentation.</li> <li>You care and value security, code maintainability,
+    readability, and testing.</li> <li>You enjoy working as a team. For us, working
+    together means being collaborative, friendly, kind, and respectful</li> </ul>
+    <p></p> <p>In the US, the base compensation range for this role is $<span data-sheets-root="1">143,759</span><span
+    data-sheets-root="1"> - $172,511</span>. Actual compensation may vary based on
+    level, experience, and skillset as assessed throughout the interview process.
+    All of our roles include Restricted Stock Units (RSUs), giving every team member
+    ownership in Grafana Labs'' success. We believe in shared outcomes—RSUs help us
+    stay aligned and invested as we scale globally.</p><div class="content-conclusion"><div>
+    <p><em data-stringify-type="italic">*Compensation ranges are country specific.
+    If you are applying for this role from a different location than listed above,
+    your recruiter will discuss your specific market’s defined pay range &amp; benefits
+    at the beginning of the process.</em></p> <p><strong>Why You’ll Thrive at Grafana
+    Labs:</strong></p> <ul> <li><strong data-stringify-type="bold">100% Remote, Global
+    Culture -&nbsp;</strong>As a remote-only company, we bring together talent from
+    around the w'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-17'
+  date_source: first_published
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.493990+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-18"

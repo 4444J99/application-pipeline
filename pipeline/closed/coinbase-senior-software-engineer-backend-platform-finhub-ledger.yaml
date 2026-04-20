@@ -1,0 +1,115 @@
+id: coinbase-senior-software-engineer-backend-platform-finhub-ledger
+name: Coinbase Senior Software Engineer, Backend - Platform (FinHub - Ledger)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7255761?gh_jid=7255761
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+  description: '<div class="content-intro"><p>Ready to be pushed beyond what you think
+    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
+    in the world. It’s a massive, ambitious opportunity that demands the best of us,
+    every day, as we build the emerging onchain platform — and with it, the future
+    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
+    candidate. We want someone who is passionate about our mission and who believes
+    in the power of crypto and blockchain technology to update the financial system.
+    We want someone who is eager to leave their mark on the world, who relishes the
+    pressure and privilege of working with high caliber colleagues, and who actively
+    seeks feedback to keep leveling up. We want someone who will run towards, not
+    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
+    culture</a> is intense and isn’t for everyone. But if you want to build the future
+    alongside others who excel in their disciplines and expect the same from you,
+    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
+    we are not remote-only. In-person participation is required throughout the year.
+    Team and company-wide offsites are held multiple times annually to foster collaboration,
+    connection, and alignment. Attendance is expected and fully supported.</p></div><p>Ledger
+    is one of the core services for Coinbase, responsible for processing transactions
+    and managing the funds of our users. Today, our scale and complexity of operations
+    has far surpassed the original design of Ledger and fund management and ledgering
+    systems. This is a unique opportunity to redesign foundational systems that will
+    set Coinbase up for success in the next decade. We are looking for problem solvers
+    who love complex problems in the intersection of crypto, finance and distributed
+    systems.</p> <p><strong>What you’ll be doing (ie. job duties):</strong></p> <ul>
+    <li>Design and develop scalable ledgering systems that processes millions of transactions
+    using modern technology and industry best practices</li> <li>Build, test, and
+    release high quality product-facing features with integrity, scalability, maintainability
+    and stability.</li> <li>Drive strategic technical direction for complex initiatives
+    either individually or through a team</li> <li>Identify, anticipate and lead analysis
+    and resolution of technical challenges</li> <li>Collaborate with internal stakeholders
+    from finance and product teams to deliver high impact and high visibility features
+    and projects</li> <li>Work with engineers, data analysts, product managers and
+    senior leadership to turn our product and technical vision into a tangible roadmap
+    every quarter</li> <li>Mentor and develop junior engineers, influencing technical
+    designs and code quality.&nbsp;</li> <li>Drive system improvements by embedding
+    AI into operational practices</li> </ul> <p><strong>What we look for in you:</strong></p>
+    <ul> <li>5+ years of software development experience with experience writing performant,
+    large scale distributed systems</li> <li>Strong coding skills, preferably in Go,
+    along with solid understanding of relational databases and transactions</li> <li>Strong
+    problem solver with ability to debug and foresee problems.</li> <li>Experience
+    in leading a team to deliver robust solutions</li> <li>Familiarity with writing
+    highly concurrent systems and good intuition for REST API design</li> <li>Proven
+    experience working on large projects with long-term impact on a single system
+    or team</li> <li>Proven experience in identifying customer problems with a proactive
+    mind-set</li> <li>Capable of driving alignments with technical and non-technical
+    stakeholders</li> <li>Strong technical grasp with excellent judgment on task prioritizations</li>
+    <li>Ability to solve complex engineering problems that deliver results aligned
+    with team objectives</li> <li>Ability to mentor junior developers and lead the
+    team technically on new initiatives and system improvements</li> </ul> <p><strong>Nice
+    to haves:</strong></p> <ul> <li>You have experience with distributed systems and
+    databases</li> <li>You have experience in financial services</li> <li>You have
+    gone through a rapid growth in your company (from startup to mid-size)</li> <li>Experience
+    with growth experiments or A/B testing frameworks</li> <li>You have experience
+    with Blockchain technology (such as Bitcoin, Ethereum etc)</li> <li>You’ve worked
+    with Golang, Python, Docker, SQL, or Postgres</li> <li>You’ve built financial,
+    high reliability or security systems</li> <li>Crypto-forward experience, including
+    familiarity with onchain activity such as interacting with Ethereum addresses,
+    using ENS, and engaging with dApps or blockchain-based services</li> </ul> <p><span
+    style="font-weight: 400;">Job #: P72778</span></p> <p><span style="font-weight:
+    400;">*Answers to crypto-related questions may be used to evaluate your onchain
+    experience</span>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-29'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.968418+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

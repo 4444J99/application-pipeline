@@ -1,0 +1,87 @@
+id: stripe-software-engineer
+name: Stripe Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7808471
+  portal: greenhouse
+  location: San Francisco, California
+  location_class: us-onsite
+  description: '<h2><strong>Who we are</strong></h2> <h3><strong>About Stripe</strong></h3>
+    <p>Stripe, LLC. is a financial infrastructure platform for businesses. Millions
+    of companies - from the world’s largest enterprises to the most ambitious startups
+    - use Stripe to accept payments, grow their revenue, and accelerate new business
+    opportunities. Our mission is to increase the GDP of the internet, and we have
+    a staggering amount of work ahead. That means you have an unprecedented opportunity
+    to put the global economy within everyone''s reach while doing the most important
+    work of your career.</p> <h2><strong>What you’ll do</strong></h2> <h3><strong>Responsibilities</strong></h3>
+    <ul> <li>Build and manage user facing products and platforms to lower Stripe’s
+    financial and regulatory risk while retaining a best in class user experience</li>
+    <li>Translate business problems into scalable engineering solutions</li> <li>Collaborate
+    with stakeholders from engineering, product, policy, legal, operations, and data
+    science teams</li> <li>Debug production issues across services and multiple levels
+    of the stack</li> <li>Improve engineering standards, tooling, and processes; Identify,
+    analyze, and quickly address emerging risk patterns.</li> </ul> <h2><strong>Who
+    you are</strong></h2> <h3><strong>Minimum requirements</strong></h3> <ul> <li>Bachelor’s
+    degree or foreign equivalent in Computer Science or related field plus 5 years
+    of software engineering experience.</li> <li>5 years of experience building software
+    solutions in Python, Ruby, Java or similar;&nbsp;</li> <li>5 years of experience
+    designing, building, and maintaining scalable systems;&nbsp;</li> <li>5 years
+    of experience translating business needs into software requirements and designs;&nbsp;</li>
+    <li>5 years of experience debugging production issues across services and multiple
+    levels of the stack;&nbsp;</li> <li>5 years of experience with distributed systems.</li>
+    </ul> <p>Salary: $213,512 - $285,600/yr.</p> <p>This salary range represents the
+    base salary range for the role and any sales commissions/sales bonuses targets,
+    if applicable, would be in addition to the base salary.</p> <p>40 hrs/week</p>
+    <p>Full remote work permitted.</p> <p>Multiple Positions Available.</p> <p>Additional
+    benefits for this role may include: equity, company bonus or sales commissions/bonuses;
+    401(k) plan; medical, dental, and vision benefits; and wellness stipends.<strong>CA07<span
+    style="color: rgb(255, 255, 255);"> </span></strong></p> <p>&nbsp;</p> <p><strong><span
+    style="color: rgb(255, 255, 255);">#LI-DNI</span></strong><span style="color:
+    rgb(255, 255, 255);">&nbsp;</span></p>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-14'
+  posting_date: '2026-04-13'
+  date_source: first_published
+  date_added: '2026-04-14'
+  discovered: '2026-04-14T10:23:06.717614+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,116 @@
+id: replit-senior-software-engineer-anti-abuse-security
+name: Replit Senior Software Engineer, Anti-Abuse & Security
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Replit
+  url: https://jobs.ashbyhq.com/replit
+  application_url: https://jobs.ashbyhq.com/replit/5bdadf61-7955-46e8-8fdf-bd69818358b7
+  portal: ashby
+  location: Foster City, CA (Hybrid) In office M,W,F
+  location_class: us-onsite
+  description: 'Replit is the agentic software creation platform that enables anyone
+    to build applications using natural language. With millions of users worldwide,
+    Replit is democratizing software development by removing traditional barriers
+    to application creation. About the role The Anti-Abuse team is the front line
+    defending Replit''s platform from exploitation. We detect and shut down phishing
+    deployments, prevent cryptomining on free-tier infrastructure, stop LLM token
+    farming, and keep bad actors from weaponizing the platform against our users.
+    This is adversarial work: attackers adapt constantly, and we build the detection
+    systems, heuristics, and automated responses that stay ahead of them. What makes
+    this role unique is the AI-native nature of Replit''s platform. You''ll work on
+    problems that barely exist elsewhere: building guardrails for AI-generated code,
+    detecting prompt injection attacks at scale, and using LLMs as a defensive tool
+    against abuse. If you want hands-on experience applying AI to security problems,
+    this is one of the few places you can do it in production with real attackers.
+    You''ll own problems end-to-end, from identifying emerging abuse patterns to shipping
+    the systems that stop them at scale. In this role you will… Design and implement
+    LLM guardrails that detect abuse scenarios in AI-generated code and agent interactions
+    Build AI-powered detection systems that use LLMs to identify malicious patterns,
+    classify threats, and automate response decisions Build and operate abuse detection
+    systems that identify phishing, cryptomining, account takeover, and financial
+    fraud across millions of daily user actions Design automated response mechanisms
+    that enforce platform policies without manual intervention Own the full abuse
+    response lifecycle: detection, investigation, enforcement, and handling appeals
+    alongside Support and Legal Analyze attack patterns using BigQuery and Hex, turning
+    investigation findings into new detection rules Maintain and extend internal detection
+    tools (Slurper, Netwatch) that continuously monitor user activity Integrate and
+    tune security scanners (SAST, SCA) in CI pipelines with tight performance SLAs
+    Track abuse trends, measure detection effectiveness, and adapt defenses as attack
+    patterns evolve Required skills and experience: 4+ years of experience in security
+    engineering, anti-abuse, trust & safety, or fraud detection Strong programming
+    skills in Python and/or TypeScript for building detection systems and automation
+    Experience with SQL and data analysis at scale (BigQuery, Snowflake, or similar)
+    Experience building or fine-tuning ML/LLM-based classifiers for security or abuse
+    detection Familiarity with prompt injection, jailbreaking, and other LLM-specific
+    attack vectors Ability to investigate complex abuse patterns and translate findings
+    into automated defenses Familiarity with common attack patterns: phishing infrastructure,
+    account takeover, credential stuffing, resource abuse Clear communication skills
+    for working across Security, Support, Legal, and Engineering teams. Nice to have:
+    Experience at a platform company dealing with user-generated content or compute
+    abuse (hosting providers, cloud platforms, developer tools) Background in fraud
+    detection, payment abuse, or financial crime Familiarity with device fingerprinting,
+    IP reputation, and email validation services Experience with CI/CD security tooling
+    (SAST, SCA, Dependabot, Snyk) Knowledge of container security, Linux internals,
+    or cloud infrastructure (GCP preferred) Prior work with abuse reporting pipelines,
+    trust & safety tooling, or content moderation systems Tools + Tech Stack for this
+    role Languages: Python, TypeScript, Go, SQL Data: BigQuery, Hex Detection tools:
+    Slurper, Netwatch, Stytch (device fingerprint); ClearOut (email reputation) CI/CD
+    Security: Dependabot, Snyk, SAST/SCA scanners Infrastructure: GCP, Kubernetes
+    Collaboration: Linear, Slack, Zendesk (for abuse reports) This role may not be
+    a fit if You prefer deep security research over building operational detection
+    systems You want to focus on vulnerability management, pentesting, or bug bounty
+    triage (that''s our Security team) You''re looking for a role with predictable,
+    well-defined problems rather than constantly adapting to adversarial behavior
+    You prefer working in isolation rather than partnering closely with Support, Legal,
+    and cross-functional teams You''re uncomfortable making enforcement decisions
+    that affect real users This is a full-time role that can be held from our Foster
+    City, CA office. The role has an in-office requirement of Monday, Wednesday, and
+    Friday. Full-Time Employee Benefits Include: 💰 Competitive Salary & Equity 💹 401(k)
+    Program with a 4% match ⚕️ Health, Dental, Vision and Life Insurance 🩼 Short Term
+    and Long Term Disability 🚼 Paid Parental, Medical, Caregiver Leave 🚗 Commuter
+    Benefits 📱 Monthly Wellness Stipend 🧑‍💻 Autonomous Work Environment 🖥 In Office
+    Set-Up Reimbursement 🏝 Flexible Time Off (FTO) + Holidays 🚀 Quarterly'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.954135+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,103 @@
+id: stripe-backend-api-engineer-privacy-products
+name: Stripe Backend / API Engineer, Privacy Products
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7579264
+  portal: greenhouse
+  location: San Francisco, Seattle
+  location_class: us-onsite
+  description: '<h2><strong>Who we are</strong></h2> <h3><strong>About Stripe</strong></h3>
+    <p>Stripe is a financial infrastructure platform for businesses. Millions of companies—from
+    the world’s largest enterprises to the most ambitious startups—use Stripe to accept
+    payments, grow their revenue, and accelerate new business opportunities. Our mission
+    is to increase the GDP of the internet, and we have a staggering amount of work
+    ahead. That means you have an unprecedented opportunity to put the global economy
+    within everyone’s reach while doing the most important work of your career.</p>
+    <h3><strong>About the team</strong></h3> <p>Privacy products’ mission is to build
+    trust that Stripe is a responsible steward of user’s data while managing privacy
+    risk and enabling business growth. The team does this by building industry leading
+    privacy products and foundational privacy infrastructure. These products provide:
+    transparency to our users about Stripe’s data practices, choices and controls
+    to our users about their data, and solutions to our customers to manage their
+    privacy. The infrastructure we build allows Stripe engineers to meet our users’
+    expectations and regulatory requirements for how Stripe handles and safeguards
+    user data. Stripe’s operating principles focus on putting users first. This means
+    the businesses built on Stripe and consumers who use payments through Stripe need
+    to trust Stripe to process their data. Protecting our user’s data and prioritizing
+    privacy is how we put users first.</p> <h2><strong>What you’ll do</strong></h2>
+    <p>As a privacy products engineer at Stripe, you’ll build products that our customers
+    and consumers use to manage their privacy needs. The customer facing product portfolio
+    includes data access tooling (Data Access Tool) within a privacy portal and a
+    new redaction API. The non-customer facing portfolio includes internal libraries
+    and tooling such as cookie and consent frameworks and data access and deletion
+    pipelines. Your role heavily impacts Stripe''s overall privacy posture, and you''ll
+    collaborate cross-functionally with product owners, engineering teams, privacy
+    legal, and ops teams. Your work is not only impactful; it is critical to the long-term
+    success of Stripe and our users.&nbsp;</p> <h3><strong>Responsibilities</strong></h3>
+    <ul> <li>Design, build, and extend external facing privacy products such as the
+    data access tool and privacy portal</li> <li>Build API products for customers
+    to help them manage their privacy requirements</li> <li>Build internal tools for
+    other Stripe teams to help manage their privacy requirements</li> <li>Build and
+    extend our data access and deletion pipelines</li> <li>Collaborate with our users
+    and on cross-functional teams to extend our privacy systems</li> </ul> <h2><strong>Who
+    you are</strong></h2> <p>We’re looking for someone who meets the minimum requirements
+    to be considered for the role. If you meet these requirements, you are encouraged
+    to apply. The preferred qualifications are a bonus, not a requirement.</p> <h3><strong>Minimum
+    requirements</strong></h3> <ul> <li>6+ years of professional hands-on software
+    development experience</li> <li>Empathy, strong communication skills and a deep
+    respect for the power of collaboration</li> <li>Able to work well individually,
+    cross-team, and cross-functionally</li> <li>The ability to drive clear next steps
+    when encountering ambiguous spaces without clear lines of ownership</li> <li>Excellent
+    problem-solving skills and attention to detail</li> <li>High standards for code
+    quality and a constructive attitude to help others raise the bar</li> </ul> <h3><strong>Preferred
+    qualifications</strong></h3> <ul> <li>Experience with privacy regulations (GDPR,
+    CCPA, etc.) and implementing technical solutions to address them</li> <li>Experience
+    with complex data pipelines over large datasets</li> <li>Experience designing
+    and building user-facing privacy tools</li> <li>Experience with Ruby or Java in
+    production environments</li> </ul> <p>&nbsp;</p>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.727635+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,116 @@
+id: scale-ai-devops-engineer-infrastructure-security
+name: Scale AI DevOps Engineer, Infrastructure & Security
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Scale AI
+  url: https://boards.greenhouse.io/scaleai
+  application_url: https://job-boards.greenhouse.io/scaleai/jobs/4674863005
+  portal: greenhouse
+  location: San Francisco, CA; New York, NY
+  location_class: us-onsite
+  description: "<p>As Scale's product portfolio and customer base expand, we are seeking\
+    \ skilled <strong>DevOps Engineers, Public Sector</strong> to be at the forefront\
+    \ of building out and enhancing our CI/CD pipelines. You will play a crucial role\
+    \ in streamlining our Software Development Life Cycle (SDLC) through collaborative\
+    \ efforts, moving us from a state of manual, disparate deployments to a more unified\
+    \ and automated system.</p> <p>These engineers will gain a deep understanding\
+    \ of our core products' architecture and composition, enabling them to effectively\
+    \ deploy and manage these systems when needed. A critical aspect of this role\
+    \ will be seamlessly integrating various machine learning (ML) tasks and updates\
+    \ into our SDLC, transforming currently separate ML components into a cohesive\
+    \ and automated workflow. While direct ML expertise is not required, a desire\
+    \ to learn and integrate ML components into the lifecycle is essential.</p> <p><strong>You\
+    \ will:</strong></p> <ul> <li>Design, develop, and maintain robust CI/CD pipelines\
+    \ to automate the deployment of our lowside and highside products.</li> <li>Collaborate\
+    \ closely with product and engineering teams to enhance existing application code\
+    \ for improved compatibility and streamlined integration within automated pipelines.</li>\
+    \ <li>Contribute to the overall architecture and design of our deployment systems,\
+    \ bringing new ideas to life for increased efficiency and reliability.</li> <li>Troubleshoot\
+    \ and resolve complex deployment issues, ensuring minimal disruption to development\
+    \ cycles.</li> <li>Develop a deep understanding of our product and ML architectures\
+    \ to facilitate seamless integration and deployment.</li> <li>Document pipeline\
+    \ processes and configurations to ensure maintainability and knowledge transfer.</li>\
+    \ <li>Proactively incorporate security best practices into all stages of the CI/CD\
+    \ pipeline, building security into our development processes.</li> <li>Drive standardization\
+    \ and foster collaboration across different product teams to achieve a unified\
+    \ and efficient SDLC.</li> </ul> <p><strong>Ideally you'd have:</strong></p> <ul>\
+    \ <li>2-3 years of experience as a DevOps Engineer, DevSecOps Engineer, Software\
+    \ Engineer with a strong focus on CI/CD, or a similar role.</li> <li>Proven track\
+    \ record of building or significantly enhancing CI/CD pipelines.</li> <li>Experience\
+    \ configuring and adapting application code to integrate seamlessly with evolving\
+    \ CI/CD environments.</li> <li>Experience working fluently with standard containerization\
+    \ &amp; deployment technologies like Kubernetes, Terraform, Docker, etc.</li>\
+    \ <li>Familiarity with cloud platforms (e.g., AWS, Azure, GCP).</li> <li>Strong\
+    \ proficiency in scripting and automation (e.g., Python, Bash, PowerShell).</li>\
+    \ <li>Familiarity with various CI/CD platforms (e.g., Jenkins, GitLab CI, GitHub\
+    \ Actions, Azure DevOps).</li> <li>Knowledge of software architecture, system\
+    \ design, and version control systems.</li> <li>Comfort with rapidly changing,\
+    \ fast-paced environments and a passion for finding automated solutions to complex\
+    \ problems.</li> <li>Basic understanding of security best practices in software\
+    \ development and an eagerness to integrate them.</li> <li>A hunger for learning\
+    \ new technologies, particularly in the realm of integrating ML into automated\
+    \ workflows.</li> <li>Strong problem-solving, analytical, collaboration, and communication\
+    \ skills.</li> <li>Possession of an active Secret or TS/SCI clearance is beneficial,\
+    \ but not a requirement, for this Public Sector position.</li> </ul> <p><strong>Nice\
+    \ to haves:</strong></p> <ul> <li>Experience with containerization technologies\
+    \ (e.g., Docker, Kubernetes).</li> <li>Exposure to machine learning lifecycles\
+    \ or MLOps concepts.</li> <li>Prior experience in classified environments.</li>\
+    \ </ul><div class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"\
+    description\"><p><em>Compensation packages at Scale for eligible roles include\
+    \ base salary, equity, and benefits. The range displayed on each job posting reflects\
+    \ the minimum and maximum target for new hire salaries for the position, determined\
+    \ by work location and additional factors, including job-related skills, experience,\
+    \ interview performance, and relevant education or training. Scale employees in\
+    \ eligible roles are also granted equity based compensation, subject to Board\
+    \ of Director approval. Your recruiter can share more about the specific salary\
+    \ range for your preferred location during the hiring process, and confirm whether\
+    \ the hired role will be eligible for equity grant. You\u2019ll also receive benefits\
+    \ including, but not limited to: Comprehensive health, dental and vision coverage,\
+    \ retirement benefits, a learning and development stipend, and generous PTO. Additionally,\
+    \ this role may be eligible for additional benefits such as a commuter stipend.</em></p></div><div\
+    \ class=\"title\">Please reference the job posting's subtitle for where this position\
+    \ will be located. For pay transparency purposes, the base salary"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.636749+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

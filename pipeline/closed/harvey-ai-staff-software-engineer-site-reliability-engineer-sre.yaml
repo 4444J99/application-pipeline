@@ -1,0 +1,107 @@
+id: harvey-ai-staff-software-engineer-site-reliability-engineer-sre
+name: Harvey AI Staff Software Engineer, Site Reliability Engineer (SRE)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Harvey AI
+  url: https://jobs.ashbyhq.com/harvey
+  application_url: https://jobs.ashbyhq.com/harvey/4d661139-19ad-42af-9f6c-a68c71263e14
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Why Harvey At Harvey, we’re transforming how legal and professional
+    services operate — not incrementally, but end-to-end. By combining frontier agentic
+    AI, an enterprise-grade platform, and deep domain expertise, we’re reshaping how
+    critical knowledge work gets done for decades to come. This is a rare chance to
+    help build a generational company at a true inflection point. With 1000+ customers
+    in 58+ countries, strong product-market fit, and world-class investor support,
+    we’re scaling fast and defining a new category in real time. The work is ambitious,
+    the bar is high, and the opportunity for growth — personal, professional, and
+    financial — is unmatched. Our team is sharp, motivated, and deeply committed to
+    the mission. We move fast, operate with intensity, and take real ownership of
+    the problems we tackle — from early thinking to long-term outcomes. We stay close
+    to our customers — from leadership to engineers — and work together to solve real
+    problems with urgency and care. If you thrive in ambiguity, push for excellence,
+    and want to help shape the future of work alongside others who raise the bar,
+    we invite you to build with us. At Harvey, the future of professional services
+    is being written today — and we’re just getting started. Role Overview As a Staff
+    Software Engineer on the Site Reliability team at Harvey, you will ensure the
+    reliability, scalability, and performance of our legal AI platform. You’ll join
+    a high-leverage team that sits at the intersection of infrastructure and product,
+    owning the systems that keep our platform fast, secure, and always on. From scaling
+    across 50+ regions to automating mission-critical operations, your work will ensure
+    that Harvey remains resilient as we grow. If you’re passionate about building
+    robust systems and reducing complexity through automation, we’d love to work with
+    you. This role is based in San Francisco, CA. We use an in-person work model and
+    offer relocation assistance to new employees. What You’ll Do Design, implement,
+    and manage monitoring, alerting, and infrastructure resources (compute, storage,
+    networking) across 50+ global regions Lead incident management processes, including
+    postmortems, root cause analyses, and driving actionable improvements Automate
+    operational tasks and workflows, building tools and processes for capacity planning,
+    graceful rollouts, and safe data access to maintain high reliability and reduce
+    manual intervention Establish best practices for security, compliance, and reliability
+    and collaborate across teams to drive these principles throughout the software
+    lifecycle Optimize infrastructure costs through strategic capacity planning and
+    build-versus-buy decisions while maintaining system performance, reliability,
+    and functionality Provide technical mentorship and leadership, promoting best
+    practices and fostering team growth What You Have 10+ years of experience in Site
+    Reliability Engineering or similar roles supporting production environments, with
+    proven ability to mentor and guide technical teams Expertise in infrastructure
+    as code(IaC) tools (Pulumi, Terraform, CloudFormation, etc.) Deep familiarity
+    with observability tools (Datadog, Sentry, etc.) and incident response practices
+    (PagerDuty, IncidentIO, etc.) Proficiency with cloud infrastructure platforms
+    (Azure, GCP, AWS, etc.) Strong programming skills (Python, Bash, Go, or similar
+    languages) Proven track record of diagnosing complex system problems and implementing
+    durable solutions Solid understanding of CI/CD, Kubernetes, containerization,
+    networking, databases, and cloud security principles Excellent problem-solving
+    skills, meticulous attention to detail, and a commitment to operational excellence
+    Compensation Range $238,000 - $290,000 USD Please find our CA applicant privacy
+    notice here . #LI-AN2 Harvey is an equal opportunity employer and does not discriminate
+    on the basis of race, gender, sexual orientation, gender identity/expression,
+    national origin, disability, age, genetic information, veteran status, marital
+    status, pregnancy or related condition, or any other basis protected by law. We
+    are committed to providing reasonable accommodations to applicants with disabilities,
+    and requests can be made by emailing accommodations@harvey.ai'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.985384+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

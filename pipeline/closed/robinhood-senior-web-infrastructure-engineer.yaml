@@ -1,0 +1,113 @@
+id: robinhood-senior-web-infrastructure-engineer
+name: 'Robinhood Senior Web Infrastructure Engineer '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7542970?t=gh_src=&gh_jid=7542970
+  portal: greenhouse
+  location: Menlo Park, CA
+  location_class: us-onsite
+  description: <div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><div class="p-rich_text_section">
+    <h2><strong>About the team + role<br></strong></h2> <p>We are building an elite
+    team, applying frontier technologies to the world’s biggest financial problems.
+    We’re looking for bold thinkers. Sharp problem-solvers. Builders who are wired
+    to make an impact. Robinhood isn’t a place for complacency, it’s where ambitious
+    people do the best work of their careers. We’re a high-performing, fast-moving
+    team with ethics at the center of everything we do. Expectations are high, and
+    so are the rewards.</p> <p>We are looking for a Senior Web Infrastructure Engineer
+    to join our team. As a Senior Web Infrastructure Engineer, you will lead the web
+    development process and build products from inception to deployment. We also work
+    closely with cross-functional teams like design, product management, and internal
+    platforms to deliver high-impact features within multidisciplinary product teams.</p>
+    <p>This individual will be helping solve challenges on, a web first, high-performance
+    and world-class trading product centered on the web.</p> <p><strong>This role
+    is based in our Menlo Park, CA, or Toronto, ON office(s), with in-person attendance
+    expected at least 3 days per week.</strong></p> <p>At Robinhood, we believe in
+    the power of in-person work to accelerate progress, spark innovation, and strengthen
+    community. Our office experience is intentional, energizing, and designed to fully
+    support high-performing teams.</p> <br><strong>What you’ll do</strong></div> <ul
+    class="p-rich_text_list p-rich_text_list__bullet p-rich_text_list--nested" data-stringify-type="unordered-list"
+    data-list-tree="true" data-indent="0" data-border="0"> <li data-stringify-indent="0"
+    data-stringify-border="0">Own and deliver medium to large-scale infrastructure
+    projects that support and scale web development at Robinhood.</li> <li data-stringify-indent="0"
+    data-stringify-border="0">Build and maintain performant, reliable tooling for
+    CI/CD, build systems (e.g., Bazel), and local development environments.</li> <li
+    data-stringify-indent="0" data-stringify-border="0">Partner with product engineering
+    teams across Brokerage and Legend to identify and resolve frontend infrastructure
+    bottlenecks.</li> <li data-stringify-indent="0" data-stringify-border="0">Optimize
+    the performance, stability, and observability of our web platform and deployment
+    pipeline.</li> <li data-stringify-indent="0" data-stringify-border="0">Optimize
+    the performance and UX of key parts of our flagship web applications.</li> <li
+    data-stringify-indent="0" data-stringify-border="0">Drive initiatives that improve
+    developer velocity and satisfaction across the engineering org.</li> </ul> <div
+    class="p-rich_text_section"><strong>What you bring</strong></div> <ul class="p-rich_text_list
+    p-rich_text_list__bullet p-rich_text_list--nested" data-stringify-type="unordered-list"
+    data-list-tree="true" data-indent="0" data-border="0"> <li data-stringify-indent="0"
+    data-stringify-border="0">5+ years of experience in web development with a focus
+    on infrastructure, tooling, or platform engineering.</li> <li data-stringify-indent="0"
+    data-stringify-border="0">Strong programming skills in&nbsp;JavaScript, TypeScript,
+    and at least one other language.</li> <li data-stringify-indent="0" data-stringify-border="0">Experience
+    working on or closely with frontend infrastructure, CI/CD pipelines, build systems,
+    or internal tools.</li> <li data-stringify-indent="0" data-stringify-border="0">Demonstrated
+    ability to reduce developer friction and increase engineering productivity through
+    technical solutions.</li> <li data-stringify-indent="0" data-stringify-border="0">Comfortable
+    working in complex developer ecosystems with hundreds of developers as stakeholders
+    (experience with Bazel or similar build tools is a plus).</li> <li data-stringify-indent="0"
+    data-stringify-border="0">A mindset for building meta-level systems and tools
+    that make other engineers more effective.</li> </ul> <h2>&nbsp;</h2> <h2><strong>What
+    we offer</strong></h2> <ul> <li>Challenging, high-impact work to grow your career</li>
+    <li>Performance driven compensation with multipliers for outsized impact, bonus
+    programs, equity ownership, and 401(k) matching</li> <li>Best in class benefits
+    to fuel your work, including 100% paid health insurance for employees with 90%
+    coverage for dependents</li> <li>Lifestyle wallet - a highly flexible benefits
+    spending account for wellness, learning, and more</li> <li>
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.141167+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

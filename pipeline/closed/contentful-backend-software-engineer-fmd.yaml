@@ -1,0 +1,115 @@
+id: contentful-backend-software-engineer-fmd
+name: Contentful Backend Software Engineer (f/m/d)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Contentful
+  url: https://boards.greenhouse.io/contentful
+  application_url: https://job-boards.greenhouse.io/contentful/jobs/7725939
+  portal: greenhouse
+  location: Berlin, Berlin, Germany
+  location_class: international
+  description: <h2>About the opportunity</h2> <p>Contentful is building new foundational
+    capabilities to enable customers to build personalized, AI-enhanced digital experiences
+    at Enterprise scale. Our team’s mission is to enable digital teams across the
+    world to quickly build the best digital experiences imaginable. We're only scratching
+    the surface of our full potential and you have an opportunity to join us on the
+    incredible journey ahead.</p> <p>We are looking for a mid-level <strong>Backend
+    Software Engineer</strong> to join the Entity Architecture team, who are building
+    the systems enabling structured content to be connected, transformed and shaped
+    for different digital experiences and platforms. This team is at the heart of
+    our most important initiative, and are responsible for building the next-generation
+    services that will power customer experiences for years to come - serving millions
+    (if not billions) of customer requests a day.</p> <p>You will join a high-performing,
+    remote-first development team based in Europe. This role is ideal for engineers
+    who enjoy deep technical work and want to see their ideas come to life in real-world
+    product experiences. This is an incredible opportunity to join us at this exciting
+    time and do meaningful, challenging work whilst growing your career.</p> <h2>What
+    to expect?</h2> <ul> <li>Design and build core backend systems for dynamic content
+    resolution and delivery</li> <li>Define and evolve APIs, schemas, and versioning
+    strategies with long-term stability in mind, which can consistently cater to billions
+    of requests every month.</li> <li>Solve complex engineering and Content Modelling
+    problems, working across multiple layers and systems.</li> <li>Implement deterministic,
+    cache-aware execution pipelines with strong performance guarantees</li> <li>Develop
+    on our Platform with services like AWS, CloudFlare, Docker, Kubernetes, and Terraform.</li>
+    <li>Own the system in production, including observability, debugging and operational
+    reliability.</li> <li>Collaborate closely with product managers and other engineers
+    to integrate with a high-performance ecosystem.</li> </ul> <h2>What you need to
+    be successful?</h2> <ul> <li>Strong backend skills and knowledge of system design,
+    performance and maintainability.</li> <li>Experience with owning/maintaining and
+    improving complex, long-lived production systems.</li> <li>Experience with evolving
+    APIs and data models used by other teams or customers.</li> <li>Product mindset
+    with empathy for customers (content practitioners, marketers, and developers).</li>
+    <li>Ability to work effectively in ambiguity and make sound technical tradeoffs.</li>
+    <li>Strong teamwork skills, able to explain the reasoning behind your technical
+    choices and be open to diverse opinions</li> </ul> <h2>Bonus</h2> <ul> <li>Familiarity
+    with TypeScript, GraphQL and serverless applications.</li> <li>Familiarity with
+    declarative systems, data transformation pipelines and cache-heavy architecture.</li>
+    <li>Experience with content platforms, personalization, or similar systems.</li>
+    <li>Familiarity with AI tooling and leveraging it in your daily work.</li> </ul>
+    <h2>What’s in it for you?</h2> <ul> <li>Join an ambitious tech company reshaping
+    the way people build digital experiences</li> <li>Full-time employees receive
+    Stock Options for the opportunity to share in the success of our company</li>
+    <li>Comprehensive healthcare package covering 100% of monthly health premiums
+    for employees&nbsp; and 85% of costs for your dependents.&nbsp;</li> <li>Fertility
+    and family building benefits, including a lifetime reimbursable wallet to support
+    your growing family.</li> <li>We value<strong> Work-Life balance </strong>and<strong>
+    You Time</strong>!<strong> </strong>A generous amount of paid time off, including
+    vacation days, sick days, compassion days for loss,&nbsp; education days, and
+    volunteer days</li> <li><strong>Company paid parental leave</strong> to care for
+    and focus on your growing family&nbsp;</li> <li>Use your personal annual education
+    budget to improve your skills and grow in your career</li> <li>Enjoy a full range
+    of virtual and in-person events, including workshops, guest speakers, and fun
+    team activities, supporting learning and networking exchange beyond the usual
+    work duties&nbsp;</li> <li>An annual wellbeing stipend to care for your physical,
+    financial, or emotional health</li> <li>A monthly communication stipend and phone
+    hardware upgrade reimbursement.</li> <li>New hire office equipment stipend for
+    hybrid or distributed employees. Get the gear you need to work at your best.</li>
+    </ul><div class="content-conclusion"><h2><strong>Who are we?</strong></h2> <p>Contentful
+    is a leading <strong>digital experience platform</strong> that helps modern businesses
+    meet the growing demand for engaging, personalized content at scale. By blending
+    composability with native <strong>AI</strong> capabilities, Contentful enables
+    dynamic personalization, automated content delivery, and real-ti
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.078806+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

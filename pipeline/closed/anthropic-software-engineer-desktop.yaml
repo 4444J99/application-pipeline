@@ -1,0 +1,116 @@
+id: anthropic-software-engineer-desktop
+name: Anthropic Software Engineer, Desktop
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/4980420008
+  portal: greenhouse
+  location: San Francisco, CA | Seattle, WA
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>About Anthropic</strong></h2>
+    <p>Anthropic’s mission is to create reliable, interpretable, and steerable AI
+    systems. We want AI to be safe and beneficial for our users and for society as
+    a whole. Our team is a quickly growing group of committed researchers, engineers,
+    policy experts, and business leaders working together to build beneficial AI systems.</p></div><h2
+    class="heading"><strong>About the Role</strong></h2> <p>We''re looking for desktop
+    app engineers to join our Claude product team and help build native applications
+    that harness the transformative power of advanced language models. Your mission
+    will be to package our AI capabilities into elegant desktop experiences that put
+    unprecedented capabilities at users'' fingertips. You will work with a talented
+    team of engineers, researchers, and product specialists to design and implement
+    key components that bridge our AI technology with intuitive user interfaces. Join
+    us in this exciting mission to transform how people engage with our AI technology
+    and unlock new realms of human potential.</p> <p>Today, our app is mostly web-based
+    – but we’re eager to build the best possible version of Claude for macOS and Windows
+    with a mix of both native and web technologies. You might be a great fit for this
+    role if you’re up for the challenge of learning multiple programming languages.</p>
+    <p>We are more interested in strong engineers excited to learn new languages and
+    technologies to build the best possible experience than we are looking for people
+    with hands-on experience in Chromium, Electron, C++, or the various native macOS
+    and Windows APIs. We believe that strong engineers can learn whatever technology
+    is best suited to build the best possible experience – and we understand that
+    even the best engineers will have little experience with one of the operating
+    systems and areas we’d like to invest in.&nbsp;</p> <p>We’re looking for curious
+    engineers excited to figure out, with us, what AI on the desktop could do.</p>
+    <h2 class="heading"><strong>Responsibilities:</strong></h2> <ul> <li>Develop and
+    maintain the core infrastructure and features within <a class="text-accent-secondary-100
+    underline" href="http://Claude.ai" target="_blank"><u>Claude.ai</u></a> and in
+    our Electron-based desktop app using a typical web stack (TypeScript, React)</li>
+    <li>Use native code (Rust, Swift, C++) to bring advanced features to the desktop
+    app, connecting Claude to macOS and Windows</li> <li>Optimize application performance,
+    memory usage, and startup time across platforms</li> <li>Design and build robust
+    update mechanisms and deployment pipelines</li> <li>Create monitoring tools to
+    track application performance and user experience</li> <li>Build a strong intuition
+    for how advanced LLMs could be most useful on your computer, augmenting humans
+    in their work</li> </ul> <h2 class="heading"><strong>You may be a good fit if
+    you have:</strong></h2> <ul> <li>Have 5+ years of experience as a software engineer,
+    with strong emphasis on desktop application development</li> <li>Have practical
+    experience with Electron and deep understanding of its architecture</li> <li>Possess
+    strong JavaScript/TypeScript skills and experience with modern frontend frameworks</li>
+    <li>Take a product-focused approach and care about building solutions that are
+    robust, scalable, and easy to use</li> <li>Have experience with native module
+    development in C++ to extend application capabilities</li> <li>Understand macOS
+    and/or Windows platform-specific technologies and development patterns</li> <li>Have
+    experience with cross-platform application packaging, code signing, and distribution</li>
+    <li>Thrive in a fast-paced, collaborative environment and enjoy working closely
+    with cross-functional teams</li> </ul> <p>We’re working with a large number of
+    technologies - and you might be an excellent candidate even if you’ve only worked
+    with a subset of them. An ideal candidate may have never used Electron before
+    but does have hands-on experience in working with Chromium’s C++. Similarly, a
+    great candidate may have worked on Electron apps, but hasn’t used C++ or Swift
+    before.</p> <p>We understand that even the best engineers will have more experience
+    with some platforms than others.</p> <h2 class="heading"><strong>Strong candidates
+    may also have experience with:</strong></h2> <ul> <li>Experience working on and
+    building operating systems, browsers, or deeply OS-integrated software (screensharing,
+    video-calling, game engines, etc)</li> <li>Experience integrating and working
+    with AI/ML models and understanding their capabilities</li> <li>Demonstrated success
+    implementing cross-platform development strategies</li> <li>Vision for the future
+    of AI-powered desktop applications and a drive to make that vision a reality</li>
+    <li>Have experience with IPC (Inter-Process Communication) and security in desktop
+    applications</li> </ul> <p><em><strong>Deadline to apply: </strong>None. Applications
+    will be revie'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.878137+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

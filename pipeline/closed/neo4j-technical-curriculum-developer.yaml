@@ -1,0 +1,113 @@
+id: neo4j-technical-curriculum-developer
+name: Neo4j Technical Curriculum Developer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Neo4j
+  url: https://boards.greenhouse.io/neo4j
+  application_url: https://boards.greenhouse.io/neo4j/jobs/4651195006?gh_jid=4651195006
+  portal: greenhouse
+  location: London
+  location_class: international
+  description: '<div class="content-intro"><div><span style="font-size: 18pt;"><strong>About
+    Neo4j:</strong></span></div> <div> <p>Neo4j is the graph intelligence platform
+    that transforms data into knowledge to power the next generation of intelligent
+    applications and AI systems. It includes enterprise-ready knowledge graphs for
+    accurate, explainable, and governed AI; the most comprehensive, trusted, and easy-to-deploy
+    graph capabilities across any environment and data source; and an unmatched ecosystem
+    trusted by 84 of the Fortune 100 and supported by the world’s largest graph community.&nbsp;Intelligence
+    that works. Results that matter.</p> <p>Built to work everywhere and integrate
+    with everything across every cloud for dynamic, personalized, and autonomous AI
+    systems. We deliver quicker results, contextual knowledge, and solutions that
+    impact customers and employees across the business.</p> </div> <div><span style="font-size:
+    18pt;"><strong>Our Vision:&nbsp;</strong></span></div> <div> <p><span style="font-weight:
+    400;">At Neo4j, we have always strived to help the world make sense of data.&nbsp;&nbsp;</span></p>
+    <p><span style="font-weight: 400;">As business, society and knowledge become increasingly
+    connected, our technology promotes innovation by helping organizations to find
+    and understand data relationships. We created, drive and lead the graph database
+    category, and we’re disrupting how organizations leverage their data to innovate
+    and stay competitive.</span></p> </div></div><h2><strong>The Role</strong></h2>
+    <p>Neo4j GraphAcademy provides free, self-paced, hands-on online training paths
+    for Developers, Data Engineers, and Data Scientists to achieve success with Neo4j.</p>
+    <p>We are looking for an enthusiastic Curriculum Developer to create engaging,
+    hands-on online training courses, videos, and technical content that educate and
+    empower Neo4j users of all experience levels.</p> <p>You can view our existing
+    course catalogue and get a feel for how we teach at <a href="http://graphacademy.neo4j.com">graphacademy.neo4j.com</a>.</p>
+    <h2><strong>Key Responsibilities</strong></h2> <ul> <li>Design and produce high-quality
+    technical content (courses, videos, sample applications, diagrams) using existing
+    Neo4j Documentation.</li> <li>Identify gaps in the course catalog, develop courses
+    to cover them, and build clear learning paths for different graph use cases.</li>
+    <li>Provide feedback on Neo4j offerings and course catalog to improve the user
+    experience.</li> <li>Collaborate with the distributed Developer Relations, Marketing,
+    Product Management, Solutions Engineering, and R&amp;D teams.</li> <li>Be comfortable
+    expressing complex subject matter clearly and simply, and working on camera.</li>
+    </ul> <h2><strong>Qualifications</strong></h2> <ul> <li><strong>Must Haves:</strong></li>
+    <ul> <li>A background in education or technical writing.</li> <li>Able to demonstrate
+    experience creating video content that uses visual aids to break complex content
+    down into easy-to-understand content.</li> <li>Ability to research and develop
+    training materials for users of all ability levels.</li> <li>An empathy for users
+    and their learning experience.</li> <li>A strong command of the English language
+    (writing and speaking).</li> <li>Experience working remotely.</li> </ul> <li><strong>Nice
+    to Have:</strong></li> <ul> <li>Experience with Generative AI, Large Language
+    Models, and GenAI frameworks.</li> <li>Experience with software development, databases,
+    data engineering, or machine learning.</li> </ul> </ul> <h2><strong>Specialities</strong></h2>
+    <p>We are seeking educators with expertise in one or more of the following domains.
+    Candidates may have direct professional experience in the field or a background
+    in technical education within these areas.</p> <ul> <li><strong>Data Ecosystem
+    Integration:</strong> Experience integrating or migrating data across major cloud
+    platforms and data providers, such as Snowflake, Databricks, and Microsoft Fabric.</li>
+    <li><strong>Generative AI (GenAI):</strong> Deep expertise in GenAI, including
+    building applications that utilize Retrieval-Augmented Generation (RAG) and Context
+    Engineering principles.</li> <li><strong>DevOps and System Administration:</strong>
+    Experience in DevOps practices and administering large-scale systems.</li> </ul>
+    <p>&nbsp;</p><div class="content-conclusion"><div><span style="font-size: 18pt;"><strong>Why
+    Join Neo4j?</strong></span></div> <div> <p>Neo4j is, without question, the most
+    popular graph intelligence platform in the world. We have customers in every industry
+    globally, and our products are a proven product/market fit. Joining our team is
+    an opportunity to shape the future of data and analytics. Below are just a few
+    exciting facts about Neo4j.&nbsp;</p> <ul> <li>Neo4j is one of the fastest-scaling
+    technology companies in this industry. It <a href="https://neo4j.com/press-releases/neo4j-revenue-milestone-2024/">recently
+    surpassed $200M</a> in annual recurring revenue (ARR), dou'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.743873+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

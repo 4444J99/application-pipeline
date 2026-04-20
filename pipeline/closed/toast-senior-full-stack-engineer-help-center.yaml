@@ -1,0 +1,115 @@
+id: toast-senior-full-stack-engineer-help-center
+name: Toast Senior Full Stack Engineer, Help Center
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7642162
+  portal: greenhouse
+  location: Dublin
+  location_class: international
+  description: <p>Toast creates technology to help restaurants and local businesses
+    succeed in a digital world, helping business owners operate, increase sales, engage
+    customers, and keep employees happy.</p> <p><strong>The Help Center team</strong>
+    is transforming how Toast customers get support through self-service. We build
+    the systems and experiences that power knowledge discovery, case creation, support
+    workflows, and proactive guidance across Toast’s product surfaces—helping restaurants
+    find the right answers quickly, resolve issues independently when possible, and
+    seamlessly connect to the right support channel when needed.</p> <p>This is a
+    high-leverage domain at the intersection of product, support, and AI. The Help
+    Center is not just a content site—it’s a dynamic, deeply integrated platform that
+    connects customer context (account, devices, subscriptions), intelligent knowledge
+    retrieval via Toast IQ, and our omnichannel support infrastructure. The systems
+    we build directly influence deflection, resolution speed, customer effort, and
+    overall satisfaction at scale.</p> <p>As a Senior Software Engineer on Help Center,
+    <strong>you’ll operate as a full-stack engineer building customer-facing experiences
+    and the backend services that power them. </strong>You’ll design and evolve APIs,
+    workflows, and UI experiences that shape how millions of support interactions
+    begin—ensuring they are context-aware, performant, resilient, and deeply integrated
+    with Toast’s broader support ecosystem.</p> <p>If you’re motivated by building
+    highly visible product surfaces, excited to connect frontend experience with scalable
+    backend architecture, and eager to shape the future of intelligent self-service
+    at Toast, this role offers meaningful scope and impact.</p> <p>&nbsp;</p> <p><strong>A
+    day in the life (Responsibilities)</strong></p> <ul> <li>Design, build, deploy,
+    and maintain the Help Center experience through full stack development&nbsp;</li>
+    <li>Collaborate with UX, PM, QA and Engineering to define, design, and build best-in-class
+    solutions in a complex and fast-moving environment</li> <li>Champion best practices
+    for development, deployment and quality life-cycles</li> <li>Mentor and support
+    other engineers through code reviews, pairing, and technical guidance, contributing
+    to a culture of quality and continuous improvement.</li> <li>Participate in technical
+    design and architecture discussions, helping shape team-level technical direction
+    and tradeoffs.</li> <li>Collaborate with team to plan and estimate work</li> </ul>
+    <p>&nbsp;</p> <p><strong>What you'll need to thrive (Requirements)<br></strong></p>
+    <ul> <li>5+ years of experience in software engineering, with a strong background
+    building and maintaining production systems using Java, Kotlin, or other object-oriented
+    languages.</li> <li>Strong hands-on experience with modern frontend frameworks
+    such as React&nbsp;</li> <li>Proficient with modern API standards and technologies
+    (e.g. REST, GraphQL)</li> <li>Proficient with AI tooling such as Cursor, Claude,
+    and MCP servers</li> <li>Proven ability to own complex features or projects end-to-end,
+    from design through production and iteration.</li> <li>Demonstrated ability to
+    deliver high-impact, scalable solutions in complex, multi-product environments</li>
+    <li>Strong leadership and mentoring skills</li> <li>Ability to collaborate effectively
+    across teams and communicate technical concepts clearly to both technical and
+    non-technical partners.</li> <li>Focused on delivering positive impact for Toast
+    customers</li> <li>Passionate about driving innovation and continuous improvement
+    of our digital support experience <br><br>#LI-HYBRID<br>#BI-Hybrid</li> </ul>
+    <p data-pm-slice="1 1 []"><strong>AI at Toast</strong></p> <p>At Toast, one of
+    our company values is that we're hungry to build and learn. We believe learning
+    new AI tools empowers us to build for our customers faster, more independently,
+    and with higher quality. We provide these tools across all disciplines, from Engineering
+    and Product to Sales and Support, and are inspired by how our Toasters are already
+    driving real value with them. The people who thrive here are those who embrace
+    changes that let us build more for our customers; it’s a core part of our culture.</p>
+    <p data-pm-slice="1 1 []"><strong>Our Total Rewards Philosophy&nbsp;<br></strong>We
+    strive to provide competitive compensation and benefits programs that help to
+    attract, retain, and motivate the best and brightest people in our industry. Our
+    total rewards package goes beyond great earnings potential and provides the means
+    to a healthy lifestyle with the flexibility to meet Toasters’ changing needs.
+    Learn more about our benefits at&nbsp;<a class="c-link" href="https://careers.toasttab.com/toast-benefits"
+    target="_blank" data-stringify-link="https://careers.toasttab.com/toast-benefits"
+    data-sk="tooltip_parent" data-remove-tab-index="true">https://careers.toasttab.com/toast-benefits</a>.</p><div
+    class="content-conclusio
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.320557+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,116 @@
+id: notion-solutions-engineer-enterprise-amer
+name: Notion Solutions Engineer - Enterprise - AMER
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Notion
+  url: https://jobs.ashbyhq.com/notion
+  application_url: https://jobs.ashbyhq.com/notion/b0c0afb3-f075-47c7-9a8e-428032b3bb20
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: 'About Us: Notion helps you build beautiful tools for your life’s work.
+    In today''s world of endless apps and tabs, Notion provides one place for teams
+    to get everything done, seamlessly connecting docs, notes, projects, calendar,
+    and email—with AI built in to find answers and automate work. Millions of users,
+    from individuals to large organizations like Toyota, Figma, and OpenAI, love Notion
+    for its flexibility and choose it because it helps them save time and money. In-person
+    collaboration is essential to Notion''s culture. We require all team members to
+    work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor
+    Days. Certain teams or positions may require additional in-office workdays. About
+    the Role: Notion’s sales motion is evolving from product‑led to sales‑led. Many
+    customers start self‑serve, then partner with our team as they scale. As a Solutions
+    Engineer focused on our Enterprise segment, you’ll work with our largest prospects
+    and customers to drive complex evaluations, design scalable architectures, and
+    guide executive stakeholders through the journey from pilot to global rollout.
+    You’ll partner closely with Account Executives and cross-functional teams to run
+    deep discovery, deliver tailored demos and POCs, and advise on security, governance,
+    and integrations that meet enterprise standards. You’ll also help shape our internal
+    tooling, content, and processes while staying close to customers. What You''ll
+    Achieve: Partner with AEs on strategic opportunities in the Enterprise segment
+    to understand goals, risks, and success criteria across business and technical
+    stakeholders Lead discovery and design solution approaches in Notion that span
+    knowledge management, projects, and databases, including data modeling and information
+    architecture at scale Deliver persuasive executive‑level presentations & demos,
+    and facilitate hands‑on pilots/POCs that prove value, adoption, and measurable
+    ROI Guide enterprise security, privacy, and procurement processes including RFPs,
+    DPA reviews, and risk assessments in partnership with Security and Legal Build
+    proof‑of‑concepts and example workspaces that showcase how Notion consolidates
+    point tools and enables cross‑functional workflows Capture and communicate structured
+    product feedback and enterprise requirements to Product and Engineering; influence
+    roadmap with clear use cases and impact Contribute enablement content for sales
+    and SE teams, including demo assets, talk tracks, competitive insights, and repeatable
+    playbooks for enterprise use cases Document patterns, field learnings, and best
+    practices to strengthen our internal knowledge base and accelerate future deals
+    Skills You''ll Need to Bring: 6+ years in a customer‑facing technical role such
+    as Solutions/Sales Engineer, Solution Consultant, or similar, ideally at a high‑growth
+    SaaS company Track record supporting complex enterprise deals with multiple stakeholders,
+    security reviews, and procurement cycles Exceptional communication and storytelling
+    skills, from white-boarding architectures to executive‑level value framing Strong
+    project leadership with the ability to run multiple evaluations in parallel, coordinate
+    cross‑functional teams, and deliver crisp next steps Adaptable, resourceful, and
+    comfortable operating in a fast‑changing environment You don’t need to be an AI
+    expert, but you’re curious and willing to adopt AI tools to work smarter and deliver
+    better results Nice to Haves: Hands‑on experience with Notion as a power user
+    or workspace admin Experience working in early stage companies & building processes
+    Exposure to AI/automation use cases and platform extensibility, including AI Agents
+    and integrations with AI systems like ChatGPT, Claude, Gemini, and Salesforce
+    Experience leading RFPs, security questionnaires, and enterprise procurement processes
+    Background in management consulting, solution architecture, or change management
+    for large deployments We hire talented and passionate people from a variety of
+    backgrounds because we want our global employee base to represent the wide diversity
+    of our customers. If you’re excited about a role but your past experience doesn’t
+    align perfectly with every bullet point listed in the job description, we still
+    encourage you to apply. If you’re a builder at heart, share our company values,
+    and enthusiastic about making software toolmaking ubiquitous, we want to hear
+    from you. Notion is proud to be an equal opportunity employer. We do not discriminate
+    in hiring or any employment decision based on race, color, religion, national
+    origin, age, sex (including pregnancy, childbirth, or related medical conditions),
+    marital status, ancestry, physical or mental disability, genetic information,
+    veteran status, gender identity or expression, sexual orientation, or other applicable
+    legally protected characteristic. Notion considers qualified applicants with criminal
+    histories, consistent with applicable federal, state and local law. Notion is
+    also committed '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.742688+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

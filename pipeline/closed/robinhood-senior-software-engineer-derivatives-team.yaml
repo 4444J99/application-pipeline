@@ -1,0 +1,115 @@
+id: robinhood-senior-software-engineer-derivatives-team
+name: Robinhood Senior Software Engineer, Derivatives Team
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7739375?t=gh_src=&gh_jid=7739375
+  portal: greenhouse
+  location: London, UK
+  location_class: international
+  description: <div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><p data-start="0" data-end="25"><strong
+    data-start="0" data-end="25">About the team + role</strong></p> <p data-start="27"
+    data-end="471">We are building an elite team, applying frontier technologies to
+    the world’s biggest financial problems. We’re looking for bold thinkers. Sharp
+    problem-solvers. Builders who are wired to make an impact. Robinhood isn’t a place
+    for complacency, it’s where ambitious people do the best work of their careers.
+    We’re a high-performing, fast-moving team with ethics at the center of everything
+    we do. Expectations are high, and so are the rewards.</p> <p data-start="473"
+    data-end="947">The Derivatives team is building a regulated exchange for perpetual
+    markets, focused on scaling infrastructure to support rapid product expansion
+    and increasing trading demand. The team partners closely with product, infrastructure,
+    and security groups to deliver reliable systems that support new contract launches
+    and market growth. Work is centered on backend systems that prioritize correctness,
+    performance, and system reliability in high-volume trading environments!</p> <p
+    data-start="949" data-end="1444">As a Senior Software Engineer, you will design
+    and develop backend systems that power derivatives trading, including order handling,
+    execution workflows, and risk-sensitive processes. You will contribute to improving
+    system performance, ensuring data accuracy, and supporting platform scalability
+    as trading volume grows. This role involves working on systems where low latency
+    and high throughput are essential, and where precise execution is critical to
+    user experience and market integrity.</p> <p data-start="1446" data-end="1552">This
+    role is based in our London office(s), with in-person attendance expected at least
+    3 days per week.</p> <p data-start="1554" data-end="1782">At Robinhood, we believe
+    in the power of in-person work to accelerate progress, spark innovation, and strengthen
+    community. Our office experience is intentional, energizing, and designed to fully
+    support high-performing teams.</p> <p data-start="1784" data-end="1858">Requires
+    participation in an on-call rotation to support business needs.</p> <p data-start="1865"
+    data-end="1883"><strong data-start="1865" data-end="1883">What you’ll do</strong></p>
+    <p data-start="1885" data-end="2474">● Design and build backend services that
+    support derivatives trading, including order processing and execution workflows<br
+    data-start="2005" data-end="2008">● Improve system latency and throughput by analyzing
+    performance bottlenecks and implementing targeted optimizations<br data-start="2124"
+    data-end="2127">● Maintain and enhance systems that support trading accuracy,
+    including data consistency and risk-related processes<br data-start="2242" data-end="2245">●
+    Work with product, infrastructure, and security teams to support new contract
+    launches and platform expansion<br data-start="2356" data-end="2359">● Monitor
+    system performance and reliability, using metrics to guide improvements in stability
+    and data integrity</p> <p data-start="2481" data-end="2499"><strong data-start="2481"
+    data-end="2499">What you bring</strong></p> <p data-start="2501" data-end="3131">●
+    You have 5+ years of experience building backend systems in production environments<br
+    data-start="2586" data-end="2589">● You have experience designing systems that
+    require low latency and high throughput<br data-start="2673" data-end="2676">●
+    You are familiar with cloud infrastructure, including AWS services<br data-start="2744"
+    data-end="2747">● You have experience working with relational databases such as
+    MySQL<br data-start="2816" data-end="2819">● You have worked on trading systems
+    or other distributed systems where performance and reliability are critical<br
+    data-start="2931" data-end="2934">● You communicate clearly and approach problems
+    with a structured, solution-oriented mindset<br data-start="3026" data-end="3029">●
+    You understand crypto derivatives markets, including perpetual futures and their
+    trading lifecycle</p> <p data-start="3138" data-end="3155"><strong data-start="3138"
+    data-end="3155">What we offer</strong></p> <p data-start="3157" data-end="3916">●
+    Challenging, high-impact work to grow your career<br data-start="3208" data-end="3211">●
+    Performance driven compensation with multipliers for outsized impact, bonus programs,
+    and equity ownership<br data-start="3319" data-end="3322">● Top tier benefits
+    to fuel your work, including supplemental health in
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-01'
+  posting_date: '2026-04-01'
+  date_source: first_published
+  date_added: '2026-04-01'
+  discovered: '2026-04-01T10:18:24.681280+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

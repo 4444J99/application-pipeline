@@ -1,0 +1,87 @@
+id: pika-software-engineer-backend
+name: Pika Software Engineer, Backend
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Pika
+  url: https://jobs.ashbyhq.com/pika
+  application_url: https://jobs.ashbyhq.com/pika/5b28c8fa-440b-4cdb-a4b9-8bd86557c4e9
+  portal: ashby
+  location: Palo Alto HQ
+  location_class: us-onsite
+  description: About the Role We're looking for a versatile Backend Engineer to help
+    shape the core infrastructure that powers Pika’s creative tools. You’ll play a
+    key role in building robust backend systems, owning product logic, and supporting
+    everything from internal tools to customer-facing features. If you enjoy solving
+    hard technical problems, thrive in fast-paced environments, and love wearing multiple
+    hats — this role is for you. What You’ll Do Architect and build scalable backend
+    services to power our web and mobile products Own backend logic end-to-end — from
+    database modeling to API design and infrastructure decisions Support internal
+    tooling and operational automation to improve team workflows Work closely with
+    frontend engineers, product managers, and designers to build features that users
+    love Debug, optimize, and future-proof our systems for scale and reliability Stay
+    up to date with backend technologies and propose new approaches where appropriate
+    What We’re Looking For Broad engineering experience, with a strong portfolio of
+    production-ready backend and/or full-stack projects Proficiency in modern backend
+    technologies (e.g., Node.js, Python, Go, etc.) and frameworks (e.g., Express,
+    FastAPI) Strong understanding of database design and operations (SQL, NoSQL, data
+    modeling, performance tuning) Experience with APIs, cloud infrastructure (e.g.,
+    AWS, GCP), and CI/CD workflows Comfort building internal tools or automation pipelines
+    in service of product and team productivity Ability to thrive in a fast-moving,
+    collaborative environment Clear communication skills and a team-first mindset
+    About Pika At Pika, we’re crafting a future where video creation is seamless,
+    intuitive, and universally accessible. Our vision is set on a world where videos
+    transcend entertainment, serving as a canvas for everyone's unique expression.
+    Harnessing AI's transformative power, we aim to dismantle the technical barriers
+    that have traditionally made video production an exclusive field. It’s about building
+    the best technology that upholds the power of creativity—not just within our products
+    but as an integral part of our culture. We’re a small team of energetic, smart
+    and curious individuals. We value efficiency, collaboration, and creativity. We
+    seek new team members who bring sharp intellect, a strong work ethic, and the
+    ambition to make an impact. Here, you'll find significant room for career advancement,
+    supported by a culture that nurtures both individual and collective development.
+    Our headquarters is based in Palo Alto, CA, and we work from the office 5 days
+    a week.
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.026604+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

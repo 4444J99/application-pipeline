@@ -1,0 +1,79 @@
+id: perplexity-senior-search-engine-developer-search-core
+name: Perplexity Senior Search Engine Developer - Search Core
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/27aa1a14-bc59-4613-a65a-38598695076f
+  portal: ashby
+  location: Belgrade
+  location_class: unknown
+  description: 'Perplexity is looking for a highly skilled Senior or Expert Systems
+    Engineer to join our Search Core team. This role is critical to building next-generation
+    search products and technologies. You will help drive key decisions around the
+    architecture, design, and implementation of foundational components in our technical
+    stack. Responsibilities Design and build core search engine components, including
+    indexing pipelines, retrieval algorithms, and ranking systems that operate at
+    the scale of billions of pages Develop streaming and batch data processing systems
+    for search index construction in a high-load environment Push the limits of hardware
+    performance through low-level optimizations and systems-level tuning Tackle challenges
+    in multithreading, concurrency, and system-level optimization Qualifications 3+
+    years of hands-on experience in systems programming (Rust, C++, C, or similar)
+    Ownership of full project lifecycle — you don''t just write a fast inner loop,
+    you care about how the system is built, deployed, operated, and scaled in production
+    Knowledge of Python or other scripting languages Passion for writing clean, efficient,
+    and scalable systems-level code Strong knowledge of algorithms and data structures,
+    and the ability to apply them effectively Deep understanding of multithreading,
+    including various approaches, challenges, and trade-offs Experience building high-load,
+    distributed, and hardware-adjacent services Solid understanding of Linux internals
+    (syscalls, networking stack, memory model, kernel tuning) Familiarity with low-level
+    optimization techniques (memory management, cache efficiency, SIMD, profiling)
+    Preferred Qualifications Experience developing core components of search engines,
+    databases, or information retrieval systems Understanding of search fundamentals:
+    indexing, query parsing, ranking, and relevance Experience with trading systems
+    or other latency-sensitive real-time systems Familiarity with cloud services,
+    Kubernetes, and AWS infrastructure'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.904680+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

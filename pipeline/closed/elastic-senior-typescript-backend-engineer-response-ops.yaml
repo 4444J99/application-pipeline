@@ -1,0 +1,114 @@
+id: elastic-senior-typescript-backend-engineer-response-ops
+name: Elastic Senior TypeScript Backend Engineer - Response Ops
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Elastic
+  url: https://boards.greenhouse.io/elastic
+  application_url: https://jobs.elastic.co/jobs?gh_jid=7743111&gh_jid=7743111
+  portal: greenhouse
+  location: United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Elastic, the Search AI Company, enables
+    everyone to find the answers they need in real time, using all their data, at
+    scale — unleashing the potential of businesses and people. The Elastic Search
+    AI Platform, used by more than 50% of the Fortune 500, brings together the precision
+    of search and the intelligence of AI to enable everyone to accelerate the results
+    that matter. By taking advantage of all structured and unstructured data — securing
+    and protecting private information more effectively — Elastic’s complete, cloud-based
+    solutions for search, security, and observability help organizations deliver on
+    the promise of AI.</p></div><h3><strong>What is The Role</strong></h3> <p>Kibana
+    is the UI and frontend for everything we do at Elastic. It is the application
+    platform that powers our Elastic Observability, Security, and Search Solutions.
+    It provides building blocks and user experiences that delight our users, accelerate
+    development, and optimize our operations. Deployed both in the cloud and on-premises,
+    it is one of the largest open-source projects, used to answer millions of complex
+    questions with large data sets at scale.</p> <p>If you are a very strong JavaScript
+    backend developer looking for new and hard backend challenges, you will want to
+    hear more about this role. We are looking for a top Engineer who wants to drive
+    and implement complex technical solutions in the Alerting and Reporting Engines
+    area.</p> <p>If this sounds like you, then let''s talk. Here are some specifics:</p>
+    <h3><strong>What You Will Be Doing</strong></h3> <ul> <li>You will contribute
+    to the development of our hosted and on-premise offerings.</li> <li>You''ll be
+    part of a close-knit team of phenomenal engineers who mentor, support, and challenge
+    each other.</li> <li>You will implement technical solutions that underpin Kibana
+    Alerting and Reporting success and the Observability and Security solutions, while
+    collaborating with other Operations, Engineering, and Documentation teams.</li>
+    <li>Assist in delivering and supporting a highly scalable cloud offering.</li>
+    <li>Work on a codebase that consists primarily of APIs and server-side frameworks.</li>
+    </ul> <h3>What You Bring</h3> <ul> <li>7+ years of backend design &amp; development
+    experience</li> <li>Seasoned and confident engineer with JavaScript, Typescript,
+    and Node.js.</li> <li>Experience with platform and SaaS engineering</li> <li>Excellent
+    understanding of distributed systems</li> <li>Technical leadership and mentoring
+    experience</li> <li>Ability to work with a worldwide team in a distributed work
+    environment</li> <li>Passionate about JavaScript or web development in general</li>
+    </ul><div class="content-pay-transparency"><div class="pay-input"><div class="description"><p><span
+    style="font-weight: 400;"><br>Compensation for this role is in the form of base
+    salary.&nbsp; This role does not have a variable compensation component.&nbsp;&nbsp;<br></span></p>
+    <p><span style="font-weight: 400;">The typical starting salary range for new hires
+    in this role is listed below.&nbsp; In select locations (including Seattle WA,
+    Los Angeles CA, the San Francisco Bay Area CA, and the New York City Metro Area),
+    an alternate range may apply as specified below.&nbsp;</span></p> <p><span style="font-weight:
+    400;">These ranges represent </span><span style="font-weight: 400;">the lowest
+    to highest salary we reasonably and in good faith believe we would pay for this
+    role at the time of this posting.&nbsp; We may ultimately pay more or less than
+    the posted range, and the ranges may be modified in the future.&nbsp;&nbsp;</span></p>
+    <p><span style="font-weight: 400;">An employee''s position within the salary range
+    will be based on several factors including, but not limited to, relevant education,
+    qualifications, certifications, experience, skills, geographic location, performance,
+    and business or organizational needs.</span></p> <p><span style="font-weight:
+    400;">Elastic believes that employees should have the opportunity to share in
+    the value that we create together for our shareholders. Therefore, in addition
+    to cash compensation, this role is currently eligible to participate in Elastic''s
+    stock program.&nbsp; Our total rewards package also includes a company-matched
+    401k with dollar-for-dollar matching up to 6% of eligible earnings, along with
+    a range of other benefits offered with a holistic emphasis on employee well-being.</span></p></div><div
+    class="title">The typical starting salary range for this role is:</div><div class="pay-range"><span>$159,800</span><span
+    class="divider">&mdash;</span><span>$252,800 USD</span></div></div><div class="pay-input"><div
+    class="title">The typical starting salary range for this role in the select locations
+    listed above is:</div><div class="pay-range"><span>$191,900</span><span class="divider">&mdash;</span><span>$303,500
+    USD</span></div></div></div><div class="content-conclusion"><h2><strong>Additional
+    Information - We Take Care of O'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.578363+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

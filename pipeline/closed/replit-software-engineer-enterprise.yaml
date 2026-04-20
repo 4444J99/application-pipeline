@@ -1,0 +1,109 @@
+id: replit-software-engineer-enterprise
+name: Replit Software Engineer, Enterprise
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Replit
+  url: https://jobs.ashbyhq.com/replit
+  application_url: https://jobs.ashbyhq.com/replit/b7f12834-78d2-424d-bf83-0c942815fbf7
+  portal: ashby
+  location: Foster City, CA (Hybrid) In office M,W,F
+  location_class: us-onsite
+  description: 'Replit is the agentic software creation platform that enables anyone
+    to build applications using natural language. With millions of users worldwide,
+    Replit is democratizing software development by removing traditional barriers
+    to application creation. About the Role We''re looking for a Product Engineer
+    to join as an early member of our new Enterprise team. The consumer story has
+    demonstrated Replit’s magic and now we are seeing use cases emerge in the B2B
+    space that are ripe for innovation and growth. It is a critical area for our success
+    this year and beyond. You can be part of the journey to build and scale features
+    that help teams and organizations of any size be more productive with Replit.
+    This is an opportunity to make meaningful impact and shape the culture and processes
+    from the ground up. Working closely with cross-functional teams including product
+    managers, designers, and AI engineers, you''ll craft solutions that enable our
+    customers to build, deploy, and share their applications seamlessly. This role
+    requires both technical expertise and a deep understanding of user needs to deliver
+    features that make an impact. In this role you will: Build and own features across
+    the full stack that serve enterprise customers, from backend services to user-facing
+    interfaces Design and implement scalable solutions for teams and organizations.
+    This includes enterprise-readiness features like authentication, permissions,
+    security, and compliance, as well as tools that improve team collaboration and
+    drive adoption within an organization. Work directly with customers to understand
+    their needs and iterate on solutions Contribute to technical decisions and architecture
+    for the Enterprise platform Collaborate closely with Product, Design, and other
+    Engineering teams to deliver high-quality experiences Mentor other engineers and
+    raise the bar for engineering excellence Ship quickly and iterate based on customer
+    feedback and usage data Required skills and experience: Strong full stack engineering
+    skills with experience shipping production code Experience building B2B or enterprise
+    software products Comfort working across the stack - from databases and APIs to
+    frontend frameworks Strong product sense and ability to translate customer needs
+    into technical solutions Experience with modern web technologies (React, Node.js,
+    TypeScript, or similar) Track record of shipping high-impact features and taking
+    ownership of projects Excellent communication skills and ability to collaborate
+    with cross-functional teams Curiosity and willingness to learn new technologies
+    and domains Nice to Have: Experience with enterprise authentication and authorization
+    systems (SSO, SAML, SCIM) Experience with AI/LLM integration in applications Understanding
+    of developer tools, internal tools, and workflows Previous experience in a high-growth
+    startup environment Contributions to open-source projects Tools + Tech Stack for
+    this role: React, TypeScript, CSS, GraphQL, Node.js, and Postgres This role may
+    not be a fit if: You prefer working exclusively on backend systems without user
+    interaction You''re uncomfortable with the pace and changing priorities of a startup
+    environment You require highly structured requirements and aren''t comfortable
+    with ambiguity This is a full-time role that is held from our Foster City, CA
+    office. The role has an in-office requirement of Monday, Wednesday, and Friday.
+    Full-Time Employee Benefits Include: 💰 Competitive Salary & Equity 💹 401(k) Program
+    with a 4% match ⚕️ Health, Dental, Vision and Life Insurance 🩼 Short Term and
+    Long Term Disability 🚼 Paid Parental, Medical, Caregiver Leave 🚗 Commuter Benefits
+    📱 Monthly Wellness Stipend 🧑‍💻 Autonomous Work Environment 🖥 In Office Set-Up
+    Reimbursement 🏝 Flexible Time Off (FTO) + Holidays 🚀 Quarterly Team Gatherings
+    ☕ In Office Amenities Want to learn more about what we are up to? Meet the Replit
+    Agent Replit: Make an app for that Replit Blog Amjad TED Talk Interviewing + Culture
+    at Replit Operating Principles Reasons not to work at Replit To achieve our mission
+    of making programming more accessible around the world, we need our team to be
+    representative of the world. We welcome your unique perspective and experiences
+    in shaping this product. We encourage people from all kinds of backgrounds to
+    apply, including and especially candidates from underrepresented and non-traditional
+    backgrounds.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.960072+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

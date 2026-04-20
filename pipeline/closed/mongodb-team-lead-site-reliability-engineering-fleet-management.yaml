@@ -1,0 +1,117 @@
+id: mongodb-team-lead-site-reliability-engineering-fleet-management
+name: MongoDB Team Lead, Site Reliability Engineering - Fleet Management
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7650199
+  portal: greenhouse
+  location: Austin; Boston; Chicago; Denver; Miami; New York City; San Francisco;
+    Seattle
+  location_class: us-onsite
+  description: '<h3>The Team</h3> <p>Platform Engineering is the department within
+    SRE that is responsible for a range of critical infrastructure and operational
+    functions that support the broader engineering organization. Among these are our
+    multi-cloud-provider Kubernetes infrastructure, networking, load balancing (including
+    our public-facing edge and internal service mesh), and observability and alerting
+    systems.</p> <p>The Fleet Management team provides the core runtime environment
+    that empowers our developers to build and ship products to delight our customers.
+    We manage the end-to-end lifecycle of our Kubernetes fleet, alongside the critical
+    components that ensure cluster reliability and security (e.g., CoreDNS, cert-manager,
+    and Gatekeeper). As our infrastructure scales to support new use cases and products,
+    we are spearheading a migration from Terraform-based Infrastructure as Code (IaC)
+    to an Operator-driven lifecycle management model.</p> <p>This role can be based
+    out of our Austin, Boston, Los Angeles, New York City, Raleigh, or San Francisco
+    offices, or remotely in the United States region.</p> <h3>Responsibilities</h3>
+    <ul> <li>Manage a team of 6-8 engineers, fostering a positive culture, handling
+    career growth and performance conversations, and proactively removing blockers</li>
+    <li>Help develop a clear technical vision and comprehensive roadmap for our runtime
+    environment, balancing long-term strategic infrastructure goals with immediate
+    engineering needs</li> <li>Contribute through light hands-on technical work, such
+    as leading architectural design reviews, reviewing PRs, and stepping in to guide
+    the team through complex operational challenges</li> <li>Act as the primary liaison
+    for the Fleet Management team, collaborating closely with other engineering leaders
+    to ensure platform alignment and manage stakeholder expectations</li> </ul> <h3>You
+    may be a good fit if you:</h3> <ul> <li>Have 10+ years of experience working on
+    software and operating distributed systems, with 2+ years managing engineering
+    teams</li> <li>Possess a customer-focused mindset, treating internal developers
+    as your primary users</li> <li>Value efficiency in processes and operations, and
+    have a track record of optimizing team workflows</li> <li>Prefer automation over
+    manual processes ("allergic to ops work"), fostering a culture of building software
+    solutions to eliminate toil</li> <li>Have deep technical familiarity with Kubernetes
+    ecosystems, containerization technologies, and modern IaC tooling (e.g., Terraform,
+    Crossplane, or Operators) so you can effectively guide the team''s technical decisions</li>
+    <li>Excel at translating complex business and engineering requirements into actionable,
+    phased technical roadmaps</li> <li>Have a high level of empathy, responsibility,
+    ownership, and accountability</li> <li>Excellent verbal and written technical
+    communication skills</li> </ul> <h3>Strong candidates may also have experience
+    with:</h3> <ul> <li>Leading major architectural shifts, such as migrating teams
+    from traditional IaC to Operator-driven lifecycle management</li> <li>Managing
+    and scaling infrastructure across multi-cloud environments (AWS, GCP, or Azure)</li>
+    <li>Designing secure, multi-tenant runtime environments at scale</li> </ul> <h3><span
+    style="color: #000000; background-color: transparent;">About MongoDB</span></h3>
+    <p style="margin: 0px !important; padding: 0px !important;"><span style="color:
+    #000000; background-color: transparent;">MongoDB is built for change, empowering
+    our customers and our people to innovate at the speed of the market. We have redefined
+    the database for the AI era, enabling innovators to create, transform, and disrupt
+    industries with software. MongoDB’s unified database platform—the most widely
+    available, globally distributed database on the market—helps organizations modernize
+    legacy workloads, embrace innovation, and unleash AI. Our cloud-native platform,
+    MongoDB Atlas, is the only globally distributed, multi-cloud database and is available
+    across AWS, Google Cloud, and Microsoft Azure.</span></p> <p style="margin: 0px
+    !important; padding: 0px !important;">&nbsp;</p> <p style="margin: 0px !important;
+    padding: 0px !important;"><span style="color: #000000; background-color: transparent;">With
+    offices worldwide and nearly 60,000 customers—including 75% of the Fortune 100
+    and AI-native startups—relying on MongoDB for their most important applications,
+    we’re powering the next era of software.</span></p> <p style="margin: 0px !important;
+    padding: 0px !important;">&nbsp;</p> <p style="margin: 0px !important; padding:
+    0px !important;"><span style="color: #000000; background-color: transparent;">Our
+    compass at MongoDB is our </span><u style="color: #1155cc; background-color: transparent;"><a
+    href="https://www.mongodb.com/company">Leadership Commitment,</a></u><span style="color:
+    #000000; background-color: transparent;"> guiding how and why we make decisions,
+    show up for each other, and win. It’s what makes us M'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-02-25'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.911287+00:00'
+  date_source: first_published
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

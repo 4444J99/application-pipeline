@@ -1,0 +1,115 @@
+id: asana-software-engineer-product
+name: Asana Software Engineer, Product
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Asana
+  url: https://boards.greenhouse.io/asana
+  application_url: https://www.asana.com/jobs/apply/6937795?gh_jid=6937795
+  portal: greenhouse
+  location: Vancouver, BC
+  location_class: international
+  description: <p>We’re looking for people who care deeply about customers and are
+    passionate about building products that improve the way millions of teams work
+    together. As a member of the team developing the software of a product-led company,
+    you won’t just code — you will be an integral part of the entire product development
+    process, from conception to post-launch reflection. Asana is helping teams become
+    significantly more productive with our leading work management platform. You will
+    be manifesting continuous improvements in their experience and helping us achieve
+    our mission to enable all teams to work together effortlessly.</p> <p>The Product
+    team builds features end-to-end. From designing our data models to implementing
+    the subtle interaction behaviors that differentiate good software from great software.
+    We work closely with UI designers and are supported by our infrastructure team.
+    We aim to delight users with both large new features and smaller, daily product
+    enhancements—thanks to our continuous deployment architecture. We want to create
+    a superlative user experience, down to the smallest details.</p> <p>This role
+    is based in our Vancouver office with an office-centric hybrid schedule. The standard
+    in-office days are Monday, Tuesday, and Thursday. Most Asanas have the option
+    to work from home on Wednesdays. Working from home on Fridays depends on the type
+    of work you do and the teams with which you partner. If you're interviewing for
+    this role, your recruiter will share more about the in-office requirements.</p>
+    <p><strong>What you’ll achieve</strong></p> <ul> <li>Work in a high-performance,
+    dynamic team with a strong focus on velocity and software quality</li> <li>Contribute
+    to building a complex SaaS application that is a market leader in its segment&nbsp;</li>
+    <li>Be exposed to Asana’s core infrastructure, particularly how data is represented,
+    stored and deleted in the storage layer.</li> <li>Work with asynchronous jobs
+    and efficiently and implement algorithms that efficiently traverse the Asana Work
+    Graph</li> <li>Work with legal to implement data ownership rules, requiring simple
+    and effective technical solutions to make this process easy and clear to customers.&nbsp;</li>
+    <li>Drive large, impactful projects, delivering features that will be rolled out
+    and used in large organizations</li> <li>Support other teams and stakeholders
+    that work in the team’s space</li> </ul> <p><strong>About you</strong></p> <ul>
+    <li>2+ years of experience working within large, well-maintained codebases</li>
+    <li>Excellent communication skills for collaborating with cross-functional partners
+    (e.g. PM, design)</li> <li>Sound judgment when balancing moving quickly with producing
+    quality code and long-term code maintainability</li> <li>Passionate about creating
+    a superlative user experience and attentive to details</li> <li>Appreciate productivity
+    and care deeply about helping teams collaborate more effectively and efficiently,
+    including your own</li> <li>Excited to be a part of an inclusive culture where
+    everyone brings the aspects of themselves to the workplace that they need to thrive</li>
+    <li>Demonstrated curiosity about AI tools and emerging technologies, with a willingness
+    to learn and leverage them to enhance productivity, collaboration, or decision-making</li>
+    </ul> <p><em>At Asana, we're committed to building teams that include a variety
+    of backgrounds, perspectives, and skills, as this is critical to helping us achieve
+    our mission. If you're interested in this role and don't meet every listed requirement,
+    we still encourage you to apply.</em></p> <p><strong>What we’ll offer</strong></p>
+    <p>Our comprehensive compensation package plays a big part in how we recognize
+    you for the impact you have on our path to achieving our mission. We believe that
+    compensation should be reflective of the value you create relative to the market
+    value of your role. To ensure pay is fair and not impacted by biases, we're committed
+    to looking at market value which is why we check ourselves and conduct a yearly
+    pay equity audit.</p> <p>For this role, the estimated base salary range is between
+    $146,000 CAD - $158,000 CAD. The actual base salary will vary based on various
+    factors, including market and individual qualifications objectively assessed during
+    the interview process. The listed range above is a guideline, and the base salary
+    range for this role may be modified.</p> <p>In addition to base salary, your compensation
+    package may include additional components such as equity, sales incentive pay
+    (for most sales roles), and benefits. If you're interviewing for this role, speak
+    with your Talent Acquisition Partner to learn more about the total compensation
+    and benefits for this role.</p> <p>We strive to provide equitable and competitive
+    benefits packages that support our employees worldwide and include:</p> <ul> <li>Mental
+    health, wellness &amp; fitness benefits</li> <li>Career coaching &amp; support</li>
+    <li>Inclusive family building benefits</
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.221938+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

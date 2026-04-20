@@ -1,0 +1,115 @@
+id: mongodb-ai-staff-developer-advocate
+name: MongoDB AI Staff Developer Advocate
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7673691
+  portal: greenhouse
+  location: California; San Francisco
+  location_class: us-onsite
+  description: '<p>We are looking for an AI Developer Advocate to join our Developer
+    Relations team. In this role, you will help promote MongoDB''s artificial intelligence
+    (AI) capabilities. As more developers choose MongoDB as their data platform, your
+    responsibilities will include directly engaging with the community, building strategic
+    partnerships with AI companies, creating inspiring resources and content, and
+    collaborating with a global team of skilled Developer Advocates.</p> <p>You will
+    empower developers—from startups to Fortune 500 companies—to integrate advanced
+    data and AI capabilities into their applications and solutions. If you are passionate
+    about helping builders explore the possibilities of AI and enjoy cultivating a
+    vibrant developer ecosystem, we invite you to join us in shaping the future of
+    development on MongoDB.</p> <p>Our Developer Relations teams are distributed across
+    the globe, with most members working remotely. This position will be based in
+    the San Francisco Bay Area. To see what our team is doing, check out our content
+    on <a href="https://www.youtube.com/@MongoDBDevelopers">YouTube</a>, <a href="https://dev.to/mongodb">Dev</a>,
+    and <a href="https://medium.com/mongodb">Medium</a>.</p> <p><span style="color:
+    #000000; background-color: transparent;">We are looking to speak to candidates
+    who are based in San Francisco for our hybrid working model.</span></p> <h3>Candidate
+    Profile</h3> <p>We are excited to welcome an influential individual to our team
+    who is already a well-established voice in AI. From your experience over the past
+    few years, we’ll see you in videos and at events sharing technical insights, leading
+    discussions, and inspiring others to effectively use AI and ML capabilities. You’ve
+    also created articles, tutorials, and hands-on workshops to teach builders best
+    practices and equip them to leverage AI in their apps.&nbsp;</p> <p>At the foundation
+    of your passion and expertise is a love to equip others. Our ideal candidate will
+    have at least 3 years of experience in a builder role, such as a data scientist
+    or developer, where they crafted AI solutions in production. They will have 8+
+    total years of experience through any combination of builder role (such as data
+    scientist or developer), educator role (such as developer advocate or developer
+    educator), or customer-facing role (such as solution architect).&nbsp;</p> <p>Our
+    ideal candidate will also have connections with AI companies and communities in
+    the San Francisco Bay Area. You will work with key AI partners to create content
+    and partner on virtual and in-person events that showcase how MongoDB is part
+    of the larger AI ecosystem.&nbsp;</p> <p>You are an effective teacher who can
+    explain complex topics in a simple and easy-to-understand way. Along with an appreciation
+    for the key AI-related features of our platform, such as vector search and Voyage
+    AI, you will also develop a strong understanding of MongoDB''s core capabilities,
+    data modeling, and emerging trends in our industry.</p> <p>Though the expertise
+    you bring will be unique, our team is built to work together to share knowledge
+    and help each other grow. You will work with others at all levels, supporting
+    peer reviews of code, demos, sessions, and other content. You should have a genuine
+    passion for equipping other developers to be more productive and successful.&nbsp;</p>
+    <h3>Position Expectations</h3> <p>Below are examples of the types of work you
+    will be doing. Your mix of activities will vary week to week based on priorities
+    and event schedules.&nbsp;</p> <ul> <li>Build on a solid foundation of ML/AI expertise,
+    adding to your database experience to become a MongoDB expert</li> <li>Expand
+    your knowledge of embedding models and rerankers to become an expert in Voyage
+    AI</li> <li>Collaborate with our events and field teams to engage developers and
+    founders in the Bay Area at meetups, events, hackathons, and startup houses</li>
+    <li>Speak at strategic AI events and lead workshops at high-profile conferences
+    such as AWS re:Invent&nbsp;</li> <li>Create and update tutorials, articles, videos,
+    and workshops along with their associated workflows or workflows or code examples</li>
+    <li>Provide feedback to our Product and Technology team, serving as the voice
+    of the developer as new products are scoped and planned</li> <li>Regularly interface
+    with Partner Managers to identify opportunities to work with key AI partners to
+    create content and partner on virtual and in-person events that showcase how MongoDB
+    is part of the larger AI ecosystem&nbsp;</li> <li>Partner with our community team
+    to support engagement with third-party and first-party user groups (MUGs), Champions,
+    and influencer programs across the region</li> <li>Lead one-hour sessions (both
+    virtual and in-person) with customer teams to evaluate their AI use cases and
+    provide recommendations on how they can better utilize MongoDB</li> </ul> <h3>Requirements</h3>
+    <ul> <li>Expertise in building AI or ML solutions and comfortable bu'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.244992+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

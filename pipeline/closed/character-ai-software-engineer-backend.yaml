@@ -1,0 +1,95 @@
+id: character-ai-software-engineer-backend
+name: Character AI Software Engineer, Backend
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Character AI
+  url: https://jobs.ashbyhq.com/character
+  application_url: https://jobs.ashbyhq.com/character/b063d44b-e1fd-4777-8079-573706a589a0
+  portal: ashby
+  location: Redwood City, CA
+  location_class: us-onsite
+  description: About the Role We are looking for a talented and motivated Backend
+    Engineer to join our team. You will be responsible for building and maintaining
+    scalable, high-performance backend systems that power our products. Collaborating
+    with designers, data scientists, and engineers, you'll play a key role in conceptualizing,
+    designing, and delivering robust and efficient backend solutions. What you’ll
+    do Design, develop, and maintain scalable backend services that support our applications
+    and infrastructure. Implement secure and efficient APIs to support frontend applications
+    and third-party integrations. Optimize system performance, reliability, and scalability
+    through effective architecture and engineering best practices. Work closely with
+    product managers, data analysts, and frontend engineers to develop backend solutions
+    that align with business and user needs. Ensure high availability, fault tolerance,
+    and performance of backend systems. Monitor system health, troubleshoot issues,
+    and implement improvements to enhance efficiency and stability. Maintain security
+    best practices to protect user data and system integrity. Stay up to date with
+    industry trends and emerging technologies in backend development and distributed
+    systems. Who you are 5+ years of experience in backend development, building scalable
+    and reliable applications. Strong proficiency in programming languages such as
+    Python, Java, or Go. Python and Go are preferred. Experience with database technologies
+    such as PostgreSQL, MySQL, or NoSQL solutions. Familiarity with designing and
+    integrating APIs, including REST and GraphQL. Understanding of distributed systems,
+    microservices architecture, and cloud platforms (AWS, GCP, or Azure). Experience
+    with containerization and orchestration tools like Docker and Kubernetes. Strong
+    problem-solving skills and the ability to optimize system performance and reliability.
+    Excellent communication skills and the ability to work effectively in a collaborative
+    environment. Preferred Qualifications Experience with event-driven architectures
+    and messaging systems (Kafka, RabbitMQ, etc.). Knowledge of caching strategies
+    and performance optimization techniques. Experience working on large-scale, high-traffic
+    applications. Familiarity with CI/CD pipelines and DevOps best practices. Exposure
+    to machine learning or data-driven applications. About Character.AI Character.AI
+    empowers people to connect, learn and tell stories through interactive entertainment.
+    Over 20 million people visit Character.AI every month, using our technology to
+    supercharge their creativity and imagination. Our platform lets users engage with
+    tens of millions of characters, enjoy unlimited conversations, and embark on infinite
+    adventure s. In just two years, we achieved unicorn status and were honored as
+    Google Play's AI App of the Year—a testament to our innovative technology and
+    visionary approach. Join us and be a part of establishing this new entertainment
+    paradigm while shaping the future of Consumer AI! At Character, we value diversity
+    and welcome applicants from all backgrounds. As an equal opportunity employer,
+    we firmly uphold a non-discrimination policy based on race, religion, national
+    origin, gender, sexual orientation, age, veteran status, or disability. Your unique
+    perspectives are vital to our success.
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.886756+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

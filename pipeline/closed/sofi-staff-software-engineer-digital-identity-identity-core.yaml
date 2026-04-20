@@ -1,0 +1,115 @@
+id: sofi-staff-software-engineer-digital-identity-identity-core
+name: SoFi Staff Software Engineer, Digital Identity - Identity Core
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: SoFi
+  url: https://boards.greenhouse.io/sofi
+  application_url: https://sofi.com/careers/job/7676577003?gh_jid=7676577003
+  portal: greenhouse
+  location: WA - Seattle
+  location_class: us-onsite
+  description: '<div class="content-intro"><p><a href="https://www.sofi.com/sofi-employee-applicant-privacy-notice/"
+    target="_blank"><strong>Employee Applicant Privacy Notice</strong></a></p> <p><strong>Who
+    we are:</strong></p> <div> <p>Shape a brighter financial future with us.</p> <p>Together
+    with our members, we’re changing the way people think about and interact with
+    personal finance.</p> <p>We’re a next-generation financial services company and
+    national bank using innovative, mobile-first technology to help our millions of
+    members reach their goals. The industry is going through an unprecedented transformation,
+    and we’re at the forefront. We’re proud to come to work every day knowing that
+    what we do has a direct impact on people’s lives, with our core values guiding
+    us every step of the way. <strong>Join us to invest in yourself, your career,
+    and the financial world.</strong></p> </div></div><h4>The Team</h4> <p>The Digital
+    Identity Platform collects, protects, and distributes the critical data that enables
+    SoFi to recognize and support its members as they move through every product and
+    feature. Digital Identity is the virtual representation of a person’s physical
+    identity — the digital attributes essential for customer identification, relationship
+    &amp; entitlement and authorization (granting access to resources). If you are
+    passionate about working on the platform that every SoFi product depends on to
+    know its customers, this is the team. Our team’s tech stack is Java/Kotlin, PostgreSQL,
+    Kubernetes, ArgoCD, Datadog, Snowflake. For AI based development we use Claude
+    Code, Cursor, Windsurf etc.</p> <h4>The Role</h4> <p>You focus on software features
+    and systems, anchored on a team but interacting across teams to deliver outcomes.
+    Problems you tackle are broadly defined — you identify the specific solutions.
+    You think 6–12 months ahead about system evolution and set standards for your
+    team’s engineering practices. In SoFi’s AI-native environment, you produce structured
+    critiques of AI-generated architecture, identify distributed systems failure modes
+    that AI consistently misses, and define how your team uses AI tools effectively.
+    When needed, you lead cross-functionally to deliver business outcomes.</p> <h4>Key
+    Responsibilities</h4> <ul> <li>Design software that addresses both current and
+    future business needs; promote efficient development, clarity, reusability, testability,
+    and reliability</li> <li>Set coding standards and best practices for the team,
+    including standards for AI-assisted development — when to use AI, how to verify,
+    what to own</li> <li>Produce structured critiques of AI-generated distributed
+    system designs, identifying race conditions, incorrect consistency models, silent
+    data loss, and improper failure handling</li> <li>Participate in group-level strategic
+    planning and resource prioritization, representing the team’s perspective; align
+    team projects with group direction</li> <li>Lead team design reviews; teammates
+    recognize that your input improves results and seek your feedback</li> <li>Simplify
+    the team’s systems, avoiding unnecessary complexity; enable easy integrations
+    across teams; optimize for long-term impact</li> <li>Frame and navigate trade-offs
+    in technology choices with a pragmatic, value-focused perspective on when to adopt
+    vs. invent</li> <li>Drive operational excellence: automate and streamline build,
+    deployment, testing, and maintenance; identify patterns in bugs and incidents
+    to propose systemic improvements</li> <li>Mentor teammates proactively to grow
+    their skillsets and impact, providing meaningful feedback from a well-calibrated
+    perspective<br><br></li> </ul> <h4>What You’ll Need</h4> <ul> <li>Bachelor’s degree
+    in Computer Science, Software Engineering, or equivalent practical experience</li>
+    <li>6-10 years of professional software development experience</li> <li>Advanced
+    expertise in writing code, consistently demonstrating best practices with clear
+    and exemplary usage of their team’s software languages</li> <li>Advanced expertise
+    in how team components contribute to broader system architecture; recognizes and
+    makes trade-offs in component interactions</li> <li>Demonstrated ability to identify
+    and critique architectural flaws in AI-generated code — race conditions, data
+    consistency issues, incorrect failure handling</li> <li>Experience with 6–12 month
+    strategic thinking; setting team priorities and driving operational excellence
+    improvements</li> <li>Domain knowledge in their product area, informing decision
+    making and design</li> <li>Proven ability to lead cross-functionally and represent
+    the team in technical discussions</li> <li>Strong focus on operational excellence
+    with a track record of identifying systemic improvement patterns</li> <li>Prior
+    experience with front-end development using Typescript and frameworks like ReactJs/AngularJs,
+    NodeJs will be nice to have.</li> </ul><div class="content-conclusion"><div class="gmail_default"><strong>Compensation
+    and Benefits</strong><'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.812336+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

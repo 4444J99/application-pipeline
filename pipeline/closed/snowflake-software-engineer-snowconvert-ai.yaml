@@ -1,0 +1,103 @@
+id: snowflake-software-engineer-snowconvert-ai
+name: Snowflake Software Engineer - SnowConvert AI
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/2a928b93-a5d4-4285-a92c-032fb389faa2
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Snowflake redefined the data landscape over
+    a decade ago by building the AI Data Cloud—delivering industry-leading performance
+    and price at scale across data engineering, analytics, and AI/ML workloads. Every
+    day, new customers begin their journey to Snowflake, but migrating existing data
+    and applications from legacy platforms remains a complex, high-effort challenge.
+    Customers must adapt their entire ecosystem—data, database code, ETL pipelines,
+    and consuming applications—to fully realize Snowflake’s value. The Migrations
+    organization serves as the catalyst for this modernization, building solutions
+    that enable customers and partners to migrate efficiently and with less risk.
+    Within this charter, the SnowConvert AI team delivers an AI-driven migration product
+    that moves data-centric applications to Snowflake an order of magnitude faster
+    than industry norms. SnowConvert goes beyond schema and SQL translation, seamlessly
+    migrating data, code, ETL pipelines, and BI tools by combining AI-based conversion
+    with rigorous execution-level validation, ensuring that migrated systems are not
+    only syntactically correct, but semantically equivalent to their source and production-ready
+    on the Snowflake AI Data Cloud RESPONSIBILITIES: The team develops fundamental
+    code conversion techniques, robust data migration and validation pipelines, and
+    automatic testing components. These capabilities are then leveraged by automated
+    AI agents that process a complete application migration to Snowflake. Develop
+    the foundations that AI agents rely on for fast, consistent code conversion This
+    development team sits at the center of the original SnowConvert team, AI team,
+    FDE to deliver the architecture below. Careful API design is a must for an ever-changing
+    landscape of AI capabilities. Iterating with the FDE team enables quick feedback
+    to prototypes, early products. OUR IDEAL SOFTWARE ENGINEER WILL HAVE: Strong software
+    engineering experience in Python, with a focus on performance, reliability, and
+    distributed systems. Hands-on experience building agentic AI applications, especially
+    in domains such as computer control or code gen. Track record of contributions
+    to open-source agentic frameworks such as LangChain, AutoGen, etc. Deep understanding
+    of distributed systems, API design, and backend architectures. High agency—ability
+    to take ownership, navigate ambiguity, and independently push projects forward.
+    STRONGLY DESIRED: Experience with GoLang for high-performance backend services.
+    Strong understanding of big data transformation, ETL, and ELT pipelines. Proficiency
+    in Spark, Airflow, dbt, Kafka or other data engineering tools. Familiarity with
+    streaming architectures, event-driven systems, and async processing. Experience
+    optimizing large-scale data pipelines for performance and cost efficiency. Former
+    founding engineers who have built and owned significant technical projects are
+    highly valued. Every Snowflake employee is expected to follow the company’s confidentiality
+    and security standards for handling sensitive data. Snowflake employees must abide
+    by the company’s data security plan as an essential part of their duties. It is
+    every employee''s duty to keep customer information secure and confidential. Snowflake
+    is growing fast, and we’re scaling our team to help enable and accelerate our
+    growth. We are looking for people who share our values, challenge ordinary thinking,
+    and push the pace of innovation while building a future for themselves and Snowflake.
+    How do you want to make your impact? For jobs located in the United States, please
+    visit the job posting on the Snowflake Careers Site for salary and benefits information:
+    careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.179473+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

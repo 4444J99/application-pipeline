@@ -1,0 +1,114 @@
+id: toast-software-engineer-i-retail-experience
+name: 'Toast Software Engineer I - Retail Experience '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7732566
+  portal: greenhouse
+  location: Dublin, Ireland
+  location_class: international
+  description: '<p>Toast creates technology to help restaurants and local businesses
+    succeed in a digital world, helping business owners operate, increase sales, engage
+    customers, and keep employees happy.</p> <p>The Toast Retail team is at the forefront
+    of this exciting evolution. We’re building innovative features that adapt Toast’s
+    powerful platform to meet the unique needs of retailers, expanding our impact
+    and delivering best-in-class experiences to a broader market.</p> <p>The Toast
+    Retail team is pioneering how Toast serves businesses beyond the restaurant space.
+    We’re focused on building powerful, intuitive tools that meet the unique needs
+    of modern retailers — inventory management, supplier relationships, purchase orders,
+    and more. As a team, we operate like a startup within Toast, balancing greenfield
+    development with the scale of a mature platform.</p> <p>The Retail Experience
+    (RXP) squad is a high-impact team focused on transforming Toast into a world-class
+    experience for retailers. While retail adoption has grown significantly, we consistently
+    hear that Toast doesn’t always feel like it was built for retail.&nbsp;RXP’s mission
+    is to close that gap. We identify friction across the retail customer journey
+    — from onboarding to daily operations — and deliver cohesive, retail-first improvements
+    across Toast’s ecosystem.&nbsp;Our work spans the Retail module and the broader
+    Toast platform, ensuring that retail customers feel understood and supported from
+    day one through long-term success.</p> <p><strong>A day in the life (Responsibilities)</strong></p>
+    <p>As a<strong> Software Engineer I</strong> on the Retail Experience team, you’ll
+    play a role in designing and developing intuitive, performant, and delightful
+    user experiences. You’ll work closely with product managers, designers, and other
+    engineers to bring new features to life. If you love working in a fast-paced environment,
+    driving innovation, and seeing your work make a real impact — we’d love to meet
+    you. Here’s what you’ll be doing:</p> <ul> <li><strong>Build and maintain</strong>
+    frontend features using modern technologies like React and TypeScript.</li> <li><strong>Collaborate</strong>
+    with Product, Design, and Engineering teammates to deliver high-quality user experiences.</li>
+    <li><strong>Contribute to improving</strong> UI components and patterns within
+    existing design systems.</li> <li>Write clean, maintainable, and well-tested code.</li>
+    <li>Learn and apply best practices in frontend development, performance, and accessibility.</li>
+    <li>Participate in code reviews and team discussions to continue growing your
+    skills.</li> <li>Leverage cutting edge AI tools to enhance your development workflow,
+    improve velocity, and help pioneer new approaches to building - contributing to
+    a culture of innovation and productivity across the team.</li> </ul> <p><strong>What
+    you''ll need to thrive (Requirements)</strong></p> <ul> <li>0–2 years of frontend
+    experience building web applications&nbsp; (internships or academic projects included).</li>
+    <li>Familiarity with modern frontend technologies such as <strong>React</strong>,
+    <strong>TypeScript</strong>, HTML, and CSS.</li> <li>Basic understanding of component-based
+    architecture and web fundamentals.</li> <li>Eagerness to learn, grow, and take
+    feedback in a collaborative environment.</li> <li>Strong problem-solving skills
+    and attention to detail.</li> <li>Ability to work effectively in a team and communicate
+    clearly.</li> </ul> <p><strong>Bonus:</strong></p> <ul> <li>Experience through
+    internships, personal projects, or coursework in frontend development.</li> <li>Exposure
+    to REST APIs, testing frameworks, or design systems.</li> <li>Interest in retail
+    or building software for new customer verticals.</li> </ul> <p data-pm-slice="1
+    1 []"><strong>AI at Toast</strong></p> <p>At Toast, one of our company values
+    is that we''re hungry to build and learn. We believe learning new AI tools empowers
+    us to build for our customers faster, more independently, and with higher quality.
+    We provide these tools across all disciplines, from Engineering and Product to
+    Sales and Support, and are inspired by how our Toasters are already driving real
+    value with them. The people who thrive here are those who embrace changes that
+    let us build more for our customers; it’s a core part of our culture.</p> <p data-pm-slice="1
+    1 []"><strong>Our Total Rewards Philosophy&nbsp;<br></strong>We strive to provide
+    competitive compensation and benefits programs that help to attract, retain, and
+    motivate the best and brightest people in our industry. Our total rewards package
+    goes beyond great earnings potential and provides the means to a healthy lifestyle
+    with the flexibility to meet Toasters’ changing needs. Learn more about our benefits
+    at&nbsp;<a href="https://careers.toasttab.com/toast-benefits">https://careers.toasttab.com/toast-benefits</a>.</p>
+    <p data-pm-slice="1 1 []">#LI-HYBRID #BI-Hybrid</p><div class="content-conclusion"><p><strong>How
+    Toast Uses'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.393952+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

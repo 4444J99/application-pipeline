@@ -1,0 +1,109 @@
+id: databricks-srstaff-software-engineer-networking
+name: Databricks Sr.Staff Software Engineer- Networking
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Databricks
+  url: https://boards.greenhouse.io/databricks
+  application_url: https://databricks.com/company/careers/open-positions/job?gh_jid=8462811002
+  portal: greenhouse
+  location: Bengaluru, India
+  location_class: international
+  description: '<p>P-1533</p> <p>At Databricks, we are passionate about enabling data
+    teams to solve the world''s toughest problems — from making the next mode of transportation
+    a reality to accelerating the development of medical breakthroughs. We do this
+    by building and running the world''s best data and AI infrastructure platform
+    so our customers can use deep data insights to improve their business.&nbsp;</p>
+    <p>Networking Infrastructure is a core part of the platform that powers all our
+    data and AI products. The platform also powers key enterprise security features
+    used by customers across all our products to build connectivity solutions to cloud
+    resources and prevent data exfiltration.</p> <p>We are seeking an experienced
+    <strong>Sr. Staff Software Engineer</strong> with deep networking expertise to
+    help shape the future of Databricks’ <strong>Networking Infrastructure</strong>.
+    As one of the early members of the rapidly growing Bangalore site, you will play
+    a critical role in <strong>defining the technical vision and architecture</strong>
+    for next-generation network connectivity &amp; observability services that will
+    power &amp; manage <strong>millions of VMs across multiple clouds</strong>.&nbsp;</p>
+    <p>In this role, you will <strong>own and drive the design of large-scale connectivity
+    platforms</strong> that form the backbone between Databricks’ <strong>control
+    plane and compute plane</strong>. These platforms are foundational to improving
+    the <strong>scalability, reliability, and efficiency</strong> of our compute infrastructure,
+    while enabling more intelligent and cost-effective use of cloud resources.</p>
+    <p>You will operate at an <strong>org-wide level</strong>, setting technical direction,
+    leading complex cross-team initiatives, and mentoring senior engineers. You’ll
+    work closely with product management, operations, and partner engineering teams
+    to translate long-term business goals into <strong>durable, extensible networking
+    systems</strong>. This role requires both <strong>hands-on technical leadership</strong>
+    and the ability to influence architecture and execution across teams.</p> <p>This
+    is a unique opportunity for a <strong>senior technical leader</strong> who enjoys
+    working in ambiguous problem spaces and is motivated by solving <strong>novel,
+    multi-cloud distributed systems challenges at massive scale</strong>.</p> <p>What
+    we look for:</p> <ul> <li>15+ years of production level experience in one of:
+    Rust, Java, Scala, C++, or similar language</li> <li>10+ years of experience developing
+    large-scale distributed systems from scratch</li> <li>Experience working on a
+    SaaS platform or with Service-Oriented Architectures.</li> <li>Experience with
+    cloud networking, kubernetes, infrastructure automation languages like terraform,
+    cloudformation, etc.</li> </ul><div class="content-conclusion"><p><strong>About
+    Databricks</strong></p> <p><span style="font-family: arial, sans-serif;">Databricks
+    is the data and AI company. More than 10,000 organizations worldwide — including
+    Comcast, Condé Nast, Grammarly, and over 50% of the Fortune 500 — rely on the
+    Databricks Data Intelligence Platform to unify and democratize data, analytics
+    and AI. Databricks is headquartered in San Francisco, with offices around the
+    globe and was founded by the original creators of Lakehouse, Apache Spark™, Delta
+    Lake and MLflow. To learn more, follow Databricks on&nbsp;<span style="color:
+    rgb(255, 54, 33);"><a style="color: rgb(255, 54, 33);" href="https://twitter.com/databricks"
+    target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://twitter.com/databricks&amp;source=gmail&amp;ust=1700237575733000&amp;usg=AOvVaw03FL8fJvOD97ytN02f5G2C">Twitter</a>,&nbsp;<a
+    style="color: rgb(255, 54, 33);" href="https://www.linkedin.com/company/databricks"
+    target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.linkedin.com/company/databricks&amp;source=gmail&amp;ust=1700237575733000&amp;usg=AOvVaw15dLk3q8VxTfHEgCUg7NSt">LinkedIn</a>&nbsp;<span
+    style="color: rgb(0, 0, 0);">and</span>&nbsp;<a style="color: rgb(255, 54, 33);"
+    href="https://www.facebook.com/databricksinc" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.facebook.com/databricksinc&amp;source=gmail&amp;ust=1700237575733000&amp;usg=AOvVaw39EcncitnlqV72EG2-RqXJ">Facebook</a></span>.<br><br><strong>Benefits<br><br></strong></span>At
+    Databricks, we strive to provide comprehensive benefits and perks that meet the
+    needs of all of our employees. For specific details on the benefits offered in
+    your region, please visit&nbsp;<a href="https://www.mybenefitsnow.com/databricks">https://www.mybenefitsnow.com/databricks</a>.&nbsp;<br><br></p>
+    <p><strong>Our Commitment to Diversity and Inclusion</strong></p> <p>At Databricks,
+    we are committed to fostering a diverse and inclusive culture where everyone can
+    excel. We take great care to ensure that our hiring practices are inclusive and
+    meet equal employment opportunity standards. Individuals look'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.733202+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

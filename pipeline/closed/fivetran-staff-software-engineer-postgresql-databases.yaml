@@ -1,0 +1,115 @@
+id: fivetran-staff-software-engineer-postgresql-databases
+name: Fivetran Staff Software Engineer - PostgreSQL Databases
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Fivetran
+  url: https://boards.greenhouse.io/fivetran
+  application_url: https://www.fivetran.com/careers/job?gh_jid=7524695003
+  portal: greenhouse
+  location: Oakland, California, United States, AMER
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>From Fivetran’s founding until now,
+    our mission has remained the same: to make access to data as simple and reliable
+    as electricity. With Fivetran, customer data arrives in their warehouses, canonical
+    and ready to query, with no engineering or maintenance required. We’re proud that
+    more organizations continue to leverage our technology every day to become truly
+    data-driven.</p></div><p><span style="font-size: 10pt;"><strong>About the Role</strong></span></p>
+    <p><span style="font-size: 10pt;">Fivetran is building data pipelines to power
+    the modern data stack for thousands of companies.</span></p> <p><span style="font-size:
+    10pt;">We’re looking for a talented Staff Software Engineer with a passion for
+    building enterprise-grade software to join the PostgreSQL database connector team.
+    You will be focusing on developing world-class enterprise capabilities and features
+    in support of our largest and most sophisticated customers. The work we do is
+    both highly visible and critically important to the long term growth and success
+    of Fivetran.</span></p> <p><span style="font-size: 10pt;">Fivetran is the epitome
+    of data-driven-development — our engineering team is focused on building a world
+    class product that:</span></p> <ul> <li><span style="font-size: 10pt;">Facilitates
+    Data Analytics — join our mission to reliably deliver best-in class schemas, and
+    clean data, designed to be intuitively useful to analysts.</span></li> <li><span
+    style="font-size: 10pt;">Contributes to our Community — help develop tools like
+    Data Lakes, SQL-based Transformations, and schema explorers to empower analysts
+    to choose the best tools, and to make those tools more powerful.</span></li> <li><span
+    style="font-size: 10pt;">Is Absolutely Dependable — work to make Fivetran the
+    most reliable and secure component of our customers’ data infrastructure.</span></li>
+    </ul> <p><span style="font-size: 10pt;">We emphasize using no-nonsense code, and
+    take great pride in the simplicity and effectiveness of the systems we build.
+    Our back-end is built on Java, C, Postgres, and Kubernetes, and our front-end
+    is built on React and Typescript.</span></p> <p><span style="font-size: 10pt;">This
+    is a full-time, hybrid position based out of our Oakland, CA office. Our hybrid
+    work model offers a blend of remote flexibility and in-person collaboration, including
+    two days in the office each week to connect and build as a team.</span></p> <p><span
+    style="font-size: 10pt;"><strong>Technologies You’ll Use</strong></span></p> <p><span
+    style="font-size: 10pt;">Java, PostgreSQL, GCP, SQL, BigQuery, Bazel, BuildKite</span></p>
+    <p><span style="font-size: 10pt;"><strong>What You’ll Do</strong></span></p> <ul>
+    <li><span style="font-size: 10pt;">Lead the design, development, and debugging
+    of our intuitive best-in-class enterprise capabilities enabling Fivetran’s largest
+    customers.</span></li> <li><span style="font-size: 10pt;">Manage and lead projects
+    simultaneously, coordinating with different stakeholders to ensure timely and
+    quality delivery in an iterative development environment.</span></li> <li><span
+    style="font-size: 10pt;">Maintain and improve existing enterprise features; call
+    for improvements in Fivetran''s codebase and infrastructure.</span></li> <li><span
+    style="font-size: 10pt;">Demonstrably maintain high standards for code quality,
+    performance, scalability, and reliability by conducting thorough testing and reviews.</span></li>
+    <li><span style="font-size: 10pt;">Collaborate across engineering on cross-functional
+    projects creating innovative solutions.</span></li> <li><span style="font-size:
+    10pt;">Make Fivetran the most reliable and secure component of our customers’
+    data infrastructure.</span></li> <li><span style="font-size: 10pt;">Stay up-to-date
+    with emerging technologies and industry trends, advocating for the adoption of
+    new tools and methodologies to improve the development process.</span></li> <li><span
+    style="font-size: 10pt;">Work closely with the Customer Success and Go-To-Market
+    (GTM) teams to assist in challenging customer situations. Provide technical expertise
+    and solutions to ensure customer satisfaction and support Fivetran''s growth objectives.</span></li>
+    <li><span style="font-size: 10pt;">Participate periodically in on-call rotation.</span></li>
+    </ul> <p><span style="font-size: 10pt;"><strong>Skills We’re Looking For</strong></span></p>
+    <ul> <li><span style="font-size: 10pt;">10+ years of experience in the software
+    industry with a passion for solving complex software engineering problems.</span></li>
+    <li><span style="font-size: 10pt;">Strong knowledge of and experience with OOP,
+    preferably Java.</span></li> <li><span style="font-size: 10pt;">Strong knowledge
+    in database and query performance tuning.</span></li> <li><span style="font-size:
+    10pt;">Understand and know how/when to leverage AI agent to improve engineering
+    efficiency</span></li> <li><span style="font-size: 10pt;">Understands and can
+    explain how to build high '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.606520+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

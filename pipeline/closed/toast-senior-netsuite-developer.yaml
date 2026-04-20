@@ -1,0 +1,114 @@
+id: toast-senior-netsuite-developer
+name: Toast Senior Netsuite Developer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7570667
+  portal: greenhouse
+  location: Bengaluru, Karnataka, India
+  location_class: international
+  description: '<p>Toast is driven by building the restaurant platform that helps
+    restaurants adapt, take control, and get back to what they do best: building the
+    businesses they love.</p> <p>As a Senior NetSuite Developer on the Financial Systems
+    team, you will build and maintain on Toast''s ERP platform (NetSuite). &nbsp;
+    You will be responsible for developing on the NetSuite platform, from internal
+    scripting to extending the platform via APIs.&nbsp; You will participate in script
+    development, configuration changes, testing, troubleshooting, process engineering
+    &amp; creating searches and reports. You’ll also work closely with the Billing,
+    Accounting, and Finance teams to ensure the highest level of data accuracy and
+    to maintain and enhance the functionality of various financial systems, helping
+    maximize the organization''s benefit.</p> <p><strong>About this </strong><strong><em>roll</em></strong><strong>*
+    (Responsibilities)&nbsp;</strong></p> <ul> <li>Develop/maintain the Toast ERP
+    implementation on NetSuite (including designing, implementing, and maintaining
+    configurations and customizations), and other related third-party business applications
+    that integrate for internal users</li> <li>Provide robust solutions to current
+    and future problems with performance and scalability at the forefront.&nbsp;</li>
+    <li>Develop, test, and deploy customizations, custom objects, third-party tools/applications,
+    and new NetSuite functionality based on evolving business needs</li> <li>Responsible
+    for change management for Finance applications within Business Systems.</li> <li>Design,
+    implement, and maintain third-party software connections and integrations to NetSuite
+    to support various business needs</li> <li>Develop, document, and implement policies,
+    procedures, and guidelines to ensure data integrity, change protocols, customization,
+    usage, etc</li> <li>Identify, evaluate, and recommend other key technologies required
+    to support and improve the business process centered on the ERP platform</li>
+    <li>Monitor end-user usage of systems, track performance, and ensure external
+    integrations comply with governance limits</li> <li>Participate in code reviews
+    and solution proposals with other NetSuite engineers</li> <li>Partner with product
+    managers on identifying solutions and fine-tuning product requirements to build
+    for the future</li> </ul> <p><strong>Do you have the right </strong><strong><em>ingredients*</em></strong><strong>?
+    (Requirements)</strong></p> <ul> <li>4+ years of hands-on experience with NetSuite
+    development and configuration across NetSuite modules (L2C, Revenue Recognition,
+    Procurement, GL, AR, FA, AP), REST, Netsuite WebServices,&nbsp; and third-party
+    integrations in complex environments</li> <li>Expert-level knowledge of scripting,
+    roles, permissions, custom objects, and workflows</li> <li>In-depth knowledge
+    of SuiteScript 1.0, 2.0, 2.1 / WebServices, OneWorld, SQL, user provisioning,
+    defining roles, analytics, and scheduling scripts.</li> <li>Experience and knowledge
+    of supply chain components, such as kits, assemblies, bins, and serial numbers</li>
+    <li>Strong data analytics, reporting, and database experience (SQL and NetSuite)</li>
+    <li>A strong understanding of business processes and requirements</li> <li>Experience
+    with SDF and GIT</li> <li>Excellent version control, QA skills, and attention
+    to detail</li> </ul> <p><strong>Bonus ingredients* (a pinch of salt):</strong></p>
+    <ul> <li>Implementing a testing framework for SuiteScripts</li> <li>Familiarity
+    with Zuora RevPro/Salesforce Billing or any other revenue recognition/billing
+    platforms</li> <li>NetSuite certifications</li> </ul> <p>&nbsp;</p> <p data-pm-slice="1
+    1 []"><strong>AI at Toast</strong></p> <p>At Toast, one of our company values
+    is that we''re hungry to build and learn. We believe learning new AI tools empowers
+    us to build for our customers faster, more independently, and with higher quality.
+    We provide these tools across all disciplines, from Engineering and Product to
+    Sales and Support, and are inspired by how our Toasters are already driving real
+    value with them. The people who thrive here are those who embrace changes that
+    let us build more for our customers; it’s a core part of our culture.</p> <p>&nbsp;</p>
+    <p><strong>Our Total Rewards Philosophy&nbsp;</strong><br>We strive to provide
+    competitive compensation and benefits programs that help to attract, retain, and
+    motivate the best and brightest people in our industry. Our total rewards package
+    goes beyond great earnings potential and provides the means to a healthy lifestyle
+    with the flexibility to meet Toasters’ changing needs. Learn more about our benefits
+    at&nbsp;<a class="c-link" href="https://careers.toasttab.com/toast-benefits" target="_blank"
+    data-stringify-link="https://careers.toasttab.com/toast-benefits" data-sk="tooltip_parent">https://careers.toasttab.com/toast-benefits</a>.</p>
+    <p><br><br></p><div class="content-conclusion"><p><strong>How Toast Uses AI in
+    its Hiring Process</strong></p> <p>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.325115+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

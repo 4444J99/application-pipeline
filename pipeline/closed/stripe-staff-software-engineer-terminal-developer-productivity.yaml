@@ -1,0 +1,115 @@
+id: stripe-staff-software-engineer-terminal-developer-productivity
+name: Stripe Staff Software Engineer, Terminal Developer Productivity
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7705412
+  portal: greenhouse
+  location: Seattle
+  location_class: us-onsite
+  description: '<h2>Who we are</h2> <h3>About Stripe</h3> <p><span style="font-weight:
+    400;">Stripe is a financial infrastructure platform for businesses. Millions of
+    companies—from the world’s largest enterprises to the most ambitious startups—use
+    Stripe to accept payments, grow their revenue, and accelerate new business opportunities.
+    Our mission is to increase the GDP of the internet, and we have a staggering amount
+    of work ahead. That means you have an unprecedented opportunity to put the global
+    economy within everyone’s reach while doing the most important work of your career.</span></p>
+    <h3>About the team</h3> <p>Stripe Terminal helps our users extend their online
+    presence to the physical world. The Terminal team’s mission is to make it as easy
+    for businesses to accept in-person payments as the Stripe API has done for online
+    payments – building for Unified Commerce. With Terminal, businesses can unify
+    their in-person and online experiences, unlocking payments use cases that are
+    right for their business model – whether it’s creating a modern retail experience,
+    extending their website to a pop-up store, or enabling a mobile point-of-sale
+    at their next event.</p> <p>Within Terminal, the Developer Productivity team empowers
+    mobile, full-stack and embedded / firmware engineers to ship high-quality products
+    quickly and safely. We build tools, processes and infrastructure that accelerate
+    engineers across multiple teams. Our work is critical to supporting Stripe’s in-person
+    payment products and, ultimately, to helping increase the GDP of the internet.</p>
+    <p>We own a diverse tech stack, including: build and developer productivity tooling
+    for mobile engineers; release tooling that enables Terminal releases across SDKs,
+    Android apps and firmware; and test automation infrastructure that helps product
+    engineers ensure the quality and reliability of what they ship. As a Staff engineer
+    on this team, you’ll shape the strategy and architecture of this tooling and infrastructure
+    and drive its adoption across Terminal.</p> <h2>What you’ll do</h2> <h3>Responsibilities</h3>
+    <ul> <li>Define the architecture and technical strategy for Terminal Developer
+    Productivity, aligning with stakeholders and building long-term sustainable solutions
+    that solve developer productivity challenges and increase engineering velocity</li>
+    <li>Design, build and maintain high-quality tools, infrastructure and services,
+    contributing hands-on through code, design documents and code reviews to ensure
+    reliability, scalability and operational excellence</li> <li>Partner with engineering,
+    product and central Developer Productivity teams to define and evolve the technical
+    roadmap for Terminal Developer Productivity and translate it into executable projects
+    with clear outcomes</li> <li>Define and track key developer productivity and reliability
+    metrics (e.g. build times, test stability, release velocity) and drive initiatives
+    that materially improve them</li> <li>Engage directly with internal teams to understand
+    their workflows and pain points, gather feedback and ensure the tools and infrastructure
+    you build meaningfully improve their day-to-day experience</li> <li>Own the operational
+    excellence of the developer tooling stack, including reliability, incident response
+    and continuous improvement of systems and processes</li> <li>Lead a team of technically
+    sophisticated engineers, providing technical mentorship, elevating engineering
+    standards and serving as a force multiplier for the team’s impact</li> </ul> <h2><strong>Who
+    you are</strong></h2> <p><span style="font-weight: 400;">We’re looking for someone
+    who meets the minimum requirements to be considered for the role. If you meet
+    these requirements, you are encouraged to apply. The preferred qualifications
+    are a bonus, not a requirement.</span></p> <h3>Minimum requirements</h3> <ul>
+    <li>This is a Staff-level role meaning we typically look for at least 10+ years
+    of software engineering experience</li> <li>BS or MS in Computer Science or a
+    related field, or equivalent practical experience</li> <li>Substantial work across
+    mobile and backend systems</li> <li>Demonstrated experience designing, building
+    and operating scalable, resilient and observable systems across the stack</li>
+    <li>Ability to listen well, synthesize input from across the organization and
+    set a technical vision that others are excited to follow</li> <li>Strong bias
+    toward simple, robust and scalable designs over unnecessary complexity</li> <li>Ability
+    to thrive in a highly collaborative environment involving multiple stakeholders
+    and subject matter experts</li> <li>Experience serving as the technical lead for
+    a team of engineers, with evidence of broad technical leadership (e.g. setting
+    direction, making tradeoffs, elevating standards)</li> <li>Proven track record
+    of scoping and leading large, complex technical projects with significant impact
+    across multiple teams or domains</li> </ul> <h3><strong>Preferred qualifications</strong><span
+    style="font-weig'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.799262+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

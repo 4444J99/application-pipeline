@@ -1,0 +1,116 @@
+id: chime-software-engineer-credit-risk-platform
+name: Chime Software Engineer, Credit Risk Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Chime
+  url: https://boards.greenhouse.io/chime
+  application_url: https://boards.greenhouse.io/chime/jobs/8219793002?gh_jid=8219793002
+  portal: greenhouse
+  location: San Francisco, CA, USA
+  location_class: us-onsite
+  description: '<h3><strong>About the role</strong></h3> <p>Chime Engineering is growing
+    rapidly as we scale to support the financial needs of our members. We are looking
+    for driven engineers to join our Credit Risk Platform team, where you’ll build
+    backend services and internal tools that help Chime manage credit risk and losses
+    across all of our credit products, including Loans, MyPay, SpotMe, and a growing
+    pipeline of new credit products in development.</p> <p>This team is building a
+    shared risk platform that expands with every new product we launch. A key part
+    of the mission is being able to onboard new credit products as a platform capability,
+    not a reinvention of decisioning, controls, and monitoring each time. You’ll partner
+    closely with Credit Risk, Product, Analytics, and Data Science to help risk experts
+    iterate safely using better tooling, richer data, and clear guardrails. That includes
+    integrating third-party data sources and building systems that are reliable, observable,
+    and auditable, because they sit on the critical path of member experiences and
+    credit outcomes.</p> <p>The base salary offered for this role and level of experience
+    will begin at $133,000 and up to $184,000. Full-time employees are also eligible
+    for a bonus, competitive equity package, and benefits. The actual base salary
+    offered may be higher, depending on your location, skills, qualifications, and
+    experience.&nbsp;</p> <h3><strong>In this role, you can expect to</strong></h3>
+    <ul> <li>Design, develop, test, and maintain backend services and internal tools
+    that support risk strategy across multiple products (e.g., eligibility, limits,
+    exposure tracking, policy enforcement)</li> <li>Contribute to reusable platform
+    primitives that make it faster and safer to launch new credit products without
+    duplicating risk decisioning and controls</li> <li>Build and improve workflows
+    that enable Credit Risk teams to adjust strategies (rules, thresholds, segmentation)
+    with appropriate guardrails and review processes</li> <li>Integrate third-party
+    data sources used in decisioning and monitoring, including implementing data validation,
+    error handling, and resilience to vendor changes</li> <li>Add instrumentation,
+    dashboards, and alerts for key risk and loss signals, and participate in on-call/incident
+    response as part of a supportive team rotation</li> <li>Collaborate with senior
+    engineers to learn best practices in system design, testing, and operational excellence</li>
+    <li>Proactively identify reliability and scalability improvements and drive them
+    to completion with mentorship and feedback</li> </ul> <h3><strong>To thrive in
+    this role, you have</strong></h3> <ul> <li>3+ years developing software in a production
+    environment</li> <li>Experience with Ruby on Rails or comparable frameworks, building
+    and operating APIs</li> <li>Experience working with relational databases and caching
+    systems, and writing safe schema changes and migrations</li> <li>Familiarity with
+    distributed systems fundamentals (async processing, idempotency, retries, backfills)
+    and an interest in learning deeper system design</li> <li>A strong appreciation
+    for maintainable, well-tested code and a willingness to improve existing systems,
+    not just ship new ones</li> <li>Comfort working across teams to clarify requirements,
+    communicate tradeoffs, and deliver incrementally</li> <li>Interest in data-driven
+    systems and integrating external/third-party data sources (fintech or risk experience
+    is a plus, not required)</li> </ul> <p>#LI-Hybrid #LI-SB1</p><div class="content-conclusion"><h2><strong>A
+    little about us</strong></h2> <p>At Chime, we believe that everyone can achieve
+    financial progress. We created Chime—a financial technology company, not a bank*—on
+    the premise that core banking services should be helpful, easy, and free. Through
+    our user-friendly tools and intuitive platforms, we empower our members to take
+    control of their finances and work towards their goals. Whether it''s starting
+    a savings account, purchasing a first car or home, launching a business, or pursuing
+    higher education, we''re proud to have helped millions unlock their financial
+    potential.</p> <p>We''re a team of problem solvers, dreamers, and builders with
+    one shared obsession: our members. From day one, Chimers have worked tirelessly
+    to out-hustle and out-execute competitors to bring our mission to life. Their
+    grit and determination inspire us to work harder every day to deliver the very
+    best experience possible. We each bring an owner''s mindset to our work, refusing
+    to be outdone and holding ourselves accountable to meet and exceed the highest
+    bars for our teams, our company, and our members.</p> <p>We believe in being bold,
+    dreaming big, and taking risks, while also working together, embracing our diverse
+    perspectives, and giving each other honest feedback. Our culture remains deeply
+    entrepreneurial, encouraging every Chimer to see themselves as stewards of our
+    mission to help everyday Americans unlock their financial pro'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-07'
+  posting_date: '2026-04-06'
+  date_source: first_published
+  date_added: '2026-04-07'
+  discovered: '2026-04-07T10:15:28.431223+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

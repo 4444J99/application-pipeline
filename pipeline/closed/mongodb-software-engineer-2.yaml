@@ -1,0 +1,109 @@
+id: mongodb-software-engineer-2
+name: MongoDB Software Engineer 2
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7588634
+  portal: greenhouse
+  location: Gurugram
+  location_class: unknown
+  description: <p>We are seeking a Software Engineer to join our growing Gurugram
+    Products &amp; Technology team to develop and expand core parts of a new platform
+    we are building to make it easier for customers to build AI applications using
+    MongoDB.&nbsp;</p> <p>As a Software Engineer on this new team, you will be responsible
+    for developing cutting edge technologies related to enabling deployment at scale
+    of AI applications. You will take on challenging, high-visibility projects that
+    improve and enhance the performance, scalability, and reliability of the distributed
+    systems infrastructure for this new product. MongoDB engineering teams pride themselves
+    on building high-quality software and living MongoDB cultural values every day
+    – we value intellectual curiosity and honesty, and building together in an environment
+    that prioritizes collaboration over competition.&nbsp;</p> <p>We are looking to
+    speak to candidates who are based in Gurugram for our hybrid working model.</p>
+    <h3>Position Expectations</h3> <ul> <li>Writing and testing software in commonly
+    used high level programming languages, such as Go, Python, Java, Javascript and
+    others.</li> <li>Design, build and deliver well-tested core pieces of the platform
+    in collaboration with other vested parties</li> <li>Maintaining a balance between
+    delivering software and performing research and development</li> <li>Working closely
+    with cross functional teams to create end user features that deliver quality software
+    to our clients</li> <li>A workplace culture where you are encouraged to bring
+    your whole self to work - we believe that Embracing the Power of Differences is
+    the best way to broaden our own perspectives and foster innovation</li> </ul>
+    <h3>Qualifications</h3> <ul> <li>Must have completed a Bachelor’s or Master’s
+    degree in Computer Science, Computer Engineering, or a related field</li> <li>Have
+    a foundation in computer science theory, with competencies in data structures,
+    algorithms, and software design</li> <li>Minimum experience of 6 months to 3 years,
+    internship experience is also accepted</li> <li>Proficient in one of our commonly
+    used languages which include Go, Python, Java, Javascript, C++, or comparable
+    high level programming languages</li> <li>Experience writing and testing software
+    whether as part of an internship, in a personal project, in a coding competition,
+    or for research</li> <li>Good verbal and written technical communication skills,
+    desire to collaborate with colleagues</li> <li>Eager to learn, with a strong technical
+    background</li> </ul> <h3>About MongoDB</h3> <p>MongoDB is built for change, empowering
+    our customers and our people to innovate at the speed of the market. We have redefined
+    the database for the AI era, enabling innovators to create, transform, and disrupt
+    industries with software. MongoDB’s unified database platform—the most widely
+    available, globally distributed database on the market—helps organizations modernize
+    legacy workloads, embrace innovation, and unleash AI. Our cloud-native platform,
+    MongoDB Atlas, is the only globally distributed, multi-cloud database and is available
+    across AWS, Google Cloud, and Microsoft Azure.</p> <p>With offices worldwide and
+    nearly 60,000 customers—including 75% of the Fortune 100 and AI-native startups—relying
+    on MongoDB for their most important applications, we’re powering the next era
+    of software.</p> <p>Our compass at MongoDB is our <a href="https://www.mongodb.com/company">Leadership
+    Commitment,</a> guiding how and why we make decisions, show up for each other,
+    and win. It’s what makes us MongoDB.&nbsp;</p> <p>To drive the personal growth
+    and business impact of our employees, we’re committed to developing a supportive
+    and enriching culture for everyone. <a href="https://www.mongodb.com/company/blog/culture/employee-benefits-that-make-a-difference-at-mongodb">From
+    employee affinity groups, to fertility assistance and a generous parental leave
+    policy</a>, we value our employees’ wellbeing and want to support them along every
+    step of their professional and personal journeys.<a href="https://www.mongodb.com/blog/channel/culture">
+    Learn more about what it’s like to work at MongoDB</a>, and help us make an impact
+    on the world!</p> <p>MongoDB is committed to providing any necessary accommodations
+    for individuals with disabilities within our application and interview process.
+    To request an accommodation due to a disability, please inform your recruiter.</p>
+    <p>MongoDB is an equal opportunities employer.</p> <p><br>Requisition ID &nbsp;
+    &nbsp;1273354605<br><br></p>
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.328367+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

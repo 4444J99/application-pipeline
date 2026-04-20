@@ -1,0 +1,112 @@
+id: robinhood-senior-machine-learning-engineer-agentic
+name: Robinhood Senior Machine Learning Engineer, Agentic
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7121213?t=gh_src=&gh_jid=7121213
+  portal: greenhouse
+  location: Bellevue, WA; Menlo Park, CA
+  location_class: us-onsite
+  description: <div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><div id="C0930A04RMM-1754413700.256529-thread-list-Thread_1754413730.933709"
+    class="c-virtual_list__item" data-qa="virtual-list-item" data-item-key="1754413730.933709">
+    <div class="c-message_kit__background c-message_kit__message c-message_kit__thread_message"
+    data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false">
+    <div class="c-message_kit__hover" data-qa-hover="true"> <div class="c-message_kit__actions
+    c-message_kit__actions--default"> <div class="c-message_kit__gutter"> <div class="c-message_kit__gutter__right"
+    data-qa="message_content"> <div class="c-message_kit__blocks c-message_kit__blocks--rich_text">
+    <div class="c-message__message_blocks c-message__message_blocks--rich_text" data-qa="message-text">
+    <div class="p-block_kit_renderer" data-qa="block-kit-renderer"> <div class="p-block_kit_renderer__block_wrapper
+    p-block_kit_renderer__block_wrapper--first"> <div class="p-rich_text_block"> <div
+    class="p-rich_text_section"> <h2><strong>About the team + role<br></strong></h2>
+    <p>We are building an elite team, applying frontier technologies to the world’s
+    biggest financial problems. We’re looking for bold thinkers. Sharp problem-solvers.
+    Builders who are wired to make an impact. Robinhood isn’t a place for complacency,
+    it’s where ambitious people do the best work of their careers. We’re a high-performing,
+    fast-moving team with ethics at the center of everything we do. Expectations are
+    high, and so are the rewards.</p> <p>The Agentic team at Robinhood builds and
+    ships production AI agents that power the next generation of AI financial products.
+    Our mission is to rapidly build, evaluate, and deploy high-performance AI agents
+    on production-grade infrastructure, strong evaluation and observability baked
+    in, and continuous optimization support.&nbsp;</p> <p><strong>This role is based
+    in our Menlo Park, CA and Bellevue, WA offices, with in-person attendance expected
+    at least 3 days per week.</strong></p> <p>At Robinhood, we believe in the power
+    of in-person work to accelerate progress, spark innovation, and strengthen community.
+    Our office experience is intentional, energizing, and designed to fully support
+    high-performing teams.</p> <h2><strong>What you’ll do</strong></h2> <ul> <li>Translate
+    product goals into measurable metrics and SLOs, and build a rigorous evaluation
+    harness to continuously score agents performance</li> <li>Develop feedback and
+    optimization pipelines that uses both automated metrics and human-in-the-loop
+    evaluation signals to improve agent behavior over time</li> <li>Implement and
+    scale optimization techniques such as Direct Preference Optimization (DPO), Proximal
+    Policy Optimization (PPO), and reward modeling to improve agent performance.</li>
+    <li>Launch and support fine-tuned models in production environments with robust
+    evaluation, rollback strategies, and performance monitoring.</li> <li>Collaborate
+    closely with applied AI/ML teams to translate state-of-the-art research in agentic
+    reasoning, planning, and tool use into reliable, production-ready systems</li>
+    </ul> <h2><strong>What you bring</strong></h2> <ul> <li>Strong technical expertise
+    in software development, with understanding of agentic workflows—including reasoning
+    loops, tool invocation, memory, and orchestration of autonomous AI agents.</li>
+    <li>Hands-on experience using Large Language Models, including prompt engineering,
+    fine-tuning, model distillation, and deploying optimized models (e.g. via DPO,
+    PPO) into production environments.</li> <li>Leadership and mentorship capabilities,
+    with a track record of guiding complex technical projects and supporting the growth
+    of teammates through code/design reviews and technical direction.</li> <li>Excellent
+    communication and collaboration skills, with the ability to translate technical
+    ideas into actionable plans and work effectively with cross-functional partners,
+    including product and infrastructure teams.</li> <li>Innovation mindset and commitment
+    to continuous learning and a bias toward action, staying at the forefront of ML/AI
+    trends, agentic systems research, and best practices in tooling, safety, and evaluation.</li>
+    </ul> <h2><strong>What we offer</strong></h2> <ul> <li>Challenging, high-impact
+    work to grow your career</li> <li>Performance-driven compensation with multipliers
+    for outsized impact, bonus programs, equity ownership, and 401(k) matching</li>
+    <li>Best-in-class benefits to fuel your work, including 100% paid health insuran
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.124225+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

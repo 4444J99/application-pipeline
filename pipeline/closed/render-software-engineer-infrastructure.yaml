@@ -1,0 +1,118 @@
+id: render-software-engineer-infrastructure
+name: Render Software Engineer, Infrastructure
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Render
+  url: https://jobs.ashbyhq.com/render
+  application_url: https://jobs.ashbyhq.com/render/d52dc923-1641-4386-b8ba-5c15e1d7028d
+  portal: ashby
+  location: 'Remote: United States'
+  location_class: us-remote
+  description: "At Render, we\u2019re building the modern cloud platform for developers\
+    \ creating AI-native, full-stack, multi-service applications. Our mission is to\
+    \ eliminate the tradeoff between the power of hyperscalers and the simplicity\
+    \ of developer-friendly platforms\u2014so teams can ship fast, scale reliably,\
+    \ and focus on their product, not infrastructure. Unlike complex hyperscalers\
+    \ or ephemeral edge/serverless solutions, Render offers a developer-first experience\
+    \ with persistent compute, dynamic autoscaling, built-in orchestration, and observability,\
+    \ allowing teams to launch, scale, and manage real-world applications without\
+    \ writing infrastructure code or managing servers. Whether you're building LLM-powered\
+    \ applications, scalable SaaS products, or async processing pipelines, Render\
+    \ empowers teams to move fast and scale confidently from MVP to millions of users.\
+    \ Our platform is trusted by over 4.5 million developers worldwide and continues\
+    \ to grow rapidly. In February 2026, we raised an additional $100M in Series C\
+    \ financing, bringing our total funding to $257M, to accelerate our vision of\
+    \ making cloud infrastructure both powerful and intuitive\u2014designed for the\
+    \ speed of modern AI development. We\u2019re a diverse and talented team that\
+    \ values craft, velocity, and user experience. If you\u2019re excited to help\
+    \ shape the future of the intelligent cloud and empower developers everywhere,\
+    \ we\u2019d love to hear from you. Applying to Render We're seeking candidates\
+    \ who possess high integrity, humility, and an insatiable drive to learn. Through\
+    \ reasoned discussions and continuous feedback, we strive to improve both individually\
+    \ and collectively. We foster an environment of mutual trust and respect, empowering\
+    \ effective debate to achieve the best outcomes for our customers and team. We\
+    \ especially encourage members of underrepresented groups in the tech community\
+    \ to apply and understand that not all successful candidates will meet each requirement\
+    \ listed. Our interview process is unique to each role, and we value the candidate\
+    \ experience just as much as our customer experience. We hope your conversations\
+    \ with us reflect a thoughtful process that is illuminative, enjoyable, and respectful\
+    \ of your time. About the Role Render's mission is to eliminate the undifferentiated\
+    \ work that goes into building software products by offering an easy-to-use, powerful\
+    \ cloud platform for developer teams of all sizes. We are scaling rapidly. Our\
+    \ customers have created hundreds of thousands of services on our platform, and\
+    \ the numbers continue to accelerate. Our customers trust us to deliver a secure,\
+    \ reliable and performant cloud \u2014 this is our top priority as a company.\
+    \ By joining us at an early stage, you will design and build the cloud platform\
+    \ you've always wanted for yourself, and make decisions that will shape our product\
+    \ and company, directly impacting developers around the globe. We are looking\
+    \ for engineers with deep specialization in cloud infrastructure. We are particularly\
+    \ interested in experience with container orchestration, low-level networking,\
+    \ and storage management. Areas of focus will be improving our architecture to\
+    \ schedule & spin up containers orders of magnitude faster, develop offerings\
+    \ to support our customers' growing AI workloads, improving the performance of\
+    \ and adding new features to our internal traffic routing & load balancing, and\
+    \ building low-level primitives to enable our users to massively parallelize data\
+    \ processing workloads. What You'll Do Own Render's core infrastructure across\
+    \ multiple data centers and regions. Help offer unique capabilities to Render\
+    \ customers through infrastructure innovation. Plan and architect for rapidly\
+    \ increasing scale. Debug issues at all levels in our infrastructure stack. Improve\
+    \ the performance and reliability of our infrastructure through increased observability,\
+    \ load testing, and chaos engineering. Collaborate with other engineers to help\
+    \ keep our platform stable, predictable, and secure. Participate in our on-call\
+    \ rotation, with the rest of the engineering team. What We're Looking For At least\
+    \ 5 years of experience building and scaling cloud infrastructure. Experience\
+    \ developing, maintaining, and debugging production systems at scale. Experience\
+    \ building, operating and scaling Kubernetes clusters or similar resource/container\
+    \ orchestration. Experience with infrastructure-as-code tools like Terraform,\
+    \ Pulumi, and Ansible. Nice-to-haves Experience with Linux kernel and/or container\
+    \ optimization Familiarity with observability tools like Datadog, Grafana, and\
+    \ OpenTelemetry. Experience hosting PostgreSQL (or similar data stores) at scale.\
+    \ Security hardening skills, especially in the context of untrusted workloads.\
+    \ Relevant Links from the Render Engineering Team SEV0 SF 2025 | Boundary Cases:\
+    \ Technical and social challenges in cross-system debugging Kubernetes Informers\
+    \ are so easy... to misuse! How Render Scaled Knative to 100k+ Web Apps Distributing\
+    \ Global State to Serve over 1 Billion Daily Reques"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 8
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.936108+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,81 @@
+id: stripe-backend-engineer-ui-services
+name: Stripe Backend Engineer, UI Services
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7310001
+  portal: greenhouse
+  location: Barcelona
+  location_class: international
+  description: <h1>Backend Engineer, UI Services</h1> <h2>Who we are</h2> <h3>About
+    Stripe</h3> <p>Stripe is a financial infrastructure platform for businesses. Millions
+    of companies—from the world’s largest enterprises to the most ambitious startups—use
+    Stripe to accept payments, grow their revenue, and accelerate new business opportunities.
+    Our mission is to increase the GDP of the internet, and we have a staggering amount
+    of work ahead. That means you have an unprecedented opportunity to put the global
+    economy within everyone’s reach while doing the most important work of your career.</p>
+    <h3>About the team</h3> <p>The UI Services team provides backend-for-frontend
+    (BFF) capabilities and services to bridge the gap between the complex backend
+    systems and the UI platform, allowing a unified experience. Our team is ambitious
+    and forward-thinking, committed to building solutions that not only meet today's
+    needs but also lay the groundwork for future innovations, ultimately enriching
+    the value that Stripe can deliver to its customers.</p> <h2>What you’ll do</h2>
+    <p>You will design, implement and maintain the services for our UI platform at
+    scale, including its user experience, and driving widespread adoption among the
+    engineering teams. The primary objective of the UI platform is to empower engineers
+    to build product experiences at scale, efficiently and faster while ensuring a
+    consistent and smooth user experience.</p> <h2>Who you are</h2> <p>We are seeking
+    a candidate with a background in backend services, tooling and infrastructure
+    and who meets the minimum requirements to be considered for the role. If you meet
+    these requirements, you are encouraged to apply.&nbsp;</p> <h3>Minimum requirements</h3>
+    <ul> <li>Residence in the Barcelona metropolitan area, or willing to relocate</li>
+    <li>3+ years of backend engineering experience building services using programming
+    languages such as Java, Ruby, or Go.</li> <li>Experience in developing infrastructure
+    solutions.</li> <li>Strong oral and written communication skills and ability to
+    collaborate with designers, product managers, and product engineers</li> <li>Appreciation
+    for the importance of good documentation -- internal and external</li> </ul> <p>&nbsp;</p>
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.745848+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

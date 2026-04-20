@@ -1,0 +1,114 @@
+id: brex-senior-software-engineer-frontend
+name: Brex Senior Software Engineer, Frontend
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Brex
+  url: https://boards.greenhouse.io/brex
+  application_url: https://www.brex.com/careers/8501051002?gh_jid=8501051002
+  portal: greenhouse
+  location: San Francisco, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p><strong>Why join us</strong></p> <p>Brex
+    is the intelligent finance platform that enables companies to spend smarter and
+    move faster in more than 200 markets. By combining global corporate cards and
+    banking with intuitive spend management, bill pay, and travel software, Brex enables
+    founders and finance teams to accelerate operations, gain real-time visibility,
+    and control spend effortlessly. Brex’s AI-native automation and world-class service
+    eliminate manual expense and accounting tasks for customers so they can focus
+    on what matters most. Tens of thousands of the world's best companies run on Brex,
+    including DoorDash, Coinbase, Robinhood, Zoom, Plaid, Reddit, and SeatGeek.</p>
+    <p>Working at Brex allows you to push your limits, challenge the status quo, and
+    collaborate with some of the brightest minds in the industry. We’re committed
+    to building a diverse team and inclusive culture and believe your potential should
+    only be limited by how big you can dream. We make this a reality by empowering
+    you with the tools, resources, and support you need to grow your career.</p></div><p><strong>Engineering
+    at Brex</strong></p> <p>Engineering at Brex is about building systems that scale
+    with speed and intention. Our teams span Software, Data, Security, and IT, and
+    operate with high autonomy and deep collaboration. We tackle hard technical problems,
+    own our outcomes, and push for excellence at every level - from architecture to
+    deployment. It’s an environment where engineering is a craft, and builders become
+    leaders.</p> <p><strong>What you’ll do</strong></p> <p>As an Senior Frontend Engineer,
+    you will be working across the entire Brex stack, creating and maintaining new
+    products, features, and building tools to help scale Brex. You will have the opportunity
+    to learn and push the frontier of providing the best financial software experience
+    to help companies grow. You’ll be encouraged to be metric and data-driven and
+    to think creatively to help Brex scale and get prepared for the new markets we
+    are about to enter. We’re looking for folks with not only an interest in building
+    products and tools but also interested in leading multi-functional projects with
+    lots of moving pieces. In this role, you’ll have the opportunity to drive direct
+    business impact and shape our long-term technical vision with a high-quality bar.</p>
+    <p><strong>Where you’ll work</strong></p> <p>This role will be based in our San
+    Francisco office. We are a hybrid environment that combines the energy and connections
+    of being in the office with the benefits and flexibility of working from home.
+    We currently require a minimum of three coordinated days in the office per week,
+    Mondays, Wednesdays, and Thursdays. As a perk, we also have up to four weeks per
+    year of fully remote work!</p> <p><strong>Responsibilities</strong></p> <ul> <li>Work
+    with engineers across the company to build new features and products.</li> <li>Work
+    side-by-side with user facing teams (Sales, Support) to best understand the needs
+    of our customers.&nbsp;</li> <li>Design and implement experiments to improve our
+    customer’s experiences.</li> <li>Own problems end-to-end, thinking through everything
+    from user experience, data models, scalability, operability and ongoing metrics.</li>
+    <li>Tune and polish features to a high-degree of excellence.</li> </ul> <p><strong>Requirements</strong></p>
+    <ul> <li>7+ years of professional experience with&nbsp;modern frontend technologies
+    and tools like ES6+, React, TypeScript, and Webpack</li> <li>Experience architecting,
+    developing, and testing client-side code end to end</li> <li>Experience developing
+    client facing software products&nbsp;</li> <li>Uphold our high engineering standards</li>
+    <li>Strong communication and interpersonal skills.</li> </ul> <p><strong>Bonus
+    points</strong></p> <ul> <li>Experience collaborating with specialists in product,
+    design, and operations</li> <li>Experience with developing in React Native for
+    mobile</li> <li>Basic experience with design tools</li> <li>Great writing skills</li>
+    <li>Proactive approach.</li> </ul> <p><strong data-stringify-type="bold">Compensation</strong></p>
+    <p>The expected salary range for this role is $192,000 - $240,000. However, the
+    starting base pay will depend on a number of factors including the candidate’s
+    location, skills, experience, market demands, and internal pay parity.&nbsp;</p>
+    <p>Brex LLC is a wholly owned subsidiary of Capital One, N.A.</p><div class="content-conclusion"><p><em>Please
+    be aware, job-seekers may be at risk of targeting by malicious actors looking
+    for personal data. Brex recruiters will only reach out via LinkedIn or email with
+    a&nbsp;<a class="c-link" href="http://brex.com/" target="_blank" data-stringify-link="http://brex.com"
+    data-sk="tooltip_parent">brex.com</a>&nbsp;domain. Any outreach claiming to be
+    from Brex via other sources should be ignored.</em></p></div>
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-09'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.112363+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

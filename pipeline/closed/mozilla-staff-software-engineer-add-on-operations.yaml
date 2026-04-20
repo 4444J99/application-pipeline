@@ -1,0 +1,114 @@
+id: mozilla-staff-software-engineer-add-on-operations
+name: Mozilla Staff Software Engineer, Add-on Operations
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Mozilla
+  url: https://boards.greenhouse.io/mozilla
+  application_url: https://job-boards.greenhouse.io/mozilla/jobs/7524336
+  portal: greenhouse
+  location: Remote
+  location_class: remote-global
+  description: '<div class="gmail_default" style="font-size: small;"> <div> <div>To
+    learn the Hiring Ranges for this position, please select your location from the
+    <strong>Apply Now</strong> dropdown menu.</div> <p style="text-align: justify;
+    line-height: 1;">To learn more about our Hiring Range System, please click this
+    <a href="https://docs.google.com/document/d/1ylUe7Ou0EbsOtGRBtUv1sSld3lbZ4mrYzo59tEkSjY8/edit?usp=sharing"
+    target="_blank"><span style="text-decoration: underline;"><strong>link.</strong></span></a></p>
+    <p><strong>Why Mozilla?</strong></p> <p><span style="font-weight: 400;">Mozilla
+    Corporation is the non-profit-backed technology company that has shaped the internet
+    for the better over the last 25 years. We make pioneering brands like Firefox,
+    the privacy-minded web browser. Now, with more than 225 million people around
+    the world using our products each month, we’re shaping the next 25 years of technology
+    and helping to reclaim an internet built for people, not companies. Our work focuses
+    on diverse areas including AI, social media, security and more. And we’re doing
+    this while never losing our focus on our core mission – to make the internet better
+    for people.</span><span style="font-weight: 400;"><br></span><span style="font-weight:
+    400;"> The Mozilla Corporation is wholly owned by the non-profit 501(c) Mozilla
+    Foundation. This means we aren’t beholden to any shareholders — only to our mission.
+    Along with thousands of volunteer contributors and collaborators all over the
+    world, Mozillians design, build and distribute open-source software that enables
+    people to enjoy the internet on their terms.</span></p> <p><strong>About this
+    team and role</strong></p> <p><span style="font-weight: 400;">addons.mozilla.org
+    (AMO) is the foundation of the Firefox add-ons ecosystem. It’s a showcase for
+    developers to publish and grow their extensions, and a place of discovery for
+    millions of users who customize Firefox to make it their own. Behind the scenes
+    are the DevHub which enables developers to manage their extensions. To manage
+    the ecosystem there are a series of reviewer tools and automated moderation systems.&nbsp;</span></p>
+    <p><span style="font-weight: 400;">As a Staff Software Engineer - Operations,
+    you’ll bring a passion for crafting resilient systems that accelerate our review
+    and operations team to provide a first-class experience for Add-on developers.
+    You’ll work closely with engineers, reviewers, developer relations, and Add-ons
+    leadership to turn ideas into polished features, modernize the platform and its
+    architecture, and see your work reach millions of people around the world.</span></p>
+    <p><strong>What you’ll do:&nbsp;</strong></p> <ul> <li style="font-weight: 400;"><span
+    style="font-weight: 400;">Plan and deliver major features and architectural improvements
+    across the Add-ons stack, including automated moderation pipelines, Reviewer tools,
+    and DevHub.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Partner with Engineering management to set Operations Engineering standards
+    (SLOs, incident management, observability baselines).</span></li> <li style="font-weight:
+    400;"><span style="font-weight: 400;">Mentor engineers, sharing knowledge and
+    delegating responsibilities to help others grow.</span></li> <li style="font-weight:
+    400;"><span style="font-weight: 400;">Improve platform reliability through deployments,
+    monitoring, and incident response.</span></li> <li style="font-weight: 400;"><span
+    style="font-weight: 400;">Help keep the platform safe and trustworthy, with attention
+    to security and user trust.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Step in to resolve issues impacting users and developers, from small bugs
+    to larger incidents.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Collaborate with designers, product managers, QA, and community contributors
+    to deliver end-to-end improvements.</span></li> <li style="font-weight: 400;"><span
+    style="font-weight: 400;">Contribute in the open through pull requests, code reviews,
+    and discussions.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Work on:&nbsp;</span></li> <ul> <li style="font-weight: 400;"><strong>Full
+    stack development:</strong><span style="font-weight: 400;"> React/TypeScript frontends,
+    Django backend, MySQL datastore.</span></li> <li style="font-weight: 400;"><strong>Platform
+    reliability:</strong><span style="font-weight: 400;"> deployments, monitoring,
+    and incident response on Google Cloud.</span></li> <li style="font-weight: 400;"><strong>Feature
+    development:</strong><span style="font-weight: 400;"> submission flows, trust
+    and safety signals, DevHub and Reviewer tools modernization.</span></li> <li style="font-weight:
+    400;"><strong>Ecosystem moderation</strong><span style="font-weight: 400;">: abuse
+    report management, policy compliance, and ecosystem safety.&nbsp;</span></li>
+    <li style="font-weight: 400;"><strong>Open collaborati'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.815024+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

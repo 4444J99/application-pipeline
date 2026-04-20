@@ -1,0 +1,115 @@
+id: deel-team-lead-engineering-nodejs
+name: Deel Team Lead, Engineering, Node.js
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Deel
+  url: https://jobs.ashbyhq.com/deel
+  application_url: https://jobs.ashbyhq.com/deel/dfc3b223-9114-4721-a40e-941e34c0dc85
+  portal: ashby
+  location: Spain
+  location_class: international
+  description: 'Who we are is what we do. Deel is the all-in-one payroll and HR platform
+    for global teams. Our vision is to unlock global opportunity for every person,
+    team, and business. Built for the way the world works today, Deel combines HRIS,
+    payroll, compliance, benefits, performance, and equipment management into one
+    seamless platform. With AI-powered tools and a fully owned payroll infrastructure,
+    Deel supports every worker type in 150+ countries—helping businesses scale smarter,
+    faster, and more compliantly. Among the largest globally distributed companies
+    in the world, our team of 7,000 spans more than 100 countries, speaks 74 languages,
+    and brings a connected and dynamic culture that drives continuous learning and
+    innovation for our customers. Why should you be part of our success story? As
+    the fastest-growing Software as a Service (SaaS) company in history, Deel is transforming
+    how global talent connects with world-class companies – breaking down borders
+    that have traditionally limited both hiring and career opportunities. We''re not
+    just building software; we''re creating the infrastructure for the future of work,
+    enabling a more diverse and inclusive global economy. In 2024 alone, we paid $11.2
+    billion to workers in nearly 100 currencies and provided healthcare and benefits
+    to workers in 109 countries—ensuring people get paid and protected, no matter
+    where they are. Our momentum is reflected in our achievements and customer satisfaction:
+    CNBC Disruptor 50, Forbes Cloud 100, Deloitte Fast 500, and repeated recognition
+    on Y Combinator’s top companies list – all while maintaining a 4.83 average rating
+    from 15,000 reviews across G2, Trustpilot, Captera, Apple and Google. Your experience
+    at Deel will be a career accelerator. At the forefront of the global work revolution,
+    you''ll tackle complex challenges that impact millions of people''s working lives.
+    With our momentum—backed by a $17.3 billion valuation and $1 B in Annual Recurring
+    Revenue (ARR) in just over five years—you''ll drive meaningful impact while building
+    expertise that makes you a sought-after leader in the transformation of global
+    work. The Impact You’ll Have: As a Team Lead, Engineering at Deel, you will lead
+    a cross-functional team of 6-10 professionals, with a balance of leadership (50%)
+    and hands-on technical work (50%). You will drive technical excellence, mentor
+    your team, and deliver scalable, innovative solutions in a fast-paced, startup-like
+    environment. By fostering collaboration and adopting best practices, you will
+    ensure the team meets organizational goals and delivers exceptional user experiences.
+    user experiences. Get Ready To: Lead with Technical and Team Excellence: Serve
+    as a technical leader, combining hands-on development with strategic oversight.
+    Design, code, and deliver high-quality, scalable applications with Node.js Provide
+    mentorship and technical guidance, fostering growth and skill development within
+    the team. Ensure best practices in development, testing, and deployment, driving
+    innovation and excellence. Conduct thorough code reviews to maintain high coding
+    standards and technical quality. Elevate Team Effectiveness: Collaborate closely
+    with product and design teams to create extraordinary user experiences. Drive
+    technical planning and execution, balancing short-term objectives with long-term
+    system health. Promote Agile methodologies to enhance team productivity and effectiveness.
+    Facilitate knowledge sharing, cross-team collaboration, and continuous improvement.
+    Strategize and Execute for Impact: Define and implement technical strategies in
+    alignment with organizational goals. Lead innovation through rapid prototyping,
+    iterative development, and problem-solving. Identify technical risks and implement
+    mitigation strategies to ensure successful delivery. Represent your teams in cross-functional
+    discussions, aligning technical requirements with business objectives. Build Teams
+    and Foster Culture: Play an active role in hiring and scaling the teams, ensuring
+    alignment with company values. Manage performance cycles, provide structured feedback,
+    and support the professional growth of team members. Cultivate a culture of collaboration,
+    inclusion, continuous learning, and engineering excellence. Champion diversity
+    and foster an environment where all team members thrive. Lead Cross-Functional
+    Collaboration: Partner with product, design, and other engineering teams to ensure
+    seamless alignment on goals. Coordinate efforts across teams to drive complex
+    projects and ensure shared objectives are met. Communicate technical challenges,
+    opportunities, and solutions effectively to stakeholders. Push back on product
+    decisions when necessary, presenting well-reasoned arguments to prioritize technical
+    health, scalability, and long-term success. Resolve complex, multi-team technical
+    challenges by fostering collaboration across disciplines. What You’ll Bring: 10+
+    years of professional software engineering experience with expertise in JavaScrip'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: null
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.550268+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

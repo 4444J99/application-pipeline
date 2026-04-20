@@ -1,0 +1,101 @@
+id: stripe-staff-full-stack-engineer-payments-dashboard
+name: Stripe Staff Full Stack Engineer, Payments Dashboard
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7492950
+  portal: greenhouse
+  location: Seattle
+  location_class: us-onsite
+  description: '<h2>Who we are</h2> <h3>About Stripe</h3> <p><span style="font-weight:
+    400;">Stripe is a financial infrastructure platform for businesses. Millions of
+    companies—from the world’s largest enterprises to the most ambitious startups—use
+    Stripe to accept payments, grow their revenue, and accelerate new business opportunities.
+    Our mission is to increase the GDP of the internet, and we have a staggering amount
+    of work ahead. That means you have an unprecedented opportunity to put the global
+    economy within everyone’s reach while doing the most important work of your career.</span></p>
+    <h3>About the team</h3> <p>The Payments Dashboard group is a newly formed organization
+    focused on Stripe’s dashboard. This team serves as the platform, center of excellence,
+    and owner of some of the highest visited pages on <a href="http://stripe.com">stripe.com</a>’s
+    merchant dashboard. These surfaces are used for core user flows with Stripe -
+    including integration setup and settings, transactions list and data exports,
+    receipts, and foundational operational pages. The forward-looking charter of this
+    team is to establish new information architecture and a centralized place to configure,
+    manage and optimize these user integrations.</p> <h2>What you’ll do</h2> <p>We’re
+    looking for a staff full-stack engineer to join this group. This engineer will
+    be working alongside multiple engineering teams within the Payments Dashboard
+    group, and with multiple organizations outside of it. They will work to enable
+    the teams around them, focusing variously on core dashboard availability and latency,
+    new information architecture and customer flows, and helping engineering teams
+    work efficiently and optimize their operational load.</p> <h3>Responsibilities</h3>
+    <ul> <li>Design and reason about integration experiences with a strong focus on
+    end-user simplicity and developer experience</li> <li>Build full-stack solutions
+    across Stripe''s ecosystem, including back-end services, dashboard interfaces,
+    and integrations with other Stripe primitives</li> <li>Engage directly with users
+    to understand their business needs and translate requirements into concrete solutions</li>
+    <li>Collaborate with cross-functional teams including product, design, and other
+    engineering teams to deliver these solutions</li> <li>Write code in your day-to-day
+    job, in addition to helping make those around you better view code review and
+    design feedback</li> <li>Help scale our systems to handle millions of transactions
+    while maintaining high availability and performance</li> </ul> <h2><strong>Who
+    you are</strong></h2> <p><span style="font-weight: 400;">We’re looking for someone
+    who meets the minimum requirements to be considered for the role. If you meet
+    these requirements, you are encouraged to apply. The preferred qualifications
+    are a bonus, not a requirement.</span></p> <h3>Minimum requirements</h3> <ul>
+    <li>12+ years of experience as a full-stack engineer</li> <li>Ability to take
+    ambiguous product requirements and problems and turn them into working software
+    solutions</li> <li>Experience leading teams that have shipped and maintained critical
+    user-facing products</li> <li>Strong technical proficiency to engage thoughtfully
+    with engineers about architecture and product design, with a particular focus
+    on modern web technologies, performance, and user experience</li> <li>Experience
+    building extensible, leveraged software solutions that scale to different kinds
+    of user needs, with the ability to empathize with users and advocate for exceptional
+    user experiences</li> </ul> <h3><strong>Preferred qualifications</strong></h3>
+    <ul> <li>History of working on geographically distributed teams</li> <li>Previous
+    experiences working in payments and on payments technology</li> <li>Previous experience
+    using Stripe products</li> </ul>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.795881+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,118 @@
+id: deepgram-senior-software-engineer-mobile-saga-team
+name: Deepgram Senior Software Engineer,  Mobile - Saga Team
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Deepgram
+  url: https://jobs.ashbyhq.com/deepgram
+  application_url: https://jobs.ashbyhq.com/deepgram/fb61505f-d3b3-4c43-90a7-6d02f3fd112d
+  portal: ashby
+  location: USA | Remote
+  location_class: us-remote
+  description: "Company Overview Deepgram is the leading platform underpinning the\
+    \ emerging trillion-dollar Voice AI economy, providing real-time APIs for speech-to-text\
+    \ (STT), text-to-speech (TTS), and building production-grade voice agents at scale.\
+    \ More than 200,000 developers and 1,300+ organizations build voice offerings\
+    \ that are \u2018Powered by Deepgram\u2019, including Twilio, Cloudflare, Sierra,\
+    \ Decagon, Vapi, Daily, Cresta, Granola, and Jack in the Box. Deepgram\u2019s\
+    \ voice-native foundation models are accessed through cloud APIs or as self-hosted\
+    \ and on-premises software, with unmatched accuracy, low latency, and cost efficiency.\
+    \ Backed by a recent Series C led by leading global investors and strategic partners,\
+    \ Deepgram has processed over 50,000 years of audio and transcribed more than\
+    \ 1 trillion words. There is no organization in the world that understands voice\
+    \ better than Deepgram. Company Operating Rhythm At Deepgram, we expect an AI-first\
+    \ mindset\u2014AI use and comfort aren\u2019t optional, they\u2019re core to how\
+    \ we operate, innovate, and measure performance. Every team member who works at\
+    \ Deepgram is expected to actively use and experiment with advanced AI tools,\
+    \ and even build your own into your everyday work. We measure how effectively\
+    \ AI is applied to deliver results, and consistent, creative use of the latest\
+    \ AI capabilities is key to success here. Candidates should be comfortable adopting\
+    \ new models and modes quickly, integrating AI into their workflows, and continuously\
+    \ pushing the boundaries of what these technologies can do. Additionally, we move\
+    \ at the pace of AI. Change is rapid, and you can expect your day-to-day work\
+    \ to evolve just as quickly. This may not be the right role if you\u2019re not\
+    \ excited to experiment, adapt, think on your feet, and learn constantly, or if\
+    \ you\u2019re seeking something highly prescriptive with a traditional 9-to-5.\
+    \ Opportunity: Saga is Deepgram\u2019s consumer facing application - this application\
+    \ lets people control their tools, workflows, and environments using natural speech.\
+    \ Deepgram Saga is an innovative voice OS designed for professionals, enabling\
+    \ hands-free control of their workflow through natural language. It integrates\
+    \ seamlessly with existing tools like Slack, Linear, and Notion, allowing them\
+    \ to execute tasks via voice commands, thereby reducing context-switching and\
+    \ enhancing productivity. On the backend, our services are built around RESTful\
+    \ APIs, providing clear, predictable contracts for data access and integration.\
+    \ For real\u2011time interactions, we rely on WebSockets to deliver low\u2011\
+    latency updates and event\u2011driven workflows that keep clients in sync without\
+    \ polling overhead. On the iOS frontend, we build with SwiftUI, using Swift Package\
+    \ Manager (SPM) to manage dependencies and ensure modularity. We leverage Socket.IO\
+    \ to connect seamlessly with our real\u2011time backend, and structure our app\
+    \ architecture with The Composable Architecture (TCA) to enforce predictable state\
+    \ management, testability, and long\u2011term maintainability. Our Android app\
+    \ is built with Kotlin and Jetpack Compose. Responsibilities Work across the frontend\
+    \ with Kotlin (Android) and Swift (iOS) Build ui-components using SwiftUI and\
+    \ Jetpack Compose Design and integrate APIs using REST, supporting flexible, scalable\
+    \ data access across services Develop deep expertise in a few areas while remaining\
+    \ comfortable diving into new parts of the codebase Participate in code reviews\
+    \ and architecture discussions, fostering a culture of clarity, curiosity, and\
+    \ shared ownership Translate high-level product requirements into parallelizable,\
+    \ incrementally releasable tasks Balance short-term deliverables with long-term\
+    \ investments in efficiency, scalability, and performance Qualifications 3+ years\
+    \ of experience on a mobile engineering team, building and maintaining production-grade\
+    \ apps Professional experience with Android and iOS Experience building user interfaces\
+    \ through reusable, composable components\u2014favoring clarity, encapsulation,\
+    \ and predictable state management. Proven ability to optimize database performance\
+    \ through thoughtful schema design, query tuning, and indexing strategies Strong\
+    \ communication skills and the ability to navigate technical tradeoffs in a collaborative,\
+    \ cross-functional environment Nice to Have: Android Telephony API Integration\
+    \ with Deepgram API Familiarity with MCP Comfort working in startup environments,\
+    \ where ambiguity, speed, and scrappy problem-solving are the norm A self-starting\
+    \ mindset with the ability to scope, prioritize, and execute independently Strong\
+    \ product intuition and curiosity about how users interact with emerging interfaces\
+    \ Prior experience with voice technology and AI-driven applications Benefits &\
+    \ Perks* Holistic health Medical, dental, vision benefits Annual wellness stipend\
+    \ Mental health support Life, STD, LTD Income Insurance Plans Work/life blend\
+    \ Unlimited PTO Generous paid parental leave Flexible schedule 12 Paid US company\
+    \ holidays Quarterly personal productivity stipend One-time stip"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.802889+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

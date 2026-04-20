@@ -1,0 +1,116 @@
+id: openai-software-engineer-codex-for-teams
+name: OpenAI Software Engineer, Codex for Teams
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: OpenAI
+  url: https://jobs.ashbyhq.com/openai
+  application_url: https://jobs.ashbyhq.com/openai/c1c8b058-2f0d-4192-8a9e-c21d0f24952c
+  portal: ashby
+  location: London, UK
+  location_class: international
+  description: 'About the Team With Codex we’re building an AI software engineer.
+    One that you can pair with, delegate to, or even ask to take on future tasks proactively.
+    Our team is a fast-moving group within OpenAI, bringing together research, engineering,
+    design, and product. We iteratively build the Codex agent harness and product
+    to get the most out of the model, and we iteratively train the model to be great
+    at complex software engineering tasks. The Codex team is responsible for building
+    state-of-the-art AI systems that can write code, reason about software, and act
+    as intelligent agents for developers and non-developers alike. We operate across
+    research, engineering, product, and infrastructure; owning the full lifecycle
+    of experimentation, deployment, and iteration on novel coding capabilities. Codex
+    for Teams builds products and platform capabilities to drive the adoption of Codex
+    in diverse team environments. It is a cross-cutting team that works across the
+    stack to build both delightful product experiences and fundamental platform capabilities.
+    Its customers range from small teams to large enterprises, and our mission is
+    critical to achieving the vision of Codex as a proactive teammate. About the Role
+    This role is for a software engineer working on Codex, with a specific focus on
+    enabling team-scale adoption across a wide spectrum of environments, from internal
+    teams at OpenAI to external customers ranging from startups to large enterprises.
+    You’ll work directly with customers, Go To Market (GTM) teams, and other engineers
+    and researchers across Codex and OpenAI. You will turn diverse team requirements
+    into products that scale across organizations. The role bridges what teams with
+    Codex’s capabilities, ensuring that they are robust, repeatable, and deeply aligned
+    with how developers work in real-world environments. You’ll own systems end-to-end
+    (architecture, implementation, production operations) with a strong bias for both
+    quality and velocity. In this role, you will: Ship fundamental capabilities including
+    analytics dashboards and APIs, compliance and audit surfaces, workspace RBAC and
+    admin controls, managed configuration and constraints, and rate limits, usage,
+    and pricing primitives for teams. Design and build robust, full-stack services
+    and APIs that power Codex across surfaces (web/app, CLI/local, IDEs, CI/CD) with
+    strong observability, reliability, and security. Enable standardized team deployments
+    by building team configuration packaging and distribution patterns that make it
+    easy to roll out consistent experiences across workspaces. Integrate with enterprise
+    identity and governance systems (e.g., SSO/SAML/OIDC, SCIM, RBAC, policy enforcement),
+    and build data-access patterns that are secure, performant, and compliant for
+    large customers. Partner with GTM to work hands-on with teams through deep engagements
+    to accelerate adoption, iterate rapidly, and translate real-world feedback into
+    scalable product and platform improvements. You might thrive in this role if you:
+    Have strong software engineering fundamentals and experience turning ideas into
+    productionized systems, thinking holistically about speed, performance, and user
+    experience. Are proficient in one or more backend languages (e.g., Python, Go,
+    Rust) and distributed systems concepts, with a focus on reliability, observability,
+    and security. Enjoy building cross-cutting platform capabilities that unlock product
+    velocity, and you’re comfortable working across services, APIs, and end-user product
+    surfaces. Have experience with team/enterprise foundations such as identity and
+    access (SAML/OIDC), SCIM, RBAC, audit/compliance logging, policy enforcement,
+    and data governance controls. Have built developer tools and workflows (CLI/IDE/SDK),
+    automation systems (triggers/scheduling), or integration platforms that connect
+    products to a broader ecosystem of tools. Like working directly with users/customers
+    (or alongside GTM/solutions teams), and can translate messy, diverse requirements
+    into opinionated implementations that scale across many teams. Enjoy 0 -> 1 environments,
+    can navigate ambiguity, and bring crisp product thinking to technical trade-offs.
+    About OpenAI OpenAI is an AI research and deployment company dedicated to ensuring
+    that general-purpose artificial intelligence benefits all of humanity. We push
+    the boundaries of the capabilities of AI systems and seek to safely deploy them
+    to the world through our products. AI is an extremely powerful tool that must
+    be created with safety and human needs at its core, and to achieve our mission,
+    we must encompass and value the many different perspectives, voices, and experiences
+    that form the full spectrum of humanity. We are an equal opportunity employer,
+    and we do not discriminate on the basis of race, religion, color, national origin,
+    sex, sexual orientation, age, veteran status, disability, genetic information,
+    or other applicable legally protected characteristic. For additional information,
+    please s'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.488146+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

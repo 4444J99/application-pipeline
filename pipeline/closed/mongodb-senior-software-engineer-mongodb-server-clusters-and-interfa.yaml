@@ -1,0 +1,115 @@
+id: mongodb-senior-software-engineer-mongodb-server-clusters-and-interfa
+name: MongoDB Senior Software Engineer, MongoDB Server Clusters and Interfaces
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=6749138
+  portal: greenhouse
+  location: United States
+  location_class: us-onsite
+  description: '<p>Join one of our Clusters and Integrations teams, and help build
+    the core infrastructure that will help MongoDB become a world-class distributed
+    database! On Clusters &amp; Interfaces, you’ll work on some of the hardest, most
+    impactful problems MongoDB is facing today in areas like networking, observability,
+    workload management, and data movement. Recently, we’ve been focusing on strengthening
+    MongoDB’s availability guarantees through improvements in connection management,
+    load shedding, robust scale-out, and availability testing.</p> <p>Our team champions
+    a strong culture of inclusivity, diversity, and collaboration. If you want to
+    work on a collaborative team that applies distributed systems fundamentals to
+    deliver core features of a popular database, join us! Let’s change what’s possible
+    for application developers, system architects, and database operators.</p> <p>This
+    role will be based remotely the United States.</p> <h3>Candidate Profile</h3>
+    <ul> <li>5+ years of experience building distributed systems</li> <li>Solid experience
+    writing and reviewing code in C++</li> <li>Proficiency in C++. Experience with
+    building production-level code with a large user base, robust design structure
+    and rigorous code quality. Bonus for familiarity in Rust!</li> <li>Degree in Computer
+    Science or similar field, or equivalent practical experience, with strong competencies
+    in data structures, algorithms, and software design/architecture</li> <li>Passion
+    for the theory and practice of system design for large-scale distributed systems,
+    as well as hands-on or academic experience in the domain</li> <li>Understands
+    modern computer architecture and internals to the degree that they can reason
+    about how specific design choices plays out in a system like MongoDB</li> <li>Has
+    demonstrated industry success or academic research in areas such as:</li> <ul>
+    <li>High performance / low latency networking</li> <li>Performance tuning</li>
+    <li>Distributed systems</li> <li>System observability</li> <li>System resiliency</li>
+    </ul> </ul> <h3>Success Measures</h3> <ul> <li>In your first month, you’ll understand
+    the high-level architecture of MongoDB, dive into the details of your team’s components,
+    and resolve a few bugs</li> <li>In the first three months, you’ll contribute to
+    the development of a project slated for the next release of MongoDB, take on code
+    review responsibilities, and participate in design reviews for new features</li>
+    <li>In the first six months, you’ll lead the development of a new feature and
+    help mentor new engineers on the team</li> </ul> <h3>About MongoDB</h3> <p>MongoDB
+    is built for change, empowering our customers and our people to innovate at the
+    speed of the market. We have redefined the database for the AI era, enabling innovators
+    to create, transform, and disrupt industries with software. MongoDB’s unified
+    database platform—the most widely available, globally distributed database on
+    the market—helps organizations modernize legacy workloads, embrace innovation,
+    and unleash AI. Our cloud-native platform, MongoDB Atlas, is the only globally
+    distributed, multi-cloud database and is available across AWS, Google Cloud, and
+    Microsoft Azure.</p> <p>With offices worldwide and nearly 60,000 customers—including
+    75% of the Fortune 100 and AI-native startups—relying on MongoDB for their most
+    important applications, we’re powering the next era of software.</p> <p>Our compass
+    at MongoDB is our <a href="https://www.mongodb.com/company">Leadership Commitment,</a>
+    guiding how and why we make decisions, show up for each other, and win. It’s what
+    makes us MongoDB.&nbsp;</p> <p>To drive the personal growth and business impact
+    of our employees, we’re committed to developing a supportive and enriching culture
+    for everyone. <a href="https://www.mongodb.com/company/blog/culture/employee-benefits-that-make-a-difference-at-mongodb">From
+    employee affinity groups, to fertility assistance and a generous parental leave
+    policy</a>, we value our employees’ wellbeing and want to support them along every
+    step of their professional and personal journeys.<a href="https://www.mongodb.com/blog/channel/culture">
+    Learn more about what it’s like to work at MongoDB</a>, and help us make an impact
+    on the world!</p> <p>MongoDB is committed to providing any necessary accommodations
+    for individuals with disabilities within our application and interview process.
+    To request an accommodation due to a disability, please inform your recruiter.</p>
+    <p>MongoDB, Inc. provides equal employment opportunities to all employees and
+    applicants for employment and prohibits discrimination and harassment of any type
+    and makes all hiring decisions without regard to race, color, religion, age, sex,
+    national origin, disability status, genetics, protected veteran status, sexual
+    orientation, gender identity or expression, or any other characteristic protected
+    by federal, state or local laws.</p> <p>Req ID: 425246</p><div class="content-pay-transparency"><div
+    class="pay-input"><d'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.589542+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

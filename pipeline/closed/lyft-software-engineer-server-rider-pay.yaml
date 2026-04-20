@@ -1,0 +1,116 @@
+id: lyft-software-engineer-server-rider-pay
+name: Lyft Software Engineer, Server - Rider Pay
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Lyft
+  url: https://boards.greenhouse.io/lyft
+  application_url: https://app.careerpuck.com/job-board/lyft/job/8470953002?gh_jid=8470953002
+  portal: greenhouse
+  location: Toronto, Canada
+  location_class: international
+  description: '<p>At Lyft, our purpose is to serve and connect. We aim to achieve
+    this by cultivating a work environment where all team members belong and have
+    the opportunity to thrive.</p> <p><em>Lyft is looking for software engineers from
+    a scope of disciplines. We are growing our team with people who want to build,
+    improve and incorporate technologies that make the lives of our community more
+    enriched. As an engineer at Lyft, you''ll collaborate with teams like product,
+    data science, analytics, and operations on code that empower us to iterate quickly,
+    while focusing on delighting our passengers and drivers.</em></p> <p><em>Rider
+    Pay sits within Rider PLP Org(Partnership, Loyalty, Pay) and exists to remove
+    friction from every payment moment and make riders'' money go further. We enable
+    financial benefits that create value, build payment systems that support membership,
+    and ensure every transaction reinforces the Lyft relationship</em></p> <h3>Responsibilities:</h3>
+    <ul> <li>Write well-crafted, well-tested, readable, maintainable code</li> <li>Participate
+    in code reviews to ensure code quality and distribute knowledge&nbsp;</li> <li>Participate
+    in our teams oncall rotation. Identify, triage, debug and resolve issues/bugs
+    across our various applications and platforms</li> <li>Have the ability to explain
+    the various trade offs made in decisions</li> <li>Manage project priorities, deadlines,
+    and deliverables.</li> <li>Participate in AI-augmented development workflows for
+    code review, testing, and documentation</li> <li>Contribute to reusable platform
+    capabilities to transition from product-by-product solutioning to scalable, config-driven
+    infrastructure</li> </ul> <h3>Experience:</h3> <ul> <li>BS/MS or equivalent in
+    Computer Engineering, Computer Science, or related field or equivalent practical
+    experience</li> <li>Experience with Python, Go.</li> <li>Proficiency in object-oriented
+    programming</li> <li>Experience working with data structures or algorithms&nbsp;</li>
+    <li>Ability to work with a low-ego, highly collaborative, and cross-functional
+    team</li> <li>Bonus points:&nbsp;</li> <ul> <li>Experience pursuing side projects
+    or open-source projects</li> <li>Experience with AI coding assistants (e.g., Cursor,
+    Claude Code) to improve developer productivity</li> </ul> </ul> <h3><strong>Benefits:</strong></h3>
+    <ul> <li>Extended health and dental coverage options, along with life insurance
+    and disability benefits</li> <li>Mental health benefits</li> <li>Family building
+    benefits</li> <li>Child care and pet benefits</li> <li>Access to a Lyft funded
+    Health Care Savings Account</li> <li>RRSP plan with company match to help save
+    for your future</li> <li>In addition to provincial observed holidays, salaried
+    team members are covered under Lyft''s flexible paid time off policy. The policy
+    allows team members to take off as much time as they need (with manager approval).
+    Hourly team members get 15 days paid time off, with an additional day for each
+    year of service&nbsp;</li> <li>Lyft is proud to support new parents with 18 weeks
+    of paid time off, designed as a top-up plan to complement provincial programs.
+    Biological, adoptive, and foster parents are all eligible.</li> <li>Subsidized
+    commuter benefits and Lyft ride credits</li> </ul> <p>Lyft is committed to creating
+    an inclusive workforce that fosters belonging. Lyft believes that every person
+    has a right to equal employment opportunities without discrimination because of
+    race, ancestry, place of origin, colour, ethnic origin, citizenship, creed, sex,
+    sexual orientation, gender identity, gender expression, age, marital status, family
+    status, disability, pardoned record of offences, or any other basis protected
+    by applicable law or by Company policy. Lyft also strives for a healthy and safe
+    workplace and strictly prohibits harassment of any kind.&nbsp; Accommodation for
+    persons with disabilities will be provided upon request in accordance with applicable
+    law during the application and hiring process. Please contact your recruiter if
+    you wish to make such a request.</p> <p>Lyft highly values having employees working
+    in-office to foster a collaborative work environment and company culture. This
+    role will be in-office on a hybrid schedule — Team Members will be expected to
+    work in the office at least 3 days per week, including on Mondays, Wednesdays,
+    and Thursdays. Lyft considers working in the office at least 3 days per week to
+    be an essential function of this hybrid role. Your recruiter can share more information
+    about the various in-office perks Lyft offers. Additionally, hybrid roles have
+    the flexibility to work from anywhere for up to 4 weeks per year. #Hybrid</p>
+    <p>The expected base pay range for this position in the Toronto area is CAD $88,000
+    - CAD $110,000, not inclusive of potential equity offering, bonus or benefits.
+    Salary ranges are dependent on a variety of factors, including qualifications,
+    experience and geographic location. Your recruiter can share more information
+    about the '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.722113+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

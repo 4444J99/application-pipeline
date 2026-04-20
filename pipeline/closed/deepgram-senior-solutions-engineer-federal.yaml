@@ -1,0 +1,116 @@
+id: deepgram-senior-solutions-engineer-federal
+name: Deepgram Senior Solutions Engineer, Federal
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Deepgram
+  url: https://jobs.ashbyhq.com/deepgram
+  application_url: https://jobs.ashbyhq.com/deepgram/b10db691-f77c-4a65-8f7c-ff9574f53f1e
+  portal: ashby
+  location: Washington D.C.
+  location_class: unknown
+  description: 'Company Overview Deepgram is the leading platform underpinning the
+    emerging trillion-dollar Voice AI economy, providing real-time APIs for speech-to-text
+    (STT), text-to-speech (TTS), and building production-grade voice agents at scale.
+    More than 200,000 developers and 1,300+ organizations build voice offerings that
+    are ‘Powered by Deepgram’, including Twilio, Cloudflare, Sierra, Decagon, Vapi,
+    Daily, Cresta, Granola, and Jack in the Box. Deepgram’s voice-native foundation
+    models are accessed through cloud APIs or as self-hosted and on-premises software,
+    with unmatched accuracy, low latency, and cost efficiency. Backed by a recent
+    Series C led by leading global investors and strategic partners, Deepgram has
+    processed over 50,000 years of audio and transcribed more than 1 trillion words.
+    There is no organization in the world that understands voice better than Deepgram.
+    Company Operating Rhythm At Deepgram, we expect an AI-first mindset—AI use and
+    comfort aren’t optional, they’re core to how we operate, innovate, and measure
+    performance. Every team member who works at Deepgram is expected to actively use
+    and experiment with advanced AI tools, and even build your own into your everyday
+    work. We measure how effectively AI is applied to deliver results, and consistent,
+    creative use of the latest AI capabilities is key to success here. Candidates
+    should be comfortable adopting new models and modes quickly, integrating AI into
+    their workflows, and continuously pushing the boundaries of what these technologies
+    can do. Additionally, we move at the pace of AI. Change is rapid, and you can
+    expect your day-to-day work to evolve just as quickly. This may not be the right
+    role if you’re not excited to experiment, adapt, think on your feet, and learn
+    constantly, or if you’re seeking something highly prescriptive with a traditional
+    9-to-5. Opportunity Deepgram is seeking a Senior Applied Engineer to join our
+    Applied Engineering team, operating in the Solutions Engineer role with a focus
+    on federal customers. In this role, you will embed directly with our most strategic
+    federal accounts to lead complex deployments of Deepgram''s Voice AI platform
+    in production environments where mission performance matters, delivery is urgent,
+    and ambiguity is the default. You will own the full technical lifecycle of federal
+    engagements, from initial discovery and proof-of-concept through production deployment
+    and ongoing optimization. You''ll map customer problems, structure delivery, and
+    ship solutions fast. This includes scoping, sequencing, and building full-stack
+    integrations that create measurable mission impact while driving clarity across
+    internal and external teams. Along the way, you''ll identify reusable patterns,
+    codify best practices, and share field signals that influence Deepgram''s product
+    roadmap. As a member of the Applied Engineering team, you''ll serve as the trusted
+    technical thought partner for federal stakeholders, guiding adoption, maximizing
+    operational value, and ensuring successful deployments at scale. While your engagements
+    will primarily involve federal customers, you''ll remain a core part of the broader
+    Applied Engineering team and may contribute to commercial engagements where your
+    expertise is valuable. Note: this role is based remotely out of the Washington
+    D.C. Metropolitan area. About Applied Engineering at Deepgram The Applied Engineering
+    (AppEng) team at Deepgram combines the functions that other companies might separate
+    into Sales Engineering, Solutions Architecture, Implementation, Forward-Deployed
+    Engineering, and Technical Support. We serve as the technical interface between
+    Deepgram and our customers throughout their entire journey, from initial discovery
+    and proof-of-concept, through implementation and onboarding, to ongoing technical
+    support. We work closely with our Customer Success and Developer Relations (DevRel)
+    teams to ensure a positive, growth-focused experience for our customers, as well
+    as with Product and Engineering teams to deliver solutions that meet customer
+    needs. This unified approach allows us to provide comprehensive technical guidance
+    and build deeper relationships with our customers. As a Senior Applied Engineer
+    operating in the FDE role for federal engagements, you''ll work with a high degree
+    of autonomy in customer environments that often have unique infrastructure constraints,
+    compliance requirements, and security considerations. Your work will directly
+    shape how federal agencies leverage Voice AI to achieve their missions. What You''ll
+    Do Own technical delivery across federal deployments, from first prototype to
+    stable production Embed deeply with federal customers to design and build mission-critical
+    applications powered by Deepgram''s Voice AI models Lead technical discovery and
+    solution design for federal prospects and customers, partnering with Account Executives
+    to navigate complex government sales and procurement cycles Prototype and build
+    full-stack integrations using Python'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: null
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.299781+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

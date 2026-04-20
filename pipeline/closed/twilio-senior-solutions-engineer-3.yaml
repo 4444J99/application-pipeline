@@ -1,0 +1,117 @@
+id: twilio-senior-solutions-engineer-3
+name: Twilio Senior Solutions Engineer 3
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Twilio
+  url: https://boards.greenhouse.io/twilio
+  application_url: https://job-boards.greenhouse.io/twilio/jobs/7511486
+  portal: greenhouse
+  location: Remote - Australia; Remote - Japan; Remote - Singapore
+  location_class: international
+  description: "<div class=\"content-intro\"><p><strong>Who we are&nbsp;</strong></p>\
+    \ <p>At Twilio, we\u2019re shaping the future of communications, all from the\
+    \ comfort of our homes. We deliver innovative solutions to<a class=\"c-link\"\
+    \ href=\"https://customers.twilio.com/\" target=\"_blank\" data-stringify-link=\"\
+    https://customers.twilio.com/\" data-sk=\"tooltip_parent\">&nbsp;hundreds of thousands\
+    \ of businesses&nbsp;</a>and empower millions of developers worldwide to craft\
+    \ personalized customer experiences.</p> <p>Our dedication to <a class=\"c-link\"\
+    \ href=\"https://www.twilio.com/en-us/blog/open-work\" target=\"_blank\" data-stringify-link=\"\
+    https://www.twilio.com/en-us/blog/open-work\" data-sk=\"tooltip_parent\">remote-first\
+    \ work</a>, and strong culture of connection and global inclusion means that no\
+    \ matter your location, you\u2019re part of a vibrant team with diverse experiences\
+    \ making a global impact each day. As we continue to revolutionize how the world\
+    \ interacts, we\u2019re acquiring new skills and experiences that make work feel\
+    \ truly rewarding. Your career at Twilio is in your hands.<br><br>We use Artificial\
+    \ Intelligence (AI) to help make our hiring process efficient. That said, every\
+    \ hiring decision is made by real Twilions!</p> <p><span style=\"color: rgb(255,\
+    \ 255, 255);\">.</span></p></div><p><strong>See yourself at Twilio</strong></p>\
+    \ <p>Join the team as Twilio\u2019s next <span style=\"text-decoration: underline;\"\
+    ><strong>Senior Solutions Engineer - APJ</strong></span> on Twilio\u2019s <span\
+    \ style=\"text-decoration: underline;\"><em>Digital Sales Communications</em></span>\
+    \ team!</p> <p><strong>About the job</strong></p> <p>This position is needed to\
+    \ enable our customers to build the future of communications. The Senior Solutions\
+    \ Engineer is a critical part of the sales team focused on our Digital Sales segment.</p>\
+    \ <p>Twilio\u2019s Senior Solutions Engineers are responsible for delivering the\
+    \ Technical Win and best Product Fit to our customers.They lead the technical\
+    \ pre-sales relationship, drive technical discovery, propose technical architectures,\
+    \ demonstrate the product, anticipate concerns and offer creative solutions. They\
+    \ build customer trust in Twilio\u2019s solutions.</p> <p>Senior Solutions Engineers\
+    \ should be comfortable engaging with mid-level managers or sketching out an API\
+    \ flow on a whiteboard with customer software engineers.</p> <p>As a Senior Solutions\
+    \ Engineer you will be able to fully and independently run low to mid-complexity\
+    \ opportunities. You will have exposure to all aspects of a deal and will work\
+    \ towards comprehensive knowledge of both our technology and elements of the deal\
+    \ cycle. Additionally, you will take the initiative in identifying and resolving\
+    \ issues that can improve the overall efficiency and effectiveness of the team.\
+    \ In doing so, you may lead the design and execution of small to medium technical\
+    \ projects with limited oversight.</p> <p><strong>Responsibilities</strong></p>\
+    \ <p>In this role, you\u2019ll:</p> <ul> <li>Partner with Account Executives to\
+    \ execute pre-sales activities including opportunity qualification, demonstrations,\
+    \ Proof-of-Concept, RFP, design documentation, technical presentations and enablement\
+    \ sessions.</li> <li>Help customers achieve success by leading the technical and\
+    \ product sale, recommending best-practice solutions, and guiding them on how\
+    \ to use Twilio\u2019s APIs.</li> <li>Establish yourself as a trusted advisor\
+    \ to our customers, by taking the lead on understanding customer technical pains\
+    \ through discovery in order to design, demonstrate, and present innovative solutions\
+    \ that solve business challenges.</li> <li>Build and present highly interactive,\
+    \ complex and engaging customer product demonstrations to help showcase the capabilities\
+    \ of Twilio\u2019s Communications Products, while effectively forming strong customer\
+    \ relationships with both technical and nontechnical stakeholders.</li> <li>Be\
+    \ Hands-on, high-energy, passionate, and a creative problem solver, equipped with\
+    \ the knowledge of how to get things done and ability to lead others to success.</li>\
+    \ <li>Take the initiative to identify and solve problems - both for the customer\
+    \ and within the organization as we grow.</li> <li>Contribute to the broader Twilio\
+    \ Solutions Engineering community through knowledge sharing, constructing demonstration\
+    \ materials, and creating reusable presentations.</li> </ul> <p><strong>Qualifications&nbsp;</strong></p>\
+    \ <p>Twilio values diverse experiences from all kinds of industries, and we encourage\
+    \ everyone who meets the required qualifications to apply. If your career is just\
+    \ starting or hasn't followed a traditional path, don't let that stop you from\
+    \ considering Twilio. We are always looking for people who will bring something\
+    \ new to the table!</p> <p><strong>*Required:</strong></p> <ul> <li>5+ years pre-sales\
+    \ experience selling complex, technical products or 6+ years of professional experience\
+    \ supporting technical products coupled with customer facing experience, particularly\
+    \ in delivery or consulting.</li> <li>Excellent communicato"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.8
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.228663+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

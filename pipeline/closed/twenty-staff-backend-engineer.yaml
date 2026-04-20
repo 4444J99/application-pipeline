@@ -1,0 +1,115 @@
+id: twenty-staff-backend-engineer
+name: Twenty Staff Backend Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Twenty
+  url: https://jobs.ashbyhq.com/twenty
+  application_url: https://jobs.ashbyhq.com/twenty/0ca195b3-a093-4f29-ba7c-b04b9ffdf873
+  portal: ashby
+  location: Arlington, VA
+  location_class: us-onsite
+  description: 'About the Company At Twenty, we''re taking on one of the most critical
+    challenges of our time: defending democracies in the digital age. We develop revolutionary
+    technologies that operate at the intersection of the cyber and electromagnetic
+    domains, where the speed of operations exceeds human sensing and complexity transcends
+    conventional boundaries. Our team doesn''t just solve problems – we deliver game-changing
+    outcomes that directly impact national security. We''re pragmatic optimists who
+    understand that while our mission of protecting America and its allies is challenging,
+    success is possible. Role Summary You’ll design and build backend systems that
+    turn real-time operational data into mission-critical capabilities. This role
+    owns core services that need to be fast, reliable, and secure—operating across
+    cloud and on-prem environments. You’ll make high-leverage architecture decisions,
+    drive technical execution, and raise the bar through mentorship and engineering
+    standards. You’ll partner closely with product, operations, and frontend teams
+    to ship systems that work under real-world constraints. Who You Are You’re motivated
+    by high-stakes, real-world outcomes—especially in national security and cyber
+    operations. You take ownership: you push projects from ambiguous problem to shipped,
+    measured capability. You bring calm, high-judgment leadership during incidents,
+    tradeoff discussions, and tight timelines. You hold a high bar for reliability,
+    security, and maintainability—and you help others meet it. You communicate clearly
+    with both technical and non-technical partners. You prefer simple, scalable designs
+    and know when complexity is justified. You enjoy mentoring and leveling up engineers
+    through feedback, pairing, and strong technical direction. What You’ll Do Architect
+    and build high-throughput backend services that process real-time operational
+    data. Lead technical design reviews and choose pragmatic approaches for new features
+    and system improvements. Design event-driven and distributed systems that are
+    resilient, observable, and performance-tuned. Define stable APIs for internal
+    and external consumers, partnering with frontend for seamless integration. Improve
+    engineering excellence through code reviews, standards, testing strategy, and
+    incident practices. Build and maintain CI/CD workflows that enable rapid, secure
+    delivery. Troubleshoot complex production issues, lead incident response, and
+    drive durable fixes. Partner with product and operational stakeholders to translate
+    needs into deliverable technical plans. Contribute to technical strategy and roadmap
+    planning across backend services. Support hiring by participating in interviews
+    and helping define what “great” looks like. Must Have You have 8+ years building
+    scalable backend systems in production environments. 4+ years of experience in
+    Golang, or 4+ years writing server-side business logic in an object-oriented language
+    (Java, Kotlin, C#, Python) or systems language (C, C++, Rust) with strong system
+    design aptitude. You have led technical initiatives end-to-end, including architecture,
+    execution, and delivery. You have experience designing distributed systems (e.g.,
+    event-driven architectures, messaging, consistency tradeoffs). You have built
+    cloud-native services and operated them in production (AWS preferred). You have
+    strong security fundamentals: secure coding, threat modeling, and defensible design
+    choices. You have a track record mentoring engineers through code reviews, technical
+    guidance, and feedback. You have strong communication skills and can align teams
+    around clear technical decisions. Nice To Have You have experience designing data
+    models and queries in graph databases (e.g., Neo4j, AWS Neptune). You have used
+    relational databases (ex: Postgres, MySQL, or MariaDB) to solve business problems
+    and are able to reason about query performance. You’ve worked on defense, intelligence,
+    or security-focused products with real operational users. You’ve shipped large-scale
+    data processing systems (streaming, near-real-time analytics, or similar). You’ve
+    integrated ML/AI capabilities into production systems in a practical, measurable
+    way. You have open-source contributions or personal projects that demonstrate
+    strong engineering craft. Tech Environment (You Might Work With) Go (Golang) business
+    logic AWS and hybrid cloud/on-prem deployments Event-driven messaging (e.g., NATS)
+    Containers and orchestration (Docker, Kubernetes) GraphQL and service-to-service
+    APIs Graph databases (Neo4j, AWS Neptune) and complex relationship data Security
+    / Work Environment This role requires eligibility to obtain and maintain a U.S.
+    Government security clearance. This role may involve work in a controlled environment.
+    If this role sounds like you, apply and share with us your interest. Some positions
+    may require eligibility to obtain a U.S. Government security clearance. Any clearance
+    requirement will be listed in the role description. Twenty is an equal opportu'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.345785+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

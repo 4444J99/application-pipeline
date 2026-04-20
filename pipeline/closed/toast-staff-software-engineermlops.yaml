@@ -1,0 +1,114 @@
+id: toast-staff-software-engineermlops
+name: Toast Staff Software Engineer(MLOps)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7593526
+  portal: greenhouse
+  location: Bangalore
+  location_class: international
+  description: '<p><span style="font-size: 10pt;">Toast creates technology to help
+    restaurants and local businesses succeed in a digital world, helping business
+    owners operate, increase sales, engage customers, and keep employees happy.</span></p>
+    <p><span style="font-size: 10pt;">Now, more than ever, the Toast team is committed
+    to our customers. We’re taking steps to help restaurants navigate these unprecedented
+    times with technology, resources, and community. Our focus is on building the
+    restaurant platform that helps restaurants adapt, take control, and get back to
+    what they do best: building the businesses they love. And because our technology
+    is purpose-built for restaurants, by restaurant people, restaurants can trust
+    that we’ll deliver on their needs for today while investing in experiences that
+    will power their restaurant of the future.&nbsp;</span></p> <p><span style="font-size:
+    10pt;"><strong><em>Bready*</em></strong><strong> to make a change?</strong></span></p>
+    <p><span style="font-size: 10pt;">Toast is looking for a <strong>Staff Machine
+    Learning Engineer</strong> to serve as a technical linchpin for our AI Platform
+    team. At the P4 level, you aren''t just deploying models; you are designing the
+    fundamental infrastructure that enables dozens of teams to build, deploy, and
+    monitor AI at scale. You will act as a force multiplier, mentoring senior engineers
+    and setting the architectural standards for our MLOps lifecycle—from feature stores
+    and automated retraining to high-performance inference at the edge.</span></p>
+    <p><span style="font-size: 10pt;"><strong>About this </strong><strong><em>Roll*</em></strong><strong>:</strong></span></p>
+    <ul> <li style="font-size: 10pt;"><span style="font-size: 10pt;"><strong>Architectural
+    Leadership:</strong> Design and lead the evolution of a unified MLOps platform
+    that supports diverse needs across Toast, ensuring high availability, scalability,
+    and security of ML services.</span></li> <li style="font-size: 10pt;"><span style="font-size:
+    10pt;"><strong>Engineering Excellence:</strong> Champion and institutionalize
+    best practices for CI/CD for ML (MLOps), automated testing, and infrastructure-as-code
+    (Terraform).</span></li> <li style="font-size: 10pt;"><span style="font-size:
+    10pt;"><strong>Cross-Functional Synergy:</strong> Lead collaborative efforts across
+    Data Engineering, DevOps, and Product teams to bridge the gap between model prototyping
+    and production-grade reliability.</span></li> <li style="font-size: 10pt;"><span
+    style="font-size: 10pt;"><strong>Strategic Roadmapping:</strong> Partner with
+    leadership and Product Managers to define the 1-2 year technical vision for AI
+    infrastructure, prioritizing long-term stability over short-term fixes.</span></li>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;"><strong>Operational
+    Ownership:</strong> Set the standard for observability and incident response for
+    ML systems, driving root-cause analysis for complex system failures.</span></li>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;"><strong>Mentorship:</strong>
+    Actively mentor P2 and P3 engineers, fostering a culture of technical rigor and
+    continuous learning.</span></li> </ul> <p><span style="font-size: 10pt;"><strong>Do
+    you have the right </strong><strong><em>ingredients*</em></strong><strong>?</strong></span></p>
+    <ul> <li style="font-size: 10pt;"><span style="font-size: 10pt;"><strong>Education:</strong>
+    Bachelor’s or Master’s degree in Computer Science, AI, or a related technical
+    field.</span></li> <li style="font-size: 10pt;"><span style="font-size: 10pt;"><strong>Experience:</strong>
+    A minimum of <strong>10-12+ years</strong> of professional software engineering
+    experience, with at least <strong>6-7 years</strong> specifically focused on productionizing
+    and scaling ML systems at the enterprise level.</span></li> <li style="font-size:
+    10pt;"><span style="font-size: 10pt;"><strong>Core Tech Stack:</strong> Expert-level
+    proficiency in <strong>Python, Scala, or Java/Kotlin</strong>. Extensive experience
+    with <strong>PySpark</strong> and high-performance computing.</span></li> <li
+    style="font-size: 10pt;"><span style="font-size: 10pt;"><strong>Generative AI
+    &amp; LLMOps:</strong> Proven track record of taking LLM applications from research
+    to production, including experience with <strong>Vector Databases, LangChain/LangGraph,
+    and A2A protocols</strong>.</span></li> <li style="font-size: 10pt;"><span style="font-size:
+    10pt;"><strong>System Design:</strong> Superior ability to design distributed
+    systems that handle millions of requests with sub-second latency.</span></li>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;">Experience with microservice
+    based architecture, preferably with AWS tooling (SageMaker, DynamoDB, Athena,
+    Glue, etc.)</span></li> <li style="font-size: 10pt;"><span style="font-size: 10pt;">Experience
+    in software engineering best practices and tools including object-oriented programming,
+    test-driven development, CI/CD, git, shel'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.439063+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

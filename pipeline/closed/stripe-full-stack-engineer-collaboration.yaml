@@ -1,0 +1,106 @@
+id: stripe-full-stack-engineer-collaboration
+name: Stripe Full Stack Engineer, Collaboration
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7488253
+  portal: greenhouse
+  location: San Francisco, CA | New York, NY | Remote
+  location_class: unknown
+  description: '<h1><strong>Who we are</strong></h1> <h3><strong>About Stripe</strong></h3>
+    <p>Stripe is a financial infrastructure platform for businesses. Millions of companies—from
+    the world’s largest enterprises to the most ambitious startups—use Stripe to accept
+    payments, grow their revenue, and accelerate new business opportunities. Our mission
+    is to increase the GDP of the internet, and we have a staggering amount of work
+    ahead. That means you have an unprecedented opportunity to put the global economy
+    within everyone’s reach while doing the most important work of your career.</p>
+    <h3><strong>About the team</strong></h3> <p>The Collaboration team helps Stripe
+    employees work smarter, find information and share knowledge, get to know each
+    other, and request and receive help from one another. Many of our solutions come
+    together in Stripe Home, our custom-built intranet (read more about it here: <a
+    href="https://stripe.com/blog/stripe-home">https://stripe.com/blog/stripe-home</a>).
+    The team is small and nimble, and works across a wide stack: on any given day,
+    we discuss user interface design, data models, API design, infrastructure maintenance,
+    search relevance, or all of the above. We’re excited to innovate in a space that
+    traditionally isn’t thought of in the forefront of innovation.</p> <p>Being a
+    small team, we carefully choose what we work on to have the highest leverage.
+    This is not always easy: we work very cross-functionally, at times partnering
+    with various groups from engineering to HR to top management of the company. But
+    one of our greatest rewards is getting to sit next to and see the impact our work
+    has on our users: our fellow Stripe employees.</p> <h2><strong>What you’ll do</strong></h2>
+    <p>As an engineer on Stripe’s Collaboration team, you will be a key member of
+    a team that acts as a force multiplier on the internal tools that Stripe uses.
+    You will focus on building innovative GenAI-powered experiences that help Stripe
+    employees be more productive across various tasks and activities. You will build
+    these experiences by collaborating with multiple other teams across Stripe and
+    experimenting with different ideas and newest technologies.</p> <h3><strong>Responsibilities</strong></h3>
+    <ul> <li>Work with a team of technically sophisticated engineers who put users
+    first.</li> <li>Own solutions from end to end, managing complexity and engaging
+    directly with stakeholders to think through everything from success metrics, to
+    the ergonomics of individual API’s.</li> <li>Use both qualitative and quantitative
+    metrics to determine priorities and measure effectiveness.</li> <li>Uphold Stripe’s
+    high standards for engineering and product quality and mentor newer team members
+    to do the same.</li> </ul> <h2><strong>Who you are</strong></h2> <p>We’re looking
+    for someone who meets the minimum requirements to be considered for the role.
+    If you meet these requirements, you are encouraged to apply. The preferred qualifications
+    are a bonus, not a requirement.</p> <h3><strong>Minimum requirements</strong></h3>
+    <ul> <li>You have 7+ years of industry experience.</li> <li>You have 2+ years
+    of industry experience building rich web experiences using modern frameworks such
+    as React, Vue, etc.</li> <li>You enjoy working across a full stack, from user
+    experience, to API design, to reliability.&nbsp;</li> </ul> <h3><strong>Preferred
+    qualifications</strong></h3> <ul> <li> <ul> <li>You have a passion for enabling
+    people to do their best work.</li> <li>You have a track record of shipping LLM-powered
+    or information retrieval experiences with a strong understanding of how underlying
+    technologies work.</li> <li>You have industry experience working with Ruby, TypeScript,
+    and React.</li> <li>You have a healthy respect for corporate software, understanding
+    where it shines and where it could be improved.</li> <li>You never lose sight
+    of the end-user, and enjoy the quick feedback loops made possible by working (sometimes
+    literally) next to your users.</li> <li>You enjoy working together with your team
+    toward common goals, but are able to drive your work forward autonomously.</li>
+    <li>You work very well cross-functionally, and are able to think rigorously and
+    make hard decisions and tradeoffs.</li> </ul> </li> </ul>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.755376+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

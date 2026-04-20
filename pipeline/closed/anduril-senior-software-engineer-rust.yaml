@@ -1,0 +1,113 @@
+id: anduril-senior-software-engineer-rust
+name: 'Anduril Senior Software Engineer, Rust '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5084301007?gh_jid=5084301007
+  portal: greenhouse
+  location: Broomfield, Colorado, United States; Fort Collins, Colorado, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h1><span style="font-family: helvetica,
+    arial, sans-serif;">ABOUT THE TEAM</span></h1> <p><span style="font-family: helvetica,
+    arial, sans-serif;">At Anduril, our Software Engineers specialize in solving complex,
+    real-world problems through cutting-edge algorithms and intelligent software integrations.
+    Operating in small, innovative teams, we push the boundaries of what''s possible
+    to deliver advanced technologies with mission-critical applications. Our commitment
+    doesn''t end with academic research or proof-of-concept experiments; we measure
+    our success by the real-world impact of our deployed solutions. Inspired by Arthur
+    C. Clarke''s vision — "Any sufficiently advanced technology is indistinguishable
+    from magic" — we aim to achieve groundbreaking results in target tracking, state
+    estimation, and situational awareness. We are currently seeking highly talented
+    technologists to join our mission and redefine the future of defense technology.</span><br><span
+    style="font-family: helvetica, arial, sans-serif;">&nbsp;</span></p> <h2><span
+    style="font-family: helvetica, arial, sans-serif;">WHAT YOU WILL DO:</span></h2>
+    <ul> <li class="text-start" style="font-family: helvetica, arial, sans-serif;"
+    data-uuid="e8f5724a-193c-441c-b2a6-270b54445bae"><span style="font-family: helvetica,
+    arial, sans-serif;">Define and influence the direction of a small team, leveraging
+    your subject-matter expertise in target tracking and state estimation.</span></li>
+    <li class="text-start" style="font-family: helvetica, arial, sans-serif;" data-uuid="dbb74dc6-81a7-497c-b365-3a33f1ddfbc5"><span
+    style="font-family: helvetica, arial, sans-serif;">Architect, maintain, and evolve
+    complex software systems, refactoring existing codebases to improve performance,
+    maintainability, and scalability.</span></li> <li class="text-start" style="font-family:
+    helvetica, arial, sans-serif;" data-uuid="c2e4dd37-2202-4e0f-81eb-f01b734762dc"><span
+    style="font-family: helvetica, arial, sans-serif;">Prototype and deploy state-of-the-art
+    algorithms for tracking, multi-sensor data fusion, and state estimation in agile,
+    iterative development environments.</span></li> <li class="text-start" style="font-family:
+    helvetica, arial, sans-serif;" data-uuid="eb84c189-702d-4aef-9496-58d783003823"><span
+    style="font-family: helvetica, arial, sans-serif;">Develop high-performance Rust
+    software for real-time systems, ranging from tactical implementations to simulation
+    environments and decision support tools.</span></li> <li class="text-start" style="font-family:
+    helvetica, arial, sans-serif;" data-uuid="0e43a3b4-7084-4d3c-b152-5f4e39cb94ec"><span
+    style="font-family: helvetica, arial, sans-serif;">Design and implement robust
+    filters, estimators, and probabilistic reasoning systems that enable actionable
+    insights from noisy, ambiguous, or incomplete sensor data.</span></li> <li class="text-start"
+    style="font-family: helvetica, arial, sans-serif;" data-uuid="d0a14bf6-3200-48df-a643-f837c4d3931c"><span
+    style="font-family: helvetica, arial, sans-serif;">Apply software design patterns
+    and architectural best practices to manage technical debt and guide the evolution
+    of production systems over time.</span></li> <li class="text-start" style="font-family:
+    helvetica, arial, sans-serif;" data-uuid="eb2b70a2-2216-43b8-b875-0d48820a4054"><span
+    style="font-family: helvetica, arial, sans-serif;">Analyze system performance
+    using high-fidelity simulations, innovative modeling tools, and rigorous statistical
+    techniques to validate the benefits of our technology.</span></li> <li class="text-start"
+    style="font-family: helvetica, arial, sans-serif;" data-uuid="1cd031c7-ff45-4086-bbea-18170adaec3c"><span
+    style="font-family: helvetica, arial, sans-serif;">Drive customer success by customizing
+    algorithms and software for mission-critical use cases, including real-time tracking
+    and sensor fusion.</span></li> <li class="text-start" style="font-family: helvetica,
+    arial, sans-serif;" data-uuid="a0a5c18b-74b6-4a07-ab1a-67ed0274b6ee"><span style="font-family:
+    helvetica, arial, sans-serif;">Integrate tracking and estimation technologies
+    into the broader software development lifecycle, from requirements definition
+    through testing and optimization.</span></li> <l'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.410455+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

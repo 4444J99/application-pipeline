@@ -1,0 +1,115 @@
+id: discord-senior-software-engineer-safety-processing
+name: Discord Senior Software Engineer - Safety Processing
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Discord
+  url: https://boards.greenhouse.io/discord
+  application_url: https://job-boards.greenhouse.io/discord/jobs/8377248002
+  portal: greenhouse
+  location: San Francisco Bay Area
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Discord is used by over 200 million people
+    every month for many different reasons, but there’s one thing that nearly everyone
+    does on our platform:<strong> play video games.</strong> Over 90% of our users
+    play games, spending a combined 1.5 billion hours playing thousands of unique
+    titles on Discord each month. Discord plays a uniquely important role in the future
+    of gaming. We are focused on making it easier and more fun for people to talk
+    and hang out before, during, and after playing games.</p></div><p>The Safety Processing
+    team is responsible for the systems that power Discord's ability to detect, review,
+    and enforce against harmful content at scale. We build the infrastructure and
+    decision systems that enable accurate, efficient, and fair content moderation
+    across all of Discord. We're looking for a Senior Software Engineer who can handle
+    complex, multi-milestone projects and deliver high-quality systems that protect
+    millions of users daily.</p> <p>As a Senior Engineer on Safety Processing, you'll
+    take full ownership of projects from initial design through post-launch monitoring
+    and iteration. You'll work on challenging problems at the intersection of automation,
+    large-scale distributed systems, and content safety. You'll help build automated
+    decision systems that scale our review capacity by 10x, develop enforcement infrastructure
+    that handles millions of decisions per day, or architect systems that centralize
+    and simplify safety signal processing. You'll collaborate closely with Trust &amp;
+    Safety operations, ML teams, Policy, and product partners to deliver solutions
+    that make Discord safer while maintaining our commitment to user experience. You'll
+    deliver lovable products while maintaining Discord's high quality bar, utilizing
+    80/20 thinking and a user-centric approach. You'll embody a growth mindset, diving
+    into new code and technologies to deliver safety solutions that protect millions
+    of users daily. This person reports to the Engineering Manager of Safety Processing.</p>
+    <p>This role offers the opportunity to work on systems that directly impact user
+    safety, tackle novel technical challenges in content moderation at scale, and
+    help shape the future of how Discord keeps communities safe.</p> <h3>What You'll
+    Be Doing:</h3> <ul> <li>Own complex safety infrastructure projects end-to-end,
+    from initial design through post-launch monitoring and iteration</li> <li>Build
+    and maintain critical systems for automated content review, enforcement, and safety
+    signal processing at massive scale</li> <li>Apply an adversarial mindset to your
+    work, thinking through security, abuse scenarios, edge cases, and scalability
+    concerns to protect Discord's users</li> <li>Collaborate with Trust &amp; Safety,
+    ML, Policy, and product teams to understand requirements and deliver effective
+    safety solutions</li> <li>Break down complex, multi-milestone projects into smaller
+    work streams while managing stakeholders and dependencies across teams</li> <li>Debug
+    and resolve issues within the team's codebase and adjacent systems, participating
+    in on-call rotations</li> <li>Contribute to technical design discussions and documentation,
+    writing RFCs</li> <li>Help establish best practices and maintain the team's quality
+    bar through code reviews and mentorship</li> </ul> <h3>What You Should Have:</h3>
+    <ul> <li>4+ years of professional software engineering experience with a focus
+    on backend services and infrastructure</li> <li>Strong programming skills in Python</li>
+    <li>Experience building and operating distributed systems and production services
+    at scale</li> <li>Demonstrated ability to own projects end-to-end and deliver
+    results on time</li> <li>Strong debugging skills and ability to navigate complex
+    codebases</li> <li>Excellent collaboration skills and ability to work effectively
+    with cross-functional partners</li> <li>Experience working in larger engineering
+    organizations with multiple teams and stakeholders</li> <li>A quality-centered
+    mindset with attention to the right details at every stage of development</li>
+    <li>Demonstrated adversarial thinking - ability to anticipate misuse, edge cases,
+    and system vulnerabilities</li> <li>Experience with distributed systems concepts
+    and cloud platforms (GCP/AWS)</li> <li>Experience being in 24/7 on-call rotations</li>
+    <li>Strong collaboration and communication skills</li> </ul> <h3>Bonus Points:</h3>
+    <ul> <li>Experience with content moderation, trust &amp; safety, or related problem
+    domains</li> <li>Experience with workflow automation or decision systems</li>
+    <li>Experience with ML/LLM integration and prompt engineering</li> <li>Experience
+    with observability tools, metrics, and monitoring systems at scale</li> <li>Experience
+    with cloud platforms (GCP/AWS)</li> <li>A strong passion for Discord and making
+    online communities safer</li> </ul> <p>&nbsp;</p> <p><em>Candidates must reside
+    in or be willing to relocate to the San Francisco Bay Area (Alameda, Contra Costa,
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.679885+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

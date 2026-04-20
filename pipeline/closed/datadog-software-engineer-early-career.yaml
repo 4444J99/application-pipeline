@@ -1,0 +1,116 @@
+id: datadog-software-engineer-early-career
+name: Datadog Software Engineer - Early Career
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Datadog
+  url: https://boards.greenhouse.io/datadog
+  application_url: https://careers.datadoghq.com/detail/7646452/?gh_jid=7646452
+  portal: greenhouse
+  location: Lisbon, Portugal
+  location_class: unknown
+  description: '<p>We’re looking for early-career engineers to help us collect, aggregate,
+    visualize, and analyze high-scale metrics, logs, and application data. Software
+    engineering at Datadog includes a variety of exciting opportunities. Interested
+    in distributed systems or Kubernetes across tens of thousands of nodes? Looking
+    to build out products like Real User Monitoring or Cloud Security Management or
+    perhaps join one of our internal teams helping engineering teams ship apps quickly?
+    Want to see your work actually impact and improve the product in a meaningful
+    way? We’ve got you covered. Whether you’re writing a new integration, building
+    data pipelines, or working with the open-source community, our early-career engineers
+    are key contributors to our product.</p> <p>Datadog offers the unique opportunity
+    to work on large-scale, real-time systems by engineers for engineers. Our product
+    is multi-cloud and collects more than a hundred trillion events per day for 28,000+
+    customers. Early-career engineers work towards the same objectives as their senior
+    teammates to bring lasting impact to our products.</p> <p>We place value in our
+    office culture - the relationships that it builds, the creativity it brings to
+    the table, and the collaboration of being together. Our hybrid workplace ensures
+    our employees can create a work-life harmony that best fits them.</p> <p>Students
+    can sign up anytime for a free <a href="https://www.datadoghq.com/blog/datadog-github-student-developer-pack/"
+    target="_blank">Datadog Pro account</a>!</p> <p>&nbsp;</p> <p><strong>What You’ll
+    Do:</strong></p> <ul> <li>Solve a scaling bottleneck in a critical service</li>
+    <li>Deploy a new feature to production and progressively roll it out with feature
+    flags</li> <li>Investigate and fix a production issue from a service your team
+    owns</li> <li>Create a way to optimize a service to handle more traffic at scale</li>
+    <li>In partnership with your team, plan the most important projects to work on
+    next</li> </ul> <p>&nbsp;</p> <p><strong>Who You Are:</strong></p> <ul> <li>You
+    are in the process of receiving/have a degree in Computer Science, Software Engineering
+    or related scientific field, or equivalent experience</li> <li>You are targeting
+    a 2026 full-time start date</li> <li>You are comfortable coding in one or more
+    languages&nbsp;</li> <li>You value code simplicity and performance</li> <li>You
+    want to work in a fast-paced environment that values its employees and customers</li>
+    <li>You are a self-starter who enjoys partnering with other engineers and solving
+    difficult problems</li> <li>You’re excited about leveraging AI tools to enhance
+    how you code, solve problems, and build – or eager to learn how</li> <li>You’re
+    looking for or have some exposure using AI coding tools in day-to-day workflows
+    and validate, critique, and refine AI-generated output</li> <li>Bonus: you’re
+    motivated to push the boundaries of how AI can improve software engineering best
+    practices and contribute to building AI-enabled products</li> </ul> <p>&nbsp;</p>
+    <p><em>Datadog values people from all walks of life. We understand not everyone
+    will meet all the above qualifications on day one. That''s okay. If you’re passionate
+    about technology and want to grow your skills, we encourage you to apply.&nbsp;</em></p>
+    <p>&nbsp;</p> <p><strong>Benefits and Growth:</strong></p> <ul> <li>New hire stock
+    equity (RSUs) and employee stock purchase plan (ESPP)</li> <li>Continuous professional
+    development, product training, and career pathing</li> <li>Intradepartmental mentor
+    and buddy program for in-house networking</li> <li>An inclusive company culture,
+    ability to join our Community Guilds (Datadog employee resource groups) and monthly
+    company social events</li> <li>Unlimited snacks and drinks in our office; catered
+    lunches on Monday, Wednesday, and Friday</li> <li>Free, global mental health benefits
+    for employees and dependents age 6+</li> </ul> <p>&nbsp;</p> <p><em>Benefits and
+    Growth listed above may vary based on the country of your employment and the nature
+    of your employment with Datadog.</em></p> <p>&nbsp;</p> <p><strong><em>Please
+    ensure that you submit your CV/resume in English. </em></strong><em>If possible,
+    please apply using your personal email address instead of your university email
+    address.</em></p> <p>&nbsp;</p> <p style="color: white;">#LI-Onsite</p><div class="content-conclusion"><hr>
+    <p><strong>About Datadog:&nbsp;</strong></p> <p>Datadog (NASDAQ: DDOG) is a global
+    SaaS business, delivering a rare combination of growth and profitability. We are
+    on a mission to break down silos and solve complexity in the cloud age by enabling
+    digital transformation, cloud migration, and infrastructure monitoring of our
+    customers’ entire technology stacks. Built by engineers, for engineers, Datadog
+    is used by organizations of all sizes across a wide range of industries. Together,
+    we champion professional development, diversity of thought, innovation, and work
+    excellence to empower continuous growth. Join t'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-07'
+  posting_date: '2026-04-06'
+  date_source: first_published
+  date_added: '2026-04-07'
+  discovered: '2026-04-07T10:15:28.393985+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

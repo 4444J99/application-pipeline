@@ -1,0 +1,75 @@
+id: perplexity-backend-software-engineer-search-crawler-team
+name: 'Perplexity Backend Software Engineer - Search, Crawler Team '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/94ccf41e-d3e1-41aa-9569-c3bcbffc4184
+  portal: ashby
+  location: Belgrade
+  location_class: unknown
+  description: 'We are seeking an experienced Backend Software Engineer to join our
+    Crawler team. In this role, you will design, develop, and operate systems that
+    ingest, process, and manage web-scale data in support of our next generation of
+    advanced search technologies. This is a critical, high-impact engineering position,
+    requiring expertise across both backend and frontend components of our data acquisition
+    stack. Responsibilities Take ownership of and lead projects focused on developing
+    large-scale web crawlers, ingestion pipelines, and data processing systems. Build,
+    maintain, and optimize core backend and frontend components for crawler services,
+    including storage, retrieval, and UI dashboards for data management. Collaborate
+    closely with Search and Infrastructure teams to ensure the reliable, high-quality
+    ingestion and processing of billions of web pages. Architect and implement fullstack
+    features and scalable distributed systems that handle high-load and real-time
+    data operations. Rapidly iterate, experiment with novel approaches, and continuously
+    enhance system performance, usability, and reliability. Qualifications Minimum
+    of 5 years of software development experience, with strong knowledge of data structures
+    and algorithms in at least one of the following languages: Python, C++, Rust,
+    or Go. Experience with large-scale web crawlers is highly desirable. Proven experience
+    building, deploying, and optimizing high-load, distributed, and hardware-adjacent
+    services. Deep understanding of cloud infrastructure, with hands-on experience
+    in Kubernetes (K8s) and AWS. Demonstrated passion for writing clean, efficient,
+    and scalable systems.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.907031+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

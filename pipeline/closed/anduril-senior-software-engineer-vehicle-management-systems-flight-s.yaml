@@ -1,0 +1,116 @@
+id: anduril-senior-software-engineer-vehicle-management-systems-flight-s
+name: Anduril Senior Software Engineer, Vehicle Management Systems (Flight Software)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5070582007?gh_jid=5070582007
+  portal: greenhouse
+  location: Seattle, Washington, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p>The
+    Vehicle Management Systems (VMS) software team, which is part of Anduril's Tactical
+    Recon and Strike (TRS) division, develops flight computer vehicle software for
+    small drones (Group 1–3).</p> <p>Are you passionate about avionics and flight
+    software? Join us in refining the foundation for a common Vehicle Management System
+    (VMS) that can be used across Group 1–3 UAVs. The team is enhancing the current
+    Altius VMS to support modularity, clean abstractions, and faster new-aircraft
+    development cycles—laying the groundwork for scalable, reusable flight software
+    across the TRS product line.</p> <p>The right person for this role has experience
+    in flight control software and embedded Linux or RTOS development. Joining early
+    means you’ll directly shape how we scale—both in the volume of drones we build
+    and the breadth of missions they can fly. Our engineers move quickly from simulation
+    to flight and thrive on solving real-world problems that matter.</p> <h3>ABOUT
+    THE ROLE</h3> <p>As a Senior Software Engineer, Vehicle Management Systems, you
+    will be responsible for developing the embedded software that powers Anduril’s
+    aircraft while working alongside a team of engineers with a diverse set of backgrounds
+    and skills. Anduril has a collaborative culture with plenty of opportunities for
+    ownership. As an early member of the team, your decisions today will have a large
+    impact on the company now and into the future, as well as on our customers.</p>
+    <p>You’ll own sections of the flight stack end-to-end — from device drivers and
+    middleware integration to control law implementation, test automation, and flight
+    validation. Expect to work closely with GNC, hardware, manufacturing, and operations
+    teams, lead technical design reviews, and mentor junior engineers. This role is
+    ideal for someone who thrives on real-world engineering constraints and wants
+    to see the code they ship fly on mission-critical systems.</p> <p><strong>WHAT
+    YOU’LL DO</strong></p> <ul> <li>Design and implement vehicle control systems.</li>
+    <li>Develop embedded software for pre-emptible Linux or RTOS applications.</li>
+    <li>Develop device drivers, protocols, and APIs for aircraft sensors.</li> <li>Integrate
+    new features and sensors into flight controller software.</li> <li>Integrate guidance
+    and control algorithms with the flight software stack.</li> <li>Create Software-In-The-Loop
+    (SITL) and Hardware-In-The-Loop (HITL) test fixtures and automation.</li> <li>Analyze
+    flight test results and iterate quickly on fixes and improvements.</li> <li>Support
+    device manufacturing efforts, debugging, and production-level test.</li> <li>Support
+    operational aircraft deployments and field troubleshooting.</li> <li>Mentor junior
+    engineers and help improve team engineering practices and test infrastructure.</li>
+    </ul> <p><strong>REQUIRED QUALIFICATIONS</strong></p> <ul> <li>4+ years of C++
+    or Rust programming experience.</li> <li>Bachelor’s degree in Computer Science,
+    Electrical Engineering, Aerospace Engineering, or equivalent experience.</li>
+    <li>Direct experience with embedded software or other safety-critical systems.</li>
+    <li>Background in low-level embedded software architecture, design and development.</li>
+    <li>Low-level device driver development experience; familiarity with both microcontrollers
+    and application processors.</li> <li>Comfortable with typical embedded systems
+    tools, compilers, debuggers, and IDEs.</li> <li>Familiarity with communications
+    busses and protocols such as CAN, CAN FD, UART/RS232/RS422/RS485, SPI, QSPI, I2C,
+    Ethernet, etc.</li> <li>Strong debugging skills, comfortable using instrumentation
+    such as oscilloscopes and protocol analyzers.</li> <li>Eligible to obtain and
+    maintain an active U.S. Secret security clearance.</li> </ul> <p><strong>PREFERRED
+    QUALIFICATIONS</strong></p> <ul> <li>6+ years of C++ or Rust programming experience
+    creating clean, efficient, and reliable code.</li> <li>Strong vehicle systems
+    and avionics design knowledge.</li> <li>Experience building flight stacks or working
+    with PX4/ArduPilot or proprietary autopilots.</li> <li>Familiarity with control
+    systems, state estimation, and guidance algorithms.</li> <li>Bias toward delivery
+    and rapid iterati
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:34.036415+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,113 @@
+id: notion-software-engineer-data-infrastructure
+name: Notion Software Engineer, Data Infrastructure
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Notion
+  url: https://jobs.ashbyhq.com/notion
+  application_url: https://jobs.ashbyhq.com/notion/7d18beb6-d40c-46b5-9734-744e6944fee4
+  portal: ashby
+  location: Hyderabad, India
+  location_class: international
+  description: 'About Us: Notion helps you build beautiful tools for your life’s work.
+    In today''s world of endless apps and tabs, Notion provides one place for teams
+    to get everything done, seamlessly connecting docs, notes, projects, calendar,
+    and email—with AI built in to find answers and automate work. Millions of users,
+    from individuals to large organizations like Toyota, Figma, and OpenAI, love Notion
+    for its flexibility and choose it because it helps them save time and money. In-person
+    collaboration is essential to Notion''s culture. We require all team members to
+    work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor
+    Days. Certain teams or positions may require additional in-office workdays. About
+    the Role: Notion''s Data Engineering Infrastructure team keeps the platform under
+    our data pipelines healthy, managing Snowflake, Airflow, and a range of AWS services
+    (EMR, S3, Athena, and more). You''ll have the opportunity to make significant
+    improvements in the infrastructure, reliability, observability, and CI/CD tooling
+    that makes those pipelines possible. You''ll be the first member of the team based
+    in India, joining a four-person team led from the US. This is a high-autonomy
+    role, you''ll ramp quickly through high-impact quick wins, then own progressively
+    larger infrastructure projects. What You''ll Achieve: Infrastructure as Code —
+    Manage and improve Terraform stacks for AWS and Snowflake resources, ensuring
+    services are properly tracked, modularized, and secured. CI/CD — Harden pipelines
+    with alerting on test failures, PR validation with plan previews and impact analysis,
+    and deployment guardrails. Compute provisioning — Set up and maintain EMR clusters
+    (and EKS in the future), track health, and scale based on workload needs. Observability
+    — Configure monitoring, alerting, and dashboards to keep the platform healthy
+    and issues visible. Operational coverage — Triage DAG failures, infrastructure
+    alerts, and platform incidents during India hours, providing faster response times
+    for the team. Skills You''ll Need to Bring: 7+ years as a software or infrastructure
+    engineer with strong DevOps experience. Experience in data platform or infrastructure
+    domains. Deep hands-on experience with Infrastructure as Code (e.g. Terraform)
+    — you''ve managed large stacks and know how to modularize, optimize, and debug
+    complex issues. Experience building and maintaining CI/CD pipelines, including
+    pipeline design, caching, artifact management, and deployment strategies. Hands-on
+    cloud infrastructure experience (AWS preferred) across services like EMR, S3,
+    Athena, and EKS. Strong SQL skills and proficiency in Python or another object-oriented
+    language. Self-starter who can independently identify opportunities and execute
+    with minimal direction. You don’t need to be an AI expert, but you’re curious
+    and willing to adopt AI tools to work smarter and deliver better results. Nice
+    to Haves: Experience with observability tooling (e.g. Grafana, Prometheus, Honeycomb)
+    Familiarity with dbt CI/CD patterns, testing, and deployment Experience with Apache
+    Spark and/or EMR-based data processing Exposure to Snowflake administration or
+    Snowflake Terraform management Experience working across time zones at a fast-growing
+    SaaS company We hire talented and passionate people from a variety of backgrounds
+    because we want our global employee base to represent the wide diversity of our
+    customers. If you’re excited about a role but your past experience doesn’t align
+    perfectly with every bullet point listed in the job description, we still encourage
+    you to apply. If you’re a builder at heart, share our company values, and enthusiastic
+    about making software toolmaking ubiquitous, we want to hear from you. Notion
+    is proud to be an equal opportunity employer. We do not discriminate in hiring
+    or any employment decision based on race, color, religion, national origin, age,
+    sex (including pregnancy, childbirth, or related medical conditions), marital
+    status, ancestry, physical or mental disability, genetic information, veteran
+    status, gender identity or expression, sexual orientation, or other applicable
+    legally protected characteristic. Notion considers qualified applicants with criminal
+    histories, consistent with applicable federal, state and local law. Notion is
+    also committed to providing reasonable accommodations for qualified individuals
+    with disabilities and disabled veterans in our job application procedures. If
+    you need assistance or an accommodation due to a disability, please let your recruiter
+    know. By clicking “Submit Application”, I understand and agree that Notion and
+    its affiliates and subsidiaries will collect and process my information in accordance
+    with Notion’s Global Recruiting Privacy Policy . #LI-Onsite'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.740852+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

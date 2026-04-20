@@ -1,0 +1,101 @@
+id: snowflake-staff-software-engineer
+name: Snowflake Staff Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/7abc060e-8205-4dc0-a954-db0622a19bd5
+  portal: ashby
+  location: DE-Berlin-Trion Building
+  location_class: international
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Staff Software Engineer - Core Data and Transactions
+    Infrastructure (Metadata) Imagine you are part of a team of talented software
+    engineers to shape the future of Snowflake’s Data Cloud. We’re looking for talented
+    and driven software engineers that are passionate about pushing the boundaries
+    of speed and scale. We keep a high bar in engineering as we want to release new
+    versions of Snowflake at fast cadence to all our customers across the globe. If
+    this resonates with you, read on and apply! Our mission is to provide low-latency
+    and highly consistent access to Snowflake’s metadata in a secure way. We keep
+    data safe through geo replication and offer immutable snapshots over long periods
+    of time. Most prominently, we build high-scale APIs that power different types
+    of workload from analytics warehouse and Unistore up to AI and container functions.
+    Almost any internal service interfaces with Metadata APIs. Therefore, our services
+    run at a large scale, supporting trillions of requests per day. Additionally,
+    we own the representation of Metadata to users through the means of Infoschema,
+    SHOW commands and Snowflake APIs. Link to article about Metadata team AS A STAFF
+    SOFTWARE ENGINEER - METADATA, YOU WILL: Solve real business needs at large scale
+    by applying your software engineering and analytical problem solving skills. Build
+    the next-generation transaction system, storage engine and multi-tenant database
+    system. Design, develop, and support a highly-parallel and fault-tolerant database
+    system including a decentralized caching system of terabytes of metadata. Design
+    and implement critical high-performance systems to handle the ever growing request
+    rate of our database. Design and implement core infrastructure features including
+    APIs, DDL transactions and logs as well as advanced features built on top of the
+    metadata, such as cloning, time travel, snapshots and replication. Analyze and
+    understand performance and scalability bottlenecks in the system and solve them.
+    Have the opportunity to work on various background services that power Snowflake''s
+    proprietary multi-level metadata system to support fast compilation and query
+    optimization. Ensure operational readiness of the services and meet the commitments
+    to our customers regarding availability and performance. We are looking for strong
+    system engineers who are interested in solving some of the most challenging problems
+    in distributed systems, performance and scalability, and passionate about building
+    system software with high quality. OUR IDEAL STAFF SOFTWARE ENGINEER WILL HAVE:
+    10+ years industry experience designing, building and supporting large scale systems
+    in production. Strong computer science fundamentals including data structures,
+    algorithms, and distributed systems. Systems programming skills including multi-threading,
+    concurrency, caching, etc. Fluency in Java (or other similar procedural object-oriented
+    language) is preferred. Track record of identifying and implementing creative
+    solutions. Knowledge of database internals is a big plus. BS in Computer Science;
+    Masters or PhD Preferred. Snowflake is growing fast, and we’re scaling our team
+    to help enable and accelerate our growth. We are looking for people who share
+    our values, challenge ordinary thinking, and push the pace of innovation while
+    building a future for themselves and Snowflake. How do you want to make your impact?
+    For jobs located in the United States, please visit the job posting on the Snowflake
+    Careers Site for salary and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.159869+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

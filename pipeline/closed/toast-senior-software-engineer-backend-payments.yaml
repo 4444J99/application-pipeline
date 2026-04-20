@@ -1,0 +1,120 @@
+id: toast-senior-software-engineer-backend-payments
+name: 'Toast Senior Software Engineer (Backend), Payments   '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7599843
+  portal: greenhouse
+  location: US (remote)
+  location_class: remote-global
+  description: "<p><strong>Location(s): </strong>US (remote), Boston (hybrid), or\
+    \ New York (hybrid)</p> <p>&nbsp;</p> <p>Toast is driven by building the restaurant\
+    \ platform that helps restaurants adapt, take control, and get back to what they\
+    \ do best: building the businesses they love.&nbsp;</p> <p>We\u2019re not your\
+    \ traditional tech company and we don\u2019t aim to be. Going against the grain\
+    \ is in our DNA. Building a revolutionary product begins with revolutionary thinking.\
+    \ That\u2019s why we value diversity of background and lived experience. Together,\
+    \ we empower restaurants of all sizes to build great teams, increase revenue,\
+    \ improve operations, and delight their guests. We pair our deep understanding\
+    \ of the restaurant industry with powerful cloud based software and restaurant-grade\
+    \ hardware to deliver an intuitive all-in-one platform. Join us on our mission\
+    \ to empower the restaurant community to delight guests, do what they love, and\
+    \ thrive.</p> <p><strong><em>Bready</em></strong><strong>* to make a change?</strong></p>\
+    \ <p>Fintech at Toast operates one of the most critical portions of the Toast\
+    \ infrastructure: processing payments on behalf of our restaurants and ensuring\
+    \ that restaurants are paid in a timely manner. Payment processing is a key source\
+    \ of Toast\u2019s revenue and also the lifeblood of our customers; we process\
+    \ millions of dollars in transactions per day.&nbsp;</p> <p>We are seeking a Senior\
+    \ Software Engineer to join our Payments team to build out our unified payment\
+    \ processing solution. This platform offers a single, integrated service for payment\
+    \ acceptance across various channels and supports a configurable enterprise approach.\
+    \ It is designed to allow a build-once, available-to-all strategy for both existing\
+    \ and emerging payment methods. The successful candidate will contribute to the\
+    \ development of services providing supporting and core functionality within and\
+    \ around this payment processing solution.</p> <p><strong>A day in the life (Responsibilities)</strong></p>\
+    \ <ul> <li>Design, build, and deliver features for Toast\u2019s payments products&nbsp;</li>\
+    \ <li>Develop and implement automated test suite to ensure the code shipped to\
+    \ our customers meets the highest quality standards</li> <li>Roll* features out\
+    \ to customers, including monitoring for success</li> <li>Collaborate with our\
+    \ PM (and UX) on the definition and design of features &nbsp;</li> <li>Partner\
+    \ with a wide array of teams across Toast&nbsp;</li> <li>Work with experienced\
+    \ engineers to deliver design and code review</li> </ul> <p><strong>What you'll\
+    \ need to thrive (Requirements)</strong></p> <ul> <li style=\"font-weight: bold;\"\
+    ><strong>5+ years of experience in designing and implementing robust backend services</strong></li>\
+    \ <li>Proven ability to develop scalable and secure APIs that integrate with various\
+    \ internal/external systems</li> <li>Knowledge of best practices in API lifecycle\
+    \ management, including versioning, documentation, and deprecation strategies</li>\
+    \ <li>Demonstrated experience with microservices architecture and containerization\
+    \ technologies for enhanced scalability and maintainability</li> </ul> <p><strong>Preferred\
+    \ qualifications (Nice to Haves)</strong></p> <ul> <li>Demonstrated proficiency\
+    \ with DynamoDB or PostgreSQL</li> <li>Proficiency in <strong>Kotlin</strong>\
+    \ (or <strong>Java</strong> and willing to learn Kotlin) and Kotlin-specific frameworks\
+    \ and libraries for building efficient backend solutions</li> <li>Experience with\
+    \ modern data architectures (event sourcing, OLAP, ETL/ELT, streaming data)</li>\
+    \ <li>Experience designing payments APIs</li> <li>Familiarity with PCI-DSS</li>\
+    \ </ul> <p>&nbsp;</p> <p data-pm-slice=\"1 1 []\"><strong>AI at Toast</strong></p>\
+    \ <p>At Toast, one of our company values is that we're hungry to build and learn.\
+    \ We believe learning new AI tools empowers us to build for our customers faster,\
+    \ more independently, and with higher quality. We provide these tools across all\
+    \ disciplines, from Engineering and Product to Sales and Support, and are inspired\
+    \ by how our Toasters are already driving real value with them. The people who\
+    \ thrive here are those who embrace changes that let us build more for our customers;\
+    \ it\u2019s a core part of our culture.</p> <p data-pm-slice=\"1 1 []\"><strong>Our\
+    \ Total Rewards Philosophy&nbsp;<br></strong>We strive to provide competitive\
+    \ compensation and benefits programs that help to attract, retain, and motivate\
+    \ the best and brightest people in our industry. Our total rewards package goes\
+    \ beyond great earnings potential and provides the means to a healthy lifestyle\
+    \ with the flexibility to meet Toasters\u2019 changing needs. Learn more about\
+    \ our benefits at&nbsp;<a class=\"c-link\" href=\"https://careers.toasttab.com/toast-benefits\"\
+    \ target=\"_blank\" data-stringify-link=\"https://careers.toasttab.com/toast-benefits\"\
+    \ data-sk=\"tooltip_parent\" data-remove-tab-index=\"true\">https://careers.toasttab.com/toast-benefits</a>.</p><div\
+    \ class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"description\"\
+    ><p><span st"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.338983+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"
+deferral:
+  reason: strategic_hold
+  resume_date: '2026-04-15'

@@ -1,0 +1,114 @@
+id: sofi-contact-platform-engineer
+name: SoFi Contact Platform Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: SoFi
+  url: https://boards.greenhouse.io/sofi
+  application_url: https://sofi.com/careers/job/7565483003?gh_jid=7565483003
+  portal: greenhouse
+  location: 'UT - Cottonwood Heights; FL - Jacksonville; TX - Frisco; NC - Charlotte;
+    DE- Greenville '
+  location_class: unknown
+  description: '<div class="content-intro"><p><a href="https://www.sofi.com/sofi-employee-applicant-privacy-notice/"
+    target="_blank"><strong>Employee Applicant Privacy Notice</strong></a></p> <p><strong>Who
+    we are:</strong></p> <div> <p>Shape a brighter financial future with us.</p> <p>Together
+    with our members, we’re changing the way people think about and interact with
+    personal finance.</p> <p>We’re a next-generation financial services company and
+    national bank using innovative, mobile-first technology to help our millions of
+    members reach their goals. The industry is going through an unprecedented transformation,
+    and we’re at the forefront. We’re proud to come to work every day knowing that
+    what we do has a direct impact on people’s lives, with our core values guiding
+    us every step of the way. <strong>Join us to invest in yourself, your career,
+    and the financial world.</strong></p> </div></div><h2><strong>Overview</strong></h2>
+    <p>The Contact Platform Engineer is a strategic technical lead focused on the
+    evolution of SoFi’s omni-channel interaction stack. This role serves as the primary
+    architect and data researcher for the member journey and may perform system configuration
+    as needed.</p> <p>The successful candidate will mine historical IVR and chat data
+    to identify customer friction points and translate those insights into high-level
+    blueprints. You will act as the bridge between Operations and Engineering, designing
+    the "what" and "why" so that technical teams can execute the "how".</p> <h3><strong>Expertise
+    Breakdown</strong></h3> <ul> <li><strong>Data Mining &amp; Friction Analysis (40%)</strong>:
+    Identifying trends in IVR/Chat performance and agent-handled friction.</li> <li><strong>Solutions
+    Architecture &amp; Blueprinting (40%)</strong>: Designing the technical workflows
+    and cross-functional requirements.</li> <li><strong>Strategic Collaboration (20%)</strong>:
+    Partnering with Engineering and Ops to drive the roadmap.</li> </ul> <h2><strong>Core
+    Responsibilities</strong></h2> <h3><strong>Insight Engineering &amp; Data Mining
+    (40%)</strong></h3> <ul> <li>Analyze historical IVR, chatbot, and transcript data
+    to identify why members are failing to self-serve.</li> <li>Go beyond platform
+    metrics to identify "friction-heavy" call/chat types that require high agent effort.</li>
+    <li>Quantify the business impact of proposed enhancements using data-driven projections.</li>
+    <li>Monitor post-launch performance to validate that designed blueprints achieved
+    intended friction reduction.</li> </ul> <h3><strong>Solutions Architecture &amp;
+    Blueprinting (40%)</strong></h3> <ul> <li>Translate identified operational gaps
+    into comprehensive technical blueprints and interaction flows.</li> <li>Define
+    the "Definition of Ready" for Engineering partners, including detailed requirements
+    and logic maps.</li> <li>Conduct design sessions to ensure proposed solutions
+    are scalable and aligned with enterprise standards.</li> <li>Front-end configuration
+    on contact platforms, as needed.</li> </ul> <h3><strong>Strategic Collaboration
+    (20%)</strong></h3> <ul> <li>Lead cross-functional meetings with Product, Engineering,
+    and Operations to align on project scope and needs.</li> <li>Act as the subject
+    matter expert (SME) during the development lifecycle demonstrating product expertise
+    to clarify architectural intent and product and member benefits.</li> <li>Maintain
+    the long-term roadmap for contact platform enhancements based on emerging member
+    needs.</li> </ul> <h2><strong>Qualifications</strong></h2> <ul> <li><strong>5+
+    years of experience</strong> in systems architecture, business intelligence, or
+    operations technology.</li> <li><strong>Expert-level Analytical Skills</strong>:
+    Proficiency in mining data from telephony or CCaaS platforms to find the "story"
+    behind the metrics.</li> <li><strong>Demonstrated Blueprinting Experience</strong>:
+    Ability to create professional system diagrams and workflow logic for Engineering
+    hand-offs.</li> <li><strong>Strong Communication</strong>: Ability to "translate"
+    between high-level business problems and deep technical requirements.</li> <li><strong>Platform
+    Knowledge</strong>: Familiarity with modern CCaaS/Chatbot capabilities is required
+    to design effectively, though hands-on configuration is not part of this role.</li>
+    <li>Preferred Bachelor degree or technical discipline or 5+ years of relative
+    experience&nbsp;</li> <li>Preferred contact analysis platform, voice bot, DataGrip,
+    SQL &amp; BI platforms</li> </ul> <p>&nbsp;</p> <p>&nbsp;</p><div class="content-conclusion"><div
+    class="gmail_default"><strong>Compensation and Benefits</strong></div> <div class="gmail_default">The
+    base pay range for this role is listed below. Final base pay offer will be determined
+    based on individual factors such as the candidate’s experience, skills, and location.&nbsp;</div>
+    <div class="gmail_default">&nbsp;</div> <div class="gmail_default">To view all
+    of our comprehensive&nbsp;and competitive&nbsp;benefits, visit our&nbsp;<stro'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.803332+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

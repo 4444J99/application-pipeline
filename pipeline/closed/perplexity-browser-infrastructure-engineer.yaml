@@ -1,0 +1,71 @@
+id: perplexity-browser-infrastructure-engineer
+name: Perplexity Browser Infrastructure Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/7bce0fcf-eef6-41aa-9243-896f07a0316e
+  portal: ashby
+  location: Belgrade
+  location_class: unknown
+  description: Infrastructure Engineer for Browser Development builds reliable, automated,
+    and scalable infrastructure for Chromium-based browser teams. This role focuses
+    on CI/CD pipelines, monitoring, and development environments to support fast-paced
+    browser innovation. Responsibilities Set up and maintain CI/CD pipelines for builds
+    and testing (TeamCity, Jenkins, etc.). Support and evolve Chromium browser development
+    infrastructure (k8s, terraform, ansible). Configure monitoring and alerting systems
+    (Sentry, Datadog). Manage cloud infrastructure (AWS), Linux servers, and virtual
+    environments. Develop automation scripts in Bash, Python, and Go. Ensure high
+    availability, resilience, and security of development infrastructure. Collaborate
+    with developers to optimize workflows and resolve incidents. Requirements 3+ years
+    in software development infrastructure, preferably Chromium browsers. Hands-on
+    DevOps and SRE experience, including monitoring and incident management. Proficiency
+    in k8s, Terraform, Datadog, Sentry, AWS, Unix, TeamCity Strong CI/CD implementation
+    skills. Ability to thrive in Agile teams with excellent communication. What We
+    Offer Join Comet, Perplexity's young, fast-growing Chromium-based browser. Office
+    work in Belgrade or remote (European time zone preferred). Dynamic team with growth
+    and learning opportunities.
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.4
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 7
+    track_record_fit: 6
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.914019+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

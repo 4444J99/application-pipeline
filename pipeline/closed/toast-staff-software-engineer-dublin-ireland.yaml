@@ -1,0 +1,115 @@
+id: toast-staff-software-engineer-dublin-ireland
+name: Toast Staff Software Engineer (Dublin, Ireland)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7790364
+  portal: greenhouse
+  location: London, England, United Kingdom
+  location_class: international
+  description: <h4><strong>This hybrid role is based in Dublin, Ireland (Full relocation
+    provided).</strong></h4> <p>Toast creates technology to help restaurants and local
+    businesses succeed in a digital world, helping business owners operate, increase
+    sales, engage customers, and keep employees happy.</p> <p><strong>What is our
+    Mission</strong></p> <p>Toast has established itself as the leading hospitality
+    platform in the US, and we are now setting our sights on the global stage. As
+    part of the International team, in our missions to expand globally,&nbsp; we are
+    building the core systems to launch Toast into new markets. You will join a high-impact,
+    high-ownership engineering team solving complex technical challenges in a fast-paced
+    environment. We are looking for leadership that balances technical excellence
+    with a strong product mindset to drive continuous growth for both the team and
+    our platform.&nbsp;</p> <p><strong>A day in the life (Responsibilities)</strong></p>
+    <ul> <li>Lead complex projects within a cross-functional collaborative and supportive
+    environment.</li> <li>Orchestrate our backend services to support internationalization
+    working across software both in the restaurant and the cloud</li> <li>Design,
+    build, deploy and maintain highly resilient and scalable systems critical to our
+    customers’ success.</li> <li>Iterate on our technical approach to data management
+    in support our international strategy&nbsp;</li> <li>Mentor and provide technical
+    guidance to team members, leading technical discussions and promoting best engineering
+    practices.</li> <li>Work directly with pilot customers (sometimes in the restaurant!)
+    to ensure successful delivery and operation</li> <li>Advocate for best coding
+    practices, raising the bar for yourself, your team, and the company.</li> <li><span
+    data-sheets-root="1">Leverage cutting edge AI tools to enhance your development
+    workflow, improve velocity, and help pioneer new approaches to building - contributing
+    to a culture of innovation and productivity across the team.</span></li> </ul>
+    <p><strong>What you'll need to thrive (Requirements)</strong></p> <ul> <li>8+
+    years of experience in delivering high quality, reliable services to production
+    using Java, Kotlin or other object oriented language(s)</li> <li>Proven track
+    record of architecting, supporting and debugging large distributed &amp; multi
+    threaded applications.</li> <li>Drive to work across our tech stack and support
+    other engineers in resolving challenging problems</li> <li>Passionate about making
+    users happy and seeing people use your product in the wild.</li> <li>Ability to
+    embrace an agile mindset focused on delivering usable software.</li> <li><strong>Experience
+    with&nbsp; fiscalisation, internationalization is a plus</strong></li> </ul> <p><strong>Our
+    Tech Stack</strong></p> <ul> <li>A core of <strong>Java &amp; Kotlin</strong>
+    based backend services.</li> <li><strong>React</strong> SPAs leveraging Tailwind,
+    GraphQL and Storybook.</li> <li><strong>Android</strong> app built in Java &amp;
+    Kotlin running in the restaurant.</li> <li><strong>PostgresQL</strong> and <strong>Dynamodb</strong>
+    as core persistence.</li> <li>Pulsar, Camel and RabbitMQ for message-based integrations.</li>
+    <li>And many more technologies that help us build a top class platform.</li> </ul>
+    <p>**This is a hybrid role requiring in-office collaboration two days per week
+    in our Dublin office.**</p> <p>#LI-HYBRID</p> <p>#BI-Hybrid</p> <p>&nbsp;</p>
+    <p data-pm-slice="1 1 []"><strong>AI at Toast</strong></p> <p>At Toast, one of
+    our company values is that we're hungry to build and learn. We believe learning
+    new AI tools empowers us to build for our customers faster, more independently,
+    and with higher quality. We provide these tools across all disciplines, from Engineering
+    and Product to Sales and Support, and are inspired by how our Toasters are already
+    driving real value with them. The people who thrive here are those who embrace
+    changes that let us build more for our customers; it’s a core part of our culture.</p>
+    <p data-pm-slice="1 1 []"><strong>Our Total Rewards Philosophy&nbsp;<br></strong>We
+    strive to provide competitive compensation and benefits programs that help to
+    attract, retain, and motivate the best and brightest people in our industry. Our
+    total rewards package goes beyond great earnings potential and provides the means
+    to a healthy lifestyle with the flexibility to meet Toasters’ changing needs.
+    Learn more about our benefits at&nbsp;<a class="c-link" href="https://careers.toasttab.com/toast-benefits"
+    target="_blank" data-stringify-link="https://careers.toasttab.com/toast-benefits"
+    data-sk="tooltip_parent" data-remove-tab-index="true">https://careers.toasttab.com/toast-benefits</a>.</p><div
+    class="content-conclusion"><p><strong>How Toast Uses AI in its Hiring Process</strong></p>
+    <p>Throughout the hiring process, our goal is to get to know you. We use AI tools
+    to support our recruiters and interviewers with tasks like note-taking, summariza
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-08'
+  posting_date: '2026-04-08'
+  date_source: first_published
+  date_added: '2026-04-08'
+  discovered: '2026-04-08T10:15:26.260398+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

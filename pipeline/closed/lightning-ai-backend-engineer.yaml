@@ -1,0 +1,114 @@
+id: lightning-ai-backend-engineer
+name: Lightning AI Backend Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Lightning AI
+  url: https://boards.greenhouse.io/lightningai
+  application_url: https://job-boards.greenhouse.io/lightningai/jobs/7667840003
+  portal: greenhouse
+  location: Seattle, Washington, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><h1><strong>Who We Are</strong></h1> <p>Lightning
+    AI is the company behind PyTorch Lightning. Founded in 2019, we build an end-to-end
+    platform for developing, training, and deploying AI systems—designed to take ideas
+    from research to production with less friction.</p> <p>Through our merger with
+    Voltage Park, a neocloud and AI Factory, Lightning AI combines developer-first
+    software with cost-efficient, large-scale compute. Teams get the tools they need
+    for experimentation, training, and production inference, with security, observability,
+    and control built in.</p> <p>We serve solo researchers, startups, and large enterprises.
+    Lightning AI operates globally with offices in New York City, San Francisco, Seattle,
+    and London, and is backed by Coatue, Index Ventures, Bain Capital Ventures, and
+    Firstminute.</p> <div class="c-message_actions__container c-message__actions">
+    <h1 class="c-message_actions__group" data-qa="message-actions"><strong>Our Values</strong></h1>
+    </div> <ul> <li> <p><strong>Move Fast</strong>: We act with speed and precision,
+    breaking down big challenges into achievable steps.</p> </li> <li> <p><strong>Focus</strong>:
+    We complete one goal at a time with care, collaborating as a team to deliver features
+    with precision.</p> </li> <li> <p><strong>Balance</strong>: Sustained performance
+    comes from rest and recovery. We ensure a healthy work-life balance to keep you
+    at your best.</p> </li> <li> <p><strong>Craftsmanship</strong>: Innovation through
+    excellence. Every detail matters, and we take pride in mastering our craft.</p>
+    </li> <li> <p><strong>Minimal</strong>: Simplicity drives our innovation. We eliminate
+    complexity through discipline and focus on what truly matters.</p> </li> </ul></div><h1><strong>What
+    we''re looking for</strong></h1> <p>We are looking for a Backend Engineer to work
+    on developing and scaling the Lightning AI platform from the frontend, CLI, and
+    API, to billing, security, and integrations.</p> <p>We want someone who can take
+    ownership of key features and drive development from end to end while collaborating
+    with a super-smart team of engineers, product managers, and designers. Here, you’ll
+    build from proof of concept to release with a focus on speed, quality, and iteration.</p>
+    <p>This is an opportunity to create groundbreaking technology that will transform
+    the machine-learning ecosystem!<br><br>This is a hybrid role based in our Redmond
+    office with in-office requirements of 2 days per week. The salary range for this
+    role is $120,000 - $250,000.</p> <h1><strong><iframe src="https://www.youtube.com/embed/fLhPBlFrfHY"
+    width="560" height="314"></iframe></strong></h1> <h1><strong>What you’ll do</strong></h1>
+    <ul> <li>Write readable/testable/efficient code in Go (Golang).</li> <li>Master
+    our technology stack to deliver new features, improve system stability, and increase
+    overall performance.</li> <li>Partner with engineering and product leaders on
+    developing the Lightning product while using your experience to set the technical
+    direction for large projects.</li> <li>Evaluate, strengthen, and document technical
+    architecture, tools, and processes.</li> <li>Champion software quality, implement
+    automation, drive continuous delivery, and reduce time to production while proactively
+    reducing technical debt.</li> <li>Mentor and coach engineers on system design,
+    operating in high uncertainty, and problem-solving to create a supportive, inclusive
+    environment where each engineer can grow.</li> </ul> <h1><strong>What you’ll need</strong></h1>
+    <ul> <li>Extensive experience writing efficient, maintainable code in Go. Familiarity
+    with best practices in testing, readability, and optimization is essential.</li>
+    <li>Broad knowledge of backend and frontend systems, with experience building
+    and scaling APIs, CLI tools, billing systems, and security protocols. Exposure
+    to frontend frameworks is a plus.</li> <li>Experience with cloud platforms like
+    AWS, GCP, or Azure and designing systems that are reliable, performant, and scalable.
+    Familiarity with containerization (Docker, Kubernetes) is a strong advantage.</li>
+    <li>Proven ability to take ownership of key features and drive end-to-end development</li>
+    <li>Commitment to software quality, test automation, and continuous delivery.
+    Experience proactively managing technical debt and speeding up time to production.</li>
+    <li>Hands-on experience as a backend or product engineer in a SaaS technology
+    company</li> <li>Communication and collaboration with engineers, product managers,
+    and designers</li> <li>Ability to operate in high uncertainty and rapidly changing
+    environments</li> </ul><div class="content-conclusion"><h2><strong>Benefits and
+    Perks</strong></h2> <p data-pm-slice="1 1 []">We offer competitive base salaries
+    and equity with a 25% one year cliff and monthly vesting thereafter. For our international
+    employees, we work with our EOR to pay you in your local currency and provide
+    equitable benefits across the globe.</p> <p data'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.809764+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

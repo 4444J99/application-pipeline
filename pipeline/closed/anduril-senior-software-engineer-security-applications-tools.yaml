@@ -1,0 +1,116 @@
+id: anduril-senior-software-engineer-security-applications-tools
+name: Anduril Senior Software Engineer, Security Applications & Tools
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5088015007?gh_jid=5088015007
+  portal: greenhouse
+  location: Boston, Massachusetts, United States; Costa Mesa, California, United States;
+    Seattle, Washington, United States; Washington, District of Columbia, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h2>Team Overview</h2> <p>The Security
+    Applications &amp; Tools (SAT) team within Lattice Platform Security builds custom
+    software systems that detect, manage, and remediate vulnerabilities across Anduril''s
+    product ecosystem at scale. We don''t just deploy scanners — we design and build
+    distributed scanning infrastructure, policy enforcement engines, and vulnerability
+    management platforms from the ground up. Our stack includes event-driven architectures
+    on AWS, custom Go services, policy-as-code systems, and integrations that span
+    CI pipelines to production environments.</p> <h2>Job Description</h2> <p>We''re
+    looking for a senior software engineer to design and build the systems that keep
+    Anduril''s software secure. This is a software engineering role first — you''ll
+    architect distributed systems, write production Go and Python, build APIs, and
+    operate services at scale. The domain is security, but the work is building real
+    software: custom scanning orchestration pipelines, policy engines that evaluate
+    thousands of configurations against security rules, and data systems that track
+    vulnerabilities across an entire product ecosystem. If you want to write code
+    that solves hard engineering problems in the security space rather than configure
+    off-the-shelf tools, this is the role.</p> <h2>Key Responsibilities</h2> <ul>
+    <li>Design and build distributed services for vulnerability scanning, policy enforcement,
+    and remediation workflows</li> <li>Develop and extend the team''s scanning orchestration
+    platform — an event-driven architecture built on AWS (SQS, Lambda, S3, ECR) that
+    processes scan events at org-wide scale</li> <li>Build and maintain policy-as-code
+    systems that programmatically enforce security policy in CI/CD pipelines and deployment
+    configurations</li> <li>Design APIs and CLIs that integrate security tooling into
+    developer workflows without creating friction</li> <li>Develop data pipelines
+    that aggregate, normalize, and route findings from multiple scanning engines into
+    vulnerability management systems</li> <li>Collaborate with engineering teams across
+    Anduril to understand their security needs and build tooling that addresses them</li>
+    <li>Evaluate third-party security tools and build custom integrations or replacements
+    where needed</li> <li>Participate in on-call rotation for security tooling infrastructure</li>
+    </ul> <h2>Required Qualifications</h2> <ul> <li>5+ years of experience designing
+    and developing production software systems</li> <li>Strong proficiency in Go —
+    this is the team''s primary language for backend services</li> <li>Experience
+    building distributed systems or data pipelines (event-driven architectures, message
+    queues, APIs, worker systems)</li> <li>Proficiency with Python for scripting,
+    automation, and tooling</li> <li>Experience with cloud infrastructure (AWS preferred:
+    Lambda, SQS, S3, ECR, or equivalent)</li> <li>Ability to read and understand security
+    tool output (vulnerability reports, SBOMs, static analysis results) and build
+    systems around it</li> <li>Strong communication skills with the ability to work
+    across teams</li> <li>Eligible to obtain and maintain active U.S. Secret security
+    clearance</li> </ul> <h2>Preferred Qualifications</h2> <ul> <li>Experience with
+    CI/CD systems (CircleCI, GitHub Actions) and building integrations for developer
+    workflows</li> <li>Familiarity with container security concepts, SBOM generation
+    tools (Syft), and vulnerability scanners (Trivy, Grype, Semgrep)</li> <li>Experience
+    with Terraform and infrastructure-as-code</li> <li>Experience with policy-as-code
+    frameworks (OPA/Rego, Conftest)</li> <li>Background in application security or
+    product security engineering</li> <li>Experience with Kubernetes and container
+    orchestration</li> <li>Familiarity with Nix build systems</li> </ul><div class="content-pay-transparency"><div
+    class="pay-input"><div class="title">US Salary Range</div><div class="pay-range"><span>$191,000</span><span
+    class="divider">&mdash;</span><span>$253,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may va'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:34.021412+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

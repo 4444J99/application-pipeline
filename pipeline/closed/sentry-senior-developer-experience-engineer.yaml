@@ -1,0 +1,117 @@
+id: sentry-senior-developer-experience-engineer
+name: Sentry Senior Developer Experience Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sentry
+  url: https://jobs.ashbyhq.com/sentry
+  application_url: https://jobs.ashbyhq.com/sentry/7ed2b263-3873-44c6-a730-2ca96100c58f
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: 'About Sentry Bad software is everywhere, and we’re tired of it. Sentry
+    is on a mission to help developers write better software faster so we can get
+    back to enjoying technology. With more than $217 million in funding and 100,000+
+    organizations that believe we’re on to something, we''re building performance
+    and error monitoring tools that help companies like Disney, Microsoft, and Atlassian
+    spend less time fixing bugs and more time building products. Sentry embraces a
+    hybrid work model across our global hubs, with Mondays, Tuesdays, and Thursdays
+    set as in-office anchor days to encourage meaningful collaboration. If you like
+    to selfishly build things that make your digital life better, come help us build
+    the next generation of software monitoring tools. About the role The Developer
+    Experience team is growing in San Francisco! This is a hybrid-role out of our
+    main headquarters and must be based there. We’re looking for a hands-on builder
+    with strong opinions on great developer docs. Are you someone who loves tinkering
+    with the newest features in your favorite products? Do you enjoy taking the next
+    random JavaScript framework for a spin and figuring out how to make them tick?
+    Does it especially irk you when the code snippets are wrong, or the only docs
+    for a feature are on X? Developer Experience at Sentry lives in the intersection
+    of shipping really cool products and getting developers set up to use them. If
+    you’re someone who is confident in partnering with Product and Engineering to
+    test and ship the latest features, not afraid to jump in and go hands-on to solve
+    problems for our biggest and a good eye for what good docs looks like - this is
+    a dream role. Developer Experience at Sentry is a team of builders who are constantly
+    looking for ways to make it easier for every developer to use Sentry. We engage
+    with the challenges facing technical communities, to support developers, gather
+    feedback, and help our product and engineering teams ship new capabilities. An
+    engineer in this role should be confident to “come with an answer”, propose the
+    product solutions, identify the content and/or execution plans and people to partner
+    with, and go execute. In this role you will Manage the docs platform, with freedom
+    to shape it how you see fit, to answer the age old question of “what does great
+    developer documentation look like” Attend and even host events and meetups in
+    the developer community Have a point of view and aren’t shy about expressing it.
+    You get your energy from both knowing the latest trends and having a POV on which
+    ones to ignore. Who’s working on something interesting, who influences the conversation,
+    and who’s going to help drive the conversation forward - while linking all this
+    back to the core problems that Sentry is solving Build content that gets people
+    excited to build their software alongside Sentry Have an ear to the street. You
+    get excited about gathering insights from users, the developer tool world, and
+    what''s currently happening in software development. Ride side by side with Engineering,
+    Product, Design, Sales engineering, Business Ops, and nearly every function in
+    Marketing from Comms to Product Marketing to develop the best content and great
+    product narratives. You’ll love this job if you Are someone who loves taking new
+    features for a spin, learning how they tick, and testing them against your own
+    projects Are an educator, a builder, and a human router. And you know that the
+    best way to get people excited about your product is to show, not sell, through
+    cool concepts, useful technical tutorials, and by bringing brilliant people together
+    Are “meh… not bad” writer who understands how to tell a useful and relevant story
+    in 30 words as well as weave together questions to panelists for 30 minutes Get
+    excited when you hear that your job is to do ⅓ of each: Educating through useful
+    and timely content + building community through live and virtual gatherings +
+    Being customer-to-product influence Listen as much as you talk. And you know how
+    to build a community organically by lifting up and promoting others. Qualifications
+    5+ years as a developer and 3+ years in an advocacy or educational role such as
+    developer relations/evangelism, creating technical content, leading a community
+    of developers via forums or events You have 3+ examples of technical educational
+    content aimed for professional developers (e.g. tutorial, video series, blog series,
+    course) At least one example of your own dedicated blogs, forum or sites with
+    a developer-focused audience and can speak to how you measured success and what
+    promotional mechanisms you used to drive top of funnel visibility At least one
+    project using a common modern development language or framework You have been
+    an active member and contributor of technical communities, on any platform (e.g.
+    Discord, Stack Overflow, Reddit, Twitter, TikTok) Ability to prioritize competing
+    opportunities and balance customer needs versus business priorities Stellar written
+    and '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.241955+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

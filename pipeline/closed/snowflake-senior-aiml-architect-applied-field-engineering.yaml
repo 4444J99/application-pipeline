@@ -1,0 +1,100 @@
+id: snowflake-senior-aiml-architect-applied-field-engineering
+name: Snowflake Senior AI/ML Architect, Applied Field Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/58d99cd2-2f36-43c6-99ee-a3cb3d32fb37
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Our Solution Engineering organization is seeking
+    an AI Specialist who can provide hands-on expertise and support while working
+    with technical decision makers and data scientists to design and architect AI
+    solutions built on the Snowflake AI Data Cloud. This is a strategic role that
+    works closely with cross-functional teams, including product, engineering, and
+    the broader field organization to ensure successful execution and customer adoption
+    of Snowflake’s AI & ML solutions. IN THIS ROLE YOU WILL GET TO: Be the technical
+    expert in the room that positions Snowflake’s AI and ML features and value to
+    technical stakeholders at Snowflake’s customers across the Americas. Partner with
+    Snowflake account team teams and customer champions to scope and drive POCs to
+    success and technical wins that prove the value of Snowflake’s capabilities, including
+    executive readouts and business value cases. Collaborate with Snowflake’s product
+    and engineering teams to influence Snowflake’s AI and ML roadmaps based on customer
+    feedback. Publish content that helps the team and company scale beyond your individual
+    efforts, like blog posts, presentations at conferences, or technical collateral
+    like notebooks and demos. Influence, tailor and maintain Sales Engineering AI
+    and ML selling assets, including customer presentations, demonstrations, and customer
+    stories. ON DAY ONE, WE WILL EXPECT YOU TO HAVE: 5+ years of experience building
+    and deploying machine learning and generative AI solutions in the cloud. Familiarity
+    and associated knowledge of generative AI techniques like RAG, few shot learning,
+    prompt engineering, or fine-tuning that are used to operationalize enterprise
+    AI use cases like interactive chat applications or text processing. Deep knowledge
+    of Python and common ML packages (such as LangChain, pandas, sklearn, and PyTorch)
+    as well as data engineering tools and technologies like dbt, Airflow, and Spark.
+    Strong presentation skills to both technical and executive audiences, whether
+    whiteboarding sessions or formal readouts and demos. Bachelor’s Degree required,
+    Masters Degree in computer science, engineering, mathematics or related fields,
+    or equivalent experience preferred. BONUS POINTS FOR EXPERIENCE WITH THE FOLLOWING:
+    Working knowledge of tools in the LLM ecosystem such as LangChain, LlamaIndex,
+    or other OSS packages. Experience and understanding of large-scale infrastructure-as-a-service
+    platforms (e.g. AWS, Microsoft Azure, GCP, etc.) 1+ years of practical Snowflake
+    experience. Knowledge of and experience with large-scale database technology (e.g.
+    Snowflake, Netezza, Exadata, Teradata, Greenplum, etc.) Every Snowflake employee
+    is expected to follow the company’s confidentiality and security standards for
+    handling sensitive data. Snowflake employees must abide by the company’s data
+    security plan as an essential part of their duties. It is every employee''s duty
+    to keep customer information secure and confidential. Snowflake is growing fast,
+    and we’re scaling our team to help enable and accelerate our growth. We are looking
+    for people who share our values, challenge ordinary thinking, and push the pace
+    of innovation while building a future for themselves and Snowflake. How do you
+    want to make your impact? For jobs located in the United States, please visit
+    the job posting on the Snowflake Careers Site for salary and benefits information:
+    careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.170662+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,116 @@
+id: openai-backend-software-engineer-chatgpt-enterprise
+name: OpenAI Backend Software Engineer, ChatGPT Enterprise
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: OpenAI
+  url: https://jobs.ashbyhq.com/openai
+  application_url: https://jobs.ashbyhq.com/openai/a5591da5-23f3-4926-ac8d-8d1c927e3004
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'About the Team OpenAI’s ChatGPT Enterprise team sits within the B2B
+    Applications organization and is responsible for making ChatGPT work for businesses
+    at scale. Our goal is to deliver a seamless experience where people can use the
+    same product at home and at work, while meeting the requirements that only enterprises
+    care about—security and admin controls, regulatory compliance (e.g., HIPAA/FINRA),
+    and data / compute residency across geographies. The team’s roadmap spans three
+    core workstreams: enterprise controls, user value & activation, and company-specific
+    products (e.g., Company Knowledge). About the Role We’re hiring backend engineers
+    to build the product experiences that turn ChatGPT into an indispensable tool
+    for teams—while ensuring the trust, controls, and performance enterprises require.
+    This role is especially focused on the enterprise controls track: designing collaboration
+    experiences, onboarding and engagement loops, and product affordances that help
+    employees discover and adopt advanced capabilities (including agents and custom
+    GPT-style workflows). In this role, you will: Build backend systems that power
+    enterprise controls, including permissions, policy enforcement, auditability,
+    and compliance workflows. Design residency- and region-aware architectures that
+    enable enterprise workloads to meet country- and customer-specific requirements.
+    Partner with product, security, legal/compliance, and adjacent engineering teams
+    to turn enterprise requirements into scalable technical systems. Improve the reliability,
+    observability, and operational maturity of the services that underpin ChatGPT
+    Enterprise. Your background might look something like: 5+ years of professional
+    engineering experience (excluding internships) in relevant roles at tech and product-driven
+    companies Former founder, or early engineer at a startup who has built a product
+    from scratch is a plus Proficiency in one or more backend languages (e.g., Python,
+    Go, Rust, Typescript or similar) and distributed systems concepts Experience designing
+    and operating distributed systems with a strong emphasis on reliability, performance,
+    and security Experience building systems involving access controls, identity,
+    compliance, privacy, data governance, or other enterprise platform concerns Some
+    experience with relational databases like Postgres/MySQL Care deeply about reliability,
+    safety, and performance in production environments Interest in AI/ML (direct experience
+    not required) Proven ability to thrive in fast-growing, product-driven companies
+    by effectively navigating loosely defined tasks and managing competing priorities
+    or deadlines. About OpenAI OpenAI is an AI research and deployment company dedicated
+    to ensuring that general-purpose artificial intelligence benefits all of humanity.
+    We push the boundaries of the capabilities of AI systems and seek to safely deploy
+    them to the world through our products. AI is an extremely powerful tool that
+    must be created with safety and human needs at its core, and to achieve our mission,
+    we must encompass and value the many different perspectives, voices, and experiences
+    that form the full spectrum of humanity. We are an equal opportunity employer,
+    and we do not discriminate on the basis of race, religion, color, national origin,
+    sex, sexual orientation, age, veteran status, disability, genetic information,
+    or other applicable legally protected characteristic. For additional information,
+    please see OpenAI’s Affirmative Action and Equal Employment Opportunity Policy
+    Statement . Background checks for applicants will be administered in accordance
+    with applicable law, and qualified applicants with arrest or conviction records
+    will be considered for employment consistent with those laws, including the San
+    Francisco Fair Chance Ordinance, the Los Angeles County Fair Chance Ordinance
+    for Employers, and the California Fair Chance Act, for US-based candidates. For
+    unincorporated Los Angeles County workers: we reasonably believe that criminal
+    history may have a direct, adverse and negative relationship with the following
+    job duties, potentially resulting in the withdrawal of a conditional offer of
+    employment: protect computer hardware entrusted to you from theft, loss or damage;
+    return all computer hardware in your possession (including the data contained
+    therein) upon termination of employment or end of assignment; and maintain the
+    confidentiality of proprietary, confidential, and non-public information. In addition,
+    job duties require access to secure and protected information technology systems
+    and related data security obligations. To notify OpenAI that you believe this
+    job posting is non-compliant, please submit a report through this form . No response
+    will be provided to inquiries unrelated to job posting compliance. We are committed
+    to providing reasonable accommodations to applicants with disabilities, and requests
+    can be made via this link . OpenAI Global Applicant Privacy Policy At OpenAI,
+    we believe a'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: null
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.480629+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

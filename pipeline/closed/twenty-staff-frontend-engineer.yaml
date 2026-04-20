@@ -1,0 +1,115 @@
+id: twenty-staff-frontend-engineer
+name: Twenty Staff Frontend Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Twenty
+  url: https://jobs.ashbyhq.com/twenty
+  application_url: https://jobs.ashbyhq.com/twenty/0c3db302-12b7-4750-aef8-bd690e6dfd25
+  portal: ashby
+  location: Washington DC
+  location_class: unknown
+  description: 'About the Company At Twenty, we''re taking on one of the most critical
+    challenges of our time: defending democracies in the digital age. We develop revolutionary
+    technologies that operate at the intersection of the cyber and electromagnetic
+    domains, where the speed of operations exceeds human sensing and complexity transcends
+    conventional boundaries. Our team doesn''t just solve problems – we deliver game-changing
+    outcomes that directly impact national security. We''re pragmatic optimists who
+    understand that while our mission of protecting America and its allies is challenging,
+    success is possible. Role Summary You’ll own the frontend architecture for mission-critical
+    operator experiences—building high-performance interfaces that visualize complex
+    cyber operation data in real time. You’ll lead technical direction for UI systems,
+    set the bar for engineering quality, and mentor engineers to move faster with
+    confidence. You’ll partner closely with backend, product, design, and operational
+    stakeholders to ship capabilities that must work reliably in both cloud and on-premises
+    environments. Who You Are You care about building software that has real-world
+    impact in high-stakes environments. You lead with high standards and high support—clear
+    feedback, strong mentorship, calm execution. You think in systems: performance,
+    reliability, accessibility, and maintainability are first-class concerns. You
+    make good tradeoffs under constraints and can explain them crisply to technical
+    and non-technical partners. You enjoy turning messy, complex data into intuitive
+    workflows that help users make decisions quickly. You’re comfortable owning ambiguous
+    problems end-to-end and driving them to measurable outcomes. You default to secure
+    engineering practices and treat trust, safety, and correctness as non-negotiable.
+    What You’ll Do Architect and build sophisticated React/TypeScript applications
+    that operate smoothly at scale. Design real-time UI experiences for complex cyber
+    operation data, optimizing for speed and clarity. Lead frontend technical design
+    decisions, from component architecture to state management patterns. Build and
+    evolve interactive visualization systems (e.g., graphs, timelines, streaming views).
+    Establish reusable frontend architecture patterns and component libraries for
+    consistency and velocity. Raise engineering excellence via code review, standards,
+    testing strategy, and performance practices. Mentor junior engineers through pairing,
+    feedback, technical coaching, and knowledge transfer. Coordinate execution across
+    backend, product, design, and operations to deliver end-to-end features. Troubleshoot
+    production issues, lead frontend performance investigations, and improve reliability
+    over time. Must Have You have 8+ years of professional frontend software development
+    experience. You have deep expertise building production React.js applications
+    with TypeScript. You have strong command of modern web fundamentals (JavaScript/TypeScript,
+    HTML, CSS). You have led frontend technical initiatives and mentored engineers
+    through delivery and growth. You have experience building for performance at scale
+    (profiling, optimization, rendering strategies). You have experience with automated
+    testing practices and frameworks in production environments. You have strong collaboration
+    skills with product and design to deliver excellent UX. You have a Bachelor’s
+    degree in CS/Engineering (or equivalent practical experience). Nice To Have You
+    have experience with complex data visualization (e.g., D3.js, Chart.js, or similar).
+    You have worked with graph databases and understand graph query patterns (e.g.,
+    Neo4j). You have experience with real-time streaming data and production visualization
+    of live systems. You have contributed to backend services to unblock full-stack
+    delivery (e.g., Go). You have experience in defense, security, or other mission-critical
+    domains. You have built UI experiences that surface AI/ML outputs in operational
+    workflows. Tech Environment (You Might Work With) React.js, TypeScript, modern
+    web tooling (e.g., Vite/Webpack) Data visualization libraries (D3.js, Chart.js,
+    and related ecosystems) Testing: Jest, React Testing Library, Cypress (and/or
+    Playwright) CI/CD pipelines for secure, repeatable frontend deployments Graph
+    databases (e.g., Neo4j) and graph-oriented data models Cloud and on-premises deployments
+    (AWS and controlled environments) Security / Work Environment Some positions may
+    require eligibility to obtain a U.S. Government security clearance. This role
+    may involve work in a controlled environment. If this role sounds like you, apply
+    and share with us your interest. Some positions may require eligibility to obtain
+    a U.S. Government security clearance. Any clearance requirement will be listed
+    in the role description. Twenty is an equal opportunity employer. We consider
+    all qualified applicants without regard to race, color, religion, sex, sexual
+    orientation, gender identity, national origin, age, veter'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.354104+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

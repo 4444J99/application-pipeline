@@ -1,0 +1,114 @@
+id: postman-staff-software-engineer-business-platform
+name: Postman Staff Software Engineer, Business Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Postman
+  url: https://boards.greenhouse.io/postman
+  application_url: https://job-boards.greenhouse.io/postman/jobs/7578716003
+  portal: greenhouse
+  location: San Francisco, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>Who Are We?</strong></h2> <p>Postman
+    is the world’s leading API platform, used by more than 45 million+ developers
+    and 500,000 organizations, including 98% of the Fortune 500. Postman is helping
+    developers and professionals across the globe build the API-first world by simplifying
+    each step of the API lifecycle and streamlining collaboration—enabling users to
+    create better APIs, faster.</p> <p>The company is headquartered in San Francisco
+    and has offices in Boston, New York, Austin, Tokyo, London, and Bangalore - where
+    Postman was founded. Postman is privately held, with funding from Battery Ventures,
+    BOND, Coatue, CRV, Insight Partners, and Nexus Venture Partners. Learn more at
+    postman.com or connect with Postman on X via @getpostman.</p> <p>P.S: We highly
+    recommend reading <a href="https://api-first-world.com/">The "API-First World"
+    graphic novel</a> to understand the bigger picture and our vision at Postman.</p></div><h2><strong>The
+    Opportunity</strong></h2> <p>As agentic AI becomes the core fabric of how engineering
+    is done worldwide, we want to be the leaders in how agents interact with APIs.
+    This transformation requires solving agentic identity, extending or building new
+    standards and protocols, building agent-to-agent interactions including authorization,
+    licensing, trust delegation, security and monetization.</p> <p>We are looking
+    for an exceptional Staff Engineer to help us build the next generation of our
+    Business Platform to support the agentic era. You will be responsible for setting
+    the vision for the long term architecture of various components in the Business
+    Platform. You’ll be accountable for strategy, technical roadmap and architecture
+    of the platform. You’ll work with multiple teams, overseeing and contributing
+    to delivery and owning critical operational KPIs such as availability and uptime.
+    Your role involves designing, implementing, and running critical tier 0 services
+    for the company. We’re looking for a seasoned individual contributor leader who
+    can work effectively with product management and engineering leaders within the
+    company and build a high quality platform.</p> <p>The ideal candidate is a strategic
+    leader with attention to detail and a relentless drive for quality. They would
+    bring their prior experience to the table with a growth mindset to solve industry-wide
+    problems. They should be comfortable being very hands on and at the same being
+    able to uplevel and provide high level guidance for others to execute. They should
+    mentor senior engineers within the org to grow the next level of engineering leadership.
+    They should also be strong communicators who can influence other leaders. Finally,
+    they should have strong industry knowledge and bring best practices from the broader
+    industry to the Postman Identity Platform.</p> <p>The ideal candidate is also
+    strongly aligned with our values. We create with the same curiosity we see in
+    our users. We&nbsp;<a href="https://www.postman.com/company/about-postman/" target="_blank"
+    data-saferedirecturl="https://www.google.com/url?q=https://www.postman.com/company/about-postman/&amp;source=gmail&amp;ust=1774990582369000&amp;usg=AOvVaw0gHV_kVJPd1DvVYKVv6VKv">value</a>&nbsp;transparency
+    and honest communication about our successes and failures. We have an inclusive
+    work culture where we value diversity of opinion. We are motivated by delivering
+    the absolute best experience for our users.</p> <h2><strong>What You''ll Do</strong></h2>
+    <ul> <li> <p>Technical Leadership</p> </li> <ul> <li> <p>Provide technical leadership
+    for the architecture and help the teams build highly secure, scalable, reliable
+    and performant systems that can cater to the needs of hundreds of millions of
+    developers</p> </li> <li> <p>Provide technical leadership to identify dependencies
+    and review key designs to ensure consistency with architecture and support for
+    the business</p> </li> <li> <p>Lead the team to deliver on multiple projects in
+    collaboration with key stakeholders</p> </li> <li> <p>Build an operational center
+    of excellence with effective observability, considerations for scale and performance
+    and focus on quality</p> </li> <li> <p>Be hands on and lead by example</p> </li>
+    </ul> <li> <p>Prioritization and Roadmap</p> </li> <ul> <li> <p>Partner with the
+    Sr. EMs within the org and product leaders within the company</p> </li> <li> <p>Help
+    the teams prioritize work and create a balanced roadmap</p> </li> </ul> <li> <p>Collaboration</p>
+    </li> <ul> <li> <p>Work closely with senior leadership to drive org design, set
+    and execute the roadmap and influence the strategy</p> </li> <li> <p>Collaborate
+    with cross functional teams to align on goals, drive engineering initiatives,
+    and create broad organizational impact</p> </li> </ul> <li> <p>Mentorship</p>
+    </li> <ul> <li> <p>Be a mentor for senior engineers and help others grow</p> </li>
+    <li> <p>Build the next level of engineering leadership</p> </li> </ul> </ul> <h2><strong>About
+    You</strong'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.881091+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

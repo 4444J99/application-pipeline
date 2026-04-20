@@ -1,0 +1,106 @@
+id: stripe-frontend-engineer-payments-and-risk
+name: Stripe Frontend Engineer, Payments and Risk
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=6786210
+  portal: greenhouse
+  location: San Francisco, CA | New York, NY | Remote
+  location_class: unknown
+  description: '<p><strong><em>Note: </em></strong><span style="font-size: 10pt;"><em>if
+    you are an intern or new grad applicant, please do not apply using this link and
+    visit our </em><a href="https://stripe.com/jobs/search"><em>jobs page</em></a><em>
+    for those specific postings.</em></span></p> <h2><strong>Who we are</strong></h2>
+    <h3><strong>About Stripe</strong></h3> <p>Stripe is a financial infrastructure
+    platform for businesses. Millions of companies - from the world’s largest enterprises
+    to the most ambitious startups - use Stripe to accept payments, grow their revenue,
+    and accelerate new business opportunities. Our mission is to increase the GDP
+    of the internet, and we have a staggering amount of work ahead. That means you
+    have an unprecedented opportunity to put the global economy within everyone''s
+    reach while doing the most important work of your career.</p> <h3><strong>About
+    the Organization&nbsp;</strong></h3> <p>The Payments organization focuses on developing
+    products and platforms that enable users to accept payments from customers efficiently.
+    This includes building APIs for processing payments, enabling regional, non-card
+    payment options, and extending Stripe''s capabilities to make it easy for businesses
+    to accept in-person payments. The Risk Engineering team develops products that
+    minimize financial and regulatory risks while ensuring a seamless user experience,
+    thereby safeguarding Stripe’s brand and financial stability.&nbsp;</p> <p><strong>Team
+    Matching:</strong> exact team matching for one of the subteams within this org
+    will begin during final stages.<em> Please note we may also consider you for different
+    orgs based on your experience, location, etc. </em>More information on our team
+    matching process can be found <a href="https://docs.google.com/document/d/1zvJkO2c7GzukHG-_oqc5wbOLajpuh5FjbmZPcZPU1o0/edit?tab=t.0#heading=h.ahb3b6nrktv1">here</a>.&nbsp;</p>
+    <h2><strong>What you’ll do</strong></h2> <p>We’re looking for Frontend engineers
+    who are interested in building consumer-focused UIs and full-stack products that
+    impact thousands of employees and millions of Stripe users, regardless of whether
+    they’re an end user, developer, or partner.</p> <h3><strong>Responsibilities</strong></h3>
+    <ul> <li>Work with a wide range of systems, processes, and technologies to own
+    and solve problems from end-to-end.</li> <li>Build elegant APIs and user experiences
+    that enable merchants to run and scale their businesses on top of Stripe.</li>
+    <li>Craft new products and features that impact millions of people and businesses
+    around the world such as building the fastest and most seamless checkout flow.&nbsp;</li>
+    <li>Explore creative opportunities for next-gen payments experiences that leverage
+    the depth of Stripe’s payment technology.&nbsp;</li> <li>Collaborate with stakeholders
+    across the organization such as product, design, infrastructure, marketing and
+    operations.&nbsp;</li> <li>Develop and execute against both short- and long-term
+    roadmaps. Make effective tradeoffs that consider business priorities, user experience,
+    and a sustainable technical foundation.</li> <li>Uphold our high engineering standards
+    and bring consistency to the many codebases and processes you will encounter.&nbsp;</li>
+    </ul> <h2><strong>Who you are</strong></h2> <p>We''re looking for someone who
+    meets the minimum requirements to be considered for the role. If you meet these
+    requirements, you are encouraged to apply. The preferred qualifications are a
+    bonus, not a requirement.</p> <h3><strong>Minimum requirements</strong></h3> <ul>
+    <li>2+ years of software development experience, with an emphasis on modern frontend
+    technologies (HTML/CSS/TypeScript/React) and building delightful user interfaces.</li>
+    <li>Comfort operating as a frontend developer and owning projects end-to-end.</li>
+    <li>Are motivated by solving hard problems, and measure your success in terms
+    of impact doing so.</li> <li>Thrive in a highly collaborative environment involving
+    different stakeholders and subject matter experts.</li> <li>Enjoy working with
+    a diverse group of people with different areas of expertise.</li> </ul> <h3><strong>Preferred
+    Qualifications</strong></h3> <ul> <li>Experience working in high-growth teams
+    similar to Stripe.</li> <li>Experience building financial systems or tools for
+    financial experts.</li> </ul>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.752842+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

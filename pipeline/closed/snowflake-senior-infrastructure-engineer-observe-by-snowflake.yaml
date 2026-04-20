@@ -1,0 +1,108 @@
+id: snowflake-senior-infrastructure-engineer-observe-by-snowflake
+name: Snowflake Senior Infrastructure Engineer, Observe by Snowflake
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/b0283c67-3bd8-4be2-a861-d538b7504bb0
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Observe by Snowflake is an AI-powered observability
+    platform built on the Snowflake AI Data Cloud and engineered for scale. We ingest
+    and store logs, metrics, traces, and events on an open, scalable data lakehouse,
+    using open formats like Apache Iceberg, at dramatically lower cost. A dynamic
+    Context Graph and chat-based AI SRE provide rich context and automated workflows
+    so teams can move from detection to root cause and resolution 10x faster. Leading
+    engineering teams at companies like Capital One, Topgolf, and Dialpad rely on
+    Observe to troubleshoot hundreds of terabytes of telemetry daily while maintaining
+    reliability at enterprise scale. As part of Snowflake, Observe combines startup-style
+    ownership and velocity with the global reach, operational excellence, and ecosystem
+    of one of the world’s leading data platforms. The Infrastructure team at Observe
+    by Snowflake is responsible for architecting, scaling, and operating the development
+    and production environments that power our observability platform. We are a small,
+    highly collaborative team with broad scope and high ownership, focused on delivering
+    reliable, secure, and scalable infrastructure while continuously evolving the
+    systems that support our engineers and customers. As a Senior Infrastructure Engineer,
+    you will play a key role in shaping our infrastructure strategy, driving architectural
+    decisions, and elevating operational excellence across the organization. What
+    You’ll Do Lead the design, build, and operation of scalable, secure cloud infrastructure
+    in AWS supporting a high-scale observability platform. Drive architectural improvements
+    that enhance reliability, performance, scalability, and operational visibility
+    across development and production environments. Own and evolve CI/CD pipelines,
+    developer tooling, and platform automation to improve productivity and deployment
+    safety at scale. Proactively identify reliability, performance, and security risks,
+    and lead efforts to mitigate them. Design and implement infrastructure patterns
+    that ensure high availability, fault tolerance, and operational resilience. Play
+    a key role in incident response, root cause analysis, and post-incident improvements,
+    driving systemic reliability enhancements. Partner cross-functionally with Product
+    and Engineering teams to ensure infrastructure strategy supports long-term platform
+    evolution. Mentor and support other engineers through design reviews, code reviews,
+    and operational best practices. What We’re Looking For 5+ years of experience
+    in Infrastructure Engineering, Site Reliability Engineering (SRE), DevOps, or
+    related roles. Demonstrated experience designing and operating production systems
+    at scale, with deep ownership of reliability and operational excellence. Strong
+    experience with container orchestration platforms such as Kubernetes or Nomad,
+    including architectural decision-making and operational tuning. Hands-on experience
+    managing cloud infrastructure using Infrastructure-as-Code tools such as Terraform,
+    Ansible, or similar, with a focus on scalable system design. Strong programming
+    skills in Go, Python, or similar languages, with a track record of building automation
+    and infrastructure systems. Experience driving cross-team technical initiatives
+    and influencing infrastructure best practices. Ability to balance immediate operational
+    demands with long-term architectural vision. Nice to Have Deep experience operating
+    large-scale distributed systems. Familiarity with observability platforms, telemetry
+    pipelines, or monitoring infrastructure. Experience building or evolving internal
+    developer platforms. Experience working in high-growth, rapidly evolving engineering
+    environments. Experience with GCP and Azure Snowflake is growing fast, and we’re
+    scaling our team to help enable and accelerate our growth. We are looking for
+    people who share our values, challenge ordinary thinking, and push the pace of
+    innovation while building a future for themselves and Snowflake. How do you want
+    to make your impact? For jobs located in the United States, please visit the job
+    posting on the Snowflake Careers Site for salary and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.215649+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

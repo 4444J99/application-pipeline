@@ -1,0 +1,118 @@
+id: grafana-labs-senior-developer-advocacy-engineer-sweden-remote
+name: Grafana Labs Senior Developer Advocacy Engineer | Sweden | Remote
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Grafana Labs
+  url: https://boards.greenhouse.io/grafanalabs
+  application_url: https://job-boards.greenhouse.io/grafanalabs/jobs/5850086004
+  portal: greenhouse
+  location: Sweden (Remote)
+  location_class: international
+  description: "<div class=\"content-intro\"><p>Grafana Labs is a remote-first, open-source\
+    \ powerhouse. There are more than 20M users of Grafana, the open source visualization\
+    \ tool, around the globe, monitoring everything from beehives to climate change\
+    \ in the Alps. The instantly recognizable dashboards have been spotted everywhere\
+    \ from a NASA launch and Minecraft HQ to Wimbledon and the Tour de France. Grafana\
+    \ Labs also helps more than 3,000 companies -- including Bloomberg, JPMorgan Chase,\
+    \ and eBay -- manage their observability strategies with the Grafana LGTM Stack,\
+    \ which can be run fully managed with <a href=\"https://grafana.com/products/cloud/\"\
+    >Grafana Cloud</a> or self-managed with the <a href=\"https://grafana.com/products/enterprise/\"\
+    >Grafana Enterprise Stack</a>, both featuring scalable metrics (<a href=\"https://grafana.com/oss/mimir/\"\
+    >Grafana Mimir</a>), logs (<a href=\"https://grafana.com/oss/loki/\">Grafana Loki</a>),\
+    \ and traces (<a href=\"https://grafana.com/oss/tempo/\">Grafana Tempo</a>).</p>\
+    \ <p>We\u2019re scaling fast and staying true to what makes us different: an open-source\
+    \ legacy, a global collaborative culture, and a passion for meaningful work. Our\
+    \ team thrives in an innovation-driven environment where transparency, autonomy,\
+    \ and trust fuel everything we do.</p> <p>You may not meet every requirement,\
+    \ and that\u2019s okay. If this role excites you, we\u2019d love you to raise\
+    \ your hand for what could be a truly career-defining opportunity.</p></div><h3>Senior\
+    \ Developer Advocacy Engineer | Sweden | Remote</h3> <p>This is a fully remote\
+    \ position and we're considering candidates in Sweden.</p> <p><strong>The Opportunity:</strong></p>\
+    \ <p>Grafana is building the <strong>Interactive Learning Plugin</strong>: an\
+    \ open source, in-product learning experience inside Grafana that helps users\
+    \ level up <em>without leaving their workflow</em>. We\u2019re hiring a <strong>software\
+    \ engineer embedded in Developer Advocacy</strong> who ships real product code\
+    \ that directly impacts both <strong>Grafana Cloud</strong> and <strong>Grafana\
+    \ OSS</strong>.</p> <p>This is for an engineer who <strong>moves fast with strong\
+    \ judgment</strong>, is excited about <strong>AI-assisted development in open\
+    \ source</strong>, and wants to help build a platform where <strong>anyone can\
+    \ contribute high-quality learning content</strong>\u2014not just engineers.</p>\
+    \ <p>Your primary focus will be the open source Interactive Learning Plugin:<a\
+    \ href=\"https://github.com/grafana/grafana-pathfinder-app\"> https://github.com/grafana/grafana-pathfinder-app</a>\
+    \ and its content: <a href=\"https://github.com/grafana/interactive-tutorials\"\
+    >https://github.com/grafana/interactive-tutorials</a>&nbsp;</p> <p><strong>What\
+    \ You\u2019ll Be Doing:</strong></p> <ul> <li><strong>Build delightful interactive\
+    \ learning inside Grafana</strong></li> <ul> <li>Ship features that make learning\
+    \ experiences feel obvious, smooth, and scalable.</li> <li>Improve the end-to-end\
+    \ learner experience\u2014from onboarding to completion.</li> </ul> <li><strong>Enable\
+    \ contribution and authoring (especially for non-engineers): </strong>create workflows\
+    \ and product features that let many contributors safely create, iterate on, and\
+    \ improve learning content.</li> <li><strong>Support private guides and experiences</strong></li>\
+    \ <li><strong>Make completion tracking that actually matters</strong></li> <ul>\
+    \ <li>Build progress and completion tracking that\u2019s <strong>trustworthy,\
+    \ motivating, and useful</strong>.</li> <li>Instrument learning flows so we can\
+    \ understand what\u2019s working, what\u2019s failing, and where learners get\
+    \ stuck.</li> </ul> <li><strong>Treat observability as a product principle</strong></li>\
+    \ <ul> <li>Build fast feedback loops (metrics/logs/traces + user journey visibility)\
+    \ so issues stay shallow.</li> <li>Make it easy to understand what\u2019s happening\
+    \ in production and in real user experiences.</li> </ul> <li><strong>Ship fast\
+    \ with an AI-driven development workflow</strong></li> <ul> <li>Work daily with\
+    \ tools like <strong>Claude Code</strong> or <strong>Cursor</strong> in an agent-based\
+    \ workflow.</li> <li>Apply strong engineering judgment\u2014scoping, iterating,\
+    \ verifying, and testing\u2014so speed doesn\u2019t compromise quality.</li> </ul>\
+    \ </ul> <p>We invest heavily in developer productivity. You can use modern AI\
+    \ coding assistants as part of your daily workflow (your choice of tools, within\
+    \ security guidelines), backed by a company-funded usage budget so you can iterate\
+    \ quickly without unnecessary friction.<br><br>We encourage pragmatic AI-assisted\
+    \ development: faster prototyping, test generation, refactors, documentation,\
+    \ and incident follow-ups\u2014always paired with strong code review and quality\
+    \ standards.<br><br>You\u2019ll also have access to frontier models (e.g., GPT-Codex\
+    \ 5/3, Claude Opus 4.6, Gemini 3 Pro).</p> <p>This role includes participation\
+    \ in an on-call rotation as part of our DevOps culture. We believe in end-to-end\
+    \ ownership\u2014those who build the software also help run and support it in\
+    \ production.</p> <p><strong>What Makes You a Gre"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-07'
+  posting_date: '2026-04-06'
+  date_source: first_published
+  date_added: '2026-04-07'
+  discovered: '2026-04-07T10:15:28.414637+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

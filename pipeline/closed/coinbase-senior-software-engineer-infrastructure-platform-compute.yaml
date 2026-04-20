@@ -1,0 +1,115 @@
+id: coinbase-senior-software-engineer-infrastructure-platform-compute
+name: Coinbase Senior Software Engineer, Infrastructure - Platform Compute
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7576764?gh_jid=7576764
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+  description: '<div class="content-intro"><p>Ready to be pushed beyond what you think
+    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
+    in the world. It’s a massive, ambitious opportunity that demands the best of us,
+    every day, as we build the emerging onchain platform — and with it, the future
+    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
+    candidate. We want someone who is passionate about our mission and who believes
+    in the power of crypto and blockchain technology to update the financial system.
+    We want someone who is eager to leave their mark on the world, who relishes the
+    pressure and privilege of working with high caliber colleagues, and who actively
+    seeks feedback to keep leveling up. We want someone who will run towards, not
+    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
+    culture</a> is intense and isn’t for everyone. But if you want to build the future
+    alongside others who excel in their disciplines and expect the same from you,
+    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
+    we are not remote-only. In-person participation is required throughout the year.
+    Team and company-wide offsites are held multiple times annually to foster collaboration,
+    connection, and alignment. Attendance is expected and fully supported.</p></div><p>The
+    mission of the Platform Product Group engineers is to build a trusted, scalable
+    and compliant platform to operate with speed, efficiency and quality. Our teams
+    build and maintain the platforms critical to the existence of Coinbase. There
+    are many teams that make up this group which include Product Foundations (i.e.
+    Identity, Payment, Risk, Proofing &amp; Regulatory, Finhub), Machine Learning,
+    Customer Experience, and Infrastructure.</p> <p>The Compute team builds and operates
+    the Kubernetes platform at Coinbase, which is the primary compute orchestration
+    infrastructure for services at Coinbase. We work towards continuously improving
+    the scalability, reliability, efficiency, and operational experience of using
+    Kubernetes at Coinbase, working closely with the Routing, Security, Reliability,
+    and Observability teams (among many others).</p> <p><strong>What you’ll be doing
+    (ie. job duties):</strong></p> <ul> <li>Build tooling and automation to make management
+    of our Kubernetes clusters easy and reliable.</li> <li>Build tooling and automation
+    to improve the developer and operational experience of working with Kubernetes
+    for all users.</li> <li>Operationalize our Kubernetes platform so that it continues
+    to be automated and self-healing to prevent unnecessary oncall burden.</li> <li>Develop
+    net-new Kubernetes-related capabilities for service owners at Coinbase (e.g. one
+    off jobs, cron, different deployment strategies, support for EFS, automated right
+    sizing).</li> <li>Support our customers as they operate critical services for
+    Coinbase in Kubernetes.</li> </ul> <p><strong>What we look for in you (ie. job
+    requirements):</strong></p> <ul> <li>You have at least 5+ years of software engineering
+    experience and experience with Kubernetes, or similar compute orchestration systems
+    (e.g. mesos, nomad)</li> <li>Strong AWS and/or GCP infrastructure knowledge</li>
+    <li>Ability to build backend services in addition to infrastructure</li> <li>Ability
+    to hold a high bar for quality, are a self starter, and have strong interpersonal
+    skills</li> <li>Strong problem solving skills and ability to identify problems,
+    determine their root cause, and see them through to solution</li> <li>Ability
+    to balance business needs with technical solutions</li> <li>Has experience scaling
+    backend infrastructure</li> </ul> <p><span style="font-weight: 400;">Job #: P74890</span></p>
+    <p><span style="font-weight: 400;">*Answers to crypto-related questions may be
+    used to evaluate your onchain experience.</span></p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p><strong>Pay Transparency Notice:</strong><strong><em>
+    </em></strong>Depending on your work location, the target annual <strong>base
+    </strong>salary for this position can range as detailed below. Total compensation
+    may also include equity and bonus eligibility and benefits (including medical,
+    dental, vision and 401(k)).</p></div><div class="title">Annual base salary range
+    (excluding equity and bonus):</div><div class="pay-range"><span>$186,065</span><span
+    class="divider">&mdash;</span><span>$218,900 USD</span></div></div></div><div
+    class="content-conclusion"><p><span style="font-weight: 400;">Please be advised
+    that each candidate may submit a maximum of four applications within any 30-day
+    period. We encourage you to carefully evaluate how your skills and interests align
+    with Coinbase''s roles before applying.</span></p> <h3>Commitment to Equal Opportunity</h3>
+    <p>Coinbase is proud to be an Equal Opportunity Employer.&nbsp; All qualified
+    applicants will receive consideration f'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-29'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.015813+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

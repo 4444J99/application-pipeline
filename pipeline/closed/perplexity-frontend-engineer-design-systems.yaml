@@ -1,0 +1,73 @@
+id: perplexity-frontend-engineer-design-systems
+name: Perplexity Frontend Engineer - Design Systems
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/36afb111-5c9c-4aec-9066-a2beb6f25f4b
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Perplexity is seeking an experienced Frontend-focused Engineer to
+    help revolutionize the way people search and interact online. In this role, you''ll
+    be developing the future of AI products. Tech Stack: Tailwind | React | TypeScript
+    | CSS Responsibilities Work with the design systems team to build an excellent
+    user interaction layer for all features. This includes both standard reusable
+    components but also primitive pieces of generative UI. Work with and improve the
+    components that form the building blocks of Perplexity''s frontend Always be thinking
+    about how to improve interaction quality, fit & finish, and team velocity Key
+    Qualifications Experience building and maintaining user interface systems at a
+    large scale Strong coding fundamentals, and some experience working across the
+    stack. Ability to build foundations that others can build on top of. Experience
+    with highly interactive React applications using strongly typed code Knowledgeable
+    about design and UI patterns at scale Passion for prototyping, experimentation,
+    and creating accessible experiences Extreme ownership mindset Takes pride in getting
+    the small details right 4+ years of industry experience AI is at the heart of
+    what we build, and using it effectively is an expectation for every role here.
+    During interviews, we want to see how you think and make decisions—qualities that
+    will directly influence our AI development. With that in mind, please avoid using
+    AI tools throughout the process unless we indicate otherwise.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.910779+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

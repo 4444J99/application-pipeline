@@ -1,0 +1,116 @@
+id: openai-sourcer-forward-deployment-engineering
+name: OpenAI Sourcer, Forward Deployment Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: OpenAI
+  url: https://jobs.ashbyhq.com/openai
+  application_url: https://jobs.ashbyhq.com/openai/c5a62426-169a-46a9-9dc9-1c6a2a7c2762
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'About this Team Our Recruiting team is the gateway to OpenAI — a tight-knit,
+    mission-driven group that takes pride in thoughtful, relationship-first hiring.
+    We partner deeply with teams across the company to find, engage, and support the
+    people who will shape the future of AI. At OpenAI, we are dedicated to building
+    safe artificial general intelligence (AGI) to benefit all of humanity. The Recruiting
+    team is at the heart of this mission, tasked with identifying and hiring exceptional
+    individuals who align with OpenAI''s values and cultural ambitions. Our approach
+    to recruitment aims to set the standard for excellence and innovation in the field,
+    connecting outstanding candidates with opportunities to impact the future of AI.
+    About the Role We''re seeking to hire an experienced sourcer to support our talent
+    outreach and strategy for our Forward Deployed Engineering team. You’ll be embedded
+    in the wider FDE recruitment pod - working alongside FDE recruiters, sourcers,
+    and coordination as well as the business leaders for Forward Deployed. Our team
+    has an outsized impact opportunity for someone who has deep experience sourcing
+    for GTM roles and driving all the front-end candidate funnel stages. As a GTM
+    Sourcer, you’ll own hiring manager relationships across the GTM organization,
+    identify and engage leading talent in their respective fields, and partner with
+    our recruiters and leaders to optimize the teams. In this role you will: Partner
+    with hiring managers across Forward Deployed Engineering to build and improve
+    recruiting processes and develop customized sourcing strategies. Build highly
+    targeted searches that deliver candidate profiles with precision. Craft thoughtful
+    approaches to candidate outreach to engage even the most passive talent. Cultivate
+    relationships with high priority targets over the long-term, including talent
+    research and "mapping." Act as the primary touchpoint for candidates from initial
+    outreach until the onsite interview stage, ensuring an exceptional candidate experience.
+    Utilize non-traditional and creative strategies to discover talent through events,
+    talks, etc. Take a highly organized and data-driven approach to candidate tracking
+    and pipeline health. Represent OpenAI and engage with candidates at conferences
+    and events. Effectively lead and contribute to cross-functional projects. We’re
+    Seeking: 5+ years of experience sourcing technical sourcing, such as forward deployed
+    engineers, software engineers, machine learning engineers, ai engineers Track
+    record of delivering healthy candidate volume while maintaining a high degree
+    of responsiveness and care to each stakeholder and candidate in the process. A
+    strong track record of hiring top 1% talent. A high level of adaptability in fast-paced,
+    evolving environments—balancing strategic vision with hands-on execution. Excellent
+    communication skills and the ability to engage effectively with diverse teams
+    and stakeholders across the globe. A continuous improvement mindset and the ability
+    to evolve processes to meet global hiring needs. Proficiency with ATS and sourcing
+    platforms such as Ashby, LinkedIn Recruiter, and other modern recruitment tools
+    About OpenAI OpenAI is an AI research and deployment company dedicated to ensuring
+    that general-purpose artificial intelligence benefits all of humanity. We push
+    the boundaries of the capabilities of AI systems and seek to safely deploy them
+    to the world through our products. AI is an extremely powerful tool that must
+    be created with safety and human needs at its core, and to achieve our mission,
+    we must encompass and value the many different perspectives, voices, and experiences
+    that form the full spectrum of humanity. We are an equal opportunity employer,
+    and we do not discriminate on the basis of race, religion, color, national origin,
+    sex, sexual orientation, age, veteran status, disability, genetic information,
+    or other applicable legally protected characteristic. For additional information,
+    please see OpenAI’s Affirmative Action and Equal Employment Opportunity Policy
+    Statement . Background checks for applicants will be administered in accordance
+    with applicable law, and qualified applicants with arrest or conviction records
+    will be considered for employment consistent with those laws, including the San
+    Francisco Fair Chance Ordinance, the Los Angeles County Fair Chance Ordinance
+    for Employers, and the California Fair Chance Act, for US-based candidates. For
+    unincorporated Los Angeles County workers: we reasonably believe that criminal
+    history may have a direct, adverse and negative relationship with the following
+    job duties, potentially resulting in the withdrawal of a conditional offer of
+    employment: protect computer hardware entrusted to you from theft, loss or damage;
+    return all computer hardware in your possession (including the data contained
+    therein) upon termination of employment or end of assignment; and maintain the
+    confidentiality of proprietary, confidential, and non-public infor'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: null
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.505562+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

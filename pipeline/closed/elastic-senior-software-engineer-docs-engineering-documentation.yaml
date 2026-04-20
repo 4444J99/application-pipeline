@@ -1,0 +1,117 @@
+id: elastic-senior-software-engineer-docs-engineering-documentation
+name: 'Elastic Senior Software Engineer - Docs Engineering - Documentation '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Elastic
+  url: https://boards.greenhouse.io/elastic
+  application_url: https://jobs.elastic.co/jobs?gh_jid=7687032&gh_jid=7687032
+  portal: greenhouse
+  location: Spain
+  location_class: international
+  description: <div class="content-intro"><p>Elastic, the Search AI Company, enables
+    everyone to find the answers they need in real time, using all their data, at
+    scale — unleashing the potential of businesses and people. The Elastic Search
+    AI Platform, used by more than 50% of the Fortune 500, brings together the precision
+    of search and the intelligence of AI to enable everyone to accelerate the results
+    that matter. By taking advantage of all structured and unstructured data — securing
+    and protecting private information more effectively — Elastic’s complete, cloud-based
+    solutions for search, security, and observability help organizations deliver on
+    the promise of AI.</p></div><h3><strong>What is The Role</strong></h3> <p>We are
+    looking for a Senior Software Engineer to join our Docs Engineering Team. In this
+    role, you will bring your technical expertise to our distributed team in order
+    to build, maintain, and support our documentation platform, tooling and pipelines.
+    You will also work alongside a variety of stakeholders to understand business
+    needs, plan and design solutions, and rollout and promote systems and processes.</p>
+    <p>Versatility and an interest in working across a range of projects and programming
+    languages, is essential. We are looking for a formidable systems thinker, a polyglot
+    engineer who views programming languages as tools rather than identities. Someone
+    who knows how to build software using the right methods, both established and
+    new. and who has a drive to improve efficiency and automation through intelligent
+    and informed choices.</p> <p>The Docs Engineering Team is responsible for making
+    available documentation to both internal and external users across the entire
+    Elastic ecosystem. We do this by providing utilities, platforms and processes
+    by which documentation can be authored, organized and delivered in both traditional
+    and emerging ways. So as part of our Docs Engineering Team, you won't just be
+    maintaining a platform, you'll be building the sophisticated tooling and pipelines
+    that deliver documentation to the world.</p> <p>You will have the autonomy to
+    help lead the effort in redefining how technical documentation is authored and
+    delivered. If you are a self-motivated engineer who enjoys solving high-level
+    architectural puzzles and isn't afraid to get their hands dirty across different
+    stacks, we want to talk to you.</p> <p>Prior experience with the Elastic product
+    suite is not essential, but is beneficial.</p> <h3><strong>What You Will Be Doing</strong></h3>
+    <ul> <li>You'll be developing, maintaining, and supporting software that bridges
+    the gap between content creation and high-scale delivery.</li> <li>You'll work
+    in a multi-language environment across a range of technologies, including C#/.NET.</li>
+    <li>You'll leverage AI-assisted coding and emerging tools to radically improve
+    engineering efficiency and automation.</li> <li>You'll work alongside with the
+    Product Team and other stakeholders to translate business needs into elegant,
+    scalable deployment patterns and processes.</li> <li>You'll maintain a relentless
+    focus on usability, ensuring our documentation platforms provide a world-class
+    experience for developers.</li> </ul> <h3>What You Bring</h3> <ul> <li>You have
+    proven experience in building, releasing, supporting and maintaining software
+    products for a broad user base.</li> <li>You have a minimum 8 years of recent
+    software engineering experience, with proficiency in a variety of programming
+    languages (including C#).</li> <li>You are comfortable with AI-assisted coding
+    and have a drive to integrate these tools into the modern development lifecycle.</li>
+    <li>You can demonstrate a deep understanding of industry best practices, complex
+    architectures, and the nuances of distributed systems.</li> <li>You have a strong
+    focus on usability and developer experience.</li> <li>You have a genuine interest
+    in technology.</li> <li>You have excellent communication, collaboration, and interpersonal
+    skills.</li> <li>You can think clearly, work independently, and collaborate effectively
+    across a remote, global team.</li> <li>Ideally, you also have prior experience
+    of Elastic products (though this is not essential).</li> </ul><div class="content-conclusion"><h2><strong>Additional
+    Information - We Take Care of Our People</strong></h2> <p>As a distributed company,
+    diversity drives our identity. Whether you’re looking to launch a new career or
+    grow an existing one, Elastic is the type of company where you can balance great
+    work with great life. Your age is only a number. It doesn’t matter if you’re just
+    out of college or your children are; we need you for what you can do.</p> <p>We
+    strive to have parity of benefits across regions and while regulations differ
+    from place to place, we believe taking care of our people is the right thing to
+    do.</p> <ul> <li>Competitive pay based on the work you do here and not your previous
+    salary</li> <li>Health coverage for you and your family in many locations</li>
+    <li>Abili
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.8
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-03'
+  posting_date: '2026-04-02'
+  date_source: first_published
+  date_added: '2026-04-03'
+  discovered: '2026-04-03T10:15:35.521021+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

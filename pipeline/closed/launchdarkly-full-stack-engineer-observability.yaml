@@ -1,0 +1,118 @@
+id: launchdarkly-full-stack-engineer-observability
+name: LaunchDarkly Full Stack Engineer - Observability
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: LaunchDarkly
+  url: https://boards.greenhouse.io/launchdarkly
+  application_url: https://job-boards.greenhouse.io/launchdarkly/jobs/7689440003
+  portal: greenhouse
+  location: Remote - US
+  location_class: us-remote
+  description: "<h4><strong>About the Job:</strong></h4> <p>LaunchDarkly is looking\
+    \ for a Full Stack Engineer to help build and expand Vega, our AI-powered platform\
+    \ that surfaces insights and automates actions across LaunchDarkly products. This\
+    \ is a greenfield opportunity: you'll help evolve Vega from an Observability-focused\
+    \ assistant into a cross-product platform that serves Feature Management customers\
+    \ and powers a new, usage-based SKU.</p> <p>You'll build the surfaces, APIs, and\
+    \ agent infrastructure that make Vega and the whole Observability platform broadly\
+    \ valuable\u2014enabling capabilities like AI-driven dashboard creation, flag\
+    \ cleanup automation, and sandboxed agent execution. You'll work across the full\
+    \ stack (React/TypeScript UI, Go services, data pipelines) and collaborate closely\
+    \ with product, design, and other engineering teams to shape how AI capabilities\
+    \ land across LaunchDarkly. Additionally, you\u2019ll work on other Enterprise-grade\
+    \ capabilities for the Observability platform to help drive customer activation\
+    \ and success.</p> <h4>What You'll Work On:</h4> <ul> <li>Expand Vega beyond Observability\
+    \ into Feature Management, including the flag cleanup agent as a cross-product\
+    \ capability</li> <li>Support enterprise capabilities for the Observability platforms:\
+    \ building data import and export pipelines to connect O11y to other platforms\
+    \ and enabling new customer workflows.</li> <li>Build a platform that other teams\
+    \ can contribute to\u2014defining contribution patterns, shared infrastructure,\
+    \ and safe, sandboxed AI agent execution</li> <li>Enable dashboard creation via\
+    \ natural language prompts, using existing Vega infrastructure as a foundation</li>\
+    \ <li>Consolidate Vega usage into fewer, higher-value surfaces, enabling faster\
+    \ iteration and justifying a usage-based monetization model</li> <li>Run experiments\
+    \ to expose Vega to mainstream FM customers across core workflows, measuring adoption\
+    \ and informing monetization</li> <li>Partner with product and design to ensure\
+    \ Vega capabilities are intuitive, well-integrated, and impactful for end users</li>\
+    \ <li>Contribute to architecture decisions, code reviews, and engineering standards\
+    \ across the Observability and Vega teams</li> </ul> <h4>Responsibilities:</h4>\
+    \ <ul> <li>Design, build, and ship full-stack features across the Vega platform\
+    \ (UI, APIs, backend services, and agent infrastructure)</li> <li>Own features\
+    \ end-to-end: from prototype and API design through production rollout and iteration</li>\
+    \ <li>Collaborate cross-functionally with product managers, designers, and engineers\
+    \ across Observability and Feature Management</li> <li>Participate in architecture\
+    \ discussions and technical design reviews, contributing to sound trade-off decisions</li>\
+    \ <li>Write well-tested, maintainable code and promote best practices for quality,\
+    \ observability, and reliability</li> <li>Mentor teammates and contribute to a\
+    \ collaborative, high-trust engineering culture</li> <li>Participate in on-call\
+    \ rotations and take ownership of production reliability for your features</li>\
+    \ </ul> <h4>About You:</h4> <ul> <li>3+ years of professional software engineering\
+    \ experience, with a track record of shipping production-quality full-stack features</li>\
+    \ <li>Proficiency across the full stack\u2014comfortable in TypeScript/React on\
+    \ the frontend and Go (or similar) on the backend</li> <li>Experience building\
+    \ or integrating LLM-powered features, agents, or AI-driven workflows</li> <li>Strong\
+    \ product instincts: you care about user experience and can translate ambiguous\
+    \ requirements into clean, well-scoped solutions</li> <li>Collaborative and communicative\u2014\
+    you work well across teams and functions, and you're comfortable navigating ambiguity</li>\
+    \ <li>Familiarity with LaunchDarkly, feature flagging, or observability tooling\
+    \ is a plus</li> <li>Experience with usage-based product surfaces, experimentation\
+    \ platforms, or developer tooling is a plus</li> </ul> <div> <p class=\"p1\"><strong>Pay:</strong></p>\
+    \ <p class=\"p1\"><em>Target pay ranges based on Geographic Zones* for Level 2:</em></p>\
+    \ <ul class=\"ul1\"> <li class=\"li1\">Zone 1: <em>San Francisco/Bay Area or NYC\
+    \ Metropolitan Area, Boston, Seattle</em> - $136,500 - $187,660**</li> <li class=\"\
+    li1\">Zone 2:<em> Irvine, LA, Monterey, Santa Barbara, Santa Rosa, Austin, Portland,\
+    \ Philadelphia, Chicago - </em>$122,800 - $168,850**</li> <li class=\"li1\">Zone\
+    \ 3: <em>All other US locations - </em>$<span class=\"collapsed-field-text\">116,000\
+    \ - $159,500</span>&nbsp;*</li> </ul> <p class=\"p1\"><em>LaunchDarkly operates\
+    \ from a place of high trust and transparency; we are happy to state the pay range\
+    \ for our open roles to best align with your needs. Exact compensation may vary\
+    \ based on skills, experience, and location.</em></p> <p class=\"p1\"><em>*Within\
+    \ the United States, our geographic pay zones are defined by counties surrounding\
+    \ major metropolitan areas.</em><br><em>**Restricted Stock Units (RSUs), health,\
+    \ vision, and dental insurance, and mental health benefits in addition to salary.</em></p>\
+    \ </d"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-04'
+  posting_date: '2026-04-03'
+  date_source: first_published
+  date_added: '2026-04-04'
+  discovered: '2026-04-04T10:23:06.034648+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

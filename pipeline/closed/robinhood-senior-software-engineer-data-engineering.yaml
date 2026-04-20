@@ -1,0 +1,114 @@
+id: robinhood-senior-software-engineer-data-engineering
+name: Robinhood Senior Software Engineer, Data Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/4738660?t=gh_src=&gh_jid=4738660
+  portal: greenhouse
+  location: Menlo Park, CA
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><h2><strong>About the team + role&nbsp;</strong></h2>
+    <p data-start="548" data-end="992">We are building an elite team, applying frontier
+    technologies to the world’s biggest financial problems. We’re looking for bold
+    thinkers. Sharp problem-solvers. Builders who are wired to make an impact. Robinhood
+    isn’t a place for complacency, it’s where ambitious people do the best work of
+    their careers. We’re a high-performing, fast-moving team with ethics at the center
+    of everything we do. Expectations are high, and so are the rewards.</p> <p data-start="994"
+    data-end="1541">The Data Engineering team builds and maintains the foundational
+    datasets that power decision-making across Robinhood. We design reliable, scalable
+    data systems that support product analytics, growth strategy, financial reporting,
+    experimentation, and machine learning. The team partners closely with Product,
+    Engineering, Data Science, and Finance to ensure accurate, well-modeled data is
+    available to teams across the company. Our work directly influences how Robinhood
+    measures performance, improves customer experience, and scales its products.</p>
+    <p data-start="1543" data-end="2111">As a Senior Data Engineer, you will design,
+    build, and evolve core datasets that track product performance and company-wide
+    metrics. You will develop scalable data pipelines that ingest application events
+    and database snapshots into our data lake, ensuring high data quality and reliability.
+    You’ll collaborate with application engineers to improve data generation patterns
+    and with analytics teams to design intuitive, well-documented data models. This
+    is an opportunity to shape the technical foundation that supports data-informed
+    decisions across the organization!</p> <p><strong>This role is based in our Menlo
+    Park, CA office, with in-person attendance expected at least 3 days per week.</strong></p>
+    <p><em>At Robinhood, we believe in the power of in-person work to accelerate progress,
+    spark innovation, and strengthen community. Our office experience is intentional,
+    energizing, and designed to fully support high-performing teams.</em></p> <h2><strong>What
+    you’ll do</strong></h2> <ul> <li>Help define and build key datasets across all
+    Robinhood product areas. Lead the evolution of these datasets as use cases grow.</li>
+    <li>Build scalable data pipelines using Python, Spark and Airflow to move data
+    from different applications into our data lake.</li> <li>Partner with upstream
+    engineering teams to enhance data generation patterns.</li> <li>Partner with data
+    consumers across Robinhood to understand consumption patterns and design intuitive
+    data models.</li> <li>Ideate and contribute to shared data engineering tooling
+    and standards.</li> <li>Define and promote data engineering best practices across
+    the company.</li> </ul> <h2><strong>What you bring</strong></h2> <ul> <li>5+ years
+    of professional experience building end-to-end data pipelines</li> <li>Hands-on
+    software engineering experience, with the ability to write production-level code
+    in Python for user-facing applications, services, or systems (not just data scripting
+    or automation).</li> <li>Expert at building and maintaining large-scale data pipelines
+    using open source frameworks (Spark, Flink, etc)</li> <li>Strong SQL (Presto,
+    Spark SQL, etc) skills.</li> <li>Experience solving problems across the data stack
+    (Data Infrastructure, Analytics and Visualization platforms)</li> <li>Expert collaborator
+    with the ability to democratize data through actionable insights and solutions.</li>
+    </ul> <h2><strong>What we offer</strong></h2> <ul> <li>Challenging, high-impact
+    work to grow your career</li> <li>Performance driven compensation with multipliers
+    for outsized impact, bonus programs, equity ownership, and 401(k) matching</li>
+    <li>Best in class benefits to fuel your work, including 100% paid health insurance
+    for employees with 90% coverage for dependents</li> <li>Lifestyle wallet - a highly
+    flexible benefits spending account for wellness, learning, and more</li> <li>Employer-paid
+    life &amp; disability insurance, fertility benefits, and mental health benefits</li>
+    <li>Time off to recharge including company holidays, paid time off, sick time,
+    parental leave, and more!</li> <li>Exceptional office experience with catered
+    meals, events, and comfortable workspaces.</li> </ul><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p><strong>In addition to the base
+    pay range listed below, '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.133075+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

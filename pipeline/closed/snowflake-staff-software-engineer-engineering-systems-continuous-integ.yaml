@@ -1,0 +1,95 @@
+id: snowflake-staff-software-engineer-engineering-systems-continuous-integ
+name: Snowflake Staff Software Engineer – Engineering Systems Continuous Integration
+  Team
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/ab3ba525-e6f1-4bb3-83e5-c4872da217c3
+  portal: ashby
+  location: US-WA-Bellevue
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. We’re hiring a seasoned Staff Software Engineer
+    to help us build a world class developer platform to fuel the Snowflake Data Cloud.
+    As an engineer in the Continuous Integration team within ES (Engineering Systems),
+    you will play a central role in setting the technical standard for and delivering
+    the CI service that powers our repositories. Together with industry-wide experts
+    in distributed systems, cross-cloud development and engineering excellence, you
+    will evolve our developer infrastructure and tooling to be elastic, large-scale,
+    and highly performant with simplicity at its core. As a software engineer in the
+    CI team in ES, you will help Snowflake realize its mission and vision of becoming
+    the premier Data Cloud by accelerating the delivery of our high quality software
+    to production. You will be a key stakeholder in driving clarity on our strategy
+    and partner with product managers to chart the quarterly and long-term roadmaps
+    for the team. You will ensure that the team is executing towards serving the current
+    needs of its customers, while also ensuring that we stay ahead of technological
+    trends and future demands. OUR IDEAL STAFF SOFTWARE ENGINEER WILL HAVE: Strong
+    passion for making developers highly productive. 9+ years industry experience
+    designing and building distributed data systems. A track record of technical leadership
+    Experience working on enterprise-grade Continuous Integration for Cloud-based
+    distributed systems. Excellent problem solving skills, and strong CS fundamentals
+    including data structures, algorithms, and distributed systems. Fluency in Java,
+    C++, Python or Go. Ability to work in a team environment, collaborate well, and
+    mentor junior engineers. A strategic mindset and strong sense of what to prioritize
+    for maximum impact. Excellent interpersonal communication skills. Outstanding
+    written and oral English language skills. BONUS POINTS FOR EXPERIENCE WITH THE
+    FOLLOWING: Developing data or distributed systems internals. Experience with Jenkins,
+    ArgoCD or other CI-related suites. Multi-tenant systems, with focus on reliability,
+    performance, isolation and security. Proven experience with authoring roadmap
+    documents, project plans and RCAs. Every Snowflake employee is expected to follow
+    the company’s confidentiality and security standards for handling sensitive data.
+    Snowflake employees must abide by the company’s data security plan as an essential
+    part of their duties. It is every employee''s duty to keep customer information
+    secure and confidential. Snowflake is growing fast, and we’re scaling our team
+    to help enable and accelerate our growth. We are looking for people who share
+    our values, challenge ordinary thinking, and push the pace of innovation while
+    building a future for themselves and Snowflake. How do you want to make your impact?
+    For jobs located in the United States, please visit the job posting on the Snowflake
+    Careers Site for salary and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.169024+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

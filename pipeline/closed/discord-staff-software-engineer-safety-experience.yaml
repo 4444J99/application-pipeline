@@ -1,0 +1,115 @@
+id: discord-staff-software-engineer-safety-experience
+name: Discord Staff Software Engineer - Safety Experience
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Discord
+  url: https://boards.greenhouse.io/discord
+  application_url: https://job-boards.greenhouse.io/discord/jobs/8344197002
+  portal: greenhouse
+  location: San Francisco Bay Area
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Discord is used by over 200 million
+    people every month for many different reasons, but there’s one thing that nearly
+    everyone does on our platform:<strong> play video games.</strong> Over 90% of
+    our users play games, spending a combined 1.5 billion hours playing thousands
+    of unique titles on Discord each month. Discord plays a uniquely important role
+    in the future of gaming. We are focused on making it easier and more fun for people
+    to talk and hang out before, during, and after playing games.</p></div><p>As a
+    <span class="notion-enable-hover" data-token-index="1">Staff Engineer</span> on
+    the Safety Experience team, you''ll be a technical leader who autonomously delivers
+    real business impact on large, ambiguous projects. You''ll design and build product
+    features and systems that prevent harmful activities at scale while ensuring regulatory
+    compliance. This role requires both deep technical expertise and the ability to
+    be a force multiplier for your team: driving engineering excellence, making solid
+    technical decisions, and remaining a top code contributor. You''ll work cross-functionally
+    to shape the technical direction of safety initiatives that protect hundreds of
+    millions of Discord users. This role reports to the <span class="notion-enable-hover"
+    data-token-index="3">Engineering Manager of Safety Experience</span>.</p> <p><strong>What
+    You''ll Be Doing</strong></p> <ul> <li>Lead development of high-impact, user-facing
+    safety products that deliver measurable results for Discord''s users.</li> <li>Own
+    complex, multi-milestone projects end-to-end, identifying optimal solutions, navigating
+    ambiguity and making independent technical decisions.</li> <li>Design, build,
+    and deploy robust production APIs, backend services, and data pipelines that enable
+    safety features to scale efficiently.</li> <li>Collaborate cross-functionally
+    with Product, Design, Policy, Data Science, ML, Legal, and Trust &amp; Safety
+    Operations to create solutions that are both impactful and lovable.</li> <li>Drive
+    engineering excellence by mentoring others and guiding the team through architectural
+    challenges to ensure long-term scalability.</li> <li>Respond rapidly to the ever-evolving
+    abuse and compliance landscape with strategic thinking and swift execution.</li>
+    </ul> <p><strong>What you should have</strong></p> <ul> <li>8+ years of relevant
+    industry experience, with demonstrated ability to deliver high-quality, high-impact
+    work on complex projects.</li> <li>Strong expertise in Python and back-end API
+    frameworks (Flask, Django).</li> <li>Strong front-end development skills with
+    JavaScript (React, TypeScript) for web and mobile platforms.</li> <li>Significant
+    experience in the Safety or Anti-Abuse domain with deep understanding of trust
+    and safety challenges at scale.</li> <li>Proven track record of owning large projects
+    end-to-end with varying degrees of ambiguity, breaking down work into well-prioritized
+    milestones with clear dependencies.</li> <li>Demonstrated ability to make independent
+    technical decisions that balance short-term needs with long-term sustainability
+    and scalability.</li> <li>Experience driving engineering excellence: setting quality
+    standards, conducting thorough code reviews, and applying an adversarial mindset
+    to identify security, performance, and scaling issues.</li> <li>Strong communication
+    skills with ability to provide high-quality technical feedback, drive alignment
+    across stakeholders, and facilitate productive debates that lead to clear decisions.</li>
+    <li>Experience using metrics and dashboards (e.g., Datadog, Mode, Faros) to make
+    data-driven decisions and monitor system health.</li> <li>Ability to be a force
+    multiplier for your team by mentoring others, establishing best practices, and
+    helping teammates grow their skills.</li> </ul> <p><strong>Bonus Points</strong></p>
+    <p><strong></strong></p> <ul> <li>Familiarity with databases such as Cassandra,
+    Postgres, or ScyllaDB.</li> <li>Experience with real-time streaming systems like
+    Kafka or Pub-Sub.</li> <li>Track record of building and operating native mobile
+    features on iOS and Android.</li> <li>Experience designing and implementing monitoring
+    strategies and on-call/on-point processes for production systems.</li> <li>Knowledge
+    of lower-level languages such as Go, Rust, or Elixir.</li> </ul> <p>&nbsp;</p>
+    <p><em>Candidates must reside in or be willing to relocate to the San Francisco
+    Bay Area (Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa
+    Clara, Solano, and Sonoma counties). Relocation assistance may be available.<br><br>The
+    US base salary range for this full-time position is $248,000 to $279,000 + equity
+    + benefits. Our salary ranges are determined by role and level. Within the range,
+    individual pay is determined by additional factors, including job-related skills,
+    experience, and relevant education or training. Please note that the compensation
+    details listed in US role postings reflect the base salary only, an'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.685235+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,92 @@
+id: snowflake-senior-frontend-engineer-data-sharing-foundation
+name: 'Snowflake Senior Frontend Engineer- Data Sharing Foundation '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/08b9b4f4-a91a-4b81-9235-9cff6cc6b220
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. The Sharing Foundation team builds software
+    that connects customers via data and provides customers access to the Data Cloud.
+    The team builds the revolutionary Data Sharing technology and Snowflake Data Marketplace
+    infrastructure. Bring the Data Cloud and AI capabilities to your SaaS Data - We
+    are building end-to-end product experiences that let customers access data from
+    big SaaS platform providers on Snowflake without managing copies, pipelines, or
+    complex integrations. We develop everything from the customer-facing product surface
+    to the backend services and platform integrations that make zero-copy access to
+    your data: fast, reliable, and secure. As part of this team, you will work closely
+    with Snowflake’s data sharing team to design intuitive workflows, solve hard performance
+    and scale problems, and define the technical foundation for how cross platform
+    data shows up in Snowflake for years to come. This is a high-impact role where
+    you will have a direct impact on the product and the opportunity to grow your
+    skills in a fast-paced, collaborative environment. AS A SOFTWARE ENGINEER AT SNOWFLAKE,
+    YOU WILL: Design, develop, and deliver features across our full stack that have
+    a direct impact on our customers and partners. Work closely with product managers,
+    designers, and other engineers to deliver end-to-end features. Build robust and
+    high-performance systems to support the zero copy experience, using technologies
+    like TypeScript, React, Go, Java, and Python. Write clean, well-tested, and maintainable
+    code, while contributing to a culture of engineering excellence and continuous
+    improvement. Be a strong contributor to the overall product and technical direction
+    of the area OUR IDEAL SOFTWARE ENGINEER WILL HAVE: 5+ years of industry experience
+    designing and building scalable web applications with a focus on great user experience.
+    A strong foundation in full-stack development. You should have significant frontend
+    experience with TypeScript and React, and experience with backend services in
+    languages like Java, Go, or Python. A genuine passion for building customer-facing
+    products and a drive to solve problems that create real value for users. A strong
+    understanding of core computer science concepts and web application architecture,
+    including security, performance, and scalability. Snowflake is growing fast, and
+    we’re scaling our team to help enable and accelerate our growth. We are looking
+    for people who share our values, challenge ordinary thinking, and push the pace
+    of innovation while building a future for themselves and Snowflake. How do you
+    want to make your impact? For jobs located in the United States, please visit
+    the job posting on the Snowflake Careers Site for salary and benefits information:
+    careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.199026+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

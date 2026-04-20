@@ -1,0 +1,118 @@
+id: coinbase-staff-software-engineer-frontend-consumer-cb1growth
+name: Coinbase Staff Software Engineer, Frontend (Consumer -CB1,Growth)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7300575?gh_jid=7300575
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><p>Ready to be pushed beyond what you\
+    \ think you\u2019re capable of?</p> <p>At Coinbase, our mission is to increase\
+    \ economic freedom in the world. It\u2019s a massive, ambitious opportunity that\
+    \ demands the best of us, every day, as we build the emerging onchain platform\
+    \ \u2014 and with it, the future global financial system.</p> <p>To achieve our\
+    \ mission, we\u2019re seeking a very specific candidate. We want someone who is\
+    \ passionate about our mission and who believes in the power of crypto and blockchain\
+    \ technology to update the financial system. We want someone who is eager to leave\
+    \ their mark on the world, who relishes the pressure and privilege of working\
+    \ with high caliber colleagues, and who actively seeks feedback to keep leveling\
+    \ up. We want someone who will run towards, not away from, solving the company\u2019\
+    s hardest problems.</p> <p>Our <a href=\"https://www.coinbase.com/mission\">work\
+    \ culture</a> is intense and isn\u2019t for everyone. But if you want to build\
+    \ the future alongside others who excel in their disciplines and expect the same\
+    \ from you, there\u2019s no better place to be.</p> <p>While many roles at Coinbase\
+    \ are remote-first, we are not remote-only. In-person participation is required\
+    \ throughout the year. Team and company-wide offsites are held multiple times\
+    \ annually to foster collaboration, connection, and alignment. Attendance is expected\
+    \ and fully supported.</p></div><p>We\u2019re looking for Staff Software Engineers\
+    \ to balance the role of an individual contributor while also anchoring new projects,\
+    \ leading technical direction and mentoring other engineers on the team. We highly\
+    \ value individuals with intellectual curiosity and openness. We collaborate across\
+    \ the organization, helping our engineers think big and take risks while building\
+    \ a culture of diversity, positive energy and blameless truth-seeking. Our engineering\
+    \ team leverages a diverse tech stack and our focus is finding smart engineers\
+    \ who\u2019ve worked on complex projects and we have all the trust you\u2019d\
+    \ be able to pick up whatever tech necessary in the stack.</p> <p>The Trust &amp;\
+    \ Loyalty org contains a portfolio of products. Our flagship offering is CB1 \u2013\
+    \ Coinbase\u2019s subscription offering and we\u2019re creating the default crypto\
+    \ membership for all members of the crypto community. Currently, CB1 offers benefits\
+    \ such as free trading, boosted staking rates, and more. The CB1 Growth team is\
+    \ responsible for driving the acquisition and activation of Coinbase One subscribers.\
+    \ Our focus is on rapid experimentation and funnel optimization to increase sign-ups\
+    \ and user engagement, as well extending the reach and benefits of Coinbase One\
+    \ through international growth, on-chain partnerships, and strategic collaborations.</p>\
+    \ <p><strong>What you\u2019ll be doing (ie. job duties):</strong></p> <ul> <li>Architect,\
+    \ design and implement foundational solutions for subscription product</li> <li>Provide\
+    \ technical structure to teams and work closely with management and stakeholders\
+    \ to define strategic roadmaps</li> <li>Manage individual projects priorities,\
+    \ deadlines and deliverables with your technical expertise</li> <li>Mentor and\
+    \ train other team members on design techniques and coding standards</li> <li>Write\
+    \ high quality, well tested code to meet the needs of your customers</li> <li>Be\
+    \ responsible for product and operational health</li> </ul> <p><strong>What we\
+    \ look for in you:</strong></p> <ul> <li>8+ years of experience in software engineering</li>\
+    \ <li>You\u2019ve experienced architecting and developing solutions to ambiguous\
+    \ problems with significant impact</li> <li>Experience managing technical roadmap\
+    \ and driving organizational engineering excellence</li> <li>Experience building\
+    \ or scaling systems related to subscription/membership/promotion products, or\
+    \ growth levers.</li> <li>Experience with growth metrics (e.g. conversion, activation,\
+    \ retention, engagement) and A/B testing frameworks</li> <li>Demonstrates the\
+    \ ability to responsibly use generative AI tools and copilots (e.g., LibreChat,\
+    \ Gemini, Glean) in daily workflows, continuously learn as tools evolve, and apply\
+    \ human-in-the-loop practices to deliver business-ready outputs and drive measurable\
+    \ improvements in efficiency, cost, and quality.</li> </ul> <p><strong>Nice to\
+    \ haves:</strong></p> <ul> <li>You\u2019ve built financial, high reliability or\
+    \ security systems</li> <li>Crypto-forward experience, including familiarity with\
+    \ onchain activity such as interacting with Ethereum addresses, using ENS, and\
+    \ engaging with dApps or blockchain-based services.</li> </ul> <p>Job #: P73197</p>\
+    \ <div id=\"fortidlp-input-element-parent\"></div><div class=\"content-conclusion\"\
+    ><p><span style=\"font-weight: 400;\">Please be advised that each candidate may\
+    \ submit a maximum of four applications within any 30-day period. We encourage\
+    \ you to carefully evaluate how your skills and interests align with Coinbase's\
+    \ roles before applying.</span></p> <h3>Commitment to Equal Opportunity</h3> <p>Coinbase\
+    \ is proud to be an Equal Opportunity Employ"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.097904+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

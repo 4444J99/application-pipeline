@@ -1,0 +1,117 @@
+id: new-relic-software-engineer-1
+name: New Relic Software Engineer 1
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: New Relic
+  url: https://boards.greenhouse.io/newrelic
+  application_url: https://job-boards.greenhouse.io/newrelic/jobs/5051574008
+  portal: greenhouse
+  location: Hyderabad, India
+  location_class: international
+  description: '<div class="content-intro"><p>We are a global team of innovators and
+    pioneers dedicated to shaping the future of observability. At New Relic, we build
+    an intelligent platform that empowers companies to thrive in an AI-first world
+    by giving them unparalleled insight into their complex systems. As we continue
+    to expand our global footprint, we''re looking for passionate people to join our
+    mission. If you''re ready to help the world''s best companies optimize their digital
+    applications, we invite you to explore a career with us!</p></div><p style="text-align:
+    left;"><strong data-stringify-type="bold">Your opportunity</strong></p> <p style="text-align:
+    left;">At New Relic, we provide our customers real-time insights, so they can
+    innovate faster. Our software delivers insightful observability tools across different
+    technologies and distributed systems, enabling software engineering teams to quickly
+    identify, understand and tackle issues, analyse performance and get the most of
+    their software and infrastructure.You will be the part of Alerts team which is
+    a cornerstone team of the New Relic platform, owning the end-to-end lifecycle
+    of critical notifications—from initial trigger to delivery. We operate at a massive
+    scale, leveraging a modern stack that includes Java, Node.js, GraphQL, and Kubernetes.
+    As a Backend Engineer, you will play a pivotal role in architecting and scaling
+    our next-generation alerting solutions to meet the demands of our global customer
+    base.New Relic is looking for engineers who are interested in building a brand-new
+    observability experience. This high-impact engineering position is a phenomenal
+    opportunity to own and build a set of next generation services and capabilities
+    for the company. We are searching for a motivated engineer who is ready for a
+    career-defining role in their next opportunity. We look forward to talking with
+    you!</p> <p style="text-align: left;"><strong data-stringify-type="bold">What
+    you''ll do</strong></p> <p>* Design, Build, maintain, and scale back-end services
+    and their support tools.<br>* Participate in architectural definitions with a
+    high degree of innovation and creativity.<br>* Creating automation and tooling
+    to make our systems more scalable and easier to deploy.<br>* Working directly
+    within a multidisciplinary team to help our customers and partners.<br>* Research
+    new tools and services to understand complex scenarios and to also propose new
+    features.<br>* Working in an agile environment with a DevOps approach - teams
+    build and maintain their own software<strong data-stringify-type="bold">This role
+    requires</strong><br>* Bachelor’s degree, software development, engineering, or
+    a related technical field<br>* 2+ years of experience working as a software engineer
+    working in Java, NodeJS and/or Go with a strong computer science background and
+    an aptitude for learning new languages quickly<br>* Demonstrated experience in
+    designing, developing, and maintaining large-scale software systems, utilizing
+    modern programming languages and frameworks<br>* Proven ability to mentor a team
+    of software engineers, guiding them towards technical excellence, and ensuring
+    the delivery of high-quality code<br>* Strong understanding of scalable distributed
+    systems and microservices architecture, with the ability to design and implement
+    solutions that meet performance and scalability&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    requirements.<br>* Passion for exploring new technologies and finding creative
+    solutions to complex problems, keeping up with industry trends and advancements
+    in observability and related domains<br>* Excellent collaboration abilities, with
+    the capacity to work effectively with cross-functional teams, present ideas, and
+    communicate technical concepts clearly<br>* Keep up to date with technologies
+    - AWS/Azure/GCP, serverless, Docker, Kubernetes among others.</p> <p><br><strong
+    data-stringify-type="bold">Bonus points if you have</strong></p> <p>* Contribution
+    to open source projects.<br>* Familiarity with the tech stacks mentioned above<br>*
+    Understanding the value that build and test automation brings to a development
+    team''s efficiency and reliability and are passionate about applying these techniques
+    to your projects.<br>* Experience in technical mentorship and help with leveling
+    up the skills of other colleagues on the team.<br>* Experience with asynchronous
+    programming techniques: streams, event-based flows, task queues, message queues.</p><div
+    class="content-conclusion"><p>Fostering a diverse, welcoming and inclusive environment
+    is important to us. We work hard to make everyone feel comfortable bringing their
+    best, most authentic selves to work every day. We celebrate our talented Relics’
+    different backgrounds and abilities, and recognize the different paths they took
+    to reach us – including nontraditional ones. Their experiences and perspectives
+    inspire us to make our products and company the best they can be. We’re looking
+    for people who feel connected to our mission'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-01'
+  posting_date: '2026-04-01'
+  date_source: first_published
+  date_added: '2026-04-01'
+  discovered: '2026-04-01T10:18:24.679587+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

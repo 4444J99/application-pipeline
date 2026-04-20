@@ -1,0 +1,95 @@
+id: harvey-ai-senior-software-engineer-backend
+name: Harvey AI Senior Software Engineer, Backend
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Harvey AI
+  url: https://jobs.ashbyhq.com/harvey
+  application_url: https://jobs.ashbyhq.com/harvey/8568dd25-b447-4be5-bdd1-42d9ef536832
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Why Harvey At Harvey, we’re transforming how legal and professional
+    services operate — not incrementally, but end-to-end. By combining frontier agentic
+    AI, an enterprise-grade platform, and deep domain expertise, we’re reshaping how
+    critical knowledge work gets done for decades to come. This is a rare chance to
+    help build a generational company at a true inflection point. With 1000+ customers
+    in 58+ countries, strong product-market fit, and world-class investor support,
+    we’re scaling fast and defining a new category in real time. The work is ambitious,
+    the bar is high, and the opportunity for growth — personal, professional, and
+    financial — is unmatched. Our team is sharp, motivated, and deeply committed to
+    the mission. We move fast, operate with intensity, and take real ownership of
+    the problems we tackle — from early thinking to long-term outcomes. We stay close
+    to our customers — from leadership to engineers — and work together to solve real
+    problems with urgency and care. If you thrive in ambiguity, push for excellence,
+    and want to help shape the future of work alongside others who raise the bar,
+    we invite you to build with us. At Harvey, the future of professional services
+    is being written today — and we’re just getting started. Role Overview As a Backend
+    Software Engineer on the Product Engineering team at Harvey, you will own and
+    lead engineering projects across our various product lines. You will work closely
+    with our AI, Legal, and GTM teams to build secure systems that deliver value to
+    our customers. We are looking for individuals who have worked across the stack
+    on incredible products across consumer, enterprise, and various industries and
+    who are excited about building the future of application layer and genAI products.
+    This role is based in San Francisco, CA. We use an in-person work model and offer
+    relocation assistance to new employees. What You''ll Do Retrieval over peta-byte
+    scale documents Organizational-level interfaces to collaborate with AI Managing
+    dedicated GPU capacity across 5+ regions 1000-step planning agents that help take
+    companies public Government-level security for the world''s most sensitive matters
+    Evaluating LLMs across a 10k+ leaf taxonomy of tasks Internet-scale data collection
+    from over 50+ jurisdictions What You Have 5+ years (post-BS/MS) of backend-focused
+    software engineering experience on product-centric teams Track record of building
+    fast-growing SaaS products by leveraging PWA technologies Track record of shipping
+    highly intuitive products, strong attention to detail Experience building backend
+    platforms that can support multiple product lines Strong programming skills and
+    general Computer Science knowledge Grit - experience working at early-stage startups
+    is a plus Compensation Range $200,000 - $260,000 USD Please find our CA applicant
+    privacy notice here . #LI-AN2 Harvey is an equal opportunity employer and does
+    not discriminate on the basis of race, gender, sexual orientation, gender identity/expression,
+    national origin, disability, age, genetic information, veteran status, marital
+    status, pregnancy or related condition, or any other basis protected by law. We
+    are committed to providing reasonable accommodations to applicants with disabilities,
+    and requests can be made by emailing accommodations@harvey.ai'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.979935+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

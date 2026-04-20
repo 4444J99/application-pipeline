@@ -1,0 +1,116 @@
+id: gitlab-staff-backend-engineer-developer-experience
+name: GitLab Staff Backend Engineer, Developer Experience
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: GitLab
+  url: https://boards.greenhouse.io/gitlab
+  application_url: https://job-boards.greenhouse.io/gitlab/jobs/8490477002
+  portal: greenhouse
+  location: Remote, Canada; Remote, United Kingdom; Remote, US
+  location_class: international
+  description: "<div class=\"content-intro\"><p>GitLab is the intelligent orchestration\
+    \ platform for DevSecOps. GitLab enables organizations to increase developer productivity,\
+    \ improve operational efficiency, reduce security and compliance risk, and accelerate\
+    \ digital transformation. More than 50 million registered users and more than\
+    \ 50% of the Fortune 100* trust GitLab to ship better, more secure software faster.</p>\
+    \ <p>The same principles built into our products are reflected in how our team\
+    \ works: we embrace AI as a core productivity multiplier, with all team members\
+    \ expected to incorporate AI into their daily workflows to drive efficiency, innovation,\
+    \ and impact. GitLab is where careers accelerate, innovation flourishes, and every\
+    \ voice is valued. Our high-performance culture is driven by our <a href=\"https://handbook.gitlab.com/handbook/values/\"\
+    >values</a> and continuous knowledge exchange, enabling our team members to reach\
+    \ their full potential while collaborating with industry leaders to solve complex\
+    \ problems. <a href=\"https://www.youtube.com/watch?v=OuZIb5zszQI\">Co-create\
+    \ the future with us</a> as we build technology that transforms how the world\
+    \ develops software.</p> <p>*<em>Fortune 500\xAE is a registered trademark of\
+    \ Fortune Media IP Limited, used under license. Claim based on GitLab data. Fortune\
+    \ 100 refers to the top 20% ranked companies in the 2025 Fortune 500 list, published\
+    \ in June 2025. Fortune and Fortune Media IP Limited are not affiliated with,\
+    \ and do not endorse products or services of GitLab.</em></p></div><p>As a Staff\
+    \ Backend Engineer in the <a href=\"https://handbook.gitlab.com/handbook/engineering/infrastructure-platforms/developer-experience/\"\
+    ><strong>Developer Experience</strong></a> group, you\u2019ll work cross-functionally\
+    \ to help us identify and improve the engineering experience across GitLab\u2019\
+    s internal engineering teams. We\u2019re at a pivotal time in transforming our\
+    \ testing approach and development experience to enable engineers to deliver high-quality\
+    \ code efficiently and with confidence.&nbsp;</p> <p><a href=\"https://handbook.gitlab.com/handbook/engineering/infrastructure-platforms/developer-experience/test-governance/\"\
+    >Developer Experience</a> currently has six, globally distributed teams of Backend\
+    \ Engineers and Software Engineers in Test. This role will work across the entire\
+    \ group to help us identify and remove the biggest points of friction that affect\
+    \ development at GitLab. Expect to split your time between hands-on coding in\
+    \ Ruby and Go, designing scalable solutions and helping every team deliver.&nbsp;\
+    \ You\u2019ll be instrumental in shaping our engineering culture across GitLab.&nbsp;&nbsp;</p>\
+    \ <p>This is a highly visible role with strong company-wide support. You\u2019\
+    ll be instrumental in shifting our culture and practices toward a cohesive Developer\
+    \ Experience Platform strategy\u2014backed by buy-in and appetite for change.</p>\
+    \ <h3><strong>Some examples of our projects</strong></h3> <ul> <li>Identifying\
+    \ and removing the source of flakiness in our tests pipelines</li> <li>Introducing\
+    \ comprehensive test coverage reporting to guide our decisions about what and\
+    \ when to test</li> <li>Standardizing logging libraries and documentation to make\
+    \ it easy for all features and components to provide consistent logs</li> <li>Providing\
+    \ stable, configurable development environments&nbsp;</li> </ul> <h3><strong>What\
+    \ You\u2019ll Do</strong></h3> <ul> <li><strong>Drive Technical Excellence Across\
+    \ Teams</strong>: Provide hands-on engineering contributions and technical leadership\
+    \ across six Developer Experience teams, jumping in to unblock critical work or\
+    \ accelerate high-impact initiatives</li> <li><strong>Champion Engineering Needs</strong>:\
+    \ Partner with engineering teams across GitLab to identify pain points, gather\
+    \ feedback, and translate day-to-day frustrations into actionable improvements\
+    \ for the Developer Experience roadmap</li> <li><strong>Transform Testing at Scale</strong>:\
+    \ Help us modernize our testing to support GitLab's growth\u2014ensuring engineers\
+    \ have fast, reliable tools that catch issues early without slowing them down</li>\
+    \ <li><strong>Optimize CI/CD Pipelines</strong>: Reduce merge and CI friction\
+    \ by building workflows that deliver fast, actionable feedback\u2014helping engineers\
+    \ iterate confidently and ship faster</li> <li><strong>Break Down Systemic Bottlenecks</strong>:\
+    \ Collaborate with Platform, Product, and Infrastructure teams to identify and\
+    \ eliminate the architectural and process friction that slows down development</li>\
+    \ <li><strong>Shape Engineering Culture</strong>: Foster a culture of continuous\
+    \ learning, inclusion, and improvement\u2014where great developer experience is\
+    \ a shared value across the organization</li> </ul> <h3><strong>What You\u2019\
+    ll Bring</strong></h3> <ul> <li>Deep experience with developer tooling, DevEx\
+    \ strategies, and testing frameworks at scale</li> <li>Experience leading platform\
+    \ or transformation initiatives across multiple teams</li> <li>Proven ability\
+    \ to influence without authority and coll"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-08'
+  posting_date: '2026-04-07'
+  date_source: first_published
+  date_added: '2026-04-08'
+  discovered: '2026-04-08T10:15:26.212283+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

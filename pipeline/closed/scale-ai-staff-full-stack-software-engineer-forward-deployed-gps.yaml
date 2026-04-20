@@ -1,0 +1,116 @@
+id: scale-ai-staff-full-stack-software-engineer-forward-deployed-gps
+name: Scale AI Staff Full-Stack Software Engineer, (Forward Deployed), GPS
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Scale AI
+  url: https://boards.greenhouse.io/scaleai
+  application_url: https://job-boards.greenhouse.io/scaleai/jobs/4676610005
+  portal: greenhouse
+  location: London, UK
+  location_class: international
+  description: '<p>Scale’s rapidly growing Global Public Sector team is focused on
+    using AI to address critical challenges facing the public sector around the world.
+    Our core work consists of:</p> <ul> <li>Creating custom AI applications that will
+    impact millions of citizens</li> <li>Generating high-quality training data for
+    custom LLMs</li> <li>Upskilling and advisory services to spread the impact of
+    AI</li> </ul> <p>As a Full Stack Software Engineer (Forward Deployed), you’ll
+    collaborate directly with public sector counterparts to quickly build full-stack,
+    AI applications, to solve their most pressing challenges and achieve meaningful
+    impact for citizens.</p> <p>At Scale, we’re not just building AI solutions—we’re
+    enabling the public sector to transform their operations and better serve citizens
+    through cutting-edge technology. If you’re ready to shape the future of AI in
+    the public sector and be a founding member of our team, we’d love to hear from
+    you.</p> <h3>You will:</h3> <ul> <li>Serve as the lead technical strategist for
+    public sector engagements, converting ambiguous mission requirements into robust
+    architectural roadmaps and guiding onsite implementation</li> <li>Architect the
+    fundamental frameworks for production-grade AI applications, setting the gold
+    standard for how interactive UIs, backend systems, and AI models are integrated
+    at scale to deliver reliable outcomes.</li> <li>Guide the evolution of cloud infrastructure,
+    ensuring security, global scalability, and long-term system integrity across all
+    environments.</li> <li>Direct the development of core platforms and shared services,
+    ensuring they solve cross-cutting needs for diverse global client use cases.</li>
+    <li>Partner with cross-functional leadership to steer the technical roadmap, mentoring
+    senior and junior staff and ensuring all products align with a cohesive, future-proof
+    technical architecture.</li> <li>Bridge the gap between the field and the core
+    platform by turning real-world client lessons into the reusable patterns that
+    power the entire engineering team.</li> </ul> <h3>Ideally you’d have:</h3> <ul>
+    <li>Masters or Phd in Computer Science or equivalent deep industry experience
+    in architecting complex, distributed systems.</li> <li>10+ years of full-stack
+    expertise across Python, Node.js, and React, with a proven track record of designing
+    high-scale architectures on Kubernetes and global cloud infrastructures (AWS/Azure/GCP).</li>
+    <li>Expert ability to design and oversee production-grade ecosystems, ensuring
+    world-class standards for system integrity, security, and long-term scalability.</li>
+    <li>Extensive experience deploying and troubleshooting sophisticated end-to-end
+    solutions directly within complex, high-security client environments.</li> <li>A
+    self-driven leader capable of resolving extreme ambiguity, mentoring senior staff,
+    and setting the technical vision for the organization.</li> <li>A driver of asynchronous
+    workflows and documentation-first cultures to streamline global engineering velocity
+    and reduce friction.</li> <li>Proficient in Arabic</li> </ul> <h3>Nice to haves:</h3>
+    <ul> <li>Past experience working at a startup as a CTO or founding engineer or
+    in a forward deployed engineer / dedicated customer engineer role</li> <li>Experience
+    working cross functionally with operations</li> <li>Proven track record of building
+    LLM-driven solutions with the strategic foresight to anticipate landscape shifts
+    and architect future-proof systems.</li> </ul><div class="content-conclusion"><p><strong><em>PLEASE
+    NOTE:&nbsp;</em></strong><em>Our policy requires a 90-day waiting period before
+    reconsidering candidates for the same role. This allows us to ensure a fair and
+    thorough evaluation of all applicants.</em></p> <p><strong>About Us:</strong></p>
+    <p><em>At Scale, our mission is to develop reliable AI systems for the world''s
+    most important decisions. Our products provide the high-quality data and full-stack
+    technologies that power the world''s leading models, and help enterprises and
+    governments build, deploy, and oversee AI applications that deliver real impact.
+    We work closely with industry leaders like Meta, Cisco, DLA Piper, Mayo Clinic,
+    Time Inc., the Government of Qatar, and U.S. government agencies including the
+    Army and Air Force. We are expanding our team to accelerate the development of
+    AI applications.</em></p> <p><em>We believe that everyone should be able to bring
+    their whole selves to work, which is why we are proud to be an inclusive and equal
+    opportunity workplace. We are committed to equal employment opportunity regardless
+    of race, color, ancestry, religion, sex, national origin, sexual orientation,
+    age, citizenship, marital status, disability status, gender identity or Veteran
+    status.&nbsp;</em></p> <p><em>We are committed to working with and providing reasonable
+    accommodations to applicants with physical and mental disabilities. If you need
+    assistance and/or a reasonable accommodation in the application or recruiting
+    process due '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.496270+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

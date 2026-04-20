@@ -1,0 +1,93 @@
+id: snowflake-software-engineer-database-platform-security
+name: Snowflake Software Engineer, Database Platform Security
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/3183f9bc-06fc-4150-99e1-45295dc9cd5c
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. There is only one Data Cloud. Snowflake’s founders
+    started from scratch and designed a data platform built for the cloud that is
+    effective, affordable, and accessible to all data users. But it didn’t stop there.
+    They engineered Snowflake to power the Data Cloud, where thousands of organizations
+    unlock the value of their data with near-unlimited scale, concurrency, and performance.
+    This is our vision: a world with endless insights to tackle the challenges and
+    opportunities of today and reveal the possibilities of tomorrow. Our Database
+    Platform Security team is dedicated to building best-in-class security solutions
+    for the Snowflake platform. We focus on three key areas: Zero Trust/Network Security:
+    We ensure secure access from/to Snowflake to customer environments through features
+    like network policies and private links. Key Management: We provide a robust crypto
+    infrastructure for all customer data and metadata, offering key rotation, rekeying,
+    and advanced Tri-secret Sharing for Bring Your Own Key (BYOK) capabilities. Secret
+    Management: This is a new and rapidly growing area where we are building functionality
+    for secure storage and management of secrets like OAuth tokens and credentials
+    within Snowflake. You will: Work on highly impactful initiatives from idea formulation
+    to design and implementation. Innovate, design and build highly available, reliable,
+    and secure distributed services and solutions within the global Snowflake platform.
+    Ensure operational readiness of services, leading incident management and mitigation
+    discussions including meeting customer commitments for security, reliability,
+    availability, and performance. Qualifications: Between 3 to 6 years of industry
+    experience designing, building, and supporting large-scale distributed systems
+    in production, with recent experience in building large scale cloud services.
+    Knowledge and experience with different security, governance, privacy and compliance
+    areas is a plus (though not required). Strong fundamentals in computer science
+    skills. Strong development skills in Java, Python, SQL. BS in Computer Science
+    or related degree. Every Snowflake employee is expected to follow the company’s
+    confidentiality and security standards for handling sensitive data. Snowflake
+    employees must abide by the company’s data security plan as an essential part
+    of their duties. It is every employee''s duty to keep customer information secure
+    and confidential. Snowflake is growing fast, and we’re scaling our team to help
+    enable and accelerate our growth. We are looking for people who share our values,
+    challenge ordinary thinking, and push the pace of innovation while building a
+    future for themselves and Snowflake. How do you want to make your impact? For
+    jobs located in the United States, please visit the job posting on the Snowflake
+    Careers Site for salary and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.181304+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

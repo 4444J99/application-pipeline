@@ -1,0 +1,115 @@
+id: sofi-staff-software-engineer-loans-platform
+name: SoFi Staff Software Engineer, Loans Platform
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: SoFi
+  url: https://boards.greenhouse.io/sofi
+  application_url: https://sofi.com/careers/job/7632117003?gh_jid=7632117003
+  portal: greenhouse
+  location: WA - Seattle
+  location_class: us-onsite
+  description: <div class="content-intro"><p><a href="https://www.sofi.com/sofi-employee-applicant-privacy-notice/"
+    target="_blank"><strong>Employee Applicant Privacy Notice</strong></a></p> <p><strong>Who
+    we are:</strong></p> <div> <p>Shape a brighter financial future with us.</p> <p>Together
+    with our members, we’re changing the way people think about and interact with
+    personal finance.</p> <p>We’re a next-generation financial services company and
+    national bank using innovative, mobile-first technology to help our millions of
+    members reach their goals. The industry is going through an unprecedented transformation,
+    and we’re at the forefront. We’re proud to come to work every day knowing that
+    what we do has a direct impact on people’s lives, with our core values guiding
+    us every step of the way. <strong>Join us to invest in yourself, your career,
+    and the financial world.</strong></p> </div></div><p></p> <p><strong>The Role</strong></p>
+    <p>Join us in revolutionizing the lending landscape. SoFi is seeking enthusiastic
+    Staff Software Engineers who are ready to lead the design and implementation of
+    key capabilities of the next generation of our financial services platform in
+    support of our goals that put our members in control of their financial destiny.&nbsp;
+    Key qualifications of this role include:</p> <ul> <li>Leading design and implementation
+    efforts across multiple system domains to affect cross-team outcomes.</li> <li>Resolving
+    problems in the platform design and implementation where there are competing constraints
+    and significant ambiguity.</li> <li>Recognition as a subject matter expert across
+    platform systems with the ability to contribute to the resolution of systemic
+    issues.</li> <li>Ability to define the architectural direction and evolutionary
+    strategy for critical subsystems within the platform.</li> <li>Ability to drive
+    alignment across teams resolving technical and organizational conflicts.</li>
+    <li>Raises the engineering maturity of the organization by consistently upholding
+    the org-wide quality, reliability, and security policies.</li> <li>Ability to
+    align technology decisions with company strategy, accounting for risk and growth
+    constraints.</li> <li>Maintains standards of excellence through code and design
+    reviews, mentors more junior engineers, and contributes to team efficiency, beyond
+    personal output.</li> <li>Is a key participant in recruiting processes.</li> </ul>
+    <p><strong>What You’ll Do</strong></p> <p>As an established technical leader within
+    our team, you will focus on designing and implementing the backend services for
+    our next-generation Lending Platform. This role involves full product lifecycle
+    engagement, from initial concept to production deployment. Your responsibilities
+    include creating durable designs, strong individual contributions in implementing
+    new capabilities, and leading by example to improve engineering excellence and
+    efficiency across the team. Success in the role will require close technical collaboration
+    with Product, Marketing, Operations, Business, Legal, and Compliance teams. You
+    will be a key stakeholder in those partnerships, responsible for driving alignment
+    and delivering technical solutions that provide outstanding value to our members.</p>
+    <p><strong>What You’ll Need</strong></p> <ul> <li>Bachelor's or Master's degree
+    in Computer Science, or Software Engineering</li> <li>5+ years as a professional,
+    full-time Software Engineer, or similar relevant work experience.</li> <li>2+
+    years in a technical leadership role.</li> <li>Proficient coding in Java, Kotlin,
+    or other similar object-oriented programming language.</li> <li>Experience with
+    public cloud compute, storage, and infrastructure.</li> <li>Experience with Kafka,
+    Docker, Kubernetes, and Spring Boot or similar frameworks.</li> <li>Deep understanding
+    of relational and document database fundamentals.</li> <li>Deep understanding
+    of fundamental distributed systems concepts.</li> <li>Deep understanding of microservices
+    design principles and architecture.</li> <li>Experience with performance tuning
+    and optimizing data access patterns.</li> <li>Proficient working with GIT and
+    related CI/CD systems.</li> <li>Familiarity with Agile methodologies.</li> <li>Ability
+    to produce clear and meaningful design and operational documentation artifacts.</li>
+    </ul> <p><strong>Nice To Have</strong></p> <ul> <li>Experience scaling highly-available,
+    mission-critical systems.</li> <li>Experience with AWS technologies – DynamoDB,
+    RDS, Lambda, Kinesis, SQS, S3, and Athena.</li> <li>Full-stack engineering experience,
+    or willingness to expand your influence across our entire platform.</li> </ul>
+    <p>We're driven to push boundaries and deliver exceptional products to help our
+    members achieve financial stability. If you have the passion and a commitment
+    to customer success, we want to hear from you.</p> <p></p><div class="content-conclusion"><div
+    class="gmail_default"><strong>Compensation and Benefits</strong></div> <div class="gmail_default">The
+    b
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.455721+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

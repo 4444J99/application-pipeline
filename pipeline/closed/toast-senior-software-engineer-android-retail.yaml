@@ -1,0 +1,120 @@
+id: toast-senior-software-engineer-android-retail
+name: Toast Senior Software Engineer, Android - Retail
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7687169
+  portal: greenhouse
+  location: Remote, US
+  location_class: remote-global
+  description: "<p>Toast creates technology to help restaurants and local businesses\
+    \ succeed in a digital world, helping business owners operate, increase sales,\
+    \ engage customers, and keep employees happy.</p> <p>Toast is scaling rapidly,\
+    \ and with that growth comes exciting opportunities to evolve a developer ecosystem\
+    \ which enables Toast engineers and external partners to continue to deliver excellent\
+    \ products on top of a reliable and sustainable platform. This role will help\
+    \ define, design, build, and maintain software solutions which advance developer\
+    \ effectiveness at Toast and provide a world-class experience to engineers across\
+    \ the business.</p> <p>On Toast's newest line of business, Retail, we are expanding\
+    \ Toast\u2019s platform to work in retail locations.&nbsp; We work with some of\
+    \ the most innovative concepts around, mixing food and retail. Think wine bars\
+    \ and markets, pizzeria + liquor stores, and boardgame caf\xE9s! We are led by\
+    \ two startup founders and thrive on rapid build-measure-learn feedback loops\
+    \ and listening to the customer at all stages of the product process.&nbsp; We\
+    \ are looking for a motivated engineer to help build this product from the ground\
+    \ up.</p> <p>As a Senior Android Engineer on the Retail POS team, you will play\
+    \ a crucial role in identifying solutions, scoping initiatives and delivering\
+    \ novel features while also maintaining and enhancing core ordering, inventory\
+    \ and payment workflows. This is a unique opportunity to shape the vision for\
+    \ new customer and guest experiences. You'll work on a cross functional team of\
+    \ innovators, researchers and problem solvers to build technology solutions that\
+    \ help our retail customers thrive and grow. <br><br>We are seeking a proactive\
+    \ and skilled Senior Android Engineer with a strong background in OOP and experience\
+    \ navigating legacy codebases. Your primary responsibilities will include contributing\
+    \ to key projects on our team\u2019s roadmap, enhancing our POS system's efficiency\
+    \ and user experience. Additionally, you will have the opportunity to contribute\
+    \ to our web-based configuration experience.&nbsp;</p> <p><strong>A day in the\
+    \ life (Responsibilities)</strong><span data-sheets-root=\"1\"><br></span></p>\
+    \ <ul> <li>Work collaboratively with UX, PM, QA and other engineers building the\
+    \ POS for Retail&nbsp;</li> <li>Ensure quality by building automated testing for\
+    \ changes</li> <li>Be a driving force in the full software development lifecycle,\
+    \ from design and prototyping to deployment and maintenance</li> <li>Ensure robustness,\
+    \ performance, and reliability of the POS</li> <li>Provide technical guidance\
+    \ and support through code reviews and design discussions</li> <li>Work closely\
+    \ with the leads to identify high-impact opportunities</li> <li>Plan, scope and\
+    \ rapidly prototype solutions using a combination of web technologies</li> <li>Make\
+    \ technical decisions and recommendations that will lay the foundation for the\
+    \ future of our strategy</li> <li>Stay in tune with customer needs by participating\
+    \ in user interviews and research</li> <li>Leverage cutting edge AI tools to enhance\
+    \ your development workflow, improve velocity, and help pioneer new approaches\
+    \ to building - contributing to a culture of innovation and productivity across\
+    \ the team.</li> </ul> <p><strong>What you'll need to thrive (Requirements)</strong></p>\
+    \ <ul> <li>Highly proficient in all aspects of native Android development with\
+    \ Kotlin</li> <li>Passionate about making users happy and seeing people use your\
+    \ product in the wild</li> <li>Excellent cross-team communication skills on complex\
+    \ technical topics</li> <li>Growth mindset with an emphasis on learning and self/team-improvement</li>\
+    \ <li>Respectful, empathetic, and humble</li> <li>Startup mindset and comfort\
+    \ with ambiguity</li> <li>Flexible in using different tech stacks and languages</li>\
+    \ </ul> <p data-pm-slice=\"1 1 []\"><strong>AI at Toast</strong></p> <p>At Toast,\
+    \ one of our company values is that we're hungry to build and learn. We believe\
+    \ learning new AI tools empowers us to build for our customers faster, more independently,\
+    \ and with higher quality. We provide these tools across all disciplines, from\
+    \ Engineering and Product to Sales and Support, and are inspired by how our Toasters\
+    \ are already driving real value with them. The people who thrive here are those\
+    \ who embrace changes that let us build more for our customers; it\u2019s a core\
+    \ part of our culture.</p> <p data-pm-slice=\"1 1 []\"><strong>Our Total Rewards\
+    \ Philosophy&nbsp;<br></strong>We strive to provide competitive compensation and\
+    \ benefits programs that help to attract, retain, and motivate the best and brightest\
+    \ people in our industry. Our total rewards package goes beyond great earnings\
+    \ potential and provides the means to a healthy lifestyle with the flexibility\
+    \ to meet Toasters\u2019 changing needs. Learn more about our benefits at&nbsp;<a\
+    \ href=\"https://careers.toasttab.com/toast-benefits\">https://careers.toasttab.com/toast-benefits</a>.</p>\
+    \ <p data-pm-slice=\"1 1 []\">#LI-REMOTE</p><div class=\"content-pay-tra"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.332639+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"
+deferral:
+  reason: strategic_hold
+  resume_date: '2026-04-15'

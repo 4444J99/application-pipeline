@@ -1,0 +1,100 @@
+id: perplexity-member-of-technical-staff-ai-infrastructure-engineer
+name: Perplexity Member of Technical Staff (AI Infrastructure Engineer)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Perplexity
+  url: https://jobs.ashbyhq.com/perplexity
+  application_url: https://jobs.ashbyhq.com/perplexity/598e1f7d-b802-4de2-99ac-90eb2bc33315
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: We are looking for an AI Infra engineer to join our growing team. We
+    work with Kubernetes, Slurm, Python, C++, PyTorch, and primarily on AWS. As an
+    AI Infrastructure Engineer, you will be partnering closely with our Inference
+    and Research teams to build, deploy, and optimize our large-scale AI training
+    and inference clusters Responsibilities Design, deploy, and maintain scalable
+    Kubernetes clusters for AI model inference and training workloads Manage and optimize
+    Slurm-based HPC environments for distributed training of large language models
+    Develop robust APIs and orchestration systems for both training pipelines and
+    inference services Implement resource scheduling and job management systems across
+    heterogeneous compute environments Benchmark system performance, diagnose bottlenecks,
+    and implement improvements across both training and inference infrastructure Build
+    monitoring, alerting, and observability solutions tailored to ML workloads running
+    on Kubernetes and Slurm Respond swiftly to system outages and collaborate across
+    teams to maintain high uptime for critical training runs and inference services
+    Optimize cluster utilization and implement autoscaling strategies for dynamic
+    workload demands Qualifications Strong expertise in Kubernetes administration,
+    including custom resource definitions, operators, and cluster management Hands-on
+    experience with Slurm workload management, including job scheduling, resource
+    allocation, and cluster optimization Experience with deploying and managing distributed
+    training systems at scale Deep understanding of container orchestration and distributed
+    systems architecture High level familiarity with LLM architecture and training
+    processes (Multi-Head Attention, Multi/Grouped-Query, distributed training strategies)
+    Experience managing GPU clusters and optimizing compute resource utilization Required
+    Skills Expert-level Kubernetes administration and YAML configuration management
+    Proficiency with Slurm job scheduling, resource management, and cluster configuration
+    Python and C++ programming with focus on systems and infrastructure automation
+    Hands-on experience with ML frameworks such as PyTorch in distributed training
+    contexts Strong understanding of networking, storage, and compute resource management
+    for ML workloads Experience developing APIs and managing distributed systems for
+    both batch and real-time workloads Solid debugging and monitoring skills with
+    expertise in observability tools for containerized environments Preferred Skills
+    Experience with Kubernetes operators and custom controllers for ML workloads Advanced
+    Slurm administration including multi-cluster federation and advanced scheduling
+    policies Familiarity with GPU cluster management and CUDA optimization Experience
+    with other ML frameworks like TensorFlow or distributed training libraries Background
+    in HPC environments, parallel computing, and high-performance networking Knowledge
+    of infrastructure as code (Terraform, Ansible) and GitOps practices Experience
+    with container registries, image optimization, and multi-stage builds for ML workloads
+    Required Experience Demonstrated experience managing large-scale Kubernetes deployments
+    in production environments Proven track record with Slurm cluster administration
+    and HPC workload management Previous roles in SRE, DevOps, or Platform Engineering
+    with focus on ML infrastructure Experience supporting both long-running training
+    jobs and high-availability inference services Ideally, 3-5 years of relevant experience
+    in ML systems deployment with specific focus on cluster orchestration and resource
+    management
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.7
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-14'
+  posting_date: '2026-04-13'
+  date_source: published_at
+  date_added: '2026-04-14'
+  discovered: '2026-04-14T10:23:06.721793+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,115 @@
+id: anduril-software-engineer-realtime-imaging
+name: Anduril Software Engineer, Realtime Imaging
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5077819007?gh_jid=5077819007
+  portal: greenhouse
+  location: Lexington, Massachusetts, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3 style="text-decoration: none;
+    text-align: start;"><span style="color: #000000;">ABOUT THE TEAM</span></h3> <p><span
+    style="color: #000000;"><span style="text-decoration: none;">The Anduril Imaging
+    team develops state-of-the-art imaging systems, deployed to tackle the most significant
+    security challenges of America and its allies. We are interested in candidates
+    that are excited to build Anduril''s&nbsp;</span><span style="text-decoration:
+    none;">next generation of imaging products&nbsp;</span><span style="text-decoration:
+    none;">from the ground up.</span></span></p> <h3 style="text-decoration: none;
+    text-align: start;"><span style="color: #000000;">ABOUT THE JOB</span></h3> <p><span
+    style="color: #000000;"><span style="text-decoration: none;">We are seeking an
+    experienced Senior Software Engineer to join our Realtime Software team</span><span
+    style="text-decoration: none;">&nbsp;in&nbsp;</span>Lexington, MA<span style="text-decoration:
+    none;">. You will design, develop, and optimize real-time image processing software
+    solutions. You will collaborate closely with cross-functional teams to ensure
+    the delivery of high-performance, low-latency software for defense systems.</span></span></p>
+    <h4 style="text-decoration: none; text-align: start;"><span style="color: #000000;">WHAT
+    YOU’LL DO</span></h4> <ul style="text-decoration: none; text-align: start;"> <li
+    style="color: #000000;"><span style="color: #000000;">Design, implement, and optimize
+    real-time software solutions for mission-critical applications.</span></li> <li
+    style="color: #000000;"><span style="color: #000000;">Implement image processing
+    algorithms for GPU and embedded compute hardware in C++ and/or CUDA.</span></li>
+    <li style="color: #000000;"><span style="color: #000000;">Jump into and understand
+    a large codebase.</span></li> <li style="color: #000000;"><span style="color:
+    #000000;">Diagnose and optimize Linux system software performance.</span></li>
+    <li style="color: #000000;"><span style="color: #000000;">Support end-to-end system
+    delivery, from initial design to manufacturing, deployment, and sustainment.</span></li>
+    <li style="color: #000000;"><span style="color: #000000;">Work with a multi-disciplinary
+    team on challenging problems in a fast-paced environment.</span></li> </ul> <h4
+    style="text-decoration: none; text-align: start;"><span style="color: #000000;">REQUIRED
+    QUALIFICATIONS</span></h4> <ul style="text-decoration: none; text-align: start;">
+    <li style="color: #000000;"><span style="color: #000000;">Bachelor''s degree in
+    Computer Science, Electrical Engineering, or equivalent work experience.</span></li>
+    <li style="color: #000000;"><span style="color: #000000;">5+ years of professional
+    software development experience.</span></li> <li style="color: #000000;"><span
+    style="color: #000000;">Experience in developing software on Linux-based systems,
+    including knowledge of system utilities and basic configuration.</span></li> <li
+    style="color: #000000;"><span style="color: #000000;">Professional experience
+    in C++.</span></li> <li style="color: #000000;"><span style="color: #000000;">Excellent
+    debugging and performance analysis skills.</span></li> <li style="color: #000000;"><span
+    style="color: #000000;">Eligible to obtain and maintain an active U.S. Secret
+    security clearance</span></li> </ul> <h4 style="text-decoration: none; text-align:
+    start;"><span style="color: #000000;">PREFERRED QUALIFICATIONS</span></h4> <ul
+    style="text-decoration: none; text-align: start;"> <li style="color: #000000;"><span
+    style="color: #000000;">Familiarity in graphics programming or image processing.</span></li>
+    <li style="color: #000000;"><span style="color: #000000;">Experience with CUDA
+    programming and optimizing custom kernels.</span></li> <li style="color: #000000;"><span
+    style="color: #000000;">Can test and debug firmware on hardware platforms</span></li>
+    <li style="color: #000000;"><span style="color: #000000;">Experience or interest
+    in a variety of programming languages: C, Rust, Python, Go, etc.</span></li> <li
+    style="color: #000000;"><span style="color: #000000;">Any experience in Nix/NixOS
+    is a big plus.</span></li> </ul><div class="content-pay-transparency"><div class="pay-input"><div
+    class="title">US Sa'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.7
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:34.113842+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

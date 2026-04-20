@@ -1,0 +1,113 @@
+id: robinhood-staff-software-engineer-compute
+name: Robinhood Staff Software Engineer, Compute
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7644973?t=gh_src=&gh_jid=7644973
+  portal: greenhouse
+  location: Toronto, Canada
+  location_class: international
+  description: '<div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><p><span style="font-size: 14pt;"><strong>About
+    the team + role</strong></span></p> <p>As Robinhood’s infrastructure engineering,
+    we are on a mission to provide Robinhood product teams a world-class platform
+    that enables rapid product development by making infrastructure invisible and
+    highly available.</p> <p>The mission of Software Platform, of which Compute is
+    a part, is to accelerate developer velocity and increase system reliability by
+    building the foundational software platforms and tools that power the rest of
+    Robinhood engineering.</p> <p>The Compute team at Robinhood is solely responsible
+    for building a highly available, horizontally scalable, secure, best in the industry
+    (for Robinhood scale) offering of Kubernetes-powered container provisioning APIs
+    that seamlessly integrate with the rest of infrastructure and platform offerings
+    from other teams. This team’s primary focus is to proactively ensure scalability,
+    reliability and availability of our Kubernetes distribution. This includes the
+    deployment topology and configuration of the OSS components we build upon and
+    all the extensions we build.</p> <p>The Compute team is the key contributor for
+    enabling a multi-region future for Robinhood’s platform and infrastructure services.
+    This helps the platform services scale without adding additional complexity to
+    our application developers. APIs and systems managed by this team are also responsible
+    for transparent platform integrations (sidecars, daemonsets) that offer core capabilities
+    (Auth, Security, DNS, Load Balancing, Storage) offered to the tenants (applications)
+    making this an area of huge importance to the overall safety and reliability of
+    Robinhood and its value to be a safety-first company.</p> <p><strong>The role
+    is located in the office location(s) listed on this job description which will
+    align with our in-office working environment. Please connect with your recruiter
+    for more information regarding our in-office philosophy and expectations.</strong></p>
+    <h2><span style="font-size: 14pt;"><strong>What you’ll do&nbsp;</strong></span></h2>
+    <ul> <li>Design large scale systems within the team, making the right tradeoffs
+    for risk and long-term maintainability.</li> <li>Proactively identify and drive
+    optimizations and improvements to the infrastructure and systems.</li> <li>Set
+    up and drive technical directions of the project while mentor and up-level junior
+    engineers in the team.</li> <li>Lead organization-wide collaboration for the team.</li>
+    <li>Contribute to open source projects.</li> </ul> <h2><span style="font-size:
+    14pt;"><strong>What you bring</strong></span></h2> <ul> <li>Expert knowledge of
+    Kubernetes control plane and data plane components.</li> <li>Thorough understanding
+    of the Kubernetes Platform and container lifecycle management.</li> <li>Experience
+    with Kubernetes multi-cluster challenges and Kubernetes networking (e.g. CNI deployment
+    and troubleshooting).</li> <li>Experience managing and debugging large scale infrastructure
+    services in production.</li> <li>Proven seasoned individual contributor with experience
+    planning and leading end to end large projects with long-term impact on one or
+    more systems or a team.</li> <li>Have a passion for mentoring junior engineers
+    and improving engineering craftsmanship.</li> <li>Open source contributions to
+    Kubernetes and other related projects.</li> <li>Prior experience scaling the Kubernetes
+    platform at high-growth startups.</li> <li>Experience designing and managing other
+    distributed systems at scale.</li> </ul> <p>Our team is committed to providing
+    an inclusive and welcoming interview experience for all candidates. If you require
+    a specific accommodation during the application or interview process due to a
+    physical or mental condition, please complete this<a href="https://robinhood.hracuity.net/webform/index/752875e4-42ba-4dff-9951-fd51e315997e">
+    Applicant Accommodation Form</a> to notify our team. The form should only be completed
+    if you need a specific accommodation.</p> <p><strong>AI Usage Disclosure:</strong>
+    Robinhood uses artificial intelligence (AI) tools to support parts of our recruiting
+    process. These tools enhance the efficiency and consistency of our hiring process;
+    however, all hiring decisions are made by our hiring teams.</p> <p><strong>Vacancy
+    Notice: </strong>This job posting represents an existing vacancy that we are actively
+    seeking to fill.</p><div class="content-pay-transparency"><div class="pay-input"><di'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.158031+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

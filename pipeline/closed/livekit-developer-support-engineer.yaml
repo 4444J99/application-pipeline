@@ -1,0 +1,101 @@
+id: livekit-developer-support-engineer
+name: LiveKit Developer Support Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: LiveKit
+  url: https://jobs.ashbyhq.com/livekit
+  application_url: https://jobs.ashbyhq.com/livekit/e1b8bdab-8713-456d-9445-0e0f8aa2332e
+  portal: ashby
+  location: Remote, India
+  location_class: international
+  description: "LiveKit is building the infrastructure layer for the voice-driven\
+    \ era of computing. Our platform gives developers everything they need to build,\
+    \ test, deploy, scale, and observe agents in production. Founded in 2021, LiveKit\
+    \ powers voice AI applications for OpenAI, xAI, Salesforce, Coursera, Spotify,\
+    \ and thousands of others, collectively facilitating billions of calls each year.\
+    \ You'll Thrive at LiveKit if You: are obsessed with helping developers succeed\
+    \ are known as the go-to person for solving tricky technical issues work hard\
+    \ and can move fast without sacrificing quality care deeply about polish, detail,\
+    \ and clear communication are a fast learner, frequently picking up new tools,\
+    \ systems, and skills The best way to impress us is by showing how you help others\
+    \ unblock themselves\u2014and maybe by tinkering with LiveKit along the way \U0001F60A\
+    \ About This Role: We\u2019re hiring a Developer Support Engineer to be the first\
+    \ line of technical support for the thousands of developers building with LiveKit.\
+    \ You\u2019ll respond to inbound requests, triage and diagnose issues, and ensure\
+    \ developers receive fast, accurate, and empathetic help, whether through direct\
+    \ responses or by routing problems to the right internal teams. This role is ideal\
+    \ for someone who thrives in a fast-paced, highly technical environment, has a\
+    \ deep curiosity about how things work, and takes pride in creating clarity out\
+    \ of chaos. You\u2019ll collaborate closely with our Developer Success , Engineering\
+    \ , and Sales teams to make sure every developer gets the help they need and that\
+    \ their feedback informs how we build. What You'll Do: Serve as the first point\
+    \ of contact for developer inquiries across support channels (tickets, community,\
+    \ Slack, email) Triage and prioritize inbound issues, ensuring clear ownership\
+    \ and timely responses Reproduce and validate issues where possible, collecting\
+    \ logs, SDK versions, and environment details Provide initial troubleshooting\
+    \ or workarounds to unblock customers quickly Escalate more complex issues to\
+    \ internal teams with crisp summaries and context Document learnings and contribute\
+    \ to internal and external knowledge bases Identify trends or recurring issues\
+    \ and collaborate with the team to improve documentation, tooling, and product\
+    \ experience Who You Are: 2\u20134 years of experience in developer support, technical\
+    \ support, or a customer-facing engineering role Strong problem-solving skills\
+    \ with a methodical approach to debugging Familiarity with APIs, SDKs, and networking\
+    \ basics (HTTP, WebRTC, WebSocket, SIP) Clear written and verbal communicator\
+    \ who can explain technical details concisely Comfortable using tools like Postman,\
+    \ curl, Wireshark, and browser dev tools Curious and empathetic, always keeping\
+    \ the developer\u2019s perspective in mind Nice to Have: Experience with real-time\
+    \ infrastructure frameworks and protocols such as WebRTC, SIP, or cloud communications\
+    \ APIs Familiarity with AI and agent platforms , including voice AI systems or\
+    \ frameworks that combine speech, reasoning, and real-time interaction Familiarity\
+    \ with AI and agent platforms , including voice AI systems or frameworks that\
+    \ combine speech, reasoning, and real-time interaction Experience using ticketing\
+    \ or issue-tracking tools like Linear, Jira, or Zendesk Basic scripting or automation\
+    \ experience for improving internal workflows or triage efficiency Our Commitment\
+    \ to You: The opportunity to shape the brand of a fast-growing developer platform\
+    \ Collaboration with a small, senior team that deeply values craft and creativity\
+    \ Competitive salary and equity package Health, dental, and vision benefits Flexible\
+    \ vacation policy"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.127522+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,109 @@
+id: stripe-full-stack-engineer-compliance-applications
+name: Stripe Full Stack Engineer, Compliance Applications
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7715292
+  portal: greenhouse
+  location: Dublin
+  location_class: international
+  description: '<h2>Who we are</h2> <h3>About Stripe</h3> <p><span style="font-weight:
+    400;">Stripe is a financial infrastructure platform for businesses. Millions of
+    companies—from the world’s largest enterprises to the most ambitious startups—use
+    Stripe to accept payments, grow their revenue, and accelerate new business opportunities.
+    Our mission is to increase the GDP of the internet, and we have a staggering amount
+    of work ahead. That means you have an unprecedented opportunity to put the global
+    economy within everyone’s reach while doing the most important work of your career.</span></p>
+    <h3>About the team</h3> <p>The GRC Systems team provides and integrates 3rd party
+    tools that help Governance, Risk and Compliance (GRC) teams detect regulatory
+    changes and orchestrate how policies, risks, controls and audits are managed.
+    These teams ensure that&nbsp; Stripe stays compliant and trusted by users, partners
+    and regulators.</p> <p>We’re actively pivoting to building GRC systems at Stripe’s
+    scale that bring joy to our users, empowering them to be surprisingly great at
+    assurance. The team is small, nimble and sits right at the intersection of Engineering
+    and Compliance teams. We’re excited to innovate in a space that has stubbornly
+    remained full of toil and friction for decades.</p> <h2>What you’ll do</h2> <p>As
+    a Full Stack Engineer on the GRC Systems team, you’ll be the founding engineer
+    for Stripe’s authoritative GRC System of Record. You will build high quality applications
+    that bridge the gap between our 3rd party toolchain and Stripe’s needs with the
+    explicit goal of evolving these into a self-sufficient platform over time.</p>
+    <p>You will focus on building software that delivers seamless user experiences,
+    making complex assurance tasks, like assessing technology risk or conducting audits,
+    feel simple and intuitive. This might involve designing and implementing the data
+    models, APIs and services that power critical GRC capabilities, enabling us to
+    aggregate risks from across Stripe and map controls to multiple regulatory frameworks.
+    You will build the integrations that stitch together our ecosystem, automating
+    the flow of data between the GRC tools and internal systems.&nbsp; You will explore
+    using LLMs and agentic AI&nbsp; to improve assurance outcomes in a domain where
+    reproducibility and auditability are non-negotiables.</p> <h3>Responsibilities</h3>
+    <ul> <li>Build, operate and improve purpose-built GRC tools for all internal and
+    external users, from internal risk, compliance and audit teams to external auditors</li>
+    <li>Work side-by-side with GRC power users to identify toil and friction, replacing
+    them with intuitive workflows that bring joy to their day-to-day work</li> <li>Integrate
+    systems provided by external vendors with internal infrastructure ensuring data
+    flows seamlessly</li> <li>Prototype and productionize GenAI features that augment
+    human judgement, such as agents that pre-populate risk assessments or map regulatory
+    changes to controls</li> <li>Maintain high standards for code quality, reliability
+    and security ensuring GRC systems are robust and validated to be fit for purpose
+    in assurance activities</li> </ul> <h2><strong>Who you are</strong></h2> <p><span
+    style="font-weight: 400;">We’re looking for someone who meets the minimum requirements
+    to be considered for the role. If you meet these requirements, you are encouraged
+    to apply. The preferred qualifications are a bonus, not a requirement.</span></p>
+    <h3>Minimum requirements</h3> <ul> <li>Strong technical background, including
+    4+ years of engineering experience building impactful systems or products</li>
+    <li>Enjoy working across a full stack, from designing backend data models and
+    APIs to building intuitive user interfaces, and anything it takes to solve problems
+    and delight users</li> <li>You care deeply about the “why” to understand the user’s
+    root problems and solve it elegantly</li> <li>Thrive in a new team environment
+    where the roadmap is yours to help define</li> <li>Effective at communicating
+    technical concepts to non-technical stakeholders (like Risk and Compliance partners)</li>
+    </ul> <h3><strong>Preferred qualifications</strong></h3> <ul> <li>Experience in
+    building internal products and tools</li> <li>Interest in GRC or a strong desire
+    to learn this domain</li> <li>Prototyped or shipped features using LLMs particularly
+    in compliance domains</li> <li>Problem-solving skills, determination, and a growth
+    mindset</li> </ul>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.757193+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

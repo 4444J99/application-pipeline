@@ -1,0 +1,115 @@
+id: llamaindex-multimodal-ai-engineer-document-understanding
+name: LlamaIndex Multimodal AI Engineer, Document Understanding
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: LlamaIndex
+  url: https://jobs.ashbyhq.com/llamaindex
+  application_url: https://jobs.ashbyhq.com/llamaindex/fd7a074f-7d80-44b7-8520-8ac787387e92
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Join us and help shape the future of AI by defining the narrative
+    around document understanding. About the Role: We are seeking exceptional AI engineers
+    to join our core document understanding team. You will work at the intersection
+    of computer vision, natural language processing, and production ML systems to
+    push the boundaries of what''s possible in document parsing and understanding.
+    Our document understanding team builds the intelligence behind LlamaParse, LlamaExtract,
+    and our other processing products. These systems are processing millions of complex
+    documents including PDFs, PowerPoints, Word documents, and spreadsheets. Your
+    work will directly impact thousands of developers building RAG applications and
+    document agents, while also contributing to our open-source frameworks that shape
+    how the industry approaches document processing. Depending on your background
+    and interests, you might focus more on data curation and evaluation, model fine-tuning
+    and experimentation, or ML infrastructure and production systems. We''re hiring
+    multiple people and will work with you to find the best fit. Responsibilities:
+    Develop, train, and optimize machine learning models for document structure understanding,
+    table extraction, layout analysis, and multimodal content processing Build robust
+    data pipelines, evaluation frameworks, and experimentation infrastructure Design
+    and implement production ML systems that handle complex, real-world documents
+    at scale Stay current with latest advances in vision-language models, document
+    AI, and multimodal learning Collaborate with engineering teams to integrate ML
+    innovations into production APIs Contribute to both our open-source frameworks
+    and enterprise offerings Drive technical decisions while balancing research exploration
+    with product delivery Required Qualifications: 3-7 years of experience in machine
+    learning engineering or applied research Strong software engineering fundamentals
+    with production Python experience (modern tooling: uv, ruff, mypy, Pydantic) Hands-on
+    experience training, fine-tuning, or deploying ML models in production Deep understanding
+    of modern ML techniques, particularly in computer vision, NLP, or multimodal learning
+    Experience with at least one of: data pipeline development, model training/fine-tuning,
+    or ML infrastructure Ability to read and implement from research papers and technical
+    specifications Track record of executing with high intensity in fast-paced environments
+    Strong technical communication skills and comfort with open-source collaboration
+    Preferred Qualifications: Experience with vision-language models, transformer
+    architectures, or model fine-tuning (LoRA, QLoRA) Experience building evaluation
+    frameworks, benchmarks, or data quality pipelines Experience with model serving
+    frameworks (vLLM, TensorRT, ONNX) or MLOps tools Experience specifically with
+    document understanding, OCR, or layout analysis Contributions to open-source ML
+    projects or frameworks Experience with LLM applications and RAG systems Strong
+    understanding of model optimization techniques (quantization, distillation, pruning)
+    Experience with Docker/Kubernetes and distributed systems Active participation
+    in ML research community Location: We offer a hybrid-friendly culture based out
+    of our downtown San Francisco office. Remote candidates will be considered for
+    exceptional fits. Why Join Us? Impactful Mission: Work on innovative AI products
+    that redefine how knowledge is accessed and utilized. Your models will process
+    millions of documents and directly impact thousands of developers. Cutting-Edge
+    Technology: Work with the latest vision-language models, contribute to open-source
+    frameworks used industry-wide, and shape the future of document AI. Collaborative
+    Team: Join a focused team of passionate engineers and researchers committed to
+    pushing the boundaries of what''s possible in document understanding. Technical
+    Autonomy: Significant creative freedom to explore new approaches while maintaining
+    focus on delivering high-quality, production-ready solutions. Growth Opportunities:
+    Be at the forefront of the AI revolution, with ample opportunities to grow alongside
+    our scaling organization. Shape your role based on your interests and strengths.
+    Additional Benefits: Competitive base salary and equity compensation Comprehensive
+    medical/dental/vision coverage for you and your family Unlimited paid time off
+    policy Daily catered lunch and snacks in the San Francisco office Budget for conferences,
+    research materials, and professional development Access to cutting-edge compute
+    resources and research tools Pursuant to the San Francisco Fair Chance Ordinance,
+    we will consider for employment qualified applicants with arrest and conviction
+    records. LlamaIndex does not accept unsolicited agency resumes. Please do not
+    forward resumes to our jobs alias, employees, or any other organization location.
+    LlamaIndex is not responsible for any fees related to unsolicited resumes.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: educator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/educator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.108807+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

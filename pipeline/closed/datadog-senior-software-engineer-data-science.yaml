@@ -1,0 +1,114 @@
+id: datadog-senior-software-engineer-data-science
+name: Datadog Senior Software Engineer - Data Science
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Datadog
+  url: https://boards.greenhouse.io/datadog
+  application_url: https://careers.datadoghq.com/detail/7472886/?gh_jid=7472886
+  portal: greenhouse
+  location: Bordeaux, France; Lyon, France; Madrid, Spain; Nantes, France; Paris,
+    France; Sophia Antipolis, France
+  location_class: international
+  description: '<p><span style="font-weight: 400;">The Data Science team designs and
+    builds algorithmically driven features in the Datadog app. We work across a range
+    of applications, primarily focusing on analysis on streaming data such as </span><a
+    href="https://www.datadoghq.com/blog/watchdog/"><span style="font-weight: 400;">anomaly
+    detection</span></a><span style="font-weight: 400;">, </span><a href="https://docs.datadoghq.com/logs/explorer/watchdog_insights/"><span
+    style="font-weight: 400;">error outliers</span></a><span style="font-weight: 400;">
+    and </span><a href="https://www.datadoghq.com/blog/faulty-deployment-detection/"><span
+    style="font-weight: 400;">faulty deployment analysis</span></a><span style="font-weight:
+    400;">. As a Software Engineer on the Data Science team, you will design, build
+    and scale the backend systems that power our growing suite of </span><a href="https://docs.datadoghq.com/watchdog/"><span
+    style="font-weight: 400;">Watchdog products</span></a><span style="font-weight:
+    400;">. You will be working on large-scale distributed systems, horizontally-scalable
+    datastores and a variety of data-processing frameworks to build our next-generation
+    platform and capabilities for Data Science at Datadog.&nbsp;</span></p> <p><em><span
+    style="font-weight: 400;">At Datadog, we place value in our office culture - the
+    relationships that it builds, the creativity it brings to the table, and the collaboration
+    of being together. We operate as a hybrid workplace to ensure our employees can
+    create a work-life harmony that best fits them.</span></em></p> <p>&nbsp;</p>
+    <p><strong>What You’ll Do:&nbsp;</strong></p> <ul> <li><span style="font-weight:
+    400;">Build common services and components encapsulating data science capabilities
+    for other products and teams to leverage</span></li> <li><span style="font-weight:
+    400;">Enable new capabilities for our core products by integrating and preprocessing
+    data from tens of sources and preparing it for incorporation into data science
+    models</span></li> <li><span style="font-weight: 400;">Ensure that our data science-driven
+    features continue to scale well as Datadog adds more customers and ingests more
+    data per customer</span></li> <li><span style="font-weight: 400;">Leverage modern
+    tools and frameworks to improve the performance and cost-efficiency of data science
+    services</span></li> <li><span style="font-weight: 400;">Join an amazing team
+    of data scientists and software engineers building a product that our customers
+    love to use</span></li> <li><span style="font-weight: 400;">Work all over the
+    stack, moving fluidly between programming languages and technologies</span><span
+    style="font-weight: 400;"><br></span></li> </ul> <p>&nbsp;</p> <p><strong>Who
+    You Are:&nbsp;</strong></p> <ul> <li><span style="font-weight: 400;">You have
+    experience working in Python, Java, Scala or Go&nbsp;</span></li> <li><span style="font-weight:
+    400;">You have experience working with microservices and/or distributed systems</span></li>
+    <li><span style="font-weight: 400;">You value simplicity and getting the right
+    things done</span></li> <li><span style="font-weight: 400;">(Senior Level) You
+    have built high-volume data pipelines</span></li> <li><span style="font-weight:
+    400;">(Senior Level) You have expertise in Python, Go or Scala and are familiar
+    with Spark or Flink</span></li> <li><span style="font-weight: 400;"><span data-sheets-root="1">You’re
+    excited about leveraging AI tools to enhance how you code, solve problems, and
+    build – or eager to learn how</span></span></li> </ul> <p><em><span style="font-weight:
+    400;">Datadog values people from all walks of life. We understand not everyone
+    will meet all the above qualifications on day one. That''s okay. If you’re passionate
+    about technology and want to grow your skills, we encourage you to apply.&nbsp;</span></em></p>
+    <p>&nbsp;</p> <p><strong>Benefits and Growth:&nbsp;</strong></p> <ul> <li><span
+    style="font-weight: 400;">Competitive global benefits&nbsp;</span></li> <li><span
+    style="font-weight: 400;">New hire stock equity (RSUs) and employee stock purchase
+    plan (ESPP)</span></li> <li><span style="font-weight: 400;">Opportunity to collaborate
+    closely with colleagues across the Datadog offices in New York City and Paris</span></li>
+    <li><span style="font-weight: 400;">Opportunity to attend and present at conferences
+    and meetups</span></li> <li><span style="font-weight: 400;">Intradepartmental
+    mentor and buddy program for in-house networking</span></li> <li><span style="font-weight:
+    400;">An inclusive company culture, ability to join our Community Guilds (Datadog
+    employee resource groups)</span></li> </ul> <p><span style="font-weight: 400;"><em>Benefits
+    and Growth listed above may vary based on the country of your employment and the
+    nature of your employment with Datadog.</em></span></p> <p style="color: white;">#LI-ER1</p>
+    <p style="color: white;">#LI-Hybrid</p><div class="content-conclusion"><hr> <p><strong>About
+    Datadog:&nbsp;</strong></p> <p>Datadog ('
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.5
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.985219+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

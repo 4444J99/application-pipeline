@@ -1,0 +1,111 @@
+id: cohere-member-of-technical-staff-data-engineering
+name: Cohere Member of Technical Staff, Data Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Cohere
+  url: https://jobs.ashbyhq.com/cohere
+  application_url: https://jobs.ashbyhq.com/cohere/0885b39d-b2f8-44be-af4c-e533be2b34af
+  portal: ashby
+  location: Toronto
+  location_class: international
+  description: 'Who are we? Our mission is to scale intelligence to serve humanity.
+    We’re training and deploying frontier models for developers and enterprises who
+    are building AI systems to power magical experiences like content generation,
+    semantic search, RAG, and agents. We believe that our work is instrumental to
+    the widespread adoption of AI. We obsess over what we build. Each one of us is
+    responsible for contributing to increasing the capabilities of our models and
+    the value they drive for our customers. We like to work hard and move fast to
+    do what’s best for our customers. Cohere is a team of researchers, engineers,
+    designers, and more, who are passionate about their craft. Each person is one
+    of the best in the world at what they do. We believe that a diverse range of perspectives
+    is a requirement for building great products. Join us on our mission and shape
+    the future! Why this role? As a Data Engineer specializing in pretraining data,
+    you will play a pivotal role in developing the data pipeline that underpins Cohere’s
+    advanced language models. Your responsibilities will encompass the end-to-end
+    management of training data, including ingestion, cleaning, filtering, and optimization,
+    as well as data modeling to ensure datasets are structured and formatted for optimal
+    model performance. You will work with diverse data sources, such as web data,
+    code data, and multilingual corpora, to ensure their quality, diversity, and reliability.
+    By combining research and engineering, you will bridge the gap between raw data
+    and cutting-edge AI models, directly contributing to improvements in critical
+    training metrics like throughput and accelerator utilization. Your work will be
+    essential to Cohere’s mission of delivering efficient and reliable language understanding
+    and generation capabilities, driving innovation in natural language processing.
+    If you are passionate about transforming data into the foundation of AI systems,
+    this role offers a unique opportunity to make a meaningful impact. Please Note:
+    We have offices in London, Paris, Toronto, San Francisco and New York but also
+    embrace being remote-friendly! There are no restrictions on where you can be located
+    for this role between EST and EU. As a Member of Technical Staff, Data Engineering,
+    you will: Design and build scalable data pipelines to ingest, parse, filter, and
+    optimize diverse web datasets. Conduct data ablations to assess data quality and
+    experiment with data mixtures to enhance model performance. Develop robust data
+    modeling techniques to ensure datasets are structured and formatted for optimal
+    training efficiency. Research and implement innovative data curation methods,
+    leveraging Cohere’s infrastructure to drive advancements in natural language processing.
+    Collaborate with cross-functional teams, including researchers and engineers,
+    to ensure data pipelines meet the demands of cutting-edge language models. You
+    may be a good fit if you have: Strong software engineering skills, with proficiency
+    in Python and experience building data pipelines. Familiarity with data processing
+    frameworks such as Apache Spark, Apache Beam, Pandas, or similar tools. Experience
+    working with large-scale web datasets like CommonCrawl. A passion for bridging
+    research and engineering to solve complex data-related challenges in AI model
+    training. Bonus : paper at top-tier venues (such as NeurIPS, ICML, ICLR, AIStats,
+    MLSys, JMLR, AAAI, Nature, COLING, ACL, EMNLP). If some of the above doesn’t line
+    up perfectly with your experience, we still encourage you to apply! We value and
+    celebrate diversity and strive to create an inclusive work environment for all.
+    We welcome applicants from all backgrounds and are committed to providing equal
+    opportunities. Should you require any accommodations during the recruitment process,
+    please submit an Accommodations Request Form , and we will work together to meet
+    your needs. Full-Time Employees at Cohere enjoy these Perks: 🤝 An open and inclusive
+    culture and work environment 🧑‍💻 Work closely with a team on the cutting edge
+    of AI research 🍽 Weekly lunch stipend, in-office lunches & snacks 🦷 Full health
+    and dental benefits, including a separate budget to take care of your mental health
+    🐣 100% Parental Leave top-up for up to 6 months 🎨 Personal enrichment benefits
+    towards arts and culture, fitness and well-being, quality time, and workspace
+    improvement 🏙 Remote-flexible, offices in Toronto, New York, San Francisco, London
+    and Paris, as well as a co-working stipend ✈️ 6 weeks of vacation (30 working
+    days!)'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.359652+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

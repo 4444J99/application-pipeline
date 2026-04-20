@@ -1,0 +1,115 @@
+id: anduril-senior-software-engineer-extensibility-sand-table
+name: Anduril Senior Software Engineer, Extensibility (Sand Table)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5029966007?gh_jid=5029966007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p><strong>ABOUT THE TEAM</strong></p>
+    <p>The Sand Table team at Anduril develops our revolutionary platform for visualizing
+    future defense scenarios. We transform massive amounts of data into an intuitive,
+    interactive 3D command center, serving as the visual interface for mission simulations,
+    a key business development tool, and a powerful demonstration of our advanced
+    capabilities to government and military leaders. We take ambitious ideas from
+    concept to completion, building the core with high-performance C++ and enabling
+    rapid feature expansion through modern scripting and plugin frameworks. The Sand
+    Table team manages the complex logistics for delivering flawless augmented reality
+    demonstrations in headset to critical stakeholders. As a cross-functional group
+    of builders, strategists, and operators, we combine the creative energy of a top
+    game studio with the rigorous discipline of national security to shape how the
+    future of defense is visualized and understood.</p> <p><strong>ABOUT THE ROLE</strong></p>
+    <p>As the Carbon Extensibility Engineer, you will be the expert practitioner of
+    our internal extensibility framework. You will spearhead the development of the
+    primary Sand Table plugin, effectively building a powerful "modding" capability
+    for our mission-critical simulation software.</p> <h4>WHAT YOU'LL DO</h4> <ul>
+    <li>Architect and develop the core Sand Table plugin using our Carbon extensibility
+    framework, leveraging your expertise in both low-level C++ and high-level TypeScript</li>
+    <li>Partner closely with artists, designers, and systems engineers to extend Sand
+    Table's capabilities, integrating new data sources, user interactions, and visual
+    features</li> <li>Become the subject matter expert on the Carbon extensibility
+    layer, providing guidance and creating robust APIs that empower other teams to
+    build upon your work</li> <li>Dive deep into the engine's C++ foundation to understand
+    its architecture, identify extension points, and ensure your plugin code is performant
+    and stable</li> <li>Write clean, high-performance, and maintainable code that
+    seamlessly blends the power of a real-time engine with the flexibility of a modern
+    scripting environment</li> <li>Diagnose and solve complex technical challenges
+    at the intersection of the core engine, scripting layer, and artistic workflows</li>
+    </ul> <h4><br><strong>REQUIRED QUALIFICATIONS</strong></h4> <ul> <li>Professional
+    experience in game engine development or a related field involving real-time 3D
+    simulation</li> <li>Strong proficiency in C++ and experience working in large,
+    performance-critical codebases</li> <li>Solid experience with TypeScript for scripting,
+    tooling, or application development</li> <li>A proven ability to collaborate with
+    cross-functional teams, including artists and engineers from other disciplines</li>
+    <li>Ability to write clean, maintainable, and extensible code with an eye for
+    creating robust APIs</li> <li>Excellent problem-solving skills and the ability
+    to work effectively on ambiguous, open-ended technical tasks</li> <li>Eligible
+    to obtain and maintain an active U.S. Secret security clearance</li> </ul> <h4><br><strong>PREFERRED
+    QUALIFICATIONS</strong></h4> <ul> <li>Direct experience creating or working with
+    <strong>modding communities and toolkits</strong> for games</li> <li>Experience
+    with API design and SDK development</li> <li>Familiarity with 3D math and real-time
+    rendering concepts</li> <li>Experience shipping a AAA game title</li> </ul><div
+    class="content-pay-transparency"><div class="pay-input"><div class="title">US
+    Salary Range</div><div class="pay-range"><span>$191,000</span><span class="divider">&mdash;</span><span>$253,000
+    USD</span></div></div></div><div class="content-conclusion"><p><span data-contrast="auto">The
+    salary range for this role is an estimate based on a wide range of compensation
+    factors, inclusive of base salary only. Actual salary offer may vary based on
+    (but not limited to) work experience, education and/or training, critical skills,
+    and/or business considerations. Highly competitive equity grants are included
+    in the majority of full time offers; and are considered part of Anduril's total
+    compensation package. Additionally, Anduril offers top-ti
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.961930+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

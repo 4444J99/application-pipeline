@@ -1,0 +1,104 @@
+id: stripe-forward-deployed-engineer-professional-services
+name: Stripe Forward Deployed Engineer, Professional Services
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7671038
+  portal: greenhouse
+  location: United States
+  location_class: us-onsite
+  description: '<h2><strong>Who we are</strong></h2> <h3><strong>About Stripe</strong></h3>
+    <p>Stripe is a financial infrastructure platform for businesses. Millions of companies—from
+    the world’s largest enterprises to the most ambitious startups—use Stripe to accept
+    payments, grow their revenue, and accelerate new business opportunities. Our mission
+    is to increase the GDP of the internet, and we have a staggering amount of work
+    ahead. That means you have an unprecedented opportunity to put the global economy
+    within everyone’s reach while doing the most important work of your career.</p>
+    <h3><strong>About the team</strong></h3> <p>Stripe’s Professional Services team
+    works with our most strategic users, delivering excellence and enabling our users
+    to succeed with Stripe. The new Forward Deployed Engineering team takes the evolution
+    of our consulting services behind the keyboard by directly building and delivering
+    software for our users. As a brand new offering from Stripe, we work directly
+    with Stripe''s users to build scalable Stripe integrations and standalone applications.</p>
+    <h2><strong>What you’ll do</strong></h2> <p>In this role, you will work closely
+    with Stripe’s Product &amp; Engineering team to help shape the features that extend
+    beyond what’s possible out of the box with Stripe integrations. You may be building
+    standalone applications that are deployed in user environments, developing priority
+    features within Stripe''s ecosystem, or augmenting existing development staff
+    for our users to deliver faster and more resilient connections to Stripe.</p>
+    <p>While maintenance is part of the work, you''ll often be starting new and exciting
+    projects. Since this is a new team at Stripe, you''ll succeed if you get excited
+    about driving direction and taking ownership of your work.</p> <h3>Responsibilities<span
+    style="font-weight: 400;">&nbsp;</span></h3> <ul> <li>Design and architect robust
+    technical solutions, ensuring they are secure, scalable, and aligned with customer
+    needs</li> <li>Design, build, and deploy production applications that combine
+    user business logic, Stripe best practices, and user-facing interfaces</li> <li>Collaborate
+    directly with internal and external stakeholders, bridging the gap between technical
+    teams and executives</li> <li>Drive the direction of the new Forward Deployed
+    Engineering arm at Stripe and contribute to technical projects</li> <li>Engage
+    directly with users to deeply understand challenges, requirements, and co-develop
+    solutions,</li> <li>Contribute tooling, frameworks, and best practices that scale
+    impact across accounts</li> </ul> <h2><strong>Who you are</strong></h2> <p><span
+    style="font-weight: 400;">We’re looking for someone who meets the minimum requirements
+    to be considered for the role. If you meet these requirements, you are encouraged
+    to apply. The preferred qualifications are a bonus, not a requirement.</span></p>
+    <h3>Minimum requirements</h3> <ul> <li>5+ years of professional, hands-on full-stack
+    development experience with languages such as JavaScript, TypeScript, React, Ruby,
+    Go, or Java</li> <li>Experience with backend infrastructure and building systems
+    that scale</li> <li>Demonstrated ability to design, build, and deploy production
+    applications</li> <li>Excellence at rapid prototyping while maintaining appropriate
+    quality standards</li> <li>Familiarity with containerized applications and object-oriented
+    programming languages</li> <li>Superb problem-solving skills and the ability to
+    understand the product and business side of development</li> </ul> <h3><strong>Preferred
+    qualifications</strong></h3> <ul> <li>Experience working as a software consultant</li>
+    <li>Strong command of distributed systems, API design, and data modeling</li>
+    <li>Familiarity working with AI APIs and leveraging AI code generation tools to
+    accelerate productivity</li> <li>Proven track record of delivering technical solutions
+    in enterprise environments that drive measurable outcomes</li> <li>A passion for
+    handling ambiguity and picking up new technologies, frameworks, and tools while
+    working in a variety of client environments</li> </ul>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.749039+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

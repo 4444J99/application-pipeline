@@ -1,0 +1,118 @@
+id: twilio-software-engineer-l3-infrastructure
+name: Twilio Software Engineer (L3) Infrastructure
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Twilio
+  url: https://boards.greenhouse.io/twilio
+  application_url: https://job-boards.greenhouse.io/twilio/jobs/7767260
+  portal: greenhouse
+  location: Remote - Canada
+  location_class: international
+  description: "<div class=\"content-intro\"><p><strong>Who we are&nbsp;</strong></p>\
+    \ <p>At Twilio, we\u2019re shaping the future of communications, all from the\
+    \ comfort of our homes. We deliver innovative solutions to<a class=\"c-link\"\
+    \ href=\"https://customers.twilio.com/\" target=\"_blank\" data-stringify-link=\"\
+    https://customers.twilio.com/\" data-sk=\"tooltip_parent\">&nbsp;hundreds of thousands\
+    \ of businesses&nbsp;</a>and empower millions of developers worldwide to craft\
+    \ personalized customer experiences.</p> <p>Our dedication to <a class=\"c-link\"\
+    \ href=\"https://www.twilio.com/en-us/blog/open-work\" target=\"_blank\" data-stringify-link=\"\
+    https://www.twilio.com/en-us/blog/open-work\" data-sk=\"tooltip_parent\">remote-first\
+    \ work</a>, and strong culture of connection and global inclusion means that no\
+    \ matter your location, you\u2019re part of a vibrant team with diverse experiences\
+    \ making a global impact each day. As we continue to revolutionize how the world\
+    \ interacts, we\u2019re acquiring new skills and experiences that make work feel\
+    \ truly rewarding. Your career at Twilio is in your hands.<br><br>We use Artificial\
+    \ Intelligence (AI) to help make our hiring process efficient. That said, every\
+    \ hiring decision is made by real Twilions!</p> <p><span style=\"color: rgb(255,\
+    \ 255, 255);\">.</span></p></div><p><strong>See yourself at Twilio</strong></p>\
+    \ <p>Join the Developer Platform Experience team under Platform Engineering as\
+    \ our next Software Engineer (L3).</p> <p><strong>About the job</strong></p> <p>We\
+    \ are actively recruiting for this role to fill an existing vacancy. This position\
+    \ will help users interact with Twilio\u2019s internal developer platform, manage\
+    \ our software taxonomy and cloud infrastructure inventory, accelerate developer\
+    \ productivity via self-service tools, and drive adoption of engineering best\
+    \ practices throughout the company.</p> <p><strong>&nbsp;</strong></p> <p>In the\
+    \ near term the team is focused on modernization, working to transition away from\
+    \ in-house legacy systems to cloud-native platform solutions.</p> <p><strong>&nbsp;</strong></p>\
+    \ <p><strong>Responsibilities</strong></p> <p>In this role, you\u2019ll:</p> <ul>\
+    \ <li>Develop, test, and deploy backend, frontend, and client-side applications\
+    \ for internal use at Twilio</li> <li>Collaborate with teammates and guest contributors\
+    \ via peer reviews, planning exercises, and pair programming</li> <li>Mentor junior\
+    \ engineers as necessary</li> <li>Write tickets, testing plans, and runbooks for\
+    \ the team, as well as internal documentation for users</li> <li>Support internal\
+    \ users and ensure system uptime by participating in a 24x7 weekly on-call rotation</li>\
+    \ <li>Continuously improve Twilio\u2019s internal developer platform interfaces,\
+    \ local development tools, and platform onboarding processes</li> <li>Independently\
+    \ own medium-sized features, authoring specifications and designs for features\
+    \ of moderate complexity</li> </ul> <p><strong>&nbsp;</strong></p> <p><strong>Qualifications&nbsp;</strong></p>\
+    \ <p>Twilio values diverse experiences from all kinds of industries, and we encourage\
+    \ everyone who meets the required qualifications to apply. If your career is just\
+    \ starting or hasn't followed a traditional path, don't let that stop you from\
+    \ considering Twilio. We are always looking for people who will bring something\
+    \ new to the table!</p> <p><strong>&nbsp;</strong></p> <p><strong>*Required:</strong></p>\
+    \ <ul> <li>Ability to work in a remote, async software development environment\
+    \ leveraging GitHub, Jira, Slack, and Zoom</li> <li>Proficiency in any/all of\
+    \ the following programming languages: Typescript, Python, Go, Terraform, Bash</li>\
+    \ <li>Experience developing and operating software in an AWS cloud environment</li>\
+    \ <li>Experience with relational database concepts and operations</li> <li>5+\
+    \ years of full-time job experience in a software engineering role&nbsp;</li>\
+    \ <li>Experience with Terraform, Kubernetes, and infrastructure-as-code concepts<br><br></li>\
+    \ </ul> <p><strong>Desired:</strong></p> <ul> <li>Prior experience working with\
+    \ a platform engineering focus in a software engineering organization</li> <li>Strong\
+    \ opinions on developer experience and local development best practices&nbsp;</li>\
+    \ <li>Familiarity with front-end web application development and frameworks such\
+    \ as React, Angular, or Vue</li> <li>Familiarity with internal developer platform\
+    \ frameworks such as Backstage, OpsLevel, Cortex, or Battlestar</li> <li>Fluency\
+    \ with AI platforms such as Claude, ChatGPT, and/or Copilot to accelerate software\
+    \ development</li> <li>Experience with SaaS and open source observability tools,\
+    \ such as OpenTelemetry, Datadog, Grafana, and Prometheus</li> </ul> <p><strong>Location</strong></p>\
+    \ <p>This role will be remote and based in Ontario, British Columbia or Alberta,\
+    \ Canada.&nbsp;</p> <p><strong>Travel&nbsp;</strong></p> <p>We prioritize connection\
+    \ and opportunities to build relationships with our customers and each other.\
+    \ For this role, you may be required to travel occasionally to participate in\
+    \ project or team in-perso"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-07'
+  posting_date: '2026-04-06'
+  date_source: first_published
+  date_added: '2026-04-07'
+  discovered: '2026-04-07T10:15:28.399204+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

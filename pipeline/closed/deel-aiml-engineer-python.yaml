@@ -1,0 +1,116 @@
+id: deel-aiml-engineer-python
+name: Deel AI/ML Engineer, Python
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Deel
+  url: https://jobs.ashbyhq.com/deel
+  application_url: https://jobs.ashbyhq.com/deel/64eb7d4f-b63c-4b26-a8d3-83ef28f72215
+  portal: ashby
+  location: Spain
+  location_class: international
+  description: 'Who we are is what we do. Deel is the all-in-one payroll and HR platform
+    for global teams. Our vision is to unlock global opportunity for every person,
+    team, and business. Built for the way the world works today, Deel combines HRIS,
+    payroll, compliance, benefits, performance, and equipment management into one
+    seamless platform. With AI-powered tools and a fully owned payroll infrastructure,
+    Deel supports every worker type in 150+ countries—helping businesses scale smarter,
+    faster, and more compliantly. Among the largest globally distributed companies
+    in the world, our team of 7,000 spans more than 100 countries, speaks 74 languages,
+    and brings a connected and dynamic culture that drives continuous learning and
+    innovation for our customers. Why should you be part of our success story? As
+    the fastest-growing Software as a Service (SaaS) company in history, Deel is transforming
+    how global talent connects with world-class companies – breaking down borders
+    that have traditionally limited both hiring and career opportunities. We''re not
+    just building software; we''re creating the infrastructure for the future of work,
+    enabling a more diverse and inclusive global economy. In 2024 alone, we paid $11.2
+    billion to workers in nearly 100 currencies and provided healthcare and benefits
+    to workers in 109 countries—ensuring people get paid and protected, no matter
+    where they are. Our momentum is reflected in our achievements and customer satisfaction:
+    CNBC Disruptor 50, Forbes Cloud 100, Deloitte Fast 500, and repeated recognition
+    on Y Combinator’s top companies list – all while maintaining a 4.83 average rating
+    from 15,000 reviews across G2, Trustpilot, Captera, Apple and Google. Your experience
+    at Deel will be a career accelerator. At the forefront of the global work revolution,
+    you''ll tackle complex challenges that impact millions of people''s working lives.
+    With our momentum—backed by a $17.3 billion valuation and $1 B in Annual Recurring
+    Revenue (ARR) in just over five years—you''ll drive meaningful impact while building
+    expertise that makes you a sought-after leader in the transformation of global
+    work. Get ready to: Be a part of a truly cross-functional team; Engineer, Product,
+    Data Science and Business Stakeholders. Participate in product planning (From
+    discovery all the way to deployment); We want your input at all stages of the
+    Software Development Lifecycle! Collaborate! Our teams work together to develop
+    robust new features, Machine Learning, continuously improve our industry-leading
+    products and find and fix any bugs at Deel Speed. Ensure our customers receive
+    a white-glove experience with our products! The bits and bytes you’ll bring to
+    the team: Developing and maintaining AI and machine learning algorithms using
+    Python. Creating and maintaining data pipelines and ETL processes to extract,
+    transform, and load data from various sources. Building and deploying scalable,
+    reliable, and efficient AI models using cloud computing platforms. Collaborating
+    with cross-functional teams including data scientists, data engineers, Product
+    and business stakeholders to understand business requirements and develop solutions
+    that meet those requirements. Writing clean and efficient code, and implementing
+    best practices for code optimization, testing, and deployment through Jupyter
+    Notebooks and/or Google Colab. Conducting research and staying up-to-date with
+    the latest AI and Machine Learning techniques, and incorporating new ideas and
+    methods into existing systems. Troubleshooting and debugging code, and resolving
+    technical issues that arise during the development, testing, and deployment process.
+    Creating documentation for code, data pipelines, and models to ensure that all
+    stakeholders have access to clear and accurate information. Participating in code
+    reviews and contributing to the development of a strong engineering culture within
+    the organization. You’re the Engineer we’re looking for if you have: High proficiency
+    in Python, PostgreSQL, and the data science stack. Background and experience in
+    Back-End engineering in production environments (5+ years) (Mid/Senior Level role)
+    Background and hands-on experience (2+ years) in implementing research and algorithms
+    in Python, specifically in information retrieval, text processing, NLP, and machine
+    learning Proven experience delivering AI/Machine Learning solutions inside a product.
+    Track record of good written and verbal communication of complex things in a simple
+    way as well as the ability to collaborate well with people from different backgrounds
+    and professions A Bachelor’s degree or higher in a STEM/Computer science related
+    field Total Rewards Our workforce deserves fair and competitive pay that meets
+    them where they are. With scalable benefits, rewards, and perks, our total rewards
+    programs reflect our commitment to inclusivity and access for all. Some things
+    you’ll enjoy Stock grant opportunities dependent on your role, employment status
+    and location Additional perks and b'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.441506+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

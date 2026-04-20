@@ -1,0 +1,114 @@
+id: scale-ai-full-stack-software-engineer-forward-deployed-gps
+name: Scale AI Full-Stack Software Engineer, (Forward Deployed), GPS
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Scale AI
+  url: https://boards.greenhouse.io/scaleai
+  application_url: https://job-boards.greenhouse.io/scaleai/jobs/4676600005
+  portal: greenhouse
+  location: 'Doha, Qatar '
+  location_class: unknown
+  description: '<p>Scale’s rapidly growing Global Public Sector team is focused on
+    using AI to address critical challenges facing the public sector around the world.
+    Our core work consists of:</p> <ul> <li>Creating custom AI applications that will
+    impact millions of citizens</li> <li>Generating high-quality training data for
+    custom LLMs</li> <li>Upskilling and advisory services to spread the impact of
+    AI</li> </ul> <p>As a Full Stack Software Engineer (Forward Deployed), you’ll
+    collaborate directly with public sector counterparts to quickly build full-stack,
+    AI applications, to solve their most pressing challenges and achieve meaningful
+    impact for citizens.</p> <p>At Scale, we’re not just building AI solutions—we’re
+    enabling the public sector to transform their operations and better serve citizens
+    through cutting-edge technology. If you’re ready to shape the future of AI in
+    the public sector and be a founding member of our team, we’d love to hear from
+    you.</p> <h3>You will:</h3> <ul> <li>Collaborate with senior engineers to implement
+    features for public sector clients, including spending time with the client&nbsp;
+    to understand user feedback and assist with delivery.</li> <li>Develop and maintain
+    full-stack components that integrate with AI models, focusing on building responsive
+    UIs and reliable backend APIs.</li> <li>Assist in deploying and monitoring applications
+    within cloud environments, ensuring basic system stability and security.</li>
+    <li>Help build and refine reusable features that support diverse international
+    client use cases.</li> <li>Work within a multi-disciplinary team of design, product,
+    and data specialists to build robust features that follow established technical
+    architectures.</li> </ul> <h3>Ideally you’d have:</h3> <ul> <li>Bachelor’s degree
+    in Computer Science or a related quantitative field&nbsp;</li> <li>Professional
+    full-stack experience with a focus on React, TypeScript, and Python/Node.js. Familiarity
+    with Next.js and NoSQL/Relational databases, along with exposure to containerization
+    (Docker) and cloud deployments.</li> <li>Experience building and deploying web
+    applications with a good understanding of cloud fundamentals and scalable coding
+    practices.</li> <li>A self-starting approach to navigate ambiguous requirements
+    and deliver reliable software.</li> </ul> <h3>Nice to haves:</h3> <ul> <li>Proficient
+    in Arabic&nbsp;</li> <li>Experience working cross functionally with operations</li>
+    <li>Experience building solutions with LLMs</li> </ul><div class="content-conclusion"><p><strong><em>PLEASE
+    NOTE:&nbsp;</em></strong><em>Our policy requires a 90-day waiting period before
+    reconsidering candidates for the same role. This allows us to ensure a fair and
+    thorough evaluation of all applicants.</em></p> <p><strong>About Us:</strong></p>
+    <p><em>At Scale, our mission is to develop reliable AI systems for the world''s
+    most important decisions. Our products provide the high-quality data and full-stack
+    technologies that power the world''s leading models, and help enterprises and
+    governments build, deploy, and oversee AI applications that deliver real impact.
+    We work closely with industry leaders like Meta, Cisco, DLA Piper, Mayo Clinic,
+    Time Inc., the Government of Qatar, and U.S. government agencies including the
+    Army and Air Force. We are expanding our team to accelerate the development of
+    AI applications.</em></p> <p><em>We believe that everyone should be able to bring
+    their whole selves to work, which is why we are proud to be an inclusive and equal
+    opportunity workplace. We are committed to equal employment opportunity regardless
+    of race, color, ancestry, religion, sex, national origin, sexual orientation,
+    age, citizenship, marital status, disability status, gender identity or Veteran
+    status.&nbsp;</em></p> <p><em>We are committed to working with and providing reasonable
+    accommodations to applicants with physical and mental disabilities. If you need
+    assistance and/or a reasonable accommodation in the application or recruiting
+    process due to a disability, please contact us at accommodations@scale.com. Please
+    see the United States Department of Labor''s </em><a href="https://www.eeoc.gov/sites/default/files/2023-06/22-088_EEOC_KnowYourRights6.12ScreenRdr.pdf"><em>Know
+    Your Rights poster</em></a><em> for additional information.</em></p> <p><em>We
+    comply with the United States Department of Labor''s </em><a href="https://www.dol.gov/sites/dolgov/files/ofccp/pdf/pay-transp_English_unformattedESQA508c.pdf"><em>Pay
+    Transparency provision</em></a><em>.&nbsp;</em></p> <p><em><strong>PLEASE NOTE:
+    </strong>We collect, retain and use personal data for our professional business
+    purposes, including notifying you of job opportunities that may be of interest
+    and sharing with our affiliates. We limit the personal data we collect to that
+    which we believe is appropriate and necessary to manage applicants’ needs, provide
+    our services, and comply with applicable laws. Any information we collect in connection
+    with your applicati'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.445522+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

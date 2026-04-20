@@ -1,0 +1,114 @@
+id: toast-senior-software-engineer-full-stack-guest-engagement
+name: 'Toast Senior Software Engineer (Full Stack) - Guest Engagement '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7764304
+  portal: greenhouse
+  location: Dublin, Ireland
+  location_class: international
+  description: '<p><strong>Senior Software Engineer, Full Stack - Guest Engagement</strong></p>
+    <p>Toast is driven by building the restaurant platform that helps restaurants
+    adapt, take control, and get back to what they do best: building the businesses
+    they love. Because our technology is purpose-built for restaurants, by restaurant
+    people - and increasingly shaped by AI in both what we build and how we build
+    - restaurants can trust that we’ll deliver on their needs for today while investing
+    in the experiences that will power their restaurant of the future.</p> <p>We’re
+    seeking a Senior Software Engineer to work within our team focused on building
+    impactful capabilities that empower restaurants to drive Guest engagement, retention
+    and growth. The team will help shape the future of how restaurants use technology
+    to connect with their guests - increasingly through AI-powered tools and experiences
+    that drive automation, personalization and smarter decision-making. You will be
+    a key part of a high-impact, high-ownership engineering team solving complex challenges
+    in a fast-moving product space. Your engineering leadership will be balancing
+    technical excellence alongside a strong product mindset to solve for continuous
+    growth within both the team and our product space.</p> <p><strong>A day in the
+    life (Responsibilities)</strong></p> <ul> <li>Deliver projects that deeply connect
+    restaurants with their guests within a cross-functional collaborative and supportive
+    environment.</li> <li>Build performant, scalable web features across guest and
+    restaurant-facing surfaces that will be critical to our customers’ success.</li>
+    <li>Partner closely with Design, Product, and other engineers across the company
+    to drive measurable outcomes.</li> <li>Monitor feature rollouts to ensure customer
+    success, iterating and improving when necessary.</li> <li>Advocate for best coding
+    practices, raising the bar for yourself, your team and the company.</li> <li>Leverage
+    cutting edge AI tools to enhance your development workflow, improve velocity,
+    and help pioneer new approaches to building - contributing to a culture of innovation
+    and productivity across the team.</li> </ul> <p><strong>What you''ll need to thrive
+    (Requirements)</strong></p> <ul> <li>Driven by impact and solving for the customer.</li>
+    <li>5+ years of experience as a Backend/Full Stack engineer, ideally in consumer-facing
+    or growth teams.</li> <li>Strong frontend skills (React preferred) with a solid
+    grasp of modern JavaScript/TypeScript, HTML, and CSS fundamentals.</li> <li>Experience
+    with modern web technologies and UI frameworks (e.g., React, Javascript , TypeScript,
+    REST, GraphQL)</li> <li>Comfortable turning high-fidelity UX designs from Figma
+    into reality.</li> <li>Ability to break down problems and communicate solutions
+    clearly throughout cross-functional teams.</li> <li>Strong collaboration mindset,
+    you thrive in a team, work transparently, and build with empathy.</li> </ul> <p
+    data-pm-slice="1 1 []"><strong>Our Tech Stack:</strong></p> <ul> <li>A core of
+    <strong>Java &amp; Kotlin</strong> based backend services.</li> <li><strong>React</strong>
+    SPAs leveraging Tailwind, GraphQL and Storybook.</li> <li><strong>Android</strong>
+    app built in Java &amp; Kotlin running in the restaurant.</li> <li><strong>PostgreSQL</strong>,
+    <strong>Dynamodb </strong>for persistence.</li> <li>Pulsar, Camel and RabbitMQ
+    for message-based integrations.</li> <li>And many more technologies that help
+    us build a top class platform.</li> </ul> <p><strong>**This role requires a minimum
+    of two days per week in our Dublin office**</strong></p> <p data-pm-slice="1 1
+    []"><strong>#LI-HYBRID</strong></p> <p data-pm-slice="1 1 []"><strong>#BI-Hybrid</strong></p>
+    <p data-pm-slice="1 1 []">&nbsp;</p> <p data-pm-slice="1 1 []"><strong>AI at Toast</strong></p>
+    <p>At Toast, one of our company values is that we''re hungry to build and learn.
+    We believe learning new AI tools empowers us to build for our customers faster,
+    more independently, and with higher quality. We provide these tools across all
+    disciplines, from Engineering and Product to Sales and Support, and are inspired
+    by how our Toasters are already driving real value with them. The people who thrive
+    here are those who embrace changes that let us build more for our customers; it’s
+    a core part of our culture.</p> <p data-pm-slice="1 1 []"><strong>Our Total Rewards
+    Philosophy&nbsp;<br></strong>We strive to provide competitive compensation and
+    benefits programs that help to attract, retain, and motivate the best and brightest
+    people in our industry. Our total rewards package goes beyond great earnings potential
+    and provides the means to a healthy lifestyle with the flexibility to meet Toasters’
+    changing needs. Learn more about our benefits at&nbsp;<a class="c-link" href="https://careers.toasttab.com/toast-benefits"
+    target="_blank" data-stringify-link="https://careers.toasttab.com/toast-benefits"
+    data-sk="tooltip_parent" data-remove-tab-index="true">https://careers.toa'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.362547+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

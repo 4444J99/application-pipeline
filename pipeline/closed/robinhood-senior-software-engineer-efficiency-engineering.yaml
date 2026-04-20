@@ -1,0 +1,114 @@
+id: robinhood-senior-software-engineer-efficiency-engineering
+name: Robinhood Senior Software Engineer, Efficiency Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7489685?t=gh_src=&gh_jid=7489685
+  portal: greenhouse
+  location: Bellevue, WA
+  location_class: us-onsite
+  description: <div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><h2><strong>About the team + role</strong></h2>
+    <p>We are building an elite team, applying frontier technologies to the world’s
+    biggest financial problems. We’re looking for bold thinkers. Sharp problem-solvers.
+    Builders who are wired to make an impact. Robinhood isn’t a place for complacency,
+    it’s where ambitious people do the best work of their careers. We’re a high-performing,
+    fast-moving team with ethics at the center of everything we do. Expectations are
+    high, and so are the rewards.</p> <p>The <strong>Efficiency Engineering team</strong>
+    focuses on improving the performance, utilization, and cost-effectiveness of Robinhood’s
+    cloud infrastructure. We build systems that make infrastructure usage measurable,
+    understandable, and actionable. Our work enables engineering teams to run services
+    that are right-sized, performant, and financially efficient. By combining deep
+    systems knowledge with practical tooling, we help ensure that every infrastructure
+    dollar directly supports product reliability and customer experience!</p> <p>As
+    a <strong>Senior Software Engineer</strong> on the Efficiency Engineering team,
+    you will design and build software that identifies performance inefficiencies,
+    reduces waste, and increases utilization across AWS and Kubernetes environments.
+    You will develop telemetry pipelines, optimization frameworks, and automated controls
+    that improve system performance while lowering cost per workload. Your work will
+    span distributed systems, cloud infrastructure, and application performance layers,
+    helping teams make informed trade-offs between latency, reliability, and spend.
+    This role directly contributes to measurable improvements in infrastructure efficiency
+    across a large-scale microservices architecture!</p> <p>This role is based in
+    our <strong>Bellevue, WA</strong> office, with in-person attendance expected at
+    least 3 days per week.</p> <p>At Robinhood, we believe in the power of in-person
+    work to accelerate progress, spark innovation, and strengthen community. Our office
+    experience is intentional, energizing, and designed to fully support high-performing
+    teams.</p> <h2><strong>What you’ll do</strong></h2> <ul> <li>Build and maintain
+    telemetry systems that measure service-level performance, infrastructure utilization,
+    and cost drivers across AWS and Kubernetes clusters.</li> <li>Analyze distributed
+    systems to identify inefficiencies such as over-provisioning, resource contention,
+    and suboptimal scaling configurations.</li> <li>Develop automation that enforces
+    right-sizing, workload optimization, and resource allocation policies to improve
+    utilization and reduce infrastructure waste.</li> <li>Partner with service owners
+    to implement performance improvements and track measurable gains in latency, throughput,
+    and cost efficiency.</li> <li>Contribute to architectural improvements and code-level
+    optimizations that increase performance per dollar spent across Robinhood’s infrastructure.</li>
+    </ul> <h2><strong>What you bring</strong></h2> <ul> <li>6+ years of industry experience,
+    including at least 1 year leading large-scale, complex engineering projects.</li>
+    <li>Experience designing, operating, or optimizing distributed systems in cloud
+    environments at scale.</li> <li>Proficiency in at least one programming language
+    such as Python, Go, Rust, or Java.</li> <li>Hands-on experience with Kubernetes,
+    Infrastructure as Code, and public cloud platforms such as AWS or GCP.</li> <li>Experience
+    analyzing system performance, workload right-sizing, or resource utilization tuning
+    using monitoring or profiling tools.</li> <li>Ability to independently diagnose
+    opaque performance issues and translate findings into practical engineering improvements.</li>
+    <li>Clear written and verbal communication skills to document findings and align
+    with engineering partners.</li> </ul> <h2><strong>What we offer</strong></h2>
+    <ul> <li>Challenging, high-impact work to grow your career.</li> <li>Performance-driven
+    compensation with multipliers for outsized impact, bonus programs, equity ownership,
+    and 401(k) matching.</li> <li>Best-in-class benefits to fuel your work, including
+    100% paid health insurance for employees with 90% coverage for dependents.</li>
+    <li>Lifestyle wallet — a highly flexible benefits spending account for wellness,
+    learning, and more.</li> <li>Employer-paid life &amp; disability insurance, fertility
+    benefits, and mental health benefits.</li> <li>Time off to recharge including
+    company ho
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.135208+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,94 @@
+id: snowflake-senior-software-engineer-customer-experience-engineering
+name: Snowflake Senior Software Engineer, Customer Experience Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/6e2509bf-babf-40fc-bb2f-957269ea0c29
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Senior Software Engineer - Customer Experience
+    Engineering Our customers are very happy with our technology and are quickly expanding
+    their use cases, only limited by their own imaginations. The Customer Experience
+    Engineering Team aims to enable customers to push these limits, and when customers
+    run into roadblocks or issues, enable them and our internal technical resources
+    to resolve those issues and get back to seeing success with Snowflake. Snowflake’s
+    Customer Experience Engineering Team is expanding! We are looking for a Senior
+    Software Engineer to join our team who likes building intelligent data applications
+    that give insight into diagnostic data and technical content that is relevant
+    to issues customers may be facing. Our Customer Experience Senior Software Engineers
+    enjoy developing features into the Snowflake product that aim to greatly reduce
+    friction points that block customers and regularly require help from Snowflake
+    technical experts. They are excited by the challenges presented by extracting
+    intelligence from a wide variety of data sources, including structured and unstructured
+    data. You will: Lead and drive projects that span our stack, including Java and
+    Python services hosted in AWS Lambda and Kubernetes. Promote strong collaboration
+    within a cross-functional team, including product management and design. Deliver
+    features requiring close coordination with several partner teams. Be a strong
+    contributor to the product vision and drive team planning. Pinpoint problems,
+    instrument relevant components as needed, and ultimately implement solutions.
+    Mentor and coach junior team members. Our ideal Senior Software Engineer will
+    have: B.S. or M.S degree in CS, MIS, or equivalent discipline 6+ years experience
+    hands-on software engineering experience Deep understanding of modern application
+    design architecture, good API design patterns, performance, and scale. Expertise
+    in at least one of the following (bonus for more than one): Python, Java, NodeJS,
+    GoLang, C#, Ruby. Experience with software engineering best practices: unit testing,
+    code reviews, and design documentation. Excellent debugging and troubleshooting
+    skills, especially in a cloud environment. Demonstrated technical leadership experience,
+    such as being an architect or tech lead for high-impact projects. Great communication
+    skills, both verbal and written and an interest in working with a diverse set
+    of peers and external developers. Genuine enjoyment of the art of building great
+    software, and a love of learning new things Snowflake is growing fast, and we’re
+    scaling our team to help enable and accelerate our growth. We are looking for
+    people who share our values, challenge ordinary thinking, and push the pace of
+    innovation while building a future for themselves and Snowflake. How do you want
+    to make your impact? For jobs located in the United States, please visit the job
+    posting on the Snowflake Careers Site for salary and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: null
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.529059+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

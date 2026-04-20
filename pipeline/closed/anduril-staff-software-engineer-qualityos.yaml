@@ -1,0 +1,116 @@
+id: anduril-staff-software-engineer-qualityos
+name: Anduril Staff Software Engineer, QualityOS
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5087238007?gh_jid=5087238007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p><strong>ABOUT THE TEAM:</strong></p>
+    <p>ArsenalOS is the digital backbone of Anduril’s hardware enterprise. It connects
+    the full lifecycle, from concept to build to field feedback, into one operating
+    environment built for speed, traceability, autonomy, and continuous improvement.
+    That environment includes not just the software used to design, plan, and execute
+    work, but also the factory-facing infrastructure that connects operators, machines,
+    test systems, and OT networks into the same adaptive Build Chain. It is not a
+    support function, but rather a strategic investment by Anduril that the operating
+    system of the hardware lifecycle is how we win. It will be one of the mechanisms
+    by which Anduril out-builds, out-adapts, and out-scales the traditional defense
+    industrial base.</p> <p><strong>ABOUT THE JOB:</strong></p> <p>We are looking
+    for a Staff Software Engineer to join our QualityOS team within Forge MES (Manufacturing
+    Execution System). As a Staff Engineer, you will set the technical direction and
+    architectural standards. You''ll architect and implement mission-critical distributed
+    systems that scale Anduril''s manufacturing operations while maintaining the technical
+    bar for reliability, performance, and maintainability.<br><br>Your impact will
+    span beyond the immediate team. You''ll serve as a technical bridge between the
+    QualityOS product team and our Platform/Foundations organization, ensuring we
+    build on solid infrastructure while influencing platform capabilities to meet
+    manufacturing needs. You''ll represent the quality domain in broader MES architectural
+    decisions, contributing to technical strategy that affects multiple product teams.<br><br>We''re
+    looking for someone who combines deep technical expertise with strong collaborative
+    instincts—someone who can dive into complex distributed systems, establish patterns
+    that others follow, and drive consensus across engineering teams. You''ll balance
+    hands-on technical execution on critical features with raising the technical standards
+    of the team through architecture reviews, code quality, and operational excellence.
+    Your decisions will have lasting impact on how Anduril scales manufacturing quality
+    systems into a next-generation defense company.</p> <h3>WHAT YOU''LL DO</h3> <p>Technical
+    Architecture &amp; Execution:</p> <ul> <li>Define and drive technical architecture
+    for QualityOS - make decisions on system design, scalability patterns, integration
+    strategies, and platform vs. build tradeoffs that shape team execution</li> <li>Architect
+    and implement complex distributed systems - build mission-critical services, APIs,
+    and tooling that enable safe, fast delivery across manufacturing quality workflows</li>
+    <li>Lead by example with engineering excellence - establish patterns through hands-on
+    work: comprehensive testing, deployment safety (blue/green/canary), infrastructure
+    as code, observability, and operational rigor</li> </ul> <p>Cross-Team Influence
+    &amp; Collaboration:</p> <ul> <li>Bridge product and platform teams - collaborate
+    with Platform/Foundations to shape shared infrastructure based on QualityOS needs
+    while driving adoption of platform capabilities</li> <li>Partner across MES product
+    teams - integrate QualityOS into cohesive manufacturing experiences, evolve data
+    models across quality/production domains, and drive technical consensus on cross-cutting
+    concerns</li> <li>Represent quality domain technically - work with architecture,
+    security, operations, and infrastructure teams to ensure quality requirements
+    influence broader technical decisions</li> </ul> <p>Team<strong> </strong>&amp;
+    Technical Standards:</p> <ul> <li>Raise the technical bar for the team - through
+    rigorous code review, architecture discussions, establishing shared ownership
+    models, and improving practices that balance velocity with correctness</li> <li>Remove
+    friction and unblock execution - identify systemic technical issues, eliminate
+    single points of failure, and create leverage through automation and improved
+    tooling</li> </ul> <p><strong>REQUIRED QUALIFICATIONS</strong></p> <ul> <li>12+
+    years of experience in a software engineering role building products in fast-paced
+    environments</li> <li>Proven ability to influence technica'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-14'
+  posting_date: '2026-04-13'
+  date_source: first_published
+  date_added: '2026-04-14'
+  discovered: '2026-04-14T10:23:06.735261+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

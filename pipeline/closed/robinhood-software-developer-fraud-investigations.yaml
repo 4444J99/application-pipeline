@@ -1,0 +1,114 @@
+id: robinhood-software-developer-fraud-investigations
+name: Robinhood Software Developer, Fraud Investigations
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7622031?t=gh_src=&gh_jid=7622031
+  portal: greenhouse
+  location: Toronto, Canada
+  location_class: international
+  description: <div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><h2 data-section-id="1mjk503" data-start="195"
+    data-end="221">About the team + role</h2> <p data-start="223" data-end="888">We
+    are building an elite team, applying frontier technologies to the world’s biggest
+    financial problems.<strong> </strong>We’re looking for bold thinkers. Sharp problem-solvers.
+    Builders who are wired to make an impact. Robinhood isn’t a place for complacency,
+    it’s where ambitious people do the best work of their careers. We’re a high-performing,
+    fast-moving team with ethics at the center of everything we do. Expectations are
+    high, and so are the rewards.<br><br>The Ops Platform and Fraud Investigations
+    team develops internal platforms that replace repetitive manual processes with
+    AI-driven systems. These tools support areas such as Fraud Operations, Account
+    Operations, Financial Crimes Operations, and Retirement Services. The team works
+    closely with product, data science, and operations partners to deliver reliable
+    systems that improve decision-making and efficiency!</p> <p data-start="890" data-end="1553">As
+    a Software Developer, you will lead the design and development of platforms that
+    enable operational teams to investigate and resolve issues more quickly and accurately.
+    You will own complex technical problems end-to-end, working with large datasets
+    and signals to build systems that support fraud detection and investigation workflows.
+    You will collaborate closely with data scientists and machine learning engineers
+    to translate manual processes into scalable automated systems. You will also guide
+    technical direction for key initiatives, ensuring systems are reliable, maintainable,
+    and capable of supporting new products and operational needs as they grow.</p>
+    <p data-start="1555" data-end="1666">This role is based in our <strong>Toronto,
+    ON</strong> office(s), with in-person attendance expected at least 3 days per
+    week.</p> <p data-start="1668" data-end="1896">At Robinhood, we believe in the
+    power of in-person work to accelerate progress, spark innovation, and strengthen
+    community. Our office experience is intentional, energizing, and designed to fully
+    support high-performing teams.</p> <hr data-start="1898" data-end="1901"> <h2
+    data-section-id="k17u0u" data-start="1903" data-end="1922">What you’ll do</h2>
+    <p data-start="1924" data-end="2601">● You will design and build scalable systems
+    that process large datasets and generate insights to support fraud investigation
+    and decision-making<br data-start="2069" data-end="2072">● You will lead the implementation
+    of systems that automate manual review processes in partnership with data scientists
+    and machine learning engineers<br data-start="2222" data-end="2225">● You will
+    develop AI-based applications that improve the speed, accuracy, and consistency
+    of operational workflows<br data-start="2340" data-end="2343">● You will define
+    technical approaches for complex projects, breaking them into clear milestones
+    and delivering measurable outcomes<br data-start="2474" data-end="2477">● You
+    will improve system reliability and development efficiency by identifying gaps
+    and implementing structured solutions</p> <hr data-start="2603" data-end="2606">
+    <h2 data-section-id="10cgn0" data-start="2608" data-end="2627">What you bring</h2>
+    <p data-start="2629" data-end="3212">● You have experience building and operating
+    production systems that use large language models or similar AI technologies<br
+    data-start="2750" data-end="2753">● You design systems that manage model behavior
+    and produce consistent, reliable outputs at scale<br data-start="2850" data-end="2853">●
+    You have experience working with large-scale data pipelines and extracting insights
+    from complex datasets<br data-start="2960" data-end="2963">● You translate business
+    processes into technical solutions with clear scope, milestones, and measurable
+    outcomes<br data-start="3076" data-end="3079">● You contribute to technical direction
+    and support other engineers through design reviews or guidance on implementation
+    approaches</p> <hr data-start="3214" data-end="3217"> <h2 data-section-id="1gnz9xh"
+    data-start="3219" data-end="3237">What we offer</h2> <p data-start="3239" data-end="3998">●
+    Challenging, high-impact work to grow your career<br data-start="3290" data-end="3293">●
+    Performance driven compensation with multipliers for outsized impact, bonus programs,
+    and equity ownership<br data-start="3401" data-end="3404">● Top tier benefits
+    to fuel your work, including supplemental he
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.128115+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

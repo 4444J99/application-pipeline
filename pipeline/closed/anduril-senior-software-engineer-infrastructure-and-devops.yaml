@@ -1,0 +1,114 @@
+id: anduril-senior-software-engineer-infrastructure-and-devops
+name: Anduril Senior Software Engineer (Infrastructure and DevOps)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5082090007?gh_jid=5082090007
+  portal: greenhouse
+  location: Reston, Virginia, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p><span
+    data-contrast="auto">Anduril Intelligence Systems (AIS) is a lead provider of
+    highly specialized engineering products for Intelligence Community (IC) customers.
+    We work within the IC to understand their requirements and shape concepts of operation.
+    We design, develop, and deliver exquisite capability across their mission set
+    using commercially available and custom hardware and software. We provide critically
+    needed capabilities that address our customers’ most pressing national security
+    requirements.</span><span data-ccp-props="{&quot;335557856&quot;:16777215,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></p>
+    <h3>ABOUT THE JOB</h3> <p>If you are a Senior Software Engineer with strong software
+    development&nbsp;expertise and DevOps capabilities supporting mission-critical
+    infrastructure&nbsp;products in air-gapped and security-hardened environments,
+    this role is for&nbsp;you.&nbsp;This hybrid role bridges software engineering
+    and site reliability engineering,&nbsp;requiring both the ability to understand,
+    modify, and extend complex internal&nbsp;infrastructure codebases and the DevOps
+    knowledge to deploy, configure,&nbsp;and maintain these systems in disconnected
+    environments.</p> <p>As the software engineer closest to our customers and deployment&nbsp;environments,
+    you will work at the intersection of product development and&nbsp;operations.
+    You'll have access to core product codebases and will make&nbsp;targeted modifications
+    to support air-gapped deployments, while collaborating&nbsp;closely with commercial
+    product teams to ensure feature parity and reliability.</p> <p>This role demands
+    a "Whatever It Takes" mindset—you'll need to be equally comfortable debugging
+    C++ code, designing Terraform configurations,&nbsp;troubleshooting networking
+    issues in classified environments, and building&nbsp;automation tooling to scale
+    deployments</p> <h4><strong>WHAT YOU’LL DO</strong></h4> <p><strong>Software Development:</strong></p>
+    <ul> <li>Access and modify core infrastructure product codebases (C++, Python,&nbsp;or
+    similar languages) to enable functionality in air-gapped and sovereign cloud environments</li>
+    <li>Debug production issues in infrastructure software, identify root causes,&nbsp;and
+    implement fixes that work within disconnected network constraints</li> <li>Collaborate
+    with commercial product teams to understand upcoming features, assess air-gap
+    compatibility, and close parity gaps between commercial and air-gapped deployments</li>
+    <li>Write clean, well-tested, and well-documented code that passes security reviews
+    and maintains system reliability</li> </ul> <p><strong>DevOps &amp; Infrastructure
+    Management:</strong></p> <ul> <li>Own end-to-end deployment of infrastructure
+    products in air-gapped environments, from initial provisioning through production
+    operations</li> <li>Configure and optimize Linux systems, containerized environments
+    (Docker/Kubernetes), and networking for mission-critical applications</li> <li>Build
+    automation solutions to eliminate manual toil in deployment, configuration management,
+    and system updates</li> </ul> <p><strong>Monitoring, Observability &amp; Reliability:</strong></p>
+    <ul> <li>Create custom metrics and dashboards to track system health, performance,
+    and security in disconnected environments</li> <li>Perform data-driven root cause
+    analysis on complex distributed systems to identify and resolve reliability issues</li>
+    </ul> <p><strong>Cross-Team Collaboration:</strong></p> <ul> <li>Work with commercial
+    product teams to advocate for air-gap-friendly architectures and flag deployment
+    challenges</li> <li>Collaborate across multiple teams to plan feature integration,
+    test complex functionality, and coordinate releases</li> <li>Contribute to establishing
+    deployment best practices and reusable patterns across product lines</li> <li>Document
+    deployment procedures, architectural decisions, and troubleshooting guides for
+    knowledge sharing</li> </ul> <h4>REQUIRED QUALIFICATIONS</h4> <ul> <li>Strong
+    engineering background from industry or school, ideally in areas/fields such as
+    Computer Science, Software Engineering, Mathematics, or Physics.</li> <li>Experience
+    with C/C++, Go, and oth
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.978495+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

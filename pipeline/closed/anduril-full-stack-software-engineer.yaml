@@ -1,0 +1,115 @@
+id: anduril-full-stack-software-engineer
+name: Anduril Full Stack Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5089044007?gh_jid=5089044007
+  portal: greenhouse
+  location: Washington, District of Columbia, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p><strong>ABOUT THE TEAM <br><br></strong>Anduril
+    Labs is a multidisciplinary team of technologists, solution architects, engineers,
+    and military subject matter experts. Its mission is to drive innovation across
+    all Anduril business units and product lines by developing novel concepts and
+    next-generation technologies that enhance Anduril’s competitive edge and give
+    its customers a decisive technological advantage over its adversaries.<br><br><strong>ABOUT
+    THE JOB</strong> <br><br>We are looking for a talented full stack software engineer
+    to join our growing team at Anduril Labs in Washington, DC. As a full stack software
+    engineer in Anduril Labs, you will help bring innovative, next-generation concepts
+    to life through proof-of-concept development and rapid prototyping using bleeding
+    edge technologies.<br><br>The ideal candidate has exceptional software development
+    and creative problem-solving skills, is a self-starter, and can quickly grasp
+    complex concepts. As a full stack software engineer, you possess the skills to
+    architect, develop, and deploy distributed applications and services, including
+    both front-end and back-end components. You have experience with agile, end-to-end
+    software development lifecycle and are comfortable developing and deploying code
+    across Windows and Linux-based systems (including standalone bare-metal hardware,
+    virtualized environments, and cloud-hosted platforms). Embedded software development
+    experience is a plus. You are also proficient in integrating legacy code and systems,
+    leveraging open-source technologies, and developing and utilizing APIs. Additionally,
+    you have a solid understanding of AI/ML core concepts (e.g., feature extraction,
+    supervised vs. unsupervised learning, regression, classification, clustering,
+    deep learning neural networks, NLP, LLMs, SLMs, model fine-tuning, prompt engineering,
+    RAG) and hands-on experience developing (Gen)AI-enhanced applications or services.<br><br>We
+    also expect candidates to have familiarity with database technologies (e.g., SQL,
+    NoSQL, Graph DB, Vector DB) and experience with data modeling, data wrangling,
+    analytics, and visualization.&nbsp;Since Anduril Labs supports all Anduril businesses
+    and product lines, you will have the unique opportunity to work closely with multi-disciplinary
+    engineering and product development teams across the entire company. This means
+    you will get to directly contribute to the development of Anduril’s next-generation
+    products and services. So if you thrive in a dynamic environment that values creative
+    problem-solving, love writing code, excel as both an individual contributor and
+    team player, are eager to learn, and bring a can-do attitude, this role is for
+    you.</p> <h4><strong>WHAT YOU’LL DO </strong></h4> <ul> <li>Lead the development
+    of prototypes to demonstrate advanced concepts in areas like autonomous and multi-agent
+    systems, GenAI, advanced data analytics, quantum computing/sensing/networking/comms/machine
+    learning, modeling, simulation, optimization, visualization, next-gen human-machine
+    interfaces, heterogenous computing, and cybersecurity.</li> <li>Own the entire
+    Software Development Lifecycle from inception through development, testing, deployment,
+    and documentation for Anduril Labs-developed software prototypes.</li> <li>Interface
+    and collaborate with other Anduril and customer engineering teams, and strategic
+    partners.</li> <li>Support Anduril- and customer-funded R&amp;D efforts.</li>
+    <li>Participate in field experiments and technology demonstrations.</li> </ul>
+    <h4><strong>REQUIRED QUALIFICATIONS </strong></h4> <ul> <li>3+ years of programming
+    with Python, C++, Java, Rust, Go, or JavaScript/TypeScript.</li> <li>Proven software
+    architecture and design skills.</li> <li>Ability to quickly understand and navigate
+    complex systems and established codebases.</li> <li>AI/ML development using commercial
+    and open-source AI frameworks, models, and tools (e.g., Jupyter Notebook, PyTorch,
+    TensorFlow, Scikit-learn, OpenAI, Claude, Gemini, Llama, LangChain, YOLO, AWS
+    Sagemaker, Bedrock, Azure AI, RAG).</li> <li>Web app development (e.g., React,
+    Angular, or Vue).</li> <li>Cloud development (e.g., AWS, Azure, or GCP).</li>
+    <li>Data modeling and wrangling.</l
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.835959+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

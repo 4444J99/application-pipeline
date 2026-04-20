@@ -1,0 +1,115 @@
+id: anthropic-ml-infrastructure-engineer-safeguards
+name: Anthropic ML Infrastructure Engineer, Safeguards
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anthropic
+  url: https://boards.greenhouse.io/anthropic
+  application_url: https://job-boards.greenhouse.io/anthropic/jobs/4778843008
+  portal: greenhouse
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>About Anthropic</strong></h2>
+    <p>Anthropic’s mission is to create reliable, interpretable, and steerable AI
+    systems. We want AI to be safe and beneficial for our users and for society as
+    a whole. Our team is a quickly growing group of committed researchers, engineers,
+    policy experts, and business leaders working together to build beneficial AI systems.</p></div><div>
+    <h2>About the role</h2> </div> <div> <p>We are seeking a Machine Learning Infrastructure
+    Engineer to join our Safeguards organization, where you''ll build and scale the
+    critical infrastructure that powers our AI safety systems. You''ll work at the
+    intersection of machine learning, large-scale distributed systems, and AI safety,
+    developing the platforms and tools that enable our safeguards to operate reliably
+    at scale.</p> <p>As part of the Safeguards team, you''ll design and implement
+    ML infrastructure that powers Claude safety. Your work will directly contribute
+    to making AI systems more trustworthy and aligned with human values, ensuring
+    our models operate safely as they become more capable.</p> </div> <h2>Responsibilities:</h2>
+    <ul> <li>Design and build scalable ML infrastructure to support real-time and
+    batch classifier and safety evaluations across our model ecosystem</li> <li>Build
+    monitoring and observability tools to track model performance, data quality, and
+    system health for safety-critical applications</li> <li>Collaborate with research
+    teams to productionize safety research, translating experimental safety techniques
+    into robust, scalable systems</li> <li>Optimize inference latency and throughput
+    for real-time safety evaluations while maintaining high reliability standards</li>
+    <li>Implement automated testing, deployment, and rollback systems for ML models
+    in production safety applications</li> <li>Partner with Safeguards, Security,
+    and Alignment teams to understand requirements and deliver infrastructure that
+    meets safety and production needs</li> <li>Contribute to the development of internal
+    tools and frameworks that accelerate safety research and deployment</li> </ul>
+    <h2>You may be a good fit if you:</h2> <ul> <li>Have 5+ years of experience building
+    production ML infrastructure, ideally in safety-critical domains like fraud detection,
+    content moderation, or risk assessment</li> <li>Are proficient in Python and have
+    experience with ML frameworks like PyTorch, TensorFlow, or JAX</li> <li>Have hands-on
+    experience with cloud platforms (AWS, GCP) and container orchestration (Kubernetes)</li>
+    <li>Understand distributed systems principles and have built systems that handle
+    high-throughput, low-latency workloads</li> <li>Have experience with data engineering
+    tools and building robust data pipelines (e.g., Spark, Airflow, streaming systems)</li>
+    <li>Are results-oriented, with a bias towards reliability and impact in safety-critical
+    systems</li> <li>Enjoy collaborating with researchers and translating cutting-edge
+    research into production systems</li> <li>Care deeply about AI safety and the
+    societal impacts of your work</li> </ul> <h2 class="text-h3_5 text-gray-700 mb2"><strong>Strong
+    candidates may have experience with:</strong></h2> <ul class="pt1 text-gray-700">
+    <li>Working with large language models and modern transformer architectures</li>
+    <li>Implementing A/B testing frameworks and experimentation infrastructure for
+    ML systems</li> <li>Developing monitoring and alerting systems for ML model performance
+    and data drift</li> <li>Building automated labeling systems and human-in-the-loop
+    workflows</li> <li>Experience in trust &amp; safety, fraud prevention, or content
+    moderation domains</li> <li>Knowledge of privacy-preserving ML techniques and
+    compliance requirements</li> <li>Contributing to open-source ML infrastructure
+    projects</li> </ul> <p><strong>Deadline to apply:&nbsp;</strong>None. Applications
+    will be reviewed on a rolling basis.&nbsp;</p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p>The annual compensation range for
+    this role is listed below.&nbsp;</p> <p>For sales roles, the range provided is
+    the role’s On Target Earnings ("OTE") range, meaning that the range includes both
+    the sales commissions/sales bonuses target and annual base salary for the role.</p></div><div
+    class="title">Annual Salary:</div><div class="pay-range"><span>$320,000</span><span
+    class="divider">&mdash;</span><span>$405,000 USD</span></div></div></div><div
+    class="content-conclusion"><h2><strong>Logistics</strong></h2> <p><strong>Education
+    requirements: </strong>We require at least a Bachelor''s degree in a related field
+    or equivalent experience.<strong><br><br>Location-based hybrid policy:</strong>
+    Currently, we expect all staff to be in one of our offices at least 25% of the
+    time. However, some roles may require more time in our offices.</p> <p><strong
+    data-stringify-type="bold">Visa sponsorship:</strong>&nbsp;We do sponsor visas!
+    However, we aren''t able to successfully sponsor v'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.837653+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

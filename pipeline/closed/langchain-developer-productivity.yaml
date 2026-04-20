@@ -1,0 +1,112 @@
+id: langchain-developer-productivity
+name: LangChain Developer Productivity
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: LangChain
+  url: https://jobs.ashbyhq.com/langchain
+  application_url: https://jobs.ashbyhq.com/langchain/e725293d-c27b-4a79-959d-19f5618f2f8e
+  portal: ashby
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: 'About LangChain At LangChain, our mission is to make intelligent agents
+    ubiquitous. We build the foundation for agent engineering in the real world, helping
+    developers move from prototypes to production-ready AI agents that teams can rely
+    on. We began as widely adopted open-source tools and have grown to also offer
+    a platform for building, evaluating, deploying, and operating agents at scale.
+    Today, LangChain, LangGraph, LangSmith, and Agent Builder are used by teams shipping
+    real AI products across startups and large enterprises. Millions of developers
+    trust LangChain to power AI teams at companies like Replit, Clay, Coinbase, Workday,
+    Lyft, Cloudflare, Harvey, Rippling, Vanta, and 35% of the Fortune 500 . With $125M
+    raised at Series B from IVP, Sequoia, Benchmark, CapitalG, and Sapphire Ventures
+    , we’re at a stage where we’re continuing to develop new products, growth is accelerating,
+    and all team members have meaningful impact on what we build and how we work together.
+    LangChain is a place where your contributions can shape how this technology shows
+    up in the real world. About the Team: The Infrastructure team builds and maintains
+    the systems that power LangChain’s developer platform, including LangGraph Cloud
+    and LangSmith. The team focuses on reliability, scalability, and developer productivity
+    across the stack, working closely with backend, frontend, and platform engineers
+    to ensure services are deployed, tested, and operated with confidence. About the
+    Role: We’re hiring a Software Engineer to join the Infrastructure team and own
+    developer productivity across our LangGraph Cloud/Platform and LangSmith products.
+    You’ll work closely with Infrastructure, Backend, and Frontend teams to ship with
+    confidence across Kubernetes-based services, APIs, and UI flows. You’ll also help
+    pioneer quality practices specific to LLM applications, such as prompt regression
+    testing and evaluation suites. Location: In person 5 days/week in San Francisco,
+    CA or New York, NY What You''ll Do: Own test strategy end-to-end across APIs,
+    services, UI, data, and infrastructure (Kubernetes, Terraform, Helm) Stand up
+    ephemeral test environments in Kubernetes for pull requests and release candidates;
+    seed test data and run hermetic test suites Shift quality earlier in CI/CD pipelines
+    (GitHub Actions) through parallelization, caching, deterministic seeds, flake
+    tracking, and quality gates Build observability into testing workflows with rich
+    failure artifacts such as logs, traces, and dashboards Establish performance and
+    reliability baselines for critical paths, including SLIs, SLOs, and regression
+    detection Partner on incident workflows by reproducing issues, adding targeted
+    regression tests, and improving runbooks and postmortems Write documentation including
+    test plans, playbooks, and contributor guidelines for writing high-quality tests
+    Example projects you might own A pull-request ephemeral end-to-end testing harness
+    that deploys a minimal LangSmith stack in CI and runs Playwright and API suites
+    against seeded tenants A k6 performance scenario that simulates multi-tenant traffic
+    and surfaces p95/p99 latency regressions per release A flake-budget system that
+    automatically quarantines flaky tests, opens issues with artifacts, and tracks
+    time-to-deflake What You''ll Bring: 3+ years of experience as a software engineer
+    or infrastructure engineer Strong hands-on experience with Python and testing
+    frameworks such as pytest Experience working with CI/CD systems (GitHub Actions
+    preferred) and improving pipeline performance and reliability Solid understanding
+    of API testing, mocking/stubbing, and data setup/teardown Comfort defining quality
+    standards, writing test plans, and driving cross-team execution Nice to Have:
+    Experience with load and performance testing tools such as k6 Familiarity with
+    observability tooling such as Datadog or OpenTelemetry Experience testing services
+    running on Kubernetes and containerized environments Basic infrastructure experience
+    with Helm, Terraform, Kubernetes networking, or secrets management SQL fluency
+    for validating data (Postgres, ClickHouse, BigQuery) Familiarity with Go, Node,
+    or React for targeted white-box tests and improving system testability Compensation
+    & Benefits We offer competitive compensation that includes base salary, meaningful
+    equity, and benefits such as health and dental coverage, flexible vacation, a
+    401(k) plan, and life insurance. Actual compensation will vary based on role,
+    level, and location. For team members in the EU and UK, we provide locally competitive
+    benefits aligned with regional norms and regulations. Annual salary range: $160,000-
+    $225,000 USD'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.063640+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

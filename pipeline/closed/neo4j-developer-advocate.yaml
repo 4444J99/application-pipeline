@@ -1,0 +1,120 @@
+id: neo4j-developer-advocate
+name: Neo4j Developer Advocate
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Neo4j
+  url: https://boards.greenhouse.io/neo4j
+  application_url: https://boards.greenhouse.io/neo4j/jobs/4648481006?gh_jid=4648481006
+  portal: greenhouse
+  location: 'Remote: India'
+  location_class: international
+  description: "<div class=\"content-intro\"><div><span style=\"font-size: 18pt;\"\
+    ><strong>About Neo4j:</strong></span></div> <div> <p>Neo4j is the graph intelligence\
+    \ platform that transforms data into knowledge to power the next generation of\
+    \ intelligent applications and AI systems. It includes enterprise-ready knowledge\
+    \ graphs for accurate, explainable, and governed AI; the most comprehensive, trusted,\
+    \ and easy-to-deploy graph capabilities across any environment and data source;\
+    \ and an unmatched ecosystem trusted by 84 of the Fortune 100 and supported by\
+    \ the world\u2019s largest graph community.&nbsp;Intelligence that works. Results\
+    \ that matter.</p> <p>Built to work everywhere and integrate with everything across\
+    \ every cloud for dynamic, personalized, and autonomous AI systems. We deliver\
+    \ quicker results, contextual knowledge, and solutions that impact customers and\
+    \ employees across the business.</p> </div> <div><span style=\"font-size: 18pt;\"\
+    ><strong>Our Vision:&nbsp;</strong></span></div> <div> <p><span style=\"font-weight:\
+    \ 400;\">At Neo4j, we have always strived to help the world make sense of data.&nbsp;&nbsp;</span></p>\
+    \ <p><span style=\"font-weight: 400;\">As business, society and knowledge become\
+    \ increasingly connected, our technology promotes innovation by helping organizations\
+    \ to find and understand data relationships. We created, drive and lead the graph\
+    \ database category, and we\u2019re disrupting how organizations leverage their\
+    \ data to innovate and stay competitive.</span></p> </div></div><p>The Developer\
+    \ Advocate will be the bridge between our developer community and the company.\
+    \ This role is responsible for promoting our products and technologies to developers,\
+    \ and advocating for developer needs within the organization.&nbsp;</p> <p>The\
+    \ ideal candidate balances leadership and participation, lifting a community up\
+    \ with equal parts inspiration and celebration. You are an active learner and\
+    \ educator, presenter and listener, builder and champion.</p> <p>We are looking\
+    \ for a candidate who is geographically located in India and can regularly attend\
+    \ and speak at meetups.</p> <p><strong>Key Responsibilities:</strong></p> <p>Developer\
+    \ Engagement:</p> <ul> <li>Build and nurture relationships with developers, both\
+    \ internally and externally.</li> <li>Act as a trusted resource and advocate for\
+    \ developers, addressing their questions and concerns.</li> <li>Collaborate with\
+    \ the developer community through forums, social media, and other channels.</li>\
+    \ </ul> <p>Product Knowledge and Expertise:</p> <ul> <li>Develop a deep understanding\
+    \ of our products and technologies.</li> <li>Stay up-to-date with industry trends,\
+    \ emerging technologies, and competitors.</li> <li>Use product knowledge to provide\
+    \ valuable insights and support to developers.</li> </ul> <p>Developer Support:</p>\
+    \ <ul> <li>Provide technical support to developers, helping them overcome challenges\
+    \ and issues.</li> <li>Create and maintain documentation, tutorials, and resources\
+    \ to aid developers.</li> <li>Offer hands-on assistance and guidance to developers\
+    \ during product integration.</li> </ul> <p>Advocacy and Feedback:</p> <ul> <li>Serve\
+    \ as the voice of developers within the organization, advocating for their needs\
+    \ and preferences.</li> <li>Provide actionable feedback and insights from the\
+    \ developer community to influence product development.</li> <li>Collaborate with\
+    \ cross-functional teams to enhance the developer experience.</li> </ul> <p>Community\
+    \ Building:</p> <ul> <li>Organize and participate in developer events, webinars,\
+    \ and meetups.</li> <li>Foster a sense of community among developers, encouraging\
+    \ collaboration and knowledge sharing.</li> <li>Identify and engage developer\
+    \ influencers and champions.</li> </ul> <p>Content Creation:</p> <ul> <li>Create\
+    \ developer-focused content, including blog posts, technical articles, videos,\
+    \ and presentations.</li> <li>Ensure that content aligns with the interests and\
+    \ needs of the developer community.</li> <li>Promote and share valuable content\
+    \ through various channels.</li> </ul> <p><strong>Qualifications:</strong></p>\
+    \ <ul> <li>Bachelor's degree in Computer Science, Engineering, or a related field.</li>\
+    \ <li>3+ years of experience in developer advocacy, developer relations, or a\
+    \ related technical role.</li> <li>Fluent in language for target communities (English)</li>\
+    \ <li>Strong technical knowledge and familiarity with developer tools, APIs, and\
+    \ technologies.</li> <li>Public github repos, blogs and/or videos</li> <li>Exceptional\
+    \ communication and presentation skills.</li> <li>Empathy for developers and their\
+    \ needs.</li> <li>Passion for technology and developer communities.</li> <li>Strong\
+    \ networking and relationship-building skills.</li> </ul><div class=\"content-conclusion\"\
+    ><div><span style=\"font-size: 18pt;\"><strong>Why Join Neo4j?</strong></span></div>\
+    \ <div> <p>Neo4j is, without question, the most popular graph intelligence platform\
+    \ in the world. We have customers in every industry globally, and our products\
+    \ are a proven product/market fit"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.170923+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"
+deferral:
+  reason: strategic_hold
+  resume_date: '2026-04-15'

@@ -1,0 +1,117 @@
+id: sentry-senior-software-engineer-control-plane
+name: Sentry Senior Software Engineer, Control Plane
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sentry
+  url: https://jobs.ashbyhq.com/sentry
+  application_url: https://jobs.ashbyhq.com/sentry/8422d476-7977-4ae0-bdaf-e5fba73fca44
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: About Sentry Bad software is everywhere, and we’re tired of it. Sentry
+    is on a mission to help developers write better software faster so we can get
+    back to enjoying technology. With more than $217 million in funding and 100,000+
+    organizations that believe we’re on to something, we're building performance and
+    error monitoring tools that help companies like Disney, Microsoft, and Atlassian
+    spend less time fixing bugs and more time building products. Sentry embraces a
+    hybrid work model across our global hubs, with Mondays, Tuesdays, and Thursdays
+    set as in-office anchor days to encourage meaningful collaboration. If you like
+    to selfishly build things that make your digital life better, come help us build
+    the next generation of software monitoring tools. About the role Sentry.io provides
+    a suite of services to diagnose health problems in their customers’ applications.
+    These tools are mission-critical to companies who want to respond effectively
+    in fast-paced markets. We make the development and deployment of these tools a
+    safe and enjoyable experience, by maintaining a succinct and helpful continuous
+    integration environment and an informative deployment pipeline. The Centralized
+    Tenancy and Routing Layer (CTRL) team builds and operates the foundational infrastructure
+    that defines customer boundaries and coordinates lifecycle operations across Sentry’s
+    distributed architecture. These systems power how customers are managed and how
+    services communicate and replicate data safely across our ecosystem. As a Senior
+    Software Engineer on the CTRL team, you’ll design and operate the core platform
+    primitives that make this architecture possible. Your work will focus on distributed
+    coordination, cross-cell routing, replication infrastructure, and lifecycle orchestration
+    for the customer environment. This role sits at the heart of Sentry’s platform
+    architecture—building the control systems that ensure the platform operates safely
+    and correctly at global scale. The work requires strong engineering judgment and
+    deep distributed systems thinking. You’ll design systems where correctness and
+    reliability are critical, and build abstractions that many teams depend on but
+    rarely see directly. Ultimately, you’ll help build the infrastructure that enables
+    Sentry’s SaaS platform to scale safely across a distributed, multi-cell architecture.
+    In this role you will Build and enhance the control plane systems that manage
+    customer identity, placement, and lifecycle across a multi-cell architecture.
+    Improve the reliability, scalability, and observability of mission-critical control
+    plane services. Partner with engineering teams to provide safe infrastructure
+    primitives and standards for cell-compatible systems. Help operate critical infrastructure
+    through incident response and continuous improvement. You’ll love this job if
+    you Enjoy building foundational distributed systems that power an entire platform.
+    Care deeply about correctness, reliability, and safe infrastructure primitives.
+    Like designing systems that coordinate state and data across large distributed
+    environments. Prefer solving architectural problems rather than product feature
+    work. Want to shape how a global platform evolves as it scales. Qualifications
+    5+ years of experience as a Software Engineer or similar role. Strong proficiency
+    with Python; experience with Rust is a plus. Experience designing and operating
+    distributed systems at scale. Strong understanding of replication, consistency
+    models, and service coordination. Experience building infrastructure services
+    or platform APIs used by multiple teams. Experience working with cloud platforms
+    (e.g., AWS, Azure, GCP). Experience operating containerized systems (e.g., Docker,
+    Kubernetes). Track record of operating production systems with strong ownership.
+    Strong written communication skills and ability to document platform systems clearly.
+    The base salary range (or hourly wage range, if applicable) that Sentry reasonably
+    expects to pay for this position is $190,000 to $280,000. A successful candidate’s
+    actual base salary (or hourly wage) amount will be determined by a variety of
+    relevant factors including, without limitation, the candidate’s work location,
+    education, work and other relevant experience, skills, and job-related knowledge.
+    A successful candidate will be eligible to participate in Sentry’s employee benefit
+    plans/programs applicable to the candidate’s position (including incentive compensation,
+    equity grants, paid time off, and group health insurance coverage). See Sentry
+    Benefits for more details about the Company’s benefit plans/programs. Equal Opportunity
+    at Sentry Sentry is committed to providing equal employment opportunities to its
+    employees and candidates for employment regardless of race, color, ancestry, religion,
+    sex, national origin, sexual orientation, age, citizenship, marital status, disability,
+    gender identity, veteran status, or other legally-protected characteristic. This
+    commitment includes the
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-09'
+  date_source: published_at
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.199239+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,103 @@
+id: snowflake-software-engineer-ecosystem-team
+name: Snowflake Software Engineer - Ecosystem team
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/10495197-9600-4590-9863-83f31f93a200
+  portal: ashby
+  location: PL-Warsaw
+  location_class: international
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. There is only one Data Cloud. Snowflake''s
+    founders started from scratch and designed a data platform built for the cloud
+    that is effective, affordable, and accessible to all data users. But it didn''t
+    stop there. They engineered Snowflake to power the Data Cloud, where thousands
+    of organizations unlock the value of their data with near-unlimited scale, concurrency,
+    and performance. This is our vision: a world with endless insights to tackle the
+    challenges and opportunities of today and reveal the possibilities of tomorrow.
+    The Developer Platform team is on a mission to win the hearts and minds of developers
+    by making it seamless and intuitive to build with data. We are forming a new Ecosystem
+    Team to own, support, and strategically grow the ecosystem of partners building
+    on top of Snowflake. This team will have a direct impact on our customers and
+    revenue by taking ownership of critical connectors and tools that drive millions
+    in monthly credits, such as our SQLAlchemy and Tableau integrations. You will
+    be at the forefront of ensuring developers have a world-class experience, enabling
+    them to integrate Snowflake into their workflows and build the next generation
+    of data applications As a Software Engineer on the Ecosystem team, you will: Design,
+    develop, and maintain features for the platform and various ecosystem tools. Contribute
+    to critical open-source projects, engage with the developer community, and help
+    resolve issues with key connectors like SQLAlchemy and Tableau. Work with a variety
+    of languages, including Java, Python, and Go, to support tools like the Terraform
+    Provider and other ecosystem integrations. Partner closely with Product Managers
+    to understand customer requirements and translate them into cutting-edge new capabilities.
+    Analyze and solve complex challenges in fault tolerance, high availability, performance,
+    and scale. Ensure the operational readiness of our services and meet our commitments
+    to customers regarding reliability and performance. Participate in on-call rotations
+    to support the services you build. Our Ideal Software Engineer will have: 2+ years
+    of industry experience designing, building, and supporting software in a production
+    environment. Proficiency in Java or Python is required. Experience with systems
+    programming, including multi-threading, concurrency, and related concepts. Strong
+    debugging and troubleshooting skills, particularly in a cloud environment. Excellent
+    communication skills and a passion for collaborating with a diverse group of colleagues
+    and external developers. BS/MS in Computer Science or a related major, or equivalent
+    experience. Bonus points for experience with the following: Experience with Go
+    or JavaScript. Experience building and designing customer-facing distributed web
+    services and APIs (e.g., REST, RPC). Knowledge of SQL or other database technologies,
+    including their internal design and implementation. Familiarity with public clouds
+    (AWS, Azure, GCP). Closing Statement Snowflake is growing fast, and we''re scaling
+    our team to help enable and accelerate our growth. We are looking for people who
+    share our values, challenge ordinary thinking, and push the pace of innovation
+    while building a future for themselves and Snowflake. Snowflake is growing fast,
+    and we’re scaling our team to help enable and accelerate our growth. We are looking
+    for people who share our values, challenge ordinary thinking, and push the pace
+    of innovation while building a future for themselves and Snowflake. How do you
+    want to make your impact? For jobs located in the United States, please visit
+    the job posting on the Snowflake Careers Site for salary and benefits information:
+    careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.219140+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

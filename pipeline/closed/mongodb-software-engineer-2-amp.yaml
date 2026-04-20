@@ -1,0 +1,117 @@
+id: mongodb-software-engineer-2-amp
+name: MongoDB Software Engineer 2, AMP
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7523893
+  portal: greenhouse
+  location: Gurugram
+  location_class: unknown
+  description: '<p>We are looking for an experienced Software Engineer who thrives
+    on solving infrastructure constraints and building developer-centric modernisation
+    platforms with a strong background in building software testkits/frameworks. The
+    ideal candidate will be designing and building automated frameworks that validate
+    functional equivalence, performance benchmarks, and data integrity. From leveraging
+    LLMs for unit test generation to building contract testing frameworks, your work
+    will be the safety net for the world’s largest enterprise migrations.</p> <p>This
+    role will be based in our India office in Gurgaon and offers a hybrid working
+    model.</p> <p><strong>The ideal candidate for this role will have</strong></p>
+    <ul> <li>Must have completed a Bachelor’s or Master’s degree in Computer Science,
+    Computer Engineering, or a related field</li> <li>Have a foundation in computer
+    science theory, with competencies in data structures, algorithms, and software
+    design</li> <li>Minimum experience of 6 months to 3 years, internship experience
+    is also accepted</li> <li>Good understanding of relational and document data modeling
+    and hands-on experience with at least one SQL database (Postgres, MySQL, etc)
+    and at least one document database (e.g. MongoDB) is a plus.</li> <li>Curiosity,
+    a positive attitude, and a drive to continue learning.</li> <li>Excellent verbal
+    and written communication skills.</li> </ul> <h3>Position Expectations</h3> <ul>
+    <li>Contribute high-quality, well-tested code to the modernization and framework
+    team and its surrounding services.</li> <li>Collaborate effectively with&nbsp;
+    other engineers, and designers to build and deliver on the product roadmap.</li>
+    <li>Participate actively in code reviews to enforce best practices and patterns.</li>
+    <li>Help troubleshoot and resolve complex technical issues in our distributed
+    systems.</li> <li>Give and solicit feedback on technical design documents and
+    pull requests</li> <li>Perform tasks related to process such as CI/CD, quality,
+    testing, etc&nbsp;</li> </ul> <p>The Application Modernization Platform (AMP)
+    team is dedicated to solving one of the industry''s biggest challenges: transforming
+    rigid, legacy applications that suffer from poor scalability and high operating
+    costs into modern, microservices-based architectures on MongoDB. To accelerate
+    this transition, MongoDB is building a dedicated Platform and Infrastructure team
+    to develop the Application Modernisation Platform and Infrastructure . As we help
+    customers modernize their application and data ecosystems, we face the challenge
+    of deploying complex tooling into highly restrictive client environments and architecting
+    automated verification frameworks to ensure data equivalence.</p> <p>This new
+    team will architect the platform foundation and infrastructure that enables a
+    "build once, run anywhere" model, ensuring our AI-powered modernisation suite
+    operates seamlessly regardless of a client''s security or network constraints.
+    We are looking for engineers to join this high-visibility initiative, where you
+    will solve unique distributed systems puzzles and help shape the future of how
+    global enterprises leverage data and AI.</p> <h3>Success Measures</h3> <p>Within
+    the first three months, you will have:</p> <ul> <li>Familiarize yourself with
+    the MongoDB <a href="../../sdash/3268714">Modernization Infrastructure &amp; Frameworks</a>
+    stack.</li> <li>Set up software development infrastructure (tech stack, build
+    tools, etc) to enable development using the relevant tech stacks</li> <li>Started
+    collaborating with your peers and contributed to code reviews and design reviews.</li>
+    </ul> <p>Within six months, you will have:</p> <ul> <li>Familiarised yourself
+    with the rest of our the application modernization tool stack</li> <li>Worked
+    on large scale feature that spans the entire tech stack</li> <li>Reviewed and
+    contributed to scope and technical design documents</li> </ul> <p>Within 12 months,
+    you will have:</p> <ul> <li>Become a key contributor to our stack, capable of
+    taking on complex features independently.</li> <li>Collaborated effectively with
+    other teams at MongoDB on cross-functional projects</li> </ul> <p>To drive the
+    personal growth and business impact of our employees, we’re committed to developing
+    a supportive and enriching culture for everyone. From employee affinity groups,
+    to fertility assistance and a generous parental leave policy, we value our employees’
+    wellbeing and want to support them along every step of their professional and
+    personal journeys. Learn more about what it’s like to work at MongoDB, and help
+    us make an impact on the world.</p> <h3>About MongoDB</h3> <p>MongoDB is built
+    for change, empowering our customers and our people to innovate at the speed of
+    the market. We have redefined the database for the AI era, enabling innovators
+    to create, transform, and disrupt industries with software. MongoDB’s unified
+    database platform—the most widely available, globally distributed database on
+    the mark'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.331170+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

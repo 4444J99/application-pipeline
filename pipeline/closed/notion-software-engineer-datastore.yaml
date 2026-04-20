@@ -1,0 +1,116 @@
+id: notion-software-engineer-datastore
+name: Notion Software Engineer, Datastore
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Notion
+  url: https://jobs.ashbyhq.com/notion
+  application_url: https://jobs.ashbyhq.com/notion/3fbcf972-52d5-4475-8720-040025c6f7da
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: 'About Us: Notion helps you build beautiful tools for your life’s work.
+    In today''s world of endless apps and tabs, Notion provides one place for teams
+    to get everything done, seamlessly connecting docs, notes, projects, calendar,
+    and email—with AI built in to find answers and automate work. Millions of users,
+    from individuals to large organizations like Toyota, Figma, and OpenAI, love Notion
+    for its flexibility and choose it because it helps them save time and money. In-person
+    collaboration is essential to Notion''s culture. We require all team members to
+    work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor
+    Days. Certain teams or positions may require additional in-office workdays. About
+    The Role: Datastore infrastructure is the backbone of any software product, and
+    at Notion, it plays a critical role in ensuring our millions of users have a fast,
+    reliable, and secure experience. Our Datastore Infra Team builds and maintains
+    the systems that power the databases and caches behind every Notion feature. From
+    scaling our relational and NoSQL databases to designing data migration frameworks,
+    we ensure that Notion’s data layer remains robust and future-proof. As part of
+    the Datastore Infra Team, you’ll have a unique opportunity to shape how Notion
+    manages and scales its foundational data services, enabling innovation across
+    the company. This role is based out of our New York City or San Francisco office.
+    What You''ll Achieve: You will drive the evolution of our datastore infrastructure
+    to meet the needs of over 100 million global users and support the rapid growth
+    of our product and business. This includes ensuring our systems are reliable,
+    efficient, and scalable, while evaluating and integrating new technologies to
+    keep us ahead of emerging challenges. Your work will empower our engineers to
+    build features with confidence, backed by a strong datastore foundation. You will
+    design and deliver a Datastore Platform that simplifies how teams manage and interact
+    with data at scale. From flexible schema management to migrating hundreds of billions
+    of records, you’ll develop tools and frameworks that make it easier for engineers
+    to innovate while maintaining safety, efficiency, and performance. You will develop
+    the skills and confidence to debug live production systems with minimal disruption,
+    whether replacing components or managing failovers. You will participate in an
+    on-call rotation, responding to incidents to uphold service reliability and quickly
+    restore normal operations. You will partner with product engineers and other infra
+    teams to ensure our datastore infrastructure aligns with evolving business needs
+    and product goals Skills You''ll Need to Bring: Familiarity with Datastore Systems:
+    You have experience with large scale relational databases, distributed caches,
+    and NoSQL systems. You understand how to design, scale, and optimize them to support
+    growing business needs. Our team utilizes cloud-based datastore solutions like
+    AWS RDS, DynamoDB, and ElastiCache to power our infrastructure. Systems thinker:
+    You understand distributed systems and can design solutions that account for tradeoffs
+    like consistency, latency, and scalability. Pragmatic problem-solver: You prioritize
+    business impact and understand the balance between craft, speed, and long-term
+    maintainability. You’re opinionated but not ideological, and you learn new technologies
+    as you go. Ownership and initiative: You thrive in a fast-moving, unstructured
+    environment and are comfortable taking ownership of ambiguous problems. You act
+    with a bias toward action and focus on results. Customer Empathy: You excel at
+    collaborating across teams, offering guidance and solutions to unblock engineers
+    and support them in building reliable systems. With empathy at the core of your
+    approach, you focus on addressing the needs of those who depend on datastore infrastructure.
+    You don’t need to be an AI expert, but you’re curious and willing to adopt AI
+    tools to work smarter and deliver better results Nice to Haves: Experience with
+    change data capture tools like Debezium for real-time data replication and migrations.
+    Experience working closely with application developers, understanding their workflows,
+    and building datastore solutions that address their challenges, such as schema
+    changes, performance, and data access patterns. We hire talented and passionate
+    people from a variety of backgrounds because we want our global employee base
+    to represent the wide diversity of our customers. If you’re excited about a role
+    but your past experience doesn’t align perfectly with every bullet point listed
+    in the job description, we still encourage you to apply. If you’re a builder at
+    heart, share our company values, and enthusiastic about making software toolmaking
+    ubiquitous, we want to hear from you. Notion is proud to be an equal opportunity
+    employer. We do not discriminate in hiring or any employment decision based on
+    race, color, religion, national or'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.725664+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

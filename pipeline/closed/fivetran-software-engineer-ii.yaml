@@ -1,0 +1,113 @@
+id: fivetran-software-engineer-ii
+name: Fivetran Software Engineer II
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Fivetran
+  url: https://boards.greenhouse.io/fivetran
+  application_url: https://www.fivetran.com/careers/job?gh_jid=7666068003
+  portal: greenhouse
+  location: Bengaluru, Karnataka, India, APAC
+  location_class: international
+  description: '<div class="content-intro"><p>From Fivetran’s founding until now,
+    our mission has remained the same: to make access to data as simple and reliable
+    as electricity. With Fivetran, customer data arrives in their warehouses, canonical
+    and ready to query, with no engineering or maintenance required. We’re proud that
+    more organizations continue to leverage our technology every day to become truly
+    data-driven.</p></div><p><span style="font-size: 10pt;"><strong>About the Role</strong></span></p>
+    <p><span style="font-size: 10pt;">We’re looking for a Software Engineer for our
+    data pipeline service to build and work on the data pipeline that moves data from
+    various sources to the data warehouse.The work is very diverse – all the way from
+    patching software to building new connectors operating on our global Kubernetes
+    compute cluster.You will ensure the technical excellence of your team and owned
+    services, by contributing to the code, reviewing code, contributing to architectural
+    design, and mentoring your junior colleagues.</span></p> <p><span style="font-size:
+    10pt;"><span style="font-family: arial, helvetica, sans-serif;">This is a full-time
+    position based out of our Bangalore office. Our hybrid work model offers a blend
+    of remote flexibility and in-person collaboration, including two days in the office
+    each week to connect and build as a team</span><strong><span style="font-family:
+    arial, helvetica, sans-serif;">.</span></strong></span></p> <p><span style="font-size:
+    10pt;"><strong>Technologies You’ll Use</strong></span></p> <p>&nbsp;</p> <ul>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;">Java, SQL, Kubernetes,
+    Docker, AWS, GCP, CircleCI</span></li> </ul> <p><span style="font-size: 10pt;"><strong>What
+    You’ll Do</strong></span></p> <p>&nbsp;</p> <ul> <li style="font-size: 10pt;"><span
+    style="font-size: 10pt;">Work on core features of the product</span></li> <li
+    style="font-size: 10pt;"><span style="font-size: 10pt;">Write connectors to integrate
+    with source systems</span></li> <li style="font-size: 10pt;"><span style="font-size:
+    10pt;">Contribute to feature enhancements and bug fixes</span></li> </ul> <p><span
+    style="font-size: 10pt;"><strong>Skills We’re Looking For</strong></span></p>
+    <ul> <li style="font-size: 10pt;"><span style="font-size: 10pt;">Strong technical
+    and problem-solving skills with 3+ years of professional experience writing code
+    in the production environment</span></li> <li style="font-size: 10pt;"><span style="font-size:
+    10pt;">Experience in reliable distributed systems, with an emphasis on high-volume
+    data management platforms that operate under strict SLAs</span></li> <li style="font-size:
+    10pt;"><span style="font-size: 10pt;">Write well-structured code following programming
+    best practices</span></li> <li style="font-size: 10pt;"><span style="font-size:
+    10pt;">Specify a software design to satisfy project requirements</span></li> <li
+    style="font-size: 10pt;"><span style="font-size: 10pt;">Expertise in working with
+    Java, popular Cloud platforms, Cloud-based APIs, databases</span></li> <li style="font-size:
+    10pt;"><span style="font-size: 10pt;">Work well in a team</span></li> <li style="font-size:
+    10pt;"><span style="font-size: 10pt;">Can troubleshoot problems with existing
+    code</span></li> </ul> <p><span style="font-family: arial, helvetica, sans-serif;
+    font-size: 10pt; color: rgb(0, 0, 0);">#<span style="font-family: arial, helvetica,
+    sans-serif;">LI-HYBRID</span></span></p> <p><span style="font-family: arial, helvetica,
+    sans-serif; font-size: 10pt; color: rgb(0, 0, 0);">#LI-DB1</span></p><div class="content-conclusion"><p>&nbsp;</p>
+    <p class="p-rich_text_section" style="line-height: 1.3;"><strong data-stringify-type="bold">Perks
+    and Benefits</strong></p> <ul> <li>100% employer-paid medical insurance<strong>*</strong></li>
+    <li>Generous paid time-off policy (PTO), plus paid sick time, inclusive parental
+    leave policy, holidays, and volunteer days off</li> <li>RSU stock grants*</li>
+    <li>Professional development and training opportunities</li> <li>Company virtual
+    happy hours, free food, and fun team-building activities</li> <li>Monthly cell
+    phone stipend</li> <li>Access to an innovative mental health support platform
+    that offers personalized care and resources in areas such as: therapy, coaching,
+    and self-guided mindfulness exercises for all covered employees and their covered
+    dependents.</li> </ul> <p style="line-height: 1.3;"><em><strong>*</strong>May
+    vary by country and worker type - please reach out to your recruiter for more
+    information</em></p> <p style="line-height: 1.3;"><em>Click <a href="https://drive.google.com/drive/folders/1CdawUwjo1Q1B7ghZJ_owdmmHB8VtqhBu?usp=sharing"
+    target="_blank">here</a> to learn more about Fivetran''s Benefits by Region.</em></p>
+    <hr> <p style="line-height: 1.3;">We’re honored to be <a class="c-link" href="https://fivetran.com/blog/hvr-acquisition-series-d"
+    target="_blank" data-stringify-link="https://fivetran.com/blog/hvr-acquisition-series-d"
+    data-sk'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.030086+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

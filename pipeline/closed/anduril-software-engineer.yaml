@@ -1,0 +1,115 @@
+id: anduril-software-engineer
+name: Anduril Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5036384007?gh_jid=5036384007
+  portal: greenhouse
+  location: Dublin, Dublin, Ireland
+  location_class: international
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3><br>ABOUT THE TEAM</h3> <p>The
+    Voyager team in Anduril Industries is an engineering and design division with
+    a vast experience in developing innovative computing and communications solutions
+    for the network edge. The team specializes in integrating enterprise networking
+    capabilities from global IT leaders with purpose-built hardware and software platforms
+    designed to meet market demands for the most stringent of environmental requirements.</p>
+    <p><strong>ABOUT THE ROLE</strong></p> <p>We are seeking a Software Engineer to
+    join our Software team in Dublin. This role will involve working on a range of
+    projects including low-power compute modules, Baseboard Management Controllers
+    (BMC), and IP routers. Candidate will be working on Linux-based embedded OSes,
+    embedded applications and BSPs. An ability to learn new technologies quickly and
+    a desire to work in challenging technical roles are key requirements. Anduril
+    has a collaborative culture with plenty of opportunities for ownership. As a member
+    of the team, your decisions today will have a large impact on the company now
+    and into the future, as well as on our customers.</p> <p><strong>Key Responsibilities</strong></p>
+    <ul> <li>Develop high-quality software solutions based on technical requirements</li>
+    <li>Collaborate with cross-functional teams to define, design, and ship new features</li>
+    <li>Maintain existing codebase and troubleshoot issues as they arise</li> <li>Participate
+    in code reviews to ensure best practices are being followed</li> <li>Collaborating
+    with development and QA teams using SCRUM/Agile methodologies</li> </ul> <p><strong>Required
+    Qualifications and experience</strong></p> <ul> <li>Minimum 3 years relevant previous
+    experience</li> <li>Bachelor''s degree in Computer Science or related field</li>
+    <li>Proficiency in multiple programming languages; Python, C/C++, Bash/Shell scripting</li>
+    <li>Strong understanding of software development lifecycle</li> <li>Good Networking
+    knowledge - IPv4/IPv6, NAT, VPN</li> <li>Experience working with virtualisation
+    and container technologies e.g. KVM, Docker.</li> <li>Experience with underlying
+    linux systems such as systemd, dbus, linux network stack.</li> <li>Experience
+    with software development for linux</li> <li>Strong problem-solving skills</li>
+    <li>Excellent communication skills</li> <li>Ability to document work clearly</li>
+    <li>Ability to work independently with minimal supervision</li> </ul> <p><strong>Preferred
+    Qualifications</strong></p> <ul> <li>Experience with build tools like yocto or
+    buildroot</li> <li>Experience with kernel debugging.</li> <li>GDB experience.</li>
+    </ul> <p>&nbsp;</p> <p>&nbsp;</p> <p>The salary range for this role is an estimate
+    based on a wide range of compensation factors, inclusive of base salary only.
+    Actual salary offer may vary based on (but not limited to) work experience, education
+    and/or training, critical skills, and/or business considerations. Highly competitive
+    equity grants are included in the majority of full time offers; and are considered
+    part of Anduril''s total compensation package. Additionally, Anduril offers top-tier
+    benefits for full-time employees, including:&nbsp;</p> <p>&nbsp;</p> <p><strong>Benefits</strong></p>
+    <ul> <li>Matched pension contributions up to 10%</li> <li>An annual contribution
+    toward your private health insurance for you and your dependents.&nbsp;</li> <li>Income
+    Protection: Anduril covers life and disability insurance for all employees.&nbsp;</li>
+    <li>Generous time off: Highly competitive PTO plans with&nbsp;a holiday hiatus
+    in December. Caregiver &amp; Wellness Leave is available to care for family members,
+    bond with a new baby, or address your own medical needs.&nbsp;</li> <li>Family
+    Planning &amp; Parenting Support:&nbsp;Coverage for fertility treatments (e.g.,
+    IVF, preservation), adoption, and gestational carriers, along with resources to
+    support you and your partner from planning to parenting.&nbsp;</li> <li>Mental
+    Health Resources:&nbsp;Access free mental health resources 24/7, including therapy
+    and life coaching. Additional work-life services, such as legal and financial
+    support, are also available.&nbsp;</li> <li>Professional Development:&nbsp;Annual
+    reimbursement for profession'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:34.056345+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

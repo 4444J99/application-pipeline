@@ -1,0 +1,125 @@
+id: affirm-senior-software-engineer-full-stack-zero-to-one-labs
+name: Affirm Senior Software Engineer, Full Stack (Zero to One Labs)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Affirm
+  url: https://boards.greenhouse.io/affirm
+  application_url: https://job-boards.greenhouse.io/affirm/jobs/7686804003
+  portal: greenhouse
+  location: Remote US
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><p>Affirm is reinventing credit to make\
+    \ it more honest and friendly, giving consumers the flexibility to buy now and\
+    \ pay later without any hidden fees or compounding interest.</p></div><p>Zero\
+    \ To One (ZT1) is Affirm\u2019s 0 -&gt; 1 innovation lab, focused on turning bold\
+    \ ideas into validated new businesses. Operating outside the standard Product\
+    \ and Engineering structure, ZT1 is built for speed, autonomy, and decisive execution.\
+    \ We run fast, hypothesis-driven experiments with a clear goal: prototype quickly,\
+    \ generate real signals, and drive explicit \u201Ckill or scale\u201D decisions\
+    \ on high-impact opportunities, with AI as a core enabler across the stack.</p>\
+    \ <p>As an engineer on ZT1, you will work in a small, highly empowered, AI-native\
+    \ team alongside product managers and cross-functional partners, with direct exposure\
+    \ to senior leadership. You will not just build systems, you will help shape experiments,\
+    \ define technical approaches, and influence product direction. Work happens in\
+    \ rapid sprint cycles, where ideas quickly move from concept to AI-powered prototypes\
+    \ and real-world testing.</p> <p>Engineers on this team are expected to be comfortable\
+    \ leveraging AI-first tools and approaches, including AI-assisted development,\
+    \ agentic workflows, automation, and rapid prototyping. You should have an eye\
+    \ for product and design, and be able to quickly translate ideas into functional,\
+    \ AI-enabled prototypes that can be tested with users or stakeholders.</p> <p>This\
+    \ role is ideal for engineers who thrive in ambiguity, move quickly, and take\
+    \ ownership end to end in an AI-centric environment. You will balance speed with\
+    \ sound engineering judgment, contributing to both early prototypes and scalable\
+    \ AI-driven solutions when ideas prove viable. If you enjoy building from scratch\
+    \ and seeing your work directly impact company strategy, ZT1 offers a uniquely\
+    \ high-leverage environment.<br><br><strong>What You'll Do</strong></p> <p>\xB7\
+    \ You will be responsible for owning and delivering quarterly goals for your team,\
+    \ leading engineers on your team through ambiguity to solve open-ended problems,\
+    \ and ensuring that everyone is supported throughout delivery.<br>\xB7 You will\
+    \ support your peers and stakeholders in the product development lifecycle by\
+    \ collaborating with product management, design &amp; analytics by participating\
+    \ in ideation, articulating technical constraints, and partnering on decisions\
+    \ that properly consider&nbsp; &nbsp; &nbsp; risks and trade-offs.<br>\xB7 You\
+    \ will proactively identify project, process, technology or business issues, advocate\
+    \ for them, and lead in solving them.<br>\xB7 You will support the operations\
+    \ and availability of your team\u2019s artifacts by creating and monitoring metrics,\
+    \ escalating when needed, and supporting \u201Ckeep the lights on\u201D &amp;\
+    \ on-call efforts.<br>\xB7 You will foster a culture of quality and ownership\
+    \ on your team by setting or improving code review and design standards for your\
+    \ team, and advocating for them beyond your team through your writing and tech\
+    \ talks.<br>\xB7 You will help develop talent on your team by providing feedback\
+    \ and guidance, and leading by example.</p> <p><br><strong>What We Look For</strong></p>\
+    \ <p>\xB7 You have a total of 4+ years of experience as a software engineer.<br>\xB7\
+    \ You are experienced in designing, developing and launching backend systems at\
+    \ scale technologies like Python, Kotlin, AWS, MySQL, and Kubernetes.<br>\xB7\
+    \ You have experience shipping web apps using declarative UI frameworks like React\
+    \ or Vue.<br>\xB7 You have experience leveraging AI tools, agentic coding workflows,\
+    \ and automation to accelerate development, prototyping, and problem solving.</p>\
+    \ <p>\xB7 You have strong experience leveraging AI tools, agentic coding workflows,\
+    \ and automation to accelerate development, prototyping, and problem solving.<br>\xB7\
+    \ You have experience defining a technical plan for the delivery of a significant\
+    \ feature or system component with an elegant, simple and extensible design. You\
+    \ write high quality code that is easily understood and used by others.<br>\xB7\
+    \ You are proficient at making significant changes in a large code base, and have\
+    \ developed a suite of tools and practices that enable you and your team to do\
+    \ so safely.<br>\xB7 Your experience demonstrates that you take ownership of your\
+    \ growth, proactively seeking feedback from your team, your manager, and your\
+    \ stakeholders.<br>\xB7 You have strong verbal and written communication skills\
+    \ that support effective collaboration with our global engineering team.<br>\xB7\
+    \ This position requires either equivalent practical experience or a Bachelor\u2019\
+    s degree in a related field.<br><br></p> <p class=\"p-small\" data-pm-slice=\"\
+    1 1 []\"><strong><span data-formula-id=\"UiWCfEIrRy\" data-error=\"false\" data-placeholder=\"\
+    false\" data-loading=\"false\" data-recalculating=\"false\" data-inactive=\"false\"\
+    >Base Pay Grade - N</span></strong></p> <p class=\"p-small\"><strong><span data-formula-id=\"\
+    HGrSJuA6kN\" data-error=\"false\" data-placeholder=\"false\" data-loading=\"fals"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-03'
+  posting_date: '2026-04-02'
+  date_source: first_published
+  date_added: '2026-04-03'
+  discovered: '2026-04-03T10:15:35.534108+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"
+submission.variant_ids.cover_letter: variants/cover-letters/affirm-senior-software-engineer-full-stack-zero-to-one-labs.md
+submission.blocks_used.identity: identity/2min
+submission.blocks_used.methodology: methodology/ai-conductor
+submission.materials_attached:
+- resumes/base/documentation-engineer-resume.html
+- resumes/base/independent-engineer-resume.html

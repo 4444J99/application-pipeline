@@ -1,0 +1,116 @@
+id: sentry-developer-support-engineer-agentic-ops-ai
+name: Sentry Developer Support Engineer (Agentic Ops & AI)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sentry
+  url: https://jobs.ashbyhq.com/sentry
+  application_url: https://jobs.ashbyhq.com/sentry/0580bfa2-ee00-41c9-94b8-df3d3b4e7fcc
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: 'About Sentry Bad software is everywhere, and we’re tired of it. Sentry
+    is on a mission to help developers write better software faster so we can get
+    back to enjoying technology. With more than $217 million in funding and 100,000+
+    organizations that believe we’re on to something, we''re building performance
+    and error monitoring tools that help companies like Disney, Microsoft, and Atlassian
+    spend less time fixing bugs and more time building products. Sentry embraces a
+    hybrid work model across our global hubs, with Mondays, Tuesdays, and Thursdays
+    set as in-office anchor days to encourage meaningful collaboration. If you like
+    to selfishly build things that make your digital life better, come help us build
+    the next generation of software monitoring tools. About the role At Sentry, support
+    is an engineering discipline. Our customers are developers building the future
+    of software, and they deserve answers that go deeper than a knowledge base link.
+    We are redefining the standard of technical support by combining deep human expertise
+    with advanced AI agents. We need you to not just solve complex technical issues,
+    but to architect the systems that help us scale that expertise to millions of
+    developers. Sentry Support Engineers don''t just clear queues; they are orchestrators.
+    You will engage with our users across GitHub, Discord, and our support systems,
+    while also acting as the product owner for our AI Agents. You ensure that when
+    a developer asks a complex question, our AI has the right context, the right data,
+    and a seamless "Human-in-the-Loop" path to you when deep expertise is required.
+    We’re looking for a coder who is passionate about both customer experience and
+    the cutting edge of Agentic Operations. You will drive success by scaling our
+    support through AI, while personally stepping in as a strategic consultant for
+    the most nuanced architectural challenges. In this role you will Master the Sentry
+    Ecosystem Become a Platform Expert: Develop deep authority on Sentry’s features
+    to guide customers through complex debugging workflows. Resolve Technical Inquiries:
+    Answer inbound support requests with a focus on teaching and enabling developers,
+    not just closing tickets. Troubleshoot SDK Implementations: Go beyond the UI to
+    help developers instrument Sentry’s SDKs within their specific codebases and frameworks.
+    Manage Bugs & Escalations: Triage and reproduce product bugs, serving as the bridge
+    between customers and our Engineering teams. Pioneer AI-First Support Train our
+    AI Agents: Manage the performance of our support bots (Triage, Billing, and Technical),
+    ensuring they provide accurate, high-quality assistance. Curate "AI-Ready" Knowledge:
+    Write and structure documentation specifically optimized for RAG (Retrieval-Augmented
+    Generation), ensuring our AI can easily find and use the right information. Design
+    Human-in-the-Loop Flows: Define the logic for when an AI should hand off to a
+    human, ensuring context is preserved so customers never have to repeat themselves.
+    Monitor & Refine: Review AI responses for accuracy or hallucinations, creating
+    examples of "perfect answers" to continuously fine-tune the model’s performance.
+    Handle Complex "Edge Cases": Step in as the expert "Solutions Architect" for gray-area
+    technical issues where AI reaches its limit. Drive Automation Strategy: Focus
+    on solving problems at the source—building systems and content that resolve issues
+    before a human ever needs to intervene. You’ll love this job if you You’re an
+    AI-First Tinkerer: You believe things should "just work," and you’re excited to
+    use MCP (Model Context Protocol) to connect AI agents to our internal tools. You
+    Value Evidence-Based Support: You prefer looking at data trends over anecdotal
+    evidence. You’re a Developer Advocate: You have a passion for developer tools
+    and want to guide the industry on how AI and Humans co-exist in a technical ecosystem.
+    You’re Results-Driven: You aren''t satisfied with "closing tickets"—you want to
+    build a system that scales infinitely. Qualifications 4+ years of experience in
+    technical support or engineering, with a track record of solving high-complexity
+    SaaS problems. Strong Coding Foundations: Proficiency in Python, JavaScript, or
+    Ruby. You should be comfortable reading SDK source code and reproducing bugs.
+    Modern Dev Stack Knowledge: Deep understanding of CI/CD, APIs, microservices,
+    and observability/monitoring. AI Literacy: Practical familiarity with the AI stack:
+    You understand how RAG works, why Context Windows matter, and how to debug a System
+    Prompt. Exceptional Communication: The ability to explain complex architectural
+    concepts to a human and write precise "system instructions" for an AI. Bonus qualifications
+    AI Ops Experience: Prior experience managing Vector Databases or fine-tuning LLMs
+    for production use. Open Source Contributor: Active presence on GitHub or experience
+    maintaining open-source repositories. Former Software Developer: You’ve spent
+    time in the trenches as a full-time '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.231969+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

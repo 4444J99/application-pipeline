@@ -1,0 +1,115 @@
+id: elastic-senior-software-engineer-ci-observability
+name: Elastic Senior Software Engineer (CI) - Observability
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Elastic
+  url: https://boards.greenhouse.io/elastic
+  application_url: https://jobs.elastic.co/jobs?gh_jid=7525644&gh_jid=7525644
+  portal: greenhouse
+  location: Spain
+  location_class: international
+  description: '<div class="content-intro"><p>Elastic, the Search AI Company, enables
+    everyone to find the answers they need in real time, using all their data, at
+    scale — unleashing the potential of businesses and people. The Elastic Search
+    AI Platform, used by more than 50% of the Fortune 500, brings together the precision
+    of search and the intelligence of AI to enable everyone to accelerate the results
+    that matter. By taking advantage of all structured and unstructured data — securing
+    and protecting private information more effectively — Elastic’s complete, cloud-based
+    solutions for search, security, and observability help organizations deliver on
+    the promise of AI.</p></div><h3><strong>What is The Role</strong></h3> <p>This
+    role focuses on the software build, test, and release processes for Elastic Agent.
+    This role extends from the CI/CD systems which run automated test and release
+    processes to the build tooling which underpins a complex Golang project.</p> <h3><strong>What
+    You Will Be Doing</strong></h3> <ul> <li>Ensuring that the test framework for
+    Elastic Agent consistently delivers accurate test results to developers quickly
+    and cost-effectively.</li> <li>Produce automated CI analytics to quantify business
+    impact, surface bottlenecks, and prioritize improvements.</li> <li>Implement a
+    curated testing strategy, manage flaky tests, and maintain an up to date support
+    matrix.</li> <li>Promote the use of container-based builds and standardized tooling
+    in the Elastic Agent CI</li> <li>Ensure proper access controls, secret management,
+    dependency security checks, and software supply chain security best practices,
+    while aligning with compliance requirements.</li> </ul> <h3>What You Bring</h3>
+    <ul> <li><strong>Communication</strong>: You will have the ability to get your
+    point across exceptionally well in both written and spoken communication and to
+    include others in your decision-making process.</li> <li><strong>Emotional intelligence:&nbsp;</strong>You''ll
+    have a good understanding of how to work on a distributed team of engineers around
+    the world and you''ll be able to put yourself in their shoes and see the world
+    from their point of view.</li> <li><strong>Security-minded:&nbsp;</strong>You''ll
+    be able to think creatively and throughly about the kind of work we should do
+    to keep our information and data secure. You should be very meticulous and conscious
+    of the fact that small mistakes can have big consequences.</li> <li><strong>Experienced:&nbsp;</strong>You
+    have demonstrated ability in Golang with a special focus on build and test processes
+    for complex projects. You have experience with Buildkite, especially on projects
+    with complex cross-platform test and deployment pipelines.</li> <li><strong>Data-driven:&nbsp;</strong>When
+    faced with a decision, among your first thoughts should be the kind of data you
+    need to make an informed choice and you should be relentless in your search for
+    high-quality data to refine and evaluate the decisions you make.</li> </ul><div
+    class="content-conclusion"><h2><strong>Additional Information - We Take Care of
+    Our People</strong></h2> <p>As a distributed company, diversity drives our identity.
+    Whether you’re looking to launch a new career or grow an existing one, Elastic
+    is the type of company where you can balance great work with great life. Your
+    age is only a number. It doesn’t matter if you’re just out of college or your
+    children are; we need you for what you can do.</p> <p>We strive to have parity
+    of benefits across regions and while regulations differ from place to place, we
+    believe taking care of our people is the right thing to do.</p> <ul> <li>Competitive
+    pay based on the work you do here and not your previous salary</li> <li>Health
+    coverage for you and your family in many locations</li> <li>Ability to craft your
+    calendar with flexible locations and schedules for many roles</li> <li>Generous
+    number of vacation days each year</li> <li>Increase your impact - We match up
+    to $2000 (or local currency equivalent) for financial donations and service</li>
+    <li>Up to 40 hours each year to use toward volunteer projects you love</li> <li>Embracing
+    parenthood with minimum of 16 weeks of parental leave</li> </ul> <p>Different
+    people approach problems differently. We need that. Elastic is an equal opportunity
+    employer and is committed to creating an inclusive culture that celebrates different
+    perspectives, experiences, and backgrounds. Qualified applicants will receive
+    consideration for employment without regard to race, ethnicity, color, religion,
+    sex, pregnancy, sexual orientation, gender perception or identity, national origin,
+    age, marital status, protected veteran status, disability status, or any other
+    basis protected by federal, state or local law, ordinance or regulation.</p> <p>We
+    welcome individuals with disabilities and strive to create an accessible and inclusive
+    experience for all individuals. To request an accommodation during the application
+    or the recruiting process, please email <a hr'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.576500+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,115 @@
+id: robinhood-senior-software-engineer-ai-infrastructure
+name: Robinhood Senior Software Engineer, AI Infrastructure
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7782697?t=gh_src=&gh_jid=7782697
+  portal: greenhouse
+  location: Menlo Park, CA
+  location_class: us-onsite
+  description: <div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><h2><strong>About the team + role</strong></h2>
+    <p>We are building an elite team, applying frontier technologies to the world’s
+    biggest financial problems. We’re looking for bold thinkers. Sharp problem-solvers.
+    Builders who are wired to make an impact. Robinhood isn’t a place for complacency,
+    it’s where ambitious people do the best work of their careers. We’re a high-performing,
+    fast-moving team with ethics at the center of everything we do. Expectations are
+    high, and so are the rewards.</p> <p>The AI Infrastructure team’s mission is to
+    provide a robust, agile, and centralized AI platform—empowering teams across Robinhood
+    to rapidly build, deploy, and iterate on high-quality Machine Learning (ML) and
+    Generative AI (GenAI) applications at scale.</p> <p>As a Senior Software Engineer,
+    you’ll help evolve our ML platform and services to support scalable, reliable,
+    and secure model development and deployment. You’ll work closely with Data Scientists
+    and Applied ML Engineers to build foundational systems that accelerate experimentation,
+    improve model observability, and drive business impact through AI.</p> <p><strong>This
+    role is based in our Menlo Park, CA or Bellevue, WA office(s), with in-person
+    attendance expected at least 3 days per week.&nbsp;</strong></p> <p>At Robinhood,
+    we believe in the power of in-person work to accelerate progress, spark innovation,
+    and strengthen community. Our office experience is intentional, energizing, and
+    designed to fully support high-performing teams.</p> <h2><strong>What you’ll do</strong></h2>
+    <ul> <li>Design, build, and maintain scalable systems for deploying, monitoring,
+    and managing Machine Learning models in production.</li> <li>Partner with ML practitioners
+    to streamline workflows, integrate internal ML libraries, and optimize model performance.</li>
+    <li>Contribute to the development and scaling of our feature store, enabling efficient
+    feature retrieval across real-time and batch use cases.</li> <li>Implement robust
+    observability for model performance, data pipelines, and feature freshness.</li>
+    <li>Manage and optimize cloud compute resources (CPU/GPU) to support cost-effective
+    training and inference across AWS.</li> </ul> <h2><strong>What you bring</strong></h2>
+    <ul> <li>4+ years of software engineering experience, ideally within ML infrastructure,
+    data engineering, or model operations.</li> <li>Hands-on experience with model
+    serving, distributed systems, or production ML workflows.</li> <li>Familiarity
+    with modern ML infrastructure tools (e.g., Ray, Kubeflow, SageMaker, TensorFlow
+    Serving, Triton).</li> <li>Strong proficiency in Python, C++, or similar languages,
+    and experience with ML frameworks like TensorFlow or PyTorch.</li> <li>Hands-on
+    experience with large-scale search systems, including embedding models, vector
+    databases, and distributed retrieval engines, using platforms like Qdrant, ChromaDB,
+    Elasticsearch etc. with dense vector search capabilities.</li> <li>A collaborative
+    mindset with an interest in building reliable platforms that support company-wide
+    impact.</li> </ul> <h2><strong>What we offer</strong></h2> <ul> <li>Challenging,
+    high-impact work to grow your career</li> <li>Performance driven compensation
+    with multipliers for outsized impact, bonus programs, equity ownership, and 401(k)
+    matching</li> <li>Best in class benefits to fuel your work, including 100% paid
+    health insurance for employees with 90% coverage for dependents</li> <li>Lifestyle
+    wallet - a highly flexible benefits spending account for wellness, learning, and
+    more</li> <li>Employer-paid life &amp; disability insurance, fertility benefits,
+    and mental health benefits</li> <li>Time off to recharge including company holidays,
+    paid time off, sick time, parental leave, and more!</li> <li>Exceptional office
+    experience with catered meals, events, and comfortable workspaces.</li> </ul><div
+    class="content-pay-transparency"><div class="pay-input"><div class="description"><p><strong>In
+    addition to the base pay range listed below, this role is also eligible for bonus
+    opportunities + equity + benefits.</strong></p> <p>Base pay for the successful
+    applicant will depend on a variety of job-related factors, which may include education,
+    training, experience, location, business needs, or market demands. The expected
+    base pay range for this role is based on the location where the work will be performed
+    and is aligned to one of 3 compensation zones. For other locations not listed,
+    compensa
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-10'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.119793+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

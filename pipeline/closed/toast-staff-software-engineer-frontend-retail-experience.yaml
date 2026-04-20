@@ -1,0 +1,114 @@
+id: toast-staff-software-engineer-frontend-retail-experience
+name: 'Toast Staff Software Engineer - Frontend, Retail Experience '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Toast
+  url: https://boards.greenhouse.io/toast
+  application_url: https://careers.toasttab.com/jobs?gh_jid=7749128
+  portal: greenhouse
+  location: Dublin, Ireland
+  location_class: international
+  description: '<p>Toast creates technology to help restaurants and local businesses
+    succeed in a digital world, helping business owners operate, increase sales, engage
+    customers, and keep employees happy.&nbsp;The Toast Retail team is pioneering
+    how Toast serves businesses beyond the restaurant space. We’re focused on building
+    powerful, intuitive tools that meet the unique needs of modern retailers — inventory
+    management, supplier relationships, purchase orders, and more. As a team, we operate
+    like a startup within Toast, balancing greenfield development with the scale of
+    a mature platform.</p> <p>The Retail Experience (RXP) squad is a high-impact team
+    focused on transforming Toast into a world-class experience for retailers. While
+    retail adoption has grown significantly, we consistently hear that Toast doesn’t
+    always feel like it was built for retail.RXP’s mission is to close that gap. We
+    identify friction across the retail customer journey — from onboarding to daily
+    operations — and deliver cohesive, retail-first improvements across Toast’s ecosystem.</p>
+    <p>Our work spans the Retail module and the broader Toast platform, ensuring that
+    retail customers feel understood and supported from day one through long-term
+    success.</p> <p>&nbsp;</p> <p><strong>A day in the life (Responsibilities)</strong></p>
+    <p>As a <strong>Staff Software Engineer</strong> on the Retail Experience team,
+    you’ll play a leading role in designing and developing intuitive, performant,
+    and delightful user experiences. You’ll work closely with product managers, designers,
+    and other engineers to bring new features to life. If you love working in a fast-paced
+    environment, driving innovation, and seeing your work make a real impact — we’d
+    love to meet you. Here’s what you’ll be doing:</p> <ul> <li><strong>Architect
+    and implement</strong> modern, high-quality frontend experiences that feel intentionally
+    designed for retail businesses.</li> <li><strong>Collaborate deeply</strong> with
+    Product, Design, and Platform teams to deliver cohesive improvements across a
+    broad cross-section of Toast’s ecosystem.</li> <li><strong>Mentor teammates</strong>,
+    contribute to technical decisions, and help shape a strong engineering culture.</li>
+    <li><strong>Continuously improve</strong> UI systems and patterns, enabling rapid
+    development of scalable features.</li> <li><strong>Stay curious</strong>, explore
+    emerging technologies, and find new ways to elevate the Toast Retail experience.</li>
+    </ul> <p>&nbsp;</p> <p><strong>What you''ll need to thrive (Requirements)</strong></p>
+    <ul> <li>8-10+ years of experience building modern web applications, with a strong
+    frontend focus.</li> <li>Strong proficiency with <strong>React</strong>, <strong>TypeScript</strong>,
+    and web standards (HTML5, CSS3).</li> <li>Solid understanding of <strong>component
+    architecture</strong>, <strong>state management</strong>, and <strong>design systems</strong>.</li>
+    <li>Experience collaborating with cross-functional teams and shipping user-facing
+    features.</li> <li>Familiarity with <strong>REST APIs</strong>, <strong>GraphQL</strong>,
+    and <strong>testing frameworks</strong> (Jest, Playwright, etc.).</li> <li>Passion
+    for clean, maintainable code.</li> <li>Comfortable working in a fast-moving team,
+    balancing quality and speed.</li> <li>Bonus: Experience in Retail software, or
+    designing systems for new customer vertical</li> </ul> <p data-pm-slice="1 1 []"><strong>***
+    This is a hybrid role requiring in-office presence two days per week ***</strong></p>
+    <p data-pm-slice="1 1 []"><strong>#LI-HYBRID</strong></p> <p data-pm-slice="1
+    1 []"><strong>#BI-Hybrid</strong></p> <p data-pm-slice="1 1 []">&nbsp;</p> <p
+    data-pm-slice="1 1 []"><strong>AI at Toast</strong></p> <p>At Toast, one of our
+    company values is that we''re hungry to build and learn. We believe learning new
+    AI tools empowers us to build for our customers faster, more independently, and
+    with higher quality. We provide these tools across all disciplines, from Engineering
+    and Product to Sales and Support, and are inspired by how our Toasters are already
+    driving real value with them. The people who thrive here are those who embrace
+    changes that let us build more for our customers; it’s a core part of our culture.</p>
+    <p data-pm-slice="1 1 []"><strong>Our Total Rewards Philosophy&nbsp;<br></strong>We
+    strive to provide competitive compensation and benefits programs that help to
+    attract, retain, and motivate the best and brightest people in our industry. Our
+    total rewards package goes beyond great earnings potential and provides the means
+    to a healthy lifestyle with the flexibility to meet Toasters’ changing needs.
+    Learn more about our benefits at&nbsp;<a class="c-link" href="https://careers.toasttab.com/toast-benefits"
+    target="_blank" data-stringify-link="https://careers.toasttab.com/toast-benefits"
+    data-sk="tooltip_parent" data-remove-tab-index="true">https://careers.toasttab.com/toast-benefits</a>.</p><div
+    class="content-conclusion"><p><strong>How Toast Use'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.422016+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

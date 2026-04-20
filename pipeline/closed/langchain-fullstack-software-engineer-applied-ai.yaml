@@ -1,0 +1,110 @@
+id: langchain-fullstack-software-engineer-applied-ai
+name: LangChain Fullstack Software Engineer, Applied AI
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: LangChain
+  url: https://jobs.ashbyhq.com/langchain
+  application_url: https://jobs.ashbyhq.com/langchain/c75915ba-a32b-4e17-873d-19b47564170d
+  portal: ashby
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: 'About Us: At LangChain, our mission is to make intelligent agents
+    ubiquitous. We build the foundation for agent engineering in the real world, helping
+    developers move from prototypes to production-ready AI agents that teams can rely
+    on. What began as widely adopted open-source tools has grown into a platform for
+    building, evaluating, deploying, and operating agents at scale. Today, LangChain,
+    LangGraph, LangSmith, and Agent Builder are used by teams shipping real AI products
+    across startups and large enterprises. Millions of developers trust LangChain
+    to power AI teams at companies like Replit, Clay, Coinbase, Workday, Lyft, Cloudflare,
+    Harvey, Rippling, Vanta, and 35% of the Fortune 500 . With $125M raised at Series
+    B from IVP, Sequoia, Benchmark, CapitalG, and Sapphire Ventures , we’re at a stage
+    where we’re continuing to develop new products, growth is accelerating, and all
+    team members have meaningful impact on what we build and how we work together.
+    LangChain is a place where your contributions can shape how this technology shows
+    up in the real world. About The Role: We’re hiring Applied AI Engineers to help
+    us build AI agents that power every part of LangChain from Marketing and GTM to
+    Recruiting, Support, Internal Tools, and our Core Product. In this role you will
+    own a problem space and work closely with that function to design, build, and
+    deploy production-grade agents, workflows, and applications that transform how
+    we operate. Your work will directly accelerate LangChain’s mission to make intelligent,
+    autonomous software a reality both internally and for our customers. Some of these
+    projects will be open source , contributing to the LangChain and LangGraph ecosystem
+    and setting new standards for how companies build with AI. If you are a fullstack
+    software engineer who is passionate about putting AI agents into real production
+    use cases and seeing them drive measurable business impact, this team is for you.
+    *This role is based in our San Francisco or New York office. Employees within
+    commuting distance work from the office five days per week. Candidates who live
+    outside commuting distance (e.g. >1hr each way), may be eligible for hybrid arrangements
+    depending on location and role requirements. What You Will Do : Design, implement,
+    and deploy end-to-end AI workflows and agents that solve real problems across
+    multiple business domains. Develop and iterate on agent architectures, evaluation
+    pipelines, and performance frameworks to ensure reliability and measurable outcomes.
+    Translate emerging AI research and tooling into practical, production-ready solutions.
+    Communicate technical decisions, trade-offs, and insights clearly to both technical
+    and non-technical stakeholders. Collaborate cross-functionally embedding with
+    teams like Marketing, GTM, Recruiting, or Product to identify opportunities for
+    agent-driven automation and measurable business impact. Contribute to the LangChain
+    and LangGraph ecosystem , including open source components, documentation, and
+    shared tools. What You Will Bring: Experienced software engineer with a strong
+    track record shipping AI or ML-powered applications (typically 3+ years, including
+    at least 1 year building LLM systems in production). Hands-on experience implementing
+    evaluation and monitoring systems for agents or workflows. Deep understanding
+    of the components that make up an AI system: prompting, retrieval, orchestration,
+    inference APIs, and model selection across modalities. Strong coding skills in
+    Python or TypeScript (ideally both). Excellent communicator who can simplify complex
+    technical ideas for diverse audiences. Thrives in a fast-moving, ambiguous startup
+    environment; enjoys identifying the highest-impact problems and driving them to
+    completion. Naturally curious and motivated to learn new tools, frameworks, and
+    approaches in applied AI. Nice To Haves: Expertise with LangChain or LangGraph
+    . Experience building or maintaining open source projects . Background in applied
+    AI research or agentic workflow development. Based in San Francisco (preferred)
+    , NYC , or Boston . Compensation: We offer competitive compensation that includes
+    base salary, meaningful equity, and benefits such as health and dental coverage,
+    flexible vacation, a 401(k) plan, and life insurance. Actual compensation will
+    vary based on role, level, and location. For team members in the EU and UK, we
+    provide locally competitive benefits aligned with regional norms and regulations.
+    Annual Annual Salary Range: $165,000 - $190,000'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.061776+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

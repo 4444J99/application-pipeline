@@ -1,0 +1,118 @@
+id: discord-staff-software-engineer-new-gaming-features
+name: Discord Staff Software Engineer, New Gaming Features
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Discord
+  url: https://boards.greenhouse.io/discord
+  application_url: https://job-boards.greenhouse.io/discord/jobs/8475180002
+  portal: greenhouse
+  location: San Francisco Bay Area or Remote (U.S.)
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><p>Discord is used by over 200 million\
+    \ people every month for many different reasons, but there\u2019s one thing that\
+    \ nearly everyone does on our platform:<strong> play video games.</strong> Over\
+    \ 90% of our users play games, spending a combined 1.5 billion hours playing thousands\
+    \ of unique titles on Discord each month. Discord plays a uniquely important role\
+    \ in the future of gaming. We are focused on making it easier and more fun for\
+    \ people to talk and hang out before, during, and after playing games.</p></div><p>People\
+    \ come to Discord before, during, and after gaming, and we want to make that experience\
+    \ even better. Working directly with our developer partners and communities, we\
+    \ are building brand new ways for users on Discord to connect, engage and have\
+    \ a great time while gaming. We believe that gaming is better when playing with\
+    \ friends, and aim to provide the features and tooling for developers to help\
+    \ us enrich those experiences. This is also reflected in how we work! Our engineering\
+    \ culture values collaboration and building great teams. Come and join us!</p>\
+    \ <p><strong>What You'll Be Doing</strong></p> <ul> <li>Design, build, and maintain\
+    \ features that help users connect and make friends through gaming on our platform,\
+    \ across desktop and mobile.</li> <li>Engage with developers, game studios and\
+    \ other partners to find opportunities and address challenges towards providing\
+    \ a more rich experience for players while gaming and engaging with online communities.</li>\
+    \ <li>Collaborate with Engineers, Designers, Product Owners, and Data Scientists\
+    \ to build engaging, fun, and trusted experiences, while experimenting and iterating\
+    \ on ideas that enhance user interactions.</li> <li>Partner with our Content,\
+    \ Marketing and ML teams to improve ranking and discovery systems, enabling users\
+    \ to find meaningful connections and relevant content.</li> <li>Build innovative\
+    \ features that help users discover new friendships and deepen existing ones,\
+    \ creating a trusted and welcoming environment.</li> </ul> <p><strong>What you\
+    \ should have</strong></p> <ul> <li>You have 8+ years of experience as a software\
+    \ engineer.</li> <li>You have experience with React/TS, Python or other modern\
+    \ programming languages.</li> <li>You have a track-record of shipping incremental\
+    \ + delightful features that improve the overall user experience.</li> <li>You\
+    \ are comfortable switching between different technical stacks and learning new\
+    \ ones.</li> <li>You enjoy collaborating with product, design and other stakeholders.\
+    \ We don\u2019t operate in silos, and you\u2019ll be working closely with cross-functional\
+    \ peers. You should be able to express opinions and stay aligned.</li> <li>You\
+    \ take a holistic approach to problem solving. You believe in solving a problem\
+    \ from first principles rather than simply shipping a solution. You learn from\
+    \ your mistakes and work through obstacles with the rest of the team.</li> <li>You\
+    \ have experience leading projects, gathering requirements, supporting partners\
+    \ and mentoring others. You believe in \u2018lead by example\u2019 with regards\
+    \ to ownership, autonomy, quality and impact, and no problem is \u201Cnot my problem\u201D\
+    .</li> <li>You are a Discord user and want to make the product better!</li> </ul>\
+    \ <p><strong>Bonus Points</strong></p> <ul> <li>Experience working on a mobile\
+    \ native stack (iOS / Obj-C / Swift), Android (Java, Kotlin)</li> <li>Experience\
+    \ integrating or deploying on Steam (or similar platforms)</li> <li>Experience\
+    \ using Epic Games Online Services, Steamworks API, Playfab</li> </ul> <p><em>The\
+    \ US base salary range for this full-time position is $248,000 to $279,000 + equity\
+    \ + benefits. Our salary ranges are determined by role and level. Within the range,\
+    \ individual pay is determined by additional factors, including job-related skills,\
+    \ experience, and relevant education or training. Please note that the compensation\
+    \ details listed in US role postings reflect the base salary only, and do not\
+    \ include equity, or benefits.<br></em></p><div class=\"content-conclusion\"><p><strong>Why\
+    \ Discord?&nbsp;</strong><br><br>Discord plays a uniquely important role in the\
+    \ future of gaming. We're a multiplatform, multigenerational and multiplayer platform\
+    \ that helps people deepen their friendships around games and shared interests.\
+    \ We believe games give us a way to have fun with our favorite people, whether\
+    \ listening to music together or grinding in competitive matches for diamond rank.\
+    \ <strong>Join us in our mission! Your future is just a click away!</strong></p>\
+    \ <p><strong>Discord is committed to inclusion and providing reasonable accommodations\
+    \ during the interview process. </strong>We want you to feel set up for success,\
+    \ so if you are in need of reasonable accommodations, please let your recruiter\
+    \ know.</p> <p><em><strong>Please see our Applicant and Candidate Privacy Policy\
+    \ for details regarding Discord\u2019s collection and usage of personal information\
+    \ relating to the application and recruitment process by clicking&nbsp;<a href=\"\
+    http"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.681631+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

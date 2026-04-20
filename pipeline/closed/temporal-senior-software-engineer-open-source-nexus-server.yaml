@@ -1,0 +1,113 @@
+id: temporal-senior-software-engineer-open-source-nexus-server
+name: Temporal Senior Software Engineer, Open Source Nexus Server
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Temporal
+  url: https://boards.greenhouse.io/temporaltechnologies
+  application_url: https://job-boards.greenhouse.io/temporaltechnologies/jobs/5007550007
+  portal: greenhouse
+  location: United States - Remote Opportunity
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><h3><strong>About Us</strong></h3> <div>Temporal\
+    \ is an open source programming model that can simplify code, make applications\
+    \ more reliable, and help developers focus on the important things like delivering\
+    \ features faster. We are on a mission to be the reliable foundation of every\
+    \ developer\u2019s toolbox, and are building the team that will make that happen.</div>\
+    \ <div>&nbsp;</div> <div>Our values guide us \u2014they are present in how we\
+    \ show up, make decisions, and work together to make an impact. We\u2019re curious,\
+    \ driven, collaborative, genuine and humble.</div> <div>&nbsp;</div> <div>Temporal\
+    \ is growing and we are looking for those who share our values, challenge 'standard'\
+    \ thinking, and want to influence our future. If you have a passion for improving\
+    \ the developer experience, building world-class open-source software and communities,\
+    \ and want to be a part of our amazing team, we'd love to hear from you!</div></div><div>\
+    \ <h3><strong>Summary</strong></h3> <p>As a <strong>Senior Software Engineer</strong>,\
+    \ you will get the chance to design, build, and maintain significant portions\
+    \ of our backend functionality for highly scalable, multi-tenant <a href=\"https://temporal.io/blog/announcing-nexus-connect-temporal-applications-across-isolated-namespaces\"\
+    \ target=\"_blank\">Nexus </a>services (Our durable execution framework for orchestrating\
+    \ work across team and application boundaries for improved modularity, security,\
+    \ debugging, and fault isolation). Examples of the key distributed systems components\
+    \ you\u2019ll own include durable execution, async processing and expand our ability\
+    \ to invoke workflows through more industry standard protocols. Working in the\
+    \ highly collaborative&nbsp;<strong>Open Source Server org</strong>, we\u2019\
+    ll look to build a new enterprise offering that involves both on-premise and dedicated\
+    \ cloud offerings. The Open Source Server org works on core Temporal. <a href=\"\
+    https://github.com/temporalio/temporal\" target=\"_blank\">See Temporal git here</a>.&nbsp;</p>\
+    \ <p><em>To see more details about projects the OSS team is working on and demo\
+    \ videos, click <a href=\"https://temporalio.notion.site/Join-the-OSS-Team-at-Temporal-2058fc567738803c86e7f42ea0353cee\"\
+    \ target=\"_blank\">here</a></em><em><a href=\"https://temporalio.notion.site/Join-the-OSS-Team-at-Temporal-2058fc567738803c86e7f42ea0353cee\"\
+    \ target=\"_blank\"> </a>- [new window opens]</em></p> <h3><strong>What You'll\
+    \ Do</strong></h3> <ul> <li>Design and implement core backend service features\
+    \ for <a href=\"https://temporal.io/blog/announcing-nexus-connect-temporal-applications-across-isolated-namespaces\"\
+    \ target=\"_blank\">Nexus</a></li> <li>Provide appropriate test coverage for unit,\
+    \ integration, and performance for your feature ownership area.</li> <li>Clearly\
+    \ document design choices and operational knowledge to successfully deploy and\
+    \ run service with those features.</li> <li>Provide appropriate service level\
+    \ logs and metrics to make features operational for cloud service setup.</li>\
+    \ <li>Provide appropriate alerts, dashboards, and runbooks for production.</li>\
+    \ </ul> <p><strong>What You Won\u2019t Do</strong></p> <ul> <li>Work in an office\
+    \ (unless you want to, but you\u2019d be by yourself). Temporal is a fully-remote\
+    \ company.</li> <li>Commit code that\u2019s poorly-tested or works \u201Cmost\
+    \ of the time\u201D. Temporal aspires to be \u201CReliable as Gravity\u201D, and\
+    \ we expect your code to be the same.</li> <li>Work behind closed doors. The SDKs\
+    \ are open source\u2014that means PRs and comments are open to the public, too.</li>\
+    \ <li>Sit in meetings all day. We mostly communicate in writing, and use meetings\
+    \ mainly for status updates and thorny issues that need input from the whole group.</li>\
+    \ </ul> <h3><strong>What You'll Bring</strong></h3> <ul> <li>At least 6 years\
+    \ of experience in a production environment as an \"Arranger\" and/or \"Builder/Enhancer\"\
+    \ of highly scalable distributed systems. <a href=\"https://temporalio.notion.site/Distributed-Systems-Concurrency-2526e6dfce4947d39fd3a40f9f07652a\"\
+    ><em>see HERE</em></a><em> for more info re: \"Arranger\" and/or \"Builder/Enhancer\"\
+    </em></li> <li>Solid computer science fundamentals in distributed systems concepts\
+    \ including multi-threading and concurrency.</li> <li>2+ years experience developing\
+    \ customer facing APIs and Frameworks</li> <li>Experience writing concurrent code\
+    \ in production with languages like Go or Java or other applicable languages with\
+    \ skill level as \"high end of Intermediate\" and/or \"Advanced\" or \"Expert\"\
+    \ levels.&nbsp;<a href=\"https://temporalio.notion.site/Distributed-Systems-Concurrency-2526e6dfce4947d39fd3a40f9f07652a\"\
+    ><em>see HERE</em></a><em> for more info re: \"high end of Intermediate\" and/or\
+    \ \"Advanced\" or \"Expert levels\"</em></li> </ul> </div> <div> <div> <h3><strong>Compensation</strong></h3>\
+    \ </div> <div> <ul> <li>The estimated pay range for this role is $185,000 - $225,000\
+    \ depending on locale.</li> <li>Additionally, this role is eligible to participate\
+    \ in Temporal's equity plan.</li> </ul> </div> <p>&nbsp;</p> </"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 10
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:34.662873+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

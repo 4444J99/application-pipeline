@@ -1,0 +1,116 @@
+id: openai-it-solutions-engineer
+name: OpenAI IT Solutions Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: OpenAI
+  url: https://jobs.ashbyhq.com/openai
+  application_url: https://jobs.ashbyhq.com/openai/6c6c1ace-12d6-48f0-88f0-488ff8521571
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'About the Team IT Systems Operations serves as the operational control
+    layer connecting Security, Engineering, and Employee Technology platforms. The
+    team ensures employee-facing systems, identity workflows, and enterprise applications
+    operate in a predictable, governed, and continuously reliable manner as the organization
+    scales. Beyond implementation, the team establishes structured operating patterns
+    that ensure platform changes, access models, integrations, and lifecycle workflows
+    evolve safely and consistently across the enterprise environment. About the Role
+    This role acts as an operational owner for identity-connected enterprise SaaS
+    platforms and system change controls supporting OpenAI’s compliance requirements.
+    The engineer will be responsible for ensuring that production configuration, access
+    models, and platform changes remain compliant, auditable, and consistently operated
+    through defined controls. You will own and operationalize controlled system and
+    workflow changes across identity platforms, SaaS applications, collaboration tooling,
+    and enterprise infrastructure. You will partner closely with Security, Platform
+    Engineering, and IT Support Operations to: Ensure identity and access workflows
+    behave consistently across systems Implement structured rollout and configuration
+    practices for enterprise applications Improve visibility and traceability of system
+    changes impacting employee workflows Translate operational requirements into durable
+    automation and policy-aligned implementations Success in this role requires not
+    only strong engineering capability, but also sound operational judgment, disciplined
+    documentation practices, and effective cross-functional collaboration. In this
+    role, you will: Enterprise SaaS & Identity Platform Ownership Own administration
+    and operational stewardship of enterprise SaaS and identity-connected platforms,
+    ensuring configuration integrity, access governance, and compliance with defined
+    control requirements. Own onboarding, access modification, and offboarding workflows
+    aligned to standardized entitlement models. Ensure lifecycle events propagate
+    reliably across downstream systems and maintain accurate, auditable access state.
+    Maintain consistent platform configuration and reduce unmanaged variance across
+    business-critical systems. Partner with Security and IT Support Operations to
+    enforce least-privilege access models and durable ownership boundaries. Controlled
+    Change, Automation & Operational Reliability Design and operationalize structured
+    rollout patterns for enterprise system configuration and workflow changes. Replace
+    manual administrative actions with governed automation incorporating validation,
+    logging, and rollback-aware deployment patterns. Translate operational and compliance
+    requirements into durable system implementations that improve reliability and
+    auditability. Build automated operational workflows using APIs, infrastructure-as-code,
+    scripting, and low-code automation platforms. Integration & Platform Engineering
+    Execute and maintain integrations across identity providers, SaaS platforms, ITSM
+    systems, and internal tooling to ensure consistent system behavior. Standardize
+    integration and deployment approaches across environments to support scalable
+    platform adoption. Translate ambiguous operational requirements into structured
+    workflows and dependable system implementations. Partner cross-functionally to
+    convert recurring incidents and operational friction into durable system improvements.
+    We’re looking for someone with: Experience owning enterprise SaaS and identity
+    platforms end-to-end. Experience with implementing and operating SOX, SOC 2, and
+    related controls in these platforms. Experience automating platforms and audits.
+    Excellent communication and collaboration skills. About OpenAI OpenAI is an AI
+    research and deployment company dedicated to ensuring that general-purpose artificial
+    intelligence benefits all of humanity. We push the boundaries of the capabilities
+    of AI systems and seek to safely deploy them to the world through our products.
+    AI is an extremely powerful tool that must be created with safety and human needs
+    at its core, and to achieve our mission, we must encompass and value the many
+    different perspectives, voices, and experiences that form the full spectrum of
+    humanity. We are an equal opportunity employer, and we do not discriminate on
+    the basis of race, religion, color, national origin, sex, sexual orientation,
+    age, veteran status, disability, genetic information, or other applicable legally
+    protected characteristic. For additional information, please see OpenAI’s Affirmative
+    Action and Equal Employment Opportunity Policy Statement . Background checks for
+    applicants will be administered in accordance with applicable law, and qualified
+    applicants with arrest or conviction records will be considered for employment
+    consistent with those laws, including the San Francisco Fair Chance Ordinance,
+    the Los Angeles County Fair Chance '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.500161+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,111 @@
+id: relativity-lead-structural-analysis-engineering-stress-fatigue-damage-t
+name: Relativity Lead, Structural Analysis Engineering (Stress, Fatigue & Damage Tolerance)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Relativity
+  url: https://boards.greenhouse.io/relativity
+  application_url: https://boards.greenhouse.io/relativity/jobs/8468809002?gh_jid=8468809002
+  portal: greenhouse
+  location: Long Beach, California
+  location_class: unknown
+  description: '<div class="content-intro"><p><span style="font-family: arial, helvetica,
+    sans-serif; font-size: 10pt;">At Relativity Space, we’re building rockets to serve
+    today’s needs and tomorrow’s breakthroughs. Our&nbsp;Terran R vehicle will deliver
+    customer payloads to orbit, meeting the growing demand for launch&nbsp;capacity.
+    But that’s just the start. Achieving commercial success with Terran R will unlock
+    new&nbsp;opportunities to advance science, exploration, and innovation, pioneering
+    progress that reaches beyond&nbsp;the known.</span></p> <p><span style="font-family:
+    arial, helvetica, sans-serif; font-size: 10pt;">Joining Relativity means becoming
+    part of something where autonomy, ownership, and impact exist at every level.
+    Here, you''re not just executing tasks; you''re solving problems that haven’t
+    been solved before, helping develop a rocket, a factory, and a business from the
+    ground up. Whether you’re in propulsion, manufacturing, software, avionics, or
+    a corporate function, you’ll collaborate across teams, shape decisions, and see
+    your work come to life in record time. Relativity is a place where creativity
+    and </span><span style="font-family: arial, helvetica, sans-serif; font-size:
+    10pt;">technical rigor go hand in hand, and your voice will help define the stories
+    we’re writing together. Now&nbsp;is a unique moment in time where it’s early enough
+    to leave your mark on the product, the process, and&nbsp;the culture, but far
+    enough along that Terran R is tangible and picking up momentum. The most&nbsp;meaningful
+    work of your career is waiting. Join us.</span></p></div><p><span style="font-family:
+    arial, helvetica, sans-serif; font-size: 10pt;"><strong><span data-contrast="none">About
+    the Team: </span></strong><span data-ccp-props="{&quot;134233117&quot;:true,&quot;134233118&quot;:true,&quot;201341983&quot;:0,&quot;335559740&quot;:240}">&nbsp;</span></span></p>
+    <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">The
+    Integrated Performance team owns the holistic view of how Terran R comes together,
+    ensuring that every system on the vehicle and ground is capable of achieving ambitious
+    performance, reliability, and reusability goals. The team works across the full
+    launch system—from trajectory design and aerodynamics to reliability analysis
+    and post-flight data review—with technical leadership influence across the entire
+    product lifecycle. Beyond analysis, team members engage hands-on with hardware,
+    testing, and operations, with the authority to lead and drive meaningful programmatic
+    change.</span></p> <p><span style="font-family: arial, helvetica, sans-serif;
+    font-size: 10pt;">The Integrated Analysis group accelerates Relativity’s hardware
+    engineering through advanced analysis, life prediction, and modern tools. The
+    team enables robust, lightweight, and reusable structures by leading the integration
+    of fatigue, fracture, durability, and inspection considerations early in design
+    and throughout vehicle maturation.</span></p> <p><span style="font-family: arial,
+    helvetica, sans-serif; font-size: 10pt;"><strong><span data-contrast="none">About
+    the Role:</span></strong><span data-ccp-props="{&quot;134233117&quot;:true,&quot;134233118&quot;:true,&quot;201341983&quot;:0,&quot;335559740&quot;:240}">&nbsp;</span></span></p>
+    <p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span
+    data-ccp-props="{&quot;134233117&quot;:true,&quot;134233118&quot;:true,&quot;201341983&quot;:0,&quot;335559740&quot;:240}">As
+    a Structural Analysis Lead, you will provide technical leadership for the structural
+    integrity, strength, durability, and life management of flight hardware across
+    the vehicle. You will be responsible for defining and executing structural analysis
+    strategies spanning static strength, fatigue and damage tolerance, fracture mechanics,
+    and structural dynamics.</span></span></p> <p><span style="font-family: arial,
+    helvetica, sans-serif; font-size: 10pt;"><span data-ccp-props="{&quot;134233117&quot;:true,&quot;134233118&quot;:true,&quot;201341983&quot;:0,&quot;335559740&quot;:240}">In
+    this role, you will guide the development, verification, and certification of
+    primary and secondary structures from early design through flight operations.
+    You will work closely with design, materials, manufacturing, and test teams to
+    ensure structurally robust designs that meet performance, reliability, and reusability
+    requirements.<br></span></span></p> <p><span style="font-family: arial, helvetica,
+    sans-serif; font-size: 10pt;"><strong>Structural Analysis Leadership</strong></span></p>
+    <ul> <li style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span
+    style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Lead structural
+    analysis activities for major vehicle structures across component, subsystem,
+    and vehicle levels</span></li> <li style="font-family: arial, helvetica, sans-serif;
+    font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif; font-size:'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.100041+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

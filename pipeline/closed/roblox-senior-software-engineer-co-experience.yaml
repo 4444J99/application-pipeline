@@ -1,0 +1,115 @@
+id: roblox-senior-software-engineer-co-experience
+name: Roblox Senior Software Engineer, Co-Experience
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Roblox
+  url: https://boards.greenhouse.io/roblox
+  application_url: https://careers.roblox.com/jobs/7733855?gh_jid=7733855
+  portal: greenhouse
+  location: San Mateo, CA, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p><span style="font-weight: 400;">Every
+    day, tens of millions of people come to Roblox to explore, create, play, learn,
+    and connect with friends in 3D immersive digital experiences– all created by our
+    global community of developers and creators.&nbsp;</span></p> <p><span style="font-weight:
+    400;">At Roblox, we’re building the tools and platform that empower our community
+    to bring any experience that they can imagine to life. Our vision is to reimagine
+    the way people come together, from anywhere in the world, and on any device.</span><strong>
+    </strong><span style="font-weight: 400;">We’re on a mission to connect a billion
+    people with optimism and civility, and looking for amazing talent to help us get
+    there.&nbsp;</span></p> <p><span style="font-weight: 400;">A career at Roblox
+    means you’ll be working to shape the future of human interaction, solving unique
+    technical challenges at scale, and helping to create safer, more civil shared
+    experiences for everyone.</span></p></div><p>As a <strong>Frontend Engineer</strong>
+    on the <strong>Co-Experience team</strong>, you will work on high-visibility initiatives
+    that define the future of age-appropriate communication. Using modern technologies,
+    you will build and maintain a social ecosystem that ensures safe, civil, and meaningful
+    interactions across diverse age groups.</p> <p>We are kind, highly collaborative,
+    and draw on a mix of startup and large company backgrounds to iterate faster within
+    Roblox.</p> <p>Our primary product is a <strong>platform-level Party System</strong>.
+    As the heartbeat of social interaction on Roblox, this system enables users to
+    coordinate, form groups, and stay connected as they navigate across servers and
+    immersive experiences.</p> <p>While we have a strong foundation of chat, voice,
+    gameplay mechanics, and creator APIs, we need your expertise to build out new
+    features and build client side developer APIs as we accelerate our path toward
+    product-market fit. As we scale, your work will directly impact our global community
+    and support the company’s top-line growth.</p> <h3>You will:</h3> <ul> <li>Collaborate
+    within a multi-functional team that includes product, design, UXR, frontend and
+    backend engineering.&nbsp;</li> <li>Own projects end to end, from design and architecture
+    to launch and iteration, driving measurable impact that drives us towards product
+    market fit and growing usage. With a drive to ship and proactively get yourself
+    unblocked.</li> <li>Participate in designing empowering Roblox creators to unlock
+    new ways to co-experience for their users.</li> <li>Partner with other engineering
+    teams (connections, voice, discovery,) to integrate multiple systems in a reusable,
+    performant and safe manner.</li> <li>Identify gaps in performance, testing, and
+    experimentation workflows, and lead improvements that make the team more effective
+    and efficient.</li> <li>Uphold high standards of technical quality and user experience
+    while rapidly iterating on new features.</li> <li>Contribute to a strong, inclusive
+    team culture by helping refine processes, mentoring peers, and supporting each
+    other’s success.</li> </ul> <p><span style="font-size: 12pt;"><strong>You Have</strong></span></p>
+    <ul> <li>An undergraduate/graduate degree in computer science, engineering or
+    a related field.</li> <li>4+ years of experience as a frontend or client apps
+    engineer working on complex user interfaces in close collaboration with product
+    and design partners.</li> <li>Experience working on large-scale consumer applications
+    in React/Redux, React Native, iOS, Android, Windows, Mac OS and other platforms.</li>
+    <li>Knowledge of testing methodologies, including tools like Jest, React Testing
+    Library or other comparable technologies.</li> <li>An appreciation for UX and
+    UI - though not a design, you have a good intuition on what delightful user experiences
+    look like, and can help contribute to design planning.</li> </ul> <h3>You Are:&nbsp;</h3>
+    <ul> <li>Versatile: You’re a generalist, open to learning new languages and technologies,
+    and can easily adapt to changing situations.</li> <li>Creative: You take a creative
+    and strategic approach to solving difficult problems. You actively research and
+    leverage recent developments in the AI field to enhance productivity for yourself
+    and your team.</li> <li>Team-oriented: You collaborate effectively and enjoy sharing
+    your knowledge and expertise with others.&nbsp;</li> <li>Responsible: You are
+    thorough in your designs, meticulous in handling potential failure cases, and
+    diligent in automated testing. You build systems that are stable and reliable.</li>
+    </ul><div class="content-pay-transparency"><div class="pay-input"><div class="description"><p>For
+    roles that are based at our headquarters in San Mateo, CA: The starting base pay
+    for this position is as shown below. The actual base pay is dependent upon a variety
+    of job-related factors such as professional background, training, work experience,
+    location, bus'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.797792+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

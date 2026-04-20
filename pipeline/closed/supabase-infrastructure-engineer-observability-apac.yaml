@@ -1,0 +1,104 @@
+id: supabase-infrastructure-engineer-observability-apac
+name: Supabase Infrastructure Engineer - Observability (APAC)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Supabase
+  url: https://jobs.ashbyhq.com/supabase
+  application_url: https://jobs.ashbyhq.com/supabase/894139b0-cc52-4fe4-b84f-ab6660b517d0
+  portal: ashby
+  location: APAC
+  location_class: international
+  description: 'We are seeking a seasoned infrastructure operations expert that has
+    experience with orchestrating high-throughput data services. Experience that showcases
+    high availability and systems reliability skillsets in high volume data pipeline
+    environments are a big plus. What you''ll own Collaborate deeply with our infrastructure
+    and product teams to enforce org-wide practices for emitting and collecting telemetry
+    across a wide range of services, both internal and external-facing. This includes
+    contributing to org-wide documentation, advocacy of best practices and helping
+    to enforce standards org-wide. Own and operate the Kubernetes infrastructure of
+    the observability team. You will help in defining the documentation, operational
+    flows, and engineering standards to ensure high uptime across our logging, tracing,
+    and metrics systems that are used by internal and external stakeholders Work within
+    the Observability team to ensure industry-standard deployment and reliability
+    practices are used, and to develop industry-leading reliability software to ensure
+    that our observability systems never go down for our customers. Orchestrate and
+    scale systems such as VictoriaMetrics, OpenTelemetry Collector, and Vector. What
+    you bring 5+ years of experience in a Site Reliability Engineering role Experience
+    operating and supporting clustered applications in production environments Hands-on
+    experience deploying and managing applications in Kubernetes (k8s) environments
+    Working knowledge of PostgreSQL, including administration, performance tuning,
+    and troubleshooting Proficiency with at least one Infrastructure as Code (IaC)
+    tool (e.g., Terraform, Pulumi, OpenTofu, or equivalent) Experience with telemetry
+    tooling such as OpenTelemetry, VictoriaMetrics, Grafana, Prometheus. Experience
+    with AWS services is a plus Strong documentation and communication skills is a
+    plus What We Offer Fully Remote We hire globally. We believe you can do your best
+    work from anywhere. There are no Supabase offices, but we provide a WeWork membership
+    or co-working allowance you can use anywhere in the world. ESOP Every team member
+    receives ESOP (equity ownership) in the company. We want everyone to share in
+    the upside of what we’re building together. Tech Allowance Use this budget to
+    set up your ideal work environment—laptop, monitor, headphones, or whatever helps
+    you do your best work. Health Benefits Supabase covers 100% of health insurance
+    for employees and 80% for dependents, wherever you are. Your wellbeing and your
+    family’s health are important to us. Annual Off-Sites Once a year, the entire
+    company gathers in a new city for a week of connection, collaboration, and fun.
+    It’s a highlight of our year. Flexible Work We operate asynchronously and trust
+    you to manage your own time. You know what needs to be done and when. Professional
+    Development Every team member receives an annual education allowance to spend
+    on learning—courses, books, conferences, or anything that supports your growth.
+    About the Team Supabase was born-remote and open-source-first. We believe our
+    globally distributed team is our secret weapon in building tools developers love.
+    280+ team members 55+ countries 20+ languages spoken $500M raised 500,000+ community
+    members We move fast, build in public, and use what we ship. If it’s in your project,
+    we probably use it in ours too. We believe deeply in the open-source ecosystem
+    and strive to support—not replace—existing tools and communities. Hiring Process
+    We keep things simple, async-friendly, and respectful of your time: Apply – Our
+    team will review your application. Intro Call – A short video chat to get to know
+    each other. Interviews – Up to four calls with: Team Leads Future teammates Someone
+    cross-functional from product, growth, or engineering (depending on the role)
+    Someone from our leadership/founding team Decision – We may follow up with a final
+    question or go straight to offer. All communication is remote and we aim to move
+    fast.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.788924+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

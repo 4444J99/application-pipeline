@@ -1,0 +1,114 @@
+id: anduril-multinational-digital-infrastructure-senior-cloud-engineer
+name: Anduril Multinational Digital Infrastructure - Senior Cloud Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5039728007?gh_jid=5039728007
+  portal: greenhouse
+  location: London, England, United Kingdom
+  location_class: international
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p><strong>ABOUT THE TEAM</strong></p>
+    <p>The Multinational Digital Infrastructure team is responsible for designing,
+    deploying, and sustaining the sovereign and multinational systems that power Anduril’s
+    global Maritime and AUKUS missions. As a Cloud Engineer, you will design and implement
+    cloud environments that enable Anduril to effectively operate sovereign programmes
+    in the U.K. and Australia, as well as expanding to other nations as Anduril’s
+    global presence increases. You will work across engineering, security, and product
+    teams to ensure our digital infrastructure is secure, scalable, and ready to support
+    emerging mission demands.<br><br><strong>WHAT YOU’LL DO</strong></p> <ul> <ul>
+    <li>Design, deploy, and maintain enterprise cloud landing zones, security and
+    infrastructure tooling.</li> <li>Collaborate with teams across the U.S. and Australia
+    to enable secure connectivity between other sovereign cloud environments.</li>
+    <li>Partner with government customers, authorizing officials (AOs), cybersecurity
+    teams, and policy shops to accelerate accreditation, break through legacy barriers,
+    and unlock access for cross-nation engineering teams.</li> <li>Implement infrastructure
+    automation (IaC), observability tooling, and secure configuration baselines to
+    support scalable, repeatable environment builds.</li> <li>Work closely with product,
+    autonomy, Lattice, and Maritime engineering teams to integrate infrastructure
+    capabilities with platform development, testing, and deployment workflows.</li>
+    <li>Act as a technical leader during environment standup, troubleshooting, and
+    validation events; ensure classified systems perform reliably in support of mission-critical
+    needs.</li> <li>Support development of next-generation secure architectures for
+    multinational development, data sharing, and mission system integration across
+    Maritime platforms.</li> <li>Serve as a technical representative during customer
+    events, exercises, and operational demonstrations to ensure infrastructure readiness
+    and mission success.</li> </ul> </ul> <p><strong>REQUIRED QUALIFICATIONS</strong></p>
+    <ul> <ul> <li>Ability to obtain and maintain a UK security clearance to SC level
+    - see <a href="https://www.gov.uk/government/publications/united-kingdom-security-vetting-clearance-levels/sc-guidance-pack-for-applicants">UK
+    Security Vetting’s guidance pack</a> for further details.</li> <li>Bachelor’s
+    degree in STEM field or equivalent engineering experience.</li> <li>Technical
+    depth in one or more: cloud infrastructure, secure networking, systems engineering,
+    DevSecOps, platform architecture, cybersecurity, identity &amp; access management.
+    Specific technology will include:</li> <ul> <li>Cloud - AWS, Azure</li> <li>Infrastructure
+    as Code - Terraform, CloudFormation</li> <li>SCM - GitHub Enterprise</li> <li>CI/CD
+    - CircleCI, Gitlab</li> <li>IDAM + SSO - Okta, AWS Identity Center</li> </ul>
+    <li>8+ years of relevant engineering, infrastructure, or technical program execution
+    experience.</li> <li>Willingness to travel domestically and internationally as
+    required - typically around 10%.</li> </ul> </ul> <p><strong>PREFERRED QUALIFICATIONS</strong></p>
+    <ul> <ul> <li>Experience with secure systems engineering, ideally within UK Government
+    or Defence. Experience in other highly regulated industries may also be relevant
+    - for example Financial Services, Energy or Healthcare.</li> <li>Experience provisioning
+    large enterprise cloud platforms for hundreds or thousands of users.</li> <li>Experience
+    designing or maintaining distributed systems, secure networks, or infrastructure
+    supporting autonomy, AI/ML, or big data workloads.</li> <li>Demonstrated ability
+    to work across technical disciplines, influence without authority, and operate
+    in ambiguous and fast-paced environments.</li> <li>Experience working with international
+    partners or navigating multi-nation technical or policy workflows.</li> </ul>
+    </ul><div class="content-conclusion"><p><span data-contrast="auto">The salary
+    range for this role is an estimate based on a wide range of compensation factors,
+    inclusive of base salary only. Actual salary offer may vary based on (but not
+    limited to) work experience, education and/or training, critical skills, and/or '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.871114+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

@@ -1,0 +1,115 @@
+id: anduril-multinational-digital-infrastructure-devops-engineer
+name: 'Anduril Multinational Digital Infrastructure - DevOps Engineer '
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5038701007?gh_jid=5038701007
+  portal: greenhouse
+  location: London, England, United Kingdom
+  location_class: international
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p>Since 2023, Anduril UK has experienced
+    rapid growth, introducing world-leading software-first, hardware-enabled systems
+    to the UK Ministry of Defence and other government agencies. Our exemplar programme
+    of Maritime Sentry Towers (MST), has been developed and delivered in close partnership
+    with the UK government and sovereign British industry, fundamentally changing
+    how border security and surveillance capabilities can be employed by UK authorities.
+    Additionally, Anduril UK has expanded its portfolio to include the ALTIUS-600,
+    a versatile autonomous aerial system, and Seabed Sentry, an advanced underwater
+    surveillance platform. These systems, along with others, position Anduril UK to
+    provide a broad range of software and software-enabled hardware products to meet
+    the UK''s defence and security needs as outlined in the 2023 Integrated Review
+    Refresh and Defence Command Paper.<br><br>World-leading technology like MST, ALTIUS-600,
+    Seabed Sentry, and many of the other autonomous systems that will underpin the
+    UK''s technological future rely on modern C4 systems. These systems can integrate
+    and fuse data across distributed systems, nodes, and networks to enable timely
+    command decision-making. Anduril''s open architecture Lattice operating system
+    is an AI-powered software platform that transforms thousands of data streams into
+    actionable information for operators at all levels.<br><br>As the world enters
+    an era of strategic competition, Anduril is committed to bringing cutting-edge
+    autonomy, AI, computer vision, and networking technology to UK defence and security
+    personnel in months, not years. Our focus is on rapidly delivering innovative
+    solutions that enhance the UK''s defence capabilities, support its industrial
+    strategy, and contribute to its position as a science and technology leader.</p>
+    <p><strong>ABOUT THE TEAM</strong><br><br>The Multinational Digital Infrastructure
+    team is responsible for designing, deploying, and sustaining the sovereign and
+    multinational systems that power Anduril’s global Maritime and AUKUS missions.
+    As a DevOps Engineer, you will design and implement developer productivity tooling
+    that enable Anduril to effectively operate sovereign programmes in the U.K. and
+    Australia, as well as expanding to other nations as Anduril’s global presence
+    increases. You will work across engineering, security, and product teams to ensure
+    our digital infrastructure is secure, scalable, and ready to support fast paced
+    software delivery.<br><br><strong>WHAT YOU’LL DO</strong></p> <ul> <ul> <li>Deploy
+    and support our software engineering productivity tools, DevSecOps toolchains,
+    and automated testing and release management infrastructure</li> <li>Implement
+    infrastructure automation (IaC), observability tooling, and secure configuration
+    baselines to support scalable, repeatable environment builds.</li> <li>Work closely
+    with software engineering and data science engineers to ensure they have the tools
+    needed to deliver robust software at pace and scale.</li> </ul> </ul> <p><strong>REQUIRED
+    QUALIFICATIONS</strong></p> <ul> <ul> <li>Ability to obtain and maintain a UK
+    security clearance to SC level - see <a href="https://www.gov.uk/government/publications/united-kingdom-security-vetting-clearance-levels/sc-guidance-pack-for-applicants">UK
+    Security Vetting’s guidance pack</a> for further details.</li> <li>Bachelor’s
+    degree in STEM field or equivalent engineering experience.</li> <li>Technical
+    depth in one or more: DevSecOps, software engineering, infrastructure engineering,
+    cloud infrastructure. Specific technology will include:</li> <ul> <li>CI/CD -
+    CircleCI, Gitlab</li> <li>SCM - GitHub Enterprise</li> <li>Docker, Kubernetes</li>
+    <li>Security Automation - Trivy, Grype, Defect Dojo, Haystack</li> <li>Infrastructure
+    as Code - Terraform</li> <li>Cloud - AWS</li> </ul> <li>5+ years of relevant engineering,
+    infrastructure, or technical program execution experience.</li> <li>Willingness
+    to travel domestically and internationally as required - typically around 10%.</li>
+    </ul> </ul> <p><strong>PREFERRED QUALIFICATIONS</strong></p> <ul> <ul> <li>Experience
+    with secure systems engineering, ideally within UK Government or Defence. Experience
+    in other highly regulated ind'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.869184+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

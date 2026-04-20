@@ -1,0 +1,112 @@
+id: harvey-ai-software-engineer-developer-experience-devex
+name: Harvey AI Software Engineer, Developer Experience (DevEx)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Harvey AI
+  url: https://jobs.ashbyhq.com/harvey
+  application_url: https://jobs.ashbyhq.com/harvey/823658d8-21ae-46e5-ac93-1454e6527c63
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Why Harvey At Harvey, we’re transforming how legal and professional
+    services operate — not incrementally, but end-to-end. By combining frontier agentic
+    AI, an enterprise-grade platform, and deep domain expertise, we’re reshaping how
+    critical knowledge work gets done for decades to come. This is a rare chance to
+    help build a generational company at a true inflection point. With 1000+ customers
+    in 58+ countries, strong product-market fit, and world-class investor support,
+    we’re scaling fast and defining a new category in real time. The work is ambitious,
+    the bar is high, and the opportunity for growth — personal, professional, and
+    financial — is unmatched. Our team is sharp, motivated, and deeply committed to
+    the mission. We move fast, operate with intensity, and take real ownership of
+    the problems we tackle — from early thinking to long-term outcomes. We stay close
+    to our customers — from leadership to engineers — and work together to solve real
+    problems with urgency and care. If you thrive in ambiguity, push for excellence,
+    and want to help shape the future of work alongside others who raise the bar,
+    we invite you to build with us. At Harvey, the future of professional services
+    is being written today — and we’re just getting started. Role Overview The Developer
+    Experience team is what keeps Harvey’s fast growth momentum possible — the kind
+    of fast where every week brings new products, new capabilities, and new challenges.
+    We build the CI/CD systems, internal frameworks, and platform-level guardrails
+    that enable all Harvey engineers to ship ambitious AI features rapidly and safely.
+    As a Software Engineer on the Developer Experience team, you will be responsible
+    for creating frameworks and systems that maximize the velocity and efficiency
+    of every engineer at Harvey. You’ll work across the entire tech stack and collaborate
+    with every team to instill reliability, automation, and simplicity into our developer
+    workflows. You''ll also have a unique opportunity to apply AI directly to the
+    problem of developer productivity, defining the future of software development
+    within an AI-native company. If you are passionate about building foundational
+    platforms to enable other engineers to move fast with confidence, we’d love to
+    hear from you. What You’ll Do Develop and scale a world-class developer platform
+    to accelerate Harvey''s hyper growth. Boost velocity and stability through robust
+    CI/CD systems, effective test frameworks, and reliable development environments..
+    Build load testing and benchmarking infrastructure essential for evaluating and
+    optimizing the performance of AI-native applications. Pioneer the future of software
+    development and site reliability engineering by integrating AI agents across the
+    software development, deployment and maintenance lifecycle. Collaborate with Backend
+    Platform teams to embed testability, reliability and observability into the platform,
+    ensuring services built on our foundation are robust, easy to test and maintain.
+    Work closely with engineering teams to gather feedback, evangelize best practices,
+    and make the “paved road” a reality — empowering every Harvey engineer to move
+    fast with confidence. What You Have 3+ years of software engineering experience,
+    including building scalable backend systems or internal developer platforms. Proficiency
+    in Python (or similar languages) and deep knowledge of backend development fundamentals
+    and distributed systems. Hands-on experience with CI/CD systems (Builtekite, Github
+    Actions), test frameworks, or load and performance testing. Hands-on experience
+    with container technologies (Docker, Kubernetes) and infrastructure as code (Pulumi,
+    Terraform). A track record of producing high-quality, well-tested code, consistently
+    following software development best practices to ensure quality and reliability.
+    Strong problem-solving skills and a passion for improving developer experience
+    — you enjoy creating tools or frameworks that make other engineers more productive
+    Excellent collaboration and communication skills, with the ability to work across
+    teams and incorporate feedback. Experience integrating AI agents into a developer
+    ecosystem is a strong plus. Compensation Range $175,000 - $250,000 USD Please
+    find our CA applicant privacy notice here . #LI-AN2 Harvey is an equal opportunity
+    employer and does not discriminate on the basis of race, gender, sexual orientation,
+    gender identity/expression, national origin, disability, age, genetic information,
+    veteran status, marital status, pregnancy or related condition, or any other basis
+    protected by law. We are committed to providing reasonable accommodations to applicants
+    with disabilities, and requests can be made by emailing accommodations@harvey.ai'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.987235+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

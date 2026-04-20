@@ -1,0 +1,87 @@
+id: pika-senior-software-engineer-backend
+name: Pika Senior Software Engineer, Backend
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Pika
+  url: https://jobs.ashbyhq.com/pika
+  application_url: https://jobs.ashbyhq.com/pika/5e94fcbf-f490-4920-97ae-ba02e466d371
+  portal: ashby
+  location: Palo Alto HQ
+  location_class: us-onsite
+  description: 'Senior Software Engineer, Backend Department: Engineering | Location:
+    Palo Alto HQ | Type: Full-time, On-site About the Role We''re looking for a Senior
+    Backend Engineer to help shape the core infrastructure that powers Pika''s products.
+    You''ll play a key role in designing and building robust, scalable backend systems
+    — owning everything from API design and service architecture to real-time messaging
+    infrastructure and platform integrations. This is a high-ownership role where
+    your decisions directly impact how millions of users experience Pika. As a senior
+    engineer, you''ll also help raise the bar for the team — through architecture
+    guidance, code reviews, and mentoring more junior engineers. What You''ll Do •
+    Architect and build scalable backend services that power Pika''s web, mobile,
+    and multi-platform products • Own backend logic end-to-end — from database modeling
+    to API design, infrastructure decisions, and production reliability • Design and
+    build real-time systems — WebSocket connections, event-driven architectures, and
+    message queues for low-latency communication • Scale infrastructure for throughput,
+    latency, and reliability as Pika grows • Support internal tooling and operational
+    automation to improve team workflows • Drive technical decisions — write RFCs,
+    evaluate trade-offs, and build consensus across engineering • Mentor engineers
+    through code reviews, architecture guidance, and pair programming • Debug, optimize,
+    and future-proof our systems for scale What We''re Looking For • 5+ years of backend
+    engineering experience building production services at scale • Proficiency in
+    modern backend technologies (Node.js, Python, Go, etc.) and frameworks (Express,
+    FastAPI, etc.) • Strong understanding of distributed systems — event-driven architectures,
+    message queues, service-to-service communication • Deep knowledge of database
+    design and operations (SQL, NoSQL, data modeling, performance tuning) • Experience
+    with APIs, cloud infrastructure (AWS, GCP), Kubernetes, and CI/CD workflows •
+    Comfort building real-time systems — WebSockets, long-polling, pub/sub patterns
+    • Strong debugging and observability skills — you can trace a problem across services
+    and fix it fast • Ownership mentality — you identify problems and ship solutions
+    without waiting for specs • Clear communication skills and a team-first mindset
+    Nice to Have • Experience with AI/LLM integration (model orchestration, token
+    management, prompt routing) • Experience with multi-tenant SaaS platforms or multi-platform
+    products • Experience building internal tools or automation pipelines • Previous
+    startup experience — comfortable with ambiguity and moving fast'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.029198+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

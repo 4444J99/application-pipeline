@@ -1,0 +1,115 @@
+id: anduril-project-engineering-enabling-technology
+name: Anduril Project Engineering -  Enabling Technology
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5047476007?gh_jid=5047476007
+  portal: greenhouse
+  location: Costa Mesa, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE JOB</h3> <p>Anduril
+    is seeking a Mechanical Engineer to join the Maneuver Dominance team at our Costa
+    Mesa HQ. The Maneuver Dominance (MD) Team at Anduril develops aerial robotic systems
+    designed to operate in large coordinated teams in concert with ground maneuver
+    forces. We develop perception, autonomy, and command and control (C2) systems
+    to solve some of the hardest problems facing our customers.<br><br>Here you will
+    develop enabling technologies for Maneuver Dominance and Anduril-writ large with
+    initial emphasis on host-platform agnostic C4ISR capability including integration-kits
+    for ground and air vehicles. The role requires high ownership and frequent collaboration
+    with other core disciplines. The ideal candidate would be practical, hands-on
+    and a self starter with experience with command and control systems.. High growth
+    potential is possible as well as additional leadership opportunities.</p> <h4>WHAT
+    YOU’LL DO</h4> <ul> <li>Lead an integrated, cross-functional program team of hardware,
+    software, and systems engineers to deliver capability that exceeds customer expectations</li>
+    <li>Own the entire lifecycle of technical initiatives, from defining requirements
+    and creating project plans to final deployment and integration on helicopter platforms</li>
+    <li>Serve as the primary owner and liaison between technical teams, business stakeholders,
+    and customers</li> <li>Partner deeply with engineering leaders to drive program
+    execution, unblock technical challenges, and accelerate cross-team projects</li>
+    <li>Deeply understand mission requirements and master technical concepts to identify
+    key dependencies, trade-offs, and risks related to airborne sensor integration
+    and data fusion</li> <li>Coordinate and execute frequent test events, from hardware-in-the-loop
+    simulations to live flight demonstrations</li> <li>Proactively identify potential
+    technical and operational risks, develop mitigation plans, and drive issues to
+    resolution before they become blockers</li> <li>Foster a culture of extreme ownership
+    and a bias toward action within the program team</li> </ul> <h4>REQUIRED QUALIFICATIONS</h4>
+    <ul> <li>B.S. in Electrical, Computer, Aerospace, Mechanical Engineering, or equivalent.</li>
+    <li>5+ years of relevant industry experience in engineering, systems integration,
+    or technical program management.</li> <li>Demonstrated experience executing program
+    management or engineering responsibilities for sophisticated hardware and software
+    systems</li> <li>Strong understanding of systems engineering, environmental considerations,
+    and requirements verification and validation, particularly for aerospace or defense
+    applications</li> <li>Proven experience delivering complex solutions in highly
+    regulated environments (e.g., DoD) .</li> <li>Ability to inspire and guide teams,
+    build consensus, and influence without direct authority.</li> <li>Must be able
+    to obtain and maintain a U.S. Security Clearance</li> </ul> <h4>PREFERRED QUALIFICATIONS</h4>
+    <ul> <li>Proven experience leading multi-disciplinary engineering teams to the
+    successful completion</li> <li>Direct experience with the integration of C4ISR
+    systems, sensor payloads (e.g., EO/IR, SIGINT), or secure data links onto airborne
+    platforms.</li> <li>Strong technical aptitude and an ability to understand technical
+    designs, software development lifecycles, challenges, and risks.</li> <li>Practical
+    familiarity with both Agile and Waterfall methodologies and an ability to apply
+    them where best suited</li> <li>Experience with tools like JIRA and Confluence</li>
+    <li>Excellent written and verbal communication skills, with the ability to translate
+    complex technical issues into non-technical terms</li> <li>Currently possesses
+    and is able to maintain an active U.S. Top Secret security clearance</li> </ul><div
+    class="content-pay-transparency"><div class="pay-input"><div class="title">US
+    Salary Range</div><div class="pay-range"><span>$166,000</span><span class="divider">&mdash;</span><span>$220,000
+    USD</span></div></div></div><div class="content-conclusion"><p><span data-contrast="auto">The
+    salary range for this role is an estimate based on a wide range of compensation
+    factors, inclusive of base salary only. Actual sala
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-02'
+  posting_date: '2026-04-01'
+  date_source: first_published
+  date_added: '2026-04-02'
+  discovered: '2026-04-02T10:15:29.191794+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

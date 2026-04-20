@@ -1,0 +1,112 @@
+id: robinhood-software-engineer-cloud-engineering
+name: Robinhood Software Engineer, Cloud Engineering
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Robinhood
+  url: https://boards.greenhouse.io/robinhood
+  application_url: https://boards.greenhouse.io/robinhood/jobs/7589432?t=gh_src=&gh_jid=7589432
+  portal: greenhouse
+  location: Ljubljana, Slovenia
+  location_class: unknown
+  description: <div class="content-intro"><h2>Join us in building the future of finance.</h2>
+    <p>Our mission is to democratize finance for all. <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048"
+    target="_blank">An estimated $124 trillion of assets</a> will be inherited by
+    younger generations in the next two decades. The largest transfer of wealth in
+    human history. If you’re ready to be at the epicenter of this historic cultural
+    and financial shift, keep reading.</p></div><h2 data-start="305" data-end="331">About
+    the team + role</h2> <p data-start="333" data-end="965">The Bitstamp Cloud Engineering
+    team is responsible for designing, maintaining, and scaling the AWS infrastructure
+    that powers our global crypto exchange. As part of the Robinhood family, we are
+    aligning our systems to support global expansion while maintaining the stability
+    and reliability our institutional customers depend on. The team partners closely
+    with Security, Data, Product Engineering, and Platform teams to ensure our infrastructure
+    supports secure trading, high availability, and regulatory requirements. We value
+    practical solutions, operational rigor, and steady progress toward automation
+    and long-term scalability!</p> <p data-start="967" data-end="1567">As a Cloud
+    Engineer, you will be an established individual contributor responsible for the
+    reliability, scalability, and modernization of our AWS environment. You will manage
+    core compute and database infrastructure while contributing to projects that align
+    Bitstamp’s systems with Robinhood’s broader platform architecture. This role balances
+    hands-on operational support with forward-looking automation work, reducing manual
+    effort and improving system resilience. Your work will directly support high-volume
+    trading systems and ensure our platform performs consistently as we scale globally!</p>
+    <p><strong>The role is located in the office location(s) listed on this job description
+    which will align with our in-office working environment. Please connect with your
+    recruiter for more information regarding our in-office philosophy and expectations.</strong></p>
+    <p>Applications for this role will be accepted through March 9th, 2026</p> <p
+    data-start="1569" data-end="1813">Requires participation in an on-call rotation
+    to support business needs.</p> <h2 data-start="1815" data-end="1834">What you’ll
+    do</h2> <p data-start="1836" data-end="2475">● You manage and troubleshoot AWS
+    services including EC2, ECS, Aurora, and DynamoDB to ensure high availability
+    and performance.<br data-start="1964" data-end="1967">● You contribute to infrastructure
+    projects that align Bitstamp systems with Robinhood’s global platform architecture
+    and shared services.<br data-start="2105" data-end="2108">● You identify manual
+    operational processes and implement automation using infrastructure-as-code and
+    workflow tooling.<br data-start="2227" data-end="2230">● You monitor database
+    and compute capacity, adjusting configurations to support platform growth and
+    transaction volume.<br data-start="2350" data-end="2353">● You participate in
+    the on-call rotation, diagnosing and resolving production issues to maintain 24/7
+    system stability.</p> <h2 data-start="2477" data-end="2496">What you bring</h2>
+    <p data-start="2498" data-end="3068">● You have 2–3+ years of hands-on experience
+    in Cloud Engineering, DevOps, or Infrastructure Engineering within AWS environments.<br
+    data-start="2627" data-end="2630">● You have practical experience with EC2, ECS,
+    and database technologies such as Aurora and DynamoDB.<br data-start="2731" data-end="2734">●
+    You use structured troubleshooting methods and data analysis to resolve moderately
+    complex infrastructure issues.<br data-start="2849" data-end="2852">● You are
+    comfortable balancing operational responsibilities with incremental automation
+    improvements.<br data-start="2954" data-end="2957">● You communicate technical
+    concepts clearly and collaborate effectively with engineering and platform teams.</p><div
+    class="content-conclusion"><p>Click <a href="https://careers.robinhood.com/benefits"
+    target="_blank">here</a> to learn more about our Total Rewards, which vary by
+    region and entity.</p> <p>If our mission energizes you and you’re ready to build
+    the future of finance, we look forward to seeing your application.</p> <p>Robinhood
+    provides equal opportunity for all applicants, offers reasonable accommodations
+    upon request, and complies with applicable equal employment and privacy laws.
+    Inclusion is built into how we hire and work—welcoming different backgrounds,
+    perspectives, and experiences so everyone can do their best. Please review the&nbsp;<a
+    href="https://careers.robinhood.com/applicantprivacypolicy" target="_blank">Privacy
+    Policy</a> for your country of application.</p></div>
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.0
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.150089+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

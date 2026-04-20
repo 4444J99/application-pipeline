@@ -1,0 +1,117 @@
+id: databricks-sr-delivery-solutions-engineer
+name: Databricks Sr. Delivery Solutions Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Databricks
+  url: https://boards.greenhouse.io/databricks
+  application_url: https://databricks.com/company/careers/open-positions/job?gh_jid=8485307002
+  portal: greenhouse
+  location: Paris, France
+  location_class: international
+  description: <p data-pm-slice="1 1 []">FEQ227R260</p> <p>At Databricks, we are on
+    a mission to empower our customers to solve the world's toughest data problems
+    by utilizing the the Databricks Data Intelligence Platform. As a Delivery Solutions
+    Architect (DSA), you will play an important role during this journey. You will
+    collaborate with our sales and field engineering teams to accelerate the adoption
+    and growth of the Databricks platform in your customers. You will also help ensure
+    customer success by increasing focus and technical accountability to our most
+    complex customers who need guidance to accelerate usage on Databricks workloads
+    that they have already selected, helping them maximise the value they get of our
+    platform and the return on investment.</p> <p>This is a hybrid technical and commercial
+    role. It is commercial in the sense that you will drive growth in your assigned
+    customers and use cases through leading your customers' stakeholders, building
+    executive relationships, orchestration of other focused/specialized teams within
+    Databricks, and creating and driving plans and strategies for Databricks colleagues
+    to build upon. This is in parallel to being technical, with expectations being
+    that you become the post-sale technical lead across all Databricks products. This
+    requires you to use your skills and technical credibility to engage and communicate
+    at all levels with an organisation. You will report directly to a DSA Manager
+    within the Field Engineering organization.&nbsp;</p> <p><strong>The impact you
+    will have:</strong></p> <ul> <li>Engage with Solutions Architects to understand
+    the full use case demand plan for prioritised customers</li> <li>Lead the post-technical
+    win technical account strategy and execution plan for the majority of Databricks
+    use cases within our most strategic accounts</li> <li>Be the accountable technical
+    leader assigned to specific use cases and customer(s) across multiple selling
+    teams and internal stakeholders, creating certainty from uncertainty and driving
+    onboarding, enablement, success, go-live and healthy consumption of the workloads
+    where the customer has made the decision to consume Databricks</li> <li>Be the
+    first contact for any technical issues or questions related to production/go live
+    status of agreed upon use cases within an account, oftentimes services multiple
+    use cases within the largest and most complex organizations</li> <li>Leverage
+    both Shared Services, User Education, Onboarding/Technical Services and Support
+    resources, along with escalating to expert level technical experts to build the
+    right tasks that are beyond your scope of activities or expertise</li> <li>Create,
+    own and execute a point-of-view as to how key use cases can be accelerated into
+    production, coordinating with Professional Services (PS) resources on the delivery
+    of PS Engagement proposals</li> <li>Navigate Databricks Product and Engineering
+    teams for new product Innovations, private previews and upgrade needs</li> <li>Develop
+    an execution plan that covers all activities of all customer-facing technical
+    roles and teams to cover the below work streams:</li> <ul> <li>Main use cases
+    moving from ‘win’ to production</li> <li>Enablement / user growth plan</li> <li>Product
+    adoption (strategy and activities to increase adoption of Databricks’ Lakehouse
+    vision)</li> <li>Organic needs for current investment (e.g. cloud cost control,
+    tuning &amp; optimization)</li> <li>Executive and operational governance</li>
+    </ul> <li>Provide internal and external updates - KPI reporting on the status
+    of usage and customer health, covering investment status, important risks, product
+    adoption and use case progression - to your Technical GM</li> </ul> <p><strong>What
+    we look for:</strong></p> <ul> <li>5+ years of experience where you have been
+    accountable for technical project / program delivery within the domain of Data
+    and AI and where you can contribute to technical debate and design choices with
+    customers</li> <li>Programming experience in Python, SQL or Scala&nbsp;</li> <li>Experience
+    in a customer-facing pre-sales, technical architecture, customer success, or consulting
+    role</li> <li>Understanding of solution architecture related distributed data
+    systems</li> <li>Understanding of how to attribute business value and outcomes
+    to specific project deliverables</li> <li>Technical program, or project management
+    including account, stakeholder and resource management accountability</li> <li>Experience
+    resolving complex and important escalation with senior customer executives</li>
+    <li>Experience conducting open-ended discovery workshops,&nbsp; creating strategic
+    roadmaps, conducting business analysis and managing delivery of complex programmes/projects</li>
+    <li>Track record of overachievement against quota, Goals or similar objective
+    targets</li> <li>Bachelor's degree in Computer Science, Information Systems, Engineering,
+    or equivalent experience through work experience</li> <li>Can travel up to 30%
+    when needed</li> </ul><d
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-07'
+  posting_date: '2026-04-07'
+  date_source: first_published
+  date_added: '2026-04-07'
+  discovered: '2026-04-07T10:15:28.419774+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

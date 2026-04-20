@@ -1,0 +1,116 @@
+id: mongodb-senior-developer-advocate
+name: MongoDB Senior Developer Advocate
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7241758
+  portal: greenhouse
+  location: Ireland
+  location_class: international
+  description: <p>Build &amp; Grow Developer Relations Team enables our most strategic
+    customers to effectively use MongoDB technology. This team is the tip of the spear
+    within these accounts, working with their developers as well as key internal MongoDB
+    stakeholders (e.g., Sales, Marketing), to encourage adoption of MongoDB solutions.
+    We're seeking a Senior Developer Advocate to join our team and drive developer
+    enablement.&nbsp;</p> <p>Our mission is to capture the imagination of new and
+    potential MongoDB developers within these accounts, to enable developers as they
+    begin their MongoDB journey, and to lead developers in designs for new or replatformed
+    workloads. Our team increases developers’ effective use of MongoDB and reduces
+    the time it takes for developers to meaningfully use the platform. You will join
+    a team of our most experienced engineers and host virtual and in-person engagement
+    with customers throughout the world. If you’re passionate about data and helping
+    developers create some of the most performant, scalable, and efficient solutions
+    of their careers, then join us in shaping the future of development on MongoDB.<br><br>Our
+    Developer Relations teams are distributed around the world and a majority of the
+    group works remotely. This is a UK / Europe based role primarily working with
+    customers in the region.</p> <p>This role can be based remotely in the Ireland
+    region.</p> <h3>Candidate Profile</h3> <p>As a Senior Developer Advocate, you
+    are a competent developer ready to peer, mentor, and lead development teams as
+    they solve their enterprise's most critical data issues. You are familiar with
+    MongoDB or other data technologies and otherwise have the ability to quickly become
+    proficient in MongoDB, possess insight into developer enablement programs and
+    have the ability to guide development teams in the adoption of new technologies.</p>
+    <p>You’re an excellent public speaker and are comfortable delivering live enablement
+    sessions to technical audiences of up to 400 or more. Your recent experience includes
+    directly enabling developers and architects with data-related challenges and moving
+    them toward solutions for their real-world performance and scalability problems.
+    As a bonus, your experience also includes exercising soft leadership with decision
+    makers in organizations for defining, adopting, and scaling data-related technologies.</p>
+    <p>With a combination of software engineering, solutions development, consulting
+    experience, and developer relations, you have a deep understanding of developer
+    ecosystems and how developers best acquire fluency in new technologies. You have
+    a solid working knowledge of databases, database performance, schema design, and
+    optimizing production applications at scale. You employ a well-developed consulting
+    method that allows you to quickly triage situations to understand the most critical
+    issues at hand and to address them efficiently.&nbsp; Finally, you excel at explaining
+    complex technical concepts in simple terms and have a natural ability to connect
+    and communicate with developers of various skill levels.</p> <p>Collaboration
+    and empowerment are at the heart of this team’s work style. You'll work closely
+    with other team members to create and refine content, to deliver events, and to
+    share insights, techniques, and best practices with the larger MongoDB team and
+    with the broader developer community. Your focus is not just on individual success
+    but on success of the entire team, consistent with MongoDB's value of Building
+    Together.</p> <h3>Position Expectations</h3> <ul> <li>Become a Subject Matter
+    Expert on document schema design</li> <li>Develop an understanding of core MongoDB
+    database functionality and Atlas features such as Search, Vector Search, Data
+    Federation, Online Archive, and Streaming</li> <li>Deliver Design Review sessions
+    to customer development teams in order to guide their design and use of MongoDB
+    document schemas for their specific workloads</li> <li>Communicate insights gathered
+    from developer engagement, through code and content, to inform team members and
+    enable other developers</li> <li>Deliver virtual and in-person developer enablement
+    sessions to audiences of up to 400 developers</li> <li>Create language-specific
+    or other content in your area of expertise to evangelize and educate various developer
+    communities</li> </ul> <h3>Requirements</h3> <ul> <li>At least 5 years of experience
+    in both customer-facing and developer-centric roles such as Consulting, Solutions
+    Architecture, Developer Relations, working with development teams in the design
+    of document schemas and high performance, scalable database implementations</li>
+    <li>At least 3 years of experience (or the equivalent) of consulting with development
+    teams as a non-member of the team</li> <li>Proficiency with at least one of the
+    languages most popular with our customers (Java, Python, Javascript)<br>Familiarity
+    with 2 or more of the languages popular with our customers (Java, Python, Javascript
+    or Typ
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.8
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-20'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-20'
+  discovered: '2026-03-20T10:18:02.262818+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

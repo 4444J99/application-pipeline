@@ -1,0 +1,119 @@
+id: coinbase-senior-software-engineer-backend-platform-payment-rails
+name: Coinbase Senior Software Engineer, Backend - Platform (Payment Rails)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Coinbase
+  url: https://boards.greenhouse.io/coinbase
+  application_url: https://www.coinbase.com/careers/positions/7554499?gh_jid=7554499
+  portal: greenhouse
+  location: Remote - USA
+  location_class: us-remote
+  description: "<div class=\"content-intro\"><p>Ready to be pushed beyond what you\
+    \ think you\u2019re capable of?</p> <p>At Coinbase, our mission is to increase\
+    \ economic freedom in the world. It\u2019s a massive, ambitious opportunity that\
+    \ demands the best of us, every day, as we build the emerging onchain platform\
+    \ \u2014 and with it, the future global financial system.</p> <p>To achieve our\
+    \ mission, we\u2019re seeking a very specific candidate. We want someone who is\
+    \ passionate about our mission and who believes in the power of crypto and blockchain\
+    \ technology to update the financial system. We want someone who is eager to leave\
+    \ their mark on the world, who relishes the pressure and privilege of working\
+    \ with high caliber colleagues, and who actively seeks feedback to keep leveling\
+    \ up. We want someone who will run towards, not away from, solving the company\u2019\
+    s hardest problems.</p> <p>Our <a href=\"https://www.coinbase.com/mission\">work\
+    \ culture</a> is intense and isn\u2019t for everyone. But if you want to build\
+    \ the future alongside others who excel in their disciplines and expect the same\
+    \ from you, there\u2019s no better place to be.</p> <p>While many roles at Coinbase\
+    \ are remote-first, we are not remote-only. In-person participation is required\
+    \ throughout the year. Team and company-wide offsites are held multiple times\
+    \ annually to foster collaboration, connection, and alignment. Attendance is expected\
+    \ and fully supported.</p></div><p>We are looking for a Senior Software Engineer\
+    \ to join the Payment Rails team within Coinbase's Platform organization. Payment\
+    \ Rails is the foundational infrastructure that powers how money moves at Coinbase\u2014\
+    processing fiat deposits, withdrawals, and transfers across payment methods, gateways,\
+    \ and banking integrations at scale. You'll design and build the low-latency,\
+    \ high-throughput backend services that ensure every transaction is fast, secure,\
+    \ and reliable, directly enabling millions of customers to move value seamlessly\
+    \ across the Coinbase ecosystem and beyond.</p> <p><strong>What you\u2019ll be\
+    \ doing (ie. job duties):</strong></p> <ul> <li>Design and build scalable payment\
+    \ systems that process millions of transactions daily\u2014developing APIs, services,\
+    \ and integrations that power deposits, withdrawals, and fund transfers across\
+    \ multiple payment methods and rails.</li> <li>Own backend services end-to-end\
+    \ from architecture through production\u2014writing high-quality, well-tested\
+    \ code and operating services that must be correct, auditable, and reliable in\
+    \ a real-time financial environment.</li> <li>Partner cross-functionally with\
+    \ Product, Design, Compliance, and Finance to translate complex payment requirements\
+    \ into robust, scalable technical solutions that balance speed, safety, and regulatory\
+    \ compliance.</li> <li>Drive technical vision and execution by working with engineers,\
+    \ product managers, and senior leadership to shape the long-term roadmap for Payment\
+    \ Rails\u2014identifying opportunities to improve reliability, reduce latency,\
+    \ and scale our systems.</li> <li>Integrate with internal and external partners\
+    \ including banking systems, payment processors, and teams across Coinbase (e.g.,\
+    \ FinHub, Ledger, Risk) to ensure seamless money movement across the platform.</li>\
+    \ <li>Contribute to engineering excellence by mentoring teammates, participating\
+    \ in design reviews, and helping build a strong, inclusive, and high-performing\
+    \ engineering culture.</li> </ul> <p>&nbsp;</p> <p><strong>What we look for in\
+    \ you (ie. job requirements):</strong></p> <ul> <li>5+ years of experience in\
+    \ backend software engineering, with demonstrated experience building high-volume,\
+    \ low-latency distributed systems.</li> <li>Strong coding skills in Go (preferred)\
+    \ or similar languages, with solid understanding of relational databases, transactions,\
+    \ and data consistency.</li> <li>Experience designing and operating production\
+    \ services at scale\u2014including monitoring, alerting, incident response, and\
+    \ performance optimization.</li> <li>Deep understanding of distributed systems,\
+    \ APIs, and system design principles\u2014you can decompose complex problems into\
+    \ well-structured, service-oriented architectures.</li> <li>Proven ability to\
+    \ collaborate across teams and functions, driving alignment with both technical\
+    \ and non-technical stakeholders.</li> <li>You're passionate about building an\
+    \ open financial system that brings the world together.</li> <li>Demonstrates\
+    \ the ability to responsibly use generative AI tools and copilots (e.g., LibreChat,\
+    \ Gemini, Glean) in daily workflows, continuously learn as tools evolve, and apply\
+    \ human-in-the-loop practices to deliver business-ready outputs and drive measurable\
+    \ improvements in efficiency, cost, and quality.</li> </ul> <p><strong>Nice to\
+    \ haves:</strong></p> <ul> <li>Experience with payment systems, banking integrations,\
+    \ or financial infrastructure (e.g., ACH, SWIFT, SEPA, card networks, payment\
+    \ processors).</li> <li>Experience with blockchain technology, stablecoins, or\
+    \ crypto payment flows.</li> <li>You've gone through rapid growth at a company "
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-09'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.127156+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

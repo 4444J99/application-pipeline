@@ -1,0 +1,107 @@
+id: harvey-ai-software-engineer-product-backend
+name: Harvey AI Software Engineer, Product Backend
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Harvey AI
+  url: https://jobs.ashbyhq.com/harvey
+  application_url: https://jobs.ashbyhq.com/harvey/73c89afe-04b5-4323-8bef-0c42229a466f
+  portal: ashby
+  location: Bengaluru
+  location_class: international
+  description: 'Why Harvey At Harvey, we’re transforming how legal and professional
+    services operate — not incrementally, but end-to-end. By combining frontier agentic
+    AI, an enterprise-grade platform, and deep domain expertise, we’re reshaping how
+    critical knowledge work gets done for decades to come. This is a rare chance to
+    help build a generational company at a true inflection point. With 1000+ customers
+    in 58+ countries, strong product-market fit, and world-class investor support,
+    we’re scaling fast and defining a new category in real time. The work is ambitious,
+    the bar is high, and the opportunity for growth — personal, professional, and
+    financial — is unmatched. Our team is sharp, motivated, and deeply committed to
+    the mission. We move fast, operate with intensity, and take real ownership of
+    the problems we tackle — from early thinking to long-term outcomes. We stay close
+    to our customers — from leadership to engineers — and work together to solve real
+    problems with urgency and care. If you thrive in ambiguity, push for excellence,
+    and want to help shape the future of work alongside others who raise the bar,
+    we invite you to build with us. At Harvey, the future of professional services
+    is being written today — and we’re just getting started. Role Overview As a Product
+    Backend Engineer on Harvey’s product engineering team, you will design and operate
+    the backend systems that turn cutting-edge AI capabilities into seamless, dependable
+    product experiences. You’ll build secure, multi-tenant services, orchestrate interactions
+    with LLMs and agentic tools, and help define the backend architecture that powers
+    Harvey’s rapidly expanding product surface. Your work will have immediate business
+    and customer impact as you ship the foundational systems behind our next generation
+    of AI products. What You''ll Do Collaborate closely with Product to prioritize
+    customer-focused work and deliver reliable features quickly in a fast-moving environment.
+    Design and own backend services and APIs that power Harvey’s web applications,
+    workflows, and integrations. Model and manage data in Postgres and related data
+    stores to support low-latency, reliable user experiences. Build secure, multi-tenant,
+    permissions-aware systems with appropriate auditing for enterprise and government
+    customers. Implement backend features and workflows that use LLMs and agentic
+    tools, orchestrating calls to our AI systems from robust, well-structured services.
+    Collaborate with frontend, product, and design partners to shape solutions, define
+    clear API contracts, and ship features end-to-end. Add meaningful logging, metrics,
+    and tracing so services are observable, debuggable, and ready for on-call ownership.
+    Improve performance and scalability by profiling bottlenecks, tuning queries,
+    and refining service boundaries as usage grows. Participate in code reviews, technical
+    design discussions, and an on-call rotation for the services you own. What You
+    Have 5+ years of backend engineering experience building and operating production
+    web applications or SaaS products. Track record of building fast-growing SaaS
+    products by leveraging PWA technologies Track record of shipping highly intuitive
+    products, strong attention to detail Strong programming skills in Python and experience
+    with a modern web framework (e.g., FastAPI or Flask). Hands-on experience with
+    relational databases (e.g., Postgres) Solid understanding of API design, authentication/authorization,
+    background job patterns, and robust error handling. Experience building for Cloud
+    Infrastructure such as Azure, AWS, or GCP. Comfort operating services in production
+    using logs, metrics, dashboards, and alerts, including participation in an on-call
+    rotation. Additional Information Work eligibility: Must be authorized to work
+    in India. Visa sponsorship is not available for this role. #LI-KV1 Harvey is an
+    equal opportunity employer and does not discriminate on the basis of race, gender,
+    sexual orientation, gender identity/expression, national origin, disability, age,
+    genetic information, veteran status, marital status, pregnancy or related condition,
+    or any other basis protected by law. We are committed to providing reasonable
+    accommodations to applicants with disabilities, and requests can be made by emailing
+    accommodations@harvey.ai'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.2
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.006304+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

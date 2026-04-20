@@ -1,0 +1,116 @@
+id: sierra-ai-software-engineer-site-reliability-sre
+name: Sierra AI Software Engineer, Site Reliability (SRE)
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Sierra AI
+  url: https://jobs.ashbyhq.com/sierra
+  application_url: https://jobs.ashbyhq.com/sierra/3914e14a-2339-4d49-97e8-3a0de793cfb1
+  portal: ashby
+  location: San Francisco, CA
+  location_class: us-onsite
+  description: 'About us At Sierra, we’re creating a platform to help businesses build
+    better, more human customer experiences with AI. We are primarily an in-person
+    company based in San Francisco, with growing offices in Atlanta, New York, London,
+    Paris, Singapore, and Japan. We are guided by a set of values that are at the
+    core of our actions and define our culture: Trust, Customer Obsession, Craftsmanship,
+    Intensity, and Family. These values are the foundation of our work, and we are
+    committed to upholding them in everything we do. Our co-founders are Bret Taylor
+    and Clay Bavor . Bret currently serves as Board Chair of OpenAI. Previously, he
+    was co-CEO of Salesforce (which had acquired the company he founded, Quip) and
+    CTO of Facebook. Bret was also one of Google''s earliest product managers and
+    co-creator of Google Maps. Before founding Sierra, Clay spent 18 years at Google,
+    where he most recently led Google Labs. Earlier, he started and led Google’s AR/VR
+    effort, Project Starline, and Google Lens. Before that, Clay led the product and
+    design teams for Google Workspace. What you''ll do As a Software Engineer on our
+    Site Reliability team at Sierra, you will be responsible for defining and building
+    the foundation of reliability, observability, and scalability across Sierra’s
+    AI-driven infrastructure. You’ll partner closely with our core engineering and
+    product teams to ensure our systems are highly available, efficient, and built
+    for growth. Own Sierra’s observability stack—monitoring, alerting, logging, and
+    tracing—to give engineers clear visibility into system health and performance.
+    Partner with product and platform engineers to design systems that are reliable
+    and scalable from day one—not as an afterthought. Design and implement scalable,
+    reliable, and secure cloud infrastructure (AWS) using Terraform and modern DevOps
+    tooling. Improve the reliability and scalability of our LLM deployments, ensuring
+    robust, performant, and cost-effective operation. Lead improvements to deployment
+    pipelines, CI/CD tooling, and incident management processes to reduce downtime
+    and response time. Define the foundation of SRE practices at Sierra, influencing
+    culture, tooling, and best practices across the engineering org. What you''ll
+    bring 5+ years of hands-on experience in Site Reliability or Infrastructure engineering
+    roles for complex SaaS or cloud-based systems. Experience designing for availability,
+    scalability, and reliability at both infrastructure and application layers. Deep
+    experience with Terraform, AWS services, container orchestration, and cloud networking
+    (including IAM and VPC architecture). Strong background in observability systems
+    (e.g., Prometheus, Grafana, Datadog, or similar). Experience working with enterprise
+    customers and familiarity with their compliance and networking needs along with
+    integration patterns. Comfortable working in fast-moving environments and collaborating
+    across product, ML, and core engineering teams. Degree in Computer Science or
+    a related field, or equivalent professional experience. Even better... Experience
+    with LLM infrastructure — optimizing inference performance, managing fine-tuned
+    models, or large-scale model deployment. Past experience in an early-stage startup
+    environment, especially defining SRE culture and tooling from scratch. Familiarity
+    with incident management automation or self-healing infrastructure patterns. Our
+    values Trust: We build trust with our customers with our accountability, empathy,
+    quality, and responsiveness. We build trust in AI by making it more accessible,
+    safe, and useful. We build trust with each other by showing up for each other
+    professionally and personally, creating an environment that enables all of us
+    to do our best work. Customer Obsession: We deeply understand our customers’ business
+    goals and relentlessly focus on driving outcomes, not just technical milestones.
+    Everyone at the company knows and spends time with our customers. When our customer
+    is having an issue, we drop everything and fix it. Craftsmanship: We get the details
+    right, from the words on the page to the system architecture. We have good taste.
+    When we notice something isn’t right, we take the time to fix it. We are proud
+    of the products we produce. We continuously self-reflect to continuously self-improve.
+    Intensity: We know we don’t have the luxury of patience. We play to win. We care
+    about our product being the best, and when it isn’t, we fix it. When we fail,
+    we talk about it openly and without blame so we succeed the next time. Family:
+    We know that balance and intensity are compatible, and we model it in our actions
+    and processes. We are the best technology company for parents. We support and
+    respect each other and celebrate each other’s personal and professional achievements.
+    What we offer We want our benefits to reflect our values and offer the following
+    to full-time employees: Flexible (Unlimited) Paid Time Off Medical, Dental, and
+    Vision benefits for you and your family Life Insu'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.283623+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

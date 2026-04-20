@@ -1,0 +1,115 @@
+id: cloudflare-forward-deployed-engineer
+name: Cloudflare Forward Deployed Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Cloudflare
+  url: https://boards.greenhouse.io/cloudflare
+  application_url: https://boards.greenhouse.io/cloudflare/jobs/7731593?gh_jid=7731593
+  portal: greenhouse
+  location: Hybrid
+  location_class: unknown
+  description: '<div class="content-intro"><div><strong>About Us</strong></div> <div>
+    <p>At Cloudflare, we are on a mission to help build a better Internet. Today the
+    company runs one of the world’s largest networks that powers millions of websites
+    and other Internet properties for customers ranging from individual bloggers to
+    SMBs to Fortune 500 companies. Cloudflare protects and accelerates any Internet
+    application online without adding hardware, installing software, or changing a
+    line of code. Internet properties powered by Cloudflare all have web traffic routed
+    through its intelligent global network, which gets smarter with every request.
+    As a result, they see significant improvement in performance and a decrease in
+    spam and other attacks. Cloudflare was named to Entrepreneur Magazine’s Top Company
+    Cultures list and ranked among the World’s Most Innovative Companies by Fast Company.&nbsp;</p>
+    <p>At Cloudflare, we’re not looking for people who wait for a polished roadmap;
+    we’re looking for the builders who see the cracks in the Internet that everyone
+    else has simply learned to live with. We value candidates who have the instinct
+    to spot a "normalized" problem and the AI-native curiosity to create a solution
+    using the latest tools. Our culture is built on iteration, leveraging AI to ship
+    faster today to make it better tomorrow, while ensuring that every improvement,
+    no matter how small, is shared across the team to lift everyone up. If you’re
+    the type of person who values curiosity over bureaucracy, and that AI is a partner
+    in solving tough problems to keep the Internet moving forward, you’ll fit right
+    in.</p> </div></div><p><strong>Available Locations: Sydney, Australia</strong></p>
+    <h2>About the Role</h2> <p>Cloudflare’s Forward Deployed Engineers (FDEs) operate
+    at the intersection of product engineering and customer impact.</p> <p>As an FDE,
+    you will be embedded within one of Cloudflare’s most strategic global customers,
+    working side-by-side with their engineering teams to build and deploy solutions
+    using Cloudflare’s platform. Unlike traditional Solutions Architects or consultants,
+    you will write production code, shape technical architecture, and directly influence
+    how Cloudflare products are used at massive scale.</p> <p>You will operate as
+    a technical extension of both organizations - helping the customer ship faster
+    while surfacing real-world product insights back to Cloudflare engineering.</p>
+    <p>This role is ideal for engineers who want to:</p> <ul> <li>Stay deeply technical</li>
+    <li>Work on real production systems</li> <li>Influence product direction</li>
+    <li>Build long-term partnerships with world-class engineering teams</li> </ul>
+    <h2>Responsibilities</h2> <ul> <li><strong>Deep Technical Embedding:</strong>
+    Serve as the dedicated, long-term technical partner within a strategic customer’s
+    engineering organization, operating as a trusted extension of their team.</li>
+    <li><strong>Production-Level Engineering:</strong> Design, build, and deploy production-ready
+    code and configurations directly into customer infrastructure using the Cloudflare
+    platform.</li> <li><strong>Technical Accountability</strong>: Own the account''s
+    technical success across the entire Cloudflare portfolio. Serve as the primary
+    technical point of contact, with other Cloudflare technical resources taking direction
+    from your technical strategy for the account.</li> <li><strong>Operational Integration:</strong>
+    Participate in customer engineering rituals, including daily standups, design
+    reviews, and real-time incident response.</li> <li><strong>Platform Advocacy &amp;
+    Adoption:</strong> Identify opportunities to accelerate the adoption of Cloudflare
+    services, unlocking new capabilities across the customer’s tech stack.</li> <li><strong>Platform
+    Breadth &amp; Depth</strong>: Deep technical competence in building production
+    applications on a modern stack, combined with the willingness and ability to go
+    deep on all Cloudflare product areas. From Workers to security, networking, and
+    observability.</li> <li><strong>Feedback Loop &amp; Product Influence:</strong>
+    Surface real-world edge cases and product gaps directly to Cloudflare’s Product
+    and Engineering teams to influence the developer platform roadmap.</li> <li><strong>Strategic
+    Relationship Management:</strong> Establish and maintain trusted technical relationships
+    with senior leadership (Staff+ engineers, Directors, and VPs).</li> <li><strong>On-Site
+    Presence:</strong> Maintain a regular on-site presence at customer locations to
+    foster deep collaboration and cultural alignment.</li> </ul> <h2>Requirements</h2>
+    <ul> <li><strong>Proven Engineering Pedigree:</strong> 5+ years of professional
+    software engineering experience. You are a builder at heart, with a track record
+    of delivering production-grade systems, not just advising on them.</li> <li><strong>Production
+    Ownership &amp; Operational Maturity:</strong> You have owned mission-critical
+    services with real-world users. You understand the grav'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.172871+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

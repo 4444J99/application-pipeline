@@ -1,0 +1,115 @@
+id: anduril-quantum-software-engineer
+name: Anduril Quantum Software Engineer
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5089054007?gh_jid=5089054007
+  portal: greenhouse
+  location: Washington, District of Columbia, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p><strong>ABOUT THE TEAM</strong><br>Anduril
+    Labs is a multidisciplinary team of technologists, solution architects, engineers,
+    and military subject matter experts. Its mission is to drive innovation across
+    all Anduril business units and product lines by developing novel concepts and
+    next-generation technologies that enhance Anduril’s competitive edge and give
+    its customers a decisive technological advantage over its adversaries.<br><br><strong>ABOUT
+    THE JOB</strong><br>We are seeking a talented and innovative Quantum Software
+    Engineer to join our forward-looking team at Anduril Labs. In this role, you will
+    be instrumental in building and delivering impactful quantum solutions for both
+    Anduril-internal use cases and external customer applications. You will work closely
+    with delivery leads, application developers, and other solutions architects, as
+    well as internal and external partners to design, implement, and deliver bleeding
+    edge quantum solutions on state-of-the-art quantum-inspired, quantum annealing,
+    and quantum gate platforms for real-world defense and national security challenges.
+    <br><br>The ideal candidate will combine a strong foundation in quantum computing
+    principles with hands-on classical and quantum software development expertise.
+    You will leverage your skills to translate complex problems into (hybrid) quantum
+    algorithms, applications, and services. This includes developing robust software
+    implementations, and integrate quantum-enhanced solutions into existing and new
+    defense systems. If you are passionate about applying theoretical quantum concepts
+    to deliver tangible, high-impact results, and thrive in an environment that values
+    innovation, collaboration, and rapid prototyping, we encourage you to apply.</p>
+    <p><strong>WHAT YOU’LL DO</strong></p> <ul> <li>Be a key contributor to the development
+    of next-generation quantum-enhanced Anduril offerings and lead the design, development,
+    and deployment of novel quantum-enhanced applications and services in the defense
+    and national security domain.</li> <li>Develop impactful hybrid quantum algorithms
+    and applications that promise significant decision advantages and focus on practical
+    scalability and real-world applicability.</li> <li>Contribute knowledge of classical
+    and quantum optimization algorithms and tools, evaluating, and communicating their
+    pros and cons, current state-of-the-art, scaling behaviors, trade-offs, and cross-over
+    points.</li> <li>Participate in the full (hybrid) quantum software development
+    lifecycle, from concept and design to testing, deployment, and ongoing maintenance.</li>
+    </ul> <h4><strong>REQUIRED QUALIFICATIONS</strong></h4> <ul> <li>Bachelor's degree
+    in Computer Science, Quantum Information Science, Physics, Mathematics, or a closely
+    related technical field.</li> <li>3+ years of hands-on, professional software
+    development experience with C, C++, Python, or another general-purpose compiled
+    programming language.</li> <li>Practical experience in quantum computing, including
+    programming quantum applications, or quantum circuit compilation.</li> <li>Proficiency
+    with one or more leading quantum programming languages, SDKs, or APIs such as
+    Qiskit, CUDA-Q, Q#, Cirq, PennyLane, or similar.</li> <li>Expertise in key mathematical
+    techniques foundational to quantum computing, including linear algebra, matrix
+    decompositions, probability theory, group theory, symmetry, and computational
+    complexity.</li> <li>Proficient with database systems and SQL, with hands-on experience
+    working with relational databases (e.g., PostgreSQL, Oracle, MySQL).</li> <li>Experience
+    with Git version control, build tools, and CI/CD pipelines.</li> <li>Demonstrated
+    understanding and application of software testing principles and practices, including
+    unit testing, integration testing, and end-to-end testing.</li> <li>Strong problem-solving
+    skills, meticulous attention to detail, and the ability to work effectively in
+    a collaborative team environment.</li> <li>Excellent communication and interpersonal
+    skills, with the ability to effectively articulate complex technical concepts
+    to diverse audiences.</li> <li>Eligible to obtain and maintain an active U.S.
+    Top Secret SCI security clearance.</li> </ul> <h4><str
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.880712+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

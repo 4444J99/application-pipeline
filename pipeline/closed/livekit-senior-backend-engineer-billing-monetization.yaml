@@ -1,0 +1,106 @@
+id: livekit-senior-backend-engineer-billing-monetization
+name: LiveKit Senior Backend Engineer, Billing & Monetization
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: LiveKit
+  url: https://jobs.ashbyhq.com/livekit
+  application_url: https://jobs.ashbyhq.com/livekit/bb299eeb-b144-41b2-a654-994f7c06fa66
+  portal: ashby
+  location: Remote, U.S
+  location_class: remote-global
+  description: "LiveKit is revolutionizing the AI landscape by providing the essential\
+    \ network infrastructure that powers multimodal AI interfaces, enabling seamless\
+    \ audio and visual interactions. Founded in 2021, LiveKit has rapidly grown to\
+    \ support over 3 Billion calls annually, 100,000+ developers globally, and industry\
+    \ giants like OpenAI, Character AI, Spotify, and Meta. You'll thrive at LiveKit\
+    \ if you: obsess with crafting code that is fast, reliable, and practical for\
+    \ the problem are known as the go-to person for tackling tough technical problems\
+    \ work hard and can build and ship fast can clearly explain complex technical\
+    \ concepts to others are a fast learner, frequently picking up new languages and\
+    \ tools The best way to impress us is with thoughtful Issues and/or PRs on our\
+    \ GitHub repos \U0001F60A About This Role: We're looking for a talented engineer\
+    \ to own and evolve the billing systems that power LiveKit's rapid growth. As\
+    \ our platform scales to support billions of metered transactions for our customers\
+    \ across the globe, our invoicing and billing infrastructure needs more dedicated\
+    \ engineering ownership. This is a rare opportunity to join at exactly the right\
+    \ moment, when your work will have outsized impact on customer experience and\
+    \ business velocity. You'll collaborate closely with Finance, Support, GTM, and\
+    \ Product teams, giving you visibility and influence across the organization.\
+    \ Working alongside world-class frontend and backend engineers using modern technologies,\
+    \ you'll build systems that are both technically elegant and commercially essential.\
+    \ If you're excited about building financially critical infrastructure that directly\
+    \ enables a fast-growing company to scale, this role offers the perfect blend\
+    \ of technical challenge and business impact. What You'll Do: Evolve our billing\
+    \ & monetization platform by ensuring accurate invoicing, reliable revenue capture,\
+    \ and a seamless customer billing experience Design and build systems for plans,\
+    \ pricing, usage, discounts, credits, and refunds that support flexible packaging\
+    \ and rapid GTM experimentation Improve financial correctness and auditability\
+    \ by strengthening reconciliation, idempotency, traceability, and error recovery\
+    \ across billing workflows Enhance observability and reliability by ensuring monitoring,\
+    \ alerting, and diagnostics that detect revenue-impacting issues before customers\
+    \ do Reduce support toil by building internal tools and automation that make adjustments,\
+    \ credits, and investigations fast and self-service Partner with Finance, Support,\
+    \ GTM and Product to enable pricing agility and future scale by evolving architecture\
+    \ to support new pricing models, usage-based billing, and international growth\
+    \ Document and operationalize billing workflows with runbooks and best practices\
+    \ to improve team confidence and response speed Who You Are: You have strong backend\
+    \ engineering experience designing reliable, scalable services and APIs (Go, gRPC,\
+    \ PostgreSQL, Kubernetes, Stripe) You\u2019ve worked on billing, payments, subscriptions,\
+    \ or other financially critical systems, and understand the importance of accuracy\
+    \ and auditability You think in systems and edge cases, anticipating race conditions,\
+    \ retries, proration scenarios, and failure modes before they impact customers\
+    \ You are comfortable working with finance, support, and product stakeholders,\
+    \ translating complex technical behavior into clear outcomes You have experience\
+    \ with relational data modeling and transactional integrity, and understand idempotency,\
+    \ reconciliation, and audit trails You value observability and operational excellence,\
+    \ building systems that are diagnosable, monitorable, and resilient You enjoy\
+    \ reducing manual toil through automation and improving internal workflows You\
+    \ are motivated by building infrastructure that directly impacts revenue, customer\
+    \ trust, and business growth We offer An opportunity to build something truly\
+    \ impactful to the world Contribute to open source alongside world-class engineers\
+    \ Competitive salary and equity package Health, dental, and vision benefits Flexible\
+    \ vacation policy"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.129149+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

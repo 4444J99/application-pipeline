@@ -1,0 +1,116 @@
+id: notion-software-engineer-cloud-infrastructure
+name: Notion Software Engineer, Cloud Infrastructure
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Notion
+  url: https://jobs.ashbyhq.com/notion
+  application_url: https://jobs.ashbyhq.com/notion/e050309a-6b81-4341-b1ca-9bdd17e62e13
+  portal: ashby
+  location: San Francisco, California
+  location_class: us-onsite
+  description: 'About Us: Notion helps you build beautiful tools for your life’s work.
+    In today''s world of endless apps and tabs, Notion provides one place for teams
+    to get everything done, seamlessly connecting docs, notes, projects, calendar,
+    and email—with AI built in to find answers and automate work. Millions of users,
+    from individuals to large organizations like Toyota, Figma, and OpenAI, love Notion
+    for its flexibility and choose it because it helps them save time and money. In-person
+    collaboration is essential to Notion''s culture. We require all team members to
+    work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor
+    Days. Certain teams or positions may require additional in-office workdays. About
+    The Role: Millions of people use Notion — and this number is increasing every
+    day. That means millions of people trust us to deliver a fast, reliable, and secure
+    experience, and we value this more than anything. We want to keep earning trust,
+    while also continuing to amaze our users with the tools they can build in Notion.
+    The Cloud Infrastructure team is a unique opportunity within Notion to architect
+    the foundational cloud environment that can scale alongside Notion’s rapid growth.
+    As an engineer on the team, you''ll work on the fundamental infrastructure components
+    that all other teams at Notion build upon and guide Notion through the next few
+    years of growth. What You''ll Achieve: Drive the future of Cloud Infrastructure
+    at Notion —you’ll lead our strategy and execution across compute, networking,
+    and resource orchestration, ensuring our platform scales reliably and securely
+    to serve 100M+ users worldwide. Including container orchestration, cloud cost
+    efficiency, resilience, global expansion across regions while considering compliance
+    and performance. Hands on in building our next-generation self-service platform
+    , partnering with product engineers to enable rapid, reliable deployment with
+    strong guardrails—while reducing friction and increasing velocity across hundreds
+    of developers. You''ll be responsible for maintaining a high-quality bar for everything
+    your team ships. Lead by example in operational excellence —you’ll guide the team
+    through high-severity incidents, eliminate our gaps in observability, improve
+    incident response processes, and uphold reliability standards. You’ll participate
+    in a sustainable on-call rotation and help shape Notion’s reliability culture.
+    Skills You''ll Need to Bring: Software Engineer with Cloud Infrastructure Foundation:
+    You are a hands-on software engineer who is an expert in contributing to large
+    codebases and establishing strong patterns in greenfield projects. You bring a
+    test-driven development mindset, carefully consider how your changes will affect
+    production environments, and take steps to validate them. You have expertise with
+    cloud concepts, particularly in networking, compute optimization. You build observability
+    tools to validate changes and programmatically catch regressions. Startup mentality:
+    You are comfortable navigating the fast moving, unstructured nature of a hyper-growth
+    startup. You understand the importance of setting the engineering quality bar
+    for the long term success of our business, but are able to make difficult prioritizations.
+    Pragmatic and business-oriented: You care about business impact and prioritize
+    projects accordingly. You don''t just go after cool stuff—you understand the balance
+    between craft, speed, and the bottom line. You don’t need to be an AI expert,
+    but you’re curious and willing to adopt AI tools to work smarter and deliver better
+    results Nice to Haves: You have experience working with the following: Cloud Compute
+    and Networking technologies - Cloudflare / AWS Cloud Efficiency - capacity planning,
+    cost attribution Infrastructure as Code Technologies - Terraform / Pulumi / Typescript
+    We hire talented and passionate people from a variety of backgrounds because we
+    want our global employee base to represent the wide diversity of our customers.
+    If you’re excited about a role but your past experience doesn’t align perfectly
+    with every bullet point listed in the job description, we still encourage you
+    to apply. If you’re a builder at heart, share our company values, and enthusiastic
+    about making software toolmaking ubiquitous, we want to hear from you. Notion
+    is proud to be an equal opportunity employer. We do not discriminate in hiring
+    or any employment decision based on race, color, religion, national origin, age,
+    sex (including pregnancy, childbirth, or related medical conditions), marital
+    status, ancestry, physical or mental disability, genetic information, veteran
+    status, gender identity or expression, sexual orientation, or other applicable
+    legally protected characteristic. Notion considers qualified applicants with criminal
+    histories, consistent with applicable federal, state and local law. Notion is
+    also committed to providing reasonable accommodations for qualified individuals
+    with disabilities and disabled veterans '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.729758+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

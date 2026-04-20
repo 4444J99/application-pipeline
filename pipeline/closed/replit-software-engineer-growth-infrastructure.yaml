@@ -1,0 +1,116 @@
+id: replit-software-engineer-growth-infrastructure
+name: Replit Software Engineer, Growth Infrastructure
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Replit
+  url: https://jobs.ashbyhq.com/replit
+  application_url: https://jobs.ashbyhq.com/replit/37f81c18-c742-4f7d-bf81-34c3f5142973
+  portal: ashby
+  location: Foster City, CA (Hybrid) In office M,W,F
+  location_class: us-onsite
+  description: 'Replit is the agentic software creation platform that enables anyone
+    to build applications using natural language. With millions of users worldwide,
+    Replit is democratizing software development by removing traditional barriers
+    to application creation. Job Summary We are looking for an experienced Growth
+    Infrastructure Engineer to build and maintain the technical backbone that enables
+    scalable growth experiments, high-performance data pipelines, and automated systems
+    that drive user acquisition, engagement, and product iteration. This role sits
+    at the intersection of growth, product, and infrastructure — combining deep technical
+    engineering with experimentation and data-driven optimization. You will collaborate
+    with product, data science, and backend teams to ensure that growth initiatives
+    run smoothly and scale efficiently across systems. Key Responsibilities Growth
+    Infrastructure & Systems Design, implement, and maintain scalable infrastructure
+    that supports growth and experimentation needs. Build and optimize analytics pipelines
+    to capture key product and growth metrics (acquisition, activation, retention,
+    etc.). Develop automated workflows for user onboarding, campaign delivery, and
+    performance tracking. Experimentation & Optimization Support A/B testing frameworks
+    and integrate them into production systems. Enable reliable data collection and
+    evaluation for growth experiments. Automate deployment and rollout of growth feature
+    flags and tests. Cross-Functional Collaboration Partner with Growth Product Managers,
+    Data Engineers, and Analysts to define technical requirements for growth initiatives.
+    Translate business goals into technical specifications and system designs. Provide
+    guidance on performance, reliability, and scalability trade-offs. Monitoring &
+    Reliability Implement monitoring and alerting for growth infrastructure services.
+    Troubleshoot production issues and optimize for uptime and performance. Ensure
+    data quality and consistency for reporting and decision-making. Continuous Improvement
+    Evaluate new tools, frameworks, and platforms that accelerate growth engineering.
+    Drive best practices in infrastructure as code, CI/CD, and automated testing.
+    Train and mentor teammates on growth infrastructure principles. ( Teal ) Required
+    Qualifications Bachelor’s degree in Computer Science, Software Engineering, or
+    related technical field. 3+ years of experience building backend or infrastructure-focused
+    services. Strong programming skills in languages such as Python, Go, or JavaScript
+    . Experience with cloud platform infrastructure (e.g., AWS, GCP, Azure). Solid
+    understanding of data pipelines, ETL processes, and databases. Experience with
+    CI/CD systems and Infrastructure as Code (Terraform, CloudFormation, etc.). Experience
+    with experimentation platforms (StatSig, Segment, LaunchDarkly, or in-house).
+    Nice to Have Familiarity with growth metrics and product analytics tools (Amplitude,
+    etc.). Experience designing and scaling A/B testing systems and feature flag orchestration.
+    Proficient with containerization (Docker, Kubernetes) and distributed systems.
+    Knowledge of observability tools (Datadog, etc). What Success Looks Like Growth
+    initiatives that deploy reliably and quickly with minimal manual intervention.
+    High-fidelity data pipelines that enable real-time insight into key growth metrics.
+    Growth teams are empowered to run experiments and launch campaigns without heavy
+    infrastructure support. Why Join Us? This is a rare opportunity to be among the
+    first engineers on a newly formed Growth team, with significant ownership and
+    influence over both technical direction and product outcomes. You’ll be working
+    on a product that scaled from ~2M to 250M users in under a year, operating in
+    a massive and still largely untapped market. The impact of your work will be visible,
+    measurable, and foundational to how the company grows next. Impact how engineering
+    and product teams scale solutions for millions of users. Competitive compensation
+    and benefits tailored to growth-focused engineers. This is a full-time role that
+    can be held from our Foster City, CA office. The role has an in-office requirement
+    of Monday, Wednesday, and Friday. Full-Time Employee Benefits Include: 💰 Competitive
+    Salary & Equity 💹 401(k) Program with a 4% match ⚕️ Health, Dental, Vision and
+    Life Insurance 🩼 Short Term and Long Term Disability 🚼 Paid Parental, Medical,
+    Caregiver Leave 🚗 Commuter Benefits 📱 Monthly Wellness Stipend 🧑‍💻 Autonomous
+    Work Environment 🖥 In Office Set-Up Reimbursement 🏝 Flexible Time Off (FTO) +
+    Holidays 🚀 Quarterly Team Gatherings ☕ In Office Amenities Want to learn more
+    about what we are up to? Meet the Replit Agent Replit: Make an app for that Replit
+    Blog Amjad TED Talk Interviewing + Culture at Replit Operating Principles Reasons
+    not to work at Replit To achieve our mission of making programming more accessible
+    around the world, we need our team to be representative of the world. We welcome
+    your unique perspective and e'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.963625+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

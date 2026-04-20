@@ -1,0 +1,116 @@
+id: sofi-staff-software-engineer-bank
+name: SoFi Staff Software Engineer, Bank
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: SoFi
+  url: https://boards.greenhouse.io/sofi
+  application_url: https://sofi.com/careers/job/7687969003?gh_jid=7687969003
+  portal: greenhouse
+  location: WA - Seattle
+  location_class: us-onsite
+  description: '<div class="content-intro"><p><a href="https://www.sofi.com/sofi-employee-applicant-privacy-notice/"
+    target="_blank"><strong>Employee Applicant Privacy Notice</strong></a></p> <p><strong>Who
+    we are:</strong></p> <div> <p>Shape a brighter financial future with us.</p> <p>Together
+    with our members, we’re changing the way people think about and interact with
+    personal finance.</p> <p>We’re a next-generation financial services company and
+    national bank using innovative, mobile-first technology to help our millions of
+    members reach their goals. The industry is going through an unprecedented transformation,
+    and we’re at the forefront. We’re proud to come to work every day knowing that
+    what we do has a direct impact on people’s lives, with our core values guiding
+    us every step of the way. <strong>Join us to invest in yourself, your career,
+    and the financial world.</strong></p> </div></div><h2><strong>The Role</strong></h2>
+    <p>SoFi is launching a brand-new commercial banking product — and we need a Senior
+    Staff Engineer to be its technical backbone.</p> <p><strong>Commercial Banking</strong>
+    is SoFi''s entry into institutional commercial banking. We''re building the infrastructure
+    that lets large institutional clients in crypto, fintech, and enterprise finance
+    manage their money at SoFi — real-time payments, multi-account treasury management,
+    and a closed-loop settlement network that operates 24/7/365. The systems you design
+    will handle real institutional money from day one. The network you help architect
+    — SEN (SoFi Exchange Network) — could become the default settlement rail for the
+    industry.</p> <p>As the <strong>Senior Staff Engineer on the Commercial Banking
+    team</strong>, you''ll be the technical leader the team looks to for the hardest
+    problems — system design, API contracts, payment correctness, performance, and
+    reliability. You''ll set the technical bar, make architectural decisions that
+    stick, and write the code that proves them out. This is a hands-on role: you''ll
+    be deep in the codebase while also shaping the direction for the engineers around
+    you.</p> <h2><strong>What You''ll Do</strong></h2> <h3><strong>Architect and Build</strong></h3>
+    <ul> <li>Own the technical architecture for Commercial Banking''s core systems
+    — payment orchestration, client onboarding workflows, API Gateway, real-time settlement,
+    and the services that power the client-facing experience.</li> <li>Design and
+    implement the SoFi Exchange Network (SEN) — a real-time, 24/7/365 closed-loop
+    payment network enabling instant settlement between SoFi commercial clients.</li>
+    <li>Build the client onboarding orchestrator: a stateful workflow engine that
+    provisions entities, bank accounts, entitlements, payment rails, limits, and pricing
+    — with retry, rollback, and idempotency guarantees.</li> <li>Design enterprise-grade
+    identity, RBAC, and maker/checker approval systems that support complex organizational
+    structures with scoped account access, per-rail permissions, and configurable
+    payment limits.</li> <li>Define API contracts that institutional clients will
+    integrate against — getting the abstractions, error models, and versioning right
+    from day one.</li> <li>Architect a sandbox environment that realistically simulates
+    every payment rail, enabling clients to build and test their integrations with
+    confidence.</li> </ul> <h3><strong>Set the Technical Standard</strong></h3> <ul>
+    <li>Establish system design patterns, coding standards, and engineering best practices
+    for the Commercial Banking codebase.</li> <li>Drive technical decisions on data
+    modeling, service boundaries, consistency guarantees, and failure handling across
+    payment workflows where correctness is non-negotiable.</li> <li>Own observability
+    strategy — structured logging, distributed tracing, alerting, and dashboards that
+    give the team confidence in production.</li> <li>Lead technical design reviews
+    and code reviews. Raise the quality bar and make it stick through example, not
+    just feedback.</li> <li>Identify and address technical debt proactively — knowing
+    when to take shortcuts for speed and when to invest in the right long-term solution.</li>
+    </ul> <h3><strong>Lead Through Influence</strong></h3> <ul> <li>Be the go-to technical
+    leader on the team — the person engineers come to when they''re stuck on a design
+    problem, a performance issue, or a tricky integration.</li> <li>Mentor engineers
+    at all levels. Help senior engineers grow toward staff-level thinking; help mid-level
+    engineers develop stronger system design instincts.</li> <li>Partner with engineering
+    management to shape the technical roadmap, estimate complexity, and sequence work
+    for maximum impact.</li> <li>Drive cross-team technical alignment with other engineering
+    teams at SoFi — working across identity, entitlements, accounts, payments, and
+    core banking systems to ensure clean integration points.</li> <li>Represent the
+    team''s technical perspective in discussions with Product, Compliance, Risk, and
+    Operations — translating busin'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-03'
+  posting_date: '2026-04-02'
+  date_source: first_published
+  date_added: '2026-04-03'
+  discovered: '2026-04-03T10:15:35.555524+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

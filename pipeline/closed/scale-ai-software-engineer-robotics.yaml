@@ -1,0 +1,115 @@
+id: scale-ai-software-engineer-robotics
+name: Scale AI Software Engineer, Robotics
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Scale AI
+  url: https://boards.greenhouse.io/scaleai
+  application_url: https://job-boards.greenhouse.io/scaleai/jobs/4655050005
+  portal: greenhouse
+  location: Mexico City, MX
+  location_class: unknown
+  description: '<p>Scale''s Robotics business unit is dedicated to solving the data
+    bottleneck in Physical AI across Robotics, Autonomous Vehicles, and Computer Vision.
+    In this role, you''ll be a key contributor building production systems for robotics
+    data collection, model training pipelines, and evaluation infrastructure. You''ll
+    have the opportunity to own critical parts of our robotics platform, work directly
+    with cutting-edge robotics and AV customers, and shape the future of embodied
+    AI systems.</p> <p><strong>You Will:</strong></p> <ul> <li>Own and architect large-scale
+    data processing pipelines for robotics and autonomous vehicle datasets</li> <li>Build
+    ML training and fine-tuning pipelines using Scale''s robotics data</li> <li>Work
+    across backend (Python,&nbsp;Node.js, C++), and frontend (React, TypeScript) stacks
+    to build end-to-end solutions</li> <li>Develop tools and real-time systems for
+    robotics data collection, teleoperation, model evaluation, data curation, and
+    data annotation</li> <li>Interact directly with robotics and AV stakeholders to
+    understand their technical needs and drive product development</li> <li>Design
+    comprehensive monitoring and evaluation frameworks for robotics models and data
+    quality</li> <li>Solving complex, late-stage industry challenges in concurrent
+    and real-time robotic systems, with strict attention to timing constraints and
+    data integrity. This often involves deep investigation, reviewing academic papers,
+    and direct collaboration with robotics vendors</li> <li>Collaborate with ML engineers
+    and researchers to bring robotics research into production</li> <li>Deliver features
+    at high velocity while maintaining system reliability and performance</li> </ul>
+    <p><strong>Ideally, You Have:</strong></p> <ul> <li>3+ years of high-proficiency
+    software engineering experience, with a strong background in complex systems and
+    the ability to independently research, analyze, and unblock hard technical problems.</li>
+    <li>Strong programming skills in Python and TypeScript/Node.js for production
+    systems</li> <li>Experience with React and modern frontend development for 3D
+    interfaces</li> <li>Concurrent and real-time systems, with special attention to
+    timing constraints</li> <li>Understanding of distributed systems, workflow orchestration,
+    and cloud infrastructure (AWS, Temporal, Kubernetes, Docker)</li> <li>Experience
+    with databases (MongoDB, PostgreSQL) and data processing at large scale</li> <li>Track
+    record of working with cross-functional teams including ML engineers, researchers,
+    and customers</li> <li>Strong communication skills and ability to operate with
+    high autonomy</li> </ul> <p><strong>Nice to Haves:</strong></p> <ul> <li>Experience
+    with C++</li> <li>Experience with robotics hardware platforms (robotic arms, mobile
+    robots, perception systems) with a focus on time synchronization</li> <li>Background
+    in computer vision, SLAM, motion planning, or imitation learning</li> <li>Familiarity
+    with autonomous vehicle data, lidar technologies, or 3D data processing</li> <li>Experience
+    with ML model deployment and serving frameworks</li> <li>Knowledge of teleoperation
+    systems (ALOHA, UMI, hand tracking) or VR interfaces</li> <li>Experience with
+    workflow orchestration systems (Temporal, Airflow)</li> <li>Published research
+    or open-source contributions in robotics or autonomous systems</li> </ul><div
+    class="content-conclusion"><p><strong><em>PLEASE NOTE:&nbsp;</em></strong><em>Our
+    policy requires a 90-day waiting period before reconsidering candidates for the
+    same role. This allows us to ensure a fair and thorough evaluation of all applicants.</em></p>
+    <p><strong>About Us:</strong></p> <p><em>At Scale, our mission is to develop reliable
+    AI systems for the world''s most important decisions. Our products provide the
+    high-quality data and full-stack technologies that power the world''s leading
+    models, and help enterprises and governments build, deploy, and oversee AI applications
+    that deliver real impact. We work closely with industry leaders like Meta, Cisco,
+    DLA Piper, Mayo Clinic, Time Inc., the Government of Qatar, and U.S. government
+    agencies including the Army and Air Force. We are expanding our team to accelerate
+    the development of AI applications.</em></p> <p><em>We believe that everyone should
+    be able to bring their whole selves to work, which is why we are proud to be an
+    inclusive and equal opportunity workplace. We are committed to equal employment
+    opportunity regardless of race, color, ancestry, religion, sex, national origin,
+    sexual orientation, age, citizenship, marital status, disability status, gender
+    identity or Veteran status.&nbsp;</em></p> <p><em>We are committed to working
+    with and providing reasonable accommodations to applicants with physical and mental
+    disabilities. If you need assistance and/or a reasonable accommodation in the
+    application or recruiting process due to a disability, please contact us at accommodations@scale.com.
+    Please see the United States Department of Labor''s </em><a '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.486876+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"

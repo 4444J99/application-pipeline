@@ -1,0 +1,115 @@
+id: anduril-senior-software-engineer-data-distribution
+name: Anduril Senior Software Engineer, Data Distribution
+track: job
+status: outcome
+outcome: expired
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5092819007?gh_jid=5092819007
+  portal: greenhouse
+  location: Boston, Massachusetts, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><h3>ABOUT THE TEAM</h3> <p>Anduril''s
+    Software Platform organization is seeking a Software Engineer to join the Data
+    Distribution team. The Data Distribution team builds and operates the Distributed
+    Service Bus (DSB) — Anduril''s next-generation mesh networking communication layer
+    that enables autonomous systems and operators to communicate reliably across denied,
+    degraded, intermittent, and limited (DDIL) network environments. DSB manages multi-path
+    routing across tactical radios, satellite links, and wired networks while providing
+    pub/sub messaging, reliable request/response, bidirectional streaming, gossip-based
+    dissemination, and gRPC proxy capabilities to every node in the Lattice mesh.<br><br>As
+    a Software Engineer on Data Distribution, you will design and build the core networking
+    infrastructure that Lattice depends on to connect thousands of assets in contested
+    environments. The right person for this role has strong systems programming fundamentals
+    and experience building distributed networking systems. If you are someone who
+    thrives on solving hard distributed systems problems under real-world constraints
+    — bandwidth-limited RF links, dynamic topologies, and strict latency requirements
+    — then this role is for you.</p> <h3>WHAT YOU''LL DO</h3> <ul> <li>Design and
+    implement new features for the Distributed Service Bus, including gossip protocols
+    (HyParView, Plumtree), OSPF-style link-state routing, and flow control mechanisms</li>
+    <li>Build and extend the gRPC proxy layer that enables existing services to communicate
+    transparently over the DSB mesh</li> <li>Debug complex distributed networking
+    issues spanning tactical radios, UDP/TCP transports, and mesh routing — from packet
+    captures on deployed assets to cloud infrastructure</li> <li>Collaborate with
+    product teams across business lines to deploy DSB onto new hardware platforms
+    and support migrations from legacy communication buses</li> <li>Design and implement
+    protocol-level optimizations for bandwidth-constrained RF links, including compression,
+    prefix routing, and priority-based QoS scheduling</li> <li>Write RFCs and technical
+    design documents for new protocol features and API surfaces</li> <li>Build deterministic
+    simulation harnesses that allow the same production code to run in fully reproducible
+    test environments</li> <li>Improve observability through Prometheus metrics, Grafana
+    dashboards, and CLI tooling (dsbtool) for live mesh inspection and debugging</li>
+    <li>Contribute to the security posture of the communication layer, including packet
+    signing (ECDSA), FIPS compliance, and end-to-end encryption</li> </ul> <h3>REQUIRED
+    QUALIFICATIONS</h3> <ul> <li>5+ years of professional software engineering experience</li>
+    <li>Proficiency in a systems programming language (Rust, C, C++, or Go)</li> <li>Strong
+    understanding of networking fundamentals: TCP/UDP, socket programming, MTU, multicast,
+    TLS/mTLS</li> <li>Experience building or maintaining distributed systems (message
+    buses, RPC frameworks, consensus protocols, or similar)</li> <li>Familiarity with
+    asynchronous programming models (async/await, event loops, futures)</li> <li>Comfort
+    working with Protocol Buffers and/or gRPC</li> <li>Ability to read packet captures
+    and use network debugging tools (tcpdump, Wireshark, etc.)</li> <li>Must be eligible
+    to obtain and maintain a U.S. Secret security clearance</li> </ul> <h3>PREFERRED
+    QUALIFICATIONS</h3> <ul> <li>Production experience writing Rust</li> <li>Experience
+    with gossip protocols, epidemic broadcast, or peer-to-peer overlay networks</li>
+    <li>Familiarity with link-state routing protocols (OSPF, IS-IS) or inter-domain
+    routing (BGP)</li> <li>Experience with deterministic simulation or property-based
+    testing of distributed systems</li> <li>Familiarity with Kubernetes and container
+    orchestration</li> </ul><div class="content-pay-transparency"><div class="pay-input"><div
+    class="title">US Salary Range</div><div class="pay-range"><span>$166,000</span><span
+    class="divider">&mdash;</span><span>$220,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.585626+00:00'
+conversion:
+  outcome_stage: posting_stale
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: "2026-04-20"
