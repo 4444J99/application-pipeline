@@ -9,14 +9,17 @@ dependencies = [
     "pyyaml",
     "ruamel.yaml",
     "typer",
-    "anthropic",
+    "anthropic>=0.87.0",
     "google-genai",
     "mcp",
+    "python-multipart>=0.0.26",
+    "cryptography>=46.0.7",
+    "markdownify>=0.14.1",
 ]
 
 [project.optional-dependencies]
 dev = [
-    "pytest",
+    "pytest>=9.0.3",
     "pytest-mock",
     "ruff",
 ]
