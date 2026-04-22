@@ -1,0 +1,107 @@
+id: grafana-labs-staff-software-engineer-data-sources-core-services-ireland-r
+name: Grafana Labs Staff Software Engineer - Data Sources Core Services | Ireland
+  | Remote
+track: job
+status: research
+outcome: null
+target:
+  organization: Grafana Labs
+  url: https://boards.greenhouse.io/grafanalabs
+  application_url: https://job-boards.greenhouse.io/grafanalabs/jobs/5976475004
+  portal: greenhouse
+  location: Republic of Ireland (Remote)
+  location_class: international
+  description: '<div class="content-intro"><p>Grafana Labs is a remote-first, open-source
+    powerhouse. There are more than 20M users of Grafana, the open source visualization
+    tool, around the globe, monitoring everything from beehives to climate change
+    in the Alps. The instantly recognizable dashboards have been spotted everywhere
+    from a NASA launch and Minecraft HQ to Wimbledon and the Tour de France. Grafana
+    Labs also helps more than 3,000 companies -- including Bloomberg, JPMorgan Chase,
+    and eBay -- manage their observability strategies with the Grafana LGTM Stack,
+    which can be run fully managed with <a href="https://grafana.com/products/cloud/">Grafana
+    Cloud</a> or self-managed with the <a href="https://grafana.com/products/enterprise/">Grafana
+    Enterprise Stack</a>, both featuring scalable metrics (<a href="https://grafana.com/oss/mimir/">Grafana
+    Mimir</a>), logs (<a href="https://grafana.com/oss/loki/">Grafana Loki</a>), and
+    traces (<a href="https://grafana.com/oss/tempo/">Grafana Tempo</a>).</p> <p>We’re
+    scaling fast and staying true to what makes us different: an open-source legacy,
+    a global collaborative culture, and a passion for meaningful work. Our team thrives
+    in an innovation-driven environment where transparency, autonomy, and trust fuel
+    everything we do.</p> <p>You may not meet every requirement, and that’s okay.
+    If this role excites you, we’d love you to raise your hand for what could be a
+    truly career-defining opportunity.</p></div><p></p> <p><strong>Staff Backend Engineer
+    - Data Sources Core Services</strong></p> <p><strong>This role is available for
+    candidates located in the UK, Germany, Spain, Ireland and Sweden.</strong></p>
+    <p><strong>The Opportunity:</strong></p> <p>As a Staff Software Engineer in the
+    Core Services Data Sources squad, you’ll take a leading role in the design and
+    development of both internal cloud services and key user facing features.</p>
+    <p>Grafana is an open-source visualization platform that helps users understand
+    their systems and data through customizable dashboards and alerts. Within the
+    Grafana department, the Data</p> <p>Sources group is responsible for connecting
+    to and querying our vast library of data sources, as well as enabling a seamless
+    plugin ecosystem and marketplace. Data source queries make up</p> <p>the majority
+    of our request traffic and are a vital part of our product. The Core Services
+    Data Sources squad specifically builds and maintains our querying service, data
+    source connections,</p> <p>and other cross-cutting features for the group.</p>
+    <p>Our mission is to deliver a robust querying experience supported by a reliable,
+    scalable architecture. Collaboration is at the heart of what we do. You''ll have
+    the opportunity to work across the</p> <p>Data Sources group and partner with
+    other squads within the Grafana division to drive innovation and solve complex
+    engineering challenges.&nbsp;</p> <p><strong>What You''ll Be Doing:&nbsp;</strong></p>
+    <ul> <li>Enhancing the querying experience through improving how queries are transformed,
+    routed, and delivered at scale</li> <li>Influencing the design of our microservice
+    architecture&nbsp;</li> <li>Supporting the reliability, scalability, and operations
+    of data sources in Grafana Cloud</li> <li>Engineering new connection types to
+    remote data sources</li> <li>Collaborating with engineers and teams across the
+    Grafana division</li> <li>Take an active role in influencing our roadmap and your
+    own career objectives&nbsp;</li> <li>As we have embraced a remote-first approach
+    and our engineering team is primarily remote, it is essential to possess strong
+    communication skills and the ability to work independently. We provide support
+    and hold regular meetings through video calls to ensure effective collaboration
+    and alignment.</li> </ul> <p>We invest heavily in developer productivity. You
+    can use modern AI coding assistants as part of your daily workflow (your choice
+    of tools, within security guidelines), backed by a company-funded usage budget
+    so you can iterate quickly without unnecessary friction.</p> <p>We encourage pragmatic
+    AI-assisted development: faster prototyping, test generation, refactors, documentation,
+    and incident follow-ups—always paired with strong code review and quality standards.</p>
+    <p>You’ll also have access to frontier models (e.g., GPT-Codex 5/3, Claude Opus
+    4.6, Gemini 3 Pro).</p> <p><strong>What Makes You a Great Fit:&nbsp;</strong></p>
+    <ul> <li>You are a motivated self-starter with a bias toward action</li> <li>You
+    have a passion for creating intuitive products that fit customers’ needs</li>
+    <li>Pragmatism: You are able to take on complex challenges and break them down
+    to achieve short feedback loops: to analyze, design, and build modular solutions,
+    deliver MVPs, gather data and feedback and then progress iteratively</li> <li>You
+    are comfortable working in a remote-first company; communication is key.</li>
+    <li>You have professional experience as a backend engineer with expertise in cloud
+    microservice archite'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-22'
+  posting_date: '2026-04-20'
+  date_source: first_published
+  date_added: '2026-04-22'
+  discovered: '2026-04-22T21:40:49.024440+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-22'

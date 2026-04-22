@@ -1,0 +1,114 @@
+id: intercom-ai-infrastructure-engineer
+name: Intercom AI Infrastructure Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: Intercom
+  url: https://boards.greenhouse.io/intercom
+  application_url: https://job-boards.greenhouse.io/intercom/jobs/7824137
+  portal: greenhouse
+  location: London, England
+  location_class: international
+  description: '<div class="content-intro"><p>Intercom is the AI Customer Service
+    company on a mission to help businesses provide incredible customer experiences.&nbsp;</p>
+    <p>Our AI agent Fin, the most advanced customer service AI agent on the market,
+    lets businesses deliver always-on, impeccable customer service and ultimately
+    transform their customer experiences for the better. Fin can also be combined
+    with our Helpdesk to become a complete solution called the Intercom Customer Service
+    Suite, which provides AI enhanced support for the more complex or high touch queries
+    that require a human agent.&nbsp;</p> <p>Founded in 2011 and trusted by nearly
+    30,000 global businesses, Intercom is setting the new standard for customer service.
+    Driven by our core values, we push boundaries, build with speed and intensity,
+    and consistently deliver incredible value to our customers.</p></div><h2><strong>What''s
+    the opportunity?</strong></h2> <p>We’re looking for Senior+ AI Infrastructure
+    Engineers to build the systems that train and serve Intercom’s next generation
+    of AI products.</p> <p>Intercom is an AI company that builds from the GPU all
+    the way up to a user agent that resolves millions of customer service queries
+    a month.&nbsp;</p> <p>You’ll join a small, highly technical team working at the
+    cutting edge of modern AI infrastructure. The AI Infra team built the training
+    pipelines and runs the inference for custom models like Fin Apex, which outperforms
+    frontier models in customer service tasks, and is the foundation of the AI Group''s
+    full stack approach to AI.</p> <p><strong>We’re particularly interested in engineers
+    who have:</strong></p> <ul> <li>A track record of working on <strong>model training</strong>
+    or <strong>model inference at scale</strong>, or on <strong>low‑level GPU coding</strong>
+    (e.g. CUDA, Triton). Experience with one is great, multiple is even better.</li>
+    </ul> <h2><strong>What will I be doing?</strong></h2> <p>As a Senior AI Infrastructure
+    Engineer focused on model training and inference, you will:</p> <ul> <li>Implement
+    and scale <strong>training pipelines</strong> for large transformer and LLM models,
+    from data ingestion and preprocessing through distributed training and evaluation.</li>
+    <li>Build and optimize <strong>inference services</strong> that deliver low‑latency,
+    high‑reliability experiences for our customers, including autoscaling, routing,
+    and fallbacks.</li> <li>Work on <strong>GPU‑level performance</strong>: tuning
+    kernels, improving utilization, and identifying bottlenecks across our training
+    and inference stack.</li> <li>Collaborate closely with ML scientists to implement
+    cutting edge training and inference methods and bring them to production.</li>
+    <li>Play an active role in <strong>hiring, mentoring, and developing</strong>
+    other engineers on the team.</li> <li>Raise the bar for <strong>technical standards,
+    reliability, and operational excellence</strong> across Intercom’s AI platform.</li>
+    </ul> <h2><strong>Profile we’re looking for:</strong></h2> <p>These are indicative,
+    not hard requirements</p> <p>We’re looking to hire <strong>Senior+ AI Infrastructure
+    Engineers</strong>. You’re likely a great fit if:</p> <ul> <li>You have <strong>5+
+    years of experience in software engineering</strong>, with a strong track record
+    of shipping high‑quality products or platforms.</li> <li>You hold a <strong>degree
+    in Computer Science, Computer Engineering, or a related field</strong> (or you
+    have equivalent experience with very strong fundamentals).</li> <li>You have hands‑on
+    experience with <strong>one or more</strong> of the following:</li> <ul> <li><strong>Model
+    training</strong> (especially transformers and LLMs).</li> <li><strong>Model inference</strong>
+    at scale (again, especially transformers and LLMs).</li> <li><strong>Low‑level
+    GPU work</strong>, such as writing <strong>CUDA</strong> or <strong>Triton</strong>
+    kernels.</li> </ul> <li>Comfortable working in production environments at <strong>meaningful
+    scale</strong> (traffic, data, or organizational).</li> <li>You communicate clearly,
+    can explain complex technical topics to different audiences, and enjoy close collaboration
+    with both engineers and non‑engineers.</li> <li>You take pride in strong <strong>technical
+    fundamentals</strong>, love learning, and are willing to invest in your own development.</li>
+    <li>Have deep knowledge of at least one programming language (for example Python,
+    Ruby, Java, Go, etc.). Specific language experience is less important than your
+    ability to write clean, reliable code and learn new stacks quickly.</li> </ul>
+    <h2><strong>Bonus skills &amp; attributes</strong></h2> <p>None of these are required,
+    but they’re nice to have:</p> <ul> <li>Experience at <strong>AI native companies</strong>
+    that <strong>train and/or run inference for their own models</strong> (e.g. modern
+    AI labs or AI‑native product companies).</li> <li>Experience running training
+    or inference workloads on <strong>Kubernetes</strong>.</li> <li>Experience with'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.8
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-17'
+  date_source: first_published
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.529941+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-18'

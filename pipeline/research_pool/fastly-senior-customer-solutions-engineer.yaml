@@ -1,0 +1,115 @@
+id: fastly-senior-customer-solutions-engineer
+name: Fastly Senior Customer Solutions Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: Fastly
+  url: https://boards.greenhouse.io/fastly
+  application_url: https://www.fastly.com/about/jobs/apply?gh_jid=7733190
+  portal: greenhouse
+  location: Denver, CO; San Francisco, CA
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Fastly helps people stay better connected
+    with the things they love. Fastly’s edge cloud platform enables customers to create
+    great digital experiences quickly, securely, and reliably by processing, serving,
+    and securing our customers’ applications as close to their end-users as possible
+    — at the edge of the Internet. The platform is designed to take advantage of the
+    modern internet, to be programmable, and to support agile software development.
+    Fastly’s customers include many of the world’s most prominent companies, including
+    GitHub, Yelp, Paramount, and JetBlue.</p> <p>We''re building a more trustworthy
+    Internet. Come join us.</p></div><p>Posting Open Date: 3/19/26</p> <p>Anticipated
+    Posting Close Date*: 5/18/26</p> <p><em>*Job posting may close early due to the
+    volume of applicants.</em></p> <p>&nbsp;</p> <p>Senior Customer Solutions Engineer,
+    Streaming Media</p> <p>Fastly is looking for a passionate and exceptional Mandarin
+    speaking Senior Customer Solutions Engineer to be the primary technical contact
+    and trusted advisor for Fastly customers, building long term customer relationships
+    with a foundation of proactive and thorough assistance.&nbsp; This role requires
+    the technical expertise and the focus of client driven communications to act as
+    the primary contact for some of our largest and most critical clients. Internally
+    within Fastly, we title this role as a Senior Cloud Engineer.&nbsp;</p> <p>A Customer
+    Solutions Engineer (Senior Cloud Engineer) will have broad technical expertise
+    including cloud, system, and Fastly architecture, along with scripting/software
+    development capabilities and an advanced understanding of networking protocols
+    (HTTP, TCP).&nbsp;</p> <p>Additional responsibilities will include working with
+    the account management team to develop customer specific strategy, building and
+    maintaining technical relationships across multiple key stakeholders within an
+    account, and handling of customer escalations. Collaborating with many teams across
+    Fastly, this role requires leveraging technical expertise, close relationships,
+    and communication skills to help drive customer initiatives and growth, coordinate
+    support assistance and escalations, and effectively become an extension of the
+    customer’s teams. The Sr. CE will be responsible for the technical mentorship
+    and advisement on deals within their vertical.</p> <p>What You''ll Do:</p> <ul>
+    <li> <p>As the resident Fastly architect for your customer, you are an extension
+    of the customer’s technical team, and represent and champion the customers needs
+    within Fastly</p> </li> <li> <p>Develop technical relationships with multiple
+    customer contacts to build a deep understanding of their team, infrastructure,
+    plans, and problems they are encountering. Demonstrate an ability to present technical
+    concepts in a streamlined manner. Display a level of comfort in working with technical
+    devops contacts as well as various levels in the customer org.&nbsp;</p> </li>
+    <li> <p>Post sales implementation of Fastly products, such as logging endpoints,
+    image optimization and VCL coding while documenting key aspects of the customer’s
+    configuration for troubleshooting and engagement&nbsp;</p> </li> <li> <p>Identify
+    key challenges across an account (or internal org), sometimes before they are
+    verbalized, and develop alternatives and solutions that balance impact and effort.
+    Partner internally to provide a comprehensive ticket escalation and support.&nbsp;</p>
+    </li> <li> <p>Help investigate and recommend ways to improve customer implementation
+    and utilization of Fastly’s product portfolio, partnering with Sales and Account
+    Management.</p> </li> <li> <p>Be your customer''s champion and advocate within
+    Fastly, responsible for tracking and reporting on the health of your customer
+    accounts. Develops mutually beneficial solutions to customer tasks, balancing
+    customer impact and Fastly cost/effort.&nbsp;</p> </li> <li> <p>Take initiative
+    in adopting organizational changes and sharing progress/impact with the team.
+    Add thought leadership to the team, while engaging others to contribute.</p> </li>
+    <li> <p>Provide constructive feedback and coaching. Mentor new Cloud Engineers
+    to strengthen their technical expertise as it relates to your area of specialty</p>
+    </li> <li> <p>Be an effective communicator. Internally represent your accounts
+    with all levels of management including risks, new opportunities, and technical
+    requirements&nbsp;</p> </li> <li> <p>Work hands-on with CS and Sales Leaders along
+    with internal teams and customers on any support requests or problems for assigned
+    customers, driving escalation as necessary depending on severity.</p> </li> <li>
+    <p>Assist in developing strategy for and participation in regularly scheduled
+    customer meetings on-site and by video/phone as necessary.</p> </li> </ul> <p>What
+    We''re Looking For:&nbsp;</p> <ul> <li> <p>At least 8+ years of related experience
+    in Pre-Sales or Post-Sales in Sales Engineering, Technical'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.6
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.611911+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-25'

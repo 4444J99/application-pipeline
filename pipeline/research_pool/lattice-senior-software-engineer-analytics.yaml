@@ -1,0 +1,123 @@
+id: lattice-senior-software-engineer-analytics
+name: Lattice Senior Software Engineer, Analytics
+track: job
+status: research
+outcome: null
+target:
+  organization: Lattice
+  url: https://boards.greenhouse.io/lattice
+  application_url: https://lattice.com/job?gh_jid=8489530002
+  portal: greenhouse
+  location: Remote - Canada
+  location_class: international
+  description: "<h2><strong>This is Engineering at Lattice</strong></h2> <p>Lattice\u2019\
+    s Engineering team is continuously working to better both our product and our\
+    \ craft. We use a modern, cutting-edge tech stack aimed at developer productivity\
+    \ and delight. We strive for maintainable, robust, and performant code. We\u2019\
+    re highly collaborative and continuously iterative and work closely with designers\
+    \ and product managers. We prioritize not only great technical architecture but\
+    \ also an amazing product experience.</p> <p>&nbsp;Lattice\u2019s Analytics team\
+    \ is on a mission to make people data more actionable and accessible across the\
+    \ product. We're building toward a dual-mandate future:</p> <ul> <li>Analytics\
+    \ as a Service delivers embedded insights directly within Lattice products to\
+    \ support user workflows, by providing a platform for internal developers to easily\
+    \ integrate and expose analytics in their features.</li> <li>Analytics as an Experience\
+    \ is a centralized product offering, comprising the Explorer, Custom Reports,\
+    \ and Dashboards, and enables admins and managers to dig into data, uncover trends,\
+    \ and share insights to inform strategic decisions.</li> </ul> <h2><strong>What\
+    \ You Will Do</strong></h2> <ul> <li>You\u2019ll be responsible for building software\
+    \ to help companies create cultures in which their employees thrive.</li> <li>Partner\
+    \ with other engineers to build and own products across a modern tech stack. Our\
+    \ current stack includes React, Relay Modern, GraphQL, Node, and PostgreSQL. We\
+    \ rely on AWS to host our infrastructure.</li> <li>Work closely with other product\
+    \ teams to understand and solve overarching pain points.</li> <li>Own the execution\
+    \ of complex projects, including those that require cross-functional collaboration\
+    \ with product managers and designers.</li> <li>Provide substantial mentorship\
+    \ to less experienced colleagues, helping to refine their technical craft and\
+    \ expand their knowledge.</li> <li>Make contributions to our engineering practices,\
+    \ identifying and evangelizing improvements to improve our team output.</li> </ul>\
+    \ <h2><strong>What You Will Bring to the Table</strong></h2> <p>You have 5+ years\
+    \ of professional experience writing and maintaining production-level applications.</p>\
+    \ <ul> <li>You have experience with modern programming languages such as TypeScript,\
+    \ Ruby, and Python.</li> <li>You have experience working on and maintaining services\
+    \ for an organization operating at scale.</li> <li>You have experience building\
+    \ systems that are adopted by the wider engineering org.</li> <li>You\u2019re\
+    \ no stranger to SQL, you know how to efficiently model data and write performant\
+    \ queries in a relational database like PostgreSQL.</li> <li>You know the ins\
+    \ and outs of maintaining and scaling an application actively serving customers\
+    \ in production.</li> <li>You seek out the root cause when debugging software\
+    \ defects, and champion improvements that prevent future issues. You are familiar\
+    \ with operations tasks such as monitoring application performance over time or\
+    \ troubleshooting issues with production applications.</li> <li>You\u2019re clear\
+    \ and concise in explaining your thought process and in enumerating the tradeoffs\
+    \ made in your work.</li> <li>You love mentoring and supporting newer software\
+    \ engineers.</li> </ul> <p><strong>Location Requirement:</strong><br>This role\
+    \ is open to candidates located in British Columbia or Ontario, Canada. At this\
+    \ time, we are only able to hire employees residing in these provinces.</p> <p>___</p>\
+    \ <p><em><span style=\"font-weight: 400;\">The estimated annual cash salary for\
+    \ this role is&nbsp; CAD $135,500 - $169,500. This position is also eligible for\
+    \ incentive stock options, subject to the terms of Lattice\u2019s applicable plans.</span></em></p>\
+    \ <p><em><span style=\"font-weight: 400;\">Benefits: The Company offers the following\
+    \ benefits for this position, subject to applicable eligibility requirements:\
+    \ Medical insurance; Dental insurance; Vision insurance; Life, AD&amp;D, and Disability\
+    \ Insurance; Emergency Weather Support; Wellness Apps; Paid Parental Leave, Paid\
+    \ Time off inclusive of holidays and sick time; Commuter &amp; Parking Accounts;\
+    \ Lunches in the Office; Workplace Amenities Stipend, Internet and Phone Stipend;\
+    \ One time WFH Office Set-Up Stipend; 401(k) retirement plan; Financial Planning;\
+    \ Learning &amp; Development Budget; Sabbatical Program; and Invest in Your People\
+    \ Fund</span></em></p> <p><em><span style=\"font-weight: 400;\">*Note on Pay Transparency:</span></em></p>\
+    \ <p><em><span style=\"font-weight: 400;\">Lattice provides an estimate of the\
+    \ compensation for roles that may be hired as required by state regulations. Compensation\
+    \ may vary based on (a) location, as Lattice factors in specific location when\
+    \ benchmarking compensation for most roles; (b) individual candidate skills and\
+    \ qualifications; and (c) individual candidate experience.</span></em></p> <p><em><span\
+    \ style=\"font-weight: 400;\">Additionally, Lattice leverages current market data\
+    \ to determine compensation, so posted compensation figu"
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.1
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-14'
+  posting_date: '2026-04-13'
+  date_source: first_published
+  date_added: '2026-04-14'
+  discovered: '2026-04-14T10:23:06.710197+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-15'
+submission.variant_ids.cover_letter: variants/cover-letters/lattice-senior-software-engineer-analytics.md
+submission.blocks_used.identity: identity/2min
+submission.blocks_used.methodology: methodology/ai-conductor
+submission.materials_attached:
+- resumes/base/founder-operator-resume.html
+- resumes/base/independent-engineer-resume.html

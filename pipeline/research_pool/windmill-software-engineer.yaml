@@ -1,0 +1,73 @@
+id: windmill-software-engineer
+name: Windmill Software Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: Windmill
+  url: https://jobs.ashbyhq.com/windmill
+  application_url: https://jobs.ashbyhq.com/windmill/f832a79f-5190-4961-b4e6-5c8da8aa3ad1
+  portal: ashby
+  location: New York, NY
+  location_class: us-onsite
+  description: 'Windmill is building the future of performance. Windmill is the first
+    performance review system people actually like. It uses AI to remember every 1:1,
+    project milestone, and piece of feedback automatically so reviews take minutes,
+    not days. Managers feel prepared, employees feel seen, and HR teams finally have
+    a process everyone appreciates. On average, reviews take 6 hours less per person,
+    and 93% of employees report being satisfied with the process. Learn more: gowindmill.com
+    We are NYC based and work together in person. If you are not open to relocating
+    to New York, this is not the right opportunity. We are looking for candidates
+    who are: Self starters, who are curious to learn new things Individuals with a
+    strong interest in AI, and hands on experience with the latest technologies Experienced
+    in software engineering and a deeper level understanding of computing and theory.
+    Knowledgable in Node.JS, Typescript and Postgres Experienced in building and launching
+    a side project The right candidates have: 3-8 years of professional engineering
+    experience Strong communication skills and an ability to simplify complex problems
+    A bias to action Strong interest and curiosity around our product A desire to
+    drive an outsized impact at a fast paced and growing company About Windmill: Founded
+    in 2023 by Brian Distelburger (Co-Founder of Yext), Max Shaw (SVP of Product at
+    Yext) and Mark Tanner (VP Strategy at Saturn), Windmill is building the AI Management
+    system of the future. Windmill is at the cutting edge of AI and how it will change
+    the future of company building.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.341834+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

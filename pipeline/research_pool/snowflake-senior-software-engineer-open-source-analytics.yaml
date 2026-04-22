@@ -1,0 +1,115 @@
+id: snowflake-senior-software-engineer-open-source-analytics
+name: Snowflake Senior Software Engineer- Open Source Analytics
+track: job
+status: research
+outcome: null
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/b77b3b89-1fd1-474f-a642-af0c41b43a3b
+  portal: ashby
+  location: US-WA-Bellevue
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Snowflake’s vision is to enable every organization
+    to be data-driven. We’re at the forefront of innovation, helping customers realize
+    the full potential of their data with our AI data cloud. We are now going far
+    beyond the traditional data warehouse and helping customers unlock the power of
+    the open data lakehouse architecture with significant investment in Open Source
+    Analytics! Snowflake engineers are leading the way with innovations directly in
+    OSS projects like Apache Iceberg, Apache Polaris (incubating), Apache Parquet
+    and more! As a Senior Software Engineer on the Open Source Analytics team, you’ll
+    play a key role in building and evolving our open and interoperable data lake
+    ecosystem. You’ll work on some of the most complex and exciting challenges in
+    the enterprise data lake analytics area, all while collaborating closely with
+    some of the best minds in the open source community! You will have a direct impact
+    towards Snowflake’s mission of providing a truly open data lake architecture,
+    free from vendor lock-in. AS A SENIOR SOFTWARE ENGINEER ON THE OPEN SOURCE ANALYTICS
+    TEAM, YOU WILL: Pioneer new and innovative technical capabilities in the Open
+    Source Analytics community. You will define and build next-generation capabilities
+    on top of critical lakehouse building blocks like interoperable table formats,
+    data catalogs, file formats, and query engines. Design and implement features
+    and enhancements for Apache Iceberg and Apache Polaris focusing on scalability,
+    performance and usability such as Iceberg DML/DDL transactions, schema evolution,
+    partitioning, time travel, and more. Collaborate with the Open source community
+    by contributing code, participating in discussions and reviewing pull requests
+    to ensure high quality contributions. Architect and build systems that integrate
+    open source technologies seamlessly with Snowflake - enabling our customers to
+    build and deploy massive data lake architectures across platforms and across cloud
+    providers. Collaborate with Snowflake’s open-source team and the Apache Iceberg
+    community to contribute new features and enhance the Iceberg table format and
+    REST specification. Work on core data access control and governance features for
+    Apache Polaris Contribute to our managed Polaris service, Snowflake Open Catalog,
+    enabling customers to seamlessly manage and expand their data lake through Snowflake
+    as well as other external query engines like Spark and Trino. Build tooling and
+    services that automate data lake table maintenance, including compaction, clustering,
+    and data retention for enhanced query performance and efficiency. OUR IDEAL SENIOR
+    SOFTWARE ENGINEER WILL HAVE: 5+ years of experience designing and building scalable,
+    distributed systems. Strong programming skills in Java, Scala, or C++ with an
+    emphasis on performance and reliability. Deep understanding of distributed transaction
+    processing, concurrency control, and high-performance query engines. Experience
+    with open-source data lake formats (e.g., Apache Iceberg, Parquet, Delta) and
+    the challenges associated with multi-engine interoperability. Experience building
+    cloud-native services and working with public cloud providers like AWS, Azure,
+    or GCP. A passion for open-source software and community engagement, particularly
+    in the data ecosystem. Familiarity with data governance, security, and access
+    control models in distributed data systems. BONUS POINTS FOR EXPERIENCE WITH:
+    Contributing to open-source projects, especially in the data infrastructure space.
+    Designing or implementing REST APIs, particularly in the context of distributed
+    systems. Managing large-scale data lakes or data catalogs in production environments.
+    Working on highly-performant and scalable query engines such as Spark, Flink,
+    or Trino. WHY JOIN THE OPEN SOURCE ANALYTICS TEAM AT SNOWFLAKE? Be part of a pioneering
+    effort to build the most open and interoperable data lake ecosystem in the industry.
+    Work on a high-impact open-source project that solves real-world data challenges
+    for enterprise customers across all industry verticals. Collaborate with some
+    of the brightest minds in the data ecosystem, including core contributors and
+    PMC members of Apache Iceberg and Apache Polaris (incubating). Have the opportunity
+    to innovate in one of the fastest-growing and evolving areas in enterprise data,
+    where you can make a direct impact on Snowflake’s growth and the broader open-source
+    community. Every Snowflake employee is expected to follow the company’s confidentiality
+    and security standards for handling sensitive data. Snowflake employees must abide
+    by the company’s data security plan as an essential part of their duties. It is
+    every employee''s duty to keep customer informat'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.7
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.142592+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

@@ -1,0 +1,98 @@
+id: navan-sr-software-engineer-backend
+name: Navan Sr. Software Engineer (Backend )
+track: job
+status: research
+outcome: null
+target:
+  organization: Navan
+  url: https://boards.greenhouse.io/tripactions
+  application_url: https://navan.com/careers/openings?gh_jid=7764298
+  portal: greenhouse
+  location: Berlin, Germany
+  location_class: international
+  description: <p>At Navan, our mission is to power the in-person connections that
+    move people, ideas and businesses forward. We help our travelers focus on being
+    there, not getting there and our Global Operations and Service team is central
+    to this mission!</p> <p>As a member of our quickly growing Global Operations and
+    Service team, you will be responsible for directly supporting our users’ travel
+    needs. As owners of customer satisfaction, your role is to solve issues, communicate
+    effectively, and collaborate with internal teams to remove any barriers for the
+    traveler - all while providing a best-in-class customer experience. As the front
+    line of our business, you will have a unique opportunity to provide regular feedback
+    to our product, design and engineering teams as they work towards continually
+    improving our customer facing and internal platforms. This is an exciting role
+    where you will have a direct impact on our day to day operations, traveler experience
+    and product development!</p> <p data-start="272" data-end="494">We are looking
+    for a Senior Backend Engineer to join the Expense Platform team. You will build
+    and scale distributed systems that power the full expense lifecycle, including
+    expense creation, approvals, and reimbursements.</p> <p data-section-id="187pcd9"
+    data-start="501" data-end="523"><strong data-start="505" data-end="523"><br>What
+    You’ll Do</strong></p> <ul data-start="524" data-end="975"> <li data-section-id="1bd7622"
+    data-start="524" data-end="595">Build and maintain backend microservices using
+    Java and Spring Boot</li> <li data-section-id="81xt3o" data-start="596" data-end="658">Design
+    and implement event-driven systems (Kafka, AWS SQS)</li> <li data-section-id="67zdai"
+    data-start="659" data-end="726">Develop REST APIs and integrate with external
+    financial systems</li> <li data-section-id="140g7mw" data-start="727" data-end="807">Work
+    on expense workflows (reimbursements, cash advances, mileage, per diem)</li> <li
+    data-section-id="12xiarh" data-start="808" data-end="865">Build and improve receipt
+    ingestion and OCR pipelines</li> <li data-section-id="1rtpu3" data-start="866"
+    data-end="925">Ensure system reliability, performance, and scalability</li> <li
+    data-section-id="1skhivl" data-start="926" data-end="975">Write and maintain unit
+    and integration tests</li> </ul> <hr data-start="977" data-end="980"> <p data-section-id="1hr9x9o"
+    data-start="982" data-end="1012"><strong data-start="986" data-end="1012">What
+    We’re Looking For</strong></p> <ul data-start="1013" data-end="1427"> <li data-section-id="1f4pqf7"
+    data-start="1013" data-end="1059">6+ years of backend engineering experience</li>
+    <li data-section-id="1b3vu8m" data-start="1060" data-end="1136">Strong experience
+    with Java, Spring Boot, and microservices architecture</li> <li data-section-id="1o821dh"
+    data-start="1137" data-end="1202">Solid SQL knowledge and database design (MySQL
+    or PostgreSQL)</li> <li data-section-id="v5of9n" data-start="1203" data-end="1268">Experience
+    with event-driven systems (Kafka, SQS, or similar)</li> <li data-section-id="10sbj79"
+    data-start="1269" data-end="1323">Familiarity with AWS services (S3, SQS, SES,
+    etc.)</li> <li data-section-id="18qx4hz" data-start="1324" data-end="1367">Experience
+    with CI/CD and Git workflows</li> <li data-section-id="cavech" data-start="1368"
+    data-end="1427">Strong testing practices (unit and integration testing)</li> <li>You
+    see engineering velocity as a strategic differentiator. You are driven by the
+    goal of making our engineering org so fast and reliable that we out-innovate the
+    market.</li> </ul>
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.7
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-13'
+  posting_date: '2026-04-12'
+  date_source: first_published
+  date_added: '2026-04-13'
+  discovered: '2026-04-13T10:15:22.250585+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-13'

@@ -1,0 +1,115 @@
+id: grammarly-software-engineer-front-end
+name: Grammarly Software Engineer, Front-End
+track: job
+status: research
+outcome: null
+target:
+  organization: Grammarly
+  url: https://boards.greenhouse.io/grammarly
+  application_url: https://job-boards.greenhouse.io/grammarly/jobs/5856195
+  portal: greenhouse
+  location: Berlin, Germany
+  location_class: international
+  description: '<p><em>Superhuman offers a dynamic hybrid working model for this role.
+    This flexible approach gives team members the best of both worlds: plenty of focus
+    time along with in-person collaboration that helps foster trust, innovation, and
+    a strong team culture.</em></p> <h3><strong>About Superhuman</strong></h3> <p>Grammarly
+    is now part of Superhuman, the AI productivity platform on a mission to unlock
+    the superhuman potential in everyone. The Superhuman suite of apps and agents
+    brings AI wherever people work, integrating with over 1 million applications and
+    websites. The company’s products include Grammarly’s writing assistance, Coda’s
+    collaborative workspaces, Mail’s inbox management, and Go, the proactive AI assistant
+    that understands context and delivers help automatically. Founded in 2009, Superhuman
+    empowers over 40 million people, 50,000 organizations, and 3,000 educational institutions
+    worldwide to eliminate busywork and focus on what matters. Learn more at <span
+    class="s1"><a href="http://superhuman.com/">superhuman.com</a></span> and about
+    our <a href="https://blog.superhuman.com/our-values/"><span class="s1">values
+    here</span></a>.</p> <h3><strong>The Opportunity&nbsp;</strong></h3> <p>To achieve
+    our ambitious goals, we’re looking for Software Engineers to join our engineering
+    teams. Front-End engineers build and own user-focused interfaces, work closely
+    with Product and Design teams, and collaborate with other functional teams across
+    the Engineering organization.&nbsp;</p> <p>Superhuman''s engineers and researchers
+    have the freedom to innovate and uncover breakthroughs—and, in turn, influence
+    our product roadmap. The complexity of our technical challenges is growing rapidly
+    as we scale our interfaces, algorithms, and infrastructure. You can hear more
+    from our team on our<a href="http://grammarly.com/blog/engineering"> technical
+    blog</a>.</p> <p>Superhuman is growing rapidly. There are opportunities to join
+    a team, learn from experienced peers, and build product offerings and teams from
+    the ground up. Within our growing engineering organization, there is plenty of
+    room for ownership and direct impact on users.</p> <p>As a Software Engineer at
+    Superhuman, you will:</p> <ul> <li>Ship production-grade code to over 40 million
+    daily active users.</li> <li>Grow and maintain the team’s technical excellence
+    by focusing on best practices for the team and product.</li> <li>Contribute to
+    the company''s technical culture.</li> <li>Harness engagement metrics to identify
+    and build new impactful features.</li> <li>Work on fun and technically challenging
+    projects to deliver impactful apps on popular browsers.</li> <li>Use React and
+    TypeScript while building super-refined and elegant user interfaces.</li> <li>Collaborate
+    with internal teams such as Core, Growth, Enterprise, Trust, and Data to deliver
+    delightful product offerings to our customers.</li> <li>Make a meaningful impact
+    on the lives of writers everywhere!</li> </ul> <h3><strong>Qualifications</strong></h3>
+    <ul> <li>Brings at least 3 years of experience in front-end development.</li>
+    <li>Has expert-level software engineering fundamentals, including knowledge of
+    algorithms and data structures.</li> <li>Has knowledge of JavaScript (and/or TypeScript),
+    HTML, and CSS.</li> <li>Has&nbsp;extensive experience with ReactJS, AngularJS,
+    or similar UI frameworks.</li> <li>Tackles infrastructure challenges when needed.</li>
+    <li>Has experience with modern web client development and testing tools.</li>
+    <li>Has a deep understanding and extensive knowledge of continuous integration
+    and delivery methods.</li> </ul> <p>Bonus points for:&nbsp;</p> <ul> <li>Functional
+    programming experience.</li> <li>Experience running experiments and A/B tests.&nbsp;</li>
+    </ul> <h3><strong>Support for you, professionally and personally</strong></h3>
+    <ul> <li><em>Professional growth</em>: We hire people we trust, and we give team
+    members autonomy to do their best work. We also support professional development
+    with training, coaching, and regular feedback.</li> <li><em>A connected team</em>:
+    Superhuman builds a product that helps people connect, and we apply this mindset
+    to our own team. We have a highly collaborative culture. We also take time to
+    celebrate our colleagues and accomplishments with global, local, and team-specific
+    events and programs.</li> <li><em>Comprehensive benefits</em>: Superhuman offers
+    all team members competitive pay along with a benefits package that includes superior
+    healthcare. We also offer ample and defined time off, catered lunches, gym and
+    recreation stipends, admission discounts, and more.</li> <li><em>Relocation support:
+    </em>We can help you relocate to Berlin and make the experience smooth and easy.
+    Superhuman provides a relocation bonus, legal and visa support, temporary housing,
+    moving support and travel expenses, assistance in finding schools for your kids—and
+    all other information you might need.</li> </ul> <h3><strong>We encourage you
+    to apply</strong></h3> <'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.8
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.723963+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-25'

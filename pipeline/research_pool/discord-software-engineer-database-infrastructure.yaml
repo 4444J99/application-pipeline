@@ -1,0 +1,109 @@
+id: discord-software-engineer-database-infrastructure
+name: Discord Software Engineer- Database Infrastructure
+track: job
+status: research
+outcome: null
+target:
+  organization: Discord
+  url: https://boards.greenhouse.io/discord
+  application_url: https://job-boards.greenhouse.io/discord/jobs/8487457002
+  portal: greenhouse
+  location: 'San Francisco Bay Area '
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Discord is used by over 200 million
+    people every month for many different reasons, but there’s one thing that nearly
+    everyone does on our platform:<strong> play video games.</strong> Over 90% of
+    our users play games, spending a combined 1.5 billion hours playing thousands
+    of unique titles on Discord each month. Discord plays a uniquely important role
+    in the future of gaming. We are focused on making it easier and more fun for people
+    to talk and hang out before, during, and after playing games.</p></div><p>The
+    Database Infrastructure team develops and operates all of Discord’s databases
+    and data services. Those systems store the data of Discord''s 200M+ monthly active
+    users—including trillions of messages! We work across multiple areas: databases,
+    disk storage and Rust-based data access services. We''re a small team whose work
+    has a huge impact on our company''s success and ability to grow!</p> <p>Some blog
+    posts from the team:</p> <ul> <li><a href="https://discord.com/blog/how-discord-indexes-trillions-of-messages">How
+    Discord Indexes Trillions of Messages</a></li> <li><a href="https://discord.com/blog/how-discord-stores-trillions-of-messages">How
+    Discord Stores Trillions of Messages</a></li> <li><a href="https://discord.com/blog/how-discord-supercharges-network-disks-for-extreme-low-latency">How
+    Discord Supercharges Network Disks for Extreme Low-Latency</a></li> </ul> <p><strong>You
+    will:</strong></p> <ul> <li>Build and operate large-scale, reliable and performant
+    data systems with ScyllaDB, PostgreSQL, ElasticSearch, Linux and Rust.</li> <li>Collaborate
+    with product and infrastructure teams to develop storage primitives enabling all
+    of Discord.</li> <li>Exercise "First Principles Thinking" to always deliver what
+    matters most to our users.</li> <li>Work with a talented team of engineers who
+    have built one of the largest communication platforms in the world.</li> </ul>
+    <p><strong>You have:</strong></p> <ul> <li>2-4 years of experience with building
+    backend infrastructure</li> <li>Ability to troubleshoot, debug, and test complex
+    systems in a live, production environment</li> <li>Strong operating systems, distributed
+    systems, and concurrency control fundamentals</li> <li>Proficiency with at least
+    one statically-typed programming language: e.g. Rust, Go, Java, C, C++</li> <li>Comfortable
+    working in fast paced environments</li> </ul> <p><strong>Bonus Points:</strong></p>
+    <ul> <li>Experience with highly-available and distributed databases: e.g. ScyllaDB,
+    Cassandra, Vitess, Postgres w/HA, etc.</li> <li>Experience with Rust</li> <li>Knowledge
+    of DevOps tools like Salt, Terraform or Kubernetes</li> </ul> <p><strong>More
+    things that might interest you:</strong></p> <ul> <li>We’ve tackled a lot of fascinating
+    technical challenges over the years, and blogged about it regularly: <ul> <li><a
+    href="https://discord.com/blog/how-discord-stores-trillions-of-messages">How Discord
+    Stores Trillions of Messages</a></li> <li><a href="https://discord.com/blog/authentication-outage">25%
+    or 6 to 4: The 11/6/23 Authentication Outage</a></li> <li><a href="https://discord.com/blog/how-discord-supercharges-network-disks-for-extreme-low-latency">How
+    Discord Supercharges Network Disks for Extreme Low Latency</a></li> <li><a href="https://discord.com/blog/why-discord-is-switching-from-go-to-rust">Why
+    Discord is switching from Go to Rust</a></li> <li><a href="https://discord.com/blog/how-discord-indexes-billions-of-messages">How
+    Discord Indexes Billions of Messages</a></li> <li><a href="https://discord.com/blog/how-discord-stores-billions-of-messages">How
+    Discord Stores Billions of Messages</a></li> <li><a href="https://discord.com/blog/how-discord-indexes-trillions-of-messages">How
+    Discord Indexes Trillions of Messages </a></li> </ul> </li> <li>One of our team
+    members even wrote a&nbsp;<a href="https://www.manning.com/books/scylladb-in-action"
+    target="_blank">book on ScyllaDB</a></li> <li>We present at conferences: <ul>
+    <li><a href="https://www.youtube.com/watch?v=k8PCBbt9j-o">How Discord Indexes
+    Trillions of Messages by Vicki Niu</a></li> <li><a href="https://www.youtube.com/watch?v=mVMudIEEXeQ">How
+    Discord Performs Database Upgrades at Scale by Ethan Donowitz</a></li> </ul> </li>
+    </ul> <p><em><br>The US base salary range for this full-time position is $160,000
+    to $180,000 + equity + benefits. Our salary ranges are determined by role and
+    level. Within the range, individual pay is determined by additional factors, including
+    job-related skills, experience, and relevant education or training. Please note
+    that the compensation details listed in US role postings reflect the base salary
+    only, and do not include equity, or benefits.<br></em></p><div class="content-conclusion"><p><strong>Why
+    Discord?&nbsp;</strong><br><br>Discord plays a uniquely important role in the
+    future of gaming. We''re a multiplatform, multigenerational and multiplayer platform
+    that helps people deepen their friendships around games and shared in'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-03'
+  posting_date: '2026-04-02'
+  date_source: first_published
+  date_added: '2026-04-03'
+  discovered: '2026-04-03T10:15:35.540078+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-03'

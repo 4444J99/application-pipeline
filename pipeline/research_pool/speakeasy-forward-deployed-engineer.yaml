@@ -1,0 +1,93 @@
+id: speakeasy-forward-deployed-engineer
+name: Speakeasy Forward Deployed Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: Speakeasy
+  url: https://jobs.ashbyhq.com/speakeasy
+  application_url: https://jobs.ashbyhq.com/speakeasy/def210b2-b6aa-421b-84c4-dcd278f95db9
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'About Speakeasy Speakeasy’s vision is to unlock the full potential
+    of APIs, empowering developers to build the future faster. We do this by helping
+    companies Build, Test, and Distribute best in class APIs. Our suite of OpenAPI-native
+    tooling gives every API producer a comprehensive toolkit for designing better
+    APIs, keeping API artifacts well governed and always up-to-date, and delivering
+    APIs to every ecosystem through production-ready SDKs, AI agent-ready MCP servers,
+    Terraform Providers, and AI-enabled API docs. Our customers today include leading
+    tech companies and fortune 100 enterprises such as Mistral AI, Vercel, Gusto,
+    Docusign and Verizon. With Speakeasy, they reduce time-to-integration, unblock
+    revenue, and save their engineering teams significant time and toil. About the
+    role As a Forward Deployed Engineer, you will be at the forefront of our customer
+    engagements. You''ll own the hands-on, technical deployment of Speakeasy within
+    key accounts, working autonomously to ensure successful implementations and serving
+    as a critical technical partner for our customers. You will iterate our core product,
+    driving and implementing improvements hand-in-hand with customers to help achieve
+    their goals. About you Significant back-end / API engineering experience -- likely
+    at least 6-8 years. You’re excited to dive deep into the technical details of
+    our customers’ APIs and SDKs, and can lead in-depth technical deployments/implementations
+    with customers and partners Previously worked as a founding engineer, solutions
+    engineer, or technical founder Demonstrate exemplary customer empathy: be able
+    to pragmatically connect customers’ goals with Speakeasy Demonstrate high ownership/autonomy.
+    You can rapidly learn what you don’t already know, and you can naturally identify
+    where to have high impact/leverage. You can drive successful outcomes with customers
+    Manage multiple customer relationships and potentially competing priorities elegantly
+    Use your customer learnings to influence the product roadmap and docs, to ensure
+    constant improvement in the customer experience What should you know about us?
+    Our team is split across PST and GMT timezones. This has its advantages and disadvantages.
+    We follow async processes pretty well but it''s not perfect. You’ll help us get
+    there We''re a small team of ~40. We are collaborative and supportive of each
+    other, but believe in high ownership and autonomy We are ambitious, passionate
+    about what we do, and seek to be exceptional. If you are looking for a place to
+    clock in and out or to simply punch a ticket, we are likely not a good fit for
+    you We serve tens of thousands of users, with customers from startups to large
+    enterprises This role is based in the SF Bay Area; we work together in the office
+    3 days a week Our codebase is written in Go and TypeScript Compensation and Benefits
+    Salary: $180–220K + equity Medical, dental, and vision insurance covered at 100%
+    for you and 90% for dependents 401(k) plan Unmetered PTO Onsites in SF and London
+    (and other locations: in the past we’ve visited NYC, Lisbon and Mexico City!)
+    Work with a fun, collaborative, ambitious team Excited to learn more? Get in touch
+    with us at simon@speakeasy.com. We look forward to hearing from you!'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 5.9
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 1
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.344074+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

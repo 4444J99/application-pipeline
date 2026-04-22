@@ -1,0 +1,116 @@
+id: chime-senior-software-engineer-genai-platform
+name: Chime Senior Software Engineer, GenAI Platform
+track: job
+status: research
+outcome: null
+target:
+  organization: Chime
+  url: https://boards.greenhouse.io/chime
+  application_url: https://boards.greenhouse.io/chime/jobs/8384241002?gh_jid=8384241002
+  portal: greenhouse
+  location: San Francisco, CA, USA
+  location_class: us-onsite
+  description: '<h3><strong>About the Role</strong></h3> <p>We are looking for a Senior
+    Full-Stack Engineer to join our Jade team and build the tooling and infrastructure
+    that powers Chime''s AI-powered financial assistant.</p> <p>As a senior engineer
+    on this team, you''ll focus on the systems that enable us to scale and move faster
+    — building eval frameworks, production observability, conversation review tools,
+    and guardrail systems that ensure our AI experiences are reliable and safe for
+    millions of members. Your work will directly help the team ship new capabilities
+    to Jade by giving them the platforms and processes they need to develop, test,
+    and monitor with confidence.</p> <p>You''ll work across the stack, from internal
+    UIs and dashboards to backend services that handle model routing, prompt management,
+    and evaluation pipelines. The AI landscape evolves rapidly, and so do the needs
+    of our team. You''ll need to learn quickly, adapt to shifting priorities, and
+    proactively anticipate what the team needs next to keep moving fast. If you''re
+    excited about solving the unique challenges that come with shipping LLM-powered
+    products at scale, this is the role for you.</p> <p>The base salary offered for
+    this role and level of experience will begin at $164,000 and up to $259,000. Full-time
+    employees are also eligible for a bonus, competitive equity package, and benefits.
+    The actual base salary offered may be higher, depending on your location, skills,
+    qualifications, and experience.</p> <h3><strong>In this role, you can expect to:</strong></h3>
+    <ul> <li>Design, develop, test, and scale backend implementations of our in-app
+    Jade agent</li> <li>Lead tooling solutions that allow us to safely and confidently
+    roll out new features</li> <li>Partner cross-functionally to solve member pain
+    points and deliver secure, scalable solutions</li> <li>Improve system reliability
+    through performance tuning and architectural enhancements</li> <li>Contribute
+    to technical design and maintain high standards across the codebase</li> <li>Participate
+    in code reviews and mentor teammates to raise the bar</li> <li>Bring curiosity
+    and initiative to explore how things work and how they can work better</li> </ul>
+    <h3><strong>To thrive in this role, you have:</strong></h3> <ul> <li>5+ years
+    of backend software development experience in production environments</li> <li>Experience
+    with agent engineering</li> <li>Proficiency with AI tooling and AI native development</li>
+    <li>Proficiency with Python or comparable frameworks</li> <li>Experience with
+    transactional databases (e.g., Postgres) and caching systems (e.g., Redis)</li>
+    <li>Familiarity with architectural patterns in high-scale systems</li> <li>A strong
+    focus on writing maintainable, well-tested code</li> <li>A drive to learn and
+    dive deep into technical systems</li> <li>Bonus: Experience in fintech, security
+    systems, or startup environments</li> </ul> <p>#LI-Onsite #LI-AA1</p><div class="content-conclusion"><h2><strong>A
+    little about us</strong></h2> <p>At Chime, we believe that everyone can achieve
+    financial progress. We created Chime—a financial technology company, not a bank*—on
+    the premise that core banking services should be helpful, easy, and free. Through
+    our user-friendly tools and intuitive platforms, we empower our members to take
+    control of their finances and work towards their goals. Whether it''s starting
+    a savings account, purchasing a first car or home, launching a business, or pursuing
+    higher education, we''re proud to have helped millions unlock their financial
+    potential.</p> <p>We''re a team of problem solvers, dreamers, and builders with
+    one shared obsession: our members. From day one, Chimers have worked tirelessly
+    to out-hustle and out-execute competitors to bring our mission to life. Their
+    grit and determination inspire us to work harder every day to deliver the very
+    best experience possible. We each bring an owner''s mindset to our work, refusing
+    to be outdone and holding ourselves accountable to meet and exceed the highest
+    bars for our teams, our company, and our members.</p> <p>We believe in being bold,
+    dreaming big, and taking risks, while also working together, embracing our diverse
+    perspectives, and giving each other honest feedback. Our culture remains deeply
+    entrepreneurial, encouraging every Chimer to see themselves as stewards of our
+    mission to help everyday Americans unlock their financial progress.&nbsp;</p>
+    <p>We know that to achieve our mission, we must earn and keep people''s trust—so
+    we hold ourselves to the highest standards of integrity in everything we do. These
+    aren''t just words on a wall—our values are embedded in every aspect of our business,
+    serving as a north star that guides us as we work to help millions achieve their
+    financial potential.</p> <p>Because if we don''t—who will?</p> <p>*Chime is a
+    financial technology company, not a bank. Banking services provided by The Bancorp
+    Bank, N.A. or Stride Bank, N.A., Members FDIC.</p> <h2><strong>What we offer for
+    our full-time'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-17'
+  date_source: first_published
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.538964+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-18'

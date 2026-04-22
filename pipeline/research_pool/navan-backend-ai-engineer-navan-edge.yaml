@@ -1,0 +1,76 @@
+id: navan-backend-ai-engineer-navan-edge
+name: Navan Backend AI Engineer - Navan Edge
+track: job
+status: research
+outcome: null
+target:
+  organization: Navan
+  url: https://boards.greenhouse.io/tripactions
+  application_url: https://navan.com/careers/openings?gh_jid=7454281
+  portal: greenhouse
+  location: Tel-Aviv, Israel
+  location_class: international
+  description: <p>We are seeking a skilled Backend Engineer to join our team and implement
+    advanced AI solutions in our travel and expense management products. The ideal
+    candidate will have strong backend engineering expertise and enthusiasm for working
+    with cutting-edge AI technologies.<br>About the Role:<br>You'll be responsible
+    for designing and implementing backend services that integrate AI capabilities
+    including large language models (LLMs), retrieval-augmented generation (RAG),
+    and conversational interfaces into our consumer-facing products. This is an opportunity
+    to expand your expertise into AI while leveraging your strong engineering foundation.</p>
+    <p><strong>What You’ll Do</strong><br>• Design and develop scalable, high-performance
+    backend services and APIs.<br>• Implement integrations with AI platforms and services.<br>•
+    Work with AI specialists to translate AI capabilities into production-ready features.<br>•
+    Ensure high reliability, performance, and security of AI-powered systems.<br>•
+    Collaborate with product and engineering teams to gather requirements and deliver
+    solutions.</p> <p><strong>What We’re Looking for:</strong><br>• 5+ years of professional
+    backend engineering experience.<br>• Strong proficiency in at least one backend
+    programming language (Java etc).<br>• Experience building and maintaining production-grade
+    APIs and microservices.<br>• Solid understanding of distributed systems, data
+    structures, and algorithms.<br>• Experience with SQL and NoSQL databases.<br>•
+    Track record of delivering consumer-facing products at scale.</p> <p>• Experience
+    with AI/ML platforms and services (OpenAI, Hugging Face, etc.)<br>• Familiarity
+    with LLMs, RAG, or conversational AI.<br>• Knowledge of vector databases and embedding
+    technologies.<br>• Experience with cloud platforms (AWS, GCP, Azure).<br>• Understanding
+    of AI/ML concepts and implementation patterns.</p>
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.7
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.745644+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-25'

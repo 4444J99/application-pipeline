@@ -1,0 +1,94 @@
+id: plane-node-js-developer-backend
+name: Plane Node JS Developer (Backend)
+track: job
+status: research
+outcome: null
+target:
+  organization: Plane
+  url: https://jobs.ashbyhq.com/plane
+  application_url: https://jobs.ashbyhq.com/plane/188f905e-3f6f-4569-9a32-d8ec48dfe656
+  portal: ashby
+  location: Hyderabad, India
+  location_class: international
+  description: 'About Plane Plane is an incisive response to config-heavy, opinionated,
+    and restrictive project management software. Check out our website . In just two
+    years, Plane’s grown to #1 in its category on GitHub and become a viable open-core
+    alternative to Jira, Monday, Wrike, Asana, ClickUp, and Linear, not to mention
+    all-in-one tools like Notion or Obsidian. Our growth has come on the back of the
+    product’s true flexibility without artificial limits, simple configurations that
+    work out of the box, and thoughtfully packaged features that nurture our customers’
+    growth instead of punishing it. As a modern product start-up, we obsess over new
+    and power users equally. Our mission is to empower teams everywhere with the simplest,
+    most delightful work management experience on the planet. Our vision is to become
+    the WorkOS of the future with a workbench of unified tools and techniques that
+    intuitively and progressively form a greater whole for knowledge workers. We’re
+    well capitalized, backed by OSS Capital, and are revenue-positive. Our coworkers
+    include ex-Microsoft, Deloitte, [24]7, Nutanix, and Yahoo! in our 50+ strong human
+    force today. What you will do? • Work at the intersection of core plane application
+    and external integrations like Slack, GitHub and AI. • Improve our importer, integration
+    reliability to migrate data safely from tools like Jira, Linear etc. • Elevate
+    our service''s reliability with superior observability, monitoring, and alert
+    systems, enabling prompt incident responses. • Expand our service''s capabilities
+    with strategic architectural and infrastructural upgrades. • Share our meaningful
+    innovations with the open-source community. • Set new industry standards for software
+    development practices, aiming to deliver unparalleled quality to the global market.
+    • Improve developer experience and help external developers build OAuth apps for
+    Plane. • Take ownership of existing and new products we''ll be building. What
+    you''d need to bring: • Skilled in Node.js with TypeScript . • Experience with
+    frameworks like Express.js, NestJS are a must have. • Should be well versed with
+    design patterns. • Extensive experience in working with queues and workers, including
+    building robust worker architectures, task management systems, and handling distributed
+    workloads. • Must be a self-starter and high ownership. • 3+ years of experience
+    in developing high quality Node applications. • Must be familiar and preferably
+    hands on with messaging systems like RabbitMQ, caches like Redis etc. • Strong
+    database experience with Postgres . • Experienced in working on monorepos and
+    micro services architecture . • Experience with building integrations is a big
+    plus. • Startup experience is a plus . Tech • Node.js/TypeScript, Python/Django,
+    Postgres, RabbitMQ and Redis in the backend • Hosted on AWS Cloud with k8s • Experienced
+    working in message queues and scheduling. • Experienced in using monitoring tools
+    like DataDog and Sentry • Tools: GitHub, PGAdmin, Postman, Pytest Why Join Plane?
+    Be part of a global product team driving meaningful impact worldwide. Thrive in
+    a collaborative, innovation-driven environment that prioritizes continuous learning.
+    Experience a vibrant and supportive company culture. Join a high-growth organization
+    with exciting opportunities for advancement.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.8
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.379280+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

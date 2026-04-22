@@ -1,0 +1,89 @@
+id: snowflake-software-engineer
+name: Snowflake Software Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/0e8b9a0b-534f-451c-9c41-5c8b98325b3a
+  portal: ashby
+  location: PL-Warsaw
+  location_class: international
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. We''re looking for a motivated and versatile
+    engineer to join our RSC (Regulatory & Sovereign Cloud) team. This team is at
+    the forefront of building Snowflake strength in areas that meet the most stringent
+    data sovereignty, compliance, and regulatory requirements globally. As a member
+    of our team, you''ll work on projects that directly impact government and highly
+    regulated markets, helping to secure and scale our platform. You''ll gain broad
+    exposure to diverse technologies and solve complex, multi-faceted problems. What
+    you''ll do: Design, implement, and maintain core services that support our sovereign
+    and regulatory cloud platform. Develop automation tools to improve the efficiency,
+    reliability, and security of our systems and ensure compliance with strict governance
+    standards. Collaborate with other engineering teams to understand their needs
+    and challenges, and eventually support them in meeting all specific requirements.
+    Contribute to the full development lifecycle , from initial design and planning
+    to deployment, monitoring, and support in a regulated environment. Debug and troubleshoot
+    complex issues across various layers of our stack, with a focus on auditability
+    and security. What you''ll need: Solid understanding of at least one programming
+    language (Go and Python are preferred). Familiarity with public cloud platforms,
+    Kubernetes, and container technologies Knowledge of infrastructure as code (IaC)
+    . An eagerness to learn new technologies and work autonomously on challenging
+    problems. Strong collaboration skills and ability to work closely with teams across
+    product management, infrastructure, and security to gather requirements and deliver
+    robust solutions. Nice to have: Experience in regulated industries or with compliance
+    standards What You’ll Gain Hands-on exposure to advanced regulatory cloud solutions
+    . The chance to contribute to mission-critical systems that enable Snowflake to
+    work at scale on regulated markets . A collaborative, growth-focused engineering
+    environment . If you care about secure, scalable solutions and thrive in a compliance-driven
+    space, the RSC team provides a rewarding opportunity for impact and career development.
+    Snowflake is growing fast, and we’re scaling our team to help enable and accelerate
+    our growth. We are looking for people who share our values, challenge ordinary
+    thinking, and push the pace of innovation while building a future for themselves
+    and Snowflake. How do you want to make your impact? For jobs located in the United
+    States, please visit the job posting on the Snowflake Careers Site for salary
+    and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.9
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.184692+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

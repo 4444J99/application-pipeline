@@ -1,0 +1,113 @@
+id: alloy-solutions-engineer-associate
+name: Alloy Solutions Engineer Associate
+track: job
+status: research
+outcome: null
+target:
+  organization: Alloy
+  url: https://boards.greenhouse.io/alloy
+  application_url: https://www.alloy.com/about/jobs/detail?gh_jid=8500155002&gh_jid=8500155002
+  portal: greenhouse
+  location: New York City
+  location_class: us-onsite
+  description: '<h2>Alloy is where you belong!</h2> <p><span style="font-weight: 400;">Alloy
+    helps solve the identity risk problem for companies that offer financial products
+    by enabling them to outpace fraud and confidently serve more people around the
+    world. Over 800 of the world’s largest financial institutions and fintechs turn
+    to Alloy to take control of fraud, credit, and compliance risk, and grow with
+    the clearest picture of their customers.</span></p> <p><span style="font-weight:
+    400;">Through our values: Be Bold, Get Scrappy, Collaborate, and Celebrate Our
+    Differences, we are creating a workplace where you can grow, thrive, and belong.
+    See how we’ve been continuously recognized and named one of&nbsp;<a class="c-link"
+    href="https://www.inc.com/profile/alloy" target="_blank" data-stringify-link="https://www.inc.com/profile/alloy"
+    data-sk="tooltip_parent">Inc. Magazine’s Best Workplaces</a>,&nbsp;<a class="c-link"
+    href="https://www.forbes.com/companies/alloy/?list=americas-best-startup-employers&amp;sh=55c076453c61"
+    target="_blank" data-stringify-link="https://www.forbes.com/companies/alloy/?list=americas-best-startup-employers&amp;sh=55c076453c61"
+    data-sk="tooltip_parent">Forbes America’s Best Startup Employers</a>,&nbsp;<a
+    class="c-link" href="https://www.americanbanker.com/list/best-places-to-work-in-fintech"
+    target="_blank" data-stringify-link="https://www.americanbanker.com/list/best-places-to-work-in-fintech"
+    data-sk="tooltip_parent">Best Fintech to Work for by American Banker</a>, year
+    after year.</span></p> <p><span style="font-weight: 400;">Check out our investors
+    and read more about us <a class="c-link" href="https://www.alloy.com/about" target="_blank"
+    data-stringify-link="https://www.alloy.com/about" data-sk="tooltip_parent">here</a>.</span></p>
+    <h2>About the team</h2> <p>This Solutions Engineering Associate role sits within
+    Alloy''s pre-sales organization. In this role, you will partner closely with Account
+    Executives and Solutions Engineers to support the technical aspects of the sales
+    process to help support and drive deals forward.</p> <p>Alloy operates in a hybrid-work
+    environment. We look to foster collaboration and community by having our local
+    employees onsite three days a week.</p> <h2><strong>What you''ll be doing</strong></h2>
+    <p>Successful Solutions Engineering Associates will develop strong expertise in
+    Alloy’s platform, APIs, and the identity and fraud landscape, enabling them to
+    help present the best technical solutions to our customers.</p> <p>You will contribute
+    to the technical work that enables prospects and customers to understand how Alloy
+    fits into their tech stack and business processes. This includes, but is not limited
+    to:&nbsp;</p> <ul> <li>Delivering product demonstrations for select upsell and
+    cross-sell opportunities</li> <li>Building customized demo environments and product
+    demonstration experiences</li> <li>Supporting and executing proof-of-concept (POC)
+    and proof-of-value (POV) exercises</li> <li>Working cross-functionally with teams
+    like Product, Engineering, and Customer Success to answer technical questions
+    and unblock customer use cases</li> </ul> <h2><strong>Who we’re looking for</strong></h2>
+    <ul> <li>2+ years of experience in a technical or customer-facing role such as
+    Sales Engineering, Solutions Engineering, Solutions Consulting, Technical Support,
+    or a similar role supporting technical products</li> <li>A degree in Computer
+    Science, Software Engineering, or a related field, or equivalent practical experience</li>
+    <li>Strong presentation and communication skills, with the ability to explain
+    complex technical concepts to both technical and business audiences</li> <li>Demonstrated
+    curiosity and a strong desire to learn new technologies quickly in a fast-moving
+    environment</li> <li>A thoughtful communicator who listens first and asks targeted
+    follow-up questions to understand customer needs</li> <li>Comfortable working
+    in ambiguous environments while maintaining integrity, accountability, and strong
+    collaboration with teammates</li> <li>Hands on experience working with APIs, including
+    but not limited to making API calls using cURL, Postman, or related technologies</li>
+    <li>Ability to troubleshoot and diagnose technical issues, including debugging
+    API requests and identifying root causes</li> <li>Experience reading and working
+    with object-oriented code. Scripting/coding ability is a huge plus!</li> <li>Experience
+    working in the Fintech/Banking space is a plus!</li> </ul> <p>We''re a lean team,
+    so your impact will be felt immediately, and opportunities will grow as the company
+    scales up. If this all sounds like a good fit for you, why not join us?</p> <p>Alloy
+    is committed to fair and equitable compensation practices. Below is the anticipated
+    starting base compensation range for this role; however, pay may vary depending
+    on job-related knowledge, in-demand skills, relevant experience, and/or geography.
+    In addition to a competitive base salary, this position is also eligibl'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 1
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-10'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.116031+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-11'

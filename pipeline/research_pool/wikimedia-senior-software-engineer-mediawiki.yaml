@@ -1,0 +1,104 @@
+id: wikimedia-senior-software-engineer-mediawiki
+name: 'Wikimedia Senior Software Engineer, MediaWiki '
+track: job
+status: research
+outcome: null
+target:
+  organization: Wikimedia
+  url: https://boards.greenhouse.io/wikimedia
+  application_url: https://job-boards.greenhouse.io/wikimedia/jobs/7723398
+  portal: greenhouse
+  location: Remote
+  location_class: remote-global
+  description: '<p><strong>Senior Software Engineer, MediaWiki&nbsp;</strong></p>
+    <p><strong>Summary</strong></p> <p>The Wikimedia Foundation is looking for a Senior
+    Software Engineer to join the <a href="https://www.mediawiki.org/wiki/MediaWiki_Platform_Team">MediaWiki
+    Platform</a> team. MediaWiki is the open-source platform that powers Wikipedia
+    and its sister projects - impacting hundreds of millions of Wikipedia users across
+    the globe.&nbsp;</p> <p>The MediaWiki Platform team builds and maintains the core
+    of MediaWiki as well as the&nbsp; components responsible for authentication, notifications,
+    and media management. The team’s mission is to provide a solid foundation for
+    feature teams to build on. It focuses on performance, reliability and scalability,
+    helping to ensure broad and equitable access to free knowledge.</p> <p>This role
+    offers a unique opportunity to combine technical depth with mission-driven impact.
+    As a Senior Engineer, you will not only write robust code but also lead by example,
+    prioritize high-impact work, support better decision-making through metrics and
+    observability and foster a culture of accountability, transparency, and continuous
+    improvement.</p> <p><strong>Important:</strong> We are a fully remote team. Your
+    working hours will need to overlap with UTC-2 to UTC+3 time zones to accommodate
+    members of your team around the world.</p> <p><strong>You will be responsible
+    for:</strong></p> <ul> <li>Designing, improving, and maintaining key parts of
+    the MediaWiki stack;</li> <li>Driving technical quality and operational excellence
+    by defining and reinforcing standards in testing, observability, and system reliability;</li>
+    <li>Comfortably and autonomously creating proofs of concept, writing design documents,
+    and breaking down complex projects into actionable tasks to support less experienced
+    team members;</li> <li>Developing and improving shared capabilities (e.g., authentication,
+    caching, rate limiting) that enable other teams to build efficiently and consistently;</li>
+    <li>Championing key product metrics by focusing on measurable outcomes that guide
+    our decisions and help us to evaluate success;</li> <li>Leading by example in
+    code review, decision-making, and team culture - fostering transparency, empathy,
+    and collaboration;</li> <li>Improving and automating processes for identifying,
+    tracking, and resolving production issues;</li> <li>Collaborating with the Product
+    team and the community to ensure technical solutions align with WMF strategy,
+    feature teams and volunteer contributor needs;</li> <li>Coaching and mentoring
+    teammates to support continuous growth and confidence in both technical and interpersonal
+    skills.</li> </ul> <p><strong>Qualities we are looking for:</strong></p> <ul>
+    <li><strong>Clear communicator:</strong> You explain complex ideas simply and
+    foster shared understanding across engineering, product, and non-technical audiences;</li>
+    <li><strong>Outcome-oriented:</strong> You prioritize work that delivers value
+    to users and aligns with organizational goals. You balance ideal solutions with
+    the constraints of scale, legacy, and user expectations;</li> <li><strong>Accountable:</strong>
+    You own your work end-to-end and help establish a culture of responsibility and
+    follow-through;</li> <li><strong>Candid and respectful:</strong> You offer feedback
+    directly, constructively, and with care - and invite the same in return. You support
+    growth by challenging ideas, not people;</li> <li><strong>Collaborative leadership:
+    </strong>You inspire trust and progress through support, example, and thoughtful
+    contributions.</li> </ul> <p><strong>Requirements:</strong></p> <ul> <li>Commitment
+    to the Foundation''s <a href="https://wikimediafoundation.org/about/mission/#:~:text=The_mission_of_the_Wikimedia,disseminate_it_effectively_and_globally.">Mission</a>
+    and <a href="https://wikimediafoundation.org/about/values/">Values</a>;</li> <li>Extensive
+    experience in backend software engineering;</li> <li>Familiarity with platform
+    or infrastructure products that serve internal or external engineering teams;</li>
+    <li>Experience with databases and event streams, including schema design, query
+    optimization, and efficient data access patterns;</li> <li>Deep understanding
+    of software architecture, testing methodologies, and system design;</li> <li>Strong
+    experience in observability practices: setting up metrics, logging, monitoring,
+    and alerting;</li> <li>Familiarity with incident response, root cause analysis,
+    and follow-up processes;</li> <li>Experience working with CI/CD pipelines and
+    automated test infrastructure.</li> </ul> <p><strong>Additionally, we’d love it
+    if you have:</strong></p> <ul> <li>Experience developing frameworks (designing
+    for reuse, extensibility, stability, and backward compatibility);</li> <li>Proficiency
+    in PHP and JavaScript;&nbsp;</li> <li>Familiarity with identity management, including
+    OAuth;</li> <li>Experience with Kubernetes ecosystem, including Envoy;</li> <li>Experience
+    with Prometh'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: documentation-engineer
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-22'
+  posting_date: '2026-04-21'
+  date_source: first_published
+  date_added: '2026-04-22'
+  discovered: '2026-04-22T21:40:48.984032+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-22'

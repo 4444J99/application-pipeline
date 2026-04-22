@@ -1,0 +1,113 @@
+id: warp-software-engineer
+name: Warp Software Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: Warp
+  url: https://boards.greenhouse.io/warp
+  application_url: https://job-boards.greenhouse.io/warp/jobs/4324888004
+  portal: greenhouse
+  location: Remote within US and Canada
+  location_class: us-remote
+  description: '<div class="content-intro"><p><strong>Warp: We''re Building the Platform
+    for Agentic Development</strong></p> <p>Warp began with the vision of reimagining
+    one of the fundamental dev tools—the terminal—to make it more usable and powerful
+    for all developers. As AI has advanced, Warp has evolved beyond its terminal roots
+    into the platform for Agentic Development: a workbench for dispatching agents
+    to code, deploy, and debug production software.</p> <p>With over 700k active developers
+    and revenue that grew over 44x last year, Warp is now one of the fastest growing
+    startups in the exploding AI development space. We believe that soon developers
+    will be “tech leads” for groups of agents; rather than opening a code editor to
+    write code or a terminal to write commands, they will open Warp and prompt their
+    computer to build features, fix bugs, and diagnose production issues.</p> <p>With
+    its starting point as a reimagined command line, Warp is well-positioned to support
+    agent-first workflows: It sits at the lowest level in the dev stack, has access
+    to all of a developer’s context, and is set up for multitasking and long-running
+    processes. In addition, Warp has state-of-the-art code editing features and built-in
+    team knowledge sharing. It’s the right interface for the agentic future.</p> <p>Our
+    mission has remained the same even as AI has advanced: to empower developers to
+    ship better software more quickly, freeing them to focus on the creative and rewarding
+    aspects of their work.</p> <p>For more information on our team and culture, we
+    highly recommend reading our&nbsp;<a href="https://warpdev.notion.site/Public-Warp-How-We-Work-b872d41a1da743fca18220a731aeba48">How
+    We Work</a>.</p></div><p><strong>As a Software Engineer, you will…</strong></p>
+    <ul> <li>Participate in all aspects of software development activities, including
+    design, coding, code review, unit/integration testing, bug fixing, and code/API
+    documentation.</li> <li>Collaborate closely with the rest of engineering and other
+    stakeholders from our growth, marketing, and product teams to plan features and
+    build a high-quality product that elevates the productivity of all developers.</li>
+    <li>Improve Warp''s performance and reliability by building new features or polishing
+    existing product parts.</li> <li>Prototype ideas and concepts to get quick feedback
+    from internal and external users</li> <li>Work across the entire technical stack
+    to ensure users have the most efficient and delightful Warp experience. The features
+    you develop will span all aspects of the user experience, making you an expert
+    on their needs.</li> <li>Be a mentor and provide thoughtful feedback to your peers,
+    and build strong personal connections with your teammates!</li> </ul> <p><strong>You
+    may be a good fit if...</strong></p> <ul> <li>You are passionate about helping
+    developers get more done — would jump at the chance to work on this particular
+    product</li> <li>You have amazing engineering chops, but are also product- and
+    user-focused</li> <li>You have great communication and collaboration skills</li>
+    <li>You’re sensitive to developers’ needs, and can develop warm relationships
+    with developers</li> <li>Bonus:</li> <ul> <li>Building native apps in Rust or
+    WASM</li> <li>Shell or Linux-programming</li> <li>Server-side programming in go</li>
+    <li>OpenGL, WebG, or other graphics programming</li> </ul> </ul> <p><span style="font-weight:
+    400;">At Warp, we are dedicated to building a diverse, inclusive, and authentic
+    workplace. So if you’re excited about this role, but your past experience doesn’t
+    align perfectly with every qualification in this job description – we encourage
+    you to apply anyways! We are a community of curious learners, and most of us are
+    learning some skills for the first time (like our engineers learning to program
+    Warp in Rust). You might be just the right candidate for this or other roles.</span></p>
+    <p><span style="font-weight: 400;">If you''re feeling playful, try out our optional
+    hiring challenge and submit your answers with your application: <a href="https://github.com/warpdotdev/hiring-challenge">https://github.com/warpdotdev/hiring-challenge</a></span></p>
+    <p><strong>Salary Transparency</strong></p> <p>Total compensation at Warp consists
+    of two parts: 1) a competitive base salary, and most importantly, 2) meaningful
+    equity.</p> <p>When we find the right person, we try to put our best foot forward
+    with an offer that excites you. We consider what you’d like to be paid, the skills
+    and level of experience you bring, what similar jobs pay, and make sure there’s
+    equal pay for equal work among those you’ll be working with. The budgeted compensation
+    amount for this role is targeted at $145,000 - $260,000.</p> <p>In addition to
+    salary, all employees receive further compensation in the form of equity in the
+    company. This is a meaningful stock option grant with a four-year vesting period
+    and one-year cliff. Your equity is where most of the significant upside potential
+    is. Comparing star'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 1
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.780676+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-25'

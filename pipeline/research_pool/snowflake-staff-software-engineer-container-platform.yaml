@@ -1,0 +1,95 @@
+id: snowflake-staff-software-engineer-container-platform
+name: 'Snowflake Staff Software Engineer - Container Platform '
+track: job
+status: research
+outcome: null
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/44ff3eec-3736-4606-8618-7f414b23baff
+  portal: ashby
+  location: PL-Warsaw
+  location_class: international
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Snowflake is about empowering enterprises to
+    achieve their full potential — and people too. With a culture that’s all in on
+    impact, innovation, and collaboration, Snowflake is the sweet spot for building
+    big, moving fast, and taking technology — and careers — to the next level. We
+    are hiring a Staff Software Engineer for our Container Platform team. Our team
+    builds the foundational container platform that powers Snowflake''s core services
+    across AWS, Azure, and GCP. We''re building a scalable, automated platform that
+    handles the complexity of our core services so our product teams don''t have to.
+    We focus on solving the hard engineering problems required to make multi-cloud
+    infrastructure feel seamless, solving for massive-scale orchestration. If you
+    enjoy designing and building the core infrastructure services that run reliably
+    at scale, this is the team for you. AS A STAFF SOFTWARE ENGINEER - CONTAINER PLATFORM
+    AT SNOWFLAKE, YOU WILL: Build, influence and evolve Snowflake’s core infrastructure
+    and services. Apply both infrastructure and software engineering knowledge to
+    deliver a highly scalable, resilient, and performant platform. Provide technical
+    leadership on large, complex projects that span infrastructure, platforms, tools,
+    and automation in the cloud. Demonstrate strategic ownership, including identifying
+    cross-team and cross-organisation problem spaces, and driving efforts to address
+    those. Use your engineering craft skills to make architectural trade-offs based
+    on software design principles and company goals. Champion platform adoption to
+    meet business goals across partner teams. Act as a role model and force multiplier,
+    developing expertise in others and driving engineering standards across the team.
+    Contribute with excellent code quality, documentation, and software development
+    best practices. OUR IDEAL STAFF SOFTWARE ENGINEER - CONTAINER PLATFORM AT SNOWFLAKE
+    WILL HAVE: BS/MS in Computer Science or equivalent experience. 8+ years industry
+    experience designing, building, and supporting large scale systems in production.
+    Strong software engineering fundamentals. Proficient in at least one modern programming
+    language, for example Go, Java, Rust, or C++. Hands-on experience in platform
+    engineering or cloud computing (AWS, Azure, or GCP). Excellent communication and
+    collaboration skills; proven ability to build alignment across teams. Ownership
+    mindset, self-direction, and a passion for solving complex problems. Tech lead
+    experience. Experience with containers and container orchestration systems such
+    as Kubernetes. Strong distributed troubleshooting and incident resolution skills.
+    Snowflake is growing fast, and we’re scaling our team to help enable and accelerate
+    our growth. We are looking for people who share our values, challenge ordinary
+    thinking, and push the pace of innovation while building a future for themselves
+    and Snowflake. How do you want to make your impact? For jobs located in the United
+    States, please visit the job posting on the Snowflake Careers Site for salary
+    and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.9
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.151157+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

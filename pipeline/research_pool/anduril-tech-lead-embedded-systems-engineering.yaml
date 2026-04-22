@@ -1,0 +1,115 @@
+id: anduril-tech-lead-embedded-systems-engineering
+name: Anduril Tech Lead, Embedded Systems Engineering
+track: job
+status: research
+outcome: null
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5111334007?gh_jid=5111334007
+  portal: greenhouse
+  location: Seattle, Washington, United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p><strong>ABOUT THE TEAM</strong></p>
+    <p>The Connected Warfare Division builds mission-critical systems that enable
+    global command and control for time-sensitive, multi-domain operations. By fusing
+    robotics, sensor networks, and advanced software, we create high-performance,
+    resilient software for autonomous systems and interconnected mesh ecosystems that
+    empower our military partners with a comprehensive source of truth for rapid decision-making.&nbsp;<br><br>The
+    Edge Compute and Comms (ECC) Engineering team, you will rapidly prototype and
+    create new products and solutions to address a wide variety of customer problems
+    involving software, hardware, networking, autonomy/robotics, systems integration,
+    and more, while making pragmatic engineering tradeoffs along the way. Your efforts
+    will ensure that Anduril products seamlessly work together to achieve a variety
+    of critical outcomes. You will work on new technology introduction and enhancing
+    products like the Menace Family of Systems to bring integrated C4 (Compute, Comms,
+    Command, and Control) capabilities to the tactical edge. <br><br></p> <p><strong>ABOUT
+    THE ROLE</strong></p> <p>As a Tech Lead for the Edge Compute and Communication
+    group, you will lead a high-performing team that leverages cutting-edge technologies
+    like Rust and C++ to deliver complex, high-impact software systems that operate
+    with extreme efficiency and reliability at the tactical edge. You’ll be instrumental
+    in shaping architectures optimized for resource-constrained environments, ensuring
+    seamless communication and compute across our distributed network. You will be
+    responsible for building the team’s culture, driving execution, and ensuring software
+    quality and mission success. You’ll partner with cross-functional leadership—including
+    seasoned engineers and product managers—to balance rapid delivery with robust,
+    scalable architecture, always anchoring decisions in the realities of connected
+    warfare.<br><br>A Note on This Role: This is a Tech Lead role focused on both
+    technical (opinionated about architecture, reliability, performance and quality,
+    especially for low-level systems programming and distributed edge deployments)
+    and non-technical (people, process, and project leadership).</p> <h3>What You’ll
+    Do</h3> <ul> <li>Lead &amp; Mentor: Manage and grow a team of 10–15 engineers,
+    fostering a high-performance, high-integrity culture focused on mission-critical
+    delivery and rapid iteration. Drive the adoption of best-in-class systems programming
+    practices, emphasizing performance, memory safety, and concurrent design patterns.</li>
+    <li>Strategic Partnership: Collaborate closely with product, mission systems,
+    and technical leadership to define team objectives, prioritize work streams, and
+    align with broader Connected Warfare initiatives.</li> <li>Drive Execution: Ensure
+    the timely and reliable delivery of complex software projects by removing impediments,
+    providing the necessary resources, and promoting agile methodologies.</li> <li>Stakeholder
+    Liaison: Serve as the primary conduit between your team and senior leadership,
+    communicating status updates, managing expectations, and advocating for your team’s
+    needs.</li> <li>Technical Ownership: Supervise and monitor architecture, design,
+    and implementation of features for high-performance, low-latency edge applications,
+    ensuring they meet stringent quality standards and customer requirements.</li>
+    <li>Drive technical excellence in areas like memory safety (Rust), concurrency,
+    inter-process communication, and hardware-software interface design. Assist engineers
+    in solving complex reliability, performance, and operational issues inherent in
+    distributed, real-time systems.</li> <li>Quality &amp; Process Ownership: Champion
+    best practices in software design, code reviews, testing for embedded deployments,
+    and CI/CD processes to ensure robust, scalable, and maintainable systems that
+    are mission-ready.</li> <li>Cross-Functional Collaboration: Work closely with
+    technical peers and other teams to support system integration, resolve technical
+    challenges, and continuously improve operational workflows.</li> <li>People Development:
+    Invest in the professional growth of your team through coaching, feedba'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-16'
+  date_source: first_published
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.595778+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-18'

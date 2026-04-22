@@ -1,0 +1,105 @@
+id: fivetran-software-engineer-ii-oracle-databases
+name: Fivetran Software Engineer II - Oracle Databases
+track: job
+status: research
+outcome: null
+target:
+  organization: Fivetran
+  url: https://boards.greenhouse.io/fivetran
+  application_url: https://www.fivetran.com/careers/job?gh_jid=7695532003
+  portal: greenhouse
+  location: Novi Sad, South Bačka, Serbia, EMEA
+  location_class: international
+  description: '<div class="content-intro"><p>From Fivetran’s founding until now,
+    our mission has remained the same: to make access to data as simple and reliable
+    as electricity. With Fivetran, customer data arrives in their warehouses, canonical
+    and ready to query, with no engineering or maintenance required. We’re proud that
+    more organizations continue to leverage our technology every day to become truly
+    data-driven.</p></div><p><span style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;"><strong>About the Role</strong></span></p> <p><span style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;">Fivetran is building data pipelines
+    to power the modern data stack for thousands of companies.</span></p> <p><span
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">We are looking
+    for a Software Engineer enthusiastic to join our fast-growing company.&nbsp;</span></p>
+    <p><span style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">As
+    a part of the Oracle Connector Team, you will be responsible to help build new
+    features of our data pipeline service, help improve our software architecture,
+    and maintain reliable operation of the service. We''re looking for someone who
+    wants to learn and apply the key values that make our product great, dive deep
+    into complex investigations into data replication and build a world class ELT
+    solution for Oracle systems.</span><br><br><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">Fivetran is the epitome of data-driven-development
+    — our engineering team is focused on building a world class product that:</span><br><br><span
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">- Facilitates
+    Data Analytics — join our mission to reliably deliver best-in class schemas, and
+    clean data, designed to be intuitively useful to analysts.</span><br><span style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;">- Contributes to our Community
+    — help develop tools like Data Lakes, SQL-based Transformations, and schema explorers
+    to empower analysts to choose the best tools, and to make those tools more powerful.</span><br><span
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">- Is Absolutely
+    Dependable — work to make Fivetran the most reliable and secure component of our
+    customers’ data infrastructure.</span><br><br><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">We emphasize using no-nonsense tools, and
+    take great pride in the simplicity and effectiveness of the systems we build.
+    Our back-end is built on Java, C, Postgres, and Kubernetes, and our front-end
+    is built on React and Typescript.</span></p> <p><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">This is a full-time position based out of
+    our Novi Sad office. Our hybrid work model offers a blend of remote flexibility
+    and in-person collaboration, including two days in the office each week to connect
+    and build as a team.</span></p> <p><strong><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">Technologies You’ll Use</span></strong></p>
+    <p><span style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">Java,
+    C, Oracle, SQL, Docker/Kubernetes</span></p> <p><strong><span style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;">What You’ll Do</span></strong></p>
+    <ul> <li style="font-family: helvetica, arial, sans-serif; font-size: 10pt;"><span
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">Dive deep
+    into data replication debugging, analyzing existing code that is in use by hundreds
+    of customers today. Some clients are operating the largest Oracle clusters in
+    the world.</span></li> <li style="font-family: helvetica, arial, sans-serif; font-size:
+    10pt;"><span style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">Analyze
+    new features that are introduced by Oracle in recent releases and determine how
+    to develop supporting features.</span></li> <li style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;"><span style="font-family: helvetica, arial,
+    sans-serif; font-size: 10pt;">Contribute to the efforts to the maintenance and
+    improvement of existing connectors; call for improvement in all areas of Fivetran''s
+    codebase and infrastructure.</span></li> <li style="font-family: helvetica, arial,
+    sans-serif; font-size: 10pt;"><span style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;">Be a part of the process to move a high performance client side
+    service to the cloud and operate at scale.</span></li> <li style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;"><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">Develop software designs and technical roadmap
+    for the team.</span></li> <li style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;"><span style="font-family: helvetica, arial, sans-serif; font-size:
+    10pt;">Contribute to hiring by participating in the inte'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-22'
+  posting_date: '2026-04-20'
+  date_source: first_published
+  date_added: '2026-04-22'
+  discovered: '2026-04-22T21:40:49.009788+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-22'

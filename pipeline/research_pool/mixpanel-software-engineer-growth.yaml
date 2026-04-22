@@ -1,0 +1,114 @@
+id: mixpanel-software-engineer-growth
+name: Mixpanel Software Engineer, Growth
+track: job
+status: research
+outcome: null
+target:
+  organization: Mixpanel
+  url: https://boards.greenhouse.io/mixpanel
+  application_url: https://job-boards.greenhouse.io/mixpanel/jobs/7773373
+  portal: greenhouse
+  location: San Francisco, US (Remote)
+  location_class: us-remote
+  description: '<div class="content-intro"><p><strong>About Mixpanel</strong></p>
+    <p>Mixpanel turns data clarity into innovation. Trusted by more than 29,000 companies,
+    including Workday, Pinterest, LG, and Rakuten Viber, Mixpanel’s AI-first digital
+    analytics help teams accelerate adoption, improve retention, and ship with confidence.
+    Powering this is an industry-leading platform that combines product and web analytics,
+    session replay, experimentation, feature flags, and metric trees. Mixpanel delivers
+    insights that customers trust. Visit <a href="mixpanel.com" target="_blank">mixpanel.com</a>
+    to learn more.</p></div><h1><strong>About the Team</strong></h1> <p>The Growth
+    Engineering team at Mixpanel is responsible for increasing user activation and
+    driving self-serve revenue. We work closely with Product, Design, and Marketing
+    to grow the funnel of customers landing on our platform, implementing Mixpanel,
+    and seeing value fast. We move fast, experiment constantly, and measure everything.</p>
+    <p>Within growth: this role is for the Top of Funnel Pod, a small crew specifically
+    targeting user acquisition and activation. Some examples of what we’ve shipped
+    lately:</p> <ul> <li>AI powered Template event suggestions</li> <li>Improving
+    the discoverability of Templates</li> <li>AI install wizard - get set up and have
+    your data flowing faster</li> </ul> <h1><strong>About the Role</strong></h1> <p>As
+    a Software Engineer on the Growth team, you will build and optimize the experiences
+    that drive user acquisition, activation, and conversion at Mixpanel. A key focus
+    of this role is web experimentation — you''ll design, implement, and analyze A/B
+    tests across our marketing site and product onboarding flows to improve key growth
+    metrics. You''ll work across the full stack, from frontend UI changes to backend
+    data pipelines, and collaborate with Product and Design to turn experiment insights
+    into product improvements. This is a high-impact role where your work directly
+    influences Mixpanel''s top-of-funnel growth and self-serve revenue.</p> <h1><strong>Responsibilities</strong></h1>
+    <ul> <li>Develop experiments across Mixpanel''s product and onboarding flows to
+    optimize acquisition and activation metrics</li> <li>Partner with Product and
+    Design to identify high-impact experiment hypotheses grounded in data and user
+    research</li> <li>Instrument tracking and build dashboards (in Mixpanel!) to measure
+    experiment outcomes and inform iteration</li> <li>Build and improve onboarding
+    experiences that drive down time to value for new Mixpanel users</li> <li>Participate
+    in team on-call rotation to improve our systems and keep them healthy</li> </ul>
+    <h1><strong>We''re Looking For Someone Who Has</strong></h1> <ul> <li>At least
+    2 years of full-stack software engineering experience</li> <li>Excellent debugging
+    and technical investigation skills</li> <li>Strong technical communication, ideally
+    with experience collaborating in an asynchronous remote environment</li> <li>Ability
+    to move fast and iterate — you take ownership of problems and focus on delivering
+    value to users</li> <li>A data-driven mindset</li> </ul> <h1><strong>Bonus Points
+    For</strong></h1> <ul> <li>Interest in leveraging AI/GenAI to accelerate experimentation
+    workflows</li> <li>Prior experience on a growth engineering team or in a growth-focused
+    role</li> <li>React / TypeScript experience</li> <li>Django / Python experience</li>
+    <li>Experience with experimentation platforms (e.g. Mixpanel, Optimizely, LaunchDarkly,
+    Statsig, or similar)</li> </ul> <p></p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p><strong>Compensation</strong></p>
+    <p><span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;The total target
+    compensation (TTC) for this full-time position is $174,600 - $213,400 across the
+    United States. This amount includes base compensation and variable compensation
+    in the form of either a company bonus or commissions. Variable compensation type
+    is determined by your role and level. This position is also eligible for equity
+    consideration and other benefits including medical, vision, and dental insurance
+    coverage. You can view our benefits offerings here.\n\nOur salary ranges are determined
+    by role and level and are benchmarked to the SF Bay Area Technology data cut released
+    by Radford, a global compensation database. The range displayed represents the
+    minimum and maximum TTC for new hire salaries for the position across all of our
+    US locations. To stay on top of market conditions, we refresh our salary ranges
+    twice a year so these ranges may change in the future. Within the range, individual
+    pay is determined by experience, job-related skills, qualifications, and other
+    factors. If you have questions about the specific range, your recruiter can share
+    this information.&quot;}" data-sheets-userformat="{&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0}">The
+    amount listed below is the total target cash compensation (T'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.9
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-02'
+  posting_date: '2026-04-01'
+  date_source: first_published
+  date_added: '2026-04-02'
+  discovered: '2026-04-02T10:15:29.176523+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-02'

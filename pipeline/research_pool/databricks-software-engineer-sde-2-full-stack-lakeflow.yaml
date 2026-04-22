@@ -1,0 +1,110 @@
+id: databricks-software-engineer-sde-2-full-stack-lakeflow
+name: Databricks Software Engineer (SDE 2) - Full Stack, Lakeflow
+track: job
+status: research
+outcome: null
+target:
+  organization: Databricks
+  url: https://boards.greenhouse.io/databricks
+  application_url: https://databricks.com/company/careers/open-positions/job?gh_jid=8509766002
+  portal: greenhouse
+  location: Bengaluru, India
+  location_class: international
+  description: '<p>P-928</p> <p>At Databricks, we are passionate about enabling our
+    customers to solve the world''s toughest problems — from making the next mode
+    of transportation a reality to accelerating the development of medical breakthroughs.
+    We do this by building and running the world''s best data and AI infrastructure
+    platform so our customers can use deep data insights to improve their business.
+    Founded by engineers — and customer obsessed — we leap at every opportunity to
+    tackle technical challenges, from designing next-gen UI/UX for interfacing with
+    data to scaling our services and infrastructure across millions of virtual machines.
+    And we''re only getting started.</p> <p>Ingesting data into the Lakehouse is a
+    strategic area of investment for Databricks and a key enabler for Data and AI
+    workflows. Lakeflow Connect is solving this problem by providing ready-to-use,
+    point-and-click connectors for a wide variety of sources — including enterprise
+    applications (like Salesforce, Workday, ServiceNow, SharePoint), databases (e.g.,
+    SQL Server), cloud storage, message queues, and local files.</p> <p>The experience
+    through which customers configure, monitor, and manage their ingestion pipelines
+    is as important as the pipelines themselves. As a Full Stack Engineer on the Lakeflow
+    Connect team, you will work closely with product management, design, and backend
+    engineers to build interfaces that make complex data ingestion feel simple and
+    intuitive — and drive adoption of Connect across thousands of organizations.</p>
+    <p><strong>The Impact you will have:</strong></p> <ul> <li>Design and ship UI
+    features for Lakeflow Connect that enable customers to set up, configure, and
+    monitor connectors with a point-and-click experience.</li> <li>Build reusable
+    UI components and patterns that behave consistently across Databricks surfaces,
+    contributing to a write-once, run-anywhere model.</li> <li>Collaborate with backend
+    and platform teams to embed Connect experiences into other Databricks surfaces
+    — Dashboards, Notebooks, SQL, and AI.</li> <li>Contribute to the full-stack implementation,
+    from API integration through to polished UI delivery.</li> <li>Help instrument
+    product usage to identify UX bottlenecks and iterate based on real customer behavior.</li>
+    <li>Write clean, well-tested, maintainable code and participate actively in design
+    and code reviews.</li> <li>Learn from senior engineers and contribute to raising
+    the bar for frontend quality, accessibility, and performance across the team.</li>
+    </ul> <p><strong>What we look for:</strong></p> <ul> <li>BS/MS in Computer Science
+    or a related field.</li> <li>2+ years of experience with HTML, CSS, and JavaScript/TypeScript
+    (including internships or significant academic projects).</li> <li>Hands-on experience
+    with modern JavaScript frameworks, with a strong preference for React.</li> <li>Passion
+    for user experience and design, and an eagerness to go beyond technical implementation
+    to understand what makes a product truly delightful.</li> <li>Awareness of front-end
+    architecture best practices, including performance, accessibility, security, and
+    usability.</li> <li>Comfortable working towards a multi-year vision with incremental,
+    high-quality deliverables.</li> <li>Motivated by delivering customer value — you
+    think about the person on the other side of the screen.</li> <li>Familiarity with
+    server-side web technologies (e.g., Java, Python, Scala, Node.js) is a plus.</li>
+    <li>Exposure to cloud environments (AWS, Azure, GCP) or distributed systems is
+    a plus.</li> </ul><div class="content-conclusion"><p><strong>About Databricks</strong></p>
+    <p><span style="font-family: arial, sans-serif;">Databricks is the data and AI
+    company. More than 10,000 organizations worldwide — including Comcast, Condé Nast,
+    Grammarly, and over 50% of the Fortune 500 — rely on the Databricks Data Intelligence
+    Platform to unify and democratize data, analytics and AI. Databricks is headquartered
+    in San Francisco, with offices around the globe and was founded by the original
+    creators of Lakehouse, Apache Spark™, Delta Lake and MLflow. To learn more, follow
+    Databricks on&nbsp;<span style="color: rgb(255, 54, 33);"><a style="color: rgb(255,
+    54, 33);" href="https://twitter.com/databricks" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://twitter.com/databricks&amp;source=gmail&amp;ust=1700237575733000&amp;usg=AOvVaw03FL8fJvOD97ytN02f5G2C">Twitter</a>,&nbsp;<a
+    style="color: rgb(255, 54, 33);" href="https://www.linkedin.com/company/databricks"
+    target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.linkedin.com/company/databricks&amp;source=gmail&amp;ust=1700237575733000&amp;usg=AOvVaw15dLk3q8VxTfHEgCUg7NSt">LinkedIn</a>&nbsp;<span
+    style="color: rgb(0, 0, 0);">and</span>&nbsp;<a style="color: rgb(255, 54, 33);"
+    href="https://www.facebook.com/databricksinc" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.facebook.com/databricksinc&amp;source=gmail&amp;ust=1'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 7.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 4
+    strategic_value: 9
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-16'
+  date_source: first_published
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.541726+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-18'

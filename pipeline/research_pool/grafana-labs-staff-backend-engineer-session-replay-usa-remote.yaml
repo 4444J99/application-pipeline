@@ -1,0 +1,105 @@
+id: grafana-labs-staff-backend-engineer-session-replay-usa-remote
+name: Grafana Labs Staff Backend Engineer - Session Replay | USA | Remote
+track: job
+status: research
+outcome: null
+target:
+  organization: Grafana Labs
+  url: https://boards.greenhouse.io/grafanalabs
+  application_url: https://job-boards.greenhouse.io/grafanalabs/jobs/5978589004
+  portal: greenhouse
+  location: United States (Remote)
+  location_class: us-remote
+  description: '<div class="content-intro"><p>Grafana Labs is a remote-first, open-source
+    powerhouse. There are more than 20M users of Grafana, the open source visualization
+    tool, around the globe, monitoring everything from beehives to climate change
+    in the Alps. The instantly recognizable dashboards have been spotted everywhere
+    from a NASA launch and Minecraft HQ to Wimbledon and the Tour de France. Grafana
+    Labs also helps more than 3,000 companies -- including Bloomberg, JPMorgan Chase,
+    and eBay -- manage their observability strategies with the Grafana LGTM Stack,
+    which can be run fully managed with <a href="https://grafana.com/products/cloud/">Grafana
+    Cloud</a> or self-managed with the <a href="https://grafana.com/products/enterprise/">Grafana
+    Enterprise Stack</a>, both featuring scalable metrics (<a href="https://grafana.com/oss/mimir/">Grafana
+    Mimir</a>), logs (<a href="https://grafana.com/oss/loki/">Grafana Loki</a>), and
+    traces (<a href="https://grafana.com/oss/tempo/">Grafana Tempo</a>).</p> <p>We’re
+    scaling fast and staying true to what makes us different: an open-source legacy,
+    a global collaborative culture, and a passion for meaningful work. Our team thrives
+    in an innovation-driven environment where transparency, autonomy, and trust fuel
+    everything we do.</p> <p>You may not meet every requirement, and that’s okay.
+    If this role excites you, we’d love you to raise your hand for what could be a
+    truly career-defining opportunity.</p></div><p><strong>This is a remote position.
+    We are looking for candidates in the EST or CT timezone in the United States or
+    Canada.</strong></p> <p><strong>The Opportunity:</strong></p> <p>The Session Replay
+    squad is building a new Grafana Cloud product that helps our customers to understand
+    what users actually experienced when something goes wrong.</p> <p>Session Replay
+    connects frontend signals (errors, performance, synthetic checks) to concrete
+    session-level evidence, enabling faster and more confident investigation of production
+    issues.</p> <p>This team works at the intersection of:</p> <ul> <li>frontend observability,</li>
+    <li>backend data processing and storage at scale,</li> <li>debugging workflows
+    across products,</li> <li>privacy and access control,</li> <li>performance and
+    cost constraints at scale.</li> </ul> <p>Session Replay is still early, which
+    means you’ll help shape both what we build and how it fits into Grafana Cloud.
+    A key part of our next phase is evolving the backend architecture of capturing
+    sessions, including a migration toward columnar/analytical solution as a primary
+    storage and query engine for high-volume session data.</p> <p>As a company we
+    are remote-first and global, we embrace people of different experiences and backgrounds
+    to build diverse teams where every person brings a new perspective to the software.
+    We are looking for Staff Software Engineers who are passionate about working with
+    data and providing seamless experiences for our customers to join our growing
+    team! Our stack is Golang, Typescript and React, but we build tools for people
+    using many other stacks.&nbsp;</p> <p><strong>What you''ll be doing:</strong></p>
+    <p>As a Staff Software Engineer, you will operate as a technical leader and systems
+    thinker, driving both product direction and architectural evolution, specifically,
+    you will:</p> <ul> <li><strong>Own end-to-end technical direction for Session
+    Replay, </strong>spanning frontend, backend, and data systems</li> <li><strong>Drive
+    the evolution of our backend architecture, including:</strong></li> <ul> <li>Designing
+    systems around columnar/analytical data storage for large-scale session data<strong>&nbsp;</strong></li>
+    <li>Defining data models, ingestion pipelines, and query patterns</li> </ul> <li><strong>Lead
+    the design of investigation workflows, </strong>connecting replay with logs, metrics,
+    traces and other telemetry across Grafana Cloud</li> <li><strong>Make high-leverage
+    architectural decisions</strong> that impact multiple teams and products</li>
+    <li>Partner with teams across Grafana (Frontend Observability, Synthetic Monitoring,
+    Core Grafana) to build <strong>cohesive cross-product experiences</strong></li>
+    <li>Improve engineering standards, patterns, and operational practices within
+    the team</li> <li>Mentor engineers and help grow technical leadership within the
+    team</li> </ul> <p><strong>Technologies you''ll work with:</strong></p> <ul> <li>Go
+    (backend services and APIs)</li> <li>Columnar/Analytical data storage (core data
+    storage and querying)</li> <li>Object storage (S3, GCS, Azure Blob Storage) and
+    MySQL&nbsp;</li> <li>TypeScript / React (user-facing workflows)</li> <li>Grafana
+    ecosystem (Mimir, Loki, Tempo, etc.)</li> </ul> <p><strong>What Makes You a Great
+    Fit:</strong></p> <ul> <li>You are <strong>comfortable working in a remote-first
+    company</strong>; communication is key.</li> <li>For us, working together means
+    being <strong>collaborative, friendly, kind, and respectful</strong>. We operate
+    by consensus. You can contribute'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-22'
+  posting_date: '2026-04-22'
+  date_source: first_published
+  date_added: '2026-04-22'
+  discovered: '2026-04-22T21:40:49.019801+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-22'

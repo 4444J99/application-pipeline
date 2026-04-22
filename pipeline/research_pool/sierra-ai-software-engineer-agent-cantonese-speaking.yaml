@@ -1,0 +1,106 @@
+id: sierra-ai-software-engineer-agent-cantonese-speaking
+name: Sierra AI Software Engineer, Agent (Cantonese Speaking)
+track: job
+status: research
+outcome: null
+target:
+  organization: Sierra AI
+  url: https://jobs.ashbyhq.com/sierra
+  application_url: https://jobs.ashbyhq.com/sierra/a4541730-ae7f-4771-b3e9-7f9da6cc5d23
+  portal: ashby
+  location: Singapore
+  location_class: international
+  description: 'About us At Sierra, we’re creating a platform to help businesses build
+    better, more human customer experiences with AI. We are primarily an in-person
+    company based in San Francisco, with growing offices in Atlanta, New York, London,
+    Paris, Madrid, Munich, Singapore, Japan, and Sydney. We are guided by a set of
+    values that are at the core of our actions and define our culture: Trust, Customer
+    Obsession, Craftsmanship, Intensity, and Family. These values are the foundation
+    of our work, and we are committed to upholding them in everything we do. Our co-founders
+    are Bret Taylor and Clay Bavor . Bret currently serves as Board Chair of OpenAI.
+    Previously, he was co-CEO of Salesforce (which had acquired the company he founded,
+    Quip) and CTO of Facebook. Bret was also one of Google''s earliest product managers
+    and co-creator of Google Maps. Before founding Sierra, Clay spent 18 years at
+    Google, where he most recently led Google Labs. Earlier, he started and led Google’s
+    AR/VR effort, Project Starline, and Google Lens. Before that, Clay led the product
+    and design teams for Google Workspace. What you’ll do Design and deliver production-grade
+    AI agents : You''ll build and ship highly performant, reliable, and intuitive
+    AI agents that are central, mission-critical and drive revenue directly to Sierra''s
+    growth. These aren''t prototypes—they are powerful, scalable systems running in
+    production environments across industries like finance, healthcare, and commerce.
+    Drive the Agent Development Life Cycle (ADLC) : You''ll have complete ownership
+    and autonomy from initial pilot through deployment and continuous iteration. You''ll
+    be responsible for building, tuning, and evolving AI agents in production environments,
+    defining the standard for ADLC best practices along the way. Partner with large
+    enterprises and cutting-edge startups: You’ll work directly with leaders at some
+    of the world’s largest enterprises to understand their most pressing business
+    challenges, and build AI agents that transform how they operate at scale. You''ll
+    also partner with the most cutting-edge startups, embedding AI agents across their
+    entire business stack to drive innovation and efficiency. Build the future of
+    the platform: Your direct work with customers will guide the evolution of Sierra''s
+    core platform. You''ll surface unmet needs, prototype new tools and features,
+    and collaborate with research, product, and platform to shape the future of AI
+    agent development and Sierra''s product. Example projects These are some examples
+    of projects that engineers on our team have worked on recently: Design and build
+    AI agents for large telecommunications and media companies that consistently outperform
+    human agents in managing subscription churn Develop and refine AI agents capable
+    of navigating complex customer interactions, like troubleshooting a broken device
+    and personalizing product recommendations Create generalizable AI agent frameworks
+    tailored for industry-specific use cases. See some examples in our financial services
+    blog ! Facilitate design partnerships for new product initiatives, such as new
+    agent architectures, self-service capabilities, and generative agent development
+    Experiment with the latest voice models and figure out how to integrate them at
+    scale to enterprise-grade customers What you''ll bring Experience building and
+    scaling end-to-end production systems Strong technical problem-solving skills,
+    especially in fast-changing, ambiguous environments A builder and tinkerer’s mindset
+    with high agency - you find creative ways to overcome obstacles and ship Comfort
+    working directly with customers to understand their needs and solve real-world
+    problems Excellent communication skills - clear, direct, and persuasive across
+    technical and non-technical audiences Even better... Experience building or deploying
+    AI/LLM systems in production Have been a founder or founding engineer - you know
+    what it means to balance craft, ownership, and speed Familiarity with tools that
+    power today''s AI agents: eval frameworks, agent tooling, RAG pipelines, and prompt
+    engineering Prior experience with React, TypeScript, and/or Go Previous roles
+    where you interfaced with customers or led technical projects with external stakeholders
+    Proficiency in Cantonese is preferred to support interactions with Cantonese-speaking
+    clients. Our values Trust: We build trust with our customers with our accountability,
+    empathy, quality, and responsiveness. We build trust in AI by making it more accessible,
+    safe, and useful. We build trust with each other by showing up for each other
+    professionally and personally, creating an environment that enables all of us
+    to do our best work. Customer Obsession: We deeply understand our customers’ business
+    goals and relentlessly focus on driving outcomes, not just technical milestones.
+    Everyone at the company knows and spends time with our customers. When our customer
+    is having an issue, we drop everything and fix it. Craftsmanship: We get the details
+    righ'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-17'
+  date_source: published_at
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.550952+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-18'

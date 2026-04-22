@@ -1,0 +1,113 @@
+id: mozilla-staff-software-engineer-iam
+name: Mozilla Staff Software Engineer, IAM
+track: job
+status: research
+outcome: null
+target:
+  organization: Mozilla
+  url: https://boards.greenhouse.io/mozilla
+  application_url: https://job-boards.greenhouse.io/mozilla/jobs/7028051
+  portal: greenhouse
+  location: Remote US
+  location_class: us-remote
+  description: '<div class="gmail_default" style="font-size: small;"> <div> <p><strong>Why
+    Mozilla?</strong></p> <p><span style="font-weight: 400;">Mozilla Corporation is
+    the non-profit-backed technology company that has shaped the internet for the
+    better over the last 25 years. We make pioneering brands like Firefox, the privacy-minded
+    web browser. Now, with more than 225 million people around the world using our
+    products each month, we’re shaping the next 25 years of technology and helping
+    to reclaim an internet built for people, not companies. Our work focuses on diverse
+    areas including AI, social media, security and more. And we’re doing this while
+    never losing our focus on our core mission – to make the internet better for people.&nbsp;</span></p>
+    <p><span style="font-weight: 400;">The Mozilla Corporation is wholly owned by
+    the non-profit 501(c) Mozilla Foundation. This means we aren’t beholden to any
+    shareholders — only to our mission. Along with thousands of volunteer contributors
+    and collaborators all over the world, Mozillians design, build and distribute
+    </span><strong>open-source</strong><span style="font-weight: 400;"> software that
+    enables people to enjoy the internet on their terms.&nbsp;</span></p> <p><strong>About
+    this role:</strong></p> <p><span style="font-weight: 400;">Mozilla IAM team seeks
+    a Staff Software Engineer to rebuild our Identity and Access Management (IAM)
+    system. The IAM solution serves both our Enterprise and Product Platform surface
+    areas. Our IAM modernization project aims to enhance scalability, security, user
+    experience, and position IAM as a platform offering within the infrastructure
+    organization. This role would report through our Cloud Engineering organization.</span></p>
+    <p><strong>What is a Staff Engineer at Mozilla?</strong></p> <span style="font-weight:
+    400;">A Staff Software Engineer is the preceding level from a Senior Software
+    Engineer. At Mozilla this role can vary but typically a Staff Engineer is a domain
+    expert who leads others within a single team to tackle multi-month projects. Tasks
+    that may be initially ambiguous or require significant planning and require them
+    to influence or direct the work of several engineers. They sequence deliverables
+    and manage risks in their team''s projects, provide feedback on our strategy and
+    goals affecting the team, and turn our strategy into action for their team members.
+    Staff Software Engineers mentor others by stewarding some responsibilities to
+    more junior and senior engineers so they can take on new ones. They collaborate
+    with management on building team consensus and providing direction. Staff Software
+    Engineers identify gaps and opportunities for improvement to enable a culture
+    of inclusion and allyship, at all levels of the organization.</span> <p><strong>What
+    you’ll do:</strong></p> <ul> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Architect and lead IAM / IdP system redesign, emphasizing user experience
+    and scalability.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Guide technical decision-making and adoption of user-centric solutions.</span></li>
+    <li style="font-weight: 400;"><span style="font-weight: 400;">Guide team members
+    and promote engineering standard methodologies, with a focus on usability and
+    maintainability.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Facilitate cross-functional collaboration for efficient and cohesive platform
+    delivery.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Drive automation and self-service capabilities in IAM / IdP, ensuring robust
+    security, compliance, and improved user satisfaction.</span></li> <li style="font-weight:
+    400;"><span style="font-weight: 400;">Meet with engineering teams across Mozilla
+    to understand their needs and concerns around access management.</span></li> <li
+    style="font-weight: 400;"><span style="font-weight: 400;">Document standard methodologies
+    and design guidelines</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Be trusted to resolve unclear but urgent tasks</span></li> </ul> <strong>What
+    you’ll bring:</strong> <ul> <li style="font-weight: 400;"><span style="font-weight:
+    400;">10+ years experience in software engineering with at least 5 years of extensive
+    IAM / IdP expertise.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Successfully implemented IAM/IdP Solution using Okta, Google IdP.</span></li>
+    <li style="font-weight: 400;"><span style="font-weight: 400;">Proven technical
+    leadership experience.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Expertise in AuthN, AuthZ, and access governance.</span></li> <li style="font-weight:
+    400;"><span style="font-weight: 400;">Deep knowledge of identity lifecycle management
+    and access governance.</span></li> <li style="font-weight: 400;"><span style="font-weight:
+    400;">Proficient in Python, JavaScript, Github actions, GitOps workflows.</span></li> '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.9
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.819508+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-30'

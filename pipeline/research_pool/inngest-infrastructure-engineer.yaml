@@ -1,0 +1,98 @@
+id: inngest-infrastructure-engineer
+name: Inngest Infrastructure Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: Inngest
+  url: https://jobs.ashbyhq.com/inngest
+  application_url: https://jobs.ashbyhq.com/inngest/50439b44-2a91-4136-b054-60e123d6251e
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Inngest is solving long standing developer problems related to queueing,
+    event-driven systems, and step functions in a novel way — which means we’re creating
+    first-of-it’s-kind solutions. Infrastructure engineering is a critical part of
+    Inngest. It involves everything from K8S, terraform, and ansible playbooks (for
+    bare metal) to developing high-throughput datastores to serve function state,
+    with o11y and alerting as standard. This means that you''ll need to know how to
+    write code (Golang) as well as how to manage infrastructure. This is a senior
+    level role, so we require at least 5 years of experience. This role requires working
+    time overlap with US PST. Ideally, you''d live in the SF Bay Area, but for strong
+    candidates you may live anywhere in the United States. This role is more than
+    CI/CD pipelines. We''re building bare metal clusters in many datacenters, owning
+    the networking stack, and solving everything from millions of DNS queries a second
+    to load balancing egress amongst switches. What you''ll do Collaborate with other
+    engineers to architect core systems for Inngest, including message streams, real-time
+    connectivity to external clients, consistent hashing caches, etc. Collaborate
+    with systems engineers to help develop our execution engine, state store, etc.
+    (in Go) Develop internal tooling (in Go) to manage our systems Provision and monitor
+    systems on public clouds, bare metal, and, in the future, our own hardware. Ensure
+    our systems are up to date and secure Core requirements A deep understanding of
+    Kubernetes A deep understanding of networking, down to the hardware level Experience
+    with bare metal, from VMs to the network switches Ideal candidate You acted as
+    technical lead, owning the discovery, architecture design, planning, and execution
+    of complex projects You understand how systems scale, how they should be monitored,
+    and how to deliver and implement such systems You are able to identify business
+    priorities and anticipate pitfalls and risks You are passionate about engineering
+    and you choose pragmatism at work You have deep understanding of modern applications
+    design architecture, networking, performance, scale and how to plan for it You''ve
+    previously worked in a strong engineering environment as a systems or infrastructure
+    engineer Bonus points 5+ years experience as a software engineer Experience with
+    Clickhouse, Kafka, Terraform, Ansible Experience with FoundationDB Experience
+    operating blobstores, eg. Ceph, or SeaweedFS Experience with Anycast/BGP What
+    your first 90 days will look like First week: you’ll learn how we work as a team
+    and our approach to growth. You’ll also start to learn our system architecture,
+    how we provision and access our infrastructure, and how we monitor our systems
+    By day 30, you’ll be proficient with our weekly cadence of work and have contributed
+    a new feature to our architecture. You’ll fully understand our company, product,
+    and growth strategy and start to build up context for your product mindset. By
+    day 90: you’ll have shipped significant changes to our product and systems for
+    which you created the spec. You’ll have actively participated in the discussions
+    about the future of our infrastructure architecture at Inngest. You’ll have contributed
+    ideas around product and growth. We’re all aligned and mutually excited about
+    how we work together now and in the future! What we build with Backend: Go Infrastructure:
+    Kafka, Clickhouse, Postgres, Redis, and FoundationDB Automation: Terraform, Terragrunt,
+    Ansible Github, Linear, Slack, Notion, Figma Hosting: Bare metal, and Cloud providers
+    as backups'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.6
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.224603+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

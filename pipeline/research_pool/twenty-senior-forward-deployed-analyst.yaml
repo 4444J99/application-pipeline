@@ -1,0 +1,115 @@
+id: twenty-senior-forward-deployed-analyst
+name: Twenty Senior Forward Deployed Analyst
+track: job
+status: research
+outcome: null
+target:
+  organization: Twenty
+  url: https://jobs.ashbyhq.com/twenty
+  application_url: https://jobs.ashbyhq.com/twenty/97ea1b3b-e3b0-440d-bcbd-5a5cd3d68c79
+  portal: ashby
+  location: Fort Meade, MD
+  location_class: us-onsite
+  description: 'About the Company At Twenty, we''re taking on one of the most critical
+    challenges of our time: defending democracies in the digital age. We develop revolutionary
+    technologies that operate at the intersection of the cyber and electromagnetic
+    domains, where the speed of operations exceeds human sensing and complexity transcends
+    conventional boundaries. Our team doesn''t just solve problems – we deliver game-changing
+    outcomes that directly impact national security. We''re pragmatic optimists who
+    understand that while our mission of protecting America and its allies is challenging,
+    success is possible. Senior Forward Deployed Analyst Twenty is seeking a Senior
+    Forward Deployed Analyst in the Fort Meade area to serve as the subject matter
+    expert (SME) bridging the gap between our revolutionary cyber technologies and
+    real-world operational requirements. We''re looking for someone with 10+ years
+    of experience in cyber operations and intelligence analysis, with deep expertise
+    in Digital Network Exploitation and Analysis (DNEA) and/or Exploitation Analyst
+    (EA) operations within the U.S. Government military or intelligence organizations.
+    In this role, you''ll be the technical voice of the operator, working directly
+    with our world-class engineering team to ensure our AI-powered graph database
+    applications meet the complex demands of modern cyber operations. You''ll translate
+    operational requirements into technical specifications, validate that our systems
+    enhance rather than hinder operator decision-making, and serve as the critical
+    link between the battlefield of cyberspace and the development teams building
+    tomorrow''s cyber capabilities. If you''re passionate about leveraging your operational
+    expertise to shape the next generation of cyber tools while making a direct impact
+    on national security, we want to talk to you. Role Details Cyber Operations &
+    Analysis Perform Digital Network Exploitation and Analysis (DNEA) analysis or
+    Exploitation Analyst cyber operations as an integrated member of our operational
+    team, conducting real-world cyber intelligence analysis and exploitation activities
+    Execute network analysis, persona development, and threat actor attribution using
+    both traditional methods and our AI-enhanced graph database systems Maintain operational
+    proficiency and credibility through regular engagement in live cyber operations
+    and intelligence production Subject Matter Expertise & Requirements Translation
+    Serve as the primary SME for cyber operations and intelligence analysis, translating
+    complex operational workflows into technical requirements for engineering teams
+    Validate that AI-powered graph database applications accurately represent and
+    enhance cyber operations in both defensive and offensive contexts Lead requirements
+    gathering sessions with government customers and translate operational needs into
+    actionable development priorities Operational Integration & Validation Work directly
+    with cyber operators to gather feedback on user interface designs and system workflows
+    Create training materials and documentation that help operators effectively utilize
+    our AI-enhanced cyber tools Customer Engagement & Strategic Leadership Represent
+    Twenty in customer engagements, leveraging operational credibility to build trust
+    and understanding Lead technical demonstrations that showcase how our AI and graph
+    database technologies enhance operational effectiveness Collaborate with government
+    stakeholders to identify emerging operational requirements and capability gaps
+    Qualifications Operational Experience & Expertise 10+ years of professional experience
+    in cyber operations and intelligence analysis within U.S. Government military
+    or intelligence organizations Expert-level knowledge of Digital Network Exploitation
+    and Analysis (DNEA) and Exploitation Analyst (EA) methodologies and tools Deep
+    understanding of cyber operations across both defensive and offensive mission
+    sets Extensive experience with multi-domain intelligence analysis correlating
+    cyber, SIGINT, GEOINT, and HUMINT Demonstrated expertise in network analysis,
+    persona development, and threat actor attribution Strong background in operational
+    planning and mission execution in cyber environments Technical Skills & Knowledge
+    Advanced understanding of network protocols, exploitation techniques, and cyber
+    attack methodologies Experience with graph-based analysis tools and methodologies
+    for intelligence analysis Knowledge of AI/ML applications in cyber operations
+    and intelligence analysis Familiarity with cloud platforms and their security
+    implications for government operations Understanding of IoT protocols, WiFi exploitation,
+    and electromagnetic spectrum operations Experience with data visualization tools
+    and techniques for complex intelligence presentations Leadership & Communication
+    Proven ability to translate complex technical concepts for diverse audiences including
+    senior government officials Strong leadership experience mentoring analysts and
+    leading operational '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.356134+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

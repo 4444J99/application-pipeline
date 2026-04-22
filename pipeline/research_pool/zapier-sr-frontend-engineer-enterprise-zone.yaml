@@ -1,0 +1,115 @@
+id: zapier-sr-frontend-engineer-enterprise-zone
+name: Zapier Sr. Frontend Engineer (Enterprise zone)
+track: job
+status: research
+outcome: null
+target:
+  organization: Zapier
+  url: https://jobs.ashbyhq.com/zapier
+  application_url: https://jobs.ashbyhq.com/zapier/6174e728-ac7b-45d2-84b0-c894e3503a40
+  portal: ashby
+  location: NAMER
+  location_class: unknown
+  description: 'AI at Zapier At Zapier , we build and use automation every day to
+    make work more efficient, creative, and human. So if you’re using AI tools while
+    applying here - that’s great! We just ask that you use them responsibly and transparently
+    . Check out our guidance on How to Collaborate with AI During Zapier’s Hiring
+    Process , including how to use AI tools like ChatGPT, Claude, Gemini, or others
+    during our hiring process - and when not to. Job Posted: March 4, 2026 Location:
+    Americas (North, Central, and South America) Hi there! Zapier is leading the way
+    in AI automation. We’ve helped small businesses increase productivity and serve
+    their customers better through an extensive platform of integrations, robust workflow
+    automations, and practical AI applications. As we continue our mission to make
+    automation work for everyone, our current focus is to unlock that vast potential
+    within Enterprise customers—organizations comprising dozens, hundreds, or even
+    thousands of employees. These companies already recognize the value of automation;
+    we are now empowering them to implement it at scale, ensuring control, visibility,
+    and confidence in their chosen tools. The Asset Management team sits within Zapier’s
+    Enterprise zone and is responsible for building the systems that make every Zapier
+    asset, across products and workspaces, discoverable, governable, and portable.
+    This work is central to Zapier’s multi-product strategy and directly shapes how
+    enterprise customers manage, transfer, and govern their automation at scale. Engineering
+    here sits close to customer outcomes and has a direct impact on premium plan sales
+    and strategic enterprise deals. We’re looking for a Senior Frontend Engineer who
+    is passionate about solving complex problems, delivering new value to customers,
+    and changing the future of automation for some of the largest companies in industry.
+    Our Commitment to Applicants Culture and Values at Zapier Zapier Guide to Remote
+    Work Zapier Code of Conduct Diversity and Inclusivity at Zapier About You We know
+    great engineers come from a range of backgrounds and career paths. You’ll be successful
+    in this role if: You''re a proven SaaS frontend builder. You have deep experience
+    designing, developing, and maintaining complex mission-critical user interfaces.
+    You''re fluent in React and TypeScript, have strong opinions about component architecture,
+    and know how to build systems that scale. Frontend craft is where you go deep,
+    but you''re comfortable following the work wherever it leads. You work through
+    AI agents, not alongside them. Your daily development workflow is built around
+    directing and reviewing agent-written code, not writing it by hand. You have opinions
+    about which models to use for which tasks, you''ve hit real failure modes and
+    built mitigations, and your workflow is actively evolving. Bonus: you use multi-agent
+    patterns, enable others on your team to build faster with AI, or have scaled AI
+    impact beyond yourself. You''re not afraid to leave the frontend. When a problem
+    traces back to an API contract, a backend service, or another team''s repo, you
+    follow it there and fix it rather than file a ticket and wait. You''ve shipped
+    features end-to-end, opened PRs outside your lane, and done it without asking
+    for permission. You bridge design and engineering. You have a strong visual sensibility
+    and can hold your own in a design conversation. You know when to push back on
+    a design for technical reasons and when to push back on a technical constraint
+    for user experience reasons. You''re a collaborator, not a handoff recipient.
+    You work close to the customer. You don''t wait for product specs or UX research
+    to tell you what to build. You pull customer tickets, talk to CSMs, review feedback,
+    and use that context to drive what you ship. You think in milestone slices: what''s
+    the smallest thing I can get into production that moves us forward and teaches
+    us something? You ship through ambiguity. When there''s no spec, no designs, and
+    no clear path forward, your first instinct is to gather customer evidence, break
+    the problem into a narrow first slice, and get rough working software into production
+    within days, not weeks. You use working prototypes to drive alignment with stakeholders
+    rather than waiting for consensus before building. You treat discarded work as
+    a fast learning loop, not a loss. You own your work and yourself. You take initiative
+    without waiting for permission and you ship fast and share early. But you also
+    own your mistakes, your gaps, and your role in friction, openly. You say "I don''t
+    know" and "I was wrong" out loud, early, and without shame. You hold yourself
+    to a high standard and can articulate where you''ve fallen short, not just where
+    you''ve succeeded. You communicate proactively in an async-first culture. You
+    manage up and across, flagging risks, surfacing decisions, and keeping stakeholders
+    informed without being asked. You use written artifacts, working demos, and rough
+    prototypes as your primary commu'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.8
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.401959+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

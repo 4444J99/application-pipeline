@@ -1,0 +1,114 @@
+id: fivetran-software-engineer-iii
+name: Fivetran Software Engineer III
+track: job
+status: research
+outcome: null
+target:
+  organization: Fivetran
+  url: https://boards.greenhouse.io/fivetran
+  application_url: https://www.fivetran.com/careers/job?gh_jid=7686505003
+  portal: greenhouse
+  location: Oakland, California, United States, AMER
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>From Fivetran’s founding until now,
+    our mission has remained the same: to make access to data as simple and reliable
+    as electricity. With Fivetran, customer data arrives in their warehouses, canonical
+    and ready to query, with no engineering or maintenance required. We’re proud that
+    more organizations continue to leverage our technology every day to become truly
+    data-driven.</p></div><p style="text-align: left;"><span style="font-size: 10pt;"><strong>About
+    the Role</strong></span></p> <p style="text-align: left;"><span style="font-size:
+    10pt;">Fivetran is building data pipelines to power the modern data stack for
+    thousands of companies. We’re looking for a talented Senior Software Engineer
+    with a passion for building enterprise grade software to join the team. You will
+    be focusing on developing world-class enterprise capabilities and features in
+    support of our largest and most sophisticated customers. The work we do is both
+    highly visible and critically important to the long term growth and success of
+    Fivetran. You will have an impact across the entire product as we develop our
+    next generation of enterprise, data governance, and solutions engineering offerings.</span></p>
+    <p style="text-align: left;"><span style="font-size: 10pt;">This team is tasked
+    with evolving a high performance extract-load-transform data integration system
+    that enables our connector teams to ship the Fivetran ELT product using powerful
+    abstractions. The role will challenge you to solve problems in the domains of
+    performance engineering, data security, and cluster orchestration. You don’t necessarily
+    need to be a subject matter expert before you join us (you will be one before
+    you leave!).</span></p> <p style="text-align: left;"><span style="font-size: 10pt;">&nbsp;We''re
+    looking for people who can understand the key values that make our product great
+    and implement those values in the many small decisions you make every day.&nbsp;</span></p>
+    <p style="text-align: left;"><span style="font-size: 10pt;">This is a full-time
+    position based out of our Oakland office. Our hybrid work model offers a blend
+    of remote flexibility and in-person collaboration, including two days in the office
+    each week to connect and build as a team.</span></p> <p style="text-align: left;"><span
+    style="font-size: 10pt;">Technologies You’ll Use</span></p> <ul style="text-align:
+    left;"> <li style="font-size: 10pt;"> <p><span style="font-size: 10pt;">Java</span></p>
+    </li> <li style="font-size: 10pt;"> <p><span style="font-size: 10pt;">SQL</span></p>
+    </li> <li style="font-size: 10pt;"> <p><span style="font-size: 10pt;">Bazel, BuildKite,
+    Docker, Kubernetes, Github</span></p> </li> <li style="font-size: 10pt;"> <p><span
+    style="font-size: 10pt;">AWS, GCP, Azure</span></p> </li> <li style="font-size:
+    10pt;"> <p><span style="font-size: 10pt;">Postgres database</span></p> </li> <li
+    style="font-size: 10pt;"> <p><span style="font-size: 10pt;">AI Tools</span></p>
+    </li> </ul> <p style="text-align: left;"><span style="font-size: 10pt;">What You’ll
+    Do</span></p> <ul style="text-align: left;"> <li style="font-size: 10pt;"> <p><span
+    style="font-size: 10pt;">Design and implement features and performance improvements
+    to create highly scalable distributed data pipelines on the cloud</span></p> </li>
+    <li style="font-size: 10pt;"> <p><span style="font-size: 10pt;">Develop, maintain,
+    and test code</span></p> </li> <li style="font-size: 10pt;"> <p><span style="font-size:
+    10pt;">Conduct design and code reviews&nbsp;</span></p> </li> <li style="font-size:
+    10pt;"> <p><span style="font-size: 10pt;">Collaborate with peers, product managers,
+    customer support, and other stakeholders to deliver the best product with high
+    quality, performance, and scalability.</span></p> </li> <li style="font-size:
+    10pt;"> <p><span style="font-size: 10pt;">Understand and fix challenges related
+    to performance and scalability.&nbsp;</span></p> </li> <li style="font-size: 10pt;">
+    <p><span style="font-size: 10pt;">Participate periodically in on-call rotation</span></p>
+    </li> <li style="font-size: 10pt;"> <p><span style="font-size: 10pt;">Participate
+    in the hiring process</span></p> </li> <li style="font-size: 10pt;"> <p><span
+    style="font-size: 10pt;">Mentor Junior developers&nbsp;</span></p> </li> <li style="font-size:
+    10pt;"> <p><span style="font-size: 10pt;">Make Fivetran the most reliable and
+    secure component of our customers’ data infrastructure</span></p> </li> </ul>
+    <p style="text-align: left;">&nbsp;</p> <p style="text-align: left;"><span style="font-size:
+    10pt;">Skills We’re Looking For</span><br><span style="font-size: 10pt;">&nbsp;</span></p>
+    <ul style="text-align: left;"> <li style="font-size: 10pt;"> <p><span style="font-size:
+    10pt;">Bachelor''s degree, preferably in Software Engineering or Computer Science&nbsp;</span></p>
+    </li> <li style="font-size: 10pt;"> <p><span style="font-size: 10pt;">5+ years
+    of experience in the software industry with a passion for solving complex softwa'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.9
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-03'
+  posting_date: '2026-04-02'
+  date_source: first_published
+  date_added: '2026-04-03'
+  discovered: '2026-04-03T10:15:35.515337+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-03'

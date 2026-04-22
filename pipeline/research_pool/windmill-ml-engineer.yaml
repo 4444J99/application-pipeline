@@ -1,0 +1,74 @@
+id: windmill-ml-engineer
+name: Windmill ML Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: Windmill
+  url: https://jobs.ashbyhq.com/windmill
+  application_url: https://jobs.ashbyhq.com/windmill/18f096aa-00fc-414f-a806-d6255d41cb96
+  portal: ashby
+  location: New York, NY
+  location_class: us-onsite
+  description: 'Windmill is building the future of performance. Windmill is the first
+    performance review system people actually like. It uses AI to remember every 1:1,
+    project milestone, and piece of feedback automatically so reviews take minutes,
+    not days. Managers feel prepared, employees feel seen, and HR teams finally have
+    a process everyone appreciates. On average, reviews take 6 hours less per person,
+    and 93% of employees report being satisfied with the process. Learn more: gowindmill.com
+    We''re looking for candidates with experience in: Model Development & Deployment
+    : Design, build, and deploy scalable machine learning models to enhance product
+    features, optimize performance, and drive intelligent automation. Algorithm Optimization
+    : Fine-tune and optimize machine learning algorithms to improve accuracy, efficiency,
+    and real-time performance within the product environment. Cross-Functional Collaboration
+    : Work closely with data scientists, software engineers, and founders to integrate
+    machine learning solutions that solve complex product challenges for our users
+    Scalable Infrastructure : Develop and maintain robust machine learning pipelines
+    and data infrastructure, ensuring the models can efficiently handle large-scale
+    data processing and deployment needs. Continuous Learning & Innovation : Stay
+    up-to-date with the latest research in machine learning, artificial intelligence,
+    and data science to identify opportunities for applying cutting-edge techniques
+    that drive product innovation. Note: We''re a New York based company, and want
+    our team working together in the office. If you''re not interested in considering
+    relocation to New York, this may not be the right opportunity.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.6
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.342943+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

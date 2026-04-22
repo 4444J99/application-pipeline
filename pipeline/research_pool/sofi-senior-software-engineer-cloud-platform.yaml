@@ -1,0 +1,112 @@
+id: sofi-senior-software-engineer-cloud-platform
+name: SoFi Senior Software Engineer, Cloud Platform
+track: job
+status: research
+outcome: null
+target:
+  organization: SoFi
+  url: https://boards.greenhouse.io/sofi
+  application_url: https://sofi.com/careers/job/7695845003?gh_jid=7695845003
+  portal: greenhouse
+  location: 'WA - Seattle '
+  location_class: us-onsite
+  description: '<div class="content-intro"><p><a href="https://www.sofi.com/sofi-employee-applicant-privacy-notice/"
+    target="_blank"><strong>Employee Applicant Privacy Notice</strong></a></p> <p><strong>Who
+    we are:</strong></p> <div> <p>Shape a brighter financial future with us.</p> <p>Together
+    with our members, we’re changing the way people think about and interact with
+    personal finance.</p> <p>We’re a next-generation financial services company and
+    national bank using innovative, mobile-first technology to help our millions of
+    members reach their goals. The industry is going through an unprecedented transformation,
+    and we’re at the forefront. We’re proud to come to work every day knowing that
+    what we do has a direct impact on people’s lives, with our core values guiding
+    us every step of the way. <strong>Join us to invest in yourself, your career,
+    and the financial world.</strong></p> </div></div><p><strong><strong>The Role:</strong></strong></p>
+    <p>We are seeking a highly skilled and experienced Senior Software Engineer to
+    join our Kubernetes and Istio team to create high-quality solutions that simplify
+    complex tasks and enhance developer productivity. You will have the opportunity
+    to directly impact the direction and architecture of our cloud infrastructure,
+    focusing on using Kubernetes and Istio on AWS. If you are a seasoned Software
+    Engineer with a passion for building robust infrastructure solutions and a strong
+    background in cloud technologies, we invite you to apply for this exciting opportunity.<br>&nbsp;</p>
+    <p><strong><strong>What You’ll Do:</strong></strong></p> <ul> <li> <p>Design,
+    develop, and maintain software that enables developers to efficiently interact
+    with our cloud infrastructure and services.</p> </li> <li> <p>Work closely with
+    cross-functional teams to understand requirements and design solutions that are
+    intuitive, efficient, scalable, and reliable.</p> </li> <li> <p>Provide technical
+    leadership for the Cloud Platform team to design and implement strategies for
+    optimizing cloud costs, resource utilization, and overall performance.</p> </li>
+    <li> <p>Lead the development of software solutions to enable engineers to seamlessly
+    use networking, compute, and storage services within AWS and Kubernetes environments.</p>
+    </li> <li> <p>Identify opportunities for automation and process improvement to
+    enhance developer productivity.</p> </li> <li> <p>Collaborate with cloud and software
+    engineers to integrate solutions seamlessly into cloud environments.</p> </li>
+    <li> <p>Conduct code reviews and provide constructive feedback to other team members.</p>
+    </li> <li> <p>Stay up-to-date with the latest trends and technologies in cloud
+    infrastructure and software engineering.<br>&nbsp;</p> </li> </ul> <p><strong><strong>What
+    You’ll Need:</strong></strong></p> <ul> <li> <p>Bachelor''s or Master''s degree
+    in Computer Science, Software Engineering, or a related technical field.</p> </li>
+    <li> <p>5+ years of software development experience.</p> </li> <li> <p>Expertise
+    in cloud platforms including AWS and cloud-native technologies.</p> </li> <li>
+    <p>Strong programming fundamentals (ex: Java/Kotlin, Python, Go).</p> </li> <li>
+    <p>Strong understanding of software design principles and best practices.</p>
+    </li> <li> <p>Experience with container orchestration (e.g., Docker, Kubernetes
+    - especially EKS), networking, and service meshes (especially Istio).</p> </li>
+    <li> <p>Experience with infrastructure as code (IaC) tools and practices (e.g.
+    Terraform).</p> </li> <li> <p>Familiarity with CI/CD pipelines and tools (e.g.,
+    Jenkins, GitLab CI/CD).</p> </li> <li> <p>Excellent problem-solving skills and
+    ability to think strategically about cloud infrastructure and platform design.</p>
+    </li> <li> <p>Experience with generative AI coding agents such as Claude and Cursor.&nbsp;<br>&nbsp;</p>
+    </li> </ul> <p><strong><strong>Preferred Qualifications:</strong></strong></p>
+    <ul> <li> <p>Experience with cloud storage solutions, compute resources management,
+    and networking in AWS.</p> </li> <li> <p>Experience with monitoring and logging
+    tools (e.g. Datadog).</p> </li> <li> <p>Experience with service discovery and
+    load balancing solutions.</p> </li> <li> <p>Experience with security and compliance
+    in cloud environments.</p> </li> </ul><div class="content-conclusion"><div class="gmail_default"><strong>Compensation
+    and Benefits</strong></div> <div class="gmail_default">The base pay range for
+    this role is listed below. Final base pay offer will be determined based on individual
+    factors such as the candidate’s experience, skills, and location.&nbsp;</div>
+    <div class="gmail_default">&nbsp;</div> <div class="gmail_default">To view all
+    of our comprehensive&nbsp;and competitive&nbsp;benefits, visit our&nbsp;<strong><a
+    href="https://sofietyinfo.sofi.com/sofi-benefits" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://sofietyinfo.sofi.com/sofi-benefits&amp;source=gmail&amp;ust=1667318410571000&amp;usg=AOvVaw0ZqbRtznVe1JsWWUOWQUnN">Be'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.9
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-10'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.213443+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-11'

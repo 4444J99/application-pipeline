@@ -1,0 +1,112 @@
+id: postman-software-engineer-iam
+name: Postman Software Engineer, IAM
+track: job
+status: research
+outcome: null
+target:
+  organization: Postman
+  url: https://boards.greenhouse.io/postman
+  application_url: https://job-boards.greenhouse.io/postman/jobs/7687341003
+  portal: greenhouse
+  location: Hyderabad, Telangana, India
+  location_class: international
+  description: '<div class="content-intro"><h2><strong>Who Are We?</strong></h2> <p>Postman
+    is the world’s leading API platform, used by more than 45 million+ developers
+    and 500,000 organizations, including 98% of the Fortune 500. Postman is helping
+    developers and professionals across the globe build the API-first world by simplifying
+    each step of the API lifecycle and streamlining collaboration—enabling users to
+    create better APIs, faster.</p> <p>The company is headquartered in San Francisco
+    and has offices in Boston, New York, Austin, Tokyo, London, and Bangalore - where
+    Postman was founded. Postman is privately held, with funding from Battery Ventures,
+    BOND, Coatue, CRV, Insight Partners, and Nexus Venture Partners. Learn more at
+    postman.com or connect with Postman on X via @getpostman.</p> <p>P.S: We highly
+    recommend reading <a href="https://api-first-world.com/">The "API-First World"
+    graphic novel</a> to understand the bigger picture and our vision at Postman.</p></div><h2
+    data-renderer-start-pos="1"><strong>About the Team</strong></h2> <p data-renderer-start-pos="1">Identity
+    and Access Management team is responsible for creating a secure, reliable and
+    seamless Identity Management Platform for all the Postman users. This is the team
+    behind authenticating and authorizing every request that reaches Postman space.<br>Postman''s
+    Identity Interface is the gateway to access a plethora of Postman''s services
+    while enabling users to connect with peers to perform work collaboratively. A
+    team of passionate engineers where each day brings new learning.</p> <h2 data-renderer-start-pos="1">What
+    You''ll Do</h2> <ul> <li data-renderer-start-pos="19">Implement and maintain features,
+    improve performance and quality of Postman’s products</li> <li data-renderer-start-pos="19">Interact
+    with Product, Design and Engineering teams to spec, build, test and deliver new
+    features</li> <li data-renderer-start-pos="210">Improve quality and reliability
+    by improving existing tests and writing new ones</li> <li data-renderer-start-pos="294">Work
+    on the scalability aspects of features and services that collection team owns.</li>
+    <li data-renderer-start-pos="381">Work with the manager for the roadmap and SLAs
+    for the micro-services that you own.</li> <li data-renderer-start-pos="468">Perform
+    code reviews and advocate better practises for software engineering by mentoring
+    and encouraging others around you to build a quality product.</li> </ul> <h2 id="About-You"
+    data-renderer-start-pos="735">About You</h2> <ul> <li data-renderer-start-pos="748">You
+    have at least 3 years of experience developing complex, distributed software applications
+    at scale.</li> <li data-renderer-start-pos="854">You’ve experience with high level
+    programming languages - e.g. Node.js, Python, Ruby, Go.&nbsp;</li> <li data-renderer-start-pos="988">Strong
+    understanding of web fundamentals.</li> <li data-renderer-start-pos="1178">Experience
+    with cloud computing and distributed systems</li> <li data-renderer-start-pos="1237">You
+    possess strong Computer Science fundamentals - Algorithms, Networking and Operating
+    Systems, and are familiar with various JavaScript tools, frameworks, and development
+    practices.</li> <li data-renderer-start-pos="1424">Has a point of view and is
+    comfortable and prior experience in collaborating and respectfully challenging
+    other stakeholders, such as PM, <span data-highlighted="true" data-vc="highlighted-text"><span
+    class="_11q7y4f7 _5pioz8co _189eyh40 _n3tdv77o _1il9nqa1 _19lc184f _d0altlke acronym-highlight"
+    data-testid="acronym-highlight">EM</span></span> etc.</li> <li data-renderer-start-pos="1573">You
+    write testable, maintainable code that’s easy to understand.</li> <li data-renderer-start-pos="1641">You
+    have curiosity about how things work and to learn new things.</li> <li data-renderer-start-pos="1710">Good
+    written and verbal communication.</li> </ul> <h2>Nice to Have</h2> <ul> <li>Previous
+    experience with systems with scale and familiarity with problems related to scalability
+    and performance</li> <li data-renderer-start-pos="1753">A learning mindset and
+    the willingness to do beyond what’s being told.</li> <li data-renderer-start-pos="1828">An
+    innate curiosity about how things work under the hood.</li> <li data-renderer-start-pos="1889">Alignment
+    with our<a class="cc-1rn59kg" href="https://www.postman.com/careers/" data-testid="link-with-safety"
+    data-renderer-mark="true">&nbsp;Values</a>.</li> </ul><div class="content-conclusion"><h2
+    data-renderer-start-pos="4036"><strong data-renderer-mark="true">What Else?</strong></h2>
+    <p data-renderer-start-pos="4048">In addition to Postman''s pay-on-performance
+    philosophy, and a flexible schedule working with a fun, collaborative team, Postman
+    offers a comprehensive set of benefits, including full medical coverage, flexible
+    PTO, wellness reimbursement, and a monthly lunch stipend. Along with that, our
+    wellness programs will help you stay in the best of your physical and mental health.
+    Our frequent and fascinating team-'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.7
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-08'
+  posting_date: '2026-04-08'
+  date_source: first_published
+  date_added: '2026-04-08'
+  discovered: '2026-04-08T10:15:26.226588+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-08'

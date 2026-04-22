@@ -1,0 +1,78 @@
+id: greptile-software-engineer-frontend
+name: Greptile Software Engineer (Frontend)
+track: job
+status: research
+outcome: null
+target:
+  organization: Greptile
+  url: https://jobs.ashbyhq.com/greptile
+  application_url: https://jobs.ashbyhq.com/greptile/356e27fa-972d-498a-bae8-dbf2aa44882b
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'We want to build agents that autonomously validate code changes. Today
+    that looks like AI that reviews pull requests in GitHub, catching bugs and enforcing
+    standards. We’re reviewing close to 1B lines of code a month now for over 3,000
+    companies. Problems we’re excited about Coding standards can be idiosyncratic
+    and are often poorly documented; can we build agents that learn them through osmosis
+    like a new hire might? Can we identify for each customer what types of PR feedback
+    they do and don’t care about, perhaps using some sample efficient RL, in order
+    to increase signal-to-noise ratio? Some bugs are best caught by running the code,
+    potentially against discerning AI-generated E2E tests. Can we autonomously deploy
+    feature branches and use agents to parallel try to break the application to detect
+    bugs? Trajectory 7,000+ customers Raised $30M from Benchmark, YC, Paul Graham,
+    Initialized Team We have assembled a small, talent dense team who have scaled
+    critical functions at companies like Stripe, Google, Figma, etc. Responsibilities
+    (in order of how much time you’ll likely spend on each) Maintain and build features
+    for the Greptile dashboard, which is a TypeScript-based web app Work with our
+    design engineer to ensure a fast, consistent, and beautiful experience across
+    the application Maintain the customer-facing analytics dashboard, which helps
+    engineering leadership see the value that Greptile is creating for their organization.
+    Qualifications B.S. Computer Science or equivalent degree, undergraduate or higher
+    1+ years of front-end/full-stack engineering experience Experience with JavaScript/TypeScript
+    Experience with ReactJS You will like this role if: You want to work on a product
+    that thousands of developers rely on The chaos of high growth and things breaking
+    is exciting to you You like being in an office every day around other smart people
+    who are excited about what they’re building You enjoy making beautiful frontends
+    You specifically prefer working in-person over working remote'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.9
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.371322+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

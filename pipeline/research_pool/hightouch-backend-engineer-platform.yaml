@@ -1,0 +1,97 @@
+id: hightouch-backend-engineer-platform
+name: Hightouch Backend Engineer, Platform
+track: job
+status: research
+outcome: null
+target:
+  organization: Hightouch
+  url: https://jobs.ashbyhq.com/hightouch
+  application_url: https://jobs.ashbyhq.com/hightouch/7f302222-2e06-4e37-8766-87b3bf6068e6
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Please drop us a line at founders@hightouch.io . We''re excited to
+    meet you! The product Data warehouses like Snowflake and BigQuery are shifting
+    how companies think of centralizing data. They''re becoming the standard place
+    to centralize customer data at a company, given how cheap and accessible warehouses
+    have become. HIghtouch.io exists to help companies get their data out of the warehouse
+    (reverse ETL) and into the hands of sales, marketing, and product teams. Business
+    users can''t get data into their SaaS tools without help from engineering. Hightouch.io
+    is the easiest way to get customer data from your database or data warehouse into
+    your SaaS tools. Just write SQL in our UI, map the columns to the fields in your
+    SaaS tool, and then watch the data live sync into your SaaS tool. Some common
+    examples include getting data into sales (Salesforce, Hubspot), marketing (Marketo,
+    Iterable, Braze), and support (Zendesk, Intercom) tools. Why is this a big deal?
+    SaaS tools like Salesforce have been promising to be the customer source of truth
+    for years, but have never achieved that goal. Warehouses have accomplished that
+    vision, but lack the final piece which is getting the data back into the operational
+    systems where it can be used. Hightouch closes this loop and captures the value
+    of getting data into these systems. The Company We are a very fast growing and
+    close-knit team of 13, headquartered in San Francisco, but located around the
+    world. We just raised a Series A and are able to offer competitive compensation,
+    benefits, and PTO. Everyone in Hightouch gets tremendous ownership of their work,
+    and we collaborate closely as a team. The Role We''re looking for a product-minded
+    backend engineer to lead the development of extending the Hightouch platform.
+    Our platform consists of integrations for sources of data (databases, warehouses)
+    as well as integrations for all of the places data can be sent to. Each integration
+    in our platform serves as a new use case that Hightouch can solve for. Today,
+    Hightouch integrates with dozens of the most common tools across many categories.
+    However, new and existing customers request integrations every week to expand
+    the capabilities of Hightouch. While primarily a backend engineering role, you''ll
+    channel many different skill sets as part of this role: Product management - ensuring
+    the capabilities of an integration meet the customer requirements Customer success
+    - personally onboarding customers and ensuring that the integration is working
+    for them UX - is the integration clearly documented and easy to use? The day-to-day
+    will include extending the Hightouch platform with new sources and destinations,
+    adding depth to existing integrations, evaluating UX decisions, and interacting
+    directly with customers. Desired skills You have 1-3 years of programming experience
+    You have JavaScript or TypeScript experience You''re driven by getting your work
+    into the hands of happy users You have excellent communication skills and enjoy
+    collaboration with coworkers and customers You strive to write simple, understandable
+    code that others can easily read You have an understanding of key backend engineering
+    and distributed system principles The following are preferred but not required.
+    Experience with queueing systems such as Kafka or Kinesis Knowledge of various
+    database / storage systems and know when to choose which Advanced SQL knowledge
+    Experience contributing to open source projects Contact Please drop us a line
+    at founders@hightouch.io . We''re excited to meet you!'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 1
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.380846+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

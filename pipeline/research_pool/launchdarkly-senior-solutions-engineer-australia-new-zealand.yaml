@@ -1,0 +1,115 @@
+id: launchdarkly-senior-solutions-engineer-australia-new-zealand
+name: LaunchDarkly Senior Solutions Engineer - Australia / New Zealand
+track: job
+status: research
+outcome: null
+target:
+  organization: LaunchDarkly
+  url: https://boards.greenhouse.io/launchdarkly
+  application_url: https://job-boards.greenhouse.io/launchdarkly/jobs/7688602003
+  portal: greenhouse
+  location: APAC - Australia
+  location_class: international
+  description: <p><strong>About the Job:</strong></p> <p>As a&nbsp;<strong>Senior</strong>
+    <strong>Solutions</strong> <strong>Engineer</strong>, you will be the technical
+    partner to Account Executives, helping LaunchDarkly land and expand enterprise
+    customers across the ANZ Market</p> <p>You will guide technical discovery, deliver
+    compelling demonstrations, lead proof-of-value engagements, and help customers
+    understand how LaunchDarkly enables safer, faster software delivery. This role
+    combines deep technical expertise with strong business acumen and the ability
+    to translate complex technology into real business outcomes.</p> <p>You’ll work
+    closely with engineering leaders, architects, and DevOps teams at large enterprises
+    to help them modernize their software delivery practices.</p> <h4>Responsibilities:</h4>
+    <ul> <li><strong>Partner with Sales to Win Enterprise Deals</strong> <ul> <li>Work
+    closely with Account Executives to qualify opportunities and develop technical
+    account strategies.</li> <li>Help customers understand how feature management
+    and progressive delivery can transform software delivery.</li> <li>Participate
+    in complex enterprise sales cycles and help secure technical wins.</li> </ul>
+    </li> <li><strong>Lead Technical Discovery and Solution Design</strong> <ul> <li>Engage
+    with engineering leaders, platform teams, and architects to understand their software
+    delivery challenges.</li> <li>Design solutions that demonstrate how LaunchDarkly
+    integrates into modern development environments.</li> <li>Align technical solutions
+    with customer business objectives.</li> </ul> </li> <li><strong>Deliver High-Impact
+    Demos and Proof of Value</strong> <ul> <li>Conduct compelling product demonstrations
+    that highlight real customer value.</li> <li>Lead technical evaluations including
+    <strong>proof-of-concepts, workshops, and hands-on trials</strong>.</li> <li>Guide
+    customers through the evaluation process and ensure successful outcomes.</li>
+    </ul> </li> <li><strong>Build Champions and Trusted Relationships</strong> <ul>
+    <li>Develop strong relationships with both technical and business stakeholders.</li>
+    <li>Enable customer champions who can advocate for LaunchDarkly internally.</li>
+    <li>Support customers throughout the evaluation process and beyond.</li> </ul>
+    </li> <li><strong>Be a Technical Thought Leader</strong> <ul> <li>Stay up to date
+    on trends in <strong>DevOps, CI/CD, feature management, AI-driven development,
+    and modern software architecture</strong>.</li> <li>Confidently communicate technical
+    and business value to a range of audiences from developers to executives.</li>
+    </ul> </li> <li><strong>Collaborate Across Teams</strong> <ul> <li>Partner with
+    <strong>Sales, Customer Success, Product, and Engineering</strong> to ensure successful
+    customer outcomes.</li> <li>Provide feedback from the field to help shape the
+    product roadmap.</li> </ul> </li> </ul> <h4>Qualifications:</h4> <ul> <li>8+ years
+    of experience in <strong>Sales Engineering, Solutions Engineering, or Technical
+    Pre-Sales</strong> in enterprise SaaS.</li> <li>Experience working with enterprise
+    development teams and technical stakeholders.</li> <li>Strong understanding of
+    <strong>modern software development practices</strong>, including:</li> <li> <ul>
+    <li>CI/CD</li> <li>DevOps</li> <li>Infrastructure as code</li> <li>Feature flags
+    and progressive delivery</li> </ul> </li> <li>Proven ability to run <strong>technical
+    demos, workshops, and proof-of-concept engagements</strong>.</li> <li>Excellent
+    communication and presentation skills.</li> <li>Experience supporting complex
+    enterprise sales cycles.</li> <li>Background in&nbsp;<strong>software engineering,
+    DevOps, SRE, or platform engineering</strong>.</li> <li>Experience with&nbsp;<strong>cloud
+    platforms such as AWS, Azure, or GCP</strong>.</li> <li>Familiarity with&nbsp;<strong>Kubernetes
+    and microservices architectures</strong>.</li> <li>Programming experience in languages
+    such as&nbsp;<strong>Java, Python, Go, Node.js, or .NET</strong>.</li> <li>Experience
+    supporting enterprise deals in&nbsp;<strong>large organizations (F500 / G2000)</strong>.</li>
+    </ul> <h4><strong>About LaunchDarkly:</strong></h4> <p>Modern software delivery
+    was supposed to be the foundation for a thriving digital business but reality
+    has proven otherwise. Slow, inefficient development cycles, costly outages, and
+    fragmented customer experiences are preventing developers from building their
+    best software. The LaunchDarkly platform helps developers innovate on new features
+    faster while protecting them with a safety valve to instantly rewind when things
+    go wrong. Developers can target product experiences to any customer segment and
+    maximize the business impact of every feature. And by gradually rolling out new
+    application components, they escape nightmare "big-bang" technology migrations.&nbsp;</p>
+    <p>The LaunchDarkly platform was built to guide engineers to the next frontier
+    of DevOps by:</p> <ul> <li>Improving the velocity and stability of so
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.7
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-03'
+  posting_date: '2026-04-02'
+  date_source: first_published
+  date_added: '2026-04-03'
+  discovered: '2026-04-03T10:15:35.505984+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-03'

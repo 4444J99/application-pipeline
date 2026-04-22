@@ -1,0 +1,80 @@
+id: greptile-software-engineer-forward-deployed
+name: Greptile Software Engineer (Forward Deployed)
+track: job
+status: research
+outcome: null
+target:
+  organization: Greptile
+  url: https://jobs.ashbyhq.com/greptile
+  application_url: https://jobs.ashbyhq.com/greptile/ea8d637e-1f2d-4347-9630-d8c949d7a201
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Greptile is the AI code reviewer that catches bugs in pull requests
+    for thousands of software teams. We’re hiring our first Forward-Deployed Engineer
+    to help enterprise customers evaluate and adopt Greptile. Trajectory 7,000+ customers
+    Raised $30M from Benchmark, YC, Paul Graham, Initialized Team We have assembled
+    a small, talent dense team who have scaled critical functions at companies like
+    Stripe, Google, Figma, LinkedIn, etc. Responsibilities Partner with GTM and engineering
+    team to run technical discovery and tailor Greptile to each customer’s stack (GitHub,
+    GitLab, Bitbucket, Perforce, on-prem). Design and lead proof-of-concepts and pilots
+    that demonstrate Greptile’s value in complex environments. Handle security and
+    compliance diligence: answer questionnaires, document architectures, and unblock
+    procurement. Build reference implementations and lightweight integrations to accelerate
+    adoption. Act as the technical voice of the customer internally, surfacing requirements
+    to product and engineering. Create reusable assets—demo environments, PoC templates,
+    technical FAQs—that raise win rates across the team. Deeply understand the customer
+    and be the bridge between GTM and engineering. Qualifications Have a software
+    engineering background and can credibly talk to senior developers and CTOs. Have
+    experience running PoCs and supporting technical customers. Have prior experience
+    in a software engineering, solutions engineering, sales engineering, or customer-facing
+    technical role at a devtools or infrastructure company. Are comfortable with Git
+    workflows, CI/CD pipelines, and enterprise identity (SSO/SCIM, SAML, OIDC). Can
+    quickly pick up new technologies and produce working examples or scripts on the
+    fly. Write clearly and concisely—whether it’s a PoC plan, a security response,
+    or a product gap report. Thrive in a fast-paced startup environment where you’ll
+    be the first hire in this function. Why join us Be the first FDE at a fast-growing,
+    technical startup—shaping how we sell and deliver to enterprise customers. Work
+    directly with the founders and engineering team to influence product direction.
+    Competitive salary and meaningful equity. In-person with the team in San Francisco.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.5
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.376390+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

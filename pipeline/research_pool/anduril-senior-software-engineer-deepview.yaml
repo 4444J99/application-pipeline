@@ -1,0 +1,111 @@
+id: anduril-senior-software-engineer-deepview
+name: Anduril Senior Software Engineer, Deepview
+track: job
+status: research
+outcome: null
+target:
+  organization: Anduril
+  url: https://boards.greenhouse.io/andurilindustries
+  application_url: https://boards.greenhouse.io/andurilindustries/jobs/5111090007?gh_jid=5111090007
+  portal: greenhouse
+  location: Boston, Massachusetts, United States; Costa Mesa, California, United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>Anduril Industries is a defense technology
+    company with a mission to transform U.S. and allied military capabilities with
+    advanced technology. By bringing the expertise, technology, and business model
+    of the 21st century’s most innovative companies to the defense industry, Anduril
+    is changing how military systems are designed, built and sold. Anduril’s family
+    of systems is powered by Lattice OS, an AI-powered operating system that turns
+    thousands of data streams into a realtime, 3D command and control center. As the
+    world enters an era of strategic competition, Anduril is committed to bringing
+    cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology
+    to the military in months, not years.</p></div><p><strong>ABOUT THE TEAM</strong><br><br>The
+    Deepview team builds Anduril’s real-time 3D data visualization and analysis tool.
+    Deepview ingests protobuf, image, video, and CSV data streams—rendering them in
+    a time-synchronized world view with terrain, plots, and camera feeds for deep
+    introspection of autonomous systems. The tool runs cross-platform (Linux, macOS,
+    Windows) and supports both offline data analysis and live telemetry streaming
+    over MAVLink, STANAG 4586, Flux, and gRPC.<br><br>Our team’s mission is to give
+    engineers and operators the deepest possible visibility into what autonomous systems
+    are doing and why. We build high-performance visualization software that handles
+    massive data volumes from heterogeneous sources, enabling engineers across Anduril
+    to debug, analyze, and validate autonomous behaviors in the field and in simulation.<br><br><br><strong>WHAT
+    YOU’LL DO</strong></p> <ul> <li>Develop and extend Deepview’s real-time 3D rendering
+    engine and 2D plotting capabilities using C++20 and OpenGL (via the Cinder framework).</li>
+    <li>Build and optimize data ingestion pipelines for diverse formats including
+    Protobuf, MCAP, HDF5, video (FFmpeg), KML, MAVLink telemetry logs, and CSV.</li>
+    <li>Implement and maintain live telemetry streaming over gRPC, MAVLink, STANAG
+    4586, and Anduril protocols.</li> <li>Design cross-platform features targeting
+    Linux, macOS, and Windows using CMake.</li> <li>Create APIs (including gRPC services
+    and a Python client SDK) that allow external tools and scripts to interact with
+    Deepview.</li> <li>Collaborate with mission teams across Anduril to support new
+    data types, visualization needs, and debugging workflows.</li> <li>Test and validate
+    features through unit testing and performance benchmarks.</li> </ul> <p><br><strong>REQUIRED
+    QUALIFICATIONS</strong></p> <ul> <li>3+ years of experience in C++ software engineering</li>
+    <li>Experience with CMake-based build systems</li> <li>Experience developing on
+    Linux-based environments</li> <li>Strong communication skills and an ability to
+    work effectively with cross-functional teams</li> <li>Must be a U.S. Person due
+    to required access to U.S. export controlled information or facilities</li> </ul>
+    <p><br><strong>PREFERRED QUALIFICATIONS</strong></p> <ul> <li>Experience with
+    real-time graphics or visualization (OpenGL, Vulkan, or similar)</li> <li>Experience
+    with 3D rendering frameworks (Cinder, OpenFrameworks, or similar)</li> <li>Experience
+    with geospatial libraries (GDAL, KML) or terrain rendering</li> <li>Experience
+    with Nix package management or reproducible build systems</li> <li>Experience
+    developing with Python or Lua scripting</li> </ul><div class="content-pay-transparency"><div
+    class="pay-input"><div class="title">US Salary Range</div><div class="pay-range"><span>$166,000</span><span
+    class="divider">&mdash;</span><span>$220,000 USD</span></div></div></div><div
+    class="content-conclusion"><p><span data-contrast="auto">The salary range for
+    this role is an estimate based on a wide range of compensation factors, inclusive
+    of base salary only. Actual salary offer may vary based on (but not limited to)
+    work experience, education and/or training, critical skills, and/or business considerations.
+    Highly competitive equity grants are included in the majority of full time offers;
+    and are considered part of Anduril's total compensation package. Additionally,
+    Anduril offers top-tier benefits for full-time employees, including:</span><span
+    data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></p>
+    <p><strong><span data-contrast="auto">Healthcare Benefits&nbsp;</span></strong></p>
+    <ul> <li><strong><span data-contrast="none">US Roles:</span></strong><span data-contrast="none">&nbsp;Comprehensive
+    medical, dental, and vision plans at little to no cost to you.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:0,&quot;335559739&quot;:0}">&nbsp;</span></li>
+    <li><strong><span data-contrast="none">UK &amp; AUS Roles:</span></strong><span
+    data-contrast="none">&n
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.4
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-16'
+  date_source: first_published
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.593815+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-18'

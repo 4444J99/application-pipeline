@@ -1,0 +1,111 @@
+id: snowflake-anti-abuse-senior-software-engineer-product-security
+name: Snowflake Anti-Abuse Senior Software Engineer, Product Security
+track: job
+status: research
+outcome: null
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/6754de86-7485-4826-9aad-ef24cce405a9
+  portal: ashby
+  location: US-WA-Bellevue
+  location_class: us-onsite
+  description: 'At Snowflake, we are powering the era of the agentic enterprise. To
+    usher in this new era, we seek AI-native thinkers across every function who are
+    energized by the opportunity to reinvent how they work. You don’t just use tools;
+    you possess an innate curiosity, treating AI as a high-trust collaborator that
+    is core to how you solve problems and accelerate your impact. We look for low-ego
+    individuals who thrive in dynamic and fast-moving environments and move with an
+    experimental mindset — who rapidly test emerging capabilities to discover simpler,
+    more powerful ways to deliver results. At Snowflake, your role isn''t just to
+    execute a function, but to help redefine the future of how work gets done. Anti-Abuse
+    Senior Software Engineer, Product Security Build the future of data and AI. Join
+    the Snowflake team. The Anti-abuse team at Snowflake is responsible for protecting
+    Snowflake and our customers from abuse on the Snowflake platform. You will have
+    the opportunity to help set the direction of the anti-abuse roadmap and Product
+    Security while working closely with other teams at Snowflake. As an Anti-Abuse
+    Security Engineer , you will design, build, and operate systems that protect our
+    platform, customers, and data from abuse, misuse, and fraud. You’ll work at the
+    intersection of security engineering, data analytics, and machine learning, developing
+    prevention controls, detections, and automation that mitigate abuse activity across
+    our ecosystem. We’re at the forefront of the data revolution, committed to building
+    the world’s greatest data and applications platform. Our ‘get it done’ culture
+    allows everyone at Snowflake to have an equal opportunity to innovate on new ideas,
+    create work with a lasting impact, and excel in a culture of collaboration. AS
+    AN ANTI-ABUSE SECURITY ENGINEER AT SNOWFLAKE, YOU WILL: Understand the abuse risks
+    faced by Snowflake and our customers. Design and deploy the anti-abuse controls
+    addressing risks such as Account Take Overs (ATO), data exfiltration, risk around
+    code/data sharing, and other newest and highest future engineering challenges
+    as Snowflake grows. Help illustrate abuse risks, threats and exploits to cross
+    functional teams. Research, plan, and build anti-abuse architectures for Snowflake
+    products and features Provide designs and reference implementations for new anti-abuse
+    features Research new services, controls, or features that can help protect the
+    product and our customers from abuse. OUR IDEAL ANTI-ABUSE SECURITY ENGINEER WILL
+    HAVE: Bachelor''s degree in Computer Science or related technical field or equivalent
+    practical experience. 4+ years of experience with anti-abuse space, insider threats,
+    detections, threat hunting and incident response. Understanding of common abuse
+    patterns (e.g., ATO, exfiltration, insider threats, , spam, fraud, privilege misuse).
+    Proficiency in Python, SQL, or a similar language for building detections and
+    data pipelines. In-depth knowledge of anti-abuse solutions, network security,
+    and/or infrastructure security. Experience performing source code reviews across
+    various languages (e.g. Java, Go) Ability to assess engineering designs and architecture
+    diagrams for abuse risks Ability to assess abuse risks within an application or
+    feature Experience communicating abuse risks and roadmaps Experience designing
+    and implementing anti-abuse solutions Experience contributing to the security
+    anti-abuse community such as presenting at conferences or meetups. BONUS POINTS
+    FOR EXPERIENCE WITH THE FOLLOWING: Master''s degree or PhD in Computer Science
+    or related technical field. Experience with cloud environments (AWS, GCP, Azure)
+    and their security/abuse detection tooling. Familiarity with ML-based detection
+    systems, feature engineering, or anomaly detection methods. WHY YOU SHOULD WORK
+    FOR US: Snowflake is growing fast, and we’re scaling our team to help enable and
+    accelerate our growth. We are looking for people who share our values, challenge
+    ordinary thinking, and push the pace of innovation while building a future for
+    themselves and Snowflake. How do you want to make your impact? Snowflake is growing
+    fast, and we’re scaling our team to help enable and accelerate our growth. We
+    are looking for people who share our values, challenge ordinary thinking, and
+    push the pace of innovation while building a future for themselves and Snowflake.
+    How do you want to make your impact? For jobs located in the United States, please
+    visit the job posting on the Snowflake Careers Site for salary and benefits information:
+    careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.7
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-10'
+  date_source: published_at
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.206068+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-11'

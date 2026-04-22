@@ -1,0 +1,106 @@
+id: snowflake-software-engineer-product-security-assurance
+name: Snowflake Software Engineer - Product Security Assurance
+track: job
+status: research
+outcome: null
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/d08e3ff6-378e-4e3e-9787-39638817ae0f
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Build the future of the AI Data Cloud. Join
+    the Snowflake team. The Product Security Assurance team builds the security services
+    that empower Snowflake engineers to bring the most secure Data Cloud to our customers.
+    We solve the hard security problems so other Snowflake engineers don’t have to.
+    Security, reliability and quality are critical. We need smart engineers who can
+    pick up and understand complex technical areas quickly – and who are enthusiastic
+    about building new technologies! In this role, you will design, build and support
+    software solutions across a wide range of problem areas, including Vulnerability
+    Management, Supply Chain Security, Cloud Security and Secure Defaults. You will
+    have the opportunity to help set the direction for the security infrastructure
+    used by engineers across the company. The systems you build must be highly-reliable
+    and scale to match Snowflake’s massive and distributed footprint. We’re scaling
+    our team to help enable and accelerate Snowflake’s growth. We are looking for
+    people who share our values, challenge ordinary thinking, and push the pace of
+    innovation while building a future for themselves and Snowflake. How do you want
+    to make your impact? As a software engineer at Snowflake, you will: Design, develop,
+    and support critical security services, libraries and frameworks that are highly
+    reliable and easy to use. Build high-quality and highly reliable software to meet
+    the needs of a fast growing company in a multi-cloud environment. Analyze and
+    understand reliability, performance and scalability bottlenecks in the system
+    and solve them. Understand the security risks faced by Snowflake and our customers,
+    and build solutions to mitigate them. Work with engineering teams from across
+    Snowflake to build empathy and understand their needs. OUR IDEAL SOFTWARE ENGINEER
+    WILL HAVE: 3+ years of relevant work experience in software development Bachelor''s
+    degree in Computer Science or related technical field or equivalent practical
+    experience. Fluency in Golang and/or Python Show high developer empathy, and make
+    security the easy thing to do across our organization. Excellent problem solving
+    skills, and strong CS fundamentals including data structures, algorithms, and
+    distributed systems. Systems programming skills including multi-threading, concurrency,
+    etc. Experience with design, implementation, testing, debugging and documentation.
+    Ability to work on-site in our Menlo Park or Bellevue office. BONUS POINTS FOR
+    EXPERIENCE WITH THE FOLLOWING: Master''s degree or PhD in Computer Science or
+    related technical field. Experience building and supporting highly reliable and
+    scalable GRPC services Experience building and supporting developer facing libraries
+    and services Experience with workload orchestration systems such as Kubernetes
+    to deploy and operate services at scale Experience using infrastructure as code
+    tools such as Terraform and Pulumi to manage production infrastructure Experience
+    building secret management, key management, identity and related services Experience
+    with AWS, Azure and GCP to build production services Ability to build scalable
+    services that improve developer productivity and security in Golang Every Snowflake
+    employee is expected to follow the company’s confidentiality and security standards
+    for handling sensitive data. Snowflake employees must abide by the company’s data
+    security plan as an essential part of their duties. It is every employee''s duty
+    to keep customer information secure and confidential. Snowflake is growing fast,
+    and we’re scaling our team to help enable and accelerate our growth. We are looking
+    for people who share our values, challenge ordinary thinking, and push the pace
+    of innovation while building a future for themselves and Snowflake. How do you
+    want to make your impact? For jobs located in the United States, please visit
+    the job posting on the Snowflake Careers Site for salary and benefits information:
+    careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.7
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.193085+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

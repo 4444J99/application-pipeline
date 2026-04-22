@@ -1,0 +1,105 @@
+id: fivetran-vice-president-systems-engineering
+name: Fivetran Vice President, Systems Engineering
+track: job
+status: research
+outcome: null
+target:
+  organization: Fivetran
+  url: https://boards.greenhouse.io/fivetran
+  application_url: https://www.fivetran.com/careers/job?gh_jid=7702443003
+  portal: greenhouse
+  location: Oakland, California, United States, AMER
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>From Fivetran’s founding until now,
+    our mission has remained the same: to make access to data as simple and reliable
+    as electricity. With Fivetran, customer data arrives in their warehouses, canonical
+    and ready to query, with no engineering or maintenance required. We’re proud that
+    more organizations continue to leverage our technology every day to become truly
+    data-driven.</p></div><p><span style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;"><strong>About the Role</strong></span></p> <p><span style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;"><span style="color: #222222;">Fivetran
+    is looking for a Vice President of Systems Engineering to manage our application
+    systems across the company. This includes the architectural strategy and design,
+    the integration, the configuration and change management, and the operations of
+    those systems. A key responsibility is to ensure the integrations with Fivetran’s
+    Automated Data Movement Platform are of the highest quality, security, and reliability,
+    delivering a superior end-to-end customer experience. </span></span></p> <p><span
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;"><span style="color:
+    #222222;">This role reports to Engineering and will be part of the worldwide engineering
+    leadership team.&nbsp;</span><span style="color: #222222;">The successful candidate
+    has a proven track record of leading teams that can architect, design, engineer,
+    implement, and operate business systems such as Salesforce, Marketo, NetSuite,
+    and Catalyst, to name a few. The VP of Systems Engineering will also partner closely
+    with sales, marketing, finance, analytics, legal, people operations, support,
+    and R&amp;D to ensure that their business and operational needs are met 24x7.
+    </span></span></p> <p><span style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;"><span style="color: #222222;">The ideal candidate will have
+    deep expertise in software engineering, engineering leadership, business system
+    architectures, systems management, and operations management, a strong analytical
+    mindset, and the ability to leverage data to drive insights and inform decisions.&nbsp;</span><span
+    style="color: #222222;">They will be a technical, strategic, first-principle thinker
+    with exceptional leadership and communication skills, able to motivate and inspire
+    teams to achieve ambitious systems, integration, and reliability goals. As the
+    VP of Systems Engineering, this individual will play a critical role in Fivetran''s
+    continued growth and success and will be instrumental in shaping the future of
+    the company''s operations.</span></span></p> <p><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">This is a full-time, hybrid position based
+    out of our Oakland, CA office. Our hybrid work model offers a blend of remote
+    flexibility and in-person collaboration, including two days in the office each
+    week to connect and build as a team.</span></p> <p><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;"><strong>What You’ll Do</strong></span></p>
+    <ul> <li style="font-family: helvetica, arial, sans-serif; font-size: 10pt;"><span
+    style="color: rgb(34, 34, 34); font-family: helvetica, arial, sans-serif; font-size:
+    10pt;"><strong>Vision, Strategy, Roadmap &amp; Stakeholder Alignment</strong></span>
+    <ul> <li style="color: rgb(34, 34, 34) !important; font-family: helvetica, arial,
+    sans-serif; font-size: 10pt;"><span style="color: rgb(34, 34, 34); font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;">Create and manage the execution
+    of a long-term technical vision, strategy, and roadmap for our major internal
+    business systems and their integration with Fivetran’s Automated Data Movement
+    Platform.</span></li> <li style="color: rgb(34, 34, 34) !important; font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;"><span style="color: rgb(34, 34,
+    34); font-family: helvetica, arial, sans-serif; font-size: 10pt;">Build trusted
+    relationships with stakeholders in product, marketing, sales, revenue, G&amp;A,
+    and engineering teams.</span></li> <li style="color: rgb(34, 34, 34) !important;
+    font-family: helvetica, arial, sans-serif; font-size: 10pt;"><span style="color:
+    rgb(34, 34, 34); font-family: helvetica, arial, sans-serif; font-size: 10pt;">Provide
+    regular Executive Leadership Team and Business Stakeholder strategy and operations
+    updates.</span></li> </ul> </li> <li style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;"><span style="color: rgb(34, 34, 34); font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;"><strong>Systems and Integration Architecture
+    &amp; Design</strong></span> <ul> <li style="color: rgb(34, 34, 34) !important;
+    font-family: helvetica, arial, sans-serif; font-size: 10pt;"><span style="color:
+    rgb(34, 34, 34); font-family: helvetica, arial, sans-serif; font-size: 10pt;">Manage
+    and grow a team that defines the overall business system and integration archi'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-22'
+  posting_date: '2026-04-20'
+  date_source: first_published
+  date_added: '2026-04-22'
+  discovered: '2026-04-22T21:40:49.012303+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-22'

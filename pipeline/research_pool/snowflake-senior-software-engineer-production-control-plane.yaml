@@ -1,0 +1,83 @@
+id: snowflake-senior-software-engineer-production-control-plane
+name: Snowflake Senior Software Engineer - Production Control Plane
+track: job
+status: research
+outcome: null
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/bcd7eea8-1f1e-437b-b7d1-52361493d55e
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'At Snowflake, we are powering the era of the agentic enterprise. To
+    usher in this new era, we seek AI-native thinkers across every function who are
+    energized by the opportunity to reinvent how they work. You don’t just use tools;
+    you possess an innate curiosity, treating AI as a high-trust collaborator that
+    is core to how you solve problems and accelerate your impact. We look for low-ego
+    individuals who thrive in dynamic and fast-moving environments and move with an
+    experimental mindset — who rapidly test emerging capabilities to discover simpler,
+    more powerful ways to deliver results. At Snowflake, your role isn''t just to
+    execute a function, but to help redefine the future of how work gets done. We
+    are hiring talented Senior Software Engineers for our Production Control Plane
+    team. The team is responsible for seamless, automated, and scalable cloud infrastructure
+    deployment, provisioning, and lifecycle management. If you are passionate about
+    building cloud platforms this opportunity may be for you. IN THIS ROLE YOU WILL:
+    Build a deep understanding of Snowflake’s infrastructure and services. Apply both
+    infrastructure and software engineering to deliver a highly scalable, resilient,
+    and performant platform. Provide technical leadership on large, complex projects
+    that span infrastructure, platforms, tools, and automation in the cloud. Champion
+    platform adoption to meet business goals across partner teams. Lead and mentor
+    more junior engineers. OUR IDEAL SENIOR SOFTWARE ENGINEER - PRODUCTION CONTROL
+    PLANE AT SNOWFLAKE WILL HAVE: BS/MS in Computer Science or equivalent experience.
+    7+ years of software engineering experience, including 3+ years in cloud computing
+    (AWS, Azure, or GCP) or platform engineering. Ownership mindset, self-direction,
+    and a passion for solving complex problems. Strong software engineering fundamentals.
+    Proficiency in one or more languages: Go, Java, Python, or C++. Daily operational
+    experience with AI-driven software development (Cursor, Claude Code, or equivalent).
+    Expertise in infrastructure-as-code frameworks (Terraform, Pulumi, CloudFormation,
+    or similar). Expertise in CI/CD systems (Github Actions, Jenkins, or similar).
+    Strong distributed-systems troubleshooting and incident resolution skills. BONUS:
+    Proficiency with Kubernetes, especially on the platform side. Every Snowflake
+    employee is expected to follow the company’s confidentiality and security standards
+    for handling sensitive data. Snowflake employees must abide by the company’s data
+    security plan as an essential part of their duties. It is every employee''s duty
+    to keep customer information secure and confidential. Snowflake is growing fast,
+    and we’re scaling our team to help enable and accelerate our growth. We are looking
+    for people who share our values, challenge ordinary thinking, and push the pace
+    of innovation while building a future for themselves and Snowflake. How do you
+    want to make your impact? For jobs located in the United States, please visit
+    the job posting on the Snowflake Careers Site for salary and benefits information:
+    careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-18'
+  date_source: published_at
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.576296+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-18'

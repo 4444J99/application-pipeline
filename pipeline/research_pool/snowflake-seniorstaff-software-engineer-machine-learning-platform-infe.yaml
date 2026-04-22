@@ -1,0 +1,101 @@
+id: snowflake-seniorstaff-software-engineer-machine-learning-platform-infe
+name: Snowflake Senior/Staff Software Engineer - Machine Learning Platform (Inference)
+track: job
+status: research
+outcome: null
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/34584833-b410-4c03-bf0c-0208bcf962c6
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Build the future of data. Join the Snowflake
+    team. The Snowflake Machine Learning Platform team’s mission is to enable customers
+    to bring their machine learning and deep learning workloads to Snowflake. Our
+    customers want to build powerful models with the ever-increasing data in Snowflake
+    but face several challenges including infrastructure optimizations, orchestration,
+    performance, and security. The team aims to solve these challenges by building
+    highly integrated platform solutions that are simple, secure, and enable end-to-end
+    ML workflows. We are on an early journey to build the most scalable machine learning
+    and data platform without sacrificing the benefits of a single platform and governance.
+    We are looking for outstanding technical leaders who will join our ML Platform
+    team to build the next-generation platform and play a pivotal role in this journey
+    by understanding Snowflake’s core platform architecture and evolving it to enable
+    state-of-the-art machine learning and LLM workloads. Join us to define strategies,
+    set technical directions, design and execute, engage and deliver innovation, and
+    unlock the power of AI for thousands of enterprise customers. This position is
+    based in Menlo Park, CA, and Bellevue, WA. RESPONSIBILITIES : Help define and
+    own the roadmap, working collaboratively and proactively with senior architects,
+    PMs, and team leadership. The initiatives include platforms and tools that enable
+    customers to do state-of-the-art machine learning on Snowflake natively. Collaboratively
+    build and execute a vision for incorporating new advances in machine learning
+    in ways that best achieve the team’s business objectives. Ensure operational excellence
+    of the services and meet the commitments to our customers regarding reliability,
+    availability, and performance. Collaborate across other ML partner teams to continuously
+    improve ML development velocity and capabilities at Snowflake. Support team members
+    in delivering a high level of technical quality. IDEAL REQUIREMENTS & QUALIFICATIONS:
+    Have 7+ years of industry experience designing, building, and supporting Internet
+    serving infrastructure, machine learning platforms, machine learning services,
+    and frameworks. Strong track record of working with machine learning systems and/or
+    platforms. Experience in serving LLMs using inference engines like vLLM, TensorRT-LLM,
+    TEI, SGLang, and knowing tradeoffs between them. Experience serving fine-tuned
+    LLMs (PEFT, DPO, RL). Experience with several of the following frameworks: SKLearn,
+    XGBoost, PyTorch, Tensorflow, MLflow is a plus. Previous experience in building
+    batch and real-time ML serving systems preferred. Have built a roadmap and vision
+    around machine learning teams, and led technical decision making with help of
+    architects and PMs and team. BS/MS/PhD in Computer Science or related majors,
+    or equivalent experience Snowflake employee is expected to follow the company’s
+    confidentiality and security standards for handling sensitive data. Snowflake
+    employees must abide by the company’s data security plan as an essential part
+    of their duties. It is every employee''s duty to keep customer information secure
+    and confidential. Snowflake is growing fast, and we’re scaling our team to help
+    enable and accelerate our growth. We are looking for people who share our values,
+    challenge ordinary thinking, and push the pace of innovation while building a
+    future for themselves and Snowflake. How do you want to make your impact? For
+    jobs located in the United States, please visit the job posting on the Snowflake
+    Careers Site for salary and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.7
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.158094+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

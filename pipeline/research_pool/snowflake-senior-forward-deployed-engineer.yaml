@@ -1,0 +1,100 @@
+id: snowflake-senior-forward-deployed-engineer
+name: Snowflake Senior Forward Deployed Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/97813cac-e55c-4631-94fe-5eda15c7eaed
+  portal: ashby
+  location: US-CA-Menlo Park
+  location_class: us-onsite
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. As a Senior Forward Deployed Engineer (FDE),
+    you will be embedded with customers to lead the modernization of their data and
+    application ecosystem using the Snowflake AI Data Cloud. You will partner closely
+    with clients to understand their business challenges and design, build, and implement
+    cutting-edge data solutions on Snowflake. Your role is crucial in enabling customers
+    to harness the full potential of their data, driving insights, and powering AI
+    initiatives. You''ll act as a trusted technical advisor, ensuring customers achieve
+    significant business value and success with Snowflake. WHAT YOU WILL BE RESPONSIBLE
+    FOR: Software Development : Design, build, and deploy robust software systems,
+    tooling, and automation required to support customer solutions on Snowflake. Create
+    comprehensive documentation for developed solutions, technical configurations,
+    and best practices. Data Engineering & Platform Implementation : Design and implement
+    scalable data pipelines and modern data architectures on Snowflake. Ensure data
+    quality, integrity, and efficient processing within the customer''s modern data
+    environment. Performance Optimization & Best Practices : Analyze and optimize
+    data models, queries, and data processing workflows to maximize performance, efficiency,
+    and cost-effectiveness within the Snowflake environment. Champion Snowflake best
+    practices. Modern Data Solutions : Evaluate, recommend, and implement modern data
+    integration tools and techniques suitable for the Snowflake ecosystem, helping
+    customers evolve their data capabilities. Client Collaboration and Enablement
+    : Provide expert technical guidance, mentorship, and training to client teams
+    on leveraging the Snowflake platform effectively, including data management, analytics,
+    AI/ML capabilities, and reporting/BI integration. Troubleshooting and Support
+    : Identify and resolve technical challenges, performance bottlenecks, and operational
+    issues. REQUIREMENTS: Bachelor''s degree in Computer Science, Information Systems,
+    or a related field. Excellent problem-solving, analytical, and communication skills.
+    Proficiency in programming and scripting languages such as Python, Go, Java or
+    C++. Experience with developing AI/ML applications. Strong understanding of data
+    modeling, data warehousing & data lake concepts, and cloud data platforms. Ability
+    to work independently and collaboratively in a client-facing environment. To accelerate
+    successful outcomes and foster trust, the role may involve travel up to 20% of
+    the time to collaborate with teams and stakeholders. DESIRABLE: Strong proficiency
+    in SQL and experience working with relational databases and data integration technologies.
+    Experience with cloud platforms (AWS, Azure, GCP). Experience implementing solutions
+    on the Snowflake Data Cloud. Every Snowflake employee is expected to follow the
+    company’s confidentiality and security standards for handling sensitive data.
+    Snowflake employees must abide by the company’s data security plan as an essential
+    part of their duties. It is every employee''s duty to keep customer information
+    secure and confidential. Snowflake is growing fast, and we’re scaling our team
+    to help enable and accelerate our growth. We are looking for people who share
+    our values, challenge ordinary thinking, and push the pace of innovation while
+    building a future for themselves and Snowflake. How do you want to make your impact?
+    For jobs located in the United States, please visit the job posting on the Snowflake
+    Careers Site for salary and benefits information: careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.7
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.149415+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

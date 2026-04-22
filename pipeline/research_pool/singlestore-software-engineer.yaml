@@ -1,0 +1,96 @@
+id: singlestore-software-engineer
+name: SingleStore Software Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: SingleStore
+  url: https://boards.greenhouse.io/singlestore
+  application_url: https://job-boards.greenhouse.io/singlestore/jobs/7582205
+  portal: greenhouse
+  location: Lisbon, Portugal
+  location_class: unknown
+  description: '<h1><strong>Software Engineer, University Graduate</strong></h1> <p>at
+    SingleStore</p> <p><strong>Lisbon, Portugal</strong></p> <h4><strong><em>Position
+    Overview</em></strong></h4> <p><em>SingleStore Software Engineers are at the forefront
+    of real-time technology that’s revolutionizing how companies run their businesses
+    every day. With release cycles throughout the year, our engineers are accustomed
+    to moving quickly in a rapid production environment. To do this successfully,
+    we work collaboratively and creatively across teams to maximize our opportunity
+    for impact. We also believe it’s important to celebrate our wins together, whether
+    it be at a local spot or getting out of the city for some exploring.</em></p>
+    <p><em>As a Software Engineer, you will be empowered to own your projects end-to-end
+    and be an active contributor throughout the product life cycle. To expedite your
+    growth path, you will partner with engineers who deeply care about your success
+    and will lend their expertise to your professional development. Our engineers
+    are not just technical partners, but are also business partners who are exposed
+    to all areas of the business, working with teams such as product, marketing, and
+    sales.</em></p> <h4><strong><em>Role and Responsibilities</em></strong></h4> <p><em>Our
+    Software Engineers work on small, collaborative teams to help drive our company
+    forward.&nbsp; Whether you’re building new features using cutting-edge technologies
+    like WASM, improving the fault tolerance a SingleStore cluster, accelerating the
+    performance of SQL queries with techniques like SIMD and LLVM codeGen, or writing
+    search and costing modules for the query optimizer, our University Graduates are
+    responsible for brand new and existing projects that are deployed into production
+    with each release. Your work will include everything from writing to testing software,
+    and you’ll gain a significant understanding of both the product and the business.</em></p>
+    <h4><strong><em>Required Skills and Experience</em></strong></h4> <p><em>B.S.
+    Degree in Computer Science, Electrical Engineering, Computer Engineering, or related
+    discipline. Deep</em><em>&nbsp;understanding of C.S. fundamentals, in particular
+    operating systems, concurrency, multithreading, and server architectures. Strong</em><em>
+    programming skills with C++ or C. Passionate</em><em> about building highly reliable
+    software. Firm</em><em>&nbsp;grasp of algorithms and data structures</em></p>
+    <p><em>&nbsp;</em></p> <p>SingleStore delivers the cloud-native database with
+    the speed and scale to power the world’s data-intensive applications. With a distributed
+    SQL database that introduces simplicity to your data architecture by unifying
+    transactions and analytics, SingleStore empowers digital leaders to deliver exceptional,
+    real-time data experiences to their customers. SingleStore is venture-backed and
+    headquartered in San Francisco with offices in Sunnyvale, Raleigh, Seattle, Boston,
+    London, Lisbon, Bangalore, Dublin, and Kyiv.&nbsp;</p> <p>Consistent with our
+    commitment to diversity &amp; inclusion, we value individuals with the ability
+    to work on diverse teams and with a diverse range of people.</p> <p><em>To all
+    recruitment agencies: SingleStore does not accept agency resumes. Please do not
+    forward resumes to SingleStore employees. SingleStore is not responsible for any
+    fees related to unsolicited resumes and will not pay fees to any third-party agency
+    or company that does not have a signed agreement with the Company.</em></p> <p><br><br></p>'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.9
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.857372+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-30'

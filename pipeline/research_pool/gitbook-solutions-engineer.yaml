@@ -1,0 +1,96 @@
+id: gitbook-solutions-engineer
+name: GitBook Solutions Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: GitBook
+  url: https://jobs.ashbyhq.com/gitbook
+  application_url: https://jobs.ashbyhq.com/gitbook/78a554ec-f960-4a1e-bc6b-a57e00814f7d
+  portal: ashby
+  location: Europe (+/- 3 hours)
+  location_class: unknown
+  description: '👋 A little about us We’re building the best platform for authoring,
+    publishing, and maintaining world-class docs. Close to 40,000 sign-ups per month
+    , over 1 00k Monthly Active Users , used by 2M+ people and thousands of teams
+    like Zoom, FedEx, Nvidia, Snyk, and Google. We’re profitable , backed by P9 Capital,
+    Notion Capital, and Fly VC, and our amazing team is spread across 15 countries
+    in North America, Europe, and Asia. The Role We’re looking for a Solutions Engineer
+    to help fuel our enterprise growth. You’ll be the bridge between our customers,
+    sales, and product teams. Leveraging your deep understanding of the GitBook product
+    and customer needs, you will help prospects and existing customers maximize the
+    value from our tool. What you will be doing Be the technical expert for sales
+    and prospects, deeply understanding the GitBook product Joining customer calls
+    to understand the deepest ''why'' behind their product needs & requests Distill
+    down feedback and relay customer insights to our product team Manage large-scale
+    content migrations Onboard customers onto our more technical features (e.g. Git
+    sync, OpenAPI, Adaptive content) Build out custom integrations to unblock customer
+    adoption Identify opportunities for scaling your efforts to our wider customer
+    base via documentation and guides, ensuring clarity on best practices and product
+    capabilities You will be valued for Your product-oriented approach: You are driven
+    by creating value for our users through education. You enjoy diving headfirst
+    into a product and learning the ins and outs through resourcefulness. Your infinite
+    curiosity: You want to understand customer requirements at the deepest level.
+    Instead of taking feedback at face value, you dive deeper to understand the true
+    nature of customer feedback and will always ask for specifics. Your amazing communication:
+    You are comfortable owning a customer call end-to-end. You lead with empathy,
+    but can also toe the line between being a customer advocate and knowing how to
+    set expectations properly. Your beginner''s mindset and proactiveness: You''re
+    a hustler who takes initiative and doesn''t make assumptions that copy-pasting
+    what worked for you in the past will work at GitBook. You actively identify opportunities
+    for improvement and own the implementation from start to finish. Your profile
+    3-5 years experience in client-facing roles, including technical consulting, product
+    demonstrations, and implementation support Strong understanding of OpenAPI specifications,
+    API design principles (including RESTful APIs, Swagger, and OAuth2), GitHub, and
+    common web technologies Proficiency in programming languages such as JavaScript,
+    or similar, with the ability to work on API integrations and custom implementations
+    Deep understanding of GitHub and CI/CD pipelines You are customer-centric and
+    data-driven, think analytically and are able to rightsize your efforts based on
+    customer/business needs Strong communication skills to explain technical concepts
+    to non-technical stakeholders effectively Native English speaker Don’t meet every
+    requirement? Apply anyway. We''ve seen amazing candidates hesitate because they
+    don’t tick every box. If this role excites you and you bring a strong perspective
+    on documentation’s future, we want to hear from you — diverse experiences often
+    make the strongest hires. 👥 Join GitBook at a pivotal time as we evolve our product
+    and team. This is a chance to shape our product, craft, and culture .'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 1
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.311551+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

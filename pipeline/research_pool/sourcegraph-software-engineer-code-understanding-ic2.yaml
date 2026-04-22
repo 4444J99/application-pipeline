@@ -1,0 +1,115 @@
+id: sourcegraph-software-engineer-code-understanding-ic2
+name: Sourcegraph Software Engineer - Code Understanding [IC2]
+track: job
+status: research
+outcome: null
+target:
+  organization: Sourcegraph
+  url: https://boards.greenhouse.io/sourcegraph91
+  application_url: https://job-boards.greenhouse.io/sourcegraph91/jobs/5855148004
+  portal: greenhouse
+  location: Remote
+  location_class: remote-global
+  description: '<div class="content-intro"><h2><span style="color: rgb(243, 78, 63);">Who
+    we are</span></h2> <p>Everything is changing in how software gets built, and Sourcegraph
+    is at the center of that transformation. With Code Search, Deep Search, and MCP,
+    Sourcegraph is the world’s most powerful code intelligence platform that developers
+    and agents rely on to navigate, understand, and operate on massive, complex codebases
+    with speed and confidence.</p> <p>Teams at companies like Stripe, Uber, and Dropbox
+    rely on Sourcegraph to ship faster and with higher quality. We’re backed by a16z,
+    Sequoia, and Redpoint, and proud to operate as a globally distributed team that
+    values high agency, direct communication, and a deep love for developers and their
+    craft.</p> <p>If you want to contribute to infrastructure that empowers millions
+    of developers to do their best work - join us.</p></div><h2><span style="color:
+    rgb(243, 78, 63);"><strong>Hours &amp; location</strong></span></h2> <p>🌎 While
+    we hire <a href="https://sourcegraph.notion.site/How-we-engage-talent-outside-of-the-US-218f7193695a46cbb1ef39ef9c1f72d4">almost
+    anywhere</a> in the world, we have a preference for someone to reside in the following
+    locations for this role. However, if you feel qualified, we welcome you to apply
+    regardless of location. No matter what, working hours must overlap with EST for
+    at least 20 hours/week.</p> <p><strong>Preferred locations:</strong></p> <ul>
+    <li>North America</li> <li>South America</li> </ul> <h2><span style="color: rgb(243,
+    78, 63);"><strong>Why this job is exciting</strong></span></h2> <p>The Code Understanding
+    team owns the products that sit closest to the developer: Code Search, Code Intel,
+    Deep Search, Code Review, and the APIs that empower others to use them. You''ll
+    be building features that users see and interact with every day, from agentic-powered
+    code review to evergreen documentation powered by agents. This is a product team,
+    not a platform team, and the work you do will directly shape how developers experience
+    Sourcegraph.</p> <p>📅 Within one month, you will…</p> <ul> <li>Familiarize yourself
+    with Sourcegraph’s codebase, understanding the architecture and the problems it
+    solves for our users.</li> <li>Start contributing to our current focus areas by
+    working on tasks related to the end-to-end user experience.</li> <li>Engage with
+    your team members, learning from their experiences and sharing your insights to
+    contribute to the product’s direction.</li> </ul> <p>📅 Within three months, you
+    will…</p> <ul> <li>Take ownership of smaller features and ship them, focusing
+    on improving user engagement and satisfaction.</li> <li>Contribute to our team''s
+    focus areas by working on end-to-end user experience tasks.</li> <li>Collaborate
+    with your teammates and design engineers to translate user feedback into product
+    requirements and begin to influence the product’s future direction.</li> </ul>
+    <p>📅 Within six months, you will…</p> <ul> <li>Be fully ramped up and able to
+    anticipate our customers'' needs.</li> <li>Establish yourself as a key contributor
+    to the team, known for your expertise in both the technical and product aspects
+    of our work.</li> <li>Ship features across the stack, from React and SvelteKit
+    frontends, through GraphQL APIs, to backend services written in Go, interfacing
+    with SQL relational storage, Redis caching, and flexible blob storage.</li> </ul>
+    <h2><span style="color: rgb(243, 78, 63);"><strong>About you&nbsp;</strong></span></h2>
+    <p>You are a passionate Full-stack Software Engineer with 2-5 years of hands-on
+    experience, looking for a role where you can grow while shipping work that matters.
+    Your coding skills are solid; you are proficient in your primary focus area with
+    a strong generalist skill set, and you are starting to develop internal expertise.</p>
+    <p>You are eager to continue building your track record of excellence, autonomy,
+    and expertise in solving complex software engineering challenges. You are used
+    to clarifying the scope of your projects and are comfortable delivering projects
+    of medium to high technical risk.</p> <p>While you are task-oriented and able
+    to follow directions, you are also demonstrating a growing sense of independence
+    in your work. You are self-sufficient, capable of delivering results with minimal
+    guidance, and unafraid to take the lead on small and mid-sized projects. You are
+    adaptable, thriving in a fast-paced, dynamic environment. You seek out work rather
+    than wait for it, and you take ownership of it.</p> <p>You actively contribute
+    to a collaborative, respectful team culture and collaborate across teams on your
+    direct areas of work. You communicate thoughtfully and proactively to keep stakeholders
+    informed and identify risks. You escalate early when blocked or when you see a
+    better way to achieve goals.</p> <ul> <li>You are proficient in Go and have exposure
+    to scaling and concurrency.</li> <li>You are proficient with TypeScript and JavaScript
+    frameworks; experience with React and '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 1
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-10'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.074774+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-11'

@@ -1,0 +1,97 @@
+id: singlestore-solutions-engineer
+name: SingleStore Solutions Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: SingleStore
+  url: https://boards.greenhouse.io/singlestore
+  application_url: https://job-boards.greenhouse.io/singlestore/jobs/7543483
+  portal: greenhouse
+  location: Dallas, United States
+  location_class: us-onsite
+  description: <p>We are looking for a SingleStore Principal Solutions Engineer who
+    is passionate about removing data bottlenecks for their customers and enabling
+    real-time data capabilities to some of the most difficult data challenges in the
+    industry. In this role you will work directly with our sales teams, and channel
+    partners to identify prospective and current customer pain points where SingleStore
+    can remove those bottlenecks and deliver real-time capabilities. You will provide
+    value-based demonstrations, presentations, and support proof of concepts to validate
+    proposed solutions.</p> <p>As a SingleStore solutions engineer, you must share
+    our passion for real-time data, fast analytics, and simplified data architecture.
+    You must be comfortable in both high executive conversations as well as being
+    able to deeply understand the technology and its value-proposition.</p> <h2><strong>About
+    our Team</strong></h2> <p>At SingleStore, the Principal Solutions Engineer team
+    epitomizes a dynamic blend of innovation, expertise, and a fervent commitment
+    to meeting complex data challenges head-on. This team is composed of highly skilled
+    individuals who are not just adept at working with the latest technologies but
+    are also instrumental in ensuring that SingleStore is the perfect fit for our
+    customers.</p> <p>Our team thrives on collaboration and determination, building
+    some of the most cutting-edge deployments of SingleStore data architectures for
+    our most strategic customers. This involves working directly with product management
+    to ensure that our product is not only addressing current data challenges but
+    is also geared up for future advancements.</p> <p>Beyond the technical prowess,
+    our team culture is rooted in a shared passion for transforming how businesses
+    leverage data. We are a community of forward-thinkers, where each member's contribution
+    is valued in our collective pursuit of excellence. Our approach combines industry-leading
+    engineering, visionary design, and a dedicated customer success ethos to shape
+    the future of database technology. In our team, every challenge is an opportunity
+    for growth, and we support each other in our continuous learning journey. At SingleStore,
+    we're more than a team; we're innovators shaping the real-time data solutions
+    of tomorrow.</p> <h2><strong>Responsibilities</strong></h2> <ul> <li>Engage with
+    both current and prospective clients to understand their technical and business
+    challenges</li> <li>Present and demonstrate SingleStore product offering to fortune
+    50 companies.</li> <li>Enthusiastic about the data analytics and data engineering
+    landscape</li> <li>Provide valuable feedback to product teams based on client
+    interactions</li> <li>Stay up to date with database technologies and the SingleStore
+    product offerings</li> </ul> <h2><strong>Qualifications</strong></h2> <ul> <li>Minimum
+    of 7 years experience in a technical pre-sales role</li> <li>Excellent presentation
+    and communication skills, with experience presenting to large corporate organizations</li>
+    <li>Ability to communicate complex technical concepts for non-technical audiences.</li>
+    <li>Strong team player with interpersonal skills</li> <li>Broad range of experience
+    within large-scale database and/or data warehousing technologies</li> <li>Experience
+    with data engineering tools&nbsp; Apache Spark, Apache Flink,Apache Airflow</li>
+    <li>Demonstrated proficiency in ANSI SQL query languages</li> <li>Demonstrated
+    proficiency in Python, Scala or Java</li> <li>Understanding of private and public
+    cloud platforms such as AWS, Azure, GCP, VMware</li> </ul>
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:34.864390+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-30'

@@ -1,0 +1,106 @@
+id: stripe-backend-engineer-ai-security
+name: Stripe Backend Engineer, AI Security
+track: job
+status: research
+outcome: null
+target:
+  organization: Stripe
+  url: https://boards.greenhouse.io/stripe
+  application_url: https://stripe.com/jobs/search?gh_jid=7826765
+  portal: greenhouse
+  location: N/A
+  location_class: unknown
+  description: '<ul> <li style="font-weight: 400;"> <div class="ArticleMarkdown">
+    <h2><strong>Software Engineer, AI Security</strong></h2> <p>Locations: New York,
+    San Francisco, Seattle, or Remote (US/Canada)</p> <h1><strong>Who we are</strong></h1>
+    <h2><strong>About Stripe</strong></h2> <p>Stripe is a financial infrastructure
+    platform for businesses. Millions of companies—from the world’s largest enterprises
+    to the most ambitious startups—use Stripe to accept payments, grow their revenue,
+    and accelerate new business opportunities. Our mission is to increase the GDP
+    of the internet, and we have a staggering amount of work ahead. That means you
+    have an unprecedented opportunity to put the global economy within everyone’s
+    reach while doing the most important work of your career.</p> <h2><strong>About
+    the team</strong></h2> <p>AI is moving fast and Stripe is moving fast to adopt
+    it. But we need to make sure we do all of this safely, and for most of these tools
+    enterprise-grade security isn''t just available off the shelf. That''s where the
+    AI security team comes in - we are responsible for building and partnering to
+    create the right security primitives to enable Stripe to move fast safely.</p>
+    <p>This is a team that will be working in the low level components of our AI stack
+    so both infrastructure and security experience are pluses. This space is moving
+    fast so being comfortable with ambiguity and changes in priority are a must.</p>
+    <p>This is a foundational role — you''d be the first engineer on the team.</p>
+    <h2><strong>What you''ll do</strong></h2> <p>Engineers on this team will do a
+    mixture of partnering and advising with teams building AI infrastructure and products,
+    and building security infrastructure primitives for AI.&nbsp;</p> <p>One of our
+    major focuses will be building a security tooling layer that sits in the inference
+    path, providing detection and protection against AI specific threats like prompt
+    injection, jailbreaks, and tool misuse.</p> <h3><strong>Responsibilities</strong></h3>
+    <ul> <li>Build security frameworks integrated with our core AI infrastructure</li>
+    <li>Design and implement defenses against AI specific threats like prompt injection
+    and jailbreaks</li> <li>Collaborate with other engineering teams to ensure Stripe''s
+    AI infrastructure and products are built securely</li> <li>Support other engineering
+    teams in integrating security primitives</li> <li>Uphold our high engineering
+    standards and improve our codebase and processes</li> <li>Design and build systems
+    that help define the state of the art for AI security</li> </ul> <h2><strong>Who
+    you are</strong></h2> <p>We’re looking for someone who meets the minimum requirements
+    to be considered for the role. If you meet these requirements, you are encouraged
+    to apply. The preferred qualifications are a bonus, not a requirement.</p> <h3><strong>Minimum
+    requirements</strong></h3> <ul> <li>5+ years of software development experience</li>
+    <li>Experience independently designing and developing medium to large projects</li>
+    <li>Experience working collaboratively across multiple engineering teams</li>
+    <li>Experience writing high quality code in a major programming language</li>
+    <li>Ability to drive clear next steps when working in an ambiguous environment</li>
+    <li>Ability to think creatively and reason clearly in a complex problem domain</li>
+    </ul> <h3><strong>Preferred qualifications</strong></h3> <ul> <li>Experience developing,
+    deploying, and maintaining reliable infrastructure systems</li> </ul> <ul> <li>
+    <ul> <li>Experience in security engineering</li> <li>Experience building AI agents
+    or LLM-based systems</li> </ul> </li> </ul> </div> <section class=" Copy variant--Subsection
+    "><header class="Copy__header"> <h1 class=" Copy__title ">In-office expectations</h1>
+    </header> <div class=" Copy__body ">Office-assigned Stripes in most of our locations
+    are currently expected to spend at least 50% of the time in a given month in their
+    local office or with users. This expectation may vary depending on role, team
+    and location. For example, Stripes in Stripe Delivery Center roles in Mexico City,
+    Mexico, Bengaluru, India, and Dublin, Ireland work 100% from the office. Also,
+    some teams have greater in-office attendance requirements, to appropriately support
+    our users and workflows, which the hiring manager will discuss. This approach
+    helps strike a balance between bringing people together for in-person collaboration
+    and learning from each other, while supporting flexibility when possible.</div>
+    </section> <section class=" Copy variant--Subsection "><header class="Copy__header">
+    <h1 class=" Copy__title ">Pay and benefits</h1> </header> <div class=" Copy__body
+    "> <p>The annual US base salary range for this role is $156,800 - $285,600. For
+    sales roles, the range provided is the role’s On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target
+    and annual base salary for the role. This salary range may be inclusive of several
+    ca'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-22'
+  posting_date: '2026-04-20'
+  date_source: first_published
+  date_added: '2026-04-22'
+  discovered: '2026-04-22T21:40:48.988216+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-22'

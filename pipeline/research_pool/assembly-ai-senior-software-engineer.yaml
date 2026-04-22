@@ -1,0 +1,97 @@
+id: assembly-ai-senior-software-engineer
+name: Assembly AI Senior Software Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: Assembly AI
+  url: https://jobs.ashbyhq.com/assembly
+  application_url: https://jobs.ashbyhq.com/assembly/3d04eed3-211a-483b-aaee-a73b98147a18
+  portal: ashby
+  location: New York
+  location_class: us-onsite
+  description: 'Learn about us and our openings here: https://www.assembly.com/jobs
+    About the role As a senior software engineer you will report to the CTO and be
+    a core member of our engineering and product team. In this role you’ll lead complex
+    technical projects, mentor junior team members, improve velocity through better
+    process, shape the engineering roadmap, and help define our engineering culture.
+    We will compensate you well, invest deeply in your development, and do everything
+    we can to make sure this is the single best work experience of your life. What
+    you''ll do You''ll design and build full stack features. You''ll be working on
+    scaling and enhancing our web platform, our flagship product. This involves overseeing
+    the libraries we use, managing the component/design system architecture, and building
+    the most robust testable features. You''ll be an owner. You''ll work with EPD
+    (engineering/product/design) leads team to help shape the roadmap. You’ll also
+    be responsible for writing technical documentation, setting up infrastructure,
+    and organizing engineering tasks. You''ll balance the short and long term. While
+    knowing the importance of shipping quickly you also know how to craft thoughtful
+    long-term technical strategy. You know when to address tech debt and when to improve
+    infrastructure and processes (testing, code reviews, CI/CD). You’ll make the engineering
+    team more effective. You’ll help us implement better processes, refine our interview
+    process, and help define our engineering culture. You''ll help build the team.
+    The first 10 members of an engineering team dictate the next 100. You''ll help
+    interview and recruit more talented engineers. You''ll learn about startups .
+    Aside from your core work, you''ll have the opportunity to get involved in other
+    areas - marketing, growth, ops, etc. Who you are You''re experienced. You have
+    4+ years experience working on complex web applications built with modern tools
+    and a proven track record as a lead developer. Familiarity with our tech stack
+    is a bonus! You''re passionate about crafting software. Whether it''s the thrilling
+    moment when a scalable system design sparks excitement, or the deep satisfaction
+    of engineering a seamless, robust frontend component, every line of code is a
+    canvas for your creativity. You take pride in building systems that are as elegant
+    as they are efficient, turning complex challenges into works of art that you love
+    to share and showcase. You design thoughtful solutions. You approach challenges
+    by exploring multiple avenues, carefully weighing edge cases and dependencies
+    to deliver the optimal user experience. You excel at articulating your ideas,
+    ensuring that you remain focused on what truly matters: understanding customer
+    needs. You love to collaborate, discuss and debate. You engage in respectful,
+    constructive debates—challenging ideas without being confrontational. You work
+    collaboratively to weigh trade-offs and find balanced solutions, clearly explaining
+    your reasoning when opinions differ and valuing the insights of your teammates.
+    You''re hardworking. You understand that building a category-defining company
+    requires people that work smart and that also work hard. You love working in person.
+    We''re convinced that building a strong culture happens face-to-face, and we''re
+    looking for people who thrive in highly collaborative, in-person environments.
+    Tech React, Typescript, Golang Libraries: Tailwind, MUI, Redux (rtk-query), AmplifyJS
+    Infra (AWS): DynamoDB, Lambda, Cognito, Cloudwatch, Cloudformation, SQS'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 5.5
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 7
+    evidence_match: 7
+    track_record_fit: 6
+    network_proximity: 1
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.382540+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

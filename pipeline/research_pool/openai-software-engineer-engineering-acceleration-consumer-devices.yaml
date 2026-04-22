@@ -1,0 +1,116 @@
+id: openai-software-engineer-engineering-acceleration-consumer-devices
+name: OpenAI Software Engineer, Engineering Acceleration | Consumer Devices
+track: job
+status: research
+outcome: null
+target:
+  organization: OpenAI
+  url: https://jobs.ashbyhq.com/openai
+  application_url: https://jobs.ashbyhq.com/openai/ae3a32af-b862-45db-838c-7fb49d4bc27e
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'About the Team At OpenAI | Consumer Devices, you won’t just build
+    products—you’ll help shape the future of how humanity interacts with intelligence.
+    We’re looking for exceptional people who thrive on solving hard problems, move
+    with urgency, and want their work to matter at global scale. Here, you’ll collaborate
+    with some of the most talented minds in research, engineering, and operations
+    to create products that millions (perhaps billions) will come to enjoy and rely
+    on. If you’re motivated by impact, curiosity, and the chance to define what comes
+    next, we’d like to hear from you. About the Role The Engineering Acceleration-focused
+    engineer on the Consumer Device Infrastructure team builds the CI/CD systems,
+    developer workflows, and internal platform capabilities that help engineers develop,
+    test, ship, and debug software across device and cloud surfaces. This is a highly
+    hands-on senior engineering role focused on CI/CD, software build and deployment
+    pipelines, and developer productivity. You will design and build the technical
+    foundations that improve engineering velocity, reduce toil, and increase software
+    quality. You will also make pragmatic architecture and platform decisions based
+    on the organization’s stage, scaling needs, and security requirements. We’re looking
+    for an engineer with deep experience in developer productivity and CI/CD who enjoys
+    building robust internal platforms, improving day-to-day engineering workflows,
+    and creating secure, reliable systems that other engineers depend on. This role
+    is based in San Francisco, CA. We use a hybrid work model of four days in the
+    office per week and offer relocation assistance to new employees. In this role,
+    you will: Design, build, and operate CI/CD systems and software delivery pipelines
+    for software that runs both on device and in the cloud. Lead the design and architecture
+    of internal platform capabilities across build, test, deployment, workflow automation,
+    and developer tooling. Make hands-on technical decisions about platform design,
+    abstraction boundaries, and system tradeoffs based on the team’s current stage,
+    scale, and operational needs. Improve developer productivity by shortening feedback
+    loops across build, test, debugging, environment setup, and release-adjacent workflows.
+    Build self-serve paved-road workflows that reduce manual effort and make common
+    engineering tasks fast, reliable, and easy to adopt. Use AI-native tooling and
+    automation to improve engineering workflows, failure triage, and developer output
+    quality. Build secure-by-default platform capabilities, including access controls,
+    secrets and credential handling, artifact permissions, auditability, and policy
+    enforcement in software delivery workflows. Partner closely with product, systems,
+    release, quality, and infrastructure teams to understand pain points and turn
+    them into durable platform improvements. Define and track metrics for platform
+    health and engineering effectiveness, including build times, queue times, failure
+    rates, flaky failures, and deployment lead time. Guide engineering teams on pragmatic
+    observability, reliability, and scalability choices for the systems they build.
+    Participate in the on-call rotation for the systems owned by the team. You might
+    thrive in this role if you: Have 7+ years of software engineering experience,
+    including 5+ years building developer productivity, CI/CD, internal platform,
+    or engineering systems. Have deep experience designing and operating robust CI/CD
+    pipelines, build systems, and software delivery infrastructure for complex products.
+    Have a strong track record of personally building platform features and workflow
+    improvements that materially increased engineering velocity, reliability, or developer
+    experience. Have experience making architectural decisions for internal platforms,
+    including when to standardize, when to abstract, and when to keep systems simple.
+    Have experience adapting technical decisions to the maturity and scaling stage
+    of an organization, balancing speed, reliability, maintainability, and adoption.
+    Have working knowledge of secure software delivery practices such as least-privilege
+    access, secrets management, policy enforcement, auditability, or software supply
+    chain hardening. Have strong empathy for the tools, workflows, and frustrations
+    that create toil or slow engineering teams down. Are comfortable operating in
+    ambiguous, fast-changing environments and bringing structure where needed. Communicate
+    clearly and work effectively across teams with different priorities, constraints,
+    and technical needs. Technical Context At the heart of our infrastructure is a
+    large-scale deployment of CPU/GPU nodes running in Kubernetes clusters across
+    regions. We build secure systems that support software running on device and in
+    the cloud. Some core technologies we work with include Terraform, Buildkite, Bazel,
+    Postgres, Cosmos DB, Kafka, and more. About OpenAI OpenAI is an AI research and
+    deployment company dedicated to '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-17'
+  date_source: published_at
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.557283+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-18'

@@ -1,0 +1,113 @@
+id: starburst-forward-deployed-engineer
+name: Starburst Forward Deployed Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: Starburst
+  url: https://boards.greenhouse.io/starburst
+  application_url: https://job-boards.greenhouse.io/starburst/jobs/5016295008
+  portal: greenhouse
+  location: United States
+  location_class: us-onsite
+  description: '<div class="content-intro"><h2><strong>About Starburst</strong></h2>
+    <p>Starburst is the data platform for analytics, applications, and AI, unifying
+    data across clouds and on-premises to accelerate AI innovation. Organizations—from
+    startups to Fortune 500 enterprises in 60+ countries—rely on Starburst for fast
+    data access, seamless collaboration, and enterprise-grade governance on an open
+    hybrid data lakehouse. Wherever data lives, Starburst unlocks its full potential,
+    powering data and AI from development to deployment. By future-proofing data architecture,
+    Starburst helps businesses fuel innovation with AI.</p></div><h2><strong>About
+    the Role</strong></h2> <p>Starburst Forward Deployed Engineers are deeply technical
+    leaders who work directly with enterprise customers and partners to define, design,
+    and operationalize large-scale data platforms built on Starburst. In this role,
+    you will be the primary technical authority guiding customers through architecture,
+    performance engineering, data governance, and multi-cloud implementation patterns.</p>
+    <p>You will engage with engineering teams, principal architects, and C-suite stakeholders
+    to shape data platform blueprints, troubleshoot complex workloads, and ensure
+    customers successfully operationalize Starburst at scale. As a technical expert,
+    you will dive into integration patterns across the modern analytics stack.</p>
+    <p>In this highly influential, customer-facing role, you will collaborate with
+    C-suite executives, architects, engineering leaders, and strategic partners to
+    define future-state architectures, drive data platform transformation, and align
+    technical strategy with business outcomes. You will also work closely with Product
+    and Engineering teams to bring field insights back into the organization and help
+    shape Starburst’s long-term roadmap.</p> <p>This role is located in North America.</p>
+    <p>&nbsp;</p> <p><strong>As a Forward Deployed Engineer at Starburst you will:&nbsp;</strong></p>
+    <ul> <li><strong>Act as a senior technical advisor</strong> to strategic enterprise
+    customers, helping them design and implement modern data architectures and solutions
+    powered by Starburst.</li> </ul> <p>&nbsp;</p> <ul> <li><strong>Build custom solutions</strong>,
+    working closely with engineering develop field solutions in customer facing projects.
+    &nbsp; <br><br></li> <li><strong>Engage with executives across IT, data, and business
+    teams</strong>, translating Starburst’s value into business impact and aligning
+    platform strategy with organizational goals.<br><br></li> <li><strong>Define and
+    articulate target-state architectures</strong>, including data products, lakehouse,
+    distributed query engines, and cloud-native data platforms.<br><br></li> <li><strong>Develop
+    technical strategy in strategic accounts</strong>, partnering with account teams
+    to drive long-term vision, remove obstacles, and ensure successful adoption.<br><br></li>
+    <li><strong>Guide customers through architectural reviews</strong>, best practices,
+    governance models, performance considerations, and security patterns.<br><br></li>
+    <li><strong>Influence and drive product direction</strong>, representing customer
+    needs and industry trends to Engineering and Product Management.<br><br></li>
+    <li><strong>Develop reference architectures, blueprints, and executive-level technical
+    content</strong> that communicates best practices and Starburst’s strategic direction..<br><br></li>
+    <li><strong>Evangelize modern data architecture principles</strong>, helping customers
+    and partners understand how distributed data access, analytics acceleration, and
+    AI workloads benefit from Starburst.</li> </ul> <p>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p>
+    <p><strong>Some of the things we look for:</strong></p> <p>&nbsp;</p> <ul> <li>Deep
+    expertise in modern data architectures, including data lakes, lakehouses and data
+    warehouses.<br><br></li> <li>Strong understanding of cloud platforms (AWS, Azure,
+    GCP) and hybrid/multi-cloud architecture patterns.<br><br></li> <li>Executive
+    presence and exceptional communication skills, with the ability to influence senior
+    leaders across technical and business domains.<br><br></li> <li>Demonstrated success
+    guiding large-scale data platform transformations and working with enterprise
+    customers.<br><br></li> <li>Hands-on proficiency with SQL, data integration, performance
+    tuning, or analytics engineering.<br><br></li> <li>Ability to travel as needed
+    for customer and industry engagements.</li> </ul> <p>&nbsp;</p> <ul> <li>Expertise
+    with kubernetes platforms like EKS,AKS, GKE and Openshift.</li> </ul> <p><strong><em>Ability
+    to Travel</em></strong><em>: This role will require 25% in-person travel for purposes
+    including but not limited to new hire onboarding, team and department offsites,
+    customer engagements, and other company events. Actual travel expectations may
+    vary by role and business needs.</em></p> <p>&nbsp;</p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="descriptio'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.3
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-17'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.334910+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

@@ -1,0 +1,105 @@
+id: fastly-staff-software-engineer-edge-protocols
+name: Fastly Staff Software Engineer - Edge Protocols
+track: job
+status: research
+outcome: null
+target:
+  organization: Fastly
+  url: https://boards.greenhouse.io/fastly
+  application_url: https://www.fastly.com/about/jobs/apply?gh_jid=7821631
+  portal: greenhouse
+  location: Denver, CO; New York City, NY; San Francisco, CA
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>Fastly helps people stay better connected
+    with the things they love. Fastly’s edge cloud platform enables customers to create
+    great digital experiences quickly, securely, and reliably by processing, serving,
+    and securing our customers’ applications as close to their end-users as possible
+    — at the edge of the Internet. The platform is designed to take advantage of the
+    modern internet, to be programmable, and to support agile software development.
+    Fastly’s customers include many of the world’s most prominent companies, including
+    GitHub, Yelp, Paramount, and JetBlue.</p> <p>We''re building a more trustworthy
+    Internet. Come join us.</p></div><p><strong>Posting date: </strong>April 21, 2026</p>
+    <p><strong>Anticipated Posting Close Date*</strong>: May 21, 2026</p> <p><em>*Job
+    posting may close early due to the volume of applicants.</em></p> <p>&nbsp;</p>
+    <p><strong>Staff Software Engineer - Edge Protocols</strong></p> <p>The Edge Protocols
+    Team develops software that interacts with both sides of Fastly, front and back
+    - handling every incoming client request to Fastly and talking to customers’ websites.
+    Projects range from implementing new protocols, efficient load balancing, routing
+    among the edge nodes, defending customers from attacks, security enhancements,
+    privacy products and more. We are looking for a Staff Software Engineer passionate
+    about applying their talents to make the Internet fast and secure.</p> <p><strong>What
+    You''ll Do</strong></p> <ul> <li>Write, test, and deploy both C and Rust code.&nbsp;</li>
+    <li>Enhance, maintain and optimize network software that implements protocols
+    including TLS, HTTP, QUIC, etc.</li> <li>Collaborate with cross-functional teams
+    and stakeholders to shape a clear technical roadmap - prioritizing key initiatives
+    and proactively identifying and mitigating risks - to deploy, support, troubleshoot,
+    and deliver features to customers</li> <li>Contribute to open source projects
+    such as h2o and picotls</li> <li>Mentor and support the professional growth of
+    engineers, fostering a culture of knowledge sharing, innovation, and collaboration
+    within the team</li> </ul> <p><strong>What We''re Looking For</strong></p> <ul>
+    <li>Proven ability to design &amp; implement reliable, scalable, low latency systems.
+    Most Staff Engineers at Fastly have <strong>at least 7 years</strong> of domain
+    relevant engineering experience.&nbsp;</li> <li>A collaborative mindset with experience
+    working across cross-functional teams, fostering a culture of knowledge sharing
+    and innovation</li> <li>Significant production experience with coding in C, C++,
+    and/or Rust.</li> <li>Proven ability to mentor and support the growth of engineers,
+    both within a specific area of expertise and more broadly</li> <li>Experience
+    with Linux systems and network programming</li> <li>Hands-on experience in building
+    distributed infrastructure and maintaining it over time</li> <li>Excellent written
+    and verbal communication skills, with the ability to produce clear and comprehensive
+    documentation</li> </ul> <p><strong>We’ll be super impressed if you have experience
+    in any of these:</strong></p> <ul> <li>Web/Internet protocols such as HTTP, TLS,
+    DNS, TCP/IP, UDP, QUIC</li> <li>Understanding of how customers will interact with
+    features you develop</li> <li>Comfortable working in a geographically distributed
+    team and highly available environments</li> <li>Proficient in Perl, Go, or similar
+    high level languages</li> </ul> <p>&nbsp;</p> <p><strong>Work Hours:</strong></p>
+    <p>This position will require you to be available during core business hours and
+    occasionally nights and weekends as required for on call support.</p> <p>&nbsp;</p>
+    <p><strong>Work Location(s) &amp; Travel Requirements:&nbsp;</strong></p> <p>The
+    preferred office locations for this position are:</p> <ul> <li>San Francisco,
+    CA</li> <li>Denver, CO</li> <li>New York, NY</li> </ul> <p>Fastly currently embraces
+    a largely hybrid model for most roles which allows employees flexibility to split
+    their time between the office and home.</p> <p>There is a strong preference for
+    Hybrid near a local office.&nbsp; However, we may be willing to consider exceptionally
+    qualified remote candidates within the US and Canada.</p> <p>&nbsp;</p> <p><strong>SF
+    / LA Fair Chance Ordinance Statement</strong></p> <p>Pursuant to the San Francisco
+    Fair Chance Ordinance and the Los Angeles Fair Chance Initiative for Hiring Ordinance,
+    we will consider for employment qualified applicants with arrest and conviction
+    records.</p> <p>&nbsp;</p> <p><strong>Salary:&nbsp;</strong></p> <p>The estimated
+    salary range for this position in the US is $211,370 to $253,644.</p> <p>Starting
+    salary may vary based on permissible, non-discriminatory factors such as experience,
+    skills, qualifications, and location.</p> <p>This role may be eligible to participate
+    in Fastly’s equity and discretionary bonus programs.</p> <p>&nbsp;</p> <p><strong>Benefits:</strong></p>
+    <p>We care about you. Fastly work'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-22'
+  posting_date: '2026-04-21'
+  date_source: first_published
+  date_added: '2026-04-22'
+  discovered: '2026-04-22T21:40:49.002774+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-22'

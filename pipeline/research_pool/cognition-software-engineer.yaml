@@ -1,0 +1,64 @@
+id: cognition-software-engineer
+name: Cognition Software Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: Cognition
+  url: https://jobs.ashbyhq.com/cognition
+  application_url: https://jobs.ashbyhq.com/cognition/e8086415-62bc-4cc0-96a4-84bb56182d35
+  portal: ashby
+  location: San Francisco Bay Area
+  location_class: us-onsite
+  description: We are an applied AI lab building end-to-end software agents. We're
+    the makers of Devin, the first AI software engineer, and Windsurf, the AI-native
+    IDE. Together, they represent our vision for collaborative AI teammates that enable
+    engineers to focus on more interesting problems and empower teams to strive for
+    more ambitious goals. Our team is small and talent-dense. Among our founding team,
+    we have world-class competitive programmers, former founders, and leaders from
+    companies at the cutting edge of AI including Scale AI, Palantir, Cursor, Waymo,
+    Tesla, Lunchclub, Modal, Google DeepMind, and Nuro. Building Devin and Windsurf
+    is just the first step—our hardest challenges still lie ahead. If you’re excited
+    to solve some of the world’s biggest problems and build AI that can reason on
+    real-world tasks, apply to join us.
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 5.0
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 4
+    evidence_match: 4
+    track_record_fit: 3
+    network_proximity: 3
+    strategic_value: 7
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.119480+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

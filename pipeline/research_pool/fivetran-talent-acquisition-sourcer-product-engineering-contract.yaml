@@ -1,0 +1,114 @@
+id: fivetran-talent-acquisition-sourcer-product-engineering-contract
+name: Fivetran Talent Acquisition Sourcer - Product & Engineering - Contract
+track: job
+status: research
+outcome: null
+target:
+  organization: Fivetran
+  url: https://boards.greenhouse.io/fivetran
+  application_url: https://www.fivetran.com/careers/job?gh_jid=7616793003
+  portal: greenhouse
+  location: Oakland, California, United States, AMER
+  location_class: us-onsite
+  description: '<div class="content-intro"><p>From Fivetran’s founding until now,
+    our mission has remained the same: to make access to data as simple and reliable
+    as electricity. With Fivetran, customer data arrives in their warehouses, canonical
+    and ready to query, with no engineering or maintenance required. We’re proud that
+    more organizations continue to leverage our technology every day to become truly
+    data-driven.</p></div><p data-pm-slice="1 1 []"><span style="font-size: 10pt;"><strong>About
+    the Role </strong></span></p> <p data-pm-slice="1 1 []"><span style="font-size:
+    10pt;">Fivetran is seeking a Contract Senior Technical Sourcer specializing in
+    Technical Product and Software Engineering roles to join our team on an initial
+    6-month contractor basis. In this role, you’ll work closely with Talent Acquisition
+    Partners and Hiring Managers to identify, engage, and screen top Product and Engineering
+    talent.Your expertise in sourcing and understanding the technical skill set landscape
+    will ensure we bring in highly qualified candidates who align with our company’s
+    mission and culture.</span></p> <p data-pm-slice="1 1 []"><span style="font-size:
+    10pt;">This is a 6 month/40 hours per week, hybrid position based out of our Oakland,
+    CA office. Our hybrid work model offers a blend of remote flexibility and in-person
+    collaboration, including two days in the office each week to connect and build
+    as a team.</span></p> <p><span style="font-size: 10pt;"><strong>What You’ll Do</strong></span></p>
+    <ul> <li style="font-size: 10pt;"><span style="font-size: 10pt;">Identify &amp;
+    Engage Talent: Leverage various sourcing strategies/tools (LinkedIn, Github, StackOverflow
+    etc.) to find top-tier technical talent for our engineering, product and other
+    technical roles&nbsp;</span></li> <li style="font-size: 10pt;"><span style="font-size:
+    10pt;">Talent Pipeline Management: Develop and maintain talent pools of high-caliber
+    technical candidates by actively networking, building relationships, and keeping
+    track of potential future hires&nbsp;</span></li> <li style="font-size: 10pt;"><span
+    style="font-size: 10pt;">Collaborate with TA Partners: Partner with technical
+    recruiters to understand specific Product and Engineering hiring needs&nbsp;</span></li>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;">Diversity Sourcing:
+    Proactively source candidates from diverse backgrounds to support our diversity,
+    equity, and inclusion (DEI) initiatives&nbsp;</span></li> <li style="font-size:
+    10pt;"><span style="font-size: 10pt;">Data-Driven Sourcing: Utilize recruitment
+    tools and applicant tracking systems (ATS) to maintain accurate candidate pipelines
+    and deliver sourcing metrics and reports</span></li> <li style="font-size: 10pt;"><span
+    style="font-size: 10pt;">Adhere to good data hygiene and best practices; using
+    tooling to give you a tactical advantage in the marketplace</span></li> </ul>
+    <p><span style="font-size: 10pt;"><strong>Skills We''re Looking For</strong></span></p>
+    <ul> <li style="font-size: 10pt;"><span style="font-size: 10pt;">5+ years of technical
+    sourcing experience in technical recruitment (engineering, software, development,
+    product management) within fast-paced environments&nbsp;</span></li> <li style="font-size:
+    10pt;"><span style="font-size: 10pt;">1+ years of in-house recruiting or sourcing
+    experience within startups or fast-growing tech companies</span></li> <li style="font-size:
+    10pt;"><span style="font-size: 10pt;">Technical understanding of highly technical
+    roles and skills, particularly within software engineering, DevOps, data science,
+    and product development</span></li> <li style="font-size: 10pt;"><span style="font-size:
+    10pt;">Collaborative approach with strong partnership skills with internal recruiting
+    teams and hiring managers&nbsp;</span></li> <li style="font-size: 10pt;"><span
+    style="font-size: 10pt;">Familiarity with recruiting and sourcing tools such as
+    Workday, Greenhouse, HackerRank, LinkedIn Recruiter, GitHub, Guide and AI platforms.</span></li>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;">Ability to thrive
+    in a hybrid work environment and adapt quickly to rapidly changing hiring needs
+    and priorities</span></li> <li style="font-size: 10pt;"><span style="font-size:
+    10pt;">A keen eye for detail and the ability to follow processes and best practices</span></li>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;">Analytical skills
+    with the ability to track and analyze key sourcing metrics and use data to refine
+    sourcing strategies</span></li> </ul> <p>&nbsp;</p> <p><span style="font-size:
+    10pt;">#LI-HYBRID #LI-SR1</span></p><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p>The compensation range displayed
+    on this job posting reflects the minimum and maximum target for new hire compensation
+    for the target position and level, and may include sales incentives or target
+    bonuses depending on the role. &nbsp;Our compensation ranges are determined by
+    role, lev'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.9
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-24'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.610044+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-25'

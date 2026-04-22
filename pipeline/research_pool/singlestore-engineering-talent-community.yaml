@@ -1,0 +1,78 @@
+id: singlestore-engineering-talent-community
+name: 'SingleStore Engineering Talent Community '
+track: job
+status: research
+outcome: null
+target:
+  organization: SingleStore
+  url: https://boards.greenhouse.io/singlestore
+  application_url: https://job-boards.greenhouse.io/singlestore/jobs/7839324
+  portal: greenhouse
+  location: United States & EMEA
+  location_class: us-onsite
+  description: <p data-start="0" data-end="247">Interested in future Engineering opportunities
+    with SingleStore? Join our Engineering Talent Community and stay connected with
+    upcoming openings across our Product, Engineering, and Infrastructure teams in
+    the United States, EMEA, and global hubs.</p> <p data-start="249" data-end="460">We’re
+    always interested in speaking with talented engineers who are passionate about
+    building high-performance systems, solving complex technical challenges, and shaping
+    the future of data and AI infrastructure.</p> <p data-start="462" data-end="529">We’d
+    love to hear from candidates with experience in areas such as:</p> <ul> <li data-start="531"
+    data-end="783">Software Engineers</li> <li data-start="531" data-end="783">Distributed
+    Systems Engineers</li> <li data-start="531" data-end="783">Database Engineers</li>
+    <li data-start="531" data-end="783">Site Reliability Engineers (SRE)</li> <li
+    data-start="531" data-end="783">Cloud / Private Cloud Engineers</li> <li data-start="531"
+    data-end="783">Performance Engineers</li> <li data-start="531" data-end="783">Backend
+    Engineers</li> <li data-start="531" data-end="783">AI / ML Infrastructure Engineers</li>
+    <li data-start="531" data-end="783">Interns and New Grad Engineers</li> </ul>
+    <p data-start="785" data-end="1013">At SingleStore, our Engineering teams build
+    the technology powering some of the world’s most innovative companies, enabling
+    real-time analytics, scalable applications, and next-generation AI workloads on
+    a unified data platform.</p> <h3 data-section-id="vo0ejc" data-start="1015" data-end="1040">Why
+    Join SingleStore?</h3> <ul data-start="1041" data-end="1398"> <li data-section-id="1tz31h5"
+    data-start="1041" data-end="1107">High-growth company at the forefront of data
+    and AI innovation</li> <li data-section-id="q4w48l" data-start="1108" data-end="1194">Opportunities
+    across core database, cloud, infrastructure, and product engineering</li> <li
+    data-section-id="hsog57" data-start="1195" data-end="1262">Global, collaborative,
+    and high-performance engineering culture</li> <li data-section-id="u79iop" data-start="1263"
+    data-end="1327">Meaningful technical challenges with visible customer impact</li>
+    <li data-section-id="rmkh6m" data-start="1328" data-end="1398">Ability to work
+    on systems built for speed, scale, and reliability</li> </ul> <h3 data-section-id="1xmjzt"
+    data-start="1400" data-end="1429">Join Our Talent Community</h3> <p data-start="1430"
+    data-end="1659">If you’re interested in being considered for future opportunities,
+    submit your profile to our Engineering Talent Community. Our Talent team will
+    review your background and reach out when relevant roles align with your experience.</p>
+    <p data-start="1661" data-end="1700" data-is-last-node="" data-is-only-node="">We
+    look forward to connecting with you.</p>
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-22'
+  posting_date: '2026-04-21'
+  date_source: first_published
+  date_added: '2026-04-22'
+  discovered: '2026-04-22T21:40:49.005380+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-22'

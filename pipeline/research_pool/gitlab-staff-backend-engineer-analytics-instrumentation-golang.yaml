@@ -1,0 +1,105 @@
+id: gitlab-staff-backend-engineer-analytics-instrumentation-golang
+name: GitLab Staff Backend Engineer, Analytics Instrumentation (Golang)
+track: job
+status: research
+outcome: null
+target:
+  organization: GitLab
+  url: https://boards.greenhouse.io/gitlab
+  application_url: https://job-boards.greenhouse.io/gitlab/jobs/8508027002
+  portal: greenhouse
+  location: Remote, India
+  location_class: international
+  description: '<div class="content-intro"><p>GitLab is the intelligent orchestration
+    platform for DevSecOps. GitLab enables organizations to increase developer productivity,
+    improve operational efficiency, reduce security and compliance risk, and accelerate
+    digital transformation. More than 50 million registered users and more than 50%
+    of the Fortune 100* trust GitLab to ship better, more secure software faster.</p>
+    <p>The same principles built into our products are reflected in how our team works:
+    we embrace AI as a core productivity multiplier, with all team members expected
+    to incorporate AI into their daily workflows to drive efficiency, innovation,
+    and impact. GitLab is where careers accelerate, innovation flourishes, and every
+    voice is valued. Our high-performance culture is driven by our <a href="https://handbook.gitlab.com/handbook/values/">values</a>
+    and continuous knowledge exchange, enabling our team members to reach their full
+    potential while collaborating with industry leaders to solve complex problems.
+    <a href="https://www.youtube.com/watch?v=OuZIb5zszQI">Co-create the future with
+    us</a> as we build technology that transforms how the world develops software.</p>
+    <p>*<em>Fortune 500® is a registered trademark of Fortune Media IP Limited, used
+    under license. Claim based on GitLab data. Fortune 100 refers to the top 20% ranked
+    companies in the 2025 Fortune 500 list, published in June 2025. Fortune and Fortune
+    Media IP Limited are not affiliated with, and do not endorse products or services
+    of GitLab.</em></p></div><p>An overview of this role</p> <p>As a Staff Backend
+    Engineer, you''ll set the technical direction for our instrumentation platform,
+    guide architecture for a foundational service, and mentor engineers across the
+    company. You''ll establish patterns that help teams build reliable, scalable instrumentation
+    that improves billing accuracy, product insights, and long-term growth.</p> <h2>What
+    you’ll do</h2> <ul> <li value="1">Architect and guide the design of a unified
+    Go-based instrumentation service, setting the technical direction to replace multiple
+    language-specific SDKs and maintain reliable, high-performance instrumentation
+    across the company.</li> <li value="2">Own the strategy for handling, validating,
+    and improving instrumentation data quality across the system, increasing billing
+    accuracy and strengthening product planning.</li> <li value="3">Coordinate mentorship
+    and training initiatives with product development teams across the company, improving
+    adoption of instrumentation best practices and raising the quality and consistency
+    of feature instrumentation.</li> <li value="4">Set reliability and turnaround
+    standards for systems that enable usage billing and instrumentation, contribute
+    to critical-incident on-call coverage, and coordinate post-incident improvements
+    that reduce recurring issues.</li> <li value="5">Coordinate cross-functional initiatives
+    across research and development teams and the enterprise data organization, aligning
+    evolving requirements and delivering solutions that serve multiple stakeholders
+    across the company.</li> <li value="6">Own key architectural choices that balance
+    ease of use for product teams with reliability and correctness for data consumers,
+    establishing patterns that scale the system as a foundational service for company-wide
+    growth.</li> </ul> <h2>What you’ll bring</h2> <ul> <li value="1">Extensive production
+    experience with Go, with a proven track record of architecting and shipping large-scale
+    services used by multiple teams.</li> <li value="2">Demonstrated ability to design
+    and own backend systems that scale, with experience shaping architectural choices
+    that influence multiple engineering teams.</li> <li value="3">Deep expertise in
+    infrastructure concerns including system reliability, performance optimization
+    at scale, data quality, and observability; proven ability to set standards and
+    mentor others in these areas.</li> <li value="4">Proven experience designing and
+    owning APIs (REST, gRPC, or similar) that scale to serve multiple internal teams,
+    with the ability to evolve designs based on diverse stakeholder needs.</li> <li
+    value="5">Experience coordinating initiatives across functional boundaries, influencing
+    product teams, data consumers, and other stakeholders through technical vision
+    and mentorship.</li> <li value="6">Deep expertise in instrumentation, analytics,
+    data systems, or similar foundational infrastructure; demonstrated impact building
+    systems that become critical to company operations.</li> </ul> <h2>About the team</h2>
+    <p>Our team is part of the Data Engineering organization and runs a foundational
+    service used by all research and development teams at GitLab. We manage the systems
+    that send, transport, and validate instrumentation data across the company, giving
+    us visibility into customer usage patterns across GitLab SaaS and Self-Managed
+    deployment environments. This data informs usage billing and product planning.
+    We''re building a unified,'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: platform-orchestrator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-22'
+  posting_date: '2026-04-20'
+  date_source: first_published
+  date_added: '2026-04-22'
+  discovered: '2026-04-22T21:40:49.000095+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-22'

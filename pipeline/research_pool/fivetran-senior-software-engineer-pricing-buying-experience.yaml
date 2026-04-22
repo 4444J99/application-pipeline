@@ -1,0 +1,113 @@
+id: fivetran-senior-software-engineer-pricing-buying-experience
+name: Fivetran Senior Software Engineer - Pricing & Buying Experience
+track: job
+status: research
+outcome: null
+target:
+  organization: Fivetran
+  url: https://boards.greenhouse.io/fivetran
+  application_url: https://www.fivetran.com/careers/job?gh_jid=7660048003
+  portal: greenhouse
+  location: Novi Sad, South Bačka, Serbia, EMEA
+  location_class: international
+  description: '<div class="content-intro"><p>From Fivetran’s founding until now,
+    our mission has remained the same: to make access to data as simple and reliable
+    as electricity. With Fivetran, customer data arrives in their warehouses, canonical
+    and ready to query, with no engineering or maintenance required. We’re proud that
+    more organizations continue to leverage our technology every day to become truly
+    data-driven.</p></div><div> <div> <div> <div> <div> <div> <div> <div> <div><span
+    style="font-size: 10pt;"><span style="font-family: helvetica, arial, sans-serif;"><strong>About
+    the Role</strong></span></span></div> <div>&nbsp;</div> <div><span style="font-size:
+    10pt;"><span style="font-family: helvetica, arial, sans-serif;">Fivetran is building
+    data pipelines to power the modern data stack for thousands of companies.</span></span><span
+    style="font-size: 10pt;"><span style="font-family: helvetica, arial, sans-serif;">We’re
+    looking for a&nbsp;Senior Software Engineer in&nbsp;Core Experience global group
+    to deliver highly valuable features to customers, improve our software architecture,
+    and maintain reliable operation of the service.</span></span></div> <div><span
+    style="font-size: 10pt;"><span style="font-family: helvetica, arial, sans-serif;">This
+    is a full-time position based out of our Novi Sad office. Our hybrid work model
+    offers a blend of remote flexibility and in-person collaboration, including two
+    days in the office each week to connect and build as a team.</span></span></div>
+    <div>&nbsp;</div> <div><strong><span style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;">Technologies You’ll Use</span></strong> <ul> <li style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;"><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">Java</span></li> <li style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;"><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">Postgres</span></li> <li style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;"><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">Kubernetes</span></li> <li style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;"><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">Docker</span></li> <li style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;"><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">AWS, GCP</span></li> <li style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;"><span style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;">Bazel, BuildKite</span><br><span style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;">&nbsp;</span></li> </ul> <span
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;"><strong>What
+    You’ll Do</strong></span> <ul> <li style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;"><span style="font-family: helvetica, arial, sans-serif; font-size:
+    10pt;">Implement functionality for Core Experience area of product (Pricing and
+    Buying)</span></li> <li style="font-family: helvetica, arial, sans-serif; font-size:
+    10pt;"><span style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">Contribute
+    to feature enhancements and bug fixes</span></li> <li style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;"><span style="font-family: helvetica, arial,
+    sans-serif; font-size: 10pt;">Writes well-designed, testable code. Optimizes code
+    to make it more performant</span></li> <li style="font-family: helvetica, arial,
+    sans-serif; font-size: 10pt;"><span style="font-family: helvetica, arial, sans-serif;
+    font-size: 10pt;">Improves code test coverage. Refactors code for maintainability.</span></li>
+    <li style="font-family: helvetica, arial, sans-serif; font-size: 10pt;"><span
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">Follows up
+    on incidents, writing postmortems and preparing mitigation plan</span></li> <li
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;"><span style="font-family:
+    helvetica, arial, sans-serif; font-size: 10pt;">Works closely with teammates to
+    achieve milestone goals. Documents work and shares information with teammates</span></li>
+    </ul> <strong><span style="font-family: helvetica, arial, sans-serif; font-size:
+    10pt;">Skills We’re Looking For</span></strong> <ul> <li style="font-family: helvetica,
+    arial, sans-serif; font-size: 10pt;"><span style="font-family: helvetica, arial,
+    sans-serif; font-size: 10pt;">Strong coding, technical and problem-solving skills
+    with professional experience writing Java based applications in production environment</span></li>
+    <li style="font-family: helvetica, arial, sans-serif; font-size: 10pt;"><span
+    style="font-family: helvetica, arial, sans-serif; font-size: 10pt;">Experience
+    in reliable distributed systems, with an emphasis on high-volume data management
+    platform that operate under strict SLAs</span></li> <li st'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.7
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.599180+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-25'

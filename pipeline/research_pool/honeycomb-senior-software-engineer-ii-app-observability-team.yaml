@@ -1,0 +1,114 @@
+id: honeycomb-senior-software-engineer-ii-app-observability-team
+name: Honeycomb Senior Software Engineer II - App Observability Team
+track: job
+status: research
+outcome: null
+target:
+  organization: Honeycomb
+  url: https://boards.greenhouse.io/honeycomb
+  application_url: https://job-boards.greenhouse.io/honeycomb/jobs/5132852008
+  portal: greenhouse
+  location: Remote - Canada
+  location_class: international
+  description: '<div class="content-intro"><div><strong>What We’re Building</strong></div>
+    <div>Honeycomb is a service for the near and present future, defining observability
+    and raising expectations of what developer tools can do! We’re working with well
+    known companies like HelloFresh, Slack, LaunchDarkly, and Vanguard and more across
+    a range of industries. This is an exciting time in our trajectory, we’ve closed
+    Series D funding, scaled past the 200-person mark, and were named to Forbes’ America’s
+    Best Startups of 2022 and 2023!&nbsp;</div> <div>&nbsp;</div> <div>If you want
+    to see what we’ve been up to, please check out these <a href="https://www.honeycomb.io/blog"
+    target="_blank">blog posts</a> and Honeycomb.io <a href="https://www.honeycomb.io/category/press-releases"
+    target="_blank">press releases</a>.&nbsp;</div> <div>&nbsp;</div> <div><strong>Who
+    We Are</strong></div> <div>We come for the impact, and stay for the culture! We’re
+    a talented, opinionated, passionate, fiercely inclusive, and responsible group
+    of bees. We have conviction and we strive to live&nbsp;<a class="postings-link"
+    href="https://www.honeycomb.io/about/" target="_blank"><u>our values</u></a>&nbsp;every
+    day. We want our people to do what they truly love amongst a team of highly talented
+    (but humble) peers.</div> <div>&nbsp;</div> <div><strong>How We Work</strong></div>
+    <div>We are a fully distributed company, which means we believe it is not where
+    you sit, but how you deliver that matters most. We invest in our people and care
+    about how you orient to our culture and processes. At the same time we imbue a
+    lot of trust, autonomy, and accountability from Day 1. #LI-Remote</div></div><h4><strong
+    data-stringify-type="bold">Little more about the team:</strong></h4> <p>As a Senior
+    Software Engineer II on the App O11y team, you''ll be joining a team focused on
+    delivering the core observability capabilities that power Honeycomb. Our ownership
+    spans across querying, metrics, anomaly detection, and high-level analysis — the
+    foundational workflows customers use to bring their telemetry to Honeycomb and
+    investigate issues.</p> <h4><strong data-stringify-type="bold">What you’ll do
+    in the role:</strong></h4> <ul> <li><strong>Design, build, and deliver backend
+    systems and APIs.</strong> You''ll architect and implement APIs and backend services
+    in Go, emphasizing clarity, maintainability, and backward compatibility. You''ll
+    think proactively about cost, scale, and risk — anticipating technical issues
+    and exploring alternatives and tradeoffs thoroughly.</li> <li><strong>Build and
+    maintain full-stack product features.</strong> You''ll contribute frontend (React/TypeScript)
+    and backend (Go) code to build robust product features, maintaining proficiency
+    across the stack. You''ll deliver impactful features that add value for our customers,
+    our team, and Honeycomb overall.</li> <li><strong>Provide technical leadership.</strong>
+    You''ll define patterns and operational guidelines that raise the bar for the
+    team and beyond. You''ll plan, lead, and deliver complex, multi-team projects
+    — including ones with external dependencies — ensuring alignment and mentoring
+    teammates along the way. We rotate tech lead responsibilities with each feature
+    to allow everyone on the team to use and grow these skills.</li> <li><strong>Collaborate
+    across disciplines.</strong> You''ll work closely within a product triad model
+    alongside design and product partners, from discovery through delivery, iterating
+    quickly based on user feedback. You''ll contribute to the team''s technical roadmap
+    and help shape quarterly product roadmaps, tying technical considerations to business
+    outcomes.</li> <li><strong>Support and own your software in production.</strong>
+    You''ll participate in on-call rotations to ensure reliable operations and proactively
+    address user pain points. You know when to shift between forward-looking feature
+    work and production needs.</li> <li><strong>Communicate clearly and multiply your
+    impact.</strong> Regular written and verbal communication, collaboration, and
+    feedback are foundational skills you''ll use daily. You''ll mentor engineers,
+    share knowledge, and delegate to help others grow — your goal is to make everyone
+    around you more effective.</li> </ul> <h4><strong data-stringify-type="bold">What
+    you’ll bring to the role:</strong></h4> <ul> <li><strong>Deep experience designing,
+    building, and maintaining backend systems.</strong> You have substantial expertise
+    building APIs and backend services in Go (or similar languages), with strong opinions
+    about API design, error handling, and developer experience. You''ve seen many
+    different patterns and have developed your own frameworks for evaluating how to
+    approach new technical challenges.</li> <li><strong>Frontend proficiency with
+    React and TypeScript.</strong> You have professional experience delivering frontend
+    features and contributing to full-stack software through all stages of the development
+    lifecycle, though your primary expertise is in bac'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.0
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 1
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.646470+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-25'

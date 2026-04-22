@@ -1,0 +1,115 @@
+id: circleci-software-engineer
+name: CircleCI Software Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: CircleCI
+  url: https://boards.greenhouse.io/circleci
+  application_url: http://www.circleci.com/careers/jobs/8420901002/?gh_jid=8420901002
+  portal: greenhouse
+  location: Toronto, Ontario
+  location_class: international
+  description: '<h2><strong>About CircleCI Engineering</strong></h2> <p>CI/CD has
+    been solved. Now it''s being reinvented. AI agents don''t just run pipelines.
+    They write code, trigger builds, interpret failures, and propose fixes. The interfaces
+    that developers use to understand and trust that work don''t exist yet. We''re
+    building them.</p> <p>At CircleCI, our guiding principles aren''t posters on a
+    wall. We learn fast: we run experiments, accept failure, and scale what works.
+    We think like the customer: every decision connects back to the developer sitting
+    in front of a failing build at 2 am. We own the outcome: not just our slice of
+    it, but the whole thing. If that''s how you already work, you''ll fit here.</p>
+    <h2><strong>Team-Agnostic Placement</strong></h2> <p>We don''t hire for a team.
+    We hire for CircleCI. Where you land depends on where your strengths create the
+    most leverage, and we figure that out together. You might own the CI pipeline
+    experience, deploy and release tooling, notification infrastructure, monetization
+    flows, AI agent surfaces, or the foundational web platform. The through line across
+    all of it is the same: full-stack ownership, a high bar for craft, and work that
+    directly shapes how tens of thousands of developers experience CircleCI every
+    day.</p> <h2><strong>What You''ll Do</strong></h2> <ul> <li><strong>Build AI-natively.</strong>
+    AI is how we work. It’s not a productivity layer on top of engineering, but the
+    default starting point for how problems get approached and solved.</li> <li><strong>Invent
+    new interfaces</strong>. Software delivery is being reinvented. Pipelines run
+    autonomously, generate fixes, and surface results that need human judgment. The
+    tools developers use to understand, trust, and act on that work don''t exist yet.
+    You''ll define what they look like.</li> <li><strong>Own the full stack.</strong>
+    Build features end-to-end in Go, React, and TypeScript. You don''t hand off at
+    a layer boundary. You own the outcome.</li> <li><strong>Obsess over craft.</strong>
+    Reliability and responsiveness are design concerns, not afterthoughts. Care about
+    how the interface holds up when stakes are high.</li> <li><strong>Champion observability.</strong>
+    Use Honeycomb, Datadog, and Rollbar to understand and improve your systems. Operational
+    data drives stability, not just incident response.</li> <li><strong>Pick up slack.</strong>
+    You''ll notice gaps and close them — not because you were asked, but because that''s
+    the standard we hold ourselves to.</li> </ul> <h2><strong>What You''ll Bring</strong></h2>
+    <ul> <li><strong>AI-native engineering practices.</strong> You use AI tools daily
+    and can speak to what you''ve built, where they changed your approach, and where
+    they fall short.&nbsp;</li> <li><strong>A track record of shipping.</strong> You''ve
+    built something real and put it in front of users. 3+ years of production full-stack
+    experience.</li> <li><strong>Full-stack depth.</strong> Strong React and TypeScript.
+    Comfortable owning backend services in Go: API design, data modeling, service
+    integration.</li> <li><strong>System design.</strong> You think about architecture,
+    not just features. You make conscious tradeoffs and document your reasoning.</li>
+    <li><strong>Production mindset.</strong> Latency, responsiveness, and reliability
+    are design concerns. You''re comfortable operating services in a distributed environment.</li>
+    </ul> <h2><strong>Sound like you?</strong></h2> <p>You''ve stopped waiting for
+    AI to mature and are already building with it, not as a productivity trick, but
+    as a core part of how you think about problems. You care about the product as
+    much as the code. You''re drawn to work where the patterns don''t exist yet and
+    the best answer requires you to invent it. If that''s how you already operate,
+    we want to talk.</p><div class="content-pay-transparency"><div class="pay-input"><div
+    class="title">Canada Base Pay Range</div><div class="pay-range"><span>$124,000</span><span
+    class="divider">&mdash;</span><span>$155,000 CAD</span></div></div></div><div
+    class="content-conclusion"><p></p> <p>We will ensure that individuals with disabilities
+    are provided reasonable&nbsp;accommodation to participate in the job application
+    or interview process, to perform&nbsp;essential job functions, and to receive
+    other benefits and privileges of employment.&nbsp;Please contact us to request
+    accommodation.</p> <p><strong>About CircleCI</strong></p> <p>CircleCI is the world’s
+    largest continuous integration/continuous delivery (CI/CD)&nbsp;platform, and
+    the hub where code moves from idea to delivery. As one of the most-used&nbsp;DevOps
+    tools - processing more than 3 million jobs a day - CircleCI has unique access
+    to&nbsp;data on how the most effective engineering teams work, and the tools to
+    help software&nbsp;companies successfully leverage the power of AI into their
+    commercial applications.&nbsp;Companies like Hinge, HuggingFace, and Samsung use
+    us to improve engineering team&nbsp;productivity, release better products, and
+    g'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.8
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-18'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.032101+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

@@ -1,0 +1,114 @@
+id: fivetran-senior-sales-engineering-specialist-kubernetes-docker-contai
+name: Fivetran Senior Sales Engineering Specialist - Kubernetes, Docker & Containerization
+track: job
+status: research
+outcome: null
+target:
+  organization: Fivetran
+  url: https://boards.greenhouse.io/fivetran
+  application_url: https://www.fivetran.com/careers/job?gh_jid=7676567003
+  portal: greenhouse
+  location: Remote, California, United States, AMER
+  location_class: us-remote
+  description: '<div class="content-intro"><p>From Fivetran’s founding until now,
+    our mission has remained the same: to make access to data as simple and reliable
+    as electricity. With Fivetran, customer data arrives in their warehouses, canonical
+    and ready to query, with no engineering or maintenance required. We’re proud that
+    more organizations continue to leverage our technology every day to become truly
+    data-driven.</p></div><p><span style="font-size: 10pt;"><strong>About the Role</strong></span></p>
+    <p><span style="font-size: 10pt;">Fivetran is building data pipelines to power
+    the modern data stack for thousands of companies.</span></p> <p><span style="font-size:
+    10pt;">We’re looking for a talented presales individual with deep expertise in
+    containerization to join our global sales engineering specialist team. As a Sales
+    Engineering Specialist focused on our Hybrid Deployment architecture, you will
+    work closely with our sales and field sales engineering teams to accelerate our
+    customers’ and prospects’ understanding of the value of our Hybrid Deployment
+    model, an architecture steeped in containerization, Kubernetes, Docker and Podman.
+    In addition, you will be tasked with working cross-functionally with our SRE and
+    Product teams to ensure comprehensive support for Hybrid Deployment mechanisms
+    and services.</span></p> <p><span style="font-size: 10pt;">This is a full-time
+    position based remotely in the United States.</span></p> <p><span style="font-size:
+    10pt;"><strong>Technologies You’ll Use</strong></span></p> <p><span style="font-size:
+    10pt;">In this role, you will be expected to have a deep understanding of the
+    following technologies:</span></p> <ul> <li style="font-size: 10pt;"><span style="font-size:
+    10pt;">Container management software including Kubernetes, Docker, and Podman.</span></li>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;">Fivetran''s data integration
+    platform, deployment and connectivity methods, and automation/abstraction technologies
+    for infrastructure creation and management.</span></li> <li style="font-size:
+    10pt;"><span style="font-size: 10pt;">Cloud computing platforms such as AWS, Azure,
+    and Google Cloud Platform, especially their Kubernetes managed services Amazon
+    Elastic Kubernetes Service, Azure Kubernetes Service, and Google Kubernetes Engine.
+    Plus, the networking considerations that arise working with these technologies.</span></li>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;">Other data architecture
+    considerations critical to our customers’ success: databases, high availability,
+    SaaS applications and their APIs, GenAI architectures, cloud data warehouses,
+    business intelligence, etc.</span></li> </ul> <p><span style="font-size: 10pt;"><strong>What
+    You’ll Do</strong></span></p> <ul> <li style="font-size: 10pt;"><span style="font-size:
+    10pt;">Create, secure, network, and validate containerized hybrid deployment data
+    pipeline architectures in conjunction with our customers, account executives,
+    and field sales engineering teams, for maximum scalability and security.</span></li>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;">Work closely with
+    Fivetran’s Product and engineering teams to ensure our Hybrid Deployment capabilities
+    are fit for purpose, secure, cost-effective, and well implemented.</span></li>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;">Stay up-to-date on
+    the latest technologies and trends in containerization, security, autoscaling
+    and secure data management.</span></li> <li style="font-size: 10pt;"><span style="font-size:
+    10pt;">Teach, enable, and coach your peers at Fivetran on the virtues and techniques
+    of Hybrid Deployment and how to deliver its value to customers.</span></li> </ul>
+    <p><span style="font-size: 10pt;"><strong>Skills We’re Looking For</strong></span></p>
+    <ul> <li style="font-size: 10pt;"><span style="font-size: 10pt;">2+ years of extensive
+    work with Kubernetes or Docker, and/or other container technologies.</span></li>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;">Hands-on expertise
+    with modern cloud, on-premise, and hybrid-cloud data architectures and connectivity
+    mechanisms.</span></li> <li style="font-size: 10pt;"><span style="font-size: 10pt;">Strong
+    analytical and problem-solving skills, particularly in the context of containerized
+    architectures, preferably in customer contexts.</span></li> <li style="font-size:
+    10pt;"><span style="font-size: 10pt;">Passion for secure, scalable data pipelines.</span></li>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;">Curiosity to learn
+    and assimilate technical information quickly, enthusiasm to share and teach others.</span></li>
+    </ul> <p><span style="font-size: 10pt;">This position qualifies for Fivetran’s
+    incentive plan, and it’s common for employees in this role to achieve the total
+    on-target earnings.</span></p> <p><span style="font-size: 10pt;">#LI-Remote <span
+    data-sheets-root="1">#LI-MT2</span></span></p><div class="content-pay-transparenc'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.9
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-11'
+  posting_date: '2026-04-10'
+  date_source: first_published
+  date_added: '2026-04-11'
+  discovered: '2026-04-11T10:25:06.138604+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-11'

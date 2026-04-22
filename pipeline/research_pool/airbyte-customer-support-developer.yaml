@@ -1,0 +1,116 @@
+id: airbyte-customer-support-developer
+name: Airbyte Customer Support Developer
+track: job
+status: research
+outcome: null
+target:
+  organization: Airbyte
+  url: https://jobs.ashbyhq.com/airbyte
+  application_url: https://jobs.ashbyhq.com/airbyte/da3aba3c-37cd-4dc8-b55d-8fe6cc415db8
+  portal: ashby
+  location: Remote (West Coast)
+  location_class: remote-global
+  description: 'Airbyte is the open‑source standard for data movement. We''ve enabled
+    data teams to move data from applications, APIs, unstructured sources and databases
+    to data warehouses, lakes, and AI applications. With tens of thousands of connectors
+    built and hundreds of thousands of companies adopting Airbyte, we''ve proven the
+    economics of data integration at scale. And now Airbyte is building the frontier
+    agentic data infrastructure, purpose-built for AI agents that need fast, accurate
+    access to data across hundreds of sources. Our mission: make data available and
+    actionable, everywhere. We''ve raised $181M from the world''s top investors (Benchmark,
+    Accel, Altimeter, Coatue, Y Combinator, etc.) and we believe in product-led growth,
+    where we build something awesome that all our users love. We’ve raised enough
+    capital to explore boldly, but we still choose to move quickly, stay scrappy,
+    and experiment constantly as we find the right paths in an AI-native landscape.
+    Please note that this role requires proficiency in Python. If your experience
+    is more focused on API investigation and you have a lighter coding background,
+    we encourage you to consider applying for our Technical Support Engineer role
+    instead. The Role: Are you the kind of developer who gets a rush from cracking
+    a gnarly API integration issue? Do you thrive at the intersection of writing code
+    and helping customers succeed? As a Customer Support Developer (APIs) at Airbyte,
+    you''ll combine hands-on development skills with deep technical empathy to support
+    our growing cloud, embedded, and open-source integration platform. This isn''t
+    a traditional support role - you''ll be writing Python, shipping contributions
+    to our open-source connectors and CDK, building features in the Connector Builder,
+    and directly shaping how customers integrate with hundreds of APIs. You''ll champion
+    the customer voice alongside our engineering and product teams every day, getting
+    your hands dirty in the code. What You’ll Do: Customer Support & Technical Troubleshooting
+    Serve as the primary technical escalation point for API-related customer issues,
+    responding via email, ticketing systems, and video calls with precision and clarity.
+    Triage and prioritize incoming issues with urgency, consistently meeting SLA targets
+    while leveraging AI tools to work smarter and resolve issues faster. Dig into
+    complex issues across REST/GraphQL APIs, connectors, data pipelines, and SaaS
+    integrations -- not just finding workarounds but partnering with Engineering to
+    root-cause and drive real fixes. Reproduce customer-reported bugs by inspecting
+    API request/response payloads, connector logs, and sync state, and document findings
+    with enough technical detail for Engineering to act on immediately. Support embedded
+    platform customers through onboarding and troubleshooting, including OAuth flows,
+    widget tokens, scoped API tokens, and connector configuration. API & Connector
+    Development Get hands-on with customers building and debugging integrations, helping
+    them navigate the Airbyte API and third-party APIs with confidence - from authentication
+    and pagination to rate limiting, error handling, and webhooks. Test and validate
+    API endpoints, review request/response payloads, and guide customers through integration
+    best practices. Support customers with the Embedded API, covering source creation,
+    connector template management, and widget token authentication. Help customers
+    building on the Airbyte Connector SDK find their footing, including YAML-based
+    connector definitions, OpenAPI specs, and cassette-based testing workflows. Contribute
+    directly to Airbyte''s open-source connectors and the Python Connector Development
+    Kit (CDK) - fix bugs, improve error handling, add incremental sync support, and
+    submit pull requests to the airbyte and airbyte-python-cdk repositories. Build
+    and ship features in the Connector Builder to improve the low-code/no-code experience
+    for users creating API connectors using declarative YAML manifests. Stay sharp
+    on Airbyte''s API surface, new connector releases, and platform updates so your
+    guidance is always accurate and timely. Cross-Functional Collaboration & Enablement
+    Be the voice of the customer within Airbyte, working closely with Engineering
+    and Product to surface issues, advocate for feature requests, and ensure customer
+    pain points actually influence the roadmap. Partner with Solutions Engineering
+    and Sales Engineering to provide white-glove technical onboarding for enterprise
+    customers, including custom connector development, API integration architecture
+    reviews, and production readiness assessments. Train and mentor Technical Support
+    Engineers on API connector concepts, including REST/GraphQL fundamentals, OAuth
+    flows, pagination patterns, rate limiting strategies, error handling, and the
+    Airbyte protocol (spec, discover, check, read). Partner with Sales and Customer
+    Success for technical conversations, onboarding, and expansion efforts, bringing
+    the kind of product depth that helps '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.9
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 4
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-03'
+  posting_date: '2026-04-02'
+  date_source: published_at
+  date_added: '2026-04-03'
+  discovered: '2026-04-03T10:15:35.552378+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-03'

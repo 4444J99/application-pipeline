@@ -1,0 +1,85 @@
+id: stainless-software-engineer-generalist
+name: Stainless Software Engineer, Generalist
+track: job
+status: research
+outcome: null
+target:
+  organization: Stainless
+  url: https://jobs.ashbyhq.com/stainlessapi
+  application_url: https://jobs.ashbyhq.com/stainlessapi/41c56e31-5515-48d7-a872-e775ee5c682e
+  portal: ashby
+  location: New York Office
+  location_class: us-onsite
+  description: 'About Stainless Stainless is a fast-growing tech startup building
+    the future of APIs. Our customers include industry leaders like OpenAI, Anthropic,
+    and Cloudflare. We have raised over $35 million from a16z, Sequoia, and founders/C-levels
+    from Stripe, Datadog, Segment, Linear, and more. We are headquartered in NYC,
+    just west of SoHo, and are a team of ~60 strong expecting to double in the next
+    ~9 to 12 months. Role Joining as a generalist engineer, you’ll have a focus area,
+    but we’ll all be pitching in on every aspect of the company and acting with a
+    high degree of ownership in a collegial, humble atmosphere. You''ll build the
+    core systems that form the foundation of the company for years, both scrappily
+    getting things done wherever help is needed and thinking deeply on foundational
+    architecture. Who you are Experience level to build anything you can imagine,
+    with great design and sound architecture. Built and/or maintained a popular open-source
+    project. Alternatively, maintained internal abstractions used across an engineering
+    org. Experience consuming APIs you didn’t control, produced APIs you didn’t consume,
+    and been the sole consumer of an API you built and could iterate on. Location:
+    onsite in our physical office location in Manhattan, New York. Experience both
+    designing and stewarding APIs at scale, whether internal or external. Ability
+    to build great abstractions that stand the test of time when used by other engineers
+    of varying skill levels, beginner to formidable. A true passion for developer
+    experience and empathy for developers from all backgrounds (junior, non-traditional
+    etc). Quick learner, self-motivated, and able to execute quickly whilst maintaining
+    high quality. Great product sense. Programming languages: Expertise with TypeScript,
+    our language of choice. Broad polyglot interest/experience – comfort working across
+    multiple programming languages. Bonus points: Have used GraphQL and appreciate
+    its benefits and drawbacks. Experience / interest working with ASTs (eg, lint
+    rules, rich codemods, compilers, etc). Experience and/or interest in writing blogs,
+    speaking at conferences and engaging with developer communities. Benefits We offer
+    competitive salary and generous equity grants. Great healthcare coverage options
+    (e.g., fully covered platinum plans). Paid commuter benefits & similar. Paid team
+    lunch/meals during workdays. Flexible PTO plus 3 weeks of company-wide vacation
+    a year (2 weeks in December, 1 week at the end of the summer). Flexible WFH and
+    1 month fully remote per year ("remote February").'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 5.9
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 1
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.110784+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

@@ -1,0 +1,106 @@
+id: lithic-senior-software-engineer-data-platform
+name: Lithic Senior Software Engineer, Data Platform
+track: job
+status: research
+outcome: null
+target:
+  organization: Lithic
+  url: https://boards.greenhouse.io/lithic
+  application_url: https://job-boards.greenhouse.io/lithic/jobs/5977140004
+  portal: greenhouse
+  location: 'Remote '
+  location_class: remote-global
+  description: '<div class="content-intro"><p>Lithic is the modern card issuing and
+    processing platform empowering ambitious financial companies to build the future
+    of payments.</p> <p>Our infrastructure powers card programs for 100+ innovative
+    clients, from fintechs reimagining credit and digital banking to platforms transforming
+    disbursements and spend management. Companies like Mercury, Flex, and Novo rely
+    on Lithic''s developer-friendly APIs, direct network connections, and flawless
+    reconciliation to launch and scale card programs in weeks, not years.</p> <p>We''re
+    building a future where access to better financial products materially improves
+    people''s lives, free from the constraints of 30-year-old mainframes and legacy
+    processors. We''re proud to be backed by world-class investors who share that
+    vision, including Bessemer Venture Partners, Index Ventures, Spark Capital, Stripes,
+    and Mastercard, along with many others.&nbsp;</p> <p>We''re a team of 160+ across
+    26 states and 7 countries, headquartered in New York City.&nbsp;</p></div><p>We''re
+    hiring a <strong>Senior Software Engineer</strong> to join our Infrastructure
+    team and build the backend services and APIs that make Lithic''s data accessible
+    across the organization. You''ll spend roughly 80% of your time designing and
+    building production backend services — REST APIs that serve data from Snowflake
+    and other sources to internal teams and systems — and 20% supporting our data
+    platform (pipelines, dbt, Airflow). You''ll partner closely with the Analytics
+    Engineering team to expose well-modeled data through clean, reliable APIs.</p>
+    <h3><strong>Job responsibilities:</strong></h3> <p><strong>Software Engineering
+    (~80%)</strong></p> <ul> <li>Design, build, and maintain backend services and
+    REST APIs that serve data from various SQL subsystems and other data sources</li>
+    <li>Develop well-tested, production-grade Python services with clean API contracts,
+    proper authentication, versioning, and error handling</li> <li>Work closely with
+    the Analytics Engineering team to expose modeled data (billing, settlement, finance)
+    through APIs that downstream consumers can rely on</li> <li>Build internal tooling
+    and services that enable the broader organization to self-serve their data needs
+    without writing SQL</li> <li>Participate in code reviews, system design discussions,
+    and engineering best practices across the Infrastructure org</li> <li>Contribute
+    to service observability: logging, metrics, alerting, and on-call practices for
+    the services you own</li> </ul> <p><strong>Data Engineering (~20%)</strong></p>
+    <ul> <li>Maintain and improve existing data pipelines that move data from source
+    systems into Snowflake (Airflow, Airbyte)</li> <li>Contribute to the dbt project
+    alongside the Analytics Engineering team — model improvements, test coverage,
+    and data quality</li> <li>Support data governance practices including access controls,
+    lineage documentation, and data quality standards</li> </ul> <h3><strong>Qualifications:</strong></h3>
+    <p><strong>Required:</strong></p> <ul> <li>Strong Python proficiency with experience
+    building backend services and REST APIs</li> <li>Experience with web frameworks
+    such as FastAPI, Flask, Django, or similar</li> <li>Solid SQL skills and hands-on
+    experience with modern cloud data warehouses (Snowflake strongly preferred)</li>
+    <li>Experience designing and building production APIs with proper authentication,
+    versioning, and error handling</li> <li>Familiarity with CI/CD, automated testing,
+    and operational reliability practices</li> <li>A track record of shipping reliable,
+    well-tested services in production environments</li> <li>Comfort navigating ambiguity
+    and driving projects forward with minimal oversight</li> </ul> <p><strong>Preferred:</strong></p>
+    <ul> <li>Experience with data pipeline development using tools like Airflow, Airbyte,
+    Dagster, or similar</li> <li>Familiarity with dbt or similar transformation frameworks</li>
+    <li>Experience in fintech, payments, or other financial services environments</li>
+    <li>Familiarity with AWS services (Lambda, S3, RDS, API Gateway, ECS/Fargate)</li>
+    <li>Kafka or event streaming experience</li> <li>Infrastructure-as-code experience
+    (Terraform, Pulumi)</li> <li>Experience at a company processing high transaction
+    volumes where correctness and reliability are non-negotiable</li> </ul> <p>The
+    annual Canadian salary range for this role is CA$170,000 - CA$280,000 plus equity.
+    This salary range is inclusive of several career levels at Lithic and will be
+    narrowed during the interview process based on the candidate''s experience and
+    qualifications.</p> <p>This is a remote position. However, candidates must be
+    located in the United States, Canada, Netherlands, Poland, or Czech Republic.
+    We do not offer visa sponsorship or assistance.</p> <p><strong>Crack the code</strong></p>
+    <p>A hidden code is tucked into this application. Find it and enter it below to
+    continue.</p> <div id="message-list_1774282931.635939"> <div> <div> <div> <div>
+    <di'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 0
+  identity_position: founder-operator
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-22'
+  posting_date: '2026-04-20'
+  date_source: first_published
+  date_added: '2026-04-22'
+  discovered: '2026-04-22T21:40:49.039965+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-22'

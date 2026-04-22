@@ -1,0 +1,113 @@
+id: intercom-senior-engineer-infrastructure-platform
+name: Intercom Senior Engineer, Infrastructure Platform
+track: job
+status: research
+outcome: null
+target:
+  organization: Intercom
+  url: https://boards.greenhouse.io/intercom
+  application_url: https://job-boards.greenhouse.io/intercom/jobs/7731665
+  portal: greenhouse
+  location: Dublin, Ireland
+  location_class: international
+  description: '<div class="content-intro"><p>Intercom is the AI Customer Service
+    company on a mission to help businesses provide incredible customer experiences.&nbsp;</p>
+    <p>Our AI agent Fin, the most advanced customer service AI agent on the market,
+    lets businesses deliver always-on, impeccable customer service and ultimately
+    transform their customer experiences for the better. Fin can also be combined
+    with our Helpdesk to become a complete solution called the Intercom Customer Service
+    Suite, which provides AI enhanced support for the more complex or high touch queries
+    that require a human agent.&nbsp;</p> <p>Founded in 2011 and trusted by nearly
+    30,000 global businesses, Intercom is setting the new standard for customer service.
+    Driven by our core values, we push boundaries, build with speed and intensity,
+    and consistently deliver incredible value to our customers.</p></div><h2>What''s
+    the opportunity?&nbsp;</h2> <p>Intercom is the AI Customer Agent company, and
+    our platform is what makes shipping that innovation possible. At Intercom, <a
+    href="https://www.intercom.com/blog/shipping-is-your-companys-heartbeat/">shipping
+    is our heartbeat</a>, and product teams shouldn''t have to worry about infrastructure—it
+    should “just work.”</p> <p>We are hiring a Senior Engineer for the Infra-Platform
+    team, part of our broader Infraservices Group. Our team’s mission is simple but
+    powerful: prevention is better than cure. We provide the tooling and platforms
+    that make reliability, observability, secure deployment, and velocity the default
+    path for every engineer. We make it incredibly easy to do the right thing, and
+    appropriately hard to do the wrong thing.</p> <p>You will be joining a high-performing,
+    high-autonomy team of deeply tenured engineers (our median tenure is five years!)
+    who hold a high bar for execution and collaborative problem-solving. As a Senior
+    Engineer, you will be a critical force-multiplier for the entire R&amp;D organization.
+    You won’t just keep the lights on; you will drive generational changes in our
+    architecture, automate away toil, and eradicate manual work so our product teams
+    can focus entirely on delivering customer value.</p> <p>Learn how we <a href="https://www.intercom.com/blog/the-safety-of-speed-shipping-code-at-intercom/">ship
+    250 versions of Intercom per day</a>, discover our engineering culture at <a href="http://intercom.engineering/">intercom.engineering</a>,
+    and explore <a href="https://www.intercom.com/blog/intercom-product-principles/">our
+    engineering values</a>.</p> <h2><strong>What you’ll do?</strong></h2> <ul> <li>Automate
+    everything: Eradicate manual, repetitive, and unscalable work. You will view infrastructure
+    challenges as software problems, building automation and tooling that accelerates
+    R&amp;D.</li> <li>Drive architectural evolution: Plan, design, and execute generational
+    changes to Intercom’s core infrastructure. You will navigate complex scaling challenges
+    and build elasticity into our systems.</li> <li>Deliver operational excellence:
+    Own the reliability of our core services. You will respond to operational events,
+    dig deep to understand why they happened, and engineer permanent, preventative
+    solutions.&nbsp;</li> <li>Be full stack: When there is an issue, you don’t stop
+    at the infrastructure layer. You dive deep into our application code to trace
+    problems out to the edge and fix customer-facing issues.</li> <li>Force-multiply
+    through enablement: Abstract away shared concerns like security, compute, availability,
+    and costs, so product engineers don''t have to think about them. You''ll scale
+    your expertise through exceptional, easy-to-use agent skills, documentation, and
+    reliable defaults.</li> <li>Raise the bar: Hold yourself and your teammates accountable
+    with deep empathy. Share your domain expertise, review code quickly, unblock your
+    peers, and foster a culture of continuous learning and support.</li> <li>Ship
+    production-grade systems: Independently lead complex initiatives, owning the design,
+    implementation, testing, and operational runbooks for high-impact infrastructure
+    projects.</li> </ul> <h2><strong>What skills do I need?</strong></h2> <p>We don’t
+    expect perfection. If you have most of this and you’re excited, we want to hear
+    from you. We can shape the position for the right person.</p> <ul> <li>Cloud infrastructure
+    expertise: Multiple years designing, building, and operating high-scale distributed
+    systems and platforms in a cloud environment (ideally AWS), with accountability
+    for availability, performance, and costs.</li> <li>Engineering rigor: Deep knowledge
+    of modern programming languages with&nbsp; infrastructure-as-code as a nice to
+    have. You have a track record of treating infrastructure as a software engineering
+    discipline.</li> <li>Operational obsession: Expert grasp of reliability, performance,
+    and failure modes. You define metrics, question outliers, and rely on telemetry
+    to guide your decisions. You treat uptime as a feature and take immense pride
+    in the resilienc'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.8
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: '2026-03-19'
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.337593+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

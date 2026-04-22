@@ -1,0 +1,114 @@
+id: fivetran-staff-technical-writer
+name: Fivetran Staff Technical Writer
+track: job
+status: research
+outcome: null
+target:
+  organization: Fivetran
+  url: https://boards.greenhouse.io/fivetran
+  application_url: https://www.fivetran.com/careers/job?gh_jid=7498409003
+  portal: greenhouse
+  location: Bengaluru, Karnataka, India, APAC
+  location_class: international
+  description: '<div class="content-intro"><p>From Fivetran’s founding until now,
+    our mission has remained the same: to make access to data as simple and reliable
+    as electricity. With Fivetran, customer data arrives in their warehouses, canonical
+    and ready to query, with no engineering or maintenance required. We’re proud that
+    more organizations continue to leverage our technology every day to become truly
+    data-driven.</p></div><p><span style="font-size: 10pt;"><strong>About the Role</strong></span></p>
+    <p><span style="font-size: 10pt;">Fivetran’s documentation receives rave reviews
+    from our customers—it is a core part of our product. The Technical Communications
+    Team owns technical documentation and in-product text. Our globally distributed
+    team of technical writers collaborates with Product Managers, Engineers, Designers,
+    and Technical Support to produce world-class documentation and UI copy that helps
+    our users succeed.</span></p> <p><span style="font-size: 10pt;">As a Staff Technical
+    writer, your mission is to make Fivetran docs a shining beacon of documentation
+    excellence. You will write and edit enterprise documentation that empowers our
+    customers to use Fivetran and understand how our database and data lake products
+    work. You’ll collaborate with engineers, product managers, support engineers,
+    and other technical writers. You join a friendly team of technical writers distributed
+    among our international offices.&nbsp;</span></p> <p><span style="font-family:
+    arial, helvetica, sans-serif; font-size: 10pt;">This is a full-time position based
+    out of our Bangalore office. Our hybrid work model offers a blend of remote flexibility
+    and in-person collaboration, including two days in the office each week to connect
+    and build as a team.</span></p> <p><span style="font-size: 10pt;"><strong><span
+    style="font-family: arial, helvetica, sans-serif;">What You’ll Do</span>&nbsp;</strong></span></p>
+    <ul> <li style="font-size: 10pt;"><span style="font-size: 10pt;">Create and maintain
+    clear, accurate product documentation and release notes that help customers succeed.</span></li>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;">Review and refine
+    customer-facing content, including error messages and UI text.</span></li> <li
+    style="font-size: 10pt;"><span style="font-size: 10pt;">Use a docs-as-code approach
+    to co-author documentation with engineers, product managers, and contributors
+    across the company.</span></li> <li style="font-size: 10pt;"><span style="font-size:
+    10pt;">Improve existing documentation by ensuring technical accuracy, clarity,
+    and consistency.</span></li> <li style="font-size: 10pt;"><span style="font-size:
+    10pt;">Collaborate with a global writing team to define and evolve documentation
+    standards, style, and terminology.</span></li> <li style="font-size: 10pt;"><span
+    style="font-size: 10pt;">Partner with engineers, SMEs, and cross-functional teams
+    to deliver best-in-class technical documentation.</span></li> <li style="font-size:
+    10pt;"><span style="font-size: 10pt;">Contribute to style guides, templates, and
+    other shared resources that raise the bar for all company content.</span></li>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;">Act as a writing resource
+    for other teams, helping improve content quality across the organization.</span></li>
+    </ul> <p><span style="font-size: 10pt;"><strong><span style="font-family: arial,
+    helvetica, sans-serif;">Skills We’re Looking For</span>&nbsp;</strong></span></p>
+    <ul> <li style="font-size: 10pt;"><span style="font-size: 10pt;"><strong>Extensive
+    expertise in database documentation:</strong> 8+ years documenting databases or
+    cloud applications for a US-centric audience, with strong knowledge of SQL queries,
+    schemas, tables, permissions, and procedures.&nbsp;</span></li> <li style="font-size:
+    10pt;"><span style="font-size: 10pt;"><strong>Deep technical knowledge:</strong>
+    Experience with complex database and data warehouse technologies, cloud platforms
+    (AWS, Azure, GCP), data pipelines (ETL/ELT), and replication techniques.</span></li>
+    <li style="font-size: 10pt;"><span style="font-size: 10pt;"><strong>Scripting,
+    automation, and AI proficiency: </strong>Skilled at leveraging scripting, automation,
+    and AI tools to streamline documentation workflows and enhance technical content
+    delivery.</span></li> <li style="font-size: 10pt;"><span style="font-size: 10pt;"><strong>Exceptional
+    communication skills</strong>: Proven ability to craft clear, concise, and accurate
+    documentation; strong technical editing abilities; impeccable grammar; and consistent
+    application of style guides.</span></li> <li style="font-size: 10pt;"><span style="font-size:
+    10pt;"><strong>Documentation leadership:</strong> Expertise in content planning,
+    creation, and review processes, with a track record of implementing best practices
+    that elevate documentation quality.</span></li> <li style="font-size: 10pt;"><span
+    style="font-size: 10pt;"><strong>Project management:</strong> Experience leading
+    smal'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.7
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.608226+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-25'

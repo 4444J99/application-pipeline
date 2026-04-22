@@ -1,0 +1,113 @@
+id: mongodb-lead-bus-sys-engineering-cpq
+name: MongoDB Lead, Bus Sys Engineering - CPQ
+track: job
+status: research
+outcome: null
+target:
+  organization: MongoDB
+  url: https://boards.greenhouse.io/mongodb
+  application_url: https://www.mongodb.com/careers/job/?gh_jid=7778984
+  portal: greenhouse
+  location: Gurugram
+  location_class: unknown
+  description: '<p>The IT SaaS Engineering Team plays a critical role in optimizing
+    MongoDB sales processes, streamlining customer interactions, and maximizing the
+    efficiency of our sales efforts. By leveraging Salesforce, the team ensures that
+    business users have the tools, automation, security, and governance needed to
+    effectively manage customer relationships, support operational processes, and
+    drive business growth.</p> <p>With deep expertise in Salesforce development, platform
+    governance, automation, and system operations, the team continuously enhances
+    the CRM platform to meet evolving business needs. The team partners closely with
+    stakeholders across Sales Operations, Revenue Operations, Security, Compliance,
+    and Engineering to deliver scalable, secure, and reliable Salesforce solutions.</p>
+    <p>We are looking to speak to candidates who are based in Gurgaon for our hybrid
+    working model.</p> <h3>Role Overview</h3> <p>We are looking for a highly experienced
+    <strong>Lead Salesforce Engineer</strong> to drive the architecture, design, and
+    evolution of critical Salesforce and CRM solutions across our business systems
+    landscape. This role combines deep <strong>technical leadership</strong>, hands-on
+    <strong>solution design</strong>, cross-functional <strong>stakeholder partnership</strong>,
+    <strong>people management</strong>, and a modern engineering mindset that embraces
+    <strong>AI-powered development responsibly</strong> to improve productivity, quality,
+    and long-term platform health.</p> <h3>What you’ll do</h3> <ul> <li>Lead the <strong>architecture</strong>,
+    <strong>design</strong>, and <strong>development</strong> of scalable Salesforce
+    solutions, including <strong>custom applications</strong>, <strong>automations</strong>,
+    and <strong>integrations</strong></li> <li>Translate <strong>business requirements</strong>
+    into <strong>secure</strong>, <strong>maintainable</strong>, and <strong>scalable
+    technical solutions</strong> aligned with long-term <strong>platform strategy</strong></li>
+    <li>Partner closely with <strong>business stakeholders</strong>, <strong>product
+    teams</strong>, and <strong>engineering teams</strong> to refine requirements
+    and deliver <strong>high-quality solutions</strong></li> <li>Oversee <strong>integrations</strong>
+    between Salesforce and other <strong>enterprise platforms</strong>, ensuring <strong>reliable
+    data flow</strong> and <strong>sound system design</strong></li> <li>Drive <strong>platform
+    optimization</strong> across <strong>performance</strong>, <strong>scalability</strong>,
+    <strong>usability</strong>, <strong>maintainability</strong>, and <strong>governance</strong></li>
+    <li>Establish and enforce <strong>engineering standards</strong> for <strong>coding</strong>,
+    <strong>testing</strong>, <strong>documentation</strong>, <strong>CI/CD</strong>,
+    and <strong>release management</strong></li> <li>Troubleshoot <strong>complex
+    technical</strong> and <strong>production issues</strong> and drive <strong>long-term</strong>,
+    <strong>scalable resolutions</strong></li> <li>Maintain <strong>technical documentation</strong>,
+    including <strong>architecture decisions</strong>, <strong>design specifications</strong>,
+    and <strong>implementation details</strong></li> <li>Stay current with <strong>Salesforce
+    platform capabilities</strong>, <strong>releases</strong>, and <strong>best practices</strong>,
+    and proactively recommend improvements</li> <li><strong>Proactively identify process
+    and technical gaps</strong>, and help define and drive <strong>tech debt reduction
+    initiatives</strong>, <strong>platform modernization efforts</strong>, and <strong>engineering
+    efficiency improvements</strong> across the Salesforce ecosystem</li> <li>Leverage
+    <strong>AI-powered engineering tools</strong> such as <strong>Apex Guru</strong>,
+    <strong>GitHub Copilot</strong>, <strong>Salesforce Agentforce/Vibes</strong>,
+    <strong>Claude Code</strong>, and similar capabilities to improve <strong>development
+    productivity</strong>, <strong>code quality</strong>, <strong>design effectiveness</strong>,
+    <strong>troubleshooting</strong>, and <strong>documentation</strong>, while applying
+    strong judgment around <strong>security</strong>, <strong>privacy</strong>, <strong>accuracy</strong>,
+    and <strong>responsible AI usage</strong></li> </ul> <h3>Responsibilities</h3>
+    <ul> <li>Provide <strong>technical leadership</strong> through <strong>architecture
+    reviews</strong>, <strong>design reviews</strong>, <strong>code reviews</strong>,
+    and <strong>engineering best practices</strong></li> <li>Act as a <strong>subject
+    matter expert</strong> on <strong>Salesforce development</strong>, <strong>platform
+    capabilities</strong>, <strong>automation</strong>, <strong>integrations</strong>,
+    and <strong>scalable CRM solution design</strong></li> <li>Lead <strong>technical
+    design sessions</strong> and identify gaps between <strong>current-state</strong>
+    and <strong>future-state solutions</strong></li> <li>Evaluate <strong>emerging
+    technologies</strong>, '
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 8.3
+  identity_position: governance-architect
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 9
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/governance-architect-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-18'
+  posting_date: '2026-04-17'
+  date_source: first_published
+  date_added: '2026-04-18'
+  discovered: '2026-04-18T10:15:25.456843+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-18'

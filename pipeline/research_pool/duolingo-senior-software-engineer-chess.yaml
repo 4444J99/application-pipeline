@@ -1,0 +1,111 @@
+id: duolingo-senior-software-engineer-chess
+name: Duolingo Senior Software Engineer, Chess
+track: job
+status: research
+outcome: null
+target:
+  organization: Duolingo
+  url: https://boards.greenhouse.io/duolingo
+  application_url: https://careers.duolingo.com/jobs/8445379002?gh_jid=8445379002
+  portal: greenhouse
+  location: New York, NY
+  location_class: us-onsite
+  description: '<p>Our mission at Duolingo is to develop the best education in the
+    world and make it universally available. It’s a big mission, and that’s where
+    you come in!</p> <p>At Duolingo, you’ll join a team that cares about finding <a
+    href="https://blog.duolingo.com/tag/engineering/?utm_source=greenhouse.com&amp;utm_medium=referral&amp;utm_campaign=engblog_gh_091224">innovative
+    solutions to complex technical problems</a>, running countless experiments (300+
+    at a time!) with our massive user base to make data-driven decisions, and educating
+    our users and employees alike. You’ll have limitless learning opportunities, mentorship
+    and collaboration with world-class minds, and a variety of projects with large
+    scopes — while doing work that’s both fun and meaningful.&nbsp;</p> <p>Join our
+    life-changing mission to develop education for our half a billion (and growing!)
+    learners around the world.</p> <hr> <p style="text-align: left;"><strong>About
+    the role...</strong></p> <p style="text-align: left;">The Chess team is building
+    Duolingo''s newest subject from the ground up, reimagining how millions of learners
+    discover and play chess. As an engineer on the team, you''ll build core gameplay
+    experiences, own projects end-to-end, and run fast experiments to shape the future
+    of the product. You''ll work at the intersection of chess and AI to create adaptive,
+    engaging features that make learning effective – and fun. We’re looking for engineers
+    who actively play chess, enjoy thinking deeply about the game, and want to help
+    shape how it’s taught to millions of learners.</p> <p><strong>🧠&nbsp; You will...</strong></p>
+    <ul> <li>Build and scale backend services that power Duolingo’s chess learning
+    experience</li> <li>Help design features such as game review, move explanations,
+    and chess learning systems</li> <li>Collaborate with AI researchers to develop
+    more human-like chess experiences and insights</li> <li>Contribute your chess
+    knowledge to help identify meaningful gameplay patterns and teaching moments</li>
+    <li>Work closely with product, design, and engineering partners to run fast experiments</li>
+    </ul> <p>&nbsp;</p> <p><strong>✅&nbsp; You have...</strong></p> <ul> <li>A Bachelor’s
+    degree in Computer Science or related technical field</li> <li>Experience programming
+    in Java, Python, or Kotlin</li> <li>Interest in how AI can enhance products and
+    user experiences</li> <li>Experience working in fast-moving product environments</li>
+    </ul> <p style="text-align: center;">&nbsp;</p> <p><strong>⭐&nbsp; Exceptional
+    candidates will have...</strong></p> <ul> <li>Active experience playing chess
+    with a rating around 1200+ (or equivalent familiarity with the game) on platforms
+    like Chess.com, Lichess, or similar</li> <li>You play chess regularly and enjoy
+    improving your game</li> <li>You can point to a rating or experience level</li>
+    <li>You’re excited about helping others learn chess</li> </ul> <hr><div class="content-pay-transparency"><div
+    class="pay-input"><div class="description"><p><strong>We post a multi-level salary
+    range for all of our roles.</strong></p> <p><em>This is not inclusive of the rest
+    of our awesome portfolio that includes equity compensation and world-class benefits.
+    Our salary ranges are the same for all US locations. Your recruiter can share
+    more details about the range for a specific level during the hiring process. </em><em>The
+    actual salary within the range is determined by many factors including but not
+    limited to, skills, experience, education, and internal equity.</em></p></div><div
+    class="title">Salary Range: </div><div class="pay-range"><span>$177,700</span><span
+    class="divider">&mdash;</span><span>$240,400 USD</span></div></div></div><div
+    class="content-conclusion"><p class="Z7ph2">Take a peek at how we care for our
+    employees'' holistic well-being with our benefits<a class="Z7ph2" href="https://careers.duolingo.com/#benefits">&nbsp;here</a>.</p>
+    <p class="Z7ph2">We will do everything we can within reason to make sure that
+    your interview takes place in an environment that fairly and accurately assesses
+    your skills. If you need assistance or accommodation, please contact&nbsp;<a class="Z7ph2"
+    href="mailto:accommodations@duolingo.com" target="_blank" data-stringify-link="mailto:accommodations@duolingo.com"
+    data-sk="tooltip_parent">accommodations@duolingo.com</a>.</p> <p class="Z7ph2">Duolingo
+    is proud to be an Equal Employment Opportunity employer. We do not discriminate
+    based upon race, religion, color, national origin, gender (including pregnancy,
+    childbirth, or related medical conditions), sexual orientation, gender identity,
+    gender expression, age, status as a protected veteran, status as an individual
+    with a disability, or other applicable legally protected characteristics.</p>
+    <p class="Z7ph2">By applying for this position your data will be processed as
+    per the<a class="Z7ph2" href="https://docs.google.com/document/d/e/2PACX-1vTX9GKeRMOMA9Vtm0vfGibrYPYz8ysl0Dg8KSXgj_PxeT5ChsdnNZZWtpxu4t7xillTPGnngnKCjIbV/pub">&nbsp;'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.9
+  identity_position: educator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/educator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-30'
+  posting_date: '2026-03-30'
+  date_added: '2026-03-30'
+  discovered: '2026-03-31T02:25:35.111348+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-30'

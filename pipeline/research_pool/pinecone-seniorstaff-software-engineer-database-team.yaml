@@ -1,0 +1,89 @@
+id: pinecone-seniorstaff-software-engineer-database-team
+name: Pinecone Senior/Staff Software Engineer, Database Team
+track: job
+status: research
+outcome: null
+target:
+  organization: Pinecone
+  url: https://jobs.ashbyhq.com/pinecone
+  application_url: https://jobs.ashbyhq.com/pinecone/4ef4269b-94c4-4c7c-93ee-15a882caa767
+  portal: ashby
+  location: New York City
+  location_class: us-onsite
+  description: 'About Pinecone Pinecone is the leading vector database for building
+    accurate and performant AI applications at scale in production. Pinecone''s mission
+    is to make AI knowledgeable. More than 9,000 customers across various industries
+    have shipped AI applications faster and more confidently with Pinecone''s developer-friendly
+    technology. Pinecone is based in New York and raised $138M in funding from Andreessen
+    Horowitz, ICONIQ, Menlo Ventures, and Wing Venture Capital. About the Team and
+    Role: Join a team that builds robust, real-time distributed systems for a cutting-edge
+    database. We care about performance, reliability, scalability, and most of all
+    learning and having fun together. Whether you’re a seasoned coder or just getting
+    started, if you’re passionate about technology and eager to learn, you’ll fit
+    right in. Who we are: We show up to work, ready to collaborate and build technologies
+    that make a difference, with people who genuinely care. We chase improvements
+    such as tail latencies, bytes throughput, cache hit rate, and operational cost
+    efficiency. We believe learning is ongoing and that even the most complex problems
+    can have simple solutions. What You’ll Do: Collaborate with teammates to design
+    and build database features that power AI applications. Learn how to tune performance
+    and support reliability in distributed systems (don’t worry, we’ll guide you).
+    Help Pinecone run smoothly on popular cloud providers. Take ownership of your
+    work and grow your skills every day. Have fun. Who You Are: 5+ years of work experience
+    - programming in Rust, Go, C++, or a comparable language. You’re genuinely curious
+    about distributed systems and eager to dive deep into technical challenges. You
+    approach problems with creativity and persistence, and you’re comfortable asking
+    thoughtful questions or seeking feedback. You’re excited to learn, value constructive
+    feedback, and appreciate mentorship. Bonus Points: You have hands-on experience
+    with cloud platforms (AWS, GCP, Azure) or have demonstrated an ability to pick
+    up new tools quickly. You’re comfortable thinking in async or multi-threaded environments,
+    or can show you’re ready to learn. You’ve explored performance tools or have a
+    track record of optimizing code for speed, reliability, or efficiency. Perks &
+    Benefits: Comprehensive health coverage (medical, dental, vision, and mental health
+    resources) 401(k) plan Equity award Flexible time off Paid parental leave Annual
+    company retreat WFH equipment stipend All qualified applicants will receive considerations
+    for employment without regard to race, color, religion, sex, age, disability,
+    marital status, familial status, sexual orientation, pregnancy, gender identity,
+    gender expression, national origin, ancestry, citizenship status, veteran status,
+    and any other legally protected status under federal, state, or local anti-discrimination
+    laws.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.5
+  identity_position: platform-orchestrator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 4
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/platform-orchestrator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.112138+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

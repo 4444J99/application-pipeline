@@ -1,0 +1,115 @@
+id: zapier-engineer-backend
+name: 'Zapier Engineer, Backend '
+track: job
+status: research
+outcome: null
+target:
+  organization: Zapier
+  url: https://jobs.ashbyhq.com/zapier
+  application_url: https://jobs.ashbyhq.com/zapier/ca495a70-c81b-4954-9fe7-0135a2405e28
+  portal: ashby
+  location: NAMER
+  location_class: unknown
+  description: 'AI at Zapier At Zapier , we build and use automation every day to
+    make work more efficient, creative, and human. So if you’re using AI tools while
+    applying here - that’s great! We just ask that you use them responsibly and transparently
+    . Check out our guidance on How to Collaborate with AI During Zapier’s Hiring
+    Process , including how to use AI tools like ChatGPT, Claude, Gemini, or others
+    during our hiring process - and when not to. Location: NAMER Date Opened: February
+    17th, 2026 Hi there! Zapier''s External Platform Zone focuses on all the ways
+    external parties—SaaS partners, developers, and AI agents—build on Zapier. The
+    zone brings together APIs, SDKs, and embedded experiences so partners can use
+    Zapier as connected infrastructure inside their own products and systems. Within
+    this zone, the Partner Solutions team makes Zapier''s automation and integration
+    capabilities accessible to partners through commercial APIs, embedded experiences,
+    and solution-focused products. We''re hiring a Backend Engineer to help shape
+    the future of partner-powered automation through the Powered by Zapier API and
+    other products and services we own, which allow companies to create fully native
+    automation experiences directly inside their products without reinventing the
+    infrastructure behind workflows, triggers, and integrations. If you''re passionate
+    about designing APIs that enable developers to build remarkable automation experiences,
+    thrive on scaling backend systems, and want to play a key role in growing Zapier''s
+    ecosystem through partnerships, we''d love to hear from you. Our Commitment to
+    Applicants Culture and Values at Zapier Zapier Guide to Remote Work Zapier Code
+    of Conduct Diversity and Inclusivity at Zapier Team Mission The Partner Solutions
+    team makes Zapier''s automation and integration capabilities accessible to partners
+    through commercial APIs, embedded experiences, and solution-focused products.
+    We design and maintain the external interfaces, programs, and experiences that
+    enable partners to build with Zapier and offer automation to their customers.
+    Our scope includes the Workflow API, embedded workflow experiences, account provisioning,
+    promotions, reporting, and more. Our mission is to help partners integrate Zapier
+    into their offerings, support their customers, and unlock new revenue and growth
+    opportunities for both sides. Rather than just providing tools, we proactively
+    design ways for partners to deliver value through our APIs. We''re building toward
+    a future where Zapier becomes the preferred integration and automation platform
+    for partners. By externalizing core capabilities in ways that align with partner
+    needs—APIs, embedded experiences, promotions, developer tools, and partner-oriented
+    programs—we enable partners to deliver automation directly within their products,
+    driving adoption, retention, and product-led growth across the ecosystem. Things
+    You’ll Do As a Backend Engineer on the Partner Solutions team, you’ll: Design
+    and build new partner-facing APIs that power automation and integration directly
+    within partner platforms. Expand and improve the Powered by Zapier platform ,
+    ensuring reliability, scalability, and exceptional developer experience. Enhance
+    partner developer tools and documentation , creating seamless onboarding and implementation
+    experiences. Balance internal and external needs , ensuring systems are ergonomic
+    and scalable for both Zapier’s engineering teams and external developers. Collaborate
+    across teams including Platform, Infrastructure, and Product Engineering to ensure
+    smooth integration and interoperability. Lead technical initiatives , mentor teammates,
+    and contribute to architectural decisions that set long-term direction for the
+    product. About You We’re looking for experienced backend engineers who bring a
+    mix of technical depth, customer sympathy, empathy, and adaptability. You have:
+    API Development Experience: You’ve built and maintained APIs, gateways, and integration
+    points that serve real-world production traffic. Language Proficiency: You’re
+    fluent in Python , with strong experience using Django and ideally the Django
+    REST Framework . Authentication Knowledge: You’re familiar with OAuth , API keys
+    , JWTs , and other authentication patterns used in secure API systems. Scale and
+    Reliability Mindset: You design systems for performance, resilience, and maintainability,
+    You think carefully about how features reach customers. Developer Experience Focus:
+    You care deeply about usability, feedback loops, and how external developers interact
+    with your APIs. Collaborative Spirit: You thrive in cross-functional environments,
+    engaging openly with product managers, designers, and fellow engineers. Remote-Ready
+    Discipline: You communicate clearly in writing, work autonomously, and thrive
+    in an asynchronous, distributed team. Adaptability: You’re comfortable navigating
+    ambiguity and enjoy evolving your tools and practices as the team and platform
+    scale. Nice to Have OpenAPI & Code G'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.8
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.397901+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

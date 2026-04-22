@@ -1,0 +1,82 @@
+id: llamaindex-senior-backend-engineer
+name: LlamaIndex Senior Backend Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: LlamaIndex
+  url: https://jobs.ashbyhq.com/llamaindex
+  application_url: https://jobs.ashbyhq.com/llamaindex/a2f14066-9e18-4da3-8861-2da3230e393c
+  portal: ashby
+  location: San Francisco
+  location_class: us-onsite
+  description: 'Join us and help shape the future of AI by defining the narrative
+    around document understanding. About the Role LlamaIndex''s backend application
+    platform team is hiring for an experienced (4+ years) backend engineer excited
+    to build new features and scale out our ingestion and AI systems! LlamaIndex is
+    backed by Greylock and has grow significantly in the last year from a combination
+    of open source and private enterprise interest. Our teams and positions offer
+    terrific growth and ownership opportunities as we expand our engineering team
+    to power our next phase of growth! Responsibilities [Primary] Build out new features
+    and scale our backend capabilities focused scaling out our core APIs Backend stack:
+    Python , Node.JS, K8s, Terraform, Postgres, Temporal, etc. [Secondary] Work closely
+    with prospects and customers to build production solutions. Qualifications Experience
+    with shipping completely new product features from scratch. Have gone from prototype
+    to production serving end users in a short amount of time. Shipped or otherwise
+    interested in AI/LLM-native applications. Iterated rapidly with customers or other
+    engineers - translate user feedback into features back to proactive user discovery.
+    Help jointly develop and iterate on product roadmap for core features. Shipped
+    applications at scale Location We offer a hybrid-friendly culture based out of
+    our downtown San Francisco office. Why Join Us? Impactful Mission: Work on innovative
+    AI products that redefine how knowledge is accessed and utilized. Collaborative
+    Team: Join a team of passionate individuals committed to pushing the boundaries
+    of technology. Growth Opportunities: Be at the forefront of the AI revolution,
+    with ample opportunities to grow alongside our scaling organization. Additional
+    Benefits Competitive base salary and equity compensation Comprehensive medical/dental/vision
+    coverage for you and your family Unlimited paid time off policy Daily catered
+    lunch and snacks in the San Francisco office Pursuant to the San Francisco Fair
+    Chance Ordinance, we will consider for employment qualified applicants with arrest
+    and conviction records. LlamaIndex does not accept unsolicited agency resumes.
+    Please do not forward resumes to our jobs alias, employees, or any other organization
+    location. LlamaIndex is not responsible for any fees related to unsolicited resumes.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.6
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.107427+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

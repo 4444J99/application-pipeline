@@ -1,0 +1,79 @@
+id: beam-software-engineer
+name: Beam Software Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: Beam
+  url: https://jobs.ashbyhq.com/beam
+  application_url: https://jobs.ashbyhq.com/beam/e7e5a789-935e-4e7d-94ef-fe639c020877
+  portal: ashby
+  location: San Francisco Office
+  location_class: us-onsite
+  description: About Beam Every housing and infrastructure project in America is slowed
+    down by stacks of paperwork, manual administrative tasks, and poor financial tracking.
+    Beam builds the software and financial tools to automate these tedious parts of
+    construction—helping America’s builders focus on what they do best. Beam’s product
+    helps construction businesses incorporate fintech and AI into their workflows,
+    from project estimating to bill payments to expense management—driving massive
+    efficiency gains, ultimately enabling more projects to get off the ground. Beam
+    is backed by Accel , Zigg , Susa , and other top venture investors. Our team is
+    in-person in a beautiful office in the Financial District of San Francisco. Our
+    team previously worked at Stripe, Pipe, Traba, Fieldwire, and more. What you’ll
+    do Build Beam’s product & infrastructure. The goal of each member of Beam’s engineering
+    team is “maximizing the team’s delivered quality product”. As a member of this
+    team, you’ll build products end-to-end, develop patterns that help the team build
+    faster, and contribute to making the team as a whole run more smoothly. We want
+    teammates who are obsessed with solving our customers’ problems, and who want
+    to accomplish this by scaling up the team’s output instead of scaling up hiring.
+    You will Design and build APIs and frontend for new products & features Iterate
+    on patterns & tooling to improve productivity Work directly with customers Work
+    closely with product and design to deliver exceptional user experiences Make improvements
+    to our engineering and product development processes Help ensure our products
+    are secure, reliable, and performant You might be a fit if You have 2+ years of
+    work experience building high-quality code/products in fast-paced environments
+    You’re excited to learn new things and make improvements to our systems You enjoy
+    thinking from first principles and delivering the best results You’re excited
+    to take on complex, open-ended problems You’re excited about improving construction
+    and development
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 5.9
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 8
+    evidence_match: 8
+    track_record_fit: 7
+    network_proximity: 1
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.396619+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

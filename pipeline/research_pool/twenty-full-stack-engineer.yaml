@@ -1,0 +1,110 @@
+id: twenty-full-stack-engineer
+name: Twenty Full Stack Engineer
+track: job
+status: research
+outcome: null
+target:
+  organization: Twenty
+  url: https://jobs.ashbyhq.com/twenty
+  application_url: https://jobs.ashbyhq.com/twenty/01e1f453-643b-46a9-bb7f-73ab024a5251
+  portal: ashby
+  location: Arlington, VA
+  location_class: us-onsite
+  description: 'About the Company At Twenty, we''re taking on one of the most critical
+    challenges of our time: defending democracies in the digital age. We develop revolutionary
+    technologies that operate at the intersection of the cyber and electromagnetic
+    domains, where the speed of operations exceeds human sensing and complexity transcends
+    conventional boundaries. Our team doesn''t just solve problems – we deliver game-changing
+    outcomes that directly impact national security. We''re pragmatic optimists who
+    understand that while our mission of protecting America and its allies is challenging,
+    success is possible. Role Summary You’ll build full-stack systems that turn real-time
+    operational data into fast, usable capabilities for cyber and electromagnetic
+    missions. This role spans a React/TypeScript frontend and Go services that power
+    high-throughput workflows, complex data models, and GraphQL APIs. You’ll partner
+    closely with product, engineering, and mission experts to ship software that performs
+    at machine speed in both cloud and on-premises environments. Who You Are You care
+    about building mission-critical software that protects democracies and supports
+    U.S. national security. You’re energized by complex systems: real-time data, performance
+    constraints, and hard engineering tradeoffs. You write software that’s reliable
+    under pressure—tests, instrumentation, and operational rigor are part of how you
+    work. You move quickly without being sloppy: you can iterate fast and still ship
+    production-grade systems. You communicate clearly with technical and non-technical
+    partners, and you like tight feedback loops. You take ownership end-to-end, from
+    design through rollout, monitoring, and improvement. What You’ll Do Design and
+    ship scalable full-stack features across React frontends and Go backend services.
+    Build high-performance UIs that ingest and visualize real-time operational data
+    streams. Develop and optimize GraphQL APIs for fast, flexible access to mission
+    data. Model complex relationships and implement efficient queries for mission-critical
+    datasets. Design event-driven services and workflows for low-latency, real-time
+    communication between components. Build and maintain automated tests that protect
+    correctness, performance, and reliability. Contribute to microservices deployed
+    across cloud and on-premises environments. Improve delivery velocity with pragmatic
+    CI/CD and release practices. Partner with operators and domain experts to translate
+    real-world workflows into usable software. Must Have You have 4+ years of professional
+    experience building scalable full-stack applications. You have strong React experience
+    and proficiency in modern JavaScript/TypeScript. You have production experience
+    building backend services in Go (Golang). You have designed and implemented GraphQL
+    APIs in real systems. You have experience with event-driven architectures and
+    message-based systems. You have experience deploying and operating services in
+    a cloud environment. You must be eligible to obtain a U.S. Government security
+    clearance. Nice To Have You have experience with graph databases (Neo4j or similar)
+    and complex relationship modeling. You have experience delivering software in
+    defense, intelligence, or security contexts. You’ve built tools for operators,
+    analysts, or security teams handling time-sensitive workflows. You have experience
+    with large-scale data processing and performance tuning for high-throughput systems.
+    You’ve integrated AI/ML capabilities into production, operational systems. You’ve
+    contributed to open-source projects or shipped high-quality personal projects.
+    Tech Environment (You Might Work With) React, TypeScript, GraphQL Go (Golang),
+    microservices, containerized deployments Neo4j and complex graph schemas NATS
+    and event-driven architectures Google Cloud Platform, CI/CD pipelines Cloud and
+    on-premises deployments Security / Work Environment Some positions may require
+    eligibility to obtain a U.S. Government security clearance. This role may involve
+    work in a controlled environment. If this role sounds like you, apply and share
+    with us your interest. Some positions may require eligibility to obtain a U.S.
+    Government security clearance. Any clearance requirement will be listed in the
+    role description. Twenty is an equal opportunity employer. We consider all qualified
+    applicants without regard to race, color, religion, sex, sexual orientation, gender
+    identity, national origin, age, veteran status, disability, or any other protected
+    status. If you need a reasonable accommodation during the hiring process, let
+    us know and we will work with you.'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.9
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.347866+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

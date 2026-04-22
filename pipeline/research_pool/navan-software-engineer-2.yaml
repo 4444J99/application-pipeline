@@ -1,0 +1,88 @@
+id: navan-software-engineer-2
+name: Navan Software Engineer - 2
+track: job
+status: research
+outcome: null
+target:
+  organization: Navan
+  url: https://boards.greenhouse.io/tripactions
+  application_url: https://navan.com/careers/openings?gh_jid=7716736
+  portal: greenhouse
+  location: Bengaluru, IN
+  location_class: us-onsite
+  description: <p>Navan has transformed the corporate travel, payment, and expense
+    landscape by consistently prioritizing user needs. As a Software Engineer II in
+    the Flights group, you’ll play an essential part in building and scaling the next-generation
+    flight platform, Navan’s flagship product that drives global business growth.
+    This is a high-impact role where your work will impact customers worldwide. You’ll
+    solve challenging problems, collaborate with engineers, product managers, and
+    designers across the globe, and contribute to a platform trusted by major enterprises.</p>
+    <p><strong>What You'll Do</strong></p> <ul> <li>Design and develop robust, high-performance
+    features and core services that support the company’s flagship product and serve
+    a global customer base.</li> <li>Apply technical expertise and creativity to address
+    engineering challenges, driving improvements in reliability, performance, and
+    user experience.</li> <li>Take end-to-end ownership of features—from design and
+    development to deployment and operational support—ensuring exceptional quality
+    and value for users.</li> <li>Work effectively as part of a global, cross-functional
+    team, partnering with fellow engineers, product managers, designers, and business
+    leaders to deliver impactful solutions and elevate team performance.</li> <li>Contribute
+    to engineering culture by championing best practices in code quality, scalability,
+    documentation, monitoring, and testing, fostering a culture of technical excellence,
+    collaboration, and continuous improvement.</li> <li>Learn and grow by staying
+    engaged with new technologies and industry trends, bringing a growth mindset and
+    a passion for delivering elegant solutions to complex problems.</li> </ul> <p><strong>What
+    We're Looking For</strong></p> <ul> <li>2-4 years of experience building and scaling
+    complex systems in fast-paced, high-growth, or large-scale environments (open
+    to exceptional candidates with less experience).</li> <li>Ownership mentality
+    with a record of delivering production-quality, maintainable code, and supporting
+    features post-release through monitoring and troubleshooting.</li> <li>Hands-on
+    experience developing and maintaining consumer-facing or core business products
+    at scale.</li> <li>Experience with distributed systems, microservices, and API
+    design.</li> <li>Collaborative team player able to work effectively with global,
+    cross-functional partners.</li> <li>Commitment to engineering best practices in
+    testing, documentation, scalability, and code quality.</li> <li>Problem-solving
+    mindset with a passion for tackling technically demanding and customer-impacting
+    challenges.</li> <li>Domain knowledge in the travel industry (flights, bookings,
+    or inventory management) is a plus.</li> <li>Experience in Java and Spring Boot.
+    Hibernate is a plus.</li> </ul>
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.9
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.746685+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-25'

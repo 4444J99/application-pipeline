@@ -1,0 +1,113 @@
+id: yugabytedb-software-engineer-ii
+name: YugabyteDB Software Engineer II
+track: job
+status: research
+outcome: null
+target:
+  organization: YugabyteDB
+  url: https://boards.greenhouse.io/yugabyte
+  application_url: https://job-boards.greenhouse.io/yugabyte/jobs/4586344006
+  portal: greenhouse
+  location: United States
+  location_class: us-onsite
+  description: <div class="content-intro"><p>At <strong>Yugabyte</strong>, we are
+    on a mission to become the default transactional database for enterprises building
+    cloud-native applications. YugabyteDB is our PostgreSQL-compatible distributed
+    database for cloud-native apps. Resilient, scalable, and flexible, it runs on
+    any cloud and enables developers to become instantly productive using well-known
+    APIs.We are looking for talented and driven people to join us on our ambitious
+    mission and help us build a lasting and impactful company.The transactional database
+    market is estimated to grow to $64B by 2025. YugabyteDB is cloud-native by design,
+    has on-demand horizontal scalability, and supports geographical distribution of
+    data using built-in replication. This means that we are well-positioned to meet
+    market demand for geo-distributed, high-scale, high-performance workloads.<br><br><strong>Join
+    the Database Revolution at Yugabyte.<br><br></strong>Modern applications need
+    a cloud-native database that eliminates tradeoffs and silos. YugabyteDB retains
+    the power and familiarity of PostgreSQL by pairing its trusted API with a precision-engineered,
+    distributed, cloud-native architecture. Even better, it’s 100% open source. Many
+    of the world's leading enterprises are migrating from legacy RDBMSs (like Oracle,
+    SQL Server, and DB2) to YugabyteDB, to meet their mission-critical app demands.</p></div><h2><strong>Software
+    Engineer – Core Database</strong></h2> <p><strong>Location:</strong> Sunnyvale,
+    United States<br><strong>Team:</strong> Core Database<br><strong>Position Level:</strong>
+    Software Engineer&nbsp;</p> <h3><strong>About Yugabyte</strong></h3> <p>At <strong>Yugabyte</strong>,
+    we are on a mission to become the default <strong>transactional database</strong>
+    for enterprises building cloud-native applications. YugabyteDB is our PostgreSQL
+    compatible distributed database for cloud-native apps. Resilient, scalable, and
+    flexible, it runs on any cloud and enables developers to become instantly productive
+    using well-known APIs.We are looking for talented and driven people to join us
+    on our ambitious mission and help us build a lasting and impactful company. The
+    transactional database market is estimated to grow to $150B by 2030. YugabyteDB
+    is cloud-native by design, has on-demand horizontal scalability, and supports
+    geographical distribution of data using built-in replication. This means that
+    we are well-positioned to meet market demand for geo-distributed, high-scale,
+    high-performance workloads.</p> <p>Yugabyte offers a culture of <strong>innovation,
+    ownership, and technical excellence</strong>, with opportunities to impact a cutting-edge
+    distributed SQL database used by global enterprises.&nbsp;</p> <h2><strong>Role
+    Overview</strong></h2> <p>As a <strong>Software Engineer </strong>on the <strong>Core
+    Database Engineering team</strong>, you will have an opportunity to work across
+    the <strong>SQL layer, query execution, storage, replication, and transactional
+    subsystems</strong> of YugabyteDB. You will collaborate with cross-functional
+    engineering teams to solve complex problems, ensuring YugabyteDB remains robust,
+    reliable, and performance at scale.</p> <p>This role is designed for <strong>engineers</strong>
+    who are excited about <strong>databases, distributed systems, and systems programming</strong>,
+    and want hands-on experience building a large-scale, production-grade distributed
+    database.</p> <h2><strong>Key Responsibilities</strong></h2> <ul> <li>Write <strong>high-quality
+    C/C++ code</strong> (and contribute in other languages as needed) with comprehensive
+    automated tests; participate actively in code reviews.</li> <li>Add unit tests,
+    integration tests, and regression tests to ensure correctness and stability</li>
+    <li>Improve database <strong>scalability and throughput</strong> as cluster sizes
+    and transaction volumes grow.</li> <li>Contribute to the open source YugabyteDB
+    project and help strengthen our distributed SQL capabilities across releases.</li>
+    <li>Troubleshoot and resolve <strong>correctness, stability, and performance issues</strong>
+    in complex distributed query planning and execution paths.</li> <li>Design, implement,
+    and test features in YugabyteDB under the guidance of senior engineers</li> <li>Collaborate
+    with engineers across query, storage, and platform teams</li> </ul> <h2><strong>Required
+    Qualifications</strong></h2> <ul> <li><strong>1–4 years</strong>&nbsp; in software
+    engineering, with a strong foundation in <strong>compiled languages</strong> such
+    as <strong>C/C++</strong>.</li> <li>Bachelor’s, Master’s, or PhD in Computer Science
+    (or related field), or equivalent practical experience.</li> <li>Understanding
+    of <strong>systems engineering fundamentals</strong>, including operating systems,
+    distributed systems, and databases.</li> <li>Strong fundamentals in <strong>data
+    structures, algorithms, and operating systems</strong></li> <li>Experience programming
+    in <strong>C/C++, Java, or similar systems-level
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.2
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 1
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-25'
+  posting_date: '2026-03-23'
+  date_added: '2026-03-25'
+  discovered: '2026-03-25T10:18:33.740411+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-25'

@@ -1,0 +1,81 @@
+id: resend-developer-experience-engineer
+name: 'Resend Developer Experience Engineer '
+track: job
+status: research
+outcome: null
+target:
+  organization: Resend
+  url: https://jobs.ashbyhq.com/resend
+  application_url: https://jobs.ashbyhq.com/resend/06bd9cb2-d189-41b6-baf7-42bd5da9610f
+  portal: ashby
+  location: United States / Remote / Full-time
+  location_class: us-remote
+  description: 'Resend is growing fast, and there are now over 1 million developers
+    using it. We need your help to create an exceptional brand that developers truly
+    love. You will create content that helps them understand how to use the product,
+    and advocating for their needs internally. The DX team currently includes both
+    an event organizer as well as a technical educator. We’re hiring a technical writer
+    to complement the team. This role is fully remote, based in the United States
+    with expected travel for team offsites, conferences, meetups, and more. Read more
+    about how we work, how we hire, and what we value here . In this role you will...
+    Write high-quality content , including blog posts, documentation, and tutorials
+    Facilitate changelog creation and help the team follow the same voice/tone Develop
+    demos to showcase the power of React Email and Resend Increase brand awareness
+    by keeping our social media channels active Plan writing projects that include
+    customer stories and SEO/GEO optimization Be customer zero and provide feedback
+    on new things before they are released You will be a great fit if you... Nerd
+    out about clear, precise writing and style guides Enjoy doing collabs with other
+    devtool companies Have 5 years of software engineering or technical documentation
+    experience Care deeply about your personal brand and how it''s perceived Are fluent
+    in writing and speaking English You will be an exceptional fit if you also...
+    Felt the pain of sending email in the past Already use Resend in your side projects
+    Active member in the React/TS/JS community What it means to join the team: Autonomy
+    to “just ship it” 100% remote team with flexible working schedules Modern tech
+    stack (Next.js, Raycast, Retool, Notion, etc.) Honest and low-ego team Ownership
+    of problems and solutions Learn more about how we work: DX Philosophy How we approach
+    marketing How we think about our website About Resend We are building the modern
+    email sending platform for developers. We care deeply about quality, creating
+    for everyone, and building in the open. Our fully remote team of 35 humans spans
+    11 countries and counting. We''re backed by a16z, Y Combinator, Basecase, and
+    other top investors .'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.5
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 10
+    evidence_match: 10
+    track_record_fit: 9
+    network_proximity: 1
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 5
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:35.967506+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'

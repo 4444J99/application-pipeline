@@ -1,0 +1,115 @@
+id: fastly-associate-elearning-developer
+name: Fastly Associate eLearning Developer
+track: job
+status: research
+outcome: null
+target:
+  organization: Fastly
+  url: https://boards.greenhouse.io/fastly
+  application_url: https://www.fastly.com/about/jobs/apply?gh_jid=7775181
+  portal: greenhouse
+  location: Pune, India
+  location_class: international
+  description: <div class="content-intro"><p>Fastly helps people stay better connected
+    with the things they love. Fastly’s edge cloud platform enables customers to create
+    great digital experiences quickly, securely, and reliably by processing, serving,
+    and securing our customers’ applications as close to their end-users as possible
+    — at the edge of the Internet. The platform is designed to take advantage of the
+    modern internet, to be programmable, and to support agile software development.
+    Fastly’s customers include many of the world’s most prominent companies, including
+    GitHub, Yelp, Paramount, and JetBlue.</p> <p>We're building a more trustworthy
+    Internet. Come join us.</p></div><p>&nbsp;</p> <p><strong><strong>Associate eLearning
+    Developer</strong></strong></p> <p>&nbsp;</p> <p>We are seeking an early career
+    eLearning Developer to join our Client Services Technical Enablement team. This
+    role is ideal for someone who enjoys translating technical concepts into clear,
+    engaging, and scalable learning experiences. You will work closely with subject
+    matter experts (SMEs), instructional designers, and cross-functional partners
+    to develop eLearning content that supports internal teams in a fast-paced, technical
+    environment.</p> <p>&nbsp;</p> <p>This is a hands-on role focused on content development,
+    learning technology, and continuous improvement. You do not need prior engineering
+    experience, but you should be comfortable learning technical concepts and using
+    modern authoring and content management tools.</p> <p>&nbsp;</p> <p><strong><strong>What
+    You'll Do:</strong></strong></p> <ul> <li> <p>Develop and maintain high-quality
+    eLearning content, including interactive modules, simulations, and assessments</p>
+    </li> <li> <p>Translate technical documentation, product features, and workflows
+    into learner-friendly instructional content</p> </li> <li> <p>Partner with SMEs
+    to gather requirements, validate technical accuracy, and iterate on learning materials</p>
+    </li> <li> <p>Build content using eLearning authoring tools (e.g., Domiknow, Articulate
+    Rise/Storyline, Adobe Captivate, or similar)</p> </li> <li> <p>Apply instructional
+    design best practices to ensure content is engaging, accessible, and effective</p>
+    </li> <li> <p>Edit and update existing courses to reflect product changes, feedback,
+    or performance data</p> </li> <li> <p>Follow established content standards, templates,
+    and development processes</p> </li> <li> <p>Assist with basic learning analytics
+    and content performance tracking</p> </li> </ul> <p>&nbsp;</p> <p><strong><strong>What
+    Success Looks Like in This Role</strong></strong></p> <ul> <li> <p>You quickly
+    ramp on technical concepts and apply them to learning content</p> </li> <li> <p>Courses
+    are delivered on time, meet quality standards, and receive positive learner feedback</p>
+    </li> <li> <p>Stakeholders trust you to translate complex information into effective
+    training and implement feedback quickly and accurately&nbsp;</p> </li> <li> <p>You
+    continuously improve your skills in instructional design, tooling, and technical
+    knowledge</p> </li> </ul> <p>&nbsp;</p> <p><strong><strong>What We're Looking
+    For:&nbsp;</strong></strong></p> <ul> <li> <p>1–3 years of experience in eLearning
+    development, instructional design, technical training, or a related field (internships,
+    coursework, or portfolio work welcome)</p> </li> <li> <p>Experience creating digital
+    learning content using at least one modern authoring tool (professional or academic
+    experience)</p> </li> <li> <p>Strong written communication skills with the ability
+    to explain complex ideas clearly</p> </li> <li> <p>Comfort working with technical
+    material (software products, systems, workflows, APIs, or similar)</p> </li> <li>
+    <p>Basic understanding of instructional design principles (adult learning theory,
+    learning objectives, assessments)</p> </li> <li> <p>Strong attention to detail
+    and ability to manage multiple tasks</p> </li> <li> <p>Willingness to learn new
+    tools, technologies, and products with a strong drive for self-directed learning&nbsp;</p>
+    </li> </ul> <p><strong><strong>We’ll be super impressed if you have experience
+    in any of these:&nbsp;</strong></strong></p> <ul> <li> <p>Familiarity with LMS
+    platforms&nbsp;</p> </li> <li> <p>Experience creating video or multimedia content
+    (screen recordings, light video editing, audio cleanup)</p> </li> <li> <p>Exposure
+    to Agile, product development, or technical enablement environments</p> </li>
+    <li> <p>Portfolio or examples of eLearning, training materials, or instructional
+    projects</p> </li> </ul> <p><strong><strong>Tools &amp; Technologies You May Use</strong></strong></p>
+    <ul> <li> <p>eLearning authoring tools (Domiknow)</p> </li> <li> <p>Video and
+    audio tools (Camtasia, Loom,Google Vids, or similar)</p> </li> <li> <p>Learning
+    Management Systems (Skilljar)</p> </li> <li> <p>Documentation tools (Confluence,
+    Google Docs)</p> </li> <li> <p>Project management and service tools (Jira, Salesforce)</p>
+    </li> </ul> <p><stron
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.5
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 3
+    strategic_value: 6
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-03'
+  posting_date: '2026-04-02'
+  date_source: first_published
+  date_added: '2026-04-03'
+  discovered: '2026-04-03T10:15:35.523951+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-03'

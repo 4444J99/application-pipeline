@@ -1,0 +1,116 @@
+id: zapier-engineer-backend-enterprise
+name: Zapier Engineer, Backend - Enterprise
+track: job
+status: research
+outcome: null
+target:
+  organization: Zapier
+  url: https://jobs.ashbyhq.com/zapier
+  application_url: https://jobs.ashbyhq.com/zapier/423d1bb7-1c08-458e-8a17-29a63cf23d92
+  portal: ashby
+  location: India
+  location_class: international
+  description: 'AI at Zapier At Zapier , we build and use automation every day to
+    make work more efficient, creative, and human. So if you’re using AI tools while
+    applying here - that’s great! We just ask that you use them responsibly and transparently
+    . Check out our guidance on How to Collaborate with AI During Zapier’s Hiring
+    Process , including how to use AI tools like ChatGPT, Claude, Gemini, or others
+    during our hiring process - and when not to. Job Posted: April 13th, 2026 Location:
+    India | Timezone = Overlap with US East Coast hours required 3–4 days/week during
+    ramp-up Zapier is seeking a Backend Engineer to join our Enterprise Integrations
+    team located in India. This team builds and maintains critical integrations within
+    Zapier, and partners closely with customer-facing teams to stay on the cutting
+    edge of customer needs. This team’s mission includes: Building and maintaining
+    some of the most important integrations in the Zapier product Collaborating with
+    Customer Success, Support, and Sales teams to understand and invest in the most
+    relevant integrations securing our most valuable deals Ensuring continued customer
+    satisfaction by quickly resolving any issues using these integrations We’re hiring
+    several Backend Engineers (mid and senior-level) to help grow our integration
+    portfolio for our biggest customers. This is a highly technical, engineering-driven
+    team where you''ll build integrations, proactively improve integration features
+    and reliability, handle API deprecations and migrations, and address any customer
+    issues that may appear. If you love working with diverse APIs — REST APIs, OAuth
+    flows, webhook design, state management, and API versioning and deprecations —
+    debugging complex systems across service boundaries, and mentoring engineers while
+    maintaining high standards for quality and craftsmanship, this is the team for
+    you. Our Commitment to Applicants Culture and Values at Zapier Zapier Guide to
+    Remote Work Zapier Code of Conduct Diversity and Inclusivity at Zapier About You
+    You work through AI agents, not alongside them. Your daily development workflow
+    is built around directing and reviewing agent-written code, not writing it by
+    hand. You have opinions about which models to use for which tasks, you''ve hit
+    real failure modes and built mitigations, and your workflow is actively evolving.
+    Bonus: you use multi-agent patterns, enable others on your team to build faster
+    with AI, or have scaled AI impact beyond yourself. You have deep customer empathy
+    and thrive in the details. Zapier’s integrations are the heart of the product.
+    With a customer-centric approach, you work with your team to improve the customer
+    experience and participate in programs to enhance our product offerings. You work
+    close to the customer. You don''t wait for product specs or UX research to tell
+    you what to build. You pull customer tickets, talk to CSMs, review feedback, and
+    use that context to drive what you ship. You think in milestone slices: what''s
+    the smallest thing I can get into production that moves us forward and teaches
+    us something? You own your work and yourself. You take initiative without waiting
+    for permission and you ship fast and share early. But you also own your mistakes,
+    your gaps, and your role in friction, openly. You say "I don''t know" and "I was
+    wrong" out loud, early, and without shame. You hold yourself to a high standard
+    and can articulate where you''ve fallen short, not just where you''ve succeeded.
+    You communicate proactively in an async-first culture. You manage up and across,
+    flagging risks, surfacing decisions, and keeping stakeholders informed without
+    being asked. You use written artifacts, working demos, and rough prototypes as
+    your primary communication tools, not meetings. You believe enterprise can move
+    fast. You''ve seen (or are excited to prove) that shipping to enterprise customers
+    doesn''t have to mean slow, waterfall-style cycles. You know how to balance compliance,
+    security, and rollout considerations with tight iteration loops and rapid customer
+    feedback. You see enterprise constraints as interesting design problems, not reasons
+    to slow down. Things You’ll Do Build, evolve, and maintain enterprise-grade integrations
+    for our highest-priority customers across REST, OAuth, and webhook-based APIs,
+    owning the full lifecycle from design through deprecation and treating agents
+    as first-class contributors in that lifecycle. Lead important projects from start
+    to finish using agentic coding workflows : framing problems into agent-friendly
+    tasks, configuring tools and context, and pairing with AI systems to generate,
+    refactor, and migrate code while you remain accountable for correctness, safety,
+    and long-term maintainability. Design and operate agent “harnesses” — prompts,
+    tools, test suites, sandboxes, and guardrails — so agents can safely modify integrations
+    at scale (for example, dependency upgrades, refactors, or bulk bug fixes) without
+    breaking customer workflows. Work directly with cross-functional st'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.7
+  identity_position: documentation-engineer
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 5
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/documentation-engineer-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-04-14'
+  posting_date: '2026-04-13'
+  date_source: published_at
+  date_added: '2026-04-14'
+  discovered: '2026-04-14T10:23:06.728166+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-04-14'

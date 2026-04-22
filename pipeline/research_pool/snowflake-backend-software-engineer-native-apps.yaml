@@ -1,0 +1,94 @@
+id: snowflake-backend-software-engineer-native-apps
+name: Snowflake Backend Software Engineer - Native Apps
+track: job
+status: research
+outcome: null
+target:
+  organization: Snowflake
+  url: https://jobs.ashbyhq.com/snowflake
+  application_url: https://jobs.ashbyhq.com/snowflake/708992c7-67da-4f99-99f0-39ed70e360d4
+  portal: ashby
+  location: CA-Ontario-Toronto
+  location_class: international
+  description: 'Snowflake is about empowering enterprises to achieve their full potential
+    — and people too. With a culture that’s all in on impact, innovation, and collaboration,
+    Snowflake is the sweet spot for building big, moving fast, and taking technology
+    — and careers — to the next level. Snowflake is a global platform where thousands
+    of organizations store and process their data. Our Data Marketplace allows our
+    customers to exchange data across geographies, organizationions and cloud providers.
+    We are now building an App Marketplace on top of the Data Marketplace. Think of
+    it as an App Store or Play Store but with the apps running on the Snowflake Cloud,
+    not phones. Snowflake is becoming an application platform. It’s a new, big, and
+    differentiating feature for Snowflake and our customers. The Native Apps team
+    in Toronto is in the center of this innovation. We’re working on the core building
+    blocks for the apps to support the app lifecycle - creation, versioning, global
+    rollouts, installation and execution in a secure sandbox. We enable app runtimes
+    for multiple languages and execution models. We deal with many aspects of the
+    app framework from access control and permissions, through IP protection to UI
+    frameworks. We’re still early in our journey and we are looking for talented and
+    passionate engineers to innovate with us. Our big, multi-year goal is to launch
+    a hugely successful app ecosystem. We count not only on your deep tech expertise
+    and problem solving skills but also on eagerness to evangelize the new platform
+    among developers. AS A SOFTWARE ENGINEER FOR NATIVE APPS, YOU WILL: Drive high
+    impact initiatives that span our product areas and tech stack including Java ,
+    python and golang Promote strong collaboration within a cross functional team,
+    including design, product management. Deliver features requiring close coordination
+    with cross-functional teams Be a strong contributor to the product vision and
+    drive team planning. Build for scale and high performance. OUR IDEAL CANDIDATE
+    WILL HAVE: 2+ years hands-on software development experience, including significant
+    experience in backend software development Deep understanding of distributed design
+    architecture, good API design patterns, security, performance and scale. Knowledge
+    of data development tools, data infrastructure, or ML is a plus. You go to work
+    everyday striving to be the very best you can be. You''re undaunted by ambiguity
+    and are motivated to drive impact. ABOUT APPS AND SNOWFLAKE: Snowflake Native
+    Apps Snowflake for Applications and Collaboration Snowflake Marketplace Life at
+    Snowflake Canada Our Human Resources Department may use artificial intelligence
+    to support its administrative processes. This role is available and may represent
+    a new position. This role is exempt from Ontario’s job posting requirements. Snowflake
+    is growing fast, and we’re scaling our team to help enable and accelerate our
+    growth. We are looking for people who share our values, challenge ordinary thinking,
+    and push the pace of innovation while building a future for themselves and Snowflake.
+    How do you want to make your impact? For jobs located in the United States, please
+    visit the job posting on the Snowflake Careers Site for salary and benefits information:
+    careers.snowflake.com'
+deadline:
+  date: null
+  type: rolling
+amount:
+  value: 0
+  currency: USD
+  type: salary
+fit:
+  score: 6.9
+  identity_position: founder-operator
+  dimensions:
+    mission_alignment: 9
+    evidence_match: 9
+    track_record_fit: 8
+    network_proximity: 4
+    strategic_value: 8
+    financial_alignment: 5
+    effort_to_value: 2
+    deadline_feasibility: 9
+    portal_friction: 5
+submission:
+  effort_level: standard
+  blocks_used: {}
+  variant_ids: {}
+  materials_attached:
+  - resumes/base/founder-operator-resume.html
+  portfolio_url: https://4444j99.github.io/portfolio/
+timeline:
+  researched: '2026-03-19'
+  posting_date: null
+  date_added: '2026-03-19'
+  discovered: '2026-03-19T21:28:36.187540+00:00'
+conversion:
+  response_received: false
+  response_type: null
+  time_to_response_days: null
+  feedback: null
+tags:
+- auto-sourced
+source: source_jobs.py
+last_touched: '2026-03-19'
