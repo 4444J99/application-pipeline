@@ -1,7 +1,7 @@
 id: dbt-labs-senior-platform-software-engineer-transport
 name: dbt Labs Senior Platform Software Engineer, Transport
 track: job
-status: qualified
+status: drafting
 outcome: null
 target:
   organization: dbt Labs
@@ -86,6 +86,7 @@ submission:
   blocks_used: {}
   variant_ids: {}
   materials_attached:
+  - resumes/batch-03/dbt-labs-senior-platform-software-engineer-transport/dbt-labs-senior-platform-software-engineer-transport-resume.html
   - resumes/base/platform-orchestrator-resume.html
   portfolio_url: https://4444j99.github.io/portfolio/
 timeline:
@@ -102,4 +103,4 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-04-18"
+last_touched: "2026-04-22"
