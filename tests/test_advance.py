@@ -2,6 +2,7 @@
 
 import sys
 import tempfile
+from datetime import date, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
@@ -382,7 +383,8 @@ def test_run_report_summary_counts(capsys, monkeypatch):
 
 
 def _write_pipeline_yaml(tmp_path, entry_id, status="qualified", effort="quick",
-                         follow_up=None, outreach=None, org=None):
+                         follow_up=None, outreach=None, org=None,
+                         posting_date=None):
     """Write a pipeline YAML file in tmp_path and return its path."""
     lines = [
         f"id: {entry_id}",
@@ -400,6 +402,7 @@ def _write_pipeline_yaml(tmp_path, entry_id, status="qualified", effort="quick",
         "timeline:",
         "  researched: '2026-01-01'",
         "  qualified: '2026-01-15'",
+        f"  posting_date: '{posting_date}'" if posting_date else "  posting_date: null",
         "  materials_ready: null",
         "  submitted: null",
         'last_touched: "2026-01-15"',
@@ -521,6 +524,60 @@ def test_run_advance_force_bypasses_outreach_gate(tmp_path, monkeypatch, capsys)
     # Should not be blocked — force bypasses the gate
     assert "BLOCKED" not in output
     assert "Advanced 1 entries" in output
+
+
+def test_run_advance_freshness_gate_blocks_stale_staged_entry(tmp_path, monkeypatch, capsys):
+    """Entries older than 24 hours are blocked from advancing to staged."""
+    stale_date = (date.today() - timedelta(days=2)).isoformat()
+    filepath = _write_pipeline_yaml(
+        tmp_path, "stale-job", status="drafting", posting_date=stale_date,
+    )
+    original_content = filepath.read_text()
+    entry = _make_loaded_entry(filepath)
+
+    monkeypatch.setattr("advance.load_entries", lambda include_filepath=False: [entry])
+
+    run_advance(
+        target_status="staged",
+        effort_filter=None,
+        status_filter=None,
+        entry_id=None,
+        dry_run=False,
+        auto_yes=True,
+        force=False,
+    )
+
+    assert filepath.read_text() == original_content
+    output = capsys.readouterr().out
+    assert "SKIP stale-job: posting is 2 days old (24h freshness gate)" in output
+    assert "No entries match" in output
+
+
+def test_run_advance_force_bypasses_freshness_gate(tmp_path, monkeypatch, capsys):
+    """Force flag bypasses the 24-hour freshness gate."""
+    stale_date = (date.today() - timedelta(days=2)).isoformat()
+    filepath = _write_pipeline_yaml(
+        tmp_path, "force-stale", status="drafting", posting_date=stale_date,
+    )
+    entry = _make_loaded_entry(filepath)
+
+    monkeypatch.setattr("advance.load_entries", lambda include_filepath=False: [entry])
+    monkeypatch.setattr("advance.advance_entry", lambda fp, eid, ts, reason=None: _mock_advance(fp, ts))
+
+    run_advance(
+        target_status="staged",
+        effort_filter=None,
+        status_filter=None,
+        entry_id=None,
+        dry_run=False,
+        auto_yes=True,
+        force=True,
+    )
+
+    output = capsys.readouterr().out
+    assert "24h freshness gate" not in output
+    assert "Advanced 1 entries" in output
+    assert "status: staged" in filepath.read_text()
 
 
 def _mock_advance(filepath, target_status):

@@ -19,9 +19,9 @@ Usage:
 """
 
 import argparse
+import datetime
 import shutil
 import sys
-from datetime import date, datetime
 from pathlib import Path
 
 from pipeline_lib import (
@@ -64,12 +64,36 @@ def has_outreach_actions(entry: dict) -> bool:
     return len(follow_up) > 0 or len(outreach) > 0
 
 
+def _posting_age_days(entry: dict) -> int | None:
+    """Return age in days for an entry's posting_date, if it is parseable."""
+    timeline = entry.get("timeline") or {}
+    posting_date = entry.get("posting_date")
+    if posting_date is None and isinstance(timeline, dict):
+        posting_date = timeline.get("posting_date")
+    if not posting_date:
+        return None
+
+    if isinstance(posting_date, datetime.datetime):
+        posting_day = posting_date.date()
+    elif isinstance(posting_date, datetime.date):
+        posting_day = posting_date
+    else:
+        try:
+            posting_day = datetime.date.fromisoformat(str(posting_date).strip()[:10])
+        except ValueError:
+            return None
+
+    today = datetime.date.today()
+    age = (today - posting_day).days
+    return age
+
+
 def _log_gate_bypass(entry_id: str, gate_name: str) -> None:
     """Log a signal-action audit entry when a gate is bypassed."""
     try:
         from log_signal_action import log_action
         log_action(
-            signal_id=f"gate-bypass-{entry_id}-{date.today().isoformat()}",
+            signal_id=f"gate-bypass-{entry_id}-{datetime.date.today().isoformat()}",
             signal_type="gate_bypass",
             description=f"Outreach gate bypassed via --skip-outreach-gate for {entry_id}",
             triggered_action=f"bypassed {gate_name} gate",
@@ -87,7 +111,7 @@ def advance_entry(filepath, entry_id: str, target_status: str, reason: str | Non
     The optional reason is included in the signal-action log entry.
     """
     content = filepath.read_text()
-    today_str = date.today().isoformat()
+    today_str = datetime.date.today().isoformat()
 
     # Read current status before modification
     import yaml as _yaml
@@ -236,7 +260,7 @@ def _backup_files(files: list, label: str = "advance") -> None:
     """Snapshot files to pipeline/.backup/{timestamp}/ before modification."""
     if not files:
         return
-    ts = datetime.now().strftime("%Y%m%d-%H%M%S")
+    ts = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
     backup_dir = REPO_ROOT / "pipeline" / ".backup" / f"{ts}-{label}"
     backup_dir.mkdir(parents=True, exist_ok=True)
     for f in files:
@@ -286,6 +310,11 @@ def run_advance(
 
         # Enforce company cap when advancing to staged or submitted
         if target_status in ("staged", "submitted"):
+            age = _posting_age_days(e)
+            if age is not None and age > 1 and not force:
+                print(f"SKIP {eid}: posting is {age} days old (24h freshness gate)")
+                continue
+
             org = (e.get("target") or {}).get("organization", "")
             if org:
                 allowed, current_count = check_company_cap(org, entries)
