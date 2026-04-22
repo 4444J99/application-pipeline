@@ -10,9 +10,9 @@ target:
   application_url: https://lacma.org/art-technology-lab
   portal: custom
 deadline:
-  date: null
-  time: null
-  type: rolling
+  date: '2026-04-22'
+  time: '23:59'
+  type: firm
 amount:
   value: 50000
   currency: USD
