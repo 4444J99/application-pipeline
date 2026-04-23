@@ -15,6 +15,7 @@ from check_email import (
     extract_company_from_subject,
     normalize_org,
     parse_apple_date,
+    triage_email,
 )
 
 # --- TestParseAppleDate ---
@@ -125,6 +126,36 @@ def test_classify_email_no_keywords_update():
     """No matching subject or body keywords → 'update'."""
     result = classify_email("Application Status", "We received your materials.")
     assert result == "update"
+
+
+# --- TestTriageEmail ---
+
+
+def test_triage_email_action_for_interview_request():
+    result = triage_email(
+        "Next Steps",
+        "We would like to schedule an interview and would appreciate your availability.",
+        "recruiter@example.com",
+    )
+    assert result == "ACTION"
+
+
+def test_triage_email_track_for_confirmation():
+    result = triage_email(
+        "Thank you for applying to Anthropic",
+        None,
+        "no-reply@us.greenhouse-mail.io",
+    )
+    assert result == "TRACK"
+
+
+def test_triage_email_skip_for_marketing_newsletter():
+    result = triage_email(
+        "Platform Newsletter Roundup",
+        "View in browser or unsubscribe from these promotional emails.",
+        "notifications@vendor.example",
+    )
+    assert result == "SKIP"
 
 
 # --- TestNormalizeOrg ---

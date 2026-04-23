@@ -91,6 +91,30 @@ class TestStaleMetrics:
         for pattern, should_be, severity in STALE_METRICS:
             assert severity in ("error", "warning"), f"Invalid severity for pattern '{pattern}'"
 
+    def test_allows_2349_tests_in_cover_letter(self, tmp_file):
+        f = tmp_file("I built the system with 2,349+ automated tests.", name="test-cover-letter.md")
+        findings = check_file(f)
+        scoped = [x for x in findings if x["check"] == "tests_cover_letter_only"]
+        assert scoped == []
+
+    def test_flags_2349_tests_outside_cover_letter(self, tmp_file):
+        f = tmp_file("Institution-scale system with 2,349+ automated tests.", name="test-resume.html")
+        findings = check_file(f)
+        scoped = [x for x in findings if x["check"] == "tests_cover_letter_only"]
+        assert len(scoped) == 1
+
+    def test_allows_43_dependency_edges_in_cover_letter(self, tmp_file):
+        f = tmp_file("The governance layer validates 43 dependency edges with zero violations.", name="test-cover-letter.md")
+        findings = check_file(f)
+        scoped = [x for x in findings if x["check"] == "dependency_edges_cover_letter_only"]
+        assert scoped == []
+
+    def test_flags_43_dependency_edges_outside_cover_letter(self, tmp_file):
+        f = tmp_file("Governance system with 43 dependency edges and zero violations.", name="test-resume.html")
+        findings = check_file(f)
+        scoped = [x for x in findings if x["check"] == "dependency_edges_cover_letter_only"]
+        assert len(scoped) == 1
+
 
 # --- Red flag detection ---
 

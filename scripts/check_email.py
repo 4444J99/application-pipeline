@@ -179,6 +179,94 @@ def classify_email(subject: str, body: str | None) -> str:
     return "update"
 
 
+_ACTION_KEYWORDS = (
+    "action required",
+    "please respond",
+    "please reply",
+    "reply with",
+    "send over",
+    "complete the following",
+    "complete your",
+    "schedule an interview",
+    "schedule a call",
+    "book a time",
+    "pick a time",
+    "choose a time",
+    "share your availability",
+    "let us know your availability",
+    "next steps",
+)
+
+_TRACK_KEYWORDS = (
+    "application received",
+    "thank you for applying",
+    "thanks for applying",
+    "application update",
+    "status update",
+    "we received your application",
+    "we received your materials",
+    "fyi",
+    "for your records",
+    "no further action",
+)
+
+_SKIP_SUBJECT_KEYWORDS = (
+    "newsletter",
+    "digest",
+    "roundup",
+    "webinar",
+    "promo",
+    "promotion",
+    "sponsored",
+    "sale",
+)
+
+_SKIP_BODY_KEYWORDS = (
+    "unsubscribe",
+    "manage preferences",
+    "view in browser",
+    "email preferences",
+    "promotional email",
+    "marketing email",
+)
+
+_SKIP_SENDERS = (
+    "mailer-daemon",
+    "notifications@",
+    "notification@",
+)
+
+
+def triage_email(
+    subject: str,
+    body: str | None,
+    sender: str = "",
+    *,
+    classification: str | None = None,
+) -> str:
+    """Bucket an email into ACTION, TRACK, or SKIP for inbox triage."""
+    status = classification or classify_email(subject, body)
+    subject_lower = subject.lower()
+    body_lower = (body or "").lower()
+    sender_lower = sender.lower()
+    text = " ".join(part for part in (subject_lower, body_lower) if part)
+
+    if status == "interview" or any(keyword in text for keyword in _ACTION_KEYWORDS):
+        return "ACTION"
+
+    if status in {"confirmation", "rejection"} or any(keyword in text for keyword in _TRACK_KEYWORDS):
+        return "TRACK"
+
+    if (
+        any(keyword in subject_lower for keyword in _SKIP_SUBJECT_KEYWORDS)
+        or any(keyword in body_lower for keyword in _SKIP_BODY_KEYWORDS)
+        or any(marker in sender_lower for marker in _SKIP_SENDERS)
+    ):
+        return "SKIP"
+
+    return "TRACK"
+
+
 # Template phrases that indicate an automated/ATS-generated rejection
 _AUTOMATED_TEMPLATE_PHRASES = (
     "after careful consideration",
@@ -375,6 +463,12 @@ def scan_confirmations(
             confirmed.append({
                 "entry_id": eid,
                 "entry_name": entry.get("name", eid),
+                "triage": triage_email(
+                    email["subject"],
+                    None,
+                    email.get("sender", ""),
+                    classification="confirmation",
+                ),
                 "email_subject": email["subject"],
                 "email_date": email_date,
                 "ats": email["ats"],
@@ -632,6 +726,12 @@ def scan_responses(
                 "entry_id": eid,
                 "entry_name": entry.get("name", eid),
                 "classification": classification,
+                "triage": triage_email(
+                    email["subject"],
+                    body,
+                    email.get("sender", ""),
+                    classification=classification,
+                ),
                 "email_subject": email["subject"],
                 "email_date": email_date,
                 "snippet": snippet,
@@ -689,7 +789,8 @@ def print_confirmations(confirmed: list[dict], unconfirmed: list[dict]):
 
     for item in sorted(confirmed, key=lambda x: x.get("email_date") or date.min, reverse=True):
         date_str = item["email_date"].isoformat() if item["email_date"] else "?"
-        print(f'  CONFIRMED  {item["entry_id"]} ({date_str}) — "{item["email_subject"][:70]}"')
+        triage = item.get("triage", "TRACK")
+        print(f'  CONFIRMED/{triage}  {item["entry_id"]} ({date_str}) — "{item["email_subject"][:70]}"')
 
     if unconfirmed:
         print()
@@ -710,9 +811,10 @@ def print_responses(responses: list[dict]):
     print("=== Responses Detected ===")
     for item in responses:
         tag = item["classification"].upper()
+        triage = item.get("triage", "TRACK")
         snippet_display = f' — "{item["snippet"]}"' if item["snippet"] else ""
         date_str = item["email_date"].isoformat() if item["email_date"] else "?"
-        print(f"  {tag}  {item['entry_id']} ({date_str}){snippet_display}")
+        print(f"  {tag}/{triage}  {item['entry_id']} ({date_str}){snippet_display}")
     print()
 
 

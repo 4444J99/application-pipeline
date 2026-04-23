@@ -114,6 +114,36 @@ ROLE_KEYWORDS = {
     "platform": ["infrastructure", "CI/CD", "pipeline", "deploy", "monitor"],
 }
 
+# === CLAIM SCOPE RULES ===
+# Certain detailed proof claims are effective in cover letters, where they can be
+# interpreted in context, but too granular for resume bullets and generic blocks.
+COVER_LETTER_ONLY_CLAIMS = [
+    (
+        "tests_cover_letter_only",
+        re.compile(r"\b2,349\+?\s*(?:automated\s+)?tests?\b", re.IGNORECASE),
+        "Keep this test-count claim in cover letters only",
+    ),
+    (
+        "dependency_edges_cover_letter_only",
+        re.compile(r"\b43\s+(?:validated\s+)?(?:directed\s+)?(?:dependency\s+)?edges?\b", re.IGNORECASE),
+        "Keep this dependency-edge claim in cover letters only",
+    ),
+]
+
+
+def _infer_material_surface(filepath: Path) -> str:
+    """Infer the material surface for scope-sensitive content checks."""
+    path_lower = str(filepath).lower()
+    name_lower = filepath.name.lower()
+
+    if "cover-letter" in name_lower or "cover_letters" in path_lower or "cover-letters" in path_lower:
+        return "cover_letter"
+    if "resume" in name_lower or "/resumes/" in path_lower:
+        return "resume"
+    if "/blocks/" in path_lower:
+        return "block"
+    return "other"
+
 
 def check_file(filepath: Path) -> list[dict]:
     """Run all checks on a single file. Returns list of findings."""
@@ -124,6 +154,7 @@ def check_file(filepath: Path) -> list[dict]:
         return [{"file": str(filepath), "severity": "error", "message": "Cannot read file"}]
 
     short = str(filepath).replace(str(REPO_ROOT) + "/", "")
+    surface = _infer_material_surface(filepath)
 
     # Stale metrics
     for pattern, should_be, severity in STALE_METRICS:
@@ -134,6 +165,17 @@ def check_file(filepath: Path) -> list[dict]:
                 "check": "stale_metric",
                 "message": f"Stale metric: '{pattern}' → should be '{should_be}'",
             })
+
+    # Scope-sensitive claims
+    if surface != "cover_letter":
+        for check_name, pattern, message in COVER_LETTER_ONLY_CLAIMS:
+            if pattern.search(content):
+                findings.append({
+                    "file": short,
+                    "severity": "warning",
+                    "check": check_name,
+                    "message": message,
+                })
 
     # Red flags
     for pattern, message in RED_FLAGS:
