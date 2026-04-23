@@ -1,0 +1,37 @@
+{
+  "target_id": "asana-junior-software-engineer-reykjavik",
+  "target_name": "Asana Junior Software Engineer, Reykjavik",
+  "category": "Job",
+  "primary_position": "documentation-engineer",
+  "auto_generated": true,
+  "generated": "2026-04-23T13:04:31",
+  "work_samples": [
+    {
+      "name": "Portfolio",
+      "url": "https://4444j99.github.io/portfolio/",
+      "description": "20 case studies, generative art, interactive resume"
+    },
+    {
+      "name": "Agentic Titan",
+      "url": "https://github.com/organvm-iv-taxis/agentic-titan",
+      "description": "Multi-agent orchestration framework: 1,095 tests, 18 development phases"
+    },
+    {
+      "name": "Recursive Engine",
+      "url": "https://github.com/organvm-i-theoria/recursive-engine--generative-entity",
+      "description": "Symbolic operating system: 1,254 tests, 85% coverage, custom DSL"
+    },
+    {
+      "name": "Eight-Organ System Hub",
+      "url": "https://github.com/meta-organvm/organvm-corpvs-testamentvm",
+      "description": "103 repositories, 8 organizations, 49 essays, ~739K words of documentation"
+    }
+  ],
+  "evidence_highlights": [
+    "739K words of production-grade documentation across 113 repositories",
+    "Auto-generating context files (CLAUDE.md/GEMINI.md) with variable binding system",
+    "MFA in Creative Writing, 100+ college courses in composition and rhetoric"
+  ],
+  "url": "https://www.asana.com/jobs/apply/7766762?gh_jid=7766762",
+  "deadline": "Rolling"
+}

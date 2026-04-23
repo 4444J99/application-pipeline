@@ -1,7 +1,7 @@
 id: coinbase-staff-software-engineer-platform-identity
 name: Coinbase Staff Software Engineer (Platform - Identity)
 track: job
-status: qualified
+status: drafting
 outcome: null
 target:
   organization: Coinbase
@@ -10,67 +10,71 @@ target:
   portal: greenhouse
   location: Remote - USA
   location_class: us-remote
-  description: '<div class="content-intro"><p>Ready to be pushed beyond what you think
-    you’re capable of?</p> <p>At Coinbase, our mission is to increase economic freedom
-    in the world. It’s a massive, ambitious opportunity that demands the best of us,
-    every day, as we build the emerging onchain platform — and with it, the future
-    global financial system.</p> <p>To achieve our mission, we’re seeking a very specific
-    candidate. We want someone who is passionate about our mission and who believes
-    in the power of crypto and blockchain technology to update the financial system.
-    We want someone who is eager to leave their mark on the world, who relishes the
-    pressure and privilege of working with high caliber colleagues, and who actively
-    seeks feedback to keep leveling up. We want someone who will run towards, not
-    away from, solving the company’s hardest problems.</p> <p>Our <a href="https://www.coinbase.com/mission">work
-    culture</a> is intense and isn’t for everyone. But if you want to build the future
-    alongside others who excel in their disciplines and expect the same from you,
-    there’s no better place to be.</p> <p>While many roles at Coinbase are remote-first,
-    we are not remote-only. In-person participation is required throughout the year.
-    Team and company-wide offsites are held multiple times annually to foster collaboration,
-    connection, and alignment. Attendance is expected and fully supported.</p></div><p>We''re
-    hiring a Staff Software Engineer to lead the Identity Accounts team — the platform
-    foundation that powers every user, organization, and account at Coinbase. This
-    is one of the most visible and business-critical engineering platforms at the
-    company: your team''s services handle authentication, authorization, security
-    settings, and account management for millions of customers across every Coinbase
-    product. You''ll be the lead across three sub-teams (Foundations, Users Platformization,
-    and Settings &amp; Account Management), drive roadmap execution in close partnership
-    with your Engineering and Product Manager, and represent the team to 20+ internal
-    product groups and key partners in Security, Risk, Compliance, and Design. If
-    you thrive at the intersection of deep technical problems and cross-functional
-    leadership, this role is for you.</p> <p><strong>What you’ll be doing:</strong></p>
-    <ul> <li>Drive roadmap execution across three focused sub-teams: Foundations (authorization
-    infrastructure), Users Platformization (decomposing the legacy monolith), and
-    Settings &amp; Account Management (Security Settings 2.0, account navigation redesign).</li>
-    <li>Own reliability and operational excellence for 8+ mission-critical Tier-0/Tier-1
-    services — maintaining 99.99% uptime, championing engineering quality, and acting
-    as quarterback during high-severity incidents.</li> <li>Represent the team to
-    internal product groups and key partners in Security, Risk, Compliance, and Design
-    — building alignment and ensuring seamless integration support.</li> <li>Partner
-    with Product and your EM to define strategic roadmaps, prioritize initiatives,
-    and translate complex constraints into simple, scalable platform solutions.</li>
-    <li>Champion engineering excellence — drive code and design reviews, set engineering
-    standards, and build every capability to be composable and reusable across product
-    lines (no bespoke, one-off integrations).</li> <li>Accelerate internal customers
-    by reducing new product team onboarding time to under 2 weeks and delivering excellent
-    APIs, clear documentation, and strong integration support.</li> </ul> <p><strong>What
-    we look for in you:</strong></p> <ul> <li>8+ years of software engineering experience</li>
-    <li>Demonstrated track record of architecting and delivering systems at scale
-    — high-throughput, high-availability services serving millions of requests in
-    production</li> <li>Proven experience leading AI/LLM product development — building
-    AI agents, code generation systems, or developer-facing AI tooling in production
-    environments</li> <li>Strong command of Go, gRPC, Kubernetes, and service mesh
-    architectures</li> <li>Ability to drive technical clarity in ambiguous, high-stakes
-    situations — you can take a vague problem ("compliance teams can''t self-serve"),
-    define the right solution space, and execute it to completion</li> <li>A history
-    of influencing across organizational boundaries — getting buy-in from skeptical
-    stakeholders, aligning competing priorities, and building durable cross-team partnerships</li>
-    <li>Excellent written and verbal communication — you produce technical design
-    documents that build organizational confidence and create shared understanding</li>
-    <li>Based in or able to commute to NYC or SF, with willingness to work from the
-    tech hub once or twice a week or on an as-needed basis for architecture reviews,
-    stakeholder meetings, and team offsites</li> </ul> <p><strong>Nice to haves:</strong></p>
-    <ul> <li>Experience in identity, authentication, authorization, or account management
-    systems.</li> <li>Prior ex'
+  description: "<div class=\"content-intro\"><p>Ready to be pushed beyond what you\
+    \ think you\u2019re capable of?</p> <p>At Coinbase, our mission is to increase\
+    \ economic freedom in the world. It\u2019s a massive, ambitious opportunity that\
+    \ demands the best of us, every day, as we build the emerging onchain platform\
+    \ \u2014 and with it, the future global financial system.</p> <p>To achieve our\
+    \ mission, we\u2019re seeking a very specific candidate. We want someone who is\
+    \ passionate about our mission and who believes in the power of crypto and blockchain\
+    \ technology to update the financial system. We want someone who is eager to leave\
+    \ their mark on the world, who relishes the pressure and privilege of working\
+    \ with high caliber colleagues, and who actively seeks feedback to keep leveling\
+    \ up. We want someone who will run towards, not away from, solving the company\u2019\
+    s hardest problems.</p> <p>Our <a href=\"https://www.coinbase.com/mission\">work\
+    \ culture</a> is intense and isn\u2019t for everyone. But if you want to build\
+    \ the future alongside others who excel in their disciplines and expect the same\
+    \ from you, there\u2019s no better place to be.</p> <p>While many roles at Coinbase\
+    \ are remote-first, we are not remote-only. In-person participation is required\
+    \ throughout the year. Team and company-wide offsites are held multiple times\
+    \ annually to foster collaboration, connection, and alignment. Attendance is expected\
+    \ and fully supported.</p></div><p>We're hiring a Staff Software Engineer to lead\
+    \ the Identity Accounts team \u2014 the platform foundation that powers every\
+    \ user, organization, and account at Coinbase. This is one of the most visible\
+    \ and business-critical engineering platforms at the company: your team's services\
+    \ handle authentication, authorization, security settings, and account management\
+    \ for millions of customers across every Coinbase product. You'll be the lead\
+    \ across three sub-teams (Foundations, Users Platformization, and Settings &amp;\
+    \ Account Management), drive roadmap execution in close partnership with your\
+    \ Engineering and Product Manager, and represent the team to 20+ internal product\
+    \ groups and key partners in Security, Risk, Compliance, and Design. If you thrive\
+    \ at the intersection of deep technical problems and cross-functional leadership,\
+    \ this role is for you.</p> <p><strong>What you\u2019ll be doing:</strong></p>\
+    \ <ul> <li>Drive roadmap execution across three focused sub-teams: Foundations\
+    \ (authorization infrastructure), Users Platformization (decomposing the legacy\
+    \ monolith), and Settings &amp; Account Management (Security Settings 2.0, account\
+    \ navigation redesign).</li> <li>Own reliability and operational excellence for\
+    \ 8+ mission-critical Tier-0/Tier-1 services \u2014 maintaining 99.99% uptime,\
+    \ championing engineering quality, and acting as quarterback during high-severity\
+    \ incidents.</li> <li>Represent the team to internal product groups and key partners\
+    \ in Security, Risk, Compliance, and Design \u2014 building alignment and ensuring\
+    \ seamless integration support.</li> <li>Partner with Product and your EM to define\
+    \ strategic roadmaps, prioritize initiatives, and translate complex constraints\
+    \ into simple, scalable platform solutions.</li> <li>Champion engineering excellence\
+    \ \u2014 drive code and design reviews, set engineering standards, and build every\
+    \ capability to be composable and reusable across product lines (no bespoke, one-off\
+    \ integrations).</li> <li>Accelerate internal customers by reducing new product\
+    \ team onboarding time to under 2 weeks and delivering excellent APIs, clear documentation,\
+    \ and strong integration support.</li> </ul> <p><strong>What we look for in you:</strong></p>\
+    \ <ul> <li>8+ years of software engineering experience</li> <li>Demonstrated track\
+    \ record of architecting and delivering systems at scale \u2014 high-throughput,\
+    \ high-availability services serving millions of requests in production</li> <li>Proven\
+    \ experience leading AI/LLM product development \u2014 building AI agents, code\
+    \ generation systems, or developer-facing AI tooling in production environments</li>\
+    \ <li>Strong command of Go, gRPC, Kubernetes, and service mesh architectures</li>\
+    \ <li>Ability to drive technical clarity in ambiguous, high-stakes situations\
+    \ \u2014 you can take a vague problem (\"compliance teams can't self-serve\"),\
+    \ define the right solution space, and execute it to completion</li> <li>A history\
+    \ of influencing across organizational boundaries \u2014 getting buy-in from skeptical\
+    \ stakeholders, aligning competing priorities, and building durable cross-team\
+    \ partnerships</li> <li>Excellent written and verbal communication \u2014 you\
+    \ produce technical design documents that build organizational confidence and\
+    \ create shared understanding</li> <li>Based in or able to commute to NYC or SF,\
+    \ with willingness to work from the tech hub once or twice a week or on an as-needed\
+    \ basis for architecture reviews, stakeholder meetings, and team offsites</li>\
+    \ </ul> <p><strong>Nice to haves:</strong></p> <ul> <li>Experience in identity,\
+    \ authentication, authorization, or account management systems.</li> <li>Prior\
+    \ ex"
 deadline:
   date: null
   type: rolling
@@ -112,4 +116,13 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-04-22'
+last_touched: '2026-04-23'
+outreach:
+  linkedin_searches:
+  - role: Engineering Manager Platform
+    search_url: https://www.linkedin.com/search/results/people/?keywords=Engineering%20Manager%20Platform%20Coinbase&origin=GLOBAL_SEARCH_HEADER
+  - role: VP Engineering
+    search_url: https://www.linkedin.com/search/results/people/?keywords=VP%20Engineering%20Coinbase&origin=GLOBAL_SEARCH_HEADER
+  contact_name: null
+  contact_url: null
+  status: pending

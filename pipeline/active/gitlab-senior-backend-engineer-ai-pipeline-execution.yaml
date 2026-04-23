@@ -1,7 +1,7 @@
 id: gitlab-senior-backend-engineer-ai-pipeline-execution
 name: GitLab Senior Backend Engineer (AI), Pipeline Execution
 track: job
-status: qualified
+status: drafting
 outcome: null
 target:
   organization: GitLab
@@ -11,67 +11,68 @@ target:
   location: Remote, Canada; Remote, Ireland; Remote, Netherlands; Remote, United Kingdom;
     Remote, US-Southeast
   location_class: us-remote
-  description: '<div class="content-intro"><p>GitLab is the intelligent orchestration
-    platform for DevSecOps. GitLab enables organizations to increase developer productivity,
-    improve operational efficiency, reduce security and compliance risk, and accelerate
-    digital transformation. More than 50 million registered users and more than 50%
-    of the Fortune 100* trust GitLab to ship better, more secure software faster.</p>
-    <p>The same principles built into our products are reflected in how our team works:
-    we embrace AI as a core productivity multiplier, with all team members expected
-    to incorporate AI into their daily workflows to drive efficiency, innovation,
-    and impact. GitLab is where careers accelerate, innovation flourishes, and every
-    voice is valued. Our high-performance culture is driven by our <a href="https://handbook.gitlab.com/handbook/values/">values</a>
-    and continuous knowledge exchange, enabling our team members to reach their full
-    potential while collaborating with industry leaders to solve complex problems.
-    <a href="https://www.youtube.com/watch?v=OuZIb5zszQI">Co-create the future with
-    us</a> as we build technology that transforms how the world develops software.</p>
-    <p>*<em>Fortune 500® is a registered trademark of Fortune Media IP Limited, used
-    under license. Claim based on GitLab data. Fortune 100 refers to the top 20% ranked
-    companies in the 2025 Fortune 500 list, published in June 2025. Fortune and Fortune
-    Media IP Limited are not affiliated with, and do not endorse products or services
-    of GitLab.</em></p></div><p><strong>An overview of this role</strong></p> <p>As
-    a Senior Backend Engineer (AI) in the Verify stage at GitLab, you''ll help shape
-    and scale the core infrastructure behind GitLab CI. You''ll play a key role in
-    how we integrate AI into CI/CD workflows, working on features that improve performance,
-    reliability, and usability for people running millions of CI jobs, from small
-    teams to the largest enterprises.</p> <p>AI is a top priority in the year ahead.
-    In this role, you''ll go beyond using AI tools — you’ll design, build, and iterate
-    on AI-assisted and agentic CI experiences. You’ll help define and implement patterns
-    for how we measure success, how we instrument behavior in production, and how
-    we account for large language model limitations in real-world environments. You’ll
-    also help integrate GitLab''s Duo Agent Platform into CI workflows at scale, on
-    a foundation that''s fast, reliable, secure, and observable.</p> <p><strong>In
-    this role, you will:</strong></p> <ul> <li>Collaborate with Engineering, Product,
-    and UX partners to refine priorities: where we can move faster, where we’re missing
-    data, and where there’s whitespace to innovate.</li> <li>Contribute to defining
-    what success looks like across our AI agents, ensuring we’re not just shipping,
-    but learning from how features perform in production.</li> <li>Keep a close eye
-    on the competitive landscape and emerging AI-native DevOps tools, helping us understand
-    what it takes to keep GitLab CI best-in-class in an increasingly agentic world.</li>
-    </ul> <p><strong>Examples of Agentic CI work we have planned for the upcoming
-    year:</strong></p> <ul> <li><a href="https://gitlab.com/groups/gitlab-org/-/work_items/20443">AI
-    Pipeline Builder</a>, the foundational CI agent that auto-creates pipelines for
-    new projects and serves as the launchpad for onboarding new CI users.</li> <li>Automate
-    the<a href="https://gitlab.com/gitlab-org/gitlab/-/work_items/588753"> Fix a Failing
-    Pipeline</a> flow at scale – from dogfooding on internal GitLab projects through
-    to safe, controlled rollout for customers, solving real infrastructure and scalability
-    challenges.</li> <li>Build the<a href="https://gitlab.com/groups/gitlab-org/-/work_items/20904">
-    instrumentation and observability</a> layer that makes agentic CI trustworthy
-    — trigger volume dashboards, retry rates, cost safeguards — so we can measure
-    what’s working, catch what isn’t, and iterate with confidence.</li> <li>Harden
-    the CI pipeline execution infrastructure that these agents depend on: database
-    access patterns, background processing, and job orchestration built to handle
-    the additional load that AI-driven automation introduces at enterprise scale.</li>
-    </ul> <p><strong>What you’ll do:</strong></p> <ul> <li>Design, build, and operate
-    backend features that make GitLab CI fast, reliable, and easy to use at scale.</li>
-    <li>Implement AI-powered and agentic CI capabilities that integrate with GitLab’s
-    Duo Agent Platform.</li> <li>Instrument, monitor, and improve CI systems using
-    data, observability, and safe rollout practices.</li> <li>Write secure, well-tested
-    Ruby on Rails code in our monolith, improving existing features while reducing
-    technical debt.</li> <li>Collaborate cross-functionally with Product, UX, and
-    Infrastructure, mentoring others and raising engineering standards across the
-    Verify stage.</li> </ul> <p><strong>What you’ll bring:</strong></p> <ul> <li>Strong
-    Ruby on Rails backend experience in a larg'
+  description: "<div class=\"content-intro\"><p>GitLab is the intelligent orchestration\
+    \ platform for DevSecOps. GitLab enables organizations to increase developer productivity,\
+    \ improve operational efficiency, reduce security and compliance risk, and accelerate\
+    \ digital transformation. More than 50 million registered users and more than\
+    \ 50% of the Fortune 100* trust GitLab to ship better, more secure software faster.</p>\
+    \ <p>The same principles built into our products are reflected in how our team\
+    \ works: we embrace AI as a core productivity multiplier, with all team members\
+    \ expected to incorporate AI into their daily workflows to drive efficiency, innovation,\
+    \ and impact. GitLab is where careers accelerate, innovation flourishes, and every\
+    \ voice is valued. Our high-performance culture is driven by our <a href=\"https://handbook.gitlab.com/handbook/values/\"\
+    >values</a> and continuous knowledge exchange, enabling our team members to reach\
+    \ their full potential while collaborating with industry leaders to solve complex\
+    \ problems. <a href=\"https://www.youtube.com/watch?v=OuZIb5zszQI\">Co-create\
+    \ the future with us</a> as we build technology that transforms how the world\
+    \ develops software.</p> <p>*<em>Fortune 500\xAE is a registered trademark of\
+    \ Fortune Media IP Limited, used under license. Claim based on GitLab data. Fortune\
+    \ 100 refers to the top 20% ranked companies in the 2025 Fortune 500 list, published\
+    \ in June 2025. Fortune and Fortune Media IP Limited are not affiliated with,\
+    \ and do not endorse products or services of GitLab.</em></p></div><p><strong>An\
+    \ overview of this role</strong></p> <p>As a Senior Backend Engineer (AI) in the\
+    \ Verify stage at GitLab, you'll help shape and scale the core infrastructure\
+    \ behind GitLab CI. You'll play a key role in how we integrate AI into CI/CD workflows,\
+    \ working on features that improve performance, reliability, and usability for\
+    \ people running millions of CI jobs, from small teams to the largest enterprises.</p>\
+    \ <p>AI is a top priority in the year ahead. In this role, you'll go beyond using\
+    \ AI tools \u2014 you\u2019ll design, build, and iterate on AI-assisted and agentic\
+    \ CI experiences. You\u2019ll help define and implement patterns for how we measure\
+    \ success, how we instrument behavior in production, and how we account for large\
+    \ language model limitations in real-world environments. You\u2019ll also help\
+    \ integrate GitLab's Duo Agent Platform into CI workflows at scale, on a foundation\
+    \ that's fast, reliable, secure, and observable.</p> <p><strong>In this role,\
+    \ you will:</strong></p> <ul> <li>Collaborate with Engineering, Product, and UX\
+    \ partners to refine priorities: where we can move faster, where we\u2019re missing\
+    \ data, and where there\u2019s whitespace to innovate.</li> <li>Contribute to\
+    \ defining what success looks like across our AI agents, ensuring we\u2019re not\
+    \ just shipping, but learning from how features perform in production.</li> <li>Keep\
+    \ a close eye on the competitive landscape and emerging AI-native DevOps tools,\
+    \ helping us understand what it takes to keep GitLab CI best-in-class in an increasingly\
+    \ agentic world.</li> </ul> <p><strong>Examples of Agentic CI work we have planned\
+    \ for the upcoming year:</strong></p> <ul> <li><a href=\"https://gitlab.com/groups/gitlab-org/-/work_items/20443\"\
+    >AI Pipeline Builder</a>, the foundational CI agent that auto-creates pipelines\
+    \ for new projects and serves as the launchpad for onboarding new CI users.</li>\
+    \ <li>Automate the<a href=\"https://gitlab.com/gitlab-org/gitlab/-/work_items/588753\"\
+    > Fix a Failing Pipeline</a> flow at scale \u2013 from dogfooding on internal\
+    \ GitLab projects through to safe, controlled rollout for customers, solving real\
+    \ infrastructure and scalability challenges.</li> <li>Build the<a href=\"https://gitlab.com/groups/gitlab-org/-/work_items/20904\"\
+    > instrumentation and observability</a> layer that makes agentic CI trustworthy\
+    \ \u2014 trigger volume dashboards, retry rates, cost safeguards \u2014 so we\
+    \ can measure what\u2019s working, catch what isn\u2019t, and iterate with confidence.</li>\
+    \ <li>Harden the CI pipeline execution infrastructure that these agents depend\
+    \ on: database access patterns, background processing, and job orchestration built\
+    \ to handle the additional load that AI-driven automation introduces at enterprise\
+    \ scale.</li> </ul> <p><strong>What you\u2019ll do:</strong></p> <ul> <li>Design,\
+    \ build, and operate backend features that make GitLab CI fast, reliable, and\
+    \ easy to use at scale.</li> <li>Implement AI-powered and agentic CI capabilities\
+    \ that integrate with GitLab\u2019s Duo Agent Platform.</li> <li>Instrument, monitor,\
+    \ and improve CI systems using data, observability, and safe rollout practices.</li>\
+    \ <li>Write secure, well-tested Ruby on Rails code in our monolith, improving\
+    \ existing features while reducing technical debt.</li> <li>Collaborate cross-functionally\
+    \ with Product, UX, and Infrastructure, mentoring others and raising engineering\
+    \ standards across the Verify stage.</li> </ul> <p><strong>What you\u2019ll bring:</strong></p>\
+    \ <ul> <li>Strong Ruby on Rails backend experience in a larg"
 deadline:
   date: null
   type: rolling
@@ -113,4 +114,13 @@ conversion:
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: '2026-04-22'
+last_touched: '2026-04-23'
+outreach:
+  linkedin_searches:
+  - role: Engineering Manager
+    search_url: https://www.linkedin.com/search/results/people/?keywords=Engineering%20Manager%20GitLab&origin=GLOBAL_SEARCH_HEADER
+  - role: VP Engineering
+    search_url: https://www.linkedin.com/search/results/people/?keywords=VP%20Engineering%20GitLab&origin=GLOBAL_SEARCH_HEADER
+  contact_name: null
+  contact_url: null
+  status: pending
