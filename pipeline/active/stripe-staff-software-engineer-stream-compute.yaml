@@ -1,11 +1,9 @@
 id: stripe-staff-software-engineer-stream-compute
 name: Stripe Staff Software Engineer, Stream Compute
 track: job
-status: deferred
-deferral:
-  reason: strategic_hold
-  resume_date: '2026-04-15'
-outcome:
+status: qualified
+deferral: null
+outcome: null
 target:
   organization: Stripe
   url: https://boards.greenhouse.io/stripe
@@ -75,7 +73,7 @@ target:
     as a product</li> <li>Strong software engineering skills and a passion for Big
     Data Distributed Systems</'
 deadline:
-  date:
+  date: null
   type: rolling
 amount:
   value: 0
@@ -109,10 +107,10 @@ timeline:
   discovered: '2026-04-01T10:18:24.672810+00:00'
 conversion:
   response_received: false
-  response_type:
-  time_to_response_days:
-  feedback:
+  response_type: null
+  time_to_response_days: null
+  feedback: null
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-04-01"
+last_touched: '2026-04-01'

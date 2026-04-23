@@ -1,7 +1,7 @@
 id: snowflake-senior-security-architect-applied-field-engineering-afe
 name: Snowflake Senior Security Architect, Applied Field Engineering (AFE)
 track: job
-status: deferred
+status: qualified
 outcome: null
 target:
   organization: Snowflake
@@ -114,8 +114,4 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: '2026-04-03'
-deferral:
-  reason: strategic_hold
-  resume_date: '2026-04-15'
-  note: Deferred during S54 triage — restore precision mode compliance (16 to 10 actionable
-    entries)
+deferral: null

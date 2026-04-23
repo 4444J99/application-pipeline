@@ -1,11 +1,9 @@
 id: anthropic-senior-staff-software-engineer-voice-platform
 name: Anthropic Senior / Staff+ Software Engineer, Voice Platform
 track: job
-status: deferred
-deferral:
-  reason: strategic_hold
-  resume_date: '2026-04-15'
-outcome:
+status: qualified
+deferral: null
+outcome: null
 target:
   organization: Anthropic
   url: https://boards.greenhouse.io/anthropic
@@ -74,7 +72,7 @@ target:
     with</h2> <ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1
     [&amp;:not(:last-child)_ol]:pb-1 list-disc flex'
 deadline:
-  date:
+  date: null
   type: rolling
 amount:
   value: 0
@@ -108,10 +106,10 @@ timeline:
   discovered: '2026-04-01T10:18:24.677902+00:00'
 conversion:
   response_received: false
-  response_type:
-  time_to_response_days:
-  feedback:
+  response_type: null
+  time_to_response_days: null
+  feedback: null
 tags:
 - auto-sourced
 source: source_jobs.py
-last_touched: "2026-04-01"
+last_touched: '2026-04-01'

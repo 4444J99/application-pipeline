@@ -1,7 +1,7 @@
 id: mongodb-senior-software-engineer-atlas-stream-processing
 name: MongoDB Senior Software Engineer, Atlas Stream Processing
 track: job
-status: deferred
+status: qualified
 outcome: null
 target:
   organization: MongoDB
@@ -111,8 +111,4 @@ tags:
 - auto-sourced
 source: source_jobs.py
 last_touched: '2026-04-03'
-deferral:
-  reason: strategic_hold
-  resume_date: '2026-04-15'
-  note: Deferred during S54 triage — restore precision mode compliance (16 to 10 actionable
-    entries)
+deferral: null
